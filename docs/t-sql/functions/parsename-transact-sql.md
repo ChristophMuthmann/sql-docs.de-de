@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 63065dcee0d1f7784e7be396273785f741ef44c7
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 5664c0a98663897f1d0a3cfa46e8dabab0d6ef7a
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="parsename-transact-sql"></a>PARSENAME (Transact-SQL)
@@ -76,46 +76,6 @@ PARSENAME ( 'object_name' , object_piece )
  Der angeforderte Objektteil hat eine Länge von 0 und ist kein gültiger [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Bezeichner. Ein Objektname mit der Länge 0 macht den gesamten qualifizierten Namen ungültig.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird `PARSENAME` verwendet, um Informationen zur `Person`-Tabelle in der `AdventureWorks2012`-Datenbank zurückzugeben.  
-  
-```  
-USE AdventureWorks2012;  
-SELECT PARSENAME('AdventureWorks2012..Person', 1) AS 'Object Name';  
-SELECT PARSENAME('AdventureWorks2012..Person', 2) AS 'Schema Name';  
-SELECT PARSENAME('AdventureWorks2012..Person', 3) AS 'Database Name';  
-SELECT PARSENAME('AdventureWorks2012..Person', 4) AS 'Server Name';  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```
-Object Name
-------------------------------
-Person
-
-(1 row(s) affected)
-
-Schema Name
-------------------------------
-(null)
-
-(1 row(s) affected)
-
-Database Name
-------------------------------
-AdventureWorks2012
-
-(1 row(s) affected)
-
-Server Name
-------------------------------
-(null)
-
-(1 row(s) affected)
- ```
- 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Im folgenden Beispiel wird `PARSENAME` verwendet, um Informationen zur `Person`-Tabelle in der `AdventureWorks2012`-Datenbank zurückzugeben.  
   
 ```  

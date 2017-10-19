@@ -16,10 +16,10 @@ author: Lingxi-Li
 ms.author: lingxl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 4cb0585acf73e734662847401c60686b54ae6410
+ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
+ms.openlocfilehash: cbc72958f992e0b5cae12cdfc8c0996378f9708c
 ms.contentlocale: de-de
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Azure Data Lake-Speicher-Dateisystemtask
@@ -37,6 +37,7 @@ Die **Vorgang** Eigenschaft gibt an, das System Dateiübertragungsvorgang ausfü
 - **CopyToADLS:** Hochladen von Dateien in ADLS.
 - **CopyFromADLS:** Herunterladen von Dateien aus ADLS.
 
+## <a name="configure-the-properties-for-the-operation"></a>Konfigurieren Sie die Eigenschaften für den Vorgang
 Für jeden Vorgang müssen Sie einen Azure Data Lake-Verbindungs-Manager angeben.
 
 Hier sind die Eigenschaften für jeden Vorgang spezifisch:

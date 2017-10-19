@@ -1,7 +1,7 @@
 ---
 title: "Zum Ausführen von Realtime Bewertung oder systemeigenen bewerten in SQL Server | Microsoft Docs"
 ms.custom: 
-ms.date: 08/20/2017
+ms.date: 10/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,15 +13,15 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2a72ac24f681d562adc7b43f02a4e91cdeb80bbc
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 175a9bc664a2032d828ca790312920339f971b9b
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>Zum Bewerten von Realtime oder systemeigenen bewerten in SQL Server ausführen
 
-Dieses Thema enthält Anweisungen und Beispielcode für der Echtzeit-Bewertung ausführen und systemeigenen bewertungs-Funktionen in SQL Server 2016 und SQL Server-2017 an. Das Ziel von Realtime Bewertung und systemeigene Bewertung ist zum Verbessern der Leistung von bewerteten Vorgängen in kleinen Batches.
+Dieses Thema enthält Anweisungen und Beispielcode für die Echtzeit-Bewertung ausführen und systemeigenen bewertungs-Funktionen in SQL Server-2017 und SQL Server 2016. Das Ziel von Realtime Bewertung und systemeigene Bewertung ist zum Verbessern der Leistung von bewerteten Vorgängen in kleinen Batches.
 
 Sowohl Echtzeit Bewertung als auch systemeigene Bewertung dienen ein Machine learning-Modell ohne Installation von r verwenden Alles, was Sie tun müssen ist ein vortrainierte Modell in einem kompatiblen Format zu erhalten, und speichern sie in einer SQL Server-Datenbank.
 
@@ -30,11 +30,11 @@ Sowohl Echtzeit Bewertung als auch systemeigene Bewertung dienen ein Machine lea
 Die folgenden Optionen sind für die schnelle Batch Vorhersage unterstützt:
 
 + **Bewerten von systemeigenen**: VORHERSAGEN von T-SQL-Funktion in SQL Server-2017
-+ **Bewerten von Realtime**: die Sp_rxPredict mithilfe der gespeicherten Prozedur in SQL Server 2016 oder SQL Server-2017.
++ **Bewerten von Realtime**: mit der sp\_RxPredict gespeicherte Prozedur in SQL Server 2016 oder SQL Server-2017.
 
 > [!NOTE]
 > Verwendung der PREDICT-Funktion wird in SQL Server-2017 empfohlen.
-> Um Sp_rxPredict zu verwenden müssen, Sie SQLCLR-Integration aktivieren. Beachten Sie die Sicherheitsrisiken, bevor Sie diese Option aktivieren.
+> Verwenden von sp\_RxPredict erfordert, dass Sie die SQLCLR-Integration aktivieren. Beachten Sie die Sicherheitsrisiken, bevor Sie diese Option aktivieren.
 
 Das generelle Verfahren Vorbereiten des Modells, und klicken Sie dann Generieren von Bewertungen ist sehr ähnlich:
 
@@ -49,7 +49,7 @@ Das generelle Verfahren Vorbereiten des Modells, und klicken Sie dann Generieren
 
 + Bei Verwendung von sp\_RxPredict, sind einige zusätzliche Schritte erforderlich. Finden Sie unter [ermöglichen, Echtzeit Bewertung](#bkmk_enableRtScoring).
 
-+ Zum Zeitpunkt der Erstellung dieses Dokuments können nur "revoscaler" und MicrosoftML kompatiblen Modelle erstellen. Zusätzliche Modelltypen möglicherweise in Zukunft verfügbar sein. Die Liste der derzeit unterstützten Algorithmen finden Sie [Echtzeit Bewertung](../real-time-scoring.md).
++ Zu diesem Zeitpunkt kann nur "revoscaler" und MicrosoftML kompatiblen Modelle erstellen. Zusätzliche Modelltypen möglicherweise in Zukunft verfügbar sein. Die Liste der derzeit unterstützten Algorithmen finden Sie [Echtzeit Bewertung](../real-time-scoring.md).
 
 ### <a name="serialization-and-storage"></a>Serialisierung und Speicher
 
@@ -80,7 +80,7 @@ Es gibt zwei Möglichkeiten, um das Modell in einer Tabelle zu speichern, aus R-
 
 ## <a name="native-scoring-with-predict"></a>Systemeigen mit VORHERSAGEN bewerten
 
-In diesem Beispiel müssen Sie ein Modell erstellen und rufen dann die Echtzeit-Vorhersagefunktion von T-SQL.
+In diesem Beispiel wird ein Modell erstellen, und rufen Sie anschließend die Echtzeit-Vorhersagefunktion aus T-SQL.
 
 ### <a name="step-1-prepare-and-save-the-model"></a>Schritt 1: Vorbereiten Sie und speichern Sie das Modell
 
@@ -159,7 +159,7 @@ Die folgende einfache PREDICT-Anweisung ruft eine Klassifizierung ab, von der En
 DECLARE @model varbinary(max) = (
   SELECT native_model_object
   FROM ml_models
-  WHERE model_name = 'iris.dtree.model'
+  WHERE model_name = 'iris.dtree'
   AND model_version = 'v1');
 SELECT d.*, p.*
   FROM PREDICT(MODEL = @model, DATA = dbo.iris_rx_data as d)
@@ -181,7 +181,7 @@ Dieser Abschnitt beschreibt die erforderlichen Schritte zum Einrichten von **Ech
 Sie müssen diese Funktion für jede Datenbank aktivieren, die Sie für die Bewertung verwenden möchten. Der Serveradministrator sollte das Befehlszeile-Hilfsprogramm RegisterRExt.exe, führen Sie die in die RevoScaleR-Paket enthalten ist.
 
 > [!NOTE]
-> Nacheinander Bewertung zur Arbeit in Echtzeit SQL CLR-Funktionalität in der Instanz aktiviert werden muss, und die Datenbank als vertrauenswürdig markiert werden muss. Wenn Sie das Skript ausführen, werden diese Aktionen für Sie ausgeführt. Allerdings sollten Sie die zusätzliche Sicherheit Konsequenzen.
+> Nacheinander Bewertung zur Arbeit in Echtzeit SQL CLR-Funktionalität in der Instanz aktiviert werden muss, und die Datenbank als vertrauenswürdig markiert werden muss. Wenn Sie das Skript ausführen, werden diese Aktionen für Sie ausgeführt. Allerdings sollten Sie die Auswirkungen auf die zusätzliche Sicherheit.
 
 1. Öffnen Sie ein Eingabeaufforderungsfenster mit erhöhten Rechten, und navigieren Sie zu dem Ordner, in dem RegisterRExt.exe befindet. Der folgende Pfad kann in einer Standardinstallation verwendet werden:
     
@@ -209,12 +209,9 @@ Sie müssen diese Funktion für jede Datenbank aktivieren, die Sie für die Bewe
 > 
 > In SQL Server 2017 gelten zusätzliche Sicherheitsmaßnahmen auf Probleme mit CLR-Integration zu verhindern. Diese Measures vorgeben zusätzliche Einschränkungen für die Verwendung dieser gespeicherten Prozedur auch.
 
-
 ### <a name="step-2-prepare-and-save-the-model"></a>Schritt 2: Vorbereiten Sie und speichern Sie das Modell
 
-Das binäre Format sp erforderlichen\_RxPredict ist dieselbe wie für VORHERSAGEN.
-
-Daher in Ihrem R-Code enthalten einen Aufruf von [RxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel), und geben Sie unbedingt _RealtimeScoringOnly_ = "true", wie in diesem Beispiel:
+Das binäre Format sp erforderlichen\_RxPredict ist dieselbe wie für VORHERSAGEN. Daher in Ihrem R-Code enthalten einen Aufruf von [RxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel), und geben Sie unbedingt _RealtimeScoringOnly_ = "true", wie in diesem Beispiel:
 
 ```R
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
@@ -222,7 +219,7 @@ model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 
 ### <a name="step-3-call-sprxpredict"></a>Schritt 3: Rufen Sie sp_rxPredict
 
-Sie rufen Sp_rxPredict wie für eine beliebige andere gespeicherte Prozedur. In der aktuellen Version die gespeicherte Prozedur akzeptiert nur zwei Parameter:  _@model_  für das Modell im binären Format und  _@inputData_  für die Daten zur Verwendung in der Bewertung, definiert als eine gültige SQL-Abfrage .
+Rufen Sie sp\_RxPredict wie würde jeder andere Prozedur enthält. In der aktuellen Version die gespeicherte Prozedur akzeptiert nur zwei Parameter:  _@model_  für das Modell im binären Format und  _@inputData_  für die Daten zur Verwendung in der Bewertung, definiert als eine gültige SQL-Abfrage .
 
 Da das Binärformat identisch, die von der PREDICT-Funktion verwendet wird ist, können Sie die Modelle und eine Datentabelle aus dem vorherigen Beispiel.
 
@@ -238,17 +235,22 @@ EXEC sp_rxPredict
 
 > [!NOTE]
 > 
-> Der Aufruf von `sp_rxPredict` schlägt fehl, wenn die Eingabedaten für die Bewertung keine Spalten enthalten, die die Anforderungen des Modells entsprechen. Derzeit werden nur die folgenden .NET Datentypen unterstützt: double, Float, Short, Ushort, long, ulong-Typ und Zeichenfolge.
+> Der Aufruf von sp\_RxPredict schlägt fehl, wenn die Eingabedaten für die Bewertung keine Spalten enthalten, die die Anforderungen des Modells entsprechen. Derzeit werden nur die folgenden .NET Datentypen unterstützt: double, Float, Short, Ushort, long, ulong-Typ und Zeichenfolge.
 > 
 > Aus diesem Grund müssen Sie die nicht unterstützten Typen der Eingabedaten herausfiltern, bevor Sie sie für die Bewertung von Realtime verwenden.
 > 
 > Informationen zur entsprechenden SQL-Datentypen finden Sie unter [SQL-CLR-Typzuordnung](https://msdn.microsoft.com/library/bb386947.aspx) oder [Zuordnen von CLR-Parameterdaten](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data).
 
-### <a name="disable-realtime-scoring"></a>Deaktivieren Sie Echtzeit-Bewertung
+## <a name="disable-realtime-scoring"></a>Deaktivieren Sie Echtzeit-Bewertung
 
 Um bewerteten Echtzeit-Funktionen zu deaktivieren, öffnen Sie ein Eingabeaufforderungsfenster mit erhöhten Rechten, und führen Sie den folgenden Befehl:`RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
-### <a name="realtime-scoring-in-microsoft-r-server"></a>Echtzeit-Bewertung in Microsoft R Server
+## <a name="realtime-scoring-in-microsoft-r-server-or-machine-learning-server"></a>Echtzeit-Bewertung in Microsoft R Server "oder" Machine Learning-Server
 
-Informationen zu Echtzeit Bewertung in einer verteilten Umgebung basierend auf Microsoft R Server finden Sie auf der [PublishService](https://msdn.microsoft.com/microsoft-r/mrsdeploy/packagehelp/publishservice) Funktion zur Verfügung, in der [MrsDeploy Paket](https://msdn.microsoft.com/microsoft-r/mrsdeploy/mrsdeploy), welche unterstützt Veröffentlichen von Modellen in Echtzeit Bewertung als neue einen Webdienst, der auf R-Server ausgeführt wird.
+Machine Learning-Server unterstützt verteilte Echtzeit Bewertung von Modellen, die als Webdienst veröffentlicht. Weitere Informationen dazu finden Sie in diesen Artikeln:
 
++ [Was sind Webdienste in Machine Learning-Server?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
++ [Was ist operationalisierung?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)
++ [Bereitstellen eines Python-Modells als Webdienst mit Azureml-Modell-Management-sdk](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
++ [Veröffentlichen Sie ein R-Code-Block oder ein Echtzeit-Modell als ein neuer Webdienst.](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
++ [Mrsdeploy-Paket für R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)

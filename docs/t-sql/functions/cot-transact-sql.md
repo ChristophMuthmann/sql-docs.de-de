@@ -23,10 +23,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d799d83336507aba7b582796f730c53d7ae4840e
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 080b20e15242342e9662b5b4c459a9e8160822ab
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="cot-transact-sql"></a>COT (Transact-SQL)
@@ -50,24 +50,6 @@ Ist ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md)des
 **float**
   
 ## <a name="examples"></a>Beispiele  
-Im folgenden Beispiel wird der Kotangens des angegebenen Winkels zurückgegeben.
-  
-```sql
-DECLARE @angle float;  
-SET @angle = 124.1332;  
-SELECT 'The COT of the angle is: ' + CONVERT(varchar,COT(@angle));  
-GO  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
-The COT of the angle is: -0.040312                
-  
-(1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Im folgenden Beispiel wird der Kotangens des angegebenen Winkels zurückgegeben.
   
 ```sql

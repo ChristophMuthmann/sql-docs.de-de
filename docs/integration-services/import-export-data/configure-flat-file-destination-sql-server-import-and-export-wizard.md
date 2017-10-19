@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e604c8c55cfa0bdb977840ee742d062573abeeeb
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 93fbd5e9429d06e3f011f6f0aff03d76a3db9000
 ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Flatfileziel konfigurieren (SQL Server-Import/Export-Assistent)
@@ -33,7 +33,7 @@ ms.lasthandoff: 09/26/2017
 -   **Zeilentrennzeichen**. Jede Datenzeile in der Ausgabe endet mit einem Wagenrücklauf-Zeilenvorschub Kombination.
 -   **Spaltentrennzeichen**. Datenspalten innerhalb jeder Zeile werden durch ein Komma getrennt.
 
- ![Flatfile-Konfigurationsseite des Import / Export-Assistenten](../../integration-services/import-export-data/media/flat-file.png "Flatfile-Konfigurationsseite des Import / Export-Assistenten")  
+ ![Flatfile-Seite des Import / Export-Assistenten "konfigurieren"](../../integration-services/import-export-data/media/flat-file.png)
   
 ## <a name="pick-a-source-table"></a>Wählen Sie eine Quelltabelle
  **Quelltabelle oder -sicht**  

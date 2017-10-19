@@ -18,10 +18,10 @@ author: Lingxi-Li
 ms.author: lingxl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 5acf2de3fccc2f5180358f87bd02591811c59c72
+ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
+ms.openlocfilehash: 0a84b10114d785c9216a0902b2eefbcb0bd3f4c8
 ms.contentlocale: de-de
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store-Verbindungsmanager
@@ -60,7 +60,8 @@ Der Azure Data Lake-Speicher-Verbindungs-Manager ist eine Komponente von der [SQ
         4. Wählen Sie zum Testen der Verbindung **Verbindung testen**.  
   
 6.  Wählen Sie **OK** schließen die **Azure Data Lake-Speicher-Verbindungs-Manager-Editor** (Dialogfeld).  
-  
+
+## <a name="view-the-properties-of-the-connection-manager"></a>Zeigen Sie die Eigenschaften des Verbindungs-Managers
 Die Eigenschaften des Verbindungs-Managers, die Sie im Fenster **Eigenschaften** erstellt haben, werden angezeigt.  
   
   

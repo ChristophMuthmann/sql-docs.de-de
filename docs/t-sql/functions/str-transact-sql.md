@@ -25,10 +25,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 27af210aca06130818fd00fea9d53eebcc8aa016
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 7cddf1af7eba56824e41ad1ebaedb9aecdc37074
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="str-transact-sql"></a>STR (Transact-SQL)
@@ -100,55 +100,6 @@ GO
   
 ```  
 SELECT STR (FLOOR (123.45), 8, 3;)  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
---------  
- 123.000  
-  
-(1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Im folgenden Beispiel wird ein Ausdruck, der aus fünf Ziffern und einem Dezimaltrennzeichen besteht, in eine Zeichenfolge mit sechs Stellen konvertiert. Die Stellen hinter dem Dezimalpunkt werden auf eine Dezimalstelle gerundet.  
-  
-```  
-SELECT STR(123.45, 6, 1);  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-------  
- 123.5  
-  
-(1 row(s) affected)  
-```  
-  
- Falls der Ausdruck die angegebene Länge überschreitet, wird die Zeichenfolge `**` in der festgelegten Länge zurückgegeben.  
-  
-```  
-SELECT STR(123.45, 2, 2);  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
---  
-**  
-  
-(1 row(s) affected)  
-```  
-  
- Auch wenn numerische Daten innerhalb von `STR` geschachtelt sind, werden als Ergebnis Zeichendaten mit dem angegebenen Format zurückgegeben.  
-  
-```  
-SELECT STR (FLOOR (123.45), 8, 3);  
 GO  
 ```  
   

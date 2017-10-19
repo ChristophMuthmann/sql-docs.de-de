@@ -22,10 +22,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2573d9f42b48205dab712ca401a1ac61ae4a17e2
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 046278bb3016b39df8039a1450a58b177d2bc180
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
@@ -107,23 +107,6 @@ NameLastname
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-using-concat"></a>C. Verwenden von CONCAT  
-  
-```sql
-SELECT CONCAT ( 'Happy ', 'Birthday ', 11, '/', '25' ) AS Result;  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
-Result  
--------------------------  
-Happy Birthday 11/25  
-  
-(1 row(s) affected)  
-```  
 ## <a name="see-also"></a>Siehe auch
 [Zeichenfolgenfunktionen (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
 [CONCAT_WS (Transact-SQL)](../../t-sql/functions/concat-ws-transact-sql.md)   

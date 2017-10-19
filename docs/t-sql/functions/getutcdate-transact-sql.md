@@ -39,10 +39,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 316ccab8ddcaf138f05d713f41093ea7d767339a
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 19145656955431c4aac52a4082a25eb36c957a9b
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="getutcdate-transact-sql"></a>GETUTCDATE (Transact-SQL)
@@ -114,67 +114,6 @@ GETUTCDATE()             2007-05-04
 ```  
   
 ### <a name="c-getting-the-current-system-time"></a>C. Abrufen der aktuellen Systemzeit  
-  
-```  
-SELECT 'SYSDATETIME()      ', CONVERT (time, SYSDATETIME());  
-SELECT 'SYSDATETIMEOFFSET()', CONVERT (time, SYSDATETIMEOFFSET());  
-SELECT 'SYSUTCDATETIME()   ', CONVERT (time, SYSUTCDATETIME());  
-SELECT 'CURRENT_TIMESTAMP  ', CONVERT (time, CURRENT_TIMESTAMP);  
-SELECT 'GETDATE()          ', CONVERT (time, GETDATE());  
-SELECT 'GETUTCDATE()       ', CONVERT (time, GETUTCDATE());  
-/* Returned  
-SYSDATETIME()            18:25:01.6958841  
-SYSDATETIMEOFFSET()      18:25:01.6958841  
-SYSUTCDATETIME()         01:25:01.6958841  
-CURRENT_TIMESTAMP        18:25:01.6930000  
-GETDATE()                18:25:01.6930000  
-GETUTCDATE()             01:25:01.6930000  
-*/  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Die folgenden Beispiele verwenden die sechs Systemfunktionen, die aktuellen Datums- und Uhrzeitangaben, um das Datum, Uhrzeit oder beides zurückzugeben zurückgeben. Die Werte werden der Reihe nach zurückgegeben und können sich daher in Bruchteilen von Sekunden unterscheiden.  
-  
-### <a name="d-getting-the-current-system-date-and-time"></a>D. Das aktuelle Systemdatum und die Uhrzeit abrufen  
-  
-```  
-SELECT 'SYSDATETIME()      ', SYSDATETIME();  
-SELECT 'SYSDATETIMEOFFSET()', SYSDATETIMEOFFSET();  
-SELECT 'SYSUTCDATETIME()   ', SYSUTCDATETIME();  
-SELECT 'CURRENT_TIMESTAMP  ', CURRENT_TIMESTAMP;  
-SELECT 'GETDATE()          ', GETDATE();  
-SELECT 'GETUTCDATE()       ', GETUTCDATE();  
-/* Returned:  
-SYSDATETIME()            2007-05-03 18:34:11.9351421  
-SYSDATETIMEOFFSET()      2007-05-03 18:34:11.9351421 -07:00  
-SYSUTCDATETIME()         2007-05-04 01:34:11.9351421  
-CURRENT_TIMESTAMP        2007-05-03 18:34:11.933  
-GETDATE()                2007-05-03 18:34:11.933  
-GETUTCDATE()             2007-05-04 01:34:11.933  
-*/  
-```  
-  
-### <a name="e-getting-the-current-system-date"></a>E. Abrufen des aktuellen Systemdatums  
-  
-```  
-SELECT 'SYSDATETIME()      ', CONVERT (date, SYSDATETIME());  
-SELECT 'SYSDATETIMEOFFSET()', CONVERT (date, SYSDATETIMEOFFSET());  
-SELECT 'SYSUTCDATETIME()   ', CONVERT (date, SYSUTCDATETIME());  
-SELECT 'CURRENT_TIMESTAMP  ', CONVERT (date, CURRENT_TIMESTAMP);  
-SELECT 'GETDATE()          ', CONVERT (date, GETDATE());  
-SELECT 'GETUTCDATE()       ', CONVERT (date, GETUTCDATE());  
-  
-/* Returned:   
-SYSDATETIME()            2007-05-03  
-SYSDATETIMEOFFSET()      2007-05-03  
-SYSUTCDATETIME()         2007-05-04  
-CURRENT_TIMESTAMP        2007-05-03  
-GETDATE()                2007-05-03  
-GETUTCDATE()             2007-05-04  
-*/  
-```  
-  
-### <a name="f-getting-the-current-system-time"></a>F. Abrufen der aktuellen Systemzeit  
   
 ```  
 SELECT 'SYSDATETIME()      ', CONVERT (time, SYSDATETIME());  

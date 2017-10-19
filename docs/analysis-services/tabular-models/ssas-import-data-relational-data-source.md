@@ -1,7 +1,7 @@
 ---
 title: "Importieren aus einer relationalen Datenquelle (SSAS – tabellarisch) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/22/2017
+ms.date: 10/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,15 +17,15 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1db6dd24d059f8c478967bc3c69652aaec0aeb51
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: d45d72ca09a8abce6d29f018fcbaa8f54415a637
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="import-data---relational-data-source"></a>Importieren von Daten per Push – relationalen Datenquelle
-  Mit dem Tabellenimport-Assistenten können Sie Daten aus einer Vielzahl relationaler Datenbanken importieren: Der Assistent ist in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]im Menü **Modell** verfügbar. Der entsprechende Anbieter muss auf dem Computer installiert sein, um eine Verbindung mit einer Datenquelle herzustellen. Weitere Informationen zu unterstützten Datenquellen und -anbietern finden Sie unter [Unterstützte Datenquellen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md).  
-  
+  Für tabellarische Modelle mit der 1200 und niedrigeren Ebenen der Kompatibilität können Sie Daten aus einer Vielzahl relationaler Datenbanken importieren, mit dem Tabellenimport-Assistenten. Der Assistent ist in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]im Menü **Modell** verfügbar. Der entsprechende Anbieter muss auf dem Computer installiert sein, um eine Verbindung mit einer Datenquelle herzustellen. Weitere Informationen zu unterstützten Datenquellen und -anbietern finden Sie unter [Unterstützte Datenquellen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md). 
+ 
  Der Tabellenimport-Assistent unterstützt das Importieren von Daten aus den folgenden Datenquellen:  
   
  **Relationale Datenbanken**  
@@ -69,3 +69,4 @@ ms.lasthandoff: 09/01/2017
  [Unterstützte Datenquellen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   
+

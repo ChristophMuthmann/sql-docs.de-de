@@ -28,10 +28,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 712b6c1b582c2eec76958eafaad5d02f2e411640
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 3c81153c233e68d12347dc47ae9c232f4a5ee030
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET (Transact-SQL)
@@ -74,27 +74,6 @@ WHERE c1 > @dt OPTION (RECOMPILE);
 ```  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird `SWITCHOFFSET` verwendet, um einen anderen als den in der Datenbank gespeicherten Zeitzonenoffset-Wert anzuzeigen.  
-  
-```  
-CREATE TABLE dbo.test   
-    (  
-    ColDatetimeoffset datetimeoffset  
-    );  
-GO  
-INSERT INTO dbo.test   
-VALUES ('1998-09-20 7:45:50.71345 -5:00');  
-GO  
-SELECT SWITCHOFFSET (ColDatetimeoffset, '-08:00')   
-FROM dbo.test;  
-GO  
---Returns: 1998-09-20 04:45:50.7134500 -08:00  
-SELECT ColDatetimeoffset  
-FROM dbo.test;  
---Returns: 1998-09-20 07:45:50.7134500 -05:00  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Im folgenden Beispiel wird `SWITCHOFFSET` verwendet, um einen anderen als den in der Datenbank gespeicherten Zeitzonenoffset-Wert anzuzeigen.  
   
 ```  
