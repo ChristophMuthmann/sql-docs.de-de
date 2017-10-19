@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 75ab644da296ecc613c803916eb0b70907ad0cf6
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: fce97e74e2b4bbc5ae0fbdadf596734677734155
 ms.contentlocale: de-de
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER ausgelegte DATENBANKKONFIGURATION (Transact-SQL)
@@ -119,7 +119,7 @@ Dieser Wert ist nur gültig für sekundäre Replikate, während die Datenbank in
   
 QUERY_OPTIMIZER_HOTFIXES  **=**  {ON | **OFF** | PRIMÄRE}  
 
-Aktiviert oder deaktiviert Hotfixes für die abfrageoptimierung unabhängig vom Kompatibilitätsgrad der Datenbank. Die Standardeinstellung ist **OFF**. Dies entspricht dem Aktivieren der [Ablaufverfolgungsflag 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
+Aktiviert oder deaktiviert Hotfixes für die abfrageoptimierung unabhängig vom Kompatibilitätsgrad der Datenbank. Die Standardeinstellung ist **OFF**, die deaktiviert zurückgreifen abfrageoptimierungs-Hotfixes, die freigegeben wurden, nachdem die höchste verfügbare Kompatibilitätsgrad für eine bestimmte Version eingeführt wurde (Post-RTM). Wenn dieser **ON** entspricht der Aktivierung von [Ablaufverfolgungsflag 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 
 > [!TIP] 
 > Fügen Sie hierzu auf der abfragenebene der **"QueryTraceOn"** [-Abfragehinweis](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 können hierfür auf Abfrageebene, Hinzufügen der verwenden Hinweis [-Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) anstatt mithilfe des Ablaufverfolgungsflags.  
@@ -140,7 +140,6 @@ Aktiviert oder deaktiviert die Identitäts-Cache auf Datenbankebene. Die Standar
 
 > [!NOTE] 
 > Diese Option kann nur für den primären festgelegt werden. Weitere Informationen finden Sie unter [Identitätsspalten](create-table-transact-sql-identity-property.md).  
->
 
 ##  <a name="Permissions"></a> Berechtigungen  
  Erfordert ALTER alle Datenbank-BEREICHSKONFIGURATION   
@@ -156,7 +155,7 @@ in der Datenbank. Diese Berechtigung kann von einem Benutzer mit CONTROL-Berecht
  Das Ereignis ALTER_DATABASE_SCOPED_CONFIGURATION wird als ein DDL-Ereignis hinzugefügt, die zum Auslösen eines DDL-Triggers verwendet werden kann. Dies ist ein untergeordnetes Element der Gruppe "ALTER_DATABASE_EVENTS Trigger".  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
- **MAXDOP**  
+**MAXDOP**  
   
  Die präzisen Einstellungen können die globale Konfigurationen überschreiben und diese Ressourcenkontrolle kann cap MAXDOP-Einstellungen.  Die Logik für die MAXDOP-Einstellung lautet wie folgt:  
   
@@ -170,15 +169,15 @@ in der Datenbank. Diese Berechtigung kann von einem Benutzer mit CONTROL-Berecht
   
 -   Die Sp_configure-Einstellung wird von der Einstellung der Ressourcenkontrolle überschrieben.  
   
- **QUERY_OPTIMIZER_HOTFIXES**  
+**QUERY_OPTIMIZER_HOTFIXES**  
   
  Wenn "QueryTraceOn" Hinweis verwendet wird, um die ältere Abfrageoptimierer oder Hotfixes für Abfrageoptimierer zu aktivieren, wäre es eine OR-Bedingung zwischen den Abfragehinweis und die datenbankweite Konfiguration festlegen, d. h., wenn entweder aktiviert ist, die Optionen angewendet werden.  
   
- **Geodr aktiv**  
+**Geodr aktiv**  
   
  Lesbare sekundäre Datenbanken, z. B. AlwaysOn-Verfügbarkeitsgruppen und GeoReplication, verwenden Sie den sekundären Wert durch Überprüfen des Zustands der Datenbank. Obwohl wir nicht neu, bei einem Failover kompilieren und technisch das neue primäre hat Abfragen, die die Einstellungen für die sekundären verwenden, ist die Vorstellung, dass die Einstellung zwischen primären und sekundären nur unterschiedlich sein wird, wenn die arbeitsauslastung besteht aus verschiedenen und daher die zwischengespeicherte Abfragen verwenden die optimalen Einstellungen an, während neue Abfragen werden die neuen Einstellungen wählen Sie die für sie geeignet sind.  
   
- **DacFx**  
+**DacFx**  
   
  Da ALTER DATABASE SCOPED CONFIGURATION ein neues Feature in Azure SQL-Datenbank und SQL Server 2016, die das Datenbankschema auswirkt ist, Exporte des Schemas (mit oder ohne Daten) werden möglicherweise nicht in einer älteren Version von SQL Server importiert werden sollen, z. B. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder < C2 > [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] . Z. B. ein Export in eine [DACPAC-Datei](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) oder ein [bacpac-Datei](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) aus einer [!INCLUDE[ssSDS](../../includes/sssds-md.md)] oder [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] dieser neuen Funktion verwendeten wären nicht in der Lage, in einen Server der Vorgängerversion importiert werden sollen.  
   
@@ -245,7 +244,7 @@ In diesem Beispiel wird PARAMETER_SNIFFING für die sekundäre Datenbank, wie in
 in einem Szenario geografische Replikation.  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING =PRIMARY ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY ;  
 ```  
   
 ### <a name="e-set-queryoptimizerhotfixes"></a>E. QUERY_OPTIMIZER_HOTFIXES festlegen  

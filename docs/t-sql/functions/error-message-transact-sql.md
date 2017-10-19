@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f15d9d23726f7558f0bf73aff3f8c3c5253cb24d
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: ad4e69ea267af2a9575558737e17e79bbdad684f
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="errormessage-transact-sql"></a>ERROR_MESSAGE (Transact-SQL)
@@ -100,22 +100,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-errormessage-in-a-catch-block"></a>C. Verwenden von ERROR_MESSAGE in einem CATCH-Block  
- Das folgende Codebeispiel zeigt eine `SELECT`-Anweisung, die einen Fehler aufgrund einer Division durch 0 generiert. Die Fehlermeldung wird zurückgegeben.  
-  
-```  
-  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT ERROR_MESSAGE() AS ErrorMessage;  
-END CATCH;  
-GO  
-```  
-  
-### <a name="d-using-errormessage-in-a-catch-block-with-other-error-handling-tools"></a>D. Verwenden von ERROR_MESSAGE in einem CATCH-Block mit anderen Fehlerbehandlungstools  
+### <a name="c-using-errormessage-in-a-catch-block-with-other-error-handling-tools"></a>C. Verwenden von ERROR_MESSAGE in einem CATCH-Block mit anderen Fehlerbehandlungstools  
  Das folgende Codebeispiel zeigt eine `SELECT`-Anweisung, die einen Fehler aufgrund einer Division durch 0 generiert. Zusammen mit der Fehlermeldung werden Informationen bezüglich des Fehlers zurückgegeben.  
   
 ```  
@@ -134,18 +119,6 @@ BEGIN CATCH
 END CATCH;  
 GO  
 ```  
-  
-## <a name="see-also"></a>Siehe auch  
- [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
- [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
- [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
- [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
- [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
- [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
- [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
-  
   
 
 

@@ -24,10 +24,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c8b61f59733fa0696e8176f6c380139330c575e9
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 5eeb03620e210cebec1afece563c5e10b8101361
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="ceiling-transact-sql"></a>CEILING (Transact-SQL)
@@ -66,21 +66,6 @@ GO
   
 (1 row(s) affected)  
 ```  
-  
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-
-Das folgende Beispiel zeigt die Verwendung von positiven numerischen, negativen und Nullwerte mit der CEILING-Funktion.
-  
-```sql
-SELECT CEILING(123.45), CEILING(-123.45), CEILING(0.0);  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```
-------- --------- --------
-124.00  -123.00   0.00
-```
   
 ## <a name="see-also"></a>Siehe auch
 [Systemfunktionen &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)

@@ -24,18 +24,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3ea034f7217d031c21cf22f6b5aaff9bf16355a9
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 1868f902cf41eba9637138d7333ac908c72cb76e
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
-# <a name="difference-transact-sql"></a>DIFFERENCE (Transact-SQL)
+# <a name="difference-transact-sql"></a>Unterschied (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt einen ganzzahligen Wert zurück, der den Unterschied zwischen den SOUNDEX-Werten von zwei Zeichenausdrücken angibt.  
+  Gibt einen Ganzzahlwert, der den Unterschied zwischen den SOUNDEX-Werten von zwei Zeichenausdrücken angibt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Thema Linksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,39 +50,13 @@ DIFFERENCE ( character_expression , character_expression )
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
-## <a name="remarks"></a>Hinweise  
- Die zurückgegebene ganze Zahl entspricht der Anzahl von gleichen Zeichen in den SOUNDEX-Werten. Der zurückgegebene Wert liegt im Bereich von 0 bis 4: 0 gibt an, dass keine oder nur eine geringe Ähnlichkeit besteht, 4 weist auf eine starke Ähnlichkeit oder identische Werte hin.  
+## <a name="remarks"></a>"Hinweise"  
+ Die zurückgegebene ganze Zahl ist die Anzahl der Zeichen in den SOUNDEX-Werten, die identisch sind. Der Rückgabewert liegt zwischen 0 und 4:0 gibt an, schwache oder keiner Ähnlichkeit und 4 weist auf starke Ähnlichkeit oder identische Werte hin.  
   
  DIFFERENCE und SOUNDEX sind sortierungsabhängig.  
   
-## <a name="examples"></a>Beispiele  
- Im ersten Teil des folgenden Beispiels werden die `SOUNDEX`-Werte von zwei sehr ähnlichen Zeichenfolgen verglichen. Bei einer Sortierung Latin1_General `DIFFERENCE` gibt einen Wert von `4`. Im zweiten Teil des folgenden Beispiels die `SOUNDEX` Werte von zwei sehr unterschiedliche Zeichenfolgen verglichen werden, und bei einer Sortierung Latin1_General `DIFFERENCE` gibt einen Wert von `0`.  
-  
-```  
--- Returns a DIFFERENCE value of 4, the least possible difference.  
-SELECT SOUNDEX('Green'), SOUNDEX('Greene'), DIFFERENCE('Green','Greene');  
-GO  
--- Returns a DIFFERENCE value of 0, the highest possible difference.  
-SELECT SOUNDEX('Blotchet-Halls'), SOUNDEX('Greene'), DIFFERENCE('Blotchet-Halls', 'Greene');  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
------ ----- -----------   
-G650  G650  4             
-  
-(1 row(s) affected)  
-  
------ ----- -----------   
-B432  G650  0             
-  
-(1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Im ersten Teil des folgenden Beispiels werden die `SOUNDEX`-Werte von zwei sehr ähnlichen Zeichenfolgen verglichen. Bei einer Sortierung Latin1_General `DIFFERENCE` gibt einen Wert von `4`. Im zweiten Teil des folgenden Beispiels die `SOUNDEX` Werte von zwei sehr unterschiedliche Zeichenfolgen verglichen werden, und bei einer Sortierung Latin1_General `DIFFERENCE` gibt einen Wert von `0`.  
+## <a name="examples"></a>Beispiele für  
+ Im ersten Teil des folgenden Beispiels die `SOUNDEX` Werte von zwei sehr ähnlichen Zeichenfolgen verglichen werden. Bei einer Sortierung Latin1_General `DIFFERENCE` gibt einen Wert von `4`. Im zweiten Teil des folgenden Beispiels die `SOUNDEX` Werte von zwei sehr unterschiedliche Zeichenfolgen verglichen werden, und bei einer Sortierung Latin1_General `DIFFERENCE` gibt einen Wert von `0`.  
   
 ```  
 -- Returns a DIFFERENCE value of 4, the least possible difference.  

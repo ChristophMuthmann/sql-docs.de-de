@@ -27,10 +27,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 545d3b5a0635c80f55aeb5b0a7a4e1804098e19c
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 76d0725816d3795715d396639bd213652bdf40f3
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="lower-transact-sql"></a>LOWER (Transact-SQL)
@@ -54,29 +54,6 @@ LOWER ( character_expression )
  **Varchar** oder **Nvarchar**  
   
 ## <a name="examples"></a>Beispiele  
- In diesem Beispiel werden die `LOWER`- und die `UPPER`-Funktion sowie eine Schachtelung der `UPPER`-Funktion in der `LOWER`-Funktion verwendet, um die Produktnamen auszuwählen, deren Preis zwischen 11 $ und 20 $ liegt. In diesem Beispiel wird die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank verwendet.  
-  
-```  
-SELECT LOWER(SUBSTRING(Name, 1, 20)) AS Lower,   
-   UPPER(SUBSTRING(Name, 1, 20)) AS Upper,   
-   LOWER(UPPER(SUBSTRING(Name, 1, 20))) As LowerUpper  
-FROM Production.Product  
-WHERE ListPrice between 11.00 and 20.00;  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- ```
-Lower                    Upper                    LowerUpper  
----------------------    ---------------------    --------------------  
-minipump                 MINIPUMP                 minipump 
-taillights - battery     TAILLIGHTS - BATTERY     taillights - battery  
-  
-(2 row(s) affected)
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  In diesem Beispiel werden die `LOWER`- und die `UPPER`-Funktion sowie eine Schachtelung der `UPPER`-Funktion in der `LOWER`-Funktion verwendet, um die Produktnamen auszuwählen, deren Preis zwischen 11 $ und 20 $ liegt.  
   
 ```  

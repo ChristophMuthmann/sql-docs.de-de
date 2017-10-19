@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: c2dbdf818ef15dc97020dd7b35f88cfa080537d3
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 2e16666c412870cc55024e7156752f43ddbc1800
 ms.contentlocale: de-de
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Bereitstellen Sie, führen Sie aus und überwachen Sie ein SSIS-Paket in Azure
@@ -22,7 +22,7 @@ In diesem Lernprogramm wird gezeigt, wie ein SQL Server Integration Services-Pro
 
 Bevor Sie beginnen, stellen Sie sicher, dass Sie Version 17.2 oder höher von SQL Server Management Studio verwenden. Informationen zum Herunterladen der neuesten Version von SSMS finden Sie unter [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-Stellen Sie außerdem sicher, dass Sie die SSISDB-Datenbank einrichten und der Azure-SSIS-Integrationslaufzeit bereitgestellt haben. Informationen zum Bereitstellen von SSIS in Azure finden Sie unter [Lift- and -Shift SQL Server Integration Services (SSIS)-Pakete Azure](https://docs.microsoft.com/en-us/azure/tutorial-deploy-ssis-packages-azure).
+Stellen Sie außerdem sicher, dass Sie die SSISDB-Datenbank einrichten und der Azure-SSIS-Integrationslaufzeit bereitgestellt haben. Informationen zum Bereitstellen von SSIS in Azure finden Sie unter [Lift- and -Shift SQL Server Integration Services (SSIS)-Pakete Azure](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure).
 
 ## <a name="connect-to-the-ssisdb-database"></a>Herstellen einer Verbindung mit dem SSISDB-Datenbank
 

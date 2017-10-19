@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 646999095957abb4e615b59b316b6ca59155dea3
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: ac121e600c3c616006d79892c50f796ca7cd6b3f
 ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Herstellen einer Verbindung mit der Datenbank SSISDB-Katalog in Azure
@@ -48,6 +48,9 @@ Bevor Sie beginnen, stellen Sie sicher, dass Sie Version 17.2 oder höher von SQ
    | **Kennwort** | Das Kennwort für Ihr serveradmin-Kontos | Dies ist das Kennwort, das Sie angegeben werden, wenn Sie auf den Server erstellt haben. |
 
 3. **Herstellen einer Verbindung mit dem SSISDB-Datenbank**. Wählen Sie **Optionen** , erweitern die **Verbindung mit Server herstellen** (Dialogfeld). In den erweiterten **Verbindung mit Server herstellen** wählen Sie im Dialogfeld die **Verbindungseigenschaften** Registerkarte. In der **mit Datenbank verbinden** aktivieren, oder geben Sie `SSISDB`.
+
+    > [!IMPORTANT]
+    > Wenn Sie nicht auswählen `SSISDB` , wenn Sie eine Verbindung herstellen, möglicherweise nicht im SSIS-Katalog im Objekt-Explorer angezeigt.
 
 4. Wählen Sie dann **verbinden**.
 

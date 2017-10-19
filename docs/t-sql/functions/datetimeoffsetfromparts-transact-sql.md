@@ -22,10 +22,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fe203e646f1ec0cb9732ff63ba8ee0dbe38c899a
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 665607c3b6ea9411d90137fba416d96d3d46a4c1
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
@@ -103,56 +103,6 @@ Result
 ### <a name="b-example-with-fractions-of-a-second"></a>B. Beispiel mit Sekundenbruchteilen  
 Das folgende Beispiel veranschaulicht die Verwendung von der *Brüche* und *Genauigkeit* Parameter:
 1.   Wenn *Brüche* hat den Wert 5 und *Genauigkeit* hat den Wert 1, klicken Sie dann den Wert der *Brüche* 5/10 Sekunde darstellt.  
-1.   Wenn *Brüche* verfügt über einen Wert von 50 und *Genauigkeit* hat den Wert 2, klicken Sie dann den Wert der *Brüche* 50/100 einer Sekunde darstellt.  
-1.   Wenn *Brüche* hat den Wert 500 und *Genauigkeit* hat den Wert 3, klicken Sie dann den Wert der *Brüche* 500/1000 einer Sekunde darstellt.  
-  
-```sql
-SELECT DATETIMEOFFSETFROMPARTS ( 2011, 8, 15, 14, 30, 00, 5, 12, 30, 1 );  
-SELECT DATETIMEOFFSETFROMPARTS ( 2011, 8, 15, 14, 30, 00, 50, 12, 30, 2 );  
-SELECT DATETIMEOFFSETFROMPARTS ( 2011, 8, 15, 14, 30, 00, 500, 12, 30, 3 );  
-GO  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
-----------------------------------  
-2011-08-15 14:30:00.5 +12:30  
-  
-(1 row(s) affected)  
-  
-----------------------------------  
-2011-08-15 14:30:00.50 +12:30  
-  
-(1 row(s) affected)  
-  
-----------------------------------  
-2011-08-15 14:30:00.500 +12:30  
-  
-(1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-simple-example-without-fractions-of-a-second"></a>C. Einfaches Beispiel ohne Sekundenbruchteile  
-  
-```sql
-SELECT DATETIMEOFFSETFROMPARTS ( 2010, 12, 31, 14, 23, 23, 0, 12, 0, 7 ) AS Result;  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
-Result  
--------------------------------------------  
-2010-12-07 00:00:00.0000000 +00:00  
-  
-(1 row(s) affected)  
-```  
-  
-### <a name="d-example-with-fractions-of-a-second"></a>D. Beispiel mit Sekundenbruchteilen  
-Das folgende Beispiel veranschaulicht die Verwendung von der *Brüche* und *Genauigkeit* Parameter:
-1.  Wenn *Brüche* hat den Wert 5 und *Genauigkeit* hat den Wert 1, klicken Sie dann den Wert der *Brüche* 5/10 Sekunde darstellt.  
 1.   Wenn *Brüche* verfügt über einen Wert von 50 und *Genauigkeit* hat den Wert 2, klicken Sie dann den Wert der *Brüche* 50/100 einer Sekunde darstellt.  
 1.   Wenn *Brüche* hat den Wert 500 und *Genauigkeit* hat den Wert 3, klicken Sie dann den Wert der *Brüche* 500/1000 einer Sekunde darstellt.  
   

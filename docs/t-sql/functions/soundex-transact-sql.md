@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ec170c756fd207c648e210de15df9d18024ea718
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: a31ab0658470cb614e1b9d633f19fbb1d8fe4a29
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="soundex-transact-sql"></a>SOUNDEX (Transact-SQL)
@@ -64,64 +64,13 @@ SOUNDEX ( character_expression )
   
  Möglicherweise sind die Indizes, Heaps oder CHECK-Einschränkungen, die die SOUNDEX-Funktion verwenden, nach dem Upgrade auf Kompatibilitätsgrad 110 oder höher erneut zu erstellen.  
   
--   Ein Heap, der eine permanent berechnete Spalte enthält, die mit SOUNDEX definiert wurde, kann erst abgefragt werden, wenn der Heap durch Ausführen der `ALTER TABLE <table> REBUILD`-Anweisung neu erstellt wurde.  
+-   Ein Heap, der eine persistierte berechnete Spalte enthält, die mit SOUNDEX definiert wurde, kann erst abgefragt werden, wenn der Heap durch Ausführen der `ALTER TABLE <table> REBUILD`-Anweisung neu erstellt wurde.  
   
 -   Mit SOUNDEX definierte CHECK-Einschränkungen werden beim Upgrade deaktiviert. Führen Sie zum Aktivieren der Einschränkung die `ALTER TABLE <table> WITH CHECK CHECK CONSTRAINT ALL`-Anweisung aus.  
   
--   Indizes (einschließlich indizierter Sichten), die eine permanent berechnete Spalte enthalten, die mit SOUNDEX definiert wurde, können erst abgefragt werden, wenn der Index durch Ausführen der `ALTER INDEX ALL ON <object> REBUILD`-Anweisung neu erstellt wurde.  
+-   Indizes (einschließlich indizierter Sichten), die eine persistierte berechnete Spalte enthalten, die mit SOUNDEX definiert wurde, können erst abgefragt werden, wenn der Index durch Ausführen der `ALTER INDEX ALL ON <object> REBUILD`-Anweisung neu erstellt wurde.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel zeigt die SOUNDEX-Funktion sowie die verwandte DIFFERENCE-Funktion. Im ersten Beispiel werden die standardmäßigen `SOUNDEX`-Werte für alle Konsonanten zurückgegeben. Die Rückgabe von `SOUNDEX` für `Smith` und `Smythe` ergibt das gleiche SOUNDEX-Ergebnis, da alle Vokale, der Buchstabe `y`, doppelt vorhandene Buchstaben und der Buchstabe `h` nicht einbezogen werden.  
-  
-```  
--- Using SOUNDEX  
-SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Dies gilt für eine Sortierung Latin1_General.  
-  
-```  
-  
------ -----   
-S530  S530    
-  
-(1 row(s) affected)  
-```  
-  
- Die `DIFFERENCE`-Funktion vergleicht den Unterschied der Werte, die von der `SOUNDEX`-Funktion zurückgegeben werden. Das folgende Beispiel zeigt zwei Zeichenfolgen, die sich nur in den Vokalen unterscheiden. Der zurückgegebene Wert beträgt `4` (größtmögliche Übereinstimmung).  
-  
-```  
--- Using DIFFERENCE  
-SELECT DIFFERENCE('Smithers', 'Smythers');  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Dies gilt für eine Sortierung Latin1_General.  
-  
-```  
------------   
-4             
-  
-(1 row(s) affected)  
-```  
-  
- Im folgenden Beispiel weisen die Zeichenfolgen unterschiedliche Konsonanten auf; die Funktion gibt daher den Wert `2` (geringere Übereinstimmung) zurück.  
-  
-```  
-SELECT DIFFERENCE('Anothers', 'Brothers');  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Dies gilt für eine Sortierung Latin1_General.  
-  
-```  
------------   
-2             
-  
-(1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Das folgende Beispiel zeigt die SOUNDEX-Funktion sowie die verwandte DIFFERENCE-Funktion. Im ersten Beispiel werden die standardmäßigen `SOUNDEX`-Werte für alle Konsonanten zurückgegeben. Die Rückgabe von `SOUNDEX` für `Smith` und `Smythe` ergibt das gleiche SOUNDEX-Ergebnis, da alle Vokale, der Buchstabe `y`, doppelt vorhandene Buchstaben und der Buchstabe `h` nicht einbezogen werden.  
   
 ```  

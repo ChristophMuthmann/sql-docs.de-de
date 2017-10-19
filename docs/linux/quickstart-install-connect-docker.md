@@ -4,16 +4,16 @@ description: "Dieser Schnellstart-Lernprogramm zeigt, wie Docker Container-Image
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 10/02/2017
+ms.date: 10/12/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.translationtype: MT
-ms.sourcegitcommit: 7811cfe9238c92746673fac4fce40a4af44d6dcd
-ms.openlocfilehash: dc105fd46a14d241bb375f0d7f3a6c5471797818
+ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
+ms.openlocfilehash: 99d9395898c4a3ff55bb34278749ec0ea2fae77b
 ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/14/2017
 
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>Führen Sie die 2017 von SQL Server-Container-Image mit Docker
@@ -60,52 +60,48 @@ Die folgenden Schritte geben Sie Speicher für Docker für Windows auf 4 GB.
 
 1. Ziehen Sie die SQL Server 2017 Linux-Container-Image von Docker Hub.
 
-    ```bash
-    docker pull microsoft/mssql-server-linux:2017-latest
-    ```
+   ```bash
+   docker pull microsoft/mssql-server-linux:2017-latest
+   ```
 
-    > [!TIP]
-    > Für Linux, abhängig von Ihrer Konfiguration System- und Benutzer müssen möglicherweise jede voranzustellen `docker` mit `sudo`.
+   > [!TIP]
+   > Für Linux, abhängig von Ihrer Konfiguration System- und Benutzer müssen möglicherweise jede voranzustellen `docker` mit `sudo`.
 
-    > [!NOTE]
-    > Den oben aufgeführten Befehl abruft, das SQL Server 2017 GA-containerimage. Wenn Sie ein bestimmtes Abbild abrufen möchten, fügen einen Doppelpunkt und der Name des Tags (z. B. `microsoft/mssql-server-linux:rc1`). Um alle verfügbaren Images anzeigen zu können, finden Sie unter [der Mssql-Server-Linux-Docker Hub-Seite](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
+   > [!NOTE]
+   > Den oben aufgeführten Befehl ruft das neueste 2017 von SQL Server-Container-Bild. Wenn Sie ein bestimmtes Abbild abrufen möchten, fügen einen Doppelpunkt und der Name des Tags (z. B. `microsoft/mssql-server-linux:2017-GA`). Um alle verfügbaren Images anzeigen zu können, finden Sie unter [der Mssql-Server-Linux-Docker Hub-Seite](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
 
-1. Um die Container-Image mit Docker auszuführen, können Sie den folgenden Befehl in einem Bash-Shell (Linux/MacOS):
+1. Um die Container-Image mit Docker auszuführen, können Sie den folgenden Befehl aus einer Bash-Shell (Linux/MacOS) oder das PowerShell-Eingabeaufforderung mit erhöhten Rechten. Der einzige Unterschied umfasst einfachen und doppelte Anführungszeichen.
 
-    ```bash
-    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -e 'MSSQL_PID=Developer' -p 1401:1433 --name sql1 -d microsoft/mssql-server-linux:2017-latest
-    ```
+   ```bash
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 --name sql1 -d microsoft/mssql-server-linux:2017-latest
+   ```
 
-    Wenn Sie Docker für Windows verwenden, verwenden Sie den folgenden Befehl an einer PowerShell-Eingabeaufforderung:
+   ```PowerShell
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 --name sql1 -d microsoft/mssql-server-linux:2017-latest
+   ```
 
-    ```PowerShell
-    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" -p 1401:1433 --name sql1 -d microsoft/mssql-server-linux:2017-latest
-    ```
+   > [!NOTE]
+   > Dies erstellt standardmäßig einen Container mit der Developer-Edition von SQL Server-2017. Der Prozess zum Ausführen von Produktions-Editionen in Containern ist etwas anders. Weitere Informationen finden Sie unter [ausführen Produktion containerimages](sql-server-linux-configure-docker.md#production).
 
-    > [!NOTE]
-    > Der einzige Unterschied zwischen der Bash (Linux/MacOS) und dem PowerShell (Windows)-Beispiel ist die einfache Anführungszeichen und doppelte Anführungszeichen um die Umgebungsvariablen. "Docker run" Befehl schlägt fehl, wenn Sie die falsche Datei verwenden. Im Rest dieses Themas werden Bash und PowerShell-Codeblöcken der Einfachheit halber bereitgestellt. Ist nur ein Beispiel, funktioniert es auf allen Plattformen, einschließlich Windows.
+   Die folgende Tabelle enthält eine Beschreibung der Parameter in der vorherigen `docker run` Beispiel:
 
-    Die folgende Tabelle enthält eine Beschreibung der Parameter in der vorherigen `docker run` Beispiel:
-
-    | Parameter | Description |
-    |-----|-----|
-    | **-e "ACCEPT_EULA = Y"** |  Legen Sie die **ACCEPT_EULA** -Variable auf einen beliebigen Wert und bestätigen Sie Ihre Zustimmung zu den [Endbenutzer-Lizenzvertrag](http://go.microsoft.com/fwlink/?LinkId=746388). Erforderlich für das Image von SQL Server festlegen. |
-    | **-e "MSSQL_SA_PASSWORD =\<YourStrong! Passw0rd\>"** | Geben Sie Ihren eigenen sicheres Kennwort, das mindestens 8 Zeichen lang und erfüllt [kennwortanforderungen wie SQL Server](../relational-databases/security/password-policy.md). Erforderlich für das Image von SQL Server festlegen. |
-    | **-e "MSSQL_PID = Entwickler"** | Gibt die Edition oder Product Key an. In diesem Beispiel wird kostenlos lizenzierte Developer Edition nicht für die Produktion zu Testzwecken verwendet. Weitere Werte finden Sie unter [konfigurieren Sie SQL Server-Einstellungen mit Umgebungsvariablen unter Linux](sql-server-linux-configure-environment-variables.md). |
-    | **p - 1401:1433** | Zuordnen von TCP-Port für die hostumgebung (erster Wert) mit einem TCP-Port im Container (zweite Wert). In diesem Beispiel wird SQL Server lauscht an TCP 1433 im Container, und dies ist an den Port nach 1401, auf dem Host verfügbar gemacht. |
-    | **– Name sql1** | Geben Sie einen benutzerdefinierten Namen für den Container, anstatt eine zufällig generierte. Wenn Sie mehrere Container ausführen, können nicht Sie diesen Namen wiederverwenden. |
-    | **Microsoft/Mssql-Server-Linux:2017-neueste** | Das SQL Server 2017 Linux-Container-Bild. |
-
+   | Parameter | Description |
+   |-----|-----|
+   | **-e "ACCEPT_EULA = Y"** |  Legen Sie die **ACCEPT_EULA** -Variable auf einen beliebigen Wert und bestätigen Sie Ihre Zustimmung zu den [Endbenutzer-Lizenzvertrag](http://go.microsoft.com/fwlink/?LinkId=746388). Erforderlich für das Image von SQL Server festlegen. |
+   | **-e "MSSQL_SA_PASSWORD =\<YourStrong! Passw0rd\>"** | Geben Sie Ihren eigenen sicheres Kennwort, das mindestens 8 Zeichen lang und erfüllt die [SQL Server-kennwortanforderungen](../relational-databases/security/password-policy.md). Erforderlich für das Image von SQL Server festlegen. |
+   | **p - 1401:1433** | Zuordnen von TCP-Port für die hostumgebung (erster Wert) mit einem TCP-Port im Container (zweite Wert). In diesem Beispiel wird SQL Server lauscht an TCP 1433 im Container, und dies ist an den Port nach 1401, auf dem Host verfügbar gemacht. |
+   | **– Name sql1** | Geben Sie einen benutzerdefinierten Namen für den Container, anstatt eine zufällig generierte. Wenn Sie mehrere Container ausführen, können nicht Sie diesen Namen wiederverwenden. |
+   | **Microsoft/Mssql-Server-Linux:2017-neueste** | Das SQL Server 2017 Linux-Container-Bild. |
 
 1. Verwenden Sie zum Anzeigen der Docker-Containers die `docker ps` Befehl.
 
-    ```bash
-    docker ps -a
-    ```
+   ```bash
+   docker ps -a
+   ```
 
-    Ähnlich wie im folgenden Bildschirmfoto Ausgabe sollte angezeigt werden:
+   Ähnlich wie im folgenden Bildschirmfoto Ausgabe sollte angezeigt werden:
 
-    ![Ps-Befehlsausgabe docker](./media/sql-server-linux-setup-docker/docker-ps-command.png)
+   ![Ps-Befehlsausgabe docker](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
 1. Wenn die **STATUS** Spalte zeigt den Status **einrichten**, klicken Sie dann SQL Server ausgeführt wird, in dem Container und am Port gelauscht angegeben, der **PORTS** Spalte. Wenn die **STATUS** Spalte für die SQL Server-Container zeigt **Exited**, finden Sie unter der [Problembehandlung Abschnitt des Handbuchs Konfiguration](sql-server-linux-configure-docker.md#troubleshooting).
 
@@ -130,15 +126,15 @@ Die folgenden Schritte verwenden den SQL Server-Befehlszeilentool **Sqlcmd**, in
 
 1. Verwenden der `docker exec -it` Befehl zum Starten einer interaktiven Bash-Shell innerhalb Ihres Containers ausgeführt. Im folgenden Beispiel `sql1` wird angegeben, indem die `--name` -Parameter, wenn Sie bei der Erstellung des Containers.
 
-    ```bash
-    docker exec -it sql1 "bash"
-    ```
+   ```bash
+   docker exec -it sql1 "bash"
+   ```
 
 1. Einmal innerhalb des Containers, verbinden Sie lokal mit Sqlcmd. Sqlcmd ist nicht im Pfad standardmäßig, daher Sie den vollständigen Pfad angeben müssen.
 
-    ```bash
-    /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourNewStrong!Passw0rd>'
-    ```
+   ```bash
+   /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourNewStrong!Passw0rd>'
+   ```
 
    > [!TIP]
    > Sie können das Kennwort in der Befehlszeile auslassen, damit Sie aufgefordert werden, es einzugeben.

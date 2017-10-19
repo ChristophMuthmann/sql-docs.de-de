@@ -23,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: 936a53d9174b199860432e0cfcb9c8add97529ca
+ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
+ms.openlocfilehash: 27eeb54d6493bb200e56caada1238d6fafb5b339
 ms.contentlocale: de-de
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
@@ -95,7 +95,7 @@ FROM OPENJSON(@json)
 |Schlüssel|value|Typ|  
 |---------|-----------|----------|  
 |StringValue|John|1|  
-|IntValue|Doe|2|  
+|IntValue|45|2|  
 |trueValue|true|3|  
 |falseValue|false|3|  
 |nullValue|NULL|0|  

@@ -22,10 +22,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3365c40b5bc4fb57a8e09cc97e706a16fbd709ec
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: a94584788187162e4cd7d433d71653a04c5103e2
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="datefromparts-transact-sql"></a>DATEFROMPARTS (Transact-SQL)
@@ -60,23 +60,6 @@ Ganzzahliger Ausdruck, der einen Tag angibt.
 Diese Funktion kann remote auf [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-Servern oder höher ausgeführt werden. Eine Remoteausführung auf Servern mit einer Version unter [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ist nicht möglich.
   
 ## <a name="examples"></a>Beispiele  
-Das folgende Beispiel veranschaulicht die **DATEFROMPARTS** Funktion.
-  
-```sql
-SELECT DATEFROMPARTS ( 2010, 12, 31 ) AS Result;  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
-Result  
-----------------------------------  
-2010-12-31  
-  
-(1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Das folgende Beispiel veranschaulicht die **DATEFROMPARTS** Funktion.
   
 ```sql

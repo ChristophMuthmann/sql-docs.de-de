@@ -9,10 +9,10 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 78778dd3f43872fd6d97ae042cc337a68b6bab2c
+ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
+ms.openlocfilehash: 1f3cc214be4eaac2199c17c3bea1da7fd02956f1
 ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/14/2017
 
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Wiederherstellen einer SQL Server-Datenbank in einem Linux-Docker-container
@@ -59,17 +59,22 @@ Dieses Lernprogramm veranschaulicht, wie verschoben und Wiederherstellen einer S
 
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
-       --name 'sql1' -e 'MSSQL_PID=Developer' -p 1401:1433 \
-       -v sql1data:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+       --name 'sql1' -p 1401:1433 \
+       -v sql1data:/var/opt/mssql \
+       -d microsoft/mssql-server-linux:2017-latest
     ```
 
     ```PowerShell
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
-       --name "sql1" -e "MSSQL_PID=Developer" -p 1401:1433 `
-       -v sql1data:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+       --name "sql1" -p 1401:1433 `
+       -v sql1data:/var/opt/mssql `
+       -d microsoft/mssql-server-linux:2017-latest
     ```
 
-    Dieser Befehl erstellt einen 2017 von SQL Server-Container mit dem **Developer** Edition. SQL Server-Port **1433** wird verfügbar gemacht werden, auf dem Host als Port **1401**. Das optionale `-v sql1data:/var/opt/mssql` Parameter erstellt einen Daten-Volume-Container mit dem Namen **sql1ddata**. Dient zur persistenten Speicherung der Daten, die von SQL Server erstellt.
+    Dieser Befehl erstellt einen 2017 von SQL Server-Container mit der Developer Edition (Standard). SQL Server-Port **1433** wird verfügbar gemacht werden, auf dem Host als Port **1401**. Das optionale `-v sql1data:/var/opt/mssql` Parameter erstellt einen Daten-Volume-Container mit dem Namen **sql1ddata**. Dient zur persistenten Speicherung der Daten, die von SQL Server erstellt.
+
+   > [!NOTE]
+   > Der Prozess zum Ausführen von SQL Server-Editionen Produktion in Containern ist etwas anders. Weitere Informationen finden Sie unter [ausführen Produktion containerimages](sql-server-linux-configure-docker.md#production). Wenn Sie die gleichen Containernamen und Ports verwenden, funktioniert die restliche in dieser exemplarischen Vorgehensweise weiterhin mit Produktions-Containern.
 
 1. Verwenden Sie zum Anzeigen der Docker-Containers die `docker ps` Befehl.
 

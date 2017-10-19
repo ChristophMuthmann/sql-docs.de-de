@@ -26,16 +26,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0ee3350b200f0f42203a89d06ddb587b0792ee18
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 2189ba0ca7245fcd098d2af55b381afc465a7fab
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt Informationen zu schemabezogenen Objekten in der aktuellen Datenbank zurück. Eine Liste der Objekte mit Schemabereich, finden Sie unter [sys.objects & #40; Transact-SQL & #41; ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). Diese Funktion kann nicht für Objekte ohne Schemabereich verwendet werden, wie z. B. DDL-Trigger (DDL, Data Definition Language) und Ereignisbenachrichtigungen.  
+  Gibt Informationen zu schemabezogenen Objekten in der aktuellen Datenbank zurück. Eine Liste der Objekte mit Schemabereich, finden Sie unter [sys.objects &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). Diese Funktion kann nicht für Objekte ohne Schemabereich verwendet werden, wie z. B. DDL-Trigger (DDL, Data Definition Language) und Ereignisbenachrichtigungen.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -218,15 +218,15 @@ GO
 0
 ```  
   
-### <a name="c-finding-the-objects-that-belong-to-a-specific-schema"></a>C. Suchen der Objekte, die zu einem bestimmten Schema gehören  
- Im folgenden Beispiel wird die `SchemaId`-Eigenschaft verwendet, um alle Objekte zurückzugeben, die dem Schema `Production` angehören.  
+### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>"C:" Suchen in den Tabellen, die zu einem bestimmten Schema gehören  
+ Im folgenden Beispiel werden alle Tabellen im Dbo-Schema zurückgegeben.  
   
 ```  
-USE AdventureWorks2012;  
-GO  
+-- Uses AdventureWorks  
+  
 SELECT name, object_id, type_desc  
 FROM sys.objects   
-WHERE OBJECTPROPERTY(object_id, N'SchemaId') = SCHEMA_ID(N'Production')  
+WHERE OBJECTPROPERTY(object_id, N'SchemaId') = SCHEMA_ID(N'dbo')  
 ORDER BY type_desc, name;  
 GO  
 ```  
@@ -246,26 +246,13 @@ ELSE
 GO  
 ```  
   
-### <a name="e-finding-the-tables-that-belong-to-a-specific-schema"></a>"E:" Suchen in den Tabellen, die zu einem bestimmten Schema gehören  
- Im folgenden Beispiel werden alle Tabellen im Dbo-Schema zurückgegeben.  
-  
-```  
--- Uses AdventureWorks  
-  
-SELECT name, object_id, type_desc  
-FROM sys.objects   
-WHERE OBJECTPROPERTY(object_id, N'SchemaId') = SCHEMA_ID(N'dbo')  
-ORDER BY type_desc, name;  
-GO  
-```  
-  
 ## <a name="see-also"></a>Siehe auch  
- [COLUMNPROPERTY & #40; Transact-SQL & #41;](../../t-sql/functions/columnproperty-transact-sql.md)   
- [Metadatenfunktionen & #40; Transact-SQL & #41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [OBJECTPROPERTYEX & #40; Transact-SQL & #41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   
- [ALTER AUTHORIZATION & #40; Transact-SQL & #41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [TYPEPROPERTY & #40; Transact-SQL & #41;](../../t-sql/functions/typeproperty-transact-sql.md)   
- [Sys.Objects & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+ [COLUMNPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
+ [Metadatenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [OBJECTPROPERTYEX &#40; Transact-SQL &#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [TYPEPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
+ [Sys.Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   
 

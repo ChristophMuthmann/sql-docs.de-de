@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: bdfc7ef9eb8048f1009f3c7f1a61533b6b620f37
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 4b39b8dce2a9d6b940936a6d7072fc41c2b67e8f
 ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Konfigurieren von SQL Server-2017 Container Bilder auf Docker
@@ -32,7 +32,47 @@ Führen Sie zum Abrufen, und führen Sie die Docker Container-Image für SQL Ser
 
 - [Führen Sie die 2017 von SQL Server-Container-Image mit Docker](quickstart-install-connect-docker.md)
 
-Dieses Thema stellt zusätzliche Verbindungs- und Szenarien für die Verwendung in den folgenden Abschnitten.
+Dieses Thema enthält Szenarien für die weitere Verwendung in den folgenden Abschnitten.
+
+## <a id="production"></a>Führen Sie Produktion containerimages
+
+Schnellstart-Tutorial im vorherigen Abschnitt führt die kostenlose Developer Edition von SQL Server von Docker Hub. Die meisten Informationen gilt weiterhin, wenn Produktion containerimages, z. B. Enterprise, Standard oder Web Edition ausgeführt werden soll. Es gibt jedoch einige Unterschiede, die im folgenden beschrieben werden.
+
+- Sie können nur SQL Server in einer produktionsumgebung verwenden, wenn Sie eine gültige Lizenz verfügen. Sie erhalten eine kostenlose Lizenz für SQL Server Express Produktion [hier](https://go.microsoft.com/fwlink/?linkid=857693). Lizenzen für SQL Server Standard und Enterprise Edition stehen über [Microsoft Volume Licensing](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs.aspx).
+
+- Produktion SQL Server-Container-Images müssen von abgerufen werden [Docker Store](https://store.docker.com). Wenn Sie einen noch nicht haben, erstellen Sie ein Konto im Docker-Speicher.
+
+- Die Developer-Container-Abbild auf Docker-Speicher kann die Produktions-Editionen ausgeführt konfiguriert werden. Verwenden Sie die folgenden Schritte aus, um die Produktion-Editionen ausgeführt:
+
+   1. Melden Sie sich zunächst auf die Docker-Id über die Befehlszeile.
+
+      ```bash
+      docker login
+      ```
+
+   1. Als Nächstes müssen Sie freien Entwickler containerimage in Docker-Informationsspeicher abzurufen. Wechseln Sie zu [https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux), klicken Sie auf **zur Kasse**, und befolgen Sie die Anweisungen.
+
+   1. Überprüfen Sie die Anforderungen und Prozeduren ausführen, der [quick Start-Lernprogramm](quickstart-install-connect-docker.md). Es gibt jedoch zwei Unterschiede. Sie müssen das Image per Pull beziehen **Store/Microsoft/Mssql-Server – Linux:\<Tagname\>**  Docker Store. Außerdem müssen Sie angeben, die Produktion Edition mit der **MSSQL_PID** -Umgebungsvariablen angegeben. Im folgende Beispiel wird gezeigt, wie das neueste 2017 von SQL Server-Container-Bild für die Enterprise Edition ausgeführt wird:
+
+      ```bash
+      docker run --name sqlenterprise \
+         -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
+         -e 'MSSQL_PID=Enterprise' -p 1433:1433 \
+         -d store/microsoft/mssql-server-linux:2017-latest
+      ```
+
+      ```PowerShell
+      docker run --name sqlenterprise `
+         -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
+         -e "MSSQL_PID=Enterprise" -p 1433:1433 `
+         -d "store/microsoft/mssql-server-linux:2017-latest"
+      ```
+
+      > [!IMPORTANT]
+      > Durch Übergeben des Werts **Y** der Umgebungsvariable **ACCEPT_EULA** und eines Werts Edition in **MSSQL_PID**, Sie sind, stehen Ihnen eine Lizenz gültige und vorhandene für Ausdrücken die Edition und die Version von SQL Server, die Sie verwenden möchten. Sie erklären sich auch, dass die Verwendung der SQL Server-Software auf einem Docker-Container-Abbild von den Bestimmungen des SQL Server-Lizenz geregelt werden wird.
+
+      > [!NOTE]
+      > Eine vollständige Liste der möglichen Werte für **MSSQL_PID**, finden Sie unter [konfigurieren Sie SQL Server-Einstellungen mit Umgebungsvariablen unter Linux](sql-server-linux-configure-environment-variables.md).
 
 ## <a name="connect-and-query"></a>Eine Verbindung herstellen und Abfragen
 

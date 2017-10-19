@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e8033e1690fcaa01ca73ce1a7d0d9972ac2d3ba9
+ms.sourcegitcommit: 5051d2d668105bd0a309eb64f2b8becd459d8a6b
+ms.openlocfilehash: 097978fa39709dc3c5cd1b8ef150ce4f4c189b17
 ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="securing-jdbc-driver-applications"></a>Sichern von JDBC-Treiberanwendungen
@@ -33,12 +33,13 @@ ms.lasthandoff: 09/09/2017
 |Thema|Description|  
 |-----------|-----------------|  
 |[Sichern von Verbindungszeichenfolgen](../../connect/jdbc/securing-connection-strings.md)|Beschreibt Verfahren zum Schützen von Informationen, mit denen eine Verbindung mit einer Datenquelle hergestellt wird.|  
-|[Validieren von Benutzereingaben](../../connect/jdbc/validating-user-input.md)|Beschreibt Verfahren zum Überprüfen von Benutzereingaben.|  
+|[Überprüfen der Benutzereingabe](../../connect/jdbc/validating-user-input.md)|Beschreibt Verfahren zum Überprüfen von Benutzereingaben.|  
 |[Anwendungssicherheit](../../connect/jdbc/application-security.md)|Beschreibt die Verwendung von Java-Richtlinienberechtigungen zum Sichern einer JDBC-Treiberanwendung.|  
-|[Mithilfe von SSL-Verschlüsselung](../../connect/jdbc/using-ssl-encryption.md)|Beschreibt das Herstellen ein sicheren Kommunikationskanals mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datenbank mithilfe von Secure Sockets Layer (SSL).|  
-|[FIPS-Modus](../../connect/jdbc/fips-mode.md)|Beschreibt, wie JDBC-Treiber im FIPS-Antragsteller-Modus verwenden.| 
+|[Verwenden der SSL-Verschlüsselung](../../connect/jdbc/using-ssl-encryption.md)|Beschreibt das Herstellen ein sicheren Kommunikationskanals mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Datenbank mithilfe von Secure Sockets Layer (SSL).|  
+|[FIPS-Modus](../../connect/jdbc/fips-mode.md)|Beschreibt, wie JDBC-Treiber im FIPS-kompatiblen Modus verwendet wird.| 
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über die JDBC-Treiber](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [Overview of the JDBC Driver (Übersicht über den JDBC-Treiber)](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
+
