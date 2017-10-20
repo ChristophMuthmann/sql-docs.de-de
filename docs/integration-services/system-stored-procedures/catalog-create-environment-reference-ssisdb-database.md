@@ -28,7 +28,7 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>Syntax  
   
-```tsql  
+```sql  
 create_environment_reference [ @folder_name = ] folder_name  
      , [ @project_name = ] project_name  
      , [ @environment_name = ] environment_name  

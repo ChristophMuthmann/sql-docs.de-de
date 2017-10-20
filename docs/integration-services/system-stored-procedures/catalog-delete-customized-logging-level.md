@@ -28,7 +28,7 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>Syntax  
   
-```tsql  
+```sql  
 delete_customized_logging_level [ @level_name = ] level_name  
   
 ```  

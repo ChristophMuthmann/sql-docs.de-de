@@ -28,7 +28,7 @@ Fügt eine [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale O
 
 ## <a name="syntax"></a>Syntax
 
-```tsql
+```sql
 add_execution_worker [@execution_id = ] execution_id, [@workeragent_id = ] workeragent_id
 ```
 

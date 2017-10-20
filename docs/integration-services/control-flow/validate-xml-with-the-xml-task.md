@@ -84,7 +84,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="analyze-xml-validation-output-with-a-transact-sql-query"></a>Analysieren der XML-Validierungsausgabe mit einer Transact-SQL-Abfrage  
  Wenn die Ausgabe der XML-Validierung sehr viele Fehler enthält, können Sie die Ausgabe mit einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]laden. Danach können Sie die Fehlerliste mit allen Funktionen der Programmiersprache T-SQL, einschließlich WHERE, GROUP BY, ORDER BY, JOIN usw. analysieren.  
   
-```tsql  
+```sql  
 DECLARE @xml XML;  
   
 SELECT @xml = XmlDoc     

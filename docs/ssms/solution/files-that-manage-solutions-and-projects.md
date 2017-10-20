@@ -23,40 +23,42 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 13c811a0c616a9ef859e86c688804c829ec0d9f0
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: ae75460f02779117b9c6061ab676795796215c09
 ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>Dateien zum Verwalten von Projektmappen und Projekten
- <a name="-this-topic-describes-the-file-types-that-are-specific-to-includemsconameincludesmsconamemdmd-includessmanstudiofullincludesssmanstudiofullmdmd-by-default-all-solutions-and-their-projects-are-created-in-my-documentssql-server-management-studio-projects"></a>In diesem Thema werden die Dateitypen von [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] beschrieben. Standardmäßig werden alle Projektmappen und Projekte im Verzeichnis \Meine Dokumente\SQL Server Management Studio Projects erstellt.  
- -  
- –## Management Studio-Projektmappendateien  
- -[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] verwendet andere Dateitypen als [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] oder [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio. Dies bedeutet, dass Sie eine [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] -Projektmappe nicht in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] oder in Visual Studio öffnen können. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] Projektmappendateien ermöglichen dem Projektmappen-Explorer, eine grafische Benutzeroberfläche zum Verwalten Ihrer Dateien anzuzeigen.  
- -  
- -|Erweiterung|Dateityp|Description|Erstellt von|  
- -|-------------|-------------|---------------|--------------|  
- -|SSMSSLN|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] Projektmappenobjekt|Stellt der Umgebung Verweise auf den Speicherort auf dem Datenträger von [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Projekten, -Projektelementen und -Projektmappen bereit|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]|  
- -  
- –## Management Studio-Projektdateien  
- In derselben Weise, wie Projektmappen Projektmappendateien zum Verwalten von Objekten in einer Projektmappe enthalten, enthalten Projekte Projektdateien. Der Projektdateityp, der von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] für ein Projekt erstellt wird, hängt von der Vorlage ab, mit der das Projekt erstellt wurde. In der folgenden Tabelle werden die Dateitypen beschrieben, die für die einzelnen Projekte erstellt werden.  
- -  
- -|Erweiterung|Projektvorlage|  
- -|-------------|--------------------|  
- -|SSMSSQLPROJ|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Skriptprojekt|  
- -|SSMSASPROJ|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] Skriptprojekt|  
- -  
- –## Speicherort für Dateien auf Projektmappenebene  
- Standardmäßig werden Dateien auf Projektmappenebene im physischen Verzeichnis des ersten Projekts erstellt, das mit der Projektmappe erstellt wird. Sie können ein Verzeichnis für die Projektmappe angeben, indem Sie eine Projektmappe erstellen. Sie können das Verzeichnis auch angeben, wenn Sie ein neues Projekt erstellen.  
- -  
- Wenn eine Verzeichnisstruktur vorhanden ist, die der logischen Struktur im Projektmappen-Explorer ähnelt, lassen sich Projekt- und Projektmappendateien einfacher suchen und mit anderen Entwicklern im Team gemeinsam nutzen.  
- -  
- – ## Siehe auch  
- -[Verwalten von Dateien mit Codierung](../../ssms/solution/manage-files-with-encoding.md)  
- -[Sonstige Dateien](../../ssms/solution/miscellaneous-files.md)  
- -[Projektmappen-Explorer](../../ssms/solution/solution-explorer.md)  
- -[Projektmappen (SQL Server Management Studio)](../../ssms/solution/solutions-sql-server-management-studio.md)  
- -[Projekte (SQL Server Management Studio)](../../ssms/solution/projects-sql-server-management-studio.md)  
- -[Quellcodeverwaltung des Projektmappen-Explorers](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  
+ In diesem Thema werden die Dateitypen von [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]beschrieben. Standardmäßig werden alle Projektmappen und Projekte im Verzeichnis \Meine Dokumente\SQL Server Management Studio Projects erstellt.  
+
+
+## <a name="management-studio-solution-files"></a>Management Studio-Projektmappendateien  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] verwendet andere Dateitypen als [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] oder [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio. Dies bedeutet, dass Sie eine [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] -Projektmappe nicht in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] oder in Visual Studio öffnen können. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] Projektmappendateien ermöglichen dem Projektmappen-Explorer, eine grafische Benutzeroberfläche zum Verwalten Ihrer Dateien anzuzeigen.  
+   
+|Erweiterung|Dateityp|Description|Erstellt von|  
+|-------------|-------------|---------------|--------------|  
+|SSMSSLN|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] Projektmappenobjekt|Stellt der Umgebung Verweise auf den Speicherort auf dem Datenträger von [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Projekten, -Projektelementen und -Projektmappen bereit|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]|  
   
+## <a name="management-studio-project-files"></a>Management Studio-Projektdateien  
+In derselben Weise, wie Projektmappen Projektmappendateien zum Verwalten von Objekten in einer Projektmappe enthalten, enthalten Projekte Projektdateien. Der Projektdateityp, der von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] für ein Projekt erstellt wird, hängt von der Vorlage ab, mit der das Projekt erstellt wurde. In der folgenden Tabelle werden die Dateitypen beschrieben, die für die einzelnen Projekte erstellt werden.  
+   
+|Erweiterung|Projektvorlage|  
+|-------------|--------------------|  
+|SSMSSQLPROJ|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Skriptprojekt|  
+|SSMSASPROJ|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] Skriptprojekt|  
+   
+## <a name="location-of-solution-level-files"></a>Speicherort für Dateien auf Projektmappenebene  
+Standardmäßig werden Dateien auf Projektmappenebene im physischen Verzeichnis des ersten Projekts erstellt, das mit der Projektmappe erstellt wird. Sie können ein Verzeichnis für die Projektmappe angeben, indem Sie eine Projektmappe erstellen. Sie können das Verzeichnis auch angeben, wenn Sie ein neues Projekt erstellen.  
+ 
+Wenn eine Verzeichnisstruktur vorhanden ist, die der logischen Struktur im Projektmappen-Explorer ähnelt, lassen sich Projekt- und Projektmappendateien einfacher suchen und mit anderen Entwicklern im Team gemeinsam nutzen.  
+   
+## <a name="see-also"></a>Siehe auch  
+[Verwalten von Dateien mit Codierung](../../ssms/solution/manage-files-with-encoding.md)  
+[Sonstige Dateien](../../ssms/solution/miscellaneous-files.md)  
+[Projektmappen-Explorer](../../ssms/solution/solution-explorer.md)  
+[Projektmappen &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
+[Projekte &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
+[Quellcodeverwaltung des Projektmappen-Explorers](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  
+  
+

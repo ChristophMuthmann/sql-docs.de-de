@@ -34,7 +34,7 @@ Anleitungen Verknüpfung von einer Datenbankrolle finden Sie unter [Verknüpfen 
 Rufen Sie die gespeicherte Prozedur [Catalog]. [Update_logdb_info] mit Sql Server-Name und Verbindung Zeichenfolge als Parameter.
 
 #### <a name="example"></a>Beispiel
-```tsql
+```sql
 SET @serverName = CONVERT(sysname, SERVERPROPERTY('servername'))
 SET @connectionString = 'Data Source=' + @serverName + ';Initial Catalog=SSISDB;Integrated Security=SSPI;'
 EXEC [internal].[update_logdb_info] @serverName, @connectionString

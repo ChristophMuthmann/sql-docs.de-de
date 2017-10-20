@@ -38,7 +38,7 @@ ms.lasthandoff: 04/11/2017
  
  Führen Sie die folgende Anweisung aus, um zu ermitteln, wie viel Speicherplatz eine Stretch-aktivierte Tabelle in SQL Server verwendet.
  
- ```tsql
+ ```sql
 USE <Stretch-enabled database name>;
 GO
 EXEC sp_spaceused '<Stretch-enabled table name>', 'true', 'LOCAL_ONLY';
@@ -65,7 +65,7 @@ GO
  
 Führen Sie die folgende Anweisung aus, um zu ermitteln, wie viel Speicherplatz eine Stretch-aktivierte Tabelle in Azure verwendet.
  
- ```tsql
+ ```sql
 USE <Stretch-enabled database name>;
 GO
 EXEC sp_spaceused '<Stretch-enabled table name>', 'true', 'REMOTE_ONLY';
@@ -119,7 +119,7 @@ Wenn Sie Spalten aus der Remotetabelle versehentlich gelöscht haben, führen Si
   
 Die folgende Abfrage gibt z. B. nur lokale Ergebnisse zurück.  
   
- ```tsql  
+ ```sql  
 USE <Stretch-enabled database name>;
 GO
 SELECT * FROM <Stretch_enabled table name> WITH (REMOTE_DATA_ARCHIVE_OVERRIDE = LOCAL_ONLY) WHERE ... ;

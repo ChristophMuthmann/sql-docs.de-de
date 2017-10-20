@@ -30,7 +30,7 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="syntax"></a>Syntax  
   
-```tsql  
+```sql  
 set_execution_parameter_value [ @execution_id = execution_id  
     , [ @object_type = ] object_type  
     , [ @parameter_name = ] parameter_name  

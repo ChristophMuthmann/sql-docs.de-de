@@ -73,7 +73,7 @@ Um eine gelöschte Azure-Datenbank im Azure-Portal in dem Zustand wiederherzuste
   
     -   Geben Sie an, ob eine Kopie der Remotedaten erstellt und eine Verbindung mit der Kopie hergestellt werden soll (empfohlen).  
   
-    ```tsql  
+    ```sql  
     USE <Stretch-enabled database name>;
     GO
     EXEC sp_rda_reauthorize_db

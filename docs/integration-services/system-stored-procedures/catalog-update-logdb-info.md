@@ -27,7 +27,7 @@ Update der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale O
 
 ## <a name="syntax"></a>Syntax
 
-```tsql
+```sql
 update_logdb_info [@server_name = ] server_name, [@connection_string = ] connection_string
 ```
 

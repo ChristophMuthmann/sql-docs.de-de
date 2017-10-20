@@ -28,7 +28,7 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>Syntax  
   
-```tsql  
+```sql  
 set_execution_property_override_value [ @execution_id = execution_id  
     , [ @property_path = ] property_path  
     , [ @property_value = ] property_value  

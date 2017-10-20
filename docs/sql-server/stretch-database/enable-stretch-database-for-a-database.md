@@ -84,7 +84,7 @@ GO
   
 3.  Um eine SQL Server-Datenbank für Stretch-Datenbank zu konfigurieren, benötigt die Datenbank einen Datenbank-Hauptschlüssel. Der Datenbank-Hauptschlüssel sichert die Anmeldeinformationen, die Stretch-Datenbank für die Verbindung mit der Remotedatenbank verwendet. Nachstehend finden Sie ein Beispiel, in dem ein neuer Datenbank-Hauptschlüssel erstellt wird.  
   
-    ```tsql  
+    ```sql  
     USE <database>; 
     GO  
   
@@ -103,7 +103,7 @@ GO
         
         Nachstehend finden Sie ein Beispiel, in dem neue Anmeldeinformationen erstellt werden.
   
-        ```tsql  
+        ```sql  
         CREATE DATABASE SCOPED CREDENTIAL <db_scoped_credential_name>  
             WITH IDENTITY = '<identity>' , SECRET = '<secret>' ;
         GO   
@@ -127,7 +127,7 @@ GO
   
     2.  Stellen Sie vorhandene Administratoranmeldeinformationen mit dem Argument CREDENTIAL bereit, oder geben Sie FEDERATED_SERVICE_ACCOUNT = ON an. Das folgende Beispiel veranschaulicht eine vorhandene Anmeldeinformationen.  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE <database name>  
         SET REMOTE_DATA_ARCHIVE = ON  
             (  
