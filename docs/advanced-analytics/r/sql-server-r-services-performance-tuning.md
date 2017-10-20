@@ -91,7 +91,7 @@ Konfiguration und Optimierung der Leistung benötigt, erstellen eine solide Grun
 
 + [Optimieren der Leistung für R in SQL Server - hardware](..\r\sql-server-configuration-r-services.md)
 
-    Bietet einen Leitfaden zum Konfigurieren der Hardware, [!INCLUDE [SsNoVersion_md](..\..\includes\ssnoversion-md.md) ] installiert ist, auf, und klicken Sie zum Konfigurieren von SQL Server-Instanz, um externe Skripts besser zu unterstützen. Dies ist besonders nützlich für **Datenbankadministratoren**.
+    Bietet einen Leitfaden zum Konfigurieren der Hardware, [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] installiert ist, auf, und klicken Sie zum Konfigurieren von SQL Server-Instanz, um externe Skripts besser zu unterstützen. Dies ist besonders nützlich für **Datenbankadministratoren**.
 
 + [Optimieren der Leistung für R in SQL Server - Code und die Optimierung](..\r\r-and-data-optimization-r-services.md)
 
