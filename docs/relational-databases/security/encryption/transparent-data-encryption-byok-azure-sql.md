@@ -18,10 +18,10 @@ ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
 ms.translationtype: HT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: fddb53ecae2ab1f15ba50a42ea59f30bff740804
+ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
+ms.openlocfilehash: 2950cf2e403cd0afd337c1578d7bbe656f2a6e53
 ms.contentlocale: de-de
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 10/16/2017
 
 --- 
 
@@ -141,7 +141,7 @@ Weitere Informationen zum Wiederherstellen von Sicherungen für SQL-Datenbank fi
 
 Es wird Folgendes empfohlen, um die schnelle Wiederherstellung von Schlüsseln sicherzustellen und den Zugriff auf Ihre Daten außerhalb von Azure zu ermöglichen:
 - Erstellen Sie Ihren Verschlüsselungsschlüssel lokal auf einem lokalen HSM-Gerät. (Stellen Sie sicher, dass dies ein asymmetrischer RSA-2048-Schlüssel ist, damit er in Azure Key Vault gespeichert werden kann.)
-- Importieren Sie die Datei für den Verschlüsselungsschlüssel (PFX, BYOK oder BACKUP) in Azure Key Vault. 
+- Importieren Sie die Datei für den Verschlüsselungsschlüssel (PFX, BYOK oder BACKUP) in Azure Key Vault. Erwägen Sie die Verwendung eines Schlüsseltresors mit aktiviertem [vorläufigen Löschen](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) für Wiederherstellungsschutz bei versehentlichem Löschen von Schlüsseln.
 - Bevor Sie den Schlüssel zum ersten Mal in Azure Key Vault verwenden, erstellen Sie eine Azure Key Vault-Schlüsselsicherung. Erhalten Sie weitere Informationen zum Befehl [Backup-AzureKeyVaultKey](https://msdn.microsoft.com/library/mt126292.aspx) .
 - Sobald Änderungen am Schlüssel vorgenommen werden (z.B. durch Hinzufügen von ACLs, Tags oder Schlüsselattributen), müssen Sie sicherstellen, dass Sie eine weitere Azure Key Vault-Schlüsselsicherung erstellen.
 - **Behalten Sie frühere Versionen des Schlüssels** im Schlüsseltresor während eines Schlüsselrollovers bei, sodass Datenbanksicherungen wiederhergestellt werden können. 

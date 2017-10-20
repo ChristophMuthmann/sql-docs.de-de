@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0feecce7b6f80df96d77273863ca1873bd74523e
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 687bddd3ce51c60e286cfa0e2634790a8a492500
 ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Neues im Datenbankmodul – SQL Server 2016
@@ -349,7 +349,8 @@ Zahlreiche Verbesserungen unterstützen die Features, die in anderen Abschnitten
 - [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md) ermöglicht jetzt die Ausführungen von vielen Aktionen zum Ändern einer Spalte, während die Tabelle verfügbar bleibt.
 - Die Volltextindex-DMV [sys.dm_fts_index_keywords_position_by_document &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-position-by-document-transact-sql.md) gibt die Positionen der Schlüsselwörter in Dokumenten zurück. Diese DMV wurde auch in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP2 und [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP1 hinzugefügt.
 - Ein neuer Abfragehinweis **NO_PERFORMANCE_SPOOL** kann verhindern, dass ein Spooloperator den Abfrageplänen hinzugefügt wird. Dies kann die Leistung verbessern, wenn viele gleichzeitige Abfragen mit Spoolvorgängen ausgeführt werden. Weitere Informationen finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../t-sql/queries/hints-transact-sql-query.md).
-- Die Anweisung [FORMATMESSAGE &#40;Transact-SQL&#41;](../t-sql/functions/formatmessage-transact-sql.md) wurde verbessert, um ein „msg_string“-Argument zu akzeptieren. Die maximale Größe von Indexschlüsseln für NONCLUSTERED-Indizes wurde auf 1700 Bytes erhöht.
+- Die [FORMATMESSAGE &#40;Transact-SQL&#41;](../t-sql/functions/formatmessage-transact-sql.md)-Anweisung wurde verbessert, um ein msg_string-Argument zu akzeptieren.
+- Die maximal zulässige Indexschlüsselgröße für NONCLUSTERED-Indizes wurde auf 1700 Bytes angehoben.
 - Neue DROP IF-Syntax wurde für Drop-Anweisungen hinzugefügt, die im Zusammenhang mit AGGREGATE, ASSEMBLY, COLUMN, CONSTRAINT, DATABASE, DEFAULT, FUNCTION, INDEX, PROCEDURE, ROLE, RULE, SCHEMA, SECURITY POLICY, SEQUENCE, SYNONYM, TABLE, TRIGGER, TYPE, USER und VIEW stehen. Informationen zur Syntax finden Sie unter den einzelnen Syntaxthemen.
 - Eine MAXDOP-Option wurde zu [DBCC CHECKTABLE &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checktable-transact-sql.md), [DBCC CHECKDB &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) und [DBCC CHECKFILEGROUP &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md) hinzugefügt, um den Grad an Parallelität anzugeben.
 - SESSION_CONTEXT kann jetzt festgelegt werden. Enthält die Funktionen [SESSION_CONTEXT &#40;Transact-SQL&#41;](../t-sql/functions/session-context-transact-sql.md), [CURRENT_TRANSACTION_ID &#40;Transact-SQL&#41;](../t-sql/functions/current-transaction-id-transact-sql.md) und die Prozedur [sp_set_session_context &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md).

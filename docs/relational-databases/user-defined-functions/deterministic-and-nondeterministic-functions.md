@@ -21,10 +21,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 4d56a0bb3893d43943478c6d5addb719ea32bd10
-ms.openlocfilehash: fe23cb7ab3fbc0461f0c0853aedaa4444e4bb543
+ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
+ms.openlocfilehash: 2a25a75485ecfb5bae812b01f142a9650ce2933c
 ms.contentlocale: de-de
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Deterministische und nicht deterministische Funktionen
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/16/2017
  In diesem Thema werden der Determinismus integrierter Systemfunktionen und die Auswirkungen auf die deterministische Eigenschaft benutzerdefinierter Funktionen erläutert, wenn in dieser ein Aufruf erweiterter gespeicherter Prozeduren enthalten ist.  
   
 ## <a name="built-in-function-determinism"></a>Determinismus integrierter Funktionen  
- Der Determinismus integrierter Funktionen kann nicht beeinflusst werden. Jede integrierte Funktion ist abhängig von deren Implementierung durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]deterministisch oder nicht deterministisch. Wenn beispielsweise eine ORDER BY-Klausel in einer Abfrage angegeben wird, wird der Determinismus einer Funktion, die in der Abfrage verwendet wird, nicht geändert.  
+ Der Determinismus integrierter Funktionen kann nicht beeinflusst werden. Jede integrierte Funktion ist abhängig von deren Implementierung durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]deterministisch oder nicht deterministisch. Wenn beispielsweise eine ORDER BY-Klausel in einer Abfrage angegeben wird, wird der Determinismus einer in der Abfrage verwendeten Funktion nicht geändert.  
   
  Alle integrierten Zeichenfolgenfunktionen sind deterministisch. Eine Liste dieser Funktionen finden Sie unter [Zeichenfolgenfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md).  
   
