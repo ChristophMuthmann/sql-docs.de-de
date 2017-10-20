@@ -31,9 +31,8 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>Syntax  
   
-```  
-  
-revoke_permission [ @object_type = ] object_type  
+```sql
+catalog.revoke_permission [ @object_type = ] object_type  
     , [ @object_id = ] object_id  
     , [ @principal_id = ] principal_id  
     , [ @permission_type = ] permission_type  

@@ -31,11 +31,10 @@ ms.lasthandoff: 08/03/2017
 ## <a name="syntax"></a>Syntax  
   
 ```sql  
-set_execution_parameter_value [ @execution_id = execution_id  
+catalog.set_execution_parameter_value [ @execution_id = execution_id  
     , [ @object_type = ] object_type  
     , [ @parameter_name = ] parameter_name  
     , [ @parameter_value = ] parameter_value  
-  
 ```  
   
 ## <a name="arguments"></a>Argumente  
@@ -117,16 +116,15 @@ set_execution_parameter_value [ @execution_id = execution_id
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird angegeben, dass der Integration Services-Server Dumpdateien generiert, wenn während einer Paketausführung ein Fehler auftritt.  
   
-```  
+```sql
 exec catalog.create_execution  'TR2','Recurring ETL', 'Dim_DCVendor.dtsx',NULL, 0,@execution_id out  
 exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_ON_ERROR',1  
-  
 ```  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird angegeben, dass der Integration Services-Server Dumpdateien generiert, wenn während einer Paketausführung Ereignisse auftreten. Zudem wird das Ereignis angegeben, das den Server zum Generieren der Dateien veranlasst.  
   
-```  
+```sql
 exec catalog.create_execution  'TR2','Recurring ETL', 'Dim_DCVendor.dtsx',NULL, 0,@execution_id out  
 exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_ON_EVENT',1  
   

@@ -29,12 +29,11 @@ ms.lasthandoff: 09/26/2017
 ## <a name="syntax"></a>Syntax  
   
 ```sql  
-create_customized_logging_level [ @level_name = ] level_name  
+catalog.create_customized_logging_level [ @level_name = ] level_name  
     , [ @level_description = ] level_description  
     , [ @profile_value = ] profile_value  
     , [ @event_value = ] event_value  
-    , [ @level_id = ] level_id OUT  
-  
+    , [ @level_id = ] level_id OUT   
 ```  
   
 ## <a name="arguments"></a>Argumente  

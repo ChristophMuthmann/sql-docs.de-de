@@ -28,10 +28,8 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>Syntax  
   
-```  
-  
-cleanup_server_log  
-  
+```sql
+catalog.cleanup_server_log  
 ```  
   
 ## <a name="arguments"></a>Argumente  
@@ -92,8 +90,7 @@ GO
 DECLARE@return_value int  
 EXEC@return_value = [internal].[cleanup_server_log]  
 SELECT'Return Value' = @return_value  
-GO  
-  
+GO   
 ```  
   
   

@@ -29,7 +29,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="syntax"></a>Syntax  
   
 ```sql  
-delete_project [ @folder_name = ] folder_name , [ @project_name = ] project_name  
+catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] project_name  
 ```  
   
 ## <a name="arguments"></a>Argumente  

@@ -28,16 +28,14 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>Syntax  
   
-```  
-  
-validate_project [ @folder_name = ] folder_name  
+```sql
+catalog.validate_project [ @folder_name = ] folder_name  
     , [ @project_name = ] project_name  
     , [ @validate_type = ] validate_type  
     , [ @validation_id = ] validation_id OUTPUT  
  [  , [ @use32bitruntime = ] use32bitruntime ]  
  [  , [ @target_environment = ] target_environment ]  
  [  , [ @reference_id = ] reference_id ]  
-  
 ```  
   
 ## <a name="arguments"></a>Argumente  

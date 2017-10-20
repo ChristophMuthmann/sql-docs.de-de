@@ -29,7 +29,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="syntax"></a>Syntax  
   
 ```sql  
-create_execution_dump [ @execution_id = ] execution_id  
+catalog.create_execution_dump [ @execution_id = ] execution_id  
   
 ```  
   
@@ -40,10 +40,8 @@ create_execution_dump [ @execution_id = ] execution_id
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird das ausgeführte Paket mit der Ausführungs-ID 88 aufgefordert, eine Dumpdatei zu erstellen.  
   
-```  
-  
+```sql
 EXEC create_execution_dump @execution_id = 88  
-  
 ```  
   
 ## <a name="return-codes"></a>Rückgabecodes  
