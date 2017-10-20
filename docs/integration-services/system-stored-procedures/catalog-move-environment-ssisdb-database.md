@@ -29,7 +29,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="syntax"></a>Syntax  
   
 ```sql  
-move_environment [ @source_folder = ] source_folder  
+catalog.move_environment [ @source_folder = ] source_folder  
     , [ @environment_name = ] environment_name  
     , [ @destination_folder = ] destination_folder  
 ```  

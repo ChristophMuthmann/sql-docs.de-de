@@ -29,7 +29,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="syntax"></a>Syntax  
   
 ```sql  
-clear_object_parameter [ @folder_name = ] folder_name   
+catalog.clear_object_parameter [ @folder_name = ] folder_name   
     , [ @project_name = ] project_name   
     , [ @object_type = ] object_type   
     , [ @object_name = ] object_name   

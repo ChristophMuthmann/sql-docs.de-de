@@ -29,7 +29,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="syntax"></a>Syntax  
   
 ```sql  
-stop_operation [ @operation_id = ] operation_id  
+catalog.stop_operation [ @operation_id = ] operation_id  
 ```  
   
 ## <a name="arguments"></a>Argumente  

@@ -29,10 +29,9 @@ ms.lasthandoff: 09/26/2017
 ## <a name="syntax"></a>Syntax  
   
 ```sql  
-set_customized_logging_level_value [ @level_name = ] level_name  
+catalog.set_customized_logging_level_value [ @level_name = ] level_name  
     , [ @property_name = ] property_name  
     , [ @property_value = ] property_value  
-  
 ```  
   
 ## <a name="arguments"></a>Argumente  

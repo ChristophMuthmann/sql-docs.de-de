@@ -29,9 +29,8 @@ ms.lasthandoff: 09/26/2017
 ## <a name="syntax"></a>Syntax  
   
 ```sql  
-rename_customized_logging_level [ @old_name = ] old_name  
+catalog.rename_customized_logging_level [ @old_name = ] old_name  
     , [ @new_name = ] new_name  
-  
 ```  
   
 ## <a name="arguments"></a>Argumente  
