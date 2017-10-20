@@ -28,7 +28,7 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>Syntax  
   
-```tsql  
+```sql  
 add_data_tap_by_guid [ @execution_id = ] execution_id  
 [ @dataflow_task_guid = ] dataflow_task_guid   
 [ @dataflow_path_id_string = ] dataflow_path_id_string  

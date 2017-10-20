@@ -28,7 +28,7 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>Syntax  
   
-```tsql  
+```sql  
 get_parameter_values [ @folder_name = ] folder_name  
      , [ @project_name = ] project_name  
      , [ @package_name = ] package_name  

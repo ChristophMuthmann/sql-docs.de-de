@@ -27,7 +27,7 @@ Update der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale-O
 
 ## <a name="syntax"></a>Syntax
 
-```tsql
+```sql
 update_master_address [@MasterAddress = ] masterAddress
 ```
 

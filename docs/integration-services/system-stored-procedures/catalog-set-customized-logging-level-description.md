@@ -28,7 +28,7 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>Syntax  
   
-```tsql  
+```sql  
 set_customized_logging_level_description [ @level_name = ] level_name  
     , [ @level_description = ] level_description  
   

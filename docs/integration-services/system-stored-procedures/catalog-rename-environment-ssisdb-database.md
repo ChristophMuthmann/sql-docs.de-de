@@ -28,7 +28,7 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>Syntax  
   
-```tsql  
+```sql  
 rename_environment [ @folder_name = ] folder_name  
     , [ @environment_name = ] environment_name  
     , [ @new_environment_name= ] new_environment_name  

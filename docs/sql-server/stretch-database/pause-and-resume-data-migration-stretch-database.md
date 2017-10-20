@@ -44,7 +44,7 @@ ms.lasthandoff: 04/11/2017
 ### <a name="use-transact-sql-to-pause-data-migration"></a>Verwenden von Transact-SQL zum Anhalten der Datenmigration  
  Führen Sie den folgenden Befehl aus:  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 ALTER TABLE <Stretch-enabled table name>  
@@ -63,7 +63,7 @@ GO
 ### <a name="use-transact-sql-to-resume-data-migration"></a>Verwenden von Transact-SQL zum Fortsetzen der Datenmigration  
  Führen Sie den folgenden Befehl aus:  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 ALTER TABLE <Stretch-enabled table name>   
