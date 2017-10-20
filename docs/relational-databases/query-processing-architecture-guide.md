@@ -1,7 +1,7 @@
 ---
 title: Handbuch zur Architektur der Abfrageverarbeitung | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 05/03/2017
+ms.date: 10/13/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 70401c6607263bb593d11f0551214d227be1a96a
+ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
+ms.openlocfilehash: 3189dade2df1e1767ba26263960a59d6b8241aa4
 ms.contentlocale: de-de
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
@@ -64,7 +64,7 @@ Der Abfrageoptimierer von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 Der Abfrageoptimierer von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wählt nicht nur den Ausführungsplan aus, der die geringsten Kosten bezüglich der benötigten Ressourcen verursacht. Stattdessen wird der Plan ausgewählt, der die Ergebnisse so schnell wie möglich an den Benutzer zurückgibt und dabei Kosten für Ressourcen in vertretbarem Maß verursacht. Für die parallele Verarbeitung einer Abfrage werden in der Regel mehr Ressourcen verwendet als für die serielle Verarbeitung, die Abfrageausführung wird jedoch schneller beendet. Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer verwendet einen Plan mit paralleler Ausführung, um Ergebnisse zurückzugeben, wenn sich dies nicht negativ auf die Serverlast auswirkt.
 
-Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer stützt sich bei der Schätzung der Ressourcenkosten, die durch unterschiedliche Methoden zum Extrahieren von Informationen aus einer Tabelle oder einem Index verursacht werden, auf Verteilungsstatistiken. Die Verteilungsstatistiken werden für Spalten und Indizes erstellt. Sie kennzeichnen die Selektivität der Werte in einem bestimmten Index oder einer bestimmten Spalte. In einer Tabelle für Autos stammen z. B. viele Autos von demselben Hersteller, jedes Auto verfügt jedoch über eine eindeutige Fahrzeugnummer. Ein Index, der die Fahrzeugnummer verwendet, weist eine höhere Selektivität auf als ein Index, der den Hersteller einsetzt. Wenn die Indexstatistiken nicht auf dem aktuellen Stand sind, wählt der Abfrageoptimierer möglicherweise nicht den Plan aus, der für den aktuellen Status der Tabelle am besten geeignet ist. Weitere Informationen zur Aktualisierung von Indexstatistiken finden Sie unter „Verwenden von Statistiken zum Verbessern der Abfrageleistung“. 
+Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer stützt sich bei der Schätzung der Ressourcenkosten, die durch unterschiedliche Methoden zum Extrahieren von Informationen aus einer Tabelle oder einem Index verursacht werden, auf Verteilungsstatistiken. Die Verteilungsstatistiken werden für Spalten und Indizes erstellt. Sie kennzeichnen die Selektivität der Werte in einem bestimmten Index oder einer bestimmten Spalte. In einer Tabelle für Autos stammen z. B. viele Autos von demselben Hersteller, jedes Auto verfügt jedoch über eine eindeutige Fahrzeugnummer. Ein Index, der die Fahrzeugnummer verwendet, weist eine höhere Selektivität auf als ein Index, der den Hersteller einsetzt. Wenn die Indexstatistiken nicht auf dem aktuellen Stand sind, wählt der Abfrageoptimierer möglicherweise nicht den Plan aus, der für den aktuellen Status der Tabelle am besten geeignet ist. Weitere Informationen zum Aktualisieren von Indexstatistiken finden Sie unter [Statistik](../relational-databases/statistics/statistics.md). 
 
 Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer ist deshalb so wichtig, weil er es dem Datenbankserver ermöglicht, dynamische Anpassungen an geänderte Bedingungen in der Datenbank vorzunehmen, ohne dass eine Eingabe durch einen Programmierer oder Datenbankadministrator erforderlich ist. Programmierer können sich somit darauf konzentrieren, das endgültige Ergebnis der Abfrage zu beschreiben. Sie können sich darauf verlassen, dass der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer bei jeder Ausführung der Anweisung einen effizienten Ausführungsplan auf der Basis des aktuellen Status der Datenbank erstellt.
 
@@ -239,7 +239,7 @@ Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageprozessor opti
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] erstellt intelligente, dynamische Pläne, in denen verteilte Abfragen effizient für den Zugriff auf Daten in Remotemitgliedstabellen verwendet werden: 
 
 * Zunächst verwendet der Abfrageprozessor OLE DB, um die Definitionen der CHECK-Einschränkungen aus jeder Mitgliedstabelle abzurufen. Dadurch kann der Abfrageprozessor die Verteilung der Schlüsselwerte auf die Mitgliedstabellen zuordnen.
-* The Query Processor compares the key ranges specified in an SQL statement `WHERE` -Klausel einer SQL-Anweisung angegebenen Schlüsselbereiche mit der Zuordnung, die die Verteilung der Zeilen in den Mitgliedstabellen anzeigt. Anschließend erstellt der Abfrageprozessor einen Abfrageausführungsplan, der mithilfe von verteilten Abfragen nur die Remotezeilen abruft, die zum Ausführen der SQL-Anweisung erforderlich sind. Darüber hinaus wird der Ausführungsplan so erstellt, dass alle Zugriffe auf Remotemitgliedstabellen, entweder für Daten oder Metadaten, so lange verzögert werden, bis die Informationen benötigt werden.
+* Der Abfrageprozessor vergleicht die in der `WHERE`-Klausel einer SQL-Anweisung angegebenen Schlüsselbereiche mit der Zuordnung, die die Verteilung der Zeilen in den Mitgliedstabellen anzeigt. Anschließend erstellt der Abfrageprozessor einen Abfrageausführungsplan, der mithilfe von verteilten Abfragen nur die Remotezeilen abruft, die zum Ausführen der SQL-Anweisung erforderlich sind. Darüber hinaus wird der Ausführungsplan so erstellt, dass alle Zugriffe auf Remotemitgliedstabellen, entweder für Daten oder Metadaten, so lange verzögert werden, bis die Informationen benötigt werden.
 
 Stellen Sie sich z.B. ein System vor, in dem eine Kundentabelle über Server1 (`CustomerID` von 1 bis 3299999), Server2 (`CustomerID` von 3300000 bis 6599999) und Server3 (`CustomerID` von 6600000 bis 9999999) partitioniert ist.
 
@@ -384,6 +384,7 @@ SELECT *
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
+
 ```tsql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
@@ -1037,4 +1038,5 @@ GO
  [Erweiterte Ereignisse](../relational-databases/extended-events/extended-events.md)  
  [Bewährte Methoden für den Abfragespeicher](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [Kardinalitätsschätzung](../relational-databases/performance/cardinality-estimation-sql-server.md)  
+ [Adaptive Abfrageverarbeitung](../relational-databases/performance/adaptive-query-processing.md)
 

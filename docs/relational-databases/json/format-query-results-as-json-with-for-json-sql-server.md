@@ -1,5 +1,5 @@
 ---
-title: Formatieren von Abfrageergebnissen als JSON mit FOR JSON (SQL Server) | Microsoft-Dokumentation
+title: Formatieren von Abfrageergebnisse als JSON mit FOR JSON (SQL Server) | Microsoft-Dokumentation
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/18/2017
@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: bfda43cbc97a641a5e2654f7cb4c92cdddaf1532
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 8ee99c52515908e93a44e936504fd8ccbd74793f
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>Formatieren von Abfrageergebnisse als JSON mit FOR JSON (SQL Server)
@@ -39,14 +39,14 @@ Formatieren Sie Abfrageergebnisse als JSON, oder exportieren Sie Daten aus SQL S
   
 Hier finden Sie ein Beispiel für eine **SELECT**-Anweisung mit der **FOR JSON**-Klausel und deren Ausgabe.
   
- ![FOR JSON](../../relational-databases/json/media/jsonslides2forjson.png "FOR JSON")  
+ ![FOR JSON](../../relational-databases/json/media/jsonslides2forjson.png)
   
 ## <a name="option-1---you-control-output-with-for-json-path"></a>Option 1: Sie können die Ausgabe mit FOR JSON PATH steuern
 Im **PATH** -Modus können Sie die Punktsyntax verwenden, z.B. `'Item.Price'` , um geschachtelte Ausgaben zu formatieren.  
 
 Hier ist eine Beispielabfrage, die den **PATH** -Modus mit der **FOR JSON** -Klausel verwendet. Im folgenden Beispiel wird auch die Option **ROOT** verwendet, um ein benanntes Stammelement anzugeben. 
   
- ![Flussdiagramm der FOR JSON-Ausgabe](../../relational-databases/json/media/forjson-example1.png "Diagram of flow of FOR JSON output")  
+ ![Flussdiagramm für FOR JSON-Ausgabe](../../relational-databases/json/media/forjson-example1.png) 
 
 ### <a name="more-info-about-for-json-path"></a>Weitere Informationen zu FOR JSON PATH
 Ausführlichere Informationen und Beispiele finden Sie unter [Format Nested JSON Output with PATH Mode (SQL Server) (Formatieren einer geschachtelten JSON-Ausgabe im PATH-Modus (SQL Server))](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md).
@@ -102,7 +102,7 @@ Die Ausgabe der **FOR JSON**-Klausel besitzt die folgenden Eigenschaften:
         -   Standardmäßig verkettet SQL Server Management Studio (SSMS) die Ergebnisse in einer einzelnen Zeile, wenn die Ausgabeeinstellung **Results to Grid (Ergebnisse im Raster)** ist. Die SSMS-Statusleiste zeigt die tatsächliche Zeilenanzahl an.
         -   Möglicherweise erfordern andere Clientanwendungen Code, um längere Ergebnislisten neu zu einer einzelnen gültigen JSON-Zeichenfolge zu kombinieren, indem die Inhalte mehrerer Zeilen verkettet werden. Ein Beispiel für diesen Code in einer C#-Anwendung finden Sie unter [Use FOR JSON output in a C# client app (Verwenden der FOR JSON-Ausgabe in einer C#-Client-App)](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app).
   
-     ![Beispiel für JSON-Ausgabe](../../relational-databases/json/media/forjson-example2.png "Example of FOR JSON output")  
+     ![Beispiel einer FOR JSON-Ausgabe](../../relational-databases/json/media/forjson-example2.png)  
   
 2.  Die Ergebnisse werden wie ein JSON-Objekt-Array formatiert.  
   
@@ -148,14 +148,15 @@ Hier ist ein Beispiel, das veranschaulicht, wie die **FOR JSON**-Klausel die JSO
 ```  
 
  Weitere Informationen darüber, was Sie in der Ausgabe der **FOR JSON**-Klausel sehen, finden Sie in den folgenden Themen.  
+
 -   [How FOR JSON converts SQL Server data types to JSON data types &#40;SQL Server&#41; (So konvertiert FOR JSON SQL Server-Datentypen in JSON-Datentypen (SQL Server))](../../relational-databases/json/how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server.md)  
-Die **FOR JSON** -Klausel verwendet die in diesem Thema beschriebenen Regeln, um SQL-Datentypen in JSON-Typen in der JSON-Ausgabe zu konvertieren.  
+    Die **FOR JSON** -Klausel verwendet die in diesem Thema beschriebenen Regeln, um SQL-Datentypen in JSON-Typen in der JSON-Ausgabe zu konvertieren.  
 
 -   [How FOR JSON escapes special characters and control characters &#40;SQL Server&#41; (So maskiert FOR JSON Sonderzeichen und Steuerzeichen (SQL Server))](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md)  
- Die **FOR JSON** -Klausel maskiert Sonderzeichen und stellt die Steuerzeichen in der JSON-Ausgabe dar, wie in diesem Thema beschrieben.  
+    Die **FOR JSON** -Klausel maskiert Sonderzeichen und stellt die Steuerzeichen in der JSON-Ausgabe dar, wie in diesem Thema beschrieben.  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Erfahren Sie mehr über die integrierte JSON-Unterstützung in SQL Server  
-Viele spezifische Lösungen, Anwendungsfälle und Empfehlungen finden Sie im [Blogbeitrag über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL-Server und in Azure SQL-Datenbank von Jovan Popovic, Program Manager bei Microsoft.
+Viele spezifische Lösungen, Anwendungsfälle und Empfehlungen finden Sie in SQL Server und in der Azure SQL-Daten im [Blogbeitrag über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) von Jovan Popovic, Program Manager bei Microsoft.
   
 ## <a name="see-also"></a>Siehe auch  
  [FOR-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)   

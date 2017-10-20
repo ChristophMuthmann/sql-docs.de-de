@@ -21,10 +21,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: 240e02e3dd0d40f53f8436e241af228b503a43d9
+ms.sourcegitcommit: 1c55b7b8b39e7b1ec296ee529bc66d2e14256994
+ms.openlocfilehash: aa1563089c53ca7cbc972bd27597f3a86006f48a
 ms.contentlocale: de-de
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="polybase-troubleshooting"></a>Problembehandlung in PolyBase
@@ -224,7 +224,7 @@ ms.lasthandoff: 10/06/2017
  ## <a name="known-limitations"></a>Bekannte Einschränkungen
  
  PolyBase weist folgende Einschränkungen auf: 
- - Die maximal mögliche Zeilengröße, einschließlich der vollständigen Länge der Spalten mit variabler Länge, darf 1 MB nicht überschreiten. 
+ - Die maximale Zeilengröße, einschließlich der vollständigen Länge der Spalten mit variabler Länge, darf in SQL Server nicht mehr als 32 KB und in Azure SQL Data Warehouse nicht mehr als 1 MB betragen. 
  - PolyBase unterstützt Hive 0.12 und Datentypen (z.B. Char(), VarChar()) nicht.   
  - Beim Exportieren von Daten aus SQL Server oder Azure SQL Data Warehouse in das Dateiformat ORC können umfangreiche Textspalten wegen Java-Fehlermeldungen aufgrund von nicht ausreichendem Arbeitsspeicher auf höchstens 50 Spalten begrenzt werden. Um das Problem zu umgehen, exportieren Sie nur eine Teilmenge der Spalten.
  - Das Lesen oder Schreiben von verschlüsselten Daten im Ruhezustand in Hadoop ist nicht möglich. Dies schließt HDFS Encrypted Zones oder Transparent Encryption ein.
