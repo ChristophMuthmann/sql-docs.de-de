@@ -1,7 +1,7 @@
 ---
 title: Binary und Varbinary (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/16/2017
+ms.date: 8/16/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -24,6 +24,7 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: e6aaf00b8e846316c92897360932703a013150e8

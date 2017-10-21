@@ -1,7 +1,7 @@
 ---
 title: Int, Bigint, Smallint und Tinyint (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 09/08/2017
+ms.date: 9/8/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -31,6 +31,7 @@ caps.latest.revision: 28
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 46ac51971b07b38b73ef18d8a953674fc77b4b17

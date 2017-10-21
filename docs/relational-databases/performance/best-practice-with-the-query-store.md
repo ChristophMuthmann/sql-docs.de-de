@@ -76,7 +76,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
  **Statistiksammlungsintervall:** Definiert den Grad der Granularität während der gesammelten Laufzeitstatistik (der Standardwert ist 1 Stunde). Ziehen Sie einen niedrigeren Wert in Betracht, wenn Sie eine geringere Granularität oder weniger Zeit benötigen, um Probleme zu erkennen und zu mindern. Denken Sie jedoch daran, dass dies unmittelbar die Größe der Abfragespeicherdaten beeinflusst. Verwenden Sie SSMS oder Transact-SQL, um einen anderen Wert für das Statistiksammlungsintervall festzulegen:  
   
 ```tsql  
-ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);  
+ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
  **Schwellenwert für veraltete Abfrage (Tage):** Zeitbasierte Cleanuprichtlinie, die die Aufbewahrungsdauer für persistente Laufzeitstatistiken und inaktive Abfragen steuert.  
@@ -86,7 +86,7 @@ Standardmäßig ist der Abfragespeicher so konfiguriert, dass Daten 30 Tage lang
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   
-SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 14));  
+SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
   
  **Größenbasierter Bereinigungsmodus:** Gibt an, ob das automatische Cleanup ausgeführt wird, wenn der Umfang der Abfragespeicherdaten den Grenzwert erreicht.  

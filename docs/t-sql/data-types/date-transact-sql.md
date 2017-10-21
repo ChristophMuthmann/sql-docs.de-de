@@ -1,7 +1,7 @@
 ---
 title: Datum (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/23/2017
+ms.date: 7/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -25,6 +25,7 @@ caps.latest.revision: 44
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 5c5d3a52b6163f375850b22e27baf9a858ef8ed8
