@@ -1,7 +1,7 @@
 ---
 title: Table (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/23/2017
+ms.date: 7/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -19,6 +19,7 @@ caps.latest.revision: 48
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b22ecfa04f949af77df974abc3359b7bc5144a82

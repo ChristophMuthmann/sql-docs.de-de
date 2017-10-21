@@ -1,7 +1,7 @@
 ---
 title: float- und Real (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/22/2017
+ms.date: 7/22/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -26,6 +26,7 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
 ms.openlocfilehash: 0ce2e3272c30057f533796e0822256c6235de0c1

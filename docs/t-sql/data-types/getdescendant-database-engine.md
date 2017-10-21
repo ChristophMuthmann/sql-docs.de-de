@@ -1,7 +1,7 @@
 ---
 title: GetDescendant (Datenbankmodul) | Microsoft Docs
 ms.custom: 
-ms.date: 07/22/2017
+ms.date: 7/22/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -21,6 +21,7 @@ caps.latest.revision: 23
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: ced4a5518ce7d58785a1d2954c4f131b66a5ddb0

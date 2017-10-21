@@ -1,7 +1,7 @@
 ---
 title: "\"DateTimeOffset\" (Transact-SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 07/23/2017
+ms.date: 7/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -26,6 +26,7 @@ caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9a6c143380711d1af39a6c11f311e9ce3caf87c7

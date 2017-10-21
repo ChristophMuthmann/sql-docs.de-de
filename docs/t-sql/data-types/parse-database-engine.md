@@ -1,7 +1,7 @@
 ---
 title: Parse (Datenbankmodul) | Microsoft Docs
 ms.custom: 
-ms.date: 07/22/2017
+ms.date: 7/22/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -21,6 +21,7 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 027940c7575f3c7901cd8668879064ff375d9986

@@ -1,7 +1,7 @@
 ---
 title: Nchar und Nvarchar (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/22/2017
+ms.date: 7/22/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -19,6 +19,7 @@ caps.latest.revision: 44
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: bc7de3b64519f3d0fd1f2e9557ccf7196e3f07a8

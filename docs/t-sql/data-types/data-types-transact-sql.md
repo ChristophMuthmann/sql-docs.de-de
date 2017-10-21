@@ -1,7 +1,7 @@
 ---
 title: Datentypen (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 09/13/2017
+ms.date: 9/13/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -19,6 +19,7 @@ caps.latest.revision: 45
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
 ms.openlocfilehash: 75efc7b5a58b3739a196e36b2c80d4ee37a92003

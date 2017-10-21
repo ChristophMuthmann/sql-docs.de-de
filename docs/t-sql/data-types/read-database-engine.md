@@ -1,7 +1,7 @@
 ---
 title: Read (Datenbankmodul) | Microsoft Docs
 ms.custom: 
-ms.date: 07/23/2017
+ms.date: 7/22/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -21,6 +21,7 @@ caps.latest.revision: 13
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 21f27c627a36f747d9e3ecbb52d14d1ac6bc5d28

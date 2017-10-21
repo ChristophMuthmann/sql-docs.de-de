@@ -1,7 +1,7 @@
 ---
 title: "\"uniqueidentifier\" (Transact-SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 07/23/2017
+ms.date: 7/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -23,6 +23,7 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
 ms.openlocfilehash: 1450aa86e3f47ef27be5acd5b5410fe40dd5983e

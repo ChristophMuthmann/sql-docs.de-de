@@ -1,7 +1,7 @@
 ---
 title: Synonyme (Transact-SQL) "Datentyp" | Microsoft Docs
 ms.custom: 
-ms.date: 07/23/2017
+ms.date: 7/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -20,6 +20,7 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 1d9b1da2bdc7084268740cd7de2580e64ee9698b
