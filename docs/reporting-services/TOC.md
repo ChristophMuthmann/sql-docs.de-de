@@ -71,6 +71,8 @@
 
 
 # Entwickler
+## [REST-API](developer/rest-api.md)
+## [REST-API-Beispiele](https://github.com/Microsoft/Reporting-Services)
 ## [Application integration (Anwendungsintegration)](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
 ## [Report server web service (Report Server-Webdienst)](../reporting-services/report-server-web-service/report-server-web-service.md)
 ## [Extensions (Erweiterungen)](../reporting-services/extensions/reporting-services-extension-library.md)
@@ -85,7 +87,7 @@
 ### [CSV Device Information Settings (CSV-Geräteinformationseinstellungen)](csv-device-information-settings.md)  
 ### [Excel Device Information Settings (Geräteinformationseinstellungen für Excel)](excel-device-information-settings.md)  
 ### [HTML Device Information Settings (HTML-Geräteinformationseinstellungen)](html-device-information-settings.md)  
-### [Bild Geräteinformationseinstellungen](image-device-information-settings.md) ### [Geräteinformationseinstellungen für MHTML](mhtml-device-information-settings.md)  
+### [Bild Geräteinformationseinstellungen](image-device-information-settings.md)  ### [Geräteinformationseinstellungen für MHTML](mhtml-device-information-settings.md)  
 ### [PDF Device Information Settings (PDF-Geräteinformationseinstellungen)](pdf-device-information-settings.md)  
 ### [PPTX Device Information Settings (PPTX-Geräteinformationseinstellungen)](pptx-device-information-settings.md)  
 ### [XML Device Information Settings (XML-Geräteinformationseinstellungen)](xml-device-information-settings.md)  
