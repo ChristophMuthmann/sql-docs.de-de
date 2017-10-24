@@ -14,10 +14,10 @@ author: haoqian
 ms.author: haoqian
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9cc5c653fe454b45148583f2e17654657a85b0a5
+ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
+ms.openlocfilehash: c386b01043764405872365af379cfdedb036b65f
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="walkthrough-set-up-integration-services-scale-out"></a>Exemplarische Vorgehensweise: Einrichten von horizontaler Hochskalierung für Integration Services
@@ -144,7 +144,7 @@ Sie erhalten den **WorkerAgentId** -Wert aus der *[catalog].[worker_agents]* -Da
 
 #### <a name="example"></a>Beispiel
 In diesem Beispiel ermöglicht Scale Out Worker auf Computer a.
-```tsql
+```sql
 SELECT WorkerAgentId, MachineName FROM [catalog].[worker_agents]
 GO
 -- Result: --

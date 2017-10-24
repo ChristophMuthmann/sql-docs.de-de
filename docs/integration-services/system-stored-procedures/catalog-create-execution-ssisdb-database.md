@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 95c07e2550330ff9a2ac1cc70107d11147ae53dd
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 7e9d38935a91bba81359bee7fdbd64dba86d0d26
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution (SSISDB-Datenbank)
@@ -30,40 +30,40 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="syntax"></a>Syntax  
   
-```tsql  
-create_execution [ @folder_name = folder_name  
-     , [ @project_name = ] project_name  
-     , [ @package_name = ] package_name  
-  [  , [ @reference_id = ] reference_id ]  
-  [  , [ @use32bitruntime = ] use32bitruntime ] 
-  [  , [ @runinscaleout = ] runinscaleout ]
-  [  , [ @useanyworker = ] useanyworker ] 
-     , [ @execution_id = ] execution_id OUTPUT  
+```sql  
+catalog.create_execution [@folder_name = folder_name  
+     , [@project_name =] project_name  
+     , [@package_name =] package_name  
+  [  , [@reference_id =] reference_id ]  
+  [  , [@use32bitruntime =] use32bitruntime ] 
+  [  , [@runinscaleout =] runinscaleout ]
+  [  , [@useanyworker =] useanyworker ] 
+     , [@execution_id =] execution_id OUTPUT  
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @folder_name =] *Ordnername*  
+ [@folder_name =] *Ordnername*  
  Der Name des Ordners mit dem Paket, das ausgeführt werden soll. Der *folder_name* ist **nvarchar(128)**.  
   
- [ @project_name =] *Project_name*  
+ [@project_name =] *Project_name*  
  Der Name des Projekts, das das Paket enthält, das ausgeführt werden soll. Der *project_name* ist **nvarchar(128)**.  
   
- [ @package_name =] *Paketname*  
+ [@package_name =] *Paketname*  
  Der Name des Pakets, das ausgeführt werden soll. Der *package_name* ist **nvarchar(260)**.  
   
- [ @reference_id =] *Reference_id*  
+ [@reference_id =] *Reference_id*  
  Ein eindeutiger Bezeichner für einen Umgebungsverweis. Dieser Parameter ist optional. Der *reference_id* ist **bigint**.  
   
- [ @use32bitruntime =] *use32bitruntime*  
+ [@use32bitruntime =] *use32bitruntime*  
  Gibt an, ob die 32-Bit-Laufzeit verwendet werden soll, um das Paket unter einem 64-Bit-Betriebssystem auszuführen. Verwenden Sie den Wert 1, um das Paket mit der 32-Bit-Laufzeit ausgeführt werden, wenn auf einem 64-Bit-Betriebssystem ausgeführt wird. Verwenden Sie den Wert 0, um das Paket mit der 64-Bit-Laufzeit auszuführen, wenn die Ausführung unter einem 64-Bit-Betriebssystem erfolgt. Dieser Parameter ist optional. Die *Use32bitruntime* ist **Bit**.  
  
- [ @runinscaleout =] *Runinscaleout*  
- Geben Sie an, ob die Ausführung in horizontal skalieren ist. Verwenden Sie den Wert 1, um das Paket in horizontal skalieren auszuführen. Verwenden Sie den Wert 0, um das Paket ohne Horizontales Skalieren ausgeführt werden. Dieser Parameter ist optional. Es wird auf DEFAULT_EXECUTION_MODE in [SSISDB] festgelegt. [Catalog]. [Catalog_properties], wenn nicht angegeben. Die *Runinscaleout* ist **Bit**. 
+ [@runinscaleout =] *Runinscaleout*  
+ Geben Sie an, ob die Ausführung in horizontal skalieren ist. Verwenden Sie den Wert 1, um das Paket in horizontal skalieren auszuführen. Verwenden Sie den Wert 0, um das Paket ohne Horizontales Skalieren ausgeführt werden. Dieser Parameter ist optional. Wenn nicht angegeben, wird der Wert auf DEFAULT_EXECUTION_MODE in [SSISDB] festgelegt. [Catalog]. [Catalog_properties]. Die *Runinscaleout* ist **Bit**. 
  
- [ @useanyworker =] *Useanyworker*  
-  Geben Sie an, ob jeder Scale-Out-Arbeitsthread führen Sie die Ausführung zugelassen wird. Verwenden Sie den Wert 1, um das Paket mit jeder Scale-Out-Arbeitsthread auszuführen. Verwenden Sie den Wert 0, um anzugeben, dass nicht alle Scale Out Worker zulässig sind, um das Paket ausgeführt werden. Dieser Parameter ist optional. Es wird auf 1 festgelegt, wenn nicht angegeben. Die *Useanyworker* ist **Bit**. 
+ [@useanyworker =] *Useanyworker*  
+  Geben Sie an, ob jeder Scale-Out-Arbeitsthread führen Sie die Ausführung zugelassen wird. Verwenden Sie den Wert 1, um das Paket mit jeder Scale-Out-Arbeitsthread auszuführen. Verwenden Sie den Wert 0, um anzugeben, dass nicht alle Scale Out Worker zulässig sind, um das Paket ausgeführt werden. Dieser Parameter ist optional. Wenn nicht angegeben, wird der Wert auf 1 festgelegt. Die *Useanyworker* ist **Bit**. 
   
- [ @execution_id =] *Execution_id*  
+ [@execution_id =] *Execution_id*  
  Gibt den eindeutigen Bezeichner für eine Ausführungsinstanz zurück. Der *execution_id* ist **bigint**.  
 
   
@@ -77,7 +77,7 @@ create_execution [ @folder_name = folder_name
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird Catalog. create_execution eine Instanz der Ausführung für das Paket Child1.dtsx zu erstellen, die nicht in horizontal skalieren ist. Das Paket ist in Integration Services Projekt1 enthalten. Im Beispiel wird catalog.set_execution_parameter_value aufgerufen, um Werte für die Parameter Parameter1, Parameter2 und LOGGING_LEVEL festzulegen. Im Beispiel wird catalog.start_execution aufgerufen, um eine Instanz der Ausführung zu starten.  
   
-```  
+```sql  
 Declare @execution_id bigint  
 EXEC [SSISDB].[catalog].[create_execution] @package_name=N'Child1.dtsx', @execution_id=@execution_id OUTPUT, @folder_name=N'TestDeply4', @project_name=N'Integration Services Project1', @use32bitruntime=False, @reference_id=Null  
 Select @execution_id  
@@ -89,7 +89,6 @@ DECLARE @var2 smallint = 1
 EXEC [SSISDB].[catalog].[set_execution_parameter_value] @execution_id, @object_type=50, @parameter_name=N'LOGGING_LEVEL', @parameter_value=@var2  
 EXEC [SSISDB].[catalog].[start_execution] @execution_id  
 GO  
-  
 ```  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  

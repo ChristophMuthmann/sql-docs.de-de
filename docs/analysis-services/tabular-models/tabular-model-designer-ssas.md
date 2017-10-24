@@ -1,6 +1,6 @@
 ---
-title: "Designer für tabellarische Modelle (SSAS) | Microsoft Docs"
-ms.date: 03/14/2017
+title: "Designer für tabellarische Modelle | Microsoft Docs"
+ms.date: 10/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,10 +18,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 7450b51aac58dc148dd1ef37e90ad20aff50883c
+ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
+ms.openlocfilehash: b660ee5e5923b47c45e3198297042607fa59f874
 ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="tabular-model-designer-ssas"></a>Tabellen-Modell-Designer (SSAS)
@@ -32,13 +32,11 @@ Der Designer für tabellarische Modelle ist Bestandteil von [!INCLUDE[ssBIDevStu
   
  Zusätzlich zu neuen Vorlagen und Tools zum Erstellen professioneller Projektmappen für mehrdimensionale und tabellarische Modelle stellt die [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] -Umgebung Debugging- und Projektlebenszyklusfunktionen bereit, mit denen Sie immer die leistungsstärksten BI-Lösungen für Ihre Organisation erstellen können. Weitere Informationen zu [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]finden Sie unter [Erste Schritte mit Visual Studio](http://go.microsoft.com/fwlink/?LinkId=206389).  
   
-##  <a name="bkmk_proj_temp"></a> Projektvorlagen  
+##  <a name="bkmk_proj_temp"></a>Projektvorlagen  
  Wenn Sie [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]installieren, werden den Business Intelligence-Projekttypen die folgenden Projektvorlagen für tabellarische Modelle hinzugefügt:  
   
  **Analysis Services-Projekt für tabellarische Modelle**  
- Mit dieser Vorlage kann ein neues, leeres tabellarisches Modellprojekt erstellt werden. Kompatibilitätsgrade werden beim Erstellen des Projekts angegeben. Wählen Sie den Standardwert **SQL Server 2016 RTM (1200)**aus, um alle in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]integrierten Funktionen zu verwenden.  
-  
- ![ssas_tabularproject_compat1200](../../analysis-services/tabular-models/media/ssas-tabularproject-compat1200.jpg "ssas_tabularproject_compat1200")  
+ Mit dieser Vorlage kann ein neues, leeres tabellarisches Modellprojekt erstellt werden. Kompatibilitätsgrade werden beim Erstellen des Projekts angegeben.
   
  **Von Server importieren (tabellarisch)**  
  Mit dieser Vorlage kann ein neues tabellarisches Modellprojekt erstellt werden, indem die Metadaten aus einem vorhandenen tabellarischen Modell in Analysis Services extrahiert werden.  
@@ -57,7 +55,7 @@ Der Designer für tabellarische Modelle ist Bestandteil von [!INCLUDE[ssBIDevStu
  **Datensicht**  
  In der Datensicht werden Tabellen in einem tabellarischen Rasterformat angezeigt. Außerdem können Sie Measures mit dem Measureraster definieren, das für jede Tabelle ausschließlich in der Datensicht angezeigt werden kann.  
   
- **Diagrammsicht**  
+ **Diagrammansicht**  
  In der Diagrammsicht werden Tabellen mit den bestehenden Beziehungen in einem grafischen Format angezeigt. Spalten, Measures, Hierarchien und KPIs können gefiltert werden, und Sie können auswählen, ob das Modell mithilfe einer definierten Perspektive angezeigt wird.  
   
  Die meisten Modellerstellungsaufgaben können in einer beliebigen Ansicht ausgeführt werden.  
@@ -87,7 +85,7 @@ Der Designer für tabellarische Modelle ist Bestandteil von [!INCLUDE[ssBIDevStu
 
  Der Tabellenmodell-Explorer bietet auch eine praktische Suchfunktion. Geben Sie einfach einen Teil des Namens in das Suchfeld ein, woraufhin der Tabellenmodell-Explorer die Strukturansicht auf die Übereinstimmungen eingrenzt. 
   
-### <a name="properties-window"></a>Eigenschaftenfenster  
+### <a name="properties-window"></a>Fenster "Eigenschaften"  
  Im Eigenschaftenfenster werden Eigenschaften des ausgewählten Objekts aufgelistet. Die folgenden Objekte verfügen über Eigenschaften, die im Eigenschaftenfenster angezeigt und bearbeitet werden können:  
   
 -   Model.bim  
@@ -128,8 +126,8 @@ Der Designer für tabellarische Modelle ist Bestandteil von [!INCLUDE[ssBIDevStu
 ### <a name="toolbar"></a>Symbolleiste  
  Die Analysis Services-Symbolleiste ermöglicht den schnellen und einfachen Zugriff auf die am häufigsten verwendeten Befehle für die Modellerstellung.  
   
-##  <a name="bkmk_vsint"></a> Integration in Visual Studio  
- **Quellcodeverwaltung**  
+##  <a name="bkmk_vsint"></a>Visual Studio-integration  
+ **Datenquellen-Steuerelements**  
  Analysis Services-Projekte werden mit dem ausgewählten Plug-In für die Quellcodeverwaltung integriert. Wenn Sie Visual Studio für die Verwendung der Quellcodeverwaltung konfiguriert haben, können Sie die Funktionen zum Ein-/Auschecken im Projektmappen-Explorer verwenden. Weitere Informationen zum Konfigurieren von Team Foundation Server finden Sie unter [Konfigurieren von Visual Studio für die Verwendung der Team Foundation-Versionskontrolle](http://msdn.microsoft.com/library/ms253064.aspx). Viele Drittanbieter-Plug-Ins für die Quellcodeverwaltung werden ebenfalls unterstützt.  
   
  **Schriftarten**  
@@ -143,3 +141,4 @@ Der Designer für tabellarische Modelle ist Bestandteil von [!INCLUDE[ssBIDevStu
  [Eigenschaften &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   
   
+

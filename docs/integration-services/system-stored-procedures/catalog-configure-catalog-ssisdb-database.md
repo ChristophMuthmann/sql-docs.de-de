@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c9e285e62e2b391939d8811b5a194a12ad55636d
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 15bec231bf1de825cea952e07827074d56751386
 ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogconfigurecatalog-ssisdb-database"></a>catalog.configure_catalog (SSISDB-Datenbank)
@@ -28,9 +28,8 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>Syntax  
   
-```  
-  
-configure_catalog [ @property_name = ] property_name , [ @property_value = ] property_value  
+```sql
+catalog.configure_catalog [ @property_name = ] property_name , [ @property_value = ] property_value  
 ```  
   
 ## <a name="arguments"></a>Argumente  
@@ -51,7 +50,7 @@ configure_catalog [ @property_name = ] property_name , [ @property_value = ] pro
   
  Diese gespeicherte Prozedur kann nur ausgeführt werden, wenn keine aktiven Ausführungen, z. B. ausstehende, in der Warteschlange stehende, in Ausführung befindliche oder angehaltene Ausführungen, vorhanden sind.  
   
- Während der Katalog konfiguriert wird, gespeichert alle anderen Katalog Prozeduren tritt mit der Fehlermeldung "Server wird zurzeit konfiguriert".  
+ Während der Katalog konfiguriert wird, gespeichert alle anderen Katalog Prozeduren tritt die Fehlermeldung "Der Server ist zurzeit konfiguriert wird."
   
  Wenn der Katalog konfiguriert ist, wird ein Eintrag in das Vorgangsprotokoll geschrieben.  
   

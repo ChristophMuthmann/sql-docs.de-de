@@ -21,11 +21,12 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fda26d14c7008d20a975ceeb156ea6b34d208335
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 37a9b92672496c6eebc50a99b2ea0cacee55372a
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="retrieving-metadata---working-with-schema-rowsets"></a>Beim Abrufen der Metadaten - arbeiten mit Schemarowsets
@@ -85,3 +86,4 @@ ms.lasthandoff: 09/01/2017
  [Abrufen von Metadaten aus einer analytischen Datenquelle](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   
+

@@ -28,11 +28,12 @@ caps.latest.revision: 31
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 193930e0050d50c8baee39aba4131cc7bf2dc6c4
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 36507bde94914d278c2dd932f2dbff3180c1b4a5
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="set-datefirst-transact-sql"></a>SET DATEFIRST (Transact-SQL)
@@ -103,14 +104,6 @@ SET DATEFIRST 3;
 SELECT CAST('1999-1-1' AS datetime2) AS SelectDate  
     ,DATEPART(dw, '1999-1-1') AS DayOfWeek;  
 GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-```  
--- SET DATEFIRST to U.S. English default value of 7.  
-SET DATEFIRST 7;  
-  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

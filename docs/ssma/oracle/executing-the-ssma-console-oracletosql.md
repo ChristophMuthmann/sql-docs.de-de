@@ -21,10 +21,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2e86935bc6eef3ea1e709cd27c916d972dd13b9f
+ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
+ms.openlocfilehash: 4ca3c3557b7f57b93dc41b23232754c5df046bdb
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>Ausführen der Konsole SSMA (OracleToSQL)
@@ -673,7 +673,7 @@ Convert-Sql-Anweisung
   
 -   `write-summary-report-to`Gibt den Pfad, in dem der Bericht generiert wird. Falls nur der Ordnerpfad angegeben wird, namentlich Datei **ConvertSQLReport.XML** wird erstellt. (optionales Attribut)  
   
-    Bericht Erstellung hat 2 Unterkategorien, begrenzt weiter..,:  
+    Bericht Erstellung hat 2 Unterkategorien, begrenzt weiter.:  
   
     -   Fehlerberichte (= "wahr/falsch", Standardwert "false" (optionale Attribute)).  
   

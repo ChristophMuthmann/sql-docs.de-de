@@ -24,11 +24,12 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d6274293bd4caedc9cad00ad4532952e63e3e989
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 3bd8f0900e3b942fb42b15deb5dbf293f168cba8
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="use-transact-sql"></a>USE (Transact-SQL)
@@ -65,13 +66,6 @@ USE { database_name }
 ```  
 USE AdventureWorks2012;  
 GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Im folgenden Beispiel wird der Datenbankkontext in die `AccountingDB`-Datenbank geändert.  
-  
-```  
-USE AccountingDB;  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

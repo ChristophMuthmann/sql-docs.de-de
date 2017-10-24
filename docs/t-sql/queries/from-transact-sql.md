@@ -38,11 +38,12 @@ caps.latest.revision: 97
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 03f3352a494bef2072ca7527dd3da804a072689e
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 6ae83ccf18cac45339d63e4ce1326c72a58c0339
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
@@ -670,18 +671,7 @@ WHERE ManagerID = 5;
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="n-using-a-simple-from-clause"></a>N. Verwenden einer einfachen FROM-Klausel  
- Das folgende Beispiel ruft die `SalesTerritoryID` und `SalesTerritoryRegion` Spalten aus der `DimSalesTerritory` Tabelle.  
-  
-```tsql
--- Uses AdventureWorks  
-  
-SELECT SalesTerritoryKey, SalesTerritoryRegion  
-FROM DimSalesTerritory  
-ORDER BY SalesTerritoryKey;  
-```  
-  
-### <a name="o-using-the-inner-join-syntax"></a>O. Verwenden der INNER JOIN-syntax  
+### <a name="n-using-the-inner-join-syntax"></a>N. Verwenden der INNER JOIN-syntax  
  Das folgende Beispiel gibt die `SalesOrderNumber`, `ProductKey`, und `EnglishProductName` Spalten aus der `FactInternetSales` und `DimProduct` Tabellen Where des Joinschlüssels `ProductKey`, in beiden Tabellen entspricht. Die `SalesOrderNumber` und `EnglishProductName` Spalten jeweils in eine der Tabellen nur vorhanden sein, daher ist es nicht erforderlich, den Tabellenalias mit den folgenden Spalten anzugeben, wie gezeigt; diese Aliase sind aus Gründen der Lesbarkeit. Das Wort **AS** vor dem Alias Name ist nicht erforderlich, jedoch wird empfohlen, zur besseren Lesbarkeit und dem ANSI-Standard entsprechen.  
   
 ```tsql
@@ -717,7 +707,7 @@ WHERE fis.SalesOrderNumber > 'SO50000'
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="p-using-the-left-outer-join-and-right-outer-join-syntax"></a>P. Mithilfe der LEFT OUTER JOIN und RIGHT OUTER JOIN-syntax  
+### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>O. Mithilfe der LEFT OUTER JOIN und RIGHT OUTER JOIN-syntax  
  Das folgende Beispiel verknüpft die `FactInternetSales` und `DimProduct` Tabellen in der `ProductKey` Spalten. Die linker äußerer Join-Syntax wird beibehalten, die nicht entsprechenden Zeilen aus der linken Seite (`FactInternetSales`) Tabelle. Da die `FactInternetSales` Tabelle enthält keine `ProductKey` Werte, die nicht entsprechen der `DimProduct` Tabelle, diese Abfrage gibt dieselben Zeilen wie im ersten inneren Join-Beispiel oben.  
   
 ```tsql
@@ -766,7 +756,7 @@ RIGHT OUTER JOIN DimSalesTerritory AS dst
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="q-using-the-full-outer-join-syntax"></a>Q. Verwenden der FULL OUTER JOIN-syntax  
+### <a name="p-using-the-full-outer-join-syntax"></a>P. Verwenden der FULL OUTER JOIN-syntax  
  Das folgende Beispiel zeigt einen vollständiger äußeren Join, die alle Zeilen aus beiden verknüpften Tabellen zurückgegeben, aber gibt NULL für Werte, die nicht übereinstimmen, aus der anderen Tabelle.  
   
 ```tsql
@@ -791,7 +781,7 @@ FULL JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="r-using-the-cross-join-syntax"></a>R. Verwenden der CROSS JOIN-syntax  
+### <a name="q-using-the-cross-join-syntax"></a>Q. Verwenden der CROSS JOIN-syntax  
  Das folgende Beispiel gibt das Kreuzprodukt von der `FactInternetSales` und `DimSalesTerritory` Tabellen. Eine Liste aller möglichen Kombinationen von `SalesOrderNumber` und `SalesTerritoryKey` werden zurückgegeben. Beachten Sie das Fehlen der `ON` -Klausel in der Cross Join-Abfrage.  
   
 ```tsql
@@ -803,7 +793,7 @@ CROSS JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="s-using-a-derived-table"></a>S. Verwenden einer abgeleiteten Tabelle  
+### <a name="r-using-a-derived-table"></a>R. Verwenden einer abgeleiteten Tabelle  
  Im folgenden Beispiel wird eine abgeleitete Tabelle (eine `SELECT` Anweisung nach der `FROM` Klausel) zurückgeben der `CustomerKey` und `LastName` Spalten aller Kunden in der `DimCustomer` -Tabelle mit `BirthDate` Werte höher als 1. Januar 1970 und dem Nachnamen "Smith".  
   
 ```tsql
@@ -817,7 +807,7 @@ WHERE LastName = 'Smith'
 ORDER BY LastName;  
 ```  
   
-### <a name="t-reduce-join-hint-example"></a>T. Beispiel für einen Join-Hinweis reduzieren  
+### <a name="s-reduce-join-hint-example"></a>S. Beispiel für einen Join-Hinweis reduzieren  
  Im folgenden Beispiel wird die `REDUCE` Join-Hinweis, die Verarbeitung der abgeleiteten Tabelle in der Abfrage zu ändern. Bei Verwendung der `REDUCE` Join-Hinweis in der folgenden Abfrage die `fis.ProductKey` projiziert wird, repliziert und unterschiedliche vorgenommen und dann hinzugefügt `DimProduct` während das Mischen von `DimProduct` auf `ProductKey`. Die daraus resultierende abgeleitete Tabelle wird auf verteilt `fis.ProductKey`.  
   
 ```tsql
@@ -833,7 +823,7 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="u-replicate-join-hint-example"></a>U. Beispiel für einen replizieren Join-Hinweis  
+### <a name="t-replicate-join-hint-example"></a>T. Beispiel für einen replizieren Join-Hinweis  
  Im folgenden Beispiel wird gezeigt, die gleiche Abfrage wie im vorherigen Beispiel, außer dass eine `REPLICATE` Join-Hinweis wird verwendet, statt die `REDUCE` Join-Hinweis. Verwenden der `REPLICATE` Hinweis bewirkt, dass die Werte in der `ProductKey` (verknüpfte) Spalte aus der `FactInternetSales` Tabelle auf allen Knoten repliziert werden sollen. Die `DimProduct` Tabelle ist verknüpft, auf die replizierten Version dieser Werte.  
   
 ```tsql
@@ -849,7 +839,7 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="v-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>V. Verwenden REDISTRIBUTE-Hinweis zum eine zufällige Verschiebung für einen Verteilungspunkt inkompatible Join zu gewährleisten.  
+### <a name="u-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>U. Verwenden REDISTRIBUTE-Hinweis zum eine zufällige Verschiebung für einen Verteilungspunkt inkompatible Join zu gewährleisten.  
  Die folgende Abfrage verwendet den Abfragehinweis Redistribute-Hinweis auf einem Verteilungspunkt nicht kompatibel. Dadurch wird sichergestellt, dass der Abfrageoptimierer eine zufällige Verschiebung im Abfrageplan verwendet wird. Auch gewährleistet ist der Abfrageplan einen Verschiebevorgang Übertragung, der verschiebt eine verteilte Tabelle zu einer replizierten Tabelle sollte nicht verwendet wird.  
   
  Im folgenden Beispiel wird der REDISTRIBUTE-Hinweis eine zufällige Verschiebung für die FactInternetSales-Tabelle erzwungen, da es sich bei "ProductKey" ist die verteilungsspalte für DimProduct und nicht die verteilungsspalte für FactInternetSales.  

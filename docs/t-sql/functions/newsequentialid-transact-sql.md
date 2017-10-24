@@ -22,11 +22,12 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2a453b99d7ab0512e57275b5ad1805f5a66522ba
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 39bd8a393a9cc3e19e457cda98c0521492e07911
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)
@@ -37,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 > [!IMPORTANT]  
 >  Falls Datenschutz eine wichtige Überlegung ist, sollten Sie diese Funktion nicht verwenden. Der Wert der als Nächstes erstellten GUID ist vorhersagbar, daher ist auch der Zugriff auf Daten möglich, die mit dieser GUID verknüpft sind.  
   
- NEWSEQUENTIALID ist ein Wrapper über die Windows [UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027) Funktion.  
+ NEWSEQUENTIALID ist ein Wrapper über die Windows [UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027) -Funktion, mit einigen [Byte vertauschen angewendet](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/).
   
 > [!WARNING]  
 >  Die UuidCreateSequential-Funktion muss es sich um Hardware Abhängigkeiten. Auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Clustern mit sequenziellen Werten können entstehen, wenn Datenbanken (z. B. eigenständige Datenbanken) auf andere Computer verschoben werden. Verwendung von Always On und auf [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], Clustern mit sequenziellen Werten können entstehen, wenn die Datenbank auf einen anderen Computer Failover.  

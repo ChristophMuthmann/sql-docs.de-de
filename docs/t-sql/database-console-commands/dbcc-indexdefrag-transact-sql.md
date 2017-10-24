@@ -27,11 +27,12 @@ caps.latest.revision: 49
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a1adc4da20dca615254f43c08282ee597b8dad17
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 79750bc5f94a7a2b459d0b3e3266ea7ee91bc4dc
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
@@ -117,7 +118,7 @@ Bei dem Aufrufer muss es sich um den Besitzer der Tabelle oder um ein Mitglied d
   
 ## <a name="examples"></a>Beispiele  
 ### <a name="a-using-dbcc-indexdefrag-to-defragment-an-index"></a>A. Defragmentieren eines Indexes mit DBCC INDEXDEFRAG  
-Im folgende Beispiel werden alle Partitionen des defragmentiert die `PK_Product`_`ProductID` index in der `Production.Product` -Tabelle in der `AdventureWorks` Datenbank.
+Im folgende Beispiel werden alle Partitionen des defragmentiert die `PK_Product_ProductID` index in der `Production.Product` -Tabelle in der `AdventureWorks` Datenbank.
   
 ```sql  
 DBCC INDEXDEFRAG (AdventureWorks2012, 'Production.Product', PK_Product_ProductID);  

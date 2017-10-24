@@ -40,11 +40,12 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fa99ed46f0d5248f2cb0552a62ec1547d5b4f296
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: ad0a32f2f11c7b0ca781c7e01635204da38fcbdd
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="search-condition-transact-sql"></a>Suchbedingung (Transact-SQL)
@@ -187,7 +188,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-using-where-with-like-and-escape-syntax"></a>A. Verwenden von WHERE mit der LIKE- und ESCAPE-Syntax  
- Im folgenden Beispiel wird nach den Zeilen gesucht, in denen die `LargePhotoFileName`-Spalte die Zeichen `green_` aufweist, und es wird die `ESCAPE`-Option verwendet, da es sich bei `_` um ein Platzhalterzeichen handelt. Ohne Angeben der `ESCAPE`-Option würde die Abfrage nach allen Beschreibungswerten suchen, die das Wort `green` gefolgt von einem anderen Zeichen als `_` enthalten.  
+ Das folgende Beispiel sucht der Zeilen, in denen die `LargePhotoFileName` Spalte hat die Zeichen `green_`, und verwendet die `ESCAPE` option, da _ ein Platzhalterzeichen ist. Ohne Angabe der `ESCAPE` -Option würde die Abfrage nach allen Beschreibungswerten mit dem Wort suchen `green` gefolgt von einem einzelnen Zeichen _ enthalten.  
   
 ```  
 USE AdventureWorks2012 ;  

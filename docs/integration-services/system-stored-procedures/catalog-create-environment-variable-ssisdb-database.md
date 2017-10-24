@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 62aa7f67d7c7b33ac61d63b10fe45d604029500b
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 5636651cccbb43c6c1627d1f28eccd9b3f9b5b0d
 ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogcreateenvironmentvariable-ssisdb-database"></a>catalog.create_environment_variable (SSISDB-Datenbank)
@@ -28,36 +28,36 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>Syntax  
   
-```tsql  
-create_environment_variable [ @folder_name = ] folder_name  
-    , [ @environment_name = ] environment_name  
-    , [ @variable_name = ] variable_name  
-    , [ @data_type = ] data_type  
-    , [ @sensitive = ] sensitive  
-    , [ @value = ] value  
-    , [ @description = ] description  
+```sql  
+catalog.create_environment_variable [@folder_name =] folder_name  
+    , [@environment_name =] environment_name  
+    , [@variable_name =] variable_name  
+    , [@data_type =] data_type  
+    , [@sensitive =] sensitive  
+    , [@value =] value  
+    , [@description =] description  
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @folder_name =] *Ordnername*  
+ [@folder_name =] *Ordnername*  
  Der Name des Ordners, der die Umgebung enthält. Der *folder_name* ist **nvarchar(128)**.  
   
- [ @environment_name =] *Environment_name*  
+ [@environment_name =] *Environment_name*  
  Der Name der Umgebung. Der *environment_name* ist **nvarchar(128)**.  
   
- [ @variable_name =] *Variable_name*  
+ [@variable_name =] *Variable_name*  
  Der Name der Umgebungsvariablen. Der *variable_name* ist **nvarchar(128)**.  
   
- [ @data_type =] *Data_type*  
- Der Datentyp der Variablen. Unterstützt die folgenden Anweisungstypen Variable Umgebungsdaten **booleschen**, **Byte**, **"DateTime"**, **doppelte**, **Int16**, **Int32**, **Int64**, **einzelne**, **Zeichenfolge**, **UInt32**, und ** UInt64**. Nicht unterstützte umgebungsvariablendatentypen sind **Char**, **DBNull**, **Objekt**, und **"SByte"**. Der Datentyp der *Data_type* Parameter ist **vom Datentyp nvarchar(128)**.  
+ [@data_type =] *Data_type*  
+ Der Datentyp der Variablen. Unterstützt die folgenden Anweisungstypen Variable Umgebungsdaten **booleschen**, **Byte**, **"DateTime"**, **doppelte**, **Int16**, **Int32**, **Int64**, **einzelne**, **Zeichenfolge**, **UInt32**, und  **UInt64**. Nicht unterstützte umgebungsvariablendatentypen sind **Char**, **DBNull**, **Objekt**, und **"SByte"**. Der Datentyp der *Data_type* Parameter ist **vom Datentyp nvarchar(128)**.  
   
- [ @sensitive =] *vertrauliche*  
+ [@sensitive =] *vertrauliche*  
  Gibt an, ob die Variable einen vertraulichen Wert enthält. Verwenden Sie den Wert `1` , um anzugeben, dass der Wert der Umgebungsvariablen vertraulich ist, oder den Wert `0` , um anzugeben, dass er nicht vertraulich ist. Ein vertraulicher Wert wird verschlüsselt, wenn er gespeichert wird. Ein Wert, der nicht vertraulich ist, wird als nur-Text gespeichert. *Vertrauliche* ist **Bit**.  
   
- [ @value =] *Wert*  
+ [@value =] *Wert*  
  Der Wert der Umgebungsvariablen. Der *value* ist **sql_variant**.  
   
- [ @description =] *Beschreibung*  
+ [@description =] *Beschreibung*  
  Die Beschreibung der Umgebungsvariablen. Die *Wert* ist **nvarchar(1024)**.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
@@ -92,7 +92,7 @@ create_environment_variable [ @folder_name = ] folder_name
 > [!TIP]  
 >  Erwägen Sie die **Int16** -Datentyp im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] statt des nicht unterstützten **"SByte"** -Datentyp.  
   
- Der an diese gespeicherte Prozedur übergebene Wert der *Wert* Parameter wird von konvertiert werden ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Datentyp, ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp gemäß der folgenden Tabelle:  
+ An diese gespeicherte Prozedur übergebene Wert der *Wert* Parameter konvertiert wird, aus einer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Datentyp, ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp gemäß der folgenden Tabelle:  
   
 |Integration Services-Datentyp|SQL Server-Datentyp|  
 |------------------------------------|--------------------------|  
@@ -105,7 +105,7 @@ create_environment_variable [ @folder_name = ] folder_name
 |**Int64-Typ**|**bigint**|  
 |**Single**|Genaue numerische: **decimal**, **numerischen**; Ungefähre numerische: **"float"**, **real**|  
 |**String**|**Varchar**, **Nvarchar**, **Char**|  
-|**UInt32**|**Int** (Dies ist die beste Entsprechung zu **Uint32**.)|  
-|**UInt64**|**"bigint"** (Dies ist die beste Entsprechung zu **Uint64**.)|  
+|**UInt32**|**Int** (**Int** ist die beste Entsprechung zu **Uint32**.)|  
+|**UInt64**|**"bigint"** (**Int** ist die beste Entsprechung zu **Uint64**.)|  
   
   

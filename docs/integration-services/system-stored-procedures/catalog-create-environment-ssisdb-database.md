@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2d3ff080d50545b75a416e459b73ebd8bbb44666
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 588728b6f86090e5b8f492ba3a117e0ccd47132e
 ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogcreateenvironment-ssisdb-database"></a>catalog.create_environment (SSISDB-Datenbank)
@@ -28,20 +28,20 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>Syntax  
   
-```tsql  
-create_environment [ @folder_name = ] folder_name  
-     , [ @environment_name = ] environment_name  
-  [  , [ @environment_description = ] environment_description ]  
+```sql  
+catalog.create_environment [@folder_name =] folder_name  
+     , [@environment_name =] environment_name  
+  [  , [@environment_description =] environment_description ]  
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @folder_name =] *Ordnername*  
- Der Name des Ordners, der die Umgebung enthält. Der *folder_name* ist **nvarchar(128)**.  
+ [@folder_name =] *Ordnername*  
+ Der Name des Ordners an die Umgebung enthalten. Der *folder_name* ist **nvarchar(128)**.  
   
- [ @environment_name =] *Environment_name*  
+ [@environment_name =] *Environment_name*  
  Der Name der Umgebung. Der *environment_name* ist **nvarchar(128)**.  
   
- [ @environment_description=] *Environment_description*  
+ [@environment_description=] *Environment_description*  
  Eine optionale Beschreibung der Umgebung. Der *environment_description* ist **nvarchar(1024)**.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  

@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: df7b4750e813601b7e4d2a02c8f1f277f1000d9c
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 43d128f9dcc4cea632c810a13d21eb5e1ddb61df
 ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogcreatefolder-ssisdb-database"></a>catalog.create_folder (SSISDB-Datenbank)
@@ -28,15 +28,15 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>Syntax  
   
-```tsql  
-create_folder [ @folder_name = ] folder_name, [ @folder_id = ] folder_id OUTPUT  
+```sql  
+catalog.create_folder [@folder_name =] folder_name, [@folder_id =] folder_id OUTPUT  
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @folder_name =] *Ordnername*  
+ [@folder_name =] *Ordnername*  
  Der Name des neuen Ordners. Der *folder_name* ist **nvarchar(128)**.  
   
- [ @folder_name =] *Folder_id*  
+ [@folder_name =] *Folder_id*  
  Der eindeutige Bezeichner (ID) des Ordners. Der *folder_id* ist **bigint**.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
@@ -53,6 +53,6 @@ create_folder [ @folder_name = ] folder_name, [ @folder_id = ] folder_id OUTPUT
 -   Mitgliedschaft in der Serverrolle **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Fehler und Warnungen  
- Die gespeicherte Prozedur gibt einen Fehler zurück, wenn bereits ein Ordner mit demselben Namen vorhanden ist.  
+Wenn Sie ein Ordner mit dem gleichen Namen bereits vorhanden ist, gibt die gespeicherte Prozedur einen Fehler zurück.  
   
   

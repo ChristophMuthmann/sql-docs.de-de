@@ -21,11 +21,12 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7e61cb9edc75dda4368e31e9eac6e4e452d4387f
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 919d12395255bc754fe89a20659576435ab51e9e
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
@@ -142,23 +143,6 @@ THROW 60000, @msg, 1;
  ```
  Msg 60000, Level 16, State 1, Line 2  
  This is a test message with one numeric parameter (500), one string parameter (First string), and another string parameter (second string).
- ```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="d-using-throw-to-raise-an-exception"></a>D. Verwenden von THROW zum Auslösen einer Ausnahme  
- Im folgenden Beispiel wird gezeigt, wie die `THROW`-Anweisung zum Auslösen einer Ausnahme verwendet wird.  
-  
-```tsql  
-THROW 51000, 'The record does not exist.', 1;  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- ```
- Msg 51000, Level 16, State 1, Line 1  
-  
- The record does not exist.
  ```  
   
 ## <a name="see-also"></a>Siehe auch  

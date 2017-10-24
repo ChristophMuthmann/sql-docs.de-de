@@ -31,11 +31,12 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0711d429f689fa0aaf0d4332ff2243835d231338
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: fb1632ed04904150247280962d8423a493b51d60
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
@@ -122,18 +123,6 @@ BACKUP CERTIFICATE sales09 TO FILE = 'c:\storedcerts\sales09cert'
     WITH PRIVATE KEY ( DECRYPTION BY PASSWORD = '9875t6#6rfid7vble7r' ,  
     FILE = 'c:\storedkeys\sales09key' ,   
     ENCRYPTION BY PASSWORD = '9n34khUbhk$w4ecJH5gh' );  
-GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="d-exporting-a-certificate-and-a-private-key"></a>D. Exportieren eines Zertifikats und eines privaten Schlüssels  
- Im folgenden Beispiel wird der private Schlüssel des zu sichernden Zertifikats mit dem Kennwort `997jkhUbhk$w4ez0876hKHJH5gh` verschlüsselt.  
-  
-```  
-BACKUP CERTIFICATE sales05 TO FILE = '\\ServerA7\storedcerts\sales05cert'  
-    WITH PRIVATE KEY ( FILE = '\\ServerA7\storedkeys\sales05key' ,   
-    ENCRYPTION BY PASSWORD = '997jkhUbhk$w4ez0876hKHJH5gh' );  
 GO  
 ```  
   

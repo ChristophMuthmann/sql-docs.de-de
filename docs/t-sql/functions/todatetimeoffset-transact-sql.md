@@ -27,11 +27,12 @@ caps.latest.revision: 37
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 77d42b2484563d162d78e1caad28389cc26f6cee
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 6c0ff45ae5842950d9f15d7b131ad107fba351b5
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET (Transact-SQL)
@@ -86,37 +87,6 @@ SELECT TODATETIMEOFFSET (@todaysDate, -120);
 ```  
   
 ### <a name="c-adding-a-13-hour-time-zone-offset"></a>C. Hinzufügen eines 13-Stunden-Zeitzonenoffsets  
- Im folgenden Beispiel wird ein 13-Stunden-Zeitzonenoffset einem Datum und einer Uhrzeit hinzugefügt.  
-  
-```  
-DECLARE @dateTime datetimeoffset(7)= '2007-08-28 18:00:30';  
-SELECT TODATETIMEOFFSET (@dateTime, '+13:00');  
--- RETURNS 2007-08-28 18:00:30.0000000 +13:00  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="d-changing-the-time-zone-offset-of-the-current-date-and-time"></a>D. Ändern des Zeitzonenoffsets für das aktuelle Datum und die aktuelle Uhrzeit  
- Im folgenden Beispiel ändert sich der Zeitzonenoffset des aktuellen Datums und der aktuellen Uhrzeit zur Zeitzone `-07:00`.  
-  
-```  
-DECLARE @todaysDateTime datetime2;  
-SET @todaysDateTime = GETDATE();  
-SELECT TODATETIMEOFFSET (@todaysDateTime, '-07:00');  
--- RETURNS 2007-08-30 15:51:34.7030000 -07:00  
-```  
-  
-### <a name="e-changing-the-time-zone-offset-in-minutes"></a>E. Ändern des Zeitzonenoffsets zu Minuten  
- Im folgenden Beispiel ändert sich die aktuelle Zeitzone zu `-120` Minuten.  
-  
-```  
-DECLARE @todaysDate datetime2;  
-SET @todaysDate = GETDATE();  
-SELECT TODATETIMEOFFSET (@todaysDate, -120);  
--- RETURNS 2007-08-30 15:52:37.8770000 -02:00  
-```  
-  
-### <a name="f-adding-a-13-hour-time-zone-offset"></a>F. Hinzufügen eines 13-Stunden-Zeitzonenoffsets  
  Im folgenden Beispiel wird ein 13-Stunden-Zeitzonenoffset einem Datum und einer Uhrzeit hinzugefügt.  
   
 ```  
