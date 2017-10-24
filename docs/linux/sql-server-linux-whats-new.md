@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 381dcb3e22f123bfa07c2b387598d3429398e21f
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: f76985a8721e154269b36b0bdcb40a83f6136cb3
 ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Neuigkeiten für SQL Server-2017 unter Linux
@@ -137,6 +137,7 @@ Unter dem Kompatibilitätsmodus 140:
 
 [Verbesserungen von Service Pack 1](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/) in dieser Version CTP1.1:
 - Für CLR, Filestream/Filetable, Objekte im Arbeitsspeicher und der Abfragespeicher das Klonen von Datenbanken.
+  - **Aktualisieren von 10/18/2017**: beim Weitere Testzwecke Filestream wird derzeit nicht unterstützt in der GA-Version von SQL Server-2017 unter Linux  
 - **Erstellen Sie** oder **ALTER** Operatoren für programmierbarkeitsobjekte.
 - Neue **verwenden Hinweis** -Abfrageoption verwenden, um Hinweise für die der Abfrageprozessor zu übermitteln. Erfahren Sie hier: [Abfragehinweise](../t-sql/queries/hints-transact-sql-query.md).
 - SQL-Dienstkonto kann nun programmgesteuert aktivieren Sperren von Seiten im Speicher und die sofortige Dateiinitialisierung Berechtigungen identifizieren.

@@ -1,7 +1,7 @@
 ---
-title: "Unterstützte Datentypen (SSAS – tabellarisch) | Microsoft Docs"
+title: "In tabellarischen Modellen von Analysis Services unterstützten Datentypen | Microsoft Docs"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 10/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,25 +17,21 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a60cc3c2782abed53a8064f80bcdbe01921826cc
+ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
+ms.openlocfilehash: d86b23c7c1b56d7407e0068c2e77e184be1aa36d
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/21/2017
 
 ---
-# <a name="data-types-supported-ssas-tabular"></a>Unterstützte Datentypen (SSAS – tabellarisch)
+# <a name="data-types-supported-in-tabular-models"></a>Unterstützte Datentypen in tabellarischen Modellen
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   In diesem Artikel werden die Datentypen erläutert, die in tabellarischen Modellen verwendet werden können, und die implizite Konvertierung von Datentypen bei der Berechnung oder Verwendung von Daten in einer Data Analysis Expressions (DAX)-Formel beschrieben.  
+
   
- Dieser Artikel enthält folgende Abschnitte:  
-  
--   [In tabellarischen Modellen verwendete Datentypen](#bkmk_data_types)  
-  
--   [Implizite und explizite Datentypkonvertierungen in DAX-Formeln](#bkmk_implicit)  
-  
--   [Behandeln von Leerzeichen, leeren Zeichenfolgen und Nullwerten](#bkmk_hand_blanks)  
-  
-##  <a name="bkmk_data_types"></a> In tabellarischen Modellen verwendete Datentypen  
- Die folgenden Datentypen werden unterstützt. Wenn Sie Daten importieren oder einen Wert in einer Formel verwenden, werden die Daten in einen der folgenden Datentypen konvertiert, auch wenn die ursprüngliche Datenquelle einen anderen Datentyp enthält. Werte, die sich aus Formeln ergeben, verwenden ebenfalls diese Datentypen.  
+##  <a name="bkmk_data_types"></a>In tabellarischen Modellen verwendete Datentypen  
+Wenn Sie Daten importieren oder einen Wert in einer Formel verwenden, werden die Daten in einen der folgenden Datentypen konvertiert, auch wenn die ursprüngliche Datenquelle einen anderen Datentyp enthält. Werte, die sich aus Formeln ergeben, verwenden ebenfalls diese Datentypen.  
   
  Im Allgemeinen werden diese Datentypen implementiert, um genaue Berechnungen in berechneten Spalten zu ermöglichen. Die gleichen Einschränkungen gelten aus Konsistenzgründen auch für den Rest der Daten in Modellen.  
   
@@ -47,12 +43,12 @@ ms.lasthandoff: 09/01/2017
 |Ganze Zahl|Ein ganzzahliger 64-Bit (acht Byte)-Wert*<br /><br /> Hinweis:<br />         DAX-Formeln unterstützen keine Datentypen, die zu klein für den kleinsten in der Beschreibung aufgeführten Wert sind.|Zahlen ohne Dezimalstellen. Ganze Zahlen können positiv oder negativ sein, aber müssen ganze Zahlen zwischen -9 223 372 036 854 775 808 (-2^63) und 9 223 372 036 854 775 807 (2^63-1) sein.|  
 |Decimal Number|Eine reelle 64-Bit (acht Byte)-Zahl*<br /><br /> Hinweis:<br />         DAX-Formeln unterstützen keine Datentypen, die zu klein für den kleinsten in der Beschreibung aufgeführten Wert sind.|Reelle Zahlen sind Zahlen, die Dezimalstellen aufweisen können. Reelle Zahlen decken viele Werte ab:<br /><br /> Negative Werte von -1,79E +308 bis -2,23E -308<br /><br /> Null (0)<br /><br /> Positive Werte von 2,23E -308 bis -1,79E +308<br /><br /> Die Anzahl der relevanten Stellen wird jedoch auf siebzehn Dezimalstellen beschränkt.|  
 |Boolean|Boolean|Entweder ein True oder ein False-Wert.|  
-|Text|String|Eine Unicodezeichen-Datenzeichenfolge. Dies können Zeichenfolgen, Zahlen oder Datumsangaben im Textformat sein.|  
+|Text|String|Eine Unicodezeichen-Datenzeichenfolge. Hierbei kann es sich um Zeichenfolgen, Zahlen oder Datumsangaben in einem Textformat dargestellt sein.|  
 |Datum|Date/Time|Datumsangaben und Uhrzeiten in einer akzeptierten Form für die Darstellung von Datum und Uhrzeit.<br /><br /> Gültig sind alle Datumsangaben nach dem 1. März 1900.|  
 |Währung|Währung|Der Währungsdatentyp lässt Werte zwischen -922 337 203 685 477,5808 und 922 337 203 685 477,5807 mit vier Dezimalstellen unveränderlicher Genauigkeit zu.|  
 |–|Leer|Ein leerer Datentyp in DAX, der SQL-NULLEN darstellt und ersetzt. Sie können mit der BLANK-Funktion ein Leerzeichen erstellen und mit der logischen ISBLANK-Funktion nach Leerzeichen suchen.|  
   
- \* Beim Importieren von Daten mit sehr großen numerischen Werten tritt möglicherweise der folgende Fehler auf:  
+ \*Wenn Sie versuchen, Daten zu importieren, die große numerische Werte verfügt, kann Import mit folgender Fehlermeldung fehl:  
   
  In-Memory-Datenbankfehler: die "\<Spaltenname >" Spalte der '\<Tabellenname > "Tabelle enthält einen Wert" 1. 7976931348623157E + 308", die nicht unterstützt wird. Der Vorgang wurde abgebrochen.  
   
@@ -66,35 +62,35 @@ ms.lasthandoff: 09/01/2017
 |1,7976931348623158e+308|  
 |2,2250738585072014e-308|  
   
- Sie sollten den Wert aus den Daten entfernen und erneut importieren.  
+ Entfernen Sie den Wert aus Ihren Daten, und wiederholen Sie den Importversuch.  
   
 > [!NOTE]  
 >  Sie können keine Elemente aus einer **varchar(max)** -Spalte importieren, die eine Zeichenfolgenlänge von mehr als 131.072 Zeichen enthält.  
   
-### <a name="table-data-type"></a>Table-Datentyp  
+### <a name="table-data-type"></a>Table (Datentyp)  
  Außerdem verwendet DAX einen *table* -Datentyp. Dieser Datentyp wird von DAX in vielen Funktionen verwendet, z. B. in Aggregationen und Zeitintelligenzberechnungen. Einige Funktionen erfordern einen Verweis auf eine Tabelle, während andere Funktionen eine Tabelle zurückgeben, die als Eingabe für andere Funktionen verwendet werden kann. In einigen Funktionen, die eine Tabelle als Eingabe erfordern, können Sie einen Ausdruck angeben, der eine Tabelle ergibt. Bei einigen Funktionen ist ein Verweis auf eine Basistabelle erforderlich. Informationen zu den Anforderungen bestimmter Funktionen finden Sie in der [DAX-Funktionsreferenz](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
   
-##  <a name="bkmk_implicit"></a> Implizite und explizite Datentypkonvertierungen in DAX-Formeln
+##  <a name="bkmk_implicit"></a>Implizite und explizite datentypkonvertierungen in DAX-Formeln
   
  Jede DAX-Funktion verfügt über bestimmte Anforderungen im Hinblick auf die Datentypen, die als Eingaben und Ausgaben verwendet werden. Einige Funktionen erfordern z. B. ganze Zahlen für einige Argumente und Daten für andere, während für andere Funktionen Text oder Tabellen erforderlich sind.  
   
- Wenn die Daten in der Spalte, die Sie als Argument angeben, nicht mit dem erforderlichen Datentyp kompatibel sind, gibt DAX in vielen Fällen einen Fehler zurück. Sofern möglich, versucht DAX die Daten jedoch implizit in den erforderlichen Datentyp zu konvertieren. Beispiel:  
+ Wenn die Daten in der Spalte, die Sie als Argument angeben, nicht mit dem von der Funktion erforderlichen Datentyp kompatibel ist, gibt DAX in vielen Fällen einen Fehler zurück. Allerdings versucht immer, wenn möglich DAX die Daten implizit in den erforderlichen Datentyp zu konvertieren. Beispiel:  
   
--   Sie können eine Zahl, z. B. "123", als Zeichenfolge eingeben. DAX analysiert die Zeichenfolge und versucht, diese als Zahlendatentyp anzugeben.  
+-   Sie können eine Zahl, z. B. "123", als Zeichenfolge eingeben. DAX analysiert die Zeichenfolge und versucht, ihn als Zahlendatentyp anzugeben.  
   
 -   Sie können TRUE + 1 hinzufügen und als Ergebnis 2 abrufen, da TRUE implizit in die Zahl 1 konvertiert wird und der Vorgang 1+1 ausgeführt wird.  
   
 -   Wenn Sie Werte in zwei Spalten hinzufügen und ein Wert als Text ("12") und der andere als Zahl (12) dargestellt wird, konvertiert DAX die Zeichenfolge implizit in eine Zahl und addiert diese dann zu einem Ergebnis in numerischer Form. Vom folgenden Ausdruck wird 44 zurückgegeben: = "22" + 22  
   
--   Wenn Sie zwei Zahlen verketten möchten, stellt das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Add-In sie als Zeichenfolgen dar und verkettet sie dann. Vom folgenden Ausdruck wird "1234" zurückgegeben: = 12 & 34  
+-   Wenn Sie zwei Zahlen verketten möchten, werden sie als Zeichenfolgen dargestellt und dann verkettet. Vom folgenden Ausdruck wird "1234" zurückgegeben: = 12 & 34  
   
  In der folgenden Tabelle werden die impliziten Datentypkonvertierungen zusammengefasst, die in Formeln ausgeführt werden. Im Allgemeinen verhält sich der Designer für semantische Modelle wie Microsoft Excel und führt implizite Konvertierungen aus, wann immer dies möglich und bei dem betreffenden Vorgang erforderlich ist.  
   
-### <a name="table-of-implicit-data-conversions"></a>Tabelle mit impliziten Datenkonvertierungen  
+### <a name="table-of-implicit-data-conversions"></a>Tabelle mit impliziten datenkonvertierungen  
  Der ausgeführte Konvertierungstyp wird vom Operator bestimmt, der die erforderlichen Werte umwandelt, bevor der entsprechende Vorgang ausgeführt wird. In diesen Tabellen sind die Operatoren aufgeführt. Außerdem wird die Konvertierung angegeben, die bei den einzelnen Datentypen in der Spalte ausgeführt wird, wenn er dem Datentyp in der überschneidenden Zeile zugeordnet wird.  
   
 > [!NOTE]  
->  Textdatentypen sind in diesen Tabellen nicht enthalten. Wenn eine Zahl wie in einem Textformat dargestellt wird, versucht der Modell-Designer in einigen Fällen, den Zahlentyp zu bestimmen und ihn als Zahl anzugeben.  
+>  Textdatentypen sind in diesen Tabellen nicht enthalten. Wenn eine Zahl, wie in einem Textformat, in einigen Fällen dargestellt wird versucht der Modell-Designer den Zahlentyp zu bestimmen und ihn als Zahl darzustellen.  
   
 #### <a name="addition-"></a>Addition (+)  
   
@@ -109,7 +105,7 @@ ms.lasthandoff: 09/01/2017
  Wenn beispielsweise eine reelle Zahl bei einer Addition in Verbindung mit Währungsdaten verwendet wird, werden beide Werte in REAL konvertiert, und das Ergebnis wird als REAL zurückgegeben.  
   
 #### <a name="subtraction--"></a>Subtraktion (-)  
- In der folgenden Tabelle ist die Zeilenüberschrift der Minuend (linke Seite), und die Spaltenüberschrift ist der Subtrahend (rechte Seite).  
+ Klicken Sie in der folgenden Tabelle ist die Zeilenüberschrift der Minuend (linke Seite), und die Spaltenüberschrift ist der Subtrahend (rechte Seite):  
   
 ||||||  
 |-|-|-|-|-|  
@@ -151,8 +147,8 @@ ms.lasthandoff: 09/01/2017
 #### <a name="comparison-operators"></a>Vergleichsoperatoren  
 Es wird nur ein eingeschränkter Satz von gemischten Datentyp Kombinationen für Vergleichsvorgänge unterstützt. Weitere Informationen finden Sie unter [DAX-Operator (Referenz)](https://msdn.microsoft.com/library/ee634237.aspx).  
   
-## <a name="bkmk_hand_blanks"></a> Behandeln von Leerzeichen, leeren Zeichenfolgen und Nullwerten  
- In der folgenden Tabelle werden die Unterschiede zwischen DAX und Microsoft Excel in Bezug auf die Behandlung von Leerzeichen zusammengefasst.  
+## <a name="bkmk_hand_blanks"></a>Behandlung von Leerzeichen, leeren Zeichenfolgen und Nullwerten  
+ In der folgenden Tabelle werden die Unterschiede zwischen DAX und Microsoft Excel, bei der Datenerfassung Behandlung von Leerzeichen zusammengefasst:  
   
 ||||  
 |-|-|-|  
@@ -171,9 +167,4 @@ Es wird nur ein eingeschränkter Satz von gemischten Datentyp Kombinationen für
 |BLANK AND BLANK|Leer|Fehler|  
   
  Informationen zur Behandlung von Leerzeichen durch eine bestimmte Funktion oder einen Operator finden Sie in den einzelnen Themen zu den verschiedenen DAX-Funktionen im Abschnitt [DAX-Funktionsreferenz](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Datenquellen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
- [Importieren von Daten &#40;SSAS – tabellarisch&#41;](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)  
-  
   

@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: aab83dd2f179c8e6b90ad9ff7a212597a51038de
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 8f4a8cd24278742ffb13d16791ce5f1f3a95f301
 ms.contentlocale: de-de
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogdisableworkeragent-ssisdb-database"></a>Catalog.disable_worker_agent (SSISDB-Datenbank)
@@ -28,15 +28,16 @@ Deaktivieren Sie eine Skala Out Worker für Skalierung Out Master arbeiten mit d
 
 ## <a name="syntax"></a>Syntax
 
-```tsql
-disable_worker_agent [@WorkerAgentId = ] WorkerAgentId
+```sql
+catalog.disable_worker_agent [@WorkerAgentId =] WorkerAgentId
 ```
 ## <a name="arguments"></a>Argumente
-[ @WorkerAgentId =] *WorkerAgentId* die Worker-Agent-Id des Scale-Out-Worker. Die *WorkerAgentId* ist **"uniqueidentifier"**.
+[@WorkerAgentId =] *WorkerAgentId* der Worker-Agent-ID der Skalierung Out Worker. Die *WorkerAgentId* ist **"uniqueidentifier"**.
 
 ## <a name="example"></a>Beispiel
 In diesem Beispiel wird die Skalierung Out Worker auf ComputerA deaktiviert.
-```tsql
+
+```sql
 SELECT WorkerAgentId, MachineName FROM [catalog].[worker_agents]
 GO
 -- Result: --
@@ -61,5 +62,5 @@ GO
 -   Mitgliedschaft in der Serverrolle **sysadmin** 
 
 ## <a name="errors-and-warnings"></a>Fehler und Warnungen
-Die gespeicherte Prozedur gibt einen Fehler zurück, wenn die Worker-Agent-ID ungültig ist.
+Wenn die Worker-Agent-ID ungültig ist, gibt die gespeicherte Prozedur einen Fehler zurück.
 

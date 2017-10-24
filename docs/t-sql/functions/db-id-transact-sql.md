@@ -26,11 +26,12 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 99497c63e037054daf249ac75ef35073f102a498
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 30d34b3509517d18559d4fbb0aa02a92e6d6cfe8
 ms.contentlocale: de-de
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="dbid-transact-sql"></a>DB_ID (Transact-SQL)
@@ -78,7 +79,7 @@ GO
 ```  
   
 ### <a name="c-using-dbid-to-specify-the-value-of-a-system-function-parameter"></a>C. Angeben des Werts eines Systemfunktionsparameters mithilfe von DB_ID  
-Im folgenden Beispiel wird `DB`_`ID` zum Zurückgeben der Datenbank-ID, der die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbank in der Systemfunktion `sys.dm_db` \_ `index` \_ `operational` \_ `stats`. Der erste Parameter dieser Funktion ist eine Datenbank-ID.
+Im folgenden Beispiel wird `DB_ID` zum Zurückgeben der Datenbank-ID, der die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbank in der Systemfunktion `sys.dm_db_index_operational_stats`. Der erste Parameter dieser Funktion ist eine Datenbank-ID.
   
 ```sql
 DECLARE @db_id int;  

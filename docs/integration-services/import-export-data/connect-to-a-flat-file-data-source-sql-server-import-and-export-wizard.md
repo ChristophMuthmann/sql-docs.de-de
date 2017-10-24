@@ -15,14 +15,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b765b02717c0eef59fda5dfa12cb64a1b9197587
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 568d02ef58102b47501415d35f64369e997e875b
 ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Herstellen einer Verbindung mit einer Flatfile-Datenquelle (SQL Server-Import / Export-Assistent)
-Dieses Thema veranschaulicht das Herstellen von Verbindungen ein **Flatfile** (Textdatei) Datenquellen aus der **wählen Sie eine Datenquelle** oder **wählen Sie ein Ziel** auf der Seite SQL Server-Import und Export Assistenten. Für Flatfiles enthalten diese beiden Seiten des Assistenten verschiedene Gruppen von Optionen, damit die Flatfile-Quelle und Ziel separat beschrieben.
+Dieses Thema veranschaulicht das Herstellen von Verbindungen ein **Flatfile** (Textdatei) Datenquellen aus der **wählen Sie eine Datenquelle** oder **wählen Sie ein Ziel** auf der Seite SQL Server-Import und Export Assistenten. Für Flatfiles enthalten diese beiden Seiten des Assistenten verschiedene Gruppen von Optionen, damit der Flatfile-Quelle und das Flatfileziel separat beschrieben.
+
+## <a name="an-alternative-for-simple-text-import"></a>Eine Alternative für einfachen Text importieren
+Wenn Sie in SQL Server eine Textdatei importieren, und Sie nicht alle Konfigurationsoptionen im Import / Export-Assistenten verfügbar brauchen, können Sie verwenden die **Flatfile-Assistenten importieren** in SQL Server Management Studio (SSMS). Weitere Informationen finden Sie in den folgenden Artikeln:
+- [Neuigkeiten in SQL Server Management Studio 17.3](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
+- [Einführung in den neuen Assistenten zum Importieren von Flatfiles in SSMS 17.3](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)
 
 ## <a name="connect-to-a-flat-file-source"></a>Herstellen einer Verbindung mit einer Flatfilequelle
  
@@ -202,10 +207,10 @@ Screenshot, beachten Sie, dass die **Id** Spalte, die Zahlen enthält, weist zun
   
 |Eigenschaft|Description|  
 |--------------|-----------------|  
-|**Name**|Geben Sie einen beschreibenden Spaltennamen an. Wenn Sie keinen Namen eingeben, wird in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] automatisch ein Name im Format Spalte 0, Spalte 1 usw. erstellt.|
+|**Name**|Geben Sie einen beschreibenden Spaltennamen an. Wenn Sie einen Namen nicht eingeben [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] automatisch ein Name im Format Spalte 0, Spalte1 usw. erstellt.|
 |**ColumnDelimiter**|Wählen Sie eine Option aus der Liste der verfügbaren Spaltentrennzeichen aus. Dabei sollten Sie Spaltentrennzeichen auswählen, deren Auftreten als Zeichen im Text unwahrscheinlich ist. Bei Spalten fester Breite wird dieser Wert ignoriert.<br /><br /> **{CR}{LF}**. Als Trennzeichen für Spalten dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.<br /><br /> **{CR}**. Als Trennzeichen für Spalten dient ein Wagenrücklauf.<br /><br /> **{LF}**. Als Trennzeichen für Spalten dient ein Zeilenvorschub.<br /><br /> **Semikolon {;}**. Als Trennzeichen für Spalten dient ein Semikolon.<br /><br /> **Doppelpunkt {:}**. Als Trennzeichen für Spalten dient ein Doppelpunkt.<br /><br /> **Komma {,}**. Als Trennzeichen für Spalten dient ein Komma.<br /><br /> **Tabulator {t}**. Als Trennzeichen für Spalten dient ein Tabulator.<br /><br /> **Senkrechter Strich {&#124;}**. Als Trennzeichen für Spalten dient ein senkrechter Strich.|
 |**ColumnType**|Gibt an, ob eine Spalte getrennt ist, eine feste Breite hat bzw. einen unregelmäßigen rechten Rand aufweist. Diese Eigenschaft ist schreibgeschützt. Bei Dateien mit rechtem Flatterrand haben die Spalten mit Ausnahme der letzten Spalte eine feste Breite. Die Trennung der letzten Spalte erfolgt mit einem Zeilentrennzeichen.|  
-|**InputColumnWidth**|Gibt an, welcher Wert als Anzahl von Bytes gespeichert werden soll; bei Unicode-Dateien wird dieser Wert als Zeichenanzahl angezeigt. Bei mit Trennzeichen versehenen Spalten wird dieser Wert ignoriert.<br /><br /> **Hinweis:** Im Objektmodell heißt diese Eigenschaft ColumnWidth.|
+|**InputColumnWidth**|Geben Sie einen Wert als Anzahl von Bytes gespeichert werden soll; Bei Unicode-Dateien ist dieser Wert einer Zeichenanzahl. Bei mit Trennzeichen versehenen Spalten wird dieser Wert ignoriert.<br /><br /> **Hinweis:** Im Objektmodell heißt diese Eigenschaft ColumnWidth.|
 |**DataPrecision**|Gibt die Präzision numerischer Daten an. Präzision heißt in diesem Fall die Anzahl der Stellen.|
 |**DataScale**|Gibt die Skala numerischer Daten an. Skala heißt in diesem Fall die Anzahl der Dezimalstellen.|
 |**DataType**|Wählen Sie eine Option aus der Liste der verfügbaren Datentypen aus.<br/>Weitere Informationen finden Sie unter [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|
@@ -229,7 +234,7 @@ Screenshot, beachten Sie, dass die **Id** Spalte, die Zahlen enthält, weist zun
  
 Klicken Sie auf **Typen vorschlagen**, um das Dialogfeld **Spaltentypen vorschlagen** anzuzeigen. 
 
-![Flatfile-Verbindung, Vorschlag](../../integration-services/import-export-data/media/flat-file-connection-suggest.png)
+![Flatfile-Verbindung vorschlagen Typen (Dialogfeld)](../../integration-services/import-export-data/media/flat-file-connection-suggest.png)
 
 Nach dem Auswählen von Optionen in der **Spaltentypen vorschlagen** (Dialogfeld), und klicken Sie auf **OK**, der Assistent kann die Datentypen der einige der Spalten ändern.
 
@@ -293,7 +298,7 @@ Für ein Flatfileziel ist nur eine einzelne Seite mit Optionen, wie im folgenden
  Geben Sie den Textqualifizierer ggf. von der Datei verwendet. So können Sie beispielsweise angeben, dass Textfelder in Anführungszeichen eingeschlossen sind. (Diese Eigenschaft gilt nur für Dateien mit Trennzeichen.) 
   
 > [!NOTE] 
-> Nachdem Sie einen Textqualifizierer ausgewählt haben, kann nicht erneut Auswahl der **keine** Option. Geben Sie **Keine** ein, um die Auswahl des Textqualifizierers aufzuheben.  
+> Nachdem Sie einen Textqualifizierer ausgewählt haben, kann nicht erneut die **keine** Option. Geben Sie **Keine** ein, um die Auswahl des Textqualifizierers aufzuheben.  
 
 ## <a name="see-also"></a>Siehe auch
 [Wählen Sie eine Datenquelle](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  

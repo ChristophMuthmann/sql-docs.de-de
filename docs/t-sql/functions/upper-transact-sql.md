@@ -26,11 +26,12 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7572e82178b211fba9967a88cb16c20d059c7b52
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: c46fb930d1bba04b4a30725cc3c40e196b3f9a8b
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="upper-transact-sql"></a>UPPER (Transact-SQL)
@@ -56,16 +57,6 @@ UPPER ( character_expression )
  **Varchar** oder **Nvarchar**  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird mithilfe der `UPPER`-Funktion und `RTRIM`-Funktion der Nachname von Personen in der `Person`-Tabelle der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückgegeben, damit der Nachname in Großbuchstaben, gekürzt und mit dem Vornamen verkettet angezeigt wird.  
-  
-```  
-SELECT UPPER(RTRIM(LastName)) + ', ' + FirstName AS Name  
-FROM Person.Person  
-ORDER BY LastName;  
-GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Im folgenden Beispiel wird die `UPPER` und `RTRIM` Funktionen zum Zurückgeben der Nachname von Personen in der `dbo.DimEmployee` Tabelle, sodass sie in Großbuchstaben, gekürzt und mit dem Vornamen verketteten ist.  
   
 ```  

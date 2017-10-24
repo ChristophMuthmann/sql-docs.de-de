@@ -34,11 +34,12 @@ caps.latest.revision: 50
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 643966017caf06959fef24177dd93d7254f30915
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 07a8bb8b08120f08cd54e42dcd332459544c206d
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
@@ -353,18 +354,6 @@ SELECT FirstName, LastName, Phone
 FROM DimEmployee  
 WHERE phone LIKE '6_2%'  
 ORDER by LastName;   
-```  
-  
-### <a name="h-using-the---wildcard-characters"></a>H. Verwenden des []-Platzhalterzeichens  
- Das folgende Beispiel sucht nach `DimEmployee` Zeilen mit den ersten Vornamen des `Rob` oder `Bob`.  
-  
-```tsql  
--- Uses AdventureWorks  
-  
-SELECT FirstName, LastName, Phone  
-FROM DimEmployee  
-WHERE FirstName LIKE '[RB]ob'  
-ORDER by LastName;  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

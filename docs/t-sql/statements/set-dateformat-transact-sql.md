@@ -30,11 +30,12 @@ caps.latest.revision: 49
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eba2bdb31a805c61b92a88ce5699c05dfa7fe09f
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 24c17668fb4d89f192ad7c9468f8dbedacd13814
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
@@ -89,16 +90,6 @@ GO
 -- Result: Msg 241: Conversion failed when converting date and/or time -- from character string.  
   
 GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-```  
--- Set date format to month/day/year.  
-SET DATEFORMAT mdy;  
-DECLARE @datevar datetime2 = '12/31/2012 09:01:01.1234567';  
-SELECT @datevar;  
-  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

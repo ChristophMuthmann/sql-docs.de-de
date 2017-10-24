@@ -1,7 +1,7 @@
 ---
 title: "DAX in tabellarischen Modellen (SSAS – tabellarisch) | Microsoft Docs"
 ms.custom: 
-ms.date: 04/10/2017
+ms.date: 10/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 653c715b8a3b990cc6073b2455887232c71c32b4
+ms.sourcegitcommit: 5bca339c13cb407e497cfa283a08833f2f4e666a
+ms.openlocfilehash: 2a72b3e1ec1dad514eb8394460267b44bca79d7d
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/23/2017
 
 ---
 # <a name="dax-in-tabular-models-ssas-tabular"></a>DAX in tabellarischen Modellen (SSAS – tabellarisch)
@@ -202,6 +202,9 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 ### <a name="mathematical-and-trigonometric-functions"></a>Mathematische und trigonometrische Funktionen  
  Die mathematischen Funktionen in DAX sind den mathematischen und trigonometrischen Funktionen in Excel sehr ähnlich. Die von den DAX-Funktionen verwendeten numerischen Datentypen weisen einige kleinere Unterschiede auf. Weitere Informationen finden Sie unter [Mathematische und trigonometrische Funktionen (DAX)](http://msdn.microsoft.com/en-us/1f408ec1-e769-43d6-a68c-567bc30d893f).  
+ 
+### <a name="other-functions"></a>Andere Funktionen  
+ Diese Funktionen führen eindeutige Aktionen, die nicht zu den meisten anderen Funktionen gehören durch keine der Kategorien definiert werden. Weitere Informationen finden Sie unter [andere Funktionen (DAX)](https://msdn.microsoft.com/mt150101).
   
 ### <a name="statistical-functions"></a>Statistische Funktionen  
  DAX stellt statistische Funktionen bereit, die Aggregationen ausführen. Zusätzlich zum Erstellen von Summen und Durchschnittswerten oder dem Ermitteln von Mindest- und Höchstwerten können in DAX Spalten vor dem Aggregieren gefiltert und Aggregationen auf Grundlage verknüpfter Tabellen erstellt werden. Weitere Informationen finden Sie unter [Statistische Funktionen (DAX)](http://msdn.microsoft.com/en-us/ba4c1298-57a0-40fc-b6f6-00e187ace559).  
@@ -400,3 +403,4 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [Unterstützte Datenquellen](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   
+

@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: d0476bbb67cff44a05aed1441a31d679882b4cb3
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: c1caf4a71e5802968d9471711b8206a26f9c28d5
 ms.contentlocale: de-de
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogsetworkeragentproperty-ssisdb-database"></a>Catalog.set_worker_agent_property (SSISDB-Datenbank)
@@ -28,22 +28,22 @@ Setzt die Eigenschaft des eine [!INCLUDE[ssISnoversion](../../includes/ssisnover
 
 ## <a name="syntax"></a>Syntax
 
-```tsql
-set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId, [ @PropertyName = ] PropertyName, [ @PropertyValue = ] PropertyValue 
+```sql
+catalog.set_worker_agent_property [@WorkerAgentId =] WorkerAgentId, [@PropertyName =] PropertyName, [@PropertyValue =] PropertyValue 
 ```
 
 ## <a name="arguments"></a>Argumente
-[ @WorkerAgentId =] *WorkerAgentId*  
-Die Worker-Agent-Id des Scale-Out-Worker. Die *WorkerAgentId* ist **"uniqueidentifier"**.
+[@WorkerAgentId =] *WorkerAgentId*  
+Der Worker-Agent-ID der Skalierung Out Worker. Die *WorkerAgentId* ist **"uniqueidentifier"**.
 
-[ @PropertyName =] *PropertyName*  
+[@PropertyName =] *PropertyName*  
 Der Name der Eigenschaft. Die *PropertyName* ist **nvarchar(256)**.
 
-[ @PropertyValue =] *PropertyValue*  
+[@PropertyValue =] *PropertyValue*  
 Der Wert der Eigenschaft. Die *PropertyValue* ist **nvarchar(max)**.
 
 ## <a name="remarks"></a>Hinweise
-Sind die gültigen Namen für die gesammelten **DisplayName**, **Beschreibung**, **Tags**.
+Die gültigen Eigenschaftennamen sind **DisplayName**, **Beschreibung**, **Tags**.
 
 ## <a name="return-code-value"></a>Rückgabecodewert  
  0 (Erfolg)  
@@ -58,13 +58,13 @@ Sind die gültigen Namen für die gesammelten **DisplayName**, **Beschreibung**,
   
 -   Mitgliedschaft in der Serverrolle **sysadmin**
 
-## <a name="erros-and-warnings"></a>Fehler und Warnungen
+## <a name="errors-and-warnings"></a>Fehler und Warnungen
   In der folgenden Liste werden einige Bedingungen beschrieben, die möglicherweise einen Fehler oder eine Warnung auslösen:  
   
 -   Der Benutzer verfügt nicht über die entsprechenden Berechtigungen. 
 
--   Der Worker-Agent-Id ist ungültig.
+-   Der Worker-Agent-ID ist ungültig.
 
 -   Der Eigenschaftsname ist ungültig.
 
--   Der Eigenschaftswert ist nicht Vilid.  
+-   Der Eigenschaftswert ist ungültig.  

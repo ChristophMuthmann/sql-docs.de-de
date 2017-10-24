@@ -1,7 +1,7 @@
 ---
 title: Importieren und Exportieren von Daten mit der SQL Server-Import / Export-Assistent | Microsoft Docs
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -28,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
-ms.openlocfilehash: 22419ce21476588f4ff2859185c8b833306fa896
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 6cd388215de02072522011b149a9cecc3239b64c
 ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Importieren und Exportieren von Daten mit dem SQL Server-Import/Export-Assistenten
@@ -45,24 +45,24 @@ Wenn Sie den Assistenten ausführen möchten, [!INCLUDE[msCoName](../../includes
 
 ## <a name="what-happens-when-i-run-the-wizard"></a>Was geschieht, wenn ich den Assistenten ausführen?
 -    **Zeigen Sie die Liste der Schritte an.** Eine Beschreibung der Schritte im Assistenten, finden Sie unter [Schritte in der SQL Server-Import / Export-Assistenten](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). Es gibt auch eine separate Seite der Dokumentation für jede Seite des Assistenten.  
-    \-oder\-
--   **Finden Sie ein einfaches Beispiel.** Für einen kurzen Blick auf die mehrere Bildschirme in eine typische Sitzung angezeigt werden soll, sehen Sie sich diesem einfachen End-to-End-Beispiel auf einer Seite - [beginnen Sie mit diesem einfachen Beispiel des Import / Export-Assistenten](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).  
+    \- oder \-
+-   **Ein Beispiel finden Sie.** Für einen kurzen Blick auf die mehrere Bildschirme in eine typische Sitzung angezeigt werden soll, sehen Sie sich in diesem einfachen Beispiel auf einer Seite - [beginnen Sie mit diesem einfachen Beispiel des Import / Export-Assistenten](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).  
 
 ##  <a name="wizardSources"></a>Verwenden Quellen und Ziele kann ich?  
  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import / Export-Assistenten können Daten kopieren in und aus den Datenquellen in der folgenden Tabelle aufgeführt. Um einige der Datenquellen zu verbinden, müssen Sie möglicherweise zusätzliche Dateien herunterladen und installieren.
  
 | Datenquelle | Muss ich weitere Dateien herunterladen? |
 |-------------|-----------------------------------------|
-|**Unternehmensdatenbanken**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, DB2 und andere.|SQL Server- oder SQL Server Data Tools (SSDT) installiert die Dateien, die Sie benötigen für die Verbindung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Aber SSDT nicht alle Dateien, die Sie für die Verbindung mit anderen Enterprise-Datenbanken, z. B. Oracle- oder IBM DB2 müssen installiert werden.<br/><br/>Um eine Verbindung mit einer Enterprise-Datenbank herstellen, benötigen Sie in der Regel zwei Dinge:<br/><br/>1. **Clientsoftware**. Wenn Sie bereits die Clientsoftware für Ihr Unternehmensdatenbank-System installiert haben, verfügen Sie in der Regel über das, was zum Herstellen einer Verbindung erforderlich ist. Wenn die Clientsoftware nicht installiert ist, bitten Sie den Datenbankadministrator, eine lizenzierte Kopie zu installieren.<br/><br/>2. **Treiber oder Anbieter**. Microsoft installierten Treiber und Anbieter für die Verbindung mit Oracle. Zur Verbindung mit IBM DB2 erhalten Sie die Microsoft® OLE DB-Anbieter für DB2 V5. 0 für Microsoft SQL Server aus der [Microsoft SQL Server 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676).|
-|**Textdateien** (Flatfile-Dateien)|Keine zusätzlichen Dateien erforderlich.|
+|**Unternehmensdatenbanken**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, DB2 und andere.|SQL Server- oder SQL Server Data Tools (SSDT) installiert die Dateien, die Sie benötigen für die Verbindung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Aber SSDT nicht alle Dateien, die Sie für die Verbindung mit anderen Enterprise-Datenbanken, z. B. Oracle- oder IBM DB2 müssen installiert werden.<br/><br/>Um eine Verbindung mit einer Enterprise-Datenbank herstellen, benötigen Sie in der Regel zwei Dinge:<br/><br/>1. **Clientsoftware**. Wenn Sie bereits die Clientsoftware für Ihr Unternehmensdatenbank-System installiert haben, verfügen Sie in der Regel über das, was zum Herstellen einer Verbindung erforderlich ist. Wenn die Clientsoftware nicht installiert ist, bitten Sie den Datenbankadministrator, eine lizenzierte Kopie zu installieren.<br/><br/>2. **Treiber oder Anbieter**. Microsoft installierten Treiber und Anbieter für die Verbindung mit Oracle. Zur Verbindung mit IBM DB2 erhalten Sie die Microsoft® OLE DB-Anbieter für DB2 V5. 0 für Microsoft SQL Server aus der [Microsoft SQL Server 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676).<br/><br/>Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einer SQL Server-Datenquelle](connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md) oder [Herstellen einer Verbindung mit einer Oracle-Datenquelle](connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md).|
+|**Textdateien** (Flatfile-Dateien)|Keine zusätzlichen Dateien erforderlich.<br/><br/>Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einer Flatfile-Datenquelle](connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md).|
 |**Microsoft Excel- und Microsoft Access-Dateien**|Mit Microsoft Office werden nicht alle Dateien installiert, die Sie benötigen, um eine Verbindung mit Excel- und Access-Dateien als Datenquellen herzustellen. Rufen Sie den folgenden Download - [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).<br/><br/>Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einer Excel-Datenquelle](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md) oder [Herstellen einer Verbindung mit einer Access-Datenquelle](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md).|
 |**Azure-Datenquellen**<br/>Derzeit nur Azure BLOB-Speicher.|SQL Server Data Tools installieren nicht die Dateien, die Sie zum Azure-Blob-Speicher als Datenquelle herstellen müssen. Laden Sie Folgendes herunter: [Microsoft SQL Server 2016 Integration Services Feature Pack für Azure](https://www.microsoft.com/download/details.aspx?id=49492).<br/><br/>Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit Azure BLOB Storage](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md).|
-|**Open Source-Datenbanken**<br/>PostgreSQL, MySQL- und andere.|Sie müssen zusätzliche Dateien für die Verbindung mit diesen Datenquellen herunterladen.<br/><br/>– Für **PostgreSQL**, finden Sie unter [Herstellen einer Verbindung mit einer Datenquelle PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md).<br/>– Für **MySql**, finden Sie unter [Herstellen einer Verbindung mit einer Datenquelle MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md).|
+|**Open Source-Datenbanken**<br/>PostgreSQL, MySQL- und andere.|Um auf diese Datenquellen zu verbinden, müssen Sie zusätzliche Dateien herunterzuladen.<br/><br/>– Für **PostgreSQL**, finden Sie unter [Herstellen einer Verbindung mit einer Datenquelle PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md).<br/>– Für **MySql**, finden Sie unter [Herstellen einer Verbindung mit einer Datenquelle MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md).|
 |**Eine beliebige andere Datenquelle, für die ein Treiber oder Anbieter verfügbar ist**|Sie müssen in der Regel zusätzliche Dateien für die Verbindung mit den folgenden Arten von Datenquellen herunterladen.<br/><br/>- Jede Quelle, für die ein **ODBC-Treiber** verfügbar ist. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einer ODBC-Datenquelle](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).<br/>- Jede Datenquelle, für die ein **.NET Framework-Datenanbieter** verfügbar ist.<br/>- Jede Quelle, für die ein **OLE DB-Treiber** verfügbar ist.<br/><br/>Drittanbieter-Komponenten, die Quell- und Zielserver für andere Datenquellen ermöglichen werden als Add-On-Produkten für SQL Server Integration Services (SSIS) manchmal vertrieben.|
 
 ## <a name="how-do-i-connect-to-my-data"></a>Wie verbinde ich mich mit meiner Daten?
-Informationen zum Herstellen einer Verbindung mit einer häufig verwendeten Datenquelle finden Sie unter den folgenden Seiten.
--   [Herstellen einer Verbindung mit SQLServer](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
+Informationen zum Herstellen einer Verbindung mit einer häufig verwendeten Datenquelle finden Sie unter den folgenden Seiten:
+-   [Connect to SQL Server (Herstellen einer Verbindung mit SQL Server)](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
 -   [Herstellen einer Verbindung mit Oracle](../../integration-services/import-export-data/connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)
 -   [Herstellen einer Verbindung mit Flatfile-Dateien (Textdateien)](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
 -   [Herstellen einer Verbindung mit Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)

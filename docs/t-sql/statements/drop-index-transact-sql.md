@@ -36,11 +36,12 @@ caps.latest.revision: 99
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8755a7463eca39c7002075d12f91b8626b76c2b4
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 59f78a8c62e8257eb09327d4b629ad678d9c0e69
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
@@ -279,7 +280,7 @@ Wenn ein gruppierter Index OFFLINE gelöscht wird, werden nur die oberen Ebenen 
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-dropping-an-index"></a>A. Löschen eines Indexes  
- Im folgenden Beispiel wird der `IX_ProductVendor`_`VendorID`-Index für die `ProductVendor`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank gelöscht.  
+ Das folgende Beispiel löscht den Index `IX_ProductVendor_VendorID` auf die `ProductVendor` -Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank.  
   
 ```  
 DROP INDEX IX_ProductVendor_BusinessEntityID   

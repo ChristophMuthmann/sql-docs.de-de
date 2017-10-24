@@ -26,11 +26,12 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 51377ebe291fe4c76d8761aaba74eab8f5201108
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: a1044fb78ebf3852a963d11607433fdb93d48007
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="print-transact-sql"></a>Drucken-Transact-SQL
@@ -111,26 +112,6 @@ IF DB_ID() = 1
     PRINT N'The current database is master.';  
 ELSE  
     PRINT N'The current database is not master.';  
-GO  
-```  
-  
-### <a name="d-building-and-displaying-a-string"></a>D. Erstellung und Anzeigen einer Zeichenfolge  
- Das folgende Beispiel konvertiert die Ergebnisse der `GETDATE`-Funktion in einen `nvarchar`-Datentyp und verkettet sie mit Literaltext. Das Ergebnis der Verkettung wird von `PRINT` zurückgegeben.  
-  
-```  
--- Build the message text by concatenating  
--- strings and expressions.  
-PRINT N'This message was printed on '  
-    + RTRIM(CAST(GETDATE() AS nvarchar(30)))  
-    + N'.';  
-GO  
--- This example shows building the message text  
--- in a variable and then passing it to PRINT.  
-DECLARE @PrintMessage nvarchar(50);  
-SET @PrintMessage = N'This message was printed on '  
-    + RTRIM(CAST(GETDATE() AS nvarchar(30)))  
-    + N'.';  
-PRINT @PrintMessage;  
 GO  
 ```  
   

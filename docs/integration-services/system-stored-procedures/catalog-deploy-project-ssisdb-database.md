@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
-ms.openlocfilehash: 9871d26467a300119c742d398ff88f87825d930c
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 5682cd23cb65e097bccb8cc69d5f2ec88ece7709
 ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogdeployproject-ssisdb-database"></a>catalog.deploy_project (SSISDB-Datenbank)
@@ -28,28 +28,28 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="syntax"></a>Syntax  
   
-```tsql  
-deploy_project [ @folder_name = ] folder_name   
-      , [ @project_name = ] project_name   
-      , [ @project_stream = ] projectstream   
+```sql  
+catalog.deploy_project [@folder_name =] folder_name   
+      , [@project_name =] project_name   
+      , [@project_stream =] projectstream   
     [ , [@operation_id ] = operation_id OUTPUT ]   
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @folder_name =] *Ordnername*  
+ [@folder_name =] *Ordnername*  
  Der Name des Ordners, in dem das Projekt bereitgestellt wird. Der *folder_name* ist **nvarchar(128)**.  
   
- [ @project_name =] *Project_name*  
+ [@project_name =] *Project_name*  
  Der Name des neuen oder aktualisierten Projekts im Ordner. Der *project_name* ist **nvarchar(128)**.  
   
- [ @projectstream =] *Projectstream*  
+ [@projectstream =] *Projectstream*  
  Die binären Inhalte ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projektbereitstellungsdatei (Erweiterung .ispac).  
   
  Sie können eine SELECT-Anweisung mit der OPENROWSET-Funktion und dem BULK-Rowsetanbieter verwenden, um binäre Dateiinhalte abzurufen. Ein Beispiel finden Sie unter [Bereitstellen von Integration Services (SSIS)-Projekten und Paketen](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md). Weitere Informationen zu OPENROWSET finden Sie unter [OPENROWSET &#40; Transact-SQL &#41; ](../../t-sql/functions/openrowset-transact-sql.md).  
   
  *projectstream* ist **varbinary(MAX)**.  
   
- [ @operation_id =] *Operation_id*  
+ [@operation_id =] *Operation_id*  
  Gibt den eindeutigen Bezeichner für den Bereitstellungsvorgang zurück. Der *operation_id* ist **bigint**.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  

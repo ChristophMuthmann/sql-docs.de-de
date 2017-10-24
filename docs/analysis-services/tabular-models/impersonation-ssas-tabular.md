@@ -1,7 +1,7 @@
 ---
-title: "Identitätswechsel (SSAS – tabellarisch) | Microsoft Docs"
+title: "Identitätswechsel in tabellarischen Modellen von Analysis Services | Microsoft Docs"
 ms.custom: 
-ms.date: 03/04/2017
+ms.date: 10/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,90 +17,81 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1bb694fef39accedea28b1c53576a7ebb161cc51
+ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
+ms.openlocfilehash: aef09b5327408701f15e484bbcea1cab9d82622b
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/21/2017
 
 ---
-# <a name="impersonation-ssas-tabular"></a>Identitätswechsel (SSAS – tabellarisch)
-  Dieses Thema vermittelt Autoren von tabellarischen Modellen Grundlegendes zur Verwendung von Anmeldedaten durch Analysis Services beim Herstellen einer Verbindung mit einer Datenquelle zum Importieren und Verarbeiten (Aktualisieren) von Daten.  
+# <a name="impersonation"></a>Identitätswechsel 
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  In diesem Thema bietet Entwicklern von tabellarischen Modellen einen Überblick über die Anmeldeinformationen von Analysis Services Verwendung beim Herstellen einer Verbindung mit einer Datenquelle zum Importieren und verarbeiten (aktualisieren) von Daten.  
+
+##  <a name="bkmk_conf_imp_info"></a>Konfigurieren des Identitätswechsels  
+ Ein Modell vorhanden ist, wo und in welchem Kontext bestimmt, wie die Identitätswechselinformationen konfiguriert ist. Wenn Sie ein neues Modellprojekt erstellen, wird Identitätswechsel beim Herstellen einer Verbindung mit einer Datenquelle zum Importieren von Daten in SQL Server Data Tools (SSDT) konfiguriert. Nachdem ein Modell bereitgestellt wurde, kann Identitätswechsel in Datenbank-Verbindungszeichenfolgeneigenschaft Modell mithilfe von SQL Server Management Studio (SSMS) konfiguriert werden. Für tabellarische Modelle in Azure Analysis Services können Sie SSMS oder die **anzeigen als: Skript** Modus im Designer browserbasierte zum Bearbeiten der Datei Model.bim im JSON-Format.
   
- Dieser Artikel enthält folgende Abschnitte:  
+##  <a name="bkmk_how_imper"></a>Wie der Identitätswechsel verwendet wird  
+ *Identitätswechsel* ist die Fähigkeit einer Serveranwendung, z.B. Analysis Services, die Identität einer Clientanwendung anzunehmen. Analysis Services wird über ein Dienstkonto, allerdings, wenn der Server eine Verbindung mit einer Datenquelle herstellt Anwendung ein Identitätswechsel verwendet, sodass für den Datenimport und die Verarbeitung zugriffsüberprüfungen kann ausgeführt werden.  
   
--   [Vorteile](#bkmk_how_imper)  
+ Für den Identitätswechsel verwendeten Anmeldeinformationen unterscheiden sich von den Anmeldeinformationen, denen Sie derzeit angemeldet sind. Angemeldeten Benutzers Anmeldeinformationen werden beim Erstellen eines Modells für bestimmte clientseitige Vorgänge verwendet.  
   
--   [enthalten](#bkmk_imp_info_options)  
-  
--   [Security](#bkmk_impers_sec)  
-  
--   [Identitätswechsel beim Importieren eines Modells](#bkmk_imp_newmodel)  
-  
--   [Konfigurieren des Identitätswechsels](#bkmk_conf_imp_info)  
-  
-##  <a name="bkmk_how_imper"></a> Vorteile  
- *Identitätswechsel* ist die Fähigkeit einer Serveranwendung, z.B. Analysis Services, die Identität einer Clientanwendung anzunehmen. Analysis Services wird über ein Dienstkonto ausgeführt. Wenn der Server jedoch eine Verbindung zu einer Datenquelle herstellt, wird für die Anwendung ein Identitätswechsel verwendet, sodass für den Datenimport und die Verarbeitung Zugriffsüberprüfungen ausgeführt werden können.  
-  
- Die für den Identitätswechsel verwendeten Anmeldeinformationen unterscheiden sich von den Anmeldeinformationen des gerade angemeldeten Benutzers. Die Anmeldeinformationen des angemeldeten Benutzers werden für bestimmte clientseitige Vorgänge beim Erstellen eines Modells verwendet.  
-  
- Sie sollten damit vertraut sein, wie die Identitätswechselinformationen angegeben und gesichert werden, und den Unterschied zwischen einem Kontext, in dem die Anmeldeinformationen des zurzeit angemeldeten Benutzers verwendet werden, und einem Kontext, in dem andere Anmeldeinformationen verwendet werden, kennen.  
+ Es ist wichtig um zu verstehen, wie Identitätswechsel-Anmeldeinformationen angegeben und gesichert, sowie den Unterschied zwischen den Kontexten in welcher sowohl Ihr angemeldetes auf Benutzeranmeldeinformationen verwendet werden, und wenn andere Identitätswechsel-Anmeldeinformationen verwendet werden.  
   
  **Grundlegendes zu serverseitigen Anmeldeinformationen**  
-  
- In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]werden Anmeldeinformationen für jede Datenquelle im Tabellenimport-Assistenten auf der Seite **Identitätswechselinformationen** oder durch Bearbeitung einer vorhandenen Datenquellenverbindung im Dialogfeld **Vorhandene Verbindungen** angegeben.  
-  
- Beim Importieren oder Verarbeiten von Daten werden die auf der Seite **Identitätswechselinformationen** angegebenen Anmeldeinformationen verwendet, um eine Verbindung mit der Datenquelle herzustellen und die Daten abzurufen. Dabei handelt es sich um einen *serverseitigen* Vorgang, der im Kontext einer Clientanwendung ausgeführt wird, da der Analysis Services-Server, der die Arbeitsbereichsdatenbank hostet, eine Verbindung mit der Datenquelle herstellt und die Daten abruft.  
+ 
+Wenn Daten nicht importiert oder verarbeitet werden, werden Identitätswechsel-Anmeldeinformationen verwendet, eine Verbindung mit der Datenquelle und die Daten abzurufen. Dies ist eine *serverseitige* Vorgang im Kontext einer Clientanwendung ausgeführt wird, da das Hosten der arbeitsbereichsdatenbank des Analysis Services-Server eine Verbindung mit der Datenquelle her, und die Daten abruft.  
   
  Wenn Sie ein Modell auf einem Analysis Services-Server bereitstellen und sich die Arbeitsbereichsdatenbank während der Bereitstellung des Modells im Arbeitsspeicher befindet, werden die Anmeldeinformationen an den Analysis Services-Server übergeben, auf dem das Modell bereitgestellt wird. Zu keinem Zeitpunkt werden Benutzeranmeldeinformationen auf dem Datenträger gespeichert.  
   
- Wenn ein bereitgestelltes Modell die Daten aus einer Datenquelle verarbeitet, werden die in der speicherinternen Datenbank dauerhaft gespeicherten Identitätswechselinformationen verwendet, um eine Verbindung mit der Datenquelle herzustellen und die Daten abzurufen. Da dieser Prozess vom Analysis Services-Server, der die Modelldatenbank verwaltet, durchgeführt wird, handelt es sich auch hierbei um einen serverseitigen Vorgang.  
+ Wenn ein bereitgestelltes Modell die Daten aus einer Datenquelle verarbeitet, werden die Identitätswechselinformationen, die in der Datenbank im Arbeitsspeicher beibehalten verwendet, eine Verbindung mit der Datenquelle und die Daten abzurufen. Da dieser Prozess vom Analysis Services-Server, der die Modelldatenbank verwaltet durchgeführt wird, ist dies erneut einen serverseitigen Vorgang.  
   
  **Grundlegendes zu clientseitigen Anmeldeinformationen**  
   
- Wenn Sie ein neues Modell erstellen oder eine Datenquelle zu einem vorhandenen Modell hinzufügen, verwenden Sie den Tabellenimport-Assistenten, um eine Verbindung mit einer Datenquelle herzustellen und Tabellen und Sichten für den Import in das Modell auszuwählen. Sie können im Tabellenimport-Assistenten auf der Seite **Tabellen und Sichten auswählen** die Funktion **Vorschau und Filter** verwenden, um ein Beispiel (maximal 50 Zeilen) der zu importierenden Daten anzuzeigen. Sie können auch Filter angeben, um Daten auszuschließen, die im Modell nicht erforderlich sind.  
+ Wenn ein neues Modell erstellen, oder eine Datenquelle zu einem vorhandenen Modell hinzufügen, Sie Verbindungen mit einer Datenquelle herstellen und Tabellen und Sichten in das Modell importiert werden sollen. In den Tabellenimport-Assistenten oder Abrufen Data\Query Designer Vorschau und Filter-Funktionen sehen Sie ein Beispiel der Daten, die Sie importieren. Sie können auch Filter angeben, um Daten auszuschließen, die im Modell nicht erforderlich sind.  
   
- Auf ähnliche Weise können Sie für bereits erstellte Modelle das Dialogfeld **Tabelleneigenschaften bearbeiten** verwenden, um in eine Tabelle importierte Daten anzuzeigen und zu filtern. Diese Vorschau- und Filterfunktionen werden genauso verwendet wie die Funktion **Vorschau und Filter** auf der Seite **Tabellen und Sichten auswählen** des Tabellenimport-Assistenten.  
+ Auf ähnliche Weise für vorhandene Modelle, die bereits erstellt wurden, verwenden Sie die **Tabelleneigenschaften** Dialogfeld Vorschau und Filtern von Daten in eine Tabelle importiert.  
   
- Bei der Funktion **Vorschau und Filter** sowie den Dialogfeldern **Tabelleneigenschaften** und **Partitions-Manager** handelt es sich um prozessinterne *clientseitige* Vorgänge. Dies bedeutet, dass diese Vorgänge anders durchgeführt werden als die serverseitigen Vorgänge, bei denen die Datenquelle verbunden und Daten aus der Datenquelle abgerufen werden. Die Anmeldeinformationen, die zum Anzeigen einer Vorschau und Filtern der Daten verwendet werden, sind die Anmeldeinformationen des Benutzers, der zu dem Zeitpunkt angemeldet ist. Bei clientseitigen Vorgängen werden immer die Windows-Anmeldeinformationen des aktuellen Benutzers verwendet, um eine Verbindung mit der Datenquelle herzustellen.  
+ Die Vorschau und Filter Funktionen **Tabelleneigenschaften**, und **Partitions-Manager** Dialogfelder sind ein in-Process *clientseitige* Vorgang, d. h. welche Aktionen während dieser ausgeführt wird Vorgang unterscheiden sich wie die Datenquelle mit verbunden ist, und Daten aus der Datenquelle abgerufen. ein serverseitiger-Vorgang. Die Anmeldeinformationen, die zum Anzeigen einer Vorschau und Filtern der Daten verwendet werden, sind die Anmeldeinformationen des Benutzers, der zu dem Zeitpunkt angemeldet ist. In der Tat, Ihre Anmeldeinformationen. 
   
- Die unterschiedliche Verwendung der Anmeldeinformationen bei serverseitigen und clientseitigen Vorgängen kann dazu führen, dass die Daten, die der Benutzer bei Verwendung der Funktion **Vorschau und Filter** oder des Dialogfelds **Tabelleneigenschaften** (clientseitige Vorgänge) sieht, nicht mit den Daten übereinstimmen, die während eines Imports oder einer Verarbeitung abgerufen werden (serverseitige Vorgänge). Wenn die Anmeldeinformationen des gerade angemeldeten Benutzers und die angegebenen Identitätswechselinformationen unterschiedlich sind, können sich die mit der Funktion **Vorschau und Filter** oder dem Dialogfeld **Tabelleneigenschaften** angezeigten und die während eines Imports oder einer Verarbeitung abgerufenen Daten abhängig davon, welche Anmeldeinformationen die Datenquelle erfordert, unterscheiden.  
+ Die Trennung von Anmeldeinformationen verwendet werden, während der serverseitigen und clientseitigen Vorgängen können dazu führen, dass ein Versionskonflikt bei sehen Sie, und welche Daten während eines Imports oder der Prozess (serverseitige Vorgänge) abgerufen werden. Wenn die Anmeldeinformationen Sie derzeit angemeldet sind mit, und die angegebenen Identitätswechselinformationen unterschiedlich sind, die Daten daraufhin in der Vorschau und Filter-Funktionen oder die **Tabelleneigenschaften** Dialogfeld und die Daten abgerufen, die während des Imports oder Prozess kann abhängig von der Datenquelle erforderlichen Anmeldeinformationen unterscheiden.  
   
 > [!IMPORTANT]  
->  Wenn Sie ein Modell erstellen, stellen Sie sicher, dass die Anmeldeinformationen des gerade angemeldeten Benutzers und die für einen Identitätswechsel angegebenen Anmeldeinformationen über ausreichende Rechte verfügen, um die Daten von der Datenquelle abzurufen.  
+>  Beim Erstellen eines Modells, stellen Sie die Anmeldeinformationen, mit dem Sie angemeldet sind, und die für einen Identitätswechsel angegebenen Anmeldeinformationen über die erforderlichen Rechte zum Abrufen der Daten aus der Datenquelle.  
   
 ##  <a name="bkmk_imp_info_options"></a> enthalten  
- Wenn Sie den Identitätswechsel konfigurieren oder Eigenschaften für eine vorhandene Datenquellenverbindung in Analysis Services bearbeiten, können Sie eine der folgenden Optionen angeben:  
+ Beim Identitätswechsel konfigurieren oder Eigenschaften für eine vorhandene Datenquelle Verbindung bearbeiten, geben Sie eine der folgenden Optionen aus:  
   
-|Option|ImpersonationMode*|Description|  
-|------------|-------------------------|-----------------|  
-|**Bestimmter Windows-Benutzername und bestimmtes Kennwort***\*|ImpersonateWindowsUserAccount|Diese Option gibt an, dass das Modell ein Windows-Benutzerkonto verwendet, um Daten aus der Datenquelle zu importieren oder zu verarbeiten. Die Domäne und den Namen des Benutzerkontos folgen dem folgenden Format:**\<Domänenname >\\< Benutzerkontoname\>**. Beim Erstellen eines neuen Modells mit dem Tabellenimport-Assistenten ist dies die Standardoption.|  
-|**Dienstkonto**|ImpersonateServiceAccount|Diese Option gibt an, dass das Modell die Sicherheitsanmeldeinformationen verwendet, die der Analysis Services-Dienstinstanz zugeordnet sind, die das Modell verwaltet.|  
+**Tabellenmodelle 1400 und höher**
+ 
+|Option|Description|  
+|------------|-----------------|  
+|**Identitätswechsel**|Gibt an, das Modell ein Windows-Benutzerkonto zum Importieren oder Daten aus der Datenquelle verarbeitet. Die Domäne und den Namen des Benutzerkontos folgen dem folgenden Format:**\<Domänenname >\\< Benutzerkontoname\>**.|  
+|**Identität des aktuellen Benutzers**|Gibt an, dass die Daten zugegriffen werden soll, aus der Datenquelle, die mit der Identität des Benutzers, der die Anforderung gesendet. Dieser Modus gilt nur für DirectQuery-Modus.|  
+|**Identität annehmen**|Gibt einen Benutzernamen für den Zugriff auf die Datenquelle, jedoch nicht das Kennwort des Kontos angeben müssen. Dieser Modus gilt nur, wenn Kerberos-Delegierung aktiviert ist, und gibt an, dass die S4U-Authentifizierung verwendet werden soll.|  
+|**Identität des Dienstkontos**|Gibt an, das Modell die Sicherheitsanmeldeinformationen, die das Modell verwaltet die Analysis Services-Dienstinstanz zugeordnet.|  
+|**Identität des Kontos für unbeaufsichtigte**|Gibt an, dass das Analysis Services-Modul ein vorkonfiguriertes unbeaufsichtigtes Konto für den Datenzugriff verwenden soll.|  
+
+
+**Tabellarische 1200-Modelle**
+ 
+|Option|Description|  
+|------------|-----------------|  
+|**Bestimmten Windows-Benutzernamen und Kennwort**|Diese Option gibt an das Modell ein Windows-Benutzerkonto zum Importieren oder Daten aus der Datenquelle verarbeitet. Die Domäne und den Namen des Benutzerkontos folgen dem folgenden Format:**\<Domänenname >\\< Benutzerkontoname\>**. Beim Erstellen eines neuen Modells mit dem Tabellenimport-Assistenten ist dies die Standardoption.|  
+|**Dienstkonto**|Diese Option gibt an, dass das Modell die Sicherheitsanmeldeinformationen verwendet, die der Analysis Services-Dienstinstanz zugeordnet sind, die das Modell verwaltet.|  
   
- *ImpersonationMode gibt den Wert der Eigenschaft [DataSourceImpersonationInfo-Element &#40;ASSL&#41;](../../analysis-services/scripting/properties/datasourceimpersonationinfo-element-assl.md) der Datenquelle an.  
-  
- \*\*Wenn diese Option verwendet wird und die Datenbank des Arbeitsbereichs aus dem Arbeitsspeicher entfernt wird, da ein Neustart durchgeführt wird oder die Eigenschaft **Arbeitsbereich beibehalten** auf **Aus dem Arbeitsspeicher entladen** oder **Aus dem Arbeitsbereich löschen**festgelegt ist, und das Modellprojekt geschlossen wird, werden Sie in der nachfolgenden Sitzung aufgefordert, die Anmeldeinformationen für jede Datenquelle einzugeben, wenn Sie die Tabellendaten verarbeiten möchten. Analog dazu werden Sie aufgefordert, die Anmeldeinformationen für jede Datenquelle einzugeben, wenn eine bereitgestellte Modelldatenbank aus dem Arbeitsspeicher entfernt wird.  
-  
-##  <a name="bkmk_impers_sec"></a> Security  
- Die für den Identitätswechsel verwendeten Informationen werden von dem xVelocity-Modul für Datenanalyse im Arbeitsspeicher (VertiPaq)™ dauerhaft im Arbeitsspeicher gespeichert, das dem Analysis Services-Server zugeordnet ist, der die Arbeitsbereichsdatenbank oder eine bereitgestellte Modelldatenbank verwaltet.  Anmeldeinformationen werden zu keinem Zeitpunkt auf den Datenträger geschrieben. Wenn sich die Datenbank des Arbeitsbereichs bei der Bereitstellung des Modells nicht im Arbeitsspeicher befindet, wird der Benutzer aufgefordert, die Anmeldeinformationen einzugeben, die zum Herstellen einer Verbindung mit der Datenquelle und Abrufen der Daten verwendet werden.  
+##  <a name="bkmk_impers_sec"></a> Sicherheit  
+ Identitätswechsel verwendeten Anmeldeinformationen werden dauerhaft im Arbeitsspeicher vom VertiPaq™-Modul. Anmeldeinformationen werden nie geschrieben, auf dem Datenträger. Wenn die arbeitsbereichsdatenbank nicht im Arbeitsspeicher ist, wenn das Modell bereitgestellt wird, der Benutzer wird aufgefordert, die Anmeldeinformationen zur Verbindung mit der Datenquelle und Abrufen der Daten einzugeben.  
   
 > [!NOTE]  
->  Es wird empfohlen, ein Windows-Benutzerkonto und ein Kennwort für die Identitätswechselinformationen anzugeben. Ein Windows-Benutzerkonto kann so konfiguriert werden, dass die mindestens erforderlichen Berechtigungen zum Herstellen einer Verbindung und Lesen von Daten aus der Datenquelle verwendet werden.  
+>  Es wird empfohlen, ein Windows-Benutzerkonto und ein Kennwort für die Identitätswechselinformationen anzugeben. Ein Windows-Benutzerkonto kann für die mindestens erforderlichen Berechtigungen zum Herstellen einer Verbindung mit und Lesen von Daten aus der Datenquelle konfiguriert werden.  
   
-##  <a name="bkmk_imp_newmodel"></a> Identitätswechsel beim Importieren eines Modells  
- Im Gegensatz zu tabellarischen Modellen, die mehrere verschiedene Identitätswechselmodi zur Unterstützung der prozessexternen Datensammlung verwenden können, verwendet [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] nur einen Modus: ImpersonateCurrentUser. Da [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] immer prozessintern ausgeführt wird, erfolgt die Herstellung der Verbindung mit Datenquellen mit den Anmeldeinformationen des gerade angemeldeten Benutzers. Bei tabellarischen Modellen werden die Anmeldeinformationen des derzeit angemeldeten Benutzers im Tabellenimport-Assistenten nur mit der Funktion **Vorschau und Filter** und beim Anzeigen der **Tabelleneigenschaften**verwendet. Identitätswechselinformationen werden verwendet, wenn Daten in die Arbeitsbereichsdatenbank oder in ein bereitgestelltes Modell importiert oder darin verarbeitet werden.  
-  
- Wenn Sie ein neues Modell erstellen, indem Sie eine vorhandene [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe importieren, werden die Identitätswechselinformationen vom Modell-Designer standardmäßig für die Verwendung des Dienstkontos konfiguriert (ImpersonateServiceAccount). Es wird empfohlen, die Identitätswechselinformationen für Modelle, die aus [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] importiert wurden, in ein Windows-Benutzerkonto zu ändern. Nachdem die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe importiert und das neue Modell im Modell-Designer erstellt wurde, können Sie die Anmeldeinformationen über das Dialogfeld **Vorhandene Verbindungen** ändern.  
-  
- Wenn Sie ein neues Modell erstellen, indem Sie die Daten aus einem vorhandenen Modell auf einem Analysis Services-Server importieren, werden die Identitätswechselinformationen aus der vorhandenen Modelldatenbank in die Arbeitsbereichsdatenbank des neuen Modells übergeben. Sie können die Anmeldeinformationen für das neue Modell ggf. über das Dialogfeld **Vorhandene Verbindungen** ändern.  
-  
-##  <a name="bkmk_conf_imp_info"></a> Konfigurieren des Identitätswechsels  
- Der Speicherort und der Kontext, an dem bzw. in dem sich das Modell befindet, bestimmen die Konfiguration der Identitätswechselinformationen. Für Modelle, die in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]erstellt werden, können Sie Identitätswechselinformationen im Tabellenimport-Assistenten auf der Seite **Identitätswechselinformationen** konfigurieren, oder indem Sie die Datenquellenverbindung im Dialogfeld **Vorhandene Verbindungen** bearbeiten. Um vorhandene Verbindungen anzuzeigen, klicken Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]im Menü **Modell** auf **Vorhandene Verbindungen**.  
-  
- Für Modelle, die auf einem Analysis Services-Server bereitgestellt werden, können die Informationen zum Identitätswechsel in SSMS unter **Verbindungseigenschaften** > **Identitätswechselinformationen**konfiguriert werden.  
+
   
 ## <a name="see-also"></a>Siehe auch  
- [DirectQuery-Modus &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [Datenquellen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
- [Bereitstellung von Tabellenmodelllösungen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+ [DirectQuery-Modus](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
+ [Datenquellen](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
+ [Tabellenmodelllösungsbereitstellung](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   
