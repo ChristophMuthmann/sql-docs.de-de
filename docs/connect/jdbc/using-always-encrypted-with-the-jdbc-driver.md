@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 84cf217faf0980d3ef1daf9a86a4aa362931d199
+ms.sourcegitcommit: fffb61c4c3dfa58edaf684f103046d1029895e7c
+ms.openlocfilehash: cee7f5dbcf66a5357ae68192703d841ae1601a35
 ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/19/2017
 
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Verwenden von „Immer verschlüsselt“ mit dem JDBC-Treiber
@@ -268,34 +268,12 @@ Alle diese Schlüsselspeicher-Anbieter werden im folgenden ausführlicher beschr
 ### <a name="using-azure-key-vault-provider"></a>Verwenden des Azure Key Vault-Anbieters
 Azure Key Vault ist eine praktische Möglichkeit zum Speichern von Spaltenhauptschlüsseln für Always Encrypted (insbesondere, wenn Ihre Anwendungen in Azure gehostet werden). Microsoft JDBC Driver für SQL Server enthält einen integrierten Anbieter SQLServerColumnEncryptionAzureKeyVaultProvider, für Anwendungen, die in Azure Key Vault gespeicherte Schlüsseln haben. Der Name des Anbieters ist AZURE_KEY_VAULT. Damit den Azure Key Vault-Speicheranbieter verwenden zu können, muss ein Anwendungsentwickler dem Tresor und die Schlüssel in Azure erstellen und konfigurieren die Anwendung auf die Schlüssel zugreifen. Weitere Informationen zum Einrichten der schlüsseltresor und erstellen spaltenhauptschlüssel finden Sie unter [Azure Key Vault – Schritt für Schritt für Weitere Informationen zum Einrichten der schlüsseltresor](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) und [Erstellen von Spaltenhauptschlüsseln in Azure Key Vault](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2).  
   
-Um Azure-Schlüsseltresor zu verwenden, müssen Clientanwendungen die SQLServerColumnEncryptionAzureKeyVaultProvider instanziieren und registrieren Sie ihn mit dem Treiber. Die JDBC-Treiber Delegaten Authentifizierung an die Anwendung über eine Schnittstelle aufgerufen SQLServerKeyVaultAuthenticationCallback besitzt eine Methode zum Abrufen eines Zugriffstokens aus dem schlüsseltresor. Um der Azure Key Vault-Speicheranbieter zu instanziieren, muss der Anwendungsentwickler eine Implementierung für die einzige aufgerufene Methode bereitstellen **GetAccessToken** , die das Zugriffstoken für den Schlüssel in Azure Key Vault gespeicherten abruft.  
-  
-Hier ist ein Beispiel für das Initialisieren von SQLServerKeyVaultAuthenticationCallback und SQLServerColumnEncryptionAzureKeyVaultProvider:  
+Um Azure-Schlüsseltresor zu verwenden, müssen Clientanwendungen die SQLServerColumnEncryptionAzureKeyVaultProvider instanziieren und registrieren Sie ihn mit dem Treiber.
+
+Hier ist ein Beispiel der SQLServerColumnEncryptionAzureKeyVaultProvider initialisieren:  
   
 ```  
-// String variables clientID and clientSecret hold the client id and client secret values respectively.  
-  
-ExecutorService service = Executors.newFixedThreadPool(10);  
-SQLServerKeyVaultAuthenticationCallback authenticationCallback = new SQLServerKeyVaultAuthenticationCallback() {  
-       @Override  
-    public String getAccessToken(String authority, String resource, String scope) {  
-        AuthenticationResult result = null;  
-        try{  
-                AuthenticationContext context = new AuthenticationContext(authority, false, service);  
-            ClientCredential cred = new ClientCredential(clientID, clientSecret);  
-  
-            Future<AuthenticationResult> future = context.acquireToken(resource, cred, null);  
-            result = future.get();  
-        }  
-        catch(Exception e){  
-            e.printStackTrace();  
-        }  
-        return result.getAccessToken();  
-    }  
-};  
-  
-SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(authenticationCallback, service);  
-  
+SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(clientID, clientKey); 
 ```
 
 Nachdem die Anwendung eine Instanz von SQLServerColumnEncryptionAzureKeyVaultProvider erstellt wurde, wird die Anwendung zum Registrieren der Instanz in Microsoft JDBC-Treiber für die Verwendung von SQL Server muss die Sqlserverconnection.registercolumnencryptionkeystoreproviders()-Methode. Es wird dringend empfohlen, die Instanz registriert ist, mithilfe des Standardnamens des Suche, AZURE_KEY_VAULT, die durch Aufrufen der API SQLServerColumnEncryptionAzureKeyVaultProvider.getName() abgerufen werden kann. Mithilfe des Standardnamens können Sie zum Verwenden von Tools, z. B. SQL Server Management Studio oder PowerShell, bereitstellen und Verwalten von Always Encrypted-Schlüssel (die Tools verwenden den Standardnamen zum Generieren des Metadatenobjekts, um spaltenhauptschlüssel). Das folgende Beispiel zeigt die Azure Key Vault-Anbieter wird registriert. Weitere Details zu der sqlserverconnection.registercolumnencryptionkeystoreproviders()-Methode, finden Sie unter [Always Encrypted-API-Referenz für den JDBC-Treiber](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md). 
@@ -314,7 +292,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >  [Azure-Active Directory-Bibliothek-für-Java-Bibliotheken](https://github.com/AzureAD/azure-activedirectory-library-for-java)  
   
 ### <a name="using-windows-certificate-store-provider"></a>Mithilfe der Windows-Zertifikatspeicher-Anbieter
-Die SQLServerColumnEncryptionCertificateStoreProvider kann verwendet werden, zum Speichern von spaltenhauptschlüsseln im Windows-Zertifikatspeicher. Verwenden Sie SQL Server Management Studio (SSMS) Always Encrypted-Assistenten oder andere unterstützte Tools, um die spaltenhauptschlüssel und die spaltenverschlüsselung Definitionen in der Datenbank erstellen. Des gleiche Assistenten verwendet werden kann, um ein selbstsigniertes Zertifikat in Windows-Zertifikatspeicher zu generieren, die als spaltenhauptschlüssel verwendet wird, für die immer verschlüsselten Daten. Weitere Informationen zu spaltenhauptschlüssel und spaltenverschlüsselung Key T-SQL-Syntax finden Sie auf [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) und [CREATE COLUMN Encryption KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) bzw..
+Die SQLServerColumnEncryptionCertificateStoreProvider kann verwendet werden, zum Speichern von spaltenhauptschlüsseln im Windows-Zertifikatspeicher. Verwenden Sie SQL Server Management Studio (SSMS) Always Encrypted-Assistenten oder andere unterstützte Tools, um die spaltenhauptschlüssel und die spaltenverschlüsselung Definitionen in der Datenbank erstellen. Des gleiche Assistenten verwendet werden kann, um ein selbstsigniertes Zertifikat in Windows-Zertifikatspeicher zu generieren, die als spaltenhauptschlüssel verwendet wird, für die immer verschlüsselten Daten. Weitere Informationen zu spaltenhauptschlüssel und spaltenverschlüsselung Key T-SQL-Syntax finden Sie auf [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) und [CREATE COLUMN Encryption KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) bzw.
 
 Der Name des der SQLServerColumnEncryptionCertificateStoreProvider "MSSQL_CERTIFICATE_STORE" ist und die getName()-API des Objekts Anbieter abgefragt werden kann. Es wird automatisch vom Treiber registriert und kann ohne Änderung Anwendung nahtlos verwendet werden.
 
@@ -653,3 +631,4 @@ Hinweis: Seien Sie bei "allowencryptedvaluemodifications" angeben, da dies zur B
  [„Immer verschlüsselt“ (Datenbankmodul)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
   
   
+
