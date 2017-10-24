@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c628e2f5f7482337ff871338d105e1d9bc9df21e
@@ -419,3 +420,4 @@ Error_cmdCreateDocForCube_Click:
     MsgBox Err.Description  
 End Sub  
 ```
+

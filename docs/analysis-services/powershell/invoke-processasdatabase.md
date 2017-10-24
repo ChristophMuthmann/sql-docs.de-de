@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: f8e83493ed934a3f9bf32a1cef35969f04996223
@@ -160,3 +161,4 @@ PS  SQL Server >  Invoke-ProcessASDatabase -databasename "AdventureWorks" -serve
   
   
   
+

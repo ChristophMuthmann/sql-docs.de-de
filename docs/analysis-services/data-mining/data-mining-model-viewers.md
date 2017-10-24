@@ -23,6 +23,7 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1436a91678a48c64ee3ee8d35a78c5957d69e32d
@@ -91,3 +92,4 @@ ms.lasthandoff: 09/01/2017
  [Datamining-Designer](../../analysis-services/data-mining/data-mining-designer.md)  
   
   
+

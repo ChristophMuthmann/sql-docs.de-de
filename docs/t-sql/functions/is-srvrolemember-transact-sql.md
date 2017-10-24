@@ -23,6 +23,7 @@ caps.latest.revision: 65
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: c26c0c1f4cb6a22f50cdc6a87d7a31f25b65e138
@@ -118,3 +119,4 @@ SELECT IS_SRVROLEMEMBER('diskadmin', 'Contoso\Pat');
  [Sicherheitsfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   
+

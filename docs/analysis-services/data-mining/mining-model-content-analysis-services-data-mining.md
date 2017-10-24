@@ -25,6 +25,7 @@ caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 4097a5ab62a6e30f2056216ec83eb0c568547479
@@ -312,3 +313,4 @@ SELECT * FROM [<mining model name>].CONTENT
  [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
   
+

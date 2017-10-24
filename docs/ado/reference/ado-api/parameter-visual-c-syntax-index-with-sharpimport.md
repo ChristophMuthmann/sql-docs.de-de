@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2711de796936a8023ece248f92c7052dc859a720
@@ -75,3 +76,4 @@ __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;
   
 ## <a name="see-also"></a>Siehe auch  
  [Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)
+

@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 01574487f221503f93e8ff58ba59c8afebe1bf9e
@@ -53,3 +54,4 @@ Gibt die relative Position von zwei Datensätzen, die durch ihre Lesezeichen dar
   
 ## <a name="see-also"></a>Siehe auch  
  [CompareBookmarks-Methode (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)
+

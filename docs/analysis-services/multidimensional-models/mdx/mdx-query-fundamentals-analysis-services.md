@@ -24,6 +24,7 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: cefad04fdadd4475863dccca5cba5f3e9cf4f48c
@@ -58,3 +59,4 @@ ms.lasthandoff: 09/01/2017
  [Multidimensional Expressions &#40;MDX&#41; – Referenz](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   
+

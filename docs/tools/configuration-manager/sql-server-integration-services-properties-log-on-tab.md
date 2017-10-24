@@ -14,6 +14,7 @@ caps.latest.revision: 14
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b19478c1c8df812c850156a8d2f72515e624b3b4
@@ -53,3 +54,4 @@ ms.lasthandoff: 08/02/2017
  Setzen Sie einen angehaltenen Dienst fort.  
   
   
+

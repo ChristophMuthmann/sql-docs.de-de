@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 80680ae03ee8ac059cfe3c9b47c3abe6b67db511
@@ -103,3 +104,4 @@ ms.lasthandoff: 09/01/2017
  Überprüfen Sie auf der Seite **Assistenten abschließen** die Struktur des neuen Cubes im Feld **Cubename** , und geben Sie einen Namen ein. Aktivieren Sie optional das Kontrollkästchen **Schema jetzt generieren** , um den Schemagenerierungs-Assistent zu starten. In den meisten Fällen sollten Sie dieses Kontrollkästchen nicht aktivieren, wenn Sie weitere Objekte erstellen möchten. Sie können das Schema auch später im Cube-Designer generieren.  
   
   
+

@@ -23,6 +23,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 75650f172c8862e082d7e5e50bc589b1cf0fe623
@@ -46,3 +47,4 @@ Gibt an, ob der Index gruppiert ist.
   
 ## <a name="see-also"></a>Siehe auch  
  [Beispiel für die Clustered-Eigenschaft (VB)](../../../ado/reference/adox-api/clustered-property-example-vb.md)
+

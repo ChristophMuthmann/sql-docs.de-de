@@ -27,6 +27,7 @@ caps.latest.revision: 46
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: c3c2a4d5104b95b1742c4e45d9f881fe81ffbc6d
@@ -94,3 +95,4 @@ ms.lasthandoff: 09/01/2017
  [Dimensionen &#40;Analysis Services – mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   
+

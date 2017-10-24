@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fb9f0e683dcdded14920be8104efcde355be0ce2
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
  [ADOX-Objektmodell](../../../ado/reference/adox-api/adox-object-model.md)   
  [ADOX-Objekte](../../../ado/reference/adox-api/adox-objects.md)   
  [ADO-Erweiterungen für Datendefinitionssprache und Sicherheit (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+

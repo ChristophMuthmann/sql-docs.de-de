@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 504a3075c1728f15a5d718b3994f5b4f093eeb4e
@@ -67,3 +68,4 @@ HRESULT ConnectComplete( struct Error *
 HRESULT Disconnect( enum EventStatusEnum *  
     adStatus, struct _Connection *     pConnection );  
 ```
+

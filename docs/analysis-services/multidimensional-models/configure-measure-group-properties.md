@@ -18,6 +18,7 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 16613e83f5632864fd86ff46067a72ed9dc88539
@@ -50,3 +51,4 @@ ms.lasthandoff: 09/01/2017
 |**Typ**|Gibt den Typ der Measuregruppe an.|  
   
   
+

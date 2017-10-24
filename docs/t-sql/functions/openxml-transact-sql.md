@@ -23,6 +23,7 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: ff4578d88cdb76468d261843c36043ef4696d92c
@@ -252,3 +253,4 @@ EXEC sp_xml_removedocument @idoc;
  [Beispiele: Verwenden von OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
   
   
+

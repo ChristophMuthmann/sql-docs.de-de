@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 45e92a822f8a8acc6abbab756a44668bb4c966c6
@@ -86,3 +87,4 @@ End Sub
  [Command-Eigenschaft (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
  [View-Objekt (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
  [Views-Auflistung (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+

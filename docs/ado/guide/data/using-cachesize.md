@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 74ec85c5907485edc5ad8dbcb6c24826fc21ccf3
@@ -39,3 +40,4 @@ Verwenden der **CacheSize** Eigenschaft steuern, wie viele Datensätze gleichzei
  Datensätze, die aus dem Cache abgerufene spiegeln nicht gleichzeitige Änderungen, die anderen Benutzern an den Quelldaten vorgenommen. Um ein Update aller zwischengespeicherten Daten zu erzwingen, verwenden Sie die [Resync](../../../ado/reference/ado-api/resync-method.md) Methode.  
   
  Wenn **CacheSize** auf einen Wert größer als 1 ist, die Navigationsmethoden festgelegt ist ([verschieben](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst, MoveLast, MoveNext und MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) kann in der Navigation zu einer gelöschten führen Datensatz gelöscht, nachdem die Datensätze abgerufen wurden. Nach dem Abrufen werden nachfolgende Löschvorgänge nicht in Ihrem Datencache berücksichtigt werden, bis Sie versuchen, einen Datenwert aus einer gelöschten Zeile zugreifen. Allerdings festlegen **CacheSize** wird auf 1 dieses Problem beseitigt, da der gelöschte Zeilen nicht abgerufen werden können.
+

@@ -23,6 +23,7 @@ caps.latest.revision: 50
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 383eafdda02f402d1c398183bfedac6dde85d9ce
@@ -98,3 +99,4 @@ GO
  [Sp_help_fulltext_catalogs &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)  
   
   
+

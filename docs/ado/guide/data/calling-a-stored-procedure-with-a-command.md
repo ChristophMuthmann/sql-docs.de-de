@@ -18,6 +18,7 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 22af55f599bc6adafe6d1c6ea0dcb409033feeb0
@@ -138,3 +139,4 @@ End Function
   
 ## <a name="see-also"></a>Siehe auch  
  [Knowledge Base-Artikel 117500](http://go.microsoft.com/fwlink/?LinkId=117500)
+

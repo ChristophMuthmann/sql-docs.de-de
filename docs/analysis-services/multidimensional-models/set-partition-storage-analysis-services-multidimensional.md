@@ -31,6 +31,7 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8915a2890be20925d739ae03098a2f29a1fab8ef
@@ -87,3 +88,4 @@ ms.lasthandoff: 09/01/2017
  [Partitionen in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/partitions-in-multidimensional-models.md)  
   
   
+

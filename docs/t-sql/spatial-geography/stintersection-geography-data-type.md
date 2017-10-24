@@ -21,6 +21,7 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 44d5a38e914ec6ea485262e44048f5fe79f317c6
@@ -94,3 +95,4 @@ SELECT @g.STIntersection('FULLGLOBE').ToString();
  [OGC-Methoden für Geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   
+

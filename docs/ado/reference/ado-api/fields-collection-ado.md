@@ -21,6 +21,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 22fa67aeac9f4296133af93562299e4f5160d996
@@ -51,3 +52,4 @@ Enthält alle der [Feld](../../../ado/reference/ado-api/field-object.md) Objekte
   
 ## <a name="see-also"></a>Siehe auch  
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)
+

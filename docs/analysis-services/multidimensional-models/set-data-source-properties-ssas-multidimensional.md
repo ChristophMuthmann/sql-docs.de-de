@@ -20,6 +20,7 @@ caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d406f4743c47ded117bf93a62bb4eefadb093058
@@ -61,3 +62,4 @@ ms.lasthandoff: 09/01/2017
  [Erstellen einer Datenquelle &#40;SSAS – mehrdimensional&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   
+

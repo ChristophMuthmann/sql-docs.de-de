@@ -19,6 +19,7 @@ caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: efcad0edec6f90bffaa72f1bb6ac42e2e12872b8
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/01/2017
  [RAISERROR & #40; Transact-SQL & #41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   
+

@@ -23,6 +23,7 @@ caps.latest.revision: 45
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: f4a4fa1196b60cb7068afe10a246ab2e18bfcf94
@@ -104,3 +105,4 @@ dbo                AWBuildVersion                         1
  [Sys. identity_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
   
   
+

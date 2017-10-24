@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1f154b79927d448b925dc8211d2373aca7b2731e
@@ -241,3 +242,4 @@ void PrintComError(_com_error &e) {
  [Item-Eigenschaft (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   
  [Parameters-Auflistung (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

@@ -26,6 +26,7 @@ caps.latest.revision: 42
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bd15969978480e68505747609332f6224355a22f
@@ -76,3 +77,4 @@ ms.lasthandoff: 09/01/2017
  [Erstellen von Measures und Measuregruppen in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)  
   
   
+

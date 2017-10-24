@@ -14,6 +14,7 @@ caps.latest.revision: 0
 author: stevestein
 ms.author: sstein
 manager: craigg
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
 ms.openlocfilehash: eccbe54c561e009858f6192126abc57e3399082c

@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 93b97bce2562604a01c564a376bd093abb9b1b7c
@@ -83,3 +84,4 @@ Wenn eine [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objek
 ## <a name="see-also"></a>Siehe auch  
  [Das Datensatzobjekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)
+

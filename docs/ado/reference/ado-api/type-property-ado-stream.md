@@ -21,6 +21,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2b16d683d9e5460e5aba904a8bc4ccc7362b2287
@@ -45,3 +46,4 @@ Gibt den Typ der Daten in der [Stream](../../../ado/reference/ado-api/stream-obj
 ## <a name="see-also"></a>Siehe auch  
  [RecordType-Eigenschaft (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   
  [Type-Eigenschaft (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
+

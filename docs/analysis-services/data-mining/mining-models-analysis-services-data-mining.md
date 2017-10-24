@@ -22,6 +22,7 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3425210ee85136d7b85c48c16562d85534a115f8
@@ -153,3 +154,4 @@ ms.lasthandoff: 09/01/2017
  [Datenbankobjekte &#40;Analysis Services – Mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
+

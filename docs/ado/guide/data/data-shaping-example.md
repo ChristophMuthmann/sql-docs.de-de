@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7b6719d8cdd2c86482c3c125ceec52fafdf3e397
@@ -52,3 +53,4 @@ RELATE customerID TO customerID)
  Dieser Abschnitt beginnt mit dem folgenden Thema.  
   
 -   [Visual Basic-Beispiel Strukturieren von Daten](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)
+

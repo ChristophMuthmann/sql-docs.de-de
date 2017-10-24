@@ -16,6 +16,7 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: da71dc67a1fd6a17f75c5aceaf7a88dce7d328ab
@@ -68,3 +69,4 @@ oRs.MarshalOptions = adMarshalModifiedOnly
 ' Disconnect the Recordset.  
 Set oRs.ActiveConnection = Nothing  
 ```
+

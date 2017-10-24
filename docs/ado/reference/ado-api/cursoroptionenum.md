@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e8c57737a5162f902c349f74b941de6d8f5ca30e
@@ -66,3 +67,4 @@ Gibt an, welche Funktionen die [unterstützt](../../../ado/reference/ado-api/sup
   
 ## <a name="applies-to"></a>Gilt für  
  [Unterstützt-Methode](../../../ado/reference/ado-api/supports-method.md)
+

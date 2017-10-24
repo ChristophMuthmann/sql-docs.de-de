@@ -26,6 +26,7 @@ caps.latest.revision: 32
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: d83b68d9d5fb52c67ca3a1910fe9541dfd6f5552
@@ -87,3 +88,4 @@ NULL           44294026.1344         1
  [GROUP BY &#40; Transact-SQL &#41;](../../t-sql/queries/select-group-by-transact-sql.md)  
   
   
+

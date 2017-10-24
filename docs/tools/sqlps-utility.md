@@ -17,6 +17,7 @@ caps.latest.revision: 22
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 730d20d8f3accf9a172553fdec5c46aa95530b15
@@ -127,3 +128,4 @@ sqlps -NoExit -Command "&{.\MyFolder.MyScript.ps1}"
  [SQL Server-PowerShell](../relational-databases/scripting/sql-server-powershell.md)  
   
   
+

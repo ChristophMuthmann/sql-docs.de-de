@@ -25,6 +25,7 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: cc90d37072e2e081fc358f186e3dc85f0c8c092c
@@ -191,3 +192,4 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   
+

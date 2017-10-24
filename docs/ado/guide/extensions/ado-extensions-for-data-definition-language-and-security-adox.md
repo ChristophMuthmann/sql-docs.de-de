@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8b349282479f2b3b63bb5d93557ef1d99b0aeddc
@@ -27,3 +28,4 @@ Dieser Abschnitt enthält die folgenden Themen.
 -   [Grundlegendes zu ADOX](../../../ado/guide/extensions/adox-fundamentals.md)  
   
 -   [Unterstützung von Zertifikatanbietern zur ADOX](../../../ado/guide/extensions/provider-support-for-adox-ado.md)
+

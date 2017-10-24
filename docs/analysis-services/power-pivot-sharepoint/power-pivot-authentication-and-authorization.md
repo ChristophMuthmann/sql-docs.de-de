@@ -16,6 +16,7 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 40b36877a7c64c10fb2eee2933b1ac2461719c0c
@@ -123,3 +124,4 @@ ms.lasthandoff: 09/01/2017
  [PowerPivot-Sicherheitsarchitektur](http://go.microsoft.com/fwlink/?linkID=220970)  
   
   
+

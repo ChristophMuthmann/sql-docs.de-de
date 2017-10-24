@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: db959e87da2bb2c9cb8c9aaa4603c6aa865e3826
@@ -123,3 +124,4 @@ End Sub
  [Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [IsolationLevel-Eigenschaft](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Mode-Eigenschaft (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)
+

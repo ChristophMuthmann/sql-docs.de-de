@@ -23,6 +23,7 @@ caps.latest.revision: 31
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 352ea0e82fa853639d94a6a151b3d7df5f5b2f21
@@ -92,3 +93,4 @@ IF ( (SELECT trigger_nestlevel() ) > 5 )
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
   
   
+

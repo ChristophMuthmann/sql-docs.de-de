@@ -21,6 +21,7 @@ caps.latest.revision: 15
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 254914f3b92289faf19a37b4651e7c95804ac791
@@ -67,3 +68,4 @@ DROP BROKER PRIORITY InitiatorAToTargetPriority;
  [Sys. conversation_priorities &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
   
   
+

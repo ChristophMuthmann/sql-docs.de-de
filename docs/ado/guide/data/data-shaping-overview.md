@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f885a8585d3665efcc39bfe979b501d779c35c00
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  Darüber hinaus Daten in ADO strukturiert werden, können Sie zum Erstellen neuer **Recordset** Objekte ohne eine zugrunde liegende Datenquelle mithilfe der **neu** Schlüsselwort, um die Felder von der übergeordneten und untergeordneten beschreiben ** Recordsets**. Die neue **Recordset** Objekt kann anschließend mit Daten gefüllt und persistent gespeichert. Entwickler können auch verschiedene Berechnungen oder Aggregationen auszuführen (z. B. **Summe**, **AVG**, und **MAX**) für untergeordnete Felder. Strukturieren von Daten kann auch ein übergeordnetes Element erstellen **Recordset** von einem untergeordneten **Recordset** durch Gruppieren von Datensätzen in der untergeordneten und eine Zeile in das übergeordnete Element für jede Gruppe in das untergeordnete Element platzieren.  
   
  Reguläre SQL ermöglicht es Ihnen, Daten mithilfe von **JOIN** Syntax, aber dies kann ineffizient sein und unhandlich da redundante übergeordneten Daten in jedem Datensatz für einen angegebenen über-/ unterordnungsbeziehung zurückgegebenen wiederholt werden. Strukturieren von Daten kann einen einzelnen übergeordneten Datensatz im übergeordneten Element verknüpft **Recordset** mit mehreren untergeordneten Datensätzen in der untergeordneten **Recordset**, vermeiden die redundante eine **verknüpfen**. Die meisten Personen suchen, die über-/ mehrere **Recordset** Programmiermodell besser natürliche und einfacher zu verwenden als die einzelnen **Recordset JOIN** Modell.
+

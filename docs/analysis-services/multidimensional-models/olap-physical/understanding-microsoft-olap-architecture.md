@@ -19,6 +19,7 @@ caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 6416855a4cfac989e9571f187d95a65343dba196
@@ -59,3 +60,4 @@ ms.lasthandoff: 09/01/2017
  [Technische Referenz &#40; SSAS &#41;](../../../analysis-services/powershell/technical-reference-ssas.md)  
   
   
+

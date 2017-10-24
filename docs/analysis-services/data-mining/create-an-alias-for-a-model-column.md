@@ -19,6 +19,7 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a49c5aac7289573631a3ed50349c98690c28212d
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/01/2017
  [Miningmodelleigenschaften](../../analysis-services/data-mining/mining-model-properties.md)  
   
   
+

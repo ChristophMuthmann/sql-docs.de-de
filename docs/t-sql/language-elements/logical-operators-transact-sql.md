@@ -23,6 +23,7 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: aa7f707ba758b6811f2fc8425bf4c2da96973e02
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/01/2017
  [Rangfolge von Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
   
   
+

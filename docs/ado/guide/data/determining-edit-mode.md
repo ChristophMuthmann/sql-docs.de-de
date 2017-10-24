@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ca4098a61984e009a2874fdca55d898938ce702d
@@ -37,3 +38,4 @@ ADO verwaltet einen Bearbeitungspuffer mit dem aktuellen Datensatz verknüpft si
 |**adEditDelete**|Gibt an, dass der aktuelle Datensatz gelöscht wurde.|  
   
  **EditMode** kann einen gültigen Wert zurückgeben, nur dann, wenn ein aktueller Datensatz vorhanden ist. **EditMode** gibt einen Fehler zurück, wenn **BOF** oder **EOF** ist **"true"** oder wenn der aktuelle Datensatz gelöscht wurde.
+

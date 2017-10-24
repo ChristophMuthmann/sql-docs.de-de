@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0133ec4e0c30ee6bb2c3d43e46b9c0307a689e19
@@ -41,3 +42,4 @@ Dieses Codebeispiel veranschaulicht das Verwenden von ADO mit der Microsoft OLE 
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft OLE DB-Anbieter für Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)   
  [Der OLE DB-Anbieter für Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)
+

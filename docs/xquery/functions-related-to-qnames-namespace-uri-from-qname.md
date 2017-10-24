@@ -21,6 +21,7 @@ caps.latest.revision: 13
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: be3af81f884ff54ff6bea5f07f97d31cf0ad2342
@@ -58,3 +59,4 @@ namespace-uri-from-QName($arg as xs:QName?) as xs:string?
  [Funktionen, die im Zusammenhang mit QNames &#40; XQuery &#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0f8f80b597ff7fdb12cfb353a21ec3ef3d1119b1
@@ -402,3 +403,4 @@ End Sub
   
 'EndHelloData  
 ```
+

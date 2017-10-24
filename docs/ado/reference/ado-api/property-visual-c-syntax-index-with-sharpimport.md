@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e739c4b9e29ecb2a77fbf1c0720840efae1f9f76
@@ -48,3 +49,4 @@ __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;
   
 ## <a name="see-also"></a>Siehe auch  
  [Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)
+

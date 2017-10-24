@@ -18,6 +18,7 @@ caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: c14ab5147125207eb63ad9e97ba2a94876d4ddce
@@ -271,3 +272,4 @@ ORDER BY Count(*) DESC
  [Sequenzclusteringmodellabfragebeispiele](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
   
   
+

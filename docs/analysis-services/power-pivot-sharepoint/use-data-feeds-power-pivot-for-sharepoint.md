@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: eb5bc547eead5e8dc2d765f56861dacbd8af64e6
@@ -99,3 +100,4 @@ ms.lasthandoff: 09/01/2017
  [Freigeben von Datenfeeds mithilfe einer Datenfeedbibliothek &#40;PowerPivot für SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md)  
   
   
+

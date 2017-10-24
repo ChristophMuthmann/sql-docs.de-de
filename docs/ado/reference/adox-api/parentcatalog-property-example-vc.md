@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3a024a29cb1e84adfb7116807fd275484a3386a2
@@ -105,3 +106,4 @@ int main() {
    ::CoUninitialize();  
 }  
 ```
+

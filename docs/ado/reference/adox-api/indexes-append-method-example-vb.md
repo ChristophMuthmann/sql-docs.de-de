@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dd9ee66d7ccfae9a0eed5cbb66da2033fd5bd3ff
@@ -88,3 +89,4 @@ End Sub
  [Append-Methode (ADOX Indizes)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
  [Index-Objekt (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Auflistung von Indizes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)
+

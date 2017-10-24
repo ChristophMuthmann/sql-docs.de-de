@@ -21,6 +21,7 @@ caps.latest.revision: 54
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e8557ed990a03d36aaf4728726de1bb3dd67d6c9
@@ -164,3 +165,4 @@ ms.lasthandoff: 09/01/2017
  [Zugriffssteuerungslisten (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
   
   
+

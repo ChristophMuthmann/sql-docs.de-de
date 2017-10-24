@@ -21,6 +21,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a2e603819e2d4c44bf612d62f86f448c560e0828
@@ -62,3 +63,4 @@ Es sei denn, Sie in Visual Basic wird für alle Ereignishandler programmieren **
  [ADO-Ereignisinstanziierung nach Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [Ereignisparameter](../../../ado/guide/data/event-parameters.md)   
  [Typen von Ereignissen](../../../ado/guide/data/types-of-events.md)
+

@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e0ff03541851ac39c2904cde2f809e196cbd2c40
@@ -35,3 +36,4 @@ Die Syntax zum Aufrufen von ADO-Methoden und Eigenschaften unterscheidet sich je
  [Mithilfe von ADO mit Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [Verwenden von ADO mit Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
  [Verwenden von ADO mit Skriptsprachen](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)
+

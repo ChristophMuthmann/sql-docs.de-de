@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a970011085cb3e78c4222d429c5db439ef586586
@@ -53,3 +54,4 @@ ms.lasthandoff: 09/01/2017
  Beschreibt das Entwerfen von Personalisierungserweiterungen für [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
   
+

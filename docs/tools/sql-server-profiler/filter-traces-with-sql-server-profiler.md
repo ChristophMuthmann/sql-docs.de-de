@@ -21,6 +21,7 @@ caps.latest.revision: 22
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 557b99965604cce4d58683cd6f5aa4745b65673a
@@ -39,3 +40,4 @@ ms.lasthandoff: 08/02/2017
  [Filtern einer Ablaufverfolgung](../../relational-databases/sql-trace/filter-a-trace.md)  
   
   
+

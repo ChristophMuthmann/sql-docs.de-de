@@ -15,6 +15,7 @@ caps.latest.revision: 5
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 93a6893146a2367719ad7b4bed23a76b7d43e589
@@ -53,3 +54,4 @@ WHERE [Model Region] = 'M200 Pacific'
  [Drillthrough in Miningstrukturen](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
   
   
+

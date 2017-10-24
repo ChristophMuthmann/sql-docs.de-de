@@ -21,6 +21,7 @@ caps.latest.revision: 45
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 198dd7792a24f0090aec82593704f0f2165b0d43
@@ -91,3 +92,4 @@ ms.lasthandoff: 09/01/2017
  [Verwaltung von Data Mining-Lösungen und -Objekten](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   
+

@@ -18,6 +18,7 @@ caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 51e4bcb074da0b11587d8783008fd250fa8867fe
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/01/2017
  [Über-und untergeordneten Dimensionen](../../analysis-services/multidimensional-models/parent-child-dimension.md)  
   
   
+

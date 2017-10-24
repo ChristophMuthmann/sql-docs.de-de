@@ -23,6 +23,7 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: fb52e3460ed6c39d619453e370df310d530dd6a6
@@ -109,3 +110,4 @@ ELSE IF IS_ROLEMEMBER ('db_datareader') IS NULL
  [Sicherheitsfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   
+

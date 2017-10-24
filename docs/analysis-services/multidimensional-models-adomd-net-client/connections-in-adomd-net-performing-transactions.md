@@ -21,6 +21,7 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b7fe4d80598e56de50748fd53e651ca1a2b5a48b
@@ -57,3 +58,4 @@ AdomdTransaction objTransaction = objConnection.BeginTransaction();
  [ADOMD.NET-Clientprogrammierung](../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md)  
   
   
+

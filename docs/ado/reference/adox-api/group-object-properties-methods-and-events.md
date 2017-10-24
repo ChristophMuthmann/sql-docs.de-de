@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2da09f05aca0fcd3d8b9c017e6e9a21e1c1d0b38
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Gruppenobjekts (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)
+

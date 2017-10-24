@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6874cadc522dbdb3727863e3409909cd98a1b810
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/01/2017
 -   [Erstellen eines Power View-Berichts mit einer mehrdimensionalen Datenquelle](../../analysis-services/multidimensional-models/create-a-power-view-report-with-a-multidimensional-data-source.md)  
   
   
+

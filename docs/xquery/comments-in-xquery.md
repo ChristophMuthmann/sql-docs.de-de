@@ -21,6 +21,7 @@ caps.latest.revision: 11
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: ac26c6d480e591b9e82b91481f989dfe897f7ec2
@@ -56,3 +57,4 @@ where ProductModelID=7
 ```  
   
   
+

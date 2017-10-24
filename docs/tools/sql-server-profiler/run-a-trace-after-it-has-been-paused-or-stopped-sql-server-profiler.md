@@ -19,6 +19,7 @@ caps.latest.revision: 22
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 05ab6c90a0bcde2bc0c1124738eb17e5e6c46066
@@ -40,3 +41,4 @@ ms.lasthandoff: 08/02/2017
  [Starten einer Ablaufverfolgung](../../tools/sql-server-profiler/start-a-trace.md)  
   
   
+

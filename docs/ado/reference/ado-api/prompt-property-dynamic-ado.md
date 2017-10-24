@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 065656ea3023b1526573a48cd6d7d21eee6f6179
@@ -48,3 +49,4 @@ cn.Properties("Prompt") = adPromptNever    ' do not prompt the user
   
 ## <a name="applies-to"></a>Gilt für  
  [Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+

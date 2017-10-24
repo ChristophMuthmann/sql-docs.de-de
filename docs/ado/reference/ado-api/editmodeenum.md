@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2b59850d8b04854ee74f94664b53dc22242c6913
@@ -48,3 +49,4 @@ Gibt den Bearbeitungsstatus eines Datensatzes.
   
 ## <a name="applies-to"></a>Gilt für  
  [EditMode-Eigenschaft](../../../ado/reference/ado-api/editmode-property.md)
+

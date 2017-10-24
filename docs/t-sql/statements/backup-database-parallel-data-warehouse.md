@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 4fb36fd89c02ff9ddd5bc33825a387b53ab6e174
@@ -248,3 +249,4 @@ WITH (
  [WIEDERHERSTELLUNGSDATENBANK &#40; Parallel Datawarehouse &#41;](../../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
   
+

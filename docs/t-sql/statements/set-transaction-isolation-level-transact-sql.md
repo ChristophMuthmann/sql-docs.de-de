@@ -30,6 +30,7 @@ caps.latest.revision: 80
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 166cd04ce5e62b46b9d6e991cf528d3abd9e9af9
@@ -194,3 +195,4 @@ GO
  [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)  
   
   
+

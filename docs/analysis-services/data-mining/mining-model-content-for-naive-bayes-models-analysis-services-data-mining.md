@@ -20,6 +20,7 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f7786d6273c7941863b413f384ea8eb86bbbe84e
@@ -299,3 +300,4 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
  [Microsoft Naive Bayes-Algorithmus](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)  
   
   
+

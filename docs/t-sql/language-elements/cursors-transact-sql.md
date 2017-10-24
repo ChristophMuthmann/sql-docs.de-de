@@ -20,6 +20,7 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 990b1bc3c44605e2b7debed67b88e5cd65770ed5
@@ -74,3 +75,4 @@ ms.lasthandoff: 09/01/2017
  [Cursor](../../relational-databases/cursors.md)  
   
   
+

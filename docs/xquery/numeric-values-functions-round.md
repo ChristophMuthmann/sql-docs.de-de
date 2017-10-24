@@ -21,6 +21,7 @@ caps.latest.revision: 29
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 84815a954021f755173fefd60ef174e7a0acdcf1
@@ -76,3 +77,4 @@ fn:round ( $arg as numeric?) as numeric?
  [CEILING-Funktion &#40; XQuery &#41;](../xquery/numeric-values-functions-ceiling.md)  
   
   
+

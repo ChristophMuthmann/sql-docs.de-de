@@ -19,6 +19,7 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ab11f0f2b60a67656bc5c529a17b0251fe2c9487
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/01/2017
  [Tasks und Anweisungen für Miningmodell-Viewer](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   
+

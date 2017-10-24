@@ -14,6 +14,7 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b8d2da25a920e0d5e25f9b7fa72ce48529fa6686
@@ -59,3 +60,4 @@ ms.lasthandoff: 08/02/2017
  Zeigt an, ob dieser Dienst ausgeführt wird, angehalten oder deaktiviert ist.  
   
   
+

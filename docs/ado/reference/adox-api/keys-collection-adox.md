@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d43a2b5a6417104461287b109ba06ed3438cc00e
@@ -53,3 +54,4 @@ Enthält alle [Schlüssel](../../../ado/reference/adox-api/key-object-adox.md) O
  [Append-Keys-Methode, Typ des Schlüssels, RelatedColumn, RelatedTable und UpdateRule Eigenschaften Beispiel (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Schlüssel Auflistungseigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/keys-collection-properties-methods-and-events.md)   
  [Schlüsselobjekt (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
+

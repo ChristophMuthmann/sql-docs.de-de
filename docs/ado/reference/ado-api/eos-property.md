@@ -20,6 +20,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c29c72e9cd88ff5672b90aeab5da97c7742f5b30
@@ -41,3 +42,4 @@ Gibt an, ob die aktuelle Position am Ende der [Stream](../../../ado/reference/ad
 ## <a name="see-also"></a>Siehe auch  
  [EOS und Zeilentrennzeichen Eigenschaften und SkipLine-Methode (VB)](../../../ado/reference/ado-api/eos-and-lineseparator-properties-and-skipline-method-example-vb.md)   
  [Streamobjekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+

@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 0a574a1159d984e59a7a8ee5ff58ae63f16199b0
@@ -111,3 +112,4 @@ C:\PS>New-PowerPivotServiceApplication -ServiceApplicationName "PowerPivot Servi
  In diesem Beispiel wird eine neue Dienstanwendung erstellt. Die Dienstanwendungsdatenbank wird auf einem Datenbankserver mit dem Namen AdvWorks-SRV01 erstellt, der als benannte [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Instanz installiert wurde. Dies ist eine gängige Konfiguration für viele [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Installationen. Sie müssen für die SQL Server-Instanz über dbcreator-Berechtigungen verfügen, um die Datenbank erstellen zu können. Sie müssen db_owner für die SharePoint-Konfigurationsdatenbank sein. Da dies die erste [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung in der Farm ist, muss sie Mitglied der Standardproxygruppe sein.  
   
   
+

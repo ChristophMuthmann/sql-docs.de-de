@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ecbd9009cabfa7a9cdcccb152af52f59e3c01ce9
@@ -40,3 +41,4 @@ Verwenden Sie die folgenden Codebeispiele, um Informationen zum Verwenden der AD
  [ADO MD-Objektmodell](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO MD-Objekte](../../../ado/reference/ado-md-api/ado-md-objects.md)   
  [ADO MD-Eigenschaften](../../../ado/reference/ado-md-api/ado-md-properties.md)
+

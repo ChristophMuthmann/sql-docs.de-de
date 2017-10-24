@@ -20,6 +20,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: af08ca92b0f9a6f20e7b1aa0544ea41361945c9d
@@ -120,3 +121,4 @@ End Sub
  [EOS-Eigenschaft](../../../ado/reference/ado-api/eos-property.md)   
  [Zeilentrennzeichen-Eigenschaft (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)   
  [SkipLine-Methode](../../../ado/reference/ado-api/skipline-method.md)
+

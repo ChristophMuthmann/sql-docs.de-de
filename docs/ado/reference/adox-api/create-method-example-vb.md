@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5211692bd7bcaf7d2fc008e1c801d8346f5ea432
@@ -56,3 +57,4 @@ End Sub
 ## <a name="see-also"></a>Siehe auch  
  [Katalogobjekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Create-Methode (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)
+

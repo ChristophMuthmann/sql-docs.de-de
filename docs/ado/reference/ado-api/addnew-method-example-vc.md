@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 67ae165ea28ec1bc7a62451e9734a882f16566b9
@@ -220,3 +221,4 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 ## <a name="see-also"></a>Siehe auch  
  [AddNew-Methode (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

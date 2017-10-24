@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9d1a4659deeab00589a09e66d885d7f7005f7a43

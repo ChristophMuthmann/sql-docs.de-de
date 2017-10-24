@@ -24,6 +24,7 @@ caps.latest.revision: 27
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 4ad652e17039cbb6a6936b074320096fd58a78d3
@@ -148,3 +149,4 @@ ALTER BROKER PRIORITY SimpleContractPriority
  [Sys. conversation_priorities &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
   
   
+

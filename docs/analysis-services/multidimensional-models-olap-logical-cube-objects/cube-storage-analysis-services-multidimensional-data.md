@@ -24,6 +24,7 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 27b0e9be1051b6abab2e0be7b0e521e9a5b54567
@@ -58,3 +59,4 @@ ms.lasthandoff: 09/01/2017
  [Aggregationen und Aggregationsentwürfe](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   
+

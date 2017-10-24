@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3601e69350096d3fae0104e5d43c6d7e4abb5237
@@ -169,3 +170,4 @@ int main() {
 ## <a name="see-also"></a>Siehe auch  
  [Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [DefinedSize-Eigenschaft (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)
+

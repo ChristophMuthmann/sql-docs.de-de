@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e9b26261c83932005ba0852b67e4f246cea47b8e
@@ -60,3 +61,4 @@ ms.lasthandoff: 09/09/2017
  [Das Datensatzobjekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Streamobjekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [ADO-Verlauf](../../../ado/guide/ado-history.md)
+

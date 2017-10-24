@@ -20,6 +20,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 52ea3d1aa490325f3abe4f5fdca80dea6edb5174
@@ -58,3 +59,4 @@ Enthält alle [Prozedur](../../../ado/reference/adox-api/procedure-object-adox.m
  [Prozeduren Auflistungseigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/procedures-collection-properties-methods-and-events.md)   
  [Katalogobjekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Prozedurobjekt (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)
+

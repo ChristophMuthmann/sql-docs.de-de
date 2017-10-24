@@ -22,6 +22,7 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 537e3a05ad368be5278eef9dc9c3d29d19754322
@@ -81,3 +82,4 @@ WHERE g.Filter(geography::Parse(
  [STIntersects &#40; Geography-Datentyp &#41;](../../t-sql/spatial-geography/stintersects-geography-data-type.md)  
   
   
+

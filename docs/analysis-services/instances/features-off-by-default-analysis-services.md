@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4b9d92a7620ed165d661fe4c48726a8049d33500
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/01/2017
 -   Gruppenaffinität. Einzelheiten dazu finden Sie unter [Thread Pool Properties](../../analysis-services/server-properties/thread-pool-properties.md) .  
   
   
+

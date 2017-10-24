@@ -21,6 +21,7 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: aa037f7ff155df158ba2967c5e7c31989ace887d
@@ -92,3 +93,4 @@ ms.lasthandoff: 09/01/2017
  [Anforderungen und Überlegungen zur Verarbeitung &#40;Data Mining&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   
+

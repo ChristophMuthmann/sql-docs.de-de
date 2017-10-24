@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9aadb2a81cc93effa0c280f5f74e6403c7403756
@@ -184,3 +185,4 @@ Response.write "</XML>"
   
 ### <a name="remarks"></a>Hinweise  
  An diesem Punkt XML wurde an den Clientbrowser gestreamt wurde und es kann angezeigt werden. Dies erfolgt mithilfe einer clientseitigen VBScript zum Binden von XML-Dokument an eine Instanz des DOM und Schleifendurchlauf durch jeden untergeordneten Knoten, um eine Liste der Produkte im HTML-Format erstellen.
+

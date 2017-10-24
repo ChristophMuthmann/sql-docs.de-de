@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 791fac2fa238cd7e6e9b0d07f5dc5b3e1734d5c1
@@ -140,3 +141,4 @@ void PrintComError(_com_error &e) {
 ## <a name="see-also"></a>Siehe auch  
  [NumericScale-Eigenschaft (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
  [Precision-Eigenschaft (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)
+

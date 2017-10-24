@@ -28,6 +28,7 @@ caps.latest.revision: 27
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 483c3779e53389d34da12c974f3a13672216c9a9
@@ -116,3 +117,4 @@ ProductModelID SmallPicturesStored
  [XQuery Expressions (XQuery-Ausdrücke)](../xquery/xquery-expressions.md)  
   
   
+

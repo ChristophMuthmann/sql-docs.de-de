@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e99e0107f8a47b032517918073f3b9cdd9c00ba1
@@ -155,3 +156,4 @@ body {
 ## <a name="see-also"></a>Siehe auch  
  [CacheSize-Eigenschaft (ADO)](../../../ado/reference/ado-api/cachesize-property-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

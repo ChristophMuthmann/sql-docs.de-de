@@ -14,6 +14,7 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5417a642fd9522ffb3453caff198480e1d930a0a
@@ -110,3 +111,4 @@ ms.lasthandoff: 09/01/2017
  [Eine Analysis Services-Fallstudie: Verwenden von tabellarischen Modellen in umfangreichen kommerziellen Lösung](https://msdn.microsoft.com/library/dn751533.aspx)  
   
   
+

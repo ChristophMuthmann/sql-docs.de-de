@@ -19,6 +19,7 @@ caps.latest.revision: 24
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 3f9fece26e607005cca982be1963a9ca8a53a632
@@ -370,3 +371,4 @@ WHERE ProductModelID=19
 -   processing-instruction(name) wird nicht unterstützt. Schließen Sie den Namen stattdessen in Anführungszeichen ein.  
   
   
+

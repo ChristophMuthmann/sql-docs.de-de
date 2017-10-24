@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 072e6f71aca74f4690f26b90887d475a955e3041
@@ -39,3 +40,4 @@ Unmittelbarer Modus im Endeffekt dasselbe ist bei der **LockType** -Eigenschafte
  Wenn Sie eine neue Zeile, beim Aufrufen Hinzufügen der **CancelUpdate** -Methode, zur aktiven Zeile wird die Zeile, die vor dem aktuellen wurde die **AddNew** aufrufen.  
   
  Wenn Sie nicht die aktuelle Zeile geändert oder eine neue Zeile hinzugefügt haben, beim Aufrufen der **CancelUpdate** Methode wird ein Fehler generiert.
+

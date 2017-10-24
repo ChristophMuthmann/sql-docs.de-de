@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 20fdfff410f2b36e8974aa7073ad287e6f4a74d4
@@ -102,3 +103,4 @@ End Sub
   
 ## <a name="see-also"></a>Siehe auch  
  [Count-Eigenschaft (ADO)](../../../ado/reference/ado-api/count-property-ado.md)
+

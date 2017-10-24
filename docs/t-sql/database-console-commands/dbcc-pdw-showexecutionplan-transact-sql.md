@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 461ee87f41692172b31125e36553c0eab0b09772
@@ -102,3 +103,4 @@ DBCC PDW_SHOWEXECUTIONPLAN ( 201001, 375 );
 ## <a name="see-also"></a>Siehe auch
 [DBCC PDW_SHOWPARTITIONSTATS &#40; Transact-SQL &#41;](dbcc-pdw-showpartitionstats-transact-sql.md)  
 [DBCC PDW_SHOWSPACEUSED &#40; Transact-SQL &#41;](dbcc-pdw-showspaceused-transact-sql.md)
+

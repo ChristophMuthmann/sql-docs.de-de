@@ -26,6 +26,7 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: e7a693ab79b1c2478042e5faa3a7e886b686a789
@@ -85,3 +86,4 @@ ms.lasthandoff: 09/01/2017
  [Programmieren AMO Fundamental Objects](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-fundamental-objects.md)  
   
   
+

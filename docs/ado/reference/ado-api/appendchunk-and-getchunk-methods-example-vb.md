@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 53550f1e8e899a480c189c6925e649d8814316ff
@@ -156,3 +157,4 @@ End Sub
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
  [GetChunk-Methode (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)   
  [Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)
+

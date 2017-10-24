@@ -25,6 +25,7 @@ caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 4ba3de4a84dfd666e23d9877241f8c444891a0be
@@ -247,3 +248,4 @@ ms.lasthandoff: 09/01/2017
  [Neuronale Beispiele für Netzwerkmodellabfragen](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   
+

@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 24c8c70d0e09614df2ce7811c1e2a1f20ff50a16
@@ -139,3 +140,4 @@ void PrintComError(_com_error &e) {
 ## <a name="see-also"></a>Siehe auch  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Sort-Eigenschaft](../../../ado/reference/ado-api/sort-property.md)
+

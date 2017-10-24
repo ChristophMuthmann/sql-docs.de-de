@@ -21,6 +21,7 @@ caps.latest.revision: 14
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: ddb30679406574a2f5f96687c4c04fae4c58f8e3
@@ -66,3 +67,4 @@ SELECT @g.RingN(2).ToString();
  [NumRings &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/numrings-geography-data-type.md)  
   
   
+

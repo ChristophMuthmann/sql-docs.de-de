@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7006bc7073693cc70dcb8eebce1bd8998895a9e8
@@ -100,3 +101,4 @@ public void setNull()
   
 ## <a name="see-also"></a>Siehe auch  
  [Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)
+

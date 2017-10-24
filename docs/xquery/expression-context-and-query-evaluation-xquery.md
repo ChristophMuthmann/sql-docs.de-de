@@ -24,6 +24,7 @@ caps.latest.revision: 19
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 0aaa0fb28aa648018a4d9f562e5ac2452e0d2309
@@ -202,3 +203,4 @@ ms.lasthandoff: 09/01/2017
  [XML-Schemaauflistungen &#40;SQL Server&#41;](../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   
+

@@ -20,6 +20,7 @@ ms.assetid:
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 6419c75df8a5b6742b102a3f56adfa7e2efd9ef1
 ms.openlocfilehash: 630c835cf7be720ad235b0f33bb093ac5a1ed926

@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7a22015949e145744ee34344685076bd4d7fa565
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
  [ADO MD-Objektmodell](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO MD-Objekte](../../../ado/reference/ado-md-api/ado-md-objects.md)   
  [ADO MD-Eigenschaften](../../../ado/reference/ado-md-api/ado-md-properties.md)
+

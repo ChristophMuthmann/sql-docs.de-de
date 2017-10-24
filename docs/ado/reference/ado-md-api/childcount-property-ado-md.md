@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6ca8ee6c01299c3db45977a8e64c4f2afd46c7d3
@@ -47,3 +48,4 @@ Gibt die Anzahl der Elemente für den aktuellen [Member](../../../ado/reference/
  [Children-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/children-property-ado-md.md)   
  [Count-Eigenschaft (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   
  [Members-Auflistung (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)
+

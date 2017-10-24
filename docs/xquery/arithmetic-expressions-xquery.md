@@ -21,6 +21,7 @@ caps.latest.revision: 16
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 6ba5c642195f1049f7df59a0fa14ef666eec4bfe
@@ -65,3 +66,4 @@ SELECT @x.query('xs:integer(2 div 3)')
 -   Vorgänge für **xs: Integer** Werte ergeben einen Wert vom Typ **xs: decimal** anstelle von **xs: Integer**.  
   
   
+

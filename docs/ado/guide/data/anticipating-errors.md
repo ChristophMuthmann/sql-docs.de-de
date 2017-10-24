@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 359dc6c1bd396a0909aea36c5039a4ba5195f326
@@ -37,3 +38,4 @@ Fehler Verhinderung von Datenverlust sind mindestens so wichtig wie die Fehlerbe
  Stellen Sie sicher, dass **Recordset** Objekte sind nicht über die Grenzen der der **Recordset** vor dem Versuch, die Zeiger für den Datensatz zu verschieben. Wenn Sie versuchen, **MoveNext** Wenn **EOF** ist "true" oder **MovePrev** Wenn **BOF** ist "true", wird eine Fehlermeldung angezeigt. Wenn Sie eine der Ausführen der **verschieben** Methoden Wenn beide **EOF** und **BOF** sind "true", wird ein Fehler generiert.  
   
  Außerdem kommt es zu Fehlern, wenn Sie versuchen, die Vorgänge wie z. B. **Seek** und **suchen** für eine leere **Recordset**.
+

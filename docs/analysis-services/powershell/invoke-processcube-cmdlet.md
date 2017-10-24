@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: e54ec7316c74bd1551194c318e9a981dff341b72
@@ -106,3 +107,4 @@ ms.lasthandoff: 09/01/2017
  Mit diesem Befehl wird der Adventure Works-Cube in der AWTEST-Datenbank verarbeitet.   
   
   
+

@@ -15,6 +15,7 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 290142e362b4e41148ab2042c8c76738f3e7b54c
@@ -210,3 +211,4 @@ ms.lasthandoff: 09/01/2017
  [Tabellenmodelllösungen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
   
   
+

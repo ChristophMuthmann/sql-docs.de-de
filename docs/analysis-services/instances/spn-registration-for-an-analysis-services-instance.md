@@ -16,6 +16,7 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8d0d90aea6725bd45cded022791699cf910b7bdd
@@ -182,3 +183,4 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
  [Konfigurieren der Kerberos-Authentifizierung für SharePoint 2010-Produkte (Whitepaper)](http://technet.microsoft.com/library/ff829837.aspx)  
   
   
+

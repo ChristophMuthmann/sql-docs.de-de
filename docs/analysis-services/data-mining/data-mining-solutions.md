@@ -18,6 +18,7 @@ caps.latest.revision: 64
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ee2196b673eb9a53d5fefe5c62d1158ae94bf702
@@ -93,3 +94,4 @@ ms.lasthandoff: 09/01/2017
  [Data Mining-Tutorials &#40;Analysis Services&#41;](../../analysis-services/data-mining-tutorials-analysis-services.md)  
   
   
+

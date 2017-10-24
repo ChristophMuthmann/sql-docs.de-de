@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a2200db6931d9cd37513e0b216c1d3545e6d09cd
@@ -141,3 +142,4 @@ void PrintComError(_com_error &e) {
 ## <a name="see-also"></a>Siehe auch  
  [Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Versionseigenschaft (ADO)](../../../ado/reference/ado-api/version-property-ado.md)
+

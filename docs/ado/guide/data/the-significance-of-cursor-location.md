@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4dbeab2366d53499eaab2f21198ab4b7ebe6f570
@@ -42,3 +43,4 @@ Jeder Cursor verwendet temporäre Ressourcen zum Speichern der Daten. Diese Ress
  Allerdings ist es wichtig, die darauf hinweisen, dass ein serverseitiger Cursor ist, zumindest vorübergehend – für jeden aktiven Client wertvolle Serverressourcen belegt. Sie müssen entsprechend planen, um sicherzustellen, dass Ihre Serverhardware Verwalten aller die serverseitige Cursor von aktiven Clients angefordert wird. Darüber hinaus ein serverseitigen Cursor kann langsam sein, da sie nur Zugriff auf einzelne Zeilen enthält – kein Batch-Cursor vorhanden ist.  
   
  Serverseitige Cursor sind hilfreich, wenn einfügen, aktualisieren oder Löschen von Datensätzen. Mit serverseitiger Cursor haben Sie mehrere aktive Anweisungen über die gleiche Verbindung.
+

@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: edc81ce4377f490b482d920871ad361c98f961c5
@@ -84,3 +85,4 @@ GROUP BY LastName, SalesTerritoryRegion;
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
   
   
+

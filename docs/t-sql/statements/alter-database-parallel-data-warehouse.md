@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 74b47bec1033728d47e5fe577af29c6d43e9af65
@@ -170,3 +171,4 @@ ALTER DATABASE CustomerSales
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
   
   
+

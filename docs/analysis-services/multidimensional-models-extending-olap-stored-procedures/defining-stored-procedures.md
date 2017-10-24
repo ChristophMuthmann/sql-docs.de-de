@@ -22,6 +22,7 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b70d20ea8ad3cc108076261b692129bf72ccb6ef
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/01/2017
  [Verwaltung von mehrdimensionalen Modellassemblys](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)  
   
   
+

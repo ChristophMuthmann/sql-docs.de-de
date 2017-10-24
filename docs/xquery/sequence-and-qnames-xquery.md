@@ -23,6 +23,7 @@ caps.latest.revision: 22
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 79e43de914a80fd8f39ebab0b93c55c1e1fc2670
@@ -158,3 +159,4 @@ WHERE ProductModelID=7;
  [XQuery Basics (XQuery-Grundlagen)](../xquery/xquery-basics.md)  
   
   
+

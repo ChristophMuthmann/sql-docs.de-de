@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 366263980ae7ad9d5a792e6525888080a38ebbf6
@@ -246,3 +247,4 @@ Invoke-ASCmd -Database:"Adventure Works DW" -Query:"<Discover xmlns='urn:schemas
   
   
   
+

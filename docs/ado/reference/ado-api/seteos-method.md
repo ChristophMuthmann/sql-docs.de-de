@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 40e2cc70b9505ba99a9ac17ebfd54f8d2cf8b401
@@ -47,3 +48,4 @@ Stream.SetEOS
   
 ## <a name="applies-to"></a>Gilt für  
  [Streamobjekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+

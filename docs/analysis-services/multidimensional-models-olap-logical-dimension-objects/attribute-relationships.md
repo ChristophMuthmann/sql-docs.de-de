@@ -31,6 +31,7 @@ caps.latest.revision: 45
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: f2fc6db2abf6c23ae4b265255b2cc9d191632e7f
@@ -106,3 +107,4 @@ ms.lasthandoff: 09/01/2017
  [Eigenschaften der Benutzerhierarchie](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)  
   
   
+

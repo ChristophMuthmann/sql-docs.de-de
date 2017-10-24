@@ -39,6 +39,7 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0a182451583f04bd52a4f720c4cc057226261e21
@@ -194,3 +195,4 @@ ms.lasthandoff: 09/01/2017
  Ein weiteres innerhalb einer **Bindung** zulässiges Element, das nicht direkt im DDL-Code vorhanden ist, ist **ParentColumnID**, das in geschachtelten Tabellen für Data Mining verwendet wird. In diesem Fall ist es erforderlich, die übergeordnete Spalte in der verschachtelten Tabelle anzugeben, für die die Bindung bereitgestellt wird.  
   
   
+

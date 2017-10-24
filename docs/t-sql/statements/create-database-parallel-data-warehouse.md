@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 52a55d6c275388e03e3f7be09d265a3b918f583f
@@ -150,3 +151,4 @@ CREATE DATABASE mytest
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
   
   
+

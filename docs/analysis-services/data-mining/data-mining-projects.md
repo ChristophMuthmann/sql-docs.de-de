@@ -15,6 +15,7 @@ caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 4462aa5a323af4b957fedc5bdbb522705f4f7140
@@ -226,3 +227,4 @@ ms.lasthandoff: 09/01/2017
  [Arbeitsbereichsdatenbank &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
   
   
+

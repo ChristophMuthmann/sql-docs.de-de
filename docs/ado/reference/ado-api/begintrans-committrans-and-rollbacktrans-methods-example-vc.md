@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 80a319b5d3edd7f8b2c901b928e1321e068ac46e
@@ -273,3 +274,4 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 ## <a name="see-also"></a>Siehe auch  
  [BeginTrans, CommitTrans und RollbackTrans-Methoden (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
  [Update-Methode](../../../ado/reference/ado-api/update-method.md)
+

@@ -17,6 +17,7 @@ caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 849c244bdfb40770d8038a78a430faa7ff26b6b8
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/01/2017
  [Drillthroughabfragen &#40;Data Mining&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
   
+

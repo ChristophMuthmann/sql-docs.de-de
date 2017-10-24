@@ -21,6 +21,7 @@ caps.latest.revision: 20
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: feaa401cfd6e2077035d164412941392412011ae
@@ -92,3 +93,4 @@ SELECT @g.BufferWithTolerance(1, .5, 0).ToString();
  [Erweiterte Methoden für Geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   
+

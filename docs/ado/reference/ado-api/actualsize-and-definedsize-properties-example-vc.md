@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5badf017821cbc6cee07289df5c8500f6cdb86ae
@@ -153,3 +154,4 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 ## <a name="see-also"></a>Siehe auch  
  [ActualSize-Eigenschaft (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
  [DefinedSize-Eigenschaft](../../../ado/reference/ado-api/definedsize-property.md)
+

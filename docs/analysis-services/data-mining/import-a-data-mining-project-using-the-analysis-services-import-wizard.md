@@ -15,6 +15,7 @@ caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: aaa433e5bd9b8730c38e4853eda591177e592a92
@@ -67,3 +68,4 @@ ms.lasthandoff: 09/01/2017
  [Projekteigenschaften &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
   
   
+

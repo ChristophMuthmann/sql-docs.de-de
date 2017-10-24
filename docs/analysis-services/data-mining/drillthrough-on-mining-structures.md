@@ -15,6 +15,7 @@ caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: db582bae24d9bfb18cbb9f7b7febf6a1e4da45fb
@@ -66,3 +67,4 @@ ms.lasthandoff: 09/01/2017
  [Miningmodell-Drillthrough](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   
   
+

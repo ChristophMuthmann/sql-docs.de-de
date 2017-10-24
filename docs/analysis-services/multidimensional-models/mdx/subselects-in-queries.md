@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 918c7727a7af1f85f93d110652da450f1ea770cb
@@ -358,3 +359,4 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
 -   Standardmäßig sind berechnete Elemente in untergeordneten SELECT-Ausdrücken nicht zulässig; allerdings diese Einschränkung kann geändert werden, in einer sitzungsbasis durch Zuweisen eines Werts, der **Unterabfragen** Verbindungszeichenfolgeneigenschaft in <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> oder **DBPROP_MSMD_SUBQUERIES** Eigenschaft im [ Unterstützte XMLA-Eigenschaften &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). Eine genaue Erklärung des Verhaltens berechneter Elemente, abhängig von den Werten von [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) oder **DBPROP_MSMD_SUBQUERIES** , finden Sie unter **Berechnete Elemente in untergeordneten SELECT-Ausdrücken und Teilcubes**.  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 77c960197a8439127820c8d1b5e8f807d5b0e1fd
@@ -97,3 +98,4 @@ __declspec(property(get=GetType,put=PutType)) enum StreamTypeEnum Type;
   
 ## <a name="see-also"></a>Siehe auch  
  [Streamobjekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+

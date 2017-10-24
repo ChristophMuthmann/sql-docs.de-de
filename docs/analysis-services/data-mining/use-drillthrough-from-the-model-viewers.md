@@ -15,6 +15,7 @@ caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ed4254b34f570f37761001542d67e94c02e70a84
@@ -81,3 +82,4 @@ ms.lasthandoff: 09/01/2017
  [Drillthrough in Miningstrukturen](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
   
   
+

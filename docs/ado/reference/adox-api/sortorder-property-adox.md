@@ -23,6 +23,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6941ae3663d0f87c09f3f97e2c8e7d0adab3aaee
@@ -46,3 +47,4 @@ Gibt die Sortierreihenfolge für die Spalte (nur Indexspalten) an.
  [SortOrder-Eigenschaft (VB)-Beispiel](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
  [Columns-Auflistung (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Index-Objekt (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)
+

@@ -30,6 +30,7 @@ caps.latest.revision: 54
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 21e3cca3d07d7f53d646b5dd052fd40d0fa2cc1a

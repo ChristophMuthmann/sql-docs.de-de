@@ -21,6 +21,7 @@ caps.latest.revision: 16
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 707a939ce112e612874fefb956b8ebbc3142c0c5
@@ -442,3 +443,4 @@ RETURN
  [Typsystem &#40; XQuery &#41;](../xquery/type-system-xquery.md)  
   
   
+

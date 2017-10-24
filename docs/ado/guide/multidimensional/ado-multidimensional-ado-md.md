@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 13ed23d1b805d0522e733f0c3fe5688e40374b6f
@@ -27,3 +28,4 @@ ms.lasthandoff: 09/09/2017
 Dieser Abschnitt enthält das folgende Thema.  
   
 -   [Grundlegendes zu ADO MD](../../../ado/guide/multidimensional/ado-md-fundamentals.md)
+

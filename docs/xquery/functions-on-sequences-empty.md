@@ -21,6 +21,7 @@ caps.latest.revision: 27
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 1ca580d89bf60046aaf2d02315f18b12772e0bea
@@ -121,3 +122,4 @@ ProductModelID Result
  [vorhanden &#40; &#41; -Methode &#40; Xml-Datentyp &#41;](../t-sql/xml/exist-method-xml-data-type.md)  
   
   
+

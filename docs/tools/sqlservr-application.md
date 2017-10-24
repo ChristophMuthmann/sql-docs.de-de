@@ -26,6 +26,7 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f0abbf1d371f7fb97547b7e52331c150c7c003ae
@@ -113,3 +114,4 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  [Database Engine Service Startup Options](../database-engine/configure-windows/database-engine-service-startup-options.md)  
   
   
+

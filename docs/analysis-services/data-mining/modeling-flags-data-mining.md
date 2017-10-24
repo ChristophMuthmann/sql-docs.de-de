@@ -27,6 +27,7 @@ caps.latest.revision: 48
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ec1ae22619f8988c6d334dfd501faa221e34d1f7
@@ -119,3 +120,4 @@ WHERE MODEL_NAME = '<model name>'
 |Weitere Informationen zum Verwalten von Modellen und Strukturen sowie Festlegen von Verwendungseigenschaften|[Verschieben von Data Mining-Objekten](../../analysis-services/data-mining/moving-data-mining-objects.md)|  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 07787bcccbd64ab9c81a22e169fb3124606bc400
@@ -136,3 +137,4 @@ End Sub
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
  [Name-Eigenschaft (ADO)](../../../ado/reference/ado-api/name-property-ado.md)   
  [Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)
+

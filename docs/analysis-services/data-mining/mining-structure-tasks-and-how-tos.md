@@ -17,6 +17,7 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 37193320cddce5b0ecccaf9d0040992118bc0e44
@@ -50,3 +51,4 @@ ms.lasthandoff: 09/01/2017
  [Entwerfen und Implementieren (Themen zur Vorgehensweise) (Analysis Services &ndash; Data Mining)](https://msdn.microsoft.com/library/bb522452.aspx)  
   
   
+

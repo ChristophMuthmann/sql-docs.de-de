@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1f3d141fc218101902ae094ff2a4db385d204fa3
@@ -122,3 +123,4 @@ Jede **Feld** Objekt entspricht in der Regel an eine Spalte in einer Datenbankta
  Wenn kein aktueller Datensatz vorhanden ist, bei der Verwendung der **GetChunk** oder **AppendChunk** Methode auf eine **Feld** -Objekt Fehler 3021 (kein aktueller Datensatz) auftritt.  
   
  Ein Beispiel der Verwendung dieser Methoden zum Bearbeiten von Binärdaten, finden Sie die [AppendChunk Methode](../../../ado/reference/ado-api/appendchunk-method-ado.md) und [GetChunk-Methode](../../../ado/reference/ado-api/getchunk-method-ado.md) Beispielen in der *ADO Programmer's Reference*.
+

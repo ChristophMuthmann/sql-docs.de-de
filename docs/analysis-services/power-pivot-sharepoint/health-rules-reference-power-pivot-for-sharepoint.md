@@ -16,6 +16,7 @@ caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 09a30dc2e51e07a9720e0796666c3a89534acdbe
@@ -61,3 +62,4 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
 |[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: ADOMD.NET ist nicht auf einem eigenständigen WFE installiert, das für die Zentraladministration konfiguriert ist|Nein|Nein|SharePoint 2013<br /><br /> SharePoint 2010|ADOMD.NET ist eine Analysis Services-Clientbibliothek, die Verbindungen mit einer Analysis Services-Datenbank unterstützt. In einer Bereitstellung von [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] für SharePoint ermöglicht ADOMD.NET den Zugriff auf die integrierten Berichte im [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Management-Dashboard der Zentraladministration. Integrierte Berichte sind eigentlich [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Arbeitsmappen, die eingebettete Analysis Services-Daten enthalten. Das Management-Dashboard sendet mithilfe von ADOMD.NET eine Verbindungsanforderung an den Server, der in der Arbeitsmappe enthaltene Daten lädt.<br /><br /> In Topologien mit Zentraladministration, die auf einem eigenständigen Web-Front-End-Server ausgeführt wird, müssen Sie ADOMD.NET manuell installieren, wenn Sie diese Berichte im Management-Dashboard anzeigen möchten. Weitere Informationen finden Sie unter [Installieren von ADOMD.NET auf Web-Front-End-Servern, auf denen die Zentraladministration ausgeführt wird](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e).|  
   
   
+

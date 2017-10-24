@@ -25,6 +25,7 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5ed262fff96572408e85067eb1e760c3ae11373e
@@ -71,3 +72,4 @@ ms.lasthandoff: 09/01/2017
  [Spaltenverteilungen &#40;Data Mining&#41;](../../analysis-services/data-mining/column-distributions-data-mining.md)  
   
   
+

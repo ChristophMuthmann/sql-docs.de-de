@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5acc04720b17df0c39203417633332a0f01c2890
@@ -74,3 +75,4 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
   
 ## <a name="applies-to"></a>Gilt für  
  [Das Datensatzobjekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)
+

@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8de12620e57fe9cf7235c2a1f5a1442b429197d0
@@ -32,3 +33,4 @@ Wenn die [Filter](../../../ado/reference/ado-api/filter-property.md) Eigenschaft
   
 > [!NOTE]
 >  Einige Einschränkungen gelten beim Speichern der hierarchischen **Recordsets** (Daten-Shapes) im XML-Format. Weitere Informationen finden Sie unter [beibehalten von Datensätzen im XML-Format](../../../ado/guide/data/persisting-records-in-xml-format.md).
+

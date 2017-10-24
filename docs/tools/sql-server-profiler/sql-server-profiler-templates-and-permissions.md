@@ -17,6 +17,7 @@ caps.latest.revision: 34
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d55a2aaf43865897995dea95fd900bf9f6eee422
@@ -65,3 +66,4 @@ ms.lasthandoff: 08/02/2017
  [Starten Sie SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)  
   
   
+

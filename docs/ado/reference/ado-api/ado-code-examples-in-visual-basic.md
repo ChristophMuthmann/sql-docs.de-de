@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c62113096ccc6737acd04b444d307658f3bf08f2
@@ -163,3 +164,4 @@ Verwenden Sie die folgenden Codebeispiele, um Informationen zum Verwenden der AD
  [ADO Code Beispiele VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [ADO-Codebeispiele in Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
  [Anhang D: ADO-Beispiele](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+

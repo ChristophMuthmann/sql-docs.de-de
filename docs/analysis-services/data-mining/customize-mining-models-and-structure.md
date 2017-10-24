@@ -22,6 +22,7 @@ caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a2e730d9e6f183e5311f29ffe87f1c46a73468a4
@@ -142,3 +143,4 @@ ms.lasthandoff: 09/01/2017
  [Physische Architektur &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
   
   
+

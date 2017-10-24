@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 66dec387cc91a2d0bd4d3aded73a6b4301aff593
@@ -74,3 +75,4 @@ else
  Dieses Schema eignet sich für alle Typen von Cursor und ist unabhängig von der zugrunde liegenden Anbieter. Wenn Sie versuchen, um zu bestimmen, die überprüft, der eine **Recordset** Objekt, indem Sie überprüfen, ob die **RecordCount** Eigenschaftswert ist 0 (null) oder nicht, Sie müssen die entsprechende Vorsichtsmaßnahmen eine entsprechende Cursor und den Anbieter verwenden, unterstützt die Anzahl der Datensätze im Resultset zurückgeben.  
   
  Wenn Sie den letzten verbleibenden Datensatz im Löschen der **Recordset** Objekt ist, wird der Cursor in einem unbestimmten Zustand verbleibt. Die **BOF** und **EOF** Eigenschaften netzwerkverbindungsfehlers **"false"** , bis Sie versuchen, den aktuellen Datensatz neu positionieren, je nach Anbieter. Weitere Informationen finden Sie unter [löschen Datensätze, verwenden Sie die Methode Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md).
+

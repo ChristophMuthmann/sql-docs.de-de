@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aae22d4169b93fa3f3526007a20abaf8cb28f652
@@ -52,3 +53,4 @@ Verwenden Sie die folgenden Codebeispiele, um Informationen zum Verwenden von AD
  [Views-Auflistung, CommandText-Eigenschaft (VB)-Beispiel](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
  [Ansichten löschen Methodenbeispiel (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
  [Ansichten aktualisieren Methodenbeispiel (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)
+

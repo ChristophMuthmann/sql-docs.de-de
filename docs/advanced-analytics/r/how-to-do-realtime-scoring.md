@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
 ms.openlocfilehash: 175a9bc664a2032d828ca790312920339f971b9b
@@ -254,3 +255,4 @@ Machine Learning-Server unterstützt verteilte Echtzeit Bewertung von Modellen, 
 + [Bereitstellen eines Python-Modells als Webdienst mit Azureml-Modell-Management-sdk](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
 + [Veröffentlichen Sie ein R-Code-Block oder ein Echtzeit-Modell als ein neuer Webdienst.](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
 + [Mrsdeploy-Paket für R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)
+

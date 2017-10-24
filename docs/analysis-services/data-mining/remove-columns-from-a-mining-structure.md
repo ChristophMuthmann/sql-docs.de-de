@@ -20,6 +20,7 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4fc6781554893147c9f2e5d1c3eb74c3526ec878
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/01/2017
  [Tasks und Anweisungen für Miningstrukturen](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   
+

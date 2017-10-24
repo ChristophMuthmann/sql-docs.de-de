@@ -24,6 +24,7 @@ caps.latest.revision: 49
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 4b3563392c1df2b6056904f932b0fa2c5eaa3db3
@@ -150,3 +151,4 @@ SELECT IDENT_CURRENT('t7');
  [Systemfunktionen &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   
+

@@ -18,6 +18,7 @@ caps.latest.revision: 14
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 8912f95f6ea643025a1255997cb4ab32126d0a27
@@ -61,3 +62,4 @@ SELECT @g.STOverlaps(@h);
 ```  
   
   
+

@@ -22,6 +22,7 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 10136119c29d785b78eec49a5e909ab1254df436
@@ -55,3 +56,4 @@ ms.lasthandoff: 09/01/2017
  [Miningmodell-Viewern &#40; Datamining-Modell-Designer &#41;](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)  
   
   
+

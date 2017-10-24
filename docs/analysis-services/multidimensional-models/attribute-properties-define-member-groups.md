@@ -20,6 +20,7 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: f527aef051d304dc9cc89a953888c8b41090789d
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/01/2017
 3.  Wählen Sie in der Dropdownliste neben **DiscretizationMethod** eine Methode aus, nach der Sie die Elemente gruppieren. Weitere Informationen zu **DiscretizationMethod**-Einstellungen finden Sie unter [Gruppieren von Attributelementen &#40;Diskretisierung&#41;](../../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md).  
   
   
+

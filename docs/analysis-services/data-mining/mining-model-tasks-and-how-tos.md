@@ -18,6 +18,7 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0ad2ff2582e2b781debd14372614bd0e8c6d2323
@@ -66,3 +67,4 @@ ms.lasthandoff: 09/01/2017
  [Data Mining-Konzepte](../../analysis-services/data-mining/data-mining-concepts.md)  
   
   
+

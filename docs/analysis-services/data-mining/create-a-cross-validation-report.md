@@ -20,6 +20,7 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 87f3809146240a6e807cad3a5e1e22981f8bbf4d
@@ -99,3 +100,4 @@ ms.lasthandoff: 09/01/2017
  [Measures im Kreuzvalidierungsbericht](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)  
   
   
+

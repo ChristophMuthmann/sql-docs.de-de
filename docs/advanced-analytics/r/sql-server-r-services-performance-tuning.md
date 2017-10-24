@@ -14,6 +14,7 @@ caps.latest.revision: 20
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 161f42e2559725b41df605c1e1c2ca12acae9c97
@@ -103,3 +104,4 @@ Konfiguration und Optimierung der Leistung benötigt, erstellen eine solide Grun
 + [Optimieren der Leistung für R in SQL Server - Methoden und Ergebnisse](..\r\performance-case-study-r-services.md)
 
     Fasst Daten wurde verwendet, die zwei Fallstudien, wie die Leistung getestet wurde und wie die Optimierungen Ergebnisse auswirken.
+

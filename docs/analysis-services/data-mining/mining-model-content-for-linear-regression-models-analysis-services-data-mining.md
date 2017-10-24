@@ -19,6 +19,7 @@ caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: d51c18399f6762976630b4498908e903a18847cf
@@ -198,3 +199,4 @@ ms.lasthandoff: 09/01/2017
  [Beispiele für lineare Regressionsmodellabfrage](../../analysis-services/data-mining/linear-regression-model-query-examples.md)  
   
   
+

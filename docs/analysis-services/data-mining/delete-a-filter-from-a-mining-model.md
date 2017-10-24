@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0830b6585e3859cf307ebe2fa4ea493cd8072546
@@ -69,3 +70,4 @@ ms.lasthandoff: 09/01/2017
  [Filter für Miningmodelle &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   
+

@@ -23,6 +23,7 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: ac481d608106e5ce787ffe737d8d11fda67af3fb
@@ -417,3 +418,4 @@ select @x.query('xs:date("2000-01-01Z")')
  [Typsystem &#40; XQuery &#41;](../xquery/type-system-xquery.md)  
   
   
+

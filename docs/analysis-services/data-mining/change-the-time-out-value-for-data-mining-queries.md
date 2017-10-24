@@ -17,6 +17,7 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 51603c1919fae5e164348181412712d4dfc673a0
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/01/2017
  [Data Mining-Abfrage](../../analysis-services/data-mining/data-mining-queries.md)  
   
   
+

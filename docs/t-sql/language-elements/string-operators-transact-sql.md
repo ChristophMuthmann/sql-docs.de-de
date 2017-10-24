@@ -21,6 +21,7 @@ caps.latest.revision: 30
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 1bf0c19cc6e7058878de8daf3e3d263b4a06b283
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/01/2017
  [_ (Platzhalterzeichen-einzelnes zu suchendes Zeichen)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
   
   
+

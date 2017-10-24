@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 212c4698286fccb4baf6764f26af263419f7078d
@@ -65,3 +66,4 @@ __declspec(property(get=GetState)) long State;
   
 ## <a name="see-also"></a>Siehe auch  
  [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)
+

@@ -15,6 +15,7 @@ caps.latest.revision: 38
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 140885b86f0f6fa1a56119246c859f143f596726
@@ -46,3 +47,4 @@ Sie können alles installieren müssen Sie mit Python mithilfe von 2017 von SQL 
 [Einrichten von Python-Machine Learning-In-Database-Dienste](setup-python-machine-learning-services.md)
 
 [Python-Lernprogramme](../tutorials/sql-server-python-tutorials.md)
+

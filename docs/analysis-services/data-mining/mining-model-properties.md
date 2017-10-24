@@ -21,6 +21,7 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1fa45b604df0a118936f903491e707bd09d58295
@@ -73,3 +74,4 @@ ms.lasthandoff: 09/01/2017
  [Erstellen eines Alias für eine Modellspalte](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)  
   
   
+

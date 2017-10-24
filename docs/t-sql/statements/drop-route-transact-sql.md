@@ -25,6 +25,7 @@ caps.latest.revision: 33
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 037753a9dc22077b2b36158458c1ea98bbe7e0f5
@@ -73,3 +74,4 @@ DROP ROUTE ExpenseRoute ;
  [Sys.Routes &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)  
   
   
+

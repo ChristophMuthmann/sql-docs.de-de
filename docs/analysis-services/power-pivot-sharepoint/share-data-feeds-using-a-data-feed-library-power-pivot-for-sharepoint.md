@@ -18,6 +18,7 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 31457f6abb88dff525bd19609b8dd552adadfeb8
@@ -122,3 +123,4 @@ ms.lasthandoff: 09/01/2017
  [Power Pivot-Datenfeeds](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   
   
+

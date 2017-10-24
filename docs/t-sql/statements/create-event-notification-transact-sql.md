@@ -27,6 +27,7 @@ caps.latest.revision: 64
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 82d4f844c44f92232c8ac9bebd5841460f93051c
@@ -200,3 +201,4 @@ WHERE name = 'Notify_ALTER_T1';
  [Sys. server_events &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-events-transact-sql.md)  
   
   
+

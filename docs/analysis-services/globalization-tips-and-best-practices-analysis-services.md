@@ -20,6 +20,7 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 79c80dd57b6a6ea1257c00dfb95bf1e9a08a5b99
@@ -155,3 +156,4 @@ ms.lasthandoff: 09/01/2017
  [Schreiben internationaler Transact-SQL-Anweisungen](../relational-databases/collations/write-international-transact-sql-statements.md)  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: a014a2de0f3f8540845eb703910890458bc99eca
@@ -170,3 +171,4 @@ ms.lasthandoff: 08/02/2017
  [Installieren von Distributed Replay – Übersicht](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   
   
+

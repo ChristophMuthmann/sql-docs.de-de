@@ -23,6 +23,7 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: d56f2cdd207e7d50584b08b5ebcae77bd9057b36
@@ -86,3 +87,4 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services Backward Compatibility](../../analysis-services/analysis-services-backward-compatibility.md)  
   
   
+

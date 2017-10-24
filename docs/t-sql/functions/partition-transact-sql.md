@@ -22,6 +22,7 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 88c9a82038aacb1cc2cda01e8172f856bd02c4e4
@@ -106,3 +107,4 @@ WHERE $PARTITION.TransactionRangePF1(TransactionDate) = 5 ;
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)  
   
   
+

@@ -21,6 +21,7 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 6c95aafc0278834c6108b99dd67908958fb47b17
@@ -98,3 +99,4 @@ END
  [SQL Server-Datenbank-Engine-Abwärtskompatibilität](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
   
   
+

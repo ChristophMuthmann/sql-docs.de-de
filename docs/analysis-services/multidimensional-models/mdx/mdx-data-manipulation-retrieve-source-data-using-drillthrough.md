@@ -21,6 +21,7 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9470c5edd50bab3622ad73f3e3404a4747b07dd7
@@ -65,3 +66,4 @@ RETURN [Department MeasureGroup].[Department Id], [Employee].[First Name]
  [Bearbeiten von Daten &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   
+

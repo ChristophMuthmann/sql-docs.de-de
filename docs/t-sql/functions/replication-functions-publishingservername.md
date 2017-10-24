@@ -22,6 +22,7 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: a5aeeb414f9c980429d20f123e1f9c986b147eee
@@ -58,3 +59,4 @@ PUBLISHINGSERVERNAME()
  [Replikationsfunktionen &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/53702dee-de58-47d5-a552-7f32000f77d4)  
   
   
+

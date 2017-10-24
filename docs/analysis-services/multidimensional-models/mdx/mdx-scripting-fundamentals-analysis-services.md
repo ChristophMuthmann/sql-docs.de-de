@@ -23,6 +23,7 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 11d9dd08521f271284c13a3d93e37fe32d8850b5
@@ -53,3 +54,4 @@ ms.lasthandoff: 09/01/2017
  [MDX-Sprachreferenz &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)  
   
   
+

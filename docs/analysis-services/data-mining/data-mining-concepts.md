@@ -29,6 +29,7 @@ caps.latest.revision: 48
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: d9bad5ee7b9724c7faa1acbe4ebcc3fa2fa6812c
@@ -186,3 +187,4 @@ ms.lasthandoff: 09/01/2017
  [Data Mining-Tools](../../analysis-services/data-mining/data-mining-tools.md)  
   
   
+

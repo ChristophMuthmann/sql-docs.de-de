@@ -25,6 +25,7 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cb753663f77dbe9fae2eb37cce9a654bfa22f483
@@ -111,3 +112,4 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
  [Erteilen von Cube- oder Modellberechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
   
   
+

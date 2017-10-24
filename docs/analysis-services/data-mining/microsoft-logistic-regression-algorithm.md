@@ -20,6 +20,7 @@ caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c4d3e835e6620ed5e4efb551d3e3ebcde7cf3bf8
@@ -89,3 +90,4 @@ ms.lasthandoff: 09/01/2017
  [Logistische Regressionsmodell-Abfragebeispiele](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)  
   
   
+

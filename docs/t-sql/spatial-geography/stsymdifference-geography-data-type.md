@@ -21,6 +21,7 @@ caps.latest.revision: 20
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 079121e8dda953a16bb5d262a0d1c1b2f45d19f4
@@ -81,3 +82,4 @@ SELECT @g.STSymDifference(@h).ToString();
  [OGC-Methoden für Geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   
+

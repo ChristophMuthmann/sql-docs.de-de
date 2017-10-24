@@ -17,6 +17,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fca9f032f5a72df58b18206c8441365ce3c8a746
@@ -50,3 +51,4 @@ Dynamische Eigenschaften hinzugefügt werden können die [Eigenschaften](../../.
  [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md)   
  [ADO-Objekte und Schnittstellen](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
  [Eigenschaften von ADO.NET](../../../ado/reference/ado-api/ado-properties.md)
+

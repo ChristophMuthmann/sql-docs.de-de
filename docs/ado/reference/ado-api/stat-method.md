@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c19b5bed54d4bbb27a5aeb235b0e4ab529b9c836
@@ -75,3 +76,4 @@ Long stream.Stat(StatStg, StatFlag)
   
 ## <a name="applies-to"></a>Gilt für  
  [Streamobjekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+

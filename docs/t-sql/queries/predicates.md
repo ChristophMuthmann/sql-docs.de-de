@@ -25,6 +25,7 @@ caps.latest.revision: 30
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: ff30f8b970c56b2ca8094aa5b3f0aea28458db5c
@@ -54,3 +55,4 @@ ms.lasthandoff: 09/01/2017
  [Suchbedingung &#40; Transact-SQL &#41;](../../t-sql/queries/search-condition-transact-sql.md)  
   
   
+

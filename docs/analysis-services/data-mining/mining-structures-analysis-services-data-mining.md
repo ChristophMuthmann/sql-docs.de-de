@@ -26,6 +26,7 @@ caps.latest.revision: 77
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 0145d9d7cd222d24294d7aaab389aa5a4bdc28cb
@@ -130,3 +131,4 @@ ms.lasthandoff: 09/01/2017
  [Miningmodelle &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   
+

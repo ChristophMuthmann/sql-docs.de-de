@@ -18,6 +18,7 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 71fbfe0f85936f3db04c527291e1baa0064dc1f9
@@ -54,3 +55,4 @@ ms.lasthandoff: 08/02/2017
  Informationen zum Empfänger des Zertifikats.  
   
   
+

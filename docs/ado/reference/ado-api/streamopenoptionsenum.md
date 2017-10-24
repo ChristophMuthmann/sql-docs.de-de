@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 268d495d2163d03244a6bec57762b93a26ab32ea
@@ -40,3 +41,4 @@ Gibt Optionen zum Öffnen einer [Stream](../../../ado/reference/ado-api/stream-o
   
 ## <a name="applies-to"></a>Gilt für  
  [Open-Methode (ADO-Datenstrom)](../../../ado/reference/ado-api/open-method-ado-stream.md)
+

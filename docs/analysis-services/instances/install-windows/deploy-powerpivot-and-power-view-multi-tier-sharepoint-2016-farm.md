@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: d7dc4fc8e7b1926359096447183dc17c9c1a1cd8
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/01/2017
  Wenn Sie dieses englischsprachige Whitepaper lesen möchten, laden Sie das Word-Dokument [Deploying SQL Server 2016 PowerPivot and Power View in a Multi-Tier SharePoint 2016 Farm](http://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/Deploying%20SQL%20Server%202016%20PowerPivot%20and%20Power%20View%20in%20a%20Multi-Tier%20SharePoint%202016%20Farm.docx) herunter.  
   
   
+

@@ -15,6 +15,7 @@ caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cbffc4a5312dc83976915653141247d27dc8eae4
@@ -60,3 +61,4 @@ ms.lasthandoff: 09/01/2017
  [Modellierungsflags &#40;Data Mining&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
   
+

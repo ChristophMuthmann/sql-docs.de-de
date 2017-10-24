@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 286b6fa05080d911215e53834a06407147046fcf
@@ -112,3 +113,4 @@ End Sub
  [Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [DefaultDatabase-Eigenschaft](../../../ado/reference/ado-api/defaultdatabase-property.md)   
  [Anbietereigenschaft (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)
+

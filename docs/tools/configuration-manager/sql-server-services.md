@@ -14,6 +14,7 @@ caps.latest.revision: 22
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 01a7ac13f4e42f9b6af26f4c802be5031a0cfd99
@@ -34,3 +35,4 @@ ms.lasthandoff: 08/02/2017
  [SQL Server-Konfigurations-Manager-Hilfe](../../tools/configuration-manager/sql-server-configuration-manager-help.md)  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f566d3fb0c639e5f7cb7214d8cf467312ae7f28d
@@ -48,3 +49,4 @@ Befehle sind Anweisungen zu einem Anbieter ausgestellt Eingriffe für die zugrun
 -   [Benannte Befehle](../../../ado/guide/data/named-commands.md)  
   
 -   [Übergeben von Parametern an einen benannten Befehl](../../../ado/guide/data/passing-parameters-to-a-named-command.md)
+

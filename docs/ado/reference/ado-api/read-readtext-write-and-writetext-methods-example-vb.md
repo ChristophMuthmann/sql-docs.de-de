@@ -21,6 +21,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c90b463c42d7f0cc289fdc35620f610a5a2980ff
@@ -124,3 +125,4 @@ End Sub
  [Streamobjekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [Write-Methode](../../../ado/reference/ado-api/write-method.md)   
  [WriteText-Methode](../../../ado/reference/ado-api/writetext-method.md)
+

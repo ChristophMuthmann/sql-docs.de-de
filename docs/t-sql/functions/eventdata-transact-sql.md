@@ -28,6 +28,7 @@ caps.latest.revision: 55
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 3b385ee993ab576307b6609670761deae9a7a1f6
@@ -156,3 +157,4 @@ GO
  [Logon-Trigger](../../relational-databases/triggers/logon-triggers.md)  
   
   
+

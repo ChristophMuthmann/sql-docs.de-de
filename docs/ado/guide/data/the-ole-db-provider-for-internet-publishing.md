@@ -20,6 +20,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c19f0a93a5f7f685d7cd8dcdf6d916ae3955cff8
@@ -59,3 +60,4 @@ Das ADO [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) und [St
 >  Wenn Msdaipp.dso explizit angegeben wird, als der Wert des Anbieters, entweder mit der *Anbieter* -Schlüsselwort der Verbindungszeichenfolge oder die **Anbieter** -Eigenschaft, können keine "URL =" in der Verbindungszeichenfolge angegeben. Wenn Sie dies tun, tritt ein Fehler auf. Stattdessen geben Sie einfach die URL wie oben beschrieben.  
   
  Weitere Informationen über die Publishing Internetanbieter finden Sie unter [Microsoft OLE DB-Anbieter für Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md), oder der Anbieterdokumentation mit der Source-Anwendung mit dem der OLE DB-Anbieter für Internet Publishing installiert wurde: Windows 2000, Office 2000 oder Internet Explorer 5.0.
+

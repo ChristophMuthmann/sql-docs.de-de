@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8aeca0021dc40b34dc19e59308256f6b7c4438f8
@@ -141,3 +142,4 @@ void PrintComError(_com_error &e) {
   
 ## <a name="see-also"></a>Siehe auch  
  [State-Eigenschaft (ADO)](../../../ado/reference/ado-api/state-property-ado.md)
+

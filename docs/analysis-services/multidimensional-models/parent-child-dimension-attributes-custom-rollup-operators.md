@@ -22,6 +22,7 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 328bd8977389ac39d049d44095c447a2843efdbe
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/01/2017
  [Unäre Operatoren in über-und untergeordneten Dimensionen](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-unary-operators.md)  
   
   
+

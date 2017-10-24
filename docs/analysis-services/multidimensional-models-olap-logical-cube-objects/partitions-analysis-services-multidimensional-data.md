@@ -30,6 +30,7 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 98538876d36c252b75173510e2724abe7377c5a5
@@ -76,3 +77,4 @@ ms.lasthandoff: 09/01/2017
  [Cubes in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   
+

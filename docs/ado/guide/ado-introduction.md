@@ -15,6 +15,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: MightyPen
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 17fb13aafe00ce39d18ea52c3a2240f4bebf14d2

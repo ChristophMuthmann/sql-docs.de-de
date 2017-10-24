@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: aaa773a470cb0c2fea7929e3e6b331cfb0e7ed31
@@ -68,3 +69,4 @@ ms.lasthandoff: 09/01/2017
  [Löschen eines Filters aus einem Miningmodell](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
   
+

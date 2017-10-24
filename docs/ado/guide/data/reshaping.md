@@ -17,6 +17,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d5264de973e4ed36cc24eb5c535576bdfa0a7228
@@ -47,3 +48,4 @@ rs2.Open "SHAPE {select * from Employees} " & _
   
 ## <a name="see-also"></a>Siehe auch  
  [Daten strukturiert werden, Beispiel](../../../ado/guide/data/data-shaping-example.md)
+

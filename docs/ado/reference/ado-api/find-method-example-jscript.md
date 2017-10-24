@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 44343f325c1d316406363a90019647eed10ad877
@@ -159,3 +160,4 @@ BODY {
 ## <a name="see-also"></a>Siehe auch  
  [Find-Methode (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

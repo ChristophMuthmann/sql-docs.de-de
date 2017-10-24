@@ -20,6 +20,7 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 52acda53b174bcbb2734a5ebcf86292c32ec8f3a
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/01/2017
  [MDX-Skriptanweisungen &#40; MDX &#41;](../../mdx/mdx-scripting-statements-mdx.md)  
   
   
+

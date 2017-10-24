@@ -22,6 +22,7 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b43a3d43e189279b45d5347b746a047f8f76eb88
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/01/2017
 |Visible|Bestimmt die Sichtbarkeit der Attributbeziehung. Die Werte sind True und False. Der Standardwert lautet "True".|  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 17
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6831b370359b7540621eb8d69bdf070689edd9a2
@@ -63,3 +64,4 @@ dreplay status –m localhost -f 60
  [Transact-SQL-Debugger](../../relational-databases/scripting/transact-sql-debugger.md)  
   
   
+

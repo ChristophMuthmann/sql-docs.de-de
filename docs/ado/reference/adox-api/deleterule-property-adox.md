@@ -23,6 +23,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 84fdcc05f2f7bcc531b3d40e2312ede5d79f55c2
@@ -44,3 +45,4 @@ Gibt an, die Aktion ausgeführt, wenn ein Primärschlüssel gelöscht wird.
   
 ## <a name="see-also"></a>Siehe auch  
  [Beispiel für DeleteRule-Eigenschaft (VB)](../../../ado/reference/adox-api/deleterule-property-example-vb.md)
+

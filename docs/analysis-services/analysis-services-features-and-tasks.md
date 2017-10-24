@@ -15,6 +15,7 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 017d6c078c2370dcc8eb62e22e03323cc3c315f2
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/01/2017
  [Neuigkeiten in Analysis Services](../analysis-services/what-s-new-in-analysis-services.md)  
   
   
+

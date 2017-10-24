@@ -29,6 +29,7 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ac568a96c856f9334b30597dfd9c9555fc54ded2
@@ -82,3 +83,4 @@ ms.lasthandoff: 09/01/2017
  [Erstellen von berechneten Elementen](../../analysis-services/multidimensional-models/create-calculated-members.md)  
   
   
+

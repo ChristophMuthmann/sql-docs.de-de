@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 287fb5bf8b87a8371ee84d89ba4e5efee6b3587f
@@ -83,3 +84,4 @@ record.Fields.Update
  [CancelUpdate-Methode (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [EditMode-Eigenschaft](../../../ado/reference/ado-api/editmode-property.md)   
  [UpdateBatch-Methode](../../../ado/reference/ado-api/updatebatch-method.md)
+

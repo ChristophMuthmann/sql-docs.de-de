@@ -21,6 +21,7 @@ caps.latest.revision: 14
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: c248e100d97150c7613ec8db7f0e7c97180ee817
@@ -118,3 +119,4 @@ SELECT KEY_NAME(@ciphertext) AS [Name of Key] ;
  [DECRYPTBYKEYAUTOASYMKEY &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbykeyautoasymkey-transact-sql.md)  
   
   
+

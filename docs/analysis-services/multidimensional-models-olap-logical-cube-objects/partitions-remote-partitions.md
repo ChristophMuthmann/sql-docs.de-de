@@ -27,6 +27,7 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b01c6fbe8bb2e6fda98da468bf4e313f5610cee3
@@ -68,3 +69,4 @@ ms.lasthandoff: 09/01/2017
  [Verarbeiten von Analysis Services-Objekte](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)  
   
   
+

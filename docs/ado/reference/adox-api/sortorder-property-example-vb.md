@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 285f0e386e20bb7edee9a4a472875abac4d44b7b
@@ -145,3 +146,4 @@ End Sub
  [Columns-Auflistung (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Index-Objekt (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [SortOrder-Eigenschaft (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)
+

@@ -24,6 +24,7 @@ caps.latest.revision: 55
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2b9b4fa79c4ef7a37158c1fbeea32a80c56effa2
@@ -71,3 +72,4 @@ ms.lasthandoff: 09/01/2017
  [Abfragen von mehrdimensionalen Daten mit MDX](../../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)  
   
   
+

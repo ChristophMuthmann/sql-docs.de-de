@@ -20,6 +20,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ac9f781cb1625b2dcf48fa0be8eb2e15b3759d58
@@ -170,3 +171,4 @@ void PrintComError(_com_error &e) {
  [EditMode-Eigenschaft](../../../ado/reference/ado-api/editmode-property.md)   
  [LockType-Eigenschaft (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

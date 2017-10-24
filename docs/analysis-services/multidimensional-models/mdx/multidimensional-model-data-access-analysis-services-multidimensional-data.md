@@ -26,6 +26,7 @@ caps.latest.revision: 46
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b659b4fd581742270fe5d38e5791ef215002757b
@@ -108,3 +109,4 @@ ms.lasthandoff: 09/01/2017
  [Datenzugriff für tabellarische Modelle](../../../analysis-services/tabular-models/tabular-model-data-access.md)  
   
   
+

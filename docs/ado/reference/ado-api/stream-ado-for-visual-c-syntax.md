@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: df4137e8ce0f7651c12584cb3c679acdb3b00d32
@@ -65,3 +66,4 @@ put_Type(StreamTypeEnum Type)
   
 ## <a name="see-also"></a>Siehe auch  
  [Streamobjekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+

@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2f7dca37be4fdebaab7bb16f82086b01a90a3665
@@ -52,3 +53,4 @@ Set object = CubeDef.GetSchemaObject (ObjType, UniqueName)
   
 ## <a name="see-also"></a>Siehe auch  
  [CubeDef-Objekt (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)
+

@@ -23,6 +23,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f6b33788185909f6a7f428eee01a5403b5c03ab9
@@ -54,3 +55,4 @@ HRESULT put_Rowset([in] IUnknown* pRowset);
   
 ## <a name="applies-to"></a>Gilt für  
  [ADORecordsetConstruction-Schnittstelle](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)
+

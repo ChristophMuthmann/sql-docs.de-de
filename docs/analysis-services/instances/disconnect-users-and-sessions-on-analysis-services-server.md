@@ -20,6 +20,7 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bb53b656c14090ada93184d8453ad79ab1ff706c
@@ -84,3 +85,4 @@ ms.lasthandoff: 09/01/2017
  [Session-Element &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)  
   
   
+

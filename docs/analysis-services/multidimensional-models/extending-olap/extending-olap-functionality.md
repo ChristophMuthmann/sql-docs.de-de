@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 20749b47397d4cd1826fbdca65be78e7f1905025
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/01/2017
  [Definieren von gespeicherten Prozeduren](../../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   
+

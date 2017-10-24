@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6c2606221388b56f672b0b44cf4a0f0656b3861c
@@ -71,3 +72,4 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
   
 ## <a name="applies-to"></a>Gilt für  
  [Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+

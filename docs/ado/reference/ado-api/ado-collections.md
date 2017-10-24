@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 633ae5b4a31c6b305aada1b6b3984b85caa8a1da
@@ -46,3 +47,4 @@ Werden die Beziehungen zwischen diesen Auflistungen und ADO-Objekten dargestellt
  [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md)   
  [ADO-Objekte und Schnittstellen](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
  [Eigenschaften von ADO.NET](../../../ado/reference/ado-api/ado-properties.md)
+

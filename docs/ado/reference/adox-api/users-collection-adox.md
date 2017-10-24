@@ -21,6 +21,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b9c19df96e66927c6dc5092cd0584f071a3d3b40
@@ -59,3 +60,4 @@ Enthält alle gespeicherten [Benutzer](../../../ado/reference/adox-api/user-obje
  [GetPermissions und SetPermissions-Methoden (Beispiel) (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [Katalogobjekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [User-Objekt (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)
+

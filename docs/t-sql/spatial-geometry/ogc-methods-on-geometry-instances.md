@@ -18,6 +18,7 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 50da8afb499935749d402baa51eaf3591610fc52
@@ -136,3 +137,4 @@ ms.lasthandoff: 09/01/2017
  [Erweiterte statische Geometry-Methoden](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   
+

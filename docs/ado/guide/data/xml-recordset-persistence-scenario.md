@@ -16,6 +16,7 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fd47944f218c6cb4d3bea571b27be990c5f7f530
@@ -119,3 +120,4 @@ In diesem Szenario erstellen Sie eine Active Server Pages (ASP)-Anwendung, die d
 ## <a name="see-also"></a>Siehe auch  
  [Save-Methode](../../../ado/reference/ado-api/save-method.md)   
  [Beibehalten von Datensätzen im XML-Format](../../../ado/guide/data/persisting-records-in-xml-format.md)
+

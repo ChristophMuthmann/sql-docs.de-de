@@ -15,6 +15,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3f24131913e671adb505f51ad467db0cdb1b7caf
@@ -28,3 +29,4 @@ Wenn dieser Dokumentation verwenden möchten, benötigen Sie mindestens über Er
  Da ADO verwendet wird, für den Zugriff auf Daten aus einer Vielzahl von Quellen, Sie benötigen außerdem einige Kenntnisse der relationalen Datenbank-Managementsystemen und online analytical Processing (OLAP) und grundlegende Kenntnisse im Internet und im Internet Protokolle.  
   
  Da ADO und die zugehörige OLE DB-Technologie auf das Microsoft Component Object Model (COM) basieren, hilft Kenntnisse der COM Ihnen bei erweiterte Konzepte in ADO besser zu verstehen.
+

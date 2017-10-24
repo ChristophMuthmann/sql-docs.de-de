@@ -21,6 +21,7 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 259335815674dfd8c9d59b1fe6bde7c170d096b6
@@ -203,3 +204,4 @@ ms.lasthandoff: 09/01/2017
  [Beispiele für Zuordnungsmodellabfragen](../../analysis-services/data-mining/association-model-query-examples.md)  
   
   
+

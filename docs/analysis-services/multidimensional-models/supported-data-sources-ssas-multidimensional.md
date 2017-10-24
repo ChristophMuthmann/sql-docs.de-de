@@ -22,6 +22,7 @@ caps.latest.revision: 69
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 173ba9ef24e1f05dcd3500ad8fecbad0dba98241
@@ -60,3 +61,4 @@ ms.lasthandoff: 09/01/2017
  [Datenquellsichten in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   
+

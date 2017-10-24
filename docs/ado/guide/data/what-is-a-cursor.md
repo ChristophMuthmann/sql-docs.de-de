@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 03b7d4fe16a379e04fe25fe8fef95802aedabe1d
@@ -76,3 +77,4 @@ Vorgänge in einer relationalen Datenbank beziehen sich immer auf eine vollstän
   
 ## <a name="scrollability"></a>Bildlauffähigkeit  
  Der Typ des von der Anwendung verwendete Cursortyp wirkt sich auch die Möglichkeit, die Zeilen in einem Resultset vorwärts und rückwärts durchlaufen; Dies wird manchmal als scrolloptionen bezeichnet. Die Möglichkeit dann vorwärts bewegt, *und* rückwärts durch ein Ergebnis Satz die Komplexität des Cursors und ist daher teurer implementieren. Aus diesem Grund sollten Sie für einen Cursor mit dieser Funktionalität, die nur bei Bedarf bitten.
+

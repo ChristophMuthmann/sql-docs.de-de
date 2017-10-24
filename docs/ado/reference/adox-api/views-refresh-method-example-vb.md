@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b6e526091804e36790f79a051399ff69e479df4a
@@ -62,3 +63,4 @@ End Sub
 ## <a name="see-also"></a>Siehe auch  
  [Refresh-Methode (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)   
  [Views-Auflistung (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+

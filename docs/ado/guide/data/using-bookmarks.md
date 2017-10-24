@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0fe945bfb5a0b2460090ccc8376543364693a1de
@@ -53,3 +54,4 @@ End If
  Die [unterstützt](../../../ado/reference/ado-api/supports-method.md) Methode wird später ausführlicher behandelt.  
   
  Mit Ausnahme der Groß-/Kleinschreibung geklonten **Recordsets**, Lesezeichen gelten nur für die **Recordset** in dem sie erstellt wurden, auch wenn Sie denselben Befehl verwendet wird. Dies bedeutet, dass Sie nicht verwenden können eine **Lesezeichen** abgerufen, die von einem **Recordset** verschieben auf den gleichen Datensatz in einer Sekunde **Recordset** mit dem gleichen Befehl geöffnet.
+

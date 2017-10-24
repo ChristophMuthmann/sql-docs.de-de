@@ -25,6 +25,7 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: c098b5144a06cae6afb5b79ca4bf395a68768bd3
@@ -212,3 +213,4 @@ ms.lasthandoff: 09/01/2017
  [Miningmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   
+
