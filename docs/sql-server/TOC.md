@@ -19,16 +19,15 @@
 
 # Versionsanmerkungen
 
-## [Versionsanmerkungen zu SQL Server 2016](sql-server-release-notes.md)
-## [Versionsanmerkungen zu SQL Server 2017](sql-server-2017-release-notes.md)
-## [Versionsanmerkungen zu SQL Server 2016](sql-server-2016-release-notes.md)
-## [SQL Server 2014 Release Notes](sql-server-2014-release-notes.md)
-## [Versionsanmerkungen zu SQL Server 2012 SP4](sql-server-2012-sp4-release-notes.md)
-## [Versionsanmerkungen zu SQL Server 2012 SP3](sql-server-2012-sp3-release-notes.md)
-## [SQL Server 2012 SP2 Release Notes](sql-server-2012-sp2-release-notes.md)
-## [SQL Server 2012 SP1 Release Notes](sql-server-2012-sp1-release-notes.md)
-## [Versionsanmerkungen zu SQL Server 2012](sql-server-2012-release-notes.md)
-## [SQL Server 2008 R2 SP2 Release Notes](sql-server-2008-r2-sp2-release-notes.md)
+## [Anmerkungen zu SQL Server 2017](sql-server-2017-release-notes.md)
+## [Anmerkungen zu SQL Server 2016](sql-server-2016-release-notes.md)
+## [Anmerkungen zu SQL Server 2014](sql-server-2014-release-notes.md)
+## [Anmerkungen zu SQL Server 2012 SP4](sql-server-2012-sp4-release-notes.md)
+## [Anmerkungen zu SQL Server 2012 SP3](sql-server-2012-sp3-release-notes.md)
+## [Anmerkungen zu SQL Server 2012 SP2](sql-server-2012-sp2-release-notes.md)
+## [Anmerkungen zu SQL Server 2012 SP1](sql-server-2012-sp1-release-notes.md)
+## [Anmerkungen zu SQL Server 2012](sql-server-2012-release-notes.md)
+## [Anmerkungen zu SQL Server 2008 R2 SP2](sql-server-2008-r2-sp2-release-notes.md)
 
 # [Analysis Services](../analysis-services/analysis-services.md)
 # [Datenbankmodul](../database-engine/sql-server-database-engine-overview.md)
@@ -42,4 +41,17 @@
 # [Assistent für die Datenmigration](../dma/dma-overview.md)
 # [Stretch Database](../sql-server/stretch-database/stretch-database.md)
 # [Tutorials für SQL Server](tutorials-for-sql-server-2016.md)
-# [Lokale Inhalte mit Help Viewer](sql-server-help-installation.md)
+
+# Ressourcen
+## Blogs
+### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
+### [SQL Server-Datenbankmodul](https://blogs.msdn.microsoft.com/sqlserverstorageengine/)
+### [SQL Server-Sicherheit](https://blogs.msdn.microsoft.com/sqlsecurity/)
+
+## Feedback und Hilfe
+### [DBA Stack Exchange (DBA-Stapelaustausch)](https://dba.stackexchange.com/questions/tagged/sql-server)
+### [Stack Overflow (Stapelüberlauf)](http://stackoverflow.com/questions/tagged/sql-server)
+### [MSDN-Foren](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
+### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)
+### [Reddit](https://www.reddit.com/r/SQLServer)
+## [Lokale Inhalte mit Help Viewer](sql-server-help-installation.md)
