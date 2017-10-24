@@ -20,6 +20,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 462b53bff1c0334c49c1e1dd8814bf128ac8abea
@@ -51,3 +52,4 @@ Enthält die [Achse](../../../ado/reference/ado-md-api/axis-object-ado-md.md) Ob
 ## <a name="see-also"></a>Siehe auch  
  [Cellset-Beispiel (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Achsenobjekt (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)
+

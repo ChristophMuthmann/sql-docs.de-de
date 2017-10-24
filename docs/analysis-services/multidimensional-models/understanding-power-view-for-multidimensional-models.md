@@ -16,6 +16,7 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9536b3a2d178e7dea79bf7d9cf3482e423c078ed
@@ -241,3 +242,4 @@ ms.lasthandoff: 09/01/2017
  [Durchsuchen des mehrdimensionalen Adventure Works-Modells mithilfe von Power View](http://office.microsoft.com/excel-help/explore-the-adventure-works-multidimensional-model-by-using-power-view-HA104046830.aspx)  
   
   
+

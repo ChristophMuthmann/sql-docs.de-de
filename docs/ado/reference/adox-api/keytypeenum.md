@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e0bfe35dc78ceaa2233f2b23978205ebabcb1729
@@ -37,3 +38,4 @@ Gibt den Typ des [Schlüssel](../../../ado/reference/adox-api/key-object-adox.md
   
 ## <a name="applies-to"></a>Gilt für  
  [Type-Eigenschaft (Schlüssel) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)
+

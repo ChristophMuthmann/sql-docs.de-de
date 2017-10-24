@@ -14,6 +14,7 @@ caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 4c13b9095224d1c33e09c9513121e46483da05c0
@@ -225,3 +226,4 @@ ms.lasthandoff: 09/01/2017
  [Microsoft Kerberos-Konfigurations-Manager für Microsoft SQL Server](http://www.microsoft.com/en-us/download/details.aspx?id=39046)  
   
   
+

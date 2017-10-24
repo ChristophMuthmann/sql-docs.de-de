@@ -22,6 +22,7 @@ caps.latest.revision: 46
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 67b093b4d4af59139dcd32401f177724823b5926
@@ -54,3 +55,4 @@ ms.lasthandoff: 09/01/2017
  [Unterstützte Datenquellen &#40;SSAS – mehrdimensional&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   
+

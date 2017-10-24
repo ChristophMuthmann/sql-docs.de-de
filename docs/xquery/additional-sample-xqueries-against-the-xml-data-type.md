@@ -21,6 +21,7 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: f8d5b2892308e1e9c8b4085c9278b81139b210c9
@@ -50,3 +51,4 @@ ms.lasthandoff: 09/01/2017
  [XQuery Operators Against the xml Data Type (XQuery-Operatoren für den xml-Datentyp)](../xquery/xquery-operators-against-the-xml-data-type.md)  
   
   
+

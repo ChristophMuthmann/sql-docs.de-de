@@ -21,6 +21,7 @@ caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7e26ac40b7cb47370107f348548cf2cc7489efa1
@@ -153,3 +154,4 @@ ms.lasthandoff: 09/01/2017
  [Miningmodellinhalt von Sequence Clustering-Modellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   
+

@@ -20,6 +20,7 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 11eaa65564dcd59442bd8b111c0de009b00e8fd4
@@ -147,3 +148,4 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
  [DbStorageLocation-Element](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
 ms.openlocfilehash: d12d9e8aa7c2a11dfe340897c4b63681591784d5
@@ -84,3 +85,4 @@ ms.lasthandoff: 08/28/2017
  [Auswählen eines Netzwerkprotokolls](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   
+

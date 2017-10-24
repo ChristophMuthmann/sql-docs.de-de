@@ -21,6 +21,7 @@ caps.latest.revision: 32
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: eed49c93e3f5754ad3c6a2d6b503ce0546cf9b34
@@ -122,3 +123,4 @@ WHERE CatalogDescription.exist('//pd:ProductDescription ') = 1
  [XQuery Functions against the xml Data Type (XQuery-Funktionen für den xml-Datentyp)](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   
+

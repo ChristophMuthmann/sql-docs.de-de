@@ -19,6 +19,7 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: a3e4bb973a314a6f5ba9103960c4d54cb1a119fa
@@ -102,3 +103,4 @@ WHERE [Product].[Category].[Bikes]
  [Erstellen im Bereich einer Sitzung berechnete Elemente &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)  
   
   
+

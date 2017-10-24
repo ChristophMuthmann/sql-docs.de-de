@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2edd707fa17ff7fd06c902c1e30e575b9e945fc1
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Ebenenobjekt (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)
+

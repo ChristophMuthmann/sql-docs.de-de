@@ -21,6 +21,7 @@ caps.latest.revision: 9
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: dcae01f4b56e022f3b5966acd33877c851d9ae05
@@ -59,3 +60,4 @@ PWDENCRYPT ( 'password' )
  [PWDCOMPARE &#40; Transact-SQL &#41;](../../t-sql/functions/pwdcompare-transact-sql.md)  
   
   
+

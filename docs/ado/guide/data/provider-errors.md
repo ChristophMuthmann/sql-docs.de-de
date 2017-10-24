@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c6e4934d8dc43c29629687a19a5d76ae46dab515
@@ -83,3 +84,4 @@ End Function
  Die **Fehler** Objekt wird auch verwendet, wenn ereignisbezogene Fehler auftreten. Sie können bestimmen, ob im Prozess ist ein Fehler, die ein ADO-Ereignis ausgelöst wird aufgetreten, indem Sie überprüfen die **Fehler** Objekt als Ereignisparameter übergeben.  
   
  Wenn der Vorgang, der bewirkt, ein Ereignis dass erfolgreich abgeschlossen wird der *AdStatus* Parameter des ereignishandlers festgelegt *AdStatusOK*. Andererseits, wenn der Vorgang, der das Ereignis ausgelöst wurde nicht erfolgreich war, die *AdStatus* Parametersatz auf *AdStatusErrorsOccurred*. In diesem Fall die *pError* Parameter enthält einen **Fehler** -Objekt, das den Fehler beschreibt.
+

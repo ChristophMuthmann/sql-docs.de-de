@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 092afd2b651b14b1a7fe34c934ff729b8b88ae6d
@@ -39,3 +40,4 @@ Das folgende Diagramm veranschaulicht, wie Objekte dargestellt und ADOX miteinan
  [ADOX-Objekte](../../../ado/reference/adox-api/adox-objects.md)   
  [ADOX-Eigenschaften](../../../ado/reference/adox-api/adox-properties.md)   
  [ADO-Erweiterungen für Datendefinitionssprache und Sicherheit (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+

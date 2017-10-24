@@ -22,6 +22,7 @@ caps.latest.revision: 63
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3f6516c119723c537d64481d17692d504df7f651
@@ -91,3 +92,4 @@ ms.lasthandoff: 09/01/2017
  [Mehrdimensionale Modelldatenbanken &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   
+

@@ -20,6 +20,7 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 7357c96eecee987f453ab83466ecec347c8ac87e
@@ -50,3 +51,4 @@ ADOMD.NET-Objektmodell
  [ADOMD.NET-serverprogrammierung](../../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md)  
   
   
+

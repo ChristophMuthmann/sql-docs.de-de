@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fb50826230e46cc71106a2b17d01914eae024f47
@@ -52,3 +53,4 @@ oRs.Open sSQL, sCnStr, adOpenStatic, adLockOptimistic, adCmdText
  Dieser Abschnitt enthält das folgende Thema.  
   
  [Grenzen eines Recordsets](../../../ado/guide/data/boundaries-of-a-recordset.md)
+

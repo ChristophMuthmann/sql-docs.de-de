@@ -26,6 +26,7 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 54dbe21707a1c4eaa1d5056f2e05ad117b298f17
@@ -69,3 +70,4 @@ ms.lasthandoff: 09/01/2017
  Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.AnnotationCollection>.  
   
   
+

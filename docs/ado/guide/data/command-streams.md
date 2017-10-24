@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1be2cc9528e62e548feb242b06686ad50a1753c8
@@ -78,3 +79,4 @@ adoCmd.Dialect = "{5D531CB2-E6Ed-11D2-B252-00C04F681B71}"
 ```  
 Set objRS = adoCmd.Execute  
 ```
+

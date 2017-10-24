@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 626d0643a170f96850c6c274d64694e86e4663a3
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/01/2017
  [Erstellen mehrdimensionaler Modelle mit SQL Server Datatools &#40; SSDT &#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
   
   
+

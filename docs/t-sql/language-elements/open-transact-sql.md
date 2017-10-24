@@ -25,6 +25,7 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: e065102cd08e12d0e7d80557dfa627f531ec629c
@@ -93,3 +94,4 @@ DEALLOCATE Employee_Cursor;
  [Abrufen von Daten &#40; Transact-SQL &#41;](../../t-sql/language-elements/fetch-transact-sql.md)  
   
   
+

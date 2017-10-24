@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 10d7a7a33b38e23c3cb6b88a3d2b73007daf3e72
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/01/2017
 4.  Klicken Sie auf den Aktionsnamen, um die Aktion zu testen.  
   
   
+

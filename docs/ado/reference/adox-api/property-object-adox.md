@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fa319e0fa981b3346232e3d3848bfdfe843d9f31
@@ -49,3 +50,4 @@ Stellt ein Merkmal eines ADOX-Objekts dar.
  Dieser Abschnitt enthält das folgende Thema.  
   
 -   [ADOX-Eigenschaft Objekteigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/adox-property-object-properties-methods-and-events.md)
+

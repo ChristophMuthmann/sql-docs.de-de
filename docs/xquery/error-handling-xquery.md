@@ -23,6 +23,7 @@ caps.latest.revision: 29
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: eee629855e21382a8cee308c4ffd42b276f72d18
@@ -93,3 +94,4 @@ GO
  [XQuery Basics (XQuery-Grundlagen)](../xquery/xquery-basics.md)  
   
   
+

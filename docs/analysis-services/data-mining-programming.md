@@ -20,6 +20,7 @@ caps.latest.revision: 20
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: bf88386fe9846ba1fee17f840a11ab635c050d01
@@ -77,3 +78,4 @@ ms.lasthandoff: 09/01/2017
  [Datamining-Erweiterungen &#40; DMX &#41; Referenz](../dmx/data-mining-extensions-dmx-reference.md)  
   
   
+

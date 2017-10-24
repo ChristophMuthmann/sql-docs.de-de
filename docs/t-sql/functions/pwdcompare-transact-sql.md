@@ -23,6 +23,7 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 6aadde33d6d1ee1404170197c32ab77ade2dbfad
@@ -97,3 +98,4 @@ WHERE PWDCOMPARE('password', password_hash) = 1 ;
  [Sicherheitsfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   
+

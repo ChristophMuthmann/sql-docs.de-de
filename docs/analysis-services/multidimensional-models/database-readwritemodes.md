@@ -19,6 +19,7 @@ caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 917f9e3802cdf0c003a956b464c7df8d8b10ca5e
@@ -59,3 +60,4 @@ ms.lasthandoff: 09/01/2017
  [Attach-Element](../../analysis-services/xmla/xml-elements-commands/attach-element.md)  
   
   
+

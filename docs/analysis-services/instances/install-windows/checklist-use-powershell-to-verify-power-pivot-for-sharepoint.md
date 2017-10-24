@@ -14,6 +14,7 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: aa577404c035753f7173546aff32fe0f8d1ee7a1
@@ -579,3 +580,4 @@ write-host -foregroundcolor DarkGray EndTime $time
 ```  
   
   
+

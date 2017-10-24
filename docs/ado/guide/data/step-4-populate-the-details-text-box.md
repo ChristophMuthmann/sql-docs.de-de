@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 512ad22b6529adcf065cacb219d1f0acc025c306
@@ -53,3 +54,4 @@ End Sub
 ## <a name="see-also"></a>Siehe auch  
  [Internet, die Publishing-Szenario](../../../ado/guide/data/internet-publishing-scenario.md)   
  [Schritt 3: Auffüllen der Felder Listenfeld](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
+

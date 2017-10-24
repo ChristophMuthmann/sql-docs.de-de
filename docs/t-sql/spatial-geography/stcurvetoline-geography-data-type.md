@@ -21,6 +21,7 @@ caps.latest.revision: 12
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9d2ad93d8bc292ebb86233917dc3f934fbe57dca
@@ -70,3 +71,4 @@ ms.lasthandoff: 09/01/2017
  [Übersicht über räumliche Datentypen](../../relational-databases/spatial/spatial-data-types-overview.md)  
   
   
+

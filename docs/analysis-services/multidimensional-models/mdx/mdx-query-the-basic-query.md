@@ -22,6 +22,7 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: d8d80527166b6b6a1d49cbd4f3735689c429020e
@@ -119,3 +120,4 @@ WHERE ( [Sales Territory].[Southwest] )
  [SELECT-Anweisung &#40; MDX &#41;](../../../mdx/mdx-data-manipulation-select.md)  
   
   
+

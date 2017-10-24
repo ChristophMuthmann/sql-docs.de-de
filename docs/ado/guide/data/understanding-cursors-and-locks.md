@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 96231e4b76ab2a01f2d817c0fd85aa2d0dca33e4
@@ -44,3 +45,4 @@ Es ist wichtig zu verstehen, wie Cursor ausgeführt werden, damit Sie die beste 
 -   [Verwenden von CacheSize](../../../ado/guide/data/using-cachesize.md)  
   
 -   [Cursor und Merkmale der Sperre](../../../ado/guide/data/cursor-and-lock-characteristics.md)
+

@@ -18,6 +18,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c8f574b00b5c53caef2184d2923e79746d3ef56c
@@ -33,3 +34,4 @@ Dienstanbieter sind Komponenten, die die Funktionalität von Datenanbietern erwe
  Angenommen, ein Cursor Modul, wie z. B. [des Cursordiensts für OLE DB-](http://msdn.microsoft.com/en-us/57638feb-4ecd-4051-becb-8f828d21cf44), ist eine Dienstkomponente, die Daten aus einem sequenziellen, Vorwärtscursor Datenspeicher bildlauffähige Daten erstellt nutzen kann. Andere häufig verwendete ADO Dienstanbieter umfassen die [Microsoft OLE DB-Anbieter für Persistenz (ADO-Dienstanbieter)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) (zum Speichern von Daten in eine Datei), die [Microsoft-Datenstrukturierungsdiensts für OLE DB (ADO-Dienstanbieter) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (für hierarchische **Recordsets**), und die [Microsoft OLE DB-Anbieter für Remoting (ADO-Dienstanbieter)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md) (zum Aufrufen von Datenanbieter auf einem Remotecomputer befindet).  
   
  Weitere Informationen zum Dienst und Datenanbieter finden Sie unter [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md).
+

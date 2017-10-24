@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fd0ace9aabf10c2b7e5b34d28bd54dbde84cfd0a
@@ -35,3 +36,4 @@ Der statische Cursor zeigt immer das Resultset, wie dem ersten Öffnen des Curso
  [Vorwärtscursor](../../../ado/guide/data/forward-only-cursors.md)   
  [KEYSET-Cursor](../../../ado/guide/data/keyset-cursors.md)   
  [Dynamische Cursor](../../../ado/guide/data/dynamic-cursors.md)
+

@@ -20,6 +20,7 @@ caps.latest.revision: 30
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 456d359fd407e305bc8bfb3b85bd29b7bada8382
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/01/2017
  [Path-Ausdrücken &#40; XQuery &#41;](../xquery/path-expressions-xquery.md)  
   
   
+

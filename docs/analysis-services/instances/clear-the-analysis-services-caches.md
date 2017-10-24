@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 67ea43179411006e5e549c44b13d4a3fa1d6074f
@@ -97,3 +98,4 @@ ms.lasthandoff: 09/01/2017
  [Überwachen einer Instanz von Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
   
+

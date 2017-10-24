@@ -21,6 +21,7 @@ caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3b1913d392467f4ba78976d9ab73919e7ac06051
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/01/2017
  [Grundlegendes zur inkrementellen Generierung](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)  
   
   
+

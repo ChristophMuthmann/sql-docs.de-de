@@ -14,6 +14,7 @@ caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 94a6df60ae3e1acebb9ff7d75cf65c7efb21d6db
@@ -85,3 +86,4 @@ ms.lasthandoff: 08/02/2017
 4.  Starten Sie den Distributed Replay Client-Dienst.  
   
   
+

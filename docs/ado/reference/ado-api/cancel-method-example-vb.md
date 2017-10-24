@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 15253360d29de93ca756b2427037251469d7c881
@@ -109,3 +110,4 @@ End Sub
 ## <a name="see-also"></a>Siehe auch  
  [Cancel-Methode (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
  [Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+

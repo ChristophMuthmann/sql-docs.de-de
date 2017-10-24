@@ -21,6 +21,7 @@ caps.latest.revision: 30
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: d950dbbb138160b5f95d0cf026bf09dc0b866a89
@@ -110,3 +111,4 @@ ProductModelID Result
  [Round-Funktion &#40; XQuery &#41;](../xquery/numeric-values-functions-round.md)  
   
   
+

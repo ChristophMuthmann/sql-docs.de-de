@@ -21,6 +21,7 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 0638e8793c75ad78aafa12bec1d1f8a3061022c2
@@ -71,3 +72,4 @@ SELECT @g.EnvelopeCenter().ToString();
  [EnvelopeAngle &#40; Geography-Datentyp &#41;](../../t-sql/spatial-geography/envelopeangle-geography-data-type.md)  
   
   
+

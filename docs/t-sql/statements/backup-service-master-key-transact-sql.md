@@ -28,6 +28,7 @@ caps.latest.revision: 29
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: dd3f95e0f3606d23dd1418b2cc0b3b32b5c61ac8
@@ -75,3 +76,4 @@ BACKUP SERVICE MASTER KEY TO FILE = 'c:\temp_backups\keys\service_master_key' EN
  [RESTORE SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-service-master-key-transact-sql.md)  
   
   
+

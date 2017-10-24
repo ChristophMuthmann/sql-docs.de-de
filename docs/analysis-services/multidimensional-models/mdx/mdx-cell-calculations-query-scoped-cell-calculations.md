@@ -19,6 +19,7 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: f8c2d0cffb212b062f1c1ff8f39929e201dc642c
@@ -63,3 +64,4 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  [CREATE CELL CALCULATION-Anweisung &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
   
+

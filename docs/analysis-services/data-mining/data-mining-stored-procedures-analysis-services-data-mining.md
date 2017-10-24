@@ -16,6 +16,7 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 67e09ad757b0433a4db09187492cdbe58dbe94ff
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/01/2017
  [Aufrufen einer gespeicherten Prozedur](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)  
   
   
+

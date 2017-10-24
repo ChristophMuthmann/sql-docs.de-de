@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ff7f2ec4696d14be39a8c492dfbaedbcd5523e9c
@@ -32,3 +33,4 @@ Die neueste Version von ADO wird als verpackt *"MSADO15.dll"*. Die neuesten Vers
 -   [In Visual Basic-Anwendungen](../../ado/guide/referencing-the-ado-libraries-in-a-visual-basic-6-application.md)  
   
 -   [In einer Visual C++-Anwendung](../../ado/guide/referencing-the-ado-libraries-in-a-visual-c-application.md)
+

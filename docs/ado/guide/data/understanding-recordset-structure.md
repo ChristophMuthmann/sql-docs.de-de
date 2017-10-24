@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a18651f533044220deededf86c6bc7b60a9ada38
@@ -31,3 +32,4 @@ Jede **Recordset** verfügt über eine **Felder** Auflistung bestehend aus einem
 -   [Field-Objekt](../../../ado/guide/data/the-field-object.md)  
   
 -   [Arbeiten mit Recordsets](../../../ado/guide/data/working-with-recordsets.md)
+

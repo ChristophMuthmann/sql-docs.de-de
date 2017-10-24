@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: ff8d7e54ba708d879e451d864050e7c16ce16ba4
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/01/2017
 |[Anforderungen an die Clientarchitektur für Analysis Services-Entwicklung](../../../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md)|Beschreibt die Clientarchitektur, um von einer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Lösung aus auf Daten und Metadaten zuzugreifen.|  
   
   
+

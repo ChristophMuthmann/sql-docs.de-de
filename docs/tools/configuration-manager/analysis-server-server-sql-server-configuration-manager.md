@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4f7f7fb38240fe3f0741a2e1ea667de168b57f96
@@ -27,3 +28,4 @@ ms.lasthandoff: 08/02/2017
  Informationen zu [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]finden Sie in der Onlinedokumentation.  
   
   
+

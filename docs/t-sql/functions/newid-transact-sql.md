@@ -22,6 +22,7 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: e6f9b19f1af5bc0b9c3bde1dfd7bddabd420f40d
@@ -132,3 +133,4 @@ GO
  [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   
+

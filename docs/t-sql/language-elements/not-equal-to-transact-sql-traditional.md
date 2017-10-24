@@ -27,6 +27,7 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 701a708f7df53c1860d665b9d79a87d1fe49a1ec
@@ -86,3 +87,4 @@ ProductCategoryID Name
  [Vergleichsoperatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
   
   
+

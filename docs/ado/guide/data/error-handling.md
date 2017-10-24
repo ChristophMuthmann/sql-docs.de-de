@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a1c85fb540f034c5a0a6870c38ea5797948d5fbd
@@ -56,3 +57,4 @@ ADO verwendet mehrere unterschiedliche Verfahren, um eine Anwendung von Fehlern 
 -   [Behandeln von Fehlern In anderen Sprachen](../../../ado/guide/data/handling-errors-in-other-languages.md)  
   
 -   [Vorhersehen von Fehlern](../../../ado/guide/data/anticipating-errors.md)
+

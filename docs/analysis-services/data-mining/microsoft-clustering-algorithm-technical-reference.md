@@ -28,6 +28,7 @@ caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c0c63e2966073fc045401febb16b1a350e94552c
@@ -189,3 +190,4 @@ ms.lasthandoff: 09/01/2017
  [Miningmodellinhalt von Clustermodellen &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   
+

@@ -22,6 +22,7 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8e74a79b18f526878981d21e36134ff82d5c862b
@@ -63,3 +64,4 @@ ms.lasthandoff: 09/01/2017
 -   [Verwenden von geschachtelten Tabellendaten als Eingabe für ein Genauigkeitsdiagramm](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)  
   
   
+

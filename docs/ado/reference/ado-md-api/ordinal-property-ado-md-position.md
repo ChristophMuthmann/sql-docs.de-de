@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d29ba5afddbdd1aa3f477a8311538dac59611685
@@ -45,3 +46,4 @@ Identifiziert eindeutig eine [Position](../../../ado/reference/ado-md-api/positi
  [Cellset-Objekt (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
  [Eigenschaft "Element" (ADO MD Cellset)](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)   
  [Ordinal-Eigenschaft (ADO MD Zelle)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)
+

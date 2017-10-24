@@ -24,6 +24,7 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: e284ed2df95c56c19ed25cad79f4cf11099902f2
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/01/2017
  [Angeben von Verarbeitungsoptionen](../../analysis-services/multidimensional-models/deployment-script-files-specifying-processing-options.md)  
   
   
+

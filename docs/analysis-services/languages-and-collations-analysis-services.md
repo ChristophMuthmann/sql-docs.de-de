@@ -25,6 +25,7 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: d2f1ca64cc2c6a3c3d376b47c660598e05227bf8
@@ -187,3 +188,4 @@ ms.lasthandoff: 09/01/2017
  [Sortierung und Unicode-Unterstützung](../relational-databases/collations/collation-and-unicode-support.md)  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1ad3b257166308fe2c5a4bd94da5427dc0ca2649
@@ -53,3 +54,4 @@ Dieser Abschnitt enthält die folgenden Themen.
 -   [Formale Grammatik für Formen](../../../ado/guide/data/formal-shape-grammar.md)  
   
 -   [Visual Basic für Applikationen-Funktionen](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+

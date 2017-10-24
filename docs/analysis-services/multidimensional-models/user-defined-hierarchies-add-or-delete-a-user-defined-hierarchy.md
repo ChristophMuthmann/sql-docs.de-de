@@ -22,6 +22,7 @@ caps.latest.revision: 51
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b64b9cd9512b07a308574cd4cf398f8ae72a2460
@@ -72,3 +73,4 @@ ms.lasthandoff: 09/01/2017
  [Erstellen von benutzerdefinierten Hierarchien](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
   
   
+

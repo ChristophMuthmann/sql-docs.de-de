@@ -27,6 +27,7 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 38bbf72a7fd58be5db3d8672de1ad4269c763020
@@ -123,3 +124,4 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
  [Definieren von gespeicherten Prozeduren](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   
+

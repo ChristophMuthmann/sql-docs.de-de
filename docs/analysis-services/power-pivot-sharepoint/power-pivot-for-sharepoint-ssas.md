@@ -16,6 +16,7 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 108c36ae7730a9622f5b8797b3dbb20cf0e96df3
@@ -93,3 +94,4 @@ ms.lasthandoff: 09/01/2017
  [Notfallwiederherstellung für PowerPivot für SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   
+

@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 79165746d00ad0f381cd702ef9ac31358f4e136d
@@ -27,3 +28,4 @@ Dieser Abschnitt ist in der Entwicklung.
 > Python-Unterstützung ist ein neues Feature in SQL Server-2017 und befindet sich in der Vorabversion. Weitere Informationen schnell finden.
 
 Im Allgemeinen können Sie externes Skript überwachen, einschließlich eines, das Python ausgeführt wird, mithilfe des gleichen Frameworks, die für die Ausführung von R-Skripts in SQL Server 2016 bereitgestellt wurde. Weitere Informationen finden Sie unter [Überwachung R Services](../r/monitoring-r-services.md).
+

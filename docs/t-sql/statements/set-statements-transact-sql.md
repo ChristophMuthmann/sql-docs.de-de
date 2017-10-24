@@ -28,6 +28,7 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: f0426730b33f0b70fda11a8cb07242a365d10fae
@@ -90,3 +91,4 @@ ms.lasthandoff: 09/01/2017
      Wenn eine dieser Optionen nicht auf die erforderlichen Werte festgelegt ist, schlagen die Aktionen INSERT, UPDATE, DELETE, DBCC CHECKDB und DBCC CHECKTABLE für die indizierten Sichten oder Tabellen mit Indizes für berechnete Spalten fehl. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] löst einen Fehler aus, wobei alle Optionen aufgelistet werden, die nicht ordnungsgemäß festgelegt sind. Außerdem verarbeitet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die SELECT-Anweisungen in diesen Tabellen oder indizierten Sichten so, als seien die Indizes auf den berechneten Spalten oder Sichten nicht vorhanden.  
   
   
+

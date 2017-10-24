@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ac5cf860d4bacb10e79de25304e950849ff30093
@@ -118,3 +119,4 @@ Error_cmdCellSettoDebugWindow_Click:
    Exit Sub  
 End Sub  
 ```
+

@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 094bf7bdb701140a45dacf0236e59d8f9232e5d4
@@ -379,3 +380,4 @@ C:\PS>Set-PowerPivotServiceApplication -identity 1234567-890a-bcde-fghijklmn -Bu
  Verwenden Sie Get-powerpivotserviceapplication, um eine gültige Identität abzurufen.  
   
   
+

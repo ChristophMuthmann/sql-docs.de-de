@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1c51e3a0f1bba7598dd9e6d6398912fe22430710
@@ -25,3 +26,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="ado-event-instantiation-jscript"></a>ADO-Ereignis-Instanziierung: JScript
 ADO-Ereignisse werden von Microsoft JScript® nicht unterstützt.
+

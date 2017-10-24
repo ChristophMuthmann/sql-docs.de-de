@@ -24,6 +24,7 @@ caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: e3372c17e261017ea48d834dfc38c509d8fd98fb
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/01/2017
  [Verwenden von Zelleneigenschaften &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)  
   
   
+

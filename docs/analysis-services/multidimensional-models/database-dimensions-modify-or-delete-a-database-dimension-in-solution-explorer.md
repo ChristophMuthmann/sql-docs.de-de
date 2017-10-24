@@ -22,6 +22,7 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b6505f48c397e021c29eb3dba454cc0575e2d94f
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/01/2017
  [Dimensionen in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   
+

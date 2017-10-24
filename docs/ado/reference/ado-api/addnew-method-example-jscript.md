@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 756b72a0012eb05e999d18030ade12e3ef924620
@@ -141,3 +142,4 @@ body {
 ## <a name="see-also"></a>Siehe auch  
  [AddNew-Methode (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

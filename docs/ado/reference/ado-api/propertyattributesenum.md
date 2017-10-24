@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6614f74546fab23a1e1ce453ac12c10082011a25
@@ -50,3 +51,4 @@ Gibt die Attribute einer [Eigenschaft](../../../ado/reference/ado-api/property-o
   
 ## <a name="applies-to"></a>Gilt für  
  [Attribute-Eigenschaft (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
+

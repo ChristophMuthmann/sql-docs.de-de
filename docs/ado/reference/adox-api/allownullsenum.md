@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2b9bb610e1b3f4a31e29ddee31e569c34528e243
@@ -38,3 +39,4 @@ Gibt an, ob Datensätze mit null-Werte indiziert werden.
   
 ## <a name="applies-to"></a>Gilt für  
  [IndexNulls-Eigenschaft (ADOX)](../../../ado/reference/adox-api/indexnulls-property-adox.md)
+

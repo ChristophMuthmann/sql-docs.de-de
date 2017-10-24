@@ -19,6 +19,7 @@ caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 66fad2d8974e832925ab67174f2c635b8f5fbf37
@@ -98,3 +99,4 @@ ms.lasthandoff: 09/01/2017
  [DMSCHEMA_MINING_SERVICES-Rowset](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md)  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 71f3463ad4d91bd117c322e9e63c0b331b07ca9f
@@ -207,3 +208,4 @@ DROP DIAGNOSTICS SESSION PdwOptimizationDiagnostics;
 ```  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: d69b5c896e89638553796d18a17a89a986f3ac96
@@ -37,3 +38,4 @@ ms.lasthandoff: 08/02/2017
  [Installieren von SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
   
   
+

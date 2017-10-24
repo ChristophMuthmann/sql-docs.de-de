@@ -20,6 +20,7 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dba50c39ff8c31154e52f8575a93acdf829df442
@@ -71,3 +72,4 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
  [Open-Methode (ADO-Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [OpenSchema-Methode](../../../ado/reference/ado-api/openschema-method.md)   
  [SaveToFile-Methode](../../../ado/reference/ado-api/savetofile-method.md)
+

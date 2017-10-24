@@ -21,6 +21,7 @@ caps.latest.revision: 28
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 0edbebbb6754fd09ff834e4ffe8d453853b6f240
@@ -73,3 +74,4 @@ SELECT @g.InstanceOf('GEOMETRYCOLLECTION');
  [Erweiterte Methoden für Geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   
+

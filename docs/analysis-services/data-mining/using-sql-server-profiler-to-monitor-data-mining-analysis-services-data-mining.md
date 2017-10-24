@@ -17,6 +17,7 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 96b5485ebddba8823f262ba6a2229018d82a72fd
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/01/2017
  [Überwachen von Analysis Services mit den erweiterten Ereignissen von SQL Server](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
   
+

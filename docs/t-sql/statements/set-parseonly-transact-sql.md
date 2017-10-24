@@ -28,6 +28,7 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 2a117e81d9645edd9f24702ac01d8eeea3765726
@@ -64,3 +65,4 @@ SET PARSEONLY { ON | OFF }
  [SET OFFSETS &#40; Transact-SQL &#41;](../../t-sql/statements/set-offsets-transact-sql.md)  
   
   
+

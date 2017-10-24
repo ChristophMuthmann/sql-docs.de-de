@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 08cbd288ba9f64816ae0c8fd62c18171967c4d0d
@@ -46,3 +47,4 @@ public static void main( String args[])
   
 ## <a name="see-also"></a>Siehe auch  
  [Mithilfe des Microsoft-SDK für Java](../../../ado/guide/appendixes/using-the-microsoft-sdk-for-java.md)
+

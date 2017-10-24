@@ -16,6 +16,7 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5168df904df1cfc8f764fe628f8e83382eb86f81
@@ -50,3 +51,4 @@ public:
  **Bibliothek:** "MSADO15.dll"  
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4
+

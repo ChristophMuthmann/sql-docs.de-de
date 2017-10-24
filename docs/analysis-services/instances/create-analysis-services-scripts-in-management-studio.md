@@ -20,6 +20,7 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 24fffa56991e411dfae93321bbe238c1bbcb4db3
@@ -74,3 +75,4 @@ ms.lasthandoff: 09/01/2017
  [XMLA-Abfrage-Editor &#40; Analysis Services – mehrdimensionale Daten &#41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
   
   
+

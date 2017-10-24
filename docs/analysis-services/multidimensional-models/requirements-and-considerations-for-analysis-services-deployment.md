@@ -27,6 +27,7 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: c698473d796548f3ed9d7d17dfb19206804f634f
@@ -109,3 +110,4 @@ ms.lasthandoff: 09/01/2017
 -   Wenn die Abfrageleistung schlecht ist, die Prozessor- und Speicherressourcen auf dem lokalen Server jedoch nicht vergrößert werden können, können Sie ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt auf zwei oder mehr Produktionsservern bereitstellen. Anschließend können Sie Netzwerklastenausgleich zum Kombinieren der Server in einem einzigen Cluster verwenden. In einem NLB-Cluster werden Abfragen automatisch auf alle Server im NLB-Cluster verteilt.  
   
   
+

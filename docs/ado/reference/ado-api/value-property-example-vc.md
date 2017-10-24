@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c22b67fabafdf82734222bd3a5d56e19c157c395
@@ -177,3 +178,4 @@ void PrintComError(_com_error &e) {
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
  [Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Value-Eigenschaft (ADO)](../../../ado/reference/ado-api/value-property-ado.md)
+

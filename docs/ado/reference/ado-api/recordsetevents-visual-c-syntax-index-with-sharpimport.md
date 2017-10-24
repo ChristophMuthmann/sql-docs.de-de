@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5970d6b6b3bb4ed5cca023628e0f52f4dc09c082
@@ -70,3 +71,4 @@ HRESULT FetchProgress( long Progress, long MaxProgress,
 HRESULT FetchComplete( struct Error * pError, enum  
     EventStatusEnum *     adStatus, struct _Recordset * pRecordset );  
 ```
+

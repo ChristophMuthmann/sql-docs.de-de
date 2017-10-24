@@ -19,6 +19,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9404f406a751ada592bb4a2c6bdaec2b13f57222
@@ -131,3 +132,4 @@ Gibt den Typ des ADO-Laufzeitfehler.
   
 ## <a name="see-also"></a>Siehe auch  
  [ADO-Fehlercodes](../../../ado/guide/appendixes/ado-error-codes.md)
+

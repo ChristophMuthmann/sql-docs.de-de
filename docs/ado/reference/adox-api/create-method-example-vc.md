@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ecbbc0188c71a696e08be138b4ce2d901f0d7634
@@ -81,3 +82,4 @@ void CreateDatabaseX() {
   
 ## <a name="see-also"></a>Siehe auch  
  [Create-Methode (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)
+

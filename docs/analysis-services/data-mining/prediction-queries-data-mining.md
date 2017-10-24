@@ -15,6 +15,7 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 55dd3cf7af1721a958ebebb70d864a1fd0b873c6
@@ -157,3 +158,4 @@ FROM
  [Datendefinitionsabfragen &#40;Data Mining&#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
   
+

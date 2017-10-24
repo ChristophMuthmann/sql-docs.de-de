@@ -20,6 +20,7 @@ caps.latest.revision: 57
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ee0b59c9035d6801bbe7a87d8589e7c337c6c9c2
@@ -126,3 +127,4 @@ ms.lasthandoff: 09/01/2017
  [Data Mining-Projektmappen](../../analysis-services/data-mining/data-mining-solutions.md)  
   
   
+

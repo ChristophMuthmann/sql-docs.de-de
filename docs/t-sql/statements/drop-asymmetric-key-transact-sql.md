@@ -27,6 +27,7 @@ caps.latest.revision: 32
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: f3737521ee178f9b7287f8d86e269973841d74c6
@@ -80,3 +81,4 @@ DROP ASYMMETRIC KEY MirandaXAsymKey6;
  [ALTER SYMMETRIC KEY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)  
   
   
+

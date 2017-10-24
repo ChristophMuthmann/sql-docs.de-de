@@ -17,6 +17,7 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 91ae26748640ae6fbcafe12ae1545fadc2adbde6
@@ -67,3 +68,4 @@ ms.lasthandoff: 09/01/2017
  [Data Mining-gespeicherte Prozeduren &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)  
   
   
+

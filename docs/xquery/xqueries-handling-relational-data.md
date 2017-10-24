@@ -21,6 +21,7 @@ caps.latest.revision: 23
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 7765f20211ebd1278136f198b6957d674c52871c
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/01/2017
  [XML-Konstruktion &#40; XQuery &#41;](../xquery/xml-construction-xquery.md)  
   
   
+

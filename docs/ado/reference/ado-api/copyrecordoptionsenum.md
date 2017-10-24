@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e747e5bb2bcff9a8e414d809c127df09c251afa4
@@ -41,3 +42,4 @@ Gibt das Verhalten der [CopyRecord](../../../ado/reference/ado-api/copyrecord-me
   
 ## <a name="applies-to"></a>Gilt für  
  [CopyRecord-Methode (ADO)](../../../ado/reference/ado-api/copyrecord-method-ado.md)
+

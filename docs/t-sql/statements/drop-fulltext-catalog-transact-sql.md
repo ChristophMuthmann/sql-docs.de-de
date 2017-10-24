@@ -25,6 +25,7 @@ caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 32445ba8410673168ffe8e7da61cdd1b37d71afe
@@ -60,3 +61,4 @@ DROP FULLTEXT CATALOG catalog_name
  [Volltextsuche](../../relational-databases/search/full-text-search.md)  
   
   
+

@@ -20,6 +20,7 @@ caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4b342f6466a757ce2705d97680ed0e0460c0031f
@@ -83,3 +84,4 @@ ms.lasthandoff: 09/01/2017
  [Miningstrukturspalten](../../analysis-services/data-mining/mining-structure-columns.md)  
   
   
+

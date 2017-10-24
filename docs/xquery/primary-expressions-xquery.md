@@ -25,6 +25,7 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 4340836259f69bfd723b8b1482f6d81c4198442c
@@ -191,3 +192,4 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
  [XML-Konstruktion &#40; XQuery &#41;](../xquery/xml-construction-xquery.md)  
   
   
+

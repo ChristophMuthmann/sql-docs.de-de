@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c851f06ecd3cec67769f761cb2aea400c5b06d9e
@@ -41,3 +42,4 @@ Gibt eine [Elemente](../../../ado/reference/ado-md-api/members-collection-ado-md
   
 ## <a name="see-also"></a>Siehe auch  
  [ChildCount-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)
+

@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0344190472a9548880e828786bd252bdb17de29b
@@ -51,3 +52,4 @@ public static void setInternetTimeout(int plInetTimeout)
   
 ## <a name="see-also"></a>Siehe auch  
  [DataSpace-Objekt (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)
+

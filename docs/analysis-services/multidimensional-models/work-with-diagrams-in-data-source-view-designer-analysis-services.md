@@ -21,6 +21,7 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b3e877f63972f6a891f788a65196d2ec621cc203
@@ -97,3 +98,4 @@ ms.lasthandoff: 09/01/2017
  [Datenquellensicht-Designers &#40; Analysis Services – mehrdimensionale Daten &#41;](http://msdn.microsoft.com/library/6f40a074-761f-440b-a999-09b755bd86ce)  
   
   
+

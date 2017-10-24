@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9c1d5366817d19dea649b24ba17ea776a10fc7c5
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/01/2017
 7.  Geben Sie als Anbieterbeschreibung **Microsoft OLE DB-Anbieter für OLAP Services 11.0**ein.  
   
   
+

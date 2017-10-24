@@ -25,6 +25,7 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d114c3495c213e5493e3ccb87c1201d0517e4edf
@@ -69,3 +70,4 @@ ms.lasthandoff: 09/01/2017
  [Datentypen &#40;Data Mining&#41;](../../analysis-services/data-mining/data-types-data-mining.md)  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9aa2f7973099f5cf05710206469eb4254293cca3
@@ -76,3 +77,4 @@ WHERE MODEL_NAME = 'TM Clustering'
  [Data Mining-Abfrage](../../analysis-services/data-mining/data-mining-queries.md)  
   
   
+

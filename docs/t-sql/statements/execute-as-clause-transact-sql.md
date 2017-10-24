@@ -29,6 +29,7 @@ caps.latest.revision: 70
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b96757281a5b36755422346ef444136ad8702726
@@ -233,3 +234,4 @@ GO
  [Führen Sie AS &#40; Transact-SQL &#41;](../../t-sql/statements/execute-as-transact-sql.md)  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e5c25ab6802b6a99902c9e52990be80ff14ed6d5
@@ -40,3 +41,4 @@ Gibt an, ob die [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.
   
 ## <a name="applies-to"></a>Gilt für  
  [Aktualisieren Sie die Resync Eigenschaft dynamisch (ADO)](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)
+

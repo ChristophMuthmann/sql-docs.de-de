@@ -16,6 +16,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8eb9a6385a47030f5d9c9a283b56228ca68f596b
@@ -123,3 +124,4 @@ End Function
 ```  
   
  Nicht alle Anbieter unterstützen vorbereitete Befehle. Wenn befehlsvorbereitung von vom Anbieter nicht unterstützt werden, kann er einen Fehler zurück, wie diese Eigenschaft, um festgelegt wird **"true"**. Wenn kein Fehler zurückgegeben wird, ignoriert er die Anforderung zum Vorbereiten der Befehl und legt die **Prepared** Eigenschaft **"false"**.
+

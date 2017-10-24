@@ -19,6 +19,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 462f8ea10fc0d4c489de40ddcf0174cb2a82435b
@@ -42,3 +43,4 @@ Die [Abrufen von Daten](../../../ado/guide/data/getting-data.md) Abschnitt wurde
 -   [Beispiel-Recordset zum Untersuchen von Daten](../../../ado/guide/data/sample-recordset-for-examining-data.md)  
   
 -   [Grenzen eines Recordsets](../../../ado/guide/data/boundaries-of-a-recordset.md)
+

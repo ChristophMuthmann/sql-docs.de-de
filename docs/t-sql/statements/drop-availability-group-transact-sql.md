@@ -24,6 +24,7 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: c1cd1e16d7d25810d571f940aaf1dece825406c3
@@ -90,3 +91,4 @@ DROP AVAILABILITY GROUP AccountsAG;
  [Entfernen einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
   
   
+

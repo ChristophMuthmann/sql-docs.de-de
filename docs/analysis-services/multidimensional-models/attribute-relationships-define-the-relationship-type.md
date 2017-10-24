@@ -22,6 +22,7 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 21fc6bc9a26916f2abdd0d433318c8175223084e
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/01/2017
  [Definieren von Attributbeziehungen](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
   
   
+

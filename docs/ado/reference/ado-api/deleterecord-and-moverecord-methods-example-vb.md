@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9d8bc240a84112df29e3b7fe85d16f721c0da5a5
@@ -159,3 +160,4 @@ End Sub
  [MoveRecord-Methode (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)   
  [ParentURL-Eigenschaft (ADO)](../../../ado/reference/ado-api/parenturl-property-ado.md)   
  [Source-Eigenschaft (ADO-Datensatz)](../../../ado/reference/ado-api/source-property-ado-record.md)
+

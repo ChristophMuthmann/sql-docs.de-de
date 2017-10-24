@@ -18,6 +18,7 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4154a0e542ed8e2bc6799dbc3f3c9ecb25ad5f4e
@@ -102,3 +103,4 @@ ms.lasthandoff: 09/01/2017
  [Entwicklerhandbuch (Analysis Services)](../../analysis-services/analysis-services-developer-documentation.md)  
   
   
+

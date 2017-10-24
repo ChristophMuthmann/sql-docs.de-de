@@ -21,6 +21,7 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: bc980db3ce9f468a98e7fbfb83d54981c4b6e6cd
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/01/2017
  [SELECT-Anweisung &#40; MDX &#41;](../../../mdx/mdx-data-manipulation-select.md)  
   
   
+

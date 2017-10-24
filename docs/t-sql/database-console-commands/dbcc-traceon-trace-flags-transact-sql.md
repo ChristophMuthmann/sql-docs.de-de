@@ -24,6 +24,7 @@ caps.latest.revision: 171
 author: pmasl
 ms.author: pelopes
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
 ms.openlocfilehash: 16e963170716b8c135bb01ffb5fcd9cf86e65256

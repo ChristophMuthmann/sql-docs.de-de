@@ -19,6 +19,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 13623de4d33c81db9a392ba739f9352bca17ff1d
@@ -209,3 +210,4 @@ Authors with 25 percent royalty
 ## <a name="see-also"></a>Siehe auch  
  [Append-Methode (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [CreateParameter-Methode (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)
+

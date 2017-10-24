@@ -17,6 +17,7 @@ caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4a4ebb3633becee7df676650ce88d2e00ff96f8a
@@ -120,3 +121,4 @@ ms.lasthandoff: 09/01/2017
  [Klassifikationsmatrix &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
   
   
+

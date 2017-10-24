@@ -19,6 +19,7 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0b72ea275e4d396531feabd86780f0dabc736e85
@@ -398,3 +399,4 @@ NATURAL PREDICTION JOIN
  [Microsoft Clustering-Algorithmus](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c78a0b7bd79da2bc75c3bcccbcb2bc9acbde8e35
@@ -41,3 +42,4 @@ HRESULT get_OLEDBCommand(
   
 ## <a name="applies-to"></a>Gilt für  
  [IADOCommandConstruction](http://msdn.microsoft.com/en-us/d8e54333-00eb-4b72-bf4a-ca92c7ca5f86)
+

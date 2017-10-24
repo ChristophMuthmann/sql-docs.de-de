@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 19a4275d339132db8efd4b09a313b482fc8cb666
@@ -45,3 +46,4 @@ oRs.Move NumRecords, Start
  Wenn Sie ein Lesezeichen im übergeben der *starten* Argument der Verschiebevorgang ist relativ zu dem Datensatz mit diesem Lesezeichen, vorausgesetzt die **Recordset** Objekt Lesezeichen unterstützt. Mithilfe ein Lesezeichens abgerufen wird die [Lesezeichen](../../../ado/reference/ado-api/bookmark-property-ado.md) Eigenschaft. Wenn nicht angegeben, ist die Verschiebung relativ zum aktuellen Datensatz.  
   
  Bei Verwendung der **CacheSize** Eigenschaft lokal Datensätze aus den Anbieter übergeben Zwischenspeichern ein *NumRecords* Argument, das die Position des aktuellen Datensatzes außerhalb der aktuellen Gruppe der zwischengespeicherten Datensätze verschiebt Erzwingt, dass ADO, um eine neue Gruppe von Datensätzen, beginnend mit dem Zieldatensatz abzurufen. Die **CacheSize** Eigenschaft bestimmt die Größe der neu abgerufenen Gruppe, und der Zieldatensatz ist der erste Datensatz abgerufen.
+

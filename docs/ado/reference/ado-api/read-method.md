@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 23eeee5244ccb92159c2afbc3ffb55fb586ff2f9
@@ -55,3 +56,4 @@ Variant = Stream.Read ( NumBytes)
   
 ## <a name="see-also"></a>Siehe auch  
  [ReadText-Methode](../../../ado/reference/ado-api/readtext-method.md)
+

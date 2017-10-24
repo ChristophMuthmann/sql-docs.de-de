@@ -29,6 +29,7 @@ caps.latest.revision: 37
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 17bd1817d8f7f04401f49f9a02562bcf577c9088
@@ -169,3 +170,4 @@ DROP TABLE t1,t2,t3,t4,t5,t6;
  [SET ANSI_NULL_DFLT_OFF &#40; Transact-SQL &#41;](../../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)  
   
   
+

@@ -22,6 +22,7 @@ caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 390e596ce08f5956f65cc106b50af7b68c4d2da4
@@ -80,3 +81,4 @@ ms.lasthandoff: 09/01/2017
  [Definieren von verknüpften Dimensionen](../../analysis-services/multidimensional-models/define-linked-dimensions.md)  
   
   
+

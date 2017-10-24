@@ -18,6 +18,7 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8dc45f7d47484dbc3b1d5e7684f4e3a5d3075dc2
@@ -95,3 +96,4 @@ ms.lasthandoff: 09/01/2017
  [Measures und Measuregruppen](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)  
   
   
+

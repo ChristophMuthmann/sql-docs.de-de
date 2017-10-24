@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bc40ecab95aa419ac81ada509133de6dd108a823
@@ -88,3 +89,4 @@ Response.Write("Success!")
 -   Sie können keine **auf Fehler Goto \<Bezeichnung >** in VBScript.  
   
 -   VBScript unterstützt einige der integrierten Visual Basic-Funktionen wie z. B. **Msgbox**, **Datum**, und **IsNumeric**. Da VBScript eine Teilmenge von Visual Basic ist, werden jedoch nicht alle integrierte Funktionen unterstützt. Z. B. VBScript unterstützt nicht die **Format** Funktion und die-e/a-Dateifunktionen.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 849f17d47b443e992bd314d6ce2d2a04ec080cd6
@@ -86,3 +87,4 @@ ms.lasthandoff: 09/01/2017
  [REFRESH CUBE-Anweisung &#40; MDX &#41;](../../../mdx/mdx-data-definition-refresh-cube.md)  
   
   
+

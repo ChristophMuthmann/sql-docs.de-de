@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c32176b7c9c5dc235c77e5f2363f1fc51ae9bb40
@@ -53,3 +54,4 @@ Gibt an, ob die [Parameter](../../../ado/reference/ado-api/parameter-object.md) 
 |||  
 |-|-|  
 |[CreateParameter-Methode (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)|[Direction-Eigenschaft](../../../ado/reference/ado-api/direction-property.md)|
+

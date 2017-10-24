@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2be2e27fa93791647fd3e27945c3203cf1afe999
@@ -42,3 +43,4 @@ Gibt die binären Zeichen als Zeilentrennzeichen in Text zu verwendende [Stream]
   
 ## <a name="see-also"></a>Siehe auch  
  [Streamobjekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+

@@ -47,6 +47,7 @@ caps.latest.revision: 50
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 576efdd0bac4b8298e3d204b065bbbd55ba6fff3
@@ -80,3 +81,4 @@ ms.lasthandoff: 09/01/2017
  [Ändern von Measures](../../analysis-services/lesson-3-1-modifying-measures.md)  
   
   
+

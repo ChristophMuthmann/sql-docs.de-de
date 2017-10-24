@@ -23,6 +23,7 @@ caps.latest.revision: 14
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: ba824c4482f49d534d11666054a0a8d3a1669d2d
@@ -65,3 +66,4 @@ SELECT @g.AsTextZM();
  [Z &#40; Geography-Datentyp &#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
   
   
+

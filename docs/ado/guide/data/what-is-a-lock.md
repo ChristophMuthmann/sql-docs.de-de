@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f4975dd903c6d012976f9288b9758e1acab52f1f
@@ -42,3 +43,4 @@ Sperren ist der Prozess, der ein DBMS nach dem Zugriff auf eine Zeile in einer m
  Dieser Abschnitt enthält die folgenden Themen.  
   
 -   [Typen von Sperren](../../../ado/guide/data/types-of-locks.md)
+

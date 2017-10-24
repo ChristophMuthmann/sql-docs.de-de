@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 424bb4b32915c774778cfd32dab18c42c5e573a8
@@ -50,3 +51,4 @@ Gibt die Gruppe von Datensätzen aus gefiltert werden sollen eine [Recordset](..
   
 ## <a name="applies-to"></a>Gilt für  
  [Filter-Eigenschaft](../../../ado/reference/ado-api/filter-property.md)
+

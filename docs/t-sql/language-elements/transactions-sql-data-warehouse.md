@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 8202a0de588bce3a36fc048e68c283b52db7e89d
@@ -154,3 +155,4 @@ COMMIT;
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: baa2fd086747707b67458914513d482f794cfdc6
@@ -27,3 +28,4 @@ ms.lasthandoff: 08/02/2017
  Um die Eigenschaften der von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clients auf diesem Computer verwendeten Clientprotokolle zu konfigurieren, klicken Sie im Konsolenbereich auf **Clientprotokolle**, klicken Sie im Detailbereich mit der rechten Maustaste auf das gewünschte Protokoll, und klicken Sie dann auf **Eigenschaften**.  
   
   
+

@@ -22,6 +22,7 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: c7c3555be8e304add34cba3a8dd9f0bac4264216
@@ -74,3 +75,4 @@ System.Diagnostics.Debug.Writeline(advwrksConnection.ConnectionString);
  [ADOMD.NET-Clientprogrammierung](../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md)  
   
   
+

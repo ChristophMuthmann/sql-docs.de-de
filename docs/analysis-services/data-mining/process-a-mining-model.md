@@ -17,6 +17,7 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d2ff8b606dfa9c7d6f4692afcd57d0c633989924
@@ -73,3 +74,4 @@ ms.lasthandoff: 09/01/2017
  [Miningmodelltasks und Anweisungen](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   
+

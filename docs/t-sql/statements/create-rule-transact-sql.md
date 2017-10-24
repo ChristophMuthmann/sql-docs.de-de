@@ -33,6 +33,7 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: f1893007dd699ffb002884a153ac72fa90fcd103
@@ -145,3 +146,4 @@ AS
  [WOBEI &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
+

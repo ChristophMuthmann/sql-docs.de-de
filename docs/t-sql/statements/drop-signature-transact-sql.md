@@ -26,6 +26,7 @@ caps.latest.revision: 32
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 81823a549f608bdcddb631084904fb303a1ddc9f
@@ -83,3 +84,4 @@ GO
  [Signatur hinzufügen &#40; Transact-SQL &#41;](../../t-sql/statements/add-signature-transact-sql.md)  
   
   
+

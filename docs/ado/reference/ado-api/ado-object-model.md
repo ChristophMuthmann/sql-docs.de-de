@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 844ccb8f4970bf4147cedfcd05d185a54ab8b6b7
@@ -37,3 +38,4 @@ Die folgenden Abbildungen zeigen die ADO-Objekte und Auflistungen.
  [ADO-Methoden](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO-Objekte und Schnittstellen](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
  [Eigenschaften von ADO.NET](../../../ado/reference/ado-api/ado-properties.md)
+

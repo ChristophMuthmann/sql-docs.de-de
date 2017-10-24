@@ -18,6 +18,7 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 76a5921185f6643f328559e3bc73dfac46bfee0c
@@ -96,3 +97,4 @@ End Function
 -   [Löschen von Datensätzen, die mit der Delete-Methode](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
   
 -   [Alternativen: SQL-Anweisungen mithilfe](../../../ado/guide/data/alternatives-using-sql-statements.md)
+

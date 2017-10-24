@@ -21,6 +21,7 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bad4593c84946a2957b6b433de359d4857f116ad
@@ -83,3 +84,4 @@ ms.lasthandoff: 09/01/2017
  [PowerPivot-Datenaktualisierung](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh.md)  
   
   
+

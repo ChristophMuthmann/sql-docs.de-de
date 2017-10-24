@@ -19,6 +19,7 @@ caps.latest.revision: 52
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1ad436f2cfa5da5381ad683a1fc804468c5a40d3
@@ -75,3 +76,4 @@ ms.lasthandoff: 09/01/2017
  [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   
+

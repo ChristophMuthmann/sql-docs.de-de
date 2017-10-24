@@ -44,6 +44,7 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f5229c37299494ca2b3b31e3ca3e0d091c93d96a
@@ -71,3 +72,4 @@ Gibt den übergeordneten Katalog eines Objekts Tabellen, Benutzer oder Spalten z
   
 ## <a name="see-also"></a>Siehe auch  
  [Beispiel für ParentCatalog-Eigenschaft (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)
+

@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2e15f52d48f5870cfe4df8cd6149d56012b42abf
@@ -38,3 +39,4 @@ boolean = recordset.Supports(CursorOptions )
  Mithilfe der **unterstützt** -Methode, sehen Sie sich für die Fähigkeit eines der **Recordset** Objekt neue Datensätze hinzufügen, Lesezeichen verwenden, verwenden Sie die **suchen** verwenden unregelmäßiger Bildlauf-Methode verwenden, die ** Index** -Eigenschaft, und zum Durchführen von Batchaktualisierungen. Eine vollständige Liste von Konstanten und ihre Bedeutungen, finden Sie unter [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md).  
   
  Obwohl die **unterstützt** Methode gelegten **"true"** für eine bestimmte Funktionalität kann nicht garantiert, dass der Anbieter das Feature unter allen Umständen verfügbar machen kann. Die **unterstützt** Methode gibt einfach auftragsantwortnachrichten zurück, ob der Anbieter unterstützt den angegebenen Funktionen können unter bestimmten Bedingungen erfüllt sind. Z. B. die **unterstützt** Methode hinweisen, die eine **Recordset** Objekt unterstützt Updates, auch wenn der Cursor auf eine Verknüpfung aus mehreren Tabellen basiert – einige Spalten der sind nicht aktualisierbar.
+

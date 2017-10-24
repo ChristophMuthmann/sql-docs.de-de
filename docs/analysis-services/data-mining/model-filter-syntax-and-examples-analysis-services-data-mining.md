@@ -20,6 +20,7 @@ caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: c24c6ad5bbfba2f93039bd53609ddd86010e10ee
@@ -321,3 +322,4 @@ FILTER (EXISTS (Products))
  [Tests und Überprüfung &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
+

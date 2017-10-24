@@ -19,6 +19,7 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8c3f9568a04572718bb6b1a968a3bacae4520898
@@ -43,3 +44,4 @@ Gibt den Zeichensatz in das der Inhalt von Text [Stream](../../../ado/reference/
   
 ## <a name="applies-to"></a>Gilt für  
  [Streamobjekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+

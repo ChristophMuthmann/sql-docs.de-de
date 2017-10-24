@@ -20,6 +20,7 @@ caps.latest.revision: 34
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 3a6f20206d0679adeffdc2b504ccef1d010c957b
@@ -355,3 +356,4 @@ AND     CatalogDescription.exist('declare namespace p1="http://schemas.microsoft
  [XQuery-Sprachreferenz &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   
+

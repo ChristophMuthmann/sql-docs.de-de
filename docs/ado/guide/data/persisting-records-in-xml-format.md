@@ -20,6 +20,7 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a45c434bdcf551e97eb97f85997ab73c883b599c
@@ -93,3 +94,4 @@ rs.Save "btitles.sav", adPersistXML
 -   [XML-Sicherheitsüberlegungen](../../../ado/guide/data/xml-security-considerations.md)  
   
 -   [Speicherszenario für XML-Recordset](../../../ado/guide/data/xml-recordset-persistence-scenario.md)
+

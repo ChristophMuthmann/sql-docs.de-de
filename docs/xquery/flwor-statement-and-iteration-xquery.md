@@ -29,6 +29,7 @@ caps.latest.revision: 44
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 0aecf7bfdb57a53c0c0cbbd8f4c2ccbaf9a9862d
@@ -542,3 +543,4 @@ order by $e/@Title ascending, $e/@Gender descending
  [XQuery Expressions (XQuery-Ausdrücke)](../xquery/xquery-expressions.md)  
   
   
+

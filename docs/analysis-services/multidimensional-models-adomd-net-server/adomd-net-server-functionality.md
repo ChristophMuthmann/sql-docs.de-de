@@ -20,6 +20,7 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 40d68e739a9628113b7adfeab5db2a6b1445981f
@@ -71,3 +72,4 @@ CALL FinalSalesNumbers()
  [ADOMD.NET-serverprogrammierung](../../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md)  
   
   
+

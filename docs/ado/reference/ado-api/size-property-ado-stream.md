@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c5a4027bf589a469092a6605743df3d08147e7d2
@@ -43,3 +44,4 @@ Gibt die Größe des Streams in Anzahl von Bytes an.
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaft "Größe" (ADO-Parameter)](../../../ado/reference/ado-api/size-property-ado-parameter.md)
+

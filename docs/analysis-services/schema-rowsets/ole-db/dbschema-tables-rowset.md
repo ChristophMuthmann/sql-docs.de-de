@@ -22,6 +22,7 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 1bc193f33395521c62e1b5e998c2098721313d9b
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/01/2017
  [OLE DB-Schemarowsets](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   
+

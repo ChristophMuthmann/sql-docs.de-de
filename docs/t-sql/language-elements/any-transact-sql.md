@@ -25,6 +25,7 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: fe683b2dbbb0a36bbc801136fe3029e9d7495135
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/01/2017
   Vergleicht einen Skalarwert mit Werten, die sich in einer einzelnen Spalte befinden. Weitere Informationen finden Sie unter [einige &#124; Alle &#40; Transact-SQL &#41; ](../../t-sql/language-elements/some-any-transact-sql.md).  
   
   
+

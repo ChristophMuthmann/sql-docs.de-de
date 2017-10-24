@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 60d5d800137febfa9b0ba01994e3b32cd159ec31
@@ -35,3 +36,4 @@ Gibt den Typ der Aktion, die beim [SetPermissions](../../../ado/reference/adox-a
 |**adAccessGrant**|1|Der Gruppen- oder Benutzernamen müssen mindestens die angeforderten Berechtigungen.|  
 |**adAccessRevoke**|4|Keine explizite Zugriffsrechte der Gruppe bzw. des Benutzers werden aufgehoben.|  
 |**adAccessSet**|2|Der Gruppen- oder Benutzernamen müssen genau die angeforderten Berechtigungen.|
+

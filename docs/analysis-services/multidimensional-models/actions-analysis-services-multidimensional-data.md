@@ -22,6 +22,7 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a61563367d64f9122441991d125cf987f6ddc4d6
@@ -81,3 +82,4 @@ ms.lasthandoff: 09/01/2017
  [Aktionen in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
   
   
+

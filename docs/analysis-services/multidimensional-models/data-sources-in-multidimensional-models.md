@@ -24,6 +24,7 @@ caps.latest.revision: 45
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fb419325bc8490fdfb62fb044cb81c81e111e6e3
@@ -73,3 +74,4 @@ ms.lasthandoff: 09/01/2017
  [Datenquellen und Bindungen &#40; SSAS – mehrdimensional &#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)  
   
   
+

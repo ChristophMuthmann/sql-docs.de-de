@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b927cf4ae288fce370f20d122c93ba72d79d454d
@@ -85,3 +86,4 @@ End Sub
  [Command-Eigenschaft (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
  [Prozedurobjekt (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [Prozeduren-Auflistung (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+

@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d4c40c6f31f783dfecb4f05f1032521d4f7e7e8c
@@ -151,3 +152,4 @@ void PrintComError(_com_error &e) {
  [Fields-Auflistung (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [StayInSync-Eigenschaft](../../../ado/reference/ado-api/stayinsync-property.md)
+

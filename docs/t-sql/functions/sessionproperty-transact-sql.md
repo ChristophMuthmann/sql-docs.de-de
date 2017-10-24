@@ -23,6 +23,7 @@ caps.latest.revision: 22
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 0d2d3eb935bd003d88795d748de2a5fb4a08c9c4
@@ -83,3 +84,4 @@ SELECT   SESSIONPROPERTY ('CONCAT_NULL_YIELDS_NULL')
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)  
   
   
+

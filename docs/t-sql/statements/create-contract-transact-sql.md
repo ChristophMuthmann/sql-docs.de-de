@@ -25,6 +25,7 @@ caps.latest.revision: 48
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 962ce2d6568a597bd580f7fc9bcd2e9243e44dc4
@@ -131,3 +132,4 @@ CREATE CONTRACT
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
+

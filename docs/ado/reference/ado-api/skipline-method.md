@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: eb9e478439c7156786a2e37856cd79ab7b9201bc
@@ -44,3 +45,4 @@ Stream.SkipLine
   
 ## <a name="applies-to"></a>Gilt für  
  [Streamobjekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+

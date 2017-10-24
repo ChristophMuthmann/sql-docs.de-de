@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 785e4dc3db234447c806ddc349682d08a8447923

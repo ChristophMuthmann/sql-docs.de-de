@@ -18,6 +18,7 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 459bae71d8b93278b71d29a601c01b0ed4954e97
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/01/2017
 -   Öffnen Sie die Dimension, der Business Intelligence hinzugefügt werden soll, und klicken Sie auf der Symbolleiste auf die Schaltfläche **Business Intelligence hinzufügen** . Sie können auch im Objekt-Explorer oder im Projektmappen-Explorer mit der rechten Maustaste auf die Dimension und anschließend auf **Business Intelligence hinzufügen**klicken.  
   
   
+

@@ -23,6 +23,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3b2dffe4d0e6d8d3d1c9f0a13886bd3aff4def31
@@ -46,3 +47,4 @@ Gibt die festgelegte maximale Größe der Spalte an.
   
 ## <a name="see-also"></a>Siehe auch  
  [Beispiel für DefinedSize-Eigenschaft (VB)](../../../ado/reference/adox-api/definedsize-property-example-vb.md)
+

@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 151e3018fa12d3f61cb06f12692f28fa9e5b7a91
@@ -42,3 +43,4 @@ Gibt die formatierte Anzeige der an eine [Zelle](../../../ado/reference/ado-md-a
 ## <a name="see-also"></a>Siehe auch  
  [Cellset-Beispiel (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Value-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/value-property-ado-md.md)
+

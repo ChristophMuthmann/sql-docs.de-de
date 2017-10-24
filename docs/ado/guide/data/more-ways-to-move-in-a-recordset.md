@@ -20,6 +20,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c3e3f666fd96a1b00d78ba364a8df062fa3f6397
@@ -59,3 +60,4 @@ If oRs.BOF Then oRs.MoveFirst
  Ein weiteres Beispiel: Wenn Sie auf eine bestimmte Zeile in der Mitte des positioniert sind eine **Recordset** und rufen Sie **löschen** und rufen Sie anschließend **MoveNext**, Sie sind jetzt im Datensatz unmittelbar nach der gelöschte Datensatz. Aber aufrufenden **MovePrevious** wird der Datensatz, der vor dem Sie den aktuellen Datensatz gelöscht, da der gelöschte Datensatz nicht mehr in der aktiven Mitgliedschaft gezählt wird die **Recordset**.  
   
  Es ist besonders schwierig, konsistente Move-Semantik für alle Anbieter für Methoden definieren, die relativ zum aktuellen Datensatz wechseln – **MovePrevious**, **MoveNext**, und **Verschieben** – beim Ändern von Daten im aktuellen Datensatz. Wenn Sie mit einer sortierten arbeiten, z. B. gefiltert **Recordset**, und ändern Sie die Daten im aktuellen Datensatz, sodass sich alle Datensätze davor würde jedoch die geänderten Daten auch nicht mehr dem Filter entspricht, wo nicht eindeutig eine **MoveNext** Vorgang sollte Sie dauern. Die sicherste Schlussfolgerung ist diese relative Bewegung innerhalb einer **Recordset** risikoreicher als absolute Bewegung ist (z. B. mit **MoveFirst** oder **MoveLast**) Wenn die Daten enthalten Ändern von während Datensätze bearbeitet werden, hinzugefügt oder gelöscht werden. Sortieren und Filtern sollte auf einen Primärschlüssel oder eine ID, basieren, da dieser Typ des Werts nicht geändert werden sollte.
+

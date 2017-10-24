@@ -27,6 +27,7 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 725f0ac6753947e587b6746528b6efc6d409f269
@@ -67,3 +68,4 @@ ms.lasthandoff: 09/01/2017
  Wenn Sie eine vorhandene Berechnung löschen möchten, wählen Sie auf der Registerkarte **Berechnungen** im **Skriptplaner** -Bereich die zu löschende Berechnung aus, und klicken Sie dann im Menü **Bearbeiten** auf **Löschen** , oder klicken Sie auf der Symbolleiste auf **Löschen** . Sie können auch im Bereich **Skriptplaner** mit der rechten Maustaste auf die Berechnung klicken und im Kontextmenü die Option **Löschen** auswählen.  
   
   
+

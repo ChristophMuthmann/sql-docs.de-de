@@ -18,6 +18,7 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 828ebf957c72e8b36b93ab3afb3db08b1fb824b1
@@ -190,3 +191,4 @@ Sylvia   Panteley   1956 Arlington Pl.   Rockville
 ## <a name="see-also"></a>Siehe auch  
  [GetString-Methode (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

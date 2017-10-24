@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b88ea0a0e2e90d38498c0d5a9f3c1abb1c5eb293
@@ -49,3 +50,4 @@ Gibt ein Lesezeichen, der angibt, an der der Vorgang beginnen soll.
 |||  
 |-|-|  
 |[GetRows-Methode (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)|[Move-Methode (ADO)](../../../ado/reference/ado-api/move-method-ado.md)|
+

@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d4879ea2bc89552409e29847ed39c9418ba668c8
@@ -49,3 +50,4 @@ Ein *Transaktion* begrenzt Anfang und Ende einer Reihe von Datenzugriffsvorgäng
   
 ## <a name="nested-transactions"></a>Geschachtelte Transaktionen  
  Für Anbieter, die geschachtelte Transaktionen unterstützen Aufrufen der **BeginTrans** Methode innerhalb einer geöffneten Transaktion wird eine neue, geschachtelte Transaktion gestartet. Der Rückgabewert gibt an, der Schachtelungsebene: ein Rückgabewert von "1" gibt an, Sie haben eine Transaktion der obersten Ebene geöffnet (d. h., die Transaktion ist nicht geschachtelte innerhalb einer anderen Transaktion), "2" gibt an, dass Sie eine Transaktion der zweiten Ebene (a geöffnet haben geschachtelten TRANSACTION-Anweisung innerhalb einer Transaktion auf der obersten Ebene), und so weiter. Aufrufen von **CommitTrans** oder **RollbackTrans** wirkt sich auf nur die zuletzt geöffnete Transaktion, und Sie müssen schließen oder Rollback für die aktuelle Transaktion aus, bevor Sie alle auf höherer Ebene Transaktionen auflösen können.
+

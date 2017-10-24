@@ -18,6 +18,7 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 12bc5ca42588d81e99490a4ed836c5e71dac49e2
@@ -77,3 +78,4 @@ FROM [Adventure Works]
  [Datenbankeigenschaften &#40; MDX &#41;](../../../mdx/properties-mdx.md)  
   
   
+

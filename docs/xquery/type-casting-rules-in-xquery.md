@@ -25,6 +25,7 @@ caps.latest.revision: 35
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b3fc531210c575742ab4af7670bb122bb7473ca3
@@ -209,3 +210,4 @@ min(xs:integer("1"), xs:double("1.1"))
  [Definieren der Serialisierung von XML-Daten](../relational-databases/xml/define-the-serialization-of-xml-data.md)  
   
   
+

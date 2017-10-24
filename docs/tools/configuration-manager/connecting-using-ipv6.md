@@ -18,6 +18,7 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 02be74463da560da23ee016918a17bc0d272319d
@@ -43,3 +44,4 @@ ms.lasthandoff: 08/02/2017
  [SQL Server-Konfigurations-Manager](../../relational-databases/sql-server-configuration-manager.md)  
   
   
+

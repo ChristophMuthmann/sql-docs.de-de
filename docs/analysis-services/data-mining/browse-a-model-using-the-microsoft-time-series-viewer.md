@@ -23,6 +23,7 @@ caps.latest.revision: 44
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0de59252e18921c4c280143b695000b5913a5aa2
@@ -97,3 +98,4 @@ ms.lasthandoff: 09/01/2017
  [Data Mining-Modell-Viewer](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
   
+

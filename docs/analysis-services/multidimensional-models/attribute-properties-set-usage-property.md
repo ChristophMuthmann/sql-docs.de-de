@@ -19,6 +19,7 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 1dfeeb95c534bd68879d101cd208eae8871d817c
@@ -50,3 +51,4 @@ ms.lasthandoff: 09/01/2017
  [Hinzufügen eines Attributs zu einer Dimension](../../analysis-services/multidimensional-models/attribute-properties-add-an-attribute-to-a-dimension.md)  
   
   
+

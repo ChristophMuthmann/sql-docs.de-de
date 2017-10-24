@@ -21,6 +21,7 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: cd410a6eb07c626c7674febad2a427bbd029f98a
@@ -66,3 +67,4 @@ SELECT @g.EnvelopeAngle();
  [EnvelopeCenter &#40; Geography-Datentyp &#41;](../../t-sql/spatial-geography/envelopecenter-geography-data-type.md)  
   
   
+

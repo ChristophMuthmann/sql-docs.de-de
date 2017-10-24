@@ -20,6 +20,7 @@ caps.latest.revision: 47
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b4fd0a5f94c049cac32b7396e212d3da387f98f5
@@ -243,3 +244,4 @@ ms.lasthandoff: 09/01/2017
  [Konfigurieren einer Windows-Firewall für Datenbankmodulzugriff](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
   
+

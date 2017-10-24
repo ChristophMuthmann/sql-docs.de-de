@@ -22,6 +22,7 @@ caps.latest.revision: 53
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ce3a87eed86b8f876c8bf9bdde305166c2681d18
@@ -83,3 +84,4 @@ ms.lasthandoff: 09/01/2017
      Wie Sie sehen können, sind Datenbank- und Dateiberechtigungen, die "NT-Dienst\ MSOLAP$TABULAR" zuvor gewährt wurden, nicht mehr gültig. Um sicherzustellen, dass Tasks und Vorgänge wie zuvor vom Dienst ausgeführt werden, müssen Sie "für NT-Dienst\ MSOLAP$TAB2" neue Datenbank- und Dateiberechtigungen gewähren.  
   
   
+

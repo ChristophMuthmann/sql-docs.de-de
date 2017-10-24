@@ -22,6 +22,7 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9154d293ca5b7737a9c80fef0754dcec6e461a46
@@ -167,3 +168,4 @@ GO
  [Table &#40; Transact-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)  
   
   
+

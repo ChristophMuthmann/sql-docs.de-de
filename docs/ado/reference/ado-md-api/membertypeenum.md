@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5a8335dcc0f713859f72971a699438b2535550ac
@@ -36,3 +37,4 @@ Gibt die Einstellung für die [Typ](../../../ado/reference/ado-md-api/type-prope
 |**adMemberMeasure**|2|Gibt an, dass die **Member** Objekt gehört zu der Measures-Dimension, und stellt ein Quantitatives Attribut dar.|  
 |**adMemberRegular**|1|Standard. Gibt an, dass die **Member** Objekt stellt eine Instanz einer Geschäftseinheit dar.|  
 |**adMemberUnknown**|0|Der Typ des Elements kann nicht bestimmt werden.|
+

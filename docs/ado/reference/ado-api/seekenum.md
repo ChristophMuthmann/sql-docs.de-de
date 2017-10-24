@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 051f4e1c300796e2777e9b06a1514c9ce00b9b02
@@ -52,3 +53,4 @@ Gibt den Typ des [Seek](../../../ado/reference/ado-api/seek-method.md) ausgefüh
   
 ## <a name="applies-to"></a>Gilt für  
  [Seek-Methode](../../../ado/reference/ado-api/seek-method.md)
+

@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7c901fea62969f33b4c087b9e70117ade05b8c21
@@ -52,3 +53,4 @@ Set rs.DataSource = myDE      'Name of the object containing an IRowset
   
 ## <a name="see-also"></a>Siehe auch  
  [DataSource-Eigenschaft (ADO)](../../../ado/reference/ado-api/datasource-property-ado.md)
+

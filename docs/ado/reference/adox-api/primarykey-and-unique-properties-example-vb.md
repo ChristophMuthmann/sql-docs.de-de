@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 66f717eee45a790016e4dc03d2f6b696f39ea365
@@ -120,3 +121,4 @@ End Sub
  [Index-Objekt (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [PrimaryKey-Eigenschaft (ADOX)](../../../ado/reference/adox-api/primarykey-property-adox.md)   
  [Eigenschaft "Unique" (ADOX)](../../../ado/reference/adox-api/unique-property-adox.md)
+

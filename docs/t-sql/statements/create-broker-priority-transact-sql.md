@@ -29,6 +29,7 @@ caps.latest.revision: 40
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: c7a1d85cba038eb3f7ef4a4e3198485943e8e194
@@ -300,3 +301,4 @@ CREATE BROKER PRIORITY BronzePriority
  [Sys. conversation_priorities & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 40b23b500c50100b5a50f06566eeadd44e7f519c
@@ -44,3 +45,4 @@ HRESULT GetDataProviderDSO(
   
 ## <a name="applies-to"></a>Gilt für  
  [IDSOShapeExtensions-Schnittstelle](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)
+

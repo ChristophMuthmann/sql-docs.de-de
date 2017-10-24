@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3d7b8c1484b3f57fe0c0caf1652b43d2d1b13f87
@@ -42,3 +43,4 @@ Gibt den Namen der Ebene von einer [Member](../../../ado/reference/ado-md-api/me
 ## <a name="see-also"></a>Siehe auch  
  [Ebenenobjekt (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)   
  [Name-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/name-property-ado-md.md)
+

@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: baee402a130847f732583db8de376c120acb1bfb
@@ -41,3 +42,4 @@ Gibt das Element, das das übergeordnete Element des aktuellen [Member](../../..
   
 ## <a name="see-also"></a>Siehe auch  
  [Children-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/children-property-ado-md.md)
+

@@ -21,6 +21,7 @@ caps.latest.revision: 53
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: efaa21099f422ae812168561351a359fc89f8e0d
@@ -296,3 +297,4 @@ ms.lasthandoff: 09/01/2017
  [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   
+

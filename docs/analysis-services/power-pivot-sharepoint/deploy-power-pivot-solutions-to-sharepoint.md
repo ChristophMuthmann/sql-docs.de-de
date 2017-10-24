@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8a9725c24b4cc324db21e9c39cdd9feef0829cae
@@ -157,3 +158,4 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
  [PowerPivot-Konfiguration mit Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  
   
   
+

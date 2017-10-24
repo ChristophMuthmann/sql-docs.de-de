@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 50e17b62aa6543cc7d8717cbc564056799ba7a78
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/01/2017
  [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md)  
   
   
+

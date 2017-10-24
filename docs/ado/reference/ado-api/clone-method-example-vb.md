@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c540b2231d4e1f6a9e55f7c173479ce17af68c84
@@ -134,3 +135,4 @@ End Sub
 ## <a name="see-also"></a>Siehe auch  
  [Clone-Methode (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

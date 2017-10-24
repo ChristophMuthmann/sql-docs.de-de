@@ -19,6 +19,7 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 06751ad71a12e537728167d4d8a9cdec0a870962
@@ -103,3 +104,4 @@ FROM Sales
  [Erstellen im Bereich einer Sitzung mit dem Namen Sets &#40; MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   
+

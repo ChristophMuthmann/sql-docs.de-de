@@ -15,6 +15,7 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3c220da116fb0294ad463d8a0e9c1e4ade6ce652
@@ -53,3 +54,4 @@ ms.lasthandoff: 09/01/2017
  [Datamining-Programmierung](../../analysis-services/data-mining-programming.md)  
   
   
+

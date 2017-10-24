@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2267d05f16baa2a592be067bad1b1476035bedfa
@@ -144,3 +145,4 @@ void PrintComError(_com_error &e) {
   
 ## <a name="see-also"></a>Siehe auch  
  [NextRecordset-Methode (ADO)](../../../ado/reference/ado-api/nextrecordset-method-ado.md)
+

@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cf0f8e2f68eccceecbbe7fe3b2c17039b55d2887
@@ -49,3 +50,4 @@ Für eine RDS [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md
 |AdoEnums.AdcPropAsyncThreadPriority.HIGHEST|  
 |AdoEnums.AdcPropAsyncThreadPriority.LOWEST|  
 |AdoEnums.AdcPropAsyncThreadPriority.NORMAL|
+

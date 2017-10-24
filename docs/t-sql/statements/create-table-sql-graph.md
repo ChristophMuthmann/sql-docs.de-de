@@ -35,6 +35,7 @@ caps.latest.revision: 1
 author: shkale-msft
 ms.author: shkale
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: c32a8c4f683f20c4384089c1d2552614090f9b3d

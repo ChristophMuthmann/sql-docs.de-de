@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f8e0e5661d3de714bd9e4c3a460e079b3e2ebc7c
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/01/2017
  Wenn Sie dieses englischsprachige Whitepaper lesen möchten, laden Sie das Word-Dokument [Deploying SQL Server 2016 PowerPivot and Power View in SharePoint 2016](http://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/Deploying%20SQL%20Server%202016%20PowerPivot%20and%20Power%20View%20in%20SharePoint%202016.docx) herunter.  
   
   
+

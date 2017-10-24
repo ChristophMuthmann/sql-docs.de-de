@@ -25,6 +25,7 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 4eb99ba6a7a5932bdf77df0a7931698ca503c4d7
@@ -74,3 +75,4 @@ DROP SERVICE [//Adventure-Works.com/Expenses] ;
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
+

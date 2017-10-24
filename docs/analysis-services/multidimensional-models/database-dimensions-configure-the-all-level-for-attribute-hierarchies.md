@@ -25,6 +25,7 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 2378dafcda0d9eca8786fb81cadfd44b22d0998b
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/01/2017
  [Definieren eines Standardelements](../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md)  
   
   
+

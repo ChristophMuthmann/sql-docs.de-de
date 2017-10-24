@@ -18,6 +18,7 @@ caps.latest.revision: 46
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 7b0e2b4020f3f9d27be84c1a6dc2f0944da88f5f
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/01/2017
  [Servereigenschaften in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
   
   
+

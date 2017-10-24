@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 10230d190b1534c5db2a7360bead3ec23f02cb67
@@ -83,3 +84,4 @@ __declspec(property(get=GetState)) enum ObjectStateEnum State;
   
 ## <a name="see-also"></a>Siehe auch  
  [Das Datensatzobjekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)
+

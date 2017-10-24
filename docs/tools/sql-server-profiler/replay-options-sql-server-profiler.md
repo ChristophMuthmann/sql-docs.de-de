@@ -19,6 +19,7 @@ caps.latest.revision: 17
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e334fe938bd9cc93854fc25e0074292a653bc3d7
@@ -87,3 +88,4 @@ ms.lasthandoff: 08/02/2017
  [Überlegungen zum Wiedergeben von Ablaufverfolgungen &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/considerations-for-replaying-traces-sql-server-profiler.md)  
   
   
+

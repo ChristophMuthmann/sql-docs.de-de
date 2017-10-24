@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d7648e91432bd90c03398e5189e4101b9741841c
@@ -53,3 +54,4 @@ Als allgemeine Regel sollte Ihre Anwendung den einfachsten Cursor verwenden den 
  [Statische Cursor](../../../ado/guide/data/static-cursors.md)   
  [KEYSET-Cursor](../../../ado/guide/data/keyset-cursors.md)   
  [Dynamische Cursor](../../../ado/guide/data/dynamic-cursors.md)
+

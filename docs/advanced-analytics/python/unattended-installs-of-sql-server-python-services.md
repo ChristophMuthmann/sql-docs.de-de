@@ -14,6 +14,7 @@ caps.latest.revision: 1
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9b9156a3dc9dec21187eec8dc0b5a44059fb5e31
@@ -73,3 +74,4 @@ Das folgende Beispiel zeigt die **minimale** erforderlichen Funktionen in der Be
 3.  Starten Sie SQL Server-Diensts für den neu konfigurierten Instanz neu. Auf diese Weise wird automatisch neu gestartet den zugehörigen [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] als auch Service.
 
 3. Möglicherweise sind weitere Schritte erforderlich, wenn Sie eine benutzerdefinierte Sicherheitskonfiguration verwenden, oder wenn Sie SQL Server einsetzen möchten, um Remoterechenkontexte zu unterstützen. Weitere Informationen finden Sie unter [Problembehandlung beim Machine Learning-Setup](../machine-learning-troubleshooting-faq.md).
+

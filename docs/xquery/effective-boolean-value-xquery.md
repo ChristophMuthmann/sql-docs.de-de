@@ -23,6 +23,7 @@ caps.latest.revision: 17
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b80d848571d645e6d12e512455ecaa3d66be32ce
@@ -99,3 +100,4 @@ go
  [FLWOR-Anweisung und Iteration &#40; XQuery &#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b074a26bdd82bd4356620dbd0b12dc0b7f1c75c7
@@ -82,3 +83,4 @@ Stellt einen Datenstrom von Binärdaten oder Text dar.
   
 ## <a name="see-also"></a>Siehe auch  
  [Datensätze und Datenströme](../../../ado/guide/data/records-and-streams.md)
+

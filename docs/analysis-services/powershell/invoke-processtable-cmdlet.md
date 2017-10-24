@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: d2298c9e882f3f754b16ce33bf6bc72dfc6d80ff
@@ -125,3 +126,4 @@ ms.lasthandoff: 09/01/2017
  Dieser Befehl verarbeitet eine tabellarische Metadatentabelle mit einem **enum** -Aktualisierungstyp.  
   
   
+

@@ -24,6 +24,7 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 32024dc0799fcc7324fd30349a65e741773db66b
@@ -79,3 +80,4 @@ ms.lasthandoff: 09/01/2017
  [Datamining-Lösungen](../../../analysis-services/data-mining/data-mining-solutions.md)  
   
   
+

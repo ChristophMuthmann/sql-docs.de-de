@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 16aad2cd94a457d3d6efe97326fdbe7e6c06e53d
@@ -49,3 +50,4 @@ Stellt ein Gruppenkonto, das über Zugriffsberechtigungen in einer gesicherten D
 ## <a name="see-also"></a>Siehe auch  
  [Groups-Auflistung (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
  [Users-Auflistung (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
+

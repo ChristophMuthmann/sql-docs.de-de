@@ -16,6 +16,7 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 1bfb3bdd7224a72849e35bd1433e59267b559f0f
@@ -323,3 +324,4 @@ ms.lasthandoff: 09/01/2017
  [Gewusst wie: Einrichten von SSL in IIS 7](http://go.microsoft.com/fwlink/?LinkId=207562)  
   
   
+

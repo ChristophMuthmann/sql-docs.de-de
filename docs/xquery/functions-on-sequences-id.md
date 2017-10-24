@@ -21,6 +21,7 @@ caps.latest.revision: 19
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 963e5eb2c2b0ddaec5674f2f7c5f930ed6c34806
@@ -190,3 +191,4 @@ select @x.query('declare namespace CustOrders="Customers";
  [Funktionen für Sequenzen](http://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
   
   
+

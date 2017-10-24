@@ -22,6 +22,7 @@ caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: f950e3bbeb239537bc606c38469b9fb79e36837b
@@ -80,3 +81,4 @@ ms.lasthandoff: 09/01/2017
  [XML-Daten &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)  
   
   
+

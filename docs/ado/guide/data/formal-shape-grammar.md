@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ae47b751e9e62d84188927186f186c6c9d344ce0
@@ -79,3 +80,4 @@ Dies ist die formale Grammatik für alle Form-Befehl zu erstellen:
  [Shape-Befehle im Allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)   
  [Shape-COMPUTE-Klausel](../../../ado/guide/data/shape-compute-clause.md)   
  [Visual Basic für Applikationen-Funktionen](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+

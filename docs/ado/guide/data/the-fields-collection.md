@@ -17,6 +17,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2c5d81985322b03892d17875959086078defd819
@@ -119,3 +120,4 @@ objField = objRecordset.Fields(0)
   
 ## <a name="see-also"></a>Siehe auch  
  [Fabricating hierarchische Recordsets](../../../ado/guide/data/fabricating-hierarchical-recordsets.md)
+

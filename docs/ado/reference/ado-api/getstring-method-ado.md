@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d146c1cdd2ebb4f069afef7163ce998cbb149ef6
@@ -66,3 +67,4 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
   
 ## <a name="see-also"></a>Siehe auch  
  [GetString-Methode (Beispiel) (VB)](../../../ado/reference/ado-api/getstring-method-example-vb.md)
+

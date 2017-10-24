@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d83ded9c35448040c60bb28bd314f39b02c08b05
@@ -102,3 +103,4 @@ ms.lasthandoff: 09/01/2017
  Auf der Seite **Assistenten abschließen** des Assistenten können Sie die Measuregruppen, Measures und Dimensionen im neuen Cube anzeigen. Geben Sie im Feld **Cubename** einen Namen für den Cube ein. Wenn der Cube Ihren Vorstellungen entspricht, klicken Sie auf **Fertig stellen**. Andernfalls klicken Sie auf **Zurück** , um zu einer vorherigen Assistentenseite zu wechseln und Änderungen vorzunehmen.  
   
   
+

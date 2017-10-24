@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 57a039333cd89dc45c3edfb6d9ba6b145c12c6d4
@@ -96,3 +97,4 @@ int main() {
   
 ## <a name="see-also"></a>Siehe auch  
  [Command-Eigenschaft (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)
+

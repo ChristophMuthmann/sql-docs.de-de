@@ -22,6 +22,7 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 5cb5b4ba4925661797760e906e36ddcec1526747
@@ -424,3 +425,4 @@ ORDER BY GROUPING_ID(DATEPART(yyyy,OrderDate)
  [GROUP BY &#40; Transact-SQL &#41;](../../t-sql/queries/select-group-by-transact-sql.md)  
   
   
+

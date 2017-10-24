@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6c1d1da58832a1fbbc133c17f58d940d46f5c6e1
@@ -36,3 +37,4 @@ strSQL = "DELETE FROM Shippers WHERE ShipperID = " & intId
 objConn1.Execute strSQL, , adCmdText + adExecuteNoRecords  
 'EndSQLDelete  
 ```
+

@@ -19,6 +19,7 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b0b17893425ea772c848b9fb20907c4e0899d1e3
@@ -131,3 +132,4 @@ Gibt den Typ des Schemas **Recordset** , die die [OpenSchema](../../../ado/refer
   
 ## <a name="applies-to"></a>Gilt für  
  [OpenSchema-Methode](../../../ado/reference/ado-api/openschema-method.md)
+
