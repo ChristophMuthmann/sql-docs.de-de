@@ -74,9 +74,9 @@ ms.lasthandoff: 09/26/2017
  Weitere Informationen zu den **Eingaben und Ausgaben** auf der Seite der **Skript Transformations-Editor**, finden Sie unter [Skript Transformations-Editor &#40; Eingaben und Ausgaben Seite &#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md).  
   
 ### <a name="adding-variables"></a>Hinzufügen von Variablen  
- Treten vorhandenen Variablen, deren Werte, die Sie in Ihrem Skript verwenden möchten, können Sie sie in den Eigenschaftenfeldern ReadOnlyVariables und ReadWriteVariables hinzufügen, auf die **Skript** auf der Seite der **Skript Transformations-Editor **.  
+ Treten vorhandenen Variablen, deren Werte, die Sie in Ihrem Skript verwenden möchten, können Sie sie in den Eigenschaftenfeldern ReadOnlyVariables und ReadWriteVariables hinzufügen, auf die **Skript** auf der Seite der **Skript Transformations-Editor** .  
   
- Wenn Sie mehrere Variablen in die Eigenschaftsfelder hinzufügen, trennen Sie die Variablennamen durch Kommas. Sie können auch mehrere Variablen auswählen, indem Sie auf die Auslassungspunkte (**... **) neben dem **ReadOnlyVariables** und **ReadWriteVariables** Eigenschaftenfelder, und wählen Sie dann die Variablen in der **Variablen auswählen** Das Dialogfeld.  
+ Wenn Sie mehrere Variablen in die Eigenschaftsfelder hinzufügen, trennen Sie die Variablennamen durch Kommas. Sie können auch mehrere Variablen auswählen, indem Sie auf die Auslassungspunkte (**...** ) neben dem **ReadOnlyVariables** und **ReadWriteVariables** Eigenschaftenfelder, und wählen Sie dann die Variablen in der **Variablen auswählen** Das Dialogfeld.  
   
  Allgemeine Informationen zur Verwendung von Variablen mit der Skriptkomponente finden Sie unter [Using Variables in the Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -112,7 +112,7 @@ ms.lasthandoff: 09/26/2017
  Dieses Beispiel zeigt die benutzerdefinierten Code, der in der ScriptMain-Klasse zum Erstellen einer asynchronen Transformationskomponente erforderlich ist.  
   
 > [!NOTE]  
->  Diese Beispiele verwenden die **Person.Address** -Tabelle in der **AdventureWorks** Beispieldatenbank aus, und übergeben Sie die erste und die vierte Spalte, die **IntAddressID** und ** Nvarchar (30) City** Spalten, durch den Datenfluss. Die gleichen Daten werden in den Quellen-, Transformations- und Zielbeispielen in diesem Abschnitt verwendet. Zusätzliche Voraussetzungen und Annahmen werden für jedes Beispiel dokumentiert.  
+>  Diese Beispiele verwenden die **Person.Address** -Tabelle in der **AdventureWorks** Beispieldatenbank aus, und übergeben Sie die erste und die vierte Spalte, die **IntAddressID** und  **Nvarchar (30) City** Spalten, durch den Datenfluss. Die gleichen Daten werden in den Quellen-, Transformations- und Zielbeispielen in diesem Abschnitt verwendet. Zusätzliche Voraussetzungen und Annahmen werden für jedes Beispiel dokumentiert.  
   
  Dieses Beispiel zeigt eine asynchrone Transformationskomponente mit zwei Ausgaben. Diese Transformation durchläuft die **AddressID** und **City** Spalten, die eine Ausgabe, während die Anzahl der Adressen in einer bestimmten Stadt (Redmond, Washington, USA) gezählt, und klicken Sie dann Ausgaben der der Ergebniswert an eine zweite Ausgabe.  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 09/26/2017
   
 1.  Fügen Sie der Datenfluss-Designeroberfläche eine neue Skriptkomponente hinzu, und konfigurieren Sie sie als Transformation.  
   
-2.  Verbinden Sie die Ausgabe einer Quelle einer anderen Transformation mit der neuen Transformation im Designer. Geben Sie diese Ausgabe sollte Daten aus der **Person.Address** Tabelle mit den **AdventureWorks** -Beispieldatenbank, die enthält mindestens die **AddressID** und ** City** Spalten.  
+2.  Verbinden Sie die Ausgabe einer Quelle einer anderen Transformation mit der neuen Transformation im Designer. Geben Sie diese Ausgabe sollte Daten aus der **Person.Address** Tabelle mit den **AdventureWorks** -Beispieldatenbank, die enthält mindestens die **AddressID** und  **City** Spalten.  
   
 3.  Öffnen der **Skript Transformations-Editor**. Auf der **Eingabespalten** Seite der **AddressID** und **City** Spalten.  
   

@@ -48,7 +48,7 @@ RetainFiles|Gibt an, ob die zu Azure Storage hochgeladenen Dateien beibehalten w
 CompressionType|Gibt an, welches Komprimierungsformat beim Hochladen von Dateien in Azure Storage verwendet werden soll. Die lokale Quelle ist nicht betroffen.
 CompressionLevel|Gibt an, welcher Komprimierungsgrad für das Komprimierungsformat verwendet werden soll.
 AzureDwConnection|Gibt einen ADO.NET-Verbindungs-Manager für Azure SQL Data Warehouse an.
-TableName|Gibt den Namen der Zieltabelle an. Wählen Sie den Tabellennamen einer vorhandenen oder ein neues erstellen, indem Sie auswählen ** \<... neuen Tabelle >**.
+TableName|Gibt den Namen der Zieltabelle an. Wählen Sie den Tabellennamen einer vorhandenen oder ein neues erstellen, indem Sie auswählen  **\<... neuen Tabelle >**.
 TableDistribution|Gibt die Verteilungsmethode für die neue Tabelle an. Gilt, wenn für **TableName**ein neuer Tabellenname angegeben wird.
 HashColumnName|Gibt an, welche Spalte für die Verteilung der Hashtabelle verwendet werden soll. Gilt, wenn **HASH** für **TableDistribution**angegeben wird.
 

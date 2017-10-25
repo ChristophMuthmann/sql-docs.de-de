@@ -26,8 +26,8 @@ ms.lasthandoff: 09/26/2017
   
 ##  <a name="wizardMapping"></a> Wie ordnet der Assistent Datentypen zwischen Quelle und Ziel zu?
 Der Assistent verwendet die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installierten Zuordnungsdateien, um Datentypen aus einem Datenbanksystem oder einer Datenbankversion einem anderen System bzw. einer anderen Version zuzuordnen. Beispielsweise ist eine Zuordnung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen zu Oracle-Datentypen möglich. Standardmäßig werden die Zuordnungsdateien im XML-Format in den folgenden Ordnern installiert.
--   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\* * (für 64-Bit)
--   **C:\Programme\Microsoft Dateien (x86) \Microsoft SQL Server\130\DTSMappingFiles\* * (für 32-Bit).  
+-   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\**  (für 64-Bit)
+-   **C:\Programme\Microsoft Dateien (x86) \Microsoft SQL Server\130\DTSMappingFiles\**  (für 32-Bit).  
   
  Wenn Sie eine vorhandene Zuordnungsdatei bearbeiten oder dem Ordner eine neue Zuordnungsdatei hinzufügen, müssen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistenten bzw. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] schließen und anschließend erneut öffnen, um die neue oder geänderte Zuordnungsdatei zu laden.  
  

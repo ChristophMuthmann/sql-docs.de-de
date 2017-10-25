@@ -60,7 +60,7 @@ ms.lasthandoff: 09/26/2017
   
      Sie können ein lokales Windows-Konto oder ein Windows-Domänenkonto für das Dienstkonto verwenden. In diesem Fall müssen Sie das **Kennwort** für dieses Konto eingeben. Dieses Konto kann für den lokalen Host gelten oder ein Domänenkonto sein. Beachten Sie, dass Sie das Kennwort, falls es sich ändert, in der Windows-Systemsteuerung unter Lokale Dienste aktualisieren müssen.  
   
- **Servernamen**: Wählen Sie das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz für die Verbindung (z. B. ** \\ \\< Computer_name >\\< Instance_name >**). Standardmäßig wird die Serverinstanz angezeigt, mit der zuletzt eine Verbindung bestanden hat.  
+ **Servernamen**: Wählen Sie das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz für die Verbindung (z. B.  **\\ \\< Computer_name >\\< Instance_name >**). Standardmäßig wird die Serverinstanz angezeigt, mit der zuletzt eine Verbindung bestanden hat.  
   
  **Authentifizierung**  
  Wählen Sie eine der folgenden Optionen aus:  

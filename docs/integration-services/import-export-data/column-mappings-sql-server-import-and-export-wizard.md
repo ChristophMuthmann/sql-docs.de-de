@@ -56,9 +56,9 @@ Klicken Sie auf **SQL bearbeiten** , um das Dialogfeld **SQL-Anweisung CREATE TA
 ### <a name="sometimes-these-options-are-disabled"></a>In einigen Fällen sind diese Optionen deaktiviert.
 Die **Zieltabelle erstellen** Option und die **SQL bearbeiten** Schaltfläche werden automatisch aktiviert, oder automatisch deaktiviert.
 
--   **Aktiviert.** Wenn Sie angegeben haben eine **neue** Zieltabelle auf die **Quelltabellen und Sichten auswählen** Seite der **Zieltabelle erstellen** automatisch ausgewählt ist und die ** SQL bearbeiten** Schaltfläche ist aktiviert.
+-   **Aktiviert.** Wenn Sie angegeben haben eine **neue** Zieltabelle auf die **Quelltabellen und Sichten auswählen** Seite der **Zieltabelle erstellen** automatisch ausgewählt ist und die  **SQL bearbeiten** Schaltfläche ist aktiviert.
 
--   **Deaktiviert.** Bei Auswahl einer **vorhandenen** Zieltabelle auf die **wählen Quelltabellen und-Sichten** Seite der **Zieltabelle erstellen** Option und die **SQL bearbeiten ** Schaltfläche deaktiviert werden. Wenn Sie eine neue Zieltabelle erstellen möchten, wechseln Sie zurück, um die **Quelltabellen und Sichten auswählen** Seite, und geben Sie den Namen des eine **neue** -Tabelle in der **Ziel** Spalte.  
+-   **Deaktiviert.** Bei Auswahl einer **vorhandenen** Zieltabelle auf die **wählen Quelltabellen und-Sichten** Seite der **Zieltabelle erstellen** Option und die **SQL bearbeiten**  Schaltfläche deaktiviert werden. Wenn Sie eine neue Zieltabelle erstellen möchten, wechseln Sie zurück, um die **Quelltabellen und Sichten auswählen** Seite, und geben Sie den Namen des eine **neue** -Tabelle in der **Ziel** Spalte.  
 
 ## <a name="what-about-existing-data-in-the-destination"></a>Was ist mit der vorhandenen Daten in das Ziel?
 ![Spalte Seite "Zuordnungen", im Abschnitt ""](../../integration-services/import-export-data/media/column-mappings-page-options-section.png)

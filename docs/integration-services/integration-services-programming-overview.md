@@ -64,9 +64,9 @@ ms.lasthandoff: 09/26/2017
 >  Die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Anwendungsprogrammierschnittstellen sind mit COM-basierten Skriptsprachen, z. B. VBScript, nicht kompatibel.  
   
 ## <a name="locating-assemblies"></a>Suchen von Assemblys  
- In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] wurden die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Assemblys auf .NET 4.0 aktualisiert. Es ist ein separater globaler Assemblycache für .NET 4 unter * \<Laufwerk >*: \Windows\Microsoft.NET\assembly. Normalerweise befinden sich alle [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Assemblys unter diesem Pfad im Ordner GAC_MSIL.  
+ In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] wurden die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Assemblys auf .NET 4.0 aktualisiert. Es ist ein separater globaler Assemblycache für .NET 4 unter  *\<Laufwerk >*: \Windows\Microsoft.NET\assembly. Normalerweise befinden sich alle [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Assemblys unter diesem Pfad im Ordner GAC_MSIL.  
   
- Wie in früheren Versionen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], den Kern [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] DLL-Dateien befinden sich auch am * \<Laufwerk >*: \Programme\Microsoft SQL Server\100\SDK\Assemblies.  
+ Wie in früheren Versionen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], den Kern [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] DLL-Dateien befinden sich auch am  *\<Laufwerk >*: \Programme\Microsoft SQL Server\100\SDK\Assemblies.  
   
 ## <a name="commonly-used-assemblies"></a>Häufig verwendete Assemblys  
  In der folgenden Tabelle sind die Assemblys, die häufig beim Programmieren von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] mithilfe von [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] verwendet werden, aufgelistet.  

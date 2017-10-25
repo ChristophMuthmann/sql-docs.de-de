@@ -39,11 +39,11 @@ In diesem Thema werden die Schritte beschrieben, um ein neues Ziel mithilfe des 
   
 3.  Wählen Sie den Zieltyp in der Liste **Typ** aus.  
   
-4.  Wählen Sie einen vorhandenen Verbindungs-Manager in der **Verbindungs-Manager** aus, oder wählen Sie ** \<neu >** an einen neuen Verbindungs-Manager zu erstellen.  
+4.  Wählen Sie einen vorhandenen Verbindungs-Manager in der **Verbindungs-Manager** aus, oder wählen Sie  **\<neu >** an einen neuen Verbindungs-Manager zu erstellen.  
   
 5.  Wenn Sie einen vorhandenen Verbindungs-Manager auswählen, klicken Sie auf **OK** , um das Dialogfeld **Neues Ziel hinzufügen** zu schließen. Sie sollten nun das Ziel und die Verbindungs-Manager sehen, die dem Datenfluss hinzugefügt wurden.  
   
-6.  Wenn Sie auf ** \<neu >** um einen neuen Verbindungs-Manager erstellen, sehen Sie eine **Verbindungs-Manager** (Dialogfeld), in dem Sie Parameter für die Verbindung angeben kann. Nachdem Sie einen neuen Verbindungs-Managers erstellt haben, werden das Ziel und der Verbindungs-Manager in SSIS-Designer angezeigt. 
+6.  Wenn Sie auf  **\<neu >** um einen neuen Verbindungs-Manager erstellen, sehen Sie eine **Verbindungs-Manager** (Dialogfeld), in dem Sie Parameter für die Verbindung angeben kann. Nachdem Sie einen neuen Verbindungs-Managers erstellt haben, werden das Ziel und der Verbindungs-Manager in SSIS-Designer angezeigt. 
   
 ## <a name="add-new-destination-dialog-box"></a>Dialogfeld für neues Ziel hinzufügen
 Die folgende Tabelle enthält die verfügbaren Optionen auf der **neues Ziel hinzufügen** (Dialogfeld).  
@@ -51,7 +51,7 @@ Die folgende Tabelle enthält die verfügbaren Optionen auf der **neues Ziel hin
 |Option|Description|  
 |------------|-----------------|  
 |Typen|Wählen Sie den Zieltyp aus, mit dem Sie eine Verbindung herstellen möchten.|  
-|Verbindungs-Manager|Wählen Sie einen vorhandenen Verbindungs-Manager, oder klicken Sie auf ** \<neu >** an einen neuen Verbindungs-Manager zu erstellen.|  
+|Verbindungs-Manager|Wählen Sie einen vorhandenen Verbindungs-Manager, oder klicken Sie auf  **\<neu >** an einen neuen Verbindungs-Manager zu erstellen.|  
 |Nur installierte anzeigen|Geben Sie an, ob nur installierte Ziele angezeigt werden sollen.|  
 |OK|Klicken Sie auf diese Schaltfläche, um die Änderungen zu speichern, und öffnen Sie die entsprechenden nachfolgenden Dialogfelder, um zusätzliche Optionen zu konfigurieren.|  
 

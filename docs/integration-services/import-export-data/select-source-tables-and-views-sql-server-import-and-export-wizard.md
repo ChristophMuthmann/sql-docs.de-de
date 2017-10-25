@@ -30,7 +30,7 @@ ms.lasthandoff: 09/26/2017
 > Wenn Sie mehr als eine SQL Server-Datenbank oder SQL Server-Datenbankobjekte Ausnahme Tabellen und Sichten kopieren müssen, verwenden Sie the Copy Database Wizard anstelle des Import / Export-Assistenten. Weitere Informationen finden Sie unter [Verwenden des Assistenten zum Kopieren von Datenbanken](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="screen-shot---if-youre-going-to-copy-tables"></a>Screenshot – Wenn Sie, zum Kopieren von Tabellen Vorhaben  
- Der folgende Screenshot zeigt ein Beispiel der **wählen Quelltabellen und-Sichten** Seite des Assistenten, wenn Sie zuvor ausgewählt haben die **Kopieren von Daten aus Tabellen oder Sichten** option der ** Tabelle kopieren oder Datenbank Abfragen** Seite. In der Liste finden Sie alle in der Datenquelle verfügbaren Tabellen und Sichten.
+ Der folgende Screenshot zeigt ein Beispiel der **wählen Quelltabellen und-Sichten** Seite des Assistenten, wenn Sie zuvor ausgewählt haben die **Kopieren von Daten aus Tabellen oder Sichten** option der  **Tabelle kopieren oder Datenbank Abfragen** Seite. In der Liste finden Sie alle in der Datenquelle verfügbaren Tabellen und Sichten.
  
 In diesem Beispiel wird die **Quelle** Liste enthält alle Tabellen in der AdventureWorks-Beispieldatenbank. Die ausgewählte Zeile zeigt, dass der Benutzer möchte kopieren Sie die **Sales.Customer** Tabelle aus der Quelldatenbank in die neue **Sales.CustomerNew** Tabelle am Ziel. 
    
