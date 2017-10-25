@@ -43,7 +43,7 @@ ms.lasthandoff: 09/26/2017
   
 -   Die **"OdbcCommand"** Positionsparameter erwartet. Die Position von Parametern wird durch die Fragezeichen (?) im Text des Befehls angegeben. (Im Gegensatz dazu eine **"SqlCommand"** benannte Parameter erwartet.)  
   
- Dieses Beispiel verwendet die **Person.Address** -Tabelle in der **AdventureWorks** -Beispieldatenbank. Das Beispiel übergibt die erste und vierte Spalte, die * *Int*AddressID*** und **Nvarchar (30) City** Spalten dieser Tabelle durch den Datenfluss. Diese Daten werden in der Quelle, Transformation und zielbeispielen in diesem Thema, [Entwickeln von bestimmten Arten von Skriptkomponenten](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
+ Dieses Beispiel verwendet die **Person.Address** -Tabelle in der **AdventureWorks** -Beispieldatenbank. Das Beispiel übergibt die erste und vierte Spalte, die  **Int*AddressID*** und **Nvarchar (30) City** Spalten dieser Tabelle durch den Datenfluss. Diese Daten werden in der Quelle, Transformation und zielbeispielen in diesem Thema, [Entwickeln von bestimmten Arten von Skriptkomponenten](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>So konfigurieren Sie dieses Skriptkomponentenbeispiel  
   

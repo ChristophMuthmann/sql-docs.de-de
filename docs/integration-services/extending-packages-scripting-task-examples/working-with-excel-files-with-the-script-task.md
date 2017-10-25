@@ -93,7 +93,7 @@ ms.lasthandoff: 09/26/2017
   
          -oder-  
   
-    -   Klicken Sie auf die Auslassungspunkte (**... **) Schaltfläche neben dem Eigenschaftsfeld, und in der **Variablen auswählen** wählen Sie im Dialogfeld die **ExcelFile** Variable.  
+    -   Klicken Sie auf die Auslassungspunkte (**...** ) Schaltfläche neben dem Eigenschaftsfeld, und in der **Variablen auswählen** wählen Sie im Dialogfeld die **ExcelFile** Variable.  
   
 3.  Klicken Sie auf **ReadWriteVariables** , und geben Sie den Eigenschaftswert mit einer der folgenden Methoden:  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 09/26/2017
   
          -oder-  
   
-    -   Klicken Sie auf die Auslassungspunkte (**... **) Schaltfläche neben dem Eigenschaftsfeld, und in der **Variablen auswählen** wählen Sie im Dialogfeld die **ExcelFileExists** Variable.  
+    -   Klicken Sie auf die Auslassungspunkte (**...** ) Schaltfläche neben dem Eigenschaftsfeld, und in der **Variablen auswählen** wählen Sie im Dialogfeld die **ExcelFileExists** Variable.  
   
 4.  Klicken Sie auf **Bearbeitungsskript** auf den Skripteditor zu öffnen.  
   
@@ -163,7 +163,7 @@ public class ScriptMain
   
          -oder-  
   
-    -   Klicken Sie auf die Auslassungspunkte (**... **) Schaltfläche neben dem Eigenschaftsfeld, und in der **Variablen auswählen** wählen Sie im Dialogfeld die **ExcelTable** und **ExcelFile** Variablen.  
+    -   Klicken Sie auf die Auslassungspunkte (**...** ) Schaltfläche neben dem Eigenschaftsfeld, und in der **Variablen auswählen** wählen Sie im Dialogfeld die **ExcelTable** und **ExcelFile** Variablen.  
   
 3.  Klicken Sie auf **ReadWriteVariables** , und geben Sie den Eigenschaftswert mit einer der folgenden Methoden:  
   
@@ -171,7 +171,7 @@ public class ScriptMain
   
          -oder-  
   
-    -   Klicken Sie auf die Auslassungspunkte (**... **) Schaltfläche neben dem Eigenschaftsfeld, und in der **Variablen auswählen** wählen Sie im Dialogfeld die **ExcelTableExists** Variable.  
+    -   Klicken Sie auf die Auslassungspunkte (**...** ) Schaltfläche neben dem Eigenschaftsfeld, und in der **Variablen auswählen** wählen Sie im Dialogfeld die **ExcelTableExists** Variable.  
   
 4.  Klicken Sie auf **Bearbeitungsskript** auf den Skripteditor zu öffnen.  
   
@@ -270,7 +270,7 @@ public class ScriptMain
   
          -oder-  
   
-    -   Klicken Sie auf die Auslassungspunkte (**... **) Schaltfläche neben dem Eigenschaftsfeld, und in der **Variablen auswählen** Dialogfeld wählen die Variable ExcelFolder.  
+    -   Klicken Sie auf die Auslassungspunkte (**...** ) Schaltfläche neben dem Eigenschaftsfeld, und in der **Variablen auswählen** Dialogfeld wählen die Variable ExcelFolder.  
   
 3.  Klicken Sie auf **ReadWriteVariables** , und geben Sie den Eigenschaftswert mit einer der folgenden Methoden:  
   
@@ -278,7 +278,7 @@ public class ScriptMain
   
          -oder-  
   
-    -   Klicken Sie auf die Auslassungspunkte (**... **) Schaltfläche neben dem Eigenschaftsfeld, und in der **Variablen auswählen** Dialogfeld wählen die Variable ExcelFiles.  
+    -   Klicken Sie auf die Auslassungspunkte (**...** ) Schaltfläche neben dem Eigenschaftsfeld, und in der **Variablen auswählen** Dialogfeld wählen die Variable ExcelFiles.  
   
 4.  Klicken Sie auf **Bearbeitungsskript** auf den Skripteditor zu öffnen.  
   
@@ -345,7 +345,7 @@ public class ScriptMain
   
          -oder-  
   
-    -   Klicken Sie auf die Auslassungspunkte (**... **) Schaltfläche neben dem Eigenschaftsfeld, und in der **Variablen auswählen** Dialogfeld Feld, wählen Sie die Variable ExcelFile.  
+    -   Klicken Sie auf die Auslassungspunkte (**...** ) Schaltfläche neben dem Eigenschaftsfeld, und in der **Variablen auswählen** Dialogfeld Feld, wählen Sie die Variable ExcelFile.  
   
 3.  Klicken Sie auf **ReadWriteVariables** , und geben Sie den Eigenschaftswert mit einer der folgenden Methoden:  
   
@@ -353,7 +353,7 @@ public class ScriptMain
   
          -oder-  
   
-    -   Klicken Sie auf die Auslassungspunkte (**... **) Schaltfläche neben dem Eigenschaftsfeld, und in der **Variablen auswählen** Dialogfeld wählen die ExcelTablesvariable.  
+    -   Klicken Sie auf die Auslassungspunkte (**...** ) Schaltfläche neben dem Eigenschaftsfeld, und in der **Variablen auswählen** Dialogfeld wählen die ExcelTablesvariable.  
   
 4.  Klicken Sie auf **Bearbeitungsskript** auf den Skripteditor zu öffnen.  
   
@@ -458,7 +458,7 @@ public class ScriptMain
   
          -oder-  
   
-    -   Klicken Sie auf die Auslassungspunkte (**... **) Schaltfläche neben dem Eigenschaftsfeld, und in der **Variablen auswählen** (Dialogfeld), die Variablen.  
+    -   Klicken Sie auf die Auslassungspunkte (**...** ) Schaltfläche neben dem Eigenschaftsfeld, und in der **Variablen auswählen** (Dialogfeld), die Variablen.  
   
 5.  Klicken Sie auf **Bearbeitungsskript** auf den Skripteditor zu öffnen.  
   

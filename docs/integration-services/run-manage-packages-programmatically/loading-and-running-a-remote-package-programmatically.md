@@ -168,7 +168,7 @@ namespace LaunchSSISPackageAgent_CS
   
 1.  Öffnen Sie Visual Studio, und erstellen Sie in der gewünchsten Programmiersprache ein Webdienstprojekt. Im Beispielcode wird der Name "LaunchSSISPackageService" für das Projekt verwendet.  
   
-2.  Hinzufügen eines Verweises auf **Microsoft.SqlServer.ManagedDTS** und Hinzufügen einer **Importe** oder **mit** Anweisung, um die Codedatei für die ** Microsoft.SqlServer.Dts.Runtime** Namespace.  
+2.  Hinzufügen eines Verweises auf **Microsoft.SqlServer.ManagedDTS** und Hinzufügen einer **Importe** oder **mit** Anweisung, um die Codedatei für die  **Microsoft.SqlServer.Dts.Runtime** Namespace.  
   
 3.  Fügen Sie den Beispielcode für die LaunchPackage-Webdienstmethode in die Klasse ein. (Im Beispiel ist der gesamte Inhalt des Codefensters dargestellt.)  
   

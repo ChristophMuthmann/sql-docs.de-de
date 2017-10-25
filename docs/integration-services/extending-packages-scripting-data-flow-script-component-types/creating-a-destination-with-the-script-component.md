@@ -37,7 +37,7 @@ ms.lasthandoff: 09/26/2017
  Die Skriptkomponente und der Infrastrukturcode, den sie generieren, erleichtern Ihnen die Entwicklung benutzerdefinierter Datenflusskomponenten deutlich. Jedoch, um die Funktionsweise der Skriptkomponente zu verstehen, Sie finden es vielleicht hilfreich, lesen die Schritte für die Entwicklung von benutzerdefinierten Datenflusskomponenten in der [Entwickeln einer benutzerdefinierten Datenflusskomponente](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) Abschnitt, und zwar insbesondere [Entwickeln einer benutzerdefinierten Zielkomponente](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md).  
   
 ## <a name="getting-started-with-a-destination-component"></a>Erste Schritte mit einer Zielkomponente  
- Wenn Sie eine Skriptkomponente hinzufügen, auf der Registerkarte Datenfluss des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer die **Skriptkomponententyp** Dialogfeld wird geöffnet und fordert Sie zum Auswählen einer **Quelle**, **Ziel **, oder **Transformation** Skript. Wählen Sie in diesem Dialogfeld **Ziel**.  
+ Wenn Sie eine Skriptkomponente hinzufügen, auf der Registerkarte Datenfluss des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer die **Skriptkomponententyp** Dialogfeld wird geöffnet und fordert Sie zum Auswählen einer **Quelle**, **Ziel** , oder **Transformation** Skript. Wählen Sie in diesem Dialogfeld **Ziel**.  
   
  Verbinden Sie anschließend die Ausgabe einer Transformation mit der Zielkomponente im [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer. Für Tests können Sie ohne Transformationen direkt eine Quelle mit einem Ziel verbinden.  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 09/26/2017
 ### <a name="adding-variables"></a>Hinzufügen von Variablen  
  Wenn Sie vorhandene Variablen in Ihrem Skript verwenden möchten, können Sie diese im Hinzufügen der **ReadOnlyVariables** und **ReadWriteVariables** Eigenschaftsfeldern für die **Skript** auf der Seite der **Skript Transformations-Editor**.  
   
- Wenn Sie mehrere Variablen in die Eigenschaftsfelder hinzufügen, trennen Sie die Variablennamen durch Kommas. Sie können auch mehrere Variablen auswählen, indem Sie auf die Auslassungspunkte (**... **) neben dem **ReadOnlyVariables** und **ReadWriteVariables** Eigenschaftenfelder, und wählen Sie dann die Variablen in der **Variablen auswählen** Das Dialogfeld.  
+ Wenn Sie mehrere Variablen in die Eigenschaftsfelder hinzufügen, trennen Sie die Variablennamen durch Kommas. Sie können auch mehrere Variablen auswählen, indem Sie auf die Auslassungspunkte (**...** ) neben dem **ReadOnlyVariables** und **ReadWriteVariables** Eigenschaftenfelder, und wählen Sie dann die Variablen in der **Variablen auswählen** Das Dialogfeld.  
   
  Allgemeine Informationen zur Verwendung von Variablen mit der Skriptkomponente finden Sie unter [Using Variables in the Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -107,7 +107,7 @@ ms.lasthandoff: 09/26/2017
  Die nachstehenden Beispielen wird Code, der erforderlich ist, in der **ScriptMain** Klasse zur Erstellung einer Zielkomponente.  
   
 > [!NOTE]  
->  Diese Beispiele verwenden die **Person.Address** -Tabelle in der **AdventureWorks** Beispieldatenbank aus, und übergeben Sie die erste und die vierte Spalte, die * *Int*AddressID *** und **Nvarchar (30) City** Spalten, durch den Datenfluss. Die gleichen Daten werden in den Quellen-, Transformations- und Zielbeispielen in diesem Abschnitt verwendet. Zusätzliche Voraussetzungen und Annahmen werden für jedes Beispiel dokumentiert.  
+>  Diese Beispiele verwenden die **Person.Address** -Tabelle in der **AdventureWorks** Beispieldatenbank aus, und übergeben Sie die erste und die vierte Spalte, die  **Int*AddressID* ** und **Nvarchar (30) City** Spalten, durch den Datenfluss. Die gleichen Daten werden in den Quellen-, Transformations- und Zielbeispielen in diesem Abschnitt verwendet. Zusätzliche Voraussetzungen und Annahmen werden für jedes Beispiel dokumentiert.  
   
 ### <a name="adonet-destination-example"></a>Beispiel ADO.NET-Ziel  
  Dieses Beispiel zeigt eine Zielkomponente, die einen vorhandenen [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Verbindungs-Manager zum Speichern von Daten aus dem Datenfluss in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle.  
@@ -125,7 +125,7 @@ ms.lasthandoff: 09/26/2017
   
 3.  Fügen Sie der Oberfläche des Datenfluss-Designers eine neue Skriptkomponente hinzu, und konfigurieren Sie sie als Ziel.  
   
-4.  Verbinden Sie die Ausgabe einer Upstreamquelle oder Transformation mit der Zielkomponente im [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer. (Sie können eine Quelle ohne Transformationen direkt mit einem Ziel verbinden.) Geben Sie diese Ausgabe sollte Daten aus der **Person.Address** Tabelle mit den **AdventureWorks** -Beispieldatenbank, die enthält mindestens die **AddressID** und ** City** Spalten.  
+4.  Verbinden Sie die Ausgabe einer Upstreamquelle oder Transformation mit der Zielkomponente im [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer. (Sie können eine Quelle ohne Transformationen direkt mit einem Ziel verbinden.) Geben Sie diese Ausgabe sollte Daten aus der **Person.Address** Tabelle mit den **AdventureWorks** -Beispieldatenbank, die enthält mindestens die **AddressID** und  **City** Spalten.  
   
 5.  Öffnen der **Skript Transformations-Editor**. Auf der **Eingabespalten** Seite der **AddressID** und **City** Eingabespalten verwendet werden sollen.  
   
