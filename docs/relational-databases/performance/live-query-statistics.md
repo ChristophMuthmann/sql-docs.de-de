@@ -20,19 +20,17 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7dbc7ae9097c4bd8e6083a9d392b6ae8fc562f4b
+ms.translationtype: HT
+ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
+ms.openlocfilehash: 32ce19a31e38ce457ae8b3ea37fa863a74a8902b
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/21/2017
 
 ---
 # <a name="live-query-statistics"></a>Live-Abfragestatistik
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] bietet die Möglichkeit, den Live-Ausführungsplan einer aktiven Abfrage anzuzeigen. Dieser Live-Abfrageplan bietet Einblicke in Echtzeit in den Abfrageausführungsprozess, während die Steuerelemente von einem Abfrageplanoperator zu einem anderen übertragen werden. Der Live-Abfrageplan zeigt den gesamten Abfragestatus und die Laufzeit-Ausführungsstatistik auf Operatorebene an, wie z.B. die Anzahl der erzeugten Zeilen, die verstrichene Zeit, den Operatorstatus usw. Da diese Daten in Echtzeit verfügbar sind und es nicht nötig ist, auf den Abschluss der Abfrage zu warten, sind diese Ausführungsstatistiken äußerst nützlich für das Debuggen von Leistungsproblemen in Zusammenhang mit Abfragen. Diese Funktion ist ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] verfügbar, funktioniert unter Umständen jedoch auch mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
-||  
-|-|  
-|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [aktuelle Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [aktuelle Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
 > [!WARNING]  
 >  Diese Funktion wird hauptsächlich für Problembehandlungszwecke vorgesehen. Mit dieser Funktion kann die gesamte Abfrageleistung leicht verlangsamt werden. Diese Funktion kann mit dem [Transact-SQL-Debugger](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)verwendet werden.  
@@ -68,7 +66,7 @@ Bis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]gibt es zwei weitere Method
 
 Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 umfasst [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine einfache Version der Infrastruktur des Statistikprofils. Es gibt zwei Methoden, die einfache Version der Statistikinfrastruktur zu aktivieren, die verwendet werden kann, um die Statistiken für aktive Abfragen aus anderen Sitzungen (z.B. vom Aktivitätsmonitor) anzuzeigen:
 
--   Verwenden des globalen Ablaufverfolgungsflags 7412.  
+-   Verwenden des globalen Ablaufverfolgungsflags 7412  
   
  oder  
   

@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 7eb8ea4b29caaf7f1600bbd31db4f669b86476c1
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 715ce3fff853f4eab433d095ffd952033defad69
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Zurückgeben von Daten von einer gespeicherten Prozedur
@@ -111,7 +111,7 @@ GO
     >  Der geschlossene Status ist nur zum Zeitpunkt der Rückgabe relevant. Beispielsweise ist es zulässig, einen Cursor während eines Teils der Prozedur zu schließen, ihn zu einem späteren Zeitpunkt in der Prozedur wieder zu öffnen und das Resultset dieses Cursors an den aufrufenden Batch, die aufrufende Prozedur oder den aufrufenden Trigger zurückzugeben.  
   
 ### <a name="examples-of-cursor-output-parameters"></a>Beispiele für Cursorausgabeparameter  
- Im folgenden Beispiel wird eine gespeicherte Prozedur mit einem Ausgabeparameter `@currency`_`cursor` vom Datentyp **cursor** erstellt. Die Prozedur wird anschließend in einem Batch aufgerufen.  
+ Im folgenden Beispiel wird eine gespeicherte Prozedur mit einem Ausgabeparameter `@currency_cursor` vom Datentyp **cursor** erstellt. Die Prozedur wird anschließend in einem Batch aufgerufen.  
   
  Zuerst wird die Prozedur erstellt, die einen Cursor für die Currency-Tabelle deklariert und dann öffnet.  
   

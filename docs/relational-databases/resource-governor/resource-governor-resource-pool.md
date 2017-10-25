@@ -1,7 +1,7 @@
 ---
 title: "Ressourcenpool für die Ressourcenkontrolle | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 03/17/2016
+ms.date: 10/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,11 +18,11 @@ caps.latest.revision: 17
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 10b74a185e59a6b2973ea17fb4c68b61e781953f
+ms.translationtype: HT
+ms.sourcegitcommit: 5bca339c13cb407e497cfa283a08833f2f4e666a
+ms.openlocfilehash: e016d57148d09109f894269007d613774c4e8263
 ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/23/2017
 
 ---
 # <a name="resource-governor-resource-pool"></a>Ressourcenpool für die Ressourcenkontrolle
@@ -53,11 +53,19 @@ ms.lasthandoff: 06/22/2017
   
      Diese Einstellungen entsprechen den minimalen und maximalen physischen E/A-Vorgängen, die pro Sekunde und pro Datenträgervolume für einen Ressourcenpool ausgeführt werden. Über diese Einstellungen können Sie die physischen E/A-Befehle steuern, die für Benutzerthreads eines bestimmten Ressourcenpools ausgegeben werden. Beispielsweise generiert die Vertriebsabteilung mehrere Monatsabschlussberichte in großen Batches. Die in diesen Batches enthaltenen Abfragen können E/A-Vorgänge erzeugen, die das Datenträgervolume vollständig beanspruchen und die Leistung anderer Arbeitsauslastungen mit höherer Priorität in der Datenbank beeinträchtigen. Um diese Arbeitsauslastung zu isolieren, wird MIN_IOPS_PER_VOLUME auf 20 und MAX_IOPS_PER_VOLUME auf 100 für den Ressourcenpool der Vertriebsabteilung festgelegt, der die Anzahl der für die Arbeitsauslastung ausgegebenen E/A-Befehle steuert.  
   
- Bei der CPU- oder Arbeitsspeicherkonfiguration darf die Summe der MIN-Werte für alle Pools 100 Prozent der Serverressourcen nicht überschreiten. Außerdem können beim Konfigurieren der CPU oder des Arbeitsspeichers MAX und CAP auf beliebige Werte im Bereich zwischen MIN und 100 Prozent festgelegt werden.  
+Bei der CPU- oder Arbeitsspeicherkonfiguration darf die Summe der MIN-Werte für alle Pools 100 Prozent der Serverressourcen nicht überschreiten. Außerdem können beim Konfigurieren der CPU oder des Arbeitsspeichers MAX und CAP auf beliebige Werte im Bereich zwischen MIN und 100 Prozent festgelegt werden.  
   
- Wenn bei einem Pool ein MIN-Wert definiert ist, der nicht 0 (null) entspricht, wird der effektive MAX-Wert anderer Pools erneut angepasst. Das Minimum des konfigurierten MAX-Werts eines Pool sowie die Summe der MIN-Werte der anderen Pools wird von 100 Prozent subtrahiert.  
+Wenn bei einem Pool ein MIN-Wert definiert ist, der nicht 0 (null) entspricht, wird der effektive MAX-Wert anderer Pools erneut angepasst. Das Minimum des konfigurierten MAX-Werts eines Pool sowie die Summe der MIN-Werte der anderen Pools wird von 100 Prozent subtrahiert.  
   
- In der folgenden Tabelle werden einige der obigen Konzepte erläutert. Die Tabelle zeigt die Einstellungen für den internen Pool, den Standardpool und zwei benutzerdefinierte Pools. Die folgenden Formeln werden zum Berechnen der Prozentwerte für den effektiven MAX-Wert (MAX %) und den freigegebenen, d. h. gemeinsam verwendeten Teil (Shared %) herangezogen.  
+In der folgenden Tabelle werden einige der obigen Konzepte erläutert. Die Tabelle zeigt die Einstellungen für den internen Pool, den Standardpool und zwei benutzerdefinierte Pools. 
+  
+|Poolname|Einstellung für MIN %|Einstellung für MAX %|Berechneter effektiver MAX %|Berechneter Shared %|Anmerkung|  
+|---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
+|Interner Pool (internal)|0|100|100|0|Effektiver MAX % und Shared % gelten nicht für den internen Pool.|  
+|default|0|100|30|30|Der effektive MAX-Wert wird berechnet als: min(100,100-(20+50)) = 30. Der berechnete Shared % ist der effektive MAX - MIN = 30.|  
+|Pool 1|20|100|50|30|Der effektive MAX-Wert wird berechnet als: min(100,100-50) = 50. Der berechnete Shared % ist der effektive MAX - MIN = 30.|  
+|Pool 2|50|70|70|20|Der effektive MAX-Wert wird berechnet als: min(70,100-20) = 70. Der berechnete Shared % ist der effektive MAX - MIN = 20.|  
+Die folgenden Formeln werden in der Tabelle oben zum Berechnen der Prozentwerte für den effektiven MAX-Wert (MAX %) und den freigegebenen, d.h. gemeinsam verwendeten Teil (Shared %) herangezogen.  
   
 -   Min(X,Y) bedeutet den kleineren Wert von X und Y.  
   
@@ -68,15 +76,8 @@ ms.lasthandoff: 06/22/2017
 -   Effektiver MAX % = min(X,Y).  
   
 -   Shared % = effektiver MAX % - MIN %.  
-  
-|Poolname|Einstellung für MIN %|Einstellung für MAX %|Berechneter effektiver MAX %|Berechneter Shared %|Anmerkung|  
-|---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
-|Interner Pool (internal)|0|100|100|0|Effektiver MAX % und Shared % gelten nicht für den internen Pool.|  
-|default|0|100|30|30|Der effektive MAX-Wert wird berechnet als: min(100,100-(20+50)) = 30. Der berechnete Shared % ist der effektive MAX - MIN = 30.|  
-|Pool 1|20|100|50|30|Der effektive MAX-Wert wird berechnet als: min(100,100-50) = 50. Der berechnete Shared % ist der effektive MAX - MIN = 30.|  
-|Pool 2|50|70|70|20|Der effektive MAX-Wert wird berechnet als: min(70,100-20) = 70. Der berechnete Shared % ist der effektive MAX - MIN = 20.|  
-  
- Anhand der obigen Tabelle als Beispiel können wir zeigen, welche Anpassungen vorgenommen werden, wenn ein weiterer Pool erstellt wird. Dieser Pool ist Pool 3 mit einer MIN %-Einstellung von 5.  
+
+Anhand der obigen Tabelle als Beispiel können wir zeigen, welche Anpassungen vorgenommen werden, wenn ein weiterer Pool erstellt wird. Dieser Pool ist Pool 3 mit einer MIN %-Einstellung von 5.  
   
 |Poolname|Einstellung für MIN %|Einstellung für MAX %|Berechneter effektiver MAX %|Berechneter Shared %|Anmerkung|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
@@ -94,29 +95,29 @@ ms.lasthandoff: 06/22/2017
   
 -   Alle Pools weisen einen Mindestwert von 0 (null) auf. Alle Pools stehen im Wettbewerb um verfügbare Ressourcen, und ihre letztendliche Größe ist abhängig von der Ressourcenbelegung in den einzelnen Pools. Andere Faktoren wie Richtlinien beeinflussen die endgültige Poolgröße.  
   
- Die Ressourcenkontrolle verfügt über zwei vordefinierte Ressourcenpools: den internen Pool und den Standardpool. Sie können weitere Pools hinzufügen.  
+Die Ressourcenkontrolle verfügt über zwei vordefinierte Ressourcenpools: den internen Pool und den Standardpool. Sie können weitere Pools hinzufügen.  
   
- **Interner Pool**  
+**Interner Pool**  
   
- Der interne Pool entspricht den von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] belegten Ressourcen. Dieser unveränderliche Pool enthält immer nur die interne Gruppe. Die Ressourcenbelegung durch den internen Pool ist nicht eingeschränkt. Alle Arbeitsauslastungen im Pool gelten als unabdingbar für die Serverfunktion. Daher darf der interne Pool Druck auf andere Pools ausüben, selbst wenn dies zu einer Verletzung der Grenzwerte für die anderen Pools führt.  
+Der interne Pool entspricht den von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] belegten Ressourcen. Dieser unveränderliche Pool enthält immer nur die interne Gruppe. Die Ressourcenbelegung durch den internen Pool ist nicht eingeschränkt. Alle Arbeitsauslastungen im Pool gelten als unabdingbar für die Serverfunktion. Daher darf der interne Pool Druck auf andere Pools ausüben, selbst wenn dies zu einer Verletzung der Grenzwerte für die anderen Pools führt.  
   
 > [!NOTE]  
 >  Die durch den internen Pool und die interne Gruppe belegten Ressourcen werden nicht von den insgesamt belegten Ressourcen abgezogen. Prozentwerte werden auf Basis der insgesamt verfügbaren Ressourcen berechnet.  
   
- **Standardpool**  
+**Standardpool**  
   
- Der Standardpool ist der erste vordefinierte Benutzerpool. Bevor eine anderweitige Konfiguration vorgenommen wird, enthält der Standardpool nur die Standardgruppe. Der Standardpool kann nicht erstellt oder gelöscht, jedoch geändert werden. Er kann neben der Standardgruppe noch benutzerdefinierte Gruppen enthalten. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] gibt es einen Standardressourcenpool für Routineoperationen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und einen externen Standardressourcenpool für externe Prozesse wie das Ausführen von R-Skripten.  
+Der Standardpool ist der erste vordefinierte Benutzerpool. Bevor eine anderweitige Konfiguration vorgenommen wird, enthält der Standardpool nur die Standardgruppe. Der Standardpool kann nicht erstellt oder gelöscht, jedoch geändert werden. Er kann neben der Standardgruppe noch benutzerdefinierte Gruppen enthalten. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] gibt es einen Standardressourcenpool für Routineoperationen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und einen externen Standardressourcenpool für externe Prozesse wie das Ausführen von R-Skripten.  
   
 > [!NOTE]  
 >  Die Standardgruppe kann zwar geändert, aber nicht aus dem Standardpool entfernt werden.  
   
- **Interner Pool**  
+**Interner Pool**  
   
- Benutzer können einen externen Pool zum Festlegen der Ressourcen für externe Prozesse definieren. Dieser deckt für R Services speziell `rterm.exe`, `BxlServer.exe` und andere Prozesse ab, die von diesen ausführbaren Dateien generiert werden.  
+Benutzer können einen externen Pool zum Festlegen der Ressourcen für externe Prozesse definieren. Dieser deckt für R Services speziell `rterm.exe`, `BxlServer.exe` und andere Prozesse ab, die von diesen ausführbaren Dateien generiert werden.  
   
- **Benutzerdefinierte Ressourcenpools**  
+**Benutzerdefinierte Ressourcenpools**  
   
- Benutzerdefinierte Ressourcenpools sind Pools, die Sie für bestimmte Arbeitsauslastungen in der Umgebung erstellen. Die Ressourcenkontrolle stellt DDL-Anweisungen zum Erstellen, Ändern und Löschen von Ressourcenpools bereit.  
+Benutzerdefinierte Ressourcenpools sind Pools, die Sie für bestimmte Arbeitsauslastungen in der Umgebung erstellen. Die Ressourcenkontrolle stellt DDL-Anweisungen zum Erstellen, Ändern und Löschen von Ressourcenpools bereit.  
   
 ## <a name="resource-pool-tasks"></a>Aufgaben in Verbindung mit Ressourcenpools  
   

@@ -1,7 +1,7 @@
 ---
 title: "Schnellere temporäre Tabellen und Tabellenvariablen durch Speicheroptimierung | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 06/12/2017
+ms.date: 10/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4e2fb53cbb1d9a8999a9260b6907f5319c0fe203
+ms.sourcegitcommit: fffb61c4c3dfa58edaf684f103046d1029895e7c
+ms.openlocfilehash: 2c44f6288c4e58caa45748e6e832465f43145b83
 ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/19/2017
 
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Schnellere temporäre Tabellen und Tabellenvariablen durch Speicheroptimierung
@@ -65,6 +65,8 @@ In-Memory-OLTP stellt die folgenden Objekte bereit, die für speicheroptimierte 
   
 ## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. Szenario: Ersetzen von globaler tempd &#x23;&#x23;table  
   
+Das Ersetzen einer globalen temporären Tabelle mit einer speicheroptimierten SCHEMA_ONLY-Tabelle ist relativ unkompliziert. Die größte Veränderung ist, dass man die Tabelle zur Bereitstellungszeit und nicht zur Laufzeit erstellt. Die Erstellung von speicheroptimierten Tabellen dauert länger als die Erstellung herkömmlicher Tabellen, aufgrund der Optimierungen zur Kompilierzeit. Das Erstellen und Verwerfen von speicheroptimierten Tabellen als Teil der Online-Workload würde die Leistung der Workload sowie die Leistung der Wiederholung für sekundäre Always On-Elemente und die Datenbankwiederherstellung beeinflussen.
+
 Angenommen, Sie verfügen über die folgende globale temporäre Tabelle.  
   
   
@@ -102,13 +104,15 @@ Die folgenden Schritte beschreiben die Konvertierung von globalen temporären Ta
   
   
 1. Erstellen Sie einmalig die **dbo.soGlobalB**-Tabelle, so wie Sie es auch auf einer herkömmlichen Tabelle auf einem Datenträger machen würden.  
-2. Entfernen Sie aus Transact-SQL den Block zum Erstellen der Tabelle **&#x23;&#x23;tempGlobalB**.  
+2. Entfernen Sie aus Transact-SQL den Block zum Erstellen der Tabelle **&#x23;&#x23;tempGlobalB**.  Es ist wichtig, dass Sie die speicheroptimierte Tabelle zur Bereitstellungszeit erstellen und nicht zur Laufzeit, um den Kompilierungsaufwand bei der Tabellenerstellung zu vermeiden.
 3. Ersetzen Sie in T-SQL alle Erwähnungen von **&#x23;&#x23;tempGlobalB** mit **dbo.soGlobalB**.  
   
   
 ## <a name="c-scenario-replace-session-tempdb-x23table"></a>C. Szenario: Ersetzen der tempd &#x23;Sitzungstabelle  
   
 Die erforderlichen Schritte zum Ersetzen einer Sitzung temporäre Tabelle umfassen zusätzliches T-SQL als für die globale temporäre Tabelle Szenario. Zusätzliches T-SQL bedeutet glücklicherweise nicht, dass mehr Arbeit für die Ausführung der Konvertierung nötig ist.  
+
+Wie bei dem Szenario mit der globalen temporären Tabelle, ist die größte Veränderung, die Tabelle zur Bereitstellungszeit und nicht zur Laufzeit zu erstellen, um den Kompilierungsaufwand zu vermeiden.
   
 Angenommen, Sie verfügen über die folgende temporäre Sitzungstabelle.  
   
@@ -184,7 +188,7 @@ Drittens: Im allgemeinen T-SQL-Code:
 1. Ändern Sie alle Verweise auf die temporäre Tabelle in den Transact-SQL-Anweisungen in die neue speicheroptimierte Tabelle:
     - _Alt:_ &#x23;tempSessionC  
     - _Neu:_ dbo.soSessionC  
-2. Ersetzen Sie die `CREATE TABLE #tempSessionC`-Anweisungen in Ihrem Code durch `DELETE FROM dbo.soSessionC`, um sicherzustellen, dass eine Sitzung keinen Tabelleninhalten ausgesetzt ist, die von einer vorherigen Sitzung mit der gleichen session_id eingefügt wurden.
+2. Ersetzen Sie die `CREATE TABLE #tempSessionC`-Anweisungen in Ihrem Code durch `DELETE FROM dbo.soSessionC`, um sicherzustellen, dass eine Sitzung keinen Tabelleninhalten ausgesetzt ist, die von einer vorherigen Sitzung mit der gleichen session_id eingefügt wurden. Es ist wichtig, dass Sie die speicheroptimierte Tabelle zur Bereitstellungszeit erstellen und nicht zur Laufzeit, um den Kompilierungsaufwand bei der Tabellenerstellung zu vermeiden.
 3. Entfernen Sie die `DROP TABLE #tempSessionC`-Anweisungen aus dem Code – Optional können Sie eine `DELETE FROM dbo.soSessionC`-Anweisung einfügen, wenn Speichergröße ein potenzielles Problem ist.
   
   
