@@ -14,6 +14,7 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 267597f8ec136ac2557be337f6260077e701b9a5
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  [DateTimeOffset-Klasse](../../../connect/jdbc/reference/datetimeoffset-class.md)  
   
   
+

@@ -24,6 +24,7 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 94e0ed38f78c485e3c0178ac4dcc02cd318d065b
@@ -77,3 +78,4 @@ ms.lasthandoff: 09/01/2017
  [CubeDimension-Datentyp &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md)  
   
   
+

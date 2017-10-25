@@ -15,6 +15,7 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 62d90be2b4fe8aea96534c7c4d8b2b4617ac1ea1
@@ -529,3 +530,4 @@ ms.lasthandoff: 09/01/2017
  [Tabular Model Scripting Language &#40;TMSL&#41; – Referenz](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   
+

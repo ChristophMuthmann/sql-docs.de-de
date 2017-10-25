@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0fafade22e12b14c1e11aab4a44ce65433d2a158
@@ -549,3 +550,4 @@ ms.lasthandoff: 09/01/2017
  [Abfrageverarbeitung (Ereigniskategorie)](../../analysis-services/trace-events/query-processing-events-category.md)  
   
   
+

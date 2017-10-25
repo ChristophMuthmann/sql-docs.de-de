@@ -14,6 +14,7 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 24e796670985c803b1a6f8a067ed6e8a548379e9
@@ -60,3 +61,4 @@ ms.lasthandoff: 09/09/2017
  [Übersicht über die JDBC-Treiber](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
+

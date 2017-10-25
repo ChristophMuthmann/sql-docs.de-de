@@ -14,6 +14,7 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ae5a5d40381cd6b7939e7e67b5950e3d0e3644d3
@@ -57,3 +58,4 @@ public int getHoldability()
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
+

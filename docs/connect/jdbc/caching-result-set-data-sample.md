@@ -14,6 +14,7 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9061548b946d631f20a9b48ed49d56aac4a4f0fd
@@ -154,3 +155,4 @@ public class cacheRS {
  [Arbeiten mit Resultsets](../../connect/jdbc/working-with-result-sets.md)  
   
   
+

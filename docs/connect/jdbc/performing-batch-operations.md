@@ -14,6 +14,7 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 01a355319eb7c65bd87e25137e013b14406048c4
@@ -64,3 +65,4 @@ public static void executeBatchUpdate(Connection con) {
  [Verwenden von Anweisungen mit der JDBC-Treiber](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   
+

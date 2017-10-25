@@ -22,6 +22,7 @@ caps.latest.revision: 27
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: bc63db6c3f61de7e77ea41e3c5a24acd4d3b275e
@@ -150,3 +151,4 @@ ms.lasthandoff: 09/01/2017
  [PropertyList-Element &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-xmla.md)  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: abb371783474c7a0580d5694e7ad2afeabce3a4c
@@ -120,3 +121,4 @@ ms.lasthandoff: 09/01/2017
  [EntitySet-Element &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md)  
   
   
+

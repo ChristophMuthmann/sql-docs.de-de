@@ -14,6 +14,7 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a6115941051862c9979db90b1aa8a58ac3c9b220
@@ -93,3 +94,4 @@ jdbc:sqlserver://abcd.int.mscds.com;databaseName= myDatabase;user=myName;passwor
  [Herstellen einer Verbindung mit SQLServer mit der JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   
+

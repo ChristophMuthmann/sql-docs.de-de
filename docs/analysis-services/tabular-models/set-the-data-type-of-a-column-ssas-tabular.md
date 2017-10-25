@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 770ce419a167c71914334ea6fa1b3fd397566b34
@@ -85,3 +86,4 @@ ms.lasthandoff: 09/01/2017
  [Unterstützte Datentypen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
   
   
+

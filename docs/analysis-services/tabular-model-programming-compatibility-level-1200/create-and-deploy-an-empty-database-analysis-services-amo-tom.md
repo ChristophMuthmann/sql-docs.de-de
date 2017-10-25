@@ -15,6 +15,7 @@ caps.latest.revision: 5
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: f8aafa733ba61563072e304cf77945203df7585d
@@ -111,3 +112,4 @@ Sobald eine Datenbank erstellt wurde, können Sie Modellobjekte hinzufügen:
 - [Hinzufügen einer Datenquelle mit einem tabellarischen Modell](../../analysis-services/tabular-model-programming-compatibility-level-1200/add-a-data-source-to-tabular-model-analysis-services-amo-tom.md)
 - [Erstellen von Tabellen, Partitionen und Spalten in einem tabellarischen Modell](../../analysis-services/tabular-model-programming-compatibility-level-1200/create-tables-partitions-and-columns-in-a-tabular-model.md)
  
+

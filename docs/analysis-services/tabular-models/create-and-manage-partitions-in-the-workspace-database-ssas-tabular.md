@@ -18,6 +18,7 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 737b5220666edbbb481f0e50671b65e5a55a1de5
@@ -79,3 +80,4 @@ ms.lasthandoff: 09/01/2017
  [Verarbeiten von Partitionen in der Arbeitsbereichsdatenbank &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)  
   
   
+

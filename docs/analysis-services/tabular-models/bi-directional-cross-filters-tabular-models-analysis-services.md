@@ -16,6 +16,7 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 98a16bacbaf839d65555b1495e7010d98a88e857
@@ -209,3 +210,4 @@ ms.lasthandoff: 09/01/2017
  [M: n-Revolution (SQLBI-Blog)](http://www.sqlbi.com/articles/many2many/)  
   
   
+

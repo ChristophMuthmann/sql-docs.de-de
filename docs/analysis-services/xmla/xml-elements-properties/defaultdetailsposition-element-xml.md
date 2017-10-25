@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: e72d34abbe3291010d568d6a7fa7d4bfb23e774d
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/01/2017
  Für **RelationshipEndVisualizationProperties** -Elemente enthält das **DefaultDetailsPosition** -Element die Position des standardmäßigen Detailelements in einer Auflistung von Details. Der Standardwert **false** gibt an, dass keine zu verwendenden Standarddetails vorhanden ist.  
   
   
+

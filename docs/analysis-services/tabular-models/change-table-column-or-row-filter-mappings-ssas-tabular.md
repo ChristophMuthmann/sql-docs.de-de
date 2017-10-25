@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b80323e5aaf1dd6c469ddffefb5d92542e9d3a19
@@ -53,3 +54,4 @@ ms.lasthandoff: 09/01/2017
  [Tabelleneigenschaften bearbeiten (Dialogfeld) &#40;SSAS&#41;](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)  
   
   
+

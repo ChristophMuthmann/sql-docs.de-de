@@ -24,6 +24,7 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 0a5fdcfc7dc7d86e9036ed075e5c5332e76dc3be
@@ -74,3 +75,4 @@ ms.lasthandoff: 09/01/2017
  [ProactiveCachingBinding-Datentyp &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/proactivecachingbinding-data-type-assl.md)  
   
   
+

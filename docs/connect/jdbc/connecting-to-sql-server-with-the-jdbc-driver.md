@@ -14,6 +14,7 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1ebc9542e5683eb58c198745892916893f284822
@@ -52,3 +53,4 @@ System.setProperty("java.net.preferIPv6Addresses", "true");
  [Übersicht über die JDBC-Treiber](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
+

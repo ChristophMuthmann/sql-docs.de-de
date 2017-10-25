@@ -19,6 +19,7 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fbd9c5092d78134ff9fc50320e3a372eeadde874
@@ -55,3 +56,4 @@ public final java.io.InputStream getAsciiStream(java.lang.String paramName)
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 0b38e5f9de0860c75c0262c2e9684cc5440ba22d
@@ -159,3 +160,4 @@ ms.lasthandoff: 09/01/2017
  [CSDL-Anmerkungen für Business Intelligence &#40;CSDLBI&#41;](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
   
+

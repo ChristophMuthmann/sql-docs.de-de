@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 74f019309884a3655348e793187f1349b1080c4a
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  [SetDateTimeOffset &#40; "Int", java.sql.DateTimeOffset &#41; &#40; SQLServerStatement &#41;](../../../connect/jdbc/reference/setdatetimeoffset-int-java-sql-datetimeoffset-sqlserverstatement.md)  
   
   
+

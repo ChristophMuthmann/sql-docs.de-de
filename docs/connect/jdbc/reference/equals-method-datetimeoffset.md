@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 77f5185b388efcc3f832997b58dd12e220fe20dc
@@ -46,3 +47,4 @@ public boolean equals(Object o)
  [DateTimeOffset-Elemente](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   
   
+

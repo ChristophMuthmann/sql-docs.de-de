@@ -11,6 +11,7 @@ ms.assetid: 1eb6afc9-76ed-45a2-a188-374a4fc23224
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
 ms.openlocfilehash: 59f753e85f2d10d70d7784335205e0d231c5ae00
@@ -18,7 +19,6 @@ ms.contentlocale: de-de
 ms.lasthandoff: 10/04/2017
 
 ---
-
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>Neuigkeiten in SQL Server 2017 Analysis Services
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
 

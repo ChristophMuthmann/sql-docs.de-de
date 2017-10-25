@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: df6548e37668661b2e2e6835cbccaf0209d223f6
@@ -47,3 +48,4 @@ public final class DateTimeOffset
  [DateTimeOffset-Elemente](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   
   
+

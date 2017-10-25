@@ -22,6 +22,7 @@ caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 1e49da22961d21088649b4eda4539e357998049e
@@ -77,3 +78,4 @@ ms.lasthandoff: 09/01/2017
  [HoldoutActualSize-Element](../../../analysis-services/scripting/properties/holdoutactualsize-element.md)  
   
   
+

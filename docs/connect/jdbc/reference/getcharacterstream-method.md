@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4ce956f08563b7afbf7d9f5220a588b7f6523d3a
@@ -53,3 +54,4 @@ public java.io.Reader getCharacterStream()
  [SQLServerClob-Klasse](../../../connect/jdbc/reference/sqlserverclob-class.md)  
   
   
+

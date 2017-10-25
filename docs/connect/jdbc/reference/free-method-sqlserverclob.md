@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 377bc8ef8d0c929379ce67667d0d8c1fb915ecb4
@@ -45,3 +46,4 @@ public void free()
  [SQLServerClob-Klasse](../../../connect/jdbc/reference/sqlserverclob-class.md)  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 75d9ab3fb70f854e56df0c659275a2983a8487ff
@@ -214,3 +215,4 @@ public class c1 {
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
+

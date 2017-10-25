@@ -19,6 +19,7 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c8edaf27e2c08b1738d8dedc3e059c0fecb5043b
@@ -51,3 +52,4 @@ public boolean getEncypt()
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
   
+

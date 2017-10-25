@@ -14,6 +14,7 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f71f36fa62861365ed4818d679e13853c257a4de
@@ -49,3 +50,4 @@ public java.sql.Clob createClob()
  [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   
+

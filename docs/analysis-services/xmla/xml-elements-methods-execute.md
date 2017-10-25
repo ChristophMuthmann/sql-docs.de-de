@@ -30,6 +30,7 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 22bf60ae16e6b4e5f30bf694505e77857b6c0600
@@ -102,3 +103,4 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services-Schemarowsets](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   
+

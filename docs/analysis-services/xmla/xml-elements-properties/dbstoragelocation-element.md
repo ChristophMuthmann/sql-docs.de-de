@@ -19,6 +19,7 @@ caps.latest.revision: 15
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9267f5858eb837efdbcd84fb040934e767835d4f
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/01/2017
  [Anfügen und Trennen von Analysis Services-Datenbanken](../../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2249704a4f5cf87694d1acb01ff46a119a4be7e8
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
  [Beispiele für JDBC-Treiberanwendungen](../../connect/jdbc/sample-jdbc-driver-applications.md)  
   
   
+

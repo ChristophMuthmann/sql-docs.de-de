@@ -16,6 +16,7 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f671eb89295049c09da1f037fdb4544db84b7280
@@ -84,3 +85,4 @@ ms.lasthandoff: 09/01/2017
  [Notification Events Event Category](../../analysis-services/trace-events/notification-events-event-category.md)  
   
   
+

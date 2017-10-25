@@ -21,6 +21,7 @@ caps.latest.revision: 14
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 64577ef2799fd56cc4e404a42fc351be8ece6baa
@@ -59,3 +60,4 @@ ms.lasthandoff: 09/01/2017
 |[UpdateCells-Element](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)|Aktualisiert Zellen in einem Cube mit aktiviertem Schreibzugriff.|  
   
   
+

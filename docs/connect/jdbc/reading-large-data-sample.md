@@ -14,6 +14,7 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4341d85ceced60ed2d108eb4e9f95251e6fdd33d
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
  [Arbeiten mit umfangreichen Daten](../../connect/jdbc/working-with-large-data.md)  
   
   
+

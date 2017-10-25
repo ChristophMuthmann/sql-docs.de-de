@@ -42,6 +42,7 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 007ace0dcec576b4a15909d470a701f442221788
@@ -181,3 +182,4 @@ ms.lasthandoff: 09/01/2017
  [Bestimmen des Servermodus einer Analysis Services-Instanz](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   
+

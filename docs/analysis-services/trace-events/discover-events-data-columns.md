@@ -16,6 +16,7 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1d4275dc8ed85c907a458c5772a57153dc88fa0e
@@ -86,3 +87,4 @@ ms.lasthandoff: 09/01/2017
  [Discover Events Event Category](../../analysis-services/trace-events/discover-events-event-category.md)  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7bd50f15603440953dc2f9c52ae669e5fcbd3108
@@ -126,3 +127,4 @@ ms.lasthandoff: 09/01/2017
 |100155|PerspectiveCollection|  
   
   
+

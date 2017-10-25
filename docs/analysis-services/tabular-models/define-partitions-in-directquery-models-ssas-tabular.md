@@ -15,6 +15,7 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: dd4570e403d7a7ffd72600efedf7023da8661d98
@@ -87,3 +88,4 @@ ms.lasthandoff: 09/01/2017
  [Partitionen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md)  
   
   
+

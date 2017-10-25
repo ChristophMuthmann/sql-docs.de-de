@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 512b3ae1512c48d1d502d763505ee0609fd90608
@@ -56,3 +57,4 @@ ms.lasthandoff: 09/01/2017
  [Measures](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   
   
+

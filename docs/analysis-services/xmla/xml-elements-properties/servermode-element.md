@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 8145c7090e1c172fe210202e55078cb4bd404fcb
@@ -66,3 +67,4 @@ ms.lasthandoff: 09/01/2017
  [Server](../../../analysis-services/scripting/objects/server-element-assl.md)  
   
   
+

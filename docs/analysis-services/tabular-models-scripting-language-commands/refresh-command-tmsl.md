@@ -15,6 +15,7 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: d66a5c0ccaccf6480e0e82053b1ca6f22c5fcc0f
@@ -241,3 +242,4 @@ ms.lasthandoff: 09/01/2017
  [Verarbeiten von Optionen und Einstellungen &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)  
   
   
+

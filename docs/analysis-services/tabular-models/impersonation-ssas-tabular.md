@@ -16,6 +16,7 @@ caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
 ms.openlocfilehash: aef09b5327408701f15e484bbcea1cab9d82622b
@@ -95,3 +96,4 @@ Wenn Daten nicht importiert oder verarbeitet werden, werden Identitätswechsel-A
  [Tabellenmodelllösungsbereitstellung](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   
+

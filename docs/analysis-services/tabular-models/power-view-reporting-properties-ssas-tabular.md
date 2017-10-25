@@ -16,6 +16,7 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f57ef9048cc2028ed8e4b056c8120b96ddb29c95
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/01/2017
 |[Konfigurieren von Tabellenverhaltenseigenschaften für Power View-Berichte &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)|Hier wird beschrieben, wie Tabellenverhaltenseigenschaften, die Detailzeilen auf einer präziseren Ebene verfügbar machen, konfiguriert werden. Das Festlegen von Tabellenverhaltenseigenschaften ändert das Gruppierungsverhalten von Detailzeilen und erzeugt eine bessere Standardplatzierung bei der Identifizierung von Informationen in Kachel, Karten- und Diagrammlayouts.|  
   
   
+

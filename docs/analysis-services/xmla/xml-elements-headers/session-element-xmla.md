@@ -28,6 +28,7 @@ caps.latest.revision: 15
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: aa1f136ee02b73ab792dae7ee7730a3917dace66
@@ -96,3 +97,4 @@ ms.lasthandoff: 09/01/2017
  [Header &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
   
   
+

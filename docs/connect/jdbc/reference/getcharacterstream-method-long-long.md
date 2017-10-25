@@ -14,6 +14,7 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ba910c36ff82209a668ef6d96987330705703080
@@ -58,3 +59,4 @@ public java.io.Reader getCharacterStream(long pos,
  [SQLServerClob-Elemente](../../../connect/jdbc/reference/sqlserverclob-members.md)  
   
   
+

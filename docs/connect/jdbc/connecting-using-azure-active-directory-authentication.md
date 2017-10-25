@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 83d5ad3bae131b58dd344c3f5f9bfc7f5d0c4f5a
@@ -233,3 +234,4 @@ Wenn die Verbindung erfolgreich ist, wird die folgende Meldung als Ausgabe angez
 Access Token: <your access token>
 You have successfully logged on as: <your client ID>    
 ``` 
+

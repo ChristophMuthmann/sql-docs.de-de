@@ -28,6 +28,7 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 30d8923c5e3e84c3e2f835caf160902c96c9bf4d
@@ -72,3 +73,4 @@ ms.lasthandoff: 09/01/2017
  [XML-Datentypen &#40; XMLA &#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   
+

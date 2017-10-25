@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 11a88bc42863076381cf2798a9bbc7c4a73f070e
@@ -231,3 +232,4 @@ private void addStaticKPI(object sender, EventArgs e)
  Um ein Verständnis für die Verwendung von AMO zur Erstellung und Bearbeitung von Key Performance Indicator Darstellungen finden Sie unter den Quellcode der AMO zum Beispiel; Prüfen Sie insbesondere die Quelldatei: AddKPIs.cs. Das Beispiel ist auf Codeplex verfügbar. Ein wichtiger Hinweis zum Code: Der Code wird nur zur Verdeutlichung für die logischen Konzepte bereitgestellt, die hier erläutert werden, und sollte nicht in einer Produktionsumgebung verwendet oder zu anderen als Lehrzwecken eingesetzt werden.  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cb85851bd0c05de09120fa2403c1e47bf0da9a75
@@ -94,3 +95,4 @@ ms.lasthandoff: 09/01/2017
  [Sicherheitsüberwachung-Ereigniskategorie](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: ec09d62c989f8a01c3984491ab4aa187e1eea654
@@ -188,3 +189,4 @@ ms.lasthandoff: 09/01/2017
  [Daten importieren](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)  
   
   
+

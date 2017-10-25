@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b7ec461cb8fea748a6bd6ad9521082e8c3c66547
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/01/2017
  Für **RelationshipEndVisualizationProperties** -Elemente gibt das **IsDefaultMeasure** -Element an, dass das Standardmeasure für diese Entität durch Navigieren zum anderen Ende der Beziehung abgerufen werden kann. Der Standardwert **false** gibt an, dass kein abzurufendes Standardmeasure vorhanden ist.  
   
   
+

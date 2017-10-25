@@ -24,6 +24,7 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 5657f57d1f7eee76efb51da0c4bd3ff278aa47ac
@@ -54,3 +55,4 @@ ms.lasthandoff: 09/01/2017
  [XML for Analysis-Referenz &#40;XMLA&#41;](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)  
   
   
+
