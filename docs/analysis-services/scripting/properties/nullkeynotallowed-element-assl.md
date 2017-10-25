@@ -26,6 +26,7 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 834a0e3728c99d41db1e7871e2c95eec96d1b922
@@ -79,3 +80,4 @@ ms.lasthandoff: 09/01/2017
  [ErrorConfiguration-Element &#40; ASSL &#41;](../../../analysis-services/scripting/objects/errorconfiguration-element-assl.md)  
   
   
+

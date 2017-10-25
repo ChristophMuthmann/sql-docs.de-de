@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0b070b5f39a062135e6a0f19546b0265a18d4c86
@@ -65,3 +66,4 @@ public java.sql.Date getDate(int index,
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   
+

@@ -28,6 +28,7 @@ caps.latest.revision: 17
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 2ac9985902b6e91fd2f69b2cc7b7ea3eec6cc79e
@@ -87,3 +88,4 @@ ms.lasthandoff: 09/01/2017
  [Dimensionen mit aktiviertem Schreibzugriff](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   
+

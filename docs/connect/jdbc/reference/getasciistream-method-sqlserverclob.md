@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4025d8814415e0889168bba781254a736d504260
@@ -55,3 +56,4 @@ public java.io.InputStream getAsciiStream()
  [SQLServerClob-Klasse](../../../connect/jdbc/reference/sqlserverclob-class.md)  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 47f455ba7df88636de5ae9ecfc59a15827adf7d8
@@ -56,3 +57,4 @@ public int[] executeBatch()
  [SQLServerStatement-Klasse](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: a9c1ad93e5c4af1736721436f4ce5116ac279934
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/01/2017
  [Hierarchien](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
   
   
+

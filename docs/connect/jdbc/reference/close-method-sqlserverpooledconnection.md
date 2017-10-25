@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a0142dc4045a7ee1e647c87b17772d5b16e3e92b
@@ -50,3 +51,4 @@ public void close()
  [SQLServerPooledConnection-Klasse](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)  
   
   
+

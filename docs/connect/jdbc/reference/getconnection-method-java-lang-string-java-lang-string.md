@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 39b7a3bb2896ff308fc58510443bd54c487c77f8
@@ -68,3 +69,4 @@ public java.sql.Connection getConnection(java.lang.String username,
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
   
+

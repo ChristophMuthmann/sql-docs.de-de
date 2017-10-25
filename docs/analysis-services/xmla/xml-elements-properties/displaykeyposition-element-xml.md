@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 06526a6e7ccb25e4deefe0556c63622a491635be
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/01/2017
  Für **RelationshipEndVisualizationProperties** -Elemente enthält das **DisplayKeyPosition** -Element die Position des Anzeigeschlüsselelements in einer Auflistung von Details. Der Standardwert gibt an, dass kein zu verwendender Anzeigeschlüssel vorhanden ist.  
   
   
+

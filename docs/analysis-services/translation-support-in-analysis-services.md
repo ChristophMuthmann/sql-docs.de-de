@@ -22,6 +22,7 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 27715bc2c9333955931a1bc500a8267c0b1aa954
@@ -55,3 +56,4 @@ ms.lasthandoff: 09/01/2017
  [Globalisierung Tipps und Best Practices &#40; Analysis Services &#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)  
   
   
+

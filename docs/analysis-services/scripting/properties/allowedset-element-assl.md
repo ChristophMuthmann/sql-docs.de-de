@@ -26,6 +26,7 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 7c5b58d9c23ac6305997ff491a9f76371ebd7179
@@ -69,3 +70,4 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
+

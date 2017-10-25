@@ -16,6 +16,7 @@ caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ad8d85e820ae8940a1b80dd130c57d5d06f140e6
@@ -109,3 +110,4 @@ ms.lasthandoff: 09/01/2017
  [Herstellen einer Verbindung mit einer tabellarischen Modelldatenbank &#40;SSAS&#41;](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
   
   
+

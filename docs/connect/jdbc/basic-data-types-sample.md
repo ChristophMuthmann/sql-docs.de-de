@@ -14,6 +14,7 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 424b1442a554cc2e4e52b0bf11c50c276d2a32cf
@@ -172,3 +173,4 @@ public class basicDT {
  [Arbeiten mit Datentypen &#40; JDBC &#41;](../../connect/jdbc/working-with-data-types-jdbc.md)  
   
   
+

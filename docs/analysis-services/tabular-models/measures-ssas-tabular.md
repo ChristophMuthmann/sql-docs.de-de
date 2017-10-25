@@ -16,6 +16,7 @@ caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 38b7467cd4ad765d651ea0ebe4ad57c278c987a1
@@ -100,3 +101,4 @@ Sum of TotalProfit: =SUM([TotalProfit])
  [Berechnete Spalten](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   
+

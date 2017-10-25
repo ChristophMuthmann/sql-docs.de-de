@@ -16,6 +16,7 @@ caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 19c19be451a22fef66b98ac71355b4963240767a
@@ -71,3 +72,4 @@ ms.lasthandoff: 09/01/2017
  [Berechnete Spalten &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   
+

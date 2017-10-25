@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: c470244cfbf90ba7f2c65395a9a0c39064a55bb1
@@ -72,3 +73,4 @@ Sie können jedoch eine kleinere Menge an Beispieldaten der Arbeitsdatenbank Ihr
 
   
   
+

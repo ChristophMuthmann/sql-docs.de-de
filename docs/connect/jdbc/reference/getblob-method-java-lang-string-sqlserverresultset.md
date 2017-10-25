@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 56b49a9516497f629f538421c7af495e057f870f
@@ -58,3 +59,4 @@ public java.sql.Blob getBlob(java.lang.String colName)
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
+

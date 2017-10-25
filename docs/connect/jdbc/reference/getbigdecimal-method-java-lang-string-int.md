@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1f47ef135f367e5263616aec8a29cd3693967974
@@ -66,3 +67,4 @@ public java.math.BigDecimal getBigDecimal(java.lang.String sCol,
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   
+

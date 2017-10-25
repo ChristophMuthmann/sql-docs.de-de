@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e9381f37b724f7e90631c931cee757f1ef017130
@@ -55,3 +56,4 @@ public java.lang.String getExtraNameCharacters()
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
+

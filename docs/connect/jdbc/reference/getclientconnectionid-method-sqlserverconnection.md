@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9b422c085307db5630cb1b70a47cafd935877dcd
@@ -69,3 +70,4 @@ UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();
  [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   
+

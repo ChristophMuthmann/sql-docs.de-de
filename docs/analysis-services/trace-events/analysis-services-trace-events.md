@@ -22,6 +22,7 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b97d63ba708128fbd4d42f2e5278273609d144e1
@@ -192,3 +193,4 @@ ms.lasthandoff: 09/01/2017
  [Verwenden von SQL Server Profiler zum Überwachen von Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)  
   
   
+

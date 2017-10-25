@@ -18,6 +18,7 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: adb50d35f60359d6bd1e18cacff6e80722665d59
@@ -73,3 +74,4 @@ ms.lasthandoff: 09/01/2017
  [Konfigurieren von Standarddatenmodellierung und Bereitstellungseigenschaften](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
   
   
+

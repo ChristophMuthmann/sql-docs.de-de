@@ -19,6 +19,7 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2e4b031190f32ec3811f0541c0cc62b044240bad
@@ -53,3 +54,4 @@ public java.sql.Connection getConnection()
  [SQLServerPooledConnection-Klasse](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)  
   
   
+

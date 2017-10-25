@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 01dc79a487d661832db2aaeb8eae0e8e7668b69d
@@ -49,3 +50,4 @@ public final void clearParameters()
  [SQLServerPreparedStatement-Klasse](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   
   
+

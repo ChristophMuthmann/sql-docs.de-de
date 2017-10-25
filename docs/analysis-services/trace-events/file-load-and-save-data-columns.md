@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fc37f3342781ace5e54a3ab9550e046933d25928
@@ -225,3 +226,4 @@ ms.lasthandoff: 09/01/2017
  [File Load- und Save-Ereigniskategorie](../../analysis-services/trace-events/file-load-and-save-event-category.md)  
   
   
+

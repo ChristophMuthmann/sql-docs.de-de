@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ff004671c2e261d055b49e1a1de3b0643c1fc94b
@@ -65,3 +66,4 @@ public java.io.InputStream getBinaryStream(java.lang.String columnName)
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
+

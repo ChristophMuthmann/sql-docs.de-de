@@ -14,6 +14,7 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 28d0c574b9666853ee2ed78ae3666a312208e240
@@ -129,3 +130,4 @@ public class updateRS {
  [Arbeiten mit Resultsets](../../connect/jdbc/working-with-result-sets.md)  
   
   
+

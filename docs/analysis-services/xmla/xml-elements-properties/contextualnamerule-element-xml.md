@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: d5860c69f618cb9c1cb131bf2da377bad405c09b
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/01/2017
 |*Merge*|Gemäß den Regeln der Anwendungssprache werden der Name der eingehenden Beziehung und der Attributname verkettet.|  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0dbd3fb453949d99a8e3c19077b8783fc8eeccda
@@ -45,3 +46,4 @@ public void free()
  [SQLServerNClob-Klasse](../../../connect/jdbc/reference/sqlservernclob-class.md)  
   
   
+

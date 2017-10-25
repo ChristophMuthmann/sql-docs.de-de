@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: c23ab7153ce90c55c9858dde6a0f0083bc92def7
@@ -61,3 +62,4 @@ ms.lasthandoff: 09/01/2017
  [Zeitintelligenzfunktionen (DAX)](http://msdn.microsoft.com/en-us/91df278d-4b28-40c1-a572-cdb91f081517)  
   
   
+

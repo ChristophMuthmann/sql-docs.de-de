@@ -19,6 +19,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1f43be7cf240323189344b23f1a0f1ecd0e8c8a8
@@ -55,3 +56,4 @@ public final java.io.InputStream getBinaryStream(java.lang.String paramName)
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   
+

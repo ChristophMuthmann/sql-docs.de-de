@@ -14,6 +14,7 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8de387fce6f7367f4a2154c4bceb8ebe8447b336
@@ -92,3 +93,4 @@ public class connectURL {
  [Verbinden und Abrufen von Daten](../../connect/jdbc/connecting-and-retrieving-data.md)  
   
   
+

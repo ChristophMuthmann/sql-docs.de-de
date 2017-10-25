@@ -28,6 +28,7 @@ caps.latest.revision: 13
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b4d8e85ec05fa6fd8b3c05ee0f27f46b0a28a867
@@ -149,3 +150,4 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
+

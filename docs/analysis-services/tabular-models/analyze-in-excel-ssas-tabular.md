@@ -16,6 +16,7 @@ caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 6450a75762b35816055efce444513c87e24eb3c4
@@ -58,3 +59,4 @@ ms.lasthandoff: 09/01/2017
  [Perspektiven](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  
   
   
+

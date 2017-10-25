@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 56da8245700f7e4d93ad0dcd3503d1b214df61a1
@@ -55,3 +56,4 @@ public java.lang.String getCursorName()
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: f8635a526095a7182c8415f571e26e6818f209a8
@@ -84,3 +85,4 @@ ms.lasthandoff: 09/01/2017
  [Technische Referenz für BI-Anmerkungen zu CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   
+

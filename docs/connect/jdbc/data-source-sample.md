@@ -14,6 +14,7 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4c72d8ce8c6ed87687cb9db69c52e20aebe9e15f
@@ -99,3 +100,4 @@ public class connectDS {
  [Verbinden und Abrufen von Daten](../../connect/jdbc/connecting-and-retrieving-data.md)  
   
   
+

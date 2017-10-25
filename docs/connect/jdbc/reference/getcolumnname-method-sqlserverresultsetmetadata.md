@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a27af3fe868fbbe62d6587d8b3f2183e39845fd6
@@ -58,3 +59,4 @@ public java.lang.String getColumnName(int column)
  [SQLServerResultSetMetaData-Klasse](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  
   
   
+

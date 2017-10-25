@@ -16,6 +16,7 @@ caps.latest.revision:
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: ed695cd15d9e0622ff28ed449395f0684b2cf9f1
@@ -104,3 +105,4 @@ In diesem Beispiel wird die MetadataPermission-Eigenschaft der Klasse ColumnPerm
 [Tabellarischen Objektmodell (TOM)](../../analysis-services/tabular-model-programming-compatibility-level-1200/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md).
 
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3a0edea86849304c9168107c0a96d04c5e197fda
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
+

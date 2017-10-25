@@ -17,6 +17,7 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 0cf821eb8c5db3410901f3d72826e0c2c8b8a274
@@ -91,3 +92,4 @@ ms.lasthandoff: 09/01/2017
  [CSDLBI-Konzepte](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-concepts.md)  
   
   
+

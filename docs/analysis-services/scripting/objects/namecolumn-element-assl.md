@@ -26,6 +26,7 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 3d625f03339e5b17981db9d4e8105679fde40fb0
@@ -78,3 +79,4 @@ ms.lasthandoff: 09/01/2017
  [Objekte &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: HeidiSteen
 ms.author: heidist
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 225c4aea79b880fd85f118d89bae1339e370aa40
@@ -52,3 +53,4 @@ MaxIntermediateRowsetSize | 1000000 | Maximale Anzahl von in einer DAX-Abfrage z
 PredicateCheckSpoolCardinalityThreshold| 5000 | Eine erweiterte Eigenschaft, die nur unter Anleitung des Microsoft-Supports geändert werden sollte.
 
 Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Servereigenschaften in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md). 
+

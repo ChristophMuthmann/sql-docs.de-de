@@ -14,6 +14,7 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a5c395fcd8ae12a91db5dcd7bf26f8d81589d2f6
@@ -92,3 +93,4 @@ keytool -import -v -trustcacerts -alias myServer -file caCert.cer -keystore trus
  [Sichern von JDBC-Treiberanwendungen](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   
+

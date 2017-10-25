@@ -19,6 +19,7 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6f78577e4f2698966afccba5f1f97855076434e9
@@ -88,3 +89,4 @@ public static void executeGetCatalogs(Connection con) {
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
+

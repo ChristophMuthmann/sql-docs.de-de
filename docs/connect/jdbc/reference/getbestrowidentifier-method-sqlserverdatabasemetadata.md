@@ -19,6 +19,7 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 09dee13a9a71b606aa630aac1716d43f6d38a1f2
@@ -123,3 +124,4 @@ public static void executeGetBestRowIdentifier(Connection con) {
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
+

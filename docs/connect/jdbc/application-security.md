@@ -14,6 +14,7 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e608d2181520284be87dbdaa078ff261a2a7d878
@@ -71,3 +72,4 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
  [Sichern von JDBC-Treiberanwendungen](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   
+

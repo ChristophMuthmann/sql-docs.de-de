@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0e2e5b78d674fa92dc4741eb7ab642ab802cb58e
@@ -46,3 +47,4 @@ public static final int CONCUR_SS_OPTIMISTIC_CC
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
+

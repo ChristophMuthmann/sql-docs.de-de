@@ -22,6 +22,7 @@ caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: e97148f9630a125dbe6e93754c532a825de96c84
@@ -76,3 +77,4 @@ ms.lasthandoff: 09/01/2017
  [HoldoutMaxCases-Element](../../../analysis-services/scripting/properties/holdoutmaxcases-element.md)  
   
   
+

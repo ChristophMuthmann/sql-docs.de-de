@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a2af3571c34946bdc494d6443b868a43f81ac1e6
@@ -56,3 +57,4 @@ public int getHoldability()
  [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   
+

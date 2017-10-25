@@ -14,6 +14,7 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5737ae7a0356f7697b254e67faa5cf715d2ffaef
@@ -107,3 +108,4 @@ ms.lasthandoff: 09/09/2017
  [Unterstützung von XML-Daten](../../connect/jdbc/supporting-xml-data.md)  
   
   
+

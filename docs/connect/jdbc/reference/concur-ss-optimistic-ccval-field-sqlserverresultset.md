@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ad73570850146eeb2e8e6c4b434b6638ac957c61
@@ -46,3 +47,4 @@ public static final int CONCUR_SS_OPTIMISTIC_CCVAL
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
+

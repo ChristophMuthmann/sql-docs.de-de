@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e9f7dc84edb37bde6242be79830198ab565547e0
@@ -51,3 +52,4 @@ public void close()
  [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   
+

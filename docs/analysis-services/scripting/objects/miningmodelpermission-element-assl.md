@@ -26,6 +26,7 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 2cd366179355590dca84fb84f8a00e8dfc103a3f
@@ -79,3 +80,4 @@ SELECT StructureColumn('<column name>') FROM <model>.CASES
  [Objekte &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
+

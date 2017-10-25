@@ -19,6 +19,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4ce2cfbae2a65b0d6f0e2ede30559e485bf5e207
@@ -49,3 +50,4 @@ public java.lang.String getApplicationName()
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1508d70610c47116a4aaf58063b0f4196459d3e4
@@ -102,3 +103,4 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
+

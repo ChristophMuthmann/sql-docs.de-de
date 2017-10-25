@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 7ec8a5cfc27be9fbf9fcf4f5844cb0112ad437cd
@@ -66,3 +67,4 @@ ms.lasthandoff: 09/01/2017
  [Umschalten Sie in einer Analysis Services-Datenbank zwischen Schreib-und Lesemodus](../../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
   
+

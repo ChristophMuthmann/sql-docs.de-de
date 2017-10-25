@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e0f92e5db61ef0b778e293ea61b25ad61956986a
@@ -57,3 +58,4 @@ public java.lang.String getClientInfo (java.lang.String name)
  [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   
+

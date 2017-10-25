@@ -14,6 +14,7 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e6dfbd857905f0c0f444c44a9c9eb9813cc32ab2
@@ -59,3 +60,4 @@ add target ring_buffer with (track_causality=on)
  [Diagnostizieren von Problemen mit dem JDBC-Treiber](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   
+

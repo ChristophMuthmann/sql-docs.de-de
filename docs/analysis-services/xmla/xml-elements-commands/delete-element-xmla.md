@@ -28,6 +28,7 @@ caps.latest.revision: 14
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 49ba01a51b67841f96ff2bea3b6a516cf38484a9
@@ -76,3 +77,4 @@ ms.lasthandoff: 09/01/2017
  [Befehle &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   
+

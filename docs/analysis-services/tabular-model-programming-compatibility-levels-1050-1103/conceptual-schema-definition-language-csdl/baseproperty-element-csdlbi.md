@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b82b9b6f137b09768fbfdadb78d98f9cd293e81e
@@ -62,3 +63,4 @@ ms.lasthandoff: 09/01/2017
  [Informationen zum tabellarischen Objektmodell auf Kompatibilität Ebenen 1050 bis 1103](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8f1139f0deb886265da6c7c56e682372155a0e3b
@@ -67,3 +68,4 @@ public byte[] getBytes(long pos,
  [SQLServerBlob-Klasse](../../../connect/jdbc/reference/sqlserverblob-class.md)  
   
   
+

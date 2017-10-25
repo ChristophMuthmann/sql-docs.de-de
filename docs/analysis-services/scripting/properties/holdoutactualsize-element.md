@@ -22,6 +22,7 @@ caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 24a26b453f90fc82e91b1572b0e79af6477caa22
@@ -73,3 +74,4 @@ ms.lasthandoff: 09/01/2017
  [HoldoutSeed-Element](../../../analysis-services/scripting/properties/holdoutseed-element.md)  
   
   
+

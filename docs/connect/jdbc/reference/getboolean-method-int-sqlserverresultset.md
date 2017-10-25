@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ca9e68e4feaea59103a494f696a87658d4077f1a
@@ -60,3 +61,4 @@ public boolean getBoolean(int columnIndex)
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
+

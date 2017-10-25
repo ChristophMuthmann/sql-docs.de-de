@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b44bf68cba02b03faad632d4b93fe3cca361e62f
@@ -58,3 +59,4 @@ ms.lasthandoff: 09/01/2017
   
  [Anfügen und Trennen von Analysis Services-Datenbanken](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)  
   
+

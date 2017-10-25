@@ -15,6 +15,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9e7db92207b2a518c3d697b997a22ed7c076cd0b
@@ -78,3 +79,4 @@ Es gibt für jede, vom Ausdruck zurückgegebene Spalte eine CalculatedTableColum
  [Grundlegendes zu DAX in tabellarischen Modellen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5c625fce817af3072e059d5d2b1172383fcdafea
@@ -77,3 +78,4 @@ ms.lasthandoff: 09/01/2017
  [CUSTOMDATA-Funktion (DAX)](http://msdn.microsoft.com/en-us/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
   
   
+

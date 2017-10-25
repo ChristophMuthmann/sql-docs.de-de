@@ -29,6 +29,7 @@ caps.latest.revision: 21
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 3fd10148d82ac0be83bfab721653cc1e200464fa
@@ -128,3 +129,4 @@ CrossProduct (
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
+

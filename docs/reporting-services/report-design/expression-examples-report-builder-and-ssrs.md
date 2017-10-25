@@ -30,7 +30,7 @@ caps.latest.revision: 101
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6cf3c3d62250f84184adc53d66d9ec274a2a1b3d
 ms.contentlocale: de-de

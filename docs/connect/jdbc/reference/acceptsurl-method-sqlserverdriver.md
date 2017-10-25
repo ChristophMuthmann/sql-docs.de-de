@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f45fb8e673528719750e18af08ccadcebf4d084c
@@ -58,3 +59,4 @@ public boolean acceptsURL(java.lang.String url)
  [SQLServerDriver-Klasse](../../../connect/jdbc/reference/sqlserverdriver-class.md)  
   
   
+

@@ -18,6 +18,7 @@ caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0d0625e9c95f309d8f925b9aecb6d8052c03d7d0
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services-Ablaufverfolgungsereignisse](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dfeede84cca769756d6408871924a384cd023edb
@@ -53,3 +54,4 @@ public int compareTo(DateTimeOffset other)
  [DateTimeOffset-Elemente](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   
   
+

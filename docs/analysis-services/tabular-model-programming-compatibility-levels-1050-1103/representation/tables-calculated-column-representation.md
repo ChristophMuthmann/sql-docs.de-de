@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 77fa541451cc69fa63baf362f0391f890219f36e
@@ -112,3 +113,4 @@ private void addCalculatedColumn(
 ```  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8d68422844c6c5692ebfe362cb6e6d44400e705b
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/01/2017
  [Löschen einer Tabelle &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 07b4331ee938c2eb8b86a263e0fb4bd6f17a241f
@@ -63,3 +64,4 @@ public java.sql.Connection connect(java.lang.String Url,
  [SQLServerDriver-Klasse](../../../connect/jdbc/reference/sqlserverdriver-class.md)  
   
   
+

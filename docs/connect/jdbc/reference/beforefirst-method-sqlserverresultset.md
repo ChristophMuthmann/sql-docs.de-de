@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 82cc703154a26f96347f87d036d45d15ab3ad8b8
@@ -49,3 +50,4 @@ public void beforeFirst()
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
+

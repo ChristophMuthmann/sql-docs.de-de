@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 10bcad6747790932e09fe66d121421b3b11590c7
@@ -47,3 +48,4 @@ protected java.lang.Object[][] getContents()
  [SQLServerResource-Klasse](../../../connect/jdbc/reference/sqlserverresource-class.md)  
   
   
+

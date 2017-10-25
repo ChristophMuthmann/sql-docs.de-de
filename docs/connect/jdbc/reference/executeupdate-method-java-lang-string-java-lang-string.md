@@ -19,6 +19,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 53682225a680d9913fd03e4e7a52beee729eecbc
@@ -65,3 +66,4 @@ public final int executeUpdate(java.lang.String sql,
  [SQLServerStatement-Klasse](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   
+

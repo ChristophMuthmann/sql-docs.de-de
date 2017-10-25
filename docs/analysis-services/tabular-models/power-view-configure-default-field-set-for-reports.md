@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: bc0a2fd4178189a072a9b194e502ae1c58de3f92
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/01/2017
  Nach dem Erstellen eines Standardfeldsatzes können Sie die Benutzerfreundlichkeit des Berichtsentwurfs weiter beeinflussen, indem Sie Standardbezeichnungen, Standardbilder, Standardgruppenverhalten oder die Anordnung von Zeilen mit gleichem Wert gruppiert in einer Zeile oder einzeln angeben. Weitere Informationen finden Sie unter [Konfigurieren von Tabellenverhaltenseigenschaften für Power View-Berichte &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md).  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f6639abb34a7d81e7e99f8cb0856ab7ab1f6e046
@@ -116,3 +117,4 @@ public static void executeGetImportedKeys(Connection con) {
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
+

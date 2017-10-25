@@ -16,6 +16,7 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b51561b367c10248daca388c58646e68ecc1534e
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/01/2017
 |[Konfigurieren von Standarddatenmodellierung und Bereitstellungseigenschaften &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)|Enthält Beschreibungen und Konfigurationsschritte für standardmäßige Modellierungs- und Bereitstellungseigenschaften. Standardeigenschaften werden auf neue Projekte für tabellarische Modelle angewendet. Nachdem ein Projekt erstellt wurde, können diese Eigenschaften abhängig von den Anforderungen für ein bestimmtes Modellprojekt geändert werden.|  
   
   
+

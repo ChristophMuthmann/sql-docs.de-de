@@ -16,6 +16,7 @@ caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 85963e947dbed1fc2d1574a537d0e42f61fbba35
@@ -123,3 +124,4 @@ ms.lasthandoff: 09/01/2017
  [Bereitstellung von Tabellenmodelllösungen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   
+

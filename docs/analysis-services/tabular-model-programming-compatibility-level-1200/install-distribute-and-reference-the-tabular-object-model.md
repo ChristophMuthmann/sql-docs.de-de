@@ -15,6 +15,7 @@ caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9688a692d25d484b05bca88e0779d2812944f3af
@@ -123,3 +124,4 @@ Verweisen auf die Core-Namespace in Ihrem Code ist nicht erforderlich. die Klass
 Verteilung von AMO und TOM erfolgt über die **sql_as_amo.msi** Installationspaket. Wenn Sie in AMO oder TOM ein Setupprogramm für eine Clientanwendung, die Aufrufe erstellen, fügen Sie **sql_as_amo.msi** an die ausführbare Datei. Dies ist der einzige unterstützte Mechanismus für das Verteilen von Clientbibliotheken AMO und TOM.  
   
 Das Paket ist in sich geschlossen und enthält alle Assemblys, die zum Aufrufen von AMO und TOM in Ihrem Code erforderlich. Andere Pakete, z. B. SQL_AS_OLEDB.msi oder SQL_AS_ADOMD.msi, müssen sich nicht speziell für TOM Programmierszenarien.
+

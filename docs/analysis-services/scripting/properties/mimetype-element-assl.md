@@ -24,6 +24,7 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 30f1ee67dca0939a61bbb8ac243b29e07afb8569
@@ -66,3 +67,4 @@ ms.lasthandoff: 09/01/2017
  [DataItem-Datentyp &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md)  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c71c32614ee4be7fdbe198530d5ce228452d2276
@@ -97,3 +98,4 @@ ms.lasthandoff: 09/01/2017
  [Discover Server State Event Category](../../analysis-services/trace-events/discover-server-state-event-category.md)  
   
   
+

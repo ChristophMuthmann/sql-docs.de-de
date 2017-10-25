@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 310909a6e5f607a9473fca8720d718351ef00476
@@ -63,3 +64,4 @@ ms.lasthandoff: 09/01/2017
  [Rollen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a882e903e689f67db7adf9b8d71d34851affd5b4
@@ -60,3 +61,4 @@ public java.io.Reader getCharacterStream(java.lang.String columnName)
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
+

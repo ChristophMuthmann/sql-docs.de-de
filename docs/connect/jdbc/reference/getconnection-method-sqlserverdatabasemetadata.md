@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bfd2a5c0b10760fa2d02ce4b5991bfd9b9ed4466
@@ -53,3 +54,4 @@ public java.sql.Connection getConnection()
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
+

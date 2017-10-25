@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: f3ff3c0bd93b75384b53e1f386a14196bcc803c3
@@ -93,3 +94,4 @@ ms.lasthandoff: 09/01/2017
  [Konfigurieren der &#40; Alle &#41; Ebene für Attributhierarchien](../../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   
+

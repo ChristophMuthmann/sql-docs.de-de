@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 6493000843f72fbc6b7f63f5ec169a55e97b8584
@@ -111,3 +112,4 @@ private void addCalculatedMeasure(
 ```  
   
   
+

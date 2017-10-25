@@ -14,6 +14,7 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2322c3ece650fb05fe19fd55e36f79e73db7d32d
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
  [Diagnostizieren von Problemen mit dem JDBC-Treiber](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   
+

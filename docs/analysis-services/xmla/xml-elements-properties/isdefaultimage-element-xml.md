@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: ed09bbccf5bb5aa399fbab0c9e6a58c7f58c7ecd
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/01/2017
  Für **RelationshipEndVisualizationProperties** -Elemente gibt das **IsDefaultImage** -Element an, dass das Standardimage für diese Entität durch Navigieren zum anderen Ende dieser Beziehung abgerufen werden kann. Der Standardwert **false** gibt an, dass kein abzurufendes Standardimage vorhanden ist.  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 18f95a363c72cde1e067bb930d44c65254631ce2
@@ -149,3 +150,4 @@ ms.lasthandoff: 09/01/2017
  [Progress Reports Event Category](../../analysis-services/trace-events/progress-reports-event-category.md)  
   
   
+

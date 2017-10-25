@@ -15,6 +15,7 @@ caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 369bf544360d50c061314f45c04e8fb55784184c
@@ -102,3 +103,4 @@ ms.lasthandoff: 09/01/2017
  [Kompatibilitätsgrad für tabellarische Modelle in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   
+

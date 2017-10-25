@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9a211ed540b3bddb11c5d84cf0db65ef3dade1ad
@@ -123,3 +124,4 @@ ms.lasthandoff: 09/01/2017
  [Sperren-Ereigniskategorie](../../analysis-services/trace-events/lock-events-category.md)  
   
   
+

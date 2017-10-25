@@ -9,6 +9,7 @@ ms.technology:
 ms.topic: article
 ms.reviewer: meetb
 ms.author: genemi
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
 ms.openlocfilehash: 000325a2e2c53e36f7a74a725962b8dd3be98988

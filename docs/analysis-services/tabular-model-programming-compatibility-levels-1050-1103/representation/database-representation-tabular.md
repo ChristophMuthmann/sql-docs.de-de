@@ -17,6 +17,7 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 52b7a92280566258321a46ecfb2c489e81267965
@@ -96,3 +97,4 @@ catch (Exception createDBxc)
  Ein praktisches Verständnis für die Verwendung von AMO zur Erstellung und Bearbeitung von datenbankdarstellungen, finden Sie in der Quellcode in der Stichprobe Tabular AMO 2012; Prüfen Sie insbesondere die Quelldatei: Database.cs. Das Beispiel ist auf Codeplex verfügbar. Beispielcode wird nur zur Verdeutlichung der hier erläuterten logischen Konzepte bereitgestellt und sollte nicht in einer Produktionsumgebung verwendet werden.  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a7cfbc1875deed8a4949a89f6a34ff8f666ef5cf
@@ -59,3 +60,4 @@ public byte[] getBytes(int index)
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   
+

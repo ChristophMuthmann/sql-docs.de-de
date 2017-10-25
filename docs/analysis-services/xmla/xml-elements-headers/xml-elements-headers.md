@@ -22,6 +22,7 @@ caps.latest.revision: 14
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b12c8b2b22d51069998b4b49d1c9aceb43f063a5
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/01/2017
  [XML-Elemente &#40; XMLA &#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)  
   
   
+

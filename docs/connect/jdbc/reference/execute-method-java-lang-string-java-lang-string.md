@@ -19,6 +19,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9dc327a107a8a164e00f2f34f21515c96766e21d
@@ -63,3 +64,4 @@ public final boolean execute(java.lang.String sql,
  [SQLServerStatement-Klasse](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   
+

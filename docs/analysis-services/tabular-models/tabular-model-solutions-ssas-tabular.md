@@ -15,6 +15,7 @@ caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 31c6a32198c4a9aa417ec65fcf85a5455ea53c4a
@@ -67,3 +68,4 @@ ms.lasthandoff: 09/27/2017
  [In Analysis Services verwendete Tools und Anwendungen](../../analysis-services/tools-and-applications-used-in-analysis-services.md)  
   
   
+
