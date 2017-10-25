@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Formatieren von Text (Berichts-Generator) | Microsoft Docs'
+title: 'Tutorial: Formatieren von Text (Berichts-Generator) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -16,7 +16,7 @@ caps.latest.revision: 16
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cfbe1001a049466af839363db29156df6b972556
 ms.contentlocale: de-de
@@ -55,7 +55,7 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
   
 ### <a name="to-create-a-data-source"></a>So erstellen Sie eine Datenquelle  
   
-1.  Klicken Sie im Bereich „Berichtsdaten“ auf **Neu**  >  **Datenquelle**.  
+1.  Klicken Sie im Bereich „Berichtsdaten“ auf **Neu** > **Datenquelle**.  
 
     Wenn der Bereich **Berichtsdaten** nicht auf der Registerkarte **Ansicht** angezeigt, überprüfen Sie **Berichtsdaten**.
   
@@ -66,15 +66,15 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
 4.  Überprüfen Sie, ob der Verbindungstyp Microsoft SQL Server ist, und geben Sie anschließend im Feld **Verbindungszeichenfolge** Folgendes ein: `Data Source = <servername>`  
   
     > [!NOTE]  
-    > Der Ausdruck `<servername>`, z.B. „Report001“, bezeichnet einen Computer, auf dem eine Instanz des SQL Server-Datenbankmoduls installiert ist. Dieses Lernprogramm ist es bestimmte Daten nicht erforderlich; Es benötigt lediglich eine Verbindung mit einer SQL Server-Datenbank. Wenn unter **Datenquellenverbindungen**bereits eine Datenquellenverbindung aufgeführt ist, können Sie sie auswählen und zum nächsten Schritt übergehen, nämlich „So erstellen Sie ein Dataset“. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung &#40;Berichts-Generator&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > Der Ausdruck `<servername>`, z.B. „Report001“, bezeichnet einen Computer, auf dem eine Instanz des SQL Server-Datenbankmoduls installiert ist. Für dieses Tutorial sind keine bestimmten Daten erforderlich. Es wird lediglich eine Verbindung mit einer Datenbank vom SQL Server benötigt. Wenn unter **Datenquellenverbindungen**bereits eine Datenquellenverbindung aufgeführt ist, können Sie sie auswählen und zum nächsten Schritt übergehen, nämlich „So erstellen Sie ein Dataset“. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### <a name="to-create-a-dataset"></a>So erstellen Sie ein Dataset  
   
-1.  Klicken Sie im Bereich „Berichtsdaten“ auf **Neu**  >  **Dataset**.  
+1.  Klicken Sie im Bereich „Berichtsdaten“ auf **Neu** > **Dataset**.  
   
-2.  Vergewissern Sie sich, dass die Datenquelle **TextDataSource** ist.  
+2.  Vergewissern Sie sich, dass die Datenquelle **TextDataSource**ist.  
   
 3.  Geben Sie im Feld **Name** Folgendes ein: **TextDataset**.  
   
@@ -231,9 +231,9 @@ In diesem Abschnitt fügen Sie dem Text in der Tabelle aus dem vorherigen Abschn
   
 6.  Das Aussehen des Texts unterscheidet sich nicht. Es muss jedoch dem des Linktexts entsprechen.  
   
-7.  Wählen Sie `[LinkText]` aus.  
+7.  Wählen Sie `[LinkText]`aus.  
   
-8.  Wählen Sie unter **Stamm** > **Schriftart**die Einstellung **Unterstreichen** aus, und ändern Sie die **Farbe** zu **Blau**.  
+8.  Klicken Sie auf der Registerkarte **Home** > **Schriftart** auf die Einstellung **Unterstreichen**, und ändern Sie die **Farbe** in **Blau**.  
   
 9. Klicken Sie auf **Ausführen**.  
   
@@ -261,7 +261,7 @@ In diesem Abschnitt drehen Sie Text in der Tabelle aus den vorherigen Abschnitte
 
     ![Berichts-Generator-Auswählen-der-Zelle-Territory](../reporting-services/media/report-builder-select-territory-cell.png)
    
-6.  Klicken Sie auf der Registerkarte **Stamm** in der Gruppe **Absatz** auf die Schaltflächen **Mitte** und **Zentriert**, um den Text sowohl vertikal als auch horizontal im Mittelpunkt der Zelle zu platzieren.  
+6.  Klicken Sie auf der Registerkarte **Home** in der Gruppe **Absatz** auf die Schaltflächen **Mitte** und **Zentriert**, um den Text sowohl vertikal als auch horizontal im Mittelpunkt der Zelle zu platzieren.  
   
 8.  Klicken Sie auf (**!**).  
   
@@ -273,11 +273,11 @@ Nun verläuft der Text in der `[Territory]` -Zelle in den Zellen vertikal von un
   
 1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zu wechseln.  
   
-2.  Klicken Sie auf die oberste Tabellenzelle, die `[Sum(Sales)]` enthält, halten Sie die UMSCHALTTASTE gedrückt, und klicken Sie auf die unterste Tabellenzelle, die `[Sum(Sales)]` enthält.  
+2.  Klicken Sie auf die oberste Tabellenzelle, die `[Sum(Sales)]`enthält, halten Sie die UMSCHALTTASTE gedrückt, und klicken Sie auf die unterste Tabellenzelle, die `[Sum(Sales)]`enthält.  
   
-3.  Klicken Sie auf der Registerkarte **Stamm** unter **Zahl** auf die Schaltfläche **Währung**.  
+3.  Klicken Sie auf der Registerkarte **Home** unter **Zahl** auf die Schaltfläche **Währung**.  
   
-4.  (Optional) Wenn Sie das Gebietsschema „Deutsch (Deutschland)“ verwenden, lautet der Standardbeispieltext [**12.345,00€**]. Falls kein Beispielwährungswert angezeigt wird, klicken Sie in der Gruppe **Zahlen** auf **Platzhalterformate**  >  **Beispielwerte**.  
+4.  (Optional) Wenn Sie das Gebietsschema „Deutsch (Deutschland)“ verwenden, lautet der Standardbeispieltext [**12.345,00€**]. Falls kein Beispielwährungswert angezeigt wird, klicken Sie in der Gruppe **Zahlen** auf **Platzhalterformate** > **Beispielwerte**.  
 
     ![Berichts-Generator-Schaltfläche-Platzhalterwert](../reporting-services/media/report-builder-placeholder-value-button.png)
   
@@ -364,10 +364,10 @@ Der Bericht wird auf dem Berichtsserver gespeichert. Der Name des Berichtsserver
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Es gibt in Berichts-Generator viele Möglichkeiten, um Text zu formatieren. [Lernprogramm: Erstellen eines Freiformberichts](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) enthält weitere Beispiele.  
+Es gibt in Berichts-Generator viele Möglichkeiten, um Text zu formatieren. Das [Tutorial: Erstellen eines Freiformberichts](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) enthält weitere Beispiele.  
 
-[Berichts-Generator-Lernprogramme ](../reporting-services/report-builder-tutorials.md)  
- [Formatieren von Berichtselementen](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
+[Tutorials für den Bericht-Generator](../reporting-services/report-builder-tutorials.md) 
+[Formatieren von Berichtselementen](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
 [Berichts-Generator in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
