@@ -87,7 +87,7 @@ BOOL SQLInstallDriverEx(
  Die Funktion gibt "true" zurück, wenn erfolgreich, "false" ist dabei ein Fehler aufgetreten.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLInstallDriverEx** gibt "false", ein zugehöriges * \*PfErrorCode* Wert abgerufen werden kann, durch den Aufruf **SQLInstallerError**. Die folgende Tabelle enthält die * \*PfErrorCode* Werte, die von zurückgegeben werden können **SQLInstallerError** und jeweils im Kontext dieser Funktion erläutert.  
+ Wenn **SQLInstallDriverEx** gibt "false", ein zugehöriges  *\*PfErrorCode* Wert abgerufen werden kann, durch den Aufruf **SQLInstallerError**. Die folgende Tabelle enthält die  *\*PfErrorCode* Werte, die von zurückgegeben werden können **SQLInstallerError** und jeweils im Kontext dieser Funktion erläutert.  
   
 |*\*pfErrorCode*|Fehler|Description|  
 |---------------------|-----------|-----------------|  
@@ -103,9 +103,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>Kommentare  
  Die *LpszDriver* Argument ist eine Liste der Attribute in Form von Schlüsselwort-Wert-Paaren. Jedes Paar wird durch ein Nullbyte beendet, und die gesamte Liste wird mit null Byte beendet. (D. h. kennzeichnen zwei null-Bytes am Ende der Liste.) Das Format dieser Liste wird wie folgt aus:  
   
- *Treiber-"DESC"* ** \\ **0Driver**=***-Treiber-DLL-Dateiname* ** \\ **0 [Setup**=***Setup-DLL-Dateiname***\\**0]  
+ *Treiber-"DESC"*  **\\** 0Driver**=***-Treiber-DLL-Dateiname*  **\\** 0 [Setup**=***Setup-DLL-Dateiname***\\**0]  
   
- [*-Treiber-Attr-Schlüsselwort1***=***value1***\\**0] [*-Treiber-Attr-Schlüsselwort2 * ** = ** *value2***\\**0]... ** \\ **0  
+ [*-Treiber-Attr-Schlüsselwort1***=***value1***\\**0] [*-Treiber-Attr-Schlüsselwort2*   **=**  *value2***\\**0]...  **\\** 0  
   
  \0 ist, in dem ein Nullbyte und *-Treiber-Attr-Keywordn* alle Treiber-Attribut-Schlüsselwort ist. Die Schlüsselwörter müssen in der angegebenen Reihenfolge angezeigt werden. Beispielsweise nehmen wir an, dass ein Treiber für Textdateien formatierte separate Treiber und -Setup-DLLs verwendet, und mit den Erweiterungen ".txt" und CSV verwenden Sie-Dateien. Die *LpszDriver* Argument für diesen Treiber möglicherweise wie folgt:  
   

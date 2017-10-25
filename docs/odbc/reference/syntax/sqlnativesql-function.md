@@ -66,10 +66,10 @@ SQLRETURN SQLNativeSql(
  Wenn *OutStatementText* NULL ist, *TextLength2Ptr* gibt weiterhin zurück, die Gesamtzahl der Zeichen (mit Ausnahme der Null-Terminierung Zeichen für Zeichendaten) verfügbar, die in den Puffer zurückgegeben verweist *OutStatementText*.  
   
  *Pufferlänge*  
- [Eingabe] Anzahl der Zeichen in der \* *OutStatementText* Puffer. Wenn der Rückgabewert in * \*InStatementText* eine Unicode-Zeichenfolge (beim Aufrufen von **SQLNativeSqlW**), wird die *Pufferlänge* Argument muss eine gerade Zahl sein.  
+ [Eingabe] Anzahl der Zeichen in der \* *OutStatementText* Puffer. Wenn der Rückgabewert in  *\*InStatementText* eine Unicode-Zeichenfolge (beim Aufrufen von **SQLNativeSqlW**), wird die *Pufferlänge* Argument muss eine gerade Zahl sein.  
   
  *TextLength2Ptr*  
- [Ausgabe] Zeiger auf einen Puffer, in dem die Gesamtanzahl der verfügbaren Zeichen ist (außer Null-Terminierung) im zurückzugebenden zurückgegeben \* *OutStatementText*. Ist die Anzahl der zurückzugebenden verfügbaren Zeichen ist größer als oder gleich *Pufferlänge*, die in SQL-Zeichenfolge übersetzt \* *OutStatementText* auf abgeschnitten * Pufferlänge* abzüglich der Länge des ein Null-Abschlusszeichen.  
+ [Ausgabe] Zeiger auf einen Puffer, in dem die Gesamtanzahl der verfügbaren Zeichen ist (außer Null-Terminierung) im zurückzugebenden zurückgegeben \* *OutStatementText*. Ist die Anzahl der zurückzugebenden verfügbaren Zeichen ist größer als oder gleich *Pufferlänge*, die in SQL-Zeichenfolge übersetzt \* *OutStatementText* auf abgeschnitten  *Pufferlänge* abzüglich der Länge des ein Null-Abschlusszeichen.  
   
 ## <a name="returns"></a>Rückgabewert  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
@@ -85,7 +85,7 @@ SQLRETURN SQLNativeSql(
 |08S01|Kommunikations-Verbindungsfehler|Die Verbindung zwischen dem Treiber und die Datenquelle mit der der Treiber verbunden wurde aufgetreten ist, bevor die Verarbeitung für die Funktion abgeschlossen.|  
 |22007|Ungültiges Datetime-format|**InStatementText* eine Escape-Klausel mit einem ungültigen Wert für Datum, Uhrzeit oder Zeitstempel enthalten.|  
 |24000|Ungültiger Cursorstatus|Der Cursor, die in der Anweisung bezeichnet wurde vor dem Start des Resultsets oder nach dem Ende des Resultsets positioniert. Dieser Fehler kann durch einen Treiber, müssen eine systemeigene Implementierung des DBMS-Cursor nicht zurückgegeben werden.|  
-|HY000|Allgemeiner Fehler|Für die es keine spezifischen SQLSTATE wurde und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der * \*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
+|HY000|Allgemeiner Fehler|Für die es keine spezifischen SQLSTATE wurde und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der  *\*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
 |HY001|Fehler bei der speicherbelegung|Der Treiber konnte nicht belegt werden zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich.|  
 |HY009|Ungültige Verwendung des null-Zeiger|(DM) **InStatementText* wurde ein null-Zeiger.|  
 |HY010|Fehler bei Funktionssequenz|(DM) eine asynchron ausgeführte Funktion wurde aufgerufen, für die *Verbindungshandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.|  

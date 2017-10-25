@@ -68,7 +68,7 @@ SQLRETURN SQLDrivers(
  [Eingabe] Länge der **DriverDescription* Puffers in Zeichen.  
   
  *DescriptionLengthPtr*  
- [Ausgabe] Zeiger auf einen Puffer, in dem die Gesamtzahl der Zeichen (mit Ausnahme von Null-Abschlusszeichen) zurückgegeben verfügbar im zurückzugebenden \* *DriverDescription*. Wenn die Anzahl der zurückzugebenden verfügbaren Zeichen ist größer als oder gleich ist *BufferLength1*, um die treiberbeschreibung in \* *DriverDescription* auf abgeschnitten * BufferLength1* abzüglich der Länge des ein Null-Abschlusszeichen.  
+ [Ausgabe] Zeiger auf einen Puffer, in dem die Gesamtzahl der Zeichen (mit Ausnahme von Null-Abschlusszeichen) zurückgegeben verfügbar im zurückzugebenden \* *DriverDescription*. Wenn die Anzahl der zurückzugebenden verfügbaren Zeichen ist größer als oder gleich ist *BufferLength1*, um die treiberbeschreibung in \* *DriverDescription* auf abgeschnitten  *BufferLength1* abzüglich der Länge des ein Null-Abschlusszeichen.  
   
  *DriverAttributes*  
  [Ausgabe] Zeiger auf einen Puffer, in dem die Liste der Treiber-Attribut-Wert-Paaren zurück (siehe "Kommentare").  
@@ -76,10 +76,10 @@ SQLRETURN SQLDrivers(
  Wenn *DriverAttributes* NULL ist, *AttributesLengthPtr* gibt weiterhin zurück, die Gesamtanzahl der Bytes (ausgenommen die Null-Terminierung Zeichen für Zeichendaten) verfügbar, die in den Puffer zurückgegeben verweist *DriverAttributes*.  
   
  *BufferLength2*  
- [Eingabe] Länge der \* *DriverAttributes* Puffers in Zeichen. Wenn die * \*DriverDescription* Wert ist eine Unicode-Zeichenfolge (beim Aufrufen von **SQLDriversW**), wird die *Pufferlänge* Argument muss eine gerade Zahl sein.  
+ [Eingabe] Länge der \* *DriverAttributes* Puffers in Zeichen. Wenn die  *\*DriverDescription* Wert ist eine Unicode-Zeichenfolge (beim Aufrufen von **SQLDriversW**), wird die *Pufferlänge* Argument muss eine gerade Zahl sein.  
   
  *AttributesLengthPtr*  
- [Ausgabe] Zeiger auf einen Puffer, in dem die Gesamtanzahl der Bytes (ausgenommen die Null-Terminierung Byte) zurückgegeben verfügbar im zurückzugebenden \* *DriverAttributes*. Wenn die Anzahl der Bytes, die für die Rückgabe verfügbar, größer als oder gleich ist *BufferLength2*, die Liste der Attribut-Wert-Paare im \* *DriverAttributes* auf abgeschnitten * BufferLength2* abzüglich der Länge des Null-Abschlusszeichen.  
+ [Ausgabe] Zeiger auf einen Puffer, in dem die Gesamtanzahl der Bytes (ausgenommen die Null-Terminierung Byte) zurückgegeben verfügbar im zurückzugebenden \* *DriverAttributes*. Wenn die Anzahl der Bytes, die für die Rückgabe verfügbar, größer als oder gleich ist *BufferLength2*, die Liste der Attribut-Wert-Paare im \* *DriverAttributes* auf abgeschnitten  *BufferLength2* abzüglich der Länge des Null-Abschlusszeichen.  
   
 ## <a name="returns"></a>Rückgabewert  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR oder SQL_INVALID_HANDLE.  
@@ -91,7 +91,7 @@ SQLRETURN SQLDrivers(
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|(DM) Treibermanager-spezifische informationsmeldung. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01004|Zeichenfolgedaten wurden rechts abgeschnitten|(DM) Puffer \* *DriverDescription* war nicht groß genug, um die vollständige treiberbeschreibung zurückzugeben. Aus diesem Grund wurden die Beschreibung abgeschnitten. Die Länge der treiberbeschreibung des vollständigen wird zurückgegeben, \* *DescriptionLengthPtr*. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)<br /><br /> (DM) Puffer \* *DriverAttributes* war nicht groß genug für die vollständige Liste der Attribut-Wert-Paaren zurück. Deshalb wurde die Liste abgeschnitten. Die Länge der ungekürzte Liste mit Attribut-Wert-Paare im zurückgegeben **AttributesLengthPtr*. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|HY000|Allgemeiner Fehler|Für die es keine spezifischen SQLSTATE wurde und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der * \*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
+|HY000|Allgemeiner Fehler|Für die es keine spezifischen SQLSTATE wurde und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der  *\*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
 |HY001|Fehler bei der speicherbelegung|Der Treiber-Manager (DM) konnte nicht belegt werden, die zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich ist.|  
 |HY010|Fehler bei Funktionssequenz|(DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreamte Parameter abgerufen wurde.|  
 |HY013|Speicherverwaltungsfehler|Der Funktionsaufruf konnte nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  

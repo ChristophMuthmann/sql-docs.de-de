@@ -73,7 +73,7 @@ Verwenden Sie SQL Server Management Studio zum Herstellen einer Verbindung im SS
   
 5.  Nachdem der Bereitstellungsvorgang abgeschlossen ist, ist die **Ergebnisse** -Seite wird geöffnet. Diese Seite zeigt an, ob die einzelnen Aktionen erfolgreich ausgeführt wurden oder ob Fehler aufgetreten sind.
     -   Wenn der Vorgang fehlgeschlagen ist, klicken Sie auf **Fehler** in der **Ergebnis** Spalte um eine Erklärung des Fehlers anzuzeigen.
-    -   Klicken Sie optional auf **Bericht speichern... ** um die Ergebnisse als XML-Datei zu speichern.
+    -   Klicken Sie optional auf **Bericht speichern...**  um die Ergebnisse als XML-Datei zu speichern.
     -   Klicken Sie auf **schließen** um den Assistenten zu beenden.
 
 ## <a name="next-steps"></a>Nächste Schritte
