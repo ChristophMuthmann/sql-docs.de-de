@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
-ms.openlocfilehash: aab54d4c1005a11e9c947a02199eec63fb289b22
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: e1b3e7db23ce9435b5d57156f2dcfd920d4d3e11
 ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="specify-parameters"></a>Angeben von Parametern
@@ -137,7 +137,7 @@ GO
   
  Um einen Ausgabeparameter anzugeben müssen Sie das OUTPUT-Schlüsselwort in der Definition des Parameters in der CREATE PROCEDURE-Anweisung angeben. Die Prozedur gibt den aktuellen Wert des Ausgabeparameters an das aufrufende Programm zurück, wenn die Prozedur beendet wird. Um den Wert des Parameters in einer Variablen zu speichern, die in dem aufrufenden Programm verwendet werden kann, muss das aufrufende Programm beim Ausführen der Prozedur ebenfalls das Schlüsselwort OUTPUT verwenden.  
   
- Im nachfolgenden Beispiel wird die `Production.usp`_`GetList` -Prozedur erstellt, von der eine Liste der Produkte zurückgegeben wird, deren Preis einen angegebenen Betrag nicht übersteigt. In dem Beispiel wird die Verwendung mehrerer SELECT-Anweisungen und mehrerer OUTPUT-Parameter dargestellt. OUTPUT-Parameter ermöglichen einer externen Prozedur, einem Batch oder mehreren [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen während dem Ausführen der Prozedur den Zugriff auf einen Satz von Werten.  
+ Im nachfolgenden Beispiel wird die `Production.usp_GetList`-Prozedur erstellt, von der eine Liste der Produkte zurückgegeben wird, deren Preis einen angegebenen Betrag nicht übersteigt. In dem Beispiel wird die Verwendung mehrerer SELECT-Anweisungen und mehrerer OUTPUT-Parameter dargestellt. OUTPUT-Parameter ermöglichen einer externen Prozedur, einem Batch oder mehreren [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen während dem Ausführen der Prozedur den Zugriff auf einen Satz von Werten.  
   
 ```  
 USE AdventureWorks2012;  
