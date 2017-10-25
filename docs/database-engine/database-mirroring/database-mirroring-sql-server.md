@@ -28,10 +28,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 40253151a07fe393046c7a1b0e20d4e5e7ce1212
+ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
+ms.openlocfilehash: 9160058a5e38ccc9e8e21e56c764b01eac610d2f
 ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/21/2017
 
 ---
 # <a name="database-mirroring-sql-server"></a>Datenbankspiegelung (SQL Server)
@@ -84,9 +84,6 @@ ms.lasthandoff: 08/02/2017
   
  Spiegeldatenbank  
  Steht für die Kopie der Datenbank, die in der Regel vollständig mit der Prinzipaldatenbank synchronisiert wird.  
-  
- Spiegelserver  
- Entspricht in einer Datenbank-Spiegelungskonfiguration der Serverinstanz, auf der sich die Spiegeldatenbank befindet.  
   
  Spiegelserver  
  Entspricht in einer Datenbank-Spiegelungskonfiguration der Serverinstanz, auf der sich die Spiegeldatenbank befindet.  
