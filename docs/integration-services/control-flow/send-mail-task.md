@@ -24,6 +24,7 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
 ms.openlocfilehash: cf06b8fdc020b9c2012d5d710427b64043898e84
@@ -168,3 +169,4 @@ ms.lasthandoff: 08/11/2017
  [Ablaufsteuerung](../../integration-services/control-flow/control-flow.md)  
   
   
+

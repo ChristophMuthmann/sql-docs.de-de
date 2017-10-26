@@ -16,6 +16,7 @@ f1_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
 ms.openlocfilehash: f54562b59e8c61f723c17e2812ca39cb2e95f273

@@ -20,6 +20,7 @@ caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
 ms.openlocfilehash: cb13596ddd01922f10632ccb3e1b801937c9941a
@@ -159,3 +160,4 @@ ms.lasthandoff: 08/03/2017
 -   [Optionen für Anforderung für Wertinklusionsprofil &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
   
+

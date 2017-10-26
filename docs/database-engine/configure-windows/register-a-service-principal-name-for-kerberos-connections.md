@@ -20,6 +20,7 @@ caps.latest.revision: 59
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2b8ceebad6ec1dfaf4427864b97cd8c2076e1a2f
@@ -185,3 +186,4 @@ WHERE session_id = @@SPID;
  [Behandeln von Problemen mit der Kerberos-Authentifizierung in einer Reporting Services-Umgebung](http://technet.microsoft.com/library/ff679930.aspx)  
   
   
+

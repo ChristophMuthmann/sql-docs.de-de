@@ -23,6 +23,7 @@ caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 8bd642d31e0a6a813b239935f3fb091003b682fc
@@ -292,3 +293,4 @@ End Module
  [Programmgesteuertes Verbinden von Datenflusskomponenten](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
   
   
+

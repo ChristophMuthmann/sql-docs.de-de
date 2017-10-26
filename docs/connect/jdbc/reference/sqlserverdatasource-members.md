@@ -14,6 +14,7 @@ caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: eb9919441a3e20fdb02753258e134ba7bedb0ce0
@@ -115,3 +116,4 @@ ms.lasthandoff: 09/09/2017
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
   
+

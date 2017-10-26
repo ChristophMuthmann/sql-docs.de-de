@@ -17,6 +17,7 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dd74ffbf491733826eef4cf61530e838033d7e3d
@@ -65,3 +66,4 @@ ISNULL(DaysToManufacture + @AddDays)
  [COALESCE &#40; Transact-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)  
   
   
+

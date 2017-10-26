@@ -16,6 +16,7 @@ caps.latest.revision: 35
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f62d2e7f2187433acdaf775d0835b1f5f7d6e5a3
@@ -55,3 +56,4 @@ ms.lasthandoff: 08/02/2017
  [Serverkonfigurationsoptionen für den Serverarbeitsspeicher](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  
   
   
+

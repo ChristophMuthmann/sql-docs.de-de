@@ -18,6 +18,7 @@ caps.latest.revision: 36
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6dd319ab3fabac9cecd2aa7ed8091b51fd190573
@@ -241,3 +242,4 @@ ms.lasthandoff: 09/09/2017
 -   Die größte Anzahl von Duplikaten in einem Cluster  
   
   
+

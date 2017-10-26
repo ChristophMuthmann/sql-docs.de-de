@@ -14,6 +14,7 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 49f92bf52ddf9c06906f42b81945ec3d630c8be4
@@ -67,3 +68,4 @@ public static void executeSprocInParams(Connection con) {
  [Verwenden von Anweisungen mit gespeicherten Prozeduren](../../connect/jdbc/using-statements-with-stored-procedures.md)  
   
   
+

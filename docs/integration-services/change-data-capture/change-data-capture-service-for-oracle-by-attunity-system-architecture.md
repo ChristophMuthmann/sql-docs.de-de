@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 69f36b9b3e01be90cc1f5a4cd19fb80543186620
@@ -56,3 +57,4 @@ ms.lasthandoff: 08/03/2017
  Der Oracle CDC Service und seine untergeordneten Oracle CDC-Instanzen können nur mit den Oracle-Quelldatenbanken und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zielinstanz als Clients kommunizieren. Damit werden nicht aktiv Netzwerke und andere Protokolle überwacht. Der Oracle CDC Service überwacht die CDC-Datenbanken auf Konfigurationsänderungen und passt seine Abläufe basierend auf der aktualisierten Konfiguration an.  
   
   
+

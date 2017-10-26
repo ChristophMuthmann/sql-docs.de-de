@@ -18,6 +18,7 @@ caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 435dc6a75dc991d618d6dcec6ea072f889d0a0ce
@@ -66,3 +67,4 @@ ms.lasthandoff: 08/02/2017
  [Entfernen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   
   
+

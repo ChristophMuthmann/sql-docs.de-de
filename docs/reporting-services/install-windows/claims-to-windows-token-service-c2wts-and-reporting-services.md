@@ -70,7 +70,7 @@ Wenn in der Umgebung die eingeschränkte Kerberos-Delegierung verwendet wird, da
 
     * Wählen Sie **Hinzufügen** zum Hinzufügen eines Dienstes, an den Sie delegieren können.
 
-    * Wählen Sie **Benutzer oder Computer... ***, und geben Sie das Konto, das den Dienst hostet. Angenommen, ein SQL-Server ausgeführt wird, unter einem Konto mit dem Namen *Sqlservice*, geben Sie `sqlservice`. 
+    * Wählen Sie **Benutzer oder Computer...** *, und geben Sie das Konto, das den Dienst hostet. Angenommen, ein SQL-Server ausgeführt wird, unter einem Konto mit dem Namen *Sqlservice*, geben Sie `sqlservice`. 
 
     * Wählen Sie die Darstellung des Diensts. Dadurch werden die SPNs angezeigt, die über dieses Konto verfügbar sind. Wenn der Dienst unter diesem Konto nicht angezeigt wird, fehlt er möglicherweise oder befindet auf einem anderen Konto. Sie können das SetSPN-Dienstprogramm verwenden, um die SPNs anzupassen.
 

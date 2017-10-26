@@ -19,6 +19,7 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 61e0e7c321323bba74e05afe4d28ce7f525843af
@@ -72,3 +73,4 @@ ms.lasthandoff: 08/03/2017
  [Kopieren von Projektelementen](http://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
   
   
+

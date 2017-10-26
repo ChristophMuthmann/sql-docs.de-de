@@ -22,6 +22,7 @@ caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
 ms.openlocfilehash: bd3eee42fbb204a9ca1e806d273b7c09a86c87d2
@@ -61,3 +62,4 @@ ms.lasthandoff: 08/19/2017
  [Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
+

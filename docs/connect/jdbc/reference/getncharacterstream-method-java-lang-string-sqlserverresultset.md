@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f846c2c2a008fae97bfb61dbd2495ae33b05f3f2
@@ -54,3 +55,4 @@ public java.io.Reader getNCharacterStream(java.lang.String columnLabel)
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)  
   
   
+

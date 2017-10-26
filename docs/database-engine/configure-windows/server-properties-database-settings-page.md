@@ -16,6 +16,7 @@ caps.latest.revision: 32
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 17e75c3b87403fc9d27fccdc27464a1470d71743
@@ -80,3 +81,4 @@ ms.lasthandoff: 08/02/2017
  [Angeben des Füllfaktors für einen Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
   
   
+

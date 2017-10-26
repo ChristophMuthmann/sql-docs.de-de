@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 13704cfef54e3401d31eb22f6dca9c9f247c079b
@@ -50,3 +51,4 @@ ms.lasthandoff: 08/03/2017
  [Fehlerbehandlung](../../integration-services/change-data-capture/error-handling.md)  
   
   
+

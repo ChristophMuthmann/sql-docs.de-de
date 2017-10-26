@@ -18,6 +18,7 @@ caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2b1ae38e8b7ba0a9e584a80d1c6cacc76938576a
@@ -51,3 +52,4 @@ ms.lasthandoff: 08/03/2017
  [OLE DB-Verbindungs-Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: caf66f974e832fcd1b27caf650d187942b3f19fe
@@ -64,3 +65,4 @@ ms.lasthandoff: 08/03/2017
  **Nächstes Thema** [Verarbeiten von Einfügungen, Updates und Löschungen](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
   
   
+

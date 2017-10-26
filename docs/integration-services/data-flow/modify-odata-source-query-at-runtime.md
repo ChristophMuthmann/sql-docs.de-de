@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
 ms.openlocfilehash: 9da1f1be0a790d01f9403d6fc05a5c1498c0ee8b
@@ -70,3 +71,4 @@ ms.lasthandoff: 08/23/2017
 > Wenn Sie diesen Ansatz verwenden, müssen Sie sicherstellen, dass die festgelegten Werte ordnungsgemäß URL-codiert werden. Bei der Übernahme der Werte aus der Benutzereingabe (z. B. der parameterbasierten Festlegung einzelner Abfrageoptionswerte) müssen Sie sicherstellen, dass die Werte überprüft werden, um potenzielle Angriffe durch die Einschleusung von SQL-Befehlen zu vermeiden.  
   
   
+

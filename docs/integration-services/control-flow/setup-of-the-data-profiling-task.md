@@ -16,6 +16,7 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
 ms.openlocfilehash: 757bee96609bf389100076434cc733ff7ad46d25
@@ -107,3 +108,4 @@ ms.lasthandoff: 08/03/2017
  [Datenprofil-Viewer](../../integration-services/control-flow/data-profile-viewer.md).  
   
   
+

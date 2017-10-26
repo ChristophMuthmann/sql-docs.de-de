@@ -17,6 +17,7 @@ caps.latest.revision: 28
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dc02a0d982ceb08f631fbdf628dff293f1f8e5c7
@@ -136,3 +137,4 @@ ms.lasthandoff: 09/09/2017
 |Der Wert stimmt nicht mit einem regulären Ausdruck überein|Nur die Werte, die nicht dem regulären Ausdruck im Operanden entsprechen, werden als gültig angesehen.|Beispieloperand: [1-5] + (die Zeichenfolge darf nicht nur Ziffern von 1 bis 5 enthalten)<br /><br /> Gültige Werte: 456, ABC<br /><br /> Ungültige Werte: 123, 123456, 14352|  
   
   
+

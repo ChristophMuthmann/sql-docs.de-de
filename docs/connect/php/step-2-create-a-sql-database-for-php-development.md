@@ -14,6 +14,7 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 58815c1984bf4dfe9d2da459166dfcffdd3b9202
@@ -25,3 +26,4 @@ ms.lasthandoff: 09/09/2017
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 [!INCLUDE[CreateDatabase](../../includes/createdatabase.md)]
+

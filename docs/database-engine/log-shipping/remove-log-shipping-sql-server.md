@@ -18,6 +18,7 @@ caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: daec2b5c293d683423b85f59fc75b7b27f76f541
@@ -103,3 +104,4 @@ ms.lasthandoff: 08/02/2017
  [Protokollversandtabellen und gespeicherte Prozeduren](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   
   
+

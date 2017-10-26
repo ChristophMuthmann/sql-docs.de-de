@@ -14,6 +14,7 @@ caps.latest.revision: 3
 ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: d28b647de71c5064dfbe0d49f399119f6a9ac283

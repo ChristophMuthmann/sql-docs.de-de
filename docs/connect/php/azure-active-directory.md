@@ -8,6 +8,7 @@ ms.topic: article
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 01d921ebee152924b905fa7a9de8c6d46f41ca64

@@ -18,6 +18,7 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
 ms.openlocfilehash: 88d6515c29c789c12818dfc51c86c5b1d4537247
@@ -98,3 +99,4 @@ ms.lasthandoff: 08/03/2017
  [Erstellen eines Bereitstellungshilfsprogramms](../../../integration-services/packages/create-a-deployment-utility.md)  
   
   
+

@@ -22,6 +22,7 @@ caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: 69a0a8b907fcb45cf6ecd0576fb6fba04775d237
@@ -217,3 +218,4 @@ ms.lasthandoff: 08/17/2017
  [Working with Excel Files with the Script Task](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   
   
+

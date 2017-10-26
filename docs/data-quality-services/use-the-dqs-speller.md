@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a14a9adc633e997fa9f8095d3d98a11bc9d386aa
@@ -77,3 +78,4 @@ ms.lasthandoff: 09/09/2017
  DQS stellt Vorschläge für Werte sowohl in der Spalte **Wert** als auch in der Spalte **Korrigieren in** der Tabelle **Wert** bereit. Wenn Sie einen Vorschlag in der Spalte **Wert** auswählen, wird der Werttyp auf **Fehler**festgelegt, und der Vorschlag wird in die Spalte **Korrigieren in** kopiert, so als hätten Sie den Wert manuell eingefügt. Eine bereits vorhandene Korrektur wird zu einem Vorschlag. Wenn Sie auf der Seite **Ergebnisse verwalten und anzeigen** der Aktivität **Bereinigung** einen Vorschlag in der Spalte **Korrigieren in** auswählen, ersetzt DQS den derzeit ausgewählten Wert durch die Auswahl, und der derzeit ausgewählte Wert wird ein Vorschlag. Auf der Seite **Ergebnisse verwalten und anzeigen** der Aktivität **Bereinigung** werden keine Vorschläge auf Datensatzebene (das untere Raster) gemacht.  
   
   
+

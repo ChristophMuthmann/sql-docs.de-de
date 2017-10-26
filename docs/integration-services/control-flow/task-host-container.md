@@ -19,6 +19,7 @@ caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 27fc5684d3ed15dcd8638e0515af57f7164d6e9c
@@ -46,3 +47,4 @@ ms.lasthandoff: 08/03/2017
  [SQL Server Integration Services-Container](../../integration-services/control-flow/integration-services-containers.md)  
   
   
+

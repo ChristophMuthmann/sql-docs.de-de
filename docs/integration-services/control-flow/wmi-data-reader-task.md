@@ -21,6 +21,7 @@ caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
 ms.openlocfilehash: 75beba806fea6d2e680720ef9c9c72b7809dbe70
@@ -187,3 +188,4 @@ Select * FROM Win32_QuickFixEngineering
  [Ablaufsteuerung](../../integration-services/control-flow/control-flow.md)  
   
   
+

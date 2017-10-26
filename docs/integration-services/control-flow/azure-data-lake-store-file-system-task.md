@@ -15,6 +15,7 @@ f1_keywords:
 author: Lingxi-Li
 ms.author: lingxl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
 ms.openlocfilehash: cbc72958f992e0b5cae12cdfc8c0996378f9708c
@@ -53,3 +54,4 @@ Hier sind die Eigenschaften für jeden Vorgang spezifisch:
 - **AzureDataLakeDirectory:** gibt das Verzeichnis der ADLS-Quelle enthält die Dateien heruntergeladen.
 - **SearchRecursively:** gibt an, ob in das Quellverzeichnis für Herunterzuladende Dateien rekursiv durchsuchen.
 - **LocalDirectory:** gibt das Zielverzeichnis zum Speichern von heruntergeladener Dateien an.
+

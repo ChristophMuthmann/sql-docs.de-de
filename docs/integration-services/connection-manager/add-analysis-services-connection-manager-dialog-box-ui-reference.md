@@ -18,6 +18,7 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 87542f1672fb53f1ea08d15c942c56a2e3bef4d5
@@ -51,3 +52,4 @@ ms.lasthandoff: 08/03/2017
  [Integrationsservices &#40; SSIS &#41; Verbindungen](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   
+

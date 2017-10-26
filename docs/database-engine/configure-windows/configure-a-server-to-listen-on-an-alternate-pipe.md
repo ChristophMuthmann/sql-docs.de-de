@@ -19,6 +19,7 @@ caps.latest.revision: 29
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: a5baeab82e2fe169483724cfe107cf54d19d492d
@@ -64,3 +65,4 @@ ms.lasthandoff: 08/02/2017
  [Server-Netzwerkkonfiguration](../../database-engine/configure-windows/server-network-configuration.md)  
   
   
+

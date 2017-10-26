@@ -19,6 +19,7 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 554c7e2483e96e27de627f764193a1d4fcabb6dd
@@ -53,3 +54,4 @@ public void setSendStringParametersAsUnicode(boolean sendStringParametersAsUnico
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
   
+

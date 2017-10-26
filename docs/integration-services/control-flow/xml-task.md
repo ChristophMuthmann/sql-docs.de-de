@@ -20,6 +20,7 @@ caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
 ms.openlocfilehash: 05d4d7b905c0539a67120983a562ee6936791c97
@@ -539,3 +540,4 @@ ms.lasthandoff: 08/11/2017
 -   CodePlex-Beispiel, [Process XML Data Package Sample](http://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples), auf www.codeplex.com  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a56f74ecd59fbe11c60bfef48a5750f18fd52b72
@@ -188,3 +189,4 @@ In diesem Beispiel eine INSERT­Anweisung ausführen, übergeben von Parametern 
   
 ## <a name="additional-samples"></a>Zusätzliche Beispiele  
 [Beispiele für JDBC-Treiberanwendungen](../../connect/jdbc/sample-jdbc-driver-applications.md)
+

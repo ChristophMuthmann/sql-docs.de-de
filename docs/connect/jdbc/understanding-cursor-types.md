@@ -14,6 +14,7 @@ caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a65c11a0f6c623162049661a11cbc392a3d8b178
@@ -119,3 +120,4 @@ ms.lasthandoff: 09/09/2017
  [Verwalten von Resultsets mit dem JDBC-Treiber legt diese fest](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
   
   
+

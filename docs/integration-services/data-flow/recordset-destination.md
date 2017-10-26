@@ -21,6 +21,7 @@ caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ba67dbc528d781325f35a7b6c1556b1debee1171
@@ -52,3 +53,4 @@ ms.lasthandoff: 08/03/2017
  [Verwenden eines Recordsetziels](../../integration-services/data-flow/use-a-recordset-destination.md)  
   
   
+

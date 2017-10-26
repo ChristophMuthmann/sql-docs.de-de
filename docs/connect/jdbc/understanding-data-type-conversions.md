@@ -14,6 +14,7 @@ caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b8a4439d9682435baca0867dfc9d8bd96d0fcd7c
@@ -124,3 +125,4 @@ ms.lasthandoff: 09/09/2017
  [Grundlegendes zu den Datentypen des JDBC-Treiber](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   
+

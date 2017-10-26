@@ -18,6 +18,7 @@ caps.latest.revision: 15
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cb82238a0e88b3e639a6185bb80de1dd1b33c351
@@ -81,3 +82,4 @@ ms.lasthandoff: 09/09/2017
  [DQS-Verwaltung](../data-quality-services/dqs-administration.md)  
   
   
+

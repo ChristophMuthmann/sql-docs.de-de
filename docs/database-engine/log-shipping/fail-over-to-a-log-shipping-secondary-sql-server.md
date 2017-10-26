@@ -19,6 +19,7 @@ caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 93360a54442a6a959b7044288bd74d16f13fa559
@@ -68,3 +69,4 @@ ms.lasthandoff: 08/02/2017
  [Sicherungen des Protokollfragments &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 882ea4b4fd7c2954ec3586e78db5c22aa0418e54
@@ -338,3 +339,4 @@ ms.lasthandoff: 08/02/2017
  [Konzepte des WMI-Anbieters für Serverereignisse](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   
+

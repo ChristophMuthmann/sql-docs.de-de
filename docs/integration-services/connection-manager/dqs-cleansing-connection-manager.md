@@ -14,6 +14,7 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 1a2e49092a7bf8e8428edad9c246ee2bda4d650f
@@ -35,3 +36,4 @@ ms.lasthandoff: 08/03/2017
  Weitere Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie in der <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> -Klasse im Entwicklerhandbuch.  
   
   
+

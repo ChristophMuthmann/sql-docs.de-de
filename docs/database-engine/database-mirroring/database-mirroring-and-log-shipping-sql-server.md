@@ -17,6 +17,7 @@ caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: d043699e20a674009268ee168b457322fd0591ee
@@ -111,3 +112,4 @@ ms.lasthandoff: 08/02/2017
 7.  Führen Sie ein weiteres manuelles Failover durch, um zum ursprünglichen Prinzipal zurückzukehren.  
   
   
+

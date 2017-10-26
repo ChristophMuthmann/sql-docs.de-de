@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 629b0c63a6dfe888b64c665fe02de93134acb320
@@ -61,3 +62,4 @@ ms.lasthandoff: 08/02/2017
  [Instanzübergreifende Datenbankmodulfunktionen](../../relational-databases/database-engine-cross-instance-features.md)  
   
   
+

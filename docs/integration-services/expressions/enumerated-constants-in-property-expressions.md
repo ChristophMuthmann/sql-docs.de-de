@@ -21,6 +21,7 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8483c36dca5a24485e865b1115e766aa579635b9
@@ -613,3 +614,4 @@ ms.lasthandoff: 08/03/2017
  [Rangfolgeneinschränkungen](../../integration-services/control-flow/precedence-constraints.md)  
   
   
+

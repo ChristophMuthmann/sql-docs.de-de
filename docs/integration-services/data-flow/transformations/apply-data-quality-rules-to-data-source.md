@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: aab3d6859df95dff080fe93aa686ee70b3c5c13a
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/27/2017
 3.  Verbinden Sie die DQS-Bereinigungstransformation mit einer Datenquelle.  
   
   
+

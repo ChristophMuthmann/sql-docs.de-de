@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aea44fc5cad62bbe23e7faad2007229f2fab47dc
@@ -27,3 +28,4 @@ ms.lasthandoff: 09/09/2017
   Informationen zu den Elementen von [SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-class.md), finden Sie unter [SQLServerResource-Elemente](../../../connect/jdbc/reference/sqlserverresource-members.md).  
   
   
+

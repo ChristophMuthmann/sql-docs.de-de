@@ -18,6 +18,7 @@ caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3a926bddda6c86a7930a349915cc2a77602448b4
@@ -62,3 +63,4 @@ SIGN(DealerPrice - StandardCost)
  [Funktionen &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
+

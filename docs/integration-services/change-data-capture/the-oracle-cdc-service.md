@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d1c3535f7818b1865d9ff7b0da1d098884b042ca
@@ -101,3 +102,4 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
  [Verwalten eines Oracle CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
   
+

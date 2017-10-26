@@ -14,6 +14,7 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e913a81f88140c983836d4231ed9c926857f0c14
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
  [Verwenden von Anweisungen mit SQL](../../connect/jdbc/using-statements-with-sql.md)  
   
   
+

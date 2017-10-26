@@ -18,6 +18,7 @@ caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5208747b21d3380a7f8fead98ec47522c2ad6e12
@@ -86,3 +87,4 @@ REPLACE((DT_WSTR,8)DaysToManufacture,"6","5")
  [Funktionen &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
+

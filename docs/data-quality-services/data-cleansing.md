@@ -14,6 +14,7 @@ caps.latest.revision: 31
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a7b606256ca38ee3dab0754904b365120de6a236
@@ -112,3 +113,4 @@ ms.lasthandoff: 09/09/2017
  [Datenabgleich](../data-quality-services/data-matching.md)  
   
   
+

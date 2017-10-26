@@ -16,6 +16,7 @@ f1_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
 ms.openlocfilehash: 83bcf5846d976b805bd9b5392fe7bed22ebd1deb
@@ -155,3 +156,4 @@ ms.lasthandoff: 08/09/2017
  [Microsoft Connector for SAP BW Components](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   
+

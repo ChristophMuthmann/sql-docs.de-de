@@ -21,6 +21,7 @@ caps.latest.revision: 22
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 894f04fe8bf8df95bb288acab897f3274fbacb18
@@ -111,3 +112,4 @@ ms.lasthandoff: 08/02/2017
  [Integrierte Windows-Authentifizierung unter Verwendung von "Erweiterter Schutz"](http://go.microsoft.com/fwlink/?LinkId=179922)  
   
   
+

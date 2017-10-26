@@ -21,6 +21,7 @@ caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 59f467f9aee0637bc9463c39b51b30e47eeaff47
@@ -114,3 +115,4 @@ ms.lasthandoff: 08/03/2017
 -   Blogeintrag, [Optimizing the Slowly Changing Dimension Wizard](http://go.microsoft.com/fwlink/?LinkId=199481)(Optimieren des Assistenten für langsam veränderliche Dimensionen), auf blogs.msdn.com.  
   
   
+

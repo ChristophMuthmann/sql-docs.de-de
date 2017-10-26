@@ -23,6 +23,7 @@ caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: ba32ea70f2a3d04753dd3860a798f8673fad032a
@@ -49,3 +50,4 @@ ms.lasthandoff: 08/02/2017
  [Überwachen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
   
   
+

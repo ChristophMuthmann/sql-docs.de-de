@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 80fc7320cb47a9fc46b331b119ff91ec0a1cdc19
@@ -47,3 +48,4 @@ ms.lasthandoff: 08/03/2017
  Andere Tasks des CDC-Diensts werden mithilfe der CDC Service Configuration Console ausgeführt. Informationen zu den Tasks, die Sie in der Service Configuration Console ausführen können, finden Sie in der Onlinehilfe der Service Configuration Console.  
   
   
+

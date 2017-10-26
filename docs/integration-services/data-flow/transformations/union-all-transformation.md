@@ -22,6 +22,7 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
 ms.openlocfilehash: e947aa8b3d079830b9433ba1b01450fda699904a
@@ -69,3 +70,4 @@ ms.lasthandoff: 08/19/2017
  [Zusammenführen von Daten mithilfe der Transformation für UNION ALL](../../../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)  
   
   
+

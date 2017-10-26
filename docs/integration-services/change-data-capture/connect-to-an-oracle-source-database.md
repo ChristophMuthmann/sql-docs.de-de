@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a5c5a28264e255b50ee3d33986ba2b84c646c0f8
@@ -74,3 +75,4 @@ ms.lasthandoff: 08/03/2017
  [Bearbeiten von Instanzeigenschaften](../../integration-services/change-data-capture/edit-instance-properties.md)  
   
   
+

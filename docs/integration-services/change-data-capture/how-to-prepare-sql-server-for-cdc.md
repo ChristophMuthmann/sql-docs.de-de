@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5b069943b47f12a56091cfd861a868fd99f62607
@@ -46,3 +47,4 @@ ms.lasthandoff: 08/03/2017
  [Vorbereiten von SQLServer für CDC](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 80944d5ebb5ec8c9f6ba98d9c520b10a0c4ade30
@@ -95,3 +96,4 @@ ms.lasthandoff: 09/09/2017
  [Verbessern von Leistung und Zuverlässigkeit mit dem JDBC-Treiber](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   
+

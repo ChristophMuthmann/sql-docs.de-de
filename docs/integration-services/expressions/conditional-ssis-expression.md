@@ -18,6 +18,7 @@ caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 311168388a44f5a42118a7bd496ead4228338496
@@ -107,3 +108,4 @@ ListPrice < 350.00 ? ListPrice * .2 : ListPrice * .1
  [Operatoren &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
+

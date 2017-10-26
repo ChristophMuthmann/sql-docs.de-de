@@ -18,6 +18,7 @@ caps.latest.revision: 26
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c007da5bb365b81cd3a8bdd570c139077e44afbd
@@ -130,3 +131,4 @@ ms.lasthandoff: 09/09/2017
 -   Wenn die Excel-Datei nicht im richtigen Format vorliegt oder beschädigt ist, führt der Importvorgang zu einem Fehler.  
   
   
+

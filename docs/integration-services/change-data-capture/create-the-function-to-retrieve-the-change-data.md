@@ -16,6 +16,7 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 20f754d1559e170c4922969b11aa97052f576cc7
@@ -226,3 +227,4 @@ go
  **Nächstes Thema**[Abrufen und Verstehen der Änderungsdaten](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
   
+

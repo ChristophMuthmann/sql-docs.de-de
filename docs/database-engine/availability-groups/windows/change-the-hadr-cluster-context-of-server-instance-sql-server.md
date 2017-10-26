@@ -17,6 +17,7 @@ caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 29d356ca6c432963015a4c9f4a81702b97812c51

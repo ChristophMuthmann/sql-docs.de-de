@@ -23,6 +23,7 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 27be63f22fda13f0959f28c4ee36cc2b12c66058
@@ -107,3 +108,4 @@ End Module
  [Programmgesteuertes Hinzufügen von Datenflusstasks](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
   
+

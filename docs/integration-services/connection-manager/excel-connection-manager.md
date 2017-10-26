@@ -20,6 +20,7 @@ caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
 ms.openlocfilehash: a5ce75f3c1715870113626642150028e31a0d58b
@@ -101,3 +102,4 @@ Wenn Sie ein Office 365-Abonnement verfügen, stellen Sie sicher, dass Sie Acces
 -   [Herstellen einer Verbindung mit einer Excel-Arbeitsmappe](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 17
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5c59c87fa8fc86a1e760e90f7ee2a4f4d733836f
@@ -93,3 +94,4 @@ ms.lasthandoff: 09/09/2017
  [Datenbereinigung](../data-quality-services/data-cleansing.md)  
   
   
+

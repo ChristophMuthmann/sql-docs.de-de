@@ -14,6 +14,7 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e4796d369ed9eb5567cb026d1892399c86479897
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
  [Verwenden von Anweisungen mit der JDBC-Treiber](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   
+

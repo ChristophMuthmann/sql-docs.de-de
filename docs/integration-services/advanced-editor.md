@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a19014f742ea4be55028bd93d07b0c388159e0a0
@@ -60,3 +61,4 @@ ms.lasthandoff: 08/03/2017
  [Erstellen und Meldungsreferenz von Integration Services-Fehler](../integration-services/integration-services-error-and-message-reference.md)  
   
   
+

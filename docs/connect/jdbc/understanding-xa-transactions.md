@@ -14,6 +14,7 @@ caps.latest.revision: 80
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b1ceff7c271688fcabf3206c4ba1fe0147e2afe4
@@ -340,3 +341,4 @@ class XidImpl implements Xid {
  [Ausführen von Transaktionen mit der JDBC-Treiber](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  
   
   
+

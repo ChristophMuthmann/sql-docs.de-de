@@ -27,6 +27,7 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c812dc44b0348d6f77e7f7e8efe23acab85a0d48
@@ -209,3 +210,4 @@ ms.lasthandoff: 08/03/2017
  [Tools zur Problembehandlung für die Ausführung des Pakets](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   
+

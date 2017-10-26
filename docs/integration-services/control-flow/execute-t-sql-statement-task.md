@@ -20,6 +20,7 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 94fd411504f1781041e8d36f3f1cf41f6082aa09
@@ -49,3 +50,4 @@ ms.lasthandoff: 08/03/2017
  [MERGE in Integrationsservices-Paketen](../../integration-services/control-flow/merge-in-integration-services-packages.md)  
   
   
+

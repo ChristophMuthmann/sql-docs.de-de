@@ -17,6 +17,7 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bb439e9221a1bcb169776eec1f6251b49ed4b861
@@ -69,3 +70,4 @@ ListPrice - (ListPrice * @[Discount%])
  [Operatoren &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
+

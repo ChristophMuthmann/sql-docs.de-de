@@ -18,6 +18,7 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 77230956969fb2fd2d27a1dec42140dd91a5cbd5
@@ -103,3 +104,4 @@ DATEADD("yyyy", 2, (DT_DBTIMESTAMP)"8/6/2003")
  [Funktionen &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
+

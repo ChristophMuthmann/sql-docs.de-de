@@ -22,6 +22,7 @@ caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
 ms.openlocfilehash: b1a74f830a25717aa3e0e36910842582be4be1c5
@@ -149,3 +150,4 @@ ms.lasthandoff: 08/11/2017
 -   Technischer Artikel [How to send email with delivery notification in C#](http://go.microsoft.com/fwlink/?LinkId=237625)(Gewusst wie: Senden von E-Mails mit Zustellungsbenachrichtigung in C#) auf shareourideas.com  
   
   
+

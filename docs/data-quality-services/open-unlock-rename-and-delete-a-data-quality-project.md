@@ -21,6 +21,7 @@ caps.latest.revision: 9
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: eec04917faf24e5e6d9075fd165a45148c9f10b7
@@ -97,3 +98,4 @@ ms.lasthandoff: 09/09/2017
 4.  Eine Bestätigungsmeldung wird angezeigt. Klicken Sie auf **Ja**.  
   
   
+

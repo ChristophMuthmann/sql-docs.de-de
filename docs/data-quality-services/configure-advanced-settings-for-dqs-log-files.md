@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5182c032b4a0c21358631df64f43dc16cdbd9ecf
@@ -129,3 +130,4 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
  [Konfigurieren von Schweregraden für DQS-Protokolldateien](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)  
   
   
+

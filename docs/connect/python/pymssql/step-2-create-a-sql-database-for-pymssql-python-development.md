@@ -14,6 +14,7 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 12c09d8ff023a8d996ca899509046bf2db46441f
@@ -25,3 +26,4 @@ ms.lasthandoff: 09/09/2017
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
 
 [!INCLUDE[CreateDatabase](../../../includes/createdatabase.md)]
+

@@ -14,6 +14,7 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 47a65bf1c9ce6afdedd1f68c0431912af4aea402
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
  [Herstellen einer Verbindung mit SQLServer mit der JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   
+

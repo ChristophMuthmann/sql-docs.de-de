@@ -18,6 +18,7 @@ caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 6bd2dd9e264437e8d40d2fe66a1394c468e99c59
@@ -63,3 +64,4 @@ ms.lasthandoff: 08/02/2017
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   
   
+

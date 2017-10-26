@@ -18,6 +18,7 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: de01c45d538cd7117b81ea55613aa66be643a2c2
@@ -74,3 +75,4 @@ ms.lasthandoff: 08/03/2017
 -   [Gruppe oder Aufheben der Gruppierung von Komponenten](../../integration-services/group-or-ungroup-components.md)  
   
   
+

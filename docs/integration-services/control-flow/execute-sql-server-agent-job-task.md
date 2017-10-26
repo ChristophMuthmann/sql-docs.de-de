@@ -20,6 +20,7 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: 65caffce1a119757743f8f2d6bf708112492e767
@@ -49,3 +50,4 @@ ms.lasthandoff: 08/03/2017
 -   [Festlegen der Eigenschaften eines Tasks oder Containers](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 9cf22d160c37c4d8904830d363e6358cb5b40aea
@@ -57,3 +58,4 @@ ms.lasthandoff: 08/02/2017
  [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
   
   
+
