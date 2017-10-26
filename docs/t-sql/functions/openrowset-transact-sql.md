@@ -189,22 +189,22 @@ Eine benannte externe Datenquelle auf den Azure-Blob-Speicherort der Fehlerdatei
  Spaltenaliase sind erforderlich, wenn ORDER verwendet wird. Die Spaltenaliasliste muss auf die abgeleitete Tabelle verweisen, auf die von der BULK-Klausel zugegriffen wird. Die Spaltennamen, die in der ORDER-Klausel angegeben sind, verweisen auf diese Spaltenaliasliste. Große Werttypen (**varchar(max)**, **nvarchar(max)**, **varbinary(max)**, und **Xml**) und große Objekttypen (LOB) (**Text**, **Ntext**, und **Image**) können keine Spalten angegeben werden.  
   
  SINGLE_BLOB  
- Gibt den Inhalt der *Data_file* als einzeiliges, einspaltiges Rowset vom Typ **varbinary(max)**.  
+ Gibt den Inhalt der *Data_file* als einzeiliges, einspaltiges Rowset vom Typ **varbinary(max)** zu.  
   
 > [!IMPORTANT]  
->  Es wird empfohlen, XML-Daten anstelle von mit SINGLE_CLOB und SINGLE_NCLOB ausschließlich mithilfe der SINGLE_BLOB-Option zu importieren, da nur SINGLE_BLOB alle Windows-Codierungskonvertierungen unterstützt.  
+>  Es wird empfohlen, XML-Daten, anstatt mit SINGLE_CLOB und SINGLE_NCLOB, ausschließlich mithilfe der SINGLE_BLOB-Option zu importieren, da nur SINGLE_BLOB alle Windows-Codierungskonvertierungen unterstützt.  
   
- SINGLE_CLOB  
+ SINGLE_CLOB
  Durch Lesen *Data_file* als ASCII-Daten, gibt Sie den Inhalt als einzeiliges, einspaltiges Rowset vom Typ **varchar(max)**, wobei die Sortierung der aktuellen Datenbank.  
   
  SINGLE_NCLOB  
- Durch Lesen *Data_file* als UNICODE, und gibt den Inhalt als einzeiliges, einspaltiges Rowset vom Typ zurück **nvarchar(max)**, wobei die Sortierung der aktuellen Datenbank.  
+ Gibt die *Data_file* als einzeiliges, einspaltiges Rowset vom Typ **nvarchar(max)** zurück, weil die Zeichen der *Data_file* als UNICODE gelesen werden, wobei die Sortierung der aktuellen Datenbank zum Einsatz kommt.
 
 ### <a name="input-file-format-options"></a>Format der Eingabedatei (Optionen)
   
 FORMAT  **=**  "CSV"   
 **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
-Gibt eine Datei mit kommagetrennten Werten kompatibel ist die [RFC 4180](https://tools.ietf.org/html/rfc4180) standard.
+Gibt eine Datei mit kommagetrennten Werten zurück, die kompatibel mit dem [RFC 4180](https://tools.ietf.org/html/rfc4180) Standard ist.
 
  FORMATFILE = "*Format_file_path*"  
  Gibt den vollständigen Pfad einer Formatdatei an. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt zwei Typen von Formatdateien: XML- und Nicht-XML-Formatdateien.  
