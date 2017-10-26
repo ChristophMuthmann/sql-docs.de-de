@@ -98,7 +98,7 @@ BULK INSERT
  Der vollständige Pfad der Datendatei mit den Daten, die in die angegebene Tabelle oder Sicht importiert werden sollen. BULK INSERT kann Daten von einem Datenträger importieren, einschließlich eines Netzwerks, einer Diskette, einer Festplatte usw.   
  
  *Data_file* muss einen gültigen Pfad auf dem Server angeben, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird. Wenn *Data_file* ist eine Datei, geben Sie den Namen (UNC = Universal Naming Convention). Ein UNC-Name weist folgendes Format \\ \\ *Systemname*\\*ShareName*\\*Pfad* \\ *FileName*. Beispiel: `\\SystemX\DiskZ\Sales\update.txt`.   
-**Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.mdf)] CTP 1.1.   
+**Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 Beginnend mit [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP1.1, kann die Data_file im Azure-Blob-Speicher.
 
 **"** *Data_source_name* **"**   
