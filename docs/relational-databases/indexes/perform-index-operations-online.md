@@ -19,6 +19,7 @@ manager: jhubbard
 ms.suite: SQL
 ms.prod_service: database engine, sql database, sql data warehouse
 ms.component: indexes
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
 ms.openlocfilehash: c2a7e07e2af46446f9271eb82d1dae13f6da2145

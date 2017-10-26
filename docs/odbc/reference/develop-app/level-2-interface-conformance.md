@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c272637e15d95a09862170ec871274adb624c271
@@ -41,3 +42,4 @@ Der Konformitätsgrad des Level 2-Schnittstelle enthält die Funktionen der Eben
 |209|Das SQL_ATTR_CONCURRENCY-Anweisungsattribut auf mindestens ein Wert als SQL_CONCUR_READ_ONLY festgelegt.|  
 |210|Die Fähigkeit zum Timeout anmeldeanforderung und SQL-Abfragen (SQL_ATTR_LOGIN_TIMEOUT und SQL_ATTR_QUERY_TIMEOUT).|  
 |211|Die Fähigkeit, die Standardisolationsstufe zu ändern; die Fähigkeit zum Ausführen von Transaktionen mit der "serializable" Maß an Isolation.|
+

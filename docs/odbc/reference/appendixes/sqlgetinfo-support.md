@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fb9afa5b40ffa7628e04ee85e5ddc4f752e98935
@@ -43,3 +44,4 @@ Wenn eine ODBC-2. *x* Anwendung ruft **SQLGetInfo** auf eine ODBC 3.*.x* -Treibe
  Eine ODBC 3.*.x* Anwendung arbeiten mit einem ODBC 3.*.x* Treiber sollte nicht aufrufen **SQLGetInfo** mit der *Infotyp* Argumente beschrieben, der vorangehenden Tabelle, aber die ODBC 3. die zu verwendende*.x* *Infotyp* Argumente, die im folgenden Abschnitt aufgelistet. Es ist keine 1: 1-Entsprechung zwischen *Infotyp* in ODBC 2. verwendeten Argumente.* X* und denen in ODBC 3.*.x*. Eine ODBC 3.*.x* Anwendung arbeiten mit einer ODBC 2..* X* Treiber, andererseits, die zu verwendende der *Infotyp* Argumente zuvor beschrieben.  
   
  Einige der Typen von Informationen in der vorherigen Tabelle sind zugunsten der Cursortypen für Attribute Informationen veraltet. Diese als veraltet markierten Typen SQL_FETCH_DIRECTION, SQL_LOCK_TYPES SQL_POS_OPERATIONS, SQL_POSITIONED_STATEMENTS, SQL_SCROLL_CONCURRENCY und SQL_STATIC_SENSITIVITY werden Informationen aus. Die neue Attribute Cursortypen sind SQL_XXX_CURSOR_ATTRIBUTES1and SQL_XXX_CURSOR_ATTRIBUTES2, wobei XXX DYNAMIC, FORWARD_ONLY, KEYSET_DRIVEN oder statische entspricht. Alle neuen Typen gibt der Treiber-Funktionen für eine einzelnes Cursortyp an. Weitere Informationen zu diesen Optionen finden Sie unter der [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) funktionsbeschreibung.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5676f323445680a0440b3aa9416a4567774a6c87
@@ -43,3 +44,4 @@ ms.lasthandoff: 06/22/2017
  [Überwachen (Replikation)](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   
+

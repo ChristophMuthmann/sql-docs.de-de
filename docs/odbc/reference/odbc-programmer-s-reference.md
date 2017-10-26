@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3c5440b6cfc25665156986a0aed99a1fa05e16be
@@ -126,3 +127,4 @@ Die *ODBC Programmer's Reference* enthält folgende Abschnitte.
 -   Welch, Keith: *mithilfe von ODBC 2* (Que, 1994).  
   
 -   Wittling, Bill: *bringen Sie sich selbst ODBC in 21 Tage* (Howard W. Sams & Unternehmen, 1994).
+

@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c1f9e266e4379b2d1cfc9ee771ac49694cd3c58b
@@ -39,3 +40,4 @@ Der Konformitätsgrad des Ebene-1-Schnittstelle enthält die Schnittstelle Konfo
 |107|Verwenden Sie ODBC-Funktionen anstelle von SQL-Anweisungen, um bestimmte Datenbankvorgänge durchzuführen: **SQLSetPos** mit SQL_POSITION und SQL_REFRESH.|  
 |108|Zugreifen auf den Inhalt der mehrere Resultsets, die durch Aufrufen von Batches und gespeicherte Prozeduren generiert **SQLMoreResults**.|  
 |109|Begrenzen von Transaktionen, die Aufteilung auf verschiedene ODBC-Funktionen mit "true" Unteilbarkeit und die Möglichkeit zum Angeben der SQL_ROLLBACK in **SQLEndTran**.|
+

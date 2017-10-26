@@ -20,6 +20,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d80594ac41f27d28051fc64f489b5cad59335c00
@@ -53,3 +54,4 @@ The specified DSN contains an architecture mismatch between the Driver and Appli
   
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-Datenquellen-Administrator](../../odbc/admin/odbc-data-source-administrator.md)
+

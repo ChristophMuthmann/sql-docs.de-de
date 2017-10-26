@@ -18,6 +18,7 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 223d43974e6b63f7375a3d3e000492612fb6856e
 ms.openlocfilehash: c07ca6e5a69f368d916c700dbc949726f198af50
@@ -104,3 +105,4 @@ ms.lasthandoff: 07/25/2017
  [DBCC INDEXDEFRAG &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-indexdefrag-transact-sql.md)  
   
   
+

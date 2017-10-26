@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a80ef1756ca2d106b7a786609fb3bbce9b9539e4
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Belegt Speicher für ein Anweisungshandle und ordnet das Anweisungshandle durch die angegebene Verbindung *Hdbc*. Der Treiber-Manager übergibt diesen Aufruf an den Treiber, der den Speicher für reserviert die *Befehls beschäftigt* Struktur.  
   
  Weitere Informationen finden Sie unter [SQLAllocStmt:](../../odbc/reference/syntax/sqlallocstmt-function.md) in der *ODBC Programmer's Reference*.
+

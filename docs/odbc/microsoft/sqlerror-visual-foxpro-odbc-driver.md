@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 46696509f9276ac4974604c931c4d77acbaae15b
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
 |*pcbErrorMsg*|Die Länge der den Meldungstext plus die Länge der Bezeichner.|  
   
  Weitere Informationen zu Fehlermeldungen Treiber finden Sie unter [Fehler (Übersicht)](../../odbc/microsoft/error-messages-visual-foxpro-odbc-driver.md). Weitere Informationen zu dieser Funktion finden Sie unter [SQLError](../../odbc/reference/syntax/sqlerror-function.md) in der *ODBC Programmer's Reference*.
+

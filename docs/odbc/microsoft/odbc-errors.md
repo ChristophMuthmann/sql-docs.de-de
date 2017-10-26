@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 810742596134c9ffd630ba2060d60aa9f15e50d4
@@ -35,3 +36,4 @@ Tritt ein Fehler auf, zurück der Microsoft ODBC-Desktop-Datenbanktreiber, die s
 -   [Fehlermeldungen](../../odbc/microsoft/odbc-jet-error-messages.md)  
   
 -   [Arithmetischen Fehler](../../odbc/microsoft/arithmetic-errors.md)
+

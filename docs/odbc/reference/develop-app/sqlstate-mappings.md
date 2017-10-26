@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: da687563cfa1b2031c6537294bbaedcbb67f7a02
@@ -87,3 +88,4 @@ Dieses Thema erläutert SQLSTATE-Werten für ODBC-2. *x* und ODBC-3.* X*. Weiter
   
 > [!NOTE]  
 >  ODBC-3. *x* SQLSTATE 07008 ODBC 2 zugeordnet ist.* X* SQLSTATE S1000.
+

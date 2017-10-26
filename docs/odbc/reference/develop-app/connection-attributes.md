@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d62657134276621442c58639d1ef1c7f2a4b63e0
@@ -41,3 +42,4 @@ Verbindungsattribute sind die Merkmale der Verbindung. Da Transaktionen auf Verb
  Die Übersetzung Verbindungsattribute (SQL_ATTR_TRANSLATE_DLL und SQL_ATTR_TRANSLATE_OPTION) müssen nach dem Herstellen einer Verbindung festgelegt werden.  
   
  Alle weiteren Verbindungsattributen können zu einem beliebigen Zeitpunkt festgelegt werden. Weitere Informationen finden Sie unter der [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) funktionsbeschreibung. (Verbindungsattribute können nicht auf die Umgebung Ebene festgelegt werden, durch den Aufruf von **SQLSetEnvAttr**.)
+

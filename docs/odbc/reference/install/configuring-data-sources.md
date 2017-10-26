@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4609b8ec49a84b4eb5fb44c1be8c8a6a85ccc5f1
@@ -34,3 +35,4 @@ Informationen zu den Datenquellen werden in der systemregistrierung gespeichert.
  Dieser Abschnitt enthält das folgende Thema:  
   
 -   [Konfigurationskomponenten](../../../odbc/reference/install/configuration-components.md)
+

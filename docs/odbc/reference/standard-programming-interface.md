@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 235d61849f28b29af7ec0b9ba67fe86b38bf8239
@@ -33,3 +34,4 @@ Die Programmierschnittstelle ist vielleicht die offensichtlichste Kandidat für 
  Eine der Anforderungen für ODBC wurde, dass eine einzelne Anwendung binäre arbeiten mit mehreren DBMS musste. Es ist deshalb, dass ODBC embedded SQL oder ein Modul Sprachen nicht verwendet wird. Obwohl die Sprache in eingebetteten SQL-Modul und den Sprachen standardisiert ist, ist jede an DBMS-spezifische Precompilers gebunden. Daher Anwendungen müssen für jede DBMS neu kompiliert werden, und die resultierenden Binärdateien funktionieren nur mit einer einzelnen DBMS. Während dies für die mit geringem Volumen-Programme finden Sie in den Bereichen Minicomputer und Großrechner zulässig ist, ist es in der Welt PC nicht akzeptabel. Zunächst ist es eine logistische Verlusts auf mehrere Versionen der Software hohem Volumen, eingeschweißt Kunden liefern. Zweitens müssen PC Anwendungen häufig mehrere DBMS gleichzeitig zugreifen.  
   
  Andererseits, kann ein Call-Level-Interface implementiert werden, über die Bibliotheken oder Datenbanktreiber, die sich auf jedem lokalen Computer befinden; ein anderer Treiber ist für jede DBMS erforderlich. Modernen Betriebssysteme diese Bibliotheken (z. B. Dynamic Link Libraries unter dem Betriebssystem Microsoft® Windows®) zur Laufzeit geladen werden können, eine einzelne Anwendung Daten aus anderen DBMS ohne Neukompilierung und kann auch Zugriff auf Daten aus mehrere Datenbanken gleichzeitig aus. Sobald neue Datenbanktreiber verfügbar sind, können Benutzer nur installieren Sie diese auf ihren Computern ohne ändern, neu kompilieren und verknüpfen ihre datenbankanwendungen. Darüber hinaus eine Call-Level-Interface ein guter Kandidat für ODBC wurde, da Windows – der Plattform für die ODBC ursprünglich entwickelt wurde – umfassenden Gebrauch von diese Bibliotheken bereits vorgenommen.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c66acd08644176170c56700720a438aa8ffcdb1b
@@ -40,3 +41,4 @@ Die *Treibermanager* ist eine Bibliothek, die Kommunikation zwischen Anwendungen
  Der letzte wichtige Rolle des Treiber-Managers ist laden und Entladen von Treibern. Die Anwendung geladen und entladen wird nur der Treiber-Manager. Wenn sie einen bestimmten Treiber verwenden möchte, ruft er eine Verbindungsfunktion (**SQLConnect**, **SQLDriverConnect**, oder **SQLBrowseConnect**) im Treiber-Manager und gibt an, der Name einer bestimmten Datenquelle oder Treiber verwenden, z. B. "Finanzwesen" oder "SQLServer". Verwenden diesen Namen, sucht der Treiber-Manager die Datenquelleninformationen für Dateinamen des Treibers, z. B. SQLSRVR. Anschließend lädt den Treiber (vorausgesetzt, dass sie nicht bereits geladen wurde), speichert die Adresse für jede Funktion in der Treiber, und ruft die Verbindungsfunktion im Treiber, die dann selbst initialisiert und eine Verbindung mit der Datenquelle her.  
   
  Wenn die Anwendung erfolgt mit dem Treiber, ruft er **SQLDisconnect** im Treiber-Manager. Der Treiber-Manager ruft diese Funktion in den Treiber, der eine Verbindung mit der Datenquelle trennt. Der Treiber-Manager behält jedoch die Treiber im Arbeitsspeicher für den Fall, dass die Anwendung, erneut eine Verbindung herstellt. Den Treiber entladen nur, wenn die Anwendung gibt die Verbindung vom Treiber verwendet wird, oder für einen anderen Treiber die Verbindung verwendet und keine weiteren Verbindungen verwenden Sie den Treiber. Eine vollständige Beschreibung der Treiber-Manager-Rolle in laden und Entladen von Treibern, finden Sie unter [Treiber-Manager-Rolle in der Verbindungsprozess](../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md).
+

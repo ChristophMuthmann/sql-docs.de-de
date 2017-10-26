@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dfd2225157c048840cd20bd140ed74ae31384b8a
@@ -79,3 +80,4 @@ SET COLLATE TO cSequenceName
   
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-Visual FoxPro einrichten (Dialogfeld)](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)
+

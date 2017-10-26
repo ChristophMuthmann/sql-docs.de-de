@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0b9313d2129b0de792e15e28a0099380a73fbf30
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_TRANSLATE_DLL|Wird nicht unterstützt.|  
 |SQL_TRANSLATION_OPTION|Wird nicht unterstützt.|  
 |SQL_TXN_ISOLATION|Wird nicht unterstützt.|
+

@@ -23,6 +23,7 @@ caps.latest.revision: 38
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0f99a9d8a572653be31e74cab00de918f1f51e16
@@ -111,3 +112,4 @@ SQLRETURN SQLSetEnvAttr(
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)   
  [Was ist neu in ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)
+

@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 64e6dfe9f31eb983170f08e9fcd3e0705ba9ae62
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
 -   **Zur Registerkarte "** werden die Dateien der installierten ODBC-Komponente aufgeführt.  
   
  Nachdem Sie eine Datenquelle hinzugefügt haben, können Sie die **ODBC-Datenquellenadministrator** (Dialogfeld), um den Zugriff auf die Datenquelle zu konfigurieren. Wählen Sie eine Datenquelle aus, und klicken Sie dann auf eine der Registerkarten bearbeiten, oder überprüfen die Informationen.
+

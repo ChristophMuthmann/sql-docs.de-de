@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 32bfeff983ef5dff4ebfe3e575bcf36e855184d0
@@ -52,3 +53,4 @@ Bevor eine Verbindung mit eine Anwendung belegt wird, müssen sie die SQL_ATTR_O
   
 > [!IMPORTANT]  
 >  Anwendungen, die die ODBC 3 befolgen. *x* Spezifikation muss bedingten Code verwenden, um zu vermeiden, mithilfe von Funktionen noch nicht mit ODBC 3.* X* beim Arbeiten mit ODBC 2.* X* Treiber. ODBC-2. *x* Treiber unterstützen keine Funktionen, die noch nicht mit ODBC 3.* X* nur verwendet werden, weil die Anwendung wird deklariert, dass er die ODBC 3 folgt.* X* Spezifikation. Darüber hinaus ODBC 3 *x* Treiber zur Unterstützung von Funktionen, die noch nicht mit ODBC 3 nicht eingestellt werden.* X* nur verwendet werden, weil die Anwendung wird deklariert, dass er die ODBC 2 folgt.* X* Spezifikation.
+

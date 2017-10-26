@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d78146d51e6e98e4b21c074838bd4c3dc0aba01d
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
 >  Dieses Thema enthält die Textdatei treiberspezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Diese Funktion unterstützt SQL_COMMIT, aber nicht SQL_ROLLBACK.
+

@@ -23,6 +23,7 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 241cb92786626bfc4674426c67f099f4349a6cb4
@@ -123,3 +124,4 @@ BOOL SQLInstallTranslatorEx(
 |Eine Übersetzung Standardoption zurückgeben|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|  
 |Konvertierer auswählen|[SQLGetTranslator](../../../odbc/reference/syntax/sqlgettranslator-function.md)|  
 |Entfernen von Konvertierer|[SQLRemoveTranslator](../../../odbc/reference/syntax/sqlremovetranslator-function.md)|
+

@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fb9b6d354657578f7188481a2e7ff7566f725c80
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Wenn das zugrunde liegende DBMS Autocommit-Modus Transaktionen nicht unterstützt, kann der Treiber emulieren sie durch jede SQL-Anweisung manuell zu übernehmen, während der Ausführung.  
   
  Wenn ein Batch von SQL-Anweisungen im Autocommit Modus ausgeführt wird, ist sie Daten datenquellenspezifischen, wenn die Anweisungen im Batch ein Commit ausgeführt werden. Sie können ein Commit ausgeführt werden während der Ausführung oder als Ganzes, nachdem der gesamte Batch ausgeführt wurde. Einige Datenquellen unterstützen möglicherweise diese beiden und möglicherweise eine Möglichkeit, einen oder anderen auszuwählen. Insbesondere wenn ein Fehler in der Mitte der Batch auftritt, ist es Daten datenquellenspezifischen, ob die bereits ausgeführten Anweisungen sind ein Commit oder Rollback. Daher sollte interoperable Anwendungen ausführen können, die erforderlich ist, damit ein Commit oder Rollback als Ganzes und Verwenden von Batches, Batches nur im Manualcommit-Modus ausführen.
+

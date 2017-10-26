@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e59fd91f1347d3521b0bcf3667cf7bb0482b5cd3
@@ -33,3 +34,4 @@ Wie der übrige einer Anwendung SQL-Anweisungen interoperable oder DBMS-spezifis
 -   [Auswählen einer SQL-Grammatik](../../../odbc/reference/develop-app/choosing-an-sql-grammar.md)  
   
 -   [Erstellen von interoperablen SQL­Anweisungen](../../../odbc/reference/develop-app/constructing-interoperable-sql-statements.md)
+

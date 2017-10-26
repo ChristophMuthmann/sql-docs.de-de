@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bbb83f9db1841b9a566ba46acd65e7b1c802deac
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
 |**SQLGetConnectAttr**|**SQLSetDescRec**|  
 |**SQLGetDiagField**|**SQLSetEnvAttr**|  
 |**SQLGetDiagRec**||
+

@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e1d68c71f727aefd0a95bb1e1c95d0a3fe77edb5
@@ -36,3 +37,4 @@ ms.lasthandoff: 06/22/2017
  [Erstellen und Verwalten von Speicher für speicheroptimierte Objekte](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   
+

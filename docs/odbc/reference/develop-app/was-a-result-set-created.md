@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4c38b613ed4c2e6efb5737118030905ab9de60b1
@@ -31,3 +32,4 @@ In den meisten Fällen wissen Anwendungsprogrammierer an, ob die Anweisungen, di
  Die Anwendung kann Aufrufen **SQLNumResultCols** jederzeit nach der Anweisung vorbereitet oder ausgeführt wird. Jedoch, da das Resultset mit Vorwärtscursor problemlos einige Datenquellen beschreiben können nicht durch die vorbereiteten Anweisungen erstellte Leistung wird beeinträchtigt werden, wenn **SQLNumResultCols** wird aufgerufen, nachdem eine Anweisung vorbereitet wurde, aber bevor er ausgeführt wird.  
   
  Einige Datenquellen unterstützen auch das Bestimmen der Anzahl von Zeilen, die eine SQL-Anweisung in einem Resultset zurückgibt. Ruft die Anwendung dazu **SQLRowCount**. Genau wie die Anzahl der Zeilen darstellt wird, wenn die Einstellung der Option "SQL_DYNAMIC_CURSOR_ATTRIBUTES2, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2, SQL_KEYSET_CURSOR_ATTRIBUTES2 oder SQL_STATIC_CURSOR_ATTRIBUTES2" (je nach Typ des Cursors) angegeben werden. durch einen Aufruf zurückgegebene **SQLGetInfo**. Bitmaske für jeden Cursortyp gibt an, ob die Anzahl der Zeilen zurückgegeben, exakten, ungefähren wird, oder es ist gar nicht verfügbar. Ob die Zeilenanzahl für statische oder keysetgesteuerte Cursor werden von vorgenommenen Änderungen betroffen **SQLBulkOperations** oder **SQLSetPos**, oder durch positionierte Update- oder Delete-Anweisungen, abhängig von anderen Bits von den gleichen Option-Argumenten, die zuvor genannten zurückgegeben. Weitere Informationen finden Sie unter der [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) funktionsbeschreibung.
+

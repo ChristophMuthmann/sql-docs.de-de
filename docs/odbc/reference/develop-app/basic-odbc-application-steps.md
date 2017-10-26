@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fbafffd1922dabbb49bec1cae59d6bce099bd5d7
@@ -44,3 +45,4 @@ In diesem Abschnitt wird beschrieben, die allgemeine Vorgehensweise des ODBC-Anw
 -   [Schritt 5: Commit der Transaktions](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)  
   
 -   [Schritt 6: Aus der Datenquelle zu trennen](../../../odbc/reference/develop-app/step-6-disconnect-from-the-data-source.md)
+

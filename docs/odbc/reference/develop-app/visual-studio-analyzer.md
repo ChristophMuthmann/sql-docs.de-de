@@ -17,6 +17,7 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 47a2aafb48de6d013806bcdbf9a64e40a0773d91
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  Dieser Abschnitt enthält das folgende Thema.  
   
 -   [Aktivieren von Visual Studio Analyzer](../../../odbc/reference/develop-app/enabling-visual-studio-analyzer.md)
+

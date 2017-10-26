@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b8f7497cb6b36602908443ab4fd9bdeb592ce8af
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_TXN_ISOLATION|SQL_TXN_ISOLATION ist immer SQL_TXN_READ_COMMITTED.|  
   
  [1] Atomarische Transaktionen werden von der Microsoft Access-Treiber nicht unterstützt. Wenn eine Transaktion, die mit dem Microsoft Access-Treiber ein Commit ausgeführt, vorhanden ist eine endliche Verzögerung zwischen dem Zeitpunkt, der die Transaktion ein Commit ausgeführt wird und die Zeit, die die Werte geschrieben werden auf den Datenträger. Diese Verzögerung wird durch eine Verzögerung in der Microsoft Jet-Datenbankmodul inhärenten bestimmt. Das Timeout für die Seite wird nicht kleiner als ein Mindestwert sein, auch wenn die Option ' pagetimeout ' unter diesen Wert festgelegt ist. Daher besteht keine Garantie, die Daten ein Commit ist stabil, da während der Verzögerung Änderungen vorgenommen werden können.
+

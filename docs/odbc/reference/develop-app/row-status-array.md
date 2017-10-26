@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 34fe599aee975dc0c01fc1fbc36f1bed6cab6b6b
@@ -40,3 +41,4 @@ Zusätzlich zu den Daten **SQLFetch** und **SQLFetchScroll** kann ein Array, das
 |SQL_ROW_DELETED|Die Zeile wurde seit dem letzten Abruf wurde gelöscht.|  
 |SQL_ROW_ADDED|Die Zeile eingefügt wurde, indem **SQLBulkOperations**. Wenn die Zeile erneut abgerufen oder, durch aktualisiert wird **SQLSetPos**, ihr Status wird SQL_ROW_SUCCESS.<br /><br /> Dieser Wert ist nicht festgelegt, indem **SQLFetch** oder **SQLFetchScroll**.|  
 |SQL_ROW_NOROW|Das Rowset überlappt, das Ende des Resultsets und, dass, die auf dieses Element des Arrays Status Zeile zugestimmt haben, wurde keine Zeile zurückgegeben.|
+

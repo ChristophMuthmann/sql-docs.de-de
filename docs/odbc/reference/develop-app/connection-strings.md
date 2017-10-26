@@ -24,6 +24,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8eefb9897492d0b6550b2f3ee80b07119e184b43
@@ -39,3 +40,4 @@ Eine Verbindungszeichenfolge enthält Informationen zum Herstellen einer Verbind
 -   **SQLBrowseConnect**, der die Verbindungszeichenfolge iterativ mit der Datenquelle abgeschlossen.  
   
  **SQLConnect** keine Verbindungszeichenfolge, mithilfe von **SQLConnect** ist analog zum Herstellen einer Verbindung mithilfe einer Verbindungszeichenfolge mit genau drei Schlüsselwort-Wert-Paaren (Datenquellenname und, optional, Benutzer-ID und Kennwort) .
+

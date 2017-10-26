@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fa215150c483776f9188ed16044b59500cb257e7
@@ -40,3 +41,4 @@ ODBC definiert eine standard-Escapesequenz für das Ausführen von Prozeduren an
     -   Ruft die Prozedur in der Datenquelle und sendet sie die konvertierte Parameterwerte. Wie der Treiber die Prozedur aufruft, ist treiberspezifische. Beispielsweise kann es für die Verwendung von SQL-Grammatik für die Datenquelle, und senden diese Anweisung für die Ausführung die SQL-Anweisung ändern, oder es möglicherweise rufen Sie die Prozedur, die direkt mit einem Remoteprozeduraufruf (RPC)-Mechanismus, der im Data Stream-Protokoll des DBMS definiert ist.  
   
     -   Gibt die Werte von jeder Eingabe/Ausgabe- oder Output-Parameter oder den Rückgabewert der Prozedur, vorausgesetzt, dass die Prozedur erfolgreich ausgeführt wird. Diese Werte werden möglicherweise nicht erst verfügbar, nachdem alle anderen Ergebnisse (Zeilenanzahl und Resultsets) generiert, die von der Prozedur verarbeitet wurden. Wenn die Prozedur fehlschlägt, kehrt der Treiber Fehler zurück.
+

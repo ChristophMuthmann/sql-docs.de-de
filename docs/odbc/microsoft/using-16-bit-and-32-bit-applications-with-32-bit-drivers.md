@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 802b09dd83ce3671edbff33ff2be447c6279621f
@@ -62,3 +63,4 @@ ms.lasthandoff: 09/09/2017
 -   [Verwenden von 16-Bit-Anwendungen mit 32-Bit-Treiber](../../odbc/microsoft/using-16-bit-applications-with-32-bit-drivers.md)  
   
 -   [Verwenden 32-Bit-Anwendungen mit 32-Bit-Treiber](../../odbc/microsoft/using-32-bit-applications-with-32-bit-drivers.md)
+

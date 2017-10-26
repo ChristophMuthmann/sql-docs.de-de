@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7c363ecd47545868e2d40afabdce9bbef6f78031
@@ -30,3 +31,4 @@ Die letzte Fragen zur Interoperabilität ist Zeit. Entwickeln in der Regel eine 
  Zusätzlich zur Entwicklungszeit muss die Produkt-Lebensdauer berücksichtigt werden. Wenn die Anwendung einmal, z. B. eine Anwendung verwendet werden, die Daten zu übertragen, bei der Migration von einem DBMS in eine andere ist gibt es keinen Sinn machen es interoperabel. Die Anwendung werden einmal verwendet und verworfen.  
   
  Wenn die Anwendung für eine lange Zeit vorhanden ist, kann es einfacher zu verwalten als interoperable Anwendung sein. Dies gilt auch für benutzerdefinierte Anwendungen, die eine einzelne DBMS als Ziel haben. Der Grund ist, dass interoperable Code eine begrenzte Teilmenge der Funktionen verwendet. Der Treiber ist erforderlich, um diese Funktionen auch bei Änderungen an das zugrunde liegende DBMS verfügbar zu halten. Daher kann interoperable Code die Last der Umgang mit Änderungen des DBMS seitens des Anwendungsentwicklers dem Treiber Entwickler zu verschieben.
+

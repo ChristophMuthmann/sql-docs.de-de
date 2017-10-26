@@ -14,6 +14,7 @@ caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b384bcb3ceee587edc89c6e5023a7caa4c882ed2
@@ -30,3 +31,4 @@ ODBC unterstützt asynchrone Vorgänge für Vorgänge der Anweisung und Verbindu
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausführen von ODBC-Anweisungen](../../../odbc/reference/develop-app/executing-statements-odbc.md)
+

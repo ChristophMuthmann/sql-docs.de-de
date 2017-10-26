@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1f2fad149692bf76c118837daf05e0b77ebf4c38
@@ -49,3 +50,4 @@ Definieren eines DBMS *long-Daten* als beliebiges Zeichen oder Binärdaten über
  Nach dem **SQLExecute** oder **SQLExecDirect** wird SQL_NEED_DATA zurückgegeben, und bevor die Daten vollständig für den letzten Data-at-Execution-Parameter gesendet wurde, wird die Anweisung in einem Zustand benötigen. Während eine Anweisung in einem Zustand erforderlich ist, kann nur die Anwendung aufrufen **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, oder **SQLGetDiagRec**; alle anderen Funktionen zurückgeben SQLSTATE HY010 (Sequenzfehler-Funktion). Aufrufen von **SQLCancel** bricht die Ausführung der Anweisung ab und gibt sie an den ursprünglichen Zustand zurück. Weitere Informationen finden Sie unter [Anhang B: ODBC-Übergang-Statustabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Ein Beispiel für das Senden von Daten zum Zeitpunkt der Ausführung, finden Sie unter der [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md) funktionsbeschreibung.
+

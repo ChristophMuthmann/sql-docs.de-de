@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 014a79813f5755e422b5e854b98f737d59a280a6
@@ -77,3 +78,4 @@ Deskriptoren enthalten *Header* und *Datensatz* Felder, die Spalten oder Paramet
 -   [Zurückgestellten Felder](../../../odbc/reference/develop-app/deferred-fields.md)  
   
 -   [Konsistenzprüfung](../../../odbc/reference/develop-app/consistency-check.md)
+

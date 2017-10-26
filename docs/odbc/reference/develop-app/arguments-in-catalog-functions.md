@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2f8939b2e1ae81c3eb171e78753e7fc3b6cc17ae
@@ -59,3 +60,4 @@ SQLTables(hstmt3, NULL, 0, NULL, 0, "Orders", SQL_NTS, NULL, 0);
 -   [Identifier-Argumente](../../../odbc/reference/develop-app/identifier-arguments.md)  
   
 -   [Auflisten von Argumenten Wert](../../../odbc/reference/develop-app/value-list-arguments.md)
+

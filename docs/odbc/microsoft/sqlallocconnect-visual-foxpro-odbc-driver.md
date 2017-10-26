@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5614b69fddd5b5430f15e8266bef6872d4294f4e
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Belegt Speicher für ein Verbindungshandle *Hdbc*, in der Umgebung identifizierten *Henv*. Der Treiber-Manager verarbeitet diese Aufruf und des Treibers ruft **SQLAllocConnect** immer [SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md), **SQLBrowseConnect**, oder [SQLDriverConnect ](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md) aufgerufen wird.  
   
  Weitere Informationen finden Sie unter [SQLAllocConnect](../../odbc/reference/syntax/sqlallocconnect-function.md) in der *ODBC Programmer's Reference*.
+

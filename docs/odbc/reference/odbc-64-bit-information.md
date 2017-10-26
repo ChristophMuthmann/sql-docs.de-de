@@ -14,6 +14,7 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e19cb2defa4e2e0e17f94b32af8f94606759f2ab
@@ -502,3 +503,4 @@ typedef SQLULEN BOOKMARK;
   
 ## <a name="see-also"></a>Siehe auch  
  [Einführung in ODBC](../../odbc/reference/introduction-to-odbc.md)
+

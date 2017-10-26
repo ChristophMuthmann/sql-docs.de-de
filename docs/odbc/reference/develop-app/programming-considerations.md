@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ce7fa26983200ba8857c44e6d085410e337e8df8
@@ -43,3 +44,4 @@ Dieser Abschnitt beschreibt kurz eine Reihe von Themen im Zusammenhang mit ODBC-
 -   [Abwärtskompatibilität und zur Einhaltung von Standards](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)  
   
 -   [ODBC in Windows](../../../odbc/reference/develop-app/odbc-in-windows.md)
+

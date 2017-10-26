@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 899a0c01994963a95b6b40936f481882e9634927
@@ -37,3 +38,4 @@ Die folgenden vier Optionen im **SQLGetInfo** beschreiben, welche Arten von Curs
 -   SQL_KEYSET_CURSOR_ATTRIBUTES2 oder SQL_STATIC_CURSOR_ATTRIBUTES2 (je nach Typ des Cursors). Listet, ob die statische und keysetgesteuerte Cursor eigene Updates, löschungen und einfügungen erkannt werden können.  
   
  Eine Anwendung kann zur Laufzeit cursorfähigkeiten bestimmen, durch den Aufruf **SQLGetInfo** mit diesen Optionen. Dies erfolgt häufig durch allgemeiner Anwendungen. Cursorfähigkeiten können auch in der Anwendung während der Anwendungsentwicklung und ihrer Verwendung, die hartcodierte ermittelt werden. Dies erfolgt häufig durch vertikale und benutzerdefinierten Anwendungen, jedoch kann auch geschehen, indem die generischen Anwendungen, die eine Implementierung von clientseitigen Cursor z. B. den ODBC-Cursorbibliothek verwenden.
+

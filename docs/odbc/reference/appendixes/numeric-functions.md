@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f41ae1e8ad665da3db472941ee47afebefa63dd3
@@ -63,3 +64,4 @@ Die folgende Tabelle beschreibt die numerische Funktionen, die in der ODBC-Skala
 |**SQRT (** *Float_exp* **)** (ODBC 1.0)|Gibt die Quadratwurzel von *Float_exp*.|  
 |**TAN (** *Float_exp* **)** (ODBC 1.0)|Gibt den Tangens des *Float_exp*, wobei *Float_exp* einen Winkel im Bogenmaß ausgedrückt wird.|  
 |**TRUNCATE (** *Numeric_exp*, *Integer_exp***)** (ODBC 2.0)|Gibt *Numeric_exp* auf gekürzt *Integer_exp* wird rechts vom Dezimaltrennzeichen an. Wenn *Integer_exp* negativ ist, *Numeric_exp* auf abgeschnitten &#124;* Integer_exp*&#124; Stellen links vom Dezimaltrennzeichen an.|
+

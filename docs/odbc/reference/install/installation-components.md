@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1725c18d40fcb9a6de414722f972318337e39cb6
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 -   [Installationsprogramm-DLL](../../../odbc/reference/install/installer-dll.md)  
   
 -   [Setup-DLL für Treiber](../../../odbc/reference/install/driver-setup-dll.md)
+

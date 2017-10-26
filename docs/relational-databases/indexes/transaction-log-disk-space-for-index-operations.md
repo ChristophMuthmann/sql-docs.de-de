@@ -20,6 +20,7 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a1d06fd19479d11e1705e6c21ed7e1698a89896a
@@ -50,3 +51,4 @@ ms.lasthandoff: 06/22/2017
  [Beispiel für den zum Speichern eines Indexes belegten Speicherplatz](../../relational-databases/indexes/index-disk-space-example.md)  
   
   
+

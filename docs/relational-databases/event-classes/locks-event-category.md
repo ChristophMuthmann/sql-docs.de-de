@@ -19,6 +19,7 @@ caps.latest.revision: 27
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8d1e11870107c27084efc54d0c9901f5f1be0f1a
@@ -46,3 +47,4 @@ ms.lasthandoff: 06/22/2017
 |[Lock:Timeout (Ereignisklasse)](../../relational-databases/event-classes/lock-timeout-event-class.md)|Verfolgt nach, wann Sperranforderungen nicht erfüllt werden können, weil eine andere Transaktion eine blockierende Sperre für die angeforderte Ressource aufrechterhält.|  
   
   
+

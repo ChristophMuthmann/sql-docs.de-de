@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d50c660ed3b405a7ae9fec6b9c66a9b395605025
@@ -39,3 +40,4 @@ Anweisungsattribute sind Eigenschaften der Anweisung. Ob Sie Lesezeichen und wel
 >  Keines der Anweisungsattribute in ODBC 3. eingeführt. *x* (mit Ausnahme von SQL_ATTR_METADATA_ID) kann auf der Verbindungsebene festgelegt werden.  
   
  Weitere Informationen finden Sie unter der [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) funktionsbeschreibung.
+

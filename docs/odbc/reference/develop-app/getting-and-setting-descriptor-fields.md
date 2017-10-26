@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f44d3016f3460d5ae9db3734c06117bdb1693259
@@ -37,3 +38,4 @@ Dieser Abschnitt beschreibt die Methoden, die eine Anwendung zum Abrufen oder Fe
 -   [Kopieren die Deskriptoren](../../../odbc/reference/develop-app/copying-descriptors.md)  
   
 -   [Verwenden präzise Funktionen](../../../odbc/reference/develop-app/using-concise-functions.md)
+

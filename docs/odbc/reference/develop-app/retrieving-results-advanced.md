@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 85ee85c9bb44f32d33cee622c60c677f22b0ba7c
@@ -44,3 +45,4 @@ Eine Anwendung angegeben werden, dass ein Offset hinzugefügt wird, Daten Puffer
 -   [Der ODBC-Cursorbibliothek](../../../odbc/reference/develop-app/the-odbc-cursor-library.md)  
   
 -   [Mehrere Ergebnisse](../../../odbc/reference/develop-app/multiple-results.md)
+

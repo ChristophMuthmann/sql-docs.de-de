@@ -23,6 +23,7 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3a67508ad9e676e679f0458eef8e46960cc72737
@@ -553,3 +554,4 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)   
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)
+

@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0a0d583b177984d86f59623f496596db12da0eb2
@@ -35,3 +36,4 @@ ms.lasthandoff: 08/03/2017
 -   [Beheben von Leistungsproblemen in SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=151354)  
   
   
+

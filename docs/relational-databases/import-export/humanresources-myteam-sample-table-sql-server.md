@@ -18,6 +18,7 @@ caps.latest.revision: 35
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
 ms.openlocfilehash: a65e93209a471963bba180b1fb0703b9c34ac846
@@ -79,3 +80,4 @@ ms.lasthandoff: 10/04/2017
  [Massenimport und -export von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)  
   
   
+

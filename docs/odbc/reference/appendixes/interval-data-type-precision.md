@@ -22,6 +22,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dc397e2aade6d016a647f1caf00a91fad48ad8e1
@@ -39,3 +40,4 @@ Genauigkeit für ein Intervall-Datentyp schließt für anführenden Intervallwer
  Alle Intervall-Datentyp, ein zweites Feld verfügt, hat eine *Genauigkeit in Millisekunden*. Dies ist die Anzahl der Dezimalstellen in den Bruchteil der Sekundenwert zulässig. Dies unterscheidet sich für andere Datentypen gibt an, in dem die Anzahl der Ziffern vor dem Dezimaltrennzeichen mit einfacher Genauigkeit. Die Sekunden Genauigkeit eines Datentyps Intervall ist die Anzahl der Ziffern nach dem Dezimaltrennzeichen an. Z. B. wenn die Sekunden Genauigkeit auf 6 festgelegt ist, würde die Zahl in das bruchteilfeld 123456 interpretiert werden als.123456 und die Anzahl 1230 als.001230 interpretiert werden würde. Für andere Datentypen wird dies als Skalierung bezeichnet. Intervall Sekunden Genauigkeit ist in der SQL_DESC_PRECISION-Feld des Deskriptors enthalten. Wenn die Genauigkeit der Sekundenbruchteil-Komponente des SQL-Intervallwert größer ist, was die C-Intervall-Struktur aufnehmen kann, ist er treiberdefinierten, ob die Sekundenbruchteile-Wert in der SQL-Intervall gerundet oder gekürzt, wenn für den C-konvertiert Intervall-Struktur.  
   
  Das Feld SQL_DESC_CONCISE_TYPE in einen Datentyp Intervall festgelegt ist, wird das SQL_DESC_TYPE-Feld als SQL_INTERVAL festgelegt und auf den Code für den Intervalltyp der Daten die SQL_DESC_DATETIME_INTERVAL_CODE festgelegt ist. Feld SQL_DESC_DATETIME_INTERVAL_PRECISION automatisch auf die führenden Intervall standardgenauigkeit von 2 festgelegt ist, und das SQL_DESC_PRECISION-Feld wird automatisch auf die Genauigkeit für die Sekunden von Intervall von 6 festgelegt. Wenn beide Werte ist nicht geeignet, sollte die Anwendung explizit das Deskriptorfeld durch einen Aufruf von festgelegt **SQLSetDescField**.
+

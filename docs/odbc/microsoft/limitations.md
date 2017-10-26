@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 034a4065615c3b0c298de110cd2501bd392a9704
@@ -49,3 +50,4 @@ Dieser Abschnitt beschreibt die Einschränkungen von der ODBC-Datenbanktreiber d
 |||[WOBEI Klausel](../../odbc/microsoft/where-clause-limitations.md)|  
 |||[Auf dem aktuellen-Klausel](../../odbc/microsoft/where-current-of-clause-limitations.md)|  
 |||[String](../../odbc/microsoft/string-limitations.md)|
+

@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 777ff52e5670d97b6dfe3813d8e05dfcccf00103
@@ -286,3 +287,4 @@ GO
  [Eigenständige Datenbanken](../../relational-databases/databases/contained-databases.md)  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 71
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: efcb8d4f781f634d24c00e0698da746dd3b4efa8
@@ -79,3 +80,4 @@ GO
  [Starten von SQL Server im Einzelbenutzermodus](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)  
   
   
+

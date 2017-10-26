@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6862ff2ec4d95ce6a2149bbcd7647cdf8ea6819f
@@ -59,3 +60,4 @@ INSERT INTO dbf_name [(fname1 [, fname2, ...])]
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen der Tabelle - SQL-Befehl](../../odbc/microsoft/create-table-sql-command.md)   
  [Wählen Sie-SQL-Befehl](../../odbc/microsoft/select-sql-command.md)
+

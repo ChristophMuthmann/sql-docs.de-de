@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cc420275f9d88108e22beae1264ad61050cca2c4
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
 -   [ODBC-Treiber für Oracle](../../odbc/microsoft/odbc-driver-for-oracle.md)  
   
 -   [Visual FoxPro-ODBC-Treiber](../../odbc/microsoft/visual-foxpro-odbc-driver.md)
+

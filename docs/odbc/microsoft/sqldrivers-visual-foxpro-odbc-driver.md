@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d178842945e642e05580d57523e21dec2ac461f0
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Listet Beschreibungen der Treiber und Treiber Attribut Schlüsselwörter.  
   
  Weitere Informationen finden Sie unter [SQLDrivers](../../odbc/reference/syntax/sqldrivers-function.md) in der *ODBC Programmer's Reference*.
+

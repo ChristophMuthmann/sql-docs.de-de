@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a3f4f8eca8309cb40b6ef9d2a7f9baac77c05f84
@@ -31,3 +32,4 @@ Vertikale Anwendungen führen in der Regel eine klar definierte Aufgabe für ein
  Da vertikale Anwendungen in der Regel auf bestimmte Funktionen, z. B. bildlauffähige Cursor oder Transaktionen, erfordern unterstützen sie nur selten allen DBMS. Stattdessen sind eher sie sehr interoperabel zwischen einer begrenzten Anzahl von DBMS. Wählen in der Regel vertikale Anwendungsentwickler diese DBMS unterstützt, die auf einen großen Teil der Zugang zum Markt darstellen und ignoriert den Rest. Sie empfiehlt sich auch bestimmte Treiber für die entsprechenden DBMS, um ihre Tests zu reduzieren und Produkt Supportkosten zu unterstützen.  
   
  Da vertikale Anwendungen einen bekannten Satz von DBMS unterstützen, enthalten sie manchmal treiberspezifische oder DBMS-spezifischen Code. Solcher Code ist jedoch am besten auf ein Minimum reduziert, da hierfür zusätzliche Zeit zum Warten erforderlich ist.
+

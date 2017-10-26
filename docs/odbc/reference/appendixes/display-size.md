@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3faac66828cdc408f9bd153377a3aefe74b882b0
@@ -48,3 +49,4 @@ Die Größe einer Spalte ist die maximale Anzahl von Zeichen, die zum Anzeigen v
 |SQL_GUID|36 (die Anzahl der Zeichen in der *Aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee* Format|  
   
  [a] Wenn der Treiber die Spalten- oder Parameternamen Länge des Variablentypen ermitteln kann, gibt Sie SQL_NO_TOTAL zurück.
+

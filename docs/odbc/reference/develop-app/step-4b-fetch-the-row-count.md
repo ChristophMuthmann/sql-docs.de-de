@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9b3526d1aad0475cb487f9c1fba6822604286834
@@ -33,3 +34,4 @@ Der nächste Schritt ist beim Abrufen der Zeilenanzahl liegt, wie in der folgend
  Wenn die Anweisung in Schritt 3 ausgeführt wurde ein **UPDATE**, **löschen**, oder **einfügen** -Anweisung, die Anwendung ruft die Anzahl der betroffenen Zeilen mit ** SQLRowCount**. Weitere Informationen finden Sie unter [bestimmen die Anzahl der betroffenen Zeilen](../../../odbc/reference/develop-app/determining-the-number-of-affected-rows.md).  
   
  Die Anwendung jetzt gibt, Schritt 3, um zu einer anderen Anweisung in derselben Transaktion ausgeführt oder mit Schritt 5, um einen commit oder Rollback der Transaktions fortgesetzt wird.
+

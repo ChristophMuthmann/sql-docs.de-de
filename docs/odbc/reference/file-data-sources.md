@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4ddd3e0db3987ed14984a978c88befbd076562b5
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
  DSN-Datei kann auch Dateidatenquelle sein. Eine Dateidatenquelle DSN-Datei befindet sich auf einem einzelnen Computer und verweist auf eine Computer-Datenquelle. Dateidatenquelle vorhanden hauptsächlich, dass die einfache Konvertierung von Datenquellen für Computer in Dateidatenquellen zulassen, damit eine Anwendung ausschließlich mit Dateidatenquellen entworfen werden kann. Wenn der Treiber-Manager die Informationen in eine Dateidatenquelle gesendet wird, wird eine Verbindung nach Bedarf, um die Computer-Datenquelle, der auf die DSN-Datei verweist.  
   
  Weitere Informationen zu Datenquellen finden Sie unter [Herstellen einer Verbindung mithilfe von Dateidatenquellen](../../odbc/reference/develop-app/connecting-using-file-data-sources.md), oder die [SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md) funktionsbeschreibung.
+

@@ -21,6 +21,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ef01b8c5a21d65fb99f5f190fd159d90f3ac78b2
@@ -48,3 +49,4 @@ Sie können Abfragen und Aktualisieren von Daten in einer Visual FoxPro-Datenban
  Sie können jetzt Microsoft Access verwenden, Abfragen und Aktualisieren von Daten in den verknüpften Visual FoxPro-Tabellen. Vorgenommenen Änderungen an verknüpften Daten werden in der Visual FoxPro-Datenquelle gesendet.  
   
  Wenn Sie nicht, dass Änderungen möchten, stellen Sie in Microsoft Access Einfluss auf die Daten in der Visual FoxPro-Datenquelle, finden Sie unter [importieren Visual FoxPro-Daten in Microsoft Access](../../odbc/microsoft/importing-visual-foxpro-data-into-microsoft-access.md).
+

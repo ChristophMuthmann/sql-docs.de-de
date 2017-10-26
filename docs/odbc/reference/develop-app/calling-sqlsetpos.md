@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 434031a496faae19ee37b8273341cc0ede6d0313
@@ -46,3 +47,4 @@ SQLSetPos(hstmt, iRow, fOption, fLock);
 3.  Wenn die Anwendung aufruft, **SQLSetStmtAttr** zum Festlegen der SQL_ATTR_ROW_STATUS_PTR der Treiber-Manager setzt *fSetPosError* gleich ToTRUE.  
   
 4.  Wenn die Anwendung aufruft, **SQLSetPos**, mit *fSetPosError* gleich "true", der Treiber-Manager löst SQL_ERROR mit SQLSTATE HY011 (Attribut kann nicht jetzt festgelegt werden) gibt an, dass die Anwendung Es wurde versucht, rufen Sie **SQLSetPos** nach dem Ändern des Zeile Status Zeigers jedoch vor dem Aufruf **SQLFetchScroll**.
+

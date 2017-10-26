@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a02f6896a6c618614a01def439fcbd8a5d2e1aa8
@@ -172,3 +173,4 @@ Die folgende Tabelle enthält die Programmiersprache C# defines für die *fInfoT
 |SQL_TXN_ISOLATION_OPTION|0|  
 |SQL_UNION|Mehrere Werte|  
 |SQL_USER_NAME|""|
+

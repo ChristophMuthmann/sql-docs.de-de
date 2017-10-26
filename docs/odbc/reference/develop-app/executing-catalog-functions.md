@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 489cd057a15e90794c71cfb433931cd9bc687016
@@ -30,3 +31,4 @@ Da eine Katalogfunktion auf ein Resultset erstellt wird, entspricht dies dem Aus
  Um eine Katalogfunktion auszuführen, ruft eine Anwendung nur die Funktion.  
   
  Weitere Informationen zu Katalogfunktionen, finden Sie unter [Katalogfunktionen](../../../odbc/reference/develop-app/catalog-functions.md).
+

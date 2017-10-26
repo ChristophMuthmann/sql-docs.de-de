@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a55f12a84c6fb354b4aefa4da40c53473cd4b215
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
 |TABLE_QUALIFIER|Der Pfad zu einem Verzeichnis zurückgegeben wird.|  
 |TABLE_OWNER|In dieser Spalte wird NULL zurückgegeben, da der Name des Besitzers nicht unterstützt wird.|  
 |NULLABLE|SQL_NO_NULLS wird in einer primary key- oder unique-Index für Spalten, die einbezogen zurückgegeben.|
+

@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 85eae404d4fa0ab739c699c8f120c76122c8ba67
@@ -56,3 +57,4 @@ HKEY_CURRENT_USER
                          Database : REG_SZ : Payroll  
                          Language : REG_SZ :  
 ```
+

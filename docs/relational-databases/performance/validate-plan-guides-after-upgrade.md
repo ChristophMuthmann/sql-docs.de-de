@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 986538833b7f1b9cc6977449b918997b21828159
@@ -31,3 +32,4 @@ ms.lasthandoff: 06/22/2017
 -   Suchen Sie mit erweiterten Ereignissen einige Zeit lang anhand des [Plan Guide Unsuccessful-Ereignisses](../../relational-databases/event-classes/plan-guide-unsuccessful-event-class.md) nach Plänen ohne Planhinweisliste.  
   
   
+

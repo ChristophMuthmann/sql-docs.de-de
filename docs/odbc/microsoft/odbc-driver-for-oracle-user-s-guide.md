@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8a54f500c0f6fe15360fdcdb72ce01460bb66ef4
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
 -   [Bestimmen der installierten Oracle-Komponenten](../../odbc/microsoft/determining-installed-oracle-components.md)  
   
 -   [Das Datumsformat festlegen für Verbindung](../../odbc/microsoft/setting-the-date-format-on-connection.md)
+

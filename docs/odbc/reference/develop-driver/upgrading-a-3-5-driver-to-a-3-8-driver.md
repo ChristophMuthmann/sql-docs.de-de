@@ -14,6 +14,7 @@ caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 98b9c8e3e2179801a4cb7cd2947939d6f2927a02
@@ -80,3 +81,4 @@ SQL_DRIVER_C_TYPE_BASE+0, SQL_DRIVER_C_TYPE_BASE+1
  [Entwickeln einen ODBC-Treiber](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Microsoft gelieferten ODBC-Treiber](../../../odbc/microsoft/microsoft-supplied-odbc-drivers.md)   
  [Was ist neu in ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)
+

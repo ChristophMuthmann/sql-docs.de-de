@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e642685b670fa872c1a34d2d10fed815e5a6fa7e
@@ -37,3 +38,4 @@ Die folgenden Regeln werden verwendet, um zu bestimmen, die Länge eines Interva
 -   1 plus die ausdrückliche oder konkludente Sekunden Genauigkeit. Wenn die Genauigkeit Sekunden nicht angegeben wird, ist der Standardwert 6.  
   
  Bestimmte Länge Spaltenwerte für jeden Datentyp Intervall in enthaltenen [Spaltengröße](../../../odbc/reference/appendixes/column-size.md).
+

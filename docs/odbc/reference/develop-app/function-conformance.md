@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 48ed4bc9b52b6a905972e566870e7e2f86fc4734
@@ -95,3 +96,4 @@ In der folgenden Tabelle gibt an, dem Konformitätsgrad für jede ODBC-Funktion,
  [1] wichtige Features dieser Funktion sind nur zur höheren Übereinstimmungsebenen verfügbar.  
   
  [2] bestimmte Attribute auf benutzerdefinierte Werte festlegen, hängt von den Konformitätsgrad ab. Weitere Informationen finden Sie im nächsten Abschnitt [Attribut Konformität](../../../odbc/reference/develop-app/attribute-conformance.md).
+

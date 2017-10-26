@@ -17,6 +17,7 @@ caps.latest.revision: 3
 author: pelopes
 ms.author: harinid
 manager: 
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
 ms.openlocfilehash: 30a271511fff2d9c3c9eab73a0d118bfb3f8130d

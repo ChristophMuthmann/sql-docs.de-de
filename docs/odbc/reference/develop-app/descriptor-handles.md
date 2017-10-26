@@ -27,6 +27,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 99b1b3dc2eabd38aea148ad5ba946d7dd0da857d
@@ -50,3 +51,4 @@ Ein *Deskriptor* ist eine Auflistung von Metadaten, die den Parametern einer SQL
  Die meisten Vorgänge in ODBC können ohne ausdrückliche Verwendung von Deskriptoren von der Anwendung ausgeführt werden. Deskriptoren bieten jedoch eine zweckmäßig für bestimmte Vorgänge an. Nehmen Sie z. B. an, dass eine Anwendung wünscht Einfügen von Daten aus zwei verschiedenen Sätzen von Puffern. Um den ersten Satz von Puffern zu verwenden, würde es wiederholt aufrufen **SQLBindParameter** an die Parameter in binden ein **einfügen** Anweisung und führen Sie die Anweisung. Um den zweiten Satz von Puffern zu verwenden, würden sie diesen Vorgang wiederholen. Alternativ konnte er Bindungen zu den ersten Satz von Puffern in einen Deskriptor und zum zweiten Satz von Puffern in einer anderen Deskriptor einrichten. Zum Wechseln zwischen den Sätzen von Bindungen, die Anwendung einfach aufrufen würde **SQLSetStmtAttr** und die Anweisung als APD richtig Deskriptors zugeordnet.  
   
  Weitere Informationen zu Deskriptoren, finden Sie unter [Typen von Deskriptoren](../../../odbc/reference/develop-app/types-of-descriptors.md).
+

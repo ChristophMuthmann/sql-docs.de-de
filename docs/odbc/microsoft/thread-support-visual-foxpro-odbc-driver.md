@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cd540c727f1e8a77dbb6d8201715c213ff688909
@@ -34,3 +35,4 @@ Der Visual FoxPro-ODBC-Treiber ist threadsicher. Zugriff auf Umgebungshandles (*
  Der Treiber verwendet einen separaten Thread zum Abrufen von Daten bei Verwendung von progressiven abrufen. Um progressive Abrufen von Zeilen für eine Datenquelle zu verwenden, wählen Sie die **Abrufen von Daten im Hintergrund** Kontrollkästchen auf der [ODBC Visual FoxPro einrichten (Dialogfeld)](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md) , oder verwenden Sie das Schlüsselwort der BackgroundFetch-Attribut in der Verbindungszeichenfolge Zeichenfolge. Verwenden Sie abrufen im Hintergrund beim Aufrufen des Treibers von Multithreadanwendungen verwendet werden können. Informationen über Schlüsselwörter für Verbindungszeichenfolgen-Attribut finden Sie unter [Verbindungszeichenfolgen verwenden](../../odbc/microsoft/using-connection-strings.md).  
   
  Weitere Informationen zu Threads und **SQLCancel**, finden Sie unter [SQLCancel](../../odbc/reference/syntax/sqlcancel-function.md) in der *ODBC Programmer's Reference*.
+

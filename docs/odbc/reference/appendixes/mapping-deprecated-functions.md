@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 61d05017039673989e1477501feb17b3da6d7220
@@ -96,3 +97,4 @@ In diesem Abschnitt wird beschrieben, wie veraltete Funktionen zugeordnet werden
 -   [SQLSetStmtOption Zuordnung](../../../odbc/reference/appendixes/sqlsetstmtoption-mapping.md)  
   
 -   [SQLTransact-Zuordnung](../../../odbc/reference/appendixes/sqltransact-mapping.md)
+

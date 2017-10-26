@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cc1da3dfbe7f06e7d98430c5cec8fbaab3176971
@@ -37,3 +38,4 @@ Die erste Entscheidung, die bei der SQL-Anweisungen Konstruieren der Grammatik v
  Aus diesem Grund sind tatsächlich zwei Optionen der Grammatik verwendet: die SQL-92-Grammatik (und die ODBC-Escapesequenzen) und einer DBMS-spezifische-Grammatik. Die beiden ist nur die SQL-92-Grammatik interoperabel, damit alle interoperable Anwendungen verwendet werden soll. Anwendungen, die nicht vollständig kompatibel sind, können die SQL-92-Grammatik oder Grammatik DBMS-spezifische verwenden. DBMS-spezifische Grammatiken haben zwei Vorteile: können sie alle Funktionen, die nicht von SQL-92 abgedeckt ausnutzen, und sie sind geringfügig schneller, da der Treiber nicht verfügt, sie zu ändern. Die zweite Funktion kann teilweise durch Festlegen der SQL_ATTR_NOSCAN-Anweisungsattribut, beenden, den Treiber von Suchen und Ersetzen von Escapesequenzen erzwungen werden.  
   
  Wenn die SQL-92-Grammatik verwendet wird, die Anwendung erkennen, wie sie vom Treiber durch den Aufruf geändert wurden **SQLNativeSql**. Dies ist häufig nützlich, beim Debuggen von Anwendungen. **SQLNativeSql** akzeptiert eine SQL-Anweisung, und gibt ihn zurück, nachdem der Treiber verändert wurde. Da diese Funktion in der Konformitätsgrad des Core-Schnittstelle ist, wird sie durch alle Treiber unterstützt.
+

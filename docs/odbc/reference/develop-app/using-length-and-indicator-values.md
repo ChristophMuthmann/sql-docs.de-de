@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f615aa92da79c391e84539fdf5cf402d523ab690
@@ -75,3 +76,4 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
 -   SQL_DEFAULT_PARAM. Eine Prozedur ist den Standardwert des input-Parameter in einer Prozedur anstelle des Werts in den entsprechenden Datenpuffer verwenden.  
   
 -   SQL_COLUMN_IGNORE. **SQLBulkOperations** oder **SQLSetPos** ignoriert den Wert im Datenpuffer. Beim Aktualisieren einer Zeile der Daten durch einen Aufruf von **SQLBulkOperations** oder **SQLSetPos** der Spaltenwert nicht geändert wird. Wenn Sie eine neue Zeile mit Daten durch einen Aufruf von einfügen **SQLBulkOperations**, der Spaltenwert auf seinen Standardwert festgelegt ist oder, wenn die Spalte keinen standardmäßig auf NULL.
+

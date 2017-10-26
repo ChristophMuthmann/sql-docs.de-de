@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 472a8a68032c1d5b119bbf1d366b353927eca0dd
@@ -81,3 +82,4 @@ Die folgende Syntax wird für die Intervall-Literale in ODBC verwendet.
  *Angebot* :: = "  
   
  *unsigned Integer* :: = *Ziffer...*
+

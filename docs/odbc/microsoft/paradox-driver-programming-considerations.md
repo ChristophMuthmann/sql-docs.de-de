@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0cca9bd8c08815c98a3aba6e9c92c3bfc9674e7e
@@ -39,3 +40,4 @@ Dieser Abschnitt enthält die folgenden Themen:
   
 > [!NOTE]  
 >  Zugreifen auf Paradox ISAM-Dateien über die ODBC-Datenbanktreiber Desktop erfordert die Installation von Borland Database Engine.
+

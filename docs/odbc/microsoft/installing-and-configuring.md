@@ -21,6 +21,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ef53f3e39116353e1b9f9a033c872b41e8225edf
@@ -42,3 +43,4 @@ Informationen zum Herunterladen der Visual FoxPro-ODBC-Treiber finden Sie unter 
 -   [ODBC-Visual FoxPro einrichten (Dialogfeld)](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)  
   
  Informationen zum Herunterladen des Treibers finden Sie unter [der Visual FoxPro-ODBC-Treiber-Download-Website](http://go.microsoft.com/fwlink/?LinkId=121318).
+

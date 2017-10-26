@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 89c3d1422ccb682bd8e8a2de8f6b760eb673c6e9
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="set-functions-limitations"></a>Einschränkungen der Set-Funktionen
 Die Set-Funktionen (AVG, MAX, MIN und SUM) unterstützen keine DISTINCT-Schlüsselworts.
+

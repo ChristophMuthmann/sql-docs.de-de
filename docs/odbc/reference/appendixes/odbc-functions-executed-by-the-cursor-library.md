@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 46c10cf6c8e2d0fe7f6f91e4eedbe864d62609fb
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/09/2017
 |**SQLGetFunctions**|**SQLSetStmtOption**|  
 |**SQLGetInfo**|**SQLTransact**|  
 |**SQLGetStmtAttr**||
+

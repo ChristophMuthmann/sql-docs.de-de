@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 56543f0de0d95bad6fa85fc415dddd7da58f3667
@@ -48,3 +49,4 @@ Das Vorhandensein beider **SQLFetchScroll** und **SQLExtendedFetch** stellt den 
   
 > [!NOTE]  
 >  ODBC-3. *x* Anwendungen sollten keine verwenden **SQLExtendedFetch** oder das Anweisungsattribut SQL_ROWSET_SIZE setzen. Verwenden sie stattdessen, **SQLFetchScroll** und SQL_ATTR_ROW_ARRAY_SIZE-Anweisungsattribut. ODBC-3. *x* Anwendungen sollte nicht verwendet werden **SQLSetPos** mit einem *Vorgang* der SQL_ADD jedoch die zu verwendende **SQLBulkOperations** mit einer *Vorgang* von SQL_ADD.
+

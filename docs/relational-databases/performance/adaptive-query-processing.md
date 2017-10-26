@@ -14,6 +14,7 @@ ms.assetid:
 author: joesackmsft
 ms.author: josack;monicar
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
 ms.openlocfilehash: e2bbfc9a89d4ec2dd3cce5625adfb09c7f85efbe

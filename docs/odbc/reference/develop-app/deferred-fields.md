@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 38967637f505191a5ff353c13b4ebfbbe08e615a
@@ -46,3 +47,4 @@ Die Werte der *verzögert Felder* werden nicht verwendet werden, wenn sie festge
 -   Wenn Feld SQL_DESC_OCTET_LENGTH_PTR ein APD einen null-Wert hat, und der Parameter eine Zeichenfolge ist, wird vom Treiber angenommen, dass Null-terminierte Zeichenfolge ist. Für dynamische Output-Parameter verhindert, dass ein null-Wert in diesem Feld den Treiber Längeninformationen zurückgeben. (Wenn das SQL_DESC_TYPE-Feld einen Zeichenfolge Parameter nicht angegeben ist, wird das Feld SQL_DESC_OCTET_LENGTH_PTR ignoriert.)  
   
  Die Anwendung muss nicht freigeben oder verwerfen Variablen für verzögerte Felder zwischen dem Zeitpunkt, der sie die Felder zuordnet und die Uhrzeit, die der Treiber liest oder schreibt sie, verwendet wird.
+

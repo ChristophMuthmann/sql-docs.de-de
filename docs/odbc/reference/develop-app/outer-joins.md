@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aff4448df5ec42e29da6c49fe0ace7f0334a1174
@@ -50,3 +51,4 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
 ```  
   
  Um die Arten von äußeren Verknüpfungen zu bestimmen, die eine Datenquelle und die Treiber zu unterstützen, eine Anwendung ruft **SQLGetInfo** mit der SQL_OJ_CAPABILITIES-flag. Die Arten von äußeren Verknüpfungen, die unterstützt werden möglicherweise Links sind, rechts, vollständige oder geschachtelte äußere Joins; äußere Joins in die Namen der Spalte in der **ON** -Klausel müssen sich nicht auf die gleiche Reihenfolge wie ihre entsprechenden Tabellennamen in der **OUTER JOIN** -Klausel; innere Joins zusammen mit äußeren Joins; und äußeren Joins verwenden Jeder Vergleichsoperator für ODBC. Wenn der Typ der SQL_OJ_CAPABILITIES Informationen "0" zurück, wird keine outer Join-Klausel unterstützt.
+

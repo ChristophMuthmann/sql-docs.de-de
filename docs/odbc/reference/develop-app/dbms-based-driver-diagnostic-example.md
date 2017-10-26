@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c0a20af8dc2a35ba451890472ad1af73e01d8688
@@ -48,3 +49,4 @@ Diagnostic Msg:   "[Microsoft][ODBC Rdb Driver][Rdb] %SQL-F-RELNOTDEF, Table EMP
 ```  
   
  Aufgrund des Fehlers in der Datenquelle, mit der Treiber die diagnosemeldung ein Präfix für den datenquellenbezeichner ([Rdb]) hinzugefügt. Wurde der Treiber die Komponente, die mit der Datenquelle verbunden, werden die diagnosemeldung Präfixe für die Anbieter (Microsoft) und den Bezeichner ([ODBC-Treiber Rdb]) hinzugefügt.
+

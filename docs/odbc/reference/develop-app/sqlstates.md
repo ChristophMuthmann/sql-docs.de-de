@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0c99959fac35ac1cd312ab3d434f607c3f256dd8
@@ -52,3 +53,4 @@ SQLSTATEs bieten ausführliche Informationen zur Ursache einer Warnung oder Fehl
  SQLSTATE HYC00 (optionales Feature nicht implementiert) ist besonders wichtig, weil es die einzige Möglichkeit besteht, in dem eine Anwendung zu bestimmen kann, ob ein Treiber ein bestimmtes Attribut der Anweisung oder Verbindung unterstützt.  
   
  Eine vollständige Liste der SQLSTATEs und welche Funktionen zurückzugeben, finden Sie unter [Anhang A: ODBC-Fehlercodes](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md). Eine ausführliche Erläuterung der Bedingungen, unter denen jede Funktion eine bestimmte SQLSTATE zurückgeben kann, finden Sie unter dieser Funktion.
+

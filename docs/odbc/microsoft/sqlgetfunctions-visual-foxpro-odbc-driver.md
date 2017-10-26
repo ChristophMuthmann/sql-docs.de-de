@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0552f93e5318e5a282b92c88fe12345e6883670d
@@ -56,3 +57,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_API_SQLTABLEPRIVILEGES|Nein|  
   
  Weitere Informationen finden Sie unter [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) in der *ODBC Programmer's Reference*.
+

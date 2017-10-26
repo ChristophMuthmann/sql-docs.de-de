@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a551d51a434d17162a5f5bcf0091e593d25f283a
@@ -54,3 +55,4 @@ _C_TYPE_TIMESTAMP|Sekundenbruchteile von Timestamp wird nicht abgeschnitten, [a]
  [f] Dies ist die Größe des entsprechenden C-Datentyp.  
   
  Wenn SQL-Zeitstempeldaten in C-Zeichendaten konvertiert werden, wird die resultierende Zeichenfolge der "*Yyyy*-*mm*-*Dd* *" hh " *:*mm*:*ss*[.* f... *] "-Format, in denen bis zu neun Ziffern für Sekundenbruchteile verwendet werden kann. Dieses Format wird durch die Einstellung der Windows® Land nicht beeinflusst. (Mit Ausnahme des Dezimaltrennzeichen und Bruchteilen von Sekunden, muss die gesamte Format, unabhängig von der Genauigkeit von der SQL-Datentyp Timestamp verwendet werden.)
+

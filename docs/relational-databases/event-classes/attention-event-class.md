@@ -16,6 +16,7 @@ caps.latest.revision: 28
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: efe8ebb8481cafd35d36b2e9594626b940cf754e
@@ -55,3 +56,4 @@ ms.lasthandoff: 06/22/2017
  [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md)  
   
   
+
