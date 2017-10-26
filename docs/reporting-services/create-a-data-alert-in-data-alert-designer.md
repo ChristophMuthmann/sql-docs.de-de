@@ -110,7 +110,7 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen. Nach 
     > [!NOTE]  
     >  Durch das Beenden einer Warnmeldung wird die Warnungsdefinition nicht gelöscht. Nach dem Beenden einer Warnmeldung können Sie diese durch Aktualisieren des Start- und Enddatums erneut starten. Weitere Informationen zum Löschen von Warnungsdefinitionen finden Sie unter [Verwalten meiner Datenwarnungen im Datenwarnungs-Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   
-18. Deaktivieren Sie optional das Kontrollkästchen zum Senden von Meldungen nur bei Ergebnisänderungen **** .  
+18. Deaktivieren Sie optional das Kontrollkästchen zum **Senden von Meldungen** nur bei Ergebnisänderungen.  
   
      Wenn Sie Warnmeldungen häufig senden, sind redundante Informationen u. U. nicht erwünscht, und Sie sollten das Kontrollkästchen nicht deaktivieren.  
   
