@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 91f9b1fe25772c464877fff38b0eb4fc73155828
@@ -36,3 +37,4 @@ Numerische Literale werden verwendet, wenn numerische Datenwerte in Zeichenfolge
 -   [Regeln für Konvertierungen](../../../odbc/reference/appendixes/rules-for-conversions.md)  
   
 -   [Überschreiben der Standardwerte für die Genauigkeit und Dezimalstellenanzahl für numerische Datentypen](../../../odbc/reference/appendixes/overriding-default-precision-and-scale-for-numeric-data-types.md)
+

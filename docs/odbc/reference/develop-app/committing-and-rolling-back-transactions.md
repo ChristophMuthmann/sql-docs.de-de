@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4090e609063b74fdcbef694c400272ee6af090c5
@@ -35,3 +36,4 @@ Um einen commit oder Rollback einer Transaktions im Manualcommit Modus, eine Anw
  Wenn eine Anwendung, um das Umgebungshandle übergibt **SQLEndTran** aber grundsätzlich nicht bestanden ein Verbindungshandle der Treiber-Manager ruft **SQLEndTran** mit das Umgebungshandle für jeden Treiber, verfügt über eine oder mehrere aktive Verbindungen in der Umgebung. Der Treiber führt dann einen Commit für die Transaktionen für jede Verbindung in der Umgebung. Allerdings ist es wichtig zu verstehen, dass der Treiber weder der Treiber-Manager auf den Verbindungen in der Umgebung ein Zweiphasencommits führt; Dies ist lediglich eine Vereinfachung der Programmierung gleichzeitig aufrufen **SQLEndTran** für alle Verbindungen in der Umgebung.  
   
  (Ein *Zweiphasen-Commit* wird in der Regel verwendet werden, um ein commit für Transaktionen, die über mehrere Datenquellen verteilt werden. In der ersten Phase werden die Datenquellen abgerufen, um gibt an, ob sie ihren Teil der Transaktion verpflichten können. In der zweiten Phase wird die Transaktion bei all denjenigen Datenquellen tatsächlich ausgeführt. Wenn alle Datenquellen in der ersten Phase Antwort erhalten, dass sie die Transaktion kein commit möglich ist, erfolgt die zweite Phase nicht.)
+

@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 684d220279ace78d42167aabb49bcee778de97b1
@@ -31,3 +32,4 @@ Diagnostizieren von Problemen in ODBC-Anwendungen können zwei Funktionen unters
 -   [Ablaufverfolgung](../../../odbc/reference/develop-app/tracing.md)  
   
 -   [Visual Studio Analyzer](../../../odbc/reference/develop-app/visual-studio-analyzer.md)
+

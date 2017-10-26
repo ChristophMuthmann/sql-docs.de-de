@@ -22,6 +22,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 367062f5e671b366771b1a04f129b8e312f48cca
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
 -   Wenn der Treiber nur eine aktive Anweisung unterstützt, wird die Bibliothek-Cursorn, die der Rest des Ergebnisses festgelegt, und klicken Sie dann das aktuelle Rowset aus dem Cache refetches, bevor eine positionierte ausgeführt wird, update oder delete-Anweisung. Wenn die Anwendung dann eine Funktion aufruft, der Metadaten in einem Resultset zurückgibt (z. B. **SQLNumResultCols** oder **SQLDescribeCol**), die Cursorbibliothek gibt einen Fehler zurück.  
   
 -   Wenn eine positionierte Update- oder Delete-Anweisung für eine Spalte einer Tabelle ausgeführt wird, die eine Timestamp-Spalte enthält, die automatisch aktualisiert wird, jedes Mal, wenn ein Update ausgeführt wird, fehl alle nachfolgenden positionierte Update- oder Delete-Anweisungen, wenn die Timestamp-Spalte ist gebunden. Dies tritt auf, wenn der gesuchten update oder delete-Anweisung, die Cursorbibliothek erstellt, die zu aktualisierende Zeile nicht genau identifiziert wird. Der Wert in der komplexen Anweisung für die Timestamp-Spalte wird den automatisch aktualisierten Wert des Timestamp-Spalte nicht überein.
+

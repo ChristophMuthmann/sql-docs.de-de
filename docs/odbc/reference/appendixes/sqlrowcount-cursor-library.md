@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9460f4f4bbc522fc421b7e40b261fe17a8410a09
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Wenn eine Anwendung ruft **SQLRowCount** mit der Anweisung, die eine positionierte Update- oder Delete-Anweisung zugeordnet, die Cursorbibliothek gibt die Anzahl der von dieser Anweisung betroffenen Zeilen zurück.  
   
  Wenn eine Anwendung aufruft **SQLRowCount** nach einer **wählen** -Anweisung, die Cursorbibliothek gibt-1 zurück.
+

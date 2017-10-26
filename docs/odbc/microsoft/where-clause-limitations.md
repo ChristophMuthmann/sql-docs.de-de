@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3169ef45acb26b6db6bbb46680163575d5a588f4
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 Die maximale Anzahl der Klauseln in einer WHERE-Klausel ist 40.  
   
  "LONGVARBINARY" und LONGVARCHAR Spalten verglichen werden können, um Literale von bis zu 255 Zeichen lang, aber Sie können nicht mit Parametern verglichen werden.
+

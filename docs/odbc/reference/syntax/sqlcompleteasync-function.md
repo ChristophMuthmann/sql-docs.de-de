@@ -18,6 +18,7 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 83f44395e0c7ed8d102bee046b19aefe96c156b5
@@ -81,3 +82,4 @@ SQLRETURN SQLCompleteAsync(
   
 ## <a name="see-also"></a>Siehe auch  
  [Asynchrone Ausführung (Abrufmethode)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
+

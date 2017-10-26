@@ -20,6 +20,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b673d47d3ad2ed1fac2a5bd68ae01b00fcd4ad40
@@ -164,3 +165,4 @@ int main (){
    return (TRUE);  
 }  
 ```
+

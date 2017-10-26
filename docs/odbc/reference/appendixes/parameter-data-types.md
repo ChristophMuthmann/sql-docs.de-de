@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5dcd41f599a6e57a55d05a8a869363ec70c5f756
@@ -40,3 +41,4 @@ Obwohl jedes Parameters angegeben **SQLBindParameter** ist definierten mithilfe 
 |Ein Wert, der mit verwendet **IN**|Identisch mit dem Ausdruck oder den ersten Wert, wenn eine parametermarkierung im Ausdruck vorliegt.|  
 |Einen Musterwert mit verwendet **wie**|VARCHAR|  
 |Eine Updatewert, der verwendet wird, mit **aktualisieren**|Der Update-Spalte|
+

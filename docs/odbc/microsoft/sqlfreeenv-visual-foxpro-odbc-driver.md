@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b36bd3b9743c8cdd351ac3c7ed6e2f0afafd7d7e
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Schließt der Visual FoxPro-ODBC-Treiber, und alle mit dem Treiber zugeordnete Speicherplatz frei.  
   
  Weitere Informationen finden Sie unter [SQLFreeEnv](../../odbc/reference/syntax/sqlfreeenv-function.md) in der *ODBC Programmer's Reference*.
+

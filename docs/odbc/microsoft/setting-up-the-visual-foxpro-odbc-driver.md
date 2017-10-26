@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7805c7099900adcdd3bd660b4e18bbe573eec20d
@@ -39,3 +40,4 @@ Informationen zum Herunterladen und Installieren des Visual FoxPro-ODBC-Treibers
 -   Entfernen Sie alle zuvor installierte Komponenten.  
   
  Nach der Installation des Treibers auf dem System, das Setup-Programm erkennt die installierten Treiber-Komponenten und stellt zusätzliche Dialogfelder, die Sie zum Ändern des Treibers Konfiguration aktivieren.
+

@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5559250002983b942601311b04e1f4ae2eac49a2
@@ -37,3 +38,4 @@ Einige ODBC-Funktionen zu impliziten Zugriff auf Deskriptoren erhalten. Anwendun
  **SQLSetDescRec** und **SQLGetDescRec** sind präzise Funktionen, die mit einem Aufruf festlegen oder Abrufen von mehreren deskriptorfelder, die den Datentyp und die Speicherung von Daten für Spalte oder Parameter beeinflussen. **SQLSetDescRec** ist eine effektive Möglichkeit für die Bindung der Spalte oder Parameter-Daten in einem Schritt zu ändern.  
   
  **SQLSetStmtAttr** und **SQLGetStmtAttr** dienen als präziser Funktionen in einigen Fällen. (Siehe [Deskriptorfelder](../../../odbc/reference/develop-app/descriptor-fields.md).)
+

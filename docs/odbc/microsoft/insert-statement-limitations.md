@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f9233e7582083ba08fb1239120e63db819b8724b
@@ -47,3 +48,4 @@ Eingefügte Daten werden auf der rechten Seite ohne Warnung abgeschnitten, falls
 ```  
   
  Wenn der Text-Treiber verwendet wird, können alle Spaltenwerte mit Leerzeichen aufgefüllt werden. Die Länge des jede Zeile muss kleiner als oder gleich 65,543 Byte sein.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cc77ced44da302f8cb80e8e6d415664ecdb2ba09
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="date-arithmetic-limitations"></a>Datum arithmetische Einschränkungen
 Arithmetische Datum ist für die Subtraktion eines DATE-Datentyps in einen DATE-Datentyp nicht unterstützt.
+

@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 99d022dd56700a3e6441413eb43c06bc1c51cb70
@@ -98,3 +99,4 @@ UPDATE Customers SET Address = ?, Phone = ? WHERE (CustID = ?)
 UPDATE Customers SET Address = ?, Phone = ?  
    WHERE (Name = ?) AND (Address = ?) AND (Phone = ?)  
 ```
+

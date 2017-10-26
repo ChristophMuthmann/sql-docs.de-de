@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cbd74bc135daec2f9468dd8a58f196321d48e496
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="distinct-keyword-limitations"></a>Einschränkungen der DISTINCT-Schlüsselwort
 Für langer Text (Microsoft Access) oder Memo-Felder (dBASE) unterstützt nicht.
+

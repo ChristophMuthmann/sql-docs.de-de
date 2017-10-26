@@ -18,6 +18,7 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 99a56af259a4be7f07183f22874385b515d6c044
@@ -136,3 +137,4 @@ GO
  [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 06baaaff03f75cbf04da86527a25ea60755a473e
@@ -106,3 +107,4 @@ Die Regeln in diesem Abschnitt gelten für Konvertierungen, die im Zusammenhang 
          (2) der Treiber rundet die Zeichenfolge in Y, die eine passende Skalierung (die auch 0 (null) sein kann) und schreibt das Ergebnis in CT  
   
          (3) der Treiber weder schneidet noch rundet aber kopiert nur die ersten Zeichen der LT von Y in CT
+

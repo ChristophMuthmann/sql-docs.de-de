@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d8ffdb2fa548b03ee38c0f817675cb88ab4acf67
@@ -30,3 +31,4 @@ Die DELETE-Anweisung wird für den Microsoft Excel- oder Textdateien-Treiber nic
  DBASE-Treiber unterstützt keine Packen einer Tabelle, um die Werte "gelöscht" zu entfernen.  
   
  Für den Treiber Paradox, eine Zeile aus einer Tabelle löschen muss die Tabelle einen eindeutigen Index (Paradox Primärschlüssel) aufweisen.
+

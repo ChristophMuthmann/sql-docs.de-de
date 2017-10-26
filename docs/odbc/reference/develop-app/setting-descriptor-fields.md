@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f4e63f722842846815fd96bed7293388c4f86c75
@@ -31,3 +32,4 @@ Eine Anwendung kann zum Ändern der Felder einen Deskriptor Aufrufen **SQLSetDes
  Wenn Sie Felder einzeln festlegen, sollte die Anwendung die Sequenz, die in definierten folgen [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Einige Felder festlegen, führt der Treiber auf andere Felder festlegen. Dadurch wird sichergestellt, dass der Deskriptor wird immer verwendet wird, sobald die Anwendung einen-Datentyp angegeben wurde. Wenn die Anwendung das SQL_DESC_TYPE-Feld festlegt, überprüft der Treiber an, dass die anderen Felder, die den Typ angeben gültig und konsistent sind.  
   
  Wenn ein Funktionsaufruf, der einem Beschreibungsfeld festlegen würde ein Fehler auftritt, sind nach dem fehlerhaften Funktionsaufruf den Inhalt des Felds Deskriptor nicht definiert.
+

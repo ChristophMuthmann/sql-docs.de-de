@@ -22,6 +22,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3941a679210a18b39ed201dd564b9613b48a2a58
@@ -101,3 +102,4 @@ Wenn eine ODBC-2. *x* Anwendung wird aktualisiert, um ODBC 3..* X*, sodass Funkt
 -   [Zuordnung der Cursor Attributes1 Informationstypen](../../../odbc/reference/develop-app/mapping-the-cursor-attributes1-information-types.md)  
   
 -   [SQL_NO_DATA](../../../odbc/reference/develop-app/sql-no-data.md)
+

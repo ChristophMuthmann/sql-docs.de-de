@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f6eb418fd3c116745ada1034ae8526a7455b1343
@@ -31,3 +32,4 @@ Die ODBC-Treiber-Dateien sind von den einzelnen Komponenten von ODBC Desktop Dat
  Einige Dateien sind mehr als eine Komponente erforderlich. Wenn Sie keines der ODBC-Datenbanktreiber der Desktop mit Ihren kommerziellen Anwendungen verteilen möchten, müssen diese Dateien verteilt werden.  
   
  Diese Dateien werden im Verzeichnis \Windows\System für Windows 95 oder höher oder in \Windows\System32 Verzeichnis für Windows NT 3.51 oder höher und Windows 2000 installiert. Wenn der ODBC-Dateien in einem anderen Verzeichnis zuvor installiert waren, stellen Sie sicher, dass Sie das Verzeichnis für neuere Dateien im \Windows\System (oder "System32") verwenden.
+

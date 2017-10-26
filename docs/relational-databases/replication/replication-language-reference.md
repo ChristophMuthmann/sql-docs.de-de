@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MikeRayMSFT
 ms.author: mblythe
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 81554169df74e3fbdf5ac5f2a440612a56e4c748
@@ -35,3 +36,4 @@ ms.lasthandoff: 06/22/2017
  [Gespeicherte Replikationsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   
+

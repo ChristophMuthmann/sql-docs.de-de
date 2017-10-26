@@ -22,6 +22,7 @@ caps.latest.revision: 42
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5079ed05c18a1a2647ea085e89f26ac7187101e3
@@ -50,3 +51,4 @@ ms.lasthandoff: 06/22/2017
      Sie können mit dem Assistenten zum Generieren von Skripts eine Datenbank von einem lokalen Computer auf einen Webhostinganbieter übertragen. Weitere Informationen finden Sie unter [Assistent zum Generieren und Veröffentlichen von Skripts](../../relational-databases/scripting/generate-and-publish-scripts-wizard.md).  
   
   
+

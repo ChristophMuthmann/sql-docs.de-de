@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e8361f0b77e8f15f775eece7aae9b599be5e62ac
@@ -38,3 +39,4 @@ SQLAllocHandle(SQL_HANDLE_STMT, InputHandle, OutputHandlePtr)
 ```  
   
  mit *InputHandle* festgelegt *Hdbc* und *OutputHandlePtr* festgelegt *Phstmt*.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a76f55d8e6e7191a47070d79856a0302a8318f11
@@ -33,3 +34,4 @@ Vorausgesetzt, dass die Anwendung ODBC verwendet werden, besteht der nächste Sc
 -   [Vertikale Anwendungen](../../../odbc/reference/develop-app/vertical-applications.md)  
   
 -   [Allgemeiner Anwendungen](../../../odbc/reference/develop-app/generic-applications.md)
+

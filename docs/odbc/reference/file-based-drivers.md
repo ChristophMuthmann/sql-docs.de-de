@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2ab8cb4066a8c5c7ab2e31401dd1e80d003d5b38
@@ -33,3 +34,4 @@ Dateibasierten Treibern werden mit Datenquellen wie z. B. dBASE verwendet, die k
  Die folgende Abbildung zeigt zwei verschiedene Konfigurationen von dateibasierten Treibern, ein, in dem die Daten lokal befinden, und der andere in der er sich befindet, auf einem Netzwerkserver für die Datei.  
   
  ![Zwei Konfigurationen der Datei &#45; basierend Treiber](../../odbc/reference/media/pr06.gif "pr06")
+

@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8e3fdaf1a063951dcb06018858a905c5ee8651e9
@@ -95,3 +96,4 @@ while ((OrderID = GetOrderID()) != 0) {
 -   [Batches von SQL-Anweisungen](../../../odbc/reference/develop-app/batches-of-sql-statements.md)  
   
 -   [Ausführen von Katalogfunktionen](../../../odbc/reference/develop-app/executing-catalog-functions.md)
+

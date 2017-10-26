@@ -22,6 +22,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8ba4e9a05f3dba74a973bf2b8b8a83a52ef78811
@@ -59,3 +60,4 @@ Ein *Anwendung* ist ein Programm, das die ODBC-API für den Datenzugriff aufruft
 -   Trennen die Datenquelle aus.  
   
  Da die meisten Datenzugriffe mit SQL ausgeführt wird, werden die primäre Aufgabe, die für die Anwendung ODBC verwenden SQL-Anweisungen zu senden und Abrufen der Ergebnisse (sofern vorhanden), das durch diese Anweisungen generiert werden. Andere Aufgaben, die für die Anwendung ODBC verwenden sind bestimmen und Treiber Funktionen anpassen und den Datenbankkatalog durchsuchen.
+

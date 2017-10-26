@@ -25,6 +25,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 19f505751d63f07dbd5eb2d1d53b9c191307e9b2
@@ -57,3 +58,4 @@ Datentypen sind gekennzeichnet durch ihre Größe Spalte (oder Parameter), Dezim
 -   [Dezimalstellen](../../../odbc/reference/appendixes/decimal-digits.md)  
 -   [Oktettlänge übertragen](../../../odbc/reference/appendixes/transfer-octet-length.md)  
 -   [Die Anzeigegröße](../../../odbc/reference/appendixes/display-size.md)
+

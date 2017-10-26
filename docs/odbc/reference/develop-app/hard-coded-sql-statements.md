@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 60f0ad180a334c1d4ad08f49057bb5598df22f59
@@ -134,3 +135,4 @@ while (GetNewValues(&PartID, Desc, &Price))
 ```  
   
  Weitere Informationen zu Parametern, vorbereitete Anweisungen und Prozeduren finden Sie unter [Ausführen einer Anweisung](../../../odbc/reference/develop-app/executing-a-statement.md).
+

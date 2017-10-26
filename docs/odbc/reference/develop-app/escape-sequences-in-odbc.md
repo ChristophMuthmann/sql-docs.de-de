@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 92fd9745bccacad3d7487c3ed9f1bee58eeb4411
@@ -71,3 +72,4 @@ Eine Anzahl von Funktionen der Programmiersprache, z. B. äußere Joins und Aufr
 -   [Äußere Joins](../../../odbc/reference/develop-app/outer-joins.md)  
   
 -   [Prozeduraufrufe](../../../odbc/reference/develop-app/procedure-calls.md)
+

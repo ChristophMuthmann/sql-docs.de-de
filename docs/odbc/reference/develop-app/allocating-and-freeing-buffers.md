@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 73689fb95eb9b51e7f5f16b10c43256ef63f8dd2
@@ -94,3 +95,4 @@ void BindAColumn(SQLHSTMT hstmt)  // WARNING! This function won't work!
    // ValuePtr is freed when BindAColumn exits.  
 }  
 ```
+

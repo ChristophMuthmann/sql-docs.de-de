@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1bd84a225c94c4141cb9c7f6a897731926384ea6
@@ -38,3 +39,4 @@ Dieser Abschnitt beschreibt die Syntax der Setup-Treiber-DLL-API besteht aus zwe
 -   [ConfigDSN-Funktion](../../../odbc/reference/syntax/configdsn-function.md)  
   
 -   [ConfigTranslator-Funktion](../../../odbc/reference/syntax/configtranslator-function.md)
+

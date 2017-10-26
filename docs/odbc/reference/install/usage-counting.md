@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0f9db5a35b8b0bb3dc437dd203267c6f53825e22
@@ -73,3 +74,4 @@ ms.lasthandoff: 09/09/2017
 C:\WINDOWS\SYSTEM32\INFRMX32.DLL : REG_DWORD : 0x2  
 C:\WINDOWS\SYSTEM32\INFRMX32.HLP : REG_DWORD : 0x2  
 ```
+

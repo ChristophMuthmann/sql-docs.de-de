@@ -22,6 +22,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9e1624febc9b53c654c1b01f5aafb601b97b3cbf
@@ -46,3 +47,4 @@ DSN={MyDataSourceName};UID={MyUserID};PWD={MyServerPassword};UIDDBMS={MyDBMSUser
  Schlüsselwort-Wert-Paare in **SQLDriverConnect** müssen bestimmte Syntaxregeln entsprechen. Die Schlüsselwörter und deren Werte dürfen nicht die **[] {} (),? \*=! @** Zeichen. Der Wert, der die **DSN** -Schlüsselwort darf nicht ausschließlich aus Leerzeichen bestehen und darf keine führende Leerzeichen enthalten. Aufgrund der Grammatik Registrierung Schlüsselwörter und Namen von Datenquellen können nicht den umgekehrten Schrägstrich enthalten (\\) Zeichen. Leerzeichen sind nach dem Gleichheitszeichen im Schlüsselwort-Wert-Paar nicht zulässig.  
   
  Die **FILEDSN** -Schlüsselwort kann verwendet werden, in einem Aufruf von **SQLDriverConnect** an den Namen einer Datei, die Informationen zur Datenquelle enthält (finden Sie unter [Herstellen einer Verbindung mithilfe von Dateidatenquellen](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)weiter unten in diesem Abschnitt). Die **SAVEFILE** -Schlüsselwort können Sie den Namen des DSN-Datei angeben, in dem die Schlüsselwort-Wert-Paare für eine erfolgreiche Verbindung verwendet werden, durch den Aufruf von **SQLDriverConnect** gespeichert werden sollen. Weitere Informationen zu Datenquellen finden Sie unter der [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) funktionsbeschreibung.
+

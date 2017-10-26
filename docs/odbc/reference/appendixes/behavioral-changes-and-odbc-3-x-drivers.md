@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a5bd1ce6560e8c93d22cac8f99f2eee53be1b953
@@ -52,3 +53,4 @@ Das Attribut der Umgebung überprüfen, ob SQL_ATTR_ODBC_VERSION an den Treiber 
 -   [Durch Aufrufen von SQLSetPos zum Einfügen von Daten](../../../odbc/reference/appendixes/calling-sqlsetpos-to-insert-data.md)  
   
 -   [Laden nach Ordnungszahl](../../../odbc/reference/appendixes/loading-by-ordinal.md)
+

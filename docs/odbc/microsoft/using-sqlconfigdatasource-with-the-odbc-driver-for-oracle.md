@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aa32db53ef43da7f01200dcf057f9855a4f5707e
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/09/2017
 |TranslationOption|33|""|EINE/N|Translation-Option.|  
 |TxnCap|2|""|EINE/N|Die Transaktion kann. Bei 0, gibt der Treiber an, dass Transaktionen nicht unterstützt wird. Bei 1, meldet der Treiber an, dass es sich bei der Durchführung von Transaktionen kann.|  
 |UID|30|""|EINE/N|Name des Benutzers.|
+

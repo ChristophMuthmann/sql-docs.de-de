@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f9265657327f71e41c124707ab66c8ad621bda55
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
 |Treiber|Schlüsselwörter, die erforderlich sind|Beispiel|  
 |------------|-----------------------|-------------|  
 |Paradox|DriverID-Treiber|Driver = {Microsoft Paradox-Treiber (*.DB)}; DBQ = "c:\Temp"; DriverID = 26|
+

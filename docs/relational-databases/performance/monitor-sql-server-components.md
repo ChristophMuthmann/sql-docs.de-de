@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c3d789288a8963a1f80bc560ab9e80fe5339d29b
@@ -141,3 +142,4 @@ ms.lasthandoff: 08/03/2017
      Die Wiedergabe von Ereignissen ermöglicht das Erstellen einer Testkopie der Datenbankumgebung, von der die Daten aufgezeichnet wurden, und dann das Wiederholen der aufgezeichneten Ereignisse, so wie sie im echten System ursprünglich aufgetreten sind. Diese Funktion ist nur mit dem Distributed Replay Utility oder [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]verfügbar. Sie können die Ereignisse mit der Geschwindigkeit des ursprünglichen Auftretens oder so schnell wie möglich (um das System zu belasten) oder, wie in den meisten Fällen, schrittweise wiedergeben, wodurch das System nach jedem Ereignis analysiert werden kann. Durch das Analysieren der Ergebnisse in einer Testumgebung können Sie Schäden im Produktionssystem verhindern. Weitere Informationen finden Sie unter [Wiedergeben von Ablaufverfolgungen](../../tools/sql-server-profiler/replay-traces.md).  
   
   
+

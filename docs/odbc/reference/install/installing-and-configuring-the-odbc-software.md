@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fe98dc96cfae31ff281426cd097237fbff87d55e
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
 -   [Registrierungseinträge für ODBC-Komponenten](../../../odbc/reference/install/registry-entries-for-odbc-components.md)  
   
 -   [Registrierungseinträge für Datenquellen](../../../odbc/reference/install/registry-entries-for-data-sources.md)
+

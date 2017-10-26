@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 725d16d6326d5fb99ce8d923bd35c64351b3e6cb
@@ -154,3 +155,4 @@ Dieses Thema erläutert SQLSTATE-Werten für ODBC 3. *x*. Weitere Informationen 
 |IM013|Fehler in der Ablaufverfolgungsdatei|Alle ODBC-Funktionen.|  
 |IM014|Ungültiger Name der Datei-DSN|**SQLDriverConnect**|  
 |IM015|Beschädigte Datei als Datenquelle|**SQLDriverConnect**|
+

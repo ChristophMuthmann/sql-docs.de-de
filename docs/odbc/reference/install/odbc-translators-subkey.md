@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dfc34daa6236fa7187c27a204ee16cc47a0de7b0
@@ -40,3 +41,4 @@ Die Werte unter dem Unterschlüssel ODBC Konvertierer Liste der installierten Ü
 MS Code Page Translator: REG_SZ : Installed  
 ASCII to EBCDIC: REG_SZ : Installed.  
 ```
+

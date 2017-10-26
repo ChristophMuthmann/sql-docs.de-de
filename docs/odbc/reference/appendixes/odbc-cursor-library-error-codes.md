@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 308ad8ed54aacb9ab7bc169efd9dad020e2f2b66
@@ -58,3 +59,4 @@ ms.lasthandoff: 09/09/2017
 |SL012|Anweisung Bindungen darf nicht geändert werden, während ein Cursor geöffnet ist.|**SQLBindCol**<br /><br /> **SQLFreeHandle**<br /><br /> **SQLFreeStmt**<br /><br /> **SQLSetStmtAttr**|  
 |SL014|Eine positionierte Anforderung ausgestellt wurde, und nicht alle Spaltenfelder Anzahl wurden gepuffert.|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLPrepare**|  
 |SL015|**SQLFetch** und **SQLFetchScroll** kann nicht kombiniert werden.|**SQLExtendedFetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**|
+

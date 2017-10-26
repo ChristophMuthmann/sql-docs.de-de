@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7ec39eba53bc05e45fc9fcf1a14476a0d12ed40a
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
 |PROCEDURE_OWNER|NULL|  
 |PROCEDURE_NAME|Nicht durch Trennzeichen getrennten Prozedurnamen|  
 |PROCEDURE_TYPE|SQL_PT_PROCEDURE|
+

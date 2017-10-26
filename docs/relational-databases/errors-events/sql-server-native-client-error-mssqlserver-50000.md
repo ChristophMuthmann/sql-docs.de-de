@@ -16,6 +16,7 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f872d7d0a2495e747ae0b3d63997f7270c585c53
@@ -47,3 +48,4 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="internal-only"></a>Nur intern  
   
+

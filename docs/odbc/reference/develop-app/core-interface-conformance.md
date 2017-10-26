@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c535d6756ba2fa5eaa20d6dec9ca3ad7ae3c85b4
@@ -72,3 +73,4 @@ Alle ODBC-Treiber müssen mindestens ein Hauptebenen-aufweisen Schnittstelle-Kon
   
     > [!IMPORTANT]  
     >  ODBC-Treiber müssen die Funktionen in der Konformitätsgrad des Core-Schnittstelle implementieren.
+

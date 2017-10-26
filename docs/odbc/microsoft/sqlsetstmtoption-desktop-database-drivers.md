@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8d1f51805413056a06c6cee769920e1ad878abe5
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_QUERY_TIMEOUT|Wird nicht unterstützt.|  
 |SQL_ROW_NUMBER|Wird nicht unterstützt.|  
 |SQL_SIMULATE_CURSOR|Wird nicht unterstützt.|
+

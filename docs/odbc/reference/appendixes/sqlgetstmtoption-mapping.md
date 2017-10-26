@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 503af3ea0dbac61cee506b932f79eccab5dedcf8
@@ -58,3 +59,4 @@ SQLGetStmtOption(hstmt, fOption, pvParam)
  Die SQL_GET_BOOKMARK Option-Anweisung ist in ODBC 3. veraltet*.x*. Für eine ODBC 3.*.x* Treiber zum Arbeiten mit ODBC 2..* X* Anwendungen, SQL_GET_BOOKMARK, muss er SQL_GET_BOOKMARK unterstützen. Für eine ODBC 3.*.x* Treiber zum Arbeiten mit ODBC 2..* X* Anwendungen müssen entdeckt SQL_USE_BOOKMARKS auf SQL_UB_ON festlegen und sollte fester Länge Lesezeichen verfügt. Wenn eine ODBC 3.*.x* -Treiber unterstützt nur variabler Länge, Lesezeichen, Lesezeichen nicht fester Länge, sie muss SQLSTATE HYC00 zurückgeben (optionales Feature nicht implementiert) Wenn einer ODBC 2..* X* Anwendung versucht, SQL_UB_ON SQL_USE_BOOKMARKS fest.  
   
  Für eine ODBC 3.*.x* Treiber, der Treiber-Manager nicht mehr überprüft, ob *Option* zwischen SQL_STMT_OPT_MIN und SQL_STMT_OPT_MAX ist, oder SQL_CONNECT_OPT_DRVR_START größer ist. Der Treiber muss diese Option aktivieren.
+

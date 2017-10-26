@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 049208450144fdd1c1d3b902093517627486ccf9
@@ -80,3 +81,4 @@ Die folgende Tabelle gibt an, dem Konformitätsgrad des einzelnen ODBC deskripto
  [1] Unterstützung für diese Datensatzfelder ist erforderlich, nur, wenn der Treiber die entsprechenden Datentypen unterstützt.  
   
  [2] ' für Hauptebenen-Konformität muss der Treiber SQL_PARAM_INPUT unterstützen. Für Ebene-2-Schnittstelle Konformität muss der Treiber auch SQL_PARAM_INPUT_OUTPUT und SQL_PARAM_OUTPUT unterstützen.
+

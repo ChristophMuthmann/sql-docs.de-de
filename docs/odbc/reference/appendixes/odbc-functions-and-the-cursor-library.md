@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6405c2a0890b9a5b43c420960f1b823b39ad9e60
@@ -78,3 +79,4 @@ ms.lasthandoff: 09/09/2017
 -   [SQLSetScrollOptions (Cursor Library)](../../../odbc/reference/appendixes/sqlsetscrolloptions-cursor-library.md)  
   
 -   [SQLSetStmtAttr (Cursor Library)](../../../odbc/reference/appendixes/sqlsetstmtattr-cursor-library.md)
+

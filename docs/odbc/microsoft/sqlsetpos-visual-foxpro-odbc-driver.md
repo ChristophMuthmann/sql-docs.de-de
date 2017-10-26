@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d255f3c1eac9b46548f10c5c4ef3bf2bc31cafbe
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Legt die Cursorposition in einem Rowset. Sie können **SQLSetPos** mit [SQLGetData](../../odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md) zum Abrufen von Zeilen aus ungebundene Spalten nach dem Positionieren des Cursors an einer bestimmten Zeile im Rowset.  
   
  Weitere Informationen finden Sie unter [SQLSetPos](../../odbc/reference/syntax/sqlsetpos-function.md) in der *ODBC Programmer's Reference*.
+

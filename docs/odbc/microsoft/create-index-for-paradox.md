@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 058677892aa1a3266b1cd93a5ff015ed0a14bcb9
@@ -77,3 +78,4 @@ CREATE INDEX PartNum
   
 > [!NOTE]  
 >  Wenn Sie Paradox Treiber verwenden, ohne die Implementierung von Borland Database Engine, nur lesen und Anfügen sind Anweisungen zulässig.
+

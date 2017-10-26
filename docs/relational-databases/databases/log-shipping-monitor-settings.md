@@ -16,6 +16,7 @@ caps.latest.revision: 17
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e93dde0e413ab7f7303d0f8404cdc4311edf8aa7
@@ -57,3 +58,4 @@ ms.lasthandoff: 06/22/2017
  Hält den vom SQL Server-Agent bereitgestellten Warnungsauftrag an.  
   
   
+

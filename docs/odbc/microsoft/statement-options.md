@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8e73ba4a1fe0bd8a7fb65b8986745f9d2edee550
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_ROW_NUMBER|Gibt eine 32-Bit-Ganzzahl, die die Position der aktuellen Zeile im Resultset angeben. Nur abgerufen werden. kann nicht festgelegt.|  
 |SQL_ROWSET_SIZE SETZEN|4.294.967.296 Zeilen darf nicht überschreiten; Allerdings benötigen Sie genügend virtuellen Arbeitsspeicher auf dem Computer, um Ihre Anforderung zu verarbeiten.|  
 |SQL_USE_BOOKMARKS|Unterstützt das Festlegen von SQL_USE_BOOKMARKS zu SQL_UB_ON und fester Länge Lesezeichen macht.|
+

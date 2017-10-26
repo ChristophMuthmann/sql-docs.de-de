@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d158cf38e5755e0e443d6cb47e4053bd05d45287
@@ -53,3 +54,4 @@ Um Visual FoxPro-Daten aus Ihrer Anwendung zuzugreifen, müssen Sie eine Datenqu
      Der neue Name der Datenquelle wird in der Liste der Datenquellen für Benutzer in der Registerkarte "Benutzer-DSN" im Dialogfeld ODBC-Datenquellen-Administrator angezeigt.  
   
 6.  Klicken Sie auf OK, um die neue Datenquelle zu speichern und schließen das Dialogfeld ODBC-Datenquellen-Administrator.
+

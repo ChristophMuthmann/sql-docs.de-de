@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b90eb16246f4eba3eebaf5d33239ccdf2b201878
@@ -36,3 +37,4 @@ Deskriptoren sind entweder implizit oder explizit reserviert wie in den folgende
 -   [Automatische Auffüllung der die IPD](../../../odbc/reference/develop-app/automatic-population-of-the-ipd.md)  
   
 -   [Freigeben von Deskriptoren](../../../odbc/reference/develop-app/freeing-descriptors.md)
+

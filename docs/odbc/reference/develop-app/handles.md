@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 05788f48f4a3fdb695fc3064023e52c2a3750c2e
@@ -96,3 +97,4 @@ SQLCloseCursor(hstmtOrder);
 -   [Deskriptorhandles](../../../odbc/reference/develop-app/descriptor-handles.md)  
   
 -   [Statusübergänge](../../../odbc/reference/develop-app/state-transitions.md)
+

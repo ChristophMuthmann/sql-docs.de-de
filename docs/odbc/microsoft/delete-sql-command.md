@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8effde0f80a219f11af460bdc941a9b6d9681455
@@ -57,3 +58,4 @@ DELETE FROM [DatabaseName!]TableName
   
 ## <a name="see-also"></a>Siehe auch  
  [SET DELETED-Befehl](../../odbc/microsoft/set-deleted-command.md)
+

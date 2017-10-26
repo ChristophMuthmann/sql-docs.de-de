@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e449fd186255d508724754b2038b8f2233d6300e
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Ordnet einen Puffer mit einer parametermarkierung in einer SQL­Anweisung. Der Visual FoxPro-ODBC-Treiber unterstützt Eingabeparameter entsprechend den Angaben von der *fParamType* Argument.  
   
  Weitere Informationen finden Sie unter [SQLBindParameter](../../odbc/reference/syntax/sqlbindparameter-function.md) in der *ODBC Programmer's Reference*.
+

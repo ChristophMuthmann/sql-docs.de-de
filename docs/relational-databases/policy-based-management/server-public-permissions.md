@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9ecb6741fae401bd5366e1bf5effdb5bbf0bd969
@@ -36,3 +37,4 @@ ms.lasthandoff: 06/22/2017
  [Sichern von SQL Server](../../relational-databases/security/securing-sql-server.md)  
   
   
+

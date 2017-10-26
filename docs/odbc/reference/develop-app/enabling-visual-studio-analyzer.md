@@ -16,6 +16,7 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 85007fd6365312db8da6f408dfc5b5332ceea239
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
  Dieser Abschnitt enthält das folgende Thema.  
   
 -   [Von der ODBC-Treiber-Manager generierte Ereignisse](../../../odbc/reference/develop-app/events-generated-by-the-odbc-driver-manager.md)
+

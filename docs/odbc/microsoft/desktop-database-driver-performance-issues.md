@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a1bcedc8266132bf617fe35e78d3a73de10f7876
@@ -36,3 +37,4 @@ Um Kompatibilität mit vorhandenen ANSI-Anwendungen zu gewährleisten, werden di
  Wenn eine Anwendung mithilfe einer Jet 3.5-Datenbank über den Microsoft ODBC-Desktop-Datenbank-Treiber, Version 4.0 aktualisiert wird, können einer Verringerung der Leistung und eine höhere Größe des Workingsets auftreten. Grund hierfür ist, wenn eine Version 3. *x* Datenbank geöffnet wird, verwenden die neue Version 4.0-Treiber, lädt er Jet 4.0. Wenn Jet 4.0 wird die Datenbank geöffnet und angezeigt werden, ist die Datenbank eine 3. *x* Version, lädt es installierbare ISAM-Treiber, die auf das Laden des 3.5 Jet-Moduls entspricht. So entfernen Sie die Leistung und Größe-Nachteil der Jet-3. *x* Datenbank in eine Datenbank der Jet 4.0-Format komprimiert werden soll. Dies vermeiden, Laden zwei Jet-Module und Minimieren der Codepfad, auf die Daten.  
   
  Darüber hinaus ist das Jet 4.0-Modul ein Unicode-Modul. Alle Zeichenfolgen gespeichert und bearbeitet, die im Unicode-Format. Wenn eine ANSI-Anwendung eine Jet-3 zugreift. *x* Datenbank durch das Jet 4.0-Modul die Daten wird von ANSI in Unicode und zurück zu ANSI konvertiert. Wenn die Datenbank in das Versionsformat 4.0 aktualisiert wird, werden die Zeichenfolgen in Unicode, entfernen eine Ebene der zeichenfolgenkonvertierung sowie zum Minimieren der Codepfad, auf die Daten durch das Ergebnis nur ein Jet-Datenbankmodul konvertiert.
+

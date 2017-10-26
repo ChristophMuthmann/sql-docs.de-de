@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7cbd7ca159b09ee1482139ef76bfff48115a62bd
@@ -38,3 +39,4 @@ Ein keysetgesteuerter Cursor liegt zwischen statischen und einen dynamischen Cur
  Keysetgesteuerte Cursor werden häufig implementiert, durch das Erstellen einer temporären Tabelle, die die Schlüssel für jede Zeile im Resultset enthält. Da sich der Cursor auch bestimmen muss, ob Zeilen aktualisiert wurden, enthält diese Tabelle häufig auch eine Spalte mit zeilenversionsverwaltungs-Informationen.  
   
  Um über die ursprünglichen Resultset zu blättern, öffnet der keysetgesteuerte Cursor einen statischen Cursor über die temporäre Tabelle. Zum Abrufen einer Zeile im ursprünglichen Resultset des Cursors ruft zunächst den entsprechenden Schlüssel aus der temporären Tabelle und ruft dann die aktuellen Werte für die Zeile ab. Blockcursor verwendet werden, muss der Cursor mehrere Schlüssel und Zeilen abgerufen werden.
+

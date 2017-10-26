@@ -20,6 +20,7 @@ caps.latest.revision: 34
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: deef18b1b37375e659dd0412dd7b69f10b8a3bdf
@@ -48,3 +49,4 @@ ms.lasthandoff: 06/22/2017
  [Synchronisieren von Daten](../../relational-databases/replication/synchronize-data.md)  
   
   
+

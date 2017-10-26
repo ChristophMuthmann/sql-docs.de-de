@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7f757a0609490c280e2d6acb3679059e7f56dace
@@ -31,3 +32,4 @@ Abhängige Namen werden vollständig unterstützt, einschließlich der in der Li
 SELECT * FROM Emp E1   
 WHERE E1.LastName = 'Smith'  
 ```
+

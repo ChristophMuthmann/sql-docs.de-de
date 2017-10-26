@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 587acf7ca97d0bce03609b42f6188aa97bd595b3
@@ -56,3 +57,4 @@ Um den Wert eines Parameters festlegen, legt die Anwendung einfach den Wert der 
  [d] Treiber müssen immer überprüfen Sie diesen Wert, um festzustellen, ob er einen Spezialwert, z. B. SQL_NULL_DATA ist.  
   
  Leistungsumfang der Treiber mit einem Parameterwert zum Zeitpunkt der Ausführung hängt vom Treiber. Bei Bedarf konvertiert der Treiber den Wert aus der C-Data Type und Byte der Länge der gebundenen Variablen in der SQL-Datentyp, Genauigkeit und Dezimalstellen des Parameters an. In den meisten Fällen sendet der Treiber klicken Sie dann den Wert an die Datenquelle. In einigen Fällen den Wert als Text formatiert und fügt sie in der SQL-Anweisung vor dem Senden der Anweisung an die Datenquelle.
+

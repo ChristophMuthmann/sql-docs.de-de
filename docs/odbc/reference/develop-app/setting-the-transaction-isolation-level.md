@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d91c7789fbcd0c4dc197f2da13b23c1da34666bb
@@ -37,3 +38,4 @@ Um die Isolationsebene der Transaktion festgelegt, verwendet eine Anwendung das 
 -   Wenn die Geschwindigkeit ist wichtiger ist als die Genauigkeit und ggf. aufgetretenen Fehlern wahrscheinlich klein sind. Nehmen wir beispielsweise an, dass ein Unternehmen viele kleine Verkäufe macht und große Sales selten sind. Eine Transaktion, die den Gesamtwert der Verkäufe aller geöffneten schätzt kann problemlos mit Read Uncommitted-Isolationsstufe verwenden. Obwohl die Transaktion Aufträge enthält, die geöffnet oder geschlossen und anschließend werden Rollback, würden diese miteinander im Allgemeinen Abbrechen und Transaktion würde viel schneller werden, da er nicht blockiert wird, jedes Mal, wenn diese It solche eine Bestellung auftritt.  
   
  Weitere Informationen finden Sie unter [vollständige Parallelität](../../../odbc/reference/develop-app/optimistic-concurrency.md).
+

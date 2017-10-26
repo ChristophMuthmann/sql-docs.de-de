@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 279b6a3c1f8eb2f1eea5bba35ee10f0a6643fb49
@@ -32,3 +33,4 @@ Wenn eine ODBC 3.*.x* Treiber sollte mit einer ODBC 2. funktionieren.* X* -Anwen
 -   SQL_UB_ON als Wert für die SQL_USE_BOOKMARKS-Option-Anweisung. (SQL_UB_ON veraltetes Feature in ODBC 3.*.x*.)  
   
 -   Die Option für den SQL_GET_BOOKMARK-Anweisung.
+

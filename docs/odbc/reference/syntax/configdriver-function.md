@@ -23,6 +23,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 037d4ffcbe7d81c6e4a9c1a524f5f4977621f277
@@ -102,3 +103,4 @@ BOOL ConfigDriver(
   
 ### <a name="messages"></a>Meldungen  
  Eine Treiber-Setup-Routine eine Textnachricht senden kann, zu einer Anwendung als eine Null-terminierte Zeichenfolge in der *LpszMsg* Puffer. Die Nachricht wird abgeschnitten und *CbMsgMax* minus der Null-Abschlusszeichen von der **ConfigDriver** funktioniert, wenn er größer als oder gleich ist *CbMsgMax* Zeichen.
+

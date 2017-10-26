@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e0481be69797c1050b901c54b3ffde023bfdfb1a
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Eine Verbindung mit einer Datenquelle, die kann entweder ein [Datenbank](../../odbc/microsoft/visual-foxpro-terminology.md) oder in einem Verzeichnis [Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md). Der Visual FoxPro-ODBC-Treiber ignoriert die *SzUID*, *CbUID*, *SzAuthStr*, und *CbAuthStr* Argumente.  
   
  Weitere Informationen finden Sie unter [SQLConnect](../../odbc/reference/syntax/sqlconnect-function.md) in der *ODBC Programmer's Reference*.
+

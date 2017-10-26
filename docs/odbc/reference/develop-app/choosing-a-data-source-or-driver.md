@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9f7263f7814e4ab286d1fd678604b3f84a45108f
@@ -46,3 +47,4 @@ Die Datenquelle oder von einer Anwendung verwendeten Treiber ist in einigen Fäl
 -   **Beim Zugriff auf ein bestimmtes DBMS ein einziges Mal.** Angenommen, eine Tabelle, die Daten abruft, durch Aufrufen von ODBC-Funktionen enthält die **Treiber** Schlüsselwort, um einen bestimmten Treiber zu identifizieren. Da der Treibername für alle Benutzer sinnvoll, die diesen Treiber haben ist, kann das Arbeitsblatt für diesen Benutzer übergeben werden. Wenn das Arbeitsblatt einen Datenquellennamen enthalten, müssten jeden Benutzer erstellen Sie die gleiche Datenquelle, um das Arbeitsblatt zu verwenden.  
   
 -   **Durchsuchen das System für alle Datenbanken auf einen bestimmten Treiber zugegriffen werden kann.** Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SQLBrowseConnect](../../../odbc/reference/develop-app/connecting-with-sqlbrowseconnect.md)weiter unten in diesem Abschnitt.
+

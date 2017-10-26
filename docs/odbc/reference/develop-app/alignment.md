@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 412c04f8181997738bac1fc7b457c9ec0c3efcde
@@ -51,3 +52,4 @@ Die, die in einer ODBC-Anwendung Ausrichtungsprobleme unterscheiden sich in der 
  ![Bindung nach größten Ausrichtungsgrenzen](../../../odbc/reference/develop-app/media/pr26.gif "pr26")  
   
  Obwohl diese Lösung größere Löcher verlässt, wird der Code für die Implementierung relativ einfach und schnell. In den meisten Fällen UTC-offsets dies den Nachteil, nicht verwendeten Arbeitsspeicher bezahlt. Ein Beispiel, das diese Methode verwendet, finden Sie unter [SQLBindCol verwenden](../../../odbc/reference/develop-app/using-sqlbindcol.md).
+

@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f6876496d243cefd2f3d6b7eb0cd5480bf225189
@@ -38,3 +39,4 @@ Die folgende Tabelle zeigt die Desktop-Datenbanktreiber Versionsverlauf.
   
 > [!NOTE]  
 >  Die Treiber version3.5 wurden ODBC2 portzuweisung entworfen. *x*. Obwohl sie auch mit ODBC 3.0 zu arbeiten, unterstützt sie nicht alle ODBC 3.0-Funktionen. Weitere Informationen über die Funktionsweise von diese Treiber mit ODBC 3.0 finden Sie unter [Abwärtskompatibilität und zur Einhaltung von Standards](../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).
+

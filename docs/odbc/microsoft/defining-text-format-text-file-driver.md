@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ed4eb087a11db45f2e3841b6e65824f1076d3693
@@ -48,3 +49,4 @@ Wenn der Text-Treiber verwendet wird, können Sie die **Textformat definieren** 
 |**Zu scannende Zeilen**|Die Anzahl der Zeilen, die von Setup oder der Treiber überprüft werden, wenn Sie die Spalten und Spaltendatentypen basierend auf vorhandenen Daten festlegen.<br /><br /> Sie können eine Zahl zwischen 1 und 32767 für die Anzahl der Zeilen eingeben. Wird standardmäßig auf 25, wenn das Format des ausgewählten Elements in der **Tabellen** Liste wurde von diesem Dialogfeld nicht zuvor definiert. (Eine Zahl außerhalb der Grenzwert wird einen Fehler zurückgegeben.)|  
 |**Tabellen**|Enthält eine Liste aller Dateien im Verzeichnis ausgewählt, die der **Text Setup** (Dialogfeld), die die Liste der Erweiterungen, die angegebene entsprechen.<br /><br /> Wenn \<Standardwert > aktiviert ist, und eine der folgenden ist "true" werden die Werte der Attribute für die Tabelle in der **Tabellen** Gruppe Schema.ini (es sind keine weiteren Einträge in "Schema.ini" berührt) geschrieben werden:<br /><br /> – Es gibt keine Schema.ini im angegebenen Verzeichnis.<br />-Die Schema.ini-Datei vorhanden ist, aber es gibt keine im Schema.ini eines Text-Dateien (mit der angegebenen Erweiterung) in das Verzeichnis.<br />-Abschnitt für eine Textdatei, die in "Schema.ini" vorhanden ist, aber der Nachrichtentext leer ist.<br /><br /> Wenn \<Standardwert > aktiviert ist, die **Spalten** Gruppe ist deaktiviert.|  
 |**Breite**|Die Breite der Spalte kann für CHAR "oder" LONGCHAR Spalten geändert werden. Die Breite wird standardmäßig auf 1, wenn das Format des ausgewählten Elements in der **Tabellen** Liste wurde von diesem Dialogfeld nicht zuvor definiert.<br /><br /> Für andere Datentypen Steuern der Breite ist deaktiviert und wird kein Wert angezeigt.|
+

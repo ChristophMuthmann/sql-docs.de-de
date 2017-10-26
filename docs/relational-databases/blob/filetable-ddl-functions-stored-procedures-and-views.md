@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0ecd91dd0c4a5b08381c68c42207ee906afb0606
@@ -73,3 +74,4 @@ ms.lasthandoff: 06/22/2017
  [Verwalten von FileTables](../../relational-databases/blob/manage-filetables.md)  
   
   
+

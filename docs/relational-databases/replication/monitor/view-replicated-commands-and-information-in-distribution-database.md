@@ -21,6 +21,7 @@ caps.latest.revision: 31
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e6f3bc834b6381285ba48dcbfdb3f12b9df3d6a9
@@ -45,3 +46,4 @@ ms.lasthandoff: 06/22/2017
  [Programmgesteuertes Überwachen der Replikation](../../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   
+

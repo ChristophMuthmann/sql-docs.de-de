@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1e5cabca53c503e2cd0c12147248b11da84ed157
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  Wenn die Cursorbibliothek mit einer ODBC 2. verwendet wird. *x* -Treiber verwenden, eine Bindung mit dem offset (gemäß der SQL_ATTR_ROW_BIND_OFFSET_PTR-Anweisungsattribut) wird nicht verwendet, wenn **SQLFetch** aufgerufen wird.  
   
  Eine Anwendung kann nicht aufgerufen, wenn die Cursorbibliothek geladen ist, **SQLFetch** Lesezeichenspalten abgerufen. Die Cursorbibliothek übergibt den Aufruf von **SQLFetch** über den Treiber, aber die Funktion aufruft, zum Aktivieren von Lesezeichen und binden die Lesezeichenspalte abgefangen werden durch die Cursorbibliothek.
+

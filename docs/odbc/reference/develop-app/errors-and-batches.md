@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e793309d25bb81eb4b65129f65276ab9ea9091ff
@@ -39,3 +40,4 @@ Tritt ein Fehler während der Ausführung eines Batches von SQL-Anweisungen, ein
 -   Alle Anweisungen mit Ausnahme der Error-Anweisung ausgeführt werden.  
   
  In den ersten beiden Fällen **SQLExecute** und **SQLExecDirect** SQL_ERROR zurück. In den letzten beiden Fällen können sie SQL_SUCCESS_WITH_INFO oder SQL_SUCCESS, je nach Implementierung zurückgeben. In allen Fällen weitere Fehlerinformationen abgerufen werden mit **SQLGetDiagField**, **SQLGetDiagRec**, oder **SQLError**. Die Art und Tiefe der diese Informationen sind jedoch Daten datenquellenspezifischen. Darüber hinaus sind diese Informationen wahrscheinlich nicht genau die Anweisung im Fehler zu identifizieren.
+

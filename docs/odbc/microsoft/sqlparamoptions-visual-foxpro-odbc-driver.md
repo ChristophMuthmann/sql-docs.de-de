@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 17a82974d8531d0524f4bac89701d6c97a05198d
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Ermöglicht es einer Anwendung mehrere Werte für den Satz von Parametern, die vom zugewiesen an [SQLBindParameter](../../odbc/microsoft/sqlbindparameter-visual-foxpro-odbc-driver.md). Die Möglichkeit, mehrere Werte für einen Satz von Parametern anzugeben, eignet sich für masseneinfügungen und andere arbeiten, die erfordert die Datenquelle die gleiche SQL-Anweisung mehrmals mit verschiedenen Parameterwerten zu verarbeiten. Eine Anwendung kann z. B. drei Sätze von Werten für den Satz von Parametern für angeben einer **einfügen** Anweisung und führen Sie dann die **einfügen** insert-Anweisung einmal die drei ausgeführt DDL-Vorgänge.  
   
  Weitere Informationen finden Sie unter [SQLParamOptions](../../odbc/reference/syntax/sqlparamoptions-function.md) in der *ODBC Programmer's Reference*.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cf87c74d4b2667daa032e814bae3655b83a46c31
@@ -86,3 +87,4 @@ SQLFetch(hstmt);
 days = is.intval.day_second.day;  
 hours = is.intval.day_second.hour;  
 ```
+

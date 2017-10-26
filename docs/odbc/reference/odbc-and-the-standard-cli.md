@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 068750e91f59a20976113277ad8871723d045acd
@@ -83,3 +84,4 @@ ODBC richtet die folgenden Spezifikationen und Standards, die mit der Call-Level
 -   Unterstützung für gespeicherte Prozeduren,-Escapesequenzen, einschließlich Parameterbindungsmechanismen ausgeben und Katalogfunktionen  
   
 -   Verbindungs-Erweiterungen, einschließlich der Unterstützung für-Verbindungsattributen und das Attribut durchsuchen
+

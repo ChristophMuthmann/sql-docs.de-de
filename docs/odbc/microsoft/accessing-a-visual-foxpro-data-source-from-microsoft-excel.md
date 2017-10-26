@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 085ab9bd928d7a25bd5d9e1d75f3355bdad0fd8e
@@ -52,3 +53,4 @@ Wenn Sie Microsoft Query installiert haben, können Sie eine Datenquelle in Micr
 8.  Klicken Sie auf.  
   
  Sie können nun das Öffnen der Abfrage Tabellen hinzufügen. Weitere Informationen zum Erstellen einer Abfrage finden Sie unter [Importieren von Daten in Microsoft Excel aus einer Visual FoxPro-Datenbank](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md).
+

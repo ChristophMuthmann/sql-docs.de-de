@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: efe7ea13150afe1eb9df7586df1a1a83e8f3f92f
@@ -98,3 +99,4 @@ INTERVAL[<sign>] 'value' <interval qualifier>
 |{INTERVALL "223.16" ZWEITE}<br /><br /> {INTERVALL "223" YEAR}|Da die führende Genauigkeit nicht angegeben wird, wird standardmäßig auf 2 ist zu klein für das angegebene Literal.|  
 |{INTERVALL "22.1234567" ZWEITE}|Die Genauigkeit für die Sekunden ist nicht vorgegeben, damit bis 6 abzielenden. Das Literal weist sieben Ziffern nach dem Dezimaltrennzeichen an.|  
 |{INTERVALL "163-13' YEAR(3) MONAT}<br /><br /> {INTERVALL 163 ' 65' DAY(3) STUNDE}<br /><br /> {INTERVALL "163 62:39" DAY(3) MINUTE}<br /><br /> {INTERVALL "163 12:125:59.163" DAY(3) ZU SECOND(3)}<br /><br /> {INTERVALL "163:144" HOUR(3) MINUTE}<br /><br /> {INTERVALL "163:567:234.163" HOUR(3) ZU SECOND(4)}<br /><br /> {INTERVALL "163:591.163" MINUTE(3) ZU SECOND(5)}|Das nachfolgende Feld befolgt nicht die Regeln des gregorianischen Kalenders.|
+

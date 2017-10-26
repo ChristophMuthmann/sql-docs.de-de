@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 64c6fb04fe5c5c693da4982e1c12194bc7e42f98
@@ -42,3 +43,4 @@ Die folgende Tabelle enthält wie die ODBC 3.*.x* Treibermanager ordnet Aufrufe 
 |**SQLFetchScroll**|Gibt das angegebene Rowset zurück. Im folgenden finden Details zur Implementierung:<br /><br /> – Wenn eine Anwendung ruft **SQLFetchScroll** in einer ODBC 2..* X* -Treiber verwenden, die ODBC 3.*.x* Treibermanager ordnet diesen **SQLExtendedFetch**. Er verwendet den zwischengespeicherten Wert des Attributs SQL_ATTR_ROW_STATUS_PTR-Anweisung für die *RowStatusArray* -Argument und den zwischengespeicherten Wert des Attributs SQL_ATTR_ROWS_FETCHED_PTR-Anweisung für die *RowCountPtr* Argument. Wenn die *FetchOrientation* Argument in **SQLFetchScroll** sql_fetch_bookmark auf, wird er verwendet den zwischengespeicherten Wert des Attributs SQL_ATTR_FETCH_BOOKMARK_PTR-Anweisung für die *FetchOffset * Argument und gibt einen Fehler zurück, wenn die *FetchOffset* Argument **SQLFetchScroll** ist nicht 0 ist.<br />– Wenn Sie eine Anwendung ruft Sie dies in einer ODBC 3.*.x* -Treiber verwenden, die ODBC 3.*.x* -Treiber-Manager wird den Aufruf an den Treiber übergeben.|  
 |**SQLSetPos**|Führt verschiedene positionierte Operationen. Die ODBC 3.*.x* -Treiber-Manager übergibt, Aufrufe von **SQLSetPos** an den Treiber, unabhängig von der Version des Treibers.|  
 |**SQLSetScrollOptions**|Wenn der Treiber-Manager ordnet **SQLSetScrollOptions** für eine Anwendung mit dem Arbeiten mit einer ODBC 3.*.x* Treiber, der nicht unterstützt **SQLSetScrollOptions**, den Treiber -Manager setzt die SQL_ROWSET_SIZE setzen-Anweisungsoption nicht das SQL_ATTR_ROW_ARRAY_SIZE-Anweisungsattribut, zu der *RowsetSize* Argument in **SQLSetScrollOption**. Folglich **SQLSetScrollOptions** kann nicht von einer Anwendung verwendet werden, wenn mehrere Zeilen durch einen Aufruf zum Abrufen von **SQLFetch** oder **SQLFetchScroll**. Kann verwendet werden, nur dann, wenn durch einen Aufruf an das Abrufen mehrerer Zeilen **SQLExtendedFetch**.|
+

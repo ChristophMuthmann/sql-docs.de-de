@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c409fd3fc46ce2612290737bf658dd4358280495
@@ -62,3 +63,4 @@ ms.lasthandoff: 06/22/2017
 7.  Wenn Sie fertig sind, klicken Sie auf **Speichern**.  
   
   
+

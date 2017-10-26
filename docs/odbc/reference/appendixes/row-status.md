@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8f164b8269e1150cdf7a85e486bcc3fd93a9411f
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 -   SQL_ROW_SUCCESS, wenn sie die Zeile wurde erfolgreich aus der Datenquelle mit abruft **SQLFetch**.  
   
 -   SQL_ROW_UPDATED, wenn sie eine positioniertes Update-Anweisung in der Zeile ausgeführt wird.
+

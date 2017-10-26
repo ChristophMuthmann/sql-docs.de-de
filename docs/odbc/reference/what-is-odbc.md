@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5aaa2a57f9439eb1588a30c362118af9b5355a8d
@@ -37,3 +38,4 @@ Viele Missverständnisse über ODBC, die in der IT-Welt vorhanden sein. Für den
  Es ist wichtig zu verstehen, dass ODBC entworfen wurde, verfügbar machen Datenbankfunktionen, die nicht zu ergänzen. Anwendungsentwickler sollten deshalb nicht erwarten, dass eine einfache Datenbank in ein voll funktionsfähiges relationalen Datenbankmodul mithilfe von ODBC plötzlich transformiert wird. Noch voraussichtlich Treiber Writer implementieren Funktionen, die in der zugrunde liegenden Datenbank nicht gefunden. Eine Ausnahme ist, dass Entwickler, die Treiber zu schreiben, die Daten (z. B. Daten in eine Datei Xbase) direkten Zugriff auf eine Datenbank-Engine schreiben, die mindestens Mindestfunktionalität SQL unterstützt erforderlich sind. Eine andere Ausnahme, die die ODBC-Komponente des Windows SDK, früher im Microsoft Data Access Components (MDAC) SDK enthalten ist, stellt eine Cursorbibliothek, die für Treiber bildlauffähige Cursor simuliert, die ein gewisses Maß an Funktionalität zu implementieren.  
   
  Anwendungen, die ODBC verwenden, sind für alle Funktionen datenbankübergreifende zuständig. Z. B. ODBC heterogenen joinmoduls, trotzdem nicht unbedingt eine Prozessors der verteilten Transaktion. Allerdings DBMS unabhängig sein, es dient datenbankübergreifende Tools zu erstellen.
+

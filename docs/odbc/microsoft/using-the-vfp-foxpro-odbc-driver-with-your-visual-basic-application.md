@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 37834afc7cc69e0276645d68752e66f68449fbb3
@@ -70,3 +71,4 @@ Ihr Microsoft® Visual Basic®-Anwendung kann kommunizieren mit Visual FoxPro-Da
     ```  
   
 8.  Führen Sie das Formular, und verwenden Sie das Steuerelement über die Kunden-Id-Felder aus der Visual FoxPro-TasTrade-Beispieldatenbank zu überspringen.
+

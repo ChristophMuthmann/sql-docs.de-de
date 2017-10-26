@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8f08ffe2a80f89040dc148543c2b3a3985b76eca
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Speicherplatz für eine Ergebnisspalte zugewiesen, und gibt den Typ des Ergebnisses. Wenn [SQLFetch](../../odbc/microsoft/sqlfetch-visual-foxpro-odbc-driver.md) oder [SQLExtendedFetch](../../odbc/microsoft/sqlextendedfetch-visual-foxpro-odbc-driver.md) wird aufgerufen, der Treiber die Daten für alle gebundenen Spalten an den zugewiesenen Speicherorten platziert. Finden Sie unter [SQLGetTypeInfo](../../odbc/microsoft/sqlgettypeinfo-visual-foxpro-odbc-driver.md) für die Zuordnung zwischen ODBC und der Visual FoxPro-Datentypen.  
   
  Weitere Informationen finden Sie unter [SQLBindCol](../../odbc/reference/syntax/sqlbindcol-function.md) in der *ODBC Programmer's Reference*.
+

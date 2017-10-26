@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d78b3b7ac10fae37bb35f88cefaf5983e0df09a4
@@ -35,3 +36,4 @@ WHERE OrderID = ?
  Er kann Aufrufen **SQLColumns** für das OrderID-Spalte.  
   
  Die einzige Situation, in der die Anwendung einfach die Parametermetadaten ermitteln kann, ist, wenn der Benutzer eine parametrisierte Anweisung gibt. In diesem Fall die Anwendung aufruft, **SQLPrepare** , die Anweisung vorzubereiten **SQLNumParams** bestimmt die Anzahl der Parameter, und **SQLDescribeParam** beschreiben Jeder Parameter. Wie bereits erwähnt wurde, die meisten Datenquellen keine bieten jedoch eine Möglichkeit für den Treiber Parametermetadaten, sodass ermitteln **SQLDescribeParam** wird nicht unterstützt.
+

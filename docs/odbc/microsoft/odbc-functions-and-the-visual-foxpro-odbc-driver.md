@@ -24,6 +24,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8115ca1601a2bbca54e6288f488a66525602929f
@@ -111,3 +112,4 @@ Die Themen in diesem Abschnitt enthalten eine kurze Zusammenfassung der ODBC-API
 -   'SQLProcedures'  
   
 -   SQLTablePrivileges
+

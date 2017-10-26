@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 06e496e3999904a019f481374598a9a774729ab3
@@ -31,3 +32,4 @@ Die Anwendung und die Datenquellensicht speichern Daten häufig in anderen Zeich
  Die Übersetzungsoption ist ein Wert, der nur von einer bestimmten DLL-Übersetzung interpretiert werden kann. Z. B. die Übersetzung zwischen verschiedenen Codepages DLL übersetzt, möglicherweise die Option die Nummern der Codepages verwendet werden, die Anwendung und die Datenquelle erhalten. Es ist nicht notwendig Konvertierungs-DLL auf eine Übersetzungsoption verwenden.  
   
  Nach der eine Übersetzung, die DLL angegeben wurde, wird der Treiber geladen und aufgerufen, um alle Daten, die zwischen der Anwendung und die Datenquelle übersetzt. Dies schließt alle SQL-Anweisungen und Zeichenparameter an die Datenquelle gesendet werden, und alle Zeichen Ergebnisse, Metadaten Zeichen, z. B. Spaltennamen und Fehlermeldungen aus der Datenquelle abgerufen. Verbindungsdaten ist nicht übersetzt, da der Konvertierungs-DLL nicht bis geladen wird, nachdem die Anwendung mit der Datenquelle verbunden ist.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1b149b1e9df8338b5502d57e6e7eb355b66bcc3f
@@ -38,3 +39,4 @@ Date und Datetime-Datentypen und die nachfolgende Felder von Interval-Datentypen
 -   Für die nachfolgende Sekundenfeld der Interval-Datentypen, muss der Wert im Sekundenfeld zwischen 0 und einen Anteil von 59,9 (*n*), einschließlich, in denen * n * ist die Anzahl der Ziffern in der Genauigkeit in Sekundenbruchteilen.  
   
 -   Für die nachfolgende Sekundenfeld der Datetime-Datentyp, der Wert im Sekundenfeld muss zwischen 0 und 61.9 sein (*n*) (einschließlich), wobei * n * gibt die Anzahl der "9" Ziffern und den Wert der * n * ist die Genauigkeit der Sekundenbruchteile. (Der Bereich von Sekunden kann bis zu zwei Schaltsekunden Synchronisierung siderischen Zeit beibehalten.)
+
