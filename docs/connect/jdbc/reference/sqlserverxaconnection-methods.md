@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5b6babe726a283b86bd5aae5071e12a97ebdbab5
@@ -27,3 +28,4 @@ ms.lasthandoff: 09/09/2017
   Informationen zu den Elementen von [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md), finden Sie unter [SQLServerXAConnection-Elemente](../../../connect/jdbc/reference/sqlserverxaconnection-members.md).  
   
   
+

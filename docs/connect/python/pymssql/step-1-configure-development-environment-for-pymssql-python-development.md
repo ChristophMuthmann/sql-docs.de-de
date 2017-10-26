@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0a1932b41ada3469deed6d36a3c68c3827687cc5
@@ -86,3 +87,4 @@ c. Einmal heruntergeladenen Ausführen der Pkg Python-Laufzeit installieren
 ```  
 > sudo -H pip install pymssql  
 ```
+

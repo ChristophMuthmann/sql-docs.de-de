@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8c6bcccc5fdff40538d7c5d99101f7d37c45c4c7
@@ -27,3 +28,4 @@ ms.lasthandoff: 09/09/2017
   Informationen zu den Elementen von [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md), finden Sie unter [SQLServerXADataSource-Elemente](../../../connect/jdbc/reference/sqlserverxadatasource-members.md).  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2f40568ff94ac2e2a026f2538fa2cb9e6fb9f7c3
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
  [Startbildschirm des Data Quality-Clients](../data-quality-services/data-quality-client-home-screen.md)  
   
   
+

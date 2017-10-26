@@ -24,6 +24,7 @@ caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: d92f79e7a43f8d8368ec44b33aef7297749eb351
@@ -227,3 +228,4 @@ ms.lasthandoff: 08/17/2017
  [Datenfluss](../../integration-services/data-flow/data-flow.md)  
   
   
+

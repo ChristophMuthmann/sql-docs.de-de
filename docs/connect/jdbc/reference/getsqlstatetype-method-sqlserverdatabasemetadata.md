@@ -19,6 +19,7 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6395cf4f457983cb7ac2540522deea5da93d9b78
@@ -57,3 +58,4 @@ public int getSQLStateType()
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
+

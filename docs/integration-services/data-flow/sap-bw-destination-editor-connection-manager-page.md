@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 17d5ce8dd762a61b6dcbf4f2363d78c090495690
@@ -122,3 +123,4 @@ ms.lasthandoff: 08/03/2017
  [F1-Hilfe zum Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ec7d426fd60890eb6b61da4441e9f497e4d58162
@@ -55,3 +56,4 @@ ms.lasthandoff: 09/09/2017
  [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md)  
   
   
+

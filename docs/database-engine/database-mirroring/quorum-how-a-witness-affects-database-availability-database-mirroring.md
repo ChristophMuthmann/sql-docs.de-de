@@ -25,6 +25,7 @@ caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 423b441557ac6d255414889deaaf50e7a510707d
@@ -113,3 +114,4 @@ ms.lasthandoff: 08/02/2017
  [Spiegelungsstatus &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md)  
   
   
+

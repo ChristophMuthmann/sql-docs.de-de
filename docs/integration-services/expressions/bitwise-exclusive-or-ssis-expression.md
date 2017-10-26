@@ -17,6 +17,7 @@ caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e4c0a93affde5af98cdeb24fd04bb00d9ac72af7
@@ -103,3 +104,4 @@ ReorderPoint ^ SafetyStockLevel
  [Operatoren &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
+

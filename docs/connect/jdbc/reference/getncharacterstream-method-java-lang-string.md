@@ -14,6 +14,7 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 58012af7ac3fe73f07cefc7a65fc97f89a858dc0
@@ -54,3 +55,4 @@ public final java.io.Reader getNCharacterStream(java.lang.String columnLabel)
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   
   
+

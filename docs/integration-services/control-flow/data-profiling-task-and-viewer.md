@@ -18,6 +18,7 @@ caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7738775f08124a54765b3597af992a74d63aaf33
@@ -76,3 +77,4 @@ ms.lasthandoff: 08/03/2017
  [Datenprofiler-Schema](http://go.microsoft.com/fwlink/?LinkId=251524)  
   
   
+

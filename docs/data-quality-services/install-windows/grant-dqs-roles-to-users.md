@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 805020ab366ec0e993c8f4be54a4d18a22510911
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/01/2017
  [Erstellen eines Anmeldenamens](../../relational-databases/security/authentication-access/create-a-login.md)  
   
   
+

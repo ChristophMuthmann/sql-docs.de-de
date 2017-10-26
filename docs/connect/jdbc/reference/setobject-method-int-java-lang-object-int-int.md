@@ -19,6 +19,7 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dda180cf7e5969704458e0d324ecc3322c6eaf18
@@ -74,3 +75,4 @@ public final void setObject(int n,
  [SQLServerPreparedStatement-Klasse](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   
   
+

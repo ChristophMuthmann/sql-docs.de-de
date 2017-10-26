@@ -18,6 +18,7 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
 ms.openlocfilehash: 1e0ef2b7cca9509a58aeadca3903e8aec3b7b9b9
@@ -135,3 +136,4 @@ Die OData-Quelle umfasst Unterstützung für die folgenden Datenquellen:
  [OData-Verbindungs-Manager](../../integration-services/connection-manager/odata-connection-manager.md)  
   
   
+

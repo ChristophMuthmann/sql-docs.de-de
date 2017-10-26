@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: Lingxi-Li
 ms.author: lingxl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ae7f1133beb9c3946850b4e7dc3fc5edd9bfdea1

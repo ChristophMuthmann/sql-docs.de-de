@@ -14,6 +14,7 @@ caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cfa509ff70a4a890a32abebc6bf50a9a04dcfec9

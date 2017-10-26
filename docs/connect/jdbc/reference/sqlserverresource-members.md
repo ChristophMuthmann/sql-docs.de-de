@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fdd4f39c4625bb6ecc7f7669e1869ce34fe63107
@@ -59,3 +60,4 @@ ms.lasthandoff: 09/09/2017
  [SQLServerResource-Klasse](../../../connect/jdbc/reference/sqlserverresource-class.md)  
   
   
+

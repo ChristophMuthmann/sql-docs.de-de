@@ -25,6 +25,7 @@ caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
 ms.openlocfilehash: 986a900c49a91578358b0ace380c1fb6e3f5cb9e
@@ -120,3 +121,4 @@ ms.lasthandoff: 08/19/2017
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
   
+

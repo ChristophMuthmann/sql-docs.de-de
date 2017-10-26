@@ -18,6 +18,7 @@ caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cc89e598abbf0b224325d74501b47e3999bf472b
@@ -87,3 +88,4 @@ ms.lasthandoff: 08/03/2017
  [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
   
   
+

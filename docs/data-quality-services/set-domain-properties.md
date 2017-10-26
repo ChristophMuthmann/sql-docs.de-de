@@ -16,6 +16,7 @@ caps.latest.revision: 22
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e097256faccb24e82194edc7247ae7010a601430
@@ -93,3 +94,4 @@ ms.lasthandoff: 09/09/2017
  Wenn der Datentyp **Zeichenfolge**ist, wählen Sie dies aus, um anzugeben, dass DQS während der Bereinigung keine Syntaxfehler in der Domäne identifiziert. Aktivieren Sie dieses Kontrollkästchen, wenn die Identifizierung von Syntaxfehlern für diese Domäne irrelevant ist. Die Identifizierung von Syntaxfehler ist für eine Seriennummer beispielsweise unwichtig. Dieses Steuerelement ist nur für den Datentyp „Zeichenfolge“ verfügbar. DQS überprüft keine anderen Datentypen als Zeichenfolgen auf Syntaxfehler.  
   
   
+

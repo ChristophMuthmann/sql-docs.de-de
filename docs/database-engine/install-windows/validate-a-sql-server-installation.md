@@ -16,6 +16,7 @@ caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
 ms.openlocfilehash: 94e78a2ae81545a5a3aa489fe5b3cef2c64be2e0
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/12/2017
  [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   
+

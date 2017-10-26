@@ -19,6 +19,7 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8a36bbb8b3400c3c3836b8e78c6df0afd3bed415
@@ -52,3 +53,4 @@ public void removeConnectionEventListener(javax.sql.ConnectionEventListener list
  [SQLServerPooledConnection-Klasse](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)  
   
   
+

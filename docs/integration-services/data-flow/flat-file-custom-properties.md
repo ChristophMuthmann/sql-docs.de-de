@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 097c9a07d738bb1b192095ac91448487fdfa0eb1
@@ -62,3 +63,4 @@ ms.lasthandoff: 08/03/2017
  [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   
+

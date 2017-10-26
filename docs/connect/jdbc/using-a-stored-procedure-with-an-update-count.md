@@ -14,6 +14,7 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fb038eeb3b3b0f14ef0ace1076244bd64949ed81
@@ -58,3 +59,4 @@ INSERT INTO dbo.TestTable (Col2, Col3) VALUES ('b', 10);
  [Verwenden von Anweisungen mit gespeicherten Prozeduren](../../connect/jdbc/using-statements-with-stored-procedures.md)  
   
   
+

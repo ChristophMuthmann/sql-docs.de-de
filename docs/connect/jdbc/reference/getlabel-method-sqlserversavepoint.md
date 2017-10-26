@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fca20a20e4893e78c7196dc9a78d7de4d133330c
@@ -47,3 +48,4 @@ public java.lang.String getLabel()
  [SQLServerSavepoint-Klasse](../../../connect/jdbc/reference/sqlserversavepoint-class.md)  
   
   
+

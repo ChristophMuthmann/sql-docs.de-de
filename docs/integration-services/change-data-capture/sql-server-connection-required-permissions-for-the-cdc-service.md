@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 406cb1233d871603a38dc2d904d7ecd894b5f0cd
@@ -41,3 +42,4 @@ ms.lasthandoff: 08/03/2017
  [Verbindung zu SQLServer zum Löschen](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md)  
   
   
+

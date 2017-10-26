@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dee01cafcad2515e5fa80462dff67c14ff66f3ea
@@ -37,3 +38,4 @@ ms.lasthandoff: 08/03/2017
 -   [Gewusst wie: Anzeigen der CDC-Instanzeigenschaften](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)  
   
   
+

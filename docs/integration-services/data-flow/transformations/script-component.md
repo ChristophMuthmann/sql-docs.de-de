@@ -26,6 +26,7 @@ caps.latest.revision: 70
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
 ms.openlocfilehash: e7b0923968137a76b68d0324223ffbb61e7443b9
@@ -225,3 +226,4 @@ ms.lasthandoff: 08/19/2017
  [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
   
   
+

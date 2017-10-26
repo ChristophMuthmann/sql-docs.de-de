@@ -24,6 +24,7 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 58a8201d68cb6d942bd98ca3c53b6cf98336284e
@@ -164,3 +165,4 @@ End Module
  [Programmgesteuertes Hinzufügen von Tasks](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  
   
   
+

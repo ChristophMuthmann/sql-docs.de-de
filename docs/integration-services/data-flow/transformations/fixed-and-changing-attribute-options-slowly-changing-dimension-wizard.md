@@ -16,6 +16,7 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e248bb1fc4e5f4d638f1cbd417cc243c59bbd5d4
@@ -39,3 +40,4 @@ ms.lasthandoff: 08/03/2017
  [Konfiguration von Ausgaben mithilfe des Assistenten für langsam veränderliche](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   
+

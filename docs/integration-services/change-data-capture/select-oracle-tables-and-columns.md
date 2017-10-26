@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a32dc9416e79380cb9ce289960ad2ab0942e99fb
@@ -60,3 +61,4 @@ ms.lasthandoff: 08/03/2017
  [Bearbeiten der Tabelleneigenschaften](../../integration-services/change-data-capture/edit-the-table-properties.md)  
   
   
+

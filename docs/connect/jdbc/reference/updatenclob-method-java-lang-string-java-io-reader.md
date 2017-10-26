@@ -14,6 +14,7 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6176fa49f6f5d1c7f0bebe529e6e8a8d3fb14de1
@@ -57,3 +58,4 @@ public void updateNClob(java.lang.String columnLabel,
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
+

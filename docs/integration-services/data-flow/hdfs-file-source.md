@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2b7ed3c3789b7c28476719422f600106a73bfebd
@@ -49,3 +50,4 @@ ms.lasthandoff: 08/03/2017
  [HDFS-Dateiziel](../../integration-services/data-flow/hdfs-file-destination.md)  
   
   
+

@@ -57,7 +57,7 @@ GO
 
 Der folgende Code die Python-ausführbare Datei lädt, übergibt die Eingabedaten und für jede Zeile von Eingabedaten, aktualisiert die Tagesnamen in der Tabelle mit einer Zahl, die den Tag der Woche Index darstellt.
 
-Beachten Sie den Parameter * @RowsPerRead *. Dieser Parameter gibt die Anzahl der Zeilen, die von SQL Server für die Python-Laufzeit übergeben werden.
+Beachten Sie den Parameter  *@RowsPerRead* . Dieser Parameter gibt die Anzahl der Zeilen, die von SQL Server für die Python-Laufzeit übergeben werden.
 
 Der Python-Daten-Analysebibliothek genannt **Pandas**ist erforderlich für die Übergabe von Daten mit SQL Server und ist standardmäßig mit Machine Learning-Diensten enthalten.
 
@@ -177,7 +177,7 @@ ParamCharN=OUTPUT
 
     Die GUID ist der Name eines temporären Ordners, die während der skriptausführung zum Speichern von Daten und Skript-Artefakten erstellt wird. Diese temporären Ordner durch SQL Server gesichert werden, und werden von der Windows-Auftragsobjekt nach bereinigt Skript beendet wurde.
 
-+ Im Abschnitt mit der Meldung "Hello World" Druckt zweimal. Dies liegt daran, dass der Wert der * @RowsPerRead * auf 5 festgelegt wurde und in der Tabelle 10 Zeilen vorhanden sind; daher sind die beiden Aufrufe von Python zum Verarbeiten aller Zeilen in der Tabelle erforderlich.
++ Im Abschnitt mit der Meldung "Hello World" Druckt zweimal. Dies liegt daran, dass der Wert der  *@RowsPerRead*  auf 5 festgelegt wurde und in der Tabelle 10 Zeilen vorhanden sind; daher sind die beiden Aufrufe von Python zum Verarbeiten aller Zeilen in der Tabelle erforderlich.
 
     In der produktionsumgebung ausgeführt wird wird empfohlen, dass Sie experimentieren mit unterschiedlichen Werten um die maximale Anzahl von Zeilen zu bestimmen, die in jedem Batch übergeben werden sollen. Die optimale Anzahl von Zeilen ist datenabhängig und sowohl die Anzahl der Spalten im Dataset und den Typ der Daten, die Sie weitergeben betroffen ist.
 

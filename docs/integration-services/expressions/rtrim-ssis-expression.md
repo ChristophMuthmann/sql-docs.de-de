@@ -17,6 +17,7 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 83882b11a5b0f262857c1d291e8dbefcd22a2531
@@ -74,3 +75,4 @@ RTRIM(@FirstName)
  [Funktionen &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
+

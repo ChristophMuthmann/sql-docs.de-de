@@ -19,6 +19,7 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 256c8da2fa3fd814057f7d81c4d1b0840c8b6919
@@ -53,3 +54,4 @@ public void setFailoverPartner(java.lang.String serverName)
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
   
+

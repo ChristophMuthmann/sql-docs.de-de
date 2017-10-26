@@ -14,6 +14,7 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 751084b2b925c43f74b7733e67946661684e3fe0
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
 
 ## <a name="documentation"></a>Dokumentation
 * [Pymssql-Dokumentation](http://pymssql.org)  
+

@@ -16,6 +16,7 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cc3effea9b3d20e556707d31852d3003b7b27a65
@@ -73,3 +74,4 @@ ms.lasthandoff: 08/03/2017
  Die Inventory-Datenbank umfasst eine ProductsInventory-Tabelle mit den Spalten ProductID und StockOnHand. In einer Shipments-Tabelle mit den Spalten ProductID, CustomerID und Quantity werden Produktlieferungen an Kunden verfolgt. Die ProductInventory-Tabelle muss täglich auf Basis der Informationen der Shipments-Tabelle aktualisiert werden. Mit einer einzigen MERGE-Anweisung kann der Bestand in der ProductInventory-Tabelle auf Grundlage der erfolgten Lieferungen reduziert werden. Wenn der Bestand für ein Produkt auf 0 reduziert wurde, kann diese MERGE-Anweisung die entsprechende Produktzeile auch in der ProductInventory-Tabelle löschen.  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 16
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 97f98fe5190f03e1d9ac8e78d5832d3b55c5835f
@@ -67,3 +68,4 @@ ms.lasthandoff: 09/27/2017
  [DQS-Wissensdatenbanken und -Domänen](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   
+

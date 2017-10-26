@@ -14,6 +14,7 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8d04a199f44d5a4781ce1bc7b877b4a63d614671
@@ -81,3 +82,4 @@ con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);
  [Ausführen von Transaktionen mit der JDBC-Treiber](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  
   
   
+

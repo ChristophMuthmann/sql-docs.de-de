@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f62050319394f50f0fb8e570a57f17389d2dfd0f
@@ -52,3 +53,4 @@ public final java.sql.SQLXML getSQLXML(int columnIndex)
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)  
   
   
+

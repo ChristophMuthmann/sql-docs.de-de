@@ -17,6 +17,7 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3c3be5273bd31a2a812c96fac458b8b173e14b3b
@@ -69,3 +70,4 @@ NULL(DT_BOOL)
  [Funktionen &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
+

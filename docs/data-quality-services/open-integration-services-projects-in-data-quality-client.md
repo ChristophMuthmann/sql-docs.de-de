@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: b8f5c57ad6f0b73eb7d8f56bd8c34dd03319bf7c
@@ -69,3 +70,4 @@ ms.lasthandoff: 09/27/2017
  [Integration Services-Projekte (SSIS)](../integration-services/integration-services-ssis-projects-and-solutions.md)  
   
   
+

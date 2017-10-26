@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 496eead0f37abd155b789d4ae4c40a40a64ac9f1
@@ -48,3 +49,4 @@ ms.lasthandoff: 08/03/2017
  [Erstellen Sie und bearbeiten Sie eines Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   
   
+

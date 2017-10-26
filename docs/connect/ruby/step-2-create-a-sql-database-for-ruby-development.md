@@ -14,6 +14,7 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 95d1e433e6e86fb262c3f59923e7d0ccf1c04ae0
@@ -24,3 +25,4 @@ ms.lasthandoff: 09/09/2017
 # <a name="step-2-create-a-sql-database-for-ruby-development"></a>Schritt 2: Erstellen einer SQL-Datenbank für Ruby-Entwicklung
 
 [!INCLUDE[CreateDatabase](../../includes/createdatabase.md)]
+

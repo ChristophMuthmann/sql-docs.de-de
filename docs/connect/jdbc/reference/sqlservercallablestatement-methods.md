@@ -14,6 +14,7 @@ caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fc16154f5f73e3eba0a69da66c81173c40db112e
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   
+

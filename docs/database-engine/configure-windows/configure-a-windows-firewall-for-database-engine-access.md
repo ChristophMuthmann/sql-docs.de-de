@@ -18,6 +18,7 @@ caps.latest.revision: 57
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: HT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 7d79f9d00344dceb2559d66f7f6f4450597c79f7
@@ -104,3 +105,4 @@ ms.lasthandoff: 08/02/2017
  [Gewusst wie: Konfigurieren von Firewalleinstellungen (Azure SQL-Datenbank)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   
+

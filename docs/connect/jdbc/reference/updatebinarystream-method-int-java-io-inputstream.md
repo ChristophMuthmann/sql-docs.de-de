@@ -14,6 +14,7 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1ede0acb87e477f965696521117c99d410bd0b19
@@ -59,3 +60,4 @@ public void updateBinaryStream(int columnIndex,
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
+

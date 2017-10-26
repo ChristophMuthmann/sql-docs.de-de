@@ -16,6 +16,7 @@ caps.latest.revision:
 author: allanhirt
 ms.author: mikeray
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 0463d237614b25667c8402da70b7c5e4217d4ef5
 ms.openlocfilehash: ee06ae8d3a3a60d77e72ee9e55ee615a1bcf0cb9

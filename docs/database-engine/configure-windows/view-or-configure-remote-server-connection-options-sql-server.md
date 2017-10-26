@@ -18,6 +18,7 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 700524e1605ef7ff871d7308ea1b4caa359081c9
@@ -102,3 +103,4 @@ EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';
  [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)  
   
   
+

@@ -18,6 +18,7 @@ caps.latest.revision: 51
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 0e37425e42bbe7c320894de9368c0113373d2e4d
@@ -139,3 +140,4 @@ ms.lasthandoff: 08/02/2017
  [Datenbank-Spiegelungszeuge](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   
   
+

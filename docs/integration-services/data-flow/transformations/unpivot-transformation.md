@@ -22,6 +22,7 @@ caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
 ms.openlocfilehash: 62a84ccfd5fdf3e6b439388e6175804b567f4be3
@@ -100,3 +101,4 @@ ms.lasthandoff: 08/19/2017
  [Transformation für Pivot](../../../integration-services/data-flow/transformations/pivot-transformation.md)  
   
   
+

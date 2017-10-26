@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6934f245f0878e3491a7d1751e764dcf3db7bb46
@@ -59,3 +60,4 @@ ms.lasthandoff: 08/03/2017
  [Der Oracle CDC Service](../../integration-services/change-data-capture/the-oracle-cdc-service.md)  
   
   
+

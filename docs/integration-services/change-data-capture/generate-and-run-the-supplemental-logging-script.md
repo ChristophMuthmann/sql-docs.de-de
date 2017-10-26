@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 736b11e79235b38659e9fa4c13f06369bd8b335d
@@ -45,3 +46,4 @@ ms.lasthandoff: 08/03/2017
  [Überprüfen Sie und generieren Sie ergänzender Protokollierungsskripts](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
   
   
+

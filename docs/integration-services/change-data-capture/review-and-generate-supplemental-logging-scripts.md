@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b3213f6e757e9fc3bcff63d0833d7f0c7fdee201
@@ -62,3 +63,4 @@ ms.lasthandoff: 08/03/2017
  [Oracle-Anmeldeinformationen zum Ausführen von Skripts](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
   
+

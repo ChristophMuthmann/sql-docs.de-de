@@ -14,6 +14,7 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 56610f09ea40942988e88202ac09ec6a3a5e48e0
@@ -169,3 +170,4 @@ LIMIT <rows> [OFFSET <row offset>]
  [Verwenden von Anweisungen mit der JDBC-Treiber](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   
+

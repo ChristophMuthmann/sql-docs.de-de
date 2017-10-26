@@ -16,6 +16,7 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5799a96f092b7277bdeb5e7e49ca998d17f12020
@@ -87,3 +88,4 @@ ms.lasthandoff: 08/03/2017
  [Schnellprofilformular für einzelne Tabelle &#40; Datenprofilerstellungs-Task &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
+

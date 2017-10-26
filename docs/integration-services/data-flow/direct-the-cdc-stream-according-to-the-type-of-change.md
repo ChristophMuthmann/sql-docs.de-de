@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4c520920a94c6c53a577953b313837aee0f7d584
@@ -60,3 +61,4 @@ ms.lasthandoff: 08/03/2017
  [CDC-Splitter](../../integration-services/data-flow/cdc-splitter.md)  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 79b0782d0d01733f10310f1eaac611fc688dbf21
@@ -71,3 +72,4 @@ ms.lasthandoff: 08/03/2017
  [Hadoop-Dateisystemtask](../../integration-services/control-flow/hadoop-file-system-task.md)  
   
   
+

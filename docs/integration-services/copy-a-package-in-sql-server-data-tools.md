@@ -19,6 +19,7 @@ caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 59a001e0aa360183e5e393faedc613cfabda0f02
@@ -62,3 +63,4 @@ ms.lasthandoff: 08/03/2017
  [Integrationsservices &#40; SSIS &#41; Pakete](../integration-services/integration-services-ssis-packages.md)  
   
   
+

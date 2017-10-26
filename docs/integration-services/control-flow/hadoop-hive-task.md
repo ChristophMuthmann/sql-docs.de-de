@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5bfd2e1fcda13aed2d95bed0ec780ff4d3372b94
@@ -46,3 +47,4 @@ ms.lasthandoff: 08/03/2017
  [Hadoop-Verbindungs-Manager](../../integration-services/connection-manager/hadoop-connection-manager.md)  
   
   
+

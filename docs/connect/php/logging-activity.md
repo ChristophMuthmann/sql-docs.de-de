@@ -16,6 +16,7 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d748bac061fdd4b76b1df0b9a6cf0a8101f21092

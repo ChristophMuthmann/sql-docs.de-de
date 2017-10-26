@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2937eb9f859184eb6ab2f3ecc5f18155afd1e545
@@ -53,3 +54,4 @@ ms.lasthandoff: 09/09/2017
  Der [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Startbildschirm wird angezeigt. Weitere Informationen hierzu finden Sie unter [Startbildschirm des Data Quality-Clients](../data-quality-services/data-quality-client-home-screen.md).  
   
   
+

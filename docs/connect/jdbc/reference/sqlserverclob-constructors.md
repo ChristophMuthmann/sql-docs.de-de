@@ -15,6 +15,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 28fb4cecdeba5cfca9413ddfa150bf3d301a19e2
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
   Informationen zu den Elementen von [SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md) Klasse, finden Sie unter [SQLServerClob-Elemente](../../../connect/jdbc/reference/sqlserverclob-members.md).  
   
   
+

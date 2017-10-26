@@ -21,6 +21,7 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: a976011c3b892d826d29038fb0501e57db4c5008

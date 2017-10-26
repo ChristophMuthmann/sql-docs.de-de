@@ -16,6 +16,7 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 4427cd045642ed4f59e1c9fdb0ab1a5916841bf0
@@ -291,3 +292,4 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
  [Datenbank-Spiegelungszeuge](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   
   
+

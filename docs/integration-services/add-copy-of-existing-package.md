@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 95cf1faebe886981c272a71d54d84bc42b2a66f9
@@ -53,3 +54,4 @@ ms.lasthandoff: 09/26/2017
  [Integration Services-Dienst &#40;SSIS-Dienst&#41;](../integration-services/service/integration-services-service-ssis-service.md)
   
   
+

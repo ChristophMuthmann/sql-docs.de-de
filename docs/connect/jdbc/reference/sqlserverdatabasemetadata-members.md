@@ -14,6 +14,7 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 47a2c30638f964f04af3b4579cccbb71af1ba65c
@@ -224,3 +225,4 @@ ms.lasthandoff: 09/09/2017
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
+

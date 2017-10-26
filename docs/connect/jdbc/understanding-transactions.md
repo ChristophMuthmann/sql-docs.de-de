@@ -14,6 +14,7 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 64a9539296531bc0d07d79da3613eb953fefa917
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
  [Ausführen von Transaktionen mit der JDBC-Treiber](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: da18ece75049aa2681379f265e9812159017d722
@@ -102,3 +103,4 @@ ms.lasthandoff: 09/09/2017
  [SQLServerConnectionPoolDataSource-Klasse](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)  
   
   
+

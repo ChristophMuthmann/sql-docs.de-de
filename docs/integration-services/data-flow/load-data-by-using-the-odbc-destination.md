@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 668cf193758a8dfaba90e598ccbdb7d0d84351fc
@@ -60,3 +61,4 @@ ms.lasthandoff: 08/03/2017
  [Quellen-Editor für ODBC &#40; Seite "Fehlerausgabe" Fehler &#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
   
+

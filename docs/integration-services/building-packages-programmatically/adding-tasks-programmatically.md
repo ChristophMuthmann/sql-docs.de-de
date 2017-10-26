@@ -22,6 +22,7 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 35fbfd1c17d88d684671050c297a19822b098479
@@ -422,3 +423,4 @@ End Module
  [Programmgesteuertes Verbinden von Tasks](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  
   
   
+

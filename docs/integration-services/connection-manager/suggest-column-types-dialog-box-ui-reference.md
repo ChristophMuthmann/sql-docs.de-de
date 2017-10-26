@@ -16,6 +16,7 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: eb4d89741a2bbdbd4e93d983a7cc49b358df8d63
@@ -52,3 +53,4 @@ ms.lasthandoff: 08/03/2017
  [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
   
+

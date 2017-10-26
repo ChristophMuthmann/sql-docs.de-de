@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1eecac5f652f34e40ebca25e0e2e9c437bd7de98
@@ -135,3 +136,4 @@ ms.lasthandoff: 08/02/2017
  [Netzwerkprotokolle und Netzwerkbibliotheken](../../sql-server/install/network-protocols-and-network-libraries.md)  
   
   
+

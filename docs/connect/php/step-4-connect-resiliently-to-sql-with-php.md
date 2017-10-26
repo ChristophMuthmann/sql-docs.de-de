@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f81efd8241edcf1ff437570713f6bb05ca8103f8
@@ -124,3 +125,4 @@ Die [sqlsrv_query()](http://php.net/manual/en/function.sqlsrv-query.php) Funktio
         }  
     ?>
 ```
+

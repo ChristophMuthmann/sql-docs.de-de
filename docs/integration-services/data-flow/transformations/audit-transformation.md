@@ -20,6 +20,7 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
 ms.openlocfilehash: 253c8abb921dbd60e571a892f108d283b111e70c
@@ -83,3 +84,4 @@ ms.lasthandoff: 08/19/2017
 |**Task-ID**|Fügen Sie die GUID ein, die den mit der Überwachungstransformation verknüpften Datenflusstask eindeutig identifiziert.|  
   
   
+

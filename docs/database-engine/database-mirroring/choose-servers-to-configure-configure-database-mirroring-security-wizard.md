@@ -16,6 +16,7 @@ caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: f1353f53b663648e5f672f508b6ab86c8562eede
@@ -49,3 +50,4 @@ ms.lasthandoff: 08/02/2017
  [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   
+

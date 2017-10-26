@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 469785d1add7db3382852938d3a798f7a6666e3e
@@ -42,3 +43,4 @@ ms.lasthandoff: 08/03/2017
  [Gewusst wie: Bearbeiten der CDC-Instanzeigenschaften](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)  
   
   
+

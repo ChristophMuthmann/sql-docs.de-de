@@ -31,7 +31,7 @@ ms.contentlocale: de-de
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40options-transact-sql"></a>& #x 40; & #x 40; Optionen (Transact-SQL)
+# <a name="x40x40options-transact-sql"></a>&#x40;&#x40;Optionen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt Informationen zu den aktuellen SET-Optionen zurück.  
@@ -50,11 +50,11 @@ ms.lasthandoff: 09/19/2017
 ## <a name="remarks"></a>Hinweise  
  Die Optionen können von der Verwendung von stammen die **festgelegt** Befehl oder aus der **Sp_configure Benutzeroptionen** Wert. Konfigurierte Sitzungswerte der **festgelegt** Befehl Außerkraftsetzung der **Sp_configure** Optionen. Viele Tools (beispielsweise [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) konfigurieren SET-Optionen automatisch. Jeder Benutzer verfügt über ein @@OPTIONS -Funktion, die die Konfiguration darstellt.  
   
- Sie können die Sprache und die Abfrageverarbeitungsoptionen für eine bestimmte Benutzersitzung mithilfe der SET-Anweisung ändern. **@@OPTIONS ** kann nur erkennen, die Optionen, die auf ON festgelegt werden oder OFF.  
+ Sie können die Sprache und die Abfrageverarbeitungsoptionen für eine bestimmte Benutzersitzung mithilfe der SET-Anweisung ändern. **@@OPTIONS**  kann nur erkennen, die Optionen, die auf ON festgelegt werden oder OFF.  
   
- Die **@@OPTIONS ** Funktion gibt ein Bitmuster der Optionen, um eine Basis 10 (dezimal) ganze Zahl konvertiert. Die biteinstellungen werden in einer Tabelle in diesem Thema beschriebenen Orten gespeichert [Konfigurieren von Benutzeroptionen Serverkonfigurationsoption](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md).  
+ Die **@@OPTIONS**  Funktion gibt ein Bitmuster der Optionen, um eine Basis 10 (dezimal) ganze Zahl konvertiert. Die biteinstellungen werden in einer Tabelle in diesem Thema beschriebenen Orten gespeichert [Konfigurieren von Benutzeroptionen Serverkonfigurationsoption](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md).  
   
- Zum Decodieren der **@@OPTIONS ** Wert, konvertieren Sie die zurückgegebene Ganzzahl **@@OPTIONS ** in das Binärformat, und suchen Sie nach den Werten für die Tabelle am [Konfigurieren von Benutzeroptionen Server Konfigurationsoption](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md). Z. B. wenn `SELECT @@OPTIONS;` gibt den Wert `5496`, verwenden Sie die Windows-Rechner (**calc.exe**) zum Konvertieren von Decimal `5496` in das Binärformat. Das Ergebnis ist `1010101111000`. Die Zeichen nach rechts die meisten (binär 1, 2 und 4) sind 0 (null), der angibt, die die ersten drei Elemente in der Tabelle deaktiviert sind. Lesen die Tabelle, sehen Sie, dass diese sind **DISABLE_DEF_CNST_CHK** und **"IMPLICIT_TRANSACTIONS"**, und **CURSOR_CLOSE_ON_COMMIT**. Das nächste Element (**ANSI_WARNINGS** in der `1000` Position) befindet sich auf. Weiterarbeiten, links über die Bitmap und nach unten in der Liste der Optionen. Wenn die Optionen für die am weitesten links 0 sind, werden sie durch die typkonvertierung abgeschnitten. Bei der Bitmap `1010101111000` handelt es sich tatsächlich um `001010101111000`, um alle 15 Optionen darzustellen.  
+ Zum Decodieren der **@@OPTIONS**  Wert, konvertieren Sie die zurückgegebene Ganzzahl **@@OPTIONS**  in das Binärformat, und suchen Sie nach den Werten für die Tabelle am [Konfigurieren von Benutzeroptionen Server Konfigurationsoption](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md). Z. B. wenn `SELECT @@OPTIONS;` gibt den Wert `5496`, verwenden Sie die Windows-Rechner (**calc.exe**) zum Konvertieren von Decimal `5496` in das Binärformat. Das Ergebnis ist `1010101111000`. Die Zeichen nach rechts die meisten (binär 1, 2 und 4) sind 0 (null), der angibt, die die ersten drei Elemente in der Tabelle deaktiviert sind. Lesen die Tabelle, sehen Sie, dass diese sind **DISABLE_DEF_CNST_CHK** und **"IMPLICIT_TRANSACTIONS"**, und **CURSOR_CLOSE_ON_COMMIT**. Das nächste Element (**ANSI_WARNINGS** in der `1000` Position) befindet sich auf. Weiterarbeiten, links über die Bitmap und nach unten in der Liste der Optionen. Wenn die Optionen für die am weitesten links 0 sind, werden sie durch die typkonvertierung abgeschnitten. Bei der Bitmap `1010101111000` handelt es sich tatsächlich um `001010101111000`, um alle 15 Optionen darzustellen.  
   
 ## <a name="examples"></a>Beispiele  
   

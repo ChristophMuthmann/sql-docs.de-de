@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5ba2f4af6ef7c21de22b8223dedc538199168521
@@ -95,3 +96,4 @@ ms.lasthandoff: 09/26/2017
  [Erstellen und Bearbeiten eines CDC Service](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
   
   
+

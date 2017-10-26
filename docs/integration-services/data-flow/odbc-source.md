@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: 1e26fe82d939dd58cbbfa850f041a7ae3d23b248
@@ -196,3 +197,4 @@ ms.lasthandoff: 08/17/2017
  Die Zeile, die den Fehler oder die Kürzung verursacht, wird an die Fehlerausgabe der ODBC-Quelle umgeleitet.  
   
   
+

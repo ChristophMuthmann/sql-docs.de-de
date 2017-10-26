@@ -19,6 +19,7 @@ caps.latest.revision: 38
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4b98bfc1ffb87a23817ce01380de2f62113e4748
@@ -293,3 +294,4 @@ ms.lasthandoff: 09/09/2017
  Weitere Informationen zur Profilerstellung finden Sie unter [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
   
+

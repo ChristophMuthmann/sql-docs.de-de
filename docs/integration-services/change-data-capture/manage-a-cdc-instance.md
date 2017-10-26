@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 308d7528e516baa755a893bb42c9864c7ef7e3b7
@@ -128,3 +129,4 @@ ms.lasthandoff: 08/03/2017
  [Verwenden des Assistenten für neue Instanzen](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   
+

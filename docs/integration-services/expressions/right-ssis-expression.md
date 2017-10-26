@@ -16,6 +16,7 @@ caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b81ead33054642391dcd95d56746a90cf347dcc9
@@ -80,3 +81,4 @@ RIGHT(Name, (DT_I2)@Times))
  [Funktionen &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
+

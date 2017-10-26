@@ -12,6 +12,7 @@ ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2e3aac41bd87f52998edf366d7c3da2326de3f26

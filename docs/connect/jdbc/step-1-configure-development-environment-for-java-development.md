@@ -14,6 +14,7 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6811fe90d64374769e858787a879231140a4e925
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 * Zu ermitteln, welche Version des JDBC-Treibers Sie verwendet werden, basierend auf Ihrer Umgebung, wie hier beschrieben: [Systemanforderungen für JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)  
 * Herunterladen und Installieren der hier zutreffend JDBC-Treiber: [Herunterladen von Microsoft JDBC-Treiber für SQL Server](../../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)  
 * Set-Klassenpfad basierend auf der Version des Treibers, folgendermaßen: [mit dem JDBC-Treiber](../../connect/jdbc/using-the-jdbc-driver.md)
+

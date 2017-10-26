@@ -17,6 +17,7 @@ caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 56cfb79fb6490032f9b12eca137ea7a22958f03b
@@ -43,3 +44,4 @@ ms.lasthandoff: 08/02/2017
  [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
   
+

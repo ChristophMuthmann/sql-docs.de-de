@@ -23,6 +23,7 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7f1a931e20a1ab0bafae0e014b174cf718e9a69f
@@ -179,3 +180,4 @@ ms.lasthandoff: 08/03/2017
  [Verwenden von Variablen in Paketen](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   
+

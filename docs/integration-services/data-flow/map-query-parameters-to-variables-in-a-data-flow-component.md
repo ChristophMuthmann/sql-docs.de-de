@@ -19,6 +19,7 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: da9367a56cefbb37244d4a47543b93586e7e8870
@@ -61,3 +62,4 @@ ms.lasthandoff: 08/03/2017
  [Transformation für Suche](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   
   
+

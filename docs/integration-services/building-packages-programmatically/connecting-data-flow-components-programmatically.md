@@ -24,6 +24,7 @@ caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 40869328965e049b5981e94655226bc0a78dc37f
@@ -130,3 +131,4 @@ End Module
  [Programmgesteuertes auswählen von Eingabespalten](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
   
   
+

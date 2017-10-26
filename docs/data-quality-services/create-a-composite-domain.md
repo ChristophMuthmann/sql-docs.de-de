@@ -17,6 +17,7 @@ caps.latest.revision: 21
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 14599472b440d54b9ce247c8c52f9cfad5815a7d
@@ -106,3 +107,4 @@ ms.lasthandoff: 09/09/2017
  Wenn Sie die Analyse der Wissensdatenbank verwenden und es weniger Werte in den Quelldaten als Domänen in der Verbunddomäne gibt, fügt DQS eine NULL in der fehlenden Domäne ein. Wenn es mehr Werte in den Quelldaten als Domänen in der Verbunddomäne gibt, fügt DQS einer der Spalten die zusätzlichen Daten hinzu. Wenn mindestens zwei Domänen die gleichen Werte enthalten, wird die Datenquelle zur ersten abgeglichenen Domäne analysiert.  
   
   
+

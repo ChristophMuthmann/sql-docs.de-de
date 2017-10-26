@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b148a9deb03d3baf9fa0095418210513f608485a
@@ -50,3 +51,4 @@ public int getMinorVersion()
  [SQLServerDriver-Klasse](../../../connect/jdbc/reference/sqlserverdriver-class.md)  
   
   
+

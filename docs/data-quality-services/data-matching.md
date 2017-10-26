@@ -14,6 +14,7 @@ caps.latest.revision: 29
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 04c6e34258d4e732373ea003e8457582bea9c4eb
@@ -81,3 +82,4 @@ ms.lasthandoff: 09/09/2017
 |Ausführen von Abgleichen in einem Data Quality-Projekt|[Ausführen eines Abgleichsprojekts](../data-quality-services/run-a-matching-project.md)|  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d0f4c9e1509dd69af6bc12c6d00c17585fe23552
@@ -69,3 +70,4 @@ POWER(Length, @DimensionCount)
  [Funktionen &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
+

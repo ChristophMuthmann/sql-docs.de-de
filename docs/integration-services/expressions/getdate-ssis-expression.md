@@ -18,6 +18,7 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e792dc04b4bb115dc3e9dff840da1690395862e9
@@ -68,3 +69,4 @@ DATEADD("Month",3,GETDATE())
  [Funktionen &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
+

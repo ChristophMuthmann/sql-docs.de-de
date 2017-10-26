@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: v-saume
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: d7eed64649188267eafb4a555fa811d8c9d27f0e

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b1f8d78348d21f48a19ba05a55de836520a0afd6
@@ -38,3 +39,4 @@ ms.lasthandoff: 08/03/2017
  [Hinzufügen von Tabellen zu einer CDC-Instanz](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)  
   
   
+

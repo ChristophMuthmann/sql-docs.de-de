@@ -20,6 +20,7 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e672ebb3b8c13a61f0ec2a061195f88ba7c751c4
@@ -55,3 +56,4 @@ ms.lasthandoff: 08/02/2017
  [osql (Hilfsprogramm)](../../tools/osql-utility.md)  
   
   
+

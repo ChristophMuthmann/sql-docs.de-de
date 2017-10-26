@@ -19,6 +19,7 @@ caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e60544cf133d302d4b2ec329b7bc648d543035f2
@@ -71,3 +72,4 @@ public void updateAsciiStream(int index,
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
+

@@ -18,6 +18,7 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2517f3b049261614a219d64698a99bd82e14915d
@@ -45,3 +46,4 @@ ms.lasthandoff: 08/03/2017
  [Integrationsservices &#40; SSIS &#41; Ausdrücke](../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   
+

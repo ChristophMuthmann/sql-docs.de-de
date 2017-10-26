@@ -14,6 +14,7 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 82440c6d3ffe0ee0f2c2b9080328c0fed302cb31
@@ -87,3 +88,4 @@ ms.lasthandoff: 09/09/2017
  [Sichern von JDBC-Treiberanwendungen](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   
+

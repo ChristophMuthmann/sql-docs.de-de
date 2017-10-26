@@ -22,6 +22,7 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d0cbddc4384df93a3a1987c12d3fbd2664d57e3b
@@ -84,3 +85,4 @@ ms.lasthandoff: 08/02/2017
  [Verwalten der Datenbankmoduldienste](../../database-engine/configure-windows/manage-the-database-engine-services.md)  
   
   
+

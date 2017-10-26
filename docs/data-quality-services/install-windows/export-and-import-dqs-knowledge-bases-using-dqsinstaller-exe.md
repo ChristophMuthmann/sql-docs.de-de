@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e85b9553a3300f51f52fab300642f15f3f08617f
@@ -65,3 +66,4 @@ dqsinstaller.exe –importkbs c:\DQSBackup.dqsb
  [Importieren einer Wissensdatenbank aus einer DQS-Datei](../../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)  
   
   
+

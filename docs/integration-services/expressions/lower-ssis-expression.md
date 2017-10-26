@@ -19,6 +19,7 @@ caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1d8887035d26ba829dae2153e4e9261836ada70d
@@ -72,3 +73,4 @@ LOWER(@CityName)
  [Funktionen &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
+

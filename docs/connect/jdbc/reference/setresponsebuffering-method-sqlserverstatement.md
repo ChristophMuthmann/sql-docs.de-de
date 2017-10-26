@@ -19,6 +19,7 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c5af0e179ea15fc4d5a30604b606f5ff45c79a1b
@@ -63,3 +64,4 @@ public final void setResponseBuffering(java.lang.String value)
  [Verwenden der adaptiven Pufferung](../../../connect/jdbc/using-adaptive-buffering.md)  
   
   
+

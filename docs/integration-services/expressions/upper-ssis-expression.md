@@ -19,6 +19,7 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1764b39b0242ce7e23d56c9c74f7b953f45009b2
@@ -72,3 +73,4 @@ UPPER(@PostalCode)
  [Funktionen &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
+

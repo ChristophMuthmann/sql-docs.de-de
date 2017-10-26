@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d6bd845f244c0ed7484d91961502bfa63879544b
@@ -37,3 +38,4 @@ ms.lasthandoff: 08/03/2017
 -   [Arbeiten mit CDC-Dienste](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)  
   
   
+

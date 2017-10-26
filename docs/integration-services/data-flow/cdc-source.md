@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: 1fa9085d2b60f5416fe11359f1c2965ac38f9ee7
@@ -252,3 +253,4 @@ use <cdc-enabled-database-name>
 -   Blogeintrag, [Processing Modes for the CDC Source](http://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/), auf mattmasson.com.  
   
   
+

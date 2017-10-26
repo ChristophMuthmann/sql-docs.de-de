@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2ebec44b7492ead6e3417758ac653360f44d4df9
@@ -93,3 +94,4 @@ ms.lasthandoff: 08/03/2017
  [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)  
   
   
+

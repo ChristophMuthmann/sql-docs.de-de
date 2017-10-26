@@ -22,6 +22,7 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
 ms.openlocfilehash: 3ea6f6f0526a0ad1a2f98c97aed2a7aebbffb65a
@@ -128,3 +129,4 @@ ms.lasthandoff: 08/19/2017
  Im Dialogfeld [Fehlerausgabe konfigurieren](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) können Sie für die Transformation verfügbare Optionen zur Fehlerbehandlung angeben.  
   
   
+

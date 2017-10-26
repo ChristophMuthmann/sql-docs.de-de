@@ -19,6 +19,7 @@ caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 98e0cdc9e81497aafb35ca3b0dfed662d06bac28
@@ -45,3 +46,4 @@ ms.lasthandoff: 08/03/2017
  [Skripttask-Editor &#40; Seite "Skript" &#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
   
   
+

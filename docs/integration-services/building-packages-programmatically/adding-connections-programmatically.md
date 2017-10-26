@@ -30,6 +30,7 @@ caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: b768ad80f2b28cc3fb73a2210188bab26c902441
@@ -220,3 +221,4 @@ End Class
  [Erstellen von Verbindungs-Manager](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   
   
+

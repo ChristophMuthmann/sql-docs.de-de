@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e86c35bf891b0e83a74c6e9b7cd30295b5e52d5f
@@ -49,3 +50,4 @@ ms.lasthandoff: 08/03/2017
  [Dateiverbindungs-Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
   
+

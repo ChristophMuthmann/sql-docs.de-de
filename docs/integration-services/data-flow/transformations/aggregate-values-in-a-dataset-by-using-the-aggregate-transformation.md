@@ -18,6 +18,7 @@ caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8b4e99dd830e0722fa5717f8749ef7f4dc152be0
@@ -79,3 +80,4 @@ ms.lasthandoff: 08/03/2017
  [Datenflusstask](../../../integration-services/control-flow/data-flow-task.md)  
   
   
+

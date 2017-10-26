@@ -19,6 +19,7 @@ caps.latest.revision: 16
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 46c5abb9edd4e854609a1854ab6d6d8d6622b4fe
@@ -163,3 +164,4 @@ ms.lasthandoff: 09/09/2017
 3.  Eine Meldung wird angezeigt, um die Aktion zu bestätigen. Klicken Sie auf **Ja**.  
   
   
+

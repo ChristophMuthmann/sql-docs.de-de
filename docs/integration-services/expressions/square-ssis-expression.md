@@ -17,6 +17,7 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 18be83801a35d9b3512d85f69c91256147fb81a9
@@ -72,3 +73,4 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
  [Funktionen &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
+

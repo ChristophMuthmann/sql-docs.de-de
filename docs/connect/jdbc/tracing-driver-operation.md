@@ -14,6 +14,7 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e364f990cc2428d771f3bc57015df0636e23fbfb
@@ -166,3 +167,4 @@ com.microsoft.sqlserver.jdbc.level=FINEST
  [Diagnostizieren von Problemen mit dem JDBC-Treiber](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   
+

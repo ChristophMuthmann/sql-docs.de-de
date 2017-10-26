@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: da92c9619f8bfbfbe732fd349cac195bc4c89926
@@ -69,3 +70,4 @@ ms.lasthandoff: 08/03/2017
     -   [Bearbeiten der erweiterten Eigenschaften](../../integration-services/change-data-capture/edit-the-advanced-properties.md)  
   
   
+

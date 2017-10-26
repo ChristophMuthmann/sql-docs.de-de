@@ -14,6 +14,7 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a7da07e66203c9bcfb4a690ccb747ff9180df8db
@@ -25,3 +26,4 @@ ms.lasthandoff: 09/09/2017
 Microsoft hat die Dokumentation dieses Produkts online bereitgestellt, um seinen Kunden aktuelle Informationen zu bieten. Finden Sie unter der [SQL Server-Treiber auf der Microsoft Developer Network (MSDN)](https://msdn.microsoft.com/library/mt654049.aspx) für Weitere Informationen.  
   
 © 2016 Microsoft. Alle Rechte vorbehalten. 
+

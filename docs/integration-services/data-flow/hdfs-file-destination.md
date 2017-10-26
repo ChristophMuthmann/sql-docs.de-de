@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 02a2ecf62d91110bfd7e8a1429d5e1b835e4244e
@@ -49,3 +50,4 @@ ms.lasthandoff: 08/03/2017
  [HDFS-Dateiquelle](../../integration-services/data-flow/hdfs-file-source.md)  
   
   
+

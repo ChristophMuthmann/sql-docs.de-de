@@ -19,6 +19,7 @@ caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5bed8ab4de8d1fe868cf12ca9e90e1040857d858
@@ -48,3 +49,4 @@ ms.lasthandoff: 08/03/2017
  Weitere Informationen zum Behandeln des Abschneidens von Daten finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md)  
   
   
+

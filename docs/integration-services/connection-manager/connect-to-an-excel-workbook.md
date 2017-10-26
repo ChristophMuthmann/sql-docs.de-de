@@ -15,6 +15,7 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
 ms.openlocfilehash: f8fb1db80ac1b750950a3401516b54af5ee29686
@@ -63,3 +64,4 @@ Wenn Sie ein Office 365-Abonnement verfügen, stellen Sie sicher, dass Sie Acces
  [Herstellen einer Verbindung zu einer Access-Datenbank](../../integration-services/connection-manager/connect-to-an-access-database.md)  
   
   
+

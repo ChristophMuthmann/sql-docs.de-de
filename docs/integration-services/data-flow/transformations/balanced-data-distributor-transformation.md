@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7a148470ac38ee6168d5c6a245899d629a0e3250
@@ -45,3 +46,4 @@ ms.lasthandoff: 08/03/2017
 >  Ein Verwendungsbeispiel dieser Transformation finden Sie im [BDD-Video (Balanced Data Distributor)](http://go.microsoft.com/fwlink/?LinkID=226278) in der TechNet Library.  
   
   
+

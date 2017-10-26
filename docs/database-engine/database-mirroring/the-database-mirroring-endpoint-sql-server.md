@@ -20,6 +20,7 @@ caps.latest.revision: 47
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: ac4059e145e2421c76a3ba55629c40e1c8e74405
@@ -103,3 +104,4 @@ ms.lasthandoff: 08/02/2017
  [sys.dm_db_mirroring_connections (Transact-SQL)](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)  
   
   
+

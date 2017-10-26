@@ -14,6 +14,7 @@ caps.latest.revision: 14
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f247bb5a8b739b1f2d35ce4e7fb08c5904ef7d50
@@ -75,3 +76,4 @@ ms.lasthandoff: 09/09/2017
 -   Weitere Informationen finden Sie in der Dokumentation unter [Using the DQS Default Knowledge Base](../data-quality-services/using-the-dqs-default-knowledge-base.md).  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: aece26acf5992160124dfa14eda26a524e82ff5a
@@ -52,3 +53,4 @@ ms.lasthandoff: 08/03/2017
  [Wählen Sie Oracle-Tabellen und Spalten](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
   
   
+

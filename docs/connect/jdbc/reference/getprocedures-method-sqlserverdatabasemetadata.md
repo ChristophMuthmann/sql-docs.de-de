@@ -19,6 +19,7 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3b1fb6671ac6f223b4e3dcc620f5f7144432abe8
@@ -110,3 +111,4 @@ public static void executeGetProcedures(Connection con) {
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
+

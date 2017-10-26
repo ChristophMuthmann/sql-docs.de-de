@@ -18,6 +18,7 @@ caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4ac230866e3abd79f711441928d09c11c05ba650
@@ -66,3 +67,4 @@ ms.lasthandoff: 08/03/2017
  [Task "Nachrichtenwarteschlange"](../../integration-services/control-flow/message-queue-task.md)  
   
   
+

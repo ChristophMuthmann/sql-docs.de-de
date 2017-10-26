@@ -20,6 +20,7 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
 ms.openlocfilehash: 6e314655d6a230bde897ffceb54fadb8d180d1db

@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: f230af88796afce17b6858a7e4ac5136a04e9dd3
@@ -91,3 +92,4 @@ Dieses Codebeispiel veranschaulicht die Verwendung von Transaktionen in der Sie:
   ## <a name="next-steps"></a>Nächste Schritte  
   
 Weitere Informationen finden Sie unter der [Python Developer Center](https://azure.microsoft.com/en-us/develop/python/).
+

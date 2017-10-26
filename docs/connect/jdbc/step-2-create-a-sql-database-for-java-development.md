@@ -14,6 +14,7 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b5d5753d0aa0685304c786558499d25a01f8b998
@@ -23,3 +24,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="step-2-create-a-sql-database-for-java-development"></a>Schritt 2: Erstellen einer SQL-Datenbank für die Entwicklung mit Java
 [!INCLUDE[CreateDatabase](../../includes/createdatabase.md)]
+

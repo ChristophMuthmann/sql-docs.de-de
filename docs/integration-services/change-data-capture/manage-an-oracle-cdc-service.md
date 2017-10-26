@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ece331cf561da80bf56df914fec6f42159ade23e
@@ -65,3 +66,4 @@ ms.lasthandoff: 08/03/2017
  [Gewusst wie: Verwalten eines lokalen CDC Service](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)  
   
   
+

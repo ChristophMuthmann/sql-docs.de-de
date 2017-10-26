@@ -22,6 +22,7 @@ caps.latest.revision: 4
 author: JasonWHowell
 ms.author: jasonh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 795c6bfbf7052d5747c6924b706907406c099ac0

@@ -17,6 +17,7 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 967a838712819e5bdcefe5f88907fe9047da0fa1
@@ -206,3 +207,4 @@ Die Standardanalyse enthält gebietsschemabezogene Analyseroutinen, die alle in 
   
  Die Standardanalyse stellt die Datentypkonvertierung interner Daten bereit und sollte verwendet werden, wenn das Datenformat nicht von der schnellen Analyse unterstützt wird. Weitere Informationen zur API für die automatische Datentypkonvertierung finden Sie unter "Data Type Conversion APIs" in der [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=79427). 
  
+

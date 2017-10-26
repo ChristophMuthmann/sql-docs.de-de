@@ -8,6 +8,7 @@ ms.topic: article
 author: ulvii
 ms.author: v-ulibra
 manager: Hadis Fard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6ca464b620a092a910d341c90b0fec364dadd89b

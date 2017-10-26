@@ -27,6 +27,7 @@ caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 2ead17945bc9a6d2d3baeb73c07c86fad0e8cf1f
@@ -220,3 +221,4 @@ End Module
  [Programmgesteuertes Speichern von Paketen](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  
   
   
+
