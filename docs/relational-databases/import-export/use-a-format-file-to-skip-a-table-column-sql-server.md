@@ -50,7 +50,7 @@ GO
 1,DataForColumn3  
 ```  
   
- Damit ein Massenimport von Daten aus `myTestSkipCol2.dat` in die `myTestSkipCol` -Tabelle ausgeführt werden kann, muss `Col1`das erste Datenfeld von der Formatdatei zugeordnet werden, `Col3`muss das zweite Feld zugeordnet werden. `Col2`wird ausgelassen.  
+  Damit ein Massenimport von Daten aus myTestSkipCol2.dat in die myTestSkipCol-Tabelle ausgeführt werden kann, muss Col1 das erste Datenfeld und Col3 das zweite Feld der Formatdatei zugeordnet werden, während Col2 übersprungen wird.   
   
 ## <a name="using-a-non-xml-format-file"></a>Verwenden einer Nicht-XML-Formatdatei  
  Sie können eine Nicht-XML-Formatdatei ändern, um eine Tabellenspalte auszulassen. Im Allgemeinen ist das **bcp** -Hilfsprogramm erforderlich, um eine standardmäßige Nicht-XML-Formatdatei zu erstellen und die Standarddatei in einem Text-Editor zu ändern. Die vorhandenen Datenfelder müssen von der geänderten Formatdatei den entsprechenden Tabellenspalten zugeordnet werden, und es muss angegeben werden, welche Tabellenspalten ausgelassen werden. Für die Bearbeitung einer standardmäßigen Nicht-XML-Datendatei stehen zwei Alternativen zur Verfügung. Beide Alternativen zeigen, dass das Datenfeld in der Datendatei nicht vorhanden ist und dass keine Daten in die entsprechende Tabellenspalte eingefügt werden.  
