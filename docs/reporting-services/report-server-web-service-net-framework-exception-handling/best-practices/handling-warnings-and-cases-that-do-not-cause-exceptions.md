@@ -20,6 +20,7 @@ caps.latest.revision: 30
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 9e4f496cae6c1bd32af9096ee5cf7a810a018386
@@ -78,3 +79,4 @@ catch (SoapException ex)
  [Reporting Services-SoapException-Klasse](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)  
   
   
+

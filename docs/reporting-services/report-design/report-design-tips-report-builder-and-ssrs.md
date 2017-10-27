@@ -15,7 +15,8 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0d30cf6d4ad8e2a4903172230469f1ba41bab360
 ms.contentlocale: de-de
@@ -168,3 +169,4 @@ ms.lasthandoff: 08/09/2017
  [Lernprogramme für den Berichts-Generator](../../reporting-services/report-builder-tutorials.md)  
   
   
+

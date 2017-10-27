@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: 87d4b4a3f0c01804329f3a7b0688632c20ed6c9b
@@ -88,3 +89,4 @@ Wenn Sie eine SharePoint-Produkts verwenden, können Sie ein Dashboard oder das 
  [Customize the Report Viewer Web Part (Anpassen des Berichts-Viewer-Webparts)](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)  
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+

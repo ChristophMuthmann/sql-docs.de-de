@@ -15,7 +15,8 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8d2a1b09aefaf3baf454edd419e3d1edd8aa575f
 ms.contentlocale: de-de
@@ -60,3 +61,4 @@ ms.lasthandoff: 08/09/2017
  [Exportieren Sie einen Bericht als anderen Dateityp &#40; Berichts-Generator und SSRS &#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)  
   
   
+

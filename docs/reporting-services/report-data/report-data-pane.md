@@ -21,7 +21,8 @@ caps.latest.revision: 28
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a832dfb9d5e5e3fc57519b8f694bd47fa755852e
 ms.contentlocale: de-de
@@ -52,3 +53,4 @@ ms.lasthandoff: 08/09/2017
  [Gruppierungsbereich](../../reporting-services/tools/grouping-pane.md)  
   
   
+

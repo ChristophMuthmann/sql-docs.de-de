@@ -20,7 +20,8 @@ caps.latest.revision: 56
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 4a02f1937207f0d3dd559c539d078b1a218666df
 ms.contentlocale: de-de
@@ -57,3 +58,4 @@ Die folgenden Funktionen von SQL Server Reporting Services wird nicht in der nä
  [Nicht mehr unterstützte Funktionen in SQL Server Reporting Services in SQL Server 2016](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md) 
 
 Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+

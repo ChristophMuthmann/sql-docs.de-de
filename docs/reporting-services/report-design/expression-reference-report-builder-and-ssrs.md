@@ -15,7 +15,8 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c398f3e0b6e3d6eae50fbd9f2bad35c47524c808
 ms.contentlocale: de-de
@@ -33,27 +34,28 @@ ms.lasthandoff: 08/09/2017
  In den Themen in diesem Abschnitt erhalten Sie Hilfestellung zum Schreiben von Ausdrücken in einem Bericht.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Datentypen in Ausdrücken &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)  
+ [Datentypen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)  
   
- [Konstanten in Ausdrücken &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md)  
+ [Konstanten in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md)  
   
- [Operatoren in Ausdrücken &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md)  
+ [Operatoren in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md)  
   
- [Integrierte Auflistungen in Ausdrücken &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)  
+ [Integrierte Sammlungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)  
   
- [Integrierte globale Werte und Verweise von Benutzern &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
+ [Integrierte globale Werte und Benutzerverweise &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
   
- [Verweise auf Parameters-Auflistung &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [Verweise auf Parameters-Sammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
- [Datasetfeldauflistungen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)  
+ [Verweise auf Datasetfeld-Sammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)  
   
- [Datenquellen und DataSets-Auflistungsverweise &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md)  
+ [Verweise auf DataSources- und DataSets-Sammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md)  
   
- [Bericht und Gruppenvariablenauflistungen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  
+ [Verweise auf Berichts- und Gruppenvariablensammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  
   
- [Verweise auf ReportItems-Auflistungen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md)  
+ [Verweise auf ReportItems-Sammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ausdrücke &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
+

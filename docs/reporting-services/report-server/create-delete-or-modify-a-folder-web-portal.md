@@ -14,7 +14,8 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6a9eef590a80442110d49359c789ff5317246791
 ms.contentlocale: de-de
@@ -26,7 +27,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-create-a-folder"></a>So erstellen Sie einen Ordner  
   
-1.  Starten Sie den [Berichts-Manager &#40; SSRS im einheitlichen Modus &#41; ](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Wählen Sie im Webportal aus dem Dropdownmenü **Neu** **Ordner** aus. Sie können einen Ordner auch unter einem vorhandenen Ordner erstellen. Navigieren Sie zu diesem Ordner, und wählen Sie aus dem Dropdownmenü **Neu** **Ordner** aus.  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 08/09/2017
 6.  Klicken Sie auf **Anwenden** , um die Änderungen zu speichern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Suchen, anzeigen und Verwalten von Berichten &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Suchen, Anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
 

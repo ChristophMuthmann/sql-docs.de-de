@@ -16,6 +16,7 @@ caps.latest.revision: 14
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e5f71a5ebacb8af3a58c6eada233c16b955b6ae5
@@ -70,3 +71,4 @@ ProductID   PName
 -   XML-Datentypmethoden in einer Sicht sind nicht aktualisierbar.  
   
   
+

@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: fbc68b6ff9f1edf5cf6ee13f6e93a3d2d1a8f834
@@ -82,3 +83,4 @@ Führen Sie folgende Schritte aus, um das Webpart zu einem bestimmten Bericht ze
 * Wenn das Berichts-Viewer-Webpart hinzufügen zu der Seite nicht angezeigt wird, stellen Sie sicher, dass [des Berichts-Viewer-Webparts bereitgestellt](deploy-report-viewer-web-part.md).
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+

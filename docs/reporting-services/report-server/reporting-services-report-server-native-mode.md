@@ -19,7 +19,8 @@ caps.latest.revision: 24
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 004db2495533a1155b58a49ac0af96943a997181
 ms.contentlocale: de-de
@@ -116,3 +117,4 @@ ms.lasthandoff: 08/09/2017
  [Problembehandlung für eine Reporting Services-Installation](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
   
   
+

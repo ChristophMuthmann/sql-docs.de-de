@@ -15,6 +15,7 @@ caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: HT
 ms.sourcegitcommit: 20a301e257244b66e1c149c7cf8cf1f2489eb489
 ms.openlocfilehash: 7115b3aa6dcad15fa26603dfe8555287af015bdf

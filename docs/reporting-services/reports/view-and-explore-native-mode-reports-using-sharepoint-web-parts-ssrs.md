@@ -15,6 +15,7 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 507cac75588632cfd89f5275ee7038a49b8cdfc5
@@ -175,3 +176,4 @@ ms.lasthandoff: 08/09/2017
     3.  Klicken Sie auf **Berichts-Viewer**.  
 
 Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -98,18 +98,18 @@ Geben Sie **Trusted_Connection = Yes** zum Herstellen einer Verbindung mit der i
 ### <a name="connection-string-format"></a>Format der Verbindungszeichenfolge
 Hier ist das Format einer Verbindungszeichenfolge, die integrierte Windows-Authentifizierung verwendet.
 
-    Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;trusted_connection=Yes;
+    `Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;trusted_connection=Yes;`
 
 Hier ist das Format einer Verbindungszeichenfolge, die SQL Server-Authentifizierung statt der integrierten Windows-Authentifizierung verwendet.
 
-     Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;uid=<user id>;pwd=<password>;
+     `Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;uid=<user id>;pwd=<password>;`
 
 ### <a name="enter-the-connection-string"></a>Geben Sie die Verbindungszeichenfolge
 Geben Sie die Verbindungszeichenfolge in der **"ConnectionString"** Feld aus, oder geben Sie den DNS-Namen in der **Dsn** Feld, auf die **wählen Sie eine Datenquelle** oder **wählen Sie ein Ziel** Seite. Nachdem Sie die Verbindungszeichenfolge eingeben, wird der Assistent analysiert die Zeichenfolge und zeigt die einzelnen Eigenschaften und ihre Werte in der Liste.
 
 Im folgenden Beispiel wird diese Verbindungszeichenfolge.
 
-    Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+    `Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;`
 
 Hier ist der Bildschirm, den nach dem Eingeben der Verbindungszeichenfolge angezeigt.
 

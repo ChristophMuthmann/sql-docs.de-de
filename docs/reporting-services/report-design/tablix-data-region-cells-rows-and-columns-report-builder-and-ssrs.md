@@ -20,7 +20,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 79c838b6bc98b64ac57b83e193b25d861e905e38
 ms.contentlocale: de-de
@@ -28,7 +29,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Zellen, Zeilen und Spalten des Tablix-Datenbereichs (Berichts-Generator und SSRS)
-  Sie müssen sich mit dem Verfahren zum Angeben von Zeilen und Spalten für Detaildaten, Gruppendetails, Bezeichnungen und Gesamtwerte vertraut machen, um zu steuern, wie Daten in den Zeilen und Spalten eines Tablix-Datenbereichs in einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht angezeigt werden. In vielen Fällen verwenden Sie die Standardstrukturen einer Tabelle, Matrix oder Liste, um die Daten anzuzeigen. Weitere Informationen finden Sie unter [Tabellen &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/tables-report-builder-and-ssrs.md), [Matrizen](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md), oder [listet](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md) .  
+  Sie müssen sich mit dem Verfahren zum Angeben von Zeilen und Spalten für Detaildaten, Gruppendetails, Bezeichnungen und Gesamtwerte vertraut machen, um zu steuern, wie Daten in den Zeilen und Spalten eines Tablix-Datenbereichs in einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht angezeigt werden. In vielen Fällen verwenden Sie die Standardstrukturen einer Tabelle, Matrix oder Liste, um die Daten anzuzeigen. Weitere Informationen finden Sie unter [Tabellen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md), [Erstellen einer Matrix &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md) und unter [Erstellen von Rechnungen und Formulare mit Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
  In einem Tablix-Datenbereich werden Detaildaten in Detailzeilen und Detailspalten sowie gruppierte Daten in Gruppenzeilen und Gruppenspalten angezeigt. Wenn Sie einem Tablix-Datenbereich Zeilengruppen und Spaltengruppen hinzufügen, werden Zeilen und Spalten zum Anzeigen der Daten automatisch hinzugefügt. Sie können manuell Zeilen und Spalten hinzufügen oder entfernen, um einen Tablix-Datenbereich anzupassen und die Anzeige der Daten im Bericht zu konfigurieren.  
   
@@ -85,7 +86,7 @@ ms.lasthandoff: 08/09/2017
   
  Wenn Sie über Detailgruppen verfügen, befindet sich jede Detailzeile innerhalb der Detailgruppe. Die Zeile wird für jeden Wert im Resultset für die Datasetabfrage wiederholt.  
   
- Weitere Informationen zu gruppenhierarchien finden Sie unter [Grundlegendes zu Gruppen &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
+ Weitere Informationen zu Gruppenhierarchien finden Sie unter [Grundlegendes zu Gruppen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
  Die folgende Abbildung zeigt einen Tablix-Datenbereich mit geschachtelten Zeilengruppen und einer Detailgruppe.  
   
@@ -99,10 +100,10 @@ ms.lasthandoff: 08/09/2017
   
  Wenn Sie Zeilen und Spalten entfernen möchten, die einer Gruppe zugeordnet sind, können Sie die Gruppe löschen. Beim Löschen einer Gruppe können Sie entweder nur die Gruppendefinition oder die Gruppe und alle zugeordneten Zeilen und Spalten löschen. Wenn Sie nur die Gruppe löschen, wird das Zeilen- und Spaltenlayout im Datenbereich beibehalten. Wenn Sie die Gruppe und die zugehörigen Zeilen und Spalten löschen, löschen Sie damit alle statischen Zeilen und Spalten (einschließlich der Kopf- und Fußzeilen der Gruppe) und die dynamischen Zeilen und Spalten (einschließlich der Gruppeninstanzen), die der betreffenden Gruppe zugeordnet sind.  
   
- Schrittweise Anweisungen zum Hinzufügen oder Löschen von Zeilen und Spalten finden Sie unter [einfügen oder Löschen einer Zeile &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md) und [einfügen oder Löschen einer Spalte &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
+ Eine Schritt-für-Schritt-Anleitung zum Hinzufügen oder Löschen von Zeilen und Spalten finden Sie unter [Einfügen oder Löschen einer Zeile &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md) und [Einfügen oder Löschen einer Spalte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
   
 ## <a name="understanding-tablix-cells"></a>Grundlegendes zu Tablix-Zellen  
- Tablix-Zellen gehören zu einem von vier Tablix-Bereichen: dem Tablix-Textbereich, dem Tablix-Zeilengruppenbereich, dem Tablix-Spaltengruppenbereich oder dem Tablix-Eckbereich. In einer Zelle kann potenziell zwar jeder Wert im Dataset angezeigt werden. Die Standardfunktion einer Zelle wird jedoch durch ihre Position bestimmt. Ausführliche Informationen zu tablixbereichen finden Sie unter [Tablix-Datenbereiche &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
+ Tablix-Zellen gehören zu einem von vier Tablix-Bereichen: dem Tablix-Textbereich, dem Tablix-Zeilengruppenbereich, dem Tablix-Spaltengruppenbereich oder dem Tablix-Eckbereich. In einer Zelle kann potenziell zwar jeder Wert im Dataset angezeigt werden. Die Standardfunktion einer Zelle wird jedoch durch ihre Position bestimmt. Ausführlichere Informationen zu Tablixbereichen finden Sie unter [Zonen des Tablix-Datenbereichs &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  Standardmäßig stellen Zellen in Tablix-Zeilengruppenbereichen und Tablix-Spaltengruppenbereichen Gruppenelemente dar. Gruppenelemente werden in der Berichtsdefinition in mehreren Strukturen organisiert. Die Zeilengruppenhierarchie wird horizontal erweitert. Die Spaltengruppenhierarchie wird vertikal erweitert. Diese Zellen werden automatisch hinzugefügt, wenn Sie eine Gruppe erstellen. In ihnen werden zur Laufzeit die eindeutigen Werte für eine Gruppe angezeigt.  
   
@@ -111,7 +112,7 @@ ms.lasthandoff: 08/09/2017
  In Zellen im Tablix-Textbereich können Detaildaten angezeigt werden, wenn sich die jeweilige Zelle in einer Detailzeile bzw. -spalte befindet. In der Zelle können aggregierte Gruppendaten angezeigt werden, wenn sie sich in einer Gruppenzeile oder -spalte befindet. Der Gültigkeitsbereich für die Daten in einer Zelle wird durch die Schnittmenge der innersten Zeilengruppe und der innersten Spaltengruppe gebildet, zu denen die Zelle gehört.  
   
 > [!NOTE]  
->  Die tatsächlich für eine Zelle angezeigten Daten stellen den ausgewerteten Ausdruck für das Berichtselement dar, das in der Zelle enthalten ist (i. d. R. ein Textfeld). In einer Zelle, die zu einer Detailzeile oder -spalte gehört, entspricht der Ausdruck standardmäßig den Detaildaten (z.B. **[LineTotal]**). In einer Zelle, die nicht zu einer Detailzeile oder -spalte gehört, entspricht der Ausdruck standardmäßig einer Aggregatfunktion (z.B. **Sum[LineTotal]**). Wenn ein Ausdruck keine Aggregatfunktion angibt, obwohl die Zelle zu einer Gruppenzeile oder -spalte gehört, wird der erste Wert in der Gruppe angezeigt. Weitere Informationen zu Aggregaten finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+>  Die tatsächlich für eine Zelle angezeigten Daten stellen den ausgewerteten Ausdruck für das Berichtselement dar, das in der Zelle enthalten ist (i. d. R. ein Textfeld). In einer Zelle, die zu einer Detailzeile oder -spalte gehört, entspricht der Ausdruck standardmäßig den Detaildaten (z.B. **[LineTotal]**). In einer Zelle, die nicht zu einer Detailzeile oder -spalte gehört, entspricht der Ausdruck standardmäßig einer Aggregatfunktion (z.B. **Sum[LineTotal]**). Wenn ein Ausdruck keine Aggregatfunktion angibt, obwohl die Zelle zu einer Gruppenzeile oder -spalte gehört, wird der erste Wert in der Gruppe angezeigt. Weitere Informationen zum Aggregaten finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ### <a name="merging-and-splitting-cells"></a>Zusammenführen und Teilen von Zellen  
  In einem Tablix-Bereich können Sie mehrere angrenzende Zellen zusammenführen. Sie können z. B. Zellen für Bezeichnungen erstellen, die sich über mehrere Spalten oder Zeilen erstrecken.  
@@ -128,3 +129,4 @@ ms.lasthandoff: 08/09/2017
  [Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
   
   
+

@@ -21,7 +21,8 @@ caps.latest.revision: 32
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 38237ef30d403dab78f8fedd00caa97ebdaf0b29
 ms.contentlocale: de-de
@@ -45,3 +46,4 @@ http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07
  [URL-Zugriffsparameterverweis](../reporting-services/url-access-parameter-reference.md)  
   
   
+

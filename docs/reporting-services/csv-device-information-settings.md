@@ -18,7 +18,8 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b727303729744eaec3dfa8994249db7d404584c4
 ms.contentlocale: de-de
@@ -49,3 +50,4 @@ ms.lasthandoff: 08/09/2017
  [Technische Referenz &#40; SSRS &#41;](../reporting-services/technical-reference-ssrs.md)  
   
   
+

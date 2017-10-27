@@ -20,6 +20,7 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 60eac755180faaba012c7fbd14001fcb66a37975
@@ -86,3 +87,4 @@ public void GetRenderingResource (CreateStream createStreamCallback, NameValueCo
  [Rendering Extensions Overview (Übersicht über Renderingerweiterungen)](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)  
   
   
+

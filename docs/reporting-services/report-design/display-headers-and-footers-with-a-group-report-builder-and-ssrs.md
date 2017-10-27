@@ -15,6 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 36fd7c4ac62280fb980bb24c89306a006605b665
@@ -78,3 +79,4 @@ ms.lasthandoff: 09/27/2017
  
   
   
+

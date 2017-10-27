@@ -23,7 +23,8 @@ caps.latest.revision: 64
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6e9aed18a938de82189349d9e3eaa4dcb8e720b5
 ms.contentlocale: de-de
@@ -102,3 +103,4 @@ ms.lasthandoff: 08/09/2017
  [Reporting Services-Tools](../../reporting-services/tools/reporting-services-tools.md)  
   
   
+

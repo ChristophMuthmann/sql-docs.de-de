@@ -17,7 +17,8 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 349180bb3cfe2b03bee076dfc2dbb90265118fa4
 ms.contentlocale: de-de
@@ -58,3 +59,4 @@ ms.lasthandoff: 08/09/2017
  [RSConfig-Hilfsprogramm &#40; SSRS &#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)  
   
   
+

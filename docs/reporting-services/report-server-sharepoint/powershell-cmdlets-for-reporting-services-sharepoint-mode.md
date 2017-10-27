@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: 5ab2078266bb130e80b0919c2a4f19e8cf45a671
@@ -299,3 +300,4 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
 [SQL Server PowerShell-Hilfe](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+

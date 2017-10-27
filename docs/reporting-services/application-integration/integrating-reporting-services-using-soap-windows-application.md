@@ -22,6 +22,7 @@ caps.latest.revision: 35
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 7dd1e6d2ddd35132ab1a9f297621218aab268e39
@@ -108,3 +109,4 @@ private void listReportsButton_Click(object sender, System.EventArgs e)
  [Verwenden die SOAP-API in einer Webanwendung](../../reporting-services/application-integration/integrating-reporting-services-using-soap-web-application.md)  
   
   
+

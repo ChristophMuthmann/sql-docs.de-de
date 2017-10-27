@@ -27,7 +27,8 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 799f6c8803852baf8b4c2262d85826167f55ed5c
 ms.contentlocale: de-de
@@ -84,3 +85,4 @@ ms.lasthandoff: 08/09/2017
  [Cacheaktualisierung-Optionen &#40; Berichts-Manager &#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
   
   
+

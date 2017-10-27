@@ -22,6 +22,7 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 761571f88c2321c823dc240cfa9bb3ba75d9414b
@@ -53,3 +54,4 @@ rs.CreateFolder("Product Sales", "/Sales", null);
  [Technische Referenz &#40; SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)  
   
   
+

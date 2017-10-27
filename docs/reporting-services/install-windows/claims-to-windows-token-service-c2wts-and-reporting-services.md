@@ -12,6 +12,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
 ms.openlocfilehash: 8a478bba3cde66967594d5ef02f867de5b33edd7
@@ -104,3 +105,4 @@ Wenn in der Umgebung die eingeschränkte Kerberos-Delegierung verwendet wird, da
 4. Starten Sie den Claims to Windows Token Service über die SharePoint-Zentraladministration auf die **Dienste auf dem Server verwalten** Seite. Der Dienst sollte auf dem Server gestartet werden, auf dem die Aktion ausgeführt wird. Z. B. Wenn Sie einen Server haben, d. h. ein WFE und einem anderen Server, der ein Anwendungsserver, den freigegebenen SQL Server Reporting Services-Dienst ausgeführt wird, verfügt, Sie nur C2WTS auf dem Anwendungsserver starten müssen. C2WTS wird nur auf einen WFE-Server erforderlich, wenn Sie den Berichts-Viewer-Webpart ausgeführt werden.
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+

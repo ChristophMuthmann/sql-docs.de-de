@@ -22,6 +22,7 @@ caps.latest.revision: 46
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 4e7dcd26be988380e17041134e0ff511ed3bed83
@@ -70,3 +71,4 @@ ms.lasthandoff: 08/12/2017
  [Verwenden von Reporting Services-SOAP-Header](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
   
   
+

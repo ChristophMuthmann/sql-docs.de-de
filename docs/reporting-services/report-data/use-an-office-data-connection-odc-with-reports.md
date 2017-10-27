@@ -19,7 +19,8 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7df29304e469a78f64a8b81198d7991f956953fe
 ms.contentlocale: de-de
@@ -51,7 +52,7 @@ ms.lasthandoff: 08/09/2017
   
  Wenn Sie nicht mit ODC-Dateien vertraut sind, können Sie die folgenden Anweisungen zum Erstellen und Exportieren einer ODC-Datei verwenden. Eine einfache Möglichkeit, eine ODC-Datei für eine OLE DB-Datenquelle zu erstellen, besteht im Verwenden von Excel 2007 und dem Datenverbindungs-Assistenten. Beachten Sie, dass vom Assistenten keine Datenquelle erstellt wird. Sie müssen über eine externe Datenquelle verfügen, die bereits definiert ist.  
   
- Eine vorhandene ODC-Datei sollte nur verwendet werden, wenn sie vollständig mit dem Bericht und den Abfragen kompatibel ist. Wenn Fehler auftreten, die beträchtliche Änderungen am Bericht oder an der ODC-Datei erfordern, sollten Sie eine neue RSDS-Datei für den Bericht erstellen. Weitere Informationen dazu, wie Sie eine freigegebene Datenquelle erstellen, die eine rsds-Datei verwendet, finden Sie unter [erstellen und Verwalten von freigegebenen Datenquellen &#40; Reporting Services in SharePoint integrierten Modus &#41; ](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+ Eine vorhandene ODC-Datei sollte nur verwendet werden, wenn sie vollständig mit dem Bericht und den Abfragen kompatibel ist. Wenn Fehler auftreten, die beträchtliche Änderungen am Bericht oder an der ODC-Datei erfordern, sollten Sie eine neue RSDS-Datei für den Bericht erstellen. Weitere Informationen zum Erstellen einer freigegebenen Datenquelle finden Sie unter [Erstellen und Verwalten von freigegebenen Datenquellen &#40;Reporting Services im integrierten SharePoint-Modus&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
   
 ### <a name="to-create-and-export-an-odc-file"></a>So erstellen und exportieren Sie eine ODC-Datei  
   
@@ -109,3 +110,4 @@ ms.lasthandoff: 08/09/2017
  [Erstellen, Ändern und Löschen von freigegebenen Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)  
   
   
+

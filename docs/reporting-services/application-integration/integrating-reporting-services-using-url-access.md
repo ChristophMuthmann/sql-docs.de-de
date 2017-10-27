@@ -20,6 +20,7 @@ caps.latest.revision: 32
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 2ed79fbeaa1ec2f4f29878d715ae0a4f87986722
@@ -47,3 +48,4 @@ ms.lasthandoff: 08/12/2017
  [URL-Zugriff &#40; SSRS &#41;](../../reporting-services/url-access-ssrs.md)  
   
   
+

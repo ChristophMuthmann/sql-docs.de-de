@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 15e258cfe62b9b6cecdcaf3b1fc2f467ba92fab7
@@ -43,3 +44,4 @@ ms.lasthandoff: 06/22/2017
  Konfigurieren Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für die Verwendung eines Domänenkontos.  
   
   
+

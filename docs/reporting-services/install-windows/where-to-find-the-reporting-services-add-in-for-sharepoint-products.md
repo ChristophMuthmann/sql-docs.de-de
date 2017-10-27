@@ -17,7 +17,8 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 9a23cb8cb401de31b69049a065b5bd34cc29e9b1
 ms.contentlocale: de-de
@@ -59,7 +60,7 @@ Das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](.
   
  Anweisungen zum Herunterladen und Installieren des Add-Ins finden Sie im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center:  
   
--   **SP1-Add-In:**  [Microsoft® SQL Server® 2012 SP1 Reporting Services-Add-In für Microsoft® SharePoint®](http://www.microsoft.com/download/details.aspx?id=35583)(http://www.microsoft.com/download/details.aspx?id=35583).  
+-   **SP1 add-in:**  [Microsoft® SQL Server® 2012 SP1 Reporting Services Add-in for Microsoft® SharePoint®](http://www.microsoft.com/download/details.aspx?id=35583)(http://www.microsoft.com/download/details.aspx?id=35583).  
   
 -   **SP1:**  [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](http://go.microsoft.com/fwlink/p/?LinkID=255906) (http://go.microsoft.com/fwlink/p/?LinkID=255906).  
 
@@ -70,6 +71,7 @@ In der SQL Server 2016-Version kann das Add-in als Teil der SQL Server-Installat
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[Nach der Deinstallation des Reporting Services-Add-Ins können Sie keine SharePoint-Seiten in der nicht standardmäßigen Zone durchsuchen.](http://support.microsoft.com/kb/2009212)  
+[Sie können keine SharePoint-Seiten in nicht standardmäßigen Zone durchsuchen, nach der Deinstallation von Reporting Services-add-Ins](http://support.microsoft.com/kb/2009212)  
 
 Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+

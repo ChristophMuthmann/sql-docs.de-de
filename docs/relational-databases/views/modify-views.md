@@ -19,6 +19,7 @@ caps.latest.revision: 22
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 242d7b946699560cf24c59a262e3a14a5c08b8d9
@@ -109,3 +110,4 @@ ms.lasthandoff: 06/22/2017
  Weitere Informationen finden Sie unter [ALTER VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/alter-view-transact-sql.md).  
   
   
+

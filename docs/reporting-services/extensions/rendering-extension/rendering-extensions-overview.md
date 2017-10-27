@@ -20,6 +20,7 @@ caps.latest.revision: 41
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: bf4ef7421e85e95d40a28803adec2c279b9a80bc
@@ -70,3 +71,4 @@ ms.lasthandoff: 08/12/2017
  [Reporting Services-Erweiterungsbibliothek](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6388e815e67edcb764a02f9c15d7f7dfdc12a6c5
@@ -59,3 +60,4 @@ ms.lasthandoff: 08/09/2017
  [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   
+

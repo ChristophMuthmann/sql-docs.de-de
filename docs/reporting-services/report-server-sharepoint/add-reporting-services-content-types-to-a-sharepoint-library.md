@@ -15,6 +15,7 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: 77b7a28486715b0583fb64a8ae6da169a27507da
@@ -180,3 +181,4 @@ ms.lasthandoff: 10/06/2017
  [Start Report Builder (Starten des Berichts-Generators.)](../../reporting-services/report-builder/start-report-builder.md)  
   
   
+

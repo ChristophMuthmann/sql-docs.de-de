@@ -15,7 +15,8 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c057de4b56529de08385a1e13e1a119550632eda
 ms.contentlocale: de-de
@@ -82,7 +83,7 @@ Datumsfelder sind für viele mobile Berichte unerlässlich, weswegen Sie sichers
   
     2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))  
   
-Nachdem Sie die Zellen konvertiert haben, müssen Sie sie als Datumsangaben formatieren, indem Sie auswählen, oder die gesamte Spalte > **Kontext** Menü > **Zellen formatieren** > **Datum** aus der **Kategorie** Liste. Sie können ebenfalls den Textkonvertierungs-Assistenten von Excel verwenden, um Textzellen in ordnungsgemäß formatierte Datumsangaben zu konvertieren.  
+Nachdem Sie die Zellen konvertiert haben, müssen Sie sie als Datumsangaben formatieren, indem Sie sie oder die gesamte Spalte auswählen > **Kontext**menü > **Zellen formatieren** > **Datum** aus der Liste **Kategorie**. Sie können ebenfalls den Textkonvertierungs-Assistenten von Excel verwenden, um Textzellen in ordnungsgemäß formatierte Datumsangaben zu konvertieren.  
   
 ## <a name="unsupported"></a>Nicht unterstützt  
   
@@ -91,7 +92,7 @@ Arbeitsblattdaten können beim Importieren unvorhersehbare Ergebnisse hervorrufe
 Benutzerdefinierte Objekte in Excel-Arbeitsblättern, einschließlich PivotTables, Visualisierungen und Bilder, werden nicht in [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]importiert.  
   
 ### <a name="see-also"></a>Siehe auch  
-- [Vorbereiten von Daten für mobile Reporting Services-Berichte](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
+- [Vorbereiten von Daten für mobile Berichte von Reporting Services](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher (Erstellen und Veröffentlichen von mobilen Berichten mit dem Publisher für mobile Berichte von SQL Server)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  Anzeigen von [mobilen SQL Server-Berichten und KPIs in der iPad-App](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI für iOS)  
 -  Anzeigen von [mobilen SQL Server-Berichten und KPIs in der iPhone-App](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI für iOS)  

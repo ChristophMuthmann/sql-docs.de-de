@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: 38f23cf5d75c47be55e1820a4421a507a73df54e
@@ -110,3 +111,4 @@ Sie können das Berichts-Viewer-Webpart verwenden, zum Anzeigen von Berichten, d
  [Der Berichts-Viewer-Webpart zu einer Webseite hinzufügen](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+

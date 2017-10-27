@@ -72,7 +72,7 @@ ms.lasthandoff: 09/26/2017
   
 3.  Wählen Sie eine Zieldatenbank aus, und öffnen Sie ein neues Abfragefenster. Führen Sie im Abfragefenster das folgende Skript aus, um die Zieltabelle zu erstellen:  
   
-    ```  
+    ```sql
     create table RowDelimitedData  
     (  
     FirstName varchar(32),  
@@ -226,7 +226,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 3.  Wählen Sie eine Zieldatenbank aus, und öffnen Sie ein neues Abfragefenster. Führen Sie im Abfragefenster das folgende Skript aus, um die Zieltabellen zu erstellen:  
   
-    ```  
+    ```sql
     CREATE TABLE [dbo].[Parents]([ParentID] [int] NOT NULL,  
     [ParentRecord] [varchar](32) NOT NULL,  
      CONSTRAINT [PK_Parents] PRIMARY KEY CLUSTERED   

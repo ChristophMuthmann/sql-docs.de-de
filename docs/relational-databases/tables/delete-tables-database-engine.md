@@ -19,6 +19,7 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ff85fc5a39fbb4c64bd934c98c235c69a2eff514
@@ -98,3 +99,4 @@ ms.lasthandoff: 06/22/2017
  Weitere Informationen finden Sie unter [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md).  
   
   
+

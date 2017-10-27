@@ -19,7 +19,8 @@ caps.latest.revision: 31
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a09ebdeda6679c80f3eb32602d38068114e7bf36
 ms.contentlocale: de-de
@@ -54,7 +55,7 @@ Dieses Lernprogramm kann auf zwei unterschiedliche Arten absolviert werden. Beid
   
  Der Vorteil der Verwendung der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage besteht darin, dass in allen anderen [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] -Tutorials die gleiche Methode verwendet wird. Sie wissen daher bereits, was zu tun ist, wenn Sie die anderen Tutorials durcharbeiten.  
   
- Für die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage müssen noch einige andere Voraussetzungen erfüllt sein. Weitere Informationen finden Sie unter [Voraussetzungen für Lernprogramme &#40;Berichts-Generator&#41;](../../reporting-services/prerequisites-for-tutorials-report-builder.md).  
+ Für die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfrage müssen noch einige andere Voraussetzungen erfüllt sein. Weitere Informationen finden Sie unter [Voraussetzungen für Lernprogramme &#40;Berichts-Generator&#41;](../../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
  [Erstellen des Kreisdiagramms mit einer Transact-SQL-Abfrage, die Daten enthält.](#CreatePieQueryData)  
   
@@ -66,7 +67,7 @@ Dieses Lernprogramm kann auf zwei unterschiedliche Arten absolviert werden. Beid
   
      ![Berichts-Generator beginnen](../../reporting-services/media/rb-getstarted.png "Berichts-Generator beginnen.")  
   
-     Falls das Dialogfeld **Erste Schritte** nicht angezeigt wird, klicken Sie auf **Datei** >**Neu**zu erstellen. Das Dialogfeld **Neuer Bericht oder neues Dataset** verfügt größtenteils über den gleichen Inhalt wie das Dialogfeld **Erste Schritte** .  
+     If the **Getting Started** dialog box does not appear, click **File** >**New**. Das Dialogfeld **Neuer Bericht oder neues Dataset** verfügt größtenteils über den gleichen Inhalt wie das Dialogfeld **Erste Schritte** .  
   
 2.  Vergewissern Sie sich, dass im linken Bereich **Neuer Bericht** ausgewählt ist.  
   
@@ -82,9 +83,9 @@ Dieses Lernprogramm kann auf zwei unterschiedliche Arten absolviert werden. Beid
   
 7.  Klicken Sie im Dialogfeld **Verbindungstyp auswählen** auf **XML**.  
   
-8.  Klicken Sie auf die **Anmeldeinformationen** Registerkarte **aktuellen Windows-Benutzer verwenden. Kerberos-Delegierung kann erforderlich sein,**, und klicken Sie dann auf **OK**.  
+8.  Klicken Sie auf die Registerkarte **Anmeldeinformationen**, wählen Sie **Aktuellen Windows-Benutzer verwenden. Möglicherweise ist eine Kerberos-Delegierung erforderlich** aus, und klicken Sie dann auf **OK**.  
   
-9. Klicken Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** auf **MyPieChart**und anschließend auf **Weiter**.  
+9. Klicken Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** auf **MyPieChart** und anschließend auf **Weiter**.  
   
 10. Kopieren Sie den folgenden Text, und fügen Sie ihn in das große Feld im oberen Bereich der Seite **Abfrage entwerfen** ein.  
   
@@ -152,7 +153,7 @@ Dieses Lernprogramm kann auf zwei unterschiedliche Arten absolviert werden. Beid
      Das Dialogfeld **Erste Schritte** wird angezeigt.  
   
     > [!NOTE]  
-    >  Falls das Dialogfeld **Erste Schritte** nicht angezeigt wird, klicken Sie auf **Datei** >**Neu**zu erstellen. Das Dialogfeld **Neuer Bericht oder neues Dataset** verfügt größtenteils über den gleichen Inhalt wie das Dialogfeld **Erste Schritte** .  
+    >  If the **Getting Started** dialog box does not appear, click **File** >**New**. Das Dialogfeld **Neuer Bericht oder neues Dataset** verfügt größtenteils über den gleichen Inhalt wie das Dialogfeld **Erste Schritte** .  
   
 2.  Vergewissern Sie sich, dass im linken Bereich **Neuer Bericht** ausgewählt ist.  
   
@@ -234,11 +235,12 @@ Beachten Sie, dass sich die Entwurfsoberfläche beim Ziehen vergrößert.
   
  Schließlich benötigen Sie die URL und die Berechtigungen, um die Berichte auf einem Berichtsserver oder einer SharePoint-Website zu speichern, die mit einem Berichtsserver integriert ist. Sie können jeden Bericht, den Sie erstellen, direkt auf Ihrem Computer ausführen. Berichte haben jedoch mehr Funktionalität, wenn sie vom Berichtsserver oder von einer SharePoint-Website aus ausgeführt werden. Sie benötigen Berechtigungen zum Ausführen Ihrer Berichte oder anderer Berichte auf dem Berichtsserver oder einer SharePoint-Website, auf der sie veröffentlicht werden. Wenden Sie sich an den Systemadministrator, um Zugriff zu erhalten.  
   
- Außerdem sollten Sie sich zunächst mit einigen Grundlagen und Begriffen vertraut machen. Finden Sie unter [Bericht Authoring Konzepte &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md). Außerdem sollten Sie das Erstellen Ihres ersten Berichts sorgfältig planen. Der Aufwand lohnt sich. Weitere Informationen finden Sie unter [Planen eines Berichts &#40;Berichts-Generator&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md).  
+ Außerdem sollten Sie sich zunächst mit einigen Grundlagen und Begriffen vertraut machen. Weitere Informationen finden Sie unter [Berichtserstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md). Außerdem sollten Sie das Erstellen Ihres ersten Berichts sorgfältig planen. Der Aufwand lohnt sich. Weitere Informationen finden Sie unter [Planen eines Berichts &#40;Berichts-Generator&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md).  
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Lernprogramme für den Berichts-Generator](../../reporting-services/report-builder-tutorials.md)   
 [Berichts-Generator in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-Haben Sie dazu Fragen? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+

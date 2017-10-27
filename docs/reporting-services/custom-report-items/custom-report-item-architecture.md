@@ -19,6 +19,7 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 6ebe0c967ffac1057773dee7d423492371542cee
@@ -45,3 +46,4 @@ ms.lasthandoff: 08/12/2017
  [Vorgehensweise: Bereitstellen eines benutzerdefinierten Berichtselements](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   
+

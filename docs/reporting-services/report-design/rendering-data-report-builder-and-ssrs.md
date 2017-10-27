@@ -15,7 +15,8 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 209938a6f1f5562fb3e5bfb70be713d2eb9b8285
 ms.contentlocale: de-de
@@ -59,3 +60,4 @@ ms.lasthandoff: 08/09/2017
  [Geräteinformationseinstellungen in Reporting Services](http://go.microsoft.com/fwlink/?LinkId=102515)  
   
   
+

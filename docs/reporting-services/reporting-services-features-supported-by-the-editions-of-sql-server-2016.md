@@ -15,6 +15,7 @@ caps.latest.revision: 3
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ac4f1eeab19ac0a7468c62ac3fa8dfcc33b12f45
@@ -113,3 +114,4 @@ Um zur Tabelle für eine SQL Server-Technologie zu navigieren, klicken Sie auf d
 [Installation für SQLServer 2016](../database-engine/install-windows/installation-for-sql-server-2016.md) 
 
 Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+

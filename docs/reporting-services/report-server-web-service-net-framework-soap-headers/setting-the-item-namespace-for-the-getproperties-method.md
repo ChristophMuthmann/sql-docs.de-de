@@ -21,6 +21,7 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 6c47c200899dbd25c9685817ea81a391364739c6
@@ -131,3 +132,4 @@ class Sample
  [Verwenden von Reporting Services-SOAP-Header](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
   
   
+

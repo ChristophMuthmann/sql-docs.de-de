@@ -21,6 +21,7 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: ac54345b14ba3ff84a755e0ce4e8b1c4e9acab13
@@ -47,3 +48,4 @@ Mithilfe der IdeliveryExtension-Schnittstelle können auch Clients Benutzerdaten
  [Reporting Services-Erweiterungsbibliothek](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
+

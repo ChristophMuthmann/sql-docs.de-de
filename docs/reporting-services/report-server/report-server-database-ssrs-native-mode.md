@@ -22,7 +22,8 @@ caps.latest.revision: 48
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b580d66daa70a5c358a458a6c8f939f5bdabce48
 ms.contentlocale: de-de
@@ -78,3 +79,4 @@ ms.lasthandoff: 08/09/2017
  [Sicherungs- und Wiederherstellungsvorgänge für Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)  
   
   
+

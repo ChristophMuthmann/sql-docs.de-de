@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1356d575f58eb36d00f52bcbac1483ce902b1954
 ms.contentlocale: de-de
@@ -31,11 +32,11 @@ ms.lasthandoff: 08/09/2017
   
  Sie können die Werte und die Status von Indikatoren aktualisieren. Weitere Informationen finden Sie in folgenden Themen:  
   
--   [Ändern von Indikatorsymbolen und Indikatorsätzen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [Ändern von Indikatorsymbolen und Indikatorsätzen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [Festlegen und Konfigurieren von Maßeinheiten &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [Festlegen und Konfigurieren von Maßeinheiten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [Festlegen der Synchronisierungsbereich &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [Festlegen des Synchronisierungsbereichs &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md)  
   
  Da ein Indikator im Messgerätebereich positioniert wird, müssen Sie den Indikator statt des Bereichs auswählen, wenn Sie den Indikator mit dem Dialogfeld **Indikatoreigenschaften** oder dem Bereich **Eigenschaften** konfigurieren möchten. Die folgende Abbildung enthält einen ausgewählten Indikator in dessen Messgerätbereich.  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-add-an-indicator-to-a-table-or-matrix"></a>So fügen Sie einer Tabelle oder einer Matrix einen Indikator hinzu  
   
-1.  Öffnen Sie einen vorhandenen Bericht, oder erstellen Sie einen neuen Bericht, der eine Tabelle und eine Matrix mit den anzuzeigenden Daten enthält. Weitere Informationen finden Sie unter [Tabellen &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/tables-report-builder-and-ssrs.md) oder [Matrizen](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md).  
+1.  Öffnen Sie einen vorhandenen Bericht, oder erstellen Sie einen neuen Bericht, der eine Tabelle und eine Matrix mit den anzuzeigenden Daten enthält. Weitere Informationen finden Sie unter [Tabellen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md) oder [Matrizen](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md).  
   
 2.  Fügen Sie eine Spalte in die Tabelle oder Matrix ein. Weitere Informationen finden Sie unter [Einfügen oder Löschen einer Spalte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
   
@@ -76,6 +77,7 @@ ms.lasthandoff: 08/09/2017
 2.  Klicken Sie auf **Löschen**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Indikatoren &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
+ [Indikatoren &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
+

@@ -23,6 +23,7 @@ caps.latest.revision: 26
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 2a0c98cd0c45fc7121a93a51e623dcd2bf36d8bf
@@ -95,3 +96,4 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportServiceAuthenticati
  [Erstellen von Anwendungen mit dem Webdienst und .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
   
   
+

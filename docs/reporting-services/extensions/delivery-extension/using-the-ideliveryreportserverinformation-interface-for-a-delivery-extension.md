@@ -20,6 +20,7 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: caebc70ede4475cef103d0d76598ea3125231252
@@ -61,3 +62,4 @@ foreach (Microsoft.ReportingServices.Interfaces.Extension e in ReportServerInfor
  [Reporting Services-Erweiterungsbibliothek](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
+

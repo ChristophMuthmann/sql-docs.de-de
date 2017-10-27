@@ -24,6 +24,7 @@ caps.latest.revision: 36
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 3a367a9ca2d9a8c9b51d0b55a9fedc006a6fa621
@@ -120,3 +121,4 @@ class Sample
  [Berichtsserver-Webdienst](../../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   
+

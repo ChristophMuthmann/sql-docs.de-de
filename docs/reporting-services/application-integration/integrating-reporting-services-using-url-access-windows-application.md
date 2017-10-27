@@ -23,6 +23,7 @@ caps.latest.revision: 48
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 782be214cb491e1fdddf6ff7d45ac377fcfbf8a4
@@ -128,3 +129,4 @@ webBrowser1.Navigate(url);
  [URL-Zugriff &#40; SSRS &#41;](../../reporting-services/url-access-ssrs.md)  
   
   
+

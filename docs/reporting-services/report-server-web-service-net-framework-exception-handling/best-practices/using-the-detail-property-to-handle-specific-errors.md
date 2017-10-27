@@ -21,6 +21,7 @@ caps.latest.revision: 30
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: cbbaf57ce4726bbb16c8cb722f50ac186fe59d81
@@ -95,3 +96,4 @@ Console.WriteLine(ex.Detail["ErrorCode"].InnerXml);
  [Tabelle für SoapException-Fehler](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/soapexception-errors-table.md)  
   
   
+

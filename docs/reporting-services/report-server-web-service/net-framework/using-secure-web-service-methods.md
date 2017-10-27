@@ -22,6 +22,7 @@ caps.latest.revision: 36
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 1222a4223f54eec0f6083790da4d0afebf353ec9
@@ -44,3 +45,4 @@ ms.lasthandoff: 08/12/2017
  [Berichtsserver-Webdienst](../../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   
+

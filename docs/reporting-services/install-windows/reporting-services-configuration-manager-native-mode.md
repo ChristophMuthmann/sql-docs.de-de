@@ -17,6 +17,7 @@ helpviewer_keywords:
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
 ms.openlocfilehash: c9aa72267460ed2d52ae3e2d42a73071b4d7a0f3
@@ -102,3 +103,4 @@ Die Reporting Services-Konfigurations-Manager wird automatisch installiert, bei 
 [Konfigurieren und Verwalten eines Berichtsservers](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+

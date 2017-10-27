@@ -15,7 +15,8 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ebfb5781c80cac35936dfdb9ad2e434ee5ca7f9e
 ms.contentlocale: de-de
@@ -66,3 +67,4 @@ Enthalten vom Berichts-Generator verwendete Ordner benutzerdefinierte Dateien, w
 [Installieren des Berichts-Generators](../../reporting-services/install-windows/install-report-builder.md)  
 
 Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -17,7 +17,8 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 38dd786c1f1caabb5e949784bb4c9dd98eab7281
 ms.contentlocale: de-de
@@ -27,7 +28,7 @@ ms.lasthandoff: 08/09/2017
 # <a name="set-default-options-for-report-builder"></a>Set default options for Report Builder
   Im Berichts-Generator können Sie zahlreiche nützliche Standardeinstellungen zum Vereinfachen und Beschleunigen der Berichtserstellung festlegen.  Wenn Sie beispielsweise den Standardberichtsserver festlegen oder ändern, speichert der Berichts-Generator Ihre Berichte automatisch auf dem gleichen Berichtsserver, sofern nicht anders angegeben.  
   
--   Klicken Sie im Berichts-Generator auf **Datei** > **Optionen**.  
+-   Klicken Sie im Berichts-Generator auf **Datei**  >  **Optionen**.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
  **Standardmäßig diesen Berichtsserver oder diese SharePoint-Website verwenden**  
@@ -56,3 +57,4 @@ ms.lasthandoff: 08/09/2017
  [Starten des Berichts-Generators](../../reporting-services/report-builder/start-report-builder.md)  
   
   
+

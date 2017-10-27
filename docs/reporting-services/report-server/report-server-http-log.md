@@ -17,7 +17,8 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bea168c6ad15828b44ea5f77f5c7bd3fa05cfb9d
 ms.contentlocale: de-de
@@ -89,3 +90,4 @@ ms.lasthandoff: 08/09/2017
  [Fehler und Ereignisreferenz &#40; Reporting Services &#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   
+
