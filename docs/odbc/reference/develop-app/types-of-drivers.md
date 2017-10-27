@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 464ba066af26c84c35f178b1a008d2e10a852119
@@ -66,3 +67,4 @@ ODBC-Treiber können wie folgt klassifiziert werden:
   
 > [!NOTE]  
 >  16-Bit-ODBC-Treiber funktioniert nicht direkt mit der ODBC-3. *x* -Treiber-Manager. Es ist jedoch möglich, dass 16-Bit-Treiber zum Arbeiten mit der 2.0-ODBC-Treiber-Manager das anschließend bis zu 3 Thunks. *x* -Treiber-Manager.
+

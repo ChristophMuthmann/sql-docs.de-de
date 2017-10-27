@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3604d435a8a95e3690d335e25e1a94b3bbb0b1a1
@@ -289,3 +290,4 @@ WHERE customer.cust_id NOT IN ;
  [INSERT - SQL](../../odbc/microsoft/insert-sql-command.md)   
  [SET ANSI](../../odbc/microsoft/set-ansi-command.md)   
  [LEGEN SIE GENAUE](../../odbc/microsoft/set-exact-command.md)
+

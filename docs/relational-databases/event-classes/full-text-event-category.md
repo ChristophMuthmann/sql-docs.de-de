@@ -18,6 +18,7 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b04c690823152b67cffb835a2056c3d9c645bcc8
@@ -37,3 +38,4 @@ ms.lasthandoff: 06/22/2017
 |[FT:Crawl Stopped-Ereignisklasse](../../relational-databases/event-classes/ft-crawl-stopped-event-class.md)|Gibt an, dass ein Volltextdurchforsten angehalten wurde.|  
   
   
+

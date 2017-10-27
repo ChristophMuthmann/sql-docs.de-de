@@ -20,6 +20,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 425821e0de310c28f18796cb74308600cd91476f
@@ -43,3 +44,4 @@ Sie können den Microsoft® Visual FoxPro® ODBC Driver für den Datenzugriff in
  Weitere Informationen zum Herstellen einer Verbindung mit einer Datenquelle finden Sie unter [eine Visual FoxPro-Datenquelle hinzufügen](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md).  
   
  Informationen zum Herunterladen des Treibers finden Sie unter [der Visual FoxPro-ODBC-Treiber-Download-Website](http://go.microsoft.com/fwlink/?LinkId=121318).
+

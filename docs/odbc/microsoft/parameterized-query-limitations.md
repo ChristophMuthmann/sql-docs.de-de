@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 604bde687e1e497ab82bd1ffb61e80e61dd58613
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="parameterized-query-limitations"></a>Parametrisierte Abfrage Einschränkungen
 Wenn der Microsoft Access-Treiber verwendet wird, eine parametrisierte Abfrage kann aufgerufen werden mithilfe der folgenden Syntax: Rufen Sie *Abfragename* [(*Parameter*[,*Parameter*]...)].
+

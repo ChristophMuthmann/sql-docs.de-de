@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0c2ed3fb1d6a68737a894663e1b5c841d6cb1041
@@ -48,3 +49,4 @@ Die C-Datentyp eines Puffers wird von der Anwendung angegeben. Mit einer einzige
     ```  
   
  Der Treiber verwendet die C-Datentyp zum Interpretieren der Daten im Puffer.
+

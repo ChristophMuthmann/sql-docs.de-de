@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 775c3d0464443d11b833a230591b94293343086b
@@ -101,3 +102,4 @@ In den Tabellen in diesem Anhang werden wie die ODBC-Funktionen Übergang von de
 -   [Anweisung Übergänge](../../../odbc/reference/appendixes/statement-transitions.md)  
   
 -   [Der Deskriptor Übergänge](../../../odbc/reference/appendixes/descriptor-transitions.md)
+

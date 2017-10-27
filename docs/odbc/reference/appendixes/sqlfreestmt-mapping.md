@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: df3cfba17f19074fbe00f33ef7fba098a4fe8184
@@ -38,3 +39,4 @@ SQLFreeHandle(SQL_HANDLE_STMT,Handle)
 ```  
   
  mit der *behandeln* Argument festgelegt wird, auf den Wert in *Befehls beschäftigt*.
+

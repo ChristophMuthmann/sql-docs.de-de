@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d13cad1b6946e1c446faa77a1a193752c05da702
@@ -34,3 +35,4 @@ ODBC-Treiber Anwendungszugriff gewähren, die auf verschiedene Datenquellen. Jed
 -   [Übereinstimmungsebenen-Schnittstelle](../../../odbc/reference/develop-app/interface-conformance-levels.md)  
   
 -   [SQL-Übereinstimmungsebenen](../../../odbc/reference/develop-app/sql-conformance-levels.md)
+

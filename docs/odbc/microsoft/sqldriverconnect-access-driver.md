@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0041199b1168bdd639f88d4c13663b73cb54efd7
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
 |Treiber|Schlüsselwörter, die erforderlich sind|Beispiele|  
 |------------|-----------------------|--------------|  
 |Microsoft Access|DBQ-Treiber|Driver = {Microsoft Access-Treiber (*.mdb)}; DBQ = c:\\\temp\\\sample.mdb|
+

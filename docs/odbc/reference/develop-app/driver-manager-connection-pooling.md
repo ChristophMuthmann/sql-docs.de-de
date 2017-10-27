@@ -19,6 +19,7 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b589f7aa0e110767b7dca9be7aa82edee486b058
@@ -89,3 +90,4 @@ Verbindungspooling ermöglicht einer Anwendung eine Verbindung aus einem Pool vo
  [Herstellen einer Verbindung mit einer Quelle oder Treiber](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [Entwickeln einen ODBC-Treiber](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [In der Microsoft Data Access Components Pooling](http://go.microsoft.com/fwlink/?LinkId=120776)
+

@@ -20,6 +20,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 26835fa277391f359d628ec25c03d38364e398e7
@@ -84,3 +85,4 @@ ODBC-Anwendungen können wie folgt klassifiziert werden:
     -   Verwendet keine neuen Funktionen in zukünftigen Versionen von ODBC nur innerhalb der bedingten Code.  
   
     -   Bedingten Code zur Behandlung von Änderungen am Systemverhalten verfügt über eingeschränkten oder hat sich selbst um eine frühere Version von ODBC-Anwendung werden registriert.
+

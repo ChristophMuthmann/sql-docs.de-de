@@ -127,7 +127,7 @@ ms.lasthandoff: 09/01/2017
   
  Der Server generiert den **KeyNotFound** -Fehler während der Partitionsverarbeitung, wenn eine Tabelle in einem Faktendatensatz einen Fremdschlüsselwert enthält, der Fremdschlüssel aber keinen entsprechenden Datensatz in einer verknüpften Dimensionstabelle aufweist. Dieser Fehler tritt auch bei der Verarbeitung von verknüpften oder Schneeflocken-Dimensionstabellen auf, wenn von einem Datensatz in einer Dimension ein Fremdschlüssel angegeben wird, der in der verknüpften Dimension nicht vorhanden ist.  
   
- Wenn ein **KeyNotFound** -Fehler auftritt, wird der problematische Datensatz dem unbekannten Element zugeordnet. Dieses Verhalten wird durch die Schlüsselaktion ****gesteuert, die auf **ConvertToUnknown**festgelegt wurde. Das heißt, Sie können die zugeordneten Datensätze anzeigen und näher untersuchen.  
+ Wenn ein **KeyNotFound** -Fehler auftritt, wird der problematische Datensatz dem unbekannten Element zugeordnet. Dieses Verhalten wird durch die **Schlüsselaktion** gesteuert, die auf **ConvertToUnknown**festgelegt wurde. Das heißt, Sie können die zugeordneten Datensätze anzeigen und näher untersuchen.  
   
 ##  <a name="bkmk_nullfact"></a> NULL-Fremdschlüssel in einer Faktentabelle (KeyNotFound)  
  Ein NULL-Wert in einer Fremdschlüsselspalte einer Faktentabelle wird standardmäßig in 0 konvertiert. In der Annahme, dass 0 kein gültiger Fremdschlüsselwert ist, wird der **KeyNotFound** -Fehler protokolliert und auf die Fehlergrenze, die standardmäßig 0 ist, angerechnet.  

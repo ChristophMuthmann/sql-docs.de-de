@@ -23,6 +23,7 @@ caps.latest.revision: 26
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
 ms.openlocfilehash: 776af20648edd32950f222469b1b0f469a12a925

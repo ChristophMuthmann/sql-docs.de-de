@@ -18,6 +18,7 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9462e6b029f56ef17f9bb4a9bdf15606180a122a
@@ -63,3 +64,4 @@ ms.lasthandoff: 06/22/2017
  [Erstellen von Skripts für die Replikation](../../relational-databases/replication/scripting-replication.md)  
   
   
+

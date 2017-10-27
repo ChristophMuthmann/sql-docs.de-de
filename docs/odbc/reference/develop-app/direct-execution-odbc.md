@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bdc332f2541fd8537fbd924e1da9ea631d8d3189
@@ -57,3 +58,4 @@ SQLExecDirect(hstmt, SQLStatement, SQL_NTS);
     -   Sendet die Anweisung und die konvertierten Parameterwerte an die Datenquelle für die Ausführung an.  
   
     -   Gibt Fehlermeldungen zurück. Dazu gehören Sequenzierung oder Status-Diagnose z. B. SQLSTATE 24000 (Ungültiger Cursorstatus), syntaktische Fehler wie z. B. SQLSTATE 42000 (Syntaxfehler oder zugriffsverletzung) und semantische Fehler, z. B. SQLSTATE 42S02 (Basis Tabelle oder-Sicht wurde nicht gefunden).
+

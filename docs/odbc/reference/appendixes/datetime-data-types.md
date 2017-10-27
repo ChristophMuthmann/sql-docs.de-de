@@ -25,6 +25,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 92ab5f52282fddf89c48bef73fa7817684ae3496
@@ -44,3 +45,4 @@ In ODBC 3*.x*, die Bezeichner für das Datum, Zeit und Zeitstempel SQL-Datentype
  Bei der Anforderung von alle Datentypen in einem Aufruf von **SQLGetTypeInfo**, die von der Funktion zurückgegebene Resultset enthält sowohl SQL_TYPE_DATE, SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP gemäß Definition in ODBC 3*.x*, und SQL_DATE, SQL_TIME und SQL_TIMESTAMP gemäß Definition in ODBC 2.*x*.  
   
  Aufgrund wie die ODBC 3*.x* -Treiber-Manager führt die Zuordnung der Date, Time und Timestamp-Datentypen, ODBC 3*.x* Treiber müssen nur erkennen **#defines** von 91, 92, und 93 für Datum, Uhrzeit und Timestamp-C-Datentypen eingegeben wird, der *TargetType* Argumente des **SQLBindCol** und **SQLGetData** oder * ValueType* Argument **SQLBindParameter**, und Sie müssen nur erkennen **#defines** von 91, 92 und 93 für das Datum, Uhrzeit und Timestamp SQL-Datentypen in der eingegeben*ParameterType* Argument **SQLBindParameter** oder *DataType* Argument **SQLGetTypeInfo**. Weitere Informationen finden Sie unter [Änderungen des Datentyps "DateTime"](../../../odbc/reference/develop-app/datetime-data-type-changes.md).
+

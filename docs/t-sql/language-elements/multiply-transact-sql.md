@@ -77,13 +77,13 @@ ORDER BY lastName ASC;
   
 ## <a name="see-also"></a>Siehe auch  
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Ausdrücke & #40; Transact-SQL & #41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Ausdrücke &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operatoren & #40; Transact-SQL & #41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [WOBEI & #40; Transact-SQL & #41;](../../t-sql/queries/where-transact-sql.md)   
- [& #42; = & #40; Multiplizieren Sie gleich & #41; & #40; Transact-SQL & #41;](../../t-sql/language-elements/multiply-equals-transact-sql.md)   
- [Zusammengesetzte Operatoren & #40; Transact-SQL & #41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [WOBEI &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
+ [&#42; = &#40; Multiplizieren Sie gleich &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/multiply-equals-transact-sql.md)   
+ [Zusammengesetzte Operatoren &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

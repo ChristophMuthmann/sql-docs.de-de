@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 322978a4006460fc61a438c6aff5ed8eca0c6c93
@@ -51,3 +52,4 @@ Die erste Aufgabe für jede ODBC-Anwendung ist der Treiber-Manager zu laden. Die
  Wenn **SQLFreeHandle** aufgerufen wird, wird der Treiberversionen, die die Struktur zum Speichern von Informationen über die Umgebung verwendet. Beachten Sie, dass **SQLFreeHandle** kann nicht für ein Umgebungshandle erst aufgerufen werden, nachdem alle Verbindungshandles auf diesem Umgebungshandle freigegeben wurden.  
   
  Weitere Informationen über das Umgebungshandle finden Sie unter [Umgebung behandelt](../../../odbc/reference/develop-app/environment-handles.md).
+

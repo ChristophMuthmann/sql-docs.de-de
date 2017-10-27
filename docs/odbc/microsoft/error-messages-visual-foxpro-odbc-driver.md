@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e561aab3359acb1f236aea38e76da33289e630ef
@@ -58,3 +59,4 @@ Wenn ein Fehler auftritt, gibt der Visual FoxPro-Treiber die folgende Informatio
  Beispielsweise kann ein der Visual FoxPro-ODBC-Treiber nicht die Datei nützlich finden konnte, die folgende Fehlermeldung zurück:  
   
  "[*Microsoft*] [*ODBC-Treiber für Visual FoxPro*] Datei"nützlich"ist nicht vorhanden."
+

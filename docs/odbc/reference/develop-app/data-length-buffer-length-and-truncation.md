@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 616dc403fdd23f3233bde4a5db19dd58b6d94cf1
@@ -37,3 +38,4 @@ Die *Datenlänge* ist die Bytelänge der Daten, die in der Anwendung Datenpuffer
  Nehmen Sie beispielsweise an, dass eine Anwendung für einen Puffer von Binärdaten 50 Bytes belegt. Wenn der Treiber 10 Bytes aus Binärdaten zurückgegeben hat, gibt diese 10 Bytes im Puffer zurück. Die Bytelänge der Daten ist 10, und die Länge in Byte des Puffers ist 50. Wenn der Treiber 60 Bytes aus Binärdaten zurückgegeben wurde, kürzt die Daten auf 50 Bytes, gibt diese Bytes im Puffer und gibt SQL_SUCCESS_WITH_INFO zurück. Die Bytelänge der Daten ist 60 (die Länge vor dem abschneiden), und die Bytelänge des Puffers ist weiterhin 50.  
   
  Für jede Spalte, die abgeschnitten wird, wird ein Diagnosedatensatz erstellt. Da es Zeit für den Treiber, um diese Datensätze zu erstellen und für die Anwendung für die Verarbeitung akzeptiert, kann Abschneiden Leistung beeinträchtigt werden. In der Regel kann eine Anwendung dieses Problem vermeiden, indem groß genug Puffer reservieren, obwohl dies nicht möglich, kann bei der Arbeit mit long-Daten. Wenn Daten abgeschnitten, wird die Anwendung kann in einigen Fällen einen größeren Puffer reservieren und müssen Sie die Daten; Dies gilt nicht in allen Fällen. Wenn eine Kürzung auftritt, beim Abrufen der Daten durch Aufrufe von **SQLGetData**, die Anwendung nicht aufrufen muss **SQLGetData** für Daten, die bereits zurückgegeben wurde; Weitere Informationen finden Sie unter [erste Long-Daten](../../../odbc/reference/develop-app/getting-long-data.md).
+

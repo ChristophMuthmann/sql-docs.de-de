@@ -21,6 +21,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5f8a5d949127e7ad87866a0272fbd285fe12ceed
@@ -59,3 +60,4 @@ DSN = MyDataSource
   
 ## <a name="see-also"></a>Siehe auch  
  [http://support.Microsoft.com/kb/165866](http://support.microsoft.com/kb/165866)
+

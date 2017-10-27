@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 50b8d192a0487a921e75a05145511441dc98b53b
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
 Der Visual FoxPro-ODBC-Treiber unterstützt die einfache Lesezeichen. Beim Aufruf [SQLGetInfo](../../odbc/microsoft/sqlgetinfo-visual-foxpro-odbc-driver.md) mit der SQL_BOOKMARK_PERSISTENCE *Infotyp*, SQL_BP_SCROLL zurückgegeben wird.  
   
  Weitere Informationen zu Lesezeichen, finden Sie unter [Lesezeichen (ODBC)](../../odbc/reference/develop-app/bookmarks-odbc.md).
+

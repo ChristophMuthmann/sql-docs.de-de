@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c94efa07d23249c9fc3e9d661998419b68f7b624
@@ -71,3 +72,4 @@ SET EXACT ON | OFF
   
 ## <a name="see-also"></a>Siehe auch  
  [SET ANSI-Befehl](../../odbc/microsoft/set-ansi-command.md)
+

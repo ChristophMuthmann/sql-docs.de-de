@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6935d0e94b931451aba5940db60877c8443df7c4
@@ -51,3 +52,4 @@ Einige Argumente im Katalog-Funktionen, wie die *TableName* Argument in **SQLTab
 >  ODBC-2. *x* Treiber unterstützen keine Suchmuster in der *CatalogName* Argument in **SQLTables**. ODBC 3.*.x* Treiber akzeptiert Suchmustern in diesem Argument aus, wenn die SQL_ATTR_ ODBC_VERSION Umgebung-Attribut auf SQL_OV_ODBC3 festgelegt ist; sie akzeptieren keine Suchmustern in diesem Argument, wenn er auf SQL_OV_ODBC2 festgelegt ist.  
   
  Einen null-Zeiger an eine Suche Pattern-Argument übergeben schränkt die Suche für dieses Argument nicht; d. h. sind ein null-Zeiger und die Suche Muster% (Zeichen) Äquivalent. Jedoch eine leere Muster suchen – d. h. ein gültiger Zeiger auf eine Zeichenfolge der Länge 0 (null) – entspricht, nur die leere Zeichenfolge ("").
+

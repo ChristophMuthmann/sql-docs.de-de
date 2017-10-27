@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fba2ffdd2b58deced57d047214e3d0fd5f579545
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="where-current-of-clause-limitations"></a>Auf dem aktuellen Klausel EINSCHRÄNKUNGEN
 Wird nicht unterstützt.
+

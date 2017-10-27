@@ -24,6 +24,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3b1ee296ea292be7287c2cd4a8e93c9e33cb04bb
@@ -53,3 +54,4 @@ DSN=XYZ Corp;
  Nachdem der Benutzer eine Datenquelle ausgewählt hat, wird der Treiber-Manager eine Verbindungszeichenfolge angeben, die Datenquelle erstellt und übergibt sie an den Treiber. Der Treiber kann dann die Benutzer für zusätzliche Informationen auffordern benötigten.  
   
  Die Bedingungen, unter dem der Treiber wird der Benutzer aufgefordert, die von gesteuert werden die *DriverCompletion* flag; es gibt Optionen, um immer eine Aufforderung, fordert bei Bedarf oder nie aufgefordert. Eine vollständige Beschreibung dieses Flags, finden Sie unter der [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) funktionsbeschreibung.
+

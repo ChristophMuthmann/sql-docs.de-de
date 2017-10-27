@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5852edbad43e4200a52d03d6ea2d9baae88d4a21
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="batch-processing"></a>Batchverarbeitung
 Unterstützung für Batches von SQL-Anweisungen ist nicht weit verbreitet ist, damit interoperable Anwendungen ausführen können sie bedingte oder gar nicht verwendet werden soll. Weitere Informationen finden Sie unter [Batches ausführen](../../../odbc/reference/develop-app/executing-batches.md).
+

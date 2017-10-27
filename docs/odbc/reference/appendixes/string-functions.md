@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1a9afffd67b839b36e663404048ac741e068b015
@@ -63,3 +64,4 @@ Die folgende Tabelle enthält die Funktionen zur Zeichenfolgenmanipulation. Eine
 |**Speicherplatz (** *Anzahl* **)** (ODBC 2.0)|Gibt eine Zeichenfolge bestehend aus *Anzahl* Leerzeichen.|  
 |**SUBSTRING (** *String_exp*, *starten*, Länge**)** (ODBC 1.0)|Gibt eine Zeichenfolge, die abgeleitet ist *String_exp*, beginnend an der Position des Zeichens, angegeben durch *starten* für *Länge* Zeichen.|  
 |**UCASE (** *String_exp* **)** (ODBC 1.0)|Gibt eine Zeichenfolge in gleich *String_exp*, mit der alle Kleinbuchstaben in Großbuchstaben konvertiert.|
+

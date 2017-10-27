@@ -23,6 +23,7 @@ caps.latest.revision: 27
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d23b44d09b5b1b38a1020ba9a04388f92119c28d
@@ -81,3 +82,4 @@ ms.lasthandoff: 06/22/2017
      Wählen Sie die **is_date_correlation_view** -Spalte der [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md) -Katalogsicht aus, um zu bestimmen, ob eine Sicht auf Korrelationsstatistiken basiert.  
   
   
+

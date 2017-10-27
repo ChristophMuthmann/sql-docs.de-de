@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6bdf35fb9c9b7b4688aa7f5bf4173b2a6a9eefb5
@@ -45,3 +46,4 @@ Sie können in einer Visual FoxPro-Datenbank in eine Microsoft Access-Datenbank 
  Microsoft Access können jetzt um die Daten in den importierten Visual FoxPro-Tabellen zu bearbeiten. Die zu importierenden Daten ist eine Momentaufnahme der Daten in der Visual FoxPro gespeichert. Änderungen auf die importierten Daten werden nicht in der Visual FoxPro-Datenquelle gesendet.  
   
  Wenn Sie Änderungen möchten, stellen Sie in Microsoft Access zum Ändern der Daten in der Visual FoxPro-Datenquelle finden Sie unter [Abfragen und Aktualisieren von Visual FoxPro-Daten aus Microsoft Access](../../odbc/microsoft/querying-and-updating-visual-foxpro-data-from-microsoft-access.md).
+

@@ -17,6 +17,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d35585ec95bdfed62c527dfe004132c7454e5243
@@ -67,3 +68,4 @@ ms.lasthandoff: 09/09/2017
 |ODBC|16-Bit-Treiber-Manager|  
 |Die Datei ODBCINST.dll|16-Bit-Installationsprogramm DLL|  
 |Odbcadm.exe|16-Bit-ODBC-Administratorprogramm|
+

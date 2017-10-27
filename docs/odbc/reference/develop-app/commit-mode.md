@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e0b385a95b8b228e00dedcdb8a078b2c9cadb85c
@@ -35,3 +36,4 @@ Transaktionen in ODBC kann in einem von zwei Modi: Autocommit-Modus oder im Manu
 -   [Manualcommit-Modus](../../../odbc/reference/develop-app/manual-commit-mode.md)  
   
 -   [Durch Festlegen des Commitmodus](../../../odbc/reference/develop-app/setting-the-commit-mode.md)
+

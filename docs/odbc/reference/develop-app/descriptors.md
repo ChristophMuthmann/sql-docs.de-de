@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8754e568c166113a0812878ef8bc91a196776100
@@ -45,3 +46,4 @@ Eine Deskriptorhandles bezieht sich auf eine Datenstruktur, die Informationen zu
 -   [Zuordnen und befreien Deskriptoren](../../../odbc/reference/develop-app/allocating-and-freeing-descriptors.md)  
   
 -   [Abrufen und Festlegen von Deskriptorfelder](../../../odbc/reference/develop-app/getting-and-setting-descriptor-fields.md)
+

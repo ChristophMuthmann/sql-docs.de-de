@@ -16,6 +16,7 @@ caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1d4237eddad4847840d16440fbd4cb0940a61d40
@@ -300,3 +301,4 @@ BOOL AsyncCommit ()
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausführen von ODBC-Anweisungen](../../../odbc/reference/develop-app/executing-statements-odbc.md)
+

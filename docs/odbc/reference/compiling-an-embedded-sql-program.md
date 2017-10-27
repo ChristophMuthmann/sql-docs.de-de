@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b4914a0f7c426f8409c53835e84ff26cecca94ba
@@ -46,3 +47,4 @@ Da eine embedded SQL-Programm eine Mischung aus SQL- und Host-sprachanweisungen 
 5.  Das Datenbank-Anforderung-Modul generiert, die für den vorkompilierten wird mit einem Hilfsprogramm der speziellen Bindung gesendet werden. Dieses Dienstprogramm überprüft die SQL-Anweisungen, analysiert, überprüft hat, und optimiert werden und anschließend ein Plans für die for each-Anweisung erzeugt. Das Ergebnis ist eine kombinierte Zugriffsplan für das gesamte Programm, das eine ausführbare Version der eingebetteten SQL-Anweisungen darstellt. Das Hilfsprogramm Bindung speichert den Plan in der Datenbank, in der Regel der Name des Anwendungsprogramms, die sie verwenden zuweisen. Gibt an, ob dieser Schritt zur Kompilierzeit oder zur Laufzeit stattfindet, hängt das DBMS ab.  
   
  Beachten Sie, die die Schritten zum Kompilieren eines eingebetteten SQL-Programms lehnt sich eng mit den zuvor beschriebenen Schritten korrelieren [eine SQL-Anweisung verarbeiten](../../odbc/reference/processing-a-sql-statement.md). Insbesondere Beachten Sie, dass der vorkompilierten die SQL-Anweisungen aus den Sprachcode der Host trennt, und die Bindung Hilfsprogramm analysiert und überprüft die SQL-Anweisungen und erstellt die Zugriffspläne. Im DBMS-Systeme, in denen Schritt 5 zum Zeitpunkt der Kompilierung stattfindet, werden die ersten vier Schritte eine SQL-Anweisung zu verarbeiten zum Zeitpunkt der Kompilierung während der letzte Schritt (Ausführung) zur Laufzeit stattfindet. Dies hat die Auswirkungen bei der Ausführung von Abfragen in solchen DBMS sehr schnell.
+

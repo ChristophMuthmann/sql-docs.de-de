@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7204f0e0185373d88606fb01a5d3382a23dd91a1
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
  In der Visual FoxPro werden die Datensätze in einer Tabelle gespeichert. Jede Zeile einer Tabelle stellt einen Datensatz, und die Spalten der Tabelle dar, die Felder des Datensatzes. Jedes Visual FoxPro-Tabelle wird in einer eigenen Datei mit einer DBF-Erweiterung gespeichert. Visual FoxPro-Tabellen können eine Datenbank zugeordnet werden.  
   
  FoxPro Version 2. *x* Tabellen nicht mit einer Datenbank verknüpft sind.
+

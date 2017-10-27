@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9a8464fb7ff4e971c1d67d270ffa021d0dca1910
@@ -56,3 +57,4 @@ Eine typische DBMS kann Benutzer speichern, zugreifen und Ändern von Daten in e
 -   [SQL-Module](../../odbc/reference/sql-modules.md)  
   
 -   [Call-Level-Schnittstellen](../../odbc/reference/call-level-interfaces.md)
+

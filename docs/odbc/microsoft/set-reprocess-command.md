@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 560d6b98c27cefe438e99e2948decaded827e618
@@ -58,3 +59,4 @@ SET REPROCESS TO nAttempts [SECONDS] | TO AUTOMATIC
   
 ## <a name="remarks"></a>Hinweise  
  Der erste Versuch, einen Datensatz oder eine Datei zu Sperren nicht immer erfolgreich. In vielen Fällen ist ein Datensatz oder eine Datei von einem anderen Benutzer im Netzwerk gesperrt. Legen Sie erneut VERARBEITEN bestimmt, ob es sich bei Visual FoxPro macht zusätzliche versucht Zustandsdaten zu Sperren der Datensätze oder eine Datei, wenn der erste Versuch nicht erfolgreich ist. Sie können entweder Häufigkeit angeben, weitere Versuche werden oder für wie lange die Versuche gestellt werden. Eine ON ERROR-Routine wirkt sich auf wie fehlgeschlagenen Sperre Versuche behandelt werden.
+

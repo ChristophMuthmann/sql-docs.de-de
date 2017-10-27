@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d17758711dd0e4e1590a3b4176829d9709a5dfd0
@@ -51,3 +52,4 @@ Nachdem das grundlegende Maß an Interoperabilität bekannt ist, müssen die Dat
 -   **Unterstützen Sie mehrere Abfragen nur, wenn der Treiber der Fall ist.** Nach dem Herstellen einer Verbindung, um einen Treiber, überprüft die Anwendung die Anzahl der aktiven Anweisungen. Die Anwendung kann der Benutzer eine neue Anweisung gestartet wird, wenn bereits einer nur aktiviert, wenn der Treiber mehrere aktive Anweisungen unterstützt. Die Anwendung verfügt über höhere Funktionalität und Interoperabilität, jedoch ist schwieriger zu implementieren.  
   
 -   **Immer unterstützen Sie mehrere Abfragen zu und zu emulieren Sie, sie bei Bedarf.** Nach dem Herstellen einer Verbindung, um einen Treiber, überprüft die Anwendung die Anzahl der aktiven Anweisungen. Die Anwendung immer ermöglicht dem Benutzer eine neue Anweisung zu starten, wenn eine bereits aktiv ist. Wenn der Treiber nur eine aktive Anweisung unterstützt, wird die Anwendung wird eine zusätzliche Verbindung zu diesen Treiber geöffnet, und die neue Anweisung für diese Verbindung ausgeführt. Die Anwendung verfügt über sämtliche Funktionen und hohe Interoperabilität, jedoch ist schwieriger zu implementieren.
+

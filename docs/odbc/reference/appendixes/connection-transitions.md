@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8af5cd175cdd9ab7d96cdb141bcd0a6b6100ea80
@@ -304,3 +305,4 @@ ODBC-Verbindungen werden die folgenden Status haben.
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Belegt|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(SODASS)|(SODASS)|(SODASS)|(SODASS)|(SODASS)|--|--|
+

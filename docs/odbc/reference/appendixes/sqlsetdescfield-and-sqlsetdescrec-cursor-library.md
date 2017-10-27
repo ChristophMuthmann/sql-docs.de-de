@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ba3d5db821bbbfa287efb811db0ca616b01df244
@@ -69,3 +70,4 @@ ms.lasthandoff: 09/09/2017
  Die Cursorbibliothek unterstützt nicht das SQL_DESC_BIND_TYPE-Feld in einem APD oder ARD ändern, wenn ein Cursor geöffnet ist. Das Feld SQL_DESC_BIND_TYPE kann geändert werden, nur, nachdem der Cursor geschlossen ist, und bevor Sie ein neuer Cursor geöffnet wird. Sind die einzige deskriptorfelder, dass die Cursorbibliothek ändern unterstützt, wenn ein Cursor geöffnet ist, SQL_DESC_ARRAY_STATUS_PTR, SQL_DESC_BIND_OFFSET_PTR SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, SQL_DESC_OCTET_LENGTH_PTR und SQL_DESC_ROWS_PROCESSED_ PTR-WERT.  
   
  Die Cursorbibliothek unterstützt nicht das SQL_DESC_COUNT Feld von der ARD nach dem Ändern **SQLExtendedFetch** oder **SQLFetchScroll** aufgerufen wurde und bevor der Cursor geschlossen wurde.
+

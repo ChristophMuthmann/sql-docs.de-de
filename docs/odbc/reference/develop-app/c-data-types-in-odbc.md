@@ -18,6 +18,7 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 65a5bd882462dbd72c39c751dcfed52c61ab194c
@@ -56,3 +57,4 @@ ODBC definiert die C-Datentypen, die von Anwendungsvariablen und ihre entspreche
   
 ## <a name="see-also"></a>Siehe auch  
  [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md)
+

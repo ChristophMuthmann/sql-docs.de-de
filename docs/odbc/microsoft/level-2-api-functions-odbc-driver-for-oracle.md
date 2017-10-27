@@ -21,6 +21,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: eb35e0e2dde90261e913ffd9ba3dc28e5859e012
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
 |**SQLProcedures**|Gibt eine Liste der Verfahren in der Datenquelle zurück. Für App-Pakete Prozeduren den PROZEDURNAMEN Spalte befindet sich im *packagename.procedurename* Format.<br /><br /> Da Oracle eine Möglichkeit, Paketfunktionen gepackte Prozeduren unterscheiden nicht bereitstellt, kehrt der Treiber SQL_PT_UNKNOWN für die Spalte PROCEDURE_TYPE zurück.|  
 |**SQLSetPos**|Legt die Cursorposition in einem Rowset. Sie können **SQLSetPos** mit **SQLGetData** zum Abrufen von Zeilen aus ungebundene Spalten nach dem Positionieren des Cursors an einer bestimmten Zeile im Rowset. Das Resultset mit hinzugefügten Zeilen *fOption* SQL_ADD werden hinzugefügt, nachdem die letzte Zeile im Resultset.|  
 |**SQLSetScrollOptions**|Legt Optionen für die Steuerung des Verhaltens von Cursor ein Anweisungshandle Befehls beschäftigt zugeordnet. Weitere Informationen finden Sie unter [Cursortyp und Parallelität Kombinationen](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md).|
+

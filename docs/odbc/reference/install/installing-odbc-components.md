@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 383a3a17abb969a57eb2de68b304da4b1bde9a6b
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/09/2017
 -   [Installationskomponenten](../../../odbc/reference/install/installation-components.md)  
   
 -   [Zählen der Verwendung](../../../odbc/reference/install/usage-counting.md)
+

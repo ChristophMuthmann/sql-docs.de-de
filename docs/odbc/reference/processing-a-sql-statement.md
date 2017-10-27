@@ -21,6 +21,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cdd0b22d4e75e6e665dc07fd8e2be5bb2e178548
@@ -46,3 +47,4 @@ Erläutert die Verfahren für die Verwendung von SQL programmgesteuert, ist es e
 5.  Das DBMS führt die Anweisung durch die Zugriffsplan ausführen.  
   
  Die Schritte, die zum Verarbeiten von einer SQL-Anweisung verwendet variieren hinsichtlich der Menge des von Ihnen geforderten Datenbankzugriff und die Zeitspanne, die sie verwenden. Analysieren Sie eine SQL-Anweisung erfordert keinen Zugriff auf die Datenbank und kann sehr schnell erfolgen. Optimierung, andererseits, ist ein sehr CPU-intensiv verarbeiten und erfordert Zugriff auf den Systemkatalog. Für eine komplexe und mehreren Tabellen basierende Abfrage kann der Optimierer Tausende von verschiedenen Methoden zum Ausführen derselben Abfrage durchsuchen. Die Kosten der Ausführung der Abfrage ineffizient ist jedoch so hoch, dass die Zeitdauer, die in der Optimierung mehr als in höhere Geschwindigkeit der abfrageausführung wiederhergestellt wird. Dies ist sogar noch stärker wichtig, wenn die gleichen optimierte Zugriffsplan immer wieder zum Ausführen von Abfragen verwendet werden kann.
+

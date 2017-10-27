@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9c39b299dc2f42fdf1eb51010e7b4fac2bb9bcfd
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Die Cursorbibliothek unterstützt Aufrufen **SQLExtendedFetch** mit einem *FetchOrientation* von sql_fetch_bookmark auf.  
   
  Wenn die Cursorbibliothek verwendet wird, Aufrufe von **SQLExtendedFetch** kann nicht kombiniert werden, mit der Aufrufe von **SQLFetchScroll** oder **SQLFetch**.
+

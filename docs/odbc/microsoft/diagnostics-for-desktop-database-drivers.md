@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 432d311b1f55ff636e8c0b6fedb28509e3d9e6ed
@@ -47,3 +48,4 @@ Alle Fehler und Warnungen nicht oder teilweise ausgecheckt vom Treiber-Manager w
 |SQL_DIAG_SERVER_NAME|Nicht unterstützt|  
 |SQL_DIAG_SQLSTATE|Unterstützt|  
 |SQL_DIAG_SUBCLASS_ORIGIN|Unterstützt|
+

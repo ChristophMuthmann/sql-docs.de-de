@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b0e11fdd0d5d560cfcacd034745f7ed32cf8fca8
@@ -35,3 +36,4 @@ Wenn zwei oder mehr Statusdatensätze zurückgegeben werden, Ihre Rangordnung de
 -   **Warnungen** Statusdatensätze, die beschreiben, Warnungen (01-Klasse) haben die niedrigsten Rang. Wenn zwei oder mehr Datensätze die gleichen warnungsbedingung, Warnung von der Open Group-CLI-Spezifikation definierten SQLSTATEs beschreiben outrank ODBC definiert und treiberdefinierten SQLSTATEs.  
   
  Wenn zwei oder mehr Datensätze mit dem höchsten Rang vorhanden sind, ist nicht definiert, welcher Datensatz des ersten Datensatzes ist. Die Reihenfolge der alle anderen Einträge ist nicht definiert. Insbesondere, da Warnungen vor dem Fehler angezeigt werden können, sollten Anwendungen alle Statusdatensätze überprüfen, wenn eine Funktion einen Wert als SQL_SUCCESS zurückgibt.
+

@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6ef94712b2ee34979937968c0f5ef1008af2ebcc
@@ -37,3 +38,4 @@ Eine der Fragen in die Entwicklung von ODBC wurde welchem Teil der Architektur d
 -   [Standard-Datenbank Zugriff Architekturen](../../odbc/reference/standard-database-access-architectures.md)  
   
 -   [Der ODBC-Lösung](../../odbc/reference/the-odbc-solution.md)
+

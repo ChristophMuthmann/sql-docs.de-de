@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a44ce860b8cd09c89597c0fc8ed55a1ba643e4c3
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Gibt den Namen der zugeordneten Cursor dem angegebenen *Befehls beschäftigt*. **SQLGetCursorName** ist in der Visual FoxPro-ODBC-Treiber-API enthalten, da es ein Bestandteil von Core Level-API-Funktionen ist; es kann nicht zusammen mit anderen API-Funktionen verwendet werden, da der Treiber positionierte Updates nicht unterstützt.  
   
  Weitere Informationen finden Sie unter [SQLGetCursorName](../../odbc/reference/syntax/sqlgetcursorname-function.md) in der *ODBC Programmer's Reference*.
+

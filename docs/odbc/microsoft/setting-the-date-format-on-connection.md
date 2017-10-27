@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 36011b0a1ea6fbb753c2e091a1e74edce498a31b
@@ -37,3 +38,4 @@ conn.Execute "ALTER SESSION SET NLS_DATE_FORMAT = 'YYYY-MM-DD HH:MI:SS' "
 sSql = "INSERT INTO DATETEST VALUES (24,'1988-12-01 10:23:03')"  
 conn.Execute sSql  
 ```
+

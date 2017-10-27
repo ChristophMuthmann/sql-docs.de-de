@@ -23,6 +23,7 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: daec226de4b93ae00997c07e25ba84352c5258e4
 ms.openlocfilehash: 28b5c5dbf4ab85b11818648e2daf62621df64219
@@ -269,3 +270,4 @@ ms.lasthandoff: 08/31/2017
  [Schätzen der Größe einer Datenbank](../../relational-databases/databases/estimate-the-size-of-a-database.md)  
   
   
+

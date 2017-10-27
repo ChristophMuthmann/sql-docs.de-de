@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 234da7bb8519149c78779f7920333338737b394b
@@ -50,3 +51,4 @@ Die vier Typen von bildlauffähigen Cursor werden statische, dynamische, keysetg
 -   [Keysetgesteuerte Cursor](../../../odbc/reference/develop-app/keyset-driven-cursors.md)  
   
 -   [Gemischte Cursor](../../../odbc/reference/develop-app/mixed-cursors.md)
+

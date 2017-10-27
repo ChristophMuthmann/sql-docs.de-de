@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9ac53209063a1204b57e7183501b5901dc8ea248
@@ -33,3 +34,4 @@ Der nächste Schritt ist beim commit der Transaktion, wie in der folgenden Abbil
  Der fünfte Schritt ist das Aufrufen **SQLEndTran** , einen commit oder Rollback der Transaktion. Die Anwendung führt diesen Schritt nur, wenn die Commit-Transaktionsmodus Manualcommit-festlegen; Transaktions-Commit-Modus ist Autocommit-dies die Standardgröße ist die Transaktion automatisch ein Commit ausgeführt, wenn die Anweisung ausgeführt wird. Weitere Informationen finden Sie unter [Transaktionen](../../../odbc/reference/develop-app/transactions-odbc.md).  
   
  Zum Ausführen einer Anweisung in einer neuen Transaktion gibt die Anwendung mit Schritt 3 fort. Um aus der Datenquelle zu trennen, wird Sie mit Schritt 6 die Anwendung fortgesetzt.
+

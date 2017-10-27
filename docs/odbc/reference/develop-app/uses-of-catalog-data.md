@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 61a112f126eb83d40e350c5cc275f28438f15383
@@ -37,3 +38,4 @@ Anwendungen verwenden die Katalogdaten in einer Vielzahl von Möglichkeiten. Es 
      Solche Umgebungen können auch **SQLTables** und **SQLColumns** Listen erstellen über die konnte der Programmierer Auswahl ändern. Diese Umgebungen können auch **SQLPrimaryKeys** und **SQLForeignKeys** automatisch ermitteln und Anzeigen von Beziehungen zwischen ausgewählten Tabellen und verwenden **SQLStatistics** zu bestimmen und indizierte Felder markieren, sodass Programmierer effizientere Abfragen erstellen kann.  
   
 -   **Cursor zu konstruieren.** Eine Anwendung, die Treiber oder die Middleware, die einen bildlauffähigen Cursor-Modul bietet können **SQLSpecialColumns** um zu bestimmen, welche Spalte oder Spalten eine Zeile eindeutig identifiziert. Das Programm erstellen konnte eine *Keyset* , die die Werte dieser Spalten für jede Zeile, die abgerufen wurde. Wenn die Anwendung wieder in die Zeile ein Bildlauf durchgeführt, würden sie diese Werte dann verwenden, zum Abrufen der neuesten Daten für die Zeile. Weitere Informationen zu bildlauffähige Cursor und Keysets, finden Sie unter [bildlauffähige Cursor](../../../odbc/reference/develop-app/scrollable-cursors.md).
+

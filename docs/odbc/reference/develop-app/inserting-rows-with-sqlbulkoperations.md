@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bd79255e4cda68d1fd4d425544702e589f44336b
@@ -39,3 +40,4 @@ Einfügen von Daten mit **SQLBulkOperations** ähnelt dem Aktualisieren von Date
 3.  Aufrufe **SQLBulkOperations** mit der *Vorgang* -Argument auf SQL_ADD festgelegt.  
   
  Nach dem **SQLBulkOperations** zurückgibt, die aktuelle Zeile unverändert ist. Wenn das (0) Lesezeichenspalte gebunden ist, **SQLBulkOperations** gibt das Lesezeichen der eingefügten Zeilen im Rowset Puffer an diese Spalte gebunden.
+

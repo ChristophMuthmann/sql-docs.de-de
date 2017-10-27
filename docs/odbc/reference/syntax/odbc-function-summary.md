@@ -16,6 +16,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9441a955eaa4a9001b7acd655f7753e32f49e68e
@@ -85,3 +86,4 @@ In der folgenden Tabelle listet ODBC-Funktionen, gruppiert nach Typ der Aufgabe,
 ||[SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md)|ODBC|Bricht die Verarbeitung auf eine Anweisung oder die Verbindung ab.|  
 ||[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)|ISO-92|Ein Commit oder Rollback einer Transaktion.|  
 |Beenden einer Verbindung|[SQLDisconnect](../../../odbc/reference/syntax/sqldisconnect-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)|ISO-92<br /><br /> ISO-92|Schließt die Verbindung.<br /><br /> Gibt ein Handle Umgebung, Verbindung, Anweisung oder Deskriptor frei.|
+

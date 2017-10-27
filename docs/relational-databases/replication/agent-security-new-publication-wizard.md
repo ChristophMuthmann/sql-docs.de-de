@@ -16,6 +16,7 @@ caps.latest.revision: 23
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: ffe19ff2c9ae121c8cf78ffd253ce2d44d90e2e9
@@ -66,3 +67,4 @@ ms.lasthandoff: 09/27/2017
  [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   
+

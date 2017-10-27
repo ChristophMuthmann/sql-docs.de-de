@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d3fbe8f4ce9fe9edbb88c7c895311bd9560dc28f
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 ```  
 SQLNET.AUTHENTICATION_SERVICES = (none)  
 ```
+

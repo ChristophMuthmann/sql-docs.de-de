@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9d615371a5bcf305158cb5f29c22a087110f95ac
@@ -106,3 +107,4 @@ In der folgenden Tabelle gibt an, dem Konformitätsgrad jedes Attributs ODBC-Umg
  [2] für Ebene-2-Schnittstelle Konformität muss der Treiber SQL_CONCUR_READ_ONLY und mindestens ein anderer Wert unterstützen.  
   
  [3] für Ebene 1 Schnittstelle Konformität muss der Treiber SQL_CURSOR_FORWARD_ONLY und mindestens ein anderer Wert unterstützen. Für Ebene-2-Schnittstelle Konformität muss der Treiber alle Werte, die in diesem Dokument definierte unterstützen.
+

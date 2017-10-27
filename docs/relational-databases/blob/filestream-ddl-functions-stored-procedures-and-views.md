@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1e466ba3d4cb053cb59959710f3ad4249ea2d349
@@ -69,3 +70,4 @@ ms.lasthandoff: 06/22/2017
 -   [Verwaltete API – SqlFileStream-Klasse](http://go.microsoft.com/fwlink/?LinkId=220875)  
   
   
+

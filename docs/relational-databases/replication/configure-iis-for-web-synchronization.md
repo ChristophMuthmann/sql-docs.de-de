@@ -18,6 +18,7 @@ caps.latest.revision: 88
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: 9555085ef832e4277da89e062aa28872b5eeb4fe
@@ -365,3 +366,4 @@ ms.lasthandoff: 06/22/2017
  [Websynchronisierung konfigurieren](../../relational-databases/replication/configure-web-synchronization.md)  
   
   
+

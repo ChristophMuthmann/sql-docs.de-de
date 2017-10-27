@@ -16,6 +16,7 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9c15f108757b6e644251e897290c98956d379117
@@ -53,3 +54,4 @@ ms.lasthandoff: 06/22/2017
 -   [Dialogfelder für die Replikation in SQL Server Management Studio](../../relational-databases/replication/sql-server-management-studio-replication-dialog-boxes.md)  
   
   
+

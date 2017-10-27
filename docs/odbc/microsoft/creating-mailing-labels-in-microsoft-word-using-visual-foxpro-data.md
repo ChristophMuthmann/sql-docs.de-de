@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1aded6b8187fd2e6c05e61662edc3dce8e1b7b04
@@ -61,3 +62,4 @@ Sie können Visual FoxPro-Daten in einem Microsoft Word für Windows 95 oder Win
 14. Klicken Sie in das Hilfsobjekt Seriendruckelement unter das Zusammenführen der Daten mit dem Dokument zusammenführen aus.  
   
 15. Wählen Sie im Dialogfeld "Merge" die Optionen werden soll, und klicken Sie dann auf Verbinden.
+

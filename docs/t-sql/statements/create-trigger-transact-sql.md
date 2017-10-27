@@ -46,7 +46,7 @@ ms.lasthandoff: 09/01/2017
 
   Erstellt einen DML-, DDL- oder LOGON-Trigger. Ein Trigger ist eine spezielle Art von gespeicherter Prozedur, die automatisch ausgeführt wird, wenn ein Ereignis auf dem Datenbankserver auftritt. DML-Trigger werden ausgeführt, wenn ein Benutzer versucht, Daten mithilfe eines DML-Ereignisses (Data Manipulation Language, Datenbearbeitungssprache) zu ändern. DML-Ereignisse sind INSERT-, UPDATE- oder DELETE-Anweisungen für eine Tabelle oder Sicht. Diese Trigger werden ausgelöst, sobald ein beliebiges gültiges Ereignis ausgelöst wird, unabhängig davon, ob Tabellenzeilen betroffen sind oder nicht. Weitere Informationen finden Sie unter [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
   
- DDL-Trigger werden als Antwort auf eine Vielzahl von Ereignisse Data Definition Language (DDL) ausführen. Diese Ereignisse entsprechen im Wesentlichen den Anweisungen CREATE, ALTER und DROP von [!INCLUDE[tsql](../../includes/tsql-md.md)] sowie bestimmten gespeicherten Systemprozeduren, die DDL-ähnliche Vorgänge ausführen. LOGON-Trigger werden als Reaktion auf das LOGON-Ereignis ausgelöst, das wiederum ausgelöst wird, wenn eine Benutzersitzung eingerichtet wird. Trigger können erstellt werden, direkt aus [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen oder aus Methoden von Assemblys, die in erstellt werden die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common Language Runtime (CLR) und des Datenuploads für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht das Erstellen mehrerer Trigger für jede konkrete Anweisung.  
+ DDL-Trigger werden als Antwort auf eine Vielzahl von Data Definition Language (DDL)-Ereignissen ausgeführt. Diese Ereignisse entsprechen im Wesentlichen den Anweisungen CREATE, ALTER und DROP von [!INCLUDE[tsql](../../includes/tsql-md.md)] sowie bestimmten gespeicherten Systemprozeduren, die DDL-ähnliche Vorgänge ausführen. LOGON-Trigger werden als Reaktion auf das LOGON-Ereignis ausgelöst, das wiederum ausgelöst wird, wenn eine Benutzersitzung eingerichtet wird. Trigger können direkt aus [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen oder aus Methoden von Assemblys erstellt werden, welche in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common Language Runtime (CLR) erstellt wurden, um dann mittels Datenuploads in eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hochgeladen zu werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht das Erstellen mehrerer Trigger für jede konkrete Anweisung.  
   
 > [!IMPORTANT]  
 >  Bösartiger Code innerhalb von Triggern kann unter ausgeweiteten Privilegien ausgeführt werden. Weitere Informationen zur Abwehr dieses Sicherheitsrisikos finden Sie unter [Verwalten der Triggersicherheit](../../relational-databases/triggers/manage-trigger-security.md).  
@@ -196,7 +196,7 @@ ODER ÄNDERN
   
  Diese Option ist erforderlich für Trigger auf speicheroptimierten Tabellen.  
   
- Weitere Informationen finden Sie unter[EXECUTE AS-Klausel &#40; Transact-SQL &#41; ](../../t-sql/statements/execute-as-clause-transact-sql.md).  
+ Weitere Informationen finden Sie unter [EXECUTE AS-Klausel &#40; Transact-SQL &#41; ](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
  NATIVE_COMPILATION  
  Gibt an, dass der Trigger systemintern kompiliert wird.  

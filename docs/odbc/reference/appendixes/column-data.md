@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2b97769aebb017ab60de531f4242ed2421b76835
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
 >  Die Cursorbibliothek nicht seinem Cache nach einer Spalte aktualisiert, wenn **StrLen_or_IndPtr* im entsprechenden Rowset Puffer SQL_DATA_AT_EXEC oder das Ergebnis des Makros SQL_LEN_DATA_AT_EXEC ist.  
   
  Wenn sie eine Spalte, eine von Datenquellendaten leer füllt Zeichen fester Länge und NULL-Wert fester Länge, binäre Daten nach Bedarf aktualisiert. Beispielsweise speichert eine Datenquelle als "Smith" "Smith" in einer char(10)-Spalte vom Datentyp. Die Cursorbibliothek ist Daten in die Rowset-Puffer nicht mit Leerzeichen aufgefüllt oder mit Nullen aufgefüllt, wenn er diese Daten in den Cache kopiert, nach der Ausführung einer positioniertes Update-Anweisung. Aus diesem Grund, wenn eine Anwendung erfordert, dass die Werte im Cache für die Cursorbibliothek mit Leerzeichen aufgefüllt oder mit Nullen aufgefüllt sind, muss er mit Leerzeichen aufgefüllt oder mit Nullen aufgefüllt die Werte in den Puffern Rowsets vor der Ausführung einer positioniertes Update-Anweisung.
+

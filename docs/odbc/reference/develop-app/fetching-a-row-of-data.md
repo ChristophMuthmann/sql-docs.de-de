@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 142c9a2c95900e5b3776f96d86a145defc447512
@@ -40,3 +41,4 @@ Um eine Zeile mit Daten abzurufen, eine Anwendung ruft **SQLFetch**. **SQLFetch*
  Zeichendaten müssen Null-terminiert sein vom Treiber vor der Rückgabe an die Anwendung, auch wenn es abgeschnitten wurde. Die Null-Abschlusszeichen benötigt Speicherplatz in der gebundenen Puffer jedoch nicht in der zurückgegebenen Bytelänge enthalten ist. Nehmen Sie z. B. an eine Anwendung verwendet Zeichenfolgen, die Zeichendaten in ASCII-Zeichensatz besteht, ein Treiber ist 50 Zeichen mit Daten zurückgegeben und die Anwendung Puffer ist 25 Byte lang. Im Puffer der die Anwendung, gibt der Treiber die ersten 24 Zeichen, gefolgt von einer Null-Abschlusszeichen. In der Längen-/Indikatorpuffers wird eine Länge von 50 zurückgegeben.  
   
  Die Anwendung kann eine beschränkte Anzahl an Zeilen im Resultset durch Festlegen von SQL_ATTR_MAX_ROWS-Anweisungsattribut vor dem Ausführen der Anweisung, die das Ergebnis erstellt. Der Seitenansicht in einer Anwendung, die zum Formatieren von Berichten benötigt beispielsweise nur genügend Daten für die erste Seite des Berichts anzuzeigen. Beschränken die Größe des Resultsets, würde eine solche Funktion schneller ausgeführt. Dieses Anweisungsattribut richtet sich an den Netzwerkverkehr zu reduzieren und möglicherweise vom alle Treiber nicht unterstützt werden.
+

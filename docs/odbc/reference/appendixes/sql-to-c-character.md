@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3ba39caca1a4ad37437f35918545ed54a5dd2266
@@ -70,3 +71,4 @@ _C_TYPE_TIMESTAMP|Datenwert ist ein gültiger *Timestamp-Wert oder ein gültiger
  [g der timestampstruktur] Datumsfelder werden auf das aktuelle Datum festgelegt.  
   
  Wenn SQL-Zeichendaten in numerische konvertiert werden, werden die Datums-, Zeit-, Timestamp, oder Intervall C, führende und nachfolgende Leerzeichen ignoriert.
+

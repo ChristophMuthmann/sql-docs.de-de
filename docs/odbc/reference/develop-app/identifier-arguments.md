@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: df3509e6b13d68858909d0739df1048b79fa8e45
@@ -40,3 +41,4 @@ SQLTables(hstmt2, NULL, 0, NULL, 0, "\"Accounts Payable\"", SQL_NTS, NULL, 0);
  Bezeichner in Anführungszeichen werden verwendet, um einen Spaltennamen "true" aus einer Pseudo-Spalte mit dem gleichen Namen, z. B. ROWID in Oracle zu unterscheiden. Wenn ein Argument einer Funktion Katalog "ROWID" übergeben wird, funktioniert die Funktion mit der ROWID Pseudo-Spalte, falls vorhanden. Wenn die Pseudo-Spalte nicht vorhanden ist, funktioniert die Funktion, mit der Spalte "ROWID". Wenn ein Argument einer Funktion Katalog ROWID übergeben wird, funktioniert die Funktion, mit der ROWID-Spalte.  
   
  Weitere Informationen zu Bezeichnern finden Sie unter [Bezeichner in Anführungszeichen](../../../odbc/reference/develop-app/quoted-identifiers.md).
+

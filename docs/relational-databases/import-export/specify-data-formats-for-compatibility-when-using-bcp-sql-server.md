@@ -20,6 +20,7 @@ caps.latest.revision: 38
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
 ms.openlocfilehash: 56ca94eab2b7245d3d42c898fbf5d51c4c249026
@@ -127,3 +128,4 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
   
   
+

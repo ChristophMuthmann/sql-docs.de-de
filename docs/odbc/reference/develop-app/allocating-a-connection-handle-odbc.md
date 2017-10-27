@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 678ba0fa4e256402e9fc25e2e4e60ba4877c6c44
@@ -47,3 +48,4 @@ Bevor die Anwendung auf eine Datenquelle oder Treiber zugreifen kann, müssen si
  Es ist wichtig zu beachten, dass das Zuordnen eines Verbindungshandles nicht um einen Treiber zu laden identisch ist. Der Treiber wurde nicht geladen werden, bis eine Verbindungsfunktion aufgerufen wird. Daher nach dem Zuordnen eines Verbindungshandles und vor dem Herstellen einer Verbindung mit der Treiber oder die Datenquelle, die nur Funktionen, die die Anwendung mit dem Verbindungshandle aufrufen kann stimmen **SQLSetConnectAttr**, **SQLGetConnectAttr**, oder **SQLGetInfo** mit der Option SQL_ODBC_VER. Aufruf anderer Funktionen mit dem Verbindungshandle, z. B. **SQLEndTran**, gibt SQLSTATE 08003 (Verbindung nicht geöffnet). Ausführliche Informationen finden Sie unter [Anhang B: ODBC-Übergang-Statustabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Weitere Informationen zu Verbindungshandles, finden Sie unter [Verbindungshandles](../../../odbc/reference/develop-app/connection-handles.md).
+

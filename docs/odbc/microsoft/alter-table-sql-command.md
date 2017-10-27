@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bafb2f2a11b7108d550dae66db0b5d8e158086a3
@@ -198,3 +199,4 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen der Tabelle - SQL-Befehl](../../odbc/microsoft/create-table-sql-command.md)   
  [Befehl "INDEX"](../../odbc/microsoft/index-command.md)
+

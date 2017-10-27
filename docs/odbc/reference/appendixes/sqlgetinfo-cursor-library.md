@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d8e1aa6617d19c9028ff08dcf171abac060bb6f1
@@ -56,3 +57,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!IMPORTANT]  
 >  Die Cursorbibliothek implementiert dasselbe Cursorverhalten, wenn die Transaktionen ein Commit oder ein Rollback als Datenquelle. D. h. Commit oder Rollback einer Transaktion, entweder durch Aufrufen **SQLEndTran** oder verwenden Sie das SQL_ATTR_AUTOCOMMIT-Verbindungsattribut, kann dazu führen, dass die Datenquelle So löschen Sie die Zugriffspläne, und schließen den Cursor für alle Anweisungen Bei einer Verbindung. Weitere Informationen finden Sie unter den Informationstypen SQL_CURSOR_COMMIT_BEHAVIOR und SQL_CURSOR_ROLLBACK_BEHAVIOR in [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).
+

@@ -17,6 +17,7 @@ caps.latest.revision: 26
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 603259e6c6d93d5fa92e2680dcc8939e51365033
@@ -93,3 +94,4 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
 -   [Erstellen eines Profils für Datenbank-E-Mail](../../relational-databases/database-mail/create-a-database-mail-profile.md)  
   
   
+

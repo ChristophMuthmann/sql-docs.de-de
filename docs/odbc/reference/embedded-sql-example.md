@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e9f19c26cf77e0f5cfbff8a8ebad193ba9e9cdf2
@@ -77,3 +78,4 @@ bad_number:
 -   **Fehlerbehandlung** der DBMS-Laufzeitfehler an das Programm Anwendungen durch eine SQL Communications Area oder SQLCA meldet. Im vorangehenden Codebeispiel wird die erste embedded SQL-Anweisung SQLCA enthalten. Dies teilt die vorkompilierten SQLCA-Struktur in die Anwendung eingeschlossen werden sollen. Dies ist erforderlich, wenn das Programm das DBMS zurückgegebene Fehler verarbeitet werden. Die WHENEVER... GOTO-Anweisung weist die vorkompilierten Fehlerbehandlungscode, die Verzweigungen, um eine bestimmte Bezeichnung, wenn ein Fehler auftritt, generiert.  
   
 -   **Singleton-SELECT** die Anweisung verwendet, um die Daten zurückzugeben ist eine Singleton-SELECT-Anweisung; d. h. gibt es nur eine einzelne Zeile mit Daten. Aus diesem Grund im Codebeispiel nicht deklarieren oder Cursor.
+

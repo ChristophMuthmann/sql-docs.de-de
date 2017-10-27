@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 55a10004936cc2333eca14fd66123b929e8b9e5c
@@ -42,3 +43,4 @@ Eine Anwendung ruft die Daten mit einem *Cursor*. Ein Cursor unterscheidet sich 
   
 > [!IMPORTANT]  
 >  Ein Commit oder Rollback einer Transaktion, entweder durch explizites Aufrufen **SQLEndTran** oder durch im Autocommit-Modus ausgeführt wird, bewirkt, dass einige Datenquellen zu allen Cursorn für alle Anweisungen für eine Verbindung zu schließen. Weitere Informationen finden Sie unter der SQL_CURSOR_COMMIT_BEHAVIOR und SQL_CURSOR_ROLLBACK_BEHAVIOR Attribute in der [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) funktionsbeschreibung.
+

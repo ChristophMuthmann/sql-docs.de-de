@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cdec619d99c610c75b9b27de710cd4e5913602f6
@@ -124,3 +125,4 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
  [Löschen Sie die TAG-Befehl](../../odbc/microsoft/delete-tag-command.md)   
  [SET COLLATE-Befehl](../../odbc/microsoft/set-collate-command.md)   
  [EINDEUTIGE SET-Befehl](../../odbc/microsoft/set-unique-command.md)
+

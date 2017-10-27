@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: eca660cf2c38539dbf4a0fa560bfc67a1b1be115
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 |Microsoft Excel 3.0 oder 4.0|DriverID-Treiber|Driver = {Microsoft Excel-Treiber (*.xls)}; DBQ = "c:\Temp"; DriverID = 278|  
 |Microsoft Excel 5.0/7.0|Treiber, DriverID, DBQ|Driver = {Microsoft Excel-Treiber (*.xls)}; DBQ=c:\temp\sample.xls; DriverID = 22|  
 |Microsoft Excel 97 und höher|Treiber, DriverID, DBQ|Driver = {Microsoft Excel-Treiber (*.xls)}; DBQ=c:\temp\sample.xls; DriverID = 790|
+

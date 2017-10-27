@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 46ad4937f804e5557d153ff94dd9c6ab559c9f81
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
 >  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
   
  Der Microsoft ODBC-Treiber für Oracle-Versionen 2.0 und 2.5 unterstützen keine Synonyme, wenn Oracle Aufrufen von gespeicherten Prozeduren. Synonyme funktionieren wie erwartet, wenn Sie mit anderen Oracle-Datenbankobjekte wie Tabellen verwendet.
+

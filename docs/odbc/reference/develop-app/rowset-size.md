@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b7d3abee6c42fe95205bbb74edc671d8dc02bf87
@@ -39,3 +40,4 @@ Welche Rowsetgröße verwendet, hängt von der Anwendung ab. Bildschirmbasierte 
 -   **SQLSetPos** verwendet die Rowsetgröße, die zum Zeitpunkt der vorherigen Aufruf von eingerichtet wurde, **SQLFetch** oder **SQLFetchScroll**, da **SQLSetPos** arbeitet mit einer Rowset, das bereits festgelegt wurde. **SQLSetPos** auch übernimmt die neue Rowsetgröße Wenn **SQLBulkOperations** wurde aufgerufen, nachdem die Rowsetgröße geändert wurde.  
   
 -   **SQLBulkOperations** wird verwendet, die Rowsetgröße faktisch zum Zeitpunkt des Aufrufs, da sie die Vorgänge in einer Tabelle, die unabhängig von der alle abgerufenen Rowsets ausführt.
+

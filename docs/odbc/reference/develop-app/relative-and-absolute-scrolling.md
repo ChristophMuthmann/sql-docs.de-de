@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cf5155a44827adb972881da17ac2bc05d92a0cd4
@@ -48,3 +49,4 @@ Durchführen eines Bildlaufs Optionen in den meisten **SQLFetchScroll** position
  Die Anzahl der Zeilen im Cursor, der die Größe des Ergebnisses ist festgelegt, wird als Feld SQL_DIAG_CURSOR_ROW_COUNT des Diagnose-Headers zur Verfügung. Der Wert in diesem Feld wird erst nach definiert **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResult** aufgerufen wurde. Diese Anzahl kann die geschätzte Anzahl oder eine genaue Anzahl, abhängig von den Funktionen des Treibers. Der Treiber kann bestimmt werden, durch den Aufruf **SQLGetInfo** mit Informationen die Cursortypen-Attribute und überprüfen, ob das Bit SQL_CA2_CRC_APPROXIMATE oder SQL_CA2_CRC_EXACT für den Typ des Cursors zurückgegeben wird.  
   
  Eine genaue Zeilenanzahl wird nie für einen dynamischen Cursor unterstützt. Für andere Typen von Cursorn kann der Treiber entweder genaue oder Ungefähre Zeilenanzahl, aber nicht beide unterstützen. Wenn der Treiber unterstützt, weder genaue oder Ungefähre Zeilenanzahl für einen bestimmten Cursortyp, das SQL_DIAG_CURSOR_ROW_COUNT-Feld enthält die Anzahl der Zeilen, die bisher abgerufen wurde. Unabhängig davon, welche der Treiber unterstützt **SQLFetchScroll** mit einem *Vorgang* SQL_FETCH_LAST, kann das SQL_DIAG_CURSOR_ROW_COUNT-Feld, um die genaue Zeilenanzahl enthalten.
+

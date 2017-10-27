@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 22208bd706e7b8966f54a501e9580b35d99a0555
@@ -81,3 +82,4 @@ DELETED=YES"
   
  **Abrufen von Daten im Hintergrund**  
  Bestimmt, ob die Datensätze werden im Hintergrund (progressiven abrufen) abgerufen werden, oder die Anwendung wird gewartet, bis alle Datensätze im Resultset abgerufen werden.
+

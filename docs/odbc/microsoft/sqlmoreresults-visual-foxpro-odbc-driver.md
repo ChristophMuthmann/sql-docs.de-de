@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4e3228a1a56de7a8220fc634ab46707d20253e37
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Bestimmt, ob weitere Ergebnisse ausstehen für ein Anweisungshandle *Befehls beschäftigt*, SELECT, UPDATE, INSERT oder DELETE-Anweisungen enthält, und wenn dies der Fall ist, initialisiert die Verarbeitung für diese Ergebnisse.  
   
  Weitere Informationen finden Sie unter [SQLMoreResults](../../odbc/reference/syntax/sqlmoreresults-function.md) in der *ODBC Programmer's Reference*.
+

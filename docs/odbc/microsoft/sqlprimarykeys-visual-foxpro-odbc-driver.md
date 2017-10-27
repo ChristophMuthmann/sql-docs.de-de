@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8906d8672c44eaf6a2e8cc6fbfc63189a4dcbda2
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
 -   Funktioniert nur für Datenquellen, [Datenbanken](../../odbc/microsoft/visual-foxpro-terminology.md). Der Treiber gibt dem Fehler "Treiber unterstützt diese Funktion nicht" ist die Datenquelle in einem Verzeichnis [frei Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md).  
   
  Weitere Informationen finden Sie unter [SQLPrimaryKeys](../../odbc/reference/syntax/sqlprimarykeys-function.md) in der *ODBC Programmer's Reference*.
+

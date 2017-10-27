@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3cd82106bf81b5885f74adf6c1759883110ea913
@@ -46,3 +47,4 @@ Sie können Visual FoxPro-Daten in Microsoft Excel-Arbeitsblatt importieren, wen
 5.  Wählen Sie Felder für die Abfrage durch Ziehen sie aus der Tabelle auf der unteren Hälfte des Designers.  
   
 6.  Schließen Sie Microsoft-Abfrage. Die Daten, die Sie ausgewählt haben, werden in Microsoft Excel-Arbeitsblatt importiert.
+

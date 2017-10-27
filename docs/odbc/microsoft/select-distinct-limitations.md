@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3d6bee060247f30770b5cf9dc3bbc506639c0ec1
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="select-distinct-limitations"></a>Wählen Sie unterschiedliche Einschränkungen
 Das DISTINCT-Schlüsselwort gilt nicht für binäre Daten.
+

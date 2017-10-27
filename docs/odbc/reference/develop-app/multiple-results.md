@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 62a4b7edd47ca6c9a6b1c7469e18269af3ab907d
@@ -57,3 +58,4 @@ UPDATE Parts SET Price = 0.9 * Price WHERE Price > 100.00
  Es ist treiberspezifische gibt an, ob die gesamte Batch-Anweisung ausgeführt wird, bevor Ergebnisse verfügbar sind. In einigen Implementierungen ist dies der Fall. in anderen Fällen Aufrufen **SQLMoreResults** löst die Ausführung die nächste Anweisung im Batch.  
   
  Wenn einer der Anweisungen in einem Batch fehlschlägt, **SQLMoreResults** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück. Wenn der Batch abgebrochen wird, wenn Fehler bei der Anweisung oder die fehlerhafte Anweisung die letzte Anweisung im Batch wurde, **SQLMoreResults** SQL_ERROR zurück. Wenn der Batch nicht abgebrochen wird, wenn Fehler bei der Anweisung und die fehlgeschlagene Anweisung nicht die letzte Anweisung im Batch war **SQLMoreResults** wird SQL_SUCCESS_WITH_INFO zurückgegeben. SQL_SUCCESS_WITH_INFO gibt an, dass mindestens ein Resultset oder Count generiert wurde und der Batch nicht abgebrochen wurde.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5b3fea1397710c5a65a03b3f829972f04cc63f5a
@@ -33,3 +34,4 @@ Einer Anwendung angegeben werden, dass ein Offset hinzugefügt wird, gebunden Pa
   
 > [!NOTE]  
 >  Bindung Offsets werden vom ODBC-2 nicht unterstützt. *x* Treiber.
+

@@ -20,6 +20,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3cd7f827ecfc367536654b9ad825302f4dba9fcf
@@ -50,3 +51,4 @@ ms.lasthandoff: 09/09/2017
 |**SQLSpecialColumns**|Ruft ab, die optimale Gruppe von Spalten, die eine Zeile in der Tabelle eindeutig identifiziert.|  
 |**SQLStatistics**|Ruft eine Liste von Statistiken über eine einzelne Tabelle und die Indizes oder die Tag-Namen der Tabelle zugeordnet. Der Treiber gibt zurück, die Informationen als ein Resultset.|  
 |**SQLTables**|Gibt die Liste der Tabellennamen angegeben durch den Parameter in der **SQLTables** Anweisung. Wenn kein Parameter angegeben wird, gibt die Namen der Tabellen in der aktuellen Datenquelle gespeichert. Der Treiber gibt zurück, die Informationen als ein Resultset.<br /><br /> Enumeration Typs ruft werden einen Ergebnis Set-Eintrag für remote-Ansichten oder lokalen parametrisierte Sichten nicht empfangen. Allerdings einen Aufruf von **SQLTables** durch eine eindeutige Tabelle namenspezifizierer findet eine Entsprechung für eine Sicht angefordertes mit diesem Namen; Dadurch wird die API für Namenskonflikte vor der Erstellung einer neuen Tabelle überprüfen.<br /><br /> Öffentliche Synonyme werden zurückgegeben, mit dem TABLE_OWNER Wert "".<br /><br /> Ansichten, die im Besitz von SYS oder SYSTEM werden als SYSTEMSICHT identifiziert.|
+

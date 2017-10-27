@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d03483adc4a566d4691bb7687f231b41ca0b41bd
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/09/2017
  Die Cursorbibliothek unterstützt das Festlegen der SQL_ATTR_PARAM_BIND_OFFSET_PTR oder SQL_ATTR_ROW_BIND_OFFSET_PTR-Anweisungsattribut, um die Bindung Offsets zu aktivieren. Der Offset für die Bindung wird nicht für Aufrufe verwendet **SQLFetch** die Cursorbibliothek bei Verendung mit einer ODBC 2..* X* Treiber.  
   
  Die Cursorbibliothek unterstützt das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut auf SQL_UB_VARIABLE festlegen.
+

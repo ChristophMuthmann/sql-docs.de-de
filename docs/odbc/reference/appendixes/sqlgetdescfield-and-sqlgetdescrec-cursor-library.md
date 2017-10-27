@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ff32edcc14799980c1d8ec9e05bd27456d71a132
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  Führt die Cursorbibliothek **SQLGetDescField** wenn er aufgerufen wird, um den Wert des Felds SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE oder SQL_DESC_ROW_STATUS_PTR zurück. Diese Felder können für jede Zeile wird nicht nur die Lesezeichen-Zeile zurückgegeben werden.  
   
  Wenn eine Anwendung ruft **SQLGetDescField** um den Wert eines Felds andere als die bereits erwähnten zurückzugeben, die Cursorbibliothek den Aufruf an den Treiber übergeben.
+

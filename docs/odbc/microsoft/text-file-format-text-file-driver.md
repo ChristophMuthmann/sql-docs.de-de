@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: eb3505a7750bf2b538078139cf84b9e88a7e23bd
@@ -125,3 +126,4 @@ fixed-width-null ::= <SPACE>...
   
 > [!NOTE]  
 >  Für Dateien mit fester Breite wird ein NULL-Wert, durch Leerzeichen dargestellt.
+

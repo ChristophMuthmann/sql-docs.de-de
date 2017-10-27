@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f933a6a4681e8c8496ae8f3b5f04b1a3cb38e519
@@ -34,3 +35,4 @@ ms.lasthandoff: 06/22/2017
 -   [Microsoft Knowledge Base-Artikel 885688](http://go.microsoft.com/fwlink/?linkid=117745)  
   
   
+

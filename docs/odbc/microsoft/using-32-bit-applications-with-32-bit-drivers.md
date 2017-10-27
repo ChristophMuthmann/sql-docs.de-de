@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e37da481e8068edb966b8f8ace4f129989cce990
@@ -48,3 +49,4 @@ Sie können die 32-Bit-Anwendungen mit 32-Bit-Treiber ausführen. Verwenden die 
 |Odbcad32.exe|32-Bit-ODBC-Administratorprogramm|  
 |Odbcinst.hlp|Installer-Hilfedatei|  
 |Msvcrt40.dll|C-Laufzeitbibliothek|
+

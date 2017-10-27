@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aaa110a6a62ca91535e790a267ef714675719bf4
@@ -50,3 +51,4 @@ ODBC gibt die folgenden Typen von Skalarfunktionen mit detaillierten Information
  ODBC und SQL-92 klassifizieren ihre Skalarfunktionen unterschiedlich. ODBC klassifiziert Skalarfunktionen von Argumenttyp; SQL-92 klassifiziert werden nach Wert zurückgegeben. Beispielsweise ist die EXTRACT-Funktion als Funktion Timedate durch ODBC, klassifiziert, da das Argument Extract-Feld ein Datetime-Schlüsselwort ist und die Extract-Source-Argument ein Ausdruck "DateTime" oder ein Zeitintervall ist. SQL-92 klassifiziert EXTRAHIEREN andererseits, als eine numerische Skalarfunktion, ist der Rückgabewert eine numerische.  
   
  Eine Anwendung kann bestimmen, welche Skalarfunktionen ein Treiber, durch den Aufruf unterstützt **SQLGetInfo**. Typen von Informationen sind für ODBC und SQL-92-Klassifikationen von Skalarfunktionen enthalten. Da diese Klassifizierungen unterschiedlich sind, kann die Unterstützung für einige skalaren Funktionen in Typen von Informationen angegeben werden, die nicht mit ODBC und SQL-92 übereinstimmen. Unterstützung für die EXTRAHIERUNG in ODBC ist z. B. den Informationstyp SQL_TIMEDATE_FUNCTIONS ersichtlich; Unterstützung für die EXTRAHIERUNG in SQL-92, wird durch den Informationstyp SQL_SQL92_NUMERIC_VALUE_FUNCTIONS andererseits, angegeben.
+

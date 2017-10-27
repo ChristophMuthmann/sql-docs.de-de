@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7cfd05e9c41fee1e0a753e2c4e4fa4f86db641b3
@@ -62,3 +63,4 @@ Die folgenden Regeln bestimmen die Diagnose Behandlung in **SQLGetDiagRec** und 
  Für eine ODBC-Komponente als der Treiber-Manager:  
   
 -   Basierend auf der systemeigene Fehler SQLSTATE muss festgelegt werden. Für den dateibasierten Treibern und DBMS-basierten Treibern, die kein Gateway verwenden, muss der Treiber SQLSTATE festgelegt. Für DBMS-basierten Treibern, die ein Gateway verwenden, kann der Treiber oder ein Gateway, die ODBC unterstützt den SQLSTATE festgelegt.
+

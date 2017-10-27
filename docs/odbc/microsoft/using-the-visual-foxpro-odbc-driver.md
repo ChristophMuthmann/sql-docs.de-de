@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c9392f5ccc17497b6f2c185b22d7cdd9c4873120
@@ -42,3 +43,4 @@ In diesem Abschnitt wird erläutert, in den folgenden Themen wie der ODBC-Treibe
 -   [Verwenden des Visual FoxPro-ODBC-Treibers mit C oder C++-Anwendung](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)  
   
 -   [Zugriff auf Visual FoxPro-Daten aus Microsoft Office](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)
+

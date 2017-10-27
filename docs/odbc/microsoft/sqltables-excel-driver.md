@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9aad9b74b9813c0526df87437999b66f27e95414
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
 |*szTableOwner*|Der einzige gültige Argument für *SzTableOwner* NULL ist, da keines der Treiber Besitzernamens unterstützt. Mit *SzTableOwner* auf NULL festgelegt, werden alle Tabellen zurückgegeben. In der Spalte TABLE_OWNER wird NULL zurückgegeben.|  
 |*szTableQualifier*|Wenn der Microsoft Excel-Version 3.0 oder 4.0-Treiber verwendet wird, beim Aufrufen **SQLTables** mit einem Wert für *SzTableQualifier* nicht den Namen einer vorhandenen Tabelle ist, erstellt der Treiber eine Tabelle mit diesem Namen.<br /><br /> In der Spalte TABLE_QUALIFIER **SQLTables** gibt den Pfad zu einem Verzeichnis zurück.|  
 |*SzTableType*|Für Microsoft Excel 3.0 oder 4.0 ist "TABLE" der einzige Tabelle unterstützt.<br /><br /> Informationen zu höheren Versionen von Microsoft Excel-Dateien ist "SYSTEMTABELLE" wird zurückgegeben, für Arbeitsblattnamen (Tabellen mit "$" auf der Seite), und "TABLE" für Tabellen in Arbeitsblättern.|
+

@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 62d94e1afab75c39a16aa0f9e3b4ca0e70527dfb
@@ -35,3 +36,4 @@ Datenpuffer werden durch drei Arten von Informationen beschrieben: der Typ, Adre
 -   [Adresse des Puffers](../../../odbc/reference/develop-app/data-buffer-address.md)  
   
 -   [Datenlänge für Puffer](../../../odbc/reference/develop-app/data-buffer-length.md)
+

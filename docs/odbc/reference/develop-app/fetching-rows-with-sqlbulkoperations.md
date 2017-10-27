@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f0e3f46b5dd742ff1e77c87a8486038c41839764
@@ -42,3 +43,4 @@ Daten können in ein Rowset mithilfe von Lesezeichen erneut abgerufen werden, du
 4.  Aufrufe **SQLBulkOperations** mit der *Vorgang* -Argument auf SQL_FETCH_BY_BOOKMARK festgelegt.  
   
  Besteht keine Notwendigkeit für die Anwendung auf die Zeile Operation-Array verwenden, um den Vorgang zu verhindern, dass in bestimmte Spalten ausgeführt werden. Die Anwendung wählt die Zeilen, die abgerufen werden nur die Lesezeichen für die Zeilen in die gebundenen Lesezeichen Array kopiert werden sollen.
+

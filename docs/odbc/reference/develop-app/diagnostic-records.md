@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 598f047d1ae18e2c37587df270001b49d1b15831
@@ -41,3 +42,4 @@ Jede Umgebung zugeordnet, Verbindung, der Anweisung und Deskriptorhandles sind *
 -   [Headerdatensatz](../../../odbc/reference/develop-app/header-record.md)  
   
 -   [Statusdatensätze](../../../odbc/reference/develop-app/status-records.md)
+

@@ -66,7 +66,7 @@ So sichern Sie die Dienstanwendung:
   
 1.  Im SharePoint-Zentraladministration auf **führen Sie eine Sicherung** in der **Sicherungs- /** Gruppe.  
   
-2.  Erweitern Sie unter dem Knoten **Gemeinsame Dienste** die Option für gemeinsame Dienstanwendungen **** , und wählen Sie die Dienstanwendung aus. Sie weist einen Typ von **SQL Server Reporting Services-Dienstanwendung**auf.  
+2.  Erweitern Sie unter dem Knoten **Gemeinsame Dienste** die Option für **gemeinsame Dienstanwendungen** , und wählen Sie die Dienstanwendung aus. Sie weist einen Typ von **SQL Server Reporting Services-Dienstanwendung**auf.  
   
 3.  Wählen Sie **Weiter**aus.  
   
@@ -126,7 +126,7 @@ So sichern Sie die Dienstanwendung:
   
 6.  Wählen Sie **Wiederherstellung starten**.  
   
-7.  Wiederholen Sie den oben beschriebenen Prozess. Erweitern Sie jedoch anstelle der Wiederherstellung der Dienstanwendung den Knoten **Gemeinsame Dienste** , und erweitern Sie anschließend den Knoten für gemeinsame Dienstanwendungen **** .  
+7.  Wiederholen Sie den oben beschriebenen Prozess. Erweitern Sie jedoch anstelle der Wiederherstellung der Dienstanwendung den Knoten **Gemeinsame Dienste** , und erweitern Sie anschließend den Knoten für **gemeinsame Dienstanwendungen**.  
   
  Weitere Information finden Sie in den folgenden Themen in der SharePoint-Dokumentation:  
   

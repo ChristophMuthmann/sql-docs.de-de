@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 79ae9e95ce31df371366e9073cb36f88c5bd9ece
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  Benutzer und System-Datenquellen werden zusammenfassend als bezeichnet *Computer* -Datenquellen, da sie lokal auf einem Computer befinden.  
   
  Jede dieser Datenquellen verfügt über eine Registerkarte der **ODBC-Datenquellenadministrator** (Dialogfeld). Weitere Informationen zu Datenquellen finden Sie unter [Datenquellen](../../odbc/reference/data-sources.md).
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e531888390bbe4f625d308ad983059634e84ba2b
@@ -63,3 +64,4 @@ SQLSetConnectOption(hdbc, fOption, vParam)
  In ODBC 2. *x*, könnte eine Anwendung aufrufen **SQLSetConnectOption** eine Option-Anweisung festgelegt. Wenn Sie fertig sind, richtet der Treiber die Option-Anweisung als Standard für alle Anweisungen, die für diese Verbindung später zugeordnet. Es ist treiberdefinierten, ob der Treiber mit die Option-Anweisung für alle vorhandenen Anweisungen, die der angegebenen Verbindung zugeordneten setzt.  
   
  Diese Funktion ist veraltet, in ODBC 3.*.x*. ODBC 3.*.x* Treiber müssen nur unterstützt das Festlegen von ODBC 2..* X* Anweisungsattribute auf Verbindungsebene, die mit ODBC 2. arbeiten sollen.* X* Anwendungen, die dazu. ODBC 3.*.x* Anwendungen Anweisungsattribute auf Verbindungsebene darf nicht festgelegt werden. ODBC 3.*.x* Anweisungsattribute können nicht auf Verbindungsebene, mit Ausnahme der SQL_ATTR_METADATA_ID und SQL_ATTR_ASYNC_ENABLE-Attribute, die Verbindungsattribute und Anweisungsattribute sind, und kann nicht festgelegt werden Legen Sie auf der Verbindungsebene oder Anweisungsebene.
+

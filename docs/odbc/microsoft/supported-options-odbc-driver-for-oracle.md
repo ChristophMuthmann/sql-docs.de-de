@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a95efee589a8570527305bd8aef8226cfc1eb3bd
@@ -58,3 +59,4 @@ ms.lasthandoff: 09/09/2017
 -   [SQL_MAX_ROWS](../../odbc/microsoft/statement-options.md)  
   
 -   [SQL_ROWSET_SIZE SETZEN](../../odbc/microsoft/statement-options.md)
+

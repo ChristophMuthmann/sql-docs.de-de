@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d4b7b0b2282d287f012272e9d34a4fbf3e23f7e0
@@ -31,3 +32,4 @@ Der Grad an Unterstützung für Transaktionen wird Treiber definiert. ODBC soll 
  Wenn der Treiber werden keine Transaktionen unterstützt, aber die Anwendung die Möglichkeit, die hat (unter Verwendung einer API als ODBC) zum Sperren und Entsperren von Daten, können Anwendungen transaktionsunterstützung durch Sperren und entsperren Datensätze und Tabellen nach Bedarf erreichen. Zum Implementieren der Konto-Transfer-Beispiel würde die Anwendung sperren die Einträge für beide Konten, kopieren Sie die aktuellen Werte soll das erste Konto, das zweite Konto Guthaben und entsperren Datensätze. Wenn alle Schritte fehlgeschlagen ist, würde die Anwendung die Konten, die mit der Kopien zurückgesetzt.  
   
  Auch Datenquellen, die Transaktionen unterstützen möglicherweise nicht mehr als eine Transaktion zu einem Zeitpunkt innerhalb einer bestimmten Umgebung zu unterstützen. -Anwendungen rufen **SQLGetInfo** mit der Option SQL_MULTIPLE_ACTIVE_TXN, um zu bestimmen, ob eine Datenquelle gleichzeitige aktive Transaktionen auf mehr als eine Verbindung in der gleichen Umgebung unterstützen kann. Da eine Transaktion pro Verbindung vorhanden ist, ist dies nur interessant, Anwendungen, die mehrere Verbindungen mit derselben Datenquelle haben.
+

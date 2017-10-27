@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f3fa7491ea354cc616d6b58de17e6fa82c785a3a
@@ -48,3 +49,4 @@ In der folgenden Tabelle werden die ODBC-Funktionen zur Zeichenfolgenmanipulatio
 |Speicherplatz *(Anzahl)*||  
 |TEILZEICHENFOLGE *(String_exp, Start, Länge)*|SUBSTR *(String_exp, Start, Länge)*|  
 |UCASE *(String_exp)*|OBERE *(String_exp)*|
+
