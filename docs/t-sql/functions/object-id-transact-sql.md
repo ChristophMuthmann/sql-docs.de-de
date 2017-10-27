@@ -59,7 +59,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
  Ist das Objekt verwendet werden. *Object_name* handelt es sich um **Varchar** oder **Nvarchar**. Wenn *Object_name* ist **Varchar**, wird es implizit in konvertiert **Nvarchar**. Die Angabe des Datenbank- und des Schemanamens ist optional.  
   
  **"** *Object_type* **"**  
- Der Objekttyp mit Schemabereich. *Object_type* handelt es sich um **Varchar** oder **Nvarchar**. Wenn *Object_type* ist **Varchar**, wird es implizit in konvertiert **Nvarchar**. Eine Liste der Objekttypen, finden Sie unter der **Typ** Spalte [sys.objects & #40; Transact-SQL & #41; ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
+ Der Objekttyp mit Schemabereich. *Object_type* handelt es sich um **Varchar** oder **Nvarchar**. Wenn *Object_type* ist **Varchar**, wird es implizit in konvertiert **Nvarchar**. Eine Liste der Objekttypen, finden Sie unter der **Typ** Spalte [sys.objects &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
@@ -76,7 +76,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
   
  Wenn ein temporären Tabellennamen angegeben wird, muss der Datenbankname vor den Namen der temporären Tabelle stammen, wenn die aktuelle Datenbank ist **Tempdb**. Beispiel: `SELECT OBJECT_ID('tempdb..#mytemptable')`  
   
- Systemfunktionen können in der SELECT-Liste, in einer WHERE-Klausel und überall dort verwendet werden, wo ein Ausdruck zulässig ist. Weitere Informationen finden Sie unter [Ausdrücke & #40; Transact-SQL & #41; ](../../t-sql/language-elements/expressions-transact-sql.md) und [, auf dem & #40; Transact-SQL & #41; ](../../t-sql/queries/where-transact-sql.md).  
+ Systemfunktionen können in der SELECT-Liste, in einer WHERE-Klausel und überall dort verwendet werden, wo ein Ausdruck zulässig ist. Weitere Informationen finden Sie unter [Ausdrücke &#40; Transact-SQL &#41; ](../../t-sql/language-elements/expressions-transact-sql.md) und [, auf dem &#40; Transact-SQL &#41; ](../../t-sql/queries/where-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -137,11 +137,11 @@ SELECT OBJECT_ID(AdventureWorksPDW2012.dbo.FactFinance') AS 'Object ID';
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Metadatenfunktionen & #40; Transact-SQL & #41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [Sys.Objects & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [Sys. dm_db_index_operational_stats & #40; Transact-SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
+ [Metadatenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [Sys.Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [Sys. dm_db_index_operational_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
- [Object_name & #40; Transact-SQL & #41;](../../t-sql/functions/object-name-transact-sql.md)  
+ [Object_name &#40; Transact-SQL &#41;](../../t-sql/functions/object-name-transact-sql.md)  
   
   
 
