@@ -33,12 +33,12 @@ ms.lasthandoff: 10/11/2017
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-**OPENJSON** ist eine Tabellenwertfunktion, die JSON-Text analysiert, und gibt Objekte und Eigenschaften aus der JSON-Eingabe als Zeilen und Spalten zurück. Das heißt, **OPENJSON** stellt eine Rowsetsicht eines JSON-Dokuments bereit. Sie können die Spalten explizit in das Rowset und die JSON-eigenschaftspfade zum Auffüllen der Spalten angeben. Da **OPENJSON** einen Satz von Zeilen zurückgibt, können Sie **OPENJSON** in der `FROM` -Klausel eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung ebenso wie Sie jede Tabelle, Sicht oder Funktion mit Tabellenrückgabe verwenden können.  
+**OPENJSON** ist eine Tabellenwertfunktion, die JSON-Text analysiert und Objekte und Eigenschaften aus der JSON-Eingabe als Zeilen und Spalten zurück gibt. Das heißt, **OPENJSON** stellt eine Rowsetsicht eines JSON-Dokuments bereit. Sie können die Spalten im Rowset und die JSON-eigenschaftspfade zum Auffüllen der Spalten angeben explizit angeben. Da **OPENJSON** einen Satz von Zeilen zurückgibt, können Sie **OPENJSON** in der `FROM` -Klausel einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung ebenso verwenden, wie Sie jede Tabelle, Sicht oder Funktion mit Tabellenrückgabe verwenden können.  
   
-Verwendung **OPENJSON** zum Importieren von JSON-Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], oder zum Konvertieren von JSON-Daten in ein relationales Format für eine app oder dem Dienst nicht nutzen, JSON direkt.  
+  Verwenden Sie **OPENJSON** zum Importieren von JSON-Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder zum Konvertieren von JSON-Daten in ein relationales Format für solche Apps oder Dienste, die JSON nicht direkt verarbeiten können. 
   
 > [!NOTE]  
->  Die **OPENJSON** -Funktion ist verfügbar nur für Kompatibilitätsgrad 130 oder höher. Wenn der Kompatibilitätsgrad Ihrer Datenbank kleiner als 130 ist, kann SQL Server die **OPENJSON**-Funktion nicht finden und ausführen. Andere JSON-Funktionen sind für alle Kompatibilitätsgrade verfügbar.
+>  Die **OPENJSON** -Funktion ist nur für den Kompatibilitätsgrad 130 oder höher verfügbar. Wenn der Kompatibilitätsgrad Ihrer Datenbank kleiner als 130 ist, kann SQL Server die **OPENJSON**-Funktion nicht finden und ausführen. Andere JSON-Funktionen sind für alle Kompatibilitätsgrade verfügbar.
 > 
 > Sie können den Kompatibilitätsgrad in der `sys.databases`-Ansicht oder in den Datenbankeigenschaften überprüfen. Sie können den Kompatibilitätsgrad einer Datenbank mithilfe des folgenden Befehls ändern:  
 > 
