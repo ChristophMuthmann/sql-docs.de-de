@@ -33,18 +33,23 @@ ms.lasthandoff: 10/11/2017
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-**OPENJSON** ist eine Tabellenwertfunktion, die JSON-Text analysiert und Objekte und Eigenschaften aus der JSON-Eingabe als Zeilen und Spalten zurück gibt. Das heißt, **OPENJSON** stellt eine Rowsetsicht eines JSON-Dokuments bereit. Sie können die Spalten im Rowset und die JSON-eigenschaftspfade zum Auffüllen der Spalten angeben explizit angeben. Da **OPENJSON** einen Satz von Zeilen zurückgibt, können Sie **OPENJSON** in der `FROM` -Klausel einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung ebenso verwenden, wie Sie jede Tabelle, Sicht oder Funktion mit Tabellenrückgabe verwenden können.  
+
+**OPENJSON** ist eine Tabellenwertfunktion, die JSON-Text analysiert, und gibt Objekte und Eigenschaften aus der JSON-Eingabe als Zeilen und Spalten zurück. Das heißt, **OPENJSON** stellt eine Rowsetsicht eines JSON-Dokuments bereit. Sie können die Spalten explizit in das Rowset und die JSON-eigenschaftspfade zum Auffüllen der Spalten angeben. Da **OPENJSON** einen Satz von Zeilen zurückgibt, können Sie **OPENJSON** in der `FROM` -Klausel eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung ebenso wie Sie jede Tabelle, Sicht oder Funktion mit Tabellenrückgabe verwenden können.  
   
-  Verwenden Sie **OPENJSON** zum Importieren von JSON-Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder zum Konvertieren von JSON-Daten in ein relationales Format für solche Apps oder Dienste, die JSON nicht direkt verarbeiten können. 
+Verwendung **OPENJSON** zum Importieren von JSON-Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], oder zum Konvertieren von JSON-Daten in ein relationales Format für eine app oder dem Dienst nicht nutzen, JSON direkt.  
   
 > [!NOTE]  
->  Die **OPENJSON** -Funktion ist nur für den Kompatibilitätsgrad 130 oder höher verfügbar. Wenn der Kompatibilitätsgrad Ihrer Datenbank kleiner als 130 ist, kann SQL Server die **OPENJSON**-Funktion nicht finden und ausführen. Andere JSON-Funktionen sind für alle Kompatibilitätsgrade verfügbar.
+>  	Die **OPENJSON**-Funktion ist nur für Kompatibilitätsgrad 130 oder höher verfügbar. Wenn der Kompatibilitätsgrad Ihrer Datenbank kleiner als 130 ist, kann SQL Server die **OPENJSON**-Funktion nicht finden und ausführen. Andere JSON-Funktionen sind für alle Kompatibilitätsgrade verfügbar. 
+Funktion nicht finden und ausführen. Andere JSON-Funktionen sind für alle Kompatibilitätsgrade verfügbar.
+
 > 
 > Sie können den Kompatibilitätsgrad in der `sys.databases`-Ansicht oder in den Datenbankeigenschaften überprüfen. Sie können den Kompatibilitätsgrad einer Datenbank mithilfe des folgenden Befehls ändern:  
 > 
 > `ALTER DATABASE DatabaseName SET COMPATIBILITY_LEVEL = 130`
 >   
-> Kompatibilitätsgrad 120 kann die Standardeinstellung auch in eine neue Azure SQL-Datenbank sein.  
+
+> Auch in einer neuen Azure SQL-Datenbank-Instanz kann der Standardkompatibilitätsgrad 120 sein.   
+
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Thema Linksymbol")[Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,7 +61,9 @@ OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
 <with_clause> ::= WITH ( { colName type [ column_path ] [ AS JSON ] } [ ,...n ] )
 ```  
 
-Die **OPENJSON** Tabellenwert-Funktion analysiert die *JsonExpression* bereitgestellt, die als erstes Argument und gibt eine oder mehrere Zeilen mit Daten aus der JSON-Objekten im Ausdruck zurück. *JsonExpression* geschachtelte untergeordnete Objekte enthalten kann. Wenn Sie innerhalb ein untergeordneten Objekts analysieren möchten *JsonExpression*, können Sie angeben, eine **Pfad** -Parameter für das JSON-Unterobjekt.
+
+Die **OPENJSON**-Tabellenwertfunktion analysiert den als erstes Argument angegebenen *jsonExpression* und gibt mindestens eine Zeile mit Daten aus den JSON-Objekten im Ausdruck zurück. *jsonExpression* kann geschachtelte untergeordnete Objekte enthalten. Wenn Sie ein untergeordnetes Objekt aus einem *jsonExpression* heraus analysieren möchten, können Sie einen **path**-Parameter für das JSON-Unterobjekt angeben.
+
 
 ### <a name="openjson"></a>openjson
 
