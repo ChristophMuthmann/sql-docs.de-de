@@ -41,7 +41,7 @@ ms.lasthandoff: 09/01/2017
 
   Enthält alle für einen Zugriff auf Remotedaten von einer OLE DB-Datenquelle notwendigen Verbindungsinformationen. Diese Methode ist eine Alternative zum Zugriff auf Tabellen eines Verbindungsservers. Sie ist eine einmalig verwendete Ad-hoc-Methode zum Verbinden und Zugreifen auf Remotedaten mithilfe von OLE DB. Für häufigere Verweise auf OLE DB-Datenquellen verwenden Sie stattdessen Verbindungsserver. Weitere Informationen finden Sie unter [Verbindungsserver &#40;Datenbankmodul&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md). Die `OPENROWSET` Funktion kann in der FROM-Klausel einer Abfrage verwendet werden, als handele es sich um einen Tabellennamen. Die `OPENROWSET` -Funktion kann auch als Zieltabelle eines `INSERT`, `UPDATE`, oder `DELETE` Statements genutzt werden, abhängig von den Funktionen der OLE DB-Provider-Anweisung. Obwohl die Abfrage mehrere Resultsets zurückgeben könnte, kann `OPENROWSET` nur das erste Resultset zurückgegeben.  
   
- `OPENROWSET`unterstützt auch Massenvorgänge über einen integrierten BULK-Anbieter, so dass Daten aus einer Datei gelesen und als Rowset zurückgegeben werden können.  
+ `OPENROWSET` unterstützt auch Massenvorgänge über einen integrierten BULK-Anbieter, so dass Daten aus einer Datei gelesen und als Rowset zurückgegeben werden können.
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
