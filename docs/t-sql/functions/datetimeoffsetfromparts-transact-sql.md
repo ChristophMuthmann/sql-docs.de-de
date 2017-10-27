@@ -135,7 +135,7 @@ GO
   
 ## <a name="see-also"></a>Siehe auch
 [datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)  
-[ZEITZONE &AMP; #40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
+[ZEITZONE &AMP;#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
   
   
 
