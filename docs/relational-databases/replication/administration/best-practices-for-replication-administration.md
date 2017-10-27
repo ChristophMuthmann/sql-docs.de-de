@@ -17,6 +17,7 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b4e86f2eb13062223533a3994180446174f9291b
@@ -155,3 +156,4 @@ ms.lasthandoff: 06/22/2017
  [Verwaltung &#40;Replikation&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
   
   
+

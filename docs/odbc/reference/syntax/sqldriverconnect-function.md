@@ -23,6 +23,7 @@ caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8b9576bf21c922c1e8d223710210a1703f1cbec3
@@ -373,3 +374,4 @@ int main() {
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
+

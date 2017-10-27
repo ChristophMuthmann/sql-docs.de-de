@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f45130c81f9fc4f669cf95d4bde72155f519c1aa
@@ -71,3 +72,4 @@ Setup : REG_SZ : C:\WINDOWS\SYSTEM32\TXTSETUP.DLL
 SQLLevel : REG_SZ : 0  
 UsageCount : REG_DWORD : 0x3  
 ```
+

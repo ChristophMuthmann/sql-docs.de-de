@@ -15,6 +15,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: abb5aebcd58c79c6351d7c47a7b98be5a040ef46
@@ -209,3 +210,4 @@ Die Themen in diesem Abschnitt beschreiben jede ODBC-Funktion in alphabetischer 
 -   [SQLTables-Funktion](../../../odbc/reference/syntax/sqltables-function.md)  
   
 -   [SQLTransact-Funktion](../../../odbc/reference/syntax/sqltransact-function.md)
+

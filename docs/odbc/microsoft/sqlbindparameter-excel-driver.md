@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 013f19579815dfcac2fcfe78cbbe41919bff9c15
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
 >  Dieses Thema enthält die Excel-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Wenn der Microsoft Excel-Treiber verwendet wird, zurück Ausführen einer INSERT-Anweisung, die einen Parameter verwendet wird, um einen NULL-Wert in eine SQL_CHAR-Spalte einfügen SQL_SUCCESS_WITH_INFO mit SQLSTATE 01004, "Daten abgeschnitten."
+

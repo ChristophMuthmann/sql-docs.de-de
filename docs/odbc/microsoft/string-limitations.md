@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e6f9d8add08f80b59adaa42f02bc1da006356081
@@ -32,3 +33,4 @@ Die maximale Länge einer Zeichenfolge, SQL-Anweisung ist 65.000 Zeichen.
  Einen senkrechten Strich (&#124;) kann nicht in einer Zeichenfolge verwendet werden, ob das Zeichen in Back Anführungszeichen eingeschlossen ist.  
   
  Für eine optimale Interoperabilität Anwendungen sollten Zeichenfolgen Parameter übergeben, anstatt Übergabe in Anführungszeichen in Zeichenfolgen.
+

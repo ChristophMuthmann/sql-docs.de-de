@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 709df0de2e0191c0f03026afdad7b8e9b8480cae
@@ -132,3 +133,4 @@ CharacterSet=ANSI
   
 > [!NOTE]  
 >  Wenn Sie einen Eintrag weglassen, wird der Standardwert in der Windows-Systemsteuerung verwendet.
+

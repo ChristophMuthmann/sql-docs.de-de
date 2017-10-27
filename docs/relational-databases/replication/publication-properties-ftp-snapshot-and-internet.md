@@ -16,6 +16,7 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: 3458af05f6289366c7a9391016327ff9d11c1434
@@ -51,3 +52,4 @@ ms.lasthandoff: 07/31/2017
  [Veröffentlichen von Daten und Datenbankobjekten](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   
+

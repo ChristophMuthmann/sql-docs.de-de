@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dfe477bf0ca518d4f4e83d141a24bcb4c2640ed2
@@ -37,3 +38,4 @@ ODBC definiert eine Reihe von Attributen, die Umgebungen, Verbindungen und Anwei
  Zusätzlich zu den Attributen, die von ODBC definiert werden kann ein Treiber eigene Verbindungs- und Anweisungsattribute definieren. Treiberdefinierten Attribute müssen registriert sein, mit der Open Group, um sicherzustellen, dass zwei Treiber Lieferanten verschiedene, proprietäre Attribute keine den gleichen ganzzahligen Wert zuweisen. Weitere Informationen finden Sie unter [Treiber-spezifische Datentypen, Deskriptor Typen Informationstypen, Diagnosetypen und Attribute](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
  Eine vollständige Liste von Attributen finden Sie unter [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), und [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md). Die meisten Attribute werden auch in der Beschreibung der ODBC-Funktion beschrieben, die sie betreffen.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3aba3d69d8bbb90b1296bf821b6552d25a05b7b2
@@ -60,3 +61,4 @@ SQLSetStmtOption(StatementHandle, fOption, vParam)
  Wenn eine Anwendung ruft **SQLSetStmtAttr** SQL_ATTR_USE_BOOKMARKS SQL_UB_ON in eine ODBC 3. festzulegende*.x* -Treiber verwenden, das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut auf SQL_UB_FIXED festgelegt ist. SQL_UB_ON ist die gleiche Konstante als SQL_UB_FIXED. Der Treiber-Manager übergibt SQL_UB_FIXED über an den Treiber. SQL_UB_FIXED ist in ODBC 3. veraltet*.x*, aber eine ODBC 3.*.x* Treiber muss diese für das Arbeiten mit ODBC 2. implementieren.* X* Anwendungen mit fester Länge Lesezeichen.  
   
  Für eine ODBC 3.*.x* Treiber, der Treiber-Manager nicht mehr überprüft, ob *Option* zwischen SQL_STMT_OPT_MIN und SQL_STMT_OPT_MAX ist, oder SQL_CONNECT_OPT_DRVR_START größer ist.
+

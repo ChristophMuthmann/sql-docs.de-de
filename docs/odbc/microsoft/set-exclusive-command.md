@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 830cec1dbb87ae2bc4336d28d6112fd76b4db0ed
@@ -45,3 +46,4 @@ SET EXCLUSIVE ON | OFF
   
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-Visual FoxPro einrichten (Dialogfeld)](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)
+

@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4426465ea41b257a4805399b703f28ccc22d704b
@@ -46,3 +47,4 @@ Beim Aktualisieren einer Zeile von Lesezeichen, **SQLBulkOperations** macht die 
 6.  Aufrufe **SQLBulkOperations** mit der *Vorgang* -Argument auf SQL_UPDATE_BY_BOOKMARK festgelegt.  
   
  Für jede Zeile, die mit der Datenquelle als Update gesendet wird, sollte die Anwendungspuffer gültige Zeilendaten haben. Wenn die Anwendungspuffer durch Abrufen, aufgefüllt wurden, falls ein zeilenstatusarray beibehalten wurde, und der Statuswert für eine Zeile SQL_ROW_DELETED, SQL_ROW_ERROR oder SQL_ROW_NOROW ist, konnte die ungültige Daten versehentlich an die Datenquelle gesendet werden.
+

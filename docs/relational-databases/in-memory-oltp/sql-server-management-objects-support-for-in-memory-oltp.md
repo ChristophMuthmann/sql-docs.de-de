@@ -15,6 +15,7 @@ caps.latest.revision: 28
 author: JennieHubbard
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
 ms.openlocfilehash: 249188036af10473b3a17eaeb2d0c47b80420f4a

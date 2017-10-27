@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8ccd79048c250c73867752ebaf0b2b7060a6c19b
@@ -77,3 +78,4 @@ int main() {
  Anwendungen, die SQL-Anweisungen zur Laufzeit konstruiert können enorme Flexibilität für Benutzer bereitstellen. Wie aus dem vorherigen Beispiel angesehen werden kann, wodurch die allgemeine Vorgänge wie das auch nicht unterstützte **, in denen** Klauseln **ORDER BY** -Klauseln oder Joins, Erstellen von SQL-Anweisungen zur Laufzeit ist erheblich komplexer als eine feste Programmierung-Anweisungen. Darüber hinaus ist das Testen von solchen Anwendungen problematisch, da sie eine beliebige Anzahl von SQL-Anweisungen erstellen können.  
   
  Erstellung von SQL-Anweisungen zur Laufzeit ein potenzieller Nachteil ist, dass das dauert wesentlich mehr Zeit, eine Anweisung zu erstellen, als eine hartcodierte-Anweisung verwenden. Glücklicherweise ist dies meist nicht relevant. Solche Anwendungen sind tendenziell Benutzeroberfläche Intensive und die Uhrzeit, an die Anwendung, Erstellen von SQL-Anweisungen ist im Allgemeinen gering im Vergleich zu der Zeit, die der Benutzer zum Eingeben Kriterien benötigt.
+

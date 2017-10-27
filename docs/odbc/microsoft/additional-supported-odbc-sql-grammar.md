@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9f021092afb3cf4f404b066a476270feac321869
@@ -68,3 +69,4 @@ Die ODBC-Treiber unterstützt die minimale ODBC 2.5-Grammatik und die folgenden 
 -   [Skalare Funktionen](../../odbc/microsoft/scalar-functions.md)  
   
 -   [Tabellennamen](../../odbc/microsoft/table-names.md)
+

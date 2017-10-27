@@ -23,6 +23,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 432fbea7fb864b0a42a000eb46df6c2642b7c28b
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
+

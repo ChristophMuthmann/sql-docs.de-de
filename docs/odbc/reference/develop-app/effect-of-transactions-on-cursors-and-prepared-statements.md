@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2533778f9b0e837ce59850d4f70a3c4545f8be60
@@ -62,3 +63,4 @@ Ein Commit oder Rollback wurde eine Transaktion folgende Auswirkungen auf den Cu
  Anwendungen, vor allem Bildschirm basierende Anwendungen in der der Benutzer einen Bildlauf durchführt, um das Resultset und Updates oder löscht Zeilen, muss Sie vorsichtig, um Code, um dieses Verhalten.  
   
  Um zu bestimmen, wie eine Datenquelle verhält, wenn eine Transaktion ein Commit oder Rollback ist, eine Anwendung ruft **SQLGetInfo** mit den Optionen SQL_CURSOR_COMMIT_BEHAVIOR und SQL_CURSOR_ROLLBACK_BEHAVIOR.
+

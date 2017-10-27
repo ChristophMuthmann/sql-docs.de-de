@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4ea01836108b8cf2524aa52001927bef852ce2a1
@@ -53,3 +54,4 @@ Der Treiber-Manager unterstützt zwei Einstiegspunkte für Funktionen, die Zeich
  Der Treiber-Manager ist unicodefähige intern. Daher ist die optimale Leistung durch einer Unicode-Anwendung mit einem Unicode-Treiber arbeiten abgerufen, da der Treiber-Manager Unicode-Funktionen über die an den Treiber übergibt. Wenn eine ANSI-Anwendung mit einem ANSI-Treiber arbeitet, der Treiber-Manager müssen Zeichenfolgen von ANSI in Unicode konvertiert bei der Verarbeitung von einigen Funktionen, wie z. B. **SQLDriverConnect**. Nach der Verarbeitung der Funktion, muss der Treiber-Manager klicken Sie dann die Unicode-Zeichenfolge in ANSI zurückkonvertieren vor dem Senden der Funktion für den ANSI-Treiber.  
   
  Eine Anwendung sollte nicht ändern oder dessen Puffern für gebundene Parameter zu lesen, wenn der Treiber SQL_STILL_EXECUTING oder SQL_NEED_DATA zurückgibt. Der Treiber-Manager bewirkt, dass die Puffer in ANSI gebunden werden, bis der Treiber SQL_SUCCESS, SQL_SUCCESS_WITH_INFO oder SQL_ERROR zurückgegeben. Eine Multithreadanwendung sollte nicht auf alle gebundenen Parameterwerte zugreifen, die ein anderer Thread auf eine SQL-Anweisung ausführt. Der Treiber-Manager die Daten von Unicode in ANSI "Direktes" konvertiert, und der andere Thread möglicherweise ANSI-Daten in diesen Puffern, während der Treiber noch die SQL-Anweisung verarbeitet wird. Anwendungen, die Unicode-Daten an eine ANSI-Treiber zu binden, müssen nicht zwei verschiedene Spalten in die gleiche Adresse binden.
+

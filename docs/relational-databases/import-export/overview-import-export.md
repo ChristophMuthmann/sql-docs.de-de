@@ -12,6 +12,7 @@ ms.topic: article
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
 ms.openlocfilehash: 1d37d86ab2e2bac04ceb8ce36fad63ae25f0f92b

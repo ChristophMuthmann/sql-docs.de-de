@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ad7a45f0f3272e1e2d7ae799ab1ca86bfb90b9be
@@ -37,3 +38,4 @@ Der Wert unter dem Unterschlüssel ODBC Core bietet der Verwendungszähler für 
 ```  
 UsageCount : REG_DWORD : 0x5  
 ```
+

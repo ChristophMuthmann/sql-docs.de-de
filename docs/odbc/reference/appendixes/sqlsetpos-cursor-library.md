@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b195ca1dbb138b21fcf107150832288df8317196
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  Die Cursorbibliothek unterstützt nicht die SQL_UPDATE und SQL_DELETE Vorgänge in einem Aufruf von **SQLSetPos**. Der Cursor-Bibliothek implementiert eine positionierte aktualisieren oder löschen die SQL-Anweisung durch das Erstellen einer durchsuchten aktualisieren oder delete-Anweisung mit einer WHERE-Klausel, die in seinem Cache für jede gebundene Spalte gespeicherten Werte auflistet. Weitere Informationen finden Sie unter [Verarbeitung positioniert Update und Delete-Anweisungen](../../../odbc/reference/appendixes/processing-positioned-update-and-delete-statements.md).  
   
  Eine Anwendung mit der Cursorbibliothek arbeiten sollten aufrufen, wenn der Treiber statische Cursor werden nicht unterstützt, **SQLSetPos** nur für ein Rowset, das vom abgerufen **SQLExtendedFetch** oder **SQLFetchScroll **, nicht von **SQLFetch**. Die Cursorbibliothek implementiert **SQLExtendedFetch** und **SQLFetchScroll** durch wiederholte Aufrufe von **SQLFetch** (mit einer Rowsetgröße von 1) im Treiber. Die Cursorbibliothek übergibt Aufrufe **SQLFetch**, auf die andere hingegen über den Treiber. Wenn **SQLSetPos** wird aufgerufen, in einem mehrzeiligen Rowset abgerufen, indem **SQLFetch** Wenn statische Cursor mit der Treiber nicht unterstützt wird, schlägt der Aufruf fehl, da **SQLSetPos** funktioniert nicht mit Vorwärtscursor. Dies geschieht auch, wenn eine Anwendung wurde erfolgreich aufgerufen wurde **SQLSetStmtAttr** für SQL_ATTR_CURSOR_TYPE SQL_CURSOR_STATIC, festzulegen, die die Cursorbibliothek unterstützt, auch wenn der Treiber statische Cursor werden nicht unterstützt.
+

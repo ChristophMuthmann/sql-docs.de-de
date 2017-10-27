@@ -14,6 +14,7 @@ f1_keywords:
 author: yualan
 ms.author: alayu
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
 ms.openlocfilehash: 3180456162da02ecef897fd340663500792d4785

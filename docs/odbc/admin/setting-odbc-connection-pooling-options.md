@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6e22b3c2c09f4bc356b54ed2ecb73988f0de2764
@@ -47,3 +48,4 @@ Verbindungspooling ermöglicht einer Anwendung eine Verbindung aus einem Pool vo
 |Erstellten Ressourcenpools|Die Anzahl von Pools aktiv ist, einschließlich active und entfernten Speicherpools. Dieser Leistungsindikator wurde in Windows 8 für Treiber hinzugefügt, die Verbindungen im Verbindungspool zu verwalten. Weitere Informationen finden Sie unter [Treiberfähiges Verbindungspooling](../../odbc/reference/develop-app/driver-aware-connection-pooling.md).|  
   
  Sie müssen eine eigene Überwachungsparameter angeben. Beispiele für die Leistungsüberwachung wurden in dieser Version von ODBC enthalten.
+

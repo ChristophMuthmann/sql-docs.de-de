@@ -196,7 +196,7 @@ ms.lasthandoff: 09/27/2017
 ### <a name="create-a-linked-server-using-the-ole-db-provider-for-ssis"></a>Erstellen eines Verbindungsservers mithilfe des OLE DB-Anbieters für SSIS  
  Erstellen Sie einen Verbindungsserver mithilfe des OLE DB-Anbieters für SSIS (SSISOLEDB) durch Ausführen der folgenden Abfrage in SQL Server Management Studio.  
   
-```  
+```sql 
   
 USE [master]  
 GO  
@@ -217,7 +217,7 @@ GO
   
 1.  Geben Sie vor der Erstellung der Sicht die folgende Abfrage in das neue Abfragefenster ein, und führen Sie diese anschließend aus. OPENQUERY ist eine von SQL Server unterstützte Rowsetfunktion. Sie führt die angegebene Pass-Through-Abfrage auf dem angegebenen Verbindungsserver mit dem OLE DB-Anbieter aus, der dem Verbindungsserver zugeordnet ist. Auf OPENQUERY kann in der FROM-Klausel einer Abfrage so verwiesen werden, als ob es ein Tabellenname wäre. Weitere Informationen finden Sie in der [OPENQUERY-Dokumentation in der MSDN Library](http://msdn.microsoft.com/library/ms188427.aspx) .  
   
-    ```  
+    ```sql
     SELECT * FROM OPENQUERY(SSISFeedServer,N'Folder=Eldorado;Project=SSISPackagePublishing;Package=Package.dtsx')   
     GO  
     ```  
@@ -227,7 +227,7 @@ GO
   
 2.  Erstellen Sie in der Datenbank **TestDB** im Rahmen dieser exemplarischen Vorgehensweise eine Sicht, indem Sie die folgende Abfrage ausführen.  
   
-    ```  
+    ```sql
   
     USE [TestDB]   
     GO   
@@ -240,14 +240,14 @@ GO
   
 3.  Testen Sie die Sicht durch Ausführen der folgenden Abfrage.  
   
-    ```  
+    ```sql
     SELECT * FROM SSISPackageView  
     ```  
   
 ### <a name="openquery-function"></a>OPENQUERY-Funktion  
  Syntax der OPENQUERY-Funktion:  
   
-```  
+```sql 
 SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters=”<parameter_name_1>=<value1>; parameter_name_2=<value2>”;Timeout=<Number of Seconds>;’)  
 ```  
   

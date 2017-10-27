@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b09a6daa19b7a8b22ac5f4b3147e6cefde6ffc60
@@ -64,3 +65,4 @@ In ODBC 3. *x*, die Bezeichner für das Datum, Zeit und Zeitstempel SQL-Datentyp
  [1] als Ergebnis des hierzu ein ODBC-3. *x* Anwendung arbeiten mit einer ODBC 2..* X* Treiber können auf das Datum, Uhrzeit oder Zeitstempel zurückgegebenem in den Resultsets, die durch die Katalogfunktionen zurückgegeben werden.  
   
  [2] von Ereignishandleraufrufen dieser, eine ODBC-3. *x* Anwendung arbeiten mit einem ODBC 3..* X* Treiber können auf das Datum, Uhrzeit oder Zeitstempel zurückgegebenem in den Resultsets, die durch die Katalogfunktionen zurückgegeben werden.
+

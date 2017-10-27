@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 30637bacfb73d56528233ea13c4c6daeabecf814
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  Wie viel der Installation tatsächlich vom Setupprogramm abgeschlossen ist, hängt davon ab, was Aufrufe in das DLL-Installationsprogramm fungiert. Das Installationsprogramm DLL enthält Funktionen, um einzelne ODBC-Komponenten zu installieren. Ruft das Setup-Programm einfach **SQLInstallDriverManager**, **SQLInstallDriverEx**, oder **SQLInstallTranslatorEx** im Installationsprogramm DLL, die den Pfad der abzurufenden der Verzeichnis, in dem die Komponente installiert werden und Informationen über die Komponente zur Registrierung hinzugefügt ist. Diese Funktionen kopieren Sie Dateien nicht tatsächlich; das Setup-Programm wird anhand der Informationen in den Argumenten dieser Funktionen.  
   
  Das Installationsprogramm DLL enthält auch Funktionen zum Entfernen von ODBC-Komponenten. Der Setup-Programm ruft **SQLRemoveDriverManager**, **SQLRemoveDriver**, oder **SQLRemoveTranslator** im Installationsprogramm DLL um eine Komponente Auslastung zu verringern. Anzahl der in der Registrierung und, wenn neue Verwendungsanzahl der Komponente auf 0 liegt, entfernen Sie alle Informationen über die Komponente aus der Registrierung. Diese Funktionen bauen Sie die Dateien für die Komponente nicht tatsächlich; das Setup-Programm wird auf 0 fällt die Verwendungsanzahl der neuen.
+

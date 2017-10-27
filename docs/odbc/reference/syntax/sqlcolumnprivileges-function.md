@@ -23,6 +23,7 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b9fa1af8ad7cc84b69f3e54e7f1f7f911880bb25
@@ -167,3 +168,4 @@ SQLRETURN SQLColumnPrivileges(
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
+

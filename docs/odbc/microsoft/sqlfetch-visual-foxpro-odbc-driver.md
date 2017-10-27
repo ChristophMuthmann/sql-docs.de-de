@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 69912ee54db3be2ef7fb068bfe26e76cbf05cdc0
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Ruft eine Zeile aus einem Resultset in die Speicherorte, die von der vorherigen Aufrufe von angegebenen [SQLBindCol](../../odbc/microsoft/sqlbindcol-visual-foxpro-odbc-driver.md). Bereitet den Treiber für einen Aufruf [SQLGetData](../../odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md) für ungebundenen Spalten.  
   
  Weitere Informationen finden Sie unter [SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md) in der *ODBC Programmer's Reference*.
+

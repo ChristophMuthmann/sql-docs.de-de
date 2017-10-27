@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 23b57350ae1abccf39e20f6b8ed6d14fa7d04a7b
@@ -143,3 +144,4 @@ END SimplePackage;
   
 > [!NOTE]  
 >  In der ODBC-Treiber für Oracle, Version 2.0 können Oracle-Funktionen, die PL/SQL-Arrays zurückgeben verwendet werden, um Resultsets zurückzugeben.
+

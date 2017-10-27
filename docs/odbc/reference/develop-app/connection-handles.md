@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ba20d3fcb6d943f4669774013dcb62c8ad896d8d
@@ -40,3 +41,4 @@ Ein *Verbindung* besteht aus einem Treiber und einer Datenquelle. Ein Verbindung
  Verbindungshandles werden in erster Linie verwendet, wenn eine Verbindung mit der Datenquelle herstellen (**SQLConnect**, **SQLDriverConnect**, oder **SQLBrowseConnect**) Verbindung wird getrennt von den Daten Quelle (**SQLDisconnect**), Abrufen von Informationen über die Treiber und die Datenquelle (**SQLGetInfo**), Abrufen von Diagnose (**SQLGetDiagField** und **SQLGetDiagRec**), und die Durchführung von Transaktionen (**SQLEndTran**). Sie werden auch verwendet, wenn festlegen und Abrufen von Verbindungsattributen (**SQLSetConnectAttr** und **SQLGetConnectAttr**) und beim Abrufen der im systemeigenen Format von einer SQL-Anweisung (**SQLNativeSql **).  
   
  Verbindungshandles zugeordnet **SQLAllocHandle** und mit freigegebenen **SQLFreeHandle**.
+

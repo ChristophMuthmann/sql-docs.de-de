@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 50b6c5ffec8dd088bdc730699cfa88abea860768
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 -   Für Datenquellen, die am Transaktionsgrenzen Cursor geschlossen wird, die Cursorbibliothek die Cursor schließt und löscht den Cache für alle Anweisungen für die Verbindung.  
   
 -   Für Datenquellen, die vorbereitete Anweisungen an den Begrenzungen der Transaktion zu löschen, muss die Anwendung alle vorbereitete Anweisungen für die Verbindung, bevor sie reexecuting reprepare.
+

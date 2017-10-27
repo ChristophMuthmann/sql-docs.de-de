@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7ebbe17713149276acbe061bfb8ba41503026306
@@ -38,3 +39,4 @@ SQLGetDiagRec(HandleType, Handle, RecNumber, szSqlstate, pfNativeErrorPtr, szErr
 ```  
   
  mit der *HandleType* Argument auf SQL_HANDLE_ENV auf SQL_HANDLE_DBC oder SQL_HANDLE_STMT auf, den Wert nach Bedarf, festgelegt und die *behandeln* Argument festgelegt wird, auf den Wert in *Henv*, *Hdbc*, oder *Befehls beschäftigt*je nach Bedarf. Die *RecNumber* -Argument wird vom Treiber-Manager bestimmt.
+

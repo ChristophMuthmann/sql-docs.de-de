@@ -16,6 +16,7 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: db8ff09a2b77f51c97ab73d6d994e1e1b4dce2a1
@@ -71,3 +72,4 @@ ODBCCONF [switches] action
   
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Open Database Connectivity (ODBC)](../odbc/microsoft-open-database-connectivity-odbc.md)
+

@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 41ca6ddf1535899ed8e5e0f065cf2f5f0ca19dca
@@ -120,3 +121,4 @@ Die folgende Tabelle zeigt die funktionsunterstützung in einer ODBC-3. *x* Trei
  [5] unter bestimmten Umständen möglicherweise Treiber zur Unterstützung dieser Funktion. Weitere Informationen finden Sie unter dieser Funktion-Referenzseite.  
   
  [6] den Treiber zur Unterstützung auswählen kann **SQLGetFunctions** Wenn der Satz von Funktionen, die der Treiber unterstützt die Verbindung zu Verbindung variiert.
+

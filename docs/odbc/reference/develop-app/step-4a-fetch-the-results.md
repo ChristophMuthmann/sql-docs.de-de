@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 736cfc952412780a4720fd92239e36106affeba7
@@ -38,3 +39,4 @@ Der nächste Schritt besteht, die Ergebnisse abzurufen, wie in der folgenden Abb
  Eine vollständige Beschreibung der Ergebnisse abgerufen werden soll, finden Sie unter [Abrufen von Ergebnissen (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md) und [Abrufen von Ergebnissen (Erweitert)](../../../odbc/reference/develop-app/retrieving-results-advanced.md).  
   
  "Schritt 3: Erstellen und Ausführen einer SQL-Anweisung" zum Ausführen einer anderen Anweisung in derselben Transaktion; gibt die Anwendung jetzt zurück. oder auf "Schritt 5: Commit der Transaktion" einen commit oder Rollback der Transaktion fortgesetzt.
+

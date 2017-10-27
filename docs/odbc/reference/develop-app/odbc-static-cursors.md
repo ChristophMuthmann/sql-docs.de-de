@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aaddef08bfea9e1a1820727743e5212557d823d4
@@ -32,3 +33,4 @@ Ein statischer Cursor ist in der das Resultset angezeigt wird, um statisch sein.
  Die zeilenstatusarray SQL_ATTR_ROW_STATUS_PTR-Anweisungsattribut gemäß kann SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO oder SQL_ROW_ERROR für jede Zeile enthalten. Es gibt SQL_ROW_UPDATED, SQL_ROW_DELETED oder SQL_ROW_ADDED für Zeilen aktualisiert, gelöscht oder eingefügt, indem der Cursor, vorausgesetzt, dass solche Änderungen zu der Cursor erkennen kann.  
   
  Statische Cursor werden in der Regel implementiert durch Sperren von Zeilen im Resultset oder durch Erstellen einer Kopie oder snapshot, der das Ergebnis festgelegt. Sperren von Zeilen relativ einfach ist, hat aber den Nachteil deutlich sinkt Parallelität. Erstellen einer Kopie für erhöhte Parallelität ermöglicht und ermöglicht den Cursor zur nachverfolgung eine eigene Updates, löschungen und fügt durch Ändern der Kopie. Allerdings ist eine Kopie teurer machen und können aus den zugrunde liegenden Daten grundlegend, wie diese Daten von anderen Benutzern geändert werden.
+

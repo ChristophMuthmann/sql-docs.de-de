@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 685eb349ecbd054ed37b77e6a8472ee47db78e0b
@@ -138,3 +139,4 @@ ms.lasthandoff: 06/22/2017
  Weitere Informationen finden Sie unter [ALTER PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md).  
   
   
+

@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3671b82eaa3281ff682314943209eb50273eb9dd
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 -   [Ebene 1](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) Konformität bietet Core Level-Interface-Funktionalität sowie zusätzlichen Features wie Transaktionen.  
   
 -   [Ebene 2](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) Konformität bietet Ebene-1-Funktionen sowie zusätzlichen Features wie Lesezeichen, dynamische Parameter und asynchrone Ausführung der ODBC-Funktionen.
+

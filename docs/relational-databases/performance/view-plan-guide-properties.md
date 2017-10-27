@@ -19,6 +19,7 @@ caps.latest.revision: 19
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a68f0e1e0c15000f40de408f41ce4c40f281900e
@@ -135,3 +136,4 @@ ms.lasthandoff: 06/22/2017
  Weitere Informationen finden Sie unter [sys.plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md).  
   
   
+

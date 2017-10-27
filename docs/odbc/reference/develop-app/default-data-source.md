@@ -25,6 +25,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 08c8aab7a9cfcecf18181dacbab6f18aaa59ff64
@@ -40,3 +41,4 @@ Der Treiber kann wählen Sie eine Datenquelle, die Standarddatenquelle in bestim
 -   In einem Aufruf von **SQLDriverConnect** , in denen *InConnectionString* gibt an, entweder **DSN**= Standard oder gibt an, mit der **DSN** Schlüsselwort ein die Datenquelle, die nicht in die Systeminformationen enthalten ist.  
   
  Es ist treiberdefinierten, wie die Standarddatenquelle angegeben wird. Dies kann zur Folge haben Verwaltungsaktion und kann, hängt davon ab, der Benutzer.
+

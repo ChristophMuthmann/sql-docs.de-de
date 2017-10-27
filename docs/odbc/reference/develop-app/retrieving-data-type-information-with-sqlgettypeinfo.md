@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8a1eb337e91595b5be013067847f73c3de117e97
@@ -38,3 +39,4 @@ Da die Zuordnungen von zugrunde liegenden SQL-Datentypen zu ODBC-Datentypbezeich
 -   ODBC definiert keine Datentypnamen für die Verwendung in **CREATE TABLE** und **ALTER TABLE** Anweisungen. Die Anwendung sollte verwenden Sie stattdessen den Namen in der Spalte TYPE_NAME des zurückgegebenes Resultset zurückgegebenen **SQLGetTypeInfo**. Der Grund dafür ist, obwohl die meisten SQL variiert nicht viel über DBMS, Datentypnamen erheblich variieren. Anstatt das Erzwingen eines Treiber zum Analysieren von SQL-Anweisungen und DBMS-spezifische Datentypnamen standard Datentypnamen ersetzt, erfordert ODBC-Anwendungen, die DBMS-spezifische Namen ursprünglich.  
   
  Beachten Sie, dass **SQLGetTypeInfo** nicht notwendigerweise beschreibt alle Datentypen, die eine Anwendung auftreten kann. Insbesondere können Resultsets nicht direkt von der Datenquelle unterstützte Datentypen enthalten. Beispielsweise werden die Datentypen der Spalten in Resultsets von Katalogfunktionen von ODBC definiert und diese Datentypen möglicherweise nicht von der Datenquelle unterstützt. Um die Merkmale der Datentypen in einem Resultset zu ermitteln, eine Anwendung ruft **SQLColAttribute**.
+

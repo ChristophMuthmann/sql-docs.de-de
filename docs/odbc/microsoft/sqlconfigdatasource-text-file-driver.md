@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e781871cc8507d10617e1a147fa6d5a7c06ac756
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
 |FORMAT|Für den Text-Treiber kann FIXEDLENGTH TABDELIMITED, CSVDELIMITED (durch ein Komma) oder DELIMITED() (durch das Sonderzeichen in Klammern angegeben). Das Sonderzeichen kann ist ein Zeichen lang und im Zeichenformat, Dezimal oder hexadezimal vorliegen.|  
 |MAXSCANROWS|Die Anzahl der Zeilen, die beim Festlegen des Datentyps einer Spalte, die basierend auf vorhandenen Daten geprüft werden.<br /><br /> Für den Text-Treiber können Sie eine Zahl zwischen 1 und 32767 für die Anzahl der Zeilen eingeben; Allerdings wird standardmäßig der Wert immer auf 25. (Eine Zahl außerhalb der Grenzwert wird einen Fehler zurückgegeben.)<br /><br /> Dadurch wird die gleiche Option als **zu scannende Zeilen** im Dialogfeld "Setup".|  
 |READONLY|True, um die Datei schreibgeschützt machen. "False", um die Datei nicht schreibgeschützt sein.<br /><br /> Dadurch wird die gleiche Option als **Read Only** im Dialogfeld "Setup".|
+

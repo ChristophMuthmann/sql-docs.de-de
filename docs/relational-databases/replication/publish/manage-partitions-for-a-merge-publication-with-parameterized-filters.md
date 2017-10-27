@@ -18,6 +18,7 @@ caps.latest.revision: 22
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5718198b2cbfc99a1658a703199bb943fcd73aeb
@@ -168,3 +169,4 @@ ms.lasthandoff: 08/03/2017
  [Momentaufnahmen für Mergeveröffentlichungen mit parametrisierten Filtern](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   
+

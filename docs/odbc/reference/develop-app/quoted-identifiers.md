@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 07a0c8299fc4063e72353025465309c426a3a251
@@ -35,3 +36,4 @@ SELECT * FROM "Accounts Payable"
  Der Grund für Bezeichner ist, die Anweisung analysiert. Wenn "Accounts Payable" nicht in der vorherigen Anweisung in Anführungszeichen gesetzt wurde, würde der Parser z. B. wird davon ausgegangen, dass zwei Tabellen, Konten und Payable, wurden und ein Syntaxfehler, den nicht durch ein Komma getrennt zurückzugeben. Der Bezeichner Anführungszeichen treiberspezifische und wird abgerufen, mit der Option SQL_IDENTIFIER_QUOTE_CHAR **SQLGetInfo**. Die Listen von Sonderzeichen und Schlüsselwörter werden abgerufen, mit den Optionen SQL_SPECIAL_CHARACTERS und SQL_KEYWORDS in **SQLGetInfo**.  
   
  Um sicher zu sein, Angebot interoperable Anwendungen häufig alle Bezeichner mit Ausnahme derjenigen für Pseudospalten, z. B. den Spalte ROWID in Oracle. **SQLSpecialColumns** gibt eine Liste der Pseudospalten zurück. Darüber hinaus treten anwendungsspezifische Beschränkungen, wobei Sonderzeichen in Objektnamen angezeigt werden können, ist es am besten für interoperablen Anwendungen nicht, für die Verwendung von Sonderzeichen in diese Positionen.
+

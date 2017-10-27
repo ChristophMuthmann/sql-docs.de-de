@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 407a67c6c4d641366b1ffabef10b22a6931a2212
@@ -52,3 +53,4 @@ SQLBindParameter(StatementHandle, 1, SQL_PARAM_INPUT, SQL_C_TCHAR, SQL_WCHAR, Na
  Unicode-Treiber müssen dennoch ANSI-Datentypen, einschließlich SQL_CHAR unterstützen. Wenn eine Anwendung, die mit einem Unicode-Treiber arbeiten SQL_CHAR gebunden, wird der Treiber-Manager die SQL_CHAR-Daten nicht SQL_WCHAR zuordnen. Der Unicode-Treiber muss die SQL_CHAR-Daten akzeptieren.  
   
  Der Treiber-Manager speichert Treiber und DSN-Namen im Unicode-Format und ordnet sie ANSI nach Bedarf. Wenn ein Unicode-Zeichen in eine ANSI-Zeichen (wie auftreten können, wenn Zeichen aus einer Codepage, die nicht den systemeigenen Code auf dem Computer ist im DSN-Namen und Treiber verwendet werden) zugeordnet werden kann, werden die Zeichen, die nicht konvertiert werden konnten von einer Standard-Sup Zeichen dargestellt. vom System plied.
+

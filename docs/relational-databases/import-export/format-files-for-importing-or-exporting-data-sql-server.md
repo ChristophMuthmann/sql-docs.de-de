@@ -18,6 +18,7 @@ caps.latest.revision: 41
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
 ms.openlocfilehash: d0e3abc1c4ae024257be18f3e3ad3ba5f5566457
@@ -133,3 +134,4 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
  [Datenformate für Massenimport oder Massenexport &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 39d795314d2333c5d33cb55057b68e652082ae89
@@ -42,3 +43,4 @@ SELECT "Customer Name" FROM "Accounts Payable"
  Die Katalogfunktionen basieren auf einer SQL-ähnlichen Autorisierungsmodell, in dem basierend auf einem Benutzernamen und Kennwort eine Verbindung hergestellt, und nur Daten, die für die der Benutzer eine Berechtigung besitzt, werden zurückgegeben. Der Kennwortschutz für einzelne Dateien, die nicht in dieses Modell passt, wird die Treiber definiert.  
   
  Durch die Katalogfunktionen zurückgegebenen Resultsets können fast nie aktualisiert werden, und Anwendungen sollten nicht erwarten, damit die Struktur der Datenbank zu ändern, indem Sie Daten in diesen Resultsets geändert werden.
+

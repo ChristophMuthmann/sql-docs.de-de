@@ -113,7 +113,7 @@ ms.lasthandoff: 08/03/2017
   
     3.  Geben Sie unter **SQL-Befehlstext**die folgende Abfrage ein:  
   
-        ```  
+        ```sql 
         SELECT     Person.Contact.EmailAddress, Person.Contact.FirstName, CONVERT(float, Sales.SalesPerson.Bonus) AS Bonus  
         FROM         Sales.SalesPerson INNER JOIN  
                               Person.Contact ON Sales.SalesPerson.SalesPersonID = Person.Contact.ContactID  

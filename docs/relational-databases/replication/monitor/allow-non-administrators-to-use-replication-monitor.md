@@ -16,6 +16,7 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 95a0b865d33d96b740a48971bfccbc1334b37807
@@ -88,3 +89,4 @@ ms.lasthandoff: 06/22/2017
 2.  Wenn der Benutzer zur Rolle **replmonitor** gehört, führen Sie auf dem Verteiler für die Verteilungsdatenbank [sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) aus. Geben Sie einen Wert **replmonitor** für **@rolename** und den Namen des Datenbankbenutzers oder den Windows-Anmeldenamen an, der für **@membername**zu verwenden.  
   
   
+

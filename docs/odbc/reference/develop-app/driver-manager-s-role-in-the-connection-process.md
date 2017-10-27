@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 32a6629892ad9667b7d56a6bb6752c68001dddc9
@@ -44,3 +45,4 @@ Denken Sie daran, dass Anwendungen keine Treiberfunktionen direkt aufrufen. Stat
  Der Treiber-Manager wird das Umgebungshandle gesperrt (*Henv*) vor dem Aufrufen des Treibers **SQLAllocHandle** und **SQLFreeHandle** Wenn *HandleType* festgelegt ist, um **SQL_HANDLE_DBC**.  
   
  Wenn die Anwendung aufruft, **SQLDisconnect**, der Treiber-Manager ruft **SQLDisconnect** im Treiber. Allerdings bleibt den Treiber geladen wird, für den Fall, dass die Anwendung an den Treiber erneut eine Verbindung herstellt. Wenn die Anwendung aufruft, **SQLFreeHandle** mit der Option SQL_HANDLE_DBC auf der Treiber-Manager ruft **SQLFreeHandle** im Treiber. Wenn der Treiber nicht durch alle anderen Verbindungen verwendet wird, ruft der Treiber-Manager dann **SQLFreeHandle** -option in den Treiber mit der SQL_HANDLE_ENV und entlädt den Treiber.
+

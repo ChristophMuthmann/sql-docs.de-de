@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 70649ee51ec7b5c2ef3926706f802da8189fc3b2
@@ -72,3 +73,4 @@ Ein Batch von SQL-Anweisungen ist eine Gruppe von mindestens zwei SQL-Anweisunge
 -   [Ausführen von Batches](../../../odbc/reference/develop-app/executing-batches.md)  
   
 -   [Fehler und Batches](../../../odbc/reference/develop-app/errors-and-batches.md)
+

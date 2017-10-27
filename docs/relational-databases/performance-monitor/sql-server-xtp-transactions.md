@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 40baae3d8967f5e4f193c1264e30749d291b0b2a
@@ -45,3 +46,4 @@ ms.lasthandoff: 06/22/2017
  [Leistungsindikatoren für SQL Server XTP &#40;In-Memory OLTP&#41;](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
   
   
+

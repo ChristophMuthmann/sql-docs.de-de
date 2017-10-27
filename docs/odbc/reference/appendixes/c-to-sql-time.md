@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6f1a59c15d2ebf1866d4543fa89662888154d4da
@@ -46,3 +47,4 @@ Der Bezeichner für die Zeit ODBC C-Datentyp ist:
  Wenn Zeitdaten C in SQL-Zeichendaten konvertiert werden, werden die resultierende Zeichendaten der "*" hh "*:*mm*:*ss*" Format.  
   
  Der Treiber ignoriert den Längenindikator /-Wert, beim Konvertieren von Daten von der Zeit, C-Datentyp, und setzt voraus, dass die Größe des Datenpuffers die Größe des Datentyps Zeit C ist. Der Längenindikator /-Wert übergeben der *StrLen_or_Ind* Argument in **SQLPutData** und in den Puffer mit angegebenen der *StrLen_or_IndPtr* Argument in **SQLBindParameter**. Datenpuffer wird angegeben, mit der *DataPtr* Argument in **SQLPutData** und die *ParameterValuePtr* Argument in **SQLBindParameter**.
+

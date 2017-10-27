@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 14cade223de7014dd4a0c27295d3ff742d18af17
@@ -51,3 +52,4 @@ SET NULL ON | OFF
  [ALTER TABLE - SQL-Befehl](../../odbc/microsoft/alter-table-sql-command.md)   
  [Erstellen der Tabelle - SQL-Befehl](../../odbc/microsoft/create-table-sql-command.md)   
  [INSERT - SQL-Befehl](../../odbc/microsoft/insert-sql-command.md)
+

@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 24154cb8cf4f07699385f773608b929a9a4ed4a3
@@ -54,3 +55,4 @@ ms.lasthandoff: 09/09/2017
 |THREADS|Die Anzahl der Hintergrundthreads für das Modul nutzen. Dieser Wert kann wird standardmäßig auf 3, jedoch geändert werden.<br /><br /> Dadurch wird die gleiche Option als **Threads** im Dialogfeld "Setup".|  
 |UID|Microsoft Access-Treiber für die Anmeldung verwendeten Benutzer-ID-Namen.|  
 |USERCOMMITSYNC|Bestimmt, ob die Microsoft Access-Treiber eine benutzerdefinierte Transaktionen asynchron durchführen. Dieser Wert wird anfangs festgelegt, auf "Ja", was bedeutet, dass der Microsoft Access-Treiber in einer benutzerdefinierten Transaktion ausgeführt werden Commits wartet.<br /><br /> Der Wert dieser Option sollten nicht ohne sorgfältiger Überlegung der möglichen Konsequenzen geändert werden. Weitere Informationen zu dieser Option finden Sie unter der *Microsoft Jet-Datenbank-Engine-Programmiererhandbuch*.<br /><br /> Dadurch wird die gleiche Option als **UserCommitSync** im Dialogfeld "Setup".|
+

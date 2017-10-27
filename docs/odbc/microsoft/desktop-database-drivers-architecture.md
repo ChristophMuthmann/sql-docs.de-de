@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0b85711437c50ccc246ad1af1432d9475d1cfc3d
@@ -54,3 +55,4 @@ Diese Treiber sind für die Verwendung auf Microsoft Windows 95 oder höher oder
  Odbcjt32.dll implementiert ODBC-Funktionen auf der Microsoft Jet-API. Es ist jedoch keine direkte Zuordnung zwischen ODBC und Microsoft Jet-Funktionen. Viele Faktoren, z. B. die Cursormodelle und SQL-Zuordnung zu verhindern, dass eine direkte Korrelation der Funktionen.  
   
  Der ODBC-Treiber befindet sich zwischen dem Microsoft Jet-Datenbankmodul und der ODBC-Treiber-Manager. Einige ODBC-Funktionen, die von einer Anwendung aufgerufen werden vom Treiber-Manager behandelt und nicht an den Treiber übergeben. Für diese Funktionen sieht Microsoft Jet nie die Funktion aufgerufen werden, da sie nicht über eine direkte Verbindung zu der Treiber-Manager verfügt.
+

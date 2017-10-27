@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bab4a7bed2fdc63224fd7a2f86757d11375f2cd2
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Da Oracle Fehler in der aktuellen Version behebt und retrofits diese zu früheren Versionen, die mit Software-Patches, wird empfohlen, dass Sie das neueste verfügbare Patch herunterladen. Dies gilt insbesondere für die Oracle-Server-Clientkomponenten. Wenn Sie Fragen zu diesen Patches installiert haben, wenden Sie sich an den Oracle-Unterstützung.
+

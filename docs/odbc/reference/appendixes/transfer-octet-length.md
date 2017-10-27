@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 763f6fdd2790de695e1e2307cbcac4e0ed3018ae
@@ -50,3 +51,4 @@ Die Übertragung Oktettlänge einer Spalte ist die maximale Anzahl von Bytes, di
 |SQL_GUID|16 (die Größe der GUID-Struktur).|  
   
  [a] Wenn der Treiber die Spalten- oder Parameternamen Länge für Variablentypen ermitteln kann, gibt Sie SQL_NO_TOTAL zurück.
+

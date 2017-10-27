@@ -24,6 +24,7 @@ caps.latest.revision: 46
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5e04261e1d43b3ca49c1c3d005d7c3ef683964ce
@@ -166,3 +167,4 @@ ms.lasthandoff: 06/22/2017
  [Übersicht über Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)  
   
   
+

@@ -32,6 +32,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e11b18afb96c7e5c1dc6ef6c23fc56cd3a75548e
@@ -288,3 +289,4 @@ Sie können keine Visual FoxPro-Regeln, Trigger, Standardwerte oder gespeicherte
 ||||  
 |-|-|-|  
 |ZAP-Befehl|||
+

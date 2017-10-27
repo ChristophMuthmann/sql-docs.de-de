@@ -23,6 +23,7 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c40e0e26ada07854f6772389ed09fc39e092952e
@@ -155,3 +156,4 @@ SQLRETURN SQLGetDescRec(
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
+

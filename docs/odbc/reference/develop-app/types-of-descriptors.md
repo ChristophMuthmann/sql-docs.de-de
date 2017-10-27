@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5554b0d7d110db9270230c25ab2bcc29d5a7cb87
@@ -54,3 +55,4 @@ Ein Deskriptor wird verwendet, um einen der folgenden beschreiben:
  Ein Deskriptor kann verschiedene Rollen ausführen. Verschiedene Anweisungen können Deskriptor freigeben, die die Anwendung explizit reserviert. Ein Zeilendeskriptor in einer einzelnen Anweisung kann als eine Parameterdeskriptor in einer anderen Anweisung dienen.  
   
  Es ist immer, ob ein angegebener Deskriptor ein Anwendungsdiensts oder einen Deskriptor Implementierung ist bekannt, selbst wenn der Deskriptor noch nicht in einem Datenbankvorgang verwendet wurde. Für die Deskriptoren, die die Implementierung implizit zuordnet, zeichnet die Implementierung der vordefinierten Zeile relativ zur das Anweisungshandle verwenden. Der Deskriptor, der die Anwendung durch Aufrufen von zuordnet **SQLAllocHandle** ist ein Deskriptor für die Anwendung.
+

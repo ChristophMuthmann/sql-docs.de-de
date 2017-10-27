@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7a0bb497044e9800461b60021fc9a6c8db4e9cca
@@ -34,3 +35,4 @@ Es ist häufig nützlich für Anwendungen mit Arrays von Parametern zu übergebe
 -   [Binden von Arrays von Parametern](../../../odbc/reference/develop-app/binding-arrays-of-parameters.md)  
   
 -   [Verwenden von Arrays von Parametern](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)
+

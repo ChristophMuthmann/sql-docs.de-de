@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 476c4710a4265214235bdd7b80a330fad5b37f34
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
 -   **Hinzufügen, ändern oder Löschen von Datenquellen im Hintergrund.** Ruft die Administration **SQLConfigDataSource** in der DLL-Installer und übergibt es ein null-Fenster zu behandeln, den Namen einer Datenquelle hinzufügen, ändern oder löschen und eine Liste von Werten für die Registrierung. Der Installer DLL ruft **ConfigDSN** in der Treiber-Setup-DLL, tatsächlich hinzuzufügen, ändern oder löschen Sie die Datenquelle.  
   
 -   **Hinzufügen, ändern oder Löschen einer Standard-Datenquelle.** Die Standarddatenquelle ist identisch mit einer anderen Datenquelle, mit dem Unterschied, dass standardmäßig ist der Anzeigename. Es wird hinzugefügt, geändert oder gelöscht werden, auf die gleiche Weise wie jede andere Datenquelle.
+

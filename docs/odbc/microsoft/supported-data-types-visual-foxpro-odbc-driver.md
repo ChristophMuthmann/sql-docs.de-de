@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: caf58413946e51ae8575b8d068e4a516316eb090
@@ -33,3 +34,4 @@ Die Liste der Datentypen, die vom Treiber unterstützt werden angezeigt, über d
   
 ## <a name="data-types-in-applications-using-microsoft-query"></a>Datentypen in Anwendungen, die mit Microsoft-Abfrage  
  Wenn Ihre Anwendung Microsoft Query verwendet, um eine neue Tabelle für eine Visual FoxPro-Datenquelle zu erstellen, zeigt Microsoft Query die **neue Tabelle (Definition)** (Dialogfeld). Unter **Feldbeschreibung**, **Typ** Feld Listen [Visual FoxPro-Felddatentypen](../../odbc/microsoft/visual-foxpro-field-data-types.md)von einzelnen Zeichen dargestellt.
+

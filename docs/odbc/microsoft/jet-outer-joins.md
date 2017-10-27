@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cb380d18747842fca36b7982d6d9bbcf87bfc3f0
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="jet-outer-joins"></a>Jet: Äußere Joins
 Eine SELECT-Anweisung kann es sich um eine Liste der OUTER JOIN-Klauseln enthalten. Geschachtelte ÄUßERE JOINS werden unterstützt. Weitere Informationen zu ÄUßEREN JOINS finden Sie unter der *Microsoft Jet-Datenbank-Engine-Programmiererhandbuch*.
+

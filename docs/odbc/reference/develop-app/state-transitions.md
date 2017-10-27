@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 42aedfe48871b04b311fb5de31fb9866e0e2468c
@@ -41,3 +42,4 @@ ODBC definiert diskrete *Zustände* für jede Umgebung, jede Verbindung und jede
  Aus Sicht der Anwendung Statusübergänge sind in der Regel einfach: rechtliche Statusübergänge tendenziell als Hand in Hand wechseln mit den Fluss einer gut geschriebene Anwendung. Statusübergänge sind komplexer für den Treiber-Manager und die Treiber, da sie den Status der Umgebung, jede Verbindung und jede Anweisung nachverfolgen müssen. Größte Teil dieser Arbeit erfolgt vom Treiber-Manager; Die meisten Aufgaben, die vom Treiber ausgeführt werden müssen, tritt bei-Anweisungen mit noch Ergebnisse ausstehen.  
   
  Teil 1 und 2 dieses Handbuchs ("Einführung in ODBC" und "Entwickeln von Anwendungen und-Treiber") eher nicht explizit Statusübergänge erwähnen. Stattdessen beschreiben sie die Reihenfolge, in der Funktionen aufgerufen werden müssen. "Ausführen von Anweisungen" gibt z. B. an, dass eine Anweisung vorbereitet sein muss, mit **SQLPrepare** , bevor sie mit ausgeführt werden kann **SQLExecute**. Eine vollständige Beschreibung der Zustände und Zustandsübergänge, z. B. die Übergänge vom Treiber-Manager überprüft werden und die durch Treiber, geprüft werden muss finden Sie unter [Anhang B: ODBC-Übergang-Statustabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 21d250dab0dd2407cebdbb0626b914867e35288d
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Gibt die Anzahl der Zeilen, die von der letzten betroffenen [UPDATE](../../odbc/microsoft/update-sql-command.md), [einfügen](../../odbc/microsoft/insert-sql-command.md), oder [löschen](../../odbc/microsoft/delete-sql-command.md) Anweisung.  
   
  Weitere Informationen finden Sie unter [SQLRowCount](../../odbc/reference/syntax/sqlrowcount-function.md) in der *ODBC Programmer's Reference*.
+

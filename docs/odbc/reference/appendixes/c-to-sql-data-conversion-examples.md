@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 46c1a95015858fbec4ff1e1b5f10bb9b409c9482
@@ -51,3 +52,4 @@ Die folgenden Beispiele veranschaulichen, wie der Treiber C-Daten in SQL-Daten k
  [c] die Zahlen in dieser Liste werden die Zahlen in den Feldern der SQL_DATE_STRUCT-Struktur gespeichert.  
   
  [d] die Zahlen in dieser Liste werden die Zahlen in die Felder der Struktur SQL_TIMESTAMP_STRUCT gespeichert.
+

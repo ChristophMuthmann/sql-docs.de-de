@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cf5a445725a72a517b0ea779ea1fc547e55cb803
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
  Die Cursorbibliothek unterstützt Aufrufen **SQLBindCol** die Lesezeichenspalte binden.  
   
  Wenn Sie mit einer ODBC 2. arbeiten zu können. *x* -Treiber verwenden, gibt die Cursorbibliothek SQLSTATE HY090 zurück (ungültige Zeichenfolgen- oder Pufferlänge.) Wenn **SQLBindCol** wird aufgerufen, um die Pufferlänge für eine Lesezeichenspalte auf einen Wert festgelegt wird, der nicht gleich 4. Bei der Arbeit mit einer ODBC 3.*.x* -Treiber die Cursorbibliothek ermöglicht den Puffer, in beliebiger Größe sein.
+

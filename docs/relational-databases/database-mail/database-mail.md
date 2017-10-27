@@ -18,6 +18,7 @@ caps.latest.revision: 47
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a613827dda07aa9fee71813b045ffc2859cc7033
@@ -130,3 +131,4 @@ ms.lasthandoff: 06/22/2017
   
   
   
+

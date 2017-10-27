@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6f344ce0a3830bbd79d6674cfd4d5961b973939e
@@ -86,3 +87,4 @@ SQLBrowseConnect(hdbc, "DATABASE=pubs;", SQL_NTS, BrowseResult,
 SQLDriverConnect(hdbc, hwnd, BrowseResult, SQL_NTS, ConnStrOut,  
                   sizeof(ConnStrOut), &ConnStrOutLen, SQL_DRIVER_NOPROMPT);  
 ```
+

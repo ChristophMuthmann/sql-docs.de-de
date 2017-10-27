@@ -21,6 +21,7 @@ caps.latest.revision: 32
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cb6afeb29ea5a834ae67e9521f690fba748c7c68
@@ -34,3 +35,4 @@ ms.lasthandoff: 06/22/2017
  Weitere Informationen finden Sie unter [Initialize a Subscription with a Snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md) und [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
   
+

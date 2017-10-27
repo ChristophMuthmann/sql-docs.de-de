@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5709d3ef8d186d0dcc0fb56f27829298f74e2b0c
@@ -51,3 +52,4 @@ Verhaltensänderungen werden diese Änderungen für die die *Syntax* der Schnitt
 -   [SQLSTATE-Zuordnungen](../../../odbc/reference/develop-app/sqlstate-mappings.md)  
   
 -   [Änderungen des Datentyps "DateTime"](../../../odbc/reference/develop-app/datetime-data-type-changes.md)
+

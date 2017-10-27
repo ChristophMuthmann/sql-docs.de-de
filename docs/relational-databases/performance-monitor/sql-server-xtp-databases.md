@@ -16,6 +16,7 @@ caps.latest.revision: 3
 author: dagiro
 ms.author: v-dagir
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e2839d276956db1b82bf6b1f236ceae74b973477
@@ -71,3 +72,4 @@ Diese Tabelle beschreibt die **SQL Server XTP-Datenbanken** -Leistungsindikatore
 
 ## <a name="see-also"></a>Siehe auch  
 [Leistungsindikatoren für SQL Server XTP &#40;In-Memory OLTP&#41;](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)
+

@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 09265543685ea8fd573ee20bea90093f920b6e49
@@ -35,3 +36,4 @@ DBMS-basierten Treibern sind mit Datenquellen wie z. B. Oracle- oder SQL Server 
  Die folgende Abbildung zeigt drei verschiedene Konfigurationen von DBMS-basierten Treibern. Befinden sich in der ersten Konfiguration der Treiber und die Datenquelle auf demselben Computer. Im zweiten Fall befinden sich auf verschiedenen Computern die Treiber und die Datenquellensicht. Im dritten die Treiber und die Datenquellensicht auf unterschiedlichen Computern befinden und ein Gateway zwischen ihnen, die auf noch einem anderen Computer befindet.  
   
  ![Drei Konfigurationen von DBMS &#45; basierend Treiber](../../odbc/reference/media/pr07.gif "pr07")
+

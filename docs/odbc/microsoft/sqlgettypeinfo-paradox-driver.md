@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1c95d4c4519b420324e9ec1364d2ac9f352ba346
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  Der Name des Typs (TYPE_NAME) zurückgegeben, in der Tabelle von erzeugten **SQLGetTypeInfo** wird der Name, der am häufigsten von der Datenquelle verwendet werden.  
   
  SQL_ALL_EXCEPT_LIKE wird in der DURCHSUCHBAREN Spalte für das Byte, Leistungsindikator, Double, Single, lange und kurze Datentypen zurückgegeben werden. (Die LIKE-Funktion kann durch Konvertieren des Werts in ein Zeichen mit der kanonischen ODBC-Konvertierungsfunktionen erzielt werden und anschließend Ausführen des Vergleichs.)
+

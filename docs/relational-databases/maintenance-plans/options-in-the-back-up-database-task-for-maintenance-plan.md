@@ -19,6 +19,7 @@ caps.latest.revision: 52
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 190b77647ebce66f7cf7af006f3b817605969bae
@@ -141,3 +142,4 @@ ms.lasthandoff: 06/22/2017
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)  
   
   
+

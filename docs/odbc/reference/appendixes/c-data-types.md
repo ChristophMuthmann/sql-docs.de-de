@@ -19,6 +19,7 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0fe266052c52b46b7f206869bdf89ff5377daf3b
@@ -161,3 +162,4 @@ struct tagSQLGUID {
   
 ## <a name="see-also"></a>Siehe auch  
  [C-Datentypen in ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)
+

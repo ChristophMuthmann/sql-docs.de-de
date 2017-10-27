@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 146e16608f0f2f790bf49a84de2ef4610df33d0f
@@ -74,3 +75,4 @@ typedef struct tagSQL_DAY_SECOND
 ```  
   
  Die *Interval_type* -Feld von der SQL_INTERVAL_STRUCT gibt an, an die Anwendung in welcher Struktur in der Union aufrechterhalten wird und welche Member der Struktur sind auch relevant. Die *Interval_sign* Feld hat den Wert SQL_FALSE aus, wenn die für anführenden Intervallwert, Feld nicht signiert ist, ist dies SQL_TRUE, das führende Feld ist ein negativer Wert. Der Wert im Feld führende selbst ist immer ohne Vorzeichen, unabhängig vom Wert der *Interval_sign*. Die *Interval_sign* Feld fungiert als Vorzeichenbit.
+

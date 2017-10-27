@@ -17,6 +17,7 @@ caps.latest.revision: 16
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 840b9d449ad320dc104960c322590e96082f0cdb
@@ -60,3 +61,4 @@ ms.lasthandoff: 08/03/2017
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   
+

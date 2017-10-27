@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ff70e2bf919735de40acec8b7386efd6d66b3ffe
@@ -30,3 +31,4 @@ Wenn der Microsoft Access, dBASE oder Paradox-Treiber verwendet wird, ist die Sy
  Wenn Paradox-Treiber verwendet wird, löscht DROP INDEX-Anweisung sekundären Indexdateien Paradox.  
   
  Die DROP INDEX-Anweisung wird für die Microsoft Excel- oder Textdateien-Treiber nicht unterstützt.
+

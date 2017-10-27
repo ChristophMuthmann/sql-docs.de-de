@@ -141,7 +141,7 @@ ms.lasthandoff: 09/12/2017
   
 24. Während der Installation wird auf der Seite Installationsstatus der Status angegeben, sodass Sie während der Installation den Installationsstatus überwachen können.  
   
-25. Nach der Installation bietet die Seite Abgeschlossen einen Link zur zusammenfassenden Protokolldatei für die Installation und andere wichtige Hinweise. Klicken Sie auf Schließen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um die Installation von ****abzuschließen.  
+25. Nach der Installation bietet die Seite Abgeschlossen einen Link zur zusammenfassenden Protokolldatei für die Installation und andere wichtige Hinweise. Klicken Sie auf Schließen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um die Installation von **abzuschließen**.  
   
 26. Starten Sie den Computer neu, falls Sie dazu aufgefordert werden. Nachdem das Setup abgeschlossen ist, sollten Sie unbedingt die vom Installations-Assistenten ausgegebene Meldung lesen. Weitere Informationen finden Sie unter [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   

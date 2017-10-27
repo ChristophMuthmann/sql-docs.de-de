@@ -15,6 +15,7 @@ caps.latest.revision: 18
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e07fbf3e86ba92f4de8c165cb37b85dbd0091035
@@ -41,3 +42,4 @@ ms.lasthandoff: 06/22/2017
  [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
+

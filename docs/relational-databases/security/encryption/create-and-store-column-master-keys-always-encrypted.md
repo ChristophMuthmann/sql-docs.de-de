@@ -109,7 +109,7 @@ Um einem Benutzer die Berechtigung *Lesen* für ein im Zertifikatspeicherort des
 5.  Klicken Sie im Dialogfeld **Zertifikat-Snap-In** auf **Computerkonto**, und klicken Sie dann auf **Fertig stellen**.
 6.  Klicken Sie im Dialogfeld **Eigenständiges Snap-In** hinzufügen auf **Schließen**.
 7.  Klicken Sie im Dialogfeld **Snap-In hinzufügen/entfernen** auf **OK**.
-8.  Finden Sie das Zertifikat im **Zertifikat-Snap-In** im Ordner ** Eigene Zertifikate**, klicken Sie mit der rechten Maustaste auf das Zertifikat, zeigen Sie auf **Alle Aufgaben**, und klicken Sie dann auf **Private Schlüssel verwalten**.
+8.  Finden Sie das Zertifikat im **Zertifikat-Snap-In** im Ordner  **Eigene Zertifikate**, klicken Sie mit der rechten Maustaste auf das Zertifikat, zeigen Sie auf **Alle Aufgaben**, und klicken Sie dann auf **Private Schlüssel verwalten**.
 9.  Fügen Sie bei Bedarf im Dialogfeld **Sicherheit** die Leseberechtigung für ein Benutzerkonto hinzu.
 
 ## <a name="creating-column-master-keys-in-azure-key-vault"></a>Erstellen von Spaltenhauptschlüsseln in Azure Key Vault

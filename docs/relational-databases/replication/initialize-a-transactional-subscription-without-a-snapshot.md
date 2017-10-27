@@ -18,6 +18,7 @@ caps.latest.revision: 37
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4b4c95296d12ba08582ecf6929c5c13dd02b2bae
@@ -81,3 +82,4 @@ ms.lasthandoff: 07/31/2017
  [Initialisieren eines Abonnements](../../relational-databases/replication/initialize-a-subscription.md)  
   
   
+

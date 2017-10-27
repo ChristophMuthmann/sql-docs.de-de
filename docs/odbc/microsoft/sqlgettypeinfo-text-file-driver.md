@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: be45f11a17e340fb3a6999c242fce208ae733210
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  SQL_ALL_EXCEPT_LIKE wird in der DURCHSUCHBAREN Spalte für das Byte, Leistungsindikator, Double, Single, lange und kurze Datentypen zurückgegeben werden. (Die LIKE-Funktion kann erreicht werden, durch Konvertieren des Werts in ein Zeichen an, indem die ODBC-kanonische Konvertierungsfunktionen, klicken Sie dann der Vergleich ausgeführt.)  
   
  Wenn der Text-Treiber verwendet wird, **SQLGetTypeInfo** gibt CASE_SENSITIVE Wert "false" für den Text-Datentypen (CHAR und LONGCHAR), wenn die Datentypen tatsächlich sind Groß-/Kleinschreibung beachtet.
+

@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d637ddfebc0563ed2591740498d519f91e34321e
@@ -35,3 +36,4 @@ Einige Treiber können mit der die Felder von der IPD festlegen, nachdem eine pa
  Wenn automatischer Auffüllung unterstützt und aktiviert ist, füllt der Treiber die Felder von der IPD an, nachdem eine SQL-Anweisung, die parametermarkierungen, durch einen Aufruf von vorbereitet wurde **SQLPrepare**. Eine Anwendung kann diese Informationen abrufen, durch den Aufruf **SQLGetDescField** oder **SQLGetDescRec**, oder **SQLDescribeParam**. Die Anwendung kann die Informationen verwenden, um den am besten geeigneten Anwendungspuffer für einen Parameter zu binden oder eine Datenkonvertierung dafür anzugeben.  
   
  Automatischer Auffüllung der die IPD kann zu Leistungseinbußen führen. Eine Anwendung kann es deaktivieren, indem das SQL_ATTR_ENABLE_AUTO_IPD-Anweisungsattribut auf SQL_FALSE (Standardwert) zurückzusetzen.
+

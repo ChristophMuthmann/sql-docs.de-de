@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e22537b5ce7b2b1ecfdf579e78859812895671c2
@@ -43,3 +44,4 @@ Das letzte Verfahren für das Senden von SQL-Anweisungen an das DBMS erfolgt üb
 3.  Wenn die Anweisung eine SELECT-Anweisung ist, ruft die Anwendung eine CLI-Funktion zum Zurückgeben der Ergebnisse in Anwendungspuffer an. Diese Funktion gibt eine Zeile oder eine Spalte mit Daten in der Regel zu einem Zeitpunkt.  
   
 4.  Die Anwendung ruft eine CLI-Funktion zum Trennen der Verbindung das DBMS an.
+

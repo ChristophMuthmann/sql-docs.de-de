@@ -22,6 +22,7 @@ caps.latest.revision: 35
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8c73a4b7e8d9c3e470136942c830a0ba879ed420
@@ -59,3 +60,4 @@ ms.lasthandoff: 06/22/2017
          Weitere Informationen finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
   
+

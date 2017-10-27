@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 26d4afc99e13e8abd5579a01b461eb6df2a05571
@@ -32,3 +33,4 @@ Sie können mit einer Visual FoxPro-Datenquelle mithilfe der Microsoft Office-An
 |Microsoft Access, Microsoft Excel oder Microsoft Word|[Zugriff auf Visual FoxPro-Daten aus Microsoft Office](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)|  
 |Die C- oder C++-Anwendung|[SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md)<br /><br /> [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)|  
 |Visual Basic-Anwendung|[Mithilfe der Visual FoxPro-ODBC-Treibers mit Visual Basic-Anwendung](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)|
+

@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2369b39ff415a5387205ce62811594fe08a9f324
@@ -37,3 +38,4 @@ Daten konvertiert werden können von einem Typ in einen anderen an einem der vie
  ODBC definiert, wie Daten zwischen jeder SQL- und C-Datentyp konvertiert werden. Im Grunde ODBC unterstützt alle angemessene Konvertierungen, z. B. ein Zeichen-, Integer und ganze Zahl, "float", und unterstützt keine Standardschaltfläche Konvertierungen, z. B. "float", um Datum. Treiber sind erforderlich, um alle Konvertierungen für jeden SQL-Datentyp unterstützen, die sie unterstützen. Eine vollständige Liste der Konvertierung zwischen SQL und C-Datentypen finden Sie unter [Konvertieren von Daten aus SQL in C-Datentypen](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) und [Konvertieren von Daten von C-in SQL-Datentypen](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) in Anhang D:-Datentypen.  
   
  ODBC definiert auch eine skalare Funktion zum Konvertieren von Daten von einem SQL-Datentyp in einen anderen. Die **konvertieren** skalare Funktion wird vom Treiber auf die zugrunde liegenden skalaren Funktion oder Funktionen, die zum Durchführen von Konvertierungen in der Datenquelle definiert zugeordnet. Da diese Funktion DBMS-spezifische Funktionen zugeordnet ist, werden keine ODBC definiert, Funktionsweise dieser Konvertierungen oder welche Konvertierungen unterstützt werden müssen. Eine Anwendung ermittelt, welche Konvertierungen von einem bestimmten Treiber und einer Datenquelle durch die SQL_CONVERT Optionen in unterstützt werden **SQLGetInfo**. Weitere Informationen zu den **konvertieren** Skalarfunktion, finden Sie unter [Escapesequenzen in ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md) und [explizite Umwandlungsfunktion für Datentyp](../../../odbc/reference/appendixes/explicit-data-type-conversion-function.md).
+

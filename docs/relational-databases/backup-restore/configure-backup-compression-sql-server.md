@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 08c6e1ccb56a08309d2c904a8566884372dc3778
@@ -60,3 +61,4 @@ ms.lasthandoff: 08/03/2017
  [Sicherungskomprimierung &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md)  
   
   
+

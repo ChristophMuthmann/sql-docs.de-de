@@ -49,10 +49,10 @@ ConvexHullAggregate ( geography_operand )
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rückgabetyp: **Geography**  
   
 ## <a name="exception"></a>Exception  
- Löst eine `FormatException` aus, wenn ungültige Eingabewerte vorhanden sind. Finden Sie unter [STIsValid & #40; Geography-Datentyp & #41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
+ Löst eine `FormatException` aus, wenn ungültige Eingabewerte vorhanden sind. Finden Sie unter [STIsValid &#40; Geography-Datentyp &#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Methode gibt **null** zurück, wenn die Eingabe leer ist oder andere SRIDs aufweist. Finden Sie unter [Spatial Reference Identifiers & #40; SRIDs & #41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+ Diese Methode gibt **null** zurück, wenn die Eingabe leer ist oder andere SRIDs aufweist. Finden Sie unter [Spatial Reference Identifiers &#40; SRIDs &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
  Diese Methode ignoriert **null** -Eingaben.  
   

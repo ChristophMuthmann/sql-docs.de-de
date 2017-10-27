@@ -15,6 +15,7 @@ caps.latest.revision: 35
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cf291b900f61590446776dab273d2fcc14509234
@@ -242,3 +243,4 @@ ORDER BY so.so_id, sod.lineitem_id
  [Codebeispiele für In-Memory OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
   
   
+

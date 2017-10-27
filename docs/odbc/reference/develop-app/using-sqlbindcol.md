@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 300ac3348efa4d66076879917091200ac73a8a62
@@ -172,3 +173,4 @@ while ((rc = SQLFetch(hstmt)) != SQL_NO_DATA) {
 // Close the cursor.  
 SQLCloseCursor(hstmt);  
 ```
+

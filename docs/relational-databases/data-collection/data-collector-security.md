@@ -18,6 +18,7 @@ caps.latest.revision: 32
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 62b958f5a1c032e11b5aaef37692b5de21a0bec4
@@ -152,3 +153,4 @@ ms.lasthandoff: 07/31/2017
  [Implementieren der SQL Server-Agent-Sicherheit](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)  
   
   
+

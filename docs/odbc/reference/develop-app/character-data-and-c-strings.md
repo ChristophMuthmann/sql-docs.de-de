@@ -24,6 +24,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c786c1ce1ea3457da20d4f50c54ea7b797c70c1b
@@ -45,3 +46,4 @@ Eingabeparameter, die Zeichendaten mit variabler Länge (z. B. Spaltennamen, dyn
  Obwohl Anwendungen und-Treiber häufig C-Zeichenfolgen (nullterminierte Arrays von Zeichen) verwenden, um Zeichendaten aufzunehmen, besteht keine zwingend vorgeschrieben. In C können Zeichendaten auch als ein Array von Zeichen (ohne Null-Terminierung) und die Bytelänge eingelesenen Längen-/Indikatorpuffers separat behandelt werden.  
   
  Da Zeichendaten in einen nicht-Null endendes Array aufnehmen können, und die Bytelänge separat übergeben, ist es möglich, die Null-Zeichen in Zeichendaten eingebettet werden sollen. Allerdings in diesem Fall ist das Verhalten der ODBC-Funktionen nicht definiert, und es treiberspezifische ist, gibt an, ob ein Treiber ordnungsgemäß verarbeitet. Daher sollte interoperable Anwendungen immer Zeichendaten verarbeiten, die eingebettete Null-Zeichen als binäre Daten enthalten kann.
+

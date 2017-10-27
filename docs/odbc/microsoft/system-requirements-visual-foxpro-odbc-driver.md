@@ -22,6 +22,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 93432e89688b9028686350f87182ef1b674c8383
@@ -59,3 +60,4 @@ Geben Sie die Systemanforderungen für die Installation die Mindestversion des B
  Der Visual FoxPro-ODBC-Treiber unterstützt Doppelbyte-Zeichensätze (DBCS). Weitere Informationen finden Sie unter [internationale Unterstützung](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md).  
   
  16-Bit Microsoft Windows 3.1-Anwendungen unterstützt der Treiber nicht.
+

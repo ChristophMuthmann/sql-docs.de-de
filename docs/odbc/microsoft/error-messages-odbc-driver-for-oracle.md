@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 45b66b513595612de968bfc8cb274ebfc90a7a46
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  Dieser Abschnitt enthält das folgende Thema:  
   
 -   [Fehlermeldungen, die von der ODBC-Treiber für Oracle](../../odbc/microsoft/messages-returned-by-the-odbc-driver-for-oracle.md)
+

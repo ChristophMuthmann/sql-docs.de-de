@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3ae017de17892595dac94a0dd4bbb843d6d5f658
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
  Wenn die Anwendung selbst durch vollständige Parallelität implementiert, wird das SQL_ATTR_CONCURRENCY-Anweisungsattribut auf SQL_CONCUR_READ_ONLY, eine Zeile zu lesen. Wenn sie Zeilenversionen verglichen werden und die Zeilenversionsspalte ist nicht bekannt, ruft es **SQLSpecialColumns** SQL_ROWVER Optional können Sie den Namen dieser Spalte zu bestimmen.  
   
  Die Anwendung aktualisiert oder löscht die Zeile infolge einer Erhöhung der Parallelität auf SQL_CONCUR_LOCK (für den Schreibzugriff auf die Zeile Zugriff) und Ausführen einer **UPDATE** oder **löschen** -Anweisung mit einer **, in denen ** -Klausel, die gibt die Version oder die Werte der zeilenupdates wurde beim Lesen der Anwendung. Wenn die Zeile seit geändert wurde, schlägt die Anweisung fehl. Wenn die **, in denen** Klausel wird die Zeile nicht eindeutig identifiziert, die Anweisung kann auch aktualisieren oder Löschen von anderen Zeilen; Zeilenversionen immer eindeutig identifiziert Zeilen, aber Zeilenwerte Zeilen eindeutig zu identifizieren, nur dann, wenn sie den Primärschlüssel enthalten.
+

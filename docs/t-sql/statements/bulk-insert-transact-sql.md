@@ -300,7 +300,7 @@ GO
 |SQLBINARY oder SQLVARBIN|Die Daten werden ohne Konvertierung gesendet.|  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
- Einen Vergleich der BULK INSERT-Anweisung, der INSERT ... Wählen Sie \* FROM OPENROWSET(Bulk...)-Anweisung und dem **Bcp** Befehl, finden Sie unter [Massenimport und-Export von Daten &#40; SQLServer &#41; ](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
+ Einen Vergleich der BULK INSERT-Anweisung, der INSERT ... SELECT \* FROM OPENROWSET(Bulk...)-Anweisung und dem **Bcp** Befehl, finden Sie unter [Massenimport und-Export von Daten &#40; SQLServer &#41; ](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
   
  Informationen zur Vorbereitung der Daten für den Massenimport finden Sie unter [Vorbereiten von Daten für den Massenexport oder-Import &#40; SQLServer &#41; ](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).  
   

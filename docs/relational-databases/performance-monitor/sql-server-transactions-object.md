@@ -17,6 +17,7 @@ caps.latest.revision: 29
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 642a22206b25ec2963fae4fa04e6b10a5329f0e6
@@ -54,3 +55,4 @@ ms.lasthandoff: 06/22/2017
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
+

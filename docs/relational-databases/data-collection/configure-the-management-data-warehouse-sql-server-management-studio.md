@@ -27,6 +27,7 @@ caps.latest.revision: 28
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0be7c28ff6d9359ae858902f7b2d07cee6f353f6
@@ -144,3 +145,4 @@ ms.lasthandoff: 08/18/2017
  [Verwalten von Datensammlungen](../../relational-databases/data-collection/manage-data-collection.md)  
   
   
+

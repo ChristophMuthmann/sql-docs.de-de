@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 192962491095f8c6b8fb212ab7789cb74b609897
@@ -67,3 +68,4 @@ Die folgende Tabelle enthält die Faktoren, die für die Sichtbarkeit der Änder
  Serialisierbare S:  
   
  [b] hängt wie der Cursor implementiert wird. Gibt an, ob der Cursor für solche Änderungen erkennen, kann über die SQL_STATIC_SENSITIVITY-Option in gemeldete ist **SQLGetInfo**.
+

@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 16369d96931bd2b01d644756ab7e1e22fd325a85
@@ -38,3 +39,4 @@ Ein gemischter Cursor ist eine Kombination eines keysetgesteuerten Cursors und e
  Nehmen wir jetzt an eine andere Anwendung löscht Zeilen 11 und 101. Wenn der Cursor versucht, die Zeile 11 abgerufen werden, wird es eine Lücke auftreten, weil er verfügt über einen Schlüssel für diese Zeile aber keine Zeile vorhanden ist; Dieses ist Verhalten keysetgesteuerte. Wenn der Cursor versucht, die Zeile 101 abgerufen werden, erkennt der Cursor nicht, dass die Zeile nicht vorhanden ist, da sie nicht über einen Schlüssel für die Zeile verfügt. Stattdessen werden sie abgerufen, welche Zeile 102 zuvor. Dies trifft dynamic-Cursor.  
   
  Ein gemischte Cursor entspricht eines keysetgesteuerten Cursors wird die Keysetgröße gleich der Größe des Resultsets. Ein gemischte Cursor entspricht in einen dynamischen Cursor, wenn die Keysetgröße gleich 1 ist.
+

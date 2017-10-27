@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4c24d1dbab68a1e47b5dfe7b48dc3df86fb9f692
@@ -44,3 +45,4 @@ Obwohl statisches SQL auch in vielen Fällen funktioniert, besteht eine Klasse v
 3.  Das Programm können die EXECUTE-Anweisung wiederholt wird, unterschiedliche Parameterwerte jedem angeben die dynamische-Anweisung ausgeführt wird.  
   
  Die vorbereitete Ausführung ist noch nicht mit statischen SQL identisch. In statischen SQL erfolgen die ersten vier Schritte der Verarbeitung einer SQL-Anweisung zum Zeitpunkt der Kompilierung. Bei der vorbereiteten Ausführung dieser Schritte weiterhin stattfinden zur Laufzeit, aber sie nur einmal ausgeführt werden; Ausführung des Plans findet statt nur EXECUTE aufgerufen wird. Dadurch werden in der Architektur von dynamischem SQL inhärenten Leistung Nachteile zu vermeiden. Die nächste Abbildung zeigt die Unterschiede zwischen statischen SQL, dynamische SQL mit unmittelbare Ausführung und dynamischem SQL mit vorbereitete Ausführung.
+

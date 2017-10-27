@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cd72cc24ff011559addeabd0bcc95b172db1a60f
@@ -52,3 +53,4 @@ In der folgenden Tabelle wird gezeigt, wie Text-Datentypen in ODBC-SQL-Datentype
 |LONGCHAR|Der theoretische Grenze für die Breite einer Spalte LONGCHAR entweder in eine feste Länge, oder durch Trennzeichen getrennten Tabelle kann 65500K. Text-ISAM ist wahrscheinlicher zuverlässige unterstützen bis zu 32 KB.|  
   
  Weitere Einschränkungen für Datentypen finden Sie in [Datentyp Einschränkungen](../../odbc/microsoft/data-type-limitations.md).
+

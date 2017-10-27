@@ -23,6 +23,7 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2eda9fe4e6a5f300f83512f669ad5206f89effe6
@@ -147,3 +148,4 @@ SQL Server\0Driver=SQLSRVR.DLL\0\0
 |Informationen zu|Finden Sie unter|  
 |---------------------------|---------|  
 |Installieren des Treiber-Managers|[SQLInstallDriverManager](../../../odbc/reference/syntax/sqlinstalldrivermanager-function.md)|
+

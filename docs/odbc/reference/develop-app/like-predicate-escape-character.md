@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 132359972cebd3dded36fb911a2ee8e561e5ca64
@@ -42,3 +43,4 @@ SELECT Name FROM Customers WHERE Name LIKE '[%]AAA%'
 ```  
   
  Um zu bestimmen, ob die **wie** Prädikat Escape-Zeichen von einer Datenquelle unterstützt wird, werden Aufrufe von einer Anwendung **SQLGetInfo** mit der Option SQL_LIKE_ESCAPE_CLAUSE.
+

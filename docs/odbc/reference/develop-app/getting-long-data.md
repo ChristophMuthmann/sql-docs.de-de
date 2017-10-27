@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0ea30c211e3cfd66acf1588ef9ca2a45fd1037d1
@@ -89,3 +90,4 @@ SQLCloseCursor(hstmt);
  Einige Treiber erzwungen diese Einschränkungen nicht. Interoperable Anwendungen ausführen können, sollte entweder voraussetzen, vorhanden, oder bestimmen, welche Einschränkungen durch den Aufruf nicht erzwungen werden **SQLGetInfo** mit der Option SQL_GETDATA_EXTENSIONS.  
   
  Wenn die Anwendung nicht alle Daten in ein Zeichen oder eine Spalte mit binary-möchten, können sie den Netzwerkdatenverkehr im DBMS-basierten Treibern reduzieren, indem SQL_ATTR_MAX_LENGTH-Anweisungsattribut festlegen, bevor die Anweisung ausgeführt. Dies schränkt die Anzahl der Datenbytes, die für beliebiges Zeichen oder binary-Spalte zurückgegeben werden. Nehmen wir beispielsweise an, dass eine Spalte mit langen Textdokumente enthält. Eine Anwendung, die durchsucht, die Tabelle, enthält diese Spalte, möglicherweise nur die erste Seite des jeweiligen Dokuments anzuzeigen. Obwohl diese Anweisungsattribut im Treiber simuliert werden kann, besteht kein Grund dazu. Insbesondere, wenn eine Anwendung wünscht eine Zeichen- oder Binärdaten abgeschnitten, es sollte binden einen kleinen Puffer auf die Spalte mit **SQLBindCol** , und lassen Sie den Treiber, die die Daten abgeschnitten.
+

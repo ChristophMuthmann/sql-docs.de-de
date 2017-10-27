@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2af859a38f288507ad87564cfbbfffa2b8f6ecf8
@@ -93,3 +94,4 @@ SQLExecDirect(hstmt, "UPDATE Employee SET OpenDate=? WHERE OrderID = 1023", SQL_
  Um zu bestimmen, ob ein Treiber die ODBC-Escapesequenzen für Intervall Literale unterstützt, eine Anwendung ruft **SQLGetTypeInfo**. Wenn die Datenquelle einen Datetime-Intervall-Datentyp unterstützt, muss es auch die entsprechende Escapesequenz unterstützen.  
   
  Datenquellen unterstützen auch die Datetime-Literale in der ANSI SQL-92-Spezifikation definiert die unterscheiden sich von den ODBC-Escapesequenzen für Datetime-Intervall-Literale. Um zu bestimmen, ob eine Datenquelle die ANSI-Literale unterstützt, eine Anwendung ruft **SQLGetInfo** mit der Option SQL_ANSI_SQL_DATETIME_LITERALS.
+

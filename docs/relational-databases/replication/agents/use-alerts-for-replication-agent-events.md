@@ -25,6 +25,7 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 915d79db6a2c8f55443c92cb568bac8a9cc2c7d4
@@ -96,3 +97,4 @@ deallocate hc
  [Überwachen &#40;Replikation&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   
+

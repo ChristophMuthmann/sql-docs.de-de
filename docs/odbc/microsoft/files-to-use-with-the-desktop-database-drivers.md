@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 03bf019ac788e5879667db83855c91ad0a3aa0ad
@@ -33,3 +34,4 @@ Der ODBC-Datenbanktreiber Desktop werden mit der Microsoft Jet-Datenbankmodul, d
 |Von jeder Desktop-ODBC-Treiber verwendeten Dateien|ODBC-Treiber-Dateien|  
 |Microsoft Jet-Dateien verwendet, die für jeden Desktop-ODBC-Treiber|Microsoft Jet-Dateien|  
 |IISAM Treiberdateien, die den Datenzugriff zwischen Microsoft Jet und andere DBMS bereitstellen|Installierbare ISAM-Treiber-Dateien|
+

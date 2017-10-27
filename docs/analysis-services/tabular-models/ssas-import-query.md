@@ -1,7 +1,7 @@
 ---
 title: Importieren von Daten mithilfe einer systemeigenen Abfrage (Analysis Services) | Microsoft Docs
 ms.custom: 
-ms.date: 10/02/2017
+ms.date: 10/26/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -22,6 +22,8 @@ ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="import-data-by-using-a-native-query"></a>Importieren von Daten mithilfe einer systemeigenen Abfrage
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
 Für tabellarische Modelle 1400 bietet die neue Daten abrufen-Benutzeroberfläche in Visual Studio Analysis Services-Projekte enorme Flexibilität beim wie kombinieren können Ihre Daten während des Imports. Dieser Artikel beschreibt das Erstellen einer Verbindungs mit einer Datenquelle und anschließend eine systemeigene SQL-Abfrage zum Importieren von Daten angeben.
 

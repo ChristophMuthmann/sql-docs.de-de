@@ -61,7 +61,7 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
   
 1.  Doppelklicken Sie auf Setup.exe, und befolgen Sie die Schritte im Installations-Assistenten.  
   
-2.  Wählen Sie auf der Seite [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Funktionsauswahl **unter** Freigegebene Funktionen ** **aus.  
+2.  Wählen Sie auf der Seite [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Funktionsauswahl **unter** **Freigegebene Funktionen** aus.  
   
      Dadurch werden [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], Assemblys, das Windows PowerShell-Snap-In sowie Ordner und Dateien für Webanwendungen und Dienste installiert.  
   

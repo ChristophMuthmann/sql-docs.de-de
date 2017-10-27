@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a7bae5e984d66d8b71a9e4b84708f3ea126c1e0b
@@ -50,3 +51,4 @@ Es gibt diverse Vorteile gegenüber der Verwendung von Prozeduren, alle basiert 
  Der zweite Nachteil ist, dass viele Datenbankmanagementsysteme Prozeduren nicht unterstützt werden. In diesem Fall ist dies wahrscheinlich ein Problem für vertikale Anwendungen, die mit einer Anzahl von DBMS-Systeme ausgeführt werden. Um zu bestimmen, ob Prozeduren unterstützt werden, eine Anwendung ruft **SQLGetInfo** mit der Option SQL_PROCEDURES.  
   
  Der dritte Nachteil, der insbesondere für entwicklungsumgebungen Anwendung gilt, ist, dass die ODBC-Grammatik eine standard zum Erstellen von Prozeduren nicht definiert ist. D. h. auch wenn Clientanwendungen Prozeduren interoperably aufrufen können, können nicht sie diese interoperably erstellen.
+

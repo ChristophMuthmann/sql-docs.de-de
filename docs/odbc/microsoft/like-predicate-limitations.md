@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5668f03e785c0d27133965f16af40ce69c2a2567
@@ -32,3 +33,4 @@ Wenn Daten in einer Spalte mehr als 255 Zeichen sind, wird der Vergleich mit LIK
  Verwenden einer Escape-Klausel in einer LIKE-Prädikat wird nicht unterstützt.  
   
  Ein Vergleich mit LIKE sollten nicht für eine Spalte mit Daten eines Datentyps Numeric oder "float" ausgeführt werden. Die Ergebnisse möglicherweise nicht vorhersehbar. Weitere Informationen finden Sie unter der *Microsoft Jet-Datenbank-Engine-Programmiererhandbuch*.
+

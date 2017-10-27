@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 91c63c55a3d36e1b0c788361a8ae13a01ece9a38
@@ -41,3 +42,4 @@ Im SDK für Windows 8 hinzugefügt ODBC einen Mechanismus, um Anwendungen zu ben
   
 ## <a name="see-also"></a>Siehe auch  
  [Entwickeln einen ODBC-Treiber](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)
+

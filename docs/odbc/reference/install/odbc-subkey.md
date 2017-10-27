@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c90ca7ef439d1f12df7ddb18e95dea883b7142af
@@ -47,3 +48,4 @@ Trace : REG_SZ : 1
 TraceFile : REG_SZ : C:\ODBC.LOG  
   
 ```
+

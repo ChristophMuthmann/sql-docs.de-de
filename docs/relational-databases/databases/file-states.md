@@ -32,6 +32,7 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 732487dba37c2ee7eae56b920ce245f77489ff66
@@ -68,3 +69,4 @@ ms.lasthandoff: 06/22/2017
  [Datenbankdateien und Dateigruppen](../../relational-databases/databases/database-files-and-filegroups.md)  
   
   
+

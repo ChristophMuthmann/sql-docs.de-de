@@ -25,6 +25,7 @@ caps.latest.revision: 45
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 02f3e2ad2af0d11f5842bacc01ecb8cdf771bd56
@@ -171,3 +172,4 @@ ms.lasthandoff: 06/22/2017
 -   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)zugeordnet ist.  
   
   
+

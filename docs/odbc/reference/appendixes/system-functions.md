@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1537c769de2c0f421ed533ea73d75a1578a10559
@@ -38,3 +39,4 @@ Die folgende Tabelle enthält die Systemfunktionen, die in der ODBC-Skalarfunkti
 |**DATENBANK ()** (ODBC 1.0)|Gibt den Namen der Datenbank entspricht dem Verbindungshandle zurück. (Der Name der Datenbank ist auch verfügbar durch Aufrufen von **SQLGetConnectOption** mit SQL_CURRENT_QUALIFIER-Verbindungsoption.)|  
 |**IFNULL (** *exp*,*Wert***)** (ODBC 1.0)|Wenn *exp* ist null, *Wert* zurückgegeben. Wenn *exp* ist ungleich null, *exp* zurückgegeben wird. Die möglichen Datentyp oder die Arten von *Wert* muss kompatibel mit dem Datentyp der *exp*.|  
 |**BENUTZER ()** (ODBC 1.0)|Gibt den Benutzernamen in das DBMS zurück. (Der Benutzername steht auch über **SQLGetInfo** durch Angabe der Informationstyp: SQL_USER_NAME.) Dies kann sich der Anmeldename sein.|
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a10dc30810a1ea71bd4e2c9d823ed010f7f611d4
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
 -   [Parallelitätstypen](../../../odbc/reference/develop-app/concurrency-types.md)  
   
 -   [Vollständige Parallelität](../../../odbc/reference/develop-app/optimistic-concurrency.md)
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 899a799e2c52a7dbb21ed10ed08512e3aad28fab
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Ruft eine Liste von Statistiken über eine einzelne Tabelle und die Indizes oder die Tag-Namen der Tabelle zugeordnet. Der Treiber gibt zurück, die Informationen als ein Resultset.  
   
  Weitere Informationen finden Sie unter [SQLStatistics](../../odbc/reference/syntax/sqlstatistics-function.md) in der *ODBC Programmer's Reference*.
+

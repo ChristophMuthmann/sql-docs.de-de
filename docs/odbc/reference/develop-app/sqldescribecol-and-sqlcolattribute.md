@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9a80ccf6ed695433a109770a567f50d100fd3a33
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  Eine Anwendung kann die resultsetmetadaten abrufen, zu einem beliebigen Zeitpunkt, nachdem eine Anweisung vorbereitet oder ausgeführt wurde und bevor Sie den Cursor über das Ergebnis Satz geschlossen ist. Nur sehr wenige Anwendungen erfordern Ergebnis Metadaten festgelegt, nachdem die Anweisung vorbereitet ist, und bevor er ausgeführt wird. Wenn möglich, sollten Anwendungen zum Abrufen von Metadaten erst, nachdem die Anweisung ausgeführt wird, da einige Datenquellen können keine Metadaten für vorbereitete Anweisungen zurückgeben und Emulieren von dieser Funktion in der Treiber häufig ein langwieriger Prozess ist, warten. Beispielsweise generiert der Treiber kann ein Resultset von 0 (null) Zeilen durch Ersetzen der **, in denen** -Klausel der eine **auswählen** Anweisung mit der Klausel **WHERE 1 = 2** und Ausführen der ergibt sich folgende Anweisung.  
   
  Metadaten sind häufig teuer, aus der Datenquelle abgerufen werden. Aus diesem Grund sollten Treiber keine Metadaten zwischenspeichern, vom Server abzurufen, und halten, dass es für als der Cursor auf das Resultset geöffnet ist. Darüber hinaus sollten Anwendungen nur die Metadaten anfordern, absolut benötigten.
+

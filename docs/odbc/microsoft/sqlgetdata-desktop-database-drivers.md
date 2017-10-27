@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e091bf31e034eaabb9c87931bc6b128f5bdeba84
@@ -28,3 +29,4 @@ Diese Funktion kann Daten aus einer beliebigen Spalte abgerufen werden, und zwar
   
 > [!NOTE]  
 >  \*PcbValue in **SQLGetData** möglicherweise doppelt so viele Zeichen zurückgeben als die tatsächlich verfügbare beim Binden an die ANSI-Daten, die länger als 510 Zeichen in einer Jet 4.0-Datenbank. Zeichenwerte von 510 oder weniger werden die tatsächliche CbValue zurückgegeben.
+

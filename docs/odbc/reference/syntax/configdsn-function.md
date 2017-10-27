@@ -23,6 +23,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 491396da26d75d6710e708b840c9407b4a976bb9
@@ -130,3 +131,4 @@ DSN=Personnel Data\0UID=Smith\0PWD=Sesame\0DATABASE=Personnel\0\0
 |Entfernen einen Datenquellennamen Odbc.ini (oder der Registrierung)|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|  
 |Hinzufügen von einem Datenquellennamen Odbc.ini (oder Registrierung)|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|  
 |Schreiben einen Wert in der Datei Odbc.ini oder in der Registrierung|[SQLWritePrivateProfileString](../../../odbc/reference/syntax/sqlwriteprivateprofilestring-function.md)|
+

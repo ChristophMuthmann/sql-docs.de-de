@@ -18,6 +18,7 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 271b9ff4060284d50e66130f8bbd4b8d5b288912
@@ -93,3 +94,4 @@ ms.lasthandoff: 06/22/2017
  [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   
+

@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 667ed133862e0ea67f4f995520ead7b372fae74e
@@ -47,3 +48,4 @@ Der Bezeichner für das Datum, an die ODBC-SQL-Datentyp ist:
  [c] Dies ist die Größe des entsprechenden C-Datentyp.  
   
  Wenn in Zeichendaten C Datum SQL-Daten konvertiert wird, wird die resultierende Zeichenfolge der "*Yyyy*-*mm*-*Dd*" Format. Dieses Format wird durch die Einstellung der Windows® Land nicht beeinflusst.
+

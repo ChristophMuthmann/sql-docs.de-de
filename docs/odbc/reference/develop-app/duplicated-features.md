@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b12ba1b5b8c70e6ab0f7efe6f0811984411a6022
@@ -56,3 +57,4 @@ Die folgenden ODBC-2. *x* wurden Funktionen von ODBC 3. verdoppelt.* X* Funktion
   
 > [!NOTE]  
 >  Die Funktion **SQLBindParam** ist ein Sonderfall. **SQLBindParam** sind doppelt vorhandenen Funktionen. Dies ist keiner ODBC 2.*.x* -Funktion, aber eine Funktion, die in den Open Group und ISO-Standards vorhanden ist. Mithilfe dieser Funktion wird vollständig von der klassifiziert **SQLBindParameter**. Daher ordnet der Treiber-Manager einen Aufruf von **SQLBindParam** auf **SQLBindParameter** beim zugrunde liegenden Treiber ist ein ODBC 3..* X* Treiber. Wenn die zugrunde liegenden Treiber ist jedoch ein ODBC 2.*.x* Treiber, der Treiber-Manager führt keine diese Zuordnung.
+

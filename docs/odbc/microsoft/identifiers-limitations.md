@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ec32697030d2ad4ede765879f83956692ed49914
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 Wenn ein Bezeichner ein Leerzeichen oder ein Sonderzeichen enthält, muss der Bezeichner in Back Anführungszeichen eingeschlossen werden. Ein gültiger Name ist eine Zeichenfolge mit nicht mehr als 64 Zeichen enthalten, von denen das erste Zeichen ein Leerzeichen nicht sein muss. Gültige Namen darf keine Steuerzeichen und folgenden Sonderzeichen enthalten: "&#124; # * ? [ ] . ! $ .  
   
  Verwenden Sie nicht die reservierten Wörtern, in der SQL-Grammatik in Anhang C aufgeführt die *ODBC Programmer's Reference* (oder die Kurzform dieser reservierte Wörter) als Bezeichner (d. h. Tabellen- oder Spaltennamen), es sei denn, Sie Sichern des Worts umschließen Anführungszeichen (').
+

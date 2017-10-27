@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2cbdbbd3da828d5a995dbd9bff9c6b95aed1420a
@@ -72,3 +73,4 @@ Der Bezeichner für die numerische ODBC C-Datentypen sind:
  [b] für den Fall "n/v" kann ein Treiber optional zurückgeben, SQL_SUCCESS_WITH_INFO und 01S07 Wenn Sekundenbruchteile abgeschnitten sind.  
   
  Der Treiber ignoriert den Längenindikator /-Wert, wenn Daten aus der numerischen C-Datentypen konvertieren und wird davon ausgegangen, dass die Größe des Datenpuffers die Größe des numerischen Datentyps C. Der Längenindikator /-Wert übergeben der *StrLen_or_Ind* Argument in **SQLPutData** und in den Puffer mit angegebenen der *StrLen_or_IndPtr* Argument in **SQLBindParameter**. Datenpuffer wird angegeben, mit der *DataPtr* Argument in **SQLPutData** und die *ParameterValuePtr* Argument in **SQLBindParameter**.
+

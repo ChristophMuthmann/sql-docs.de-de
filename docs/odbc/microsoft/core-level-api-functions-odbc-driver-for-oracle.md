@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d3bc36063659da3cf0cd6b2b837be0c4fce46c6f
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/09/2017
 |**SQLSetCursorName**|Ein Handle aktive Anweisung ordnet einen Cursornamen *Befehls beschäftigt*.|  
 |**SQLSetParam**|Durch SQLBindParameter in ODBC 2 ersetzt. *x*.|  
 |**SQLTransact**|Fordert einen Commit oder Rollback-Vorgang für alle aktiven Vorgänge für alle Anweisungshandles (Hstmts) eine Verbindung zugeordnet oder für alle Verbindungen, die das Umgebungshandle zugeordnet *Henv*. Die Transaktion bleibt aktiv, wenn ein Commit im manuellen Modus fehlschlägt, Sie können auswählen, um ein Rollback der Transaktion, oder wiederholen den Commitvorgang. Wenn ein Commitvorgang im Transaktionsmodus für automatische fehlschlägt, wird die Transaktion automatisch zurückgesetzt; die Transaktion darf nicht inaktiv sein.|
+

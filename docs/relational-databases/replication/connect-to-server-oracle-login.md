@@ -18,6 +18,7 @@ caps.latest.revision: 20
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 180122568df0cdffe7e9f011194ac54d7bf01dc4
@@ -46,3 +47,4 @@ ms.lasthandoff: 06/22/2017
  [Glossary of Terms for Oracle Publishing](../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)  
   
   
+

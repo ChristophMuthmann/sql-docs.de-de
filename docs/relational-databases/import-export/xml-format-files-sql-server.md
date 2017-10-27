@@ -18,6 +18,7 @@ caps.latest.revision: 45
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
 ms.openlocfilehash: 77cde7d5ad701ec6d2ae98ade32a77f6af6b9e8a
@@ -574,3 +575,4 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  [Formatdateien zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
   
   
+

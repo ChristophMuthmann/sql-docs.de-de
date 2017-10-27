@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7ec40cc841c073fe66f9537687516f044048a0fc
@@ -44,3 +45,4 @@ Unicode definiert die Codierung für Zeichen in vielen Sprachen.
 -   [Unicode-Funktionsargumente](../../../odbc/reference/develop-app/unicode-function-arguments.md)  
   
 -   [Unicode-Daten](../../../odbc/reference/develop-app/unicode-data.md)
+

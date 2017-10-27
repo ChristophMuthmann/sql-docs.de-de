@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bd65300d9d3c79ea0604d6ea83c1c9377b7982cc
@@ -74,3 +75,4 @@ ms.lasthandoff: 08/03/2017
  [Objekt-Explorer](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)  
   
   
+

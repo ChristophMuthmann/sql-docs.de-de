@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 673298af856478eb1c94db4f79ef5fb56ee3396b
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Beendet die Verarbeitung einer bestimmten zugeordneten *Befehls beschäftigt*, schließt alle geöffneten Cursor verknüpft ist, mit der *Befehls beschäftigt*ausstehende Ergebnisse verworfen und optional alle der Anweisung zugeordnete Ressourcen frei behandeln.  
   
  Weitere Informationen finden Sie unter [SQLFreeStmt](../../odbc/reference/syntax/sqlfreestmt-function.md) in der *ODBC Programmer's Reference*.
+

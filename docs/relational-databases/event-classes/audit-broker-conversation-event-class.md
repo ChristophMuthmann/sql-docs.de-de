@@ -16,6 +16,7 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9839fc61788b3bbd3070455fac7ba8d3dcfb5e4a
@@ -65,3 +66,4 @@ ms.lasthandoff: 06/22/2017
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b39bfb096e980106ecaef4e12ef9871f1a32452a
@@ -420,3 +421,4 @@ Else
     // Call the corresponding Asynchronous ODBC API to complete all processing and retrieve the return code.  
 }  
 ```
+

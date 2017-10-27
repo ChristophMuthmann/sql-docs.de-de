@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a5e2fb7cf9f54177ce357058e51e541b6a442379
@@ -36,3 +37,4 @@ Spaltennamen können keine gültigen Zeichen (z. B. Leerzeichen) enthalten. Wenn
  Einen senkrechten Strich (&#124;) kann nicht in einem Spaltennamen verwendet werden, ob der Name in Back Anführungszeichen eingeschlossen ist.  
   
  Wenn der Text-Treiber verwendet wird, umfasst der Treiber einen Standardnamen, wenn ein Spaltenname nicht angegeben ist. Beispielsweise ruft der Treiber die erste Spalte F1, die zweite Spalte F2 usw.
+

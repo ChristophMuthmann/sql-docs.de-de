@@ -23,6 +23,7 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8785fef25830aa3987470a8007e115da1cc73a42
@@ -130,3 +131,4 @@ BOOL SQLManageDataSources(
 |Informationen zu|Finden Sie unter|  
 |---------------------------|---------|  
 |Erstellen von Datenquellen|[SQLCreateDataSource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|
+

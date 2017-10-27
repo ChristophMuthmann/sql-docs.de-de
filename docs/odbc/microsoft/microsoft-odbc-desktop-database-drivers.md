@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 939847cee3b9fb9f8051d98e5def53abf787f148
@@ -75,3 +76,4 @@ ODBC ist eine API, die mit der Datenbank Zugriff Sprache Structured Query Langua
 -   [ODBC-Fehler](../../odbc/microsoft/odbc-errors.md)  
   
 -   [Unterstützte ODBC-API-Funktionen](../../odbc/microsoft/supported-odbc-api-functions.md)
+

@@ -23,6 +23,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d52a471de1590df140f766a417820126ac191f77
@@ -75,3 +76,4 @@ BOOL SQLGetConfigMode(
 |Informationen zu|Finden Sie unter|  
 |---------------------------|---------|  
 |Durch Festlegen des Konfigurationsmodus|[SQLSetConfigMode](../../../odbc/reference/syntax/sqlsetconfigmode-function.md)|
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6be642b6c64da8193ba97de9df8b21ecb9e5a27c
@@ -36,3 +37,4 @@ Ist die nächste Frage zu berücksichtigen, was sind das Ziel-DBMS für die Anwe
  Wie Oracle, DB2 und SQL Server-Datenbanken unterstützen die vollständige Transaktion, unterstützen viele gleichzeitige Benutzer und umfangreiche SQL haben. Sie sind viel teurer und eine kleinere Basis installierte haben. Andererseits, tendenziell Software Preise höher etwas versetzen eines kleineren potenziellen Marktes.  
   
  Daher kann Ziel-DBMS-Systeme manchmal basierend auf die von der Anwendung und die Zielgruppe für die Anwendung erforderlichen Funktionen ausgewählt werden. Beispielsweise kann ein bestellungseingabesystem für große Unternehmen nicht Desktopdatenbanken abzielen, da diese keine transaktionsunterstützung für die entsprechende. Ein ähnliches System, die speziell für kleine Unternehmen möglicherweise die meisten Serverdatenbanken auf Basis der Kosten ausschließen. Und Entwickler generischen Anwendungen sowohl als Ziel können jedoch zu vermeiden, verwenden die erweiterten Funktionen in Server-Datenbanken.
+

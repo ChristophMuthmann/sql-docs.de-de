@@ -18,6 +18,7 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3817f8c3c5b3aaa50770b3734974e457a4e802e8
@@ -258,3 +259,4 @@ ADD TARGET package0.asynchronous_file_target
  [Anzeigen der Entsprechungen von erweiterten Ereignissen für SQL-Ablaufverfolgungsklassen](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
   
   
+

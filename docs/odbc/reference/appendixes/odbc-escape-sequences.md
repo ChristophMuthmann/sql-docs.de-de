@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 525475b3e9d7cdeae9755208da1cb19e9c077fe8
@@ -39,3 +40,4 @@ Die folgenden Escapesequenzen werden in ODBC verwendet. Die Grammatik in diesem 
 -   [Prozedur Call-Escapesequenz](../../../odbc/reference/appendixes/procedure-call-escape-sequence.md)  
   
 -   [Escapesequenz Skalarfunktion](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md)
+

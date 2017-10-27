@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2ab537128c572ef36bf4e0175f3bde1c8bedefc1
@@ -33,3 +34,4 @@ In der Vergangenheit verwendet Unternehmen eine einzelne DBMS. Jeglicher Datenba
  Ein ähnliches Problem Datenwachstums unabhängige Softwarehersteller (ISVs). Anbieter schreiben Datenbanksoftware für Kleincomputer und Mainframes wurden in der Regel gezwungen, eine Version einer Anwendung für jedes DBMS geschrieben, oder Schreiben von DBMS-spezifischen Code für jede DBMS, die sie zugreifen wollten. Schreiben von Software für Personalcomputer Lieferanten musste Data Access-Routinen für jeden unterschiedlichen DBMS zu schreiben, mit denen sie arbeiten möchten. Dies bedeutet häufig, riesige Menge an Ressourcen wurden aufgewendet, schreiben und Verwalten von Datenzugriff Routinen anstelle von Anwendungen und Anwendungen häufig nicht auf ihre Qualität aber auf, ob sie Daten in einem bestimmten DBMS zugreifen konnte verkauft wurden.  
   
  Beide Gruppen von Entwicklern benötigt wurde eine Möglichkeit, den Zugriff auf Daten in anderen DBMS. Die Gruppe Großrechner und Minicomputer benötigt eine Möglichkeit zum Zusammenführen von Daten aus anderen DBMS in einer einzigen Anwendung während die PC-Gruppe erforderlich, diese Möglichkeit als auch eine Möglichkeit, eine einzelne Anwendung schreiben, die unabhängig von der alle einem DBMS war. Beide Gruppen erforderlich kurz gesagt, interoperable Weise auf Daten zugreifen. Sie benötigt Datenbankkonnektivität öffnen.
+

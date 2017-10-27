@@ -17,6 +17,7 @@ caps.latest.revision: 34
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5eaf827f2da31a125dbfad5831553c0f15894e21
@@ -50,3 +51,4 @@ ms.lasthandoff: 06/22/2017
  ![Komponenten und Datenfluss der Mergereplikation](../../../relational-databases/replication/merge/media/merge.gif "Merge replication components and data flow")  
   
   
+

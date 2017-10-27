@@ -20,6 +20,7 @@ caps.latest.revision: 45
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 82a29880c3595f5c3df5814a65c163ddd02da6a8
@@ -127,3 +128,4 @@ ms.lasthandoff: 08/03/2017
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   
+

@@ -18,6 +18,7 @@ caps.latest.revision: 42
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 17c975de731604cb3bec9586735b344f532a50ab
@@ -77,3 +78,4 @@ ms.lasthandoff: 06/22/2017
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   
+

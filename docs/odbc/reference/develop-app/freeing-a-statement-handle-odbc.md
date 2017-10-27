@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b33d262c846d9ef8a41bf9440802664ac7d4b75f
@@ -33,3 +34,4 @@ Wie bereits erwähnt, ist es effizienter, wiederverwenden Anweisungen als zum L�
  Wenn **SQLFreeHandle** aufgerufen wird, wird der Treiberversionen, die die Struktur zum Speichern von Informationen über die Anweisung verwendet.  
   
  **SQLDisconnect** alle Anweisungen für eine Verbindung automatisch freigibt.
+

@@ -20,6 +20,7 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 12b8b87460c4cb21776780af955eeecad3b5cda3
@@ -137,3 +138,4 @@ ms.lasthandoff: 07/31/2017
  Dieses Beispielszenario wurde in der AdventureWorks-Beispielanwendung implementiert, die für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] heruntergeladen werden kann.  
   
   
+

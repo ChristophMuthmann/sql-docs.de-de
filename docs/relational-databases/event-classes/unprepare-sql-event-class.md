@@ -16,6 +16,7 @@ caps.latest.revision: 31
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1624f66ac4b4910dda2f4c3122b3130d91a44c12
@@ -56,3 +57,4 @@ ms.lasthandoff: 06/22/2017
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   
+

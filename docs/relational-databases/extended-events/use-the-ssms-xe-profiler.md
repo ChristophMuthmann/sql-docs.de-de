@@ -19,6 +19,7 @@ ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: yualan
 ms.author: alayu
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
 ms.openlocfilehash: 3794c4ee749902e6d453053405cc155bc1bbac1a

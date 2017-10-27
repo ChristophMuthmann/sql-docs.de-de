@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e5806fe1dcdbabbc27e25c0387f2d06ea25f64ee
@@ -46,3 +47,4 @@ Der Bezeichner für die Date ODBC C-Datentyp ist:
  Wenn Datumsdaten C in SQL-Zeichendaten konvertiert werden, werden die resultierende Zeichendaten der "*Yyyy*-*mm*-*Dd*" Format.  
   
  Der Treiber ignoriert den Längenindikator /-Wert, wenn Daten aus den Date-C-Datentyp zu konvertieren, und es wird davon ausgegangen, dass die Größe des Datenpuffers die Größe des Datentyps Date C. Der Längenindikator /-Wert übergeben der *StrLen_or_Ind* Argument in **SQLPutData** und in den Puffer mit angegebenen der *StrLen_or_IndPtr* Argument in **SQLBindParameter**. Datenpuffer wird angegeben, mit der *DataPtr* Argument in **SQLPutData** und die *ParameterValuePtr* Argument in **SQLBindParameter**.
+

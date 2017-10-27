@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: adb6f66ecfbff558fd163437a56453efb4265185
@@ -41,3 +42,4 @@ Funktionen in ODBC gibt Diagnoseinformationen in zweierlei Art zurück. Gibt der
 -   [Implementieren von SQLGetDiagRec und SQLGetDiagField](../../../odbc/reference/develop-app/implementing-sqlgetdiagrec-and-sqlgetdiagfield.md)  
   
 -   [Beispiele für die Diagnose Behandlung](../../../odbc/reference/develop-app/diagnostic-handling-examples.md)
+

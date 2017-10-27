@@ -18,6 +18,7 @@ caps.latest.revision: 24
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bad5ad9148bdfd89a6d73bcc359b236491a73dfa
@@ -35,3 +36,4 @@ ms.lasthandoff: 06/22/2017
 |[ExistingConnection (Ereignisklasse)](../../relational-databases/event-classes/existingconnection-event-class.md)|Zeigt die Eigenschaften von Benutzerverbindungen an, die beim Starten der Ablaufverfolgung vorhanden waren.|  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7b7b550bd24788f30926aaee5ae42a8de79a59c9
@@ -152,3 +153,4 @@ In diesem Artikel werden die Details der Entwicklung von eines ODBC-Treibers, de
 ## <a name="see-also"></a>Siehe auch  
  [Treiberfähiges Verbindungspooling](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [ODBC-Dienstanbieterschnittstelle (Service Provider Interface, SPI) – Referenz](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)
+

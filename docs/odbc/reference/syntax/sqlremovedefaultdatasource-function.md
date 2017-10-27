@@ -23,6 +23,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ed4db21dce5cf5da5234f4906116c93f9a4ea735
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 ```  
 SQLConfigDataSource (NULL, ODBC_REMOVE_DEFAULT_DSN, NULL, NULL)  
 ```
+

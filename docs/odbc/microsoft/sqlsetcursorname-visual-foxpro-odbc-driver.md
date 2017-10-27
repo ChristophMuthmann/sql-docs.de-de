@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 74410e39c16c2239471f3f2d328bf29a39dc7cec
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Ein Handle aktive Anweisung ordnet einen Cursornamen *Befehls beschäftigt*. **SQLSetCursorName** ist in der Visual FoxPro-ODBC-Treiber-API enthalten, da es ein Bestandteil von Core Level ODBC-API-Funktionen ist; es kann nicht zusammen mit anderen API-Funktionen verwendet werden, da der Treiber positionierte Updates nicht unterstützt.  
   
  Weitere Informationen finden Sie unter [SQLSetCursorName](../../odbc/reference/syntax/sqlsetcursorname-function.md) in der *ODBC Programmer's Reference*.
+

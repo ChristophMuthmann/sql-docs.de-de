@@ -16,6 +16,7 @@ caps.latest.revision: 37
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dd6d7d2d41813cd3a6748aa6e8bb31e2a09363a7
@@ -132,3 +133,4 @@ GRANT CREATE ANY TRIGGER TO &&ReplLogin;
  [Konfigurieren eines Oracle-Verlegers](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)  
   
   
+

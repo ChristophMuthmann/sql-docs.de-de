@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a60688231bc01f55cf5b49fae3bb8d6da4a54950
@@ -47,3 +48,4 @@ SELECT * FROM Customers WHERE (Name > ?) AND (CustID > ?)
  Diese Anweisung erstellt ein zweites Resultset, von denen das erste Rowset das nächste Rowset im ursprünglichen Resultset wird – in diesem Fall wird der Satz von Zeilen in der Customers-Tabelle. Dieses Rowset wird von der Cursor an die Anwendung zurückgegeben.  
   
  Es ist interessant, beachten, dass ein dynamischer Cursor, die auf diese Weise implementiert viele Resultsets, tatsächlich erstellt, wodurch es zu Änderungen an der ursprünglichen Resultset zu erkennen. Die Anwendung nie erfährt, dass diese zusätzlichen Resultsets vorhanden ist; Er wird einfach angezeigt, als ob der Cursor kann Änderungen an der ursprünglichen Resultset zu erkennen ist.
+
