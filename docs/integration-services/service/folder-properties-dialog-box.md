@@ -38,7 +38,7 @@ ms.lasthandoff: 09/27/2017
   
 4.  Wählen Sie unter **Anmeldungen oder Rollen** einen Namen aus, und geben Sie die entsprechenden Berechtigungen unter **Berechtigungen**an.  
   
-5.  Klicken Sie auf **OK** , um die Änderungen zu akzeptieren, und schließen Sie das Dialogfeld für die Eigenschaften der Ordner **** .  
+5.  Klicken Sie auf **OK** , um die Änderungen zu akzeptieren, und schließen Sie das Dialogfeld für die **Eigenschaften der Ordner**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Integrationsservices &#40; SSIS &#41; Server](../integration-services-ssis-packages.md)   

@@ -317,7 +317,7 @@ Wenn Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]installier
   
 5.  Klicken Sie mit der rechten Maustaste auf „SQL Server Integration Services 11.0“, und klicken Sie anschließend auf **Eigenschaften**.  
   
-6.  Wählen Sie im Dialogfeld für die Eigenschaften von SQL Server Integration Services 11.0 **** die Registerkarte **Sicherheit** aus.  
+6.  Wählen Sie im Dialogfeld für die **Eigenschaften von SQL Server Integration Services 11.0** die Registerkarte **Sicherheit** aus.  
   
 7.  Wählen Sie unter **Start- und Aktivierungsberechtigungen**die Option **Anpassen**aus, und klicken Sie auf **Bearbeiten** , um das Dialogfeld **Startberechtigung** zu öffnen.  
   
