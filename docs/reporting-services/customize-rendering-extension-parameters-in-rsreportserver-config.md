@@ -22,7 +22,8 @@ caps.latest.revision: 31
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 009b40c83d662b40b3215f701a2eb490ebc4fed1
 ms.contentlocale: de-de
@@ -145,3 +146,4 @@ ms.lasthandoff: 08/09/2017
  [XML-Geräteinformationseinstellungen](../reporting-services/xml-device-information-settings.md)  
   
   
+

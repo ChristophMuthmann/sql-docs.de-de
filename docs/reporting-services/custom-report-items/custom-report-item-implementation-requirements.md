@@ -19,6 +19,7 @@ caps.latest.revision: 22
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 43770b0b167e2a40874d1b8f31b3b146e62ec2b5
@@ -59,3 +60,4 @@ ms.lasthandoff: 08/12/2017
  [Klassenbibliotheken für benutzerdefinierten Berichts-Element](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
   
   
+

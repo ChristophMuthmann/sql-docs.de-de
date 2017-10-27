@@ -18,7 +18,8 @@ caps.latest.revision: 35
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c5543c648289dee007a2249299ecb006d41f6b98
 ms.contentlocale: de-de
@@ -132,3 +133,4 @@ ms.lasthandoff: 08/09/2017
  [Zwischenspeichern von Berichten &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)  
   
   
+

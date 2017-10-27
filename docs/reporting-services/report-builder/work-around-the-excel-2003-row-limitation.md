@@ -15,7 +15,8 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8533cd39c8a3d5efde78fee3e045eb744d562a97
 ms.contentlocale: de-de
@@ -34,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  Öffnen Sie den Bericht in [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] oder im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Datenzeile in der Tabelle, und klicken Sie anschließend auf **Gruppe hinzufügen** > **Übergeordnete Gruppe**, um eine äußere Tabellengruppe hinzuzufügen.  
+2.  Klicken Sie mit der rechten Maustaste auf die Datenzeile in der Tabelle, und klicken Sie anschließend auf **Gruppe hinzufügen** > **Übergeordnete Gruppe** , um eine äußere Tabellengruppe hinzuzufügen.  
   
      ![Wählen Sie die übergeordnete Gruppe](../../reporting-services/report-builder/media/datarow-selectparentgroup.png "Auswählen der übergeordneten Gruppe")  
   
@@ -65,3 +66,4 @@ ms.lasthandoff: 08/09/2017
 8.  Speichern Sie den Bericht. Beim Exportieren des Berichts nach Excel wird dieser in mehrere Arbeitsblätter exportiert. Jedes Arbeitsblatt enthält maximal 65.000 Zeilen.  
   
   
+

@@ -21,7 +21,8 @@ caps.latest.revision: 33
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
 ms.openlocfilehash: be7e76aa26ca4b94afd2e32b40b9fbfbe92b170d
 ms.contentlocale: de-de
@@ -71,3 +72,4 @@ service.Credentials = new System.Net.NetworkCredential("username", "password", "
  [Berichtsserver-Webdienst](../../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   
+

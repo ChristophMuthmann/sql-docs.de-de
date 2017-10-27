@@ -101,7 +101,7 @@ ms.lasthandoff: 09/01/2017
   
 -   Keine CHECK-Einschränkungen oder aktivierten Regeln.  
   
- *column_list*  
+*column_list*  
  Ist eine optionale Liste mit Spaltennamen in der Zieltabelle der INTO-Klausel. Es ist analog zu der Liste der Spalten in zulässig der [einfügen](../../t-sql/statements/insert-transact-sql.md) Anweisung.  
   
  *"scalar_expression"*  

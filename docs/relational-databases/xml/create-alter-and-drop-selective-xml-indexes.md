@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: cff16890d58c610a08e7bbe0d5958de2e821b0a5
@@ -86,3 +87,4 @@ DROP INDEX sxi_index ON tbl
   
   
   
+

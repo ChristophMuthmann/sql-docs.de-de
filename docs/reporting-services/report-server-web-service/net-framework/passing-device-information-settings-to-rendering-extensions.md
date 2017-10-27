@@ -28,6 +28,7 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: dfbc65590c676278c89ca2646dae0d347abcd3ee
@@ -66,3 +67,4 @@ http://<Server Name>/reportserver?/SampleReports/Sales Order Detail&rs:Command=R
  [Erstellen von Anwendungen mit dem Webdienst und .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
   
   
+

@@ -14,7 +14,8 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7a6554de812f8f85c9adbd7a3338ab744555e9a0
 ms.contentlocale: de-de
@@ -44,7 +45,7 @@ Jede einzelne Metrik bzw. jeder Wert, die bzw. der in einem Diagramm angezeigt w
 ### <a name="change-aggregation"></a>Ändern der Aggregation 
 Die Standardaggregation für numerische Felder in Diagrammen lautet „Summieren“. Sie können sie auf „Average“, „Count“, „Minimum“, „Maximum“, „First“ oder „Last“ ändern.
 
-* Wählen Sie die **Daten** Registerkarte, und klicken Sie in **Dateneigenschaften**Option **Optionen** neben das numerische Feld > Wählen Sie eine andere Aggregation.
+* Wählen Sie die Registerkarte **Daten** aus, und wählen Sie unter **Dateneigenschaften** neben dem numerischen Feld **Optionen**, um eine andere Aggregation auszuwählen.
 
 ### <a name="set-or-clear-filters"></a>Festlegen oder Löschen von Filtern
 
@@ -64,15 +65,15 @@ Das Zeitdiagramm ist das grundlegendste Diagramm in [!INCLUDE[SS_MobileReptPub_S
 
 1. Ziehen Sie ein **Zeitdiagramm** aus der Registerkarte **Layout** auf die Entwurfsoberfläche, und ändern Sie die Größe.
 
-2. Es handelt sich standardmäßig um ein gestapeltes Balkendiagramm. Sie können dies unter **Serienvisualisierung**ändern.
+2. Es handelt sich standardmäßig um ein gestapeltes Balkendiagramm. Sie können dies unter **Serienvisualisierung** ändern.
 
-3. Wenn das Diagramm Daten, die im Bericht noch nicht vorhanden ist benötigt, wählen Sie die **Daten** Registerkarte > **Daten hinzufügen** auf [Abrufen von Daten aus Excel oder ein freigegebenes Dataset](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md).
+3. Wenn für das Diagramm Daten erforderlich sind, die noch nicht im Bericht vorhanden sind, wählen Sie die Registerkarte **Daten** > **Daten hinzufügen**, um [Daten aus Excel oder einem freigegebenen Dataset](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md) abzurufen.
 
-3. Im Bereich **Dateneigenschaften** ist **SimulatedTable** für **Hauptreihe**festgelegt. Klicken Sie auf dem Pfeil im Feld, und wählen Sie anschließend Ihre Tabelle aus.
+3. Im Bereich **Dateneigenschaften** ist für **Hauptreihe** **SimulatedTable** festgelegt. Klicken Sie auf dem Pfeil im Feld, und wählen Sie anschließend Ihre Tabelle aus.
 
-5. Wenn Sie festlegen, **Datenstruktur** auf **nach Spalten** (auf der **Layout** Registerkarte > **Eigenschaften visueller Elemente** Bereich), hier in der **Dateneigenschaften** Bereich können Sie mehrere Spalten mit numerischen Werten auswählen.
+5. Wenn Sie die **Datenstruktur** auf **Nach Spalten** festlegen (auf der Registerkarte **Layout** > Bereich **Eigenschaften visueller Elemente**), können Sie im Bereich **Dateneigenschaften** mehrere Spalten mit numerischen Werten auswählen.
 
-   Wenn Sie die **Datenstruktur** auf **Nach Zeilen**festlegen, können Sie im Bereich **Dateneigenschaften** ein **Namensfeld für Reihe** und eine Spalte mit numerischen Werten auswählen.
+   Wenn Sie die **Datenstruktur** auf **Nach Zeilen** festlegen, können Sie im Bereich **Dateneigenschaften** ein **Namensfeld für Reihe** und eine Spalte mit numerischen Werten auswählen.
    
 Erfahren Sie mehr über das [Gruppieren von Daten nach Spalten oder Zeilen](../../reporting-services/mobile-reports/group-data-by-columns-or-rows-in-a-mobile-report-reporting-services.md).
   

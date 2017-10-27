@@ -58,13 +58,13 @@ ms.lasthandoff: 09/27/2017
   
  Im folgenden Beispiel gibt die Funktion Statistiken für eine aktive Ausführung mit einer ID von 34 zurück.  
   
-```  
+```sql
 select * from [catalog].[dm_execution_performance_counters] (34)  
 ```  
   
  Im folgenden Beispiel gibt die Funktion Statistiken für alle Ausführungen zurück, die auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server ausgeführt werden.  
   
-```  
+```sql
 select * from [catalog].[dm_execution_performance_counters] (NULL)  
   
 ```  

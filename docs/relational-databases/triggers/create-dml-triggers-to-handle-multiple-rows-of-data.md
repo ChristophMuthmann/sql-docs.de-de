@@ -21,6 +21,7 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8f8f36c8882e981ba4096fdccab4bed5801ebc9e
@@ -114,3 +115,4 @@ END;
  [DML-Trigger](../../relational-databases/triggers/dml-triggers.md)  
   
   
+

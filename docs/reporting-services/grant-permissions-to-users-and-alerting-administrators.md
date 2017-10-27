@@ -15,6 +15,7 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: fd7b39c2600bc683a37f6cec43041ccf8ebb009f
@@ -63,3 +64,4 @@ Weitere Informationen zu SharePoint-Berechtigungen finden Sie im Thema zu [Benut
 [Reporting Services-Datenwarnungen](../reporting-services/reporting-services-data-alerts.md)  
 
 Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+

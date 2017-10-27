@@ -21,6 +21,7 @@ ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
 caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 0d6c14934417d4ece40596c17a7335e09ec1ad78
@@ -72,3 +73,4 @@ public void DeleteItem(string item);
  [Berichtsserver-Webdienst](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   
+

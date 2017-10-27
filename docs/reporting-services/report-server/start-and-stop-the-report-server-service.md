@@ -20,7 +20,8 @@ caps.latest.revision: 55
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 90106293e319e53c8fcbfe772c119f5c6a0f20c2
 ms.contentlocale: de-de
@@ -61,3 +62,4 @@ ms.lasthandoff: 08/09/2017
  [Starten, Beenden oder Anhalten des SQL Server-Agent-Dienstes](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
   
   
+

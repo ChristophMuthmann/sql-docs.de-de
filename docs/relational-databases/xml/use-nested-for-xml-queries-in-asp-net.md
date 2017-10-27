@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: 080c4c94b10836dd58206ebf690ea45a946994b0
@@ -100,3 +101,4 @@ using(System.Data.SqlClient.SqlCommand cmd = c.CreateCommand())
  [Verwenden von geschachtelten FOR XML-Abfragen](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   
+

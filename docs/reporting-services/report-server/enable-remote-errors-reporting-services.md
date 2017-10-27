@@ -18,7 +18,8 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 20adc5eb8b830b960fe07d39f3717279abca3f23
 ms.contentlocale: de-de
@@ -73,7 +74,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Klicken Sie mit der rechten Maustaste auf den Berichtsserverknoten, und wählen Sie **Eigenschaften**aus.  
   
-3.  Klicken Sie auf **Erweitert** , um die Eigenschaftenseite zu öffnen. Weitere Informationen finden Sie unter [Servereigenschaften &#40; Seite "Erweitert" &#41; -Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+3.  Klicken Sie auf **Erweitert** , um die Eigenschaftenseite zu öffnen. Weitere Informationen finden Sie unter [Servereigenschaften &#40;Seite „Erweitert“&#41; – Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
 4.  Wählen Sie in **EnableRemoteErrors** **true**aus.  
   
@@ -119,3 +120,4 @@ ms.lasthandoff: 08/09/2017
     >  Sie können die **ConfigurationInfo** -Tabelle in der Berichtsserver-Datenbank bearbeiten, um **EnableRemoteErrors** auf **True**festzulegen. Wenn der Berichtsserver jedoch aktiv verwendet wird, sollten Sie nach Möglichkeit SQL Server Management Studio oder ein Skript zum Ändern der Einstellungen verwenden. Wenn Sie die Einstellung in der Datenbank ändern, müssen Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienst neu starten, bevor die Änderungen wirksam werden.  
   
   
+

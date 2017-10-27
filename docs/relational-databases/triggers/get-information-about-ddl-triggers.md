@@ -18,6 +18,7 @@ caps.latest.revision: 31
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9a0ce4e36a1b396311938b8d57c6d44bf922ca56
@@ -78,3 +79,4 @@ ms.lasthandoff: 06/22/2017
  [DDL-Trigger](../../relational-databases/triggers/ddl-triggers.md)  
   
   
+

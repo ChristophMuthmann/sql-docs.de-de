@@ -15,7 +15,8 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d4ca3cc183fb405fc9379f29012a92e39b7ad95b
 ms.contentlocale: de-de
@@ -31,7 +32,7 @@ Das Diagramm verf체gt 체ber zwei Achsentypen: prim채r und sekund채r. Die sekund�
   
  In F채llen, in denen mehr als zwei Reihen verglichen werden, sollten Sie einen anderen Ansatz f체r den Vergleich und die Anzeige mehrerer Reihen in einem Diagramm in Erw채gung ziehen. Weitere Informationen finden Sie unter [mehrere Reihen in einem Diagramm](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
   
- Ein Beispiel f체r dieses Diagramm ist als Beispielbericht verf체gbar. Weitere Informationen zum Herunterladen des Beispielberichts und anderer Berichte finden Sie unter [Beispielberichte zu Berichts-Generator und Berichts-Designer](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Ein Beispiel f체r dieses Diagramm ist als Beispielbericht verf체gbar. Weitere Informationen zum Herunterladen dieses Beispielberichts und anderer finden Sie unter [Beispielberichte f체r Berichts-Generator und Berichts-Designer](http://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -48,3 +49,4 @@ Das Diagramm verf체gt 체ber zwei Achsentypen: prim채r und sekund채r. Die sekund�
 [Angeben eines Achsenintervalls](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)  
 
 Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+

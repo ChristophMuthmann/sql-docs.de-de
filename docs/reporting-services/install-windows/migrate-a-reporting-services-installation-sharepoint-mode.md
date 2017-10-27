@@ -15,6 +15,7 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: 75bce56e88ef80a33d13e188ad0ecbf3e8b453ec
@@ -138,3 +139,4 @@ ms.lasthandoff: 08/17/2017
 [Migrieren einer Reporting Services-Installation](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 
 Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+

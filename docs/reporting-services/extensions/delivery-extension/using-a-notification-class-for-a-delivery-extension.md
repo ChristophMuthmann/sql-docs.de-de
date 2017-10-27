@@ -22,6 +22,7 @@ caps.latest.revision: 33
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 064d5556dca130324f69dd49d14f3caa76c8eec8
@@ -49,3 +50,4 @@ Die Benachrichtigung ist das zentrale Objekt einer jeden Übermittlung
  [Reporting Services-Erweiterungsbibliothek](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
+

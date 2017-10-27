@@ -14,14 +14,15 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 410863a8fc12424addbc8edba0196066fd1daf79
 ms.contentlocale: de-de
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="custom-maps-in-reporting-services-mobile-reports"></a>Benutzerdefinierte Karten in mobilen Reporting Services-Berichten
+# <a name="custom-maps-in-reporting-services-mobile-reports"></a>benutzerdefinierte Karten in mobilen Reporting Services-Berichten
 Geografische Karten in SQL Server Mobile Report Publisher werden definiert, in einem Format, bekannt als *-esri-Shape-Dateien*.  
   
 Dieses wurde ursprünglich von einem privaten Unternehmen entwickelt und ist inzwischen ein weitverbreitetes halboffenes Format, das in vielen Geoinformationssystem-Anwendungen verwendet wird. Entsprechend diesem Format erfordert Mobile Report Publisher zwei Dateien bereitgestellt werden, wenn Sie eine Zuordnung zu definieren:  

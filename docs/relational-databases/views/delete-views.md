@@ -19,6 +19,7 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1c869b1e4ba7cc992687baa3236c96d25b0e63e8
@@ -90,3 +91,4 @@ ms.lasthandoff: 06/22/2017
  Weitere Informationen finden Sie unter [DROP VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/drop-view-transact-sql.md).  
   
   
+

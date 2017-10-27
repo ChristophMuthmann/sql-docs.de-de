@@ -21,6 +21,7 @@ caps.latest.revision: 36
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: bcfb5b69df148108531e9e5b843f127af0e3fbb4
@@ -73,3 +74,4 @@ vbc /t:library /out:CompanyName.ExtensionName.dll *.vb /r:System.dll
  [Reporting Services-Erweiterungsbibliothek](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
+

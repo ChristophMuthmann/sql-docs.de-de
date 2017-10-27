@@ -19,6 +19,7 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a7bbc956b852d4a7af1a8b9e3d26920fa4aeeebe
@@ -88,3 +89,4 @@ ms.lasthandoff: 06/22/2017
 5.  Klicken Sie auf **Ausführen**.  
   
   
+

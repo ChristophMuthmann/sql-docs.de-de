@@ -19,6 +19,7 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e716b2ec51b07b2a2e675c7bdd76c6f91913d23b
@@ -77,3 +78,4 @@ ms.lasthandoff: 06/22/2017
  Weitere Informationen finden Sie unter [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md).  
   
 ###  <a name="TsqlExample"></a>  
+

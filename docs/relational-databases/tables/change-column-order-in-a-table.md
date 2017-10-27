@@ -17,6 +17,7 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f9ab22cf6c60bd7d89ff70eba15ca65c731a1fb1
@@ -56,3 +57,4 @@ ms.lasthandoff: 06/22/2017
  Diese Aufgabe kann nicht mit Transact-SQL-Anweisungen ausgeführt werden.  
   
 ###  <a name="TsqlExample"></a>  
+

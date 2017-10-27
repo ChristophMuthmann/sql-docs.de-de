@@ -18,7 +18,8 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d3c4c7a2cf0b04e6b8e6912de1483d276473c63a
 ms.contentlocale: de-de
@@ -41,3 +42,4 @@ ms.lasthandoff: 08/09/2017
  [Reporting Services-Abfrage-Designer](http://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)  
   
   
+

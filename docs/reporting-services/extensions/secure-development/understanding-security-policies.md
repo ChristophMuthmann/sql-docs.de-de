@@ -28,6 +28,7 @@ caps.latest.revision: 32
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 4c8fa977e2b9cdd596e3029be4954daea7fe239d
@@ -87,3 +88,4 @@ ms.lasthandoff: 08/12/2017
  [Sichere Entwicklung &#40; Reporting Services &#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
   
   
+

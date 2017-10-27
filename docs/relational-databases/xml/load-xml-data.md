@@ -17,6 +17,7 @@ caps.latest.revision: 20
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 627870d10fb4a6d91a4570f14274b6b2d1c2119b
@@ -89,3 +90,4 @@ CREATE XML SCHEMA COLLECTION XMLCOLL1 AS N'<xsd:schema … '
  [XML-Daten &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   
   
+

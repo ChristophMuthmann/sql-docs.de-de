@@ -16,7 +16,8 @@ caps.latest.revision: 40
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: f7e12ebcec8e06828430e10c377205e2421f50f4
 ms.contentlocale: de-de
@@ -91,3 +92,4 @@ Sie können installieren und Ausführen von SQL Server Reporting Services (SSRS)
 [Installieren von Reporting Services-Berichtsserver im einheitlichen Modus](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)  
 
 Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+

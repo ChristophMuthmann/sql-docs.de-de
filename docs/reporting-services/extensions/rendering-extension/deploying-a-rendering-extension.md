@@ -20,6 +20,7 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 3fbab7c48a0d522519a9e7ada9cf9c8cb1d40c7b
@@ -83,3 +84,4 @@ ms.lasthandoff: 08/12/2017
  [Security Considerations for Extensions (Überlegungen zur Sicherheit von Erweiterungen)](../../../reporting-services/extensions/security-considerations-for-extensions.md)  
   
   
+

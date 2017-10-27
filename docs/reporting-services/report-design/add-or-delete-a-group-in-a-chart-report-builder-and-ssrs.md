@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5360240569fcffe5f9708f68d7f95403e45c0909
 ms.contentlocale: de-de
@@ -61,6 +62,7 @@ Klicken Sie in paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion
 2.  Klicken Sie mit der rechten Maustaste auf die Gruppe im Bereich **Kategoriegruppen** oder **Reihengruppen** , und klicken Sie anschließend auf **Löschen**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Diagramme &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
+

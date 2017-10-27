@@ -28,7 +28,8 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
 ms.openlocfilehash: 6a5e70f353771fb763029f8fa3306ce04067f3e6
 ms.contentlocale: de-de
@@ -71,3 +72,4 @@ http://server/reportserver/ReportService2010.asmx?wsdl
  [Berichtsserver-Webdienst](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   
+
