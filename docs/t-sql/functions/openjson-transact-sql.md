@@ -35,7 +35,7 @@ ms.lasthandoff: 10/11/2017
 
 **OPENJSON** ist eine Tabellenwertfunktion, die JSON-Text analysiert und Objekte und Eigenschaften aus der JSON-Eingabe als Zeilen und Spalten zurück gibt. Das heißt, **OPENJSON** stellt eine Rowsetsicht eines JSON-Dokuments bereit. Sie können die Spalten im Rowset und die JSON-eigenschaftspfade zum Auffüllen der Spalten angeben explizit angeben. Da **OPENJSON** einen Satz von Zeilen zurückgibt, können Sie **OPENJSON** in der `FROM` -Klausel einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung ebenso verwenden, wie Sie jede Tabelle, Sicht oder Funktion mit Tabellenrückgabe verwenden können.  
   
-Verwenden Sie **OPENJSON** zum Importieren von JSON-Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], oder zum Konvertieren von JSON-Daten in ein relationales Format für eine app oder einen Dienst, der JSON direkt verarbeiten kann.
+  Verwenden Sie **OPENJSON** zum Importieren von JSON-Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder zum Konvertieren von JSON-Daten in ein relationales Format für solche Apps oder Dienste, die JSON nicht direkt verarbeiten können. 
   
 > [!NOTE]  
 >  Die **OPENJSON** -Funktion ist nur für den Kompatibilitätsgrad 130 oder höher verfügbar. Wenn der Kompatibilitätsgrad Ihrer Datenbank kleiner als 130 ist, kann SQL Server die **OPENJSON**-Funktion nicht finden und ausführen. Andere JSON-Funktionen sind für alle Kompatibilitätsgrade verfügbar.
