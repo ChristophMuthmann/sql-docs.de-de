@@ -45,6 +45,9 @@
                 - name: ADO RDS API (veraltet)
                   href: /sql/ado/reference/rds-api/
                   homepage: /sql/ado/reference/rds-api/rds-api-reference
+        - name: Analyseplattformsystem
+          href: /sql/analytics-platform-system/
+          homepage: /sql/analytics-platform-system/index
         - name: Connect your client to SQL (Verbinden Ihres Clients zu SQL)
           href: /sql/connect/
           homepage: /sql/connect/sql-server-drivers
