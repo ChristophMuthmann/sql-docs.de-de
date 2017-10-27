@@ -67,7 +67,7 @@ ms.lasthandoff: 08/11/2017
   
 -   Wenn Sie Microsoft Visual Basic verwenden, um die Anwendung zu schreiben, legen Sie die **My.Application.CommandLineArgs** -Eigenschaft fest. Im folgenden Beispiel ruft die **My.Application.CommandLineArgs** -Eigenschaft zwei Argumente ab:  
   
-    ```  
+    ```vb  
     Dim variable1 As String = My.Application.CommandLineArgs.Item(0)  
     Dim variable2 As String = My.Application.CommandLineArgs.Item(1)   
     ```  
