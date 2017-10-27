@@ -37,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Aktualisiert den derzeit konfigurierten Wert (der **Config_value** Spalte in der **Sp_configure** Resultset) einer Konfigurationsoption geändert, mit der **Sp_configure** System gespeicherte Prozedur. Da einige Konfigurationsoptionen einen Serverstopp und Neustart für das aktuell ausgeführte Update erfordern, aktualisiert RECONFIGURE nicht immer den derzeit ausgeführten Wert (der **Run_value** Spalte im **Sp_configure**  Resultset) für einen geänderten Konfigurationswert.    
+  Aktualisiert den derzeit konfigurierten Wert (Spalte **config_value** im Resultset **sp_configure**) einer Konfigurationsoption mit der gespeicherten Systemprozedur **sp_configure**. Da einige Konfigurationsoptionen das Beenden und erneute Starten des Servers für die Aktualisierung des aktuell ausgeführten Werts erfordern, aktualisiert RECONFIGURE bei Änderung des Konfigurationswerts nicht immer den aktuell ausgeführten Wert (Spalte **run_value** im Resultset **sp_configure**).     
     
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
@@ -53,9 +53,9 @@ RECONFIGURE [ WITH OVERRIDE ]
  Gibt an, dass der derzeit wirksame Wert aktualisiert werden soll, wenn die Konfigurationseinstellung keinen Serverstopp und Neustart erfordert. RECONFIGURE überprüft auch die neuen Konfigurationswerte entweder Werte, die nicht gültig sind (z. B. einen Sortierreihenfolgenwert, die nicht in existiert **Syscharsets**) oder nicht empfehlenswerte Konfigurationswertswerte. Bei den Konfigurationsoptionen, die keinen Serverstopp und -neustart erfordern, sollten der derzeit wirksame Wert und der derzeit konfigurierte Wert der Konfigurationsoption nach Angabe von RECONFIGURE identisch sein.    
     
  WITH OVERRIDE    
- Deaktiviert die konfigurationswertüberprüfung (für Werte, die ungültig sind oder für nicht empfehlenswerte Konfigurationswertswerte) für die **Wiederherstellungsintervall** erweiterte Konfigurationsoption.    
+ Deaktiviert die Konfigurationswertüberprüfung (für ungültige oder nicht empfohlene Werte) für die erweiterte Konfigurationsoption **recovery interval**.   
     
- Nahezu jede Konfigurationsoption kann mithilfe der Option WITH OVERRIDE neu konfiguriert werden, trotzdem werden einige schwerwiegende Fehler weiterhin verhindert. Z. B. kann die **Min. Serverarbeitsspeicher** Konfigurationsoption nicht mit einem Wert größer als dem Wert der **Max. Serverarbeitsspeicher** Konfigurationsoption konfiguriert werden.
+ Nahezu jede Konfigurationsoption kann mithilfe der Option WITH OVERRIDE neu konfiguriert werden. Allerdings werden einige schwerwiegende Fehler auch weiterhin verhindert. So kann etwa für die Konfigurationsoption **min server memory** kein Wert konfiguriert werden ,der größer ist als der Wert der Konfigurationsoption **max server memory**.
       
 ## <a name="remarks"></a>Hinweise    
  **Sp_configure** akzeptiert keine neuen Werte für eine Konfigurationsoption außerhalb der dokumentierten gültigen Bereiche für jede Konfigurationsoption.    
