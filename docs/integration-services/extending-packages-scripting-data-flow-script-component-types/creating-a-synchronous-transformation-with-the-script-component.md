@@ -161,7 +161,7 @@ else
   
 6.  Erstellen und konfigurieren Sie eine Zielkomponente, die **AddressID** und **City** Spalten, z. B. eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ziel oder die beispielzielkomponente, die im demonstriert[Erstellen eines Ziels mit der Skriptkomponente](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Verbinden Sie daraufhin die Ausgabe der Transformation mit der Zielkomponente. Sie können eine Zieltabelle erstellen, durch Ausführen des folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehl in der **AdventureWorks** Datenbank:  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  
@@ -215,7 +215,7 @@ public class ScriptMain:
   
 7.  Erstellen und konfigurieren Sie zwei Zielkomponenten für die die **AddressID** und **City** Spalten, z. B. eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ziel, ein Flatfileziel oder die beispielzielkomponente im demonstriert [Erstellen eines Ziels mit der Skriptkomponente](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Verbinden Sie daraufhin alle Ausgaben der Transformation mit einer der Zielkomponenten. Sie können Zieltabellen erstellen, durch Ausführen einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Befehl ähnlich dem folgenden (mit eindeutigen Tabellennamen) in der **AdventureWorks** Datenbank:  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2](  
         [AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL  

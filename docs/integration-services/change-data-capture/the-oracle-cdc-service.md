@@ -37,7 +37,7 @@ ms.lasthandoff: 08/03/2017
   
  Beim Verwenden der Oracle CDC Designer Console werden Änderungen automatisch erkannt. Beim direkten Aktualisieren der Oracle CDC-Konfiguration mit SQL sollte die folgende Prozedur aufgerufen werden, damit der Oracle CDC Service die Konfigurationsänderung beachtet:  
   
-```  
+```sql
 DECLARE @dbname nvarchar(128) = 'HRcdc'  
 EXECUTE [MSXDBCDC].[dbo].[xdbcdc_update_config_version] @dbname  
 GO  
@@ -66,7 +66,7 @@ GO
   
  Das Log Mining-Kennwort wird mithilfe eines asymmetrischen Schlüssels mit dem festen Namen `xdbcdc_asym_key` gespeichert, der mit dem folgenden Befehl automatisch erstellt wird:  
   
-```  
+```sql
 USE [<cdc-database-name>]  
 CREATE ASYMMETRIC KEY xdbcdc_asym_key  
     WITH ALGORITHM = RSA_1024  
