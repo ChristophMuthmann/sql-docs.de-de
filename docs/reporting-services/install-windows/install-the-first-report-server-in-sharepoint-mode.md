@@ -240,7 +240,7 @@ ms.lasthandoff: 10/06/2017
 3.  Klicken Sie im Menü „Neu“ auf **SQL Server Reporting Services-Dienstanwendung**.  
   
     > [!IMPORTANT]  
-    >  Wenn die Reporting Services-Option in der Liste nicht angezeigt wird, wird ein **gibt an, dass die freigegebenen von Reporting Services-Dienst ist nicht installiert.**. Lesen Sie den vorherigen Abschnitt zur Verwendung von PowerShell-Diensts zum Installieren des Reporting Services-Diensts.  
+    >  Wenn die Reporting Services-Option in der Liste nicht angezeigt wird, wird ein **gibt an, dass die freigegebenen von Reporting Services-Dienst ist nicht installiert**. Lesen Sie den vorherigen Abschnitt zur Verwendung von PowerShell-Diensts zum Installieren des Reporting Services-Diensts.  
   
 4.  Geben Sie auf der Seite **SQL Server Reporting Services-Dienstanwendung erstellen** einen Namen für die Anwendung ein. Wenn Sie mehrere Reporting Services-Dienstanwendungen erstellen, hilft ein aussagekräftiger Name oder eine Benennungskonvention bei der Organisation von Administrations- und Verwaltungsvorgängen.  
   

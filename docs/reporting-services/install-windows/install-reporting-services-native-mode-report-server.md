@@ -146,7 +146,7 @@ Ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserve
   
 7.  Fügen Sie SQL Server-Administratoren auf der Seite **Datenbankmodulkonfiguration** hinzu.  
   
-8.  Wählen Sie auf der Seite **Reporting Services-Konfiguration** die Option zum Installieren und Konfigurieren ****aus.  
+8.  Wählen Sie auf der Seite **Reporting Services-Konfiguration** die Option zum **Installieren und Konfigurieren** aus.  
   
      ![Konfiguration von SSRS im einheitlichen Modus](../../reporting-services/install-windows/media/rs-setupconfiguration-native-with-circles.png "Konfiguration von SSRS im einheitlichen Modus")  
   
