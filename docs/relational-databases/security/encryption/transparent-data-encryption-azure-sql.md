@@ -10,7 +10,7 @@ editor:
 ms.assetid: 
 ms.service: sql-database
 ms.custom: security
-ms.workload: 
+ms.workload: On Demand
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article

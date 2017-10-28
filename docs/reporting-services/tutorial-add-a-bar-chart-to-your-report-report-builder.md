@@ -16,7 +16,8 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: af11d5fdee9122663431f4f00ef5e40fb765c7b4
 ms.contentlocale: de-de
@@ -38,7 +39,7 @@ Die folgende Abbildung zeigt das zu erstellende Balkendiagramm mit den Umsätzen
   
  
 > [!NOTE]  
-> In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Detaillierte Anweisungen zum Navigieren auf einem Berichtsserver, erstellen Sie ein Dataset, und wählen Sie eine Datenquelle finden Sie im erste Lernprogramm dieser Reihe: [Lernprogramm: Erstellen eines einfachen Tabellenberichts &#40; Berichts-Generator &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Für detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Erstellen eines Datasets und zum Auswählen einer Datenquelle gehen Sie auf die Seite [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Geschätzte Zeit zum Bearbeiten dieses Tutorials: 15 Minuten.  
   
@@ -68,7 +69,7 @@ Darin erstellen Sie ein eingebettetes Dataset, wählen eine freigegebene Datenqu
 5.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine vorhandene Datenquelle aus, oder navigieren Sie zum Berichtsserver, und wählen Sie eine Datenquelle aus. Klicken Sie anschließend auf **Weiter**. Möglicherweise müssen Benutzername und Kennwort eingegeben werden.  
   
     > [!NOTE]  
-    > Welche Datenquelle Sie auswählen, ist unwichtig, solange Sie über ausreichende Berechtigungen verfügen. Aus der Datenquelle werden keine Daten abgerufen. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > Welche Datenquelle Sie auswählen, ist unwichtig, solange Sie über ausreichende Berechtigungen verfügen. Aus der Datenquelle werden keine Daten abgerufen. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung &#40;Berichts-Generator&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 6.  Klicken Sie auf der Seite **Abfrage entwerfen** auf **Als Text bearbeiten**.  
   
@@ -97,7 +98,7 @@ Darin erstellen Sie ein eingebettetes Dataset, wählen eine freigegebene Datenqu
   
 ## <a name="ChartType"></a>2. Erstellen eines Balkendiagramms  
  
-1.  Das Säulendiagramm ist der Standarddiagrammtyp der Seite **Diagrammtyp auswählen** .  
+1.  Das Säulendiagramm ist der Standarddiagrammtyp der Seite **Diagrammtyp auswählen**.  
   
 2.  Klicken Sie auf **Balken**und anschließend auf **Weiter**.  
   
@@ -220,7 +221,7 @@ Standardmäßig werden die Werte auf der horizontalen Achse in einem allgemeinen
   
 2.  Klicken Sie unten im Diagramm auf die horizontale Achse, um sie auszuwählen.  
   
-3.  Auf der **Home** Registerkarte "> **Anzahl** Gruppe > **Währung**. Die horizontalen Achsenbezeichnungen werden zu Währungsbezeichnungen geändert.  
+3.  Klicken Sie auf der Registerkarte **Stamm** unter **Zahl** auf **Währung**. Die horizontalen Achsenbezeichnungen werden zu Währungsbezeichnungen geändert.  
   
 3.  (Optional) Entfernen Sie die Dezimalstellen. Klicken Sie in der Nähe der Schaltfläche **Währung** zweimal auf die Schaltfläche **Dezimalstelle löschen** .  
   

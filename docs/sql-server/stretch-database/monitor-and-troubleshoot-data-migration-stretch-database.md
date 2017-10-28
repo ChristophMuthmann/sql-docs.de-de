@@ -18,6 +18,7 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 91c10b51a3fec9ccc96c3aa23100abdf2a60ba81

@@ -25,6 +25,7 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e62b052b5d17b5cefb7a2e081cb3b3e5503e9b9f
@@ -77,3 +78,4 @@ ms.lasthandoff: 06/22/2017
 2.  Geben Sie die gewünschte Zeilennummer ein.  
   
   
+

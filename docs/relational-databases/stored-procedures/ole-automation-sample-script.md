@@ -16,6 +16,7 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9db090a1bf5d4cf53896bb0de2e7390f426bdb5b
@@ -156,3 +157,4 @@ GO
  [sp_OADestroy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oadestroy-transact-sql.md)  
   
   
+

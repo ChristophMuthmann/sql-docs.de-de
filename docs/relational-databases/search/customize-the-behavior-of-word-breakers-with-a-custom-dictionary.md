@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9325fc9817b8c0f57ebeb9c6a0e9ae8f29b899cc
@@ -37,3 +38,4 @@ ms.lasthandoff: 06/22/2017
  `exec sp_fulltext_service 'restart_all_fdhosts'`  
   
   
+

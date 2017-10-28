@@ -23,7 +23,8 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 75976823433b59a52f3fe1fe17ebd86f48d33917
 ms.contentlocale: de-de
@@ -49,11 +50,12 @@ public class MSReportServer_Instance
  Alle öffentlichen statischen Member dieses Typs (**Shared** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) sind für Vorgänge mit mehreren Threads sicher. Für Instanzmember kann nicht gewährleistet werden, dass sie für Threads sicher sind.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Namespace:**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
- **Plattform:**[!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
+ **Plattform:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [MSReportServer_Instance-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   
+

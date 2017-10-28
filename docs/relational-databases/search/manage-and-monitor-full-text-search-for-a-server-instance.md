@@ -18,6 +18,7 @@ caps.latest.revision: 19
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 657d78f548e8368ad2ff4c554fc6f731d7fb27fa
@@ -116,3 +117,4 @@ ms.lasthandoff: 06/22/2017
 -   [sys.dm_fts_population_ranges &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-population-ranges-transact-sql.md)  
   
   
+

@@ -16,7 +16,8 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c231648deb4920a3e36a594271d1c9c199313668
 ms.contentlocale: de-de
@@ -36,7 +37,7 @@ In der folgenden Abbildung sehen Sie das zu erstellende Säulendiagramm mit eine
   
 ![report-builder-column-chart-tutorial](../reporting-services/media/report-builder-column-chart-tutorial.png)    
 > [!NOTE]  
-> In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle sowie zum Erstellen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle sowie zum Erstellen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Geschätzte Zeit zum Bearbeiten dieses Tutorials: 15 Minuten.  
   
@@ -66,7 +67,7 @@ In diesem Abschnitt verwenden Sie den Diagramm-Assistenten, um ein eingebettetes
 5.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine vorhandene Datenquelle aus, oder navigieren Sie zum Berichtsserver, und wählen Sie eine Datenquelle aus. Klicken Sie anschließend auf **Weiter**. Möglicherweise müssen Benutzername und Kennwort eingegeben werden.  
   
     > [!NOTE]  
-    > Welche Datenquelle Sie auswählen, ist unwichtig, solange Sie über ausreichende Berechtigungen verfügen. Aus der Datenquelle werden keine Daten abgerufen. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > Welche Datenquelle Sie auswählen, ist unwichtig, solange Sie über ausreichende Berechtigungen verfügen. Aus der Datenquelle werden keine Daten abgerufen. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung &#40;Berichts-Generator&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 6.  Klicken Sie auf der Seite **Abfrage entwerfen** auf **Als Text bearbeiten**.  
   
@@ -127,9 +128,9 @@ Standardmäßig werden die Werte auf der horizontalen Achse in einem allgemeinen
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
   
-2.  Mit der rechten Maustaste in der horizontalen Achse > **Eigenschaften für horizontale Achsen**.  
+2.  Klicken Sie mit der rechten Maustaste auf die horizontale Achse und anschließend auf **Eigenschaften für horizontale Achsen**.  
   
-3.  Klicken Sie auf **Nummer** , und wählen Sie unter **Kategorie**die Option **Datum**aus.  
+3.  Klicken Sie auf **Nummer**, und wählen Sie unter **Kategorie** die Option **Datum** aus.  
   
 5.  Wählen Sie im Feld **Typ** die Option **31. Jan. 2000**aus.  
   
@@ -143,15 +144,15 @@ Das Datum wird im ausgewählten Datumsformat angezeigt. Im Diagramm wird immer n
   
 Sie können die Bezeichnungsanzeige anpassen, indem Sie die Bezeichnungen drehen und das Intervall angeben.  
   
-## <a name="4-rotate-the-axis-labels-on-the-horizontal-axis"></a>4. Drehen Sie die achsenbezeichnungen auf der horizontalen Achse  
+## <a name="4-rotate-the-axis-labels-on-the-horizontal-axis"></a>4. Rotieren der Achsenbezeichnungen auf der horizontalen Achse  
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
   
 2.  Klicken Sie mit der rechten Maustaste auf den Titel der horizontalen Achse und anschließend auf **Achsentitel anzeigen** , um den Titel zu entfernen. Da auf der horizontalen Achse Datumsangaben angezeigt werden, wird der Titel nicht benötigt.  
   
-3.  Mit der rechten Maustaste in der horizontalen Achse > **Eigenschaften für horizontale Achsen**.  
+3.  Klicken Sie mit der rechten Maustaste auf die horizontale Achse und anschließend auf **Eigenschaften für horizontale Achsen**.  
   
-5.  Wählen Sie auf der Registerkarte **Bezeichnungen** unter **Optionen für automatische Anpassung von Achsenbezeichnungen ändern** **Automatische Anpassung deaktivieren**aus.  
+5.  Wählen Sie auf der Registerkarte **Bezeichnungen** unter **Optionen für automatische Anpassung von Achsenbezeichnungen ändern** **Automatische Anpassung deaktivieren** aus.  
   
 7.  Wählen Sie in **Drehwinkel für Bezeichnungen**den Wert **-90**aus.  
   
@@ -172,15 +173,15 @@ Die Legende wird automatisch auf Basis der Kategorie- und Reihendaten erstellt. 
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
   
-2.  Mit der rechten Maustaste in der Legende des Diagramms > **Legendeneigenschaften**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Legende des Diagramms und anschließend auf **Legendeneigenschaften**.  
   
-3.  Wählen Sie unter **Layout und Position**eine andere Position aus. Wählen Sie z.B. die Option unten in der Mitte aus.  
+3.  Wählen Sie unter **Layout und Position** eine andere Position aus. Wählen Sie z.B. die Option unten in der Mitte aus.  
   
     Wenn Sie die Legende über oder unter einem Diagramm platzieren, ändert sich das Layout der Legende von vertikal zu horizontal. Im Feld **Layout** können Sie ein anderes Layout auswählen.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  (Optional) Da es nur eine Kategorie in diesem Tutorial gibt, benötigt das Diagramm keine Legende. Um ihn zu entfernen, Maustaste die Legende > **Legende löschen**.  
+5.  (Optional) Da es nur eine Kategorie in diesem Tutorial gibt, benötigt das Diagramm keine Legende. Klicken Sie mit der rechten Maustaste auf die Legende und anschließend auf **Legende löschen**, um sie zu entfernen.  
   
 6.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
@@ -199,11 +200,11 @@ Standardmäßig werden die Werte auf der vertikalen Achse in einem allgemeinen F
   
 2. Klicken Sie neben dem Diagramm auf die Bezeichnungen der vertikalen Achse, um sie auszuwählen.  
   
-3.  Auf der **Home** Registerkarte "> **Anzahl** zu gruppieren, klicken Sie auf die **Währung** Schaltfläche. Die Achsenbezeichnungen werden nun im Währungsformat dargestellt.  
+3.  Klicken Sie auf der Registerkarte **Stamm** unter **Zahl** auf die Schaltfläche **Währung**. Die Achsenbezeichnungen werden nun im Währungsformat dargestellt.  
   
-4.  Klicken Sie zweimal auf die Schaltfläche **Dezimalstellen verringern** , damit die Zahl auf einen vollständigen Dollarbetrag gerundet wird.  
+4.  Klicken Sie zweimal auf die Schaltfläche **Dezimalstellen verringern**, damit die Zahl auf einen vollständigen Dollarbetrag gerundet wird.  
   
-5.  Mit der rechten Maustaste in der vertikalen Achse > **Eigenschaften für vertikale Achsen**.  
+5.  Klicken Sie mit der rechten Maustaste auf die vertikale Achse und anschließend auf **Eigenschaften für vertikale Achsen**.  
   
 6.  Beachten Sie, dass auf der Registerkarte **Zahl** im Feld **Kategorie** bereits die Option **Währung** ausgewählt und **Dezimalstellen** bereits auf **0** (Null) festgelegt ist.  
   
@@ -211,9 +212,9 @@ Standardmäßig werden die Werte auf der vertikalen Achse in einem allgemeinen F
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-9. Mit der rechten Maustaste in der vertikalen Achse > **Achsentitel anzeigen**. 
+9. Klicken Sie mit der rechten Maustaste auf die vertikale Achse und anschließend auf **Achsentitel anzeigen**. 
 
-10. Mit der rechten Maustaste des Titels der vertikalen Achse > **Achsentiteleigenschaften**.  
+10. Klicken Sie mit der rechten Maustaste auf die vertikale Achse und anschließend auf **Achsentiteleigenschaften**.  
   
 10. Ersetzen Sie den Text im Feld **Titeltext** durch **Sales Total (in Thousands)**. Darüber hinaus können Sie das gewünschte Format für den Titel festlegen.  
   
@@ -223,7 +224,7 @@ Standardmäßig werden die Werte auf der vertikalen Achse in einem allgemeinen F
 
     ![Berichts-Generator-Säulendiagramm-Format-Y-Achse](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
     
-## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8. Zeigen Sie alle Bezeichnungen auf der horizontalen Achse (x-Achse)
+## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8. Anzeigen aller Bezeichnungen auf der horizontalen Achse (X-Achse)
 
 Sie sehen, dass nur einige der Bezeichnungen auf der X-Achse angezeigt werden. In diesem Abschnitt legen Sie eine Eigenschaft im Bereich „Eigenschaften“ fest, damit alle Bezeichnungen angezeigt werden.
 
@@ -283,7 +284,7 @@ Im Diagramm wird eine Linie angezeigt, die den gleitenden Durchschnitt für den 
   
 4.  Wählen Sie **Umsatzdiagramm** aus, und wählen Sie auf der Registerkarte **Stamm** im Abschnitt **Schriftart** die Einstellung **Fett** aus.  
   
-5.  Wählen Sie **Januar bis Dezember 2015**, und klicken Sie auf die **Home** Registerkarte "> **Schriftart** Abschnitt > legen Schriftgröße **10**.  
+5.  Wählen Sie **Januar bis Dezember 2015** aus, und wählen Sie auf der Registerkarte **Stamm** im Abschnitt **Schriftart** den Schriftgrad **10** aus.  
   
 6.  (Optional) Das Textfeld **Titel** muss ggf. vergrößert werden, damit die beiden Textzeilen hineinpassen. Ziehen Sie den Pfeil mit den zwei Spitzen nach unten, wenn Sie in die Mitte des unteren Rands klicken. Sie müssen möglicherweise auch den oberen Rand der Tabelle verschieben, sodass der Titel nicht überlappt wird.  
   
@@ -306,7 +307,7 @@ Im Diagramm wird eine Linie angezeigt, die den gleitenden Durchschnitt für den 
 4.  Klicken Sie auf **Speichern**.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
-Sie haben das Lernprogramm "Hinzufügen eines Säulendiagramms zu einem Bericht" erfolgreich abgeschlossen. Weitere Informationen zu Diagrammen finden Sie unter [Diagramme &#40; Berichts-Generator und SSRS &#41; ](../reporting-services/report-design/charts-report-builder-and-ssrs.md) und [Sparklines und Datenbalken &#40; Berichts-Generator und SSRS &#41; ](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+Sie haben das Lernprogramm "Hinzufügen eines Säulendiagramms zu einem Bericht" erfolgreich abgeschlossen. Weitere Informationen zu Diagrammen finden Sie unter [Diagramme &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) und [Sparklines und Datenbalken &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Siehe auch  
 -    [Tutorials (Berichts-Generator)](../reporting-services/report-builder-tutorials.md) 

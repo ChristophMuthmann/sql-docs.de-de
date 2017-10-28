@@ -20,6 +20,7 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f5d3e50dcc4dd901255992d5aeea8c818f498de2
@@ -132,3 +133,4 @@ ms.lasthandoff: 06/22/2017
  [Tastenkombinationen für SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   
+

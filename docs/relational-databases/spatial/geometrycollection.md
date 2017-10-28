@@ -17,6 +17,7 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ad3b942675c879183f8be2fe8bc8b82effee8bf2
@@ -71,3 +72,4 @@ SET @g = geometry::STGeomCollFromText('GEOMETRYCOLLECTION(POINT(3 3 1), POLYGON(
  [Räumliche Daten &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   
+

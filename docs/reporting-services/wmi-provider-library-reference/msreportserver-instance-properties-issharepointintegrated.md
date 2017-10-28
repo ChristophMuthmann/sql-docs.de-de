@@ -17,7 +17,8 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a4a86ce7dbb8336aaa70cb2f93debe5dd7f9f70f
 ms.contentlocale: de-de
@@ -48,3 +49,4 @@ public Boolean IsSharePointIntegrated;
  [MSReportServer_ConfigurationSetting-Klasse](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
   
+

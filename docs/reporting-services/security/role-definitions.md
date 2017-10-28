@@ -20,7 +20,8 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 890a94891df3bbae4e65b7733752f99ba458e3e8
 ms.contentlocale: de-de
@@ -68,3 +69,4 @@ ms.lasthandoff: 08/09/2017
  [Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 68bc53fbfbe4db76e44042936642ad8541784b36
@@ -65,3 +66,4 @@ ms.lasthandoff: 06/22/2017
  [Transact-SQL-Debuggerinformationen](../../relational-databases/scripting/transact-sql-debugger-information.md)  
   
   
+

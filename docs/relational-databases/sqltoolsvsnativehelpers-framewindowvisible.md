@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f09e83d79a913bb56042a5a48b832a940e0f9ea9
@@ -51,3 +52,4 @@ BOOL WINAPI IsFrameWindowVisible(IVsWindowFrame* frame)
  [SqlToolsVSNativeHelpers](../relational-databases/sqltoolsvsnativehelpers.md)  
   
   
+

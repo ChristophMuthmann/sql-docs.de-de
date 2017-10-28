@@ -20,6 +20,7 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 30d542287f81032aa1bc2540d461a8f8c163b2f9
@@ -94,3 +95,4 @@ ms.lasthandoff: 08/09/2017
  [Veröffentlichen von Berichten auf einem Berichtsserver](../../reporting-services/reports/publishing-reports-to-a-report-server.md)  
   
   
+

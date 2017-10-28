@@ -19,7 +19,8 @@ caps.latest.revision: 30
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 67a2bf743e580ef73204c02b6e6531aa3c08868d
 ms.contentlocale: de-de
@@ -45,3 +46,4 @@ ms.lasthandoff: 08/09/2017
  [Reporting Services in SQL Server Management Studio &#40; SSRS &#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   
+

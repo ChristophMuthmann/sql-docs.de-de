@@ -16,6 +16,7 @@ caps.latest.revision: 35
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: 431e6a9d3345462a8ce9ac3f03feb9a0e1534b2a
@@ -89,3 +90,4 @@ ms.lasthandoff: 07/31/2017
  [Verwalten mehrerer Server mithilfe von zentralen Verwaltungsservern](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
   
   
+

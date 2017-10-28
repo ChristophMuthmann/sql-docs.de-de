@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 20eb76a9e2cc89015167b5199f1a6f8dd5baec16
@@ -79,3 +80,4 @@ ms.lasthandoff: 09/27/2017
  - [Always Encrypted &#40;Database Engine&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  - [Always Encrypted Wizard](../../../relational-databases/security/encryption/always-encrypted-wizard.md)   
  - [Always Encrypted &#40;client development&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
+

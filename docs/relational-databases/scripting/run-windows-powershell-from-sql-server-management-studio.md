@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ec4be68684d53bc8252c0c08e51a47eccb0cc05d
@@ -47,3 +48,4 @@ SQLSERVER:\SQL\MyComputer\MyInstance\Databases\AdventureWorks2012>
  [SQL Server-PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   
   
+

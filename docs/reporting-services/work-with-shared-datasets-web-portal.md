@@ -14,7 +14,8 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 40f29d8cd68a60f88e2077a16f745f8e37bf35f2
 ms.contentlocale: de-de
@@ -111,3 +112,4 @@ Sobald Sie fertig sind, können Sie **Cacheaktualisierungsplan erstellen**auswä
 Sie können gelistete Pläne **Bearbeiten** oder **Löschen** . Die Option **Neu aus vorhandenem** wird nur aktiviert, wenn genau ein Cacheaktualisierungsplan ausgewählt ist. Durch diese Option wird ein neuer Aktualisierungsplan erstellt, der vom ursprünglichen Plan kopiert wird. Die Seite Cacheaktualisierungsplan wird geöffnet und enthält bereits die Details des ausgewählten Plans. Anschließend können Sie die Optionen für den Aktualisierungsplan ändern und den Plan mit einer neuen Beschreibung speichern.  
 
 Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+

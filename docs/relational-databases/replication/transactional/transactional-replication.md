@@ -17,6 +17,7 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c496335127a2f2d8acbacec53efa8ecdae697cfc
@@ -88,3 +89,4 @@ ms.lasthandoff: 06/22/2017
  Der Verteilungs-Agent wird für Pushabonnements auf dem Verteiler und für Pullabonnements auf dem Abonnenten ausgeführt. Der Agent verschiebt Transaktionen aus der Verteilungsdatenbank auf den Abonnenten. Wenn ein Abonnement für die Überprüfung markiert ist, überprüft der Verteilungs-Agent auch, ob die Daten auf dem Verleger und dem Abonnenten übereinstimmen.  
   
   
+

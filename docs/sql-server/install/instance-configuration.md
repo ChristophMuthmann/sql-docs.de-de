@@ -19,6 +19,7 @@ caps.latest.revision: 62
 ms.author: mikeray
 manager: jhubbard
 robots: noindex,nofollow
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 4b16feb70ed6de54240e3335a42ce6df8fa57b81

@@ -20,6 +20,7 @@ caps.latest.revision: 27
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: 384095b7fc904f9e8d57cb3d71a1bd074900c86a
@@ -65,3 +66,4 @@ ms.lasthandoff: 07/31/2017
  [Erstellen eines neuen registrierten Servers &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)  
   
   
+

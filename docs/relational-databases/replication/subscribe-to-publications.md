@@ -28,6 +28,7 @@ caps.latest.revision: 44
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 640c90e4f58c0dc09a732eb26a03808be2097999
@@ -98,3 +99,4 @@ ms.lasthandoff: 07/31/2017
  [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   
   
+

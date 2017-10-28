@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 969f70df2cdb72c1fa47e645580ae723fb519864
@@ -98,3 +99,4 @@ ms.lasthandoff: 06/22/2017
  [Prinzipale &#40;Datenbankmodul&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   
+

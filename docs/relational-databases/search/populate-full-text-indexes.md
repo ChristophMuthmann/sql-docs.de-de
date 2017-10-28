@@ -28,6 +28,7 @@ caps.latest.revision: 78
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d68baa882e382b2b68e5eded3ea7807e4b13aa6d
@@ -233,3 +234,4 @@ Die variablen Teile des Durchforstungsprotokolldatei-Namens sind die folgenden.
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   
   
+

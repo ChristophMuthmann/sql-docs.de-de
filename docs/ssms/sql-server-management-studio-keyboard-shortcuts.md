@@ -24,6 +24,7 @@ caps.latest.revision: 82
 author: stevestein
 ms.author: sstein
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: 599b4967bce7c87eda5be0509ed1f9145d39ac92
@@ -467,3 +468,4 @@ ms.lasthandoff: 07/31/2017
  [Anpassen von Menüs und Tastenkombinationen](http://msdn.microsoft.com/library/fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b)  
   
   
+

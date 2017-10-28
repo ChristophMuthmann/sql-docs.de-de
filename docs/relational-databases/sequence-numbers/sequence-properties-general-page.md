@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 46ce2a01967b75aa0fec969d24cf6ad320932ace
@@ -94,3 +95,4 @@ ms.lasthandoff: 06/22/2017
  [sys.sequences &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)  
   
   
+

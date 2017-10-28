@@ -15,7 +15,8 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6449b0b9d9e27c860d3246b4992cac6405af731f
 ms.contentlocale: de-de
@@ -52,3 +53,4 @@ public string RSWindowsExtendedProtectionScenario;
  [RsReportServer.config Configuration File (RSReportServer.config-Konfigurationsdatei)](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
   
   
+

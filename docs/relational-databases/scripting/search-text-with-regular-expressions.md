@@ -22,6 +22,7 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 530e940d95c3375b58b494e165cf5a193fdec720
@@ -141,3 +142,4 @@ ms.lasthandoff: 07/31/2017
  [Suchen von Text mit Platzhaltern](../../relational-databases/scripting/search-text-with-wildcards.md)  
   
   
+

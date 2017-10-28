@@ -14,6 +14,7 @@ caps.latest.revision: 22
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 22d90850650f386147ccc9b88b00f06cbd6813ec
@@ -63,3 +64,4 @@ ms.lasthandoff: 06/22/2017
 -   [Verbindung mit Server herstellen &#40;Oracle&#41;, Verbindungseigenschaften](../../relational-databases/replication/connect-to-server-oracle-connection-properties.md)  
   
   
+

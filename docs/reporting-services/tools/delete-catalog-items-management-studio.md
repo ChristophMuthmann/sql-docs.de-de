@@ -17,7 +17,8 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7cdd06f5488603b10e788d513c93269b250d8486
 ms.contentlocale: de-de
@@ -55,3 +56,4 @@ ms.lasthandoff: 08/09/2017
  [Erstellen, ändern und Löschen von Zeitplänen](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
   
   
+

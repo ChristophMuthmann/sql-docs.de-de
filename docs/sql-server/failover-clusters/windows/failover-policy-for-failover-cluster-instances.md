@@ -16,6 +16,7 @@ caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5f71e743730968231015410177f9bea2d6f00228
@@ -116,3 +117,4 @@ ms.lasthandoff: 06/22/2017
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   
+

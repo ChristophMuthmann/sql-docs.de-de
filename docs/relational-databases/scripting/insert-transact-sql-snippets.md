@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f431402a937407f00d054e6ad488ea92f0b5a647
@@ -51,3 +52,4 @@ ms.lasthandoff: 06/22/2017
  [Einfügen von Transact-SQL-Umschließungsausschnitten](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
   
   
+

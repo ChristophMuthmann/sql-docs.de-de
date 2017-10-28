@@ -18,6 +18,7 @@ caps.latest.revision: 23
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ac76f08879c6fabae99b4ff7dc5bb0cffa74b0fb
@@ -60,3 +61,4 @@ ms.lasthandoff: 06/22/2017
  [Ssms-Hilfsprogramm](../../tools/sql-server-management-studio/ssms-utility.md)  
   
   
+

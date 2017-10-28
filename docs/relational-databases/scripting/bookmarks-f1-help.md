@@ -18,6 +18,7 @@ caps.latest.revision: 14
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 72f3c7a5418f708c2d8a6a75d8271deccc9861d0
@@ -31,3 +32,4 @@ ms.lasthandoff: 06/22/2017
  [Verwalten von Lesezeichen](../../relational-databases/scripting/manage-bookmarks.md)  
   
   
+

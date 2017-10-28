@@ -24,6 +24,7 @@ caps.latest.revision: 31
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a24b143d85660d979e61a103a077bddaef28029b
@@ -69,3 +70,4 @@ ms.lasthandoff: 06/22/2017
  [Sichern von SQL Server](../../../relational-databases/security/securing-sql-server.md)  
   
   
+

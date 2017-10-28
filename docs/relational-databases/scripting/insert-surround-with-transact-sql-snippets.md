@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 852836ea43accda6af057b014abbc987f4f14299
@@ -51,3 +52,4 @@ ms.lasthandoff: 06/22/2017
  [Einfügen von Transact-SQL-Ausschnitten](../../relational-databases/scripting/insert-transact-sql-snippets.md)  
   
   
+

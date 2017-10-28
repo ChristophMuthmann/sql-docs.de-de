@@ -20,6 +20,7 @@ caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
 ms.openlocfilehash: ed2f64e9596dd905c0e8b24f6616520942ccc3ce
@@ -118,3 +119,4 @@ ms.lasthandoff: 08/28/2017
  [Sicherungsfähige Elemente](../../../relational-databases/security/securables.md)  
   
   
+

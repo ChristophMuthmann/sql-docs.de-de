@@ -22,6 +22,7 @@ caps.latest.revision: 24
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8bbb42de736fd7c330c87380dc7203198062f3da
@@ -52,3 +53,4 @@ ms.lasthandoff: 06/22/2017
  [Automatisierte Administrationstasks &#40;SQL Server Agent&#41;](http://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)  
   
   
+

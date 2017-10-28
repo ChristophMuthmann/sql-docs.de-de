@@ -17,6 +17,7 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: HT
 ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
 ms.openlocfilehash: 715ce3fff853f4eab433d095ffd952033defad69
@@ -269,3 +270,4 @@ GO
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   
   
+

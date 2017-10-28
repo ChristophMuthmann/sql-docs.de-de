@@ -17,6 +17,7 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6749d7f7db6e6e76cd940c166180a7ccd206aaf9
@@ -148,3 +149,4 @@ GO
  Weitere Informationen finden Sie unter [Behandeln von Problemen mit der Volltextindizierung](../../relational-databases/search/troubleshoot-full-text-indexing.md).  
   
   
+

@@ -16,7 +16,8 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ee55d7f9499b638828a6312761dd1b7480a7816c
 ms.contentlocale: de-de
@@ -57,7 +58,7 @@ In diesem Abschnitt wählen Sie eine freigegebene Datenquelle aus, erstellen ein
   
 5.  Klicken Sie auf **Weiter**.  
   
-6.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine vorhandene Datenquelle aus oder navigieren Sie zum Berichtsserver und wählen Sie eine Datenquelle aus. Falls keine Datenquelle verfügbar ist oder Sie über keinen Zugriff auf einen Berichtsserver verfügen, können Sie stattdessen eine eingebettete Datenquelle verwenden. Informationen zum Erstellen einer eingebetteten Datenquelle, finden Sie unter [Lernprogramm: Erstellen eines einfachen Tabellenberichts &#40; Berichts-Generator &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine vorhandene Datenquelle aus oder navigieren Sie zum Berichtsserver und wählen Sie eine Datenquelle aus. Falls keine Datenquelle verfügbar ist oder Sie über keinen Zugriff auf einen Berichtsserver verfügen, können Sie stattdessen eine eingebettete Datenquelle verwenden. Weitere Informationen zum Erstellen einer eingebetteten Datenquelle finden Sie unter [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Klicken Sie auf **Weiter**.  
   
@@ -160,19 +161,19 @@ Standardmäßig wird in den Zusammenfassungsdaten für das Feld Sales eine allge
   
 1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zu wechseln.  
   
-2.  Drücken Sie die STRG-TASTE, und wählen Sie dann die neun Zellen aus, die `[Sum(Sales)]`enthalten.  
+2.  Drücken Sie die STRG-TASTE, und wählen Sie dann die neun Zellen aus, die `[Sum(Sales)]` enthalten.  
   
-3.  Auf der **Home** Registerkarte "> **Anzahl** > **Währung**. Die Zellen ändern sich, um die formatierte Währung anzuzeigen.  
+3.  On the **Home** tab > **Number** > **Currency**. Die Zellen ändern sich, um die formatierte Währung anzuzeigen.  
   
-    Wenn Sie das Gebietsschema „Deutsch (Deutschland)“ verwenden, lautet der Standardbeispieltext [**12,345.00€**]. Falls kein Beispielwährungswert angezeigt wird, klicken Sie in der Gruppe **Zahlen** auf **Platzhalterformate** > **Beispielwerte**.  
+    Wenn Sie das Gebietsschema „Deutsch (Deutschland)“ verwenden, lautet der Standardbeispieltext [**12,345.00€**]. Falls kein Beispielwährungswert angezeigt wird, klicken Sie in der Gruppe **Zahlen** auf **Platzhalterformate**  >  **Beispielwerte**.  
     
     ![Berichts-Generator-Platzhalter-Werte](../reporting-services/media/report-builder-placeholder-value.png)
   
-4.  Klicken Sie auf die Zelle, die `[SalesDate]`enthält.  
+4.  Klicken Sie auf die Zelle, die `[SalesDate]` enthält.  
   
-5.  In der **Anzahl** Gruppe > **Datum**.  
+5.  Wählen Sie in der Gruppe **Zahl** im Einblendmenü die Einstellung **Datum**.  
   
-    In der Zelle wird das Beispieldatum **[31.01.2000]**angezeigt. Falls kein Beispieldatum angezeigt wird, klicken Sie in der Gruppe **Zahlen** auf **Platzhalterformate** und anschließend auf **Beispielwerte**.  
+    In der Zelle wird das Beispieldatum **[31.01.2000]** angezeigt. Falls kein Beispieldatum angezeigt wird, klicken Sie in der Gruppe **Zahlen** auf **Platzhalterformate** und anschließend auf **Beispielwerte**.  
   
 6.  Klicken Sie auf **Ausführen** , um den Bericht in der Vorschau anzuzeigen.  
   
@@ -268,7 +269,7 @@ Der Eckenbereich befindet sich oben links in der Matrix. Abhängig von der Anzah
   
 5.  Klicken Sie mit der rechten Maustaste auf die zusammengeführte Zelle und anschließend auf **Textfeldeigenschaften**.  
   
-6.  Auf der **Rahmen** Registerkarte "> **Voreinstellungen** > **keine**.
+6.  On the **Border** tab > **Presets** > **None**.
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -283,15 +284,15 @@ Ein Berichtstitel wird oben im Bericht angezeigt. Sie können den Berichtstitel 
   
 1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zurückzukehren.  
   
-2.  Wählen Sie das Textfeld am Anfang des Berichtstexts, das **Zum Hinzufügen eines Titels klicken**enthält, und drücken Sie anschließend die ENTF-TASTE.  
+2.  Wählen Sie das Textfeld am Anfang des Berichtstexts, das **Zum Hinzufügen eines Titels klicken** enthält, und drücken Sie anschließend die ENTF-TASTE.  
   
-3.  Auf der **einfügen** Registerkarte "> **Header** > **Header hinzufügen**.  
+3.  Klicken sie auf der Registerkarte **Einfügen** auf **Kopfzeile**  >  **Kopfzeile hinzufügen**.  
   
     Am Anfang des Berichtstexts wird eine Kopfzeile hinzugefügt.  
   
 4.  Klicken Sie auf der Registerkarte **Einfügen** auf **Textfeld**und ziehen Sie anschließend ein Textfeld in den Berichtskopf. Erweitern Sie das Textfeld auf eine Länge von etwa 15 cm und eine Höhe von etwa 2 cm, und platzieren Sie es links neben der Berichtskopfzeile.  
   
-5.  Geben Sie im Textfeld **Umsatz nach Territory, Subcategory und Tag**ein.  
+5.  Geben Sie im Textfeld **Umsatz nach Territory, Subcategory und Tag** ein.  
   
 6.  Markieren Sie den Text, den Sie eingegeben haben, und nehmen Sie anschließend unter **Stamm** > **Schriftart** folgende Einstellungen vor:
     * **Größe 24 pt**
@@ -335,7 +336,7 @@ Der Bericht wird auf dem Berichtsserver gespeichert. Der Name des Berichtsserver
 ## <a name="RotateTextBox"></a>9. (Optional) Drehen des Textfelds um 270 Grad  
 Ein Bericht mit Matrizen kann bei der Ausführung horizontal und vertikal erweitert werden. Durch vertikales Drehen der Textfelder oder um 270 Grad können Sie in horizontaler Richtung Platz sparen. Der gerenderte Bericht ist in diesem Fall schmäler und passt beim Exportieren in ein Format wie Microsoft Word mit einer höheren Wahrscheinlichkeit auf eine gedruckte Seite.  
   
-In einem Textfeld kann Text auch horizontal und vertikal (von oben nach unten) angezeigt werden. Weitere Informationen finden Sie unter [Textfelder &#40; Berichts-Generator und SSRS &#41; ](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
+In einem Textfeld kann Text auch horizontal und vertikal (von oben nach unten) angezeigt werden. Weitere Informationen finden Sie unter [Textfelder &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
   
 ### <a name="to-rotate-text-box-270-degrees"></a>So drehen Sie das Textfeld um 270 Grad  
   
@@ -351,9 +352,9 @@ In einem Textfeld kann Text auch horizontal und vertikal (von oben nach unten) a
   
     Wenn der Eigenschaftenbereich nicht geöffnet ist, klicken Sie auf die Registerkarte **Ansicht** des Menübands und aktivieren Sie das Kontrollkästchen **Eigenschaften**.  
   
-4.  Vergewissern Sie sich, dass die „CanGrow“-Eigenschaft auf **True**festgelegt wurde.  
+4.  Vergewissern Sie sich, dass die „CanGrow“-Eigenschaft auf **True** festgelegt wurde.  
   
-5.  Klicken Sie auf der Registerkarte **Home** in der Gruppe **Absatz** auf die Schaltflächen **Mitte** und **Zentriert**, um den Text sowohl vertikal als auch horizontal im Mittelpunkt der Zelle zu platzieren.  
+5.  Klicken Sie auf der Registerkarte **Stamm** in der Gruppe **Absatz** auf die Schaltflächen **Mitte** und **Zentriert**, um den Text sowohl vertikal als auch horizontal im Mittelpunkt der Zelle zu platzieren.  
  
 6. Ändern Sie die Breite der Spalte "Territory" auf ca. 1,3 cm, und löschen Sie den Spaltentitel.  
 6.  Klicken Sie auf **Ausführen** , um den Bericht in der Vorschau anzuzeigen.  

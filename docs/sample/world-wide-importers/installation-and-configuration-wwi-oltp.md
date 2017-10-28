@@ -15,6 +15,7 @@ author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 3b4a02b7b8c17f6bd5a75714a8fc3357dcfbd9a3

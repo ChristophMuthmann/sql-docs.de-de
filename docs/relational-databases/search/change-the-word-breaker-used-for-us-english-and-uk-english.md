@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: be3d7e956f6ed89f14fc63c36d97974cc9218933
@@ -132,3 +133,4 @@ ms.lasthandoff: 07/31/2017
  [Verhaltensänderungen der Volltextsuche](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   
   
+

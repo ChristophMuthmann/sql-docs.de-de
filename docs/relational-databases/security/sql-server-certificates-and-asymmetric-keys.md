@@ -16,6 +16,7 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
 ms.openlocfilehash: ff3d6bcd21c301e13d39f3ce22205e879af86b85
@@ -86,3 +87,4 @@ ms.lasthandoff: 08/28/2017
  [Transparente Datenverschlüsselung &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
   
+

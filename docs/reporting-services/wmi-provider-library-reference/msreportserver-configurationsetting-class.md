@@ -23,7 +23,8 @@ caps.latest.revision: 39
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0c9a364ca856fef827afee604f64893ce20d21a1
 ms.contentlocale: de-de
@@ -49,7 +50,7 @@ public class MSReportServer_ConfigurationSetting
  Alle öffentlichen statischen Member dieses Typs (**Shared** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) sind für Vorgänge mit mehreren Threads sicher. Für Instanzmember kann nicht gewährleistet werden, dass sie für Threads sicher sind.  
   
 ## <a name="example"></a>Beispiel  
- Fügen Sie zum Ausführen des folgenden Codes, den Servernamen an Stelle jedes \< *Servername*>. Aktualisieren Sie ggf. den Pfad, sodass dieser auf den Installationspfad verweist. Im folgenden Codebeispiel wird jede Eigenschaft in der *MSReportServer_ConfigurationSetting*-Klasse durchlaufen, wobei der Name jeder Eigenschaft und deren Wert in die Konsole geschrieben werden.  
+ Fügen Sie zum Ausführen des folgenden Codes, den Servernamen an Stelle jedes \< *Servername*>. Aktualisieren Sie ggf. den Pfad, sodass dieser auf den Installationspfad verweist. Im folgenden Codebeispiel wird jede Eigenschaft in der *MSReportServer_ConfigurationSetting* -Klasse durchlaufen, wobei der Name jeder Eigenschaft und deren Wert in die Konsole geschrieben werden.  
   
 ```vb  
 Imports System  
@@ -174,11 +175,12 @@ class Class1
 ```  
   
 ## <a name="requirements"></a>Anforderungen  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
- **Plattform:**[!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
+ **Plattform:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [MSReportServer_ConfigurationSetting-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
+

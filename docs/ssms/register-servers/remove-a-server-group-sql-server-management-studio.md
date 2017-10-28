@@ -20,6 +20,7 @@ caps.latest.revision: 23
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: 5b1ae9e4b35f9e46200741d02f97e0faecb753ff
@@ -42,3 +43,4 @@ ms.lasthandoff: 07/31/2017
  [Verschieben eines registrierten Servers oder einer registrierten Servergruppe &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/move-a-registered-server-or-registered-server-group.md)  
   
   
+

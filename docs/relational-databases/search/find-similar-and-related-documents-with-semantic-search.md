@@ -16,6 +16,7 @@ caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: cf6a2042a33da89c453c278b1beb1950bfb96e61
@@ -79,3 +80,4 @@ GO
 ```  
   
   
+

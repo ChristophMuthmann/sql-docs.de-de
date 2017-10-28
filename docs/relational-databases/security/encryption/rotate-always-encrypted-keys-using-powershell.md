@@ -14,6 +14,7 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
 ms.openlocfilehash: 9bec2f6ad7f48cd881a2de13b14191e9deb2f851

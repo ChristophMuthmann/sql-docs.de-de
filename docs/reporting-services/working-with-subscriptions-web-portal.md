@@ -14,7 +14,8 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 4f49f5376344d6c52159c3a4dcff553255c79320
 ms.contentlocale: de-de
@@ -96,3 +97,4 @@ Nachdem die Abfrage erstellt wurde, können Sie dann die Werte den benötigten F
 [Arbeiten mit freigegebenen Datasets](../reporting-services/work-with-shared-datasets-web-portal.md)
 
 Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+

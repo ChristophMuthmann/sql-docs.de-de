@@ -16,6 +16,7 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 326f645ff1c214623b5c46fbaa4f86f08066e64b
@@ -81,3 +82,4 @@ ms.lasthandoff: 06/22/2017
  [Verwalten und Überwachen der semantischen Suche](../../relational-databases/search/manage-and-monitor-semantic-search.md)  
   
   
+

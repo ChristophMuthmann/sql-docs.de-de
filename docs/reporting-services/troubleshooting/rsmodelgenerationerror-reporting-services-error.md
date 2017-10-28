@@ -17,7 +17,8 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 658d9bdaffa05e3bf287b38953bc2e318da7d319
 ms.contentlocale: de-de
@@ -44,3 +45,4 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="internal-only"></a>Nur intern  
   
+

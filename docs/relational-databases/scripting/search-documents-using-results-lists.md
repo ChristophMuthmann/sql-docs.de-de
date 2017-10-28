@@ -19,6 +19,7 @@ caps.latest.revision: 22
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a63ced363f4aee6ece4481f7b89b0ab195b82019
@@ -73,3 +74,4 @@ ms.lasthandoff: 07/31/2017
  [Suchen von Text mit regulären Ausdrücken](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
   
   
+

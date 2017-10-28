@@ -17,7 +17,8 @@ caps.latest.revision: 36
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ed67f96cd8487703e81ec702505724725e5c13d3
 ms.contentlocale: de-de
@@ -25,7 +26,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="run-a-reporting-services-script-file"></a>Ausführen einer Reporting Services-Skriptdatei
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Skriptdateien werden von der Eingabeaufforderung in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Skriptumgebung (RS.exe) ausgeführt. In RS.exe stehen Ihnen viele Befehlszeileargumente zur Verfügung. Weitere Informationen zu den Befehlszeilenoptionen finden Sie unter [Hilfsprogramm „RS.exe“ &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md). Weitere Skriptbeispiele finden Sie unter [SQL Server Reporting Services-Produktbeispiele](http://go.microsoft.com/fwlink/?LinkId=177889).  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Skriptdateien werden von der Eingabeaufforderung in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Skriptumgebung (RS.exe) ausgeführt. In RS.exe stehen Ihnen viele Befehlszeileargumente zur Verfügung. Weitere Informationen zu den Befehlszeilenoptionen finden Sie unter [Hilfsprogramm „RS.exe“ &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md). Weitere Skriptbeispiele finden Sie unter [SQL Server Reporting Services-Produktbeispiele](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="sample-command-lines"></a>Beispielbefehlszeilen  
   
@@ -60,6 +61,7 @@ ms.lasthandoff: 08/09/2017
     ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Technische Referenz &#40; SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)  
+ [Technische Referenz &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)  
   
   
+

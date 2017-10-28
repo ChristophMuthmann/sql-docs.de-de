@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: murato
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
 ms.openlocfilehash: d161da0d79c4b778e739fb806ffae62e68eac52c

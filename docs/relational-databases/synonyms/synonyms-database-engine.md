@@ -18,6 +18,7 @@ caps.latest.revision: 31
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 09336539a812ddf6c28e81344299750ba3177361
@@ -154,3 +155,4 @@ GO
  [DROP SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/drop-synonym-transact-sql.md)  
   
   
+

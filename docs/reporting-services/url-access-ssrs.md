@@ -22,7 +22,8 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Active
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f91b97d1877e365813f3aa2445fabea1a263ab2b
 ms.contentlocale: de-de
@@ -130,3 +131,4 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  [Suchen, anzeigen und Verwalten von Berichten &#40; Berichts-Generator und SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
+

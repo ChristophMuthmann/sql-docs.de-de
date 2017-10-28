@@ -15,6 +15,7 @@ author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: a802bef552e18826608f7d900f654034df8ad23b
@@ -26,3 +27,4 @@ ms.lasthandoff: 08/02/2017
 Finden Sie in der Beispiel-scripts.zip-Datei, die enthalten ist das [release](http://go.microsoft.com/fwlink/?LinkID=800630) des Beispiels, und beziehen sich auf den Quellcode einfügen:
 
 [Wide-Welt-Importers /-Beispielskripts](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
+

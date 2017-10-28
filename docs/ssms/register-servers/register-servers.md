@@ -22,6 +22,7 @@ caps.latest.revision: 29
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: 5f72c610c068b0958aad49cce4fdac71121c2a22
@@ -88,3 +89,4 @@ ms.lasthandoff: 07/31/2017
  [Remoteserver](../../database-engine/configure-windows/remote-servers.md)  
   
   
+

@@ -20,6 +20,7 @@ caps.latest.revision: 28
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6315705010a41afb985682e63338cc95237b5e78
@@ -186,3 +187,4 @@ ms.lasthandoff: 06/22/2017
  [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)  
   
   
+

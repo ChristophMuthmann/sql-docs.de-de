@@ -18,6 +18,7 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: 875a8e25243e9623cbafdfdc63eba65585ca469d
@@ -37,3 +38,4 @@ ms.lasthandoff: 07/31/2017
 2.  Klicken Sie im Dialogfeld **Löschen bestätigen** auf **Ja**.  
   
   
+

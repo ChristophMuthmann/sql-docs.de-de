@@ -18,6 +18,7 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3417818eb5ff6f9f5afce213457828844d2912a8
@@ -101,3 +102,4 @@ COMMIT TRANSACTION T2
  [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   
+
