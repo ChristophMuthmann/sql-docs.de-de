@@ -17,6 +17,7 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: ffc94518fc4589aaadc5d7fdf87e518a6c5adc95
@@ -39,3 +40,4 @@ ms.lasthandoff: 07/31/2017
  [Registrieren von Servern](../../tools/sql-server-management-studio/register-servers.md)  
   
   
+

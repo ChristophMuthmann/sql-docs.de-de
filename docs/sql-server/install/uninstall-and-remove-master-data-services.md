@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9d936f9a9726a5d7dd5a214cdc813a8634119600
@@ -40,3 +41,4 @@ ms.lasthandoff: 06/22/2017
  [Installieren von Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   
+

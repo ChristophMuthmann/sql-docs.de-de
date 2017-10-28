@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a4f4804fbc59d9744eaa819ba8f39e1be79de647
@@ -40,3 +41,4 @@ ms.lasthandoff: 06/22/2017
  **Alle Nicht-Systembenutzer in der Datenbank werden als Rollen veröffentlicht.  
   
   
+

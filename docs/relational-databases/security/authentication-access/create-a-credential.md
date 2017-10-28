@@ -18,6 +18,7 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 80dba3f156735179c0fb016e39f3065acd6f5ac1
@@ -100,3 +101,4 @@ ms.lasthandoff: 06/22/2017
  Weitere Informationen finden Sie unter [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../../t-sql/statements/create-credential-transact-sql.md).  
   
   
+

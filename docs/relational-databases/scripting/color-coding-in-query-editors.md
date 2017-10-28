@@ -17,6 +17,7 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ade5a74e7b4ee2222ada550de92d6967314770e8
@@ -47,3 +48,4 @@ ms.lasthandoff: 06/22/2017
  In manchen Editor-Typen wird die Statusleiste nicht angezeigt, oder es werden keine verschiedenen Farben unterstützt.  
   
   
+

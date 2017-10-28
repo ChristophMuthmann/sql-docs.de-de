@@ -14,6 +14,7 @@ caps.latest.revision: 4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
 ms.openlocfilehash: 99906cb4dbfcfa8e4dbaca01b9bf993ab84c7a82
@@ -41,3 +42,4 @@ ms.lasthandoff: 08/28/2017
 
 [Hardware- und Softwareanforderungen für die Installation von SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
+

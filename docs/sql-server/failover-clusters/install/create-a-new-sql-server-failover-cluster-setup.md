@@ -21,6 +21,7 @@ caps.latest.revision: 77
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c8b4817b3630562c514ac3593abd80f83d7b0284
@@ -408,3 +409,4 @@ ms.lasthandoff: 08/03/2017
  [Installieren von SQL Server 2016 von der Eingabeaufforderung](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
   
+

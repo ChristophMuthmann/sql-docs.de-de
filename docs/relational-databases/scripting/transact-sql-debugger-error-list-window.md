@@ -21,6 +21,7 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: aa7ebae3445240303352026f7cdb99a06b2d61ca
@@ -95,3 +96,4 @@ ms.lasthandoff: 06/22/2017
  Zeigt den Namen des Projekts an, in dem die angegebene Skriptdatei enthalten ist.  
   
   
+

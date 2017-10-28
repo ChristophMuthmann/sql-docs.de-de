@@ -18,6 +18,7 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b55cf845ad298a2e6595929776e856ee1d43fc6a
@@ -58,3 +59,4 @@ ms.lasthandoff: 06/22/2017
  [Eigenschaftenfenster &#40;Management Studio&#41;](http://msdn.microsoft.com/library/6a9a1389-df8d-4cfc-928b-eccbf884a22d)  
   
   
+

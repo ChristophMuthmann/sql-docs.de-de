@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ae35fb3deecc8b77940ab76d1b0f016f00f39e27
@@ -80,3 +81,4 @@ ms.lasthandoff: 06/22/2017
  [SQL Server-PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   
   
+

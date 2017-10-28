@@ -20,6 +20,7 @@ caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 6dccaff93a6c8b2374a1fad069b2f597898802fc
 ms.openlocfilehash: 84b9b39b9a7ae03244dd3703cc303d1cf7f4380b
@@ -133,3 +134,4 @@ Ssms "C:\solutionsfolder\ReportProj\MonthlyReports.ssmssln"
  [Verwenden von SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
   
   
+

@@ -19,7 +19,8 @@ caps.latest.revision: 35
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e056f5577c2c569e333f2341060862c06d803f6b
 ms.contentlocale: de-de
@@ -52,3 +53,4 @@ ms.lasthandoff: 08/09/2017
  [Speichern von Anmeldeinformationen in einer Reporting Services-Datenquelle](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   
+

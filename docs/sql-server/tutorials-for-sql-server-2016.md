@@ -14,6 +14,7 @@ caps.latest.revision: 40
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: HT
 ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
 ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
@@ -50,3 +51,4 @@ ms.lasthandoff: 07/31/2017
  - [Tutorials für SQL Server 2008 R2](http://msdn.microsoft.com/library/ms167593.aspx)   
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+

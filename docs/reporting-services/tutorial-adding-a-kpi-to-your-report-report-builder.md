@@ -16,7 +16,8 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6ff993552c5c5b8a3e48c672a29f6567107f2331
 ms.contentlocale: de-de
@@ -33,7 +34,7 @@ Die folgende Abbildung ähnelt dem Bericht, den Sie erstellen werden.
 ![Berichts-Generator-KPI-Bericht](../reporting-services/media/report-builder-kpi-report.png)
     
 > [!NOTE]  
-> In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst: ein Verfahren zum Erstellen des Datasets und ein Verfahren zum Erstellen einer Tabelle. Im ersten Tutorial dieser Reihe erhalten Sie ausführliche Anweisungen zum Navigieren zu einem Berichtsserver, Auswählen einer Datenquelle, Erstellen eines Datasets und Ausführen des Assistenten: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst: ein Verfahren zum Erstellen des Datasets und ein Verfahren zum Erstellen einer Tabelle. Im ersten Tutorial dieser Reihe erhalten Sie Schritt-für-Schritt-Anweisungen zum Navigieren zu einem Berichtsserver, Auswählen einer Datenquelle, Erstellen eines Datasets und Ausführen des Assistenten: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Geschätzte Zeit zum Bearbeiten dieses Tutorials: 15 Minuten.  
   
@@ -59,7 +60,7 @@ In diesem Abschnitt wählen Sie eine freigegebene Datenquelle aus, erstellen ein
   
 5.  Klicken Sie auf **Weiter**.  
   
-6.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine vorhandene Datenquelle aus, oder navigieren Sie zum Berichtsserver, und wählen Sie eine Datenquelle aus. Falls dort keine Datenquelle verfügbar ist oder Sie keinen Zugriff auf einen Berichtsserver haben, können Sie stattdessen eine eingebettete Datenquelle verwenden. Weitere Informationen finden Sie unter [Lernprogramm: Erstellen eines einfachen Tabellenberichts &#40; Berichts-Generator &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine vorhandene Datenquelle aus, oder navigieren Sie zum Berichtsserver, und wählen Sie eine Datenquelle aus. Falls dort keine Datenquelle verfügbar ist oder Sie keinen Zugriff auf einen Berichtsserver haben, können Sie stattdessen eine eingebettete Datenquelle verwenden. Weitere Informationen finden Sie unter [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Klicken Sie auf **Weiter**.  
   
@@ -163,9 +164,9 @@ Erweitern Sie die Spalten, und legen Sie das Format für die Datums- und Währun
 
 3. Drücken Sie die STRG-TASTE, und wählen Sie anschließend die vier Zellen aus, die [Sum(Sales)] enthalten.
 
-4. Auf der **Home** Registerkarte "> **Anzahl** > **Währung**. Die Zellen ändern sich, um die formatierte Währung anzuzeigen.
+4. On the **Home** tab > **Number** > **Currency**. Die Zellen ändern sich, um die formatierte Währung anzuzeigen.
 
-   Wenn Sie das Gebietsschema „Deutsch (Deutschland)“ verwenden, lautet der Standardbeispieltext [12.345,00€]. Wenn Sie eine Beispiel-Währungswert in sehen die **Zahlen** zu gruppieren, klicken Sie auf **Platzhalterformate** > **Beispielwerte**.
+   Wenn Sie das Gebietsschema „Deutsch (Deutschland)“ verwenden, lautet der Standardbeispieltext [12.345,00€]. Falls kein Beispielwährungswert angezeigt wird, klicken Sie in der Gruppe **Zahlen** auf **Platzhalterformate**  >  **Beispielwerte**.
     
     ![Berichts-Generator-Schaltfläche-Platzhalterwert](../reporting-services/media/report-builder-placeholder-value-button.png)
 
@@ -173,7 +174,7 @@ Erweitern Sie die Spalten, und legen Sie das Format für die Datums- und Währun
 
 6. Klicken Sie auf die Zelle, die [SalesDate] enthält.
 
-6. In der **Anzahl** Gruppe > **Datum**.
+6. Wählen Sie in der Gruppe **Zahl** im Einblendmenü die Einstellung **Datum**.
 
    In der Zelle wird das Beispieldatum [1/31/2000] angezeigt. 
 
@@ -213,15 +214,15 @@ Ein Messgerät stellt einen einzelnen Wert in einem Dataset dar. In diesem Tutor
   
 1.  Wechseln Sie zurück in die Entwurfsansicht.  
   
-2.  In der Tabelle mit der Maustaste des spaltenhandle für die Spalte Sales > **Spalte einfügen** > **rechts**. Eine neue Spalte wird der Tabelle hinzugefügt.  
+2.  Klicken Sie in der Tabelle mit der rechten Maustaste auf den Spaltenziehpunkt für die Spalte „Sales“, und klicken Sie auf **Spalte einfügen**  >  **Rechts**. Eine neue Spalte wird der Tabelle hinzugefügt.  
 
     ![Berichts-Generator-KPI-Spalte-einfügen](../reporting-services/media/report-builder-kpi-insert-column.png)
   
 3.  Geben Sie in der Spaltenüberschrift **Lineare KPI** ein.  
   
-4.  Auf der **einfügen** Registerkarte "> **Datenvisualisierungen** > **Messgerät**, und klicken Sie dann auf die Entwurfsoberfläche außerhalb der Tabelle.   
+4.  Klicken Sie auf der Registerkarte **Einfügen** auf **Datenvisualisierungen**  >  **Messgerät**, und klicken Sie anschließend außerhalb der Tabelle auf die Entwurfsoberfläche.   
   
-5.  Wählen Sie im Dialogfeld **Messgerättyp auswählen** den ersten linearen Messgerättyp ( **Horizontal**) aus.  
+5.  Wählen Sie im Dialogfeld **Messgerättyp auswählen** den ersten linearen Messgerättyp (**Horizontal**) aus.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -233,15 +234,15 @@ Ein Messgerät stellt einen einzelnen Wert in einem Dataset dar. In diesem Tutor
    
     ![Berichts-Generator-KPI-Sales-Feld-ziehen](../reporting-services/media/report-builder-kpi-drag-sales-field.png)
    
-9. In der **Messgerätdaten** Bereich, klicken Sie auf den Pfeil neben **LinearPointer1** > **Zeigereigenschaften**.  
+9. Klicken Sie im Bereich **Messgerätdaten** auf den Pfeil neben **LinearPointer1**  >  **Zeigereigenschaften**.  
   
-10. In der **lineare Zeigereigenschaften** Dialogfeld > **Zeigeroptionen** Registerkarte "> **Zeigertyp**, stellen Sie sicher, dass **Leiste** ausgewählt ist. 
+10. Stellen Sie im Dialogfeld **Lineare Zeigereigenschaften** in der Registerkarte **Zeigeroptionen** unter **Zeigertyp** sicher, dass **Leiste** ausgewählt ist. 
  
 11. Klicken Sie auf **OK**.  
   
 12. Klicken Sie mit der rechten Maustaste auf die Skala im Messgerät, und klicken Sie auf **Skalierungseigenschaften**.  
   
-13. In der **lineare Skalierungseigenschaften** Dialogfeld > **allgemeine** Registerkarte **maximale** auf 25000 fest.  
+13. Legen Sie im Dialogfeld **Lineare Skalierungseigenschaften** auf der Registerkarte **Allgemein** **Maximum** auf 25.000 fest.  
 
     > [!NOTE]  
     > Anstelle einer Konstante wie 25.000 können Sie den Wert der Option **Maximum** auch mithilfe eines Ausdrucks dynamisch berechnen. Der Ausdruck würde das Aggregat der Aggregatfunktion verwenden und dem Ausdruck `=Max(Sum(Fields!Sales.value), "Tablix1")`ähneln.  
@@ -262,21 +263,21 @@ Ein Messgerät stellt einen einzelnen Wert in einem Dataset dar. In diesem Tutor
 ![Berichts-Generator-KPI-linear](../reporting-services/media/report-builder-linear-kpi.png) 
   
 ## <a name="Indicator"></a>5. Anzeigen eines KPI mit einem Indikator  
-Indikatoren sind kleine einfache Messgeräte, die Datenwerte auf einen Blick darstellen. Aufgrund ihrer Größe und Einfachheit werden Indikatoren oft in Tabellen und Matrizen verwendet. Weitere Informationen finden Sie unter [Indikatoren &#40; Berichts-Generator und SSRS &#41; ](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
+Indikatoren sind kleine einfache Messgeräte, die Datenwerte auf einen Blick darstellen. Aufgrund ihrer Größe und Einfachheit werden Indikatoren oft in Tabellen und Matrizen verwendet. Weitere Informationen finden Sie unter [Indikatoren &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-an-indicator"></a>So zeigen Sie den aktuellen Status eines KPI mit einem Indikator an  
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
-2.  In der Tabelle mit der Maustaste des spaltenhandle für die lineare KPI-Spalte, die Sie in der vorherigen Prozedur hinzugefügt > **Spalte einfügen** > **rechts**. Eine neue Spalte wird der Tabelle hinzugefügt.  
+2.  Klicken Sie in der Tabelle mit der Maustaste den Spaltenziehpunkt für die Spalte „Lineare KPI“, die Sie in der vorherigen Prozedur hinzugefügt haben, und klicken Sie anschließend auf **Spalte einfügen**  >  **Rechts**. Eine neue Spalte wird der Tabelle hinzugefügt.  
   
 3.  Geben Sie in der Spaltenüberschrift **Ampel-KPI** ein.  
   
 4.  Klicken Sie auf die Zelle für die Unterkategorie „Teilergebnis“, die sich neben dem linearen Messgerät befindet, das Sie in der vorherigen Prozedur hinzugefügt haben.  
   
-5.  Auf der **einfügen** Registerkarte "> **Datenvisualisierungen** > doppelklicken Sie auf **Indikator.**  
+5.  Doppelklicken Sie auf der Registerkarte **Einfügen** unter **Datenvisualisierungen** auf **Indikator**.  
   
-6.  Wählen Sie im Dialogfeld **Indikatortyp auswählen** unter **Formen**den ersten Formtyp **3 Ampeln (ohne Rand)**aus.  
+6.  Wählen Sie im Dialogfeld **Indikatortyp auswählen** unter **Formen** den ersten Formtyp **3 Ampeln (ohne Rand)** aus.  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -299,7 +300,7 @@ Indikatoren sind kleine einfache Messgeräte, die Datenwerte auf einen Blick dar
 ## <a name="Title"></a>6. Hinzufügen eines Berichtstitels  
 Ein Berichtstitel wird oben im Bericht angezeigt. Sie können den Berichtstitel in eine Berichtskopfzeile einfügen oder, wenn der Bericht keine Kopfzeile enthält, in einem Textfeld am oberen Rand des Berichtshauptteils. In diesem Abschnitt verwenden Sie das Textfeld, das automatisch am oberen Rand des Berichtshauptteils platziert wird.  
   
-Sie können die Textdarstellung weiter verbessern, indem Sie verschiedene Schriftschnitte, Größen und Farben für Ausdrücke und einzelne Zeichen des Texts anwenden. Weitere Informationen finden Sie unter [Formatieren von Text in einem Textfeld (Berichts-Generator und SSRS)](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
+Sie können die Textdarstellung weiter verbessern, indem Sie verschiedene Schriftschnitte, Größen und Farben für Ausdrücke und einzelne Zeichen des Texts anwenden. Weitere Informationen finden Sie unter [Formatieren von Text in einem Textfeld &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
 ### <a name="to-add-a-report-title"></a>So fügen Sie einen Berichtstitel hinzu  
   

@@ -18,6 +18,7 @@ caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a3751c169e73b2c15ffe204221a3ce3db3176506
@@ -42,3 +43,4 @@ ms.lasthandoff: 06/22/2017
  [Überprüfen von replizierten Daten](../../relational-databases/replication/validate-replicated-data.md)  
   
   
+

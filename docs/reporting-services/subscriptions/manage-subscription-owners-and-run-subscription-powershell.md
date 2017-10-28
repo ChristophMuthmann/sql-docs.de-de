@@ -15,7 +15,8 @@ caps.latest.revision: 21
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 103cb28ac4917370c8f116b8de46a27f159261cc
 ms.contentlocale: de-de
@@ -82,7 +83,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Ereignis auslösen: ManageWeb  
   
- Weitere Informationen finden Sie unter [Vergleichen der Rollen und Aufgaben in Reporting Services mit SharePoint-Gruppen und -Berechtigungen](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).  
+ Weitere Informationen finden Sie unter [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).  
   
 ### <a name="script-usage"></a>Verwenden von Skripts  
  **Erstellen von Skriptdateien (.ps1)**  
@@ -397,3 +398,4 @@ $subscriptions | select Status, Path, report, Description, Owner, SubscriptionID
 [ReportingService2010.FireEvent](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx)
   
   
+

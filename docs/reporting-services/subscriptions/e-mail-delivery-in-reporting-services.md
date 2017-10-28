@@ -19,6 +19,7 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 0b50ccb5717de8f64f915d7cbedc663ec8345400
@@ -101,3 +102,4 @@ ms.lasthandoff: 09/27/2017
  [Role Assignments (Rollenzuweisungen)](../../reporting-services/security/role-assignments.md)  
   
   
+

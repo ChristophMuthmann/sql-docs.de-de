@@ -17,6 +17,7 @@ caps.latest.revision: 34
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6c99d91ab0209eb08c04488ce27043b2ad714781
@@ -108,3 +109,4 @@ ms.lasthandoff: 06/22/2017
 3.  Wenn eine neue Momentaufnahme verfügbar ist, wendet der Merge-Agent die Momentaufnahmedateien aus dem in **sysmergeschemachange**angegebenen Speicherort auf die Abonnementdatenbank an.  
   
   
+

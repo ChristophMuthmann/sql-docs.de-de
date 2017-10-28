@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e3f94b815f18075eb769d4537e8af354aa11a297
@@ -86,3 +87,4 @@ ms.lasthandoff: 06/22/2017
 -   Doppelklicken Sie auf eine Vorlage, um ein Fenster für die Datenbankmodul-Abfrage mit dem Text der Vorlage zu öffnen. Um z. B. eine CREATE DATABASE-Vorlage zu öffnen, öffnen Sie den Ordner **SQL Server-Vorlagen** und dann den Ordner **Datenbanken** , und doppelklicken Sie auf **Datenbank erstellen**.  
   
   
+

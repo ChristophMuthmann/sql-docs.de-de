@@ -16,6 +16,7 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 29ac4abdca7f7b8b3f77091bf91862471bb1066c
@@ -84,3 +85,4 @@ ms.lasthandoff: 07/31/2017
  [Sicherheit und Schutz &#40;Replikation&#41;](../../relational-databases/replication/security/security-and-protection-replication.md)  
   
   
+

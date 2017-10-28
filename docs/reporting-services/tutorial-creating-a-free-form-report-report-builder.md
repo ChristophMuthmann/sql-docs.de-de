@@ -16,7 +16,8 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 356d795aec5249ecf4f990d549c8eacb70e25f03
 ms.contentlocale: de-de
@@ -54,15 +55,15 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
   
 ### <a name="to-create-a-new-data-source"></a>So erstellen Sie eine neue Datenquelle  
   
-1.  Klicken Sie im Bereich „Berichtsdaten“ auf **Neu** > **Datenquelle**.  
+1.  Klicken Sie im Bereich „Berichtsdaten“ auf **Neu**  >  **Datenquelle**.  
   
 2.  Geben Sie im Feld **Name** Folgendes ein: **ListDataSource**  
   
 3.  Klicken Sie auf **In Bericht eingebettete Verbindung verwenden**.  
   
-4.  Überprüfen Sie, ob der Verbindungstyp Microsoft SQL Server, und klicken Sie dann in der **Verbindungszeichenfolge** geben: **Datenquelle = \<Servername >**  
+4.  Überprüfen Sie, ob der Verbindungstyp „Microsoft SQL Server“ ist, und geben Sie anschließend im Feld **Verbindungszeichenfolge** Folgendes ein:  **Data Source = \<Servername**.  
   
-    **\<Servername >**für Beispiel Report001, bezeichnet einen Computer, die auf dem eine Instanz des SQL Server-Datenbankmoduls installiert ist. Da die Daten für diesen Bericht nicht aus einer SQL Server-Datenbank extrahiert werden, muss der Name einer Datenbank nicht eingeschlossen werden. Die Standarddatenbank auf dem angegebenen Server wird nur verwendet, um die Abfrage zu analysieren.  
+    Der **\<Servername>**, z.B. Report001, bezeichnet einen Computer, auf dem eine Instanz des SQL Server-Datenbankmoduls installiert ist. Da die Daten für diesen Bericht nicht aus einer SQL Server-Datenbank extrahiert werden, muss der Name einer Datenbank nicht eingeschlossen werden. Die Standarddatenbank auf dem angegebenen Server wird nur verwendet, um die Abfrage zu analysieren.  
   
 5.  Klicken Sie auf **Anmeldeinformationen**und geben Sie die zur Verbindung mit der Instanz des SQL Server-Datenbankmoduls benötigten Anmeldeinformationen ein.  
   
@@ -70,9 +71,9 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
   
 ### <a name="to-create-a-new-dataset"></a>So erstellen Sie ein neues Dataset  
   
-1.  Klicken Sie im Bereich „Berichtsdaten“ auf **Neu** > **Dataset**.  
+1.  Klicken Sie im Bereich „Berichtsdaten“ auf **Neu**  >  **Dataset**.  
   
-2.  Geben Sie im Feld **Name** **ListDataset**ein.  
+2.  Geben Sie im Feld **Name** **ListDataset** ein.  
   
 3.  Klicken Sie auf **Ein in den eigenen Bericht eingebettetes Dataset verwenden**und überprüfen Sie, ob **ListDataSource**die Datenquelle ist.  
   
@@ -130,7 +131,7 @@ In diesem Abschnitt verwenden Sie eine Liste, um die Umsatzdaten für Vertriebsg
   
 ### <a name="to-add-a-list"></a>So fügen Sie eine Liste hinzu  
   
-1.  Auf der **einfügen** Registerkarte "> **Datenbereiche** > **Liste**. 
+1.  Gehen Sie auf der Registerkarte **Einfügen** zu **Datenbereiche**  >  **Liste**. 
 
 2. Klicken Sie auf den Berichtstext (zwischen dem Titel- und dem Fußzeilenbereich), und ziehen Sie ihn in das Listenfeld. Passen Sie die Größe des Listenfeldes auf eine Höhe von 17,8 cm und eine Breite von 15,9 cm an. Geben Sie im Bereich **Eigenschaften** unter **Position**die Werte für **Width** und **Height** ein, um die exakte Größe zu erzielen.
   
@@ -169,7 +170,7 @@ In diesem Abschnitt verwenden Sie eine Liste, um die Umsatzdaten für Vertriebsg
   
 5.  Klicken Sie auf **Nur Spalten löschen**.  
   
-6.  Im Bereich Zeilengruppen mit der Maustaste die **Details** Gruppe > **Gruppe löschen**.  
+6.  Klicken Sie im Bereich „Zeilengruppen“ mit der rechten Maustaste auf die Gruppe **Details**, und klicken Sie anschließend auf **Gruppe löschen**.  
    
 7.  Wählen Sie **Nur Gruppe löschen**aus.  
   
@@ -182,9 +183,9 @@ Ein Vorteil von Listendatenbereichen besteht darin, dass Berichtselemente wie z.
   
 1.  Wählen Sie auf der Registerkarte **Einfügen** die Option **Rechteck**aus. 
 
-2. Klicken Sie in die obere linke Ecke der Liste, und ziehen Sie das Rechteck, um die Höhe auf 17,8 cm und die Breite auf 8,9 cm festzulegen. Auch hier können Sie die Werte **Width** und **Height**im Bereich **Eigenschaften** unter **Position**eingeben, um die exakte Größe zu erzielen.
+2. Klicken Sie in die obere linke Ecke der Liste, und ziehen Sie das Rechteck, um die Höhe auf 17,8 cm und die Breite auf 8,9 cm festzulegen. Auch hier können Sie die Werte **Width** und **Height** im Bereich **Eigenschaften** unter **Position** eingeben, um die exakte Größe zu erzielen.
   
-2.  Mit der rechten Maustaste in des Rechtecks > **Rechteckeigenschaften**.  
+2.  Klicken Sie mit der rechten Maustaste auf das Rechteck, und klicken Sie anschließend auf **Rechteckeigenschaften**.  
   
 3.  Klicken Sie auf die Registerkarte **Ausfüllen** .  
   
@@ -205,7 +206,7 @@ Sie können Textfelder hinzufügen, um statischen Text anzuzeigen, der auf jeder
   
 1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zurückzukehren.  
   
-2.  Auf der **einfügen** Registerkarte "> **Textfeld**. Klicken Sie in die obere linke Ecke der Liste innerhalb des Rechtecks, das Sie zuvor hinzugefügt haben, und ziehen Sie das Textfeld, um die Breite auf etwa 8,8 cm und die Höhe auf etwa 12,7 cm festzulegen.  
+2.  Klicken Sie auf der Registerkarte **Einfügen** auf **Textfeld**. Klicken Sie in die obere linke Ecke der Liste innerhalb des Rechtecks, das Sie zuvor hinzugefügt haben, und ziehen Sie das Textfeld, um die Breite auf etwa 8,8 cm und die Höhe auf etwa 12,7 cm festzulegen.  
   
 3.  Setzen Sie den Cursor in das Textfeld, und geben Sie anschließend Folgendes ein: **Newsletter für** . Setzen Sie ein Leerzeichen nach dem Wort „für“, um den Text von dem Feld zu trennen, das Sie im nächsten Schritt hinzufügen werden.   
   
@@ -215,9 +216,9 @@ Sie können Textfelder hinzufügen, um statischen Text anzuzeigen, der auf jeder
   
     ![Berichts-Generator-Freiform-Territory-Feld](../reporting-services/media/report-builder-free-form-territory-field.png)
   
-5.  Wählen Sie den Text und das `[Territory]` -Feld aus.  
+5.  Wählen Sie den Text und das `[Territory]`-Feld aus.  
   
-6.  Auf der **Home** Registerkarte "> **Schriftart**wählen: 
+6.  Klicken Sie auf die Registerkarte **Stamm**, und wählen Sie unter **Schriftart** Folgendes aus: 
   
     *  **Segoe Semibold**
     *  **20 pt**
@@ -229,7 +230,7 @@ Sie können Textfelder hinzufügen, um statischen Text anzuzeigen, der auf jeder
    
 11. Wählen Sie den Text aus, den Sie in den vorherigen Schritten hinzugefügt haben.
   
-12. Auf der **Home** Registerkarte "> **Schriftart**wählen: 
+12. Klicken Sie auf die Registerkarte **Stamm**, und wählen Sie unter **Schriftart** Folgendes aus: 
   
     *  **Segoe Semibold**
     *  **16 pt**
@@ -246,7 +247,7 @@ Sie können Textfelder hinzufügen, um statischen Text anzuzeigen, der auf jeder
   
 16. Wählen Sie den gerade eingegebenen Text aus.  
   
-17.  Auf der **Home** Registerkarte "> **Schriftart**wählen: 
+17.  Klicken Sie auf die Registerkarte **Stamm**, und wählen Sie unter **Schriftart** Folgendes aus: 
   
       *  **Segoe UI**
       *  **10 pt**
@@ -258,13 +259,13 @@ Sie können Textfelder hinzufügen, um statischen Text anzuzeigen, der auf jeder
 
 25. Wählen Sie den Text und das Feld aus, den bzw. das Sie gerade hinzugefügt haben.  
   
-17.  Auf der **Home** Registerkarte "> **Schriftart**wählen: 
+17.  Klicken Sie auf die Registerkarte **Stamm**, und wählen Sie unter **Schriftart** Folgendes aus: 
   
       *  **Segoe Semibold**
       *  **16 pt**
       *  **Schwarz**  
   
-22. Wählen Sie nur die `[Sales]` Feld der rechten Maustaste auf das Feld > **Ausdruck**.  
+22. Wählen Sie nur das `[Sales]`-Feld aus, klicken Sie mit der rechten Maustaste darauf, und wählen Sie **Ausdruck** aus.  
   
 23. Ändern Sie im Feld **Ausdruck** den Ausdruck so, dass er die Sum-Funktion einschließt:  
   
@@ -276,7 +277,7 @@ Sie können Textfelder hinzufügen, um statischen Text anzuzeigen, der auf jeder
   
     ![Berichts-Generator-Freiform-Textfeld](../reporting-services/media/report-builder-free-form-text-box.png)
  
-29. Mit `[Sum(Sales)]` noch aus und klicken auf die **Home** Registerkarte "> **Anzahl** Gruppe > **Währung**.  
+29. Wählen Sie auf der Registerkarte **Stamm**, während `[Sum(Sales)]` noch ausgewählt ist, die Gruppe **Zahl** > **Währung** aus.  
   
 30. Klicken Sie mit der rechten Maustaste auf das Textfeld mit dem Text „Zum Hinzufügen eines Titels klicken“, und klicken Sie anschließend auf **Löschen**.  
   
@@ -295,7 +296,7 @@ Fügen Sie dem formfreien Bericht mithilfe des Assistenten für neue Tabellen un
   
 ### <a name="to-add-a-table"></a>So fügen Sie eine Tabelle hinzu  
   
-1.  Auf der **einfügen** Registerkarte "> **Datenbereiche** Bereich > **Tabelle** > **Tabellenassistenten**.  
+1.  Klicken Sie auf der Registerkarte **Einfügen** im Bereich **Datenbereiche** auf **Tabelle**  >  **Tabellen-Assistent**.  
   
 2.  Aktivieren Sie auf der Registerkarte **Dataset auswählen** auf **ListDataset** > **Weiter**.  
   
@@ -318,7 +319,7 @@ Fügen Sie dem formfreien Bericht mithilfe des Assistenten für neue Tabellen un
     > [!NOTE]  
     > Stellen Sie sicher, dass sich die Tabelle innerhalb des Listenfeldes und innerhalb des grauen Rechtecks befindet.  
   
-12. Mit der Tabelle ausgewählt, in der **Zeilengruppe** Bereich mit der rechten Maustaste **Details** > **Gesamtergebnis hinzufügen** > **nach**.  
+12. Klicken Sie bei ausgewählter Tabelle im Bereich **Zeilengruppe** mit der rechten Maustaste auf **Details**  >  **Gesamtergebnis hinzufügen**  >  **Nach**.  
   
     ![Berichts-Generator-Freiform-Tabelle-Gesamtergebnis](../reporting-services/media/report-builder-free-form-table-totals.png)
   
@@ -326,9 +327,9 @@ Fügen Sie dem formfreien Bericht mithilfe des Assistenten für neue Tabellen un
 
     ![Berichts-Generator-Freiform-Eingeben-Gesamteergebnis](../reporting-services/media/report-builder-free-form-type-total.png)
 
-12. Wählen Sie das Feld [SalesDate] aus. Auf der **Home** Registerkarte > **Anzahl**, ändern Sie **Standard** auf **Datum**.
+12. Wählen Sie das Feld [SalesDate] aus. Ändern Sie auf der Registerkarte **Stamm** unter **Zahl** die Option **Standard** zu **Datum**.
 
-13. Wählen Sie die Felder für [Sum(Sales)] aus. Auf der **Home** Registerkarte > **Anzahl**, ändern Sie **Standard** auf **Währung**.
+13. Wählen Sie die Felder für [Sum(Sales)] aus. Ändern Sie auf der Registerkarte **Stamm** unter **Zahl** die Option **Standard** zu **Währung**.
 
 Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
@@ -378,8 +379,8 @@ Fügen Sie eine Zeile hinzu, um den Leitartikel und die Details des Berichts zu 
   
 3.  Zeichnen Sie eine Linie unter dem Textfeld, das Sie in Lektion 4 hinzugefügt haben.  
   
-4.  Klicken Sie auf die Zeile, und klicken Sie auf die **Startseite** Registerkarte "> **Rahmen**wählen:
-     * Wählen Sie als**Stärke**  **3** pt aus.
+4.  Klicken Sie auf die Linie, und wählen Sie anschließend auf der Registerkarte **Stamm** im Bereich **Rahmen** Folgendes aus:
+     * Wählen Sie als **Stärke** **3** pt aus.
      * Wählen Sie für**Farbe**  **Tomate**aus.  
   
 ## <a name="Visualization"></a>8. Hinzufügen von Zusammenfassungsdatenvisualisierungen (optional)  
@@ -397,11 +398,11 @@ Mit Rechtecken kann das Rendern des Berichts beeinflusst werden. Platzieren Sie 
   
 ## <a name="to-add-a-pie-chart"></a>So fügen Sie ein Kreisdiagramm hinzu  
   
-1.  Auf der **einfügen** Registerkarte "> **Datenvisualisierungen** > **Diagramm** > **Diagrammassistent**.  
+1.  Klicken Sie auf der Registerkarte **Einfügen** auf **Datenvisualisierungen**  >  **Diagramm**  >  **Diagramm-Assistent**.  
   
 2.  Aktivieren Sie auf der Registerkarte **Dataset auswählen** auf **ListDataset** > **Weiter**.  
   
-3.  Klicken Sie auf **Kreis** > **Weiter**.  
+3.  Klicken Sie auf **Kreis**  >  **Weiter**.  
   
 4.  Ziehen Sie auf der Seite „Diagrammfelder anordnen“ das Feld „Product“ in **Kategorien**.  
   
@@ -413,16 +414,16 @@ Mit Rechtecken kann das Rendern des Berichts beeinflusst werden. Platzieren Sie 
   
 9. Ziehen Sie das Diagramm in das Rechteck.  
    
-10. Wählen Sie den Diagrammtitel und Typ **Verkaufte Produktmengen**aus.  
+10. Wählen Sie den Diagrammtitel und Typ **Verkaufte Produktmengen** aus.  
   
-12. Auf der **Home** Registerkarte "> **Schriftart**, stellen Sie den Titel:
+12. Legen Sie für den Titel auf der Registerkarte **Stamm** im Bereich **Schriftart** Folgendes fest:
     * **Schriftart** **Segoe UI Semibold**.
-    * **Größe** **12 pt**.
+    * **Size** **12 pt**.
     * **Farbe** **Schwarz**.  
 
-13. Mit der rechten Maustaste in der Legende > **Legendeneigenschaften**.
+13. Klicken Sie mit der rechten Maustaste auf die Legende und anschließend auf **Legendeneigenschaften**.
 
-14. Wählen Sie auf der Registerkarte **Allgemein** unter **Legendenposition**den mittleren Punkt am unteren Rand aus. 
+14. Wählen Sie auf der Registerkarte **Allgemein** unter **Legendenposition** den mittleren Punkt am unteren Rand aus. 
   
 15. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
 
@@ -432,9 +433,9 @@ Mit Rechtecken kann das Rendern des Berichts beeinflusst werden. Platzieren Sie 
   
 ## <a name="to-add-a-column-chart"></a>So fügen Sie einem Bericht ein Säulendiagramm hinzu  
   
-1.  Auf der **einfügen** Registerkarte "> **Datenvisualisierungen** > **Diagramm** > **Diagrammassistent**.  
+1.  Klicken Sie auf der Registerkarte **Einfügen** auf **Datenvisualisierungen**  >  **Diagramm**  >  **Diagramm-Assistent**.  
   
-2.  Klicken Sie auf der Seite **Dataset auswählen** auf **ListDataset**und anschließend auf **Weiter**.  
+2.  Klicken Sie auf der Seite **Dataset auswählen** auf **ListDataset** und anschließend auf **Weiter**.  
   
 3.  Klicken Sie auf **Spalte**und anschließend auf **Weiter**.  
   
@@ -452,12 +453,12 @@ Mit Rechtecken kann das Rendern des Berichts beeinflusst werden. Platzieren Sie 
   
 9. Ziehen Sie das Diagramm in das Rechteck unter dem Kreisdiagramm.  
    
-10. Wählen Sie den Diagrammtitel aus und geben Sie **Produktumsatz**ein.  
+10. Wählen Sie den Diagrammtitel aus und geben Sie **Produktumsatz** ein.  
   
-12. Auf der **Home** Registerkarte "> **Schriftart**, stellen Sie den Titel:
+12. Legen Sie für den Titel auf der Registerkarte **Stamm** im Bereich **Schriftart** Folgendes fest:
     * **Schriftart** **Segoe UI Semibold**.
-    * **Größe** **12 pt**.
-    * **Farbe** **Schwarz**.  
+    * **Size** **12 pt**.
+    * **Color** **Black**.  
   
 15. Klicken Sie mit der rechten Maustaste auf die Legende, und klicken Sie dann auf **Legende löschen**.  
   
@@ -494,7 +495,7 @@ Sie können Rechtecke als Container für andere Elemente auf einer Berichtsseite
   
 1.  Wählen Sie das Kreisdiagramm aus, drücken Sie die STRG-TASTE, und wählen Sie anschließend das Säulendiagramm aus.  
   
-2.  Beide Diagramme markiert, Maustaste > **Layout** > **Breite angleichen**.  
+2.  Klicken Sie,wenn beide Diagramme ausgewählt sind, mit der rechten Maustaste auf **Layout**  >  **Breite angleichen**.  
   
     > [!NOTE]  
     > Das Element, auf das Sie zuerst klicken, bestimmt die Breite aller ausgewählten Elemente.  
@@ -510,10 +511,10 @@ Hiermit ist das Tutorial für die Erstellung von formfreien Berichten abgeschlos
   
 Weitere Informationen zu Listen finden Sie unter: 
 * [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md) 
-* [Create Invoices and Forms with Lists (Erstellen von Rechnungen und Formularen mit Listen)](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
+* [Erstellen von Rechnungen und Formulare mit Listen (Berichts-Generator und SSRS)](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Zellen, Zeilen und Spalten des Tablix-Datenbereichs &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
-Weitere Informationen zu Abfrage-Designern finden Sie unter [Abfrage-Designer &#40; Berichts-Generator &#41; ](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) und [Benutzeroberfläche des textbasierten Abfrage-Designers &#40; Berichts-Generator &#41; ](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+Weitere Informationen zu Abfrage-Designern finden Sie unter [Abfrage-Designer &#40;Berichts-Generator&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) und [Benutzeroberfläche des textbasierten Abfrage-Designers &#40;Berichts-Generator&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 ## <a name="see-also"></a>Siehe auch  
 [Lernprogramme für den Berichts-Generator](../reporting-services/report-builder-tutorials.md) 

@@ -13,6 +13,7 @@ caps.latest.revision: 6
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
 ms.openlocfilehash: ed00031d1f55fc6fda2ee1c37fe76f7637e8e891

@@ -22,7 +22,8 @@ caps.latest.revision: 29
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 815af671e5bd26445153b96f68ebcbaf0e972cf7
 ms.contentlocale: de-de
@@ -51,3 +52,4 @@ http://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render
  [URL-Zugriffsparameterverweis](../reporting-services/url-access-parameter-reference.md)  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 12
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7893b1dad863356ed767debe84759448ace6f359
@@ -31,3 +32,4 @@ ms.lasthandoff: 06/22/2017
  [Technische Referenz &#40;Replikation&#41;](../../relational-databases/replication/technical-reference-replication.md)  
   
   
+

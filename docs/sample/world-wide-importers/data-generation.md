@@ -15,6 +15,7 @@ author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: c17ad40220d46ab6e19054818ce2abfdce7251f4
@@ -84,3 +85,4 @@ Die Prozedur `Application.Configuration_PopulateLargeSaleTable` können verwende
 In etwa die erforderliche Anzahl von Zeilen eingefügt werden die `Fact.Sale` Tabelle im Jahr 2012. Die Prozedur beschränkt die Standardanzahl der Anzahl der Zeilen pro Tag auf 50000. Dies kann geändert werden, jedoch handelt es sich um es versehentlich Overinflations der Tabelle zu vermeiden.
 
 Darüber hinaus angewendet wird die Prozedur gruppierten columnstore-Index, wenn es nicht bereits angewendet wurde.
+

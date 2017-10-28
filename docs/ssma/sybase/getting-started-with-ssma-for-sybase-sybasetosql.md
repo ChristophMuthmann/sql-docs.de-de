@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 759a7084024e1c608431683de6dae5a6fb40304e
 ms.openlocfilehash: aafb1156f2036e09fa4f610380a5a1d24a5dbdad
@@ -119,3 +120,4 @@ Die **Ansicht** Menü enthält Befehle zum Umschalten der Sichtbarkeit der im Au
 ## <a name="see-also"></a>Siehe auch  
 [Migrieren von SAP ASE Datenbanken zu SQLServer – Azure SQL-Datenbank &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
 [Referenz zur Benutzeroberfläche &#40; SybaseToSQL &#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
+

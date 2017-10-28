@@ -21,7 +21,8 @@ caps.latest.revision: 48
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: eb04937fc5c68bf2efb82ece9914c56409b7f325
 ms.contentlocale: de-de
@@ -47,3 +48,4 @@ ms.lasthandoff: 08/09/2017
  [Reporting Services-Berichtsserver &#40; Im einheitlichen Modus &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)  
   
   
+

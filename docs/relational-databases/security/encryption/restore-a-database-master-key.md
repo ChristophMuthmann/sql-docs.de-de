@@ -16,6 +16,7 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c2833a4b91d4465e126c0a393e756ab09106d1c8
@@ -82,3 +83,4 @@ ms.lasthandoff: 06/22/2017
  Weitere Informationen finden Sie unter [RESTORE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-master-key-transact-sql.md).  
   
   
+

@@ -22,7 +22,8 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c41f22af9e492ed8bf1be8ba159ce84e8cfbc7db
 ms.contentlocale: de-de
@@ -36,9 +37,9 @@ ms.lasthandoff: 08/09/2017
   
 |||  
 |-|-|  
-|[EditionID-Eigenschaft der &#40; WMI: MSReportServer_Instance &#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md)|Gibt die Edition des Berichtsservers zurück.|  
-|[EditionName-Eigenschaft der &#40; WMI: MSReportServer_Instance &#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md)|Gibt den lesbaren Namen der Edition des Berichtsservers zurück|  
-|[Instanz-ID](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instanceid.md)|Dieses Objekt unterstützt die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.|  
+|[EditionID-Eigenschaft&#40;WMI MSReportServer_Instance&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md)|Gibt die Edition des Berichtsservers zurück.|  
+|[EditionName-Eigenschaft &#40;WMI MSReportServer_Instance&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md)|Gibt den lesbaren Namen der Edition des Berichtsservers zurück|  
+|[InstanceID](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instanceid.md)|Dieses Objekt unterstützt die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.|  
 |[InstanceName](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instancename.md)|Gibt den Namen einer Berichtsserverinstanz auf einem bestimmten Computer zurück. Schreibgeschützt.|  
 |[IsSharePointIntegrated](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-issharepointintegrated.md)|Gibt an, ob der Berichtsserver für den integrierten SharePoint-Modus konfiguriert ist|  
 |[Version](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-version.md)|Gibt die Version des Berichtsservers zurück|  
@@ -47,3 +48,4 @@ ms.lasthandoff: 08/09/2017
  [MSReportServer_Instance-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   
+

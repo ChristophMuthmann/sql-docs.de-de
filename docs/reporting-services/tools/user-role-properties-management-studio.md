@@ -17,6 +17,7 @@ caps.latest.revision: 27
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 76bd80e1fc470d9cdb998d23834d0a3473d411fe
@@ -55,3 +56,4 @@ ms.lasthandoff: 08/09/2017
  [Vordefinierte Rollen](../../reporting-services/security/role-definitions-predefined-roles.md)  
   
   
+

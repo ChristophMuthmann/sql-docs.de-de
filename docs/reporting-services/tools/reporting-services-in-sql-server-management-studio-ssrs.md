@@ -17,7 +17,8 @@ caps.latest.revision: 57
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b5c82bbd8c2ed4b53bba8afca05d0c439b3ff6be
 ms.contentlocale: de-de
@@ -52,3 +53,4 @@ ms.lasthandoff: 08/09/2017
  [Einführung in SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
   
   
+

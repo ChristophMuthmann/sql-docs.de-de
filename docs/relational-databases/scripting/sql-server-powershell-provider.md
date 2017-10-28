@@ -21,6 +21,7 @@ caps.latest.revision: 61
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 40b88611b6d25c2908a679b84f73ccad5b12cfbe
@@ -80,3 +81,4 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
  [SQL Server-PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   
   
+

@@ -17,7 +17,8 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: db3f35e539a034d2016de9cd89fb0fe8b7c1d0a7
 ms.contentlocale: de-de
@@ -41,9 +42,10 @@ public string MachineAccountIdentity;
  Ein **String** -Wert, der die Computerkontoidentität des Computers abruft, auf dem der Berichtsserver installiert ist  
   
 ## <a name="requirements"></a>Anforderungen  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [MSReportServer_ConfigurationSetting-Eigenschaften](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-properties.md)  
   
   
+

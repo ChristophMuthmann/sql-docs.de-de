@@ -19,6 +19,7 @@ caps.latest.revision: 51
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 2163fd7b37b211d9cf272fda03781d831ad43da0
@@ -221,3 +222,4 @@ ms.lasthandoff: 09/27/2017
  -- [STNumCurves &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)   
  -- [STGeomFromText &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)   
  -- [STGeomFromText &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)  
+

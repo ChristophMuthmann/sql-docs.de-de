@@ -23,7 +23,8 @@ caps.latest.revision: 40
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c1e2822182d644b90aa419986f75a6fdc6fd3296
 ms.contentlocale: de-de
@@ -54,3 +55,4 @@ Diagramm für Berechtigungen und Aufgaben
  [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
 ms.openlocfilehash: 8246a40f5fd59ae4d8a28f1e0315ea1a015e8e7d
@@ -110,3 +111,4 @@ Die Januar 2016 Wartung-Version von SSMA für DB2 enthält die folgenden Änderu
   
 ## <a name="november-2014"></a>November 2014  
 Die Version vom November 2014 von SSMA für DB2 war die erste Version.
+

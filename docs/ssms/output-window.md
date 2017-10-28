@@ -18,6 +18,7 @@ caps.latest.revision: 1
 author: shueybubbles
 ms.author: davidshi
 manager: kenvh
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
 ms.openlocfilehash: 69d3f6ecaaf9299a8816ac56d5587051548ac1df

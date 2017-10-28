@@ -22,7 +22,8 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8964b2b0886ffd0483e48c8e9baf91ab9b2dae3d
 ms.contentlocale: de-de
@@ -56,7 +57,7 @@ public void SetServiceState(Boolean EnableWindowsService,
  Ein **Boolean** -Wert, der den gewünschten Status des Berichts-Managers angibt.
  
  > [!NOTE] 
- > Diese Einstellung wurde ab dem Kumulativen Update 2 von SQL Server 2016 Reporting Services als veraltet gekennzeichnet. Das Webportal bleibt weiterhin aktiviert. Der Wert wird ignoriert.
+ > Diese Einstellung ist ab SQL Server 2016 Reporting Services kumulative Update 2 veraltet. Das Webportal wird immer aktiviert. Der Wert wird ignoriert.
   
  *HRESULT*  
  [out] Wert, der angibt, ob der Aufruf erfolgreich war oder zu einem Fehler geführt hat.  
@@ -67,7 +68,7 @@ public void SetServiceState(Boolean EnableWindowsService,
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="requirements"></a>Anforderungen  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [MSReportServer_ConfigurationSetting-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

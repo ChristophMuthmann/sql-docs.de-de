@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 310aa99b485cedf79237f993a8ffbdcffe9d2a46
@@ -57,3 +58,4 @@ dir variable:sqlserver*
  [SQL Server-PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   
   
+

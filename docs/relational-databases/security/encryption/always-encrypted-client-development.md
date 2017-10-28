@@ -16,6 +16,7 @@ ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 caps.latest.revision: 33
 author: stevestein
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 8cb39d4ae3ff02fffe83e7f0e4646ade1545ce72
 ms.openlocfilehash: f1ad5de594493c65688d5c1ca2d69ac421661770

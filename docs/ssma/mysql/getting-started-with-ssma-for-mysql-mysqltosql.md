@@ -21,6 +21,7 @@ caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 38ce5c0e27703094e4d7ff2415d0bc91d501d1b4

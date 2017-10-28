@@ -13,6 +13,7 @@ caps.latest.revision: 0
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
 ms.openlocfilehash: 1d637aa3e820f1acd6dc283030d2cdfa1e6ca074
@@ -59,3 +60,4 @@ Unter den folgenden Links finden Sie die Hauptdownloadpakete für SQL Server 201
 - [So identifizieren Sie die SQL Server-Version und -Edition](https://support.microsoft.com/en-us/help/321185)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+

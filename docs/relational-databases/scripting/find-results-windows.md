@@ -20,6 +20,7 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 52589dedfb673f299f63d12c2381be04019a78bb
@@ -102,3 +103,4 @@ ms.lasthandoff: 06/22/2017
  `Total replaced: 57  Matching files: 23  Total files searched: 59`  
   
   
+

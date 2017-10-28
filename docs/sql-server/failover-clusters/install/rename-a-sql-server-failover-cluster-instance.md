@@ -19,6 +19,7 @@ caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0d98bc0762d800a4fc86c56c37ee815fd189a4cd
@@ -89,3 +90,4 @@ ms.lasthandoff: 06/22/2017
  [Umbenennen eines Computers, der eine eigenständige Instanz von SQL Server hostet](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
   
   
+
