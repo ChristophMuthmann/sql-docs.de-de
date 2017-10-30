@@ -25,6 +25,7 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 565a2b8e48537cea20a8e509cf5b6d7b59cc12f0
@@ -92,3 +93,4 @@ End Class
  [Entwickeln einer Benutzeroberfläche für eine Datenflusskomponente](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-user-interface-for-a-data-flow-component.md)  
   
   
+

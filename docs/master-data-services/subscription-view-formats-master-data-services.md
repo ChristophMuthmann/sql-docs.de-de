@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 770c479f7a4361a6c792e7c299181751ca20072b
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/07/2017
  [Erstellen einer Abonnementsicht zum Exportieren von Daten &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   
   
+

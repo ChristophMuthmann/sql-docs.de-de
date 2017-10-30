@@ -27,6 +27,7 @@ caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 937d904f7139e03655177b4544d573da7cc35e14
@@ -195,3 +196,4 @@ Public  Overrides Sub ReinitializeMetaData()
 End Sub  
 ```  
   
+

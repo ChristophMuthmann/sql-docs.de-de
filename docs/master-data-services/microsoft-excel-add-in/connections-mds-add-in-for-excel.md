@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 1c301a0192a0fd8a894a92dacc5503b27ce180f1
@@ -55,3 +56,4 @@ ms.lasthandoff: 09/07/2017
 -   [Master Data Services-Add-In für Microsoft Excel](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
   
   
+

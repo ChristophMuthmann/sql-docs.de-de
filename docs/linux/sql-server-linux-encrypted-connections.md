@@ -11,6 +11,7 @@ ms.technology: database-engine
 ms.assetid: 
 helpviewer_keywords:
 - Linux, encrypted connections
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
 ms.openlocfilehash: d6beb6350c0d48d35cb3153c2df8eebaec0e4f34

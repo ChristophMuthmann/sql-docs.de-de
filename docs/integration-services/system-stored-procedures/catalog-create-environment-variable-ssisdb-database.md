@@ -14,6 +14,7 @@ caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
 ms.openlocfilehash: 5636651cccbb43c6c1627d1f28eccd9b3f9b5b0d
@@ -109,3 +110,4 @@ catalog.create_environment_variable [@folder_name =] folder_name
 |**UInt64**|**"bigint"** (**Int** ist die beste Entsprechung zu **Uint64**.)|  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a2c53009bfbd2f0876d4cf0a01cf8fa2b5bc738e
@@ -62,3 +63,4 @@ delete_customized_logging_level [ @level_name = ] level_name
 -   Der Benutzer besitzt nicht die erforderlichen Berechtigungen.  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: bd3ff266d41d4e62d5ecb9314a14de7e1b86d8d5
@@ -67,3 +68,4 @@ delete_environment_variable [ @folder_name = ] folder_name
 -   Die Umgebungsvariable ist nicht vorhanden.  
   
   
+

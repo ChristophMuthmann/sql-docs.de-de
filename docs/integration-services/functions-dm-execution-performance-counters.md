@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 67d5ece89f5b964acb2bb55a8cc69ff2fb77b93b
@@ -98,3 +99,4 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
 -   Die angegebene Ausführungs-ID ist ungültig.  
   
   
+

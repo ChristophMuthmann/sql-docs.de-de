@@ -16,6 +16,7 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 599665d49b8512ec772ac5ca522cb4e0b7a521ec
@@ -62,3 +63,4 @@ ms.lasthandoff: 08/03/2017
  [Erweitern von Paketen mit Skripts](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
   
   
+

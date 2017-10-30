@@ -17,6 +17,7 @@ caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
 ms.openlocfilehash: b04ba24fd90ec81e735933a45fed18294d77ceab
@@ -81,3 +82,4 @@ ms.lasthandoff: 08/03/2017
  Skripttask- und Skriptkomponentenskripts, die explizit auf "ADODB.dll" verweisen, können auf Computern, auf denen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] nicht installiert ist, weder aktualisiert noch ausgeführt werden. Zum Aktualisieren dieser Skripttask- und Skriptkomponentenskripts sollten Sie die Abhängigkeit auf „ADODB.dll“ entfernen.  Ado.Net ist die empfohlene Alternative für verwalteten Code, beispielsweise VB- und C#-Skripts.  
   
   
+

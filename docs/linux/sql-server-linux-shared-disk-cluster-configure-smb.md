@@ -8,6 +8,7 @@ ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
 ms.openlocfilehash: c32c0593df6b40cc76ecafaabc0571090f2907fa
@@ -259,3 +260,4 @@ Sie können nun die FCI konfigurieren.
 <!--Image references-->
 [1]: ./media/sql-server-linux-shared-disk-cluster-configure-smb/05-smbsource.png 
 [2]: ./media/sql-server-linux-shared-disk-cluster-configure-smb/10-testcreatedb.png 
+

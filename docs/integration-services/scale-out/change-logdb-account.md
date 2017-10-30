@@ -13,6 +13,7 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: ec785459e5f9585776d83cde3f460c1e79367e46
@@ -45,3 +46,4 @@ GO
 
 > [!NOTE]
 > Wenn Sie ein Windows-Benutzerkonto für die Protokollierung verwenden, muss sie dasselbe Konto Scale-Out-Worker-Dienst ausgeführt wird. Andernfalls schlägt die Anmeldung bei SQL Server fehl.
+

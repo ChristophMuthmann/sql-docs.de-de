@@ -20,6 +20,7 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 4ebdf52b9ec71be3845d0fcdf3053b2168467389
@@ -248,3 +249,4 @@ namespace EnumeratePackagesSql_CS
  [Paketverwaltung &#40;SSIS-Dienst&#41;](../../integration-services/service/package-management-ssis-service.md)    
     
   
+

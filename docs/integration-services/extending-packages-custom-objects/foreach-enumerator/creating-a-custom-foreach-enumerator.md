@@ -21,6 +21,7 @@ caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: f2f852ff319554d0b863fd06d790c2e5e9bf2d59
@@ -88,3 +89,4 @@ namespace Microsoft.Samples.SqlServer.Dts
  [Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten foreach-Enumerator](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: bc671da319ee9e8ce71d98df001c3989d497a096
@@ -50,3 +51,4 @@ ms.lasthandoff: 09/26/2017
 -   Mitgliedschaft in der Serverrolle **sysadmin**  
   
   
+

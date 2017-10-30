@@ -14,6 +14,7 @@ caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: adb3542d50db426d5908aa8786145406d7263ad6
@@ -64,3 +65,4 @@ catalog.get_project [ @folder_name = ] folder_name , [ @project_name = ] project
 -   Der Benutzer verfügt nicht über die entsprechenden Berechtigungen.  
   
   
+

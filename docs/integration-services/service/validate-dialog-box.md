@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d7ff51208136b767dfb6260e6cfc07e67615531e
@@ -84,3 +85,4 @@ ms.lasthandoff: 08/03/2017
  Listet den Wert auf, der der Verbindungs-Manager-Eigenschaft zugewiesen ist.  
   
   
+

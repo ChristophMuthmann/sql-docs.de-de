@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: bf4ecdd473e94c7f00c31b9f99e6cec86db93f60
@@ -53,3 +54,4 @@ delete_folder [ @folder_name = ] folder_name
  Gibt eine Meldung zurück, um das Löschen des Ordners zu bestätigen.  
   
   
+

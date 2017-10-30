@@ -14,6 +14,7 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 4b225e35b22c7dbeb7c53cb8d93aac6e5e1059f2
@@ -62,3 +63,4 @@ delete_environment [ @folder_name = ] folder_name , [ @environment_name = ] envi
 -   Der Benutzer verfügt nicht über die entsprechenden Berechtigungen.  
   
   
+

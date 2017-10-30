@@ -20,6 +20,7 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6f6f682da8a11f99d1d58d85405dd2ff0d526a47
@@ -124,3 +125,4 @@ ms.lasthandoff: 08/03/2017
  [SSIS-Designer](../integration-services/ssis-designer.md)  
   
   
+

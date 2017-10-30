@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: ba3b315cc62ce64da9212ef3d00b60ec1a303e33
@@ -68,3 +69,4 @@ svcutil.exe http://<server_name:port>/<virtual_path>/Service/Service.svc
  [Kategorisierte Webdienstvorgänge &#40;Master Data Services&#41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
   
   
+

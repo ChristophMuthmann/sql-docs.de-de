@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
 ms.openlocfilehash: 15bec231bf1de825cea952e07827074d56751386
@@ -69,3 +70,4 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
 -   Der Eigenschaftswert ist ungültig.  
   
   
+

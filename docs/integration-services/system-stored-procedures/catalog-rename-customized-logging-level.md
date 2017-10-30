@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 00c2cd8fa5f8423a7791d663d02aecbf27b8ab41
@@ -67,3 +68,4 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
 -   Der Benutzer besitzt nicht die erforderlichen Berechtigungen.  
   
   
+

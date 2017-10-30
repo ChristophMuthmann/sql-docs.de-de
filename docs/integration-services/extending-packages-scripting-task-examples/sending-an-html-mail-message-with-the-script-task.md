@@ -22,6 +22,7 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: b5f50a79ca83243ea130c77a0d95ab402ba2d31a
@@ -160,3 +161,4 @@ public void Main()
  [Task "Mail" Senden](../../integration-services/control-flow/send-mail-task.md)  
   
   
+

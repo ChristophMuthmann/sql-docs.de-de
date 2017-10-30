@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 9eba993695071796b6f9a4dfb4b05a1d1382be5a
@@ -50,3 +51,4 @@ ms.lasthandoff: 09/07/2017
 -   [Entitäten &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
   
+

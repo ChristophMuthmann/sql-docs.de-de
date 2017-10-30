@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 2347f26d041c15142487420440a470f87a822e3e
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/07/2017
 |Bearbeiten und Löschen eines Indexes|[Bearbeiten und Löschen eines Indexes &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-index-master-data-services.md)|  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 2cb08ab16291e87a25eb2596f75f4d01616a80db
@@ -206,3 +207,4 @@ ms.lasthandoff: 09/27/2017
 -   Blogeintrag [Konfigurieren von SQL-Agentaufträgen für das Schreiben in das Windows-Ereignisprotokoll](http://go.microsoft.com/fwlink/?LinkId=220745)auf mssqltips.com  
   
   
+

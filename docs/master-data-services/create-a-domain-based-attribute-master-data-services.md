@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: a8242d0b8f5285201c32721c793aff995d50b88d
@@ -108,3 +109,4 @@ ms.lasthandoff: 09/07/2017
  [Löschen eines Attributs &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)  
   
   
+

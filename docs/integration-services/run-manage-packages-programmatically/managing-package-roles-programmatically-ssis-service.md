@@ -20,6 +20,7 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 7a7fb000389756caf0c2f2ea00cd0b80e75557d8
@@ -47,3 +48,4 @@ ms.lasthandoff: 08/03/2017
  [Integration Services-Rollen &#40; SSIS-Dienst &#41;](../../integration-services/security/integration-services-roles-ssis-service.md)  
   
   
+

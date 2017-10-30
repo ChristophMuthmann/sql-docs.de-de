@@ -14,6 +14,7 @@ caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
 ms.openlocfilehash: 588728b6f86090e5b8f492ba3a117e0ccd47132e
@@ -72,3 +73,4 @@ catalog.create_environment [@folder_name =] folder_name
  Der Umgebungsname muss innerhalb des Ordners eindeutig sein.  
   
   
+

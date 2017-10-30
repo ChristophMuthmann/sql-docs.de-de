@@ -19,6 +19,7 @@ caps.latest.revision: 15
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: f8fae51be3dfb642f437ab64a69db532074d58bf
@@ -60,3 +61,4 @@ ms.lasthandoff: 09/07/2017
 -   [Problembehandlung für E-Mail-Benachrichtigungen (Master Data Services)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-email-notifications-master-data-services.aspx)  
   
   
+

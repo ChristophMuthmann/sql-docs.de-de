@@ -18,6 +18,7 @@ caps.latest.revision: 14
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: c74bf4d6520ca399be34da8369f6f62b2eb3d3ec
@@ -127,3 +128,4 @@ ms.lasthandoff: 09/07/2017
  [Hinzufügen mehrerer Bedingungen zu einer Geschäftsregel &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
   
   
+

@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 811aa84b91aa7c91aa56dbf231c2ef2d247ec015
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/07/2017
 -   [Explizite Hierarchien &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
   
+

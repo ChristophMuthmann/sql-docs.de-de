@@ -8,6 +8,7 @@ ms.date: 09/14/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
 ms.openlocfilehash: 18d40800ee74783b0ce3df4d9d4e0458fbb72ebb

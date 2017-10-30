@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 0dd8ddbd08e97d1761881d0c955f02d491fce7af
@@ -91,3 +92,4 @@ ms.lasthandoff: 09/07/2017
 -   [Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)  
   
   
+

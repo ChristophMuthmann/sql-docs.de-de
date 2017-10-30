@@ -18,6 +18,7 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: c6226a4f0e91ac69b8355892d67c721325a1439b
@@ -134,3 +135,4 @@ ms.lasthandoff: 08/03/2017
  [Aufträge des SQL Server-Agents für Pakete](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)  
   
   
+

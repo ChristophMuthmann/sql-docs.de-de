@@ -8,6 +8,7 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1e3d9736612211038991489a4bd858d1ff89d333
 ms.openlocfilehash: 1b60d877c6c75a77dd16fa8cb1704e10baf36bdb

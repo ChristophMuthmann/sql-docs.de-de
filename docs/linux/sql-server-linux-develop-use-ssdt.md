@@ -10,6 +10,7 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: H1Hack27Feb2017
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
 ms.openlocfilehash: 9a639559de35573c7fb6dfdcc98c9d9680312659
@@ -116,3 +117,4 @@ Weitere Informationen zum Entwickeln von einer Datenbank mit SQL Data Tools find
 [SSDT MSDN-Dokumente]: https://msdn.microsoft.com/en-us/library/hh272686(v=vs.103).aspx
 [Lernprogramm: Schreiben von Transact-SQL-Anweisungen]:https://msdn.microsoft.com/library/ms365303.aspx
 [Transact-SQL-Referenz (Datenbankmodul)]:https://msdn.microsoft.com/library/bb510741.aspx
+

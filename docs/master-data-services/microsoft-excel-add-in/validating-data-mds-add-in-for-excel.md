@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 70d6d666e81c58d607c3b7070c6e2c0133e517c0
@@ -67,3 +68,4 @@ ms.lasthandoff: 09/07/2017
 -   [Übersicht: Importieren von Daten aus Excel &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   
+

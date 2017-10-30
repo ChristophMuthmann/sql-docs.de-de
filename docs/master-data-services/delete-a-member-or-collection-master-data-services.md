@@ -21,6 +21,7 @@ caps.latest.revision: 10
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: f39b7e4c68f20d1a83532145029f51e6cd06e47d
@@ -73,3 +74,4 @@ ms.lasthandoff: 09/07/2017
  [Sammlungen &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
   
+

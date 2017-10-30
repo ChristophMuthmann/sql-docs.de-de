@@ -15,6 +15,7 @@ caps.latest.revision: 5
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: b322107b8fa557d82b03a6b08b96c872be5205af
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/07/2017
  [Berechtigungen für Hierarchieelemente &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
   
   
+

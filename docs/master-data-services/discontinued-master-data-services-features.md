@@ -15,6 +15,7 @@ caps.latest.revision: 18
 author: smartysanthosh
 ms.author: nagavo
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 3e4f11a2dd8cc4bc07f359f62daf5d444b0a46d3
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/07/2017
  [Veraltete Funktionen von Master Data Services](../master-data-services/deprecated-master-data-services-features.md)  
   
   
+

@@ -20,6 +20,7 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 31653debba3400f6a5f3a5b23474bd3055e02522
@@ -50,3 +51,4 @@ ms.lasthandoff: 08/03/2017
 -   [Speichern eines Pakets als Paketvorlage](http://msdn.microsoft.com/library/efe66cec-3933-4f6e-8d35-fe3d300de66c)  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: 939f31adf1ab0a975bd4339dabab310ef9025049
@@ -63,3 +64,4 @@ ms.lasthandoff: 08/03/2017
  Blogeintrag, [SSIS mit Always On-](http://go.microsoft.com/fwlink/?LinkId=255873), auf blogs.msdn.com.  
   
   
+
