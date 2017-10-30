@@ -65,7 +65,7 @@ ms.lasthandoff: 09/09/2017
 3.  Wählen Sie unter **Zuordnungen**ein Feld in der Datenquelle für **Quellspalte**aus, und wählen Sie dann die entsprechende Domäne aus. Wiederholen Sie den Vorgang für alle Domänen, die Sie im Abgleichsprozess verwenden. Jede Domäne, die in der Abgleichsrichtlinie definiert ist, muss einer entsprechenden Quellspalte zugeordnet werden. Auf der Seite „Zuordnen“ werden die Domänen angezeigt, die in der Abgleichsrichtlinie und den Regeln in der Abgleichsrichtlinie im rechten Bereich definiert wurden.  
   
     > [!NOTE]  
-    >  Sie können die Quelldaten nur dann einer DQS-Domäne zuordnen, wenn der Quelldatentyp in DQS unterstützt wird und mit dem DQS-Domänendatentyp übereinstimmt. Informationen zu in DQS unterstützten Datentypen finden Sie unter [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+    >  Sie können die Quelldaten nur dann einer DQS-Domäne zuordnen, wenn der Quelldatentyp in DQS unterstützt wird und mit dem DQS-Domänendatentyp übereinstimmt. Informationen zu in DQS unterstützten Datentypen finden Sie unter [Unterstützte SQL Server- und SSIS-Datentypen für DQS-Domänen](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 4.  Klicken Sie auf das Plussteuerelement **(+)** , um der Zuordnungstabellen eine Zeile hinzuzufügen, oder auf das Minussteuerelement **(-)** , um eine Zeile zu entfernen.  
   
