@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 240967b3909a2b3796534cb29c42dfa5838be692
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/07/2017
 [Master Data Services – Installation und Konfiguration](../master-data-services/master-data-services-installation-and-configuration.md)
   
   
+

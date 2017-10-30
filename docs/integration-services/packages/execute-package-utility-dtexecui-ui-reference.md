@@ -27,6 +27,7 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: 2be36b0dcc8c6c87b1765607ecdb337c24ba83cd
@@ -377,3 +378,4 @@ ms.lasthandoff: 08/03/2017
  [DTExec (Hilfsprogramm)](../../integration-services/packages/dtexec-utility.md)  
   
   
+

@@ -20,6 +20,7 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3dfe873284d448a53d4c094b622a5411261039e3
@@ -156,3 +157,4 @@ ms.lasthandoff: 08/03/2017
  ![Datenfluss-Vorlagendateien und den Fluss steuern](../integration-services/media/control-flow-templates-intro.png "Flow-Vorlagendateien und den Fluss steuern")  
   
   
+

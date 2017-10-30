@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: e7ce67245871cff2682bec6e314a21fdca31a954
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/07/2017
  [Testen der Berechtigungen eines Benutzers &#40;Master Data Services&#41;](../master-data-services/test-a-user-s-permissions-master-data-services.md)  
   
   
+

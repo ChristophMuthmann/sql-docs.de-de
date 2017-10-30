@@ -19,6 +19,7 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7355d98c342052997441c2013e056b0453962c5a
@@ -166,3 +167,4 @@ Es ist möglich, dass ein Paket nicht miteinander verbundene Transaktionen in ei
  [Mehrere Transaktionen](http://msdn.microsoft.com/library/c3664a94-be89-40c0-a3a0-84b74a7fedbe)  
   
   
+

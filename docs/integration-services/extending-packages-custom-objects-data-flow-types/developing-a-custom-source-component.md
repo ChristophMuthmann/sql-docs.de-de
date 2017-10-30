@@ -27,6 +27,7 @@ caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 30e5320679193120148f714324da10d4d0c65506
@@ -677,3 +678,4 @@ End Namespace
  [Erstellen einer Datenquelle mit der Skriptkomponente](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: c0837857b0aeb20f449fd6fca34f5b5df95b4eeb
@@ -60,3 +61,4 @@ ms.lasthandoff: 09/07/2017
  [Entsperren einer Version &#40;Master Data Services&#41;](../master-data-services/unlock-a-version-master-data-services.md)  
   
   
+

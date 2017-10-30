@@ -17,6 +17,7 @@ caps.latest.revision: 17
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: c2c1d9b5af3b0825e7002c44344ac9428d0e8980
@@ -153,3 +154,4 @@ ms.lasthandoff: 09/07/2017
  [Sicherheit von Datenbankobjekten &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)  
   
   
+

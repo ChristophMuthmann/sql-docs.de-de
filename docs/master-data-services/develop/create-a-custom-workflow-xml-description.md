@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 704c66f3d7748e2a0b49fed2567a606dc507627d
@@ -85,3 +86,4 @@ ms.lasthandoff: 09/07/2017
  [Beispiel für einen benutzerdefinierten Workflow &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)  
   
   
+

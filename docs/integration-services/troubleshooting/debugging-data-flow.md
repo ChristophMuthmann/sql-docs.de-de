@@ -20,6 +20,7 @@ caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: 7502a4c00ff680dd372114debbfc4d8de4067da3
@@ -279,3 +280,4 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md)  
   
   
+

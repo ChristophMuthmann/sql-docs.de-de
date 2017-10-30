@@ -10,6 +10,7 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
 ms.openlocfilehash: 4b39b8dce2a9d6b940936a6d7072fc41c2b67e8f

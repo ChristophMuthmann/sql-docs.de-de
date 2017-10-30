@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 4ad8f0c367e38581db696d2aa32afd5b92d635d2
@@ -87,3 +88,4 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 -   Der angegebene Umgebungsverweis ist nicht vorhanden.  
   
   
+

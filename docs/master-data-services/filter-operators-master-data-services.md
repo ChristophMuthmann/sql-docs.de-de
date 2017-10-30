@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 0d83ee33afcd50635a163a56f977e77fc6e6c68a
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/07/2017
 |**Ist nicht NULL**|Gibt Attributwerte zurück, die nicht NULL lauten. Das Feld **Kriterien** wird deaktiviert, wenn Sie den **Ist nicht NULL** -Operator auswählen.|  
   
   
+

@@ -13,6 +13,7 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 77cf90268938bada458aa159a5f18f885491b407
@@ -60,3 +61,4 @@ Die Protokolldatei des Scale-Out-Worker-Dienst befindet sich in der \<Treiber\>:
 Der Protokollspeicherort jedes einzelnen Tasks ist in der Datei „WorkerSettings.config“ durch „TasksRootFolder“ konfiguriert. Wenn sie nicht angegeben ist, wird das Protokoll der \<Treiber\>: \Users\\*[Account]*\AppData\Local\SSIS\ScaleOut\Tasks Ordnerpfad. 
 
 Die *[Account]* ist das Konto, das Scale-Out-Worker-Dienst ausgeführt wird. Standardmäßig ist dies das Konto SSISScaleOutWorker140.
+

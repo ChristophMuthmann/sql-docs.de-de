@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 3bb995f72c56735a15861a5c515cc9e086d5c3f4
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/07/2017
  [Datenabgleich](../../data-quality-services/data-matching.md)  
   
   
+

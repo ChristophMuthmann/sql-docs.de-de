@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bdf9a0d6fa3ae9a022b720ff0bac003cd65c00db
@@ -54,3 +55,4 @@ ms.lasthandoff: 08/03/2017
  Um eine frühere Version eines Projekts wiederherzustellen, wählen Sie die Version in der Tabelle **Versionen** aus, und klicken Sie dann auf **Ausgewählte Version wiederherstellen**. Das Projekt wird in der ausgewählten Version wiederhergestellt, und diese Version wird mit einem Häkchen in der aktuellen **** Spalte der Tabelle **Versionen** angegeben.  
   
   
+

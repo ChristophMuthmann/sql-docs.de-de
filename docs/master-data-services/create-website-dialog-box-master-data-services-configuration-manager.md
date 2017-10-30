@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 72b03df097b9951384674abbb984636b8999abf7
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/07/2017
  [Erstellen einer Master Data Manager-Webanwendung &#40;Master Data Services&#41;](../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   
+

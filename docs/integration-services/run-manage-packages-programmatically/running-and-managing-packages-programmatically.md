@@ -16,6 +16,7 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 206411bed262d99b043cf667b9699a6fbeb85981
@@ -86,3 +87,4 @@ ms.lasthandoff: 09/26/2017
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7f30937f6dca19f82ccb2dc8ac998dd9f9510c0f
@@ -75,3 +76,4 @@ catalog.set_environment_variable_value [ @folder_name = ] folder_name
 -   Der Benutzer verfügt nicht über die entsprechenden Berechtigungen.  
   
   
+

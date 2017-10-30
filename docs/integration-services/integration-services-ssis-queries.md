@@ -21,6 +21,7 @@ caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 236a6fab2910eaf6eef70ce298259b17fe9f0e3a
@@ -119,3 +120,4 @@ Verwenden Sie das Dialogfeld **Abfrage-Generator** , um Abfragen zum Verwenden m
 |Bereich**Ergebnisse** |Zeigt die Ergebnisse der Abfrage an, wenn Sie auf die Schaltfläche **Ausführen** auf der Symbolleiste klicken.| 
 
   
+

@@ -15,6 +15,7 @@ ms.author: haoqian
 manager: jhubbard
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 2c158ae6a711ecb5f5065561c0c8c303e9a09980
@@ -117,3 +118,4 @@ Um Standardausführungsmodus wieder in den nicht - horizontal skalieren Modus zu
 
 ## <a name="run-package-in-sql-agent-job"></a>Ausführen des Pakets in SQL-Agent-Auftrag
 In Sql-Agent-Auftrag können Sie auswählen, um ein SSIS-Paket als einen Schritt des Auftrags auszuführen. Zum Ausführen des Pakets in horizontal skalieren, können Sie die oben genannten Standardausführungsmodus nutzen. Nach der Einstellung der Standard-Ausführungsmodus auf "Horizontal skalieren" werden Pakete in Sql-Agent-Aufträge in horizontal skalieren ausgeführt werden.
+

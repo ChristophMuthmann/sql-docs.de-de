@@ -17,6 +17,7 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
 ms.openlocfilehash: eb3b444f7cc248e89d21970d174d9792711dfbc6
@@ -220,3 +221,4 @@ Mit dem Bereitstellungs-Assistenten können Sie Serverstandardparameterwerte fes
  Blogeintrag [SSIS-Quicktipp: Erforderliche Parameter](http://go.microsoft.com/fwlink/?LinkId=239781)auf mattmasson.com.  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: a242f91eb8259b8941a61db94f59c4e331d5b06b
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/07/2017
  [Ändern des Transaktionsprotokolltyps von Entitäten &#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
   
   
+

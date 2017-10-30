@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 50488f539ba00055f4b515a41dca47594c5d3f0d
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/07/2017
  [Installieren von Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 3051e6d5cbeef00ce4b05ee03bc39e79271207be
@@ -58,3 +59,4 @@ ms.lasthandoff: 09/07/2017
  [Überprüfen von Daten &#40;MDS-Add-In für Excel&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)  
   
   
+

@@ -9,6 +9,7 @@ ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
 ms.openlocfilehash: 04b294aafb8019a44d2bb7fa05a4e6092a9a490f

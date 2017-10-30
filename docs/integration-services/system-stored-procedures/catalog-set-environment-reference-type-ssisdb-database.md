@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e83d9979ee4736528efb4851848ea3eac717fab8
@@ -75,3 +76,4 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
 >  Wenn ein relativer Verweis angegeben wird, wird der *environment_folder_name* -Parameterwert nicht verwendet, und der Umgebungsordnername wird automatisch auf **NULL**festgelegt. Wenn ein absoluter Verweis angegeben wird, muss der Umgebungsordnername im *environment_folder_name* -Parameter angegeben werden.  
   
   
+

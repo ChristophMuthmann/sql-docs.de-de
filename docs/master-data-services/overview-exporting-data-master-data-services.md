@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 40f4ec6f9d1e30676dfba32288384a6f0b6fcc6e
@@ -64,3 +65,4 @@ ms.lasthandoff: 09/07/2017
 -   [Sichten](../relational-databases/views/views.md)  
   
   
+

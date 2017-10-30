@@ -22,6 +22,7 @@ caps.latest.revision: 66
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 41de742c987d9f043f3dd247ee84af6a3eaf365b
@@ -305,3 +306,4 @@ namespace DtsClientWParamCS
  [Programmgesteuertes Laden und Ausführen eines Remotepakets](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)  
   
   
+

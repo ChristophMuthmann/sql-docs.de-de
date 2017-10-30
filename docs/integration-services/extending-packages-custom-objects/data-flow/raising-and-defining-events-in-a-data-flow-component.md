@@ -26,6 +26,7 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: a900b27c9056d95fb2284d8ba9d6b09d9c6635b5
@@ -101,3 +102,4 @@ End Sub
  [Hinzufügen eines Ereignishandlers zu einem Paket](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   
+

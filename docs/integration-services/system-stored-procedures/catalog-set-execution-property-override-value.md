@@ -14,6 +14,7 @@ caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 20f2c882a78f5e60931b0152d5877898e1972d0a
@@ -72,3 +73,4 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
  [catalog.set_execution_parameter_value &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
   
   
+

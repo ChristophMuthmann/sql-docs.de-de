@@ -14,6 +14,7 @@ caps.latest.revision: 18
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 16858dc8ab6dcad69792697b88811cba2689b1fe
@@ -79,3 +80,4 @@ ms.lasthandoff: 09/07/2017
  [Datenbank erstellen (Assistent im Konfigurations-Manager für Master Data Services)](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)  
   
   
+

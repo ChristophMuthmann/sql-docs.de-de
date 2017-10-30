@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 458ba4be689ed976a5948380d35f38020f7dd4dd
@@ -56,3 +57,4 @@ ms.lasthandoff: 09/26/2017
  [Entwickeln bestimmte Arten von Daten von Datenflusskomponenten](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)  
   
   
+

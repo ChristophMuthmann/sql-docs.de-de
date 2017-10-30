@@ -14,6 +14,7 @@ caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
 ms.openlocfilehash: c1caf4a71e5802968d9471711b8206a26f9c28d5
@@ -68,3 +69,4 @@ Die gültigen Eigenschaftennamen sind **DisplayName**, **Beschreibung**, **Tags*
 -   Der Eigenschaftsname ist ungültig.
 
 -   Der Eigenschaftswert ist ungültig.  
+

@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
 ms.openlocfilehash: e9d1b8851f113fa44264230a79d0e496007ed96b
@@ -87,3 +88,4 @@ Die SQL Server Evaluation Edition steht für einen Testzeitraum von 180 Tagen zu
 |Ausdrucksextrahierung und Transformationen für Suche Begriff|ja|||||  
 
 <sup>1</sup> der Change Data Capture-Komponenten von Attunity erfordern, Enterprise Edition. Die Change Data Capture Service und Change Data Capture Designer ist die Enterprise Edition nicht jedoch erforderlich. Können Sie den Designer und dem Dienst auf einem Computer, auf dem SSIS nicht installiert.
+

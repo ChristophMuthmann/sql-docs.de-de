@@ -23,6 +23,7 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ee5a82829785e78554b105e1f3bf3bd24f05b778
@@ -117,3 +118,4 @@ public void Main()
 -   Technische Artikel [Processing Active Directory Information in SSIS](http://go.microsoft.com/fwlink/?LinkId=199588), auf social.technet.microsoft.com  
   
   
+

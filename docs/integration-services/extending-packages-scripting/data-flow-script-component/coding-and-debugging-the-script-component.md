@@ -27,6 +27,7 @@ caps.latest.revision: 66
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: ff6c9814547a83439717f8a88d3bd52be80c4ca5
@@ -218,3 +219,4 @@ public class ScriptMain : UserComponent
  [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)  
   
   
+

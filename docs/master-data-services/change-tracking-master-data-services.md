@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 0def93a0f88d19ba894508d4a5d39de59dbd7a28
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/07/2017
 -   [Attribute &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
   
+

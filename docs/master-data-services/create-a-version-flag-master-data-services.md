@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 039f5c71946946bc6093dcfcd432da21d75ec2ad
@@ -64,3 +65,4 @@ ms.lasthandoff: 09/07/2017
  [Ändern des Namens eines Versionsflags &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)  
   
   
+

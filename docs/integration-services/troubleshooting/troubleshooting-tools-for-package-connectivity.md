@@ -21,6 +21,7 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e3799e224930806445bc1c27f37c05b95a0bbbae
@@ -77,3 +78,4 @@ ms.lasthandoff: 08/03/2017
  [Tools zur Problembehandlung für die Ausführung des Pakets](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   
+

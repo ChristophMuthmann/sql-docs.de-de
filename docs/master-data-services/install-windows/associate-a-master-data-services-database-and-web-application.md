@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 31a1db8384143ead4a5d8adc81a8b905129d6b4e
@@ -61,3 +62,4 @@ ms.lasthandoff: 09/07/2017
  [Webkonfigurationsseite &#40;Master Data Services Configuration Manager&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 21
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: bda0dbc730e24017dfc1978e691d3da654a15149

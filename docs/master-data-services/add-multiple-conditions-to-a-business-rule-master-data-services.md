@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: be8c4995258fe2e5150a6575682988728bdae94f
@@ -81,3 +82,4 @@ ms.lasthandoff: 09/07/2017
  [Konfigurieren von Geschäftsregeln für das Senden von Benachrichtigungen &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
   
   
+

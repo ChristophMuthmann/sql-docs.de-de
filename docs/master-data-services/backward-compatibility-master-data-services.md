@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: e255634ad8e28c1fd8bec597f58df30a6ee6a260
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/07/2017
 -   [Eingestellte Master Data Services-Funktionen](../master-data-services/discontinued-master-data-services-features.md)  
   
   
+

@@ -21,6 +21,7 @@ caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 40deae6a08a597114fbc721271a789895e1d8fa2
@@ -149,3 +150,4 @@ public void Main()
  [Skripttask-Beispiele](../../integration-services/extending-packages-scripting-task-examples/script-task-examples.md)  
   
   
+

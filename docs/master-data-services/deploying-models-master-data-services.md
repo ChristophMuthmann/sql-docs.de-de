@@ -18,6 +18,7 @@ caps.latest.revision: 24
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 021c2e7c829f8da9cf1633aa5047c561b11702d6
@@ -84,3 +85,4 @@ ms.lasthandoff: 09/07/2017
 -   [Optionen für Modellbereitstellung &#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md)  
   
   
+

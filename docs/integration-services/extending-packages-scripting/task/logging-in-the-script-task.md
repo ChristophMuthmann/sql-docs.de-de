@@ -27,6 +27,7 @@ caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 98859dafe0b023954f10239fe11e8b76f36ab28b
@@ -106,3 +107,4 @@ public class ScriptMain
  [Integrationsservices &#40; SSIS &#41; Protokollierung](../../../integration-services/performance/integration-services-ssis-logging.md)  
   
   
+

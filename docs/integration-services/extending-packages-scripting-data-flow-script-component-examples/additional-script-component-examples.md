@@ -20,6 +20,7 @@ caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 2a5cf91bb82b66247aa100f8ada13693c409183a
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/26/2017
  Erklärt und veranschaulicht, wie zwei verschiedene nicht standardmäßige Textdateiformate in Zieltabellen analysiert werden.  
   
   
+

@@ -10,6 +10,7 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.custom: H1Hack27Feb2017
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 5936634cf243216f5916812bbe5ec04767932ec7
@@ -192,3 +193,4 @@ Die verwaltungssicht Dm_os_wait Stats dynamische Abfragen:
    SELECT wait_type, wait_time_ms
    FROM sys.dm_os_wait_stats;
    ```
+

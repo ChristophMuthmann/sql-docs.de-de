@@ -21,6 +21,7 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c6bf6a70027da7804e2fdca998948d44c9a26097
@@ -357,3 +358,4 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
  [Erstellen einer asynchronen Transformation mit der Skriptkomponente](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
   
   
+

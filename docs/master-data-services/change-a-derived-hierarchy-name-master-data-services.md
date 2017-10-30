@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: c8451eb8bc285c16720b27bf9592c83caa73a4d9
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/07/2017
  [Löschen einer abgeleiteten Hierarchie &#40;Master Data Services&#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)  
   
   
+

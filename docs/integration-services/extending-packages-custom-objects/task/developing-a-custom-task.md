@@ -29,6 +29,7 @@ caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: a6f9c16453365ce5b7a278f352c8cec8d86c2780
@@ -96,3 +97,4 @@ ms.lasthandoff: 08/03/2017
  [Vergleichen von Skriptlösungen und benutzerdefinierten Objekten](../../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
   
   
+

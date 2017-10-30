@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 746f2073255e38e7b92ec7690ec2669ebdfaeba4
@@ -53,3 +54,4 @@ ms.lasthandoff: 09/07/2017
  [Datenbankanmeldenamen, -benutzer und -rollen &#40;Master Data Services&#41;](../master-data-services/database-logins-users-and-roles-master-data-services.md)  
   
   
+

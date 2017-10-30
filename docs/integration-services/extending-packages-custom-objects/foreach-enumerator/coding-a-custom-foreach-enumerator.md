@@ -18,6 +18,7 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 74e6e838c3dcfb18e52a8fbf460a5b71ee25399a
@@ -118,3 +119,4 @@ End Function
  [Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten foreach-Enumerator](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
   
   
+

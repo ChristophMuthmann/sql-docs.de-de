@@ -26,6 +26,7 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 47cb31613e30199902335d891b9f5777757feed3
@@ -79,3 +80,4 @@ ms.lasthandoff: 09/26/2017
 |Microsoft.SqlServer.PipelineWrapper.dll|Enthält die primäre Interopassembly (PIA) oder den Wrapper für das systemeigene Datenflussmodul.|  
   
   
+

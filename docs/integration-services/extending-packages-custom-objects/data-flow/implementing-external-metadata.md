@@ -29,6 +29,7 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 96d413bca20ec171d515ac6d0ad81b5b994bd854
@@ -118,3 +119,4 @@ End Function
  [Datenfluss](../../../integration-services/data-flow/data-flow.md)  
   
   
+

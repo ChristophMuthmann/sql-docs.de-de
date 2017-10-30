@@ -19,6 +19,7 @@ caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a87438f0f702a46b88b350ee32b734f64b1c6ad2
@@ -120,3 +121,4 @@ ms.lasthandoff: 09/26/2017
  [Generieren von Dumpdateien für die Paketausführung](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   
   
+

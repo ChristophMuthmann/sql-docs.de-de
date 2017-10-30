@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: e53df9230c69a001fffca1c3b1a53cf3c69b625e
@@ -98,3 +99,4 @@ ms.lasthandoff: 09/07/2017
  [Erstellen eines Dateiattributs &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
   
+

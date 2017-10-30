@@ -20,6 +20,7 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0c472b50d9bf7f208a474c14bd5576767842a56c
@@ -111,3 +112,4 @@ ms.lasthandoff: 08/03/2017
  [Zuordnen von Abfrageparametern zu Variablen in einem Task SQL ausführen](http://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
   
   
+

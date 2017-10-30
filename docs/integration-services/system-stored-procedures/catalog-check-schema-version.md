@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 56eacb6ed209f34f65ae406fe4dd520284b79e5b
@@ -49,3 +50,4 @@ catalog.check_schema_version [@use32bitruntime = ] use32bitruntime
 -   Mitgliedschaft in der Datenbankrolle **ssis_admin** .  
   
   
+

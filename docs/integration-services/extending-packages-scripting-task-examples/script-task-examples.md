@@ -22,6 +22,7 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f7732abe880aa5eeaab2030da423e18d1977d64a
@@ -83,3 +84,4 @@ ms.lasthandoff: 09/26/2017
  Protokolliert die Anzahl der Elemente, die vom Task zu aktivierten Protokollanbietern verarbeitet wird.  
   
   
+

@@ -29,6 +29,7 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 4a28fe7c6024d8cf5669199e5f33e3532013e4d3
@@ -296,3 +297,4 @@ bool ThumbnailCallback()
 ```  
   
   
+

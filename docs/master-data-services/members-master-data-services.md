@@ -21,6 +21,7 @@ caps.latest.revision: 16
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 3161b24f55c5473829b5d0a0ea090763d1203295
@@ -90,3 +91,4 @@ ms.lasthandoff: 09/07/2017
 -   [Filteroperatoren &#40;Master Data Services&#41;](../master-data-services/filter-operators-master-data-services.md)  
   
   
+

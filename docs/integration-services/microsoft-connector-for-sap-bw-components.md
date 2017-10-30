@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 13877d29b192079361051d4775d09f1f4596c9d3
@@ -44,3 +45,4 @@ ms.lasthandoff: 08/03/2017
  Beschreibt das SAP BW-Ziel, mit dem Sie Daten in ein SAP NetWeaver BW-System laden können.  
   
   
+

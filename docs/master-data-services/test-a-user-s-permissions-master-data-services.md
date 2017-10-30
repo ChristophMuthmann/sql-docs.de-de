@@ -14,6 +14,7 @@ caps.latest.revision: 4
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 6e3a240837692dbe8ea3cdfdcba42035e0317e78
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/07/2017
  [Sicherheit &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   
+

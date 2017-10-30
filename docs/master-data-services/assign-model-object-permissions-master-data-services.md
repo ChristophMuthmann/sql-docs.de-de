@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: fa5c8efcfbefcc52aed6c4ffb5bd1614c3fb607c
@@ -69,3 +70,4 @@ ms.lasthandoff: 09/07/2017
  [Erstellen eines Modelladministrators &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)  
   
   
+

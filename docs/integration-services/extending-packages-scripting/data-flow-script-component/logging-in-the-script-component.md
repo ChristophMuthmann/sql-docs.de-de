@@ -18,6 +18,7 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 410a2472399574753d67a44b93437b1698c8b086
@@ -47,3 +48,4 @@ ms.lasthandoff: 08/03/2017
  [Integrationsservices &#40; SSIS &#41; Protokollierung](../../../integration-services/performance/integration-services-ssis-logging.md)  
   
   
+

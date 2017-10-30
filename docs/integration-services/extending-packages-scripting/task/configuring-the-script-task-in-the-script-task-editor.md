@@ -22,6 +22,7 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 182a7b8f04c2339a8f3d3b986c978a7998c8a9c3
@@ -69,3 +70,4 @@ ms.lasthandoff: 08/03/2017
  [Beim Codieren und Debuggen des Skripttasks](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)  
   
   
+

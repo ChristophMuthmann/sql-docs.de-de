@@ -29,6 +29,7 @@ caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 0253d7a43724b0b852b96bb84618480df6c8f9a4
@@ -441,3 +442,4 @@ End Sub
  [Verwenden von Fehlerausgaben](../../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)  
   
   
+

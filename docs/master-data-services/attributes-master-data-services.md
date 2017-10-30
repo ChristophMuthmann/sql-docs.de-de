@@ -21,6 +21,7 @@ caps.latest.revision: 13
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 5e34382b2252af20e0959940f2f7ac9c06bf0379
@@ -103,3 +104,4 @@ ms.lasthandoff: 09/07/2017
   
 -   [Blattberechtigungen &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)
   
+
