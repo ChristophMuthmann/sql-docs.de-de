@@ -30,9 +30,9 @@ ms.lasthandoff: 09/09/2017
  Sie können auch eine Verbunddomäne erstellen, die aus zwei oder mehr einzelnen Domänen besteht, von denen jede Wissen über allgemeine Daten enthält. Weitere Informationen finden Sie unter [Verwalten einer Verbunddomäne](../data-quality-services/managing-a-composite-domain.md).  
   
 ## <a name="domain-properties"></a>Domäneneigenschaften  
- Wenn Sie eine Domäne erstellen, haben Sie die folgenden Optionen zum Auffüllen der Domäne aus den Quelldaten und zur Ausgabe der Domänenwerte. Weitere Informationen finden Sie unter [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
+ Wenn Sie eine Domäne erstellen, haben Sie die folgenden Optionen zum Auffüllen der Domäne aus den Quelldaten und zur Ausgabe der Domänenwerte. Weitere Informationen finden Sie unter [Domain-Eigenschaften festlegen](../data-quality-services/set-domain-properties.md).  
   
--   Wählen Sie den Typ der Daten aus, mit denen Sie die Domäne auffüllen. Informationen zu Datentypen, die für jeden Domänendatentyp unterstützt wurden, finden Sie unter [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+-   Wählen Sie den Typ der Daten aus, mit denen Sie die Domäne auffüllen. Informationen zu Datentypen, die für jeden Domänendatentyp unterstützt wurden, finden Sie unter [Unterstützte SQL Server- und SSIS-Datentypen für DQS-Domänen](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 -   Geben Sie an, dass nur führende Werte, nicht ihre Synonyme, von der Domäne ausgegeben werden.  
   
