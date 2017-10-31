@@ -9,8 +9,8 @@ ms.topic: article
 ms.technology:
 - database-engine
 ms.translationtype: HT
-ms.sourcegitcommit: e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1
-ms.openlocfilehash: 46264a1ab74bc97fc3354edf777de556881c9d42
+ms.sourcegitcommit: 767ab302130cb258071c09b3d879328adb63c442
+ms.openlocfilehash: 236d52afa80f2825c11a9226495085b17a6d5e1f
 ms.contentlocale: de-de
 ms.lasthandoff: 10/26/2017
 
@@ -53,7 +53,8 @@ ms.lasthandoff: 10/26/2017
                                                     <li><a href="https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx">SQL Server 2012</a></li>
                                                     <li><a href="/azure/sql-database/sql-database-design-first-database">Azure SQL-Datenbank</a></li>
                                                     <li><a href="/azure/sql-data-warehouse/sql-data-warehouse-get-started-tutorial">Azure SQL Data Warehouse</a></li>
-                                                </ul>
+                                                    <li><a href="/sql/analytics-platform-system/index">Analyseplattformsystem – Parallel Data Warehouse</a></li>
+                                                    </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Werden unter Windows oder Linux ausgeführt</h4>
                                                 <ul>
                                                     <li><a href="/sql/linux/sql-server-linux-overview">SQL Server unter Linux</a></li>
