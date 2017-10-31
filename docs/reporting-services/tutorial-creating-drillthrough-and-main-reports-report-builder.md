@@ -16,8 +16,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 0c67ffbd38887cd9428551a369a4d864d8b972d8
 ms.contentlocale: de-de
@@ -45,7 +44,7 @@ Sie benötigen Zugriff auf eine Instanz von [!INCLUDE[ssASnoversion](../includes
 Weitere Informationen zu den allgemeinen Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
 ## <a name="DMatrixAndDataset"></a>1. Erstellen eines Drillthroughberichts mit dem Tabellen- oder Matrix-Assistenten  
-Erstellen Sie im Dialogfeld „Erste Schritte“ mit dem **Tabellen- oder Matrix-Assistenten** einen Matrixbericht. Im Assistenten stehen zwei Modi zur Auswahl: Berichtsentwurf und Entwurf von freigegebenen Datasets. In diesem Lernprogramm verwenden Sie den Berichtsentwurfsmodus.  
+Erstellen Sie im Dialogfeld „Erste Schritte“ mit dem **Tabellen- oder Matrix-Assistenten**einen Matrixbericht. Im Assistenten stehen zwei Modi zur Auswahl: Berichtsentwurf und Entwurf von freigegebenen Datasets. In diesem Lernprogramm verwenden Sie den Berichtsentwurfsmodus.  
   
 #### <a name="to-create-a-new-report"></a>So erstellen Sie einen neuen Bericht  
   
@@ -60,7 +59,7 @@ Erstellen Sie im Dialogfeld „Erste Schritte“ mit dem **Tabellen- oder Matrix
 3.  Vergewissern Sie sich, dass im rechten Bereich **Tabellen- oder Matrix-Assistent** ausgewählt ist.  
   
 ## <a name="DConnection"></a>1a. Angeben einer Datenverbindung  
-Eine Datenverbindung enthält die erforderlichen Informationen zum Herstellen einer Verbindung mit einer externen Datenquelle, z. B. einem Analysis Services-Cube oder einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank. Sie können zum Angeben einer Datenverbindung eine freigegebene Datenquelle vom Berichtsserver verwenden oder eine eingebettete Datenquelle erstellen, die nur in diesem Bericht verwendet wird. In diesem Lernprogramm verwenden Sie eine eingebettete Datenquelle. Weitere Informationen zur Verwendung von freigegebenen Datenquellen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung &#40;Berichts-Generator&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+Eine Datenverbindung enthält die erforderlichen Informationen zum Herstellen einer Verbindung mit einer externen Datenquelle, z. B. einem Analysis Services-Cube oder einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank. Sie können zum Angeben einer Datenverbindung eine freigegebene Datenquelle vom Berichtsserver verwenden oder eine eingebettete Datenquelle erstellen, die nur in diesem Bericht verwendet wird. In diesem Lernprogramm verwenden Sie eine eingebettete Datenquelle. Weitere Informationen zum Verwenden einer freigegebenen Datenquelle finden Sie unter [Alternative Möglichkeiten zum Abrufen von einer Verbindung mit Daten &#40; Berichts-Generator &#41; ](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 #### <a name="to-create-an-embedded-data-source"></a>So erstellen Sie eine eingebettete Datenquelle  
   
@@ -91,7 +90,7 @@ Eine Datenverbindung enthält die erforderlichen Informationen zum Herstellen ei
 10. Klicken Sie auf **Anmeldeinformationstyp**.  
   
     > [!NOTE]  
-    > Abhängig davon, wie die Berechtigungen für die Datenquelle konfiguriert sind, müssen Sie u. U. die standardmäßigen Authentifizierungsoptionen ändern. Weitere Informationen finden Sie unter [ &#40;Berichts-Generator&#41;](../reporting-services/report-builder/security-report-builder.md).  
+    > Abhängig davon, wie die Berechtigungen für die Datenquelle konfiguriert sind, müssen Sie u. U. die standardmäßigen Authentifizierungsoptionen ändern. Weitere Informationen finden Sie unter [ &#40;Berichts-Generator&#41;](../reporting-services/report-builder/security-report-builder.md).  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -115,7 +114,7 @@ In einem Bericht können Sie ein freigegebenes Dataset mit einer vordefinierten 
 2.  Klicken Sie im Dialogfeld **Cubeauswahl** auf „Sales“ und anschließend auf **OK**.  
   
     > [!TIP]  
-    > Wenn Sie nicht, um die MDX-Abfrage manuell zu erstellen möchten, klicken Sie auf die ![in den Entwurfsmodus wechseln](../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode") Symbol, Wechseln der Abfrage-Designer zum Abfragemodus, fügen Sie die abgeschlossene MDX in den Abfrage-Designer, und fahren Sie mit Schritt 6 in [So erstellen Sie das Dataset](#DSkip).  
+    > Wenn Sie nicht, um die MDX-Abfrage manuell zu erstellen möchten, klicken Sie auf die ![in den Entwurfsmodus wechseln](../reporting-services/media/rsqdicon-designmode.gif "in den Entwurfsmodus wechseln") Symbol, Wechseln der Abfrage-Designer zum Abfragemodus, fügen Sie die abgeschlossene MDX in den Abfrage-Designer, und fahren Sie mit Schritt 6 in [So erstellen Sie das Dataset](#DSkip).  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -345,7 +344,7 @@ Sie können den Bericht in einer SharePoint-Bibliothek, auf einem Berichtsserver
 7.  Klicken Sie auf **Speichern**.  
   
 ## <a name="MMatrixAndDataset"></a>1. Erstellen des Hauptberichts mit dem Tabellen- oder Matrix-Assistenten  
-Erstellen Sie im Dialogfeld **Erste Schritte** mit dem **Tabellen- oder Matrix-Assistenten** einen Matrixbericht.  
+Erstellen Sie im Dialogfeld **Erste Schritte** mit dem **Tabellen- oder Matrix-Assistenten**einen Matrixbericht.  
   
 #### <a name="to-create-the-main-report"></a>So erstellen Sie den Hauptbericht  
   
@@ -406,7 +405,7 @@ Erstellen Sie als Nächstes ein eingebettetes Dataset. Hierzu erstellen Sie mit 
 2.  Klicken Sie im Dialogfeld **Cubeauswahl** auf „Sales“ und anschließend auf **OK**.  
   
     > [!TIP]  
-    > Wenn Sie nicht, um die MDX-Abfrage manuell zu erstellen möchten, klicken Sie auf die ![in den Entwurfsmodus wechseln](../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode") Symbol, den Abfrage-Designer in den Abfragemodus zu wechseln, fügen Sie die abgeschlossene MDX in den Abfrage-Designer, und fahren Sie mit Schritt 5 in [So erstellen Sie das Dataset](#MSkip).  
+    > Wenn Sie nicht, um die MDX-Abfrage manuell zu erstellen möchten, klicken Sie auf die ![in den Entwurfsmodus wechseln](../reporting-services/media/rsqdicon-designmode.gif "in den Entwurfsmodus zu wechseln") Symbol, den Abfrage-Designer in den Abfragemodus zu wechseln, fügen Sie die abgeschlossene MDX in den Abfrage-Designer, und fahren Sie mit Schritt 5 in [So erstellen Sie das Dataset](#MSkip).  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
