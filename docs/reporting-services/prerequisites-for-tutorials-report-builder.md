@@ -16,8 +16,7 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 2c2056dccbb2d65e880928e4ec37a70080cfbf53
 ms.contentlocale: de-de
@@ -29,7 +28,7 @@ ms.lasthandoff: 08/09/2017
 
 Die Tutorials zum Berichts-Generator setzen voraus, dass Sie paginierte Berichte aus [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] auf einem Berichtsserver oder einer in einen Berichtsserver integrierten SharePoint-Website anzeigen und speichern können. Für Daten verwenden, allen Lernprogrammen wörtliche Abfragen, die verarbeitet werden müssen, von einer Instanz von SQL Server.  
   
-Wenn Sie keinen Zugriff auf einen Berichtsserver, eine Website oder eine Datenquelle haben, können Sie sich mit Berichts-Generator vertraut machen, indem Sie einen Offlinebericht erstellen. Siehe [Tutorial: Erstellen eines Quick-Diagrammberichts offline &#40;Berichts-Generator&#41;](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+Wenn Sie keinen Zugriff auf einen Berichtsserver, eine Website oder eine Datenquelle haben, können Sie sich mit Berichts-Generator vertraut machen, indem Sie einen Offlinebericht erstellen. Finden Sie unter [Lernprogramm: Erstellen eines Quick-Diagrammberichts Offline &#40; Berichts-Generator &#41; ](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,4 +55,3 @@ Der Berichtsserveradministrator muss Ihnen die erforderlichen Berechtigungen fü
 [Tutorials (Berichts-Generator)](../reporting-services/report-builder-tutorials.md)  
 
 Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
-

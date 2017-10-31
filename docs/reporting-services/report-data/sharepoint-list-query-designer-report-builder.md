@@ -17,8 +17,7 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 957ddf233fbbf41f468f8c981c3e8303a3672d9b
 ms.contentlocale: de-de
@@ -101,7 +100,6 @@ ms.lasthandoff: 08/09/2017
 |**Verborgene Felder anzeigen**|Blendet die Felder ein oder aus, die automatisch von SharePoint erstellt, normalerweise aber nicht in Berichten verwendet werden (z. B. "ProgId" und "Level" für SharePoint-Linkelemente). Durch das Ausblenden dieser Felder wird die Feldliste verkürzt, sodass sie einfacher zu verwenden ist.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Abfrage-Designer &#40;Berichts-Generator&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [Abfrage-Designer &#40; Berichts-Generator &#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   
-

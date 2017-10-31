@@ -15,8 +15,7 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 75444343968c9901a24c1a4d431d4d8cfacb1567
 ms.contentlocale: de-de
@@ -82,4 +81,3 @@ ms.lasthandoff: 08/09/2017
  [Tastenkombinationen &#40; Berichts-Generator &#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
   
   
-
