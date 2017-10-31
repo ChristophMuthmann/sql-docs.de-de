@@ -64,10 +64,10 @@ Um den Vergleich der resultierenden Tabellendaten zu ermöglichen, legen die **g
 Beachten Sie, dass die aktuelle Version von SSMA Tester die parallele Ausführung von verschiedenen Benutzern auf demselben Server Quelle oder Ziel nicht unterstützt.  
   
 ## <a name="getting-started"></a>Erste Schritte  
-[Erstellen von Testfällen & #40; OracleToSQL & #41;](../../ssma/oracle/creating-test-cases-oracletosql.md)  
+[Erstellen von Testfällen &#40; OracleToSQL &#41;](../../ssma/oracle/creating-test-cases-oracletosql.md)  
   
 ## <a name="see-also"></a>Siehe auch  
-[Installieren SSMA-Komponenten für SQLServer & #40; OracleToSQL & #41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
-[Projekteinstellungen & #40; Konvertierung & #41; & #40; OracleToSQL & #41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)  
+[Installieren SSMA-Komponenten für SQLServer &#40; OracleToSQL &#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
+[Projekteinstellungen &#40; Konvertierung &#41; &#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)  
   
 
