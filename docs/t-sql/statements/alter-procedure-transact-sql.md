@@ -23,9 +23,9 @@ helpviewer_keywords:
 - stored procedures [SQL Server], modifying
 ms.assetid: ed9b2f76-11ec-498d-a95e-75b490a75733
 caps.latest.revision: 69
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

@@ -17,9 +17,9 @@ helpviewer_keywords:
 - names [SQL Server], collations
 ms.assetid: 56483d24-add7-483d-9b96-c6fda460ddbc
 caps.latest.revision: 30
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

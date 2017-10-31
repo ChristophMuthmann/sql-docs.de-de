@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
 ms.openlocfilehash: ea8a0eb15a17cb7bc0032cf951c3fce0830761ac

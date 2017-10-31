@@ -15,9 +15,9 @@ helpviewer_keywords:
 - events [SQL Server Database Engine]
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4

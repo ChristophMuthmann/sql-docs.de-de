@@ -18,9 +18,9 @@ helpviewer_keywords:
 - DENY statement, schemas
 ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
 caps.latest.revision: 28
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

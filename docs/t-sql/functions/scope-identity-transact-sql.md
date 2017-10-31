@@ -21,9 +21,9 @@ helpviewer_keywords:
 - identity values [SQL Server], last-inserted
 ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
 caps.latest.revision: 36
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

@@ -18,9 +18,9 @@ helpviewer_keywords:
 - cryptography [SQL Server], system objects
 ms.assetid: 4e43f954-0982-470b-a239-08a13c61563a
 caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

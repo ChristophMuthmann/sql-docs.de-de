@@ -24,9 +24,9 @@ helpviewer_keywords:
 - negative values
 ms.assetid: c3a98b52-6fbe-4127-a5c9-8a4922e83e28
 caps.latest.revision: 33
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

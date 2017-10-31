@@ -24,9 +24,9 @@ helpviewer_keywords:
 - names [SQL Server], logins
 ms.assetid: ae598d9f-9baa-49b8-b1c1-042854206de4
 caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

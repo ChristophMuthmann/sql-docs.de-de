@@ -23,9 +23,9 @@ helpviewer_keywords:
 - CATCH block
 ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

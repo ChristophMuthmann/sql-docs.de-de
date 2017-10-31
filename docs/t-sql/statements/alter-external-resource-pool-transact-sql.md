@@ -17,9 +17,9 @@ helpviewer_keywords:
 - ALTER EXTERNAL RESOURCE POOL statement
 ms.assetid: 634c327d-971b-49ba-b8a2-e243a04040db
 caps.latest.revision: 10
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

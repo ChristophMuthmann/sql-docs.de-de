@@ -13,9 +13,9 @@ helpviewer_keywords:
 - 7984 (Database Engine error)
 ms.assetid: e3192f56-e4e2-41da-b132-65f1e7540b1a
 caps.latest.revision: 16
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4

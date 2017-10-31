@@ -18,9 +18,9 @@ helpviewer_keywords:
 - aggregate functions [SQL Server]
 ms.assetid: 0c06ae42-eb0a-4d77-9d74-aa1e7f344009
 caps.latest.revision: 30
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

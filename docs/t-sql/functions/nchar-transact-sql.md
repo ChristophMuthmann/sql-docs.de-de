@@ -19,9 +19,9 @@ helpviewer_keywords:
 - Unicode [SQL Server], NCHAR function
 ms.assetid: 68cefc68-7c4f-4326-80c1-300f90cf19db
 caps.latest.revision: 43
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74

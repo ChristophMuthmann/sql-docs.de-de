@@ -22,9 +22,9 @@ helpviewer_keywords:
 - counting rows
 ms.assetid: 6e18a0eb-bb36-4348-90d9-8b1ecf095064
 caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

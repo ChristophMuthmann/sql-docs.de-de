@@ -18,9 +18,9 @@ helpviewer_keywords:
 - ORIGINAL_DB_NAME function
 ms.assetid: 7dadc40a-1287-4f31-8487-434ee477144d
 caps.latest.revision: 11
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

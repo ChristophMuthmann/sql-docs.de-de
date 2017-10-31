@@ -20,9 +20,9 @@ helpviewer_keywords:
 - cryptography [SQL Server], asymmetric keys
 ms.assetid: dd7d8cd5-536b-460c-ab5b-cb4752bbdfaa
 caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

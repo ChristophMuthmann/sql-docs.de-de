@@ -21,9 +21,9 @@ helpviewer_keywords:
 - starting point of expression in character string
 ms.assetid: 78c10341-8373-4b30-b404-3db20e1a3ac4
 caps.latest.revision: 52
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e

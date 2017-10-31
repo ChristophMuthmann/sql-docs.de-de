@@ -15,9 +15,9 @@ helpviewer_keywords:
 - index_option
 ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 caps.latest.revision: 68
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06

@@ -27,9 +27,9 @@ helpviewer_keywords:
 - DROP ENCRYPTION BY SERVICE MASTER KEY phrase
 ms.assetid: 8ac501c3-4280-4d5b-b58a-1524fa715b50
 caps.latest.revision: 49
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

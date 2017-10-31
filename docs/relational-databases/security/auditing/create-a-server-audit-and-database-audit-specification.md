@@ -16,9 +16,9 @@ helpviewer_keywords:
 - database audit [SQL Server]
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 caps.latest.revision: 17
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4

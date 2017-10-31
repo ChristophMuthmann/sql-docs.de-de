@@ -15,9 +15,9 @@ helpviewer_keywords:
 - database access
 ms.assetid: 686edfe2-3650-48a6-a2da-9d46fa211ad8
 caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

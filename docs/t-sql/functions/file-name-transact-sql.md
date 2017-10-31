@@ -26,9 +26,9 @@ helpviewer_keywords:
 - logical file names [SQL Server]
 ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
 caps.latest.revision: 35
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.translationtype: MT
 ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
 ms.openlocfilehash: 0fcf9f37da268e266cb94037995f271c54536cb8

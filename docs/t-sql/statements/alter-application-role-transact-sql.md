@@ -21,9 +21,9 @@ helpviewer_keywords:
 - application roles [SQL Server], modifying
 ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
 caps.latest.revision: 46
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

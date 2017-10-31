@@ -21,9 +21,9 @@ helpviewer_keywords:
 - locking [SQL Server], time-outs
 ms.assetid: 6bf8bf97-60b8-40c1-b89d-8f5a00bcae2e
 caps.latest.revision: 31
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6

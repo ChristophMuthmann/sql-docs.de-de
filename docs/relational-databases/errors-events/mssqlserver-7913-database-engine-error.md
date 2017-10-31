@@ -13,9 +13,9 @@ helpviewer_keywords:
 - 7913 (Database Engine error)
 ms.assetid: 9d8ad456-b1a2-4f79-a252-657fbec9ad9b
 caps.latest.revision: 12
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4

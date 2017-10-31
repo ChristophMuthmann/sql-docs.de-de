@@ -22,9 +22,9 @@ helpviewer_keywords:
 - CREATE EXTERNAL RESOURCE POOL statement
 ms.assetid: 8cc798ad-c395-461c-b7ff-8c561c098808
 caps.latest.revision: 12
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

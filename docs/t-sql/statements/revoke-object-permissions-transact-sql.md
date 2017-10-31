@@ -18,9 +18,9 @@ helpviewer_keywords:
 - object permissions [SQL Server], revoking
 ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
 caps.latest.revision: 33
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

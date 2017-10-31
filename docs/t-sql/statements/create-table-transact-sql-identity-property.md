@@ -21,9 +21,9 @@ helpviewer_keywords:
 - autonumbers, identity numbers
 ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 caps.latest.revision: 27
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

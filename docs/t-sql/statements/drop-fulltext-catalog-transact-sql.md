@@ -22,9 +22,9 @@ helpviewer_keywords:
 - DROP FULLTEXT CATALOG statement
 ms.assetid: b54efb0b-400b-49ce-923b-ce20a2a12255
 caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

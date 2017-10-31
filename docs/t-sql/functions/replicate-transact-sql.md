@@ -20,9 +20,9 @@ helpviewer_keywords:
 - repeating character expressions
 ms.assetid: 0cd467fb-3f22-471a-892c-0039d9f7fa1a
 caps.latest.revision: 42
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

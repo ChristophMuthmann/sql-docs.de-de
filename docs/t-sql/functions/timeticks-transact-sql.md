@@ -22,9 +22,9 @@ helpviewer_keywords:
 - number of microseconds per tick
 ms.assetid: 9d036633-837f-4309-9c45-3d9600258018
 caps.latest.revision: 28
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6

@@ -22,9 +22,9 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 ms.assetid: 9bd1cc5b-227b-4032-95d6-7581ddcc9924
 caps.latest.revision: 64
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

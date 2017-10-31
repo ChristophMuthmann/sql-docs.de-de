@@ -20,9 +20,9 @@ helpviewer_keywords:
 - packets [SQL Server], number read
 ms.assetid: 5c0b3d36-bfad-4f0b-abb8-e8f6391b32cd
 caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

@@ -13,9 +13,9 @@ helpviewer_keywords:
 - creating tables
 ms.assetid: 653f2dd3-36a2-4bd5-8703-71a57d244661
 caps.latest.revision: 17
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

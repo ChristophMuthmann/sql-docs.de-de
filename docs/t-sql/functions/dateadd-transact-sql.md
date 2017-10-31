@@ -26,9 +26,9 @@ helpviewer_keywords:
 - DATEADD function [SQL Server]
 ms.assetid: 89c5ae32-89c6-47e1-979e-15d97908b9f1
 caps.latest.revision: 71
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

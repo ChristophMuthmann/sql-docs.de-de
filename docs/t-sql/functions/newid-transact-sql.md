@@ -19,9 +19,9 @@ helpviewer_keywords:
 - NEWID function
 ms.assetid: f7014e60-96d5-457e-afc3-72b60ba20c0f
 caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

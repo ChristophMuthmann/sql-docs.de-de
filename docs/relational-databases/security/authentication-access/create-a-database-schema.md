@@ -18,9 +18,9 @@ helpviewer_keywords:
 - schemas [SQL Server], creating
 ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 caps.latest.revision: 11
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Active
 ms.translationtype: HT
 ms.sourcegitcommit: 3a224f5be40f6f7a68a28cb4c8f741c24527e8bd

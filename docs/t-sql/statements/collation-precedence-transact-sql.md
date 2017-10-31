@@ -26,9 +26,9 @@ helpviewer_keywords:
 - rules [SQL Server], collations
 ms.assetid: 58c4e64b-5634-4c29-aa22-33193282dd27
 caps.latest.revision: 34
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

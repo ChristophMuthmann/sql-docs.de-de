@@ -16,9 +16,9 @@ helpviewer_keywords:
 - Transact-SQL
 ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
 caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

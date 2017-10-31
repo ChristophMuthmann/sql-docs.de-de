@@ -21,9 +21,9 @@ helpviewer_keywords:
 - ALTER DATABASE ENCRYPTION KEY
 ms.assetid: f88dac4b-efe0-47ed-9808-972a4381377e
 caps.latest.revision: 28
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969

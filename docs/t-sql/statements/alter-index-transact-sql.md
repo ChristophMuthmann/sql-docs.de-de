@@ -44,9 +44,9 @@ helpviewer_keywords:
 - page locks [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 caps.latest.revision: 222
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460

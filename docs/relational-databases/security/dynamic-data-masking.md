@@ -11,9 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 caps.latest.revision: 41
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010

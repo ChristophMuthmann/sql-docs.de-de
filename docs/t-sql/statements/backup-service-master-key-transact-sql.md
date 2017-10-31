@@ -25,9 +25,9 @@ helpviewer_keywords:
 - service master key [SQL Server], exporting
 ms.assetid: f8356683-6680-4f1c-9eaf-5c29a9a9020d
 caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

@@ -18,9 +18,9 @@ helpviewer_keywords:
 - Reparent [Database Engine]
 ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

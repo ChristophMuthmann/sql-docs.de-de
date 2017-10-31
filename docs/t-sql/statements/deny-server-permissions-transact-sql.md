@@ -18,9 +18,9 @@ helpviewer_keywords:
 - DENY statement, servers
 ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
 caps.latest.revision: 34
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

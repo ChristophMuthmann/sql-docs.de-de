@@ -23,9 +23,9 @@ helpviewer_keywords:
 - output packets written to network [SQL Server]
 ms.assetid: 8a322162-24c9-48e9-bfa4-c060e4e11dba
 caps.latest.revision: 23
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6

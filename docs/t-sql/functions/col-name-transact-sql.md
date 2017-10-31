@@ -21,9 +21,9 @@ helpviewer_keywords:
 - names [SQL Server], columns
 ms.assetid: 214144ab-f2bc-4052-83cf-caf0a85c4cc6
 caps.latest.revision: 28
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74

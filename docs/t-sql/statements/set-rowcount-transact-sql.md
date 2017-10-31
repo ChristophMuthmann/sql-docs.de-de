@@ -27,9 +27,9 @@ helpviewer_keywords:
 - queries [SQL Server], stopping
 ms.assetid: c6966fb7-6421-47ef-98f3-82351f2f6bdc
 caps.latest.revision: 43
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

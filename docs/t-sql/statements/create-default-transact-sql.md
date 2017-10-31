@@ -22,9 +22,9 @@ helpviewer_keywords:
 - DEFAULT definition
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 caps.latest.revision: 47
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

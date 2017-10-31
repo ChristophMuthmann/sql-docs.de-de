@@ -19,9 +19,9 @@ helpviewer_keywords:
 - ROUND function [Transact-SQL]
 ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
 caps.latest.revision: 40
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74

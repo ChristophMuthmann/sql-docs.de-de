@@ -18,9 +18,9 @@ helpviewer_keywords:
 - PWDENCRYPT function [Transact-SQL]
 ms.assetid: 333e9a43-1099-4b9b-b941-4b0b016f47f3
 caps.latest.revision: 9
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

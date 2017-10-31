@@ -13,9 +13,9 @@ helpviewer_keywords:
 - 41301 (Database Engine error)
 ms.assetid: c6127e1e-2846-4ee9-bc42-2d896ea9730e
 caps.latest.revision: 10
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4

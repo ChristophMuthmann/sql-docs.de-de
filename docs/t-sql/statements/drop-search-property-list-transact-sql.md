@@ -21,9 +21,9 @@ helpviewer_keywords:
 - search property lists [SQL Server], deleting
 ms.assetid: 7c7ce52a-6b77-4a1c-9abf-d5feb664bea8
 caps.latest.revision: 23
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

@@ -25,9 +25,9 @@ helpviewer_keywords:
 - SET QUOTED_IDENTIFIER statement
 ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
 caps.latest.revision: 48
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

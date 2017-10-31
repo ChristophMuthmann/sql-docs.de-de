@@ -46,9 +46,9 @@ helpviewer_keywords:
 - creating stored procedures
 ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 caps.latest.revision: 180
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: c2a0a43aefe59bc11f16445b5ee0c781179a33fa

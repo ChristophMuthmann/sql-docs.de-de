@@ -18,9 +18,9 @@ helpviewer_keywords:
 - denying permissions [SQL Server], certificates
 ms.assetid: 5971ff9e-d6a4-414b-ae1f-819bc2e348f5
 caps.latest.revision: 22
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

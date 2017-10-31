@@ -23,9 +23,9 @@ helpviewer_keywords:
 - blank characters [SQL Server]
 ms.assetid: 369ed340-1a09-4597-a9eb-6720156cd39a
 caps.latest.revision: 36
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

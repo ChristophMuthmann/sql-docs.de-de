@@ -23,9 +23,9 @@ helpviewer_keywords:
 - synonyms [SQL Server], creating
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 caps.latest.revision: 43
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

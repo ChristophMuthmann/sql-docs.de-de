@@ -22,9 +22,9 @@ helpviewer_keywords:
 - ALTER SYMMETRIC KEY statement
 ms.assetid: d3c776a4-7d71-4e6f-84fc-1db47400c465
 caps.latest.revision: 44
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

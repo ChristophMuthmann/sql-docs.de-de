@@ -23,9 +23,9 @@ helpviewer_keywords:
 - ENABLE TRIGGER statement
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

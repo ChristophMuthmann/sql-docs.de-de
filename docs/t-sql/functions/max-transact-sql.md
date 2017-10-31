@@ -20,9 +20,9 @@ helpviewer_keywords:
 - maximum values [SQL Server]
 ms.assetid: 9b002b69-ab5e-472d-b12e-dc2fbe35ef42
 caps.latest.revision: 38
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

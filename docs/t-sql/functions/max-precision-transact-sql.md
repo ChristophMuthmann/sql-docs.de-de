@@ -22,9 +22,9 @@ helpviewer_keywords:
 - data types [SQL Server], precision
 ms.assetid: 9e7158a1-e503-422a-b326-3c9b06e181b2
 caps.latest.revision: 30
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6

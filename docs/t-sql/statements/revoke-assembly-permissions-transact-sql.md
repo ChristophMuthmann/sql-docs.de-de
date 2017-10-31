@@ -16,9 +16,9 @@ helpviewer_keywords:
 - assemblies [CLR integration], permissions
 ms.assetid: f88e9da1-2c0b-4bdd-9ec5-44467707cb46
 caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

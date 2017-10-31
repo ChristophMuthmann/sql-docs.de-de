@@ -20,9 +20,9 @@ helpviewer_keywords:
 - ATN2 function
 ms.assetid: 014b291e-7cd7-4c39-b20d-5db3a9f0505d
 caps.latest.revision: 36
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
