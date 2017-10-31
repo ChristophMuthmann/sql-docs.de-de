@@ -23,9 +23,9 @@ helpviewer_keywords:
 - dropping credentials
 ms.assetid: df22c826-317d-45a6-b078-186acb65f71e
 caps.latest.revision: 31
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

@@ -21,9 +21,9 @@ helpviewer_keywords:
 - IDENT_CURRENT function
 ms.assetid: 21517ced-39f5-4cd8-8d9c-0a0b8aff554a
 caps.latest.revision: 49
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

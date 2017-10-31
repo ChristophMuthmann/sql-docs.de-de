@@ -16,9 +16,9 @@ helpviewer_keywords:
 - permissions [SQL Server], system objects
 ms.assetid: 84983238-dd7d-45bd-99bb-52c9d8e96a87
 caps.latest.revision: 20
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

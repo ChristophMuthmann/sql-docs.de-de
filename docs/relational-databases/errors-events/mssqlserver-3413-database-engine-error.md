@@ -13,9 +13,9 @@ helpviewer_keywords:
 - 3413 (Database Engine error)
 ms.assetid: 3fa07637-ba93-4633-aaf2-ade7d18bc487
 caps.latest.revision: 16
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4

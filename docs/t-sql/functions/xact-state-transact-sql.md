@@ -23,9 +23,9 @@ helpviewer_keywords:
 - active transactions
 ms.assetid: e9300827-e793-4eb6-9042-ffa0204aeb50
 caps.latest.revision: 41
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

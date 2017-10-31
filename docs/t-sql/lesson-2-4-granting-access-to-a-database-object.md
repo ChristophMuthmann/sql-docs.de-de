@@ -15,9 +15,9 @@ helpviewer_keywords:
 - granting access to database objects
 ms.assetid: a44d9bbf-f58e-4734-b7f4-eb3b492b777b
 caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

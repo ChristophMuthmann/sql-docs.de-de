@@ -25,9 +25,9 @@ helpviewer_keywords:
 - dates [SQL Server], dateparts
 ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
 caps.latest.revision: 59
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

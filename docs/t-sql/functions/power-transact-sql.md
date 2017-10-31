@@ -18,9 +18,9 @@ helpviewer_keywords:
 - POWER function
 ms.assetid: 0fd34494-90b9-4559-8011-a8c1b9f40239
 caps.latest.revision: 41
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

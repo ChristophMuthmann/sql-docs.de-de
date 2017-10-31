@@ -24,9 +24,9 @@ helpviewer_keywords:
 - SET CURSOR_CLOSE_ON_COMMIT statement
 ms.assetid: 7b976154-98ce-4a06-bbae-7e59c34211f7
 caps.latest.revision: 38
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

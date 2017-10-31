@@ -24,9 +24,9 @@ helpviewer_keywords:
 - clear text signing
 ms.assetid: b1c46159-cc76-4205-a841-8f4a71742f80
 caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

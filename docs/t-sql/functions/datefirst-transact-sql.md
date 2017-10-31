@@ -32,9 +32,9 @@ helpviewer_keywords:
 - options [SQL Server], date
 ms.assetid: a178868e-49d5-4bd5-a5e2-1283409c8ce6
 caps.latest.revision: 46
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6

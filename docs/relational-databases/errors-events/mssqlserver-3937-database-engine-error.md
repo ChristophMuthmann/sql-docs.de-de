@@ -13,9 +13,9 @@ helpviewer_keywords:
 - 3937 (Database Engine error)
 ms.assetid: 312d5bbe-c8de-42db-af4b-4ccb448ce6ef
 caps.latest.revision: 12
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4

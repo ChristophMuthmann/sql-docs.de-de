@@ -23,9 +23,9 @@ helpviewer_keywords:
 - asymmetric keys [SQL Server], modifying
 ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

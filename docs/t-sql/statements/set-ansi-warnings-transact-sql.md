@@ -23,9 +23,9 @@ helpviewer_keywords:
 - ANSI_WARNINGS option
 ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
 caps.latest.revision: 33
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

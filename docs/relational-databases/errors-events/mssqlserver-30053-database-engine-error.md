@@ -11,9 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 ms.assetid: 8ad23889-e243-4bd7-bc3e-150403399d89
 caps.latest.revision: 11
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4

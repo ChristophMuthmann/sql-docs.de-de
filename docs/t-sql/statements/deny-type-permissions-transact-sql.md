@@ -18,9 +18,9 @@ helpviewer_keywords:
 - denying permissions [SQL Server], types
 ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
 caps.latest.revision: 28
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

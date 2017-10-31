@@ -13,9 +13,9 @@ helpviewer_keywords:
 - 4846 (Database Engine error)
 ms.assetid: a455e809-1883-4c7d-b3e3-835ee5bfe258
 caps.latest.revision: 19
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4

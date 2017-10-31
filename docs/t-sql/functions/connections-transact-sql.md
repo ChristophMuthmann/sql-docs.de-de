@@ -22,9 +22,9 @@ helpviewer_keywords:
 - attempted connections
 ms.assetid: c59836a8-443c-4b9a-8b96-8863ada97ac7
 caps.latest.revision: 32
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6

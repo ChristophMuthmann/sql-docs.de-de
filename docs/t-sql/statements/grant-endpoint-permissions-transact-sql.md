@@ -18,9 +18,9 @@ helpviewer_keywords:
 - permissions [SQL Server], endpoints
 ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
 caps.latest.revision: 16
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

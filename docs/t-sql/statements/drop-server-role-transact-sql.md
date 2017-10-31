@@ -19,9 +19,9 @@ helpviewer_keywords:
 - DROP SERVER ROLE statement
 ms.assetid: a2a1e6e6-e40c-4d6a-81be-d197b80bf226
 caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

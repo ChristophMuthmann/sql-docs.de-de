@@ -22,9 +22,9 @@ helpviewer_keywords:
 - users [SQL Server], names
 ms.assetid: 29248949-325b-4063-9f55-5a445fb35c6e
 caps.latest.revision: 43
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74

@@ -18,9 +18,9 @@ helpviewer_keywords:
 - SMALLDATETIMEFROMPARTS function
 ms.assetid: 7467fdab-e588-419c-9e29-42caec34a9ea
 caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74

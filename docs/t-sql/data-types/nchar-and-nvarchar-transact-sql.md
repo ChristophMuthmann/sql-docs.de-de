@@ -16,9 +16,9 @@ helpviewer_keywords:
 - nchar data type
 ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
 caps.latest.revision: 44
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

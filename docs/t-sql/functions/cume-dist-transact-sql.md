@@ -19,9 +19,9 @@ helpviewer_keywords:
 - analytic functions, CUME_DIST
 ms.assetid: 491b07f3-9ffd-4cdd-93e5-5abb636fc5ef
 caps.latest.revision: 19
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

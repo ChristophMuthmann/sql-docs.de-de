@@ -33,9 +33,9 @@ helpviewer_keywords:
 - LOGINPROPERTY function
 ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
 caps.latest.revision: 42
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

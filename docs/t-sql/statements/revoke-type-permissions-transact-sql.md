@@ -17,9 +17,9 @@ helpviewer_keywords:
 - type permissions [SQL Server]
 ms.assetid: 3969c7e9-ca10-4c67-971b-25d2dfccf650
 caps.latest.revision: 30
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

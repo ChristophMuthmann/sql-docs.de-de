@@ -13,9 +13,9 @@ helpviewer_keywords:
 - 5228 (Database Engine error)
 ms.assetid: 5e83c617-4aa2-4755-bcc5-a798c46b97e4
 caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4

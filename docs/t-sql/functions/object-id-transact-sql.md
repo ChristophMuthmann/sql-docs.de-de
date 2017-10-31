@@ -26,9 +26,9 @@ helpviewer_keywords:
 - verifying object exists
 ms.assetid: f89286db-440f-4218-a828-30881ce3077a
 caps.latest.revision: 63
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

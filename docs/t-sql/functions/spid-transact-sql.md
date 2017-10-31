@@ -24,9 +24,9 @@ helpviewer_keywords:
 - process ID of current user process
 ms.assetid: df955d32-8194-438e-abee-387eebebcbb7
 caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6

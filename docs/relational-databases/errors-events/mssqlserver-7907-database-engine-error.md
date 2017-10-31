@@ -13,9 +13,9 @@ helpviewer_keywords:
 - 7907 (Database Engine error)
 ms.assetid: a1c94e4a-7e91-46e0-9fac-07bbbf6dd018
 caps.latest.revision: 16
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4

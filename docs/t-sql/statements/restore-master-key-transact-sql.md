@@ -26,9 +26,9 @@ helpviewer_keywords:
 - RESTORE MASTER KEY statement
 ms.assetid: 70ceb951-31a2-4fc4-a0c1-e6c18eeb3ae7
 caps.latest.revision: 23
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

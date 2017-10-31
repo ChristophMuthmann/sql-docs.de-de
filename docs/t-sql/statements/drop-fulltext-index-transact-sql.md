@@ -22,9 +22,9 @@ helpviewer_keywords:
 - dropping full-text indexes
 ms.assetid: 7443a4ab-1d43-4a22-bbba-a07f620892cb
 caps.latest.revision: 33
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

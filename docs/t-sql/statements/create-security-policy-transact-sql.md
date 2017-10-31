@@ -26,9 +26,9 @@ helpviewer_keywords:
 - Row-Level Security
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

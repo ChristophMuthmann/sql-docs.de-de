@@ -39,9 +39,9 @@ helpviewer_keywords:
 - groups [SQL Server], roles
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 caps.latest.revision: 49
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Active
 ms.translationtype: HT
 ms.sourcegitcommit: 47b0c3fc8aba635dcfd573536b770f13a40956fa

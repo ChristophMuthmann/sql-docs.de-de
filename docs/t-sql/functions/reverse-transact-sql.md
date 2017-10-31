@@ -20,9 +20,9 @@ helpviewer_keywords:
 - reverse character expressions
 ms.assetid: 555d8877-7cc7-4955-ae2c-6215aca313b7
 caps.latest.revision: 46
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74

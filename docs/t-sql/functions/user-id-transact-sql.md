@@ -23,9 +23,9 @@ helpviewer_keywords:
 - identification numbers [SQL Server], databases
 ms.assetid: 67fd29bc-eda9-4d4d-b148-5d3659181a43
 caps.latest.revision: 31
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

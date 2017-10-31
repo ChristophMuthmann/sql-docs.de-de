@@ -32,9 +32,9 @@ helpviewer_keywords:
 - inserting data
 ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 caps.latest.revision: 136
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

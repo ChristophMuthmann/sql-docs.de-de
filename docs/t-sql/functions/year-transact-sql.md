@@ -23,9 +23,9 @@ helpviewer_keywords:
 - dateparts [SQL Server], year
 ms.assetid: 74aa7ccc-8575-4018-80cf-14aeca379687
 caps.latest.revision: 44
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969

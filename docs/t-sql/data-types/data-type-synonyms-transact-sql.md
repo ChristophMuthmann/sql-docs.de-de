@@ -17,9 +17,9 @@ helpviewer_keywords:
 - synonyms [SQL Server], data types
 ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

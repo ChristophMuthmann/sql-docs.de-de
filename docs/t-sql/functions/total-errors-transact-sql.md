@@ -24,9 +24,9 @@ helpviewer_keywords:
 - read/write errors
 ms.assetid: 09e62428-ee0e-4ef5-b969-da9d255f1199
 caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6

@@ -22,9 +22,9 @@ helpviewer_keywords:
 - local language IDs [SQL Server]
 ms.assetid: 7a0fc089-2a48-4a81-9d78-2aaedb540d37
 caps.latest.revision: 30
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6

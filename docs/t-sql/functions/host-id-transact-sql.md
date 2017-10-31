@@ -21,9 +21,9 @@ helpviewer_keywords:
 - identification numbers [SQL Server], workstations
 ms.assetid: 36ba56d4-20d7-4cd1-aa2a-e40a6c0a4e39
 caps.latest.revision: 22
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

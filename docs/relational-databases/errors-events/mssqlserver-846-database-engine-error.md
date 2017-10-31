@@ -13,9 +13,9 @@ helpviewer_keywords:
 - 846 (Database Engine error)
 ms.assetid: ccf367eb-06b0-42b8-b4d6-2b88f4a502d3
 caps.latest.revision: 17
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4

@@ -15,9 +15,9 @@ helpviewer_keywords:
 - database permissions
 ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
 caps.latest.revision: 12
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
