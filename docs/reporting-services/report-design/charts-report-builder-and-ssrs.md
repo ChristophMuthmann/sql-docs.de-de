@@ -25,7 +25,8 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d7c46a132a6d559e6299910d6b2e4e117e650f45
 ms.contentlocale: de-de
@@ -151,3 +152,4 @@ Weitere Zeit, die Sie aufwenden müssen sorgfältig vorbereiten und auswerten Ih
  [Lernprogramm: Hinzufügen eines Balkendiagramms zum Bericht &#40; Berichts-Generator &#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   
+

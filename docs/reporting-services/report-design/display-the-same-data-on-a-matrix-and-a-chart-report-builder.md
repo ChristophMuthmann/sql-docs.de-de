@@ -15,7 +15,8 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bf125e2438d3d79662920c8fbc93faab8e8024d4
 ms.contentlocale: de-de
@@ -107,3 +108,4 @@ ms.lasthandoff: 08/09/2017
  [Diagramme &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
+
