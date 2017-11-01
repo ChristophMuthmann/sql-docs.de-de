@@ -32,7 +32,7 @@ ms.lasthandoff: 06/22/2017
   Mit Wartungsplänen wird ein Workflow der Tasks erstellt, die erforderlich sind, um sicherzustellen, dass Ihre Datenbank optimiert und regelmäßig gesichert wird und dass sie keine Inkonsistenzen aufweist. Mit dem Wartungsplanungs-Assistenten werden zudem zentrale Wartungspläne erstellt, doch durch das manuelle Erstellen von Plänen steht Ihnen eine sehr viel höhere Flexibilität zur Verfügung.  
   
 ## <a name="benefits-of-maintenance-plans"></a>Vorteile von Wartungsplänen  
- In [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)]wird mit Wartungsplänen ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket erstellt, das durch einen Auftrag des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt wird. Wartungspläne können manuell oder automatisch in bestimmten Zeitabständen ausgeführt werden.  
+ In [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)] wird mit Wartungsplänen ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket erstellt, das durch einen Auftrag des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt wird. Wartungspläne können manuell oder automatisch in bestimmten Zeitabständen ausgeführt werden.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Wartungspläne bieten folgende Funktionen:  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="maintenance-plan-functionality"></a>Funktionalität von Wartungsplänen  
  Wartungspläne können zum Ausführen der folgenden Tasks erstellt werden:  
   
--   Erneutes Organisieren der Daten auf den Daten- und Indexseiten durch erneutes Erstellen von Indizes mit einem neuen Füllfaktor. Durch das erneute Erstellen von Indizes mit einem neuen Füllfaktor wird sichergestellt, dass für den Inhalt von Datenbankseiten das Verhältnis zwischen der Menge an Daten und freiem Speicherplatz ausgewogen ist. Darüber hinaus wird das zukünftige Wachstum beschleunigt. Weitere Informationen finden Sie unter [Angeben des Füllfaktors für einen Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
+-   Reorganisieren der Daten auf den Daten- und Indexseiten durch erneutes Erstellen von Indizes mit einem neuen Füllfaktor. Durch das erneute Erstellen von Indizes mit einem neuen Füllfaktor wird sichergestellt, dass für den Inhalt von Datenbankseiten das Verhältnis zwischen der Menge an Daten und freiem Speicherplatz ausgewogen ist. Darüber hinaus wird das zukünftige Wachstum beschleunigt. Weitere Informationen finden Sie unter [Angeben des Füllfaktors für einen Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
   
 -   Komprimieren von Datendateien durch Entfernen leerer Datenbankseiten.  
   
