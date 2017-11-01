@@ -52,7 +52,7 @@ GO
 ```  
   
 ##  <a name="BasicsDisabling"></a> Deaktivieren und erneutes Aktivieren von nicht transaktionalem Zugriff auf Datenbankebene  
- Um den exklusiven Zugriff abzurufen, der für bestimmte administrative Tasks erforderlich ist, müssen Sie möglicherweise nicht transaktionalen Zugriff vorübergehend deaktivieren.  
+ Um den exklusiven Zugriff zu erhalten, der für bestimmte administrative Tasks erforderlich ist, müssen Sie möglicherweise nicht transaktionalen Zugriff vorübergehend deaktivieren.  
   
  **Verhalten der ALTER DATABASE-Anweisung beim Ändern der Ebene von nicht transaktionalem Zugriff**  
   
