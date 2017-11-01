@@ -18,7 +18,8 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6021dec1c7d072041710c62a533d4e19ead4aa53
 ms.contentlocale: de-de
@@ -112,3 +113,4 @@ ms.lasthandoff: 08/09/2017
  [Lernprogramm: Hinzufügen einer Sparkline zum Bericht &#40; Berichts-Generator &#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)   
   
   
+

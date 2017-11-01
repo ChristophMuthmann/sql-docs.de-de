@@ -15,7 +15,8 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b0085b620ed18da8020b4a3960fe6d27eb6ffce7
 ms.contentlocale: de-de
@@ -102,3 +103,4 @@ ms.lasthandoff: 08/09/2017
  [Abfrage-Designer &#40; Berichts-Generator &#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   
+

@@ -15,7 +15,8 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c8916eaf7a88d74e88c6364148259373a6d0d75d
 ms.contentlocale: de-de
@@ -141,3 +142,4 @@ ms.lasthandoff: 08/09/2017
  [Berichtsserver-Authoring Konzepte &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   
+
