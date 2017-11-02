@@ -1,5 +1,5 @@
 ---
-title: "Löschen eines Attributs (Master Data Services) | Microsoft Docs"
+title: "Löschen eines Attributs (Master Data Services) | Microsoft-Dokumentation"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/15/2017
@@ -15,14 +15,15 @@ helpviewer_keywords:
 - deleting attributes [Master Data Services]
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1d36564680430b7d35c415e23586c7fd0c47e084
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.workload: Inactive
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 630faa003648c05c9f159b8dfa5fb6369823c040
 ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="delete-an-attribute-master-data-services"></a>Löschen eines Attributs (Master Data Services)
@@ -63,9 +64,10 @@ ms.lasthandoff: 09/01/2017
 8.  Klicken Sie im Bestätigungsdialogfeld auf **OK**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Attribute &#40; Master Data Services &#41;](../master-data-services/attributes-master-data-services.md)   
- [Domänenbasierte Attribute &#40; Master Data Services &#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
- [Erstellen Sie ein Textattribut &#40; Master Data Services &#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
- [Erstellen Sie ein domänenbasiertes Attribut &#40; Master Data Services &#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+ [Attribute &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
+ [Domänenbasierte Attribute &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
+ [Erstellen eines Textattributs &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
+ [Erstellen eines domänenbasierten Attributs &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
   
+
