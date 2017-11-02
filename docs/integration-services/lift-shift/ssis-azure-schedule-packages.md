@@ -76,12 +76,12 @@ Erstellen Sie den Auftrag mithilfe eines Transact-SQL-Skripts, die ähnlich wie 
 ```sql
 -- Create Elastic Jobs target group 
 EXEC jobs.sp_add_target_group 'TargetGroup' 
-? 
+
 -- Add Elastic Jobs target group member 
 EXEC jobs.sp_add_target_group_member @target_group_name='TargetGroup', 
     @target_type='SqlDatabase', @server_name='YourSQLDBServer.database.windows.net',
     @database_name='SSISDB' 
-? 
+
 -- Add a job to schedule SSIS package execution
 EXEC jobs.sp_add_job @job_name='ExecutePackageJob', @description='Description', 
     @schedule_interval_type='Minutes', @schedule_interval_count=60
