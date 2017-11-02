@@ -18,8 +18,7 @@ caps.latest.revision: 20
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5a9b6a8f5eb6238fac6b0588ecf6c79227e9ec7d
 ms.contentlocale: de-de
@@ -103,4 +102,3 @@ ms.lasthandoff: 08/09/2017
  [Glossar &#40; Berichts-Generator &#41;](../../reporting-services/report-builder/glossary-report-builder.md)  
   
   
-
