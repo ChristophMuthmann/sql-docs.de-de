@@ -1,5 +1,5 @@
 ---
-title: Sofortiges Anwenden von Elementberechtigungen (Master Data Services) | Microsoft-Dokumentation
+title: Sofortiges Anwenden von Elementberechtigungen (Master Data Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,15 +14,14 @@ helpviewer_keywords:
 - permissions [Master Data Services], applying member permissions immediately
 ms.assetid: 5b16de66-5c39-49f5-992f-402a9eb319aa
 caps.latest.revision: 6
-author: smartysanthosh
-ms.author: nagavo
-manager: craigg
-ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: a3ac0d4510b77c5e0c6fe95ff7cbf2c6aae433be
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1549958a5c84045eccbb52c5fac2f2f2b09d316e
 ms.contentlocale: de-de
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="immediately-apply-member-permissions-master-data-services"></a>Sofortiges Anwenden von Elementberechtigungen (Master Data Services)
@@ -54,8 +53,7 @@ ms.lasthandoff: 09/07/2017
 4.  Führen Sie die Abfrage aus.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Zuweisen von Hierarchieelementberechtigungen &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
- [Berechtigungen für Hierarchieelemente &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
+ [Zuweisen von Berechtigungen für Hierarchieelemente &#40; Master Data Services &#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
+ [Berechtigungen für Hierarchieelemente &#40; Master Data Services &#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
   
   
-
