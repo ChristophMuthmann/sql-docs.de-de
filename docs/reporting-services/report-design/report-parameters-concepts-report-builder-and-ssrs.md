@@ -15,8 +15,7 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cb4044deed8935af354e1c6f15ace89f0b3e5010
 ms.contentlocale: de-de
@@ -55,4 +54,3 @@ ms.lasthandoff: 08/09/2017
  [Lernprogramm: Hinzufügen eines Parameters zum Bericht &#40; Berichts-Generator &#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
   
-
