@@ -94,7 +94,7 @@ Die DBCC-Befehle verwenden Tabellensperren anstelle der internen Datenbankmoment
 >  Wird DBCC CHECKALLOC oder der entsprechende Teil von DBCC CHECKDB mithilfe der WITH TABLOCK-Option ausgeführt, muss hierfür die Datenbank exklusiv gesperrt (X) werden. Diese Datenbanksperre kann nicht festgelegt werden, auf **Tempdb** oder **master** und erzeugt wahrscheinlich bei allen anderen Datenbanken einen Fehler.  
   
 > [!NOTE]  
->  DBCC CHECKDB schlägt fehl, wenn es sich bei der Ausführung für **master** Wenn eine interne Datenbankmomentaufnahme erstellt werden kann.  
+>  Bei der Ausführung von DBCC CHECKDB für die Masterdatenbank tritt ein Fehler auf, wenn eine interne Datenbankmomentaufnahme nicht erstellt werden kann.  
   
 ## <a name="progress-reporting-for-dbcc-commands"></a>Statusmeldungen für DBCC-Befehle  
 Die **Sys. dm_exec_requests** -Katalogsicht enthält Informationen zum Fortschritt und zur aktuellen Ausführungsphase der Befehle DBCC CHECKDB, CHECKFILEGROUP und CHECKTABLE. Die **Percent_complete** Spalte zeigt den Fortschritt des Befehls, und die **Befehl** Spalte meldet die aktuelle Phase der Ausführung des Befehls.
