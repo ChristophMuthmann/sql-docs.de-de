@@ -65,7 +65,7 @@ ms.lasthandoff: 09/13/2017
 
 ## <a name="dbo-user-and-dbo-schema"></a>dbo-Benutzer und dbo-Schema
 
-Die `dbo`-Verwendung ist ein bestimmter Benutzerprinzipal in jeder Datenbank. Alle SQL Server-Administratoren, Mitglieder der festen Serverrolle `sysadmin`, `sa`-Anmeldenamen und Besitzer der Datenbank treten in Datenbanken als `dbo`-Benutzer ein. Der `dbo`-Benutzer besitzt alle Berechtigungen in der Datenbank und kann nicht beschränkt oder gelöscht werden. `dbo` steht für Datenbankbesitzer. Doch das `dbo`-Benutzerkonto ist nicht identisch mit der festen Datenbankrolle `db_owner`, und die feste Datenbankrolle `db_owner` ist wiederum nicht identisch mit dem Benutzerkonto, das als Besitzer der Datenbank aufgezeichnet ist.     
+Die `dbo`-Verwendung ist ein bestimmter Benutzerprinzipal in jeder Datenbank. Alle SQL Server-Administratoren, Mitglieder der festen Serverrolle `sysadmin`, der `sa`-Anmeldename und Besitzer der Datenbank treten in der Datenbanken als `dbo`-Benutzer auf. Der `dbo`-Benutzer besitzt alle Berechtigungen in der Datenbank und kann nicht beschränkt oder gelöscht werden. `dbo` steht für Datenbankbesitzer. Doch das `dbo`-Benutzerkonto ist nicht identisch mit der festen Datenbankrolle `db_owner`, und die feste Datenbankrolle `db_owner` ist wiederum nicht identisch mit dem Benutzerkonto, das als Besitzer der Datenbank aufgezeichnet ist.     
 Der `dbo`-Benutzer besitzt das `dbo`-Schema. Das `dbo`-Schema ist das Standardschema für alle Benutzer, sofern kein anderes Schema angegeben wird.  Das `dbo`-Schema kann nicht gelöscht werden.
   
 ## <a name="public-server-role-and-database-role"></a>Serverrolle und Datenbankrolle „public“  
