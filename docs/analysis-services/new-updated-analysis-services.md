@@ -4,7 +4,7 @@ description: "Codeausschnitte anzeigen aktualisierter Inhalt in zuletzt geänder
 services: na
 documentationcenter: 
 author: MightyPen
-manager: jhubbard
+manager: kfile
 editor: 
 ms.service: na
 ms.topic: updart-autogen

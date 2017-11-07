@@ -25,9 +25,9 @@ helpviewer_keywords:
 - Key element
 ms.assetid: 09d3cd48-49f7-4b58-b8bb-ca75b81bb02f
 caps.latest.revision: 12
-author: jeannt
-ms.author: jeannt
-manager: erikre
+author: Minewiskan
+ms.author: owend
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

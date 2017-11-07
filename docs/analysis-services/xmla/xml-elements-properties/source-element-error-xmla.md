@@ -25,9 +25,9 @@ helpviewer_keywords:
 - Source element
 ms.assetid: eed47b9f-0501-4baf-8cac-3ea839a859c3
 caps.latest.revision: 10
-author: jeannt
-ms.author: jeannt
-manager: erikre
+author: Minewiskan
+ms.author: owend
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

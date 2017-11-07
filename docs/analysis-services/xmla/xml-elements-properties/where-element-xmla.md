@@ -25,9 +25,9 @@ helpviewer_keywords:
 - Where element
 ms.assetid: 81fb4190-3379-4ddf-8795-a0772f3b92bb
 caps.latest.revision: 12
-author: jeannt
-ms.author: jeannt
-manager: erikre
+author: Minewiskan
+ms.author: owend
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

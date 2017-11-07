@@ -25,9 +25,9 @@ helpviewer_keywords:
 - Queries element
 ms.assetid: e199412a-23f1-4d11-9e72-11f184ad9602
 caps.latest.revision: 11
-author: jeannt
-ms.author: jeannt
-manager: erikre
+author: Minewiskan
+ms.author: owend
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

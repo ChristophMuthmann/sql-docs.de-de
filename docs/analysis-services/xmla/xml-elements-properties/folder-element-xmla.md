@@ -25,9 +25,9 @@ helpviewer_keywords:
 - Folder element
 ms.assetid: 87b305b0-57e3-4ec3-9d80-f1bcf3ce7540
 caps.latest.revision: 12
-author: jeannt
-ms.author: jeannt
-manager: erikre
+author: Minewiskan
+ms.author: owend
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

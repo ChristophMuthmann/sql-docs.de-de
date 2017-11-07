@@ -25,9 +25,9 @@ helpviewer_keywords:
 - DbTableName element
 ms.assetid: 0ffda645-2a88-4f42-8929-9d7385c19a74
 caps.latest.revision: 12
-author: jeannt
-ms.author: jeannt
-manager: erikre
+author: Minewiskan
+ms.author: owend
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

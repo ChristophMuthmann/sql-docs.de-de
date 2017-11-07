@@ -13,7 +13,7 @@ ms.assetid: aa928dc5-d00d-4f8a-80b9-7e6973d2196c
 caps.latest.revision: 6
 author: HeidiSteen
 ms.author: heidist
-manager: erikre
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4

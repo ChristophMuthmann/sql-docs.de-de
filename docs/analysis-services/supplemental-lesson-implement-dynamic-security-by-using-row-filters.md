@@ -13,7 +13,7 @@ applies_to:
 ms.assetid: 
 author: Minewiskan
 ms.author: owend
-manager: erikre
+manager: kfile
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 14bc3755dcbb92af2f75ed47a4df6843fe4782b4

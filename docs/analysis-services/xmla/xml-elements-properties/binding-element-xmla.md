@@ -25,9 +25,9 @@ helpviewer_keywords:
 - Binding element
 ms.assetid: d5acd8d4-8551-449a-ae30-d0ba828cc02d
 caps.latest.revision: 12
-author: jeannt
-ms.author: jeannt
-manager: erikre
+author: Minewiskan
+ms.author: owend
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
