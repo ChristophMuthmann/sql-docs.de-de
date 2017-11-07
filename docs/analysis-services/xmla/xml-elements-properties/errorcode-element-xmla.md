@@ -25,9 +25,9 @@ helpviewer_keywords:
 - ErrorCode element
 ms.assetid: da187661-b15e-4b95-8b49-7820ebcced40
 caps.latest.revision: 11
-author: jeannt
-ms.author: jeannt
-manager: erikre
+author: Minewiskan
+ms.author: owend
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

@@ -15,7 +15,7 @@ ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 caps.latest.revision: 5
 author: Minewiskan
 ms.author: owend
-manager: erikre
+manager: kfile
 ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4

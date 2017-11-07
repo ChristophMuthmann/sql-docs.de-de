@@ -25,9 +25,9 @@ helpviewer_keywords:
 - RequestType element
 ms.assetid: 54270a57-e327-4233-b4b2-d85b44652ac5
 caps.latest.revision: 12
-author: jeannt
-ms.author: jeannt
-manager: erikre
+author: Minewiskan
+ms.author: owend
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

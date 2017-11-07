@@ -25,9 +25,9 @@ helpviewer_keywords:
 - Subscribe command
 ms.assetid: aad50dd7-44d4-4d83-a973-187f9aed35ec
 caps.latest.revision: 14
-author: jeannt
-ms.author: jeannt
-manager: erikre
+author: Minewiskan
+ms.author: owend
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

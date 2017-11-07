@@ -25,9 +25,9 @@ helpviewer_keywords:
 - Locations element
 ms.assetid: 630929cb-f0dc-472a-86bc-28b67e907c3d
 caps.latest.revision: 11
-author: jeannt
-ms.author: jeannt
-manager: erikre
+author: Minewiskan
+ms.author: owend
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

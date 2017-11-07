@@ -25,9 +25,9 @@ helpviewer_keywords:
 - Steps element
 ms.assetid: a6821a2a-89ec-418b-b2dd-92adf2ccc20e
 caps.latest.revision: 11
-author: jeannt
-ms.author: jeannt
-manager: erikre
+author: Minewiskan
+ms.author: owend
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

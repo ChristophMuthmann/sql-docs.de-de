@@ -22,7 +22,7 @@ ms.assetid: fab47643-5bfd-424e-a0f7-69e665db6bab
 caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
-manager: jhubbard
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4

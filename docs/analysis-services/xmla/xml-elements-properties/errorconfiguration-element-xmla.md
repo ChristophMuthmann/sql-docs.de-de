@@ -25,9 +25,9 @@ helpviewer_keywords:
 - ErrorConfiguration element
 ms.assetid: 5e350f5f-3a14-49b4-80c0-208c61f336d5
 caps.latest.revision: 13
-author: jeannt
-ms.author: jeannt
-manager: erikre
+author: Minewiskan
+ms.author: owend
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

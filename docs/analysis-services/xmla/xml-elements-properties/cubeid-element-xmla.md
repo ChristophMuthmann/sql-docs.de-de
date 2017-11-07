@@ -25,9 +25,9 @@ helpviewer_keywords:
 - CubeID element
 ms.assetid: 9dba605a-c45e-4730-827b-b7c55c8110da
 caps.latest.revision: 12
-author: jeannt
-ms.author: jeannt
-manager: erikre
+author: Minewiskan
+ms.author: owend
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

@@ -25,9 +25,9 @@ helpviewer_keywords:
 - Object element
 ms.assetid: db7feb39-7cc1-4b54-8979-77ce402ef71f
 caps.latest.revision: 11
-author: jeannt
-ms.author: jeannt
-manager: erikre
+author: Minewiskan
+ms.author: owend
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

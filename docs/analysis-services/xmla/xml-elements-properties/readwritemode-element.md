@@ -16,9 +16,9 @@ helpviewer_keywords:
 - ReadWriteMode command
 ms.assetid: 379bcaca-bb7e-4934-a9e7-21f8ede2fdc7
 caps.latest.revision: 13
-author: jeannt
-ms.author: jeannt
-manager: erikre
+author: Minewiskan
+ms.author: owend
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

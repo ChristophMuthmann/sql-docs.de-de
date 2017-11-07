@@ -25,9 +25,9 @@ helpviewer_keywords:
 - SkippedLevels element
 ms.assetid: 4887b557-0ffc-4f42-b6b9-c98ad1208ca5
 caps.latest.revision: 11
-author: jeannt
-ms.author: jeannt
-manager: erikre
+author: Minewiskan
+ms.author: owend
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

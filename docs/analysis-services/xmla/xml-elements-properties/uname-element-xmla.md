@@ -25,9 +25,9 @@ helpviewer_keywords:
 - UName element
 ms.assetid: b4916d44-cf77-4d4c-b4e5-a0a98192d057
 caps.latest.revision: 13
-author: jeannt
-ms.author: jeannt
-manager: erikre
+author: Minewiskan
+ms.author: owend
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

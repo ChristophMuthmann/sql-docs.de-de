@@ -25,9 +25,9 @@ helpviewer_keywords:
 - Restore command
 ms.assetid: bb5a0c92-3927-4fa4-975b-6e4d79e0a912
 caps.latest.revision: 26
-author: jeannt
-ms.author: jeannt
-manager: erikre
+author: Minewiskan
+ms.author: owend
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

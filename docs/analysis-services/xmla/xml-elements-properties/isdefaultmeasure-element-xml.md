@@ -14,9 +14,9 @@ applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 523cf3d7-9df0-4f9d-8486-9109de8d3cca
 caps.latest.revision: 6
-author: jeannt
-ms.author: jeannt
-manager: erikre
+author: Minewiskan
+ms.author: owend
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

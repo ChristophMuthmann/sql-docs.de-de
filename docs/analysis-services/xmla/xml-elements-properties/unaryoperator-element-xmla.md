@@ -25,9 +25,9 @@ helpviewer_keywords:
 - UnaryOperator element
 ms.assetid: 4dc9cfbe-6f8b-42bc-8d3a-42f48ca5d299
 caps.latest.revision: 11
-author: jeannt
-ms.author: jeannt
-manager: erikre
+author: Minewiskan
+ms.author: owend
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

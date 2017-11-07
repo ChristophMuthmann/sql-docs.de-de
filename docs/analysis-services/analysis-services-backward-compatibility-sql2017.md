@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 
 author: Minewiskan
 ms.author: owend
-manager: erikre
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 6419c75df8a5b6742b102a3f56adfa7e2efd9ef1

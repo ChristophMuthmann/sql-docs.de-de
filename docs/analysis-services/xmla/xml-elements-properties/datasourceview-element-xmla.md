@@ -25,9 +25,9 @@ helpviewer_keywords:
 - DataSourceView element
 ms.assetid: c4a4360f-7342-484b-bac1-0a247e8f279d
 caps.latest.revision: 12
-author: jeannt
-ms.author: jeannt
-manager: erikre
+author: Minewiskan
+ms.author: owend
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

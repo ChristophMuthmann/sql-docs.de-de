@@ -25,9 +25,9 @@ helpviewer_keywords:
 - ConnectionString element
 ms.assetid: 3b0575aa-79ed-4f14-ae7e-dd587af4cdb1
 caps.latest.revision: 13
-author: jeannt
-ms.author: jeannt
-manager: erikre
+author: Minewiskan
+ms.author: owend
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

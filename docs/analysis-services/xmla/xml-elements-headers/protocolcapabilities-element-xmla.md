@@ -25,9 +25,9 @@ helpviewer_keywords:
 - ProtocolCapabilities element
 ms.assetid: f923896a-3f32-46a3-9543-388c30b3465d
 caps.latest.revision: 13
-author: jeannt
-ms.author: jeannt
-manager: erikre
+author: Minewiskan
+ms.author: owend
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

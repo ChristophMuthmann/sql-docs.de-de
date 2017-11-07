@@ -25,9 +25,9 @@ helpviewer_keywords:
 - CustomRollupProperties element
 ms.assetid: 4abf0129-e529-4355-b8d5-6f4e6a88e796
 caps.latest.revision: 12
-author: jeannt
-ms.author: jeannt
-manager: erikre
+author: Minewiskan
+ms.author: owend
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1

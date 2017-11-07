@@ -25,9 +25,9 @@ helpviewer_keywords:
 - DatabaseID element
 ms.assetid: 2df720dd-9b42-449a-9df6-0d12930603f0
 caps.latest.revision: 13
-author: jeannt
-ms.author: jeannt
-manager: erikre
+author: Minewiskan
+ms.author: owend
+manager: kfile
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
