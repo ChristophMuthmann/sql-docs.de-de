@@ -97,7 +97,7 @@ FROM dbo.test;
   
 ## <a name="see-also"></a>Siehe auch  
  [CAST und CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [ZEITZONE &AMP;#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
+ [ZEITZONE &#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
   
 
