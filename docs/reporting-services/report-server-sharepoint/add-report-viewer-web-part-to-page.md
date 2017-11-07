@@ -50,7 +50,7 @@ Einen Bericht, aus SQL Server Reporting Services oder Power BI-Berichtsserver, i
 
     ![Fügen Sie ein Webpart aus dem Office-Menüband.](media/sharepoint-insert-web-part.png)
 
-4. Klicken Sie unter **Kategorien**Option ** SQL Server Reporting Services (einheitlicher Modus). Klicken Sie unter **Teile**Option **Berichts-Viewer**. Wählen Sie dann **hinzufügen**.
+4. Klicken Sie unter **Kategorien**Option **SQL Server Reporting Services (einheitlicher Modus). Klicken Sie unter **Teile**Option **Berichts-Viewer**. Wählen Sie dann **hinzufügen**.
 
     ![Berichts-Viewer-Webpart hinzufügen.](media/sharepoint-report-viewer-web-part.png)
 
