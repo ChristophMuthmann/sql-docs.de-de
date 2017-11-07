@@ -24,7 +24,7 @@ ms.lasthandoff: 10/10/2017
 
 In diesem Thema zeigt, wie die **Mssql** -Erweiterung für Visual Studio-Code (Visual Studio-Code), SQL Server-Datenbanken zu entwickeln.
 
-Visual Studio-Code ist eine grafische Code-Editor für Linux, Mac OS und Windows, der Erweiterungen unterstützt. Die [ **Mssql** -Erweiterung für Visual Studio Code] ermöglicht es Ihnen, eine Verbindung mit SQL Server, Abfrage mit Transact-SQL (T-SQL) und die Ergebnisse anzuzeigen.
+Visual Studio-Code ist eine grafische Code-Editor für Linux, Mac OS und Windows, der Erweiterungen unterstützt. Die [**Mssql** -Erweiterung für Visual Studio Code] ermöglicht es Ihnen, eine Verbindung mit SQL Server, Abfrage mit Transact-SQL (T-SQL) und die Ergebnisse anzuzeigen.
 
 ## <a name="install-vs-code"></a>Installieren von VS-Code
 1. Wenn Sie Visual Studio-Code nicht bereits installiert haben [herunterladen und installieren Sie Visual Studio Code] auf Ihrem Computer.
