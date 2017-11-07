@@ -23,10 +23,10 @@ ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
-ms.openlocfilehash: be7e76aa26ca4b94afd2e32b40b9fbfbe92b170d
+ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
+ms.openlocfilehash: 37ad9a54e400dbf011d21ecf7227509f33af49da
 ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 11/07/2017
 
 ---
 # <a name="web-service-authentication"></a>Webdienstauthentifizierung
@@ -69,7 +69,7 @@ service.Credentials = new System.Net.NetworkCredential("username", "password", "
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen von Anwendungen mit dem Webdienst und .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Berichtsserver-Webdienst](../../../reporting-services/report-server-web-service/report-server-web-service.md)  
+ [Report Server Web Service (Report Server-Webdienst)](../../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   
 
