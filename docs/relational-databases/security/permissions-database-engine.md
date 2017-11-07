@@ -415,7 +415,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
     > [!NOTE]  
     >  Durch eine GRANT-Berechtigung auf Spaltenebene wird eine DENY-Berechtigung auf Objektebene überschrieben.  
   
-5.  Identifizieren der **erforderliche Berechtigung**.  
+5.  Identifizieren der **erforderlichen Berechtigung**.  
   
 6.  Die Berechtigungsprüfung ist nicht bestanden, wenn die **erforderliche Berechtigung** für eine der Identitäten im **Sicherheitskontext** der Objekte im **Berechtigungsbereich** direkt oder implizit verweigert werden.  
   
