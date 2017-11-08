@@ -38,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Überprüft die Integrität aller Seiten und Strukturen, die die Tabelle oder indizierte Sicht bilden.
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Überprüft die Integrität aller Seiten und Strukturen, die die Tabelle oder indizierte Sicht bilden.
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
     
 ## <a name="syntax"></a>Syntax    
@@ -160,7 +160,7 @@ Die logische Konsistenzprüfung an Indizes variiert wie folgt je nach dem Kompat
 [Anzeigen oder Ändern des Kompatibilitätsgrads einer Datenbank](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
     
 ## <a name="internal-database-snapshot"></a>Interne Datenbankmomentaufnahme    
-DBCC CHECKTABLE verwendet eine interne Datenbankmomentaufnahme, um die für die Ausführung dieser Überprüfungen erforderliche Transaktionskonsistenz bereitzustellen. Weitere Informationen finden Sie unter [Anzeigen der Größe der Datei mit geringer Dichte einer Datenbank-Momentaufnahme &#40; Transact-SQL &#41; ](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) und im Abschnitt "DBCC interne Datenbankmomentaufnahme" in [DBCC &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-transact-sql.md).
+DBCC CHECKTABLE verwendet eine interne Datenbankmomentaufnahme, um die für die Ausführung dieser Überprüfungen erforderliche Transaktionskonsistenz bereitzustellen. Weitere Informationen finden Sie unter [Anzeigen der Größe der Datei mit geringer Dichte einer Datenbank-Momentaufnahme & #40; Transact-SQL & #41; ](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) und im Abschnitt "DBCC interne Datenbankmomentaufnahme" in [DBCC & #40; Transact-SQL & #41; ](../../t-sql/database-console-commands/dbcc-transact-sql.md).
 Wenn eine Momentaufnahme nicht erstellt werden kann oder TABLOCK angegeben ist, erwirbt DBCC CHECKTABLE eine freigegebene Tabellensperre, um die erforderliche Konsistenz zu erhalten.
     
 > [!NOTE]    
