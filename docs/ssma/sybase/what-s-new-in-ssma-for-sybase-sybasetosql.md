@@ -1,5 +1,5 @@
 ---
-title: "Was &#39; s in SSMA für die SAP ASE (SybaseToSQL) | Microsoft Docs"
+title: "Neuheiten bei SSMA für die SAP ASE (SybaseToSQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/30/2017
 ms.prod: sql-non-specified
@@ -19,13 +19,13 @@ ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: 91c748f24b360934e160cea8b03c2c2259766a5c
+ms.sourcegitcommit: a435479b9cad332215b1f44f7d881f5055b2fefd
+ms.openlocfilehash: 79f9f01b8811f67f252c68192825d17084467da1
 ms.contentlocale: de-de
-ms.lasthandoff: 09/30/2017
+ms.lasthandoff: 11/08/2017
 
 ---
-# <a name="what39s-new-in-ssma-for-sap-ase-sybasetosql"></a>Was &#39; s in SSMA für die SAP ASE (SybaseToSQL)
+# <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Was ist neu in SSMA für die SAP ASE (SybaseToSQL)
 In diesem Thema werden die SSMA für SAP ASE (früher SSMA für Sybase) Änderungen in jeder Version aufgelistet. 
 
 ## <a name="ssma-v76"></a>SSMA v7.6

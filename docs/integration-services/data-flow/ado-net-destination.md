@@ -24,10 +24,10 @@ ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 70508825dfb2bdf60bcd77bdaad9ba9dbb19e7eb
+ms.sourcegitcommit: e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1
+ms.openlocfilehash: dc8301025936bb5f1b0ad31db6b15d90416580ba
 ms.contentlocale: de-de
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 11/08/2017
 
 ---
 # <a name="ado-net-destination"></a>ADO NET-Ziel
