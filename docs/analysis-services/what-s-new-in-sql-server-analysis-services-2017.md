@@ -1,6 +1,6 @@
 ---
 title: Neuigkeiten in SQL Server 2017 Analysis Services | Microsoft Docs
-ms.date: 10/03/2017
+ms.date: 10/27/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -10,13 +10,13 @@ ms.topic: article
 ms.assetid: 1eb6afc9-76ed-45a2-a188-374a4fc23224
 author: Minewiskan
 ms.author: owend
-manager: erikre
+manager: kfile
 ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 59f753e85f2d10d70d7784335205e0d231c5ae00
+ms.sourcegitcommit: 14ce5d9110f49ce155e89a96e1f72618f2879661
+ms.openlocfilehash: 68410430d97a0e3033e17deb7d03a0ba8fecd436
 ms.contentlocale: de-de
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 11/08/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>Neuigkeiten in SQL Server 2017 Analysis Services
@@ -47,9 +47,9 @@ So aktualisieren Sie ein vorhandenes tabellarisches Modell in SSDT im Projektmap
 Es ist wichtig zu bedenken, sobald Sie ein vorhandenes Modell 1400 aktualisieren, können nicht herabstufen. Achten Sie darauf, dass Sie eine Sicherung Ihrer 1200-Modell-Datenbank beibehalten.
 
 ## <a name="modern-get-data-experience"></a>Moderne Get Data-Funktion
-Wenn es sich um das Erfassen von Daten aus Datenquellen in tabellarischen Modellen geht, führt SQL Server Data Tools (SSDT) die moderne **Daten abrufen** für Modelle mit Kompatibilitätsgrad 1400 auftreten. Diese neue Funktion basiert auf einer ähnlichen Funktion in Power BI Desktop und Microsoft Excel 2016. Moderne Get Data-Erfahrung bietet enorme Datentransformation und die Fähigkeit zum Kombinieren von Daten mit dem Get Data-Abfrage-Generator und M-Ausdrücke.
+Wenn es sich um das Importieren von Daten aus Datenquellen in tabellarischen Modellen geht, führt SQL Server Data Tools (SSDT) die moderne **Daten abrufen** für Modelle mit Kompatibilitätsgrad 1400 auftreten. Diese neue Funktion basiert auf einer ähnlichen Funktion in Power BI Desktop und Microsoft Excel 2016. Moderne Get Data-Erfahrung bietet enorme Datentransformation und die Fähigkeit zum Kombinieren von Daten mit dem Get Data-Abfrage-Generator und M-Ausdrücke.
 
-Die moderne Daten abrufen auftreten bereitgestellten Unterstützung für eine Breite Palette von zusätzliche Datenquelle. Zukünftige Updates werden die zusätzlichen Datenquellen unterstützt.
+Die moderne Daten abrufen Erfahrung bietet Unterstützung für eine Vielzahl von Datenquellen. In Zukunft wird werden Updates Unterstützung für noch länger enthalten.
 
 ![AS_Get_Data_in_SSDT](../analysis-services/media/as-get-data-in-ssdt.png)
 

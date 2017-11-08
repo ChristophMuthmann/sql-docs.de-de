@@ -14,14 +14,17 @@ ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2e3aac41bd87f52998edf366d7c3da2326de3f26
+ms.sourcegitcommit: 50f9efe65f14dbd73ccbc3c6e81307c3893c469f
+ms.openlocfilehash: 85ba8b35fa698769bd390837855729f3edbc7291
 ms.contentlocale: de-de
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 11/08/2017
 
 ---
 # <a name="programming-guidelines"></a>Programmierrichtlinien
-[!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)] Die Features für die Programmierung von der [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 and 13.1 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] unter Mac OS und Linux basieren auf ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Native Client basiert auf ODBC in Windows Data Access Components ([ODBC Programmer's Reference](http://go.microsoft.com/fwlink/?LinkID=45250)).  
+
+[!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+
+Die Features für die Programmierung von der [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 and 13.1 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] unter Mac OS und Linux basieren auf ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Native Client basiert auf ODBC in Windows Data Access Components ([ODBC Programmer's Reference](http://go.microsoft.com/fwlink/?LinkID=45250)).  
 
 Eine ODBC-Anwendung verwenden kann, Multiple Active Result Sets (MARS) und andere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Besonderheiten dazu `/usr/local/include/msodbcsql.h` nach einschließlich der UnixODBC-Header (`sql.h`, `sqlext.h`, `sqltypes.h`, und `sqlucode.h`). Verwenden Sie die gleichen symbolischen Namen für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-konkreter Elemente, die in Ihrer Windows-ODBC-Anwendungen aus.  
 
