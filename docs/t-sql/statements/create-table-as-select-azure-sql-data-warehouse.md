@@ -2,7 +2,7 @@
 title: Erstellen der Tabelle als Option (Azure SQL Datawarehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 10/07/2016
-ms.prod: sql-non-specified
+ms.prod: 
 ms.reviewer: 
 ms.service: sql-data-warehouse
 ms.suite: 
