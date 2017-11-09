@@ -46,13 +46,13 @@ ms.lasthandoff: 09/01/2017
   
 DECLARE   
 {   
-    { @local_variable [AS] data_type  | [ = value ] }  
+    { @local_variable [AS] data_type  [ = value ] }  
   | { @cursor_variable_name CURSOR }  
 } [,...n]   
 | { @table_variable_name [AS] <table_type_definition> }   
   
 <table_type_definition> ::=   
-     TABLE ( { <column_definition> | <table_constraint> } [ ,... ] )   
+     TABLE ( { <column_definition> | <table_constraint> } [ ,...n] )   
   
 <column_definition> ::=   
      column_name { scalar_data_type | AS computed_column_expression }  
@@ -69,7 +69,7 @@ DECLARE
      }   
   
 <table_constraint> ::=   
-     { { PRIMARY KEY | UNIQUE } ( column_name [ ,... ] )   
+     { { PRIMARY KEY | UNIQUE } ( column_name [ ,...n] )   
      | CHECK ( search_condition )   
      }   
   
