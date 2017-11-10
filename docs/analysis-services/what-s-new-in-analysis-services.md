@@ -1,5 +1,5 @@
 ---
-title: Was &#39; s in Analysis Services | Microsoft Docs
+title: Was ist neu in Analysis Services | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/24/2017
@@ -23,7 +23,7 @@ ms.contentlocale: de-de
 ms.lasthandoff: 09/01/2017
 
 ---
-# <a name="what39s-new-in-analysis-services"></a>Was &#39; s in Analysis Services
+# <a name="what39s-new-in-analysis-services"></a>Was ist neu in Analysis Services
 SQL Server 2016 Analysis Services umfasst viele neue Verbesserungen, die Leistung zu verbessern, einfacher Lösung erstellen, automatisierte datenbankverwaltung bereitstellen, verbesserte Beziehungen mit bidirektionale kreuzfilterung, parallele Verarbeitung von Partitionen und vieles mehr. Das Herzstück der meisten Verbesserungen in dieser Version ist der neue Kompatibilitätsgrad 1200 für tabellarische Modelldatenbanken.     
 
 ## <a name="azure-analysis-services"></a>Azure Analysis Services
@@ -144,7 +144,7 @@ Durch Updates der Bearbeitungsleiste können Sie Formeln einfacher schreiben, in
 ### <a name="dax-variables"></a>DAX-Variablen    
 Diese Version bietet jetzt Unterstützung für Variablen in DAX. Variablen können jetzt das Ergebnis eines Ausdrucks als benannte Variable speichern, die dann als Argument für andere Measureausdrücke übergeben werden kann. Sobald die resultierenden Werte für einen Variablenausdruck berechnet wurden, werden diese Werte nicht wieder geändert, auch wenn auf die Variable in einem anderen Ausdruck verwiesen wird. Weitere Informationen finden Sie unter [VAR-Funktion](http://msdn.microsoft.com/library/mt243785.aspx).    
 ### <a name="new-dax-functions"></a>Neue DAX-Funktionen
-Mit dieser Version stellt DAX über&50; neue Funktionen zur Unterstützung schnellerer Berechnungen und verbesserter Visualisierungen in Power BI bereit. Weitere Informationen finden Sie unter [Neue DAX-Funktionen](http://msdn.microsoft.com/library/mt704075.aspx).
+Mit dieser Version stellt DAX über 50 neue Funktionen zur Unterstützung schnellerer Berechnungen und verbesserter Visualisierungen in Power BI bereit. Weitere Informationen finden Sie unter [Neue DAX-Funktionen](http://msdn.microsoft.com/library/mt704075.aspx).
 ### <a name="save-incomplete-measures"></a>Speichern unvollständiger Measures
 Sie können jetzt unvollständige DAX-Measures direkt in einem Projekt mit einem tabellarischen 1200-Modell speichern und erneut verwenden, wenn Sie fortfahren möchten.
 ### <a name="additional-dax-enhancements"></a>Zusätzliche DAX-Erweiterungen
