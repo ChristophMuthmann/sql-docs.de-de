@@ -364,7 +364,7 @@ Das liegt daran, dass Verfügbarkeitsgruppenlistenern in jedem Subnetz, das Verf
   
 **Weitere Informationen**  
   
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] enthält MSOLAP.6. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] - und [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssGemini](../includes/ssgemini-md.md)] -Arbeitsmappen verwenden MSOLAP.&5;. Wenn MSOLAP.5 auf dem Computer, auf dem Excel Services ausgeführt werden, nicht installiert ist, können die Datenmodelle von Excel Services nicht geladen werden.  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] enthält MSOLAP.6. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] - und [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssGemini](../includes/ssgemini-md.md)] -Arbeitsmappen verwenden MSOLAP.5. Wenn MSOLAP.5 auf dem Computer, auf dem Excel Services ausgeführt werden, nicht installiert ist, können die Datenmodelle von Excel Services nicht geladen werden.  
   
 ### <a name="62-msolap5-must-be-downloaded-installed-and-registered-for-a-sharepoint-2013-new-farm-configured-with-sql-server-2014"></a>6.2 Für eine neue SharePoint 2013-Farm, die mit SQL Server 2014 konfiguriert ist, muss MSOLAP.5 heruntergeladen, installiert und registriert werden  
 **Problem:**  
