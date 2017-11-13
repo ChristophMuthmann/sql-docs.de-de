@@ -15,8 +15,7 @@ caps.latest.revision: 5
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 53c07f85e9ec0bfca627b8ff941eddfde03336df
 ms.contentlocale: de-de
@@ -125,7 +124,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="file-names"></a>Dateinamen  
  Dateinamen in einer URL für Berichtselemente müssen eine Dateinamenerweiterung aufweisen. Durch die Dateinamenerweiterung wird der Dateityp bestimmt. Wenn Sie Berichtselemente über ein Berichterstellungstool veröffentlichen, wird die Dateinamenerweiterung automatisch eingeschlossen. Wenn Sie ein Berichtselement in eine SharePoint-Bibliothek hochladen, müssen Sie eine Dateinamenerweiterung einschließen.  
   
- Wenn Sie für Elemente, die Sie auf eine SharePoint-Website hochladen, keine Dateinamenerweiterung angeben, tritt der **rsInvalidDataSourceReference** -Fehler auf. Dateinamen dürfen keine Zeichen enthalten, die von SharePoint-Anwendungen nicht als gültige Dateinamenzeichen erkannt werden. Verwenden Sie keines der folgenden Zeichen: # % & * : &amp;lt; &amp;gt; ? / { | }.  
+ Wenn Sie für Elemente, die Sie auf eine SharePoint-Website hochladen, keine Dateinamenerweiterung angeben, tritt der **rsInvalidDataSourceReference** -Fehler auf. Dateinamen dürfen keine Zeichen enthalten, die von SharePoint-Anwendungen nicht als gültige Dateinamenzeichen erkannt werden. Verwenden Sie keines der folgenden Zeichen: # % & * : < > ? / { | }.  
   
 ## <a name="differences-between-uploading-and-publishing"></a>Unterschiede zwischen Hochladen und Veröffentlichen  
  Wenn Sie den Berichts-Designer oder den Berichts-Generator zum Veröffentlichen von Berichten und zugehörigen Dateien in einer Bibliothek verwenden, werden die Dateien überprüft, bevor sie hinzugefügt werden. Wenn Sie Berichte und zugehörige Dateien mithilfe der **Upload** -Aktion in einer SharePoint-Bibliothek hochladen, erfolgt keine Überprüfung. Sie wissen erst, ob die Datei gültig ist, wenn Sie den Bericht verwalten, bearbeiten oder ausführen und somit auf ihn zugreifen.  

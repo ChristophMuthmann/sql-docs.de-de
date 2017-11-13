@@ -22,8 +22,7 @@ caps.latest.revision: 41
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Active
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3f91523a9cf7555e8d42fc546fff450827ab3f41
 ms.contentlocale: de-de
@@ -56,13 +55,13 @@ ms.lasthandoff: 08/09/2017
   
 -   Verwenden Sie Parameter, um Hauptberichte mit Drillthroughberichten, Unterberichten sowie verknüpften Berichten zu verbinden. Beim Entwurf von Berichtssätzen können Sie jeden Bericht so entwerfen, dass er Antworten auf ganz bestimmte Fragen liefert. Jeder Bericht kann eine andere Sicht oder Detailebene zu verwandten Informationen bereitstellen. Zum Bereitstellen eines Satzes untereinander verbundener Berichte erstellen Sie Parameter für die verbundenen Daten in den Zielberichten.  
   
-     Weitere Informationen finden Sie unter [Drillthroughberichte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md), [Unterberichte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md) und [Erstellen eines verknüpften Berichts](../../reporting-services/reports/create-a-linked-report.md).  
+     Weitere Informationen finden Sie unter [Drillthroughberichte &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md), [Unterberichte &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md), und [Erstellen eines verknüpften Berichts](../../reporting-services/reports/create-a-linked-report.md).  
   
 -   Anpassen von Parametersätzen für mehrere Benutzer. Erstellen Sie auf der Grundlage eines Verkaufsberichts auf dem Berichtsserver zwei verknüpfte Berichte. In einem der verknüpften Berichte werden vordefinierte Parameterwerte für Vertriebsmitarbeiter, im anderen vordefinierte Parameterwerte für Verkaufsmanager verwendet. Für beide Berichte wird die gleiche Berichtsdefinition verwendet.  
   
  **Berichtspräsentation anpassen**  
   
--   Senden Sie einem Berichtsserver über eine URL-Anforderung Befehle, um das Rendering eines Berichts anzupassen. Weitere Informationen finden Sie unter [URL-Zugriff &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md) und [Übergeben von Berichtsparametern innerhalb einer URL](../../reporting-services/pass-a-report-parameter-within-a-url.md).  
+-   Senden Sie einem Berichtsserver über eine URL-Anforderung Befehle, um das Rendering eines Berichts anzupassen. Weitere Informationen finden Sie unter [URL-Zugriff &#40; SSRS &#41; ](../../reporting-services/url-access-ssrs.md) und [übergeben von Berichtsparametern innerhalb einer URL](../../reporting-services/pass-a-report-parameter-within-a-url.md).  
   
 -   Ermöglichen der Angabe von Werte durch Benutzer, um die Darstellung eines Berichts anzupassen. Beispiel: Angabe eines booleschen Parameters, um anzugeben, ob alle geschachtelten Zeilengruppen in einer Tabelle erweitert oder reduziert werden sollen.  
   
@@ -75,7 +74,7 @@ ms.lasthandoff: 08/09/2017
   
  ![Anzeigen des Berichts mit Parametern](../../reporting-services/report-design/media/ssrb-rptparamviewrpt.png "Anzeigen des Berichts mit Parametern")  
   
-1.  **Parameterbereich** Auf der Berichts-Viewer-Symbolleiste werden für jeden Parameter eine Eingabeaufforderung und ein Standardwert angezeigt. Sie können das Layout von Parametern im Parameterbereich anpassen. Weitere Informationen finden Sie unter [Benutzerdefiniertes Anpassen des Parameterbereichs in einem Bericht &#40;Berichts-Generator&#41;](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)erstellen.  
+1.  **Parameterbereich** Auf der Berichts-Viewer-Symbolleiste werden für jeden Parameter eine Eingabeaufforderung und ein Standardwert angezeigt. Sie können das Layout von Parametern im Parameterbereich anpassen. Weitere Informationen finden Sie unter [Benutzerdefiniertes Anpassen des Parameterbereichs &#40;Berichts-Generator&#41;](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
   
 2.  **@SalesDateParameter** Parameters @SalesDate Datentyp **"DateTime"**. Neben dem Textfeld wird die Aufforderung „Datum auswählen“ angezeigt. Geben Sie zum Ändern des Datums ein neues Datum in das Textfeld ein, oder verwenden Sie das Kalendersteuerelement.  
   
@@ -124,10 +123,10 @@ ms.lasthandoff: 08/09/2017
   
  Fügen Sie einen Berichtsteil hinzu, der Verweise auf einen Parameter oder ein freigegebenes Dataset mit Variablen enthält.  
   
- Berichtsteile werden auf dem Berichtsserver gespeichert und können von anderen Benutzern in deren Berichten verwendet werden. Berichtsteile, bei denen es sich um Parameter handelt, können nicht vom Berichtsserver aus verwaltet werden. Im Berichtsteilkatalog können Sie nach Parametern suchen und sie nach dem Hinzufügen in Ihrem Bericht konfigurieren. Weitere Informationen finden Sie unter [Berichtsteile &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
+ Berichtsteile werden auf dem Berichtsserver gespeichert und können von anderen Benutzern in deren Berichten verwendet werden. Berichtsteile, bei denen es sich um Parameter handelt, können nicht vom Berichtsserver aus verwaltet werden. Im Berichtsteilkatalog können Sie nach Parametern suchen und sie nach dem Hinzufügen in Ihrem Bericht konfigurieren. Weitere Informationen finden Sie unter [Report Parts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  Parameter können als separater Berichtsteil für Datenbereiche veröffentlicht werden, die abhängige Datasets mit Parametern enthalten. Obwohl Parameter als Berichtsteil aufgeführt werden, können Sie einem Bericht keinen Berichtsteilparameter direkt hinzufügen. Fügen Sie stattdessen den Berichtsteil hinzu, und alle notwendigen Berichtsparameter werden automatisch aus Datasetabfragen generiert, die enthalten sind oder auf die vom Berichtsteil verwiesen wird. Weitere Informationen zu Berichtsteilen finden Sie unter [Berichtsteile &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md) und [Berichtsteile im Berichts-Designer &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
+>  Parameter können als separater Berichtsteil für Datenbereiche veröffentlicht werden, die abhängige Datasets mit Parametern enthalten. Obwohl Parameter als Berichtsteil aufgeführt werden, können Sie einem Bericht keinen Berichtsteilparameter direkt hinzufügen. Fügen Sie stattdessen den Berichtsteil hinzu, und alle notwendigen Berichtsparameter werden automatisch aus Datasetabfragen generiert, die enthalten sind oder auf die vom Berichtsteil verwiesen wird. Weitere Informationen zu berichtsteilen finden Sie unter [Berichtsteile &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md) und [Berichtsteile im Berichts-Designer &#40; SSRS &#41; ](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
 ### <a name="parameter-values"></a>Parameterwerte  
  Ihnen stehen folgende Optionen für das Auswählen von Parameterwerten im Bericht zur Verfügung.  
@@ -165,7 +164,7 @@ ms.lasthandoff: 08/09/2017
   
  Verwenden Sie den Abfrage-Designer für die Datenquelle, um eine parametrisierte Abfrage zu erstellen.  
   
--   Im Falle von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfragen unterstützen verschiedene Datenquellen eine unterschiedliche Parametersyntax. Unterstützt werden Parameter, die in der Abfrage anhand der Position oder des Namens identifiziert werden. Weitere Informationen finden Sie in den Themen zu spezifischen externen Datenquellentypen unter [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md). Im relationalen Abfrage-Designer müssen Sie die Parameteroption für einen Filter auswählen, um eine parametrisierte Abfrage zu erstellen. Weitere Informationen finden Sie unter [Benutzeroberfläche des relationalen Abfrage-Designers &#40;Berichts-Generator&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md).  
+-   Im Falle von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfragen unterstützen verschiedene Datenquellen eine unterschiedliche Parametersyntax. Unterstützt werden Parameter, die in der Abfrage anhand der Position oder des Namens identifiziert werden. Weitere Informationen finden Sie unter Themen zu spezifischen externen Datenquellentypen in [Berichtsdatasets &#40; SSRS &#41; ](../../reporting-services/report-data/report-datasets-ssrs.md). Im relationalen Abfrage-Designer müssen Sie die Parameteroption für einen Filter auswählen, um eine parametrisierte Abfrage zu erstellen. Weitere Informationen finden Sie unter [Benutzeroberfläche des relationalen Abfrage-Designers (Berichts-Generator)](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md).  
   
 -   Für Abfragen, die auf einer mehrdimensionalen Datenquelle wie Microsoft SQL Server Analysis Services, SAP NetWeaver BI oder Hyperion Essbase basieren, können Sie angeben, ob ein Parameter auf Basis eines Filters erstellt werden soll, den Sie im Abfrage-Designer angeben. Weitere Informationen finden Sie unter [Abfrage-Designer &#40;Berichts-Generator&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) im Thema über den entsprechenden Abfrage-Designer für die Datenerweiterung.  
   
@@ -176,15 +175,15 @@ ms.lasthandoff: 08/09/2017
   
 -   **Berichtsparametereigenschaften.** Ändern Sie Berichtsparameterwerte direkt auf dem Berichtsserver, unabhängig von der Berichtsdefinition.  
   
--   **Zwischengespeicherte Berichte.** Zum Erstellen eines Cacheplans für einen Bericht muss jeder Parameter über einen Standardwert verfügen. Weitere Informationen finden Sie unter [Zwischenspeichern von Berichten &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md).  
+-   **Zwischengespeicherte Berichte.** Zum Erstellen eines Cacheplans für einen Bericht muss jeder Parameter über einen Standardwert verfügen. Weitere Informationen finden Sie unter [Zwischenspeichern von Berichten &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)bestand darin die einzige Möglichkeit, den Cache vorab zu laden.  
   
--   **Zwischengespeicherte freigegebene Datasets.** Zum Erstellen eines Cacheplans für ein freigegebenes Dataset muss jeder Parameter über einen Standardwert verfügen. Weitere Informationen finden Sie unter [Zwischenspeichern von Berichten &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md).  
+-   **Zwischengespeicherte freigegebene Datasets.** Zum Erstellen eines Cacheplans für ein freigegebenes Dataset muss jeder Parameter über einen Standardwert verfügen. Weitere Informationen finden Sie unter [Zwischenspeichern von Berichten &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)bestand darin die einzige Möglichkeit, den Cache vorab zu laden.  
   
 -   **Verknüpfte Berichte.** Sie können verknüpfte Berichte mit voreingestellten Parameterwerten erstellen, um Daten für verschiedene Zielgruppen zu filtern. Weitere Informationen finden Sie unter [Erstellen eines verknüpften Berichts](../../reporting-services/reports/create-a-linked-report.md).  
   
 -   **Berichtsabonnements.** Sie können Parameterwerte angeben, um Daten unter Verwendung von Abonnements zu filtern und Berichte unter Verwendung von Abonnements zu übermitteln. Weitere Informationen finden Sie unter [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
--   **URL-Zugriff** Sie können Parameterwerte in einer URL zu einem Bericht angeben. Sie können auch Berichte ausführen und Parameterwerte mit URL-Zugriff angeben. Weitere Informationen finden Sie unter [URL-Zugriff &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md).  
+-   **URL-Zugriff** Sie können Parameterwerte in einer URL zu einem Bericht angeben. Sie können auch Berichte ausführen und Parameterwerte mit URL-Zugriff angeben. Weitere Informationen finden Sie unter [URL-Zugriff &#40; SSRS &#41; ](../../reporting-services/url-access-ssrs.md).  
   
  Parametereigenschaften für einen veröffentlichten Bericht bleiben im Allgemeinen erhalten, wenn Sie die Berichtsdefinition erneut veröffentlichen. Falls die Berichtsdefinition als derselbe Bericht erneut veröffentlicht wird und die Parameternamen und Datentypen unverändert sind, bleiben die Eigenschaftseinstellungen erhalten. Wenn Sie Parameter in der Berichtsdefinition hinzufügen bzw. löschen oder den Datentyp oder den Namen eines vorhandenen Parameters ändern, müssen Sie möglicherweise die Parametereigenschaften in dem veröffentlichten Bericht ändern.  
   
