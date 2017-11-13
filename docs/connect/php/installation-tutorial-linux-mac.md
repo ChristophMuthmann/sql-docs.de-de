@@ -374,6 +374,6 @@ function FormatErrors( $errors )
 }
 ?>
 ```
-Zeigen Sie Ihren Browser auf http://localhost/testsql.php (Http://localhost:8080/testsql.php auf Mac OS). Sie sollten jetzt mit Ihrer SQL Server/Azure SQL-Datenbank herstellen können.
+Zeigen Sie Ihren Browser auf http://localhost/testsql.php (http://localhost:8080/testsql.php auf Mac OS). Sie sollten jetzt mit Ihrer SQL Server/Azure SQL-Datenbank herstellen können.
 
 
