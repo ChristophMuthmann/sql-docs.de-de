@@ -53,7 +53,7 @@ Ein Batch von SQL-Anweisungen ist eine Gruppe von mindestens zwei SQL-Anweisunge
           WHERE CustID = @CustomerID AND Status = 'OPEN'  
     ```  
   
-     Die **CREATE PROCEDURE** -Anweisung selbst ist ein Batch von SQL-Anweisungen. Die Prozedur erstellt wird, ist jedoch ein Batch von SQL-Anweisungen. Keine Semikolons trennen Sie die beiden **wählen** Anweisungen da die **CREATE PROCEDURE** -Anweisung ist spezifisch für SQL Server und SQL Server erfordert keine Semikolons, um mehrere Anweisungen in einem ** CREATE PROCEDURE** Anweisung.  
+     Die **CREATE PROCEDURE** -Anweisung selbst ist ein Batch von SQL-Anweisungen. Die Prozedur erstellt wird, ist jedoch ein Batch von SQL-Anweisungen. Keine Semikolons trennen Sie die beiden **wählen** Anweisungen da die **CREATE PROCEDURE** -Anweisung ist spezifisch für SQL Server und SQL Server erfordert keine Semikolons, um mehrere Anweisungen in einem  **CREATE PROCEDURE** Anweisung.  
   
 -   **Arrays von Parametern** Arrays von Parametern mit einer parametrisierten SQL-Anweisung als eine effektive Möglichkeit für das Ausführen von Massenvorgängen verwendet werden können. Beispielsweise können Arrays von Parametern verwendet werden, mit den folgenden **einfügen** Anweisung mehrere Zeilen in der Tabelle Zeilen eingefügt werden, während der Ausführung nur einer einzelnen SQL-Anweisung:  
   

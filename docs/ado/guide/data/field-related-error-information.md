@@ -26,7 +26,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="field-related-error-information"></a>Fehler im Zusammenhang mit dem Feld Informationen
-Wenn ein Fehler auf ein Feld direkt verknüpft ist – z. B. wenn die Daten nicht vorhanden ist oder wenn es sich um den falschen Typ für das Feld ist – Sie können weitere Informationen zur Ursache des Problems abrufen, indem Sie untersuchen die **Feld** des Objekts **Status ** Eigenschaft. Diese Eigenschaft wurde verbessert, um spezifische Informationen zum Problem bereit. Dies der Fall ist, z. B. bei einem Aufruf von **UpdateBatch** ein Fehler auftritt, die Ursache des Problems können ermittelt werden die **Status** Eigenschaft von der **Felder** in jeder von den betroffenen Datensätze. Die Eigenschaft enthält einen der Werte in der **FieldStatusEnum** konstant. Die folgende Tabelle enthält die Werte, die von besonderem Interesse sind, wenn ein Fehler auftritt.  
+Wenn ein Fehler auf ein Feld direkt verknüpft ist – z. B. wenn die Daten nicht vorhanden ist oder wenn es sich um den falschen Typ für das Feld ist – Sie können weitere Informationen zur Ursache des Problems abrufen, indem Sie untersuchen die **Feld** des Objekts **Status**  Eigenschaft. Diese Eigenschaft wurde verbessert, um spezifische Informationen zum Problem bereit. Dies der Fall ist, z. B. bei einem Aufruf von **UpdateBatch** ein Fehler auftritt, die Ursache des Problems können ermittelt werden die **Status** Eigenschaft von der **Felder** in jeder von den betroffenen Datensätze. Die Eigenschaft enthält einen der Werte in der **FieldStatusEnum** konstant. Die folgende Tabelle enthält die Werte, die von besonderem Interesse sind, wenn ein Fehler auftritt.  
   
 |Konstante|Wert|Description|  
 |--------------|-----------|-----------------|  

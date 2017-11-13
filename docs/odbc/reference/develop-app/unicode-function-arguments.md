@@ -70,7 +70,7 @@ Der ODBC 3.5 (oder höher)-Treiber-Manager unterstützt ANSI- und Unicode-Versio
 |**SQLInstallDriver**||  
   
 > [!NOTE]  
->  Als veraltet markierte Funktionen haben Unterstützung für Unicode in ANSI-Zuordnung aus, da die ODBC 3.*.x* -Treiber-Manager unterstützt ODBC 2. Neukompilierung.* X* Anwendungen mit dem Unicode- **#define**.  
+>  Als veraltet markierte Funktionen haben Unterstützung für Unicode in ANSI-Zuordnung aus, da die ODBC 3.*.x* -Treiber-Manager unterstützt ODBC 2. Neukompilierung. *X* Anwendungen mit dem Unicode- **#define**.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

@@ -90,7 +90,7 @@ SQLRETURN SQLGetDiagRec(
  [Eingabe] Länge der **MessageText* -Puffers in Zeichen. Es gibt keine maximale Länge des Texts diagnosemeldung aus.  
   
  *TextLengthPtr*  
- [Ausgabe] Zeiger auf einen Puffer, in dem die Gesamtzahl der Zeichen enthalten (ohne die erforderliche Anzahl von Zeichen für die Null-Abschlusszeichen) zurückgegeben verfügbar im zurückzugebenden * \*MessageText*. Ist die Anzahl der zurückzugebenden verfügbaren Zeichen ist größer als *Pufferlänge*, den Text diagnosemeldung in * \*MessageText* auf abgeschnitten *Pufferlänge* abzüglich der Länge des ein Null-Abschlusszeichen.  
+ [Ausgabe] Zeiger auf einen Puffer, in dem die Gesamtzahl der Zeichen enthalten (ohne die erforderliche Anzahl von Zeichen für die Null-Abschlusszeichen) zurückgegeben verfügbar im zurückzugebenden  *\*MessageText*. Ist die Anzahl der zurückzugebenden verfügbaren Zeichen ist größer als *Pufferlänge*, den Text diagnosemeldung in  *\*MessageText* auf abgeschnitten *Pufferlänge* abzüglich der Länge des ein Null-Abschlusszeichen.  
   
 ## <a name="returns"></a>Rückgabewert  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  

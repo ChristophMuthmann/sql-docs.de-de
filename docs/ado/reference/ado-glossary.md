@@ -52,7 +52,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
  Eine Zuordnung zwischen einem Feld in einer Tabelle und einer Variablen. In den Visual C++ ADO-Erweiterungen **Recordset** Felder C/C++-Variablen zugeordnet werden.  
   
  Bitmaske  
- Ein numerischer Wert vorgesehen für ein Bit für Bit Wertvergleich mit anderen numerischen Werten in der Regel so kennzeichnen Sie die Optionen im Parameter oder Rückgabewerte. Dieser Vergleich erfolgt normalerweise mit bitweisen logischen Operatoren, wie z. B. **und** und **oder** in Visual Basic ** & ** und **&#124;** in C++.  
+ Ein numerischer Wert vorgesehen für ein Bit für Bit Wertvergleich mit anderen numerischen Werten in der Regel so kennzeichnen Sie die Optionen im Parameter oder Rückgabewerte. Dieser Vergleich erfolgt normalerweise mit bitweisen logischen Operatoren, wie z. B. **und** und **oder** in Visual Basic  **&**  und **&#124;** in C++.  
   
  Zum Beispiel das ADO- **FieldAttributeEnum** Werte können als Bitmasken verwendet werden, um die Attribute eines Felds zu bestimmen. Angenommen Sie, Sie möchten, um festzustellen, ob ein Feld aktualisiert wurde. Sie können mit dem folgenden Ausdruck in Visual Basic dafür testen:`Field.Attributes AND adFldUpdatable`  
   
@@ -74,7 +74,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
  Kapitel  
  Ein Verweis auf einen Bereich von Zeilen aus einer Datenquelle. In ADO ist ein Kapitel in der Regel einen Verweis auf eine andere **Recordset**.  
   
- Kapitelspalten stellen das Definieren einer *über-/* Beziehung, in dem die *übergeordneten* ist die **Recordset** , enthält der Kapitelspalte und die * untergeordnete* ist die **Recordset** durch das Kapitel dargestellt.  
+ Kapitelspalten stellen das Definieren einer *über-/* Beziehung, in dem die *übergeordneten* ist die **Recordset** , enthält der Kapitelspalte und die  *untergeordnete* ist die **Recordset** durch das Kapitel dargestellt.  
   
  Kapitel-alias  
  Ein Alias, der auf die Spalte, angefügt an das übergeordnete Element verweist.  
@@ -220,7 +220,7 @@ In diesem Thema werden Begriffe, die relevant für ADO definiert.
  eingeschränktes Sperren  
  Ein Typ der Sperre in dem die Datenseite mit einem oder mehreren Datensätzen, einschließlich des Datensatzes, die bearbeitet wird, nicht verfügbar ist, anderen Benutzern ist nur, wenn der Eintrag aktualisiert wird, indem Sie die **Update** -Methode, jedoch steht vor und nach der Aufruf von **Update**.  
   
- Eingeschränktes Sperren wird verwendet, wenn die **Recordset** -Objekt wird geöffnet, mit der **LockType** Parameter oder die Eigenschaft auf festgelegt **AdLockOptimistic** oder ** AdLockBatchOptimistic**. Siehe auch eingeschränkte sperren.  
+ Eingeschränktes Sperren wird verwendet, wenn die **Recordset** -Objekt wird geöffnet, mit der **LockType** Parameter oder die Eigenschaft auf festgelegt **AdLockOptimistic** oder  **AdLockBatchOptimistic**. Siehe auch eingeschränkte sperren.  
   
  Ordinalwert  
  Die numerische Position eines Elements innerhalb einer Bestellung. In einer Auflistung ADO ist der Ordinalwert des ersten Elements 0 (null). Das nächste Element ist eins (1) und So weiter.  

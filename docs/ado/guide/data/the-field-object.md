@@ -108,7 +108,7 @@ Jede **Feld** Objekt entspricht in der Regel an eine Spalte in einer Datenbankta
 ### <a name="dealing-with-binary-data"></a>Umgang mit Binärdaten  
  Verwenden der [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) Methode auf eine **Feld** Objekt mit dem lange Binär-oder Zeichendatentypen gefüllt. In Situationen, in dem Systemspeicher beschränkt ist, können Sie die **AppendChunk** Methode, um lange Werte in Teilen anstatt in ihrer Gesamtheit zu bearbeiten.  
   
- Wenn die **AdFldLong** bit in der **Attribute** Eigenschaft eine **Feld** -Objekts festgelegt wird, um **"true"**, können Sie die ** AppendChunk** Methode für dieses Feld.  
+ Wenn die **AdFldLong** bit in der **Attribute** Eigenschaft eine **Feld** -Objekts festgelegt wird, um **"true"**, können Sie die  **AppendChunk** Methode für dieses Feld.  
   
  Die erste **AppendChunk** rufen Sie für eine **Feld** Objekt schreibt Daten in das Feld alle vorhandenen Daten überschrieben. Nachfolgende **AppendChunk** Aufrufe an die vorhandenen Daten hinzufügen. Anfügen von Daten werden an ein Feld, und klicken Sie dann festlegen oder Lesen Sie den Wert eines anderen Felds im aktuellen Datensatz, geht davon aus ADO, dass Sie die Daten an das erste Feld anfügen abgeschlossen haben. Beim Aufrufen der **AppendChunk** Methode auf das erste Feld erneut ADO interpretiert den Aufruf als ein neues **AppendChunk** Vorgang und die vorhandenen Daten überschrieben. Zugriff auf Felder in anderen **Recordset** Objekte, die nicht der ersten Klone sind **Recordset** Objekt wird nicht unterbrochen. **AppendChunk** Vorgänge.  
   
@@ -118,7 +118,7 @@ Jede **Feld** Objekt entspricht in der Regel an eine Spalte in einer Datenbankta
   
  Jeder nachfolgende **GetChunk** Aufruf ruft Daten ab, aus denen der vorherigen **GetChunk** Aufruf unterbrochen wurde. Abrufen von Daten werden von einem Feld, und klicken Sie dann festlegen oder lesen den Wert eines anderen Felds im aktuellen Datensatz nimmt ADO jedoch, dass Sie das Abrufen von Daten aus dem ersten Feld abgeschlossen haben. Beim Aufrufen der **GetChunk** Methode auf das erste Feld erneut ADO interpretiert den Aufruf als ein neues **GetChunk** Vorgang und beginnt mit der vom Anfang der Daten zu lesen. Zugriff auf Felder in anderen **Recordset** Objekte, die nicht der ersten Klone sind **Recordset** Objekt wird nicht unterbrochen. **GetChunk** Vorgänge.  
   
- Wenn die **AdFldLong** bit in der **Attribute** Eigenschaft eine **Feld** -Objekts festgelegt wird, um **"true"**, können Sie die **GetChunk ** Methode für dieses Feld.  
+ Wenn die **AdFldLong** bit in der **Attribute** Eigenschaft eine **Feld** -Objekts festgelegt wird, um **"true"**, können Sie die **GetChunk**  Methode für dieses Feld.  
   
  Wenn kein aktueller Datensatz vorhanden ist, bei der Verwendung der **GetChunk** oder **AppendChunk** Methode auf eine **Feld** -Objekt Fehler 3021 (kein aktueller Datensatz) auftritt.  
   

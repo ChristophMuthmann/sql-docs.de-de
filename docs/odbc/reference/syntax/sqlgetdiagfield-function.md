@@ -80,10 +80,10 @@ SQLRETURN SQLGetDiagField(
  *DiagInfoPtr*  
  [Ausgabe] Zeiger auf einen Puffer, in dem die Diagnoseinformationen zurückgegeben. Der Datentyp hängt vom Wert der *DiagIdentifier*. Wenn *DiagInfoPtr* ein Ganzzahltyp ist, Anwendungen einen Puffer von SQLULEN sollte verwendet werden, und initialisieren, die der Wert auf 0 vor dem Aufrufen dieser Funktion können als einige Treiber kann nur die unteren 32-Bit- oder 16-Bit-eines Puffers zu schreiben und lassen Sie die höherer Ordnung Bit unverändert.  
   
- Wenn *DiagInfoPtr* NULL ist, *StringLengthPtr* weiterhin die Gesamtanzahl der Bytes (ausgenommen die Null-Terminierung Zeichen für Zeichendaten) zurück in den Puffer verweist zurückzugebendenverfügbar* DiagInfoPtr*.  
+ Wenn *DiagInfoPtr* NULL ist, *StringLengthPtr* weiterhin die Gesamtanzahl der Bytes (ausgenommen die Null-Terminierung Zeichen für Zeichendaten) zurück in den Puffer verweist zurückzugebendenverfügbar *DiagInfoPtr*.  
   
  *Pufferlänge*  
- [Eingabe] Wenn *DiagIdentifier* ist ein ODBC-definierten Diagnose- und *DiagInfoPtr* zeigt auf eine Zeichenfolge oder einen binären Puffer, in dieses Argument muss die Länge des \* *DiagInfoPtr *. Wenn *DiagIdentifier* ist ein ODBC-definierten Feld und \* *DiagInfoPtr* ist eine ganze Zahl *Pufferlänge* wird ignoriert. Wenn der Wert in * \*DiagInfoPtr* eine Unicode-Zeichenfolge (beim Aufrufen von **SQLGetDiagFieldW**), wird die *Pufferlänge* Argument muss eine gerade Zahl sein.  
+ [Eingabe] Wenn *DiagIdentifier* ist ein ODBC-definierten Diagnose- und *DiagInfoPtr* zeigt auf eine Zeichenfolge oder einen binären Puffer, in dieses Argument muss die Länge des \* *DiagInfoPtr* . Wenn *DiagIdentifier* ist ein ODBC-definierten Feld und \* *DiagInfoPtr* ist eine ganze Zahl *Pufferlänge* wird ignoriert. Wenn der Wert in  *\*DiagInfoPtr* eine Unicode-Zeichenfolge (beim Aufrufen von **SQLGetDiagFieldW**), wird die *Pufferlänge* Argument muss eine gerade Zahl sein.  
   
  Wenn *DiagIdentifier* ist ein Feld treiberdefinierten die Anwendung zeigt die Art des Felds um den Treiber-Manager an, indem die *Pufferlänge* Argument. *Pufferlänge* können die folgenden Werte aufweisen:  
   
@@ -93,7 +93,7 @@ SQLRETURN SQLGetDiagField(
   
 -   Wenn *DiagInfoPtr* ist ein Zeiger auf einen anderen Wert als eine Zeichenfolge oder Binärzeichenfolge, *Pufferlänge* müssen den Wert SQL_IS_POINTER.  
   
--   Wenn * \*DiagInfoPtr* enthält einen Datentyp mit fester Länge *Pufferlänge* SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT oder SQL_IS_USMALLINT, nach Bedarf ist.  
+-   Wenn  *\*DiagInfoPtr* enthält einen Datentyp mit fester Länge *Pufferlänge* SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT oder SQL_IS_USMALLINT, nach Bedarf ist.  
   
  *StringLengthPtr*  
  [Ausgabe] Zeiger auf einen Puffer, in dem die Gesamtanzahl der Bytes (ausgenommen die Anzahl der Bytes, die erforderlich sind, für die Null-Abschlusszeichen) zurückgegeben verfügbar im zurückzugebenden \* *DiagInfoPtr*, für Zeichendaten. Wenn die Anzahl der Bytes, die für die Rückgabe verfügbar, größer als oder gleich ist *Pufferlänge*, den Text im \* *DiagInfoPtr* auf abgeschnitten *Pufferlänge* minus die Länge des ein Null-Abschlusszeichen.  
@@ -129,7 +129,7 @@ SQLRETURN SQLGetDiagField(
   
 1.  Bestimmte Fehler oder Warnungsinformationen abrufen, wenn ein Funktionsaufruf SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgegeben hat (oder SQL_NEED_DATA zurück, für die **SQLBrowseConnect** Funktion).  
   
-2.  Um die Anzahl der Zeilen in der Datenquelle zu ermitteln, die betroffen sind, wenn mit einem Aufruf von INSERT-, DELETE- oder Update-Vorgänge ausgeführt wurden **SQLExecute**, **SQLExecDirect**, ** SQLBulkOperations**, oder **SQLSetPos** (aus der SQL_DIAG_ROW_COUNT-Headerfeld), oder die Anzahl der Zeilen, die in der aktuellen geöffneten Cursor vorhanden ermitteln möchten, wenn der Treiber diese Informationen nicht bereitstellen kann (aus der SQL_DIAG_CURSOR_ROW_COUNT-Headerfeld).  
+2.  Um die Anzahl der Zeilen in der Datenquelle zu ermitteln, die betroffen sind, wenn mit einem Aufruf von INSERT-, DELETE- oder Update-Vorgänge ausgeführt wurden **SQLExecute**, **SQLExecDirect**,  **SQLBulkOperations**, oder **SQLSetPos** (aus der SQL_DIAG_ROW_COUNT-Headerfeld), oder die Anzahl der Zeilen, die in der aktuellen geöffneten Cursor vorhanden ermitteln möchten, wenn der Treiber diese Informationen nicht bereitstellen kann (aus der SQL_DIAG_CURSOR_ROW_COUNT-Headerfeld).  
   
 3.  Um zu bestimmen, welche Funktion durch einen Aufruf ausgeführt wurde **SQLExecDirect** oder **SQLExecute** (von Headerfelder SQL_DIAG_DYNAMIC_FUNCTION und SQL_DIAG_DYNAMIC_FUNCTION_CODE).  
   
@@ -238,7 +238,7 @@ n-Definition *|"ERSTELLEN SIE DOMÄNE"|SQL_DIAG_CREATE_DOMAIN|
 -   Für alle Datensätze, die an bestimmten Zeilen betreffen, werden die Datensätze durch den Wert im Feld SQL_DIAG_ROW_NUMBER sortiert. Alle Fehler und Warnungen der ersten Zeile betroffen aufgeführt sind, und klicken Sie dann alle Fehler und Warnungen der nächsten Zeile betroffenen usw.  
   
 > [!NOTE]  
->  Die ODBC 3*.x* Treibermanager sortiert nicht Statusdatensätze in der Diagnose Warteschlange Wenn SQLSTATE 01 s 01 (Fehler in Zeile) wird zurückgegeben, von einer ODBC 2*.x* Treiber oder, wenn SQLSTATE 01 s 01 (Fehler in Zeile) wird zurückgegeben, die von einer ODBC 3*.x* Treiber beim **SQLExtendedFetch** aufgerufen wird oder **SQLSetPos** wird aufgerufen, für einen Cursor, die mit positioniert **SQLExtendedFetch **.  
+>  Die ODBC 3*.x* Treibermanager sortiert nicht Statusdatensätze in der Diagnose Warteschlange Wenn SQLSTATE 01 s 01 (Fehler in Zeile) wird zurückgegeben, von einer ODBC 2*.x* Treiber oder, wenn SQLSTATE 01 s 01 (Fehler in Zeile) wird zurückgegeben, die von einer ODBC 3*.x* Treiber beim **SQLExtendedFetch** aufgerufen wird oder **SQLSetPos** wird aufgerufen, für einen Cursor, die mit positioniert **SQLExtendedFetch** .  
   
  Innerhalb jeder Zeile, oder für alle Datensätze, die für die Nummer der Zeile unbekannt ist oder eine Zeile nicht entsprechen, oder für alle diese Datensätze mit einer Zeilennummer SQL_NO_ROW_NUMBER gleich, richtet sich der erste Datensatz aufgeführt werden anhand eines Satzes von Regeln zu sortieren. Nach dem ersten Datensatz ist die Reihenfolge von den anderen Datensätzen, die Auswirkungen auf eine Zeile nicht definiert. Eine Anwendung kann nicht davon ausgehen, dass Fehler nach dem ersten Datensatz Warnungen vorausgehen. Anwendungen sollten die vollständige Diagnosedaten-Struktur, um vollständige Informationen zu einer nicht erfolgreichen Aufruf einer Funktion Abrufen überprüfen.  
   

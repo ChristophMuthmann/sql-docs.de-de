@@ -50,9 +50,9 @@ recordset.Move NumRecords, Start
   
  Wenn die *NumRecords* Argument ist größer als 0 (null), die Position des aktuellen Datensatzes rückt vor (gegen Ende der **Recordset**). Wenn *NumRecords* ist kleiner als 0 (null), die Position des aktuellen Datensatzes verschiebt diesen rückwärts (bis zum Anfang der **Recordset**).  
   
- Wenn die **verschieben** aufrufen würde die Position des aktuellen Datensatzes zu einem Zeitpunkt vor dem ersten Datensatz verschoben wird, ADO wird des aktuellen Datensatzes auf die Position vor dem ersten Datensatz des Recordsets ([BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) ist **"true" **). Der Versuch, When rückwärts Verschieben der **BOF** Eigenschaft ist bereits **"true"** wird ein Fehler generiert.  
+ Wenn die **verschieben** aufrufen würde die Position des aktuellen Datensatzes zu einem Zeitpunkt vor dem ersten Datensatz verschoben wird, ADO wird des aktuellen Datensatzes auf die Position vor dem ersten Datensatz des Recordsets ([BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) ist **"true"** ). Der Versuch, When rückwärts Verschieben der **BOF** Eigenschaft ist bereits **"true"** wird ein Fehler generiert.  
   
- Wenn die **verschieben** Aufruf würde die Position des aktuellen Datensatzes zu einem Zeitpunkt nach dem letzten Datensatz verschieben, ADO setzt den aktuellen Datensatz auf die Position hinter dem letzten Datensatz im Recordset ([EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) ist **"true" **). Der Versuch, forward When Verschieben der **EOF** Eigenschaft ist bereits **"true"** wird ein Fehler generiert.  
+ Wenn die **verschieben** Aufruf würde die Position des aktuellen Datensatzes zu einem Zeitpunkt nach dem letzten Datensatz verschieben, ADO setzt den aktuellen Datensatz auf die Position hinter dem letzten Datensatz im Recordset ([EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) ist **"true"** ). Der Versuch, forward When Verschieben der **EOF** Eigenschaft ist bereits **"true"** wird ein Fehler generiert.  
   
  Aufrufen der **verschieben** Methode aus einer leeren **Recordset** Objekt wird ein Fehler generiert.  
   

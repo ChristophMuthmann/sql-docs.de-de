@@ -29,7 +29,7 @@ ms.lasthandoff: 09/09/2017
 Wenn der Text-Treiber verwendet wird, wird das Format der Textdatei mit einer Schema-Informationsdatei bestimmt. Die Schemadatei für die Informationen ist immer mit dem Namen "Schema.ini" und im selben Verzeichnis wie die Textdatenquelle immer beibehalten. Die Schemadatei für die Informationen enthält die IISAM mit Informationen über das allgemeine Format der Datei, den Spaltennamen und Datentypinformationen und mehrere andere Datenmerkmale. Datei "Schema.ini" ist immer erforderlich, für den Zugriff auf Daten fester Länge. Sie sollten die Datei "Schema.ini" verwenden, wenn Ihre Texttabelle enthält, DateTime, Währung oder Dezimaldaten oder jedes Mal, wenn Sie mehr Kontrolle über die Behandlung der Daten in der Tabelle werden soll.  
   
 > [!NOTE]  
->  Aus der Registrierung und nicht von "Schema.ini" Text-ISAM Anfangswerte abgerufen. Das gleiche Standard-Dateiformat gilt für alle neuen Datentabellen von Text. Alle Dateien, die von der CREATE TABLE-Anweisung erstellt wurden, erben die gleichen Format Standardwerte, die festgelegt werden, durch Auswählen der Datei Formatierung von Werten in der **Textformat definieren** Dialogfeld mit \<Standardwert > in der ausgewähltwurde** Tabellen** Liste. Wenn die Werte in der Registrierung von den Werten in Schema.ini unterscheiden zu können, werden die Werte in der Registrierung durch die Werte aus "Schema.ini" überschrieben.  
+>  Aus der Registrierung und nicht von "Schema.ini" Text-ISAM Anfangswerte abgerufen. Das gleiche Standard-Dateiformat gilt für alle neuen Datentabellen von Text. Alle Dateien, die von der CREATE TABLE-Anweisung erstellt wurden, erben die gleichen Format Standardwerte, die festgelegt werden, durch Auswählen der Datei Formatierung von Werten in der **Textformat definieren** Dialogfeld mit \<Standardwert > in der ausgewähltwurde **Tabellen** Liste. Wenn die Werte in der Registrierung von den Werten in Schema.ini unterscheiden zu können, werden die Werte in der Registrierung durch die Werte aus "Schema.ini" überschrieben.  
   
 ## <a name="understanding-schemaini-files"></a>Grundlegendes zu Schema.ini-Dateien  
  Schema.ini-Dateien bieten Schemainformationen zu den Datensätzen in einer Textdatei. Jeder Eintrag Schema.ini gibt einen von fünf Eigenschaften der Tabelle:  
@@ -91,7 +91,7 @@ Col1=CustomerNumber Text Width 10
 Col2=CustomerName Text Width 30  
 ```  
   
- Die Syntax der **Col** * n * ist:  
+ Die Syntax der **Col**  *n*  ist:  
   
 ```  
   
@@ -99,7 +99,7 @@ n=ColumnNametype [#]
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die folgende Tabelle beschreibt die einzelnen Bestandteile der **Col** * n * Eintrag.  
+ Die folgende Tabelle beschreibt die einzelnen Bestandteile der **Col**  *n*  Eintrag.  
   
 |Parameter|Description|  
 |---------------|-----------------|  

@@ -74,7 +74,7 @@ SQLRETURN SQLSetEnvAttr(
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiberspezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01 S 02|Der Optionswert wurde geändert|Der Treiber nicht den Wert im angegebenen *ValuePtr* und einen ähnlichen Wert ersetzt. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|HY000|Allgemeiner Fehler|Für die es keine spezifischen SQLSTATE wurde und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der * \*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
+|HY000|Allgemeiner Fehler|Für die es keine spezifischen SQLSTATE wurde und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der  *\*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
 |HY001|Fehler bei der speicherbelegung|Der Treiber konnte nicht belegt werden zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich.|  
 |HY009|Ungültige Verwendung des null-Zeiger|Das Attributargument identifiziert ein Umgebung-Attribut, das einen Zeichenfolgenwert erforderlich sind und die *ValuePtr* Argument wurde ein null-Zeiger.|  
 |HY010|Fehler bei Funktionssequenz|(DM) für ein Verbindungshandle zugewiesen wurde *EnvironmentHandle*.<br /><br /> (DM) **SQL_ATTR_ODBC_VERSION** wurde nicht festgelegt wurde, mit **SQLSetEnvAttr** und *Attribut* stimmt nicht mit **SQL_ATTR_ODBC_VERSION**. Sie müssen nicht festzulegende **SQL_ATTR_ODBC_VERSION** explizit bei Verwendung von **SQLAllocHandleStd**.|  

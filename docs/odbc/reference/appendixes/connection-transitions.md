@@ -58,7 +58,7 @@ ODBC-Verbindungen werden die folgenden Status haben.
   
  [4] für diese Zeile zeigt die Übergänge beim *HandleType* SQL_HANDLE_DESC wurde.  
   
- [5] aufrufen **SQLAllocHandle** mit *OutputHandlePtr* überschreibt dieses Handle ohne Berücksichtigung der vorherige Inhalt Ofthat Handle auf ein gültiges Handle verweist, und für ODBC-Treiber Probleme verursachen. Falsche ODBC-anwendungsprogrammierung aufrufen ist **SQLAllocHandle** zweimal mit der gleichen Anwendungsvariablen für definiert * \*OutputHandlePtr* ohne Aufruf ** SQLFreeHandle** , bevor Sie es erneut zugewiesen werden, das Freigeben des Handles. Überschreiben von ODBC können Handles auf solche Weise Fehler seitens der ODBC-Treiber zu inkonsistentem Verhalten führen.  
+ [5] aufrufen **SQLAllocHandle** mit *OutputHandlePtr* überschreibt dieses Handle ohne Berücksichtigung der vorherige Inhalt Ofthat Handle auf ein gültiges Handle verweist, und für ODBC-Treiber Probleme verursachen. Falsche ODBC-anwendungsprogrammierung aufrufen ist **SQLAllocHandle** zweimal mit der gleichen Anwendungsvariablen für definiert  *\*OutputHandlePtr* ohne Aufruf  **SQLFreeHandle** , bevor Sie es erneut zugewiesen werden, das Freigeben des Handles. Überschreiben von ODBC können Handles auf solche Weise Fehler seitens der ODBC-Treiber zu inkonsistentem Verhalten führen.  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
   

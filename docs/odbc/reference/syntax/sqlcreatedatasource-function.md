@@ -58,7 +58,7 @@ BOOL SQLCreateDataSource(
  **SQLCreateDataSource** gibt TRUE zurück, wenn die Datenquelle erstellt wird. Andernfalls wird "false" zurückgegeben.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLCreateDataSource** gibt "false", ein zugehöriges * \*PfErrorCode* Wert abgerufen werden kann, durch den Aufruf **SQLInstallerError**. Die folgende Tabelle enthält die * \*PfErrorCode* Werte, die von zurückgegeben werden können **SQLInstallerError** und jeweils im Kontext dieser Funktion erläutert.  
+ Wenn **SQLCreateDataSource** gibt "false", ein zugehöriges  *\*PfErrorCode* Wert abgerufen werden kann, durch den Aufruf **SQLInstallerError**. Die folgende Tabelle enthält die  *\*PfErrorCode* Werte, die von zurückgegeben werden können **SQLInstallerError** und jeweils im Kontext dieser Funktion erläutert.  
   
 |*\*pfErrorCode*|Fehler|Description|  
 |---------------------|-----------|-----------------|  
@@ -102,7 +102,7 @@ BOOL SQLCreateDataSource(
   
  ![Erstellen neue Datenquelle (Dialogfeld): Überprüfen Sie](../../../odbc/reference/syntax/media/ch23d.gif "CH23D")  
   
- Wenn **Fertig stellen** geklickt wird und **Dateidatenquelle** ausgewählt wurde, als Typ der Datenquelle, und wenn die **Verbindung überprüfen** Option ist "true", ** SQLDriverConnect** aufgerufen wird und die **SAVEFILE** und **Treiber** Schlüsselwörter. Die *DriverCompletion* Argument auf SQL_DRIVER_COMPLETE festgelegt ist. Der Dateiname für die **SAVEFILE** -Schlüsselwort ist der Name, der eingegeben wurde oder ausgewählt und den Namen des Treibers für die **Treiber** -Schlüsselwort ist der Name, der ausgewählt wurde. Wenn eine treiberspezifische Verbindungszeichenfolge auf der Seite Erweitert des Assistenten angegeben wurde, wird diese Zeichenfolge angefügt, nach der **Treiber** Schlüsselwort.  
+ Wenn **Fertig stellen** geklickt wird und **Dateidatenquelle** ausgewählt wurde, als Typ der Datenquelle, und wenn die **Verbindung überprüfen** Option ist "true",  **SQLDriverConnect** aufgerufen wird und die **SAVEFILE** und **Treiber** Schlüsselwörter. Die *DriverCompletion* Argument auf SQL_DRIVER_COMPLETE festgelegt ist. Der Dateiname für die **SAVEFILE** -Schlüsselwort ist der Name, der eingegeben wurde oder ausgewählt und den Namen des Treibers für die **Treiber** -Schlüsselwort ist der Name, der ausgewählt wurde. Wenn eine treiberspezifische Verbindungszeichenfolge auf der Seite Erweitert des Assistenten angegeben wurde, wird diese Zeichenfolge angefügt, nach der **Treiber** Schlüsselwort.  
   
  Wenn **SQLDriverConnect** gibt SQL_SUCCESS zurück, der Treiber-Manager wurde die Datei-DSN erstellt. **SQLCreateDataSource** gibt "true" zurück. Wenn **SQLDriverConnect** gibt keinen SQL_SUCCESS, eine Warnmeldung zurück Feld zeigt an, dass keine Verbindung mit der Datenquelle hergestellt werden konnte. Ein DSN mit minimalen Verbindungsinformationen kann dennoch erstellt werden. Dieses Meldungsfeld ermöglicht dem Benutzer das "Abbrechen", oder fahren Sie mit der Datei-DSN-Erstellung fort.  
   
@@ -110,7 +110,7 @@ BOOL SQLCreateDataSource(
   
  Wenn **Dateidatenquelle** wurde als Typ der Datenquelle ausgewählt und die **Verbindung überprüfen** Option ist "false", Datei-DSN wird erstellt, mit der **Treiber** Schlüsselwort und benutzerdefinierte Verbindungszeichenfolge (sofern vorhanden) von der erweiterten Assistenten-Seite. Wenn die Erstellung erfolgreich war, wird "true" zurückgegeben, für die **SQLCreateDataSource**. Wenn die Erstellung der Datei nicht erfolgreich war, benachrichtigt eine Fehlermeldung zu den Benutzer der Fehler vom Betriebssystem zurückgegeben wurde. "False" wird zurückgegeben, für die **SQLCreateDataSource** mit einem Fehlercode von ODBC_ERROR_CREATE_DSN_FAILED. Weitere Informationen zu Datenquellen finden Sie unter [Herstellen einer Verbindung mithilfe von Dateidatenquellen](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md), oder finden Sie unter [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
- Wenn **Benutzer** oder **Systemdatenquelle** ausgewählt wurde, als den Datenquellentyp **ConfigDSN** Bibliothek heißt in der Setup-Treiber mit der ODBC_ADD_DSN * Häufigsten*. Weitere Informationen finden Sie unter [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md).  
+ Wenn **Benutzer** oder **Systemdatenquelle** ausgewählt wurde, als den Datenquellentyp **ConfigDSN** Bibliothek heißt in der Setup-Treiber mit der ODBC_ADD_DSN  *Häufigsten*. Weitere Informationen finden Sie unter [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md).  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   

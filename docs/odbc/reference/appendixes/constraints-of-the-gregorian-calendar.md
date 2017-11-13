@@ -36,7 +36,7 @@ Date und Datetime-Datentypen und die nachfolgende Felder von Interval-Datentypen
   
 -   Der Wert des Felds für die Minuten muss zwischen 0 und 59.  
   
--   Für die nachfolgende Sekundenfeld der Interval-Datentypen, muss der Wert im Sekundenfeld zwischen 0 und einen Anteil von 59,9 (*n*), einschließlich, in denen * n * ist die Anzahl der Ziffern in der Genauigkeit in Sekundenbruchteilen.  
+-   Für die nachfolgende Sekundenfeld der Interval-Datentypen, muss der Wert im Sekundenfeld zwischen 0 und einen Anteil von 59,9 (*n*), einschließlich, in denen  *n*  ist die Anzahl der Ziffern in der Genauigkeit in Sekundenbruchteilen.  
   
--   Für die nachfolgende Sekundenfeld der Datetime-Datentyp, der Wert im Sekundenfeld muss zwischen 0 und 61.9 sein (*n*) (einschließlich), wobei * n * gibt die Anzahl der "9" Ziffern und den Wert der * n * ist die Genauigkeit der Sekundenbruchteile. (Der Bereich von Sekunden kann bis zu zwei Schaltsekunden Synchronisierung siderischen Zeit beibehalten.)
+-   Für die nachfolgende Sekundenfeld der Datetime-Datentyp, der Wert im Sekundenfeld muss zwischen 0 und 61.9 sein (*n*) (einschließlich), wobei  *n*  gibt die Anzahl der "9" Ziffern und den Wert der  *n*  ist die Genauigkeit der Sekundenbruchteile. (Der Bereich von Sekunden kann bis zu zwei Schaltsekunden Synchronisierung siderischen Zeit beibehalten.)
 

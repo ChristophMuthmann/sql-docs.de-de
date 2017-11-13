@@ -55,7 +55,7 @@ objectPtr->PutRefProperty(&value);   // set property with object pointer
 ```  
   
 ## <a name="using-property-directives"></a>Using-Eigenschaftendirektiven  
- Die **__declspec(property...) ** Compilerdirektive ist eine Erweiterung der Microsoft-spezifischen C-Sprache, die eine Funktion, die als eine Eigenschaft verwendet, um eine alternative Syntax deklariert. Daher können Sie festlegen oder Abrufen der Werte einer Eigenschaft auf eine Weise Visual Basic ähnelt. Sie können z. B. festgelegt und eine Eigenschaft auf diese Weise abrufen:  
+ Die **__declspec(property...)**  Compilerdirektive ist eine Erweiterung der Microsoft-spezifischen C-Sprache, die eine Funktion, die als eine Eigenschaft verwendet, um eine alternative Syntax deklariert. Daher können Sie festlegen oder Abrufen der Werte einer Eigenschaft auf eine Weise Visual Basic ähnelt. Sie können z. B. festgelegt und eine Eigenschaft auf diese Weise abrufen:  
   
 ```  
 objectPtr->property = value;        // set property value  
@@ -71,16 +71,16 @@ variable = objectPtr->GetProperty;  // get property value
   
  Generiert der Compiler den entsprechenden **abrufen***-*, **Put**-, oder **PutRef***-Eigenschaft* Aufruf basierend auf welche alternative Syntax deklariert wird, und gibt an, ob die Eigenschaft wird gelesen bzw. geschrieben werden.  
   
- Die **__declspec(property...) ** kann nur die Compilerdirektive deklarieren **abrufen**, **put**, oder **abrufen** und **put** alternative Syntax für eine Funktion. Nur schreibgeschützte Vorgänge haben eine **abrufen** Deklaration; nur-schreiben Vorgänge, die nur eine **put** -Deklaration; Vorgänge, die sind sowohl Lese-als auch haben beide **abrufen** und **put** Deklarationen.  
+ Die **__declspec(property...)**  kann nur die Compilerdirektive deklarieren **abrufen**, **put**, oder **abrufen** und **put** alternative Syntax für eine Funktion. Nur schreibgeschützte Vorgänge haben eine **abrufen** Deklaration; nur-schreiben Vorgänge, die nur eine **put** -Deklaration; Vorgänge, die sind sowohl Lese-als auch haben beide **abrufen** und **put** Deklarationen.  
   
- Es sind nur zwei Deklarationen mit dieser Richtlinie möglich; Allerdings kann jede Eigenschaft drei Eigenschaftenfunktionen aufweisen: **abrufen***Eigenschaft*, **Put***Eigenschaft*, und **PutRef ** *Eigenschaft*. In diesem Fall ist nur zwei Formen der Eigenschaft, die alternative Syntax.  
+ Es sind nur zwei Deklarationen mit dieser Richtlinie möglich; Allerdings kann jede Eigenschaft drei Eigenschaftenfunktionen aufweisen: **abrufen***Eigenschaft*, **Put***Eigenschaft*, und **PutRef**  *Eigenschaft*. In diesem Fall ist nur zwei Formen der Eigenschaft, die alternative Syntax.  
   
  Z. B. die **Befehl** Objekt **ActiveConnection** Eigenschaft wird deklariert, wobei eine alternative Syntax für **abrufen***ActiveConnection*und **PutRef***ActiveConnection*. Die **PutRef**-Syntax ist eine gute Wahl, da in der Praxis, Sie in der Regel werden ein offenes aufnehmen möchten **Verbindung** Objekt (d. h. eine **Verbindung** Objektzeiger) in diesem Diese Eigenschaft. Auf der anderen Seite der **Recordset** Objekt hat **abrufen**-, **Put**-, und **PutRef***ActiveConnection*Vorgänge, aber keine alternative Syntax.  
   
 ## <a name="collections-the-getitem-method-and-the-item-property"></a>Sammlungen, die GetItem-Methode und die Item-Eigenschaft  
  ADO definiert mehrere Auflistungen, einschließlich **Felder**, **Parameter**, **Eigenschaften**, und **Fehler**. In Visual C++ die **GetItem (***Index***)** Methode gibt ein Element der Auflistung zurück. *Index* ist ein **Variant**, dessen Wert der wird entweder einen numerischen Index des Elements in der Auflistung oder eine Zeichenfolge, die mit dem Namen des Elements.  
   
- Die **__declspec(property...) ** Compilerdirektive deklariert die **Element** eine alternative Syntax auf jede Sammlung-Eigenschaft des grundlegenden **'GetItem()'** Methode. Die alternative Syntax eckige Klammern verwendet, und gleicht dem Verweis auf ein Array. Im Allgemeinen werden die beiden Formen wie folgt aussehen:  
+ Die **__declspec(property...)**  Compilerdirektive deklariert die **Element** eine alternative Syntax auf jede Sammlung-Eigenschaft des grundlegenden **'GetItem()'** Methode. Die alternative Syntax eckige Klammern verwendet, und gleicht dem Verweis auf ein Array. Im Allgemeinen werden die beiden Formen wie folgt aussehen:  
   
 ```  
   
@@ -116,7 +116,7 @@ rs->Fields->Item["au_fname"]->Value = "value";
  Beispiele für das Durchlaufen einer Auflistung finden Sie unter "ADO Reference" Abschnitt "ADO Sammlungen".  
   
 ## <a name="com-specific-data-types"></a>COM-spezifischen Datentypen  
- Im Allgemeinen haben alle Visual Basic-Datentyp, der in der ADO-API-Referenz Sie finden eine Visual C++-Entsprechung. Dazu gehören z. B. Standarddatentypen **unsigned Char** für eine Visual Basic **Byte**, **kurze** für **Ganzzahl**, und ** lange** für **lang**. Suchen in der Syntax Indexesto finden Sie, was für die Operanden des einer bestimmten Methode oder Eigenschaft benötigt wird.  
+ Im Allgemeinen haben alle Visual Basic-Datentyp, der in der ADO-API-Referenz Sie finden eine Visual C++-Entsprechung. Dazu gehören z. B. Standarddatentypen **unsigned Char** für eine Visual Basic **Byte**, **kurze** für **Ganzzahl**, und  **lange** für **lang**. Suchen in der Syntax Indexesto finden Sie, was für die Operanden des einer bestimmten Methode oder Eigenschaft benötigt wird.  
   
  Die Ausnahmen von dieser Regel werden die spezifisch für COM-Datentypen: **Variant**, **BSTR**, und **SafeArray**.  
   
@@ -267,7 +267,7 @@ rs->Open(...);
   
  Beachten Sie, dass in einem Fall ist die "`.`"-Operator wird verwendet, als wären die Variable eine Instanz einer Klasse (`rs.CreateInstance`), und in einem anderen Fall der "`->`"-Operator wird verwendet, als wären die Variable ein Zeiger auf eine Schnittstelle (`rs->Open`).  
   
- Eine Variable kann auf zwei Arten verwendet werden, da die "`->`"-Operator ist überladen, sodass um eine Instanz einer Klasse, verhält sich wie ein Zeiger auf eine Schnittstelle zu ermöglichen. Mitglied private Klasse die Instanzvariable enthält einen Zeiger auf die **_Recordset** Schnittstelle; die "`->`" Operator gibt diesen Zeiger; und der zurückgegebene Zeiger greift auf die Mitglieder der **_Recordset ** Objekt.  
+ Eine Variable kann auf zwei Arten verwendet werden, da die "`->`"-Operator ist überladen, sodass um eine Instanz einer Klasse, verhält sich wie ein Zeiger auf eine Schnittstelle zu ermöglichen. Mitglied private Klasse die Instanzvariable enthält einen Zeiger auf die **_Recordset** Schnittstelle; die "`->`" Operator gibt diesen Zeiger; und der zurückgegebene Zeiger greift auf die Mitglieder der **_Recordset**  Objekt.  
   
 ### <a name="coding-a-missing-parameter--string"></a>Codieren eines fehlenden Parameters – Zeichenfolge  
  Wenn Sie einen fehlenden code müssen **Zeichenfolge** Operanden in Visual Basic, lassen Sie lediglich den Operanden. Sie müssen den Operanden in Visual C++ angeben. Code eine **_bstr_t** , eine leere Zeichenfolge als Wert besitzt.  
@@ -442,7 +442,7 @@ End Sub
 #### <a name="notes"></a>Hinweise  
  Die folgenden Hinweise entsprechen kommentierten Abschnitten im Codebeispiel.  
   
-1.  Dieses Beispiel verwendet zwei Arten von fehlenden Zeichenfolgenargument: eine explizite Konstante **StrMissing**, und eine Zeichenfolge, die der Compiler zum Erstellen eines temporären verwendet **_bstr_t** ist, die für den Rahmen der vorhanden** Open** Methode.  
+1.  Dieses Beispiel verwendet zwei Arten von fehlenden Zeichenfolgenargument: eine explizite Konstante **StrMissing**, und eine Zeichenfolge, die der Compiler zum Erstellen eines temporären verwendet **_bstr_t** ist, die für den Rahmen der vorhanden **Open** Methode.  
   
 2.  Es ist nicht notwendig, die der Operand des umgewandelt `rs->PutRefActiveConnection(cn)` auf `(IDispatch *)` da der Datentyp des Operanden bereits `(IDispatch *)`.  
   
@@ -563,7 +563,7 @@ void main() {
   
 1.  Geben Sie ein offenes **Verbindung** Objekt in einen codierten explizit **Variant**. Wandeln sie mit (IDispatch \*), damit der richtige Konstruktor aufgerufen wird. Auch explizit festgelegt, die zweite **_variant_t** Parameter auf den Standardwert des **"true"**, sodass den Verweiszählerwert des Objekts richtig, wenn ausgeführt wird die **Open** Vorgang wird beendet.  
   
-2.  Der Ausdruck `(_bstr_t)`, wird nicht umgewandelt, aber ein **_variant_t** -Operator, extrahiert eine **_bstr_t** die Zeichenfolge, aus der **Variant** zurückgegebenes **Wert **.  
+2.  Der Ausdruck `(_bstr_t)`, wird nicht umgewandelt, aber ein **_variant_t** -Operator, extrahiert eine **_bstr_t** die Zeichenfolge, aus der **Variant** zurückgegebenes **Wert** .  
   
  Der Ausdruck `(char*)`, wird nicht umgewandelt, aber ein **_bstr_t** Operator, der einen Zeiger auf die gekapselte Zeichenfolge in extrahiert eine **_bstr_t** Objekt.  
   

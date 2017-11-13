@@ -243,7 +243,7 @@ Das ReportViewer-Steuerelement ist jetzt als ein NuGet-Paket zur Verfügung gest
 
     ![SsRS-Remove-alte-Rvcontrol-toolbox](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
-3. Mit der rechten Maustaste an einer beliebigen Stelle in der Toolbox in, und wählen Sie dann **Elemente auswählen... **.
+3. Mit der rechten Maustaste an einer beliebigen Stelle in der Toolbox in, und wählen Sie dann **Elemente auswählen...** .
 
     ![SsRS-Toolbox-wählen-Element](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     

@@ -43,7 +43,7 @@ Alle ODBC-Treiber müssen mindestens ein Hauptebenen-aufweisen Schnittstelle-Kon
   
 -   Verwalten von Cursorn und Cursornamen, durch den Aufruf **SQLCloseCursor**, **SQLGetCursorName**, und **SQLSetCursorName**.  
   
--   Erhalten Sie Zugriff auf die Beschreibung (Metadaten) von Resultsets, durch den Aufruf **SQLColAttribute**, **SQLDescribeCol**, **SQLNumResultCols**, und **SQLRowCount **. (Verwendung dieser Funktionen auf Spaltennummer 0 zum Abrufen von Metadaten Lesezeichen 204 in Features sind [Ebene 2 Schnittstelle Konformität](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
+-   Erhalten Sie Zugriff auf die Beschreibung (Metadaten) von Resultsets, durch den Aufruf **SQLColAttribute**, **SQLDescribeCol**, **SQLNumResultCols**, und **SQLRowCount** . (Verwendung dieser Funktionen auf Spaltennummer 0 zum Abrufen von Metadaten Lesezeichen 204 in Features sind [Ebene 2 Schnittstelle Konformität](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
   
 -   Abfragen des Datenwörterbuchs durch Aufrufen der Katalogfunktionen **SQLColumns**, **SQLGetTypeInfo**, **SQLStatistics**, und **SQLTables**.  
   

@@ -52,7 +52,7 @@ variable = field.GetChunk(Size)
   
  Jeder nachfolgende **GetChunk** Aufruf ruft Daten ab, aus denen der vorherigen **GetChunk** Aufruf unterbrochen wurde. Wenn beim Abrufen von Daten aus einem Feld aus, und klicken Sie dann festlegen oder lesen den Wert eines anderen Felds im aktuellen Datensatz nimmt ADO jedoch, dass Sie das Abrufen von Daten aus dem ersten Feld abgeschlossen haben. Beim Aufrufen der **GetChunk** Methode auf das erste Feld erneut ADO interpretiert den Aufruf als ein neues **GetChunk** Vorgang und beginnt mit der vom Anfang der Daten zu lesen. Zugriff auf Felder in anderen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekte, die nicht der ersten Klone sind **Recordset** Objekt wird nicht unterbrochen. **GetChunk** Vorgänge.  
   
- Wenn die **AdFldLong** bit in der [Attribute](../../../ado/reference/ado-api/attributes-property-ado.md) Eigenschaft eine **Feld** -Objekts festgelegt wird, um **"true"**, können Sie die **GetChunk ** Methode für dieses Feld.  
+ Wenn die **AdFldLong** bit in der [Attribute](../../../ado/reference/ado-api/attributes-property-ado.md) Eigenschaft eine **Feld** -Objekts festgelegt wird, um **"true"**, können Sie die **GetChunk**  Methode für dieses Feld.  
   
  Wenn kein aktueller Datensatz vorhanden ist, bei der Verwendung der **GetChunk** Methode auf eine **Feld** -Objekt Fehler 3021 (kein aktueller Datensatz) auftritt.  
   

@@ -53,7 +53,7 @@ Ein **Array** von Arrays oder **false**. Das Array besteht aus einem Array für 
 |Größe|Anzahl der Zeichen für die Felder eines bestimmten Zeichentyps (char(n), varchar(n), nchar(n), nvarchar(n), XML) Anzahl der Bytes für Felder vom Typ „binär“ (binary(n), varbinary(n), UDT). **NULL** für andere SQL Server-Datentypen.|  
 |Genauigkeit|Die Genauigkeit für die Typen mit variabler Genauigkeit (real, numeric, decimal, datetime2, datetimeoffset und time). **NULL** für andere SQL Server-Datentypen.|  
 |Dezimalstellen|Die Skalierung für die Typen mit variabler Skalierung (numeric, decimal, datetime2, datetimeoffset und time). **NULL** für andere SQL Server-Datentypen.|  
-|NULL zulassen|Ein Enumerationswert, der angibt, ob die Spalte NULL-Werte zulässt (**SQLSRV_NULLABLE_YES**), die Spalte ist keine NULL-Werte zulässt (**SQLSRV_NULLABLE_NO**), oder es ist nicht bekannt, wenn die Spalte NULL-Werte zulässt (** SQLSRV_NULLABLE_UNKNOWN**).|  
+|NULL zulassen|Ein Enumerationswert, der angibt, ob die Spalte NULL-Werte zulässt (**SQLSRV_NULLABLE_YES**), die Spalte ist keine NULL-Werte zulässt (**SQLSRV_NULLABLE_NO**), oder es ist nicht bekannt, wenn die Spalte NULL-Werte zulässt ( **SQLSRV_NULLABLE_UNKNOWN**).|  
   
 Die folgende Tabelle enthält mehr Informationen zu den Schlüsseln für jedes Teilarray (weiter Informationen zu diesen Typen finden Sie in der Dokumentation zu SQL Server):   
   

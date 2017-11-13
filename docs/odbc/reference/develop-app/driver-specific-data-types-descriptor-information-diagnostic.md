@@ -29,15 +29,15 @@ ms.lasthandoff: 09/09/2017
 # <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>Treiber-spezifische Datentypen, Deskriptor Typen Informationstypen, Diagnose Typen und Attribute
 Treiber können Treiber-spezifische Werte für Folgendes zuordnen:  
   
--   **SQL Data Type Indicators** diese kommen in *ParameterType* in **SQLBindParameter** und *DataType* in **SQLGetTypeInfo** und zurückgegebenes **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**, ** SQLDescribeParam**, **SQLProcedureColumns**, und **SQLSpecialColumns**.  
+-   **SQL Data Type Indicators** diese kommen in *ParameterType* in **SQLBindParameter** und *DataType* in **SQLGetTypeInfo** und zurückgegebenes **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**,  **SQLDescribeParam**, **SQLProcedureColumns**, und **SQLSpecialColumns**.  
   
--   **Deskriptorfelder** diese kommen in *FieldIdentifier* in **SQLColAttribute**, **SQLGetDescField**, und **SQLSetDescField **.  
+-   **Deskriptorfelder** diese kommen in *FieldIdentifier* in **SQLColAttribute**, **SQLGetDescField**, und **SQLSetDescField** .  
   
 -   **Diagnosefelder** diese kommen in *DiagIdentifier* in **SQLGetDiagField** und **SQLGetDiagRec**.  
   
 -   **Typen von Informationen** diese kommen in *Infotyp* in **SQLGetInfo**.  
   
--   **Verbindungs- und Anweisungsattribute** diese kommen in *Attribut* in **SQLGetConnectAttr**, **SQLGetStmtAttr**, ** SQLSetConnectAttr**, und **SQLSetStmtAttr**.  
+-   **Verbindungs- und Anweisungsattribute** diese kommen in *Attribut* in **SQLGetConnectAttr**, **SQLGetStmtAttr**,  **SQLSetConnectAttr**, und **SQLSetStmtAttr**.  
   
  Für jedes dieser Elemente, es gibt zwei Sätze an Werten: Werte, die für die Verwendung von ODBC reserviert und Werte, die vom Treiber für die Verwendung reserviert. Vor der Implementierung treiberspezifische Werte, muss ein Treiber-Writer für treiberspezifische-Typ, ein Feld oder jedes Attribut einen Wert vom Open Group anfordern. Verwenden Sie für die Treiberentwicklung neuer den Bereich in der folgenden Tabelle beschrieben. Der ODBC 3.8-Treiber-Manager generiert keinen Fehler, wenn ein Unbekannter Wert, die nicht im Bereich verwendet wird unten beschriebenen. Allerdings generiert höhere Versionen des Treiber-Managers Fehler, wenn unbekannte Werte empfangen werden, die nicht im Bereich enthalten sind.  
   

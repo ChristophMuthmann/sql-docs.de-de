@@ -34,7 +34,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Legen Sie die [CursorLocation-Eigenschaft (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) Eigenschaft **AdUseClient**.  
   
--   Geben Sie den Namen des ereignishandlers zur Verwendung in der [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) des Objekts **Handler** -Eigenschaft, oder die [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) Verbindungszeichenfolge des Objekts "** Handler**= "Schlüsselwort. (Den Handler kann nicht festgelegt werden, der **Verbindung** Objekt Verbindungszeichenfolge.)  
+-   Geben Sie den Namen des ereignishandlers zur Verwendung in der [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) des Objekts **Handler** -Eigenschaft, oder die [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) Verbindungszeichenfolge des Objekts " **Handler**= "Schlüsselwort. (Den Handler kann nicht festgelegt werden, der **Verbindung** Objekt Verbindungszeichenfolge.)  
   
  RDS stellt einen Standard-Handler bereit, auf dem Server mit dem Namen **MSDFMAP. Handler**. (Die Standarddatei für die Anpassung heißt MSDFMAP. INI.)  
   
@@ -71,7 +71,7 @@ Dim rs as New ADODB.Recordset
 rs.CursorLocation = adUseClient  
 ```  
   
- Geben Sie entweder die [Handler-Eigenschaft (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) Eigenschaft oder das Schlüsselwort; die [Anbieter-Eigenschaft (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) Eigenschaft oder das Schlüsselwort und die *CustomerById* und * CustomerDatabase* Bezeichner. Öffnen Sie dann die **Recordset** Objekt  
+ Geben Sie entweder die [Handler-Eigenschaft (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) Eigenschaft oder das Schlüsselwort; die [Anbieter-Eigenschaft (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) Eigenschaft oder das Schlüsselwort und die *CustomerById* und  *CustomerDatabase* Bezeichner. Öffnen Sie dann die **Recordset** Objekt  
   
  RS. Öffnen Sie "CustomerById(4)", "Handler = MSDFMAP. Handler;"& _  
   

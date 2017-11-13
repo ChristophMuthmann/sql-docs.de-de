@@ -36,10 +36,10 @@ ms.lasthandoff: 09/09/2017
  Version eingeführt: ODBC 1.0 Standardkonformität: veraltet  
   
  **Zusammenfassung**  
- Der ODBC 2.0-Funktion **SQLParamOptions** in ODBC 3. ersetzt wurde.* X* durch Aufrufe von [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
+ Der ODBC 2.0-Funktion **SQLParamOptions** in ODBC 3. ersetzt wurde. *X* durch Aufrufe von [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
   
 > [!NOTE]  
->  Weitere Informationen zu welcher der Treiber-Manager ordnet diese Funktion zu, wenn eine ODBC-2. *x* Anwendung arbeitet mit einer ODBC-3.* X* -Treiber verwenden, finden Sie unter [veraltet Zuordnungsfunktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Treiber Richtlinien für die Abwärtskompatibilität.  
+>  Weitere Informationen zu welcher der Treiber-Manager ordnet diese Funktion zu, wenn eine ODBC-2. *x* Anwendung arbeitet mit einer ODBC-3. *X* -Treiber verwenden, finden Sie unter [veraltet Zuordnungsfunktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Treiber Richtlinien für die Abwärtskompatibilität.  
   
 ## <a name="remarks"></a>Hinweise  
  Finden Sie unter [ODBC-64-Bit-Informationen](../../../odbc/reference/odbc-64-bit-information.md), wenn die Anwendung auf einem 64-Bit-Betriebssystem ausgeführt wird.  

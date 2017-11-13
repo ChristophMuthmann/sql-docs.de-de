@@ -44,7 +44,7 @@ MoveComplete adReason, pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>Parameter  
  *adReason*  
- Ein [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md) Wert, der die Ursache für dieses Ereignis angibt. Der Wert kann **AdRsnMoveFirst**, **AdRsnMoveLast**, **AdRsnMoveNext**, **AdRsnMovePrevious**, **AdRsnMove **, oder **AdRsnRequery**.  
+ Ein [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md) Wert, der die Ursache für dieses Ereignis angibt. Der Wert kann **AdRsnMoveFirst**, **AdRsnMoveLast**, **AdRsnMoveNext**, **AdRsnMovePrevious**, **AdRsnMove** , oder **AdRsnRequery**.  
   
  *pError*  
  Ein [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt. Wenn aufgetretenen Fehlers beschrieben der Wert der *AdStatus* ist **AdStatusErrorsOccurred**; andernfalls wird der Parameter nicht festgelegt.  

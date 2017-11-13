@@ -36,7 +36,7 @@ Denken Sie daran, dass Anwendungen keine Treiberfunktionen direkt aufrufen. Stat
   
 -   Wenn kein Treiber für die Verbindung geladen wird, überprüft der Treiber-Manager an, ob der angegebene Treiber auf eine andere Verbindung in der gleichen Umgebung geladen wird. Wenn nicht, den Treiber-Manager den Treiber auf die Verbindung und ruft lädt **SQLAllocHandle** im Treiber mit der Option SQL_HANDLE_ENV auf.  
   
-     Der Treiber-Manager ruft dann **SQLAllocHandle** im Treiber mit der Option SQL_HANDLE_DBC auf, und zwar unabhängig davon, ob sie nur geladen wurde. Wenn die Anwendung Verbindungsattribute festgelegt wird, ruft der Treiber-Manager **SQLSetConnectAttr** im Treiber; Wenn ein Fehler auftritt, der Treiber-Manager-Verbindungsfunktion gibt SQLSTATE IM006 (des Treibers ** SQLSetConnectAttr** fehlgeschlagen). Zum Schluss ruft der Treiber-Manager die Verbindungsfunktion im Treiber.  
+     Der Treiber-Manager ruft dann **SQLAllocHandle** im Treiber mit der Option SQL_HANDLE_DBC auf, und zwar unabhängig davon, ob sie nur geladen wurde. Wenn die Anwendung Verbindungsattribute festgelegt wird, ruft der Treiber-Manager **SQLSetConnectAttr** im Treiber; Wenn ein Fehler auftritt, der Treiber-Manager-Verbindungsfunktion gibt SQLSTATE IM006 (des Treibers  **SQLSetConnectAttr** fehlgeschlagen). Zum Schluss ruft der Treiber-Manager die Verbindungsfunktion im Treiber.  
   
 -   Wenn der angegebene Treiber für die Verbindung geladen wird, ruft der Treiber-Manager nur die Verbindungsfunktion im Treiber. In diesem Fall muss der Treiber aufbewahren müssen, für die Verbindung alle Verbindungsattribute ihren aktuellen Einstellungen.  
   

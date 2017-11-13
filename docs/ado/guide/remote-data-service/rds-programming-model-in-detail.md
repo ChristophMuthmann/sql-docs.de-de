@@ -52,7 +52,7 @@ Im folgenden sind wichtige Elemente, die RDS-Programmiermodell:
   
  Die RDS-Objektmodell stellt diese Funktionalität mit dem [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) Objekt.  
   
- Darüber hinaus weist diesem Objekt eine Methode zum Erstellen einer leeres **Recordset** -Objekt, das programmgesteuert gefüllt werden kann ([CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)), und eine andere Methode zum Konvertieren einer **Recordset ** Objekt in eine Zeichenfolge zum Erstellen einer Webseite ([ConvertToString](../../../ado/reference/rds-api/converttostring-method-rds.md)).  
+ Darüber hinaus weist diesem Objekt eine Methode zum Erstellen einer leeres **Recordset** -Objekt, das programmgesteuert gefüllt werden kann ([CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)), und eine andere Methode zum Konvertieren einer **Recordset**  Objekt in eine Zeichenfolge zum Erstellen einer Webseite ([ConvertToString](../../../ado/reference/rds-api/converttostring-method-rds.md)).  
   
  Mit ADO, können Sie einige der standard-Verbindung und Befehlsverhalten von überschreiben die **RDSServer.DataFactory** mit eine **DataFactory** Befehl Handler und eine Anpassungsdatei, die Verbindung enthält. und Sicherheitsparametern.  
   
@@ -63,7 +63,7 @@ Im folgenden sind wichtige Elemente, die RDS-Programmiermodell:
   
  Die RDS-Objektmodell stellt diese Funktionalität mit dem [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Objekt.  
   
- Die **RDS. DataControl** hat zwei Aspekte. Ein Aspekt bezieht sich auf die Datenquelle. Wenn Sie festlegen, dass der Befehl und die Verbindung mit der **verbinden** und **SQL** Eigenschaften der **RDS. DataControl**, er verwendet automatisch die **RDS. DataSpace** , erstellen Sie einen Verweis auf den Standardwert **RDSServer.DataFactory** Objekt. Die **RDSServer.DataFactory** verwendet die **verbinden** Eigenschaftswert zum Herstellen einer Verbindung mit der Datenquelle die **SQL** Eigenschaftswert Abrufen einer ** Recordset** aus der Datenquelle und der Rückgabewert der **Recordset** -Objekt an die **RDS. DataControl**.  
+ Die **RDS. DataControl** hat zwei Aspekte. Ein Aspekt bezieht sich auf die Datenquelle. Wenn Sie festlegen, dass der Befehl und die Verbindung mit der **verbinden** und **SQL** Eigenschaften der **RDS. DataControl**, er verwendet automatisch die **RDS. DataSpace** , erstellen Sie einen Verweis auf den Standardwert **RDSServer.DataFactory** Objekt. Die **RDSServer.DataFactory** verwendet die **verbinden** Eigenschaftswert zum Herstellen einer Verbindung mit der Datenquelle die **SQL** Eigenschaftswert Abrufen einer  **Recordset** aus der Datenquelle und der Rückgabewert der **Recordset** -Objekt an die **RDS. DataControl**.  
   
  Der zweite Aspekt bezieht sich auf die Anzeige der zurückgegebenen **Recordset** Informationen in einem visuellen Steuerelement. Sie können ein visuelles Steuerelement mit Zuordnen der **RDS. DataControl** (in einem Prozess, der als Bindung bezeichnet wird) und den Zugriff auf die Informationen in der zugeordneten **Recordset** -Objekt, das Anzeigen von Abfrageergebnissen auf einer Webseite in Microsoft® Internet Explorer. Jede **RDS. DataControl** Objekts bindet einen **Recordset** Objekt, das die Ergebnisse einer einzelnen Abfrage für eine oder mehrere visual-Steuerelemente (z. B. ein Textfeld, Kombinationsfeld, Rastersteuerelement usw.) darstellt. Es kann nicht mehr als eine **RDS. DataControl** Objekt auf jeder Seite. Jede **RDS. DataControl** Objekt kann mit einer anderen Datenquelle verbunden und enthalten die Ergebnisse einer separaten Abfrage.  
   
@@ -73,7 +73,7 @@ Im folgenden sind wichtige Elemente, die RDS-Programmiermodell:
  RDS unterstützt zwei seine eigenen Ereignisse, die das ADO-Ereignismodell unabhängig sind. Die ["onreadystatechange"](../../../ado/reference/rds-api/onreadystatechange-event-rds.md) Ereignis wird aufgerufen, wenn die **RDS. DataControl** [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) eigenschaftsänderungen, daher benachrichtigt werden, wenn ein asynchroner Vorgang erfolgreich abgeschlossen wurde, beendet oder ist ein Fehler aufgetreten. Die [OnError](../../../ado/reference/rds-api/onerror-event-rds.md) Ereignis wird aufgerufen, wenn ein Fehler auftritt, selbst wenn der Fehler während eines asynchronen Vorgangs auftritt.  
   
 > [!NOTE]
->  Microsoft Internet Explorer werden zwei zusätzliche Ereignisse an RDS: **OnDataSetChanged**, gibt an, dass die **Recordset** ist voll funktionsfähiges und zugleich noch Abrufen von Zeilen, und ** OnDataSetComplete**, gibt an, dass die **Recordset** wurde das Abrufen von Zeilen.  
+>  Microsoft Internet Explorer werden zwei zusätzliche Ereignisse an RDS: **OnDataSetChanged**, gibt an, dass die **Recordset** ist voll funktionsfähiges und zugleich noch Abrufen von Zeilen, und  **OnDataSetComplete**, gibt an, dass die **Recordset** wurde das Abrufen von Zeilen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [RDS-Programmiermodell mit Objekten](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)   

@@ -37,7 +37,7 @@ Um das Debuggen zu erleichtern, Liste der ADO-Enumerationen einen Wert für jede
 |[BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)|Gibt ein Lesezeichen, der angibt, in dem der Vorgang beginnen soll.|  
 |[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)|Gibt an, wie ein Befehlsargument interpretiert werden sollen.|  
 |[CompareEnum](../../../ado/reference/ado-api/compareenum.md)|Gibt die relative Position von zwei Datensätzen, die durch ihre Lesezeichen dargestellt.|  
-|[ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md)|Gibt die verfügbaren Berechtigungen zum Ändern von Daten in eine **Verbindung**, öffnen eine **Datensatz**, oder das Angeben von Werten für die **Modus** Eigenschaft von der ** Datensatz** und **Stream** Objekte.|  
+|[ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md)|Gibt die verfügbaren Berechtigungen zum Ändern von Daten in eine **Verbindung**, öffnen eine **Datensatz**, oder das Angeben von Werten für die **Modus** Eigenschaft von der  **Datensatz** und **Stream** Objekte.|  
 |[ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md)|Gibt an, ob die **öffnen** Methode von einer **Verbindung** Objekt sollte nach dem zurückgeben (synchron) oder bevor (asynchron) die Verbindung hergestellt wird.|  
 |[ConnectPromptEnum](../../../ado/reference/ado-api/connectpromptenum.md)|Gibt an, ob ein Dialogfeld angezeigt werden soll, um fehlende Parameter beim Öffnen einer Verbindung mit einer ODBC-Datenquelle anzufordern.|  
 |[CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md)|Gibt das Verhalten der **CopyRecord** Methode.|  

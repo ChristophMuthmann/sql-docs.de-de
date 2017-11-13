@@ -66,7 +66,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
  [4] für diese Zeile zeigt die Übergänge beim *HandleType* SQL_HANDLE_DESC wurde.  
   
- [5] aufrufen **SQLAllocHandle** mit *OutputHandlePtr* verweist auf ein gültiges Handle dieses Handle ohne Berücksichtigung überschreibt, für die bisherigen Inhalte auf, behandeln und für ODBC-Treiber Probleme verursachen. Falsche ODBC-anwendungsprogrammierung aufrufen ist **SQLAllocHandle** zweimal mit der gleichen Anwendungsvariablen für definiert * \*OutputHandlePtr* ohne Aufruf ** SQLFreeHandle** , bevor Sie es erneut zugewiesen werden, das Freigeben des Handles. Überschreiben von ODBC könnte Handles auf solche Weise Fehler seitens der ODBC-Treiber zu inkonsistentem Verhalten führen.  
+ [5] aufrufen **SQLAllocHandle** mit *OutputHandlePtr* verweist auf ein gültiges Handle dieses Handle ohne Berücksichtigung überschreibt, für die bisherigen Inhalte auf, behandeln und für ODBC-Treiber Probleme verursachen. Falsche ODBC-anwendungsprogrammierung aufrufen ist **SQLAllocHandle** zweimal mit der gleichen Anwendungsvariablen für definiert  *\*OutputHandlePtr* ohne Aufruf  **SQLFreeHandle** , bevor Sie es erneut zugewiesen werden, das Freigeben des Handles. Überschreiben von ODBC könnte Handles auf solche Weise Fehler seitens der ODBC-Treiber zu inkonsistentem Verhalten führen.  
   
 ## <a name="sqlbindcol"></a>SQLBindCol  
   
@@ -255,7 +255,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
 |-------------------|---------------------------------------|-----------------------------|  
 |24000|24000 [1]|24000|  
   
- [1]. dieser Fehler wird vom Treiber-Manager zurückgegeben, wenn **SQLFetch** oder **SQLFetchScroll** wurden keine SQL_NO_DATA zurückgegeben und wird vom Treiber zurückgegeben, wenn **SQLFetch** oder ** SQLFetchScroll** SQL_NO_DATA zurückgegeben hat.  
+ [1]. dieser Fehler wird vom Treiber-Manager zurückgegeben, wenn **SQLFetch** oder **SQLFetchScroll** wurden keine SQL_NO_DATA zurückgegeben und wird vom Treiber zurückgegeben, wenn **SQLFetch** oder  **SQLFetchScroll** SQL_NO_DATA zurückgegeben hat.  
   
 ## <a name="sqlexecute"></a>SQLExecute  
   
@@ -279,7 +279,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
 |-------------------|---------------------------------------|-----------------------------|  
 |24000 [p] HY010 [Np]|24000 [p], [1] HY010 [Np]|24000 [p] HY010 [Np]|  
   
- [1]. dieser Fehler wird vom Treiber-Manager zurückgegeben, wenn **SQLFetch** oder **SQLFetchScroll** wurden keine SQL_NO_DATA zurückgegeben und wird vom Treiber zurückgegeben, wenn **SQLFetch** oder ** SQLFetchScroll** SQL_NO_DATA zurückgegeben hat.  
+ [1]. dieser Fehler wird vom Treiber-Manager zurückgegeben, wenn **SQLFetch** oder **SQLFetchScroll** wurden keine SQL_NO_DATA zurückgegeben und wird vom Treiber zurückgegeben, wenn **SQLFetch** oder  **SQLFetchScroll** SQL_NO_DATA zurückgegeben hat.  
   
 ## <a name="sqlextendedfetch"></a>SQLExtendedFetch  
   
@@ -328,7 +328,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
  [1] für diese Zeile zeigt die Übergänge beim *Option* SQL_CLOSE wurde.  
   
- [2] für diese Zeile zeigt die Übergänge beim *Option* SQL_UNBIND oder SQL_RESET_PARAMS wurde. Wenn die *Option* Argument wurde SQL_DROP und der zugrunde liegenden Treiber ist ein ODBC 3.*.x* Treiber, der Treiber-Manager ordnet dies zu einem Aufruf von **SQLFreeHandle** mit * HandleType* auf SQL_HANDLE_STMT festgelegt wird. Weitere Informationen finden Sie in der Tabelle der Zustandsübergänge für [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
+ [2] für diese Zeile zeigt die Übergänge beim *Option* SQL_UNBIND oder SQL_RESET_PARAMS wurde. Wenn die *Option* Argument wurde SQL_DROP und der zugrunde liegenden Treiber ist ein ODBC 3.*.x* Treiber, der Treiber-Manager ordnet dies zu einem Aufruf von **SQLFreeHandle** mit  *HandleType* auf SQL_HANDLE_STMT festgelegt wird. Weitere Informationen finden Sie in der Tabelle der Zustandsübergänge für [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
 ## <a name="sqlgetconnectattr"></a>SQLGetConnectAttr  
   

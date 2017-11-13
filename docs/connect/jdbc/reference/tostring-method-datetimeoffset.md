@@ -38,7 +38,7 @@ public String toString()
  Eine Zeichenfolgendarstellung der **"DateTimeOffset"** Objekt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Zeichenfolge hat das Format *YYYY*-*MM*-*DD**"hh"*:*mm*: *ss*[.* FFFFFFF*] [+ |-]*"hh"*:*mm*.  
+ Die Zeichenfolge hat das Format *YYYY*-*MM*-*DD**"hh"*:*mm*: *ss*[. *FFFFFFF*] [+ |-]*"hh"*:*mm*.  
   
  Die Sekundenbruchteile der zurückgegebenen Zeichenfolge werden bis zur angegebenen Genauigkeit mit Nullen aufgefüllt. Z. B. eine **datetimeoffset(6)** mit einem Wert von "2010-03-10-12:34:56.78-08: 00" formatiert von DateTimeOffset.toString als "2010-03-10-12:34:56.780000-08: 00".  
   

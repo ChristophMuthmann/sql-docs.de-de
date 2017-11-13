@@ -51,7 +51,7 @@ Der Paradox ODBC-Treiber ordnet Paradox-Datentypen in ODBC-SQL-Datentypen. Die f
   
  [1] gültig nur für Paradox, Versionen 5. *x*.  
   
- [2] gültig nur für Paradox Versionen 4. *x* und 5.* X*.  
+ [2] gültig nur für Paradox Versionen 4. *x* und 5. *X*.  
   
 > [!NOTE]  
 >  **SQLGetTypeInfo** gibt ODBC SQL-Datentypen. Alle Konvertierungen in Anhang D der *ODBC Programmer's Reference* werden für die ODBC-SQL-Datentypen, die weiter oben in diesem Thema aufgeführten unterstützt.  

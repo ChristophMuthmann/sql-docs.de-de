@@ -53,7 +53,7 @@ public long getLong(java.lang.String sCol)
 ## <a name="remarks"></a>Hinweise  
  Diese GetLong-Methode wird von der GetLong-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
- Diese Methode wird nur unterstützt unter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datentypen, die einen ganzzahligen Wert sicher, z. B. zurückgeben können **"bigint"**, **Int**, **"smallint"**, **"tinyint" **, und **Bit**. Bei Verwendung dieser Methode für andere Datentypen wird eine Ausnahme ausgelöst.  
+ Diese Methode wird nur unterstützt unter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Datentypen, die einen ganzzahligen Wert sicher, z. B. zurückgeben können **"bigint"**, **Int**, **"smallint"**, **"tinyint"** , und **Bit**. Bei Verwendung dieser Methode für andere Datentypen wird eine Ausnahme ausgelöst.  
   
 ## <a name="see-also"></a>Siehe auch  
  [GetLong-Methode &#40; SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)   

@@ -43,7 +43,7 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
   
 #### <a name="parameters"></a>Parameter  
  *StringFormat*  
- Ein [StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md) Wert, der angibt, wie die **Recordset** in eine Zeichenfolge konvertiert werden sollen. Die *RowDelimiter*, *ColumnDelimiter*, und *NullExpr* Parameter dienen nur mit einem *StringFormat* von ** AdClipString**.  
+ Ein [StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md) Wert, der angibt, wie die **Recordset** in eine Zeichenfolge konvertiert werden sollen. Die *RowDelimiter*, *ColumnDelimiter*, und *NullExpr* Parameter dienen nur mit einem *StringFormat* von  **AdClipString**.  
   
  *NumRows*  
  Optional. Die Anzahl der Zeilen in konvertiert werden die **Recordset**. Wenn *NumRows* nicht angegeben wird, oder wenn sie größer als die Gesamtzahl der Zeilen in ist die **Recordset**, klicken Sie dann alle Zeilen in der **Recordset** konvertiert werden.  

@@ -36,7 +36,7 @@ ADO für Windows Foundation Classes (ADO/WFC) baut auf das ADO-Ereignismodell un
     }  
     ```  
   
-2.  Definieren Sie ein Handler, das den Ereignishandler darstellt. Das Handlerobjekt muss der Datentyp **ConnectEventHandler** für ein Ereignis vom Typ **ConnectionEvent**, oder ein Datentyp **RecordsetEventHandler** für ein Ereignis vom Typ ** RecordsetEvent**. Z. B. den folgenden code für Ihre **ConnectComplete** Ereignishandler:  
+2.  Definieren Sie ein Handler, das den Ereignishandler darstellt. Das Handlerobjekt muss der Datentyp **ConnectEventHandler** für ein Ereignis vom Typ **ConnectionEvent**, oder ein Datentyp **RecordsetEventHandler** für ein Ereignis vom Typ  **RecordsetEvent**. Z. B. den folgenden code für Ihre **ConnectComplete** Ereignishandler:  
   
     ```  
     ConnectionEventHandler handler =   

@@ -39,7 +39,7 @@ ms.lasthandoff: 09/09/2017
  Ihre Auswahl entscheidet auch über die verfügbaren Funktionen. Weitere Informationen zu der JAR-Datei auswählen, finden Sie unter [Systemanforderungen für JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="setting-the-classpath"></a>Festlegen des Klassenpfads  
- Der JDBC-Treiber ist kein Bestandteil des Java SDK. Wenn Sie sie verwenden möchten, müssen Sie den Klassenpfad eingeschlossen Festlegen der **"sqljdbc.jar"** Datei **"sqljdbc4.jar"** Datei, die **"sqljdbc41.jar"** Datei, oder die ** "sqljdbc42.jar"** Datei. Wenn mit der JDBC-Treiber 6.2, den Klassenpfad so festlegen enthalten die **Mssql-Jdbc-6.2.1.jre7.jar** oder **Mssql-Jdbc-6.2.1.jre8.jar**. Wenn die Angabe des Klassenpfads fehlt, gibt die Anwendung die allgemeine Ausnahme „Klasse nicht gefunden“ aus.  
+ Der JDBC-Treiber ist kein Bestandteil des Java SDK. Wenn Sie sie verwenden möchten, müssen Sie den Klassenpfad eingeschlossen Festlegen der **"sqljdbc.jar"** Datei **"sqljdbc4.jar"** Datei, die **"sqljdbc41.jar"** Datei, oder die  **"sqljdbc42.jar"** Datei. Wenn mit der JDBC-Treiber 6.2, den Klassenpfad so festlegen enthalten die **Mssql-Jdbc-6.2.1.jre7.jar** oder **Mssql-Jdbc-6.2.1.jre8.jar**. Wenn die Angabe des Klassenpfads fehlt, gibt die Anwendung die allgemeine Ausnahme „Klasse nicht gefunden“ aus.  
   
 ### <a name="for-microsoft-jdbc-driver-62"></a>Für Microsoft JDBC Driver 6.2
  Die **Mssql-Jdbc-6.2.1.jre7.jar** oder **Mssql-Jdbc-6.2.1.jre8.jar** Dateien werden an folgendem Speicherort installiert:  

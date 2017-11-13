@@ -72,7 +72,7 @@ STDMETHODIMP CConnEvent::ConnectComplete(
   
  Die Ereignisklassen, die von erben **IUnknown**, sodass Sie auch implementieren, müssen die **QueryInterface**, **AddRef**, und **Version** Methoden. Implementieren Sie außerdem-Klasse, Konstruktoren und Destruktoren. Wählen Sie die Visual C++-Tools, mit denen Sie am häufigsten in diesem Teil der Aufgabe zu vereinfachen vertraut sind.  
   
- Stellen sie mit, dass Ihre Ereignishandler stehen durch Ausgeben von **QueryInterface** auf die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) und [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) von Objekten für die ** IConnectionPointContainer** und **IConnectionPoint** Schnittstellen. Geben Sie dann **IConnectionPoint:: Advise** für jede Klasse.  
+ Stellen sie mit, dass Ihre Ereignishandler stehen durch Ausgeben von **QueryInterface** auf die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) und [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) von Objekten für die  **IConnectionPointContainer** und **IConnectionPoint** Schnittstellen. Geben Sie dann **IConnectionPoint:: Advise** für jede Klasse.  
   
  Nehmen wir beispielsweise an, die Sie verwenden eine boolesche Funktion, die zurückgibt **"true"** , wenn er erfolgreich informiert eine **Recordset** Objekt, das Sie Ereignishandler verfügbar sind.  
   

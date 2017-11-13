@@ -35,7 +35,7 @@ Einrichten eines ADO-Projekts und Schreiben von Code für ADO gleicht gibt an, o
 
 #### <a name="to-reference-ado-from-microsoft-visual-basic"></a>In ADO-Verweis aus Microsoft Visual Basic
 
-1.  In Visual Basic aus der **Projekt** klicken Sie im Menü **Verweise... **.
+1.  In Visual Basic aus der **Projekt** klicken Sie im Menü **Verweise...** .
 
 2.  Wählen Sie **Microsoft ActiveX Data Objects x.x Library** aus der Liste. Überprüfen Sie, dass mindestens die folgenden Bibliotheken ebenfalls ausgewählt sind:
 
@@ -55,7 +55,7 @@ Einrichten eines ADO-Projekts und Schreiben von Code für ADO gleicht gibt an, o
 
 1.  Klicken Sie in Microsoft Access wählen, oder erstellen Sie ein Modul aus der **Module** Registerkarte der **Datenbank** Fenster.
 
-2.  Auf der **Tools** klicken Sie im Menü **Verweise... **.
+2.  Auf der **Tools** klicken Sie im Menü **Verweise...** .
 
 3.  Wählen Sie **Microsoft ActiveX Data Objects x.x Library** aus der Liste. Überprüfen Sie, dass mindestens die folgenden Bibliotheken ebenfalls ausgewählt sind:
 

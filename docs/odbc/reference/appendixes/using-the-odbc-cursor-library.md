@@ -43,7 +43,7 @@ ms.lasthandoff: 09/09/2017
   
 6.  Aufrufe **SQLFetch** oder **SQLFetchScroll** ein- oder mehrmals, über das Resultset zu scrollen.  
   
- Die Anwendung kann Datenwerte in den Puffern Rowset ändern. Um die Rowset-Puffer mit Daten aus der Cursorbibliothek Cache zu aktualisieren, eine Anwendung ruft **SQLFetchScroll** mit der *FetchOrientation* SQL_FETCH_RELATIVE-Argument festgelegt und die * FetchOffset* Argument auf 0 festgelegt.  
+ Die Anwendung kann Datenwerte in den Puffern Rowset ändern. Um die Rowset-Puffer mit Daten aus der Cursorbibliothek Cache zu aktualisieren, eine Anwendung ruft **SQLFetchScroll** mit der *FetchOrientation* SQL_FETCH_RELATIVE-Argument festgelegt und die  *FetchOffset* Argument auf 0 festgelegt.  
   
  Zum Abrufen von Daten aus einer nicht gebundenen Spalte, die Anwendung ruft **SQLSetPos** zur Positionierung des Cursors in der gewünschten Zeile. Er ruft dann **SQLGetData** zum Abrufen der Daten.  
   

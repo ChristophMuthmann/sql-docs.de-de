@@ -84,7 +84,7 @@ SQLRETURN SQLDataSources(
  [Eingabe] Länge in Zeichen von der **Beschreibung* Puffer.  
   
  *NameLength2Ptr*  
- [Ausgabe] Zeiger auf einen Puffer, in dem die Gesamtzahl der Zeichen (mit Ausnahme von Null-Abschlusszeichen) zurückgegeben verfügbar im zurückzugebenden \* *Beschreibung*. Wenn die Anzahl der zurückzugebenden verfügbaren Zeichen ist größer als oder gleich ist *BufferLength2*, um die treiberbeschreibung in \* *Beschreibung* auf abgeschnitten *BufferLength2 * abzüglich der Länge des ein Null-Abschlusszeichen.  
+ [Ausgabe] Zeiger auf einen Puffer, in dem die Gesamtzahl der Zeichen (mit Ausnahme von Null-Abschlusszeichen) zurückgegeben verfügbar im zurückzugebenden \* *Beschreibung*. Wenn die Anzahl der zurückzugebenden verfügbaren Zeichen ist größer als oder gleich ist *BufferLength2*, um die treiberbeschreibung in \* *Beschreibung* auf abgeschnitten *BufferLength2*  abzüglich der Länge des ein Null-Abschlusszeichen.  
   
 ## <a name="returns"></a>Rückgabewert  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR oder SQL_INVALID_HANDLE.  
@@ -96,7 +96,7 @@ SQLRETURN SQLDataSources(
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|(DM) Treibermanager-spezifische informationsmeldung. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01004|Zeichenfolgedaten wurden rechts abgeschnitten|(DM) Puffer \* *ServerName* war nicht groß genug ist, der vollständige Name der Datenquelle zurückgegeben. Deshalb wurde der Name abgeschnitten. Die Länge des gesamten Datenquellenname wird zurückgegeben, \* *NameLength1Ptr*. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)<br /><br /> (DM) Puffer \* *Beschreibung* war nicht groß genug, um die vollständige treiberbeschreibung zurückzugeben. Aus diesem Grund wurden die Beschreibung abgeschnitten. Die Länge des ungekürzte datenquellenbeschreibung wird zurückgegeben, **NameLength2Ptr*. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|HY000|Allgemeiner Fehler|(DM) Fehler für die keine spezifischen SQLSTATE vorhanden war, und für die keine implementierungsabhängige SQLSTATE definiert wurde. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der * \*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
+|HY000|Allgemeiner Fehler|(DM) Fehler für die keine spezifischen SQLSTATE vorhanden war, und für die keine implementierungsabhängige SQLSTATE definiert wurde. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der  *\*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
 |HY001|Fehler bei der speicherbelegung|Der Treiber-Manager (DM) konnte nicht belegt werden, die zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich ist.|  
 |HY010|Fehler bei Funktionssequenz|(DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreamte Parameter abgerufen wurde.|  
 |HY013|Speicherverwaltungsfehler|Der Funktionsaufruf konnte nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  

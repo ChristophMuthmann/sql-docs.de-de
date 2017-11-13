@@ -88,7 +88,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
   
  Ein nicht vorhandenes Feld erstellt und angefügt werden kann, die **Felder** Auflistung von Field-Objekt einen Wert zuweisen, als ob sie bereits in der Auflistung vorhanden waren. Die Zuweisung wird ausgelöst, die automatische Erstellung von und Anhängen von der **Feld** -Objekt, und klicken Sie dann die Zuweisung abgeschlossen werden.  
   
- Nach dem Anhängen ein **Feld** auf die **Felder** Auflistung von eine **Datensatz** -Objekt, rufen Sie die **Update** Methode der **Felder ** -Auflistung, um die Änderung zu speichern.  
+ Nach dem Anhängen ein **Feld** auf die **Felder** Auflistung von eine **Datensatz** -Objekt, rufen Sie die **Update** Methode der **Felder**  -Auflistung, um die Änderung zu speichern.  
   
 ## <a name="applies-to"></a>Gilt für  
   

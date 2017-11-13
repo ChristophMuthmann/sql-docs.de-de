@@ -33,11 +33,11 @@ SQL-basierte Anwendungen und nehmen Sie Änderungen an Tabellen durch Ausführen
   
  Die Syntax dieser Anweisungen lautet:  
   
- **UPDATE***Tabellenname  *  
+ **UPDATE***Tabellenname*   
   
- **Legen Sie** *Spaltenbezeichner* ** = ** {*Ausdruck* &#124; **NULL**}  
+ **Legen Sie** *Spaltenbezeichner*  **=**  {*Ausdruck* &#124; **NULL**}  
   
- [**,** *Spaltenbezeichner* ** = ** {*Ausdruck* &#124; **NULL**}]...  
+ [**,** *Spaltenbezeichner*  **=**  {*Ausdruck* &#124; **NULL**}]...  
   
  [**, In denen** *Suchbedingung*]  
   

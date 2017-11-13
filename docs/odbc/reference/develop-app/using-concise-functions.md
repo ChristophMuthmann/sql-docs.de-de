@@ -33,7 +33,7 @@ Einige ODBC-Funktionen zu impliziten Zugriff auf Deskriptoren erhalten. Anwendun
   
  Die präzisen Funktionen **SQLBindCol** und **SQLBindParameter** Binden einer Spalte oder eines Parameters durch Festlegen der deskriptorfelder, die entsprechen, ihre Argumente. Jede dieser Funktionen führt mehr Aufgaben als das Festlegen der Deskriptoren. **SQLBindCol** und **SQLBindParameter** bieten eine vollständige Spezifikation der Bindung einer Datenspalte oder den dynamischen Parameter. Eine Anwendung kann jedoch die einzelnen Details einer Bindung ändern, indem Aufrufen **SQLSetDescField** oder **SQLSetDescRec** und können vollständig binden Sie eine Spalte oder Parameter machen eine Reihe von geeignete Aufrufe an Diese Funktionen.  
   
- Die präzisen Funktionen **SQLColAttribute**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLNumParams**, und ** SQLNumResultCols** Werte in deskriptorfelder abrufen.  
+ Die präzisen Funktionen **SQLColAttribute**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLNumParams**, und  **SQLNumResultCols** Werte in deskriptorfelder abrufen.  
   
  **SQLSetDescRec** und **SQLGetDescRec** sind präzise Funktionen, die mit einem Aufruf festlegen oder Abrufen von mehreren deskriptorfelder, die den Datentyp und die Speicherung von Daten für Spalte oder Parameter beeinflussen. **SQLSetDescRec** ist eine effektive Möglichkeit für die Bindung der Spalte oder Parameter-Daten in einem Schritt zu ändern.  
   

@@ -133,7 +133,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example"></a>Beispiel  
-Im folgenden Beispiel wird jede Zeile eines Resultsets als eine Instanz der im Skript definierten *Product* -Klasse abgerufen. Im Beispiel wird die Produktinformation aus der *Purchasing.PurchaseOrderDetail* und *Production.Product* Tabellen der AdventureWorks-Datenbank für Produkte mit einem angegebenen Fälligkeitsdatum (* DueDate*), und einer gelagerten Menge (*StockQty*) kleiner als ein angegebener Wert. In diesem Beispiel sind einige der Regeln, die beim Spezifizieren einer Klasse in einem Aufruf an **sqlsrv_fetch_object**zur Anwendung kommen, noch einmal deutlich herausgestellt:  
+Im folgenden Beispiel wird jede Zeile eines Resultsets als eine Instanz der im Skript definierten *Product* -Klasse abgerufen. Im Beispiel wird die Produktinformation aus der *Purchasing.PurchaseOrderDetail* und *Production.Product* Tabellen der AdventureWorks-Datenbank für Produkte mit einem angegebenen Fälligkeitsdatum ( *DueDate*), und einer gelagerten Menge (*StockQty*) kleiner als ein angegebener Wert. In diesem Beispiel sind einige der Regeln, die beim Spezifizieren einer Klasse in einem Aufruf an **sqlsrv_fetch_object**zur Anwendung kommen, noch einmal deutlich herausgestellt:  
   
 -   Die *$product* -Variable ist eine Instanz der *Product* -Klasse, da „Produkt“ mit dem *$className* -Parameter spezifiziert wurde und die *Product* -Klasse existiert.  
   

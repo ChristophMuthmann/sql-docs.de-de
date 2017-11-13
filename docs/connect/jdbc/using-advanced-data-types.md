@@ -46,7 +46,7 @@ ms.lasthandoff: 09/09/2017
  Der JDBC-Treiber implementiert alle Methoden der java.sql.Blob-, java.sql.Clob- und java.sql.NClob-Schnittstellen.  
   
 > [!NOTE]  
->  CLOB-Werte verwendet werden können, mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] (oder höher) Datentypen mit umfangreichen Werten. Insbesondere können CLOB-Typen verwendet werden, mit der **varchar(max)** und **nvarchar(max)** -Datentypen BLOB-Typen können verwendet werden mit **varbinary(max)** und **Bild ** Datentypen sowie NCLOB-Typen mit verwendet werden können **Ntext** und **nvarchar(max)**.  
+>  CLOB-Werte verwendet werden können, mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] (oder höher) Datentypen mit umfangreichen Werten. Insbesondere können CLOB-Typen verwendet werden, mit der **varchar(max)** und **nvarchar(max)** -Datentypen BLOB-Typen können verwendet werden mit **varbinary(max)** und **Bild**  Datentypen sowie NCLOB-Typen mit verwendet werden können **Ntext** und **nvarchar(max)**.  
   
 ## <a name="large-value-data-types"></a>Datentypen mit umfangreichen Werten  
  In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], arbeiten mit Datentypen mit umfangreichen Werten Typen eine besondere Behandlung erforderlich. Datentypen mit umfangreichen Werten sind solche, die die maximale Zeilengröße von 8 KB überschreiten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Führt einen maximalbezeichner für **Varchar**, **Nvarchar**, und **Varbinary** Datentypen um Speicherung von Werten zu ermöglichen, die so groß wie 2 ^ 31 Byte. Spalten der Tabelle und [!INCLUDE[tsql](../../includes/tsql_md.md)] Variablen festlegbaren **varchar(max)**, **nvarchar(max)**, oder **varbinary(max)** Datentypen.  

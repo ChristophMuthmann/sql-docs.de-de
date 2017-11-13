@@ -48,7 +48,7 @@ Sie können keine Visual FoxPro-Regeln, Trigger, Standardwerte oder gespeicherte
  Wenn Ihre Anwendung mit Daten, deren Regeln, Trigger, Standardwerte kommuniziert oder gespeicherte Prozeduren, keine weiteren Visual FoxPro-Befehle oder Funktionen aufrufen, generiert der Treiber einen Fehler aus. Finden Sie unter [nicht unterstützte Visual FoxPro-Befehle und Funktionen](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md) eine Liste von Befehlen und Funktionen, die vom Treiber nicht unterstützt.  
   
 > [!TIP]  
->  Wenn Sie die Regeln, Trigger oder gespeicherte Prozeduren, die bestimmt, die Befehle ausführen, wenn vom Treiber aufgerufen bedingten Code einfügen möchten, können Sie mithilfe der **VERSION ()** Funktion. Die **VERSION ()** -Funktion gibt "Visual FoxPro-ODBC-Treiber * \<Version >*" beim Aufruf durch den Treiber.  
+>  Wenn Sie die Regeln, Trigger oder gespeicherte Prozeduren, die bestimmt, die Befehle ausführen, wenn vom Treiber aufgerufen bedingten Code einfügen möchten, können Sie mithilfe der **VERSION ()** Funktion. Die **VERSION ()** -Funktion gibt "Visual FoxPro-ODBC-Treiber  *\<Version >*" beim Aufruf durch den Treiber.  
   
 ## <a name="visual-foxpro-commands-and-functions-supported-in-rules-triggers-default-values-and-stored-procedures"></a>Visual FoxPro-Befehlen und Funktionen, die in Regeln, Trigger, Standardwerte und gespeicherten Prozeduren unterstützt  
   

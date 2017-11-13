@@ -34,7 +34,7 @@ Diese einfache Anwendung schrittweise jeden der vier wichtigsten ADO-Vorgänge: 
   
 2.  Erstellen Sie vier Schaltflächen am oberen Rand des Formulars, das Festlegen der **Namen** und **Beschriftung** Eigenschaften mit den Werten in der Tabelle am Ende dieses Themas aufgeführt.  
   
-3.  Fügen Sie unterhalb der Schaltflächen eine **Microsoft DataGrid Control** (Msdatgrd.ocx). Die Msdatgrd.ocx-Datei ist im Lieferumfang von Visual Basic und befindet sich im Verzeichnis \windows\system32 oder \winnt\system32. Um Ihrem Visual Basic-Bereich "Toolbox" DataGrid-Steuerelement hinzugefügt haben, wählen Sie **Komponenten... ** aus der **Projekt** Menü. Aktivieren Sie das Kontrollkästchen neben "Microsoft DataGrid Control 6.0 (SP3) (OLEDB)", und klicken Sie dann auf **OK**. Ziehen Sie zum Hinzufügen des Steuerelements zum Projekt das DataGrid-Steuerelement aus der Toolbox in das Visual Basic-Formular.  
+3.  Fügen Sie unterhalb der Schaltflächen eine **Microsoft DataGrid Control** (Msdatgrd.ocx). Die Msdatgrd.ocx-Datei ist im Lieferumfang von Visual Basic und befindet sich im Verzeichnis \windows\system32 oder \winnt\system32. Um Ihrem Visual Basic-Bereich "Toolbox" DataGrid-Steuerelement hinzugefügt haben, wählen Sie **Komponenten...**  aus der **Projekt** Menü. Aktivieren Sie das Kontrollkästchen neben "Microsoft DataGrid Control 6.0 (SP3) (OLEDB)", und klicken Sie dann auf **OK**. Ziehen Sie zum Hinzufügen des Steuerelements zum Projekt das DataGrid-Steuerelement aus der Toolbox in das Visual Basic-Formular.  
   
 4.  Erstellen einer **Textfeld** auf das Formular unten im Raster und seine Eigenschaften festlegen, wie in der Tabelle dargestellt. Das Formular sollte die folgende Abbildung entsprechen, wenn Sie fertig sind.  
   

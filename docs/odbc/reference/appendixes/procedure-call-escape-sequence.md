@@ -43,11 +43,11 @@ ODBC verwendet Escapesequenzen für Prozeduraufrufe an. Die Syntax für diese Es
   
  *Prozedurnamen* :: = *Prozedur-ID*  
   
- &#124; *Besitzername*.* Prozedur-ID*  
+ &#124; *Besitzername*. *Prozedur-ID*  
   
  &#124; *Katalognamen Katalogtrennzeichen* *Prozedur-ID*  
   
- &#124; *Katalognamen Katalogtrennzeichen* [*Besitzername*].* Prozedur-ID*  
+ &#124; *Katalognamen Katalogtrennzeichen* [*Besitzername*]. *Prozedur-ID*  
   
  (Die dritte Syntax ist nur gültig, wenn die Datenquelle Besitzer nicht unterstützt.)  
   

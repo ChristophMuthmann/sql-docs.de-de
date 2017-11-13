@@ -35,7 +35,7 @@ Gibt den Namen eines Objekts an.
  Legt fest oder gibt einen **Zeichenfolge** Wert, der den Namen eines Objekts angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der **Namen** Eigenschaft, um einen Namen zuweisen oder Abrufen des Namens des eine **Befehl**, **Eigenschaft**, **Feld**, oder **Parameter ** Objekt.  
+ Verwenden der **Namen** Eigenschaft, um einen Namen zuweisen oder Abrufen des Namens des eine **Befehl**, **Eigenschaft**, **Feld**, oder **Parameter**  Objekt.  
   
  Der Wert ist Lese-/Schreibzugriff auf eine **Befehl** Objekt "und" Read-only auf eine **Eigenschaft** Objekt.  
   

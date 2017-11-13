@@ -33,12 +33,12 @@ Die folgende Tabelle enthält die Werte für die *FieldType* -Argument in ALTER 
 |B|-|d|Double|  
 |C|N|-|Zeichenfeld der Breite*n*|  
 |D|-|-|Datum|  
-|V|N|d|Gleitkommawert numerisches Feld der Breite * n * mit *d* Dezimalstellen an.|  
+|V|N|d|Gleitkommawert numerisches Feld der Breite  *n*  mit *d* Dezimalstellen an.|  
 |G|-|-|Allgemein|  
 |I|-|-|Integer|  
 |L|-|-|Logische Operatoren|  
 |M|-|-|Memo|  
-|N|N|d|Numerisches Feld der Breite * n * mit *d* Dezimalstellen an.|  
+|N|N|d|Numerisches Feld der Breite  *n*  mit *d* Dezimalstellen an.|  
 |T|-|-|DateTime|  
 |J|-|-|Währung|
 

@@ -36,10 +36,10 @@ ms.lasthandoff: 09/09/2017
  Version eingeführt: ODBC 1.0 Standardkonformität: veraltet  
   
  **Zusammenfassung**  
- In ODBC 3. *x*, die ODBC-2.* X* Funktion **SQLAllocStmt:** wurde ersetzt durch **SQLAllocHandle**. Weitere Informationen finden Sie unter [SQLAllocHandle-Funktion](../../../odbc/reference/syntax/sqlallochandle-function.md).  
+ In ODBC 3. *x*, die ODBC-2. *X* Funktion **SQLAllocStmt:** wurde ersetzt durch **SQLAllocHandle**. Weitere Informationen finden Sie unter [SQLAllocHandle-Funktion](../../../odbc/reference/syntax/sqlallochandle-function.md).  
   
 > [!NOTE]  
->  Weitere Informationen zu welcher der Treiber-Manager ordnet diese Funktion zu, wenn eine ODBC-2. *x* Anwendung arbeitet mit einer ODBC-3.* X* -Treiber verwenden, finden Sie unter [veraltet Zuordnungsfunktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Treiber Richtlinien für die Abwärtskompatibilität.  
+>  Weitere Informationen zu welcher der Treiber-Manager ordnet diese Funktion zu, wenn eine ODBC-2. *x* Anwendung arbeitet mit einer ODBC-3. *X* -Treiber verwenden, finden Sie unter [veraltet Zuordnungsfunktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Treiber Richtlinien für die Abwärtskompatibilität.  
   
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   

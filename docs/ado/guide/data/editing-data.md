@@ -48,7 +48,7 @@ Wir haben erläutert wie ADO verwenden, um eine Verbindung mit einer Datenquelle
 'EndEditIntro  
 ```  
   
- Die wichtige Änderung des Codes besteht im Festlegen der **CursorLocation** Eigenschaft von der **Verbindung** Objekt gleich **AdUseClient** in der * GetNewConnection* Funktion (im nächsten Beispiel gezeigt), womit die Verwendung eines Client-Cursors. Weitere Informationen zu den Unterschieden zwischen Client- und serverseitigen Cursor finden Sie unter [Grundlegendes zu Cursorn und Sperren](../../../ado/guide/data/understanding-cursors-and-locks.md).  
+ Die wichtige Änderung des Codes besteht im Festlegen der **CursorLocation** Eigenschaft von der **Verbindung** Objekt gleich **AdUseClient** in der  *GetNewConnection* Funktion (im nächsten Beispiel gezeigt), womit die Verwendung eines Client-Cursors. Weitere Informationen zu den Unterschieden zwischen Client- und serverseitigen Cursor finden Sie unter [Grundlegendes zu Cursorn und Sperren](../../../ado/guide/data/understanding-cursors-and-locks.md).  
   
  Die **CursorLocation** der Eigenschaft **AdUseClient** Einstellung verschiebt die Position des Cursors aus der Datenquelle (in diesem Fall die SQL-Server) auf den Speicherort der Clientcode (der desktop-Arbeitsstation). Diese Einstellung erzwingt, dass ADO die Client-Cursormoduls für OLE DB-aufrufen, auf dem Client zum Erstellen und verwalten den Cursor.  
   

@@ -82,7 +82,7 @@ shutdown /r /t 1
  Vor Version 4.0 die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]beim Herstellen einer Verbindung mit einer [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], mussten Sie, den Servernamen an die UserId in der Verbindungszeichenfolge angefügt werden soll. Beispiel: user@servername. Ab Version 4.0 von der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], es ist nicht mehr erforderlich, anzufügende @servername an die UserId in der Verbindungszeichenfolge angegeben.  
   
  Einstellung "hostNameInCertificate" zur Verwendung der Verschlüsselung erforderlich  
- Beim Herstellen einer Verbindung mit einer [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], geben Sie **HostNameInCertificate** bei Angabe von **Verschlüsseln = "true"**. (Wenn der Servername in der Verbindungszeichenfolge ist *ShortName*.* DomainName*legen die **HostNameInCertificate** Eigenschaft \*.* DomainName*.)  
+ Beim Herstellen einer Verbindung mit einer [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], geben Sie **HostNameInCertificate** bei Angabe von **Verschlüsseln = "true"**. (Wenn der Servername in der Verbindungszeichenfolge ist *ShortName*. *DomainName*legen die **HostNameInCertificate** Eigenschaft \*. *DomainName*.)  
   
  Beispiel:  
   

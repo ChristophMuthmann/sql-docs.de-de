@@ -48,7 +48,7 @@ Gibt an, die Informationen zum Herstellen einer Verbindung mit einer Datenquelle
   
  Nach dem Festlegen der **"ConnectionString"** -Eigenschaft, und Öffnen der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) -Objekt, den Anbieter möglicherweise zu ändern den Inhalt der Eigenschaft, z. B. durch Zuordnen von ADO definierten Argumentnamen auf ihre Entsprechung für den bestimmten Anbieter.  
   
- Die **"ConnectionString"** -Eigenschaft erbt automatisch den Wert für die *"ConnectionString"* Argument der [öffnen](../../../ado/reference/ado-api/open-method-ado-connection.md) Methode, sodass Sie die aktuelle überschreibenkönnen** "ConnectionString"** Eigenschaft während der **öffnen** -Methodenaufruf.  
+ Die **"ConnectionString"** -Eigenschaft erbt automatisch den Wert für die *"ConnectionString"* Argument der [öffnen](../../../ado/reference/ado-api/open-method-ado-connection.md) Methode, sodass Sie die aktuelle überschreibenkönnen **"ConnectionString"** Eigenschaft während der **öffnen** -Methodenaufruf.  
   
  Da die *Dateiname* Argument bewirkt, dass ADO zugeordneten Anbieter zu laden, kann nicht übergeben werden, sowohl die *Anbieter* und *Dateiname* Argumente.  
   

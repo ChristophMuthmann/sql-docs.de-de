@@ -46,7 +46,7 @@ Die Themen in diesem Abschnitt beschreiben jede ODBC-Funktion in alphabetischer 
   
 -   Verweise auf verwandte Funktionen  
   
- Der standard CLI Konformitätsgrad kann eines der folgenden sein: ISO-92, Open Group, ODBC oder veraltet sind. Eine Funktion, die wie ISO-92-konforme auch Open Group Version 1, wird gekennzeichnet, da Open Group ISO-92 reinen übergeordnet ist. Eine Funktion, die als Gruppe geöffnet kompatibel gekennzeichnet wird auch in ODBC 3. angezeigt. *x*, da ODBC 3.* X* ist eine reine Obermenge der Open Group Version 1. Eine Funktion, die als ODBC-kompatiblen wird weder Standard angezeigt. Eine Funktion, die als veraltet markiert wurde in ODBC 3. als veraltet markiert. *x*.  
+ Der standard CLI Konformitätsgrad kann eines der folgenden sein: ISO-92, Open Group, ODBC oder veraltet sind. Eine Funktion, die wie ISO-92-konforme auch Open Group Version 1, wird gekennzeichnet, da Open Group ISO-92 reinen übergeordnet ist. Eine Funktion, die als Gruppe geöffnet kompatibel gekennzeichnet wird auch in ODBC 3. angezeigt. *x*, da ODBC 3. *X* ist eine reine Obermenge der Open Group Version 1. Eine Funktion, die als ODBC-kompatiblen wird weder Standard angezeigt. Eine Funktion, die als veraltet markiert wurde in ODBC 3. als veraltet markiert. *x*.  
   
  Behandlung von Diagnoseinformationen wird beschrieben, der [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) funktionsbeschreibung. Der SQLSTATE-Werten zugeordnete Text Geben Sie eine Beschreibung der Bedingung ist jedoch sollte nicht bestimmten Text vorgegeben.  
   

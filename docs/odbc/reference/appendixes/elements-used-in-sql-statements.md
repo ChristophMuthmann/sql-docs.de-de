@@ -58,7 +58,7 @@ Die folgenden Elemente werden in der SQL-Anweisungen, die zuvor aufgeführten ve
   
  *Ausdruck* :: = Begriff &#124; Ausdruck {+ &#124; –} Begriff  
   
- *Faktor* :: = [*+*&#124;* –*]*primären*  
+ *Faktor* :: = [*+*&#124; *–*]*primären*  
   
  *INSERT-Wert* :: =  
   
@@ -102,7 +102,7 @@ Die folgenden Elemente werden in der SQL-Anweisungen, die zuvor aufgeführten ve
   
  *Tabelle der Verweisliste* :: = *Tabellenverweis* [,*Tabellenverweis*]...  
   
- *Begriff* :: = *Faktor* &#124; *Begriff* {\*&#124;* / *} *Faktor*  
+ *Begriff* :: = *Faktor* &#124; *Begriff* {\*&#124; */* } *Faktor*  
   
  *unsigned Integer* :: = {*Ziffer*}  
   

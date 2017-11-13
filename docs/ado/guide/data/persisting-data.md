@@ -66,7 +66,7 @@ Destination, PersistFormat
   
  Wenn eine **Recordset** wird beibehalten, mit der **CursorLocation** -Eigenschaftensatz auf **AdUseServer**, die Update-Funktion für die **Recordset**ist beschränkt. In der Regel nur einzelne Tabelle Updates, einfügungen und löschungen (abhängig von Anbieterfunktionen) zulässig sind. Die [Resync](../../../ado/reference/ado-api/resync-method.md) Methode ist auch in dieser Konfiguration nicht verfügbar.  
   
- Da die *Ziel* Parameter akzeptiert jedes Objekt, das die OLE DB unterstützt **IStream** -Schnittstelle, die Sie speichern eine **Recordset** direkt an die ASP ** Antwort** Objekt.  
+ Da die *Ziel* Parameter akzeptiert jedes Objekt, das die OLE DB unterstützt **IStream** -Schnittstelle, die Sie speichern eine **Recordset** direkt an die ASP  **Antwort** Objekt.  
   
  Im folgenden Beispiel die **speichern** und **öffnen** Methoden zum Beibehalten einer **Recordset** und es später erneut öffnen:  
   

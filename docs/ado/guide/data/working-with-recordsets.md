@@ -78,7 +78,7 @@ Die **Recordset** Objekt verfügt über integrierte Funktionen, mit denen Sie di
 ## <a name="filtering-the-results"></a>Filtern der Ergebnisse  
  Die **suchen** -Methode schränkt die Suche auf den Inhalt des Felds ein. Die **Seek** Methode erfordert, dass Sie weitere Einschränkungen sowie noch und einen Index haben. Wenn Sie auf mehrere Felder, die nicht auf der Grundlage eines Indexes sind suchen oder müssen wenn Ihr Anbieter Indizes nicht unterstützt, können Sie Ihre Ergebnisse einschränken, indem Sie mit der **Filter** Eigenschaft von der **Recordset** Objekt.  
   
- Verwenden der **Filter** Eigenschaft, um selektiv herauszufiltern Datensätze in einem **Recordset** Objekt. Die gefilterten **Recordset** wird der aktuelle Cursor, der Möglichkeit, die Datensätze nicht erfüllen die **Filter** Kriterien sind nicht verfügbar in der **Recordset** bis der **Filter** wird entfernt. Weitere Eigenschaften, die Rückgabe von Werten basierend auf den aktuellen Cursor betroffen sind, z. B. **AbsolutePosition**, **AbsolutePage**, **RecordCount**, und ** "PageCount"**. Dies ist, da das Festlegen der **Filter** Eigenschaft auf einen bestimmten Wert wird den aktuellen Datensatz verschoben, auf den ersten Eintrag, der den neuen Wert entspricht.  
+ Verwenden der **Filter** Eigenschaft, um selektiv herauszufiltern Datensätze in einem **Recordset** Objekt. Die gefilterten **Recordset** wird der aktuelle Cursor, der Möglichkeit, die Datensätze nicht erfüllen die **Filter** Kriterien sind nicht verfügbar in der **Recordset** bis der **Filter** wird entfernt. Weitere Eigenschaften, die Rückgabe von Werten basierend auf den aktuellen Cursor betroffen sind, z. B. **AbsolutePosition**, **AbsolutePage**, **RecordCount**, und  **"PageCount"**. Dies ist, da das Festlegen der **Filter** Eigenschaft auf einen bestimmten Wert wird den aktuellen Datensatz verschoben, auf den ersten Eintrag, der den neuen Wert entspricht.  
   
  Die **Filter** Eigenschaft akzeptiert einen variant-Argument. Dieser Wert gibt eine der drei Methoden für die Verwendung der **Filter** Eigenschaft: eine Kriterienzeichenfolge eine **FilterGroupEnum** -Konstante oder ein Array von Lesezeichen. Weitere Informationen finden Sie weiter unten in diesem Thema mit einem Zeichenfolgen-Kriterien filtern, Filtern mit einer Konstante und Filtern mit Lesezeichen.  
   
@@ -92,7 +92,7 @@ Die **Recordset** Objekt verfügt über integrierte Funktionen, mit denen Sie di
   
 -   *Feldname* muss ein gültigen Feldnamen aus der **Recordset**. Wenn das Feldname Leerzeichen enthält, müssen Sie den Namen in eckige Klammern einschließen.  
   
--   *Operator* muss eines der folgenden sein: ** \< **, ** > **, ** \< = **, ** >= ** , ** <> **, ** = **, oder **wie**.  
+-   *Operator* muss eines der folgenden sein:  **\<** ,  **>** ,  **\< =** ,  **>=**  ,  **<>** ,  **=** , oder **wie**.  
   
 -   *Wert* ist der Wert, mit denen Sie die Feldwerte vergleichen (z. B. `'Smith'`, `#8/24/95#`, `12.345`, oder `$50.00`). Verwenden Sie einfache Anführungszeichen (') mit Zeichenfolgen und Nummernzeichen (`#`) mit Datumsangaben. Für Zahlen können Sie das Dezimaltrennzeichen, Dollarzeichen sowie die wissenschaftliche Schreibweise. Wenn *Operator* ist **wie**, *Wert* können Platzhalterzeichen verwenden. Nur das Sternchen (\*) und Prozentzeichen (%) Platzhalter Zeichen sind zulässig und sie müssen das letzte Zeichen in der Zeichenfolge sein. *Wert* darf nicht null sein.  
   

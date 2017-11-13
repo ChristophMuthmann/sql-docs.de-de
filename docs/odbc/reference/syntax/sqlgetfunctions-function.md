@@ -76,7 +76,7 @@ SQLRETURN SQLGetFunctions(
 |--------|-----|-----------|  
 |01000|Allgemeine Warnung|Treiberspezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |08S01|Kommunikations-Verbindungsfehler|Die Verbindung zwischen dem Treiber und die Datenquelle mit der der Treiber verbunden wurde aufgetreten ist, bevor die Verarbeitung für die Funktion abgeschlossen.|  
-|HY000|Allgemeiner Fehler|Für die es keine spezifischen SQLSTATE wurde und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der * \*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
+|HY000|Allgemeiner Fehler|Für die es keine spezifischen SQLSTATE wurde und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der  *\*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
 |HY001|Fehler bei der speicherbelegung|Der Treiber konnte nicht belegt werden zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich.|  
 |HY010|Fehler bei Funktionssequenz|(DM) **SQLGetFunctions** wurde aufgerufen, bevor **SQLConnect**, **SQLBrowseConnect**, oder **SQLDriverConnect**.<br /><br /> (DM) **SQLBrowseConnect** wurde aufgerufen, die *Verbindungshandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion aufgerufen wurde, bevor **SQLBrowseConnect** SQL_SUCCESS_WITH_INFO oder SQL_SUCCESS zurückgegeben.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *Verbindungshandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreamte Parameter abgerufen wurde.|  
 |HY013|Speicherverwaltungsfehler|Der Funktionsaufruf konnte nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
@@ -133,7 +133,7 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLFOREIGNKEYS|SQL_API_SQLTABLEPRIVILEGES|  
 |SQL_API_SQLMORERESULTS| |  
   
- [1] bei der Arbeit mit einer ODBC 2.*.x* -Treiber **SQLBulkOperations** wird zurückgegeben, als nur unterstützt, wenn beide folgenden Bedingungen erfüllt sind: die ODBC 2.*.x* -Treiber unterstützt ** SQLSetPos**, und der Typ der Informationen SQL_POS_OPERATIONS gibt das SQL_POS_ADD Bit festgelegt.  
+ [1] bei der Arbeit mit einer ODBC 2.*.x* -Treiber **SQLBulkOperations** wird zurückgegeben, als nur unterstützt, wenn beide folgenden Bedingungen erfüllt sind: die ODBC 2.*.x* -Treiber unterstützt  **SQLSetPos**, und der Typ der Informationen SQL_POS_OPERATIONS gibt das SQL_POS_ADD Bit festgelegt.  
   
  Im folgenden werden eine Liste der gültigen Werte für *FunctionId* für Funktionen, die in ODBC 3.8 oder höher eingeführt:  
   
@@ -141,16 +141,16 @@ SQLRETURN SQLGetFunctions(
 |-|  
 |SQL_API_SQLCANCELHANDLE [2]|  
   
- [2] **SQLCancelHandle** wird zurückgegeben, als nur unterstützt, wenn der Treiber sowohl unterstützt **SQLCancel** und **SQLCancelHandle**. Wenn **SQLCancel** wird unterstützt, aber **SQLCancelHandle** jedoch nicht, die Anwendung kann immer noch Aufrufen **SQLCancelHandle** für ein Anweisungshandle, da er zur zugeordnetwerdensollen** SQLCancel**.  
+ [2] **SQLCancelHandle** wird zurückgegeben, als nur unterstützt, wenn der Treiber sowohl unterstützt **SQLCancel** und **SQLCancelHandle**. Wenn **SQLCancel** wird unterstützt, aber **SQLCancelHandle** jedoch nicht, die Anwendung kann immer noch Aufrufen **SQLCancelHandle** für ein Anweisungshandle, da er zur zugeordnetwerdensollen **SQLCancel**.  
   
 ## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS-Makro  
- Die SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) Makro wird verwendet, um zu bestimmen, die Unterstützung von ODBC 3.*.x* oder Funktionen, die nach dem früheren **SQLGetFunctions ** aufgerufen wurde mit einem *FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS Argument. Ruft die Anwendung SQL_FUNC_EXISTS mit der *SupportedPtr* Argument festgelegt wird, um die *SupportedPtr* übergebene *SQLGetFunctions*, und mit der * FunctionID* Argument festgelegt wird, um die **#define** für die Funktion. SQL_FUNC_EXISTS gibt SQL_TRUE, wenn die Funktion unterstützt wird und SQL_FALSE andernfalls zurück.  
+ Die SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) Makro wird verwendet, um zu bestimmen, die Unterstützung von ODBC 3.*.x* oder Funktionen, die nach dem früheren **SQLGetFunctions**  aufgerufen wurde mit einem *FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS Argument. Ruft die Anwendung SQL_FUNC_EXISTS mit der *SupportedPtr* Argument festgelegt wird, um die *SupportedPtr* übergebene *SQLGetFunctions*, und mit der  *FunctionID* Argument festgelegt wird, um die **#define** für die Funktion. SQL_FUNC_EXISTS gibt SQL_TRUE, wenn die Funktion unterstützt wird und SQL_FALSE andernfalls zurück.  
   
 > [!NOTE]  
 >  Bei der Arbeit mit einer ODBC 2.*.x* -Treiber verwenden, die ODBC 3.*.x* -Treiber-Managers zurück SQL_TRUE für **SQLAllocHandle** und **SQLFreeHandle**da **SQLAllocHandle** zugeordnet **SQLAllocEnv**, **SQLAllocConnect**, oder **SQLAllocStmt:**, und Da **SQLFreeHandle** zugeordnet **SQLFreeEnv**, **SQLFreeConnect**, oder **SQLFreeStmt**. **SQLAllocHandle** oder **SQLFreeHandle** mit einem *HandleType* Argument SQL_HANDLE_DESC wird nicht unterstützt, allerdings, obwohl SQL_TRUE für die Funktionen, die zurückgegeben wird, denn es gibt keine ODBC 2.*.x* Funktion in diesem Fall zuzuordnen.  
   
 ## <a name="code-example"></a>Codebeispiel  
- Die folgenden drei Beispiele zeigen, wie eine Anwendung verwendet **SQLGetFunctions** zu bestimmen, ob ein Treiber unterstützt **SQLTables**, **SQLColumns**, und ** SQLStatistics**. Wenn der Treiber diese Funktionen nicht unterstützt, trennt die Anwendung aus dem Treiber. Im ersten Beispiel wird **SQLGetFunctions** einmal für jede Funktion.  
+ Die folgenden drei Beispiele zeigen, wie eine Anwendung verwendet **SQLGetFunctions** zu bestimmen, ob ein Treiber unterstützt **SQLTables**, **SQLColumns**, und  **SQLStatistics**. Wenn der Treiber diese Funktionen nicht unterstützt, trennt die Anwendung aus dem Treiber. Im ersten Beispiel wird **SQLGetFunctions** einmal für jede Funktion.  
   
 ```  
 SQLUSMALLINT TablesExists, ColumnsExists, StatisticsExists;  

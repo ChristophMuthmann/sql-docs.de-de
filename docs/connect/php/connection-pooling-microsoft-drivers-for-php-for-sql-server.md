@@ -41,7 +41,7 @@ Weitere Informationen zum Verbindungspooling finden Sie unter [Treibermanager-Ve
   
 ## <a name="enablingdisabling-connection-pooling"></a>Aktivieren/Deaktivieren Verbindungspooling
 ### <a name="windows"></a>Windows
-Sie können den Treiber zwingen, eine neue Verbindung (anstelle der Suche nach einer äquivalenten Verbindung im Verbindungspool) zu erstellen, durch Festlegen des Werts, der die *ConnectionPooling* Attribut in der Verbindungszeichenfolge auf **"false" ** (oder 0).  
+Sie können den Treiber zwingen, eine neue Verbindung (anstelle der Suche nach einer äquivalenten Verbindung im Verbindungspool) zu erstellen, durch Festlegen des Werts, der die *ConnectionPooling* Attribut in der Verbindungszeichenfolge auf **"false"**  (oder 0).  
   
 Wenn die *ConnectionPooling* -Attribut wird aus der Verbindungszeichenfolge weggelassen oder wenn sie, um festgelegt ist **"true"** (oder 1) der Treiber wird nur eine neue Verbindung erstellen, wenn keine äquivalente Verbindung nicht, in vorhanden ist der Verbindungspool.  
   

@@ -31,7 +31,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>ADO für Visual C++-Syntax Index für COM
 Dieser Index ist ein Querverweis auf der Grundlage von Microsoft Visual C++ ADO-Sprachreferenz.  
   
- Bei Verwendung der **#import** Richtlinie in der Anwendung, eine Headerdatei generiert wird, mit denen Sie ähnliche Syntax wie Microsoft Visual Basic verwenden. Eigenschaftennamen des Formulars **Get_***PropertyName* und **Put_***PropertyName* behandelt werden kann, als ob sie einfach als deklariertwurden* PropertyName*. Eine Eigenschaft kann dann wie ein Datenmember anstelle einer Funktion behandelt werden.  
+ Bei Verwendung der **#import** Richtlinie in der Anwendung, eine Headerdatei generiert wird, mit denen Sie ähnliche Syntax wie Microsoft Visual Basic verwenden. Eigenschaftennamen des Formulars **Get_***PropertyName* und **Put_***PropertyName* behandelt werden kann, als ob sie einfach als deklariertwurden *PropertyName*. Eine Eigenschaft kann dann wie ein Datenmember anstelle einer Funktion behandelt werden.  
   
  Alle Methoden, Eigenschaften und Ereignisse sind Funktionen, die Zurückgeben einer **HRESULT**, die Sie testen können, um festzustellen, ob die Funktion erfolgreich ausgeführt.  
   

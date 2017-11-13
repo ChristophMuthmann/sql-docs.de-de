@@ -88,7 +88,7 @@ BOOL SQLConfigDriver(
  Die Funktion gibt "true" zurück, wenn erfolgreich, "false" ist dabei ein Fehler aufgetreten.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLConfigDriver** gibt "false", ein zugehöriges * \*PfErrorCode* Wert abgerufen werden kann, durch den Aufruf **SQLInstallerError**. Die folgende Tabelle enthält die * \*PfErrorCode* Werte, die von zurückgegeben werden können **SQLInstallerError** und jeweils im Kontext dieser Funktion erläutert.  
+ Wenn **SQLConfigDriver** gibt "false", ein zugehöriges  *\*PfErrorCode* Wert abgerufen werden kann, durch den Aufruf **SQLInstallerError**. Die folgende Tabelle enthält die  *\*PfErrorCode* Werte, die von zurückgegeben werden können **SQLInstallerError** und jeweils im Kontext dieser Funktion erläutert.  
   
 |*\*pfErrorCode*|Fehler|Description|  
 |---------------------|-----------|-----------------|  
@@ -111,7 +111,7 @@ BOOL SQLConfigDriver(
 ## <a name="setting-connection-pooling-timeout"></a>Verbindungs-Pooling-Timeout festlegen  
  Verbindungspooling Timeouteigenschaften kann festgelegt werden, wenn Sie die Konfiguration des Treibers festlegen. **SQLConfigDriver** aufgerufen wird und ein *häufigsten* von ODBC_CONFIG_DRIVER und *LpszArgs* festgelegt **CPTimeout**. **CPTimeout** bestimmt den Zeitraum, der eine Verbindung im Verbindungspool verbleiben kann, ohne verwendet wird. Wenn das Timeout abläuft, wird die Verbindung geschlossen und aus dem Pool entfernt. Der Standardtimeout beträgt 60 Sekunden.  
   
- Wenn **SQLConfigDriver** aufgerufen wird und *häufigsten* ODBC_INSTALL_DRIVER oder ODBC_REMOVE_DRIVER festgelegt, der Treiber-Manager lädt, die Setup-DLL für geeigneter Treiber und ruft die ** ConfigDriver** Funktion. Wenn **SQLConfigDriver** aufgerufen wird und ein *häufigsten* von ODBC_CONFIG_DRIVER, gesamte Verarbeitung erfolgt im ODBC-Installer, damit der Treiber-Setup-DLL nicht geladen werden.  
+ Wenn **SQLConfigDriver** aufgerufen wird und *häufigsten* ODBC_INSTALL_DRIVER oder ODBC_REMOVE_DRIVER festgelegt, der Treiber-Manager lädt, die Setup-DLL für geeigneter Treiber und ruft die  **ConfigDriver** Funktion. Wenn **SQLConfigDriver** aufgerufen wird und ein *häufigsten* von ODBC_CONFIG_DRIVER, gesamte Verarbeitung erfolgt im ODBC-Installer, damit der Treiber-Setup-DLL nicht geladen werden.  
   
 ## <a name="messages"></a>Meldungen  
  Eine Treiber-Setup-Routine eine Textnachricht senden kann, zu einer Anwendung als Null endende Zeichenfolgen, in der *LpszMsg* Puffer. Die Nachricht wird abgeschnitten und *CbMsgMax* minus der Null-Abschlusszeichen von der **ConfigDriver** funktioniert, wenn er größer als oder gleich ist *CbMsgMax* Zeichen.  

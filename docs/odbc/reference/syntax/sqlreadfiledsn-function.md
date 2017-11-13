@@ -53,30 +53,30 @@ BOOL SQLReadFileDSN(
   
 ## <a name="arguments"></a>Argumente  
  *lpszFileName*  
- [Eingabe] Zeiger auf den Datenpuffer, der mit dem Namen des DSN-Datei. Eine DSN-Erweiterung wird an alle Dateinamen angefügt, die noch nicht über eine DSN-Erweiterung verfügen. Der Wert in * \*LpszFileName* muss eine Null-terminierte Zeichenfolge sein.  
+ [Eingabe] Zeiger auf den Datenpuffer, der mit dem Namen des DSN-Datei. Eine DSN-Erweiterung wird an alle Dateinamen angefügt, die noch nicht über eine DSN-Erweiterung verfügen. Der Wert in  *\*LpszFileName* muss eine Null-terminierte Zeichenfolge sein.  
   
  *lpszAppName*  
- [Eingabe] Zeiger auf den Datenpuffer, der mit dem Namen der Anwendung. Dies ist "ODBC" für den ODBC-Abschnitt. Der Wert in * \*LpszAppName* muss eine Null-terminierte Zeichenfolge sein.  
+ [Eingabe] Zeiger auf den Datenpuffer, der mit dem Namen der Anwendung. Dies ist "ODBC" für den ODBC-Abschnitt. Der Wert in  *\*LpszAppName* muss eine Null-terminierte Zeichenfolge sein.  
   
  *lpszKeyName*  
- [Eingabe] Zeiger auf den Datenpuffer, der mit dem Namen des Schlüssels, der gelesen werden. Reservierte Schlüsselwörter finden Sie unter "Kommentare". Der Wert in * \*LpszAppName* muss eine Null-terminierte Zeichenfolge sein.  
+ [Eingabe] Zeiger auf den Datenpuffer, der mit dem Namen des Schlüssels, der gelesen werden. Reservierte Schlüsselwörter finden Sie unter "Kommentare". Der Wert in  *\*LpszAppName* muss eine Null-terminierte Zeichenfolge sein.  
   
  *lpszString*  
  [Ausgabe] Zeiger auf den Datenpuffer, die mit der Zeichenfolge, die dem Schlüssel gelesen werden.  
   
- Wenn * \*LpszFileName* ist der Name einer gültigen DSN-Datei jedoch *LpszAppName* Argument ist ein null-Zeiger und der *LpszKeyName* Argument ist ein null-Zeiger * \*LpszString* enthält eine Liste der gültigen Anwendungen. Wenn * \*LpszFileName* ist der Name einer gültigen DSN-Datei und * \*LpszAppName* ist ein gültiger Anwendungsname angegeben wird, aber die *LpszKeyName* Argument ist ein NULL-Wert Zeiger, dann * \*LpszString* enthält eine Liste der gültigen reservierten Schlüsselwörter im entsprechenden Abschnitt der DSN-Datei, die durch ein Semikolon getrennt. Wenn * \*LpszFileName* ist der Name einer gültigen DSN-Datei jedoch * \*LpszAppName* ist ein null-Zeiger und der *LpszKeyName* Argument ist ein null-Zeiger Klicken Sie dann * \*LpszString* enthält eine Liste der Abschnitte in der DSN-Datei durch ein Semikolon getrennt.  
+ Wenn  *\*LpszFileName* ist der Name einer gültigen DSN-Datei jedoch *LpszAppName* Argument ist ein null-Zeiger und der *LpszKeyName* Argument ist ein null-Zeiger  *\*LpszString* enthält eine Liste der gültigen Anwendungen. Wenn  *\*LpszFileName* ist der Name einer gültigen DSN-Datei und  *\*LpszAppName* ist ein gültiger Anwendungsname angegeben wird, aber die *LpszKeyName* Argument ist ein NULL-Wert Zeiger, dann  *\*LpszString* enthält eine Liste der gültigen reservierten Schlüsselwörter im entsprechenden Abschnitt der DSN-Datei, die durch ein Semikolon getrennt. Wenn  *\*LpszFileName* ist der Name einer gültigen DSN-Datei jedoch  *\*LpszAppName* ist ein null-Zeiger und der *LpszKeyName* Argument ist ein null-Zeiger Klicken Sie dann  *\*LpszString* enthält eine Liste der Abschnitte in der DSN-Datei durch ein Semikolon getrennt.  
   
  *cbString*  
- [Eingabe] Länge der * \*LpszString* Puffer.  
+ [Eingabe] Länge der  *\*LpszString* Puffer.  
   
  *pcbString*  
- [Ausgabe] Gesamtanzahl der Bytes im zurückzugebenden verfügbar * \*LpszString*. Wenn die Anzahl der Bytes, die für die Rückgabe verfügbar, größer als oder gleich ist *CbString*, in die Ausgabezeichenfolge * \*LpszString* auf abgeschnitten *CbString* minus die Null-Abschlusszeichen. Die *PcbString* -Argument ein null-Zeiger sein.  
+ [Ausgabe] Gesamtanzahl der Bytes im zurückzugebenden verfügbar  *\*LpszString*. Wenn die Anzahl der Bytes, die für die Rückgabe verfügbar, größer als oder gleich ist *CbString*, in die Ausgabezeichenfolge  *\*LpszString* auf abgeschnitten *CbString* minus die Null-Abschlusszeichen. Die *PcbString* -Argument ein null-Zeiger sein.  
   
 ## <a name="returns"></a>Rückgabewert  
  Die Funktion gibt "true" zurück, wenn erfolgreich, "false" ist dabei ein Fehler aufgetreten.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLReadFileDSN** gibt "false", ein zugehöriges * \*PfErrorCode* Wert abgerufen werden kann, durch den Aufruf **SQLInstallerError**. Die folgende Tabelle enthält die * \*PfErrorCode* Werte, die von zurückgegeben werden können **SQLInstallerError** und jeweils im Kontext dieser Funktion erläutert.  
+ Wenn **SQLReadFileDSN** gibt "false", ein zugehöriges  *\*PfErrorCode* Wert abgerufen werden kann, durch den Aufruf **SQLInstallerError**. Die folgende Tabelle enthält die  *\*PfErrorCode* Werte, die von zurückgegeben werden können **SQLInstallerError** und jeweils im Kontext dieser Funktion erläutert.  
   
 |*\*pfErrorCode*|Fehler|Description|  
 |---------------------|-----------|-----------------|  
@@ -85,7 +85,7 @@ BOOL SQLReadFileDSN(
 |ODBC_ERROR_INVALID_PATH|Ungültiger Installationspfad|Der Pfad der Datei im angegebenen der *LpszFileName* Argument war ungültig.|  
 |ODBC_ERROR_INVALID_REQUEST_TYPE|Ungültiger Typ der Anforderung|Die *LpszAppName* -Argument war NULL, während die *LpszKeyName* Argument war ungültig.|  
 |ODBC_ERROR_OUT_OF_MEM|Nicht genügend Arbeitsspeicher.|Das Installationsprogramm konnte die Funktion aufgrund unzureichenden Arbeitsspeichers nicht ausgeführt werden.|  
-|ODBC_ERROR_OUTPUT_STRING_TRUNCATED|Ausgabezeichenfolge abgeschnitten|Die Zeichenfolge, die im zurückgegebenen * \*LpszString* wurde abgeschnitten, da der Wert in *CbString* war kleiner oder gleich dem Wert in * \*PcbString*.|  
+|ODBC_ERROR_OUTPUT_STRING_TRUNCATED|Ausgabezeichenfolge abgeschnitten|Die Zeichenfolge, die im zurückgegebenen  *\*LpszString* wurde abgeschnitten, da der Wert in *CbString* war kleiner oder gleich dem Wert in  *\*PcbString*.|  
 |ODBC_ERROR_REQUEST_FAILED|Fehler bei der Anforderung|Das Schlüsselwort nicht in der Datei-DSN vorhanden.|  
   
 ## <a name="comments"></a>Kommentare  

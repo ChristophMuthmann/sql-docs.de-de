@@ -38,7 +38,7 @@ ms.lasthandoff: 09/09/2017
  Die **BOF** und **EOF** Eigenschaften zurückgeben **booleschen** Werte.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der **BOF** und **EOF** Eigenschaften, um zu bestimmen, ob eine **Recordset** -Objekt Datensätze enthält oder ob Sie die Grenzwerte überschritten haben eine **Recordset ** Objekt, wenn Sie von Datensatz zu Datensatz verschoben.  
+ Verwenden der **BOF** und **EOF** Eigenschaften, um zu bestimmen, ob eine **Recordset** -Objekt Datensätze enthält oder ob Sie die Grenzwerte überschritten haben eine **Recordset**  Objekt, wenn Sie von Datensatz zu Datensatz verschoben.  
   
  Die **BOF** -Eigenschaft gibt **"true"** (1), wenn die aktuelle Position des Datensatzes vor dem ersten Datensatz ist und **"false"** (0), wenn die Position des aktuellen Datensatzes auf oder nach dem ersten ist Datensatz.  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 09/09/2017
   
  Wenn entweder die **BOF** oder **EOF** Eigenschaft **"true"**, es ist kein aktueller Datensatz.  
   
- Wenn Sie öffnen ein **Recordset** Objekt, das keine Datensätze enthält die **BOF** und **EOF** Eigenschaften werden festgelegt, um **"true"** (finden Sie unter der [ RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) -Eigenschaft für Weitere Informationen zu diesem Zustand, der eine **Recordset**). Beim Öffnen einer **Recordset** -Objekt, das über mindestens ein Datensatz des ersten Datensatzes enthält, wird der aktuelle Datensatz und der **BOF** und **EOF** Eigenschaften sind **"false" **.  
+ Wenn Sie öffnen ein **Recordset** Objekt, das keine Datensätze enthält die **BOF** und **EOF** Eigenschaften werden festgelegt, um **"true"** (finden Sie unter der [ RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) -Eigenschaft für Weitere Informationen zu diesem Zustand, der eine **Recordset**). Beim Öffnen einer **Recordset** -Objekt, das über mindestens ein Datensatz des ersten Datensatzes enthält, wird der aktuelle Datensatz und der **BOF** und **EOF** Eigenschaften sind **"false"** .  
   
  Wenn Sie den letzten verbleibenden Datensatz im Löschen der **Recordset** -Objekt, das **BOF** und **EOF** Eigenschaften bleiben möglicherweise **"false"** bis Es wurde versucht, den aktuellen Datensatz neu zu positionieren.  
   

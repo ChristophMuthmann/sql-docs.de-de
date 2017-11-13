@@ -41,7 +41,7 @@ ms.lasthandoff: 09/09/2017
   
  Positioniert, Update- und Delete-Anweisungen sind jedoch mit folgenden Einschränkungen:  
   
--   Positioniert, Update- und Delete Anweisungen können nur in den folgenden Fällen verwendet werden: Wenn eine **auswählen** -Anweisung generiert das Resultset; Wenn der **auswählen** Anweisung enthielt keinen Join eine ** UNION** -Klausel, oder ein **GROUP BY** -Klausel; und wenn alle Spalten, die einen Alias oder ein Ausdruck in der select-Liste verwendet, nicht mit gebunden wurden **SQLBindCol**.  
+-   Positioniert, Update- und Delete Anweisungen können nur in den folgenden Fällen verwendet werden: Wenn eine **auswählen** -Anweisung generiert das Resultset; Wenn der **auswählen** Anweisung enthielt keinen Join eine  **UNION** -Klausel, oder ein **GROUP BY** -Klausel; und wenn alle Spalten, die einen Alias oder ein Ausdruck in der select-Liste verwendet, nicht mit gebunden wurden **SQLBindCol**.  
   
 -   Wenn eine Anwendung eine positionierte Update- oder Delete-Anweisung vorbereitet hat, sie müssen dazu nach aufgerufen wurde **SQLFetch** oder **SQLFetchScroll**. Obwohl die Cursorbibliothek die Anweisung den Treiber für die Vorbereitung sendet, schließt der Anweisung und führt sie aus direkt Wenn die Anwendung aufruft, **SQLExecute**.  
   

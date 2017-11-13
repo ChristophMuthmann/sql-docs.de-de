@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="retrieving-results-advanced"></a>Abrufen von Ergebnissen (Erweitert)
-Eine Anwendung angegeben werden, dass ein Offset hinzugefügt wird, Daten Puffer Adressen und den entsprechenden Längenindikator gebunden Puffer Adressen Wenn **SQLBulkOperations**, **SQLFetch**, ** SQLFetchScroll**, oder **SQLSetPos** aufgerufen wird. Die Ergebnisse dieser Erweiterungen bestimmen, die Adressen, die bei diesen Vorgängen verwendet werden.  
+Eine Anwendung angegeben werden, dass ein Offset hinzugefügt wird, Daten Puffer Adressen und den entsprechenden Längenindikator gebunden Puffer Adressen Wenn **SQLBulkOperations**, **SQLFetch**,  **SQLFetchScroll**, oder **SQLSetPos** aufgerufen wird. Die Ergebnisse dieser Erweiterungen bestimmen, die Adressen, die bei diesen Vorgängen verwendet werden.  
   
  BIND-Offsets, damit eine Anwendung so ändern Sie die Bindungen ohne Aufruf **SQLBindCol** für zuvor gebundenen Spalten. Ein Aufruf von **SQLBindCol** zum Binden von Daten ändert sich der Pufferadresse und den Längenindikator/Zeiger. Das erneute Binden mit einem Versatz addiert andererseits, einfach einen Offset zum die vorhandenen gebundenen Daten Pufferadresse und Längenindikator/Pufferadresse. Wenn Offsets verwendet werden, die Bindungen sind "Template" des wie die Anwendungspuffer angelegt werden, und die Anwendung kann auf unterschiedliche Bereiche des Arbeitsspeichers dieser "Vorlage" verschieben, durch Ändern des Offsets. Ein neuer Offset kann zu einem beliebigen Zeitpunkt angegeben werden und wird immer auf die ursprünglich gebundenen Werte hinzugefügt.  
   

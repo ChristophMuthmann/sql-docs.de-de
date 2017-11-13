@@ -67,7 +67,7 @@ identifier
   
 -   Ein **Userlist** Abschnitt wird verwendet, wenn die **Userlist** Abschnitt Bezeichner entspricht einer **verbinden** Abschnitt Bezeichner. Wenn eine Übereinstimmung auftritt, den Inhalt der **Userlist** Abschnitt gelten für die Verbindung, unterliegt die **verbinden** Abschnitt.  
   
--   Die Zeichenfolge in eine Zeichenfolge Verbindung oder Befehl den Bezeichner in einem stimmt nicht überein **verbinden** oder **Sql** Abschnitt Header, und es gibt keine **verbinden** oder **Sql ** Abschnitt Header mit einem Standardparameter, und klicken Sie dann die Clientzeichenfolge ohne Änderungen verwendet wird.  
+-   Die Zeichenfolge in eine Zeichenfolge Verbindung oder Befehl den Bezeichner in einem stimmt nicht überein **verbinden** oder **Sql** Abschnitt Header, und es gibt keine **verbinden** oder **Sql**  Abschnitt Header mit einem Standardparameter, und klicken Sie dann die Clientzeichenfolge ohne Änderungen verwendet wird.  
   
 -   Die **Protokolle** Abschnitt wird verwendet, wenn die **DataFactory** in Betrieb ist.  
   
