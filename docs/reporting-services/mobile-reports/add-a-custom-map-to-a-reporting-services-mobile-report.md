@@ -1,5 +1,5 @@
 ---
-title: "Hinzufügen einer benutzerdefinierte Zuordnung zu einem mobilen Reporting Services-Bericht | Microsoft Docs"
+title: "Hinzufügen einer benutzerdefinierten Karte zu einem mobilen Reporting Services-Bericht | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,8 +14,7 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e38a8b7a03c79a596d2c795b3ee992e974f604cb
 ms.contentlocale: de-de
@@ -37,7 +36,7 @@ Speichern Sie die beiden Dateien im selben Ordner. Die Dateinamen müssen übere
   
    ![SSMRP_MapsGallery](../../reporting-services/mobile-reports/media/ssmrp-mapsgallery.png)  
   
-2. Wählen Sie in der Ansicht **Layout** im Bereich **Eigenschaften visueller Elemente** unter **Karte** die benutzerdefinierte Karte in einer Datei aus****.   
+2. Wählen Sie in der Ansicht **Layout** im Bereich **Eigenschaften visueller Elemente** unter **Karte** die **benutzerdefinierte Karte in einer Datei aus**.   
   
    ![SSMRP_SelectCustomMap](../../reporting-services/mobile-reports/media/ssmrp-selectcustommap.png)  
   
