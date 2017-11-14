@@ -1,0 +1,10 @@
+# [SQLXML 4.0-Datenzugriffskomponenten - SQLXMLOLEDB-Anbieter](sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)
+
+# [Anwenden einer XSL-Transformation (SQLXMLOLEDB-Anbieter)](applying-an-xsl-transformation-sqlxmloledb-provider.md)
+# [Ausführen von SQL-Abfragen (SQLXMLOLEDB-Anbieter)](executing-sql-queries-sqlxmloledb-provider.md)
+# [Ausführen von Vorlagen, die SQL-Abfragen (SQLXMLOLEDB-Anbieter) enthalten](executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md)
+# [Ausführen von Vorlagen, die XPath-Abfragen (SQLXMLOLEDB-Anbieter) enthalten](executing-templates-that-contain-xpath-queries-sqlxmloledb-provider.md)
+# [Ausführen von XPath-Abfragen (SQLXMLOLEDB-Anbieter)](executing-xpath-queries-sqlxmloledb-provider.md)
+# [Ausführen von XPath-Abfragen mit Namespaces (SQLXMLOLEDB-Anbieter)](executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md)
+# [Einführung in den SQLXMLOLEDB-Anbieter (SQLXML 4.0)](introduction-to-the-sqlxmloledb-provider-sqlxml-4-0.md)
+# [Verwenden den SQLXMLOLEDB-Anbieter (SQLXML 4.0)](using-the-sqlxmloledb-provider-sqlxml-4-0.md)

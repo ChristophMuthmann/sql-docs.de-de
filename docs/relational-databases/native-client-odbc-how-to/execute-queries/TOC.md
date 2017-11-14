@@ -1,0 +1,5 @@
+# [Ausführen von Gewusst-wie-Themen zu Abfragen (ODBC)](executing-queries-how-to-topics-odbc.md)
+# [Direktes Ausführen von Anweisungen (ODBC)](execute-a-statement-directly-odbc.md)
+# [Vorbereiten und Ausführen einer Anweisung (ODBC)](prepare-and-execute-a-statement-odbc.md)
+# [Festlegen von Cursoroptionen (ODBC)](set-cursor-options-odbc.md)
+# [Verwenden einer Anweisung (ODBC)](use-a-statement-odbc.md)

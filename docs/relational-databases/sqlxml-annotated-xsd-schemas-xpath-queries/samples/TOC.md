@@ -1,0 +1,11 @@
+# [XPath-Beispielabfragen (SQLXML 4.0)](sample-xpath-queries-sqlxml-4-0.md)
+
+# [Beispiel XSD-Schema mit Anmerkungen, für die XPath-Beispiele (SQLXML 4.0)](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)
+# [Angeben von arithmetischen Operatoren in XPath-Abfragen (SQLXML 4.0)](specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)
+# [Angeben von Achsen in XPath-Abfragen (SQLXML 4.0)](specifying-axes-in-xpath-queries-sqlxml-4-0.md)
+# [Angeben von booleschen Funktionen in XPath-Abfragen (SQLXML 4.0)](specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)
+# [Angeben von booleschen Operatoren in XPath-Abfragen (SQLXML 4.0)](specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)
+# [Angeben von Prädikate mit booleschen Werten in XPath-Abfragen (SQLXML 4.0)](specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-4-0.md)
+# [Angeben von expliziten Konvertierungsfunktionen in XPath-Abfragen (SQLXML 4.0)](specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)
+# [Angeben von relationalen Operatoren in XPath-Abfragen (SQLXML 4.0)](specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)
+# [Angeben von XPath-Variablen in XPath-Abfragen (SQLXML 4.0)](specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)

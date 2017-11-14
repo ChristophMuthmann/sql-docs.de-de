@@ -1,0 +1,7 @@
+# [ClientNetLibInfo-Klasse](clientnetlibinfo-class.md)
+# [Date-Eigenschaft (ClientNetLibInfo-Klasse)](date-property-clientnetlibinfo-class.md)
+# [FileName-Eigenschaft (ClientNetLibInfo-Klasse)](filename-property-clientnetlibinfo-class.md)
+# [ProtocolDisplayName-Eigenschaft (ClientNetLibInfo-Klasse)](protocoldisplayname-property-clientnetlibinfo-class.md)
+# [ProtocolName-Eigenschaft (ClientNetLibInfo-Klasse)](protocolname-property-clientnetlibinfo-class.md)
+# [Size-Eigenschaft (ClientNetLibInfo-Klasse)](size-property-clientnetlibinfo-class.md)
+# [Versionseigenschaft (ClientNetLibInfo-Klasse)](version-property-clientnetlibinfo-class.md)

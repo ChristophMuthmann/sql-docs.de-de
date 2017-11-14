@@ -1,10 +1,8 @@
---- 
+---
 redirect_url: /sql/sql-server/failover-clusters/install/sql-server-failover-cluster-installation
-ms.translationtype: HT
-ms.sourcegitcommit: 9d75fe688a9d83401fd34c45f4b4384dccb4ecf4
 ms.openlocfilehash: c02ab939ba96ac22e6722af22070446ae9f348fd
-ms.contentlocale: de-de
-ms.lasthandoff: 08/01/2017
-
---- 
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
+---
