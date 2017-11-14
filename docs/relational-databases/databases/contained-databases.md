@@ -59,7 +59,7 @@ ms.lasthandoff: 06/22/2017
  Ein Element, das die Datenbankbegrenzung überschreitet.  
   
  Nicht enthaltene Datenbank  
- Eine Datenbank, deren Eigenständigkeit auf **NONE** festgelegt ist. Alle Datenbanken in Versionen vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] sind nicht enthalten. Die Kapselung aller Datenbanken von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher ist standardmäßig auf **NONE** estgelegt.  
+ Eine Datenbank, deren Eigenständigkeit auf **NONE** festgelegt ist. Alle Datenbanken in Versionen vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] sind nicht enthalten. Die Kapselung aller Datenbanken von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher ist standardmäßig auf **NONE** festgelegt.   
   
  Teilweise enthaltene Datenbank  
  Eine teilweise eigenständige Datenbank ist eine eigenständige Datenbank, die einige Funktionen zulassen kann, die die Datenbankbegrenzung überschreiten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält die Fähigkeit ein zu bestimmen, wann die Kapselungsbegrenzung überschritten wird.  
@@ -109,7 +109,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="benefits"></a> Vorteile des Verwendens von teilweise enthaltenen Datenbanken  
  Im Zusammenhang mit abhängigen Datenbanken treten Probleme und Schwierigkeiten auf, die mithilfe einer teilweise eigenständigen Datenbank behoben werden können.  
   
-### <a name="database-movement"></a>Verschieben von Datenbanken  
+### <a name="database-movement"></a>Verschiebung von Datenbanken   
  Eines der Probleme, das beim Verschieben von Datenbanken auftritt, besteht darin, dass einige wichtige Informationen beim Verschieben der Datenbank von einer Instanz zu einer anderen möglicherweise nicht verfügbar sind. Beispielsweise werden Anmeldeinformationen innerhalb der Instanz gespeichert und nicht in der Datenbank. Wenn Sie eine abhängige Datenbank von einer Instanz in eine andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verschieben, bleiben diese Daten zurück. Sie müssen die fehlenden Daten bestimmen und zusammen mit der Datenbank in die neue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verschieben. Dieser Vorgang kann schwierig und zeitaufwendig sein.  
   
  Die teilweise eigenständige Datenbank kann wichtige Daten in der Datenbank speichern. Demnach verfügt die Datenbank auch nach dem Verschieben weiterhin über die Daten.  
