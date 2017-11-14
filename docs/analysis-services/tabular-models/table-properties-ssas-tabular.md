@@ -1,9 +1,13 @@
 ---
 title: "Tabelleneigenschaften (SSAS – tabellarisch) | Microsoft Docs"
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: tabular-models
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
