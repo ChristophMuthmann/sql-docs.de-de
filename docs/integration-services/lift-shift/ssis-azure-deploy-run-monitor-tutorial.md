@@ -36,7 +36,7 @@ Verwenden Sie SQL Server Management Studio, um im SSIS-Katalog auf dem Azure SQL
 
 2. **Herstellen einer Verbindung mit dem Server**. In der **Verbindung mit Server herstellen** Dialogfeld Geben Sie die folgende Informationen:
 
-   | Einstellung       | Empfohlener Wert | Description | 
+   | Einstellung       | Empfohlener Wert | Description | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Servertyp** | Datenbankmodul | Dieser Wert ist erforderlich. |
    | **Servername** | Die vollqualifizierten Servernamen | Der Name muss im folgenden Format: **mysqldbserver.database.windows.net**. Wenn Sie den Namen des Servers benötigen, finden Sie unter [Herstellen einer Verbindung mit der Datenbank SSISDB-Katalog in Azure](ssis-azure-connect-to-catalog-database.md). |

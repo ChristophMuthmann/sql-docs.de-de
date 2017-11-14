@@ -55,7 +55,7 @@ Verwenden Sie Visual Studio-Code zum Herstellen einer Verbindung im SSIS-Katalog
 
 4. Befolgen Sie die Verbindungseigenschaften für das neue Verbindungsprofil angeben. Drücken Sie nach jeder Wert angeben, **EINGABETASTE** um den Vorgang fortzusetzen. 
 
-   | Einstellung       | Empfohlener Wert | Weitere Informationen |
+   | Einstellung       | Empfohlener Wert | Weitere Informationen |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Servername** | Die vollqualifizierten Servernamen |  |
    | **Datenbankname** | **SSISDB** | Der Name der Datenbank für die Verbindung. |
