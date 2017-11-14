@@ -58,9 +58,9 @@ ms.lasthandoff: 08/02/2017
   
     1.  Öffnen Sie in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]auf dem primären Abonnentenknoten die Struktur des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agents.  
   
-    2.  Suchen Sie den Agentauftrag zur Verteilung des Pullabonnements **** , und bearbeiten Sie den Auftrag.  
+    2.  Suchen Sie den **Agentauftrag zur Verteilung des Pullabonnements**, und bearbeiten Sie den Auftrag.  
   
-    3.  Überprüfen Sie im Schritt zum Ausführen des Agentauftrags **** den `-Publisher` -Parameter und den `-Distributor` -Parameter. Stellen Sie sicher, dass diese Parameter den richtigen direkten Server- und Instanznamen des Verleger- und Verteilerservers enthalten.  
+    3.  Überprüfen Sie im Schritt zum **Ausführen des Agentauftrags** den `-Publisher` -Parameter und den `-Distributor` -Parameter. Stellen Sie sicher, dass diese Parameter den richtigen direkten Server- und Instanznamen des Verleger- und Verteilerservers enthalten.  
   
     4.  Ändern Sie den `-Subscriber` -Parameter in den Verfügbarkeitsgruppenlistener-Namen des Abonnenten.  
   

@@ -48,7 +48,7 @@ ms.lasthandoff: 08/02/2017
     > [!NOTE]  
     >  Wenn Sie kein Mitglied der festen Serverrolle **sysadmin** sind, lautet dieser Statuts **Verbunden mit** *Name der Serverinstanz* **(Begrenzte Berechtigungen)**.  
   
- Der Name jeder der Partnerserverinstanzen wird in einem separaten Feld für die Serverinstanz und den zugehörigen Verbindungsstatus ** angezeigt. Das oberste Feld listet den Prinzipalserver auf, wenn die Ausführung des Monitors gestartet wurde.  
+ Der Name jeder der Partnerserverinstanzen wird in einem separaten Feld für die *Serverinstanz und den zugehörigen Verbindungsstatus* angezeigt. Das oberste Feld listet den Prinzipalserver auf, wenn die Ausführung des Monitors gestartet wurde.  
   
  **Verbinden**/**Abbrechen**  
  Eine Schaltfläche **Verbinden**/**Abbrechen** ist jedem Feld für die *Serverinstanz und den zugehörigen Verbindungsstatus* zugeordnet. Der Status der Schaltfläche ist abhängig vom Verbindungsstatus:  

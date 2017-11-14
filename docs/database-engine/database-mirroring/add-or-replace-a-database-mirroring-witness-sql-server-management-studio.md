@@ -41,7 +41,7 @@ ms.lasthandoff: 08/02/2017
   
 4.  Klicken Sie auf **Sicherheit konfigurieren**.  
   
-5.  Wenn die Willkommenseite des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung **** angezeigt wird, klicken Sie auf **Weiter**.  
+5.  Wenn die Willkommenseite des Assistenten zum **Konfigurieren der Sicherheit für die Datenbankspiegelung** angezeigt wird, klicken Sie auf **Weiter**.  
   
 6.  Klicken Sie im Dialogfeld **Zeugenserver einschließen** auf **Ja**, und klicken Sie dann auf **Weiter**.  
   

@@ -81,7 +81,7 @@ ms.lasthandoff: 08/02/2017
   
 5.  Im Dialogfeld **Eigenschaften des Verfügbarkeitsreplikats** können Sie den Verbindungszugriff für die primäre Rolle und die sekundäre Rolle wie folgt ändern:  
   
-    -   Wählen Sie für die sekundäre Rolle aus der Dropdownliste für die lesbare sekundäre Rolle ****  wie folgt einen neuen Wert aus:  
+    -   Wählen Sie für die sekundäre Rolle aus der Dropdownliste für die **lesbare sekundäre** Rolle wie folgt einen neuen Wert aus:  
   
          **Nein**  
          Es werden keine Verbindungen mit sekundären Datenbanken dieses Replikats zugelassen. Sie sind für den Lesezugriff nicht verfügbar. Dies ist die Standardeinstellung.  
@@ -92,7 +92,7 @@ ms.lasthandoff: 08/02/2017
          **ja**  
          Alle Verbindungen zu sekundären Datenbanken dieses Replikats sind zugelassen, aber nur für Lesezugriff. Die sekundären Datenbanken sind alle für Lesezugriff verfügbar.  
   
-    -   Wählen Sie für die primäre Rolle aus der Dropdownliste für Verbindungen in der primären Rolle ****  einen neuen Wert wie folgt aus:  
+    -   Wählen Sie für die primäre Rolle aus der Dropdownliste für **Verbindungen in der primären Rolle** einen neuen Wert wie folgt aus:  
   
          **Alle Verbindungen zulassen**  
          Für die Datenbanken im primären Replikat sind alle Verbindungen zugelassen. Dies ist die Standardeinstellung.  

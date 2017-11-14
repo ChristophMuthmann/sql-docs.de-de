@@ -42,7 +42,7 @@ ms.lasthandoff: 08/02/2017
   
 4.  Wählen Sie im Feld **Protokoll** das zu verwendende Protokoll für diesen Alias aus. Sobald Sie ein Protokoll angegeben haben, erhält das optionale Eigenschaftsfeld die Bezeichnung "Portnummer", "Pipename" oder "Verbindungszeichenfolge".  
   
- Die in der Hilfe zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager beschriebenen Verbindungszeichenfolgen können für Programmierer hilfreich sein, die ihre eigenen Verbindungszeichenfolgen erstellen. Drücken Sie F1, oder rufen Sie die Hilfe auf **** , um auf diese Informationen, im Dialogfeld **Neuer Alias**, zuzugreifen.  
+ Die in der Hilfe zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager beschriebenen Verbindungszeichenfolgen können für Programmierer hilfreich sein, die ihre eigenen Verbindungszeichenfolgen erstellen. Drücken Sie F1, oder rufen Sie die **Hilfe** auf, um auf diese Informationen, im Dialogfeld **Neuer Alias**, zuzugreifen.  
   
 > [!NOTE]  
 >  Wenn ein konfigurierter Alias eine Verbindung mit dem falschen Server oder zur falschen Instanz herstellt, deaktivieren Sie das zugeordnete Netzwerkprotokoll, und aktivieren Sie es erneut. Dadurch werden alle zwischengespeicherten Verbindungsinformationen gelöscht, und der Client kann die Verbindung ordnungsgemäß herstellen.  

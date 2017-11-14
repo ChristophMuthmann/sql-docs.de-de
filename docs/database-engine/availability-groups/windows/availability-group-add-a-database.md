@@ -67,7 +67,7 @@ ms.lasthandoff: 08/02/2017
   
     -   Wählen Sie zum Starten des Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen den Befehl **Datenbank hinzufügen** aus. Weitere Informationen finden Sie unter [Verwenden des Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md).  
   
-    -   Wählen Sie den Befehl **Eigenschaften** aus, um mindestens eine Datenbank durch Angabe im Dialogfeld für die ****  Eigenschaften der Verfügbarkeitsgruppe hinzuzufügen. Folgende Schritte sind zum Hinzufügen einer Datenbank erforderlich:  
+    -   Wählen Sie den Befehl **Eigenschaften** aus, um mindestens eine Datenbank durch Angabe im Dialogfeld für die **Eigenschaften der Verfügbarkeitsgruppe** hinzuzufügen. Folgende Schritte sind zum Hinzufügen einer Datenbank erforderlich:  
   
         1.  Klicken Sie im Bereich **Verfügbarkeitsdatenbanken** auf die Schaltfläche **Hinzufügen** . Dadurch wird ein leeres Datenbankfeld erstellt und ausgewählt.  
   
