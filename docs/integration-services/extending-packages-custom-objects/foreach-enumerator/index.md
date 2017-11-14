@@ -1,10 +1,8 @@
 ---
 redirect_url: /sql/integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0546616160e8ee9aea530d95c7dbf42f0d16bc5c
-ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
-
+ms.openlocfilehash: 0ea56d97f8f94ab91247765052612fdf3ead0b85
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-

@@ -1,10 +1,8 @@
---- 
+---
 redirect_url: /sql/integration-services/install-windows/install-integration-services
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8a7d9af4f3352f8f81a8450487e9e07749adc9b5
-ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
-
---- 
-
+ms.openlocfilehash: 4afd6bb266c6e46ee53bfbac0c58269d01853240
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
+---

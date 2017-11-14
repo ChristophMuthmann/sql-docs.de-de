@@ -1,10 +1,8 @@
---- 
+---
 redirect_url: /sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a06fc59855637a31ebf325755253de1d35cc4f9d
-ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
-
---- 
-
+ms.openlocfilehash: 876e874196c3ea3b94fc8a39a1d9cc02db9a56cd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
+---

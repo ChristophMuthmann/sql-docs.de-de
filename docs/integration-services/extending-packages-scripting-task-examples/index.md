@@ -1,10 +1,8 @@
 ---
 redirect_url: /sql/integration-services/extending-packages-scripting-task-examples/script-task-examples
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f95972a63c3dd98e412b0a9800667f394a92c124
-ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
-
+ms.openlocfilehash: 78b931eb5213fcfead5b8a2d533a928a29e054dc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-

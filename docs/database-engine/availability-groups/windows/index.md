@@ -1,10 +1,8 @@
 ---
 redirect_url: /sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 44079a4b56e9756e26f26b991c7ee7fb9fafb8c7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-

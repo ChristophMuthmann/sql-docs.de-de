@@ -1,10 +1,8 @@
---- 
+---
 redirect_url: /sql/integration-services/scale-out/integration-services-ssis-scale-out
-ms.translationtype: HT
-ms.sourcegitcommit: 6419c75df8a5b6742b102a3f56adfa7e2efd9ef1
 ms.openlocfilehash: ed05b0fb7ac42a56b8f373a06fc0735bfac8f79d
-ms.contentlocale: de-de
-ms.lasthandoff: 10/03/2017
-
---- 
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
+---

@@ -1,10 +1,8 @@
---- 
+---
 redirect_url: /sql/integration-services/performance/monitor-running-packages-and-other-operations
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 77c08e3c470346b812d542238d9e89806f01c449
-ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
-
---- 
-
+ms.openlocfilehash: 9f5334f43f7de5bdc77eb818a5853780e6fcc5cf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
+---

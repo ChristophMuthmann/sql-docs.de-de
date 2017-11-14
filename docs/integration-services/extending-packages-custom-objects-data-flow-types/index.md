@@ -1,10 +1,8 @@
 ---
 redirect_url: /sql/integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2a2afc38ddd2a342b1345f20a9e2f7a7a9c9e76d
-ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
-
+ms.openlocfilehash: e43d8aeb0d8b8000954ef8a21938c9d67fdc4021
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-

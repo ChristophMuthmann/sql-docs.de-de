@@ -1,9 +1,8 @@
---- 
+---
 redirect_url: /sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database
-ms.translationtype: HT
-ms.sourcegitcommit: e524538c1e9be266981e6001e72f18cf3af069f6
 ms.openlocfilehash: 0912e16ede51804fc999ad0a1749f29ef1bf3fa9
-ms.contentlocale: de-de
-ms.lasthandoff: 08/01/2017
-
---- 
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
+---

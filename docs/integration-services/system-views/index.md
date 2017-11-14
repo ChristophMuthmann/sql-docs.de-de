@@ -1,10 +1,8 @@
---- 
+---
 redirect_url: /sql/integration-services/system-views/views-integration-services-catalog
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d88ab1e5ab1366c434b5b24a49f906239aba0e68
-ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
-
---- 
-
+ms.openlocfilehash: 59e5680965cae4e27adb3eb9328bcac3531066e9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
+---

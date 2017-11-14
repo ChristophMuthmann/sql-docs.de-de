@@ -1,10 +1,8 @@
 ---
 redirect_url: /sql/integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 12d421b21499a693a18da8b2f131f8c4e963137a
-ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
-
+ms.openlocfilehash: 933ec4abeb37cac3d67c8b9d76bb634bd46f5f9a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-

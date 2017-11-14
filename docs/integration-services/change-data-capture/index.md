@@ -1,10 +1,8 @@
---- 
+---
 redirect_url: /sql/integration-services/change-data-capture/change-data-capture-ssis
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 38d1c68ff5109a86a1d5bd03fbc7818dbe47cf5f
-ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
-
---- 
-
+ms.openlocfilehash: 9e5726d24b672b0ac15933dae399441b247bcf1e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
+---

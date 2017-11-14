@@ -1,10 +1,8 @@
---- 
+---
 redirect_url: /sql/integration-services/data-flow/transformations/integration-services-transformations
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9ae1d7513de0f990f352fb979b98b5f2334b3d78
-ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
-
---- 
-
+ms.openlocfilehash: 0b5a0c57305adccf1580932f63362565c94f5c86
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
+---
