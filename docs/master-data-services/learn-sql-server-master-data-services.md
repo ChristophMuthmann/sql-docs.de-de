@@ -28,7 +28,7 @@ ms.lasthandoff: 09/07/2017
   
   
 ## <a name="training"></a>Training  
-* Absolvieren Sie diese [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], um die neuen Features und Funktionen in [****](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23113&lod=true) zu kennenzulernen. Dazu müssen Sie bei Ihrem Microsoft-Konto angemeldet sein.  
+* Um die neuen Features und Funktionen in [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] zu untersuchen, testen Sie diese [**virtuelle TechNet-Übungseinheit**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23113&lod=true) (Sie müssen bei Ihrem Microsoft-Konto angemeldet sein).  
 * Absolvieren Sie diese [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] virtuelle TechNet-Übungseinheit [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)], um mithilfe des Add-In für Excel und des [**s eine**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23112&lod=true)-Lösung zum Speichern und Verwalten von Masterlisten mit geografischen Daten zu entwickeln. Erstellen Sie Entitäten und Hierarchien, und verwenden Sie [!INCLUDE[ssIS_md](../includes/ssis-md.md)] zum Auffüllen einer Dimensionstabelle.  
   
 ## <a name="videos"></a>Videos  
