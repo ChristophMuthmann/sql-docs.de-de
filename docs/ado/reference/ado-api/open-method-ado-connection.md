@@ -1,12 +1,15 @@
 ---
 title: Open-Methode (ADO-Verbindung) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -57,7 +60,7 @@ connection.Open ConnectionString, UserID, Password, Options
   
  Verwenden Sie das optionale *"ConnectionString"* Argument, um entweder eine Verbindungszeichenfolge mit einer Reihe von anzugeben *Argument* *= Value* Anweisungen, die durch Semikolons getrennt ein, oder ein Datei oder ein Verzeichnis mit einer URL bezeichnete Ressource. Die **"ConnectionString"** -Eigenschaft erbt automatisch den Wert für die *"ConnectionString"* Argument. Aus diesem Grund können Sie entweder die **"ConnectionString"** Eigenschaft von der **Verbindung** Objekt vor dem Öffnen, oder verwenden Sie die *"ConnectionString"* Argument festlegen oder überschreiben die aktuelle Verbindungsparameter während der **öffnen** -Methodenaufruf.  
   
- Wenn Sie Benutzer und Kennwort sowohl Weitergabe von Informationen an die *"ConnectionString"* Argument und der optionalen *UserID* und *Kennwort* Argumente, die *UserID * und *Kennwort* Argumente werden im angegebenen Werte überschrieben *"ConnectionString"*.  
+ Wenn Sie Benutzer und Kennwort sowohl Weitergabe von Informationen an die *"ConnectionString"* Argument und der optionalen *UserID* und *Kennwort* Argumente, die *UserID*  und *Kennwort* Argumente werden im angegebenen Werte überschrieben *"ConnectionString"*.  
   
  Wenn Sie Ihre Vorgänge über ein offenes geschlossen haben **Verbindung**, verwenden Sie die [schließen](../../../ado/reference/ado-api/close-method-ado.md) -Methode freizugeben zugeordnete Systemressourcen verfügbar sind. Schließen ein Objekt entfernt diesen nicht aus dem Arbeitsspeicher; Sie können die eigenschafteneinstellungen ändern und die **öffnen** Methode, um sie später erneut öffnen. Um ein Objekt aus dem Arbeitsspeicher vollständig zu vermeiden, legen Sie die Objektvariable auf *nichts*.  
   

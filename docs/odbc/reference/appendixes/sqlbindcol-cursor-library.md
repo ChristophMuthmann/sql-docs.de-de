@@ -34,7 +34,7 @@ ms.lasthandoff: 09/09/2017
   
  Eine Anwendung kann Aufrufen **SQLBindCol** Ergebnis erneut binden Resultsetspalten nach aufgerufen wurde **SQLExtendedFetch**, **SQLFetch**, oder **SQLFetchScroll**, solange die C-Datentyp, die Spaltengröße und die Dezimalstellen der gebundenen Spalte unverändert bleiben. Die Anwendung muss nicht den Cursor zum Binden von Spalten mit verschiedenen Adressen zu schließen.  
   
- Die Cursorbibliothek unterstützt das Festlegen von SQL_ATTR_ROW_BIND_OFFSET_PTR-Anweisungsattribut Bind-Offsets zu verwenden. (**SQLBindCol** muss nicht für diese erneute Bindung erfolgen aufgerufen werden.) Wenn die Cursorbibliothek, mit einer ODBC 3. verwendet wird*.x* Treiber, der Bind-Offset ist nicht verwendet werden, wenn **SQLFetch** aufgerufen wird. Der Offset für die Bindung wird verwendet, wenn **SQLFetch** wird aufgerufen, wenn die Cursorbibliothek, mit einer ODBC 2. verwendet wird.* X* Treiber da **SQLFetch** dann zugeordnet wird **SQLExtendedFetch**.  
+ Die Cursorbibliothek unterstützt das Festlegen von SQL_ATTR_ROW_BIND_OFFSET_PTR-Anweisungsattribut Bind-Offsets zu verwenden. (**SQLBindCol** muss nicht für diese erneute Bindung erfolgen aufgerufen werden.) Wenn die Cursorbibliothek, mit einer ODBC 3. verwendet wird*.x* Treiber, der Bind-Offset ist nicht verwendet werden, wenn **SQLFetch** aufgerufen wird. Der Offset für die Bindung wird verwendet, wenn **SQLFetch** wird aufgerufen, wenn die Cursorbibliothek, mit einer ODBC 2. verwendet wird. *X* Treiber da **SQLFetch** dann zugeordnet wird **SQLExtendedFetch**.  
   
  Die Cursorbibliothek unterstützt Aufrufen **SQLBindCol** die Lesezeichenspalte binden.  
   

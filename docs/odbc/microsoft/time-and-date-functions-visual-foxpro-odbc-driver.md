@@ -65,7 +65,7 @@ Die folgende Tabelle listet die ODBC-Datum und die Funktionen von der Visual Fox
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)—  
 ```  
   
- In dieser Syntax **d** gibt an, dass *Wert* ein Datum in der *jjjj-mm-tt* Format und **ts** gibt an, dass *Wert * ist ein Zeitstempel in der *jjjj-mm-tt hh: mm:*[.* f... *] Format. Die kurznotationssyntax für Datums- und Zeitstempel lautet wie folgt:  
+ In dieser Syntax **d** gibt an, dass *Wert* ein Datum in der *jjjj-mm-tt* Format und **ts** gibt an, dass *Wert*  ist ein Zeitstempel in der *jjjj-mm-tt hh: mm:*[. *f...* ] Format. Die kurznotationssyntax für Datums- und Zeitstempel lautet wie folgt:  
   
 ```  
 {d 'value'}  

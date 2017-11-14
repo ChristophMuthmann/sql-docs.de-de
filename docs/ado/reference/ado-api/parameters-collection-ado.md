@@ -1,12 +1,15 @@
 ---
 title: Parameters-Auflistung (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -39,7 +42,7 @@ Enthält alle der [Parameter](../../../ado/reference/ado-api/parameter-object.md
   
  Wenn Sie nicht Ihre eigenen definiert haben **Parameter** Zugriff auf Objekte und Sie die **Parameter** Auflistung vor dem Aufruf der **aktualisieren** Methode, ADO wird automatisch aufgerufen haben die Methode, und füllen Sie die Auflistung für Sie.  
   
- Sie können Aufrufe an den Anbieter zum Verbessern der Leistung, wenn Sie die Eigenschaften der Parameter der gespeicherten Prozedur zugeordnet oder einer parametrisierten Abfrage wissen, dass Sie aufrufen möchten, minimieren. Verwenden Sie die [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) Methode zum Erstellen der **Parameter** Objekte mit dem entsprechenden eigenschafteneinstellungen und Verwenden der [Anfügen](../../../ado/reference/ado-api/append-method-ado.md) Methode hinzugefügt der ** Parameter** Auflistung. Dadurch können Sie die festzulegen und Parameterwerte zurückzugeben, ohne den Anbieter für die Parameterinformationen aufrufen. Wenn Sie an einen Anbieter, der keine Parameterinformationen bereitstellt schreiben, müssen Sie manuell Auffüllen der **Parameter** Auflistung, die mit dieser Methode, um Parameter verwenden zu können. Verwenden der [löschen](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md) -Methode zum Entfernen **Parameter** Objekte aus der **Parameter** Auflistung bei Bedarf.  
+ Sie können Aufrufe an den Anbieter zum Verbessern der Leistung, wenn Sie die Eigenschaften der Parameter der gespeicherten Prozedur zugeordnet oder einer parametrisierten Abfrage wissen, dass Sie aufrufen möchten, minimieren. Verwenden Sie die [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) Methode zum Erstellen der **Parameter** Objekte mit dem entsprechenden eigenschafteneinstellungen und Verwenden der [Anfügen](../../../ado/reference/ado-api/append-method-ado.md) Methode hinzugefügt der  **Parameter** Auflistung. Dadurch können Sie die festzulegen und Parameterwerte zurückzugeben, ohne den Anbieter für die Parameterinformationen aufrufen. Wenn Sie an einen Anbieter, der keine Parameterinformationen bereitstellt schreiben, müssen Sie manuell Auffüllen der **Parameter** Auflistung, die mit dieser Methode, um Parameter verwenden zu können. Verwenden der [löschen](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md) -Methode zum Entfernen **Parameter** Objekte aus der **Parameter** Auflistung bei Bedarf.  
   
  Die Objekte in der **Parameter** Auflistung von eine **Recordset** außerhalb des gültigen Bereichs (somit nicht verfügbar) wechseln Sie bei der **Recordset** geschlossen wird.  
   

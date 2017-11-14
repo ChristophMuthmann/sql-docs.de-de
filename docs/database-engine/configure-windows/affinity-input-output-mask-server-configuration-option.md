@@ -55,7 +55,7 @@ ms.lasthandoff: 08/02/2017
   
  Ein 1-Bit im E/A-Affinitätsmuster gibt an, dass die entsprechende CPU für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenträger-E/A-Vorgänge geeignet ist; ein 0-Bit gibt an, dass keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenträger-E/A-Vorgänge für die entsprechende CPU geplant werden sollen. Sind alle Bits auf 0 festgelegt oder ist **affinity I/O mask** nicht angegeben, werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenträger-E/A-Vorgänge für eine beliebige CPU geplant, die für die Verarbeitung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Threads geeignet ist.  
   
- Da das Festlegen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **affinity I/O mask** option is a specialized operation, it should be used only when necessary. In den meisten Fällen kann eine optimale Leistung durch die standardmäßige Affinität von Windows 2000 oder Windows Server 2003 erzielt werden.  
+ Da das Festlegen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **affinity I/O mask** einen spezialisierten Vorgang darstellt, sollte er nur bei Bedarf ausgeführt werden. In den meisten Fällen kann eine optimale Leistung durch die standardmäßige Affinität von Windows 2000 oder Windows Server 2003 erzielt werden.  
   
  Wenn Sie die Option **affinity I/O mask** angeben, müssen Sie sie mit der Konfigurationsoption **affinity mask** verwenden. Aktivieren Sie in der Option **affinity I/O mask** und in der Option **affinity mask** nicht dieselbe CPU. Die Bits, die den einzelnen CPUs entsprechen, sollten sich jeweils in einem der folgenden drei Zustände befinden:  
   

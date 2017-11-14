@@ -1,10 +1,8 @@
 ---
 redirect_url: /sql/integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7fd171ef050866227797a5eae52ec41afa3f7859
-ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
-
+ms.openlocfilehash: 87a6faa47ca19a31741e56f393a6a0296250f8d2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-

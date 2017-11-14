@@ -1,12 +1,15 @@
 ---
 title: Ereignisparameter | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -56,7 +59,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  Wenn Sie in das Ereignis wird, die der Vorgang fortgesetzt werden soll bestimmen, lassen Sie die *Status* -Parameter unverändert. Solange der eingehende Statusparameter nicht, um festgelegt wurde **AdStatusCantDeny**, Sie können jedoch den ausstehenden Vorgang abbrechen, indem ändern *Status* auf **AdStatusCancel**. Wenn Sie dies tun, das dem Vorgang zugeordnete Abschlussereignis hat seine *Status* Parametersatz auf **AdStatusErrorsOccurred**. Die **Fehler** Objekt, das das ausgelöste Ereignis übergeben den Wert enthält **AdErrOperationCancelled**.  
   
- Wenn Sie ein Ereignis verarbeitet nicht mehr verwenden möchten, legen Sie *Status* auf **AdStatusUnwantedEvent** und Ihre Anwendung nicht mehr benachrichtigt, wenn das Ereignis empfangen. Beachten Sie jedoch, dass einige Ereignisse, die mehr als ein Grund ausgelöst werden können. In diesem Fall müssen Sie angeben **AdStatusUnwantedEvent** für jede mögliche Ursache. Beispielsweise zum Beenden des Empfangs der Benachrichtigung über ausstehende **RecordChange** Ereignisse, die Sie festlegen müssen die *Status* Parameter **AdStatusUnwantedEvent** für ** AdRsnAddNew**, **AdRsnDelete**, **AdRsnUpdate**, **AdRsnUndoUpdate**, **AdRsnUndoAddNew**, **AdRsnUndoDelete**, und **AdRsnFirstChange** , wenn sie auftreten.  
+ Wenn Sie ein Ereignis verarbeitet nicht mehr verwenden möchten, legen Sie *Status* auf **AdStatusUnwantedEvent** und Ihre Anwendung nicht mehr benachrichtigt, wenn das Ereignis empfangen. Beachten Sie jedoch, dass einige Ereignisse, die mehr als ein Grund ausgelöst werden können. In diesem Fall müssen Sie angeben **AdStatusUnwantedEvent** für jede mögliche Ursache. Beispielsweise zum Beenden des Empfangs der Benachrichtigung über ausstehende **RecordChange** Ereignisse, die Sie festlegen müssen die *Status* Parameter **AdStatusUnwantedEvent** für  **AdRsnAddNew**, **AdRsnDelete**, **AdRsnUpdate**, **AdRsnUndoUpdate**, **AdRsnUndoAddNew**, **AdRsnUndoDelete**, und **AdRsnFirstChange** , wenn sie auftreten.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -64,7 +67,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 |**adStatusCancel**|Anfordern der Abbruch des Vorgangs, die durchgeführt wird.|  
   
 ## <a name="error-parameter"></a>Fehlerparameter  
- Die *Fehler* Parameter ist ein Verweis auf ein ADO [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt. Wenn die *Status* Parameter auf festgelegt ist **AdStatusErrorsOccurred**, die **Fehler** Objekt enthält die Details, warum der Vorgang fehlgeschlagen ist. Das wird Ereignis zugeordneten ausgelöste Ereignis. den Vorgang durch Festlegen von abgebrochen hat die *Status* Parameter an **AdStatusCancel**, das Fehlerobjekt ist immer auf festgelegt ** AdErrOperationCancelled**.  
+ Die *Fehler* Parameter ist ein Verweis auf ein ADO [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt. Wenn die *Status* Parameter auf festgelegt ist **AdStatusErrorsOccurred**, die **Fehler** Objekt enthält die Details, warum der Vorgang fehlgeschlagen ist. Das wird Ereignis zugeordneten ausgelöste Ereignis. den Vorgang durch Festlegen von abgebrochen hat die *Status* Parameter an **AdStatusCancel**, das Fehlerobjekt ist immer auf festgelegt  **AdErrOperationCancelled**.  
   
 ## <a name="object-parameter"></a>Object-Parameter  
  Jedes Ereignis empfängt ein oder mehrere Objekte, die im Vorgang betroffenen Objekten darstellt. Z. B. die **ExecuteComplete** -Ereignis empfängt ein **Befehl** -Objekt, eine **Recordset** -Objekt, und ein **Verbindung** Objekt.  

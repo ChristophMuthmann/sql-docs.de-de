@@ -1,12 +1,15 @@
 ---
 title: CreateParameter-Methode (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -62,7 +65,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
   
  Diese Methode fügt keinen automatisch die **Parameter** -Objekt an die **Parameter** Auflistung von einem [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt. Auf diese Weise können Sie zusätzliche Eigenschaften festlegen, wenn Sie angefügt werden soll, deren Werte ADO überprüft, die **Parameter** Objekt der Auflistung.  
   
- Wenn Sie angeben, dass einen Datentyp mit variabler Länge, die in der *Typ* Argument, müssen Sie entweder übergeben eine *Größe* Argument oder eine Gruppe der [Größe](../../../ado/reference/ado-api/size-property-ado-parameter.md) Eigenschaft von der **Parameter ** Objekt vor dem Anfügen, damit die **Parameter** Auflistung enthalten ist, andernfalls ein Fehler auftritt.  
+ Wenn Sie angeben, dass einen Datentyp mit variabler Länge, die in der *Typ* Argument, müssen Sie entweder übergeben eine *Größe* Argument oder eine Gruppe der [Größe](../../../ado/reference/ado-api/size-property-ado-parameter.md) Eigenschaft von der **Parameter**  Objekt vor dem Anfügen, damit die **Parameter** Auflistung enthalten ist, andernfalls ein Fehler auftritt.  
   
  Wenn Sie einen numerischen Datentyp angeben (**Type** oder **AdDecimal**) in der *Typ* Argument, und Sie müssen ebenfalls festgelegt. die [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) und [Genauigkeit](../../../ado/reference/ado-api/precision-property-ado.md) Eigenschaften.  
   

@@ -98,10 +98,10 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
   
- CREATION_DISPOSITION ** = ** CREATE_NEW  
+ CREATION_DISPOSITION  **=**  CREATE_NEW  
  Erstellt einen neuen Schlüssel auf dem Extensible Key Management-Gerät.  Wenn bereits ein Schlüssel auf dem Gerät vorhanden ist, gibt die Anweisung eine Fehlermeldung zurück.  
   
- CREATION_DISPOSITION ** = ** OPEN_EXISTING  
+ CREATION_DISPOSITION  **=**  OPEN_EXISTING  
  Ordnet einen symmetrischen Schlüssel von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einem vorhandenen Extensible Key Management-Schlüssel zu. Wenn CREATION_DISPOSITION = OPEN_EXISTING nicht bereitgestellt wird, wird der Standardwert CREATE_NEW angenommen.  
   
  *Name*  

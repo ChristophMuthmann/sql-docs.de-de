@@ -39,9 +39,9 @@ ms.lasthandoff: 09/09/2017
   
      **UPDATE** *Tabellenname*  
   
-     **Legen Sie** *Spaltenbezeichner* ** = ** {*Ausdruck* &#124; **NULL**}  
+     **Legen Sie** *Spaltenbezeichner*  **=**  {*Ausdruck* &#124; **NULL**}  
   
-     [**,** *Spaltenbezeichner* ** = ** {*Ausdruck* &#124; **NULL**}]  
+     [**,** *Spaltenbezeichner*  **=**  {*Ausdruck* &#124; **NULL**}]  
   
      **WHERE CURRENT OF** *Cursorname*  
   

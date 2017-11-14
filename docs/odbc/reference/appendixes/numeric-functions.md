@@ -58,10 +58,10 @@ Die folgende Tabelle beschreibt die numerische Funktionen, die in der ODBC-Skala
 |**POWER (** *Numeric_exp*, *Integer_exp***)** (ODBC 2.0)|Gibt den Wert der *Numeric_exp* zur Potenz einer *Integer_exp*.|  
 |**BOGENMAß (** *Numeric_exp* **)** (ODBC 2.0)|Gibt die Anzahl der Bogenmaß konvertiert aus *Numeric_exp* Grad.|  
 |**RAND (**[*Integer_exp*]**)** (ODBC 1.0)|Gibt einen zufälligen Gleitkommawert mit *Integer_exp* als optionale Startwert.|  
-|**ROUND (** *Numeric_exp*, *Integer_exp***)** (ODBC 2.0)|Gibt *Numeric_exp* auf gerundet *Integer_exp* wird rechts vom Dezimaltrennzeichen an. Wenn *Integer_exp* negativ ist, *Numeric_exp* wird gerundet, um &#124;* Integer_exp*&#124; Stellen links vom Dezimaltrennzeichen an.|  
+|**ROUND (** *Numeric_exp*, *Integer_exp***)** (ODBC 2.0)|Gibt *Numeric_exp* auf gerundet *Integer_exp* wird rechts vom Dezimaltrennzeichen an. Wenn *Integer_exp* negativ ist, *Numeric_exp* wird gerundet, um &#124; *Integer_exp*&#124; Stellen links vom Dezimaltrennzeichen an.|  
 |**Signieren (** *Numeric_exp* **)** (ODBC 1.0)|Gibt einen Indikator, der das Vorzeichen des *Numeric_exp*. Wenn *Numeric_exp* ist kleiner als 0 (null),-1 zurückgegeben. Wenn *Numeric_exp* gleich 0 (null) ist, wird 0 zurückgegeben. Wenn *Numeric_exp* ist größer als 0 (null), wird 1 zurückgegeben.|  
 |**SIN (** *Float_exp* **)** (ODBC 1.0)|Gibt den Sinus des *Float_exp*, wobei *Float_exp* einen Winkel im Bogenmaß ausgedrückt wird.|  
 |**SQRT (** *Float_exp* **)** (ODBC 1.0)|Gibt die Quadratwurzel von *Float_exp*.|  
 |**TAN (** *Float_exp* **)** (ODBC 1.0)|Gibt den Tangens des *Float_exp*, wobei *Float_exp* einen Winkel im Bogenmaß ausgedrückt wird.|  
-|**TRUNCATE (** *Numeric_exp*, *Integer_exp***)** (ODBC 2.0)|Gibt *Numeric_exp* auf gekürzt *Integer_exp* wird rechts vom Dezimaltrennzeichen an. Wenn *Integer_exp* negativ ist, *Numeric_exp* auf abgeschnitten &#124;* Integer_exp*&#124; Stellen links vom Dezimaltrennzeichen an.|
+|**TRUNCATE (** *Numeric_exp*, *Integer_exp***)** (ODBC 2.0)|Gibt *Numeric_exp* auf gekürzt *Integer_exp* wird rechts vom Dezimaltrennzeichen an. Wenn *Integer_exp* negativ ist, *Numeric_exp* auf abgeschnitten &#124; *Integer_exp*&#124; Stellen links vom Dezimaltrennzeichen an.|
 

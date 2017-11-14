@@ -52,7 +52,7 @@ SQLGetConnectOption(hdbc, fOption, pvParam)
     SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, NULL)  
     ```  
   
- In den vorhergehenden drei Fällen die *Verbindungshandle* Argument wird festgelegt, auf den Wert in *Hdbc*, *Attribut* Argument wird festgelegt, auf den Wert in *fOption *, und die *ValuePtr* Argument wird festgelegt, auf den gleichen Wert wie *PvParam*.  
+ In den vorhergehenden drei Fällen die *Verbindungshandle* Argument wird festgelegt, auf den Wert in *Hdbc*, *Attribut* Argument wird festgelegt, auf den Wert in *fOption* , und die *ValuePtr* Argument wird festgelegt, auf den gleichen Wert wie *PvParam*.  
   
  Für ODBC definierte Zeichenfolge Verbindungsoptionen, legt der Treiber-Manager die *Pufferlänge* Argument im Aufruf **SQLGetConnectAttr** auf die vordefinierte maximale Länge (SQL_MAX_OPTION_STRING_LENGTH); für eine Verbindungsoption Objektressourcen *Pufferlänge* auf 0 festgelegt ist.  
   

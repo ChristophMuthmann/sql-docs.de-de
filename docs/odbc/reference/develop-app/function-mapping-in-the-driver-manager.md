@@ -31,7 +31,7 @@ Der Treiber-Manager unterstützt zwei Einstiegspunkte für Funktionen, die Zeich
   
  Die ODBC-Headerdatei unterstützt auch Funktionen ergänzt, die mit einer *A,* (**SQLDriverConnectA**) der Übersichtlichkeit halber gemischten ANSI/Unicode-Anwendungen. Aufrufe an die **ein** Funktionen sind tatsächlich Aufrufe in den nicht ergänzten Einstiegspunkt (**SQLDriverConnect**.)  
   
- Wenn die Anwendung, mit der _UNICODE kompiliert wird **#define**, die ODBC-Header-Datei ordnet nicht ergänzten Funktionsaufrufe (**SQLDriverConnect**) auf die Unicode-Version (**SQLDriverConnectW **.)  
+ Wenn die Anwendung, mit der _UNICODE kompiliert wird **#define**, die ODBC-Header-Datei ordnet nicht ergänzten Funktionsaufrufe (**SQLDriverConnect**) auf die Unicode-Version (**SQLDriverConnectW** .)  
   
  Der Treiber-Manager einen Treiber als Unicode-Treiber erkennt, wenn **SQLConnectW** wird vom Treiber unterstützt.  
   

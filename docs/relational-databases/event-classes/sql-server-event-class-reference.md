@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sql-server-event-class-reference"></a>Ereignisklassen in SQL Server – Referenz
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] lets you record events as they occur in an instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Die erfassten Ereignisse sind Instanzen der Ereignisklassen in der Ablaufverfolgungsdefinition. Ereignisklassen und die dazugehörigen Ereigniskategorien sind in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]im Dialogfeld **Eigenschaften der Ablaufverfolgungsdatei** auf der Registerkarte **Ereignisauswahl** verfügbar.  
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] Mithilfe von können Sie Ereignisse aufzeichnen, sobald diese in einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]auftreten. Die erfassten Ereignisse sind Instanzen der Ereignisklassen in der Ablaufverfolgungsdefinition. Ereignisklassen und die dazugehörigen Ereigniskategorien sind in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]im Dialogfeld **Eigenschaften der Ablaufverfolgungsdatei** auf der Registerkarte **Ereignisauswahl** verfügbar.  
   
  In der folgenden Tabelle finden Sie eine Beschreibung der Ereigniskategorien und der zugehörigen Ereignisklassen.  
   

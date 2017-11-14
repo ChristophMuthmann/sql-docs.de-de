@@ -31,7 +31,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="allocating-the-environment-handle"></a>Das Umgebungshandle zuordnen
-Die erste Aufgabe für jede ODBC-Anwendung ist der Treiber-Manager zu laden. Diese Vorgehensweise ist abhängig vom Betriebssystem. Z. B. auf einem Computer unter Microsoft® Windows NT® Server-Windows 2000 Server, Windows NT Arbeitsstation/Windows 2000 Professional oder Microsoft Windows® 95-und Windows 98, die Anwendung entweder enthält links zu den Treiber-Manager-Bibliothek oder Aufrufe ** LoadLibrary** zum Laden der DLL-Treiber-Manager.  
+Die erste Aufgabe für jede ODBC-Anwendung ist der Treiber-Manager zu laden. Diese Vorgehensweise ist abhängig vom Betriebssystem. Z. B. auf einem Computer unter Microsoft® Windows NT® Server-Windows 2000 Server, Windows NT Arbeitsstation/Windows 2000 Professional oder Microsoft Windows® 95-und Windows 98, die Anwendung entweder enthält links zu den Treiber-Manager-Bibliothek oder Aufrufe  **LoadLibrary** zum Laden der DLL-Treiber-Manager.  
   
  Die nächste Aufgabe ausgeführt werden muss, bevor eine Anwendung eine ODBC-Funktion aufrufen kann, ist das Initialisieren der ODBC-Umgebung, und ordnen Sie ein Umgebungshandle wie folgt:  
   

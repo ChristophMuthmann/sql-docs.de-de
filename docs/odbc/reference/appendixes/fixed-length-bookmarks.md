@@ -28,7 +28,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="fixed-length-bookmarks"></a>Lesezeichen mit fester Länge
-Wenn eine ODBC 3.*.x* Treiber sollte mit einer ODBC 2. funktionieren.* X* -Anwendung verwendet fester Länge, Lesezeichen, die Treiber Folgendes unterstützen:  
+Wenn eine ODBC 3.*.x* Treiber sollte mit einer ODBC 2. funktionieren. *X* -Anwendung verwendet fester Länge, Lesezeichen, die Treiber Folgendes unterstützen:  
   
 -   SQL_UB_ON als Wert für die SQL_USE_BOOKMARKS-Option-Anweisung. (SQL_UB_ON veraltetes Feature in ODBC 3.*.x*.)  
   

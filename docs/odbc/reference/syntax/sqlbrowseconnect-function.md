@@ -70,7 +70,7 @@ SQLRETURN SQLBrowseConnect(
  [Eingabe] Länge in Zeichen, d. h. von der **OutConnectionString* Puffer.  
   
  *StringLength2Ptr*  
- [Ausgabe] Die Gesamtanzahl der verfügbaren Zeichen ist (außer Null-Terminierung) im zurückzugebenden \* *OutConnectionString*. Wenn die Anzahl der zurückzugebenden verfügbaren Zeichen ist größer als oder gleich ist *Pufferlänge*, die Verbindungszeichenfolge in \* *OutConnectionString* auf abgeschnitten * Pufferlänge* abzüglich der Länge des ein Null-Abschlusszeichen.  
+ [Ausgabe] Die Gesamtanzahl der verfügbaren Zeichen ist (außer Null-Terminierung) im zurückzugebenden \* *OutConnectionString*. Wenn die Anzahl der zurückzugebenden verfügbaren Zeichen ist größer als oder gleich ist *Pufferlänge*, die Verbindungszeichenfolge in \* *OutConnectionString* auf abgeschnitten  *Pufferlänge* abzüglich der Länge des ein Null-Abschlusszeichen.  
   
 ## <a name="returns"></a>Rückgabewert  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_ERROR, SQL_INVALID_HANDLE oder SQL_STILL_EXECUTING.  
@@ -89,7 +89,7 @@ SQLRETURN SQLBrowseConnect(
 |08004|Der Server wies die Verbindung|Die Datenquelle die Einrichtung der Verbindung Gründen abgelehnt Implementierung definiert.|  
 |08S01|Kommunikations-Verbindungsfehler|Die Verbindung zwischen dem Treiber und der Datenquelle, zu der der Treiber versucht hat, die Verbindung, konnte nicht vor der Verarbeitung für die Funktion abgeschlossen.|  
 |28000|Ungültige Autorisierungsangabe|Der Bezeichner des Benutzers oder der autorisierungszeichenfolge oder beides entsprechend den Angaben in die Schaltfläche zum Durchsuchen, anfordern Verbindungszeichenfolge (*InConnectionString*), durch die Datenquelle definierten Einschränkungen verletzt.|  
-|HY000|Allgemeiner Fehler|Für die es keine spezifischen SQLSTATE wurde und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der * \*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
+|HY000|Allgemeiner Fehler|Für die es keine spezifischen SQLSTATE wurde und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der  *\*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
 |HY001|Fehler bei der speicherbelegung|Der Treiber-Manager (DM) konnte nicht belegt werden zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich.<br /><br /> Der Treiber konnte nicht belegt werden zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich.|  
 |HY008|Der Vorgang wurde abgebrochen|Ein asynchroner Vorgang abgebrochen wurde, durch den Aufruf [SQLCancelHandle Funktion](../../../odbc/reference/syntax/sqlcancelhandle-function.md). Klicken Sie dann die ursprüngliche Funktion erneut auf aufgerufen wurde die *Verbindungshandle*.<br /><br /> Ein Vorgang wurde abgebrochen, durch den Aufruf **SQLCancelHandle** auf die *Verbindungshandle* aus einem anderen Thread in einer multithread-Anwendung.|  
 |HY010|Fehler bei Funktionssequenz|(DM) hieß eine asynchron ausgeführte Funktion (nicht auf dieses Objekt) für die *Verbindungshandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.|  

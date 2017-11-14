@@ -1,5 +1,5 @@
 ---
-title: "Lernprogramm: Einführung in Ausdrücke | Microsoft Docs"
+title: "Tutorial: Einführung in Ausdrücke | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 09/16/2016
 ms.prod: sql-server-2016
@@ -16,8 +16,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 97b19aaffd06a196d3cbd39e44b49c971a146edf
 ms.contentlocale: de-de
@@ -63,7 +62,7 @@ In diesem Abschnitt erstellen Sie einen Tabellenbericht, eine Datenquelle und ei
 6.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine Datenquelle vom Typ **SQL Server**aus. Wählen Sie in der Liste eine Datenquelle aus, oder navigieren Sie zum Berichtsserver, um eine Datenquelle auszuwählen.  
 
     > [!NOTE]  
-    > Welche Datenquelle Sie auswählen, ist unwichtig, solange Sie über ausreichende Berechtigungen verfügen. Aus der Datenquelle werden keine Daten abgerufen. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung &#40;Berichts-Generator&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > Welche Datenquelle Sie auswählen, ist unwichtig, solange Sie über ausreichende Berechtigungen verfügen. Aus der Datenquelle werden keine Daten abgerufen. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 7.  Klicken Sie auf **Weiter**.  
   
@@ -156,7 +155,7 @@ In diesem Abschnitt erstellen Sie einen Tabellenbericht, eine Datenquelle und ei
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="Concatenate"></a>3. Anzeigen des Anfangsbuchstabens des Vornamens und des Nachnamens  
-In diesem Abschnitt verwenden Sie die **Left**-Funktion und den Operator zum **Verketten** (**&**) in einem Ausdruck, der zu einem Anfangsbuchstaben des Vornamens und dem Nachnamen ausgewertet wird. Sie können den Ausdruck Schritt für Schritt erstellen oder diesen Teil der Prozedur überspringen und den Ausdruck aus dem Tutorial in das Dialogfeld **Ausdruck** kopieren und einfügen.   
+In diesem Abschnitt verwenden Sie die **Left** -Funktion und den Operator zum **Verketten** (**&**) in einem Ausdruck, der zu einem Anfangsbuchstaben des Vornamens und dem Nachnamen ausgewertet wird. Sie können den Ausdruck Schritt für Schritt erstellen oder diesen Teil der Prozedur überspringen und den Ausdruck aus dem Tutorial in das Dialogfeld **Ausdruck** kopieren und einfügen.   
   
 1.  Klicken Sie mit der rechten Maustaste auf die Spalte **StateProvince** , zeigen Sie auf **Spalte einfügen**und klicken Sie auf **Links**.  
   
@@ -184,7 +183,7 @@ In diesem Abschnitt verwenden Sie die **Left**-Funktion und den Operator zum **V
   
 8.  Geben Sie **, 1)**ein  
   
-    Der Ausdruck extrahiert ein Zeichen aus dem Wert **FirstName**, beginnend von links.  
+    Der Ausdruck extrahiert ein Zeichen aus dem Wert **FirstName** , beginnend von links.  
   
 9. Geben Sie **&". "&** ein.  
 
@@ -207,7 +206,7 @@ In diesem Abschnitt formatieren Sie die Spalte **Last Purchase** , die Datumsang
   
 1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zurückzukehren.  
   
-2.  Wählen Sie die Datenzelle in der Spalte **Last Purchase** aus, und wählen Sie auf der Registerkarte **Stamm** im Abschnitt **Zahl** **Datum** aus.  
+2.  Klicken Sie auf die Datenzelle in der Spalte **Letzter Kauf**, und klicken Sie auf der Registerkarte **Stamm** im Abschnitt **Zahl** auf **Datum**.  
 
     ![Berichts-Generator-Ausdruck-Tutorial-Datumsformat](../reporting-services/media/report-builder-expression-tutorial-date-format.png)
   
@@ -225,7 +224,7 @@ In diesem Abschnitt formatieren Sie die Spalte **Last Purchase** , die Datumsang
 
 1. Wählen Sie die Zeile mit Spaltenheadern aus.
 
-2. Wählen Sie auf der Registerkarte **Stamm** im Abschnitt **Absatz** **Links** aus. 
+2. Klicken Sie auf der Registerkarte **Stamm** im Abschnitt **Absatz** auf **Links**. 
 
     ![Berichts-Generator-Ausdruck-Tutorial-Header-formatieren](../reporting-services/media/report-builder-expression-tutorial-format-headings.png)
 
@@ -319,7 +318,7 @@ Um bei der Erstellung eines gebänderten Berichts die Farbe beizubehalten, die S
     ![Berichts-Generator-Ausdruck-Tutorial-Vorschau-formatierte-M-W-Spalte](../reporting-services/media/report-builder-expression-tutorial-preview-formatted-m-f-column.png)  
   
 ## <a name="Lookup"></a>5. Suchen des CountryRegion-Namens  
-In diesem Abschnitt erstellen Sie das CountryRegion-Dataset und verwenden die **Lookup**-Funktion, um den Namen des Lands/der Region anstelle des Bezeichners des Lands/der Region anzuzeigen.  
+In diesem Abschnitt erstellen Sie das CountryRegion-Dataset und verwenden die **Lookup** -Funktion, um den Namen des Lands/der Region anstelle des Bezeichners des Lands/der Region anzuzeigen.  
   
 ### <a name="to-create-the-countryregion-dataset"></a>So erstellen Sie das CountryRegion-Dataset  
   
@@ -327,7 +326,7 @@ In diesem Abschnitt erstellen Sie das CountryRegion-Dataset und verwenden die **
   
 2.  Klicken Sie im Berichtsdatenbereich auf **Neu** und anschließend auf **Dataset**.  
   
-3.  In ** Dataset-Eigenschaften, klicken Sie auf **ein in den eigenen Bericht eingebettetes Dataset verwenden**.  
+3.  Klicken Sie unter „Dataseteigenschaften“ auf **Ein in den eigenen Bericht eingebettetes Dataset verwenden**.  
   
 4.  Wählen Sie in der Liste **Datenquelle** die Option „Datenquelle_für_Ausdrücke“.  
   
@@ -389,7 +388,7 @@ In diesem Abschnitt erstellen Sie das CountryRegion-Dataset und verwenden die **
 11. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
 ## <a name="Count"></a>6. Ermitteln der vergangenen Tage seit dem letzten Kauf  
-In diesem Abschnitt fügen Sie eine Spalte hinzu und verwenden anschließend die **Now**-Funktion oder die integrierte globale `ExecutionTime`-Variable, um die Anzahl der Tage seit dem letzten Einkauf (ab heute) eines Kunden zu berechnen.  
+In diesem Abschnitt fügen Sie eine Spalte hinzu und verwenden anschließend die **Now** -Funktion oder die integrierte globale `ExecutionTime` -Variable, um die Anzahl der Tage seit dem letzten Einkauf (ab heute) eines Kunden zu berechnen.  
   
 ### <a name="to-add-the-days-ago-column"></a>So fügen Sie die Spalte "Vor (n) Tagen)" hinzu  
   
@@ -411,12 +410,12 @@ In diesem Abschnitt fügen Sie eine Spalte hinzu und verwenden anschließend die
   
 9. Klicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**, und doppelklicken Sie in der Liste **Werte** auf **LastPurchase**.  
   
-11. Geben Sie unmittelbar hinter `Fields!LastPurchase.Value` ein Komma **,** ein. 
+11. Geben Sie unmittelbar hinter `Fields!LastPurchase.Value`ein Komma **,** ein. 
   
-13. Klicken Sie in der Liste **Kategorie** erneut auf **Datum/Uhrzeit**, und doppelklicken Sie in der Liste **Elemente** auf **Now** (Jetzt).  
+13. Klicken Sie in der Liste **Kategorie** erneut auf **Datum/Uhrzeit**, und doppelklicken Sie in der Liste **Elemente** auf **Jetzt**.  
   
     > [!WARNING]  
-    > In Produktionsberichten dürfen Sie nicht die **Now**-Funktion in Ausdrücken verwenden, die beim Rendern des Berichts mehrmals ausgewertet werden (z.B. in den Detailzeilen eines Berichts). Der Wert von **Now** ändert sich von Zeile zu Zeile, und die verschiedenen Werte wirken sich auf die Auswertungsergebnisse der Ausdrücke aus, was zu inkonsistenten Resultaten führt. Verwenden Sie stattdessen die globale Variable `ExecutionTime` , die von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] bereitgestellt wird.  
+    > In Produktionsberichten dürfen Sie nicht die **Now** -Funktion in Ausdrücken verwenden, die beim Rendern des Berichts mehrmals ausgewertet werden (z.B. in den Detailzeilen eines Berichts). Der Wert von **Now** ändert sich von Zeile zu Zeile, und die verschiedenen Werte wirken sich auf die Auswertungsergebnisse der Ausdrücke aus, was zu inkonsistenten Resultaten führt. Verwenden Sie stattdessen die globale Variable `ExecutionTime` , die von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] bereitgestellt wird.  
   
 15. Löschen Sie die öffnende Klammer nach `Now(`, und geben Sie dann eine schließende Klammer **)**ein.  
   

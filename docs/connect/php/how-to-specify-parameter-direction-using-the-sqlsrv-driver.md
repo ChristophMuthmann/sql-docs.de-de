@@ -50,7 +50,7 @@ In diesem Thema wird beschrieben, wie der SQLSRV-Treiber verwendet wird, um die 
     > [!NOTE]  
     > Variablen, die auf **NULL**, **DateTime**oder Streamtypen aktualisiert oder initialisiert werden, können nicht als Ausgabeparameter verwendet werden.  
   
-3.  Verwenden Sie Ihre PHP-Variablen aus Schritt 2, um ein Array von Parameterwerten zu erstellen oder zu aktualisieren. Dieses soll der Reihenfolge der Parameterplatzhalter in der Transact-SQL-Zeichenfolge entsprechen. Geben Sie die Richtung  jedes Parameters im Array an. Die Richtung jedes Parameters wird bestimmt, auf zwei Arten: standardmäßig (für Eingabeparameter) oder mithilfe von **SQLSRV_PARAM_\* ** -Konstanten (für Ausgabeparameter und bidirektionale Parameter). Der folgende Code gibt beispielsweise den *$employeeId* -Parameter als Eingabeparameter und den *$usedVacationHours* -Parameter als bidirektionaler Parameter an:  
+3.  Verwenden Sie Ihre PHP-Variablen aus Schritt 2, um ein Array von Parameterwerten zu erstellen oder zu aktualisieren. Dieses soll der Reihenfolge der Parameterplatzhalter in der Transact-SQL-Zeichenfolge entsprechen. Geben Sie die Richtung  jedes Parameters im Array an. Die Richtung jedes Parameters wird bestimmt, auf zwei Arten: standardmäßig (für Eingabeparameter) oder mithilfe von **SQLSRV_PARAM_\***  -Konstanten (für Ausgabeparameter und bidirektionale Parameter). Der folgende Code gibt beispielsweise den *$employeeId* -Parameter als Eingabeparameter und den *$usedVacationHours* -Parameter als bidirektionaler Parameter an:  
   
     ```  
     $params = array(  

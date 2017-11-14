@@ -1,12 +1,15 @@
 ---
 title: Handlereigenschaft (RDS) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -54,7 +57,7 @@ DataControl.Handler = String
   
  Der Name der Standardhandler ist **MSDFMAP. Handler**, und der Standardparameter ist eine Anpassungsdatei namens **MSDFMAP. INI**. Verwenden Sie diese Eigenschaft, um alternative Anpassungsdateien erstellt vom Serveradministrator aufzurufen.  
   
- Die Alternative zur Einstellung der **Handler** Eigenschaft ist die Angabe eines Handlers und Parameter in der ["ConnectionString"](../../../ado/reference/ado-api/connectionstring-property-ado.md) Eigenschaft; d. h. "**Handler =** * HandlerName, parameter1, parameter2, *".  
+ Die Alternative zur Einstellung der **Handler** Eigenschaft ist die Angabe eines Handlers und Parameter in der ["ConnectionString"](../../../ado/reference/ado-api/connectionstring-property-ado.md) Eigenschaft; d. h. "**Handler =**  *HandlerName, parameter1, parameter2,* ".  
   
 ## <a name="applies-to"></a>Gilt für  
  [RDS (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

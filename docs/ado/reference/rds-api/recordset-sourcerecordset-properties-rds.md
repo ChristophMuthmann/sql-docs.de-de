@@ -51,7 +51,7 @@ Recordset = DataControl.Recordset
 ## <a name="remarks"></a>Hinweise  
  Sie können festlegen, die **SourceRecordset** Eigenschaft, um eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) aus einem benutzerdefinierten Geschäftsobjekt zurückgegeben.  
   
- Diese Eigenschaften ermöglichen es eine Anwendung zur Handhabung der Bindungsprozess durch einen benutzerdefinierten Prozess. Erhalt ein Rowsets, die eingebunden in eine **Recordset** , damit Sie direkt interagieren können die **Recordset**, Ausführen von Aktionen wie das Festlegen von Eigenschaften oder durchlaufen die **Recordset **.  
+ Diese Eigenschaften ermöglichen es eine Anwendung zur Handhabung der Bindungsprozess durch einen benutzerdefinierten Prozess. Erhalt ein Rowsets, die eingebunden in eine **Recordset** , damit Sie direkt interagieren können die **Recordset**, Ausführen von Aktionen wie das Festlegen von Eigenschaften oder durchlaufen die **Recordset** .  
   
  Sie können festlegen, die **SourceRecordset** -Eigenschaft, oder erfahren Sie die **Recordset** Eigenschaft zur Laufzeit in Skriptcode.  
   

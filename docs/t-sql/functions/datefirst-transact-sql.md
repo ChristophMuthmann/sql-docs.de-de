@@ -43,7 +43,7 @@ ms.contentlocale: de-de
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40datefirst-transact-sql"></a>& #x 40; & #x 40; DATEFIRST (Transact-SQL)
+# <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40; DATEFIRST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Gibt den aktuellen Wert für eine Sitzung des [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).

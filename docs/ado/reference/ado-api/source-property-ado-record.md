@@ -1,12 +1,15 @@
 ---
 title: Source-Eigenschaft (ADO-Datensatz) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -41,7 +44,7 @@ Gibt an, die Datenquelle oder das Objekt dargestellt wird, indem die [Datensatz]
 ## <a name="remarks"></a>Hinweise  
  Die **Quelle** -Eigenschaft gibt die *Quelle* Argument der **Datensatz** Objekt [öffnen](../../../ado/reference/ado-api/open-method-ado-record.md) Methode. Sie können eine absolute oder relative URL-Zeichenfolge enthalten. Eine absolute URL verwendet werden kann, ohne die Einstellung der [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) Eigenschaft direkt öffnen die **Datensatz** Objekt. Eine implizite **Verbindung** Objekt wird in diesem Fall erstellt.  
   
- Die **Quelle** Eigenschaft kann auch einen Verweis auf ein bereits geöffnetes enthalten **Recordset**, daraufhin eine **Datensatz** Objekt, das in die aktuelle Zeile darstellt. die ** Recordset**.  
+ Die **Quelle** Eigenschaft kann auch einen Verweis auf ein bereits geöffnetes enthalten **Recordset**, daraufhin eine **Datensatz** Objekt, das in die aktuelle Zeile darstellt. die  **Recordset**.  
   
  Die **Quelle** Eigenschaft kann auch enthalten einen Verweis auf eine [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt, das eine einzelne Zeile mit Daten vom Anbieter zurückgegeben.  
   

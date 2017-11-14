@@ -56,7 +56,7 @@ Dieses Thema enthält die Optionen, die im assoziativen Array zulässig sind (be
 
 1. Die `ConnectionPooling` Attribut kann nicht verwendet werden, zum Aktivieren/Deaktivieren Verbindungspooling in Linux und Mac Finden Sie unter [Verbindungspooling (Microsoft Drivers for PHP for SQLServer)](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md).
 
-2. Alle für die hergestellte Verbindung ausgeführten Abfragen erfolgen an der Datenbank, indem angegeben wird, die *Datenbank* Attribut. Wenn der Benutzer die entsprechenden Berechtigungen verfügt, können jedoch Daten in anderen Datenbanken zugegriffen werden mithilfe eines vollqualifizierten Namens. Z. B. wenn die *master* Datenbank festgelegt ist, mit der *Datenbank* Verbindungsattribut, es ist weiterhin möglich, eine Transact-SQL-Abfrage auszuführen, die greift auf die * AdventureWorks.HumanResources.Employee* Tabelle mit dem vollqualifizierten Namen.  
+2. Alle für die hergestellte Verbindung ausgeführten Abfragen erfolgen an der Datenbank, indem angegeben wird, die *Datenbank* Attribut. Wenn der Benutzer die entsprechenden Berechtigungen verfügt, können jedoch Daten in anderen Datenbanken zugegriffen werden mithilfe eines vollqualifizierten Namens. Z. B. wenn die *master* Datenbank festgelegt ist, mit der *Datenbank* Verbindungsattribut, es ist weiterhin möglich, eine Transact-SQL-Abfrage auszuführen, die greift auf die  *AdventureWorks.HumanResources.Employee* Tabelle mit dem vollqualifizierten Namen.  
 
 3. Aktivieren von *Verschlüsselung* beeinträchtigt die Leistung einiger Anwendungen aufgrund des aufwändigen Berechnungsprozesses, der erforderlich ist, um Daten zu verschlüsseln.  
 

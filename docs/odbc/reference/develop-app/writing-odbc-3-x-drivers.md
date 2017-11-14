@@ -28,7 +28,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="writing-odbc-3x-drivers"></a>Schreiben von ODBC 3.x-Treiber
-Die folgende Tabelle zeigt die funktionsunterstützung in einer ODBC-3. *x* Treiber und eine ODBC-Anwendung und die Zuordnung, die vom Treiber-Manager ausgeführt, wenn die Funktionen für eine ODBC 3. aufgerufen werden.* X* Treiber.  
+Die folgende Tabelle zeigt die funktionsunterstützung in einer ODBC-3. *x* Treiber und eine ODBC-Anwendung und die Zuordnung, die vom Treiber-Manager ausgeführt, wenn die Funktionen für eine ODBC 3. aufgerufen werden. *X* Treiber.  
   
 |Funktion|Unterstützt<br /><br /> durch eine<br /><br /> ODBC-3. *x*<br /><br /> Treiber?|Unterstützt<br /><br /> durch eine<br /><br /> ODBC-3. *x*<br /><br /> Anwendung?|Zugeordnet/unterstützt<br /><br /> durch die ODBC-3. *x*<br /><br /> Treiber-Manager<br /><br /> eine ODBC-3. *x* Treiber?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  

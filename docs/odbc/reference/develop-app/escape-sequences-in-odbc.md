@@ -51,7 +51,7 @@ Eine Anzahl von Funktionen der Programmiersprache, z. B. äußere Joins und Aufr
  Die-Escapesequenz ist erkannt und analysiert von Treibern, die die Escapesequenzen durch DBMS-spezifische Grammatik zu ersetzen. Weitere Informationen zu escapesequenzsyntax, finden Sie unter [Escapesequenzen für ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) in Anhang C: SQL-Grammatik.  
   
 > [!NOTE]  
->  In ODBC 2. *x*, dies war die Standardsyntax der Escapesequenz: **--(\*Hersteller (***Herstellername***), Product (** *Produktname***)***Erweiterung* ** \*)--**  
+>  In ODBC 2. *x*, dies war die Standardsyntax der Escapesequenz: **--(\*Hersteller (***Herstellername***), Product (** *Produktname***)***Erweiterung*  **\*)--**  
 >   
 >  Zusätzlich zu dieser Syntax eine Kurzsyntax für das Formular definiert wurde: **{***Erweiterung***}**  
 >   

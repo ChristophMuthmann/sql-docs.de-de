@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="date-time-and-timestamp-literals"></a>Date, Time und Timestamp-Literale
 Die Escapesequenz für Datum, Uhrzeit und timestampliterale lautet  
   
- **{***-Typ* **"** *Wert* **'}  **  
+ **{***-Typ* **"** *Wert* **'}**   
   
  wobei *Literal vom Typ* ist einer der Werte in der folgenden Tabelle aufgeführt.  
   
@@ -35,7 +35,7 @@ Die Escapesequenz für Datum, Uhrzeit und timestampliterale lautet
 |---------------------|-------------|-----------------------|  
 |**d**|Datum|*JJJJ*-*mm*-*TT*|  
 |**t**|Zeit *|*"hh"*:*mm*:*ss*[1]|  
-|**TS**|Timestamp|*JJJJ*-*mm*-*Dd* *"hh"*:*mm*:*ss* [. *f... *] [1]|  
+|**TS**|Timestamp|*JJJJ*-*mm*-*Dd* *"hh"*:*mm*:*ss* [. *f...* ] [1]|  
   
  [1] die Anzahl der Ziffern rechts vom Dezimaltrennzeichen in einem Zeichenfolgenliteral, eine Komponente für Sekunden enthält, Uhrzeit oder Zeitstempel Zeitraum ist abhängig von der Genauigkeit Sekunden, wie in der SQL_DESC_PRECISION Deskriptorfeld enthalten. (Weitere Informationen finden Sie unter [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   

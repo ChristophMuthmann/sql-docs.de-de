@@ -33,5 +33,5 @@ ms.lasthandoff: 09/09/2017
  Wenn der Treiber diese Funktion unterstützt wird, ruft die Cursorbibliothek **SQLNativeSql** im Treiber und übergibt sie die SQL-Anweisung. Positioniertes Update positioniert "Delete" und **für aktualisieren wählen** -Anweisungen, die Cursorbibliothek ändert die Anweisung vor der Übergabe an den Treiber.  
   
 > [!NOTE]  
->  Die Cursorbibliothek gibt fälschlicherweise SQLSTATE 34000 (Ungültiger Cursorname) zurück, wenn der Name des Cursors ist ungültig in eine positionierte Update- oder Delete-Anweisung, die übergeben wird die *InStatementText* Argument **SQLNativeSql **. **SQLNativeSql** nicht Syntaxfehler, zurückgeben, die erst nach der Vorbereitung der Anweisung oder der Ausführung zurückgegeben werden soll.
+>  Die Cursorbibliothek gibt fälschlicherweise SQLSTATE 34000 (Ungültiger Cursorname) zurück, wenn der Name des Cursors ist ungültig in eine positionierte Update- oder Delete-Anweisung, die übergeben wird die *InStatementText* Argument **SQLNativeSql** . **SQLNativeSql** nicht Syntaxfehler, zurückgeben, die erst nach der Vorbereitung der Anweisung oder der Ausführung zurückgegeben werden soll.
 

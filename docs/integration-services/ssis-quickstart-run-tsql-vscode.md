@@ -52,7 +52,7 @@ Verwenden Sie Visual Studio-Code zum Herstellen einer Verbindung im SSIS-Katalog
 
 4. Befolgen Sie die Verbindungseigenschaften für das neue Verbindungsprofil angeben. Drücken Sie nach jeder Wert angeben, **EINGABETASTE** um den Vorgang fortzusetzen. 
 
-   | Einstellung       | Empfohlener Wert | Weitere Informationen |
+   | Einstellung       | Empfohlener Wert | Weitere Informationen |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Servername** | Die vollqualifizierten Servernamen | Wenn Sie die Verbindung mit einem Azure SQL-Datenbankserver herstellen, wird der Name im folgenden Format: `<server_name>.database.windows.net`. |
    | **Datenbankname** | **SSISDB** | Der Name der Datenbank für die Verbindung. |

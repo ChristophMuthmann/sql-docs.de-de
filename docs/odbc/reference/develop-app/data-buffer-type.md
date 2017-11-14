@@ -30,7 +30,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="data-buffer-type"></a>Buffer-Datentyp
 Die C-Datentyp eines Puffers wird von der Anwendung angegeben. Mit einer einzigen Variablen geschieht dies, wenn die Anwendung die Variable belegt. Mit generischen Arbeitsspeicher – d. h. Speicher verweist Zeiger vom Typ "void" – Dies tritt auf, wenn die Anwendung den Speicher für eine bestimmte Art umgewandelt. Der Treiber ermittelt dieses Typs auf zwei Arten:  
   
--   **Datentypargument Puffer.** Übertragung von Parameterwerten und Resultsetdaten, verwendet werden, z. B. der Puffer mit gebundenen Puffer *TargetValuePtr* in **SQLBindCol**, haben normalerweise Argument zugeordneten Typ, z. B. die * TargetType* Argument in **SQLBindCol**. In diesem Argument übergibt die Anwendung die C-Typ-ID, die entspricht, in den Typ des Puffers. Z. B. im folgenden Aufruf **SQLBindCol**, der Wert SQL_C_TYPE_DATE weist den Treiber an, die die *Datum* Puffer ist ein SQL_DATE_STRUCT:  
+-   **Datentypargument Puffer.** Übertragung von Parameterwerten und Resultsetdaten, verwendet werden, z. B. der Puffer mit gebundenen Puffer *TargetValuePtr* in **SQLBindCol**, haben normalerweise Argument zugeordneten Typ, z. B. die  *TargetType* Argument in **SQLBindCol**. In diesem Argument übergibt die Anwendung die C-Typ-ID, die entspricht, in den Typ des Puffers. Z. B. im folgenden Aufruf **SQLBindCol**, der Wert SQL_C_TYPE_DATE weist den Treiber an, die die *Datum* Puffer ist ein SQL_DATE_STRUCT:  
   
     ```  
     SQL_DATE_STRUCT Date;  

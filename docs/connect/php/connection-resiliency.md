@@ -28,7 +28,7 @@ Verbindungsresilienz wird implementiert, mit zwei Schlüsselwörter, die Verbind
 |**ConnectRetryCount**| Ganze Zahl zwischen 0 und 255 (inklusiv)|1|Die maximale Anzahl der Versuche vor dem Allgemeinheit eine unterbrochene Verbindung her. Standardmäßig wird ein einzelner Versuch unternommen, bei unterteilt eine Verbindung her. Der Wert 0 bedeutet, dass keine erneute Verbindung erneut versucht wird.|
 |**Connectionretryinterval**| Ganze Zahl zwischen 1 und 60 (inklusiv)|1| Die Zeit in Sekunden zwischen den versuchen, eine Verbindung wiederherzustellen. Die Anwendung versucht, die sofort erneut eine Verbindung herzustellen, eine unterbrochene Verbindung wird erkannt, und wartet dann **Connectionretryinterval** Sekunden, bevor Sie es erneut zu versuchen. Dieses Schlüsselwort wird ignoriert, wenn **ConnectRetryCount** gleich 0 ist.
 
-Wenn das Produkt der **ConnectRetryCount** multipliziert **Connectionretryinterval** ist größer als **LoginTimeout**, und klicken Sie dann der Client eingestellt wird einmal eine Verbindung herstellen möchten ** LoginTimeout** erreicht wird; andernfalls ist sie weiterhin für die Verbindung erst versuchen **ConnectRetryCount** erreicht ist.
+Wenn das Produkt der **ConnectRetryCount** multipliziert **Connectionretryinterval** ist größer als **LoginTimeout**, und klicken Sie dann der Client eingestellt wird einmal eine Verbindung herstellen möchten  **LoginTimeout** erreicht wird; andernfalls ist sie weiterhin für die Verbindung erst versuchen **ConnectRetryCount** erreicht ist.
 
 #### <a name="remarks"></a>Hinweise
 

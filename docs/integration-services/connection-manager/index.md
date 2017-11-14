@@ -1,10 +1,8 @@
---- 
+---
 redirect_url: /sql/integration-services/connection-manager/integration-services-ssis-connections
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3fc3f1e683ad0dc8ca219e1f867f58e273227da8
-ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
-
---- 
-
+ms.openlocfilehash: d0a335bf7e4409c8704be7db86362503dd77f321
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
+---

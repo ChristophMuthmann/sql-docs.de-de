@@ -1,12 +1,15 @@
 ---
 title: StayInSync-Eigenschaft (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -29,7 +32,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="stayinsync-property-example-vc"></a>StayInSync-Eigenschaft (VC++-Beispiel)
 In diesem Beispiel wird veranschaulicht, wie die [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) Eigenschaft ermöglicht den Zugriff auf Zeilen in einer hierarchischen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
- Die äußere Schleife zeigt jeden Autor vor-und Nachname, Bundesland und Identifikation. Die angefügten **Recordset** für jede Zeile aus abgerufen wird die [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung und automatisch zugewiesen ist, **RstTitleAuthor** durch die **StayInSync ** Eigenschaft bei jedem übergeordneten **Recordset** in eine neue Zeile bewegt. Die innere Schleife zeigt vier Felder aus jeder Zeile im angefügten Recordset.  
+ Die äußere Schleife zeigt jeden Autor vor-und Nachname, Bundesland und Identifikation. Die angefügten **Recordset** für jede Zeile aus abgerufen wird die [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung und automatisch zugewiesen ist, **RstTitleAuthor** durch die **StayInSync**  Eigenschaft bei jedem übergeordneten **Recordset** in eine neue Zeile bewegt. Die innere Schleife zeigt vier Felder aus jeder Zeile im angefügten Recordset.  
   
 ```  
 // BeginStayInSyncCpp.cpp  

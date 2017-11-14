@@ -1,12 +1,15 @@
 ---
 title: "Datensätze und Felder Anbieter bereitgestellte | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="records-and-provider-supplied-fields"></a>Datensätze und Felder Anbieter bereitgestellte
 Wenn eine [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt geöffnet ist, werden seine Quelle kann die aktuelle Zeile eines geöffneten [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), eine absolute URL oder eine relative URL in Verbindung mit einem geöffneten [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt .  
   
- Wenn die **Datensatz** geöffnet wird eine **Recordset**, **Datensatz** Objekt [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung enthält alle Felder aus der ** Recordset**, sowie alle Felder, die vom zugrunde liegenden Anbieter hinzugefügt wurden.  
+ Wenn die **Datensatz** geöffnet wird eine **Recordset**, **Datensatz** Objekt [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung enthält alle Felder aus der  **Recordset**, sowie alle Felder, die vom zugrunde liegenden Anbieter hinzugefügt wurden.  
   
  Der Anbieter kann weitere Felder, die als ergänzende Merkmale des dienen Einfügen der **Datensatz**. Folglich eine **Datensatz** möglicherweise eindeutige Felder nicht in der **Recordset** als Ganzes oder any **Datensatz** abgeleitet aus einer anderen Zeile die **Recordset**.  
   

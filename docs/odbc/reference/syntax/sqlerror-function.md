@@ -38,7 +38,7 @@ ms.lasthandoff: 09/09/2017
  **Zusammenfassung**  
  **SQLError** Fehler oder Statusinformationen zurückgibt.  
   
- Weitere Informationen zu welcher der Treiber-Manager ordnet diese Funktion zu, wenn eine ODBC-2. *x* Anwendung arbeitet mit einer ODBC-3.* X* -Treiber verwenden, finden Sie unter [veraltet Zuordnungsfunktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Treiber Richtlinien für die Abwärtskompatibilität.  
+ Weitere Informationen zu welcher der Treiber-Manager ordnet diese Funktion zu, wenn eine ODBC-2. *x* Anwendung arbeitet mit einer ODBC-3. *X* -Treiber verwenden, finden Sie unter [veraltet Zuordnungsfunktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Treiber Richtlinien für die Abwärtskompatibilität.  
   
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   

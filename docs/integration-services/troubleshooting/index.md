@@ -1,10 +1,8 @@
---- 
+---
 redirect_url: /sql/integration-services/troubleshooting/troubleshoot-integration-services-ssis-packages
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dc3c6fa5639990d9bded0558e84e71872ed7f942
-ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
-
---- 
-
+ms.openlocfilehash: d55a3b4309bffed6772b89beb30f756977576863
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
+---

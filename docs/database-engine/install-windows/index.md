@@ -1,10 +1,8 @@
---- 
+---
 redirect_url: /sql/database-engine/install-windows/installation-for-sql-server-2016
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: a97593fea059c0743689d207bdda17e6435c48b1
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
---- 
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
+---

@@ -73,7 +73,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
   
 ```  
   
-###  <a name="find3"></a> Find the key phrases that make documents similar or related  
+###  <a name="find3"></a> Suchen der Schlüsselausdrücke, die Dokumente ähnlich oder verwandt machen  
  Die folgende Abfrage ruft die Schlüsselausdrücke ab, die zwei Beispieldokumente ähnlich oder verwandt machen. Sie präsentiert die Ergebnisse in absteigender Reihenfolge nach dem Grad, der die Gewichtung der einzelnen Schlüsselausdrücke angibt.
  
  Diese Abfrage ruft die Funktion [semanticsimilaritydetailstable](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md) auf.  

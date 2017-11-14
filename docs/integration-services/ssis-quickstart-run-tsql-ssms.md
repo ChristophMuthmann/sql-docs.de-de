@@ -36,7 +36,7 @@ Verwenden Sie SQL Server Management Studio zum Herstellen einer Verbindung im SS
 
 2. In der **Verbindung mit Server herstellen** Dialogfeld Geben Sie die folgende Informationen:
 
-   | Einstellung       | Empfohlener Wert | Weitere Informationen | 
+   | Einstellung       | Empfohlener Wert | Weitere Informationen | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Servertyp** | Datenbankmodul | Dieser Wert ist erforderlich. |
    | **Servername** | Die vollqualifizierten Servernamen | Wenn Sie die Verbindung mit einem Azure SQL-Datenbankserver herstellen, wird der Name im folgenden Format: `<server_name>.database.windows.net`. |

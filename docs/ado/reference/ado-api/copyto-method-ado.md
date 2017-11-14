@@ -1,12 +1,15 @@
 ---
 title: CopyTo-Methode (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -53,7 +56,7 @@ Stream.CopyTo DestStream, NumChars
   
  Wenn vorhandene Zeichen oder Bytes in den Zieldatenstrom, werden alle Inhalte über den Zeitpunkt, an dem der Kopiervorgang endet, hinaus bleiben, und werden nicht abgeschnitten. **Position** das Byte, das unmittelbar hinter das letzte Byte kopiert wird. Wenn Sie diese Bytes abschneiden möchten, rufen [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
   
- **CopyTo** sollte verwendet werden, um Daten in ein Ziel kopiert **Stream** desselben Typs als Quelle **Stream** (ihre **Typ** eigenschafteneinstellungen werden beide **AdTypeText** oder beides **AdTypeBinary**). Für Text **Stream** Objekte aufweist, können Sie ändern die [Charset](../../../ado/reference/ado-api/charset-property-ado.md) eigenschafteneinstellung des Ziels **Stream** Übersetzen von einem Zeichen in eine andere festgelegt. Außerdem Text **Stream** Objekte können in binären erfolgreich kopiert werden **Stream** Objekte aber binäre **Stream** Objekte können nicht kopiert werden, in Text **Stream ** Objekte.  
+ **CopyTo** sollte verwendet werden, um Daten in ein Ziel kopiert **Stream** desselben Typs als Quelle **Stream** (ihre **Typ** eigenschafteneinstellungen werden beide **AdTypeText** oder beides **AdTypeBinary**). Für Text **Stream** Objekte aufweist, können Sie ändern die [Charset](../../../ado/reference/ado-api/charset-property-ado.md) eigenschafteneinstellung des Ziels **Stream** Übersetzen von einem Zeichen in eine andere festgelegt. Außerdem Text **Stream** Objekte können in binären erfolgreich kopiert werden **Stream** Objekte aber binäre **Stream** Objekte können nicht kopiert werden, in Text **Stream**  Objekte.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Streamobjekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

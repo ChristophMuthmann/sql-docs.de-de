@@ -1,12 +1,15 @@
 ---
 title: Mithilfe eines Recordset-Objekts | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -52,5 +55,5 @@ oRs.Close
 Set oRs = Nothing  
 ```  
   
- Beachten Sie, dass **oRs.Open** nimmt eine Verbindungszeichenfolge (*sConn*), anstelle von einer **Verbindung** Objekt (*oConn*), als Wert für die ** ActiveConnection** Parameter. Auch die clientseitigen Cursortyp erzwungen wird, durch Festlegen der **CursorLocation** Eigenschaft auf die **Recordset** Objekt. Vergleichen Sie dies mit erneut, den **HelloData** Beispiel.
+ Beachten Sie, dass **oRs.Open** nimmt eine Verbindungszeichenfolge (*sConn*), anstelle von einer **Verbindung** Objekt (*oConn*), als Wert für die  **ActiveConnection** Parameter. Auch die clientseitigen Cursortyp erzwungen wird, durch Festlegen der **CursorLocation** Eigenschaft auf die **Recordset** Objekt. Vergleichen Sie dies mit erneut, den **HelloData** Beispiel.
 

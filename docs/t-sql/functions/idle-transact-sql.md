@@ -33,7 +33,7 @@ ms.contentlocale: de-de
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40idle-transact-sql"></a>& #x 40; & #x 40; IDLE (Transact-SQL)
+# <a name="x40x40idle-transact-sql"></a>&#x40;&#x40;IDLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt die Zeit zurück, während der sich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seit dem letzten Start im Leerlauf befunden hat. Das Ergebnis wird in CPU-Zeiteinheiten oder "Takten" angegeben. Es ist für alle CPUs kumulativ und kann also höher sein als die tatsächlich abgelaufende Zeit. Multiplizieren mit@TIMETICKS in Mikrosekunden konvertiert.  
@@ -74,9 +74,9 @@ Idle microseconds  as of
   
 ## <a name="see-also"></a>Siehe auch  
  [@@CPU_BUSY &#40;Transact-SQL&#41;](../../t-sql/functions/cpu-busy-transact-sql.md)   
- [Sp_monitor &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
+ [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
  [@@IO_BUSY &#40;Transact-SQL&#41;](../../t-sql/functions/io-busy-transact-sql.md)   
- [Statistische Systemfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+ [System Statistical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   
 

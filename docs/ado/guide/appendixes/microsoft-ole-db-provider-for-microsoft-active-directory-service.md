@@ -1,12 +1,15 @@
 ---
 title: "Microsoft OLE DB-Anbieter für Microsoft Active Directory-Dienst | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -90,7 +93,7 @@ objectClass='user' AND objectCategory='Person'"
 ## <a name="recordset-behavior"></a>Recordset-Verhalten  
  Die folgenden Tabellen enthalten die Funktionen, die über eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) mithilfe dieses Anbieters geöffnet. Nur der statische Cursor-Datentyp (**AdOpenStatic**) verfügbar ist.  
   
- Weitere Informationen zu **Recordset** Verhalten für die Anbieterkonfiguration kann durch Ausführen der [unterstützt](../../../ado/reference/ado-api/supports-method.md) Methode und Auflisten von der [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung von der ** Recordset** zu bestimmen, ob die anbieterspezifische dynamische Eigenschaften vorhanden sind.  
+ Weitere Informationen zu **Recordset** Verhalten für die Anbieterkonfiguration kann durch Ausführen der [unterstützt](../../../ado/reference/ado-api/supports-method.md) Methode und Auflisten von der [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung von der  **Recordset** zu bestimmen, ob die anbieterspezifische dynamische Eigenschaften vorhanden sind.  
   
  **Verfügbarkeit von ADO-Recordset Standardeigenschaften:**  
   

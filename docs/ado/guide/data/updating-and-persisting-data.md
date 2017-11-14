@@ -1,12 +1,15 @@
 ---
 title: Aktualisieren und Beibehalten von Daten | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,7 +30,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="updating-and-persisting-data"></a>Aktualisieren und Beibehalten von Daten
-Die vorhergehenden Kapitel wurde erläutert, wie ADO verwenden, um Daten in einer Datenquelle abzurufen, wie in den Daten navigieren und auch zum Bearbeiten der Daten. Wenn das Ziel der Anwendung besteht darin, Benutzern, um die Daten zu ändern, müssen Sie natürlich zu verstehen, wie die Änderungen zu speichern. Sie können entweder beibehalten der **Recordset** ändert sich in einer Datei mit der **speichern** -Methode, oder Sie können die Änderungen werden wieder an die Datenquelle für die Verwendung von Storage senden die **Update** oder ** UpdateBatch** Methoden.  
+Die vorhergehenden Kapitel wurde erläutert, wie ADO verwenden, um Daten in einer Datenquelle abzurufen, wie in den Daten navigieren und auch zum Bearbeiten der Daten. Wenn das Ziel der Anwendung besteht darin, Benutzern, um die Daten zu ändern, müssen Sie natürlich zu verstehen, wie die Änderungen zu speichern. Sie können entweder beibehalten der **Recordset** ändert sich in einer Datei mit der **speichern** -Methode, oder Sie können die Änderungen werden wieder an die Datenquelle für die Verwendung von Storage senden die **Update** oder  **UpdateBatch** Methoden.  
   
  In den vorangegangenen Kapiteln geändert Sie die Daten in mehreren Zeilen von der **Recordset**. ADO unterstützt zwei grundlegende Konzepte im Zusammenhang mit der hinzufügen, löschen und Ändern von Zeilen mit Daten.  
   

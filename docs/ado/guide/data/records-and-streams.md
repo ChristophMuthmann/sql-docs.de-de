@@ -1,12 +1,15 @@
 ---
 title: "Datensätze und Datenströme | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/09/2017
 ADO stellt derzeit die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt als das primäre Mittel, um den Zugriff auf Daten in Datenquellen, z. B. relationalen Datenbanken. Einige Anbieter unterstützen jedoch die [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) und [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekte als alternative oder Ergänzung Objekte, mit denen Daten von Anbietern bearbeitet werden können. Besonderheiten zur **Datensatz** Verhalten, finden Sie in der Dokumentation Ihres Anbieters.  
   
 ## <a name="records"></a>Datensätze  
- **Datensatz** Objekte funktionieren im Wesentlichen als einzelne Zeilen **Recordset**s. Allerdings **Datensätze** haben eingeschränkte Funktionalität, die im Vergleich zu **Recordsets** und verfügen über unterschiedliche Eigenschaften und Methoden. Die Quelle für die Daten in einem **Datensatz** -Objekt eines Befehls, der eine Zeile mit Daten vom Anbieter zurückgegeben werden kann. Mit **Datensatz** Objekte statt **Recordset** -Objekten, die die Ergebnisse aus einer Abfrage zu erhalten, die eine Zeile mit Daten zurückgibt, beseitigt den Mehraufwand der Instanziierung je komplexer **Recordset ** Objekt.  
+ **Datensatz** Objekte funktionieren im Wesentlichen als einzelne Zeilen **Recordset**s. Allerdings **Datensätze** haben eingeschränkte Funktionalität, die im Vergleich zu **Recordsets** und verfügen über unterschiedliche Eigenschaften und Methoden. Die Quelle für die Daten in einem **Datensatz** -Objekt eines Befehls, der eine Zeile mit Daten vom Anbieter zurückgegeben werden kann. Mit **Datensatz** Objekte statt **Recordset** -Objekten, die die Ergebnisse aus einer Abfrage zu erhalten, die eine Zeile mit Daten zurückgibt, beseitigt den Mehraufwand der Instanziierung je komplexer **Recordset**  Objekt.  
   
  **Datensatz** Objekte können einen anderen Zweck dienen, insbesondere bei Anbietern für andere Datenquellen als herkömmliche relationale Datenbanken, wie z. B. die [Microsoft OLE DB-Anbieter für Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Ein Großteil der Informationen, die verarbeitet werden muss, vorhanden ist, nicht als Tabellen in Datenbanken, sondern als Nachrichten in e-Mail-Systeme und Dateien in modernen Dateisystemen. Die **Datensatz** und **Stream** Objekte zu ermöglichen, den Zugriff auf in anderen Quellen als relationalen Datenbanken gespeicherten Informationen.  
   

@@ -1,12 +1,15 @@
 ---
 title: Execute-Methode (ADO-Befehl) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -61,7 +64,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
   
  Der Anbieter gibt zurück, wenn der Befehl nicht beabsichtigt ist, Zurückgeben von Ergebnissen (z. B. eine SQL-UPDATE-Abfrage) **nichts** solange die Option **AdExecuteNoRecords** angegeben ist; gibt andernfalls führen eine geschlossen **Recordset**. Einige Anwendungssprachen können Sie diesen Rückgabewert ignorieren, wenn kein **Recordset** erwünscht ist.  
   
- **Führen Sie** löst einen Fehler aus, wenn der Benutzer einen Wert für angibt **CommandStream** bei der **CommandType** ist **AdCmdStoredProc**, ** AdCmdTable**, oder **AdCmdTableDirect**.  
+ **Führen Sie** löst einen Fehler aus, wenn der Benutzer einen Wert für angibt **CommandStream** bei der **CommandType** ist **AdCmdStoredProc**,  **AdCmdTable**, oder **AdCmdTableDirect**.  
   
  Wenn die Abfrage Parameter enthält, Werte der aktuellen für die **Befehl** objektspezifischen Parameter werden verwendet, es sei denn, Sie überschreiben Sie diese mit Parameterwerten, die nur mit der **Execute** aufrufen. Sie können eine Teilmenge der Parameter überschreiben, indem Sie neue Werte für einige der Parameter auslassen, beim Aufrufen der **Execute** Methode. Die Reihenfolge, in der Sie die Parameter angeben, ist die gleiche Reihenfolge, in der Sie die Methode übergibt. Angenommen, es wurden vier (oder mehr) Parameter und neue Werte für nur der erste und vierte Parameter übergeben möchten, übergeben Sie `Array(var1,,,var4)` als die *Parameter* Argument.  
   

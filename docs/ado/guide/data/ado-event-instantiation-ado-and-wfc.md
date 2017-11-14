@@ -1,12 +1,15 @@
 ---
 title: 'ADO-Ereignis-Instanziierung: ADO und WFC | Microsoft Docs'
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
@@ -36,7 +39,7 @@ ADO für Windows Foundation Classes (ADO/WFC) baut auf das ADO-Ereignismodell un
     }  
     ```  
   
-2.  Definieren Sie ein Handler, das den Ereignishandler darstellt. Das Handlerobjekt muss der Datentyp **ConnectEventHandler** für ein Ereignis vom Typ **ConnectionEvent**, oder ein Datentyp **RecordsetEventHandler** für ein Ereignis vom Typ ** RecordsetEvent**. Z. B. den folgenden code für Ihre **ConnectComplete** Ereignishandler:  
+2.  Definieren Sie ein Handler, das den Ereignishandler darstellt. Das Handlerobjekt muss der Datentyp **ConnectEventHandler** für ein Ereignis vom Typ **ConnectionEvent**, oder ein Datentyp **RecordsetEventHandler** für ein Ereignis vom Typ  **RecordsetEvent**. Z. B. den folgenden code für Ihre **ConnectComplete** Ereignishandler:  
   
     ```  
     ConnectionEventHandler handler =   

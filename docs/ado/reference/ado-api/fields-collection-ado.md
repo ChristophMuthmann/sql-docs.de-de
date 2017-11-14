@@ -1,12 +1,15 @@
 ---
 title: Fields-Auflistung (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -44,7 +47,7 @@ Enthält alle der [Feld](../../../ado/reference/ado-api/field-object.md) Objekte
   
  Bestimmter Anbieter (z. B. die [Microsoft OLE DB-Anbieter für Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)) möglicherweise Auffüllen der **Felder** Auflistung mit einer Teilmenge der verfügbaren Felder für die **Datensatz** oder **Recordset**. Andere Felder werden der Auflistung nicht hinzugefügt werden, bis sie zunächst anhand des Namens verwiesen oder durch Ihren Code indiziert werden.  
   
- Wenn Sie versuchen, ein nicht vorhandenes Feld Namen verweisen, einen neuen **Feld** Objekt angefügt wird die **Felder** Auflistung mit einer [Status](../../../ado/reference/ado-api/status-property-ado-field.md) von ** AdFieldPendingInsert**. Beim Aufruf [Update](../../../ado/reference/ado-api/update-method.md), ADO erstellen ein neues Feld in der Datenquelle ab, wenn von Ihrem Anbieter zugelassen.  
+ Wenn Sie versuchen, ein nicht vorhandenes Feld Namen verweisen, einen neuen **Feld** Objekt angefügt wird die **Felder** Auflistung mit einer [Status](../../../ado/reference/ado-api/status-property-ado-field.md) von  **AdFieldPendingInsert**. Beim Aufruf [Update](../../../ado/reference/ado-api/update-method.md), ADO erstellen ein neues Feld in der Datenquelle ab, wenn von Ihrem Anbieter zugelassen.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   

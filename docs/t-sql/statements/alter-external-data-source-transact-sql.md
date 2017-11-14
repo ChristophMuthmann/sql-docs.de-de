@@ -1,7 +1,7 @@
 ---
 title: "Ändern der EXTERNEN Datenquelle (Transact-SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 12/16/2016
+ms.date: 11/10/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -31,7 +31,7 @@ ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="alter-external-data-source-transact-sql"></a>Ändern der EXTERNEN Datenquelle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Ändert eine externe Datenquelle verwendet, um eine externe Tabelle zu erstellen. Die externe Datenquelle kann Hadoop oder Azure Blob Storage (WASB) sein.  
   

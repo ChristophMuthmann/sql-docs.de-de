@@ -1,12 +1,15 @@
 ---
 title: Grundlegendes zur Anpassungsdatei | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -67,7 +70,7 @@ identifier
   
 -   Ein **Userlist** Abschnitt wird verwendet, wenn die **Userlist** Abschnitt Bezeichner entspricht einer **verbinden** Abschnitt Bezeichner. Wenn eine Übereinstimmung auftritt, den Inhalt der **Userlist** Abschnitt gelten für die Verbindung, unterliegt die **verbinden** Abschnitt.  
   
--   Die Zeichenfolge in eine Zeichenfolge Verbindung oder Befehl den Bezeichner in einem stimmt nicht überein **verbinden** oder **Sql** Abschnitt Header, und es gibt keine **verbinden** oder **Sql ** Abschnitt Header mit einem Standardparameter, und klicken Sie dann die Clientzeichenfolge ohne Änderungen verwendet wird.  
+-   Die Zeichenfolge in eine Zeichenfolge Verbindung oder Befehl den Bezeichner in einem stimmt nicht überein **verbinden** oder **Sql** Abschnitt Header, und es gibt keine **verbinden** oder **Sql**  Abschnitt Header mit einem Standardparameter, und klicken Sie dann die Clientzeichenfolge ohne Änderungen verwendet wird.  
   
 -   Die **Protokolle** Abschnitt wird verwendet, wenn die **DataFactory** in Betrieb ist.  
   

@@ -50,11 +50,11 @@ Die Syntax der CREATE INDEX-Anweisung für den Paradox ODBC-Treiber lautet:
   
 -   Die *Indexname* Argument für einen primären Index muss den Namen der Tabelle nach Bedarf Paradox identisch sein.  
   
- Wenn das Schlüsselwort **UNIQUE** wird weggelassen, wird der Paradox ODBC-Treiber einen nichteindeutiger Index erstellt. Dies umfasst zwei Paradox sekundären Indexdateien mit dem Namen *Tabellenname*. X* nn * und *Tabellenname*. Y*nn*, wobei * nn * ist die Nummer der Spalte in der Tabelle. Nicht eindeutige Indizes gelten die folgenden Einschränkungen:  
+ Wenn das Schlüsselwort **UNIQUE** wird weggelassen, wird der Paradox ODBC-Treiber einen nichteindeutiger Index erstellt. Dies umfasst zwei Paradox sekundären Indexdateien mit dem Namen *Tabellenname*. X *nn*  und *Tabellenname*. Y*nn*, wobei  *nn*  ist die Nummer der Spalte in der Tabelle. Nicht eindeutige Indizes gelten die folgenden Einschränkungen:  
   
 -   Ein nichteindeutiger Index für eine Tabelle erstellt werden kann, muss ein primärer Index für diese Tabelle vorhanden sein.  
   
--   Für Paradox 3. *x*, *Indexname* Argument für jeden Index als primären Index (eindeutige oder nicht eindeutig) muss den Namen der Spalte identisch sein. Für 4 Paradox. *x* und 5.* X*, der Namen des solchen Index werden kann, braucht jedoch den Namen der Spalte identisch sein.  
+-   Für Paradox 3. *x*, *Indexname* Argument für jeden Index als primären Index (eindeutige oder nicht eindeutig) muss den Namen der Spalte identisch sein. Für 4 Paradox. *x* und 5. *X*, der Namen des solchen Index werden kann, braucht jedoch den Namen der Spalte identisch sein.  
   
 -   Für ein nichteindeutiger Index kann nur eine Spalte angegeben werden.  
   

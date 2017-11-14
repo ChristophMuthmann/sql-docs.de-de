@@ -1,12 +1,15 @@
 ---
 title: Name-Eigenschaft (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -64,7 +67,7 @@ Gibt den Namen des Objekts an.
   
  Die **Namen** Eigenschaft ist Lese-/Schreibzugriff auf [Spalte](../../../ado/reference/adox-api/column-object-adox.md), [Gruppe](../../../ado/reference/adox-api/group-object-adox.md), [Schlüssel](../../../ado/reference/adox-api/key-object-adox.md), [Index](../../../ado/reference/adox-api/index-object-adox.md), [ Tabelle](../../../ado/reference/adox-api/table-object-adox.md), und [Benutzer](../../../ado/reference/adox-api/user-object-adox.md) Objekte. Die **Namen** Eigenschaft ist schreibgeschützt und auf [Katalog](../../../ado/reference/adox-api/catalog-object-adox.md), [Prozedur](../../../ado/reference/adox-api/procedure-object-adox.md), und [Ansicht](../../../ado/reference/adox-api/view-object-adox.md) Objekte.  
   
- Für Lese-/Schreibzugriff-Objekte (**Spalte**, **Gruppe**, **Schlüssel**, **Index**, **Tabelle** und ** Benutzer** Objekte), der Standardwert ist eine leere Zeichenfolge ("").  
+ Für Lese-/Schreibzugriff-Objekte (**Spalte**, **Gruppe**, **Schlüssel**, **Index**, **Tabelle** und  **Benutzer** Objekte), der Standardwert ist eine leere Zeichenfolge ("").  
   
 > [!NOTE]
 >  Für Schlüssel, diese Eigenschaft ist schreibgeschützt und auf **Schlüssel** Objekte, die bereits an eine Auflistung angefügt. Für Tabellen, diese Eigenschaft ist schreibgeschützt und für **Tabelle** Objekte, die bereits an eine Auflistung angefügt.  

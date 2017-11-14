@@ -1,12 +1,15 @@
 ---
 title: CommandStream-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -40,7 +43,7 @@ Gibt den Datenstrom verwendet als Eingabe für eine [Befehl](../../../ado/refere
   
  Der Eingabedatenstrom ist nicht verfügbar für andere ADO-Objekte, die die Quelle der Zurückgeben einer **Befehl**. Z. B. wenn die [Quelle](../../../ado/reference/ado-api/source-property-ado-recordset.md) von einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) auf festgelegt ist eine **Befehl** -Objekt, das über einen Stream als Eingabe, **Recordset.Source** weiterhin zurück, die **CommandText** Eigenschaft, die eine leere Zeichenfolge enthält (""), anstatt den Inhalt des Streams von der **CommandStream** Eigenschaft.  
   
- Bei Verwendung einer befehlsdatenstrom (nach den Angaben von **CommandStream**), der einzige gültige [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) Werte für die [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) -Eigenschaft sind ** AdCmdText** und **AdCmdUnknown**. Jeder andere Wert verursacht einen Fehler.  
+ Bei Verwendung einer befehlsdatenstrom (nach den Angaben von **CommandStream**), der einzige gültige [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) Werte für die [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) -Eigenschaft sind  **AdCmdText** und **AdCmdUnknown**. Jeder andere Wert verursacht einen Fehler.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  

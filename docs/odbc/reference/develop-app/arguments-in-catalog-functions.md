@@ -42,7 +42,7 @@ SQLTables(hstmt3, NULL, 0, NULL, 0, "Orders", SQL_NTS, NULL, 0);
 |--------------|--------------|---------------------------------------------------------------|--------------------------------------------------------------|  
 |**SQLColumnPrivileges**|*Katalogname* *SchemaName* *TableName* *ColumnName*|OA OA OA PV|ID-ID ID-NUMMER|  
 |**SQLColumns**|*Katalogname* *SchemaName* *TableName* *ColumnName*|OA PV PV PV|ID-ID ID-NUMMER|  
-|**SQLForeignKeys**|*PKCatalogName* *PKSchemaName* *PKTableName* *FKCatalogName* *FKSchemaName* * FKTableName*|OA OA OA OA OA OA|ID-ID ID ID ID-ID|  
+|**SQLForeignKeys**|*PKCatalogName* *PKSchemaName* *PKTableName* *FKCatalogName* *FKSchemaName*  *FKTableName*|OA OA OA OA OA OA|ID-ID ID ID ID-ID|  
 |**SQLPrimaryKeys**|*Katalogname* *SchemaName* *TableName*|OA OA OA|ID-ID-NUMMER|  
 |**SQLProcedureColumns**|*Katalogname* *SchemaName* *ProcName* *ColumnName*|OA PV PV PV|ID-ID ID-NUMMER|  
 |**SQLProcedures**|*Katalogname* *SchemaName* *ProcName*|OA PV PV|ID-ID-NUMMER|  

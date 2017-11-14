@@ -1,12 +1,15 @@
 ---
 title: Arbeiten mit mehrdimensionalen Daten | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,7 +30,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="working-with-multidimensional-data"></a>Arbeiten mit mehrdimensionalen Daten
 Ein *Cellset* ist das Ergebnis einer Abfrage auf mehrdimensionalen Daten. Er besteht aus einer Auflistung von Achsen, in der Regel nicht mehr als vier Achsen und in der Regel nur zwei oder drei. Ein *Achse* ist eine Auflistung von Elementen aus einer oder mehreren Dimensionen, die suchen oder Filtern bestimmte Werte in einem Cube verwendet wird.  
   
- Ein *Position* entspricht einem Punkt auf einer Achse. Für eine Achse bestehend aus einer einzelnen Dimensions ist sind diese Positionen eine Teilmenge der Dimensionselemente. Wenn eine Achse besteht aus mehreren Dimensionen, jede Position ist eine zusammengesetzte Entität hat * n * Teile Where * n * ist die Anzahl der Dimensionen, die entlang dieser Achse ausgerichtet. Jeder Teil der Position ist ein Element aus einer einzelnen Dimension.  
+ Ein *Position* entspricht einem Punkt auf einer Achse. Für eine Achse bestehend aus einer einzelnen Dimensions ist sind diese Positionen eine Teilmenge der Dimensionselemente. Wenn eine Achse besteht aus mehreren Dimensionen, jede Position ist eine zusammengesetzte Entität hat  *n*  Teile Where  *n*  ist die Anzahl der Dimensionen, die entlang dieser Achse ausgerichtet. Jeder Teil der Position ist ein Element aus einer einzelnen Dimension.  
   
  Z. B. wenn die geografischen Daten und Dimensionen aus einem Cube mit Verkaufsdaten entlang der x-Achse eines cellSets ausgerichtet sind, kann eine Position entlang dieser Achse die Elemente "USA" und "Agents". enthalten In diesem Beispiel erfordert das Ermitteln einer Position entlang der x-Achse, dass Elemente aus jeder Dimension auf der Achse ausgerichtet sind.  
   

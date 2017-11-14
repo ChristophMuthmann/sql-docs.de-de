@@ -1,10 +1,8 @@
---- 
+---
 redirect_url: /sql/integration-services/sql-server-integration-services
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5d86e53706ac62c8311d317731d23825458af135
-ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
-
---- 
-
+ms.openlocfilehash: 7f3acbb6b26d7be14fb3b15ff59c1adb1bbddb40
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
+---

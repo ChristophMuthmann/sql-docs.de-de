@@ -39,7 +39,7 @@ ms.lasthandoff: 09/09/2017
  In ODBC 3. *x*, die ODBC 2.0-Funktion **SQLColAttributes** wurde ersetzt durch **SQLColAttribute**. Weitere Informationen finden Sie unter [SQLColAttribute-Funktion](../../../odbc/reference/syntax/sqlcolattribute-function.md).  
   
 > [!NOTE]  
->  Weitere Informationen zu welcher der Treiber-Manager ordnet diese Funktion zu, wenn eine ODBC-2. *x* Anwendung arbeitet mit einer ODBC-3.* X* -Treiber verwenden, finden Sie unter [veraltet Zuordnungsfunktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Treiber Richtlinien für die Abwärtskompatibilität.  
+>  Weitere Informationen zu welcher der Treiber-Manager ordnet diese Funktion zu, wenn eine ODBC-2. *x* Anwendung arbeitet mit einer ODBC-3. *X* -Treiber verwenden, finden Sie unter [veraltet Zuordnungsfunktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Treiber Richtlinien für die Abwärtskompatibilität.  
   
  Finden Sie unter [ODBC-64-Bit-Informationen](../../../odbc/reference/odbc-64-bit-information.md), wenn die Anwendung auf einem 64-Bit-Betriebssystem ausgeführt wird.  
   

@@ -1,12 +1,15 @@
 ---
 title: Command-Objekt (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -62,7 +65,7 @@ Definiert einen bestimmten Befehl, den Sie für eine Datenquelle ausführen möc
 > [!NOTE]
 >  Zum Ausführen einer Abfrage ohne Verwendung einer **Befehl** Objekt, und übergeben Sie eine Abfragezeichenfolge enthält, die die [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) Methode eine **Verbindung** Objekt oder auf die [Öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md)Methode von einer **Recordset** Objekt. Allerdings eine **Befehl** Objekt ist erforderlich, wenn den Befehlstext beibehalten und erneut ausgeführt wird, oder verwenden Sie Abfrageparameter werden sollen.  
   
- Zum Erstellen einer **Befehl** Objekt unabhängig von einem zuvor definierten **Verbindung** -Objekt, legen Sie seine **ActiveConnection** Eigenschaft, um eine gültige Verbindungszeichenfolge. ADO erstellt dennoch ein **Verbindung** -Objekt, aber sie weist keinen dieses Objekt zu einer Object-Variablen. Jedoch wenn Sie mehrere zuordnen **Befehl** Objekte mit derselben Verbindung, sollten Sie explizit erstellen und öffnen Sie eine **Verbindung** Objekt; dieser weist den **Verbindung** Objekt, das eine Objektvariable. Stellen Sie sicher, dass die **Verbindung** Objekt wurde erfolgreich geöffnet, bevor Sie sie zum Zuweisen der **ActiveConnection** Eigenschaft von der **Befehl** Objekt, da zuweisen eine geschlossen **Verbindung** Objekt verursacht einen Fehler. Wenn Sie nicht Festlegen der **ActiveConnection** Eigenschaft von der **Befehl** -Objekt an diese Objektvariable ADO erstellt ein neues **Verbindung** -Objekt für jedes ** Befehl** -Objekt, auch wenn Sie dieselbe Verbindungszeichenfolge verwenden.  
+ Zum Erstellen einer **Befehl** Objekt unabhängig von einem zuvor definierten **Verbindung** -Objekt, legen Sie seine **ActiveConnection** Eigenschaft, um eine gültige Verbindungszeichenfolge. ADO erstellt dennoch ein **Verbindung** -Objekt, aber sie weist keinen dieses Objekt zu einer Object-Variablen. Jedoch wenn Sie mehrere zuordnen **Befehl** Objekte mit derselben Verbindung, sollten Sie explizit erstellen und öffnen Sie eine **Verbindung** Objekt; dieser weist den **Verbindung** Objekt, das eine Objektvariable. Stellen Sie sicher, dass die **Verbindung** Objekt wurde erfolgreich geöffnet, bevor Sie sie zum Zuweisen der **ActiveConnection** Eigenschaft von der **Befehl** Objekt, da zuweisen eine geschlossen **Verbindung** Objekt verursacht einen Fehler. Wenn Sie nicht Festlegen der **ActiveConnection** Eigenschaft von der **Befehl** -Objekt an diese Objektvariable ADO erstellt ein neues **Verbindung** -Objekt für jedes  **Befehl** -Objekt, auch wenn Sie dieselbe Verbindungszeichenfolge verwenden.  
   
  Zum Ausführen einer **Befehl**, rufen sie seine [Namen](../../../ado/reference/ado-api/name-property-ado.md) Eigenschaft auf dem zugeordneten **Verbindung** Objekt. Die **Befehl** benötigen ihre **ActiveConnection** -Eigenschaftensatz auf die **Verbindung** Objekt. Wenn die **Befehl** verfügt über Parameter, deren Werte als Argumente an die Methode übergeben.  
   

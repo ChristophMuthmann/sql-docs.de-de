@@ -28,7 +28,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>Durchführen eines Bildlaufs und das Abrufen von Zeilen (ODBC)
-Wenn Sie einen bildlauffähigen Cursor verwenden, rufen Anwendungen **SQLFetchScroll** , positionieren Sie den Cursor und Fetch-Zeilen. **SQLFetchScroll** relative Bildlauf unterstützt (Weiter, die vor und Relative * n * Zeilen), absolute Durchführen eines Bildlaufs (First-und last und Zeile * n *), und Positionieren von Lesezeichen. Die *FetchOrientation* und *FetchOffset* Argumente **SQLFetchScroll** wo Rowsetanbieter, abzurufen, geben Sie wie in den folgenden Diagrammen dargestellt.  
+Wenn Sie einen bildlauffähigen Cursor verwenden, rufen Anwendungen **SQLFetchScroll** , positionieren Sie den Cursor und Fetch-Zeilen. **SQLFetchScroll** relative Bildlauf unterstützt (Weiter, die vor und Relative  *n*  Zeilen), absolute Durchführen eines Bildlaufs (First-und last und Zeile  *n* ), und Positionieren von Lesezeichen. Die *FetchOrientation* und *FetchOffset* Argumente **SQLFetchScroll** wo Rowsetanbieter, abzurufen, geben Sie wie in den folgenden Diagrammen dargestellt.  
   
  ![Abrufen des nächsten, vor der ersten und letzten Rowsets](../../../odbc/reference/develop-app/media/pr20_2.gif "pr20_2")  
   

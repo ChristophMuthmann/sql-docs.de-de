@@ -1,0 +1,7 @@
+# [Datenquellenobjekte (OLE DB)](data-source-objects-ole-db.md)
+# [Eigenschaften für Datenquelleninformationen](data-source-information-properties.md)
+# [Datenquelleneigenschaften (OLE DB)](data-source-properties-ole-db.md)
+# [Initialisierungs- und Autorisierungseigenschaften](initialization-and-authorization-properties.md)
+# [Persistente Datenquellenobjekte](persisted-data-source-objects.md)
+# [Eigenschaften von leistungssitzungen - SQL Server Native Client OLE DB-Anbieter](session-properties-sql-server-native-client-ole-db-provider.md)
+# [Sitzungen](sessions.md)

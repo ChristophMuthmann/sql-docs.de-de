@@ -79,7 +79,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Das Zertifikat ist nicht abgelaufen.  
   
--   Der allgemeine Name (CN) in den Betreff oder einen DNS-Namen in der Subject alternative Name (SAN) des Zertifikats genau entspricht der **ServerName** in der Verbindungszeichenfolge angegebene Wert oder, falls angegeben, die ** HostNameInCertificate** Eigenschaftswert.  
+-   Der allgemeine Name (CN) in den Betreff oder einen DNS-Namen in der Subject alternative Name (SAN) des Zertifikats genau entspricht der **ServerName** in der Verbindungszeichenfolge angegebene Wert oder, falls angegeben, die  **HostNameInCertificate** Eigenschaftswert.  
   
 -   Ein DNS-Name kann Platzhalterzeichen enthalten. Aber die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unterstützt keine Platzhalterzeichen. D. h. abc.com stimmen nicht überein "*.com" jedoch \*".com" entspricht \*. com.  
   

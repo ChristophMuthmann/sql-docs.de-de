@@ -1,5 +1,5 @@
 ---
-title: "Lernprogramm: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator) | Microsoft Docs"
+title: "Tutorial: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -16,8 +16,7 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c4cc42eaf9862f2154f598d6f91dafffa906c799
 ms.contentlocale: de-de
@@ -40,7 +39,7 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
   
 ## <a name="CreateTable"></a>1. Erstellen eines Berichts mit einer Tabelle  
   
-1.  [Starten Sie den Berichts-Generator](../reporting-services/report-builder/start-report-builder.md) entweder von Ihrem Computer, über das [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]-Webportal oder über den integrierten SharePoint-Modus.  
+1.  [Starten Sie den Berichts-Generator](../reporting-services/report-builder/start-report-builder.md) entweder von Ihrem Computer, über das [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Webportal oder über den integrierten SharePoint-Modus.  
   
     Das Dialogfeld **Neuer Bericht oder neues Dataset** wird geöffnet.  
   
@@ -50,10 +49,10 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
   
 3.  Klicken Sie im rechten Bereich auf **Tabellen- oder Matrix-Assistent**.  
   
-4.  Klicken Sie auf der Seite **Dataset auswählen** auf **Dataset erstellen**  >  **Weiter**. Die Seite **Verbindung mit einer Datenquelle auswählen** wird geöffnet.  
+4.  Klicken Sie auf der Seite **Dataset auswählen** auf **Dataset erstellen** > **Weiter**. Die Seite **Verbindung mit einer Datenquelle auswählen** wird geöffnet.  
   
     > [!NOTE]  
-    > In diesem Lernprogramm sind keine bestimmte Daten erforderlich; Es benötigt lediglich eine Verbindung mit einer SQL Server-Datenbank. Wenn unter **Datenquellenverbindungen**bereits eine Datenquellenverbindung aufgeführt ist, können Sie sie auswählen und zu Schritt 10 wechseln. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung &#40;Berichts-Generator&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > Für dieses Tutorial sind keine bestimmten Daten erforderlich. Es wird lediglich eine Verbindung mit einer SQL Server-Datenbank benötigt. Wenn unter **Datenquellenverbindungen**bereits eine Datenquellenverbindung aufgeführt ist, können Sie sie auswählen und zu Schritt 10 wechseln. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  Klicken Sie auf **Neu**. Das Dialogfeld **Datenquelleneigenschaften** wird angezeigt.  
   
@@ -179,22 +178,22 @@ Die Zusammenfassungsdaten für das Feld **Sales** werden standardmäßig als ein
 
     ![Berichts-Generator-Sum-Sales-markieren](../reporting-services/media/report-builder-select-sum-sales.png) 
   
-3.  Klicken Sie auf der Registerkarte **Stamm** in der Gruppe **Zahl** auf **Währung**. Die Zellen ändern sich, um die formatierte Währung anzuzeigen.  
+3.  Klicken Sie auf der Registerkarte **Home** in der Gruppe **Zahl** auf **Währung**. Die Zellen ändern sich, um die formatierte Währung anzuzeigen.  
 
     ![Berichts-Generator-Platzhalter-Währung](../reporting-services/media/report-builder-placeholder-currency.png)
   
-    Wenn Sie das Gebietsschema „Deutsch (Deutschland)“ verwenden, lautet der Standardbeispieltext [**12,345.00€**]. Falls kein Beispielwährungswert angezeigt wird, klicken Sie in der Gruppe **Zahlen** auf **Platzhalterformate**  >  **Beispielwerte**.  
+    Wenn Sie das Gebietsschema „Deutsch (Deutschland)“ verwenden, lautet der Standardbeispieltext [**12,345.00€**]. Falls kein Beispielwährungswert angezeigt wird, klicken Sie in der Gruppe **Zahlen** auf **Platzhalterformate** > **Beispielwerte**.  
     
     ![Berichts-Generator-Schaltfläche-Platzhalterwert](../reporting-services/media/report-builder-placeholder-value-button.png)
    
 ### <a name="FormatDates"></a>2b. Formatieren von Daten als Datumsangaben (optional)  
 Im Feld **SalesDate** werden standardmäßig sowohl Datums- als auch Zeitangaben angezeigt. Durch entsprechende Formatierung kann auch nur das Datum angezeigt werden.  
   
-1.  Klicken Sie auf die Zelle, die `[SalesDate]` enthält.  
+1.  Klicken Sie auf die Zelle, die `[SalesDate]`enthält.  
   
-3.  Klicken Sie auf der Registerkarte **Stamm** in der Gruppe **Zahl** auf **Datum**.  
+3.  Klicken Sie auf der Registerkarte **Home** in der Gruppe **Zahl** auf **Datum**.  
   
-    In der Zelle wird das Beispieldatum **[31.01.2000]** angezeigt.
+    In der Zelle wird das Beispieldatum **[31.01.2000]**angezeigt.
      
 4.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
@@ -210,7 +209,7 @@ Die Werte für **SalesDate** werden im Standarddatumsformat angezeigt und die zu
 
     ![Berichts-Generator-Spalte-links-hinzufügen](../reporting-services/media/report-builder-add-column-left.png)
   
-4.  Klicken Sie in der neuen Spalte mit der Maustaste in die Zelle in der `[Product]`-Zeile und anschließend auf **Einfügen**  >  **Sparkline**.  
+4.  Klicken Sie in der neuen Spalte mit der Maustaste in die Zelle in der `[Product]`-Zeile und anschließend auf **Einfügen** > **Sparkline**.  
 
     ![Berichts-Generator-Sparkline-einfügen](../reporting-services/media/report-builder-insert-sparkline.png)
   
@@ -279,7 +278,7 @@ Um die Höhe der Zeilen zu reduzieren, vergrößern Sie die Spaltenbreite, sodas
 ## <a name="Title"></a>8. Hinzufügen eines Berichtstitels (optional)  
 Ein Berichtstitel wird oben im Bericht angezeigt. Sie können den Berichtstitel in eine Berichtskopfzeile einfügen oder, wenn der Bericht keine Kopfzeile enthält, in einem Textfeld am oberen Rand des Berichtshauptteils. In diesem Lernprogramm verwenden Sie das Textfeld, das automatisch am oberen Rand des Berichtshauptteils platziert wird.  
   
-Die Darstellung des Texts kann weiter verbessert werden, indem andere Schriftschnitte, Größen und Farben für Ausdrücke und einzelne Zeichen des Texts angewendet werden. Weitere Informationen finden Sie unter [Formatieren von Text in einem Textfeld &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
+Die Darstellung des Texts kann weiter verbessert werden, indem andere Schriftschnitte, Größen und Farben für Ausdrücke und einzelne Zeichen des Texts angewendet werden. Weitere Informationen finden Sie unter [Formatieren von Text in einem Textfeld (Berichts-Generator und SSRS)](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
 ### <a name="to-add-a-report-title"></a>So fügen Sie einen Berichtstitel hinzu  
   
@@ -287,9 +286,9 @@ Die Darstellung des Texts kann weiter verbessert werden, indem andere Schriftsch
   
 2.  Geben Sie **Sales by Date**ein, und klicken Sie in den Bereich außerhalb des Textfelds.  
   
-3.  Wählen Sie das Textfeld aus, das **Product Sales** enthält.  
+3.  Wählen Sie das Textfeld aus, das **Product Sales**enthält.  
   
-4.  Wählen Sie auf der Registerkarte „Stamm“ in der Gruppe **Schriftart** für **Farbe** die Option **Blaugrün** aus.  
+4.  Wählen Sie auf der Registerkarte „Home“ in der Gruppe **Schriftart** für **Farbe** die Option **Blaugrün** aus.  
   
 7.  Wählen Sie **Fett**aus.  
   
@@ -331,5 +330,4 @@ Hiermit ist das Lernprogramm zum Erstellen eines Tabellenberichts mit Sparklined
 [Tutorials (Berichts-Generator)](../reporting-services/report-builder-tutorials.md) 
 [Berichts-Generator in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

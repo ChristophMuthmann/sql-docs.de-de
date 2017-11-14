@@ -1,12 +1,15 @@
 ---
 title: Append-Methode (ADOX Views) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -51,7 +54,7 @@ Views.Append Name, Command
  Wenn der Befehlstext, den angibt, der Benutzer eine Sicht, sondern eine Prozedur darstellt, ist das Verhalten vom Anbieter abhängig. **Append** schlägt fehl, wenn der Anbieter keine persistenten Befehle unterstützt.  
   
 > [!NOTE]
->  Bei Verwendung des OLE DB-Anbieters für Microsoft Jet, der **Ansichten** Auflistung **Anfügen** Methode ermöglicht Ihnen die Angabe einer **Prozedur** anstelle eines **anzeigen ** in der *Befehl* Parameter. Die **Prozedur** wird an die Datenquelle hinzugefügt werden und werden hinzugefügt, um die **Ansichten** Auflistung. Nach der **Append**, wenn die **Prozeduren** und **Ansichten** Sammlungen werden aktualisiert, die **Prozedur** werden nicht mehr in der **Ansichten** Auflistung und erscheint der **Prozeduren** Auflistung.  
+>  Bei Verwendung des OLE DB-Anbieters für Microsoft Jet, der **Ansichten** Auflistung **Anfügen** Methode ermöglicht Ihnen die Angabe einer **Prozedur** anstelle eines **anzeigen**  in der *Befehl* Parameter. Die **Prozedur** wird an die Datenquelle hinzugefügt werden und werden hinzugefügt, um die **Ansichten** Auflistung. Nach der **Append**, wenn die **Prozeduren** und **Ansichten** Sammlungen werden aktualisiert, die **Prozedur** werden nicht mehr in der **Ansichten** Auflistung und erscheint der **Prozeduren** Auflistung.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Views-Auflistung (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  

@@ -56,7 +56,7 @@ Die Spalte (oder Parameter) Größe des numerischen Datentypen wird als die maxi
 |SQL_INTERVAL_HOUR_TO_MINUTE|3 +*p*, wobei *p* ist die Genauigkeit für anführenden Intervallwert. [ d]|  
 |SQL_GUID|36 (die Anzahl der Zeichen in der *Aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee* Format)|  
   
- [a] für eine ODBC-1.0 aufrufende **SQLSetParam** in ODBC 2.0-Treiber und für eine aufrufende ODBC 2.0 **SQLBindParameter** in ein 1.0 ODBC-Treiber, wenn \* * StrLen_or_IndPtr* SQL_DATA_AT_EXEC für einen Typ SQL_LONGVARCHAR oder SQL_LONGVARBINARY wird *ColumnSize* muss auf die gesamte Länge der Daten festgelegt werden, um gesendet werden, nicht die Genauigkeit wie in dieser Tabelle definiert.  
+ [a] für eine ODBC-1.0 aufrufende **SQLSetParam** in ODBC 2.0-Treiber und für eine aufrufende ODBC 2.0 **SQLBindParameter** in ein 1.0 ODBC-Treiber, wenn \*  *StrLen_or_IndPtr* SQL_DATA_AT_EXEC für einen Typ SQL_LONGVARCHAR oder SQL_LONGVARBINARY wird *ColumnSize* muss auf die gesamte Länge der Daten festgelegt werden, um gesendet werden, nicht die Genauigkeit wie in dieser Tabelle definiert.  
   
  [b] Wenn der Treiber die Spalten- oder Parameternamen Länge für einen Variablentyp nicht ermitteln kann, gibt es SQL_NO_TOTAL zurück.  
   

@@ -1,12 +1,15 @@
 ---
 title: ADO-Handler-ereigniszusammenfassung | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
-ms.custom: H1Hack27Feb2017
+ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +29,11 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO-Verbindung und Recordsetereignisse
-ADO-Objekten, die zwei Ereignisse auslösen können: der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt und die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt. Die **ConnectionEvent** Familie bezieht sich auf Vorgänge auf die **Verbindung** -Objekt, und die **RecordsetEvent** Familie bezieht sich auf Vorgänge auf die ** Recordset** Objekt.
+ADO-Objekten, die zwei Ereignisse auslösen können: der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt und die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt. Die **ConnectionEvent** Familie bezieht sich auf Vorgänge auf die **Verbindung** -Objekt, und die **RecordsetEvent** Familie bezieht sich auf Vorgänge auf die  **Recordset** Objekt.
 
 -   **Verbindungsereignisse**: Ereignisse werden ausgegeben, wenn eine Transaktion für eine Verbindung beginnt, wird ein Commit ausgeführt wurde oder ein Rollback, zurück, wenn ausgeführt wird eine [Befehl](../../../ado/reference/ado-api/command-object-ado.md) führt; beim Auftreten einer Warnung während einem **Verbindungsereignis**Operation; oder wenn eine **Verbindung** beginnt bzw. endet.
 
--   **Recordset-Ereignisse**: Ereignisse werden ausgegeben, um asynchrone Abrufvorgänge sowie beim Navigieren durch die Zeilen einer **Recordset** Objekt, das Ändern eines Felds in einer Zeile eine **Recordset**, Ändern Sie eine Zeile in einer **Recordset**öffnen eine **Recordset** mit einem serverseitigen Cursor zu schließen eine **Recordset**, oder ändern, ist in der ** Recordset**.
+-   **Recordset-Ereignisse**: Ereignisse werden ausgegeben, um asynchrone Abrufvorgänge sowie beim Navigieren durch die Zeilen einer **Recordset** Objekt, das Ändern eines Felds in einer Zeile eine **Recordset**, Ändern Sie eine Zeile in einer **Recordset**öffnen eine **Recordset** mit einem serverseitigen Cursor zu schließen eine **Recordset**, oder ändern, ist in der  **Recordset**.
 
  In den folgenden Tabellen werden die Ereignisse und deren Beschreibungen zusammengefasst.
 

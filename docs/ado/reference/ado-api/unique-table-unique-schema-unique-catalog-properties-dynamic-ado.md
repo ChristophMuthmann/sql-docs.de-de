@@ -1,12 +1,15 @@
 ---
 title: "Steuerelement ändert sich in Basistabelle von Recordsets (ADO) | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -50,7 +53,7 @@ Ermöglicht es Ihnen zu eng Steuerelement Änderungen an einer bestimmten Basist
   
  Ein Laufzeitfehler ausgegeben, wenn eine eindeutige Basistabelle nicht gefunden werden kann.  
   
- Diese dynamischen Eigenschaften werden an angehängt der **Recordset** Objekt [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung bei der [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) -Eigenschaftensatz auf ** AdUseClient**.  
+ Diese dynamischen Eigenschaften werden an angehängt der **Recordset** Objekt [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung bei der [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) -Eigenschaftensatz auf  **AdUseClient**.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

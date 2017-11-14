@@ -1,12 +1,15 @@
 ---
 title: WillChangeRecord- und RecordChangeComplete-Ereignisse (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -58,7 +61,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
   
  Wenn **RecordChangeComplete** wird aufgerufen, wird dieser Parameter auf festgelegt **AdStatusOK** , wenn der Vorgang, der das Ereignis verursacht hat erfolgreich war, oder auf **AdStatusErrorsOccurred** Wenn der Vorgang ist fehlgeschlagen.  
   
- Vor dem **WillChangeRecord** zurückgegeben wird, legen Sie diesen Parameter auf **AdStatusCancel** Anforderung Abbruch des Vorgangs, der dieses Ereignis verursacht hat, oder legen Sie diesen Parameter zu ** AdStatusUnwantedEvent** um nachfolgende Benachrichtigungen zu verhindern.  
+ Vor dem **WillChangeRecord** zurückgegeben wird, legen Sie diesen Parameter auf **AdStatusCancel** Anforderung Abbruch des Vorgangs, der dieses Ereignis verursacht hat, oder legen Sie diesen Parameter zu  **AdStatusUnwantedEvent** um nachfolgende Benachrichtigungen zu verhindern.  
   
  Vor dem **RecordChangeComplete** zurückgegeben wird, legen Sie diesen Parameter auf **AdStatusUnwantedEvent** um nachfolgende Benachrichtigungen zu verhindern.  
   

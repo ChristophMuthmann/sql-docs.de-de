@@ -1,12 +1,15 @@
 ---
 title: Kommentare zur HelloData | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,7 +33,7 @@ Die HelloData-Anwendung führt Sie durch die grundlegenden Operationen des eine 
 ## <a name="getdata"></a>GetData  
  **GetData** setzt eine gültige Verbindungszeichenfolge in einer Variablen auf Modulebene *M_sConnStr*. Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter [Erstellen der Verbindungszeichenfolge](../../../ado/guide/data/creating-a-connection-string.md).  
   
- Zuweisen ein fehlerhandlers mit einem Visual Basic **OnError** Anweisung. Weitere Informationen zur Fehlerbehandlung in ADO finden Sie unter [Fehlerbehandlung](../../../ado/guide/data/error-handling.md). Ein neues **Verbindung** -Objekt wird erstellt, und die **CursorLocation** -Eigenschaftensatz auf **AdUseClient** daran, dass die HelloData-Beispiel erstellt eine * getrenntes Recordset*. Dies bedeutet, dass, sobald die Daten aus der Datenquelle abgerufen wurden, die physische Verbindung mit der Datenquelle unterbrochen ist, aber Sie können weiterhin arbeiten mit den Daten, die lokal im zwischengespeichert werden Ihre **Recordset** Objekt.  
+ Zuweisen ein fehlerhandlers mit einem Visual Basic **OnError** Anweisung. Weitere Informationen zur Fehlerbehandlung in ADO finden Sie unter [Fehlerbehandlung](../../../ado/guide/data/error-handling.md). Ein neues **Verbindung** -Objekt wird erstellt, und die **CursorLocation** -Eigenschaftensatz auf **AdUseClient** daran, dass die HelloData-Beispiel erstellt eine  *getrenntes Recordset*. Dies bedeutet, dass, sobald die Daten aus der Datenquelle abgerufen wurden, die physische Verbindung mit der Datenquelle unterbrochen ist, aber Sie können weiterhin arbeiten mit den Daten, die lokal im zwischengespeichert werden Ihre **Recordset** Objekt.  
   
  Nachdem die Verbindung geöffnet wurde, weisen Sie eine SQL-Zeichenfolge an eine Variable (sSQL). Erstellen Sie eine Instanz eines neuen **Recordset** Objekt `m_oRecordset1`. Öffnen Sie in der nächsten Zeile des Codes, der **Recordset** über die vorhandene **Verbindung**, und übergeben Sie `sSQL` als Quelle für die **Recordset**. Hilfsmittel ADO treffen die Entscheidung, dass Sie die SQL-Zeichenfolge übergeben wurden, als Quelle für die **Recordset** ist Textdefinition eines Befehls, übergeben Sie **AdCmdText** in das letzte Argument für die **Recordset öffnen** Methode. Diese Zeile setzt auch die **LockType** und **CursorType** zugeordneten der **Recordset**.  
   
@@ -47,7 +50,7 @@ Die HelloData-Anwendung führt Sie durch die grundlegenden Operationen des eine 
 ## <a name="examinedata"></a>ExamineData  
  ExamineData verwendet verschiedene Methoden und Eigenschaften der **Recordset** Objekt zum Anzeigen von Informationen zu den Daten in der **Recordset**. Es gibt die Anzahl der Datensätze mithilfe der **RecordCount** Eigenschaft. Es durchläuft die **Recordset** und gibt den Wert des der **AbsolutePosition** Eigenschaft in das Textfeld anzeigen, auf dem Formular. Während Sie sich auch in der Schleife, die den Wert des der **Lesezeichen** -Eigenschaft für die dritte Datensatz befindet sich in einer variant-Variablen, *vBookmark*, für die spätere Verwendung.  
   
- Die Routine navigiert direkt an der dritte Datensatz mit der Lesezeichen-Variablen, die sie zuvor gespeichert. Ruft die Routine die **WalkFields** -Unterroutine, die Schleife durchläuft die **Felder** Auflistung von der **Recordset** und zeigt Details zu den einzelnen **Feld ** in der Auflistung.  
+ Die Routine navigiert direkt an der dritte Datensatz mit der Lesezeichen-Variablen, die sie zuvor gespeichert. Ruft die Routine die **WalkFields** -Unterroutine, die Schleife durchläuft die **Felder** Auflistung von der **Recordset** und zeigt Details zu den einzelnen **Feld**  in der Auflistung.  
   
  Schließlich **ExamineData** verwendet die **Filter** Eigenschaft von der **Recordset** Bildschirm für nur die Datensätze mit einer **CategoryId** gleich 2. Das Ergebnis dieses Filters ist sofort sichtbar, in dem Anzeigeraster, auf dem Formular.  
   

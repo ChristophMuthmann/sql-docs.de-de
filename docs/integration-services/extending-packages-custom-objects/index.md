@@ -1,10 +1,8 @@
 ---
 redirect_url: /sql/integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1c8b55feec10743f3f83ccc508ef4ad327d34329
-ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
-
+ms.openlocfilehash: b93dc8d5c931650ab8b419c07503798e82407dc7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-

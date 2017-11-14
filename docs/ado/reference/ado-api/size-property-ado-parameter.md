@@ -1,12 +1,15 @@
 ---
 title: Size-Eigenschaft (ADO-Parameter) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -36,7 +39,7 @@ Gibt die maximale Größe in Bytes oder Zeichen, der eine [Parameter](../../../a
 ## <a name="remarks"></a>Hinweise  
  Verwenden der **Größe** Eigenschaft zum Ermitteln der maximalen Größe für die geschriebenen Werte oder Auslesen der [Wert](../../../ado/reference/ado-api/value-property-ado.md) Eigenschaft eine **Parameter** Objekt.  
   
- Wenn Sie einen Datentyp mit variabler Länge für angeben einer **Parameter** Objekt (z. B. eine **Zeichenfolge** eingeben, z. B. **AdVarChar**), müssen Sie des Objekts festlegen ** Größe** Eigenschaft, bevor es zum Anfügen der [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung enthalten ist, andernfalls ein Fehler auftritt.  
+ Wenn Sie einen Datentyp mit variabler Länge für angeben einer **Parameter** Objekt (z. B. eine **Zeichenfolge** eingeben, z. B. **AdVarChar**), müssen Sie des Objekts festlegen  **Größe** Eigenschaft, bevor es zum Anfügen der [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung enthalten ist, andernfalls ein Fehler auftritt.  
   
  Wenn Sie bereits angefügt haben die **Parameter** -Objekt an die **Parameter** Auflistung von eine [Befehl](../../../ado/reference/ado-api/command-object-ado.md) -Objekt, und Sie ändern den Typ in einen Datentyp mit variabler Länge, müssen Sie Legen Sie die **Parameter** des Objekts **Größe** Eigenschaft vor dem Ausführen der **Befehl** Objekt; andernfalls ein Fehler auftritt.  
   

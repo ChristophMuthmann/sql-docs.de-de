@@ -1,12 +1,15 @@
 ---
 title: "Aggregieren von Funktionen, die CALC-Funktion und das NEW-Schlüsselwort | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -34,13 +37,13 @@ Strukturieren von Daten unterstützt die folgenden Funktionen: Ist im Kapitel ü
   
 |Aggregatfunktionen|Description|  
 |-------------------------|-----------------|  
-|SUM (*Kapitel-Alias*.* Spaltennamen*)|Berechnet die Summe aller Werte in der angegebenen Spalte.|  
-|AVG (*Kapitel-Alias*.* Spaltennamen*)|Berechnet den Durchschnitt aller Werte in der angegebenen Spalte.|  
-|MAX (*Kapitel-Alias*.* Spaltennamen*)|Berechnet den maximalen Wert in der angegebenen Spalte.|  
-|MIN (*Kapitel-Alias*.* Spaltennamen*)|Berechnet den minimalen Wert in der angegebenen Spalte.|  
-|COUNT (*Kapitel-Alias*[.* Spaltennamen*])|Zählt die Anzahl der Zeilen in den angegebenen Alias. Wenn eine Spalte angegeben wird, werden nur Zeilen, die für die diese Spalte ungleich Null ist in der Zählung enthalten.|  
-|STDEV (*Kapitel-Alias*.* Spaltennamen*)|Berechnet die Standardabweichung in der angegebenen Spalte.|  
-|Alle (*Kapitel-Alias*.* Spaltennamen*)|Ein Wert der angegebenen Spalte. Alle hat einen vorhersagbaren Wert nur, wenn der Wert der Spalte für alle Zeilen im Kapitel identisch ist.<br /><br /> **Hinweis** enthält die Spalte nicht den gleichen Wert für alle Zeilen im Kapitel, gibt der SHAPE-Befehl nach dem Zufallsprinzip einen der Werte der Wert der eine beliebige Funktion sein.|  
+|SUM (*Kapitel-Alias*. *Spaltennamen*)|Berechnet die Summe aller Werte in der angegebenen Spalte.|  
+|AVG (*Kapitel-Alias*. *Spaltennamen*)|Berechnet den Durchschnitt aller Werte in der angegebenen Spalte.|  
+|MAX (*Kapitel-Alias*. *Spaltennamen*)|Berechnet den maximalen Wert in der angegebenen Spalte.|  
+|MIN (*Kapitel-Alias*. *Spaltennamen*)|Berechnet den minimalen Wert in der angegebenen Spalte.|  
+|COUNT (*Kapitel-Alias*[. *Spaltennamen*])|Zählt die Anzahl der Zeilen in den angegebenen Alias. Wenn eine Spalte angegeben wird, werden nur Zeilen, die für die diese Spalte ungleich Null ist in der Zählung enthalten.|  
+|STDEV (*Kapitel-Alias*. *Spaltennamen*)|Berechnet die Standardabweichung in der angegebenen Spalte.|  
+|Alle (*Kapitel-Alias*. *Spaltennamen*)|Ein Wert der angegebenen Spalte. Alle hat einen vorhersagbaren Wert nur, wenn der Wert der Spalte für alle Zeilen im Kapitel identisch ist.<br /><br /> **Hinweis** enthält die Spalte nicht den gleichen Wert für alle Zeilen im Kapitel, gibt der SHAPE-Befehl nach dem Zufallsprinzip einen der Werte der Wert der eine beliebige Funktion sein.|  
   
 |berechneter Ausdruck|Description|  
 |---------------------------|-----------------|  

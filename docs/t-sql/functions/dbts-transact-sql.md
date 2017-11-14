@@ -30,7 +30,7 @@ ms.contentlocale: de-de
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40dbts-transact-sql"></a>& #x 40; & #x 40; DBTS (Transact-SQL)
+# <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Gibt den aktuellen Wert vom Datentyp **timestamp** für die aktuelle Datenbank zurück. Dieser timestamp-Wert ist in der Datenbank definitiv nur einmal vorhanden.

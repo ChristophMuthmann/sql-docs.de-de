@@ -30,7 +30,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="mapping-deprecated-functions"></a>Zuordnung veraltete Funktionen
-In diesem Abschnitt wird beschrieben, wie veraltete Funktionen zugeordnet werden, indem die ODBC 3.*.x* Treiber-Manager zum Gewährleisten der Abwärtskompatibilität von ODBC 3.*.x* Treiber, die mit ODBC-2 verwendet werden.* X* Anwendungen. Der Treiber-Manager führt diese Zuordnung unabhängig von der Version der Anwendung. Da jedes der ODBC-2. *x* Funktionen in der folgenden Liste wird die entsprechende ODBC 3. zugeordnet*.x* -Funktion bei Aufruf in einer ODBC 3.*.x* -Treiber verwenden, die ODBC 3.*.x*Treiber muss sich nicht in der ODBC 2. implementieren. *x* Funktionen.  
+In diesem Abschnitt wird beschrieben, wie veraltete Funktionen zugeordnet werden, indem die ODBC 3.*.x* Treiber-Manager zum Gewährleisten der Abwärtskompatibilität von ODBC 3.*.x* Treiber, die mit ODBC-2 verwendet werden. *X* Anwendungen. Der Treiber-Manager führt diese Zuordnung unabhängig von der Version der Anwendung. Da jedes der ODBC-2. *x* Funktionen in der folgenden Liste wird die entsprechende ODBC 3. zugeordnet*.x* -Funktion bei Aufruf in einer ODBC 3.*.x* -Treiber verwenden, die ODBC 3.*.x*Treiber muss sich nicht in der ODBC 2. implementieren. *x* Funktionen.  
   
  Die Zuordnung in der Liste wird ausgelöst, wenn der Treiber eine ODBC 3.*.x* und den Treiber unterstützt nicht die Funktion, die zugeordnet wird.  
   

@@ -55,7 +55,7 @@ SQLRETURN  SQLCleanupConnectionPoolID (
  Eine Anwendung kann nicht vom Treiber zurückgegebene Fehlermeldung empfangen.  
   
 ## <a name="remarks"></a>Hinweise  
- **SQLCleanupConnectionPoolID** kann jederzeit aufgerufen werden, aber der Treiber-Manager wird sichergestellt, dass keine anderen Threads gleichzeitig aufruft **SQLGetPoolID** und keine anderen Threads gleichzeitig aufruft ** SQLRateConnection** und **SQLPoolConnect** mit einem Verbindungs-Info-Token mit dieser ID Pool zugewiesen Aus diesem Grund muss der Treiber stellen Sie sicher, dass diese Funktion threadsicher ist.  
+ **SQLCleanupConnectionPoolID** kann jederzeit aufgerufen werden, aber der Treiber-Manager wird sichergestellt, dass keine anderen Threads gleichzeitig aufruft **SQLGetPoolID** und keine anderen Threads gleichzeitig aufruft  **SQLRateConnection** und **SQLPoolConnect** mit einem Verbindungs-Info-Token mit dieser ID Pool zugewiesen Aus diesem Grund muss der Treiber stellen Sie sicher, dass diese Funktion threadsicher ist.  
   
  Ein Treiber kann bereinigen die Ressourcen, die die Pool-ID zugeordnet ist  
   

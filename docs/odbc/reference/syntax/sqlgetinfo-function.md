@@ -65,14 +65,14 @@ SQLRETURN SQLGetInfo(
  Wenn *InfoValuePtr* NULL ist, *StringLengthPtr* gibt weiterhin zurück, die Gesamtanzahl der Bytes (ausgenommen die Null-Terminierung Zeichen für Zeichendaten) verfügbaren zurückzugebenden im Puffer verweist *InfoValuePtr*.  
   
  *Pufferlänge*  
- [Eingabe] Länge der \* *InfoValuePtr* Puffer. Wenn der Wert in * \*InfoValuePtr* ist eine Zeichenfolge oder, wenn *InfoValuePtr* ist ein null-Zeiger der *Pufferlänge* Argument wird ignoriert. Der Treiber setzt voraus, dass die Größe des * \*InfoValuePtr* ist SQLUSMALLINT oder SQLUINTEGER, basierend auf den *Infotyp*. Wenn * \*InfoValuePtr* eine Unicode-Zeichenfolge (beim Aufrufen von **SQLGetInfoW**), wird die *Pufferlänge* Argument muss eine gerade Zahl; Wenn nicht, SQLSTATE HY090 () Ungültige Zeichenfolgen- oder Pufferlänge) wird zurückgegeben.  
+ [Eingabe] Länge der \* *InfoValuePtr* Puffer. Wenn der Wert in  *\*InfoValuePtr* ist eine Zeichenfolge oder, wenn *InfoValuePtr* ist ein null-Zeiger der *Pufferlänge* Argument wird ignoriert. Der Treiber setzt voraus, dass die Größe des  *\*InfoValuePtr* ist SQLUSMALLINT oder SQLUINTEGER, basierend auf den *Infotyp*. Wenn  *\*InfoValuePtr* eine Unicode-Zeichenfolge (beim Aufrufen von **SQLGetInfoW**), wird die *Pufferlänge* Argument muss eine gerade Zahl; Wenn nicht, SQLSTATE HY090 () Ungültige Zeichenfolgen- oder Pufferlänge) wird zurückgegeben.  
   
  *StringLengthPtr*  
  [Ausgabe] Zeiger auf einen Puffer, in dem die Gesamtanzahl der Bytes (ausgenommen die Null-Terminierung Zeichen für Zeichendaten) zurückgegeben zur Rückgabe in **InfoValuePtr*.  
   
- Bei Zeichendaten ist die Anzahl der zurückzugebenden verfügbaren Bytes größer als oder gleich *Pufferlänge*, die Informationen in \* *InfoValuePtr* auf abgeschnitten * Pufferlänge* Bytes abzüglich der Länge des ein Null-Terminierung Zeichen und endet auf Null vom Treiber.  
+ Bei Zeichendaten ist die Anzahl der zurückzugebenden verfügbaren Bytes größer als oder gleich *Pufferlänge*, die Informationen in \* *InfoValuePtr* auf abgeschnitten  *Pufferlänge* Bytes abzüglich der Länge des ein Null-Terminierung Zeichen und endet auf Null vom Treiber.  
   
- Für alle anderen Typen von Daten, den Wert der *Pufferlänge* wird ignoriert, und der Treiber geht davon aus, die Größe des \* *InfoValuePtr* SQLUSMALLINT oder SQLUINTEGER, ist abhängig von der * Infotyp*.  
+ Für alle anderen Typen von Daten, den Wert der *Pufferlänge* wird ignoriert, und der Treiber geht davon aus, die Größe des \* *InfoValuePtr* SQLUSMALLINT oder SQLUINTEGER, ist abhängig von der  *Infotyp*.  
   
 ## <a name="return-value"></a>Rückgabewert  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
@@ -86,12 +86,12 @@ SQLRETURN SQLGetInfo(
 |01004|Zeichenfolgedaten wurden rechts abgeschnitten|Der Puffer \* *InfoValuePtr* war nicht groß genug, um die angeforderten Informationen zurückzugeben. Aus diesem Grund wurden die Daten abgeschnitten. Die Länge der angeforderten Informationen in den ungekürzten Format wird zurückgegeben, **StringLengthPtr*. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |08003|Verbindung nicht geöffnet|(DM) in der Typ der Informationen angefordert *Infotyp* ist eine geöffnete Verbindung erforderlich. Reservierte ODBC Informationen Typ kann nur SQL_ODBC_VER ohne eine offene Verbindung zurückgegeben werden.|  
 |08S01|Kommunikations-Verbindungsfehler|Die Verbindung zwischen dem Treiber und die Datenquelle mit der der Treiber verbunden wurde aufgetreten ist, bevor die Verarbeitung für die Funktion abgeschlossen.|  
-|HY000|Allgemeiner Fehler|Für die es keine spezifischen SQLSTATE wurde und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der * \*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
+|HY000|Allgemeiner Fehler|Für die es keine spezifischen SQLSTATE wurde und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der  *\*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
 |HY001|Fehler bei der speicherbelegung|Der Treiber konnte nicht belegt werden, die zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich ist.|  
 |HY010|Fehler bei Funktionssequenz|(DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreamte Parameter abgerufen wurde.|  
 |HY013|Speicherverwaltungsfehler|Der Funktionsaufruf konnte nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
 |HY024|Ungültiger Attributwert|(DM) die *Infotyp* Argument wurde SQL_DRIVER_HSTMT und der Wert verweist *InfoValuePtr* war keinem gültigen Anweisungshandle.<br /><br /> (DM) die *Infotyp* Argument wurde SQL_DRIVER_HDESC und der Wert verweist *InfoValuePtr* war keinem gültigen Deskriptorhandles.|  
-|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM) für Argument angegebene Wert *Pufferlänge* war kleiner als 0.<br /><br /> (DM) der angegebene Wert für *Pufferlänge* wurde eine ungerade Anzahl und * \*InfoValuePtr* wurde von einem Unicode-Datentyp.|  
+|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM) für Argument angegebene Wert *Pufferlänge* war kleiner als 0.<br /><br /> (DM) der angegebene Wert für *Pufferlänge* wurde eine ungerade Anzahl und  *\*InfoValuePtr* wurde von einem Unicode-Datentyp.|  
 |HY096|Informationstyp außerhalb des gültigen Bereichs|Der Wert für das Argument angegebene *Infotyp* war für die vom Treiber unterstützten ODBC-Version ungültig.|  
 |HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Nur trennen, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum Zustand "angehalten" [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYC00|Optionales Feld, die nicht implementiert.|Der Wert für das Argument angegebene *Infotyp* wurde ein treiberspezifische-Wert, der vom Treiber nicht unterstützt wird.|  
@@ -527,7 +527,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CU_PROCEDURE_INVOCATION = Volltextkataloge werden in der ODBC-Prozedur aufrufanweisung unterstützt.  
   
- SQL_CU_TABLE_DEFINITION = Volltextkataloge werden in alle Table-Anweisungen Definition unterstützt: **CREATE TABLE**, **CREATE VIEW**, **ALTER TABLE**, **DROP TABLE **, und **DROP VIEW**.  
+ SQL_CU_TABLE_DEFINITION = Volltextkataloge werden in alle Table-Anweisungen Definition unterstützt: **CREATE TABLE**, **CREATE VIEW**, **ALTER TABLE**, **DROP TABLE** , und **DROP VIEW**.  
   
  SQL_CU_INDEX_DEFINITION = Volltextkataloge werden in alle indexanweisungen Definition unterstützt: **CREATE INDEX** und **DROP INDEX**.  
   
@@ -1005,7 +1005,7 @@ SQLRETURN SQLGetInfo(
   
  Eine Anwendung kann diese verwenden, um zu bestimmen, wie Benutzer die Daten ausgewählt werden. Z. B. vorstellen Xbase Benutzer häufig Daten in Dateien gespeichert, wohingegen ORACLE und Microsoft Access-Benutzer in der Regel Daten vorstellen, wie in Tabellen gespeichert.  
   
- Wenn ein Benutzer eine Datenquelle Xbase auswählt, konnte die Anwendung die Fenster anzeigen **Datei öffnen** Standarddialogfeld; Wenn der Benutzer eine Microsoft Access oder ORACLE-Datenquelle, wählt die Anwendung konnte eine benutzerdefinierte anzeigen ** Wählen Sie die Tabelle** (Dialogfeld).  
+ Wenn ein Benutzer eine Datenquelle Xbase auswählt, konnte die Anwendung die Fenster anzeigen **Datei öffnen** Standarddialogfeld; Wenn der Benutzer eine Microsoft Access oder ORACLE-Datenquelle, wählt die Anwendung konnte eine benutzerdefinierte anzeigen  **Wählen Sie die Tabelle** (Dialogfeld).  
   
  SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1(ODBC 3.0)  
  Eine SQLUINTEGER-Bitmaske, die die Attribute eines Cursors Vorwärtscursor beschreibt, die vom Treiber unterstützt werden. Diese Bitmaske enthält die erste Teilmenge der Attribute. die zweite Teilmenge finden Sie unter SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2.  
@@ -1433,7 +1433,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_SU_PROCEDURE_INVOCATION = Schemas werden in der ODBC-Prozedur aufrufanweisung unterstützt.  
   
- SQL_SU_TABLE_DEFINITION = Schemas werden in allen Table-Anweisungen Definition unterstützt: **CREATE TABLE**, **CREATE VIEW**, **ALTER TABLE**, **DROP TABLE **, und **DROP VIEW**.  
+ SQL_SU_TABLE_DEFINITION = Schemas werden in allen Table-Anweisungen Definition unterstützt: **CREATE TABLE**, **CREATE VIEW**, **ALTER TABLE**, **DROP TABLE** , und **DROP VIEW**.  
   
  SQL_SU_INDEX_DEFINITION = Schemas werden in alle indexanweisungen Definition unterstützt: **CREATE INDEX** und **DROP INDEX**.  
   

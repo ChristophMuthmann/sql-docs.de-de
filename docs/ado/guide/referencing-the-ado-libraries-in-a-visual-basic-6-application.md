@@ -3,9 +3,12 @@ title: Verweisen auf die ADO-Bibliotheken In Visual Basic 6-Anwendungen | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology: "“drivers”"
 ms.topic: article
 dev_langs:
@@ -34,7 +37,7 @@ Um die ADO-Bibliotheken in eine Microsoft Visual Basic 6-Anwendung importieren, 
   
 1.  Erstellen Sie ein neues oder öffnen Sie ein vorhandenes Visual Basic-Projekt.  
   
-2.  Klicken Sie auf die **Projekt** Menüelement und wählen Sie dann **Verweise... ** aus dem Dropdown-Menü Bereich.  
+2.  Klicken Sie auf die **Projekt** Menüelement und wählen Sie dann **Verweise...**  aus dem Dropdown-Menü Bereich.  
   
 3.  Von **Verfügbare Verweise**, aktivieren Sie das Kontrollkästchen für **Microsoft ActiveX Data Objects *ist n.n* Bibliothek**, wobei ***ist n.n*** stellt die neuesten Versionsnummer. Die **Speicherort** Feld unten sollten Identifizieren Ihrer Wahl als *$installDir\msado15.dll*, wobei *$installDir* bezeichnet den Pfad des Verzeichnisses, in dem die ADO-Bibliothek wurde installiert.  
   

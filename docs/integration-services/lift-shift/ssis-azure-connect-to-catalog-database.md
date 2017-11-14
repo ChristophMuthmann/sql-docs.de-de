@@ -40,7 +40,7 @@ Bevor Sie beginnen, stellen Sie sicher, dass Sie Version 17.2 oder höher von SQ
 
 2. **Herstellen einer Verbindung mit dem Server**. In der **Verbindung mit Server herstellen** Dialogfeld Geben Sie die folgende Informationen:
 
-   | Einstellung       | Empfohlener Wert | Description | 
+   | Einstellung       | Empfohlener Wert | Description | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Servertyp** | Datenbankmodul | Dieser Wert ist erforderlich. |
    | **Servername** | Die vollqualifizierten Servernamen | Der Name muss im folgenden Format: **mysqldbserver.database.windows.net**. |

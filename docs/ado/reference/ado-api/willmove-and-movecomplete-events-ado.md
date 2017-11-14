@@ -1,12 +1,15 @@
 ---
 title: WillMove- und MoveComplete-Ereignisse (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -44,7 +47,7 @@ MoveComplete adReason, pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>Parameter  
  *adReason*  
- Ein [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md) Wert, der die Ursache für dieses Ereignis angibt. Der Wert kann **AdRsnMoveFirst**, **AdRsnMoveLast**, **AdRsnMoveNext**, **AdRsnMovePrevious**, **AdRsnMove **, oder **AdRsnRequery**.  
+ Ein [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md) Wert, der die Ursache für dieses Ereignis angibt. Der Wert kann **AdRsnMoveFirst**, **AdRsnMoveLast**, **AdRsnMoveNext**, **AdRsnMovePrevious**, **AdRsnMove** , oder **AdRsnRequery**.  
   
  *pError*  
  Ein [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt. Wenn aufgetretenen Fehlers beschrieben der Wert der *AdStatus* ist **AdStatusErrorsOccurred**; andernfalls wird der Parameter nicht festgelegt.  

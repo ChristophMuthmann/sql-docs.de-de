@@ -1,12 +1,15 @@
 ---
 title: Name-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -35,7 +38,7 @@ Gibt den Namen eines Objekts an.
  Legt fest oder gibt einen **Zeichenfolge** Wert, der den Namen eines Objekts angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der **Namen** Eigenschaft, um einen Namen zuweisen oder Abrufen des Namens des eine **Befehl**, **Eigenschaft**, **Feld**, oder **Parameter ** Objekt.  
+ Verwenden der **Namen** Eigenschaft, um einen Namen zuweisen oder Abrufen des Namens des eine **Befehl**, **Eigenschaft**, **Feld**, oder **Parameter**  Objekt.  
   
  Der Wert ist Lese-/Schreibzugriff auf eine **Befehl** Objekt "und" Read-only auf eine **Eigenschaft** Objekt.  
   

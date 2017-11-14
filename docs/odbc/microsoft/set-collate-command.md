@@ -51,7 +51,7 @@ SET COLLATE TO cSequenceName
 |UNIQWT|Eindeutige Gewichtung|  
   
 > [!NOTE]  
->  Bei der Angabe der SPANISCHEN Option *ch* ist aus ein einzelnen Buchstaben, die zwischen sortiert *c* und *d*, und *ll* zwischen sortiert * l* und *m*.  
+>  Bei der Angabe der SPANISCHEN Option *ch* ist aus ein einzelnen Buchstaben, die zwischen sortiert *c* und *d*, und *ll* zwischen sortiert  *l* und *m*.  
   
  Wenn Sie eine Sequenz Sortierungsoption als Literalzeichen Zeichenfolge angeben, achten Sie darauf, dass Sie die Option in Anführungszeichen setzen:  
   

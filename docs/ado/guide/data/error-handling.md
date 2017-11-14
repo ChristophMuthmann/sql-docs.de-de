@@ -1,12 +1,15 @@
 ---
 title: Fehlerbehandlung | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -42,7 +45,7 @@ ADO verwendet mehrere unterschiedliche Verfahren, um eine Anwendung von Fehlern 
   
 -   Problemen beim Verarbeiten von batch-Updates oder andere im Zusammenhang mit Massenvorgängen eine **Recordset** können ersichtlich sein, die **Status** Eigenschaft von der **Recordset**. Z. B. einschränkungsverletzungen Schema oder keine ausreichenden Berechtigungen können angegeben werden durch **RecordStatusEnum** Werte.  
   
--   Probleme im Zusammenhang mit einem bestimmten **Feld** im aktuellen Datensatz werden auch angezeigt, durch die **Status** -Eigenschaft jedes **Feld** in die **Felder ** Auflistung von der **Datensatz** oder **Recordset**. Beispielsweise Updates, die nicht abgeschlossen werden konnte oder inkompatible Datentypen können angegeben werden durch **FieldStatusEnum** Werte.  
+-   Probleme im Zusammenhang mit einem bestimmten **Feld** im aktuellen Datensatz werden auch angezeigt, durch die **Status** -Eigenschaft jedes **Feld** in die **Felder**  Auflistung von der **Datensatz** oder **Recordset**. Beispielsweise Updates, die nicht abgeschlossen werden konnte oder inkompatible Datentypen können angegeben werden durch **FieldStatusEnum** Werte.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

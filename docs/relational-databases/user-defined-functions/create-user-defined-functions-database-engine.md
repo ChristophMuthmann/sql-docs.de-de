@@ -1,7 +1,7 @@
 ---
 title: Erstellen von benutzerdefinierten Funktionen (Datenbankmodul) | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 10/24/2016
+ms.date: 11/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -75,7 +75,7 @@ Erfordert die CREATE FUNCTION-Berechtigung in der Datenbank und die ALTER-Berech
 ##  <a name="Scalar"></a> Skalarfunktionen  
  Im folgenden Beispiel wird eine Skalarfunktion mit mehreren Anweisungen in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank erstellt. Die Funktion nimmt einen Eingabewert ( `ProductID`) an und gibt einen einzelnen Datenwert zurück, der die aggregierte Menge des Lagerbestands für das angegebene Produkt darstellt.  
   
-```  
+```t-sql  
 IF OBJECT_ID (N'dbo.ufnGetInventoryStock', N'FN') IS NOT NULL  
     DROP FUNCTION ufnGetInventoryStock;  
 GO  
@@ -92,24 +92,21 @@ BEGIN
      IF (@ret IS NULL)   
         SET @ret = 0;  
     RETURN @ret;  
-END;  
-GO  
-  
+END; 
 ```  
   
  Im folgenden Beispiel wird die `ufnGetInventoryStock` -Funktion verwendet, um den aktuellen Lagerbestand für Produkte mit einer `ProductModelID` zwischen 75 und 80 zurückzugeben.  
   
-```  
+```t-sql  
 SELECT ProductModelID, Name, dbo.ufnGetInventoryStock(ProductID)AS CurrentSupply  
 FROM Production.Product  
 WHERE ProductModelID BETWEEN 75 and 80;  
-  
 ```  
   
 ##  <a name="TVF"></a> Tabellenwertfunktionen  
  Im folgenden Beispiel wird eine Inline-Tabellenwertfunktion in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank erstellt. Die Funktion nimmt einen Eingabeparameter (eine Kunden-ID (Geschäfts-ID)) an und gibt die Spalten `ProductID`, `Name`sowie das Aggregat der bisherigen Verkaufseinnahmen dieses Jahres als `YTD Total` für jedes Produkt zurück, das an das Geschäft verkauft wurde.  
   
-```  
+```t-sql  
 IF OBJECT_ID (N'Sales.ufn_SalesByStore', N'IF') IS NOT NULL  
     DROP FUNCTION Sales.ufn_SalesByStore;  
 GO  
@@ -126,19 +123,17 @@ RETURN
     WHERE C.StoreID = @storeid  
     GROUP BY P.ProductID, P.Name  
 );  
-  
 ```  
   
  Das folgende Beispiel ruft die Funktion auf und gibt die Kunden-ID 602 an.  
   
-```  
+```t-sql  
 SELECT * FROM Sales.ufn_SalesByStore (602);  
-  
 ```  
   
  Im folgenden Beispiel wird eine Tabellenwertfunktion in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank erstellt. Die Funktion nimmt einen einzelnen Eingabeparameter ( `EmployeeID` ) an und gibt eine Liste aller Mitarbeiter zurück, die dem angegebenen Mitarbeiter direkt oder indirekt unterstellt sind. Die Funktion wird dann unter Angabe der Mitarbeiternummer 109 aufgerufen.  
   
-```  
+```t-sql  
 IF OBJECT_ID (N'dbo.ufn_FindReports', N'TF') IS NOT NULL  
     DROP FUNCTION dbo.ufn_FindReports;  
 GO  
@@ -180,13 +175,12 @@ GO
 -- Example invocation  
 SELECT EmployeeID, FirstName, LastName, JobTitle, RecursionLevel  
 FROM dbo.ufn_FindReports(1);  
-  
 ```  
   
 ## <a name="more-examples"></a>Weitere Beispiele  
  - [Benutzerdefinierte Funktionen](../../relational-databases/user-defined-functions/user-defined-functions.md)   
  - [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md) 
-  - [ALTER FUNCTION (Transact SQL)](../../tools/sql-server-profiler/start-sql-server-profiler.md) 
+ - [ALTER FUNCTION (Transact SQL)](../../tools/sql-server-profiler/start-sql-server-profiler.md) 
  - [DROP FUNCTION (Transact SQL)](../../tools/sql-server-profiler/start-sql-server-profiler.md)
  - [DROP PARTITION FUNCTION (Transact-SQL)](https://msdn.microsoft.com/library/ms187759(SQL.130).aspx)
  - Weitere Beispiele in der [Community](https://www.bing.com/search?q=user%20defined%20function%20%22sql%20server%202016%22%20examples&qs=n&form=QBRE&pq=user%20defined%20function%20%22sql%20server%202016%22%20examples&sc=0-48&sp=-1&sk=&cvid=C3AD337125A840AD9EEFA3AAC36A3712)

@@ -45,7 +45,7 @@ Der Bezeichner für den Timestamp ODBC C-Datentyp ist:
   
  Informationen, welche Werte in einer Struktur SQL_C_TIMESTAMP gültig sind, finden Sie unter [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md)weiter oben in diesem Anhang.  
   
- Wenn Zeitstempeldaten C in SQL-Zeichendaten konvertiert werden, werden die resultierende Zeichendaten der "*Yyyy*-*mm*-*Dd* *"hh"*:*mm*:*ss*[.* f... *] "Format.  
+ Wenn Zeitstempeldaten C in SQL-Zeichendaten konvertiert werden, werden die resultierende Zeichendaten der "*Yyyy*-*mm*-*Dd* *"hh"*:*mm*:*ss*[. *f...* ] "Format.  
   
  Der Treiber ignoriert den Längenindikator /-Wert, wenn Daten aus der C-Timestamp-Datentyp zu konvertieren und wird davon ausgegangen, dass die Größe des Datenpuffers die Größe des C-Timestamp-Datentyps. Der Längenindikator /-Wert übergeben der *StrLen_or_Ind* Argument in **SQLPutData** und in den Puffer mit angegebenen der *StrLen_or_IndPtr* Argument in **SQLBindParameter**. Datenpuffer wird angegeben, mit der *DataPtr* Argument in **SQLPutData** und die *ParameterValuePtr* Argument in **SQLBindParameter**.
 

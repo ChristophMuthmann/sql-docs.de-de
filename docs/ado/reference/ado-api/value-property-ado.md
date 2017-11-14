@@ -1,12 +1,15 @@
 ---
 title: Value-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -40,7 +43,7 @@ Gibt den zugewiesenen Wert an eine [Feld](../../../ado/reference/ado-api/field-o
  ADO ermöglicht das Festlegen und Zurückgeben von lange Binärdaten mit dem **Wert** Eigenschaft.  
   
 > [!NOTE]
->  Für **Parameter** Objekte, ADO-Lesevorgänge der **Wert** -Eigenschaft nur einmal vom Anbieter. Wenn ein Befehl enthält eine **Parameter** , deren **Wert** -Eigenschaft ist leer, und erstellen Sie eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) aus den Befehl ein, stellen Sie sicher, dass Sie zuerst schließen der ** Recordset** vor dem Abrufen der **Wert** Eigenschaft. Einige Anbieter, andernfalls der **Wert** -Eigenschaft können leer sein und wird nicht den richtigen Wert enthalten.  
+>  Für **Parameter** Objekte, ADO-Lesevorgänge der **Wert** -Eigenschaft nur einmal vom Anbieter. Wenn ein Befehl enthält eine **Parameter** , deren **Wert** -Eigenschaft ist leer, und erstellen Sie eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) aus den Befehl ein, stellen Sie sicher, dass Sie zuerst schließen der  **Recordset** vor dem Abrufen der **Wert** Eigenschaft. Einige Anbieter, andernfalls der **Wert** -Eigenschaft können leer sein und wird nicht den richtigen Wert enthalten.  
 >   
 >  Für neue **Feld** Objekte, die angefügt wurden die [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung von einer [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -Objekt, das **Wert** Eigenschaft muss festgelegt werden vor allen anderen **Feld** Eigenschaften können angegeben werden. Zunächst, einen bestimmten Wert für die **Wert** Eigenschaft zugewiesen und [Update](../../../ado/reference/ado-api/update-method.md) auf die **Felder** Auflistung aufgerufen. Klicken Sie dann, um andere Eigenschaften wie z. B. [Typ](../../../ado/reference/ado-api/type-property-ado.md) oder [Attribute](../../../ado/reference/ado-api/attributes-property-ado.md) zugegriffen werden kann.  
   

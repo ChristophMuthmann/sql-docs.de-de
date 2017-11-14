@@ -1,12 +1,15 @@
 ---
 title: "Markieren von Geschäftsobjekten als sicher für Skripting | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -48,7 +51,7 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
   
  Im letzten Schritt erstellt die Anwendung-Setup-Assistenten eine htm- und eine CAB-Datei. Sie können diese beiden Dateien auf den Zielcomputer kopieren und doppelklicken Sie auf die HTM-Datei, um die Seite laden und registrieren Sie den Server richtig.  
   
- Da das Geschäftsobjekt standardmäßig im Verzeichnis Windows\System32\Occache installiert werden, verschieben Sie es in das Verzeichnis "Windows\System32", und ändern Sie die **HKEY_CLASSES_ROOT\CLSID\\ ** \< *MyActiveXGUID*>\\**InprocServer32** Registrierungsschlüssel auf den richtigen Pfad entsprechen.
+ Da das Geschäftsobjekt standardmäßig im Verzeichnis Windows\System32\Occache installiert werden, verschieben Sie es in das Verzeichnis "Windows\System32", und ändern Sie die **HKEY_CLASSES_ROOT\CLSID\\**  \< *MyActiveXGUID*>\\**InprocServer32** Registrierungsschlüssel auf den richtigen Pfad entsprechen.
 
 
 

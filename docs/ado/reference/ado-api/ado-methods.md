@@ -1,12 +1,15 @@
 ---
 title: ADO-Methoden | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/09/2017
 |[BeginTrans, CommitTrans und RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|Verwaltet die transaktionsverarbeitung in einem **Verbindung** Objekt wie folgt:<br /><br /> **BeginTrans** – beginnt eine neue Transaktion.<br /><br /> **CommitTrans** – speichert alle Änderungen, und beendet die aktuelle Transaktion. Es kann auch eine neue Transaktion starten.<br /><br /> **RollbackTrans** – verwirft alle Änderungen, und beendet die aktuelle Transaktion. Es kann auch eine neue Transaktion starten.|  
 |[Abbrechen](../../../ado/reference/ado-api/cancel-method-ado.md)|Bricht die Ausführung einer ausstehenden asynchronen Methodenaufrufs.|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Bricht einen ausstehenden BatchUpdate ab.|  
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Verwirft alle Änderungen, die an die aktuelle oder neue Zeile vorgenommen wurden eine **Recordset** -Objekt, oder die **Felder** Auflistung von einer **Datensatz** -Objekt, vor dem Aufruf der ** Update** Methode.|  
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Verwirft alle Änderungen, die an die aktuelle oder neue Zeile vorgenommen wurden eine **Recordset** -Objekt, oder die **Felder** Auflistung von einer **Datensatz** -Objekt, vor dem Aufruf der  **Update** Methode.|  
 |[Löschen](../../../ado/reference/ado-api/clear-method-ado.md)|Entfernt alle der **Fehler** Objekte aus der **Fehler** Auflistung.|  
 |[Klon](../../../ado/reference/ado-api/clone-method-ado.md)|Erstellt ein Duplikat **Recordset** Objekt aus einer vorhandenen **Recordset** Objekt. Optional gibt an, dass der Klon schreibgeschützt ist.|  
 |[Schließen](../../../ado/reference/ado-api/close-method-ado.md)|Schließt einen geöffneten Objekt und alle abhängigen Objekte.|  

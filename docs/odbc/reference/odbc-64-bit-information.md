@@ -27,11 +27,11 @@ Ab Windows Server 2003, haben die 64-Bit-ODBC-Bibliotheken Microsoft-Betriebssys
   
  Es gibt einige Punkte zu bedenken, wenn für einen 64-Bit-Prozessor-Programmierung:  
   
--   Obwohl die Größe eines Zeigers auf 8 Bytes aus 4 Bytes geändert wurde, werden ganze Zahlen und Long-Werte immer noch 4-Byte-Werte. Die Typen **INT64** und **UINT64** für 8 Bytes langen ganzen Zahlen definiert wurden. Die neuen ODBC-Typen **SQLLEN** und **SQLULEN** werden definiert, in der ODBC-Headerdatei als **INT64** und **UINT64** Wenn **_WIN64 ** definiert wurde.  
+-   Obwohl die Größe eines Zeigers auf 8 Bytes aus 4 Bytes geändert wurde, werden ganze Zahlen und Long-Werte immer noch 4-Byte-Werte. Die Typen **INT64** und **UINT64** für 8 Bytes langen ganzen Zahlen definiert wurden. Die neuen ODBC-Typen **SQLLEN** und **SQLULEN** werden definiert, in der ODBC-Headerdatei als **INT64** und **UINT64** Wenn **_WIN64**  definiert wurde.  
   
 -   Mehrere Funktionen in ODBC werden deklariert, dass Sie einen Zeigerparameter erwartet. In 32-Bit-ODBC definiert Parameter als Zeiger häufig verwendet wurden, um einen ganzzahligen Wert oder ein Zeiger auf einen Puffer, je nach Kontext des Aufrufs übergeben. Dies war natürlich möglich, Zeiger und ganze Zahlen dieselbe Größe hat. In 64-Bit-Windows ist dies nicht der Fall.  
   
--   Einige ODBC-Funktionen, die zuvor mit definierten **SQLINTEGER** und **SQLUINTEGER** Parameter wurden geändert, um die neuen **SQLLEN** und ** SQLULEN** Typdefinitionen. Diese Änderungen werden im nächsten Abschnitt werden die Funktionsänderungen für die Deklaration aufgeführt.  
+-   Einige ODBC-Funktionen, die zuvor mit definierten **SQLINTEGER** und **SQLUINTEGER** Parameter wurden geändert, um die neuen **SQLLEN** und  **SQLULEN** Typdefinitionen. Diese Änderungen werden im nächsten Abschnitt werden die Funktionsänderungen für die Deklaration aufgeführt.  
   
 -   Einige der deskriptorfelder, die über die verschiedenen festgelegt werden können **SQLSet** und **SQLGet** Funktionen wurden geändert, um die 64-Bit-Werte zu berücksichtigen, während andere immer noch 32-Bit-Werte sind. Stellen Sie sicher, dass Sie die geeignete Größe Variable beim Festlegen und Abrufen von diese Felder verwenden. Besonderheiten der welche, die Deskriptor Felder geändert wurden, werden unter Funktion Deklaration Änderungen aufgeführt.  
   

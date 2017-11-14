@@ -1,12 +1,15 @@
 ---
 title: Steuern von Transaktionen (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="controlling-transactions-ado"></a>Steuern von Transaktionen (ADO)
-ADO unterstützt transaktionsverarbeitung innerhalb einer Verbindungs mit der Hilfe der **BeginTrans**, **CommitTrans**, und **RollbackTrans** Methoden auf eine ** Verbindung** Objekt. Das allgemeine Konzept der Implementierung der transaktionsverarbeitung in ADO wird im folgenden einfachen Codeausschnitt veranschaulicht.  
+ADO unterstützt transaktionsverarbeitung innerhalb einer Verbindungs mit der Hilfe der **BeginTrans**, **CommitTrans**, und **RollbackTrans** Methoden auf eine  **Verbindung** Objekt. Das allgemeine Konzept der Implementierung der transaktionsverarbeitung in ADO wird im folgenden einfachen Codeausschnitt veranschaulicht.  
   
 ```  
 Const DS = "MySqlServer"  

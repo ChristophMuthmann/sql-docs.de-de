@@ -46,7 +46,7 @@ Gibt den Status einer [DataControl](../../../ado/reference/rds-api/datacontrol-o
 ## <a name="remarks"></a>Hinweise  
  Verwenden der ["onreadystatechange"](../../../ado/reference/rds-api/onreadystatechange-event-rds.md) Ereignis zum Überwachen von Änderungen in der **ReadyState** Eigenschaft während eines Vorgangs asynchrone Abfrage. Dies ist effizienter als der Wert der Eigenschaft in regelmäßigen Abständen geprüft wird.  
   
- Bei einem während einer asynchronen Operation Fehler der **ReadyState** eigenschaftsänderungen **AdcReadyStateComplete**, [Status](../../../ado/reference/ado-api/state-property-ado.md) eigenschaftsänderungen von **AdStateExecuting** auf **AdStateClosed**, und die **Recordset** Objekt [Wert](../../../ado/reference/ado-api/value-property-ado.md) Eigenschaft bleibt *nichts *.  
+ Bei einem während einer asynchronen Operation Fehler der **ReadyState** eigenschaftsänderungen **AdcReadyStateComplete**, [Status](../../../ado/reference/ado-api/state-property-ado.md) eigenschaftsänderungen von **AdStateExecuting** auf **AdStateClosed**, und die **Recordset** Objekt [Wert](../../../ado/reference/ado-api/value-property-ado.md) Eigenschaft bleibt *nichts* .  
   
 ## <a name="applies-to"></a>Gilt für  
  [RDS (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

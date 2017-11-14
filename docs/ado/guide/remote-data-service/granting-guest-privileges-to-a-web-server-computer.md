@@ -1,12 +1,15 @@
 ---
 title: "Gewähren von Gastberechtigungen für einen Webservercomputer | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -40,7 +43,7 @@ Das anonyme Konto der Web-Server (IUSR_*ComputerName*) muss zur lokalen Gruppe G
   
 4.  In der **Gäste Eigenschaften** (Dialogfeld), klicken Sie auf **hinzufügen**.  
   
-5.  Wenn das anonyme Konto der Web-Server nicht in der Liste angezeigt wird der **Benutzer oder Gruppen auswählen** Dialogfeld Feld, geben Sie seinen Namen (IUSR_*ComputerName*) in das leere Feld unten ein, und klicken Sie dann auf **hinzufügen **.  
+5.  Wenn das anonyme Konto der Web-Server nicht in der Liste angezeigt wird der **Benutzer oder Gruppen auswählen** Dialogfeld Feld, geben Sie seinen Namen (IUSR_*ComputerName*) in das leere Feld unten ein, und klicken Sie dann auf **hinzufügen** .  
   
 6.  Klicken Sie auf **OK**.
 

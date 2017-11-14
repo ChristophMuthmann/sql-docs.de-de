@@ -79,7 +79,7 @@ SQLRETURN  SQLRateConnection(
   
  Wenn der Treiber-Manager eine Verbindung wiederverwendet werden, deren Ergebnis streng kleiner als 100 (einschließlich 99) ist, wird der Treiber-Manager SQLSetConnectAttr(SQL_ATTR_DBC_INFO_TOKEN) zum Zurücksetzen der Verbindung wieder in den Zustand, der von der Anwendung angeforderte aufgerufen. Der Treiber sollte die Verbindung nicht in dieser Funktionsaufruf nicht zurückgesetzt werden.  
   
- Wenn *fRequiredTransactionEnlistment* ist "true", Wiederverwenden von *hCandidateConnection* benötigt eine zusätzliche Eintragung (*Transaktions* ! = NULL) oder Unenlistment (* Transaktions* == NULL). Hiermit wird die Kosten für das Wiederverwenden von eine Verbindung und gibt an, ob der Treiber eintragen / tragen Sie die Verbindung, wenn sie also die Verbindung erneut verwenden soll. Wenn *fRequireTransactionEnlistment* ist "false", Treiber sollte der Wert der ignoriert *Transaktions*.  
+ Wenn *fRequiredTransactionEnlistment* ist "true", Wiederverwenden von *hCandidateConnection* benötigt eine zusätzliche Eintragung (*Transaktions* ! = NULL) oder Unenlistment ( *Transaktions* == NULL). Hiermit wird die Kosten für das Wiederverwenden von eine Verbindung und gibt an, ob der Treiber eintragen / tragen Sie die Verbindung, wenn sie also die Verbindung erneut verwenden soll. Wenn *fRequireTransactionEnlistment* ist "false", Treiber sollte der Wert der ignoriert *Transaktions*.  
   
  Der Treiber-Manager wird sichergestellt, dass das übergeordnete Element HENV Behandeln der *hRequest* und *hCandidateConnection* sind identisch. Der Treiber-Manager wird sichergestellt, dass die Pool-ID zugeordneten *hRequest* und *hCandidateConnection* sind identisch.  
   

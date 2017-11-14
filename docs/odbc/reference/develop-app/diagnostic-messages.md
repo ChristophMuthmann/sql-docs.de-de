@@ -37,11 +37,11 @@ Eine diagnosemeldung wird mit jeder SQLSTATE zurückgegeben. Die gleiche SQLSTAT
   
  Wenn die Quelle der Warnung oder ein Fehler einer Komponente selbst ist, muss die diagnosemeldung dies erläutern. Daher muss der Text der Fehlermeldungen zwei verschiedene Formaten. Für Fehler und Warnungen, die nicht in eine Datenquelle auftreten, muss die diagnosemeldung dieses Format verwenden:  
   
- **[** *Hersteller-ID* **] [** *ODBC komponentenbezeichners* **]** * Komponente bereitgestellten text*  
+ **[** *Hersteller-ID* **] [** *ODBC komponentenbezeichners* **]**  *Komponente bereitgestellten text*  
   
  Für Fehler und Warnungen, die in einer Datenquelle auftreten, muss die diagnosemeldung dieses Format verwenden:  
   
- **[** *Hersteller-ID* **] [** *ODBC komponentenbezeichners* **] [** * datenquellenbezeichner* **]** *Data Source bereitgestellten Text*  
+ **[** *Hersteller-ID* **] [** *ODBC komponentenbezeichners* **] [**  *datenquellenbezeichner* **]** *Data Source bereitgestellten Text*  
   
  Die folgende Tabelle zeigt die Bedeutung der einzelnen Elemente an.  
   

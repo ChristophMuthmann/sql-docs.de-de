@@ -1,12 +1,15 @@
 ---
 title: NumericScale und Precision-Eigenschaft (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>NumericScale und Precision-Eigenschaft (VC++-Beispiel)
-Dieses Beispiel verwendet die [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) und [Genauigkeit](../../../ado/reference/ado-api/precision-property-ado.md) anzuzeigenden numerischen Dezimalstellen und die Genauigkeit der Felder in Eigenschaften der ***Rabatte*** Tabelle mit den *** Pubs*** Datenbank.  
+Dieses Beispiel verwendet die [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) und [Genauigkeit](../../../ado/reference/ado-api/precision-property-ado.md) anzuzeigenden numerischen Dezimalstellen und die Genauigkeit der Felder in Eigenschaften der ***Rabatte*** Tabelle mit den  ***Pubs*** Datenbank.  
   
 ```  
 // BeginNumericScaleCpp.cpp  

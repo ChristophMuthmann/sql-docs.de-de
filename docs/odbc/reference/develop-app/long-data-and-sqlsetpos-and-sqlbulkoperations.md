@@ -34,7 +34,7 @@ Wie bei Parametern in SQL-Anweisungen der Fall ist, long-Daten gesendet werden k
 > [!NOTE]  
 >  Eine-Anwendung tatsächlich senden kann jeden Datentyp zum Zeitpunkt der Ausführung mit **SQLPutData**, obwohl nur Zeichen- und Binärdaten in Teilen gesendet werden können. Wenn die Daten klein genug, um einen einzelnen Puffer zu groß ist, besteht jedoch im Allgemeinen kein Grund zur Verwendung **SQLPutData**. Es ist viel leichter, den Puffer zu binden, und lassen den Treiber, die Abrufen der Daten aus dem Puffer.  
   
- Da lange Datenspalten in der Regel nicht gebunden werden, muss die Anwendung die Spalte vor dem Aufruf binden **SQLBulkOperations** oder **SQLSetPos** und heben Sie die Bindung nach dem Aufruf **SQLBulkOperations ** oder **SQLSetPos**. Die Spalte gebunden werden muss, da **SQLBulkOperations** oder **SQLSetPos** kann nur für gebundene Spalten und aufgehoben werden muss, damit **SQLGetData** kann zum Abrufen von Daten verwendet werden aus der Spalte.  
+ Da lange Datenspalten in der Regel nicht gebunden werden, muss die Anwendung die Spalte vor dem Aufruf binden **SQLBulkOperations** oder **SQLSetPos** und heben Sie die Bindung nach dem Aufruf **SQLBulkOperations**  oder **SQLSetPos**. Die Spalte gebunden werden muss, da **SQLBulkOperations** oder **SQLSetPos** kann nur für gebundene Spalten und aufgehoben werden muss, damit **SQLGetData** kann zum Abrufen von Daten verwendet werden aus der Spalte.  
   
  Zum Senden von Daten zum Zeitpunkt der Ausführung führt die Anwendung Folgendes aus:  
   
