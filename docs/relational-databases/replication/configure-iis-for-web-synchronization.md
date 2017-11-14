@@ -354,7 +354,7 @@ ms.lasthandoff: 06/22/2017
   
 4.  Geben Sie im Dialogfeld **Verbindung mit \<ServerName> herstellen** den Anmeldenamen und das Kennwort an, den bzw. das der Merge-Agent zum Herstellen der Verbindung mit dem IIS verwenden soll. Diese Anmeldeinformationen werden auch im Assistenten für neue Abonnements angegeben.  
   
-5.  Überprüfen Sie im Internet Explorer-Fenster mit **** Diagnoseinformationen zur SQL-Websynchronisierung, ob der Wert in jeder **Status** -Spalte der Seite **Erfolg**lautet.  
+5.  Überprüfen Sie im Internet Explorer-Fenster mit **Diagnoseinformationen zur SQL-Websynchronisierung**, ob der Wert in jeder **Status** -Spalte der Seite **Erfolg**lautet.  
   
 6.  Stellen Sie sicher, dass das Zertifikat ordnungsgemäß auf dem Abonnenten installiert ist:  
   
