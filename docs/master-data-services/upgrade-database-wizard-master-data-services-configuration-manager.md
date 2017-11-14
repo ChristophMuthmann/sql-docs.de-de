@@ -23,7 +23,7 @@ ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Datenbankupgrade-Assistent (Konfigurations-Manager für Master Data Services)
-  Mit dem **** Datenbankupgrade-Assistenten können Sie [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbanken aktualisieren.  
+  Mit dem **Datenbankupgrade-Assistenten** können Sie [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbanken aktualisieren.  
   
 ## <a name="action"></a>Aktion  
  Dies ist die Einführungsseite des Assistenten. Klicken Sie auf **Weiter** , um mit dem Aktualisieren der Datenbank zu beginnen.  
