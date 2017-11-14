@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="dqs-administration"></a>DQS-Administration
-  Mit[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) können Sie verschiedene auf [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]ausgeführte DQS-Aktivitäten verwalten, auf DQS-bezogene Eigenschaften auf Serverebene, die Reference Data Service-Einstellungen und DQS-Protokolleinstellungen konfigurieren. Dies ist durch die Funktion Verwaltung **** in möglich [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. In Abhängigkeit von Ihrem Sicherheitszugriff (Rolle) in DQS wird Ihnen der Zugriff auf bestimmte Funktionen in diesem Bereich gewährt bzw. verweigert.  
+  Mit[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) können Sie verschiedene auf [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]ausgeführte DQS-Aktivitäten verwalten, auf DQS-bezogene Eigenschaften auf Serverebene, die Reference Data Service-Einstellungen und DQS-Protokolleinstellungen konfigurieren. Dies ist durch die Funktion **Verwaltung** in möglich [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. In Abhängigkeit von Ihrem Sicherheitszugriff (Rolle) in DQS wird Ihnen der Zugriff auf bestimmte Funktionen in diesem Bereich gewährt bzw. verweigert.  
   
  Abgesehen von diesen Verwaltungsaktivitäten enthält dieses Thema auch Informationen über eine Verwaltungsaktivität, Sichern und Wiederherstellen von DQS-Datenbanken, die nicht mithilfe von [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]ausgeführt wird.  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 09/09/2017
 -   Konfigurieren Sie die Protokollierung auf Grundlage des Schweregrads der Ereignisse.  
   
 ##  <a name="AdminUsingClent"></a> Verwalten von Aktivitäten mithilfe des Data Quality-Clients  
- Diese Aktivitäten werden mit der Funktion Verwaltung **** in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]ausgeführt.  
+ Diese Aktivitäten werden mit der Funktion **Verwaltung** in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]ausgeführt.  
   
 ### <a name="activity-monitoring"></a>Aktivitätsüberwachung  
  Auf dem Bildschirm **Aktivitätsüberwachung** in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] werden Informationen zu jeder Aktivität angezeigt, die auf einem [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]ausgeführt werden. Dieser Bildschirm wird vom Data Steward hauptsächlich verwendet, um alle auf dem verbundenen [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , mit dem die [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Anwendung verbunden ist, ausgeführten Aktivitäten auf hoher Ebene zu überwachen. Über diesen Bildschirm kann keine Überwachung auf Systemebene durchgeführt werden. Zudem können DQS-Administratoren mit diesem Bildschirm bei Bedarf eine Aktivität oder einen Prozess innerhalb einer Aktivität durch Beenden einer ausgeführten Aktivität oder Anhalten eines laufenden Prozesses innerhalb einer Aktivität steuern. Die Daten werden für die Wissensermittlung, die Domänenverwaltung, die Abgleichsrichtlinie, die Bereinigung, den Abgleich und für die SSIS-basierte Bereinigung (SQL Server Integration Services) angezeigt.  
