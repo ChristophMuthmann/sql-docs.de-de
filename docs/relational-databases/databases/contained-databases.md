@@ -59,7 +59,7 @@ ms.lasthandoff: 06/22/2017
  Ein Element, das die Datenbankbegrenzung überschreitet.  
   
  Nicht enthaltene Datenbank  
- Eine Datenbank, deren Eigenständigkeit auf **NONE**festgelegt ist. Alle Datenbanken in Versionen vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] sind nicht enthalten. Die Kapselung aller Datenbanken von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher ist standardmäßig auf **NONE**festgelegt.  
+ Eine Datenbank, deren Eigenständigkeit auf **NONE** festgelegt ist. Alle Datenbanken in Versionen vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] sind nicht enthalten. Die Kapselung aller Datenbanken von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher ist standardmäßig auf **NONE** festgelegt.   
   
  Teilweise enthaltene Datenbank  
  Eine teilweise eigenständige Datenbank ist eine eigenständige Datenbank, die einige Funktionen zulassen kann, die die Datenbankbegrenzung überschreiten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält die Fähigkeit ein zu bestimmen, wann die Kapselungsbegrenzung überschritten wird.  
@@ -81,14 +81,14 @@ ms.lasthandoff: 06/22/2017
 >  Das Aktivieren von teilweise eigenständigen Datenbanken delegiert die Steuerung über den Zugriff auf die Instanz der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an die Besitzer der Datenbank. Weitere Informationen finden Sie unter [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
  Datenbankbegrenzung  
- Da teilweise eigenständige Datenbanken Datenbankfunktionen von den Funktionen der Instanz trennen, besteht eine eindeutig definierte Trennlinie zwischen diesen beiden Elementen. Diese wird als *Datenbankbegrenzung*bezeichnet.  
+ Da teilweise eigenständige Datenbanken Datenbankfunktionen von den Funktionen der Instanz trennen, besteht eine eindeutig definierte Trennlinie zwischen diesen beiden Elementen. Diese wird als *Datenbankbegrenzung* bezeichnet.  
   
  Innerhalb der Datenbankbegrenzung befindet sich das *Datenbankmodell*, in dem die Datenbanken entwickelt und verwaltet werden. Beispiele für Entitäten, die sich innerhalb der Datenbank befinden, sind Systemtabellen (z.B. **sys.tables**), eigenständige Datenbankbenutzer mit Kennwörtern sowie Benutzertabellen in der aktuellen Datenbank, auf die mit einem zweiteiligen Namen verwiesen wird.  
   
  Außerhalb der Datenbankbegrenzung befindet sich das *Verwaltungsmodell*, das sich auf Funktionen auf Instanzebene und auf die Verwaltung bezieht. Beispiele für Entitäten, die sich außerhalb der Datenbankbegrenzung befinden, sind Systemtabellen wie **sys.endpoints**, zu Anmeldungen zugeordnete Benutzer und Benutzertabellen in einer anderen Datenbank, auf die mit einem dreiteiligen Namen verwiesen wird.  
   
 ##  <a name="containment"></a> Eigenständigkeit  
- Benutzerentitäten, die sich vollständig innerhalb der Datenbank befinden, werden als *enthalten*angesehen. Alle Benutzerentitäten, die sich außerhalb der Datenbank befinden oder sich auf die Interaktion mit Funktionen außerhalb der Datenbank stützen, werden als *nicht enthalten*angesehen.  
+ Benutzerentitäten, die sich vollständig innerhalb der Datenbank befinden, werden als *enthalten* angesehen. Alle Benutzerentitäten, die sich außerhalb der Datenbank befinden oder sich auf die Interaktion mit Funktionen außerhalb der Datenbank stützen, werden als *nicht enthalten* angesehen.  
   
  Im Allgemeinen sind Benutzerentitäten folgenden Kapselungskategorien zuzuordnen:  
   
@@ -102,15 +102,15 @@ ms.lasthandoff: 06/22/2017
  Geben Sie Informationen zu nicht eigenständigen Objekten und Funktionen mithilfe von [sys.dm_db_uncontained_entities](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) und [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) zurück. Durch Bestimmen des Kapselungsstatus der Elemente von Datenbanken können Sie ermitteln, welche Objekte und Funktionen ersetzt oder geändert werden müssen, um eine Kapselung zu erzielen.  
   
 > [!IMPORTANT]  
->  Da bestimmte Objekte bei der Eigenständigkeit die Standardeinstellung **NONE**aufweisen, werden von dieser Sicht möglicherweise falsch positive Ergebnisse zurückgegeben.  
+>  Da bestimmte Objekte bei der Eigenständigkeit die Standardeinstellung **NONE** aufweisen, werden von dieser Sicht möglicherweise falsch positive Ergebnisse zurückgegeben.  
   
  Das Verhalten teilweise eigenständiger Datenbanken unterscheidet sich von dem abhängiger Datenbanken am deutlichsten hinsichtlich der Sortierung. Weitere Informationen zu Sortierungsaspekten finden Sie unter [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md).  
   
 ##  <a name="benefits"></a> Vorteile des Verwendens von teilweise enthaltenen Datenbanken  
  Im Zusammenhang mit abhängigen Datenbanken treten Probleme und Schwierigkeiten auf, die mithilfe einer teilweise eigenständigen Datenbank behoben werden können.  
   
-### <a name="database-movement"></a>Verschiebung von Datenbanken  
- Eines der Probleme, das beim Verschieben von Datenbanken auftritt, besteht darin, dass einige wichtige Informationen beim Verschieben der Datenbank von einer Instanz zu einer anderen möglicherweise nicht verfügbar ist. Beispielsweise werden Anmeldeinformationen innerhalb der Instanz gespeichert und nicht in der Datenbank. Wenn Sie eine abhängige Datenbank von einer Instanz in eine andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verschieben, bleiben diese Daten zurück. Sie müssen die fehlenden Daten bestimmen und zusammen mit der Datenbank in die neue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verschieben. Dieser Vorgang kann schwierig und zeitaufwendig sein.  
+### <a name="database-movement"></a>Verschiebung von Datenbanken   
+ Eines der Probleme, das beim Verschieben von Datenbanken auftritt, besteht darin, dass einige wichtige Informationen beim Verschieben der Datenbank von einer Instanz zu einer anderen möglicherweise nicht verfügbar sind. Beispielsweise werden Anmeldeinformationen innerhalb der Instanz gespeichert und nicht in der Datenbank. Wenn Sie eine abhängige Datenbank von einer Instanz in eine andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verschieben, bleiben diese Daten zurück. Sie müssen die fehlenden Daten bestimmen und zusammen mit der Datenbank in die neue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verschieben. Dieser Vorgang kann schwierig und zeitaufwendig sein.  
   
  Die teilweise eigenständige Datenbank kann wichtige Daten in der Datenbank speichern. Demnach verfügt die Datenbank auch nach dem Verschieben weiterhin über die Daten.  
   
