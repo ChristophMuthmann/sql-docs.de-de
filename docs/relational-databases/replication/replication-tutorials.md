@@ -5,28 +5,25 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 helpviewer_keywords:
 - tutorials [SQL Server replication]
 - walkthroughs [SQL Server replication]
 - replication [SQL Server], tutorials
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3b25cb76e77fd59e63e3700ea418925bc37dd95e
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 84c864082da2c0a224b8ef42cea768c677534d23
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replication-tutorials"></a>Lernprogramme zur Replikation
 Zur Replikation stehen Lernprogramme zur Verfügung, in denen Sie lernen können, wie Replikationstopologien mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eingerichtet und ausgeführt werden.  
@@ -51,4 +48,3 @@ Hier erfahren Sie, wie Daten mithilfe der Mergereplikation zwischen einem Server
   
   
   
-

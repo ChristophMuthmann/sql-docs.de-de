@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,28 +14,27 @@ helpviewer_keywords:
 - components [SQL Server], connections
 - SQL Server Management Studio [SQL Server], connections
 ms.assetid: 5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 567cb988769e738f414f1c2a37971a792f8a41ec
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7d870ebdb27bcb83de08db14653b022aaba002de
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>Herstellen einer Verbindung mit einer beliebigen SQL Server-Komponente aus SQL Server Management Studio
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] stellt die Funktionalität zum Verwalten aller Komponenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]bereit. Mit [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] können Sie eine Verbindung zu folgenden Komponenten herstellen:  
   
 -   Eine Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)].  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)].  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]bereit.  
   
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)].  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)]bereit.  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)].  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)]bereit.  
   
 Obwohl [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] es Ihnen ermöglicht, mit Abfragen zu arbeiten, ohne zuerst eine Verbindung mit einer Datenquelle herzustellen, ist für die meisten anderen Aufgaben eine Verbindung erforderlich. [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] stellt das Dialogfeld **Verbindung mit Server herstellen** bereit, um Verbindungseigenschaften für [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Komponenten zu konfigurieren. Wenn [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] gestartet wird, wird das Dialogfeld **Verbindung mit Server herstellen** geöffnet, und Sie werden aufgefordert, eine Verbindung mit einem Server herzustellen. Das Dialogfeld **Verbindung mit Server herstellen** behält die Verbindungseinstellungen vom vorherigen Mal bei.  
   
@@ -56,4 +54,3 @@ Mit dem Projektmappen-Explorer können Sie zugehörige Abfragen, Skripts, Verbin
 [Verwenden von SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)  
 [Objekt-Explorer](../../ssms/object/object-explorer.md)  
   
-

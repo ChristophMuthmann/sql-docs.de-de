@@ -1,13 +1,11 @@
 ---
-title: "Auswählen zu migrierender Zeilen mithilfe einer Filterfunktion (Stretch-Datenbank) | Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
+title: "Auswählen zu migrierender Zeilen mithilfe einer Filterfunktion (Stretch Database) | Microsoft-Dokumentation"
+ms.custom: SQL2016_New_Updated
 ms.date: 06/27/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-stretch
+ms.technology: dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - Stretch Database, inline table-valued functions
 - inline table-valued functions for Stretch Database
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 097d613e8732823d91d660f6e8a0c1f6d749fb39
-ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
-
+ms.openlocfilehash: 290d0a17271d7099904eb7f4f50ffd8280fe2264
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Auswählen zu migrierender Zeilen mithilfe einer Filterfunktion (Stretch-Datenbank)
+# <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Auswählen zu migrierender Zeilen mithilfe einer Filterfunktion (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Wenn Sie kalte Daten in einer separaten Tabelle speichern, können Sie Stretch-Datenbank zum Migrieren der gesamten Tabelle konfigurieren. Wenn Ihre Tabelle sowohl heiße als auch kalte Daten enthält, können Sie ein Filterprädikat zum Auswählen der zu migrierenden Zeilen angeben. Das Filterprädikat ist eine Inline-Tabellenwertfunktion. In diesem Thema wird beschrieben, wie Sie eine Inline-Tabellenwertfunktion schreiben, um die zu migrierenden Zeilen auszuwählen.  
@@ -215,7 +212,7 @@ Wenn Sie eine Funktion verwenden möchten, die Sie im Assistenten **zum Aktivier
         SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;   
     ```  
   
-2. Warten Sie, bis die Migration abgeschlossen ist. Sie können den Status unter **Stretch-Datenbankmonitor** in SQL Server Management Studio überprüfen oder die Sicht **sys.dm_db_rda_migration_status** abfragen. Weitere Informationen finden Sie unter [Monitor and troubleshoot data migration](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) (Überwachung und Problembehandlung für die Datenmigration) oder [sys.dm_db_rda_migration_status](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md).  
+2. Warten Sie, bis die Migration abgeschlossen ist. Sie können den Status unter **Stretch Database-Überwachung** in SQL Server Management Studio überprüfen oder die Sicht **sys.dm_db_rda_migration_status** abfragen. Weitere Informationen finden Sie unter [Monitor and troubleshoot data migration](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) (Überwachung und Problembehandlung für die Datenmigration) oder [sys.dm_db_rda_migration_status](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md).  
   
 3. Erstellen Sie die Filterfunktion, die auf die Tabelle angewendet werden soll.  
   
@@ -621,4 +618,3 @@ Ein kompromittiertes Konto mit db_owner-Berechtigungen kann folgende Aktionen au
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   
-

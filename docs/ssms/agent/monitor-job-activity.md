@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,20 +20,19 @@ helpviewer_keywords:
 - performance [SQL Server], jobs
 - current activity
 ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 762fd21319860bfe98fcbeeec5b777b62f54c533
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 469142ab52bedda92cba1650982afbc6809b77ea
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-job-activity"></a>Überwachen der Auftragsaktivität
-Sie können die aktuellen Aktivitäten aller definierten Aufträge auf einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] überwachen, indem Sie den Auftragsaktivitätsmonitor des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agents verwenden.  
+Sie können die aktuellen Aktivitäten aller definierten Aufträge auf einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] überwachen, indem Sie den Auftragsaktivitätsmonitor des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agents verwenden.  
   
 ## <a name="sql-server-agent-sessions"></a>Sitzungen des SQL Server-Agents  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent erstellt jedes Mal, wenn der Dienst gestartet wird, eine neue Sitzung. Beim Erstellen einer neuen Sitzung wird die **sysjobactivity** -Tabelle in der **msdb** -Datenbank mit allen vorhandenen definierten Aufträgen aufgefüllt. Beim Neustart des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agents bleibt die letzte Auftragsaktivität in dieser Tabelle erhalten. Jede Sitzung zeichnet die normale Auftragsaktivität des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agents vom Anfang bis zum Ende des Auftrags auf. Informationen zu diesen Sitzungen werden in der **syssessions** -Tabelle der **msdb** -Datenbank gespeichert.  
@@ -71,4 +69,3 @@ Sie können Auftragsaktivitäten für die aktuelle Sitzung auch mithilfe der ges
 [syssessions (Transact-SQL)](http://msdn.microsoft.com/en-us/187819b6-c7f4-4a26-b74c-0a89e96695cf)  
 [sp_help_jobactivity (Transact-SQL)](http://msdn.microsoft.com/en-us/d344864f-b4d3-46b1-8933-b81dec71f511)  
   
-

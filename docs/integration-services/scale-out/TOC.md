@@ -8,5 +8,5 @@
 # [Ausführen von Paketen in horizontaler Hochskalierung](run-packages-in-integration-services-ssis-scale-out.md)
 # [Ändern des Kontos für die Scale Out-Protokollierung](change-logdb-account.md)
 # [Umgang mit Zertifikaten in Scale Out](deal-with-certificates-in-ssis-scale-out.md)
-# [Scale Out-Unterstützung für hohe Verfügbarkeit](scale-out-support-for-high-availability.md)
+# [Scale Out-Unterstützung für Hochverfügbarkeit](scale-out-support-for-high-availability.md)
 # [Problembehandlung für Scale Out](troubleshooting-scale-out.md)

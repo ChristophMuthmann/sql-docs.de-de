@@ -1,27 +1,24 @@
 ---
 title: Verwalten der Beibehaltung von Verlaufsdaten in temporalen Tabellen mit Systemversionsverwaltung | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 05/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 08416515a890c5e1f2775afa436ed3bcb4bb0bd7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 96ca811479e59cc444e6ad0ddef19ab3bd7ec3f8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Verwalten der Beibehaltung von Verlaufsdaten in temporalen Tabellen mit Systemversionsverwaltung
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -57,10 +54,10 @@ ms.lasthandoff: 09/27/2017
   
  [Stretch-Datenbank](../../sql-server/stretch-database/stretch-database.md) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migriert die Verlaufsdaten transparent zu Azure. Zur Erhöhung der Sicherheit können Sie Daten während der Übertragung mit der SQL Server-Funktion [Always Encrypted](https://msdnstage.redmond.corp.microsoft.com/library/mt163865.aspx) verschlüsseln. Darüber hinaus können Sie zum Schutz Ihrer Daten [Sicherheit auf Zeilenebene](../../relational-databases/security/row-level-security.md) und andere erweiterte SQL Server-Sicherheitsfeatures für eine temporale Datenbank und Stretch-Datenbank verwenden.  
   
- Mit Stretch-Datenbank können Sie einige oder alle Ihrer temporalen Verlaufstabellen auf Azure ausweiten, und SQL Server verschiebt Verlaufsdaten im Hintergrund nach Azure. Durch die Aktivierung von Stretch für eine Verlaufstabelle ändert sich die Interaktion mit der temporalen Tabelle im Hinblick auf Datenänderungen und temporale Abfragen nicht.  
+ Mit Stretch Database können Sie für einige oder alle Ihrer temporalen Verlaufstabellen ein Stretching auf Azure durchführen, und SQL Server verschiebt Verlaufsdaten im Hintergrund nach Azure. Durch die Aktivierung von Stretch für eine Verlaufstabelle ändert sich die Interaktion mit der temporalen Tabelle im Hinblick auf Datenänderungen und temporale Abfragen nicht.  
   
 -   **Strecken der gesamten Verlaufstabelle:** Konfigurieren Sie Stretch-Datenbank für die gesamte Verlaufstabelle, wenn das wichtigste Szenario die Datenüberwachung in einer Umgebung mit häufigen Datenänderungen und relativ seltenen Abfragen von Verlaufsdaten ist.  Verwenden Sie diesen Ansatz also, wenn die Leistung temporaler Abfragen nicht entscheidend ist. In diesem Fall kann die von Azure bereitgestellte Kosteneffizienz interessant sein.   
-    Beim Strecken der gesamten Verlaufstabelle können Sie den Stretch-Assistenten oder Transact-SQL verwenden. Beispiele für beides sind weiter unten aufgeführt.  
+    Beim Stretching der gesamten Verlaufstabelle können Sie den Stretch-Assistenten oder Transact-SQL verwenden. Beispiele für beides sind weiter unten aufgeführt.  
   
 -   **Strecken eines Teils der Verlaufstabelle:** Konfigurieren Sie Stretch-Datenbank nur für einen Teil der Verlaufstabelle, um die Leistung zu verbessern, wenn Ihr wichtigstes Szenario in erster Linie das Abfragen aktueller Verlaufsdaten beinhaltet, Sie aber die Option zum Abfragen älterer Verlaufsdaten bei Bedarf beibehalten möchten, solange diese Daten remote zu geringeren Kosten gespeichert werden. Mit Transact-SQL erreichen Sie dies, indem Sie eine Prädikatfunktion angeben, um die Zeilen auszuwählen, die aus der Verlaufstabelle migriert werden, statt alle Zeilen zu migrieren.  Wenn Sie mit temporalen Tabellen arbeiten, ist es in der Regel sinnvoll, Daten basierend auf einer Zeitbedingung zu verschieben (d. h. basierend auf dem Alter der Zeilenversion in der Verlaufstabelle).    
     Wenn Sie eine deterministische Prädikatfunktion verwenden, können Sie einen Teil des Verlaufs in derselben Datenbank zusammen mit den aktuellen Daten behalten, während der Rest zu Azure migriert wird.    
@@ -68,10 +65,10 @@ ms.lasthandoff: 09/27/2017
   
 > **HINWEIS:** Stretch-Datenbank migriert Daten zu Azure. Daher benötigen Sie ein Azure-Konto und ein Abonnement für die Abrechnung. Um ein kostenloses Azure-Testkonto zu erhalten, melden Sie sich für eine [einmonatige kostenlose Testversion](https://azure.microsoft.com/pricing/free-trial/)an.  
   
- Sie können eine temporale Verlaufstabelle für Stretch mit dem Stretch-Assistenten oder Transact-SQL konfigurieren, und Sie können eine temporale Verlaufstabelle für Stretch aktivieren, wenn die Systemversionsverwaltung auf **ON**festgelegt ist. Ein Strecken der aktuellen Tabelle ist nicht zulässig, da es nicht sinnvoll ist, die aktuelle Tabelle zu strecken.  
+ Sie können eine temporale Verlaufstabelle für Stretch mit dem Stretch-Assistenten oder Transact-SQL konfigurieren, und Sie können eine temporale Verlaufstabelle für Stretch aktivieren, wenn die Systemversionsverwaltung auf **ON**festgelegt ist. Ein Stretching der aktuellen Tabelle ist nicht zulässig, da es nicht sinnvoll ist, für die aktuelle Tabelle ein Stretching durchzuführen.  
   
-### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>Verwenden des Stretch-Assistenten zum Strecken der gesamten Verlaufstabelle  
- Die einfachste Methode für Anfänger ist, den Stretch-Assistenten zu verwenden, um das Strecken für die gesamte Datenbank zu aktivieren. Wählen Sie dann die temporale Verlaufstabelle im Stretch-Assistenten aus (in diesem Beispiel wird davon ausgegangen, dass Sie die Department-Tabelle als eine temporale Tabelle mit Systemversionsverwaltung in einer ansonsten leeren Datenbank konfiguriert haben). In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]können Sie nicht mit der rechten Maustaste auf die temporale Verlaufstabelle selbst klicken und dann auf „Stretch“ klicken.  
+### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>Verwenden des Stretch-Assistenten für ein Stretching der gesamten Verlaufstabelle  
+ Die einfachste Methode für Anfänger ist, den Stretch-Assistenten zu verwenden, um Stretch für die gesamte Datenbank zu aktivieren. Wählen Sie dann die temporale Verlaufstabelle im Stretch-Assistenten aus (in diesem Beispiel wird davon ausgegangen, dass Sie die Department-Tabelle als eine temporale Tabelle mit Systemversionsverwaltung in einer ansonsten leeren Datenbank konfiguriert haben). In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]können Sie nicht mit der rechten Maustaste auf die temporale Verlaufstabelle selbst klicken und dann auf „Stretch“ klicken.  
   
 1.  Klicken Sie mit der rechten Maustaste auf die Datenbank, und zeigen Sie auf **Aufgaben**, zeigen Sie auf **Stretch**, und klicken Sie dann auf **Aktivieren** , um den Assistenten zu starten.  
   
@@ -87,11 +84,11 @@ ms.lasthandoff: 09/27/2017
   
      ![Sichere Anmeldeinformationenseite des Stretch-Datenbank-Assistenten](../../relational-databases/tables/media/stretch-wizard-6.png "Sichere Anmeldeinformationenseite des Stretch-Datenbank-Assistenten")  
   
-5.  Geben Sie im Fenster **IP-Adresse auswählen** den IP-Adressbereich für Ihre SQL Server-Instanz an, um Ihrem Azure-Server die Kommunikation mit SQL Server zu ermöglichen (bei Auswahl eines vorhandenen Servers, für den bereits eine Firewallregel vorhanden ist, klicken Sie hier einfach auf „Weiter“, um die vorhandene Firewallregel zu verwenden). Klicken Sie auf **Weiter** dann auf **Fertig stellen** , um Stretch-Datenbank zu aktivieren und die temporale Verlaufstabelle zu strecken.  
+5.  Geben Sie im Fenster **IP-Adresse auswählen** den IP-Adressbereich für Ihre SQL Server-Instanz an, um Ihrem Azure-Server die Kommunikation mit SQL Server zu ermöglichen (bei Auswahl eines vorhandenen Servers, für den bereits eine Firewallregel vorhanden ist, klicken Sie hier einfach auf „Weiter“, um die vorhandene Firewallregel zu verwenden). Klicken Sie auf **Weiter** dann auf **Fertig stellen**, um Stretch Database zu aktivieren und ein Stretching für die temporale Verlaufstabelle durchzuführen.  
   
      ![Wählen der IP-Adressseite des Stretch-Datenbank-Assistenten](../../relational-databases/tables/media/stretch-wizard-7.png "Wählen der IP-Adressseite des Stretch-Datenbank-Assistenten")  
   
-6.  Überprüfen Sie nach Abschluss des Assistenten, ob die Datenbank erfolgreich für Stretch aktiviert wurde. Beachten Sie die Symbole im Objekt-Explorer, die angeben, dass die Datenbank gestreckt wurde.  
+6.  Überprüfen Sie nach Abschluss des Assistenten, ob die Datenbank erfolgreich für Stretch aktiviert wurde. Beachten Sie die Symbole im Objekt-Explorer, die angeben, dass für die Datenbank ein Stretching durchgeführt wurde.  
   
 > **HINWEIS:** Wenn das Aktivieren der Datenbank für Stretch fehlschlägt, überprüfen Sie das Fehlerprotokoll. Ein häufiger Fehler ist eine fehlerhafte Konfiguration der Firewallregel.  
   
@@ -103,16 +100,16 @@ ms.lasthandoff: 09/27/2017
   
 -   [Aktivieren von Stretch-Datenbank für eine Tabelle](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
-### <a name="using-transact-sql-to-stretch-the-entire-history-table"></a>Verwenden von Transact-SQL zum Strecken der gesamten Verlaufstabelle  
- Sie können alternativ Transact-SQL verwenden, um die Streckung für den lokalen Server zu aktivieren, und [Stretch-Datenbank für eine Datenbank zu aktivieren](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md). Sie können dann  [Transact-SQL verwenden, um Stretch-Datenbank für eine Tabelle zu aktivieren](https://msdn.microsoft.com/library/mt605115.aspx#Anchor_1). Führen Sie mit einer Datenbank, die zuvor für Stretch-Datenbank aktiviert wurde, das folgende Transact-SQL-Skript aus, um eine vorhandene temporale Verlaufstabelle mit Systemversionsverwaltung zu strecken:  
+### <a name="using-transact-sql-to-stretch-the-entire-history-table"></a>Verwenden von Transact-SQL zum Durchführen eines Stretchings der gesamten Verlaufstabelle  
+ Sie können alternativ Transact-SQL verwenden, um die Streckung für den lokalen Server zu aktivieren, und [Stretch-Datenbank für eine Datenbank zu aktivieren](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md). Sie können dann  [Transact-SQL verwenden, um Stretch-Datenbank für eine Tabelle zu aktivieren](https://msdn.microsoft.com/library/mt605115.aspx#Anchor_1). Führen Sie mit einer Datenbank, die zuvor für Stretch Database aktiviert wurde, das folgende Transact-SQL-Skript aus, um für eine vorhandene temporale Verlaufstabelle mit Systemversionsverwaltung ein Stretching durchzuführen:  
   
 ```  
 ALTER TABLE <history table name>   
 SET (REMOTE_DATA_ARCHIVE = ON (MIGRATION_STATE = OUTBOUND));  
 ```  
   
-### <a name="using-transact-sql-to-stretch-a-portion-of-the-history-table"></a>Verwenden von Transact-SQL zum Strecken eines Teils der Verlaufstabelle  
- Um nur einen Teil der Verlaufstabelle zu strecken, erstellen Sie zunächst eine [Inlineprädikatfunktion](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). In diesem Beispiel gehen wir davon aus, dass Sie zum ersten Mal am 1. Dezember 2015 die Inlineprädikatfunktion konfiguriert haben und dass alle Verlaufsdaten, die älter als der 1. November 2015 sind, auf Azure gestreckt werden sollen. Um dies zu erreichen, erstellen Sie zunächst die folgende Funktion:  
+### <a name="using-transact-sql-to-stretch-a-portion-of-the-history-table"></a>Verwenden von Transact-SQL zum Durchführen eines Stretchings für einen Teil der Verlaufstabelle  
+ Um nur für einen Teil der Verlaufstabelle ein Stretching durchzuführen, erstellen Sie zunächst eine [Inlineprädikatfunktion](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). In diesem Beispiel gehen wir davon aus, dass Sie zum ersten Mal am 1. Dezember 2015 die Inlineprädikatfunktion konfiguriert haben und dass für alle Verlaufsdaten, die vor dem 1. November 2015 gespeichert wurden, ein Stretching auf Azure durchgeführt werden soll. Um dies zu erreichen, erstellen Sie zunächst die folgende Funktion:  
   
 ```  
 CREATE FUNCTION dbo.fn_StretchBySystemEndTime20151101(@systemEndTime datetime2)   
@@ -511,4 +508,3 @@ Weitere Details finden Sie unter: [Verwalten von Verlaufsdaten in temporalen Tab
  [Metadatenansichten und Funktionen für temporale Tabellen](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
-

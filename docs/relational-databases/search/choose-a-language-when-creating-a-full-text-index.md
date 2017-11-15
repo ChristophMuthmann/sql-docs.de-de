@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-search
+ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +18,16 @@ helpviewer_keywords:
 - languages [SQL Server], full-text indexes
 - word breakers [full-text search]
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 72f8dcb0e0426d8e37ae7284163f841caa478570
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 82edddf024831f41ce82ce8ec5d3f212513d89f7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Auswählen einer Sprache beim Erstellen eines Volltextindex
   Wenn Sie einen Volltextindex erstellen, müssen Sie für die indizierte Spalte eine Spaltensprache angeben. Die [Wörtertrennung und Wortstammerkennung](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) der angegebenen Sprache wird von Volltextabfragen für die Spalte verwendet. Bei der Wahl der Spaltensprache für die Erstellung eines Volltextindex sind mehrere Dinge zu bedenken. Diese beziehen sich darauf, wie der Text vom Volltextmodul in Token zerlegt und anschließend indiziert wird.  

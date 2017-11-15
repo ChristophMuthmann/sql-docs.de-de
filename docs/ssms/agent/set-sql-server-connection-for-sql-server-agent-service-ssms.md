@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Agent, connections
 - connections [SQL Server], SQL Server Agent service
 ms.assetid: 28b6178b-0a9e-4f2c-8562-7a62d2d2a285
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4129f5324f4b93efb98e9bd437571daa0bc404a1
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ae121d1c655caadfb447d2714601c0f24ea71c1c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-the-sql-server-connection-for-the-sql-server-agent-service-sql-server-management-studio"></a>Festlegen der SQL Server-Verbindung für den SQL Server-Agent-Dienst (SQL Server Management Studio)
 In diesem Thema wird beschrieben, wie Sie die Verbindung zwischen dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent und [!INCLUDE[ssDE](../../includes/ssde_md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]festlegen. Mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Diensts kann eine Verbindung mit einer lokalen Instanz von SQL Server mit der Windows-Authentifizierung hergestellt werden.  
@@ -48,7 +46,7 @@ In diesem Thema wird beschrieben, wie Sie die Verbindung zwischen dem [!INCLUDE[
   
 -   Seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)]unterstützt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Authentifizierung. Diese Option ist nur beim Verwalten früherer Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]verfügbar.  
   
-### <a name="Security"></a>Sicherheit  
+### <a name="Security"></a>Security  
   
 #### <a name="Permissions"></a>Berechtigungen  
 Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent muss zur Verwendung der Anmeldeinformationen eines Kontos konfiguriert werden, das Mitglied der festen Serverrolle **sysadmin** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ist, um seine Funktionen ausführen zu können. Das Konto muss über die folgenden Windows-Berechtigungen verfügen:  
@@ -75,4 +73,3 @@ Weitere Informationen zu den Windows-Berechtigungen, die für das [!INCLUDE[ssNo
   
 4.  Wählen Sie unter **SQL Server-Verbindung**die Option **Windows-Authentifizierung verwenden** aus, damit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent beim Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssDE](../../includes/ssde_md.md)] die [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows-Authentifizierung verwenden kann. Für Verbindungen mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] und höher muss die Windows-Authentifizierung verwendet werden.  
   
-

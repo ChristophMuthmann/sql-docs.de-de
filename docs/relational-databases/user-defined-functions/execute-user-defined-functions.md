@@ -5,25 +5,23 @@ ms.date: 10/24/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-udf
+ms.technology: dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - invoking user-defined functions
 - user-defined functions [SQL Server], executing
 ms.assetid: 0de7744d-9b73-463f-ae80-e31a020004b5
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 121ec11d9bf1dbd380716da37e78463467d41f54
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 8bf738f8ef313edd347fadcabf91a8007c228a7d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="execute-user-defined-functions"></a>Ausführen von benutzerdefinierten Funktionen
   Ausführen einer benutzerdefinierten Funktion mit Transact-SQL
@@ -67,4 +65,3 @@ SELECT N'Order Status: ' + @ret;
   
   
   
-

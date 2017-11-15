@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, target servers
 - target servers [SQL Server], creating
 ms.assetid: 13aabe2d-67fe-4c67-8d49-2928dd705b7a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: be4e79791bad00c268354d91dab4a301a79b5ef4
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f6fe3a1ebc7a0d50b9f124d22f7847ff54d2ba2b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="make-a-target-server"></a>Erstellen eines Zielservers
 In diesem Thema wird beschrieben, wie Sie einen Zielserver in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)]oder SQL Server Management Objects (SMO) erstellen.  
@@ -48,7 +46,7 @@ In diesem Thema wird beschrieben, wie Sie einen Zielserver in [!INCLUDE[ssCurren
   
 ## <a name="BeforeYouBegin"></a>Vorbereitungen  
   
-### <a name="Security"></a>Sicherheit  
+### <a name="Security"></a>Security  
 Verteilte Aufträge mit Schritten, die einem Proxy zugeordnet sind, werden im Kontext des Proxykontos auf dem Zielserver ausgeführt. Stellen Sie sicher, dass die folgenden Bedingungen erfüllt sind, da andernfalls einem Proxy zugeordnete Auftragsschritte nicht vom Masterserver auf den Zielserver heruntergeladen werden:  
   
 -   Der Registrierungsunterschlüssel des Masterservers **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<&#42;instance_name&#42;>\SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) wird auf 1 (true) festgelegt. Dieser Unterschlüssel ist standardmäßig auf 0 (false) festgelegt.  
@@ -113,4 +111,3 @@ Berechtigungen zur Ausführung dieser Prozedur erhalten standardmäßig Mitglied
 ## <a name="see-also"></a>Siehe auch  
 [Automatisierte Verwaltung in einem Unternehmen](../../ssms/agent/automated-administration-across-an-enterprise.md)  
   
-

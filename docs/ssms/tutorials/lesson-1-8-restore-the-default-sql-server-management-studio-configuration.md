@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 4efb0f74-edd5-4b14-bca6-bee94fb48bcc
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 89b560ab563dbed6236ba694b692cdff0dfa8685
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 0038cdb40b315e3a32159902e889f3a7306cb993
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-8---restore-the-default-sql-server-management-studio-configuration"></a>Lektion 1-8: Wiederherstellen der Standardkonfiguration von SQL Server Management Studio
 Möglicherweise haben Benutzer mit wenig Erfahrung im Umgang mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] versehentlich Fenster geschlossen oder ausgeblendet und jetzt Probleme beim Wiederherstellen des ursprünglichen Layouts von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Mit den folgenden Schritten wird das Standardumgebungslayout von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] wiederhergestellt.  
@@ -41,4 +38,3 @@ Möglicherweise haben Benutzer mit wenig Erfahrung im Umgang mit [!INCLUDE[ssMan
   
   
   
-

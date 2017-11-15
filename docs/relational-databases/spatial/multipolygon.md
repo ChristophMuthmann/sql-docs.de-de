@@ -5,24 +5,23 @@ ms.date: 03/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-spatial
+ms.technology: dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - MultiPolygon geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 06a27579c5e54406093daf4eb318c2e004a9763b
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 7ef921a21028f0d477a8c918b00ca3ec5210ccc9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="multipolygon"></a>MultiPolygon
   Eine **MultiPolygon** -Instanz ist eine Sammlung von null oder mehr **Polygon** -Instanzen.  

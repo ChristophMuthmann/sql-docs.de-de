@@ -5,25 +5,22 @@ ms.date: 03/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.monitor.beta2.f1
-helpviewer_keywords:
-- Replication Monitor, help
+f1_keywords: sql13.rep.monitor.beta2.f1
+helpviewer_keywords: Replication Monitor, help
 ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e42bb12b2af3ec0e640314aa4f703feb12666329
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 88d326cb4bbb7383391ca1956deb7456fc4283e8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replication-monitor"></a>Replikationsmonitor
   Dieser Abschnitt der Dokumentation enthält Informationen zum Replikationsmonitor. Die im Monitor angezeigten Seiten und Dialogfelder können Unterschiede aufweisen, abhängig vom Replikationstyp und der Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die überwacht wird.  

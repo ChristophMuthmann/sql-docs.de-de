@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +19,19 @@ helpviewer_keywords:
 - multiple instances of SQL Server
 - target servers [SQL Server]
 ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 618e199812a39ec29e032f8371419ec6184c713f
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5bdcf6d71e83d0edabd5ba3650fd6fb963dbf51c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Automatisierte Verwaltung in einem Unternehmen
-Das Automatisieren der Verwaltung über mehrere Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] hinweg wird *Multiserververwaltung* genannt. Verwenden Sie die Multiserveradministration für folgende Aufgaben:  
+Das Automatisieren der Verwaltung über mehrere Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] hinweg wird *Multiserververwaltung*genannt. Verwenden Sie die Multiserveradministration für folgende Aufgaben:  
   
 -   Verwalten von zwei oder mehr Servern.  
   
@@ -98,4 +96,3 @@ Enthält Informationen dazu, wie die automatisierte Verwaltung in einer Multiser
 [syslogins](http://msdn.microsoft.com/en-us/4cb34f17-a4bb-469f-a218-71f074e6308f)  
 [systargetservers](http://msdn.microsoft.com/en-us/479d1314-be37-4d19-ac9c-419fc9110e53)  
   
-

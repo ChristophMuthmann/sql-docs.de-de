@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-stored-Procs
+ms.technology: dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - recompiling stored procedures
 - stored procedures [SQL Server], recompiling
 ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e2c8f7940c224d22fc93eea4d2c269658e97f266
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: ec48fb989e7735b52603aecc2059d0806cbf9c53
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="recompile-a-stored-procedure"></a>Erneutes Kompilieren einer gespeicherten Prozedur
   In diesem Thema wird beschrieben, wie Sie eine gespeicherte Prozedur in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)]erneut kompilieren. Hierzu stehen drei Möglichkeiten zur Verfügung: die **WITH RECOMPILE** -Option in der Prozedurdefinition, beim Aufrufen der Prozedur der **RECOMPILE** -Abfragehinweis in einzelnen Anweisungen oder die gespeicherte Systemprozedur **sp_recompile** . In diesem Thema wird die Verwendung der WITH RECOMPILE-Option beim Erstellen einer Prozedurdefinition und Ausführen einer vorhandenen Prozedur beschrieben. Zudem wird erläutert, wie die gespeicherte Systemprozedur sp_recompile zum erneuten Kompilieren einer vorhandenen Prozedur verwendet wird.  

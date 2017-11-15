@@ -5,22 +5,20 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0fc668d4-6244-4fef-b90e-62d2c776cd7c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6707983f3fe707a5253ff6722adb190579bd1d48
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 62f55e0baa0bc0518e1ae5104e7e17260aa3596a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="list-job-category-information"></a>Auflisten von Informationen zu Auftragskategorien
 In diesem Thema wird beschrieben, wie Sie Auftragskategorieinformationen in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mithilfe von [!INCLUDE[tsql](../../includes/tsql_md.md)] oder SQL Server Management Objects auflisten können.  
@@ -67,4 +65,3 @@ Weitere Informationen finden Sie unter [sp_help_category (Transact-SQL)](http://
   
 Verwenden Sie die **JobCategory** -Klasse, indem Sie eine von Ihnen ausgewählte Programmiersprache, z. B. Visual Basic, Visual C# oder PowerShell verwenden.  
   
-

@@ -7,21 +7,19 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
 ms.openlocfilehash: e4466a00945b2cc919ed9c2332ccf42f536f89bd
-ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>Dateispeicherorte für Standard- und benannte Instanzen von SQL Server
   Eine Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] besteht aus einer oder mehreren separaten Instanzen. Eine Instanz (Standard- als auch benannte Instanz) besitzt eine Reihe eigener Programm- und Datendateien sowie mehrere freigegebene Dateien, die für alle Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem Computer freigegeben werden.  
@@ -151,4 +149,3 @@ Beachten Sie, dass das Standardlaufwerk für Dateispeicherorte *systemdrive*laut
  [Konfigurationseigenschaften von Analysis Services – Datenverzeichnisse](http://msdn.microsoft.com/library/ef732855-b7af-4f40-a619-5573c1c354bb)  
   
   
-

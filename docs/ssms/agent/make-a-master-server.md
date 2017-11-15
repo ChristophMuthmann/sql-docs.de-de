@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, master servers
 - Master Server Wizard
 ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 99f55a30de01a0f9848b8f1c1f4f75e3d3c3fe3c
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: fdaaf25e74004b787f02e17a8f04598d1e2d13f0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="make-a-master-server"></a>Einrichten eines Masterservers
 In diesem Thema wird beschrieben, wie Sie mithilfe von [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] einen [!INCLUDE[tsql](../../includes/tsql_md.md)]-Masterserver einrichten.  
@@ -50,7 +48,7 @@ In diesem Thema wird beschrieben, wie Sie mithilfe von [!INCLUDE[ssCurrent](../.
   
 ## <a name="BeforeYouBegin"></a>Vorbereitungen  
   
-### <a name="Security"></a>Sicherheit  
+### <a name="Security"></a>Security  
 Verteilte Aufträge mit Schritten, die einem Proxy zugeordnet sind, werden im Kontext des Proxykontos auf dem Zielserver ausgeführt. Stellen Sie sicher, dass die folgenden Bedingungen erfüllt sind, da andernfalls einem Proxy zugeordnete Auftragsschritte nicht vom Masterserver auf den Zielserver heruntergeladen werden:  
   
 -   Der Registrierungsunterschlüssel des Masterservers **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<&#42;instance_name&#42;>\SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) wird auf 1 (true) festgelegt. Dieser Unterschlüssel ist standardmäßig auf 0 (false) festgelegt.  
@@ -145,4 +143,3 @@ Weitere Informationen finden Sie unter [sp_msx_enlist (Transact-SQL)](http://msd
 [Erstellen einer Multiserverumgebung](../../ssms/agent/create-a-multiserver-environment.md)  
 [Automatisierte Verwaltung in einem Unternehmen](../../ssms/agent/automated-administration-across-an-enterprise.md)  
   
-

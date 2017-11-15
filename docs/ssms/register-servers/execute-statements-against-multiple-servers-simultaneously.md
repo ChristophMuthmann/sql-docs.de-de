@@ -5,8 +5,7 @@ ms.date: 07/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - executing queries against multiple servers
 - queries [SQL Server], multiserver
 ms.assetid: 197760f3-0a06-43de-8162-69c27d3fbe56
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: bbb8034b858033621ebe86f9214743ddbf02d68c
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: ee6fb349a9b2582d59a176af52b5eb4b71d79a37
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously"></a>Gleichzeitiges Ausführen von Anweisungen für mehrere Server
   In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Abfragen gleichzeitig für mehrere Server durchführen, indem Sie eine lokale Servergruppe oder einen zentralen Verwaltungsserver und eine oder mehrere Servergruppen sowie einen oder mehrere registrierte Server innerhalb der Gruppen erstellen und anschließend eine Abfrage für die ganze Gruppe durchführen. 
@@ -66,4 +64,3 @@ Die von der Abfrage zurückgegebenen Ergebnisse können in einem einzigen Ergebn
  [Verwalten mehrerer Server mithilfe von zentralen Verwaltungsservern](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
   
   
-

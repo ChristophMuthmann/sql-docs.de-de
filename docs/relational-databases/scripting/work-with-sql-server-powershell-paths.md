@@ -5,35 +5,34 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ee981bee7832202a85186216a21f6f3129dfdc0a
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: a6f1ac20142830ba91edc3835879bead8549f797
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>Verwenden von SQL Server PowerShell-Pfaden
   Nach der Navigation zu einem Knoten in einem [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Anbieterpfad können Sie mit den Methoden und Eigenschaften des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Verwaltungsobjekts, das dem Knoten zugeordnet ist, Arbeiten ausführen oder Informationen abrufen.  
   
 1.  [Vorbereitungen](#BeforeYouBegin)  
   
-2.  **To work on a path node:**  [Listing Methods and Properties](#ListPropMeth), [Using Methods and Properties](#UsePropMeth)  
+2.  **So arbeiten Sie an einem Pfadknoten:**  [Auflisten von Methoden und Eigenschaften](#ListPropMeth), [Verwenden von Methoden und Eigenschaften](#UsePropMeth)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
  Nach der Navigation zu einem Knoten in einem [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Anbieterpfad können Sie zwei Arten von Aktionen ausführen:  
   
 -   Sie können Windows PowerShell-Cmdlets ausführen, die Vorgänge an Knoten durchführen, z.B. **Rename-Item**.  
   
--   Sie können die Methoden vom zugeordneten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Modell des Verwaltungsobjekts aufrufen, z. B. SMO. Wenn Sie beispielsweise zum Datenbankenknoten in einem Pfad navigieren, können Sie die Methoden und Eigenschaften der <xref:Microsoft.SqlServer.Management.Smo.Database>-Klasse verwenden.  
+-   Sie können die Methoden vom zugeordneten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Modell des Verwaltungsobjekts aufrufen, z. B. SMO. Wenn Sie beispielsweise zum Knoten Databases in einem Pfad navigieren, können Sie die Methoden und Eigenschaften der <xref:Microsoft.SqlServer.Management.Smo.Database> -Klasse verwenden.  
   
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anbieter wird zum Verwalten der Objekte in einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]verwendet. Er wird nicht verwendet, um mit den Daten in Datenbanken zu arbeiten. Wenn Sie zu einer Tabelle oder einer Sicht navigiert sind, können Sie den Anbieter nicht dazu verwenden, Daten auszuwählen, einzufügen, zu aktualisieren oder zu löschen. Verwenden Sie das Cmdlet **Invoke-Sqlcmd** , um Daten in Tabellen und Sichten aus der Windows PowerShell-Umgebung abzufragen oder zu ändern. Weitere Informationen finden Sie unter [Cmdlet Invoke-Sqlcmd](../../powershell/invoke-sqlcmd-cmdlet.md).  
   
@@ -43,7 +42,7 @@ ms.lasthandoff: 06/22/2017
  Sie können das Cmdlet **Get-Member** verwenden, um die für bestimmte Objekte oder Objektklassen verfügbaren Methoden und Eigenschaften anzuzeigen.  
   
 ### <a name="examples-listing-methods-and-properties"></a>Beispiele: Auflisten von Methoden und Eigenschaften  
- In diesem Beispiel wird eine Windows PowerShell-Variable auf die SMO-<xref:Microsoft.SqlServer.Management.Smo.Database>-Klasse festgelegt und listet die Methoden und Eigenschaften auf:  
+ In diesem Beispiel wird eine Windows PowerShell-Variable auf die <xref:Microsoft.SqlServer.Management.Smo.Database> -Klasse von SMO festgelegt und werden die Methoden und Eigenschaften aufgeführt:  
   
 ```  
 $MyDBVar = New-Object Microsoft.SqlServer.Management.SMO.Database  

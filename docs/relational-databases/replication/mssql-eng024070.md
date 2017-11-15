@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- MSSQL_ENG024070 error
+helpviewer_keywords: MSSQL_ENG024070 error
 ms.assetid: 23ac7e00-fab6-429b-9f85-2736a322aa65
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 205b2f0da8ad8a8f3523b8d554c84235df45d619
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: bd579b309fdf344b735a484f4c87f719e2490717
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqleng024070"></a>MSSQL_ENG024070
     
@@ -58,4 +56,3 @@ ms.lasthandoff: 06/22/2017
  [SQL Server-Konfigurations-Manager](../../relational-databases/sql-server-configuration-manager.md)  
   
   
-

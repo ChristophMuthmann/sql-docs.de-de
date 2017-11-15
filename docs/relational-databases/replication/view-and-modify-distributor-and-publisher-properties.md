@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - modifying replication properties, Distributors
 - Distributors [SQL Server replication], properties
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b0c9adb0d7fa110c08f280706d17706f4af07b07
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: dbc553f4f6e7013eb613f7bc2c89fc020c947801
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Anzeigen und Ändern der Verteiler- und Verlegereigenschaften
   In diesem Thema wird beschrieben, wie die Distributor-Eigenschaft und die Publisher-Eigenschaft in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) angezeigt und geändert werden.  
@@ -197,9 +196,9 @@ ms.lasthandoff: 08/03/2017
 > [!IMPORTANT]  
 >  Um die Speicherung von Anmeldeinformationen im Code vermeiden, wird das neue Verteilerkennwort zur Laufzeit angegeben.  
   
- [!code-cs[HowTo #rmo_ChangeDistPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_changedistpub)]  
+ [!code-cs[HowTo#rmo_ChangeDistPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_changedistpub)]  
   
- [!code-vb[HowTo #rmo_ChangeDistPub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changedistpub)]  
+ [!code-vb[HowTo#rmo_vb_ChangeDistPub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changedistpub)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konzepte für Replikationsverwaltungsobjekte (RMO)](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
@@ -211,4 +210,3 @@ ms.lasthandoff: 08/03/2017
  [Anzeigen von Informationen und Ausführen von Aufgaben für einen Verleger &#40;Replikationsmonitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
   
   
-

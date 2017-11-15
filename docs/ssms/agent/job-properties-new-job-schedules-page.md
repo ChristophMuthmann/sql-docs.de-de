@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ag.job.schedules.f1
+f1_keywords: sql13.ag.job.schedules.f1
 ms.assetid: 0b03585b-a510-484d-8a63-9b32459def9c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2caba3193b6fe9de2112cae7cc113e879fafced8
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f2d1a5874d6059fa67a6b33686d8a1299526b0c0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="job-properties---new-job-schedules-page"></a>Auftragseigenschaften – Neuer Auftrag (Seite „Zeitpläne“)
 Mithilfe dieser Seite können Sie Zeitpläne für einen [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agentauftrag anzeigen und verwalten.  
@@ -46,4 +43,3 @@ Entfernt den ausgewählten Zeitplan aus der Liste für den Auftrag. Wenn keine a
 ## <a name="see-also"></a>Siehe auch  
 [Implementieren von Aufträgen](../../ssms/agent/implement-jobs.md)  
   
-

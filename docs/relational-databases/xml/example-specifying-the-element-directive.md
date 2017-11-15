@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ELEMENT directive
+helpviewer_keywords: ELEMENT directive
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 09cafc5549257ccb614627316541f0d4f3142ad0
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7a7213ce0ad1fe8f13310a5e72f4143235451d7e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="example-specifying-the-element-directive"></a>Beispiel: Angeben der ELEMENT-Direktive
   Dadurch werden Mitarbeiterinformationen abgerufen und wird elementzentriertes XML generiert, wie nachfolgend zu sehen ist:  
@@ -92,4 +89,3 @@ FOR XML EXPLICIT;
  [Verwenden des EXPLICIT-Modus mit FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   
-

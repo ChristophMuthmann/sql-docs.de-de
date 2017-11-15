@@ -5,22 +5,20 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 176e73b6-08aa-48ec-b349-e84b431e65cc
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f431174986975cc5b5d6f25c6e9aa89469ee94b4
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f82243c5d9a5c42df9fd553a879092fd06d262ca
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>Ändern der einem Masterauftrag für den SQL Server-Agent zugewiesenen Zielserver
 In diesem Thema wird beschrieben, wie Sie die Zielserver, die einem Masterauftrag für den SQL Server-Agent zugewiesen sind, mithilfe von [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] in [!INCLUDE[tsql](../../includes/tsql_md.md)]ändern.  
@@ -44,7 +42,7 @@ In diesem Thema wird beschrieben, wie Sie die Zielserver, die einem Masterauftra
 ### <a name="Restrictions"></a>Einschränkungen  
 Ein Masterauftrag für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent kann nicht gleichzeitig lokale Server und Remoteserver als Ziel haben.  
   
-### <a name="Security"></a>Sicherheit  
+### <a name="Security"></a>Security  
   
 #### <a name="Permissions"></a>Berechtigungen  
 Sie können nur Aufträge ändern, die in Ihrem Besitz sind, es sei denn, Sie sind ein Mitglied der festen Serverrolle **sysadmin** . Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
@@ -112,4 +110,3 @@ Weitere Informationen finden Sie unter [sp_delete_jobserver (Transact-SQL)](http
   
 Weitere Informationen finden Sie unter [sp_add_jobserver (Transact-SQL)](http://msdn.microsoft.com/en-us/485252cc-0081-490a-9bd1-cbbd68eea286).  
   
-

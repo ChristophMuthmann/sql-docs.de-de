@@ -5,12 +5,10 @@ ms.date: 08/30/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.tutorialstart.ssms.f1
+f1_keywords: sql13.tutorialstart.ssms.f1
 helpviewer_keywords:
 - projects [SQL Server Management Studio], tutorials
 - templates [SQL Server], SQL Server Management Studio
@@ -22,17 +20,16 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 5aa858aff03e93db9db36b8caa710cc3a3b874ca
-ms.openlocfilehash: dde887f6e0999c5ebc107a300c33981a38ec7034
-ms.contentlocale: de-de
-ms.lasthandoff: 08/31/2017
-
+ms.openlocfilehash: c0f23dc5f31266df619b03e1dad56835607de88b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-sql-server-management-studio"></a>Lernprogramm: SQL Server Management Studio
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,5 +67,4 @@ Zum Durchlaufen dieses Tutorials muss Folgendes installiert sein:
   
   
   
-
 

@@ -5,12 +5,10 @@ ms.date: 10/19/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- audit
+f1_keywords: audit
 helpviewer_keywords:
 - audit actions [SQL Server]
 - audits [SQL Server], groups
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - audit action groups [SQL Server]
 - audits [SQL Server], actions
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d3eb276c9571a168a746e0e422adf426292cfad2
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: fbdcbf397021885a9a69875f6dcaa8122cab0d77
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server Audit-Aktionsgruppen und -Aktionen
   Die Funktion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit ermöglicht Ihnen, Ereignisgruppen und einzelne Ereignisse auf Server- und Datenbankebene zu überwachen. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbankmodul&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
@@ -231,4 +228,3 @@ ms.lasthandoff: 06/22/2017
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)  
   
   
-

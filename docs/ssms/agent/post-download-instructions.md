@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ag.target.post.f1
+f1_keywords: sql13.ag.target.post.f1
 ms.assetid: 11db1efb-8f5b-4284-b17c-04b4bfcef9ed
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dd82f10ad1b997b8e14080e030079d6179d6b848
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b20bfc05f18b7c06f66cc8cf5f13462b073ae1bc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="post-download-instructions"></a>Bereitstellen von Anweisungen zum Herunterladen
 Mithilfe dieser Seite können Sie Downloadanweisungen für einen Zielserver angeben.  
@@ -58,4 +55,3 @@ Zeigt das aktuelle Abrufintervall für den Zielserver an.
 ## <a name="see-also"></a>Siehe auch  
 [Automatisierte Verwaltung in einem Unternehmen](../../ssms/agent/automated-administration-across-an-enterprise.md)  
   
-

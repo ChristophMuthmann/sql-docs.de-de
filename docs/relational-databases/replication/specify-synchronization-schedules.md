@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - synchronization [SQL Server replication], schedules
 - replication [SQL Server], synchronization
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1d131e8e7aee66186245b0d69acb1b5c10285cf3
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 7858c07206dd1f3f9bbbbb3a1e91d7284280ea34
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-synchronization-schedules"></a>Angeben von Synchronisierungszeitplänen
   In diesem Thema wird beschrieben, wie Synchronisierungszeitpläne in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) angegeben werden. Während der Erstellung eines Abonnements kann ein Synchronisierungszeitplan definiert werden, der steuert, wann der Replikations-Agent für das Abonnement ausgeführt wird. Wenn Sie keine Zeitplanungsparameter angeben, wird der Standardzeitplan für das Abonnement verwendet.  
@@ -149,23 +148,23 @@ ms.lasthandoff: 08/03/2017
   
 -   **@frequency_type** &ndash; der Typ der Frequenz, der bei der Planung des Agents verwendet wird.  
   
--   **@frequency_interval** &amp;ndash; der Tag der Woche, an dem ein Agent ausgeführt wird.  
+-   **@frequency_interval** &ndash; der Tag der Woche, an dem ein Agent ausgeführt wird.  
   
--   **@frequency_relative_interval** &amp;ndash; die Woche eines gegebenen Monats, in der der Agent einmal monatlich ausgeführt wird.  
+-   **@frequency_relative_interval** &ndash; die Woche eines gegebenen Monats, in der der Agent einmal monatlich ausgeführt wird.  
   
--   **@frequency_recurrence_factor** &amp;ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Synchronisierungen liegen.  
+-   **@frequency_recurrence_factor** &ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Synchronisierungen liegen.  
   
--   **@frequency_subday** &amp;ndash; die Einheit für die Frequenz, wenn der Agent täglich mehrmals ausgeführt wird.  
+-   **@frequency_subday** &ndash; die Einheit für die Frequenz, wenn der Agent täglich mehrmals ausgeführt wird.  
   
--   **@frequency_subday_interval** &amp;ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Ausführungen liegen, wenn der Agent mehrmals täglich ausgeführt wird.  
+-   **@frequency_subday_interval** &ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Ausführungen liegen, wenn der Agent mehrmals täglich ausgeführt wird.  
   
--   **@active_start_time_of_day** &amp;ndash; die früheste Uhrzeit an einem gegebenen Tag, zu der eine Agent-Ausführung gestartet wird.  
+-   **@active_start_time_of_day** &ndash; die früheste Uhrzeit an einem gegebenen Tag, zu der eine Agent-Ausführung gestartet wird.  
   
--   **@active_end_time_of_day** &amp;ndash; die späteste Uhrzeit an einem gegebenen Tag, zu der eine Agent-Ausführung gestartet wird.  
+-   **@active_end_time_of_day** &ndash; die späteste Uhrzeit an einem gegebenen Tag, zu der eine Agent-Ausführung gestartet wird.  
   
--   **@active_start_date** &amp;ndash; der erste Tag, an dem der Agentzeitplan gültig ist.  
+-   **@active_start_date** &ndash; der erste Tag, an dem der Agentzeitplan gültig ist.  
   
--   **@active_end_date** &amp;ndash; der letzte Tag, an dem der Agentzeitplan gültig ist.  
+-   **@active_end_date** &ndash; der letzte Tag, an dem der Agentzeitplan gültig ist.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-transactional-publication"></a>So definieren Sie den Synchronisierungszeitplan für ein Pullabonnement für eine Transaktionsveröffentlichung  
   
@@ -203,25 +202,25 @@ ms.lasthandoff: 08/03/2017
   
 2.  Bevor Sie <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>aufrufen, legen Sie mindestens eines der folgenden Felder der <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> -Eigenschaft fest:  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> &amp;ndash; der Typ der Frequenz (z. B. täglich oder wöchentlich), den Sie beim Planen des Agents verwenden.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> &ndash; der Typ der Frequenz (z. B. täglich oder wöchentlich), den Sie beim Planen des Agents verwenden.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> &amp;ndash; der Tag der Woche, an dem ein Agent ausgeführt wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> &ndash; der Tag der Woche, an dem ein Agent ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> &amp;ndash; die Woche eines gegebenen Monats, in der der Agent einmal monatlich ausgeführt wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> &ndash; die Woche eines gegebenen Monats, in der der Agent einmal monatlich ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> &amp;ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Synchronisierungen liegen.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> &ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Synchronisierungen liegen.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> &amp;ndash; die Einheit für die Frequenz, wenn der Agent täglich mehrmals ausgeführt wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> &ndash; die Einheit für die Frequenz, wenn der Agent täglich mehrmals ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> &amp;ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Ausführungen liegen, wenn der Agent mehrmals täglich ausgeführt wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> &ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Ausführungen liegen, wenn der Agent mehrmals täglich ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> &amp;ndash; der früheste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> &ndash; der früheste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> &amp;ndash; der späteste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> &ndash; der späteste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> &amp;ndash; der erste Tag, an dem der Agentzeitplan in Kraft ist.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> &ndash; der erste Tag, an dem der Agentzeitplan in Kraft ist.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> &amp;ndash; der letzte Tag, an dem der Agentzeitplan in Kraft ist.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> &ndash; der letzte Tag, an dem der Agentzeitplan in Kraft ist.  
   
     > [!NOTE]  
     >  Wenn Sie keine dieser Eigenschaften angeben, wird ein Standardwert festgelegt.  
@@ -234,25 +233,25 @@ ms.lasthandoff: 08/03/2017
   
 2.  Bevor Sie <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>aufrufen, legen Sie mindestens eines der folgenden Felder der <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> -Eigenschaft fest:  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> &amp;ndash; der Typ der Frequenz (z. B. täglich oder wöchentlich), den Sie beim Planen des Agents verwenden.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> &ndash; der Typ der Frequenz (z. B. täglich oder wöchentlich), den Sie beim Planen des Agents verwenden.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> &amp;ndash; der Tag der Woche, an dem ein Agent ausgeführt wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> &ndash; der Tag der Woche, an dem ein Agent ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> &amp;ndash; die Woche eines bestimmten Monats, in der der Agent einmal monatlich ausgeführt wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> &ndash; die Woche eines bestimmten Monats, in der der Agent einmal monatlich ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> &amp;ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Synchronisierungen liegen.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> &ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Synchronisierungen liegen.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> &amp;ndash; die Einheit für die Frequenz, wenn der Agent täglich mehrmals ausgeführt wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> &ndash; die Einheit für die Frequenz, wenn der Agent täglich mehrmals ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> &amp;ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Ausführungen liegen, wenn der Agent mehrmals täglich ausgeführt wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> &ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Ausführungen liegen, wenn der Agent mehrmals täglich ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> &amp;ndash; der früheste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> &ndash; der früheste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> &amp;ndash; der späteste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> &ndash; der späteste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> &amp;ndash; der erste Tag, an dem der Agentzeitplan in Kraft ist.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> &ndash; der erste Tag, an dem der Agentzeitplan in Kraft ist.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> &amp;ndash; der letzte Tag, an dem der Agentzeitplan in Kraft ist.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> &ndash; der letzte Tag, an dem der Agentzeitplan in Kraft ist.  
   
     > [!NOTE]  
     >  Wenn Sie keine dieser Eigenschaften angeben, wird ein Standardwert festgelegt.  
@@ -265,25 +264,25 @@ ms.lasthandoff: 08/03/2017
   
 2.  Bevor Sie <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>aufrufen, legen Sie mindestens eines der folgenden Felder der <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> -Eigenschaft fest:  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> &amp;ndash; der Typ der Frequenz (z. B. täglich oder wöchentlich), den Sie beim Planen des Agents verwenden.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> &ndash; der Typ der Frequenz (z. B. täglich oder wöchentlich), den Sie beim Planen des Agents verwenden.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> &amp;ndash; der Tag der Woche, an dem ein Agent ausgeführt wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> &ndash; der Tag der Woche, an dem ein Agent ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> &amp;ndash; die Woche eines bestimmten Monats, in der der Agent einmal monatlich ausgeführt wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> &ndash; die Woche eines bestimmten Monats, in der der Agent einmal monatlich ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> &amp;ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Synchronisierungen liegen.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> &ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Synchronisierungen liegen.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> &amp;ndash; die Einheit für die Frequenz, wenn der Agent täglich mehrmals ausgeführt wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> &ndash; die Einheit für die Frequenz, wenn der Agent täglich mehrmals ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> &amp;ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Ausführungen liegen, wenn der Agent mehrmals täglich ausgeführt wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> &ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Ausführungen liegen, wenn der Agent mehrmals täglich ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> &amp;ndash; der früheste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> &ndash; der früheste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> &amp;ndash; der späteste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> &ndash; der späteste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> &amp;ndash; der erste Tag, an dem der Agentzeitplan in Kraft ist.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> &ndash; der erste Tag, an dem der Agentzeitplan in Kraft ist.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> &amp;ndash; der letzte Tag, an dem der Agentzeitplan in Kraft ist.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> &ndash; der letzte Tag, an dem der Agentzeitplan in Kraft ist.  
   
     > [!NOTE]  
     >  Wenn Sie keine dieser Eigenschaften angeben, wird ein Standardwert festgelegt.  
@@ -296,25 +295,25 @@ ms.lasthandoff: 08/03/2017
   
 2.  Bevor Sie <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>aufrufen, legen Sie mindestens eines der folgenden Felder der <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> -Eigenschaft fest:  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> &amp;ndash; der Typ der Frequenz (z. B. täglich oder wöchentlich), den Sie beim Planen des Agents verwenden.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> &ndash; der Typ der Frequenz (z. B. täglich oder wöchentlich), den Sie beim Planen des Agents verwenden.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> &amp;ndash; der Tag der Woche, an dem ein Agent ausgeführt wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> &ndash; der Tag der Woche, an dem ein Agent ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> &amp;ndash; die Woche eines bestimmten Monats, in der der Agent einmal monatlich ausgeführt wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> &ndash; die Woche eines bestimmten Monats, in der der Agent einmal monatlich ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> &amp;ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Synchronisierungen liegen.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> &ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Synchronisierungen liegen.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> &amp;ndash; die Einheit für die Frequenz, wenn der Agent täglich mehrmals ausgeführt wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> &ndash; die Einheit für die Frequenz, wenn der Agent täglich mehrmals ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> &amp;ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Ausführungen liegen, wenn der Agent mehrmals täglich ausgeführt wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> &ndash; die Anzahl der Einheiten für die Frequenz, die zwischen den einzelnen Ausführungen liegen, wenn der Agent mehrmals täglich ausgeführt wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> &amp;ndash; der früheste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> &ndash; der früheste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> &amp;ndash; der späteste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndTime%2A> &ndash; der späteste Zeitpunkt an einem bestimmten Tag, zu dem eine Agent-Ausführung gestartet wird.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> &amp;ndash; der erste Tag, an dem der Agentzeitplan in Kraft ist.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> &ndash; der erste Tag, an dem der Agentzeitplan in Kraft ist.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> &amp;ndash; der letzte Tag, an dem der Agentzeitplan in Kraft ist.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> &ndash; der letzte Tag, an dem der Agentzeitplan in Kraft ist.  
   
     > [!NOTE]  
     >  Wenn Sie keine dieser Eigenschaften angeben, wird ein Standardwert festgelegt.  
@@ -336,4 +335,3 @@ ms.lasthandoff: 08/03/2017
  [Synchronisieren von Daten](../../relational-databases/replication/synchronize-data.md)  
   
   
-

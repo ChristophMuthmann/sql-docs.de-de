@@ -5,28 +5,26 @@ ms.date: 03/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - publishing [SQL Server replication], stored procedure execution
 - articles [SQL Server replication], transactional replication options
 - articles [SQL Server replication], merge replication options
 - stored procedures [SQL Server replication], publishing
 ms.assetid: d7effbac-c45b-423f-97ae-fd426b1050ba
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e4595c34321877ac16b30a105d1d80f414166c47
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 30aa9302585d7a7eabc8dee8e9a1cd27695e0bab
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>Angeben von Artikeltypen (Replikationsprogrammierung mit Transact-SQL)
   Die Standardartikeltypen für die Replikation sind Tabellen. Sie können aber auch andere Datenbankobjekte als Artikel veröffentlichen, einschließlich Sichten, gespeicherte Prozeduren, benutzerdefinierte Funktionen und die Ausführung von gespeicherten Prozeduren. Sie können gespeicherte Replikationsprozeduren verwenden, um einen Artikeltyp beim Definieren eines Artikels programmgesteuert anzugeben. Welche Prozeduren Sie verwenden, hängt vom Typ der Replikation und des Artikels ab.  

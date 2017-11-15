@@ -5,8 +5,7 @@ ms.date: 08/25/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], subscribing
 - transactional replication, subscribing
 ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 7a78735cc1ccee742982c51a12bab2b5d47b046e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 7118e800e4a3d80fdc1fb30bff59604ffd2d5d62
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-push-subscription"></a>Erstellen eines Pushabonnements
   In diesem Thema wird beschrieben, wie ein Pushabonnement in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) erstellt wird. Informationen zum Erstellen eines Pushabonnements für einen nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten finden Sie unter [Erstellen eines Abonnements für einen Nicht-SQL-Server-Abonnenten](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
@@ -261,4 +259,3 @@ ms.lasthandoff: 09/27/2017
  [Verwenden von sqlcmd mit Skriptvariablen](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
   
   
-

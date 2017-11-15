@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vdt.dlgbox.columnselection
 - vdtsql.chm:65548
 ms.assetid: 479bae2c-fee0-4215-b424-1ab779a7e5ca
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ec9eb8b6cee6f16dc54f6d16a43d1f94f16a8e11
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 9dc761c177b2845c88a197034228eed073e811d6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>Spaltenauswahl (Dialogfeld) (Visual Database Tools)
 Mit diesem Dialogfeld können Sie die benutzerdefinierte Sicht für Tabellen im Datenbankdiagramm ändern. In der benutzerdefinierten Sicht werden nur die vom Benutzer angegebenen Spalteneigenschaften angezeigt.  
@@ -57,4 +55,3 @@ Bricht die Änderung der benutzerdefinierten Sicht ab.
 [Verwenden von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [Anpassen des Umfangs der in Diagrammen angezeigten Informationen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md)  
   
-

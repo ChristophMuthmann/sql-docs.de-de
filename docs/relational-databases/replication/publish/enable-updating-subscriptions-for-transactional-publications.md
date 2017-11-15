@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - updatable subscriptions, enabling
 - subscriptions [SQL Server replication], updatable
 ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: e989a795ff6179bdab183a2c7814f099b0448f38
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 743b3c1ff32b12d3d531cac043dddb6822eb3664
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>Aktivieren des Aktualisierens von Abonnements für Transaktionsveröffentlichungen
   In diesem Thema wird beschrieben, wie das Aktualisieren von Abonnements für Transaktionsveröffentlichungen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]aktiviert wird.  
@@ -116,4 +114,3 @@ ms.lasthandoff: 09/27/2017
  [Verwenden von „sqlcmd“ mit Skriptvariablen](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
   
   
-

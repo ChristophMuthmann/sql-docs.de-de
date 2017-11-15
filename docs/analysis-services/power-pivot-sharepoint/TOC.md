@@ -41,7 +41,7 @@
 ## [Herstellen einer BI-Semantikmodellverbindung mit einer tabellarischen Modelldatenbank](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
 ## [Verwenden einer BI-Semantikmodellverbindung in Excel oder Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
 # [Fehler- und Ereignisreferenz (Power Pivot für SharePoint)](errors-and-events-reference-power-pivot-for-sharepoint.md)  
-## [Während des Herstellens einer Verbindung mit der externen Datenquelle ist ein Fehler aufgetreten. Die folgenden Verbindungen wurden nicht aktualisiert: Power Pivot-Daten](an-error-occurred-during-an-attempt-to-establish-a-connection.md)  
+## [Während des Herstellens einer Verbindung mit der externen Datenquelle ist ein Fehler aufgetreten. Die folgenden Verbindungen wurden nicht aktualisiert: Power Pivot-Daten.](an-error-occurred-during-an-attempt-to-establish-a-connection.md)  
 ## [Die Datei oder Assembly „Microsoft.Data.Services“ konnte nicht geladen werden.](could-not-load-file-or-assembly-microsoft-data-services.md)  
 ## [Datei oder Assembly „Microsoft.AnalysisServices.SharePoint.Integration“ konnte nicht geladen werden.](could-not-load-microsoft-analysisservices-sharepoint-integration.md)  
 ## [Der Datenverbindungspfad in der Arbeitsmappe verweist auf eine Datei auf dem lokalen Laufwerk oder entspricht einem ungültigen URI.](the-data-connection-path-is-invalid.md)  

@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - text [SQL Server]
 - unindenting code
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 57fcddb2d5f87d0b03ab1ed504e07072dc41d367
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ae6040d1ba9e14a4e77135a1f1f99ebf350aa33d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-code-formatting"></a>Verwalten der Codeformatierung
   Mit dem Editor können Sie Code formatieren, z. B. mit Einzug, ausgeblendetem Text, URLs usw. Außerdem können Sie mit dem intelligenten Einzug den Code automatisch bei der Eingabe formatieren.  
@@ -154,4 +152,3 @@ ms.lasthandoff: 06/22/2017
 4.  Wählen Sie die Option **Einfaches Klicken für URLs aktivieren**aus.  
   
   
-

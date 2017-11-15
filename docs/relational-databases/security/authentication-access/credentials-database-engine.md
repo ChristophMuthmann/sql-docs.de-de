@@ -5,8 +5,7 @@ ms.date: 02/27/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,16 +20,16 @@ helpviewer_keywords:
 - credentials [SQL Server], about credentials
 - credentials [SQL Server]
 ms.assetid: c8df6022-e0b4-46b8-9670-3f86938d3177
-caps.latest.revision: 31
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6c1e49cf402cf944e912e4297f6a315a570f27e8
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "31"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: On Demand
+ms.openlocfilehash: 42937069314e8f2c607871d950dce0fedb937e23
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="credentials-database-engine"></a>Anmeldeinformationen (Datenbankmodul)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,4 +51,3 @@ ms.lasthandoff: 06/22/2017
  [Sichern von SQL Server](../../../relational-databases/security/securing-sql-server.md)  
   
   
-

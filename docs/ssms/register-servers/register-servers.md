@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.sqlserverregisteredserver.dhelp
+f1_keywords: sql13.swb.sqlserverregisteredserver.dhelp
 helpviewer_keywords:
 - connections [SQL Server], registered servers
 - registering servers
@@ -18,17 +16,16 @@ helpviewer_keywords:
 - server management [SQL Server], registering servers
 - server registration [SQL Server]
 ms.assetid: c2a2513e-fa09-419c-99e7-a12d57c5a0db
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 5f72c610c068b0958aad49cce4fdac71121c2a22
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: fb40b9101e963e3ba7c712f9911f2963178bcf82
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="register-servers"></a>Registrieren von Servern
   Durch das Registrieren eines Servers in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Sie die Serververbindungsinformationen für zukünftige Verbindungen speichern. Es gibt drei Möglichkeiten, einen Server in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]zu registrieren.  
@@ -89,4 +86,3 @@ ms.lasthandoff: 07/31/2017
  [Remoteserver](../../database-engine/configure-windows/remote-servers.md)  
   
   
-

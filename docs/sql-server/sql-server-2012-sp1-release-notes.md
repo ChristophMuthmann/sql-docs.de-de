@@ -9,17 +9,16 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 72171357-28de-4edd-bdfd-194f97225a6f
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
-ms.openlocfilehash: bb97a542834adce9221b55f54c4bf5657586f187
-ms.contentlocale: de-de
-ms.lasthandoff: 09/02/2017
-
+ms.openlocfilehash: d0e126678e921a47135ada143b1dba53a467df7d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-2012-sp1-release-notes"></a>SQL Server 2012 SP1 Release Notes
 In diesen Versionsanmerkungen werden bekannte Probleme beschrieben, mit denen Sie sich vertraut machen sollten, bevor Sie mit der Installation oder Problembehandlung in [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 1 beginnen. Die Anmerkungen zu dieser Version sind nur online und nicht auf den Installationsmedien verfügbar und werden regelmäßig aktualisiert.  
@@ -205,4 +204,3 @@ Eine vollständige Liste von Fehlern und bekannten Problemen, die in diesem Serv
 [Ermitteln der Version und Edition von SQL Server](http://support.microsoft.com/kb/321185)  
 [Von den SQL Server 2014-Editionen unterstützte Funktionen](http://msdn.microsoft.com/en-us/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
   
-

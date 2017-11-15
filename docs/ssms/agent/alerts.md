@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - SQL Server Agent alerts, about alerts
 - alerts [SQL Server], names
 ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9351cc5d4e47b418576cbff3be1884a081b5a4f7
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6506dcef18d066ff7432d3e8ce9ee62255a82d89
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="alerts"></a>Warnungen
 Ereignisse werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] erzeugt und in das [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows-Anwendungsprotokoll geschrieben. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent liest das Anwendungsprotokoll und vergleicht die dort festgehaltenen Ereignisse mit den von Ihnen definierten Warnungen. Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent eine Übereinstimmung findet, wird eine Warnung ausgelöst, also eine automatische Antwort auf das Ereignis. Mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent können Sie nicht nur [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Ereignisse überwachen, sondern auch den Leistungsstatus und die WMI-Ereignisse (Windows Management Instrumentation oder Windows-Verwaltungsinstrumentation).  
@@ -160,4 +158,3 @@ Die folgenden Links führen zu häufig anfallenden Aufgaben:
 ## <a name="see-also"></a>Siehe auch  
 [sp_update_alert (Transact-SQL)](http://msdn.microsoft.com/en-us/bcd731b1-3c4e-4086-b58a-af7a3af904ad)  
   
-

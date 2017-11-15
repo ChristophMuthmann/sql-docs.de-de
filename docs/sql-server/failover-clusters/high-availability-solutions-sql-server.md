@@ -5,8 +5,7 @@ ms.date: 05/19/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - availability [SQL Server]
 - server availability [SQL Server]
 ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
-caps.latest.revision: 84
+caps.latest.revision: "84"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dd78349c495ceb9b653ae3b44915da327c489152
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: dd44d90bef2561db193698e02b41014c56f592f4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="high-availability-solutions-sql-server"></a>Lösungen mit hoher Verfügbarkeit (SQL Server)
   In diesem Thema werden mehrere Hochverfügbarkeitslösungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorgestellt, die die Verfügbarkeit von Servern oder Datenbanken verbessern. Eine Lösung mit hoher Verfügbarkeit unterdrückt die Auswirkungen eines Hardware- oder Softwarefehlers und hält die Verfügbarkeit von Anwendungen aufrecht, damit die Ausfallzeiten für Benutzer so gering wie möglich gehalten werden.    
@@ -35,10 +34,10 @@ ms.lasthandoff: 06/22/2017
      
     
 ##  <a name="TermsAndDefinitions"></a> Übersicht über SQL Server-Hochverfügbarkeitslösungen    
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind mehrere Optionen zum Einrichten hoher Verfügbarkeit für einen Server oder eine Datenbank verfügbar. Die Hochverfügbarkeitsoptionen umfassen Folgendes:    
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind mehrere Optionen zum Einrichten von Hochverfügbarkeit für einen Server oder eine Datenbank verfügbar. Die Hochverfügbarkeitsoptionen umfassen Folgendes:    
     
 *  Always On-Failoverclusterinstanzen    
- Als Teil des Always On-Angebots von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nutzen Always On-Failoverclusterinstanzen die Funktionalität des Windows Server-Failoverclustering (WSFC), um durch Redundanz auf Serverinstanzebene (eine *Failoverclusterinstanz* [FCI]) eine hohe lokale Verfügbarkeit zu bieten. Eine FCI ist eine einzelne Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Diese ist auf Windows Server-Failoverclustering-Knoten (WSFC) und möglicherweise auf mehreren Subnetzen installiert. In einem Netzwerk wird eine FCI als eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angezeigt, die auf einem einzelnen Computer ausgeführt wird. Die FCI bietet jedoch die Möglichkeit zur Failoverbereitstellung von einem WSFC-Knoten zu einem anderen, wenn der aktuelle Knoten nicht verfügbar ist.    
+ Als Teil des Always On-Angebots von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nutzen Always On-Failoverclusterinstanzen die Funktionalität des Windows Server-Failoverclustering (WSFC), um durch Redundanz auf Serverinstanzebene (eine *Failoverclusterinstanz* [FCI]) lokale Hochverfügbarkeit zu bieten. Eine FCI ist eine einzelne Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Diese ist auf Windows Server-Failoverclustering-Knoten (WSFC) und möglicherweise auf mehreren Subnetzen installiert. In einem Netzwerk wird eine FCI als eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angezeigt, die auf einem einzelnen Computer ausgeführt wird. Die FCI bietet jedoch die Möglichkeit zur Failoverbereitstellung von einem WSFC-Knoten zu einem anderen, wenn der aktuelle Knoten nicht verfügbar ist.    
     
  Weitere Informationen finden Sie unter [Always On-Failoverclusterinstanzen &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)hostet.    
     
@@ -69,5 +68,4 @@ Die Datenbankspiegelung stellt eine Softwarelösung dar, mit der die Verfügbark
  [Als veraltet markierte Funktionen des Datenbankmoduls in SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)    
     
   
-
 

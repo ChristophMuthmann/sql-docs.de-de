@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.common.selectobjects.f1
+f1_keywords: sql13.swb.common.selectobjects.f1
 ms.assetid: 692477fe-dd7c-403d-acd2-bb108b6077f1
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bf429c56ec1c00a62c747869a8bfe4aca2ef0355
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5e0cabd01a513714390048fbce62fd91dd2efcaf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="select-objects-object-explorer"></a>Objekte auswählen (Objekt-Explorer)
 Verwenden Sie das Dialogfeld **Objekte auswählen** , um der Liste in einem anderen Dialogfeld ein Objekt hinzuzufügen. Der Titel des Dialogfelds und die darin verfügbaren Optionen hängen davon ab, wie es geöffnet wurde. Es werden nur verfügbare Optionen angezeigt. Wenn Sie z. B. einen Besitzer für ein neues Objekt auswählen, sind nur Benutzernamen verfügbar.  
@@ -43,4 +40,3 @@ Zeigt eine Liste von Objekttypen an. Wählen Sie einen oder mehrere Objekttypen 
 **Durchsuchen**  
 Zeigt das Dialogfeld **Nach Objekten suchen** an. Es enthält eine Liste der Objekte, deren Typen im Feld **Wählen Sie Objekttypen aus** aufgeführt sind. Wählen Sie aus dieser Liste Objekte aus, indem Sie die entsprechenden Kontrollkästchen aktivieren.  
   
-

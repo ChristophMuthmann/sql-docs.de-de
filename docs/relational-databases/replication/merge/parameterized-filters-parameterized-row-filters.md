@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +19,16 @@ helpviewer_keywords:
 - filters [SQL Server replication], parameterized
 - dynamic filters [SQL Server replication]
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c16383cadde524f23f8a6b94a14c282666856780
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 8cc71572d7cc5b68293a288af4715634b615cb39
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Parametrisierte Filter – Parametrisierte Zeilenfilter
   Mit parametrisierten Zeilenfiltern können verschiedene Datenpartitionen an verschiedene Abonnenten gesendet werden, ohne dass hierfür mehrere Veröffentlichungen erstellt werden müssen (parametrisierte Filter wurden in früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]als dynamische Filter bezeichnet). Der Begriff Partition bezeichnet nichts weiter als eine Teilmenge der Zeilen in einer Tabelle. Abhängig von den Einstellungen für den parametrisierten Zeilenfilter, die im Zuge der Erstellung des Filters festgelegt werden, kann jede Zeile in einer veröffentlichten Tabelle entweder nur zu einer Partition (nicht überlappende Partitionen) oder aber zu mehreren Partitionen (überlappende Partitionen) gehören.  
@@ -38,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
  Parametrisierte Filter werden in einer einzelnen Tabelle verwendet und in der Regel mit Joinfiltern kombiniert, um auch verknüpfte Tabellen filtern zu können. Weitere Informationen finden Sie unter [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
   
- Informationen zum Definieren oder Ändern eines parametrisierten Zeilenfilters finden Sie unter [Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+ Informationen zum Definieren oder Ändern eines parametrisierten Zeilenfilters finden Sie unter [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
 ## <a name="how-parameterized-filters-work"></a>Funktionsweise parametrisierter Filter  
  Parametrisierte Zeilenfilter verwenden zum Auswählen der Daten, die veröffentlicht werden sollen, eine WHERE-Klausel. Statt in der Klausel einen Literalwert anzugeben (wie dies bei statischen Zeilenfiltern der Fall wäre), wird mindestens eine der folgenden Systemfunktionen angegeben: SUSER_SNAME() und HOST_NAME(). Darüber hinaus können auch benutzerdefinierte Funktionen verwendet werden, sofern diese in ihrem Hauptteil SUSER_SNAME() oder HOST_NAME() enthalten bzw. eine dieser Systemfunktionen auswerten (wie beispielsweise `MyUDF(SUSER_SNAME()`). Wenn eine benutzerdefinierte Funktion in ihrem Hauptteil SUSER_SNAME() oder HOST_NAME() enthält, können dieser Funktion keine Parameter übergeben werden.  

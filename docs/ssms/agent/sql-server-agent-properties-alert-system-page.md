@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ag.agent.alert.f1
+f1_keywords: sql13.ag.agent.alert.f1
 ms.assetid: 3e6d3bfd-20ee-4593-86cc-f65b1c08c69d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 334a1025cca8100f1ba6bcc0855712a7e5fe0ef0
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2645355a8d79e728a5fa6d0a5d9dabf92be0e19a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>SQL Server-Agent-Eigenschaften (Seite Warnungssystem)
-Auf dieser Seite können Sie die Einstellungen für die vom [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent versandten Warnmeldungen anzeigen und ändern.  
+Auf dieser Seite können Sie die Einstellungen für die vom [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent versandten Warnmeldungen anzeigen und ändern.  
   
 ## <a name="options"></a>enthalten  
 **Mailsitzung**  
@@ -113,4 +110,3 @@ Aktivieren Sie dieses Kontrollkästchen, um die Tokenersetzung für Aufträge zu
 [Konfigurieren von SQL Server-Agent-Mail zum Verwenden von Datenbank-E-Mails](http://msdn.microsoft.com/en-us/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
 [Datenbank-E-Mail](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
   
-

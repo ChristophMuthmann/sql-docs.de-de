@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - static row filters
 - filters [SQL Server replication], static row
 ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d9326b4395a2883b172ff59ef009128a85e3098e
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: c493832bd29563b7131a8724fe13d88401ef1a6c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>Definieren oder Ändern eines statischen Zeilenfilters
   In diesem Thema wird beschrieben, wie in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]statische Zeilenfilter definiert und geändert werden.  
@@ -52,7 +51,7 @@ ms.lasthandoff: 06/22/2017
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
--   Da diese Filter statisch sind, erhalten alle Abonnenten die gleiche Teilmenge der Daten. Informationen darüber, wie Sie Zeilen in einem Tabellenartikel, der zu einer Mergeveröffentlichung gehört, dynamisch filtern können, damit jeder Abonnent eine andere Partition der Daten erhält, finden Sie unter [Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md). Mergereplikation ermöglicht es Ihnen zudem, verknüpfte Zeilen auf Grundlage eines vorhandenen Zeilenfilters zu filtern. Weitere Informationen finden Sie unter [Definieren und Ändern eines Verknüpfungsfilters zwischen Mergeartikeln](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+-   Da diese Filter statisch sind, erhalten alle Abonnenten die gleiche Teilmenge der Daten. Informationen darüber, wie Sie Zeilen in einem Tabellenartikel, der zu einer Mergeveröffentlichung gehört, dynamisch filtern können, damit jeder Abonnent eine andere Partition der Daten erhält, finden Sie unter [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md). Mergereplikation ermöglicht es Ihnen zudem, verknüpfte Zeilen auf Grundlage eines vorhandenen Zeilenfilters zu filtern. Weitere Informationen finden Sie unter [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 ##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
  Definieren, ändern und löschen Sie statische Zeilenfilter auf der Seite **Tabellenzeilen filtern** des Assistenten für neue Veröffentlichung oder der Seite **Filterzeilen** des Dialogfelds **Veröffentlichungseigenschaften - \<Veröffentlichung>**. Weitere Informationen zum Verwenden des Assistenten sowie zum Zugriff auf das Dialogfeld finden Sie unter [Eine Veröffentlichung erstellen](../../../relational-databases/replication/publish/create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
@@ -123,7 +122,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_articleview#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) aus. Geben Sie den Veröffentlichungsnamen für **@publication**, den Namen des gefilterten Artikels für **@article**und die in Schritt 1 angegebene Filterklausel für **@filter_clause**statische Zeilenfilter definiert und geändert werden. Dadurch wird die Sicht neu erstellt, die den gefilterten Artikel definiert.  
   
-3.  Führen Sie den Auftrag des Momentaufnahme-Agents für die Veröffentlichung erneut aus, um eine aktualisierte Momentaufnahme zu erstellen. Weitere Informationen finden Sie unter [Erstellen und Anwenden der Anfangsmomentaufnahme](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+3.  Führen Sie den Auftrag des Momentaufnahme-Agents für die Veröffentlichung erneut aus, um eine aktualisierte Momentaufnahme zu erstellen. Weitere Informationen finden Sie unter [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
 4.  Erneutes Initialisieren von Abonnements Weitere Informationen finden Sie unter [Erneutes Initialisieren von Abonnements](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
@@ -131,21 +130,21 @@ ms.lasthandoff: 06/22/2017
   
 1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank, [Sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) aus. Geben Sie den Namen des Artikels für **@article**, den Namen der Veröffentlichung für **@publication**und den Wert NULL für **@filter_name**und **@filter_clause**statische Zeilenfilter definiert und geändert werden. Da durch diese Änderung Daten in vorhandenen Abonnements ungültig werden, geben Sie den Wert **1** für **@force_reinit_subscription**statische Zeilenfilter definiert und geändert werden.  
   
-2.  Führen Sie den Auftrag des Momentaufnahme-Agents für die Veröffentlichung erneut aus, um eine aktualisierte Momentaufnahme zu erstellen. Weitere Informationen finden Sie unter [Erstellen und Anwenden der Anfangsmomentaufnahme](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+2.  Führen Sie den Auftrag des Momentaufnahme-Agents für die Veröffentlichung erneut aus, um eine aktualisierte Momentaufnahme zu erstellen. Weitere Informationen finden Sie unter [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
 3.  Erneutes Initialisieren von Abonnements Weitere Informationen finden Sie unter [Erneutes Initialisieren von Abonnements](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
 #### <a name="to-define-a-static-row-filter-for-a-merge-publication"></a>So definieren Sie einen statischen Zeilenfilter für eine Mergeveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) aus. Geben Sie die Filterklausel für **@subset_filterclause** an (ausgenommen `WHERE`). Weitere Informationen finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) aus. Geben Sie die Filterklausel für **@subset_filterclause** an (ausgenommen `WHERE`). Weitere Informationen finden Sie unter [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
-2.  Wenn außerdem ein Spaltenfilter definiert werden muss, finden Sie Informationen unter [Definieren und Ändern eines Spaltenfilters](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
+2.  Wenn außerdem ein Spaltenfilter definiert werden muss, finden Sie Informationen unter [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   
 #### <a name="to-modify-a-static-row-filter-for-a-merge-publication"></a>So ändern Sie einen statischen Zeilenfilter für eine Mergeveröffentlichung  
   
 1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aus. Geben Sie den Veröffentlichungsnamen für **@publication**, den Namen des gefilterten Artikels für **@article**, den Wert **subset_filterclause** für **@property**und die neue Filterklausel für **@value** an (ausgenommen `WHERE`). Da durch diese Änderung Daten in vorhandenen Abonnements ungültig werden, geben Sie den Wert **@force_reinit_subscription**statische Zeilenfilter definiert und geändert werden.  
   
-2.  Führen Sie den Auftrag des Momentaufnahme-Agents für die Veröffentlichung erneut aus, um eine aktualisierte Momentaufnahme zu erstellen. Weitere Informationen finden Sie unter [Erstellen und Anwenden der Anfangsmomentaufnahme](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+2.  Führen Sie den Auftrag des Momentaufnahme-Agents für die Veröffentlichung erneut aus, um eine aktualisierte Momentaufnahme zu erstellen. Weitere Informationen finden Sie unter [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
 3.  Erneutes Initialisieren von Abonnements Weitere Informationen finden Sie unter [Erneutes Initialisieren von Abonnements](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
@@ -154,7 +153,7 @@ ms.lasthandoff: 06/22/2017
   
  [!code-sql[HowTo#sp_AddTranArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-stat_1.sql)]  
   
- In diesem Beispiel für eine Mergereplikation werden die Artikel horizontal gefiltert, und nur die Zeilen zurückgegeben, die auf den angegebenen Vertriebsmitarbeiter entfallen. Außerdem wird ein Joinfilter verwendet. Weitere Informationen finden Sie unter [Definieren und Ändern eines Verknüpfungsfilters zwischen Mergeartikeln](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+ In diesem Beispiel für eine Mergereplikation werden die Artikel horizontal gefiltert, und nur die Zeilen zurückgegeben, die auf den angegebenen Vertriebsmitarbeiter entfallen. Außerdem wird ein Joinfilter verwendet. Weitere Informationen finden Sie unter [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-stat_2.sql)]  
   
@@ -162,6 +161,6 @@ ms.lasthandoff: 06/22/2017
  [Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Filtern von veröffentlichten Daten](../../../relational-databases/replication/publish/filter-published-data.md)   
- [Filtern von veröffentlichten Daten für die Mergereplikation](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)  
+ [Filtern veröffentlichter Daten für die Mergereplikation](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)  
   
   

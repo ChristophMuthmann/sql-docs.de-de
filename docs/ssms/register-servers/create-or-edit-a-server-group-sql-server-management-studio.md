@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - server groups [SQL Server]
 - groups [SQL Server], server
 ms.assetid: d4a942bd-2dd1-42db-ad0e-e9a9ae5b856d
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 14f3fe407b9d5fd654c0ac6f2e55ce81e0e90638
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: fc405a4a6302f687d6bec832832d64c87e6bb1c0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>Erstellen oder Bearbeiten einer Servergruppe (SQL Server Management Studio)
   In diesem Thema wird beschrieben, wie Sie die Server in Registrierte Server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] organisieren, indem Sie Servergruppen erstellen und die Server den Servergruppen zuordnen. Servergruppen können jederzeit in Registrierte Server erstellt werden, aber auch beim Registrieren von Servern.  
@@ -53,4 +51,3 @@ ms.lasthandoff: 07/31/2017
  [Registrieren von Servern](../../tools/sql-server-management-studio/register-servers.md)  
   
   
-

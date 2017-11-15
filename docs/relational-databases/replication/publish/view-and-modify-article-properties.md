@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - sp_changearticle
 - sp_helparticle
@@ -21,16 +19,16 @@ helpviewer_keywords:
 - articles [SQL Server replication], modifying
 - articles [SQL Server replication], properties
 ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7dd32148c10d940808986a58e78c6528bc772d9b
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 3428249896b2e7ead3b09cb9922e05175eb0fa8f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-and-modify-article-properties"></a>Anzeigen und Ändern von Artikeleigenschaften
   In diesem Thema wird beschrieben, wie die Artikeleigenschaften in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) angezeigt und geändert werden.  
@@ -152,35 +150,35 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-view-or-modify-properties-of-an-article-that-belongs-to-a-snapshot-or-transactional-publication"></a>So zeigen Sie die Eigenschaften eines Artikels an, der zu einer Momentaufnahme- oder einer Transaktionsveröffentlichung gehört, oder ändern sie  
   
-1.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Klasse verwenden.  
+1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransArticle>-Klasse.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransArticle> -Klasse.  
   
-3.  Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A> und <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> fest.  
+3.  Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>und <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> fest.  
   
-4.  Legen Sie die Verbindung aus Schritt 1 für die Eigenschaft <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> fest.  
+4.  Legen Sie die Verbindung aus Schritt 1 für die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft fest.  
   
-5.  Rufen Sie die Methode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode **false**zurückgibt, wurden entweder die Artikeleigenschaften in Schritt 3 falsch definiert, oder der Artikel ist nicht vorhanden.  
+5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode **false**zurückgibt, wurden entweder die Artikeleigenschaften in Schritt 3 falsch definiert, oder der Artikel ist nicht vorhanden.  
   
-6.  (Optional) Um Eigenschaften zu ändern, legen Sie einen neuen Wert für eine der definierbaren <xref:Microsoft.SqlServer.Replication.TransArticle>-Eigenschaften fest.  
+6.  (Optional) Um Eigenschaften zu ändern, legen Sie einen neuen Wert für eine der definierbaren <xref:Microsoft.SqlServer.Replication.TransArticle> -Eigenschaften fest.  
   
-7.  (Optional) Wenn Sie den Wert **TRUE** für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>angegeben haben, rufen Sie die Methode <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> auf, um die Änderungen auf dem Server einzutragen. Wenn Sie den Wert **FALSE** für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (die Standardeinstellung) angegeben haben, werden die Änderungen sofort an den Server gesendet.  
+7.  (Optional) Wenn Sie den Wert **true** für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>angegeben haben, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> -Methode auf, um die Änderungen auf dem Server einzutragen. Wenn Sie den Wert **false** für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (die Standardeinstellung) angegeben haben, werden die Änderungen sofort an den Server gesendet.  
   
 #### <a name="to-view-or-modify-properties-of-an-article-that-belongs-to-a-merge-publication"></a>So zeigen Sie die Eigenschaften eines Artikels an, der zu einer Mergeveröffentlichung gehört, oder ändern sie  
   
-1.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Klasse verwenden.  
+1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergeArticle>-Klasse.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergeArticle> -Klasse.  
   
-3.  Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A> und <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> fest.  
+3.  Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>und <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> fest.  
   
-4.  Legen Sie die Verbindung aus Schritt 1 für die Eigenschaft <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> fest.  
+4.  Legen Sie die Verbindung aus Schritt 1 für die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft fest.  
   
-5.  Rufen Sie die Methode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode **false**zurückgibt, wurden entweder die Artikeleigenschaften in Schritt 3 falsch definiert, oder der Artikel ist nicht vorhanden.  
+5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode **false**zurückgibt, wurden entweder die Artikeleigenschaften in Schritt 3 falsch definiert, oder der Artikel ist nicht vorhanden.  
   
-6.  (Optional) Um Eigenschaften zu ändern, legen Sie einen neuen Wert für eine der definierbaren <xref:Microsoft.SqlServer.Replication.MergeArticle>-Eigenschaften fest.  
+6.  (Optional) Um Eigenschaften zu ändern, legen Sie einen neuen Wert für eine der definierbaren <xref:Microsoft.SqlServer.Replication.MergeArticle> -Eigenschaften fest.  
   
-7.  (Optional) Wenn Sie den Wert **TRUE** für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>angegeben haben, rufen Sie die Methode <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> auf, um die Änderungen auf dem Server einzutragen. Wenn Sie den Wert **FALSE** für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (die Standardeinstellung) angegeben haben, werden die Änderungen sofort an den Server gesendet.  
+7.  (Optional) Wenn Sie den Wert **true** für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>angegeben haben, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> -Methode auf, um die Änderungen auf dem Server einzutragen. Wenn Sie den Wert **false** für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (die Standardeinstellung) angegeben haben, werden die Änderungen sofort an den Server gesendet.  
   
 ###  <a name="PShellExample"></a> Beispiel (RMO)  
  In diesem Beispiel wird ein Mergeartikel geändert, um den vom Artikel verwendeten Geschäftslogikhandler anzugeben.  

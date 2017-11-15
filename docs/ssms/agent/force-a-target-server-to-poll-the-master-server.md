@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - master servers [SQL Server], polling
 - target servers [SQL Server], polling the master server
 ms.assetid: f1189a47-5ac3-45e2-9c5f-847810672279
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 57fe0392adfb1e290491815acd216fd356e20f3e
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ae09299dd054f21263d746a2c39ae3c6e490e332
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>Force a Target Server to Poll the Master Server
 Dieses Thema beschreibt, wie Sie erzwingen, dass ein Zielserver den Masterserver abruft. Der Zielserver muss ein registrierter Server auf dem Masterserver sein.  
@@ -45,7 +43,7 @@ Ein Auftrag ist eine festgelegte Reihe von Aktionen, die der [!INCLUDE[ssNoVersi
 Der Zielserver muss ein registrierter Server auf dem Masterserver sein. Die Anweisungen in diesem Thema müssen auf dem Masterserver ausgeführt werden.  
   
 ### <a name="Security"></a>Sicherheit  
-Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md) und [Auswählen des richtigen SQL Server-Agent-Dienstkontos für Multiserverumgebungen](../../ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md).  
+Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md) und [Choose the Right SQL Server Agent Service Account for Multiserver Environments](../../ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md).  
   
 ## <a name="SSMS"></a>Verwenden von SQL Server Management Studio  
 **So erzwingen Sie, dass ein Zielserver den Masterserver abruft**  
@@ -56,4 +54,3 @@ Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Securit
   
 3.  Klicken Sie auf einen Zielserver und dann auf **Abruf erzwingen**.  
   
-

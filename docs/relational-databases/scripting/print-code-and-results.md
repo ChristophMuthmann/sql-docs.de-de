@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - text printing [SQL Server Management Studio]
 - printing code and text
 ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fdecd02b17ae8fc66bb57a807e7211667666fbd6
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 493a87b6a78fbc1918c86852999afbb9bc557be3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="print-code-and-results"></a>Drucken von Code und Ergebnissen
   Wenn Sie eine Abfrage oder Datei drucken, werden farbige Elemente in Farbe gedruckt, wenn Ihr Drucker Farbdruck unterstützt und die Farbdruckoption in der Druckerkonfiguration aktiviert ist.  
@@ -38,4 +36,3 @@ ms.lasthandoff: 06/22/2017
  [Ändern von Schriftfarbe, Schriftgrad und Schriftschnitt](../../relational-databases/scripting/change-font-color-size-and-style.md)  
   
   
-

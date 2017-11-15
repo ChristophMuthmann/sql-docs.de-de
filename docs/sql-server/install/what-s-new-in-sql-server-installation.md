@@ -5,22 +5,20 @@ ms.date: 08/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9b136b27-4779-4284-904f-b5a1c12bdcc0
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 99906cb4dbfcfa8e4dbaca01b9bf993ab84c7a82
-ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: d41437182f423016da8e25c71bd493c5f1816f95
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>Neuigkeiten in der SQL Server-Installation
 
@@ -42,4 +40,3 @@ ms.lasthandoff: 08/28/2017
 
 [Hardware- und Softwareanforderungen für die Installation von SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
-

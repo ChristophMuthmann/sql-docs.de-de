@@ -5,29 +5,25 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.summary.new.custom.report.f1
-helpviewer_keywords:
-- SQL Server Management Studio [SQL Server], custom reports
+f1_keywords: sql13.swb.summary.new.custom.report.f1
+helpviewer_keywords: SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b1292293885329df9b38dfcf94cd8ee1c5ca5238
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d1933b88111092137c15210111d3bafb63f0f381
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="custom-reports-in-management-studio"></a>Benutzerdefinierte Berichte in Management Studio
-In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] wird von vielen Objekt-Explorer-Knoten ein Satz von Standardberichten angezeigt, die von [!INCLUDE[msCoName](../../includes/msconame_md.md)] erstellt werden. In diesen Berichten werden häufig angeforderte Serverinformationen zusammengefasst. Seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 2 können in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] von [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]erstellte benutzerdefinierte Berichte von Administratoren ausgeführt werden.  
+In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]wird von vielen Objekt-Explorer-Knoten ein Satz von Standardberichten angezeigt, die von [!INCLUDE[msCoName](../../includes/msconame_md.md)]erstellt werden. In diesen Berichten werden häufig angeforderte Serverinformationen zusammengefasst. Seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 2 können in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] von [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]erstellte benutzerdefinierte Berichte von Administratoren ausgeführt werden.  
   
 ## <a name="implementation"></a>Implementierung  
 Benutzerdefinierte Berichte werden als RDL-Dateien gespeichert und mithilfe der Berichtsdefinitionssprache (Report Definition Language, RDL) erstellt. In der Berichtsdefinitionssprache sind Informationen zum Datenabruf und Datenlayout für einen Bericht in einem XML-Format enthalten. Die Berichtsdefinitionssprache ist ein offenes Schema. Entwickler können die Berichtsdefinitionssprache mit zusätzlichen Attributen und Elementen erweitern. Jede gültige [!INCLUDE[tsql](../../includes/tsql_md.md)] -Anweisung in einem Bericht kann von Berichten ausgeführt wird.  
@@ -82,4 +78,3 @@ Jeder gültige [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] -Befehl
 [Aufheben der Unterdrückung von Warnungen für das Ausführen von benutzerdefinierten Berichten](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
 [Verwenden benutzerdefinierter Berichte mit Eigenschaften von Objekt-Explorer-Knoten](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
   
-

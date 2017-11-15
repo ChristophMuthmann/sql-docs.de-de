@@ -1,13 +1,11 @@
 ---
 title: "Transparente Datenverschlüsselung (TDE) | Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - Transparent Data Encryption, about
 - encryption [SQL Server], transparent data encryption
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
-caps.latest.revision: 75
+caps.latest.revision: "75"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: 64feb0c11acb5f2c68e560fbecc251dcdb2d6a95
-ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: 975a267896ea8b97c432a7c7fc50245d20f87b86
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="transparent-data-encryption-tde"></a>Transparente Datenverschlüsselung (TDE)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -256,4 +253,3 @@ GO
  [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md)  
   
   
-

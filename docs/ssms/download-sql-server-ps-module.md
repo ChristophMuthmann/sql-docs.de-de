@@ -5,24 +5,21 @@ ms.date: 03/10/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords:
-- SQL Server PowerShell installieren, SQL Server PowerShell herunterladen
+keywords: SQL Server PowerShell installieren, SQL Server PowerShell herunterladen
 ms.assetid: 
-caps.latest.revision: 113
+caps.latest.revision: "113"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
-ms.openlocfilehash: 7449932a07aa0284fe2248828270b7f391713175
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 16ca0d08413ba75b7603596e8e4c5340715cb1a3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="download-sql-server-powershell-module"></a>Herunterladen des SQL Server PowerShell-Moduls
 Als Teil der Version 17.0 von SQL Server Management Studio ist das SQL Server PowerShell-Modul nun im PowerShell-Katalog enthalten.  Das Modul ist nicht mehr im SSMS-Installationspaket enthalten. Um PowerShell mit Version 17.0 und neuer von SSMS zu verwenden, muss das SQL Server-Modul in einem zusätzlichen Schritt auf dem Computer installiert werden.
@@ -62,4 +59,3 @@ Mit dem folgenden Befehl können Sie einen Import vornehmen, wenn Sie eine besti
 > Import-Module SqlServer -Version 21.0.17178
 
 Die Versionen des SQL Server PowerShell-Moduls, die im PowerShell-Katalog enthalten sind, unterstützen die Versionsverwaltung und benötigen die PowerShell-Version 5.0 oder neuer. Sie finden das SqlServer-Modul [PowerShell-Katalog](https://www.powershellgallery.com/packages/Sqlserver/) 
-

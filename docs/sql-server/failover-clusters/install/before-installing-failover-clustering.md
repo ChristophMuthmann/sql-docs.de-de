@@ -5,8 +5,7 @@ ms.date: 08/24/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - installing failover clusters
 - failover clustering [SQL Server], preinstallation checklist
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
-caps.latest.revision: 141
+caps.latest.revision: "141"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 880d10a367cc625bcc313b19c06ee4504e955a19
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3ee39b07f117a70c4de03d921cf2c751913e70c5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="before-installing-failover-clustering"></a>Vor dem Installieren des Failoverclusterings
   Bevor Sie einen SQL Server-Failovercluster installieren, müssen Sie die Hardware und das Betriebssystem auswählen, unter dem SQL Server ausgeführt werden soll. Außerdem müssen Sie das Windows Server Failover Clustering (WSFC) konfigurieren und Überlegungen zu Netzwerk, Sicherheit und anderer Software überprüfen, die auf dem Failovercluster ausgeführt werden soll.  
@@ -261,5 +259,4 @@ ms.lasthandoff: 08/03/2017
  [Verwaltung und Wartung von Failoverclusterinstanzen](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)  
   
   
-
 

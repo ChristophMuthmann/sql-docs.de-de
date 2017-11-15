@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - adding tables
 - related tables [SQL Server]
 ms.assetid: be6f421b-5697-4a52-8cab-ed5f90c3f506
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8af59d37d3d028cf3d37feb7f621f21771e0ce60
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c4f3bb71005dad9ef5cff8d797c58813a8adae05
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-related-tables-to-diagrams-visual-database-tools"></a>Hinzufügen verknüpfter Tabellen zu Diagrammen (Visual Database Tools)
 Sie können ein Datenbankdiagramm schnell allen Tabellen hinzufügen, die einer Beziehung zu einer ausgewählten Tabelle zugeordnet sind.  
@@ -35,4 +33,3 @@ Sie können ein Datenbankdiagramm schnell allen Tabellen hinzufügen, die einer 
   
 2.  Klicken Sie mit der rechten Maustaste auf die Tabelle. Klicken Sie im Kontextmenü auf **Verknüpfte Tabellen hinzufügen**.  
   
-

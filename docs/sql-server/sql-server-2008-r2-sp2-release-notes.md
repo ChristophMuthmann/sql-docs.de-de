@@ -12,17 +12,16 @@ helpviewer_keywords:
 - SQL Server 2008 R2 SP2
 - Release Notes, SQL Server 2008 R2 SP2
 ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
-ms.openlocfilehash: 25aba71ea2c8b7fc8b0944ad5731e6edcb161c37
-ms.contentlocale: de-de
-ms.lasthandoff: 09/02/2017
-
+ms.openlocfilehash: e9a25b50719f315fc9b6ab4683cdb4a75f13d266
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 In diesem Dokument mit Versionsanmerkungen werden bekannte Probleme beschrieben, mit denen Sie sich vertraut machen sollten, bevor Sie Microsoft SQL Server 2008 R2 Service Pack 2 installieren bzw. mit der Problembehandlung beginnen. Diese Versionsanmerkungen gelten für alle Editionen von SQL Server 2008 R2 SP2 und sind nur online verfügbar. Das Dokument wird regelmäßig aktualisiert.  
@@ -68,4 +67,3 @@ Eine vollständige Liste von Fehlern und bekannten Problemen, die in diesem Serv
 ## <a name="see-also"></a>Siehe auch  
 [Ermitteln der Version und Edition von SQL Server](http://support.microsoft.com/kb/321185)  
   
-

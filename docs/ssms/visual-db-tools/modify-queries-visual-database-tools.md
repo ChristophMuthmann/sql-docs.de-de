@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - modifying queries
 - queries [SQL Server], modifying
 ms.assetid: e2618a89-90fb-43d8-ac4e-cabd2aa3f1dc
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ba1aeadc84bf4ffb5ecc019eec496b0bd2db084d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: b6cd0175e531974952306f649ef326eeb74e84ad
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="modify-queries-visual-database-tools"></a>Ändern von Abfragen (Visual Database Tools)
 Öffnen Sie eine Abfrage, um diese im Abfrage- und Sicht-Designer zu ändern.  
@@ -43,4 +41,3 @@ Der Abfrage-Designer ist jetzt geöffnet, und Sie können Änderungen vornehmen.
 [Verwenden von Daten im Ergebnisbereich &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
 [Ausführen grundlegender Vorgänge mit Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
-

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - file rollover option [SQL Server]
 - size [SQL Server], files
 ms.assetid: 88c31b02-f44c-4a14-be8b-437f2097de12
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 88ac44b6c82349c1c0294a512a24ffacd6002ad3
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d9827287ecea08ca547c2b371c8e0696e37c7d02
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>Beschränken der Größe von Ablaufverfolgungsdatei und -tabelle
   Abhängig von den in der Ablaufverfolgung enthaltenen Ereignisklassen und der Verwendungsweise des [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann der Umfang der Ergebnisse der SQL-Ablaufverfolgung variieren. Wenn Sie eine Ablaufverfolgung für häufig auftretende Ereignisklassen durchführen, können Sie die dabei gesammelten Daten minimieren, indem Sie die maximale Dateigröße und die maximale Anzahl von Zeilen festlegen. Durch Angabe der maximalen Dateigröße oder der maximalen Zeilen können Sie sicherstellen, dass die Ablaufverfolgungsdatei oder -tabelle nicht über das angegebene Limit hinaus anwächst.  
@@ -62,4 +60,3 @@ ms.lasthandoff: 06/22/2017
  [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)  
   
   
-

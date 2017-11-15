@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], deleting
 - deleting solutions
 ms.assetid: 750bb2ac-4f69-4c8d-9db5-3f33837b6dff
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b783dbb2d94608d4d3d798403dde78b34027d38d
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0bc9d4185ffae8c2d11a12537f986e0da832ea2f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="delete-a-solution"></a>Löschen einer Projektmappe
 Wenn Sie eine Projektmappe unwiderruflich löschen, werden die Dateien aus dem physischen Speicher und die Dateielemente aus der Projektmappe entfernt.  
@@ -48,4 +46,3 @@ Wenn Sie eine Projektmappe unwiderruflich löschen, werden die Dateien aus dem p
 [Erstellen eines Projekts](../../ssms/solution/create-a-project.md)  
 [Entfernen oder Löschen eines Elements oder Projekts](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
   
-

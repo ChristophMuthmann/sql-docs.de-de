@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - logs [SQL Server], jobs
 - removing job step logs
 ms.assetid: ee20c6cd-0258-4550-bdb0-71e86a0fb330
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e3ddfb6b7c76014732bb12c2d33f337af683dade
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 399ded1a034d3664def419322c91d3b84e8d62e2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="delete-a-job-step-log"></a>Löschen eines Auftragsschrittprotokolls
 In diesem Thema wird beschrieben, wie Sie ein Auftragsschrittprotokoll des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agents löschen.  
@@ -97,4 +95,3 @@ $jb = $srv.JobServer.Jobs["Test Job"]
 $jb.DeleteJobStepLogs(5)  
 ```  
   
-

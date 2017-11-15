@@ -5,26 +5,22 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.openwith
-helpviewer_keywords:
-- Open With dialog box
+f1_keywords: vs.openwith
+helpviewer_keywords: Open With dialog box
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e0edd5dbed47243ef0d13f352ec525be43d6f0c7
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ce714ce9042b3c827e1916ec3b6664ca06e278e7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="open-with-new-file"></a>Öffnen mit (neue Datei)
 Sie können ein Dokument in einem oder mehreren Editoren öffnen, indem Sie im Menü **Datei** auf **Öffnen** und danach auf **Datei**klicken. Wählen Sie im Dialogfeld **Datei öffnen** die Datei aus, klicken Sie auf den Pfeil bei **Öffnen** , und klicken Sie dann auf **Öffnen mit**. Klicken Sie im Dialogfeld **Öffnen mit** in der Liste **Wählen Sie das zu öffnende Programm aus** auf das bevorzugte Programm, und klicken Sie dann auf **Öffnen**.  
@@ -51,4 +47,3 @@ Um einen Standardeditor (und ggf. eine Sprachcodierungsoption) für den ausgewä
 ## <a name="see-also"></a>Siehe auch  
 [Zuordnen von Dateierweiterungen zu einem Code-Editor](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)  
   
-

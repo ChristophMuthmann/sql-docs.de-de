@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - queries [SQL Server], discarding changes
 - discarding query changes
 ms.assetid: 7bb17ece-1222-4622-b476-5789d7641c64
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9df42c738038a393b1a2955c3825eaf58e0dc4ed
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4fc3552f3c45f41b828b4027dc25b98fc332262f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>Verwerfen von Änderungen an Abfragen (Visual Database Tools)
 Sie können an einer Abfragedefinition vorgenommene Änderungen vor dem Speichern verwerfen. Nach dem Speichern kann ein früherer Zustand nicht wiederhergestellt werden.  
@@ -46,4 +44,3 @@ Sie können an einer Abfragedefinition vorgenommene Änderungen vor dem Speicher
 [Ausführen grundlegender Vorgänge mit Abfragen (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 [Verwenden von Daten im Ergebnisbereich (Visual Database Tools)](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   
-

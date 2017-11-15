@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - parameters [SQL Server], table-valued
 - TVP See table-valued parameters
 ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 021177aa350c47474e48453f7d9a5735e1083b04
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 31480a002f6953c3576a12181d17971dd235a16a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Verwenden von Tabellenwertparameter (Datenbankmodul)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]

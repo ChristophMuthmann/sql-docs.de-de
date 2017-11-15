@@ -8,20 +8,18 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Release Notes, SQL Server
+helpviewer_keywords: Release Notes, SQL Server
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 855dc52c2d4ac7a4d28864328536de62e23ced3d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/08/2017
-
+ms.openlocfilehash: 2aa2d466fce0c67b1bf51493d986cbb43af1b166
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-2012-release-notes"></a>Versionsanmerkungen zu SQL Server 2012
 In diesen Versionsanmerkungen werden bekannte Probleme beschrieben, mit denen Sie sich vertraut machen sollten, bevor Sie mit der Installation oder Problembehandlung in Microsoft SQL Server 2012 ([zum Herunterladen hier klicken](http://go.microsoft.com/fwlink/?LinkId=238647)) beginnen. Die Anmerkungen zu dieser Version sind nur online und nicht auf den Installationsmedien verfügbar und werden regelmäßig aktualisiert.  
@@ -505,9 +503,9 @@ In der folgenden Tabelle ist die Treiberunterstützung für AlwaysOn-Verfügbark
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|ja|ja|ja|ja|ja|  
 |SQL Native Client 11.0 OLEDB|Nein|Ja|ja|Nein|Nein|  
-|ADO.NET mit .NET Framework 4.0 mit Konnektivitätspatch**\&#42;**|ja|ja|ja|ja|ja|  
-|ADO.NET mit .NET Framework 3.5 SP1 mit Konnektivitätspatch **\&#42;\&#42;**|ja|ja|ja|ja|ja|  
-|Microsoft JDBC Driver 4.0 für SQL Server|ja|ja|ja|ja|ja|  
+|ADO.NET mit .NET Framework 4.0 mit Konnektivitätspatch**\&#42;**|Benutzerkontensteuerung|ja|ja|ja|Benutzerkontensteuerung|  
+|ADO.NET mit .NET Framework 3.5 SP1 mit Konnektivitätspatch **\&#42;\&#42;**|Benutzerkontensteuerung|ja|ja|ja|ja|  
+|Microsoft JDBC Driver 4.0 für SQL Server|ja|ja|ja|ja|Benutzerkontensteuerung|  
   
 **\&#42;** Laden Sie das Konnektivitätspatch für ADO.NET mit .NET Framework 4.0 herunter: [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211).  
   
@@ -637,4 +635,3 @@ Problem: Beim Versuch, Upgrade Advisor auf einer unterstützten Windows-Version 
   
 ![Horizontal_bar](media/horizontal-bar.png "Horizontal_bar")  
   
-

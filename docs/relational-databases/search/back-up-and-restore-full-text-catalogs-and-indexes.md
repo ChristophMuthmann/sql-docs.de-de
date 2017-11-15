@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-search
+ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +16,16 @@ helpviewer_keywords:
 - full-text indexes [SQL Server], restoring
 - restore operations [full-text search]
 ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
-caps.latest.revision: 62
+caps.latest.revision: "62"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 36c621b35e944fe536e3a2983113ba7586e6e461
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: c38558c5d480add9fdade607373f4e55f9551803
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>Sichern und Wiederherstellen von Volltextkatalogen und Indizes
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

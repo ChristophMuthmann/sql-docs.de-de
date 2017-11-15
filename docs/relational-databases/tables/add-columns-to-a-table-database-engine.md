@@ -5,8 +5,7 @@ ms.date: 10/27/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - columns [SQL Server], adding
 - adding columns
 ms.assetid: abeb8d52-d562-4e29-9e1e-2923ae874859
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: 82d9586bdd3dce6f463f9c142b4e0a1e9ddb3a72
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b79e054d30f0e94823779e21d93e0ddf4436ca8d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>Hinzufügen von Spalten zu einer Tabelle (Datenbankmodul)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -83,4 +81,3 @@ ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL, column_c INT NULL ;
 ####  <a name="FollowUp"></a> Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   
-

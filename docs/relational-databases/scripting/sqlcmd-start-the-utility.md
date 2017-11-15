@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9f213219f9d9fd65af0fee8544f64e61fc1151a3
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a21662f3522e5fa6652f97aad88d68a1475d498a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sqlcmd---start-the-utility"></a>Starten des Hilfsprogramms „sqlcmd“
   Mit dem Hilfsprogramm [sqlcmd](../../tools/sqlcmd-utility.md) können Sie an der Eingabeaufforderung, im Abfrage-Editor im SQLCMD-Mode, in einer Windows-Skriptdatei oder in einem Auftragsschritt des Betriebssystems (Cmd.exe) eines [!INCLUDE[tsql](../../includes/tsql-md.md)] -Agent-Auftrags [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anweisungen, Systemprozeduren und Skriptdateien eingeben.
@@ -59,4 +57,3 @@ ms.lasthandoff: 06/22/2017
  [Ausführen von Transact-SQL-Skriptdateien mithilfe von sqlcmd](../../relational-databases/scripting/sqlcmd-run-transact-sql-script-files.md)  
   
   
-

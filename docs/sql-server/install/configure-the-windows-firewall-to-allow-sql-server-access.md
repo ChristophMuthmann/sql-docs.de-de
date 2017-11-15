@@ -5,8 +5,7 @@ ms.date: 05/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
-ms.openlocfilehash: 5849c0c3d38756795a7aef83b04e95eb0ffcc305
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 672a3204c3bba22efd0d129d384980352ab2ac8d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.lasthandoff: 06/22/2017
 
 Durch Firewallsysteme kann der nicht autorisierte Zugriff auf Computerressourcen verhindert werden. Wenn eine Firewall aktiviert, aber nicht richtig konfiguriert ist, können Versuche der Verbindungsherstellung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] blockiert werden.  
   
-Um über eine Firewall auf eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreifen zu können, müssen Sie die Firewall auf dem Computer mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entsprechend konfigurieren. Die Firewall ist eine Komponente von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Sie können auch eine Firewall von einem anderen Unternehmen installieren. In diesem Thema wird erläutert, wie die Windows-Firewall konfiguriert wird. Die Grundprinzipien gelten jedoch auch für andere Firewallprogramme.  
+Um über eine Firewall auf eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreifen zu können, müssen Sie die Firewall auf dem Computer mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die Firewall ist eine Komponente von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Sie können auch eine Firewall von einem anderen Unternehmen installieren. In diesem Thema wird erläutert, wie die Windows-Firewall konfiguriert wird. Die Grundprinzipien gelten jedoch auch für andere Firewallprogramme.  
   
 > [!NOTE]  
 >  Dieses Thema bietet einen Überblick über die Firewallkonfiguration und fasst Informationen zusammen, die für einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Administrator interessant sind. Weitere Informationen zur Firewall sowie autorisierende Informationen für diese finden Sie in der Dokumentation der Firewall, z. B. in [Windows-Firewall mit erweiterter Sicherheit und IPsec](http://go.microsoft.com/fwlink/?LinkID=116904).  
@@ -319,4 +318,3 @@ Die folgende Tabelle enthält Ports und Dienste, von denen [!INCLUDE[ssNoVersion
  [Gewusst wie: Konfigurieren von Firewalleinstellungen (Azure SQL-Datenbank)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   
-

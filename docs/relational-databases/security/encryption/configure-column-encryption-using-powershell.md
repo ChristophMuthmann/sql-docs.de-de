@@ -5,22 +5,20 @@ ms.date: 05/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- powershell
+ms.technology: powershell
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
-ms.openlocfilehash: d4a5651f3ef4f8d848253711ed93721f387c016a
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 7ac535e20c2782c81b34e33e2f1ba1afe325e821
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-column-encryption-using-powershell"></a>Konfigurieren der Spaltenverschlüsselung mithilfe von PowerShell
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -156,7 +154,6 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -L
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 - [Konfigurieren von Always Encrypted mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
 - [Always Encrypted (Datenbankmodul)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-
 
 
 

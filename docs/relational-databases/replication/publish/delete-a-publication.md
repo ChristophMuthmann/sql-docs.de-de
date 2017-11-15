@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - articles [SQL Server replication], deleting
 - deleting publications
 ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e63359b9005b1f2f2651699121c5a86c78be7a3e
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: ab912d7a972631b6fa63cb9ed9209cb41fd8ac7d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="delete-a-publication"></a>Löschen einer Veröffentlichung
   In diesem Thema wird beschrieben, wie eine Veröffentlichung in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) gelöscht wird.  
@@ -100,49 +99,49 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-remove-a-snapshot-or-transactional-publication"></a>So entfernen Sie eine Momentaufnahme- oder Transaktionsveröffentlichung  
   
-1.  Stellen Sie eine Verbindung mit dem Verleger her, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Klasse verwenden.  
+1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransPublication>-Klasse.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransPublication> -Klasse.  
   
-3.  Legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>-Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>-Eigenschaft für die Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>-Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
+3.  Legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> -Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> -Eigenschaft für die Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
   
-4.  Überprüfen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A>-Eigenschaft, um festzustellen, ob die Veröffentlichung vorhanden ist. Wenn der Wert dieser Eigenschaft **false**lautet, wurden entweder die Veröffentlichungseigenschaften in Schritt 3 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
+4.  Überprüfen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> -Eigenschaft, um festzustellen, ob die Veröffentlichung vorhanden ist. Wenn der Wert dieser Eigenschaft **false**lautet, wurden entweder die Veröffentlichungseigenschaften in Schritt 3 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
-5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A>-Methode auf.  
+5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A> -Methode auf.  
   
 6.  (Optional) Wenn für diese Datenbank keine anderen Transaktionsveröffentlichungen vorhanden sind, kann die Datenbank wie folgt für Transaktionsveröffentlichungen deaktiviert werden:  
   
-    1.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationDatabase>-Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>-Eigenschaft auf die Instanz <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1 fest.  
+    1.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> -Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die Instanz von <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1 fest.  
   
-    2.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>-Methode auf. Wenn diese Methode **false**zurückgibt, überzeugen Sie sich davon, dass die Datenbank vorhanden ist.  
+    2.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn diese Methode **false**zurückgibt, überzeugen Sie sich davon, dass die Datenbank vorhanden ist.  
   
-    3.  Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A>-Eigenschaft auf **FALSE**fest.  
+    3.  Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> -Eigenschaft auf **false**.  
   
-    4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>-Methode auf.  
+    4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> -Methode auf.  
   
 7.  Trennen Sie die Verbindung.  
   
 #### <a name="to-remove-a-merge-publication"></a>So entfernen Sie eine Mergeveröffentlichung  
   
-1.  Stellen Sie eine Verbindung mit dem Verleger her, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Klasse verwenden.  
+1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication>-Klasse.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication> -Klasse.  
   
-3.  Legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>-Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>-Eigenschaft für die Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>-Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
+3.  Legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> -Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> -Eigenschaft für die Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
   
-4.  Überprüfen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A>-Eigenschaft, um festzustellen, ob die Veröffentlichung vorhanden ist. Wenn der Wert dieser Eigenschaft **false**lautet, wurden entweder die Veröffentlichungseigenschaften in Schritt 3 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
+4.  Überprüfen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> -Eigenschaft, um festzustellen, ob die Veröffentlichung vorhanden ist. Wenn der Wert dieser Eigenschaft **false**lautet, wurden entweder die Veröffentlichungseigenschaften in Schritt 3 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
-5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A>-Methode auf.  
+5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A> -Methode auf.  
   
 6.  (Optional) Wenn für diese Datenbank keine anderen Mergeveröffentlichungen vorhanden sind, kann die Datenbank wie folgt für Mergeveröffentlichungen deaktiviert werden:  
   
-    1.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationDatabase>-Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>-Eigenschaft auf die Instanz <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1 fest.  
+    1.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> -Klasse. Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die Instanz von <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1 fest.  
   
-    2.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>-Methode auf. Wenn diese Methode **false**zurückgibt, überzeugen Sie sich davon, dass die Datenbank vorhanden ist.  
+    2.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn diese Methode **false**zurückgibt, überzeugen Sie sich davon, dass die Datenbank vorhanden ist.  
   
-    3.  Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A>-Eigenschaft auf **FALSE**fest.  
+    3.  Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> -Eigenschaft auf **false**.  
   
-    4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>-Methode auf.  
+    4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> -Methode auf.  
   
 7.  Trennen Sie die Verbindung.  
   

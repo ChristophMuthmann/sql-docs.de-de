@@ -5,22 +5,20 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e207a41546270197fa35cccd63348107db2d30f4
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 57d972b2af70f5ffa7b7d2682ea235f062fa27c6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="projects-sql-server-management-studio"></a>Projekte (SQL Server Management Studio)
 Ein [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] -Projekt ist eine Sammlung logisch verbundener Skripts und Dateien, die zusammen zur Verwaltung und Entwicklung von Datenbanken gespeichert werden können.  
@@ -65,4 +63,3 @@ Mit dem Eigenschaftenfenster in [!INCLUDE[ssManStudio](../../includes/ssmanstudi
 [Projektmappen &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
 [Quellcodeverwaltung des Projektmappen-Explorers](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  
   
-

@@ -9,22 +9,19 @@ manager: cguyer
 editor: 
 ms.assetid: 
 ms.service: sql-database
-ms.custom:
-- security
+ms.custom: security
 ms.workload: Inactive
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
-ms.translationtype: HT
-ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
-ms.openlocfilehash: 2950cf2e403cd0afd337c1578d7bbe656f2a6e53
-ms.contentlocale: de-de
-ms.lasthandoff: 10/16/2017
-
---- 
-
+ms.openlocfilehash: 35e51899bda60ccb5b176de0a3d7fabcc86faad7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
+---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption mit Bring Your Own Key-Unterstützung für Azure SQL-Datenbank und Data Warehouse
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -159,4 +156,3 @@ Es wird empfohlen, dass jeder Server Zugriff auf das Key Vault-Schlüsselmateria
 - Erste Schritte mit der Bring Your Own Key-Unterstützung für TDE: [Turn on TDE using your own key from Key Vault using PowerShell (Aktivieren von TDE für das Verwenden Ihres eigenen Schlüssels von Key Vault mithilfe von PowerShell)](transparent-data-encryption-byok-azure-sql-configure.md)
 - Erfahren Sie , wie Sie die TDE-Schutzvorrichtung eines Servers rotieren können, damit dieser den Sicherheitsanforderungen entspricht: [Rotate the Transparent Data Encryption protector Using PowerShell (Rotieren des Transparent Data Encryption-Schutzes mithilfe von PowerShell)](transparent-data-encryption-byok-azure-sql-key-rotation.md).
 - Im Fall eines Sicherheitsrisikos erfahren Sie unter [Remove a potentially compromised key (Entfernen eines möglicherweise kompromittierten Schlüssels)](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md), wie Sie eine möglicherweise kompromittierte TDE-Schutzvorrichtung entfernen können. 
-

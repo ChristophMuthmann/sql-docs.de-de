@@ -5,25 +5,23 @@ ms.date: 03/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - snapshots [SQL Server replication], applying
 - snapshots [SQL Server replication], creating
 ms.assetid: 631f48bf-50c9-4015-b9d8-8f1ad92d1ee2
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7fdc75559ffafea97e9ad3f4ef4b5e0788d7fb3d
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 4834625127d034e228416aa5ba0f25f9314b3734
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-and-apply-the-snapshot"></a>Erstellen und Anwenden der Momentaufnahme
   Momentaufnahmen werden nach dem Erstellen einer Veröffentlichung vom Momentaufnahme-Agent generiert. Sie können folgendermaßen generiert werden:  
@@ -58,4 +56,3 @@ ms.lasthandoff: 07/31/2017
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)  
   
   
-

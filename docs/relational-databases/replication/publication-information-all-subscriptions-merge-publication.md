@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.monitor.publicationinfo.allsubscriptions.merge.f1
+f1_keywords: sql13.rep.monitor.publicationinfo.allsubscriptions.merge.f1
 ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 08f8762c93f26dc9159328f6aa58b73063234d30
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: dd188dfeed5b6615d7146dcaf4d1b81a38bcbeaa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publication-information-all-subscriptions-merge-publication"></a>Veröffentlichungsinformationen, Alle Abonnements (Mergeveröffentlichung)
   Auf der Registerkarte **Alle Abonnements** werden Informationen zu allen Abonnements der ausgewählten Mergeveröffentlichung angezeigt.  

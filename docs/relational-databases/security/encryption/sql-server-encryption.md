@@ -1,13 +1,11 @@
 ---
 title: "SQL Server-Verschlüsselung | Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 05/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - cryptography [SQL Server], about cryptography
 ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: 8c449858a5f72cb7647c32a22b7a5906754d23bf
-ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: 91f10ac9cc1e83187298d258c626c852634cf19b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-encryption"></a>SQL Server-Verschlüsselung
   Als Verschlüsselung wird der Vorgang bezeichnet, Daten mithilfe eines Schlüssels oder eines Kennworts unlesbar zu machen. Die Daten werden dadurch ohne den entsprechenden Entschlüsselungsschlüssel oder das Kennwort unbrauchbar. Durch Verschlüsselung werden keine Probleme der Zugriffssteuerung gelöst. Sie erhöht jedoch die Sicherheit, indem sie den Datenverlust auch dann einschränkt, wenn die Zugriffssteuerung umgangen wird. Wenn der Hostcomputer einer Datenbank beispielsweise falsch konfiguriert wurde und ein Hacker Zugriff auf vertrauliche Daten erlangt, sind diese gestohlenen Daten sehr wahrscheinlich nutzlos, wenn sie verschlüsselt wurden.  
@@ -89,4 +86,3 @@ Sie können in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Verb
  [Verschlüsselungsschlüssel für SSRS - sichern und Wiederherstellen von Verschlüsselungsschlüsseln](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   
-

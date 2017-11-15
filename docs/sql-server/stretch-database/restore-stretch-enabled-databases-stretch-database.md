@@ -5,22 +5,20 @@ ms.date: 07/06/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-stretch
+ms.technology: dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 179935cc6a15d076737d12b4fa6fac28f354db3c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 97cbd56ea25072856220db88996bccd6aba2c26b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>Wiederherstellen von Stretch-aktivierten Datenbanken (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +28,7 @@ ms.lasthandoff: 09/01/2017
   Weitere Informationen finden Sie unter [Sichern von Stretch-aktivierten Datenbanken](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md).
 
 > [!TIP]
-> Das Sichern von Daten ist nur ein Teil einer umfassenden Lösung für hohe Verfügbarkeit und Geschäftskontinuität. Weitere Informationen zu hoher Verfügbarkeit finden Sie unter [Lösungen mit hoher Verfügbarkeit](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md).
+> Backup ist nur ein Teil einer umfassenden Lösung für Hochverfügbarkeit und Geschäftskontinuität. Weitere Informationen zu Hochverfügbarkeit finden Sie unter [Lösungen mit Hochverfügbarkeit](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md).
 
 ## <a name="restore-your-sql-server-data"></a>Wiederherstellen der SQL Server-Daten
 Nach einem Hardwareausfall oder einer Beschädigung stellen Sie die Stretch-aktivierte SQL Server-Datenbank aus einer Sicherung wieder her. Dafür können Sie die derzeit verwendeten und üblichen SQL Server-Wiederherstellungsmethoden verwenden. Weitere Informationen finden Sie unter [Übersicht über Wiederherstellungsvorgänge](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
@@ -92,4 +90,3 @@ Um eine gelöschte Azure-Datenbank im Azure-Portal in dem Zustand wiederherzuste
  
  [Azure-Portal]: https://portal.azure.com/
  
-

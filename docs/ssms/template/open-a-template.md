@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - templates [Transact-SQL], opening
 - opening templates
 ms.assetid: 605b0f4c-5ba1-4249-ad1c-6341df77cd7a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fdf01f10ec6de0b63b1981f59cc6ba541b4de7c2
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: bfa128c7a1510b2f20eb9fa86d8a960aa4b13dd9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="open-a-template"></a>Öffnen einer Vorlage
 Sie können eine Vorlage über den Vorlagen-Explorer öffnen.  
@@ -51,4 +49,3 @@ Wird durch das Öffnen einer Vorlage ein neues Editor-Fenster geöffnet, erfolgt
 [Vorlagen-Explorer](../../ssms/template/template-explorer.md)  
 [Vorlagenparameter ersetzen](../../ssms/template/replace-template-parameters.md)  
   
-

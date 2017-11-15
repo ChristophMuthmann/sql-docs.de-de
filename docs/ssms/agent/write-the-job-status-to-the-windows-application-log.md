@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], status
 - logs [SQL Server], jobs
 ms.assetid: 3b813702-8f61-40ec-bf3b-ce9deb7e68be
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a23a522ebf0c1d506cc55ef5923a583a19b64434
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2792cbe969500bdce10b9c422f307b635c875b98
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Schreiben des Auftragsstatus in das Windows-Anwendungsprotokoll
 In diesem Thema wird beschrieben, wie Sie den [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] konfigurieren müssen, damit der Auftragsstatus mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)], oder SQL Server Management Objects in das Windows Anwendungsereignisprotokoll geschrieben wird.  
@@ -89,4 +87,3 @@ $jb = new-object Microsoft.SqlServer.Management.Smo.Agent.Job($srv.JobServer, "T
 $jb.EventLogLevel = [Microsoft.SqlServer.Management.Smo.Agent.CompletionAction]::Always  
 ```  
   
-

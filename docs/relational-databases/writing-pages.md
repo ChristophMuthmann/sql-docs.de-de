@@ -5,23 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- server-general
+ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- pages
+helpviewer_keywords: pages
 ms.assetid: 409c8753-03c4-436d-839c-6a5879971551
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: pmasl
 ms.author: pelopes
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8f8e6bff396499886a23182787d84a84e6ceaf17
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 3e2a92f98a71588a6c46f4f38a961aefb82ce267
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="writing-pages"></a>Schreiben von Seiten
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]

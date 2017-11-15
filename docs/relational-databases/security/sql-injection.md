@@ -1,28 +1,25 @@
 ---
 title: SQL Injection | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-security
+ms.technology: dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQL Injection
+helpviewer_keywords: SQL Injection
 ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
-caps.latest.revision: 7
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d415833c9a51fd9b7fcde0b2515183ecc4dfb235
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "7"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: Inactive
+ms.openlocfilehash: 58bdc38f3f48ce52f7d67281af89b45e2007be59
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-injection"></a>SQL Injection
   Bei einem SQL-Injection-Angriff wird ein bösartiger Code in Zeichenfolgen eingefügt, die später zur Analyse und Ausführung an eine Instanz von SQL Server übergeben werden. Sie sollten jede Prozedur, die SQL-Anweisungen erstellt, nach Injection-Anfälligkeiten überprüfen, denn SQL Server führt alle empfangenen gültigen Abfragen aus. Auch parametrisierte Daten können von einem technisch versierten Angreifer manipuliert werden.  

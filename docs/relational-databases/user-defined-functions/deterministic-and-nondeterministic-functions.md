@@ -5,8 +5,7 @@ ms.date: 08/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-udf
+ms.technology: dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - deterministic functions
 - user-defined functions [SQL Server], deterministic
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
-ms.openlocfilehash: 2a25a75485ecfb5bae812b01f142a9650ce2933c
-ms.contentlocale: de-de
-ms.lasthandoff: 10/17/2017
-
+ms.openlocfilehash: 0a9aeecbec7487e9d750fabb7e2374366f41678a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Deterministische und nicht deterministische Funktionen
   Deterministische Funktionen geben bei jedem Aufrufen dasselbe Ergebnis zurück, wenn sie mit einem bestimmten Satz von Eingabewerten aufgerufen werden und die Datenbank denselben Status aufweist. Nicht deterministische Funktionen können bei jedem Aufrufen unterschiedliche Ergebnisse zurückgeben, wenn sie mit einem bestimmten Satz von Eingabewerten aufgerufen werden – selbst wenn die Datenbank, auf die zugegriffen wird, immer denselben Status aufweist. Beispielsweise gibt die AVG-Funktion immer dasselbe Ergebnis zurück, sofern die zuvor genannten Bedingungen erfüllt sind. Die GETDATE-Funktion hingegen, die den aktuellen datetime-Wert liefert, gibt immer ein anderes Ergebnis zurück.  
@@ -73,19 +71,19 @@ ms.lasthandoff: 10/17/2017
   
 |||  
 |-|-|  
-|@@CONNECTIONS |GETDATE|  
-|@@CPU_BUSY |GETUTCDATE|  
-|@@DBTS |GET_TRANSMISSION_STATUS|  
-|@@IDLE |LAG|  
-|@@IO_BUSY |LAST_VALUE|  
-|@@MAX_CONNECTIONS |LEAD|  
-|@@PACK_RECEIVED |MIN_ACTIVE_ROWVERSION|  
-|@@PACK_SENT |NEWID|  
-|@@PACKET_ERRORS |NEWSEQUENTIALID|  
-|@@TIMETICKS |NEXT VALUE FOR|  
-|@@TOTAL_ERRORS |NTILE|  
-|@@TOTAL_READ |PARSENAME|  
-|@@TOTAL_WRITE |PERCENTILE_CONT|  
+|@@CONNECTIONS|GETDATE|  
+|@@CPU_BUSY|GETUTCDATE|  
+|@@DBTS|GET_TRANSMISSION_STATUS|  
+|@@IDLE|LAG|  
+|@@IO_BUSY|LAST_VALUE|  
+|@@MAX_CONNECTIONS|LEAD|  
+|@@PACK_RECEIVED|MIN_ACTIVE_ROWVERSION|  
+|@@PACK_SENT|NEWID|  
+|@@PACKET_ERRORS|NEWSEQUENTIALID|  
+|@@TIMETICKS|NEXT VALUE FOR|  
+|@@TOTAL_ERRORS|NTILE|  
+|@@TOTAL_READ|PARSENAME|  
+|@@TOTAL_WRITE|PERCENTILE_CONT|  
 |AT TIME ZONE|PERCENTILE_DISC|
 |CUME_DIST|PERCENT_RANK|  
 |CURRENT_TIMESTAMP|RAND|  
@@ -103,4 +101,3 @@ ms.lasthandoff: 10/17/2017
  Wie bei Aufrufen von einem Batch oder einer gespeicherten Prozedur aus wird die erweiterte gespeicherte Prozedur im Kontext des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Sicherheitskontos ausgeführt, unter dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird. Der Besitzer der erweiterten gespeicherten Prozedur sollte diese Berechtigungen dieses Sicherheitskontexts berücksichtigen, wenn er anderen Benutzern Berechtigungen zum Ausführen der Prozedur erteilt.  
   
   
-

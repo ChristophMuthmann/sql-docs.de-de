@@ -5,25 +5,23 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - FOR XML query
 - queries [XML in SQL Server], comparing query types
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2e83d836d3cf5e736847c5ebbb1934e8cde5374a
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 26e2fb52bc52ff9f00fb70f20385533104cb8924
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>FOR XML-Abfragen im Vergleich zu geschachtelten FOR XML-Abfragen
   In diesem Thema wird eine einstufige FOR XML-Abfrage mit einer geschachtelten FOR XML-Abfrage verglichen. Ein Vorteil, den die Verwendung geschachtelter FOR XML-Abfragen bietet, besteht darin, dass Sie eine Kombination aus attributzentriertem und elementzentriertem XML-Code für Abfrageergebnisse angeben können. Das Beispiel veranschaulicht dies.  
@@ -209,4 +207,3 @@ FOR XML AUTO, TYPE
  [Verwenden von geschachtelten FOR XML-Abfragen](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   
-

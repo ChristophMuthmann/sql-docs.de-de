@@ -5,27 +5,24 @@ ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - Transact-SQL IntelliSense
 - IntelliSense [SQL Server], Transact-SQL syntax
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 328ed60693a51b4bd081b1089e39e4805124f042
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4fa116b3ef7a86697f053a653c14aad0e86f1535
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Von IntelliSense unterstützte Transact-SQL-Syntax
   Dieses Thema beschreibt die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen und Syntaxelemente, die von IntelliSense in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]unterstützt werden.  
@@ -138,4 +135,3 @@ SELECT
  Wenn Sie `SELECT`eingegeben haben, listet IntelliSense **PrimaryKeyCol**, **FirstNameCol**und **LastNameCol** als mögliche Elemente in der Auswahlliste auf, auch wenn das Skript nicht ausgeführt wurde und `MyTable` noch nicht in `MyTestDB`vorhanden ist.  
   
   
-

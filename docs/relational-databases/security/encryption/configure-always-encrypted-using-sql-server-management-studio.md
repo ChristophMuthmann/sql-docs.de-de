@@ -5,28 +5,25 @@ ms.date: 11/30/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - SQL13.SWB.COLUMNMASTERKEY.PAGE.F1
 - SQL13.SWB.COLUMNENCRYPTIONKEY.PAGE.F1
 - SQL13.SWB.COLUMNMASTERKEY.ROTATION.F1
-helpviewer_keywords:
-- Always Encrypted, configure with SSMS
+helpviewer_keywords: Always Encrypted, configure with SSMS
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 097ce7fb331df64de9b293a6af9e05e7d95f1b37
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 08f7778ecba3cf55a8bc47d492e410de9e480146
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Konfigurieren von Always Encrypted mithilfe von SQL Server Management Studio
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -475,7 +472,6 @@ Weitere Informationen finden Sie unter [Create and Store Column Master Keys (Alw
 - [sys.column_master_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
 - [sys.column_encryption_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)
 - [Konfigurieren von Always Encrypted mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
-
 
 
 

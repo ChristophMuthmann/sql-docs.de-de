@@ -5,8 +5,7 @@ ms.date: 08/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - change tracking [SQL Server]
 - change tracking [SQL Server], managing
 ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e6a29f384995058da7b4beef3edc3dac37e3e616
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: bbf7327b30ba9964dc89849be2af673cf29492d6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-change-tracking-sql-server"></a>Verwalten der Änderungsnachverfolgung (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -119,4 +118,3 @@ sp_spaceused 'sys.syscommittab'
  [Arbeiten mit Änderungsdaten &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
   
   
-

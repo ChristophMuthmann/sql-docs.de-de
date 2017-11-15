@@ -5,8 +5,7 @@ ms.date: 08/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - 32-bit edition [SQL Server]
 - editions [SQL Server], side-by-side installations
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
-caps.latest.revision: 67
+caps.latest.revision: "67"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 65ad6ac9f50532c686db62240b45ec313752cfb9
-ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: 50c3f64fed5b1a6eba3f2675458001e2e70e4ba5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Verwenden mehrerer Versionen und Instanzen von SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können auf ein und demselben Computer mehrere Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwaltet werden. Darüber hinaus können Sie frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktualisieren oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Computer installieren, auf dem bereits frühere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen installiert sind. Unterstützte Upgradeszenarien finden Sie unter [Unterstützte Versions- und Editionsupgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
@@ -111,4 +109,3 @@ In der folgenden Tabelle wird die parallele Unterstützung von [!INCLUDE[ssSQL15
  [Abwärtskompatibilität](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   
   
-

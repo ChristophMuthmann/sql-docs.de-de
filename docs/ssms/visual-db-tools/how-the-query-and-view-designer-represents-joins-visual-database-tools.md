@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - joins [SQL Server], Query and View Designer
 - Diagram pane [Visual Database Tools]
 ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1556e7c6469ff2ece09e3249c8396e6a0e96eb6c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 2231538d858cf69c6275c00458ebfa97561bd303
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Darstellungsweise von Joins im Abfrage- und Sicht-Designer (Visual Database Tools)
 Bei verknüpften Tabellen stellt der [Abfrage- und Sicht-Designer](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) die Verknüpfung im [Diagrammbereich](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) grafisch und im [SQL-Bereich](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)mithilfe von SQL-Syntax dar.  
@@ -89,4 +87,3 @@ Folgende Syntaxoptionen werden beim Verknüpfen von Tabellen angewendet:
 [Erstellen von Abfragen mit Joins &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
 [Verknüpfen (Dialogfeld) &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md)  
   
-

@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 861d60a66b9dc6d86b31aded956561fcdf1be6ff
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 4a43451046d7cbea498941d867b235a58f56d468
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>Deinstallieren von Power Pivot für SharePoint
   Die Deinstallation einer [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Installation ist ein Vorgang mit mehreren Schritten, der die Vorbereitung auf die Deinstallation, das Entfernen von Funktionen und Lösungen aus der Farm und das Entfernen von Programmdateien und Registrierungseinstellungen umfasst.  
@@ -197,4 +197,3 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
  [Power Pivot-Konfigurationstools](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
   
   
-

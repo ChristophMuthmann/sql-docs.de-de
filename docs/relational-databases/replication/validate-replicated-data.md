@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - merge replication data validation [SQL Server replication], about data validation
 - validating replicated data
 ms.assetid: f7500a2b-61cb-41b5-816d-27609a6c58e7
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a57d074a1e24ec0d865c2a1be5c6a857ecb68354
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 257cb487ad0609a334a17604485a1941d4382373
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="validate-replicated-data"></a>Überprüfen von replizierten Daten
   Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die Daten auf dem Abonnenten mit denen auf dem Verleger übereinstimmen. Die Überprüfung kann für bestimmte Abonnements oder für alle Abonnements für eine Veröffentlichung ausgeführt werden. Geben Sie einen der folgenden Überprüfungstypen an. Bei der nächsten Ausführung des Verteilungs-Agents oder des Merge-Agents werden die Daten dann überprüft:  
@@ -93,4 +91,3 @@ ms.lasthandoff: 06/22/2017
  [Best Practices for Replication Administration](../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
   
   
-

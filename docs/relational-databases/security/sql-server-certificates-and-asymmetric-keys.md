@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- security [SQL Server], certificates and asymmetric keys
+helpviewer_keywords: security [SQL Server], certificates and asymmetric keys
 ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: ff3d6bcd21c301e13d39f3ce22205e879af86b85
-ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: a1175f8ea6b93440437b23c6322fe2eb8a89332c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server-Zertifikate und asymmetrische Schlüssel
   Die Verschlüsselung mit öffentlichen Schlüsseln (Public Key Cryptography, PKI) ist eine Form der Nachrichtenverschlüsselung, bei der ein Benutzer einen *öffentlichen* Schlüssel und einen *privaten* Schlüssel erstellt. Der private Schlüssel wird geheim gehalten, der öffentliche Schlüssel kann an andere verteilt werden. Zwar sind die Schlüssel mathematisch miteinander verknüpft, jedoch kann der private Schlüssel nicht einfach aus dem öffentlichen Schlüssel abgeleitet werden. Der öffentliche Schlüssel wird verwendet, um Daten zu verschlüsseln und der private Schlüssel wird verwendet, um Daten zu entschlüsseln. Eine mit dem öffentlichen Schlüssel verschlüsselte Nachricht kann nur mit dem korrekten privaten Schlüssel wieder entschlüsselt werden. Da es sich um zwei verschiedene Schlüssel handelt, werden diese Schlüssel als *asymmetrisch*bezeichnet.  
@@ -87,4 +84,3 @@ ms.lasthandoff: 08/28/2017
  [Transparente Datenverschlüsselung &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
   
-

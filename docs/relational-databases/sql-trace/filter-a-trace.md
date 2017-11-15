@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - filters [SQL Server], traces
 - traces [SQL Server], filters
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6315705010a41afb985682e63338cc95237b5e78
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 53f0f6ea6b12c702cadcacebe8deb87f45b48aa7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="filter-a-trace"></a>Filtern einer Ablaufverfolgung
   Durch Filter werden die in einer Ablaufverfolgung aufgezeichneten Ereignisse eingeschränkt. Ist kein Filter eingerichtet, werden alle Ereignisse der ausgewählten Ereignisklassen in der Ablaufverfolgungsausgabe zurückgegeben. Wenn Sie z. B. die Benutzernamen von Windows in der Ablaufverfolgung auf bestimmte Benutzer beschränken, werden die Ausgabedaten auf die für Sie interessanten Benutzer reduziert.  
@@ -187,4 +185,3 @@ ms.lasthandoff: 06/22/2017
  [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)  
   
   
-

@@ -5,26 +5,22 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.deleteobjects.f1
-helpviewer_keywords:
-- Delete Objects dialog box
+f1_keywords: sql13.swb.deleteobjects.f1
+helpviewer_keywords: Delete Objects dialog box
 ms.assetid: 49541441-179c-40d3-ba0c-01bcae545984
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 053e53c609786f9ba9193c5dd2f70c58ec00eba3
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2f4fdde3b074596301e42cf557c8cfb641963b8e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="delete-objects"></a>Objekte löschen
 In diesem Dialogfeld können Sie eine Datenbank oder ein Datenbankobjekt löschen.  
@@ -48,4 +44,3 @@ Wird nur angezeigt, wenn eine Datenbank gelöscht wird. Bei Aktivierung dieses K
 **Bestehende Verbindungen schließen**  
 Wird nur angezeigt, wenn eine Datenbank gelöscht wird. Bei Aktivierung dieses Kontrollkästchens werden die Verbindungen zur betreffenden Datenbank beendet.  
   
-

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - duplicating tables
 - table copying [SQL Server]
 ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a7bbc956b852d4a7af1a8b9e3d26920fa4aeeebe
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5126bfa281db7e6b8fa295b338137e9d4b2bf1b7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="duplicate-tables"></a>Duplizieren von Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -89,4 +87,3 @@ ms.lasthandoff: 06/22/2017
 5.  Klicken Sie auf **Ausführen**.  
   
   
-

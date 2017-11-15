@@ -5,22 +5,20 @@ ms.date: 07/20/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-security
+ms.technology: dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 8333a497795ae7968b5d297b62aba83944f1b3ba
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 313e9c416f29321c38c47b80002b9ca219e36cf8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Übersicht über die Schlüsselverwaltung für Always Encrypted
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -112,7 +110,6 @@ Ihr Schlüsselverwaltungsprozess muss sicherstellen, dass die Spaltenhauptschlü
 - [Always Encrypted (Client Development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 - [Tutorial zum Always Encrypted-Assistenten (Azure Key Vault)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)
 - [Tutorial zum Always Encrypted-Assistenten (Windows-Zertifikatspeicher)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
-
 
 
 

@@ -5,24 +5,23 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - filters [SQL Server], traces
 - traces [SQL Server], filters
 ms.assetid: 7b976a84-7381-43a6-a828-ba83ada71cbe
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 991f41c8eefc83710b90782e364a55a91c20335f
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: fe092dd82ffd0ebadc9c8a2a79db62d3f8855009
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-a-trace-filter-transact-sql"></a>Festlegen eines Ablaufverfolgungsfilters (Transact-SQL)
   In diesem Thema wird die Vorgehensweise zum Verwenden gespeicherter Prozeduren zum Erstellen eines Filters beschrieben, von dem nur die von Ihnen benötigten Informationen zum Nachverfolgen eines Ereignisses abgerufen werden.  

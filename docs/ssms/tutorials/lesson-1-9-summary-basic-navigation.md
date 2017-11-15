@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: de4e9430-7290-4ce5-be9e-f247539460e1
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 546a25682e74daa3515e36069fbcb764da7c8dee
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: b9f0db357c16b9b3b2347fdd1f1922be9e473827
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-9---summary---basic-navigation"></a>Lektion 1-9: Zusammenfassung: Grundlagen zur Navigation
 Die Entwurfsoberfläche von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] kann angepasst werden, sodass sie Ihren privaten und beruflichen Anforderungen entspricht.  
@@ -42,4 +39,3 @@ Im Folgenden werden die bewährten Vorgehensweisen für den effizienten Einsatz 
   
   
   
-

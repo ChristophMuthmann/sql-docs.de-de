@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.debug.breakpt.condition
-helpviewer_keywords:
-- Transact-SQL debugger, breakpoint conditions
+f1_keywords: vs.debug.breakpt.condition
+helpviewer_keywords: Transact-SQL debugger, breakpoint conditions
 ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 087070d0e19d777b6ac2d457303e9e9962073ead
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 8261bb5b0a2b65493a6a55af55c9cbf85bf256d6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-a-breakpoint-condition"></a>Angeben einer Breakpointbedingung
   Eine Breakpointbedingung ist ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -Ausdruck, der vom Debugger ausgewertet wird, wenn der Breaktpoint erreicht wird. Wenn die Bedingungen erfüllt ist und eine angegebene Trefferanzahl erreicht ist, unterbricht der Debugger die Ausführung, oder er führt die für den Breakpoint angegebene Aktion aus.  

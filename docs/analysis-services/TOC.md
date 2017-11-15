@@ -93,7 +93,7 @@
 ## [Manage servers (Verwalten von Servern)](../analysis-services/instances/analysis-services-instance-management.md)
 ## [Ablaufverfolgungsereignisse ](../analysis-services/trace-events/analysis-services-trace-events.md)
 
-# Developer
+# Entwickler
 ## Tabellarische Modelle
 ### [Tabular Model Programming for Compatibility Level 1200 and higher (Programmieren von tabellarischen Modellen für Kompatibilitätsgrad 1200 und höher)](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
 #### [Tabular Model Scripting Language (TMSL) (Skriptsprache für tabellarische Modelle (TMSL))](tabular-model-scripting-language-tmsl-reference.md)

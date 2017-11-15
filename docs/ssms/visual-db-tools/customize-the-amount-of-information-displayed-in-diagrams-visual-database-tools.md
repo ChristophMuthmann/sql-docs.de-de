@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - customizing database diagram information [SQL Server]
 - custom table views [SQL Server]
 ms.assetid: 31bb6772-7974-4329-bca0-c16d5875483d
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2f4f078ac1d04aa8f470ad7479497cc8dfb5c00f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 4650285a2b6070bf057f114235550591f557a85c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>Anpassen des Umfangs der in Diagrammen angezeigten Informationen (Visual Database Tools)
 Wenn Sie eine Tabelle zu einem Datenbankdiagramm hinzufügen, wird eine festgelegte Anzahl von Eigenschaften angezeigt. Sie können in einem Menü den Umfang der angezeigten Informationen auswählen, oder Sie können einen benutzerdefinierten Satz von Eigenschaften erstellen.  
@@ -61,4 +59,3 @@ Dabei stehen folgende Möglichkeiten zur Verfügung:
 ## <a name="see-also"></a>Siehe auch  
 [Verwenden von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
-

@@ -5,8 +5,7 @@ ms.date: 10/03/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +13,19 @@ helpviewer_keywords:
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 439b7c66da985003952c897583d520674c26d2ec
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 53ff3b74ec6e818f91b92f7b968362c1f9a8bb7e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC-Quorummodi und Abstimmungskonfiguration (SQL Server)
-  Sowohl [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] als auch Always On-Failoverclusterinstanzen (FCIs) nutzen Windows Server Failover Clustering (WSFC) als Plattformtechnologie.  WSFC verwendet einen auf Quorum basierenden Ansatz zum Überwachen des Gesamtclusterzustands und Maximieren der Fehlertoleranz auf Knotenebene. Umfassende Kenntnisse in Bezug auf WSFC-Quorummodi und die Knotenabstimmungskonfiguration sind sehr wichtig für das Entwerfen, Betreiben und Warten (Fehlerbehandlung) der Always On-Lösung für hohe Verfügbarkeit und für die Notfallwiederherstellung.  
+  Sowohl [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] als auch Always On-Failoverclusterinstanzen (FCIs) nutzen Windows Server Failover Clustering (WSFC) als Plattformtechnologie.  WSFC verwendet einen auf Quorum basierenden Ansatz zum Überwachen des Gesamtclusterzustands und Maximieren der Fehlertoleranz auf Knotenebene. Umfassende Kenntnisse in Bezug auf WSFC-Quorummodi und die Knotenabstimmungskonfiguration sind sehr wichtig für das Entwerfen, Betreiben und Warten (Fehlerbehandlung) der Always On-Lösung für Hochverfügbarkeit und für die Notfallwiederherstellung.  
   
  **In diesem Thema:**  
   
@@ -141,4 +140,3 @@ ms.lasthandoff: 06/22/2017
  [Windows Server-Failoverclustering &#40;WSFC&#41; mit SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   
-

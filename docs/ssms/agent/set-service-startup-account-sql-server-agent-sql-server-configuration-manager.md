@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - startup accounts [SQL Server]
 - service startup accounts [SQL Server Agent]
 ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ca20cf42839419f5d40826ef992087623dbc3059
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c421d5bab68e114069534ebf4fd83dddfb50469e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Festlegen des Dienststartkontos für den SQL Server-Agent (SQL Server-Konfigurations-Manager)
 Das Dienststartkonto des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agents definiert das Windows-Konto, unter dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent ausgeführt wird, sowie die zugehörigen Netzwerkberechtigungen. In diesem Thema wird beschrieben, wie Sie das Dienstkonto für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Konfigurations-Manager in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]festlegen.  
@@ -47,7 +45,7 @@ Das Dienststartkonto des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md
   
 -   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Knoten wird nur im Objekt-Explorer angezeigt, wenn Sie die Berechtigung besitzen, ihn zu verwenden.  
   
-### <a name="Security"></a>Sicherheit  
+### <a name="Security"></a>Security  
   
 #### <a name="Permissions"></a>Berechtigungen  
 Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent muss zur Verwendung der Anmeldeinformationen eines Kontos konfiguriert werden, das Mitglied der festen Serverrolle **sysadmin** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ist, um seine Funktionen ausführen zu können. Das Konto muss über die folgenden Windows-Berechtigungen verfügen:  
@@ -97,4 +95,3 @@ Weitere Informationen zu den Windows-Berechtigungen, die für das [!INCLUDE[ssNo
   
 9. Klicken Sie im [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Konfigurations-Manager auf die Schaltfläche **Schließen** .  
   
-

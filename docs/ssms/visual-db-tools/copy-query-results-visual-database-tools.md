@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Visual Database Tools [SQL Server], queries
+helpviewer_keywords: Visual Database Tools [SQL Server], queries
 ms.assetid: 65883f21-c898-4857-a0b8-d1851e1486e1
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 43a63ea7380ce4586d8a411c085c094aa953b1b2
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: a256975fbeed9461b13cd579382c3a0dbbd4d5ab
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="copy-query-results-visual-database-tools"></a>Kopieren von Abfrageergebnissen (Visual Database Tools)
 Sie können das Resultset in Form von durch Tabstopps getrenntem Text aus dem Bereich **Ergebnisse** kopieren. Dabei kann das gesamte Resultset oder eine beliebige Anzahl zusammenhängender oder nicht zusammenhängender Zeilen oder Zellen kopiert werden.  
@@ -58,4 +55,3 @@ Sie können das Resultset in Form von durch Tabstopps getrenntem Text aus dem Be
 ## <a name="see-also"></a>Siehe auch  
 [Verwenden von Daten im Ergebnisbereich &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   
-

@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - monitoring [SQL Server], events
 - responding to events automatically
 ms.assetid: f7fbe155-5b68-4777-bc71-a47637471f32
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 96a0b14ba381f1fe2465a73e75dec541037d9915
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c3eda2e99be82aa0809168c5dccaa46d52933c41
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-and-respond-to-events"></a>Überwachen und Reagieren auf Ereignisse
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent kann Ereignisse überwachen und automatisch auf *Ereignisse*reagieren. Zu diesen Ereignissen gehören Meldungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], bestimmte Leistungsbedingungen, und WMI-Ereignisse (Windows Management Instrumentation, Windows-Verwaltungsinstrumentation).  
@@ -75,4 +73,3 @@ Unabhängig von der Ereignisquelle reagiert der [!INCLUDE[ssNoVersion](../../inc
 ## <a name="see-also"></a>Siehe auch  
 [sp_altermessage](http://msdn.microsoft.com/en-us/1b28f280-8ef9-48e9-bd99-ec14d79abaca)  
   
-

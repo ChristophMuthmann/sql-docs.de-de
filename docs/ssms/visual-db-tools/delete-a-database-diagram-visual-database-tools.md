@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - database diagrams [SQL Server], deleting
 - removing database diagrams
 ms.assetid: 2e558164-f1cb-4e43-b966-3567ed0190ee
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ca2182f7cf871a32891a186f13fb177b7f22be52
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 76746c886322fdf58e5abe4725da992569b16f15
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="delete-a-database-diagram-visual-database-tools"></a>Löschen eines Datenbankdiagramms (Visual Database Tools)
 Wenn Sie ein Datenbankdiagramm nicht mehr benötigen, können Sie es löschen.  
@@ -45,4 +43,3 @@ Das Datenbankdiagramm wird aus der Datenbank gelöscht. Beim Löschen eines Date
 ## <a name="see-also"></a>Siehe auch  
 [Verwenden von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
-

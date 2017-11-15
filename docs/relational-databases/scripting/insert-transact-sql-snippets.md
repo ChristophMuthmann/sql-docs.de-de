@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - Transact-SQL snippets, code
 - snippets [Transact-SQL], how to insert
 ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f431402a937407f00d054e6ad488ea92f0b5a647
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: dd2463b84505c7dbbd617e4a700725147e01c336
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="insert-transact-sql-snippets"></a>Einfügen von Transact-SQL-Ausschnitten
   Ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -Codeausschnitt ist eine Vorlage, die Sie als Ausgangspunkt beim Schreiben von neuen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor verwenden können.  
@@ -52,4 +50,3 @@ ms.lasthandoff: 06/22/2017
  [Einfügen von Transact-SQL-Umschließungsausschnitten](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
   
   
-

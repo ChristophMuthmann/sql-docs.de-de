@@ -17,17 +17,16 @@ helpviewer_keywords:
 - instances of SQL Server, uninstalling
 - uninstalling SQL Server
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
-caps.latest.revision: 74
+caps.latest.revision: "74"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 31c1a78b0f951933fea5927efd7acc13a6ce6f6c
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 1267da1e11ffb76d2b2ce32dfde03c16e7eb3742
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Deinstallieren einer vorhandenen SQL Server-Instanz (Setup)
 
@@ -117,4 +116,3 @@ ms.lasthandoff: 07/31/2017
  [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   
-

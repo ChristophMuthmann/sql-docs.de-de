@@ -5,12 +5,10 @@ ms.date: 01/31/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- Security [SQL Server]
+f1_keywords: Security [SQL Server]
 helpviewer_keywords:
 - database objects [SQL Server], security
 - SQL Server, security
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - security [SQL Server], planning
 - applications [SQL Server], security
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
-caps.latest.revision: 31
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9397a4279a769cc6504c0a37a09f1b42a810cdd0
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "31"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: On Demand
+ms.openlocfilehash: f616ae89a25530c7fd229634e91d8f17646c397e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="securing-sql-server"></a>Sichern von SQL Server
   Das Sichern von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann als eine Reihe von Schritten betrachtet werden, die vier Bereiche betreffen: die Plattform, die Authentifizierung, die Objekte (einschließlich der Daten) und die Anwendungen, die auf das System zugreifen. In den folgenden Themen werden Sie durch das Erstellen und Implementieren eines effektiven Sicherheitsplans geführt.  
@@ -152,4 +150,3 @@ GO
 [Sicherheit auf Zeilenebene](../../relational-databases/security/row-level-security.md)   
 [Schutz Ihres geistigen SQL Server-Eigentums](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)   
   
-

@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ag.operator.history.f1
+f1_keywords: sql13.ag.operator.history.f1
 ms.assetid: d25f79da-1ec1-4683-8ceb-5026b62b7364
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5ce6c8110367a4dd37e5e3e782cfc06c6ea16ef1
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a68e13937b689de305558802cb2d41f5ab2e94e4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="operator-properties-history-page"></a>Operatoreigenschaften (Seite Verlauf)
 Mithilfe dieser Seite können Sie Datum, Uhrzeit und Typ der letzten an den Operator gesendeten Benachrichtigungen anzeigen.  
@@ -40,4 +37,3 @@ Die letzten per NET SEND vorgenommenen Benachrichtigungsversuche oder **(Nie dur
 ## <a name="see-also"></a>Siehe auch  
 [Operatoren](../../ssms/agent/operators.md)  
   
-

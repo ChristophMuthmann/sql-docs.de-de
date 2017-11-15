@@ -5,27 +5,24 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.findreplace.replaceinfiles
 - vs.replaceinfiles
-helpviewer_keywords:
-- Replace in Files dialog box
+helpviewer_keywords: Replace in Files dialog box
 ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b2626e43307f63dc878531d36c5129575f1ff69e
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 27f72fee58d96813be7d6ab6146ebeb58a2af9e7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replace-in-files"></a>In Dateien ersetzen
   Die Registerkarte **In Dateien ersetzen** des Fensters zum Suchen und Ersetzen ermöglicht es Ihnen, den Code eines angegebenen Satzes von Dateien nach einer Zeichenfolge oder einem Ausdruck zu durchsuchen und einige oder alle der übereinstimmenden Stellen zu ändern. Die gefundenen Übereinstimmungen und ausgeführten Aktionen werden in dem unter **Ergebnisoptionen**ausgewählten Suchergebnisfenster aufgelistet.  
@@ -164,4 +161,3 @@ ms.lasthandoff: 06/22/2017
  [Tastenkombinationen für SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   
-

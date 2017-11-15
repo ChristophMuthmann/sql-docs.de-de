@@ -5,8 +5,7 @@ ms.date: 08/25/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - tables [SQL Server], opening
 - Table Designer, opening
 ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: ca37946fadb30837e21255ae67b862a61bd6f68e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: 47869f706f615cf32b3a80bcfc872c2aebe7964f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-and-update-database-tables"></a>Erstellen und Aktualisieren von Datenbanktabellen
 
@@ -68,4 +66,3 @@ Der Tabellen-Designer ist ein visuelles Tool, in dem [Datenbanktabellen](../../r
 [Indizes](../../relational-databases/indexes/indexes.md)  
 [Data types (Transact-SQL) (Datentypen (Transact-SQL))](../../t-sql/data-types/data-types-transact-sql.md)  
 [Herunterladen von SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)  
-

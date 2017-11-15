@@ -5,29 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.templates.replaceparameters.f1
+f1_keywords: sql13.swb.templates.replaceparameters.f1
 helpviewer_keywords:
 - template parameters [Template Explorer]
 - templates [Transact-SQL], replacing parameters
 - Replace (Query) Template Parameters dialog box
 - replacing template parameters
 ms.assetid: 1234aa14-3464-4a3e-922a-5cfb8fb23627
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 46e39ef54d2caf54cf68fa3ff3823d9111c05e0d
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9c8b245e57af135e6e11e98cc468ad4b0dab7237
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replace-template-parameters"></a>Ersetzen von Vorlagenparametern
 Vorlagen enthalten Parameter, die bei jeder Verwendung der betreffenden Vorlage durch implementierungsspezifische Werte ersetzt werden können. Nach dem Öffnen einer Vorlage in einem Code-Editor können Sie die Parameter durch für die Implementierung relevante Werte ersetzen.  
@@ -50,4 +47,3 @@ Nach dem Öffnen der Vorlage in einem Code-Editor-Fenster:
 [Vorlagen-Explorer](../../ssms/template/template-explorer.md)  
 [Öffnen einer Vorlage](../../ssms/template/open-a-template.md)  
   
-

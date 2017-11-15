@@ -5,29 +5,27 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-search
+ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2549481c3e09e4b052e0eea40c993ccf191f38ba
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 4380c25d02f6fd6d05f41c030691738f3715d6e6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Wiederherstellen der von der Suche verwendeten Wörtertrennungen auf die vorherige Version
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installiert und aktiviert eine Version der Wörtertrennung und Wortstammerkennung für alle von der Volltextsuche unterstützten Sprachen, mit Ausnahme von Koreanisch. In diesem Thema wird beschrieben, wie von der neuen Version dieser Komponenten zur früheren Version gewechselt bzw. von der früheren Version zu der neuen Version zurückgewechselt wird.  
   
  In diesem Thema werden die folgenden Sprachen nicht erläutert:  
   
--   **Englisch**. Informationen zum Wiederherstellen der englischen Komponenten finden Sie unter [Ändern der für Englisch (USA) und Englisch (Vereinigtes Königreich) verwendeten Wörtertrennung](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
+-   **Englisch**. Informationen zum Wiederherstellen der englischen Komponenten finden Sie unter [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 -   **Dänisch, Polnisch und Türkisch**. Die Wörtertrennungen von Drittanbietern für Dänisch, Polnisch und Türkisch, die in vorherigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthalten waren, wurden durch [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Komponenten ersetzt.  
   
@@ -382,8 +380,7 @@ ms.lasthandoff: 09/01/2017
 |Aktueller Dateiname|MsWb70804.dll|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ändern der für Englisch (USA) und Englisch (Vereinigtes Königreich) verwendeten Wörtertrennung](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
+ [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
  [Verhaltensänderungen der Volltextsuche](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   
   
-

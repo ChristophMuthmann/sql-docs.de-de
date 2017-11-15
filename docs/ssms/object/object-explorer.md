@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - filtering objects [SQL Server]
 - Object Explorer, about Object Explorer
 ms.assetid: 469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: da54a02db64f353f31598520ed70d2423447d374
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 41d97e078b7d7faa4cd15e35a2f3de6b438d09c6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="object-explorer"></a>Objekt-Explorer
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] bietet Funktionen zum Verwalten von Objekten in Instanzen von [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)]und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)].  
@@ -54,4 +52,3 @@ Der Objekt-Explorer stellt eine hierarchische Benutzeroberfläche zum Anzeigen u
 |Beschreibt den Bereich "Details zum Objekt-Explorer", eine tabellarische Ansicht aller Objekte im Server mit einer Benutzeroberfläche zu deren Verwaltung.|[Detailbereich des Objekt-Explorers](../../ssms/object/object-explorer-details-pane.md)|  
 |Beschreibt Möglichkeiten zum Ausführen benutzerdefinierter Berichte in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].|[Benutzerdefinierte Berichte in Management Studio](../../ssms/object/custom-reports-in-management-studio.md)|  
   
-

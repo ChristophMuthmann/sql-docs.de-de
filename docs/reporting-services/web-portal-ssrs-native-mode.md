@@ -1,26 +1,24 @@
 ---
 title: Webportal (einheitlicher SSRS-Modus) | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: e3dff8b613f933caa84522b31bdc862aa9c799f7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.workload: Active
+ms.openlocfilehash: 803aa964bd9bd8e982075fe5dd9a7c359236440e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="web-portal-ssrs-native-mode"></a>Webportal (einheitlicher SSRS-Modus)
 

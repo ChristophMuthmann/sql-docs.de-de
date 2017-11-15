@@ -5,8 +5,7 @@ ms.date: 01/07/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,16 +15,16 @@ f1_keywords:
 - sql13.swb.availabilitygroupproperties.permission.f1
 - sql13.swb.SecurableAndEffectivePermission.f1
 ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
-caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d591578ed239e7c6b0279ea923fc18b558d4f252
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "39"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: Inactive
+ms.openlocfilehash: 6a79f06d97d05a29b4c7e0460c5f95931e07ef85
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="permissions-or-securables-page"></a>Seite 'Berechtigungen' oder 'Sicherungsfähige Elemente'
   Auf der Seite **Berechtigungen** oder **Sicherungsfähige Elemente** können die Berechtigungen für sicherungsfähige Elemente angezeigt oder festgelegt werden. Diese Seite kann von vielen Orten aus geöffnet werden. Der Inhalt der Seite kann sich geringfügig ändern, je nachdem, wie die Seite geöffnet wird und was sie enthält. Das obere Raster der Seite ist u. U. aufgefüllt, wenn die Seite geöffnet wird, oder es ist leer. Klicken Sie auf **Suchen**, um dem oberen Raster Elemente hinzuzufügen. Wählen Sie im oberen Raster ein Element aus, und legen Sie dann auf der Registerkarte **Explizit** die entsprechenden Berechtigungen fest. Verwenden Sie zum Anzeigen von aggregierten Berechtigungen die Registerkarte **Effektiv** .  
@@ -79,4 +78,3 @@ ms.lasthandoff: 06/22/2017
  [Sicherheitscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
-

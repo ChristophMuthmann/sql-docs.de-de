@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-search
+ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - full populations [full-text search]
 - full-text indexes [SQL Server], populations
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
-caps.latest.revision: 78
+caps.latest.revision: "78"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d68baa882e382b2b68e5eded3ea7807e4b13aa6d
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 2c1d56c9d50735bb3a97bbfc150359ae06941dc7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="populate-full-text-indexes"></a>Auffüllen von Volltextindizes
   Das Erstellen und Verwalten eines Volltextindexes umfasst das Auffüllen des Indexes mithilfe eines Prozesses, der als *Auffüllung* (oder auch als *Crawl*) bezeichnet wird.  
@@ -234,4 +232,3 @@ Die variablen Teile des Durchforstungsprotokolldatei-Namens sind die folgenden.
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   
   
-

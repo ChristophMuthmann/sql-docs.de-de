@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.ToolsOptionsPages.Designers.MaintenancePlans
+f1_keywords: VS.ToolsOptionsPages.Designers.MaintenancePlans
 ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6fb56fc5fbbc30517abf66cc8b29fea7609675ff
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 87e5c7771dfa5bdb1f49633b08625de0302b69d9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="options-designers---maintenance-plans-page"></a>Optionen (Designer – Seite „Wartungspläne“)
 Bestimmen Sie mithilfe des Dialogfelds **Optionen** das Standardverhalten des Designers, wenn einer Entwurfsoberfläche neue Formen hinzugefügt werden. Klicken Sie im Menü **Extras** auf **Optionen**, erweitern Sie **Designer**, und wählen Sie **Wartungspläne**.  
@@ -51,4 +48,3 @@ Wählen Sie aus diesem Dropdown-Listenfeld eine Option aus, um den Standardspeic
   
 -   **Neue Form unter der ausgewählten Form hinzufügen**  
   
-

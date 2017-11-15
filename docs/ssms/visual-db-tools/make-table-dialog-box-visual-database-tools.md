@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vdtsql.chm:69650
 - vdt.dlgbox.maketable
 ms.assetid: 5eb28dc3-828e-486c-9348-596bb5a04c85
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 55372985e2d5ae739e2e03fd07c3c02e5cbeb97f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 813c9846bd0662a454df2a197192da90dcc17ae4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>Tabelle erstellen (Dialogfeld) (Visual Database Tools)
 Ermöglicht das Benennen einer erstellten Tabelle, in die Zeilen kopiert werden. Dieses Dialogfeld wird angezeigt, wenn Sie einen Abfragetyp in eine MAKE TABLE-Abfrage ändern. Um einen Abfragetyp zu ändern, zeigen Sie im Menü **Abfrage-Designer** auf **Typ ändern**, und klicken Sie dann auf **Tabelle erstellen**.  
@@ -41,4 +39,3 @@ Geben Sie zum Erstellen einer Zieltabelle in einer anderen Datenbank einen vollq
 [Erstellen von Tabellenerstellungsabfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-make-table-queries-visual-database-tools.md)  
 [Typen von Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   
-

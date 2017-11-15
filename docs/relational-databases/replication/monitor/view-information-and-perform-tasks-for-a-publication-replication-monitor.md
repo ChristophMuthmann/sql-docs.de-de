@@ -5,8 +5,7 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - publications [SQL Server replication], viewing information
 - publications [SQL Server replication], Replication Monitor tasks
 ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d01adb7abcb4c110f826e0cd54814a66c83c0051
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 3cc21b75d345df304fd84514e62e609866ccced0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-information-and-perform-tasks-for-a-publication-replication-monitor"></a>Anzeigen von Informationen und Ausführen von Aufgaben für eine Veröffentlichung (Replikationsmonitor)
   Der Replikationsmonitor stellt die folgenden Registerkarten mit Informationen zur ausgewählten Veröffentlichung bereit:  

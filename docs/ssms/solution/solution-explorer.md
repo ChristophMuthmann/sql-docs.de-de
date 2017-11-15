@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], items
 - items [SQL Server]
 ms.assetid: 0df09843-0d4f-4925-bc6c-99265035a0c1
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 54ac206f363cfdb5698d02d16fdf197933b87a72
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: c561819367b6e61a1ccfc977a9533efdc95009e7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="solution-explorer"></a>Projektmappen-Explorer
 Der Bereich des Projektmappen-Explorers in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] enthält Projekte genannte Container zur Verwaltung von Elementen wie Datenbankskripts, Abfragen, Datenverbindungen und Dateien. Miteinander verknüpfte Projekte können in einem Projektmappe genannten Container zusammengefasst werden.  
@@ -62,4 +60,3 @@ Erste Schritte mit den SQL Server-Lösungen mithilfe der folgenden Themen:
 |Beschreibt, wie ein Projekt erstellt und Elemente wie Skripts und Verbindungen hinzugefügt werden.|[Projekte &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)|  
 |Enthält Informationen zu den Dateien, mit denen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] Projektmappen und Dateien verwaltet.|[Dateien zum Verwalten von Projektmappen und Projekten](../../ssms/solution/files-that-manage-solutions-and-projects.md)|  
   
-

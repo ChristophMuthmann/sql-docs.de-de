@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.security.LRA.f1
-helpviewer_keywords:
-- Log Reader Agent Security dialog box
+f1_keywords: sql13.rep.security.LRA.f1
+helpviewer_keywords: Log Reader Agent Security dialog box
 ms.assetid: d6981e74-ddb8-41b8-9ea1-56c2ece63b8a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 67f7bfd9eb599250b951f4365d3d6efe6e943a31
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 6536d1ae78cfb2fc1e23ff17efafc2a65b121190
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="log-reader-agent-security"></a>Sicherheit für den Protokolllese-Agent
   Mithilfe des Dialogfelds **Sicherheit für den Protokolllese-Agent** können Sie folgende Angaben machen:  

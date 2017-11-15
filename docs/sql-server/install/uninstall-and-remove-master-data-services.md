@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: efc2431c-588b-42e7-b23b-c875145a33f6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9d936f9a9726a5d7dd5a214cdc813a8634119600
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b7e664af4bd45e1fc8a7bd6abc4b43b45a69b5b5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>Deinstallieren und Entfernen von Master Data Services
   Um die [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Funktion von einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu deinstallieren, befolgen Sie die Schritte unter [Deinstallieren einer vorhandenen SQL Server-Instanz &#40;Setup&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) und geben auf der Seite **Funktionen auswählen** [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] als zu entfernende Funktion an. Durch den Deinstallationsvorgang werden [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Ordner und -Dateien entfernt und [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] vom lokalen Computer deinstalliert.  
@@ -41,4 +39,3 @@ ms.lasthandoff: 06/22/2017
  [Installieren von Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   
-

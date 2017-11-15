@@ -5,24 +5,21 @@ ms.date: 08/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- audit records [SQL Server]
+helpviewer_keywords: audit records [SQL Server]
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 74f73ab33a010583b4747fcc2d9b35d6cdea14a2
-ms.openlocfilehash: ef3a6055836ea2b54d68f162b07b16eb3357a3dd
-ms.contentlocale: de-de
-ms.lasthandoff: 08/04/2017
-
+ms.openlocfilehash: 88abfd6fba8d615e6c34d4d05cbf9c0701acf219
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit-Datensätze
   Die Funktion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit ermöglicht es, Ereignisgruppen und Ereignisse auf Serverebene und auf Datenbankebene zu überwachen. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbankmodul&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -115,4 +112,3 @@ ms.lasthandoff: 08/04/2017
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)  
   
   
-

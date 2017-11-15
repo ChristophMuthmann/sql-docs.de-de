@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - displaying traces
 - viewing traces
 ms.assetid: 3a95a816-aa89-4d5f-858c-968a9cb3ee87
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ac0fccff82a4324911481ea1179ca3cab01b8f10
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 297d8e0725f30e97bf7c393559a04e62b0d3af21
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-a-saved-trace-transact-sql"></a>Anzeigen einer gespeicherten Ablaufverfolgung (Transact-SQL)
   In diesem Thema wird beschrieben, wie Sie integrierte Funktionen verwenden, um eine gespeicherte Ablaufverfolgung anzuzeigen.  

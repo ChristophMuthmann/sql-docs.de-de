@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - status information [SQL Server], event notifications
 - metadata [SQL Server], event notifications
 ms.assetid: 8bc10867-66d6-4f57-ac32-a6c29f3327cd
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6e41d81ae5f32fd8d78e1515f17a9229129348df
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5d71b5cb9f5e418607e56e69cac3df9ef15063ff
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="get-information-about-event-notifications"></a>Abrufen von Informationen zu Ereignisbenachrichtigungen
   Zum Abfragen von Metadaten zu Ereignisbenachrichtigungen stehen die folgenden Katalogsichten zur Verfügung.  
@@ -54,4 +52,3 @@ ms.lasthandoff: 06/22/2017
  [Ereignisbenachrichtigungen](../../relational-databases/service-broker/event-notifications.md)  
   
   
-

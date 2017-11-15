@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ea88d736-849e-4368-b55d-06aeee097bf3
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 422a81da1656b9b5c72fdcf1e71979ff0c8c058f
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 299ee6d6e49a86c36bb14dab28da5b6fe484aa02
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-2-6---script-a-table"></a>Lektion 2-6: Erstellen eines Skriptes für eine Tabelle
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Skripts für das Auswählen, Einfügen, Aktualisieren und Löschen von Tabellen und das Anlegen, Ändern, Löschen und Ausführen von gespeicherten Prozeduren erstellt werden.  
@@ -40,4 +38,3 @@ Möglicherweise benötigen Sie in einigen Fällen ein Skript mit mehreren Option
   
   
   
-

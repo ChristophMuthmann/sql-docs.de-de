@@ -4,22 +4,20 @@ ms.date: 02/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 70a1fd4dbec68d22187585de69a1d603c39e259e
-ms.openlocfilehash: 91f6659896282f5c64a2b3d2c931f2b7dee635a3
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 027258a4da555e2874b6a6e041d703edbe1cb743
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
 
@@ -47,4 +45,3 @@ ms.lasthandoff: 08/18/2017
 ## <a name="next-steps"></a>Nächste Schritte  
 [Lernprogramm: SQL Server Management Studio](http://msdn.microsoft.com/en-us/d2bade70-07cf-4d94-b5d2-88aecb538ed1)  
 [Lernprogramm: Schreiben von Transact-SQL-Anweisungen](http://msdn.microsoft.com/en-us/2addc9be-67d0-423d-a457-192fe9d7d058)  
-

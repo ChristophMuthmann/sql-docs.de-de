@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ag.agent.general.f1
+f1_keywords: sql13.ag.agent.general.f1
 ms.assetid: b51601e9-5454-43c6-bb5e-24eb2ff043c8
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4da1f93dcc4c6e75b554a1a6dab8cbeb86096009
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4046c9c45fda98646043e73c8a9b1e1bacfdd335
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-agent-properties-general-page"></a>SQL Server-Agent-Eigenschaften (Seite Allgemein)
 Mithilfe dieser Seite können Sie die allgemeinen Eigenschaften des [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Dienstes anzeigen und ändern.  
@@ -56,4 +53,3 @@ Geben Sie den Namen eines Operators ein, der NET SEND-Benachrichtigungen von Mel
 [Operatoren](../../ssms/agent/operators.md)  
 [SQL Server-Agent-Fehlerprotokoll](../../ssms/agent/sql-server-agent-error-log.md)  
   
-

@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 635c2845-93c5-4c7f-8f33-ea848ca48b7c
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 587a0141644fd01112d2f890b6e210a9cc862128
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 9d265d008c019ccc03aed0a212bf632962d04ab2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-2-3---maximizing-query-editor"></a>Lektion 2-3: Maximieren des Abfrage-Editors
 Programmierer fragen häufig, wie sie mehr Platz zum Schreiben von Code erhalten können. Als Antwort bieten sich zwei Möglichkeiten, die beide einfach zu realisieren sind: Maximieren des Abfrage-Editorfensters und Ausblenden der Fenster nicht verwendeter Tools.  
@@ -52,4 +49,3 @@ Programmierer fragen häufig, wie sie mehr Platz zum Schreiben von Code erhalten
   
   
   
-

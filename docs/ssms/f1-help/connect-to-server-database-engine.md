@@ -1,13 +1,11 @@
 ---
 title: Verbindung mit Server herstellen (Datenbankmodul) (Datenbankmodul) | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 08/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +16,16 @@ f1_keywords:
 - sql13.swb.connection.login.sqlserver.f1
 - sql13.swb.manageSS2k.f1
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 240201bd70521dcfd92a24c920d941c4ccfa3498
-ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: 179e84b113980d4dfc1a45a29ff00ef88958a574
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-server-database-engine"></a>Verbindung mit Server herstellen (Datenbankmodul)
 Verwenden Sie dieses Dialogfeld, um Optionen für Verbindungen mit Computern mit [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]anzuzeigen oder anzugeben. In den meisten Fällen können Sie eine Verbindung herstellen, indem Sie im Feld **Servername** den Computernamen des Datenbankservers eingeben und dann auf **Verbinden**klicken. Wenn Sie eine Verbindung mit einer benannte Instanz herstellen, verwenden Sie den Computernamen, gefolgt von einem umgekehrten Schrägstrich und dem Namen der Instanz. Beispiel: `mycomputer\myinstance`. Geben Sie beim Herstellen der Verbindung mit [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]den Computernamen gefolgt von **\sqlexpress**an.  
@@ -82,4 +79,3 @@ Klicken Sie darauf, um eine Verbindung mit dem Server herzustellen.
 **Optionen**  
 Klicken Sie darauf, um die **Verbindungseigenschaften** und die Registerkarte **Zusätzliche Verbindungsparameter** anzuzeigen.  
   
-

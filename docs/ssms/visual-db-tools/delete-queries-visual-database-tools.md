@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - removing queries
 - queries [SQL Server], deleting
 ms.assetid: 084e1504-3d2f-4bd9-b97c-b9c8c874751c
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c801801c96b4abf82745278e1b28b9b88309a2d6
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 5b3c61f8905a7625ccedc00153bf02eca62287b2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="delete-queries-visual-database-tools"></a>Löschen von Abfragen (Visual Database Tools)
 Sie können eine Abfrage löschen, indem Sie sie aus dem Projekt entfernen und dauerhaft aus dem Dateisystem löschen. Die anhand der folgenden Methode gelöschten Abfragen werden nicht in den Papierkorb verschoben und können nicht wiederhergestellt werden.  
@@ -49,4 +47,3 @@ Sie können eine Abfrage löschen, indem Sie sie aus dem Projekt entfernen und d
 [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Ausführen grundlegender Vorgänge mit Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
-

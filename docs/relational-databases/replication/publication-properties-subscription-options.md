@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.pubproperties.subscriptionoptions.f1
+f1_keywords: sql13.rep.newpubwizard.pubproperties.subscriptionoptions.f1
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8de57644d66112352b48a88a5ce80bb15bc24dd6
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 0e46255c7b91546ff00dadd04c5bc7d214831b2d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publication-properties-subscription-options"></a>Veröffentlichungseigenschaften, Abonnementoptionen
   Auf der Seite **Abonnementoptionen** des Dialogfelds **Veröffentlichungseigenschaften** können Sie die mit den Abonnements verknüpften Veröffentlichungsebeneneigenschaften anzeigen und festlegen. Die Eigenschaften sind in folgenden Kategorien angeordnet:  
@@ -52,7 +50,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="schema-replication"></a>Schemareplikation  
  **Schemaänderungen replizieren**  
-Nur in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen. Bestimmt, ob Schemaänderungen auf veröffentlichte Objekte repliziert werden. (Dazu gehört z. B. das Hinzufügen einer Spalte zu einer Tabelle oder das Ändern des Datentyps einer Spalte.) Weitere Informationen finden Sie unter [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+ Nur in[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen. Bestimmt, ob Schemaänderungen auf veröffentlichte Objekte repliziert werden. (Dazu gehört z. B. das Hinzufügen einer Spalte zu einer Tabelle oder das Ändern des Datentyps einer Spalte.) Weitere Informationen finden Sie unter [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="options-for-snapshot-and-transactional-publications"></a>Optionen für Momentaufnahme- und Transaktionsveröffentlichungen  
   
@@ -64,10 +62,10 @@ Nur in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion20
  Bestimmt, ob bei jeder Ausführung des Momentaufnahme-Agents Momentaufnahmedateien erstellt werden ( **Unabhängiger Verteilungs-Agent**erforderlich). Diese Option ist schreibgeschützt; sie wird auf **True** festgelegt, wenn Sie auf der Seite **Momentaufnahme-Agent** des Assistenten für neue Veröffentlichung die Option **Momentaufnahme sofort erstellen und zum Initialisieren von Abonnements verfügbar halten** auswählen (Standardeinstellung). Weitere Informationen finden Sie unter [Erstellen und Anwenden der Momentaufnahme](../../relational-databases/replication/create-and-apply-the-snapshot.md).  
   
  **Initialisierung aus Sicherungsdateien zulassen**  
-Nur in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen. Bestimmt, ob Sicherungsdateien für die Initialisierung von Abonnements verwendet werden dürfen. Weitere Informationen finden Sie unter [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)initialisiert wird.  
+ Nur in[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen. Bestimmt, ob Sicherungsdateien für die Initialisierung von Abonnements verwendet werden dürfen. Weitere Informationen finden Sie unter [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)initialisiert wird.  
   
  **Nicht-SQL Server-Abonnenten zulassen**  
-Nur in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen. Bestimmt, ob Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten von der Veröffentlichung unterstützt werden. Wird für diese Option der Wert **True** festgelegt, werden andere Veröffentlichungseigenschaften so festgelegt, dass Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten unterstützt werden. Diese Option ist schreibgeschützt, wenn Abonnenten vorhanden sind. Wenn für **Abonnements mit sofortigem Update zulassen** , **Abonnements mit verzögertem Update über eine Warteschlange zulassen**oder **Peer-zu-Peer-Abonnements zulassen**der Wert **True** festgelegt ist, kann die Option nicht auf **True**festgelegt werden. Weitere Informationen finden Sie unter [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+ Nur in[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen. Bestimmt, ob Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten von der Veröffentlichung unterstützt werden. Wird für diese Option der Wert **True** festgelegt, werden andere Veröffentlichungseigenschaften so festgelegt, dass Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten unterstützt werden. Diese Option ist schreibgeschützt, wenn Abonnenten vorhanden sind. Wenn für **Abonnements mit sofortigem Update zulassen** , **Abonnements mit verzögertem Update über eine Warteschlange zulassen**oder **Peer-zu-Peer-Abonnements zulassen**der Wert **True** festgelegt ist, kann die Option nicht auf **True**festgelegt werden. Weitere Informationen finden Sie unter [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
 ### <a name="data-transformation"></a>Datentransformation  
  **Datentransformationen zulassen**  
@@ -116,7 +114,7 @@ Nur in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höhere
  Bestimmt, welche Funktionen verwendet werden sollen, um zu überprüfen, ob ein Abonnent über die richtige Partition der Daten verfügt. Bei mehreren Werten werden Kommas als Trennzeichen verwendet. Weitere Informationen finden Sie unter [Überprüfen von Partitionsinformationen für einen Mergeabonnenten](../../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md).  
   
  **Partitionen im Voraus berechnen**  
-Nur in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen. Bestimmt, ob die Synchronisierung optimiert werden soll, indem im Voraus berechnet wird, welche Datenzeilen in welche Partitionen gehören. Der Standardwert für diese Option lautet **True** , wenn die Veröffentlichung die Kriterien für im Voraus berechnete Partitionen erfüllt. Weitere Informationen finden Sie unter [Optimieren der Leistung parametrisierter Filter mithilfe vorausberechneter Partitionen](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
+ Nur in[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen. Bestimmt, ob die Synchronisierung optimiert werden soll, indem im Voraus berechnet wird, welche Datenzeilen in welche Partitionen gehören. Der Standardwert für diese Option lautet **True** , wenn die Veröffentlichung die Kriterien für im Voraus berechnete Partitionen erfüllt. Weitere Informationen finden Sie unter [Optimieren der Leistung parametrisierter Filter mithilfe vorausberechneter Partitionen](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
  **Synchronisierung optimieren**  
  Bestimmt, ob die Mergeverarbeitung optimiert werden soll, indem zusätzliche Metadaten auf den einzelnen Abonnenten gespeichert werden. An die Stelle dieser Optimierung sind die im Voraus berechneten Partitionen getreten, d. h., die Option **Synchronisierung optimieren** ist nur relevant, wenn für **Partitionen im Voraus berechnen** der Wert **False**festgelegt ist. Weitere Informationen finden Sie unter [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  

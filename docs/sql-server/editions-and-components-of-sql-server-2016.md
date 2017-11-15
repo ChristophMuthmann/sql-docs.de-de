@@ -1,13 +1,11 @@
 ---
 title: "Editionen und unterstützte Funktionen von SQL Server 2016 | Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 05/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- server-general
+ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -34,17 +32,16 @@ helpviewer_keywords:
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
 ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
-caps.latest.revision: 121
+caps.latest.revision: "121"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: da8692d3cf786157c5e573e18df51e27c41c19c2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: bbe79db32cbf00e83c2cc74efb8c91884e201770
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>Editionen und unterstützte Funktionen von SQL Server 2016
 
@@ -387,4 +384,3 @@ Informationen über die Business Intelligence-Clientfeatures, die von den einzel
  
   
   
-

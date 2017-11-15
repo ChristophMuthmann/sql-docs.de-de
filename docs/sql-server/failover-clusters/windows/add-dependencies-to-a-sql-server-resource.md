@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - clusters [SQL Server], dependencies
 - dependencies [SQL Server], clustering
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bffe545296432d465fd744092519c9882ccc04c1
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4fc39f8d8bc454006432c3be42d536e4fa027cdc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>Hinzufügen von Abhängigkeiten zu einer Ressource von SQL Server
   In diesem Thema wird beschrieben, wie einer AlwaysOn-Failoverclusterinstanz-Ressource mithilfe des Failovercluster-Manager-Snap-Ins Abhängigkeiten hinzugefügt werden. Das Failovercluster-Manager-Snap-In ist die Clusterverwaltungsanwendung für den WSFC (Windows Server Failover Clustering)-Dienst.  
@@ -74,4 +72,3 @@ ms.lasthandoff: 06/22/2017
 -   Wählen Sie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressource aus, öffnen Sie das Dialogfeld **Eigenschaften** , und fügen Sie den Datenträger auf der Registerkarte **Abhängigkeiten** den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abhängigkeiten hinzu.  
   
   
-

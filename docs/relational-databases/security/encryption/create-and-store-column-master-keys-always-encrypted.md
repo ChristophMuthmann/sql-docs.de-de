@@ -5,22 +5,20 @@ ms.date: 07/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-security
+ms.technology: dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 9c4dfd2aa4f511e9ef7615dccf05ed46757f1e0c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 3a250eaea12b32fb08603efb56a7a5105502fc38
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -245,5 +243,4 @@ Informieren Sie sich in der Dokumentation zu Ihrem HSM und CSP, wie Sie den CSP 
 - [Entwickeln von Anwendungen unter Verwendung von Always Encrypted mit dem .NET Framework-Datenanbieter für SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 - [Always Encrypted-Blog](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
     
-
 

@@ -5,8 +5,7 @@ ms.date: 08/05/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - Invoke-Sqlcmd cmdlet
 - sqlcmd utility, PowerShell
 ms.assetid: 0c74d21b-84a5-4fa4-be51-90f0f7230044
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: 2172a7e83454030f0cee9eaec1909c0cfb019d63
-ms.contentlocale: de-de
-ms.lasthandoff: 09/19/2017
-
+ms.openlocfilehash: 3a80c470217ede2ea1eae6ffad6d09cd4bccec8c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd-Cmdlet
   **Invoke-Sqlcmd** ist ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Cmdlet, das Skripts ausführt, die Anweisungen aus den Sprachen ([!INCLUDE[tsql](../includes/tsql-md.md)] und XQuery) und Befehle enthalten, die vom Hilfsprogramm **sqlcmd** unterstützt werden.  
@@ -157,4 +155,3 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
  [Verwenden des Hilfsprogramms sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
   
-

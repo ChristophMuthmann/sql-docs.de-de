@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - deleting registered servers
 - Registered Servers [SQL Server], removing servers
 ms.assetid: 1f7f755f-7ed2-4572-aa18-13cdd92e350e
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 875a8e25243e9623cbafdfdc63eba65585ca469d
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 46cdbf02412ec4e7e521d7f87527cf663292b29d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="remove-a-registered-server-sql-server-management-studio"></a>Entfernen eines registrierten Servers (SQL Server Management Studio)
   In diesem Thema wird beschrieben, wie Sie einen Server aus Registrierte Server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]entfernen.  
@@ -38,4 +36,3 @@ ms.lasthandoff: 07/31/2017
 2.  Klicken Sie im Dialogfeld **Löschen bestätigen** auf **Ja**.  
   
   
-

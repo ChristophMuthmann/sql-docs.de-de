@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: d94f79ec-9f8f-4c06-b62b-3ed22a0f8971
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 5977d22f769e8edc3244cdd64ed7a4cd75684a62
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 5419967dca2b9602d477acfcdd2bab1037db3fb7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-2-5---other-ways-of-viewing-the-code-window"></a>Lektion 2-5: Weitere Möglichkeiten zum Anzeigen des Codefensters
 Das Codefenster kann so konfiguriert werden, dass es mehrere Codefenster auf verschiedene Weisen anzeigt.  
@@ -49,4 +46,3 @@ Das Codefenster kann so konfiguriert werden, dass es mehrere Codefenster auf ver
   
   
   
-

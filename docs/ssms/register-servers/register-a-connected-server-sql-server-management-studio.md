@@ -5,27 +5,24 @@ ms.date: 07/28/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.registerserver.f1
+f1_keywords: sql13.swb.registerserver.f1
 helpviewer_keywords:
 - Registered Servers [SQL Server], register connected servers
 - connected server registrations [SQL Server]
 ms.assetid: 77deb5f5-0f80-484f-8b8b-29afa67ec18f
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: d1b34aea0b591b6b288dbfcc80529750596dd996
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 520992cd863dcd5fcdc9b265ef168cd171b8aa27
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>Registrieren eines verbundenen Servers (SQL Server Management Studio)
   In diesem Thema wird das Registrieren eines verbundenen Servers in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) beschrieben. Indem Sie den Server registrieren, können Sie die Verbindungsinformationen für Server, auf die Sie häufig zugreifen, speichern. Ein Server kann vor dem Verbinden oder bei der Verbindung im Objekt-Explorer registriert werden.  Sie können Ihre registrierten Server in SSMS anzeigen, indem Sie im Menü zu **Ansicht**\\**Registrierte Server** navigieren.
@@ -88,4 +85,3 @@ Klicken Sie hier, um die Einstellungen des registrierten Servers zu speichern.
 [Erstellen eines neu registrierten Servers (SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)
   
   
-

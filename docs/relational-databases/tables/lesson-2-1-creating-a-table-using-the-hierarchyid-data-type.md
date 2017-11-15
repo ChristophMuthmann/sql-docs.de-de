@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- HierarchyID
+applies_to: SQL Server 2016
+helpviewer_keywords: HierarchyID
 ms.assetid: 0d1f361f-336c-4571-99d1-f4813b2d9fc4
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d3671dcea0c0825ba2624bc84a13ee9e2073a25f
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3565aed920e28bf9424a41b72c872e9cb648aafc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-2-1---creating-a-table-using-the-hierarchyid-data-type"></a>Lektion 2.1: Erstellen einer Tabelle mit dem hierarchyid-Datentyp
 Im folgenden Beispiel wird eine Tabelle namens EmployeeOrg erstellt, die Mitarbeiterdaten zusammen mit ihrer Berichtshierarchie aufnimmt. Das Beispiel erstellt die neue Tabelle in der Datenbank [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ; dies ist jedoch optional. Um das Beispiel einfach zu halten, enthält die Tabelle nur fünf Spalten:  
@@ -72,4 +68,3 @@ Die Tabelle ist jetzt bereit, Daten zu speichern. Die nächste Aufgabe besteht d
   
   
   
-

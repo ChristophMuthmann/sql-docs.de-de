@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- F1 Help [SQL Server replication]
+helpviewer_keywords: F1 Help [SQL Server replication]
 ms.assetid: 0c8c282a-d428-417f-ac83-7f37593d40c5
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9c15f108757b6e644251e897290c98956d379117
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3177d3ff20f9b35b17044a1d8144ba17b7013a9c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="properties-reference-replication"></a>Eigenschaftenreferenz (Replikation)
   Dieser Abschnitt der Dokumentation enthält Informationen zu den folgenden Replikations-Assistenten und Dialogfeldern:  
@@ -54,4 +51,3 @@ ms.lasthandoff: 06/22/2017
 -   [Dialogfelder für die Replikation in SQL Server Management Studio](../../relational-databases/replication/sql-server-management-studio-replication-dialog-boxes.md)  
   
   
-

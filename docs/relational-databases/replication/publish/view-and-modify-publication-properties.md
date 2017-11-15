@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,16 @@ helpviewer_keywords:
 - modifying replication properties, publications
 - publications [SQL Server replication], modifying
 ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 25672cad6198647ca7e24eb924796740ce20c264
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 78c385fbef819baf5a3f4b1508fc6d58b6464df6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-and-modify-publication-properties"></a>Anzeigen und Ändern von Veröffentlichungseigenschaften
   In diesem Thema wird beschrieben, wie die Veröffentlichungseigenschaften in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) angezeigt und geändert werden.  
@@ -156,27 +155,27 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-view-or-modify-properties-of-a-snapshot-or-transactional-publication"></a>So zeigen Sie die Eigenschaften einer Momentaufnahme- oder einer Transaktionsveröffentlichung an oder ändern diese  
   
-1.  Stellen Sie eine Verbindung mit dem Verleger her, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Klasse verwenden.  
+1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransPublication>-Klasse, legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>-Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>-Eigenschaften der Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>-Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransPublication> -Klasse, legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> -Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> -Eigenschaft der Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>-Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode **false**zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode **false**zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
-4.  (Optional) Um Eigenschaften zu ändern, legen Sie einen neuen Wert für eine oder mehrere festlegbaren Eigenschaften fest. Verwenden Sie den logischen AND-Operator (**&** in Microsoft Visual C# und **And** in Microsoft Visual Basic), um zu ermitteln, ob ein gegebener <xref:Microsoft.SqlServer.Replication.PublicationAttributes>-Wert für die <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>-Eigenschaft festgelegt wurde. Verwenden Sie den inklusiven logischen OR-Operator (**|** in Visual C# und **Or** in Visual Basic) und den exklusiven logischen OR-Operator (**^** in Visual C# und **Xor** in Visual Basic), um die <xref:Microsoft.SqlServer.Replication.PublicationAttributes>-Werte für die <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>-Eigenschaft zu ändern.  
+4.  (Optional) Um Eigenschaften zu ändern, legen Sie einen neuen Wert für eine oder mehrere festlegbaren Eigenschaften fest. Verwenden Sie den logischen AND-Operator (**&** in Microsoft Visual C# and **And** in Microsoft Visual Basic), um zu ermitteln, ob ein gegebener <xref:Microsoft.SqlServer.Replication.PublicationAttributes> -Wert für die <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> -Eigenschaft festgelegt wurde. Verwenden Sie den inklusiven logischen OR-Operator (**|** in Visual C# and **Or** in Visual Basic) und den exklusiven logischen OR-Operator (**^** in Visual C# and **Xor** in Visual Basic), um die <xref:Microsoft.SqlServer.Replication.PublicationAttributes> -Werte für die <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> -Eigenschaft festgelegt wurde.  
   
-5.  (Optional) Wenn Sie den Wert **true** für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> angegeben haben, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>-Methode auf, um die Änderungen auf dem Server einzutragen. Wenn Sie den Wert **false** für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (die Standardeinstellung) angegeben haben, werden die Änderungen sofort an den Server gesendet.  
+5.  (Optional) Wenn Sie den Wert **true** für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>angegeben haben, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> -Methode auf, um die Änderungen auf dem Server einzutragen. Wenn Sie den Wert **false** für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (die Standardeinstellung) angegeben haben, werden die Änderungen sofort an den Server gesendet.  
   
 #### <a name="to-view-or-modify-properties-of-a-merge-publication"></a>So zeigen Sie die Eigenschaften einer Mergeveröffentlichung an oder ändern diese  
   
-1.  Stellen Sie eine Verbindung mit dem Verleger her, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Klasse verwenden.  
+1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication>-Klasse, legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> und <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>-Eigenschaften der Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>-Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication> -Klasse, legen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> -Eigenschaft und die <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> -Eigenschaft der Veröffentlichung fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die in Schritt 1 erstellte Verbindung fest.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>-Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode **false**zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode **false**zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
-4.  (Optional) Um Eigenschaften zu ändern, legen Sie einen neuen Wert für eine oder mehrere festlegbaren Eigenschaften fest. Verwenden Sie den logischen AND-Operator (**&** in Visual C# und**And** in Visual Basic), um zu ermitteln, ob ein gegebener <xref:Microsoft.SqlServer.Replication.PublicationAttributes>-Wert für die <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>-Eigenschaft festgelegt wurde. Verwenden Sie den inklusiven logischen OR-Operator (**|** in Visual C# und **Or** in Visual Basic) und den exklusiven logischen OR-Operator (**^** in Visual C# und **Xor** in Visual Basic), um die <xref:Microsoft.SqlServer.Replication.PublicationAttributes>-Werte für die <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>-Eigenschaft zu ändern.  
+4.  (Optional) Um Eigenschaften zu ändern, legen Sie einen neuen Wert für eine oder mehrere festlegbaren Eigenschaften fest. Verwenden Sie den logischen AND-Operator (**&** in Visual C# and **And** in Microsoft Visual Basic), um zu ermitteln, ob ein gegebener <xref:Microsoft.SqlServer.Replication.PublicationAttributes> -Wert für die <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> -Eigenschaft festgelegt wurde. Verwenden Sie den inklusiven logischen OR-Operator (**|** in Visual C# and **Or** in Visual Basic) und den exklusiven logischen OR-Operator (**^** in Visual C# and **Xor** in Visual Basic), um die <xref:Microsoft.SqlServer.Replication.PublicationAttributes> -Werte für die <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> -Eigenschaft festgelegt wurde.  
   
-5.  (Optional) Wenn Sie den Wert **true** für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> angegeben haben, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>-Methode auf, um die Änderungen auf dem Server einzutragen. Wenn Sie den Wert **false** für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (die Standardeinstellung) angegeben haben, werden die Änderungen sofort an den Server gesendet.  
+5.  (Optional) Wenn Sie den Wert **true** für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>angegeben haben, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> -Methode auf, um die Änderungen auf dem Server einzutragen. Wenn Sie den Wert **false** für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (die Standardeinstellung) angegeben haben, werden die Änderungen sofort an den Server gesendet.  
   
 ###  <a name="PShellExample"></a> Beispiele (RMO)  
  In diesem Beispiel werden Veröffentlichungsattribute einer Transaktionsveröffentlichung festgelegt. Die Änderungen werden zwischengespeichert, bis sie explizit zum Server gesendet werden.  

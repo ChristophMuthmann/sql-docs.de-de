@@ -5,26 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- optimizing tables
+applies_to: SQL Server 2016
+helpviewer_keywords: optimizing tables
 ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6ac25b85afabdeb906005346c349941a49ca8de4
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7765d8f8a4953f428cae4843d0f89aaa92678a8a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-3---optimizing-the-neworg-table"></a>Lektion 1-3 – Optimieren der NewOrg-Tabelle
 Die **NewOrd** -Tabelle, die Sie in der Aufgabe [Populating a Table with Existing Hierarchical Data](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) erstellt haben, enthält alle Angestellteninformationen und stellt die hierarchische Struktur mithilfe des **hierarchyid** -Datentyps dar. In dieser Aufgabe werden neue Indizes hinzugefügt, die das Suchen in der **hierarchyid** -Spalte unterstützen.  
@@ -170,4 +166,3 @@ Dieser Schritt erstellt zwei nicht gruppierte Indizes, um typische Suchoperation
   
   
   
-

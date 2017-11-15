@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.ToolsOptionsPages.Environment.Help.Online
+f1_keywords: VS.ToolsOptionsPages.Environment.Help.Online
 ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 06e55fc194e5ff0a70bc2f62705bb8914041a2ad
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4e48c89f058af257e0f375e4493d3066804a7e73
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="options-environment---help---online-page"></a>Optionen (Umgebung – Hilfe – Seite „Online“)
 Im Dialogfeld **Optionen** können Sie die bei Suchvorgängen in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] zu verwendenden Hilfequellen angeben, einschließlich der F1-Hilfe. Klicken Sie im Menü **Extras** auf **Optionen**, erweitern Sie den Ordner **Umgebung** , wählen Sie **Hilfe**, und klicken Sie anschließend auf **Online**. Wenn die Seite **Online** in der Liste nicht angezeigt wird, aktivieren Sie im Dialogfeld **Optionen** das Kontrollkästchen **Alle Einstellungen anzeigen** .  
@@ -54,4 +51,3 @@ Zeigt eine kurze Beschreibung für jeden in der Liste **Codezone-Community** aus
 **Datenschutzbestimmungen lesen**  
 Zeigt die Datenschutzrichtlinie von [!INCLUDE[msCoName](../../includes/msconame_md.md)] für die Onlinenutzung an.  
   
-

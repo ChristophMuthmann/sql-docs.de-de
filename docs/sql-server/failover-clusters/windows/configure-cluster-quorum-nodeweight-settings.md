@@ -5,31 +5,30 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 ms.assetid: cb3fd9a6-39a2-4e9c-9157-619bf3db9951
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2c43965a7e6b0021bb4bcf2d6fdca14e66cafa18
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 26138aca07ef49f2249ae6e760027090ece101e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>Konfigurieren von Cluster-Quorum-NodeWeight-Einstellungen
   In diesem Thema wird beschrieben, wie NodeWeight-Einstellungen für einen Elementknoten in einem Windows Server-Failoverclustering-Cluster konfiguriert werden. NodeWeight-Einstellungen werden während der Quorumabstimmung verwendet, um Notfallwiederherstellungs- und Multisubnetzszenarien für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] - und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanzen zu unterstützen.  
   
--   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
+-   **Vorbereitungen:**  [Erforderliche Komponenten](#Prerequisites), [Sicherheit](#Security)  
   
--   **To view quorum NodeWeight settings using:** [Using Powershell](#PowerShellProcedure), [Using Cluster.exe](#CommandPromptProcedure)  
+-   **Anzeigen von Quorum-NodeWeight-Einstellungen mit:** [Verwenden von PowerShell](#PowerShellProcedure), [Verwenden von Cluster.exe](#CommandPromptProcedure)  
   
 -   [Verwandte Inhalte](#RelatedContent)  
   

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - synchronization [SQL Server replication], pull subscriptions
 - subscriptions [SQL Server replication], pull
 ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38b72e808e19854400bf8d4baa867148f4c5a867
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 378cb06700c6bce0dcfd5971b1a84cc4a7786770
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="synchronize-a-pull-subscription"></a>Synchronisieren eines Pullabonnements
   In diesem Thema wird beschrieben, wie ein Pullabonnement in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [Replikations-Agents](../../relational-databases/replication/agents/replication-agents-overview.md)oder Replikationsverwaltungsobjekten (RMO) synchronisiert wird.  
@@ -187,13 +186,13 @@ SET Publication=AdvWorksSalesOrdersMerge
  Sie können Pullabonnements mit Replikationsverwaltungsobjekten (RMO) und dem Zugriff von verwaltetem Code auf Funktionen des Replikations-Agent programmgesteuert synchronisieren. Die Klassen für die Synchronisierung eines Pullabonnements richten sich nach dem Typ der Veröffentlichung, zu der das Abonnement gehört.  
   
 > [!NOTE]  
->  Starten Sie den Agent asynchron, wenn Sie eine Synchronisierung starten möchten, die autonom ausgeführt wird, ohne sich auf die Anwendung auszuwirken. Wenn Sie während der Synchronisierung das Ergebnis der Synchronisierung überwachen und Rückrufe vom Agent empfangen möchten (z. B. über eine Statusanzeige), müssen Sie den Agent synchron starten. For [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] Subscribers, you must start the agent synchronously.  
+>  Starten Sie den Agent asynchron, wenn Sie eine Synchronisierung starten möchten, die autonom ausgeführt wird, ohne sich auf die Anwendung auszuwirken. Wenn Sie während der Synchronisierung das Ergebnis der Synchronisierung überwachen und Rückrufe vom Agent empfangen möchten (z. B. über eine Statusanzeige), müssen Sie den Agent synchron starten. Für [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] -Abonnenten müssen Sie den Agent synchron starten.  
   
 #### <a name="to-synchronize-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>So synchronisieren Sie ein Pullabonnement für eine Momentaufnahme- oder Transaktionsveröffentlichung  
   
-1.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Klasse verwenden.  
+1.  Erstellen Sie eine Verbindung mit dem Abonnenten, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransPullSubscription>-Klasse, und legen Sie die folgenden Eigenschaften fest:  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransPullSubscription> -Klasse, und legen Sie die folgenden Eigenschaften fest:  
   
     -   Den Namen der Abonnementdatenbank für <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>.  
   
@@ -205,22 +204,22 @@ SET Publication=AdvWorksSalesOrdersMerge
   
     -   Die in Schritt 1 erstellte Verbindung für <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>-Methode auf, um die restlichen Abonnementeigenschaften abzurufen. Überprüfen Sie, ob das Abonnement vorhanden ist, wenn diese Methode **false**zurückgibt.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Abonnementeigenschaften abzurufen. Überprüfen Sie, ob das Abonnement vorhanden ist, wenn diese Methode **false**zurückgibt.  
   
 4.  Starten Sie den Verteilungs-Agent auf eine der folgenden Arten auf dem Abonnenten:  
   
-    -   Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>-Methode für die <xref:Microsoft.SqlServer.Replication.TransPullSubscription>-Instanz aus Schritt 2 auf. Diese Methode startet den Verteilungs-Agent asynchron, und die Steuerung wird sofort an die Anwendung zurückgegeben, während der Agentauftrag ausgeführt wird. Sie können diese Methode für [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] -Abonnenten nicht aufrufen. Diese Methode kann ebenfalls nicht aufgerufen werden, wenn das Abonnement mit dem Wert **false** für <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (dem Standard) erstellt wurde.  
+    -   Rufen Sie die <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizeWithJob%2A> -Methode für die <xref:Microsoft.SqlServer.Replication.TransPullSubscription> -Instanz aus Schritt 2 auf. Diese Methode startet den Verteilungs-Agent asynchron, und die Steuerung wird sofort an die Anwendung zurückgegeben, während der Agentauftrag ausgeführt wird. Sie können diese Methode für [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] -Abonnenten nicht aufrufen. Diese Methode kann ebenfalls nicht aufgerufen werden, wenn das Abonnement mit dem Wert **false** for <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (dem Standard) erstellt wurde.  
   
-    -   Rufen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent>-Klasse von der <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A>-Eigenschaft ab, und rufen Sie die <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Synchronize%2A>-Methode auf. Diese Methode startet den Agent synchron, und die Steuerung bleibt beim ausgeführten Agentauftrag. Während der synchronen Ausführung können Sie das <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Status>-Ereignis verarbeiten, während der Agent ausgeführt wird.  
+    -   Rufen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> -Klasse von der <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> -Eigenschaft ab, und rufen Sie die <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Synchronize%2A> -Methode auf. Diese Methode startet den Agent synchron, und die Steuerung bleibt beim ausgeführten Agentauftrag. Während der synchronen Ausführung können Sie das <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Status> -Ereignis verarbeiten, während der Agent ausgeführt wird.  
   
         > [!NOTE]  
-        >  Wenn Sie beim Erstellen des Pullabonnements den Wert **false** für <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (den Standard) festgelegt haben, müssen Sie auch <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Distributor%2A>, <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorSecurityMode%2A> und optional <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorLogin%2A> sowie <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorPassword%2A> angeben, weil die auf den Agentauftrag bezogenen Metadaten für das Abonnement in [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) nicht verfügbar sind.  
+        >  Wenn Sie beim Erstellen des Pullabonnements den Wert **false** for <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (den Standard) festgelegt haben, müssen Sie auch <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Distributor%2A>, <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorSecurityMode%2A>und optional <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorLogin%2A> sowie <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorPassword%2A> angeben, weil die auf den Agentauftrag bezogenen Metadaten für das Abonnement in [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md).  
   
 #### <a name="to-synchronize-a-pull-subscription-to-a-merge-publication"></a>So synchronisieren Sie ein Pullabonnement mit einer Mergeveröffentlichung  
   
-1.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Klasse verwenden.  
+1.  Erstellen Sie eine Verbindung mit dem Abonnenten, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePullSubscription>-Klasse, und legen Sie die folgenden Eigenschaften fest:  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePullSubscription> -Klasse, und legen Sie die folgenden Eigenschaften fest:  
   
     -   Den Namen der Abonnementdatenbank für <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>.  
   
@@ -232,16 +231,16 @@ SET Publication=AdvWorksSalesOrdersMerge
   
     -   Die in Schritt 1 erstellte Verbindung für <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>-Methode auf, um die restlichen Abonnementeigenschaften abzurufen. Überprüfen Sie, ob das Abonnement vorhanden ist, wenn diese Methode **false**zurückgibt.  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die restlichen Abonnementeigenschaften abzurufen. Überprüfen Sie, ob das Abonnement vorhanden ist, wenn diese Methode **false**zurückgibt.  
   
 4.  Starten Sie den Merge-Agent auf eine der folgenden Arten auf dem Abonnenten:  
   
-    -   Rufen Sie die <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizeWithJob%2A>-Methode für die <xref:Microsoft.SqlServer.Replication.MergePullSubscription>-Instanz aus Schritt 2 auf. Diese Methode startet den Merge-Agent asynchron, und die Steuerung wird sofort an die Anwendung zurückgegeben, während der Agentauftrag ausgeführt wird. Sie können diese Methode für [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)]-Abonnenten nicht aufrufen. Diese Methode kann ebenfalls nicht aufgerufen werden, wenn das Abonnement mit dem Wert **false** für <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (dem Standard) erstellt wurde.  
+    -   Rufen Sie die <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizeWithJob%2A> -Methode für die <xref:Microsoft.SqlServer.Replication.MergePullSubscription> -Instanz aus Schritt 2 auf. Diese Methode startet den Merge-Agent asynchron, und die Steuerung wird sofort an die Anwendung zurückgegeben, während der Agentauftrag ausgeführt wird. Sie können diese Methode für [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] -Abonnenten nicht aufrufen. Diese Methode kann ebenfalls nicht aufgerufen werden, wenn das Abonnement mit dem Wert **false** for <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (dem Standard) erstellt wurde.  
   
-    -   Rufen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent>-Klasse von der <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A>-Eigenschaft ab, und rufen Sie die <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A>-Methode auf. Diese Methode startet den Merge-Agent synchron, und die Steuerung bleibt beim ausgeführten Agentauftrag. Während der synchronen Ausführung können Sie das <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status>-Ereignis verarbeiten, während der Agent ausgeführt wird.  
+    -   Rufen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> -Klasse von der <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A> -Eigenschaft ab, und rufen Sie die <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A> -Methode auf. Diese Methode startet den Merge-Agent synchron, und die Steuerung bleibt beim ausgeführten Agentauftrag. Während der synchronen Ausführung können Sie das <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> -Ereignis verarbeiten, während der Agent ausgeführt wird.  
   
         > [!NOTE]  
-        >  Wenn Sie beim Erstellen des Pullabonnements den Wert **false** für <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (den Standard) festgelegt haben, müssen Sie auch <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A>, und optional <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A> sowie <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A> angeben, weil die auf den Agentauftrag bezogenen Metadaten für das Abonnement in [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md)nicht verfügbar sind.  
+        >  Wenn Sie beim Erstellen des Pullabonnements den Wert **false** for <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (den Standard) festgelegt haben, müssen Sie auch <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A>und optional <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A>sowie <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A> angeben, weil die auf den Agentauftrag bezogenen Metadaten für das Abonnement in [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md).  
   
 ###  <a name="PShellExample"></a> Beispiele (RMO)  
  In diesem Beispiel wird ein Pullabonnement mit einer Transaktionsveröffentlichung synchronisiert, wobei der Agent asynchron mit dem Agentauftrag gestartet wird.  

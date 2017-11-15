@@ -5,22 +5,20 @@ ms.date: 09/28/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssdt
+ms.technology: tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5d32e301-0f44-4916-b0db-76e8322c0ab7
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: dcc05f9e7bb009bb164f3577b7a82ba7b1c9b215
-ms.contentlocale: de-de
-ms.lasthandoff: 10/10/2017
-
+ms.openlocfilehash: 4b1dab5e822c5ef2f9ac580f4d4cd2e5b43b7ae6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>Vorgängerversionen von SQL Server Data Tools (SSDT und SSDT-BI)
 
@@ -80,4 +78,3 @@ Für SQL Server 2012 oder 2014 können Sie entweder **SSDT-BI für Visual Studio
 [Herunterladen von SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [Herunterladen von SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md)  
 [SQL Tools and Utilities (Tools und Hilfsprogramme für SQL)](../tools/overview-sql-tools.md)
-

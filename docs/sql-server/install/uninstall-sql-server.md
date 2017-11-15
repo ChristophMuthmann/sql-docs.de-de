@@ -5,21 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e6255f8e-a25e-4b3d-9310-c5da2f9c9333
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1eec9ad248be759bdeed5950086ab9e5ec67a991
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 5356cb28fee023ed1bb99285eb8898128e1690aa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="uninstall-sql-server"></a>Deinstallieren von SQL Server 
   Wenn Sie eine vorhandene Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vollständig deinstallieren und das System für die Neuinstallation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vorbereiten möchten, informieren Sie sich in den folgenden Themen.  
