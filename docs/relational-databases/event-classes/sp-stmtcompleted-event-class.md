@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SP:StmtCompleted event class
+helpviewer_keywords: SP:StmtCompleted event class
 ms.assetid: 9e8147a4-aeeb-49a6-80f8-df753d0f34cc
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0ff9f91227c08c932e33afb97c47a2019e1cd0f0
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: dd823a1bb566458d1c158ab6cfc121808e0c6ae3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="spstmtcompleted-event-class"></a>SP:StmtCompleted-Ereignisklasse
   Die SP:StmtCompleted-Ereignisklasse gibt an, dass eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung in einer gespeicherten Prozedur abgeschlossen wurde.  
@@ -35,22 +33,22 @@ ms.lasthandoff: 06/22/2017
 |CPU|**int**|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|18|ja|  
 |DatabaseID|**int**|ID der Datenbank, in der die gespeicherte Prozedur ausgeführt wird. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|ja|  
 |DatabaseName|**nvarchar**|Name der Datenbank, in der die gespeicherte Prozedur ausgeführt wird.|35|ja|  
-|Dauer|**bigint**|Die Zeit (in Mikrosekunden), die für das Ereignis benötigt wurde.|13|Ja|  
+|Dauer|**bigint**|Die Zeit (in Mikrosekunden), die für das Ereignis benötigt wurde.|13|ja|  
 |EndTime|**datetime**|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt.|15|Ja|  
 |EventClass|**int**|Ereignistyp = 45.|27|Nein|  
 |EventSequence|**int**|Sequenz eines bestimmten Ereignisses innerhalb der Anforderung.|51|Nein|  
 |GroupID|**int**|ID der Arbeitsauslastungsgruppe, in der das SQL-Ablaufverfolgungsereignis ausgelöst wird.|66|ja|  
 |HostName|**nvarchar**|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname vom Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|Ja|  
 |IntegerData|**int**|Wert für eine ganze Zahl, der von der in der Ablaufverfolgung erfassten Ereignisklasse abhängt.|25|ja|  
-|IntegerData2|**int**|Endoffset (in Bytes) der Anweisung, die gerade ausgeführt wird.|55|Ja|  
+|IntegerData2|**int**|Endoffset (in Bytes) der Anweisung, die gerade ausgeführt wird.|55|ja|  
 |IsSystem|**int**|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist. 1 = System, 0 = Benutzer.|60|Ja|  
 |LineNumber|**int**|Die Zeilennummer der Anweisung, die gerade ausgeführt wird.|5|Ja|  
 |LoginName|**nvarchar**|Der Anmeldename des Benutzers ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheitsanmeldung oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldeinformationen im Format DOMAIN\username).|11|ja|  
 |LoginSid|**image**|Sicherheits-ID (SID) des angemeldeten Benutzers. Diese Informationen finden Sie in der sys.server_principals-Katalogsicht. Die SID ist für jede Anmeldung beim Server eindeutig.|41|ja|  
-|NestLevel|**int**|Ganze Zahl, welche die von @@NESTLEVEL zurückgegebenen Daten darstellt.|29|Ja|  
+|NestLevel|**int**|Ganze Zahl, die die von @@NESTLEVEL zurückgegebenen Daten darstellt.|29|Ja|  
 |NTDomainName|**nvarchar**|Windows-Domäne, zu der der Benutzer gehört.|7|ja|  
 |NTUserName|**nvarchar**|Windows-Benutzername.|6|ja|  
-|ObjectID|**int**|Vom System zugewiesene ID des Objekts.|22|Ja|  
+|ObjectID|**int**|Vom System zugewiesene ID des Objekts.|22|ja|  
 |ObjectName|**nvarchar**|Name des Objekts, auf das verwiesen wird|34|Ja|  
 |ObjectType|**int**|Der Wert, der den Typ des am Ereignis beteiligten Objekts darstellt. Dieser Wert entspricht der type-Spalte in der sys.objects-Katalogsicht. Weitere Werte finden Sie unter [ObjectType (Spalte für Ablaufverfolgungsereignisse)](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|ja|  
 |Offset|**int**|Der Startoffset der Anweisung in der gespeicherten Prozedur oder im Batch.|61|ja|  

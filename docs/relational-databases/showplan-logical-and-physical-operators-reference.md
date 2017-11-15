@@ -5,8 +5,7 @@ ms.date: 10/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -135,17 +134,16 @@ helpviewer_keywords:
 - ActualRebinds attribute
 - execution plans [SQL Server], reading output
 ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: 12177becd4b5d228cd65562b4da36708c61e70da
-ms.contentlocale: de-de
-ms.lasthandoff: 10/13/2017
-
+ms.openlocfilehash: 80ad5d780193ef6a540dccb2f78fd2e5002a3eb7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Referenz zu logischen und physischen Showplanoperatoren
   Operatoren beschreiben, wie eine Abfrage oder eine DML-Anweisung (Data Manipulation Language) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird. Der Abfrageoptimierer verwendet Operatoren, um einen Abfrageplan für das in der Abfrage angegebene Ergebnis zu erstellen, oder zum Ausführen des in der DML-Anweisung angegebenen Vorgangs. Der Abfrageplan ist eine Struktur, die aus physischen Operatoren besteht. Sie können den Abfrageplan mit den SET SHOWPLAN-Anweisungen, den grafischen Ausführungsplanoptionen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], oder den SQL Server Profiler Showplan-Ereignisklassen anzeigen.  
@@ -288,7 +286,7 @@ ms.lasthandoff: 10/13/2017
 |![Table Spool-Operator (Symbol)](../relational-databases/media/table-spool-32x.gif "Table Spool-Operator (Symbol)")|**Table Spool**|Der **Table Spool** -Operator scannt die Eingabe und platziert eine Kopie jeder Zeile in einer verborgenen Spooltabelle, die in der [tempdb](../relational-databases/databases/tempdb-database.md) -Datenbank gespeichert und nur für die Dauer der Abfrage vorhanden ist. Wenn der Operator zurückgesetzt wird (beispielsweise aufgrund eines **Nested Loops** -Operators), aber keine erneute Zuordnung erforderlich ist, werden die gespoolten Daten verwendet, anstatt die Eingabe erneut zu scannen. **Table Spool** ist ein physischer Operator.|  
 |![Table Update-Operator (Symbol)](../relational-databases/media/table-update-32x.gif "Table Update-Operator (Symbol)")|**Table Update**|Mithilfe des physischen **Table Update** -Operators werden Eingabezeilen aktualisiert, die in der **Argument** -Spalte des Abfrageausführungsplans angegeben werden. Das SET:()-Prädikat bestimmt den Wert jeder aktualisierten Spalte. Auf diese Werte kann in der SET-Klausel oder an anderer Stelle in diesem Operator sowie an anderer Stelle dieser Abfrage verwiesen werden.|  
 |![Tabellenwertfunktion-Operator (Symbol)](../relational-databases/media/table-valued-function-32x.gif "-Tabellenwertfunktion-Operator (Symbol)")|**Table-valued Function**|Mit dem Operator **Tabellenwertfunktion** wird eine Tabellenwertfunktion ausgewertet ( [!INCLUDE[tsql](../includes/tsql-md.md)] oder CLR), und die Ergebniszeilen werden in der [tempdb](../relational-databases/databases/tempdb-database.md) -Datenbank gespeichert. Wenn die übergeordneten Iteratoren die Zeilen anfordern, gibt die **Tabellenwertfunktion** die Zeilen aus **tempdb**zurück.<br /><br /> Abfragen mit Aufrufen von Tabellenwertfunktionen generieren Abfragepläne mit dem **Tabellenwertfunktion** -Iterator. Die**Tabellenwertfunktion** kann mit verschiedenen Parameterwerten analysiert werden:<br /><br /> -<br />                    Der**Tabellenwertfunktion-XML-Leser** gibt einen XML-BLOB als Parameter ein und erstellt ein Rowset, das XML-Knoten in der XML-Dokumentreihenfolge darstellt. Andere Eingabeparameter können die zurückgegebenen XML-Knoten auf eine Teilmenge von XML-Dokumenten einschränken.<br /><br /> -**Tabellenwertfunktion-XML-Leser mit XPath-Filter** ist ein spezieller Typ von **Tabellenwertfunktion-XML-Leser** , der die Ausgabe auf XML-Knoten einschränkt, die einen XPath-Ausdruck erfüllen.<br /><br /> Die**Tabellenwertfunktion** ist sowohl ein logischer als auch ein physischer Operator.|  
-|![Top-Operator (Symbol)](../relational-databases/media/top-32x.gif "Top-Operator (Symbol)")|**Top**|Der **Top** -Operator scannt die Eingabe und gibt nur die angegebene Anzahl bzw. den angegebenen Prozentsatz von Zeilen zurück, meist basierend auf einer Sortierreihenfolge. Die **Argument** -Spalte kann eine Liste der Spalten enthalten, die auf Verbindungen überprüft werden. In Updateplänen wird der **Top** -Operator verwendet, um die Einschränkung der Zeilenanzahl zu erzwingen. **Top** ist sowohl ein logischer als auch physischer Operator. **Top** ist sowohl ein logischer als auch physischer Operator.|  
+|![Top-Operator (Symbol)](../relational-databases/media/top-32x.gif "Top-Operator (Symbol)")|**Top**|Der **Top** -Operator scannt die Eingabe und gibt nur die angegebene Anzahl bzw. den angegebenen Prozentsatz von Zeilen zurück, meist basierend auf einer Sortierreihenfolge. Die **Argument** -Spalte kann eine Liste der Spalten enthalten, die auf Verbindungen überprüft werden. In Updateplänen wird der **Top** -Operator verwendet, um die Einschränkung der Zeilenanzahl zu erzwingen. **Top** ist sowohl ein logischer als auch physischer Operator.|  
 |Keine|**Top N Sort**|**Top N Sort** ähnelt dem **Sort** -Iterator. Es werden allerdings nur die ersten *N* benötigt, und nicht das gesamte Resultset. Bei kleinen Werten für *N*versucht das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Abfrageausführungsmodul, den gesamten Sortiervorgang im Arbeitsspeicher auszuführen. Bei großen Werten für *N*greift das Abfrageausführungsmodul auf die mehr generische Methode der Sortierung zurück, für die *N* kein Parameter ist.|  
 |![Erweiterter Operator (UDX – Symbol)](../relational-databases/media/udx-32x.gif "Erweiterter Operator (UDX – Symbol)")|**UDX**|Erweiterte Operatoren (UDX) implementieren einen von vielen XQuery- und XPath-Vorgängen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Alle UDX-Operatoren sind sowohl logische als auch physische Operatoren.<br /><br /> Mit dem erweiterten Operator (UDX) **FOR XML** wird das relationale Rowset serialisiert, das in die XML-Darstellung einer einzelnen BLOB-Spalte in einer einzigen Ausgabezeile eingegeben wird. Bei diesem XML-Aggregationsoperator wird die Reihenfolge berücksichtigt.<br /><br /> Der erweiterte Operator (UDX) **XML SERIALIZER** ist ein XML-Aggregationsoperator, bei dem die Reihenfolge berücksichtigt wird. Er gibt Zeilen ein, die XML-Knoten oder XQuery-Skalarwerte in der XML-Dokumentreihenfolge darstellen, und erstellt eine serialisierte XML-BLOB-Spalte in einer einzelnen XML-Spalte in einer einzigen Ausgabezeile.<br /><br /> Der erweiterte Operator (UDX) **XML FRAGMENT SERIALIZER** ist eine Sonderform von **XML SERIALIZER** , womit Eingabezeilen verarbeitet werden, die XML-Fragmente darstellen, die in der XQuery-Erweiterung zum Ändern von Einfügungsdaten eingefügt werden.<br /><br /> Der erweiterte Operator (UDX) **XQUERY STRING** wertet den XQuery-Zeichenfolgenwert von Eingabezeilen aus, die XML-Knoten darstellen. Bei diesem Zeichenfolgen-Aggregationsoperator wird die Reihenfolge berücksichtigt. Er gibt eine Zeile mit Spalten zurück, die den XQuery-Skalarwert darstellt, der den Zeichenfolgenwert der Eingabe enthält.<br /><br /> Der erweiterte Operator (UDX) **XQUERY LIST DECOMPOSER** ist ein XQuery-Listendekompositionsoperator. Für jede Eingabezeile, die einen XML-Knoten darstellt, erstellt dieser Operator mindestens eine Zeile, die einen XQuery-Skalarwert mit einem Listenelementwert darstellt, falls die Eingabe vom XSD-Listentyp ist.<br /><br /> Der erweiterte Operator (UDX) **XQUERY DATA** wertet die XQuery-Funktion fn:data() in Eingabezeilen aus, die XML-Knoten darstellen. Bei diesem Zeichenfolgen-Aggregationsoperator wird die Reihenfolge berücksichtigt. Er gibt eine Zeile mit Spalten zurück, die den XQuery-Skalarwert darstellt, der das Ergebnis von **fn:data()**enthält.<br /><br /> Der erweiterte Operator **XQUERY CONTAINS** wertet die XQuery-Funktion fn:contains() in Eingabezeilen aus, die XML-Knoten darstellen. Bei diesem Zeichenfolgen-Aggregationsoperator wird die Reihenfolge berücksichtigt. Er gibt eine Zeile mit Spalten zurück, die den XQuery-Skalarwert darstellt, der das Ergebnis von **fn:contains()**enthält.<br /><br /> Der erweiterte Operator **UPDATE XML NODE** aktualisiert XML-Knoten in der XQuery-Erweiterung zum Ändern von Ersetzungsdaten in der **modify()** -Methode vom XML-Typ.|  
 |Keine|**Union**|Der **Union** -Operator scannt mehrere Eingaben und gibt alle gescannten Zeilen aus, wobei Duplikate entfernt werden. **Union** ist ein logischer Operator.|  
@@ -297,4 +295,3 @@ ms.lasthandoff: 10/13/2017
 |![Table Spool-Operator (Symbol)](../relational-databases/media/table-spool-32x.gif "Table Spool-Operator (Symbol)")|**Window Spool**|Der **Window Spool** -Operator erweitert jede Zeile in den Satz von Zeilen, die das ihm zugeordnete Fenster darstellen. In einer Abfrage definiert die OVER-Klausel das Fenster innerhalb eines Abfrageresultsets, und eine Fensterfunktion berechnet dann einen Wert für jede Zeile im Fenster. **Window Spool** ist sowohl ein logischer als auch physischer Operator.|  
   
   
-

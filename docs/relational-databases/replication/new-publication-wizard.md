@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -37,19 +36,18 @@ f1_keywords:
 - sql13.swb.dbpublishingwizard.choosedbroles.f1
 - sql13.swb.dbpublishingwizard.chooseudtype.f1
 - sql13.swb.dbpublishingwizard.chooseschemas.f1
-helpviewer_keywords:
-- New Publication Wizard
+helpviewer_keywords: New Publication Wizard
 ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 434497c7eaec0ffef8dfca16752e3919753d963d
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 33adc9d05d1ef7ed1740f8aa28effc55e36028e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="new-publication-wizard"></a>Assistent für neue Veröffentlichung
   Dieser Abschnitt enthält Informationen zu den folgenden Seiten des Assistenten für neue Veröffentlichung:  

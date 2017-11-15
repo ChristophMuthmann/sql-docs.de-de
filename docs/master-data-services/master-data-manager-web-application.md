@@ -1,27 +1,24 @@
 ---
 title: Master Data Manager-Webanwendung | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 12/20/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 269fbc636345b0313c07812cb8475afb6d1ab238
-ms.contentlocale: de-de
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: 5352e1eeabd5050d0a7d1e28fe324b96be6ebb9d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="master-data-manager-web-application"></a>Master Data Manager-Webanwendung [Master Data Services]
   Die [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung wird hauptsächlich von Administratoren verwendet, um administrative Tasks auszuführen. Nur Administratoren können z. B. Modelle, Geschäftsregeln oder Versionen von Daten erstellen. Weitere Informationen zu Administratoren finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
@@ -46,4 +43,3 @@ ms.lasthandoff: 09/07/2017
  [Funktionsbereich "Benutzer- und Gruppenberechtigungen" &#40;Master Data Manager&#41;](../master-data-services/user-and-group-permissions-functional-area-master-data-manager.md)  
   
   
-

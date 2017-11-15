@@ -5,25 +5,23 @@ ms.date: 5/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - post-migration validation and optimization
 - guide, post-migration validation and optimization
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: pelopes
 ms.author: harinid
 manager: 
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
-ms.openlocfilehash: 30a271511fff2d9c3c9eab73a0d118bfb3f8130d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9a886b8b2b617f3c507f98c3c2dbd495bf2d86a0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Handbuch für die Überprüfung und Optimierung nach der Migration
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -170,4 +168,3 @@ Tabellenwertfunktionen geben einen table-Datentyp zurück, der eine Alternative 
 [Table Variables and Row Estimations - Part 1 (Tabellenvariablen und Zeilenschätzungen – Teil 1)](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/11/30/table-variables-and-row-estimations-part-1/)  
 [Table Variables and Row Estimations - Part 1 (Tabellenvariablen und Zeilenschätzungen – Teil 2)](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/12/09/table-variables-and-row-estimations-part-2/)  
 [Zwischenspeichern und Wiederverwenden von Ausführungsplänen](../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)
-

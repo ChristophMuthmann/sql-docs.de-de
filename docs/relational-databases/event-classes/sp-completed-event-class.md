@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SP:Completed event class
+helpviewer_keywords: SP:Completed event class
 ms.assetid: 7636a433-5d32-4562-8f5a-694f8e2beeca
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8ed4a766035c7fffe237cf4cee20e8fea64ed001
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: c32aff7fc0442875971e07d53a805948459747cd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="spcompleted-event-class"></a>SP:Completed-Ereignisklasse
   Die SP:Completed-Ereignisklasse gibt an, dass die Ausführung der gespeicherten Prozedur abgeschlossen wurde.  
@@ -34,7 +32,7 @@ ms.lasthandoff: 06/22/2017
 |ClientProcessID|**int**|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Client die Clientprozess-ID angibt.|9|ja|  
 |DatabaseID|**int**|ID der Datenbank, in der die gespeicherte Prozedur ausgeführt wird. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|ja|  
 |DatabaseName|**nvarchar**|Name der Datenbank, in der die gespeicherte Prozedur ausgeführt wird.|35|ja|  
-|Dauer|**bigint**|Die Zeit (in Mikrosekunden), die für das Ereignis benötigt wurde.|13|Ja|  
+|Dauer|**bigint**|Die Zeit (in Mikrosekunden), die für das Ereignis benötigt wurde.|13|ja|  
 |EndTime|**datetime**|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt.|15|Ja|  
 |EventClass|**int**|Ereignistyp = 43.|27|Nein|  
 |EventSequence|**int**|Sequenz eines bestimmten Ereignisses innerhalb der Anforderung.|51|Nein|  
@@ -47,7 +45,7 @@ ms.lasthandoff: 06/22/2017
 |NestLevel|**int**|Schachtelungsebene der gespeicherten Prozedur|29|Ja|  
 |NTDomainName|**nvarchar**|Windows-Domäne, zu der der Benutzer gehört.|7|ja|  
 |NTUserName|**nvarchar**|Windows-Benutzername.|6|ja|  
-|ObjectID|**int**|Vom System zugewiesene ID der gespeicherten Prozedur.|22|Ja|  
+|ObjectID|**int**|Vom System zugewiesene ID der gespeicherten Prozedur.|22|ja|  
 |ObjectName|**nvarchar**|Name des Objekts, auf das verwiesen wird|34|Ja|  
 |ObjectType|**int**|Typ der aufgerufenen gespeicherten Prozedur. Dieser Wert entspricht der type-Spalte in der sys.objects-Katalogsicht. Weitere Werte finden Sie unter [ObjectType (Spalte für Ablaufverfolgungsereignisse)](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Ja|  
 |RequestID|**int**|Die ID der Anforderung, die die Anweisung enthält.|49|ja|  

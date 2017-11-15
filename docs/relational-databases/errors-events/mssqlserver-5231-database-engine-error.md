@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 5231 (Database Engine error)
+helpviewer_keywords: 5231 (Database Engine error)
 ms.assetid: 6954ae84-ed0b-4f4c-9d0a-e73f3d71476c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2f56a076832476227aac8cfcb3b44feb0558843a
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d973161b3c7b7f84374f69b149e210cef4e9a2b9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver5231"></a>MSSQLSERVER_5231
   
@@ -43,4 +40,3 @@ Es kam zu einem Deadlock, als von DBCC versucht wurde, das Objekt zu sperren. DB
 ## <a name="user-action"></a>Benutzeraktion  
 Keine  
   
-

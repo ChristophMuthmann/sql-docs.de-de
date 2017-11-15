@@ -5,8 +5,7 @@ ms.date: 02/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - database mirroring [SQL Server], upgrading system
 - rolling upgrades [SQL Server]
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: eb81c72c3640df10334bcdb108150e755e49695f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: 27c4e397e7cf5dbf6b8a930badf965b293898537
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upgrading-mirrored-instances"></a>Upgrade von gespiegelten Instanzen
   Wenn eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -gespiegelte Instanz auf eine neue [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version, ein neues [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows-Service Pack oder ein kumulatives Update upgegradet wird, können Sie die Downtime für jede gespiegelte Datenbank auf ein einziges manuelles Failover reduzieren, indem Sie ein paralleles Upgrade ausführen (oder zwei manuelle Failover, falls Sie ein Failback auf das ursprüngliche primäre Replikat ausführen). Ein paralleles Upgrade bildet einen mehrstufigen Vorgang, bei dem im einfachsten Fall die gegenwärtig als Spiegelserver in einer Spiegelungssitzung verwendete [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Instanz aktualisiert, anschließend ein manuelles Failover auf die gespiegelte Datenbank ausgeführt, die vorherige prinzipale [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Instanz aktualisiert und die Spiegelung wiederaufgenommen wird. In der Praxis hängt der genaue Vorgang vom Betriebsmodus und der Anzahl sowie dem Layout der Spiegelungssitzung auf den zu aktualisierenden [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Instanzen ab.  
@@ -170,4 +168,3 @@ ms.lasthandoff: 08/02/2017
  [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
   
   
-

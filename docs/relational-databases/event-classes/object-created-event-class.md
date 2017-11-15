@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Object:Created event class
+helpviewer_keywords: Object:Created event class
 ms.assetid: 57536924-5e66-4b09-a76d-8fcea2131771
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 25cdce0deb228a8a02688a8b01fa3995c5230f6b
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5b16e94c7d025bceead676537fc54c4343403345
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="objectcreated-event-class"></a>Object:Created-Ereignisklasse
   Die Object:Created-Ereignisklasse gibt an, dass ein Objekt erstellt wurde, z. B. mit der CREATE INDEX-, CREATE TABLE- oder CREATE DATABASE-Anweisung.  
@@ -65,4 +62,3 @@ ms.lasthandoff: 06/22/2017
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   
-

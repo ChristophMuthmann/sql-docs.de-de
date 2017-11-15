@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 3314 (Database Engine error)
+helpviewer_keywords: 3314 (Database Engine error)
 ms.assetid: f3a5ca6a-b502-4cab-b3b1-4bc753763fa9
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 93c6e9b68074cdd1c9698e88205f2140d2a9dcfa
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6108c6c1ceafcae06b5a4750890bf6f5d5d6b163
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver3314"></a>MSSQLSERVER_3314
   
@@ -54,4 +51,3 @@ Um Informationen zur Ursache dieses Auftretens von Fehler 3314 zu erhalten, übe
 [MSSQLSERVER_824](~/relational-databases/errors-events/mssqlserver-824-database-engine-error.md)  
 [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   
-

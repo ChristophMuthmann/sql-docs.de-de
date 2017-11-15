@@ -5,21 +5,19 @@ ms.date: 10/04/2016
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- xevents
+ms.technology: xevents
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9d7fcf086b0eb18db72c2d710c061ccee9c01aaf
-ms.contentlocale: de-de
-ms.lasthandoff: 04/11/2017
-
+ms.openlocfilehash: 643d3b6f21d5ff42c1117df009f4e08e83793898
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Erweiterte Ansicht von Zieldaten aus erweiterten Ereignissen in SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -120,7 +118,7 @@ SSMS kann Daten aus jedem Ziel anzeigen. Die Ansichten unterscheiden sich jedoch
 ### <a name="b1-open-xel-with-menu-file--open--file"></a>B.1 Öffnen einer .XEL-Datei über das Menü „Datei“ > „Öffnen“ > „Datei“
 
 
-Sie können eine einzelne .XEL-Datei über das Standardmenü **Datei** > **Öffnen** > **Datei** öffnen.
+Sie können eine einzelne .XEL-Datei über das Standardmenü **Datei** > **Öffnen** > **Datei**öffnen.
 
 Sie können auch eine .XEL-Datei per Drag & Drop auf die Registerkartenleiste in der SSMS-Benutzeroberfläche ziehen.
 
@@ -162,7 +160,7 @@ Wenn Ihre Ereignissitzung aktiv ist, können Sie die Ereignisdaten in Echtzeit a
 
 Die Datenanzeige wird in einem von Ihnen angegebenen Intervall aktualisiert. Siehe **Maximale Verteilungslatenzzeit** unter:
 
-- **Extended Events** > **Sessions** > *[your-session]* > **Properties** > **Advanced** > **Maximum dispatch latency**
+- **Erweiterte Ereignisse** > **Sitzungen** > *[Ihre_Sitzung]* > **Eigenschaften** > **Erweitert** > **Maximale Verteilungslatenzzeit**
 
 
 
@@ -301,7 +299,7 @@ Nachdem die Gruppierung durchgeführt wurde, ändert sich die Anzeige, wie in de
 #### <a name="d42-aggregation"></a>D.4.2 Aggregation
 
 
-Nachdem die angezeigten Daten gruppiert wurden, können Sie damit fortfahren, Daten in anderen Spalten zu aggregieren.  Der nächste Screenshot zeigt die gruppierten Daten, die nach *Anzahl* aggregiert werden.
+Nachdem die angezeigten Daten gruppiert wurden, können Sie damit fortfahren, Daten in anderen Spalten zu aggregieren.  Der nächste Screenshot zeigt die gruppierten Daten, die nach *Anzahl*aggregiert werden.
 
 ![Symbolleiste > Schaltfläche „Aggregation“, dann Dialogfeld „Aggregation“](../../relational-databases/extended-events/media/xevents-ssms-ui51-aggregdialogcount.png)
 
@@ -318,6 +316,5 @@ Das Ereignis **query_post_execution_showplan** ermöglicht Ihnen die Anzeige des
 
 
 ![Abfrageplan mit Eigenschaftenliste für einen Knoten](../../relational-databases/extended-events/media/xevents-ssms-ui60-showplangraph.png)
-
 
 

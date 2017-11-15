@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SP:CacheMiss event class
+helpviewer_keywords: SP:CacheMiss event class
 ms.assetid: 82229233-f772-4558-95a0-d54584d1b1ae
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ab69805ae94f8b902f2f754cf57ff713ac39ce67
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: cfad681a8b7d8162aa37264ed60f02c243bcc686
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="spcachemiss-event-class"></a>SP:CacheMiss-Ereignisklasse
   Von der SP:CacheMiss-Ereignisklasse wird angegeben, dass die Prozedur nicht im Cache gefunden wurde. Wenn die SP:CacheMiss-Ereignisklasse häufig auftritt, kann das ein Hinweis darauf sein, dass für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mehr Arbeitsspeicher bereitgestellt werden sollte, um die Größe des Prozedurcaches zu erhöhen.  
@@ -42,7 +40,7 @@ ms.lasthandoff: 06/22/2017
 |LoginSid|**image**|Sicherheits-ID (SID) des angemeldeten Benutzers. Diese Informationen finden Sie in der sys.server_principals-Katalogsicht. Die SID ist für jede Anmeldung beim Server eindeutig.|41|ja|  
 |NTDomainName|**nvarchar**|Windows-Domäne, zu der der Benutzer gehört.|7|ja|  
 |NTUserName|**nvarchar**|Windows-Benutzername.|6|ja|  
-|ObjectID|**int**|Vom System zugewiesene ID des Objekts.|22|Ja|  
+|ObjectID|**int**|Vom System zugewiesene ID des Objekts.|22|ja|  
 |ObjectName|**nvarchar**|Name der gespeicherten Prozedur. Wenn ObjectName gefüllt wird, dann wird TextData nicht gefüllt.|34|Ja|  
 |ObjectType|**int**|Der Wert, der den Typ des am Ereignis beteiligten Objekts darstellt. Dieser Wert entspricht der type-Spalte in der sys.objects-Katalogsicht. Weitere Werte finden Sie unter [ObjectType (Spalte für Ablaufverfolgungsereignisse)](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Ja|  
 |RequestID|**int**|Die ID der Anforderung, die die Anweisung enthält.|49|ja|  

@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords:
-- 50000 [SQL Server Native Client setup error]
+helpviewer_keywords: 50000 [SQL Server Native Client setup error]
 ms.assetid: 5426d87a-d5d9-4984-b211-b07d69e834a2
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f872d7d0a2495e747ae0b3d63997f7270c585c53
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 84f6e861c63326b2fd972d987bb45fa56635fd0f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-native-client-error-mssqlserver50000"></a>SQL Server-Fehler beim nativen Client MSSQLSERVER_50000
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
@@ -48,4 +45,3 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="internal-only"></a>Nur intern  
   
-

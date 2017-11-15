@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 7916 (Database Engine error)
+helpviewer_keywords: 7916 (Database Engine error)
 ms.assetid: 9bac3536-de14-4e98-84c2-bde9a59ba0d1
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 251fb90f65df36322173d611a326e75ab3be577b
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 06bf41fb97f4ce28b339e1e9a737a7f611cfa7d1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver7916"></a>MSSQLSERVER_7916
   
@@ -43,4 +40,3 @@ Dies ist eine Informationsmeldung von REPAIR, die angibt, dass der angegebene Da
 ## <a name="user-action"></a>Benutzeraktion  
 Keine  
   
-

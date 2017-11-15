@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2c02a1b16e4ab6375c0479f494838649ed7a413f
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 54b7cc1dc7cbd96f17a9c39e1b0e1f8a812df145
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>Schnellstart: Erweiterte Ereignisse in SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -94,25 +94,25 @@ Der Text und die unterstützenden Screenshots können im Laufe der Monate oder J
 
 2. Klicken Sie im Objekt-Explorer auf **Verwaltung** > **Erweiterte Ereignisse** > **Neue Sitzung**. Das Dialogfeld **Neue Sitzung** ist dabei dem **Assistenten für neue Sitzungen**vorzuziehen, obwohl die beiden einander ähnlich sind.
 
-3. Klicken Sie in der linken oberen Ecke auf die Seite **Allgemein** . Geben Sie *YourSession*oder einen beliebigen Namen in das Textfeld **Sitzungsname** ein. Drücken Sie noch *nicht* die Schaltfläche **OK**, die nur am Ende der Demo auftritt.
+3. Klicken Sie in der linken oberen Ecke auf die Seite **Allgemein** . Geben Sie *YourSession*oder einen beliebigen Namen in das Textfeld **Sitzungsname** ein. Drücken Sie noch *nicht* die Schaltfläche **OK** , die nur am Ende der Demo auftritt.
 
     ![Neue Sitzung > Allgemein > Sitzungsname](../../relational-databases/extended-events/media/xevents-session-newsessions-10-general-ssms-yoursessionnode.png)
 
-4. Klicken Sie in der linken oberen Ecke auf die Seite **Ereignisse**, und klicken Sie dann auf die Schaltfläche **Auswählen**.
+4. Klicken Sie in der linken oberen Ecke auf die Seite **Ereignisse** , und klicken Sie dann auf die Schaltfläche **Auswählen** .
 
     ![Neue Sitzung > Ereignisse > Auswählen > Ereignisbibliothek, Ausgewählte Ereignisse](../../relational-databases/extended-events/media/xevents-session-newsessions-14-events-ssms-rightclick-not-wizard.png)
 
-5. Wählen Sie im Bereich **Ereignisbibliothek** in der Dropdownliste **Nur Ereignisnamen** aus.
+5. Wählen Sie im Bereich **Ereignisbibliothek** in der Dropdownliste **Nur Ereignisnamen**aus.
     - Geben Sie **sql**in das Textfeld ein, wodurch die lange Liste der verfügbaren Ereignisse mithilfe eines *Enthält* -Operators gefiltert und somit verkürzt wird.
     - Scrollen Sie zum Ereignis **sql_statement_completed**, und klicken Sie anschließend darauf.
     - Klicken Sie auf den Pfeil nach rechts **>** , um das Ereignis in das Feld **Ausgewählte Ereignisse** zu verschieben.
 
 6. Bleiben Sie auf der Seite **Ereignisse** , und klicken Sie ganz rechts auf die Schaltfläche **Konfigurieren** .
-    - Im folgenden Screenshot sehen Sie den Bereich **Optionen für die Ereigniskonfiguration**, wobei die linke Seite zur besseren Ansicht abgeschnitten ist.
+    - Im folgenden Screenshot sehen Sie den Bereich **Optionen für die Ereigniskonfiguration** , wobei die linke Seite zur besseren Ansicht abgeschnitten ist.
 
     ![Neue Sitzung > Ereignisse > Konfigurieren > Filter (Prädikat) > Feld](../../relational-databases/extended-events/media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png)
 
-7. Klicken Sie auf die Registerkarte **Filter (Prädikat)**. Klicken Sie anschließend auf **Klicken Sie hier, um eine Klausel hinzuzufügen**, um alle SQL SELECT-Anweisungen zu erfassen, die eine HAVING-Klausel aufweisen.
+7. Klicken Sie auf die Registerkarte **Filter (Prädikat)** . Klicken Sie anschließend auf **Klicken Sie hier, um eine Klausel hinzuzufügen**, um alle SQL SELECT-Anweisungen zu erfassen, die eine HAVING-Klausel aufweisen.
 
 8. Wählen Sie in der Dropdownliste **Feld** die Option **sqlserver.sql_text**aus.
    - Wählen Sie für **Operator** einen LIKE-Operator aus.
@@ -131,15 +131,15 @@ Der Text und die unterstützenden Screenshots können im Laufe der Monate oder J
 
 11. Geben Sie im Bereich **Eigenschaften** einen vollständigen Pfad und Namen in das Textfeld **Dateiname auf Server** ein.
     - Die Dateierweiterung muss *XEL*sein.
-    - Unser kleiner Test erfordert eine Dateigröße von weniger als 1 MB.
+    - Unser kleiner Test erfordert eine Dateigröße von weniger als 1 MB.
 
     ![Neue Sitzung > Erweitert > Maximale Verteilungslatenzzeit > OK](../../relational-databases/extended-events/media/xevents-session-newsessions-40-advanced-ssms-yoursessionnode.png)
 
-12. Klicken Sie in der linken oberen Ecke auf die Seite **Erweitert**.
+12. Klicken Sie in der linken oberen Ecke auf die Seite **Erweitert** .
     - Verringern Sie den Wert für **Maximale Verteilungslatenzzeit** auf 3 Sekunden.
     - Klicken Sie abschließend unten auf die Schaltfläche **OK** .
 
-13. Erweitern Sie dann im **Objekt-Explorer** die Option **Verwaltung** > **Sitzungen**, und beachten Sie den neuen Knoten für **YourSession**.
+13. Erweitern Sie dann im **Objekt-Explorer**die Option **Verwaltung** > **Sitzungen**, und beachten Sie den neuen Knoten für **YourSession**.
 
     ![Knoten für Ihre neue *Ereignissitzung* namens „YourSession“ im Objekt-Explorer unter „Verwaltung > Erweiterte Ereignisse > Sitzungen“](../../relational-databases/extended-events/media/xevents-session-newsessions-50-objectexplorer-ssms-yoursessionnode.png)
 
@@ -661,6 +661,5 @@ Hier folgen Links zu Dokumentationen, die sich auf diese SELECT-Anweisungen und 
 
 
 - [sys.fn_xe_file_target_read_file (Transact-SQL)](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)
-
 
 

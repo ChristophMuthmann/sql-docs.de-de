@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Missing Join Predicate event class
+helpviewer_keywords: Missing Join Predicate event class
 ms.assetid: 0668cb4d-5682-4140-aab5-7b0da5cd3479
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fdd6f18f8c2423c9118e27bfa5ae9bf1d67fad3a
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: cb38e09a3b22a2ccdb193960cd68e5e114e484ba
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="missing-join-predicate-event-class"></a>Missing Join Predicate-Ereignisklasse
   Die Missing Join Predicate-Ereignisklasse zeigt an, dass eine Abfrage ohne JOIN-Prädikat ausgeführt wird. Dies kann zu einer langen Ausführungszeit für die Abfrage führen. Weitere Informationen zu JOIN-Prädikaten finden Sie unter [Prädikate &#40;Transact-SQL&#41;](~/t-sql/queries/predicates.md).  
@@ -56,4 +54,3 @@ ms.lasthandoff: 06/22/2017
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   
-

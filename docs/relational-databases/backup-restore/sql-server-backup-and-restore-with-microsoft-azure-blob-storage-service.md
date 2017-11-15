@@ -5,22 +5,20 @@ ms.date: 07/25/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2ca66cdb80dd12a242b2c9e8130cf3236e47371c
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 531ce97e4da5b580139a6c0de557b3c99becc170
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +55,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Kostenvorteile: Sie zahlen nur für den genutzten Dienst. Die Option kann genauso kosteneffizient wie eine externe Sicherungs-/Archivierungslösung sein. Weitere Informationen und Links finden Sie im Abschnitt [Überlegungen zur Abrechnung in Microsoft Azure](#Billing) .  
   
-##  <a name="Billing"></a> Microsoft Azure Billing Considerations:  
+##  <a name="Billing"></a> Überlegungen zur Abrechnung in Microsoft Azure:  
  Auf Grundlage der Speicherkosten für Microsoft Azure können Sie die Kosten für die Erstellung und Speicherung von Sicherungen in Microsoft Azure ableiten.  
   
  Der [Microsoft Azure-Preisrechner](http://go.microsoft.com/fwlink/?LinkId=277060) unterstützt Sie bei der Kostenschätzung.  
@@ -77,4 +75,3 @@ ms.lasthandoff: 06/22/2017
 [SQL Server-Sicherung über URLs](../../relational-databases/backup-restore/sql-server-backup-to-url.md)  
   
   
-

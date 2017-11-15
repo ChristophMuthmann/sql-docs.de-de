@@ -7,8 +7,7 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,15 @@ helpviewer_keywords:
 - compatibility levels [SQL Server], after upgrade
 - Database Engine [SQL Server], upgrading
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
-caps.latest.revision: 62
+caps.latest.revision: "62"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 11bf3a52f7c528fca881c7dd3262c5a1ce09589e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upgrade-database-engine"></a>Aktualisieren des Datenbankmoduls
   Mit den Themen in diesem Abschnitt können Sie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankmodul von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisieren.  
@@ -41,4 +39,3 @@ ms.lasthandoff: 08/02/2017
 5.  [Take Advantage of New SQL Server Features (Nutzen Sie die Vorteile der neuen Features von SQL Server)](http://www.microsoft.com/sql-server/sql-server-2017) Schließlich, nachdem Sie die vorherigen Schritte abgeschlossen haben, können Sie die speziellen neuen Erweiterungen des Datenbankmoduls nutzen. In diesem Thema schlägt einige dieser Erweiterungen vor und stellt Links zu weiteren Informationen bereit.  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 08/25/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - distribution configuration [SQL Server replication]
 - publishing [SQL Server replication], configuring
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bd4ea4d94bb9986127e4d5ffd2b8801f73528b93
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: cd7a911a8828bf4738df967c8af14a0ee52d2272
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-publishing-and-distribution"></a>Konfigurieren der Veröffentlichung und der Verteilung
   In diesem Thema wird beschrieben, wie die Veröffentlichung und die Verteilung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) konfiguriert werden.  
@@ -97,65 +96,65 @@ ms.lasthandoff: 06/22/2017
   
 1.  Erstellen Sie eine Verbindung mit dem Server, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationServer>-Klasse. Übergeben Sie <xref:Microsoft.SqlServer.Management.Common.ServerConnection> von Schritt 1.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationServer> -Klasse. Übergeben Sie <xref:Microsoft.SqlServer.Management.Common.ServerConnection> von Schritt 1.  
   
-3.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.DistributionDatabase>-Klasse.  
+3.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.DistributionDatabase> -Klasse.  
   
-4.  Legen Sie die <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A>-Eigenschaft auf den Datenbanknamen fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>-Eigenschaft auf die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1 fest.  
+4.  Legen Sie die <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> -Eigenschaft auf den Datenbanknamen fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1 fest.  
   
-5.  Installieren Sie den Verteiler durch Aufrufen der <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A>-Methode. Übergeben Sie das <xref:Microsoft.SqlServer.Replication.DistributionDatabase>-Objekt aus Schritt 3.  
+5.  Installieren Sie den Verteiler, indem Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> -Methode aufrufen. Übergeben Sie das <xref:Microsoft.SqlServer.Replication.DistributionDatabase> -Objekt aus Schritt 3.  
   
-6.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.DistributionPublisher>-Klasse.  
+6.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.DistributionPublisher> -Klasse.  
   
-7.  Legen Sie dann die folgenden Eigenschaften von <xref:Microsoft.SqlServer.Replication.DistributionPublisher> fest:  
+7.  Legen Sie dann die folgenden Eigenschaften von <xref:Microsoft.SqlServer.Replication.DistributionPublisher>fest:  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A>: Der Name des Verlegers.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> &ndash; der Name des Verlegers  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>: Die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> &ndash; die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1.  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A>: Der Name der in Schritt 5 erstellten Datenbank.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> &ndash; der Name der in Schritt 5 erstellten Datenbank.  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A>: Die Freigabe, die verwendet wird, um auf Momentaufnahmedateien zuzugreifen.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> &ndash; die Freigabe, die verwendet wird, um auf Momentaufnahmedateien zuzugreifen.  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A>: Der Sicherheitsmodus, der beim Herstellen einer Verbindung mit dem Verleger verwendet wird. <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> wird empfohlen.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> : Der Sicherheitsmodus, der beim Herstellen einer Verbindung mit dem Verleger verwendet wird. <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> wird empfohlen.  
   
-8.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A>-Methode auf.  
+8.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A> -Methode auf.  
   
 #### <a name="to-configure-publishing-and-distribution-using-a-remote-distributor"></a>So konfigurieren Sie Veröffentlichung und Verteiler mit einem Remoteverteiler  
   
-1.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Klasse verwenden.  
+1.  Erstellen Sie mithilfe der <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse eine Verbindung zum Remoteverteilerserver.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationServer>-Klasse. Übergeben Sie <xref:Microsoft.SqlServer.Management.Common.ServerConnection> von Schritt 1.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationServer> -Klasse. Übergeben Sie <xref:Microsoft.SqlServer.Management.Common.ServerConnection> von Schritt 1.  
   
-3.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.DistributionDatabase>-Klasse.  
+3.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.DistributionDatabase> -Klasse.  
   
-4.  Legen Sie die <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A>-Eigenschaft auf den Datenbanknamen fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>-Eigenschaft auf die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1 fest.  
+4.  Legen Sie die <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> -Eigenschaft auf den Datenbanknamen fest, und legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> -Eigenschaft auf die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus dem Schritt 1 fest.  
   
-5.  Installieren Sie den Verteiler durch Aufrufen der <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A>-Methode. Geben Sie ein sicheres Kennwort (das vom Verteiler für den Verbindungsaufbau mit dem Remoteverteiler verwendet wird) und das <xref:Microsoft.SqlServer.Replication.DistributionDatabase>-Objekt aus Schritt 3 an. Weitere Informationen finden Sie unter [Schützen des Verteilers](../../relational-databases/replication/security/secure-the-distributor.md).  
+5.  Installieren Sie den Verteiler, indem Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> -Methode aufrufen. Geben Sie ein sicheres Kennwort (das vom Verteiler für den Verbindungsaufbau mit dem Remoteverteiler verwendet wird) und das <xref:Microsoft.SqlServer.Replication.DistributionDatabase> -Objekt aus Schritt 3 an. Weitere Informationen finden Sie unter [Schützen des Verteilers](../../relational-databases/replication/security/secure-the-distributor.md).  
   
     > **WICHTIG!** Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmeldeinformationen speichern müssen, verwenden Sie die [Kryptografiedienste](http://go.microsoft.com/fwlink/?LinkId=34733) von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
-6.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.DistributionPublisher>-Klasse.  
+6.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.DistributionPublisher> -Klasse.  
   
-7.  Legen Sie dann die folgenden Eigenschaften von <xref:Microsoft.SqlServer.Replication.DistributionPublisher> fest:  
+7.  Legen Sie dann die folgenden Eigenschaften von <xref:Microsoft.SqlServer.Replication.DistributionPublisher>fest:  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A>: Der Name des lokalen Verlegerservers.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> &ndash; der Name des lokalen Verlegerservers.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>: Die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> &ndash; die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1.  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A>: Der Name der in Schritt 5 erstellten Datenbank.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> &ndash; der Name der in Schritt 5 erstellten Datenbank.  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A>: Die Freigabe, die verwendet wird, um auf Momentaufnahmedateien zuzugreifen.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> &ndash; die Freigabe, die verwendet wird, um auf Momentaufnahmedateien zuzugreifen.  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A>: Der Sicherheitsmodus, der beim Herstellen einer Verbindung mit dem Verleger verwendet wird. <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> wird empfohlen.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> : Der Sicherheitsmodus, der beim Herstellen einer Verbindung mit dem Verleger verwendet wird. <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> wird empfohlen.  
   
-8.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A>-Methode auf.  
+8.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A> -Methode auf.  
   
-9. Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Klasse verwenden.  
+9. Erstellen Sie mithilfe der <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse eine Verbindung zum lokalen Verlegerserver.  
   
-10. Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationServer>-Klasse. Übergeben Sie <xref:Microsoft.SqlServer.Management.Common.ServerConnection> von Schritt 9.  
+10. Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationServer> -Klasse. Übergeben Sie <xref:Microsoft.SqlServer.Management.Common.ServerConnection> von Schritt 9.  
   
-11. Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A>-Methode auf. Übergeben Sie den Namen des Remoteverteilers und das Kennwort des Remoteverteilers, der in Schritt 5 angegeben wurde.  
+11. Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> -Methode auf. Übergeben Sie den Namen des Remoteverteilers und das Kennwort des Remoteverteilers, der in Schritt 5 angegeben wurde.  
   
     > **WICHTIG!**  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmeldeinformationen speichern müssen, verwenden Sie die [Kryptografiedienste](http://go.microsoft.com/fwlink/?LinkId=34733) von Windows .NET Framework.  
   
@@ -174,4 +173,3 @@ ms.lasthandoff: 06/22/2017
  [Konfigurieren der Replikation für Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  
   
   
-

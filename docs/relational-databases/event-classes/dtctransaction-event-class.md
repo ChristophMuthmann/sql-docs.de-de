@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- DTCTransaction event class
+helpviewer_keywords: DTCTransaction event class
 ms.assetid: 9a2d358e-5b8f-4d0b-8b93-6705c009ad57
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a7832dce3ed058f5ddd599fd19abd9703b20ff06
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 1141977cd68380ba94848a510a21ccf540bf8889
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="dtctransaction-event-class"></a>DTCTransaction-Ereignisklasse
   Verwenden Sie die **DTCTransaction-Ereignisklasse** zum Überwachen des Status von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Transaktionen, die über [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (DTC) koordiniert werden. Dies umfasst Transaktionen, die mindestens zwei Datenbanken in derselben Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]betreffen, oder verteilte Transaktionen, die mindestens Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]betreffen.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 06/22/2017
 |**LoginSid**|**image**|Sicherheits-ID (SID) des angemeldeten Benutzers. Diese Informationen finden Sie in der **sys.server_principals** -Katalogsicht. Die SID ist für jede Anmeldung beim Server eindeutig.|41|ja|  
 |**NTDomainName**|**nvarchar**|Windows-Domäne, zu der der Benutzer gehört.|7|ja|  
 |**NTUserName**|**nvarchar**|Windows-Benutzername.|6|ja|  
-|**RequestID**|**int**|Die ID der Anforderung, die die Anweisung enthält.|49|ja|  
+|**RequestID**|**int**|Die ID der Anforderung, die die Anweisung enthält.|49|Ja|  
 |**ServerName**|**nvarchar**|Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, für die eine Ablaufverfolgung ausgeführt wird.|26|Nein|  
 |**SessionLoginName**|**nvarchar**|Der Anmeldename des Benutzers, der die Sitzung gestartet hat. Wenn Sie z. B. mit Login1 eine Verbindung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen und mit Login2 eine Anweisung ausführen, zeigt **SessionLoginName** Login1 an, und **LoginName** zeigt Login2 an. Diese Spalte zeigt sowohl den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch den Windows-Anmeldenamen an.|64|ja|  
 |**SPID**|**int**|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|12|ja|  

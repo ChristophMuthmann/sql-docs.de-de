@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 611 (Database Engine error)
+helpviewer_keywords: 611 (Database Engine error)
 ms.assetid: ac6a213f-5c38-44ad-bc85-a62863786614
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b96bc69d694f4831086804cec2fe655c113e9d89
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9a191f7a6a44327c21bedd5e663a91763762fdd4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver611"></a>MSSQLSERVER_611
   
@@ -43,4 +40,3 @@ Die Maximalgröße der Variablenspalte übersteigt die vom Schema zugelassene Gr
 ## <a name="user-action"></a>Benutzeraktion  
 Reduzieren Sie die Größe des Datensatzes.  
   
-

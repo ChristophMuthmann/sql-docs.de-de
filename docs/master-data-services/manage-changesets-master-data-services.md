@@ -1,27 +1,24 @@
 ---
 title: Verwalten von Changesets (Master Data Services) | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cc74d46d-7566-45d8-9b51-2cfc262f6abe
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 919045309d1aaa37c0eeb74c56254681a34de284
-ms.contentlocale: de-de
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: 84dd9b67dfba8990a0fd1920311ed25218070443
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-changesets-master-data-services"></a>Verwalten von Changesets (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] können Sie alle Änderungen nach Modell und Version verwalten.  
@@ -51,4 +48,3 @@ ms.lasthandoff: 09/07/2017
 6.  Klicken Sie zum Bearbeiten eines Changesets auf **Bearbeiten** .  
   
   
-

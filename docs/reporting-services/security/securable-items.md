@@ -16,20 +16,19 @@ helpviewer_keywords:
 - security [Reporting Services], securable items listed
 - role-based security [Reporting Services], securable items
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 7cd3e8b8d3e1a623a7bcc10022da6081dca330cd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b1c11b204b5a48e4324f49e05467cc3ac96e7fa4
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="securable-items"></a>Sicherbare Elemente
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]verwendet rollenbasierte Sicherheit den Zugriff auf Elemente zu steuern, die auf einem Berichtsserver gespeichert sind. Wenn Sie Benutzerzugriff auf einen Berichtsserver gewähren, erstellen Sie in der Regel ein Rollenzuweisungspaar:  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet rollenbasierte Sicherheit zur Steuerung des Zugriffs auf die Elemente, die auf einem Berichtsserver gespeichert sind. Wenn Sie Benutzerzugriff auf einen Berichtsserver gewähren, erstellen Sie in der Regel ein Rollenzuweisungspaar:  
   
 -   Auf Websiteebene  
   
@@ -67,9 +66,8 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Erstellen Sie, löschen Sie oder ändern Sie einer Rolle &#40; Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40; Berichts-Manager &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Ändern Sie oder löschen Sie einer Rollenzuweisung &#40; Berichts-Manager &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
+ [Erstellen, Löschen oder Ändern einer Rolle &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [Ändern oder Löschen einer Rollenzuweisung &#40;Berichts-Manager&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
   
   
-

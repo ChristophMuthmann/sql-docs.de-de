@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 17300 (Database Engine error)
+helpviewer_keywords: 17300 (Database Engine error)
 ms.assetid: c1d6bfb6-28af-4df6-8087-25807602d282
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ef809a200d3544e5e24549440506b77d6f1a79e5
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ace63f50fe67d3cbac58884ad5ce2a26e85393e4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver17300"></a>MSSQLSERVER_17300
   
@@ -58,4 +55,3 @@ Führen Sie die folgenden Tasks entsprechend aus:
 [Konfigurieren der Serverkonfigurationsoption Benutzerverbindungen](~/database-engine/configure-windows/configure-the-user-connections-server-configuration-option.md)  
 [KILL &#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md)  
   
-

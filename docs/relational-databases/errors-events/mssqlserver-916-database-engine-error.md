@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 916 (Database Engine error)
+helpviewer_keywords: 916 (Database Engine error)
 ms.assetid: 73eb6581-99fe-49a5-9b42-e239d7ffe27f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 69490614063e878043c59bce1bc7836f813eb517
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ddc3e794d1c6ec3b7d4b7528bbc363667583bd41
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver916"></a>MSSQLSERVER_916
   
@@ -71,4 +68,3 @@ Sie können auf eine der folgenden Arten eine Verbindung mit der Datenbank herst
   
     `ALTER DATABASE AdventureWorks SET TRUSTWORTHY ON;`  
   
-

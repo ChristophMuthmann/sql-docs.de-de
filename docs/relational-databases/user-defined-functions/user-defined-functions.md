@@ -5,25 +5,23 @@ ms.date: 08/05/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-udf
+ms.technology: dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - user-defined functions [SQL Server], components
 - user-defined functions [SQL Server], about user-defined functions
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
-ms.openlocfilehash: 12297570eae81459949b6c910fba26525e27d9ed
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 08c5ebad818f4a3f3c29396e6a60b84d36c86c00
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-defined-functions"></a>Benutzerdefinierte Funktionen
   Ebenso wie Funktionen in Programmiersprachen sind auch benutzerdefinierte Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Routinen, die Parameter annehmen, eine Aktion ausführen (z. B. eine komplexe Berechnung) und das Ergebnis dieser Aktion als Wert zurückgeben können. Der Rückgabewert kann ein einzelner Skalarwert oder ein Resultset sein.  
@@ -95,10 +93,10 @@ Die folgenden Anweisungstypen sind in einer Funktion zulässig:
 |GET_TRANSMISSION_STATUS|@@PACK_RECEIVED|  
 |GETDATE|@@PACK_SENT|  
 |GETUTCDATE|@@PACKET_ERRORS|  
-|@@CONNECTIONS|@@TIMETICKS|  
-|@@CPU_BUSY|@@TOTAL_ERRORS|  
-|@@DBTS|@@TOTAL_READ|  
-|@@IDLE|@@TOTAL_WRITE|  
+|@@CONNECTIONS |@@TIMETICKS |  
+|@@CPU_BUSY |@@TOTAL_ERRORS |  
+|@@DBTS |@@TOTAL_READ |  
+|@@IDLE |@@TOTAL_WRITE |  
 |@@IO_BUSY||  
   
  Die folgenden nicht deterministischen integrierten Funktionen können in benutzerdefinierten Transact-SQL-Funktionen **nicht** verwendet werden.  
@@ -141,4 +139,3 @@ Die folgenden Anweisungstypen sind in einer Funktion zulässig:
 |Beschreibt, wie die Definition einer benutzerdefinierten Funktion angezeigt wird.|[Anzeigen benutzerdefinierter Funktionen](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
   
   
-

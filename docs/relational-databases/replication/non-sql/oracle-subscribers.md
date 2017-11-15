@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - heterogeneous Subscribers, Oracle
 - mapping data types [SQL Server replication]
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 473ac265f469403a52c96349a484b9fc85a572c4
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: a7f47f316449b6048dc826dcfbf265c1bc85877e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="oracle-subscribers"></a>Oracle-Abonnenten
   Ab [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]unterstützt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Oracle-Pushabonnements über den von Oracle bereitgestellten Oracle OLE DB-Anbieter.  
@@ -52,7 +51,7 @@ ms.lasthandoff: 06/22/2017
     |Wählen Sie ein Netzwerkprotokoll aus.|Wählen Sie die Netzwerkprotokolle aus, die unterstützt werden sollen. Die meisten Anwendungen verwenden TCP.|  
     |Geben Sie die Hostinformationen zur Identifikation des Datenbanklisteners an.|Der Host ist der Name oder DNS-Alias des Computers, auf dem der Oracle-Listener ausgeführt wird, d. h. normalerweise der Computer, auf dem sich die Datenbank befindet. Für bestimmte Protokolle müssen Sie zusätzliche Informationen angeben. Wenn Sie TCP ausgewählt haben, müssen Sie beispielsweise auch den Port angeben, an dem der Listener Verbindungsanforderungen zur Zieldatenbank überwachen soll. Standardmäßig verwendet die TCP-Konfiguration Port 1521.|  
   
-3.  Erstellen Sie eine Momentaufnahme- oder Transaktionsveröffentlichung, aktivieren Sie sie für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten, und erstellen Sie dann ein Pushabonnement für den Abonnenten. Weitere Informationen finden Sie unter [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+3.  Erstellen Sie eine Momentaufnahme- oder Transaktionsveröffentlichung, aktivieren Sie sie für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten, und erstellen Sie dann ein Pushabonnement für den Abonnenten. Weitere Informationen finden Sie unter [Erstellen eines Abonnements für einen Nicht-SQL Server-Abonnenten](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
 ### <a name="setting-directory-permissions"></a>Festlegen von Verzeichnisberechtigungen  
  Dem Konto, unter dem der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienst auf dem Verteiler ausgeführt wird, müssen Lese- und Ausführungsberechtigungen für das Verzeichnis (und alle Unterverzeichnisse) erteilt sein, in dem die Oracle-Clientnetzwerksoftware installiert ist.  

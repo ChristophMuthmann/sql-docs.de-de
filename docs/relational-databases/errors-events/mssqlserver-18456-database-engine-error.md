@@ -5,24 +5,21 @@ ms.date: 06/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 18456 (Database Engine error)
+helpviewer_keywords: 18456 (Database Engine error)
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 45f30fa7d1153f4ee70a9cfcb7c7e891bc15fec1
-ms.openlocfilehash: 53733118cf5fcf0b2b29544d64ebac6622425d56
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: b8b1465feb409dc73ef13899e78e2dd2ab626639
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
   
@@ -79,7 +76,7 @@ Zur Verbesserung der Sicherheit bleibt die Art des Authentifizierungsfehlers in 
 |18|Das Kennwort muss geändert werden.|  
 |38, 46|Die vom Benutzer angeforderte Datenbank konnte nicht gefunden werden.|
 |102 – 111|AAD-Fehler|
-|122 – 124|Fehler: Der Benutzername oder das Kennwort ist leer.|
+|122 – 124|Fehler wegen eines leeren Benutzernamens oder Kennworts.|
 |126|Die vom Benutzer angeforderte Datenbank ist nicht vorhanden.|
 |132 – 133|AAD-Fehler|
   
@@ -121,4 +118,3 @@ Wenn das [!INCLUDE[ssDE](../../includes/ssde-md.md)] eigenständige Datenbanken 
   
 Wenn Sie lokal eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz herstellen, müssen Dienste, die unter **NT AUTHORITY\NETWORK SERVICE** ausgeführt werden, mithilfe des vollqualifizierten Domänennamens des Computers authentifiziert werden. Weitere Informationen finden Sie unter [How To: Use the Network Service Account to Access Resources in ASP.NET (Vorgehensweise: Verwenden des Netzwerkdienstkontos für den Zugriff auf Ressourcen in ASP.NET)](http://msdn.microsoft.com/library/ff647402.aspx)  
   
-

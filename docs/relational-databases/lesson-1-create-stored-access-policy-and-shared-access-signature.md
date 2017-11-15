@@ -1,29 +1,25 @@
 ---
 title: 'Lektion 1: Erstellen einer gespeicherten Zugriffsrichtlinie und SAS | Microsoft-Dokumentation'
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 06/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 41674d9d-8132-4bff-be4d-85a861419f3d
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f2c8af4701b9a01ee21613fe7e093a89f1d8f990
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 327c2ac79a2aa2870cf11b637befba789a4ecc15
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-create-stored-access-policy-and-shared-access-signature"></a>Lektion 1: Erstellen einer gespeicherten Zugriffsrichtlinie und SAS
 In dieser Lektion verwenden Sie ein [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) -Skript zum Erstellen einer SAS für einen Azure-Blobcontainer mithilfe einer gespeicherten Zugriffsrichtlinie.  
@@ -155,5 +151,4 @@ Befolgen Sie folgende Schritte, um eine Richtlinie für einen Container zu erste
   
   
   
-
 

@@ -5,28 +5,26 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Exchange Spill event class
+helpviewer_keywords: Exchange Spill event class
 ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5920469e3f0ff312ac155011300034b8d8f8de50
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 3fcde620a2badc249d1f6105548ca4e816e4fdb4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill-Ereignisklasse
   Die **Exchange Spill** -Ereignisklasse gibt an, dass die Kommunikationspuffer in einem parallelen Abfrageplan vorübergehend in die **tempdb** -Datenbank geschrieben wurden. Dies tritt nur selten auf, und auch nur, wenn ein Abfrageplan mehrere Bereichsscans hat.  
   
- Normalerweise verfügt die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfrage, die diese Bereichsscans generiert, über viele BETWEEN-Operatoren, wobei jeder dieser Operatoren einen Zeilenbereich aus einer Tabelle oder aus einem Index auswählt. Stattdessen können Sie mehrere Bereiche auch mithilfe von Ausdrücken abrufen, beispielsweise (T.a > 10 AND T.a < 20) OR (T.a > 100 AND T.a < 120). Darüber hinaus müssen die Abfragepläne erfordern, dass diese Bereiche der Reihenfolge nach gescannt werden. Dies geschieht aufgrund einer ORDER BY-Klausel für T.a oder weil ein Iterator im Plan erfordert, dass die Tupel in einer bestimmten Reihenfolge verwendet werden.  
+ Normalerweise verfügt die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage, die diese Bereichsscans generiert, über viele BETWEEN-Operatoren, wobei jeder dieser Operatoren einen Zeilenbereich aus einer Tabelle oder aus einem Index auswählt. Stattdessen können Sie mehrere Bereiche auch mithilfe von Ausdrücken abrufen, beispielsweise (T.a > 10 AND T.a < 20) OR (T.a > 100 AND T.a < 120). Darüber hinaus müssen die Abfragepläne erfordern, dass diese Bereiche der Reihenfolge nach gescannt werden. Dies geschieht aufgrund einer ORDER BY-Klausel für T.a oder weil ein Iterator im Plan erfordert, dass die Tupel in einer bestimmten Reihenfolge verwendet werden.  
   
  Wenn ein Abfrageplan für eine solche Abfrage mehrere **Parallelism** -Operatoren aufweist, werden die von den **Parallelism** -Operatoren verwendeten Speicherkommunikationspuffer vollständig gefüllt. Das kann dazu führen, dass der Ausführungsfortschritt der Abfrage beendet wird. In dieser Situation schreibt einer der **Parallelism** -Operatoren seinen Ausgabepuffer in **tempdb** (dieser Vorgang wird *Austauschüberlauf*genannt), damit Zeilen aus einigen seiner Eingabepuffer verwendet werden können. Letztendlich werden die übergelaufenen Zeilen wieder an den Consumer zurückgegeben, wenn dieser in der Lage ist, sie zu verarbeiten.  
   
@@ -68,7 +66,7 @@ ms.lasthandoff: 06/22/2017
 |**NTDomainName**|**nvarchar**|Windows-Domäne, zu der der Benutzer gehört.|7|ja|  
 |**NTUserName**|**nvarchar**|Windows-Benutzername.|6|ja|  
 |**ObjectID**|**int**|Vom System zugewiesene ID des Objekts. Entspricht der Knoten-ID in Showplans.|22|ja|  
-|**RequestID**|**int**|Die ID der Anforderung, die die Anweisung enthält.|49|ja|  
+|**RequestID**|**int**|Die ID der Anforderung, die die Anweisung enthält.|49|Ja|  
 |**ServerName**|**nvarchar**|Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, für die eine Ablaufverfolgung ausgeführt wird.|26|Nein|  
 |**SessionLoginName**|**nvarchar**|Der Anmeldename des Benutzers, der die Sitzung gestartet hat. Wenn Sie z. B. mit Login1 eine Verbindung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen und mit Login2 eine Anweisung ausführen, zeigt **SessionLoginName** Login1 an, und **LoginName** zeigt Login2 an. Diese Spalte zeigt sowohl den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch den Windows-Anmeldenamen an.|64|ja|  
 |**SPID**|**int**|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|12|ja|  
@@ -82,4 +80,3 @@ ms.lasthandoff: 06/22/2017
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
   
   
-

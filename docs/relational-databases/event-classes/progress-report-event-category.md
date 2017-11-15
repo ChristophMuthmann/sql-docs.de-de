@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - Progress Report event category [SQL Server]
 - SQL Server event classes, Progress Report event category
 ms.assetid: 15eba54b-ad75-4eda-9fc3-429672da46f2
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8ef53b3844065d1ba1d2cbec0d11f69e5026b560
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 85c24626325d72f3a4b17eacfa57f92a77685276
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="progress-report-event-category"></a>Fortschrittsbericht-Ereigniskategorie
   Die **Fortschrittsbericht** -Ereigniskategorie enthält die **Progress Report: Online Index Operation** -Ereignisklasse.  
@@ -37,4 +35,3 @@ ms.lasthandoff: 06/22/2017
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   
-

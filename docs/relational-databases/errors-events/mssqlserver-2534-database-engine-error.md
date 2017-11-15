@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 2534 (Database Engine error)
+helpviewer_keywords: 2534 (Database Engine error)
 ms.assetid: 121cf99d-0722-494c-be24-3369c1a0badc
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 37ec008476133fea369977d69b277c9174cae022
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 092e309de0fa88af645bf034201de9018f6fe267
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver2534"></a>MSSQLSERVER_2534
   
@@ -69,4 +66,3 @@ REPAIR erstellt den Index neu, wenn ein Index vorhanden ist.
 > [!CAUTION]  
 > Diese Reparatur führt möglicherweise zum Datenverlust.  
   
-

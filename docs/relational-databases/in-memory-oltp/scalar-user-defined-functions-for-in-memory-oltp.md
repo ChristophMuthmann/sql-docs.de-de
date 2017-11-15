@@ -1,27 +1,24 @@
 ---
 title: "Benutzerdefinierte Skalarfunktionen für In-Memory-OLTP | Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d2546e40-fdfc-414b-8196-76ed1f124bf5
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: e2bc469930621e79c05435c042240510d7826648
-ms.contentlocale: de-de
-ms.lasthandoff: 09/08/2017
-
+ms.openlocfilehash: 1a6894b71c7bd506b7da1cc0518355c043fa59a6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>Benutzerdefinierte Skalarfunktionen für In-Memory-OLTP
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -111,4 +108,3 @@ END
  [Speichern eines Ausführungsplans im XML-Format](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
   
   
-

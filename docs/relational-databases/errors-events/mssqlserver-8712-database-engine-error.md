@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 8712 (Database Engine error)
+helpviewer_keywords: 8712 (Database Engine error)
 ms.assetid: 292fb3bc-062e-41e4-a566-b5d3d0b21977
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 65489fa755c5dda3459d7de227631591f821e5bd
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c8d97513694a8f1b0559dbd029a6f9f3bed91cf5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver8712"></a>MSSQLSERVER_8712
   
@@ -47,4 +44,3 @@ Stellen Sie sicher, dass alle im USE PLAN-Hinweis angegebenen Indizes vorhanden 
 [Abfragehinweise &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-query.md)  
 [Planhinweislisten](~/relational-databases/performance/plan-guides.md)  
   
-

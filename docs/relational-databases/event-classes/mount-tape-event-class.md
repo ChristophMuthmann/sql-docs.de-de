@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Mount Tape event class
+helpviewer_keywords: Mount Tape event class
 ms.assetid: 4c595e0a-d968-47d3-a84f-9b6857342671
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5bdfe11491fd0850d1255b560cc394a8e82446ce
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: d3d00f865e7beee1248ba43fd4008c1d32685e8b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mount-tape-event-class"></a>Mount Tape (Ereignisklasse)
   Die Mount Tape-Ereignisklasse tritt auf, wenn eine Anforderung zum Bandeinlegen empfangen wird. Verwenden Sie diese Ereignisklasse, um Anforderungen zum Bandeinlegen sowie deren Erfolg oder Misserfolg zu überwachen.  
@@ -34,7 +32,7 @@ ms.lasthandoff: 06/22/2017
 |ClientProcessID|**int**|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Client die Clientprozess-ID angibt.|9|ja|  
 |DatabaseID|**int**|Die ID der Datenbank, die durch die USE *database* -Anweisung angegeben wurde, bzw. die ID der Standarddatenbank, wenn für eine angegebene Instanz keine USE *database* -Anweisung ausgegeben wurde. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zeigt den Namen der Datenbank an, wenn die ServerName-Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|ja|  
 |DatabaseName|**nvarchar**|Name der Datenbank, in der die Benutzeranweisung ausgeführt wird.|35|ja|  
-|Dauer|**bigint**|Die Zeit (in Mikrosekunden), die für das Ereignis benötigt wurde.|13|Ja|  
+|Dauer|**bigint**|Die Zeit (in Mikrosekunden), die für das Ereignis benötigt wurde.|13|ja|  
 |EndTime|**datetime**|Bei Mount Request-Ereignissen die Dauer eines Bereitstellungstimeouts, wenn ein Timeout auftritt. Andernfalls die Dauer des Ereignisses (in solchen Fällen gibt StartTime den Zeitpunkt der entsprechenden Einbindungsanforderung an).|15|Ja|  
 |EventClass|**int**|Ereignistyp = 195.|27|Nein|  
 |EventSequence|**int**|Die Sequenz eines bestimmten Ereignisses innerhalb der Anforderung.|51|Nein|  

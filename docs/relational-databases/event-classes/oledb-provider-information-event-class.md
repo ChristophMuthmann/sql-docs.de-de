@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- OLEDB Provider Information event class
+helpviewer_keywords: OLEDB Provider Information event class
 ms.assetid: a0316c4e-4b8c-4754-8a35-222f3c0907d1
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 60ff0c896be635089acd38d9ade6ec731d526250
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 51a72f6c28d36e67542b65022f8281b4ee418678
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="oledb-provider-information-event-class"></a>OLEDB Provider Information-Ereignisklasse
   Die **OLEDB Provider Information** -Ereignisklasse tritt auf, wenn eine verteilte Abfrage ausgeführt wird und Informationen zur Anbieterverbindung sammelt.  
@@ -66,7 +64,7 @@ ms.lasthandoff: 06/22/2017
 |**SPID**|**int**|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|12|ja|  
 |**StartTime**|**datetime**|Zeitpunkt, zu dem das Ereignis begonnen hat (falls vorhanden).|14|Ja|  
 |**TextData**|**ntext**|Textwert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wurde.|1|Ja|  
-|**TransactionID**|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|ja|  
+|**TransactionID**|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|Ja|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md)   

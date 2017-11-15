@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - hierarchies [SQL Server], encryption
 ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: ed2f64e9596dd905c0e8b24f6616520942ccc3ce
-ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: 2c0b0ad380f67917414067b1ddc90b8e421420cd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="encryption-hierarchy"></a>Verschlüsselungshierarchie
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden Daten anhand einer hierarchischen Verschlüsselungs- und Schlüsselverwaltungsinfrastruktur verschlüsselt. Jede Ebene verschlüsselt die Ebene darunter, indem eine Kombination aus Zertifikaten, asymmetrischen und symmetrischen Schlüsseln verwendet wird. Asymmetrische Schlüssel und symmetrische Schlüssel können außerhalb von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in einem EKM-Modul (erweiterbare Schlüsselverwaltung) gespeichert werden.  
@@ -119,4 +117,3 @@ ms.lasthandoff: 08/28/2017
  [Sicherungsfähige Elemente](../../../relational-databases/security/securables.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - bookmarks [SQL Server Management Studio]
 - SQL Server Management Studio Help [SQL Server], bookmarks
 ms.assetid: b6feff89-dd6e-41fe-b2f9-449f2532e1c4
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 72f3c7a5418f708c2d8a6a75d8271deccc9861d0
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: bad8557480b7991751ea9a7fa616743884551570
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="bookmarks-f1-help"></a>Lesezeichen (F1-Hilfe)
   Dieser Abschnitt enthält die F1-Hilfe zu den Seiten **Lesezeichen** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -32,4 +30,3 @@ ms.lasthandoff: 06/22/2017
  [Verwalten von Lesezeichen](../../relational-databases/scripting/manage-bookmarks.md)  
   
   
-

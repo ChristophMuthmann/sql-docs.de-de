@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - monitoring [SQL Server], database mirroring
 - database mirroring [SQL Server], monitoring
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
-caps.latest.revision: 78
+caps.latest.revision: "78"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 882ea4b4fd7c2954ec3586e78db5c22aa0418e54
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: 873b3fe6f7bcfa321f9a6b05473b57b9fb2030cf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Überwachen der Datenbankspiegelung (SQL Server)
   Dieser Abschnitt stellt den Datenbankspiegelungs-Monitor und die gespeicherten Prozeduren **sp_dbmmonitor** vor, erklärt die Funktionsweise der Überwachung von Datenbankspiegelungen (mit dem **Auftrag für den Datenbankspiegelungs-Monitor**) und bietet einen Überblick über die Informationen, die Sie im Zusammenhang mit Datenbankspiegelungssitzungen überwachen können. Außerdem erläutert dieser Abschnitt das Definieren von Warnschwellenwerten für eine Reihe vordefinierter Datenbankspiegelungsereignisse sowie das Einrichten von Warnungen für jedes Datenbankspiegelungsereignis.  
@@ -339,4 +337,3 @@ ms.lasthandoff: 08/02/2017
  [Konzepte des WMI-Anbieters für Serverereignisse](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   
-

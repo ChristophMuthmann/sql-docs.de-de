@@ -5,8 +5,7 @@ ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - logs [SQL Server], SQL Server error logs
 - logs [SQL Server], viewing
 ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 177b287f4a107d87ed96acd96bd7a06efe5ecde4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 20a301e257244b66e1c149c7cf8cf1f2489eb489
-ms.openlocfilehash: a8c1290e33ad567520c813a1f365830644f545c7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/29/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-the-sql-server-error-log-sql-server-management-studio"></a>Anzeigen des SQL Server-Fehlerprotokolls (SQL Server Management Studio)
 
@@ -49,5 +47,4 @@ Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll e
 5.  Der Protokolldatei-Viewer öffnet sich, und es wird eine Liste der verfügbaren Protokolle angezeigt (dies kann einen Moment dauern).
   
 6. Eine Reihe von Personen hat den nützlichen Beitrag [Identify location of the SQL Server Error Log file (Bestimmen des Speicherorts der SQL Server-Fehlerprotokolldatei)](https://www.mssqltips.com/sqlservertip/2506/identify-location-of-the-sql-server-error-log-file/)[MSSQLTips.com](https://www.mssqltips.com/) empfohlen. Da finden Sie eine Menge wirklich guter Informationen – probieren Sie es unbedingt aus!
-
 

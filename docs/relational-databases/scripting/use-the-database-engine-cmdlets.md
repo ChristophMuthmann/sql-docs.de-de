@@ -5,8 +5,7 @@ ms.date: 08/04/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +21,16 @@ helpviewer_keywords:
 - PowerShell [SQL Server], Decode-Sqlname
 - Cmdlets [SQL Server], Decode-Sqlname
 ms.assetid: 720aa982-09ae-41a3-b603-a91004cfbe3e
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 457781b7e16a5722f4d232cff14b8f20c7651972
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: f73610b00bc4c7dd6e68128f841a3c7a1e6ed691
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-the-database-engine-cmdlets"></a>Verwenden der Datenbankmodul-Cmdlets
   Windows PowerShell-Cmdlets sind Einzelfunktionsbefehle, für die i. d. R. eine Verb-Substantiv-Namenskonvention gilt, z. B. **Get-Help** oder **Set-MachineName**. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anbieter für Windows PowerShell bietet für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]spezifische Cmdlets.  
@@ -68,4 +67,3 @@ Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryT 3
 [Übersicht über PowerShell-Cmdlets für Always On-Verfügbarkeitsgruppen (SQL Server)](../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)
   
   
-

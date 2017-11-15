@@ -5,22 +5,20 @@ ms.date: 08/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: db336415059b9bc6b6251d9e590ac852903b66f8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 618716ff9a9c6515945c3b93827136cba85d8470
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-engine-tutorials"></a>Lernprogramme zum Datenbankmodul
 Dieser Abschnitt enthält Lernprogramme für [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
@@ -61,5 +59,4 @@ Dieses Lernprogramm hilft Ihnen, zu verstehen, wie Sie SQL Server-Datendateien d
   
   
   
-
 

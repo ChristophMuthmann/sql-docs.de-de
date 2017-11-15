@@ -5,8 +5,7 @@ ms.date: 08/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - read-only database views
 - database snapshots [SQL Server], about database snapshots
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1087898fae9896722e795f2c6c68c5df20d0f3aa
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 69680a68ba3656f3bbbaa0515da33cd602d1473f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-snapshots-sql-server"></a>Datenbank-Momentaufnahmen (SQL Server)
   Eine Datenbankmomentaufnahme ist eine schreibgeschützte statische Sicht einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank (die *Quelldatenbank*). Die Datenbankmomentaufnahme ist hinsichtlich der Transaktionen mit der Quelldatenbank zum Zeitpunkt der Momentaufnahmeerstellung konsistent. Eine Datenbankmomentaufnahme befindet sich immer auf derselben Serverinstanz wie ihre Quelldatenbank. Beim Aktualisieren der Quelldatenbank wird auch die Datenbankmomentaufnahme aktualisiert. Daher wird wahrscheinlich der verfügbare Speicherplatz aufgebraucht, je länger eine Datenbankmomentaufnahme besteht.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="FeatureOverview"></a> Übersicht über die Funktionen  
  Datenbankmomentaufnahmen arbeiten auf der Ebene der Datenseiten. Bevor eine Seite der Quellendatenbank zum ersten Mal geändert wird, wird die Originalseite der Quellendatenbank auf die Momentaufnahme kopiert. In der Momentaufnahme wird die Originalseite gespeichert, wodurch die Datensätze in dem Zustand erhalten werden, wie sie zum Zeitpunkt der Momentaufnahmeerstellung vorhanden waren. Der gleiche Vorgang wird für jede Seite wiederholt, die zum ersten Mal geändert wird. Für den Benutzer scheint sich eine Datenbankmomentaufnahme niemals zu ändern, weil von Lesevorgängen auf einer Datenbankmomentaufnahme immer auf die Originaldatenseiten zugegriffen wird, unabhängig von deren Speicherort.  
   
- Um die kopierten Originalseiten zu speichern, wird von der Momentaufnahme mindestens eine *Datei mit geringer Dichte*verwendet. Ursprünglich ist eine Datei mit geringer Dichte im Wesentlichen eine leere Datei, die keine Benutzerdaten enthält und für die noch kein Speicherplatz für Benutzerdaten auf einem Speichermedium zugeordnet worden ist. Je mehr Seiten in der Quellendatenbank aktualisiert werden, desto größer wird die Datei. Die folgende Abbildung veranschaulicht die Auswirkungen zweier unterschiedlicher Updatemuster auf die Größe einer Momentaufnahme. Das Updatemuster A spiegelt eine Umgebung wider, in der nur 30 Prozent der Originalseiten während der Lebensspanne der Momentaufnahme aktualisiert werden. Das Updatemuster B spiegelt eine Umgebung wider, in der 80 Prozent der Originalseiten während der Lebensspanne der Momentaufnahme aktualisiert werden.  
+ Um die kopierten Originalseiten zu speichern, wird von der Momentaufnahme mindestens eine *Sparsedatei*verwendet. Ursprünglich ist eine Sparsedatei im Wesentlichen eine leere Datei, die keine Benutzerdaten enthält und für die noch kein Speicherplatz für Benutzerdaten auf einem Speichermedium zugeordnet worden ist. Je mehr Seiten in der Quellendatenbank aktualisiert werden, desto größer wird die Datei. Die folgende Abbildung veranschaulicht die Auswirkungen zweier unterschiedlicher Updatemuster auf die Größe einer Momentaufnahme. Das Updatemuster A spiegelt eine Umgebung wider, in der nur 30 Prozent der Originalseiten während der Lebensspanne der Momentaufnahme aktualisiert werden. Das Updatemuster B spiegelt eine Umgebung wider, in der 80 Prozent der Originalseiten während der Lebensspanne der Momentaufnahme aktualisiert werden.  
   
  ![Alternative Updatemuster und Momentaufnahmegrößen](../../relational-databases/databases/media/dbview-04.gif "Alternative Updatemuster und Momentaufnahmegrößen")  
   
@@ -105,8 +103,8 @@ ms.lasthandoff: 06/22/2017
  Quelldatenbank  
  Bei einer Datenbankmomentaufnahme die Datenbank, für die die Momentaufnahme erstellt wurde. Datenbankmomentaufnahmen sind von der Quelldatenbank abhängig. Die Momentaufnahmen einer Datenbank müssen sich auf der gleichen Serverinstanz wie die Datenbank selbst befinden. Ist diese Datenbank außerdem aus irgendeinem Grund nicht verfügbar, stehen die zugehörigen Datenbankmomentaufnahmen ebenfalls nicht zur Verfügung.  
   
- Datei mit geringer Dichte  
- Eine vom NTFS-Dateisystem bereitgestellte Datei, die so verarbeitet wird, dass sie viel weniger Speicherplatz benötigt als bei gewöhnlicher Verarbeitung. Eine Datei mit geringer Dichte wird zum Speichern von in eine Datenbankmomentaufnahme kopierten Seiten verwendet. Unmittelbar nach dem Erstellen beanspruchen Dateien mit geringer Dichte nur wenig Speicherplatz. Während Daten in eine Datenbankmomentaufnahme geschrieben werden, ordnet NTFS der entsprechenden Datei mit geringer Dichte schrittweise den Speicherplatz zu.  
+ Sparsedatei  
+ Eine vom NTFS-Dateisystem bereitgestellte Datei, die so verarbeitet wird, dass sie viel weniger Speicherplatz benötigt als bei gewöhnlicher Verarbeitung. Eine Sparsedatei wird zum Speichern von in eine Datenbankmomentaufnahme kopierten Seiten verwendet. Unmittelbar nach dem Erstellen beanspruchen Sparsedateien nur wenig Speicherplatz. Während Daten in eine Datenbankmomentaufnahme geschrieben werden, ordnet NTFS der entsprechenden Sparsedatei schrittweise den Speicherplatz zu.  
   
 ##  <a name="LimitationsRequirements"></a> Voraussetzungen und Einschränkungen bei Datenbankmomentaufnahmen  
  **In diesem Abschnitt:**  
@@ -178,7 +176,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Sie können Datenbankmomentaufnahmen nicht anfügen oder trennen.  
   
--   Sie können keine Datenbankmomentaufnahmen auf Partitionen mit dem FAT32-Dateisystem oder auf RAW-Partitionen erstellen. Die von Datenbankmomentaufnahmen verwendeten Dateien mit geringer Dichte werden vom NTFS-Dateisystem bereitgestellt.  
+-   Sie können keine Datenbankmomentaufnahmen auf Partitionen mit dem FAT32-Dateisystem oder auf RAW-Partitionen erstellen. Die von Datenbankmomentaufnahmen verwendeten Sparsedateien werden vom NTFS-Dateisystem bereitgestellt.  
   
 -   Die Volltextindizierung wird für Datenbankmomentaufnahmen nicht unterstützt. Volltextkataloge werden nicht von der Quelldatenbank aus weitergegeben.  
   
@@ -204,7 +202,7 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="DiskSpace"></a> Anforderungen an den Datenträgerspeicher  
  Datenbankmomentaufnahmen belegen Datenträgerspeicher. Wenn für eine Datenbankmomentaufnahme nicht genügend Speicherplatz vorhanden ist, wird er als fehlerverdächtig gekennzeichnet und muss gelöscht werden. (Auf die Quelldatenbank hat dies jedoch keine Auswirkungen. Aktionen in ihr werden normal fortgesetzt.) Im Vergleich zu einer vollständigen Kopie einer Datenbank sind Momentaufnahmen jedoch äußerst speicherplatzeffizient. Bei einer Momentaufnahme ist nur genügend Speicher für die Seiten erforderlich, die während seiner Lebensdauer geändert werden. Im Allgemeinen werden Momentaufnahmen nur für eine begrenzte Zeit gespeichert. Daher spielt ihre Größe keine wesentliche Rolle.  
   
- Je länger eine Momentaufnahme jedoch gespeichert wird, desto wahrscheinlicher belegt er verfügbaren Speicherplatz. Die maximale Größe, auf die eine Datei mit geringer Dichte anwachsen kann, ist die Größe der entsprechenden Quelldatenbankdatei zum Zeitpunkt der Erstellung der Momentaufnahme. Wenn für eine Datenbankmomentaufnahme nicht genügend Speicherplatz vorhanden ist, muss sie gelöscht werden.  
+ Je länger eine Momentaufnahme jedoch gespeichert wird, desto wahrscheinlicher belegt er verfügbaren Speicherplatz. Die maximale Größe, auf die eine Sparsedatei anwachsen kann, ist die Größe der entsprechenden Quelldatenbankdatei zum Zeitpunkt der Erstellung der Momentaufnahme. Wenn für eine Datenbankmomentaufnahme nicht genügend Speicherplatz vorhanden ist, muss sie gelöscht werden.  
   
 > [!NOTE]  
 >  Abgesehen vom Dateispeicherplatz nimmt eine Datenbankmomentaufnahme ungefähr so viele Ressourcen in Anspruch wie eine Datenbank.  
@@ -244,5 +242,4 @@ ms.lasthandoff: 06/22/2017
  [Datenbankspiegelung und Datenbankmomentaufnahmen &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   
   
-
 

@@ -5,29 +5,26 @@ ms.date: 06/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - Transact-SQL statements, executing
 - command prompt utilities [SQL Server], sqlcmd
 - statements [SQL Server], executing
 - sqlcmd utility, about sqlcmd utility
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 0c1e5939ddf08692998f26ccbb2c2fa699342c55
-ms.openlocfilehash: 4ff24dabc28ae25ec38a546ed8f119979eef4e60
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: f0db4cc8c1888e53735579e82699a1471d432b18
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sqlcmd---use-the-utility"></a>Verwenden des Hilfsprogramms „sqlcmd“
   Das Hilfsprogramm **sqlcmd** ist ein Befehlszeilen-Hilfsprogramm für die interaktive Ad-hoc-Ausführung von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen und -Skripts und die Automatisierung von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripttasks. Damit Sie **sqlcmd** interaktiv verwenden oder Skriptdateien aufbauen können, die mithilfe von **sqlcmd**ausgeführt werden, müssen Sie mit den Grundlagen von [!INCLUDE[tsql](../../includes/tsql-md.md)]vertraut sein. Das Hilfsprogramm **sqlcmd** wird in der Regel wie folgt verwendet:  
@@ -566,4 +563,3 @@ SQLCMD –E –N –C
  [Erstellen eines CmdExec-Auftragsschritts](http://msdn.microsoft.com/library/b48da5b4-6fe7-4eb7-bade-dc7d697c6d5c)  
   
   
-

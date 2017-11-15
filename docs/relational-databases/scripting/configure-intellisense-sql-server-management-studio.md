@@ -5,8 +5,7 @@ ms.date: 06/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - modifying IntelliSense options
 - IntelliSense [SQL Server], modifying options
 ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 11849de0164d10de523450897b7a106078b8f2be
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2a4f61032e9cd11158a80b9e95d1d98c457b56be
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>Konfigurieren von IntelliSense (SQL Server Management Studio)
   Die meisten [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense-Optionen sind standardmäßig aktiviert. Sie können eine IntelliSense-Option deaktivieren und stattdessen über einen Menübefehl oder eine Tastenkombination aufrufen.  
@@ -55,4 +53,3 @@ ms.lasthandoff: 06/22/2017
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
   
-

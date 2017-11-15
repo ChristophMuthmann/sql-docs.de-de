@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e3f94b815f18075eb769d4537e8af354aa11a297
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 561ddee283355b308e58cd5e0aa5eb66c29b1c47
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Öffnen eines Editors (SQL Server Management Studio)
   In diesem Thema wird beschrieben, wie die [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-, MDX-, DMX- oder XML/A-Editoren in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]geöffnet werden. Nach dem Öffnen werden alle Editor-Fenster als Registerkarte im zentralen Bereich von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]angezeigt.  
@@ -87,4 +85,3 @@ ms.lasthandoff: 06/22/2017
 -   Doppelklicken Sie auf eine Vorlage, um ein Fenster für die Datenbankmodul-Abfrage mit dem Text der Vorlage zu öffnen. Um z. B. eine CREATE DATABASE-Vorlage zu öffnen, öffnen Sie den Ordner **SQL Server-Vorlagen** und dann den Ordner **Datenbanken** , und doppelklicken Sie auf **Datenbank erstellen**.  
   
   
-

@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 17053 (Database Engine error)
+helpviewer_keywords: 17053 (Database Engine error)
 ms.assetid: e0a01f3d-d0aa-4c38-8bcc-82e59de50512
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 17c4615ade7b6276713d36dac920cc3a2e341dcb
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 09a09ba19aa51777d06f9392c04617f27298693b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver17053"></a>MSSQLSERVER_17053
   
@@ -43,4 +40,3 @@ Ein allgemeiner Betriebssystemfehler ist aufgetreten.  Der resultierende Status 
 ## <a name="user-action"></a>Benutzeraktion  
 Normalerweise tritt dies in Verbindung mit einem anderen Fehler auf und sollte dazu verwendet werden, eine Diagnose für diesen Fehler zu erstellen. Zu den Beispielen gehören fehlerhafte Lese- oder Schreibvorgänge für Daten und Protokolldateien, Lese-/Schreibvorgänge für die Registrierung oder unerwartete Win32API-Fehler.  
   
-

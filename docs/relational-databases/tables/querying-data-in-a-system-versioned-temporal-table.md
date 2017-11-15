@@ -1,33 +1,31 @@
 ---
 title: Abfragen von Daten in einer temporalen Tabelle mit Systemversionsverwaltung | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/28/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9cc4156eccf9dd642e53ec2aeea967d9dcf016af
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 9b9e126587a2c3a6beb34b74f234375de5a4469b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Abfragen von Daten in einer temporalen Tabelle mit Systemversionsverwaltung
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Wenn Sie den letzten (aktuellsten) Zustand der Daten in einer temporalen Tabelle abrufen möchten, können Sie die Abfrage wie gewohnt durchführen, so wie auch bei nicht temporalen Tabellen. Wenn die PERIOD-Spalten nicht ausgeblendet sind, erscheinen ihre Werte in einer SELECT \* -Abfrage. Wenn Sie die **PERIOD** -Spalten als ausgeblendet angegeben haben, erscheinen ihre Werte nicht in einer SELECT \* -Abfrage. Wenn die **PERIOD** -Spalten ausgeblendet wurden, verweisen Sie in der SELECT-Klausel explizit auf die **PERIOD** -Spalten, um die Werte für diese Spalten zurückzugeben.  
   
- Verwenden Sie die neue  **FOR SYSTEM_TIME** -Klausel mit vier temporal-spezifischen Unterklauseln zum Abfragen von Daten über die aktuellen Tabellen und Verlaufstabellen, um eine zeitbasierte Analyse jedweder Art auszuführen. Weitere Informationen zu diesen Klauseln finden Sie unter [Temporal Tables](../../relational-databases/tables/temporal-tables.md) (Temporäre Tabellen) und [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
+ Verwenden Sie die neue  **FOR SYSTEM_TIME** -Klausel mit vier temporal-spezifischen Unterklauseln zum Abfragen von Daten über die aktuellen Tabellen und Verlaufstabellen, um eine zeitbasierte Analyse jedweder Art auszuführen. Weitere Informationen zu diesen Klauseln finden Sie unter [Temporal Tables](../../relational-databases/tables/temporal-tables.md) (Temporäre Tabellen) und [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
 -   AS OF <Datum>  
   
@@ -149,4 +147,3 @@ ORDER BY [DeptID], [SysStartTime] Desc
  [Beenden der Versionsverwaltung auf einer versionsverwalteten temporalen Tabelle](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
-

@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLServer:LogPool FreePool
+helpviewer_keywords: SQLServer:LogPool FreePool
 ms.assetid: 8ffd569b-045f-4c3f-a473-4a491d6a1d80
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dagiro
 ms.author: v-dagir
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 94165b004d209bef5b62727bce5eb4ae4a0bfcb8
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4e1431cc4cc311e20daf416e9086acefe2bc6df9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-logpool-freepool-object"></a>SQLServer, LogPool FreePool (Objekt)
 Das Leistungsobjekt **SQLServer:LogPool FreePool** bietet Leistungsindikatoren für Statistiken zum freien Pool innerhalb des Protokollpools.
@@ -38,5 +35,4 @@ Für jede Kategorie von Protokollpool gibt es eine Instanz des Leistungsindikato
 
 ## <a name="see-also"></a>Siehe auch  
 [Überwachen der Ressourcenverwendung (Systemmonitor)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)
-
 

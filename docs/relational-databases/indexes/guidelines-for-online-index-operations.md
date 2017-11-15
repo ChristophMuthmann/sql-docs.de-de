@@ -15,20 +15,19 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], online operations
 - transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.suite: SQL
-ms.prod_service: database engine, sql database, sql data warehouse
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.component: indexes
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
-ms.openlocfilehash: 9b6d3aabe451c35c25822a2114e825e980ad01d3
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 2cf2c877207a3dfaf5c3c6ff3aa2cca0da2d9bab
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="guidelines-for-online-index-operations"></a>Richtlinien für Onlineindexvorgänge
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.lasthandoff: 07/31/2017
 -   Nicht eindeutige, nicht gruppierte Indizes können online erstellt werden, wenn die Tabelle LOB-Datentypen enthält, keine dieser Spalten jedoch in der Indexdefinition als Schlüssel- oder Nichtschlüsselspalte (eingeschlossene Spalte) verwendet wird.  
   
 -   Indizes für lokale temp-Tabellen können nicht online erstellt, neu erstellt oder gelöscht werden. Diese Einschränkung gilt nicht für Indizes globaler temporärer Tabellen.
-- Indizes können von dort fortgesetzt werden, wo nach einem unerwarteten Fehler, einem Datenbank-Failover oder einem **PAUSE**-Befehl angehalten wurde. Weitere Informationen finden Sie unter [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md). Diese Funktion ist in der Public Preview für SQL Server 2017 und Azure SQL Database.
+- Indizes können von dort fortgesetzt werden, wo nach einem unerwarteten Fehler, einem Datenbank-Failover oder einem **PAUSE**-Befehl angehalten wurde. Weitere Informationen finden Sie unter [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md). 
 
 > [!NOTE]  
 >  Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den Editionen unterstützte Funktionen](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -95,7 +94,7 @@ Weitere Informationen finden Sie unter [Disk Space Requirements for Index DDL Op
 ## <a name="resumable-index-rebuild-considerations"></a>Überlegungen zur fortsetzbaren Neuerstellung von Indizes
 
 > [!NOTE]
-> Weitere Informationen finden Sie unter [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md). Diese Funktion ist in der Public Preview für SQL Server 2017 und Azure SQL Database.
+> Weitere Informationen finden Sie unter [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md). 
 >
 
 Für das Ausführen einer fortsetzbaren Neuerstellung eines Onlineindex gelten die folgenden Richtlinien:
@@ -126,4 +125,3 @@ Im Allgemeinen besteht kein Unterschied bei der Defragmentierungsqualität zwisc
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
   
-

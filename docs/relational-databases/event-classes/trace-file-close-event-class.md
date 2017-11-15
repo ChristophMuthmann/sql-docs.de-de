@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Trace File Close event class
+helpviewer_keywords: Trace File Close event class
 ms.assetid: 128b7bac-cb64-43e7-ae9b-87b7d2ebb4ef
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6ce196fb683057e914891ca2a58f7db9b813f74b
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4478bfd117f1388d0372081cf76018786d8e9919
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="trace-file-close-event-class"></a>Trace File Close-Ereignisklasse
   Die **Trace File Close** -Ereignisklasse weist darauf hin, dass eine Ablaufverfolgungsdatei während eines Rollovers für Ablaufverfolgungsdateien geschlossen wurde.  
@@ -46,4 +43,3 @@ ms.lasthandoff: 06/22/2017
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   
-

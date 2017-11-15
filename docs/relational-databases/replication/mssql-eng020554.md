@@ -5,23 +5,21 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- MSSQL_ENG020554 error
+helpviewer_keywords: MSSQL_ENG020554 error
 ms.assetid: ef1a1b88-b2ab-43e8-99cd-163a973262d6
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e3c5e6ae34945bda4ec27846f242a5c4bfd73daa
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: c3cd330495a1956a925bbd37d2b3e841c773d297
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqleng020554"></a>MSSQL_ENG020554
     
@@ -77,7 +75,7 @@ ms.lasthandoff: 06/22/2017
     -   [Ausführbare Konzepte für die Programmierung von Replikations-Agents](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Replikations-Agent-Verwaltung](../../relational-databases/replication/agents/replication-agent-administration.md)   
+ [Replikations-Agentverwaltung](../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Fehler- und Ereignisreferenz &#40;Replikation&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
  [Replikationsverteilungs Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)   
  [Replikationsprotokolllese-Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)   

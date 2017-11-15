@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQL:StmtCompleted event class
+helpviewer_keywords: SQL:StmtCompleted event class
 ms.assetid: a55f005d-e020-423c-8940-c24ea1b20104
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 99a9d763386ecea12b12e9ddd6d597f00ff6b172
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 7e748f3fa3ec93660084f2bed127a832ca70832a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sqlstmtcompleted-event-class"></a>SQL:StmtCompleted-Ereignisklasse
   Die SQL:StmtCompleted-Ereignisklasse zeigt an, dass die Ausführung einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung abgeschlossen wurde.  
@@ -35,14 +33,14 @@ ms.lasthandoff: 06/22/2017
 |CPU|**int**|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|18|ja|  
 |DatabaseID|**int**|Die ID der Datenbank, die durch die USE *database* -Anweisung angegeben wurde, bzw. die ID der Standarddatenbank, wenn für eine bestimmte Instanz keine USE *database* -Anweisung ausgegeben wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die ServerName-Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|ja|  
 |DatabaseName|**nvarchar**|Name der Datenbank, in der die Benutzeranweisung ausgeführt wird.|35|ja|  
-|Dauer|**bigint**|Die Zeit (in Mikrosekunden), die für das Ereignis benötigt wurde.|13|Ja|  
+|Dauer|**bigint**|Die Zeit (in Mikrosekunden), die für das Ereignis benötigt wurde.|13|ja|  
 |EndTime|**datetime**|Der Zeitpunkt, zu dem das Ereignis beendet wurde.|15|Ja|  
 |EventClass|**int**|Ereignistyp = 41.|27|Nein|  
 |EventSequence|**int**|Sequenz eines bestimmten Ereignisses innerhalb der Anforderung.|51|Nein|  
 |GroupID|**int**|ID der Arbeitsauslastungsgruppe, in der das SQL-Ablaufverfolgungsereignis ausgelöst wird.|66|ja|  
 |HostName|**nvarchar**|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname vom Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|Ja|  
 |IntegerData|**int**|Anzahl der von der Anweisung zurückgegebenen Zeilen.|25|ja|  
-|IntegerData2|**int**|Endoffset (in Bytes) der Anweisung, die gerade ausgeführt wird.|55|Ja|  
+|IntegerData2|**int**|Endoffset (in Bytes) der Anweisung, die gerade ausgeführt wird.|55|ja|  
 |IsSystem|**int**|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist. 1 = System, 0 = Benutzer.|60|Ja|  
 |LineNumber|**int**|Die Zeilennummer der Anweisung, die gerade ausgeführt wird.|5|Ja|  
 |LoginName|**nvarchar**|Der Anmeldename des Benutzers ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheitsanmeldung oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldeinformationen im Format DOMAIN\username).|11|ja|  

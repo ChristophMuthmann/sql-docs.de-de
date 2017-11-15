@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7f5dfdc1-6693-4b0d-8691-2d6f06913ed9
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 075e44b9b50eb356a4eabdebf8524f186db3d527
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b427d3a291839b588250d8bfd5d1dbab09e62a92
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="policy-management-node-object-explorer"></a>Richtlinienverwaltungsknoten (Objekt-Explorer)
   Dieser Abschnitt enthält die folgenden F1-Hilfethemen zum Knoten **Richtlinienverwaltung** des Objekt-Explorers von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -63,4 +61,3 @@ ms.lasthandoff: 06/22/2017
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   
-

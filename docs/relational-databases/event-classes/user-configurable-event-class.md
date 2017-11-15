@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- User-Configurable event class
+helpviewer_keywords: User-Configurable event class
 ms.assetid: 06fe5f07-a0dd-4968-b123-56b124a86020
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0434c01304ccb0aaf138ab046ee5ed7acce6a89d
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: ff6cce49cb06cf6d102be1cf7c5dc93abff1fc2c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-configurable-event-class"></a>Benutzerkonfigurierbar-Ereignisklasse
   Verwenden Sie die User-Configurable-Ereigniskategorie zum Überwachen von benutzerdefinierten Ereignissen. Erstellen Sie benutzerdefinierte Ereignisklassen zum Überwachen von Ereignissen, die nicht mithilfe der vom System bereitgestellten Ereignisklassen in anderen Ereigniskategorien überwacht werden können. So kann beispielsweise ein benutzerdefiniertes Ereignis erstellt werden, um den Fortschritt der zurzeit getesteten Anwendung zu überwachen. Die Anwendung kann während der Ausführung bestimmte Ereignisse an vordefinierten Punkten generieren, die es Ihnen ermöglichen, den aktuellen Ausführungspunkt in der Anwendung zu ermitteln.  
@@ -49,7 +47,7 @@ ms.lasthandoff: 06/22/2017
 |SPID|**int**|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|12|ja|  
 |StartTime|**datetime**|Zeitpunkt, zu dem das Ereignis begonnen hat (falls vorhanden).|14|ja|  
 |TextData|**ntext**|Textwert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wurde.|1|ja|  
-|TransactionID|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|ja|  
+|TransactionID|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|Ja|  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   

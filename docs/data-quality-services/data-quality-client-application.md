@@ -5,22 +5,20 @@ ms.date: 10/01/2012
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2f40568ff94ac2e2a026f2538fa2cb9e6fb9f7c3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: 940d2cb164c6f1d1af3574ae204d379d8293ce8f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-quality-client-application"></a>Data Quality-Clientanwendung
   Die Anwendung [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ermöglicht es Ihnen, Data Quality-Vorgänge mithilfe eines eigenständigen Tools auszuführen. Diese Anwendung ermöglicht es Ihnen, Wissensdatenbanken zu erstellen, Data Quality-Projekte zu erstellen und auszuführen sowie administrative Aufgaben auszuführen.  
@@ -49,4 +47,3 @@ ms.lasthandoff: 09/09/2017
  [Startbildschirm des Data Quality-Clients](../data-quality-services/data-quality-client-home-screen.md)  
   
   
-

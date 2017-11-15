@@ -1,26 +1,24 @@
 ---
 title: "Erste Schritte mit Columnstore für operative Echtzeitanalyse | Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e032da9604178eb356de35448eb5d53a9d663214
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: a67a7a405fc46996a1db1f3abdee5d948d080f63
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Erste Schritte mit Columnstore für operative Echtzeitanalyse
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -206,7 +204,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
 -   **Einfüge-/Abfragearbeitsauslastung:**Wenn Ihre Arbeitsauslastung in erster Linie Daten einfügt und sie abfragt, stellt der Standardwert 0 für COMPRESSION_DELAY die empfohlene Option dar. Die neu eingefügten Zeilen werden komprimiert, sobald eine Million Zeilen in eine einzelne Deltazeilengruppe eingefügt wurden.  
     Beispiele für eine solche Arbeitsauslastung sind (a) traditionelle DW-Arbeitsauslastung (b) Klickdatenstrom-Analyse, bei der das Klickmuster in einer Webanwendung analysiert werden soll.  
   
--   **OLTP-Arbeitsauslastung:** Wenn die Arbeitsauslastung stark DML-lastig ist (also eine Mischung aus UPDATE, DELETE und INSERT), lässt sich die Fragmentierung des Columnstore-Index durch Untersuchen von DMV „sys. dm_db_column_store_row_group_physical_stats“ bestimmen. Wenn Sie dabei sehen, dass mehr als 10 % der Zeilen in kürzlich komprimierten Zeilengruppen als gelöscht markiert wurden, können Sie die Option COMPRESSION_DELAY verwenden, um eine Zeitverzögerung bis zur Qualifikation der Zeilen zur Komprimierung hinzuzufügen. Wenn bei Ihrer Arbeitsauslastung neu eingefügte Datensätze normalerweise für etwa 60 Minuten „heiß“ bleiben (d.h. in dieser Zeit mehrfach aktualisiert werden), sollten Sie COMPRESSION_DELAY auf 60 festlegen.  
+-   **OLTP-Arbeitsauslastung:** Wenn die Arbeitsauslastung stark DML-lastig ist (also eine Mischung aus UPDATE, DELETE und INSERT), lässt sich die Fragmentierung des Columnstore-Index durch Untersuchen von DMV „sys. dm_db_column_store_row_group_physical_stats“ bestimmen. Wenn Sie dabei sehen, dass mehr als 10 % der Zeilen in kürzlich komprimierten Zeilengruppen als gelöscht markiert wurden, können Sie die Option COMPRESSION_DELAY verwenden, um eine Zeitverzögerung bis zur Qualifikation der Zeilen zur Komprimierung hinzuzufügen. Wenn bei Ihrer Arbeitsauslastung neu eingefügte Datensätze normalerweise für etwa 60 Minuten „heiß“ bleiben (d.h. in dieser Zeit mehrfach aktualisiert werden), sollten Sie COMPRESSION_DELAY auf 60 festlegen.  
   
  Wir gehen davon aus, dass die meisten Kunden keine Anpassungen vornehmen müssen. Der Standardwert der Option COMPRESSION_DELAY sollte für ihren Fall funktionieren.  
 Fortgeschrittenen Benutzern empfehlen wir, die Abfrage unten auszuführen und den Prozentsatz der gelöschten Zeilen im Lauf der letzten 7 Tage zu bestimmen.  
@@ -221,7 +219,7 @@ WHERE object_id = object_id('FactOnlineSales2')
 ORDER BY created_time DESC  
 ```  
   
- Wenn die Anzahl der gelöschten Zeilen in komprimierten Zeilengruppen mehr als 20 % beträgt, mit einer Häufung in älteren Zeilengruppen mit weniger als 5 % Variation (die als „kalte“ Zeilengruppen bezeichnet werden), legen Sie COMPRESSION_DELAY = (Erstellungszeit_der_jüngsten_Zeilengruppe – aktuelle_Zeit) fest. Beachten Sie, dass dieser Ansatz sich besonders für eine stabile und relativ homogene Arbeitslast eignet.  
+ Wenn die Anzahl der gelöschten Zeilen in komprimierten Zeilengruppen mehr als 20 % beträgt, mit einer Häufung in älteren Zeilengruppen mit weniger als 5 % Variation (die als „kalte“ Zeilengruppen bezeichnet werden), legen Sie COMPRESSION_DELAY = (Erstellungszeit_der_jüngsten_Zeilengruppe – aktuelle_Zeit) fest. Beachten Sie, dass dieser Ansatz sich besonders für eine stabile und relativ homogene Arbeitslast eignet.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Beschreibung von Columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-overview.md)   
@@ -231,4 +229,3 @@ ORDER BY created_time DESC
  [Columnstore-Index-Defragmentierung](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
-

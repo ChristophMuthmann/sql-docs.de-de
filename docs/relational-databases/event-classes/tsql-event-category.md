@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - TSQL event category [SQL Server]
 - event classes [SQL Server], TSQL event category
 ms.assetid: 215f8747-64b5-4bf3-9845-d476b10cda3a
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b092e525c81dd9458f764929f4ab8d664595dd85
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4f8e3374fe48236eee62fc1df2af39048055e9b8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tsql-event-category"></a>TSQL-Ereigniskategorie
   Die **TSQL** -Ereigniskategorie enthält allgemeine TSQL-Ereignisse.  
@@ -47,4 +45,3 @@ ms.lasthandoff: 06/22/2017
  [Transact-SQL-Referenz &#40;Datenbankmodul&#41;](../../t-sql/transact-sql-reference-database-engine.md)  
   
   
-

@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - replication [SQL Server], log shipping and
 - log shipping [SQL Server], replication and
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ed95df5cd7c02d5c8c6789dbbcf416a40c279460
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: fc7c67f47d535a639f1862cc1bc8be92855f6567
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>Protokollversand und Replikation (SQL Server)
   Beim Protokollversand werden zwei Kopien einer einzigen Datenbank verwendet, die normalerweise auf verschiedenen Computern gespeichert sind. Für die Clients ist immer nur eine Kopie der Datenbank verfügbar. Diese Kopie wird als primäre Datenbank bezeichnet. Updates, die von Clients an der primären Datenbank vorgenommen werden, werden durch den Protokollversand auf die andere Kopie der Datenbank übertragen, die als sekundäre Datenbank bezeichnet wird. Beim Protokollversand wird das Transaktionsprotokoll von jedem Einfüge-, Update- oder Löschvorgang, der an der primären Datenbank vorgenommen wird, auf die sekundäre Datenbank angewandt.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 08/02/2017
 ### <a name="log-shipping-with-transactional-replication"></a>Protokollversand mit Transaktionsreplikation  
  Bei der Transaktionsreplikation hängt das Verhalten des Protokollversands von der **sync with backup** -Option ab. Diese Option kann für die Veröffentlichungsdatenbank und für die Verteilungsdatenbank festgelegt werden; beim Protokollversand für den Verleger ist nur die Einstellung für die Veröffentlichungsdatenbank relevant.  
   
- Wenn Sie diese Option für die Veröffentlichungsdatenbank festlegen, stellen Sie sicher, dass Transaktionen erst an die Verteilungsdatenbank übermittelt werden, wenn Sie in der Veröffentlichungsdatenbank gesichert wurden. Die neueste Sicherung der Veröffentlichungsdatenbank kann dann auf dem Sekundärserver wiederhergestellt werden, und es besteht keine Möglichkeit, dass die Verteilungsdatenbank Transaktionen enthält, die in der wiederhergestellten Veröffentlichungsdatenbank nicht vorhanden sind. Mit dieser Option wird die Konsistenz zwischen dem Verleger, dem Verteiler und den Abonnenten sichergestellt, wenn ein Failover des Verlegers zu einem Sekundärserver erfolgt. Latenzzeit und Durchsatz sind betroffen, da Transaktionen erst an die Verteilungsdatenbank übermittelt werden können, nachdem sie auf dem Verleger gesichert wurden. Wenn Ihre Anwendung diese Latenzzeit tolerieren kann, sollten Sie diese Option für die Veröffentlichungsdatenbank festlegen. Wenn die **sync with backup** -Option nicht festgelegt ist, können Abonnenten Änderungen empfangen, die nicht mehr in der wiederhergestellten Datenbank auf dem Sekundärserver enthalten sind. Weitere Informationen finden Sie unter [Strategien zum Sichern und Wiederherstellen einer Momentaufnahme- und Transaktionsreplikation](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
+ Wenn Sie diese Option für die Veröffentlichungsdatenbank festlegen, stellen Sie sicher, dass Transaktionen erst an die Verteilungsdatenbank übermittelt werden, wenn Sie in der Veröffentlichungsdatenbank gesichert wurden. Die neueste Sicherung der Veröffentlichungsdatenbank kann dann auf dem Sekundärserver wiederhergestellt werden, und es besteht keine Möglichkeit, dass die Verteilungsdatenbank Transaktionen enthält, die in der wiederhergestellten Veröffentlichungsdatenbank nicht vorhanden sind. Mit dieser Option wird die Konsistenz zwischen dem Verleger, dem Verteiler und den Abonnenten sichergestellt, wenn ein Failover des Verlegers zu einem Sekundärserver erfolgt. Latenzzeit und Durchsatz sind betroffen, da Transaktionen erst an die Verteilungsdatenbank übermittelt werden können, nachdem sie auf dem Verleger gesichert wurden. Wenn Ihre Anwendung diese Latenzzeit tolerieren kann, sollten Sie diese Option für die Veröffentlichungsdatenbank festlegen. Wenn die **sync with backup** -Option nicht festgelegt ist, können Abonnenten Änderungen empfangen, die nicht mehr in der wiederhergestellten Datenbank auf dem Sekundärserver enthalten sind. Weitere Informationen finden Sie unter [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
   
  **Konfigurieren der Transaktionsreplikation und des Protokollversands mit der "sync with backup"-Option**  
   
@@ -124,4 +122,3 @@ ms.lasthandoff: 08/02/2017
  [Datenbankspiegelung und Replikation &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  
   
   
-

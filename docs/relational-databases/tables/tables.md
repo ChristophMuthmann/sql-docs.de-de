@@ -5,24 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - tables [SQL Server]
 - table components [SQL Server]
 ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7111c0043ebecaa5ca55480eb530ffd665ef4243
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 370473bbbace616bde5ebbf1b1994a38e394c62e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tables"></a>Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -48,7 +47,7 @@ ms.lasthandoff: 06/22/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] speichert die Daten, welche die Konfiguration des Servers sowie alle seine Tabellen definieren, in einem bestimmten Satz von Tabellen, die als Systemtabellen bezeichnet werden. Benutzer können die Systemtabellen nicht direkt abfragen oder aktualisieren. Die in den Systemtabellen enthaltenen Informationen werden über die Systemsichten zur Verfügung gestellt. Weitere Informationen finden Sie unter [Systemsichten &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
   
  Breite Tabellen  
- Breite Tabellen verwenden [Spalten mit geringer Dichte](../../relational-databases/tables/use-sparse-columns.md) , um die möglichen Spalten einer Tabelle auf 30.000 zu erhöhen. Spalten mit geringer Dichte sind gewöhnliche Spalten, die einen optimierten Speicher für NULL-Werte haben. Spalten mit geringer Dichte reduzieren die Speicherplatzanforderungen von NULL-Werten auf Kosten eines erhöhten Aufwands, um Werte ungleich NULL abzurufen. Eine breite Tabelle besitzt einen definierten [Spaltensatz](../../relational-databases/tables/use-column-sets.md), bei dem es sich um eine nicht typisierte XML-Darstellung handelt, die alle Tabellenspalten mit geringer Dichte in einer strukturierten Ausgabe kombiniert. Die Anzahl der Indizes und Statistiken wird ebenfalls auf 1.000 bzw. 30.000 erhöht. Die maximale Größe einer breiten Tabelle beträgt normalerweise 8.019 Byte. Deshalb sollten die meisten Daten einer Zeile NULL sein. Für eine breite Tabelle beträgt die maximale Anzahl von Spalten ohne geringe Dichte zuzüglich der berechneten Spalten weiterhin 1.024.  
+ Breite Tabellen verwenden [Sparsespalten](../../relational-databases/tables/use-sparse-columns.md) , um die möglichen Spalten einer Tabelle auf 30.000 zu erhöhen. Spalten mit geringer Dichte sind gewöhnliche Spalten, die einen optimierten Speicher für NULL-Werte haben. Spalten mit geringer Dichte reduzieren die Speicherplatzanforderungen von NULL-Werten auf Kosten eines erhöhten Aufwands, um Werte ungleich NULL abzurufen. Eine breite Tabelle besitzt einen definierten [Spaltensatz](../../relational-databases/tables/use-column-sets.md), bei dem es sich um eine nicht typisierte XML-Darstellung handelt, die alle Sparsespalten einer Tabelle in einer strukturierten Ausgabe kombiniert. Die Anzahl der Indizes und Statistiken wird ebenfalls auf 1.000 bzw. 30.000 erhöht. Die maximale Größe einer breiten Tabelle beträgt normalerweise 8.019 Byte. Deshalb sollten die meisten Daten einer Zeile NULL sein. Für eine breite Tabelle beträgt die maximale Anzahl von Spalten ohne geringe Dichte zuzüglich der berechneten Spalten weiterhin 1.024.  
   
  Bei breiten Tabellen treten folgende Leistungsauswirkungen auf:  
   

@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 145fd074c9c84ce704ba43c9ad3591a324fea507
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b749035286507e3ee2a8a05af82d9da9d1e7b4c9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
   Die Editoren in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] unterstützen [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense-Optionen, die die Typisierung reduzieren, schnellen Zugriff auf Syntaxinformationen bieten oder das Anzeigen der Trennzeichen komplexer Ausdrücke erleichtern.  
@@ -43,4 +41,3 @@ ms.lasthandoff: 06/22/2017
  [Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   
-

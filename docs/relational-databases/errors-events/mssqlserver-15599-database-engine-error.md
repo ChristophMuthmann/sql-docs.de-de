@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 15599 (Database Engine error)
+helpviewer_keywords: 15599 (Database Engine error)
 ms.assetid: 97e427a9-8587-46ea-954b-974b5df9c223
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: aa0d5c203907702e20ca9c780baad266b3def320
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 27f88e96ffa6a9dc693f6f3e4fe6bf0bd0626655
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver15599"></a>MSSQLSERVER_15599
   
@@ -45,4 +42,3 @@ Dieses Verhalten hat sich nicht geändert. Seit [!INCLUDE[ssSQL11](../../include
 ## <a name="user-action"></a>Benutzeraktion  
 Es ist keine Aktion notwendig. Sie sollten jedoch das Entfernen von Anweisungen in Erwägung ziehen, durch die Überwachung oder Berechtigungen für lokale oder globale temp-Objekte festgelegt werden.  
   
-

@@ -5,25 +5,23 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.adddatabasewizard.connecttoreplicas.f1
 - sql13.swb.addreplicawizard.connecttoreplicas.f1
 ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a2d98e3815a2c91af1ceb4fdbb0f457f62c8cfd5
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: d91eaaa6269959c7877f0bddeba79de63e72ef1f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-existing-secondary-replicas-page"></a>Seite „Mit vorhandenen sekundären Replikaten verbinden“
   In diesem Hilfethema werden die Optionen auf der Seite **Mit vorhandenen sekundären Replikaten verbinden** beschrieben. Dieses Thema wird unter [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] sowohl von [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] als auch von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]verwendet.  
@@ -54,4 +52,3 @@ ms.lasthandoff: 08/02/2017
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
-

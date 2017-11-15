@@ -5,25 +5,23 @@ ms.date: 11/22/2011
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.createcd.f1
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14599472b440d54b9ce247c8c52f9cfad5815a7d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: c69c58ed516b9977e8b8ea43a6a5f69a1e57f2e4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-composite-domain"></a>Erstellen einer Verbunddomäne
   In diesem Thema wird beschrieben, wie eine Verbunddomäne in einer Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) erstellt wird. Eine Verbunddomäne besteht aus einer oder mehreren Einzeldomänen, die für ein einzelnes Datenfeld gelten. Weitere Informationen zu Verbunddomänen finden Sie unter [Verwalten einer Verbunddomäne](../data-quality-services/managing-a-composite-domain.md).  
@@ -54,7 +52,7 @@ ms.lasthandoff: 09/09/2017
   
 5.  Wählen Sie in der Tabelle **Zuordnungen** eine Quellspalte aus der Dropdownliste für die Spalte **Quellspalte** einer leeren Zeile aus. Stellen Sie sicher, dass die Quellspalte eine Verbunddomäne enthält, die von zwei vorhandenen Einzeldomänen adressiert wird. Wenn keine entsprechenden Einzeldomänen vorhanden sind, klicken Sie auf das Symbol **Domäne erstellen** .  
   
-6.  Wählen Sie in der Tabelle **Zuordnungen** eine Quellspalte aus der Dropdownliste für die Spalte **Quellspalte** einer leeren Zeile aus. Stellen Sie sicher, dass die Quellspalte Teile einer Verbunddomäne enthält, die von zwei vorhandenen Einzeldomänen adressiert wird. Wenn keine entsprechenden Einzeldomänen vorhanden sind, klicken Sie auf das Symbol **Domäne erstellen** , um sie zu erstellen. Weitere Informationen finden Sie unter [Create a Domain](../data-quality-services/create-a-domain.md).  
+6.  Wählen Sie in der Tabelle **Zuordnungen** eine Quellspalte aus der Dropdownliste für die Spalte **Quellspalte** einer leeren Zeile aus. Stellen Sie sicher, dass die Quellspalte Teile einer Verbunddomäne enthält, die von zwei vorhandenen Einzeldomänen adressiert wird. Wenn keine entsprechenden Einzeldomänen vorhanden sind, klicken Sie auf das Symbol **Domäne erstellen** , um sie zu erstellen. Weitere Informationen finden Sie unter [Erstellen einer Domäne](../data-quality-services/create-a-domain.md).  
   
 7.  Klicken Sie auf das Symbol **Verbunddomäne erstellen** .  
   
@@ -64,7 +62,7 @@ ms.lasthandoff: 09/09/2017
   
 2.  Wählen Sie die Aktivität **Domänenverwaltung** aus, und klicken Sie dann auf **Erstellen** , um die neue Wissensdatenbank zu erstellen, oder auf **Öffnen** , um eine vorhandene Wissensdatenbank zu öffnen.  
   
-3.  Stellen Sie sicher, dass mindestens zwei für die Verbunddomäne erforderliche Einzeldomänen vorhanden sind. Klicken Sie andernfalls auf das Symbol **Domäne erstellen** , und erstellen Sie die Domänen. Weitere Informationen finden Sie unter [Create a Domain](../data-quality-services/create-a-domain.md).  
+3.  Stellen Sie sicher, dass mindestens zwei für die Verbunddomäne erforderliche Einzeldomänen vorhanden sind. Klicken Sie andernfalls auf das Symbol **Domäne erstellen** , und erstellen Sie die Domänen. Weitere Informationen finden Sie unter [Erstellen einer Domäne](../data-quality-services/create-a-domain.md).  
   
 4.  Klicken Sie auf der Seite **Domänenverwaltung** oberhalb der Domänenliste auf das Symbol **Verbunddomäne erstellen** .  
   
@@ -107,4 +105,3 @@ ms.lasthandoff: 09/09/2017
  Wenn Sie die Analyse der Wissensdatenbank verwenden und es weniger Werte in den Quelldaten als Domänen in der Verbunddomäne gibt, fügt DQS eine NULL in der fehlenden Domäne ein. Wenn es mehr Werte in den Quelldaten als Domänen in der Verbunddomäne gibt, fügt DQS einer der Spalten die zusätzlichen Daten hinzu. Wenn mindestens zwei Domänen die gleichen Werte enthalten, wird die Datenquelle zur ersten abgeglichenen Domäne analysiert.  
   
   
-

@@ -5,25 +5,23 @@ ms.date: 02/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting, connecting to Database Engine
 - connecting to Database Engine, troubleshooting
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 95a95824ad3bf2b01f01a579fe38c7ab61f6d27d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 33ea706474d71f9424aa724f18f2febd69ae62d0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Beheben von Verbindungsfehlern mit dem SQL Server-Datenbankmodul
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -157,5 +155,4 @@ Beide Probleme beziehen sich auf den SQL Server-Browserdienst, der die Portnumme
     1. Erweitern Sie auf dem Clientcomputer im linken Bereich des SQL Server-Konfigurations-Managers **SQL Native Client** *Version* **Configuration**, and then select **Client Protocols**.
     2. Überprüfen Sie, ob TCP/IP im rechten Bereich aktiviert ist. Falls TCP/IP nicht aktiviert ist, klicken Sie mit der rechten Maustaste auf **TCP/IP** und anschließend auf **Aktivieren**.
     3. TC/IP muss in der Reihenfolge der Protokolle vor „Named Pipes“ (oder „VIA“ für ältere Versionen) stehen. Im Allgemeinen sollten Sie Shared Memory als Reihenfolge 1 und TCP/IP als Reihenfolge 2 lassen. Shared Memory wird nur verwendet, wenn der Client und SQL Server auf dem gleichen Computer ausgeführt werden. Alle aktivierten Protokolle werden in dieser Reihenfolge getestet, bis eine Verbindung hergestellt ist, es sei denn, gemeinsam genutzter Speicher wird übersprungen, wenn die Verbindung nicht auf demselben Computer vorhanden ist. 
-
 

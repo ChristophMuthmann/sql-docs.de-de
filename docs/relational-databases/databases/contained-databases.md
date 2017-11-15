@@ -1,13 +1,11 @@
 ---
 title: "Eigenständige Datenbanken | Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 08/24/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +14,16 @@ helpviewer_keywords:
 - partially contained database
 - contained database, understanding
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 40dc720b7c0e74efbd1602d29af26da6320f66c1
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 603c85443f4f80e102919ad855dc7ead2ea5b6e6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="contained-databases"></a>Eigenständige Datenbanken
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -120,7 +118,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="benefit-of-contained-database-users-with-always-on"></a>Vorteil Benutzern von eigenständigen Datenbanken mit Always On  
  Durch die Reduzierung der Verknüpfungen in Bezug auf die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]können teilweise eigenständige Datenbanken bei einem Failover nützlich sein, wenn Sie [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]verwenden.  
   
- Durch die Erstellung von enthaltenen Benutzern kann der Benutzer direkt eine Verbindung mit der enthaltenen Datenbank herstellen. Dies ist eine sehr bedeutende Funktion in Szenarien mit hoher Verfügbarkeit und Notfallwiederherstellung, z.B. in einer Always On-Lösung. Wenn die Benutzer enthaltene Benutzer sind, können bei einem Failover Verbindungen zur sekundären Komponente hergestellt werden, ohne dass Anmeldungen bei der Instanz erforderlich sind, die die sekundäre Komponente hostet. Dies bietet einen unmittelbaren Vorteil. Weitere Informationen finden Sie unter [Übersicht über Always On-Verfügbarkeitsgruppen (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) und [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen (SQL Server)](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
+ Durch die Erstellung von enthaltenen Benutzern kann der Benutzer direkt eine Verbindung mit der enthaltenen Datenbank herstellen. Dies ist eine sehr bedeutende Funktion in Szenarien mit Hochverfügbarkeit und Notfallwiederherstellung, z.B. in einer Always On-Lösung. Wenn die Benutzer enthaltene Benutzer sind, können bei einem Failover Verbindungen zur sekundären Komponente hergestellt werden, ohne dass Anmeldungen bei der Instanz erforderlich sind, die die sekundäre Komponente hostet. Dies bietet einen unmittelbaren Vorteil. Weitere Informationen finden Sie unter [Übersicht über Always On-Verfügbarkeitsgruppen (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) und [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen (SQL Server)](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ### <a name="initial-database-development"></a>Anfängliche Datenbankentwicklung  
  Da einem Entwickler möglicherweise nicht bekannt ist, wo eine neue Datenbank bereitgestellt wird, verringern sich durch das Beschränken der Auswirkungen der Bereitstellungsumgebung der Arbeitsaufwand und die Probleme für den Entwickler. Im nicht enthaltenen Modell muss der Entwickler beim Programmieren mögliche Umgebungsauswirkungen auf die neue Datenbank berücksichtigen. Mit teilweise eigenständigen Datenbanken können Entwickler jedoch Auswirkungen auf Instanzebene auf die Datenbank und Aspekte auf Instanzebene für den Entwickler erkennen.  
@@ -161,4 +159,3 @@ ms.lasthandoff: 06/22/2017
  [Eigenständige Datenbankbenutzer - machen Sie Ihre Datenbank portabel](../../relational-databases/security/contained-database-users-making-your-database-portable.md)  
   
   
-

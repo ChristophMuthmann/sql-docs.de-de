@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- 'TM: Begin Tran Starting event class'
+helpviewer_keywords: 'TM: Begin Tran Starting event class'
 ms.assetid: 34a35b0e-7bd1-480d-8cc8-00614adae84e
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 07f48faa37d861d3ec257906d149025af813b93c
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 749ccf462a1f9165ace2d4034fd2788ad4f02ec8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tm-begin-tran-starting-event-class"></a>TM: Begin Tran Starting (Ereignisklasse)
   Die TM: Begin Tran Starting-Ereignisklasse zeigt an, dass eine BEGIN TRANSACTION-Anforderung beginnt. Die Anforderung wird vom Client über die Schnittstelle für die Transaktionsverwaltung gesendet.  

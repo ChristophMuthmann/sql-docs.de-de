@@ -1,5 +1,5 @@
 ---
-title: "Datentypen in Ausdrücken (Berichts-Generator und SSRS) | Microsoft Docs"
+title: "Datentypen in Ausdrücken (Berichts-Generator und SSRS) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ae8de6c7f599e9e6e3414a5f0296213e0dbc89e7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: efd0b42180aa54a60c572c6c149aa53bd9ee852c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Datentypen in Ausdrücken (Berichts-Generator und SSRS)
   Datentypen stellen verschiedene Arten von Daten dar, die auf diese Weise effizient gespeichert und verarbeitet werden können. Zu den gängigen Datentypen gehören Text (auch String oder Zeichenfolge genannt), Zahlen mit oder ohne Dezimalstellen, Datum und Uhrzeit sowie Bilder. Werte in einem Bericht müssen dem RDL-Datentyp (Report Definition Language) entsprechen. Sie können einen Wert beliebig formatieren, wenn Sie ihn in einem Bericht anzeigen. So kann ein Feld, das eine Währung darstellt, als Gleitkommazahl in der Berichtsdefinition gespeichert, jedoch je nach gewählter Formatierungseigenschaft in verschiedenen Formaten angezeigt werden.  
@@ -71,7 +70,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Erstellen Sie ein berechnetes, auf einem bestehenden Berichtsdatasetfeld basierendes Feld, indem Sie einen Ausdruck schreiben, durch den alle Daten in einer Resultsetspalte in eine neue Spalte mit einem anderen Datentyp konvertiert werden. So wird beispielsweise durch den folgenden Ausdruck das Feld Year von einer Ganzzahl in eine Zeichenfolge konvertiert: `=CStr(Fields!Year.Value)`. Weitere Informationen finden Sie unter [Hinzufügen, Bearbeiten und Aktualisieren von Feldern im Berichtsdatenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
--   Überprüfen Sie, ob die verwendete Datenverarbeitungserweiterung Metadaten zum Abrufen von vorformatierten Daten enthält. So enthält beispielsweise eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-MDX-Abfrage die erweiterte Eigenschaft FORMATTED_VALUE für Cube-Werte, die bereits während der Verarbeitung des Cubes formatiert wurden. Weitere Informationen finden Sie unter [Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+-   Überprüfen Sie, ob die verwendete Datenverarbeitungserweiterung Metadaten zum Abrufen von vorformatierten Daten enthält. So enthält beispielsweise eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -MDX-Abfrage die erweiterte Eigenschaft FORMATTED_VALUE für Cube-Werte, die bereits während der Verarbeitung des Cubes formatiert wurden. Weitere Informationen finden Sie unter [Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## <a name="understanding-parameter-data-types"></a>Parameterdatentypen  
  Berichtsparameter müssen einen der folgenden Datentypen aufweisen: Boolesch (Boolean), Datum/Zeit (DateTime), Ganzzahl (Integer), Gleitkomma (Float) oder Text (String). Wenn eine Datasetabfrage Abfrageparameter enthält, werden automatisch Berichtsparameter erstellt und mit den Abfrageparametern verknüpft. Der Standarddatentyp für einen Berichtsparameter lautet String. Wenn Sie den Standarddatentyp eines Berichtsparameters ändern möchten, wählen Sie im Dialogfeld **Berichtsparametereigenschaften** auf der Seite **Allgemein** in der Dropdownliste **Datentyp** den gewünschten Wert aus.  
@@ -80,7 +79,7 @@ ms.lasthandoff: 08/09/2017
 >  Berichtsparameter mit einem DateTime-Datentyp unterstützen keine Millisekunden. Sie können zwar einen Parameter erstellen, der auf Werten mit Millisekunden basiert, in der Dropdownliste mit den verfügbaren Werten kann jedoch kein Wert ausgewählt werden, der Datums- oder Zeitwerte mit Millisekunden enthält.  
   
 ## <a name="writing-expressions-that-convert-data-types-or-extract-parts-of-data"></a>Schreiben von Ausdrücken zum Konvertieren von Datentypen oder Extrahieren von Datenteilen  
- Wenn Sie Text und Datasetfelder mit dem Verkettungsoperator (&) kombinieren, stellt die Common Language Runtime (CLR) im Allgemeinen Standardformate bereit. Falls Sie ein Datasetfeld oder einen Parameter explizit in einen bestimmten Datentyp konvertieren müssen, müssen die Daten mit einer CLR-Methode oder einer Funktion der Visual Basic-Laufzeit konvertiert werden.  
+ Wenn Sie Text und Datasetfelder mit dem Verkettungsoperator (&) kombinieren, stellt die Common Language Runtime (CLR) im Allgemeinen Standardformate bereit. Falls Sie ein Datasetfeld oder einen Parameter explizit in einen bestimmten Datentyp konvertieren müssen, müssen die Daten mit einer CLR-Methode oder einer Funktion der Visual Basic-Laufzeit konvertiert werden.  
   
  Die folgende Tabelle enthält Beispiele zum Konvertieren von Datentypen.  
   
@@ -101,9 +100,9 @@ ms.lasthandoff: 08/09/2017
  Wenn Sie eine Datenquelle mit einem Datenanbieter verbinden, der nicht die Konvertierung aller Datentypen in der Datenquelle unterstützt, wird standardmäßig für alle nicht unterstützten Datentypen der Datentyp String verwendet. In den folgenden Beispielen finden Sie Lösungen für bestimmte Datentypen, die als Zeichenfolge (String) zurückgegeben werden.  
   
 ### <a name="concatenating-a-string-and-a-clr-datetimeoffset-data-type"></a>Verketten eines String-Datentyps und eines CLR-DateTimeOffset-Datentyps  
- Die CLR stellt für die meisten Datentypen eine Standardkonvertierung bereit, sodass Sie Werte mit unterschiedlichen Datentypen mithilfe des &-Operators in einer Zeichenfolge verketten können. Der folgende Ausdruck verkettet zum Beispiel den Text "The date and time are:" mit einem StartDate-Datasetfeld, bei dem es sich um einen <xref:System.DateTime>-Wert handelt: `="The date and time are: " & Fields!StartDate.Value`  
+ Die CLR stellt für die meisten Datentypen eine Standardkonvertierung bereit, sodass Sie Werte mit unterschiedlichen Datentypen mithilfe des &-Operators in einer Zeichenfolge verketten können. Der folgende Ausdruck verkettet zum Beispiel den Text „The date and time are:“ mit einem StartDate-Datasetfeld, bei dem es sich um einen <xref:System.DateTime> -Wert handelt: `="The date and time are: " & Fields!StartDate.Value`.  
   
- Bei einigen Datentypen müssen Sie eventuell die ToString-Funktion verwenden. Der folgende Ausdruck zeigt z. B. das gleiche Beispiel mit der CLR-Datentyp <xref:System.DateTimeOffset>, darunter das Datum und die Uhrzeit ein offset relativ zur UTC-Zeitzone Zeitzone: `="The time is: " & Fields!StartDate.Value.ToString()`.  
+ Bei einigen Datentypen müssen Sie eventuell die ToString-Funktion verwenden. Der folgende Ausdruck zeigt das gleiche Beispiel mit dem CLR-Datentyp <xref:System.DateTimeOffset>, der das Datum, die Uhrzeit sowie eine Zeitzonenverschiebung relativ zur UTC-Zeitzone beinhaltet: `="The time is: " & Fields!StartDate.Value.ToString()`.  
   
 ### <a name="converting-a-string-data-type-to-a-clr-datetime-data-type"></a>Konvertieren eines String-Datentyps in einen CLR-DateTime-Datentyp  
  Falls eine Datenverarbeitungserweiterung nicht alle in einer Datenquelle definierten Datentypen unterstützt, werden die Daten eventuell als Text abgerufen. Beispiel: Der Datentypwert **datetimeoffset(7)** wird möglicherweise als String-Datentyp abgerufen. Für Perth in Australien würde der Zeichenfolgenwert für den 1. Juli 2008, 6:05:07.9999999 in etwa wie folgt aussehen:  
@@ -144,12 +143,11 @@ ms.lasthandoff: 08/09/2017
   
      `2008-07-01 06:05:07             2008                   480`  
   
- Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanktypen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md) und [Datums- und Uhrzeitdatentypen und zugehörige Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) in der [SQL Server-Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=120955).  
+ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanktypen finden Sie unter [Datentypen (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md) und [Datums- und Uhrzeitdatentypen und zugehörige Funktionen (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) in der [SQL Server-Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=120955).  
   
- Weitere Informationen zu den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datentypen finden Sie unter [Datentypen in Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) in der [SQL Server-Onlinedokumentation](http://go.microsoft.com/fwlink/?linkid=120955).  
+ Weitere Informationen zu den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datentypen fin derden Sie unter [Datentypen in der Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) in der [SQL Server Books Onlin dere](http://go.microsoft.com/fwlink/?linkid=120955).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Formatieren von Berichtselementen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
   
   
-

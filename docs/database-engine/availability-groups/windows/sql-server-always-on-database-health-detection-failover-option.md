@@ -5,12 +5,10 @@ ms.date: 04/28/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 helpviewer_keywords:
 - AlwaysOn
 - DB_FAILOVER
@@ -18,17 +16,16 @@ helpviewer_keywords:
 - High Availability
 - SQL Server
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: JasonWHowell
 ms.author: jasonh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 795c6bfbf7052d5747c6924b706907406c099ac0
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: 722fec600bcb9b40564dff99c6036467c3856632
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Failoveroption für die Integritätserkennung auf Datenbankebene in einer Verfügbarkeitsgruppe
 
@@ -197,7 +194,6 @@ In dieser Beispielausgabe zeigt „fault_type“, dass ein kritisches Ereignis a
 * [Enhance Always On Failover Policy to Test SQL Server Database Data and Log Drives (Erweiterte Always On-Failoverrichtlinien zum Testen von SQL Server-Datenbankdaten und -Protokolllaufwerken)](https://blogs.msdn.microsoft.com/alwaysonpro/2016/01/14/enhance-alwayson-failover-policy-to-test-sql-server-database-data-and-log-drives/)
 
 * [Erweiterte Ereignisse](../../../relational-databases/extended-events/extended-events.md)
-
 
 
 

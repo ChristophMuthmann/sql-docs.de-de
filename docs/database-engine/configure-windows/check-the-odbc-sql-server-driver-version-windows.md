@@ -5,25 +5,23 @@ ms.date: 11/07/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - driver version number [ODBC]
 - ODBC drivers, version number
 ms.assetid: 43451080-a562-4231-b1d4-1ba35ca0ea79
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fc0d054304aadb3f5c8df795dca4ad327090e5c1
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: 18feb04d932c92618136823a9c6c020126786354
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="check-the-odbc-sql-server-driver-version-windows"></a>Überprüfen der Version des ODBC SQL Server-Treibers (Windows)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,4 +45,3 @@ ms.lasthandoff: 08/02/2017
  [Öffnen des ODBC-Datenquellen-Administrators](../../database-engine/configure-windows/open-the-odbc-data-source-administrator.md)  
   
   
-

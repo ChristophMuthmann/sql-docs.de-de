@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,24 +19,23 @@ helpviewer_keywords:
 - register DAC
 - data-tier application [SQL Server], register
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: af264d24411b3d384abea2723df465dd926232c6
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9b6f99676e0fbb0a8b883593e88eb8a0e9ccf258
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrieren einer Datenbank als eine DAC
   Verwenden Sie entweder den **Assistenten zum Registrieren von Datenschichtanwendungen** oder ein Windows PowerShell-Skript, um eine Definition für eine Datenschichtanwendung (DAC) zu erstellen, in der die Objekte in einer vorhandenen Datenbank beschrieben werden, und registrieren Sie die DAC-Definition in der **msdb** -Systemdatenbank (**master** in [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]).  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **Vorbereitungen:**  [Einschränkungen](#LimitationsRestrictions), [Berechtigungen](#Permissions)  
   
--   **To upgrade a DAC, using:**  [The Register Data-tier Application Wizard](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
+-   **So aktualisieren Sie eine DAC mit:**  [dem Assistenten zum Registrieren von Datenebenenanwendungen](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
  Beim Registrierungsprozess wird eine DAC-Definition erstellt, die die Objekte in der Datenbank definiert. Eine DAC-Instanz setzt sich aus der Kombination von DAC-Definition und Datenbank zusammen. Bei der Registrierung einer Datenbank als DAC in einer verwalteten Instanz des Datenbankmoduls wird die registrierte DAC in das SQL Server-Hilfsprogramm integriert, wenn der Hilfsprogramm-Sammlungssatz das nächste Mal von der Instanz an den Steuerungspunkt für das Hilfsprogramm gesendet wird. Die DAC ist dann unter dem Knoten **Bereitgestellte Datenschichtanwendungen** im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Bereitgestellte Datenschichtanwendungen** details page.  
@@ -114,7 +112,7 @@ ms.lasthandoff: 06/22/2017
  [Verwenden des Assistenten zum Registrieren von Datenebenenanwendungen](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>Überprüfen von Objekten  
- **Checking**  *SchemaName* **.** *ObjectName* **.** – Zeigt eine Statusanzeige an, während der Assistent die Abhängigkeiten der abgerufenen Objekten überprüft und sicherstellt, dass sie alle für eine DAC gültig sind. *SchemaName***.***ObjectName* gibt das derzeit überprüfte Objekt an.  
+ **Prüfung**  *SchemaName* **beispielsweise nicht ausgeführt werden.** *ObjectName* **beispielsweise nicht ausgeführt werden.** – Zeigt eine Statusanzeige an, während der Assistent die Abhängigkeiten der abgerufenen Objekten überprüft und sicherstellt, dass sie alle für eine DAC gültig sind. *SchemaName***.***ObjectName* gibt das derzeit überprüfte Objekt an.  
   
  **< Zurück**– Sie kehren zur Seite **Eigenschaften festlegen** zurück, auf der Sie Ihre Einträge ändern.  
   
@@ -185,4 +183,3 @@ $registerunit.Register()
  [Datenebenenanwendungen](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   
-

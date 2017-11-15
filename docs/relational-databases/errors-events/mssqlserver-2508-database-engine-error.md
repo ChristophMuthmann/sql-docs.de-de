@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 2508 (Database Engine error)
+helpviewer_keywords: 2508 (Database Engine error)
 ms.assetid: c37d40e5-c665-4d66-a727-5cb845634fcc
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b5e66405fcdc57a971c1d098d105345ce141978d
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 84b5e10c6a26536153bafceede732c5d2fd56618
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver2508"></a>MSSQLSERVER_2508
   
@@ -43,4 +40,3 @@ In Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vor [
 ## <a name="user-action"></a>Benutzeraktion  
 Führen Sie DBCC UPDATEUSAGE für das angegebene Objekt bzw. den angegeben Index oder für die Datenbank aus, in der das Objekt enthalten ist, um die falsche Anzahl zu korrigieren.  
   
-

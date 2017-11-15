@@ -5,23 +5,21 @@ ms.date: 03/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- event classes [SQL Server], Query Notifications event category
+helpviewer_keywords: event classes [SQL Server], Query Notifications event category
 ms.assetid: 13c62636-ce8a-410f-9af9-c0a78959fb49
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2156cef6f6d610a80410ffb468c5428da4152492
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 2176b111d90957a25a1ec0ce1ea493924b0f017f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="query-notifications-event-category"></a>Abfragebenachrichtigungen (Ereigniskategorie)
   Die **Abfragebenachrichtigungen** -Ereigniskategorie enthält Ereignisklassen, die Informationen melden, mit deren Hilfe Entwickler und Administratoren Abfragebenachrichtigungen überwachen und auftretende Probleme behandeln können.  

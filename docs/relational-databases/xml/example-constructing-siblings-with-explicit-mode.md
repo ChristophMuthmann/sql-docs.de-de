@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- EXPLICIT FOR XML mode
+helpviewer_keywords: EXPLICIT FOR XML mode
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9ada54a0e85cc9e03441ef008372d0df59a4030f
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6889b92094b8f9767930506a6e32da07c60b92ed
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="example-constructing-siblings-with-explicit-mode"></a>Beispiel: Erstellen von gleichgeordneten Elementen im EXPLICIT-Modus
   Angenommen, Sie möchten eine XML-Ausgabe mit Informationen zu Bestellungen konstruieren. Beachten Sie, dass das <`SalesPerson`>-Element und <`OrderDetail`>-Element gleichgeordnete Elemente sind. Jede Reihenfolge verfügt über ein <`OrderHeader`>-Element, ein <`SalesPerson`>-Element und mindestens ein <`OrderDetail`>-Element.  
@@ -118,4 +115,3 @@ FOR XML EXPLICIT;
  [Verwenden des EXPLICIT-Modus mit FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   
-

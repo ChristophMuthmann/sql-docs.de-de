@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8e446499e51168614859e77beb312c468167c1e3
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 40c9434ae693dfe71e97a389ac4c8b500154112a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Lektion 1: Erstellen und Anwenden einer Richtlinie 'Standardmäßig aus'
 Mit richtlinienbasierten Verwaltungsrichtlinien können Sie ein oder mehrere Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ein oder mehrere Instanzobjekte, Serverinstanzen, ein oder mehrere Datenbanken oder ein oder mehrere Datenbankobjekte verwalten. Als Datenbankadministrator möchten Sie sicherstellen, dass auf bestimmten Servern keine Datenbank-E-Mail aktiviert ist. In dieser Lektion erstellen Sie eine Bedingung und eine Richtlinie, durch die diese Serveroption festgelegt wird. Sie testen den Server, um zu sehen, ob er die Richtlinie einhält. Anschließend verwenden Sie die Richtlinie, um den Server neu zu konfigurieren, sodass der Server die Richtlinie einhält.  
@@ -41,4 +38,3 @@ Diese Lektion enthält die folgenden Themen:
   
   
   
-
