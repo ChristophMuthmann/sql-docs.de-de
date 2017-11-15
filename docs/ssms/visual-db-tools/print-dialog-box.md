@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.Print
+f1_keywords: vs.Print
 ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: acc46cf8d6af75c2c4719dcd30e6766ab8756512
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ea8fac71efd68ff30b4ea79845434b223f5ba8e5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="print-dialog-box"></a>Drucken (Dialogfeld)
 Sie können angeben, wie ein Dokument gedruckt werden soll, indem Sie Optionen im Dialogfeld **Drucken** auswählen.  
@@ -50,7 +47,7 @@ Klicken Sie hier, um das Dialogfeld \<*Eigenschaften von Druckername*> zu öffne
 Gibt das Dokument in einer Datei statt auf einem Drucker aus.  
   
 ## <a name="page-range"></a>Seitenbereich  
-**Allee**  
+**Alle**  
 Druckt das gesamte Dokument.  
   
 **Auswahl**  
@@ -73,4 +70,3 @@ Verhindert, dass Bereiche gedruckt werden, die im Code-Editor reduziert sind. Da
 **Zeilennummern einschließen**  
 Schließt die Zeilennummern in die gedruckte Ausgabe ein.  
   
-

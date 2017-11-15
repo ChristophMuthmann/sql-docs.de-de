@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - Query Designer [SQL Server], SQL Editor
 - View Designer, SQL Editor
 ms.assetid: 029abf7d-6414-47ca-a3a7-b3a057efb6c2
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dd01c244e33751b49c4bd811a879eedd500be957
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 5b5c0c123950f5314a0f6fce46c92d64b20821df
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL-Editor (Visual Database Tools)
 Verwenden Sie den SQL-Editor, um vorhandene gespeicherte Prozeduren, Funktionen, Trigger und SQL-Skripts zu bearbeiten. Dieses Fenster wird geöffnet, wenn Sie eines dieser Objekte öffnen. Wenn Sie eine neue SQL-Anweisung erstellen möchten, um sie auf Ihre Datenquelle anzuwenden, verwenden Sie den [SQL-Bereich](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) des Abfrage-Designers.  
@@ -56,4 +54,3 @@ Bei der Bearbeitung von SQL-Anweisungen werden bestimmte Transact-SQL-Anweisunge
 ## <a name="see-also"></a>Siehe auch  
 [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
-

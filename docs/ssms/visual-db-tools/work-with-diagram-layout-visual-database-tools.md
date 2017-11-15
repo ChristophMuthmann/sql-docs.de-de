@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - layouts [SQL Server]
 - appearance of database diagrams
 ms.assetid: 59ff07bd-a147-47e1-969f-3b260a9e2763
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c616f7558d0d4be04a7f8b704fce83219d35265a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 49f415516259af9648253702ebef3a9abcbc2cf1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="work-with-diagram-layout-visual-database-tools"></a>Verwenden von Diagrammlayout (Visual Database Tools)
 Sie können die Darstellung von Datenbankdiagrammen anpassen.  
@@ -45,4 +43,3 @@ Sie können die Darstellung von Datenbankdiagrammen anpassen.
 ## <a name="related-sections"></a>Verwandte Abschnitte  
 [Verwenden von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
-

@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - Visual Database Tools [SQL Server], queries
 - limiting rows returned
 ms.assetid: 25fb4e31-6dbf-4cf6-8e47-0dd0998c836c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 944b81ceb8f0fd07284364818b58366099ba19f5
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 3cf5249d181909e5b4c2473c0dc33d4ad1340eb2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-search-criteria-visual-database-tools"></a>Angeben von Suchkriterien (Visual Database Tools)
 Die Anzahl der von einer Abfrage zurückgegebenen Zeilen kann durch Suchkriterien eingeschränkt werden.  
@@ -95,4 +93,3 @@ Stellt Links zu Themen bereit, die Anweisungen zum Zusammenfassen von Ergebnisse
 [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 Stellt Links zu Themen und Abschnitten bereit, in denen im Abfrage- und Sicht-Designer auszuführende Arbeitsschritte beschrieben werden.  
   
-

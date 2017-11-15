@@ -5,22 +5,20 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
-ms.openlocfilehash: 0569452520fad4183c4de2f15c59c7ca3a37586b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/08/2017
-
+ms.openlocfilehash: c35f596a096c84d8d55ca4d0db08c4c1ca8ef34a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-management-studio---license-terms"></a>SQL Server Management Studio – Lizenzbestimmungen
 ### <a name="available-languages"></a>Verfügbare Sprachen:  
@@ -124,4 +122,3 @@ Diese Einschränkung gilt für
   
 Sie gilt auch dann, wenn Microsoft von der Möglichkeit der Schäden wusste oder hätte wissen müssen. Die obige Einschränkung oder Ausschlussbestimmung gilt möglicherweise nicht für Sie, weil Ihr Land den Ausschluss oder die Einschränkung von zufälligen, Folge- oder anderen Schäden nicht zulässt.  
   
-
