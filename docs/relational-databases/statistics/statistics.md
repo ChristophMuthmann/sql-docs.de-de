@@ -5,8 +5,7 @@ ms.date: 10/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-statistics
+ms.technology: dbe-statistics
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - query optimizer [SQL Server], statistics
 - statistics [SQL Server]
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
-caps.latest.revision: 70
+caps.latest.revision: "70"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 1c55b7b8b39e7b1ec296ee529bc66d2e14256994
-ms.openlocfilehash: 59d83fc61c1a595c1ab95515060682269eaf465e
-ms.contentlocale: de-de
-ms.lasthandoff: 10/12/2017
-
+ms.openlocfilehash: b64fe249a6fb8d1c619f9e63ecb2cd7af4494c17
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="statistics"></a>Statistik
   Der Abfrageoptimierer verwendet Statistiken zum Erstellen von Abfrageplänen, die die Abfrageleistung verbessern. Bei den meisten Abfragen generiert der Abfrageoptimierer automatisch die notwendigen Statistiken für einen hochwertigen Abfrageplan. In einigen Fällen müssen Sie weitere Statistiken erstellen oder den Abfrageentwurf ändern, um optimale Ergebnisse zu erzielen. Dieses Thema enthält eine Erläuterung von Statistikkonzepten sowie Richtlinien zur effektiven Verwendung von Abfrageoptimierungsstatistiken.  
@@ -68,7 +66,7 @@ ORDER BY s.name;
 #### <a name="autoupdatestatistics-option"></a>AUTO_UPDATE_STATISTICS (Option)  
  Wenn die AUTO_UPDATE_STATISTICS-Option zur automatischen Aktualisierung von Statistiken aktiviert ist, stellt der Abfrageoptimierer fest, wann Statistiken veraltet sein könnten, und aktualisiert diese Statistiken, sobald sie von einer Abfrage verwendet werden. Statistiken sind veraltet, wenn die Datenverteilung in der Tabelle oder indizierten Sicht durch die Vorgänge INSERT, UPDATE, DELETE oder MERGE geändert wurde. Der Abfrageoptimierer stellt fest, wann Statistiken veraltet sein könnten, indem er die Anzahl von Datenänderungen seit der letzten Statistikaktualisierung ermittelt und sie mit einem Schwellenwert vergleicht. Der Schwellenwert basiert auf der Anzahl von Zeilen in der Tabelle oder indizierten Sicht.  
   
-* [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet einen Schwellenwert basierend auf dem Prozentsatz der geänderten Zeilen. Dies ist unabhängig von der Anzahl von Zeilen in der Tabelle. Der Schwellenwert lautet:
+* [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet einen Schwellenwert basierend auf dem Prozentsatz der geänderten Zeilen. Dies ist unabhängig von der Anzahl der Zeilen in der Tabelle. Der Schwellenwert lautet:
     * Wenn die Tabellenkardinalität zum Zeitpunkt der Statistikauswertung 500 oder weniger beträgt, wird nach jeweils 500 Änderungen eine Aktualisierung durchgeführt.
     * Wenn die Tabellenkardinalität zum Zeitpunkt der Statistikauswertung über 500 liegt, wird nach jeweils 500 Änderungen + 20 Prozent eine Aktualisierung durchgeführt.
 
@@ -354,4 +352,3 @@ GO
  [Steuern des Verhaltens der automatischen Statistikaktualisierung (AUTO_UPDATE_STATISTICS) in SQL Server](http://support.microsoft.com/help/2754171)
   
  
-

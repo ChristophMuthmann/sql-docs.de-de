@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Best Practices [Database Engine]
+helpviewer_keywords: Best Practices [Database Engine]
 ms.assetid: 7101d77a-84ca-4c00-af1c-17679234e9fb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f7a14c7c37edb39e6ca5f9f9fe685ab57dae42d1
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 36f3952128e8c2b0476a3b5647263410d395561e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="device-driver-control-error"></a>Gerätetreiber-Steuerungsfehler
   Diese Regel überprüft das Systemereignisprotokoll auf EventId 11. Dies könnte durch einen fehlerhaften Gerätetreiber, ein Hardwareproblem, eine fehlerhafte Verkabelung oder Konnektivitätsprobleme verursacht werden.  
@@ -35,4 +32,3 @@ ms.lasthandoff: 06/22/2017
 -   [Microsoft Knowledge Base-Artikel 154690](http://go.microsoft.com/fwlink/?linkid=117747)  
   
   
-

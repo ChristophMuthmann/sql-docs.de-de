@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 21862 (Database Engine error)
+helpviewer_keywords: 21862 (Database Engine error)
 ms.assetid: a1d393dd-453b-4d45-9aa5-7d371213e32b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d7733792d9133f5db50df313b9f99bbc30f10f2e
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b5881b2ce3fd46c43dac7e879ce8a7aaa9b378f8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver21862"></a>MSSQLSERVER_21862
   
@@ -43,4 +40,3 @@ Da der Zugriff auf FILESTREAM-Daten über eine Datenbankmomentaufnahme nicht mö
 ## <a name="user-action"></a>Benutzeraktion  
 Verwenden Sie für die Veröffentlichung eine andere Synchronisierungsmethode als die *Datenbankmomentaufnahme* oder *database_snapshot_character*, oder schließen Sie die FILESTREAM-Spalte aus der Veröffentlichung aus.  
   
-

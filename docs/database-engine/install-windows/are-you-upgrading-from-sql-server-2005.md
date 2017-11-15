@@ -1,28 +1,25 @@
 ---
 title: "Führen Sie ein Upgrade von SQL Server 2005 aus? | Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 07/18/2017
 ms.prod:
 - sql-server-2016
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ad40e66f-71fe-4ee6-9ce3-17127e7b1d7a
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 930b38a7cf74f6f5fca26ec97fb5510a1ad31b6f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>Führen Sie ein Upgrade von SQL Server 2005 aus?
  Das Ende des erweiterten Support für SQL Server 2005 ist ein guter Grund für das Upgrade auf eine neuere Version von SQL Server und der Azure SQL-Datenbank. Ein Upgrade ermöglicht es Ihnen, Sicherheit und Compliance beizubehalten, eine bahnbrechende Leistung zu erzielen, und die Infrastruktur Ihrer Datenplattform zu optimieren.  
@@ -43,7 +40,7 @@ Um eine umfassendere Analyse dieser Optionen anzuzeigen, [klicken Sie hier](http
 |-------------------------------|--------------|-------------------------------|  
 |**Lokale SQL Server-Infrastruktur**<br /><br /> Diese Option bietet sich für Datenbankanwendungen jeder Art an, von Transaktionssystemen bis hin zu Data Warehouses.|Sie haben die bestmögliche Kontrolle über Features und Skalierbarkeit, da Sie sowohl Hardware als auch Software selbst verwalten.<br /><br /> Wenn Sie ein Upgrade von SQL Server 2005 ausführen, ist dies die ähnlichste Umgebung.|Sie müssen vorab die größte Investition leisten und haben im laufenden Betrieb den höchsten Verwaltungsaufwand, da Sie Ihre eigene Hardware und Software kaufen, warten und verwalten müssen.<br /><br /> Weitere Informationen finden Sie unter [SQL Server](https://www.microsoft.com/EN-US/server-cloud/products/sql-server-2017/).|  
 |**SQL Server auf virtuellen Azure-Computern gehostet**<br /><br /> Ziehen Sie diese Option in Erwägung, wenn Ihnen die folgenden Punkte wichtig sind:<br /><br /> Vorzüge der Migration zu einer gehosteten Umgebung.<br /><br /> Kontrolle über die Betriebsumgebung.<br /><br /> Vertrauter Funktionsumfang von SQL Server.|Die Bereitstellung kann schnell aus einer Bibliothek mit Images virtueller Computer erfolgen.<br /><br /> Sie erhalten den vollständigen Funktionsumfang von SQL Server.<br /><br /> Sie sparen die Kosten für Hardware und Serversoftware. Sie zahlen nur für die Nutzungsstunden.|Sie müssen sowohl die SQL Server- als auch die Betriebssystemsoftware konfigurieren und verwalten.<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Übersicht zu SQL Server auf virtuellen Azure-Computern](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/).<br /><br /> Informationen zur Migration finden Sie unter [Migrieren einer Datenbank zu SQL Server auf einem virtuellen Azure-Computer](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/).|  
-|**Gehosteter Azure SQL-Datenbankdienst**<br /><br /> Ziehen Sie diese Option in Betracht, wenn Sie eine kostengünstigere Lösung mit weniger Wartung wünschen.<br /><br /> Diese Option eignet sich besonders für Apps, die nicht zu allen Zeiten die gleiche Kapazität erfordern oder externen Zugriff bereitstellen müssen.|Sie können schnell bereitstellen und einfach zentral hochskalieren.<br /><br /> Sie zahlen nur für die Nutzungsstunden.<br /><br /> Die Kosten für den Dienst beinhalten nicht nur die Speicherung, sondern darüber hinaus auch hohe Verfügbarkeit und automatische Sicherungen.|Azure SQL-Datenbank bringt den Verzicht auf einige Features von SQL Server mit sich, die in einer gehosteten Cloudumgebung nicht anwendbar sind. Weitere Informationen finden Sie unter [Azure SQL-Datenbank – Transact-SQL-Informationen](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/).<br /><br /> Außerdem beträgt die maximale Datenbankgröße für Azure SQL-Datenbank 500 GB, im Vergleich dazu beträgt sie 524 PB für SQL Server.<br /><br /> Weitere Informationen finden Sie unter [SQL-Datenbank](https://azure.microsoft.com/services/sql-database/).<br /><br /> Informationen zur Migration finden Sie unter [Migrieren einer SQL Server-Datenbank zu Azure SQL-Datenbank](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/).|  
+|**Gehosteter Azure SQL-Datenbankdienst**<br /><br /> Ziehen Sie diese Option in Betracht, wenn Sie eine kostengünstigere Lösung mit weniger Wartung wünschen.<br /><br /> Diese Option eignet sich besonders für Apps, die nicht zu allen Zeiten die gleiche Kapazität erfordern oder externen Zugriff bereitstellen müssen.|Sie können schnell bereitstellen und einfach zentral hochskalieren.<br /><br /> Sie zahlen nur für die Nutzungsstunden.<br /><br /> Die Kosten für den Dienst beinhalten nicht nur die Speicherung, sondern darüber hinaus auch Hochverfügbarkeit und automatische Sicherungen.|Azure SQL-Datenbank bringt den Verzicht auf einige Features von SQL Server mit sich, die in einer gehosteten Cloudumgebung nicht anwendbar sind. Weitere Informationen finden Sie unter [Azure SQL-Datenbank – Transact-SQL-Informationen](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/).<br /><br /> Außerdem beträgt die maximale Datenbankgröße für Azure SQL-Datenbank 500 GB, im Vergleich dazu beträgt sie 524 PB für SQL Server.<br /><br /> Weitere Informationen finden Sie unter [SQL-Datenbank](https://azure.microsoft.com/services/sql-database/).<br /><br /> Informationen zur Migration finden Sie unter [Migrieren einer SQL Server-Datenbank zu Azure SQL-Datenbank](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/).|  
   
  Für bestimmte Daten und Anwendungen kann außerdem eine nicht relationale oder NoSQL-Lösung sinnvoll sein.  
   

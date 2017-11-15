@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- vs.toolbox
-helpviewer_keywords:
-- Toolbox [SQL Server Management Studio]
+f1_keywords: vs.toolbox
+helpviewer_keywords: Toolbox [SQL Server Management Studio]
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4c90dcc58ef2f84d6a2611cda85ef6580df8e174
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: e6ee1d17314517b3115f594d36f781bd778585e6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="toolbox-component-f1-help"></a>Toolboxkomponente (F1-Hilfe)
   In der**Toolbox** wird eine Vielzahl von Elementen angezeigt, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Projekten verwendet werden können. Die **Toolbox** können Sie über das Menü **Ansicht** öffnen. Bei Bedarf können Sie das Fenster der Toolbox verankern. Eine verankerte **Toolbox** kann in geöffnetem Zustand fixiert werden oder für die Zeit, in der sie nicht verwendet wird, auf **Automatisch ausblenden** gesetzt werden.  

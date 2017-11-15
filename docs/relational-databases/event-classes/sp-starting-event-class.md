@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SP:Starting event class
+helpviewer_keywords: SP:Starting event class
 ms.assetid: ef55e579-080d-4650-a7fc-4dd03ed8e391
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5c5aed4070cc1d0c3477f2ce31a55add8ca89e0f
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 262f6f862fb2bfc2a8d1474642279c9b8e043b59
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="spstarting-event-class"></a>SP:Starting-Ereignisklasse
   Die SP:Starting-Ereignisklasse zeigt an, dass die Ausführung einer gespeicherten Prozedur beginnt.  
@@ -45,7 +43,7 @@ ms.lasthandoff: 06/22/2017
 |NestLevel|**int**|Schachtelungsebene der gespeicherten Prozedur|29|Ja|  
 |NTDomainName|**nvarchar**|Windows-Domäne, zu der der Benutzer gehört.|7|ja|  
 |NTUserName|**nvarchar**|Windows-Benutzername.|6|ja|  
-|ObjectID|**int**|Vom System zugewiesene ID der gespeicherten Prozedur.|22|Ja|  
+|ObjectID|**int**|Vom System zugewiesene ID der gespeicherten Prozedur.|22|ja|  
 |ObjectName|**nvarchar**|Name der gespeicherten Prozedur, die gestartet wird|34|Ja|  
 |ObjectType|**int**|Typ der gespeicherten Prozedur, die gestartet wird. Dieser Wert entspricht der type-Spalte in der sys.objects-Katalogsicht. Weitere Werte finden Sie unter [ObjectType (Spalte für Ablaufverfolgungsereignisse)](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Ja|  
 |RequestID|**int**|Die ID der Anforderung, die die Anweisung enthält.|49|ja|  

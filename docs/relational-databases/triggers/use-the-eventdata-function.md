@@ -5,24 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-ddl
+ms.technology: dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - EVENTDATA function
 - DDL triggers, EVENTDATA function
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5cb1a29cd7638f5ec9a4248f615381fe6da721b9
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: f657cb2a52bb4871baba4c2fa6c8b846590ab111
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-the-eventdata-function"></a>Verwenden der EVENTDATA-Funktion
   Informationen zu einem Ereignis, das einen DDL-Trigger auslöst, werden mit der EVENTDATA-Funktion erfasst. Diese Funktion gibt einen **xml** -Wert zurück. Das XML-Schema schließt Informationen zu folgenden Punkten ein:  
@@ -62,7 +61,7 @@ AS
 >   
 >  `CREATE TABLE t1 (col1 int)`  
 >   
->  Ruft die Anwendung die `TSQLCommand`-Daten des CREATE_TABLE-Ereignisses ab, sollten Sie beachten, dass diese Daten möglicherweise doppelt angezeigt werden: einmal, wenn das CREATE_SCHEMA-Ereignis stattfindet, und ein zweites Mal, wenn das CREATE_TABLE-Ereignis stattfindet. Vermeiden Sie das Erstellen von DDL-Triggern sowohl für die CREATE_SCHEMA-Ereignisse als auch für die <schema_element>-Texte entsprechender CREATE SCHEMA-Definitionen, oder integrieren Sie eine Logik in die Anwendung, damit dasselbe Ereignis nicht doppelt verarbeitet wird.  
+>  Ruft die Anwendung die `TSQLCommand` -Daten des CREATE_TABLE-Ereignisses ab, sollten Sie beachten, dass diese Daten möglicherweise doppelt angezeigt werden: einmal, wenn das CREATE_SCHEMA-Ereignis stattfindet, und ein zweites Mal, wenn das CREATE_TABLE-Ereignis stattfindet. Vermeiden Sie das Erstellen von DDL-Triggern sowohl für die CREATE_SCHEMA-Ereignisse als auch für die <schema_element>-Texte entsprechender CREATE SCHEMA-Definitionen, oder integrieren Sie eine Logik in die Anwendung, damit dasselbe Ereignis nicht doppelt verarbeitet wird.  
   
 ## <a name="alter-table-and-alter-database-events"></a>ALTER TABLE-Ereignis und ALTER DATABASE-Ereignis  
  Die Ereignisdaten für das ALTER_TABLE-Ereignis und das ALTER DATABASE-Ereignis umfassen auch die Namen und Typen anderer Objekte, die durch die DDL-Anweisung betroffen sind, sowie die Aktionen, die für diese Objekte ausgeführt werden. Die Daten für das ALTER_TABLE-Ereignis umfassen die Namen der Spalten, Einschränkungen oder Trigger, die durch die ALTER TABLE-Anweisung betroffen sind, sowie die Aktion (Erstellen, Ändern, Löschen, Aktivieren oder Deaktivieren), die für die betroffenen Objekte ausgeführt wurde. Die Daten für das ALTER_DATABASE-Ereignis umfassen die Namen aller Dateien oder Dateigruppen, die durch die ALTER_DATABASE-Anweisung betroffen sind, sowie die Aktion (Erstellen, Ändern oder Löschen), die für die betroffenen Objekte ausgeführt wurde.  

@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ELEMENTXSINIL directive
+helpviewer_keywords: ELEMENTXSINIL directive
 ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 42f40e0a22457f365e27a6f1560bd2f496366294
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: dc7da5b0e66592b6d7c8f2f7318cc79483188571
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="example-specifying-the-elementxsinil-directive"></a>Beispiel: Angeben der ELEMENTXSINIL-Direktive
   Wenn Sie zum Abrufen einer elementzentrierten XML-Ausgabe die ELEMENT-Direktive angeben, und eine Spalte einen NULL-Wert aufweist, wird das entsprechende Element im EXPLICIT-Modus nicht generiert. Sie können optional die ELEMENTXSINIL-Direktive angeben, um das Generieren von Elementen für NULL-Werte anzufordern, wenn das **xsi:nil** -Attribut auf TRUE festgelegt ist.  
@@ -86,4 +83,3 @@ FOR XML EXPLICIT;
  [Verwenden des EXPLICIT-Modus mit FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   
-

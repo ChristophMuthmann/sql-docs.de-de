@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 17148 (Database Engine error)
+helpviewer_keywords: 17148 (Database Engine error)
 ms.assetid: acc6bb58-7248-4237-8bd6-4b3ed2c11446
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2432ee41fd2323fbc41c06f04bbb6ab3277657ba
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 020a3b569e64282947738a6910b7eaa1ff624271
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver17148"></a>MSSQLSERVER_17148
   
@@ -43,4 +40,3 @@ SQL Server wurde vom Dienstkontroll-Manager heruntergefahren.
 ## <a name="user-action"></a>Benutzeraktion  
 Keine  
   
-

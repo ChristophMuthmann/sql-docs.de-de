@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +19,16 @@ helpviewer_keywords:
 - sync with backup [SQL Server replication]
 - backups [SQL Server replication], transactional replication
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 58cc3e019838c102405191b25ef734b011915244
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 215580bbf9feec36fbbdb972ecb2aad6a422a196
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Strategien zum Sichern und Wiederherstellen einer Momentaufnahme- und Transaktionsreplikation
   Drei Bereiche sind beim Entwickeln einer Sicherungs- und Wiederherstellungsstrategie für die Momentaufnahme- und Transaktionsreplikation zu berücksichtigen:  
@@ -142,7 +141,7 @@ ms.lasthandoff: 06/22/2017
   
     2.  Verwenden Sie das [Hilfsprogramm "tablediff"](../../../tools/tablediff-utility.md) oder ein anderes Tool, um den Verleger manuell mit dem Abonnenten zu synchronisieren. So können Sie Daten aus der Abonnementdatenbank wiederherstellen, die nicht in der Sicherung der Veröffentlichungsdatenbank enthalten waren. Fahren Sie mit Schritt c fort.  
   
-         Weitere Informationen zu den **Tablediff**-Dienstprogramm finden Sie unter [Überprüfen replizierter Tabellen auf Unterschiede &#40;Replikationsprogrammierung&#41;](../../../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md).  
+         Weitere Informationen zu den **tablediff**-Dienstprogramm finden Sie unter [Überprüfen replizierter Tabellen auf Unterschiede &#40;Replikationsprogrammierung&#41;](../../../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md).  
   
     3.  Ist die wiederhergestellte Sicherung vollständig und aktuell? Enthält sie die aktuelle Konfiguration für alle Veröffentlichungen und Abonnements? Wenn ja, führen Sie die gespeicherte Prozedur [sp_replrestart](../../../relational-databases/system-stored-procedures/sp-replrestart-transact-sql.md) aus, um die Metadaten des Verlegers erneut mit denen des Verteilers zu synchronisieren. Die Wiederherstellung ist abgeschlossen. Wenn nein, fahren Sie mit Schritt d fort.  
   

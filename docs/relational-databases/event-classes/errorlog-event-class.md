@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ErrorLog event class
+helpviewer_keywords: ErrorLog event class
 ms.assetid: b0153a31-5794-410b-8816-d9f1290a5b36
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f54f2076d535594d15571aaecdcadf04b2125951
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 0686b4c9ea6ddeae68a097f19f82631d241acf1a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="errorlog-event-class"></a>ErrorLog-Ereignisklasse
   Die ErrorLog-Ereignisklasse zeigt an, dass Meldungen im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll protokolliert wurden.  
@@ -50,7 +48,7 @@ ms.lasthandoff: 06/22/2017
 |SPID|**int**|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|12|ja|  
 |StartTime|**datetime**|Zeitpunkt, zu dem das Ereignis begonnen hat (falls vorhanden).|14|ja|  
 |TextData|**ntext**|Text der Fehlermeldung.|1|ja|  
-|TransactionID|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|ja|  
+|TransactionID|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|Ja|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md)   

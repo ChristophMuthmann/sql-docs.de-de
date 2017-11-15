@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQL:StmtRecompile event class
+helpviewer_keywords: SQL:StmtRecompile event class
 ms.assetid: 3a134751-3e93-4fe8-bf22-1e0561189293
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dfed0cde775d2274f6a9e09e6f9dc43a9e5def23
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 6ed25c679c1bfb5d532c420dd5d7c79c853caf70
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile (Ereignisklasse)
   Die SQL:StmtRecompile-Ereignisklasse zeigt Neukompilierungen auf Anweisungsebene an, die durch jegliche Arten von Batches, durch gespeicherte Prozeduren, durch Trigger, durch Ad-hoc-Batches sowie durch Abfragen verursacht wurden. Abfragen können über sp_executesql, dynamische SQL-Anweisungen, Prepare-Methoden, Execute-Methoden oder ähnliche Schnittstellen gesendet werden. Die SQL:StmtRecompile-Ereignisklasse sollte anstelle der SP:Recompile-Ereignisklasse verwendet werden.  
@@ -37,8 +35,8 @@ ms.lasthandoff: 06/22/2017
 |EventSequence|**int**|Die Sequenz eines Ereignisses innerhalb der Anforderung.|51|Nein|  
 |EventSubClass|**int**|Beschreibt den Grund für die Neukompilierung:<br /><br /> 1 = Schema geändert<br /><br /> 2 = Statistiken geändert<br /><br /> 3 = Verzögertes Kompilieren<br /><br /> 4 = Festgelegte Option geändert<br /><br /> 5 = Temp. Tabelle geändert<br /><br /> 6 = Remoterowset geändert<br /><br /> 7 = For Browse-Berechtigungen geändert<br /><br /> 8 = Abfragebenachrichtigungsumgebung geändert<br /><br /> 9 = Partitionierte Sicht geändert<br /><br /> 10 = Cursoroptionen geändert<br /><br /> 11 = Option (Neukompilierung) angefordert|21|ja|  
 |GroupID|**int**|ID der Arbeitsauslastungsgruppe, in der das SQL-Ablaufverfolgungsereignis ausgelöst wird.|66|ja|  
-|HostName|**nvarchar**|Name des Computers, auf dem der Client ausgeführt wird, von dem diese Anweisung gesendet wurde. Diese Datenspalte wird aufgefüllt, wenn der Hostname vom Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|Ja|  
-|IntegerData2|**int**|Endoffset der Anweisung innerhalb der gespeicherten Prozedur oder des Batches, die bzw. der die Neukompilierung verursacht hat. Der Endoffset ist -1, falls die Anweisung die letzte Anweisung im Batch ist.|55|Ja|  
+|HostName|**nvarchar**|Name des Computers, auf dem der Client ausgeführt wird, von dem diese Anweisung gesendet wurde. Diese Datenspalte wird aufgefüllt, wenn der Hostname vom Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|ja|  
+|IntegerData2|**int**|Endoffset der Anweisung innerhalb der gespeicherten Prozedur oder des Batches, die bzw. der die Neukompilierung verursacht hat. Der Endoffset ist -1, falls die Anweisung die letzte Anweisung im Batch ist.|55|ja|  
 |IsSystem|**int**|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist.<br /><br /> 1 = System<br /><br /> 0 = Benutzer|60|Ja|  
 |LineNumber|**int**|Folgenummer dieser Anweisung innerhalb dieses Batches, falls zutreffend.|5|Ja|  
 |LoginName|**nvarchar**|Anmeldename, die diesen Batch gesendet hat.|11|ja|  
@@ -46,7 +44,7 @@ ms.lasthandoff: 06/22/2017
 |NestLevel|**int**|Die Schachtelungsebene des Aufrufs der gespeicherten Prozedur. Mit der gespeicherten my_proc_a-Prozedur wird beispielsweise my_proc_b aufgerufen. In diesem Fall weist my_proc_a eine NestLevel von 1 und my_proc_b eine NestLevel von 2 auf.|29|Ja|  
 |NTDomainName|**nvarchar**|Windows-Domäne, zu der der Benutzer gehört.|7|ja|  
 |NTUserName|**nvarchar**|Windows-Benutzername des verbundenen Benutzers.|6|ja|  
-|ObjectID|**int**|Vom System zugewiesener Bezeichner des Objekts mit der Anweisung, die die Neukompilierung verursacht hat. Bei diesem Objekt kann es sich um eine gespeicherte Prozedur, einen Trigger oder eine benutzerdefinierte Funktion handeln. Bei Ad-hoc-Batches oder vorbereitetem SQL-Code geben ObjectID und ObjectName einen NULL-Wert zurück.|22|Ja|  
+|ObjectID|**int**|Vom System zugewiesener Bezeichner des Objekts mit der Anweisung, die die Neukompilierung verursacht hat. Bei diesem Objekt kann es sich um eine gespeicherte Prozedur, einen Trigger oder eine benutzerdefinierte Funktion handeln. Bei Ad-hoc-Batches oder vorbereitetem SQL-Code geben ObjectID und ObjectName einen NULL-Wert zurück.|22|ja|  
 |ObjectName|**nvarchar**|Name des von ObjectID identifizierten Objekts.|34|Ja|  
 |ObjectType|**int**|Der Wert, der den Typ des am Ereignis beteiligten Objekts darstellt. Weitere Informationen finden Sie unter [ObjectType Trace Event Column](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|ja|  
 |Offset|**int**|Startoffset der Anweisung innerhalb der gespeicherten Prozedur oder des Batches, die bzw. der die Neukompilierung verursacht hat.|61|ja|  

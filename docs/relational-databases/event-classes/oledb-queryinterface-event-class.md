@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- OLEDB QueryInterface event class
+helpviewer_keywords: OLEDB QueryInterface event class
 ms.assetid: f54c9ef9-3add-497c-a09b-42c4ce3c623d
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b47d42e3d8de99ad7dc4fc508c2af42a745ca704
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: a675719a1c034127bce3afc1bee730cc2221dd53
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface-Ereignisklasse
   Die **OLEDB QueryInterface** -Ereignisklasse tritt auf, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen OLE DB- **QueryInterface** -Aufruf für verteilte Abfragen und remote gespeicherte Prozeduren ausführt. Nehmen Sie diese Ereignisklasse in Ablaufverfolgungen auf, die Probleme im Zusammenhang mit verteilten Abfragen und remote gespeicherten Prozeduren überwachen.  
@@ -57,7 +55,7 @@ ms.lasthandoff: 06/22/2017
 |SPID|**int**|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|12|ja|  
 |StartTime|**datetime**|Zeitpunkt, zu dem das Ereignis begonnen hat (falls vorhanden).|14|ja|  
 |TextData|**nvarchar**|Während des OLE DB-Aufrufs gesendete und empfangene Parameter|1|Nein|  
-|TransactionID|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|ja|  
+|TransactionID|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|Ja|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md)   

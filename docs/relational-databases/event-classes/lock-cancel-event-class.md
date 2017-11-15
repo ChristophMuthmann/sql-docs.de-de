@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Cancel event class
+helpviewer_keywords: Cancel event class
 ms.assetid: d9203e58-40ba-4712-a918-2c34a5d396d7
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 07e88997a7b05c0cd8c2e866ea483e088b2d5404
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 7779d63d103903fe4f7f756f5f3ed68c5aecd321
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lockcancel-event-class"></a>Lock:Cancel-Ereignisklasse
   Die **Lock:Cancel** -Ereignisklasse zeigt an, dass der Erhalt einer Sperre für eine Ressource abgebrochen wurde (z. B. aufgrund einer abgebrochenen Abfrage).  
@@ -36,7 +34,7 @@ ms.lasthandoff: 06/22/2017
 |**DatabaseID**|**int**|Die ID der Datenbank, in der die Sperre eingerichtet wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die **ServerName** -Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|ja|  
 |**DatabaseName**|**nvarchar**|Der Name der Datenbank, in der eine Sperre angefordert wurde.|35|ja|  
 |**Dauer**|**bigint**|Die Wartezeit (in Mikrosekunden) zwischen dem Zeitpunkt, zu dem die Sperranforderung ausgegeben wurde, und dem Zeitpunkt, zu dem die Sperre aufgehoben wurde.|13|ja|  
-|**EndTime**|**datetime**|Der Zeitpunkt, zu dem das Ereignis beendet wurde.|15|Ja|  
+|**EndTime**|**datetime**|Der Zeitpunkt, zu dem das Ereignis beendet wurde.|15|ja|  
 |**EventClass**|**int**|Ereignistyp = 26.|27|Nein|  
 |**EventSequence**|**int**|Sequenz eines bestimmten Ereignisses innerhalb der Anforderung.|51|Nein|  
 |**GroupID**|**int**|ID der Arbeitsauslastungsgruppe, in der das SQL-Ablaufverfolgungsereignis ausgelöst wird.|66|ja|  
@@ -51,7 +49,7 @@ ms.lasthandoff: 06/22/2017
 |**ObjectID**|**int**|Die ID des Objekts, für das die Sperre aufgehoben wurde, soweit vorhanden und zutreffend.|22|Ja|  
 |**ObjectID2**|**bigint**|Die ID des verbundenen Objekts oder der verbundenen Entität (sofern verfügbar und anwendbar).|56|Ja|  
 |**OwnerID**|**int**|1 = TRANSACTION<br /><br /> 2 = CURSOR<br /><br /> 3 = SESSION<br /><br /> 4 = SHARED_TRANSACTION_WORKSPACE<br /><br /> 5 = EXCLUSIVE_TRANSACTION_WORKSPACE|58|Ja|  
-|**RequestID**|**int**|Die ID der Anforderung, die die Anweisung enthält.|49|ja|  
+|**RequestID**|**int**|Die ID der Anforderung, die die Anweisung enthält.|49|Ja|  
 |**ServerName**|**nvarchar**|Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, für die eine Ablaufverfolgung ausgeführt wird.|26|Nein|  
 |**SessionLoginName**|**nvarchar**|Der Anmeldename des Benutzers, der die Sitzung gestartet hat. Wenn Sie z. B. mit Login1 eine Verbindung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen und mit Login2 eine Anweisung ausführen, zeigt **SessionLoginName** Login1 an, und **LoginName** zeigt Login2 an. Diese Spalte zeigt sowohl den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch den Windows-Anmeldenamen an.|64|ja|  
 |**SPID**|**int**|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|12|ja|  

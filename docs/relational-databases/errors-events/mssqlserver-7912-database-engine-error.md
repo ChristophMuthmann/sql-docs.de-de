@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 7912 (Database Engine error)
+helpviewer_keywords: 7912 (Database Engine error)
 ms.assetid: 8e6157c2-7e84-49f2-965a-c7426c2b23fa
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d8fe92b11ddd40b06375a7bf06c3c7e4e7252547
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a633136080c229ac15d6047213ee72735621e881
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver7912"></a>MSSQLSERVER_7912
   
@@ -43,4 +40,3 @@ Dies ist eine Informationsmeldung von REPAIR, die angibt, dass ein Block dem ang
 ## <a name="user-action"></a>Benutzeraktion  
 Keine  
   
-

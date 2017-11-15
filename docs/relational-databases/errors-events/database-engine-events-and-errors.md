@@ -5,22 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 78b8df4b3bc143c06b2876856dcbd5f26711a3d7
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5d905daa4fb553b7152befcefd97ea0afbdf6cfc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-engine-events-and-errors"></a>Datenbankmodul (Fehler und Ereignisse)
   Dieses Thema enthält Informationen zu Fehlern und Ereignissen für [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -33,4 +31,3 @@ ms.lasthandoff: 06/22/2017
  Erläutert die Systemfehlermeldungen sowie die möglichen Ursachen und die Maßnahmen, die Sie ergreifen können.  
   
   
-

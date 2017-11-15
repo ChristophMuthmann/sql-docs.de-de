@@ -5,25 +5,23 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.maint.maintplanproperties.general.f1
 - sql13.swb.maint.subplanproperties.f1
 ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b8adb2a4c6f1ddbf04d11413284b500629b911d4
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e97a88a9ab7a57a41c6a3b8ac2b6ae2c98736d04
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="maintenance-plan-subplan-properties"></a>Wartungsplan (Unterplaneigenschaften)
   Verwenden Sie das Dialogfeld **Wartungsplan (Unterplaneigenschaften)** , um einen Namen, eine Beschreibung und einen Zeitplan für einen Unterplan eines Wartungsplans anzugeben. Klicken Sie auf der Registerkarte **Entwurf** des Wartungsplans auf **Unterplaneigenschaften** , oder doppelklicken Sie auf einen Unterplan im Designer-Raster, um dieses Dialogfeld anzuzeigen.  
@@ -42,4 +40,3 @@ ms.lasthandoff: 06/22/2017
  [Wartungspläne](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   
-

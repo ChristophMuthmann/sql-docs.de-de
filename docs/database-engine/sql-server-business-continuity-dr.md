@@ -11,12 +11,11 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2cdfda9e305b5a31a3c4303c9238901ff874020d
-ms.openlocfilehash: 89394b31ca9971ddb95dd71fbf1c6a6742813265
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 2d74d8eb8009ec9ccf5328630db36b5fda2eb8df
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="business-continuity-and-database-recovery---sql-server"></a>Geschäftskontinuität und Datenbankwiederherstellung – SQL Server
 
@@ -27,4 +26,3 @@ ms.lasthandoff: 09/26/2017
 [Verfügbarkeitsgruppen](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 
 [Failovercluster](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)
-

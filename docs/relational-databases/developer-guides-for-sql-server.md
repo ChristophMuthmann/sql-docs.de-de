@@ -4,24 +4,21 @@ ms.date: 10/19/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.portal.DevRef.f1
+f1_keywords: sql13.portal.DevRef.f1
 ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: cf076244d1a73b543f1907400c26ef0c27695ff9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: cae0c9873a900fc5a5cb180a01e912b9f4dd61cf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="developer-guides-for-sql-server"></a>Leitfäden für Entwickler für SQL Server
   Integrieren Sie fast jede SQL Server-Funktion mithilfe von benutzerdefiniertem Code mithilfe der Programmierungsmodelle und Programmierungsschnittstellen. Jeder Funktionsbereich enthält native und verwaltete APIs, die für Datensammlung, Datenzugriff, Serververwaltung oder Datenvisualisierung verwendet werden.  
@@ -54,4 +51,3 @@ ms.lasthandoff: 09/27/2017
  [Technische Dokumentation zu SQL Server](../sql-server/sql-server-technical-documentation.md)   
  [SQL Server-Tutorial](../sql-server/tutorials-for-sql-server-2016.md)  
   
-

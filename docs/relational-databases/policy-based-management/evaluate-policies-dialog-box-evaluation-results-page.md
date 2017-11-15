@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.dmf.evalpoliciesresults.f1
+f1_keywords: sql13.swb.dmf.evalpoliciesresults.f1
 ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3801000fb37d133ca0bf7c5197c939188e4e59a4
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: cdbaf264398ac66a0b237f28eab927183c7421ff
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>Dialogfeld 'Richtlinien auswerten', Seite 'Auswertungsergebnisse'
   Mithilfe dieses Dialogfelds können Sie die Ergebnisse der Richtlinienauswertung anzeigen und richtlinienbasierte Verwaltungsrichtlinien auf einen Satz von Zielen anwenden, die mit den Richtlinien nicht übereinstimmen.  

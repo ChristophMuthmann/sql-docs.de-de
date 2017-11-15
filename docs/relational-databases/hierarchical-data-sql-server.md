@@ -5,8 +5,7 @@ ms.date: 09/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - hierarchyid [Database Engine]
 - hierarchical queries [SQL Server], using hierarchyid data type
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
-ms.openlocfilehash: 6f4cd91c26935f93d99e2a23965c3c256e2e5bbd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/02/2017
-
+ms.openlocfilehash: a353346cd6cf9abe094f839b1396bdadac93c7e7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="hierarchical-data-sql-server"></a>Hierarchische Daten (SQL Server)
   Der integrierte Datentyp **hierarchyid** vereinfacht das Speichern und Abfragen hierarchischer Daten. **hierarchyid** wird zum Darstellen von Strukturen, dem häufigsten Typ hierarchischer Daten, optimiert.  
@@ -534,4 +532,3 @@ GO
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   
-

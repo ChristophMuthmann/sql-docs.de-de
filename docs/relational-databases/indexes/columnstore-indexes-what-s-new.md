@@ -1,27 +1,24 @@
 ---
 title: Columnstore-Indizes - Neuigkeiten | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 06/27/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1fe5ea05-5b19-45a4-9b7a-8ae5ca367897
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 47b0c3fc8aba635dcfd573536b770f13a40956fa
-ms.openlocfilehash: 0a63e3e5641ce513e0d3c30705ac8a7523cbc053
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 919cdbcd48d8773b906ad7e410cb18627fddd8bf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Columnstore-Indizes - Neuigkeiten
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -53,7 +50,7 @@ ms.lasthandoff: 07/31/2017
 |Columnstore-Index für eine speicheroptimierte Tabelle|||Ja|Ja|Ja|Ja|  
 |Definition von nicht gruppiertem Columnstore-Index unterstützt eine gefilterte Bedingung|||Ja|Ja|Ja|Ja|  
 |Komprimierungsverzögerungsoption für Columnstore-Indizes in CREATE TABLE und ALTER TABLE.|||Ja|Ja|Ja|Ja|
-|Der Columnstore-Index kann über eine nicht permanent berechnete Spalte verfügen.||||Ja|||   
+|Der Columnstore-Index kann über eine nicht persistierte berechnete Spalte verfügen.||||Ja|||   
   
  *Um einen lesbaren nicht gruppierten Columnstore-Index zu erstellen, speichern Sie den Index in einer schreibgeschützten Dateigruppe.  
 
@@ -61,7 +58,7 @@ ms.lasthandoff: 07/31/2017
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] fügt diese neuen Funktionen hinzu.
 
 ### <a name="functional"></a>Funktionell
-- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] unterstützt nicht permanent berechnete Spalten in gruppierten Columnstore-Indexen. Persistent berechnete Spalten werden in gruppierten Indexen nicht unterstützt. Sie können einen nicht gruppierten Index auf einem Columnstore-Index erstellen, der über berechnete Spalten verfügt. 
+- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] unterstützt nichtpersistierte berechnete Spalten in gruppierten Columnstore-Indexen. Persistent berechnete Spalten werden in gruppierten Indexen nicht unterstützt. Sie können einen nicht gruppierten Index auf einem Columnstore-Index erstellen, der über berechnete Spalten verfügt. 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fügt wichtige Verbesserungen hinzu, um die Leistung und Flexibilität von Columnstore-Indizes zu erhöhen. Dies verbessert die Data Warehouse-Szenarios und ermöglicht operative Echtzeitanalysen.  
@@ -182,4 +179,3 @@ ms.lasthandoff: 07/31/2017
  [Columnstore-Index-Defragmentierung](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
-

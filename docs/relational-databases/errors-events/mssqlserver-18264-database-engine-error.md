@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 18264 (Database Engine error)
+helpviewer_keywords: 18264 (Database Engine error)
 ms.assetid: 3050fc56-2be5-43cf-916b-50a3ac5f89aa
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 06ae22f5e2e7344a5934493bb893a07bdb20383a
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2023c8ee20cab791eac1041af0ba2e5500d42c7d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver18264"></a>MSSQLSERVER_18264
   
@@ -48,4 +45,3 @@ Weitere Informationen zum Verwenden von Ablaufverfolgungsflags finden Sie in der
 ## <a name="see-also"></a>Siehe auch  
 [Ablaufverfolgungsflags &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   
-

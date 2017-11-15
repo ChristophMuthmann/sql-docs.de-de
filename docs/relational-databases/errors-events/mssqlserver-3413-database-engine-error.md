@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 3413 (Database Engine error)
+helpviewer_keywords: 3413 (Database Engine error)
 ms.assetid: 3fa07637-ba93-4633-aaf2-ade7d18bc487
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 38900b11bc5e2892ea85f22db2a6c1490d6399fb
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0c98db87f49ef52d68e49b8553a09b77fb18b3f0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver3413"></a>MSSQLSERVER_3413
   
@@ -43,4 +40,3 @@ Es ist ein unerwarteter Fehler aufgetreten, während versucht wurde, eine Benutz
 ## <a name="user-action"></a>Benutzeraktion  
 Zeigen Sie vorherige Fehler an, und beheben Sie das Problem.  
   
-

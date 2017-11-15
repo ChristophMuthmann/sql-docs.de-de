@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-ddl
+ms.technology: dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- DDL triggers, implementing
+helpviewer_keywords: DDL triggers, implementing
 ms.assetid: f44e5340-1d18-40e9-828e-0ffcca091ae3
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ebeb270725abbb10a2bcb86c3248d71cdd3f15b1
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5def307824891a2560d9b49ccc3b7b5bab03fcc6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="implement-ddl-triggers"></a>Implementieren von DDL-Triggern
   Dieses Thema enthält Informationen, die Ihnen beim Erstellen von DDL-Triggern, Ändern von DDL-Triggern sowie Deaktivieren oder Löschen von DDL-Triggern helfen sollen.  
@@ -80,4 +77,3 @@ ms.lasthandoff: 06/22/2017
 -   [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)  
   
   
-

@@ -5,24 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - event notifications, about
 - events [SQL Server], notifications
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 01d42e113fabb39353971749462c144374e470fe
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 6a1470d8bb606a29df7c7393fbd0c74772ba5d06
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="event-notifications"></a>Ereignisbenachrichtigungen
   Mit Ereignisbenachrichtigungen werden Informationen zu Ereignissen an einen [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dienst gesendet. Ereignisbenachrichtigungen werden als Antwort auf eine Vielzahl von [!INCLUDE[tsql](../../includes/tsql-md.md)] -DDL-Anweisungen (Data Definition Language, Datendefinitionssprache) und Ereignissen der SQL-Ablaufverfolgung ausgeführt, indem Informationen zu diesen Ereignissen an einen [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dienst gesendet werden.  

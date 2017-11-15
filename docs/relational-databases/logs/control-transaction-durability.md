@@ -5,25 +5,23 @@ ms.date: 09/16/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-transaction-log
+ms.technology: dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - delayed durability
 - Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 956e9f95b95aa0ecb99477714e70ac61d29c45e0
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 70f830b3e94781733cf18ea638912e5813ffeb90
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="control-transaction-durability"></a>Steuern der Transaktionsdauerhaftigkeit
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -94,7 +92,7 @@ ms.lasthandoff: 06/22/2017
     
 ## <a name="how-to-control-transaction-durability"></a>Steuern der Transaktionsdauerhaftigkeit    
     
-###  <a name="bkmk_DbControl"></a> Database level control    
+###  <a name="bkmk_DbControl"></a> Steuerung auf Datenbankebene    
  Der Datenbankadministrator kann mithilfe der folgenden Anweisung steuern, ob Benutzer die verzögerte Transaktionsdauerhaftigkeit in einer Datenbank nutzen können. Sie müssen die Einstellung für verzögerte Dauerhaftigkeit mit ALTER DATABASE festlegen.    
     
 ```tsql    
@@ -110,7 +108,7 @@ ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  **FORCED**    
  Mit dieser Einstellung wird jede Transaktion, für die in der Datenbank ein Commit ausgeführt wird, zu einer verzögert dauerhaften Transaktion. Unabhängig davon, ob für die Transaktion vollständige Dauerhaftigkeit (DELAYED_DURABILITY = OFF) oder keine Einstellung angegeben wird, wird sie zu einer verzögert dauerhaften Transaktion. Diese Einstellung ist hilfreich, wenn die verzögerte Transaktionsdauerhaftigkeit für eine Datenbank von Nutzen ist und Sie keinen Anwendungscode ändern möchten.    
     
-###  <a name="CompiledProcControl"></a> Atomic block level control – Natively Compiled Stored Procedures    
+###  <a name="CompiledProcControl"></a> Steuerung auf Atomic-Blockebene – systemintern kompilierte gespeicherte Prozeduren    
  Folgender Code wird in den Atomic-Block eingefügt.    
     
 ```tsql    
@@ -145,7 +143,7 @@ END
 |**DELAYED_DURABILITY = OFF**|Atomic-Block startet eine neue vollständig dauerhafte Transaktion.|Atomic-Block erstellt einen Sicherungspunkt in der vorhandenen Transaktion und startet dann die neue Transaktion.|    
 |**DELAYED_DURABILITY = ON**|Atomic-Block startet eine neue verzögert dauerhafte Transaktion.|Atomic-Block erstellt einen Sicherungspunkt in der vorhandenen Transaktion und startet dann die neue Transaktion.|    
     
-###  <a name="bkmk_T-SQLControl"></a> COMMIT level control –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
+###  <a name="bkmk_T-SQLControl"></a> Steuerung auf COMMIT-Ebene –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
  Da die COMMIT-Syntax erweitert ist, kann die verzögerte Transaktionsdauerhaftigkeit erzwungen werden. Wenn für DELAYED_DURABILITY auf Datenbankebene DISABLED oder FORCED festgelegt wird (siehe oben), wird diese COMMIT-Option ignoriert.    
     
 ```tsql    
@@ -201,7 +199,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **Protokollsicherung**    
  In die Sicherung werden nur Transaktionen aufgenommen, die in dauerhafte Transaktionen konvertiert wurden.    
     
-##  <a name="bkmk_DataLoss"></a> When can I lose data?    
+##  <a name="bkmk_DataLoss"></a> Wann können Daten verloren gehen?    
  Wenn Sie verzögerte Dauerhaftigkeit in einer der Tabellen implementieren, sollten Sie beachten, dass es unter bestimmten Umständen zu Datenverlust kommen kann. Falls kein Datenverlust hinnehmbar ist, sollten Sie auf die verzögerte Dauerhaftigkeit in Tabellen verzichten.    
     
 ### <a name="catastrophic-events"></a>Notfälle    
@@ -214,4 +212,3 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  [Transaktionen mit speicheroptimierten Tabellen](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)    
     
   
-

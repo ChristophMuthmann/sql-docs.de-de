@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 2538 (Database Engine error)
+helpviewer_keywords: 2538 (Database Engine error)
 ms.assetid: 0a0f7d79-f1ba-4749-8804-fb660cca3492
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d42c869f177f075eea97b285390325d2437b6fd8
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 069fd1e095f96eb29dc0ab1486184a61108d9b5c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver2538"></a>MSSQLSERVER_2538
   
@@ -43,4 +40,3 @@ Diese Informationen sind Teil der Ausgabe des Befehls DBCC CHECKALLOC. Bei diese
 ## <a name="user-action"></a>Benutzeraktion  
 Keine  
   
-

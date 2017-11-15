@@ -1,26 +1,24 @@
 ---
 title: Erstellen einer temporalen Tabelle mit Systemversionsverwaltung | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 05/24/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a75bde97eddb1b99546ec4d5ff0dbb33340e19e4
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 1507ae227bac2f5b4ef6f04533295f96e8c767b7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Erstellen einer temporalen Tabelle mit Systemversionsverwaltung
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -29,14 +27,12 @@ ms.lasthandoff: 06/22/2017
   
 -   Temporale Tabelle mit einer anonymen Verlaufstabelle: Sie geben das Schema der aktuellen Tabelle an und lassen eine entsprechende Verlaufstabelle mit einem automatisch generierten Namen vom System erstellen.  
   
--   Temporale Tabelle mit einer Standardverlaufstabelle: Sie geben den Namen des Verlaufstabellenschemas und der Tabelle an und lassen vom System eine Verlaufstabelle in diesem Schema erstellen.
-  
+-   Temporale Tabelle mit einer Standardverlaufstabelle: Sie geben den Namen des Verlauftabellenschemas und der Tabelle an und lassen vom System eine Verlaufstabelle in diesem Schema erstellen.  
   
 -   Temporale Tabelle mit einer vorab erstellten, benutzerdefinierten Verlaufstabelle: Sie erstellen eine Verlaufstabelle, die Ihren Anforderungen am besten entspricht, und verweisen dann beim Erstellen der temporalen Tabelle auf diese Tabelle.  
   
 ## <a name="creating-a-temporal-table-with-an-anonymous-history-table"></a>Erstellen einer temporalen Tabelle mit einer anonymen Verlaufstabelle  
- Das Erstellen einer temporalen Tabelle mit einer „anonymen“ Verlaufstabelle ist eine praktische Möglichkeit für das schnelle Erstellen von Objekten insbesondere in Prototyp- und Testumgebungen.
- Es ist auch die einfachste Möglichkeit, eine temporale Tabelle zu erstellen, da keine Parameter in der **SYSTEM_VERSIONING** -Klausel erforderlich sind. Im folgenden Beispiel wird eine neue Tabelle mit aktivierter Systemversionsverwaltung erstellt, ohne den Namen der Verlaufstabelle zu definieren.  
+ Das Erstellen einer temporalen Tabelle mit einer „anonymen“ Verlaufstabelle ist eine praktische Möglichkeit für das schnelle erstellen von Objekten, insbesondere in Prototyp- und Testumgebungen. Es ist auch die einfachste Möglichkeit, eine temporale Tabelle zu erstellen, da keine Parameter in der **SYSTEM_VERSIONING** -Klausel erforderlich sind. Im folgenden Beispiel wird eine neue Tabelle mit aktivierter Systemversionsverwaltung erstellt, ohne den Namen der Verlaufstabelle zu definieren.  
   
 ```  
 CREATE TABLE Department   
@@ -65,9 +61,7 @@ WITH (SYSTEM_VERSIONING = ON)
   
 -   Der Name der anonymen Verlaufstabelle weist das folgende Format auf: *MSSQL_TemporalHistoryFor_<Objekt-ID_der_aktuellen_temporalen_Tabelle>_[Suffix]*. Das Suffix ist optional und wird nur hinzugefügt, wenn der erste Teil des Tabellennamens nicht eindeutig ist.  
   
--   Die Verlaufstabelle wird als Rowstoretabelle erstellt.
- Sofern möglich, wird die PAGE-Komprimierung angewendet; andernfalls wird die Verlaufstabelle nicht komprimiert.
- Einige Tabellenkonfigurationen, z. B. SPARSE-Spalten, lassen beispielsweise keine Komprimierung zu.  
+-   Die Verlaufstabelle wird als eine Rowstore-Tabelle erstellt. PAGE-Komprimierung wird angewendet, wenn möglich, andernfalls wird die Verlaufstabelle nicht komprimiert. Einige Tabellenkonfigurationen, z. B. SPARSE-Spalten, lassen beispielsweise keine Komprimierung zu.  
   
 -   Für die Verlaufstabelle wird ein gruppierter Standardindex mit einem automatisch generierten Namen im Format *IX_<history_table_name>* erstellt. Der gruppierte Index enthält die **PERIOD**-Spalten (Ende, Anfang).  
   
@@ -140,11 +134,9 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory))
   
 -   Wenn Sie analytische Abfragen für die historischen Daten ausführen möchten, die Aggregate oder Fensterfunktionen einsetzen, ist es zum Zwecke der Leistung bei Komprimierung und Abfrage sehr zu empfehlen, einen gruppierten Columnstore als primären Index zu erstellen.  
   
--   Wenn der primäre Anwendungsfall die Datenüberwachung ist (d.h. wenn Sie Verlaufsänderungen für eine bestimmte Zeile in der aktuellen Tabelle suchen möchten), empfiehlt sich die Erstellung einer Rowstoreverlaufstabelle mit einem gruppierten Index.
+-   Wenn der primäre Anwendungsfall die Datenüberwachung ist (d. h. wenn Sie Verlaufsänderungen für eine bestimmte Zeile in der aktuellen Tabelle suchen möchten), empfiehlt sich die Erstellung einer Rowstore-Verlaufstabelle mit einem gruppierten Index.  
   
-  
--   Die Verlaufstabelle kann keine Primärschlüssel, Fremdschlüssel, eindeutige Indizes, Tabelleneinschränkungen oder Trigger enthalten. Sie kann nicht zur Erfassung von Änderungsdaten, zur Änderungsnachverfolgung oder zur Transaktions- oder Mergereplikation konfiguriert werden.
-  
+-   Die Verlaufstabelle kann keine Primärschlüssel, Fremdschlüssel, eindeutige Indizes, Tabelleneinschränkungen oder Trigger enthalten. Sie kann nicht zur Erfassung von Änderungdaten, zur Änderungsnachverfolgung oder zur Transaktions- oder Mergereplikation konfiguriert werden.  
   
 ## <a name="alter-non-temporal-table-to-be-system-versioned-temporal-table"></a>Ändern einer nicht temporalen Tabelle in eine temporale Tabelle mit Systemversionsverwaltung  
  Wenn Sie die Systemversionsverwaltung für eine vorhandene Tabelle aktivieren müssen, z. B., wenn Sie eine benutzerdefinierte temporale Lösung zu integrierter Unterstützung migrieren möchten.   
@@ -152,15 +144,13 @@ Angenommen, Sie verfügen über eine Gruppe von Tabellen, bei denen die Versions
   
 -   Unveränderlichen Verlauf  
   
--   Neue Syntax für „Zeitreiseabfragen“
-  
+-   Neue Syntax für „Zeitreise“-Abfragen  
   
 -   Eine bessere DML-Leistung  
   
 -   Minimale Wartungskosten  
   
- Beim Konvertieren einer vorhandenen Tabelle sollten Sie die Verwendung der Klausel **HIDDEN** in Betracht ziehen, um die neuen **PERIOD** -Spalten auszublenden und so Auswirkungen auf vorhandene Anwendungen zu vermeiden, die keine neuen Spalten verarbeiten können.
-  
+ Beim Konvertieren einer vorhandenen Tabelle sollten Sie die Verwendung der Klausel **HIDDEN** in Betracht ziehen, um die neuen **PERIOD** -Spalten auszublenden und so Auswirkungen auf vorhandene Anwendungen zu vermeiden, die keine neue Spalten verarbeiten können.  
   
 ### <a name="adding-versioning-to-non-temporal-tables"></a>Hinzufügen der Versionsverwaltung zu nicht temporalen Tabellen  
  Wenn Sie das Nachverfolgen von Änderungen für eine nicht temporale Tabelle mit den Daten starten möchten, müssen Sie die **PERIOD** -Definition hinzufügen und optional einen Namen für die leere Verlaufstabelle angeben, die SQL Server für Sie erstellt:  
@@ -183,8 +173,7 @@ ALTER TABLE InsurancePolicy
   
 #### <a name="important-remarks"></a>Wichtige Hinweise  
   
--   Das Hinzufügen von Spalten, die keine NULL-Werte zulassen, mit Standardwerten zu einer vorhandenen Tabelle mit Daten ist in allen Editionen außer SQL Server Enterprise Edition ein Datengrößenvorgang (in SQL Server Enterprise Edition wäre es ein Metadatenvorgang).
- Bei einer vorhandenen großen Verlaufstabelle mit Daten in SQL Server Standard Edition kann das Hinzufügen einer Nicht-NULL-Spalte ein aufwendiger Vorgang sein.  
+-   Das Hinzufügen von Spalten, die keine NULL-Werte zulassen, mit Standardwerten, zu einer vorhandenen Tabelle mit Daten ist in allen Editionen außer SQL Server Enterprise Edition ein Datengrößenvorgang (in SQL Server Enterprise Edition wäre es ein Metadatenvorgang). Bei einer vorhandenen großen Verlaufstabelle mit Daten in SQL Server Standard Edition kann das Hinzufügen einer Nicht-NULL-Spalte ein aufwendiger Vorgang sein.  
   
 -   Einschränkungen für Spalten des Zeitraumstarts und -endes müssen sorgfältig gewählt werden:  
   
@@ -194,9 +183,7 @@ ALTER TABLE InsurancePolicy
   
 -   Durch das Hinzufügen eines Zeitraums wird für die aktuelle Tabelle eine Datenkonsistenzprüfung durchgeführt, um sicherzustellen, dass die Standardwerte für Zeitraumspalten gültig sind.  
   
--   Wenn bei der Aktivierung von **SYSTEM_VERSIONING** eine vorhandene Verlaufstabelle angegeben wird, erfolgt eine Datenkonsistenzprüfung der aktuellen Tabelle und der Verlaufstabelle.
- Diese Prüfung kann übersprungen werden, indem Sie **DATA_CONSISTENCY_CHECK = OFF** als zusätzlichen Parameter angeben.
-  
+-   Wenn bei der Aktivierung von **SYSTEM_VERSIONING**eine vorhandene Verlaufstabelle angegeben wird, erfolgt eine Datenkonsistenzprüfung der aktuellen Tabelle und der Verlaufstabelle. Diese Prüfung kann übersprungen werden, indem Sie **DATA_CONISTENCY_CHECK = OFF** als zusätzlichen Parameter angeben.  
   
 ### <a name="migrate-existing-tables-to-built-in-support"></a>Migrieren von vorhandenen Tabellen zu integrierter Unterstützung  
  Dieses Beispiel zeigt, wie eine vorhandene Lösung basierend auf Triggern zu integrierter temporaler Unterstützung migriert wird. In diesem Beispiel wird angenommen, dass in der aktuellen benutzerdefinierten Lösung die aktuellen und die historischen Daten auf zwei getrennte Benutzertabellen aufgeteilt sind (**ProjectTaskCurrent** und **ProjectTaskHistory**). Wenn Ihre vorhandene Lösung sowohl die aktuellen als auch die historischen Zeilen in einer einzigen Tabelle speichert, sollten Sie die Daten auf zwei Tabellen aufteilen, bevor Sie die in diesem Beispiel gezeigten Migrationsschritte ausführen:  
@@ -235,9 +222,7 @@ ALTER TABLE ProjectTaskCurrent
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [Ändern von Daten in einer temporalen Tabelle mit Systemversionsverwaltung](../../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md)   
  [Abfragen von Daten in einer temporalen Tabelle mit Systemversionsverwaltung](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)   
- [Ändern des Schemas einer versionsverwalteten temporalen Tabelle](../../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md) 
-  
+ [Ändern vom Schema einer versionsverwalteten temporalen Tabelle](../../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md)   
  [Beenden der Versionsverwaltung auf einer versionsverwalteten temporalen Tabelle](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
-

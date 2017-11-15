@@ -5,22 +5,20 @@ ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 04518abb-8581-47c8-a601-ee9136c3c0eb
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: c527b6a7feafc3647535dc498fa9eab213876594
-ms.openlocfilehash: f5113541de0deb1ba42519da8e0ec5fff33dfe4d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 0ad6c0a663d8204152ec457e24dad3435a5d47bd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="guidance-for-using-microsoft-sql-relational-databases"></a>Leitfaden für die Verwendung von relationalen Microsoft SQL-Datenbanken
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
@@ -35,4 +33,3 @@ ms.lasthandoff: 09/01/2017
 
   
   
-
