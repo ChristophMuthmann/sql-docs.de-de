@@ -2,9 +2,12 @@
 title: Implementieren von dynamischer Sicherheit mithilfe von Zeilenfiltern | Microsoft Docs
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: 
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: 
@@ -194,3 +197,4 @@ In dieser Aufgabe verwenden analysieren in Excel-Funktion in SSDT Sie die Wirksa
 [USERNAME-Funktion (DAX)](http://msdn.microsoft.com/en-us/22dddc4b-1648-4c89-8c93-f1151162b93f)  
 [LOOKUPVALUE-Funktion (DAX)](http://msdn.microsoft.com/en-us/73a51c4d-131c-4c33-a139-b1342d10caab)  
 [CUSTOMDATA-Funktion (DAX)](http://msdn.microsoft.com/en-us/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
+
