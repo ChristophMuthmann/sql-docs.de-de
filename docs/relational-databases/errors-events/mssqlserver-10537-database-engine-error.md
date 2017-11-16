@@ -2,26 +2,33 @@
 title: MSSQLSERVER_10537 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 10537 (Database Engine error)
+helpviewer_keywords:
+- 10537 (Database Engine error)
 ms.assetid: 728469a4-6523-4a37-925f-a950d75420fa
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: c06cdb313b6b5872d244620042d61b9a23ec0161
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7b71c60cbafb79dac3f93d9b46ef03040a3b1196
+ms.contentlocale: de-de
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver10537"></a>MSSQLSERVER_10537
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
   
@@ -45,3 +52,4 @@ Deaktivieren Sie die vorhandene Planhinweisliste, bevor Sie die angegebene Planh
 [Planhinweislisten](~/relational-databases/performance/plan-guides.md)  
 [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  
   
+

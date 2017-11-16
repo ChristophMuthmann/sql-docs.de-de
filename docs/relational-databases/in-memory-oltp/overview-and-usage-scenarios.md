@@ -2,26 +2,31 @@
 title: "Übersicht und Verwendungsszenarios | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: jodebrui
 ms.author: jodebrui
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 33804f220a760d2959f5e3feb1a629b07d1b0296
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 13128a755dcfd302224a8291a006878a68bdd09f
+ms.contentlocale: de-de
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="overview-and-usage-scenarios"></a>Übersicht und Verwendungsszenarien
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 In-Memory-OLTP ist in SQL Server und Azure SQL-Datenbank die wichtigste verfügbare Technologie für die Optimierung der Transaktionsverarbeitung, das Erfassen und Laden von Daten sowie für vorübergehende Datenszenarios. Dieses Thema bietet eine Übersicht über die Technologie und beschreibt Verwendungsszenarien für In-Memory-OLTP. Nutzen Sie diese Informationen, um festzustellen, ob In-Memory-OLTP für Ihre Anwendung geeignet ist. Das Thema endet mit einem Beispiel, das In-Memory-OLTP-Objekte zeigt. Es bietet einen Verweis auf eine leistungsbezogene Demo und Verweise auf Ressourcen, die Sie für die nächsten Schritte nutzen können.
 
@@ -233,3 +238,4 @@ Das folgende Skript veranschaulicht In-Memory-OLTP-Objekte, die Sie in der Daten
 [Optimieren der Leistung mithilfe von In-Memory-Technologie in SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)
 - [Temporale Tabellen mit Systemversionsverwaltung und speicheroptimierten Tabellen](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 - [In-Memory-OLTP – Allgemeine Arbeitsauslastungsmuster und Überlegungen zur Migration](http://msdn.microsoft.com/library/dn673538.aspx) 
+

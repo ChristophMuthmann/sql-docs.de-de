@@ -2,26 +2,31 @@
 title: Speicheroptimierte Tabellen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 12/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 14dddf81-b502-49dc-a6b6-d18b1ae32d2b
-caps.latest.revision: "66"
+caps.latest.revision: 66
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 07be4fcfccb1f962162f1cc8ce540399347e1bc1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8eae5ffaa89b83055f56bdf192ec07268a5783a8
+ms.contentlocale: de-de
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="memory-optimized-tables"></a>Speicheroptimierte Tabellen
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Mit[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In-Memory OLTP wird die Leistung von OLTP-Anwendungen durch effiziente, speicheroptimierte Datenzugriffe, systeminterne Kompilierung der Geschäftslogik sowie sperr- und latchfreie Algorithmen verbessert. Die In-Memory OLTP-Funktion enthält speicheroptimierte Tabellen und Tabellentypen sowie systeminterne Kompilierung von gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozeduren für effizienten Zugriff auf diese Tabellen.  
   
@@ -47,3 +52,4 @@ ms.lasthandoff: 11/09/2017
  [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
+

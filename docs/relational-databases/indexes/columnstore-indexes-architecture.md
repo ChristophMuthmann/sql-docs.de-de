@@ -2,26 +2,31 @@
 title: Columnstore-Indizes - Architektur | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 96b8e884-8244-425f-b856-72a8ff6895a6
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 86700a7247c7a712e03a5b34c6b68e9364d870b9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 835e3acd76972eef01b4d286cbc1f6ecf6fac605
+ms.contentlocale: de-de
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="columnstore-indexes---architecture"></a>Columnstore-Indizes-Architektur
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Erfahren Sie, wie ein Columnstore-Index erstellt wird. Die Kenntnis dieser Grundlagen erleichtert es die anderen Columnstore-Artikel zu verstehen, die erläutern, wie sie effektiv verwendet werden können.
 
@@ -134,3 +139,4 @@ Alle Spalten in einem Columnstore-Index werden in den Metadaten als eingeschloss
 
 ## <a name="next-steps"></a>Nächste Schritte
  Hinweise zum Entwerfen Ihrer Columnstore-Indizes finden Sie unter [Columnstore-Indizes - Leitfaden zum Design](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)
+

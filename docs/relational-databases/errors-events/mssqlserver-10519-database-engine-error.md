@@ -2,26 +2,33 @@
 title: MSSQLSERVER_10519 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 10519 (Database Engine error)
+helpviewer_keywords:
+- 10519 (Database Engine error)
 ms.assetid: 3be393a1-b186-41ae-afb9-a3d07ff354bb
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: 2161f49985d7e88db78f80da855894b93ca4f5a6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: db940e5befce39f3e8fa41775e66ceacca858a7d
+ms.contentlocale: de-de
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver10519"></a>MSSQLSERVER_10519
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
   
@@ -45,3 +52,4 @@ Legen Sie Hinweise fest, die auf die Anweisung angewendet werden können.
 [Planhinweislisten](~/relational-databases/performance/plan-guides.md)  
 [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  
   
+

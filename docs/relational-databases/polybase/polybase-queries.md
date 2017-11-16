@@ -1,14 +1,19 @@
 ---
 title: PolyBase-Abfragen | Microsoft-Dokumentation
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/09/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: polybase
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-polybase
+ms.suite: sql
+ms.technology:
+- database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords: PolyBase
+keywords:
+- PolyBase
 helpviewer_keywords:
 - PolyBase, import and export
 - Hadoop, import with PolyBase
@@ -16,19 +21,20 @@ helpviewer_keywords:
 - Azure blob storage, import with PolyBase
 - Azure blob storage, export with PolyBase
 ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1aec3348d0df5e52f2381206966d3e5053c4c9b2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: d6cc1b4523bdb0b48cfc22b34b205e15613fb290
+ms.contentlocale: de-de
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="polybase-queries"></a>PolyBase-Abfragen
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Nachstehend werden Beispiele für Abfragen mit der [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md) -Funktion (PolyBase-Handbuch) von SQL Server 2016 aufgeführt. Bevor Sie diese Beispiele verwenden können, müssen Sie zudem die T-SQL-Anweisungen zum Einrichten von PolyBase verstehen (siehe [PolyBase T-SQL objects](../../relational-databases/polybase/polybase-t-sql-objects.md)(PolyBase T-SQL-Objekte)).  
   
@@ -191,3 +197,4 @@ SELECT name, type, is_external FROM sys.tables WHERE name='myTableName'
  Weitere Informationen zur Problembehandlung finden Sie unter [PolyBase troubleshooting](../../relational-databases/polybase/polybase-troubleshooting.md)(PolyBase-Problembehandlung).  
   
   
+

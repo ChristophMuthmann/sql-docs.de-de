@@ -2,26 +2,33 @@
 title: MSSQLSERVER_17660 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 17660 (Database Engine error)
+helpviewer_keywords:
+- 17660 (Database Engine error)
 ms.assetid: da30e8a7-1c5a-4140-98ee-f84528ac3140
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: 1d0d5dba582aec73fe116e6f03428336cffe8784
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7295a6cbca5daffb37c6fdcb46365e3245a90e56
+ms.contentlocale: de-de
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver17660"></a>MSSQLSERVER_17660
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
   
@@ -40,3 +47,4 @@ Diagnoseausgabe
 ## <a name="user-action"></a>Benutzeraktion  
 Keine.  
   
+

@@ -1,13 +1,13 @@
 ---
 title: "Hashindizes für speicheroptimierte Tabellen | Microsoft-Dokumentation"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 06/12/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
 ms.reviewer: 
 ms.service: 
-ms.suite: 
+ms.component: in-memory-oltp
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
@@ -26,7 +26,7 @@ ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="hash-indexes-for-memory-optimized-tables"></a>Hashindizes für speicheroptimierte Tabellen
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
 Dieser Artikel beschreibt die *Hashindextypen*, die für eine speicheroptimierte Tabelle zur Verfügung stehen. Der Artikel enthält Folgendes:  

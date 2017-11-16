@@ -2,26 +2,33 @@
 title: MSSQLSERVER_33129 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 33129 (Database Engine error)
+helpviewer_keywords:
+- 33129 (Database Engine error)
 ms.assetid: 83b5f368-f1a1-4a40-9bb6-c77e2dec690f
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: 9f8aae4ba73b11689914285dbddfa1f6d7edd0b3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: d834ce29e5b21445cfa53d0ef59a5893356e74d8
+ms.contentlocale: de-de
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver33129"></a>MSSQLSERVER_33129
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
   
@@ -44,3 +51,4 @@ Der Anmeldename einer Windows-Gruppe kann nicht deaktiviert werden. Um die Zugri
 REVOKE CONNECT TO [WESTCOAST\Accounting];  
 ```  
   
+

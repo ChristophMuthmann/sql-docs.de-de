@@ -2,26 +2,33 @@
 title: MSSQLSERVER_208 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 208 (Database Engine error)
+helpviewer_keywords:
+- 208 (Database Engine error)
 ms.assetid: 4b1895f5-3197-4da1-af86-954c93507956
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: fb66e4c711c77af729e293d3f752e249114619bf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1d2936b044341cbd2ccaaf8955c351524ea83396
+ms.contentlocale: de-de
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver208"></a>MSSQLSERVER_208
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
   
@@ -76,3 +83,4 @@ Dieser Fehler kann durch eines der folgenden Probleme verursacht werden:
 [Konfigurieren der Sichtbarkeit von Metadaten](~/relational-databases/security/metadata-visibility-configuration.md)  
 [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](~/t-sql/functions/has-perms-by-name-transact-sql.md)  
   
+

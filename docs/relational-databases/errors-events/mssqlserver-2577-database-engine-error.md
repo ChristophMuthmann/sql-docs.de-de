@@ -2,26 +2,33 @@
 title: MSSQLSERVER_2577 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 2577 (Database Engine error)
+helpviewer_keywords:
+- 2577 (Database Engine error)
 ms.assetid: f53256a2-2fb0-47fd-9ed9-c45389104145
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: f21a9176fc03fb6a4f22427e0ee5755e51866925
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1244598f5e9b836eb3d3aefa1bd13011d527bfdc
+ms.contentlocale: de-de
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver2577"></a>MSSQLSERVER_2577
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
   
@@ -65,3 +72,4 @@ REPAIR verbindet dann die beiden Hälften der Kette und generiert die Sequenznum
 > [!CAUTION]  
 > Diese Reparatur führt möglicherweise zum Datenverlust.  
   
+

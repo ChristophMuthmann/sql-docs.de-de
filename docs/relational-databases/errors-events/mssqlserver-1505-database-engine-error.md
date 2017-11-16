@@ -2,26 +2,33 @@
 title: MSSQLSERVER_1505 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 1505 (Database Engine error)
+helpviewer_keywords:
+- 1505 (Database Engine error)
 ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: 95d83ed430504baabdf8431dccba5369c70379fc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 8383fd472e054f26db78ab8ec28b4a67e81e7f02
+ms.contentlocale: de-de
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver1505"></a>MSSQLSERVER_1505
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
   
@@ -68,3 +75,4 @@ Ziehen Sie die folgenden Lösungen in Betracht:
 [Erstellen eindeutiger Indizes](~/relational-databases/indexes/create-unique-indexes.md)  
 [Erstellen von Unique-Einschränkungen](~/relational-databases/tables/create-unique-constraints.md)  
   
+

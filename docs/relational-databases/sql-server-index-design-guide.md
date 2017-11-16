@@ -2,29 +2,34 @@
 title: Handbuch zum SQL Server Indexentwurf | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/06/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - index design guide
 - guide, index design
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b164852d30165935ad3b7ce038df1ae07aef3430
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b56ebb9f804f575c6f1f83cb4e9e192bd4f10e15
+ms.contentlocale: de-de
+ms.lasthandoff: 04/11/2017
+
 ---
 # <a name="sql-server-index-design-guide"></a>Handbuch zum SQL Server Indexentwurf
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Schlecht entworfene oder fehlende Indizes sind die Hauptquellen für Engpässe der Datenbankanwendung. Ein effizienter Indexentwurf ist zum Erzielen einer guten Datenbank- und Anwendungsleistung unabdinglich. Die in diesem Handbuch zum SQL Server Indexentwurf enthaltenen Informationen und Best Practices unterstützen Sie beim Entwerfen effizienter Indizes, die den Anforderungen Ihrer Anwendung entsprechen.  
     
@@ -97,7 +102,7 @@ In diesem Handbuch wird davon ausgegangen, dass der Leser grundsätzlich mit den
   
 -   Überprüfen Sie die Datenverteilung in der Spalte. Häufig dauert eine Abfrage deshalb sehr lange, weil eine indizierte Spalte mit wenigen eindeutigen Werten verwendet wird oder weil sie einen Join mit einer solchen Spalte durchführt. Hierbei handelt es sich um ein grundlegendes Problem von Daten und Abfragen, das in der Regel nicht gelöst werden kann, ohne die betreffende Situation zu identifizieren. Beispielsweise wird ein physisches Telefonbuch, das alphabetisch nach dem Nachnamen sortiert ist, das Suchen eines Teilnehmers nicht vereinfachen, wenn alle Teilnehmer des Ortsnetzes Smith oder Jones heißen. Weitere Informationen zur Datenverteilung finden Sie unter [Statistics](../relational-databases/statistics/statistics.md).  
   
--   Verwenden Sie für Spalten mit fest definierten Teilmengen, z. B. Sparsespalten, Spalten, die größtenteils NULL-Werte enthalten, Spalten mit Wertekategorien und Spalten mit verschiedenen Wertebereichen, gefilterte Indizes. Ein gut entworfener gefilterter Index kann die Abfrageleistung verbessern, die Indexwartungskosten reduzieren und den Speicheraufwand verringern.  
+-   Verwenden Sie für Spalten mit fest definierten Teilmengen, z. B. Spalten mit geringer Dichte, Spalten, die größtenteils NULL-Werte enthalten, Spalten mit Wertekategorien und Spalten mit verschiedenen Wertebereichen, gefilterte Indizes. Ein gut entworfener gefilterter Index kann die Abfrageleistung verbessern, die Indexwartungskosten reduzieren und den Speicheraufwand verringern.  
   
 -   Berücksichtigen Sie die Reihenfolge der Spalten, wenn der Index mehrere Spalten enthalten soll. Die Spalte, die in der WHERE-Klausel in einer Gleich- (=), Größer als- (>), Kleiner als- (<) oder BETWEEN-Suchbedingung verwendet oder in einen Join eingeschlossen wird, sollte an erster Stelle stehen. Die Reihenfolge zusätzlicher Spalten sollte basierend auf dem Grad ihrer Eindeutigkeit, d. h. von der eindeutigsten Spalte absteigend zu der am wenigsten eindeutigen Spalte, ausgewählt werden.  
   
@@ -211,7 +216,7 @@ ON Purchasing.PurchaseOrderDetail
 ### <a name="query-considerations"></a>Überlegungen zu Abfragen  
  Bevor Sie gruppierte Indizes erstellen, sollten Sie sich überlegen, wie der Zugriff auf die Daten erfolgt. Einen gruppierten Index können Sie für Abfragen verwenden, die die folgenden Aktionen durchführen:  
   
--   Zurückgeben eines Wertebereichs, indem z. B. folgende Operatoren verwendet werden: BETWEEN, >, >=, < und <=.  
+-   Zurückgeben eines Wertebereichs, indem z. B. folgende Operatoren verwendet werden: BETWEEN, >, >=, < und <=.  
   
      Sobald mithilfe des gruppierten Indexes die Zeile mit dem ersten Wert gefunden wird, ist sichergestellt, dass Zeilen mit nachfolgenden Indexwerten physisch benachbart sind. Wenn mit einer Abfrage z. B. Datensätze aus einem Bereich von Verkaufsauftragsnummern abgerufen werden, bietet ein gruppierter Index für die `SalesOrderNumber` -Spalte die Möglichkeit, schnell die Zeile zu finden, die die Start-Verkaufsauftragsnummer enthält, und dann alle nachfolgenden Zeilen in der Tabelle abzurufen, bis die letzte Verkaufsauftragsnummer erreicht ist.  
   
@@ -592,4 +597,5 @@ WHERE b = CONVERT(Varbinary(4), 1);
 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   
+
 

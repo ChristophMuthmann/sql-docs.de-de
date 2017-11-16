@@ -3,28 +3,33 @@ title: "Handbuch zur Architektur von Seiten und Blöcken | Microsoft-Dokumentati
 ms.custom: 
 ms.date: 10/21/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - page and extent architecture guide
 - guide, page and extent architecture
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ebc9b8e32bc6848547b8833841876b74ca25cc27
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: ec9c558fedd7cf0bb96ee4dec34a1c072418a343
+ms.openlocfilehash: 0b7dc681acb41c7d90360ae67331621a738a7cfd
+ms.contentlocale: de-de
+ms.lasthandoff: 09/20/2017
+
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Handbuch zur Architektur von Seiten und Blöcken
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Die Seite ist die grundlegende Einheit für die Datenspeicherung in SQL Server. Ein Block ist eine Auflistung von acht physisch zusammenhängenden Seiten. Blöcke tragen zu einer effizienten Verwaltung von Seiten bei. In diesem Handbuch werden die Datenstrukturen beschrieben, die zum Verwalten von Seiten und Blöcken in allen Versionen von SQL Server verwendet werden. Kenntnisse der Architektur von Seiten und Blöcken sind Voraussetzung für das Entwerfen und Entwickeln von effizienten Datenbanken.
 
@@ -164,3 +169,4 @@ Der Abstand zwischen DCM-Seiten und BCM-Seiten ist derselbe Abstand wie zwischen
 
 ![special_page_order](../relational-databases/media/special-page-order.gif)
  
+

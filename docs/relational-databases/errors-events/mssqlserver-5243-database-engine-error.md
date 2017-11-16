@@ -2,26 +2,33 @@
 title: MSSQLSERVER_5243 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 5243 (Database Engine error)
+helpviewer_keywords:
+- 5243 (Database Engine error)
 ms.assetid: e04a1934-e57d-420e-ac79-97071745824e
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: 603e742f8de7760bca24b7a063e8122250ed3a85
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: cd1c84f02b9c7c9f0e38bebcbb38948f1a541517
+ms.contentlocale: de-de
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver5243"></a>MSSQLSERVER_5243
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
   
@@ -44,3 +51,4 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wurde eine struktur
 [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
 [Datenbankdateien und Dateigruppen](~/relational-databases/databases/database-files-and-filegroups.md)  
   
+

@@ -2,13 +2,18 @@
 title: Wiederherstellung von Seiten (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-backup-restore
+ms.suite: sql
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.restorepage.general.f1
+f1_keywords:
+- sql13.swb.restorepage.general.f1
 helpviewer_keywords:
 - restoring pages [SQL Server]
 - pages [SQL Server], restoring
@@ -17,19 +22,20 @@ helpviewer_keywords:
 - pages [SQL Server], damaged
 - restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
-caps.latest.revision: "67"
+caps.latest.revision: 67
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 78feabfa9ca97c46afa45d9e452d41e46f27f09b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1cdf13c937ecdaa54c31831625dc6fc41b35be70
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
 # <a name="restore-pages-sql-server"></a>Wiederherstellung von Seiten (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   In diesem Thema wird beschrieben, wie Seiten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]wiederhergestellt werden. Das Ziel einer Seitenwiederherstellung besteht darin, eine oder mehrere beschädigte Seiten wiederherzustellen, ohne dazu die gesamte Datenbank wiederherstellen zu müssen. In der Regel wurden Seiten, die wiederhergestellt werden sollen, aufgrund eines Fehlers beim Zugriff auf die Seite als fehlerverdächtig gekennzeichnet. Fehlerverdächtige Seiten werden in der [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) -Tabelle in der **msdb** -Datenbank identifiziert.  
   
@@ -228,3 +234,4 @@ GO
  [Sichern und Wiederherstellen von SQL Server-Datenbanken](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
   
+

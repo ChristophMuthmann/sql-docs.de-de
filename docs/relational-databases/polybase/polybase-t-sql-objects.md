@@ -1,31 +1,34 @@
 ---
 title: PolyBase T-SQL-Objekte | Microsoft-Dokumentation
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-data-warehouse, pdw
+ms.service: 
+ms.component: polybase
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-polybase
+ms.suite: sql
+ms.technology:
+- database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - PolyBase, fundamentals
 - PolyBase, SQL statements
 - PolyBase, SQL objects
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ef0cb120c3df3f4bc0d06a3848f2ed0543f99d6b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
+ms.openlocfilehash: 8a6a21a3cc6317d1eee54cd83ced008e3358e139
+ms.contentlocale: de-de
+ms.lasthandoff: 08/16/2017
+
 ---
 # <a name="polybase-t-sql-objects"></a>PolyBase T-SQL-Objekte
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
-
   Um PolyBase verwenden zu können, müssen Sie externe Tabellen erstellen, um auf Ihre externen Daten zu verweisen.  
   
  [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
@@ -301,3 +304,4 @@ CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)
  [PolyBase-Leitfaden](../../relational-databases/polybase/polybase-guide.md)  
   
   
+

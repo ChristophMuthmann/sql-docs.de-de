@@ -2,26 +2,31 @@
 title: "Schnellstart 1: In-Memory-OLTP-Technologien für höhere Transact-SQL-Leistung | Microsoft Dokumentation"
 ms.custom: 
 ms.date: 09/05/2017"
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fdc7648ab70e2f636f610e26191c753130a26dc0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 481c0843888345d3a3440dd22cae2135c00863e1
+ms.contentlocale: de-de
+ms.lasthandoff: 09/06/2017
+
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Überblick des Anfangsbereichs in In-Memory OLTP
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
 Dieser Artikel ist für Entwickler konzipiert, die schnell die Grundlagen der In-Memory-OLTP-Leistungsmerkmale von Microsoft SQL Server und der Azure SQL-Datenbank lernen möchten.  
@@ -517,3 +522,4 @@ Hier finden Sie Artikel, die Code zum Veranschaulichen der Leistungsverbesserung
   
 - [Demo: Leistungsverbesserungen von In-Memory-OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) bietet eine kleine Demonstration der größeren potenziellen Leistungsgewinne.  
 - [Sample Database for In-Memory-OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) (Beispieldatenbank für In-Memory-OLTP) bietet eine genauere Erläuterung.  
+

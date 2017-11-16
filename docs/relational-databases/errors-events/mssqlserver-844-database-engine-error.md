@@ -2,26 +2,33 @@
 title: MSSQLSERVER_844 | Microsoft Dokumentation
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 844 (Database Engine error)
+helpviewer_keywords:
+- 844 (Database Engine error)
 ms.assetid: 2060c886-1226-4066-bc0c-de90a1cfb82b
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: f96ef47b421246b634570d1676e111b3ff3bc996
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 83f444c62c0b5842e2af10854c1946b4b27f029e
+ms.contentlocale: de-de
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver844"></a>MSSQLSERVER_844
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
   
@@ -50,3 +57,4 @@ Versuchen Sie Folgendes, um zu verhindern, dass der Fehler erneut auftritt:
   
 Wenn der Fehler wiederholt auftritt, wenden Sie sich an den Microsoft-Kundendienst und -Support.  
   
+

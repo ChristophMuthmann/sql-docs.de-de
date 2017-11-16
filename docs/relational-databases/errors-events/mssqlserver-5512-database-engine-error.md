@@ -2,27 +2,34 @@
 title: MSSQLSERVER_5512 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 5512 (Database Engine error)
+helpviewer_keywords:
+- 5512 (Database Engine error)
 ms.assetid: 64e01ddc-fb74-4af0-88cf-9402a6900cb0
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: 3162eb37583f61a71d0153144e528d53ea7bf81a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5db02c1179d6b44962bce2a503e520e639db006b
+ms.contentlocale: de-de
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver5512"></a>MSSQLSERVER_5512
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
   
@@ -41,3 +48,4 @@ Der Abschneidevorgang ist fehlgeschlagen.
 ## <a name="user-action"></a>Benutzeraktion  
 Die Ursache des Fehlers finden Sie im entsprechenden Windows-Statuscode.  
   
+
