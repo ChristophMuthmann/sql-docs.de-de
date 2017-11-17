@@ -3,8 +3,11 @@ title: NTILE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="ntile-transact-sql"></a>NTILE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Verteilt die Zeilen in einer sortierten Partition in eine angegebene Anzahl von Gruppen. Die Gruppen sind nummeriert. Die Nummerierung beginnt bei 1. Für jede Zeile gibt NTILE die Nummer der Gruppe zurück, der die Zeile angehört.  
   

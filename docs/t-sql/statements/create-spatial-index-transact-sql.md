@@ -3,8 +3,11 @@ title: CREATE SPATIAL INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Erstellt für eine angegebene Tabelle und Spalte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen räumlichen Index. Ein Index kann erstellt werden, bevor Daten in der Tabelle enthalten sind. Indizes können für Tabellen oder Sichten einer anderen Datenbank durch Angabe eines gekennzeichneten Datenbanknamens erstellt werden. Beim räumlichen Indizes muss die Tabelle einen gruppierten Primärschlüssel aufweisen. Informationen zu räumlichen Indizes finden Sie unter [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md).  
   

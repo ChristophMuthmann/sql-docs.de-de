@@ -3,8 +3,11 @@ title: Table (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Entspricht einem speziellen Datentyp, der verwendet werden kann, um ein Resultset für die Verarbeitung zu einem späteren Zeitpunkt zu speichern. **Tabelle** dient in erster Linie für die temporäre Speicherung einer Reihe von Zeilen, die als Resultset einer Tabellenwertfunktion zurückgegeben. Funktionen und Variablen vom Typ deklariert werden **Tabelle**. **Tabelle** Variablen können in Funktionen, gespeicherte Prozeduren und Batches verwendet werden. Deklarieren von Variablen des Typs **Tabelle**, verwenden Sie [DECLARE @local_variable ](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
   

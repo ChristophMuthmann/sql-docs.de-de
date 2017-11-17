@@ -3,8 +3,11 @@ title: Hierarchyid (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>Hierarchyid-Datentyp-Methodenverweis
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Die **Hierarchyid** -Datentyp ist eine Variable Länge-Systemdatentyp. Verwendung **Hierarchyid** Position in einer Hierarchie darstellen. Eine Spalte des Typs **hierarchyid** stellt nicht automatisch eine Baumstruktur dar. Es ist Aufgabe der Anwendung, **hierarchyid** -Werte so zu erstellen und zuzuweisen, dass die gewünschte Beziehung zwischen Zeilen anhand der Werte zu erkennen ist.
   

@@ -3,8 +3,11 @@ title: Ablaufverfolgungsflags (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - Ablaufverfolgungsflags (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Ablaufverfolgungsflags werden zur temporären Festlegung bestimmter Servereigenschaften oder zum Ausschalten eines bestimmten Verhaltens verwendet. Wenn z. B. das Ablaufverfolgungsflag 3205 beim Starten einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] festgelegt ist, wird die Hardwarekomprimierung der Treiber für Bandlaufwerke deaktiviert. Häufig werden Ablaufverfolgungsflags zur Diagnose der Systemleistung und zum Debuggen von gespeicherten Prozeduren oder komplexen Computersystemen verwendet.
   

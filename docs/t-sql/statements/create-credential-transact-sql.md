@@ -3,8 +3,11 @@ title: Erstellen von Anmeldeinformationen (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Anmeldeinformationen auf Serverebene erstellt. Anmeldeinformationen sind ein Datensatz, der die Authentifizierungsinformationen enthalten, die für die Verbindung zu einer Ressource außerhalb von SQL Server erforderlich ist. Die meisten Anmeldeinformationen schließen einen Windows-Benutzer und ein Kennwort ein. Speichern eine datenbanksicherung an einem Ort erfordert z. B. möglicherweise SQL-Server für die spezielle Anmeldeinformationen für den Zugriff auf diesen Speicherort. Weitere Informationen finden Sie unter [Anmeldeinformationen (Datenbankmodul)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
   

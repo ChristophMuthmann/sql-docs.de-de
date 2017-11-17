@@ -3,8 +3,11 @@ title: CREATE-Funktion (SQL Datawarehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-function-sql-data-warehouse"></a>CREATE-Funktion (SQL Datawarehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Erstellt eine benutzerdefinierte Funktion in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Eine benutzerdefinierte Funktion ist ein [!INCLUDE[tsql](../../includes/tsql-md.md)] Routine, die Parameter annehmen, eine Aktion, z. B. eine komplexe Berechnung, und gibt das Ergebnis dieser Aktion als Wert zurück. Der Rückgabewert muss einen skalaren (Einzelwert). Verwenden Sie diese Anweisung zum Erstellen einer wiederverwendbaren Routine, die auf folgende Weise verwendet werden kann:  
   

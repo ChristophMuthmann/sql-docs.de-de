@@ -3,8 +3,11 @@ title: datetime2 (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Definiert ein Datum, das mit einer Uhrzeit kombiniert ist und auf dem 24-Stunden-Format basiert. **datetime2** berücksichtigt werden können, als Erweiterung des vorhandenen **"DateTime"** Typ, der einen größeren Datumsbereich, eine größere standardgenauigkeit bei Sekundenbruchteilen und eine optionale vom Benutzer angegebene Genauigkeit besitzt.
   

@@ -3,8 +3,11 @@ title: UPDATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -50,7 +53,7 @@ ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Ändert vorhandene Daten in einer Tabelle oder Sicht in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Beispiele finden Sie unter [Beispiele](#UpdateExamples).  
   

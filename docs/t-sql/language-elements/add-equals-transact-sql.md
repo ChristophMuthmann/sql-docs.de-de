@@ -3,8 +3,11 @@ title: "+= (Hinzufügen von EQUALS) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="-add-equals-transact-sql"></a>+= (Add EQUALS) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Addiert zwei Zahlen und legt einen Wert auf das Ergebnis des Vorgangs fest. Angenommen, eine Variable @x gleich 35 ist, klicken Sie dann @x += 2 nimmt den ursprünglichen Wert des @x, Hinzufügen von 2 und legt @x auf diesen neuen Wert (37).  
   

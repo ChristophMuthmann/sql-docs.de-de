@@ -3,8 +3,11 @@ title: Erstellen eines EXTERNEN DATEIFORMATS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-external-file-format-transact-sql"></a>Erstellen eines EXTERNEN DATEIFORMATS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Erstellt eine PolyBase externe-Dateiformatdefinition für externe Daten in Hadoop oder Azure Blob-Speicher mit Azure Data Lake-Speicher gespeichert. Erstellen ein externes Dateiformat ist eine Voraussetzung zum Erstellen einer externen PolyBase-Tabelle. Durch das Erstellen eines externen Dateiformats, geben Sie das tatsächliche Layout der Daten von einer externen Tabelle verwiesen wird.  
   

@@ -2,9 +2,13 @@
 title: INSERT (SQL-Diagramm) | Microsoft Docs
 description: "Fügen Sie die Syntax für das Diagramm der SQL-Knoten oder Edge-Tabellen."
 ms.date: 05/12/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,9 +31,8 @@ ms.contentlocale: de-de
 ms.lasthandoff: 09/01/2017
 
 ---
-
 # <a name="insert-sql-graph"></a>INSERT (SQL-Diagramm)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   Fügt eine oder mehrere Zeilen auf einer `node` oder `edge` in Tabelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 

@@ -3,8 +3,11 @@ title: Tabellenwertkonstruktor (Transact-SQL) Tabelle | Microsoft Docs
 ms.custom: 
 ms.date: 08/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="table-value-constructor-transact-sql"></a>Tabellenwertkonstruktor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt eine Gruppe mit Zeilenwertausdrücken an, die in einer Tabelle erstellt werden sollen. Der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Tabellenwertkonstruktor ermöglicht das Angeben mehrerer Datenzeilen in nur einer DML-Anweisung. Der tabellenwertkonstruktor kann angegeben werden, in der VALUES-Klausel der INSERT-Anweisung, in der USING \<Quelltabelle >-Klausel der MERGE-Anweisung und in der Definition einer abgeleiteten Tabelle in der FROM-Klausel.  
   

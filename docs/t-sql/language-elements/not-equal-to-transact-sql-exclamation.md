@@ -3,8 +3,11 @@ title: '! = (Ungleich) (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="not-equal-to-transact-sql---exclamation"></a>Nicht gleich (Transact SQL) - Ausrufezeichen
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Testet, ob zwei Ausdrücke ungleich sind (ein Vergleichsoperator). Wenn einer der Operanden oder beide Operanden NULL sind, wird NULL zurückgegeben. Funktioniert genauso wie die [<> (nicht gleich)](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md) Vergleichsoperator.  
   

@@ -3,8 +3,11 @@ title: "Prädikate | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="predicates"></a>Prädikate
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Ein Ausdruck, der zu TRUE, FALSE oder UNKNOWN aufgelöst wird. Prädikate werden verwendet, in der Suchbedingung der [, in denen](../../t-sql/queries/where-transact-sql.md) Klauseln und [HAVING](../../t-sql/queries/select-having-transact-sql.md) -Klauseln sowie in den Joinbedingungen von [FROM](../../t-sql/queries/from-transact-sql.md) Klauseln und andere Konstrukte, in denen ein boolescher Wert ist, Erforderlich.  
   

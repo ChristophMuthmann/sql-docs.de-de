@@ -3,8 +3,11 @@ title: Erstellen der Datenbank (Parallel Datawarehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-database-parallel-data-warehouse"></a>Erstellen der Datenbank (Parallel Datawarehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Erstellt eine neue Datenbank auf einem [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Appliance. Verwenden Sie diese Anweisung, um alle einer Anwendungsdatenbank zugeordneten Dateien erstellen und die maximale Größe und die automatische Vergrößerung-Optionen für die Datenbanktabellen und das Transaktionsprotokoll festzulegen.  
   

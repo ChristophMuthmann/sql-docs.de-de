@@ -1,12 +1,14 @@
 ---
 title: ALTER DATABASE SET-Optionen (Transact-SQL) | Microsoft Docs
 description: "Informationen Sie zum Festlegen von Datenbankoptionen wie z.B. die automatische Optimierung, Verschlüsselung, Abfragespeicher in einer SQL Server und Azure SQL-Datenbank"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -40,7 +42,7 @@ ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET-Optionen (Transact-SQL) 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Dieses Thema enthält die ALTER DATABASE-Syntax für das Festlegen von Datenbankoptionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere ALTER DATABASE-Syntax finden Sie unter den folgenden Themen.  
   

@@ -3,8 +3,11 @@ title: Transaktionen (SQL Datawarehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="transactions-sql-data-warehouse"></a>Transaktionen (SQL Datawarehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Eine Transaktion ist eine Gruppe von einer oder mehreren Datenbank-Anweisungen, die entweder vollständig zugesichert oder vollständig ein Rollback. Jede Transaktion wird atomic, konsistent, isoliert und dauerhaft (ACID-Eigenschaften). Wenn die Transaktion erfolgreich ausgeführt wird, sind alle Anweisungen darin ein Commit ausgeführt wurde. Beim Fehlschlagen die Transaktion ist, die mindestens eine der Anweisungen in der Gruppe ein Fehler auftritt, und klicken Sie dann die gesamte Gruppe, ein Rollback ausgeführt wird.  
   

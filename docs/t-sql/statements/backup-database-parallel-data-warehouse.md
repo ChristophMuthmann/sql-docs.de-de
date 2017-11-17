@@ -3,8 +3,11 @@ title: SICHERUNGSDATENBANK (Parallel Datawarehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="backup-database-parallel-data-warehouse"></a>SICHERUNGSDATENBANK (Parallel Datawarehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Erstellt eine Sicherungskopie der eine [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Datenbank und speichert die Sicherung deaktiviert das Gerät in einem Benutzer angegebenen Netzwerkadresse. Verwenden Sie diese Anweisung mit [Datenbank wiederherstellen &#40; Parallel Datawarehouse &#41; ](../../t-sql/statements/restore-database-parallel-data-warehouse.md) Wiederherstellung im Notfall oder eine Datenbank auf einem Gerät in einen anderen kopieren.  
   

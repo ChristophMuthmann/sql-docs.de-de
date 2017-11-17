@@ -3,8 +3,11 @@ title: ROLLBACK TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/14/2017
 
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   Führt für eine explizite oder implizite Transaktion ein Rollback zum Anfang der Transaktion oder auf einen Sicherungspunkt innerhalb der Transaktion aus. Mit ROLLBACK TRANSACTION können Sie alle Datenänderungen löschen, die seit dem letzten Start der Transaktion oder bis zu einem Sicherungspunkt vorgenommen wurden. Die Anweisung gibt auch Ressourcen frei, die von der Transaktion beansprucht werden.  
   

@@ -1,11 +1,13 @@
 ---
 title: Erstellen von COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/18/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -42,7 +44,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Erstellt einen Verschlüsselungsschlüssel für die Spalte mit den anfänglichen Satz von Werten, mit der angegebenen spaltenhauptschlüssel verschlüsselt. Dies ist ein Metadatenvorgang. Ein CEK kann bis zu zwei Werte, die für eine Rotation der spaltenhauptschlüssel ermöglicht haben. Erstellen eines CEK ist erforderlich, damit jede Spalte in der Datenbank verschlüsselt werden kann, mithilfe der [Always Encrypted &#40; Datenbankmodul &#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) Funktion. Der CEK kann auch erstellt werden, mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vor dem Erstellen eines CEK, müssen Sie mithilfe ein CMK definieren [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) Anweisung.  
   

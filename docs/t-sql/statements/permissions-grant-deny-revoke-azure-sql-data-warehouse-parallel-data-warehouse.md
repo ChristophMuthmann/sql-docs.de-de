@@ -3,8 +3,11 @@ title: "GRANT DENY REVOKE Perms – Azure SQL-Daten und Parallel Datawarehouses 
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Berechtigungen: GRANT, DENY oder REVOKE (Azure SQL Datawarehouse, Parallel Datawarehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Verwendung [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **GRANT** und **DENY** Anweisungen zu erteilen oder Verweigern einer Berechtigung (z. B. **UPDATE**) für ein sicherungsfähiges Element (z. B. eine Datenbank, Tabelle, Sicht usw..) können einem Sicherheitsprinzipal (eine Anmeldung, ein Datenbankbenutzer oder eine Datenbankrolle). Verwendung **widerrufen** zum Entfernen der erteilen oder Verweigern einer Berechtigung.  
   

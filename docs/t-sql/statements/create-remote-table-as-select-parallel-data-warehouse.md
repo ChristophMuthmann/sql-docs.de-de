@@ -3,9 +3,11 @@ title: Erstellen Sie REMOTE Tabelle AS SELECT (Parallel Datawarehouse) | Microso
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: 
+ms.prod_service: pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|statements
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>Erstellen Sie REMOTE Tabelle AS SELECT (Parallel Datawarehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Wählt Daten aus einer [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Datenbank und kopiert die Daten in eine neue Tabelle in einem SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank auf einem Remoteserver. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]verwendet das Gerät mit, alle Vorteile der MPP abfrageverarbeitung, um die Daten für die Remotekopie auszuwählen. Verwenden Sie dies für Szenarien, die erfordern [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Funktionalität.  
   

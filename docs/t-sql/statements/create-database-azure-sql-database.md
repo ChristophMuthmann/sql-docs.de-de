@@ -1,13 +1,13 @@
 ---
 title: "CREATE DATABASE (Azure SQL­Datenbank) | Microsoft Docs"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 08/28/2017
 ms.prod: 
+ms.prod_service: sql-database
 ms.reviewer: 
 ms.service: sql-database
-ms.suite: 
+ms.component: t-sql|statements
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -42,7 +42,7 @@ ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE (Azure SQL-Datenbank)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Erstellt eine neue Datenbank.  
   

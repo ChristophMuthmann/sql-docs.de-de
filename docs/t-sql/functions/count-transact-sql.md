@@ -3,8 +3,11 @@ title: COUNT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Gibt die Anzahl von Elementen in einer Gruppe zurück. COUNT funktioniert wie die [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md) Funktion. Der einzige Unterschied zwischen den beiden Funktionen sind die Rückgabewerte. COUNT gibt immer zurück ein **Int** -Datentypwert. COUNT_BIG gibt immer eine **"bigint"** -Datentypwert.
   

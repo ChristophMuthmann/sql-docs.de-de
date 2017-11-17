@@ -3,8 +3,11 @@ title: RESTORE DATABASE (Parallel Datawarehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="restore-database-parallel-data-warehouse"></a>Wiederherstellen der Datenbank (Parallel Datawarehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Wiederhergestellt eine [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Benutzerdatenbank von einer datenbanksicherung auf einer [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Appliance. Wiederherstellung der Datenbank aus einer Sicherung, die zuvor von erstellt die [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [BACKUP DATABASE &#40; Parallel Datawarehouse &#41; ](../../t-sql/statements/backup-database-parallel-data-warehouse.md) Befehl. Das Sichern und Wiederherstellen in einen Notfallwiederherstellungsplan erstellen oder Datenbanken aus einer Anwendung auf einen anderen verschoben.  
   

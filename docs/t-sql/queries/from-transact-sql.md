@@ -1,11 +1,13 @@
 ---
 title: AUS (Transact-SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -47,7 +49,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Legt die Tabellen, Sichten, abgeleiteten Tabellen und verknüpften Tabellen in DELETE-, SELECT- und UPDATE-Anweisungen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fest. Die FROM-Klausel wird in der SELECT-Anweisung immer benötigt, es sei denn, die Auswahlliste enthält nur Konstanten, Variablen und arithmetische Ausdrücke (keine Spaltennamen).  
   

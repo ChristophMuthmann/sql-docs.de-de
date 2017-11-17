@@ -3,8 +3,11 @@ title: Erstellen Sie TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Erstellt einen Aliasdatentyp oder einen benutzerdefinierten Typ in der aktuellen Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Die Implementierung eines Aliasdatentyps basiert auf einem systemeigenen Typ von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ein benutzerdefinierten Typ wird durch eine Klasse einer Assembly im implementiert die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common Language Runtime (CLR). Um einen benutzerdefinierten Typ an seine Implementierung zu binden, muss die CLR-Assembly, die die Implementierung des Typs enthält zunächst in registriert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
   

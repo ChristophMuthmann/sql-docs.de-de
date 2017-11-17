@@ -3,8 +3,11 @@ title: RESTORE VERIFYONLY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>RESTORE-Anweisungen - VERIFYONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Überprüft die Sicherung, stellt sie jedoch nicht wieder her, und überprüft die Vollständigkeit des Sicherungssatzes sowie die Lesbarkeit der gesamten Sicherung. Allerdings versucht RESTORE VERIFYONLY nicht, die Struktur der auf den Sicherungsvolumes befindlichen Daten zu überprüfen. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], RESTORE VERIFYONLY wurde verbessert, um zusätzliche Prüfungen der Daten erhöhen die Wahrscheinlichkeit von Fehlern. Das Ziel liegt darin, einen tatsächlichen Wiederherstellungsvorgang so authentisch wie möglich zu imitieren. Weitere Informationen finden Sie unter den Hinweisen.  
   

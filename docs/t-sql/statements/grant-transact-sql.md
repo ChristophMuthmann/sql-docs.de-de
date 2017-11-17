@@ -3,8 +3,11 @@ title: GRANT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Erteilt einem Prinzipal Berechtigungen für ein sicherungsfähiges Element.  Das allgemeine Konzept entspricht GRANT \<bestimmte Berechtigungen > ON \<ein Objekt > TO \<einige Benutzer, Anmeldenamen oder Gruppe >. Eine allgemeine Beschreibung der Berechtigungen finden Sie unter [Berechtigungen &#40; Datenbankmodul &#41;](../../relational-databases/security/permissions-database-engine.md).  
   

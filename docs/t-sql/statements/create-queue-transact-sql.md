@@ -3,8 +3,11 @@ title: Erstellen der Warteschlange (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -38,7 +41,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Erstellt eine neue Warteschlange in einer Datenbank. Fügt einer Warteschlange gespeicherte Nachrichten hinzu. Wenn eine Nachricht für einen Dienst eintrifft, platziert [!INCLUDE[ssSB](../../includes/sssb-md.md)] die Nachricht in der dem Dienst zugeordneten Warteschlange.  
   

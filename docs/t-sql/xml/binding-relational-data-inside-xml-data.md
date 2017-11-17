@@ -3,8 +3,11 @@ title: Einbinden relationaler Daten in XML-Daten | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>Einbinden relationaler Daten in XML-Daten
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Sie können angeben, [Xml-Datentypmethoden](../../t-sql/xml/xml-data-type-methods.md) gegen eine **Xml** -Datentyp, Variable oder Spalte. Z. B. die [Query &#40; &#41; -Methode &#40; Xml-Datentyp &#41; ](../../t-sql/xml/query-method-xml-data-type.md) führt die angegebene XQuery-Abfrage für eine XML-Instanz. Beim Erstellen von XML-Code auf diese Art sollten Sie einen Wert aus einer Nicht-XML-Typspalte oder eine Transact-SQL-Variable einbringen. Dieser Prozess wird als Einbinden relationaler Daten in XML bezeichnet.  
   

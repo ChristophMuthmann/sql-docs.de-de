@@ -3,8 +3,11 @@ title: Zeichenfolgenoperatoren (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="string-operators-transact-sql"></a>Zeichenfolgenoperatoren (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt die folgenden Zeichenfolgenoperatoren bereit: Operatoren für das Verketten von Zeichenfolgen können zwei oder mehr Zeichenfolgen, binäre Zeichenfolgen oder Spalten oder eine Kombination aus Zeichenfolgen und Spaltennamen zu einem Ausdruck verketten. Operatoren mit Platzhalterzeichenfolgen können einem oder mehreren Zeichen in einem Zeichenfolgenvergleich, z. B. LIKE oder PATINDEX, entsprechen.  
   

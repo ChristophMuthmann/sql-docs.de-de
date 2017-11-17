@@ -3,8 +3,11 @@ title: Was sind die Funktionen der Microsoft SQL-Datenbank? | Microsoft-Dokument
 ms.custom: 
 ms.date: 06/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="what-are-the-sql-database-functions"></a>Was sind die Funktionen der SQL-Datenbank?
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
 Informationen Sie zu den Kategorien von integrierten Funktionen, die mit SQL-Datenbanken verwendet werden können. Sie können die integrierten Funktionen verwenden oder eigene benutzerdefinierte Funktionen erstellen.
   

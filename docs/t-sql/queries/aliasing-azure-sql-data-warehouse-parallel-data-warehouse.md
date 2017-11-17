@@ -3,8 +3,11 @@ title: Aliasing (Azure SQL Datawarehouse, Parallel Datawarehouse) | Microsoft Do
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>Aliasing (Azure SQL Datawarehouse, Parallel Datawarehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Aliasing ermöglicht es, den temporären Ersatz einer kurz und leicht zu merkenden Zeichenfolge anstelle eines Tabellen- oder Spaltennamens Verzeichnisnamens [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] Abfragen. Tabellenaliase werden häufig in JOIN-Abfragen verwendet werden, da die JOIN-Syntax vollqualifizierten Objektnamen erforderlich ist, wenn Sie auf Spalten verweisen.  
   

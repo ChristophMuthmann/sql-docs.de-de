@@ -3,8 +3,11 @@ title: SET REMOTE_PROC_TRANSACTIONS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="set-remoteproctransactions-transact-sql"></a>SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt an, dass durch das Ausführen einer remote gespeicherten Prozedur, sofern eine lokale Transaktion aktiv ist, eine verteilte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Transaktion gestartet wird, die von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Manager (MS DTC) verwaltet wird.  
   

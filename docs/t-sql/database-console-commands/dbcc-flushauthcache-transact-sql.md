@@ -1,12 +1,13 @@
 ---
 title: DBCC FLUSHAUTHCACHE (Transact-SQL) | Microsoft Docs
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-flushauthcache-transact-sql"></a>DBCC FLUSHAUTHCACHE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 Leert den Datenbankcache der Authentifizierung mit den Informationen zu Anmeldungen und Firewallregeln für den aktuellen Benutzerdatenbank [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Diese Anweisung gilt nicht für der logischen master-Datenbank, weil der master-Datenbank den physischen Speicher für die Informationen zu Anmeldungen und Firewall-Regeln enthält. Der Benutzer die Anweisung ausführt und andere derzeit verbundene Benutzer bleiben verbunden. (DBCC FLUSHAUTHCACHE wird derzeit nicht unterstützt für [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].)
  
