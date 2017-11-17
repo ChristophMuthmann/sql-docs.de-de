@@ -2,27 +2,33 @@
 title: "SQL Server-Connector – Wartung &amp; Problembehandlung | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 04/05/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: SQL Server Connector, appendix
+helpviewer_keywords:
+- SQL Server Connector, appendix
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: 076c31d89d907dbba144fec6be43267976cca733
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: 0218298a95d1e7df242b3ca7cbae657effead719
+ms.contentlocale: de-de
+ms.lasthandoff: 08/03/2017
+
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server-Connector – Wartung &amp; Problembehandlung
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Dieses Thema enthält ergänzende Informationen zum [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector. Weitere Informationen zum [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Connector finden Sie unter [Erweiterbare Schlüsselverwaltung mit Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md), [Installationsschritte für die Erweiterbare Schlüsselverwaltung mit Azure Key Vault.](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md) und [Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).  
   
@@ -301,3 +307,4 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
  [Installationsschritte für die Erweiterbare Schlüsselverwaltung mit Azure Key Vault.](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
   
   
+

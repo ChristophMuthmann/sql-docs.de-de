@@ -2,9 +2,12 @@
 title: Erstellen einer gespeicherten Prozedur | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-stored-Procs
 ms.tgt_pltfrm: 
@@ -27,7 +30,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-a-stored-procedure"></a>Erstellen einer gespeicherten Prozedur
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
  > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [Erstellen einer gespeicherten Prozedur](https://msdn.microsoft.com/en-US/library/ms345415(SQL.120).aspx).
 
   In diesem Thema wird das Erstellen einer gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung CREATE PROCEDURE beschrieben.  

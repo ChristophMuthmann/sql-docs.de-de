@@ -2,10 +2,14 @@
 title: Heterogene Datenbankreplikation | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/28/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: replication
+ms.suite: sql
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - replication [SQL Server], heterogeneous database replication
 - heterogeneous database replication
 ms.assetid: 3fd983ad-e206-45db-9054-417c9b5bb815
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1ce049fe1f818132c5f7c27383576bc6000d0aef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: 5fae2c0c64f4aa703661792641dd99009562ba1a
+ms.contentlocale: de-de
+ms.lasthandoff: 08/29/2017
+
 ---
 # <a name="heterogeneous-database-replication"></a>Heterogene Datenbankreplikation  
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt die folgenden heterogenen Szenarien für die Transaktions- und Momentaufnahmereplikation:  
   
@@ -64,3 +69,4 @@ ms.lasthandoff: 11/09/2017
  Weitere Informationen finden Sie unter [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
   
+

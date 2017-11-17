@@ -2,26 +2,31 @@
 title: "Konfigurieren der Spaltenverschlüsselung mithilfe von PowerShell | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: powershell
+ms.suite: sql
+ms.technology:
+- powershell
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ac535e20c2782c81b34e33e2f1ba1afe325e821
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
+ms.openlocfilehash: d4a5651f3ef4f8d848253711ed93721f387c016a
+ms.contentlocale: de-de
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="configure-column-encryption-using-powershell"></a>Konfigurieren der Spaltenverschlüsselung mithilfe von PowerShell
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Dieser Artikel enthält die Schritte zum Festlegen der Always Encrypted-Zielkonfiguration für Datenbankspalten mithilfe des Cmdlet [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) (im PowerShell-Modul *SqlServer* ). Das Cmdlet **Set-SqlColumnEncryption** ändert sowohl das Schema der Zieldatenbank sowie die in den ausgewählten Spalten gespeicherten Daten. Die in einer Spalte gespeicherten Daten können verschlüsselt, erneut verschlüsselt oder entschlüsselt werden, je nachdem, welche Zielverschlüsselungseinstellungen für die Spalten angegeben wurden und wie die aktuelle Verschlüsselungskonfiguration aussieht.
 Weitere Informationen zur Unterstützung von Always Encrytped im PowerShell-Modul „SqlServer“ finden Sie unter [Konfigurieren von Always Encrypted mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
@@ -154,6 +159,7 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -L
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 - [Konfigurieren von Always Encrypted mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
 - [Always Encrypted (Datenbankmodul)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+
 
 
 

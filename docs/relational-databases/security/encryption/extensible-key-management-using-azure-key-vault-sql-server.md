@@ -1,11 +1,15 @@
 ---
 title: "Erweiterbare Schlüsselverwaltung mit Azure Key Vault (SQL Server) | Microsoft-Dokumentation"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/22/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +20,20 @@ helpviewer_keywords:
 - Key Management with key vault
 - SQL Server Connector, about
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
-caps.latest.revision: "66"
+caps.latest.revision: 66
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.openlocfilehash: 972ea846249400c3219c27f446a61dee824caca6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 24d344d6dc7f42ed57c53442f7fada245d25c65a
+ms.contentlocale: de-de
+ms.lasthandoff: 08/28/2017
+
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Erweiterbare Schlüsselverwaltung mit Azure Key Vault (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Connector für [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault ermöglicht der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verschlüsselung die Verwendung des Azure Key Vault-Diensts als Anbieter für die [Erweiterbare Schlüsselverwaltung &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md) zum Schutz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verschlüsselungsschlüsseln.  
   
@@ -61,3 +66,4 @@ ms.lasthandoff: 11/09/2017
  [SQL Server-Connector Wartung & Problembehandlung](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   
   
+

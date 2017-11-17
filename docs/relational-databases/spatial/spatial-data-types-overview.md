@@ -3,9 +3,13 @@ title: "Übersicht über räumliche Datentypen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 11/01/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: spatial
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-spatial
+ms.suite: sql
+ms.technology:
+- dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +18,20 @@ helpviewer_keywords:
 - planar spatial data [SQL Server], geometry data type
 - spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
-caps.latest.revision: "51"
+caps.latest.revision: 51
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 36d70ddc89e96b1b07804d429e08722370092806
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2163fd7b37b211d9cf272fda03781d831ad43da0
+ms.contentlocale: de-de
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="spatial-data-types-overview"></a>Übersicht über räumliche Datentypen
-
-  [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   
  -  Es gibt zwei Typen von räumlichen Daten. Der **geometry** -Datentyp unterstützt planare bzw. euklidische Daten (flache Erdabbildung). Der **geometry** -Datentyp entspricht der Version 1.1.0. der Simple Features for SQL-Spezifikation des Open Geospatial Consortium (OGC) und ist auch mit SQL MM (ISO-Standard) kompatibel.  
  -  
@@ -220,3 +224,4 @@ ms.lasthandoff: 11/09/2017
  -- [STNumCurves &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)   
  -- [STGeomFromText &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)   
  -- [STGeomFromText &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)  
+

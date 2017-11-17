@@ -2,9 +2,12 @@
 title: "Verschlüsseln einer Datenspalte | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/22/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,7 +31,7 @@ ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="encrypt-a-column-of-data"></a>Verschlüsseln einer Datenspalte
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   In diesem Thema wird beschrieben, wie Sie eine Datenspalte mithilfe der symmetrischen Verschlüsselung in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../../includes/tsql-md.md)]verschlüsseln können. Dies wird manchmal als Verschlüsselung auf Spaltenebene oder Verschlüsselung auf Zellenebene bezeichnet.  
   

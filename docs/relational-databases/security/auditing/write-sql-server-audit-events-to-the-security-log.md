@@ -2,10 +2,14 @@
 title: "Schreiben von SQL-Serverüberwachungsereignissen in das Sicherheitsprotokoll | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 09/21/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - audits [SQL Server], writing to Security Log
 - security logs [SQL Server]
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.openlocfilehash: 7c0cedbe24800db112822e05046a60364a679903
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
----
+ms.translationtype: HT
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 990b47afdf34cc16f15a658f5a69f840d44a27fe
+ms.contentlocale: de-de
+ms.lasthandoff: 09/21/2017
+
+---  
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Schreiben von SQL-Serverüberwachungsereignissen in das Sicherheitsprotokoll  
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In einer Umgebung mit hoher Sicherheit ist das Windows-Sicherheitsprotokoll der geeignete Speicherort für Ereignisse, die Objektzugriffe aufzeichnen. Andere Überwachungsspeicherorte werden unterstützt, können aber leichter manipuliert werden.  
   
@@ -110,3 +115,4 @@ Die Windows-Überwachungsrichtlinie kann sich auf die [!INCLUDE[ssNoVersion](../
  [SQL Server Audit &#40;Datenbankmodul&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   
+
