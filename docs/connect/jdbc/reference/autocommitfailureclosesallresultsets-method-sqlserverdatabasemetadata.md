@@ -3,8 +3,11 @@ title: "Schließt JDBC-Treiber geöffneten Resultsets | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -22,28 +25,28 @@ ms.contentlocale: de-de
 ms.lasthandoff: 09/09/2017
 
 ---
-# autoCommitFailureClosesAllResultSets-Methode (SQLServerDatabaseMetaData)
+# <a name="autocommitfailureclosesallresultsets-method-sqlserverdatabasemetadata"></a>autoCommitFailureClosesAllResultSets-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Gibt an, ob vom JDBC-Treiber alle geöffneten Resultsets (einschließlich Resultsets mit Haltbarkeit) geschlossen werden, wenn ein automatischer Commit aktiviert und eine Ausnahme ausgelöst wird.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 public boolean autoCommitFailureClosesAllResultSets()  
 ```  
   
-## Rückgabewert  
+## <a name="return-value"></a>Rückgabewert  
  **"true"** , wenn alle offenen führen Mengen, einschließlich der holdability geschlossen werden, wenn ein automatischer Commit aktiviert ist und eine Ausnahme ausgelöst. Andernfalls lautet der Wert **false**.  
   
-## Ausnahmen  
+## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Diese AutoCommitFailureClosesAllResultSets-Methode wird von der AutoCommitFailureClosesAllResultSets-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

@@ -3,8 +3,11 @@ title: SetAutoCommit-Methode (SQLServerConnection) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -27,27 +30,27 @@ ms.contentlocale: de-de
 ms.lasthandoff: 09/09/2017
 
 ---
-# SetAutoCommit-Methode (SQLServerConnection)
+# <a name="setautocommit-method-sqlserverconnection"></a>SetAutoCommit-Methode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Legt den Autocommit-Modus für diese [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) Objekt, das dem angegebenen Status.  
   
-## Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
 public void setAutoCommit(boolean value)  
 ```  
   
-#### Parameter  
+#### <a name="parameters"></a>Parameter  
  *value*  
   
  **"true"** Autocommit-Modus für die Verbindung aktivieren **"false"** zu deaktivieren.  
   
-## Ausnahmen  
+## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## Hinweise  
+## <a name="remarks"></a>Hinweise  
  Diese SetAutoCommit-Methode wird von der SetAutoCommit-Methode in der java.sql.Connection-Schnittstelle angegeben.  
   
  Ist für eine Verbindung der Modus für automatische Commits aktiviert, werden alle SQL-Anweisungen als einzelne Transaktionen ausgeführt, und die Commits der SQL-Anweisungen werden als einzelne Transaktionen ausgeführt. Andernfalls die SQL-Anweisungen in Transaktionen, die durch einen Aufruf von entweder beendet werden gruppiert die [Commit](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md) Methode oder die [Rollback](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md) Methode. Der Modus für automatische Commits ist für neue Verbindungen standardmäßig aktiviert.  
@@ -59,7 +62,7 @@ public void setAutoCommit(boolean value)
 > [!NOTE]  
 >  Wenn diese Methode während einer Transaktion aufgerufen wird, wird ein Commit der Transaktion ausgeführt.  
   
-## Siehe auch  
+## <a name="see-also"></a>Siehe auch  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

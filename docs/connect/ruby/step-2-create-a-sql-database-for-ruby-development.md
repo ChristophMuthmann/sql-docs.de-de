@@ -3,8 +3,11 @@ title: "Schritt 2: Erstellen eine SQL-Datenbank für die Entwicklung Ruby | Micr
 ms.custom: 
 ms.date: 08/08/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: ruby
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 

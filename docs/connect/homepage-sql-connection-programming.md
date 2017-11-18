@@ -4,6 +4,11 @@ description: "Hubseite mit Anmerkungen Links zu Downloads und der Dokumentation 
 author: MightyPen
 ms.date: 09/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: connect
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - drivers
 ms.topic: article

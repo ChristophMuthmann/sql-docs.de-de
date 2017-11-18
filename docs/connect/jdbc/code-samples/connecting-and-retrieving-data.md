@@ -3,8 +3,11 @@ title: Herstellen einer Verbindung und zum Abrufen von Daten | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -44,3 +47,4 @@ ms.lasthandoff: 09/09/2017
  [Beispiele für JDBC-Treiberanwendungen](../../../connect/jdbc/sample-jdbc-driver-applications.md)  
   
   
+
