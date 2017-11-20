@@ -2,9 +2,12 @@
 title: SQL Server Integration Services-Sprachreferenz | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="integration-services-language-reference"></a>Integration Services-Sprachreferenz
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   In diesem Abschnitt wird beschrieben, die [!INCLUDE[tsql](../includes/tsql-md.md)] -API zum Verwalten von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Projekte, die mit einer Instanz von bereitgestellt wurden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   

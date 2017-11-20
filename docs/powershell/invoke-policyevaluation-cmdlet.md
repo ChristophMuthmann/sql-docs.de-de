@@ -2,10 +2,14 @@
 title: Invoke-PolicyEvaluation-Cmdlet | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: powershell
+ms.service: 
+ms.component: powershell
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +19,17 @@ helpviewer_keywords:
 - Cmdlets [SQL Server], Invoke-PolicyEvaluation
 - PowerShell [SQL Server], Invoke-PolicyEvaluation
 ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 296534b89550efde62d0c2e1dea02c06d4896f8c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f5adc3571b07e3613514525f286241add73af1a8
+ms.contentlocale: de-de
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>Invoke-PolicyEvaluation-Cmdlet
   **Invoke_PolicyEvaluation** ist ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Cmdlet, das meldet, ob ein Zielsatz von SQL Server-Objekten den Bedingungen entspricht, die in ein oder mehreren richtlinienbasierten Verwaltungsrichtlinien angegeben sind.  
@@ -87,9 +92,9 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
 ## <a name="specifying-the-target-set"></a>Angeben des Zielsatzes  
  Mithilfe von drei Parametern können Sie den Satz der Zielobjekte angeben:  
   
--   **-TargetServerName** gibt die Instanz von SQL Server an, die die Zielobjekte enthält. Sie können die Informationen in einer Zeichenfolge angeben, die das für die ConnectionString-Eigenschaft der <xref:System.Data.SqlClient.SqlConnection> -Klasse definierte Format verwendet. Sie können die <xref:System.Data.SqlClient.SqlConnectionStringBuilder> -Klasse verwenden, um eine ordnungsgemäß formatierte Verbindungszeichenfolge zu erstellen. Sie können auch ein <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> -Objekt erstellen und an **-TargetServer**genutzt. Wenn Sie eine Zeichenfolge angeben, die nur den Namen des Servers enthält, verwendet **Invoke-PolicyEvaluation** die Windows-Authentifizierung, um eine Verbindung mit dem Server herzustellen.  
+-   **-TargetServerName** gibt die Instanz von SQL Server an, die die Zielobjekte enthält. Sie können die Informationen in einer Zeichenfolge angeben, die das für die ConnectionString-Eigenschaft der <xref:System.Data.SqlClient.SqlConnection>-Klasse definierte Format verwendet. Sie können die <xref:System.Data.SqlClient.SqlConnectionStringBuilder>-Klasse verwenden, um eine ordnungsgemäß formatierte Verbindungszeichenfolge zu erstellen. Sie können auch ein <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection>-Objekt erstellen und es an **-TargetServer** übergeben. Wenn Sie eine Zeichenfolge angeben, die nur den Namen des Servers enthält, verwendet **Invoke-PolicyEvaluation** die Windows-Authentifizierung, um eine Verbindung mit dem Server herzustellen.  
   
--   **-TargetObjects** nimmt ein Objekt oder ein Array von Objekten entgegen, das die SQL Server-Objekte im Zielsatz darstellt. Beispielsweise könnten Sie ein Array von <xref:Microsoft.SqlServer.Management.Smo.Database> -Klassenobjekten erstellen, um es an **-TargetObjects**genutzt.  
+-   **-TargetObjects** nimmt ein Objekt oder ein Array von Objekten entgegen, das die SQL Server-Objekte im Zielsatz darstellt. Beispielsweise könnten Sie ein Array von <xref:Microsoft.SqlServer.Management.Smo.Database>-Klassenobjekten erstellen, um es an **-TargetObjects** zu übergeben.  
   
 -   **-TargetExpressions** nimmt eine Zeichenfolge mit einem Abfrageausdruck entgegen, der die Objekte im Zielsatz angibt. Der Abfrageausdruck liegt in Form von Knoten vor, die durch das Zeichen '/' getrennt sind. Jeder Knoten hat das Format ObjectType [Filter]. ObjectType ist eines der Objekte in einer SMO-Objekthierarchie (SQL Server Management Object). "Filter" ist ein Ausdruck, der bei diesem Knoten nach Objekten filtert. Weitere Informationen finden Sie unter [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md).  
   
@@ -143,3 +148,4 @@ Invoke-PolicyEvaluation -Policy "Datbase Status" -TargetServer "MYCOMPUTER" -Out
  [Verwenden der Datenbankmodul-Cmdlets](../relational-databases/scripting/use-the-database-engine-cmdlets.md)   
   
   
+

@@ -3,8 +3,11 @@ title: Datenquellen | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -38,3 +41,4 @@ Ein *Datenquelle* ist einfach die Quelle der Daten. Sie können eine Datei, die 
 -   [Verwenden von Datenquellen](../../odbc/reference/using-data-sources.md)  
   
 -   [Beispiel für Datenquellen](../../odbc/reference/data-source-example.md)
+

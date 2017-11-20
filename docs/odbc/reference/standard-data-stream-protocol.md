@@ -3,8 +3,11 @@ title: Standard-Datenstrom Protokoll | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -29,6 +32,6 @@ ms.contentlocale: de-de
 ms.lasthandoff: 09/09/2017
 
 ---
-# Standard-Datenstrom Protokoll
+# <a name="standard-data-stream-protocol"></a>Standard-Datenstrom Protokoll
 Eine standardmäßige-Stream-Protokoll ist eine Möglichkeit, den Zugriff auf Daten in heterogenen DBMS. In der Tat Standarddaten Stream Protokolle bereits vorhanden sein: die ANSI/ISO Remote Datenbank Remotedatenzugriff (RDA)-Standard ([ISO/IEC 9579:2000](http://www.iso.org/iso/catalogue_detail.htm?csnumber=30615)) und die IBM Distributed relationale Datenbank Architektur (DRDA) ([http:// www.netstoreusa.com/cbbooks/007/0070351384.shtml](http://www.netstoreusa.com/cbbooks/007/0070351384.shtml)). Obwohl beide Systeme Promise anzeigen ist keines von beiden heute umfassend implementiert.
 

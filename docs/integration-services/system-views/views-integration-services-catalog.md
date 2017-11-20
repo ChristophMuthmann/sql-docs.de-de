@@ -2,9 +2,12 @@
 title: Sichten (Integration Services-Katalog) | Microsoft Docs
 ms.custom: 
 ms.date: 12/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-views
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="views-integration-services-catalog"></a>Sichten (Integration Services-Katalog)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   In diesem Abschnitt werden die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Sichten beschrieben, die zum Verwalten von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekten, die in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellt wurden, verfügbar sind.  
   

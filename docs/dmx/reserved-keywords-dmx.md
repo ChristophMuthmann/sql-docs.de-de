@@ -2,9 +2,12 @@
 title: "Reservierte Schlüsselwörter (DMX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,7 +33,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="reserved-keywords-dmx"></a>Reservierte Schlüsselwörter (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] reserviert bestimmte Schlüsselwörter ausschließlich zur eigenen Verwendung. Diese Schlüsselwörter dürfen in Anweisungen für Data Mining-Erweiterungen (DMX) nur an den Positionen verwendet werden, die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in der Referenz der Sprache DMX definiert. Diese beschränkten DMX-Schlüsselwörter schließen die folgenden Elemente ein:  
   

@@ -1,11 +1,15 @@
 ---
-title: "Einschränkungen für Stretch Database | Microsoft-Dokumentation"
-ms.custom: SQL2016_New_Updated
+title: "Einschränkungen (Stretch-Datenbank) | Microsoft-Dokumentation"
+ms.custom: 
 ms.date: 06/14/2016
-ms.prod: sql-server-2016
+ms.prod: stretch-database
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stretch
+ms.suite: sql
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - limitations (Stretch Database)
 - blocking issues (Stretch Database)
 ms.assetid: 2b1fbec1-7859-44fc-8417-724fc57a59c0
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 59d43fb73d8e9a4faa76fbe9be70fc7ac417e375
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 1ca180fe8f74a0b64f341087c324792f8ab0de3d
+ms.contentlocale: de-de
+ms.lasthandoff: 07/29/2017
+
 ---
-# <a name="limitations-for-stretch-database"></a>Einschränkungen für Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="limitations-for-stretch-database"></a>Einschränkungen (Stretch-Datenbank)
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Erfahren Sie mehr zu Einschränkungen für Stretch-aktivierten Tabellen und zu Einschränkungen, die derzeit verhindern, Stretch für eine Tabelle zu aktivieren.  
   
@@ -91,8 +96,9 @@ Die folgenden Einschränkungen für Stretch-aktivierte Tabellen sind zu beachten
 -   Indizierte Sichten, die auf die Tabelle verweisen  
   
 ## <a name="see-also"></a>Siehe auch  
- [Identifizieren von Datenbanken und Tabellen für Stretch Database durch Ausführen des Ratgebers für Stretch Database](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)   
- [Aktivieren von Stretch Database für eine Datenbank](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
+ [Identifizieren von Datenbanken und Tabellen für Stretch-Datenbank durch Ausführen des Ratgebers für Stretch-Datenbank](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)   
+ [Aktivieren von Stretch-Datenbank für eine Datenbank](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
  [Aktivieren von Stretch-Datenbank für eine Tabelle](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   
+

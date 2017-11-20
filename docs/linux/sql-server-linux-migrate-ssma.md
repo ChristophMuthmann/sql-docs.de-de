@@ -6,10 +6,14 @@ ms.author: sanagama
 manager: jhubbard
 ms.date: 08/23/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
-ms.custom: H1Hack27Feb2017
+ms.custom: 
 ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678

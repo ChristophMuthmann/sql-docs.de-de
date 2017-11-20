@@ -1,11 +1,15 @@
 ---
 title: "Erste Schritte durch Ausführen des Assistenten zum Aktivieren von Stretch für eine Datenbank | Microsoft-Dokumentation"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.prod: stretch-database
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stretch
+ms.suite: sql
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 f1_keywords:
@@ -22,19 +26,20 @@ helpviewer_keywords:
 - Stretch Database, wizard
 - Enable Database for Stretch Wizard
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e164e6f47a97f860b6b84e9519e14d7887b873c5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: a3385d76691aa2710dd0d0e1544ee6e4fb5b43d0
+ms.contentlocale: de-de
+ms.lasthandoff: 07/29/2017
+
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Erste Schritte durch Ausführen des Assistenten zum Aktivieren von Stretch für eine Datenbank
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
  Um eine Datenbank für Stretch-Datenbank zu konfigurieren, führen Sie den Assistenten zum Aktivieren von Stretch für eine Datenbank aus.  In diesem Thema werden die im Assistenten einzugebenden Informationen und zu treffenden Entscheidungen beschrieben.  
   
@@ -79,11 +84,11 @@ Oben in der sortierten Liste werden Tabellen mit einer Vielzahl von Zeilen angez
 ## <a name="optionally-provide-a-row-filter"></a>Optionales Angeben eines Zeilenfilters  
  Wenn Sie zum Auswählen zu migrierender Zeilen eine Filterfunktion verwenden möchten, führen Sie auf der Seite **Tabellen auswählen** die folgenden Schritte aus.  
   
-1.  Klicken Sie in der Liste **Wählen Sie die Tabellen aus, für die Sie ein Stretching durchführen möchten.** in der Zeile für die Tabelle auf **Gesamte Tabelle** . Das Dialogfeld **Wählen Sie die Zeilen für das Stretching aus.** wird geöffnet.  
+1.  Klicken Sie in der Liste **Wählen Sie die Tabellen aus, die Sie strecken möchten.** in der Zeile für die Tabelle auf **Gesamte Tabelle** . Das Dialogfeld **Wählen Sie die zu streckenden Zeilen aus.** wird geöffnet.  
   
      ![Definieren eines datenbasierten Filterprädikats](../../sql-server/stretch-database/media/stretch-wizard-2a.png "Definieren eines datenbasierten Filterprädikats")  
   
-2.  Wählen Sie im Dialogfeld **Wählen Sie die Zeilen für das Stretching aus.** die Option **Zeilen auswählen**.  
+2.  Wählen Sie im Dialogfeld **Wählen Sie die zu streckenden Zeilen aus.** die Option **Zeilen auswählen**.  
   
 3.  Geben Sie im Feld **Namensfeld**einen Namen für die Filterfunktion an.  
   
@@ -203,3 +208,4 @@ Wenn Sie zum Auswählen zu migrierender Zeilen eine andere Art von Filterfunktio
  [Aktivieren von Stretch-Datenbank für eine Tabelle](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   
+

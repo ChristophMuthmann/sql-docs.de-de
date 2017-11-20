@@ -1,28 +1,34 @@
 ---
 title: "Übersicht über Master Data Services (MDS) | Microsoft-Dokumentation"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 02/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords: Was ist Master Data
+keywords:
+- Was ist Master Data
 helpviewer_keywords:
 - Master Data Services, overview
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 023472f0c047e244f1e4a60fa519a9dc41046743
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 09064a57e9a55ec5bf868b839be6444d0de853be
+ms.contentlocale: de-de
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="master-data-services-overview-mds"></a>Übersicht über Master Data Services (MDS)
   In diesem Thema werden die Organisations- und Verwaltungsfunktionen von Schlüsseldaten in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]beschrieben. 
@@ -76,4 +82,5 @@ ms.lasthandoff: 11/09/2017
  Anschließend können Sie das Modell mit oder ohne Daten in der Produktionsumgebung bereitstellen. Weitere Informationen finden Sie unter [Bereitstellen von Modellen &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md).  
   
   
+
 

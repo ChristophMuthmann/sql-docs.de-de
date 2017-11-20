@@ -2,24 +2,30 @@
 title: "Öffnen einer Wissensdatenbank | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 06/04/2013
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dqs.kb.openkb.f1
+f1_keywords:
+- sql13.dqs.kb.openkb.f1
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4b1a386b507130da322219343e181384dc25a8ad
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 495047016c4ffe394214115f77ec13846b57d9db
+ms.contentlocale: de-de
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="open-a-knowledge-base"></a>Öffnen einer Wissensdatenbank
   In diesem Thema wird beschrieben, wie eine vorhandene Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) geöffnet und auf die Domänenverwaltung, die Wissensermittlung und das Hinzufügen einer Abgleichsrichtlinie vorbereitet wird.  
@@ -96,3 +102,4 @@ ms.lasthandoff: 11/09/2017
 -   **Abgleichsrichtlinie - Abgleichsergebnisse**: Die Wissensdatenbank wurde auf der Seite **Abgleichsrichtlinie - Abgleichsergebnisse** geschlossen. Die Wissensdatenbank ist gesperrt, und die Wissensermittlungs- und die Domänenverwaltungsaktivitäten sind nicht verfügbar.  
   
   
+

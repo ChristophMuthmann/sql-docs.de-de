@@ -6,14 +6,18 @@ documentationcenter:
 author: MightyPen
 manager: jhubbard
 editor: rothja
-ms.service: na
+ms.service: 
+ms.component: linux
+ms.suite: sql
 ms.topic: updart-autogen
 ms.technology: database-engine
-ms.custom: UpdArt.exe
+ms.custom: 
 ms.workload: linux-sql
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 09/27/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
 ms.author: genemi
 ms.translationtype: MT
 ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678

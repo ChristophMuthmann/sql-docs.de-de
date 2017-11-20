@@ -2,11 +2,12 @@
 title: Installieren von Data Quality Services | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/11/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: 
@@ -129,3 +130,4 @@ ms.lasthandoff: 09/12/2017
  [Behandeln von Installations- und Konfigurationsproblemen in DQS](http://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
   
   
+

@@ -3,8 +3,11 @@ title: Gespeicherte Prozeduren (Integration Services-Katalog) | Microsoft Docs
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="stored-procedures-integration-services-catalog"></a>Gespeicherte Prozeduren (Integration Services-Katalog)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   In diesem Abschnitt wird beschrieben, die [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherten Systemprozeduren, die zum Verwalten von verfügbaren [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Projekte, die mit einer Instanz von bereitgestellt wurden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

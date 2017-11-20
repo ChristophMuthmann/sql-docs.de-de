@@ -2,27 +2,30 @@
 title: "Automatisches Initialisieren der Always On-Verfügbarkeitsgruppe | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: v-saume
 manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 151aa8876623f8d3cca40a953b318f0c0663f92e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.contentlocale: de-de
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>Automatisches Initialisieren der AlwaysOn-Verfügbarkeitsgruppe
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Mit SQL Server 2016 wurde das automatische Seeding von Verfügbarkeitsgruppen eingeführt. Beim Erstellen einer Verfügbarkeitsgruppe mit automatischem Seeding erstellt SQL Server automatisch die sekundären Replikate für jede Datenbank in der Gruppe. Sie müssen sekundäre Replikate nicht mehr manuell sichern und wiederherstellen. Erstellen Sie zum Aktivieren des automatischen Seedings die Verfügbarkeitsgruppe mit T-SQL, oder verwenden Sie die neueste Version von SQL Server Management Studio.
 
@@ -285,4 +288,5 @@ Vor dem Hinzufügen einer Datenbank zu einer Verfügbarkeitsgruppe mit automatis
 [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)
 
 [Handbuch zur Problembehandlung und Überwachung von AlwaysOn-Verfügbarkeitsgruppen](http://technet.microsoft.com/library/dn135328.aspx)
+
 

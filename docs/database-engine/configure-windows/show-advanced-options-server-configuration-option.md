@@ -2,29 +2,34 @@
 title: Erweiterte Optionen anzeigen (Serverkonfigurationsoption) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - sp_configure
 - show advanced options option
 ms.assetid: 7572372a-24b6-428f-84ae-48560430b159
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d7f4abbfa21d5645ec6ca4a45ce58a1cf59f0fdc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ec5ba368607a59081c6c97e89bc7ff32076da74a
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="show-advanced-options-server-configuration-option"></a>Erweiterte Optionen anzeigen (Serverkonfigurationsoption)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Sie können mit der Option **Erweiterte Optionen anzeigen** die erweiterten Optionen der gespeicherten Systemprozedur **sp_configure** anzeigen. Wenn Sie **Erweiterte Optionen anzeigen** auf 1 festlegen, können Sie die erweiterten Optionen mithilfe von **sp_configure**in einer Liste aufführen. Die Standardeinstellung ist 0.  
   
@@ -36,3 +41,4 @@ ms.lasthandoff: 11/09/2017
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

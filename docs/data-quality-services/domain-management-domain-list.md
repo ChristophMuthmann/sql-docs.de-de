@@ -2,24 +2,30 @@
 title: "Domänenverwaltung: Domänenliste | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 11/08/2011
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dqs.dm.domainlist.f1
+f1_keywords:
+- sql13.dqs.dm.domainlist.f1
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ffb0cd1bbb37aeb7c551e9d71612507aad1a3724
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 83b1db3be39a5472fd422f23955eff9bafb5265f
+ms.contentlocale: de-de
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="domain-management-domain-list"></a>Domänenverwaltung: Domänenliste
   In diesem Thema werden die Steuerelemente in der Liste „Domänen“ auf der Seite **Domänenverwaltung** in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) beschrieben. Verwenden Sie diesen Bereich, um eine Domäne auszuwählen, für die Verwaltungsvorgänge ausgeführt werden sollen. Der gleiche Bereich wird für alle Seiten im Registerkartenformat auf der Seite **Domänenverwaltung** verwendet.  
@@ -57,3 +63,4 @@ ms.lasthandoff: 11/09/2017
  Exportieren Sie die Domäne in eine DQS-Datei. Durch diesen Befehl wird das Dialogfeld **In Datendatei exportieren** aufgerufen. Sie rufen diesen Befehl über das Menü **Exportieren** in der Menüleiste am oberen Rand der Seite auf, oder klicken Sie mit der rechten Maustaste in den Domänenlistenbereich. Weitere Informationen finden Sie unter [Exportieren einer Domäne in eine DQS-Datei](../data-quality-services/export-a-domain-to-a-dqs-file.md).  
   
   
+

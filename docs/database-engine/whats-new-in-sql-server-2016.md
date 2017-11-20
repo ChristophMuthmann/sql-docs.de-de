@@ -1,32 +1,35 @@
 ---
 title: "Neues im Datenbankmodul – SQL Server 2016 | Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
-- SQL2016_rc1
+ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-engine
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
 - Database Engine [SQL Server], what's new
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
-caps.latest.revision: "431"
+caps.latest.revision: 431
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 211d0d1d59ac9875fd3c66efb0fc88a453a8deb4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 687bddd3ce51c60e286cfa0e2634790a8a492500
+ms.contentlocale: de-de
+ms.lasthandoff: 10/18/2017
+
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Neues im Datenbankmodul – SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 In diesem Thema werden die eingeführten Verbesserungen der [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Version des [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]vorgestellt.  Die neuen Funktionen und Verbesserungen verbessern die Leistungsfähigkeit und Produktivität von Architekten, Entwicklern und Administratoren, die Datenspeichersysteme entwerfen, entwickeln und pflegen.
 
@@ -457,6 +460,7 @@ SQL Server 2016 Upgrade Advisor Preview ist ein eigenständiges Tool, mit dem Be
 [Versionsanmerkungen zu SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 
  
 [Installieren von SQL Server-Verwaltungstools mit SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)
+
 
 
 

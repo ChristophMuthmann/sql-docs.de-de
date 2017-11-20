@@ -3,10 +3,14 @@ title: CLR Strict Security | Microsoft-Dokumentation
 description: Konfigurieren von CLR Strict Security in SQL Server
 ms.custom: 
 ms.date: 06/20/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,19 +22,20 @@ helpviewer_keywords:
 - assemblies [CLR integration], strick security
 - clr strict security option
 ms.assetid: 
-caps.latest.revision: "0"
+caps.latest.revision: 0
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d6f38449d20aa21da76fbaa375c91c88e664d3c6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 54f976fac931d9cdc731f4b3e91c433d66310194
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="clr-strict-security"></a>CLR Strict Security   
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]   
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Steuert die Interpretation der Berechtigungen `SAFE`, `EXTERNAL ACCESS` und `UNSAFE` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
 
@@ -70,3 +75,4 @@ Die folgenden Berechtigungen werden zum Erstellen einer CLR-Assembly benötigt, 
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [CLR-fähig (Serverkonfigurationsoption)](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)
+

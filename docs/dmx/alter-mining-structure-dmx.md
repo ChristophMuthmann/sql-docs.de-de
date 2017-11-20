@@ -2,9 +2,12 @@
 title: ALTER MINING STRUCTURE (DMX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -35,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Erstellt ein neues Miningmodell, das auf einer vorhandenen Miningstruktur basiert.  Bei Verwendung der **ALTER MINING STRUCTURE** -Anweisung zum Erstellen eines neuen Miningmodells, die Struktur muss bereits vorhanden sein. Im Gegensatz dazu werden bei Verwendung die Anweisung [CREATE MINING MODEL &#40; DMX &#41;](../dmx/create-mining-model-dmx.md), erstellen Sie ein Modell und die zugrunde liegende Struktur automatisch zur gleichen Zeit zu generieren.  
   

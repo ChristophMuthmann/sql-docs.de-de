@@ -2,9 +2,12 @@
 title: Struktur und die Verwendung von DMX-Vorhersageabfragen | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -35,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>Struktur und Verwendung von DMX-Vorhersageabfragen
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   In [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], können Sie die Vorhersageabfrage in Data Mining Extensions (DMX), unbekannte Spaltenwerte in ein neues Dataset, das auf der Grundlage der Ergebnisse eines Miningmodells vorherzusagen.  
   

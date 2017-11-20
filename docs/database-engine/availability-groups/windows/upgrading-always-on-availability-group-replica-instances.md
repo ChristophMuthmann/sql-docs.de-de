@@ -2,26 +2,31 @@
 title: "Upgraden von Always On-Verfügbarkeitsgruppen-Replikatsinstanzen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ae69dfe35f74a8e8084c44ca4ed8614ae3ba4ae3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 1783e700e516978e4eded68fa675addd8d31a234
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Upgraden von Always On-Verfügbarkeitsgruppen-Replikatsinstanzen
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Wenn eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Always On-Verfügbarkeitsgruppe auf eine neue [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -Version oder ein neues [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Service Pack aktualisiert wird, können Sie die Downtime für das primäre Replikat auf ein einzelnes manuelles Failover reduzieren. Führen Sie dazu ein paralleles Upgrade aus (oder zwei manuelle Failover, falls Sie einen Failback auf das ursprüngliche primäre Replikat ausführen). Diese Vorgehensweise funktioniert auch, wenn eine kumulative Aktualisierung durchgeführt wird, beim Installieren auf einem neuen Windows Service Pack oder bei der kumulativen Aktualisierung. Während des Upgradevorgangs steht ein sekundäres Replikat weder für ein Failover noch für schreibgeschützte Vorgänge zur Verfügung. Nach dem Upgrade kann es etwas dauern, bis das sekundäre Replikat auf dem gleichen Stand ist, wie der primäre Replikatknoten. Dies ist vom Ausmaß der Aktivität auf dem Primären Replikatknoten (erwarten Sie also viel Netzwerkverkehr) abhängig.  
   
@@ -172,3 +177,4 @@ ms.lasthandoff: 11/09/2017
  [Installieren von SQL Server 2016 von der Eingabeaufforderung](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
   
+
