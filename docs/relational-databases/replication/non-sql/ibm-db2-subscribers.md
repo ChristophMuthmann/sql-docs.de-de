@@ -5,8 +5,7 @@ ms.date: 03/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - mapping data types [SQL Server replication]
 - heterogeneous Subscribers, IBM DB2
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
-caps.latest.revision: 74
+caps.latest.revision: "74"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6fa91235b6de818646673afd4e637083c5a6660c
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b9923a93650c564621e13d0e088b99d78a62a1ec
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2-Abonnenten
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
     1.  Zeigen Sie im Menü **Start**auf **Programme**, dann auf **Microsoft OLE DB-Anbieter für DB2**, und klicken Sie dann auf **Data Access Tool**.  
   
-    2.  Folgen Sie im **Data Access Tool**den Anweisungen, um die Informationen zum DB2-Server anzugeben. Wenn Sie das Tool abgeschlossen haben, wird ein universeller Datenlink (Universal Data Link, UDL) mit einer zugeordneten Verbindungszeichenfolge erstellt (die UDL wird nicht tatsächlich von der Replikation verwendet, sondern die Verbindungszeichenfolge).  
+    2.  Folgen Sie im **Data Access Tool** den Anweisungen, um die Informationen zum DB2-Server anzugeben. Wenn Sie das Tool abgeschlossen haben, wird ein universeller Datenlink (Universal Data Link, UDL) mit einer zugeordneten Verbindungszeichenfolge erstellt (die UDL wird nicht tatsächlich von der Replikation verwendet, sondern die Verbindungszeichenfolge).  
   
     3.  Greifen Sie auf die Verbindungszeichenfolge zu: Klicken Sie mit der rechten Maustaste auf die UDL im Data Access Tool, und wählen Sie **Verbindungszeichenfolge anzeigen**aus.  
   
@@ -62,7 +61,7 @@ ms.lasthandoff: 06/22/2017
   
      Die meisten Optionen in der Zeichenfolge beziehen sich speziell auf den DB2-Server, den Sie konfigurieren. Die Optionen `Process Binary as Character` und `Derive Parameters` sollten jedoch immer auf `False` festgelegt sein. Für die Option `Initial Catalog` ist ein Wert erforderlich, um die Abonnementdatenbank identifizieren zu können. Die Verbindungszeichenfolge wird beim Erstellen des Abonnements in Assistenten für neue Abonnements eingegeben.  
   
-3.  Erstellen Sie eine Momentaufnahme- oder Transaktionsveröffentlichung, aktivieren Sie sie für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten, und erstellen Sie dann ein Pushabonnement für den Abonnenten. Weitere Informationen finden Sie unter [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+3.  Erstellen Sie eine Momentaufnahme- oder Transaktionsveröffentlichung, aktivieren Sie sie für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten, und erstellen Sie dann ein Pushabonnement für den Abonnenten. Weitere Informationen finden Sie unter [Erstellen eines Abonnements für einen Nicht-SQL Server-Abonnenten](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
 4.  Sie können auch ein benutzerdefiniertes Erstellungsskript für einen oder mehrere Artikel angeben. Beim Veröffentlichen einer Tabelle wird ein `CREATE TABLE`-Skript für diese Tabelle erstellt. Bei Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten wird das Skript im [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Dialekt erstellt und dann vom Verteilungs-Agent in einen allgemeineren SQL-Dialekt übersetzt, bevor es auf dem Abonnenten angewendet wird. Um ein benutzerdefiniertes Erstellungsskript anzugeben, ändern Sie entweder das vorhandene [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Skript, oder erstellen Sie ein vollständiges Skript, das den DB2 SQL-Dialekt verwendet. Wenn Sie ein DB2-Skript erstellen, verwenden Sie die **bypass_translation** -Direktive, damit der Verteilungs-Agent das Skript ohne Übersetzung auf dem Abonnenten anwendet.  
   
@@ -176,4 +175,3 @@ ms.lasthandoff: 06/22/2017
  [Abonnieren von Veröffentlichungen](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
-

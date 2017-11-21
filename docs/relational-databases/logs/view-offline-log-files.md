@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Log File Viewer, viewing offline logs
 - offline log files
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 339787b7252b5604a08770d417fe39d5b63aca70
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2fbac24caac2af64ba28178a1cfebd9bd860581d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-offline-log-files"></a>Anzeigen von Offlineprotokolldateien
   Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]können Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Protokolldateien von einer lokalen oder Remoteinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzeigen, wenn die Zielinstanz offline ist oder nicht gestartet werden kann.  
@@ -65,7 +63,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Öffnen Sie das Snap-In WMI-Kontrolle. Führen Sie dazu je nach Betriebssystem eine der folgenden Aktionen aus:  
   
-    -   Klicken Sie im **Startmenü**auf **Suche starten** , geben Sie **wmimgmt.msc** ein, und drücken Sie dann die EINGABETASTE.  
+    -   Klicken Sie im **Startmenü** auf **Suche starten**, geben Sie **wmimgmt.msc** ein, und drücken Sie dann die EINGABETASTE.  
   
     -   Klicken Sie auf **Start**, dann auf **Ausführen**, geben Sie **wmimgmt.msc**ein, und drücken Sie dann die EINGABETASTE.  
   
@@ -127,4 +125,3 @@ ms.lasthandoff: 06/22/2017
  [Protokolldatei-Viewer](../../relational-databases/logs/log-file-viewer.md)  
   
   
-

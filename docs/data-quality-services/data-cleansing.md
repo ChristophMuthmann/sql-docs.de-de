@@ -2,28 +2,23 @@
 title: Datenbereinigung | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/01/2012
-ms.prod: sql-non-specified
-ms.prod_service: data-quality-services
-ms.service: 
-ms.component: data-quality-services
+ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.suite: 
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0c17b3a503a1ab2f7149c9b5a1ad425e57b2aae3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a7b606256ca38ee3dab0754904b365120de6a236
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-cleansing"></a>Datenbereinigung
   Die Datenbereinigung ist der Prozess der Datenqualitätsanalyse in einer Datenquelle, wobei die Empfehlungen vom System manuell genehmigt/zurückgewiesen werden und dadurch Änderungen an den Daten vorgenommen werden. Datenbereinigung in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) schließt einen computerunterstützten Prozess ein, der analysiert, wie Daten mit den Informationen in einer Wissensdatenbank übereinstimmen, sowie einen interaktiven Prozess, mit dem der Data Steward computerunterstützte Prozessergebnisse anzeigen und ändern kann, um sicherzustellen, dass die Datenbereinigung entsprechend ausgeführt wird.  
@@ -62,9 +57,9 @@ ms.lasthandoff: 09/09/2017
   
  Der computergestützte Prozess zeigt die Informationen bezüglich der Datenqualität im [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] für den interaktiven Bereinigungsprozess an. Bei der Kategorisierung von Daten werden von DQS nicht nur die Syntaxfehlerregeln eingehalten, sondern auch Verweisdaten, erweiterte Algorithmen und ein *Vertrauensgrad*verwendet. Der Vertrauensgrad gibt die DQS-Sicherheitsstufe der Korrektur oder des Vorschlags an. Der Vertrauensgrad basiert auf den folgenden Schwellenwerten:  
   
--   *Schwellenwert für die automatische Korrektur* – oberhalb dieses Werts werden Änderungen von DQS vorgeschlagen und vorgenommen, außer wenn sie vom Data Steward abgelehnt werden Sie können den automatischen Korrekturschwellenwert auf der Registerkarte **Allgemeine Einstellungen** auf dem Bildschirm **Konfiguration** angeben. Weitere Informationen finden Sie unter [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   *Schwellenwert für die automatische Korrektur* – oberhalb dieses Werts werden Änderungen von DQS vorgeschlagen und vorgenommen, außer wenn sie vom Data Steward abgelehnt werden Sie können den automatischen Korrekturschwellenwert auf der Registerkarte **Allgemeine Einstellungen** auf dem Bildschirm **Konfiguration** angeben. Weitere Informationen finden Sie unter [Konfigurieren der Schwellenwerte für Bereinigung und Abgleich](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   *Schwellenwert für automatische Vorschläge* (unter dem Schwellenwert für die automatische Korrektur) – oberhalb dieses Werts werden Änderungen von DQS vorgeschlagen und vorgenommen, wenn sie vom Data Steward genehmigt werden. Sie können den automatischen Vorschlagsschwellenwert auf der Registerkarte **Allgemeine Einstellungen** auf dem Bildschirm **Konfiguration** angeben. Weitere Informationen finden Sie unter [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   *Schwellenwert für automatische Vorschläge* (unter dem Schwellenwert für die automatische Korrektur) – oberhalb dieses Werts werden Änderungen von DQS vorgeschlagen und vorgenommen, wenn sie vom Data Steward genehmigt werden. Sie können den automatischen Vorschlagsschwellenwert auf der Registerkarte **Allgemeine Einstellungen** auf dem Bildschirm **Konfiguration** angeben. Weitere Informationen finden Sie unter [Konfigurieren der Schwellenwerte für Bereinigung und Abgleich](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
  Jeder Wert, der über einen Vertrauensgrad unter dem Schwellenwert für die automatischen Vorschläge verfügt, wird von DQS nicht verändert, außer wenn der Data Steward eine Änderung angibt.  
   
@@ -116,4 +111,3 @@ ms.lasthandoff: 09/09/2017
  [Datenabgleich](../data-quality-services/data-matching.md)  
   
   
-
