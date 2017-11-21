@@ -14,7 +14,7 @@ ms.topic: article
 caps.latest.revision: 2
 author: barbkess
 ms.author: ronitr
-manager: cguyer
+manager: craigg
 ms.translationtype: HT
 ms.sourcegitcommit: d533818e9498237316dabc08fc538caa2ac31c63
 ms.openlocfilehash: f236ff85204ba08e8c02d5e680a4de43f021b9aa

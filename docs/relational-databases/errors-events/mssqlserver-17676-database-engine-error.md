@@ -18,7 +18,7 @@ ms.assetid: a4e2c568-f794-486e-ac38-380e30ab0c3d
 caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4

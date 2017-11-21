@@ -32,7 +32,7 @@ ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
 caps.latest.revision: 57
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
