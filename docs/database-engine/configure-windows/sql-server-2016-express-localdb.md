@@ -2,14 +2,10 @@
 title: SQL Server 2016 Express LocalDB | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/10/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
+ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- database-engine
+ms.suite: 
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,20 +15,19 @@ helpviewer_keywords:
 - file database
 - LocalDB
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 15c7e7ce18d60b766251f171a6f671a679d93990
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 64d008b25aacd5ad76b711662f9b6ffd3e5e5926
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
  > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/en-US/library/hh510202(SQL.120).aspx).
 
 Microsoft SQL Server 2016 Express **LocalDB** ist ein Feature von [SQL Server Express](https://msdn.microsoft.com/library/ms144275(SQL.130).aspx) , das speziell für Entwickler konzipiert wurde. Es ist in SQL Server 2016 Express mit Advanced Services verfügbar.  
@@ -139,4 +134,3 @@ REM Gather information about the instance of LocalDB
  [SqlLocalDB-Hilfsprogramm](../../tools/sqllocaldb-utility.md)  
   
   
-

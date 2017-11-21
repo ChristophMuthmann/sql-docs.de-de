@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 114ec05b-7eca-4c87-b276-25e37b84be39
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9330ef01cb491fef9307149e0cc774fa2b042c52
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 13a065cee629a4a44f12f1a892a080683a8b9b52
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="alter-an-extended-events-session"></a>Ändern einer Sitzung für erweiterte Ereignisse
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
  Folgende zusätzliche Änderungen sind für eine inaktive Ereignissitzung möglich:  
   
--   Aktivieren Sie die Option zum **Nachverfolgen der Beziehung zwischen Ereignissen** .  
+-   Aktivieren Sie die Option zum **Nachverfolgen der Beziehung zwischen Ereignissen**.  
   
 -   Ändern Sie die Konfiguration für erweiterte Eigenschaften.  
   

@@ -5,8 +5,7 @@ ms.date: 08/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -50,17 +49,16 @@ helpviewer_keywords:
 - manual startup state [SQL Server]
 - accounts [SQL Server], user
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
-caps.latest.revision: 207
+caps.latest.revision: "207"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: b93f57717cea30367f212020d73684a3fe55b796
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
-ms.openlocfilehash: 2fa9ca92039b8e26aecd78ca0f6c1bdc03f36d71
-ms.contentlocale: de-de
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Konfigurieren von Windows-Dienstkonten und -Berechtigungen
 
@@ -277,7 +275,7 @@ Verwaltete Dienstkonten, gruppenverwaltete Dienstkonten und virtuellen Konten so
  Je nach Dienstkonfiguration wird das Dienstkonto für einen Dienst oder eine Dienst-SID während der Installation oder eines Upgrades als Element der Dienstgruppe hinzugefügt.  
   
 ###  <a name="Windows"></a> Windows-Berechtigungen und Rechte  
- Für das zum Starten eines Diensts zugewiesene Konto ist die Berechtigung zum Starten, Beenden und Anhalten für den Dienst erforderlich **** . Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setupprogramm weist diese automatisch zu.  Installieren Sie zuerst Remoteserver-Verwaltungstools (Remote Server Administration Tools, RSAT). Siehe [Remoteserver-Verwaltungstools für Windows 7](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d).  
+ Für das zum Starten eines Diensts zugewiesene Konto ist die **Berechtigung zum Starten, Beenden und Anhalten** für den Dienst erforderlich. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setupprogramm weist diese automatisch zu.  Installieren Sie zuerst Remoteserver-Verwaltungstools (Remote Server Administration Tools, RSAT). Siehe [Remoteserver-Verwaltungstools für Windows 7](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d).  
   
  Die folgende Tabelle enthält Berechtigungen, die beim [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup für die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten verwendeten Pro-Dienst-SIDs oder lokalen Windows-Gruppen erforderlich sind.  
   
@@ -645,4 +643,3 @@ Verwaltete Dienstkonten, gruppenverwaltete Dienstkonten und virtuellen Konten so
  [Installieren von Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   
-

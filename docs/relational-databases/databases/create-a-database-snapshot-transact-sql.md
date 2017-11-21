@@ -5,23 +5,21 @@ ms.date: 08/10/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- database snapshots [SQL Server], creating
+helpviewer_keywords: database snapshots [SQL Server], creating
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b3f980ff1cdf0dd08b0970887988eafa245e9622
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: cf1f5e93da2d30437dddad27ccf2e6d1edd6d15d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Erstellen einer Datenbankmomentaufnahme (Transact-SQL)
   Eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankmomentaufnahme kann nur mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt werden. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nicht unterstützt.  
@@ -118,7 +116,7 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     Dabei ist der *Name der Quelldatenbank* die Quelldatenbank, der *logische Dateiname* ist der in SQL Server beim Verweis auf die Datei verwendete logische Name, der *physische Dateiname* ist der vom Betriebssystem beim Erstellen der Datei verwendete Pfad- und Dateiname, und der *Name der Datenbank-Momentaufnahme* ist der *Name der Momentaufnahme*, aus der die Datenbank wiederhergestellt werden soll. Eine vollständige Beschreibung dieser Syntax finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+     Dabei ist der *Name der Quelldatenbank* die *Quelldatenbank*, der *logische Dateiname* ist der in SQL Server beim Verweis auf die Datei verwendete logische Name, der *physische Dateiname* ist der vom Betriebssystem beim Erstellen der Datei verwendete Pfad- und Dateiname, und der *Name der Datenbank-Momentaufnahme* ist der Name der Momentaufnahme, aus der die Datenbank wiederhergestellt werden soll. Eine vollständige Beschreibung dieser Syntax finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
     > [!NOTE]  
     >  Wenn Sie eine Datenbankmomentaufnahme erstellen, darf die CREATE DATABASE-Anweisung weder Protokolldateien noch Offlinedateien, Wiederherstellungsdateien oder außer Kraft gesetzte Dateien enthalten.  
@@ -135,7 +133,7 @@ AdventureWorks_snapshot_evening
 -   B. [Erstellen einer Momentaufnahme für die Sales-Datenbank](#Creating_on_Sales)  
   
 ####  <a name="Creating_on_AW"></a> A. Erstellen einer Momentaufnahme für die AdventureWorks-Datenbank  
- In diesem Beispiel wird eine Datenbankmomentaufnahme für die `AdventureWorks` -Datenbank erstellt. Der Momentaufnahmename, `AdventureWorks_dbss_1800`, und der Dateiname der entsprechenden Datei mit geringer Dichte, `AdventureWorks_data_1800.ss`, geben als Erstellungszeit 18:00 Uhr an.  
+ In diesem Beispiel wird eine Datenbankmomentaufnahme für die `AdventureWorks` -Datenbank erstellt. Der Momentaufnahmename, `AdventureWorks_dbss_1800`, und der Dateiname der entsprechenden Sparsedatei, `AdventureWorks_data_1800.ss`, geben als Erstellungszeit 18:00 Uhr an.  
   
 ```  
 CREATE DATABASE AdventureWorks_dbss1800 ON  
@@ -181,5 +179,4 @@ GO
  [Datenbank-Momentaufnahmen &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
   
-
 

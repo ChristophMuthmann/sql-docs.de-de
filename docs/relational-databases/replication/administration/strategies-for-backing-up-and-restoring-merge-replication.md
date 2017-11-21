@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - restoring [SQL Server replication], merge replication
 - merge replication [SQL Server replication], backup and restore
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b518488e5ac42e28487f984bfd65ca196dfbe723
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: c5c183c029afd8eb87a6df90e09d39b4d8c755bf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Strategien zum Sichern und Wiederherstellen einer Mergereplikation
   Sichern Sie bei Mergereplikationen regelmäßig die folgenden Datenbanken:  
@@ -65,16 +64,16 @@ ms.lasthandoff: 06/22/2017
   
  Wenn Sie die Veröffentlichungsdatenbank mit einem Abonnenten synchronisieren, auf dem eine frühere Version von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] als [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]ausgeführt wird, kann das Abonnement nicht anonym sein – es muss sich um ein Clientabonnement oder ein Serverabonnement handeln (in früheren Versionen als lokales Abonnement bzw. globales Abonnement bezeichnet).  
   
- Informationen zum Synchronisieren eines Abonnements finden Sie unter [Synchronisieren eines Pushabonnements](../../../relational-databases/replication/synchronize-a-push-subscription.md) und [Synchronisieren eines Pullabonnements](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+ Informationen zum Synchronisieren eines Abonnements finden Sie unter [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) und [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 ### <a name="reinitializing-all-subscriptions"></a>Erneutes Initialisieren aller Abonnements  
  Durch das erneute Initialisieren aller Abonnements wird sichergestellt, dass alle Abonnenten konsistent mit der wiederhergestellten Veröffentlichungsdatenbank sind. Diese Herangehensweise sollten Sie verwenden, wenn Sie eine ganze Topologie auf den früheren Status zurücksetzen möchten, der in einer bestimmten Sicherung der Veröffentlichungsdatenbank festgehalten ist. So kann es z. B. erforderlich sein, alle Abonnements neu zu initialisieren, wenn Sie nach einer fehlerhaft ausgeführten Batchoperation einen früheren Zustand Ihrer Veröffentlichungsdatenbank wiederherstellen möchten.  
   
  Generieren Sie bei Wahl dieser Option direkt nach dem Wiederherstellen der Veröffentlichungsdatenbank eine neue Momentaufnahme, die an die erneut initialisierten Abonnenten übertragen wird.  
   
- Informationen zum erneuten Initialisieren eines Abonnement finden Sie unter [Erneutes Initialisieren eines Abonnements](../../../relational-databases/replication/reinitialize-a-subscription.md).  
+ Informationen zum erneuten Initialisieren eines Abonnement finden Sie unter [Reinitialize a Subscription](../../../relational-databases/replication/reinitialize-a-subscription.md).  
   
- Informationen zum Erstellen und Anwenden einer Momentaufnahme finden Sie unter [Erstellen und Anwenden der Anfangsmomentaufnahme](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) und [Erstellen einer Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+ Informationen zum Erstellen und Anwenden einer Momentaufnahme finden Sie unter [Create und Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) und [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="backing-up-and-restoring-the-distribution-database"></a>Sichern und Wiederherstellen der Verteilungsdatenbank  
  Bei einer Mergereplikation sollte die Verteilungsdatenbank in regelmäßigen Abständen gesichert werden. Wenn die Sicherung nicht älter als die kürzeste Beibehaltungsdauer aller Veröffentlichungen ist, die den Verteiler verwenden, kann die Verteilungsdatenbank jederzeit problemlos wiederhergestellt werden. Wenn es z. B. drei Veröffentlichungen mit Beibehaltungsdauerwerten von 10, 20 und 30 Tagen gibt, sollte die zum Wiederherstellen der Datenbank verwendete Sicherung höchstens 10 Tage alt sein. Die Verteilungsdatenbank spielt in einer Mergereplikation nur eine begrenzte Rolle: Sie speichert keine Daten, die bei der Änderungsnachverfolgung verwendet werden, und sie bietet auch keine temporäre Speicherung von Mergereplikationsänderungen, die an Abonnementdatenbanken weitergeleitet werden (wie dies bei Transaktionsreplikationen der Fall ist).  

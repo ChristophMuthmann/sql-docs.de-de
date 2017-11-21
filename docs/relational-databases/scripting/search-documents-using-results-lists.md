@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - searches [SQL Server Management Studio], multiple files
 - Query Editor [SQL Server Management Studio], search multiple files
 ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9a1db7c29119e1d1f1fb2cad559c559287817f57
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a63ced363f4aee6ece4481f7b89b0ab195b82019
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="search-documents-using-results-lists"></a>Durchsuchen von Dokumenten mithilfe von Ergebnislisten
   Mit dem Dialogfeld **Suchen und Ersetzen** können Sie Text in allen Dateien innerhalb eines Projekts bzw. einer Projektmappe oder in einem Dateisystemordner durchsuchen und ersetzen, auch wenn diese nicht in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]geöffnet sind. Übereinstimmungen aus Suchvorgängen, die mit dem Dialogfeld **Suchen und Ersetzen** ausgeführt wurden, werden in den Fenstern Suchergebnisse 1 und Suchergebnisse 2 angezeigt. Im Fenster Suchergebnisse 2 können Sie den genauen Text aus der Zeile anzeigen, in der sich die Übereinstimmung befindet.  
@@ -44,7 +42,7 @@ ms.lasthandoff: 07/31/2017
   
 6.  Klicken Sie auf **Suchen** , um die Suche zu starten.  
   
- Standardmäßig werden die Übereinstimmungen für den Suchvorgang im Fenster Suchergebnisse 1 angezeigt. Sie können die Suchübereinstimmungen durchsuchen, indem Sie im Fenster Suchergebnisse 1 auf die einzelnen Einträge doppelklicken. Um die Suchergebnisse in einem neuen Fenster anzuzeigen, wählen Sie die Option zum Anzeigen in Suche 2 ****aus.  
+ Standardmäßig werden die Übereinstimmungen für den Suchvorgang im Fenster Suchergebnisse 1 angezeigt. Sie können die Suchübereinstimmungen durchsuchen, indem Sie im Fenster Suchergebnisse 1 auf die einzelnen Einträge doppelklicken. Um die Suchergebnisse in einem neuen Fenster anzuzeigen, wählen Sie die Option zum **Anzeigen in Suche 2** aus.  
   
 #### <a name="to-replace-across-multiple-files-or-folders"></a>So ersetzen Sie Elemente in mehreren Dateien oder Ordnern  
   
@@ -74,4 +72,3 @@ ms.lasthandoff: 07/31/2017
  [Suchen von Text mit regulären Ausdrücken](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
   
   
-

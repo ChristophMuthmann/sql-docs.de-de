@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.articleproperties.f1
-helpviewer_keywords:
-- Article Properties dialog box
+f1_keywords: sql13.rep.newpubwizard.articleproperties.f1
+helpviewer_keywords: Article Properties dialog box
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9d485cf7aface5f33fd4bd30f8c4a3d36707b2d2
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 44abce2c85d841034ec0e70433b29fbb48e99714
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="article-properties---ltarticlegt"></a>Artikeleigenschaften – &lt;Artikel&gt;
   Das Dialogfeld **Artikeleigenschaften** steht über den Assistenten für neue Veröffentlichung und das Dialogfeld **Veröffentlichungseigenschaften** zur Verfügung. Es ermöglicht Ihnen, die Eigenschaften für alle Typen von Artikeln anzuzeigen und festzulegen. Bestimmte Eigenschaften können nur beim Erstellen der Veröffentlichung festgelegt werden, andere nur, wenn für die Veröffentlichung keine aktiven Abonnements vorhanden sind. Eigenschaften, die nicht festgelegt werden können, werden als schreibgeschützt angezeigt.  
@@ -43,13 +40,13 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="options-for-all-publications"></a>Optionen für alle Veröffentlichungen  
  **Tabellenpartitionierungsschemas kopieren** und **Indexpartitionierungsschemas kopieren**  
-In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] wurde die Tabellen- und Indexpartitionierung eingeführt, die in keinem Zusammenhang zu der Partitionierung stehen, die die Replikation über Zeilen- und Spaltenfilter anbietet. Die Optionen **Tabellenpartitionierungsschemas kopieren** und **Indexpartitionierungsschemas kopieren** geben an, ob Partitionierungsschemas auf den Abonnenten kopiert werden sollen. Weitere Informationen zur Partitionierung finden Sie unter [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+ In[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] wurde die Tabellen- und Indexpartitionierung eingeführt, die in keinem Zusammenhang zu der Partitionierung stehen, die die Replikation über Zeilen- und Spaltenfilter anbietet. Die Optionen **Tabellenpartitionierungsschemas kopieren** und **Indexpartitionierungsschemas kopieren** geben an, ob Partitionierungsschemas auf den Abonnenten kopiert werden sollen. Weitere Informationen zur Partitionierung finden Sie unter [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  **Datentypen konvertieren**  
  Bestimmt, ob beim Erstellen von Objekten auf dem Abonnenten benutzerdefinierte Datentypen in Basisdatentypen konvertiert werden. Zu den benutzerdefinierten Datentypen gehören die benutzerdefinierten CLR-Typen, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]eingeführt wurden. Geben Sie den Wert **True** an, wenn Sie diese Datentypen auf frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]replizieren. Auf diese Weise stellen Sie sicher, dass sie auf dem Abonnenten fehlerfrei verarbeitet werden können.  
   
  **Schemas auf dem Abonnenten erstellen**  
-In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] wurden Schemas eingeführt, die mithilfe der CREATE SCHEMA-Anweisung definiert werden. Ein Schema ist der Eigentümer eines Objekts. Es wird in einem mehrteiligen Namen verwendet, z.B. \<Database>.\<Schema>.\<Object>. Wenn Sie in der Datenbank Objekte haben, deren Besitzer nicht DBO ist, kann die Replikation diese Schemas auf dem Abonnenten erstellen, sodass veröffentlichte Objekte erstellt werden können.  
+ In[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] wurden Schemas eingeführt, die mithilfe der CREATE SCHEMA-Anweisung definiert werden. Ein Schema ist der Eigentümer eines Objekts. Es wird in einem mehrteiligen Namen verwendet, z.B. \<Database>.\<Schema>.\<Object>. Wenn Sie in der Datenbank Objekte haben, deren Besitzer nicht DBO ist, kann die Replikation diese Schemas auf dem Abonnenten erstellen, sodass veröffentlichte Objekte erstellt werden können.  
   
  Gehen Sie folgendermaßen vor, wenn Sie Daten auf Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]replizieren:  
   

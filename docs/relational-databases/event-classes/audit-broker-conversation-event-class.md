@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Audit Broker Conversation event class
+helpviewer_keywords: Audit Broker Conversation event class
 ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9839fc61788b3bbd3070455fac7ba8d3dcfb5e4a
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d600a639c4b6f340c75efa48bd091bf3e072c8a8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation-Ereignisklasse
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt ein **Audit Broker Conversation** -Ereignis, um Überwachungsmeldungen in Bezug auf die Dialogsicherheit von Service Broker zu melden.  
@@ -49,7 +46,7 @@ ms.lasthandoff: 06/22/2017
 |**ServerName**|**nvarchar**|Der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , für die eine Ablaufverfolgung ausgeführt wird.|26|Nein|  
 |**Severity**|**int**|Wenn dieses Ereignis einen Fehler meldet, ist dies der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Schweregrad.|29|Nein|  
 |**SPID**|**int**|Die Serverprozess-ID, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem Prozess zugewiesen wurde, der diesem Client zugeordnet ist.|12|ja|  
-|**StartTime**|**datetime**|Der Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar.|14|ja|  
+|**StartTime**|**datetime**|Der Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar.|14|Ja|  
 |**Status**|**int**|Gibt den Standort im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Quellcode an, der das Ereignis erstellt hat. Jeder Ort, von dem aus dieses Ereignis ggf. erstellt werden kann, besitzt einen anderen Statuscode. Der Microsoft Software Service kann mithilfe dieses Statuscodes herausfinden, wo das Ereignis generiert wurde.|30|Nein|  
 |**TextData**|**ntext**|Enthält für Fehler eine Meldung, die den Grund des Fehlers beschreibt. Einer der folgenden Werte:<br /><br /> <br /><br /> **Kein Zertifikat gefunden**. Der für Dialogprotokollsicherheit angegebene Benutzer besitzt kein Zertifikat.<br /><br /> **Ungültige Zeitspanne**. Der für Dialogprotokollsicherheit angegebene Benutzer besitzt ein Zertifikat, das jedoch abgelaufen ist.<br /><br /> **Zertifikat zu groß für Arbeitsspeicher**. Der für Dialogprotokollsicherheit angegebene Benutzer besitzt ein Zertifikat, das jedoch zu groß ist. Die maximale von Service Broker unterstützte Zertifikatgröße beträgt 32.768 Byte.<br /><br /> **Kein privater Schlüssel gefunden**. Der für Dialogprotokollsicherheit angegebene Benutzer besitzt ein Zertifikat, diesem ist jedoch kein privater Schlüssel zugeordnet.<br /><br /> **Die Größe des privaten Zertifikatschlüssels ist nicht mit dem Kryptografieanbieter kompatibel**. Der private Schlüssel für das Zertifikat besitzt eine Schlüsselgröße, die nicht erfolgreich verarbeitet werden kann. Die Größe des privaten Schlüssels muss ein Vielfaches von 64 Bytes sein.<br /><br /> **Die Größe des öffentlichen Zertifikatschlüssels ist nicht mit dem Kryptografieanbieter kompatibel**. Der öffentliche Schlüssel für das Zertifikat besitzt eine Schlüsselgröße, die nicht erfolgreich verarbeitet werden kann. Die Größe des öffentlichen Schlüssels muss ein Vielfaches von 64 Bytes sein.<br /><br /> **Die Größe des privaten Zertifikatschlüssels ist nicht mit dem verschlüsselten Schlüsselaustauschschlüssel kompatibel**. Die im Schlüsselaustauschschlüssel angegebene Schlüsselgröße entspricht nicht der Größe des privaten Schlüssels für das Zertifikat. Dies gibt im Allgemeinen an, dass das Zertifikat auf dem Remotecomputer nicht dem Zertifikat in der Datenbank entspricht.<br /><br /> **Die Größe des öffentlichen Zertifikatschlüssels ist nicht mit der Sicherheitsheadersignatur kompatibel**. Der Sicherheitsheader enthält eine Signatur, die nicht mit dem öffentlichen Schlüssel des Zertifikats überprüft werden kann. Dies gibt im Allgemeinen an, dass das Zertifikat auf dem Remotecomputer nicht dem Zertifikat in der Datenbank entspricht.|1|ja|  
   
@@ -66,4 +63,3 @@ ms.lasthandoff: 06/22/2017
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   
-

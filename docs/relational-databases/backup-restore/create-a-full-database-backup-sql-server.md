@@ -2,14 +2,10 @@
 title: "Erstellen einer vollständigen Datenbanksicherung (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 06/13/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: backup-restore
+ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.suite: 
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +14,19 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 76660f46a6ff92e80dcf80d23ac1276ed55037bd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: a5f180c837af757fd5a8df7f356b8c644916612f
-ms.contentlocale: de-de
-ms.lasthandoff: 10/11/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Erstellen einer vollständigen Datenbanksicherung (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
  > Gehen Sie für SQL Server 2014 unter [Erstellen einer vollständigen Datenbanksicherung (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx).
 
   In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder PowerShell eine vollständige Datenbanksicherung erstellen.  
@@ -218,20 +213,20 @@ Eine gespeicherte Zugriffsrichtlinie wurde mit Lese-, Schreib-, und Auflistungsr
 *
     5.  Wählen Sie `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` aus dem Textfeld **Azure-Speichercontainer:** .
 
-    6.  Geben Sie `Sales_stripe1of2_20160601.bak` im Textfeld **Sicherungsdatei:** ein.
+    6.  Geben Sie im Textfeld **Sicherungsdatei:** `Sales_stripe1of2_20160601.bak`ein.
 
     7.  Klicken Sie auf **OK**.
 
     8.  Wiederholen Sie die Schritte **4** und **5**.
 
-    9.  Geben Sie `Sales_stripe2of2_20160601.bak` im Textfeld **Sicherungsdatei:** ein.
+    9.  Geben Sie im Textfeld **Sicherungsdatei:** `Sales_stripe2of2_20160601.bak`ein.
 
     10.  Klicken Sie auf **OK**.
 
     11.   Klicken Sie auf **OK**.
 
     **D2.  Eine Shared Access Signature ist vorhanden und eine SQL Server-Anmeldeinformation ist nicht vorhanden**
-  5.    Geben Sie `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` in das Textfeld **Azure-Speichercontainer:** ein
+  5.    Geben Sie `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` in das Textfeld **Azure-Speichercontainer:** ein.
   
   6.    Geben Sie die SAS in das Textfeld **Shared Access Signature:** ein.
   
@@ -405,4 +400,3 @@ Backup-SqlDatabase -ServerInstance "MyServer" –Database $database -BackupFile 
  [Vollständige Datenbanksicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)  
   
   
-

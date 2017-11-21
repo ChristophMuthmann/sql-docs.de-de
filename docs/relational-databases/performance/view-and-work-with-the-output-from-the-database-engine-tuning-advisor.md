@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,16 +25,16 @@ helpviewer_keywords:
 - reports [SQL Server], tuning
 - viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ce827e3df11e103bced1b62afb2329db9c81e0f4
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: fb34918a06fe49195766fbcdd22e8f762c9e4faf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -171,7 +170,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Bearbeiten Sie die in der Beispiel-XML-Eingabedatei enthaltenen **TuningOptions** - und **Configuration** -Elemente. Geben Sie im **TuningOptions** -Element an, welche physischen Entwurfsstrukturen der Datenbankoptimierungsratgeber während der Optimierungssitzung berücksichtigen soll. Geben Sie im **Configuration** -Element die physischen Entwurfsstrukturen an, die der hypothetischen Konfiguration der physischen Datenbankentwurfsstrukturen entsprechen, die der Datenbankoptimierungsratgeber analysieren soll. Weitere Informationen darüber, welche Attribute und untergeordneten Elemente Sie mit den übergeordneten Elementen **TuningOptions** und **Configuration** verwenden können, finden Sie unter [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
-4.  Speichern Sie die Eingabedatei mit der Dateinamenerweiterung **XML** .  
+4.  Speichern Sie die Eingabedatei mit der Dateinamenerweiterung **XML**.  
   
 5.  Überprüfen Sie die in Schritt 4 gespeicherte XML-Eingabedatei mit dem XML-Schema des Datenbankoptimierungsratgebers. Bei der Installation von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird dieses Schema unter dem folgenden Pfad installiert:  
   
@@ -260,7 +259,7 @@ ms.lasthandoff: 06/22/2017
  Datenbank mit den Objekten, für die Änderungen empfohlen wurden.  
   
  **Empfehlung**  
- Empfohlene Aktion zur Steigerung der Leistung. Mögliche Werte sind Create und Drop.  
+ Empfohlene Aktion zur Steigerung der Leistung. Mögliche Werte sind <localizedText>Create</localizedText> und <localizedText>Drop</localizedText>.  
   
  **Empfehlungsziel**  
  Die von der Empfehlung betroffene Partitionsfunktion oder das Partitionsschema. Das Symbol in dieser Spalte steht für die Empfehlung, den Wert unter **Empfehlungsziel** zu löschen oder hinzuzufügen, und dafür, ob es sich um eine Partitionsfunktion oder ein Partitionsschema handelt.  
@@ -282,7 +281,7 @@ ms.lasthandoff: 06/22/2017
  Mit der Empfehlung verbundene Tabelle.  
   
  **Empfehlung**  
- Empfohlene Aktion zur Steigerung der Leistung. Mögliche Werte sind Create und Drop.  
+ Empfohlene Aktion zur Steigerung der Leistung. Mögliche Werte sind <localizedText>Create</localizedText> und <localizedText>Drop</localizedText>.  
   
  **Empfehlungsziel**  
  Der Index oder die Sicht, auf den/die sich die Empfehlung bezieht. Das Symbol in dieser Spalte steht für die Empfehlung, den Wert unter **Empfehlungsziel**zu löschen oder hinzuzufügen.  
