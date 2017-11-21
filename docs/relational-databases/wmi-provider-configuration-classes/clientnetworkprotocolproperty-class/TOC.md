@@ -1,5 +1,5 @@
 # [ClientNetworkProtocolProperty-Klasse](clientnetworkprotocolproperty-class.md)
-# [PropertyIdx-Eigenschaftswert (ClientNetworkProtocolProperty-Klasse)](propertyidx-property-clientnetworkprotocolproperty-class.md)
+# [PropertyIdx-Eigenschaft (ClientNetworkProtocolProperty-Klasse)](propertyidx-property-clientnetworkprotocolproperty-class.md)
 # [PropertyName-Eigenschaft (ClientNetworkProtocolProperty-Klasse)](propertyname-property-clientnetworkprotocolproperty-class.md)
 # [PropertyNumVal-Eigenschaft (ClientNetworkProtocolProperty-Klasse)](propertynumval-property-clientnetworkprotocolproperty-class.md)
 # [PropertyStrVal-Eigenschaft (ClientNetworkProtocolProperty-Klasse)](propertystrval-property-clientnetworkprotocolproperty-class.md)

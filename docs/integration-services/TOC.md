@@ -28,6 +28,8 @@
 ## [Verbinden mit dem SSIS-Katalog in Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Zeitliche Planung der Paketausführung in Azure](lift-shift/ssis-azure-schedule-packages.md)
 ## [Verbinden mit Datenquellen mit der Windows-Authentifizierung](lift-shift/ssis-azure-connect-with-windows-auth.md)
+## [Verbinden mit Dateien und Dateifreigaben](lift-shift/ssis-azure-files-file-shares.md)
+
 # [Installation oder Upgrade](../integration-services/install-windows/install-integration-services.md)
 
 # [Entwicklungs- und Verwaltungstools](integration-services-ssis-development-and-management-tools.md)
@@ -169,3 +171,13 @@
 #### [Lektion 3-1: Kopieren des Bereitstellungspakets](lesson-3-1-copying-the-deployment-bundle.md)
 #### [Lektion 3-2: Ausführen des Paketinstallations-Assistenten](lesson-3-2-running-the-package-installation-wizard.md)
 #### [Lektion 3-3: Testen des bereitgestellten Pakets](lesson-3-3-testing-the-deployed-packages.md)
+
+# Ressourcen
+## Folgen Sie dem Blog
+### [SSIS-Teamblog](https://blogs.msdn.microsoft.com/ssis/)
+## Hilfe
+### [SSIS-Forum auf MSDN](https://social.msdn.microsoft.com/Forums/en-us/home?forum=sqlintegrationservices)
+### [SSIS-Tag in Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
+## Geben Sie Feedback
+### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
+## [Rufen Sie die Dokumente auf Ihrem PC auf](../sql-server/sql-server-help-installation.md)

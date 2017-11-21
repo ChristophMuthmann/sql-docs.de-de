@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], operators
 - operators (users) [Database Engine], modifying with Management Studio
 ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8e23fd7483965d019aaaae28dab95700f04abf74
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b8628cf736650c53493501777f79f970ff864209
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="edit-an-operator"></a>Bearbeiten eines Operators
 In diesem Thema wird beschrieben, wie Sie für Operatoren die Möglichkeit zum Empfangen von Benachrichtigungen und deren E-Mail-, Pager- und NET SEND-Adressen in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] oder [!INCLUDE[tsql](../../includes/tsql_md.md)]bearbeiten.  
@@ -63,7 +61,7 @@ Nur Mitglieder der festen Serverrolle **sysadmin** können Operatoren bearbeiten
   
 #### <a name="to-edit-an-operator"></a>So bearbeiten Sie einen Operator  
   
-1.  Klicken Sie im **Objekt-Explorer**auf das Pluszeichen, um den Server zu erweitern, der den Operator enthält, den Sie bearbeiten möchten.  
+1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Server zu erweitern, der den Operator enthält, den Sie bearbeiten möchten.  
   
 2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent**zu erweitern.  
   
@@ -111,4 +109,3 @@ Nur Mitglieder der festen Serverrolle **sysadmin** können Operatoren bearbeiten
   
 Weitere Informationen finden Sie unter [sp_update_operator (Transact-SQL)](http://msdn.microsoft.com/en-us/231750a6-4828-4d03-afe6-b91d38c42ed3).  
   
-

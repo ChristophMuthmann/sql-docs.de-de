@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - notifications [SQL Server], job status
 - displaying operators
 ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0289a935664edbdbc8b83395ebedad6b2bd5eaa4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a747402098366d0bbe387b76938fc5fbde8ed87a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-information-about-an-operator"></a>View Information About an Operator
 In diesem Thema wird beschrieben, wie Sie Infodermationen über einen [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agentoperatoder in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] oder [!INCLUDE[tsql](../../includes/tsql_md.md)]anzeigen können.  
@@ -63,7 +61,7 @@ Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Fest
   
 #### <a name="to-view-information-about-an-operator"></a>So zeigen Sie Informationen zu einem Operator an  
   
-1.  Klicken Sie im **Objekt-Explorer**auf das Pluszeichen, um den Server zu erweitern, der den Operator enthält, den Sie anzeigen möchten.  
+1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Server zu erweitern, der den Operator enthält, den Sie anzeigen möchten.  
   
 2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent**zu erweitern.  
   
@@ -104,4 +102,3 @@ Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Fest
   
 Weitere Informationen finden Sie unter [sp_help_operator (Transact-SQL)](http://msdn.microsoft.com/en-us/caedc43d-44b8-415a-897e-92923f6de3b8).  
   
-

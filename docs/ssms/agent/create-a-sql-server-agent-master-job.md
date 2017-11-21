@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], creating
 - master SQL Server Agent job [SQL Server]
 ms.assetid: c12ab23f-d7ee-43a5-8cd2-0a9121292bcd
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7e7a77acb4657324e748446b20a3f0b92d00949b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 97df1479aee6e7b1a057fa08e6bb52569c3ab431
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>Erstellen eines Masterauftrag für den SQL Server-Agent
 In diesem Thema wird beschrieben, wie Sie einen Masterauftrag für einen [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] oder [!INCLUDE[tsql](../../includes/tsql_md.md)]erstellen können.  
@@ -67,7 +65,7 @@ Falls bei Auftragsschritten, die Proxykonten verwenden, beim Herunterladen vom M
   
 #### <a name="to-create-a-master-sql-server-agent-job"></a>So erstellen Sie einen Masterauftrag für den SQL Server-Agent  
   
-1.  Klicken Sie im **Objekt-Explorer**auf das Pluszeichen, um den Server zu erweitern, auf dem Sie den SQL Server-Agent-Auftrag erstellen möchten.  
+1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Server zu erweitern, auf dem Sie den SQL Server-Agent-Auftrag erstellen möchten.  
   
 2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent**zu erweitern.  
   
@@ -145,4 +143,3 @@ Weitere Informationen finden Sie in den folgenden Themen:
   
 -   [sp_add_jobserver (Transact-SQL)](http://msdn.microsoft.com/en-us/485252cc-0081-490a-9bd1-cbbd68eea286)  
   
-

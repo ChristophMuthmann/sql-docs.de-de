@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - fixed database roles [SQL Server]
 - SQLAgentOperatorRole database role
 ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ccb75de64c08f26932a26af3c1c4b9d5a17d11a5
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a8b2d1ccf779150f478702870689c359af4b0182
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Feste Datenbankrollen des SQL Server-Agents
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] verfügt über die folgenden festen **msdb** -Datenbankrollen, mit denen Administratoren den Zugriff auf den [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent besser steuern können. In der folgenden Auflistung sind die Rollen von den niedrigsten bis hin zu den höchsten Zugriffsberechtigungen enthalten:  
@@ -57,8 +55,8 @@ Die folgende Tabelle enthält einen Überblick über die **SQLAgentUserRole** -B
 |----------|-------------|-----------------------------------|-------------------------------------------|-----------|  
 |Erstellen/Ändern/Löschen|Nein|Ja<br /><br />Der Auftragsbesitz kann nicht geändert werden.|Ja|Nein|  
 |Liste anzeigen (aufzählen)|Ja<br /><br />Die Liste mit verfügbaren Operatoren kann zum Verwenden in **sp_notify_operator** und im Dialogfeld **Auftragseigenschaften** von Management Studio abgerufen werden.|Ja|ja|Ja<br /><br />Die Liste der Proxys steht nur im Dialogfeld **Auftragsschritt-Eigenschaften** von Management Studio zur Verfügung.|  
-|Aktivieren/Deaktivieren|Nein|ja|Ja|Nicht verfügbar|  
-|Eigenschaften anzeigen|Nein|ja|ja|Nein|  
+|Aktivieren/Deaktivieren|Nein|Ja|Ja|Nicht verfügbar|  
+|Eigenschaften anzeigen|Nein|Ja|ja|Nein|  
 |Ausführen/Beenden/Starten|Nicht verfügbar|Ja|Nicht verfügbar|Nicht verfügbar|  
 |Auftragsverlauf anzeigen|Nicht verfügbar|Ja|Nicht verfügbar|Nicht verfügbar|  
 |Auftragsverlauf löschen|Nicht verfügbar|Nein<br /><br />Den Mitgliedern von **SQLAgentUserRole** muss die EXECUTE-Berechtigung für **sp_purge_jobhistory** zum Löschen des Auftragsverlaufs für Aufträge, deren Besitzer sie sind, ausdrücklich erteilt werden. Sie können den Auftragsverlauf für keine anderen Aufträge löschen.|Nicht verfügbar|Nicht verfügbar|  
@@ -77,7 +75,7 @@ Die folgende Tabelle enthält einen Überblick über die **SQLAgentReaderRole** 
 |Erstellen/Ändern/Löschen|Nein|Ja (nur Aufträge mit Besitzer)<br /><br />Der Auftragsbesitz kann nicht geändert werden.|Nein|Ja (nur Zeitpläne mit Besitzer)|Nein|  
 |Liste anzeigen (aufzählen)|Ja<br /><br />Die Liste mit verfügbaren Operatoren kann zum Verwenden in **sp_notify_operator** und im Dialogfeld **Auftragseigenschaften** von Management Studio abgerufen werden.|Ja|ja|ja|Ja<br /><br />Die Liste der Proxys steht nur im Dialogfeld **Auftragsschritt-Eigenschaften** von Management Studio zur Verfügung.|  
 |Aktivieren/Deaktivieren|Nein|Ja (nur Aufträge mit Besitzer)|Nein|Ja (nur Zeitpläne mit Besitzer)|Nicht verfügbar|  
-|Eigenschaften anzeigen|Nein|ja|ja|ja|Nein|  
+|Eigenschaften anzeigen|Nein|Ja|ja|ja|Nein|  
 |Eigenschaften bearbeiten|Nein|Ja (nur Aufträge mit Besitzer)|Nein|Ja (nur Zeitpläne mit Besitzer)|Nein|  
 |Ausführen/Beenden/Starten|Nicht verfügbar|Ja (nur Aufträge mit Besitzer)|Nein|Nicht verfügbar|Nicht verfügbar|  
 |Auftragsverlauf anzeigen|Nicht verfügbar|Ja|Ja|Nicht verfügbar|Nicht verfügbar|  
@@ -118,4 +116,3 @@ Die Mitglieder der festen Serverrolle **sysadmin** haben Zugriff auf alle [!INCL
 [sp_notify_operator (Transact-SQL)](http://msdn.microsoft.com/en-us/c440f5c9-9884-4196-b07c-55d87afb17c3)  
 [sp_purge_jobhistory (Transact-SQL)](http://msdn.microsoft.com/en-us/237f9bad-636d-4262-9bfb-66c034a43e88)  
   
-

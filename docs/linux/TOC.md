@@ -12,6 +12,7 @@
 ## [Install & Connect - Ubuntu ((Installieren und Verbinden – Ubuntu)](quickstart-install-connect-ubuntu.md)
 ## [Run & Connect - Docker (Ausführen und Verbinden – Docker)](quickstart-install-connect-docker.md)
 ## [Provision a SQL VM in Azure (Bereitstellen einer SQL-VM in Azure)](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+## [Ausführen und Verbinden – Cloud](quickstart-install-connect-clouds.md)
 
 # Lernprogramme
 ## [1_Migration von Windows](sql-server-linux-migrate-restore-database.md)
@@ -77,7 +78,7 @@
 ##### [Configure on SUSE (Konfigurieren unter SUSE)](sql-server-linux-availability-group-cluster-sles.md)
 ##### [Configure on Ubuntu (Konfigurieren unter Ubuntu)](sql-server-linux-availability-group-cluster-ubuntu.md)
 ##### [Operate (Ausführen)](sql-server-linux-availability-group-failover-ha.md)
-#### [Create for read scale-out only (Nur für die schreibgeschützte horizontale Skalierung erstellen)]()
+#### [Erstellung nur für schreibgeschützten Zugriff]()
 ##### [Configure AG (Konfigurieren von AG)](sql-server-linux-availability-group-configure-rs.md)
 
 ## [Sicherheit](sql-server-linux-security-overview.md)
