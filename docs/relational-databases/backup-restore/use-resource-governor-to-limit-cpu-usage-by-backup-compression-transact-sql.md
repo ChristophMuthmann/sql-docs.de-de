@@ -2,9 +2,12 @@
 title: "Einschränken der CPU-Nutzung durch die Sicherungskomprimierung mithilfe der Ressourcenkontrolle (Transact-SQL) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f3b254dd4fa4b664a0787898a61cc94ca050a097
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 967060be06fd9b7769705aa0995ba288f9ba19f8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Einschränken der CPU-Nutzung durch die Sicherungskomprimierung mithilfe der Ressourcenkontrolle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Standardmäßig steigt die CPU-Nutzung durch die Sicherung mit Komprimierung erheblich, und die bei der Komprimierung zusätzlich benötigten CPU-Ressourcen können sich negativ auf gleichzeitig ausgeführte Vorgänge auswirken. Daher ist es u.U. sinnvoll, in einer Sitzung, bei der die CPU-Nutzung durch den[Resource Governor](../../relational-databases/resource-governor/resource-governor.md) eingeschränkt ist, eine komprimierte Sicherung mit niedriger Priorität zu erstellen, wenn CPU-Konflikte bestehen. In diesem Thema wird ein Szenario dargestellt, in dem die Sitzungen eines bestimmten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Benutzers klassifiziert werden, indem diese einer Arbeitsauslastungsgruppe der Ressourcenkontrolle zugeordnet werden, die die CPU-Nutzung in solchen Fällen einschränkt.  
   

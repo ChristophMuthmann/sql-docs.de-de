@@ -8,25 +8,23 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - driver version number [ODBC]
 - ODBC drivers, version number
 ms.assetid: 43451080-a562-4231-b1d4-1ba35ca0ea79
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: afe647fd866e396cdf418824281b9f6cfbc49de1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fc0d054304aadb3f5c8df795dca4ad327090e5c1
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="check-the-odbc-sql-server-driver-version-windows"></a>Überprüfen der Version des ODBC SQL Server-Treibers (Windows)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,4 +48,3 @@ ms.lasthandoff: 08/02/2017
  [Öffnen des ODBC-Datenquellen-Administrators](../../database-engine/configure-windows/open-the-odbc-data-source-administrator.md)  
   
   
-

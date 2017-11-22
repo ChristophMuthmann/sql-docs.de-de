@@ -8,24 +8,21 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- table creation [SQL Server], Visual Database Tools
+helpviewer_keywords: table creation [SQL Server], Visual Database Tools
 ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BYHAM
 ms.author: rickbyh
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: d4ee3aeccb0b6c84fbd265ab1ad2f566ef9f30a0
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
-ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
-ms.openlocfilehash: 6251736a0ba3f21e0dca7f97d32efb03205200d8
-ms.contentlocale: de-de
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-tables-database-engine"></a>Erstellen von Tabellen (Datenbankmodul)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -103,4 +100,3 @@ Für diesen Task benötigen Sie die CREATE TABLE-Berechtigung in der Datenbank u
  Weitere Beispiele finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
   
-

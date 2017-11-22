@@ -8,22 +8,20 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: e7f2945bcceefdd7613a44a292fa5794554607ce
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
-ms.sourcegitcommit: 20a301e257244b66e1c149c7cf8cf1f2489eb489
-ms.openlocfilehash: 7115b3aa6dcad15fa26603dfe8555287af015bdf
-ms.contentlocale: de-de
-ms.lasthandoff: 09/29/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="temporal-tables"></a>Temporale Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -172,4 +170,3 @@ SELECT * FROM Employee
  [Metadatenansichten und Funktionen für temporale Tabellen](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
-

@@ -8,12 +8,10 @@ ms.service:
 ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-polybase
+ms.technology: database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords:
-- PolyBase
+keywords: PolyBase
 helpviewer_keywords:
 - PolyBase, import and export
 - Hadoop, import with PolyBase
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - Azure blob storage, import with PolyBase
 - Azure blob storage, export with PolyBase
 ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d6cc1b4523bdb0b48cfc22b34b205e15613fb290
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2648460e86e3fca300fdf1cb0396602e176236c8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="polybase-queries"></a>PolyBase-Abfragen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -197,4 +194,3 @@ SELECT name, type, is_external FROM sys.tables WHERE name='myTableName'
  Weitere Informationen zur Problembehandlung finden Sie unter [PolyBase troubleshooting](../../relational-databases/polybase/polybase-troubleshooting.md)(PolyBase-Problembehandlung).  
   
   
-

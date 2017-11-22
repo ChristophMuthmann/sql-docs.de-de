@@ -13,20 +13,18 @@ ms.technology:
 - xevents
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- extended events [SQL Server], engine
+helpviewer_keywords: extended events [SQL Server], engine
 ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e11bf82e65be3b127ca7ee6c4f43ab2b60531b71
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 749c0ec0825f2024c646fecae692bdcbbb082b24
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-extended-events-engine"></a>Modul für erweiterte Ereignisse von SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,4 +69,3 @@ ms.lasthandoff: 06/22/2017
  [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md)  
   
   
-

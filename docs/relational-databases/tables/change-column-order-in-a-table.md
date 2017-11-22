@@ -8,25 +8,23 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - columns [SQL Server], change order in a table
 - column order, change
 ms.assetid: cd99ef56-9085-431a-a0fc-58e7add5399f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f9ab22cf6c60bd7d89ff70eba15ca65c731a1fb1
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d8e31c18cf8441fbd5b7b5a2bed69aaa79a94910
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="change-column-order-in-a-table"></a>Ändern der Spaltenreihenfolge einer Tabelle
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -60,4 +58,3 @@ ms.lasthandoff: 06/22/2017
  Diese Aufgabe kann nicht mit Transact-SQL-Anweisungen ausgeführt werden.  
   
 ###  <a name="TsqlExample"></a>  
-

@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9a3f027fddc3ab7094b2ca82ae1f9ad3190a886
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 160513acf82e56718e15893de1aa70d698174c80
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SELECT- und JOIN-Anweisungen von Systemsichten für erweiterte Ereignisse in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -122,7 +121,7 @@ Die Referenzdokumentation zu den Katalogsichten für erweiterte Ereignisse finde
 
 Im **Objekt-Explorer**von SSMS können Sie das Dialogfeld **Neue Sitzung** ausführen, indem Sie **Management** > **Extended Events**erweitern und anschließend mit der rechten Maustaste auf **Sitzungen** > **Neue Sitzung**klicken.
 
-Im großen Dialogfeld **New Session** (Neue Sitzung) wird im ersten Abschnitt namens **General** (Allgemein) angezeigt, dass die Option **Start the event session at server startup** (Ereignissitzung beim Serverstart starten) ausgewählt wurde.
+Im großen Dialogfeld **New Session** (Neue Sitzung) wird im ersten Abschnitt namens **General**(Allgemein) angezeigt, dass die Option **Start the event session at server startup**(Ereignissitzung beim Serverstart starten) ausgewählt wurde.
 
 ![Neue Sitzung > Allgemein, Ereignissitzung beim Serverstart starten.](../../relational-databases/extended-events/media/xevents-ssms-ac105-eventname-startup.png)
 
@@ -134,7 +133,7 @@ Als nächstes sehen wir, dass im Abschnitt **Events** (Ereignisse), das Ereignis
 
 <a name="resource_type_PAGE_cat_view"></a>
 
-Wir sind immer noch im Abschnitt **Events** > **Configure** (Ereignisse > Konfigurieren) und sehen als nächstes, dass [**resource_type** auf **PAGE**](#resource_type_dmv_actual_row) festgelegt wurde. Dies bedeutet, dass Ereignisdaten nicht vom Ereignismodul zum Ziel gesendet wird, wenn der Wert **resource_type** nicht **PAGE**ist.
+Wir sind immer noch im Abschnitt **Events** > **Configure** (Ereignisse &gt; Konfigurieren) und sehen als nächstes, dass [**resource_type** auf **PAGE**](#resource_type_dmv_actual_row)festgelegt wurde. Dies bedeutet, dass Ereignisdaten nicht vom Ereignismodul zum Ziel gesendet wird, wenn der Wert **resource_type** nicht **PAGE**ist.
 
 Es werden zusätzliche Prädikatfilter für die Datenbank und für einen Leistungsindikator angezeigt.
 
@@ -924,6 +923,5 @@ Hier wird der Inhalt der ersten XML-Zelle aus dem vorherigen zurückgegebenen Ro
   </action>
 </event>
 ```
-
 
 

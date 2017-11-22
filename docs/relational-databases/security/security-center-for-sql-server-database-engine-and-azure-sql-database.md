@@ -8,29 +8,26 @@ ms.reviewer:
 ms.service: 
 ms.component: security
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- Security [SQL Server]
+f1_keywords: Security [SQL Server]
 helpviewer_keywords:
 - SQL Server, security
 - security [SQL Server]
 - database security [SQL Server]
 - databases [SQL Server], security
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 7e08477e178143b8d37a55c3e01cfc3a0c5145fe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
-ms.openlocfilehash: ec39e8b4a49d0a452a4030a18f7b7a4c7a5d9922
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Sicherheitscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -103,4 +100,3 @@ ms.lasthandoff: 09/27/2017
  [Datenbankmodulfunktionen und Tasks](http://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34)  
  [Schutz Ihres geistigen SQL Server-Eigentums](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)   
   
-
