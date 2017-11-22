@@ -1,0 +1,39 @@
+<DTAXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/sqlserver/2004/07/dta">
+  <metadata xmlns="">
+    <meta name="ms.openlocfilehash" value="fbfbde3078a0d2e5a3e884b97dedc076b5c9cf7a" />
+    <meta name="ms.sourcegitcommit" value="9678eba3c2d3100cef408c69bcfe76df49803d63" />
+    <meta name="ms.translationtype" value="MT" />
+    <meta name="ms.contentlocale" value="de-DE" />
+    <meta name="ms.lasthandoff" value="11/09/2017" />
+  </metadata>
+  <DTAInput>
+    <Server>
+      <Name>MyServerName</Name>
+      <!-- To tune multiplate databases, list them and their associated tables in the following section. -->
+      <Database>
+        <Name>MyDatabaseName</Name>
+        <Schema>
+          <Name>MyDatabaseSchemaName</Name>
+          <!-- You can list as many tables as necessary in the following section. -->
+          <Table>
+            <Name>MyTableName1</Name>
+          </Table>
+          <Table>
+            <Name>MyTableName2</Name>
+          </Table>
+        </Schema>
+      </Database>
+    </Server>
+    <Workload>
+      <!-- The following element specifies a workload file, which can be a trace file or a Transact-SQL script file. -->
+      <File>c:\PathToYourWorkloadFile</File>
+    </Workload>
+    <TuningOptions>
+      <TuningTimeInMin>60</TuningTimeInMin>
+      <FeatureSet>IDX_IV</FeatureSet>
+      <Partitioning>NONE</Partitioning>
+      <KeepExisting>NONE</KeepExisting>
+      <OnlineIndexOperation>OFF</OnlineIndexOperation>
+    </TuningOptions>
+  </DTAInput>
+</DTAXML>

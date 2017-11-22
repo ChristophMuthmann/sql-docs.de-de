@@ -2,9 +2,12 @@
 title: Datenbereinigung | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/01/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0c17b3a503a1ab2f7149c9b5a1ad425e57b2aae3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 48ab1d80a01cbcaf74f5ba11850ab61f358b24fe
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-cleansing"></a>Datenbereinigung
   Die Datenbereinigung ist der Prozess der Datenqualitätsanalyse in einer Datenquelle, wobei die Empfehlungen vom System manuell genehmigt/zurückgewiesen werden und dadurch Änderungen an den Daten vorgenommen werden. Datenbereinigung in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) schließt einen computerunterstützten Prozess ein, der analysiert, wie Daten mit den Informationen in einer Wissensdatenbank übereinstimmen, sowie einen interaktiven Prozess, mit dem der Data Steward computerunterstützte Prozessergebnisse anzeigen und ändern kann, um sicherzustellen, dass die Datenbereinigung entsprechend ausgeführt wird.  
