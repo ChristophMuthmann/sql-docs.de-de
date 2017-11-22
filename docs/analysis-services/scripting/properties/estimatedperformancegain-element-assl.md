@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- EstimatedPerformanceGain Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: EstimatedPerformanceGain Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- EstimatedPerformanceGain
-helpviewer_keywords:
-- EstimatedPerformanceGain element
+applies_to: SQL Server 2016 Preview
+f1_keywords: EstimatedPerformanceGain
+helpviewer_keywords: EstimatedPerformanceGain element
 ms.assetid: d7487977-73c3-4244-ad5d-3c357b219db4
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b574ee4d98186ad406e7f3a763bc07ee5d5a7abd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ff2c7edeb2d26a8ecaea19277844c61772e581bd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="estimatedperformancegain-element-assl"></a>EstimatedPerformanceGain-Element (ASSL)
   Enthält den schreibgeschützten Prozentwert des geschätzten Leistungsgewinns für die Partition.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

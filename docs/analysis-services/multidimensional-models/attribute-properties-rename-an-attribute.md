@@ -20,17 +20,16 @@ helpviewer_keywords:
 - attributes [Analysis Services], renaming
 - Name property
 ms.assetid: 4094f0a7-2fde-407c-9b36-c8b30537c2da
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6a77edcfe011502f3c863c873135f86163e9eb11
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 51dcac0162d224006a40396468af1f3677c1fab9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-properties---rename-an-attribute"></a>Attributeigenschaften: Umbenennen eines Attributs
   Der Name eines Attributs in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] wird durch seine **Name** -Eigenschaft definiert. Klicken Sie zum Umbenennen eines Attributs im Bereich **Attribute** auf der Registerkarte **Dimensionsstruktur** des Dimensions-Designers in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]auf ein Attribut, und klicken Sie anschließend auf **Umbenennen**. Wenn der Bereich **Attribute** sich in der Rasteransicht befindet, klicken Sie auf den Namen des Attributs, und bearbeiten Sie diesen direkt im Raster. Sie können auch ein Attribut auswählen und die **Name** -Eigenschaft im Fenster **Eigenschaften** festlegen.  
@@ -41,4 +40,3 @@ ms.lasthandoff: 09/01/2017
  [Dimensionsattributeigenschaftenverweis](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   
-

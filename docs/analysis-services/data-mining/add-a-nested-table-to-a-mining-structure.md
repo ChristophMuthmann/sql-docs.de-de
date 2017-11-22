@@ -19,17 +19,16 @@ helpviewer_keywords:
 - mining structures [Analysis Services], nested tables
 - adding nested tables
 ms.assetid: 6cf9c701-9cff-4fae-94c2-73796c24ef59
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 95bac11034fd091d9390a618568a6b58e6067dcf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a33c2958724cf1d64a0706427afa377d4db9e8bc
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>Hinzufügen einer geschachtelten Tabelle zu einer Miningstruktur
   Mithilfe des Data Mining-Designers fügen Sie einer Miningstruktur eine geschachtelte Tabelle hinzu, die Sie zuvor im Data Mining-Assistenten erstellt haben.  
@@ -56,4 +55,3 @@ ms.lasthandoff: 09/01/2017
  [Tasks und Anweisungen für Miningstrukturen](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   
-

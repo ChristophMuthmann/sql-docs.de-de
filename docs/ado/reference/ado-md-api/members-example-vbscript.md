@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Members collection [ADO MD], VBScript example
+dev_langs: VB
+helpviewer_keywords: Members collection [ADO MD], VBScript example
 ms.assetid: 87bbd4ad-bb1a-4123-93ef-99ef47fd970b
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1e583363b1aeb0af736b34634a158fe6d136acde
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 33ec3dbbe5d79f8623e063e778aa544b57ebd9d2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="members-example-vbscript"></a>Member-Beispiel (VBScript)
 Dieses Beispiel verwendet eine MDX-Abfragezeichenfolge zum Abrufen von OLAP-Daten und schreibt den resultierenden Cellset auf ein HTML-Tabellenstruktur mit Spalte umfassende Funktionen für mehrere Dimension Cellsets.  
@@ -345,4 +341,3 @@ For h=0 to intDC0
 </body>  
 </html>  
 ```
-

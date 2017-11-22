@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Visible Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Visible Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Visible
-helpviewer_keywords:
-- Visible element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Visible
+helpviewer_keywords: Visible element
 ms.assetid: 3e9baf1b-351f-4ebf-b57d-13d561f72d6f
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: de9a8d9a56f4842fadc5bcb701463c4f159aaf63
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1fc6ffa6df721501245d78dc85763e881bd83159
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="visible-element-assl"></a>Visible-Element (ASSL)
   Bestimmt die Sichtbarkeit des übergeordneten Elements.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Aliases Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Aliases Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Aliases
-helpviewer_keywords:
-- Aliases element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Aliases
+helpviewer_keywords: Aliases element
 ms.assetid: 9de9e683-d30d-4d61-b32d-c5a946825742
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0de2641b217b3d8d3db1756d5eb9bef0da2d3ee3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a2c0b1eb29df31046b0cb8175be382af50a920a3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="aliases-element-assl"></a>Aliases-Element (ASSL)
   Enthält die Auflistung der [Alias](../../../analysis-services/scripting/properties/alias-element-assl.md) Elemente, die zu einer [Konto](../../../analysis-services/scripting/objects/account-element-assl.md) Element  
@@ -77,4 +71,3 @@ ms.lasthandoff: 09/01/2017
  [Schemaauflistungen &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

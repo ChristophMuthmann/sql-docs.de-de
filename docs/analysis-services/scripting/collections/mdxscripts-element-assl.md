@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MdxScripts Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: MdxScripts Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- MdxScripts
-helpviewer_keywords:
-- MdxScripts element
+applies_to: SQL Server 2016 Preview
+f1_keywords: MdxScripts
+helpviewer_keywords: MdxScripts element
 ms.assetid: 0aaa849f-e723-4245-8c16-7ed049590fd2
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 75aa1577e0e4e77187cb52491ee4afa6e3273df2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e5e4f7f00e9da3e3324751b0dd22fb3d8badea90
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdxscripts-element-assl"></a>MdxScripts-Element (ASSL)
   Enthält die Auflistung der [MdxScript](../../../analysis-services/scripting/objects/mdxscript-element-assl.md) Elemente, die zu einem [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) Element.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Schemaauflistungen &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

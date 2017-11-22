@@ -8,22 +8,20 @@ ms.service: ssdt
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- tools-ssdt
+ms.technology: tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 68b76541-ab99-436a-982b-f18c46bc6fe3
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 20cd5814a6855e7a576642d23d83166c48603a8a
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 67d200f7fd16799631dd3f01be5eb2a820fe6def
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-tier-application-framework---license-terms"></a>Data-Tier Application Framework – Lizenzbedingungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -89,7 +87,7 @@ von Microsoft für diese Software, sofern diese Elemente nicht von anderen Bedin
   
 5.  **SICHERUNGSKOPIE.** Sie dürfen eine Sicherungskopie der Software erstellen. Sie dürfen diese nur zur erneuten Installation der Software verwenden.  
   
-6.  **DOKUMENTATION** Jede Person, die einen gültigen Zugang zu Ihrem Computer oder internen Netzwerk besitzt, darf die Dokumentation für interne und Referenzzwecke kopieren und verwenden.  
+6.  **DOKUMENTATION.** Jede Person, die einen gültigen Zugang zu Ihrem Computer oder internen Netzwerk besitzt, darf die Dokumentation für interne und Referenzzwecke kopieren und verwenden.  
   
 7.  **EXPORTEINSCHRÄNKUNGEN.** Die Software unterliegt den Exportgesetzen und -regelungen der USA. Sie müssen alle inländischen und internationalen Gesetze und Bestimmungen einhalten, die für die Software gelten. Zu diesen Gesetzen zählen Einschränkungen zu Zielen, Endbenutzern und zur Endverwendung. Weitere Informationen finden Sie unter „www.microsoft.com/exporting“.  
   
@@ -135,4 +133,3 @@ Sie gilt auch dann, wenn Microsoft von der Möglichkeit der Schäden wusste oder
 Elle s’applique également même si Microsoft connaissait l'éventualité d'un tel dommage. La limitation ou exclusion ci-dessus peut également ne pas vous être applicable, car votre pays n’autorise pas l’exclusion ou la limitation de responsabilité pour les dommages indirects, accessoires ou de quelque nature que ce soit.  
   
   
-

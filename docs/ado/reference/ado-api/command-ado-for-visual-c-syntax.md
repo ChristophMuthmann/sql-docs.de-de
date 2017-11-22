@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-dev_langs:
-- C++
-helpviewer_keywords:
-- Command collection [ADO], ADO for Visual C++ syntax
+dev_langs: C++
+helpviewer_keywords: Command collection [ADO], ADO for Visual C++ syntax
 ms.assetid: cf12cbd1-25f7-4bb5-aa94-0fe823b3b6d6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 807992ec7bb5f0c96f466f08653adcf0fde601c3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5d4a3f4714f4d813f4423e68cae2ae1fb404eb51
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="command-ado-for-visual-c-syntax"></a>Befehl (ADO für Visual C++-Syntax)
 ## <a name="methods"></a>Methoden  
@@ -61,4 +57,3 @@ get_Parameters(ADOParameters **ppvObject)
   
 ## <a name="see-also"></a>Siehe auch  
  [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)
-

@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- EstimatedCount Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: EstimatedCount Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- EstimatedCount
-helpviewer_keywords:
-- EstimatedCount element
+applies_to: SQL Server 2016 Preview
+f1_keywords: EstimatedCount
+helpviewer_keywords: EstimatedCount element
 ms.assetid: ce84b54a-8ab2-42f4-a7dd-e10a3d41cb4d
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 70ce6096c424234d144203044e53eb80ccb7fcb5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 683f8dee8bdb1e765bb6af695a1109093842bd29
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="estimatedcount-element-assl"></a>EstimatedCount-Element (ASSL)
   Enthält die geschätzte Anzahl von Elementen eines Attributs, gemäß der Definition vom Benutzer.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

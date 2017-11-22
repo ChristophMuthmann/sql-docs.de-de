@@ -13,24 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - OLAP objects [Analysis Services], dimensions
 - dimensions [Analysis Services]
 - Analysis Services objects, dimensions
 ms.assetid: 2b114135-2572-4479-8c81-3ccf0cfeb9f7
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ffb3b3a3ef069be26ff6d3812d52ff4d18a7dc9c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: aa2cc688c2fd70a212f4f44766185ae69476358a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dimensions-analysis-services---multidimensional-data"></a>Dimensionen (Analysis Services – Mehrdimensionale Daten)
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Dimensionen sind eine wesentliche Komponente von Cubes. Mit Dimensionen werden Daten nach Interessensbereichen geordnet, z. B. nach Kunden, Geschäften oder Angestellten. Dimensionen in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] enthalten Attribute, die den Spalten in den Dimensionstabellen entsprechen. Diese Attribute erscheinen in der Form von Attributhierarchien und können in benutzerdefinierten Hierarchien organisiert, oder basierend auf den Spalten der zugrunde liegenden Dimensionstabelle als Über-/Unterordnungshierarchien definiert werden. Hierarchien werden dazu verwendet, die in einem Cube enthaltenen Measures zu ordnen. Die folgenden Themen bieten eine Übersicht über Dimensionen, Attribute und Hierarchien.  
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/01/2017
  [Cubeobjekte &#40; Analysis Services – mehrdimensionale Daten &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
   
   
-

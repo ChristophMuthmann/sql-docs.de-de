@@ -11,20 +11,18 @@ ms.service:
 ms.component: guide
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords:
-- ADO, security
+helpviewer_keywords: ADO, security
 ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fbc093aa095d74831e0f9d75ad78159db2e498e2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 51c7e3cf9c99bdd76ce1b84a7c387b1e6e4d2f58
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-security-design-features"></a>ADO-Sicherheitsfunktionen Entwurf
 In den folgenden Abschnitten wird beschrieben, Entwurf Sicherheitsfunktionen in ActiveX Data Objects (ADO) 2.8 und höher. Diese Änderungen wurden in ADO 2.8 vorgenommen, um die Sicherheit zu verbessern. ADO 6.0, das in Windows DAC 6.0 in Windows Vista enthalten ist, ist funktionell gleichwertig mit ADO 2.8, die in MDAC 2.8 in Windows XP und Windows Server 2003 enthalten war. Dieses Thema enthält Informationen zum am besten Sichern Ihrer Anwendungen in ADO 2.8 oder höher.
@@ -120,4 +118,3 @@ This Website is using your identity to access a data source. If you trust this W
 
 > [!NOTE]
 >  Datei typüberprüfung gilt in diesem Abschnitt beschriebenen nur für Windows 2000 und höher. Es gilt nicht für Situationen, in denen ADO 2.8 oder höher unter früheren Versionen von Windows, z. B. Windows 98 ausgeführt wird.
-

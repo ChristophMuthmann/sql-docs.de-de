@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- SourceAttributeID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: SourceAttributeID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- SourceAttributeID
-helpviewer_keywords:
-- SourceAttributeID element
+applies_to: SQL Server 2016 Preview
+f1_keywords: SourceAttributeID
+helpviewer_keywords: SourceAttributeID element
 ms.assetid: 8973eb62-6142-4ce2-ad42-c8be2b43c04f
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bef6d96192765f5fffa6468c7c84093dacee992e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cabbcfb07d284f684b43db44d751eda34ad93481
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sourceattributeid-element-assl"></a>SourceAttributeID-Element (ASSL)
   Enthält den Bezeichner (ID) des Quellattributs, auf denen die [Ebene](../../../analysis-services/scripting/objects/level-element-assl.md) -Element basiert.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

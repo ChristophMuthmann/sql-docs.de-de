@@ -13,25 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - schema rowsets [Analysis Services], OLE DB for OLAP
 - OLE DB for OLAP schema rowsets
 - schema rowsets [OLE DB for OLAP]
 - rowsets [Analysis Services], OLE DB for OLAP
 ms.assetid: 5fad3ecc-407c-4148-862e-ea6119cc7480
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f06af3341034ccc9ddebe1ac6a130be705bdd0cd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 655e40afe2808b5f26216923d54e474054170a54
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ole-db-for-olap-schema-rowsets"></a>OLE DB für OLAP-Schemarowsets
   Die folgenden OLE DB für OLAP-Schemarowsets werden vom [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis-Anbieter (XMLA) unterstützt.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 09/01/2017
 |-------------------------------|-----------------|  
 |[DISCOVER_INSTANCES-Rowset](../../../analysis-services/schema-rowsets/ole-db-olap/discover-instances-rowset.md)|Beschreibt die Instanzen auf dem Server.|  
 |[DISCOVER_KEYWORDS-Rowset &#40; OLE DB für OLAP- &#41;](../../../analysis-services/schema-rowsets/ole-db-olap/discover-keywords-rowset-ole-db-for-olap.md)|Listet eine Liste von vom Anbieter reservierten Wörtern auf.|  
-|[MDSCHEMA_ACTIONS-Rowsets](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-actions-rowset.md)|Beschreibt die Aktionen, die der Clientanwendung möglicherweise zur Verfügung stehen.|  
+|[MDSCHEMA_ACTIONS-Rowset](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-actions-rowset.md)|Beschreibt die Aktionen, die der Clientanwendung möglicherweise zur Verfügung stehen.|  
 |[MDSCHEMA_CUBES-Rowset](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-cubes-rowset.md)|Beschreibt die Struktur der Cubes innerhalb einer Datenbank.|  
 |[MDSCHEMA_DIMENSIONS-Rowset](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-dimensions-rowset.md)|Beschreibt die freigegebenen und privaten Dimensionen innerhalb einer Datenbank.|  
 |[MDSCHEMA_FUNCTIONS-Rowset](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-functions-rowset.md)|Beschreibt die Funktionen, die mit der Datenbank verbundene Clientanwendungen zur Verfügung stehen.|  
@@ -69,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services-Schemarowsets](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   
-

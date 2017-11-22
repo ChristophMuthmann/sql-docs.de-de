@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ColumnID Element (ColumnBinding)
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ColumnID Element (ColumnBinding)
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ColumnID
-helpviewer_keywords:
-- ColumnID element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ColumnID
+helpviewer_keywords: ColumnID element
 ms.assetid: f4edf532-7e40-4ee2-9b5e-48b3c3de7a74
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d13ccee573076a8b56071601d86c693240621d1c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2c206495ab2a8391738011e4e76f9ab252122a51
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="columnid-element-columnbinding-assl"></a>ColumnID-Element (ColumnBinding) (ASSL)
   Enthält den Bezeichner (ID) der Spalte innerhalb der Tabelle, an die das Datenelement gebunden ist.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

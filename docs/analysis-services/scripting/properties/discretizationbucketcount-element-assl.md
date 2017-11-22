@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DiscretizationBucketCount Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DiscretizationBucketCount Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DiscretizationBucketCount
-helpviewer_keywords:
-- DiscretizationBucketCount element
+applies_to: SQL Server 2016 Preview
+f1_keywords: DiscretizationBucketCount
+helpviewer_keywords: DiscretizationBucketCount element
 ms.assetid: 551a73ae-59e1-4079-a2d9-988df96b5e07
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9c388580d5ec8169d7c84856c3971ace18b80507
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 80e3dcaa9c2cd5ee79dd1873c85b23d0a8054b33
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discretizationbucketcount-element-assl"></a>DiscretizationBucketCount-Element (ASSL)
   Enthält die Anzahl der Buckets, in denen diskretisiert werden soll.  
@@ -76,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Caption Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Caption Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Caption
-helpviewer_keywords:
-- Caption element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Caption
+helpviewer_keywords: Caption element
 ms.assetid: ed2be851-0ddc-4fa5-8aee-b2acb2e6d25e
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f233a7d5b02448a73b3d0966cd2f929c6d6b03c1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 81e2c617212ed8f383d4835176bcef8142719630
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="caption-element-assl"></a>Caption-Element (ASSL)
   Enthält die Beschriftung für das zugeordnete übergeordnete Element.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

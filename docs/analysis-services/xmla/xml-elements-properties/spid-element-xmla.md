@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- SPID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: SPID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#SPID
 - microsoft.xml.analysis.spid
 - urn:schemas-microsoft-com:xml-analysis#SPID
-helpviewer_keywords:
-- SPID element
+helpviewer_keywords: SPID element
 ms.assetid: c4a54dcb-a0cd-4255-9e0f-a34eb990854f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4feb6748cacd70b31470c0496ead5c7dacec6dd1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eaeb9f5e9560d784b65b535618d05c57e9402973
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="spid-element-xmla"></a>SPID-Element (XMLA)
   Identifiziert einen aktiven Serverprozessbezeichner (SPID), für das übergeordnete Element ausgeführt ["Abbrechen"](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) Element.  
@@ -78,4 +73,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

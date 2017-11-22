@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MemberNamesUnique Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: MemberNamesUnique Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- MemberNamesUnique
-helpviewer_keywords:
-- MemberNamesUnique element
+applies_to: SQL Server 2016 Preview
+f1_keywords: MemberNamesUnique
+helpviewer_keywords: MemberNamesUnique element
 ms.assetid: bd4e75b2-4605-4ebc-a535-10f743eba08e
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fc19331d253fe7a0c9abf51c9e93e35421f418be
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9a57a5fe9775ee68d452f84d4b681bb44120ae62
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="membernamesunique-element-assl"></a>MemberNamesUnique-Element (ASSL)
   Bestimmt, ob Elementnamen im übergeordneten Element eindeutig sein müssen.  
@@ -70,4 +64,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Schema Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Schema Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Schema
-helpviewer_keywords:
-- Schema element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Schema
+helpviewer_keywords: Schema element
 ms.assetid: 4b6375fb-7ad8-4d5f-88b1-abd3da2654db
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a39f50d6c91a8f4a321c62943e8894777c376faf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 51fd142bad60a7c8e64d27952509dfa5b2b6c28f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="schema-element-assl"></a>Schema-Element (ASSL)
   Enthält das Schema der Datenquellensicht.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

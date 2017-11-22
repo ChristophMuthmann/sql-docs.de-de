@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Field object [ADO]
+helpviewer_keywords: Field object [ADO]
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7ecd2382d15536a5c2ebd2b2098c89c41c78ba1f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1f3d141fc218101902ae094ff2a4db385d204fa3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="the-field-object"></a>Field-Objekt
 Jede **Feld** Objekt entspricht in der Regel an eine Spalte in einer Datenbanktabelle. Allerdings eine **Feld** kann auch einen Zeiger auf einen anderen repräsentieren **Recordset**, einem Kapitel aufgerufen. Ausnahmen, z. B. Kapitelspalten, werden weiter unten in diesem Handbuch behandelt.  
@@ -126,4 +123,3 @@ Jede **Feld** Objekt entspricht in der Regel an eine Spalte in einer Datenbankta
  Wenn kein aktueller Datensatz vorhanden ist, bei der Verwendung der **GetChunk** oder **AppendChunk** Methode auf eine **Feld** -Objekt Fehler 3021 (kein aktueller Datensatz) auftritt.  
   
  Ein Beispiel der Verwendung dieser Methoden zum Bearbeiten von Binärdaten, finden Sie die [AppendChunk Methode](../../../ado/reference/ado-api/appendchunk-method-ado.md) und [GetChunk-Methode](../../../ado/reference/ado-api/getchunk-method-ado.md) Beispielen in der *ADO Programmer's Reference*.
-

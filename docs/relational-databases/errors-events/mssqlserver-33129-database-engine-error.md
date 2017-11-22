@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 33129 (Database Engine error)
+helpviewer_keywords: 33129 (Database Engine error)
 ms.assetid: 83b5f368-f1a1-4a40-9bb6-c77e2dec690f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d834ce29e5b21445cfa53d0ef59a5893356e74d8
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 04eea183e0c393c987b6cd9a99dec888c95c8b33
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver33129"></a>MSSQLSERVER_33129
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,4 +48,3 @@ Der Anmeldename einer Windows-Gruppe kann nicht deaktiviert werden. Um die Zugri
 REVOKE CONNECT TO [WESTCOAST\Accounting];  
 ```  
   
-

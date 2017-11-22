@@ -8,25 +8,23 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - permissions [Master Data Services], assigning functional area permissions
 - functional area permissions [Master Data Services], assigning
 ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2dafba6e25d2dc8c7f9dd839ccdbc234a3407313
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 452fccef15919dafdac6d650a3b3cf5db4f2ffd9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>Zuweisen von Berechtigungen für Funktionsbereiche (Master Data Services)
   Weisen Sie Funktionsbereichberechtigungen zu, um Benutzern oder Gruppen Zugriff auf die Funktionsbereiche von [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]zu gewähren.  
@@ -61,4 +59,3 @@ ms.lasthandoff: 09/07/2017
  [Sicherheit &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   
-

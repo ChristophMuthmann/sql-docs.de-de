@@ -14,22 +14,19 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.sqlserverstudio.datasourceproperties.f1
-helpviewer_keywords:
-- Data Source Properties dialog box
+f1_keywords: sql13.asvs.sqlserverstudio.datasourceproperties.f1
+helpviewer_keywords: Data Source Properties dialog box
 ms.assetid: bf8b600f-5b99-4f7d-908b-8a391721e9dd
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 732cdd40d8601f00854ebd6a3ebc3694f733e187
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d406f4743c47ded117bf93a62bb4eefadb093058
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="set-data-source-properties-ssas-multidimensional"></a>Festlegen von Datenquelleneigenschaften (SSAS – mehrdimensional)
   In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]gibt ein Datenquellenobjekt eine Verbindung mit einem externen Data Warehouse oder einer relationalen Datenbank an, das oder die für ein mehrdimensionales Modell Daten bereitstellt. Durch Eigenschaften in der Datenquelle werden die Verbindungszeichenfolge, ein Timeoutintervall, die maximale Anzahl der Verbindungen sowie die Transaktionsisolationsstufe bestimmt.  
@@ -65,4 +62,3 @@ ms.lasthandoff: 09/01/2017
  [Erstellen einer Datenquelle &#40;SSAS – mehrdimensional&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   
-

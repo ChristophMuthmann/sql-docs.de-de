@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 2518 (Database Engine error)
+helpviewer_keywords: 2518 (Database Engine error)
 ms.assetid: 54a13abc-4c33-43f0-b55d-e2e74a1381c8
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b37286d2e4eff6ee52acacf81e784ea8e554bf59
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9bc87ebba32ddec6710eed0ed59298563a9c66fb
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver2518"></a>MSSQLSERVER_2518
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,4 +47,3 @@ Aktivieren Sie CLR, und führen Sie die DBCC-Anweisung erneut aus.
 ## <a name="see-also"></a>Siehe auch  
 [Aktivieren der CLR-Integration](~/relational-databases/clr-integration/clr-integration-enabling.md)  
   
-

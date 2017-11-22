@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Filter Element (Binding)
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Filter Element (Binding)
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- filter
-helpviewer_keywords:
-- Filter element
+applies_to: SQL Server 2016 Preview
+f1_keywords: filter
+helpviewer_keywords: Filter element
 ms.assetid: 3d4cd169-2903-4266-8541-540ece424b7b
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d3bf6f2f01d27b17be0aa41df2073c88420dc137
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 15ecd103b47b64c0e6cc11c766483a667e9ee743
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="filter-element-binding-assl"></a>Filter-Element (Binding) (ASSL)
   Enthält einen MDX-Ausdruck (Multidimensional Expression), der die Inhalte des übergeordneten Elements filtert.  
@@ -79,4 +73,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

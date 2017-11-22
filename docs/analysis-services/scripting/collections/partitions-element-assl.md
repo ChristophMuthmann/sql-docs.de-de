@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Partitions Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Partitions Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Partitions
-helpviewer_keywords:
-- Partitions element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Partitions
+helpviewer_keywords: Partitions element
 ms.assetid: e41c97ca-da44-48e9-a454-d25ee74209fd
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f2a08dd399a8e932b85b1d055486fde290e2e5d1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a98f10c0ff3cf40c28cb4085032b0a858bf7bbd8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="partitions-element-assl"></a>Partitions-Element (ASSL)
   Enthält die Auflistung der [Partition](../../../analysis-services/scripting/objects/partition-element-assl.md) Elementen, die verwendet werden, indem eine [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md) Element oder die Auflistung der partitionsbindungen, die eine Out-of-Line bilden [MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-out-of-line-assl.md)Element.  
@@ -82,4 +76,3 @@ ms.lasthandoff: 09/01/2017
  [Schemaauflistungen &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

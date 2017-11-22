@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DefaultMeasure Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DefaultMeasure Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DefaultMeasure
-helpviewer_keywords:
-- DefaultMeasure element
+applies_to: SQL Server 2016 Preview
+f1_keywords: DefaultMeasure
+helpviewer_keywords: DefaultMeasure element
 ms.assetid: ceac8b3d-ebae-463f-9e8c-506281d42792
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ff93051b34b685bfe7d7138be0e7a6647d8b8e9c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 526b178391f1688dbd70d79cf1f23b3fc5f1b07f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="defaultmeasure-element-assl"></a>DefaultMeasure-Element (ASSL)
   Enthält einen Multidimensional Expressions (MDX)-Ausdruck, der das Standardmeasure für definiert eine [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) oder [Perspektive](../../../analysis-services/scripting/objects/perspective-element-assl.md) Element.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MeasureGroups Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: MeasureGroups Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- MeasureGroups
-helpviewer_keywords:
-- MeasureGroups element
+applies_to: SQL Server 2016 Preview
+f1_keywords: MeasureGroups
+helpviewer_keywords: MeasureGroups element
 ms.assetid: 80e970e9-6ea6-47a9-9e5c-d0f9b01c09c0
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cb7398ce2568c4fee80c8ce87e3d76431566079d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a96daffbd355d3a363366299921816dcca80eaa7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="measuregroups-element-assl"></a>MeasureGroups-Element (ASSL)
   Enthält die Auflistung der [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md) Elemente mit dem übergeordneten Element verknüpft sind.  
@@ -83,4 +77,3 @@ ms.lasthandoff: 09/01/2017
  [Schemaauflistungen &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

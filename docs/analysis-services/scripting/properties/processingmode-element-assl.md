@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ProcessingMode Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ProcessingMode Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ProcessingMode
-helpviewer_keywords:
-- ProcessingMode element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ProcessingMode
+helpviewer_keywords: ProcessingMode element
 ms.assetid: dff6eeba-f09c-4d8c-ad81-caef76254af0
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c57e716da746a83c3310ccfa071cb0c43d8b64ab
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 81a9733cecb0aaea39c52183eae40ec66626f3f9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="processingmode-element-assl"></a>ProcessingMode-Element (ASSL)
   Gibt an, ob die Instanz während oder nach der Verarbeitung indizieren und aggregieren soll.  
@@ -82,4 +76,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ProactiveCachingIncrementalProcessingBinding Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ProactiveCachingIncrementalProcessingBinding Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ProactiveCachingIncrementalProcessingBinding data type
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: ProactiveCachingIncrementalProcessingBinding data type
 ms.assetid: f49c0c96-4277-417b-9660-d77a4faebd00
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d6dc41bede6adcba0c11d2ce0bc364c5150f357c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 593a10991ea472897e1c5744614f82f0410467d5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="proactivecachingincrementalprocessingbinding-data-type-assl"></a>ProactiveCachingIncrementalProcessingBinding-Datentyp (ASSL)
   Definiert einen abgeleiteten Datentyp, der eine Bindung an die [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) Element über den Status des Neuerstellungsprozesses des Caches.  
@@ -77,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services Scripting Language-XML-Datentypen &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

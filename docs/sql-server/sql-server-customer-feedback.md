@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
+ms.openlocfilehash: 89fa77ec8e95bfc1f6ea2b796e07a1a2266bbab4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
-ms.openlocfilehash: de638f50e6c11633859e7cdc3c6ddb208fe64f00
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Konfigurieren von SQL Server zum Senden von Feedback an Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -171,4 +170,3 @@ Während der Installation fügt SQL Server 2016 Analysis Services ein gesonderte
 Sie können Ihren Dienst so konfigurieren, dass keine Nutzungsdaten gesendet werden. Wie Sie dazu vorgehen müssen, ist im Abschnitt „Festlegen von Registrierungsunterschlüsseln auf dem Server“ beschrieben. Wenn Sie dies machen, wird das Dienstkonto jedoch nicht entfernt. 
  
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

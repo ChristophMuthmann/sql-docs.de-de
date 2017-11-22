@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ExecuteResponse Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ExecuteResponse Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#ExecuteResponse
 - http://schemas.microsoft.com/analysisservices/2003/engine#ExecuteResponse
 - microsoft.xml.analysis.executeresponse
-helpviewer_keywords:
-- ExecuteResponse element
+helpviewer_keywords: ExecuteResponse element
 ms.assetid: 6edb1b82-da4c-4cd9-9385-bea04032f0eb
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1ce67e186ba1de23fda714359f4fcdc7a78b51fa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d90ec4cac02bf3429603d095cb91c3bef77cc00d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-elements---objects---executeresponse"></a>XML-Elemente - Objekte - ExecuteResponse
   Enthält die Informationen von einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] als Antwort auf eine [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) -Methodenaufruf.  
@@ -76,4 +71,3 @@ ms.lasthandoff: 09/01/2017
  [Objekte &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-objects.md)  
   
   
-

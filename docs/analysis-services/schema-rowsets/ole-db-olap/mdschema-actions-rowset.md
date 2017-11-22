@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_ACTIONS
+apiname: MDSCHEMA_ACTIONS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_ACTIONS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_ACTIONS rowset
 ms.assetid: f73081f8-ac51-4286-b46e-2b34e792c3e0
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b2957bca5aee8c0894e7139c46beab26fe2c74f0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e9abd044460f463b952eb6fbd88cd7d7a4ea2821
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdschemaactions-rowset"></a>MDSCHEMA_ACTIONS-Rowset
   Beschreibt die Aktionen, die der Clientanwendung möglicherweise zur Verfügung stehen.  
@@ -42,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 |Spaltenname|Typindikator|Länge|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**||Der Name der Datenbank.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**||Wird nicht unterstützt. Enthält immer **VT_NULL**.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**||Nicht unterstützt. Enthält immer **VT_NULL**.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**||Der Name des Cubes, zu dem diese Aktion gehört.|  
 |**AKTIONSNAME**|**DBTYPE_WSTR**||Der Name dieser Aktion.|  
 |**ACTION_TYPE**|**DBTYPE_I4**||Eine Bitmap, die verwendet wird, um die Triggermethode der Aktion anzugeben. Die Datei Msmd.h definiert die folgenden Bitwertkonstanten für diese Bitmap:<br /><br /> **MDACTION_TYPE_URL** (**0 x 01**)<br /><br /> **MDACTION_TYPE_HTML** (**0 x 02**)<br /><br /> **MDACTION_TYPE_STATEMENT** (**0 x 04**)<br /><br /> **MDACTION_TYPE_DATASET** (**0 x 08**)<br /><br /> **MDACTION_TYPE_ROWSET** (**0 x 10**)<br /><br /> **MDACTION_TYPE_COMMANDLINE** (**0 x 20**)<br /><br /> **MDACTION_TYPE_PROPRIETARY** (**0 x 40**)<br /><br /> **MDACTION_TYPE_REPORT** (**0 x 80**)<br /><br /> **MDACTION_TYPE_DRILLTHROUGH** (**0 x 100**)|  
@@ -96,4 +92,3 @@ ms.lasthandoff: 09/01/2017
  [OLE DB für OLAP-Schemarowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

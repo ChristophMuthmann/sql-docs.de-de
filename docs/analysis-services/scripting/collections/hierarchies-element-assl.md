@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Hierarchies Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Hierarchies Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Hierarchies
-helpviewer_keywords:
-- Hierarchies element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Hierarchies
+helpviewer_keywords: Hierarchies element
 ms.assetid: dc844eea-869c-4217-b9be-e543a76f5e92
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1faf121482f52e31a19c6fadcb82ec76c66366ee
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3b4ba62d1a41b224dc75e77ddddda208bc8e46bb
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hierarchies-element-assl"></a>Hierarchies-Element (ASSL)
   Enthält die Auflistung der [Hierarchie](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) Elemente mit dem übergeordneten Element verknüpft sind.  
@@ -85,4 +79,3 @@ ms.lasthandoff: 09/01/2017
  [Schemaauflistungen &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

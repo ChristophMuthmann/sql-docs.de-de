@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- StorageMode Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: StorageMode Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- StorageMode
-helpviewer_keywords:
-- StorageMode element
+applies_to: SQL Server 2016 Preview
+f1_keywords: StorageMode
+helpviewer_keywords: StorageMode element
 ms.assetid: 197e8153-1ab6-43ba-a7e9-ae9be19ac511
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1cb05e28a6deb1158ecd41f50041b2d63738af53
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dd6ed7838025255015c3a4103689b772dd035771
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="storagemode-element-assl"></a>StorageMode-Element (ASSL)
   Bestimmt den Speichermodus für das übergeordnete Element.  
@@ -84,4 +78,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

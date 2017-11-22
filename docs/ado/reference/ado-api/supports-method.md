@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Recordset15::raw_Supports
 - Recordset15::Supports
-helpviewer_keywords:
-- Supports method [ADO]
+helpviewer_keywords: Supports method [ADO]
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 13186c130b85de50bc6cff9487d8fec11359d008
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 60e3039e48ea203b0585dba1ecbeaf7ad3e57907
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="supports-method"></a>Unterstützt-Methode
 Bestimmt, ob ein angegebener [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt unterstützt eine bestimmte Art von Funktionen.  
@@ -61,4 +58,3 @@ boolean = recordset.Supports(CursorOptions )
  [Unterstützt-Methode (Beispiel) (VB)](../../../ado/reference/ado-api/supports-method-example-vb.md)   
  [Unterstützt-Methode (VC++-Beispiel)](../../../ado/reference/ado-api/supports-method-example-vc.md)   
  [CursorType-Eigenschaft (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)
-

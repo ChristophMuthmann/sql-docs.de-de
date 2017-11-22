@@ -8,22 +8,20 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: bcd7c5ce901bf1083aa48ee2e1236226b13ce5ae
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
-ms.openlocfilehash: 6ea14b40f988028a714323bc4e35fcd7a357e27c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="dynamic-data-masking"></a>Dynamische Datenmaskierung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,7 +88,7 @@ WHERE is_masked = 1;
   
 -   FILESTREAM  
   
--   COLUMN_SET oder eine Spalte mit geringer Dichte, die Teil eines Spaltensatzes ist.  
+-   COLUMN_SET oder eine Sparsespalte, die Teil eines Spaltensatzes ist.  
   
 -   Eine Maske kann nicht für eine berechnete Spalte konfiguriert werden, aber wenn die berechnete Spalte von einer Spalte mit MASKE abhängig ist, gibt die berechnete Spalte maskierte Daten zurück.  
   
@@ -207,4 +205,3 @@ ALTER COLUMN LastName DROP MASKED;
  [Erste Schritte mit der dynamischen Datenmaskierung für die SQL-Datenbank (Azure-Vorschauportal)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
   
   
-

@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Calculation Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Calculation Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Calculation
-helpviewer_keywords:
-- Calculation element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Calculation
+helpviewer_keywords: Calculation element
 ms.assetid: c96e37cf-b7ff-4296-a043-f9a5a5c444ce
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ac214a7bd62b68894b7cbdf81a280291f93b700a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 142f51ddda6944c69a3bb88fe6eed03cbf96fc86
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="calculation-element-assl"></a>Calculation-Element (ASSL)
   Weist eine Berechnung mit einem [Perspektive](../../../analysis-services/scripting/objects/perspective-element-assl.md) Element.  
@@ -72,4 +66,3 @@ ms.lasthandoff: 09/01/2017
  [Objekte &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

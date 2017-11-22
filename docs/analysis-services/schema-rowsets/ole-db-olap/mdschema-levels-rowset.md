@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_LEVELS
+apiname: MDSCHEMA_LEVELS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_LEVELS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_LEVELS rowset
 ms.assetid: 4313e268-33f4-4e99-96d7-2ec26775c580
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1c0497713e1a115a0c82b7eb957affb82dd060db
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8d9a56387365489615b6b7665dedb3edc7f367f6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdschemalevels-rowset"></a>MDSCHEMA_LEVELS-Rowset
   Beschreibt jede Ebene innerhalb einer bestimmten Hierarchie.  
@@ -48,7 +44,7 @@ ms.lasthandoff: 09/01/2017
 |**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Der eindeutige Name der Hierarchie. Wenn die Ebene zu mehreren Hierarchien gehört, gibt es eine Zeile für jede Hierarchie, zu der die Ebene gehört. Für Anbieter, die eindeutige Namen durch eine Einschränkung generieren, ist jede Komponente dieses Namens begrenzt.|  
 |**EBENENNAME**|**DBTYPE_WSTR**|Der Name der Ebene.|  
 |**LEVEL_UNIQUE_NAME**|**DBTYPE_WSTR**|Der ordnungsgemäß mit Escapezeichen versehene eindeutige Name der Ebene.|  
-|**LEVEL_GUID**|**DBTYPE_GUID**|Wird nicht unterstützt.|  
+|**LEVEL_GUID**|**DBTYPE_GUID**|Nicht unterstützt.|  
 |**LEVEL_CAPTION**|**DBTYPE_WSTR**|Eine Bezeichnung oder Beschriftung, die der Hierarchie zugeordnet ist. Wird hauptsächlich für Anzeigezwecke verwendet. Wenn keine Beschriftung vorhanden, **Ebenenname** zurückgegeben wird.|  
 |**LEVEL_NUMBER**|**DBTYPE_UI4**|Der Abstand der Ebene vom Stamm der Hierarchie. Stammebene entspricht null (**0)**.|  
 |**LEVEL_CARDINALITY**|**DBTYPE_UI4**|Die Anzahl der Elemente in der Ebene.|  
@@ -89,4 +85,3 @@ ms.lasthandoff: 09/01/2017
  [OLE DB für OLAP-Schemarowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

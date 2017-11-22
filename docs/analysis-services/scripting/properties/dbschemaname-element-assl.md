@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DbSchemaName Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DbSchemaName Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DbSchemaName
-helpviewer_keywords:
-- DbSchemaName element
+applies_to: SQL Server 2016 Preview
+f1_keywords: DbSchemaName
+helpviewer_keywords: DbSchemaName element
 ms.assetid: ae0f0edd-7b76-400d-a288-39a36d2a746b
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e45aa795d343b11323bedf7430de85bef321050d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 97fa874f546d3ff6a4b8406e1b71c312f609cc1f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbschemaname-element-assl"></a>DbSchemaName-Element (ASSL)
   Enthält den Namen des Schemas verwendet, die für das übergeordnete Element in die Tabelle identifiziert durch die [DbTableName](../../../analysis-services/scripting/properties/dbtablename-element-assl.md) Element.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

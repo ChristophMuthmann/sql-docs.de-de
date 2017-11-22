@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 871a6d98-85bf-4200-8343-137543029512
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7435de185c6a8cb54d9fc55ea53d9c8d66214033
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dae8eace8a062bb296e172ce5d547eaf7768fa42
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="multidimensional-model-programming"></a>Mehrdimensionale Modellprogrammierung
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]bietet mehrere APIs Sie verwenden können, um die Programmierung für eine Analysis Services-Instanz und die mehrdimensionalen Datenbanken, die sie verfügbar macht. In diesem Abschnitt werden Ansätze für Entwickler beschrieben, die benutzerdefinierte Anwendungen unter Verwendung mehrdimensionaler Analysis Services-Projektmappen erstellen möchten. Anhand dieser Informationen können Sie eine Programmierschnittstelle auswählen, die den Anforderungen eines bestimmten Projekts am besten entspricht. Analysis Services-Entwicklungsprojekte können auf verwaltetem oder nicht verwaltetem Code basieren, der auf einer Windows-Plattform oder anderen Plattformen ausgeführt wird, die den HTTP-Zugriff unterstützen.  
@@ -42,7 +40,7 @@ ms.lasthandoff: 09/01/2017
   
  [Entwickeln mit Analysis Services Scripting Language &#40;ASSL&#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
- [Erweitern von OLAP-Funktionalität](../../analysis-services/multidimensional-models/extending-olap/extending-olap-functionality.md)  
+ [Erweitern der OLAP-Funktionalität](../../analysis-services/multidimensional-models/extending-olap/extending-olap-functionality.md)  
   
  [OLE DB-Anbieter für Analysis Services &#40;Analysis Services – mehrdimensionale Daten&#41;](http://msdn.microsoft.com/library/cdeecd50-1d91-4162-a4a2-01c7799b02a8)  
   
@@ -51,4 +49,3 @@ ms.lasthandoff: 09/01/2017
  [Datamining-Programmierung](../../analysis-services/data-mining-programming.md)  
   
   
-

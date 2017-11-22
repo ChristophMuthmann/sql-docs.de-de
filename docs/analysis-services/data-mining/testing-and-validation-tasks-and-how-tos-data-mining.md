@@ -21,17 +21,16 @@ helpviewer_keywords:
 - mining models [Analysis Services], predictive modeling
 - predictive accuracy [data mining]
 ms.assetid: 3a0b4dc9-5b64-4be1-aa5f-6ff26f43dbf8
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4dff2bccc2c56f35152c2959ee4b9699eaf9821b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8e74a79b18f526878981d21e36134ff82d5c862b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>Tasks und Anweisungen für Test und Überprüfung (Data Mining)
   Sie können die Registerkarte **Mininggenauigkeitsdiagramm** des Data Mining-Designers in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] verwenden, um die Vorhersagegenauigkeit der Miningmodelle in Ihrer Miningstruktur zu vergleichen.  
@@ -56,7 +55,7 @@ ms.lasthandoff: 09/01/2017
   
 -   [Erstellen von Prognosegütediagrammen, Gewinndiagrammen oder Klassifikationsmatrizen](../../analysis-services/data-mining/create-a-lift-chart-profit-chart-or-classification-matrix.md)  
   
--   [Erstellen von Berichten für Kreuzvalidierung](../../analysis-services/data-mining/create-a-cross-validation-report.md)  
+-   [Erstellen eines Kreuzvalidierungsberichts](../../analysis-services/data-mining/create-a-cross-validation-report.md)  
   
 -   [Auswählen und Zuordnen von Modelltestdaten](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)  
   
@@ -67,4 +66,3 @@ ms.lasthandoff: 09/01/2017
 -   [Verwenden von geschachtelten Tabellendaten als Eingabe für ein Genauigkeitsdiagramm](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)  
   
   
-

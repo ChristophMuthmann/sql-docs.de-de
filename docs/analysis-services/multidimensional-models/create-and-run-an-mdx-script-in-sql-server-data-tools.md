@@ -19,17 +19,16 @@ helpviewer_keywords:
 - scripts [Analysis Services], creating
 - scripts [MDX], creating
 ms.assetid: aa54b8cc-ff3b-4ef6-a64e-11b9e9d7fa11
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8f496189909d7f6b7801c642eea2e4830ce239f0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 52acda53b174bcbb2734a5ebcf86292c32ec8f3a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-run-an-mdx-script-in-sql-server-data-tools"></a>Erstellen und Ausführen eines MDX-Skripts in SQL Server-Datentools
   Zum Erstellen und Ausführen eines MDX-Skripts in  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]müssen Sie sich in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] befinden und bereits einen Cube erstellt haben, der für die Bearbeitung bereitsteht.  
@@ -50,4 +49,3 @@ ms.lasthandoff: 09/01/2017
  [MDX-Skriptanweisungen &#40; MDX &#41;](../../mdx/mdx-scripting-statements-mdx.md)  
   
   
-

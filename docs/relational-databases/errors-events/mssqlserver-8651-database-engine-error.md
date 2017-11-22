@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 8651 (Database Engine error)
+helpviewer_keywords: 8651 (Database Engine error)
 ms.assetid: 4cc3498d-5449-4c4e-b1f9-3271831c725a
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 301cff27085ef62a3011bfef1103aca00b44d93b
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 664396a7daad8d8108c792b8f909e023d4d7b1fe
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver8651"></a>MSSQLSERVER_8651
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +52,7 @@ In der folgenden Liste werden allgemeine Schritte erläutert, die bei der Proble
   
 3.  Überprüfen Sie die folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Speicherkonfigurationsparameter:  
   
-    -   **Max. Serverarbeitspeicher**  
+    -   **Max. Serverarbeitsspeicher**  
   
     -   **Min. Serverarbeitsspeicher**  
   
@@ -89,4 +86,3 @@ Wenn das Problem weiterhin besteht, müssen Sie weitere Untersuchungen ausführe
 [SQL Server, Puffer-Manager-Objekt](~/relational-databases/performance-monitor/sql-server-buffer-manager-object.md)  
 [SQL Server, Speicher-Manager-Objekt](~/relational-databases/performance-monitor/sql-server-memory-manager-object.md)  
   
-
