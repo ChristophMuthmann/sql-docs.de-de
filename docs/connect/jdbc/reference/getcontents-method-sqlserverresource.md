@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResource.getContents
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResource.getContents
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7f25b8e0-a9fb-496f-aa05-84c5fdc9b49f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: aae63a20fd40d96706c5495b0ab413c8577336f0
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 10bcad6747790932e09fe66d121421b3b11590c7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getcontents-method-sqlserverresource"></a>getContents-Methode (SQLServerResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,4 +47,3 @@ protected java.lang.Object[][] getContents()
  [SQLServerResource-Klasse](../../../connect/jdbc/reference/sqlserverresource-class.md)  
   
   
-

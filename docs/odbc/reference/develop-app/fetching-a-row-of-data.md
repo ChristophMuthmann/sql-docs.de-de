@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 - fetches [ODBC], row of data
 ms.assetid: 16d4a380-0d83-456b-aeee-f10738944e86
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1136751fc7ec479cd3538814369cafed8ca45abf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 142c9a2c95900e5b3776f96d86a145defc447512
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="fetching-a-row-of-data"></a>Abrufen einer Datenzeile
 Um eine Zeile mit Daten abzurufen, eine Anwendung ruft **SQLFetch**. **SQLFetch** kann mit jeder Art des Cursors aufgerufen werden, aber nur den Rowset-Cursor in eine Richtung vorwärts verschoben. **SQLFetch** verschiebt den Cursor auf die nächste Zeile und gibt die Daten für alle Spalten, die durch Aufrufe von gebunden wurden **SQLBindCol**. Wenn sich der Cursor auf das Ende des Resultsets erreicht festgelegt, **SQLFetch** gibt SQL_NO_DATA zurück. Beispiele für das Aufrufen von **SQLFetch**, finden Sie unter [SQLBindCol verwenden](../../../odbc/reference/develop-app/using-sqlbindcol.md).  
@@ -44,4 +42,3 @@ Um eine Zeile mit Daten abzurufen, eine Anwendung ruft **SQLFetch**. **SQLFetch*
  Zeichendaten müssen Null-terminiert sein vom Treiber vor der Rückgabe an die Anwendung, auch wenn es abgeschnitten wurde. Die Null-Abschlusszeichen benötigt Speicherplatz in der gebundenen Puffer jedoch nicht in der zurückgegebenen Bytelänge enthalten ist. Nehmen Sie z. B. an eine Anwendung verwendet Zeichenfolgen, die Zeichendaten in ASCII-Zeichensatz besteht, ein Treiber ist 50 Zeichen mit Daten zurückgegeben und die Anwendung Puffer ist 25 Byte lang. Im Puffer der die Anwendung, gibt der Treiber die ersten 24 Zeichen, gefolgt von einer Null-Abschlusszeichen. In der Längen-/Indikatorpuffers wird eine Länge von 50 zurückgegeben.  
   
  Die Anwendung kann eine beschränkte Anzahl an Zeilen im Resultset durch Festlegen von SQL_ATTR_MAX_ROWS-Anweisungsattribut vor dem Ausführen der Anweisung, die das Ergebnis erstellt. Der Seitenansicht in einer Anwendung, die zum Formatieren von Berichten benötigt beispielsweise nur genügend Daten für die erste Seite des Berichts anzuzeigen. Beschränken die Größe des Resultsets, würde eine solche Funktion schneller ausgeführt. Dieses Anweisungsattribut richtet sich an den Netzwerkverkehr zu reduzieren und möglicherweise vom alle Treiber nicht unterstützt werden.
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - updating data [ODBC], long data
 - SQLBulkOperations function [ODBC], long data
 ms.assetid: e2fdf842-5e4c-46ca-bb21-4625c3324f28
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 51662d6540fb8db0eed5456e918313a71ccbccc8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 308e1ad6f2d99a0a6b7e73d8a82ac62362fea9a2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>Long-Daten und SQLSetPos und SQLBulkOperations
 Wie bei Parametern in SQL-Anweisungen der Fall ist, long-Daten gesendet werden können, wenn die Aktualisierung mit Zeilen **SQLBulkOperations** oder **SQLSetPos** oder beim Einfügen von Zeilen mit **SQLBulkOperations**. Die Daten werden gesendet, in Teilen, mit mehreren Aufrufen an **SQLPutData**. Spalten, die für die Daten zum Zeitpunkt der Ausführung gesendet werden, werden als bezeichnet *Data-at-Execution-Spalten*.  
@@ -54,4 +52,3 @@ Wie bei Parametern in SQL-Anweisungen der Fall ist, long-Daten gesendet werden k
 6.  Aufrufe **SQLParamData** erneut aus, um anzugeben, dass sie alle Daten für die Spalte gesendet wurde. Wenn alle Data-at-Execution-Spalten, die für die Daten nicht gesendet wurden vorhanden sind, gibt der Treiber SQL_NEED_DATA sowie den eindeutigen Wert für die nächste Data-at-Execution-Spalte zurück; Gibt zurück, die Anwendung mit Schritt 5 fort. Wenn Daten für alle Data-at-Execution-Spalten gesendet wurde, werden die Daten für die Zeile an die Datenquelle gesendet. **SQLParamData** gibt SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO und kann SQLSTATE zurückgeben **SQLBulkOperations** oder **SQLSetPos** zurückgeben kann.  
   
  Nach dem **SQLBulkOperations** oder **SQLSetPos** wird SQL_NEED_DATA zurückgegeben, und bevor die Daten vollständig für die letzte Data-at-Execution-Spalte gesendet wurde, wird die Anweisung in einem Zustand benötigen. In diesem Zustand befindet, kann die Anwendung nur aufrufen **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, oder **SQLGetDiagRec**; alle anderen Funktionen zurückgeben SQLSTATE HY010 (Sequenzfehler-Funktion). Aufrufen von **SQLCancel** bricht die Ausführung der Anweisung ab und gibt sie an den ursprünglichen Zustand zurück. Weitere Informationen finden Sie unter [Anhang B: ODBC-Übergang-Statustabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).
-

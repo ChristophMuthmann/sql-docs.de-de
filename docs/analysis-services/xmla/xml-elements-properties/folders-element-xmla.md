@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Folders Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Folders Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.folders
 - http://schemas.microsoft.com/analysisservices/2003/engine#Folders
 - urn:schemas-microsoft-com:xml-analysis#Folders
-helpviewer_keywords:
-- Folders element
+helpviewer_keywords: Folders element
 ms.assetid: fefb0469-22ea-4804-8dc3-9c49825b32f1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 83571bacbbd3779909d79d3f327c4088b9222bb6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 66d219274d57cfd8505de2c19e8f0e804f6f9cd1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="folders-element-xmla"></a>Folders-Element (XMLA)
   Enthält eine Auflistung von [Folder](../../../analysis-services/xmla/xml-elements-properties/folder-element-xmla.md) -Elementen, die vom übergeordneten [Location](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md) -Element während eines [Restore](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) - oder [Synchronize](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) -Befehls verwendet werden.  
@@ -78,4 +73,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

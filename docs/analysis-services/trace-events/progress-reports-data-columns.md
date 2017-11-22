@@ -8,24 +8,21 @@ ms.service:
 ms.component: trace-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords:
-- Progress Reports event category
+helpviewer_keywords: Progress Reports event category
 ms.assetid: d34a6322-e26b-4454-b98f-32307d6956b5
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5019f2837d69da2269aca786e56d34b383330e84
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 18f95a363c72cde1e067bb930d44c65254631ce2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="progress-reports-data-columns"></a>Datenspalten für Fortschrittsbericht
   Die Fortschrittsbericht-Ereigniskategorie enthält die folgenden Ereignisklassen:  
@@ -153,4 +150,3 @@ ms.lasthandoff: 09/01/2017
  [Progress Reports Event Category](../../analysis-services/trace-events/progress-reports-event-category.md)  
   
   
-

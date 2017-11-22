@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - application upgrades [ODBC], compatibility matrix
 - upgrading applications [ODBC], compatibility matrix
 ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 26f6b907cf81545ce8356ca7654c3779833f73aa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8c980058ea2cacba7b9160571b1b42884ea02e41
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="compatibility-matrix"></a>Kompatibilitätsmatrix
 Die folgende Tabelle beschreibt die Kompatibilität der Typen von Anwendungen und Treiber, die zuvor in diesem Abschnitt definiert.  
@@ -77,5 +75,4 @@ Die folgende Tabelle beschreibt die Kompatibilität der Typen von Anwendungen un
  Da [SQLCancelHandle Funktion](../../../odbc/reference/syntax/sqlcancelhandle-function.md) wird nicht unterstützt in-Treiber-Manager, die vor Windows 7 veröffentlicht wurden, kann keine Anwendung in früheren Versionen von Windows geladen werden, wenn aufgerufen **SQLCancelHandle** direkt. Arbeiten mit allen Versionen der Treiber-Manager, und verwenden **SQLCancelHandle** auf neue Versionen von Windows, sollte eine Anwendung aufrufen **SQLCancelHandle** indirekt mithilfe **LoadLibrary** und **GetProcAddress.**  
   
 ## <a name="see-also"></a>Siehe auch  
- [Was ist neu in ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)
-
+ [What's New in ODBC 3.8 (Neues in ODBX 3.8)](../../../odbc/reference/what-s-new-in-odbc-3-8.md)

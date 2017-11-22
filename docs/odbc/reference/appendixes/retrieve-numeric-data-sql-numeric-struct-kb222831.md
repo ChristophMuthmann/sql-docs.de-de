@@ -18,12 +18,11 @@ ms.tgt_pltfrm: NA
 ms.workload: Inactive
 ms.date: 07/13/2017
 ms.author: genemi
+ms.openlocfilehash: 3db232853bdf2106dd0166ac8307f99990371c05
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ed79b7c006efaeb6af03a10c7421eb71d1ab69ad
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>Abrufen von numerischen Daten mit SQL\_numerischen\_Struktur
 
@@ -389,5 +388,4 @@ http://web.archive.org/web/20080505073901/http:/support.microsoft.com:80/kb/1812
 
 https://docs.microsoft.com/en-us/sql/odbc/reference/appendixes/c-data-types
 -->
-
 

@@ -8,22 +8,20 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3a4cd1c0e7d86a51e1278e8c3f44f43a8854be13
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: d3ba6607f717299bdeb60b649a8c6a1838ab0d17
-ms.contentlocale: de-de
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="data-source-wizard-screen-4"></a>Data Source-Assistent (Bildschirm 4)
 
@@ -86,4 +84,3 @@ Wenn die auf diesem Bildschirm angegebene Informationen abgeschlossen ist, könn
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Assistent Datenquellenbildschirm 3](../../../connect/odbc/windows/dsn-wizard-3.md)
-

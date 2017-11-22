@@ -13,24 +13,20 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- RangeMax
-dev_langs:
-- DMX
-helpviewer_keywords:
-- RangeMax function
+f1_keywords: RangeMax
+dev_langs: DMX
+helpviewer_keywords: RangeMax function
 ms.assetid: 6798d9d7-c3dc-40fb-bd8e-56cb1a6d0e5f
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 213bf6be55fd38a62b33875c3bf2e809504068f2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8b8cb363e9d5db767ed172206f497ff300bb29a6
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="rangemax-dmx"></a>RangeMax (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -74,4 +70,3 @@ FROM [TM Decision Tree]
  [RangeMin &#40; DMX &#41;](../dmx/rangemin-dmx.md)  
   
   
-

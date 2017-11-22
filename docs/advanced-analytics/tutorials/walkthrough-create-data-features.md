@@ -5,26 +5,22 @@ ms.date: 08/23/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 4981d4eb-0874-4fe9-82e1-edf99890e27a
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 095f5b9880a8f78a8d73461dd8cbeae28f30169e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
-ms.openlocfilehash: 4f3f5463e6a0117780add65feb9916ff78dad68d
-ms.contentlocale: de-de
-ms.lasthandoff: 10/07/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-data-features-using-r-and-sql-walkthrough"></a>Erstellen von Data-Features, die mit R und SQL (Exemplarische Vorgehensweise)
 
@@ -250,5 +246,4 @@ Die Zeiten variieren beträchtlich, je nach Geschwindigkeit des Netzwerks ab, un
 ## <a name="previous-lesson"></a>Vorherige Lektion
 
 [Anzeigen und Zusammenfassen von Daten mithilfe von R](walkthrough-view-and-summarize-data-using-r.md)
-
 

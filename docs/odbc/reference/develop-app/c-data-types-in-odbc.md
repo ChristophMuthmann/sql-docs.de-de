@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - C data types [ODBC], about C data types
 - C data types [ODBC]
 ms.assetid: c91bef31-3794-4736-966a-d50997b2233c
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b042185cb49c00e61d090934a9c8ed8d2258059f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 65a5bd882462dbd72c39c751dcfed52c61ab194c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="c-data-types-in-odbc"></a>C-Datentypen in ODBC
 ODBC definiert die C-Datentypen, die von Anwendungsvariablen und ihre entsprechenden Typ-IDs verwendet werden. Diese werden von den Puffern verwendet, die an die Resultsetspalten und Anweisungsparameter gebunden sind. Angenommen Sie, dass eine Anwendung wünscht eine zum Abrufen von Daten aus einer Resultsetspalte im Zeichenformat vorliegen. Deklariert eine Variable mit dem SQLCHAR *-Datentyp und bindet diese Variable an die Resultsetspalte mit einem Typbezeichner SQL_C_CHAR. Eine vollständige Liste der C-Datentypen und Typ-IDs, finden Sie unter [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
@@ -60,4 +58,3 @@ ODBC definiert die C-Datentypen, die von Anwendungsvariablen und ihre entspreche
   
 ## <a name="see-also"></a>Siehe auch  
  [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md)
-

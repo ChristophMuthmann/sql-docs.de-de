@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OVER_TSQL
 - OVER
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - order of rowsets [SQL Server]
 - rowsets [SQL Server], windowing
@@ -27,17 +25,16 @@ helpviewer_keywords:
 - rowsets [SQL Server], ordering
 - OVER clause
 ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
-caps.latest.revision: 75
+caps.latest.revision: "75"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 1c7a34974cfcae2d58f7dcaefaffc9bc09e148f3
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: db58418025c1659d42c4f1b76a06af8b08ff2ea6
-ms.openlocfilehash: 9e6dad4cbd3e3b64b35f859986b4b7b9928babd5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER-Klausel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -556,4 +553,3 @@ ORDER BY SalesOrderNumber,ProductKey;
  [Ausgezeichnete Blogbeitrag zu Fensterfunktionen und OVER, auf sqlmag.com Itzik Ben-Gan](http://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1)  
   
   
-

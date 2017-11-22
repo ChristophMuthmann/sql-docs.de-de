@@ -3,33 +3,36 @@ title: "Beispiele für Microsoft SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
-ms.prod: sql-non-specified
+ms.prod: sample
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
 ms.technology: 
 ms.topic: article
 ms.assetid: d67e31d0-49fb-40d3-b340-95c1fe00957f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
+ms.workload: On Demand
+ms.openlocfilehash: a8aa94cd3d28fe8516588b0c7c25811319cb4c50
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b6c0bbe97c8638f3a669f3c651d66bbdeac2f60f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="microsoft-sql-server-samples"></a>Microsoft SQL Server-Beispiele
-Diese Galerie enthält Beispieldatenbanken und andere Beispiele für Microsoft SQL-Produkte, einschließlich SQL Server und Azure SQL-Datenbank.   
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Diese Galerie enthält Beispieldatenbanken und andere Beispiele für Microsoft SQL-Produkte, einschließlich SQL Server und Azure SQL-Datenbank.   
 
 ## <a name="new-wide-world-importers-sample-database"></a>Neu!! Beispieldatenbank von Wide World Importers
 
 Wir freuen uns, neue Beispieldatenbank Wide World Importers (Schlachtfeld), auf den aktuellen Funktionen, Tools und Entwurfstechniken mit Showcase-Datenbankentwurf entwickelt feature. Die Beispiele umfassen eine OLTP und einer OLAP-Datenbank die erstellt werden, um auf SQL Server 2016 und später ausgeführt werden. 
 
 ## <a name="documentation"></a>Dokumentation
-Die [Schlachtfeld Dokumentation](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx) befindet sich auf MSDN.   
+Die [Schlachtfeld Dokumentation](./world-wide-importers/wide-world-importers-documentation.md) befindet sich auf Microsoft Docs.   
   
 
 ## <a name="sql-server-samples-repository"></a>Beispiele für SQL Server-repository

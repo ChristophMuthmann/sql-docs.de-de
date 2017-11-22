@@ -5,22 +5,20 @@ ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e0fd4554-60c6-4181-ac4c-2e366fb434f6
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1f90cb9c8792086352403a6bb937391daf3f338f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c533a35c09842221468764ef2f59e7c9cd7714d5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configuration-and-management"></a>Konfiguration und Verwaltung
 
@@ -77,5 +75,4 @@ Zusätzliche Hilfe im Zusammenhang mit der ersten Installation und Konfiguration
 + [Häufig gestellte Fragen zu Upgrade und Installation](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 + [Überlegungen zur Sicherheit](../r/security-considerations-for-the-r-runtime-in-sql-server.md)
 + [Bekannte Probleme für R Services](../../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
-
 

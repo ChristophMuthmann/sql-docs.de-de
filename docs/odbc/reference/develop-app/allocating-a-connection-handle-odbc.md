@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - connection handles [ODBC]
 - handles [ODBC], connection
 ms.assetid: c99a8159-7693-4f97-8dcf-401336550e77
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 598ced35301a656baf5fc744785a6fc8aefe1ef4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 678ba0fa4e256402e9fc25e2e4e60ba4877c6c44
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>Zuordnen eines Verbindungshandles ODBC
 Bevor die Anwendung auf eine Datenquelle oder Treiber zugreifen kann, müssen sie ein Verbindungshandle wie folgt zuordnen:  
@@ -51,4 +49,3 @@ Bevor die Anwendung auf eine Datenquelle oder Treiber zugreifen kann, müssen si
  Es ist wichtig zu beachten, dass das Zuordnen eines Verbindungshandles nicht um einen Treiber zu laden identisch ist. Der Treiber wurde nicht geladen werden, bis eine Verbindungsfunktion aufgerufen wird. Daher nach dem Zuordnen eines Verbindungshandles und vor dem Herstellen einer Verbindung mit der Treiber oder die Datenquelle, die nur Funktionen, die die Anwendung mit dem Verbindungshandle aufrufen kann stimmen **SQLSetConnectAttr**, **SQLGetConnectAttr**, oder **SQLGetInfo** mit der Option SQL_ODBC_VER. Aufruf anderer Funktionen mit dem Verbindungshandle, z. B. **SQLEndTran**, gibt SQLSTATE 08003 (Verbindung nicht geöffnet). Ausführliche Informationen finden Sie unter [Anhang B: ODBC-Übergang-Statustabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Weitere Informationen zu Verbindungshandles, finden Sie unter [Verbindungshandles](../../../odbc/reference/develop-app/connection-handles.md).
-

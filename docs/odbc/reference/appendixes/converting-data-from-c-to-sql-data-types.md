@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - data conversions from C to SQL types [ODBC]
 - C data types [ODBC], converting to SQL types
 ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9d3f3edee7f90920ad1d3ff68ccf3057a248b3b6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c8f3f8c3c62c7a4d4c6765d52c48d592ff92a21e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Konvertieren von Daten von C-in SQL-Datentypen
 Wenn eine Anwendung ruft **SQLExecute** oder **SQLExecDirect**, ruft der Treiber die Daten für alle Parameter über gebunden **SQLBindParameter** aus Speicherorte in die Anwendung. Wenn eine Anwendung ruft **SQLSetPos**, der Treiber Ruft die Daten für ein Update oder das Hinzufügen von Spalten mit gebundenen **SQLBindCol**. Für Data-at-Execution-Parameter, die Anwendung sendet die Parameterdaten mit **SQLPutData**. Wenn erforderlich, der Treiber die Daten aus der angegebenen Datentyp konvertiert der *ValueType* Argument in **SQLBindParameter** an der angegebenen Datentyp die *ParameterType*Argument in **SQLBindParameter**, und klicken Sie dann die Daten an die Datenquelle sendet.  
@@ -65,25 +63,24 @@ Wenn eine Anwendung ruft **SQLExecute** oder **SQLExecDirect**, ruft der Treiber
   
  Dieser Abschnitt enthält die folgenden Themen.  
   
--   [C, um SQL: Zeichen](../../../odbc/reference/appendixes/c-to-sql-character.md)  
+-   [C to SQL: Character (C zu SQL: Zeichen)](../../../odbc/reference/appendixes/c-to-sql-character.md)  
   
--   [C, um SQL: numerische](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
+-   [C to SQL: Numeric (C zu SQL: Numerisch)](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
   
--   [C, um SQL: Bit](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
+-   [C to SQL: Bit (C zu SQL: Bit)](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
   
--   [C, um SQL: binär](../../../odbc/reference/appendixes/c-to-sql-binary.md)  
+-   [C to SQL: Binary (C zu SQL: Binär)](../../../odbc/reference/appendixes/c-to-sql-binary.md)  
   
--   [C, um SQL: Datum](../../../odbc/reference/appendixes/c-to-sql-date.md)  
+-   [C to SQL: Date (C zu SQL: Datum)](../../../odbc/reference/appendixes/c-to-sql-date.md)  
   
--   [C, um SQL: GUID](../../../odbc/reference/appendixes/c-to-sql-guid.md)  
+-   [C to SQL: GUID (C zu SQL: GUID)](../../../odbc/reference/appendixes/c-to-sql-guid.md)  
   
--   [C, um SQL: Uhrzeit](../../../odbc/reference/appendixes/c-to-sql-time.md)  
+-   [C to SQL: Time (C zu SQL: Zeit)](../../../odbc/reference/appendixes/c-to-sql-time.md)  
   
--   [C, um SQL: Timestamp](../../../odbc/reference/appendixes/c-to-sql-timestamp.md)  
+-   [C to SQL: Timestamp (C zu SQL: Zeitstempel)](../../../odbc/reference/appendixes/c-to-sql-timestamp.md)  
   
--   [C, um SQL: Jahr-Monat-Intervallen](../../../odbc/reference/appendixes/c-to-sql-year-month-intervals.md)  
+-   [C to SQL: Year-Month Intervals (C zu SQL: Jahr-Monat-Intervalle)](../../../odbc/reference/appendixes/c-to-sql-year-month-intervals.md)  
   
--   [C, um SQL: Tag-Zeiträume](../../../odbc/reference/appendixes/c-to-sql-day-time-intervals.md)  
+-   [C to SQL: Day-Time Intervals (C zu SQL: Taginvervalle)](../../../odbc/reference/appendixes/c-to-sql-day-time-intervals.md)  
   
--   [C, um Beispiele für die Konvertierung von SQL-Daten](../../../odbc/reference/appendixes/c-to-sql-data-conversion-examples.md)
-
+-   [C to SQL Data Conversion Examples (Beispiele für die Datenkonvertierung von C zu SQL)](../../../odbc/reference/appendixes/c-to-sql-data-conversion-examples.md)

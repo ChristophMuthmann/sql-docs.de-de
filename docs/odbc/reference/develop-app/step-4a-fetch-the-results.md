@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - application process [ODBC], fetching results
 - fetches [ODBC], fetching results
 ms.assetid: 77d30142-c774-473c-96fb-b364bb92ac60
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f706364735794aea773847431a9d42d0a09c8183
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 736cfc952412780a4720fd92239e36106affeba7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="step-4a-fetch-the-results"></a>Schritt 4a: Abrufen der Ergebnisse
 Der nächste Schritt besteht, die Ergebnisse abzurufen, wie in der folgenden Abbildung dargestellt.  
@@ -42,4 +40,3 @@ Der nächste Schritt besteht, die Ergebnisse abzurufen, wie in der folgenden Abb
  Eine vollständige Beschreibung der Ergebnisse abgerufen werden soll, finden Sie unter [Abrufen von Ergebnissen (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md) und [Abrufen von Ergebnissen (Erweitert)](../../../odbc/reference/develop-app/retrieving-results-advanced.md).  
   
  "Schritt 3: Erstellen und Ausführen einer SQL-Anweisung" zum Ausführen einer anderen Anweisung in derselben Transaktion; gibt die Anwendung jetzt zurück. oder auf "Schritt 5: Commit der Transaktion" einen commit oder Rollback der Transaktion fortgesetzt.
-

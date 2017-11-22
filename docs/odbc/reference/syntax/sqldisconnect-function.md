@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLDisconnect
-apilocation:
-- sqlsrv32.dll
+apiname: SQLDisconnect
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLDisconnect
-helpviewer_keywords:
-- SQLDisconnect function [ODBC]
+f1_keywords: SQLDisconnect
+helpviewer_keywords: SQLDisconnect function [ODBC]
 ms.assetid: 9e84a58e-db48-4821-a0cd-5c711fcbe36b
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1ad106e27956217ba2afa0960d094a7bb7243d07
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: af65dee0cfa0efcb4b4daffa55e02dfbebff8473
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqldisconnect-function"></a>SQLDisconnect-Funktion
 **Konformität**  
@@ -104,4 +98,3 @@ SQLRETURN SQLDisconnect(
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7b69bbf94ea08bbd7452cc577cee896777947d74
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5737ae7a0356f7697b254e67faa5cf715d2ffaef
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="programming-with-sqlxml"></a>Programmieren mit SQLXML
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -58,14 +56,14 @@ ms.lasthandoff: 09/09/2017
   
 |Methodenname|SQLXML-Abrufobjekt<br /><br /> (Lesbar)|SQLXML-Festlegungsobjekt<br /><br /> (Schreibbar)|  
 |-----------------|-------------------------------------------|-------------------------------------------|  
-|CallableStatement.setSQLXML()|Nicht unterstützt.|Unterstützt|  
-|CallableStatement.setObject()|Nicht unterstützt.|Unterstützt|  
-|PreparedStatement.setSQLXML()|Nicht unterstützt.|Unterstützt|  
-|PreparedStatement.setObject()|Nicht unterstützt.|Unterstützt|  
-|ResultSet.updateSQLXML()|Nicht unterstützt.|Unterstützt|  
-|ResultSet.updateObject()|Nicht unterstützt.|Unterstützt|  
-|ResultSet.getSQLXML()|Unterstützt|Nicht unterstützt.|  
-|CallableStatement.getSQLXML()|Unterstützt|Nicht unterstützt.|  
+|CallableStatement.setSQLXML()|Nicht unterstützt.|Supported|  
+|CallableStatement.setObject()|Nicht unterstützt.|Supported|  
+|PreparedStatement.setSQLXML()|Nicht unterstützt.|Supported|  
+|PreparedStatement.setObject()|Nicht unterstützt.|Supported|  
+|ResultSet.updateSQLXML()|Nicht unterstützt.|Supported|  
+|ResultSet.updateObject()|Nicht unterstützt.|Supported|  
+|ResultSet.getSQLXML()|Supported|Nicht unterstützt.|  
+|CallableStatement.getSQLXML()|Supported|Nicht unterstützt.|  
   
  Wie in der Tabelle oben angegeben ist, können die SQLXML-Festlegungsmethoden nicht mit den lesbaren SQLXML-Objekten verwendet werden. Entsprechend können die Abrufmethoden nicht mit den schreibbaren SQLXML-Objekten verwendet werden.  
   
@@ -108,7 +106,6 @@ ms.lasthandoff: 09/09/2017
  Die vom SQLXML-Objekt zurückgegebenen Binär- und Zeichendatenströme richten sich nach den Modi für die adaptive oder vollständige Pufferung. Wenn die XML-Parser hingegen keine Datenströme sind, berücksichtigen sie die Einstellungen für adaptive oder vollständige Pufferung nicht. Weitere Informationen zur adaptiven Pufferung finden Sie unter [mithilfe der adaptiven Pufferung](../../connect/jdbc/using-adaptive-buffering.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Unterstützung von XML-Daten](../../connect/jdbc/supporting-xml-data.md)  
+ [Unterstützen von XML-Daten](../../connect/jdbc/supporting-xml-data.md)  
   
   
-

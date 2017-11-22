@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- header files [ODBC]
+helpviewer_keywords: header files [ODBC]
 ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d56c0096350b5f8d1d217a2cea85a770ecde6e14
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8cec0dc5105addb28606a12c99dd2d77b0a48a64
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="header-files"></a>Headerdateien
 Die Headerdatei Sql.h enthält die Prototypen für die Funktionen und Funktionen in der ODBC-Kernschnittstelle Konformitätsgrad. Die Sqlext.h-Header-Datei enthält die Prototypen für die Funktionen und Funktionen in der Ebene 1 und Level 2-API-Übereinstimmungsebenen. Die Headerdatei Sqltypes.h enthält Typdefinitionen und Indikatoren für die SQL-Datentypen.  
@@ -57,4 +54,3 @@ Die Headerdatei Sql.h enthält die Prototypen für die Funktionen und Funktionen
 |SQL_OJ_CAPABILITIES|SQL_OUTER_JOIN_CAPABILITIES|  
 |SQL_TXN_CAPABLE|SQL_TRANSACTION_CAPABLE|  
 |SQL_TXN_ISOLATION_OPTION|SQL_TRANSACTION_ISOLATION_OPTION|
-

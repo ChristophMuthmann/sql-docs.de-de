@@ -5,20 +5,18 @@ ms.date: 11/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 1dcde96872f391d1be312c5b8ff9bd8c2dd7a479
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1328a346dd9852cba349e38204b49faf32573611
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="architecture-overview-for-machine-learning-services-with-python"></a>Übersicht über die Architektur für Machine Learning-Dienste mit Python
 
@@ -56,4 +54,3 @@ Weitere Informationen finden Sie unter [Ressourcenkontrolle für R](../../advanc
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Ausführen von Python mit T-SQL](../tutorials/run-python-using-t-sql.md)
-

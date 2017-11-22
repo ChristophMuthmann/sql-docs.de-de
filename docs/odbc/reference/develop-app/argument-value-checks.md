@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - argument value checks [ODBC]
 - driver manager [ODBC], error checking
 ms.assetid: 37a65f8b-83aa-456c-b7cf-500404abb38a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5269d810e91187b8c57ce6b2fbd1043d1df3a89d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0a5a57d03f7f1da36115bd0e69c11c33289547f9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="argument-value-checks"></a>Argument Wert überprüft
 Der Treiber-Manager überprüft die folgenden Typen von Argumenten. Sofern nicht anders angegeben, gibt der Treiber-Manager SQL_ERROR Argumentwerte auf Fehler.  
@@ -43,4 +41,3 @@ Der Treiber-Manager überprüft die folgenden Typen von Argumenten. Sofern nicht
 -   Anzahl von Spalten und Parameter muss größer als 0 oder größer als oder gleich 0 ist, abhängig von der Funktion. Der Treiber muss die Obergrenze von diesen Argumentwerten auf Grundlage des aktuellen Resultset oder eine SQL-Anweisung überprüfen.  
   
 -   Längenindikator/Argumente und Daten Puffer Länge Argumente müssen entsprechende Werte enthalten. Beispielsweise das Argument, der angibt, die Länge eines Tabellennamens in **SQLColumns** (*NameLength3*) muss SQL_NTS oder einen Wert größer als 0; *Pufferlänge* in **SQLDescribeCol** muss größer als oder gleich 0 sein. Der Treiber möglicherweise müssen Sie auch diesen Argumenten überprüfen. Beispielsweise können sie überprüfen, *NameLength3* ist kleiner oder gleich der maximal einen Tabellennamen in der Datenquelle.
-

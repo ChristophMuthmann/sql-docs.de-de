@@ -5,22 +5,20 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 420452fd-9507-4093-8857-71d3e70d96cc
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 196b8e8e49ceae58054eae3d1b74480a9f438b75
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 753380839f10fc25c4bafa4ea045c301831361a0
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>VBA-Funktionen in MDX und DAX
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -158,7 +156,7 @@ ms.lasthandoff: 08/02/2017
 |[SYD](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007655&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Nur MDX||  
 |[Registerkarte "](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007656&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Nicht unterstützt||  
 |[Tan](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007657&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Nur MDX||  
-|[Zeit](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007658&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Nicht unterstützt||  
+|[Uhrzeit](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007658&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Nicht unterstützt||  
 |[Timer](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007659&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Nur MDX||  
 |[TimeSerial](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007660&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Nur MDX||  
 |[TimeValue](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007661&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|DAX, MDX||  
@@ -173,4 +171,3 @@ ms.lasthandoff: 08/02/2017
 |[Jahr](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007670&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|DAX, MDX||  
   
   
-

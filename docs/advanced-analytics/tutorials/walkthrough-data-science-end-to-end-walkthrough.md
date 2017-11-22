@@ -5,25 +5,21 @@ ms.date: 08/22/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: edd76ae9-4125-45a8-bf42-47a85b9d9a32
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: a49cad5bd89633841c5ff54c03e39b098fca72e5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>End-to-End Data sience-Vorgehensweise für R und SQL Server
 
@@ -45,8 +41,8 @@ Die geschätzte Zeiten beinhalten keine Setup. Weitere Informationen finden Sie 
 |Themenliste|Geschätzte Zeit|
 |-|------------------------------|
 |[Vorbereiten der exemplarischen Vorgehensweise R](../tutorials/walkthrough-prepare-the-data.md) <br /><br />Erhalten Sie die Daten, die zum Erstellen eines Modells verwendet werden. Laden Sie ein öffentliches Dataset herunter, und laden Sie es in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|30 Minuten|
-|[Untersuchen Sie die Daten mit SQL](../tutorials/walkthrough-view-and-explore-the-data.md) <br /><br />Verstehen Sie Ihre Daten mithilfe von SQL-Tools und Zusammenfassungen.|10 Minuten|
-|[Zusammenfassen von Daten mithilfe von R](../tutorials/walkthrough-view-and-summarize-data-using-r.md) <br /><br />Verwenden Sie R, um die Daten untersuchen und Zusammenfassungen zu generieren.|10 Minuten|
+|[Durchsuchen der Daten mithilfe von SQL](../tutorials/walkthrough-view-and-explore-the-data.md) <br /><br />Verstehen Sie Ihre Daten mithilfe von SQL-Tools und Zusammenfassungen.|10 Minuten|
+|[Zusammenfassen der Daten mithilfe von R](../tutorials/walkthrough-view-and-summarize-data-using-r.md) <br /><br />Verwenden Sie R, um die Daten untersuchen und Zusammenfassungen zu generieren.|10 Minuten|
 |[Erstellen von Darstellungen, die Verwendung von R in SQL Server](../tutorials/walkthrough-create-graphs-and-plots-using-r.md) <br /><br />Erstellen von Darstellungen in lokalen und remoterechenkontexte durch das Mischen von R und SQL.|10 Minuten|
 |[Erstellen Sie Data-Funktionen, die mittels R und T-SQL)](../tutorials/walkthrough-create-data-features.md) <br /><br />Entwickeln Sie Features mithilfe von benutzerdefinierten Funktionen in R und [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vergleichen Sie die Leistung von R und T-SQL im Hinblick auf Featurebereitstellung. |10 Minuten|
 |[Erstellen Sie ein R-Modell zu und speichern Sie sie in SQL Server](../tutorials/walkthrough-build-and-save-the-model.md) <br /><br />Trainieren und optimieren Sie ein Vorhersagemodell. Bewerten Sie die Leistung des Modells. In dieser exemplarischen Vorgehensweise wird ein Klassifizierungsmodell erstellt. Stellen Sie die Genauigkeit des Modells mithilfe von R dar.|15 Minuten|
@@ -71,4 +67,3 @@ Weitere Informationen dazu, wie Sie diese Server und Client-Umgebungen einrichte
 ## <a name="next-lesson"></a>Nächste Lektion
 
 [Vorbereiten der exemplarischen Vorgehensweise R](../tutorials/walkthrough-prepare-the-data.md)
-

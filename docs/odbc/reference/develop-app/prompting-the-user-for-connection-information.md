@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - prompting user for connection information [ODBC]
 - SQLDriverConnect function [ODBC], prompting user for connection information
 ms.assetid: da98e9b9-a4ac-4a9d-bae6-e9252b1fe1e5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dc8ca40adb6a70b56d9b91842fa1fd560fc50f8a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3b1ee296ea292be7287c2cd4a8e93c9e33cb04bb
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="prompting-the-user-for-connection-information"></a>Der Benutzer aufgefordert, Verbindungsinformationen
 Wenn die Anwendung verwendet **SQLConnect** und muss den Benutzer für alle Verbindungsinformationen aufzufordern wie Benutzername und Kennwort muss geschieht dies selbst. Obwohl dadurch die Anwendung die Steuerung des "Erscheinungsbilds" kann die Anwendung, die Treiber-spezifischen Code enthalten Internet Explorer erzwungen. Dies tritt auf, wenn die Anwendung den Benutzer zur treiberspezifische Verbindungsinformationen aufzufordern muss. Dies stellt eine unmöglich Situation für allgemeiner Anwendungen, die darauf ausgelegt sind, funktionieren alle Treiber, einschließlich der Treiber, die nicht vorhanden sind, wenn die Anwendung geschrieben wird.  
@@ -57,4 +55,3 @@ DSN=XYZ Corp;
  Nachdem der Benutzer eine Datenquelle ausgewählt hat, wird der Treiber-Manager eine Verbindungszeichenfolge angeben, die Datenquelle erstellt und übergibt sie an den Treiber. Der Treiber kann dann die Benutzer für zusätzliche Informationen auffordern benötigten.  
   
  Die Bedingungen, unter dem der Treiber wird der Benutzer aufgefordert, die von gesteuert werden die *DriverCompletion* flag; es gibt Optionen, um immer eine Aufforderung, fordert bei Bedarf oder nie aufgefordert. Eine vollständige Beschreibung dieses Flags, finden Sie unter der [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) funktionsbeschreibung.
-

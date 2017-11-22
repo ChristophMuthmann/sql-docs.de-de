@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 63b3e069-6ba5-474e-b769-47b7cc87b7dd
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 525b00678272347473f0cf845689be6d691c8ace
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0cf821eb8c5db3410901f3d72826e0c2c8b8a274
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="technical-reference-for-bi-annotations-to-csdl"></a>Technische Referenz für BI-Anmerkungen zu CSDL
   Dieser Abschnitt listet die Elemente, Attribute und Eigenschaften in CSDL auf, die verwendet werden, um darzustellen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tabellarische Modelle. Einige Elemente sind neu; andere wurden mit Anmerkungen versehen oder zur Unterstützung von Business Intelligence-Modellen erweitert.  
@@ -95,4 +93,3 @@ ms.lasthandoff: 09/01/2017
  [CSDLBI-Konzepte](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-concepts.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC drivers [ODBC], standards-compliant
 - application features are standards-compliant [ODBC]
 ms.assetid: a1145c4c-3094-4f3f-8cc2-e6bb1a930ab1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c62e19d2d7c2c856b358649955a5b1540a802a12
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1aba299d163aaf9ec14d86740e5d8aa91ddb7b3b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>Mit Standards kompatible Anwendungen und-Treiber
 Eine mit Standards kompatible Anwendung oder Treiber ist, die Open Group CAE-Spezifikation "Data Management: SQL Call-Level Interface (CLI)" und der ISO/IEC 9075 entspricht-3:1995 (E) Call-Level-Interface (SQL/CLI).  
@@ -49,4 +47,3 @@ Eine mit Standards kompatible Anwendung oder Treiber ist, die Open Group CAE-Spe
 -   Die ISO-CLI, die ODBC 3. veröffentlichungshäufigkeit*.x* Headerdateien enthalten Aliase für Typen von Informationen in Aufrufen verwendet **SQLGetInfo**. Eine mit Standards kompatible Anwendung kann diese Aliase verwenden, statt die ODBC 3.*.x* Informationstypen. Weitere Informationen finden Sie im nächste Thema [Headerdateien](../../../odbc/reference/develop-app/header-files.md).  
   
 -   Eine mit Standards kompatible Anwendung muss überprüfen, ob alle Funktionen, die es unterstützt der Treiber unterstützt werden mit geeignet sind. Festlegen der Anweisungsattribut SQL_ATTR_CURSOR_SCROLLABLE auf SQL_SCROLLABLE und das Festlegen der Anweisungsattribut SQL_ATTR_CURSOR_SENSITIVITY auf SQL_INSENSITIVE oder SQL_SENSITIVE sind Funktionen, die als optionale Funktionen in den Standards verfügbar sind jedoch nicht enthalten sind, in die ODBC 3.*.x* Core level und daher möglicherweise nicht unterstützt durch alle ODBC 3.*.x* Treiber. Eine mit Standards kompatible Anwendung diese Funktionen verwendet, sollten sie sicher, dass der Treiber, dem er arbeitet unterstützt.
-

@@ -8,24 +8,21 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- executing queries
+helpviewer_keywords: executing queries
 ms.assetid: 130fc0fd-87dd-46b2-918f-de9dc572c769
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 59523326f9eedb07742fa67dc85026a1570e3bea
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e74c7433ab2e3a831d6aa800a2a1a9abbbda5863
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="comparing-execution-functions"></a>Vergleichen von Ausführungsfunktionen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,4 +44,3 @@ Wenn Sie den PDO_SQLSRV-Treiber verwenden, können Sie eine Abfrage mit einer de
 [Referenz zum Treiber PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)  
 [Programmierhandbuch für den PHP-SQL-Treiber](../../connect/php/programming-guide-for-php-sql-driver.md)
   
-

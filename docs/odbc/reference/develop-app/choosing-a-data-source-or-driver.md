@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data sources [ODBC], selecting
 - ODBC drivers [ODBC], selecting
 ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 449aeb2cf24cc03df6b76c84079c88badc7b1ff9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9f7263f7814e4ab286d1fd678604b3f84a45108f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="choosing-a-data-source-or-driver"></a>Auswählen einer Datenquelle oder Treiber
 Die Datenquelle oder von einer Anwendung verwendeten Treiber ist in einigen Fällen in der Anwendung hartcodiert. Z. B. eine benutzerdefinierte Anwendung ein MIS abteilungsweise zu übertragenden Daten aus einer Datenquelle in eine andere enthält die Namen dieser Datenquellen – die Anwendung einfach funktioniert nicht mit allen anderen Datenquellen. Ein weiteres Beispiel ist eine vertikale Anwendung, wie z. B. nach Auftragseingabe eines verwendet. Eine solche Anwendung immer verwendet die gleiche Datenquelle, mit einem vordefinierten Schema, das von der Anwendung bezeichnet.  
@@ -50,4 +48,3 @@ Die Datenquelle oder von einer Anwendung verwendeten Treiber ist in einigen Fäl
 -   **Beim Zugriff auf ein bestimmtes DBMS ein einziges Mal.** Angenommen, eine Tabelle, die Daten abruft, durch Aufrufen von ODBC-Funktionen enthält die **Treiber** Schlüsselwort, um einen bestimmten Treiber zu identifizieren. Da der Treibername für alle Benutzer sinnvoll, die diesen Treiber haben ist, kann das Arbeitsblatt für diesen Benutzer übergeben werden. Wenn das Arbeitsblatt einen Datenquellennamen enthalten, müssten jeden Benutzer erstellen Sie die gleiche Datenquelle, um das Arbeitsblatt zu verwenden.  
   
 -   **Durchsuchen das System für alle Datenbanken auf einen bestimmten Treiber zugegriffen werden kann.** Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SQLBrowseConnect](../../../odbc/reference/develop-app/connecting-with-sqlbrowseconnect.md)weiter unten in diesem Abschnitt.
-

@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLSetEnvAttr
-apilocation:
-- sqlsrv32.dll
+apiname: SQLSetEnvAttr
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLSetEnvAttr
-helpviewer_keywords:
-- SQLSetEnvAttr function [ODBC]
+f1_keywords: SQLSetEnvAttr
+helpviewer_keywords: SQLSetEnvAttr function [ODBC]
 ms.assetid: 0343241c-4b15-4d4b-aa2b-2e8ab5215cd2
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ad246dc337b57eb97b588c1ed08bb380cc4d6185
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0f99a9d8a572653be31e74cab00de918f1f51e16
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetenvattr-function"></a>SQLSetEnvAttr-Funktion
 **Konformität**  
@@ -114,5 +108,4 @@ SQLRETURN SQLSetEnvAttr(
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)   
- [Was ist neu in ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)
-
+ [What's New in ODBC 3.8 (Neues in ODBX 3.8)](../../../odbc/reference/what-s-new-in-odbc-3-8.md)

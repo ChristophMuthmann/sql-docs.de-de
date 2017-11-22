@@ -13,32 +13,27 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Command Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Command Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.command
 - Command
 - urn:schemas-microsoft-com:xml-analysis#Command
 - http://schemas.microsoft.com/analysisservices/2003/engine#Command
-helpviewer_keywords:
-- Command element
+helpviewer_keywords: Command element
 ms.assetid: 9abc14df-7cbe-46bc-ba0f-f0691c19afad
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9dad2fd03f81522873b5e40bb09c709fad4e2fbf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 496d96ef9057658fec36b8b5b2ccd0ecd73b5508
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="command-element-xmla"></a>Command-Element (XMLA)
   Enthält den Befehl ausgeführt werden soll die [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) Methode.  
@@ -127,4 +122,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

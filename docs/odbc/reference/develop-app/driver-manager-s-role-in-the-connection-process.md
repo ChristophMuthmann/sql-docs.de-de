@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - connecting to driver [ODBC], driver manager
 - ODBC driver manager [ODBC]
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 797d3439b378cb5caef62af019352ff6797fdb43
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 32a6629892ad9667b7d56a6bb6752c68001dddc9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>Treiber-Manager &#39; s-Rolle in der Verbindungsprozess
 Denken Sie daran, dass Anwendungen keine Treiberfunktionen direkt aufrufen. Stattdessen rufen Sie Treiber-Manager-Funktionen mit dem gleichen Namen und der Treiber-Manager ruft der Treiberfunktionen. In der Regel geschieht dies fast sofort. Beispielsweise ruft die Anwendung **SQLExecute** im Treiber-Manager und nach einigen Fehlern der fehlerprüfung, ruft der Treiber-Manager **SQLExecute** im Treiber.  
@@ -48,4 +46,3 @@ Denken Sie daran, dass Anwendungen keine Treiberfunktionen direkt aufrufen. Stat
  Der Treiber-Manager wird das Umgebungshandle gesperrt (*Henv*) vor dem Aufrufen des Treibers **SQLAllocHandle** und **SQLFreeHandle** Wenn *HandleType* festgelegt ist, um **SQL_HANDLE_DBC**.  
   
  Wenn die Anwendung aufruft, **SQLDisconnect**, der Treiber-Manager ruft **SQLDisconnect** im Treiber. Allerdings bleibt den Treiber geladen wird, für den Fall, dass die Anwendung an den Treiber erneut eine Verbindung herstellt. Wenn die Anwendung aufruft, **SQLFreeHandle** mit der Option SQL_HANDLE_DBC auf der Treiber-Manager ruft **SQLFreeHandle** im Treiber. Wenn der Treiber nicht durch alle anderen Verbindungen verwendet wird, ruft der Treiber-Manager dann **SQLFreeHandle** -option in den Treiber mit der SQL_HANDLE_ENV und entlädt den Treiber.
-

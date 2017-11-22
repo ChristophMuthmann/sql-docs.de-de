@@ -13,24 +13,20 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- NOT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- NOT operator [DMX]
+f1_keywords: NOT
+dev_langs: DMX
+helpviewer_keywords: NOT operator [DMX]
 ms.assetid: 6d91b3d9-270c-4a68-b41f-169cff5faa0e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 7124cc5f317d8480863a94772b290020a5ba9f57
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 947d066f9dd13d7f4af15407987fcf218c275cc2
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="not-dmx"></a>NOT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -65,4 +61,3 @@ NOT Expression1
  [Operatoren &#40; DMX &#41;](../dmx/operators-dmx.md)  
   
   
-

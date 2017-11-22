@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- interoperability [ODBC], writing interoperable applications
+helpviewer_keywords: interoperability [ODBC], writing interoperable applications
 ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 97d25a4d641e63dd081f16601f78e48d0ec8e17b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 89e348d084f150bdcb2d74f4d4dd561816fc351f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="features-to-watch-for"></a>Funktionen, die Überwachung für
 Dieser Abschnitt beschreibt eine Reihe von Funktionen, die Anwendungsentwicklern häufig dauern, bis gewährt. Diese Funktionen in der Tat variieren stark Support-und Art der Unterstützung von DBMS; Fehler beim Code dafür ist wahrscheinlich Probleme verursachen, im interoperablen Anwendungen ausführen können.  
@@ -38,15 +35,14 @@ Dieser Abschnitt beschreibt eine Reihe von Funktionen, die Anwendungsentwicklern
   
 -   [Mehrere aktive Anweisungen und Verbindungen](../../../odbc/reference/develop-app/multiple-active-statements-and-connections.md)  
   
--   [Transaktionsunterstützung in Datenbank-Managementsysteme](../../../odbc/reference/develop-app/transaction-support-in-dbmss.md)  
+-   [Transaktionsunterstützung in DBMS](../../../odbc/reference/develop-app/transaction-support-in-dbmss.md)  
   
--   [Commit- und Rollback-Verhalten](../../../odbc/reference/develop-app/commit-and-rollback-behavior.md)  
+-   [Commit- und Rollbackverhalten](../../../odbc/reference/develop-app/commit-and-rollback-behavior.md)  
   
--   [NOT NULL in CREATE TABLE-Anweisungen](../../../odbc/reference/develop-app/not-null-in-create-table-statements.md)  
+-   [NOT NULL in „CREATE TABLE“-Anweisungen](../../../odbc/reference/develop-app/not-null-in-create-table-statements.md)  
   
 -   [Unterstützte Datentypen](../../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)  
   
 -   [ODBC-SQL-Grammatik](../../../odbc/reference/develop-app/odbc-sql-grammar.md)  
   
 -   [Batchverarbeitung](../../../odbc/reference/develop-app/batch-processing.md)
-

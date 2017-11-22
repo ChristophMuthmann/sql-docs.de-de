@@ -1,30 +1,31 @@
 ---
 title: Installation und Konfiguration | Microsoft Docs
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d07ffb9a-ac4f-4295-9aeb-ecfb97600134
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
+ms.openlocfilehash: 64149cc79a4c2e4c19c2f93e02c97fcc42865712
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: f40894ea8ee3d7b998a8a45170e9833f2e6c763f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW Installation und Konfiguration
-Anweisungen zu Installation und Konfiguration für die WideWorldImportersDW-Datenbank.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Anweisungen zu Installation und Konfiguration für die WideWorldImportersDW-Datenbank.
 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (oder höher) oder [Azure SQL-Datenbank](https://azure.microsoft.com/services/sql-database/). Um die vollständige Version des Beispiels zu verwenden, verwenden Sie SQL Server-Evaluierung, Developer, Enterprise Edition.
 - [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md). Für die besten Ergebnisse verwenden Sie das Release vom Juni 2016 oder höher.
@@ -77,4 +78,3 @@ Die Beispieldatenbank kann Nutzen des PolyBase zur Abfrage von Dateien in Hadoop
 2. Führen Sie den folgenden T-SQL-Befehl, um die Verwendung von PolyBase in der Datenbank zu aktivieren:
 
    Führen Sie [Anwendung]. [Configuration_ApplyPolyBase]
-

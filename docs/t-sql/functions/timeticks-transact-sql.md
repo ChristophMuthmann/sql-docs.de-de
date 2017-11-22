@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '@@TIMETICKS_TSQL'
 - '@@TIMETICKS'
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - ticks [SQL Server]
 - '@@TIMETICKS function'
@@ -24,19 +22,18 @@ helpviewer_keywords:
 - time [SQL Server], ticks
 - number of microseconds per tick
 ms.assetid: 9d036633-837f-4309-9c45-3d9600258018
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 60c1cd3597bd6e92e0a813b38d755dfb47dc22eb
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: 51139d84f42be25fe41c42907ddc6640b95899e3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40timeticks-transact-sql"></a>& #x 40; & #x 40; TIMETICKS (Transact-SQL)
+# <a name="x40x40timeticks-transact-sql"></a>&#x40;&#x40;TIMETICKS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt die Anzahl von Mikrosekunden pro Takt zurück.  
@@ -63,7 +60,6 @@ SELECT @@TIMETICKS AS 'Time Ticks';
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Statistische Systemfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
+ [Statistische Systemfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   
-

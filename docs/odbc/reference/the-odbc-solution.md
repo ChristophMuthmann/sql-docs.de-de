@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - database access [ODBC]
 - standardizing database access [ODBC], using ODBC
 ms.assetid: 34b80790-e010-4b90-8eaa-03189f5d8986
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 806bc94a3807dbdd658cf710c0d22e2b6116d27b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c7288fcb9fad7b2567f7fec16cf0f407b2f6b2e4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="the-odbc-solution"></a>Der ODBC-Lösung
 Klicken Sie dann die Frage ist, wie ODBC Datenbankzugriff standardisieren? Es gibt zwei architektonische Anforderungen:  
@@ -64,4 +62,3 @@ Klicken Sie dann die Frage ist, wie ODBC Datenbankzugriff standardisieren? Es gi
      Damit eine Anwendung bestimmen kann, welche Treiber features und DBMS unterstützt ODBC bietet zwei Funktionen (**SQLGetInfo** und **SQLGetFunctions**), die allgemeine Informationen über die Treiber und DBMS zurückgeben Funktionen und eine Liste der Funktionen der Treiber unterstützt. ODBC definiert auch die API und SQL-Grammatik Übereinstimmungsebenen, die allgemeine Bereiche vom Treiber unterstützten Funktionen angeben. Weitere Informationen finden Sie unter [Übereinstimmungsebenen](../../odbc/reference/develop-app/conformance-levels.md).  
   
      Es ist wichtig zu beachten, dass ODBC eine allgemeine Schnittstelle für alle Funktionen definiert, die sie verfügbar macht. Aus diesem Grund Anwendungen featurespezifische Code enthalten, nicht von DBMS-spezifischen Code, und alle Treiber, die die Features verfügbar machen können. Ein Vorteil besteht darin, dass Anwendungen müssen nicht aktualisiert werden, wenn die von einem DBMS unterstützten Funktionen erweitert werden; Stattdessen, wenn ein aktualisierter Treiber installiert ist, verwendet die Anwendung automatisch die Funktionen des Codes ist featurespezifische, nicht treiberspezifische oder DBMS-spezifische.
-

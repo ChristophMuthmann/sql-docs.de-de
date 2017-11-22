@@ -8,32 +8,29 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - ODBC function calls
 - keywords [SQL Server], reserved
 - reserved words [SQL Server]
 - keywords [SQL Server]
 ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 000b5c3177db29b173ee836df9c194c2af322d39
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: efaa21099f422ae812168561351a359fc89f8e0d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="reserved-keywords-transact-sql"></a>Reservierte Schlüsselwörter-Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="reserved-keywords-transact-sql"></a>Reservierte Schlüsselwörter (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet reservierte Schlüsselwörter zum Definieren, Bearbeiten und Zugreifen auf Datenbanken. Reservierte Schlüsselwörter sind ein Bestandteil der Grammatik der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Sprache, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet wird, um [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen und -Batches zu analysieren und zu verstehen. Obwohl es syntaktisch möglich ist, reservierte Schlüsselwörter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Bezeichner und Objektnamen in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripts zu verwenden, ist hierzu die Verwendung von Begrenzungsbezeichnern erforderlich.  
   
@@ -120,29 +117,29 @@ ms.lasthandoff: 09/01/2017
 |-|-|-|  
 |**ABSOLUTE**|**EXEC**|**(ÜBERLAPPUNGEN)**|  
 |**AKTION**|**EXECUTE**|**MIT LEERSTELLEN AUFFÜLLEN**|  
-|**ADA**|**VORHANDEN IST**|**PARTIELLE**|  
+|**ADA**|**EXISTS**|**PARTIELLE**|  
 |**HINZUFÜGEN**|**EXTERNAL**|**PASCAL-SCHREIBWEISE**|  
 |**ALL**|**EXTRAHIEREN**|**POSITION**|  
 |**ZUORDNEN**|**"FALSE"**|**GENAUIGKEIT**|  
-|**ALTER**|**ABRUFEN VON DATEN**|**VORBEREITEN**|  
+|**ALTER**|**FETCH**|**VORBEREITEN**|  
 |**AND**|**ERSTE**|**BEIBEHALTEN**|  
-|**ALLE**|**"FLOAT"**|**PRIMARY**|  
+|**ANY**|**"FLOAT"**|**PRIMARY**|  
 |**SIND**|**FÜR**|**VOR**|  
 |**AS**|**FREMDSCHLÜSSEL**|**BERECHTIGUNGEN**|  
-|**ASC**|**FORTRAN**|**PROZEDUR**|  
+|**ASC**|**FORTRAN**|**PROCEDURE**|  
 |**ASSERTION**|**GEFUNDEN**|**ÖFFENTLICHE**|  
 |**AT**|**FROM**|**LESEN**|  
-|**AUTORISIERUNG**|**FULL**|**ECHTE**|  
+|**AUTHORIZATION**|**FULL**|**ECHTE**|  
 |**AVG**|**ERHALTEN**|**VERWEISE**|  
 |**BEGIN**|**GLOBALE**|**RELATIVE**|  
-|**BETWEEN**|**WECHSELN SIE**|**EINSCHRÄNKEN**|  
-|**BIT**|**GEHE ZU**|**REVOKE**|  
+|**BETWEEN**|**GO**|**EINSCHRÄNKEN**|  
+|**BIT**|**GOTO**|**REVOKE**|  
 |**BIT_LENGTH**|**GRANT**|**RIGHT**|  
 |**BEIDE**|**GRUPPE**|**ROLLBACK**|  
 |**DURCH**|**HAVING**|**ZEILEN**|  
 |**CASCADE**|**STUNDE**|**SCHEMA**|  
 |**KASKADIERTE**|**IDENTITÄT**|**FÜHREN SIE EINEN BILDLAUF**|  
-|**FALL**|**SOFORTIGE**|**SEKUNDE**|  
+|**CASE**|**SOFORTIGE**|**SEKUNDE**|  
 |**TYPUMWANDLUNG**|**IN**|**IM ABSCHNITT**|  
 |**KATALOG**|**EINSCHLIESSEN**|**SELECT**|  
 |**CHAR**|**INDEX**|**SITZUNG**|  
@@ -150,8 +147,8 @@ ms.lasthandoff: 09/01/2017
 |**ZEICHEN**|**ANFÄNGLICH**|**FESTLEGEN**|  
 |**CHARACTER_LENGTH**|**INNERE**|**GRÖSSE**|  
 |**KONTROLLKÄSTCHEN**|**EINGABE**|**"SMALLINT"**|  
-|**SCHLIESSEN SIE**|**UNTERSCHEIDUNG**|**EINIGE**|  
-|**COALESCE**|**INSERT**|**SPEICHERPLATZ**|  
+|**CLOSE**|**UNTERSCHEIDUNG**|**EINIGE**|  
+|**COALESCE**|**INSERT**|**SPACE**|  
 |**COLLATE**|**INT**|**location**|  
 |**SORTIERUNG**|**GANZE ZAHL**|**SQLCA**|  
 |**SPALTE**|**INTERSECT**|**SQLCODE**|  
@@ -159,42 +156,42 @@ ms.lasthandoff: 09/01/2017
 |**EINE VERBINDUNG HERSTELLEN**|**IN**|**SQLSTATE**|  
 |**VERBINDUNG**|**IS**|**SQLWARNING**|  
 |**EINSCHRÄNKUNG**|**ISOLATION**|**SUBSTRING**|  
-|**EINSCHRÄNKUNGEN**|**JOIN**|**SUMME**|  
-|**FORTSETZEN**|**SCHLÜSSEL**|**SYSTEM_USER**|  
-|**KONVERTIEREN**|**LANGUAGE**|**TABELLE**|  
+|**EINSCHRÄNKUNGEN**|**JOIN**|**SUM**|  
+|**CONTINUE**|**SCHLÜSSEL**|**SYSTEM_USER**|  
+|**KONVERTIEREN**|**LANGUAGE**|**TABLE**|  
 |**ENTSPRICHT**|**LETZTE**|**TEMPORÄRE**|  
-|**ANZAHL**|**FÜHRENDE**|**KLICKEN SIE DANN**|  
+|**COUNT**|**FÜHRENDE**|**KLICKEN SIE DANN**|  
 |**ERSTELLEN**|**LEFT**|**ZEIT**|  
 |**CROSS**|**EBENE**|**ZEITSTEMPEL**|  
 |**AKTUELLE**|**LIKE**|**TIMEZONE_HOUR**|  
 |**CURRENT_DATE**|**LOKALE**|**TIMEZONE_MINUTE**|  
-|**AKTUELLE_ZEIT**|**NIEDRIGERE**|**AN**|  
+|**AKTUELLE_ZEIT**|**LOWER**|**AN**|  
 |**CURRENT_TIMESTAMP**|**MATCH**|**NACHFOLGENDE**|  
 |**CURRENT_USER**|**MAX**|**TRANSAKTION**|  
-|**CURSOR**|**MIN.**|**ÜBERSETZEN**|  
+|**CURSOR**|**MIN**|**TRANSLATE**|  
 |**DATUM**|**MINUTE**|**ÜBERSETZUNG**|  
-|**TAG**|**MODUL**|**ZUSCHNEIDEN**|  
-|**AUFHEBEN DER ZUORDNUNG**|**MONAT**|**"TRUE"**|  
+|**DAY**|**MODUL**|**TRIM**|  
+|**DEALLOCATE**|**MONTH**|**"TRUE"**|  
 |**DEC**|**NAMEN**|**UNION**|  
 |**DEZIMALZAHL**|**NATIONAL**|**EINDEUTIGE**|  
 |**DEKLARIEREN**|**NATÜRLICHE**|**UNBEKANNT**|  
-|**STANDARDWERT**|**NCHAR**|**UPDATE**|  
-|**VERZÖGERT**|**WEITER**|**OBERE**|  
+|**DEFAULT**|**NCHAR**|**UPDATE**|  
+|**VERZÖGERT**|**WEITER**|**UPPER**|  
 |**VERZÖGERTE**|**NEIN**|**VERWENDUNG**|  
-|**DELETE**|**NONE**|**BENUTZER**|  
+|**DELETE**|**NONE**|**USER**|  
 |**"DESC"**|**NOT**|**MITHILFE VON**|  
 |**BESCHREIBEN**|**NULL**|**VALUE**|  
 |**DER DESKRIPTOR**|**NULLIF**|**WERTE**|  
 |**DIAGNOSE**|**NUMERISCH**|**VARCHAR**|  
 |**TRENNEN**|**OCTET_LENGTH**|**VARYING**|  
-|**DISTINCT**|**DER**|**ANZEIGEN**|  
+|**DISTINCT**|**DER**|**VIEW**|  
 |**DOMÄNE**|**ON**|**WENN**|  
 |**DOUBLE**|**NUR**|**BEI JEDEM**|  
-|**LÖSCHEN**|**ÖFFNEN**|**WHERE**|  
+|**LÖSCHEN**|**OPEN**|**WHERE**|  
 |**ELSE**|**OPTION**|**MIT**|  
 |**END**|**OR**|**ARBEITSAUFGABEN**|  
 |**END-EXEC**|**REIHENFOLGE**|**SCHREIBEN**|  
-|**ESCAPEZEICHEN**|**ÄUSSERE**|**JAHR**|  
+|**ESCAPEZEICHEN**|**ÄUSSERE**|**YEAR**|  
 |**AUSNAHME:**|**AUSGABE**|**ZONE**|  
 |**AUSNAHME**|||  
   
@@ -300,4 +297,3 @@ ms.lasthandoff: 09/01/2017
  [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   
-
