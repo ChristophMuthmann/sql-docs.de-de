@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -33,17 +32,16 @@ helpviewer_keywords:
 - translating Access to SQL Azure
 - translating Access to SQL Server
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9b2240361d87aed6817f2bd5e1b0398ea7fc7894
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5fd1535f35afdfa53895816da2e3e32f539c04b5
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Konvertieren den Zugriff auf Datenbankobjekte (AccessToSQL)
 Nachdem Sie den Zugriff auf Datenbanken hinzugefügt und verbunden haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure, SSMA zeigt die Metadaten für den Zugriff und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datenbankobjekte. Sie können nun den Zugriff auf Datenbankobjekte auswählen und dann die Umstellung der Schemas in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Schemas.  
@@ -68,7 +66,7 @@ Die folgende Tabelle zeigt, welche Zugriff Objekte konvertiert werden, und die r
 |column|column|  
 |Index|Index|  
 |Fremdschlüssel|Fremdschlüssel|  
-|Abfrage|Anzeigen<br /><br />Die meisten SELECT-Abfragen werden in Ansichten konvertiert. Andere Abfragen, z. B. UPDATE-Abfragen werden nicht migriert.<br /><br />SELECT-Abfragen, die Parameter werden nicht konvertiert, was auch Kreuztabellenberichten Abfragen.|  
+|Abfrage|Ansicht<br /><br />Die meisten SELECT-Abfragen werden in Ansichten konvertiert. Andere Abfragen, z. B. UPDATE-Abfragen werden nicht migriert.<br /><br />SELECT-Abfragen, die Parameter werden nicht konvertiert, was auch Kreuztabellenberichten Abfragen.|  
 |Bericht|nicht konvertiert.|  
 |Formular|nicht konvertiert.|  
 |Makro|nicht konvertiert.|  
@@ -129,4 +127,3 @@ Der nächste Schritt des Migrationsvorgangs besteht [lädt die konvertierten Dat
 ## <a name="see-also"></a>Siehe auch  
 [Migrieren von Access-Datenbanken zu SQLServer](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
-

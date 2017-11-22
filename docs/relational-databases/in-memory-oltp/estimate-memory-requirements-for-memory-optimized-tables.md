@@ -8,22 +8,20 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ea8b5ddea3edfbe5d2521bd30e4a51fd62a2b482
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f8eb8029f9824ceaeee061fc829a89d0054e1244
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +40,7 @@ Die Größe einer speicheroptimierten Tabelle entspricht die Größe der Daten z
 
 Indizes für speicheroptimierte Tabellen sind tendenziell kleiner als nicht gruppierte Indizes für datenträgerbasierte Tabellen. Die Größe eines nicht gruppierten Index bewegt sich in der Größenordnung von `[primary key size] * [row count]`. Die Größe von Hashindizes beträgt `[bucket count] * 8 bytes`. 
 
-Wenn eine aktive Arbeitsauslastung vorliegt, ist zusätzlicher Arbeitsspeicher erforderlich, um die Zeilenversionsverwaltung und verschiedene Vorgänge zu berücksichtigen. Wie viel Arbeitsspeicher in der Praxis benötigt wird, hängt von der Arbeitsauslastung ab, aber es wird sicherheitshalber empfohlen, mit dem Zweifachen der erwarteten Größe für speicheroptimierte Tabellen und Indizes zu beginnen, um dann zu beobachten, welche Speicheranforderungen sich in der Praxis ergeben. Der Mehraufwand für die Zeilenversionsverwaltung hängt immer von den Merkmalen der Arbeitsauslastung ab – insbesondere lang andauernde Transaktionen erhöhen den Mehraufwand. Für die meisten Arbeitsauslastungen, die größere Datenbanken (z. B. >100 GB) verwenden, ist der Mehraufwand meist begrenzt (25 % oder weniger).
+Wenn eine aktive Arbeitsauslastung vorliegt, ist zusätzlicher Arbeitsspeicher erforderlich, um die Zeilenversionsverwaltung und verschiedene Vorgänge zu berücksichtigen. Wie viel Arbeitsspeicher in der Praxis benötigt wird, hängt von der Arbeitsauslastung ab, aber es wird sicherheitshalber empfohlen, mit dem Zweifachen der erwarteten Größe für speicheroptimierte Tabellen und Indizes zu beginnen, um dann zu beobachten, welche Speicheranforderungen sich in der Praxis ergeben. Der Mehraufwand für die Zeilenversionsverwaltung hängt immer von den Merkmalen der Arbeitsauslastung ab – insbesondere lang andauernde Transaktionen erhöhen den Mehraufwand. Für die meisten Arbeitsauslastungen, die größere Datenbanken (z. B. >100 GB) verwenden, ist der Mehraufwand meist begrenzt (25 % oder weniger).
 
   
 ## <a name="detailed-computation-of-memory-requirements"></a>Detaillierte Berechnung der Speicheranforderungen 
@@ -202,5 +200,4 @@ Mit den oben aufgeführten Berechnungen wird der Arbeitsspeicherbedarf für die 
 ## <a name="see-also"></a>Siehe auch
 
 [Migrieren zu In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-
 

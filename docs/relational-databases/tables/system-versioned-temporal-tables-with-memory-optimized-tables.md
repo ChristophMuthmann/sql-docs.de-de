@@ -1,10 +1,13 @@
 ---
 title: Temporale Tabellen mit Systemversionsverwaltung und speicheroptimierten Tabellen | Microsoft-Dokumentation
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/12/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 321212aae6e3438a24903293a6b0ab923eb1d456
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 55972445fa42c914b9b01fcb05d059caa5a562dd
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Temporale Tabellen mit Systemversionsverwaltung und speicheroptimierten Tabellen
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Temporale Tabellen mit Systemversionsverwaltung für [speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) bieten eine kostengünstige Lösung für Szenarien, in denen zusätzlich zur Datensammlung mit In-Memory-OLTP-Arbeitsauslastungen [Datenüberwachung und Zeitpunktanalyse](http://msdn.microsoft.com/library/mt631669.aspx) erforderlich sind. Sie bieten hohen Transaktionsdurchsatz, sperrenfreie Parallelität und gleichzeitig die Möglichkeit, große Mengen von Verlaufsdaten zu speichern, die leicht abgefragt werden können.  
   

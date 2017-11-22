@@ -17,17 +17,16 @@ helpviewer_keywords:
 - SQL Trace, convert script to extended events
 - extended events [SQL Server], convert SQL Trace script
 ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3817f8c3c5b3aaa50770b3734974e457a4e802e8
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b00c44c7ae18bb15042cfd02d0bacb6520d5720f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Konvertieren eines vorhandenen SQL-Ablaufverfolgungsskripts in eine Sitzung für erweiterte Ereignisse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -106,7 +105,7 @@ ms.lasthandoff: 06/22/2017
            AND em.xe_event_name = '<event_name>';  
         ```  
   
-         Beispielsweise ist die Ereignisklasse „SP:StmtCompleted“ dem erweiterten Ereignis „sp_statement_completed“ zugeordnet. Wenn Sie „sp_statement_completed“ in der Abfrage als Ereignisnamen angeben, werden in der Spalte „event_field“ die Felder angezeigt, die standardmäßig in dem Ereignis enthalten sind. Wenn Sie sich die Felder ansehen, werden Sie sehen, dass es ein Feld "duration" gibt. Um den Filter in der entsprechenden Sitzung für erweiterte Ereignisse zu erstellen, würden Sie ein Prädikat, z. B. "WHERE duration > 0" hinzufügen. Ein Beispiel finden Sie in der Vorgehensweise "So erstellen Sie die Sitzung für erweiterte Ereignisse" weiter unten in diesem Thema.  
+         Beispielsweise ist die Ereignisklasse „SP:StmtCompleted“ dem erweiterten Ereignis „sp_statement_completed“ zugeordnet. Wenn Sie „sp_statement_completed“ in der Abfrage als Ereignisnamen angeben, werden in der Spalte „event_field“ die Felder angezeigt, die standardmäßig in dem Ereignis enthalten sind. Wenn Sie sich die Felder ansehen, werden Sie sehen, dass es ein Feld "duration" gibt. Um den Filter in der entsprechenden Sitzung für erweiterte Ereignisse zu erstellen, würden Sie ein Prädikat, z. B. "WHERE duration > 0" hinzufügen. Ein Beispiel finden Sie in der Vorgehensweise "So erstellen Sie die Sitzung für erweiterte Ereignisse" weiter unten in diesem Thema.  
   
 ## <a name="to-create-the-extended-events-session"></a>So erstellen Sie die Sitzung für erweiterte Ereignisse  
  Verwenden Sie den Abfrage-Editor, um die Sitzung für erweiterte Ereignisse zu erstellen und die Ausgabe in eine Dateiziel zu schreiben. Die folgenden Schritte beschreiben eine einzelne Abfrage, mit Erklärungen, um Ihnen zu zeigen, wie die Abfrage erstellt wird. Die vollständige Beispielabfrage finden Sie im Abschnitt "Beispiel" dieses Themas.  
@@ -262,4 +261,3 @@ ADD TARGET package0.asynchronous_file_target
  [Anzeigen der Entsprechungen von erweiterten Ereignissen für SQL-Ablaufverfolgungsklassen](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
   
   
-

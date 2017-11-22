@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - NEW keyword [ADO]
 - aggregate functions [ADO]
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 284a672a725e5627d0b9be61c12f0c95d565ae09
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f24280f155fd5ec6bd86b8486b0f8f77338d8eb6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Aggregatfunktionen, die CALC-Funktion und das NEW-Schlüsselwort
 Strukturieren von Daten unterstützt die folgenden Funktionen: Ist im Kapitel über das mit der Spalte verarbeitet werden sollen zugewiesene Name der *Kapitel-Alias*.  
@@ -75,7 +73,7 @@ Strukturieren von Daten unterstützt die folgenden Funktionen: Ist im Kapitel ü
 |DBTYPE_DBTIME|adDBTime|  
 |DBTYPE_DBTIMESTAMP|adDBTimeStamp|  
 |DBTYPE_VARNUMERIC|adVarNumeric|  
-|DBTYPE_FILETIME|adFileTime|  
+|DBTYPE_FILETIME|AdFileTime|  
 |DBTYPE_ERROR|adError|  
   
  Wenn das neue Feld vom Typ Decimal (um in OLE DB DBTYPE_DECIMAL oder in ADO AdDecimal) ist, müssen Sie die Genauigkeit und Dezimalstellenanzahl Werte angeben.  
@@ -84,4 +82,3 @@ Strukturieren von Daten unterstützt die folgenden Funktionen: Ist im Kapitel ü
  [Daten strukturiert werden, Beispiel](../../../ado/guide/data/data-shaping-example.md)   
  [Formale Grammatik für Formen](../../../ado/guide/data/formal-shape-grammar.md)   
  [Shape-Befehle im Allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)
-

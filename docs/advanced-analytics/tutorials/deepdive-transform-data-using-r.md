@@ -1,31 +1,26 @@
 ---
 title: Transformieren von Daten mithilfe von R | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 05/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 0327e788-94cc-4a47-933b-7c5c027b9208
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 24f37dd048f9eb7f8bb872515958006874a9b3a7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 10670f1a5ac3e002d67eab076c41b822b2e757fd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="transform-data-using-r"></a>Transformieren von Daten mithilfe von R
 
@@ -125,4 +120,3 @@ Beachten Sie, dass die Faktorvariablen als Zeichendaten in die Tabelle *ccScoreO
 ## <a name="previous-step"></a>Vorheriger Schritt
 
 [Erstellen und Ausführen von R-Skripts](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)
-

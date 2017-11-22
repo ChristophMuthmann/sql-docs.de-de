@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,17 +28,16 @@ helpviewer_keywords:
 - automatic diagnostic collection
 - clusters [SQL Server], diagnostic collection
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1dbfd36d6761c539176165653bd2e3484c07d5c1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 766c1292435eb11dcff94f7353d49478f554c6a7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sqldiag-utility"></a>SQLdiag (Hilfsprogramm)
   Das Hilfsprogramm **SQLDiag** listet allgemeine Diagnoseinformationen auf und kann als Konsolenanwendung oder Dienst ausgeführt werden. Mithilfe von **SQLDiag** können Sie Protokolle und Datendateien von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und anderen Servertypen sammeln. Dies kann hilfreich sein, um Server für eine gewisse Zeit zu überwachen oder bestimmte Serverprobleme zu behandeln. **SQLDiag** dient dazu, das Sammeln von Diagnoseinformationen für [!INCLUDE[msCoName](../includes/msconame-md.md)] Support Services zu beschleunigen und zu vereinfachen.  
@@ -53,11 +51,11 @@ ms.lasthandoff: 08/02/2017
   
 -   Windows-Ereignisprotokolle  
   
--   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]ablaufverfolgungen  
+-   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] Ablaufverfolgungen  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Blockierungsinformationen  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Blockierungsinformationen  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Konfigurationsinformationen  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Konfigurationsinformationen  
   
  Sie können angeben, welche Informationen **SQLDiag** sammeln soll, indem Sie die Konfigurationsdatei „SQLDiag.xml“ bearbeiten. Dies wird im nächsten Abschnitt weiter beschrieben.  
   
@@ -156,7 +154,7 @@ sqldiag
   
  Beachten Sie, dass **SQLDiag** die lokale Zeit auf dem Computer verwendet, auf dem das Hilfsprogramm ausgeführt wird.  
   
- **/A**  *SQLdiag_application_name*  
+ **/A**  *SQLDiag_application_name*  
  Ermöglicht das Ausführen mehrerer Instanzen des Hilfsprogramms **SQLDiag** für dieselbe Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Jeder *SQLDiag_application_name* identifiziert eine andere Instanz von **SQLDiag**. Zwischen einer Instanz von *SQLDiag_application_name* und einem Instanznamen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] besteht keine Beziehung.  
@@ -165,11 +163,11 @@ sqldiag
   
  Beispiel:  
   
- **SQLDIAG START /A**  *SQLdiag_application_name*  
+ **SQLDIAG START /A**  *SQLDiag_application_name*  
   
  Das Argument kann zusammen mit der Option **/R** auch zum Registrieren einer bestimmten Instanz von **SQLDiag** als Dienst verwendet werden. Beispiel:  
   
- **SQLDIAG /R /A** *SQLdiag_application_name*  
+ **SQLDIAG /R /A** *SQLDiag_application_name*  
   
 > [!NOTE]  
 >  **SQLDiag** setzt vor den für *SQLDiag_application_name*angegebenen Instanznamen automatisch das Präfix DIAG$. Hierdurch kann beim Registrieren von **SQLDiag** als Dienst ein aussagefähiger Dienstname bereitgestellt werden.  
@@ -232,10 +230,10 @@ sqldiag
   
  Nur das **/A** -Argument, das eine benannte Instanz von **SQLDiag**angibt, kann zusammen mit **START**, **STOP**oder **STOP_ABORT** verwendet werden, um eine bestimmte Instanz des **SQLDiag** -Diensts zu steuern. Beispiel:  
   
- **SQLDIAG START /A** *SQLdiag_application_name*  
+ **SQLDIAG START /A** *SQLDiag_application_name*  
   
 ## <a name="security-requirements"></a>Sicherheitsanforderungen  
- Sofern **SQLDiag** nicht im generischen Modus (durch Angeben des Befehlszeilenarguments **/G** ) ausgeführt wird, muss der Benutzer, der **SQLDiag** ausführt, Mitglied der Windows-Gruppe **Administratoren** und der festen Serverrolle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** ist. Standardmäßig verwendet **SQLDiag** die Windows-Authentifizierung für die Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung wird jedoch ebenfalls unterstützt.  
+ Sofern **SQLDiag** nicht im generischen Modus (durch Angeben des Befehlszeilenarguments **/G** ) ausgeführt wird, muss der Benutzer, der **SQLDiag** ausführt, Mitglied der Windows-Gruppe **Administratoren** und der festen Serverrolle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** fixed server role. Standardmäßig verwendet **SQLDiag** die Windows-Authentifizierung für die Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung wird jedoch ebenfalls unterstützt.  
   
 ## <a name="performance-considerations"></a>Leistungsaspekte  
  Inwiefern sich die Ausführung von **SQLDiag** auf die Leistung auswirkt, hängt von der Art der Diagnosedaten ab, deren Sammlung konfiguriert wurde. Wenn Sie **SQLDiag** z.B. so konfiguriert haben, dass [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] -Ablaufverfolgungsdaten gesammelt werden, wirkt sich dies umso stärker auf die Serverleistung aus, je mehr Ereignisklassen Sie für die Ablaufverfolgung ausgewählt haben.  
@@ -264,7 +262,7 @@ sqldiag
   
  Wenn Sie **SQLDiag** zum Diagnostizieren eines reproduzierbaren Problems verwenden, sollten Sie warten, bis diese Meldung angezeigt wird, bevor Sie das Problem auf dem Server reproduzieren.  
   
- **SQLDiag** sammelt die meisten Diagnosedaten parallel. Alle Diagnoseinformationen werden gesammelt, indem Verbindungen mit Tools hergestellt werden, z.B. dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sqlcmd** oder dem Windows-Befehlsprozessor, es sei denn, die Informationen werden aus Windows-Leistungs- und Ereignisprotokollen gesammelt. **SQLDiag** verwendet einen Arbeitsthread je Computer, um die Sammlung der Diagnosedaten mithilfe dieser anderen Tools zu überwachen; hierbei wird oftmals gleichzeitig auf die Beendigung der Ausführung mehrerer Tools gewartet. Während des Sammelns leitet **SQLDiag** die Ausgabe jeder Diagnose an den Ausgabeordner weiter.  
+ **SQLDiag** sammelt die meisten Diagnosedaten parallel. Alle Diagnoseinformationen werden gesammelt, indem Verbindungen mit Tools hergestellt werden, z.B. dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sqlcmd** utility or the Windows command processor, except when information is collected from Windows performance logs and event logs. **SQLDiag** verwendet einen Arbeitsthread je Computer, um die Sammlung der Diagnosedaten mithilfe dieser anderen Tools zu überwachen; hierbei wird oftmals gleichzeitig auf die Beendigung der Ausführung mehrerer Tools gewartet. Während des Sammelns leitet **SQLDiag** die Ausgabe jeder Diagnose an den Ausgabeordner weiter.  
   
 ## <a name="stopping-data-collection"></a>Beenden der Datensammlung  
  Nachdem **SQLDiag** mit dem Sammeln von Diagnosedaten begonnen hat, wird dieser Vorgang fortgesetzt, bis Sie ihn beenden oder er konfigurationsgemäß zu einer bestimmten Zeit beendet wird. Sie können **SQLDiag** so konfigurieren, dass die Datensammlung zu einem bestimmten Zeitpunkt beendet wird, indem Sie **/E** verwenden, um eine bestimmte Beendigungszeit anzugeben, oder **/X** angeben, um **SQLDiag** im Momentaufnahmemodus auszuführen.  
@@ -363,15 +361,14 @@ SQLDIAG START /A Instance1
  Sie können mehrere Instanzen von **SQLDiag** auf demselben Computer ausführen, indem Sie **/A***SQLDiag_application_name* in der Befehlszeile angeben. Dies ist sinnvoll, wenn von derselben Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verschiedene Sätze von Diagnosedaten gleichzeitig gesammelt werden sollen. Sie können beispielsweise eine benannte Instanz von **SQLDiag** konfigurieren, um fortlaufend eine geringe Menge von Daten zu sammeln. Falls anschließend ein bestimmtes Problem in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]auftritt, können Sie die Standardinstanz von **SQLDiag** ausführen, um Diagnosedaten für dieses Problem zu sammeln, oder um auf Anforderung vom [!INCLUDE[msCoName](../includes/msconame-md.md)] -Kundenservice und -support hin einen Satz von Diagnosedaten zu sammeln, die für die Diagnose eines Problems erforderlich sind.  
   
 ## <a name="collecting-diagnostic-data-from-clustered-sql-server-instances"></a>Sammeln von Diagnosedaten von gruppierten SQL Server-Instanzen  
- **SQLDiag** unterstützt das Sammeln von Diagnosedaten von gruppierten Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Zum Sammeln von Diagnosedaten von gruppierten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Instanzen, stellen sicher, dass **"."**  wird angegeben, für die **Name** Attribut des der  **\<Computer >** -Elements in der Konfigurationsdatei SQLDiag.Xml Datei, und geben Sie keine der **/g** Argument in der Befehlszeile angegeben. Standardmäßig ist **"."** für das **name**-Attribut in der Konfigurationsdatei angegeben und das Argument **/G** deaktiviert. Normalerweise ist es nicht nötig, die Konfigurationsdatei zu bearbeiten oder die Befehlszeilenargumente zu ändern, wenn Sie Diagnosedaten von einer gruppierten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sammeln möchten.  
+ **SQLDiag** unterstützt das Sammeln von Diagnosedaten von gruppierten Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Zum Sammeln von Diagnosedaten von gruppierten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Instanzen, stellen sicher, dass **"."**  wird angegeben, für die **Name** Attribut des der  **\<Computer >** -Elements in der Konfigurationsdatei SQLDiag.Xml Datei, und geben Sie keine der **/g** Argument in der Befehlszeile angegeben. Standardmäßig ist **"."** für das **name** -Attribut in der Konfigurationsdatei angegeben und das Argument **/G** deaktiviert. Normalerweise ist es nicht nötig, die Konfigurationsdatei zu bearbeiten oder die Befehlszeilenargumente zu ändern, wenn Sie Diagnosedaten von einer gruppierten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sammeln möchten.  
   
- Wenn **"."** als Computername angegeben ist, erkennt **SQLDiag**, dass es in einem Cluster ausgeführt wird, und ruft daher gleichzeitig Diagnoseinformationen von allen virtuellen Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] im Cluster ab. Wenn Sie nur einen virtuellen Instanz von Diagnoseinformationen sammeln möchten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , die auf einem Computer ausgeführt wird, geben Sie das virtuelle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für die **Namen** Attribut des der  **\<Computer >** -Elements in SQLDiag.Xml.  
+ Wenn **"."** als Computername angegeben ist, erkennt **SQLDiag** , dass es in einem Cluster ausgeführt wird, und ruft daher gleichzeitig Diagnoseinformationen von allen virtuellen Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] im Cluster ab. Wenn Sie nur einen virtuellen Instanz von Diagnoseinformationen sammeln möchten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , die auf einem Computer ausgeführt wird, geben Sie das virtuelle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für die **Namen** Attribut des der  **\<Computer >** -Elements in SQLDiag.Xml.  
   
 > [!NOTE]  
->  Zum Sammeln von [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]-Ablaufverfolgungsinformationen aus gruppierten Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] müssen auf dem Cluster administrative Freigaben (ADMIN$) aktiviert sein.  
+>  Zum Sammeln von [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] -Ablaufverfolgungsinformationen aus gruppierten Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] müssen auf dem Cluster administrative Freigaben (ADMIN$) aktiviert sein.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;Datenbankmodul&#41;](../tools/command-prompt-utility-reference-database-engine.md)  
   
   
-

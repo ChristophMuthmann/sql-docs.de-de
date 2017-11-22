@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: e0f611ac-7b67-4245-8d1c-804c1c44c935
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0c7a5fcb384b354166220cd5bdc6462952c3b620
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d27eafc855c33e8e323a74f5a045df0c18dc2c43
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-gui-accesstosql"></a>Projekteinstellungen (GUI) (AccessToSQL)
 Die GUI-projekteinstellungen können Sie konfigurieren, wie Daten auf angezeigt wird der **Daten** Registerkarte und, wenn Datenberichte mit Assessment-Berichten einschließen.  
@@ -50,4 +48,3 @@ Um einen Bericht anzuzeigen, nachdem Sie Schemas konvertieren, wählen Sie "true
   
 **Standard**: "false"  
   
-

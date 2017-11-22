@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Connection object [ADO], members
+helpviewer_keywords: Connection object [ADO], members
 ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 8dc35d2758821e7a44ad43c7f239864425b84f72
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bd347fe80f6b3d1cdd557b1f985d1c22fd0a669e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connection-object-properties-methods-and-events"></a>Verbindungs-Objekteigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften-Sammlungen  
@@ -62,9 +59,9 @@ ms.lasthandoff: 09/09/2017
   
  [Close-Methode](../../../ado/reference/ado-api/close-method-ado.md)  
   
- [Execute-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/execute-method-ado-connection.md)  
+ [Execute-Methode (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)  
   
- [Open-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/open-method-ado-connection.md)  
+ [Open-Methode (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)  
   
  [OpenSchema-Methode](../../../ado/reference/ado-api/openschema-method.md)  
   
@@ -82,5 +79,4 @@ ms.lasthandoff: 09/09/2017
  [WillExecute-Ereignis](../../../ado/reference/ado-api/willexecute-event-ado.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
-
+ [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

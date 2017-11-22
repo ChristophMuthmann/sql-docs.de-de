@@ -3,8 +3,11 @@ title: Schreiben von Seiten | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3e2a92f98a71588a6c46f4f38a961aefb82ce267
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e116782bb7c78f69a1d7c90755e746e4587d4426
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="writing-pages"></a>Schreiben von Seiten
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Die E/A-Aktivitäten von einer Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] schließen logische und physische Schreibvorgänge ein. Ein logischer Schreibvorgang findet statt, wenn Daten auf einer Seite im Puffercache geändert werden. Ein physischer Schreibvorgang findet statt, wenn die Seite vom [Puffercache](../relational-databases/memory-management-architecture-guide.md) auf den Datenträger geschrieben wird.
 

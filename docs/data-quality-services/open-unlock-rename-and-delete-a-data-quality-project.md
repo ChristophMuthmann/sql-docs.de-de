@@ -8,29 +8,26 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.dqproject.opendqproject.f1
+f1_keywords: sql13.dqs.dqproject.opendqproject.f1
 helpviewer_keywords:
 - data quality project,delete
 - data quality project,rename
 - data quality project,unlock
 - data quality project,open
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b92dba54db168d503d371c927df66d8e9e8dbf7c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: eec04917faf24e5e6d9075fd165a45148c9f10b7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project"></a>Öffnen, Entsperren, Umbenennen und Löschen eines Data Quality-Projekts
   In diesem Thema wird beschrieben, wie ein Data Quality-Projekt mithilfe von [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] verwaltet wird, zum Beispiel das Öffnen, Entsperren, Umbenennen und Löschen eines Data Quality-Projekts.  
@@ -101,4 +98,3 @@ ms.lasthandoff: 09/09/2017
 4.  Eine Bestätigungsmeldung wird angezeigt. Klicken Sie auf **Ja**.  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- FieldAttributeEnum
-helpviewer_keywords:
-- FieldAttributeEnum enumeration [ADO]
+f1_keywords: FieldAttributeEnum
+helpviewer_keywords: FieldAttributeEnum enumeration [ADO]
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 70d22ef6ee9ed47b15f7c247b589ca7123556e0f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dfac02887d8f66066a11674ca6dded410df709aa
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 Gibt einen oder mehrere Attribute eines eine [Feld](../../../ado/reference/ado-api/field-object.md) Objekt.  
@@ -75,5 +71,4 @@ Gibt einen oder mehrere Attribute eines eine [Feld](../../../ado/reference/ado-a
   
 |||  
 |-|-|  
-|[Append-Methode (ADO)](../../../ado/reference/ado-api/append-method-ado.md)|[Attribute-Eigenschaft (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)|
-
+|[Append-Methode (ADO)](../../../ado/reference/ado-api/append-method-ado.md)|[Attributes-Eigenschaft (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)|

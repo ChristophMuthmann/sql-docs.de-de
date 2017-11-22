@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 267d3e30f61539da24ed22d54c4355945da21999
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0b9bc26477c4b43e47588280e2cce74096b810c5
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Projekteinstellungen (Zuordnung) (DB2ToSQL)
 Die Seite "Type Mapping", der die **Projekteinstellungen** Dialogfeld enthält Einstellungen, anpassen, wie SSMA DB2-Datentypen in konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datentypen.  
@@ -80,7 +78,7 @@ Die folgende Tabelle enthält die standardmäßige datentypzuordnung für Argume
 |CLOB|varchar(max)|  
 |Datum|datetime2 [0]|  
 |dec|DEC [38] [0]|  
-|Decimal|"float" [53]|  
+|decimal|"float" [53]|  
 |mit doppelter Genauigkeit|"float" [53]|  
 |float|"float" [53]|  
 |int|int|  
@@ -138,7 +136,7 @@ Die folgende Tabelle enthält die Standard-Typzuordnung für Spalten.
 |dec|DEC [38] [0]|  
 |DEC [*.. \*]|DEC [*] [0]|  
 |DEC [*.. \*][\*.. \*]|dec[*][\*]|  
-|Decimal|Dezimal [38] [0]|  
+|decimal|Dezimal [38] [0]|  
 |Dezimal [*.. \*]|Dezimal [*] [0]|  
 |Dezimal [*.. \*][\*.. \*]|Dezimal [*] [\*]|  
 |mit doppelter Genauigkeit|"float" [53]|  
@@ -212,7 +210,7 @@ Die folgende Tabelle enthält die Standard-Typzuordnung für lokale Variablen.
 |dec|DEC [38] [0]|  
 |DEC [*.. \*]|DEC [*] [0]|  
 |DEC [*.. \*][\*.. \*]|dec[*][\*]|  
-|Decimal|Dezimal [38] [0]|  
+|decimal|Dezimal [38] [0]|  
 |Dezimal [*.. \*]|Dezimal [*] [0]|  
 |Dezimal [*.. \*][\*.. \*]|Dezimal [*] [\*]|  
 |mit doppelter Genauigkeit|"float" [53]|  
@@ -276,4 +274,3 @@ Die folgende Tabelle enthält die Standard-Typzuordnung für lokale Variablen.
 ## <a name="see-also"></a>Siehe auch  
 [Referenz zur Benutzeroberfläche &#40; DB2ToSQL &#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   
-

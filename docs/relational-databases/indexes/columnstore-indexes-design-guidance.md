@@ -8,22 +8,20 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 2166cfa2f5ab944ac302916085c7abbebb687457
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: 22b8b23b9bbee402de83a5327ea7fb8b7ec734e2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/30/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Columnstore-Indizes - Designrichtlinien
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -212,5 +210,4 @@ Zum Konvertieren eines Heap- oder BTree-Indexes einer vorhandenen Rowstore-Tabel
 
 
   
-
 

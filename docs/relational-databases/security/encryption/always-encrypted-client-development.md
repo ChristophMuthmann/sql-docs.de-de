@@ -8,23 +8,20 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- CSharp
+dev_langs: CSharp
 ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: stevestein
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: e869b4a64cfb65a7b760f525379926515b86405f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 8cb39d4ae3ff02fffe83e7f0e4646ade1545ce72
-ms.openlocfilehash: f1ad5de594493c65688d5c1ca2d69ac421661770
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="always-encrypted-client-development"></a>Always Encrypted (Cliententwicklung)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,5 +39,4 @@ Weitere Informationen zum Entwickeln von Anwendungen, die durch Always Encrypted
 ## <a name="see-also"></a>Siehe auch
 
 [„Immer verschlüsselt“ (Datenbankmodul)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-
 

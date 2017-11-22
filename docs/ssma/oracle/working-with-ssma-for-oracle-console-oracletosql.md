@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4e47bb04-cf9b-41a0-923e-bdab9ba0c51d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: dea846a3de7ce7ad60f46d58239e0d5fce9a9af7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4bb8091460427468705575dd00b8f41138ac3134
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>Arbeiten mit SSMA für Oracle-Konsole (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) Version für Oracle ist jetzt über eine Konsolenanwendung in Befehlszeile zugegriffen werden kann. Die Skriptdateien bilden die Eingabe für die Anwendung für die Befehle ausführen. SSMA als Konsolenanwendung Skriptebene Schnittstelle ermöglicht, den Zyklus Migration verringert und der Migrationsaufwand skaliert.  
@@ -31,7 +29,7 @@ In diesem Abschnitt behandelten Themen gehören:
   
 |||  
 |-|-|  
-|**Themen**|**Beschreibung**|  
+|**Themen**|**Description**|  
 |[Erste Schritte mit SSMA für Oracle-Konsole &#40; OracleToSQL &#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md)|Erläutert das Verfahren, um die Konsolenanwendung auszuführen.|  
 |[Befehlszeilenoptionen SSMA-Konsole &#40; OracleToSQL &#41;](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)|Beschreibt die Befehlszeilenoptionen und Parameter, um die SSMA-Konsolenanwendung ausgeführt werden.|  
 |[Erstellen von Skriptdateien &#40; OracleToSQL &#41;](../../ssma/oracle/creating-script-files-oracletosql.md)|Erläutert das Erstellen einer Skriptdatei.|  
@@ -46,4 +44,3 @@ In diesem Abschnitt behandelten Themen gehören:
 ## <a name="see-also"></a>Siehe auch  
 [Erste Schritte mit SSMA für Oracle-Konsole](http://msdn.microsoft.com/en-us/667a5e4a-6848-4973-a72d-1287f64718ac)  
   
-

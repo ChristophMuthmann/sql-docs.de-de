@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ f1_keywords:
 - sql13.dqs.kb.kbanalyze.f1
 - sql13.dqs.kb.kbmap.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2071dfc0ea042138a9f6b5f00261b81847f7f909
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4b98bfc1ffb87a23817ce01380de2f62113e4748
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="perform-knowledge-discovery"></a>Durchführen der Wissensermittlung
   In diesem Thema wird beschrieben, wie eine Wissensdatenbank über die Wissensermittlung erstellt wird. Im Wissensermittlungsprozess werden die Daten in einer Beispieldatenquelle in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) über einen computergestützten Prozess analysiert, und das gewonnene Wissen wird zur Wissensdatenbank hinzugefügt. Dieses Wissen kann im Schritt **Domänenwerte verwalten** der Wissensermittlungsaktivität oder in der Domänenverwaltungsaktivität geändert und verbessert werden.  
@@ -74,12 +72,12 @@ ms.lasthandoff: 09/09/2017
   
 4.  Ordnen Sie in der Tabelle **Zuordnungen** jede Quellspalte, für die die Wissensermittlung durchgeführt werden soll, einer Domäne in der Wissensdatenbank wie folgt zu:  
   
-    1.  Erstellen Sie eine Zuordnung, indem Sie eine Quellspalte aus der Dropdownliste für die Spalte **Quellspalte** einer leeren Zeile auswählen und dann eine Domäne aus der Dropdownliste für die Spalte **Domäne** in der gleichen Zeile auswählen (wenn eine Domäne vorhanden ist). Wenn keine Domäne vorhanden ist, klicken Sie auf **Domäne erstellen** oder **Verbunddomäne erstellen** , um eine Domäne zu erstellen. Weitere Informationen finden Sie unter [Erstellen einer Domänenregel](../data-quality-services/create-a-domain-rule.md) oder [Verbunddomäne erstellen](../data-quality-services/create-a-composite-domain.md).  
+    1.  Erstellen Sie eine Zuordnung, indem Sie eine Quellspalte aus der Dropdownliste für die Spalte **Quellspalte** einer leeren Zeile auswählen und dann eine Domäne aus der Dropdownliste für die Spalte **Domäne** in der gleichen Zeile auswählen (wenn eine Domäne vorhanden ist). Wenn keine Domäne vorhanden ist, klicken Sie auf **Domäne erstellen** oder **Verbunddomäne erstellen** , um eine Domäne zu erstellen. Weitere Informationen finden Sie unter [Create a Domain Rule](../data-quality-services/create-a-domain-rule.md) oder [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md).  
   
     2.  Wiederholen Sie den vorherigen Schritt für jede Zuordnung. Um die Anzahl der Zeilen in der Tabelle zu ändern, klicken Sie auf **Spaltenzuordnung hinzufügen**, oder wählen Sie eine Zeile aus, und klicken Sie auf **Ausgewählte Spaltenzuordnung entfernen**. Wenn Sie auf **Ausgewählte Spaltenzuordnung entfernen** klicken, während eine aufgefüllte Zeile ausgewählt ist, wird die ausgewählte Zeile gelöscht, auch wenn es eine nicht aufgefüllte Zeile gibt.  
   
         > [!NOTE]  
-        >  Sie können die Quelldaten zum Durchführen der Wissensermittlung einer DQS-Domäne nur zuordnen, wenn der Quelldatentyp in DQS unterstützt wird und mit dem DQS-Domänendatentyp übereinstimmt. Weitere Informationen zu den unterstützten Datentypen finden Sie unter [Unterstützte SQL Server- und SSIS-Datentypen für DQS-Domänen](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+        >  Sie können die Quelldaten zum Durchführen der Wissensermittlung einer DQS-Domäne nur zuordnen, wenn der Quelldatentyp in DQS unterstützt wird und mit dem DQS-Domänendatentyp übereinstimmt. Weitere Informationen zu den unterstützten Datentypen finden Sie unter [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
     3.  Klicken Sie auf **Verbunddomänen anzeigen/auswählen** aus, um die Verbunddomänen anzuzeigen, die definiert wurden. Wenn keine Verbunddomänen definiert wurden, ist das Steuerelement nicht verfügbar.  
   
@@ -294,7 +292,6 @@ ms.lasthandoff: 09/09/2017
   
 -   Es gibt nur wenige gültige Werte im Feld; Sie sollten die Zuordnung und die Relevanz von Domänenregeln für den Feldinhalt überprüfen.  
   
- Weitere Informationen zur Profilerstellung finden Sie unter [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
+ Weitere Informationen zur Profilerstellung finden Sie unter [Datenprofilerstellung und Benachrichtigungen in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
   
-

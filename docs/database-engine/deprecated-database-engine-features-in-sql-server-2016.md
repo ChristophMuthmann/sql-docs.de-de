@@ -8,8 +8,7 @@ ms.service:
 ms.component: database-engine
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
-caps.latest.revision: 215
+caps.latest.revision: "215"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: ea0efb1cf326d03a2b45ff6a6f2566c93afc500b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0dff466c24cebd9c4045b6cf99530cf5eec8d7d4
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Als veraltet markierte Funktionen des Datenbankmoduls in SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +53,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Datenbankobjekte|Funktionalität zum Zurückgeben von Resultsets von Triggern|Keine|Zurückgeben von Ergebnissen aus Triggern|12|  
 |Verschlüsselung|Die Verschlüsselung mit RC4 oder RC4_128 ist veraltet. Die Entfernung ist für die nächste Version geplant. Die Entschlüsselung von RC4 und RC4_128 sind nicht veraltet.|Verwenden Sie einen anderen Verschlüsselungsalgorithmus, z. B. AES.|Veralteter Verschlüsselungsalgorithmus|253|  
 |Remoteserver|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Ersetzen Sie Remoteserver mithilfe von Verbindungsservern. sp_addserver kann nur mit der lokalen Option verwendet werden.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
-|Remoteserver|@@remserver |Ersetzen Sie Remoteserver mithilfe von Verbindungsservern.|Keine|Keine|  
+|Remoteserver|@@remserver|Ersetzen Sie Remoteserver mithilfe von Verbindungsservern.|Keine|Keine|  
 |Remoteserver|SET REMOTE_PROC_TRANSACTIONS|Ersetzen Sie Remoteserver mithilfe von Verbindungsservern.|SET REMOTE_PROC_TRANSACTIONS|110|  
 |SET-Optionen|**SET ROWCOUNT** für die **INSERT**-, **UPDATE**-Anweisung und die **DELETE** -Anweisung|TOP-Schlüsselwort|SET ROWCOUNT|109|  
 |Tabellenhinweise|HOLDLOCK-Tabellenhinweis ohne Klammern.|Verwenden Sie HOLDLOCK mit Klammern.|HOLDLOCK-Tabellenhinweis ohne Klammern|167|  
@@ -159,7 +157,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ROWGUIDCOL als Spaltenname in DML-Anweisungen|Verwenden Sie $rowguid.|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|IDENTITYCOL als Spaltenname in DML-Anweisungen|Verwenden Sie $identity.|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Verwendung von #, ## als Name für eine temporäre Tabelle oder eine temporäre gespeicherte Prozedur|Verwenden Sie mindestens ein zusätzliches Zeichen.|'#' und '##' als Namen von temporären Tabellen und gespeicherten Prozeduren|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|Verwendung von '@', '@@' oder '@@' als [!INCLUDE[tsql](../includes/tsql-md.md)] -Bezeichner|@ oder @@ oder Namen, die mit @@ beginnen, dürfen nicht als Bezeichner verwendet werden.|' @ ' und Namen, die mit ' @@ ' beginnen, als [!INCLUDE[tsql](../includes/tsql-md.md)] -Bezeichner|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|Verwendung von '@', '@@' oder '@@' als [!INCLUDE[tsql](../includes/tsql-md.md)] -Bezeichner|@ oder @@ oder Namen, die mit @@ beginnen, dürfen nicht als Bezeichner verwendet werden.|'@' und Namen, die mit '@@' beginnen, als [!INCLUDE[tsql](../includes/tsql-md.md)] -Bezeichner|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Verwendung des DEFAULT-Schlüsselworts als Standardwert.|Verwenden Sie das Wort DEFAULT nicht als Standardwert.|DEFAULT-Schlüsselwort als Standardwert|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Verwendung eines Leerzeichens als Trennzeichen zwischen Tabellenhinweisen|Trennen Sie die Tabellenhinweise durch Kommas.|Mehrere Tabellenhinweise ohne Komma|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Die Auswahlliste einer indizierten Aggregatsicht muss im Kompatibilitätsmodus '90' oder höher den Wert COUNT_BIG (*) enthalten.|Verwenden Sie COUNT_BIG(*).|Indexsicht-Auswahlliste ohne COUNT_BIG(*)|2|  
@@ -178,5 +176,4 @@ WHERE object_name = 'SQLServer:Deprecated Features';
  [Nicht mehr unterstützte Datenbankmodul-Funktionalität in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
   
-
 

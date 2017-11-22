@@ -8,22 +8,20 @@ ms.service:
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-json
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 4482935894f2aa785814c1af430065920afe25b3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 95489b4e72f1321f7e1139f06040eb81a5956b15
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="import-json-documents-into-sql-server"></a>Importieren von JSON-Dokumenten in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,7 +56,7 @@ SELECT BulkColumn
 Nachdem Sie den Inhalt der JSON-Datei geladen haben, können Sie den JSON-Text in einer Tabelle speichern.
 
 ## <a name="import-multiple-json-documents"></a>Importieren mehrerer JSON-Dokumente
-Diese Vorgehensweise kann auch zum aufeinanderfolgenden Laden einer Anzahl von JSON-Dateien aus dem Dateisystem in lokale Variablen verwendet werden. Nehmen wir an, dass die Dateien `book<index>.json` heißen.
+Diese Vorgehensweise kann auch zum Laden eines Satzes von JSON-Dateien aus dem Dateisystem in lokale Variablen (nacheinander) verwendet werden. Nehmen wir an, dass die Dateien `book<index>.json` heißen.
   
 ```sql
 DECLARE @i INT = 1
@@ -109,7 +107,7 @@ Weitere Informationen zu Azure File Storage finden Sie unter [File Storage](http
 
 ## <a name="import-json-documents-from-azure-blob-storage"></a>Importieren von JSON-Dokumenten aus Azure BLOB-Speicher
 
-Sie können Dateien mit dem Befehl T-SQL BULK INSERT oder der OPENROWSET-Funktion direkt aus Azure Blob Storage in Azure SQL-Datenbank laden.
+Sie können Dateien mit dem Befehl T-SQL BULK INSERT oder der OPENROWSET-Funktion direkt aus Azure Blob Storage in die Azure SQL-Datenbank laden.
 
 Erstellen Sie zunächst eine externe Datenquelle, wie im folgenden Beispiel gezeigt.
 
@@ -128,10 +126,10 @@ FROM 'data/product.dat'
 WITH ( DATA_SOURCE = 'MyAzureBlobStorage');
 ```
 
-Weitere Informationen und ein Beispiel für OPENROWSET finden Sie unter [Loading files from Azure Blob Storage into Azure SQL Database (Laden von Dateien aus Azure Blob Storage in Azure SQL-Datenbank)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/02/23/loading-files-from-azure-blob-storage-into-azure-sql-database/).
+Weitere Informationen und ein Beispiel für OPENROWSET finden Sie unter [Loading files from Azure Blob Storage into Azure SQL Database (Laden von Dateien aus Azure Blob Storage in die Azure SQL-Datenbank)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/02/23/loading-files-from-azure-blob-storage-into-azure-sql-database/).
 
 ## <a name="parse-json-documents-into-rows-and-columns"></a>Analysieren von JSON-Dokumenten in Zeilen und Spalten
-Statt die gesamte JSON-Datei als einzelnen Wert zu lesen, sollten Sie sie analysieren und die Bücher in der Tabelle sowie die Eigenschaften in Reihen und Zeilen zurückgeben. Im folgenden Beispiel wird eine JSON-Datei mit einer Liste von Büchern von [dieser Website](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json) verwendet.
+Möglicherweise möchten Sie eine JSON-Datei analysieren und die Bücher in der Tabelle sowie die Eigenschaften in Reihen und Zeilen zurückgeben, anstatt die gesamte JSON-Datei als einzelnen Wert zu lesen. Im folgenden Beispiel wird eine JSON-Datei mit einer Liste von Büchern von [dieser Website](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json) verwendet.
 
 ### <a name="example-1"></a>Beispiel 1
 Im einfachsten Beispiel können Sie einfach die gesamte Liste aus der Datei laden. 
@@ -176,9 +174,8 @@ In diesem Beispiel liest OPENROWSET(BULK) den Inhalt der Datei und übergibt den
 Jetzt können Sie die Tabelle an den Benutzer zurückgeben oder die Daten in eine andere Tabelle laden.
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Erfahren Sie mehr über die integrierte JSON-Unterstützung in SQL Server  
-Viele spezifische Lösungen, Anwendungsfälle und Empfehlungen finden Sie im [Blogbeitrag über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL-Server und in Azure SQL-Datenbank von Jovan Popovic, Program Manager bei Microsoft.
+Viele spezifische Lösungen, Anwendungsfälle und Empfehlungen finden Sie in SQL Server und in der Azure SQL-Daten im [Blogbeitrag über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) von Jovan Popovic, Program Manager bei Microsoft.
   
 ## <a name="see-also"></a>Siehe auch
 [Konvertieren von JSON-Daten in Zeilen und Spalten mit OPENJSON](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)
-
 

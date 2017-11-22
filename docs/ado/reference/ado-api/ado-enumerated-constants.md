@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- enumerated constants [ADO]
+helpviewer_keywords: enumerated constants [ADO]
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fb606a366746b09d7ba6303b0cb11bb1b96f6164
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 93011b8b30d552e5bf3852c9e4d483161d90fc55
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-enumerated-constants"></a>ADO--Enumerationskonstanten
 Um das Debuggen zu erleichtern, Liste der ADO-Enumerationen einen Wert für jede Konstante. Dieser Wert ist nur eine Empfehlung und kann von einer Version von ADO auf einen anderen ändern. Der Code sollte nur auf den Namen, die nicht den tatsächlichen Wert, der jede Enumerationskonstante abhängig sein.  
@@ -94,5 +91,4 @@ Um das Debuggen zu erleichtern, Liste der ADO-Enumerationen einen Wert für jede
  [ADO-Methoden](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md)   
  [ADO-Objekte und Schnittstellen](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
- [Eigenschaften von ADO.NET](../../../ado/reference/ado-api/ado-properties.md)
-
+ [ADO-Eigenschaften](../../../ado/reference/ado-api/ado-properties.md)

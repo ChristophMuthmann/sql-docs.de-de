@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Sybase Console,Appendix
+helpviewer_keywords: Sybase Console,Appendix
 ms.assetid: 6dcfd6d5-772c-4876-aa94-a7f43c4b9d59
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8f2604a4bfa9726d32aeb20f1ef3d064c507bd36
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a6121c15131cc42ee064767cd5a25e428e0968cb
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="appendix---1-sybasetosql"></a>Anhang - 1 (SybaseToSQL)
 Kurze Übersicht über die Befehlszeilenoptionen SSMA-Konsole:  
@@ -44,4 +41,3 @@ Kurze Übersicht über die Befehlszeilenoptionen SSMA-Konsole:
 ## <a name="see-also"></a>Siehe auch  
 [Ausführen der Konsole SSMA (Sybase)](http://msdn.microsoft.com/en-us/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
   
-

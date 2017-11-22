@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ae7b5af8-eeb5-4c40-9f76-ebbab3d29e5d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 10eae24038de38723175599bf90db1ad2e512098
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d15ac434efe8b87bf859143b6f16c35e8a302c3f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="shortcut-keysoracle-to-sql"></a>Tastenkombinationen (Oracle To SQL)
 Sie können Tastenkombinationen verwenden, zum Navigieren durch SSMA-Anwendung. Weitere Informationen finden Sie in den nachfolgenden Themen.  
@@ -30,4 +28,3 @@ Sie können Tastenkombinationen verwenden, zum Navigieren durch SSMA-Anwendung. 
 ## <a name="see-also"></a>Siehe auch  
 [Erste Schritte mit SSMA für Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
   
-

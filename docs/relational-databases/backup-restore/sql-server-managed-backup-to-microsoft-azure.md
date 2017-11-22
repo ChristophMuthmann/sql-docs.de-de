@@ -8,22 +8,20 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 826f59f9b61e95091edf8a0c47c528f8cc83b488
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
-ms.openlocfilehash: 9061cf182fd1bc245de22ea2bade18b93e231042
-ms.contentlocale: de-de
-ms.lasthandoff: 08/24/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>SQL Server Managed Backup für Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -133,7 +131,7 @@ ms.lasthandoff: 08/24/2017
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] verwendet die Funktion „Sichern in Blockblob“. Die maximale Größe eines Blockblobs beträgt 200 GB. Die maximale Größe einer einzelnen Sicherung kann durch Verbinden jedoch bis zu 12 TB betragen. Wenn Ihre Sicherungsanforderungen diese Größen überschreiten, ziehen Sie eine Komprimierung in Betracht, und testen Sie die Sicherungsdateigröße vor dem Einrichten von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Sie können diese testen, indem Sie eine Sicherung entweder auf einem lokalen Datenträger oder manuell mithilfe der Transact-SQL-Anweisung **BACKUP TO URL** in einen Microsoft Azure-Speicher durchführen. Weitere Informationen finden Sie unter [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
--   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] gelten ggf. bestimmte Einschränkungen, wenn eine Konfiguration in Kombination mit anderen Technologien erfolgt, die Sicherungen, eine hohe Verfügbarkeit und eine Wiederherstellung im Notfall unterstützen.  
+-   Für [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] gelten ggf. bestimmte Einschränkungen, wenn eine Konfiguration in Kombination mit anderen Technologien erfolgt, die Sicherungen, Hochverfügbarkeit und eine Wiederherstellung im Notfall unterstützen.  
   
 ## <a name="see-also"></a>Siehe auch  
 - [Aktivieren der verwalteten SQL Server-Sicherung in Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)   
@@ -143,4 +141,3 @@ ms.lasthandoff: 08/24/2017
 - [Sichern und Wiederherstellen von SQL Server-Datenbanken](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
   
   
-

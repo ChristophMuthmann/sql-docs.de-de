@@ -8,25 +8,23 @@ ms.service:
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-json
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - JSON, indexing JSON data
 - indexing JSON data
 ms.assetid: ced241e1-ff09-4d6e-9f04-a594a9d2f25e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 5d89fd1ad109ab0017b49dd9993aa3cafec85d15
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 2d618b486f61f2e25a221517eb0efdaed70f582d
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="index-json-data"></a>Indizieren von JSON-Daten
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,9 +68,9 @@ ON Sales.SalesOrderHeader(vCustomerName)
 ### <a name="more-info-about-the-computed-column"></a>Weitere Informationen über die berechnete Spalte 
 Die Spalte wird nicht permanent berechnet. Sie wird nur berechnet, wenn der Index erneut erstellt werden muss. Sie beansprucht keinen zusätzlichen Platz in der Tabelle.   
   
-Es ist wichtig, die berechnete Spalte mit dem gleichen Ausdruck zu erstellen, den Sie in Ihren Abfragen verwenden möchten – in diesem Beispiel handelt es sich dabei um den Ausdruck `JSON_VALUE(Info, '$.Customer.Name')`.  
+Es ist wichtig, dass Sie die berechnete Spalte mit dem gleichen Ausdruck erstellen, den Sie in Ihren Abfragen verwenden möchten – in diesem Beispiel handelt es sich dabei um den Ausdruck `JSON_VALUE(Info, '$.Customer.Name')`.  
   
-Sie müssen Ihre Abfragen nicht neu schreiben. Falls Sie Ausdrücke mit der `JSON_VALUE`-Funktion verwenden, wie in der Beispielfrage oben dargestellt, erkennt SQL Server, dass es eine gleichwertige berechnete Spalte mit dem gleichen Ausdruck gibt und wendet dann, falls möglich, einen Index darauf an.
+Sie müssen Ihre Abfragen nicht neu schreiben. Falls Sie Ausdrücke mit der `JSON_VALUE`-Funktion verwenden, wie in der Beispielfrage oben dargestellt, sieht SQL Server, dass es eine äquivalent berechnete Spalte mit dem gleichen Ausdruck gibt. Er wendet, falls möglich, einen Index darauf an.
 
 ### <a name="execution-plan-for-this-example"></a>Ausführungsplan für dieses Beispiel
 Hier finden Sie den Ausführungsplan für die Abfrage in diesem Beispiel.  
@@ -90,7 +88,7 @@ ON Sales.SalesOrderHeader(vCustomerName)
 INCLUDE(SalesOrderNumber,OrderDate)
 ```  
   
-In diesem Fall muss SQL Server keine zusätzlichen Daten aus der Tabelle `SalesOrderHeader` lesen, da alle benötigten Informationen im nicht gruppierten JSON-Index enthalten sind. Das ist eine gute Möglichkeit, um JSON- und Spaltendaten in Abfragen zu kombinieren nd optimale Indizes für Ihre Arbeitsauslastung zu erstellen.  
+In diesem Fall muss SQL Server keine zusätzlichen Daten aus der Tabelle `SalesOrderHeader` lesen, da alle benötigten Informationen im nicht gruppierten JSON-Index enthalten sind. Das ist eine gute Möglichkeit, JSON- und Spaltendaten in Abfragen zu kombinieren, und um optimale Indizes für Ihre Arbeitsauslastung zu erstellen.  
   
 ## <a name="json-indexes-are-collation-aware-indexes"></a>JSON-Indizes sind Indizes mit Sortierungserkennung  
 Eine wichtige Funktion von Indizes für JSON-Daten ist, dass die Indizes über eine Sortierungserkennung verfügen. Das Ergebnis der Funktion `JSON_VALUE`, die Sie beim Erstellen der berechneten Spalte verwenden, ist ein Textwert, der seine Sortierung vom Eingabeausdruck erbt. Die Werte im Index sind daher nach den Sortierungsregeln geordnet, die in den Quellspalten definiert sind.  
@@ -149,7 +147,7 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  Obwohl die Abfrage eine `ORDER BY`-Klausel hat, verwendet der Ausführungsplan keinen Sort-Operator. Der JSON-Index ist bereits nach den Regeln für serbisches Kyrillisch geordnet. Daher kann SQL Server den nicht gruppierten Index verwenden, in dem die Ergebnisse bereits sortiert sind.  
   
- Falls wir jedoch die Reihenfolge des Ausdrucks `ORDER BY` ändern – falls wir beispielsweise `COLLATE French_100_CI_AS_SC` hinter die `JSON_VALUE`-Funktion platzieren –, erhalten wir einen anderen Ausführungsplan für die Abfrage.  
+ Falls wir jedoch die Reihenfolge des Ausdrucks `ORDER BY` ändern – falls wir beispielsweise `COLLATE French_100_CI_AS_SC` hinter die `JSON_VALUE`-Funktion platzieren – erhalten wir einen anderen Ausführungsplan für die Abfrage.  
   
  ![Ausführungsplan](../../relational-databases/json/media/jsonindexblog3.png "Ausführungsplan")  
   
@@ -157,4 +155,3 @@ ORDER BY JSON_VALUE(json,'$.name')
  
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Erfahren Sie mehr über die integrierte JSON-Unterstützung in SQL Server  
 Viele spezifische Lösungen, Anwendungsfälle und Empfehlungen finden Sie im [Blogbeitrag über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL-Server und in Azure SQL-Datenbank von Jovan Popovic, Program Manager bei Microsoft.
-

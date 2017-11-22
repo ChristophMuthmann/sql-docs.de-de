@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- HelloData sample application [ADO], sample code
+helpviewer_keywords: HelloData sample application [ADO], sample code
 ms.assetid: 6da136c5-fa93-4fe6-9bf5-90f4d92441fb
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ae54e94b84540a7c12b11e8db218bff56b7b63be
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0f8f80b597ff7fdb12cfb353a21ec3ef3d1119b1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hellodata-code"></a>HelloData-Code
 ```  
@@ -406,4 +403,3 @@ End Sub
   
 'EndHelloData  
 ```
-

@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d3c60e8c-f0a7-4590-8ece-c68ceaeaea4a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: de5702dd6682d08538722c2e36fb730a311c9e44
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2dd0e259bdb6b5e31cd60da49561f47acde784b0
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="new-gui-features-in-ssma-for-sybase-sybasetosql"></a>Neue GUI-Funktionen in SSMA für Sybase (SybaseToSQL)
 In diesem Kapitel wird beschrieben, neuen Features von SSMA-Benutzeroberfläche.  
@@ -132,4 +130,3 @@ Sie können die schnelle Textsuche mithilfe der folgenden Funktionen ausführen:
 ### <a name="advanced-search"></a>Erweiterte Suche  
 Klicken Sie dann auf Erweiterte Suche, um erweiterte Suche Dialogfeld zeigen Sie im Menü "Bearbeiten" suchen zu öffnen. Klicken Sie im Dialogfeld werden Sie jedes Objekt, das Muster gefunden. Oben im Dialogfeld können Sie Suchkategorien "Bereich" und "Objekt auswählen.  
   
-

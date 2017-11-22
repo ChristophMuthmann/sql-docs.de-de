@@ -8,25 +8,23 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL Database replication
 - replication, SQL Database
 ms.assetid: e8484da7-495f-4dac-b38e-bcdc4691f9fa
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 8733b33aa97e33daf1a7394d5e0df8fb2d97a6d4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 72ae10ca4b2977d50a883507e2658abcf50e6579
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-to-sql-database"></a>Replikation zu SQL-Datenbank
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -162,4 +160,3 @@ ms.lasthandoff: 09/27/2017
  - [Replikationstypen](../../relational-databases/replication/types-of-replication.md)   
  - [Überwachen &#40;Replikation&#41;](../../relational-databases/replication/monitor/monitoring-replication.md)   
  - [Initialize a Subscription](../../relational-databases/replication/initialize-a-subscription.md)  
-

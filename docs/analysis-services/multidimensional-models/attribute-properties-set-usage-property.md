@@ -18,17 +18,16 @@ helpviewer_keywords:
 - attributes [Analysis Services], usage setting
 - usage options [Analysis Services]
 ms.assetid: 7b0ebc58-94b9-4523-8994-e7bc796b0bd8
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8fcc3776686ea2b7a1099628a4ca84b464df57e9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1dfeeb95c534bd68879d101cd208eae8871d817c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-properties---set-usage-property"></a>Attributeigenschaften - Set Usage-Eigenschaft
   Sie können die Verwendung eines Attributs mithilfe der Sicht **Dimensionsstruktur** im Dimensions-Designer festlegen. Der Zugriff auf diese Sicht erfolgt über [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -54,4 +53,3 @@ ms.lasthandoff: 09/01/2017
  [Hinzufügen eines Attributs zu einer Dimension](../../analysis-services/multidimensional-models/attribute-properties-add-an-attribute-to-a-dimension.md)  
   
   
-

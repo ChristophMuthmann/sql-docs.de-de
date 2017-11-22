@@ -5,26 +5,22 @@ ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: f28a7aac-6d08-4781-ad28-b48d18cc16a0
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f2749f0bfb3ab330a6a82fac824db245c005a819
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
-ms.openlocfilehash: 5d37c9150d19c3e39ea76b48fb0453d159ca0f44
-ms.contentlocale: de-de
-ms.lasthandoff: 10/07/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>Das R-Modell bereitstellen und deren Verwendung in SQL
 
@@ -72,7 +68,7 @@ Eine gespeicherte Prozedur für die batchbewertung wurde erstellt, wenn Sie zun�
 
     + Sie verwenden eine SELECT-Anweisung, um das gespeicherte Modell aus einer SQL-Tabelle aufzurufen. Das Modell wird abgerufen, aus der Tabelle als **varbinary(max)** Daten, die in der SQL-Variablen gespeichert  _@lmodel2_ , und als Parameter übergeben *mod* an das System gespeichert Prozedur [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + Die Daten, die als Eingaben verwendet werden, für die Bewertung als eine SQL-Abfrage definiert und als Zeichenfolge in der SQL-Variablen gespeicherten  _@input_ . Wie Daten aus der Datenbank abgerufen werden, wird es in einem Datenrahmen aufgerufen gespeichert *InputDataSet*, also nur der Standardnamen für die Eingabedaten für die [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) Prozedur können Sie definieren einen anderen Variablennamen an, die bei Bedarf mithilfe des Parameters  _@input \_Daten\_1\_Namen_.
+    + Die Daten, die als Eingaben verwendet werden, für die Bewertung als eine SQL-Abfrage definiert und als Zeichenfolge in der SQL-Variablen gespeicherten  _@input_ . Wie Daten aus der Datenbank abgerufen werden, wird es in einem Datenrahmen aufgerufen gespeichert *InputDataSet*, also nur der Standardnamen für die Eingabedaten für die [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) Prozedur können Sie definieren einen anderen Variablennamen an, die bei Bedarf mithilfe des Parameters   *_@input_data_1_name_*  .
 
     + Die gespeicherte Prozedur ruft die `rxPredict` -Funktion aus der **RevoScaleR** -Bibliothek auf, um die Bewertung zu generieren.
 
@@ -229,4 +225,3 @@ Wir empfehlen außerdem, dass Sie sich einige dieser Beispiele und Ressourcen an
 [SQL Server-R-Lernprogramme](sql-server-r-tutorials.md)
 
 [Vorgehensweise: erstellen eine gespeicherte Prozedur mithilfe von sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)
-

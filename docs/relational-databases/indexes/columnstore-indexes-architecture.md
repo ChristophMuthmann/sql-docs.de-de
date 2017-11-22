@@ -8,22 +8,20 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 96b8e884-8244-425f-b856-72a8ff6895a6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 835e3acd76972eef01b4d286cbc1f6ecf6fac605
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 64914f8620c848cf7505253c3b517486a53ad14e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="columnstore-indexes---architecture"></a>Columnstore-Indizes-Architektur
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -139,4 +137,3 @@ Alle Spalten in einem Columnstore-Index werden in den Metadaten als eingeschloss
 
 ## <a name="next-steps"></a>Nächste Schritte
  Hinweise zum Entwerfen Ihrer Columnstore-Indizes finden Sie unter [Columnstore-Indizes - Leitfaden zum Design](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)
-

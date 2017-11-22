@@ -8,8 +8,7 @@ ms.service:
 ms.component: installing-mds-in-an-alwayson-group-environment
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
@@ -18,24 +17,20 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2caabcb53e4386927b4103764c8abce34ccdefcd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: f5cebe2ba32765cc5f4bddc974ee62b3ed3b8915
-ms.contentlocale: de-de
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
-
-
-
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Hochverfügbarkeit und Notfallwiederherstellung für Master Data Services
 
-**Zusammenfassung:** Dieser Artikel beschreibt eine Lösung für die Konfiguration von Master Data Services (MDS), gehostet in einer Always On-Verfügbarkeitsgruppe. Der Artikel beschreibt, wie Sie SQL 2016 Master Data Services auf einer SQL 2016 AlwaysOn-Verfügbarkeitsgruppe (availability group, AG) installieren und konfigurieren. Der Hauptzweck dieser Lösung ist die Verbesserung der hohen Verfügbarkeit und der Notfallwiederherstellung von MDS-Back-End-Daten, die auf einer SQL Server-Datenbank gehostet werden.
+**Zusammenfassung:** Dieser Artikel beschreibt eine Lösung für die Konfiguration von Master Data Services (MDS), gehostet in einer Always On-Verfügbarkeitsgruppe. Der Artikel beschreibt, wie Sie SQL 2016 Master Data Services auf einer SQL 2016 AlwaysOn-Verfügbarkeitsgruppe (availability group, AG) installieren und konfigurieren. Der Hauptzweck dieser Lösung ist die Verbesserung der Hochverfügbarkeit und der Notfallwiederherstellung von MDS-Back-End-Daten, die auf einer SQL Server-Datenbank gehostet werden.
 
 ## <a name="introduction"></a>Einführung
 
 
-Dieser Artikel beschreibt eine Lösung für die Konfiguration von Master Data Services (MDS), gehostet auf einer Always On-Verfügbarkeitsgruppe. Der Artikel beschreibt, wie Sie SQL 2016 MDS auf einer SQL 2016 Always On-Verfügbarkeitsgruppe (Availability Group, AG) installieren und konfigurieren. Der Hauptzweck dieser Lösung ist die Verbesserung der hohen Verfügbarkeit und der Notfallwiederherstellung von MDS-Back-End-Daten, die auf einer SQL Server-Datenbank gehostet werden.
+Dieser Artikel beschreibt eine Lösung für die Konfiguration von Master Data Services (MDS), gehostet auf einer Always On-Verfügbarkeitsgruppe. Der Artikel beschreibt, wie Sie SQL 2016 MDS auf einer SQL 2016 Always On-Verfügbarkeitsgruppe (Availability Group, AG) installieren und konfigurieren. Der Hauptzweck dieser Lösung ist die Verbesserung der Hochverfügbarkeit und der Notfallwiederherstellung von MDS-Back-End-Daten, die auf einer SQL Server-Datenbank gehostet werden.
 
 Um die Lösung zu implementieren, müssen Sie die folgenden Aufgaben, die in diesem Artikel beschrieben sind, ausführen.
 
@@ -410,5 +405,4 @@ In diesem Whitepaper wird erläutert, wie die Master Data Services-Back-End-Date
 War dieses Dokument hilfreich? Senden Sie uns Ihr Feedback, indem Sie auf oben im Artikel auf **Kommentare** klicken. 
 
 Ihr Feedback unterstützt uns bei der Verbesserung der Qualität unserer Whitepaper. 
-
 

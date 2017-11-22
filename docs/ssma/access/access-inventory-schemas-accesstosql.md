@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -40,17 +39,16 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b399910612848033ea927aa8c4d3adc86d048ae0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: cd7d907f2c78125a477737299f6aaee28b5ccc7f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Access-Inventur-Schemas (AccessToSQL)
 In den folgenden Abschnitten wird beschrieben, die Tabellen, die von SSMA erstellt werden, wenn Sie zu Access-Schemas exportieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -105,7 +103,7 @@ Spaltenmetadaten ist exportiert der **SSMA_Access_InventoryColumns** Tabelle. Di
 |**IsNullable**|**bit**|Gibt an, ob die Spalte null-Werte enthalten kann. Wenn der Wert 1 ist, kann die Spalte null-Werte enthalten. Wenn der Wert 0 ist, kann nicht in die Spalte null-Werte enthalten. Beachten Sie, dass die Validierungsregel auch verwendet werden kann, um zu verhindern, dass null-Werte.|  
 |**DataType**|**nvarchar(4000)**|Der Access-Datentyp der Spalte, wie z. B. **Text** oder **lang**.|  
 |**IsAutoIncrement**|**bit**|Gibt an, ob ganzzahligen Werten in die Spalte automatisch inkrementiert wird. Wenn der Wert 1 ist, werden die ganzen Zahlen automatisch inkrementiert.|  
-|**Ordnungszahl**|**smallint**|Die Reihenfolge der Spalte in der Tabelle, beginnend mit 0 (null).|  
+|**Ordinal**|**smallint**|Die Reihenfolge der Spalte in der Tabelle, beginnend mit 0 (null).|  
 |**"DefaultValue"**|**nvarchar(4000)**|Der Standardwert für die Spalte.|  
 |**ValidationRule**|**nvarchar(4000)**|Die Regel, die zum Überprüfen der Daten, die hinzugefügt oder aktualisiert werden, in der Spalte verwendet wird.|  
   
@@ -189,6 +187,5 @@ Metadaten des Moduls ist exportiert der **SSMA_Access_InventoryModules** Tabelle
 |**"ModuleName"**|**nvarchar(4000)**|Der Name des Moduls.|  
   
 ## <a name="see-also"></a>Siehe auch  
-[Exportieren eine Access-Inventur](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  
+[Exporting an Access Inventory (Exportieren eines Access-Inventars)](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  
   
-
