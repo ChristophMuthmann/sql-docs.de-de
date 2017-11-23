@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 29d8787c-632e-4ff7-9ccc-3f7ad40480ec
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 90f472a8eaa4bcfadf13eaea3d5145fe25c74a63
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 31c069a602027d7d49d944b654653e2476c94e2b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-ssma-for-oracle-console-db2tosql"></a>Arbeiten mit SSMA für Oracle-Konsole (DB2ToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) Version für DB2 ist jetzt über eine Konsolenanwendung in Befehlszeile zugegriffen werden kann. Die Skriptdateien bilden die Eingabe für die Anwendung für die Befehle ausführen. SSMA als Konsolenanwendung Skriptebene Schnittstelle ermöglicht, den Zyklus Migration verringert und der Migrationsaufwand skaliert.  
@@ -34,7 +32,7 @@ In diesem Abschnitt behandelten Themen gehören:
   
 |||  
 |-|-|  
-|**Themen**|**Beschreibung**|  
+|**Themen**|**Description**|  
 |[Erste Schritte mit SSMA für DB2-Konsole &#40; DB2ToSQL &#41;](../../ssma/db2/getting-started-with-ssma-for-db2-console-db2tosql.md)|Erläutert das Verfahren, um die Konsolenanwendung auszuführen.|  
 |[Befehlszeilenoptionen SSMA-Konsole &#40; DB2ToSQL &#41;](../../ssma/db2/command-line-options-in-ssma-console-db2tosql.md)|Beschreibt die Befehlszeilenoptionen und Parameter, um die SSMA-Konsolenanwendung ausgeführt werden.|  
 |[Erstellen von Skriptdateien &#40; DB2ToSQL &#41;](../../ssma/db2/creating-script-files-db2tosql.md)|Erläutert das Erstellen einer Skriptdatei.|  
@@ -49,4 +47,3 @@ In diesem Abschnitt behandelten Themen gehören:
 ## <a name="see-also"></a>Siehe auch  
 [Erste Schritte mit SSMA für die DB2-Konsole](http://msdn.microsoft.com/en-us/f245c017-023e-4880-8721-8908d339525e)  
   
-

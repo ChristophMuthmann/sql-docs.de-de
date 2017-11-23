@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data sources [ODBC], types
+helpviewer_keywords: data sources [ODBC], types
 ms.assetid: a5e3f966-3357-4827-afbc-6153682d26bc
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 26570dde689f8a014b3551cd86c3f41c9bd14733
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 77d2aff43a35245724fdc5f165b8e9f3361ee3a0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="types-of-data-sources"></a>Typen von Datenquellen
 Es gibt zwei Arten von Datenquellen: Computer, Datenquellen und Dateidatenquellen. Obwohl beide ähnliche Informationen über die Quelle der Daten enthalten, unterscheiden sich jedoch auf die Weise, die diese Informationen gespeichert werden. Aufgrund dieser Unterschiede werden diese in unterschiedliche Arten verwendet.  
@@ -35,4 +32,3 @@ Es gibt zwei Arten von Datenquellen: Computer, Datenquellen und Dateidatenquelle
 -   [Computer-Datenquellen](../../odbc/reference/machine-data-sources.md)  
   
 -   [Dateidatenquellen](../../odbc/reference/file-data-sources.md)
-

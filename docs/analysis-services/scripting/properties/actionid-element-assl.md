@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ActionID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ActionID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ActionID
-helpviewer_keywords:
-- ActionID element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ActionID
+helpviewer_keywords: ActionID element
 ms.assetid: 2c9c66b2-a7ea-4874-a0ed-020ce3feab20
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 62e81b5fbf076c5928ec2d0f83584abb944ce1fc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7a37bba497503e9d3c01031e3256baa86d1e3e0a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="actionid-element-assl"></a>ActionID-Element (ASSL)
   Enthält den Namen des ein [Aktion](../../../analysis-services/scripting/objects/action-element-assl.md) Element definiert, die auf eine [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) Element, das in verfügbar gemacht wird eine [Perspektive](../../../analysis-services/scripting/objects/perspective-element-assl.md) Element als ein [PerspectiveAction](../../../analysis-services/scripting/data-type/perspectiveaction-data-type-assl.md) Element.  
@@ -72,4 +66,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

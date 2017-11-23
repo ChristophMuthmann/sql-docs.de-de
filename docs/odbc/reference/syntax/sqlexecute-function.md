@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLExecute
-apilocation:
-- sqlsrv32.dll
+apiname: SQLExecute
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLExecute
-helpviewer_keywords:
-- SQLExecute function [ODBC]
+f1_keywords: SQLExecute
+helpviewer_keywords: SQLExecute function [ODBC]
 ms.assetid: 9286a01d-cde2-4b90-af94-9fd7f8da48bf
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1f3d44cf289144ea93317e08a170edb2bd5cc471
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e81f813f00513add62298c5f7ebb2d0dd3e85a50
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlexecute-function"></a>SQLExecute-Funktion
 **Konformität**  
@@ -155,4 +149,3 @@ SQLRETURN SQLExecute(
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

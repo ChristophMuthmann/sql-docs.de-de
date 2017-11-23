@@ -8,8 +8,7 @@ ms.component: misc
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - multidimensional data [Analysis Services]
 - SSAS, about Analysis Services - Multidimensional Data
 ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: c7e997b69125703fd4dbd240aada1071d4e6a658
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8c3a514f91e9af8de54fdbd4d9ef851c72f1911e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="what-is-analysis-services"></a>Was ist eine Analysis Services?
   Analysis Services ist ein analytisches Datenmodul in Decision Support und Business Analytics, analytischen Daten für Geschäftsberichte und Clientanwendungen wie Excel, Power BI bereitstellt, die durch das Reporting Services-Berichte und andere Daten Visualisierungstools verwendet.  
@@ -69,4 +67,3 @@ Im Allgemeinen ist die Dokumentation für Azure Analysis Services in Azure-Dokum
 *  [Tutorials](../analysis-services/analysis-services-tutorials-ssas.md)   
 *  [Dokumentation für Entwickler](https://msdn.microsoft.com/library/bb500153(SQL.130).aspx)  
 *  [Technische Referenz (SSAS)](../analysis-services/powershell/technical-reference-ssas.md)
-

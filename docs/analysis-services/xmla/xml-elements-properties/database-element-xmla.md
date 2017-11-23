@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Database Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Database Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.database
 - http://schemas.microsoft.com/analysisservices/2003/engine#Database
 - urn:schemas-microsoft-com:xml-analysis#Database
-helpviewer_keywords:
-- Database element
+helpviewer_keywords: Database element
 ms.assetid: 2ded06c4-4eaf-4ccb-a416-41ee51ced8bc
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cb1d9091dfbeb521c84d1db19fca80b2629f8c63
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b21cc8a503c2da54c7d5f30e643da6a4e9a090dd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-element-xmla"></a>Database-Element (XMLA)
   Identifiziert die Datenbank, die die vom übergeordneten dargestellte Dimension enthält [Objekt](../../../analysis-services/xmla/xml-elements-properties/object-element-dimension-xmla.md) Element.  
@@ -77,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

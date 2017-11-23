@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -23,25 +22,23 @@ f1_keywords:
 - CREATE COLUMNSTORE INDEX
 - CREATE_CLUSTERED_COLUMNSTORE_INDEX_TSQL
 - COLUMNSTORE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - index creation [SQL Server], columnstore indexes
 - columnstore index, creating
 - CREATE COLUMNSTORE INDEX statement
 - CREATE INDEX statement
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
-caps.latest.revision: 76
+caps.latest.revision: "76"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: c2c5b9cec465ff1e969df9f657ab66a7e6d5b68f
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0fb8883678dad7a62cac9c2109b093ee79e27b27
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -343,7 +340,7 @@ Wenn die zugrunde liegenden Tabelle eine Spalte mit einem Datentyp, die für col
 -   Kann nicht mehr als 1024 Spalten enthalten.  
 -   Eine Tabelle mit einem nicht gruppierten columnstore-Index kann über UNIQUE-, PRIMARY KEY- oder FOREIGN KEY-Einschränkungen verfügen, die Einschränkungen können aber nicht in den nicht gruppierten columnstore-Index eingeschlossen werden.  
 -   Kann nicht für eine Sicht oder indizierte Sicht erstellt werden.  
--   Kann keine Spalte mit geringer Dichte enthalten.  
+-   Kann keine Sparsespalte enthalten.  
 -   Kann nicht geändert werden, mithilfe der **ALTER INDEX** Anweisung. Um den nicht gruppierten Index zu ändern, müssen Sie stattdessen den columnstore-Index löschen und neu erstellen. Sie können **ALTER INDEX** deaktivieren und neu Erstellen eines columnstore-Indexes.  
 -   Kann nicht erstellt werden, mithilfe der **INCLUDE** Schlüsselwort.  
 -   Darf keine enthalten die **ASC** oder **"DESC"** Schlüsselwörter zum Sortieren des Index. Columnstore-Indizes werden gemäß den Komprimierungsalgorithmen sortiert. Durch die Sortierung würden viele der Leistungsvorteile entfernt werden.  
@@ -715,5 +712,4 @@ WITH ( DROP_EXISTING = ON);
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  
 DROP INDEX cci_xdimProduct ON xdimProduct;  
 ```  
-
 

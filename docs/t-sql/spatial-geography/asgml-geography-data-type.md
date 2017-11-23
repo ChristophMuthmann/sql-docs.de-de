@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,22 +16,19 @@ f1_keywords:
 - AsGml
 - AsGml_TSQL
 - AsGml (geography Data Type)
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- AsGml method
+dev_langs: TSQL
+helpviewer_keywords: AsGml method
 ms.assetid: 67795c64-d8d3-48dc-93ef-3c8a9274deb6
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b4e59d7ffe152449c40644115649c2bf913b8c51
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9f5c13754e9d889245e667dcf377ee158fb500aa
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 #  <a name="asgml---geography-data-type"></a>AsGml - Geography-Datentyp
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +67,6 @@ SELECT @g.AsGml();
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erweiterte Methoden für Geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
+ [Erweiterte Methoden für geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   
-

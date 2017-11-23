@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CubeID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CubeID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- CubeID
-helpviewer_keywords:
-- CubeID element
+applies_to: SQL Server 2016 Preview
+f1_keywords: CubeID
+helpviewer_keywords: CubeID element
 ms.assetid: cea9cd1b-30e6-48b1-afb9-c2c1243cead8
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5c46d34c953fb45aea921ac42c4a99f7fd78b2d7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 57e73f06eb06e7a8768451fdd45d5ca3775ccde5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cubeid-element-assl"></a>CubeID-Element (ASSL)
   Identifiziert die [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) zugeordnete Element eine [binden](../../../analysis-services/scripting/data-type/binding-data-type-assl.md) Element.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

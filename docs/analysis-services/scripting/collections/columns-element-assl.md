@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Columns Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Columns Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- COLUMNS
-helpviewer_keywords:
-- Columns element
+applies_to: SQL Server 2016 Preview
+f1_keywords: COLUMNS
+helpviewer_keywords: Columns element
 ms.assetid: 14011eed-6f10-4120-b256-d599d59bde80
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 55467e21f97a6bb3bbef079ce19b2fa8dc345ca8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 85e58f48f9b014e6dcb2f79982ad96b19afdae95
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="columns-element-assl"></a>Columns-Element (ASSL)
   Enthält die Auflistung der Spalten, die mit dem übergeordneten Element verknüpft sind.  
@@ -97,4 +91,3 @@ ms.lasthandoff: 09/01/2017
  [Schemaauflistungen &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

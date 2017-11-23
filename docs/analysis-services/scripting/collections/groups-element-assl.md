@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Groups Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Groups Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Groups
-helpviewer_keywords:
-- Groups element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Groups
+helpviewer_keywords: Groups element
 ms.assetid: 62196435-83a8-4a0a-8be1-7dfc986dc6c5
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a131f96b8c3c01c8103408fc85d97b2903fbafe7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ec1af07e39807cbb64473b2229c0798bd5b7219f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="groups-element-assl"></a>Groups-Element (ASSL)
   Enthält die Auflistung der Gruppen von Elementen, die an ein Attribut gebunden sind.  
@@ -76,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [Schemaauflistungen &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

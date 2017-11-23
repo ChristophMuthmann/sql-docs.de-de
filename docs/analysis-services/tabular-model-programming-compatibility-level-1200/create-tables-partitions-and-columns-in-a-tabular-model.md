@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: cf0e4791-ad3b-41a8-81ce-509d4cf223f8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ecf8c233177b283c5dc3a5601a267bdfa0c8a10f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 42d7a07de0c82921f08fd091f72aef125ebe053e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-tables-partitions-and-columns-in-a-tabular-model"></a>Erstellen von Tabellen, Partitionen und Spalten in einem tabellarischen Modell
 
@@ -266,4 +265,3 @@ Beim Speichern der Änderungen an den Server der Server der hergeleiteten Wertel
 
 Überprüfen Sie die Klassen zur Behandlung von Ausnahmen in TOM: [Behandeln von Fehlern in TOM](../../analysis-services/tabular-model-programming-compatibility-level-1200/handling-errors-in-the-tom-api-analysis-services-amo-tom.md)
   
-

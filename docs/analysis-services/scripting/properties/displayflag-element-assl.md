@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DisplayFlag Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DisplayFlag Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DisplayFlag
-helpviewer_keywords:
-- DisplayFlag element
+applies_to: SQL Server 2016 Preview
+f1_keywords: DisplayFlag
+helpviewer_keywords: DisplayFlag element
 ms.assetid: a6750477-0763-46da-9add-1f4448146a6b
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a79b507d66ea369bd952830b9b81719957a21066
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a28934e2249a9fe1b16ebffb8e19dea4fed34501
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="displayflag-element-assl"></a>DisplayFlag-Element (ASSL)
   Enthält einen schreibgeschützten Hinweis, der angibt, ob Benutzeroberflächenkomponenten das zugeordnete anzeigen sollten [ServerProperty](../../../analysis-services/scripting/objects/serverproperty-element-assl.md) Element.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

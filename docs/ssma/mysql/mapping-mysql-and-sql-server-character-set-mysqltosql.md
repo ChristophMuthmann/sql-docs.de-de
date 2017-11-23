@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6953025addea83b247e8f1c03fef4bdd24d27147
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1145e4168e41f2014b95e7315a17dd00d764c386
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Zuordnen von MySQL und SQL Server-Zeichen (MySQLToSQL) festlegen
 Zeichensatz (Zeichensatz) kann für MySQL-Unicodezeichen-Datentypen, Ausdrücke und Literale angegeben werden.  
@@ -143,4 +141,3 @@ Zuordnen von CharSet variiert auf unterschiedlichen Knotenebenen, nämlich:
 > -   In der Charset-Zuordnung zwischen MySQL-Datenbank und die Zieldatenbank auf Datenbank-, Kategorie und Objektebenen für die Knoten, die Standardwerte für einen bestimmten Zeichensatz für jede Ebene als Stammverzeichnis für die Spalte **Zieldatentyp** sollte "vererbt".  
 > -   Im Raster, den Wert **geerbte** ist entweder mit dem Suffix '(CHAR/VARCHAR) "oder '(NCHAR/NVARCHAR)" je nachdem, welcher Wert von dieser bestimmten Charset vom übergeordneten Element geerbt wurde.  
   
-

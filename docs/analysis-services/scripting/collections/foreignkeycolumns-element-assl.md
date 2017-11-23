@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ForeignKeyColumns Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ForeignKeyColumns Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ForeignKeyColumns
-helpviewer_keywords:
-- ForeignKeyColumns element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ForeignKeyColumns
+helpviewer_keywords: ForeignKeyColumns element
 ms.assetid: 0a673c1a-73dd-4217-aa41-56b340b5e1ab
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4cd5ca2e63ead853814d1f2d9ab8ad24a7c73d33
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 61e25f5b47229e1a56e15963b0fec43174b5a10d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="foreignkeycolumns-element-assl"></a>ForeignKeyColumns-Element (ASSL)
   Enthält die Sammlung der Spalten, die den Join mit der übergeordneten Tabelle für eine relationale Datenquelle identifizieren.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Schemaauflistungen &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

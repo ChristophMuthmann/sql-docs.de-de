@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -23,22 +22,19 @@ f1_keywords:
 - CREATE_BROKER_TSQL
 - BROKER PRIORITY
 - BROKER_PRIORITY_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- CREATE BROKER PRIORITY statement
+dev_langs: TSQL
+helpviewer_keywords: CREATE BROKER PRIORITY statement
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 256536ee8fc56891b0b957498c7c5bcf4881f235
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c7a1d85cba038eb3f7ef4a4e3198485943e8e194
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -292,16 +288,15 @@ CREATE BROKER PRIORITY BronzePriority
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [ALTER BROKER PRIORITY & #40; Transact-SQL & #41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [BEGIN DIALOG CONVERSATION & #40; Transact-SQL & #41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [Erstellen Sie Vertrag & #40; Transact-SQL & #41;](../../t-sql/statements/create-contract-transact-sql.md)   
+ [ALTER BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
+ [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [Erstellen Sie Vertrag &#40; Transact-SQL &#41;](../../t-sql/statements/create-contract-transact-sql.md)   
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
- [DROP BROKER PRIORITY & #40; Transact-SQL & #41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
- [GET CONVERSATION GROUP & #40; Transact-SQL & #41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
- [Empfangen von & #40; Transact-SQL & #41;](../../t-sql/statements/receive-transact-sql.md)   
- [SEND & #40; Transact-SQL & #41;](../../t-sql/statements/send-transact-sql.md)   
- [Sys. conversation_priorities & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
+ [DROP BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
+ [GET CONVERSATION GROUP &#40; Transact-SQL &#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
+ [Empfangen von &#40; Transact-SQL &#41;](../../t-sql/statements/receive-transact-sql.md)   
+ [SEND &#40; Transact-SQL &#41;](../../t-sql/statements/send-transact-sql.md)   
+ [Sys. conversation_priorities &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
   
   
-

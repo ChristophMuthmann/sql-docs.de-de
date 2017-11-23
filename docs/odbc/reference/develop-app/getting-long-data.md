@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - SQLGetData function [ODBC], getting long data
 - retrieving long data [ODBC]
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0d78c97adc2ee17c4da6d3f1224313360a798e3b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0ea30c211e3cfd66acf1588ef9ca2a45fd1037d1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="getting-long-data"></a>Abrufen von Long-Daten
 Definieren eines DBMS *long-Daten* als beliebiges Zeichen oder Binärdaten über eine bestimmte Größe, z. B. 255 Zeichen lang sein. Diese Daten möglicherweise klein genug, um in einem einzigen Puffer, z. B. eine Beschreibung für den mehrere Tausend Zeichen gespeichert werden. Allerdings möglicherweise zu lang im Arbeitsspeicher, z. B. lange Dokumente oder Bitmaps gespeichert sein. Da diese Daten in einem einzigen Puffer gespeichert werden können, aus dem Treiber des Webparts mit abgerufen **SQLGetData** nach die anderen Daten in der Zeile abgerufen wurde.  
@@ -93,4 +91,3 @@ SQLCloseCursor(hstmt);
  Einige Treiber erzwungen diese Einschränkungen nicht. Interoperable Anwendungen ausführen können, sollte entweder voraussetzen, vorhanden, oder bestimmen, welche Einschränkungen durch den Aufruf nicht erzwungen werden **SQLGetInfo** mit der Option SQL_GETDATA_EXTENSIONS.  
   
  Wenn die Anwendung nicht alle Daten in ein Zeichen oder eine Spalte mit binary-möchten, können sie den Netzwerkdatenverkehr im DBMS-basierten Treibern reduzieren, indem SQL_ATTR_MAX_LENGTH-Anweisungsattribut festlegen, bevor die Anweisung ausgeführt. Dies schränkt die Anzahl der Datenbytes, die für beliebiges Zeichen oder binary-Spalte zurückgegeben werden. Nehmen wir beispielsweise an, dass eine Spalte mit langen Textdokumente enthält. Eine Anwendung, die durchsucht, die Tabelle, enthält diese Spalte, möglicherweise nur die erste Seite des jeweiligen Dokuments anzuzeigen. Obwohl diese Anweisungsattribut im Treiber simuliert werden kann, besteht kein Grund dazu. Insbesondere, wenn eine Anwendung wünscht eine Zeichen- oder Binärdaten abgeschnitten, es sollte binden einen kleinen Puffer auf die Spalte mit **SQLBindCol** , und lassen Sie den Treiber, die die Daten abgeschnitten.
-

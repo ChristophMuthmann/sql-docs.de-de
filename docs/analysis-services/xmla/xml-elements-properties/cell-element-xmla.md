@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Cell Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Cell Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.cell
 - http://schemas.microsoft.com/analysisservices/2003/engine#Cell
 - urn:schemas-microsoft-com:xml-analysis#Cell
-helpviewer_keywords:
-- Cell element
+helpviewer_keywords: Cell element
 ms.assetid: 88daba54-89e9-423f-8d12-8de80cf52d6b
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b6a57a3c7da9418dafb1899fddebc2d5646adf81
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ea902dc97ee06cb63f5e1437187d9df80816f9a1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cell-element-xmla"></a>Cell-Element (XMLA)
   Enthält Informationen über eine Zelle, die von einem [UpdateCells](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md) -Befehl aktualisiert wird.  
@@ -83,4 +78,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

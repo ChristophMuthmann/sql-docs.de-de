@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- EmptyResult Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: EmptyResult Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#EmptyResult
 - olapxmla_EmptyResult
 - urn:schemas-microsoft-com:xml-analysis#EmptyResult
-helpviewer_keywords:
-- EmptyResult data type
+helpviewer_keywords: EmptyResult data type
 ms.assetid: 63818123-acbb-4220-9d60-1aa20a7326a1
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3c189379eb31d59f139e1a2732b36ab98a79f3c6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3854d63c59cd8b5132358d51e084e39232b79d52
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="emptyresult-data-type-xmla"></a>EmptyResult-Datentyp (XMLA)
   Definiert einen abgeleiteten Datentyp, der darstellt eine [Root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) Element, das keine Daten zurückgibt eine [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) oder [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) -Methodenaufruf.  
@@ -84,4 +79,3 @@ ms.lasthandoff: 09/01/2017
  [XML-Datentypen &#40; XMLA &#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   
-

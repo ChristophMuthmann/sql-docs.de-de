@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: fa4ce8ad-9935-4195-90f9-3fdac587a4ee
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3073a7630f12ce6bff08f10667518adbd3a4649d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5cc772d20da71bc811d88fa4b27bfe4d9b8f6fe0
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="save-metadata-acesstosql"></a>Speichern von Metadaten (AcessToSQL)
 Die **speichern Metadaten** Dialogfeld aufgefordert, die Metadaten in das SSMA-Projekt zu laden, bevor Sie es speichern. Mit diesem können Sie eine vollständige Projektdatei verfügen, die Sie offline verwenden können, und Senden an andere Personen, z. B. der technische Support in Verbindung.  
@@ -51,4 +49,3 @@ Speichert das Projekt, das Laden der Metadaten für ausgewählte Datenbanken, di
 **Abbrechen**  
 Wird der Speichervorgang abgebrochen Vorgang. Fehlender Metadaten wird nicht in das Projekt geladen.  
   
-

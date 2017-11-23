@@ -1,13 +1,14 @@
 ---
 title: ALTER ausgelegte DATENBANKKONFIGURATION (Transact-SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,20 +23,19 @@ helpviewer_keywords:
 - ALTER DATABASE SCOPED CONFIGURATION statement
 - configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f003a852db7b1773e2c82b6ade3a951da673dbe0
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: fce97e74e2b4bbc5ae0fbdadf596734677734155
-ms.contentlocale: de-de
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER ausgelegte DATENBANKKONFIGURATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Diese Anweisung ermöglicht es, mehrere Konfigurationseinstellungen der Datenbank an die **einzelne Datenbank** Ebene. Diese Anweisung ist in beiden verfügbar [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Diese Einstellungen sind:  
   
@@ -135,7 +135,7 @@ Löscht den Prozedurcache (Plan) für die Datenbank an. Dies kann sowohl auf dem
 
 IDENTITY_CACHE  **=**  { **ON** | {OFF}  
 
-**Gilt für**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (Feature steht in der öffentlichen Vorschau) 
+**Gilt für**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
 Aktiviert oder deaktiviert die Identitäts-Cache auf Datenbankebene. Die Standardeinstellung ist **ON**. Zwischenspeichern von Identität dient zum Verbessern der Leistung von INSERT auf Tabellen mit Identitätsspalten. Deaktivieren Sie die IDENTITY_CACHE-Option, um Lücken in den Werten einer Identitätsspalte in Fällen, in dem der Server wird unerwartet neu gestartet oder ein Failover zu einem sekundären Server, zu vermeiden. Diese Option ist vergleichbar mit der vorhandenen [Trace-Flag 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), außer dass es auf Datenbankebene, statt nur auf Serverebene festgelegt werden kann.   
 
@@ -300,4 +300,3 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
  [Serverkonfigurationsoptionen &#40; SQLServer &#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
   
   
-

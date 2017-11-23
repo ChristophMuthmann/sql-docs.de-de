@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Description Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Description Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.description
 - http://schemas.microsoft.com/analysisservices/2003/engine#Description
 - urn:schemas-microsoft-com:xml-analysis#Description
-helpviewer_keywords:
-- Description element
+helpviewer_keywords: Description element
 ms.assetid: db24bb51-3d75-49f9-82be-3380b2de1622
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 41064071dea3359a34fb2f8c88bd6687eb85f5da
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 32ffc66c0d996127ac34af63dd53d535568d85c0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="description-element-xmla"></a>Description-Element (XMLA)
   Enthält die Beschreibung des übergeordneten [Error](../../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md) -Elements.  
@@ -74,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

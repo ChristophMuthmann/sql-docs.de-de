@@ -8,12 +8,10 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- PIVOT_TSQL
+f1_keywords: PIVOT_TSQL
 helpviewer_keywords:
 - FROM clause, UNPIVOT operator
 - unpivoting tables
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - FROM clause, PIVOT operator
 - rotating columns
 ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 4555a892c55ae8ef40e8fd0c3658412e3641d973
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 413e4e89679358f0c53c82340dcae5640387ddcb
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="from---using-pivot-and-unpivot"></a>VON - Verwenden von PIVOT und UNPIVOT
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -217,4 +214,3 @@ VendorID    Employee    Orders
  [Fall (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
   
   
-

@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 9382d0d6-2d4b-49ad-a0eb-35970f0f3afb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0407755cbe3b8608c1b88dad1c85eef4fdba18a1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 369bf544360d50c061314f45c04e8fb55784184c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="model-object-tmsl"></a>Model-Objekts (TMSL)
 
@@ -44,7 +43,7 @@ ms.lasthandoff: 09/01/2017
  Alle Objekte verfügen über einen gemeinsamen Satz von Eigenschaften, einschließlich Name, Typ, Beschreibung, eine eigenschaftsauflistung und Anmerkungen. **Modell** Objekte verfügen außerdem über die folgenden Eigenschaften.  
   
  StorageLocation  
- Der Speicherort auf dem Datenträger, um das Modell zu platzieren.  
+ Der Speicherort auf dem Datenträger, auf dem das Modell platziert werden soll.  
   
  defaultMode  
  Die Standardmethode zum Bereitstellen von Daten in der Partition.  
@@ -106,4 +105,3 @@ ms.lasthandoff: 09/01/2017
  [Kompatibilitätsgrad für tabellarische Modelle in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   
-

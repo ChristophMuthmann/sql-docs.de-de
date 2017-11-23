@@ -8,22 +8,20 @@ ms.service:
 ms.component: powershell
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 03d58a82-021c-4e13-b265-c084f42a8bb2
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cc648f0ad73c9ed39f49e823fe4293b57ff0d470
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1a4daeaf04fc9fe9c41064fe047110037c6d34e1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="backup-asdatabase-cmdlet"></a>Backup-ASDatabase-Cmdlet
 
@@ -218,4 +216,3 @@ PS SQLSERVER:\SQLAS\Localhost\default >Remove-Variable –Name pwd
   
   
   
-

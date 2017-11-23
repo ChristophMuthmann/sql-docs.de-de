@@ -8,27 +8,24 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - locking [SQL Server], hints
 - isolation levels [SQL Server], metadata access
 - hints [SQL Server], locking
 ms.assetid: 02bb71fa-1e92-4782-a9cf-6e256cc1f3ea
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.openlocfilehash: 7f13bd2886aaf2363cde83461f246bf034c89de5
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0acd70fad20d0ad1c2727f93da52b2e938ee21fd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transaction-isolation-levels"></a>Transaktionsisolationsstufen
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +52,7 @@ ms.lasthandoff: 09/01/2017
   
  Die folgende Tabelle fasst den Zugriff auf Metadaten bei verschiedenen Isolationsstufen zusammen.  
   
-|Isolationsstufe|Unterstützt|Berücksichtigt|  
+|Isolationsstufe|Supported|Berücksichtigt|  
 |---------------------|---------------|-------------|  
 |READ UNCOMMITTED|Nein|Nicht mit Sicherheit berücksichtigt|  
 |READ COMMITTED|ja|ja|  
@@ -64,4 +61,3 @@ ms.lasthandoff: 09/01/2017
 |SERIALIZABLE|Nein|Nein|  
   
   
-

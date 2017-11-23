@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,20 +18,18 @@ f1_keywords:
 - _Column::PutAttributes
 - _Column::get_Attributes
 - _Column::GetAttributes
-helpviewer_keywords:
-- Attributes property [ADOX]
+helpviewer_keywords: Attributes property [ADOX]
 ms.assetid: e3abb359-79a3-4c22-b3a8-2900817e0d23
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f96dd1109015a95013640551578089bebe24955f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4386e0943a9703373e4bec6bb7c6a99c8981e687
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attributes-property-adox"></a>Attribute-Eigenschaft (ADOX)
 Beschreibt die Spaltenmerkmale.  
@@ -46,4 +43,3 @@ Beschreibt die Spaltenmerkmale.
   
 ## <a name="see-also"></a>Siehe auch  
  [Beispiel für Dateneigenschaften Attribute (VB)](../../../ado/reference/adox-api/attributes-property-example-vb.md)
-

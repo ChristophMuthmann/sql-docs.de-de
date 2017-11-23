@@ -13,10 +13,8 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- SELECT
-dev_langs:
-- DMX
+f1_keywords: SELECT
+dev_langs: DMX
 helpviewer_keywords:
 - browsing mining model [Analysis Services]
 - TOP clause, SELECT
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - statements [DMX], SELECT statement
 - WHERE clause, DMX
 ms.assetid: 32d9e8fd-796b-4e1c-ae59-73cd6f645485
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 79fb3f8ce7766130ced9a8353a83e34bbbf007d1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c012d5fd04ed19665964119d0a0985b08ff2c7c8
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="select-dmx"></a>SELECT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -158,4 +155,3 @@ SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>
  [Datamining-Erweiterungen &#40; DMX &#41; Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)  
   
   
-

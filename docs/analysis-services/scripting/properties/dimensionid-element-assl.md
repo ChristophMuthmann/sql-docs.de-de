@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DimensionID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DimensionID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DimensionID
-helpviewer_keywords:
-- DimensionID element
+applies_to: SQL Server 2016 Preview
+f1_keywords: DimensionID
+helpviewer_keywords: DimensionID element
 ms.assetid: 00262781-4216-4a19-8bdc-d46647f42165
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 74fe551b27fc10badaab02d58666a1d67d5bbf98
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9d0171e6ddcbd67e61ea5255656218f9f0c57994
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dimensionid-element-assl"></a>DimensionID-Element (ASSL)
   Enthält den Bezeichner (ID) der Dimension.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

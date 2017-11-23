@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AttributeRelationships Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AttributeRelationships Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- MemberProperties
-helpviewer_keywords:
-- AttributeRelationships element
+applies_to: SQL Server 2016 Preview
+f1_keywords: MemberProperties
+helpviewer_keywords: AttributeRelationships element
 ms.assetid: f2ff82f6-6a7f-481a-a1ef-014bef38face
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 37fd8d0c2520f4e3626b7a4261d888ed9ad8b21a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5fe0ed6c2e5ba9fd8517a844c4bd0d894cd403dd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attributerelationships-element-assl"></a>AttributeRelationships-Element (ASSL)
   Enthält die Auflistung der [AttributeRelationship](../../../analysis-services/scripting/objects/attributerelationship-element-assl.md) Elemente für das Attribut.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Schemaauflistungen &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Aggregations Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Aggregations Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Aggregations
-helpviewer_keywords:
-- Aggregations element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Aggregations
+helpviewer_keywords: Aggregations element
 ms.assetid: 79b7de7a-53b2-4202-bc0f-de1daaf1b179
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a5bedb657cb1f0f1ef57545df2b9c559e3d1f713
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c5ef3e8dc2ba27d7d016b236b36fd892e74ea434
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="aggregations-element-assl"></a>Aggregations-Element (ASSL)
   Enthält die Auflistung von Aggregationen für definierte ein [AggregationDesign](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md) Element.  
@@ -77,4 +71,3 @@ ms.lasthandoff: 09/01/2017
  [Schemaauflistungen &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - CompareBookmarks
 - Recordset20::CompareBookmarks
 - Recordset20::raw_CompareBookmarks
-helpviewer_keywords:
-- CompareBookmarks method [ADO]
+helpviewer_keywords: CompareBookmarks method [ADO]
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d29f880d5bc5896efe603153bbfaf8e58b658e4a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f1e19f4800505e3ed481455bc349d65855c6b538
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks-Methode (ADO)
 Vergleicht zwei Textmarken und gibt eine Angabe über das Verhältnis der entsprechenden Werte zurück.  
@@ -70,4 +67,3 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  [CompareBookmarks-Methode (Beispiel) (VB)](../../../ado/reference/ado-api/comparebookmarks-method-example-vb.md)   
  [CompareBookmarks-Methode (VC++-Beispiel)](../../../ado/reference/ado-api/comparebookmarks-method-example-vc.md)   
  [Bookmark-Eigenschaft (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)
-

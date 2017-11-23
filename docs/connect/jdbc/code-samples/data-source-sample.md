@@ -8,21 +8,19 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b4a933ee-f2c6-4e0d-a96d-6dd061abf759
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.openlocfilehash: eb2521c115b888d44ff7340c2734c31e6f5b7a62
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9cda7cac56de964c97b2f60d416cbb83ff4e2b80
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="data-source-sample"></a>Beispiel für Datenquellen
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -102,4 +100,3 @@ public class connectDS {
  [Verbinden und Abrufen von Daten](../../../connect/jdbc/connecting-and-retrieving-data.md)  
   
   
-

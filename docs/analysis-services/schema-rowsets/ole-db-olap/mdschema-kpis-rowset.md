@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_KPIS
+apiname: MDSCHEMA_KPIS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_KPIS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_KPIS rowset
 ms.assetid: 40fb5112-6a90-4455-82b3-8b6322490222
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5eae9579701d6f3c2bea0235994cce3325c93130
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a347540894ee0dad15f2c5217bfd93d33d36cc98
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdschemakpis-rowset"></a>MDSCHEMA_KPIS-Rowset
   Beschreibt die Key Performance Indicators (KPIs) innerhalb einer Datenbank.  
@@ -42,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 |Spaltenname|Typindikator|Description|  
 |-----------------|--------------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**|Die Quelldatenbank.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Wird nicht unterstützt.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Nicht unterstützt.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|Der übergeordnete Cube für den KPI.|  
 |**MEASUREGROUP_NAME**|**DBTYPE_WSTR**|Die dem KPI zugeordnete Measuregruppe.<br /><br /> Sie können diese Spalte verwenden, um die Dimensionalität des KPI zu bestimmen. Wenn "**\<NULL >**", wird der KPI von allen Measuregruppen dimensioniert werden.<br /><br /> Der Standardwert ist "**\<NULL >**".|  
 |**KPI_NAME**|**DBTYPE_WSTR**|Der Name des KPI.|  
@@ -78,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [OLE DB für OLAP-Schemarowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- JScript
+dev_langs: JScript
 helpviewer_keywords:
 - errors [ADO], JScript
 - JScript error handling [ADO]
 ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9d8e0111cc2102135190579e4aa9a158dc7d8078
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b88b7b9a746b15425f449d672d7c663cfcbe1f15
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="handling-errors-in-jscript"></a>Fehlerbehandlung in JScript
 Muss Ihr Microsoft JScript® Code überprüfen, die **Anzahl** Eigenschaft von der **Verbindung** des Objekts **Fehler** Auflistung. Wenn der Wert größer als 0 ist, der die Auflistung durchlaufen Sie und drucken Sie die Werte wie in allen anderen Sprachen.  
@@ -78,4 +75,3 @@ Muss Ihr Microsoft JScript® Code überprüfen, die **Anzahl** Eigenschaft von d
 </HTML>  
 <!-- EndErrorExampleJS -->  
 ```
-

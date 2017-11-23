@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45897363-cfc2-44bb-817b-7561e60b7410
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: d679f892f40cbe4121605c965851241c5823e516
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7b01c33af45962720fb179271900ba6400870c24
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="initializing-test-cases-oracletosql"></a>Initialisieren von Testfällen (OracleToSQL)
 In diesem Schritt geben Sie die anfängliche Informationen für den neuen Testfall.  
@@ -44,4 +42,3 @@ Geben Sie zusätzliche Informationen um den Zweck des Testfalls zu identifiziere
 ## <a name="see-also"></a>Siehe auch  
 [Testen von migriert Datenbankobjekte &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
-

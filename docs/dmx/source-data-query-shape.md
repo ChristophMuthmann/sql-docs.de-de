@@ -13,25 +13,22 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- SHAPE
-dev_langs:
-- DMX
+f1_keywords: SHAPE
+dev_langs: DMX
 helpviewer_keywords:
 - SHAPE statement
 - multiple data sources
 ms.assetid: b9526ec2-40bc-4bf5-b4e5-774f71075065
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: b337483b23ef2f4bee4f82a7be05f3ea521b03a1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: dcd4940769fc52852b1d48feb453f1393c754084
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;quelldatenabfrage&gt; -Form
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -95,4 +92,3 @@ SHAPE {
  [Datamining-Erweiterungen &#40; DMX &#41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

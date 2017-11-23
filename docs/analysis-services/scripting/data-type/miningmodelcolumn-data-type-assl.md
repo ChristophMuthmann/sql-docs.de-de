@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MiningModelColumn Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: MiningModelColumn Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- MiningModelColumn
-helpviewer_keywords:
-- MiningModelColumn data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: MiningModelColumn
+helpviewer_keywords: MiningModelColumn data type
 ms.assetid: de8bf815-43b4-4983-bdb9-b67e8563be0e
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 250096d0838b4bdfd5843b229017793cdc731951
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 27ad96e38b52dbe3b0a05d29b8b0bd75f6465c5c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="miningmodelcolumn-data-type-assl"></a>MiningModelColumn-Datentyp (ASSL)
   Definiert einen Grunddatentyp, der Informationen über eine Spalte in einer [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) Element.  
@@ -79,4 +73,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services Scripting Language-XML-Datentypen &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

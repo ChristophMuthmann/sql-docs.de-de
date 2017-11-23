@@ -13,8 +13,7 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - data sources [DMX]
 - predictions [DMX]
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - <source data query> element
 - training mining models
 ms.assetid: 9dce5e37-1354-4d28-87c2-f9c419cb5b09
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 7e950bdcc5b6e2b683ac1a63a79353c97c88dec1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 195c2ecd04a28ad830aca2d90df821b76d46e98e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ltsource-data-querygt"></a>&lt;quelldatenabfrage&gt;
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -77,4 +75,3 @@ ms.lasthandoff: 08/02/2017
  [Geschachtelte Tabellen &#40; Analysis Services – Datamining &#41;](../analysis-services/data-mining/nested-tables-analysis-services-data-mining.md)  
   
   
-

@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- SessionID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: SessionID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#SessionID
 - http://schemas.microsoft.com/analysisservices/2003/engine#SessionID
 - microsoft.xml.analysis.sessionid
-helpviewer_keywords:
-- SessionID element
+helpviewer_keywords: SessionID element
 ms.assetid: 18220e00-76cf-48f6-9465-200465a0c553
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: afc320ef1cb6a913df7e4ecc6e65087de4cb0d5a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ecc8e3e51310a4575677377beba99f693ee4174e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sessionid-element-xmla"></a>SessionID-Element (XMLA)
   Identifiziert eine aktive Sitzung, für das übergeordnete Element ausgeführt ["Abbrechen"](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) Element.  
@@ -77,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

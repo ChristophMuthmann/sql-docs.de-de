@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- HierarchyInfo Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: HierarchyInfo Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#HierarchyInfo
 - microsoft.xml.analysis.hierarchyinfo
 - urn:schemas-microsoft-com:xml-analysis#HierarchyInfo
-helpviewer_keywords:
-- HierarchyInfo element
+helpviewer_keywords: HierarchyInfo element
 ms.assetid: b4472251-1f1d-4233-a8e6-407397862ab4
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 25659220c3a65b3741e3859e2e92f3047c8d6d56
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 888bacff8501114152ddfd6d33aa8f3e697137ba
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hierarchyinfo-element-xmla"></a>HierarchyInfo-Element (XMLA)
   Stellt eine einzelne Hierarchie dar, die in einem übergeordneten [AxisInfo](../../../analysis-services/xmla/xml-elements-properties/axisinfo-element-xmla.md) -Element enthalten ist.  
@@ -86,4 +81,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

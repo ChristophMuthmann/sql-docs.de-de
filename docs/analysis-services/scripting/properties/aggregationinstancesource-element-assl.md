@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AggregationInstanceSource Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AggregationInstanceSource Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- AggregationInstanceSource element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: AggregationInstanceSource element
 ms.assetid: ab58c817-eb2b-4974-8470-2946ca5affea
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 490cb6ca76549def68d5a1d6605d0d8edb7f4b00
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 67ba06344f0f8c816c41b6788763fa1a93f70798
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="aggregationinstancesource-element-assl"></a>AggregationInstanceSource-Element (ASSL)
   Identifiziert die Quelle der Daten für benutzerdefinierte aggregationsinstanzen, die gebunden werden, um eine [Partition](../../../analysis-services/scripting/objects/partition-element-assl.md) Element.  
@@ -75,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

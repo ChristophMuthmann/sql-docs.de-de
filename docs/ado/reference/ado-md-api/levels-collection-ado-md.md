@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Levels
 - Hierarchy::Levels
-helpviewer_keywords:
-- Levels collection [ADO MD]
+helpviewer_keywords: Levels collection [ADO MD]
 ms.assetid: fed8684a-b428-4ee4-8f8d-928abe4ad9ad
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e0ac8d69d19d381fad2e452bb429a076a00b3a73
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b1b075869179c8a786dc62085646352b73d1826c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="levels-collection-ado-md"></a>Levels-Auflistung (ADO MD)
 Enthält die [Ebene](../../../ado/reference/ado-md-api/level-object-ado-md.md) Objekte, die eine Hierarchie bilden.  
@@ -50,5 +47,4 @@ Enthält die [Ebene](../../../ado/reference/ado-md-api/level-object-ado-md.md) O
 ## <a name="see-also"></a>Siehe auch  
  [Katalog-Beispiel (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Hierarchy-Objekt (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)   
- [Ebenenobjekt (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)
-
+ [Level-Objekt (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)

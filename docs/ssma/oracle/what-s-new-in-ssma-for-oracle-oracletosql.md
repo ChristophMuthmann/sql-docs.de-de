@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 09/22/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a435479b9cad332215b1f44f7d881f5055b2fefd
 ms.openlocfilehash: 9e1b0d59ec958bdd5abc254ce289df88ea80e04f
-ms.contentlocale: de-de
-ms.lasthandoff: 11/08/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Was ist neu in SSMA für Oracle (OracleToSQL)
 In diesem Thema werden die SSMA für Oracle-Änderungen in jeder Version aufgelistet.  
@@ -206,4 +204,3 @@ Die August 2007-Version von SSMA für Oracle enthält die folgenden Änderungen:
   
 ## <a name="april-2007"></a>April 2007  
 Die Version April 2007 von SSMA für die Oracle war die erste Version.
-

@@ -5,29 +5,25 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- tuning reports [SQL Server]
+applies_to: SQL Server 2016
+helpviewer_keywords: tuning reports [SQL Server]
 ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a3fca4cfcb035c48e37c455e72b03a76474a3cd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a395ca1faceb1465c1ce7dc8fc43215dae31c8be
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-3---viewing-tuning-reports"></a>Lektion 1 bis 3 - Optimierungsberichte anzeigen
-In der vorigen Übung dieser Lektion haben Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripts angezeigt, mit denen Datenbankobjekte in den Empfehlungen des Datenbankoptimierungsratgebers erstellt oder gelöscht werden, die als Ergebnis der Optimierungssitzung „MySession“ generiert wurden. Die Optimierungssitzung MySession wurde in [Optimieren einer Arbeitsauslastung](../../tools/dta/lesson-1-1-tuning-a-workload.md)angelegt.  
+In der vorigen Übung dieser Lektion haben Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts angezeigt, mit denen Datenbankobjekte in den Empfehlungen des Datenbankoptimierungsratgebers erstellt oder gelöscht werden, die als Ergebnis der Optimierungssitzung „MySession“ generiert wurden. Die Optimierungssitzung MySession wurde in [Optimieren einer Arbeitsauslastung](../../tools/dta/lesson-1-1-tuning-a-workload.md)angelegt.  
   
 Es kann sehr nützlich sein, die Skripts anzuzeigen, die zum Implementieren der Optimierungsergebnisse verwendet werden können. Daneben bietet der Datenbankmodul-Optimierungsratgeber jedoch noch viele weitere nützliche Berichte, die Sie ebenfalls anzeigen können. Diese Berichte umfassen Informationen zu den vorhandenen physischen Entwurfsstrukturen in der zu optimierenden Datenbank sowie über die empfohlenen Strukturen. Zum Anzeigen der Optimierungsberichte klicken Sie auf die Registerkarte **Berichte** , wie in der folgenden Übung beschrieben. In dieser Übung werden die Optimierungssitzungen MySession und EvaluateMySession verwendet, die Sie in [Optimieren einer Arbeitsauslastung](../../tools/dta/lesson-1-1-tuning-a-workload.md) und in [Anzeigen von Empfehlungen für die Optimierung](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md)angelegt haben.  
   
@@ -57,4 +53,3 @@ Sie haben jetzt die Registerkarte **Berichte** der Benutzeroberfläche des Daten
   
   
   
-

@@ -4,32 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - LineSeparator property [ADO], Visual Basic example
 - Skipline method [ADO], Visual Basic example
 - EOS property [ADO], Visual Basic example
 ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f2672b5d41683313c36d95adac68f33367396864
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: af08ca92b0f9a6f20e7b1aa0544ea41361945c9d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS und Zeilentrennzeichen Eigenschaften und SkipLine-Methode (VB)
 In diesem Beispiel wird veranschaulicht, wie eine Textzeile für Streams gleichzeitig bearbeiten. Die Auswirkungen der Änderung die Linie wird als Trennzeichen in der Standardeinstellung Wagenrücklauf/Zeilenvorschub (**AdCRLF**), einfach Zeilenvorschubzeichen (**AdLF**) oder Carriage return, Wagenrücklauf (**AdCR**) wird angezeigt.  
@@ -124,4 +121,3 @@ End Sub
  [EOS-Eigenschaft](../../../ado/reference/ado-api/eos-property.md)   
  [Zeilentrennzeichen-Eigenschaft (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)   
  [SkipLine-Methode](../../../ado/reference/ado-api/skipline-method.md)
-

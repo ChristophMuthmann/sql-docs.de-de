@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- RoleID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: RoleID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- RoleID
-helpviewer_keywords:
-- RoleID element
+applies_to: SQL Server 2016 Preview
+f1_keywords: RoleID
+helpviewer_keywords: RoleID element
 ms.assetid: 811e24c9-c732-41f9-bd5f-5c9e3503706a
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a850b4823bab2f8531ef97909c8563350f643996
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c435658fe5bc58e27b0d78d1c4f88017c122d5d7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="roleid-element-assl"></a>RoleID-Element (ASSL)
   Identifiziert die Rolle, für die Berechtigungen definiert werden.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,22 +17,21 @@ helpviewer_keywords:
 - backward compatibility [ODBC], drivers
 - compatibility [ODBC], drivers
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5ea639a8bde008d657cff558183220d7e68fe568
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 41ca6ddf1535899ed8e5e0f065cf2f5f0ca19dca
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="writing-odbc-3x-drivers"></a>Schreiben von ODBC 3.x-Treiber
 Die folgende Tabelle zeigt die funktionsunterstützung in einer ODBC-3. *x* Treiber und eine ODBC-Anwendung und die Zuordnung, die vom Treiber-Manager ausgeführt, wenn die Funktionen für eine ODBC 3. aufgerufen werden. *X* Treiber.  
   
-|Funktion|Unterstützt<br /><br /> durch eine<br /><br /> ODBC-3. *x*<br /><br /> Treiber?|Unterstützt<br /><br /> durch eine<br /><br /> ODBC-3. *x*<br /><br /> Anwendung?|Zugeordnet/unterstützt<br /><br /> durch die ODBC-3. *x*<br /><br /> Treiber-Manager<br /><br /> eine ODBC-3. *x* Treiber?|  
+|Funktion|Supported<br /><br /> durch eine<br /><br /> ODBC-3. *x*<br /><br /> Treiber?|Supported<br /><br /> durch eine<br /><br /> ODBC-3. *x*<br /><br /> Anwendung?|Zugeordnet/unterstützt<br /><br /> durch die ODBC-3. *x*<br /><br /> Treiber-Manager<br /><br /> eine ODBC-3. *x* Treiber?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
 |**SQLAllocConnect**|Nein|Keine [1]|ja|  
 |**SQLAllocEnv**|Nein|Keine [1]|ja|  
@@ -124,4 +122,3 @@ Die folgende Tabelle zeigt die funktionsunterstützung in einer ODBC-3. *x* Trei
  [5] unter bestimmten Umständen möglicherweise Treiber zur Unterstützung dieser Funktion. Weitere Informationen finden Sie unter dieser Funktion-Referenzseite.  
   
  [6] den Treiber zur Unterstützung auswählen kann **SQLGetFunctions** Wenn der Satz von Funktionen, die der Treiber unterstützt die Verbindung zu Verbindung variiert.
-

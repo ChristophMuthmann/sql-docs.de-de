@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DROP EXTERNAL RESOURCE POOL
 - DROP_EXTERNAL_RESOURCE_POOL_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- DROP EXTERNAL RESOURCE POOL statement
+dev_langs: TSQL
+helpviewer_keywords: DROP EXTERNAL RESOURCE POOL statement
 ms.assetid: e2fa01bd-96ff-4ea9-bb08-6cb6b6adf68c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: edd6e956bc9453317c928a099469e65ddf5e0e0f
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a0aae6de75280fb0e32879ece5acea6d0fd94f3c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="drop-external-resource-pool-transact-sql"></a>DROP EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -81,4 +77,3 @@ GO
  [DROP RESOURCE POOL &#40; Transact-SQL &#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)  
   
   
-

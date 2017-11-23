@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Cellset object [ADO MD], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: Cellset object [ADO MD], Visual Basic example
 ms.assetid: 2666ad1c-b48e-4b2c-b269-5a9f4e4a7810
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 35bcc8eb6068c1e0579d3245e5acc85601ebec49
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ac5cf860d4bacb10e79de25304e950849ff30093
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cellset-example-vb"></a>Cellset-Beispiel (VB)
 Diese Visual Basic-Projekt veranschaulicht die Grundlagen der Verwendung von ADO MD auf Cubedaten zuzugreifen. Member von Beschriftungen für die Spalten- und Zeilenüberschriften angezeigt, und zeigt formatierte Werte für bestimmte Zellen in das Cellset.  
@@ -122,4 +118,3 @@ Error_cmdCellSettoDebugWindow_Click:
    Exit Sub  
 End Sub  
 ```
-

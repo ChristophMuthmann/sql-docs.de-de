@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ms.workload: Inactive
+ms.openlocfilehash: d8ebecb0d6ff5892bdee8cf4cf98287f1ace33e0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 50a2633790b9878a8be2a9a3c417fc877a37633d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>SLES Cluster für SQL Server-Verfügbarkeitsgruppe zu konfigurieren.
 
@@ -123,9 +122,9 @@ Konfigurieren der verfügbarkeitsgruppe, und konfigurieren Sie die Clusterressou
 
 3. So konfigurieren Sie die clusterkommunikationsebene (Corosync): 
 
-   A. Geben Sie eine Netzwerkadresse zum Binden an. Standardmäßig wird das Skript die Netzwerkadresse des eth0 vorzuschlagen. Alternativ geben Sie eine andere Netzwerkadresse, z. B. die Adresse des bond0 ein. 
+   a. Geben Sie eine Netzwerkadresse zum Binden an. Standardmäßig wird das Skript die Netzwerkadresse des eth0 vorzuschlagen. Alternativ geben Sie eine andere Netzwerkadresse, z. B. die Adresse des bond0 ein. 
 
-   B. Geben Sie eine Multicastadresse. Das Skript schlägt eine zufällige Adresse, die als Standard verwendet werden können. 
+   b. Geben Sie eine Multicastadresse. Das Skript schlägt eine zufällige Adresse, die als Standard verwendet werden können. 
 
    c. Geben Sie einen multicast-Port. Das Skript schlägt 5405 als Standard. 
 
@@ -313,4 +312,3 @@ Weitere Informationen finden Sie unter:
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Betreiben HA-verfügbarkeitsgruppe](sql-server-linux-availability-group-failover-ha.md)
-

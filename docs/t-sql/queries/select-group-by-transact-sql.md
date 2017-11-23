@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -23,8 +22,7 @@ f1_keywords:
 - GROUP_TSQL
 - CUBE_TSQL
 - ROLLUP_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - GROUP BY clause, about GROUP BY clause
 - dividing tables into groups
@@ -34,17 +32,16 @@ helpviewer_keywords:
 - groups [SQL Server], tables divided into groups
 - summary values [SQL Server]
 ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
-caps.latest.revision: 80
+caps.latest.revision: "80"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 49b572a8ce91287faa4c162efa8de8e7f0113235
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 01e2c02cade5b84f3560fe5cb415cece4f815abf
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="select---group-by--transact-sql"></a>Wählen Sie-GROUP BY - Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -351,15 +348,15 @@ Die GROUP BY-Klausel unterstützt alle GROUP BY-Funktionen, die in der SQL-2006-
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT-Aggregate|Nicht unterstützt für WITH CUBE oder WITH ROLLUP.|Unterstützt für WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE oder ROLLUP.|Wie bei Kompatibilitätsgrad 100|  
 |Benutzerdefinierte Funktion mit CUBE- oder ROLLUP-Namen in der GROUP BY-Klausel|User-defined Function, **dbo.cube (***arg1***,***.. ...argN***)** oder  **dbo.Rollup (***arg1***,**... *ArgN***)** in der GROUP BY-Klausel ist zulässig.<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|User-defined Function, **dbo.cube (***arg1***,**.. ...argN**)** oder **dbo.rollup (**arg1**,***.. ...argN***)** in der GROUP BY-Klausel nicht zulässig.<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Die folgende Fehlermeldung wird zurückgegeben: "falsche Syntax in der Nähe von Schlüsselwort 'Cube' &#124;" Rollup "."<br /><br /> Ersetzen Sie `dbo.cube` durch `[dbo].[cube]` oder `dbo.rollup` durch `[dbo].[rollup]`, um dieses Problem zu vermeiden.<br /><br /> Im folgende Beispiel ist zulässig:`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|User-defined Function, **dbo.cube (***arg1***,***.. ...argN*) oder **dbo.rollup (** *arg1***,***.. ...argN***)** in der GROUP BY-Klausel ist zulässig<br /><br /> Beispiel: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
-|GROUPING SETS|Nicht unterstützt|Unterstützt|Unterstützt|  
-|CUBE|Nicht unterstützt|Unterstützt|Nicht unterstützt|  
-|ROLLUP|Nicht unterstützt|Unterstützt|Nicht unterstützt|  
-|Gesamtergebnis, z. B. GROUP BY ()|Nicht unterstützt|Unterstützt|Unterstützt|  
-|GROUPING_ID-Funktion|Nicht unterstützt|Unterstützt|Unterstützt|  
-|GROUPING-Funktion|Unterstützt|Supported|Unterstützt|  
-|WITH CUBE|Unterstützt|Supported|Unterstützt|  
-|WITH ROLLUP|Unterstützt|Supported|Unterstützt|  
-|WITH CUBE- oder WITH ROLLUP-Entfernung "doppelter" Gruppierungen|Unterstützt|Supported|Unterstützt| 
+|GROUPING SETS|Nicht unterstützt|Supported|Supported|  
+|CUBE|Nicht unterstützt|Supported|Nicht unterstützt|  
+|ROLLUP|Nicht unterstützt|Supported|Nicht unterstützt|  
+|Gesamtergebnis, z. B. GROUP BY ()|Nicht unterstützt|Supported|Supported|  
+|GROUPING_ID-Funktion|Nicht unterstützt|Supported|Supported|  
+|GROUPING-Funktion|Supported|Supported|Supported|  
+|WITH CUBE|Supported|Supported|Supported|  
+|WITH ROLLUP|Supported|Supported|Supported|  
+|WITH CUBE- oder WITH ROLLUP-Entfernung "doppelter" Gruppierungen|Supported|Supported|Supported| 
  
   
 ## <a name="examples"></a>Beispiele  
@@ -477,7 +474,6 @@ ORDER BY OrderDateKey;
  [SELECT-Klausel &#40; Transact-SQL &#41;](~/t-sql/queries/select-clause-transact-sql.md)  
   
   
-
 
 
 

@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Member Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Member Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Member
-helpviewer_keywords:
-- Member element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Member
+helpviewer_keywords: Member element
 ms.assetid: 03b4cfcb-ce87-452f-9e25-8745c0423f56
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: dac6db8ea51fd20187c96b34a3670224ac41e8e9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fbb9e95ecb65dd5d065bdfa8ca30b26ddb906df2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="member-element-assl"></a>Member-Element (ASSL)
   Enthält den Namen eines Mitglieds eines [Group](../../../analysis-services/scripting/objects/group-element-assl.md) - oder [Role](../../../analysis-services/scripting/objects/role-element-assl.md) -Elements.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Objekte &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

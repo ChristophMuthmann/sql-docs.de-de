@@ -1,27 +1,23 @@
 ---
 title: SQL Server-Machine Learning-Dienste | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 08/20/2017
-ms.prod: sql-server-2016
+ms.date: 11/09/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba1dea65-40ea-484a-b767-53680c954934
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Active
+ms.openlocfilehash: fb770b52f2cacfc527f6bb89955acfbda243c18a
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e8c384b7fba553175767aaf7c439207771b31e6b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="sql-server-machine-learning-services"></a>SQL Server-Machine Learning-Dienste
 
@@ -39,7 +35,7 @@ SQL Server unterstützt die open Source-R-Sprache und einem umfassenden Satz von
   
     Wenn Sie diese Funktion auswählen, werden Erweiterungen im Datenbankmodul um die Ausführung von Code, in R oder Python unterstützen installiert. Ein neuer Dienst erstellt, die [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], um die Verwaltung der Kommunikation zwischen den externen Laufzeiten und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz.
   
-+ Installieren Sie **Microsoft Machine Learning-Server (eigenständig)** auf einem separaten Computer, wenn Sie keine SQL Server als computekontext verwenden müssen. Machine Learning-Server enthält die gleichen Machine learning-Komponenten sowie das Paket Mrsdeploy für skalierbarer, verteilter Ausführung von Machine Learning-Aufträgen als Webdienst.
++ Installieren Sie **Microsoft Machine Learning-Server (eigenständig)** auf einem separaten Computer, wenn Sie keine SQL Server als computekontext verwenden müssen. Machine Learning-Server sind die gleichen Machine Learning-Komponenten, sowie die Möglichkeit, skalierbarer, verteilter Machine Learning Aufträge als Webdienst auszuführen.
   
 +    Installieren Sie [Microsoft R Client](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client) auf Remotecomputern zum Entwickeln von Lösungen, die in SQL Server oder auf Machine Learning-Server unter Windows, Linux oder Hadoop bereitgestellt werden kann.
 
@@ -49,7 +45,7 @@ SQL Server unterstützt die open Source-R-Sprache und einem umfassenden Satz von
   
     Wenn Sie dieses Feature auswählen, erhalten Sie die Möglichkeit, die beim Ausführen von R-Skript mithilfe des SQL Servers als computekontext oder zum Ausführen von R-Skripts in einer gespeicherten Prozedur.
   
-+   Installieren Sie **Microsoft R Server (eigenständig)** aus SQL Server 2016-Setup, um die R-Komponenten auf separaten Computern einrichten, die Sie für Developin R-Lösungen verwenden.
++   Installieren Sie **Microsoft R Server (eigenständig)** aus SQL Server 2016-Setup aus, um die R-Komponenten auf einem separaten Computer installieren, die für die Entwicklung und Bereitstellung von R-Lösungen verwendet werden können.
 
 
 ## <a name="which-type-of-machine-learning-service-do-i-need"></a>Welche Art von Machine Learning-Dienst benötige ich?
@@ -75,4 +71,3 @@ SQL Server unterstützt die open Source-R-Sprache und einem umfassenden Satz von
 + [Lernprogramme für SQL Server R](../../advanced-analytics/tutorials/sql-server-r-tutorials.md)
 
     Erfahren Sie, wie Sie SQL Server-Datenquellen in Ihrem R-Code erstellen und Remote Compute-Kontexte verwenden. Andere Tutorials für SQL-Entwickler veranschaulichen das Trainieren und Bereitstellen eines R-Modells in SQL Server.
-

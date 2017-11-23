@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- ADCPROP_UPDATECRITERIA_ENUM
-helpviewer_keywords:
-- ADCPROP_UPDATECRITERIA_ENUM [ADO]
+f1_keywords: ADCPROP_UPDATECRITERIA_ENUM
+helpviewer_keywords: ADCPROP_UPDATECRITERIA_ENUM [ADO]
 ms.assetid: 33fd7b65-2ec8-4f62-91a7-630b5dab1aa2
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1dd5edb408cb5356069b9d5d5f39d5452df52aec
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 730a97c27d4aa57632ecf14b0f5cbddffb689d70
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adcpropupdatecriteriaenum"></a>ADCPROP_UPDATECRITERIA_ENUM
 Gibt an, welche Felder verwendet werden können, zum Erkennen von Konflikten während einer optimistischen Aktualisierung einer Zeile der Datenquelle mit einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
@@ -51,4 +47,3 @@ Gibt an, welche Felder verwendet werden können, zum Erkennen von Konflikten wä
 |AdoEnums.AdcPropUpdateCriteria.KEY|  
 |AdoEnums.AdcPropUpdateCriteria.TIMESTAMP|  
 |AdoEnums.AdcPropUpdateCriteria.UPDCOLS|
-

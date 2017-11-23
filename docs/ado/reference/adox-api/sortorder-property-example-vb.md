@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- SortOrder property [ADOX]
+dev_langs: VB
+helpviewer_keywords: SortOrder property [ADOX]
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f11956a6030b825c37f6600b2f8b40c47dc0ce20
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 285f0e386e20bb7edee9a4a472875abac4d44b7b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder-Eigenschaft (VB)-Beispiel
 In diesem Beispiel wird veranschaulicht, die [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) Eigenschaft eine [Spalte](../../../ado/reference/adox-api/column-object-adox.md) wurde, angefügt an die [Spalten](../../../ado/reference/adox-api/columns-collection-adox.md) Auflistung von ein [Index](../../../ado/reference/adox-api/index-object-adox.md). Der Code Fügt einen aufsteigenden Index der Spalte "Country" in der **Mitarbeiter** Tabelle, zeigt die Datensätze. Und klicken Sie dann der Code der Country-Spalte in einer absteigenden Index fügt die **Mitarbeiter** Tabelle und die Datensätze wird erneut angezeigt. Der Unterschied zwischen der auf- und absteigender Indizes wird angezeigt.  
@@ -149,4 +145,3 @@ End Sub
  [Columns-Auflistung (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Index-Objekt (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [SortOrder-Eigenschaft (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)
-

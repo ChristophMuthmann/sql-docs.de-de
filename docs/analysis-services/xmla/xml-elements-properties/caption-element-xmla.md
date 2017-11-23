@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Caption Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Caption Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#Caption
 - http://schemas.microsoft.com/analysisservices/2003/engine#Caption
 - microsoft.xml.analysis.caption
-helpviewer_keywords:
-- Caption element
+helpviewer_keywords: Caption element
 ms.assetid: 3d10ee68-98ab-4da0-a409-800dea2f1c32
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b1d22c28c79adbefcdd136a7412fe39e53792299
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b2b9ece977da21b4e08124ca12cfafb1a7895f19
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="caption-element-xmla"></a>Caption-Element (XMLA)
   Enthält Informationen über die Beschriftung des übergeordneten Elements [HierarchyInfo](../../../analysis-services/xmla/xml-elements-properties/hierarchyinfo-element-xmla.md) oder [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) Element.  
@@ -77,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

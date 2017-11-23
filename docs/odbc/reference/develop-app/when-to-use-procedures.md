@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], procedures
 - procedures [ODBC], about procedures
 ms.assetid: 7dc9e327-dd54-4b10-9f66-9ef5c074f122
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d69e085ace58008eab92bbe8422180b9b8eeab07
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7bae5e984d66d8b71a9e4b84708f3ea126c1e0b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="when-to-use-procedures"></a>Verwendung von Prozeduren
 Es gibt diverse Vorteile gegenüber der Verwendung von Prozeduren, alle basiert sowohl auf der Tatsache, dass Prozeduren verschiebt SQL-Anweisungen von der Anwendung an die Datenquelle. Nun muss nur noch in der Anwendung ist eine interoperable Prozeduraufruf. Diese bietet folgende Vorteile:  
@@ -54,4 +52,3 @@ Es gibt diverse Vorteile gegenüber der Verwendung von Prozeduren, alle basiert 
  Der zweite Nachteil ist, dass viele Datenbankmanagementsysteme Prozeduren nicht unterstützt werden. In diesem Fall ist dies wahrscheinlich ein Problem für vertikale Anwendungen, die mit einer Anzahl von DBMS-Systeme ausgeführt werden. Um zu bestimmen, ob Prozeduren unterstützt werden, eine Anwendung ruft **SQLGetInfo** mit der Option SQL_PROCEDURES.  
   
  Der dritte Nachteil, der insbesondere für entwicklungsumgebungen Anwendung gilt, ist, dass die ODBC-Grammatik eine standard zum Erstellen von Prozeduren nicht definiert ist. D. h. auch wenn Clientanwendungen Prozeduren interoperably aufrufen können, können nicht sie diese interoperably erstellen.
-

@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AggregationFunction Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AggregationFunction Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- AggregationFunction
-helpviewer_keywords:
-- AggregationFunction element
+applies_to: SQL Server 2016 Preview
+f1_keywords: AggregationFunction
+helpviewer_keywords: AggregationFunction element
 ms.assetid: 40cfc7f9-1089-45f9-be90-a29770ed9682
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 68f13efcbd341ce11f7529f9396753649099e237
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e14f744b35fc1d48ba2a96b15bd8bc3ec46e8e20
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="aggregationfunction-element-assl"></a>AggregationFunction-Element (ASSL)
   Enthält die Aggregationsfunktion, die für den Kontotyp zu verwenden ist.  
@@ -90,4 +84,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-
