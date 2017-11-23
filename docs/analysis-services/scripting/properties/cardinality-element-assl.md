@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Cardinality Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Cardinality Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Cardinality element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: Cardinality element
 ms.assetid: 60ac8a26-7c8b-4011-9b9b-a29863779428
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 370c30491c54d0df0eb94d572ba04983db00b0f0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4275f4ce39d24aebce00da8275a9a175c9a90238
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cardinality-element-assl"></a>Cardinality-Element (ASSL)
   Zeigt die Kardinalität der Beziehung beschrieben durch einen [AttributeRelationship](../../../analysis-services/scripting/objects/attributerelationship-element-assl.md) oder [RegularMeasureGroupDimension](../../../analysis-services/scripting/data-type/regularmeasuregroupdimension-data-type-assl.md).  
@@ -79,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

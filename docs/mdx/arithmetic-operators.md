@@ -5,26 +5,22 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- arithmetic operators
+dev_langs: kbMDX
+helpviewer_keywords: arithmetic operators
 ms.assetid: 1dff3e20-fe9d-4155-bf06-27d6458188e9
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 7d32b5c9c7dba58abd456847b77836a5f4a9028b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bc3adf599f92a74dd996a0ef090f6f42ab1fba0d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="arithmetic-operators"></a>Arithmetische Operatoren
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,10 +31,10 @@ ms.lasthandoff: 08/02/2017
   
 |Operator|Description|  
 |--------------|-----------------|  
-|[+ (Addition)](../mdx/add-mdx.md)|Addition zweier Zahlen.|  
+|[+ (Add) (+ (Addieren))](../mdx/add-mdx.md)|Addition zweier Zahlen.|  
 |[/ (Division)](../mdx/divide-mdx-operator-reference.md)|Dividiert eine Zahl durch eine andere Zahl.|  
-|[* (Multiplikation)](../mdx/multiply-mdx.md)|Multipliziert zwei Zahlen.|  
-|[-(Subtraktion)](../mdx/subtract-mdx.md)|Subtraktion zweier Zahlen.|  
+|[* (Multiply) (* (Multiplizieren))](../mdx/multiply-mdx.md)|Multipliziert zwei Zahlen.|  
+|[- (Subtract) (- (Subtrahieren))](../mdx/subtract-mdx.md)|Subtraktion zweier Zahlen.|  
 |^ (Potenz) |Potenziert eine Zahl mit einer anderen Zahl.|  
   
 > [!NOTE]  
@@ -58,4 +54,3 @@ ms.lasthandoff: 08/02/2017
  [Operatoren &#40; MDX-Syntax &#41;](../mdx/operators-mdx-syntax.md)  
   
   
-

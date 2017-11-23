@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - APPEND clause [ADO]
 - COMPUTE command [ADO]
 ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c21676293fe0d395a1e0cc5952a3d6fab1951d60
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8821ebd2fb20cf32c6b1921c36e45404421f415b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>Parametrisierte Befehle mit dazwischen liegenden COMPUTE-Befehlen
 Eine typische parametrisierte Form ANFÜGEN-Befehl hat eine Klausel, die ein übergeordnetes Element erstellt **Recordset** mit einem Abfragebefehl und eine weitere Klausel, die ein untergeordnetes Element erstellt **Recordset** mit einer parametrisierten Abfrage-Befehl: d. h. einen Befehl mit einem Platzhalter für Parameter (ein Fragezeichen "?"). Das resultierende strukturierte **Recordset** hat zwei Ebenen, in dem das übergeordnete Element die obere Ebene belegt, und das untergeordnete Element nimmt die untere Ebene.  
@@ -38,5 +36,4 @@ Eine typische parametrisierte Form ANFÜGEN-Befehl hat eine Klausel, die ein üb
  Die typische Verwendung für dieses Feature zum Aufrufen der Aggregatfunktion und Gruppierungsfunktionen von ShapeCOMPUTE wird Befehle, um sich dazwischen erstellen **Recordset** Objekte mit analytischen Informationen über das untergeordnete Element **Recordset** . Darüber hinaus, da dies einen Befehl für die parametrisierte Form ist, jedes Mal eine Kapitelspalte des übergeordneten Elements erfolgt, eine neue untergeordnete **Recordset** abgerufen werden kann. Da die dazwischen liegenden Ebenen von untergeordneten abgeleitet sind, werden sie auch neu berechnet werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Daten strukturiert werden, Beispiel](../../../ado/guide/data/data-shaping-example.md)
-
+ [Data Shaping Example (Beispiele der Datenstrukturierung)](../../../ado/guide/data/data-shaping-example.md)

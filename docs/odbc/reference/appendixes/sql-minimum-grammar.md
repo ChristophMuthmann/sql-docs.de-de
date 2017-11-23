@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 25a9ec485980223d9464bc3283c77c101e225bcd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c225ab76f4c67938590bd19f21bfafafa20742d8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-minimum-grammar"></a>Minimale SQL-Grammatik
 Dieser Abschnitt beschreibt die minimale SQL-Syntax, die ein ODBC-Treiber unterstützen muss. Die in diesem Abschnitt erläuterten Syntax ist eine Teilmenge der Eintrag Ebene Syntax der SQL-92.  
@@ -91,11 +89,10 @@ Dieser Abschnitt beschreibt die minimale SQL-Syntax, die ein ODBC-Treiber unters
   
  Dieser Abschnitt enthält die folgenden Themen.  
   
--   [Elemente, die in SQL­Anweisungen verwendet werden](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md)  
+-   [Elemente, die in SQL-­Anweisungen verwendet werden](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md)  
   
 -   [Datentypunterstützung](../../../odbc/reference/appendixes/data-type-support.md)  
   
 -   [Parameterdatentypen](../../../odbc/reference/appendixes/parameter-data-types.md)  
   
 -   [Parametermarkierungen](../../../odbc/reference/appendixes/parameter-markers.md)
-

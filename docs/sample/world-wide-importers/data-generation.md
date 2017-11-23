@@ -3,28 +3,29 @@ title: Der datengenerierung | Microsoft Docs
 ms.custom: 
 ms.date: 01/30/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
-ms.prod: sql-non-specified
-ms.technology:
-- " database-engine "
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: " database-engine "
 ms.topic: article
 ms.assetid: f387273b-8b5f-4687-b033-09499ea2d68f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: cb816c1d41f0f5b77aa1dd6434cf912a6fbf4592
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c17ad40220d46ab6e19054818ce2abfdce7251f4
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wideworldimporters-data-generation"></a>"Wideworldimporters" Datengenerierungsplan
-Die Versionen der Datenbanken "wideworldimporters" und WideWorldImportersDW enthält Daten, die beginnend am 1. Januar-2013, bis zu dem Tag, die diese Datenbanken erstellt wurden.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Die Versionen der Datenbanken "wideworldimporters" und WideWorldImportersDW enthält Daten, die beginnend am 1. Januar-2013, bis zu dem Tag, die diese Datenbanken erstellt wurden.
 
 Wenn die Beispieldatenbanken zu einem späteren Zeitpunkt, für Demonstrations- oder Abbildung, verwendet werden, kann es vorteilhaft, neuere Beispieldaten in der Datenbank enthalten sein.
 
@@ -85,4 +86,3 @@ Die Prozedur `Application.Configuration_PopulateLargeSaleTable` können verwende
 In etwa die erforderliche Anzahl von Zeilen eingefügt werden die `Fact.Sale` Tabelle im Jahr 2012. Die Prozedur beschränkt die Standardanzahl der Anzahl der Zeilen pro Tag auf 50000. Dies kann geändert werden, jedoch handelt es sich um es versehentlich Overinflations der Tabelle zu vermeiden.
 
 Darüber hinaus angewendet wird die Prozedur gruppierten columnstore-Index, wenn es nicht bereits angewendet wurde.
-

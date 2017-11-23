@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- ConfigDriver
-apilocation:
-- sqlsrv32.dll
+apiname: ConfigDriver
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- ConfigDriver
-helpviewer_keywords:
-- ConfigDriver [ODBC]
+f1_keywords: ConfigDriver
+helpviewer_keywords: ConfigDriver [ODBC]
 ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8d52e818312a12397328854971cdf065f1ef9eb3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 037d4ffcbe7d81c6e4a9c1a524f5f4977621f277
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configdriver-function"></a>ConfigDriver-Funktion
 **Konformität**  
@@ -106,4 +100,3 @@ BOOL ConfigDriver(
   
 ### <a name="messages"></a>Meldungen  
  Eine Treiber-Setup-Routine eine Textnachricht senden kann, zu einer Anwendung als eine Null-terminierte Zeichenfolge in der *LpszMsg* Puffer. Die Nachricht wird abgeschnitten und *CbMsgMax* minus der Null-Abschlusszeichen von der **ConfigDriver** funktioniert, wenn er größer als oder gleich ist *CbMsgMax* Zeichen.
-

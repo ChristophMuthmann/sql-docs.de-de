@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,20 +12,18 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- Prompt property [ADO]
+helpviewer_keywords: Prompt property [ADO]
 ms.assetid: c4f001b5-8d16-4d39-a42e-c0e2faaaceaf
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 820e3aae44e3a1fcd8ebabaee21d5bdac651cab2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 065656ea3023b1526573a48cd6d7d21eee6f6179
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="prompt-property-dynamic-ado"></a>Prompt-Eigenschaft dynamisch (ADO)
 Gibt an, ob der OLE DB-Anbieter den Benutzer zur Initialisierungsinformationen aufzufordern sollten.  
@@ -51,5 +48,4 @@ cn.Properties("Prompt") = adPromptNever    ' do not prompt the user
 ```  
   
 ## <a name="applies-to"></a>Gilt für  
- [Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
-
+ [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

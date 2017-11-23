@@ -13,23 +13,21 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - less than (<)
 - < (less than operator)
 ms.assetid: 61d257ce-7ffd-4124-a795-49e5f8a6d72f
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 84e143bd63a0156d212336cac12ac932c4cb710d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8366421d379efcddd5576cebab1ae333842c91d0
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="lt-less-than-dmx"></a>&lt;(Kleiner als) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,4 +54,3 @@ DMX_Expression < DMX_Expression
  [Operatoren &#40; DMX &#41;](../dmx/operators-dmx.md)  
   
   
-

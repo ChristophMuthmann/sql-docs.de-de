@@ -13,24 +13,20 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- RangeMid
-dev_langs:
-- DMX
-helpviewer_keywords:
-- RangeMid function
+f1_keywords: RangeMid
+dev_langs: DMX
+helpviewer_keywords: RangeMid function
 ms.assetid: 23493d2d-4afd-43d6-b047-d110fcacee51
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 256a0ebe07b2b5dfc132d0e13e1eefbb7ff20687
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 754d6c81dcd1fd07778c5a252906a82e5ca2943a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="rangemid-dmx"></a>RangeMid (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -72,4 +68,3 @@ FROM [TM Decision Tree]
  [RangeMin &#40; DMX &#41;](../dmx/rangemin-dmx.md)  
   
   
-

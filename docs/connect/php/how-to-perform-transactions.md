@@ -8,24 +8,21 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- transaction support
+helpviewer_keywords: transaction support
 ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a759dbf523ff275f20436919b5f093225b2693e5
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e24f0580fc79ab07043be419a866b19a47b80f73
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="how-to-perform-transactions"></a>Vorgehensweise: Ausführen von Transaktionen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -165,4 +162,3 @@ Für die Überwachung des Transaktionsverhaltens ist eine empfohlene Fehlerbehan
 [Transaktionen (Datenbankmodul)](http://go.microsoft.com/fwlink/?LinkId=105862)  
 [Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)  
   
-

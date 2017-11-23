@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], history
 - desktop database drivers [ODBC], history
 ms.assetid: b4a2aff8-bde7-4bd5-8580-bc50f27311c8
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: beb79b003e6e36b195d781b071dde814c5265adc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f6876496d243cefd2f3d6b7eb0cd5480bf225189
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="history-of-the-desktop-database-drivers"></a>Verlauf der Desktop-Datenbanktreiber
 Die folgende Tabelle zeigt die Desktop-Datenbanktreiber Versionsverlauf.  
@@ -42,4 +40,3 @@ Die folgende Tabelle zeigt die Desktop-Datenbanktreiber Versionsverlauf.
   
 > [!NOTE]  
 >  Die Treiber version3.5 wurden ODBC2 portzuweisung entworfen. *x*. Obwohl sie auch mit ODBC 3.0 zu arbeiten, unterstützt sie nicht alle ODBC 3.0-Funktionen. Weitere Informationen über die Funktionsweise von diese Treiber mit ODBC 3.0 finden Sie unter [Abwärtskompatibilität und zur Einhaltung von Standards](../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).
-

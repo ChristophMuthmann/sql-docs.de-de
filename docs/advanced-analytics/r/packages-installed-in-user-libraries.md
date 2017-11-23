@@ -1,26 +1,24 @@
 ---
 title: Vermeiden von Fehlern in R-Paketen in benutzerbibliotheken installiert | Microsoft Docs
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 11/16/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 99ffd9b8-aa6d-4ac2-9840-4e66d0463978
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: f7e5a9e69d98a3e39a66c48b1a7add5a3f0b0e69
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 0de06ebee16d903b4b00c9d8e4673bf450c485d1
-ms.contentlocale: de-de
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="avoiding-errors-on-r-packages-installed-in-user-libraries"></a>Vermeiden von Fehlern in R-Paketen in benutzerbibliotheken installiert
 
@@ -35,7 +33,7 @@ R-Entwickler, die neue R-Pakete installieren müssen, sind beim Installieren von
 Z. B. in einer typischen R-Entwicklungsumgebung, die Benutzer würde Hinzufügen der Speicherort des Pakets der R-Umgebungsvariable `libPath`, oder verweisen Sie den vollständigen Paketpfad wie folgt:
 
 ```R
-library("c:/Users/<username>/R/win-library/packagename")  
+library("c:/Users/<username>/R/win-library/packagename")
 ```
 
 Allerdings kann diese nie arbeiten, bei der Ausführung von R-Lösungen in SQL Server, da R-Pakete in einer spezifischen Bibliothek installiert werden müssen, die mit der Instanz verknüpft ist.
@@ -68,7 +66,6 @@ Wenn Sie die Paket-Management-Ansatz basierend auf Datenbankrollen verwenden, is
 
     + Bearbeiten Sie Code, um sicherzustellen, dass Pakete aus der Bibliothek standardmäßig nicht aus ad-hoc-Verzeichnisse oder benutzerbibliotheken geladen werden.
 
-+ Vermeiden Sie die ad-hoc-Paketinstallation als Teil einer Lösung. Checken Sie den Code, um sicherzustellen, dass es keine Aufrufe an deinstalliert Pakete oder Code, der dynamisch Pakete installiert sind. Der Code schlägt fehl, wenn Sie keine Berechtigungen haben, und wenn Sie Berechtigungen haben, sollten Sie die Pakete separat installieren, von anderem Code, der ausgeführt werden soll.
++ Vermeiden Sie die ad-hoc-Paketinstallation als Teil einer Lösung. Checken Sie den Code, um sicherzustellen, dass es keine Aufrufe an deinstalliert Pakete oder Code, der dynamisch Pakete installiert sind. Wenn Sie nicht über Berechtigungen zum Installieren der Pakete verfügen, schlägt der Code fehl. Auch wenn Sie Berechtigungen zum Installieren der Pakete haben, sollten Sie daher separat aus anderem Code durchführen, die Sie ausführen möchten.
 
-+ Ändern Sie direkte Pfade zu R-Paket-Bibliotheken. Wenn ein Paket in der Standardbibliothek installiert wurde, lädt die R-Laufzeit das Paket aus der Standardbibliothek, auch wenn im R-Code eine andere Bibliothek angegeben wurde.
-
++ Aktualisieren Sie den Code um direkte Verweise auf die Pfade der R-Pakete oder R-Bibliotheken zu entfernen. Wenn ein Paket in der Standardbibliothek installiert wurde, lädt die R-Laufzeit das Paket aus der Standardbibliothek, auch wenn im R-Code eine andere Bibliothek angegeben wurde.

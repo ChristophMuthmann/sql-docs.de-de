@@ -25,17 +25,16 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - coding [Data Mining]
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 1c4d0c9166a850d9860e2844403bb7da925f8193
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6ae50c18dab1894b42e209d2a37762e0fa9e0d57
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="feature-selection-data-mining"></a>Funktionsauswahl (Data Mining)
   Die*Featureauswahl* ist ein wichtiger Teil für das Machine Learning. Die Featureauswahl bezieht sich auf das Reduzieren der Eingaben für die Verarbeitung und Analyse oder die Suche nach sinnvollen Eingaben. Ein verwandter Begriff ist die *Featureentwicklung* (oder *Featureextraktion*), der sich auf Verfahren zum Extrahieren nützlicher Informationen aus vorhandenen Daten bezieht.  
@@ -144,4 +143,3 @@ ms.lasthandoff: 09/01/2017
  [Anpassen von Miningmodellen und -strukturen](../../analysis-services/data-mining/customize-mining-models-and-structure.md)  
   
   
-

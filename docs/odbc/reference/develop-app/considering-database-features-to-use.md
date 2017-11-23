@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- interoperability [ODBC], database features
+helpviewer_keywords: interoperability [ODBC], database features
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 30b073e6bca1fee5b98ed835bcc72f127c9ad40c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d17758711dd0e4e1590a3b4176829d9709a5dfd0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="considering-database-features-to-use"></a>Erwägen die Datenbankfunktionen verwenden
 Nachdem das grundlegende Maß an Interoperabilität bekannt ist, müssen die Datenbankfunktionen, die von der Anwendung verwendeten berücksichtigt werden. Welche SQL-Anweisungen wird z. B. die Anwendung ausführen? Verwendet die Anwendung bildlauffähigen Cursor? Transaktionen? Verfahren? Long-Daten? Weitere Ideen zur welche Funktionen möglicherweise nicht von allen DBMS unterstützt werden müssen, finden Sie unter der [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), und [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) Funktion Beschreibungen und [ Anhang C: SQL-Grammatik](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Die Funktionen, die von einer Anwendung benötigt möglicherweise einige DBMS aus der Liste der Ziel-DBMS vermieden. Sie können auch anzeigen, dass die Anwendung leicht viele Datenbankmanagementsysteme Ziel verwendet werden kann.  
@@ -55,4 +52,3 @@ Nachdem das grundlegende Maß an Interoperabilität bekannt ist, müssen die Dat
 -   **Unterstützen Sie mehrere Abfragen nur, wenn der Treiber der Fall ist.** Nach dem Herstellen einer Verbindung, um einen Treiber, überprüft die Anwendung die Anzahl der aktiven Anweisungen. Die Anwendung kann der Benutzer eine neue Anweisung gestartet wird, wenn bereits einer nur aktiviert, wenn der Treiber mehrere aktive Anweisungen unterstützt. Die Anwendung verfügt über höhere Funktionalität und Interoperabilität, jedoch ist schwieriger zu implementieren.  
   
 -   **Immer unterstützen Sie mehrere Abfragen zu und zu emulieren Sie, sie bei Bedarf.** Nach dem Herstellen einer Verbindung, um einen Treiber, überprüft die Anwendung die Anzahl der aktiven Anweisungen. Die Anwendung immer ermöglicht dem Benutzer eine neue Anweisung zu starten, wenn eine bereits aktiv ist. Wenn der Treiber nur eine aktive Anweisung unterstützt, wird die Anwendung wird eine zusätzliche Verbindung zu diesen Treiber geöffnet, und die neue Anweisung für diese Verbindung ausgeführt. Die Anwendung verfügt über sämtliche Funktionen und hohe Interoperabilität, jedoch ist schwieriger zu implementieren.
-

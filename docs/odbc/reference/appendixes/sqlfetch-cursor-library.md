@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLFetch function [ODBC], Cursor Library
+helpviewer_keywords: SQLFetch function [ODBC], Cursor Library
 ms.assetid: 35a0d493-778b-4fb1-84ee-a13540e2fe0e
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: be061255491a6c697654d82f9933b3b1133e2d67
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1e5cabca53c503e2cd0c12147248b11da84ed157
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlfetch-cursor-library"></a>SQLFetch (Cursor Library)
 > [!IMPORTANT]  
@@ -40,4 +37,3 @@ ms.lasthandoff: 09/09/2017
  Wenn die Cursorbibliothek mit einer ODBC 2. verwendet wird. *x* -Treiber verwenden, eine Bindung mit dem offset (gemäß der SQL_ATTR_ROW_BIND_OFFSET_PTR-Anweisungsattribut) wird nicht verwendet, wenn **SQLFetch** aufgerufen wird.  
   
  Eine Anwendung kann nicht aufgerufen, wenn die Cursorbibliothek geladen ist, **SQLFetch** Lesezeichenspalten abgerufen. Die Cursorbibliothek übergibt den Aufruf von **SQLFetch** über den Treiber, aber die Funktion aufruft, zum Aktivieren von Lesezeichen und binden die Lesezeichenspalte abgefangen werden durch die Cursorbibliothek.
-

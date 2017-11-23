@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 09/30/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a435479b9cad332215b1f44f7d881f5055b2fefd
 ms.openlocfilehash: f895aee684d353451c263b136547c2c6ed7d976d
-ms.contentlocale: de-de
-ms.lasthandoff: 11/08/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Was ist neu in SSMA für die MySQL (MySQLToSql)
 In diesem Thema werden die SSMA für MySQL-Änderungen in jeder Version aufgelistet. 
@@ -183,4 +181,3 @@ Die Januar 2010-Version von SSMA für MySQL war die erste Version. Sie enthalten
 -   Unterstützung für die Migration sowohl einer lokalen SQL Server und SQL Azure.  
   
 -   **Feature-Momentaufnahme:** Schema und Daten Migration von Tabellen/Indizes/Einschränkungen MySQL.
-

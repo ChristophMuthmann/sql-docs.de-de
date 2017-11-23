@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - dynamic properties [ADO]
 - properties [ADO], dynamic
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 55158776c72f16a8988edb0e8a552f64672935e2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fca9f032f5a72df58b18206c8441365ce3c8a746
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-dynamic-properties"></a>Dynamische Eigenschaften von ADO.NET
 Dynamische Eigenschaften hinzugefügt werden können die [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Sammlungen von der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md), [Befehl](../../../ado/reference/ado-api/command-object-ado.md), oder [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekte. Die Quelle für diese Eigenschaften ist entweder ein Datenanbieter, wie z. B. die [OLE DB-Anbieter für SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), oder ein Dienstanbieter, wie z. B. die [Microsoft Cursor Service für OLE DB-](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md). Finden Sie in der entsprechenden Datenanbieter oder die Service Provider Dokumentation weitere Informationen zu einer bestimmten dynamische Eigenschaft.  
@@ -53,5 +51,4 @@ Dynamische Eigenschaften hinzugefügt werden können die [Eigenschaften](../../.
  [ADO-Methoden](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md)   
  [ADO-Objekte und Schnittstellen](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
- [Eigenschaften von ADO.NET](../../../ado/reference/ado-api/ado-properties.md)
-
+ [ADO-Eigenschaften](../../../ado/reference/ado-api/ado-properties.md)

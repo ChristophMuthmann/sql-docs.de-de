@@ -21,17 +21,16 @@ helpviewer_keywords:
 - profit charts [Analysis Services]
 - accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: bc351c7439eac3a6714181b05257bef284915f95
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b939d468a964160cd84dbdb60fcae97d4f2ee6a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Prognosegütediagramm (Analysis Services – Data Mining)
   A *Liftergebnisses chart* wird grafisch dargestellt, welche Verbesserung mit einem Miningmodell gegenüber einer Zufallsvorhersage erzielt werden kann. Darüber hinaus wird die Änderung in Form eines *Liftergebnisses* gemessen. Durch Vergleichen der Prognosegüteergebnisse für verschiedene Modelle können Sie herausfinden, welches Modell sich am besten eignet. Sie können auch den Punkt ermitteln, an dem die Vorhersagen des Modells weniger nützlich werden. Sie können durch Überprüfen des Prognosegütediagramms z.B. feststellen, dass eine Werbekampagne wahrscheinlich nur bei 30% Ihrer Kunden ankommen wird. Anhand dieser Zahl können Sie den Umfang der Kampagne entsprechend begrenzen.  
@@ -134,4 +133,3 @@ ms.lasthandoff: 09/01/2017
  [Tests und Überprüfung &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
-

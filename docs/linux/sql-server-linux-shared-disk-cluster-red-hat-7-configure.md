@@ -6,15 +6,20 @@ ms.author: mikeray
 manager: jhubbard
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
+ms.workload: On Demand
+ms.openlocfilehash: 1417e02a0a0c2ef56171a5dd99782cdbb4abe0e1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 1b71dbe381c2b1c3db6ac686c40a3065b851c26a
-ms.contentlocale: de-de
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Konfigurieren Sie Red Hat Enterprise Linux freigegebene Datenträgercluster für SQL Server
 
@@ -108,7 +113,10 @@ Im nächsten Abschnitt Konfigurieren freigegebenen Speicher und die Datenbankdat
 
 ## <a name="configure-shared-storage-and-move-database-files"></a>Konfigurieren von freigegebenen Speicher und Verschieben von Datenbankdateien 
 
-Es gibt eine Vielzahl von Lösungen für das Bereitstellen von freigegebenen Speichers. Diese exemplarische Vorgehensweise wird das Konfigurieren von freigegebenen Speicher mit NFS. Es wird empfohlen, bewährte Methoden befolgen und Kerberos verwenden, um NFS zu sichern (finden Sie hier ein Beispiel: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/). Wenn nicht der Fall, klicken Sie dann werden jeder, der Zugriff auf Ihr Netzwerk und die IP-Adresse eines SQL-Knotens zu spoofen können auf die Datendateien zugreifen. Wie immer, stellen Sie sicher, dass Sie Bedrohungsmodells für Ihr System vor der Verwendung in der Produktion. Eine andere Speicheroption ist die Verwendung von SMB-Dateifreigabe.
+Es gibt eine Vielzahl von Lösungen für das Bereitstellen von freigegebenen Speichers. Diese exemplarische Vorgehensweise wird das Konfigurieren von freigegebenen Speicher mit NFS. Es wird empfohlen, bewährte Methoden befolgen und Kerberos verwenden, um NFS zu sichern (finden Sie hier ein Beispiel: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/). 
+
+>[!Warning]
+>Wenn Sie NFS nicht sichern, dann werden jeder, der Zugriff auf Ihr Netzwerk und die IP-Adresse eines SQL-Knotens zu spoofen können auf die Datendateien zugreifen. Wie immer, stellen Sie sicher, dass Sie Bedrohungsmodells für Ihr System vor der Verwendung in der Produktion. Eine andere Speicheroption ist die Verwendung von SMB-Dateifreigabe.
 
 ### <a name="configure-shared-storage-with-nfs"></a>Konfigurieren von freigegebenen Speicher mit NFS
 
@@ -391,4 +399,3 @@ Zu diesem Zeitpunkt sind beide SQL Server-Instanzen mit Datenbankdateien auf den
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Arbeiten Sie mit SQL Server freigegebene Datenträgercluster für Red Hat Enterprise Linux](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-

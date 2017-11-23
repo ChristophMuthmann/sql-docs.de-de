@@ -8,22 +8,20 @@ ms.service:
 ms.component: ruby
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 481061c2d37bd4b6c6cf0c5c131f2c8a24f3025f
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 445782c1958ee5344f64b365dd81725c5ac8e6f6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>Schritt 3: Machbarkeitsnachweis Herstellen einer Verbindung mit SQL mit Ruby
 
@@ -90,4 +88,3 @@ Zum Ausrichten von mit Microsoft SQL Server ["DateTime"](http://msdn.microsoft.c
     puts row  
     end  
 ```
-

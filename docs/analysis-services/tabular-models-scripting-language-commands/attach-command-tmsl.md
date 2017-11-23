@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7a12d148-eac9-4e6c-a222-1439e0817c64
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 995e77345c2770f59db620afb1ced2085eaeefa2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d19093c8030e9faf909168cd4707cf5b3e8759ef
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attach-command-tmsl"></a>Attach-Befehl (TMSL)
 
@@ -51,7 +50,7 @@ ms.lasthandoff: 09/01/2017
 |-|-|-|  
 |**Eigenschaft**|**Default**|**Description**|  
 |database|[Erforderlich]|Der Name des Datenbankobjekts angefügt werden.|  
-|Ordner|[Erforderlich]|Der Ordner, der die angefügte Datenbank enthält.|  
+|folder|[Erforderlich]|Der Ordner, der die angefügte Datenbank enthält.|  
 |Kennwort|Empty|Das Kennwort zum Verschlüsseln geheimer Schlüssel in die angefügte Datenbank verwendet werden soll.|  
 |readWriteMode|ReadWrite|Ein Enumerationswert, der Zugriffsmodi darf die Datenbank angibt.<br /><br /> **Enumerationswerte werden wie folgt aus:**<br /><br /> ReadWrite – ist Lese-/ Schreib-Zugriff zulässig.<br /><br /> ReadOnly – ist nur-Lese-Zugriff zulässig.<br /><br /> ReadOnlyExclusive – ist nur-Lese exklusiver Zugriff zulässig.|  
   
@@ -76,4 +75,3 @@ ms.lasthandoff: 09/01/2017
  [Anfügen und Trennen von Analysis Services-Datenbanken](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)  
   
   
-

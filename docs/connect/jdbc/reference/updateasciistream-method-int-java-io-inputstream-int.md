@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerResultSet.updateAsciiStream (int, java.io.InputStream.int)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerResultSet.updateAsciiStream (int, java.io.InputStream.int)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: d07944b8-7001-49b5-b3b3-0676f71e17cf
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 50427107f953ae175bacb595cada567a7fef3496
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e60544cf133d302d4b2ec329b7bc648d543035f2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="updateasciistream-method-int-javaioinputstream-int"></a>updateAsciiStream-Methode (int, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -75,4 +71,3 @@ public void updateAsciiStream(int index,
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
-

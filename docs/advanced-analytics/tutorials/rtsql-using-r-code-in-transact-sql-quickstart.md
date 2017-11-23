@@ -1,31 +1,26 @@
 ---
 title: Verwenden von R-Code in Transact-SQL (R in SQL-Schnellstart) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 08/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 4e6fe30d-a105-4d5b-bc05-5e5204753847
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: d0915986d39aa6fb376063bf6a2a31a5c5953aa9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c023af0a3a9b9c53cb2b6adf7298c18657a60803
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>Verwenden von R-Code in Transact-SQL (R in SQL-Schnellstart)
 
@@ -102,4 +97,3 @@ Lektion 3: [mit R-Funktionen mit SQL Server-Daten](rtsql-using-r-functions-with-
 Lektion 4: [aus einem Vorhersagemodell erstellen](rtsql-create-a-predictive-model-r.md)
 
 Lektion 5: [Vorhersagen und der Zeichnungsfläche aus Modell](rtsql-predict-and-plot-from-model.md)
-

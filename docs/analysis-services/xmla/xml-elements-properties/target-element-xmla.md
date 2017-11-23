@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Target Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Target Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.target
 - http://schemas.microsoft.com/analysisservices/2003/engine#Target
 - urn:schemas-microsoft-com:xml-analysis#Target
-helpviewer_keywords:
-- Target element
+helpviewer_keywords: Target element
 ms.assetid: 9a69a777-5f34-4e94-b470-6bab2a98df8b
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e21f5e040cd8414a6b4334cdd23170e3a10f9214
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6b9a30b4b16ee56479e594cf71c79e963e55ed77
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="target-element-xmla"></a>Target-Element (XMLA)
   Stellt die Zielpartition dar, die während der zusammengeführt werden eine [MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) Befehl.  
@@ -104,8 +99,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Source-Element &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)   
- [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Source-Element & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)   
+ [Datenbankeigenschaften & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

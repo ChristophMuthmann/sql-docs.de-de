@@ -11,20 +11,18 @@ ms.component: ado
 ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO, about
+helpviewer_keywords: ADO, about
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0d9da4cba3b4d90d82b3ac66ffec68a0e961ec40
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 28fa2c279cfd7964d8516514a3caed129e335692
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX Data Objects (ADO)
 
@@ -48,7 +46,7 @@ Jeder Abschnitt in diesem Artikel wird beschrieben, eine Komponente von ADO.
  Remote Data Service (RDS) ist ein Feature von ADO, mit dem Verschieben von Daten von einem Server in einer Clientanwendung oder die Webseite, die Daten auf dem Client und Updates in einem einzigen Roundtrip an den Server zurückgegeben.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="adox"></a>ADOX  
  Microsoft ActiveX Data Objects Extensions, Data Definition Language und Sicherheit (ADOX) ist eine Erweiterung der ADO-Objekten und das Programmiermodell. ADOX enthält Objekte für Schema-Erstellung und Änderung als auch Sicherheit. Da es sich um ein Objekt basierenden Ansatz zum schemabearbeitung handelt, können Sie Code schreiben, die für verschiedene Datenquellen unabhängig von sortierungsunterschieden in deren systemeigenen Syntax funktioniert.  
@@ -56,9 +54,9 @@ Jeder Abschnitt in diesem Artikel wird beschrieben, eine Komponente von ADO.
  ADOX ist eine Begleit-Bibliothek in der wichtigsten Objekte im ADO. Er stellt zusätzliche Objekte zum Erstellen, ändern und Löschen von Schemaobjekten, z. B. Tabellen und Prozeduren bereit. Darüber hinaus Sicherheitsobjekte, um Benutzer und Gruppen verwalten und zu erteilen und Widerrufen von Berechtigungen für Objekte.  
   
 ## <a name="documentation"></a>Dokumentation  
- [Entwurfsaspekte für ADO-Sicherheit](../ado/guide/ado-security-design-issues.md)  
+ [ADO Security Design Issues (Entwurfsaspekte für die ADO-Sicherheit)](../ado/guide/ado-security-design-issues.md)  
   
- [ADO Handbuch für Programmierer](../ado/guide/ado-programmer-s-guide.md)  
+ [ADO Programmer's Guide (Programmierhandbuch zu ADO)](../ado/guide/ado-programmer-s-guide.md)  
   
  Eine Einführung zur Verwendung von ADO, RDS, ADO MD und ADOX.  
   
@@ -72,6 +70,5 @@ Jeder Abschnitt in diesem Artikel wird beschrieben, eine Komponente von ADO.
  Kostenlos mit ADO Probleme helfen, versuchen Sie es bereitstellen für die öffentliche ADO-Newsgroup. Diese Newsgroup wird überwacht, indem Microsoft Product Support Services (PSS) Supportspezialisten, die ADO abdecken und andere erfahrenen Entwicklern von ADO.  
   
  Weitere Informationen zu Supportoptionen finden Sie auf der Website Microsoft Help und unterstützen.
-
 
 

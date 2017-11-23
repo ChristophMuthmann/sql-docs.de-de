@@ -5,29 +5,25 @@ ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to:
-- SQL Server
-dev_langs:
-- XML
+applies_to: SQL Server
+dev_langs: XML
 helpviewer_keywords:
 - XQuery, samples
 - sample applications [XQuery]
 ms.assetid: 2af66304-c021-427c-b3b3-e000ec0896cd
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 53a8258fcee8c415226c69b3504725fa89c40351
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f8d5b2892308e1e9c8b4085c9278b81139b210c9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="additional-sample-xqueries-against-the-xml-data-type"></a>Zusätzliches Beispiel für XQuery-Abfragen für den XML-Datentyp
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,4 +47,3 @@ ms.lasthandoff: 09/01/2017
  [XQuery Operators Against the xml Data Type (XQuery-Operatoren für den xml-Datentyp)](../xquery/xquery-operators-against-the-xml-data-type.md)  
   
   
-

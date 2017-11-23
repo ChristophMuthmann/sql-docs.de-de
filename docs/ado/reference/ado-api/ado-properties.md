@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - properties [ADO]
 - ADO properties
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 92fd58042fec8d001f539074db2d76d2d8243f6b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 686684010ff1e72f61b971c2504d5634ee28f269
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-properties"></a>Eigenschaften von ADO.NET
 |||  
@@ -96,7 +94,7 @@ ms.lasthandoff: 09/09/2017
 |[Status (ADO-Feld)](../../../ado/reference/ado-api/status-property-ado-field.md)|Gibt den Status einer **Feld** Objekt.|  
 |[Status (ADO-Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Gibt den Status des aktuellen Datensatzes im Hinblick darauf BatchUpdates oder andere Massenvorgänge.|  
 |[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)|Gibt an, in einer hierarchischen **Recordset** Objekt, gibt an, ob der Verweis auf die zugrunde liegenden untergeordneten Datensätze (d. h. die *Kapitel*) ändert, wenn die übergeordneten Zeile positionieren Änderungen.|  
-|[Streameigenschaft](../../../ado/reference/ado-api/stream-property.md)|Ruft ab oder legt einen OLE DB- **Stream** Objekt vom bzw. auf eine **ADOStreamConstruction** Objekt.|  
+|[Stream-Eigenschaft](../../../ado/reference/ado-api/stream-property.md)|Ruft ab oder legt einen OLE DB- **Stream** Objekt vom bzw. auf eine **ADOStreamConstruction** Objekt.|  
 |[Typ](../../../ado/reference/ado-api/type-property-ado.md)|Gibt an, die betriebliche Typ oder den Datentyp einer **Parameter**, **Feld**, oder **Eigenschaft** Objekt.|  
 |[Typ (ADO-Datenstrom)](../../../ado/reference/ado-api/type-property-ado-stream.md)|Gibt den Typ der Daten in der **Stream** (binär oder Text).|  
 |[OriginalValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|Gibt den aktuellen Wert in der Datenbank für eine **Feld** Objekt.|  
@@ -112,5 +110,4 @@ ms.lasthandoff: 09/09/2017
  [ADO-Ereignisse](../../../ado/reference/ado-api/ado-events.md)   
  [ADO-Methoden](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md)   
- [ADO-Objekte und Schnittstellen](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)
-
+ [ADO-Objekte und -Schnittstellen](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)

@@ -8,28 +8,25 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC driver for Oracle [ODBC], versions
+helpviewer_keywords: ODBC driver for Oracle [ODBC], versions
 ms.assetid: e4a8d9d7-8aba-48ab-8be6-1a6129adfb8f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 35ee21329cabca4e160112887f8c746ad8f44b82
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e3a8132d535b764818fb9dcab72b3cba8bb48154
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="driver-version-scheme"></a>Treiber Versionsschema
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
   
  Die folgende Tabelle enthält alle veröffentlichte Versionen von Microsoft ODBC Driver für Oracle.  
   
@@ -55,4 +52,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  2.573.2973 Version, die Benennungskonvention hat zu einer gewissen Verwirrung 2.573 ist eine frühere Version als 2,73, dass jeder Abschnitt der Buildnummer angesehen wird, einzeln geführt. Die Anzahl 573 übersteigt 73, daher ist es eine neuere Version. Außerdem gibt "2.5" Versionsnummer des Treibers an.
-

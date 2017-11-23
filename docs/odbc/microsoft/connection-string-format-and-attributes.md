@@ -8,29 +8,27 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - connection strings [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], connection strings
 ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 40b73ac727b682649f12ac6b70a0256681447622
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 79d5cabb884262b052429da53cf19c360048dd21
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connection-string-format-and-attributes"></a>Format der Verbindungszeichenfolge und Attribute
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
   
  Anstatt ein Dialogfeld zu verwenden, erfordern einige Anwendungen möglicherweise eine Verbindungszeichenfolge, die Datenquellen-Verbindungsinformationen angibt. Die Verbindungszeichenfolge besteht aus einer Anzahl von Attributen, die angeben, wie ein Treiber eine Verbindung mit einer Datenquelle herstellt. Ein Attribut identifiziert eine bestimmte Information, die der Treiber muss wissen, kann er die entsprechenden datenquellenverbindung treffen. Jeder Treiber möglicherweise einen anderen Satz von Attributen, aber das Verbindungszeichenfolgenformat ist immer gleich. Eine Verbindungszeichenfolge weist das folgende Format:  
   
@@ -70,4 +68,3 @@ ms.lasthandoff: 09/09/2017
 ```  
 "DSN=MyOtherDataSource;UID=/;PWD=;SERVER=MyOtherOracleServer"  
 ```
-

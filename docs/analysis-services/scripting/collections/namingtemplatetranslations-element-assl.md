@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- NamingTemplateTranslations Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: NamingTemplateTranslations Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- NamingTemplateTranslations
-helpviewer_keywords:
-- NamingTemplateTranslations element
+applies_to: SQL Server 2016 Preview
+f1_keywords: NamingTemplateTranslations
+helpviewer_keywords: NamingTemplateTranslations element
 ms.assetid: fde65778-1fa3-490a-9874-8bf2052ef25c
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c1747160a1360a0b3edbe989fc041791dd5ed7e4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ed377512b4d2e27e6f3ec0d85066ac72b9996499
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="namingtemplatetranslations-element-assl"></a>NamingTemplateTranslation-Element (ASSL)
   Stellt eine Auflistung lokalisierter Übersetzungen für das [NamingTemplate](../../../analysis-services/scripting/properties/namingtemplate-element-assl.md) -Element des übergeordneten Elements, [DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md), bereit.  
@@ -77,4 +71,3 @@ ms.lasthandoff: 09/01/2017
  [Schemaauflistungen &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

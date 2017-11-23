@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - diagnostic information [ODBC], sqlstates
 - SQLSTATE [ODBC]
 ms.assetid: f29fff2e-3d09-4a8c-a2f9-2059062cbebf
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1c45bbcbf03c4377e8ff162c3cd28ddf7128810b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0c99959fac35ac1cd312ab3d434f607c3f256dd8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlstates"></a>SQLSTATEs
 SQLSTATEs bieten ausführliche Informationen zur Ursache einer Warnung oder Fehler. Die SQLSTATEs in diesem Handbuch basiert auf solche, die in der ISO/IEF CLI-Spezifikation, obwohl diese SQLSTATEs, die mit Instant Messaging-Diensten beginnen für ODBC spezifisch sind.  
@@ -56,4 +54,3 @@ SQLSTATEs bieten ausführliche Informationen zur Ursache einer Warnung oder Fehl
  SQLSTATE HYC00 (optionales Feature nicht implementiert) ist besonders wichtig, weil es die einzige Möglichkeit besteht, in dem eine Anwendung zu bestimmen kann, ob ein Treiber ein bestimmtes Attribut der Anweisung oder Verbindung unterstützt.  
   
  Eine vollständige Liste der SQLSTATEs und welche Funktionen zurückzugeben, finden Sie unter [Anhang A: ODBC-Fehlercodes](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md). Eine ausführliche Erläuterung der Bedingungen, unter denen jede Funktion eine bestimmte SQLSTATE zurückgeben kann, finden Sie unter dieser Funktion.
-

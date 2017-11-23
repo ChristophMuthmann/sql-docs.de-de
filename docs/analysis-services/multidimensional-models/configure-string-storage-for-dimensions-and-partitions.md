@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b16b14e2fb2fd703905245f9e779fd83b7f35cb4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cd8d940628f843407c7c841b73b1322096fda615
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Konfigurieren des Zeichenfolgenspeichers für Dimensionen und Partitionen
   Sie haben die Möglichkeit, Zeichenfolgenspeicher neu zu konfigurieren, um Platz für sehr große Zeichenfolgen in Dimensionsattributen oder Partitionen schaffen, die die maximale Dateigröße von 4 GB für Zeichenfolgenspeicher überschreiten. Wenn die Dimensionen oder Partitionen Zeichenfolgenspeicher dieser Größe beinhalten, können Sie die Dateigrößeneinschränkung durch Ändern der Eigenschaft **StringStoresCompatibilityLevel** auf Ebene der Dimension oder Partition für lokale als auch für verknüpfte Objekte (lokal oder remote) umgehen.  
@@ -103,4 +102,3 @@ ms.lasthandoff: 09/01/2017
  [Speichern von Dimensionen](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   
   
-

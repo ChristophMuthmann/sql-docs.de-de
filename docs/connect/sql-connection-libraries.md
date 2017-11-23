@@ -13,12 +13,11 @@ ms.workload: data-management
 ms.topic: article
 ms.date: 08/09/2017
 ms.author: genemi
+ms.openlocfilehash: fceff06b2a35fbcc5621f08883ece0a126723f6b
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 191d24de433ed6b156c1c02730eb6304bf4d683e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Verbindung von Modulen für Microsoft SQL-Datenbanken
 
@@ -123,4 +122,3 @@ Die folgende Tabelle enthält Beispiele für Objekt Relational Mapping (ORM)-Fra
 
 [image-ref-163-buildanapp-webpages-first-page]: ./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png
 [image-ref-167-buildanapp-webpages-menu-java-ubuntu]: ./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-java-ubuntu-c31.png
-

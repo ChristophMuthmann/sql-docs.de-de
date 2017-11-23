@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - catalog functions [ODBC], result sets
 - functions [ODBC], catalog functions
 ms.assetid: 399e1a64-8766-4c44-81ff-445399b7a1de
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 46b8a628b6b8e6ad9a2eb3164e6935f3f3401ec8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 39d795314d2333c5d33cb55057b68e652082ae89
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-returned-by-catalog-functions"></a>Daten, die von Katalogfunktionen zurückgegeben werden.
 Jeder Katalogfunktion gibt die Daten als Resultset zurück. Dieses Resultset unterscheidet sich nicht von anderen Resultsets. Er wird in der Regel generiert durch eine vordefinierte parametrisiert **wählen** -Anweisung, die im Treiber fest programmiert oder in einer Prozedur in der Datenquelle gespeichert ist. Informationen zum Abrufen von Daten aus einem Resultset, finden Sie unter [Ergebnis festgelegt erstellt wurde?](../../../odbc/reference/develop-app/was-a-result-set-created.md).  
@@ -46,4 +44,3 @@ SELECT "Customer Name" FROM "Accounts Payable"
  Die Katalogfunktionen basieren auf einer SQL-ähnlichen Autorisierungsmodell, in dem basierend auf einem Benutzernamen und Kennwort eine Verbindung hergestellt, und nur Daten, die für die der Benutzer eine Berechtigung besitzt, werden zurückgegeben. Der Kennwortschutz für einzelne Dateien, die nicht in dieses Modell passt, wird die Treiber definiert.  
   
  Durch die Katalogfunktionen zurückgegebenen Resultsets können fast nie aktualisiert werden, und Anwendungen sollten nicht erwarten, damit die Struktur der Datenbank zu ändern, indem Sie Daten in diesen Resultsets geändert werden.
-

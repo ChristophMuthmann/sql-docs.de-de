@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- alignment issues [ODBC]
+helpviewer_keywords: alignment issues [ODBC]
 ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 506a496cb09e2a874e7d2dc19f06e250715db6f1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 412c04f8181997738bac1fc7b457c9ec0c3efcde
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="alignment"></a>Ausrichtung
 Die, die in einer ODBC-Anwendung Ausrichtungsprobleme unterscheiden sich in der Regel nicht als bei einer anderen Anwendung. Das heißt, haben die meisten ODBC-Anwendungen nur wenige oder gar keine Probleme mit der Ausrichtung. Die Nachteile für die fehlende Ausrichtung von Adressen hängt von der Hardware und Betriebssystem und als kleinere als eine leichte Leistungseinbuße oder als ein schwerwiegender Laufzeitfehler wie Haupt-sein. Aus diesem Grund sollten ODBC-Anwendungen und portable ODBC-Anwendungen insbesondere darauf achten, dass die Daten ordnungsgemäß auszurichten sein.  
@@ -55,4 +52,3 @@ Die, die in einer ODBC-Anwendung Ausrichtungsprobleme unterscheiden sich in der 
  ![Bindung nach größten Ausrichtungsgrenzen](../../../odbc/reference/develop-app/media/pr26.gif "pr26")  
   
  Obwohl diese Lösung größere Löcher verlässt, wird der Code für die Implementierung relativ einfach und schnell. In den meisten Fällen UTC-offsets dies den Nachteil, nicht verwendeten Arbeitsspeicher bezahlt. Ein Beispiel, das diese Methode verwendet, finden Sie unter [SQLBindCol verwenden](../../../odbc/reference/develop-app/using-sqlbindcol.md).
-

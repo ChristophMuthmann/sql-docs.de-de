@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CubePermissions Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CubePermissions Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- CubePermissions
-helpviewer_keywords:
-- CubePermissions element
+applies_to: SQL Server 2016 Preview
+f1_keywords: CubePermissions
+helpviewer_keywords: CubePermissions element
 ms.assetid: 75a3a0c2-e1d4-4896-b0f5-2ea9c769b927
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 87054c96716e44a9bd4c505dc22c872f70745dfe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0b2b01298fb0c7e9c24ae029d2675c26735d90d3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cubepermissions-element-assl"></a>CubePermissions-Element (ASSL)
   Enthält die Auflistung der Berechtigungen für eine [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) Element.  
@@ -76,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [Schemaauflistungen &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

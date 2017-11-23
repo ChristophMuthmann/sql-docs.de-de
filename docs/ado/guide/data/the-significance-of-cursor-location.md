@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - client-side cursors [ADO]
 - cursors [ADO], server-side
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 541b0195abbe4a37c3a2090add0b0cf5dbbeb568
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4dbeab2366d53499eaab2f21198ab4b7ebe6f570
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="the-significance-of-cursor-location"></a>Die Bedeutung der Cursorposition
 Jeder Cursor verwendet temporäre Ressourcen zum Speichern der Daten. Diese Ressourcen können Speicher, eine Auslagerungsdatei des Datenträgers, temporäre Datenträgerdateien oder sogar temporären Speicherplatz in der Datenbank sein. Der Cursor wird aufgerufen, eine *clientseitige* Cursor, wenn diese Ressourcen auf dem Clientcomputer gespeichert werden. Der Cursor wird aufgerufen, eine *serverseitige* Cursor, wenn diese Ressourcen auf dem Server gespeichert sind.  
@@ -46,4 +44,3 @@ Jeder Cursor verwendet temporäre Ressourcen zum Speichern der Daten. Diese Ress
  Allerdings ist es wichtig, die darauf hinweisen, dass ein serverseitiger Cursor ist, zumindest vorübergehend – für jeden aktiven Client wertvolle Serverressourcen belegt. Sie müssen entsprechend planen, um sicherzustellen, dass Ihre Serverhardware Verwalten aller die serverseitige Cursor von aktiven Clients angefordert wird. Darüber hinaus ein serverseitigen Cursor kann langsam sein, da sie nur Zugriff auf einzelne Zeilen enthält – kein Batch-Cursor vorhanden ist.  
   
  Serverseitige Cursor sind hilfreich, wenn einfügen, aktualisieren oder Löschen von Datensätzen. Mit serverseitiger Cursor haben Sie mehrere aktive Anweisungen über die gleiche Verbindung.
-

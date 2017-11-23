@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Measures Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Measures Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Measures
-helpviewer_keywords:
-- Measures element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Measures
+helpviewer_keywords: Measures element
 ms.assetid: d2107112-f620-4fd7-a05f-bb2606b4be18
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ccab4ed6802509d953819d7048418de8a6672f61
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 157f158ea9351f4ec5e27c65021c8c40b21de3d1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="measures-element-assl"></a>Measures-Element (ASSL)
   Enthält die Auflistung der [Measure](../../../analysis-services/scripting/objects/measure-element-assl.md) Elemente mit dem übergeordneten Element verknüpft sind.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Schemaauflistungen &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

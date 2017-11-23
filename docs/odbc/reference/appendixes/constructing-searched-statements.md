@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - cursor library [ODBC], searched statements
 - SQL statements [ODBC], searched statements
 ms.assetid: e429254c-c43f-4fbf-98b2-5f1ed53501ff
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7b989547fa41d187ac33efe65050bc09add3a0f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 90464acc97539252ae24aa6f959c16f58465d715
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="constructing-searched-statements"></a>Erstellen von komplexen Anweisungen
 > [!IMPORTANT]  
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/09/2017
 -   **Geben Sie die Länge ungleich Null-Puffer für die C-Binärdaten.** Die Cursorbibliothek ordnet Länge Puffer in der Cache nur, wenn die *StrLen_or_IndPtr* Argument in **SQLBindCol** ungleich Null ist. Wenn die *TargetType* -Argument SQL_C_BINARY ist, die Cursorbibliothek muss die Länge der binären Daten zum Erstellen eine **, in dem** Klausel aus den Daten. Es ist kein Puffer Länge für eine SQL_C_BINARY-Spalte und die Anwendung ruft **SQLGetData** versucht hat, führen Sie ein positioniertes Update oder delete-Anweisung, die Cursor-Bibliothek gibt SQL_ERROR und SQLSTATE SL014 (eine positionierte Anforderung ausgestellt wurde, und nicht alle Spaltenfelder Anzahl gepuffert wurden).  
   
 -   **Geben Sie die Länge ungleich Null-Puffer für die Spalten NULL-Werte zulässt.** Die Cursorbibliothek ordnet Länge Puffer in der Cache nur, wenn die *StrLen_or_IndPtr* Argument in **SQLBindCol** ungleich Null ist. Da SQL_NULL_DATA im Puffer Länge gespeichert wird, die Cursorbibliothek wird vorausgesetzt, jede Spalte, für welche keine, die Länge Puffer angegeben wird, NULL-Werte zulässt. Wenn keine Spalte mit der Länge für eine NULL zulassende Spalte angegeben wird, erstellt die Cursorbibliothek eine **, in dem** -Klausel, die den Wert für die Spalte verwendet. Diese Klausel wird die Zeile nicht richtig identifiziert.
-

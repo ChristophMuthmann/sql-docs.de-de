@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DatabasePermissions Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DatabasePermissions Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DatabasePermissions
-helpviewer_keywords:
-- DatabasePermissions element
+applies_to: SQL Server 2016 Preview
+f1_keywords: DatabasePermissions
+helpviewer_keywords: DatabasePermissions element
 ms.assetid: c4ce0da3-f7ba-4f11-8cd8-236c32992aaf
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c8d6bce09b1a9fa48161f746557f0b1cb94416b1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2fe4aeb00e4daed509e4a1d5daa24f65c7ac2b26
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="databasepermissions-element-assl"></a>DatabasePermissions-Element (ASSL)
   Enthält die Auflistung der [DatabasePermission](../../../analysis-services/scripting/objects/databasepermission-element-assl.md) Elemente, die zu einem [Datenbank](../../../analysis-services/scripting/objects/database-element-assl.md) Element.  
@@ -76,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [Schemaauflistungen &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

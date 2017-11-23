@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CaseCubeDimensionID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CaseCubeDimensionID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- CaseCubeDimensionID
-helpviewer_keywords:
-- CaseCubeDimensionID element
+applies_to: SQL Server 2016 Preview
+f1_keywords: CaseCubeDimensionID
+helpviewer_keywords: CaseCubeDimensionID element
 ms.assetid: 96720e13-7f9b-4768-ad4b-4def40758707
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 836a033ae3ac296e3138f018900253718dc7c3bc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5e0cfaad40688d61d52c792e1e970bdaf072ba5b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="casecubedimensionid-element-assl"></a>CaseCubeDimensionID-Element (ASSL)
   Enthält den Bezeichner (ID) der Cubedimension, der die Data Mining-Dimension mit der Measuregruppe verknüpft.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

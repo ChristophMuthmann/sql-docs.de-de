@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4743d48d09625dd4ce1840b61abb58497057789d
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 80944d5ebb5ec8c9f6ba98d9c520b10a0c4ade30
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-adaptive-buffering"></a>Verwenden der adaptiven Pufferung
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -36,7 +34,7 @@ ms.lasthandoff: 09/09/2017
   
 -   **Die Abfrage erzeugt ein sehr umfangreiches Resultset:** Ausführen der Anwendung kann eine SELECT-Anweisung, die mehr Zeilen zurückgibt als die Anwendung im Arbeitsspeicher gespeichert werden können. In früheren Versionen musste die Anwendung einen Servercursor verwenden, um eine OutOfMemoryError zu vermeiden. Die adaptive Pufferung stellt die Möglichkeit bereit, ein beliebig großes Resultset mit Vorwärtscursor und schreibgeschützt zu übergeben, ohne dass ein Servercursor erforderlich ist.  
   
--   **Die Abfrage erzeugt sehr große**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**Spalten oder**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**OUT-Parameterwerte:**  Abrufen der Anwendung kann einen einzelnen Wert (Spalte oder OUT-Parameter), ist zu groß, um vollständig im Anwendungsspeicher gespeichert.         Adaptive Pufferung kann die Clientanwendung solche Werte als einen Stream abrufen, indem Sie mit der GetAsciiStream, die GetBinaryStream oder die GetCharacterStream-Methoden. Die Anwendung ruft den Wert aus der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] wie aus dem Stream gelesen.  
+-   **Die Abfrage erzeugt sehr große**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**Spalten oder**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**OUT-Parameterwerte:**  Abrufen der Anwendung kann einen einzelnen Wert (Spalte oder OUT-Parameter), ist zu groß, um vollständig im Anwendungsspeicher gespeichert. Adaptive Pufferung kann die Clientanwendung solche Werte als einen Stream abrufen, indem Sie mit der GetAsciiStream, die GetBinaryStream oder die GetCharacterStream-Methoden. Die Anwendung ruft den Wert aus der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] wie aus dem Stream gelesen.  
   
 > [!NOTE]  
 >  Mit adaptiver Pufferung puffert der JDBC-Treiber nur die benötigte Datenmenge. Der Treiber stellt keine öffentliche Methode zum Steuern oder Beschränken der Puffergröße bereit.  
@@ -99,4 +97,3 @@ ms.lasthandoff: 09/09/2017
  [Verbessern von Leistung und Zuverlässigkeit mit dem JDBC-Treiber](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   
-

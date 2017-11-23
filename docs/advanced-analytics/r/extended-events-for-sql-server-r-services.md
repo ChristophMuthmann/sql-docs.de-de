@@ -1,27 +1,24 @@
 ---
 title: Erweiterte Ereignisse bei SQL Server R Services | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 11/29/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4e90e057-aacb-4adc-8da6-64861f4e87df
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0b4d65cd2812fea830bbdd7127b8f47569979e94
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 814dacf2dbc7f3be05ad163c8c7162acf53fe404
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="extended-events-for-sql-server-r-services"></a>Erweiterte Ereignisse bei SQL Server R Services
   [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] bietet eine Reihe von erweiterten Ereignissen, die bei der Problembehandlung von Vorgängen im Zusammenhang mit [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] oder R-Aufträgen an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet werden können.  
@@ -184,4 +181,3 @@ select o.name as event_name, o.description
  [Managing and Monitoring R Solutions (Verwalten und Überwachen von R-Lösungen)](../../advanced-analytics/r-services/managing-and-monitoring-r-solutions.md)  
   
   
-

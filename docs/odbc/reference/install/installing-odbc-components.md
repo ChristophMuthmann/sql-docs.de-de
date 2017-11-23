@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - installing ODBC components [ODBC], about installing
 - ODBC [ODBC], component installation
 ms.assetid: b7e48e9c-8912-4003-b4ef-30aa44de06a7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 26592f5fdc0be2a5e5b9dc35945d07ec2ef3c101
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 383a3a17abb969a57eb2de68b304da4b1bde9a6b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="installing-odbc-components"></a>Installieren von ODBC-Komponenten
 > [!NOTE]  
@@ -53,4 +51,3 @@ ms.lasthandoff: 09/09/2017
 -   [Installationskomponenten](../../../odbc/reference/install/installation-components.md)  
   
 -   [Zählen der Verwendung](../../../odbc/reference/install/usage-counting.md)
-

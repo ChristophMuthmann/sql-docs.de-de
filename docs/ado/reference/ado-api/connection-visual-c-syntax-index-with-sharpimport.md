@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-dev_langs:
-- C++
-helpviewer_keywords:
-- 'Connection collection [ADO], Visual C++ syntax index with #import'
+dev_langs: C++
+helpviewer_keywords: 'Connection collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: 03f47eda-840d-4cab-83d9-ccddd873f342
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e903b3090119134ea2010b8edfdcd449d18b8907
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5bf3620d3fa893aa31a38f61a20c47db50498881
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connection-visual-c-syntax-index-with-import"></a>Verbindung (Visual C++-Syntax Index mit #import)
 ## <a name="methods"></a>Methoden  
@@ -96,5 +92,4 @@ __declspec(property(get=GetState)) long State;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
-
+ [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

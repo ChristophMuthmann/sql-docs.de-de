@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - compiling embedded SQL programs [ODBC]
 - embedded SQL [ODBC]
 ms.assetid: 9e94146a-5b80-4a01-b586-1e03ff05b9ac
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 996e0cc19a0828fe7ca7a7ba1bd1a95402ebbe81
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b4914a0f7c426f8409c53835e84ff26cecca94ba
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="compiling-an-embedded-sql-program"></a>Kompilieren eines eingebetteten SQL-Programms
 Da eine embedded SQL-Programm eine Mischung aus SQL- und Host-sprachanweisungen enthält, kann es direkt an einen Compiler der Hostsprache übermittelt werden. Stattdessen wird er durch den Upgradevorgang kompiliert. Obwohl dabei aus einem Produkt zu einem anderen Produkt im Detail variiert, die Schritte sind ungefähr gleich für alle Produkte.  
@@ -50,4 +48,3 @@ Da eine embedded SQL-Programm eine Mischung aus SQL- und Host-sprachanweisungen 
 5.  Das Datenbank-Anforderung-Modul generiert, die für den vorkompilierten wird mit einem Hilfsprogramm der speziellen Bindung gesendet werden. Dieses Dienstprogramm überprüft die SQL-Anweisungen, analysiert, überprüft hat, und optimiert werden und anschließend ein Plans für die for each-Anweisung erzeugt. Das Ergebnis ist eine kombinierte Zugriffsplan für das gesamte Programm, das eine ausführbare Version der eingebetteten SQL-Anweisungen darstellt. Das Hilfsprogramm Bindung speichert den Plan in der Datenbank, in der Regel der Name des Anwendungsprogramms, die sie verwenden zuweisen. Gibt an, ob dieser Schritt zur Kompilierzeit oder zur Laufzeit stattfindet, hängt das DBMS ab.  
   
  Beachten Sie, die die Schritten zum Kompilieren eines eingebetteten SQL-Programms lehnt sich eng mit den zuvor beschriebenen Schritten korrelieren [eine SQL-Anweisung verarbeiten](../../odbc/reference/processing-a-sql-statement.md). Insbesondere Beachten Sie, dass der vorkompilierten die SQL-Anweisungen aus den Sprachcode der Host trennt, und die Bindung Hilfsprogramm analysiert und überprüft die SQL-Anweisungen und erstellt die Zugriffspläne. Im DBMS-Systeme, in denen Schritt 5 zum Zeitpunkt der Kompilierung stattfindet, werden die ersten vier Schritte eine SQL-Anweisung zu verarbeiten zum Zeitpunkt der Kompilierung während der letzte Schritt (Ausführung) zur Laufzeit stattfindet. Dies hat die Auswirkungen bei der Ausführung von Abfragen in solchen DBMS sehr schnell.
-

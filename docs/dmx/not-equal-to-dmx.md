@@ -13,23 +13,21 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - not equal operator (<>)
 - <> (not equal to operator)
 ms.assetid: df0e7901-9e31-452a-af14-471f5130c09d
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: df165d14cacfde172fa8d242c3fae7add30f87db
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 162c2e98b21a799288a4acc30817730f017f06fd
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ltgt-not-equal-to-dmx"></a>&lt;&gt;(Ungleich) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,4 +54,3 @@ DMX_Expression <> DMX_Expression
  [Operatoren &#40; DMX &#41;](../dmx/operators-dmx.md)  
   
   
-

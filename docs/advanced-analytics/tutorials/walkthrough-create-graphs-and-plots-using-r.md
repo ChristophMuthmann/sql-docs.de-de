@@ -1,35 +1,29 @@
 ---
 title: Erstellen von Diagrammen und Darstellungen, die mithilfe von SQL und R (Exemplarische Vorgehensweise) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/03/2017
+ms.date: 11/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 5f70f0a6-fd4a-410f-9f44-1605503f77ec
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: e720755146e8d29ddf06ccdecdd2d744c1885013
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e81411ea3e59276739425e2527aca93ea1ebb0ad
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Erstellen von Diagrammen und Darstellungen, die mithilfe von SQL und R (Exemplarische Vorgehensweise)
 
-In diesem Teil der exemplarischen Vorgehensweise erfahren Sie Verfahren zum Generieren von Zeichnungen und Zuordnungen, die mithilfe von R mit SQL Server-Daten. Sie erstellen ein einfaches Histogramm, um etwas zu üben und anschließend eine komplexere Kartenzeichnung zu erstellen.
+In diesem Teil der exemplarischen Vorgehensweise lernen Sie die Techniken zum Generieren von Zeichnungen und Zuordnungen, die mithilfe von R mit SQL Server-Daten. Erstellen Sie ein einfache Histogramm angezeigt, und um, vertraut zu machen und entwickeln Sie eine komplexere Zuordnung zeichnen.
 
 ### <a name="create-a-histogram"></a>Erstellt ein Histogramm
 
@@ -56,8 +50,6 @@ In diesem Teil der exemplarischen Vorgehensweise erfahren Sie Verfahren zum Gene
 ### <a name="create-a-map-plot"></a>Erstellen Sie eine Zuordnung Zeichnungsfläche
 
 In der Regel Sperren Datenbankserver Zugang zum Internet. Dies kann unpraktisch sein, wenn R-Pakete zu verwenden, die müssen zum Herunterladen von Zuordnungen oder anderen Bildern um Darstellungen zu generieren. Allerdings ist dieses Problem zu umgehen, die Sie hilfreich finden könnten bei der Entwicklung eigener Anwendungen. Im Grunde die Darstellung der Karte auf dem Client zu generieren und dann Überlagerung auf der Karte die Punkte, die als Attribute in der SQL Server-Tabelle gespeichert sind.
-
-Wir müssen es in dieser Lektion erläutert.
 
 1. Definieren Sie die Funktion, die die R-Plots-Objekt erstellt. Die benutzerdefinierte Funktion *MapPlot* erstellt ein Punktdiagramm, die die Taxi pickup-Speicherorte verwendet und zeichnet die Anzahl der Schlittenfahrten, die von jedem Standort gestartet. Die Funktion verwendet die Pakete **ggplot2** und  **ggmap** , die bereits installiert und geladen sein sollten.
 
@@ -117,4 +109,3 @@ Wir müssen es in dieser Lektion erläutert.
 ## <a name="previous-lesson"></a>Vorherige Lektion
 
 [Zusammenfassen von Daten mithilfe von R](/walkthrough-view-and-summarize-data-using-r.md)
-

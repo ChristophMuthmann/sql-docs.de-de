@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Trend Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Trend Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Trend
-helpviewer_keywords:
-- Trend element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Trend
+helpviewer_keywords: Trend element
 ms.assetid: d1d92d10-a181-4402-aacb-c0b2adc96bba
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6a784b274e5971f0846c0ee3739cce75e70b2276
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5bf676f870a6ee482ec02bb14bf716b748dfe597
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="trend-element-assl"></a>Trend-Element (ASSL)
   Enthält einen Multidimensional Expressions (MDX)-Ausdruck, der für einen Trendindikator zurückgibt eine [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) Element.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

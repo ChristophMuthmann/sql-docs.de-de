@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Attribute Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Attribute Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Attribute
-helpviewer_keywords:
-- Attribute element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Attribute
+helpviewer_keywords: Attribute element
 ms.assetid: 079ec9f8-a314-4e3c-821a-b42c65cc7363
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6a4586966f0718bc3108bf000356901982308bbd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: df044cf0b878fb6d9bd39ba4d6abe610cfc5d497
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-element-assl"></a>Attribute-Element (ASSL)
   Enthält die Beschreibung eines Attributs.  
@@ -98,4 +92,3 @@ ms.lasthandoff: 09/01/2017
  [Objekte &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

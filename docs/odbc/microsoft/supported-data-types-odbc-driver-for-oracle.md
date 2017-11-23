@@ -8,29 +8,27 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], data types
 ms.assetid: 21d5f8d9-a3aa-4aa4-bc37-ff8bc90c0870
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7ea00ac6b2e95b2bd21453312a42ef2769b20d9c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: af54700b80c2e2e2187f0c0b0ca5fe3a1137e374
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="supported-data-types-odbc-driver-for-oracle"></a>Unterstützte Datentypen (ODBC-Treiber für Oracle)
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
   
  Der ODBC-Treiber für Oracle unterstützt alle Datentypen von Oracle 7.3; Es ist jedoch nicht keines der neuen 8-Datentypen, die hier aufgeführten unterstützen.  
   
@@ -38,21 +36,20 @@ ms.lasthandoff: 09/09/2017
 |---------------|----------------|-------------|  
 |BFILE|–|Nicht unterstützt|  
 |BLOB|–|Nicht unterstützt|  
-|CHAR|Unterstützt|Unterstützt|  
+|CHAR|Supported|Supported|  
 |CLOB|–|Nicht unterstützt|  
-|DATE|Unterstützt|Unterstützt|  
-|GLEITKOMMAZAHL|Unterstützt|Unterstützt|  
-|INTEGER|Unterstützt|Unterstützt|  
-|LONG|Unterstützt|Unterstützt|  
-|LONG RAW|Unterstützt|Unterstützt|  
+|DATE|Supported|Supported|  
+|GLEITKOMMAZAHL|Supported|Supported|  
+|INTEGER|Supported|Supported|  
+|LONG|Supported|Supported|  
+|LONG RAW|Supported|Supported|  
 |NCHAR|–|Nicht unterstützt|  
 |NCLOB|–|Nicht unterstützt|  
-|NUMBER|Unterstützt|Unterstützt|  
+|NUMBER|Supported|Supported|  
 |NVARCHAR2|–|Nicht unterstützt|  
-|RAW|Unterstützt|Unterstützt|  
-|VARCHAR2|Unterstützt|Unterstützt|  
-|MLSLABEL|Wird nicht unterstützt.|Wird nicht unterstützt.|  
+|RAW|Supported|Supported|  
+|VARCHAR2|Supported|Supported|  
+|MLSLABEL|Nicht unterstützt.|Nicht unterstützt.|  
   
 > [!NOTE]  
 >  Weitere Informationen zu die zulässige Größe der Spalte VARCHAR, finden Sie unter [VARCHAR Spaltengröße](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md) in diesem Handbuch.
-

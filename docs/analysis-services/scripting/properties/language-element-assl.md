@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Language Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Language Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- LANGUAGE
-helpviewer_keywords:
-- Language element
+applies_to: SQL Server 2016 Preview
+f1_keywords: LANGUAGE
+helpviewer_keywords: Language element
 ms.assetid: 4d745d23-6b1f-4a85-97cf-d034cc41356f
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ac4036b7ce722d716b82550b77a8778c31c766b7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9d20a2cd26f92bcfba3978289b7bae07deedc11f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="language-element-assl"></a>Language-Element (ASSL)
   Enthält den Sprachenbezeichner des übergeordneten Elements.  
@@ -80,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

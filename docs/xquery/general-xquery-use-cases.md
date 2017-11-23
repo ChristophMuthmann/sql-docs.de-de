@@ -5,28 +5,23 @@ ms.date: 03/07/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to:
-- SQL Server
-dev_langs:
-- XML
-helpviewer_keywords:
-- XQuery, general usage cases
+applies_to: SQL Server
+dev_langs: XML
+helpviewer_keywords: XQuery, general usage cases
 ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4bef0c77a25ac81adb5a758ecb96e1d02a1177ea
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3a6f20206d0679adeffdc2b504ccef1d010c957b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="general-xquery-use-cases"></a>Allgemeine Einsatzgebiete für XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -356,4 +351,3 @@ AND     CatalogDescription.exist('declare namespace p1="http://schemas.microsoft
  [XQuery-Sprachreferenz &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   
-

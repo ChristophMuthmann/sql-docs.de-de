@@ -8,28 +8,25 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLConfigDataSource function [ODBC], ODBC driver for Oracle
+helpviewer_keywords: SQLConfigDataSource function [ODBC], ODBC driver for Oracle
 ms.assetid: e535d1ef-aff9-4ae7-a3ed-ef4ca2584289
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 17d7cfdacb91ff3963a1bf77343c171e8f9d3fec
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aa32db53ef43da7f01200dcf057f9855a4f5707e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>Verwenden von SQLConfigDatasource mit dem ODBC-Treiber für Oracle
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
   
  Die folgende Tabelle enthält gültige **SQLConfigDatasource** Einstellungen für den Microsoft ODBC-Treiber für Oracle, Version 1.0 (Msorcl10.dll) und der Microsoft ODBC-Treiber für Oracle, Version 2.0 (Msorcl32.dll).  
   
@@ -61,4 +58,3 @@ ms.lasthandoff: 09/09/2017
 |TranslationOption|33|""|EINE/N|Translation-Option.|  
 |TxnCap|2|""|EINE/N|Die Transaktion kann. Bei 0, gibt der Treiber an, dass Transaktionen nicht unterstützt wird. Bei 1, meldet der Treiber an, dass es sich bei der Durchführung von Transaktionen kann.|  
 |UID|30|""|EINE/N|Name des Benutzers.|
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- LineSeparatorsEnum
-helpviewer_keywords:
-- LineSeparatorsEnum enumeration [ADO]
+f1_keywords: LineSeparatorsEnum
+helpviewer_keywords: LineSeparatorsEnum enumeration [ADO]
 ms.assetid: 0440b793-99c7-49a2-b3e2-ec5b1a7e3e60
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 094b09ad55dff9ac876b1939ccc148a9f75dd800
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ebab43836ed3e933bfcee9fd75804ab7c6f2360b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lineseparatorsenum"></a>LineSeparatorsEnum
 Gibt an, das als Zeilentrennzeichen in Text verwendete Zeichen [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekte.  
@@ -43,5 +39,4 @@ Gibt an, das als Zeilentrennzeichen in Text verwendete Zeichen [Stream](../../..
  Diese Konstanten keine ADO/WFC-Entsprechungen.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Zeilentrennzeichen-Eigenschaft (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)
-
+ [LineSeparator-Eigenschaft (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)

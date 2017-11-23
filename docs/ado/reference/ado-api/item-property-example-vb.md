@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Item property [ADO], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: Item property [ADO], Visual Basic example
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1788c7111c4ccfd5320190ef2fa0ff2de9cb0a75
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 29b1a91501507ed6f755c71bf567cdff7d021ed1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="item-property-example-vb"></a>Beispiel für Element-Eigenschaft (VB)
 In diesem Beispiel wird veranschaulicht, wie die [Element](../../../ado/reference/ado-api/item-property-ado.md) Eigenschaft greift auf die Member einer Auflistung. Im Beispiel wird die ***Autoren*** Tabelle mit der ***Pubs*** Datenbank mit einem parametrisierten Befehl.  
@@ -148,4 +144,3 @@ End Sub
  [Item-Eigenschaft (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   
  [Parameters-Auflistung (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

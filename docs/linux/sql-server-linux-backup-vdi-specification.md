@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.workload: Inactive
+ms.openlocfilehash: a57fee5d37032e54ac13f57ee3cb7d9a20fad6c5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b0fec674c130732a159598797ce332070dd6242e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server auf Linux VDI-Client-SDK-Spezifikation
 
@@ -200,7 +199,7 @@ Wenn diese Routine blockieren muss, warten Sie einen Befehl, wird der Thread in 
 | |**pCmd** |Dies ist die Adresse eines Befehls, der zuvor von ClientVirtualDevice::GetCommand zurückgegeben wird.
 | |**completionCode** |Dies ist ein Statuscode "", der den Abschlussstatus angibt. Dieser Parameter muss für alle Befehle zurückgegeben werden. Der zurückgegebene Code sollte an den ausgeführten Befehl geeignet sein. ERROR_SUCCESS wird in allen Fällen verwendet, um einem erfolgreich ausgeführten Befehl zu kennzeichnen. Die vollständige Liste der möglichen Fehlercodes, finden Sie in der Datei vdierror.h. Eine Liste der typische Statuscodes für jeden Befehl wird in "Befehle" weiter unten in diesem Dokument.
 | |**bytesTransferred** |Dies ist die Anzahl der erfolgreich übertragenen Bytes. Dies wird nur für die Datenübertragung zurückgegeben, Befehle lesen und schreiben.
-| |**position** |Dies ist eine Antwort auf die GetPosition-Befehl.
+| |**Position** |Dies ist eine Antwort auf die GetPosition-Befehl.
         
 | Rückgabewerte | Argument | Erklärung
 | ----- | ----- | ------ |
@@ -330,6 +329,5 @@ Weitere Informationen finden Sie unter "Nicht ordnungsgemäße Beendigung" weite
 | |**VD_E_INVALID** |Die PpBuffer ist ein ungültiges Handle.
 
 **"Hinweise"** muss darauf geachtet werden auf die Handles ordnungsgemäß zu kommunizieren. Ziehpunkte werden für einen einzelnen virtuellen Gerät Satz lokal. Die Partner-Prozesse, die Freigabe ein Handle müssen diesen Puffer sicherstellen, dass die Handles, nur innerhalb des Bereichs des virtuellen Geräts verwendet werden aus dem Puffer ursprünglich abgerufen wurde festgelegt.
-
 
 

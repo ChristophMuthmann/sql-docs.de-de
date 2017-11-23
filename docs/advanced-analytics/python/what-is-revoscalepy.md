@@ -5,19 +5,17 @@ ms.date: 10/05/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.openlocfilehash: 65a9924c70cdcdc86ce855b62caa23d19b72dc6d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: e7135947e2a8ed23b960575cae0689a77bcdd97d
-ms.contentlocale: de-de
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="introducing-revoscalepy"></a>Einführung in revoscalepy
 
@@ -125,7 +123,7 @@ Sie können Code ein ausführen **Revoscalepy** Funktionen entweder lokal oder i
 
 Wenn lokal ausgeführt wird, Sie in der Regel ein Python-Skript ausführen, über die Befehlszeile oder aus einer Entwicklungsumgebung Python und geben Sie einen SQL Server-computekontext mithilfe eines der der **Revoscalepy** Funktionen. Sie können die remote-computekontext für den gesamten Code oder für einzelne Funktionen verwenden. Sie möchten z. B. Auslagern modelltrainings zum Server, der die neuesten Daten verwenden und Verschieben von Daten zu vermeiden.
 
-Wenn Sie ein vollständiges Python-Skript in der gespeicherten Prozedur platzieren möchten [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), es wird empfohlen, die als einzelne Funktion den Code so umschreiben, die Eingaben und Ausgaben klar definiert wurde. Eingaben und Ausgaben muss **Pandas** Datenrahmen. Nachdem dies geschehen ist, können Sie rufen Sie die gespeicherte Prozedur von jedem beliebigen Client, der T-SQL unterstützt, einfach SQL-Abfragen als Eingaben übergeben und die Ergebnisse in SQL-Tabellen speichern. Ein Beispiel finden Sie unter [In-Database Python-Analyse für Entwickler L](../tutorials/sqldev-in-database-python-for-sql-developers.md).
+Wenn Sie ein vollständiges Python-Skript in der gespeicherten Prozedur platzieren möchten [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), es wird empfohlen, die als einzelne Funktion den Code so umschreiben, die Eingaben und Ausgaben klar definiert wurde. Eingaben und Ausgaben muss **Pandas** Datenrahmen. Nachdem dies geschehen ist, können Sie rufen Sie die gespeicherte Prozedur von jedem beliebigen Client, der T-SQL unterstützt, einfach SQL-Abfragen als Eingaben übergeben und die Ergebnisse in SQL-Tabellen speichern. Ein Beispiel finden Sie unter [In-Database Python-Analyse für SQL-Entwickler](../tutorials/sqldev-in-database-python-for-sql-developers.md).
 
 ### <a name="using-remote-compute-contexts"></a>Verwenden remote rechenkontexte
 

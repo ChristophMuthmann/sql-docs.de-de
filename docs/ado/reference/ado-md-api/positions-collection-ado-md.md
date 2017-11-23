@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - Axis::Positions
 - Cell::Positions
 - Positions
-helpviewer_keywords:
-- Positions collection [ADO MD]
+helpviewer_keywords: Positions collection [ADO MD]
 ms.assetid: 5b9e7545-cf30-464d-80ef-5c99c8306bab
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e812608f75e885ce933c0aaf252b50e1c9735dcc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 934b68032c6bede8499d331e869edceff958f7f4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="positions-collection-ado-md"></a>Positionen-Auflistung (ADO MD)
 Enthält die [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) Objekte, die einen Punkt auf einer Achse zu definieren.  
@@ -53,4 +50,3 @@ Enthält die [Position](../../../ado/reference/ado-md-api/position-object-ado-md
  [Achsenobjekt (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
  [Cell-Objekt (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [Position-Objekt (ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)
-

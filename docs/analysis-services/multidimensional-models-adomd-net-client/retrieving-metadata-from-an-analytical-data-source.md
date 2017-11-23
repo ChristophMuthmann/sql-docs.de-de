@@ -13,23 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - metadata [ADOMD.NET]
 - retrieving metadata
 ms.assetid: 00043ebd-7164-4ceb-b945-6e44378ea00a
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c7c280b4b4a996d68bb403ea6210322604452e5d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 595b68b37eacf09f6cb4d327190f012207eb4286
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="retrieving-metadata-from-an-analytical-data-source"></a>Abrufen von Metadaten aus einer analytischen Datenquelle
   Metadaten sind wichtig für Anwendungen, die analytische Daten abrufen und damit arbeiten. Beim Abrufen von Daten aus einer relationalen Datenquelle ist die Dimensionalität dieser Daten selbst bei geschachtelten Datasets vorhersehbar. Resultsets aus einer relationalen Datenbank haben meist eine zweidimensionale oder skalare Struktur. Aus analytischen Datenquellen abgerufene Daten können jedoch eine variable Dimensionalität aufweisen und möglicherweise entlang tiefer Hierarchien organisiert sein.  
@@ -50,7 +48,7 @@ ms.lasthandoff: 09/01/2017
   
 |GUID (in Schemarowsets verwendet)|XMLA-Name (in Schemarowsets verwendet)|ADOMD.NET-Objektmodell|  
 |-------------------------------------|------------------------------------------|----------------------------|  
-|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdSchemaGuid.Actions>|[MDSCHEMA_ACTIONS-Rowsets](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-actions-rowset.md)||  
+|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdSchemaGuid.Actions>|[MDSCHEMA_ACTIONS-Rowset](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-actions-rowset.md)||  
 |<xref:Microsoft.AnalysisServices.AdomdClient.AdomdSchemaGuid.Catalogs>|[DBSCHEMA_CATALOGS-Rowset](../../analysis-services/schema-rowsets/ole-db/dbschema-catalogs-rowset.md)||  
 |<xref:Microsoft.AnalysisServices.AdomdClient.AdomdSchemaGuid.Columns>|[DBSCHEMA_COLUMNS-Rowset](../../analysis-services/schema-rowsets/ole-db/dbschema-columns-rowset.md)||  
 |<xref:Microsoft.AnalysisServices.AdomdClient.AdomdSchemaGuid.Connections>|**DISCOVER_CONNECTIONS**||  
@@ -112,4 +110,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services-Schemarowsets](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   
-

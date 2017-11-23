@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Sort property [ADO], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: Sort property [ADO], Visual Basic example
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 653f50c01ba6850da1984b5c3bb307ce2580adcd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 04432fa17ae9f8073dfaa7060a2d32035b4897dc
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sort-property-example-vb"></a>Beispiel für Sortieren-Eigenschaft (VB)
 Dieses Beispiel verwendet die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) des Objekts [sortieren](../../../ado/reference/ado-api/sort-property.md) Eigenschaft, um die Zeilen der neu anordnen eine **Recordset** abgeleitet wurde. die ***Autoren*** Tabelle die ***Pubs*** Datenbank. Eine sekundäre Dienstprogrammroutine gibt jede Zeile aus.  
@@ -120,4 +116,3 @@ Attribute VB_Name = "Sort"
 ## <a name="see-also"></a>Siehe auch  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Sort-Eigenschaft](../../../ado/reference/ado-api/sort-property.md)
-

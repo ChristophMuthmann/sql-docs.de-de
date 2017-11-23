@@ -18,17 +18,16 @@ helpviewer_keywords:
 - MDX [Analysis Services], statements
 - MDX [Analysis Services], functions
 ms.assetid: 308bc0b3-4fd6-4435-972b-5e40d9e3c99b
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2fc0cbe76eff75b9735e32c879d20bf70c16005f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3568e7cb1d769bd12c1217a1b5a0111ac4619341
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="supported-mdx-mdx"></a>Unterstütztes MDX (MDX)
   Die folgenden Anweisungen und Funktionen werden in MDX-Skripts (Multidimensional Expressions) unterstützt:  
@@ -71,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [Grundlegendes MDX-Skript &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
   
   
-

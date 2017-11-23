@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Catalog::raw_Create
 - _Catalog::Create
-helpviewer_keywords:
-- Create method [ADOX]
+helpviewer_keywords: Create method [ADOX]
 ms.assetid: 64f5c21c-b581-42d8-bdc7-c4f1bebaf105
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8b31df006624acdfd66a55c467be5a59dfc6afd1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0bfad8159575c9439846ed2cf407e1b6e407418c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-method-adox"></a>Create-Methode (ADOX)
 Wird einen neuen Katalog erstellt.  
@@ -56,4 +53,3 @@ Catalog.Create ConnectString
 ## <a name="see-also"></a>Siehe auch  
  [Create-Methode-Beispiel (VB)](../../../ado/reference/adox-api/create-method-example-vb.md)   
  [ActiveConnection-Eigenschaft (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)
-

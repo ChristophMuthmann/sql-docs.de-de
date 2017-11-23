@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9c7e0a6e50df2e448d63be99d4aefe9bea9e3e5b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b19bd52df094e13cadb042208cc42fb8da1a418c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-interface-reference-db2tosql"></a>Referenz zur Benutzeroberfläche (DB2ToSQL)
 Dieser Abschnitt enthält Hilfethemen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for DB2.  
@@ -39,7 +37,7 @@ Die folgende Tabelle enthält die SSMA-Dialogfelder:
 |[Herstellen einer Verbindung mit DB2-Datenbank &#40; DB2ToSQL &#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|Verwenden der **Herstellen einer Verbindung mit DB2** Dialogfeld Verbindung mit der DB2-Datenbank, die Sie migrieren möchten.|  
 |[Verbinden Sie mit SQLServer &#40; DB2ToSQL &#41;](../../ssma/db2/connect-to-sql-server-db2tosql.md)|Verwenden der **Herstellen einer Verbindung mit SQL Server** im Dialogfeld für die Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , die Sie migrieren möchten.|  
 |[Migrationsbericht Daten &#40; DB2ToSQL &#41;](../../ssma/db2/data-migration-report-db2tosql.md)|Zeigt die Ergebnisse der Migration von Daten aus DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
-|[Einstellungen für die Migration von Daten](http://msdn.microsoft.com/en-us/573e673e-a194-4cb2-9aba-aaac6e1a225c)|Verwenden der **erweiterte Daten Migrationseinstellungen** Registerkarte benutzerdefinierte Abfragen für die Datenmigration zu schreiben.|  
+|[Data Migration Settings (Einstellungen für die Datenmigration)](http://msdn.microsoft.com/en-us/573e673e-a194-4cb2-9aba-aaac6e1a225c)|Verwenden der **erweiterte Daten Migrationseinstellungen** Registerkarte benutzerdefinierte Abfragen für die Datenmigration zu schreiben.|  
 |[Bearbeiten Sie die Typzuordnung &#40; DB2ToSQL &#41;](../../ssma/db2/edit-type-mapping-db2tosql.md)|Verwenden der **neue Typzuordnung** oder **Typzuordnung bearbeiten** Dialogfelder zum Erstellen oder ändern die Zuordnung von Datentypen zwischen den Quell-und Zieldatenbanken und Datenbankobjekte.|  
 |[Globale Einstellungen &#40; -Editor &#41; &#40; DB2ToSQL &#41;](../../ssma/db2/global-settings-editor-db2tosql.md)|Verwenden Sie die Seite des Editors für die **globale Einstellungen** Dialogfeld zum Code-Editor-Optionen konfigurieren.|  
 |[Globale Einstellungen &#40; Dialogfelder &#41; &#40; DB2ToSQL &#41;](../../ssma/db2/global-settings-dialogs-db2tosql.md)|Mithilfe der Dialogfelder Seite der **globale Einstellungen** Dialogfeld zum Konfigurieren von Standard-Dialogfeld und Einstellungen für die Warnung.|  
@@ -59,4 +57,3 @@ Die folgende Tabelle enthält die SSMA-Dialogfelder:
 [Erste Schritte mit SSMA für DB2 &#40; DB2ToSQL &#41;](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
 [Migrieren von DB2-Datenbanken zu SQLServer &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   
-

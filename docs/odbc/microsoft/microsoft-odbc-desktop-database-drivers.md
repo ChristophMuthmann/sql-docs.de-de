@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], about Jet-based ODBC drivers
 - desktop database drivers [ODBC], about desktop database drivers
 ms.assetid: 4e505c65-a8dd-4283-ae28-313d8a3aa046
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 38917d4e3a7cbd53be9a638d0d4dc3f5b2c2b179
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 939847cee3b9fb9f8051d98e5def53abf787f148
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Microsoft ODBC-Datenbanktreiber für Desktop
 ODBC ist eine API, die mit der Datenbank Zugriff Sprache Structured Query Language (SQL) verwendet. Sie können eine Vielzahl von Datenbank-Managementsystemen (DBMS) mit dem gleichen ODBC-Quellcode zugreifen, die direkt in Quellcode einer Anwendung integriert wird. Mit Microsoft ODBC-Desktop-Datenbanktreiber kann ein Benutzer einer ODBC-fähigen Anwendung zu öffnen, Abfrage, und Aktualisieren einer desktop-Datenbank über die ODBC-Schnittstelle.  
@@ -54,23 +52,23 @@ ODBC ist eine API, die mit der Datenbank Zugriff Sprache Structured Query Langua
   
  Dieser Abschnitt enthält die folgenden Themen.  
   
--   [Desktop-Treiber-Datenbankarchitektur](../../odbc/microsoft/desktop-database-drivers-architecture.md)  
+-   [Architektur der Desktop-Datenbanktreiber](../../odbc/microsoft/desktop-database-drivers-architecture.md)  
   
--   [Verlauf der Desktop-Datenbanktreiber](../../odbc/microsoft/history-of-the-desktop-database-drivers.md)  
+-   [Versionsgeschichte der Desktop-Datenbanktreiber](../../odbc/microsoft/history-of-the-desktop-database-drivers.md)  
   
 -   [Produktsupport](../../odbc/microsoft/product-support.md)  
   
--   [Implementieren von Desktop-Datenbanktreiber](../../odbc/microsoft/implementing-desktop-database-drivers.md)  
+-   [Implementieren der Desktop-Datenbanktreiber](../../odbc/microsoft/implementing-desktop-database-drivers.md)  
   
--   [Überlegungen zur Programmierung von Microsoft Access-Treiber](../../odbc/microsoft/microsoft-access-driver-programming-considerations.md)  
+-   [Überlegungen zur Programmierung von Microsoft Access-Treibern](../../odbc/microsoft/microsoft-access-driver-programming-considerations.md)  
   
--   [Überlegungen zur Programmierung von Microsoft Excel-Treiber](../../odbc/microsoft/microsoft-excel-driver-programming-considerations.md)  
+-   [Überlegungen zur Programmierung von Microsoft Excel-Treibern](../../odbc/microsoft/microsoft-excel-driver-programming-considerations.md)  
   
--   [Überlegungen zur Programmierung von Paradox-Treiber](../../odbc/microsoft/paradox-driver-programming-considerations.md)  
+-   [Überlegungen zur Programmierung von Paradox-Treibern](../../odbc/microsoft/paradox-driver-programming-considerations.md)  
   
--   [dBASE-Treiber Programmierung Überlegungen](../../odbc/microsoft/dbase-driver-programming-considerations.md)  
+-   [Überlegungen zur Programmierung von dBASE-Treibern](../../odbc/microsoft/dbase-driver-programming-considerations.md)  
   
--   [Überlegungen zur Programmierung von Text-Datei-Treiber](../../odbc/microsoft/text-file-driver-programming-considerations.md)  
+-   [Überlegungen zur Programmierung von Textdateitreibern](../../odbc/microsoft/text-file-driver-programming-considerations.md)  
   
 -   [Zusätzliche unterstützte ODBC-SQL-Grammatik](../../odbc/microsoft/additional-supported-odbc-sql-grammar.md)  
   
@@ -79,4 +77,3 @@ ODBC ist eine API, die mit der Datenbank Zugriff Sprache Structured Query Langua
 -   [ODBC-Fehler](../../odbc/microsoft/odbc-errors.md)  
   
 -   [Unterstützte ODBC-API-Funktionen](../../odbc/microsoft/supported-odbc-api-functions.md)
-

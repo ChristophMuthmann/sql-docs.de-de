@@ -1,54 +1,54 @@
 ---
-title: "SQL-Tools und Hilfsprogramme für SQLServer, Azure SQL-Datenbank und SQL Datawarehouse | Microsoft Docs"
+title: "SQL-Tools und Hilfsprogramme für SQLServer, Azure SQL-Datenbank und Azure SQL Datawarehouse | Microsoft Docs"
 ms.custom: 
-ms.date: 08/25/2017
+ms.date: 11/15/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 0ad2c6a833d064d7e70da281e1fdc36ae9c235e1
+ms.sourcegitcommit: c31ab3a0c47644560fd125decee4f8630da5ebdb
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: eccbe54c561e009858f6192126abc57e3399082c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/15/2017
 ---
-# <a name="tools-and-utilities-for-azure-sql-database-sql-server-and-sql-data-warehouse"></a>Tools und Hilfsprogramme für Azure SQL-Datenbank, SQL Server und SQL Data Warehouse
+# <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL-Tools und Hilfsprogramme für SQLServer, Azure SQL-Datenbank und SQL Azure Datawarehouse
 
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
 
-![](../includes/media/sql-database-tools.png)Dieser Artikel enthält eine Liste der verfügbaren Tools zum Arbeiten mit SQL Server, Azure SQL-Datenbank, SQL Data Warehouse und SQL Server-basierten Anwendungen. 
 
-Wenn Sie direkt im und Erstellen von Tabellen, Start springen Ausführen von Abfragen, im Grunde entwerfen und verwalten Sie die Datenbank aus, klicken Sie dann [ **SQL Server Management Studio (SSMS)** ](../ssms/download-sql-server-management-studio-ssms.md) ist sehr wahrscheinlich die Werkzeug. SSMS ist kostenlos und unter Windows ausgeführt wird.
+## <a name="tools-to-run-queries-and-manage-databases"></a>Tools zum Ausführen von Abfragen und Verwalten von Datenbanken  
 
-Wenn Sie Linux oder MacOS ausführen, versuchen Sie es [Visual Studio Code](https://code.visualstudio.com/) mit der [ **Mssql für Visual Studio Code** ](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) Erweiterung. Diese Tools sind für die Entwicklung von Microsoft SQL Server, Azure SQL-Datenbank und SQL Data Warehouse mit einem umfangreichen Satz an Funktionen und sind auch frei. Finden Sie unter [verwenden Visual Studio-Code zum Erstellen und Ausführen von Transact-SQL-Skripts für SQL Server](../linux/sql-server-linux-develop-use-vscode.md).
-
-
-## <a name="sql-tools"></a>SQL-tools 
- 
 | Tool | Description |
 |:--|:--|
-| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Verwenden Sie SQL Server Management Studio (SSMS), um Abfragen, Entwerfen und Verwalten Ihrer SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse. |
-| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Umwandeln von Visual Studio in einer leistungsstarken Entwicklungsumgebung für SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse. |
-| [Visual Studio-Code](https://code.visualstudio.com/)| Visual Studio-Code funktioniert unter Linux, Mac OS und Windows. Installieren Sie nach der Installation von Visual Studio-Code, der [Mssql-Erweiterung](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) zum Entwickeln von Microsoft SQL Server, Azure SQL-Datenbank und SQL Data Warehouse. |
+| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)]ist eine kostenlose, leicht-Tool zum Verwalten von Datenbanken, wo sie ausgeführt werden. Diese Preview-Version stellt die Datenbank-Verwaltungsfunktionen, z. B. eine erweiterte Transact-SQL-Editor und anpassbare Einblicke in den Betriebsstatus Ihrer Datenbanken bereit. **[!INCLUDE[name-sos](../includes/name-sos-short.md)]unter Windows, Mac OS und Linux ausgeführt wird**.|
+| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Verwenden Sie SQL Server Management Studio (SSMS), um Abfragen, Entwerfen und Verwalten Ihrer SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse. **SSMS unter Windows ausgeführt wird**.|
+| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Umwandeln von Visual Studio in einer leistungsstarken Entwicklungsumgebung für SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse. **SSDT unter Windows ausgeführt wird**.|
+| [Visual Studio-Code](https://code.visualstudio.com/)| Installieren Sie nach der Installation von Visual Studio-Code, der [Mssql-Erweiterung](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) zum Entwickeln von Microsoft SQL Server, Azure SQL-Datenbank und SQL Data Warehouse. **Visual Studio-Code ausgeführt wird, unter Windows, Mac OS und Linux**.|
+
+
+
+## <a name="additional-tools"></a>Zusätzliche tools
+
+| Tool | Description |
+|:--|:--|
 | [Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md) | Verwenden Sie SQL Server Configuration Manager, zum Konfigurieren von SQL Server-Dienste und Netzwerkkonnektivität.|
 | [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md) | Verwenden Sie SQL Server Migration Assistant zur Automatisierung der Datenbankmigration zu SQL Server aus Microsoft Access, DB2, MySQL, Oracle und Sybase.|
 | [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md) | Verwenden Sie die Distributed Replay-Funktion können Sie das Bewerten der Auswirkungen zukünftiger Upgrades von SQL Server. Verwenden des Distributed Replay auch Bewerten der Auswirkungen von Hardware- und Betriebssystemupgrades sowie SQL Server-Computer optimieren. |
 | [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | Die Ssbdiagnose (Hilfsprogramm) meldet Probleme in Service Broker-Konversationen oder die Konfiguration von Service Broker-Dienste. |
 
 
-## <a name="sql-command-prompt-utilities"></a>SQL-Eingabeaufforderungs-Hilfsprogramme
+## <a name="command-line-utilities"></a>Befehlszeilenhilfsprogramme
 
-  Eingabeaufforderungs-Hilfsprogramme versetzen Sie in die Lage, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Vorgänge einem Skript hinzuzufügen. Die folgende Tabelle enthält eine Liste der Eingabeaufforderung-Hilfsprogramme, die im Lieferumfang von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]enthalten sind.  
+  Befehlszeilen-Hilfsprogramme versetzen Sie in Skripts [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Vorgänge. Die folgende Tabelle enthält eine Liste der Eingabeaufforderung-Hilfsprogramme, die im Lieferumfang von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]enthalten sind.  
   
 |**Hilfsprogramm**|**Beschreibung**|**Installiert in**|  
 |-----------------|---------------------|----------------------|  
@@ -58,7 +58,7 @@ Wenn Sie Linux oder MacOS ausführen, versuchen Sie es [Visual Studio Code](http
 |[dtutil (Hilfsprogramm)](../integration-services/dtutil-utility.md)|Wird für die Verwaltung von SSIS-Paketen verwendet.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[Bereitstellen von Modelllösungen mit dem Bereitstellungshilfsprogramm](../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|Wird verwendet, um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekte für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Instanzen bereitzustellen.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\VShell\Common7\IDE|  
 |[MSSQL-Skripter (öffentliche Vorschau)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/17/try-new-sql-server-command-line-tools-to-generate-t-sql-scripts-and-monitor-dynamic-management-views/)|Zum Generieren von CREATE "und" Einfügen von T-SQL-Skripts für Datenbankobjekte in SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse verwendet.|Finden Sie in unserem [GitHub-Repository](https://github.com/Microsoft/sql-xplat-cli) für Download und Nutzungsinformationen.| 
-|[Osql (Hilfsprogramm)](../tools/osql-utility.md)|Ermöglicht es Ihnen, [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen, Systemprozeduren und Skriptdateien an der Eingabeaufforderung einzugeben.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
+|[osql (Hilfsprogramm)](../tools/osql-utility.md)|Ermöglicht es Ihnen, [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen, Systemprozeduren und Skriptdateien an der Eingabeaufforderung einzugeben.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[Profiler-Hilfsprogramm](../tools/profiler-utility.md)|Wird verwendet, um [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] von der Eingabeaufforderung zu starten.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[Hilfsprogramm RS.exe &#40;SSRS&#41;](../reporting-services/tools/rs-exe-utility-ssrs.md)|Wird verwendet, um Skripts für die Verwaltung von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtsservern auszuführen.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[rsconfig-Hilfsprogramm &#40;SSRS&#41;](../reporting-services/tools/rsconfig-utility-ssrs.md)|Wird zum Konfigurieren einer Berichtsserververbindung verwendet.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
@@ -82,6 +82,5 @@ Wenn Sie Linux oder MacOS ausführen, versuchen Sie es [Visual Studio Code](http
 |`monospace`|Beispielbefehle und Programmcode.|  
 |*Kursiv*|Vom Benutzer angegebene Parameter.|  
 |**Fett**|Befehle, Parameter und sonstige Syntaxelemente, die genau wie angezeigt eingegeben werden müssen.|  
-
 
 

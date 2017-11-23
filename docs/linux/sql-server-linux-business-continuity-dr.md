@@ -16,14 +16,12 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
 ms.workload: Inactive
+ms.openlocfilehash: c250ca5a16a20fca8a11f21a32c9722aad3dc35f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 2cdfda9e305b5a31a3c4303c9238901ff874020d
-ms.openlocfilehash: 257fd55b32fbd62c6bc380f973a1fedaf82ad63e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="business-continuity-and-database-recovery---sql-server-on-linux"></a>Business Continuity und Datenbank Wiederherstellung: SQL Server on Linux
 
 [!INCLUDE[HA-Story](../includes/sql-server-ha-story.md)]
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - errors [ADO], DataControl
 - DataControl errors [ADO]
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 54dcd3721781ccb2889d88c2545d8bb3630cb7bc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aa52b8ec38ce23c8916bb885714d45b0fe6c374e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="datacontrol-object-error-codes"></a>RDS-Fehlercodes
 Die folgende Tabelle enthält die [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Fehlercodes-Objekt. Die positive decimal Übersetzung der niedrigen zwei Bytes, die negative dezimale Übersetzung von der vollständigen Fehlercode und die hexadezimale Werte werden angezeigt.
@@ -55,5 +53,4 @@ Die folgende Tabelle enthält die [RDS. DataControl](../../../ado/reference/rds-
 |**IDS_URLMONNotFound**|4119-2146824169 0x800A1017|DataControl **URL** Eigenschaft erfordert die Systemdatei Urlmon.dll, die nicht gefunden werden kann.|
 
 ## <a name="see-also"></a>Siehe auch
- [RDS (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
-
+ [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)

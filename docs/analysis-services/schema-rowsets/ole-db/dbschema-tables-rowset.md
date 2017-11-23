@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DBSCHEMA_TABLES
+apiname: DBSCHEMA_TABLES
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DBSCHEMA_TABLES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DBSCHEMA_TABLES rowset
 ms.assetid: 14c16e6b-0aff-4ad1-b98f-cdb7df0f8d73
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 50ba3f0ac4c0dc0090df5fd3122dcff7e7e6923a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1bc193f33395521c62e1b5e998c2098721313d9b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbschematables-rowset"></a>DBSCHEMA_TABLES-Rowset
   Gibt die Measuregruppen und Dimensionen, die in als Tabellen verfügbar gemacht [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -45,10 +41,10 @@ ms.lasthandoff: 09/01/2017
 |**TABLE_SCHEMA**|**DBTYPE_WSTR**|255|Der Name des Cubes, zu dem dieses Objekt gehört.|  
 |**TABELLENNAME**|**DBTYPE_WSTR**|255|Der Name des Objekts, wenn **TABLE_TYPE** **TABLE**lautet.|  
 |**TABLE_TYPE**|**DBTYPE_WSTR**||Der Typ der Tabelle.<br /><br /> **TABLE** gibt an, dass das Objekt eine Measuregruppe ist.<br /><br /> **SYSTEM TABLE** gibt an, dass das Objekt eine Dimension ist.|  
-|**TABLE_GUID**|**DBTYPE_GUID**||Wird nicht unterstützt.|  
+|**TABLE_GUID**|**DBTYPE_GUID**||Nicht unterstützt.|  
 |**DESCRIPTION**|**DBTYPE_WSTR**||Eine lesbare Beschreibung des Objekts.|  
-|**TABLE_PROPID**|**DBTYPE_UI4**||Wird nicht unterstützt.|  
-|**DATE_CREATED**|**DBTYPE_DBTIMESTAMP**||Wird nicht unterstützt.|  
+|**TABLE_PROPID**|**DBTYPE_UI4**||Nicht unterstützt.|  
+|**DATE_CREATED**|**DBTYPE_DBTIMESTAMP**||Nicht unterstützt.|  
 |**DATE_MODIFIED**|**DBTYPE_DBTIMESTAMP**||Das Datum, an dem das Objekt zuletzt geändert wurde.|  
 |**TABLE_OLAP_TYPE**|**DBTYPE_WSTR**||Den OLAP-Typ des Objekts.<br /><br /> **MEASURE_GROUP** gibt an, dass das Objekt eine Measuregruppe ist.<br /><br /> **CUBE_DIMENSION** gibt an, dass das Objekt eine Dimension ist.|  
   
@@ -69,4 +65,3 @@ ms.lasthandoff: 09/01/2017
  [OLE DB-Schemarowsets](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   
-

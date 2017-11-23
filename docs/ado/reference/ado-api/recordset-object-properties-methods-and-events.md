@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Recordset object [ADO], members
+helpviewer_keywords: Recordset object [ADO], members
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6917146077060e7ca9d11aeb034479dff6901e32
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e2d35cf15880ae2dfa902acaccca04cb204a6d77
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>Recordset-Objekt Eigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften-Sammlungen  
@@ -75,11 +72,11 @@ ms.lasthandoff: 09/09/2017
   
  [Sort-Eigenschaft](../../../ado/reference/ado-api/sort-property.md)  
   
- [Source-Eigenschaft (ADO-Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)  
+ [Source-Eigenschaft (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)  
   
  [State-Eigenschaft](../../../ado/reference/ado-api/state-property-ado.md)  
   
- [Status-Eigenschaft (ADO-Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)  
+ [Status-Eigenschaft (ADO Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)  
   
  [StayInSync-Eigenschaft](../../../ado/reference/ado-api/stayinsync-property.md)  
   
@@ -98,9 +95,9 @@ ms.lasthandoff: 09/09/2017
   
  [CompareBookmarks-Methode](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)  
   
- [Delete-Methode (ADO-Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)  
+ [Delete-Methode (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)  
   
- [Find-Methode](../../../ado/reference/ado-api/find-method-ado.md)  
+ [Find (Methode)](../../../ado/reference/ado-api/find-method-ado.md)  
   
  [GetRows-Methode](../../../ado/reference/ado-api/getrows-method-ado.md)  
   
@@ -112,7 +109,7 @@ ms.lasthandoff: 09/09/2017
   
  [NextRecordset-Methode](../../../ado/reference/ado-api/nextrecordset-method-ado.md)  
   
- [Open-Methode (ADO-Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+ [Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
   
  [Requery-Methode](../../../ado/reference/ado-api/requery-method.md)  
   
@@ -122,7 +119,7 @@ ms.lasthandoff: 09/09/2017
   
  [Seek-Methode](../../../ado/reference/ado-api/seek-method.md)  
   
- [Unterstützt-Methode](../../../ado/reference/ado-api/supports-method.md)  
+ [Supports-Methode](../../../ado/reference/ado-api/supports-method.md)  
   
  [Update-Methode](../../../ado/reference/ado-api/update-method.md)  
   
@@ -145,4 +142,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - result sets [ODBC], block cursors
 - rowset status [ODBC]
 ms.assetid: 4b69f189-2722-4314-8a02-f4ffecd6dabd
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f4451ccb74ca19a02c352c2e7361d0ec8e84c87d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 34fe599aee975dc0c01fc1fbc36f1bed6cab6b6b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="row-status-array"></a>Zeilenstatusarray
 Zusätzlich zu den Daten **SQLFetch** und **SQLFetchScroll** kann ein Array, das den Status der einzelnen Zeilen im Rowset bietet zurückgeben. Dieses Array wird durch das SQL_ATTR_ROW_STATUS_PTR-Anweisungsattribut festgelegt. Dieses Array muss wird von der Anwendung zugeordnet und so viele Elemente wie vom Attribut SQL_ATTR_ROW_ARRAY_SIZE-Anweisung angegeben werden. Die vom festgelegten Werte im Array **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, und **SQLSetPos.** Die Werte beschreibt den Status der Zeile und gibt an, ob dieser Status seit dem letzten Abruf geändert hat.  
@@ -44,4 +42,3 @@ Zusätzlich zu den Daten **SQLFetch** und **SQLFetchScroll** kann ein Array, das
 |SQL_ROW_DELETED|Die Zeile wurde seit dem letzten Abruf wurde gelöscht.|  
 |SQL_ROW_ADDED|Die Zeile eingefügt wurde, indem **SQLBulkOperations**. Wenn die Zeile erneut abgerufen oder, durch aktualisiert wird **SQLSetPos**, ihr Status wird SQL_ROW_SUCCESS.<br /><br /> Dieser Wert ist nicht festgelegt, indem **SQLFetch** oder **SQLFetchScroll**.|  
 |SQL_ROW_NOROW|Das Rowset überlappt, das Ende des Resultsets und, dass, die auf dieses Element des Arrays Status Zeile zugestimmt haben, wurde keine Zeile zurückgegeben.|
-

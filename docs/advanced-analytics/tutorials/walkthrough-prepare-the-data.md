@@ -1,30 +1,26 @@
 ---
 title: Vorbereiten der Daten mithilfe von PowerShell (Exemplarische Vorgehensweise) | Microsoft Docs
 ms.custom: 
-ms.date: 07/26/2017
+ms.date: 11/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 65fd41d4-c94e-4929-a24a-20e792a86579
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 048419d5838a5e7f667f80ccd5fccb5dfa101d0f
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e1d85684da36ef69caf9dfa39f155a320def37b5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>Vorbereiten der Daten mithilfe von PowerShell (Exemplarische Vorgehensweise)
 
@@ -111,7 +107,7 @@ Es gibt viele verschiedene Arten, dass Sie Pakete auf SQL Server installieren k�
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - Dieses Beispiel verwendet die „grep“-Funktion in R, um den Vektor der verfügbaren Pfade zu durchsuchen und denjenigen in „Programme“ zu finden. Weitere Informationen finden Sie unter [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep).
+    - In diesem Beispiel verwendet die R-Grep-Funktion, um den Vektor der verfügbaren Pfade zu suchen, und suchen Sie den Pfad, der "Programme" enthält. Weitere Informationen finden Sie unter [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep).
 
     - Wenn Sie glauben, die Pakete sind bereits installiert dass, überprüfen Sie die Liste der installierten Pakete Treiberdienst `installed.packages()`.
 
@@ -129,7 +125,7 @@ Zusammen mit den Datendateien, die R-Skripts und die T-SQL-Skripts, der Download
 
 - Schreibt die Argumente in der R-Skriptdatei neu, um den von Ihnen angegebenen Datenbanknamen zu verwenden.
 
-Sie sollten dieses Skript ausführen, auf dem Computer, in dem Sie die Projektmappe erstellen: z. B. der Laptop, in dem Entwickeln und Testen von R-Code. Dieser Computer, den wir als Data Science-Client bezeichnen, muss in der Lage sein, eine Verbindung zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Computer mithilfe des Named Pipes-Protokolls herzustellen.
+Führen Sie dieses Skript auf dem Computer, in dem Sie die Projektmappe erstellen: z. B. der Laptop, in dem Entwickeln und Testen von R-Code. Dieser Computer, den wir als Data Science-Client bezeichnen, muss in der Lage sein, eine Verbindung zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Computer mithilfe des Named Pipes-Protokolls herzustellen.
 
 1. Öffnen Sie eine PowerShell-Befehlszeile **als Administrator**.
   
@@ -156,7 +152,7 @@ Sie sollten dieses Skript ausführen, auf dem Computer, in dem Sie die Projektma
       > [!WARNING]
       > Wenn Sie die Eingabeaufforderung im PowerShell-Skript verwenden, um Ihre Anmeldeinformationen angegeben haben, wird das Kennwort in der aktualisierten Skriptdatei im nur-Text geschrieben. Bearbeiten Sie die Datei sofort nach dem Erstellen der erforderlichen R-Objekte, um die Anmeldeinformationen zu entfernen.
       
-    **Pfad der CSV-Datei**: Geben Sie den vollständigen Pfad zur Datendatei an. Der Standard für Pfad und Dateiname ist `C:\tempR\nyctaxi1pct.csv1`.
+    **Pfad der CSV-Datei**: Geben Sie den vollständigen Pfad zur Datendatei an. Der Standard für Pfad und Dateiname ist `C:\tempR\nyctaxi1pct.csv`.
   
 4.  Drücken Sie die EINGABETASTE, um das Skript auszuführen.
 
@@ -260,7 +256,7 @@ Im folgenden Beispiel wird das Skript mit einer SQL-Anmeldung ausgeführt:
 
 Wenn die Datenbank auf eine vorhandene Tabelle mit dem gleichen Namen und das gleiche Schema enthält **Bcp** Fügt eine neue Kopie der Daten verwenden, anstatt die Überschreiben vorhandener Daten.
 
-Schneiden Sie alle vorhandenen Tabellen ab, ehe Sie das Skript erneut ausführen, um doppelte Daten zu vermeiden.
+Um doppelte Daten zu vermeiden, kürzen Sie vorhandenen Tabellen, bevor das Skript erneut ausführen.
 
 ## <a name="whats-included-in-the-sample"></a>Was ist im Beispiel enthalten.
 
@@ -274,7 +270,7 @@ Wenn Sie die Dateien aus dem GitHub-Repository herunterladen, erhalten Sie Folge
 
 ### <a name="bkmk_data"></a>Trainieren und Bewerten von Daten
 
-Die Daten stellen einen repräsentativen Querschnitt des Datasets New York City Taxi dar, das Datensätze von über 173 Millionen Fahrten aus dem Jahr 2013 enthält, einschließlich der Fahrpreise und Trinkgelder, die für jede Fahrt gezahlt wurden. Damit Sie mit den Daten einfacher arbeiten können, hat das Microsoft Data-Science-Team diese verkleinert, damit nur noch 1 % der Daten abgerufen werden.  Diese Daten wurden in einem öffentlichen Blob-Speichercontainer in Azure im CSV-Format freigegeben. Die Quelldaten ist eine unkomprimierte Datei mit einer Größe von nicht ganz 350 MB.
+Die Daten stellen einen repräsentativen Querschnitt des Datasets New York City Taxi dar, das Datensätze von über 173 Millionen Fahrten aus dem Jahr 2013 enthält, einschließlich der Fahrpreise und Trinkgelder, die für jede Fahrt gezahlt wurden. Damit Sie mit den Daten einfacher arbeiten können, hat das Microsoft Data-Science-Team diese verkleinert, damit nur noch 1 % der Daten abgerufen werden.  Diese Daten wurden in einem öffentlichen Blob-Speichercontainer in Azure im CSV-Format freigegeben. Die Quelldaten ist eine nicht komprimierte Datei, direkt unter 350 MB.
 
 + Öffentliche Dataset: [NYC Taxi und Limousine Kommission] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
@@ -294,7 +290,7 @@ Das PowerShell-Skript führt mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)]
 
 |Name der SQL-Skriptdatei|Description|
 |------------------------|----------------|
-|create-db-tb-upload-data.sql|Erstellt die Datenbank und zwei Tabellen:<br /><br /> *nyctaxi_sample*: Tabelle, in der die trainierten Daten gespeichert sind – ein 1 %-Beispiel des Datasets NYC Taxi. Ein gruppierter Columnstore-Index wird der Tabelle hinzugefügt, um die Speicher- und Abfrageleistung zu verbessern.<br /><br /> *nyc_taxi_models*: Eine leere Tabelle, die Sie später zum Speichern des trainierten Klassifizierungsmodells verwenden.|
+|create-db-tb-upload-data.sql|Erstellt die Datenbank und zwei Tabellen:<br /><br /> *nyctaxi_sample*: Tabelle, in der die trainierten Daten gespeichert sind – ein 1 %-Beispiel des Datasets NYC Taxi. Ein gruppierter Columnstore-Index wird der Tabelle hinzugefügt, um die Speicher- und Abfrageleistung zu verbessern.<br /><br /> *Nyc_taxi_models*: eine Tabelle zum Speichern von trainierten Modelle im binären Format verwendet.|
 |PredictTipBatchMode.sql|Erstellt eine gespeicherte Prozedur, die ein trainiertes Modell zum Vorhersagen der Bezeichnungen für neue Beobachtungen aufruft. Sie akzeptiert eine Abfrage als Eingabeparameter.|
 |PredictTipSingleMode.sql|Erstellt eine gespeicherte Prozedur, die ein trainiertes Klassifizierungsmodell zum Vorhersagen der Bezeichnungen für neue Beobachtungen aufruft. Variablen der neuen Beobachtungen werden als Inlineparameter übergeben.|
 |PersistModel.sql|Erstellt eine gespeicherte Prozedur, mit der die binäre Darstellung des Klassifizierungsmodells in eine Tabelle in der Datenbank gespeichert werden kann.|
@@ -314,5 +310,4 @@ Die T-SQL-Abfragen in dieser exemplarischen Vorgehensweise verwendet getestet wu
 
 [End-to-End Data sience-Vorgehensweise für R und SQL Server](/walkthrough-data-science-end-to-end-walkthrough.md)
 
-[Voraussetzungen für die Data sience-Vorgehensweise](walkthrough-prerequisites-for-data-science-walkthroughs.md)
-
+[Voraussetzungen für die exemplarische Vorgehensweise zu Data Science](walkthrough-prerequisites-for-data-science-walkthroughs.md)

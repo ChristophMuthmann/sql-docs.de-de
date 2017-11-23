@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -21,20 +20,18 @@ f1_keywords:
 - _Catalog::putref_ActiveConnection
 - _Catalog::ActiveConnection
 - _Catalog::GetActiveConnection
-helpviewer_keywords:
-- ActiveConnection property [ADOX]
+helpviewer_keywords: ActiveConnection property [ADOX]
 ms.assetid: 25fff69b-7556-4a28-b6f5-600a4bb0f607
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d0e3fe0c51bb9e21cdb4cf3ef27fee3785b871c5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3b827ec332b89767a030e1925320345a2b78baee
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="activeconnection-property-adox"></a>ActiveConnection-Eigenschaft (ADOX)
 Gibt an, das ADO [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt, mit dem die [Katalog](../../../ado/reference/adox-api/catalog-object-adox.md) gehört.  
@@ -61,4 +58,3 @@ Gibt an, das ADO [Verbindung](../../../ado/reference/ado-api/connection-object-a
  [Views-Auflistung, CommandText-Eigenschaft (VB)-Beispiel](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
  [Ansichten aktualisieren Methodenbeispiel (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
  [Create-Methode (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)
-

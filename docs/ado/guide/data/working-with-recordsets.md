@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Recordset object [ADO]
+helpviewer_keywords: Recordset object [ADO]
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cf54089c037d972649d3acc872a38eed21d02507
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 368e3b3a793bce6b6182ba262493d9a8ed1ac1bd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="working-with-recordsets"></a>Arbeiten mit Recordsets
 Die **Recordset** Objekt verfügt über integrierte Funktionen, mit denen Sie die Reihenfolge der Daten in das Resultset für die Suche nach einem bestimmten Datensatz basierend auf Kriterien, die Sie bereitstellen und sogar diese Suchvorgänge mithilfe von Indizes optimieren ändern können. Gibt an, ob diese Funktionen zur Verfügung stehen, hängt von den Anbieter sowie in einigen Fällen –, beispielsweise von der [Index](../../../ado/reference/ado-api/index-property.md) Eigenschaft – die Struktur der Datenquelle selbst.  
@@ -174,4 +171,3 @@ Loop
  Schließen die ursprüngliche **Recordset** seine Datenbankkopien wird nicht geschlossen, ebenso wie nicht schließen schließen eine Kopie der ursprünglichen oder keines der anderen Kopien.  
   
  Klonvorgänge können eine **Recordset** Objekt nur, wenn sie Lesezeichen unterstützt. Lesezeichenwerte sind austauschbar. d. h. ein Lesezeichenverweis von einem **Recordset** Objekt bezieht sich auf den gleichen Datensatz in einer seiner Klone.
-

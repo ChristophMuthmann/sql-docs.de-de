@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO, using with ADO MD
+helpviewer_keywords: ADO, using with ADO MD
 ms.assetid: cfae435e-2ac3-4312-8c1e-9ca4a74cd875
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e762bf200d81596f99cd20352f8da381bffe9255
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 38df55c27ced6e0a7b32c321e2b3968bedb73aa1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-ado-with-ado-md"></a>Verwenden von ADO mit ADO MD
 ADO und ADO MD sind verwandte aber separate Objektmodelle. ADO stellt Objekte für das Herstellen einer Verbindung mit Datenquellen, Ausführen von Befehlen, Abrufen von Tabellendaten und Schemametadaten in einem tabellarischen Format und Anzeigen von Anbieter-Fehlerinformationen bereit. ADO MD bietet Objekte zum Abrufen von mehrdimensionalen Daten und Anzeigen von Metadaten von mehrdimensionalen Schema.  
@@ -58,4 +55,3 @@ ADO und ADO MD sind verwandte aber separate Objektmodelle. ADO stellt Objekte f�
  [Übersicht über multidimensionale Schemas und Daten](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
  [Programmieren mit ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
  [Arbeiten mit mehrdimensionalen Daten](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
-

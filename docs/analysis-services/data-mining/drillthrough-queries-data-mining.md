@@ -18,17 +18,16 @@ helpviewer_keywords:
 - drillthrough [Analysis Services]
 - drillthrough [DMX]
 ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 41a3c89638b1fc9cc7e95fa13baeac93eb20c683
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1cb15acfcc31572a34c6bf2fe6c3ec75101a9fd0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="drillthrough-queries-data-mining"></a>Drillthroughabfragen (Data Mining)
   Mithilfe einer *Drillthroughabfrage* können Sie Details aus zugrunde liegenden Fällen oder Strukturdaten abrufen, indem Sie eine Anfrage an das Miningmodell senden. Ein Drillthrough ist hilfreich, wenn Sie die Fälle anzeigen möchten, die zum Trainieren des Modells verwendet wurden, und nicht die Fälle, die zum Testen des Modells verwendet wurden, oder wenn Sie zusätzliche Details aus den Falldaten einsehen möchten.  
@@ -112,4 +111,3 @@ ms.lasthandoff: 09/01/2017
  [Data Mining-Abfrage](../../analysis-services/data-mining/data-mining-queries.md)  
   
   
-

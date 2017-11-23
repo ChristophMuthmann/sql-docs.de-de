@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLGetStmtOption function [ODBC], Cursor Library
+helpviewer_keywords: SQLGetStmtOption function [ODBC], Cursor Library
 ms.assetid: 986170b3-fba8-4323-9224-60b381c7effb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 693de4693c883bf329c0da5cee941a95b0024955
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 17f6a57b37b95c3a295ffd3bb5270ae82e955aba
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetstmtoption-cursor-library"></a>SQLGetStmtOption (Cursor Library)
 > [!IMPORTANT]  
@@ -41,4 +38,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_CONCURRENCY|SQL_ROWSET_SIZE SETZEN|  
 |SQL_CURSOR_TYPE|SQL_SIMULATE_CURSOR|  
 |SQL_GET_BOOKMARK||
-

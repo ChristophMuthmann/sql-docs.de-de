@@ -1,27 +1,24 @@
 ---
 title: ADO-dynamische Property-Index | Microsoft Docs
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- dynamic properties [ADO], index
+helpviewer_keywords: dynamic properties [ADO], index
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f126cc040174725ded02bd320e54a76536c0d516
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="ado-dynamic-property-index"></a>ADO-dynamische Property-Index
 Datenanbieter, Dienstanbieter und Dienstkomponenten können dynamische Eigenschaften zum Hinzufügen der **Eigenschaften** Sammlungen von der geöffnete [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) und [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekte. Ein angegebenen Anbieter möglicherweise auch weitere Eigenschaften einfügen, wenn diese Objekte geöffnet werden. Einige dieser Eigenschaften sind aufgeführt, der [dynamische Eigenschaften der ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) Abschnitt. Weitere sind aufgeführt, unter bestimmten Anbieter in der [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md) Abschnitt.  

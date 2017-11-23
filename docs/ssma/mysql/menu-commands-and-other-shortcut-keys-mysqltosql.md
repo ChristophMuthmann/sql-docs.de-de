@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 040f770f568e7dacf3d378415f227742e70935f7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5f4342a5433c20c00075e3ec82fa82cd7a400529
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>Menübefehle und andere Tastenkombinationen (MySQLToSQL)
 Den folgenden Abschnitten werden die Tastenkombinationen für den Zugriff auf Menübefehle und andere Tastenkombinationen, die in verschiedenen Dialogfeldern von SSMA für MySQL-Anwendung verwendet.  
@@ -191,4 +189,3 @@ Um das Kontextmenü für das ausgewählte Objekt im Objekt-Explorer zugreifen zu
 ## <a name="see-also"></a>Siehe auch  
 [Tastenkombinationen &#40; MySQLToSQL &#41;](../../ssma/mysql/shortcut-keys-mysqltosql.md)  
   
-

@@ -5,22 +5,20 @@ ms.date: 07/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf6f3b7d-f9f9-4e45-b0d1-07850b53e0c5
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 536d493ba199ff4cdc808c5463cb260926f106f5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 161f42e2559725b41df605c1e1c2ca12acae9c97
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>Optimieren der Leistung für R in SQL Server
 
@@ -92,7 +90,7 @@ Konfiguration und Optimierung der Leistung benötigt, erstellen eine solide Grun
 
 + [Optimieren der Leistung für R in SQL Server - hardware](..\r\sql-server-configuration-r-services.md)
 
-    Bietet einen Leitfaden zum Konfigurieren der Hardware, [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] installiert ist, auf, und klicken Sie zum Konfigurieren von SQL Server-Instanz, um externe Skripts besser zu unterstützen. Dies ist besonders nützlich für **Datenbankadministratoren**.
+    Bietet einen Leitfaden zum Konfigurieren der Hardware, [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] installiert ist, auf, und klicken Sie zum Konfigurieren von SQL Server-Instanz, um externe Skripts besser zu unterstützen. Dies ist besonders nützlich für **Datenbankadministratoren**.
 
 + [Optimieren der Leistung für R in SQL Server - Code und die Optimierung](..\r\r-and-data-optimization-r-services.md)
 
@@ -104,4 +102,3 @@ Konfiguration und Optimierung der Leistung benötigt, erstellen eine solide Grun
 + [Optimieren der Leistung für R in SQL Server - Methoden und Ergebnisse](..\r\performance-case-study-r-services.md)
 
     Fasst Daten wurde verwendet, die zwei Fallstudien, wie die Leistung getestet wurde und wie die Optimierungen Ergebnisse auswirken.
-

@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- JScript
-helpviewer_keywords:
-- Recordset [ADO]
+dev_langs: JScript
+helpviewer_keywords: Recordset [ADO]
 ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f69cc6f994aa9caa79733a2b32fb11111e03ff29
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: edecd6bcaf8cb7547cf026f68edaf72767c57659
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="jscript-code-example-to-return-a-recordset"></a>JScript-Codebeispiel wird ein Recordset zurückgeben
 ## <a name="jscript-code-rsjs"></a>JScript-Code (rs.js)  
@@ -94,4 +90,3 @@ function alert(str)
 2.  Öffnen Sie ein Eingabeaufforderungsfenster und die cd in das Verzeichnis, in dem Sie die JScript-Datei (rs.js) gespeichert haben.  
   
 3.  Typ `CScript rs.js` von der Befehlszeile aus.
-

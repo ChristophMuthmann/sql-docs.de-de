@@ -17,17 +17,16 @@ helpviewer_keywords:
 - multidimensional data [Analysis Services], developer's guide
 - developer's guide [Analysis Services - multidimensional data]
 ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fb44b74ac82e369f6dbdd29d87bd085a35144d29
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4694fd3def6dea209929f99559fcc61fe833972a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-developer-documentation"></a>Entwicklerhandbuch (Analysis Services)
 In Analysis Services fast jedes Objekt und die Arbeitslast programmierbaren und häufig mehr als ein Ansatz zur Auswahl vorhanden ist.  Optionen umfassen das Schreiben von verwaltetem Code, Skript oder einen offenen Standards wie XMLA und MSOLAP verwenden, wenn Ihre Lösung nicht infrage mithilfe von .NET Framework.
@@ -85,4 +84,3 @@ Analysis Services bietet viele Methoden zum Anpassen einer Lösung mithilfe von 
 ## <a name="see-also"></a>Siehe auch
 [Technische Referenz &#40; SSAS &#41; ](../analysis-services/powershell/technical-reference-ssas.md) 
  [Abfrage- und Expression-Sprachreferenz &#40; Analysis Services &#41;](http://msdn.microsoft.com/library/gg492188.aspx)
-

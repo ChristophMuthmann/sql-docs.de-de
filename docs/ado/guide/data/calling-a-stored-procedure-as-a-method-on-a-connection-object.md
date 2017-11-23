@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - stored procedures [ADO]
 - commands [ADO]
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 09d72e54d02fc6d13b34532ef5b847fcdca44d79
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8d9ddfc9497f744e2904ae06fa32e93887ae5080
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Aufrufen einer gespeicherten Prozedur als Methode für ein Verbindungsobjekt
 Sie können eine gespeicherte Prozedur aufrufen, als wäre er einer nativen Methode zugeordneten öffnen **Verbindung** Objekt. Dies ist vergleichbar mit einen benannten Befehl aufrufen, auf die **Verbindung** Objekt.  
@@ -87,5 +85,4 @@ Set objComm = Nothing
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
-
+ [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

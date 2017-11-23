@@ -1,42 +1,40 @@
 ---
 title: Machine Learning-Komponenten ohne Internetzugang installieren | Microsoft Docs
 ms.custom: 
-ms.date: 10/0522/2017
-ms.prod: sql-server-2016
+ms.date: 11/30/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0a90c438-d78b-47be-ac05-479de64378b2
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 065f66ca4d1e94e021b1d65b379c4a79302b1066
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: f2b67ff49d5773890ff94f44eddeb01f2d5aaddf
-ms.contentlocale: de-de
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="installing-machine-learning-components-without-internet-access"></a>Machine Learning-Komponenten ohne Internetzugang installieren
 
-Da die R und Python-Komponenten, die mit SQL Server 2016 und SQL Server-2017 bereitgestellten open-Source sind, wird Microsoft R oder Python-Komponenten nicht standardmäßig installiert.
-
-Stattdessen geben Sie die zugehörigen Installationsprogramme und Pakete auf dem Microsoft Download Center und andere vertrauenswürdige Sites zur Vereinfachung gebündelt. Muss stimmen Sie die entsprechende Lizenz, und klicken Sie dann SQL Server-Setup installiert R oder Python-Komponenten, für Sie.
+Da die R und Python-Komponenten, die mit SQL Server 2016 und SQL Server-2017 bereitgestellten open-Source sind, wird Microsoft R oder Python-Komponenten nicht standardmäßig installiert. Stattdessen geben Sie die zugehörigen Installationsprogramme und Pakete auf dem Microsoft Download Center und andere vertrauenswürdige Sites zur Vereinfachung gebündelt. Muss stimmen Sie die entsprechende Lizenz, und klicken Sie dann SQL Server-Setup installiert R oder Python-Komponenten, für Sie.
 
 In diesem Thema Downloadpfade die für die Installationsprogramme und einen Überblick über den offline-Setupvorgang.
 
-## <a name="installation-process"></a>Installationsprozess
+## <a name="overview-of-the-offline-installation-process"></a>Übersicht über den Prozess offline-installation
 
 Setup der Computerkomponenten in SQL Server 2016 und SQL Server-2017 verwendet ist in der Regel eine Internetverbindung erforderlich. Wenn SQL Server-Setup ausgeführt wird, wenn Sie eine der Machine learning Optionen ausgewählt haben, überprüft Setup den Python oder R Installationsprogramme, als auch alle anderen erforderlichen Komponenten.
 
 + **Wenn der Computer eine Internetverbindung verfügt.**
 
-    SQL Server sucht und die Komponenten für die Sie herunterladen und dann während des Setups installiert. Sie müssen die Lizenzbedingungen separat für jede open-Source-Komponente (R oder Python) akzeptieren, die Sie installieren.
+    SQL Server sucht und die Komponenten für die Sie heruntergeladen und installiert sie während des Setups. Akzeptieren Sie die Lizenzbedingungen separat für jede open-Source-Komponente (R oder Python), die Sie installieren.
 
 + **Wenn der Computer keinen Zugriff auf das internet**
 
@@ -48,12 +46,21 @@ Setup der Computerkomponenten in SQL Server 2016 und SQL Server-2017 verwendet i
 
 ### <a name="step-1-obtain-additional-installers"></a>Schritt 1: Beziehen Sie zusätzliche Installationsprogramme
 
-Für **R** in SQL Server 2016 und SQL Server-2017, müssen Sie zwei unterschiedliche Installationsprogramme abgerufen. Der SQL Server-Setup-Assistent wird sichergestellt, dass sie in der richtigen Reihenfolge installiert werden.
+**Für R**
+
+Die Sprache "R" wird in SQL Server 2016 und SQL Server-2017 unterstützt. Zwei verschiedene Installationsprogramme sind erforderlich, für die open-Source und proprietäre Komponenten. Der SQL Server-Setup-Assistent wird sichergestellt, dass sie in der richtigen Reihenfolge installiert werden.
 
 + Installationsprogramme mit **SRO** Geben Sie den Namen der open-Source-Komponenten.
 + Installationsprogramme mit **SRS** im Namen enthalten Komponenten von Microsoft, einschließlich derjenigen für Datenbankintegration bereitgestellt.
 
-Für **Python** in SQL Server 2017 herunterladen, die einzelnen CAB-Datei und alle erforderlichen Komponenten.
+**Für Python**
+
+Die Sprache Python wird nur in SQL Server-2017 unterstützt. Es stehen zwei separate Installationsprogramme, die Sie herunterladen müssen.
+
++ Installationsprogramme mit **SPO** in den Namen für Microsoft Python öffnen, und geben Sie die open-Source-Komponenten.
++ Installationsprogramme mit **SPS** im Namen sind für Microsoft-Python-Server und Komponenten von Microsoft, einschließlich derjenigen für Datenbankintegration bereitgestellten enthalten.
+
+**Zum Herunterladen**
 
 1. Laden Sie die Installationsprogramme in der [Microsoft Download Center-Websites](#installerlocs) auf einem Computer mit Internetzugriff, und speichern Sie das Installationsprogramm, anstatt ihn ausführen.
 2. Kopieren Sie die Dateien des komponenteninstallationsprogramms (CAB-Datei) auf dem Computer, auf dem Sie Machine Learning-Komponenten installieren möchten.
@@ -119,10 +126,15 @@ Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink
 Öffnen Sie Microsoft-Python     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
 Microsoft-Python-Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 **SQL Server 2017 CU1** |
-Microsoft R Open     |Verwenden Sie prervious|
+Microsoft R Open     |Vorheriges verwenden|
 Microsoft R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
 Öffnen Sie Microsoft-Python     |Vorheriges verwenden |
 Microsoft-Python-Server    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
+**SQL Server 2017 CU2** |
+Microsoft R Open     |Vorheriges verwenden|
+Microsoft R Server      |Vorheriges verwenden|
+Öffnen Sie Microsoft-Python     |Vorheriges verwenden |
+Microsoft-Python-Server    |Vorheriges verwenden|
 
 ### <a name="bkmk_2016Installers"></a>Downloads für SQLServer 2016
 
@@ -189,7 +201,6 @@ Komponente  |Version
 [Microsoft Visual C++ 2013 Redistributable](https://go.microsoft.com/fwlink/?linkid=799853)     | 12.0.30501.0
 [Microsoft Visual C++ 2015 Redistributable](https://go.microsoft.com/fwlink/?linkid=828641)     | 14.0.23026.0
 
-
 ## <a name="modslocales"></a>Installieren für verschiedene Gebietsschemas
 
 Wenn Sie beim Herunterladen der. CAB-Dateien als Teil des SQL Server-Setup auf einem Computer mit Internetzugriff des Setup-Assistenten die lokale Sprache erkennt und automatisch geändert wird, die Sprache des Installationsprogramms.
@@ -204,7 +215,7 @@ Allerdings können abhängig von Ihrer Version von SQL Server, Sie müssen zusä
 
     > [!IMPORTANT]
     > Dieses Problem gilt nur für frühere Versionen und in späteren Versionen behoben wurde.
-    > Verwenden Sie nur diese problemumgehung auf, wenn das Installationsprogramm eine Meldung zurückgegeben, die richtige Sprache kann nicht installiert werden.
+    > **Verwenden Sie nur diese problemumgehung auf, wenn das Installationsprogramm eine Meldung zurückgegeben, die richtige Sprache kann nicht installiert werden.**
 
 + **Für SQLServer 2017**
 
@@ -220,14 +231,15 @@ Als Slipstream-Einrichtung wird die Möglichkeit bezeichnet, einen Patch oder ei
 
 + Domänenmodus *hinzufügen* diese Komponenten einer *vorhandenen* Installation, die aktualisierte Version der SQL Server-Installationsprogramm verwenden, und die entsprechende Version der zusätzlichen Komponenten aktualisiert. Wenn Sie angeben, dass die R-Funktion installiert werden, sucht das Installationsprogramm für die passende Version der Installationsprogramme für Machine learning-Komponenten.
 
-## <a name="command-line-arguments-for-setup"></a>Befehlszeilenargumente für setup
+## <a name="command-line-arguments-for-specifying-component-locations"></a>Befehlszeilenargumente für das Angeben von Positionen
 
-Wenn Sie eine unbeaufsichtigte Installation ausführen zu können, müssen Sie die folgenden Befehlszeilenargumente angeben. Allerdings müssen Sie keine zusätzliche Attribute zum Installieren zusätzlicher erforderlicher Komponenten festgelegt; Erforderliche Komponenten, z. B. .NET Core werden standardmäßig im Hintergrund installiert.
+Wenn Sie eine offline-Installation über die Befehlszeile durchführen zu können, müssen Sie angeben, die folgenden Befehlszeilenargumente zum Angeben des Speicherorts der Komponenten, die Sie zuvor heruntergeladen haben. Allerdings müssen Sie keine zusätzliche Attribute zum Installieren zusätzlicher erforderlicher Komponenten festgelegt; Erforderliche Komponenten, z. B. .NET Core werden standardmäßig im Hintergrund installiert.
 
 **Speicherort der Installationsprogramme**
 
 - `/UPDATESOURCE`um den Speicherort der lokalen Datei mit diesem SQL Server-Update-Installationsprogramm anzugeben
 - `/MRCACHEDIRECTORY`um den Ordner mit den R-Komponente CAB-Dateien anzugeben
+- `/MPYCACHEDIRECTORY`um den Ordner mit den Python-Komponente CAB-Dateien anzugeben
 
 **R-Komponenten in SQL Server 2016**
 
@@ -244,7 +256,7 @@ Wenn Sie eine unbeaufsichtigte Installation ausführen zu können, müssen Sie d
 
 - `/ADVANCEDANALYTICS`beim Abrufen der Datenbankmodul-Unterstützung für externe Skripts
 - `/SQL_INST_MPY`Verwenden von Python
-- `/IACCEPTPYTHONLICENSETERMS="True"`die separaten R Lizenzvertrag akzeptieren
+- `/IACCEPTPYTHONLICENSETERMS="True"`die separaten Python-Lizenzvertrag akzeptieren
 
 
 > [!NOTE]
@@ -255,4 +267,3 @@ Wenn Sie eine unbeaufsichtigte Installation ausführen zu können, müssen Sie d
 [Installieren von Microsoft R Server](https://docs.microsoft.com/r-server/install/r-server-install-windows)
 
 Dieser Artikel durch das Supportteam von R Services veranschaulicht, wie eine unbeaufsichtigte Installation oder Aktualisierung von R Services in SQL Server 2016 ausführen: [Bereitstellen von R Services auf Computern ohne Internetzugang](https://blogs.msdn.microsoft.com/sqlcat/2016/10/20/do-it-right-deploying-sql-server-r-services-on-computers-without-internet-access/).
-

@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Columns Comparison Settings
 - Selection of Affected Objects
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 8679e3f18c8352b1a10f110354af6dafc0c7e81c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 75fd62bd569709733c1915357057d9b8a88556e6
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Auswählen und Konfigurieren von betroffene Objekte (OracleToSQL)
 Auf dieser Seite können Sie Tabellen auswählen und Fremdschlüsseln, Änderungen in der verglichen werden sollen, wenn SSMA wird überprüft, die Ergebnisse der Ausführung für die Objekte, die in den vorherigen Schritt ausgewählt wurde ob. Darüber hinaus können Sie die Überprüfung der Parameter anpassen.  
@@ -55,7 +53,7 @@ Die Registerkarte "Tabelle" enthält die Rasteransicht der ausgewählten Tabelle
 ## <a name="sql"></a>Sql  
 Registerkarte "SQL" enthält die Tabelle"erstellen" SQL der ausgewählten Tabelle.  
   
-## <a name="data"></a>Daten  
+## <a name="data"></a>data  
 Registerkarte "Daten" zeigt die ausgewählte Tabelle vorhandenen Daten.  
   
 ## <a name="properties"></a>Eigenschaften  
@@ -119,4 +117,3 @@ Sie können diese SELECT-Anweisungen für die benutzerdefinierte Überprüfung b
 [Ausführen von Testfällen &#40; OracleToSQL &#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [Testen von migriert Datenbankobjekte &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
-

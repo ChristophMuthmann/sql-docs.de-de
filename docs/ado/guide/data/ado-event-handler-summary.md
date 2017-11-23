@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - events [ADO], about event handlers
 - event handlers [ADO]
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e7a241c21719e2181f8dbbce11742a273d8552d7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0cd8bf7593fb1e8c770edde83e697f5b5be1d1d3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO-Verbindung und Recordsetereignisse
 ADO-Objekten, die zwei Ereignisse auslösen können: der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt und die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt. Die **ConnectionEvent** Familie bezieht sich auf Vorgänge auf die **Verbindung** -Objekt, und die **RecordsetEvent** Familie bezieht sich auf Vorgänge auf die  **Recordset** Objekt.
@@ -54,4 +52,3 @@ ADO-Objekten, die zwei Ereignisse auslösen können: der [Verbindung](../../../a
 
 ## <a name="see-also"></a>Siehe auch
  [ADO-Ereignisinstanziierung von Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md) [ADO-Ereignisse](../../../ado/reference/ado-api/ado-events.md) [Ereignisparameter](../../../ado/guide/data/event-parameters.md) [Zusammenwirken der Ereignishandler](../../../ado/guide/data/how-event-handlers-work-together.md) [Ereignistypen](../../../ado/guide/data/types-of-events.md)
-

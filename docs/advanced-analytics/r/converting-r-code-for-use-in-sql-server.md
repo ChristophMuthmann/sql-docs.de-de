@@ -1,29 +1,25 @@
 ---
 title: "Konvertieren von R-Code für die Verwendung in R Services| Microsoft-Dokumentation"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 06/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- R
+dev_langs: R
 ms.assetid: 0b11ab52-b2f9-4a4f-b1ab-68ba09c8adcc
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d403b716d6be6c571f4de76a25ba3f6f7f5c4e8d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ed5f9052467492fe4bbbfb4ac0682c08a7ba8062
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="converting-r-code-for-use-in-r-services"></a>Konvertieren von R-Code für die Verwendung in R Services
 
@@ -113,4 +109,3 @@ Weitere Informationen finden Sie unter [R-Bibliotheken und Datentypen](../r/r-li
  + Vermeiden Sie die Installation von Paketen aus R-Code. Auf SQL Server sollten im Voraus Pakete installiert werden.
  
   Achten Sie darauf, dass Pakete in die Standardbibliothek von Machine Learning Services verwendete Paket zu installieren. Weitere Informationen finden Sie unter [R-Paketverwaltung für SQL Server](../r/r-package-management-for-sql-server-r-services.md)
-

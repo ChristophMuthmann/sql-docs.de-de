@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-dev_langs:
-- C++
-helpviewer_keywords:
-- RecordsetEvents collection [ADO]
+dev_langs: C++
+helpviewer_keywords: RecordsetEvents collection [ADO]
 ms.assetid: b7021f11-8242-4e9f-92e9-1a4472673fb1
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0673b99f120abf960b6ccf9e70120ae987b25c2f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5970d6b6b3bb4ed5cca023628e0f52f4dc09c082
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="recordsetevents-visual-c-syntax-index-with-import"></a>RecordsetEvents (Visual C++-Syntax Index mit #import)
 ## <a name="events"></a>Ereignisse  
@@ -74,4 +70,3 @@ HRESULT FetchProgress( long Progress, long MaxProgress,
 HRESULT FetchComplete( struct Error * pError, enum  
     EventStatusEnum *     adStatus, struct _Recordset * pRecordset );  
 ```
-

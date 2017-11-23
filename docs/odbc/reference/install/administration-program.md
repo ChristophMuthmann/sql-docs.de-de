@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - administration program [ODBC]
 - ODBC administrator [ODBC]
 ms.assetid: a6c8248a-7a01-42e7-aaed-99dc94d50028
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 53024c6d7ba7933ae6bcc425455b262b176fed80
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 476c4710a4265214235bdd7b80a330fad5b37f34
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="administration-program"></a>-Verwaltungsprogramm
 > [!NOTE]  
@@ -45,4 +43,3 @@ ms.lasthandoff: 09/09/2017
 -   **Hinzufügen, ändern oder Löschen von Datenquellen im Hintergrund.** Ruft die Administration **SQLConfigDataSource** in der DLL-Installer und übergibt es ein null-Fenster zu behandeln, den Namen einer Datenquelle hinzufügen, ändern oder löschen und eine Liste von Werten für die Registrierung. Der Installer DLL ruft **ConfigDSN** in der Treiber-Setup-DLL, tatsächlich hinzuzufügen, ändern oder löschen Sie die Datenquelle.  
   
 -   **Hinzufügen, ändern oder Löschen einer Standard-Datenquelle.** Die Standarddatenquelle ist identisch mit einer anderen Datenquelle, mit dem Unterschied, dass standardmäßig ist der Anzeigename. Es wird hinzugefügt, geändert oder gelöscht werden, auf die gleiche Weise wie jede andere Datenquelle.
-

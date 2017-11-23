@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- dimensions [Analysis Services], defining
+helpviewer_keywords: dimensions [Analysis Services], defining
 ms.assetid: fe84588b-66a3-4100-a1cf-59b21b7adf01
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3fb255e95232a290d01321f0e2e5b8d6f83eeced
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d57a877e5d332dfffc24ed6d3df14143ecae3442
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="define-database-dimensions"></a>Definieren von Datenbankdimensionen
   Verwenden Sie den Dimensions-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , um eine vorhandene Datenbankdimension in einem Projekt bzw. in einer Datenbank von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zu konfigurieren. Sie können den Dimensions-Designer für die folgenden Aufgaben verwenden:  
@@ -72,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  Beschreibt das Verwenden des Business Intelligence-Assistenten zum Optimieren einer Dimension.  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - conformance levels [ODBC], interface
 - level 1 interface conformance levels [ODBC]
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 34c9b63a4abda3b510ab2b9549f90251996ec9e9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c1f9e266e4379b2d1cfc9ee771ac49694cd3c58b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="level-1-interface-conformance"></a>Ebene 1 Schnittstelle Konformität
 Der Konformitätsgrad des Ebene-1-Schnittstelle enthält die Schnittstelle Konformität Ebene Kernfunktionalität sowie auf zusätzliche Funktionen, z. B. Transaktionen, die in der Regel in eine relationale OLTP-DBMS verfügbar sind. Ein Ebene-1-Schnittstelle – konforme-Treiber ermöglicht die Anwendung, zusätzlich zu den Funktionen in der zentrale Schnittstelle Konformitätsgrad gehen:  
@@ -43,4 +41,3 @@ Der Konformitätsgrad des Ebene-1-Schnittstelle enthält die Schnittstelle Konfo
 |107|Verwenden Sie ODBC-Funktionen anstelle von SQL-Anweisungen, um bestimmte Datenbankvorgänge durchzuführen: **SQLSetPos** mit SQL_POSITION und SQL_REFRESH.|  
 |108|Zugreifen auf den Inhalt der mehrere Resultsets, die durch Aufrufen von Batches und gespeicherte Prozeduren generiert **SQLMoreResults**.|  
 |109|Begrenzen von Transaktionen, die Aufteilung auf verschiedene ODBC-Funktionen mit "true" Unteilbarkeit und die Möglichkeit zum Angeben der SQL_ROLLBACK in **SQLEndTran**.|
-

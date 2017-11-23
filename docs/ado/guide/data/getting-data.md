@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO, getting data
+helpviewer_keywords: ADO, getting data
 ms.assetid: 3931e7ec-f66b-4d5d-aad3-c4bf12e8b154
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4336c13df5d04f356c83141c5a98653da516a6a6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2d97c9d8450cd906def9aae3e386a836d32f4d92
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="getting-data"></a>Abrufen von Daten
 [ADO-Grundlagen](../../../ado/guide/data/ado-fundamentals.md), und die [HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md) Beispiel, insbesondere die vier primären Vorgänge, die beim Erstellen einer ADO-Anwendung eingeführt: Abrufen von Daten, Daten untersuchen, Bearbeiten von Daten und Aktualisieren von Daten. In diesem Abschnitt wird erläutert, Abrufen von Daten im Detail.  
@@ -39,4 +36,3 @@ ms.lasthandoff: 09/09/2017
 -   [Vorbereiten und Ausführen von Befehlen](../../../ado/guide/data/preparing-and-executing-commands.md)  
   
 -   [Empfangen von Ergebnissen](../../../ado/guide/data/receiving-results.md)
-

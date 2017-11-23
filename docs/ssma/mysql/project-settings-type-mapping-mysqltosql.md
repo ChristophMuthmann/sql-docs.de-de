@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 445f69a6c78293f74dfea35f40ea99c380108e72
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 269c901b4242ae199f6d83fc7f678c29be39e5e5
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Projekteinstellungen (Zuordnung) (MySQLToSQL)
 Die projekteinstellungen Type Mapping können Sie die standardtypmappings für das SSMA-Projekt festgelegt.  
@@ -93,10 +91,10 @@ Die folgende Tabelle zeigt die Zuordnung zwischen Quelle und Ziel-Datentypen
 |Zeichen [2..255]|NCHAR [*]|  
 |Datum|Datum|  
 |datetime|datetime2 [0]|  
-|dec|Decimal|  
+|dec|decimal|  
 |DEC [*.. 65]|Dezimal [*] [0]|  
 |DEC [*.. 65][\*.. 30]|Dezimal [*] [\*]|  
-|Decimal|Decimal|  
+|decimal|decimal|  
 |Dezimal [*.. 65]|Dezimal [*] [0]|  
 |Dezimal [*.. 65][\*.. 30]|Dezimal [*] [\*]|  
 |double|"float" [53]|  
@@ -163,10 +161,10 @@ Die folgende Tabelle zeigt die Zuordnung zwischen Quelle und Ziel-Datentypen
 |tinytext|Nvarchar [255]|  
 |ohne Vorzeichen "bigint"|bigint|  
 |ohne Vorzeichen "bigint" [*.. 255]|bigint|  
-|ohne Vorzeichen Dez.|Decimal|  
+|ohne Vorzeichen Dez.|decimal|  
 |ohne Vorzeichen Dec [*.. 65]|Dezimal [*] [0]|  
 |ohne Vorzeichen Dec [*.. 65][\*.. 30]|Dezimal [*] [\*]|  
-|Dezimalzahl ohne Vorzeichen|Decimal|  
+|Dezimalzahl ohne Vorzeichen|decimal|  
 |Dezimalzahl ohne Vorzeichen [*.. 65]|Dezimal [*] [0]|  
 |Dezimalzahl ohne Vorzeichen [*.. 65][\*.. 30]|Dezimal [*] [\*]|  
 |Doppelte ohne Vorzeichen|"float" [53]|  
@@ -215,4 +213,3 @@ Klicken Sie auf diese Option, um die ausgewählte Zuordnung aus der Zuordnungsli
 ##### <a name="reset-to-default"></a>Standard wiederherstellen  
 Klicken Sie auf diese Option, um alle datentypzuordnungen auf die SSMA-Standardwerte zurückzusetzen.  
   
-

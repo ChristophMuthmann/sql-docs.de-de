@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 07ba161d9f053e35c80f9c22627a55a4f1cab003
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8e49acca5ae556f6f892c364a7bd81d0db4c68ec
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>Projekteinstellungen (Konvertierung) (SybaseToSQL)
 Die Seite "Konvertierung", der die **Projekteinstellungen** Dialogfeld enthält Einstellungen, anpassen, wie SSMA für Sybase Adaptive Server Enterprise (ASE)-Syntax, um konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Syntax.  
@@ -123,7 +121,7 @@ Bei Auswahl einer Konvertierungsmodus in der **Modus** Feld SSMA gilt die folgen
   
 **Vollmodus:** konvertieren, und beheben Sie  
   
-**Dynamische SQL-Anweisungen**  
+**Dynamisches SQL**  
 Verwenden Sie diese Einstellung, um den Typ der Nachricht (Warnung oder Fehler) anzugeben, die SSMA im Bereich "Ausgabe" oder "Fehlerliste" zeigt, dynamisches SQL im Code ASE stößt.  
   
 -   Bei Auswahl des **konvertieren, und markieren Sie mit der Warnung**, SSMA dynamische SQL konvertiert und markieren Sie die Anweisungen mit Warnungskommentare.  
@@ -456,4 +454,3 @@ Erstellt einen neuen primären Schlüssel in der [!INCLUDE[ssNoVersion](../../in
 ## <a name="see-also"></a>Siehe auch  
 [Referenz zur Benutzeroberfläche &#40; SybaseToSQL &#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
   
-

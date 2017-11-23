@@ -19,17 +19,16 @@ helpviewer_keywords:
 - Business Intelligence enhancements [Analysis Services], account intelligence
 - account intelligence [Analysis Services]
 ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9507044c972401407aadf80dddfe164ec4a3617c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: defce52a3e89858c08eff6626601392066996891
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>BI-Assistent – Hinzufügen von Kontointelligenz zu einer Dimension
   Die Kontointelligenzerweiterung kann einem Cube oder eine Dimension hinzugefügt werden, um Elementen eines Kontoattributs Standardkontoklassifikationen wie Einnahmen und Ausgaben zuzuweisen. Diese Erweiterung identifiziert auch Kontotypen (wie Asset und Liability) und weist jedem Kontotyp die entsprechende Aggregation zu. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] kann die Klassifikationen verwenden, um Konten im Zeitverlauf zu aggregieren.  
@@ -78,4 +77,3 @@ ms.lasthandoff: 09/01/2017
 4.  Ändern Sie im Dropdown-Listenfeld **Aggregationsfunktion** die Standardaggregationsfunktion für diesen Kontotyp.  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- ConnectOptionEnum
-helpviewer_keywords:
-- ConnectOptionEnum enumeration [ADO]
+f1_keywords: ConnectOptionEnum
+helpviewer_keywords: ConnectOptionEnum enumeration [ADO]
 ms.assetid: bff07eeb-dee3-4e4e-9b2d-d56061ea744d
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 56f0ad9e79cdc7c570f805d76ec1ca68d7a77602
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 582f85d3ce45071cd283f05f5d595e10b5d1614c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connectoptionenum"></a>ConnectOptionEnum
 Gibt an, ob die [öffnen](../../../ado/reference/ado-api/open-method-ado-connection.md) Methode von einer [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt sollte nach dem Herstellen der Verbindung (synchron) oder vor dem zurückgeben (asynchron).  
@@ -47,5 +43,4 @@ Gibt an, ob die [öffnen](../../../ado/reference/ado-api/open-method-ado-connect
 |AdoEnums.ConnectOption.CONNECTUNSPECIFIED|  
   
 ## <a name="applies-to"></a>Gilt für  
- [Open-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/open-method-ado-connection.md)
-
+ [Open-Methode (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)

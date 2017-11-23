@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- FormatString Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: FormatString Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- FormatString
-helpviewer_keywords:
-- FormatString element
+applies_to: SQL Server 2016 Preview
+f1_keywords: FormatString
+helpviewer_keywords: FormatString element
 ms.assetid: 7b996221-936e-4f36-a3a8-676eb9869c55
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 08619d72dfbcc41113ba62ff5901482771747da7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fa36998feaea7eb400279448c83c128e104b72ff
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="formatstring-element-assl"></a>FormatString-Element (ASSL)
   Beschreibt das Anzeigeformat für ein [CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md) Element oder ein [Measure](../../../analysis-services/scripting/objects/measure-element-assl.md) Element.  
@@ -78,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

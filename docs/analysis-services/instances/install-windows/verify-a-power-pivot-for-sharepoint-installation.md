@@ -8,22 +8,20 @@ ms.service:
 ms.component: instances
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4ab5b1730f6244f81fc9e59c7565080eb72fba66
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: abc618942a95b28fd2b93f72e4b511e519c58191
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>Überprüfen einer Power Pivot für SharePoint-Installation
   Eine Instanz von [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint, die Sie in einer SharePoint-Farm installieren, wird über die SharePoint-Zentraladministration verwaltet. Sie können zumindest die Seiten in der Zentraladministration und auf SharePoint-Websites durchsuchen, um zu überprüfen, ob [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Serverkomponenten und -funktionen verfügbar sind. Um jedoch eine Installation vollständig zu überprüfen, müssen Sie eine [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Arbeitsmappe haben, die Sie in SharePoint veröffentlichen und auf die Sie über eine Bibliothek zugreifen können. Zu Testzwecken können Sie eine Beispielarbeitsmappe veröffentlichen, die bereits [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]-Daten enthält, und damit überprüfen, ob die SharePoint-Integration ordnungsgemäß konfiguriert wurde.  
@@ -109,4 +107,3 @@ ms.lasthandoff: 09/01/2017
 11. Überprüfen Sie im Computerdateisystem den folgenden Ordner, um zu bestimmen, ob Dateien auf dem Datenträger zwischengespeichert wurden. Das Vorhandensein zwischengespeicherter Dateien ist eine weitere Bestätigung, dass die Bereitstellung betriebsbereit ist. Um den Dateicache anzuzeigen, wechseln Sie in den [!INCLUDE[ssInstallPathVar](../../../includes/ssinstallpathvar-md.md)]-Dienstanwendungsordner [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] MSAS13.POWERPIVOT\OLAP\Backup\Sandboxes\Default. Jede zwischengespeicherte Datenbank wird in einem eigenen Ordner gespeichert. Dabei wird eine GUID-basierte Namenskonvention verwendet, um einen eindeutigen Namen sicherzustellen.  
   
   
-

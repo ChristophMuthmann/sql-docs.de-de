@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - data types [ODBC], descriptors
 - concise data types [ODBC]
 ms.assetid: f0077c9b-8eb2-4b5f-8c4c-7436fdef37ab
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0040a426bd11048a993e98015a536c76e1b4381c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 93b813632c3a281e1ae0ba90e95545e28d07ed09
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>-Datentypbezeichnungen und Deskriptoren
 Die Datentypen aufgeführt, der [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) und [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) Abschnitten weiter oben in diesem Anhang werden "präzise" Datentypen: jeder Bezeichner verweist auf eine single-Datentyp. Es ist eine 1: 1-Entsprechung zwischen den Bezeichner und den Datentyp aus. Deskriptoren, führen jedoch nicht in allen Fällen einen einzelnen Wert verwenden, um Datentypen zu identifizieren. In einigen Fällen verwenden sie einen Datentyp für "verbose" und einen Typ Subcode. Für alle Datentypen mit Ausnahme der Datentypen "DateTime" und das Intervall der ausführlichen Typbezeichner ist identisch mit der präzise Typbezeichner, und der Wert in SQL_DESC_DATETIME_INTERVAL_CODE gleich 0 ist. Für die Datentypen "DateTime" und das Intervall jedoch ein ausführlichen Typ (SQL_DATETIME oder SQL_INTERVAL) in SQL_DESC_TYPE gespeichert ist, ein präziser in SQL_DESC_CONCISE_TYPE gespeichert wird und eine Subcode für jeden präziser in SQL_DESC_DATETIME_INTERVAL_CODE gespeichert ist. Eines dieser Felder wirkt sich auf die anderen. Weitere Informationen zu diesen Feldern finden Sie unter der [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) funktionsbeschreibung.  
@@ -57,4 +55,3 @@ QL_INTERVAL_DAY_TO_SECOND|SQL_C_INTERVAL_DAY_TO_SECOND|SQL_INTERVAL|SQL_CODE_DAY
 |SQL_INTERVAL_HOUR_TO_MINUTE|SQL_C_INTERVAL_HOUR_TO_MINUTE|SQL_INTERVAL|SQL_CODE_HOUR_TO_MINUTE|  
 |SQL_INTERVAL_HOUR_TO_SECOND|SQL_C_INTERVAL_HOUR_TO_SECOND|SQL_INTERVAL|SQL_CODE_HOUR_TO_SECOND|  
 |SQL_INTERVAL_MINUTE_TO_SECOND|SQL_C_INTERVAL_MINUTE_TO_SECOND|SQL_INTERVAL|SQL_CODE_MINUTE_TO_SECOND|
-

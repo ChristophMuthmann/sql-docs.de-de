@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,20 +12,18 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- syntax indexes [ADO]
+helpviewer_keywords: syntax indexes [ADO]
 ms.assetid: fad34f61-c34f-4c0b-8ce5-3b8872abfe4e
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7adcbadefe3af5939679b6e6ce8bfe44667f95be
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e0ff03541851ac39c2904cde2f809e196cbd2c40
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-syntax-indexes"></a>Indizes für ADO-Syntax
 Die Syntax zum Aufrufen von ADO-Methoden und Eigenschaften unterscheidet sich je nach Ihrer Entwicklungsumgebung. Im weiteren Verlauf der ADO-Sprachreferenz verwendet der Microsoft Visual Basic Programmiersprache um ADO Methoden- und Syntax zu veranschaulichen. Allerdings finden Sie in den folgenden Abschnitten finden Sie spezifischere Syntaxbeispiele basierend auf Ihrer Programmiersprache und Methodik:  
@@ -39,4 +36,3 @@ Die Syntax zum Aufrufen von ADO-Methoden und Eigenschaften unterscheidet sich je
  [Mithilfe von ADO mit Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [Verwenden von ADO mit Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
  [Verwenden von ADO mit Skriptsprachen](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)
-

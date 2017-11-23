@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - errors [ADO], provider
 - Error object [ADO], provider errors
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 327869785bddfbd0d43bfff051a9b7ef6b97c8fb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c6e4934d8dc43c29629687a19a5d76ae46dab515
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="provider-errors"></a>Anbieterfehler
 Wenn ein Anbieterfehler auftritt, wird ein Laufzeitfehler-2147467259 zurückgegeben. Wenn Sie diesen Fehler erhalten, überprüfen Sie die **Fehler** Auflistung der aktiven **Verbindung** -Objekt, das enthält einen oder mehrere Fehler, die beschreiben, was aufgetreten ist.  
@@ -87,4 +85,3 @@ End Function
  Die **Fehler** Objekt wird auch verwendet, wenn ereignisbezogene Fehler auftreten. Sie können bestimmen, ob im Prozess ist ein Fehler, die ein ADO-Ereignis ausgelöst wird aufgetreten, indem Sie überprüfen die **Fehler** Objekt als Ereignisparameter übergeben.  
   
  Wenn der Vorgang, der bewirkt, ein Ereignis dass erfolgreich abgeschlossen wird der *AdStatus* Parameter des ereignishandlers festgelegt *AdStatusOK*. Andererseits, wenn der Vorgang, der das Ereignis ausgelöst wurde nicht erfolgreich war, die *AdStatus* Parametersatz auf *AdStatusErrorsOccurred*. In diesem Fall die *pError* Parameter enthält einen **Fehler** -Objekt, das den Fehler beschreibt.
-

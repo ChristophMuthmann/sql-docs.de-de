@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e01f8be5-ce68-4c9f-bd13-d65e73a16470
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: a1ad067b44b4884f507bd2815074e6d3d7d60d4f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1dc360647251f526764ebb0d86fd0b7931aa7e9d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="appendix---1-oracletosql"></a>Anhang - 1 (OracleToSQL)
 Kurze Übersicht über die Befehlszeilenoptionen SSMA-Konsole:  
@@ -39,4 +37,3 @@ Kurze Übersicht über die Befehlszeilenoptionen SSMA-Konsole:
 ## <a name="see-also"></a>Siehe auch  
 [Ausführen der Konsole SSMA (Oracle)](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   
-

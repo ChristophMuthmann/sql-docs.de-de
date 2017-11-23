@@ -11,20 +11,18 @@ ms.service:
 ms.component: guide
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords:
-- ADO, programming
+helpviewer_keywords: ADO, programming
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: MightyPen
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ce6cdcbf6969f00c42b1fe06f591471a0735e8d0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 17fb13aafe00ce39d18ea52c3a2240f4bebf14d2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-overview-and-benefits"></a>ADO-Übersicht und Vorteile
 ActiveX Data Objects (ADO) ist eine einfach zu verwendende Schnittstelle zu OLE DB auf hoher Ebene. OLE DB ist eine leistungsstarke Schnittstelle mit einer Vielzahl von Datenspeichern auf niedriger Ebene. ADO und OLE DB können arbeiten mit relationalen (tabellarischen) und nicht relationalen (hierarchische oder Datenstrom) Daten.
@@ -39,9 +37,8 @@ ActiveX Data Objects (ADO) ist eine einfach zu verwendende Schnittstelle zu OLE 
 
 -   [Verweisen auf die ADO-Bibliotheken](../../ado/guide/referencing-the-ado-libraries.md)
 
--   [Tabelle der ADO-Aufgabe](../../ado/guide/ado-task-table.md)
+-   [ADO Task Table (ADO-Aufgabentabelle)](../../ado/guide/ado-task-table.md)
 
--   [ADO-Technologie-Tabelle](../../ado/guide/ado-technology-table.md)
+-   [ADO Technology Table (ADO-Technologientabelle)](../../ado/guide/ado-technology-table.md)
 
--   [Entwurfsaspekte für ADO-Sicherheit](../../ado/guide/ado-security-design-issues.md)
-
+-   [ADO Security Design Issues (Entwurfsaspekte für die ADO-Sicherheit)](../../ado/guide/ado-security-design-issues.md)

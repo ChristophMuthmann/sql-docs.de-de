@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLColumnPrivileges
-apilocation:
-- sqlsrv32.dll
+apiname: SQLColumnPrivileges
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLColumnPrivileges
-helpviewer_keywords:
-- SQLColumnPrivileges function [ODBC]
+f1_keywords: SQLColumnPrivileges
+helpviewer_keywords: SQLColumnPrivileges function [ODBC]
 ms.assetid: ef233d9a-6ed5-4986-9d42-5e0b1a79fb6e
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1142c70054eca7d9a67f1544fe84c72cb209c44c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b9fa1af8ad7cc84b69f3e54e7f1f7f911880bb25
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlcolumnprivileges-function"></a>SQLColumnPrivileges-Funktion
 **Konformität**  
@@ -171,4 +165,3 @@ SQLRETURN SQLColumnPrivileges(
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- KeyColumns Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: KeyColumns Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- KeyColumns
-helpviewer_keywords:
-- KeyColumns element
+applies_to: SQL Server 2016 Preview
+f1_keywords: KeyColumns
+helpviewer_keywords: KeyColumns element
 ms.assetid: 03f3ad21-25cb-4afd-9287-cbf942ac1ad9
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e88f847d5aed1cb7224f1f94e731b7444e143a1c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f069b94b4f73718fe1de943fe1c616f8ddd4ae80
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="keycolumns-element-assl"></a>KeyColumns-Element (ASSL)
   Enthält die Auflistung der [KeyColumn](../../../analysis-services/scripting/objects/keycolumn-element-assl.md) -Elementdefinitionen für ein übergeordnetes Objekt.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Schemaauflistungen &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ADO, events
 - event handlers [ADO]
 ms.assetid: e9003457-0762-48b3-942f-0820266b158f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 43d07faf4f544ef22c2afcf9013528fd65225be6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a451023d3e3501ac60cd2724349337f30c46b689
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="handling-ado-events"></a>Behandlung von Ereignissen für ADO
 Das ADO-Ereignismodell unterstützt bestimmte synchrone und asynchrone ADO-Vorgänge, die Zertifikate ausstellen *Ereignisse*, oder Benachrichtigungen, die vor dem Vorgang gestartet oder abgeschlossen ist. Ein Ereignis ist tatsächlich ein Aufruf an eine Ereignishandler-Routine, die Sie in der Anwendung zu definieren.  
@@ -43,7 +41,7 @@ Das ADO-Ereignismodell unterstützt bestimmte synchrone und asynchrone ADO-Vorg�
   
  Dieser Abschnitt enthält die folgenden Themen.  
   
--   [ADO-Ereignis-Handler-Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)  
+-   [ADO-Ereignishandler – Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)  
   
 -   [Typen von Ereignissen](../../../ado/guide/data/types-of-events.md)  
   
@@ -59,4 +57,3 @@ Das ADO-Ereignismodell unterstützt bestimmte synchrone und asynchrone ADO-Vorg�
  [ADO-Ereignisse](../../../ado/reference/ado-api/ado-events.md)   
  [Ereignisparameter](../../../ado/guide/data/event-parameters.md)   
  [Typen von Ereignissen](../../../ado/guide/data/types-of-events.md)
-

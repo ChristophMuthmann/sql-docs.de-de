@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- error messages (ODBC driver for oracle)
+helpviewer_keywords: error messages (ODBC driver for oracle)
 ms.assetid: f8d2a8f2-0316-42c4-bc34-5367661634ae
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e2ef49cea10f32ab4022ecb7e1823ac860bb3165
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0fad2aab1020cb7a56c00a2b78c1d2c46a41c422
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-jet-error-messages"></a>Jet ODBC-Fehlermeldungen
 Für Fehler, die in der Datenquelle auftreten, gibt der ODBC-Treiber eine Fehlermeldung zurückgegeben, von der ODBC-Datei-Bibliothek zurück. Für Fehler, die in der ODBC-Treiber oder der Treiber-Manager auftreten, zugeordnet ist der Treiber gibt eine Fehlermeldung den Text anhand der SQLSTATE.  
@@ -44,4 +41,3 @@ Für Fehler, die in der Datenquelle auftreten, gibt der ODBC-Treiber eine Fehler
 |-------------------|--------------------|  
 |[Microsoft] [ODBC-Treiber-Manager] *Meldungstext*|Treiber-Managers (Odbc32.dll)|  
 |[Microsoft] [ODBC *Treibername*]*Meldungstext*|ISAM-Treiber (Siehe ISAMs-Treiber)|
-

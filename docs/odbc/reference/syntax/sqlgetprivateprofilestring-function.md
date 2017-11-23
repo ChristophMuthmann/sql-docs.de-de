@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetPrivateProfileString
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetPrivateProfileString
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetPrivateProfileString
-helpviewer_keywords:
-- SQLGetPrivateProfileString function [ODBC]
+f1_keywords: SQLGetPrivateProfileString
+helpviewer_keywords: SQLGetPrivateProfileString function [ODBC]
 ms.assetid: b72ca065-4d67-48df-baac-e18379a8320a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 06819c4be2b75efe13ba762a282ce425a26f691a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 49c1939845ed63f295054afab629389f3e1bbcaf
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetprivateprofilestring-function"></a>SQLGetPrivateProfileString-Funktion
 **Konformität**  
@@ -94,4 +88,3 @@ int SQLGetPrivateProfileString(
 |Informationen zu|Finden Sie unter|  
 |---------------------------|---------|  
 |Schreiben einen Wert in die Systeminformationen|[SQLWritePrivateProfileString](../../../odbc/reference/syntax/sqlwriteprivateprofilestring-function.md)|
-

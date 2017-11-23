@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: dbd32576-0453-4e90-ae45-1a81cee8259d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 989f573a68fb818ca7f09d90ae0160d65e7a39c1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 234da7bb8519149c78779f7920333338737b394b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="scrollable-cursor-types"></a>Bildlauffähige Cursortypen
 Die vier Typen von bildlauffähigen Cursor werden statische, dynamische, keysetgesteuerte und gemischten. Statische Cursor erkennen wenige oder keine Änderungen jedoch relativ billig implementiert werden. Dynamische Cursor erkennen alle Änderungen jedoch aufwendig zu implementieren. Und gemischten, keysetgesteuerter Cursor liegen zwischen, die meisten Änderungen erkennen, aber weniger Kosten als dynamische Cursor.  
@@ -49,9 +47,8 @@ Die vier Typen von bildlauffähigen Cursor werden statische, dynamische, keysetg
   
 -   [Statische ODBC-Cursor](../../../odbc/reference/develop-app/odbc-static-cursors.md)  
   
--   [ODBC-Cursorn](../../../odbc/reference/develop-app/odbc-dynamic-cursors.md)  
+-   [Dynamische Cursor von ODBC](../../../odbc/reference/develop-app/odbc-dynamic-cursors.md)  
   
 -   [Keysetgesteuerte Cursor](../../../odbc/reference/develop-app/keyset-driven-cursors.md)  
   
 -   [Gemischte Cursor](../../../odbc/reference/develop-app/mixed-cursors.md)
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Column
-helpviewer_keywords:
-- Column object [ADOX]
+f1_keywords: Column
+helpviewer_keywords: Column object [ADOX]
 ms.assetid: 6e772783-1bc8-4ea7-94b2-7d7a52ea5c47
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a12b65adf6e13dd04573453c588f07b796e778d5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a5a8a5047f4cd4655ebe1dd041e44949ca361c54
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="column-object-adox"></a>Column-Objekt (ADOX)
 Stellt eine Spalte aus einer Tabelle, Index oder Schlüssel.  
@@ -67,7 +63,7 @@ Stellt eine Spalte aus einer Tabelle, Index oder Schlüssel.
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Spalte-Objekteigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/column-object-properties-methods-and-events.md)  
+-   [Column-Objekt – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/column-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Append-Methode, Beispiel für Name-Eigenschaft (VB) Spalten und Tabellen](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
@@ -77,5 +73,4 @@ Stellt eine Spalte aus einer Tabelle, Index oder Schlüssel.
  [Beispiel für ParentCatalog-Eigenschaft (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
  [SortOrder-Eigenschaft (VB)-Beispiel](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
  [Columns-Auflistung (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Properties-Auflistung (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+ [Properties-Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

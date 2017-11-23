@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Hierarchy
-helpviewer_keywords:
-- Hierarchy object [ADO MD]
+f1_keywords: Hierarchy
+helpviewer_keywords: Hierarchy object [ADO MD]
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e02aefb90af923cea7bfd6d33b8b1e97415c6ae8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 46bb03c91b2305f0453676891d87676e784b03fa
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hierarchy-object-ado-md"></a>Hierarchy-Objekt (ADO MD)
 Stellt eine Möglichkeit dar, in dem die Mitglieder einer [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) aggregiert werden können oder die "Rollup wird erstellt." Eine Dimension kann entlang einer oder mehrerer Hierarchien aggregiert werden.  
@@ -53,7 +49,7 @@ Stellt eine Möglichkeit dar, in dem die Mitglieder einer [Dimension](../../../a
 |CubeName|Der Name des Cubes.|  
 |DefaultMember|Der eindeutige Name des Standardelements für diese Hierarchie.|  
 |Description|Eine aussagekräftige Beschreibung der Hierarchie.|  
-|Von DimensionType|Der Typ der Dimension, zu dem diese Hierarchie gehört.|  
+|DimensionType|Der Typ der Dimension, zu dem diese Hierarchie gehört.|  
 |DimensionUniqueName|Der eindeutige Name der Dimension.|  
 |HierarchyCaption|Eine Bezeichnung oder Beschriftung, die der Hierarchie zugeordnet ist.|  
 |HierarchyCardinality|Die Anzahl der Member in der Hierarchie.|  
@@ -71,5 +67,4 @@ Stellt eine Möglichkeit dar, in dem die Mitglieder einer [Dimension](../../../a
  [Dimensionsobjekt (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
  [Hierarchies-Auflistung (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
  [Levels-Auflistung (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)   
- [Properties-Auflistung (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+ [Properties-Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

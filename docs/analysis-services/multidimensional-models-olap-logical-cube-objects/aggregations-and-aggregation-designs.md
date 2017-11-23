@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - aggregations [Analysis Services], about aggregations
 - storage [Analysis Services], aggregations
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - storing data [Analysis Services], aggregations
 - aggregations [Analysis Services]
 ms.assetid: 35bd8589-39fa-4e0b-b28f-5a07d70da0a2
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: db3dce8f47d784b62a03524361edc9308dad68fc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8554ed91ce593803fe1043823aa0e97aa890043b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="aggregations-and-aggregation-designs"></a>Aggregationen und Aggregationsentwürfe
   Ein <xref:Microsoft.AnalysisServices.AggregationDesign>-Objekt definiert einen Satz von Aggregationsdefinitionen, die für mehrere Partitionen freigegeben werden können.  
@@ -62,4 +60,3 @@ ms.lasthandoff: 09/01/2017
  [Partition Speichermodi und Verarbeitung](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)  
   
   
-

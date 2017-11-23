@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - AdUseClient [ADO]
 - editing data [ADO]
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2a7328007b213817e0d306fe3329e434304dedfa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 76a5921185f6643f328559e3bc73dfac46bfee0c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="editing-data"></a>Bearbeiten von Daten
 Wir haben erläutert wie ADO verwenden, um eine Verbindung mit einer Datenquelle herstellen, einen Befehl auszuführen, rufen Sie die Ergebnisse einem **Recordset** Objekt, und navigieren Sie in der **Recordset**. Dieser Abschnitt konzentriert sich auf den nächsten grundlegenden ADO-Vorgang: Bearbeiten von Daten.  
@@ -97,7 +95,6 @@ End Function
   
 -   [Bestimmen, was unterstützt wird](../../../ado/guide/data/determining-what-is-supported.md)  
   
--   [Löschen von Datensätzen, die mit der Delete-Methode](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
+-   [Deleting Records Using the Delete Method (Löschen von Datensätzen mit der Delete-Methode)](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
   
--   [Alternativen: SQL-Anweisungen mithilfe](../../../ado/guide/data/alternatives-using-sql-statements.md)
-
+-   [Alternatives: Using SQL Statements (Alternative: Verwenden von SQL-Anweisungen)](../../../ado/guide/data/alternatives-using-sql-statements.md)

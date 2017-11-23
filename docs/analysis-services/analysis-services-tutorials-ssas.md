@@ -8,24 +8,21 @@ ms.component: misc
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: b378c3bb-eead-46eb-b213-70d994f2d562
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: 69e97b3571679a523bbd1033ce33fd2491a20ecc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 29b7f0e097ba29eb69dc2fe3b7d6c34dee9e238d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Analysis Services-Lernprogramme (SSAS)
 Dieser Abschnitt enthält Lernprogramme für SQL Server Analysis Services.  
@@ -49,4 +46,3 @@ Dieser Link führt Sie zu einer Codeplex-Downloadseite mit dem AMO Beispiel.
   
   
   
-

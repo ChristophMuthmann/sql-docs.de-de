@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Error
-helpviewer_keywords:
-- error object [ADO]
+f1_keywords: Error
+helpviewer_keywords: error object [ADO]
 ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c866f3df4ca51d935fee22327a6196f88635a4ea
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a283d7d40140e46668dc704196316a4a52c1fdbf
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="error-object"></a>Error-Objekt
 Enthält Details über Data Access-Fehlern, die auf einem einzelnen Vorgang im Zusammenhang mit dem Anbieter beziehen.  
@@ -62,12 +58,11 @@ Enthält Details über Data Access-Fehlern, die auf einem einzelnen Vorgang im Z
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Fehler-Objekteigenschaften, Methoden und Ereignisse](../../../ado/reference/ado-api/error-object-properties-methods-and-events.md)  
+-   [Error-Objekt – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/ado-api/error-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Beschreibung, HelpContext HelpFile, NativeError, Anzahl, Quelle und SQLState-Eigenschaften-Beispiel (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [Beschreibung, HelpContext HelpFile, NativeError, Anzahl, Quelle und SQLState Eigenschaften (VC++-Beispiel)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [Verbindungsobjekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Errors-Auflistung (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [Anhang A: Daten und Dienstanbieter](../../../ado/guide/appendixes/appendix-a-providers.md)

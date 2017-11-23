@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Dimension
-helpviewer_keywords:
-- Dimension object [ADO MD]
+f1_keywords: Dimension
+helpviewer_keywords: Dimension object [ADO MD]
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b8b166484928abbeba70934d5b597c7e27d41f1f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ad282fee080d57546335029eceff5475fe6aecc1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dimension-object-ado-md"></a>Dimensionsobjekt (ADO MD)
 Stellt eine der Dimensionen eines mehrdimensionalen Cubes, die, die eine oder mehrere Hierarchien von Elementen enthält.  
@@ -57,7 +53,7 @@ Stellt eine der Dimensionen eines mehrdimensionalen Cubes, die, die eine oder me
 |DimensionGUID|Die GUID der Dimension.|  
 |DimensionName|Der Name der Dimension.|  
 |DimensionOrdinal|Die Ordinalzahl der Dimension innerhalb dieser Gruppe von Dimensionen, die den Cube zu bilden.|  
-|Von DimensionType|Die Dimension-Datentyp.|  
+|DimensionType|Die Dimension-Datentyp.|  
 |DimensionUniqueName|Der eindeutige Name der Dimension.|  
 |SchemaName|Der Name des Schemas, zu dem dieser Cube gehört.|  
   
@@ -70,5 +66,4 @@ Stellt eine der Dimensionen eines mehrdimensionalen Cubes, die, die eine oder me
  [CubeDef-Objekt (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)   
  [Auflistung von Dimensionen (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
  [Hierarchies-Auflistung (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
- [Properties-Auflistung (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+ [Properties-Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

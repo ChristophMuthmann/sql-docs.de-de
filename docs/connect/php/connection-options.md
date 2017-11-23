@@ -8,22 +8,20 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 4fcec3597676efa5feebc3fdb562a6dd19878278
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aadb44954096cbbcb520850a54d4cc2c41911f08
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="connection-options"></a>Verbindungsoptionen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -69,4 +67,3 @@ Viele der unterstützten Schlüssel sind ODBC-Verbindungszeichenfolgen-Attribute
 
 ## <a name="see-also"></a>Siehe auch  
 [Verbinden mit dem Server](../../connect/php/connecting-to-the-server.md)  
-

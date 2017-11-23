@@ -8,22 +8,20 @@ ms.service:
 ms.component: instances
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a7aedabc-6af9-4698-a7a4-98f894001476
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 63ce2b423f04ef4199bbb32b5349c26c25fe2199
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bd6aa812228cce132b4180a8537ba853f3ea92a2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="install-analysis-services-data-providers-amo-adomdnet-msolap"></a>Installieren von Analysis Services-Datenanbietern (AMO, ADOMD.NET, MSOLAP)
   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ist ein Versionsupdate der Analysis Services-Datenanbieter, die aus ADOMD.Net, AMO und MSOLAP bestehen.  
@@ -72,4 +70,3 @@ ms.lasthandoff: 09/01/2017
 3.  Klicken Sie auf **Version** , um zu bestätigen, dass Sie über den neuesten Build verfügen.  
   
   
-

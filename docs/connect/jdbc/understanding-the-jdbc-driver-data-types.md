@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1c9599a6e71ee0fbf171ba9c8619cafac8332cc5
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1cd9f516a8d72aabf8b10d25b9553cf35a3be3bd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>Grundlegendes zu den Datentypen in JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,16 +37,15 @@ ms.lasthandoff: 09/09/2017
 |Thema|Description|  
 |-----------|-----------------|  
 |[Verwenden von Standarddatentypen](../../connect/jdbc/using-basic-data-types.md)|Beschreibt die grundlegenden JDBC-Datentypen. Umfasst Beispiele zum Arbeiten mit den Datentypen mithilfe von Resultsets, parametrisierten Abfragen und gespeicherten Prozeduren.|  
-|[Konfigurieren, wie java.sql.Time-Werte an den Server gesendet werden](../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)|Beschreibt die Generierung von Datumsangaben durch den JDBC-Treiber.|  
+|[Konfigurieren der Art und Weise, wie java.sql.Time-Werte an den Server gesendet werden](../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)|Beschreibt die Generierung von Datumsangaben durch den JDBC-Treiber.|  
 |[Verwenden von erweiterten Datentypen](../../connect/jdbc/using-advanced-data-types.md)|Beschreibt die erweiterten JDBC-Datentypen.|  
 |[Grundlegendes zu den Unterschieden von Datentypen](../../connect/jdbc/understanding-data-type-differences.md)|Beschreibt Unterschiede zwischen den verschiedenen Datentypen des JDBC-Treibers.|  
 |[Grundlegendes zu Datentypkonvertierungen](../../connect/jdbc/understanding-data-type-conversions.md)|Beschreibt, wie die Datentypkonvertierung bei der Verwendung von Methoden zum Festlegen und Abrufen behandelt wird.|  
 |[Unterstützung für nationale Zeichensätze](../../connect/jdbc/national-character-set-support.md)|Beschreibt die Unterstützung der Typen für nationale Zeichensätze.|  
-|[Unterstützung von XML-Daten](../../connect/jdbc/supporting-xml-data.md)|Beschreibt die SQLXML-Schnittstelle. Außerdem wird beschrieben, wie zum Lesen und Schreiben von XML-Daten in bzw. aus einer relationalen Datenbank mit der **SQLXML** Java-Datentyp.|  
+|[Unterstützen von XML-Daten](../../connect/jdbc/supporting-xml-data.md)|Beschreibt die SQLXML-Schnittstelle. Außerdem wird beschrieben, wie zum Lesen und Schreiben von XML-Daten in bzw. aus einer relationalen Datenbank mit der **SQLXML** Java-Datentyp.|  
 |[Wrapper und Schnittstellen](../../connect/jdbc/wrappers-and-interfaces.md)|Behandelt die Schnittstellen, die über die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] -spezifischen Methoden und Konstanten, mit denen einen Anwendungsserver einen Proxy der Klasse erstellen können außerdem unterstützungen für die java.sql.Wrapper-Schnittstelle.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über die JDBC-Treiber](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [Overview of the JDBC Driver (Übersicht über den JDBC-Treiber)](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

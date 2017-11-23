@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- installer DLL [ODBC]
+helpviewer_keywords: installer DLL [ODBC]
 ms.assetid: 47fcadc3-f102-4989-9ee7-a1c65233142a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 846cd1f07c5bd940e35711ee79dc1c6c5e63e736
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2fdc92484d13c6a83cb4528cf2858927710f5cf0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="installer-dll-api-reference-function"></a>Installer DLL-API-Referenz-Funktion
 Dieser Abschnitt beschreibt die Syntax der Funktionen in der DLL-API-Installationsprogramm an. Der Installer DLL-API besteht aus 20 Funktionen. Drei dieser Funktionen **SQLGetTranslator**, **SQLRemoveDSNFromIni**, und **SQLWriteDSNToIni**, die nur von Setup DLLs aufgerufen werden. Die anderen Funktionen werden durch die Einrichtung und Verwaltung Programme aufgerufen.  
@@ -83,4 +80,3 @@ Dieser Abschnitt beschreibt die Syntax der Funktionen in der DLL-API-Installatio
 -   [SQLWriteFileDSN-Funktion](../../../odbc/reference/syntax/sqlwritefiledsn-function.md)  
   
 -   [SQLWritePrivateProfileString-Funktion](../../../odbc/reference/syntax/sqlwriteprivateprofilestring-function.md)
-

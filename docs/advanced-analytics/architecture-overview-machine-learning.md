@@ -1,27 +1,24 @@
 ---
-title: "Architektur und (Übersicht) | Microsoft Docs"
+title: "Übersicht über die Architektur für SQL Server-Machine Learning-Services | Microsoft Docs"
 ms.custom: 
-ms.date: 06/20/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: c81f114f97dee97a37832201637ac5e17fe08794
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7549b59d4edc00dd620deeb515f6cd7143a62db7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-
-# <a name="architecture-and-overview-of-machine-learning-services"></a>Architektur und Übersicht über die Machine Learning-Dienste
+# <a name="architecture-overview-for-sql-server-machine-learning-services"></a>Übersicht über die Architektur für SQL Server-Machine Learning-Services 
 
 In diesem Thema wird beschrieben, die Ziele der Extensibility Framework, die Ausführung von Python und R-Skript in SQL Server unterstützt.
 
@@ -70,7 +67,6 @@ Um diese Ziele zu erreichen, wird diese kernbegriffe die Architektur des SQL Ser
 
   Zur Optimierung der Leistung basiert auf zwei gleichermaßen leistungsstarke Aspekte der Plattform: die Ressourcenkontrolle und parallele Verarbeitung mit SQL Server und verteiltes rechnen von in-Algorithmen bereitgestellte **"revoscaler"** und **Revoscalepy**.
 
-
 ## <a name="solution-development-and-deployment"></a>Entwicklung und Bereitstellung
 
 Zusätzlich zu dieser Core Ziele für die Erweiterbarkeitsplattform dienen die Machine Learning-Dienste in SQL Server zum Bereitstellen von starken Integration mit dem Datenbankmodul und die BI-Stacks mit folgenden Vorteilen:
@@ -93,7 +89,7 @@ Sehen wir uns an, wie es in der Praxis funktioniert.
 
 Nicht sicher mit die Machine learning-Lösung Ihre Anforderungen erfüllt? Zusätzlich zu den eingebetteten Analytics in SQL Server 2016 und SQL Server-2017 bietet Microsoft die folgenden Machine learning-Plattformen und Diensten:
 
-+ [Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver)
++ [Microsoft R Server und Machine Learning-Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)
 
   Ein Multi-Plattform-Umgebung zum Entwickeln, verteilen und Verwalten von Machine Learning-Aufträgen
 + [Data Science Virtual Machines](https://docs.microsoft.com/azure/machine-learning/machine-learning-data-science-virtual-machine-overview)
@@ -101,6 +97,7 @@ Nicht sicher mit die Machine learning-Lösung Ihre Anforderungen erfüllt? Zusä
   Alle Tools, die für Machine learning, die vorinstalliert werden müssen. Verwenden Sie Jupyter Notebooks, Python oder R.
   
   Wiederholen Sie dann die neue [Windows 2016 Preview Edition](http://aka.ms/dsvm/win2016), dazu zählen auch GPU-Versionen der beliebten umfassenden lernen Frameworks wie z. B. CNTK und MxNet sowie Unterstützung für Windows-Containern!
+
 + [Azure Cognitive-Dienste](https://azure.microsoft.com/services/cognitive-services/)
 
   Eine Vielzahl von Clouddiensten zum Hinzufügen von AI und ML in Ihre Anwendungen, einschließlich natürlicher Sprache zu indizieren, video, Gesichtsausdruck Anerkennung Emotionen-Erkennung, Textanalyse Computer Übersetzung und vieles mehr
@@ -110,5 +107,4 @@ Nicht sicher mit die Machine learning-Lösung Ihre Anforderungen erfüllt? Zusä
 
 ## <a name="see-also"></a>Siehe auch
 
-[Eigenständigen R-Server](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone)
-
+[Vergleichen von Machine Learning-Server und Microsoft R-Produkte](https://docs.microsoft.com/machine-learning-server/what-is-r-server-interoperability)

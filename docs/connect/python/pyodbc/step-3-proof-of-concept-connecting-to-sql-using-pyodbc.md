@@ -8,22 +8,20 @@ ms.service:
 ms.component: python
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f8dce58a202a14294f53772294e7c9f1899d4ba3
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: ae1fc34c07fe85e8ecea70f9cc582d2d7908676e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>Schritt 3: Machbarkeitsnachweis Herstellen einer Verbindung mit SQL mit pyodbc
 
@@ -84,4 +82,3 @@ while row:
   ## <a name="next-steps"></a>Nächste Schritte  
   
 Weitere Informationen finden Sie unter der [Python Developer Center](https://azure.microsoft.com/en-us/develop/python/).
-

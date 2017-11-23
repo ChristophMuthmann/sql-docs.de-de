@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: bac234ef-bc16-47e6-8a7c-aa6e76d860c5
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9823a7811ceb439e1c8395c7ff88385f56af2009
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1f29647b3fdaf5f06b7974294813e52c67a253fe
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-migration-report-sybasetosql"></a>Migration Datenbericht (SybaseToSQL)
 Die **Daten Migrationsbericht** Dialogfeld wird angezeigt, nach dem Migrieren von Daten an [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -32,7 +30,7 @@ Die **Daten Migrationsbericht** Dialogfeld wird angezeigt, nach dem Migrieren vo
 **Status**  
 Zeigt den Status der Datenmigration von der Quell-in die Zieldatenbank.  
   
-**Von**  
+**From**  
 Die Quelltabelle.  
   
 **Aktion**  
@@ -53,4 +51,3 @@ Wenn Fehler bei der Migration von Daten, klicken Sie auf, um Details zur Migrati
 **Bericht speichern**  
 Speichert den Bericht ein. CSV (durch Trennzeichen getrennte Werte)-Datei, die Verwendung von Microsoft Excel überprüft werden kann.  
   
-
