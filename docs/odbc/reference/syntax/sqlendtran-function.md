@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLEndTran
-apilocation:
-- sqlsrv32.dll
+apiname: SQLEndTran
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLEndTran
-helpviewer_keywords:
-- SQLEndTran function [ODBC]
+f1_keywords: SQLEndTran
+helpviewer_keywords: SQLEndTran function [ODBC]
 ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c85e1102eb259f9ab1df342ab2ca0402fd68fa73
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fcae4699f6effbc0e6605701560dad11acff5281
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran-Funktion
 **Konformität**  
@@ -42,7 +36,7 @@ ms.lasthandoff: 09/09/2017
  **SQLEndTran** fordert einen Commit- oder Rollback-Vorgang für alle aktiven Vorgänge für alle Anweisungen, die eine Verbindung zugeordnet. **SQLEndTran** können auch anfordern, dass ein Commit oder Rollback-Vorgang für alle Verbindungen, die verknüpft sind mit einer Umgebung ausgeführt werden.  
   
 > [!NOTE]  
->  Weitere Informationen zu welcher der Treiber-Manager ordnet diese Funktion auf, wenn eine ODBC 3.*x* Anwendung arbeitet mit einer ODBC 2. *X* -Treiber verwenden, finden Sie unter [Ersatz-Zuordnungsfunktionen für Backward Compatibility Anwendungen](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
+>  Weitere Informationen zu welcher der Treiber-Manager ordnet diese Funktion auf, wenn eine ODBC 3.. *x* Anwendung arbeitet mit einer ODBC 2.. *X* -Treiber verwenden, finden Sie unter [Ersatz-Zuordnungsfunktionen für Backward Compatibility Anwendungen](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -164,4 +158,3 @@ SQLRETURN SQLEndTran(
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)   
  [Asynchrone Ausführung (Abrufmethode)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
-

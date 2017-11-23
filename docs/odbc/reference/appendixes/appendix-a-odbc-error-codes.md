@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +16,19 @@ helpviewer_keywords:
 - SQLSTATE [ODBC]
 - error codes [ODBC], SQLSTATE
 ms.assetid: c06902e4-721d-42e2-b818-05f0e18e4ce0
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1117eac94fdad6d90fda688f1a324608f0b37dad
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 725d16d6326d5fb99ce8d923bd35c64351b3e6cb
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="appendix-a-odbc-error-codes"></a>Anhang A: ODBC-Fehlercodes
-Dieses Thema erläutert SQLSTATE-Werten für ODBC 3. *x*. Weitere Informationen zu ODBC 3. *x* SQLSTATE-Werten finden Sie unter [SQLSTATE-Zuordnungen](../../../odbc/reference/develop-app/sqlstate-mappings.md).  
+Dieses Thema erläutert SQLSTATE-Werten für ODBC 3.. *x*. Weitere Informationen zu ODBC 3.. *x* SQLSTATE-Werten finden Sie unter [SQLSTATE-Zuordnungen](../../../odbc/reference/develop-app/sqlstate-mappings.md).  
   
  **SQLGetDiagRec** oder **SQLGetDiagField** SQLSTATE-Werten zurückgibt, gemäß der Definition von Open Group *Datenverwaltung: Structured Query Language (SQL), Version 2* (März 1995). SQLSTATE-Werten handelt es sich um Zeichenfolgen, die fünf Zeichen enthalten. Die folgende Tabelle enthält die SQLSTATE-Werten, die ein Treiber für zurückgeben können **SQLGetDiagRec**.  
   
@@ -158,4 +156,3 @@ Dieses Thema erläutert SQLSTATE-Werten für ODBC 3. *x*. Weitere Informationen 
 |IM013|Fehler in der Ablaufverfolgungsdatei|Alle ODBC-Funktionen.|  
 |IM014|Ungültiger Name der Datei-DSN|**SQLDriverConnect**|  
 |IM015|Beschädigte Datei als Datenquelle|**SQLDriverConnect**|
-

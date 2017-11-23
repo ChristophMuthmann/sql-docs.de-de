@@ -5,26 +5,22 @@ ms.date: 05/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: f420b816-ddab-4a1a-89b9-c8285a2d33a3
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c6bad3a92aa3bf5c1e52d34b5c9f9e981c96bd87
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e5bbd69bba01da2aacd3b8912aebac6b4e1c28a1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-simple-simulation"></a>Erstellen Sie eine einfache Simulation
 
@@ -135,6 +131,5 @@ In diesem Tutorial haben Sie die folgenden Aufgaben geübt:
 ## <a name="previous-step"></a>Vorheriger Schritt
 
 [Verschieben von Daten zwischen SQLServer und XDF-Datei](../../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
-
 
 

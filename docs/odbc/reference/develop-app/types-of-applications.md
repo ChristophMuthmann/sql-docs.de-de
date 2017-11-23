@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - application upgrades [ODBC], application types
 - application compatibility issues [ODBC]
 ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3cca547e091ffdd601550b5cfb4ddb6b078f0900
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 26835fa277391f359d628ec25c03d38364e398e7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="types-of-applications"></a>Anwendungstypen
 ODBC-Anwendungen können wie folgt klassifiziert werden:  
@@ -44,10 +42,10 @@ ODBC-Anwendungen können wie folgt klassifiziert werden:
     -   Nicht mit ODBC 3.5-Headern neu kompiliert wurde.  
   
 -   **Reine ODBC 2.**  
-     ***X* Anwendung neu kompiliert** eine reine ODBC 2..* X* Anwendung, die neu kompiliert wurde mithilfe der ODBC 3.5-Header-Dateien durch Festlegen von ODBCVER = 0x0250.  
+     ***X* Anwendung neu kompiliert** eine reine ODBC 2.. *X* Anwendung, die neu kompiliert wurde mithilfe der ODBC 3.5-Header-Dateien durch Festlegen von ODBCVER = 0x0250.  
   
 -   **Reine ODBC 2.**  
-     ***X* Unicode-Anwendung** eine reine ODBC 2..* X* erneut kompiliert, Anwendung, die Unicode-kompatibel ist und verwendet den SQL_WCHAR-Datentyp.  
+     ***X* Unicode-Anwendung** eine reine ODBC 2.. *X* erneut kompiliert, Anwendung, die Unicode-kompatibel ist und verwendet den SQL_WCHAR-Datentyp.  
   
 -   **Reine Open Group und ISO**–**kompatibler ODBC-Anwendung** eine 32-Bit-Anwendung, die:  
   
@@ -88,4 +86,3 @@ ODBC-Anwendungen können wie folgt klassifiziert werden:
     -   Verwendet keine neuen Funktionen in zukünftigen Versionen von ODBC nur innerhalb der bedingten Code.  
   
     -   Bedingten Code zur Behandlung von Änderungen am Systemverhalten verfügt über eingeschränkten oder hat sich selbst um eine frühere Version von ODBC-Anwendung werden registriert.
-

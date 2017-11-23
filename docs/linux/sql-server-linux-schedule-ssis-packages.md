@@ -15,12 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: 8678d4abd61ca93e53c217b295650c9d3998fe50
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 84ee0eaf4743cc4a3b188dd700b1ccbdc4ca42cc
-ms.contentlocale: de-de
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>Zeitplan SQL Server Integration Services-paketausführung unter Linux mit cron
 
@@ -79,4 +78,3 @@ Um eine ausführlichere Beschreibung des Dateiformats Crontab zu erhalten, verwe
 Hier ist eine partielle Beispiel der Ausgabe, die hilft, die im Beispiel in diesem Artikel wird erläutert:
 
 ![Ausführliche teilweise Beschreibung der Crontab-format](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-crontab-format.png)
-

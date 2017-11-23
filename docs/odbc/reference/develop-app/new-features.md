@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - compatibility [ODBC], new features in release
 - ODBC [ODBC], new features
 ms.assetid: a8fcdd00-6cb3-4871-9489-6018b3d0d65f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 016c2cefd6280a7b2cc21e4b5e290468d8271973
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6e2b48097b6c398772e14d2594a583d89e6825e0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="new-features"></a>Neue Funktionen
 Die folgende neue Funktionen wurde in ODBC 3. eingeführt. *x*. Eine ODBC-3. *x* Anwendung arbeiten mit einer ODBC 2.*.x* Treiber wird nicht in der Lage, diese Funktionalität verwenden. Der ODBC-3. *x* -Treiber-Manager zugeordnet ist diese Funktionen bei der Arbeit mit einer ODBC 2.*.x* Treiber.  
@@ -88,7 +86,7 @@ Die folgende neue Funktionen wurde in ODBC 3. eingeführt. *x*. Eine ODBC-3. *x*
   
 -   Benannte Parameter.  
   
--   Alle von der ODBC-3. *x*– bestimmte **SQLGetInfo** Optionen. (Bei einer ODBC-3. *x* Anwendung arbeiten mit einer ODBC 2..* X* Treiber Ruft die SQL_XXX_CURSOR_ATTRIBUTES1 Informationstypen, bei denen mehrere ODBC 2. ersetzt haben.* X* Informationstypen, einige Informationen möglicherweise zuverlässig, aber einige möglicherweise unzuverlässig. Weitere Informationen finden Sie unter [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
+-   Alle von der ODBC-3. *x*– bestimmte **SQLGetInfo** Optionen. (Bei einer ODBC-3. *x* Anwendung arbeiten mit einer ODBC 2.. *X* Treiber Ruft die SQL_XXX_CURSOR_ATTRIBUTES1 Informationstypen, bei denen mehrere ODBC 2. ersetzt haben. *X* Informationstypen, einige Informationen möglicherweise zuverlässig, aber einige möglicherweise unzuverlässig. Weitere Informationen finden Sie unter [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
   
 -   Binden Sie Offsets.  
   
@@ -116,5 +114,4 @@ Die folgende neue Funktionen wurde in ODBC 3. eingeführt. *x*. Eine ODBC-3. *x*
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Blockcursor, scrollfähige Cursor und Abwärtskompatibilität für ODBC 3.x-Anwendungen](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md)
-
+-   [Blockcursor, scrollbare Cursor und Abwärtskompatibilität für ODBC 3.x-Anwendungen](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md)

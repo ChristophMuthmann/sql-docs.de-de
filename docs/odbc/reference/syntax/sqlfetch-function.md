@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLFetch
-apilocation:
-- sqlsrv32.dll
+apiname: SQLFetch
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLFetch
-helpviewer_keywords:
-- SQLFetch function [ODBC]
+f1_keywords: SQLFetch
+helpviewer_keywords: SQLFetch function [ODBC]
 ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 4da263d0f7511aef2e01b66667761a9e364e9720
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 135ee130d56801c5da3abb47447a1372d29656a5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlfetch-function"></a>SQLFetch-Funktion
 **Konformität**  
@@ -65,10 +59,10 @@ SQLRETURN SQLFetch(
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiberspezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01004|Zeichenfolgedaten wurden rechts abgeschnitten|Das Abschneiden von nicht leeren Zeichen oder Binärdaten ungleich NULL führte Zeichenfolgen- oder Binärdaten, die für eine Spalte zurückgegeben. Falls es sich um einen Zeichenfolgenwert handelt, wurde es rechts abgeschnitten.|  
-|01 S 01|Fehler in Zeile|Fehler beim Abrufen von einer oder mehreren Zeilen.<br /><br /> (Wenn diese SQLSTATE zurückgegeben, wenn eine ODBC 3*.x* Anwendung arbeitet mit einer ODBC 2*.x* -Treiber verwenden, kann es ignoriert werden.)|  
+|01 S 01|Fehler in Zeile|Fehler beim Abrufen von einer oder mehreren Zeilen.<br /><br /> (Wenn diese SQLSTATE zurückgegeben, wenn eine ODBC 3.*.x* Anwendung arbeitet mit einer ODBC 2.*.x* -Treiber verwenden, kann es ignoriert werden.)|  
 |01S07|Teilbereiche wurden abgeschnitten.|Für eine Spalte zurückgegebenen Daten wurden abgeschnitten. Für numerische Datentypen und wurde die Nachkommastellen der Zahl gekürzt. Für die Zeit, Zeitstempel und Interval-Datentypen, die eine Zeitkomponente enthalten, wurde der Bruchteil der Zeit abgeschnitten.<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |07006|Eingeschränkte Datentypattribut|Der Datenwert einer Spalte im Resultset konnte nicht an der angegebenen Datentyp konvertiert werden *TargetType* in **SQLBindCol**.<br /><br /> Spalte 0 wurde mit einem Datentyp von SQL_C_BOOKMARK gebunden, und das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut auf SQL_UB_VARIABLE festgelegt wurde.<br /><br /> Spalte 0 wurde mit einem Datentyp von SQL_C_VARBOOKMARK gebunden, und das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut auf SQL_UB_VARIABLE nicht festgelegt wurde.|  
-|07009|Ungültiger Deskriptorindex|Der Treiber wurde von einer ODBC 2*.x* Treiber, der nicht unterstützt **SQLExtendedFetch**, und eine Spaltennummer in der Bindung für eine Spalte angegeben wurde, 0.<br /><br /> Spalte 0 gebunden wurde, und das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut auf SQL_UB_OFF festgelegt wurde.|  
+|07009|Ungültiger Deskriptorindex|Der Treiber wurde von einer ODBC 2.*.x* Treiber, der nicht unterstützt **SQLExtendedFetch**, und eine Spaltennummer in der Bindung für eine Spalte angegeben wurde, 0.<br /><br /> Spalte 0 gebunden wurde, und das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut auf SQL_UB_OFF festgelegt wurde.|  
 |08S01|Kommunikations-Verbindungsfehler|Die Verbindung zwischen dem Treiber und die Datenquelle mit der der Treiber verbunden wurde aufgetreten ist, bevor die Verarbeitung für die Funktion abgeschlossen.|  
 |22001|Zeichenfolgedaten wurden rechts abgeschnitten|Ein variabler Länge Lesezeichen für eine Spalte zurückgegeben wurde abgeschnitten.|  
 |22002|Anzeigevariable erforderlich, aber nicht angegeben|NULL wurde abgerufene Daten in eine Spalte, deren *StrLen_or_IndPtr* festlegen, indem **SQLBindCol** (oder SQL_DESC_INDICATOR_PTR festlegen, indem **SQLSetDescField** oder  **SQLSetDescRec**) wurde ein null-Zeiger.|  
@@ -98,7 +92,7 @@ SQLRETURN SQLFetch(
 ## <a name="comments"></a>Kommentare  
  **SQLFetch** des nächsten Rowsets im Resultset zurückgegeben. Es kann nur verwendet werden, während ein Resultset vorhanden ist aufgerufen werden: d. h. nach einem Aufruf, der ein Resultset erstellt und vor dem Cursor Failover, das Resultset geschlossen wird. Wenn keine Spalten gebunden sind, werden die Daten in diesen Spalten zurückgegeben. Wenn die Anwendung einen Zeiger auf ein zeilenstatusarray oder auf einen Puffer, in dem die Anzahl der Zeilen abgerufen, zurückgegeben angegeben wurde **SQLFetch** gibt auch diese Informationen zurück. Aufrufe von **SQLFetch** können durch Aufrufe von gemischt werden **SQLFetchScroll** jedoch durch Aufrufe von kombiniert werden, kann nicht **SQLExtendedFetch**. Weitere Informationen finden Sie unter [Abrufen von Zeilendaten](../../../odbc/reference/develop-app/fetching-a-row-of-data.md).  
   
- Wenn eine ODBC 3*.x* Anwendung arbeitet mit einer ODBC 2*.x* -Treiber verwenden, wird der Treiber-Manager zugeordnet **SQLFetch** Aufrufe von **SQLExtendedFetch** für ein ODBC 2*.x* Treiber, unterstützt **SQLExtendedFetch**. Wenn die ODBC 2*.x* -Treiber nicht unterstützt **SQLExtendedFetch**, ordnet der Treiber-Manager **SQLFetch** Aufrufe von **SQLFetch** in der ODBC-2 *.x* Treiber, der nur eine einzelne Zeile abrufen kann.  
+ Wenn eine ODBC 3.*.x* Anwendung arbeitet mit einer ODBC 2.*.x* -Treiber verwenden, wird der Treiber-Manager zugeordnet **SQLFetch** Aufrufe von **SQLExtendedFetch** für ein ODBC 2.*.x* Treiber, unterstützt **SQLExtendedFetch**. Wenn die ODBC 2.*.x* -Treiber nicht unterstützt **SQLExtendedFetch**, ordnet der Treiber-Manager **SQLFetch** Aufrufe von **SQLFetch** in der ODBC-2 *.x* Treiber, der nur eine einzelne Zeile abrufen kann.  
   
  Weitere Informationen finden Sie unter [Blockcursor, scrollfähige Cursor und Abwärtskompatibilität](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) in Anhang G: Treiber Richtlinien für die Abwärtskompatibilität.  
   
@@ -222,7 +216,7 @@ SQLRETURN SQLFetch(
   
 -   Fügt 0 (null) oder mehrere Statusdatensätze, die für den Fehler oder die Warnung SQLSTATEs enthalten.  
   
--   Legt die Zeilen- und Zahlenfelder in den statusdatensätzen fest. Wenn **SQLFetch** diverse Zeile oder Spalte kann nicht bestimmt werden. es legt diese Anzahl auf SQL_ROW_NUMBER_UNKNOWN oder SQL_COLUMN_NUMBER_UNKNOWN, bzw. Wenn der Status-Datensatz nicht für eine bestimmte Spalte gelten **SQLFetch** legt die Nummer der Spalte auf SQL_NO_COLUMN_NUMBER fest.  
+-   Legt die Zeilen- und Zahlenfelder in den statusdatensätzen fest. Wenn **SQLFetch** diverse Zeile oder Spalte kann nicht bestimmt werden. es legt diese Anzahl auf SQL_ROW_NUMBER_UNKNOWN oder SQL_COLUMN_NUMBER_UNKNOWN, bzw.. Wenn der Status-Datensatz nicht für eine bestimmte Spalte gelten **SQLFetch** legt die Nummer der Spalte auf SQL_NO_COLUMN_NUMBER fest.  
   
  **SQLFetch** weiterhin das Abrufen von Zeilen, bis sie alle Zeilen im Rowset abgerufen hat. Es gibt SQL_SUCCESS_WITH_INFO zurück, es sei denn, die Fehler in jeder Zeile des Rowsets (nicht einschließlich Zeilen mit dem Status SQL_ROW_NOROW), wird in diesem Fall wird SQL_ERROR zurückgegeben. Insbesondere wenn die Rowsetgröße 1 und ein Fehler auftritt, in dieser Zeile **SQLFetch** gibt SQL_ERROR zurück.  
   
@@ -279,4 +273,3 @@ SQLRETURN SQLFetch(
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

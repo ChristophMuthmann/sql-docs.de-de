@@ -5,24 +5,21 @@ ms.date: 08/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- R
+dev_langs: R
 ms.assetid: 5f3c9864-9c75-4688-947d-0940045b2671
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 08d8d3e6a13066aa79c96ba161e1c9d8f230e60f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c93fc378a7255c5a4f4b8f4833794cc0817c9996
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="revoscaler-functions-for-working-with-sql-server-data"></a>RevoScaleR-Funktionen zum Arbeiten mit SQL Server-Daten
 
@@ -75,4 +72,3 @@ Z. B. Wenn Sie regelmäßig große Mengen von Daten aus einer Datenbank auf eine
 + [RxReadXdf](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxreadxdf) -liest Daten aus einer XDF-Datei in einem Datenrahmen
 
 Weitere Informationen zum Arbeiten mit diesen Funktionen, einschließlich der Verwendung von Daten als Datenquellen [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], finden Sie unter [so wird's gemacht-Handbücher für die Datenanalyse in Microsoft R](https://docs.microsoft.com/r-server/r/how-to-introduction).
-

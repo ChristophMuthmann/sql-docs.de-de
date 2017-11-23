@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +16,19 @@ helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 64a037f0-5065-4f45-9669-6710404a540c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d30d7746cb49609154a9b5e82ec7a85b1a1480e8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d91c7789fbcd0c4dc197f2da13b23c1da34666bb
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-the-transaction-isolation-level"></a>Die Transaction Isolation festlegen Level
-Um die Isolationsebene der Transaktion festgelegt, verwendet eine Anwendung das Verbindungsattribut SQL_ATTR_TXN_ISOLATION. Wenn die Datenquelle die angeforderte Isolationsstufe nicht unterstützt, kann der Treiber oder die Datenquelle eine höhere Ebene festgelegt. Um zu bestimmen, welche Transaktionsisolationsstufen wird eine Datenquelle unterstützt, und welche die Standardisolationsstufe ist, eine Anwendung ruft **SQLGetInfo** mit den Optionen dem SQL_TXN_ISOLATION_OPTION und SQL_DEFAULT_TXN_ISOLATION bzw.  
+Um die Isolationsebene der Transaktion festgelegt, verwendet eine Anwendung das Verbindungsattribut SQL_ATTR_TXN_ISOLATION. Wenn die Datenquelle die angeforderte Isolationsstufe nicht unterstützt, kann der Treiber oder die Datenquelle eine höhere Ebene festgelegt. Um zu bestimmen, welche Transaktionsisolationsstufen wird eine Datenquelle unterstützt, und welche die Standardisolationsstufe ist, eine Anwendung ruft **SQLGetInfo** mit den Optionen dem SQL_TXN_ISOLATION_OPTION und SQL_DEFAULT_TXN_ISOLATION bzw..  
   
  Höheres Maß an Isolation jeder Transaktion bieten, die meisten Schutz für die Integrität von Datenbankdaten. Serialisierbare Transaktionen sind nicht betroffen von anderen Transaktionen garantiert, und daher sichergestellt, dass Datenbankintegrität zu wahren.  
   
@@ -41,4 +39,3 @@ Um die Isolationsebene der Transaktion festgelegt, verwendet eine Anwendung das 
 -   Wenn die Geschwindigkeit ist wichtiger ist als die Genauigkeit und ggf. aufgetretenen Fehlern wahrscheinlich klein sind. Nehmen wir beispielsweise an, dass ein Unternehmen viele kleine Verkäufe macht und große Sales selten sind. Eine Transaktion, die den Gesamtwert der Verkäufe aller geöffneten schätzt kann problemlos mit Read Uncommitted-Isolationsstufe verwenden. Obwohl die Transaktion Aufträge enthält, die geöffnet oder geschlossen und anschließend werden Rollback, würden diese miteinander im Allgemeinen Abbrechen und Transaktion würde viel schneller werden, da er nicht blockiert wird, jedes Mal, wenn diese It solche eine Bestellung auftritt.  
   
  Weitere Informationen finden Sie unter [vollständige Parallelität](../../../odbc/reference/develop-app/optimistic-concurrency.md).
-

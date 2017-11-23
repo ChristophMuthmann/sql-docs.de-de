@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - IDENTITY_TSQL
 - IDENTITY
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - IDENTITY function
 - SELECT statement [SQL Server], IDENTITY function
@@ -24,17 +22,16 @@ helpviewer_keywords:
 - columns [SQL Server], creating
 - identity columns [SQL Server], IDENTITY function
 ms.assetid: ebec77eb-fc02-4feb-b6c5-f0098d43ccb6
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 70fbbbae7e04331130346702c8f974669d53942a
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 43d42425842def7572cf7961a89cae355e6b78ae
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="identity-function-transact-sql"></a>IDENTITY (Funktion) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -118,4 +115,3 @@ GO
  [Sys. identity_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
   
   
-

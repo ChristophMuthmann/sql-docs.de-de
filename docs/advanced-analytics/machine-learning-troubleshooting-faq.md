@@ -5,22 +5,19 @@ ms.date: 06/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e110a2578d6663c2c7c4c2e0dd92957744b44f4a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 6e45e8dc4df1404833fddd9000eb40cad6e5299f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="troubleshoot-machine-learning"></a>Problembehandlung bei Machine learning
 
 Dieser Artikel enthält Informationen zur Problembehandlung im Zusammenhang mit der Installation und Konfiguration von Machine Learning-Funktionen in SQL Server. Die Informationen enthält Links zu den Installationshandbüchern, bekannten Problemen und Anmerkungen zu dieser Version. Anderen Artikeln verknüpft, um von diesem Artikel Ratschläge zur leistungsoptimierung für Machine Learning-Lösungen in SQL Server bereitstellen.
@@ -61,7 +58,7 @@ In den folgenden Artikeln wird beschrieben, die für offline Machine Learning-Fu
 
 Wenn Sie Machine learning-Funktionen auf einem Computer ohne Internetzugang installieren müssen, verwenden Sie die Links in diesem Artikel, die R und Python-Komponenten, die vor dem Setup herunterzuladen:
 
-+ [Machine Learning-Komponenten ohne Internetzugang installieren](../advanced-analytics/r/installing-ml-components-without-internet-access.md)
++ [Installieren von Machine Learning-Komponenten ohne Internetzugriff](../advanced-analytics/r/installing-ml-components-without-internet-access.md)
 
 ### <a name="configuration"></a>Konfiguration
 
@@ -78,4 +75,3 @@ Die folgenden Artikel enthalten Informationen über die Standardwerte sowie zum 
 + [R-Server auf einem virtuellen Azure-Computer einrichten](../advanced-analytics/r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 + [Installieren von R Server für Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)
 + [Abrufen von R-Tools für Visual Studio](https://www.visualstudio.com/vs/rtvs/)
-

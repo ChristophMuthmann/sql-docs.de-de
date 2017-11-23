@@ -8,27 +8,24 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - RESTORE statement, arguments
 - RESTORE statement
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
-caps.latest.revision: 154
+caps.latest.revision: "154"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 387e808d57395db8978611b311f54df441eabc91
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 8a5997cc7692e7cce1459dc64401397cc3b07eaf
-ms.contentlocale: de-de
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE-Anweisungen - Argumente (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -130,7 +127,7 @@ AUS { \<Backup_device > [ **,**... *n* ]| \<Database_snapshot >} Gibt an, in der
   
  \<Backup_device > [ **,**...  *n*  ] Gibt die logischen oder physischen Sicherungsmedien für den Wiederherstellungsvorgang verwenden.  
   
- **Unterstützt von:**[wiederherstellen](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [ RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md), und [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).    
+ **Unterstützt von:**[wiederherstellen](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [ RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md), und [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  \<Backup_device >:: = Gibt ein logisches oder physisches Sicherungsmedium an, die für den Sicherungsvorgang wie folgt verwenden:  
   
@@ -253,7 +250,7 @@ Verschieben Sie **"***Logical_file_name_in_backup***"** TO **"***Operating_syste
  Weitere Informationen finden Sie unter [Kopieren von Datenbanken durch Sichern und Wiederherstellen](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
 CREDENTIAL  
- **Unterstützt von:**[wiederherstellen](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), und [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).    
+ **Unterstützt von:**[wiederherstellen](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), und [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
 **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 bis[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
@@ -283,7 +280,7 @@ RESTART
  Gibt an, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen unterbrochenen Wiederherstellungsvorgang neu starten soll. RESTART startet den Wiederherstellungsvorgang an dem Punkt wieder neu, an dem er unterbrochen wurde.  
   
 RESTRICTED_USER  
- **Unterstützt von:**[wiederherstellen](../../t-sql/statements/restore-statements-transact-sql.md).    
+ **Unterstützt von:**[wiederherstellen](../../t-sql/statements/restore-statements-transact-sql.md).  
   
  Beschränkt den Zugriff auf die neu wiederhergestellte Datenbank auf Mitglieder der **Db_owner**, **Dbcreator**, oder **Sysadmin** Rollen.  RESTRICTED_USER ersetzt die Option DBO_ONLY. DBO_ONLY wurde mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] eingestellt.  
   
@@ -293,7 +290,7 @@ RESTRICTED_USER
  Diese Optionen werden für den Sicherungssatz verwendet, der die wiederherzustellende Sicherung enthält.  
   
 Datei  **=** { *Backup_set_file_number* | **@***Backup_set_file_number* }  
- **Unterstützt von:**[wiederherstellen](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), und [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).    
+ **Unterstützt von:**[wiederherstellen](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), und [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Identifiziert den wiederherzustellenden Sicherungssatz. Wenn *backup_set_file_number* beispielsweise den Wert **1** besitzt, weist dies auf den ersten Sicherungssatz auf dem Sicherungsmedium hin. Wenn *backup_set_file_number* den Wert **2** besitzt, entspricht dies dem zweiten Sicherungssatz. Sie können die *backup_set_file_number* eines Sicherungssatzes mit der [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) -Anweisung abrufen.  
   
@@ -303,7 +300,7 @@ Datei  **=** { *Backup_set_file_number* | **@***Backup_set_file_number* }
 >  Diese Option FILE ist unabhängig von der Option FILE zum Angeben einer Datenbankdatei, FILE  **=**  { *Logical_file_name_in_backup*  |   **@**  *Logical_file_name_in_backup_var* }.  
   
  Kennwort  **=**  { *Kennwort* | **@***Password_variable* }  
- **Unterstützt von:**[wiederherstellen](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), und [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).    
+ **Unterstützt von:**[wiederherstellen](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), und [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Gibt das Kennwort für den Sicherungssatz an. Das Kennwort für einen Sicherungssatz ist eine Zeichenfolge.  
   
@@ -319,7 +316,7 @@ Datei  **=** { *Backup_set_file_number* | **@***Backup_set_file_number* }
  Diese Optionen werden für den Mediensatz insgesamt verwendet.  
   
  MEDIANAME  **=**  { *Media_name* | **@***Media_name_variable*}  
- **Unterstützt von:**[wiederherstellen](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), und [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).    
+ **Unterstützt von:**[wiederherstellen](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), und [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Gibt den Mediennamen an. Falls der Medienname bereitgestellt wird, muss er mit dem Mediennamen auf den Sicherungsvolumes übereinstimmen. Andernfalls wird der Wiederherstellungsvorgang beendet. Falls kein Medienname in der RESTORE-Anweisung angegeben wird, wird keine Überprüfung auf einen übereinstimmenden Mediennamen auf den Sicherungsvolumes ausgeführt.  
   
@@ -327,7 +324,7 @@ Datei  **=** { *Backup_set_file_number* | **@***Backup_set_file_number* }
 >  Das einheitliche Verwenden von Mediennamen in Sicherungs- und Wiederherstellungsvorgängen ermöglicht eine zusätzliche Sicherheitsüberprüfung der Medien, die für den Wiederherstellungsvorgang ausgewählt wurden.  
   
  MEDIAPASSWORD  **=**  { *Mediapassword* | **@***Mediapassword_variable* }  
- **Unterstützt von:**[wiederherstellen](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), und [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).    
+ **Unterstützt von:**[wiederherstellen](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), und [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Stellt das Kennwort für den Mediensatz bereit. Das Kennwort für einen Mediensatz ist eine Zeichenfolge.  
   
@@ -370,7 +367,7 @@ Datei  **=** { *Backup_set_file_number* | **@***Backup_set_file_number* }
  Diese Optionen können Sie bestimmen, ob sicherungsprüfsummen für den Wiederherstellungsvorgang aktiviert werden, und gibt an, ob der Vorgang bei Auftreten eines Fehlers beendet wird.    
   
  { CHECKSUM | NO_CHECKSUM }  
- **Unterstützt von:**[wiederherstellen](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), und [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).    
+ **Unterstützt von:**[wiederherstellen](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), und [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Das Standardverhalten besteht darin, Prüfsummen zu überprüfen, falls sie vorhanden sind, oder den Vorgang ohne Überprüfung fortzusetzen, falls sie nicht vorhanden sind.  
   
@@ -388,7 +385,7 @@ Datei  **=** { *Backup_set_file_number* | **@***Backup_set_file_number* }
  Deaktiviert explizit die Überprüfung von Prüfsummen durch den Wiederherstellungsvorgang.  
   
  { **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR}  
- **Unterstützt von:**[wiederherstellen](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), und [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).    
+ **Unterstützt von:**[wiederherstellen](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), und [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  STOP_ON_ERROR  
  Gibt an, dass der Wiederherstellungsvorgang beendet wird, sobald der erste Fehler festgestellt wird. Das ist das Standardverhalten von RESTORE. Eine Ausnahme stellt VERIFYONLY dar; hier wird das Standardverhalten durch CONTINUE_AFTER_ERROR definiert.  
@@ -423,7 +420,7 @@ Datei  **=** { *Backup_set_file_number* | **@***Backup_set_file_number* }
  Diese Optionen werden nur für Bandmedien verwendet. Die Optionen werden ignoriert, wenn ein anderes Medium als ein Bandmedium verwendet wird.  
   
  REWIND  
- **Unterstützt von:**[wiederherstellen](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), und [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).    
+ **Unterstützt von:**[wiederherstellen](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), und [ RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Gibt an, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Band freigeben und zurückspulen soll. REWIND ist die Standardeinstellung.  
   
@@ -440,7 +437,7 @@ Datei  **=** { *Backup_set_file_number* | **@***Backup_set_file_number* }
 >  Bei Verwendung von "NOREWIND", die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] behält Besitz des Bandlaufwerks, bis eine Backup- oder RESTORE-Anweisung, die in demselben Prozess ausgeführt wird entweder die REWIND oder UNLOAD-Option verwendet, oder die Serverinstanz heruntergefahren wird. Ein Offenhalten des Bandes verhindert, dass andere Prozesse auf das Band zugreifen können. Informationen dazu, wie eine Liste offener Bänder anzeigen und Schließen eines offenen Bandes finden Sie unter [Sicherungsmedien &#40; SQLServer &#41; ](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
  { **ENTLADEN** | "NOUNLOAD"}  
- **Unterstützt von:**[wiederherstellen](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [ RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md), und [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).    
+ **Unterstützt von:**[wiederherstellen](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [ RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md), und [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Diese Optionen werden nur für Bandmedien verwendet. Die Optionen werden ignoriert, wenn ein anderes Medium als ein Bandmedium verwendet wird.  
   
@@ -493,7 +490,7 @@ Verwenden Sie KEEP_REPLICATION beim Einrichten der Replikation zum Arbeiten mit 
  Gibt an, dass der Datenbank ein neuer Service Broker-Bezeichner zugewiesen wird. Da die Datenbank als neuer Service Broker betrachtet wird, werden alle bestehenden Konversationen in der Datenbank sofort entfernt, ohne Nachrichten über das Beenden des Dialogs zu erstellen. Jede Route, die auf den alten Service Broker-Bezeichner verweist, muss mit dem neuen Bezeichner neu erstellt werden.  
   
 #### <a name="pointintimewithoptions"></a>\<Point_in_time_WITH_options >  
- **Unterstützt von:**[RESTORE {DATABASE | LOG}](../../t-sql/statements/restore-statements-transact-sql.md) und nur für das vollständige oder massenprotokollierte Wiederherstellungsmodell.    
+ **Unterstützt von:**[RESTORE {DATABASE | LOG}](../../t-sql/statements/restore-statements-transact-sql.md) und nur für das vollständige oder massenprotokollierte Wiederherstellungsmodell.  
   
  Sie können eine Datenbank für einen bestimmten Zeitpunkt oder eine bestimmte Transaktion wiederherstellen, indem Sie den Zielwiederherstellungspunkt in einer STOPAT-, STOPATMARK- oder STOPBEFOREMARK-Klausel angeben. Die Wiederherstellung zu einem bestimmten Zeitpunkt oder einer bestimmten Transaktion erfolgt immer aus einer Protokollsicherung. In jeder RESTORE LOG-Anweisung der Wiederherstellungssequenz müssen Sie den Zielzeitpunkt oder die Transaktion in einer identischen STOPAT-, STOPATMARK- oder STOPBEFOREMARK-Klausel angeben.  
   
@@ -643,5 +640,4 @@ Verwenden Sie KEEP_REPLICATION beim Einrichten der Replikation zum Arbeiten mit 
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
   
   
-
 

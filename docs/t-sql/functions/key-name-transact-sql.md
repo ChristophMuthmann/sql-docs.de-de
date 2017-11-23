@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - KEY_NAME_TSQL
 - KEY_NAME
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- KEY_NAME function
+dev_langs: TSQL
+helpviewer_keywords: KEY_NAME function
 ms.assetid: 7b693e5d-2325-4bf9-9b45-ad6a23374b41
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: db0ea5d34aae0bd3486bd6a143df187b9d5d7899
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c248e100d97150c7613ec8db7f0e7c97180ee817
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="keyname-transact-sql"></a>KEY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -122,4 +118,3 @@ SELECT KEY_NAME(@ciphertext) AS [Name of Key] ;
  [DECRYPTBYKEYAUTOASYMKEY &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbykeyautoasymkey-transact-sql.md)  
   
   
-

@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLBindCol
-apilocation:
-- sqlsrv32.dll
+apiname: SQLBindCol
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLBindCol
-helpviewer_keywords:
-- SQLBindCol function [ODBC]
+f1_keywords: SQLBindCol
+helpviewer_keywords: SQLBindCol function [ODBC]
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6e7a52f3c90004405f97aa3142c10f64d4e80e26
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 641b08ab3d3aec59f66dd0405770cf19d4690769
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol-Funktion
 **Konformität**  
@@ -126,14 +120,14 @@ SQLRETURN SQLBindCol(
 |01000|Allgemeine Warnung|Treiberspezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |07006|Eingeschränkte Datentypattribut|(DM) die *ColumnNumber* -Argument lautete 0 (null) und die *TargetType* Argument war kein SQL_C_BOOKMARK oder SQL_C_VARBOOKMARK.|  
 |07009|Ungültiger Deskriptorindex|Der Wert für das Argument angegebene *ColumnNumber* die maximale Anzahl von Spalten im Resultset überschritten.|  
-|HY000|Allgemeiner Fehler|Für die es keine spezifischen SQLSTATE wurde und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der * \*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
+|HY000|Allgemeiner Fehler|Für die es keine spezifischen SQLSTATE wurde und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der  *\*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
 |HY001|Fehler bei der speicherbelegung|Der Treiber konnte nicht belegt werden, die zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich ist.|  
 |HY003|Ungültiger Anwendungspuffertyp|Das Argument *TargetType* wurde weder SQL_C_DEFAULT als auch einen gültigen Datentyp.|  
-|HY010|Fehler bei Funktionssequenz|(DM) eine asynchron ausgeführte Funktion das, das zugeordnete Verbindungshandle hieß die *StatementHandle*. Diese asynchronen Funktion wurde weiterhin ausgeführt, wenn **SQLBindCol** aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreamte Parameter abgerufen wurde.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde aufgerufen, für die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, für die * StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.|  
+|HY010|Fehler bei Funktionssequenz|(DM) eine asynchron ausgeführte Funktion das, das zugeordnete Verbindungshandle hieß die *StatementHandle*. Diese asynchronen Funktion wurde weiterhin ausgeführt, wenn **SQLBindCol** aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreamte Parameter abgerufen wurde.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde aufgerufen, für die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, für die  *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.|  
 |HY013|Speicherverwaltungsfehler|Der Funktionsaufruf konnte nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
 |HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM) der Wert für das Argument angegebene *Pufferlänge* war kleiner als 0.<br /><br /> (DM) der Treiber wurde eine ODBC-2. *x* -Treiber die *ColumnNumber* Argument wurde auf 0 festgelegt, sowie den Wert für das Argument angegebene *Pufferlänge* war nicht gleich 4.|  
 |HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Nur trennen, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum Zustand "angehalten" [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYC00|Optionales Feature nicht implementiert|Der Treiber oder die Datenquelle unterstützt nicht die Konvertierung angegeben, durch die Kombination der *TargetType* Argument und der Treiber-spezifische SQL-Datentyp der entsprechenden Spalte.<br /><br /> Das Argument *ColumnNumber* 0 wurde und der Treiber unterstützt keine Lesezeichen.<br /><br /> Der Treiber unterstützt nur ODBC 2. *x* und dem Argument *TargetType* war es eines der folgenden:<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> und das Intervall C-Datentypen in [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) in Anhang D:-Datentypen.<br /><br /> Der Treiber unterstützt nur die ODBC-Versionen vor 3.50 und dem Argument *TargetType* SQL_C_GUID wurde.|  
+|HYC00|Optionales Feature nicht implementiert|Der Treiber oder die Datenquelle unterstützt nicht die Konvertierung angegeben, durch die Kombination der *TargetType* Argument und der Treiber-spezifische SQL-Datentyp der entsprechenden Spalte.<br /><br /> Das Argument *ColumnNumber* 0 wurde und der Treiber unterstützt keine Lesezeichen.<br /><br /> Der Treiber unterstützt nur ODBC 2.. *x* und dem Argument *TargetType* war es eines der folgenden:<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> und das Intervall C-Datentypen in [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) in Anhang D:-Datentypen.<br /><br /> Der Treiber unterstützt nur die ODBC-Versionen vor 3.50 und dem Argument *TargetType* SQL_C_GUID wurde.|  
 |HYT01|Verbindungstimeout abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Das Verbindungstimeout wird über festgelegt **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|Diese Funktion wird im Treiber nicht unterstützt.|(DM) der Treiber verknüpft sind, mit der *StatementHandle* der Funktion nicht unterstützt.|  
   
@@ -151,7 +145,7 @@ SQLRETURN SQLBindCol(
 ## <a name="binding-columns"></a>Binden von Spalten  
  Um eine Spalte binden, ruft die Anwendung **SQLBindCol** und übergibt die Spaltennummer, Typ, Adresse und die Länge eines Datenpuffers mit und die Adresse des ein Längen-/Indikatorpuffers. Informationen, wie diese Adressen verwendet werden finden Sie unter "Puffer Adressen" weiter unten in diesem Abschnitt. Weitere Informationen zum Binden von Spalten finden Sie unter [SQLBindCol verwenden](../../../odbc/reference/develop-app/using-sqlbindcol.md).  
   
- Die Verwendung dieser Puffer ist verzögert; d. h. die Anwendung bindet in **SQLBindCol** , aber der Treiber greift auf sie von anderen Funktionen – nämlich **SQLBulkOperations**, **SQLFetch**, ** SQLFetchScroll**, oder **SQLSetPos**. Es ist die Anwendung dafür verantwortlich, um sicherzustellen, dass der Zeiger im angegebenen **SQLBindCol** bleibt gültig, solange die Bindung wirksam ist. Wenn die Anwendung diese Zeiger ungültig werden kann – z. B. einen Puffer freigegeben, und klicken Sie dann eine Funktion, die sie ungültig werden erwartet, die Folgen sind nicht definiert. Weitere Informationen finden Sie unter [Puffer verzögert](../../../odbc/reference/develop-app/deferred-buffers.md).  
+ Die Verwendung dieser Puffer ist verzögert; d. h. die Anwendung bindet in **SQLBindCol** , aber der Treiber greift auf sie von anderen Funktionen – nämlich **SQLBulkOperations**, **SQLFetch**,  **SQLFetchScroll**, oder **SQLSetPos**. Es ist die Anwendung dafür verantwortlich, um sicherzustellen, dass der Zeiger im angegebenen **SQLBindCol** bleibt gültig, solange die Bindung wirksam ist. Wenn die Anwendung diese Zeiger ungültig werden kann – z. B. einen Puffer freigegeben, und klicken Sie dann eine Funktion, die sie ungültig werden erwartet, die Folgen sind nicht definiert. Weitere Informationen finden Sie unter [Puffer verzögert](../../../odbc/reference/develop-app/deferred-buffers.md).  
   
  Die Bindung bleibt wirksam, bis sie durch eine neue Bindung ersetzt wird, die Spalte entfernt wird oder die Anweisung wird freigegeben.  
   
@@ -261,7 +255,7 @@ SQLRETURN SQLBindCol(
   
 1.  Aufrufe **SQLGetStmtAttr** um ARD-Handle abzurufen.  
   
-2.  Aufrufe **SQLGetDescField** zum Abrufen dieser Deskriptorfeld SQL_DESC_COUNT und, wenn der Wert in der *ColumnNumber* Arguments überschreitet den Wert von SQL_DESC_COUNT Aufrufe **SQLSetDescField ** erhöhen den Wert der SQL_DESC_COUNT auf *ColumnNumber*.  
+2.  Aufrufe **SQLGetDescField** zum Abrufen dieser Deskriptorfeld SQL_DESC_COUNT und, wenn der Wert in der *ColumnNumber* Arguments überschreitet den Wert von SQL_DESC_COUNT Aufrufe **SQLSetDescField**  erhöhen den Wert der SQL_DESC_COUNT auf *ColumnNumber*.  
   
 3.  Aufrufe **SQLSetDescField** mehrere Male auf, um die folgenden Felder von der ARD Werte zuzuweisen:  
   
@@ -391,4 +385,3 @@ int main() {
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

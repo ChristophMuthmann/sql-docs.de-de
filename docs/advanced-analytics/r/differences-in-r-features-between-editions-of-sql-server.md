@@ -1,31 +1,33 @@
 ---
 title: Unterschiede in Machine Learning-Funktionen zwischen SQL Server-Editionen | Microsoft Docs
 ms.custom: 
-ms.date: 08/22/2017
-ms.prod: sql-server-2016
+ms.date: 11/16/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8b33a3e2-04d3-4bad-9335-9568ae09db0b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: bd59eae3617b81d3368703eba7c25a615e6a52f1
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b9b520b7fc7e97498f4b46a43ad991558025123a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
-
 # <a name="differences-in-machine-learning-features-between-editions-of-sql-server"></a>Unterschiede in Machine Learning-Funktionen zwischen SQL Server-Editionen
  
- Unterstützung für Machine Learning ist in den folgenden Editionen von SQL Server 2016 und SQL Server-2017 verfügbar:
+ Unterstützung für Machine Learning ist in SQL Server 2016 und SQL Server-2017 verfügbar. In diesem Artikel listet die Editionen, die das Feature zu unterstützen, sind zusätzliche Einschränkungen, die in bestimmten Editionen gelten und sind Funktionen, die nur in bestimmten Editionen verfügbar.
+
+ > [!NOTE]
+ > SQL Server-Machine Learning umfasst in der Regel keine der [operationalisierung](https://docs.microsoft.com/machine-learning-server/what-is-operationalization) Funktionen, die in Microsoft R Server "oder" Machine Learning-Server enthalten sind.
+ > 
+ > Wenn Sie diese Funktionen benötigen, können Sie Microsoft R Server oder Computer Learning separat installieren zur Unterstützung einer Bereitstellung von Vorhersagemodellen als Webdienst. 
 
 ## <a name="summary-of-differences"></a>Zusammenfassung der Unterschiede
 
@@ -35,11 +37,11 @@ ms.lasthandoff: 09/01/2017
      
      SQL Server-2017 umfasst Microsoft Machine Learning-Server (eigenständig). SQL Server 2016 umfasst Microsoft R Server (eigenständig). Diese Funktion unterstützt operationalisierung von Machine learning, die nicht erfordert, dass die Verwendung von SQL Server als computekontext verwenden.
 
-     Es gibt keine Einschränkungen für diese Funktionen in der Enterprise Edition, die durch die Parallelisierung und streaming optimierte Leistung und Skalierbarkeit bietet. Diese Edition maximiert auch die Verwendung der plattformunterstützung für streaming und parallele Ausführung.
+     Es gibt keine Einschränkungen für diese Funktionen in der Enterprise Edition, die durch die Parallelisierung und streaming optimierte Leistung und Skalierbarkeit bietet. Diese Edition maximiert auch die Verwendung der plattformunterstützung für streaming und parallele Ausführung. Das bedeutet, die Eingabedaten anders als Standard Edition muss nicht in den Arbeitsspeicher passen jedoch gestreamt werden.
      
      In der Datenbank-Analysen, die mit SQL Server unterstützt die Ressourcenkontrolle externer Skripts, die Nutzung von Serverressourcen anpassen.
      
-     Neuere Versionen von Microsoft R Server einschließen, eine verbesserte Version des Moduls operationalisierung, die eine schnelle und sichere Bereitstellung unterstützt und Freigabe von R-Lösungen. Weitere Informationen finden Sie unter [Mrsdeploy](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package).
+     Neuere Versionen von Microsoft R Server und Machine Learning-Servers gehören eine verbesserte Version des Moduls operationalisierung, die eine schnelle und sichere Bereitstellung unterstützt und Freigabe von R-Lösungen. Weitere Informationen finden Sie unter [Operationalisieren Analysen mit Machine Learning-Server](https://docs.microsoft.com/machine-learning-server/what-is-operationalization).
 
 -   **Developer Edition**
 
@@ -47,20 +49,19 @@ ms.lasthandoff: 09/01/2017
   
 -   **Standard Edition**
 
-     Verfügt über alle Funktionen in der Datenbank-Analysefunktionen von mit Ausnahme der Ressourcenkontrolle mit Enterprise Edition enthalten. Leistung und Skalierung ist außerdem beschränkt: die Daten, die verarbeitet werden können, müssen in den Serverarbeitsspeicher passen und Verarbeitung an einen einzelnen Compute-Thread beschränkt ist, selbst bei Verwendung der **"revoscaler"** Funktionen.
+     Verfügt über alle Funktionen in der Datenbank-Analysefunktionen von mit Ausnahme der Ressourcenkontrolle mit Enterprise Edition enthalten. Leistung und Skalierung sind zudem beschränkt: die Daten, die verarbeitet werden können, müssen in den Serverarbeitsspeicher passen und Verarbeitung an einen einzelnen Compute-Thread beschränkt ist, selbst bei Verwendung der **"revoscaler"** Funktionen.
   
 -   **Express und Web-Editionen**
   
-     Nur Express Edition with Advanced Services enthält Machine learning-Funktionen. Die Leistungseinschränkungen ähneln denen in der Standard Edition. Web Edition ist nicht für Aufgaben wie das Erstellen von Machine Learning-Modellen vorgesehen; die PREDICT-Funktion können Sie jedoch bewerten Modelle trainiert an anderer Stelle verwenden.
+     Nur Express Edition with Advanced Services enthält Machine learning-Funktionen. Die Leistungseinschränkungen ähneln denen in der Standard Edition. 
+     
+     Web Edition ist nicht für Aufgaben wie das Erstellen von Machine Learning-Modellen vorgesehen. Die PREDICT-Funktion können Sie jedoch bewerten Modelle trainiert an anderer Stelle verwenden.
 
 -   **Azure SQL-Datenbank**
   
-     Machine Learning-Funktionen wie R und Python-Skripts werden in Azure SQL-Datenbank derzeit nicht unterstützt.
-     
-     Weitere Informationen und Hinweise zu, wenn diese Funktion zur Verfügung stehen, werden die SQL Server-Blog finden Sie unter: [Python in SQL Server-2017: Erweiterte in Datenbank-Machine Learning](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)
+     Nach der Veröffentlichung einer anfänglichen Test-R Services ist zurzeit **nicht** ausstehende weiteren Entwicklung in Azure SQL-Datenbank verfügbar. 
 
-
-### <a name="languages-supported-in-all-editions"></a>In allen Editionen unterstützten Sprachen
+### <a name="external-script-languages-supported"></a>Externes Skriptsprachen unterstützt
 
 Für alle Editionen werden die folgenden Machine Learning-Sprachen unterstützt:
 
@@ -85,15 +86,19 @@ Zudem wird empfohlen, dass Sie konfigurieren [Resource Governor](../../relationa
 
 ## <a name="machine-learning-in-developer-edition"></a>Machine learning-Developer Edition
 
-Die Developer Edition bietet die gleiche Leistung, die Enterprise Edition bietet. Die Verwendung der Developer Edition wird jedoch nicht für Produktionsumgebungen unterstützt.
+Developer Edition bietet Leistung entspricht, die Enterprise Edition.
+
+Verwenden der Developer Edition wird für produktionsumgebungen nicht unterstützt.
 
 ## <a name="machine-learning-in-standard-edition"></a>Machine learning-Standard Edition
 
 Auch die Standard Edition sollte einige Leistungsvorteile bieten, im Vergleich zu Standard R-Paketen, die die gleiche Hardwarekonfiguration angeben.
 
-Die Ressourcenkontrolle unterstützt Standard Edition nicht. Verwenden die Ressourcenkontrolle ist die beste Methode zum Anpassen von Serverressourcen zur Unterstützung von verschiedenen arbeitsauslastungen wie z. B. Modell trainieren und bewerten.
+Die Ressourcenkontrolle unterstützt Standard Edition nicht. Standard Edition bietet auch nur eine eingeschränkte Leistung und Skalierbarkeit im Vergleich zu Enterprise und Developer Edition.
 
-Die Standard Edition bietet auch nur eine eingeschränkte Leistung und Skalierbarkeit im Vergleich zur Enterprise und Developer Edition. Alle der **"revoscaler"** Funktionen und Pakete sind in der Standard Edition enthalten, aber der Dienst, der gestartet wird, und R-Skripts verwaltet ist beschränkt, in die Anzahl von Prozessen, die sie verwenden kann. Darüber hinaus müssen vom Skript verarbeitete Daten in den Arbeitsspeicher passen.  Die gleichen Einschränkungen gelten für Lösungen, in denen **Revoscalepy**.
+Alle der **"revoscaler"** Funktionen und Pakete sind in der Standard Edition enthalten, aber der Dienst, der gestartet wird, und R-Skripts verwaltet ist beschränkt, in die Anzahl von Prozessen, die sie verwenden kann. Darüber hinaus müssen vom Skript verarbeitete Daten in den Arbeitsspeicher passen.
+
+Die gleichen Einschränkungen gelten für Lösungen, in denen **Revoscalepy**.
 
 ## <a name="machine-learning-in-express-edition-with-advanced-services"></a>Machine learning-Express Edition with Advanced Services
 
@@ -101,7 +106,7 @@ Express Edition unterliegt denselben Einschränkungen wie Standard Edition.
 
 ## <a name="machine-learning-in-web-edition"></a>Machine learning-im Web Edition
 
-Web Edition unterstützt keine Ausführung von R oder Python-Skripts. Sie können jedoch die Vorhersagefunktion ausführen [native Bewertung](../sql-native-scoring.md) auf ein Modell, das auf einer anderen Instanz von SQL Server oder R trainiert und klicken Sie dann in das erforderliche Binärformat gespeichert wurde.
+Web Edition unterstützt keine Ausführung von R oder Python-Skripts. Allerdings können Sie die [PREDICT](../../t-sql/queries/predict-transact-sql.md) Funktion ausführen [native Bewertung](../sql-native-scoring.md) auf ein Modell, das auf einer anderen Instanz von SQL Server oder R trainiert und klicken Sie dann in das erforderliche Binärformat gespeichert wurde.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
@@ -112,7 +117,6 @@ Weitere Informationen finden Sie in den folgenden Themen:
 
 Weitere Informationen zu anderen Features in SQL Server finden Sie unter:
 
-+ [Von den SQL Server 2016-Editionen unterstützte Funktionen](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) 
++ [Editionen und unterstützten Funktionen von SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) 
 
-Weitere Informationen zu Microsoft R-Funktionen und wie Sie Ihre Lösung für große Datasets optimieren können, finden Sie unter der [Microsoft R Server](https://docs.microsoft.com/r-server/r/tutorial-large-data-tips) Dokumentation.
-
+Weitere Informationen dazu, wie Sie Ihre Lösung für große Datasets optimieren können, finden Sie unter [Tipps für Computerressourcen mit umfangreichen Daten in R](https://docs.microsoft.com/machine-learning-server/r/tutorial-large-data-tips) Dokumentation.

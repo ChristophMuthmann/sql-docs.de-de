@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetDiagField
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetDiagField
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetDiagField
-helpviewer_keywords:
-- SQLGetDiagField function [ODBC]
+f1_keywords: SQLGetDiagField
+helpviewer_keywords: SQLGetDiagField function [ODBC]
 ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3dbc86d0dd1be8ef4e8ca19f8a7f25147a35fcc6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0cd8f64eb18fc6e1fb456b03ef65ef2dc33cc140
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField-Funktion
 **Konformität**  
@@ -162,7 +156,7 @@ SQLRETURN SQLGetDiagField(
   
  Treiber können treiberspezifische Header und Datensatzfelder in der Struktur Diagnosedaten definieren.  
   
- Eine ODBC 3*.x* Anwendung arbeiten mit einer ODBC 2*.x* Treiber wird in der Lage, rufen Sie **SQLGetDiagField** nur mit einem *DiagIdentifier* Argument SQL_DIAG_CLASS_ORIGIN, SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_NUMBER, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME oder SQL_DIAG_SQLSTATE. Alle anderen Diagnosefelder gibt SQL_ERROR zurück.  
+ Eine ODBC 3.*.x* Anwendung arbeiten mit einer ODBC 2.*.x* Treiber wird in der Lage, rufen Sie **SQLGetDiagField** nur mit einem *DiagIdentifier* Argument SQL_DIAG_CLASS_ORIGIN, SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_NUMBER, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME oder SQL_DIAG_SQLSTATE. Alle anderen Diagnosefelder gibt SQL_ERROR zurück.  
   
 ## <a name="header-fields"></a>Headerfelder  
  Headerfelder, die in der folgenden Tabelle aufgeführten enthalten sein können, der *DiagIdentifier* Argument.  
@@ -238,10 +232,10 @@ n-Definition *|"ERSTELLEN SIE DOMÄNE"|SQL_DIAG_CREATE_DOMAIN|
   
 -   Datensätze, die für die Nummer der Zeile unbekannt ist werden vor allen anderen Datensätzen angezeigt, da SQL_ROW_NUMBER_UNKNOWN definiert ist, um – 2 werden.  
   
--   Für alle Datensätze, die an bestimmten Zeilen betreffen, werden die Datensätze durch den Wert im Feld SQL_DIAG_ROW_NUMBER sortiert. Alle Fehler und Warnungen der ersten Zeile betroffen aufgeführt sind, und klicken Sie dann alle Fehler und Warnungen der nächsten Zeile betroffenen usw.  
+-   Für alle Datensätze, die an bestimmten Zeilen betreffen, werden die Datensätze durch den Wert im Feld SQL_DIAG_ROW_NUMBER sortiert. Alle Fehler und Warnungen der ersten Zeile betroffen aufgeführt sind, und klicken Sie dann alle Fehler und Warnungen der nächsten Zeile betroffenen usw..  
   
 > [!NOTE]  
->  Die ODBC 3*.x* Treibermanager sortiert nicht Statusdatensätze in der Diagnose Warteschlange Wenn SQLSTATE 01 s 01 (Fehler in Zeile) wird zurückgegeben, von einer ODBC 2*.x* Treiber oder, wenn SQLSTATE 01 s 01 (Fehler in Zeile) wird zurückgegeben, die von einer ODBC 3*.x* Treiber beim **SQLExtendedFetch** aufgerufen wird oder **SQLSetPos** wird aufgerufen, für einen Cursor, die mit positioniert **SQLExtendedFetch** .  
+>  Die ODBC 3.*.x* Treibermanager sortiert nicht Statusdatensätze in der Diagnose Warteschlange Wenn SQLSTATE 01 s 01 (Fehler in Zeile) wird zurückgegeben, von einer ODBC 2.*.x* Treiber oder, wenn SQLSTATE 01 s 01 (Fehler in Zeile) wird zurückgegeben, die von einer ODBC 3*.x* Treiber beim **SQLExtendedFetch** aufgerufen wird oder **SQLSetPos** wird aufgerufen, für einen Cursor, die mit positioniert **SQLExtendedFetch** .  
   
  Innerhalb jeder Zeile, oder für alle Datensätze, die für die Nummer der Zeile unbekannt ist oder eine Zeile nicht entsprechen, oder für alle diese Datensätze mit einer Zeilennummer SQL_NO_ROW_NUMBER gleich, richtet sich der erste Datensatz aufgeführt werden anhand eines Satzes von Regeln zu sortieren. Nach dem ersten Datensatz ist die Reihenfolge von den anderen Datensätzen, die Auswirkungen auf eine Zeile nicht definiert. Eine Anwendung kann nicht davon ausgehen, dass Fehler nach dem ersten Datensatz Warnungen vorausgehen. Anwendungen sollten die vollständige Diagnosedaten-Struktur, um vollständige Informationen zu einer nicht erfolgreichen Aufruf einer Funktion Abrufen überprüfen.  
   
@@ -266,4 +260,3 @@ n-Definition *|"ERSTELLEN SIE DOMÄNE"|SQL_DIAG_CREATE_DOMAIN|
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

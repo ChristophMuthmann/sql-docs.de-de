@@ -5,26 +5,23 @@ ms.date: 10/17/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- python-services
+ms.technology: python-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2017
+applies_to: SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
 ms.openlocfilehash: 7dcda2d17413e6c660510498c4b3ea770bb0b09d
-ms.contentlocale: de-de
-ms.lasthandoff: 10/18/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="step-6-operationalize-the-python-model-using-sql-server"></a>Schritt 6: Operationalisieren Sie die Python-Modell mithilfe von SQL Server
 
@@ -188,7 +185,7 @@ In diesem Abschnitt erfahren Sie, wie einzelne Vorhersagen zu erstellen, indem z
 + [PredictTipSingleModeRxPy](#PredictTipSingleModeRxPy) für die einzelnen Zeile Bewertung unter Verwendung des Modells Revoscalepy dient.
 + Wenn Sie noch nicht geschehen ein Modell trainiert, wiederherstellen, [Schritt 5](sqldev-py5-train-and-save-a-model-using-t-sql.md)!
 
-Beide Modelle werden als Eingabe eine Reihe von einzelnen Werten, z. B. Reisenden Count, Reise Abstand usw. Eine Funktion mit Tabellenrückgabe `fnEngineerFeatures`, wird verwendet, um Breiten-und Längengrade der Eingaben in ein neues Feature konvertieren, direkte Abstand. [Lektion 4](sqldev-py4-create-data-features-using-t-sql.md) enthält eine Beschreibung dieser Funktion mit Tabellenrückgabe.
+Beide Modelle werden als Eingabe eine Reihe von einzelnen Werten, z. B. Reisenden Count, Reise Abstand usw.. Eine Funktion mit Tabellenrückgabe `fnEngineerFeatures`, wird verwendet, um Breiten-und Längengrade der Eingaben in ein neues Feature konvertieren, direkte Abstand. [Lektion 4](sqldev-py4-create-data-features-using-t-sql.md) enthält eine Beschreibung dieser Funktion mit Tabellenrückgabe.
 
 Sowohl gespeicherten Prozeduren erstellen Sie eine Bewertung auf der Grundlage der Python-Modells.
 
@@ -377,4 +374,3 @@ In diesem Lernprogramm haben Sie gelernt, wie mit Python-Code eingebettet in ges
 ## <a name="see-also"></a>Siehe auch
 
 [Machine Learning-Dienste mit Python](../python/sql-server-python-services.md)
-

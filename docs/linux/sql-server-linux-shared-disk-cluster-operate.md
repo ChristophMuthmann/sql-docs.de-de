@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
+ms.openlocfilehash: 8af38fffc17a1b5198dbc85eff5c66a7c2acbb1f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: a8595b61afd374d6127f6cc7b9b363f325a257b5
-ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Failoverclusterinstanz – SQL Server on Linux Betrieb
 
@@ -86,4 +85,3 @@ crm resource migrate <FCIResourceName> <NewHostNode>
 - [Konfigurieren Sie Failoverclusterinstanz – SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
 
 <!--Image references-->
-

@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- connections [ADO]
+helpviewer_keywords: connections [ADO]
 ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2a05c4da49edef0635e95cc5aaf43976ff0753af
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 47aa7f058db324c7388801ae6a391b6c0c24ae1d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connecting-to-data-sources"></a>Herstellen einer Verbindung mit Datenquellen
 Ein ADO **Verbindung** -Objekt stellt eine eindeutige Sitzung mit einer Datenquelle, z. B. ein DBMS, einen Speicher oder eine durch Trennzeichen getrennte Textdatei dar. Im Fall von einem Client/Server-Datenbanksystem kann die ADO-Verbindung eine tatsächliche Netzwerk-Verbindung mit dem Server sein.  
@@ -36,13 +33,12 @@ Ein ADO **Verbindung** -Objekt stellt eine eindeutige Sitzung mit einer Datenque
   
  Dieser Abschnitt enthält die folgenden Themen.  
   
--   [Verwenden ein Verbindungsobjekt](../../../ado/guide/data/using-a-connection-object.md)  
+-   [Verwenden eines Verbindungsobjekts](../../../ado/guide/data/using-a-connection-object.md)  
   
--   [Mithilfe eines Recordset-Objekts](../../../ado/guide/data/using-a-recordset-object.md)  
+-   [Verwenden eines Recordset-Objekts](../../../ado/guide/data/using-a-recordset-object.md)  
   
 -   [Erstellen einer Verbindungszeichenfolge](../../../ado/guide/data/creating-a-connection-string.md)  
   
 -   [Angeben von Verbindungseigenschaften](../../../ado/guide/data/specifying-connection-properties.md)  
   
 -   [Steuern von Transaktionen](../../../ado/guide/data/controlling-transactions-ado.md)
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 53e7e3f7-edab-4d0b-8943-45442ba3ebc9
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 390d9801346f904e77647c1784d810672b45b6cf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bf5c6405d4492a4cf559c3a62f53f69eb8a3fdeb
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="driver-aware-connection-pooling"></a>Treiberfähiges Verbindungspooling
 Treiber treiberfähiges Verbindungspooling ist eine neue Funktion des Treiber-Managers in Windows 8. Treiber treiberfähiges Verbindungspooling kann Treiber Writer zum Anpassen der Verbindungspooling-Verhalten in ihren ODBC-Treiber.  
@@ -46,5 +44,4 @@ Treiber treiberfähiges Verbindungspooling ist eine neue Funktion des Treiber-Ma
  Eine Anwendung kann einen Treiber Verbindungspooling Awareness verwenden, durch Festlegen der SQL_ATTR_CONNECTION_POOLING-Attributs auf SQL_CP_DRIVER_AWARE mit [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md). Wenn ein Treiber Verbindungspool Erkennung nicht unterstützt, Treibermanager-Verbindungspooling verwendet werden (wie bei SQL_CP_ONE_PER_HENV wäre, statt SQL_CP_DRIVER_AWARE angegeben worden identisch). ODBC 2.x und 3.x-Anwendungen können diese Funktion aktivieren.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Entwickeln einen ODBC-Treiber](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)
-
+ [Developing an ODBC Driver (Entwickeln eines ODBC-Treibers)](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)

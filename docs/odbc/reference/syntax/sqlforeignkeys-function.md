@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLForeignKeys
-apilocation:
-- sqlsrv32.dll
+apiname: SQLForeignKeys
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLForeignKeys
-helpviewer_keywords:
-- SQLForeignKeys function [ODBC]
+f1_keywords: SQLForeignKeys
+helpviewer_keywords: SQLForeignKeys function [ODBC]
 ms.assetid: 07f3f645-f643-4d39-9a10-70a72f24e608
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c57c8e1aa0548ceaec3342d5e668616b3292400c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0d56fd87c4c9612fb520b1a54b9d0c2cab645223
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlforeignkeys-function"></a>SQLForeignKeys-Funktion
 **Konformität**  
@@ -165,9 +159,9 @@ SQLRETURN SQLForeignKeys(
   
  Die Länge von VARCHAR-Spalten werden nicht in der Tabelle angezeigt; die tatsächliche Länge hängen von der Datenquelle ab. Um zu bestimmen, die tatsächliche Länge der PKTABLE_CAT FKTABLE_CAT, PKTABLE_SCHEM oder FKTABLE_SCHEM, PKTABLE_NAME oder FKTABLE_NAME, und PKCOLUMN_NAME oder FKCOLUMN_NAME Spalten kann eine Anwendung aufrufen **SQLGetInfo** mit der SQL_MAX_ CATALOG_NAME_LEN, SQL_MAX_SCHEMA_NAME_LEN SQL_MAX_TABLE_NAME_LEN und SQL_MAX_COLUMN_NAME_LEN-Optionen.  
   
- Die folgenden Spalten wurden umbenannt für ODBC 3*. X.* Die Spalte Namensänderungen wirken Abwärtskompatibilität sich nicht, da Anwendungen Spaltennummer binden.  
+ Die folgenden Spalten wurden umbenannt für ODBC 3.*. X.* Die Spalte Namensänderungen wirken Abwärtskompatibilität sich nicht, da Anwendungen Spaltennummer binden.  
   
-|ODBC 2.0-Spalte|ODBC 3*.x* Spalte|  
+|ODBC 2.0-Spalte|ODBC 3.*.x* Spalte|  
 |---------------------|-----------------------|  
 |PKTABLE_QUALIFIER|PKTABLE_CAT|  
 |PKTABLE_OWNER|PKTABLE_SCHEM|  
@@ -187,8 +181,8 @@ SQLRETURN SQLForeignKeys(
 |FKTABLE_NAME (ODBC 1.0)|7|Varchar, die nicht NULL|Name der Fremdschlüsseltabelle.|  
 |FKCOLUMN_NAME (ODBC 1.0)|8|Varchar, die nicht NULL|Name der Fremdschlüsselspalte. Der Treiber gibt eine leere Zeichenfolge für eine Spalte, die nicht über einen Namen verfügt.|  
 |KEY_SEQ (ODBC 1.0)|9|Smallint nicht NULL|Spalte Sequenznummer im Schlüssel (beginnend mit 1).|  
-|UPDATE_RULE (ODBC 1.0)|10|Smallint|Aktion für den Fremdschlüssel angewendet werden, wenn der SQL-Vorgang ist **UPDATE**. Dabei kann es sich um einen der folgenden Werte aufweisen. (Die referenzierte Tabelle ist die Tabelle, die den primären Schlüssel aufweist, die verweisende Tabelle ist die Tabelle, die den Fremdschlüssel aufweist.)<br /><br /> SQL_CASCADE: Wenn der Primärschlüssel der Tabelle, auf die verwiesen wird, aktualisiert wird, wird auch die Fremdschlüssel der verweisenden Tabelle aktualisiert.<br /><br /> SQL_NO_ACTION: Wenn ein Update des Primärschlüssels von die referenzierte Tabelle würde dazu führen, dass "zurückbleiben Reference" in der verweisenden Tabelle (d. h. Zeilen in der verweisenden Tabelle müsste keine Entsprechungen in der referenzierten Tabelle), das Update abgelehnt. Wenn ein Update des Fremdschlüssels der verweisenden Tabelle einen Wert führen würde, der als Wert des Primärschlüssels der referenzierten Tabelle nicht vorhanden ist, wird das Update abgelehnt. (Diese Aktion ist identisch mit der Aktion SQL_RESTRICT in ODBC 2*.x*.)<br /><br /> SQL_SET_NULL: Wenn eine oder mehrere Zeilen in der referenzierten Tabelle so aktualisiert werden, die eine oder mehrere Komponenten des Primärschlüssels geändert werden, werden die Komponenten des Fremdschlüssels in der verweisenden Tabelle, die die geänderten Komponenten des primären Schlüssels entsprechen festgelegt auf NULL in der verweisenden Tabelle alle übereinstimmenden Zeilen.<br /><br /> SQL_SET_DEFAULT: Wenn eine oder mehrere Zeilen in der referenzierten Tabelle so aktualisiert werden, die eine oder mehrere Komponenten des Primärschlüssels geändert werden, werden die Komponenten des Fremdschlüssels in der verweisenden Tabelle, die die geänderten Komponenten des primären Schlüssels entsprechen Legen Sie auf die entsprechenden Standardwerte in der verweisenden Tabelle alle übereinstimmenden Zeilen.<br /><br /> NULL, wenn Sie auf die Datenquelle nicht verfügbar.|  
-|DELETE_RULE (ODBC 1.0)|11|Smallint|Aktion für den Fremdschlüssel angewendet werden, wenn der SQL-Vorgang ist **löschen**. Dabei kann es sich um einen der folgenden Werte aufweisen. (Die referenzierte Tabelle ist die Tabelle, die den primären Schlüssel aufweist, die verweisende Tabelle ist die Tabelle, die den Fremdschlüssel aufweist.)<br /><br /> SQL_CASCADE: Wenn eine Zeile in der referenzierten Tabelle gelöscht wird, werden alle übereinstimmenden Zeilen in den verweisenden Tabellen ebenfalls gelöscht.<br /><br /> SQL_NO_ACTION: Wenn ein Löschvorgang einer Zeile in die referenzierte Tabelle würde dazu führen, dass "zurückbleiben Reference" in der verweisenden Tabelle (d. h. Zeilen in der verweisenden Tabelle müsste keine Entsprechungen in der referenzierten Tabelle), das Update abgelehnt. (Diese Aktion ist identisch mit der Aktion SQL_RESTRICT in ODBC 2*.x*.)<br /><br /> SQL_SET_NULL: Wenn eine oder mehrere Zeilen in der referenzierten Tabelle gelöscht werden, wird jede Komponente des Fremdschlüssels der verweisenden Tabelle auf NULL in der verweisenden Tabelle alle übereinstimmenden Zeilen festgelegt.<br /><br /> SQL_SET_DEFAULT: Wenn eine oder mehrere Zeilen in der referenzierten Tabelle gelöscht werden, wird jede Komponente des Fremdschlüssels der verweisenden Tabelle gilt in der verweisenden Tabelle alle übereinstimmenden Zeilen festgelegt.<br /><br /> NULL, wenn Sie auf die Datenquelle nicht verfügbar.|  
+|UPDATE_RULE (ODBC 1.0)|10|Smallint|Aktion für den Fremdschlüssel angewendet werden, wenn der SQL-Vorgang ist **UPDATE**. Dabei kann es sich um einen der folgenden Werte aufweisen. (Die referenzierte Tabelle ist die Tabelle, die den primären Schlüssel aufweist, die verweisende Tabelle ist die Tabelle, die den Fremdschlüssel aufweist.)<br /><br /> SQL_CASCADE: Wenn der Primärschlüssel der Tabelle, auf die verwiesen wird, aktualisiert wird, wird auch die Fremdschlüssel der verweisenden Tabelle aktualisiert.<br /><br /> SQL_NO_ACTION: Wenn ein Update des Primärschlüssels von die referenzierte Tabelle würde dazu führen, dass "zurückbleiben Reference" in der verweisenden Tabelle (d. h. Zeilen in der verweisenden Tabelle müsste keine Entsprechungen in der referenzierten Tabelle), das Update abgelehnt. Wenn ein Update des Fremdschlüssels der verweisenden Tabelle einen Wert führen würde, der als Wert des Primärschlüssels der referenzierten Tabelle nicht vorhanden ist, wird das Update abgelehnt. (Diese Aktion ist identisch mit der Aktion SQL_RESTRICT in ODBC 2.*.x*.)<br /><br /> SQL_SET_NULL: Wenn eine oder mehrere Zeilen in der referenzierten Tabelle so aktualisiert werden, die eine oder mehrere Komponenten des Primärschlüssels geändert werden, werden die Komponenten des Fremdschlüssels in der verweisenden Tabelle, die die geänderten Komponenten des primären Schlüssels entsprechen festgelegt auf NULL in der verweisenden Tabelle alle übereinstimmenden Zeilen.<br /><br /> SQL_SET_DEFAULT: Wenn eine oder mehrere Zeilen in der referenzierten Tabelle so aktualisiert werden, die eine oder mehrere Komponenten des Primärschlüssels geändert werden, werden die Komponenten des Fremdschlüssels in der verweisenden Tabelle, die die geänderten Komponenten des primären Schlüssels entsprechen Legen Sie auf die entsprechenden Standardwerte in der verweisenden Tabelle alle übereinstimmenden Zeilen.<br /><br /> NULL, wenn Sie auf die Datenquelle nicht verfügbar.|  
+|DELETE_RULE (ODBC 1.0)|11|Smallint|Aktion für den Fremdschlüssel angewendet werden, wenn der SQL-Vorgang ist **löschen**. Dabei kann es sich um einen der folgenden Werte aufweisen. (Die referenzierte Tabelle ist die Tabelle, die den primären Schlüssel aufweist, die verweisende Tabelle ist die Tabelle, die den Fremdschlüssel aufweist.)<br /><br /> SQL_CASCADE: Wenn eine Zeile in der referenzierten Tabelle gelöscht wird, werden alle übereinstimmenden Zeilen in den verweisenden Tabellen ebenfalls gelöscht.<br /><br /> SQL_NO_ACTION: Wenn ein Löschvorgang einer Zeile in die referenzierte Tabelle würde dazu führen, dass "zurückbleiben Reference" in der verweisenden Tabelle (d. h. Zeilen in der verweisenden Tabelle müsste keine Entsprechungen in der referenzierten Tabelle), das Update abgelehnt. (Diese Aktion ist identisch mit der Aktion SQL_RESTRICT in ODBC 2.*.x*.)<br /><br /> SQL_SET_NULL: Wenn eine oder mehrere Zeilen in der referenzierten Tabelle gelöscht werden, wird jede Komponente des Fremdschlüssels der verweisenden Tabelle auf NULL in der verweisenden Tabelle alle übereinstimmenden Zeilen festgelegt.<br /><br /> SQL_SET_DEFAULT: Wenn eine oder mehrere Zeilen in der referenzierten Tabelle gelöscht werden, wird jede Komponente des Fremdschlüssels der verweisenden Tabelle gilt in der verweisenden Tabelle alle übereinstimmenden Zeilen festgelegt.<br /><br /> NULL, wenn Sie auf die Datenquelle nicht verfügbar.|  
 |FK_NAME (ODBC 2.0)|12|Varchar|Foreign Key-Name. NULL, wenn Sie auf die Datenquelle nicht verfügbar.|  
 |PK_NAME (ODBC 2.0)|13|Varchar|Der Name für den Primärschlüssel. NULL, wenn Sie auf die Datenquelle nicht verfügbar.|  
 |DEFERRABILITY (ODBC 3.0)|14|Smallint|SQL_INITIALLY_DEFERRED SQL_INITIALLY_IMMEDIATE, SQL_NOT_DEFERRABLE.|  
@@ -340,4 +334,3 @@ SQLFreeStmt(hstmt, SQL_DROP);
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

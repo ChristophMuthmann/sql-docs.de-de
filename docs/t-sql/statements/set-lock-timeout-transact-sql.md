@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - SET_LOCK_TIMEOUT_TSQL
 - SET LOCK_TIMEOUT
 - LOCK_TIMEOUT
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - timeout options [SQL Server], locks
 - releasing locks
@@ -27,17 +25,16 @@ helpviewer_keywords:
 - locking [SQL Server], time-outs
 - wait time for lock releases [SQL Server]
 ms.assetid: dd0c389e-956d-435e-bf71-e16624a0a215
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 0e19a9acd7378615433364ac1b30db31a1a84b3a
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 754242a86367b07b98caa9f70f457b70d0840075
-ms.openlocfilehash: 3de86c7f33afd6e708ad8e773470ec650e092d2c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/12/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-locktimeout-transact-sql"></a>SET LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -100,5 +97,4 @@ SET LOCK_TIMEOUT 1800;
  [SET-Anweisungen &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   
-
 

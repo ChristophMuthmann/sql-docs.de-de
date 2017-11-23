@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab8fa00f-cb16-47e2-94b8-3a76f56c2b84
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f9f24abd0bf39ebe61cf3715371c6c6c3d6f5663
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1a0068e98ab284ff3fbe89a7047cf485ecb5ef4b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="understanding-data-type-differences"></a>Grundlegendes zu den Unterschieden von Datentypen
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -59,7 +57,7 @@ ms.lasthandoff: 09/09/2017
 |INTEGER|Der JDBC **Ganzzahl** Typ stellt eine 32-Bit-Ganzzahl mit Vorzeichen dar. Dies ordnet eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **Int** Typ.|  
 |bigint|Der JDBC **"bigint"** Typ stellt eine 64-Bit-Ganzzahl mit Vorzeichen dar. Dies ordnet eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **"bigint"** Typ.|  
 |NUMERIC|Der JDBC **numerischen** Typ stellt einen Dezimalwert fester Genauigkeit, die Werte mit identischer Genauigkeit enthält. Die **numerischen** Typ ordnet die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **numerischen** Typ.|  
-|DECIMAL|Der JDBC **DECIMAL** Typ darstellt, einen fester Genauigkeit Dezimalwert, dass die Werte mit mindestens der angegebenen Genauigkeit enthält. Die **DECIMAL** Typ ordnet die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **decimal** Typ.<br /><br /> Der JDBC **DECIMAL** Typ ordnet auch die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **Money** und **Smallmoney** Typen, die spezielle Dezimaltypen fester Genauigkeit, die in 8 und 4 gespeichert sind Bytes bzw.|  
+|DECIMAL|Der JDBC **DECIMAL** Typ darstellt, einen fester Genauigkeit Dezimalwert, dass die Werte mit mindestens der angegebenen Genauigkeit enthält. Die **DECIMAL** Typ ordnet die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **decimal** Typ.<br /><br /> Der JDBC **DECIMAL** Typ ordnet auch die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **Money** und **Smallmoney** Typen, die spezielle Dezimaltypen fester Genauigkeit, die in 8 und 4 gespeichert sind Bytes bzw..|  
   
 ## <a name="approximate-numeric-types"></a>Angenäherte numerische Typen  
  Die angenäherten numerischen JDBC-Typen sind **echte**, **doppelte**, und **FLOAT**.  
@@ -79,7 +77,6 @@ ms.lasthandoff: 09/09/2017
  Die Zuordnungsfunktion für benutzerdefinierte Typen von JDBC, die die SQLData-Schnittstellen für die JDBC verwendet erweiterte Typen (UDTs, Struct usw.). ist im JDBC-Treiber nicht implementiert.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Grundlegendes zu den Datentypen des JDBC-Treiber](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+ [Grundlegendes zu den Datentypen in JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   
-

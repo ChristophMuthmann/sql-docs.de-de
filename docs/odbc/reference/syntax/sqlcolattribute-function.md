@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLColAttribute
-apilocation:
-- sqlsrv32.dll
+apiname: SQLColAttribute
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLColAttribute
-helpviewer_keywords:
-- SQLColAttribute function [ODBC]
+f1_keywords: SQLColAttribute
+helpviewer_keywords: SQLColAttribute function [ODBC]
 ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fead7415e3cb4a951a5ab2ba90b4969682905a0a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4248444c3b8908266a587ce3cb208a1d492fe1d9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute-Funktion
 **Konformität**  
@@ -42,7 +36,7 @@ ms.lasthandoff: 09/09/2017
  **SQLColAttribute** Deskriptorinformationen für eine Spalte in einem Resultset zurückgegeben. Deskriptorinformationen wird als eine Zeichenfolge, einen Deskriptor abhängiges-Wert oder einen ganzzahligen Wert zurückgegeben.  
   
 > [!NOTE]  
->  Weitere Informationen zu welcher der Treiber-Manager ordnet diese Funktion auf, wenn eine ODBC 3. *x* Anwendung arbeitet mit einer ODBC 2.* X* -Treiber verwenden, finden Sie unter [Ersatz-Zuordnungsfunktionen für Backward Compatibility Anwendungen](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
+>  Weitere Informationen zu welcher der Treiber-Manager ordnet diese Funktion auf, wenn eine ODBC 3.. *x* Anwendung arbeitet mit einer ODBC 2.. *X* -Treiber verwenden, finden Sie unter [Ersatz-Zuordnungsfunktionen für Backward Compatibility Anwendungen](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -76,7 +70,7 @@ SQLRETURN SQLColAttribute (
  Wenn *CharacterAttributePtr* NULL ist, *StringLengthPtr* gibt weiterhin zurück, die Gesamtanzahl der Bytes (ausgenommen die Null-Terminierung Zeichen für Zeichendaten) verfügbar, die in den Puffer zurückgegeben verweist *CharacterAttributePtr*.  
   
  *Pufferlänge*  
- [Eingabe] Wenn *FieldIdentifier* ist ein ODBC-definierten Feld und *CharacterAttributePtr* zeigt auf einen Zeichenfolgen- oder binären Puffer, in dieses Argument muss die Länge des \* * CharacterAttributePtr*. Wenn *FieldIdentifier* ist ein ODBC-definierten Feld und \* *CharacterAttribute*Ptr ist eine ganze Zahl, wird dieses Feld ignoriert. Wenn die * \*CharacterAttributePtr* eine Unicode-Zeichenfolge (beim Aufrufen von **SQLColAttributeW**), wird die *Pufferlänge* Argument muss eine gerade Zahl sein. Wenn *FieldIdentifier* ist ein Feld treiberdefinierten die Anwendung zeigt die Art des Felds um den Treiber-Manager an, indem die *Pufferlänge* Argument. *Pufferlänge* können die folgenden Werte aufweisen:  
+ [Eingabe] Wenn *FieldIdentifier* ist ein ODBC-definierten Feld und *CharacterAttributePtr* zeigt auf einen Zeichenfolgen- oder binären Puffer, in dieses Argument muss die Länge des \*  *CharacterAttributePtr*. Wenn *FieldIdentifier* ist ein ODBC-definierten Feld und \* *CharacterAttribute*Ptr ist eine ganze Zahl, wird dieses Feld ignoriert. Wenn die  *\*CharacterAttributePtr* eine Unicode-Zeichenfolge (beim Aufrufen von **SQLColAttributeW**), wird die *Pufferlänge* Argument muss eine gerade Zahl sein. Wenn *FieldIdentifier* ist ein Feld treiberdefinierten die Anwendung zeigt die Art des Felds um den Treiber-Manager an, indem die *Pufferlänge* Argument. *Pufferlänge* können die folgenden Werte aufweisen:  
   
 -   Wenn *CharacterAttributePtr* ist ein Zeiger auf einen Zeiger *Pufferlänge* müssen den Wert SQL_IS_POINTER.  
   
@@ -89,7 +83,7 @@ SQLRETURN SQLColAttribute (
  *StringLengthPtr*  
  [Ausgabe] Zeiger auf einen Puffer, in dem die Gesamtanzahl der Bytes (ausgenommen die Null-Terminierung Byte für Zeichendaten) zurückgegeben zur Rückgabe in **CharacterAttributePtr*.  
   
- Bei Zeichendaten ist die Anzahl der zurückzugebenden verfügbaren Bytes größer als oder gleich *Pufferlänge*, das die Deskriptorinformationen in \* *CharacterAttributePtr* auf abgeschnitten* Pufferlänge* abzüglich der Länge des ein Null-Abschlusszeichen und wird vom Treiber Null-terminiert.  
+ Bei Zeichendaten ist die Anzahl der zurückzugebenden verfügbaren Bytes größer als oder gleich *Pufferlänge*, das die Deskriptorinformationen in \* *CharacterAttributePtr* auf abgeschnitten *Pufferlänge* abzüglich der Länge des ein Null-Abschlusszeichen und wird vom Treiber Null-terminiert.  
   
  Für alle anderen Typen von Daten, den Wert der *Pufferlänge* wird ignoriert, und der Treiber geht davon aus, die Größe der **CharacterAttributePtr* beträgt 32 Bits.  
   
@@ -111,9 +105,9 @@ SQLRETURN SQLColAttribute (
 |HY000|Allgemeiner Fehler|Für die es keine spezifischen SQLSTATE wurde und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagField** aus der Diagnosedaten Struktur beschreibt den Fehler und seiner Ursache.|  
 |HY001|Fehler bei der speicherbelegung|Der Treiber konnte nicht belegt werden zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich.|  
 |HY008|Der Vorgang wurde abgebrochen|Asynchroner Verarbeitung wurde aktiviert, für die *StatementHandle*. Die Funktion aufgerufen wurde, und die Ausführung vor Abschluss **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle*. Und dann die Funktion erneut aufgerufen wurde, auf die *StatementHandle*.<br /><br /> Die Funktion aufgerufen wurde, und die Ausführung vor Abschluss **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle* aus einem anderen Thread in einem Multithread-Anwendung.|  
-|HY010|Fehler bei Funktionssequenz|(DM) eine asynchron ausgeführte Funktion das, das zugeordnete Verbindungshandle hieß die *StatementHandle*. Diese Funktion Aynchronous wurde noch ausgeführt, beim Aufruf von SQLColAttribute.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreamte Parameter abgerufen wurde.<br /><br /> (DM) hieß die Funktion vor dem Aufruf **SQLPrepare**, **SQLExecDirect**, oder eine Katalogfunktion für die *StatementHandle*.<br /><br /> (DM) hieß eine asynchron ausgeführte Funktion (nicht auf dieses Objekt) für die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, für die * StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.|  
+|HY010|Fehler bei Funktionssequenz|(DM) eine asynchron ausgeführte Funktion das, das zugeordnete Verbindungshandle hieß die *StatementHandle*. Diese Funktion Aynchronous wurde noch ausgeführt, beim Aufruf von SQLColAttribute.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreamte Parameter abgerufen wurde.<br /><br /> (DM) hieß die Funktion vor dem Aufruf **SQLPrepare**, **SQLExecDirect**, oder eine Katalogfunktion für die *StatementHandle*.<br /><br /> (DM) hieß eine asynchron ausgeführte Funktion (nicht auf dieses Objekt) für die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, für die  *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.|  
 |HY013|Speicherverwaltungsfehler|Der Funktionsaufruf konnte nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
-|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM) * \*CharacterAttributePtr* ist eine Zeichenfolge und *Pufferlänge* war kleiner als 0, aber nicht SQL_NTS gleich.|  
+|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM)  *\*CharacterAttributePtr* ist eine Zeichenfolge und *Pufferlänge* war kleiner als 0, aber nicht SQL_NTS gleich.|  
 |HY091|Ungültiger Deskriptorfeldbezeichner|Der Wert für das Argument angegebene *FieldIdentifier* war nicht das vorgegebenen Werten und kein Implementierung definierte Wert wurde.|  
 |HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Nur trennen, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum Zustand "angehalten" [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYC00|Vom Treiber nicht unterstützt|Der Wert für das Argument angegebene *FieldIdentifier* wurde vom Treiber nicht unterstützt.|  
@@ -129,7 +123,7 @@ SQLRETURN SQLColAttribute (
 ## <a name="comments"></a>Kommentare  
  Informationen zur Verwendung von Anwendungen zurückgegebene Informationen **SQLColAttribute**, finden Sie unter [Ergebnismetadaten festgelegt](../../../odbc/reference/develop-app/result-set-metadata.md).  
   
- **SQLColAttribute** gibt Informationen zurück, entweder in \* *NumericAttributePtr* oder im \* *CharacterAttributePtr*. Integer-Informationen werden zurückgegeben, \* *NumericAttributePtr* als SQLLEN-Wert; alle anderen Formate der Informationen zurückgegeben werden, \* *CharacterAttributePtr*. Bei Rückgabe Informationen \* *NumericAttributePtr*, ignoriert der Treiber *CharacterAttributePtr*, *Pufferlänge*, und * StringLengthPtr*. Bei Rückgabe Informationen \* *CharacterAttributePtr*, ignoriert der Treiber *NumericAttributePtr*.  
+ **SQLColAttribute** gibt Informationen zurück, entweder in \* *NumericAttributePtr* oder im \* *CharacterAttributePtr*. Integer-Informationen werden zurückgegeben, \* *NumericAttributePtr* als SQLLEN-Wert; alle anderen Formate der Informationen zurückgegeben werden, \* *CharacterAttributePtr*. Bei Rückgabe Informationen \* *NumericAttributePtr*, ignoriert der Treiber *CharacterAttributePtr*, *Pufferlänge*, und  *StringLengthPtr*. Bei Rückgabe Informationen \* *CharacterAttributePtr*, ignoriert der Treiber *NumericAttributePtr*.  
   
  **SQLColAttribute** Werte aus den deskriptorfelder vom IRD zurückgegeben. Die Funktion wird mit einer Deskriptorhandles, anstatt ein Anweisungshandle aufgerufen. Die Rückgabewerte **SQLColAttribute** für die *FieldIdentifier* weiter unten in diesem Abschnitt aufgeführten Werte können auch durch den Aufruf abgerufen werden **SQLGetDescField** mit der entsprechende IRD-Handle.  
   
@@ -138,20 +132,20 @@ SQLRETURN SQLColAttribute (
  Eine ODBC-3. *x* Treiber muss einen Wert für jedes der deskriptorfelder zurück. Wenn ein Deskriptorfeld nicht für einen Treiber oder eine Datenquelle gilt und, sofern nichts anderes angegeben ist, der Treiber 0 in gibt \* *StringLengthPtr* oder eine leere Zeichenfolge in **CharacterAttributePtr*.  
   
 ## <a name="backward-compatibility"></a>Abwärtskompatibilität  
- Der ODBC-3. *x* Funktion **SQLColAttribute** ersetzt die veraltete ODBC 2.* X* Funktion **SQLColAttributes**. Bei der Zuordnung **SQLColAttributes** auf **SQLColAttribute** (bei einer ODBC 2.* X* Anwendung arbeitet mit einer ODBC-3.* X* Treiber), oder die Zuordnung **SQLColAttribute** auf **SQLColAttributes** (Wenn eine ODBC 3.* X* Anwendung arbeitet mit einer ODBC 2.* X* Treiber), der Treiber-Manager übergibt entweder den Wert des *FieldIdentifier* ordnet Sie diesen durch, um einen neuen Wert oder einen Fehler zurückgibt, wie folgt:  
+ Der ODBC-3. *x* Funktion **SQLColAttribute** ersetzt die veraltete ODBC 2.. *X* Funktion **SQLColAttributes**. Bei der Zuordnung **SQLColAttributes** auf **SQLColAttribute** (bei einer ODBC 2.. *X* Anwendung arbeitet mit einer ODBC-3. *X* Treiber), oder die Zuordnung **SQLColAttribute** auf **SQLColAttributes** (Wenn eine ODBC 3.. *X* Anwendung arbeitet mit einer ODBC 2.. *X* Treiber), der Treiber-Manager übergibt entweder den Wert des *FieldIdentifier* ordnet Sie diesen durch, um einen neuen Wert oder einen Fehler zurückgibt, wie folgt:  
   
 > [!NOTE]  
->  Das Präfix *FieldIdentifier* Werte in ODBC 3.* X* wurde geändert, verwendet der 2 von ODBC.* X*. Das neue Präfix ist "SQL_DESC"; das alte Präfix wurde "SQL_COLUMN".  
+>  Das Präfix *FieldIdentifier* Werte in ODBC 3.. *X* wurde geändert, verwendet der 2 von ODBC. *X*. Das neue Präfix ist "SQL_DESC"; das alte Präfix wurde "SQL_COLUMN".  
   
--   Wenn die **#define** Wert von der ODBC 2.* X* *FieldIdentifier* ist identisch mit der **#define** Wert der ODBC-3.* X* *FieldIdentifier*, wird der Wert im Funktionsaufruf nur übergeben.  
+-   Wenn die **#define** Wert von der ODBC 2.. *X* *FieldIdentifier* ist identisch mit der **#define** Wert der ODBC-3. *X* *FieldIdentifier*, wird der Wert im Funktionsaufruf nur übergeben.  
   
--   Die **#define** Werte von der ODBC 2.* X* *FieldIdentifiers* SQL_COLUMN_LENGTH SQL_COLUMN_PRECISION und SQL_COLUMN_SCALE unterscheiden sich von der **#define** Werte von ODBC-3.* X* *FieldIdentifiers* SQL_DESC_SCALE, SQL_DESC_PRECISION und SQL_DESC_LENGTH. Eine ODBC-2. *x* Treiber muss nur die ODBC-2 unterstützt.* X* Werte. Eine ODBC-3. *x* -Treiber muss "SQL_COLUMN" und "SQL_DESC" Werte für diese drei unterstützen *FieldIdentifiers*. Diese Werte unterscheiden, da mit einfacher Genauigkeit, Dezimalstellen und Länge in ODBC 3 unterschiedlich definiert sind. *x* als in ODBC 2 waren.* X*. Weitere Informationen finden Sie unter [Spaltengröße, Dezimalstellen, Oktettlänge übertragen und Anzeigegröße](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).  
+-   Die **#define** Werte von der ODBC 2.. *X* *FieldIdentifiers* SQL_COLUMN_LENGTH SQL_COLUMN_PRECISION und SQL_COLUMN_SCALE unterscheiden sich von der **#define** Werte von ODBC-3. *X* *FieldIdentifiers* SQL_DESC_SCALE, SQL_DESC_PRECISION und SQL_DESC_LENGTH. Eine ODBC-2. *x* Treiber muss nur die ODBC-2 unterstützt. *X* Werte. Eine ODBC-3. *x* -Treiber muss "SQL_COLUMN" und "SQL_DESC" Werte für diese drei unterstützen *FieldIdentifiers*. Diese Werte unterscheiden, da mit einfacher Genauigkeit, Dezimalstellen und Länge in ODBC 3. unterschiedlich definiert sind. *x* als in ODBC 2. waren. *X*. Weitere Informationen finden Sie unter [Spaltengröße, Dezimalstellen, Oktettlänge übertragen und Anzeigegröße](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).  
   
--   Wenn die **#define** Wert von der ODBC 2.* X* *FieldIdentifier* unterscheidet sich von der **#define** Wert der ODBC-3.* X* *FieldIdentifier*, der NULL zulässt, den Wert im Funktionsaufruf und dem entsprechenden Wert zugeordnet wird und wie mit der Anzahl, Namen, auftritt. Beispielsweise ist SQL_COLUMN_COUNT SQL_DESC_COUNT, zugeordnet und SQL_DESC_COUNT SQL_COLUMN_COUNT, je nach Richtung der Zuordnung zugeordnet ist.  
+-   Wenn die **#define** Wert von der ODBC 2.. *X* *FieldIdentifier* unterscheidet sich von der **#define** Wert der ODBC-3. *X* *FieldIdentifier*, der NULL zulässt, den Wert im Funktionsaufruf und dem entsprechenden Wert zugeordnet wird und wie mit der Anzahl, Namen, auftritt. Beispielsweise ist SQL_COLUMN_COUNT SQL_DESC_COUNT, zugeordnet und SQL_DESC_COUNT SQL_COLUMN_COUNT, je nach Richtung der Zuordnung zugeordnet ist.  
   
--   Wenn *FieldIdentifier* wird ein neuer Wert in ODBC 3.* X*, für die gab es keinen entsprechenden Wert in ODBC 2.* X*, wird es nicht zugeordnet werden, wenn eine ODBC 3.* X* Anwendung wird in einem Aufruf von **SQLColAttribute** in einer ODBC 2.* X* Treiber und der Aufruf SQLSTATE HY091 zurück (Ungültiger Deskriptorfeldbezeichner).  
+-   Wenn *FieldIdentifier* wird ein neuer Wert in ODBC 3.. *X*, für die gab es keinen entsprechenden Wert in ODBC 2.. *X*, wird es nicht zugeordnet werden, wenn eine ODBC 3.. *X* Anwendung wird in einem Aufruf von **SQLColAttribute** in einer ODBC 2.. *X* Treiber und der Aufruf SQLSTATE HY091 zurück (Ungültiger Deskriptorfeldbezeichner).  
   
- Die folgende Tabelle enthält die Deskriptor Typen zurückgegebenes **SQLColAttribute**. Der Typ für *NumericAttributePtr* Werte ist **SQLLEN \* **.  
+ Die folgende Tabelle enthält die Deskriptor Typen zurückgegebenes **SQLColAttribute**. Der Typ für *NumericAttributePtr* Werte ist **SQLLEN \*** .  
   
 |*FieldIdentifier*|Informationen<br /><br /> im zurückgegebenen|Description|  
 |-----------------------|---------------------------------|-----------------|  
@@ -176,9 +170,9 @@ SQLRETURN SQLColAttribute (
 |SQL_DESC_PRECISION (ODBC 3.0)|*NumericAttributePtr*|Ein numerischer Wert, der für einen numerischen Datentyp anwendbare Genauigkeit kennzeichnet. Bei allen Datentypen SQL_TYPE_TIME SQL_TYPE_TIMESTAMP, und alle Interval-Datentypen, die ein Zeitintervall, dessen Wert darstellen, ist die anwendbaren Genauigkeit der Sekundenbruchteil-Komponente.<br /><br /> Diese Informationen werden vom SQL_DESC_PRECISION-Datensatzfeld vom IRD zurückgegeben.|  
 |SQL_DESC_SCALE (ODBC 3.0)|*NumericAttributePtr*|Ein numerischer Wert, der die entsprechenden Dezimalstellen für einen numerischen Datentyp ist. Für die Datentypen DECIMAL und NUMERIC ist dies die definierten Anzahl von Dezimalstellen an. Es ist nicht für alle anderen Datentypen definiert.<br /><br /> Diese Informationen werden vom Skalierung-Datensatzfeld vom IRD zurückgegeben.|  
 |SQL_DESC_SCHEMA_NAME (ODBC 2.0)|*CharacterAttributePtr*|Das Schema der Tabelle, die die Spalte enthält. Der zurückgegebene Wert ist die Implementierung definiertes, wenn die Spalte ein Ausdruck ist, oder wenn die Spalte Teil einer Ansicht ist. Wenn die Datenquelle keine Schemas unterstützt oder der Schemaname kann nicht bestimmt werden, ist eine leere Zeichenfolge zurückgegeben. Dieses Feld der VARCHAR-Datensatz ist nicht auf 128 Zeichen beschränkt.|  
-|SQL_DESC_SEARCHABLE (ODBC 1.0)|*NumericAttributePtr*|SQL_PRED_NONE, wenn die Spalte in einer WHERE-Klausel verwendet werden kann. (Dies ist identisch mit der SQL_UNSEARCHABLE-Wert in ODBC 2. *x*.)<br /><br /> SQL_PRED_CHAR, ob die Spalte in einer WHERE-Klausel jedoch nur mit dem LIKE-Prädikat verwendet werden kann. (Dies ist identisch mit der SQL_LIKE_ONLY-Wert in ODBC 2. *x*.)<br /><br /> SQL_PRED_BASIC, ob die Spalte in einer WHERE-Klausel mit allen Vergleichsoperatoren mit Ausnahme von LIKE verwendet werden kann. (Dies ist identisch mit der SQL_EXCEPT_LIKE-Wert in ODBC 2. *x*.)<br /><br /> SQL_PRED_SEARCHABLE, ob die Spalte in einer WHERE-Klausel mit jedem Vergleichsoperator verwendet werden kann.<br /><br /> Spalten vom Datentyp SQL_LONGVARCHAR und SQL_LONGVARBINARY normalerweise return SQL_PRED_CHAR.|  
+|SQL_DESC_SEARCHABLE (ODBC 1.0)|*NumericAttributePtr*|SQL_PRED_NONE, wenn die Spalte in einer WHERE-Klausel verwendet werden kann. (Dies ist identisch mit der SQL_UNSEARCHABLE-Wert in ODBC 2.. *x*.)<br /><br /> SQL_PRED_CHAR, ob die Spalte in einer WHERE-Klausel jedoch nur mit dem LIKE-Prädikat verwendet werden kann. (Dies ist identisch mit der SQL_LIKE_ONLY-Wert in ODBC 2.. *x*.)<br /><br /> SQL_PRED_BASIC, ob die Spalte in einer WHERE-Klausel mit allen Vergleichsoperatoren mit Ausnahme von LIKE verwendet werden kann. (Dies ist identisch mit der SQL_EXCEPT_LIKE-Wert in ODBC 2.. *x*.)<br /><br /> SQL_PRED_SEARCHABLE, ob die Spalte in einer WHERE-Klausel mit jedem Vergleichsoperator verwendet werden kann.<br /><br /> Spalten vom Datentyp SQL_LONGVARCHAR und SQL_LONGVARBINARY normalerweise return SQL_PRED_CHAR.|  
 |SQL_DESC_TABLE_NAME (ODBC 2.0)|*CharacterAttributePtr*|Der Name der Tabelle, die die Spalte enthält. Der zurückgegebene Wert ist die Implementierung definiertes, wenn die Spalte ein Ausdruck ist, oder wenn die Spalte Teil einer Ansicht ist.<br /><br /> Wenn der Tabellenname nicht bestimmt werden kann, ist eine leere Zeichenfolge zurückgegeben.|  
-|SQL_DESC_TYPE (ODBC 3.0)|*NumericAttributePtr*|Ein numerischer Wert, der angibt, den SQL-Datentyp.<br /><br /> Wenn *ColumnNumber* ist gleich 0 ist, wird SQL_BINARY für Lesezeichen variabler Länge zurückgegeben und SQL_INTEGER für Lesezeichen fester Länge ist.<br /><br /> Dieses Feld gibt den ausführlichen Datentyp für die Datentypen "DateTime" und das Intervall zurück: SQL_DATETIME oder SQL_INTERVAL. (Weitere Informationen finden Sie unter [-datentypbezeichnungen und Deskriptoren](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md) in Anhang D:-Datentypen.<br /><br /> Diese Informationen werden vom SQL_DESC_TYPE-Datensatzfeld vom IRD zurückgegeben. **Hinweis:** für ODBC 2 funktioniert.* X* Treiber, verwenden Sie stattdessen SQL_DESC_CONCISE_TYPE.|  
+|SQL_DESC_TYPE (ODBC 3.0)|*NumericAttributePtr*|Ein numerischer Wert, der angibt, den SQL-Datentyp.<br /><br /> Wenn *ColumnNumber* ist gleich 0 ist, wird SQL_BINARY für Lesezeichen variabler Länge zurückgegeben und SQL_INTEGER für Lesezeichen fester Länge ist.<br /><br /> Dieses Feld gibt den ausführlichen Datentyp für die Datentypen "DateTime" und das Intervall zurück: SQL_DATETIME oder SQL_INTERVAL. (Weitere Informationen finden Sie unter [-datentypbezeichnungen und Deskriptoren](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md) in Anhang D:-Datentypen.<br /><br /> Diese Informationen werden vom SQL_DESC_TYPE-Datensatzfeld vom IRD zurückgegeben. **Hinweis:** für ODBC 2. funktioniert. *X* Treiber, verwenden Sie stattdessen SQL_DESC_CONCISE_TYPE.|  
 |SQL_DESC_TYPE_NAME (ODBC 1.0)|*CharacterAttributePtr*|Data Source – abhängiger Datentypname; "z. B. CHAR", "VARCHAR", "MONEY", "LONG VARBINARY" oder "CHAR () für BIT-Daten".<br /><br /> Wenn der Typ unbekannt ist, wird eine leere Zeichenfolge zurückgegeben.|  
 |SQL_DESC_UNNAMED (ODBC 3.0)|*NumericAttributePtr*|SQL_NAMED oder SQL_UNNAMED. Wenn vom IRD SQL_DESC_NAME-Felds einen Spaltenalias oder einen Spaltennamen enthält, wird SQL_NAMED zurückgegeben. Wenn keine Spaltennamen oder Spaltenalias vorhanden ist, wird SQL_UNNAMED zurückgegeben.<br /><br /> Diese Informationen werden vom SQL_DESC_UNNAMED-Datensatzfeld vom IRD zurückgegeben.|  
 |SQL_DESC_UNSIGNED (ODBC 1.0)|*NumericAttributePtr*|SQL_TRUE, wenn die Spalte ohne Vorzeichen (oder nicht numerische) ist.<br /><br /> SQL_FALSE, wenn die Spalte signiert ist.|  
@@ -316,4 +310,3 @@ int main() {
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)   
  [ODBC-Beispielprogramm](../../../odbc/reference/sample-odbc-program.md)
-

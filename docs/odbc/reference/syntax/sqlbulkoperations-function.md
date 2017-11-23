@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLBulkOperations
-apilocation:
-- sqlsrv32.dll
+apiname: SQLBulkOperations
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLBulkOperations
-helpviewer_keywords:
-- SQLBulkOperations function [ODBC]
+f1_keywords: SQLBulkOperations
+helpviewer_keywords: SQLBulkOperations function [ODBC]
 ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 74934fb9edbcea316b4acb09f4b8e63c08236b1d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ea439a41a6a3d42c9266bbccfe53aace1c0f37f4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations-Funktion
 **Konformität**  
@@ -73,7 +67,7 @@ SQLRETURN SQLBulkOperations(
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiberspezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01004|Zeichenfolgedaten wurden rechts abgeschnitten|Die *Vorgang* Argument war SQL_FETCH_BY_BOOKMARK und Zeichenfolgen- oder Binärdaten, die für eine Spalte oder Spalten mit einem Datentyp SQL_C_CHAR oder SQL_C_BINARY zurückgegeben, die in das Abschneiden von nicht leeren Zeichen oder Binärdaten ungleich NULL geführt haben.|  
-|01 S 01|Fehler in Zeile|Die *Vorgang* Argument war SQL_ADD, und beim Ausführen des Vorgangs ist in einer oder mehreren Zeilen ein Fehler aufgetreten, aber mindestens eine Zeile wurde erfolgreich hinzugefügt. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)<br /><br /> (Dieser Fehler wird nur ausgelöst, wenn eine Anwendung mit einer ODBC 2 arbeitet. *x* Treiber.)|  
+|01 S 01|Fehler in Zeile|Die *Vorgang* Argument war SQL_ADD, und beim Ausführen des Vorgangs ist in einer oder mehreren Zeilen ein Fehler aufgetreten, aber mindestens eine Zeile wurde erfolgreich hinzugefügt. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)<br /><br /> (Dieser Fehler wird nur ausgelöst, wenn eine Anwendung mit einer ODBC 2. arbeitet. *x* Treiber.)|  
 |01S07|Teilbereiche wurden abgeschnitten.|Die *Vorgang* Argument war SQL_FETCH_BY_BOOKMARK, der Datentyp des Puffers Anwendung war nicht SQL_C_CHAR oder sql_c_binary angegeben und die Daten an die Anwendungspuffer für eine oder mehrere Spalten zurückgegeben wurden abgeschnitten. (Für numerische C-Datentypen, wurden die Nachkommastellen der Zahl abgeschnitten. Für die Zeit, Zeitstempel und Intervall C-Datentypen, die eine Zeitkomponente enthalten, wurde der Bruchteil der Zeit gekürzt.)<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |07006|Eingeschränkte Datentypattribut|Die *Vorgang* Argument wurde SQL_FETCH_BY_BOOKMARK und der Datenwert einer Spalte im Resultset konnte nicht an der angegebenen Datentyp konvertiert werden die *TargetType* Argument im Aufruf von **SQLBindCol**.<br /><br /> Die *Vorgang* Argument war SQL_UPDATE_BY_BOOKMARK oder SQL_ADD und der Datenwert in die Anwendungspuffer konnte nicht in den Datentyp einer Spalte im Resultset konvertiert werden.|  
 |07009|Ungültiger Deskriptorindex|Das Argument *Vorgang* SQL_ADD wurde und eine Spalte mit der eine Spaltennummer, die größer als die Anzahl der Spalten im Resultset gebunden wurde.|  
@@ -90,11 +84,11 @@ SQLRETURN SQLBulkOperations(
 |40003|Unbekannte Anweisungsvervollständigung|Die zugeordnete Verbindung konnte während der Ausführung dieser Funktion und der Status der Transaktion kann nicht bestimmt werden.|  
 |42000|Syntaxfehler oder zugriffsverletzung|Der Treiber konnte Zeilensperre Bedarf zum Ausführen des Vorgangs angefordert die *Vorgang* Argument.|  
 |44000|WITH CHECK OPTION-Verstoß|Die *Vorgang* Argument war SQL_ADD oder SQL_UPDATE_BY_BOOKMARK und die Einfügung oder Updatevorgang für eine Tabelle ausgeführt wurde (oder eine Tabelle aus der angezeigten Tabelle abgeleitet), die erstellt wurde, indem **WITH CHECK OPTION**, so, dass eine oder mehrere Zeilen Insert betroffen oder Update wird nicht mehr in der Tabelle vorhanden sein.|  
-|HY000|Allgemeiner Fehler|Für die es keine spezifischen SQLSTATE wurde und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der * \*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
+|HY000|Allgemeiner Fehler|Für die es keine spezifischen SQLSTATE wurde und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in der  *\*MessageText* Puffer beschreibt den Fehler und seiner Ursache.|  
 |HY001|Fehler bei der speicherbelegung|Der Treiber konnte nicht belegt werden zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich.|  
 |HY008|Der Vorgang wurde abgebrochen|Asynchroner Verarbeitung wurde aktiviert, für die *StatementHandle*. Die Funktion aufgerufen wurde, und die Ausführung vor Abschluss **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle*. Und dann die Funktion erneut aufgerufen wurde, auf die *StatementHandle*.<br /><br /> Die Funktion aufgerufen wurde, und die Ausführung vor Abschluss **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle* aus einem anderen Thread in einem Multithread-Anwendung.|  
-|HY010|Fehler bei Funktionssequenz|(DM) eine asynchron ausgeführte Funktion das, das zugeordnete Verbindungshandle hieß die *StatementHandle*. Diese asynchronen Funktion wurde weiterhin ausgeführt, wenn die **SQLBulkOperations** Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreamte Parameter abgerufen wurde.<br /><br /> (DM) dem angegebenen *StatementHandle* war nicht in einem ausgeführten Zustand. Die Funktion wurde aufgerufen, ohne zunächst **SQLExecDirect**, **SQLExecute**, oder eine Katalogfunktion auf.<br /><br /> (DM) hieß eine asynchron ausgeführte Funktion (nicht auf dieses Objekt) für die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLSetPos** wurde aufgerufen, die *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.<br /><br /> (DM) der Treiber wurde eine ODBC-2. *x* -Treiber und **SQLBulkOperations** wurde aufgerufen, eine *StatementHandle* vor **SQLFetchScroll** oder **SQLFetch ** aufgerufen wurde.<br /><br /> (DM) **SQLBulkOperations** wurde aufgerufen, nachdem **SQLExtendedFetch** aufgerufen wurde, auf die *StatementHandle*.|  
-|HY011|Attribut kann jetzt nicht festgelegt werden|(DM) der Treiber wurde eine ODBC-2. *x* Treiber und das SQL_ATTR_ROW_STATUS_PTR-Anweisungsattribut festgelegt wurde, zwischen den Aufrufen **SQLFetch** oder **SQLFetchScroll** und **SQLBulkOperations **.|  
+|HY010|Fehler bei Funktionssequenz|(DM) eine asynchron ausgeführte Funktion das, das zugeordnete Verbindungshandle hieß die *StatementHandle*. Diese asynchronen Funktion wurde weiterhin ausgeführt, wenn die **SQLBulkOperations** Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreamte Parameter abgerufen wurde.<br /><br /> (DM) dem angegebenen *StatementHandle* war nicht in einem ausgeführten Zustand. Die Funktion wurde aufgerufen, ohne zunächst **SQLExecDirect**, **SQLExecute**, oder eine Katalogfunktion auf.<br /><br /> (DM) hieß eine asynchron ausgeführte Funktion (nicht auf dieses Objekt) für die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLSetPos** wurde aufgerufen, die *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.<br /><br /> (DM) der Treiber wurde eine ODBC-2. *x* -Treiber und **SQLBulkOperations** wurde aufgerufen, eine *StatementHandle* vor **SQLFetchScroll** oder **SQLFetch**  aufgerufen wurde.<br /><br /> (DM) **SQLBulkOperations** wurde aufgerufen, nachdem **SQLExtendedFetch** aufgerufen wurde, auf die *StatementHandle*.|  
+|HY011|Attribut kann jetzt nicht festgelegt werden|(DM) der Treiber wurde eine ODBC-2. *x* Treiber und das SQL_ATTR_ROW_STATUS_PTR-Anweisungsattribut festgelegt wurde, zwischen den Aufrufen **SQLFetch** oder **SQLFetchScroll** und **SQLBulkOperations** .|  
 |HY013|Speicherverwaltungsfehler|Der Funktionsaufruf konnte nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
 |HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|Die *Vorgang* Argument war SQL_ADD oder SQL_UPDATE_BY_BOOKMARK; ein Datenwert war nicht null-Zeiger; wurde von der C-Datentyp SQL_C_BINARY oder SQL_C_CHAR; und der Spaltenwert für die Länge ist kleiner als 0, aber ungleich-SQL_DATA_AT_EXEC , SQL_COLUMN_IGNORE, SQL_NTS oder SQL_NULL_DATA oder kleiner oder gleich SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> Der Wert in ein Längen-/Indikatorpuffers wurde SQL_DATA_AT_EXEC; der SQL-Typ wurde entweder SQL_LONGVARCHAR, SQL_LONGVARBINARY oder einem long-Daten datenquellenspezifischen Datentyp; und welche Informationen SQL_NEED_LONG_DATA_LEN in **SQLGetInfo** wurde von "Y".<br /><br /> Die *Vorgang* Argument war SQL_ADD SQL_ATTR_USE_BOOKMARK-Anweisungsattribut auf SQL_UB_VARIABLE festgelegt wurde und Spalte 0 in einen Puffer mit einer Länge nicht die maximale Länge für das Lesezeichen für dieses Resultset gleich war gebunden wurde. (Diese Länge finden Sie im Feld SQL_DESC_OCTET_LENGTH vom IRD und abgerufen werden kann, durch den Aufruf **SQLDescribeCol**, **SQLColAttribute**, oder **SQLGetDescField**.)|  
 |HY092|Ungültiges Attribut-ID|(DM) der angegebene Wert für die *Vorgang* Argument war ungültig.<br /><br /> Die *Vorgang* Argument war SQL_ADD, SQL_UPDATE_BY_BOOKMARK oder SQL_DELETE_BY_BOOKMARK und das SQL_ATTR_CONCURRENCY-Anweisungsattribut auf SQL_CONCUR_READ_ONLY festgelegt wurde.<br /><br /> Die *Vorgang* Argument war SQL_DELETE_BY_BOOKMARK, SQL_FETCH_BY_BOOKMARK oder SQL_UPDATE_BY_BOOKMARK, und die Lesezeichenspalte wurde nicht gebunden oder das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut auf SQL_UB_OFF festgelegt wurde.|  
@@ -109,7 +103,7 @@ SQLRETURN SQLBulkOperations(
 ## <a name="comments"></a>Kommentare  
   
 > [!CAUTION]  
->  Informationen zum Status der fehlerhaften Anweisung **SQLBulkOperations** in aufgerufen werden können und was sie tun muss, um die Kompatibilität mit ODBC 2.* X* -Anwendungen finden Sie unter der [Blockcursor, scrollfähige Cursor und Abwärtskompatibilität](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) Abschnitt in Anhang G: Treiber Richtlinien für die Abwärtskompatibilität.  
+>  Informationen zum Status der fehlerhaften Anweisung **SQLBulkOperations** in aufgerufen werden können und was sie tun muss, um die Kompatibilität mit ODBC 2.. *X* -Anwendungen finden Sie unter der [Blockcursor, scrollfähige Cursor und Abwärtskompatibilität](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) Abschnitt in Anhang G: Treiber Richtlinien für die Abwärtskompatibilität.  
   
  Eine Anwendung verwendet **SQLBulkOperations** zum Ausführen der folgenden Vorgänge für die Basistabelle oder Sicht, die die aktuelle Abfrage entspricht:  
   
@@ -149,11 +143,11 @@ SQLRETURN SQLBulkOperations(
   
 5.  Wenn die Anwendung das Anweisungsattribut SQL_ATTR_ROW_STATUS_PTR festgelegt wurde, können sie dieses Array, um das Ergebnis des Vorgangs finden Sie unter überprüfen.  
   
- Wenn eine Anwendung bindet die Spalte 0 vor dem Aufrufen **SQLBulkOperations** mit einer *Vorgang* Argument SQL_ADD, der Treiber aktualisiert die Puffern mit gebundenen Spalten 0 mit den Werten der Lesezeichen für die neu eingefügte Zeile. Damit dies eintritt muss die Anwendung das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut auf SQL_UB_VARIABLE festgelegt haben vor der Ausführung der Anweisung. (Dies funktioniert nicht mit einer ODBC 2. *x* Treiber.)  
+ Wenn eine Anwendung bindet die Spalte 0 vor dem Aufrufen **SQLBulkOperations** mit einer *Vorgang* Argument SQL_ADD, der Treiber aktualisiert die Puffern mit gebundenen Spalten 0 mit den Werten der Lesezeichen für die neu eingefügte Zeile. Damit dies eintritt muss die Anwendung das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut auf SQL_UB_VARIABLE festgelegt haben vor der Ausführung der Anweisung. (Dies funktioniert nicht mit einer ODBC 2.. *x* Treiber.)  
   
  Long-Daten können mithilfe von SQLParamData und SQLPutData Aufrufe in Teilen von SQLBulkOperations, hinzugefügt werden. Weitere Informationen finden Sie unter "Bereitstellen von langen Daten für Bulk Inserts und Updates" weiter unten in diesem Funktionsverweis.  
   
- Es ist nicht notwendig, für die Anwendung aufrufen **SQLFetch** oder **SQLFetchScroll** vor **SQLBulkOperations** (es sei denn, für eine ODBC-2 passiert.* X* Treiber; Siehe [Abwärtskompatibilität und zur Einhaltung von Standards](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)).  
+ Es ist nicht notwendig, für die Anwendung aufrufen **SQLFetch** oder **SQLFetchScroll** vor **SQLBulkOperations** (es sei denn, für eine ODBC-2 passiert. *X* Treiber; Siehe [Abwärtskompatibilität und zur Einhaltung von Standards](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)).  
   
  Das Verhalten ist treiberdefinierten Wenn **SQLBulkOperations**, mit einer *Vorgang* SQL_ADD, Argument für einen Cursor, enthält doppelte Spalten, aufgerufen wird. Der Treiber können ein SQLSTATE treiberdefinierten zurückgeben, zum Hinzufügen die Daten in die erste Spalte, die im Resultset angezeigt wird festgelegt oder andere treiberdefinierten Verhalten führen.  
   
@@ -237,20 +231,20 @@ SQLRETURN SQLBulkOperations(
 ## <a name="providing-long-data-for-bulk-inserts-and-updates"></a>Long-Daten bereitstellen für Masseneinfügungen und-Updates  
  Long-Daten können angegeben werden, für masseneinfügungen und-Updates ausgeführt, die durch Aufrufe von **SQLBulkOperations**. Zum Einfügen oder Aktualisieren von long-Daten, führt eine Anwendung die folgenden Schritte aus, zusätzlich zu den Schritten, die in den Abschnitten "Masseneinfügung ausführen" und "Ausführen von Massenladen Updates mithilfe von Lesezeichen" weiter oben in diesem Thema beschrieben.  
   
-1.  Wenn bindet die Daten mithilfe von **SQLBindCol**, die Anwendung wird einen anwendungsdefinierten Wert, z. B. die Nummer der Spalte, in der * \*TargetValuePtr* Puffer für die Data-at-Execution Spalten. Der Wert kann später verwendet werden, um die Spalte zu identifizieren.  
+1.  Wenn bindet die Daten mithilfe von **SQLBindCol**, die Anwendung wird einen anwendungsdefinierten Wert, z. B. die Nummer der Spalte, in der  *\*TargetValuePtr* Puffer für die Data-at-Execution Spalten. Der Wert kann später verwendet werden, um die Spalte zu identifizieren.  
   
-     Die Anwendung gibt das Ergebnis von der SQL_LEN_DATA_AT_EXEC (*Länge*) Makro in den * \*StrLen_or_IndPtr* Puffer. Wenn der SQL-Datentyp der Spalte SQL_LONGVARBINARY, SQL_LONGVARCHAR oder einem long-Daten datenquellenspezifischen-Datentyp und der Treiber "Y" für den Informationstyp SQL_NEED_LONG_DATA_LEN in gibt **SQLGetInfo**, *Länge * ist die Anzahl der Bytes der Daten für den Parameter; gesendet werden sollen, andernfalls muss er einen nicht negativen Wert und wird ignoriert.  
+     Die Anwendung gibt das Ergebnis von der SQL_LEN_DATA_AT_EXEC (*Länge*) Makro in den  *\*StrLen_or_IndPtr* Puffer. Wenn der SQL-Datentyp der Spalte SQL_LONGVARBINARY, SQL_LONGVARCHAR oder einem long-Daten datenquellenspezifischen-Datentyp und der Treiber "Y" für den Informationstyp SQL_NEED_LONG_DATA_LEN in gibt **SQLGetInfo**, *Länge*  ist die Anzahl der Bytes der Daten für den Parameter; gesendet werden sollen, andernfalls muss er einen nicht negativen Wert und wird ignoriert.  
   
 2.  Wenn **SQLBulkOperations** aufgerufen wird, wenn Data-at-Execution-Spalten, die Funktion gibt SQL_NEED_DATA zurück und fährt mit Schritt 3 fort, das folgt vorhanden sind. (Wenn keine Data-at-Execution-Spalten vorhanden sind, ist der Prozess abgeschlossen.)  
   
-3.  Ruft die Anwendung **SQLParamData** die Adresse des abzurufenden der * \*TargetValuePtr* Puffer für die erste Data-at-Execution-Spalte verarbeitet werden. **SQLParamData** wird SQL_NEED_DATA zurückgegeben. Die Anwendung ruft den anwendungsdefinierten Wert aus der * \*TargetValuePtr* Puffer.  
+3.  Ruft die Anwendung **SQLParamData** die Adresse des abzurufenden der  *\*TargetValuePtr* Puffer für die erste Data-at-Execution-Spalte verarbeitet werden. **SQLParamData** wird SQL_NEED_DATA zurückgegeben. Die Anwendung ruft den anwendungsdefinierten Wert aus der  *\*TargetValuePtr* Puffer.  
   
     > [!NOTE]  
     >  Obwohl Data-at-Execution-Parameter Data-at-Execution-Spalten ähneln, der Rückgabewert von **SQLParamData** für jedes unterschiedlich ist.  
   
      Data-at-Execution-Spalten in einem Rowset für die Daten mit gesendet werden, sind **SQLPutData** Wenn eine Zeile aktualisiert oder eingefügt mit **SQLBulkOperations**. Sie sind mit gebunden **SQLBindCol**. Der Rückgabewert von **SQLParamData** ist die Adresse der Zeile in der **TargetValuePtr* Puffer, die verarbeitet wird.  
   
-4.  Ruft die Anwendung **SQLPutData** ein- oder mehrmals zum Senden von Daten für die Spalte. Mehr als ein Aufruf ist erforderlich, wenn der Datenwert in zurückgegeben werden, kann die * \*TargetValuePtr* im angegebenen Puffer **SQLPutData**; mehrere Aufrufe **SQLPutData** für dieselbe Spalte dürfen nur, wenn auf eine Spalte mit einem Zeichen, Binary oder Daten datenquellenspezifischen Datentyp Zeichendaten C senden, oder beim Senden von Binärdaten C an eine Spalte mit einem Zeichen, binary, oder geben Sie die Datenquelle spezifischen Daten.  
+4.  Ruft die Anwendung **SQLPutData** ein- oder mehrmals zum Senden von Daten für die Spalte. Mehr als ein Aufruf ist erforderlich, wenn der Datenwert in zurückgegeben werden, kann die  *\*TargetValuePtr* im angegebenen Puffer **SQLPutData**; mehrere Aufrufe **SQLPutData** für dieselbe Spalte dürfen nur, wenn auf eine Spalte mit einem Zeichen, Binary oder Daten datenquellenspezifischen Datentyp Zeichendaten C senden, oder beim Senden von Binärdaten C an eine Spalte mit einem Zeichen, binary, oder geben Sie die Datenquelle spezifischen Daten.  
   
 5.  Ruft die Anwendung **SQLParamData** erneut aus, um zu signalisieren, dass alle Daten für die Spalte gesendet wurde.  
   
@@ -258,12 +252,12 @@ SQLRETURN SQLBulkOperations(
   
     -   Wenn keine weiteren Data-at-Execution-Spalten vorhanden sind, ist der Prozess abgeschlossen. Wenn die Anweisung erfolgreich ausgeführt wurde **SQLParamData** gibt SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO; Wenn Fehler bei der Ausführung gibt SQL_ERROR zurück. An diesem Punkt **SQLParamData** zurückgeben kann eine beliebige SQLSTATE, die von zurückgegeben werden kann **SQLBulkOperations**.  
   
- Wenn der Vorgang abgebrochen wird oder ein Fehler, in auftritt **SQLParamData** oder **SQLPutData** nach **SQLBulkOperations** wird SQL_NEED_DATA zurückgegeben und vor dem Senden von Daten für alle Data-at-Execution-Spalten, die Anwendung kann aufrufen nur **SQLCancel**, **SQLGetDiagField**, **SQLGetDiagRec**, **SQLGetFunctions **, **SQLParamData**, oder **SQLPutData** für die Anweisung oder die Verbindung mit der Anweisung verknüpft sind. Wenn für die Anweisung oder die Verbindung mit der Anweisung verknüpfte jede andere Funktion aufgerufen wird, gibt die Funktion SQL_ERROR und SQLSTATE HY010 (Sequenzfehler-Funktion).  
+ Wenn der Vorgang abgebrochen wird oder ein Fehler, in auftritt **SQLParamData** oder **SQLPutData** nach **SQLBulkOperations** wird SQL_NEED_DATA zurückgegeben und vor dem Senden von Daten für alle Data-at-Execution-Spalten, die Anwendung kann aufrufen nur **SQLCancel**, **SQLGetDiagField**, **SQLGetDiagRec**, **SQLGetFunctions** , **SQLParamData**, oder **SQLPutData** für die Anweisung oder die Verbindung mit der Anweisung verknüpft sind. Wenn für die Anweisung oder die Verbindung mit der Anweisung verknüpfte jede andere Funktion aufgerufen wird, gibt die Funktion SQL_ERROR und SQLSTATE HY010 (Sequenzfehler-Funktion).  
   
  Wenn die Anwendung aufruft, **SQLCancel** während der Treiber für Data-at-Execution-Spalten weiterhin Daten benötigt, bricht der Treiber den Vorgang ab. Die Anwendung kann dann aufrufen **SQLBulkOperations** erneut Abbrechen hat keine Auswirkungen auf die Cursor-Status oder der aktuellen Cursorposition.  
   
 ## <a name="row-status-array"></a>Zeilenstatusarray  
- Die zeilenstatusarray Statuswerte für jede Zeile der Daten im Rowset enthält, nach einem Aufruf von **SQLBulkOperations**. Der Treiber setzt die Statuswerte in diesem Array nach einem Aufruf von **SQLFetch**, **SQLFetchScroll**, **SQLSetPos**, oder **SQLBulkOperations** . Dieses Array wird durch einen Aufruf von anfänglich aufgefüllt **SQLBulkOperations** Wenn **SQLFetch** oder **SQLFetchScroll** nicht aufgerufen wurde vor dem **SQLBulkOperations **. Dieses Array wird durch das Anweisungsattribut SQL_ATTR_ROW_STATUS_PTR verwiesen. Die Anzahl der Elemente in der Zeile Status Arrays, muss die Anzahl der Zeilen im Rowset (gemäß dem SQL_ATTR_ROW_ARRAY_SIZE-Anweisungsattribut) gleich. Informationen zu diesem zeilenstatusarray finden Sie unter [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md).  
+ Die zeilenstatusarray Statuswerte für jede Zeile der Daten im Rowset enthält, nach einem Aufruf von **SQLBulkOperations**. Der Treiber setzt die Statuswerte in diesem Array nach einem Aufruf von **SQLFetch**, **SQLFetchScroll**, **SQLSetPos**, oder **SQLBulkOperations** . Dieses Array wird durch einen Aufruf von anfänglich aufgefüllt **SQLBulkOperations** Wenn **SQLFetch** oder **SQLFetchScroll** nicht aufgerufen wurde vor dem **SQLBulkOperations** . Dieses Array wird durch das Anweisungsattribut SQL_ATTR_ROW_STATUS_PTR verwiesen. Die Anzahl der Elemente in der Zeile Status Arrays, muss die Anzahl der Zeilen im Rowset (gemäß dem SQL_ATTR_ROW_ARRAY_SIZE-Anweisungsattribut) gleich. Informationen zu diesem zeilenstatusarray finden Sie unter [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md).  
   
 ## <a name="code-example"></a>Codebeispiel  
  Im folgende Beispiel werden 10 Zeilen mit Daten zu einem Zeitpunkt aus der Customers-Tabelle abgerufen. Anschließend wird der Benutzer für eine Aktion dauern aufgefordert. Um den Netzwerkverkehr zu reduzieren, wird der Beispiel-Puffer updates, Löschvorgängen und und fügt lokal in den gebundenen Arrays, weist jedoch hinter der Rowsetdaten Offsets. Wenn der Benutzer entscheidet sich für das Senden von Updates, löschungen und auf die Datenquelle einfügungen, wird der Code legt die Bindung, die entsprechend offset fest und ruft **SQLBulkOperations**. Der Einfachheit halber kann nicht der Benutzer mehr als 10-Updates, löschungen oder einfügungen Puffer.  
@@ -471,4 +465,3 @@ int main() {
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

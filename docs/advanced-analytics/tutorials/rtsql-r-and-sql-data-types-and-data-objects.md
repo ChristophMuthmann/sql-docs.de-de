@@ -5,25 +5,23 @@ ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - R
 - SQL
 ms.assetid: 1a17fc5b-b8c5-498f-b8b1-3b7b43a567e1
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 4207d26b2f38e3f13a45c21ab40293cf0dc95219
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e71e4a5d6fc6a88d0482ecd10d4238c12cd5ceaa
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="r-and-sql-data-types-and-data-objects-r-in-sql-quickstart"></a>R und SQL-Typen und Daten Datenobjekte (R in SQL-Schnellstart)
 
@@ -283,4 +281,3 @@ Informationen zu Auswirkungen auf die Leistung zur Laufzeit Konvertierung von Ze
 Im nächsten Schritt erfahren Sie, wie R-Funktionen auf SQL Server-Daten angewendet werden.
 
 [Verwenden von R-Funktionen mit SQL Server-Daten](../../advanced-analytics/tutorials/rtsql-using-r-functions-with-sql-server-data.md)
-

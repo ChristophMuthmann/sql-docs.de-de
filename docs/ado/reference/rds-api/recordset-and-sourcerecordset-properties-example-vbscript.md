@@ -1,35 +1,32 @@
 ---
 title: Recordset und SourceRecordset Eigenschaften Beispiel (VBScript) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - Source property [ADO], VBScript example
 - Recordset property [ADO], VBScript example
 ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bddde66f1e2afa1fe8e37332b282e023e534cea7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 76f372b037154024f5a301fa3ee3bcb62c3532cd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>Recordset und SourceRecordset Eigenschaften Beispiel (VBScript)
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Im folgende Beispiel wird gezeigt, wie die erforderlichen Parameter von der [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) Business-Standardobjekt zur Laufzeit.  
   
@@ -134,8 +131,7 @@ CLASSID="CLSID:BD96C556-65A3-11D0-983A-00C04FC29E36">
   
 ## <a name="see-also"></a>Siehe auch  
  [DataFactory-Objekt (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [Recordset SourceRecordset-Eigenschaft (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)
-
+ [Recordset, SourceRecordset-Eigenschaft (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)
 
 
 

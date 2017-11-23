@@ -8,22 +8,20 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c56aedc9-f7f7-4641-b605-f0f98ed4400c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 615792da52bcdc2dd12775d2c62450f95364b115
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bedd3f13de0b44de2e6098c117ccfa9bd08f4ce1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlasyncnotificationcallback-function"></a>SQLAsyncNotificationCallback-Funktion
 **Konformität**  
@@ -34,7 +32,7 @@ ms.lasthandoff: 09/09/2017
  **Zusammenfassung**  
  **SQLAsyncNotificationCallback** können Sie einen Treiber für den Rückruf an den Treiber-Manager an, bei einigen Fortschritt für den aktuellen asynchronen Vorgang, nachdem der Treiber SQL_STILL_EXECUTING zurückgibt. **SQLAsyncNotificationCallback** können nur vom Treiber aufgerufen.  
   
- Rufen Sie Treiber nicht **SQLAsyncNotificationCallback** mit Funktionsnamen **SQLAsyncNotificationCallback**. Der Treiber-Manager übergibt einen Funktionszeiger stattdessen einem Treiberpaket als Wert für die SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK oder SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK-Attribut des entsprechenden Verbindungshandle oder Anweisungshandle, bzw. Andere Handles können andere Funktion Zeigerwerte zugewiesen werden. Der Typ des Funktionszeigers wird als SQL_ASYNC_NOTIFICATION_CALLBACK definiert.  
+ Rufen Sie Treiber nicht **SQLAsyncNotificationCallback** mit Funktionsnamen **SQLAsyncNotificationCallback**. Der Treiber-Manager übergibt einen Funktionszeiger stattdessen einem Treiberpaket als Wert für die SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK oder SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK-Attribut des entsprechenden Verbindungshandle oder Anweisungshandle, bzw.. Andere Handles können andere Funktion Zeigerwerte zugewiesen werden. Der Typ des Funktionszeigers wird als SQL_ASYNC_NOTIFICATION_CALLBACK definiert.  
   
  **SQLAsyncNotificationCallback** ist threadsicher. Ein Treiber können mit mehreren Threads aufgerufen **SQLAsyncNotificationCallback** auf anderen handles gleichzeitig.  
   
@@ -68,4 +66,3 @@ typedef SQLRETURN (SQL_API *SQL_ASYNC_NOTIFICATION_CALLBACK)(
   
 ## <a name="see-also"></a>Siehe auch  
  [Asynchrone Ausführung (Abrufmethode)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
-
