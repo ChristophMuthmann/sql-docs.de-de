@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - storage [Analysis Services], roles
 - Analysis Services objects, roles
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - storing data [Analysis Services], roles
 - access rights [Analysis Services], roles
 ms.assetid: 5b7e9cef-ff68-4d8e-99bc-e0094ced1baa
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 01525ae36d9efed7df054d4100c7a4b79340a2aa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ee88f607ae1370746db12ea4b9f9f6acc98c4c09
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>Sicherheitsrollen (Analysis Services – Mehrdimensionale Daten)
   Rollen werden verwendet, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] zum Verwalten der Sicherheit für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Objekte und Daten. Ausgedrückt, eine Rolle ordnet die Sicherheits-IDs (SIDs) der Microsoft Windows-Benutzer und Gruppen, die bestimmte Zugriffsrechte und Berechtigungen, die von einer Instanz von verwalteten Objekte definiert haben [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Zwei Arten von Rollen finden Sie unter [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  
@@ -99,4 +97,3 @@ ms.lasthandoff: 09/01/2017
  [Autorisieren des Zugriffs auf Objekte und Vorgänge &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
   
-

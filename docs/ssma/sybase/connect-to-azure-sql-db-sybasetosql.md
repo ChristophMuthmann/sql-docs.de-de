@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4f7d19d050a0c6c0c6656c6a297780e1ae9bfdf7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 76a29a448dfbbba4b8fc0771edf352545d361cf9
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>Herstellen einer Verbindung mit Azure SQL-Datenbank (SybaseToSQL)
 Stellen Sie mithilfe der Azure SQL-Datenbank (Dialogfeld), mit der Azure SQL-Datenbank-Datenbank herstellen, die Sie migrieren möchten.  
@@ -73,4 +71,3 @@ Führen Sie die folgenden Schritte aus, um eine neue Datenbank zum ersten Mal er
   
     2.  **Datenbankgröße:** wählen Sie die Größe der Datenbank, die Sie in Azure SQL-Datenbank-Konto erstellen müssen.  
   
-

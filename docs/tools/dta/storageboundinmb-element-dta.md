@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- StorageBoundInMB element
+dev_langs: XML
+helpviewer_keywords: StorageBoundInMB element
 ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3ab0965888661501f8a9a9b0f31a7edd6cb7e3bb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9be01bd27f8a3ad4a878e8b5340f2a4e0aead79e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB-Element (DTA)
   Gibt die maximale Größe des Speicherplatzes in Megabyte an, der von der Optimierungsempfehlung des Datenbankoptimierungsratgebers (Index und Partitionierung) beansprucht werden kann.  
@@ -51,7 +47,7 @@ ms.lasthandoff: 08/02/2017
   
 |Beziehung|Elemente|  
 |------------------|--------------|  
-|**Übergeordnetes Element**|[TuningOptions-Element &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**Übergeordnetes Element**|[TuningOptions-Element &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
 |**Untergeordnete Elemente**|Keine|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -86,4 +82,3 @@ ms.lasthandoff: 08/02/2017
  [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

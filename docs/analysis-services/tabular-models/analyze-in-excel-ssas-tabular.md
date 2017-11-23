@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2f17b4df-eea2-48c7-a1f2-a3fb7748c15f
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 937b51884cd5a4b4bc06d990c65a5247822c85c5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6450a75762b35816055efce444513c87e24eb3c4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analyze-in-excel"></a>In Excel analysieren
   Die Funktion in Excel analysieren, in SSDT Entwicklern erleichtert tabellarischer Modelle eine Möglichkeit, die schnelle Analyse von Modellprojekten während der Entwicklung. Über die Funktion In Excel analysieren wird Microsoft Excel geöffnet; sie stellt eine Datenquellenverbindung mit der Arbeitsbereichsdatenbank des Modells her und fügt automatisch eine PivotTable in das Arbeitsblatt ein. Objekte der Arbeitsbereichsdatenbank (Tabellen, Spalten und Measures) sind als Felder in der PivotTable-Feldliste enthalten. Objekte und Daten können dann innerhalb des Kontexts des effektiven Benutzers oder der Rolle und Perspektive angezeigt werden.  
@@ -54,7 +53,7 @@ ms.lasthandoff: 09/01/2017
   
 |**Thema**|**Description**|  
 |---------------|---------------------|  
-|[Analysieren eines Tabellenmodells in Excel](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)|In diesem Thema wird Folgendes beschrieben: Öffnen von Excel über die Funktion In Excel analysieren im Modell-Designer, Erstellen einer Datenquellenverbindung mit der Arbeitsbereichsdatenbank des Modells und Hinzufügen einer PivotTable zum Arbeitsblatt.|  
+|[Analysieren eines tabellarischen Modells in Excel](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)|In diesem Thema wird Folgendes beschrieben: Öffnen von Excel über die Funktion In Excel analysieren im Modell-Designer, Erstellen einer Datenquellenverbindung mit der Arbeitsbereichsdatenbank des Modells und Hinzufügen einer PivotTable zum Arbeitsblatt.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysieren eines Tabellenmodells in Excel](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)   
@@ -62,4 +61,3 @@ ms.lasthandoff: 09/01/2017
  [Perspektiven](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  
   
   
-

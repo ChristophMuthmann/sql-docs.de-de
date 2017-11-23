@@ -5,29 +5,25 @@ ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to:
-- SQL Server
-dev_langs:
-- XML
+applies_to: SQL Server
+dev_langs: XML
 helpviewer_keywords:
 - fn:ceiling function
 - ceiling function [XQuery]
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8b3c235e66f30eea6ea21918608e707d202e72dc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d950dbbb138160b5f95d0cf026bf09dc0b866a89
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="numeric-values-functions---ceiling"></a>Numerische Werte Funktionen - ceiling 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -111,4 +107,3 @@ ProductModelID Result
  [Round-Funktion &#40; XQuery &#41;](../xquery/numeric-values-functions-round.md)  
   
   
-

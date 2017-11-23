@@ -5,29 +5,25 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- ':'
-dev_langs:
-- kbMDX
+f1_keywords: ':'
+dev_langs: kbMDX
 helpviewer_keywords:
 - ': (range operator)'
 - range operator (:)
 ms.assetid: f9b36aca-4efd-49b4-9e4f-12914c1b24a6
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: f272f132f85d1ed9ed83c61975a111f2eec6ebf6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b80f453f0553404d1d337e15e9194f7d4b97ccd7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="-range-mdx"></a>: (Bereich) (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,4 +75,3 @@ WHERE
  [MDX-Operatorreferenz &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   
-

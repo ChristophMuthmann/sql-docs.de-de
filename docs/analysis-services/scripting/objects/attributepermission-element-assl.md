@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AttributePermission Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AttributePermission Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- AttributePermission
-helpviewer_keywords:
-- AttributePermission element
+applies_to: SQL Server 2016 Preview
+f1_keywords: AttributePermission
+helpviewer_keywords: AttributePermission element
 ms.assetid: efc8aa63-3959-4b2e-98f8-2a9c424298c2
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b3db75bf8a3517fe9c3296036cf164979e0299e5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a780b5f3f29edf8ff320763740ca505826f2c80d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attributepermission-element-assl"></a>AttributePermission-Element (ASSL)
   Definiert den Berechtigungen, die Elemente einer [Rolle](../../../analysis-services/scripting/objects/role-element-assl.md) Element verfügen, auf die Attribute einer individuellen Dimension in einem [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) Element.  
@@ -80,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [Objekte &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,18 +16,16 @@ helpviewer_keywords:
 - general error checks [ODBC]
 - driver manager [ODBC], error checking
 ms.assetid: 0c9a3425-0a7c-48de-9ff6-73601c26283e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2377d11bb0e689ac15d7913d228afba5b98f030f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 63734f5986c10c1ae3d175e3f1f37ef39c865ce4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="general-error-checks"></a>Überprüfungen auf allgemeine Fehler
 Der Treiber-Manager überprüft ein allgemeinen Fehler. Wird immer SQL_ERROR zurückgegeben, wenn den folgenden Fehler gefunden wird: die Funktion, die vom Treiber unterstützt werden muss.
-

@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Invocation Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Invocation Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Invocation
-helpviewer_keywords:
-- Invocation element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Invocation
+helpviewer_keywords: Invocation element
 ms.assetid: f6bf64ad-ae57-4d46-bf92-1d07a65378bb
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8e83bb6a69802c2a4aa39108712661d6e7f1c692
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d48dedecabb385ebacd752fff75d6ccec2e1489c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="invocation-element-assl"></a>Invocation-Element (ASSL)
   Gibt an, wie ein [Aktion](../../../analysis-services/scripting/objects/action-element-assl.md) aufgerufen werden soll.  
@@ -83,4 +77,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

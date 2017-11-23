@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - buffers [ODBC], length
 - C strings and buffers [ODBC]
 ms.assetid: 3a141cb4-229d-4027-9349-615cb2995e36
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 54f9d438571b1535d16f5fc3b333e9a9cede42eb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c786c1ce1ea3457da20d4f50c54ea7b797c70c1b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="character-data-and-c-strings"></a>Zeichendaten und C-Zeichenfolgen
 Eingabeparameter, die Zeichendaten mit variabler Länge (z. B. Spaltennamen, dynamische Parameter und zeichenfolgenattributwerten) verweisen, haben einen zugeordnete Length-Parameter. Wenn Sie Zeichenfolgen mit Null-Zeichen, wie in C, wird von die Anwendung beendet wird, stellt er entweder die Länge in Bytes der Zeichenfolge (nicht einschließlich der Null-Terminator) oder SQL_NTS (Null-Terminated String) als Argument bereit. Ein nicht negativer Längenargument gibt die tatsächliche Länge der Zeichenfolge zugeordnet. Der Length-Argument möglicherweise 0 an eine Zeichenfolge der Länge 0 (null), die von einer NULL-Wert unterscheidet. Der negative Wert SQL_NTS weist den Treiber auf die Länge der Zeichenfolge zu bestimmen, indem die Suche nach Null-Abschlusszeichen.  
@@ -49,4 +47,3 @@ Eingabeparameter, die Zeichendaten mit variabler Länge (z. B. Spaltennamen, dyn
  Obwohl Anwendungen und-Treiber häufig C-Zeichenfolgen (nullterminierte Arrays von Zeichen) verwenden, um Zeichendaten aufzunehmen, besteht keine zwingend vorgeschrieben. In C können Zeichendaten auch als ein Array von Zeichen (ohne Null-Terminierung) und die Bytelänge eingelesenen Längen-/Indikatorpuffers separat behandelt werden.  
   
  Da Zeichendaten in einen nicht-Null endendes Array aufnehmen können, und die Bytelänge separat übergeben, ist es möglich, die Null-Zeichen in Zeichendaten eingebettet werden sollen. Allerdings in diesem Fall ist das Verhalten der ODBC-Funktionen nicht definiert, und es treiberspezifische ist, gibt an, ob ein Treiber ordnungsgemäß verarbeitet. Daher sollte interoperable Anwendungen immer Zeichendaten verarbeiten, die eingebettete Null-Zeichen als binäre Daten enthalten kann.
-

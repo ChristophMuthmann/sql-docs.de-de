@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Value
 - Cell::Value
-helpviewer_keywords:
-- Value property [ADO MD]
+helpviewer_keywords: Value property [ADO MD]
 ms.assetid: 70dc5cff-0b05-456d-b86b-2686fe4e7ce6
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 309d725c5390927ab23fe623ec42afadaa9a0aac
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 67ff4dd7aa7d8698aa6d99cf82b61f5f0afe54bf
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="value-property-ado-md"></a>Value-Eigenschaft (ADO MD)
 Gibt den Wert des aktuellen [Zelle](../../../ado/reference/ado-md-api/cell-object-ado-md.md).  
@@ -42,4 +39,3 @@ Gibt den Wert des aktuellen [Zelle](../../../ado/reference/ado-md-api/cell-objec
   
 ## <a name="see-also"></a>Siehe auch  
  [FormattedValue-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)
-

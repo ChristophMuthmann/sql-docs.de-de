@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Type Element (Partition)
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Type Element (Partition)
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- TYPE
-helpviewer_keywords:
-- Type element
+applies_to: SQL Server 2016 Preview
+f1_keywords: TYPE
+helpviewer_keywords: Type element
 ms.assetid: 61c022fe-8c41-4f62-9808-c386e05eb547
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 15443e137c2aeb66d9877b942b93d3fb01355034
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6913ab92035030516c9f6694f55f29891ee4b91c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="type-element-partition-assl"></a>Type-Element (Partition) (ASSL)
   Enthält den Typ des der [Partition](../../../analysis-services/scripting/objects/partition-element-assl.md) Element.  
@@ -82,4 +76,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

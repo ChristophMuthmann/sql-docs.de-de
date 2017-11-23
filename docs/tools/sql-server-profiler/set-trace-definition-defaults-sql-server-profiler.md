@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- traces [SQL Server], defaults
+helpviewer_keywords: traces [SQL Server], defaults
 ms.assetid: ab9fc570-797d-411e-814f-1c46d2d5feae
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c3a8d5677ce67c60caf910104cf30144bfde3950
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4ef7efda96c725e38ebb3f5d63f93c33816e790a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>Festlegen der Standardeinstellungen für Ablaufverfolgungsdefinitionen (SQL Server Profiler)
   In der Standardeinstellung wird für Ablaufverfolgungsdefinitionen die Standardvorlage für die Ablaufverfolgung für jeden Anbieter oder Server verwendet. Sie können Standardvorlagen für die Ablaufverfolgung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]festlegen.  
@@ -46,4 +43,3 @@ ms.lasthandoff: 08/02/2017
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   
-

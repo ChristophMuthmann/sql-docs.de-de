@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MiningModelID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: MiningModelID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- MiningModelID
-helpviewer_keywords:
-- MiningModelID element
+applies_to: SQL Server 2016 Preview
+f1_keywords: MiningModelID
+helpviewer_keywords: MiningModelID element
 ms.assetid: fada8720-1590-44be-bafc-0ab3612b00e5
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 963482060fe39dab8c9c439924b96bf8cc6399c6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 515b195cede70b2e3727f5cb27228bac4f370e54
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="miningmodelid-element-assl"></a>MiningModelID-Element (ASSL)
   Ordnet einer Data Mining-Dimension ein Miningmodell zu.  
@@ -74,4 +68,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

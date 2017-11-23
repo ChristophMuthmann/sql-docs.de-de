@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- EstimatedRows Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: EstimatedRows Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- EstimatedRows
-helpviewer_keywords:
-- EstimatedRows element
+applies_to: SQL Server 2016 Preview
+f1_keywords: EstimatedRows
+helpviewer_keywords: EstimatedRows element
 ms.assetid: 08a66481-6479-4a93-aa7e-15e8b1f854f2
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5c9624ed15b86d924d3c878dc9a7a3608bbae762
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 28417273a58f8d2c11ea9526d92f10ec6139ca18
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="estimatedrows-element-assl"></a>EstimatedRows-Element (ASSL)
   Enthält die geschätzte Anzahl der durch das übergeordnete Element dargestellten Zeilen.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

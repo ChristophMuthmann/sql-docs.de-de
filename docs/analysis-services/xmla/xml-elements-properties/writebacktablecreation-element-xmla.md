@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- WritebackTableCreation Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: WritebackTableCreation Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#WritebackTableCreation
 - microsoft.xml.analysis.writebacktablecreation
 - http://schemas.microsoft.com/analysisservices/2003/engine#WritebackTableCreation
-helpviewer_keywords:
-- WritebackTableCreation element
+helpviewer_keywords: WritebackTableCreation element
 ms.assetid: e9579d63-e28c-4d4e-9f4a-21c5da24c276
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6ac62b6327cda533fe6487e1499488a5a1f6ba33
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2c618959b64ccf8d68cd5f50c06aa94df3179173
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="writebacktablecreation-element-xmla"></a>WritebackTableCreation-Element (XMLA)
   Bestimmt, ob eine Rückschreibetabelle, während erstellt wird die [Prozess](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) Vorgang.  
@@ -83,4 +78,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

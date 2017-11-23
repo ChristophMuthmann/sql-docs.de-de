@@ -19,17 +19,16 @@ helpviewer_keywords:
 - grouping members
 - DiscretizationMethod property
 ms.assetid: 006cc915-c499-4781-b9a7-01ad31bebf6a
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 70a192c25c9271824bcf1ea74c7de68ce0b44651
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f527aef051d304dc9cc89a953888c8b41090789d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-properties---define-member-groups"></a>Attributeigenschaften: Definieren von Elementgruppen
   Wenn ein Attribut über viele Elemente verfügt, können Sie diese Elemente in Buckets gruppieren und so die Zahl derjenigen Elemente verringern, die Benutzer sehen, wenn sie die Daten einer Hierarchie durchsuchen. Sie können auch die Zahl der Buckets festlegen, in denen die Elemente Gruppen bilden und ein Benennungsschema für die Buckets vorgeben. Weitere Informationen finden Sie unter [Gruppieren von Attributelementen &#40;Diskretisierung&#41;](../../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md).  
@@ -47,4 +46,3 @@ ms.lasthandoff: 09/01/2017
 3.  Wählen Sie in der Dropdownliste neben **DiscretizationMethod** eine Methode aus, nach der Sie die Elemente gruppieren. Weitere Informationen zu **DiscretizationMethod**-Einstellungen finden Sie unter [Gruppieren von Attributelementen &#40;Diskretisierung&#41;](../../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md).  
   
   
-

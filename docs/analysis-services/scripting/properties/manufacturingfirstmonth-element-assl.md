@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ManufacturingFirstMonth Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ManufacturingFirstMonth Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ManufacturingFirstMonth
-helpviewer_keywords:
-- ManufacturingFirstMonth element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ManufacturingFirstMonth
+helpviewer_keywords: ManufacturingFirstMonth element
 ms.assetid: 3b2fb440-662b-4d88-a133-1e098b9c8169
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d3142945d17a4c59c4b72f376581e4441adabec5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f87ff23396fc5fb9c998dae4bc9d9dd86239c904
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manufacturingfirstmonth-element-assl"></a>ManufacturingFirstMonth-Element (ASSL)
   Definiert den ersten Produktionsmonat für ein [TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md) Element.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

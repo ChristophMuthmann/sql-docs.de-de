@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - InstanceOf
 - InstanceOf_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- InstanceOf method
+dev_langs: TSQL
+helpviewer_keywords: InstanceOf method
 ms.assetid: 1eaed0e4-1c72-45a9-9926-5b513335cf33
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: aa35fb390b51699d4291a51efaea373129273365
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0edbebbb6754fd09ff834e4ffe8d453853b6f240
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="instanceof-geography-data-type"></a>InstanceOf (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +70,6 @@ SELECT @g.InstanceOf('GEOMETRYCOLLECTION');
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erweiterte Methoden für Geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
+ [Erweiterte Methoden für geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   
-

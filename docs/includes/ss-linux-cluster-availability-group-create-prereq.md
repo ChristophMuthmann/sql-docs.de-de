@@ -75,7 +75,7 @@ sudo systemctl restart mssql-server
 
 Sie können optional erweiterte Ereignisse der Always On-Verfügbarkeitsgruppen aktivieren, die Ihnen bei der Ursachendiagnose helfen, wenn Sie Probleme in einer Verfügbarkeitsgruppe behandeln. Führen Sie den folgenden Befehl auf jeder Instanz des SQL Servers aus. 
 
-```Transact-SQL
+```SQL
 ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
@@ -86,7 +86,7 @@ Weitere Informationen zu dieser XE-Sitzung finden Sie unter [Always On erweitert
 
 Das folgende Transact-SQL-Skript erstellt eine Anmeldung mit dem Namen `dbm_login` und einen Benutzer mit dem Namen `dbm_user`. Aktualisieren Sie das Skript durch ein sicheres Kennwort. Führen Sie den folgenden Befehl für alle SQL Server-Instanzen aus, um den Endpunktbenutzer für die Datenbankspiegelung zu erstellen.
 
-```Transact-SQL
+```SQL
 CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
 CREATE USER dbm_user FOR LOGIN dbm_login;
 ```
@@ -97,7 +97,7 @@ Der SQL Server-Dienst unter Linux verwendet Zertifikate zum Authentifizieren von
 
 Die folgende Transact-SQL-Skript erstellt ein Hauptschlüssel und ein Zertifikat. Anschließend wird damit das Zertifikat und die Datei mit einem privaten Schlüssel gesichert. Aktualisieren Sie das Skript durch sichere Kennwörter. Stellen Sie eine Verbindung mit der primären SQL Server-Instanz her, und führen Sie die folgende Transact-SQL aus, um das Zertifikat zu erstellen:
 
-```Transact-SQL
+```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate WITH SUBJECT = 'dbm';
 BACKUP CERTIFICATE dbm_certificate
@@ -128,7 +128,7 @@ chown mssql:mssql dbm_certificate.*
 
 Das folgende Transact-SQL-Skript erstellt ein Hauptschlüssel und ein Zertifikat aus der Sicherung, die Sie auf dem primären SQL Server-Replikat erstellt haben. Der Befehl autorisiert auch den Benutzer, damit er Zugriff auf das Zertifikat hat. Aktualisieren Sie das Skript durch sichere Kennwörter. Das Entschlüsselungskennwort ist das gleiche Kennwort, mit dem Sie die PVK-Datei in einem vorherigen Schritt erstellt haben. Führen Sie das folgende Skript auf allen sekundären Servern zum Erstellen des Zertifikats aus.
 
-```Transact-SQL
+```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate   
     AUTHORIZATION dbm_user
@@ -141,16 +141,13 @@ CREATE CERTIFICATE dbm_certificate
 
 ## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>Erstellen des Datenbankspiegelungs-Endpunkte auf allen Replikaten
 
-Datenbank-Spiegelungsendpunkte senden und empfangen Meldungen zwischen den Serverinstanzen beim Teilnehmen an Datenbankspiegelungssitzungen über TCP (Transmission Control Protocol) oder beim Hosten verfügbarer Replikate. Der Datenbank-Spiegelungsendpunkt lauscht an einer eindeutigen TCP-Portnummer. 
+Datenbank-Spiegelungsendpunkte senden und empfangen Meldungen zwischen den Serverinstanzen beim Teilnehmen an Datenbankspiegelungssitzungen über TCP (Transmission Control Protocol) oder beim Hosten verfügbarer Replikate. Der Datenbank-Spiegelungsendpunkt lauscht an einer eindeutigen TCP-Portnummer. Der TCP-Listener erfordert eine IP-Adresse des Listeners. Die IP-Adresse des Listeners muss eine IPv4-Adresse sein. Sie können auch `0.0.0.0`. 
 
 Das folgende Transact-SQL erstellt für die Verfügbarkeitsgruppe einen überwachenden Endpunkt mit dem Namen `Hadr_endpoint`. Es startet den Endpunkt, und erteilt Verbindungsberechtigungen an den Benutzer, den Sie erstellt haben. Bevor Sie das Skript ausführen, ersetzen Sie die Werte zwischen `**< ... >**`.
 
->[!NOTE]
->Verwenden Sie für dieses Release keine andere IP-Adresse für die Listener-IP-Adresse. Wir arbeiten an der Behebung dieses Problems. Vorläufig ist der einzige zulässige Wert jedoch „0.0.0.0“.
+Aktualisieren Sie die folgende Transact-SQL für Ihre Umgebung für alle SQL Server-Instanzen: 
 
-Aktualisieren Sie das folgende Transact-SQL für Ihre Umgebung auf allen SQL Server-Instanzen: 
-
-```Transact-SQL
+```SQL
 CREATE ENDPOINT [Hadr_endpoint]
     AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
     FOR DATA_MIRRORING (
@@ -162,10 +159,25 @@ ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
 GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 ```
 
->[!IMPORTANT]
->Der TCP-Port in der Firewall muss für den Listenerport geöffnet sein.
+>[!NOTE]
+>Wenn Sie SQL Server Express Edition auf einem Knoten zum Hosten eines Replikats Konfiguration verwenden werden, ist der einzige gültige Wert für die Rolle `WITNESS`. Führen Sie das folgende Skript in SQL Server Express Edition.
+>```SQL
+CREATE ENDPOINT [Hadr_endpoint]
+    AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
+    FOR DATA_MIRRORING (
+        ROLE = WITNESS,
+        AUTHENTICATION = CERTIFICATE dbm_certificate,
+        ENCRYPTION = REQUIRED ALGORITHM AES
+        );
+ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
+GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
+```
+
+The TCP port on the firewall needs to be open for the listener port.
+
+
 
 >[!IMPORTANT]
->Für die Version SQL Server 2017 ist `CERTIFICATE` die einzige unterstützte Authentifizierungsmethode für den Datenbankspiegelungs-Endpunkt. Die Option `WINDOWS` wird in einer zukünftigen Version aktiviert.
+>For SQL Server 2017 release, the only authentication method supported for database mirroring endpoint is `CERTIFICATE`. `WINDOWS` option will be enabled in a future release.
 
-Weitere Informationen finden Sie unter [Der Datenbankspiegelungs-Endpunkt (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).
+For complete information, see [The Database Mirroring Endpoint (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).

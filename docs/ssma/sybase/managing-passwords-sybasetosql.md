@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - Sybase Console,Managing Passwords
 - Sybase Console,Securing Password
 ms.assetid: 9b6a70f9-6840-4140-a059-bb7bd7ccc67c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b744ae31d721995e49bea05e0b4998243dd66278
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a3e6e0a2bc661db9741ef3ee53eaed5426d1971c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="managing-passwords-sybasetosql"></a>Verwalten von Kennwörtern (SybaseToSQL)
 In diesem Abschnitt wird zum Schützen von Datenbankkennwörter und das Verfahren zum Importieren oder exportieren Sie sie über Server:  
@@ -142,4 +140,3 @@ Beispiel:
 ## <a name="see-also"></a>Siehe auch  
 [Ausführen der Konsole SSMA (Sybase)](http://msdn.microsoft.com/en-us/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
   
-

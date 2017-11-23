@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- RequiresRestart Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: RequiresRestart Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- RequiresRestart
-helpviewer_keywords:
-- RequiresRestart element
+applies_to: SQL Server 2016 Preview
+f1_keywords: RequiresRestart
+helpviewer_keywords: RequiresRestart element
 ms.assetid: 9e98f956-c41e-4e15-a7bd-e17c10ee6fc6
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 12998cda4f9ce55d99b427c0aca07b93f5ba82ee
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b588d4b4229c5a53511335ea21cd8e5759ed210f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="requiresrestart-element-assl"></a>RequiresRestart-Element (ASSL)
   Enthält einen schreibgeschützten Wert, der zugeordnet einer [ServerProperty](../../../analysis-services/scripting/objects/serverproperty-element-assl.md) Element, das bestimmt, ob die Änderung des Werts der Servereigenschaft erfordert, dass die Instanz neu gestartet werden, damit die Änderung wirksam wird.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Migrating data,Client Side Data Migration
 - Migrating data,Server Side Data Migration
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0227da93168d1a0b7de95cd289e1beaec17145d5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2e30171c86c56f232d17ed159eb53d0eaddae79c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>Migrieren von Sybase ASE-Daten in SQLServer - Azure SQL-Datenbank (SybaseToSQL)
 Nachdem Sie die Datenbankobjekte Sybase Adaptive Server Enterprise (ASE) in erfolgreich geladen wurde [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank, können Sie Daten aus ASE zum Migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Azure SQL-Datenbank.  
@@ -119,4 +117,3 @@ Zum Anzeigen der Migration Nachrichten sicher, dass im Ausgabebereich angezeigt 
 ## <a name="see-also"></a>Siehe auch  
 [Migrieren von Sybase ASE-Datenbanken zu SQLServer - Azure SQL-Datenbank &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   
-

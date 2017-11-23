@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c8fc14fc26221bedd8d97af5e4f478de99535b74
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9e98f38071c044aab967690ffafffa6ada634141
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-customize-power-pivot-gallery"></a>Erstellen und Anpassen des PowerPivot-Katalogs
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog ist eine besondere SharePoint-Dokumentbibliothek, die umfangreiche Vorschau- und Dokumentverwaltungsmöglichkeiten für veröffentlichte Excel-Arbeitsmappen und Reporting Services-Berichte bereitstellt, die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten enthalten.  
@@ -163,4 +162,3 @@ ms.lasthandoff: 09/01/2017
  [Löschen eines Power Pivot-Katalogs](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)  
   
   
-

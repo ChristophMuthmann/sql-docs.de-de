@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- HideMemberIf Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: HideMemberIf Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- HideMemberIf
-helpviewer_keywords:
-- HideMemberIf element
+applies_to: SQL Server 2016 Preview
+f1_keywords: HideMemberIf
+helpviewer_keywords: HideMemberIf element
 ms.assetid: ff0e6b19-6216-43ac-ba76-1628da8c333b
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: eefed5009773186d939401a508785abe4f956125
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 63e9386cbeb679bef13c87857df9b95a10863099
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hidememberif-element-assl"></a>HideMemberIf-Element (ASSL)
   Gibt an, ob und wann ein Element auf einer Ebene aus Clientanwendungen ausgeblendet werden sollte.  
@@ -84,4 +78,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

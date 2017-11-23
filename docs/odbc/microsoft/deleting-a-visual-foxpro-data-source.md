@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - Visual FoxPro data source [ODBC], deleting
 - deleting data sources [ODBC], Visual FoxPro
 ms.assetid: 8468957a-632a-4d7b-a3e1-66b34e7df639
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1546bac6ca086af00b7f3096056bcb98db2d8741
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 409f171f2e747123ee1f47e3e32b6e13346110b6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="deleting-a-visual-foxpro-data-source"></a>Löschen einer Visual FoxPro-Datenquelle
 ### <a name="to-delete-a-visual-foxpro-data-source"></a>So löschen Sie eine Visual FoxPro-Datenquelle  
@@ -44,4 +42,3 @@ ms.lasthandoff: 09/09/2017
 4.  Klicken Sie auf Entfernen.  
   
 5.  Klicken Sie auf OK, um die Änderungen zu speichern und schließen das Dialogfeld ODBC-Datenquellen-Administrator.
-

@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerCallableStatement.getFloat (java.lang.String)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerCallableStatement.getFloat (java.lang.String)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: b6492341-fdc2-449c-9d03-95a5dadf1bb0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 208bba07d833dbdbb80bd88d8e9cd5aeee1a2a46
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f10c51b95abd620d1ee129793809ccbe7f299c25
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getfloat-method-javalangstring"></a>getFloat-Methode (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -64,4 +60,3 @@ public float getFloat(java.lang.String sCol)
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   
-

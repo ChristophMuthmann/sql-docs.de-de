@@ -5,27 +5,25 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e9b35cb5-d8ae-42ea-b59e-deedc99c4823
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c8fedc613289421e51967890e0508c44812e73b7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8951624c19b03c7630698fe08aa7987e780dc35d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="unknown-service-log-on-tab"></a>Unbekannter Dienst (Registerkarte Anmelden)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Konfigurations-Manager ist, kann dieser Dienst nicht identifizieren.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager kann diesen Dienst nicht identifizieren.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Konfigurations-Manager werden Dienstinformationen vom WMI-Anbieter auf dem Computer, die der Dienst ausgeführt wird. Entweder ist beim Lesen der Diensteigenschaften ein Fehler aufgetreten, oder die Diensteigenschaften sind nicht vollständig. Eine mögliche Problemlösung besteht darin, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager zu schließen und erneut zu öffnen, oder den WMI-Anbieter auf dem Computer zu überprüfen, auf dem der Dienst ausgeführt wird.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager werden Dienstinformationen vom WMI-Anbieter auf dem Computer empfangen, auf dem der Dienst ausgeführt wird. Entweder ist beim Lesen der Diensteigenschaften ein Fehler aufgetreten, oder die Diensteigenschaften sind nicht vollständig. Eine mögliche Problemlösung besteht darin, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager zu schließen und erneut zu öffnen, oder den WMI-Anbieter auf dem Computer zu überprüfen, auf dem der Dienst ausgeführt wird.  
   
  Der WMI-Anbieter ist eine Windows-Komponente. Informationen zum Prüfen von Berechtigungen für den WMI-Anbieter finden Sie unter "Vorgehensweise: Konfigurieren von WMI zum Anzeigen des Serverstatus in SQL Server-Tools" in der SQL Server-Onlinedokumentation.  
   
@@ -60,4 +58,3 @@ ms.lasthandoff: 08/02/2017
  Setzen Sie einen angehaltenen Dienst fort.  
   
   
-

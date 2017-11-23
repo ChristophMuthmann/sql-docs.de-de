@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- _Stream::raw_LoadFromFile
-helpviewer_keywords:
-- LoadFromFile method [ADO]
+f1_keywords: _Stream::raw_LoadFromFile
+helpviewer_keywords: LoadFromFile method [ADO]
 ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 14124cf39e58cf46c50ae367f68ca61b82bd50e3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bbb4b032f3cb386c0915e04b949b3244edbb1c4a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="loadfromfile-method-ado"></a>LoadFromFile-Methode (ADO)
 Lädt den Inhalt einer vorhandenen Datei in eine [Stream](../../../ado/reference/ado-api/stream-object-ado.md).  
@@ -56,5 +52,4 @@ Stream.LoadFromFileFileName
  Da 2 Bytes auf den Anfang des Datenstroms für die Codierung hinzugefügt werden kann, kann die Größe des Datenstroms nicht genau der Größe der Datei entsprechen, an dem es geladen wurde.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Streamobjekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
-
+ [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

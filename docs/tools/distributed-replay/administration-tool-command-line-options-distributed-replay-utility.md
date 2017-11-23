@@ -5,22 +5,20 @@ ms.date: 08/12/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c01b0ed3-67e4-4561-92d2-a8fbb086aca8
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6ea715d618afdd48dc24b05753f2b5dd23477f76
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 652600de9d777f13332509fcaae3985daf9c26fc
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>Befehlszeilenoptionen für das Verwaltungstool (Distributed Replay Utility)
   Das Verwaltungstool [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay ( **DReplay.exe**) ist ein Befehlszeilentool für die Kommunikation mit dem Distributed Replay-Controller. Mit dem Verwaltungstool können Sie Vorgänge auf dem Controller initiieren, überwachen und abbrechen.  
@@ -64,13 +62,13 @@ Usage:
   
  Ausführliche Informationen zur Syntax, einschließlich Befehlsargumenten und Beispielen, finden Sie in den folgenden Themen:  
   
--   [Vorverarbeiten Sie Option &#40; Verwaltungstool "Distributed Replay" &#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)  
+-   [Vorverarbeitungsoption &#40;Verwaltungstool „Distributed Replay“&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)  
   
--   [Wiedergabeoption &#40; Verwaltungstool "Distributed Replay" &#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)  
+-   [Wiedergabeoption &#40;Verwaltungstool „Distributed Replay“&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)  
   
--   [Statusoption &#40; Verwaltungstool "Distributed Replay" &#41;](../../tools/distributed-replay/status-option-distributed-replay-administration-tool.md)  
+-   [Statusoption &#40;Verwaltungstool „Distributed Replay“&#41;](../../tools/distributed-replay/status-option-distributed-replay-administration-tool.md)  
   
--   [Option "Abbrechen" &#40; Verwaltungstool "Distributed Replay" &#41;](../../tools/distributed-replay/cancel-option-distributed-replay-administration-tool.md)  
+-   [Option zum Abbrechen &#40;Verwaltungstool „Distributed Replay“&#41;](../../tools/distributed-replay/cancel-option-distributed-replay-administration-tool.md)  
   
  RPCs werden als RPCs wiedergegeben und nicht als Sprachereignisse.  
   
@@ -83,4 +81,3 @@ Usage:
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)  
   
   
-

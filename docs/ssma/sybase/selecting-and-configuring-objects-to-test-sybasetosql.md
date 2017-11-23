@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Tester Component,Parameter Comparision Setting
 - Tester Component,Selecting Objects
 ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e42d7c638f7185431afc4621fee46245a396a262
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e1cc9bf3ed4348e3875885c1c7bb6face6562753
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>Auswählen und Konfigurieren von Objekten mit Test (SybaseToSQL)
 In diesem Schritt wählen Sie die Objekte zu testen, und konfigurieren Einstellungen für den Vergleich von Prozeduren und Funktionen Output-Parameter als auch die Rückgabewerte von Funktionen.  
@@ -94,4 +92,3 @@ Sie können die Werte der Eingabeparameter angeben, auf die **rufen Werte** Seit
 ## <a name="see-also"></a>Siehe auch  
 [Testen von migriert Datenbankobjekte &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   
-

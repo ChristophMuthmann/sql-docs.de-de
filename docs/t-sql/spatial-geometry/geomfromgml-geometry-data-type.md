@@ -8,29 +8,25 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - GeomFromGML_TSQL
 - GeomFromGML
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- GeomFromGML (geometry Data Type)
+dev_langs: TSQL
+helpviewer_keywords: GeomFromGML (geometry Data Type)
 ms.assetid: a3f2c84b-a49f-4ce3-ba25-b903fb0c99b4
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: deef7c2f23cf60725769189dabf4fc0b5c868a38
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b16e57ed05ba2d0bccf46db95b1e515a7d1d0efd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="geomfromgml-geometry-data-type"></a>GeomFromGml (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,8 +71,7 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erweiterte statische Geometry-Methoden](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
+ [Erweiterte statische geometry-Methoden](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   
-
 

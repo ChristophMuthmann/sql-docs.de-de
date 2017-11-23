@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Latency Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Latency Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Latency
-helpviewer_keywords:
-- Latency element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Latency
+helpviewer_keywords: Latency element
 ms.assetid: 93940637-b83e-4773-b80d-3394ca3a1ce5
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 83de3562db54a631c78787cd5db0836a8d81d265
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c4e6dec17b87a714f15c022f3ba4f51fa26c95a7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="latency-element-assl"></a>Latency-Element (ASSL)
   Definiert die "Kulanzfrist" zwischen der frühesten Benachrichtigung und dem Augenblick, an dem die MOLAP-Images zerstört werden.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

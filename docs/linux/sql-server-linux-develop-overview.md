@@ -15,12 +15,11 @@ ms.technology: database-engine
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 ms.custom: 
 ms.workload: On Demand
+ms.openlocfilehash: ed4f34bf3e08897ab13cae24f47fc74292ce38bc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: c83b105706916c193cb1a0bbf966ff64fb7bac05
-ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Erste Schritte Entwickeln von Anwendungen für SQL Server on Linux
 
@@ -83,4 +82,3 @@ Installieren Sie SQL Server unter Linux mit einer der folgenden Schnellstart-Ler
 - [Installieren Sie auf SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installieren Sie auf Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Führen Sie auf Docker](quickstart-install-connect-ubuntu.md)
-

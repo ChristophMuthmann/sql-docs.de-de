@@ -5,31 +5,27 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to:
-- SQL Server
-dev_langs:
-- XML
+applies_to: SQL Server
+dev_langs: XML
 helpviewer_keywords:
 - SequenceType expressions
 - instance of operator [XQuery]
 - expressions [XQuery], SequenceType
 - cast as operator
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 889036ecfc17146276e8bcff0daa056aae043b64
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ac481d608106e5ce787ffe737d8d11fda67af3fb
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sequencetype-expressions-xquery"></a>SequenceType-Ausdrücke (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -418,4 +414,3 @@ select @x.query('xs:date("2000-01-01Z")')
  [Typsystem &#40; XQuery &#41;](../xquery/type-system-xquery.md)  
   
   
-

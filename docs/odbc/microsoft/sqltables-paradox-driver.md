@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Paradox driver [ODBC], SQLTables
 - SQLTables function [ODBC], Paradox Driver
 ms.assetid: d68adad6-97bd-4b47-bcf9-0102aafb00d4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d7d2ec552387973295f079dfcc23bf36c34db867
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 505bbc8fb606a44d9c3f4bf94115fd5ff41e7d06
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqltables-paradox-driver"></a>SQLTables (Paradox-Treiber)
 > [!NOTE]  
@@ -40,4 +38,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [SQLTables-Funktion](../../odbc/reference/syntax/sqltables-function.md)
-

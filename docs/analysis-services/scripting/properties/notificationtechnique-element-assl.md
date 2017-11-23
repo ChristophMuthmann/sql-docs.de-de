@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- NotificationTechnique Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: NotificationTechnique Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- NotificationTechnique element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: NotificationTechnique element
 ms.assetid: 80c43de3-f147-4bf5-bb85-da9d182ce415
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ced9ed7e24ac1f1f6e3481a1cc639677ebcf58b4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0a5fdcfc7dc7d86e9036ed075e5c5332e76dc3be
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="notificationtechnique-element-assl"></a>NotificationTechnique-Element (ASSL)
   Gibt an, ob [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder eine externen Clientanwendung die Benachrichtigungen verarbeitet.  
@@ -78,4 +73,3 @@ ms.lasthandoff: 09/01/2017
  [ProactiveCachingBinding-Datentyp &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/proactivecachingbinding-data-type-assl.md)  
   
   
-

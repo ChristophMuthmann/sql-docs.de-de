@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - text file driver [ODBC], SQLStatistics
 - SQLStatistics function [ODBC], Text File Driver
 ms.assetid: 311afc01-d656-425f-be43-4a8e7cbc9a97
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9309adf4839c4450d14ba00ed3338d7b70371254
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c6ec091f36c4b7c432278f48666e4a9f9f0ce879
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlstatistics-text-file-driver"></a>SQLStatistics (Text-Datei-Treiber)
 > [!NOTE]  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 |PAGES|Immer wird NULL zurückgegeben.|  
   
  Filtern von basiert auf Eindeutigkeit (das *fUnique* Argument). Die *fAccuracy* Parameter wird ignoriert.
-

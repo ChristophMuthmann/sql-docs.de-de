@@ -1,34 +1,30 @@
 ---
 title: SubmitChanges-Methode (Beispiel (VBScript) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- SubmitChanges method [ADO], VBScript example
+dev_langs: VB
+helpviewer_keywords: SubmitChanges method [ADO], VBScript example
 ms.assetid: 619bc7fd-ad0a-44ea-9678-ad40a662c258
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f344c635a6a9995421668f0accb18d01092fc50c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 00af0b6c1f3bb480d4aa40967eca59d3d71ccc7d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="submitchanges-method-example-vbscript"></a>SubmitChanges-Methode (Beispiel (VBScript)
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in Windows-Betriebssystems enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) detailliertere). RDS-Clientkomponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden sollten migrieren [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Das folgende Codefragment zeigt, wie die [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) Methode mit einem [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Objekt.  
   
@@ -125,6 +121,5 @@ End Sub
 ## <a name="see-also"></a>Siehe auch  
  [RDS (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [SubmitChanges-Methode (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
 
 

@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - desktop database drivers [ODBC], limitations
 - ODBC desktop database drivers [ODBC], limitations
 ms.assetid: b8d71c2a-23c8-4e9b-b5f7-aca51c5a4721
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 05f969f344ef69777d0586c18aba76cf7630bfd3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 034a4065615c3b0c298de110cd2501bd392a9704
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="limitations"></a>Einschränkungen
 Dieser Abschnitt beschreibt die Einschränkungen von der ODBC-Datenbanktreiber der Desktop in Bezug auf den folgenden Themen:  
@@ -35,7 +33,7 @@ Dieser Abschnitt beschreibt die Einschränkungen von der ODBC-Datenbanktreiber d
 |---------------|----------------|-------------------------------|  
 |[Aggregate-Funktion](../../odbc/microsoft/aggregate-function-limitations.md)|[ALTER TABLE-Anweisung](../../odbc/microsoft/alter-table-statement-limitations.md)|[Spaltenname](../../odbc/microsoft/column-name-limitations.md)|  
 |[Skalarfunktion](../../odbc/microsoft/scalar-function-limitations.md)|[CALL-Anweisung](../../odbc/microsoft/call-statement-limitations.md)|[Datentyp](../../odbc/microsoft/data-type-limitations.md)|  
-|[Set-Funktionen](../../odbc/microsoft/set-functions-limitations.md)|[CREATE Indexanweisung](../../odbc/microsoft/create-index-statement-limitations.md)|[Datum arithmetische Operationen](../../odbc/microsoft/date-arithmetic-limitations.md)|  
+|[Set-Funktionen](../../odbc/microsoft/set-functions-limitations.md)|[CREATE INDEX-Anweisung](../../odbc/microsoft/create-index-statement-limitations.md)|[Datumsarithmetik](../../odbc/microsoft/date-arithmetic-limitations.md)|  
 |[Sortieren](../../odbc/microsoft/sorting-limitations.md)|[TABLE-Anweisung erstellen](../../odbc/microsoft/create-table-statement-limitations.md)|[Identifiers (Bezeichner)](../../odbc/microsoft/identifiers-limitations.md)|  
 |[CONVERT-Funktion](../../odbc/microsoft/convert-function-limitations.md)|[DELETE-Anweisung](../../odbc/microsoft/delete-statement-limitations.md)|[Indexname](../../odbc/microsoft/index-name-limitations.md)|  
 ||[DROP INDEX-Anweisung](../../odbc/microsoft/drop-index-statement-limitations.md)|[Parametrisierte Abfrage](../../odbc/microsoft/parameterized-query-limitations.md)|  
@@ -53,4 +51,3 @@ Dieser Abschnitt beschreibt die Einschränkungen von der ODBC-Datenbanktreiber d
 |||[WOBEI Klausel](../../odbc/microsoft/where-clause-limitations.md)|  
 |||[Auf dem aktuellen-Klausel](../../odbc/microsoft/where-current-of-clause-limitations.md)|  
 |||[String](../../odbc/microsoft/string-limitations.md)|
-

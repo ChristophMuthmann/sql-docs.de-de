@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - DBCC CHECKIDENT
 - CHECKIDENT_TSQL
 - DBCC_CHECKIDENT_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - checking identity values
 - reseeding identity values
@@ -31,17 +29,16 @@ helpviewer_keywords:
 - identity values [SQL Server], reseeding
 - reporting current identity values
 ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: c97d13d1609f11802ec84940dab421ac8f96d28c
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d81aa2c26cf693d8ed5613c2aceb970a54db5aca
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -164,4 +161,3 @@ GO
 [IDENT_INCR &#40; Transact-SQL &#41;](../../t-sql/functions/ident-incr-transact-sql.md)  
   
   
-

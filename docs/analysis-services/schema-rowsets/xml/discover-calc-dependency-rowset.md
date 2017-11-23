@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_CALC_DEPENDENCIES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_CALC_DEPENDENCIES rowset
 ms.assetid: f39dde72-fa5c-4c82-8b4e-88358aa2e422
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0926c2eef3b0b733d9d334a5ed59a96a24826c42
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 86f0ed45ced35aba884f05284f886334d250694d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discovercalcdependency-rowset"></a>DISCOVER_CALC_DEPENDENCY-Rowset
   Berichtet von den Abhängigkeiten zwischen Berechnungen und auf den in jenen Berechnungen verwiesenen Objekten. Sie können diese Informationen in einer Clientanwendung verwenden, um Probleme mit komplexen Formeln zu melden oder um eine Warnung auszugeben, wenn verbundene Objekte gelöscht oder verändert werden. Sie können auch die in Measures oder berechneten Spalten verwendeten DAX-Ausdrücke mithilfe des Rowsets extrahieren.  
@@ -43,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 |**DATENBANKNAME**|**DBTYPE_WSTR**|ja|Gibt den Datenbanknamen an, der das Objekt enthält, für das die Abhängigkeitsanalyse angefordert wird. Bei Auslassung wird die aktuelle Datenbank verwendet.<br /><br /> Das **DISCOVER_DEPENDENCY_CALC** -Rowset kann mithilfe dieser Spalte eingeschränkt werden.|  
 |**OBJECT_TYPE**|**DBTYPE_WSTR**|ja|Gibt den Typ des Objekts an, für den die Abhängigkeitsanalyse angefordert wird. Das Objekt muss einem der folgenden Typen entsprechen:<br /><br /> **ACTIVE_RELATIONSHIP**: eine aktive Beziehung<br /><br /> **CALC_COLUMN**: Berechnete Spalte<br /><br /> **HIERARCHY**: eine Hierarchie<br /><br /> **MEASURE**: ein Measure<br /><br /> **RELATIONSHIP**: eine Beziehung<br /><br /> **KPI**: eine Leistungskennzahl (KPI – Key Performance Indicator)<br /><br /> <br /><br /> Beachten Sie, dass die **DISCOVER_DEPENDENCY_CALC** Rowset kann mithilfe dieser Spalte eingeschränkt werden.|  
 |**ABFRAGE**|**DBTYPE_WSTR**|ja|Für tabellarische Modelle, die in [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] erstellt wurden, kann eine DAX-Abfrage oder ein DAX-Ausdruck eingefügt werden, um das Abhängigkeitsdiagramm für diese Abfrage bzw. den Ausdruck anzuzeigen. Mithilfe der QUERY-Einschränkung können Clientanwendungen bestimmen, welche Objekte von einer DAX-Abfrage verwendet werden.<br /><br /> Die **QUERY** -Einschränkung kann in XMLA oder in der WHERE-Klausel einer DMV-Abfrage angegeben werden. Weitere Informationen finden Sie im Abschnitt mit Beispielen.|  
-|**TABELLE**|**DBTYPE_WSTR**||Der Name der Tabelle, die das Objekt enthält, wofür die Abhängigkeitsinformationen generiert werden.|  
+|**TABLE**|**DBTYPE_WSTR**||Der Name der Tabelle, die das Objekt enthält, wofür die Abhängigkeitsinformationen generiert werden.|  
 |**OBJEKT**|**DBTYPE_WSTR**||Der Name des Objekts, wofür die Abhängigkeitsinformationen generiert werden. Falls es sich beim Objekt um ein Measure oder eine berechnete Spalte handelt, verwenden Sie den Namen des Measures. Falls es sich beim Objekt um eine Beziehung handelt: der Name der Tabelle (oder Cubedimension), die die Spalte enthält, die an der Beziehung beteiligt ist.|  
 |**AUSDRUCK**|**DBTYPE_WSTR**||Die Formel, die das Objekt enthält, für das Abhängigkeiten gesucht werden.|  
 |**REFERENCED_OBJECT_TYPE**|**DBTYPE_WSTR**||Gibt den Typ des Objekts zurück, das eine Abhängigkeit vom Objekt aufweist, auf das verwiesen wird. Die zurückgegebenen Objekte können folgenden Typen entsprechen:<br /><br /> **CALC_COLUMN**: eine berechnete Spalte<br /><br /> **COLUMN**: eine Datenspalte<br /><br /> **MEASURE**: ein Measure<br /><br /> **RELATIONSHIP**: eine Beziehung<br /><br /> **KPI**: eine Leistungskennzahl (KPI – Key Performance Indicator)|  
@@ -139,4 +136,3 @@ SELECT * from $system.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE CALCULATE
  [Verwenden Sie dynamische Verwaltungssichten &#40; DMVs &#41; zum Überwachen von Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   
-

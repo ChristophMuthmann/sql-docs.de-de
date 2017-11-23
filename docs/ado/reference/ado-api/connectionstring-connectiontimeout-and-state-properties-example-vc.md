@@ -4,32 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ConnectionString property [ADO], VC++ example
 - ConnectionTimeout property [ADO], VC++ example
 - State property [ADO], VC++ example
 ms.assetid: c6bd2609-4c49-462f-a1aa-7bee0f615adb
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0727d4aa613771872d175ca3909499df5c2c35b5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 036913baf18e836412b9d9fadea3b7eff0c33d74
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>"ConnectionString" ConnectionTimeout und State-Eigenschaft (VC++-Beispiel)
 Dieses Beispiel zeigt verschiedene Möglichkeiten der Verwendung der ["ConnectionString"](../../../ado/reference/ado-api/connectionstring-property-ado.md) Eigenschaft so öffnen eine [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt. Darüber hinaus verwendet der [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) ein Verbindungstimeout festzulegende Eigenschaft und die [Zustand](../../../ado/reference/ado-api/state-property-ado.md) Eigenschaft beim Überprüfen des Status der Verbindungen. Die GetState-Funktion ist erforderlich, damit dieses Verfahren ausführen.  
@@ -179,4 +176,3 @@ void PrintComError(_com_error &e) {
  [ConnectionString-Eigenschaft (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
  [ConnectionTimeout-Eigenschaft (ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   
  [State-Eigenschaft (ADO)](../../../ado/reference/ado-api/state-property-ado.md)
-

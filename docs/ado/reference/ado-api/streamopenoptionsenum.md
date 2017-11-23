@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- StreamOpenOptionsEnum
-helpviewer_keywords:
-- StreamOpenOptionsEnum enumeration [ADO]
+f1_keywords: StreamOpenOptionsEnum
+helpviewer_keywords: StreamOpenOptionsEnum enumeration [ADO]
 ms.assetid: 85b6c57f-47ed-46ba-bd92-07882ae9e9d2
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 44e21fbed203effb3262ed2af84340856c4af8be
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 268d495d2163d03244a6bec57762b93a26ab32ea
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="streamopenoptionsenum"></a>StreamOpenOptionsEnum
 Gibt Optionen zum Öffnen einer [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt. Die Werte können mit einer OR-Operation kombiniert werden.  
@@ -43,5 +39,4 @@ Gibt Optionen zum Öffnen einer [Stream](../../../ado/reference/ado-api/stream-o
  Diese Konstanten keine ADO/WFC-Entsprechungen.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Open-Methode (ADO-Datenstrom)](../../../ado/reference/ado-api/open-method-ado-stream.md)
-
+ [Open-Methode (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)

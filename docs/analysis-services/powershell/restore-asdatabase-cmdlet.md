@@ -8,22 +8,20 @@ ms.service:
 ms.component: powershell
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 8ab7a2d0-679c-40e6-b9b9-042184b2dfc9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ae57bdc2a1f385e06248ab9486b7ef5fc07f7932
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 96e61c207316b216a1706834188a4f6f235cb52e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="restore-asdatabase-cmdlet"></a>Restore-ASDatabase-Cmdlet
 
@@ -204,4 +202,3 @@ PS SQLSERVER:\SQLAS\localhost\default> restore-asdatabase –restorefile “\\my
   
  Dieser Befehl stellt eine verschlüsselte Analysis Services-Sicherungsdatei (testdb.abf) in einem Remotesicherungsordner auf einer Remote-Analysis Services Standardinstanz wieder her. Der –StorageLocations-Parameter wird verwendet, um die Datenbankdateien an einem nicht standardmäßigen Speicherort einzufügen, in diesem Fall eine freigegebene Datei mit dem Namen "restoreDBfiles".  
   
-

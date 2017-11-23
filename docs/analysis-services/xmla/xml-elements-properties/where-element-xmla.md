@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Where Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Where Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#Where
 - microsoft.xml.analysis.where
 - http://schemas.microsoft.com/analysisservices/2003/engine#Where
-helpviewer_keywords:
-- Where element
+helpviewer_keywords: Where element
 ms.assetid: 81fb4190-3379-4ddf-8795-a0772f3b92bb
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5cff731a9673f8f811895f6dcc2b1a65c77f5716
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b559e82af0840067e9448e83056a3f1e96937b39
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="where-element-xmla"></a>Where-Element (XMLA)
   Definiert eine Filterbedingung, die vom übergeordneten Befehl [Drop](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) oder [Update](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md) verwendet wird.  
@@ -81,4 +76,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_MEASURES
+apiname: MDSCHEMA_MEASURES
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_MEASURES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_MEASURES rowset
 ms.assetid: 6ff5bd1a-aad0-49b8-9f8d-7df2637caacf
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b6e2e862d6ad09659a19ce60498e2f5f06810eb2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c77b91b179e360f539549cda05d0a17f0697ee56
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdschemameasures-rowset"></a>MDSCHEMA_MEASURES-Rowset
   Beschreibt jedes Measure innerhalb eines Cubes.  
@@ -47,7 +43,7 @@ ms.lasthandoff: 09/01/2017
 |**MEASURE_NAME**|**DBTYPE_WSTR**||Der Name des Measures.|  
 |**MEASURE_UNIQUE_NAME**|**DBTYPE_WSTR**||Der eindeutige Name des Measures. Für Anbieter, die eindeutige Namen durch eine Einschränkung generieren, ist jede Komponente dieses Namens begrenzt.|  
 |**MEASURE_CAPTION**|**DBTYPE_WSTR**||Eine Bezeichnung oder Beschriftung, die dem Measure zugeordnet ist. Wird hauptsächlich für Anzeigezwecke verwendet. Wenn keine Beschriftung vorhanden, **MEASURE_NAME** wird zurückgegeben.|  
-|**MEASURE_GUID**|**DBTYPE_GUID**||Wird nicht unterstützt.|  
+|**MEASURE_GUID**|**DBTYPE_GUID**||Nicht unterstützt.|  
 |**MEASURE_AGGREGATOR**|**DBTYPE_I4**||Eine Enumeration, die angibt, wie ein Measure abgeleitet wurde. Folgende Werte sind möglich:<br /><br /> **MDMEASURE_AGGR_SUM** (**1**) gibt an, dass das Measure aus aggregierten **Summe**.<br /><br /> **MDMEASURE_AGGR_COUNT** (**2**) gibt an, dass das Measure aus aggregierten **Anzahl**.<br /><br /> **MDMEASURE_AGGR_MIN** (**3**) gibt an, dass das Measure aus aggregierten **MIN**.<br /><br /> **MDMEASURE_AGGR_MAX** (**4**) gibt an, dass das Measure aus aggregierten **MAX**.<br /><br /> **MDMEASURE_AGGR_AVG** (**5**) gibt an, dass das Measure aus aggregierten **AVG**.<br /><br /> **MDMEASURE_AGGR_VAR** (**6**) gibt an, dass das Measure aus aggregierten **VAR**.<br /><br /> **MDMEASURE_AGGR_STD** (**7**) gibt an, dass das Measure aus aggregierten **STDEV**.<br /><br /> **MDMEASURE_AGGR_DST** (**8**) gibt an, dass das Measure aus aggregierten **DISTINCT COUNT**.<br /><br /> **MDMEASURE_AGGR_NONE** (**9**) gibt an, dass das Measure aus aggregierten **NONE**.<br /><br /> **MDMEASURE_AGGR_AVGCHILDREN** (**10**) gibt an, dass das Measure aus aggregierten **AVERAGEOFCHILDREN**.<br /><br /> **MDMEASURE_AGGR_FIRSTCHILD** (**11**) gibt an, dass das Measure aus aggregierten **FIRSTCHILD**.<br /><br /> **MDMEASURE_AGGR_LASTCHILD** (**12**) gibt an, dass das Measure aus aggregierten **LASTCHILD**.<br /><br /> **MDMEASURE_AGGR_FIRSTNONEMPTY** (**13**) gibt an, dass das Measure aus aggregierten **FIRSTNONEMPTY**,<br /><br /> **MDMEASURE_AGGR_LASTNONEMPTY** (**14**) gibt an, dass das Measure aus aggregierten **LASTNONEMPTY**.<br /><br /> **MDMEASURE_AGGR_BYACCOUNT** (**15**) gibt an, dass das Measure aus aggregierten **BYACCOUNT**.<br /><br /> **MDMEASURE_AGGR_CALCULATED** (**127**) gibt an, dass das Measure aus einer Formel abgeleitet wurde, die nicht die oben genannten Einzelfunktionen war.<br /><br /> **MDMEASURE_AGGR_UNKNOWN** (**0**) gibt an, dass das Measure aus einer unbekannten Aggregatfunktion oder Formel abgeleitet wurde.|  
 |**DATA_TYPE**|**DBTYPE_UI2**||Der Datentyp des Measures.|  
 |**"NUMERIC_PRECISION"**|**DBTYPE_UI2**||Die maximale Genauigkeit der Eigenschaft, wenn der Datentyp des Measureobjekts genau numerisch ist. **NULL** für alle anderen Eigenschaftentypen.|  
@@ -83,4 +79,3 @@ ms.lasthandoff: 09/01/2017
  [OLE DB für OLAP-Schemarowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

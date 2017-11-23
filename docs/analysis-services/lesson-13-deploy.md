@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: efcf6f3c540325b07c5e8b5a3892f2ed464141f8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f93ae84ae1ab52e5be122b0d2d397af7bf9e458a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-13-deploy"></a>Lektion 13: Bereitstellen
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -86,4 +83,3 @@ Gratulation! Sie sind nicht mehr benötigen, erstellen und Bereitstellen von Ihr
 *  [Ergänzende Lektion - Implementieren von dynamischer Sicherheit mithilfe von Zeilenfiltern](../analysis-services/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md).
 
 *  [Ergänzende Lektion: Konfigurieren von Berichterstellungseigenschaften für Power View-Berichte](../analysis-services/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md).
-

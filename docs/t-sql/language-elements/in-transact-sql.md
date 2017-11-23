@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - IN_TSQL
 - IN
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - values [SQL Server], matching
 - NOT IN keyword
@@ -25,17 +23,16 @@ helpviewer_keywords:
 - IN keyword
 - 8632 (Database Engine error)
 ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 487c576ea2323ea7da9726dfb161889e12aff0d9
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 70b186107966791e29ccb76ea9c310724b76e3b6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -223,7 +220,6 @@ WHERE FirstName IN ('Mike', 'Michael');
  [Einige &#124; Alle &#40; Transact-SQL &#41;](../../t-sql/language-elements/some-any-transact-sql.md)  
   
   
-
 
 
 

@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ManufacturingExtraMonthQuarter Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ManufacturingExtraMonthQuarter Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ManufacturingExtraMonthQuarter
-helpviewer_keywords:
-- ManufacturingExtraMonthQuarter element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ManufacturingExtraMonthQuarter
+helpviewer_keywords: ManufacturingExtraMonthQuarter element
 ms.assetid: 6e97d92c-dd1e-48f6-a379-c1036c975f9f
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6ca516d465b3e7dcfe661df1c7e849ba158b08e8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6155bc55f4db913c52b349e4a5ec0086db1bff8d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manufacturingextramonthquarter-element-assl"></a>ManufacturingExtraMonthQuarter-Element (ASSL)
   Definiert den Monat des Produktionszeitraums, dem ein zusätzlicher Monat für zugewiesen ist, ein [TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md) Element.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

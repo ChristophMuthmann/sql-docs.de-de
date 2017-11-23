@@ -8,20 +8,18 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b107903c83100d24f8691fba78ab9e928ee23d00
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 50f9efe65f14dbd73ccbc3c6e81307c3893c469f
-ms.openlocfilehash: 85ba8b35fa698769bd390837855729f3edbc7291
-ms.contentlocale: de-de
-ms.lasthandoff: 11/08/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="programming-guidelines"></a>Programmierrichtlinien
 
@@ -34,17 +32,17 @@ Eine ODBC-Anwendung verwenden kann, Multiple Active Result Sets (MARS) und ander
 ## <a name="available-features"></a>Verfügbare Funktionen  
 Aus den folgenden Abschnitten werden die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client Dokumentation für ODBC ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) bei Verwendung den ODBC-Treiber unter Mac OS und Linux gültig sind:  
 
--   [Bei der Kommunikation mit SQLServer (ODBC)](http://msdn.microsoft.com/library/ms131692.aspx)  
+-   [Kommunikation mit SQL Server (ODBC)](http://msdn.microsoft.com/library/ms131692.aspx)  
 -   [Verbindungs- und Abfragetimeout-Unterstützung](http://msdn.microsoft.com/library/ms130822.aspx)  
 -   [Cursor](http://msdn.microsoft.com/library/ms130794(SQL.110).aspx)  
 -   [Uhrzeitverbesserungen Sie Datums-/ (ODBC)](http://msdn.microsoft.com/library/bb677319.aspx)  
 -   [Ausführen von Abfragen (ODBC)](http://msdn.microsoft.com/library/ms131677.aspx)  
--   [Behandeln von Fehlern und Meldungen](http://msdn.microsoft.com/library/ms131289.aspx)  
+-   [Behandlung von Fehlern und Meldungen](http://msdn.microsoft.com/library/ms131289.aspx)  
 -   [Kerberos-Authentifizierung](http://msdn.microsoft.com/library/cc280459.aspx)  
 -   [Große benutzerdefinierte CLR-Typen (ODBC)](http://msdn.microsoft.com/library/bb677316.aspx)  
 -   [Ausführen von Transaktionen (ODBC) (mit Ausnahme von verteilten Transaktionen)](http://msdn.microsoft.com/library/ms131706.aspx)  
 -   [Verarbeiten von Ergebnissen (ODBC)](http://msdn.microsoft.com/library/ms130812.aspx)  
--   [Ausführen von gespeicherten Prozeduren](http://msdn.microsoft.com/library/ms131440.aspx)
+-   [Ausführen gespeicherter Prozeduren](http://msdn.microsoft.com/library/ms131440.aspx)
 -   [Unterstützung für Spalten mit geringer Dichte (ODBC)](http://msdn.microsoft.com/library/cc280357.aspx)
 -   [SSL-Verschlüsselung](http://msdn.microsoft.com/library/ms131691.aspx)
 -   [Tabelle Valued Parameter](https://docs.microsoft.com/en-us/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
@@ -118,4 +116,3 @@ Wenn UTF-8-Mehrbytezeichen oder UTF-16-Ersatzzeichen auf SQLPutData-Puffer aufge
 [Bekannte Probleme in dieser Version des Treibers](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 
 [Versionsanmerkungen](../../../connect/odbc/linux-mac/release-notes.md)
-

@@ -5,29 +5,25 @@ ms.date: 03/09/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to:
-- SQL Server
-dev_langs:
-- XML
+applies_to: SQL Server
+dev_langs: XML
 helpviewer_keywords:
 - upper-case
 - upper-case Function (XQuery)
 ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e5297bbdf2cd1129142c2b33e633fafb0ca0bab2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 18643d9c41fd78cc8f01ec4e5dcb607b73a5bf0a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="functions-on-string-values---upper-case"></a>Funktionen für Zeichenfolgenwerte - Großbuchstaben
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -129,4 +125,3 @@ where CatalogDescription.exist('
  [XQuery Functions against the xml Data Type (XQuery-Funktionen für den xml-Datentyp)](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   
-

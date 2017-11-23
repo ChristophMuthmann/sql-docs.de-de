@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Enabled Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Enabled Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Enabled
-helpviewer_keywords:
-- Enabled element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Enabled
+helpviewer_keywords: Enabled element
 ms.assetid: dbe57903-75c0-4060-a2b3-eab241d7469f
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 86d268657d49ccd368161693f11f1a7c2f1a8aeb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8832c5d6ec6dcba3c49289ada700572b657f821c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="enabled-element-assl"></a>Enabled-Element (ASSL)
   Gibt an, ob das übergeordnete Element aktiviert ist.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

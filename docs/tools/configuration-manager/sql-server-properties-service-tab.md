@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e4ae0c6b-6fd8-4325-b54e-1758fc659958
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: afec632bf85f8e95d370842946fed62e6b8c4111
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 17df1facd3c4c3f9035017c0156e6e3aed910d33
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-properties-service-tab"></a>SQL-Server-Eigenschaften (Registerkarte Dienst)
   Verwenden Sie im Dialogfeld **MSSQLSERVER-Eigenschaften**die Registerkarte **Dienst** , um die folgenden Optionen anzuzeigen oder anzugeben.  
@@ -45,7 +43,7 @@ ms.lasthandoff: 08/02/2017
  Zeigt die Prozess-ID von Windows an.  
   
  **Diensttyp**  
- Zeigt den für aufrufende Prozesse bereitgestellten Diensttyp an. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert mehrere Dienste.  
+ Zeigt den für aufrufende Prozesse bereitgestellten Diensttyp an. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden mehrere Dienste installiert.  
   
  **Startmodus**  
  Richten Sie den Dienst mit den folgenden Auswahlmöglichkeiten ein:  
@@ -60,4 +58,3 @@ ms.lasthandoff: 08/02/2017
  Zeigt an, ob dieser Dienst ausgeführt wird, angehalten oder deaktiviert ist. "**…**" gibt einen ausstehenden Statuswechsel an.  
   
   
-

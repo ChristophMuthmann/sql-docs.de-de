@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Process Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Process Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Process
-helpviewer_keywords:
-- Process element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Process
+helpviewer_keywords: Process element
 ms.assetid: 4aa08718-be44-4781-92cf-7b32b20f862c
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7d05a61a362245c7810259c0ca01c31c374bf523
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e208dcbd564db186af596132f0974e4e42789dd6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="process-element-assl"></a>Process-Element (ASSL)
   Bestimmt, ob ein Benutzer Zugriff auf den Besitzer eines übergeordneten Elements hat.  
@@ -74,4 +68,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

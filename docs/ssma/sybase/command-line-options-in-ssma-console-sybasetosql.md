@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Sybase Console,Command Line Options
+helpviewer_keywords: Sybase Console,Command Line Options
 ms.assetid: 337cbd26-67b7-4c88-9deb-d0a69a3d7714
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4b83196309d457e35f45840bc32fe458db298739
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f5dd6992056b19367f8e7f9d9ee4119976827764
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>Befehlszeilenoptionen in SSMA-Konsole (SybaseToSQL)
 Microsoft stellt Ihnen eine Reihe robuster Befehlszeilenoptionen zum Ausführen und Steuern von SSMA-Aktivitäten. In den folgenden Abschnitten ausführlich identisch.  
@@ -181,4 +178,3 @@ Der nächste Schritt hängt davon ab, auf die Anforderungen Ihres Projekts:
   
 -   Behandlung von Problemen in der Konsole, finden Sie unter [Problembehandlung &#40; SybaseToSQL &#41; ](../../ssma/sybase/troubleshooting-sybasetosql.md).  
   
-

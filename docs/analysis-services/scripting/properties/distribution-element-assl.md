@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Distribution Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Distribution Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Distribution
-helpviewer_keywords:
-- Distribution element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Distribution
+helpviewer_keywords: Distribution element
 ms.assetid: a1309b90-8ad8-431b-a918-67f0cdd4fd20
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 18155de029549cdf777515dc9432dd63378ce263
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 20e87df47e6be29c91f4e9b47ac25b62506bc3b8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="distribution-element-assl"></a>Distribution-Element (ASSL)
   Enthält einen anbieterspezifischen Wert, der beschreibt, wie Skalare Werte innerhalb einer Spalte verteilt werden eine [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) Element.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

@@ -8,36 +8,33 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - descriptors [ODBC], allocating and freeing
 - allocating and freeing descriptors [ODBC]
 ms.assetid: c615ab7a-f631-4783-a37f-d429873b6047
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d0046ac6e7168106fd8710496470a899c503ee61
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b90eb16246f4eba3eebaf5d33239ccdf2b201878
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="allocating-and-freeing-descriptors"></a>Zuordnen und befreien Deskriptoren
 Deskriptoren sind entweder implizit oder explizit reserviert wie in den folgenden Abschnitten beschrieben.  
   
--   [Implizit zugeordneten Deskriptoren](../../../odbc/reference/develop-app/implicitly-allocated-descriptors.md)  
+-   [Implizit zugewiesene Deskriptoren](../../../odbc/reference/develop-app/implicitly-allocated-descriptors.md)  
   
 -   [Explizit zugewiesene Deskriptoren](../../../odbc/reference/develop-app/explicitly-allocated-descriptors.md)  
   
--   [Initialisierung des Deskriptorfelder](../../../odbc/reference/develop-app/initialization-of-descriptor-fields.md)  
+-   [Initialisierung der Deskriptorfelder](../../../odbc/reference/develop-app/initialization-of-descriptor-fields.md)  
   
--   [Automatische Auffüllung der die IPD](../../../odbc/reference/develop-app/automatic-population-of-the-ipd.md)  
+-   [Automatische Auffüllung des IPD](../../../odbc/reference/develop-app/automatic-population-of-the-ipd.md)  
   
 -   [Freigeben von Deskriptoren](../../../odbc/reference/develop-app/freeing-descriptors.md)
-

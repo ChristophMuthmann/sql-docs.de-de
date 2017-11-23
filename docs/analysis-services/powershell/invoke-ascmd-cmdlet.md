@@ -8,22 +8,20 @@ ms.service:
 ms.component: powershell
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 2896b74a-3911-4b3f-89ab-bb375bdb34d8
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 6e5d1fba56fd4cee4c736a583d8af2fe8ec6f986
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 366263980ae7ad9d5a792e6525888080a38ebbf6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="invoke-ascmd-cmdlet"></a>Invoke-ASCmd-Cmdlet
 
@@ -250,4 +248,3 @@ Invoke-ASCmd -Database:"Adventure Works DW" -Query:"<Discover xmlns='urn:schemas
   
   
   
-

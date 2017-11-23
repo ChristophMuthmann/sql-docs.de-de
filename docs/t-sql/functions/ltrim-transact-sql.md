@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - LTRIM
 - LTRIM_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - leading blanks
 - deleting blank spaces
@@ -25,17 +23,16 @@ helpviewer_keywords:
 - LTRIM function
 - blank characters [SQL Server]
 ms.assetid: 369ed340-1a09-4597-a9eb-6720156cd39a
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 4221804a91d23c872f3874d19bc575c88b6e0ffe
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ad63999f685b31848ea505fd5a671d1e163ddc91
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltrim-transact-sql"></a>LTRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -100,6 +97,5 @@ Original string Without spaces
  [Zeichenfolgenfunktionen &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
-
 
 

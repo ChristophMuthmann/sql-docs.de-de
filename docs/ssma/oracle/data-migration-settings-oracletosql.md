@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 91f7f558-025d-4f4d-ac2c-aa095e7d1ace
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 314f44b5ac58ef1e5291530cc68697b787c6193b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9e92081e6dea57616636e2b404bce3a950ca8ea4
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-migration-settings-oracletosql"></a>Daten-Migrationseinstellungen (OracleToSQL)
   
@@ -60,4 +58,3 @@ Es begrenzt sind zwei Schaltflächen vorhanden.:
 ## <a name="see-also"></a>Siehe auch  
 [Migrieren von Oracle-Daten in SQLServer](http://msdn.microsoft.com/en-us/e23c5268-41ed-4e55-9fe7-a11376202a13)  
   
-

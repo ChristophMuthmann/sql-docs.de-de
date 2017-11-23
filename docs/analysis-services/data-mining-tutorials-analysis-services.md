@@ -8,26 +8,22 @@ ms.service:
 ms.component: data-mining
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- data mining [Analysis Services], designing
+applies_to: SQL Server 2016
+helpviewer_keywords: data mining [Analysis Services], designing
 ms.assetid: 96eea930-4a4f-42d8-bf72-6c5daf1a5f09
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 39db9f015ef3c52d5e967bdb6c45a47f8b7bd40f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d97b1f305fe41cc1bf67113cdad38fbe14f7f15a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>Data Mining-Lernprogramme (Analysis Services)
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erleichtert das Erstellen von Datamining-Lösungen mithilfe von Assistenten und integrierten Visualisierungen. Insbesondere dann, wenn Sie Computerlernen nicht gewohnt sind, sind die Tools in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] eine einfache Möglichkeit zum Entwerfen, Trainieren und Durchsuchen von Datamining-Modellen. Die Daten in Ihren Modellen können in einem Cube, einer relationalen Datenbank oder einer anderen Quelle, die von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützt wird, gespeichert werden. Nach dem Erstellen eines Modells können Sie es produktiv nutzen durch Zugriff auf das Modell zum Erstellen von Vorhersageabfragen mithilfe von mehreren Clients, einschließlich [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] und ASP.NET.  
@@ -50,5 +46,4 @@ ms.lasthandoff: 09/01/2017
   
   
   
-
 
