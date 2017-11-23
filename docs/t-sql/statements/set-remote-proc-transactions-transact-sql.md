@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - SET REMOTE_PROC_TRANSACTIONS
 - REMOTE_PROC_TRANSACTIONS
 - SET_REMOTE_PROC_TRANSACTIONS_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - remote stored procedures [SQL Server]
 - SET REMOTE_PROC_TRANSACTIONS statement
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - REMOTE_PROC_TRANSACTIONS option
 - active transactions
 ms.assetid: 4d284ae9-3f5f-465a-b0dd-1328a4832a03
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 97d4599c98e68a3cf4bd8682ec2b4601aec19568
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9ad924fa239801adb78cb391a26249cb1c2a21d1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-remoteproctransactions-transact-sql"></a>SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,4 +77,3 @@ SET REMOTE_PROC_TRANSACTIONS { ON | OFF }
  [SET-Anweisungen &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   
-

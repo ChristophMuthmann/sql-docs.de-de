@@ -8,24 +8,21 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 ms.assetid: d8d6f62a-e815-425c-a80e-a63fd34ec275
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: e6e36b056aaca063970c81d2932ec47ee7cef29e
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d780aa463f6d4defe7dc727091863feabe7f338a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="transact-sql-statements"></a>Transact-SQL-Anweisungen
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -63,4 +60,3 @@ Service Broker ist ein Feature, die systemeigene Unterstützung für Messaging-u
 
 ## <a name="session-settings"></a>Sitzungseinstellungen
 SET-Anweisungen bestimmen, wie die aktuelle Sitzung Handles Uhrzeiteinstellungen ausgeführt. Eine Übersicht finden Sie unter [SET-Anweisungen](set-statements-transact-sql.md).
-

@@ -1,13 +1,14 @@
 ---
 title: Erstellen der Tabelle (Transact-SQL) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,8 +20,7 @@ f1_keywords:
 - TABLE_TSQL
 - FILESTREAM_ON
 - FILESTREAM_ON_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - CHECK constraints
 - global temporary tables [SQL Server]
@@ -47,20 +47,19 @@ helpviewer_keywords:
 - number of columns per table
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: 256
+caps.latest.revision: "256"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: e61305f37dd20279f328dfe57e3de0c22c9b01f2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0978041b1c2683f6af3f6c531ddc10edc6b9bcbf
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Erstellt eine neue Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
@@ -587,7 +586,7 @@ Gibt an, um einen Index für die Tabelle zu erstellen. Dies kann ein gruppierter
  **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  SPARSE  
- Gibt an, dass die Spalte eine Spalte mit geringer Dichte ist. Der Speicher für Spalten mit geringer Dichte ist für NULL-Werte optimiert. Spalten mit geringer Dichte können nicht als NOT NULL festgelegt werden. Zusätzliche Einschränkungen und Weitere Informationen zu Spalten mit geringer Dichte finden Sie unter [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
+ Gibt an, dass die Spalte eine Sparsespalte ist. Der Speicher für Sparsespalten ist für NULL-Werte optimiert. Spalten mit geringer Dichte können nicht als NOT NULL festgelegt werden. Zusätzliche Einschränkungen und Weitere Informationen zu Spalten mit geringer Dichte finden Sie unter [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
  MASKIERTE mit (Funktion = " *Mask_function* ")  
  **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -739,7 +738,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
 >  Dokumentieren mit FILLFACTOR = *Fillfactor* als einzige Indexoption, für die PRIMARY KEY- oder UNIQUE-Einschränkungen gilt wird aus Gründen der Abwärtskompatibilität beibehalten, jedoch nicht auf diese Weise in Zukunft dokumentiert wird frei.  
   
  *spaltensatzname* XML COLUMN_SET FOR ALL_SPARSE_COLUMNS  
- Der Name des Spaltensatzes. Bei einem Spaltensatz handelt es sich um eine nicht typisierte XML-Darstellung, die alle Tabellenspalten mit geringer Dichte in einer strukturierten Ausgabe kombiniert. Weitere Informationen zu Spaltensätzen finden Sie unter [Verwenden von Spaltensätzen](../../relational-databases/tables/use-column-sets.md).  
+ Der Name des Spaltensatzes. Bei einem Spaltensatz handelt es sich um eine nicht typisierte XML-Darstellung, die alle Sparsespalten einer Tabelle in einer strukturierten Ausgabe kombiniert. Weitere Informationen zu Spaltensätzen finden Sie unter [Verwenden von Spaltensätzen](../../relational-databases/tables/use-column-sets.md).  
   
  PERIOD FOR SYSTEM_TIME (*System_start_time_column_name* , *System_end_time_column_name* )  
    
@@ -1020,7 +1019,7 @@ INSERT INTO #MyTempTable VALUES (1);
 ```  
 CREATE PROCEDURE dbo.Test2  
 AS  
-    CREATE TABLE #t(x INT PRIMARY KEY);  
+n    CREATE TABLE #t(x INT PRIMARY KEY);  
     INSERT INTO #t VALUES (2);  
     SELECT Test2Col = x FROM #t;  
 GO  
@@ -1030,7 +1029,7 @@ AS
     CREATE TABLE #t(x INT PRIMARY KEY);  
     INSERT INTO #t VALUES (1);  
     SELECT Test1Col = x FROM #t;  
-EXEC Test2;  
+ EXEC Test2;  
 GO  
   
 CREATE TABLE #t(x INT PRIMARY KEY);  
@@ -1069,7 +1068,7 @@ Azure SQL-Datenbank unterstützt globale temporäre Tabellen, die auch in Tempdb
 Globale temporäre Tabellen für Azure SQL-Datenbank führen Sie die gleichen Syntax und Semantik, die SQL Server für temporäre Tabellen verwendet.  Auf ähnliche Weise sind globale temporäre gespeicherte Prozeduren auch auf Datenbankebene in Azure SQL-Datenbank beschränkt. Lokale temporäre Tabellen (eingeleitet mit # Tabellennamen) auch für Azure SQL-Datenbank unterstützt werden, und folgen Sie der gleichen Syntax und Semantik, die SQL Server verwendet.  Finden Sie im obigen Abschnitt [temporäre Tabellen](#temporary-tables).  
 
 > [!IMPORTANT]
-> Dieses Feature ist in der öffentlichen Vorschau und steht für die Azure SQL-Datenbank.
+> Diese Funktion ist nur verfügbar für Azure SQL-Datenbank.
 >
 
 ### <a name="troubleshooting-global-temporary-tables-for-azure-sql-db"></a>Problembehandlung bei globalen temporären Tabellen für Azure SQL-Datenbank 
@@ -1469,10 +1468,10 @@ WITH (DATA_COMPRESSION = ROW);
   
  Zusätzliche Beispiele zur datenkomprimierung finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).  
   
-### <a name="o-creating-a-table-that-has-sparse-columns-and-a-column-set"></a>O. Erstellen einer Tabelle mit Spalten mit geringer Dichte und einem Spaltensatz  
- Anhand der folgenden Beispiele wird gezeigt, wie Sie eine Tabelle mit einer Spalte mit geringer Dichte und eine Tabelle mit zwei Spalten mit geringer Dichte und einem Spaltensatz erstellen. In den Beispielen wird die grundlegende Syntax verwendet. Komplexere Beispiele finden Sie unter [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md) und [Verwenden von Spaltensätzen](../../relational-databases/tables/use-column-sets.md).  
+### <a name="o-creating-a-table-that-has-sparse-columns-and-a-column-set"></a>O. Erstellen einer Tabelle mit Sparsespalten und einem Spaltensatz  
+ Anhand der folgenden Beispiele wird gezeigt, wie Sie eine Tabelle mit einer Sparsespalte und eine Tabelle mit zwei Sparsespalten und einem Spaltensatz erstellen. In den Beispielen wird die grundlegende Syntax verwendet. Komplexere Beispiele finden Sie unter [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md) und [Verwenden von Spaltensätzen](../../relational-databases/tables/use-column-sets.md).  
   
- In diesem Beispiel wird eine Tabelle erstellt, die eine Spalte mit geringer Dichte enthält.  
+ In diesem Beispiel wird eine Tabelle erstellt, die eine Sparsespalte enthält.  
   
 ```  
 CREATE TABLE dbo.T1  
@@ -1480,7 +1479,7 @@ CREATE TABLE dbo.T1
     c2 varchar(50) SPARSE NULL ) ;  
 ```  
   
- In diesem Beispiel wird eine Tabelle erstellt, die zwei Spalten mit geringer Dichte und einen Spaltensatz mit dem Namen `CSet` enthält.  
+ In diesem Beispiel wird eine Tabelle erstellt, die zwei Sparsespalten und einen Spaltensatz mit dem Namen `CSet` enthält.  
   
 ```  
 CREATE TABLE T1  
@@ -1660,6 +1659,5 @@ GO
  [Sp_spaceused &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
   
   
-
 
 
