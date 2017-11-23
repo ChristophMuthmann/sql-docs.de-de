@@ -20,17 +20,16 @@ helpviewer_keywords:
 - solutions [Analysis Services], deploying
 - models [Analysis Services], data mining
 ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e40b686c7aa60b023600e17170c33e2ba7b776be
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aa037f7ff155df158ba2967c5e7c31989ace887d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deployment-of-data-mining-solutions"></a>Bereitstellen von Data Mining-Lösungen
   Der letzte Schritt im Data Mining-Prozess besteht darin, die Modelle in einer Produktionsumgebung bereitzustellen. Die Bereitstellung ist wichtig, da dadurch die Modelle Benutzern zur Verfügung gestellt werden, damit Sie irgendeine der folgenden Aufgaben ausführen können:  
@@ -59,12 +58,12 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="bkmk_Reqs"></a> Anforderungen für die Bereitstellung von Data Mining-Projektmappen  
  Die Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , für die Sie die Projektmappe bereitstellen, muss in einem Modus ausgeführt werden, der mehrdimensionale Objekte und Data Mining-Objekte unterstützt. Sie können daher Data Mining-Objekte nicht in einer Instanz bereitstellen, die tabellarische Modelle oder [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten hostet.  
   
- Wenn Sie in Visual Studio eine Data Mining-Projektmappe erstellen, müssen Sie demzufolge die Vorlage für multidimensionale Projekte bzw. Data Mining-Projekte von Analysis Services ****verwenden.  
+ Wenn Sie in Visual Studio eine Data Mining-Projektmappe erstellen, müssen Sie demzufolge die **Vorlage für multidimensionale Projekte bzw. Data Mining-Projekte von Analysis Services** verwenden.  
   
  Wenn Sie die Projektmappe bereitstellen, werden die für Data Mining verwendeten Objekte in der angegebenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz erstellt, und zwar in einer Datenbank mit dem gleichen Namen wie die Projektmappendatei.  
   
 ###  <a name="bkmk_RelationalSltn"></a> Bereitstellen von relationalen Projektmappen  
- Wenn Sie eine relationale Data Mining-Projektmappe bereitstellen, werden die erforderlichen Data Mining-Objekte innerhalb einer neuen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank erstellt, und die Objekte werden standardmäßig verarbeitet. Sie können die Verarbeitungsoptionen mithilfe der Konfigurationseigenschaft für die Verarbeitungsoption ****ändern. Weitere Informationen finden Sie unter [Konfigurieren von Analysis Services-Projekteigenschaften &#40;SSDT&#41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
+ Wenn Sie eine relationale Data Mining-Projektmappe bereitstellen, werden die erforderlichen Data Mining-Objekte innerhalb einer neuen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank erstellt, und die Objekte werden standardmäßig verarbeitet. Sie können die Verarbeitungsoptionen mithilfe der Konfigurationseigenschaft für die **Verarbeitungsoption** ändern. Weitere Informationen finden Sie unter [Konfigurieren von Analysis Services-Projekteigenschaften &#40;SSDT&#41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
  Standardmäßig werden nur inkrementelle Änderungen jedes Mal bereitgestellt. Sie können demnach ein Miningmodell ändern, und wenn Sie das Projekt erneut bereitstellen, wird nur das Miningmodell aktualisiert. Wenn jedoch mehrere Clients die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank bearbeiten, kann dies zu Fehlern führen. Ändern Sie die Eigenschaft **Bereitstellungsmodus** , um den Standardbereitstellungsmodus zu ändern, damit die gesamte Datenbank aktualisiert wird, wenn Sie die Projektmappe bereitstellen.  
   
@@ -96,4 +95,3 @@ ms.lasthandoff: 09/01/2017
  [Anforderungen und Überlegungen zur Verarbeitung &#40;Data Mining&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   
-

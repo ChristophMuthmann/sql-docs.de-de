@@ -2,9 +2,12 @@
 title: SQL Server 2016 Express LocalDB | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/10/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 15c7e7ce18d60b766251f171a6f671a679d93990
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a50727ec3560bf2d5f0cef41c13be050026366df
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/en-US/library/hh510202(SQL.120).aspx).
 
 Microsoft SQL Server 2016 Express **LocalDB** ist ein Feature von [SQL Server Express](https://msdn.microsoft.com/library/ms144275(SQL.130).aspx) , das speziell für Entwickler konzipiert wurde. Es ist in SQL Server 2016 Express mit Advanced Services verfügbar.  
@@ -119,7 +122,7 @@ REM Gather information about the instance of LocalDB
 >  Wenn Ihre Anwendung eine Version vor .NET 4.0.2 verwendet, müssen Sie eine direkte Verbindung mit der Named Pipe von **LocalDB**herstellen. Der Wert für Instanz-Pipename ist die Named Pipe, welche die Instanz von **LocalDB** überwacht. Der Teil des Instanzpipenamens nach LOCALDB # ändert sich jedes Mal, wenn die Instanz von **LocalDB** gestartet wird. Sie stellen eine Verbindung zur Instanz von **LocalDB** mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] her, indem Sie den Namen der Instanzpipe im Feld **Servername** des Dialogfeldes **Verbindung herstellen mit [!INCLUDE[ssDE](../../includes/ssde-md.md)]** eingeben. Von Ihrem benutzerdefinierten Programm aus können Sie mit einer Verbindungszeichenfolge ähnlich **Die LocalDB** eine Verbindung mit der Instanz von LocalDB `SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");`  
   
 ### <a name="connecting-to-a-shared-instance-of-localdb"></a>Herstellen einer Verbindung mit einer freigegebenen Instanz von LocalDB  
- Fügen Sie zum Herstellen einer Verbindung mit einer freigegebenen Instanz von **LocalDB** der Verbindungszeichenfolge **erforderlich ist.\\** (Punkt + umgekehrter Schrägstrich) hinzu, um einen Verweis auf den für die freigegebenen Instanzen reservierten Namespace zu erstellen. Verwenden Sie beispielsweise eine Verbindungszeichenfolge wie als Teil der Verbindungszeichenfolge, um eine Verbindung mit einer freigegeben Instanz von **LocalDB** `AppData` namens `(localdb)\.\AppData` herzustellen. Benutzer, die eine Verbindung mit einer freigegebenen Instanz von **LocalDB** herstellen, die sie nicht besitzen, müssen über eine Windows-Authentifizierung oder über einen Anmeldenamen für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verfügen.  
+ Fügen Sie zum Herstellen einer Verbindung mit einer freigegebenen Instanz von **LocalDB** der Verbindungszeichenfolge **erforderlich ist.\\** (Punkt + umgekehrter Schrägstrich) hinzu, um einen Verweis auf den für die freigegebenen Instanzen reservierten Namespace zu erstellen. Verwenden Sie beispielsweise eine Verbindungszeichenfolge wie **** als Teil der Verbindungszeichenfolge, um eine Verbindung mit einer freigegeben Instanz von LocalDB `AppData` namens `(localdb)\.\AppData` herzustellen. Benutzer, die eine Verbindung mit einer freigegebenen Instanz von **LocalDB** herstellen, die sie nicht besitzen, müssen über eine Windows-Authentifizierung oder über einen Anmeldenamen für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verfügen.  
   
 ## <a name="troubleshooting"></a>Problembehandlung  
  Informationen zur Problembehandlung für **LocalDB**finden Sie unter [Problembehandlung SQL Server 2012 Express LocalDB](http://social.technet.microsoft.com/wiki/contents/articles/4609.aspx).  

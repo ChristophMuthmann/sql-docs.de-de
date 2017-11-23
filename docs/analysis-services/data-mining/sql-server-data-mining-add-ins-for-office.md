@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: e2682484f535bbc98e75c072e1a75243ab78ccd3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d637a50ca56acfcc80da1a09542e88e476351634
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>SQL Server Data Mining-Add-Ins für Office
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Bei den Data Mining-Add-Ins für Office handelt es sich um ein kompaktes Set von Tools für Vorhersageanalysen, mit denen Sie auf der Grundlage von Daten in Excel analytische Modelle für Vorhersagezwecke, Empfehlungen oder Untersuchungen erstellen können.  
@@ -47,7 +46,7 @@ ms.lasthandoff: 09/01/2017
   
      In den Add-Ins sind bewährte Computerlernalgorithmen wie Naive Bayes, Logistic Regression, Clustering, Zeitreihen und Neural Networks enthalten.  
   
-     Wenn Sie über keine Erfahrungen mit dem Data Mining verfügen, werden Sie durch den Abfrage-Assistenten **** beim Erstellen von Vorhersageabfragen unterstützt.  
+     Wenn Sie über keine Erfahrungen mit dem Data Mining verfügen, werden Sie durch den **Abfrage**-Assistenten beim Erstellen von Vorhersageabfragen unterstützt.  
   
      Erfahrene Benutzer können benutzerdefinierte DMX-Abfragen mit dem **erweiterten Abfrage-Editor**per Drag &amp; Drop erstellen oder mit Excel VBA Vorhersagen automatisieren.  
   
@@ -87,4 +86,3 @@ ms.lasthandoff: 09/01/2017
  Weiterführende Hilfe zur Installation finden Sie im Download Center auf der folgenden Seite: [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
   
   
-

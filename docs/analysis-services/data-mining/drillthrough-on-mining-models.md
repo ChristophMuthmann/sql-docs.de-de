@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5b732f8e0fbb955c190c20f32ff0866b2c4c2286
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5c725d6035300f168f6388d484f1e3b9ba2f0428
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="drillthrough-on-mining-models"></a>Miningmodell-Drillthrough
   *Drillthrough* beschreibt die Fähigkeit, entweder ein Miningmodell oder eine Miningstruktur abzufragen und ausführliche Daten zu erhalten, die im Modell nicht verfügbar sind.  
@@ -34,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>Drillthrough zu Modellfällen im Vergleich zu Drillthrough zu Strukturen  
  Ein Drillthrough zu **Modellfällen** ist hilfreich für die Suche nach weiteren Details zu Regeln, Mustern oder Clustern in einem Modell. Sie würden beispielsweise keine Kundenkontaktinformationen in einem Clustermodell für die Analyse verwenden, auch wenn Ihnen die Daten zur Verfügung stünden. Durch einen Drillthrough können Sie auf diese Informationen vom Modell zugreifen.  
   
- Demgegenüber soll ein **** Drillthrough in Bezug auf Strukturdaten einen Zugriff auf Informationen ermöglichen, die im Modell nicht verfügbar waren. Beispielsweise könnten einige Strukturspalten aus dem Modell ausgeschlossen sein, da entweder der Datentyp nicht kompatibel war oder die Daten für die Analyse nicht nützlich waren.  
+ Demgegenüber soll ein **Drillthrough in Bezug auf Strukturdaten** einen Zugriff auf Informationen ermöglichen, die im Modell nicht verfügbar waren. Beispielsweise könnten einige Strukturspalten aus dem Modell ausgeschlossen sein, da entweder der Datentyp nicht kompatibel war oder die Daten für die Analyse nicht nützlich waren.  
   
 ## <a name="enabling-drillthrough-on-a-model"></a>Ermöglichen von Drillthrough für ein Modell  
  Damit ein Drillthrough auf ein Miningmodell angewendet werden kann, müssen die folgenden Bedingungen erfüllt werden:  
@@ -75,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [Drillthrough in Miningstrukturen](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
   
   
-

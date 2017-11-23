@@ -19,17 +19,16 @@ helpviewer_keywords:
 - Data Mining Wizard
 - relational mining models [Analysis Services]
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4ad9dd40bb7f7f8da0820d9ccbefafed9079650b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ee0b59c9035d6801bbe7a87d8589e7c337c6c9c2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Data Mining-Assistent (Analysis Services - Data Mining)
   Der Data Mining-Assistent in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] wird immer dann gestartet, wenn Sie einem Data Mining-Projekt eine neue Miningstruktur hinzufügen. Der Assistent hilft Ihnen, eine Datenquelle auszuwählen und eine Datenquellenansicht einzurichten, mit der die für die Analyse verwendeten Daten definiert werden. Anschließend hilft er Ihnen, ein erstes Modell zu erstellen.  
@@ -54,7 +53,7 @@ ms.lasthandoff: 09/01/2017
   
 -   Wenn die Projektmappe für Data Mining bereit ist, können Sie im Projektmappen-Explorer einfach mit der rechten Maustaste auf den Knoten **Miningstrukturen** klicken und **Neue Miningstruktur** auswählen, um den Assistenten zu starten.  
   
--   Wenn die Projektmappe keine vorhandenen Projekte enthält, können Sie ein neues Data Mining-Projekt hinzufügen. Wählen Sie im Menü **Datei** die Option **Neu**aus, und klicken Sie dann auf **Projekt**. Wählen Sie die Vorlage für multidimensionale Projekte bzw. Data Mining-Projekte von Analysis Services aus ****.  
+-   Wenn die Projektmappe keine vorhandenen Projekte enthält, können Sie ein neues Data Mining-Projekt hinzufügen. Wählen Sie im Menü **Datei** die Option **Neu**aus, und klicken Sie dann auf **Projekt**. Wählen Sie die Vorlage für multidimensionale **Projekte bzw. Data Mining-Projekte von Analysis** Services aus.  
   
 -   Sie können auch Metadaten aus einer vorhandenen Data Mining-Projektmappe mithilfe des Analysis Services-Import-Assistenten abrufen. Sie können jedoch die zu importierenden einzelnen Objekte nicht auswählen. Die gesamte Datenbank wird importiert, und zwar einschließlich sämtlicher Cubes, Datenquellensichten usw. Die durch den Import neu erstellte Projektmappe wird automatisch so konfiguriert, dass sie die lokale Standarddatenbank verwendet. Sie müssen dies möglicherweise in eine andere Instanz ändern, bevor Sie die Objekte verarbeiten oder durchsuchen können. Wenn Sie aus einer früheren Version von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]importieren, müssen Sie die Verweise auf Anbieter möglicherweise aktualisieren.  
   
@@ -130,4 +129,3 @@ ms.lasthandoff: 09/01/2017
  [Data Mining-Projektmappen](../../analysis-services/data-mining/data-mining-solutions.md)  
   
   
-
