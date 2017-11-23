@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- PartitionID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: PartitionID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- PartitionID element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: PartitionID element
 ms.assetid: 95e59c73-5ca4-478e-898d-50ffa4bbe794
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ced5e03a10c37e4b28c467efd03a72c42dadea4d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2e93957d649fef92eb05608e1b7a084a13294521
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="partitionid-element-assl"></a>PartitionID-Element (ASSL)
   Ordnet eine [Partition](../../../analysis-services/scripting/objects/partition-element-assl.md) Element mit einem übergeordneten Element, Bindung oder Out-of-Line-Bindung.  
@@ -71,4 +66,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

@@ -1,12 +1,14 @@
 ---
 title: "Erstellen der VERFÜGBARKEITSGRUPPE (Transact-SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 10/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,28 +18,26 @@ f1_keywords:
 - CREATE AVAILABILITY GROUP
 - CREATE AVAILABILITY
 - AVAILABILITY_GROUP_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - CREATE AVAILABILITY GROUP statement
 - Availability Groups [SQL Server], creating
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
-caps.latest.revision: 196
+caps.latest.revision: "196"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 35ccffcfbdce2c10b20c8459e59a1c2d41962088
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cebeb43402be1762021738096b9a0e959082d986
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Erstellt eine neue Verfügbarkeitsgruppe, wenn die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]-Funktion aktiviert wird.  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```SQL  
   
 CREATE AVAILABILITY GROUP group_name  
    WITH (<with_option_spec> [ ,...n ] )  
@@ -73,8 +73,8 @@ CREATE AVAILABILITY GROUP group_name
   <server_instance> WITH  
     (  
        ENDPOINT_URL = 'TCP://system-address:port',  
-       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT },  
-       FAILOVER_MODE = { AUTOMATIC | MANUAL }  
+       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY },  
+       FAILOVER_MODE = { AUTOMATIC | MANUAL | EXTERNAL }  
        [ , <add_replica_option> [ ,...n ] ]  
     )   
   
@@ -188,10 +188,10 @@ CREATE AVAILABILITY GROUP group_name
  Dient zum Erstellen einer verteilten verfügbarkeitsgruppe. Diese Option wird mit dem AVAILABILITY GROUP ON-Parameter verwendet, die Verbindung zwei Verfügbarkeitsgruppen in separate Windows Server-Failovercluster.  Weitere Informationen finden Sie unter [Verteilte Verfügbarkeitsgruppen &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md). Verteilte Verfügbarkeitsgruppen werden unterstützt ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. 
 
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
- In SQL Server 2017 CTP 2.2 eingeführt. Dient zum Festlegen einer minimalen Anzahl von synchrone sekundäre Replikate erforderlich, um einen Commit auszuführen, bevor die primäre eine Transaktion ein Commit ausgeführt wird. Garantiert, dass SQL Server-Transaktion wartet, bis die Transaktionsprotokolle für die minimale Anzahl von sekundären Replikaten aktualisiert werden. Der Standardwert ist 0. das gleiche Verhalten wie SQL Server 2016 bietet. Der minimale Wert ist 0. Der maximale Wert ist die Anzahl der Replikate minus 1. Diese Option bezieht sich auf die Replikate im synchronen Commit-Modus. Wenn Replikate im synchronen Commit-Modus befinden, Schreibvorgänge auf dem primären Replikat warten, bis der Schreibvorgänge auf den sekundären Replikaten für synchrone Commit im Transaktionsprotokoll der Replikat-Datenbank. Wenn eine SQL-Server, die ein synchrone sekundäre Replikat hostet, nicht mehr reagiert, markiert der SQL-Server, die das primäre Replikat hostet dieses sekundäre Replikat als nicht synchronisiert, und fahren Sie fort. Wenn die nicht reagierende Datenbank wieder online geschaltet wird befindet sich in einem Zustand "nicht synchronisiert", und das Replikat als fehlerhaft markiert, bis das primäre synchronen Vorgang erleichtern kann. Diese Einstellung wird sichergestellt, dass das primäre Replikat wartet, bis die minimale Anzahl der Replikate für jede Transaktion ein Commit ausgeführt wurde. Wenn die minimale Anzahl der Replikate nicht verfügbar ist, führen Sie anschließend Commits auf dem primären Replikat. Diese Einstellung gilt für Verfügbarkeitsgruppen mit Clustertyp `WSFC` und `EXTERNAL`. Für Clustertyp `EXTERNAL` die Einstellung geändert wird, wenn die Clusterressource die verfügbarkeitsgruppe hinzugefügt wird. Finden Sie unter [hohe Verfügbarkeit und Datenschutz für verfügbarkeitsgruppenkonfigurationen](../../linux/sql-server-linux-availability-group-ha.md).
+ In SQLServer 2017 eingeführt. Dient zum Festlegen einer minimalen Anzahl von synchrone sekundäre Replikate erforderlich, um einen Commit auszuführen, bevor die primäre eine Transaktion ein Commit ausgeführt wird. Garantiert, dass SQL Server-Transaktion wartet, bis die Transaktionsprotokolle für die minimale Anzahl von sekundären Replikaten aktualisiert werden. Der Standardwert ist 0. das gleiche Verhalten wie SQL Server 2016 bietet. Der minimale Wert ist 0. Der maximale Wert ist die Anzahl der Replikate minus 1. Diese Option bezieht sich auf die Replikate im synchronen Commit-Modus. Wenn Replikate im synchronen Commit-Modus befinden, Schreibvorgänge auf dem primären Replikat warten, bis der Schreibvorgänge auf den sekundären Replikaten für synchrone Commit im Transaktionsprotokoll der Replikat-Datenbank. Wenn eine SQL-Server, die ein synchrone sekundäre Replikat hostet, nicht mehr reagiert, markiert der SQL-Server, die das primäre Replikat hostet dieses sekundäre Replikat als nicht synchronisiert, und fahren Sie fort. Wenn die nicht reagierende Datenbank wieder online geschaltet wird befindet sich in einem Zustand "nicht synchronisiert", und das Replikat als fehlerhaft markiert, bis das primäre synchronen Vorgang erleichtern kann. Diese Einstellung wird sichergestellt, dass das primäre Replikat wartet, bis die minimale Anzahl der Replikate für jede Transaktion ein Commit ausgeführt wurde. Wenn die minimale Anzahl der Replikate nicht verfügbar ist, führen Sie anschließend Commits auf dem primären Replikat. Für Clustertyp `EXTERNAL` die Einstellung geändert wird, wenn die Clusterressource die verfügbarkeitsgruppe hinzugefügt wird. Finden Sie unter [hohe Verfügbarkeit und Datenschutz für verfügbarkeitsgruppenkonfigurationen](../../linux/sql-server-linux-availability-group-ha.md).
 
  CLUSTER_TYPE  
- In SQL Server 2017 CTP 2.2 eingeführt. Verwendet, um festzustellen, ob die verfügbarkeitsgruppe auf einem Windows Server Failover Cluster (WSFC) ist.  Auf WSFC festgelegt, wenn die verfügbarkeitsgruppe auf eine Failoverclusterinstanz auf einem Windows Server-Failovercluster ist. Auf EXTERNEN festgelegt, wenn der Cluster von einem Cluster-Manager verwaltet wird, die nicht auf einem Windows Server-Failovercluster, wie Linux Schrittmacher ist. Beim Gruppieren von Verfügbarkeit mithilfe von WSFC nicht für Cluster Koordinierung auf NONE festgelegt. Angenommen, wenn eine verfügbarkeitsgruppe Linux-Servern enthält. 
+ In SQLServer 2017 eingeführt. Verwendet, um festzustellen, ob die verfügbarkeitsgruppe auf einem Windows Server Failover Cluster (WSFC) ist.  Auf WSFC festgelegt, wenn die verfügbarkeitsgruppe auf eine Failoverclusterinstanz auf einem Windows Server-Failovercluster ist. Auf EXTERNEN festgelegt, wenn der Cluster von einem Cluster-Manager verwaltet wird, die nicht auf einem Windows Server-Failovercluster, wie Linux Schrittmacher ist. Beim Gruppieren von Verfügbarkeit mithilfe von WSFC nicht für Cluster Koordinierung auf NONE festgelegt. Angenommen, wenn eine verfügbarkeitsgruppe Linux-Servern mit keine Cluster-Manager enthält. 
 
  Datenbank *Database_name*  
  Gibt eine Liste mit mindestens einer Benutzerdatenbank auf der lokalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz an (der Serverinstanz, auf der Sie die Verfügbarkeitsgruppe erstellen). Sie können mehrere Datenbanken für eine Verfügbarkeitsgruppe angeben, aber jede Datenbank kann nur zu einer Verfügbarkeitsgruppe gehören. Weitere Informationen zu den Typ von Datenbanken, die eine verfügbarkeitsgruppe unterstützt werden, finden Sie unter [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40; SQLServer &#41; ](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). Um herauszufinden, welche lokalen Datenbanken bereits zu einer verfügbarkeitsgruppe gehören, finden Sie unter der **Replica_id** Spalte in der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) -Katalogsicht angezeigt.  
@@ -245,14 +245,23 @@ CREATE AVAILABILITY GROUP group_name
  *port*  
  Ist eine Portnummer, die dem Spiegelungsendpunkt der Partnerserverinstanz (für die ENDPOINT_URL-Option) oder der Portnummer, die von [!INCLUDE[ssDE](../../includes/ssde-md.md)] der Serverinstanz (für die READ_ONLY_ROUTING_URL-Option) verwendet wird, zugeordnet ist.  
   
- AVAILABILITY_MODE  **=**  {{SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT}  
- SYNCHRONOUS_COMMIT oder ASYNCHRONOUS_COMMIT gibt an, ob das primäre Replikat warten Sie, bis das sekundäre Replikat zum Bestätigen des verstärken (Schreiben), der die Protokolldatensätze auf den Datenträger, bevor das primäre Replikat die Transaktion auf einem angegebenen primären übergeben werden können die Datenbank. Die Transaktionen auf anderen Datenbanken über dasselbe primäre Replikat können unabhängig einen Commit ausführen.
+ AVAILABILITY_MODE  **=**  {{SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY}  
+ SYNCHRONOUS_COMMIT oder ASYNCHRONOUS_COMMIT gibt an, ob das primäre Replikat warten Sie, bis das sekundäre Replikat zum Bestätigen des verstärken (Schreiben), der die Protokolldatensätze auf den Datenträger, bevor das primäre Replikat die Transaktion auf einem angegebenen primären übergeben werden können die Datenbank. Die Transaktionen auf anderen Datenbanken über dasselbe primäre Replikat können unabhängig einen Commit ausführen. SQL Server 2017 CU 1 wird CONFIGURATION_ONLY eingeführt. CONFIGURATION_ONLY Replikat gilt nur für Verfügbarkeitsgruppen mit CLUSTER_TYPE = extern oder CLUSTER_TYPE = NONE. 
   
  SYNCHRONOUS_COMMIT  
  Gibt an, dass das primäre Replikat wartet, bis sie auf diesem sekundären Replikat (Modus mit synchronem Commit) festgeschrieben wurden ein commit für Transaktionen. Sie können SYNCHRONOUS_COMMIT für bis zu drei Replikate angeben, einschließlich des primären Replikats.  
   
  ASYNCHRONOUS_COMMIT  
  Gibt an, dass das primäre Replikat einen Commit für Transaktionen ausführt, ohne zu warten, bis dieses sekundäre Replikat das Protokoll verstärkt (Verfügbarkeitsmodus mit synchronem Commit). Sie können ASYNCHRONOUS_COMMIT für bis zu fünf Verfügbarkeitsreplikate angeben, einschließlich des primären Replikats.  
+
+ CONFIGURATION_ONLY gibt an, dass das primäre Replikat synchron verfügbarkeitsgruppenmetadaten Konfiguration mit der master-Datenbank auf diesem Replikat einen Commit auszuführen. Das Replikat enthält keine Benutzerdaten. Diese Option:
+
+- Kann auf eine beliebige Edition von SQL Server Express Edition einschließlich gehostet werden.
+- Müssen die Daten mit dem datenbankspiegelungs-Endpunkt des Replikats CONFIGURATION_ONLY Typ `WITNESS`.
+- Kann nicht geändert werden.
+- Ist nicht gültig, wenn `CLUSTER_TYPE = WSFC`. 
+
+   Weitere Informationen finden Sie unter [Konfiguration nur Replikat](../../linux/sql-server-linux-availability-group-ha.md).
   
  Die AVAILABILITY_MODE-Klausel ist erforderlich. Weitere Informationen finden Sie unter [Verfügbarkeitsmodi &#40;Always On-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)ausgetauscht werden.  
   
@@ -380,7 +389,7 @@ CREATE AVAILABILITY GROUP group_name
  *port*  
  Ist eine Portnummer, die dem Spiegelungsendpunkt der verfügbarkeitsgruppe zugeordnet ist. Beachten Sie, dass dies nicht der Port des Listeners ist.  
   
- AVAILABILITY_MODE  **=**  {SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT}  
+ AVAILABILITY_MODE  **=**  {SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY}  
  Gibt an, ob das primäre Replikat warten Sie, bis die sekundäre verfügbarkeitsgruppe bestätigen Sie das verstärken (Schreiben), der die Protokolldatensätze auf den Datenträger, bevor das primäre Replikat einen Commit die Transaktion auf eine bestimmte primäre Datenbank ausführen kann.  
   
  SYNCHRONOUS_COMMIT  
@@ -498,7 +507,7 @@ CREATE AVAILABILITY GROUP group_name
   
  Im Beispiel wird schließlich die optionale LISTENER-Klausel angegeben, um einen Verfügbarkeitsgruppenlistener für die neue Verfügbarkeitsgruppe zu erstellen. Der eindeutige DNS-Name `MyAgListenerIvP6`wird für diesen Listener angegeben. Die zwei Replikate befinden sich auf anderen Subnetzen, daher muss der Listener statische IP-Adressen verwenden. Für die beiden Verfügbarkeitsreplikate gibt die WITH IP-Klausel jeweils eine statische IP-Adresse an, nämlich `2001:4898:f0:f00f::cf3c` und `2001:4898:e0:f213::4ce2`, die das IPv6-Format verwenden. In diesem Beispiel wird zudem das optionale PORT-Argument verwendet, um Port `60173` als Listenerport anzugeben.  
   
-```  
+```SQL
 CREATE AVAILABILITY GROUP MyAg   
    WITH (  
       AUTOMATED_BACKUP_PREFERENCE = SECONDARY,  
@@ -572,5 +581,4 @@ GO
  [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover (SQL Server)](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   
-
 

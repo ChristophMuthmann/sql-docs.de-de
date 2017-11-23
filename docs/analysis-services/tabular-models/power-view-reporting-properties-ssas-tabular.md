@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 51205c2d-b6ce-4b92-afd2-58e399a81691
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 83c7a6d7bc2008e1532a302f68c6db93123a24b5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f57ef9048cc2028ed8e4b056c8120b96ddb29c95
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-view---reporting-properties-ssas-tabular"></a>Power View - Berichterstellungseigenschaften (SSAS – tabellarisch)
   [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] ermöglicht eine intuitive Ad-hoc-Berichterstellung für Fachanwender wie Datenanalysten, Entscheidungsträger und Information Worker. Sie können bequem Sichten von Daten aus Tabellenmodellen, die auf in einem [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog erstellten [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen basieren, oder aus durch die Verwendung von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] erstellten und anschließend für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services-Instanzen bereitgestellten Tabellenmodellen erstellen und mit diesen Sichten interagieren. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] ist eine browserbasierte Silverlight-Anwendung, die aus SharePoint Server 2010 oder später gestartet wird.  
@@ -40,4 +39,3 @@ ms.lasthandoff: 09/01/2017
 |[Konfigurieren von Tabellenverhaltenseigenschaften für Power View-Berichte &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)|Hier wird beschrieben, wie Tabellenverhaltenseigenschaften, die Detailzeilen auf einer präziseren Ebene verfügbar machen, konfiguriert werden. Das Festlegen von Tabellenverhaltenseigenschaften ändert das Gruppierungsverhalten von Detailzeilen und erzeugt eine bessere Standardplatzierung bei der Identifizierung von Informationen in Kachel, Karten- und Diagrammlayouts.|  
   
   
-

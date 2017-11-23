@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Content Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Content Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Content
-helpviewer_keywords:
-- Content element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Content
+helpviewer_keywords: Content element
 ms.assetid: 221addef-2f88-49c5-b8f5-9eee330497a9
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 98f996bf7b1b274afed0313ef326596f3e88d5f2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c42c6d4af398dd08021b8b9e308155f2d23b11cb
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="content-element-assl"></a>Content-Element (ASSL)
   Beschreibt den Inhalt der Spalte in der [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) Element.  
@@ -102,4 +96,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

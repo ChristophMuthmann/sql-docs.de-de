@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CalendarEndDate Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CalendarEndDate Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- CalendarEndDate
-helpviewer_keywords:
-- CalendarEndDate element
+applies_to: SQL Server 2016 Preview
+f1_keywords: CalendarEndDate
+helpviewer_keywords: CalendarEndDate element
 ms.assetid: abedd074-9a28-4169-85b5-49ea57f10fb6
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 82b97e05267c879ba949a66453a4295b015449d8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 743457683a716772854653212f2c67966db665b2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="calendarenddate-element-assl"></a>CalendarEndDate-Element (ASSL)
   Definiert das Enddatum des Kalenderzeitraums für ein [TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md) Element.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

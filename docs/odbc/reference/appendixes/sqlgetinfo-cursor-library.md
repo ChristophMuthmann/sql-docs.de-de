@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLGetInfo function [ODBC], Cursor Library
+helpviewer_keywords: SQLGetInfo function [ODBC], Cursor Library
 ms.assetid: 1b4d220d-2c07-4f56-987e-36813bb1a6ce
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fe270f6c939711d91a6b6c7a4ffd2a0a37479334
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d8e1aa6617d19c9028ff08dcf171abac060bb6f1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetinfo-cursor-library"></a>SQLGetInfo (Cursor Library)
 > [!IMPORTANT]  
@@ -60,4 +57,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!IMPORTANT]  
 >  Die Cursorbibliothek implementiert dasselbe Cursorverhalten, wenn die Transaktionen ein Commit oder ein Rollback als Datenquelle. D. h. Commit oder Rollback einer Transaktion, entweder durch Aufrufen **SQLEndTran** oder verwenden Sie das SQL_ATTR_AUTOCOMMIT-Verbindungsattribut, kann dazu führen, dass die Datenquelle So löschen Sie die Zugriffspläne, und schließen den Cursor für alle Anweisungen Bei einer Verbindung. Weitere Informationen finden Sie unter den Informationstypen SQL_CURSOR_COMMIT_BEHAVIOR und SQL_CURSOR_ROLLBACK_BEHAVIOR in [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).
-

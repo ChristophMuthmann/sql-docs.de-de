@@ -6,23 +6,28 @@ ms.author: mikeray
 manager: jhubbard
 ms.date: 06/14/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 
+ms.workload: On Demand
+ms.openlocfilehash: de348a584333eb113cca2e5eb052b21bbc3d1c54
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 6ceceaa00b2db22b5f1be9a6e8305da5b4cea49b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-always-on-availability-group-for-sql-server-on-linux"></a>Konfigurieren von Always On-verfügbarkeitsgruppe für SQL Server on Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Dieser Artikel beschreibt, wie eine SQL Server AlwaysOn für die verfügbarkeitsgruppe für hohe Verfügbarkeit unter Linux erstellt wird. Es gibt zwei Konfigurationstypen für Verfügbarkeitsgruppen. Ein *hohe Verfügbarkeit* Konfiguration verwendet einen Cluster-Manager für die Geschäftskontinuität bereitstellen. Diese Konfiguration kann auch schreibgeschützte mit horizontaler Skalierung Replikate enthalten. Dieses Dokument erläutert, wie die hohe Verfügbarkeit der verfügbarkeitsgruppenkonfiguration erstellt wird.
+Dieser Artikel beschreibt, wie eine SQL Server AlwaysOn für die verfügbarkeitsgruppe für hohe Verfügbarkeit unter Linux erstellt wird. Es gibt zwei Konfigurationstypen für Verfügbarkeitsgruppen. Ein *hohe Verfügbarkeit* Konfiguration verwendet einen Cluster-Manager für die Geschäftskontinuität bereitstellen. Diese Konfiguration kann auch Skalieren von Lesevorgängen Replikate enthalten. Dieses Dokument erläutert, wie die hohe Verfügbarkeit der verfügbarkeitsgruppenkonfiguration erstellt wird.
 
-Sie können auch erstellen eine *Lesen mit horizontaler Skalierung* verfügbarkeitsgruppe ohne einen Cluster-Manager. Diese Konfiguration bietet nur schreibgeschützte Replikate für dezentrales Skalieren der Leistung. Es bietet keine hohen Verfügbarkeit. Um eine verfügbarkeitsgruppe für schreibgeschützte mit horizontaler Skalierung zu erstellen, finden Sie unter [konfigurieren, die verfügbarkeitsgruppe mit horizontaler Skalierung für SQL Server on Linux lesen](sql-server-linux-availability-group-configure-rs.md).
+Sie können auch erstellen eine *Skalieren von Lesevorgängen* verfügbarkeitsgruppe ohne einen Cluster-Manager. Diese Konfiguration bietet nur schreibgeschützte Replikate für dezentrales Skalieren der Leistung. Es bietet keine hohen Verfügbarkeit. Um eine Skalieren von Lesevorgängen verfügbarkeitsgruppe zu erstellen, finden Sie unter [konfigurieren Skalieren von Lesevorgängen verfügbarkeitsgruppe für SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md).
 
 Konfigurationen, die hohe Verfügbarkeit und Datenschutz gewährleisten erfordern zwei oder drei synchrone Replikate commit. Mit drei synchroner Replikate die verfügbarkeitsgruppe können automatisch wiederherstellen, selbst wenn ein Server nicht verfügbar ist. Weitere Informationen finden Sie unter [hohe Verfügbarkeit und Datenschutz für verfügbarkeitsgruppenkonfigurationen](sql-server-linux-availability-group-ha.md). 
 
@@ -81,13 +86,19 @@ Erstellen Sie die verfügbarkeitsgruppe für hohe Verfügbarkeit unter Linux. Ve
 * Legen Sie die primären und sekundäre Replikaten `FAILOVER_MODE = EXTERNAL`. 
    Gibt an, dass das Replikat mit einem externen Cluster-Manager, z. B. Schrittmacher interagiert. 
 
-Die folgende Transact-SQL-Skripts erstellt eine verfügbarkeitsgruppe für hohe Verfügbarkeit, die mit dem Namen `ag1`. Das Skript konfiguriert die verfügbarkeitsgruppenreplikaten mit `SEEDING_MODE = AUTOMATIC`. Diese Einstellung bewirkt, dass SQL Server die Datenbank automatisch in jeder sekundären Serverinstanz erstellt. Aktualisieren Sie das folgende Skript für Ihre Umgebung. Ersetzen Sie die `**<node1>**`, und `**<node2>**` Werte mit den Namen der SQL Server-Instanzen, die die Replikate hosten. Ersetzen Sie die `**<5022>**` mit dem Port, den Sie für die datenbankspiegelungs-Endpunkt Daten festlegen. Um die verfügbarkeitsgruppe zu erstellen, führen Sie die folgende Transact-SQL für die SQL Server-Instanz, die das primäre Replikat hostet.
+Die folgende Transact-SQL-Skripts erstellt eine verfügbarkeitsgruppe für hohe Verfügbarkeit, die mit dem Namen `ag1`. Das Skript konfiguriert die verfügbarkeitsgruppenreplikaten mit `SEEDING_MODE = AUTOMATIC`. Diese Einstellung bewirkt, dass SQL Server die Datenbank automatisch in jeder sekundären Serverinstanz erstellt. Aktualisieren Sie das folgende Skript für Ihre Umgebung. Ersetzen Sie die `**<node1>**`, `**<node2>**`, oder `**<node3>**` Werte mit den Namen der SQL Server-Instanzen, die die Replikate hosten. Ersetzen Sie die `**<5022>**` mit dem Port, den Sie für die datenbankspiegelungs-Endpunkt Daten festlegen. Um die verfügbarkeitsgruppe zu erstellen, führen Sie die folgende Transact-SQL für die SQL Server-Instanz, die das primäre Replikat hostet.
 
 Führen Sie **nur eine** der folgenden Skripts: 
 
-- Erstellen Sie verfügbarkeitsgruppe mit drei synchronen Replikaten.
+- [Erstellen Sie die verfügbarkeitsgruppe mit drei synchronen Replikaten](#threeSynch).
+- [Erstellen Sie die verfügbarkeitsgruppe ein Replikat für die Konfiguration mit zwei synchronen Replikaten](#configOnly)
+- [Erstellen Sie die verfügbarkeitsgruppe mit drei synchronen Replikaten](#readScale).
 
-   ```Transact-SQL
+<a name="threeSynch"></a>
+
+- Erstellen Sie die verfügbarkeitsgruppe mit drei synchroner Replikate
+
+   ```SQL
    CREATE AVAILABILITY GROUP [ag1]
        WITH (DB_FAILOVER = ON, CLUSTER_TYPE = EXTERNAL)
        FOR REPLICA ON
@@ -119,6 +130,33 @@ Führen Sie **nur eine** der folgenden Skripts:
    >[!IMPORTANT]
    >Führen Sie nach dem Ausführen dieses Skript zum Erstellen einer verfügbarkeitsgruppe mit drei synchronen Replikate nicht das folgende Skript aus:
 
+- Verfügbarkeitsgruppe mit zwei synchronen Replikaten und ein Replikat für die Konfiguration zu erstellen:
+
+   >[!IMPORTANT]
+   >Diese Architektur ermöglicht eine beliebige Edition von SQL Server das dritte Replikat hosten. Beispielsweise kann das dritte Replikat auf SQL Server Enterprise Edition gehostet werden. Enterprise Edition, ist der einzige gültige Endpunkttyp `WITNESS`. 
+
+   ```SQL
+   CREATE AVAILABILITY GROUP [ag1] 
+      WITH (CLUSTER_TYPE = EXTERNAL) 
+      FOR REPLICA ON 
+       N'**<node1>**' WITH ( 
+          ENDPOINT_URL = N'tcp://**<node1>**:**<5022>**', 
+          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
+          FAILOVER_MODE = EXTERNAL, 
+          SEEDING_MODE = AUTOMATIC 
+          ), 
+       N'**<node2>**' WITH (  
+          ENDPOINT_URL = N'tcp://**<node2>**:**<5022>**',  
+          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
+          FAILOVER_MODE = EXTERNAL, 
+          SEEDING_MODE = AUTOMATIC 
+          ), 
+       N'**<node3>**' WITH ( 
+          ENDPOINT_URL = N'tcp://**<node3>**:**<5022>**', 
+          AVAILABILITY_MODE = CONFIGURATION_ONLY  
+          );
+   ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
+   ```
 <a name="readScale"></a>
 
 - Erstellen Sie die verfügbarkeitsgruppe mit zwei synchronen Replikaten
@@ -126,9 +164,9 @@ Führen Sie **nur eine** der folgenden Skripts:
    Zwei Replikate mit den Verfügbarkeitsmodus für synchrone einschließen. Das folgende Skript erstellt z. B. eine verfügbarkeitsgruppe namens `ag1`. `node1`und `node2` Replikate im synchronen Modus mit automatischem seeding und automatisches Failover zu hosten.
 
    >[!IMPORTANT]
-   >Führen Sie nur das folgende Skript zum Erstellen einer verfügbarkeitsgruppe mit zwei synchronen Replikaten. Das folgende Skript kann nicht ausgeführt werden, wenn Sie dieses Skript ausgeführt haben. 
+   >Führen Sie nur das folgende Skript zum Erstellen einer verfügbarkeitsgruppe mit zwei synchronen Replikaten. Das folgende Skript kann nicht ausgeführt werden, wenn Sie entweder dieses Skript ausgeführt haben. 
 
-   ```Transact-SQL
+   ```SQL
    CREATE AVAILABILITY GROUP [ag1]
       WITH (CLUSTER_TYPE = EXTERNAL)
       FOR REPLICA ON
@@ -164,9 +202,9 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 [!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
 >[!IMPORTANT]
->Nachdem Sie die verfügbarkeitsgruppe erstellt haben, müssen Sie die Integration mit einer Cluster-Technologie wie Schrittmacher für hohe Verfügbarkeit konfigurieren. Für eine schreibgeschützte mit horizontaler Skalierung-Konfiguration, die Verwendung von Verfügbarkeitsgruppen, beginnend mit [!INCLUDE [SQL Server-Version](..\includes\sssqlv14-md.md)], das Einrichten eines Clusters ist nicht erforderlich.
+>Nachdem Sie die verfügbarkeitsgruppe erstellt haben, müssen Sie die Integration mit einer Cluster-Technologie wie Schrittmacher für hohe Verfügbarkeit konfigurieren. Für eine Verwendung von Verfügbarkeitsgruppen, beginnend mit Skalieren von Lesevorgängen-Konfiguration [!INCLUDE [SQL Server version](..\includes\sssqlv14-md.md)], das Einrichten eines Clusters ist nicht erforderlich.
 
-Wenn Sie die in diesem Dokument beschriebenen Schritte ausführen, müssen Sie eine verfügbarkeitsgruppe, die noch nicht gruppiert ist. Der nächste Schritt besteht, um den Cluster hinzuzufügen. Diese Konfiguration gilt für read Scale-Out/Load balancing Szenarien, es ist nicht vollständig für hohe Verfügbarkeit. Für hohe Verfügbarkeit müssen Sie als Clusterressource der verfügbarkeitsgruppe hinzuzufügen. Finden Sie unter [nächste Schritte](#next-steps) Anweisungen. 
+Wenn Sie die in diesem Dokument beschriebenen Schritte ausführen, müssen Sie eine verfügbarkeitsgruppe, die noch nicht gruppiert ist. Der nächste Schritt besteht, um den Cluster hinzuzufügen. Diese Konfiguration gilt für Read-Scale/Load balancing Szenarien, es ist nicht vollständig für hohe Verfügbarkeit. Für hohe Verfügbarkeit müssen Sie als Clusterressource der verfügbarkeitsgruppe hinzuzufügen. Finden Sie unter [nächste Schritte](#next-steps) Anweisungen. 
 
 ## <a name="notes"></a>Hinweise
 
@@ -184,4 +222,3 @@ Wenn Sie die in diesem Dokument beschriebenen Schritte ausführen, müssen Sie e
 [Konfigurieren von SUSE Linux Enterprise Server-Cluster für Clusterressourcen für SQL Server-Verfügbarkeitsgruppe](sql-server-linux-availability-group-cluster-sles.md)
 
 [Konfigurieren Sie Ubuntu-Cluster für SQL Server-Verfügbarkeitsgruppe Clusterressourcen](sql-server-linux-availability-group-cluster-ubuntu.md)
-

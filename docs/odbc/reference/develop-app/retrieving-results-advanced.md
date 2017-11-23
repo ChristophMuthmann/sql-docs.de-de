@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - result sets [ODBC], about result sets
 - bind offsets [ODBC]
 ms.assetid: bc00c379-71a7-407a-975c-898243f39bb6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0f669180407ed626ae9235bd666068b6889060b8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 85ee85c9bb44f32d33cee622c60c677f22b0ba7c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="retrieving-results-advanced"></a>Abrufen von Ergebnissen (Erweitert)
 Eine Anwendung angegeben werden, dass ein Offset hinzugefügt wird, Daten Puffer Adressen und den entsprechenden Längenindikator gebunden Puffer Adressen Wenn **SQLBulkOperations**, **SQLFetch**,  **SQLFetchScroll**, oder **SQLSetPos** aufgerufen wird. Die Ergebnisse dieser Erweiterungen bestimmen, die Adressen, die bei diesen Vorgängen verwendet werden.  
@@ -43,9 +41,8 @@ Eine Anwendung angegeben werden, dass ein Offset hinzugefügt wird, Daten Puffer
   
 -   [Blockcursor](../../../odbc/reference/develop-app/block-cursors.md)  
   
--   [Bildlauffähige Cursor](../../../odbc/reference/develop-app/scrollable-cursors.md)  
+-   [Scrollbare Cursor](../../../odbc/reference/develop-app/scrollable-cursors.md)  
   
--   [Der ODBC-Cursorbibliothek](../../../odbc/reference/develop-app/the-odbc-cursor-library.md)  
+-   [Die ODBC-Cursorbibliothek](../../../odbc/reference/develop-app/the-odbc-cursor-library.md)  
   
 -   [Mehrere Ergebnisse](../../../odbc/reference/develop-app/multiple-results.md)
-

@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e51769f7-aac7-4835-a5ae-91aac04aa476
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a2ba71ce1ac7dcc0787e84edba3ea436bd33e25f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9688a692d25d484b05bca88e0779d2812944f3af
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="install-distribute-and-reference-the-tabular-object-model"></a>Installieren, verteilen und verweisen auf die tabellarischen Objektmodell
 
@@ -127,4 +126,3 @@ Verweisen auf die Core-Namespace in Ihrem Code ist nicht erforderlich. die Klass
 Verteilung von AMO und TOM erfolgt über die **sql_as_amo.msi** Installationspaket. Wenn Sie in AMO oder TOM ein Setupprogramm für eine Clientanwendung, die Aufrufe erstellen, fügen Sie **sql_as_amo.msi** an die ausführbare Datei. Dies ist der einzige unterstützte Mechanismus für das Verteilen von Clientbibliotheken AMO und TOM.  
   
 Das Paket ist in sich geschlossen und enthält alle Assemblys, die zum Aufrufen von AMO und TOM in Ihrem Code erforderlich. Andere Pakete, z. B. SQL_AS_OLEDB.msi oder SQL_AS_ADOMD.msi, müssen sich nicht speziell für TOM Programmierszenarien.
-

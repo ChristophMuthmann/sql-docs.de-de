@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CalendarLanguage Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CalendarLanguage Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- CalendarLanguage
-helpviewer_keywords:
-- CalendarLanguage element
+applies_to: SQL Server 2016 Preview
+f1_keywords: CalendarLanguage
+helpviewer_keywords: CalendarLanguage element
 ms.assetid: e43a0f48-a583-418b-a0a4-d73a40035573
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 40f1350b6d30d7c210f1773a328a5d7b93a0410d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7b07200c3f6f33a72d577d74fb6070ae3b7c799e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="calendarlanguage-element-assl"></a>CalendarLanguage-Element (ASSL)
   Definiert die für verwendete Kalendersprache der [TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md) Element.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

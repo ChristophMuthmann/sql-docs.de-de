@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - keyset-driven cursors [ODBC]
 - cursors [ODBC], key-set driven
 ms.assetid: 01769f43-1d9c-4685-84fa-15a6465335e9
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f908db305a92399ccb5ca9e4930460db249fff46
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7cbd7ca159b09ee1482139ef76bfff48115a62bd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="keyset-driven-cursors"></a>Keysetgesteuerte Cursor
 Ein keysetgesteuerter Cursor liegt zwischen statischen und einen dynamischen Cursor in seiner Fähigkeit, Änderungen zu erkennen. Wie ein statischer Cursor kann es nicht immer zum Ändern der Mitgliedschaft und Reihenfolge des Resultsets erkennen. Z. B. einen dynamischen Cursor erkennt er Änderungen auf die Werte der Zeilen im Resultset (unterliegen die Isolationsstufe der Transaktion, wie durch das Verbindungsattribut SQL_ATTR_TXN_ISOLATION festgelegt).  
@@ -42,4 +40,3 @@ Ein keysetgesteuerter Cursor liegt zwischen statischen und einen dynamischen Cur
  Keysetgesteuerte Cursor werden häufig implementiert, durch das Erstellen einer temporären Tabelle, die die Schlüssel für jede Zeile im Resultset enthält. Da sich der Cursor auch bestimmen muss, ob Zeilen aktualisiert wurden, enthält diese Tabelle häufig auch eine Spalte mit zeilenversionsverwaltungs-Informationen.  
   
  Um über die ursprünglichen Resultset zu blättern, öffnet der keysetgesteuerte Cursor einen statischen Cursor über die temporäre Tabelle. Zum Abrufen einer Zeile im ursprünglichen Resultset des Cursors ruft zunächst den entsprechenden Schlüssel aus der temporären Tabelle und ruft dann die aktuellen Werte für die Zeile ab. Blockcursor verwendet werden, muss der Cursor mehrere Schlüssel und Zeilen abgerufen werden.
-

@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AxesInfo Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AxesInfo Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#AxesInfo
 - microsoft.xml.analysis.axesinfo
 - http://schemas.microsoft.com/analysisservices/2003/engine#AxesInfo
-helpviewer_keywords:
-- AxesInfo element
+helpviewer_keywords: AxesInfo element
 ms.assetid: 15cfa67d-5acd-4737-8a81-2df34b334d3f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f78f9500040b54e0f6fc2fe0c8a3588e2f75e454
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 421702aa97fb44e0fba9c8db6d54a9164b9125ff
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="axesinfo-element-xmla"></a>AxesInfo-Element (XMLA)
   Enthält eine Auflistung von [AxisInfo](../../../analysis-services/xmla/xml-elements-properties/axisinfo-element-xmla.md) -Elementen und stellt die im übergeordneten [OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md) -Element enthaltenen Achsenmetadaten dar.  
@@ -77,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

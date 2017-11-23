@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.workload: Inactive
+ms.openlocfilehash: f5c51b405d3c3eaca081abfddd1b770e4b9a8559
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 30187dcf31421be045bb54e9824336e5d258f555
-ms.contentlocale: de-de
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>SLES freigegebene Datenträgercluster für SQL Server konfigurieren
 
@@ -269,4 +268,3 @@ migrate mssqlha SLES2
 ## <a name="additional-resources"></a>Weitere Ressourcen
 
 [SUSE Linux Enterprise hohe Verfügbarkeit Erweiterung – Administratorhandbuch](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html) 
-

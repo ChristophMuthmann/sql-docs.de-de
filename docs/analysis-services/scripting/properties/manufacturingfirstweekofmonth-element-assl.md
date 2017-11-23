@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ManufacturingFirstWeekOfMonth Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ManufacturingFirstWeekOfMonth Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ManufacturingFirstWeekOfMonth
-helpviewer_keywords:
-- ManufacturingFirstWeekOfMonth element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ManufacturingFirstWeekOfMonth
+helpviewer_keywords: ManufacturingFirstWeekOfMonth element
 ms.assetid: adb76a2f-c6c3-459e-a441-e80adad76ff1
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d7f815300c448158888c383e26d4f2e03d9a9a96
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9913802d1fb1ef5bb0c9b0073cdaa0fe863d8bc7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manufacturingfirstweekofmonth-element-assl"></a>ManufacturingFirstWeekOfMonth-Element (ASSL)
   Definiert die erste Woche des produktionsmonats für ein [TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md) Element.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

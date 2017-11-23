@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLPrimaryKeys
-apilocation:
-- sqlsrv32.dll
+apiname: SQLPrimaryKeys
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLPrimaryKeys
-helpviewer_keywords:
-- SQLPrimaryKeys function [ODBC]
+f1_keywords: SQLPrimaryKeys
+helpviewer_keywords: SQLPrimaryKeys function [ODBC]
 ms.assetid: 3f809b09-3c1b-415e-80c5-a603e8e25d5b
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 597ccf9143957c0d7f2ad1dbe29b77636eb54b49
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 79261b649994d97d88f75a7ac1dd4d067c0354d6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlprimarykeys-function"></a>SQLPrimaryKeys-Funktion
 **Konformität**  
@@ -154,4 +148,3 @@ SQLRETURN SQLPrimaryKeys(
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

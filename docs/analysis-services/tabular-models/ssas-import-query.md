@@ -8,8 +8,7 @@ ms.service:
 ms.component: tabular-models
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
@@ -17,12 +16,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1b4d0672b30747729d324386e1f761a377e15ad2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
-ms.openlocfilehash: 8888951d9fca0013015105998200b3ee9364855d
-ms.contentlocale: de-de
-ms.lasthandoff: 10/11/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="import-data-by-using-a-native-query"></a>Importieren von Daten mithilfe einer systemeigenen Abfrage
 
@@ -72,4 +70,3 @@ Nach dem Importieren, wird eine Tabelle mit dem Namen Mitarbeiter im Modell erst
  [Identitätswechsel](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
 
   
-

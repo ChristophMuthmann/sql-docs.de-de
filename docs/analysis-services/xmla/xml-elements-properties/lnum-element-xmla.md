@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- LNum Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: LNum Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.lnum
 - urn:schemas-microsoft-com:xml-analysis#LNum
 - http://schemas.microsoft.com/analysisservices/2003/engine#LNum
-helpviewer_keywords:
-- LNum element
+helpviewer_keywords: LNum element
 ms.assetid: 7b9cc143-0c5e-4a8c-a288-8921bfcfd103
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 92c25621cf0f67598f99bc451df37e01f6cd5a2c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e020166ca3b3d1d2923e64ebfaaa6cba14a27edf
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lnum-element-xmla"></a>LNum-Element (XMLA)
   Enthält Informationen über die Ordnungsposition der Ebenen für die übergeordneten Elemente [HierarchyInfo](../../../analysis-services/xmla/xml-elements-properties/hierarchyinfo-element-xmla.md) oder [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) .  
@@ -77,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Excel driver
 - Excel driver [ODBC], setting options programmatically
 ms.assetid: b5ee3636-4591-427a-a65a-a2d5926fcc1a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e728a06c640203a2a3057933a3c40b543b01d4d3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: da1f2ed6bbca3709c8223713f4841ed34288f5a3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-options-programmatically-for-the-excel-driver"></a>Festlegen von Optionen für Excel-Treibers programmgesteuert
 |Option|Description|Methode|  
@@ -40,4 +38,3 @@ ms.lasthandoff: 09/09/2017
 |Schreibgeschützt|Legt die Datenbank als schreibgeschützt fest.|Um diese Option dynamisch festzulegen, verwenden die **READONLY** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
 |Zu scannende Zeilen|Die Anzahl der Zeilen zu scannen, um den Datentyp jeder Spalte zu bestimmen. Der Datentyp wird bestimmt, angesichts der maximalen Anzahl von Arten von Daten gefunden. Wenn Daten, der den Datentyp für die Spalte ermittelten nicht übereinstimmt erkannt werden, wird der Datentyp als NULL-Wert zurückgegeben.<br /><br /> Microsoft Excel-Treiber können Sie eine Zahl von 1 bis 16 für die Zeilen zu scannen eingeben. Der Standardwert ist 8; Wenn es auf 0 festgelegt ist, werden alle Zeilen gescannt. (Eine Zahl außerhalb der Grenzwert wird einen Fehler zurückgegeben.)|Um diese Option dynamisch festzulegen, verwenden die **MAXSCANROWS** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
 |Wählen Sie Verzeichnis|Zeigt ein Dialogfeld, in dem Sie ein Verzeichnis mit den Dateien, die Sie zugreifen möchten auswählen können.<br /><br /> Wenn Sie ein Quellverzeichnis Daten (für alle mit Ausnahme von Microsoft Access-Treiber) zu definieren, geben Sie das Verzeichnis, in dem die am häufigsten verwendeten Dateien gespeichert sind. Der ODBC-Treiber verwendet dieses Verzeichnis als Standardverzeichnis. Kopieren Sie andere Dateien in dieses Verzeichnis, wenn sie häufig verwendet werden. Alternativ können Sie den Dateinamen in einer SELECT-Anweisung mit dem Verzeichnisnamen qualifizieren:<br /><br /> WÄHLEN SIE \* AUS C:\MYDIR\EMP<br /><br /> Sie können ein neues Standardverzeichnis angeben, mit der **SQLSetConnectOption** Funktion mit der Option SQL_CURRENT_QUALIFIER.<br /><br /> Für Microsoft Excel 3.0 oder 4.0-Dateien die Pfad-Anzeige ist mit der Bezeichnung "Directory", und die Schaltfläche "Auswahl Pfad" ist mit der Bezeichnung "Verzeichnis auswählen". Für Microsoft Excel 5.0, 7.0 oder 97-Dateien die Pfad-Anzeige ist mit der Bezeichnung "Arbeitsmappe", und die Schaltfläche "Auswahl Pfad" ist mit der Bezeichnung "Arbeitsmappe auswählen". Wenn Sie ein Quellverzeichnis Daten zu definieren, geben Sie das Verzeichnis, in dem die am häufigsten verwendeten Microsoft Excel-Dateien für Microsoft Excel 3.0/4.0 befinden, oder das Verzeichnis, in dem die Datei für Microsoft Excel 5.0, 7.0 oder 97 befindet. **Verwenden Sie die aktuellen Verzeichnis** für Microsoft Excel 5.0, 7.0 und 97 deaktiviert ist.|Um diese Option dynamisch festzulegen, verwenden die **Wert** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|
-

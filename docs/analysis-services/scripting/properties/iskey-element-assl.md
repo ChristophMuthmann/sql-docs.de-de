@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- IsKey Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: IsKey Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- IsKey
-helpviewer_keywords:
-- IsKey element
+applies_to: SQL Server 2016 Preview
+f1_keywords: IsKey
+helpviewer_keywords: IsKey element
 ms.assetid: 523b26c8-5cce-415d-a360-9a0d8724b872
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 43d40efc22dd205aa9dd9a983d8f5cdf40da3a2d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7b3c2b5c749d0f11141138854a01423bb4870cec
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="iskey-element-assl"></a>IsKey-Element (ASSL)
   Gibt an, ob die Spalte den Schlüssel für den Fall in bietet eine [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) Element.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

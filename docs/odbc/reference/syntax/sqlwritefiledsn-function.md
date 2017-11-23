@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLWriteFileDSN
-apilocation:
-- sqlsrv32.dll
+apiname: SQLWriteFileDSN
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLWriteFileDSN
-helpviewer_keywords:
-- SQLWriteFileDSN [ODBC]
+f1_keywords: SQLWriteFileDSN
+helpviewer_keywords: SQLWriteFileDSN [ODBC]
 ms.assetid: 9e18f56f-1061-416b-83d4-ffeec42ab5a9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 635f756827364a1ca586a934f94216e0cf4d537a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 47cc9672aecb91917a5abc15de2fc34fac59d2c2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlwritefiledsn-function"></a>SQLWriteFileDSN-Funktion
 **Konformität**  
@@ -89,4 +83,3 @@ BOOL SQLWriteFileDSN(
 |Informationen zu|Finden Sie unter|  
 |---------------------------|---------|  
 |Lesen von Informationen aus der Datei-DSNs|[SQLReadFileDSN](../../../odbc/reference/syntax/sqlreadfiledsn-function.md)|
-

@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- NamingTemplate Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: NamingTemplate Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- NamingTemplate
-helpviewer_keywords:
-- NamingTemplate element
+applies_to: SQL Server 2016 Preview
+f1_keywords: NamingTemplate
+helpviewer_keywords: NamingTemplate element
 ms.assetid: d68d765c-f012-40c1-acd4-32741ee2eadf
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e10a7edf7c8c5b1aad63f76cda140e5894402799
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 38a37b2e9aa2006916e110cbdf4ba622ee742fab
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="namingtemplate-element-assl"></a>NamingTemplate-Element (ASSL)
   Definiert, wie Ebenen in einer über-/ unterordnungshierarchie aus erstellter benannt werden die [DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md) übergeordneten Elements.  
@@ -89,4 +83,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

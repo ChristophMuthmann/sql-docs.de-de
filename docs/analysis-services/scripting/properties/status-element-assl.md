@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Status Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Status Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Status
-helpviewer_keywords:
-- Status element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Status
+helpviewer_keywords: Status element
 ms.assetid: 4938465e-7876-43e2-9d03-70dcc9b7b749
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ecaffa4bbe4e32a5c84f05218dcd691d62474782
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1c2c556520f0815f09dc3cdd4a0b7962cccc4527
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="status-element-assl"></a>Status-Element (ASSL)
   Enthält einen Multidimensional Expressions (MDX)-Ausdruck, der für einen Statusindikator zurückgibt eine [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) Element.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

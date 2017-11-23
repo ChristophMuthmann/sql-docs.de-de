@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Excel driver
 - Excel driver [ODBC], data types
 ms.assetid: 7b44c8e5-0bc3-4912-8a5d-56f4d5562fe6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ecd939c775b18efd2f08d4d34b7ee393c6146ccb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: eeb2bc72ce34141eb3dbdca3f952dca0c476c2dd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="microsoft-excel-data-types"></a>Microsoft Excel-Datentypen
 Die folgende Tabelle zeigt, wie Microsoft Excel-Treiber-Datentypen in ODBC-SQL-Datentypen zugeordnet werden. Microsoft Excel-Treibers weist dieser Datentypen zu Spalten in Microsoft Excel-Tabellen basierend auf den Daten in der Spalte.  
@@ -57,4 +55,3 @@ Die folgende Tabelle zeigt, wie Microsoft Excel-Treiber-Datentypen in ODBC-SQL-D
 |TEXT|Wenn die Zeilen einer Spalte mehr als ein Microsoft Excel-Datentyp enthalten, mit ODBC Microsoft Excel-Treibers die Spalte den SQL_VARCHAR-Datentyp zugewiesen. Es wird eine Ausnahme: Wenn die Spalte nur zwei oder drei Datetime-Datentypen (DATE, TIME und DATETIME) enthält, weist ODBC Microsoft Excel-Treibers SQL_TIMESTAMP-Datentyp der Spalte.<br /><br /> Erstellen eine Textspalte mit 0 (null) oder nicht angegebene Länge gibt tatsächlich eine 255 Byte-Spalte.<br /><br /> Ein Zeichenfolgenliteral kann jedes ANSI-Zeichen (1-255 dezimal) enthalten. Verwenden Sie zwei aufeinander folgende einfache Anführungszeichen ("), um ein einfaches Anführungszeichen (') darzustellen.<br /><br /> Einfügen von NULL in eine Spalte mit einem anderen Datentyp als SQL_VARCHAR führt dazu, dass den Datentyp der Spalte, die in SQL_VARCHAR zu ändern.|  
   
  Weitere Einschränkungen für Datentypen finden Sie in [Datentyp Einschränkungen](../../odbc/microsoft/data-type-limitations.md).
-

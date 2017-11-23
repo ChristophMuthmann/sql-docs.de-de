@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Timeout Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Timeout Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Timeout
-helpviewer_keywords:
-- Timeout element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Timeout
+helpviewer_keywords: Timeout element
 ms.assetid: 7694872b-bd05-459f-b5dc-3cfbd92a9664
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e665212271cf1a6ce6d52864b9540382af15820a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e2c577b8a36c3e843712c56ef8bf4a3d7f13be27
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="timeout-element-assl"></a>Timeout-Element (ASSL)
   Gibt die Zeit in Sekunden an, nach der ein Datenabfrageversuch einen Timeout meldet.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

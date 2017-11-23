@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- OnlineMode Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: OnlineMode Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- OnlineMode
-helpviewer_keywords:
-- OnlineMode element
+applies_to: SQL Server 2016 Preview
+f1_keywords: OnlineMode
+helpviewer_keywords: OnlineMode element
 ms.assetid: 0bbac4e2-002f-4be4-8dd6-ccd7034f5f93
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4c8a38c9882484335fefdfe1e7b8f155b27a84fd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bf7b07efcfdc165ed3abd737aaecd241a225a71b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="onlinemode-element-assl"></a>OnlineMode-Element (ASSL)
   Gibt an, ob die Datenbank sofort nach dem Initiieren der Cache-Neuerstellung oder erst nach Abschluss der Cache-Neuerstellung wieder online geschaltet wird.  
@@ -80,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [ProactiveCaching-Element &#40; ASSL &#41;](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md)  
   
   
-

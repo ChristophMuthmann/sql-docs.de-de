@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Databases Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Databases Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Databases
-helpviewer_keywords:
-- Databases element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Databases
+helpviewer_keywords: Databases element
 ms.assetid: 2806a074-d47e-4434-9599-04888783770f
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: eaef838e6cfe0f2821f1fe722426b6f11eb9d2ad
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f689eb660991545f581f8a3dd4e8ca62529bba28
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="databases-element-assl"></a>Databases-Element (ASSL)
   Enthält die Auflistung der [Datenbank](../../../analysis-services/scripting/objects/database-element-assl.md) Elemente, die zu einem [Server](../../../analysis-services/scripting/objects/server-element-assl.md) Element.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Schemaauflistungen &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

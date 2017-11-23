@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Cube Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Cube Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Cube
-helpviewer_keywords:
-- Cube element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Cube
+helpviewer_keywords: Cube element
 ms.assetid: 2d801066-6cca-4a99-bbd8-56a38d762108
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 894f26ca16518d210047590d76ea0d71e89af5fa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bd8bd9f2f76070f697b9fdabe6c488b2f51838b0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cube-element-assl"></a>Cube-Element (ASSL)
   Definiert einen regulären, virtuellen oder verknüpften Cube in einer [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [Datenbank](../../../analysis-services/scripting/objects/database-element-assl.md) Element.  
@@ -99,7 +93,6 @@ ms.lasthandoff: 09/01/2017
  Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.Cube>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Objekte & #40; ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [Objekte &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

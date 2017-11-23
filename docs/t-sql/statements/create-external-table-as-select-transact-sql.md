@@ -8,8 +8,7 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - External, table create as select
 - PolyBase, create table as select
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 5742453b2465aa06c425e81d2e8c45d79e0c5e72
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 716c0fdaa701865e8d35154cd19068051e0ab017
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>Erstellen Sie die externe Tabelle AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -186,7 +184,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   Externe Partition verschieben  
   
- **GILT für:**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]als Voraussetzung für das Erstellen einer externen Tabelle, muss der Administrator Appliance Hadoop-Konnektivität konfigurieren.   Weitere Informationen finden Sie unter Konfigurieren Sie Verbindungen zu externen Daten (Analytics Platform System) in der APS-Dokumentation, das Sie herunterladen können [hier](http://www.microsoft.com/download/details.aspx?id=48241).  
+ **GILT für:**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]als Voraussetzung für das Erstellen einer externen Tabelle, muss der Administrator Appliance Hadoop-Konnektivität konfigurieren. Weitere Informationen finden Sie unter Konfigurieren Sie Verbindungen zu externen Daten (Analytics Platform System) in der APS-Dokumentation, das Sie herunterladen können [hier](http://www.microsoft.com/download/details.aspx?id=48241).  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
  Da externe Tabellendaten befindet sich außerhalb der Datenbank, Sichern und Wiederherstellen funktionieren Vorgänge nur auf Daten in der Datenbank gespeichert. Dies bedeutet, dass nur die Metadaten gesichert und wiederhergestellt werden.  
@@ -266,6 +264,5 @@ OPTION ( HASH JOIN );
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   
-
 
 

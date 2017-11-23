@@ -13,24 +13,20 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- OR
-dev_langs:
-- DMX
-helpviewer_keywords:
-- OR operator
+f1_keywords: OR
+dev_langs: DMX
+helpviewer_keywords: OR operator
 ms.assetid: 727a38a9-7f75-4963-8e8a-aa703c129d30
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 02c668382e80e240f7728639105a5beeac836707
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 41cdd1638dc31eefa9cb034db33ef9d30162d617
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="or-dmx"></a>OR (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -72,4 +68,3 @@ Expression1 OR Expression2
  [Operatoren &#40; DMX &#41;](../dmx/operators-dmx.md)  
   
   
-

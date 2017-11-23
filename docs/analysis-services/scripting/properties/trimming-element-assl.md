@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Trimming Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Trimming Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Trimming
-helpviewer_keywords:
-- Trimming element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Trimming
+helpviewer_keywords: Trimming element
 ms.assetid: 8b3bbf89-8309-4d00-9aea-a5918f0c7027
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 962e3b82e8853d00c34684c23db891617c2ff08a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: beafc7cac603ba056b70be09bc2377844ec46cdb
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="trimming-element-assl"></a>Trimming-Element (ASSL)
   Gibt an, wie die Daten der Datenquelle eingeschränkt werden.  
@@ -84,4 +78,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

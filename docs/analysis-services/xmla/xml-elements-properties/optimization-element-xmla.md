@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Optimization Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Optimization Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Optimization
 - urn:schemas-microsoft-com:xml-analysis#Optimization
 - microsoft.xml.analysis.optimization
-helpviewer_keywords:
-- Optimization element
+helpviewer_keywords: Optimization element
 ms.assetid: fb9ff737-59e2-4d8b-9f0e-af392eb25d08
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d2218d163ad4d42c3741b04c21e7c50aaaace61a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0a1a61c86a16442a6467a27ad0932b8f8a09010e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="optimization-element-xmla"></a>Optimization-Element (XMLA)
   Gibt den Optimierungsschwellenwert in Prozent an, der vom [DesignAggregations](../../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) -Befehl verwendet wird, um Aggregationen zu entwerfen.  
@@ -74,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

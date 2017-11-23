@@ -8,8 +8,7 @@ ms.service:
 ms.component: admin
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC data source administrator [ODBC], connection pooling options
 - ODBC data source administrator [ODBC], performance monitoring
 ms.assetid: 037e2f78-f204-40f4-b4ab-d9cdf562012b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d44325018516574641ccb938a8d7acbefb121cd4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6e22b3c2c09f4bc356b54ed2ecb73988f0de2764
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>Festlegen von Optionen für ODBC-Verbindungspooling
 Verbindungspooling ermöglicht einer Anwendung eine Verbindung aus einem Pool von Verbindungen verwendet werden, die nicht für die einzelnen wiederhergestellt werden müssen. Können Sie die **Verbindungspooling** auf der Registerkarte die **ODBC-Datenquellenadministrator** Dialogfeld zum Aktivieren und Deaktivieren der Überwachung der Anwendungsleistung. Doppelklicken Sie auf eine Treibername den Timeoutzeitraum festlegen.  
@@ -51,4 +49,3 @@ Verbindungspooling ermöglicht einer Anwendung eine Verbindung aus einem Pool vo
 |Erstellten Ressourcenpools|Die Anzahl von Pools aktiv ist, einschließlich active und entfernten Speicherpools. Dieser Leistungsindikator wurde in Windows 8 für Treiber hinzugefügt, die Verbindungen im Verbindungspool zu verwalten. Weitere Informationen finden Sie unter [Treiberfähiges Verbindungspooling](../../odbc/reference/develop-app/driver-aware-connection-pooling.md).|  
   
  Sie müssen eine eigene Überwachungsparameter angeben. Beispiele für die Leistungsüberwachung wurden in dieser Version von ODBC enthalten.
-

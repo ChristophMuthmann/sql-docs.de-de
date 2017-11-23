@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- SourceMeasureGroup Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: SourceMeasureGroup Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- SourceMeasureGroup
-helpviewer_keywords:
-- SourceMeasureGroup element
+applies_to: SQL Server 2016 Preview
+f1_keywords: SourceMeasureGroup
+helpviewer_keywords: SourceMeasureGroup element
 ms.assetid: aaa7cc0b-162a-4c31-ab03-a90f81eeca00
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 30cea4a156acf4af8c715b6fdf96cf0d92eca2c7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dc4a472b56b27f4f6459611413968542e784f331
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sourcemeasuregroup-element-assl"></a>SourceMeasureGroup-Element (ASSL)
   Identifiziert die Measuregruppe, die als Datenquelle für eine Miningstruktur-Spalte dient.  
@@ -77,4 +71,3 @@ ms.lasthandoff: 09/01/2017
  [Objekte &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

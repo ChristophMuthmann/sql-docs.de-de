@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - length of data buffers [ODBC]
 - buffers [ODBC], length
 ms.assetid: 849792f1-cb1e-4bc2-b568-c0aff0b66199
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5497ef9b94a57442fd675db6729147d0432ece56
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f615aa92da79c391e84539fdf5cf402d523ab690
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-length-and-indicator-values"></a>Mithilfe der Länge und Indikatorwerte
 Die Längen-/Indikatorpuffers wird verwendet, übergeben Sie die Bytelänge der Daten in den Datenpuffer oder einen speziellen Indikator wie z. B. SQL_NULL_DATA gibt an, dass die Daten NULL sind. Abhängig von der Funktion, in der es verwendet wird, wird ein Längen-/Indikatorpuffers definiert, um eine SQLINTEGER oder ein SQLSMALLINT sein. Aus diesem Grund ist ein einzelnes Argument erforderlich, um es zu beschreiben. Dieses Argument enthält die Bytelänge der Daten selbst oder um einen Indikatorwert, wenn Datenpuffer eine nondeferred Eingabepuffer ist. Es wird oft mit dem Namen *StrLen_or_Ind* oder einem ähnlichen Namen. Beispielsweise folgender code ruft **SQLPutData** , übergeben einen Puffer von Daten vollständig; die Bytelänge (*ValueLen*) direkt übergeben wird, da Datenpuffer (*ValuePtr*) ist ein Eingabepuffer.  
@@ -79,4 +77,3 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
 -   SQL_DEFAULT_PARAM. Eine Prozedur ist den Standardwert des input-Parameter in einer Prozedur anstelle des Werts in den entsprechenden Datenpuffer verwenden.  
   
 -   SQL_COLUMN_IGNORE. **SQLBulkOperations** oder **SQLSetPos** ignoriert den Wert im Datenpuffer. Beim Aktualisieren einer Zeile der Daten durch einen Aufruf von **SQLBulkOperations** oder **SQLSetPos** der Spaltenwert nicht geändert wird. Wenn Sie eine neue Zeile mit Daten durch einen Aufruf von einfügen **SQLBulkOperations**, der Spaltenwert auf seinen Standardwert festgelegt ist oder, wenn die Spalte keinen standardmäßig auf NULL.
-

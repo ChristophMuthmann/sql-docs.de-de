@@ -8,24 +8,21 @@ ms.service:
 ms.component: trace-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords:
-- Discover Events event category
+helpviewer_keywords: Discover Events event category
 ms.assetid: 10ec598e-5b51-4767-b4f7-42e261d96a40
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fd7ca49c095ceb88e72392eadb15a879a9ece614
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1d4275dc8ed85c907a458c5772a57153dc88fa0e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discover-events-data-columns"></a>Datenspalten für Ermittlungsereignisse
   Die Kategorie "Ermittlungsereignisse" besitzt die folgenden Ereignisklassen:  
@@ -90,4 +87,3 @@ ms.lasthandoff: 09/01/2017
  [Discover Events Event Category](../../analysis-services/trace-events/discover-events-event-category.md)  
   
   
-

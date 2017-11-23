@@ -4,28 +4,32 @@ description: Informationen Sie zum Sichern und Wiederherstellen von SQL Server-D
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 11/14/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.workload: On Demand
+ms.openlocfilehash: 4693d53a8318a4d8ac5ecfa696203688737dad25
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: a34954f14ad4c40fdc7376f3f35c6a3def6e2ec7
-ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Sichern und Wiederherstellen der SQL Server-Datenbanken unter Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Sie können Sicherungen der Datenbanken von SQL Server-2017 unter Linux mit den gleichen Tools wie andere Plattformen schalten. Auf einem Linux-Server, können Sie `sqlcmd` zum Herstellen einer Verbindung mit SQL Server und Sicherungen. Sie können von Windows Herstellen einer Verbindung mit SQL Server on Linux und Sicherungen mit der Benutzeroberfläche. Die Sicherungsfunktion für entspricht dem über Plattformen hinweg. Beispielsweise können Sie Datenbanken sichern, lokal, remote-Laufwerke oder zu [Microsoft Azure Blob-Speicherdienst](http://msdn.microsoft.com/library/dn435916.aspx). 
+Sie können Sicherungen der Datenbanken von SQL Server-2017 unter Linux mit den gleichen Tools wie andere Plattformen schalten. Auf einem Linux-Server, können Sie **Sqlcmd** zum Herstellen einer Verbindung mit SQL Server und Sicherungen. Sie können von Windows Herstellen einer Verbindung mit SQL Server on Linux und Sicherungen mit der Benutzeroberfläche. Die Sicherungsfunktion für entspricht dem über Plattformen hinweg. Beispielsweise können Sie Datenbanken sichern, lokal, remote-Laufwerke oder zu [Microsoft Azure Blob-Speicherdienst](../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
-## <a name="backup-with-sqlcmd"></a>Sicherung mit sqlcmd
+## <a name="backup-a-database"></a>Sichern einer Datenbank
 
-Im folgenden Beispiel `sqlcmd` eine Verbindung mit der lokalen SQL Server-Instanz her und nimmt eine vollständige Sicherung einer Benutzerdatenbank aufgerufen `demodb`.
+Im folgenden Beispiel **Sqlcmd** eine Verbindung mit der lokalen SQL Server-Instanz her und nimmt eine vollständige Sicherung einer Benutzerdatenbank aufgerufen `demodb`.
 
 ```bash
 sqlcmd -S localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'/var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
@@ -50,28 +54,39 @@ Processed 2 pages for database 'demodb', file 'demodb_log' on file 1.
 BACKUP DATABASE successfully processed 298 pages in 0.064 seconds (36.376 MB/sec).
 ```
 
-### <a name="backup-log-with-sqlcmd"></a>Sicherung des Protokolls mit sqlcmd
+### <a name="backup-the-transaction-log"></a>Sichern des Transaktionsprotokolls
 
-Im folgenden Beispiel `sqlcmd` eine Verbindung mit der lokalen SQL Server-Instanz her und nimmt der Sicherung ein Protokollfragments. Nach Abschluss der Sicherung des Protokollfragments wird die Datenbank im Wiederherstellungsstatus befinden. 
+Wenn Ihre Datenbank in das vollständige Wiederherstellungsmodell ist, können Sie auch Sicherungen des Transaktionsprotokolls für eine detailliertere Wiederherstellungsoptionen vornehmen. Im folgenden Beispiel **Sqlcmd** eine Verbindung mit der lokalen SQL Server-Instanz her und nimmt ein Transaktionsprotokoll sichern.
 
 ```bash
-sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO  DISK = N'/var/opt/mssql/data/demodb_LogBackup_2016-11-14_18-09-53.bak' WITH NOFORMAT, NOINIT,  NAME = N'demodb_LogBackup_2016-11-14_18-09-53', NOSKIP, NOREWIND, NOUNLOAD,  NORECOVERY ,  STATS = 5"
+sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO  DISK = N'/var/opt/mssql/data/demodb_LogBackup.bak' WITH NOFORMAT, NOINIT,  NAME = N'demodb_LogBackup', NOSKIP, NOREWIND, NOUNLOAD, STATS = 5"
 ```
 
-## <a name="restore-with-sqlcmd"></a>Wiederherstellen mit sqlcmd
+## <a name="restore-a-database"></a>Wiederherstellen einer Datenbank
 
-Im folgenden Beispiel `sqlcmd` eine Verbindung mit der lokalen Instanz von SQL Server her und stellt eine Datenbank wieder her.
+Im folgenden Beispiel **Sqlcmd** eine Verbindung mit der lokalen Instanz von SQL Server her und stellt die Demodb-Datenbank wieder her. Beachten Sie, dass die `NORECOVERY` Option wird verwendet, um zusätzliche Wiederherstellung von protokollsicherungen für die Datei zu ermöglichen. Wenn Sie nicht beabsichtigen, zusätzliche Protokolldateien wiederhergestellt werden, entfernen die `NORECOVERY` Option.
 
 ```bash
-sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM  DISK = N'/var/opt/mssql/data/demodb.bak' WITH  FILE = 1,  NOUNLOAD,  REPLACE,  STATS = 5"
+sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM  DISK = N'/var/opt/mssql/data/demodb.bak' WITH  FILE = 1,  NOUNLOAD,  REPLACE, NORECOVERY, STATS = 5"
+```
+
+> [!TIP]
+> Wenn Sie versehentlich WITH NORECOVERY, aber keine zusätzlichen Protokollsicherungsdateien, führen Sie den Befehl `RESTORE DATABASE demodb` ohne zusätzliche Parameter. Die Wiederherstellung abzuschließen wird und die Datenbank bleibt einsatzbereit.
+
+### <a name="restore-the-transaction-log"></a>Wiederherstellen des Transaktionsprotokolls
+
+Der folgende Befehl stellt vorherige Sicherung des Transaktionsprotokolls wieder her.
+
+```bash
+sqlcmd -S localhost -U SA -Q "RESTORE LOG demodb FROM DISK = N'/var/opt/mssql/data/demodb_LogBackup.bak'"
 ```
 
 ## <a name="backup-and-restore-with-sql-server-management-studio-ssms"></a>Sicherung und-Wiederherstellung mit dem SQL Server Management Studio (SSMS)
 
-Sie können SSMS auf einem Windows-Computer verwenden, eine Verbindung mit einer Linux-Datenbank und erstellen Sie eine Sicherung über die Benutzeroberfläche. 
+Sie können SSMS auf einem Windows-Computer verwenden, eine Verbindung mit einer Linux-Datenbank und erstellen Sie eine Sicherung über die Benutzeroberfläche.
 
 >[!NOTE] 
-> Verwenden Sie die neueste Version von SSMS, um die Verbindung mit SQL Server. Zum Herunterladen und installieren Sie die neueste Version, finden Sie unter [SSMS herunterladen](http://msdn.microsoft.com/library/mt238290.aspx). 
+> Verwenden Sie die neueste Version von SSMS, um die Verbindung mit SQL Server. Zum Herunterladen und installieren Sie die neueste Version, finden Sie unter [SSMS herunterladen](../ssms/download-sql-server-management-studio-ssms.md). Weitere Informationen zum Verwenden von SSMS finden Sie unter [Verwenden von SSMS zum Verwalten von SQL Server on Linux](sql-server-linux-manage-ssms.md).
 
 Die folgenden Schritte führen über eine Sicherung mit SSMS. 
 
@@ -82,8 +97,6 @@ Die folgenden Schritte führen über eine Sicherung mit SSMS.
 1. In der **Sicherung Datenbank** im Dialogfeld die Optionen und Parameter überprüfen, und klicken Sie auf **OK**.
  
 SQL Server ist die datenbanksicherung abgeschlossen.
-
-Weitere Informationen finden Sie unter [Verwenden von SSMS zum Verwalten von SQL Server on Linux](sql-server-linux-manage-ssms.md).
 
 ### <a name="restore-with-sql-server-management-studio-ssms"></a>Wiederherstellen Sie mit SQL Server Management Studio (SSMS) 
 
@@ -101,8 +114,7 @@ Die folgenden Schritte führen Sie durch das Wiederherstellen einer Datenbank mi
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Erstellen einer vollständigen Datenbanksicherung (SQLServer)](http://msdn.microsoft.com/library/ms187510.aspx)
-* [Sichern eines Transaktionsprotokolls (SQL Server)](http://msdn.microsoft.com/library/ms179478.aspx)
-* [BACKUP (Transact-SQL)](http://msdn.microsoft.com/library/ms186865.aspx)
-* [SQL Server-Sicherung über URLs](http://msdn.microsoft.com/library/dn435916.aspx)
-
+* [Erstellen einer vollständigen Datenbanksicherung (SQLServer)](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
+* [Sichern eines Transaktionsprotokolls (SQL Server)](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)
+* [BACKUP (Transact-SQL)](../t-sql/statements/backup-transact-sql.md)
+* [SQL Server-Sicherung über URLs](../relational-databases/backup-restore/sql-server-backup-to-url.md)

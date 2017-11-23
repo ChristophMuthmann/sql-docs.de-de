@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ClearCache Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ClearCache Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#ClearCache
 - urn:schemas-microsoft-com:xml-analysis#ClearCache
 - microsoft.xml.analysis.clearcache
-helpviewer_keywords:
-- ClearCache command
+helpviewer_keywords: ClearCache command
 ms.assetid: e154b489-e443-469a-9490-43c62da62e11
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 41f6d0a9f19ba68b0d44a54a32784becf037e927
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7acd1b2b00dacdd9639ff875af16bbb8c27e6756
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="clearcache-element-xmla"></a>ClearCache-Element (XMLA) 
   Entleert den Arbeitsspeichercache des angegebenen Objekts auf ein [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz.  
@@ -75,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [Befehle &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   
-

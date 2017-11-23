@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Sources Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Sources Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.sources
 - http://schemas.microsoft.com/analysisservices/2003/engine#Sources
 - urn:schemas-microsoft-com:xml-analysis#Sources
-helpviewer_keywords:
-- Sources element
+helpviewer_keywords: Sources element
 ms.assetid: fefe8f01-4c62-4b70-9bf6-f11d2f01623a
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 85d46b8d29799ec52bf3bf97fcc7f21cd6019540
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 86d5d299e4ea6088ca9915289fb9147725bab6d7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sources-element-xmla"></a>Sources-Element (XMLA)
   Enthält eine Auflistung von [Source](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md) -Elementen für das übergeordnete [MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) -Element.  
@@ -110,4 +105,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

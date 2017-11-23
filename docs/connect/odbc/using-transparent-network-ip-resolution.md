@@ -8,22 +8,20 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d255208f-d486-4ad3-8080-61c6e0261825
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0db2d2b8dfc796b8c2dc696d66264745182ab39a
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cc3b7595b836544f3f7bcfd94f2bab83fac24b36
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-transparent-network-ip-resolution"></a>Mithilfe des transparenten Netzwerk-IP-Auflösung
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -63,4 +61,3 @@ Die `SQL_COPT_SS_TNIR` vorverbindungsattribut ermöglicht einer Anwendung, um di
 ## <a name="see-also"></a>Siehe auch  
 * [Microsoft ODBC Driver for SQL Server unter Windows](../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)
 * [SQL Server-Multisubnetzclustering (SQLServer)](https://msdn.microsoft.com/library/ff878716.aspx#RelatedContent)
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Index
-helpviewer_keywords:
-- Index object [ADOX]
+f1_keywords: Index
+helpviewer_keywords: Index object [ADOX]
 ms.assetid: 6b9578c0-bc94-46b9-b801-c18e14b04b31
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 584ab3c0bb5bb4616df21598d36da1b6e729d9fa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2fe0916836a44ecb61d1d606a9c894ac22342d57
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="index-object-adox"></a>Index-Objekt (ADOX)
 Stellt einen Index aus einer Datenbanktabelle dar.  
@@ -67,7 +63,7 @@ Dim obj As New Index
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Index-Objekteigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/index-object-properties-methods-and-events.md)  
+-   [Index-Objekt – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/index-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Indizes Append-Methode (Beispiel) (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
@@ -76,5 +72,4 @@ Dim obj As New Index
  [SortOrder-Eigenschaft (VB)-Beispiel](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
  [Columns-Auflistung (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Auflistung von Indizes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)   
- [Properties-Auflistung (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+ [Properties-Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], embedded SQL
 - embedded SQL [ODBC]
 ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ae3b2c60025f82d3153166a887fea12453443450
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e9f19c26cf77e0f5cfbff8a8ebad193ba9e9cdf2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="embedded-sql-example"></a>Embedded SQL-Beispiel
 Der folgende Code ist eine einfache embedded SQL, geschriebenes Programm in c Das Programm zeigt viele, aber nicht in allen eingebetteten SQL-Techniken. Das Programm fordert den Benutzer für eine Auftragsnummer ein, die Kundennummer, Vertriebsmitarbeiter und Status der Bestellung abgerufen und die abgerufene Informationen auf dem Bildschirm angezeigt.  
@@ -81,4 +79,3 @@ bad_number:
 -   **Fehlerbehandlung** der DBMS-Laufzeitfehler an das Programm Anwendungen durch eine SQL Communications Area oder SQLCA meldet. Im vorangehenden Codebeispiel wird die erste embedded SQL-Anweisung SQLCA enthalten. Dies teilt die vorkompilierten SQLCA-Struktur in die Anwendung eingeschlossen werden sollen. Dies ist erforderlich, wenn das Programm das DBMS zurückgegebene Fehler verarbeitet werden. Die WHENEVER... GOTO-Anweisung weist die vorkompilierten Fehlerbehandlungscode, die Verzweigungen, um eine bestimmte Bezeichnung, wenn ein Fehler auftritt, generiert.  
   
 -   **Singleton-SELECT** die Anweisung verwendet, um die Daten zurückzugeben ist eine Singleton-SELECT-Anweisung; d. h. gibt es nur eine einzelne Zeile mit Daten. Aus diesem Grund im Codebeispiel nicht deklarieren oder Cursor.
-

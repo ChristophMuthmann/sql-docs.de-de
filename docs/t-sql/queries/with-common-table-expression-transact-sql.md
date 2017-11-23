@@ -3,10 +3,12 @@ title: WITH allgemeiner_tabellenausdruck (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - WITH_TSQL
 - WITH
 - common table expression
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - WITH common_table_expression clause
 - CTEs
@@ -26,20 +27,19 @@ helpviewer_keywords:
 - MAXRECURSION hint
 - clauses [SQL Server], WITH common_table_expression
 ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: a45cb91754fdff2aaafb90d33b7d89a70702dfb2
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a065ef1f5c21d0fb5a458d55108acd8a9fd0678e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt ein temporäres benanntes Resultset an, das als allgemeiner Tabellenausdruck (CTE, Common Table Expression) bekannt ist. Dieser wird von einer einfachen Abfrage abgeleitet und innerhalb des Ausführungsbereichs einer einzelnen SELECT-, INSERT-, UPDATE- oder DELETE-Anweisung definiert. Diese Klausel kann auch in einer CREATE VIEW-Anweisung als Teil der definierenden SELECT-Anweisung verwendet werden. Ein allgemeiner Tabellenausdruck kann auch Verweise auf sich selbst enthalten. In diesem Fall handelt es sich um einen rekursiven allgemeinen Tabellenausdruck.  
   
@@ -601,48 +601,7 @@ Lvl  N
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="l-creating-a-simple-common-table-expression"></a>L. Erstellen eines einfachen allgemeinen Tabellenausdrucks  
- Im folgenden Beispiel wird die Gesamtanzahl der Aufträge pro Jahr für jeden Vertriebsmitarbeiter von [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] angezeigt.  
-  
-```  
--- Uses AdventureWorks  
-  
--- Define the CTE expression name and column list.  
-WITH Sales_CTE (SalesPersonID, SalesOrderID, SalesYear)  
-AS  
--- Define the CTE query.  
-(  
-    SELECT SalesPersonID, SalesOrderID, YEAR(OrderDate) AS SalesYear  
-    FROM Sales.SalesOrderHeader  
-    WHERE SalesPersonID IS NOT NULL  
-)  
--- Define the outer query referencing the CTE name.  
-SELECT SalesPersonID, COUNT(SalesOrderID) AS TotalSales, SalesYear  
-FROM Sales_CTE  
-GROUP BY SalesYear, SalesPersonID  
-ORDER BY SalesPersonID, SalesYear;  
-GO  
-  
-```  
-  
-### <a name="m-using-a-common-table-expression-to-limit-counts-and-report-averages"></a>M. Verwenden eines allgemeinen Tabellenausdrucks zum Einschränken von Anzahlen und Wiedergeben von Durchschnittswerten  
- Im folgenden Beispiel wird die durchschnittliche Anzahl der Verkaufsaufträge der Vertriebsmitarbeiter für alle Jahre veranschaulicht.  
-  
-```  
-WITH Sales_CTE (SalesPersonID, NumberOfOrders)  
-AS  
-(  
-    SELECT SalesPersonID, COUNT(*)  
-    FROM Sales.SalesOrderHeader  
-    WHERE SalesPersonID IS NOT NULL  
-    GROUP BY SalesPersonID  
-)  
-SELECT AVG(NumberOfOrders) AS "Average Sales Per Person"  
-FROM Sales_CTE;  
-GO  
-```  
-  
-### <a name="n-using-a-common-table-expression-within-a-ctas-statement"></a>N. Verwenden eines allgemeinen Tabellenausdrucks in einer CTAS-Anweisung  
+### <a name="l-using-a-common-table-expression-within-a-ctas-statement"></a>L. Verwenden eines allgemeinen Tabellenausdrucks in einer CTAS-Anweisung  
  Das folgende Beispiel erstellt eine neue Tabelle mit der Gesamtanzahl der Kaufaufträge pro Jahr für jeden Vertriebsmitarbeiter [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
   
 ```  
@@ -671,7 +630,7 @@ AS
 GO  
 ```  
   
-### <a name="o-using-a-common-table-expression-within-a-cetas-statement"></a>O. Verwenden eines allgemeinen Tabellenausdrucks in einer CETAS-Anweisung  
+### <a name="m-using-a-common-table-expression-within-a-cetas-statement"></a>M. Verwenden eines allgemeinen Tabellenausdrucks in einer CETAS-Anweisung  
  Das folgende Beispiel erstellt eine neue externe Tabelle, die die Gesamtanzahl der Kaufaufträge pro Jahr für jeden Vertriebsmitarbeiter enthält [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
   
 ```  
@@ -701,7 +660,7 @@ AS
 GO  
 ```  
   
-### <a name="p-using-multiple-comma-separated-ctes-in-a-statement"></a>P. Verwenden mehrere durch Trennzeichen voneinander getrennt allgemeine Tabellenausdrücke in einer Anweisung  
+### <a name="n-using-multiple-comma-separated-ctes-in-a-statement"></a>N. Verwenden mehrere durch Trennzeichen voneinander getrennt allgemeine Tabellenausdrücke in einer Anweisung  
  Im folgende Beispiel wird veranschaulicht, einschließlich der zwei allgemeine Tabellenausdrücke in einer einzelnen Anweisung. Die allgemeine Tabellenausdrücke darf nicht sein (keine Rekursion) geschachtelt.  
   
 ```  
@@ -728,4 +687,3 @@ SELECT TableName, TotalAvg FROM CountCustomer;
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
   
   
-

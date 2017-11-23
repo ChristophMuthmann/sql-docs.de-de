@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC [ODBC]
 - ODBC [ODBC], about ODBC
 ms.assetid: 233315bd-2b7f-4b20-9978-e920e1ea9a07
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 607e516c8654631ab032dfc6159a8990d464a023
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 20767544a83219c6583eaf03a78e240e15e19be2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-overview"></a>ODBC-Übersicht
 Open Database Connectivity (ODBC) ist eine weit verbreitete Anwendungsprogrammierschnittstelle (API) für den Datenbankzugriff. Es basiert auf den (Call-Level Interface, CLI)-Spezifikationen von Open Group und ISO/IEC für Datenbank-APIs und Structured Query Language (SQL) als seine Datenbank-Access-Sprache verwendet.  
@@ -37,7 +35,6 @@ Open Database Connectivity (ODBC) ist eine weit verbreitete Anwendungsprogrammie
   
 -   [Warum wurde ODBC erstellt?](../../odbc/reference/why-was-odbc-created.md)  
   
--   [Was ist "ODBC"?](../../odbc/reference/what-is-odbc.md)  
+-   [Was ist ODBC?](../../odbc/reference/what-is-odbc.md)  
   
 -   [ODBC und die Standard-CLI](../../odbc/reference/odbc-and-the-standard-cli.md)
-

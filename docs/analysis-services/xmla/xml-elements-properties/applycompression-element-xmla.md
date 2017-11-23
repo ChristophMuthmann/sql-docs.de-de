@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ApplyCompression Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ApplyCompression Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#ApplyCompression
 - urn:schemas-microsoft-com:xml-analysis#ApplyCompression
 - microsoft.xml.analysis.applycompression
-helpviewer_keywords:
-- ApplyCompression element
+helpviewer_keywords: ApplyCompression element
 ms.assetid: 93e222e5-9371-4fb5-aae0-f50b964cc264
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a0f3dc91f2d1755c537db51d4691d202c127230d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8dbeb5b39b1140460bb160d640b6d6e6b5bf10c2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="applycompression-element-xmla"></a>ApplyCompression-Element (XMLA)
   Bestimmt, ob der übergeordnete [Backup](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) -Befehl die Sicherungsdatei komprimiert.  
@@ -74,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

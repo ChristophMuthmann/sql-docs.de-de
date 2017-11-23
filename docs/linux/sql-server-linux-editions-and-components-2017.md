@@ -31,16 +31,15 @@ helpviewer_keywords:
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
 ms.assetid: 
-caps.latest.revision: 121
+caps.latest.revision: "121"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.openlocfilehash: 58503277d586394e329c6232ab097a2d9d9d69cd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 0011a3f43860b353867852e944a0c2ab8a48f9f4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Editionen und unterstützten Funktionen von SQL Server-2017 unter Linux
 
@@ -49,7 +48,7 @@ Dieser Artikel enthält Details zu Features, die von den verschiedenen Editionen
 Die Installationsanforderungen variieren je nach den benötigten Anwendungen. Die verschiedenen Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tragen den individuellen Leistungs-, Laufzeit- und Preisanforderungen von Organisationen und Einzelpersonen Rechnung. Welche [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Komponenten Sie installieren, hängt auch von den individuellen Anforderungen ab. In den folgenden Abschnitten erfahren Sie, wie Sie die bestmögliche Auswahl unter den in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verfügbaren Editionen und Komponenten treffen.  
 
 Die neuesten Versionsanmerkungen und Informationen zu Neuerungen finden Sie über die folgenden Links:
-- [SQL Server auf Linux-Versionshinweise](sql-server-linux-release-notes.md)
+- [SQL Server unter Linux: Anmerkungen zu dieser Version](sql-server-linux-release-notes.md)
 - [Neuigkeiten in SQL Server on Linux](sql-server-linux-whats-new.md)
 
 Eine Liste der SQL Server-Funktionen unter Linux nicht verfügbar, finden Sie unter [nicht unterstützte Funktionen und Dienstleistungen](sql-server-linux-release-notes.md#Unsupported).
@@ -99,7 +98,8 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
   
 <sup>1</sup> Enterprise Edition mit Server + Client Clientzugriffslizenz (CAL) basierte Lizenzierung (für neue Verträge nicht verfügbar) ist auf maximal 20 Kerne pro SQL Server-Instanz beschränkt. Für das auf Prozessorkernen basierende Serverlizenzierungsmodell gelten keine Beschränkungen. Weitere Informationen finden Sie unter [Kapazitätsgrenzen zu berechnen, indem Sie SQL Server-Edition](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
  
-##  <a name="RDBMSHA"></a> RDBMS: Hohe Verfügbarkeit  
+##  <a name="RDBMSHA">
+            </a> RDBMS: Hochverfügbarkeit  
   
 |Funktion|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
@@ -121,11 +121,11 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |Verschlüsselte Sicherung|ja|ja|Nein|Nein|
 |Hybridsicherung in Windows Azure (Sicherung über URL)|ja|ja|Nein|Nein|
   
-<sup>1</sup> auf Enterprise Edition verwendet wird, wird die Anzahl der Knoten das maximum des Betriebssystems. In Standard Edition wird unterstützt zwei Knoten. 
+<sup>1</sup> auf Enterprise Edition verwendet wird, wird die Anzahl der Knoten das maximum des Betriebssystems. Bei der Standard Edition werden nur zwei Knoten unterstützt. 
 
 <sup>2</sup> auf Enterprise Edition bietet Unterstützung für bis zu 8 sekundäre Replikate - einschließlich 2 synchronen sekundären Replikaten. 
 
-<sup>3</sup> standard Edition unterstützt die Basis-Verfügbarkeitsgruppen. Eine Basis-verfügbarkeitsgruppe unterstützt zwei Replikate mit einer Datenbank. Weitere Informationen zur Basis-Verfügbarkeitsgruppen finden Sie unter [Basis-Verfügbarkeitsgruppen](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
+<sup>3</sup> standard Edition unterstützt die Basis-Verfügbarkeitsgruppen. Eine Basis-Verfügbarkeitsgruppe unterstützt zwei Replikate mit einer Datenbank. Weitere Informationen über Basis-Verfügbarkeitsgruppen finden Sie unter [Basis-Verfügbarkeitsgruppen](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
 
 ##  <a name="RDBMSSP"></a> RDBMS: Skalierbarkeit und Leistung  
   
@@ -229,4 +229,3 @@ Informationen zu Integration Services (SSIS)-Funktionen, die von den Editionen u
 
   
   
-

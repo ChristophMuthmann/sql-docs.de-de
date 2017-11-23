@@ -3,17 +3,18 @@ title: ALTER INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
 - ALTER_INDEX_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - indexes [SQL Server], reorganizing
 - ALTER INDEX statement
@@ -43,20 +44,19 @@ helpviewer_keywords:
 - ALLOW_PAGE_LOCKS option
 - page locks [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: 222
+caps.latest.revision: "222"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 39f0a539906f192c39599dda94dfa150c13fdeca
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: f61b6469e40ba303cbff14db9bde15161b225ca7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Ändert einen vorhandenen Tabellen- oder Sichtindex (relational oder XML), indem der Index deaktiviert, neu erstellt oder neu organisiert wird oder indem Optionen für den Index festgelegt werden.  
   
@@ -191,7 +191,7 @@ ALTER INDEX { index_name | ALL }
 |REORGANIZE PARTITION = *Partitionsnummer*|Nicht partitionierter Index, XML-Index, räumlicher Index oder deaktivierter Index|  
 |IGNORE_DUP_KEY = ON|XML-Index<br /><br /> Räumlicher Index<br /><br /> Columnstore-Index: **gilt für:** SQL Server (beginnend mit SQL Server 2012) und Azure SQL-Datenbank.|  
 |ONLINE = ON|XML-Index<br /><br /> Räumlicher Index<br /><br /> Columnstore-Index: **gilt für:** SQL Server (beginnend mit SQL Server 2012) und Azure SQL-Datenbank.|
-| FORTSETZBARE = ON  | Fortsetzbare Indizes nicht unterstützt, mit **alle** Schlüsselwort. <br /><br /> **Gilt für**: ab SQL Server 2017 und Azure SQL-Datenbank (Feature steht in der öffentlichen Vorschau) |   
+| FORTSETZBARE = ON  | Fortsetzbare Indizes nicht unterstützt, mit **alle** Schlüsselwort. <br /><br /> **Gilt für**: ab SQL Server-2017 und Azure SQL-Datenbank |   
   
 > [!WARNING]
 >  Ausführlichere Informationen zu indexvorgängen, die online ausgeführt werden können, finden Sie unter [Richtlinien für Onlineindexvorgänge](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
@@ -436,7 +436,7 @@ FILLFACTOR = *Fillfactor*
 
 FORTSETZBARE  **=**  {ON | **OFF**}
 
-**Gilt für**: ab SQL Server 2017 und Azure SQL-Datenbank (Feature steht in der öffentlichen Vorschau)  
+**Gilt für**: ab SQL Server-2017 und Azure SQL-Datenbank   
 
  Gibt an, ob ein Onlineindexvorgang kann wieder aufgenommen wird.
 
@@ -446,7 +446,7 @@ FORTSETZBARE  **=**  {ON | **OFF**}
 
 MAX_DURATION  **=**  *Zeit* [**Minuten**] mit verwendet **kann wieder aufgenommen werden = ON** (erfordert **ONLINE = ON**).
  
-**Gilt für**: ab SQL Server 2017 und Azure SQL-Datenbank (Feature steht in der öffentlichen Vorschau)  
+**Gilt für**: ab SQL Server-2017 und Azure SQL-Datenbank 
 
 Gibt die Zeit (ein Integerwert in Minuten angegeben), dass eine fortsetzbar online-Vorgang Index werden ausgeführt, bevor er angehalten wurde. 
 
@@ -604,33 +604,33 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
  RESUME 
  
-**Gilt für**: ab SQL Server-2017 (Feature steht in der öffentlichen Vorschau)
+**Gilt für**: ab SQLServer 2017  
 
 Fortsetzen eines Indexvorgangs, das manuell oder aufgrund eines Fehlers angehalten wurde.
 
 Mit MAX_DURATION verwendet **kann wieder aufgenommen werden = ON**
 
  
-**Gilt für**: ab SQL Server 2017 und Azure SQL-Datenbank (Feature steht in der öffentlichen Vorschau)
+**Gilt für**: ab SQL Server-2017 und Azure SQL-Datenbank
 
 Die Zeit (ein ganzzahliger Wert, der in Minuten angegeben ist) die fortsetzbar Onlineindexvorgang wird ausgeführt, nachdem das wieder aufgenommen wird. Nach Ablauf dieses Zeitraums ist fortsetzbare Vorgang angehalten, wenn er immer noch ausgeführt wird.
 
 WAIT_AT_LOW_PRIORITY mit verwendet **kann wieder aufgenommen werden = ON** und **ONLINE = ON**.  
   
-**Gilt für**: ab SQL Server 2017 und Azure SQL-Datenbank (Feature steht in der öffentlichen Vorschau)
+**Gilt für**: ab SQL Server-2017 und Azure SQL-Datenbank 
   
  Eine online-indexneuerstellung wird fortgesetzt, nachdem eine Pause auf blockierende Vorgänge für diese Tabelle gewartet hat. **WAIT_AT_LOW_PRIORITY** gibt an, dass der Vorgang zur onlineindexneuerstellung Sperren mit niedriger Priorität, sodass andere Vorgänge, während die onlineindexerstellung wartet gewartet wird. Das Weglassen der **WAIT AT LOW PRIORITY** -Option ist gleichwertig mit `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Weitere Informationen finden Sie unter [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
 
 
 ANHALTEN
  
-**Gilt für**: ab SQL Server 2017 und Azure SQL-Datenbank (Feature steht in der öffentlichen Vorschau)
+**Gilt für**: ab SQL Server-2017 und Azure SQL-Datenbank 
   
 Anhalten eines fortsetzbar Vorgangs zur onlineindexneuerstellung an.
 
 ABBRECHEN
 
-**Gilt für**: ab SQL Server 2017 und Azure SQL-Datenbank (Feature steht in der öffentlichen Vorschau)   
+**Gilt für**: ab SQL Server-2017 und Azure SQL-Datenbank   
 
 Abbrechen eines ausgeführten oder angehaltenen Indexvorgangs, der als fortsetzbar deklariert wurde. Müssen Sie explizit ausführen, eine **ABORT** -Neuerstellungsvorgang von Befehl zum Beenden eines Indexes kann wieder aufgenommen. Fehler oder einen fortsetzbaren Indexvorgang Anhalten wird nicht seine Ausführung beendet; Stattdessen bewirkt, dass sie den Vorgang unbestimmtes anhalten.
   
@@ -712,7 +712,7 @@ Abbrechen eines ausgeführten oder angehaltenen Indexvorgangs, der als fortsetzb
 
 ### <a name="resumable-index-operations"></a>Fortsetzbare Indexvorgänge
 
-**Gilt für**: ab SQL Server 2017 und Azure SQL-Datenbank (Feature steht in der öffentlichen Vorschau)
+**Gilt für**: ab SQL Server-2017 und Azure SQL-Datenbank 
 
 ONLINE INDEX REBUILD angegeben ist, als fortsetzbar mithilfe der kann wieder aufgenommen werden = Option. 
 -  Die FORTSETZBARE Option wird nicht in den Metadaten für einen bestimmten Index beibehalten und gelten nur für die Dauer der aktuellen DDL-Anweisung. Aus diesem Grund die ANWENDUNGSUNABHÄNGIG = ON-Klausel muss explizit angegeben werden, um Resumability zu aktivieren.
@@ -786,7 +786,7 @@ Die folgende Funktionalität ist für Neuerstellungsvorgänge fortsetzbar Index 
   
 -   Columnstore-Indizes sind nicht vor SQL Server 2012 verfügbar. 
 
--  Fortsetzbare Indexvorgänge sind mit SQL Server 2017 und Azure SQL-Datenbank (Feature steht in der öffentlichen Vorschau) |   
+-  Fortsetzbare Indexvorgänge sind mit SQL Server-2017 und Azure SQL-Datenbank ab   
   
 ## <a name="basic-syntax-example"></a>Einfaches Syntaxbeispiel:   
   
@@ -1135,7 +1135,7 @@ GO
  
 ### <a name="j-online-resumable-index-rebuild"></a>J. Fortsetzbare onlineneuerstellung von Indizes
 
-**Gilt für**: ab SQL Server 2017 und Azure SQL-Datenbank (Feature steht in der öffentlichen Vorschau)    
+**Gilt für**: ab SQL Server-2017 und Azure SQL-Datenbank   
 
  Die folgenden Beispiele zeigen, wie fortsetzbar onlineneuerstellung von Indizes verwendet wird. 
 
@@ -1188,6 +1188,5 @@ GO
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-
 
 

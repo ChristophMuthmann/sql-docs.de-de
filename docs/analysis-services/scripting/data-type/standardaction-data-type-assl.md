@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- StandardAction Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: StandardAction Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- StandardAction
-helpviewer_keywords:
-- StandardAction data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: StandardAction
+helpviewer_keywords: StandardAction data type
 ms.assetid: 81b574d5-06c1-4587-8bd2-0e5c5e3b1d99
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 27f3ae41d9dd941e1fa372005ddbdcbc39534c24
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d57cf9ec56c160d49111b3301f11dbed72e383a1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="standardaction-data-type-assl"></a>StandardAction-Datentyp (ASSL)
   Definiert einen abgeleiteten Datentyp, der eine stellt [Aktion](../../../analysis-services/scripting/objects/action-element-assl.md) Element außer einer [DrillThroughAction](../../../analysis-services/scripting/data-type/drillthroughaction-data-type-assl.md) Element oder ein [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md) Element.  
@@ -72,4 +66,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services Scripting Language-XML-Datentypen &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

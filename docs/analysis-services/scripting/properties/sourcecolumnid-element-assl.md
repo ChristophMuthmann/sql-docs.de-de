@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- SourceColumnID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: SourceColumnID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- SourceColumnID
-helpviewer_keywords:
-- SourceColumnID element
+applies_to: SQL Server 2016 Preview
+f1_keywords: SourceColumnID
+helpviewer_keywords: SourceColumnID element
 ms.assetid: 715c0be7-aa07-4dff-a909-9738224941ec
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 37bc05f9fb5d44261f5d0eb51fba7581e2f2f979
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a912bf66ed7526bfce8976c3006539c23c5fa241
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sourcecolumnid-element-assl"></a>SourceColumnID-Element (ASSL)
   Enthält den Bezeichner (ID) der Quellminingstruktur-Spalte in den Vorgänger [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) Element.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

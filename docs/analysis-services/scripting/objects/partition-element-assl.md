@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Partition Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Partition Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- PARTITION
-helpviewer_keywords:
-- Partition element
+applies_to: SQL Server 2016 Preview
+f1_keywords: PARTITION
+helpviewer_keywords: Partition element
 ms.assetid: 40020840-1bb7-478f-9017-1a30342ac4c6
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e8ab9845b93fe0b4e3ea8afdd9ec1bc4aaa2c0ee
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 90c86a43bbd290ae3ffd04408ab61a68a307fc83
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="partition-element-assl"></a>Partition-Element (ASSL)
   Definiert eine Partition eine [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md) Element oder eine partitionsbindung in einem Out-of-Line [MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-out-of-line-assl.md) Element.  
@@ -146,4 +140,3 @@ ms.lasthandoff: 09/01/2017
  [Objekte &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

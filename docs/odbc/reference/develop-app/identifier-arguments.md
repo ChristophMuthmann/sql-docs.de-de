@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - catalog functions [ODBC], arguments
 - arguments in catalog functions [ODBC], identifier
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a81844609833db4953102f72d2eb6d0939cfc78
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: df3509e6b13d68858909d0739df1048b79fa8e45
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="identifier-arguments"></a>Identifier-Argumente
 Wenn eine Zeichenfolge in einem Argument Bezeichner in Anführungszeichen eingeschlossen ist, wird der Treiber entfernt führende und nachfolgende Leerzeichen und behandelt, als solcher die Zeichenfolge in Anführungszeichen. Wenn die Zeichenfolge nicht in Anführungszeichen eingeschlossen ist, entfernt der Treiber nachfolgende Leerzeichen und Aufteilungen die Zeichenfolge in Großbuchstaben. Wird ein ID-Argument auf ein null-Zeiger gibt SQL_ERROR und SQLSTATE HY009 zurück (Ungültige Verwendung von null-Zeiger), es sei denn, das Argument ein Katalogname ist und Kataloge werden nicht unterstützt.  
@@ -44,4 +42,3 @@ SQLTables(hstmt2, NULL, 0, NULL, 0, "\"Accounts Payable\"", SQL_NTS, NULL, 0);
  Bezeichner in Anführungszeichen werden verwendet, um einen Spaltennamen "true" aus einer Pseudo-Spalte mit dem gleichen Namen, z. B. ROWID in Oracle zu unterscheiden. Wenn ein Argument einer Funktion Katalog "ROWID" übergeben wird, funktioniert die Funktion mit der ROWID Pseudo-Spalte, falls vorhanden. Wenn die Pseudo-Spalte nicht vorhanden ist, funktioniert die Funktion, mit der Spalte "ROWID". Wenn ein Argument einer Funktion Katalog ROWID übergeben wird, funktioniert die Funktion, mit der ROWID-Spalte.  
   
  Weitere Informationen zu Bezeichnern finden Sie unter [Bezeichner in Anführungszeichen](../../../odbc/reference/develop-app/quoted-identifiers.md).
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
-caps.latest.revision: 206
+caps.latest.revision: "206"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 827840a7aa7e221edaad60060fb51972460808ed
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bd65725237fd625c40f8755e636bb4f6fa2c55ea
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>Anmerkungen zu dieser Version für den JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -133,17 +131,17 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
   
  Unterstützung für hohe Verfügbarkeit und Verbindungen zur notfallwiederherstellung bei AlwaysOn-Verfügbarkeitsgruppen in [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. Finden Sie unter [JDBC Driver-Unterstützung für hohe Verfügbarkeit, Wiederherstellung im Notfall](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md) für Weitere Informationen.  
   
- **Verwenden integrierte Kerberos-Authentifizierung zum Verbinden mit SQLServer**  
+ **Verwenden der integrierten Kerberos-Authentifizierung für Verbindungen mit SQL Server**  
   
  Unterstützung für integrierte Typ 4 Kerberos-Authentifizierung für Verbindungen von Anwendungen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank. Weitere Informationen finden Sie unter [mithilfe von integrierten Kerberos-Authentifizierung zum Herstellen einer Verbindung mit SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md). (Geben Sie die integrierte Authentifizierung in steht 2-Kerberos [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] -Versionen vor 4.0.)  
   
- **Zugreifen auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse**  
+ **Zugreifen auf Diagnoseinformationen im Protokoll der erweiterten Ereignisse**  
   
  Sie können auf die Informationen in den erweiterten Ereignisprotokollen des Servers zugreifen, um die Ursachen von Verbindungsfehlern zu bestimmen. Weitere Informationen finden Sie unter [Zugriff auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse](../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
  **Zusätzliche Unterstützung für Spalten mit geringer Dichte**  
   
- Wenn Ihre Anwendung bereits auf Daten in einer Tabelle zugreift, die Daten mit geringer Dichte verwendet, sollten Sie einen Leistungszuwachs feststellen können. Sie erhalten Informationen über Spalten (einschließlich Informationen zu Spalten mit geringer Dichte) mit [GetColumns-Methode &#40; SQLServerDatabaseMetaData &#41; ](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md). Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Spalten mit geringer Dichte, finden Sie unter [Spalten mit geringer Dichte verwenden](http://go.microsoft.com/fwlink/?LinkId=224244).  
+ Wenn Ihre Anwendung bereits auf Daten in einer Tabelle zugreift, die Sparsespalten verwendet, sollten Sie einen Leistungszuwachs feststellen können. Sie erhalten Informationen über Spalten (einschließlich Informationen zu Spalten mit geringer Dichte) mit [GetColumns-Methode &#40; SQLServerDatabaseMetaData &#41; ](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md). Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Spalten mit geringer Dichte, finden Sie unter [Spalten mit geringer Dichte verwenden](http://go.microsoft.com/fwlink/?LinkId=224244).  
   
  **Xid.getFormatId**  
   
@@ -154,7 +152,6 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
  Microsoft JDBC Drivers 6.0, 4.2, 4.1 und 4.0 für SQL Server-Anwendungen werden nicht unterstützt, um auf einem Itanium-Computer ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über die JDBC-Treiber](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [Overview of the JDBC Driver (Übersicht über den JDBC-Treiber)](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

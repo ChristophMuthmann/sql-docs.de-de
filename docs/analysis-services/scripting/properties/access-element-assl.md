@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Access Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Access Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Access
-helpviewer_keywords:
-- Access element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Access
+helpviewer_keywords: Access element
 ms.assetid: 6ad99010-fac5-48e9-a099-ecbca380e127
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bd5e903a31d041bba8e8fd29d1e61aec98a76248
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f04bafc11cdda8d9c0e82b6cb8dee3e3916099eb
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="access-element-assl"></a>Access-Element (ASSL)
   Gibt an, die Zugriffsebene, die auf eine [CellPermission](../../../analysis-services/scripting/objects/cellpermission-element-assl.md) Element.  
@@ -82,4 +76,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

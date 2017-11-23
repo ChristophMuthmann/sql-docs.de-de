@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - data sources [ODBC], configuring
 - registry entries for data sources [ODBC]
 ms.assetid: 78aaa3d3-d081-4550-80e3-720c910d5996
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 96e3a3e03e0a3b8f995323c81f6052bf41d16dbd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 177b6d8121cf218551f486599b5baf6ffc23a6fd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="registry-entries-for-data-sources"></a>Registrierungseinträge für Datenquellen
 > [!NOTE]  
@@ -64,4 +62,3 @@ ms.lasthandoff: 09/09/2017
 -   [Standardunterschlüssel](../../../odbc/reference/install/default-subkey.md)  
   
 -   [ODBC-Unterschlüssel](../../../odbc/reference/install/odbc-subkey.md)
-

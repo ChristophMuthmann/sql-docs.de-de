@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], Gregorian calendar
 - Gregorian calendar [ODBC]
 ms.assetid: 70667410-c582-4369-8e06-9d98e21cd2bf
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 75c4d5aaca5efa8595c358b3fc40cb06c6cfbcbf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1b149b1e9df8338b5502d57e6e7eb355b66bcc3f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="constraints-of-the-gregorian-calendar"></a>Einschränkungen des gregorianischen Kalenders
 Date und Datetime-Datentypen und die nachfolgende Felder von Interval-Datentypen, müssen den Einschränkungen des gregorianischen Kalenders entsprechen. Diese Einschränkungen lauten wie folgt:  
@@ -42,4 +40,3 @@ Date und Datetime-Datentypen und die nachfolgende Felder von Interval-Datentypen
 -   Für die nachfolgende Sekundenfeld der Interval-Datentypen, muss der Wert im Sekundenfeld zwischen 0 und einen Anteil von 59,9 (*n*), einschließlich, in denen  *n*  ist die Anzahl der Ziffern in der Genauigkeit in Sekundenbruchteilen.  
   
 -   Für die nachfolgende Sekundenfeld der Datetime-Datentyp, der Wert im Sekundenfeld muss zwischen 0 und 61.9 sein (*n*) (einschließlich), wobei  *n*  gibt die Anzahl der "9" Ziffern und den Wert der  *n*  ist die Genauigkeit der Sekundenbruchteile. (Der Bereich von Sekunden kann bis zu zwei Schaltsekunden Synchronisierung siderischen Zeit beibehalten.)
-

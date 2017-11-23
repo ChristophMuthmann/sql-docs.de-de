@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- statement parameters [ODBC]
+helpviewer_keywords: statement parameters [ODBC]
 ms.assetid: 58d5b166-2578-4699-a560-1f1e6d86c49a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7039a3830f24f29260b41ad244799be677fc817b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5e56b61d47581f98f37560875de920c45029c2e9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="statement-parameters"></a>Anweisungsparametern
 Ein *Parameter* ist eine Variable in einer SQL­Anweisung. Angenommen Sie, dass eine Parts-Tabelle Spalten PartID, Beschreibung und Price verfügt. Ein Teil ohne Parameter hinzufügen, müsste z. B. eine SQL-Anweisung erstellen:  
@@ -54,11 +51,10 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
 -   [Festlegen von Parameterwerten](../../../odbc/reference/develop-app/setting-parameter-values.md)  
   
--   [Long-Daten senden](../../../odbc/reference/develop-app/sending-long-data.md)  
+-   [Senden von Long-Daten](../../../odbc/reference/develop-app/sending-long-data.md)  
   
 -   [Abrufen von Ausgabeparametern von SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)  
   
 -   [Prozedurparameter](../../../odbc/reference/develop-app/procedure-parameters.md)  
   
--   [Arrays von Parameterwerten](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)
-
+-   [Arrays für Parameterwerte](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)

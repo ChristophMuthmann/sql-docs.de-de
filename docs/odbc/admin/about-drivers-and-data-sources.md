@@ -8,24 +8,21 @@ ms.service:
 ms.component: admin
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC data source administrator [ODBC], concepts
+helpviewer_keywords: ODBC data source administrator [ODBC], concepts
 ms.assetid: 2bb83ef1-4bbe-4be3-8c32-c4d1140aae1d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1f62308694c54a62d2cc83669e49e9983bcec4a9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 79ae9e95ce31df371366e9073cb36f88c5bd9ece
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="about-drivers-and-data-sources"></a>Informationen zu Treibern und Datenquellen
 *Treiber* sind die Komponenten, die ODBC-Anforderungen zu verarbeiten und Daten an die Anwendung zurückgegeben. Ggf. ändern, Treiber die Anforderung einer Anwendung in ein Formular, das von der Datenquelle im Klaren sind. Sie müssen den Treiber-Setup-Programm verwenden, hinzufügen oder Löschen einen Treiber von Ihrem Computer.  
@@ -41,4 +38,3 @@ ms.lasthandoff: 09/09/2017
  Benutzer und System-Datenquellen werden zusammenfassend als bezeichnet *Computer* -Datenquellen, da sie lokal auf einem Computer befinden.  
   
  Jede dieser Datenquellen verfügt über eine Registerkarte der **ODBC-Datenquellenadministrator** (Dialogfeld). Weitere Informationen zu Datenquellen finden Sie unter [Datenquellen](../../odbc/reference/data-sources.md).
-

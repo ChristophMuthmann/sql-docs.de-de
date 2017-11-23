@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Description Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Description Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Description
-helpviewer_keywords:
-- Description element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Description
+helpviewer_keywords: Description element
 ms.assetid: 34d67e7c-e79a-429b-8cc3-6ca13b9cf9c3
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b02591c06ed8b67558e2d7fabcd2929de4c25caa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d5ef24c6aa0ed6366dadd615b874c2f2f5735298
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="description-element-assl"></a>Description-Element (ASSL)
   Enthält die Beschreibung des übergeordneten Elements.  
@@ -78,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

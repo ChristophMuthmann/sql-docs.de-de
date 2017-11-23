@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ReportParameters Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ReportParameters Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ReportParameters
-helpviewer_keywords:
-- ReportParameters element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ReportParameters
+helpviewer_keywords: ReportParameters element
 ms.assetid: 0e138e8f-8313-47f2-96e1-cd189eec26bb
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0e7361c6d9cee2e9efda3d6617419ea5642eac11
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9333f77100cb9192530ac09a404e1d2ee35fe1d7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="reportparameters-element-assl"></a>ReportParameters-Element (ASSL)
   Enthält die Auflistung der [ReportParameter](../../../analysis-services/scripting/objects/reportparameter-element-assl.md) Elemente für eine [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md) Element.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Schemaauflistungen &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

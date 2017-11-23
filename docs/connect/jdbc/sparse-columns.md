@@ -8,36 +8,34 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7d4237e0-818f-4639-9093-d5ac9683fc71
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5d2a6d25b889eee4db7947a50a6763eb457f3b4c
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e70b83f9c419c6d619ce4e90697e40289f4d9ae4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="sparse-columns"></a>Spalten mit geringer Dichte
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Spalten mit geringer Dichte sind gewöhnliche Spalten, die einen optimierten Speicher für NULL-Werte haben. Spalten mit geringer Dichte reduzieren die Speicherplatzanforderungen von NULL-Werten auf Kosten eines erhöhten Aufwands, um Werte ungleich NULL abzurufen. Verwenden Sie Spalten mit geringer Dichte, wenn dadurch mindestens 20 Prozent bis 40 Prozent Speicherplatz eingespart werden.  
+  Spalten mit geringer Dichte sind gewöhnliche Spalten, die einen optimierten Speicher für NULL-Werte haben. Spalten mit geringer Dichte reduzieren die Speicherplatzanforderungen von NULL-Werten auf Kosten eines erhöhten Aufwands, um Werte ungleich NULL abzurufen. Verwenden Sie Sparsespalten, wenn dadurch mindestens 20 Prozent bis 40 Prozent Speicherplatz eingespart werden.  
   
  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0 unterstützt Spalten mit geringer Dichte, bei der Herstellung einer [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (oder höher) Server. Sie können [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md), [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md), oder [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) Legen Sie Spalte, um zu bestimmen, welche Spalten mit geringer Dichte und welche Spalte die Spalte ist.  
   
- Spaltensätze sind berechnete Spalten, die alle Spalten mit geringer Dichte im nicht typisierten XML-Format zurückgeben. Verwenden Sie Spaltensätze, wenn die Tabelle eine große Anzahl an Spalten (oder mehr als 1024 Spalten) enthält und es sehr aufwändig ist, einzelne Spalten mit geringer Dichte zu verarbeiten. Ein Spaltensatz kann bis zu 30 000 Spalten enthalten.  
+ Spaltensätze sind berechnete Spalten, die alle Sparsespalten im nicht typisierten XML-Format zurückgeben. Verwenden Sie Spaltensätze, wenn die Tabelle eine große Anzahl an Spalten (oder mehr als 1024 Spalten) enthält und es sehr aufwändig ist, einzelne Sparsespalten zu verarbeiten. Ein Spaltensatz kann bis zu 30 000 Spalten enthalten.  
   
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>Description  
- Dieses Beispiel zeigt, wie Spaltensätze erkannt werden. Des Weiteren zeigt es, wie die XML-Ausgabe eines Spaltensatzes analysiert wird, um die Daten aus den Spalten von geringer Dichte zu erhalten.  
+ Dieses Beispiel zeigt, wie Spaltensätze erkannt werden. Des Weiteren zeigt es, wie die XML-Ausgabe eines Spaltensatzes analysiert wird, um die Daten aus den Sparsespalten zu erhalten.  
   
  Die erste Codeauflistung ist die Transact-SQL, die auf diesem Server ausgeführt werden sollte.  
   
@@ -197,4 +195,3 @@ public class SparseColumns {
  [Verbessern von Leistung und Zuverlässigkeit mit dem JDBC-Treiber](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   
-

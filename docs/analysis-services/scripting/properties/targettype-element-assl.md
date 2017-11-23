@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- TargetType Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: TargetType Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- TargetType
-helpviewer_keywords:
-- TargetType element
+applies_to: SQL Server 2016 Preview
+f1_keywords: TargetType
+helpviewer_keywords: TargetType element
 ms.assetid: 2c69ea6e-2af7-435b-9841-86117d5554a7
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cbcbd4235faf1e68b3e31f7f73e4c14fc048d5aa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 49c2fd13925130bfb76730708775f6bb0d5e79ca
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="targettype-element-assl"></a>TargetType-Element (ASSL)
   Identifiziert den Elementtyp des Elements identifiziert, der [Ziel](../../../analysis-services/scripting/properties/target-element-assl.md) Element.  
@@ -89,4 +83,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

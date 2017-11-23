@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - descriptors [ODBC], deferred fields
 - deferred fields [ODBC]
 ms.assetid: 5abeb9cc-4070-4f43-a80d-ad6a2004e5f3
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 46f0e525814b648b5f2b1236e1b093321974eb39
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 38967637f505191a5ff353c13b4ebfbbe08e615a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="deferred-fields"></a>Zurückgestellten Felder
 Die Werte der *verzögert Felder* werden nicht verwendet werden, wenn sie festgelegt werden, aber der Treiber die Adressen mit den Variablen für eine verzögerte wirksam speichert. Für eine anwendungsparameterdeskriptor, verwendet der Treiber den Inhalt der Variablen zum Zeitpunkt des Aufrufs von **SQLExecDirect** oder **SQLExecute**. Für eine Anwendung Zeilendeskriptor verwendet der Treiber den Inhalt der Variablen zum Zeitpunkt des Abrufs.  
@@ -50,4 +48,3 @@ Die Werte der *verzögert Felder* werden nicht verwendet werden, wenn sie festge
 -   Wenn Feld SQL_DESC_OCTET_LENGTH_PTR ein APD einen null-Wert hat, und der Parameter eine Zeichenfolge ist, wird vom Treiber angenommen, dass Null-terminierte Zeichenfolge ist. Für dynamische Output-Parameter verhindert, dass ein null-Wert in diesem Feld den Treiber Längeninformationen zurückgeben. (Wenn das SQL_DESC_TYPE-Feld einen Zeichenfolge Parameter nicht angegeben ist, wird das Feld SQL_DESC_OCTET_LENGTH_PTR ignoriert.)  
   
  Die Anwendung muss nicht freigeben oder verwerfen Variablen für verzögerte Felder zwischen dem Zeitpunkt, der sie die Felder zuordnet und die Uhrzeit, die der Treiber liest oder schreibt sie, verwendet wird.
-

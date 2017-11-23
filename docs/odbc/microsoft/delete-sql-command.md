@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- DELETE [ODBC]
+helpviewer_keywords: DELETE [ODBC]
 ms.assetid: 0d5bd477-626f-4f22-a05a-f531d9f8c5e7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9c302282bb88761b4e24d4e3efcd51b22ffe31c8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8effde0f80a219f11af460bdc941a9b6d9681455
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="delete---sql-command"></a>Löschen - SQL-Befehl
 Datensätze zum Löschen markiert.  
@@ -60,5 +57,4 @@ DELETE FROM [DatabaseName!]TableName
  Wenn Ihre Anwendung die ODBC-SQL-Anweisung DELETE an die Datenquelle gesendet wird, konvertiert der Visual FoxPro-ODBC-Treiber den Befehl in der Visual FoxPro-löschen-Befehl ohne Übersetzung an.  
   
 ## <a name="see-also"></a>Siehe auch  
- [SET DELETED-Befehl](../../odbc/microsoft/set-deleted-command.md)
-
+ [Befehl SET DELETED](../../odbc/microsoft/set-deleted-command.md)

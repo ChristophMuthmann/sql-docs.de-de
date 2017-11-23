@@ -15,12 +15,11 @@ ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: 
 ms.workload: Active
+ms.openlocfilehash: 41bfb66db6f16d9e7ca8829568798a2aa57316da
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 2d8ba0dcd52de143cd935eab6e8bba95e924409d
-ms.contentlocale: de-de
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Verwenden von Visual Studio-Code zum Erstellen und Ausführen von Transact-SQL-Skripts für SQL Server
 
@@ -273,4 +272,3 @@ Weitere Informationen zur Verwendung von Visual Studio Code finden Sie unter der
 [Windows 10 universelle C-Laufzeit]:https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement
 [Erweiterung Optionen anpassen]: https://github.com/Microsoft/vscode-mssql/wiki/customize-options
 [Mssql Erweiterung Projekt Wiki]: https://github.com/Microsoft/vscode-mssql/wiki
-

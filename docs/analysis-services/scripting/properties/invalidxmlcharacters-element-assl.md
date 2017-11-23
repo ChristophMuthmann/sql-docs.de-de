@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- InvalidXmlCharacters Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: InvalidXmlCharacters Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- InvalidXmlCharacters
-helpviewer_keywords:
-- InvalidXmlCharacters element
+applies_to: SQL Server 2016 Preview
+f1_keywords: InvalidXmlCharacters
+helpviewer_keywords: InvalidXmlCharacters element
 ms.assetid: 92b1210c-1075-4f2f-a2c4-dfdc6d7e5c05
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f9a13652a928b850db2891f9e11c684a53ac1010
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 76ee1ccf33324510f18d79229684310cc67cde25
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="invalidxmlcharacters-element-assl"></a>InvalidXmlCharacters-Element (ASSL)
   Gibt die Behandlungsmethode für ungültige XML-Zeichen in den Quelldaten an.  
@@ -81,4 +75,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

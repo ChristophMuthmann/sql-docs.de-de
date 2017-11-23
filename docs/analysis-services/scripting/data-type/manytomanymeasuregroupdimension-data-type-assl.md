@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ManyToManyMeasureGroupDimension Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ManyToManyMeasureGroupDimension Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ManyToManyMeasureGroupDimension
-helpviewer_keywords:
-- ManyToManyMeasureGroupDimension data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: ManyToManyMeasureGroupDimension
+helpviewer_keywords: ManyToManyMeasureGroupDimension data type
 ms.assetid: f2b914cb-c817-43ff-9cb4-ac8d326136b5
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: dbd82517dd93c98e1dc11d259abf8c2021556a77
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6cb471757b8a2835992e543fef1fba3c0fee3093
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manytomanymeasuregroupdimension-data-type-assl"></a>ManyToManyMeasureGroupDimension-Datentyp (ASSL)
   Definiert einen abgeleiteten Datentyp, der die Beziehung zwischen einer m:n-Dimension und einer Measuregruppe darstellt.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services Scripting Language-XML-Datentypen &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

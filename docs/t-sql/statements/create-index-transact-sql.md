@@ -3,10 +3,12 @@ title: Erstellen des INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - INDEX
 - INDEX_TSQL
 - CREATE_INDEX_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - CREATE XML INDEX statement
 - PRIMARY XML INDEX statement
@@ -53,20 +54,19 @@ helpviewer_keywords:
 - secondary indexes [SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
-caps.latest.revision: 223
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "223"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 2a7ab870eda08de78986c14233e4ebc79b397573
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ce92f7f55f82a7245818cbe669da76900f76be89
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Erstellt einen relationalen Index für eine Tabelle oder Sicht an. Auch als einen Rowstore-Index bezeichnet, da es entweder eines gruppierten oder nicht gruppierten Btree-Indexes ist. Sie können einen Rowstore-Index erstellen, bevor Daten in der Tabelle vorhanden ist. Verwenden Sie einen Rowstore-Index, um die abfrageleistung zu verbessern, besonders bei der die Abfragen bestimmte Spalten auswählen oder erfordern Werte, die in einer bestimmten Reihenfolge sortiert werden.  
   
@@ -1044,19 +1044,6 @@ CREATE CLUSTERED INDEX IX_ProductVendor_VendorID
     ON Purchasing..ProductVendor (VendorID);   
 ```  
   
-### <a name="p-add-a-column-to-an-index"></a>P. Hinzufügen einer Spalte auf einen index  
- Das folgende Beispiel erstellt Index IX_FF mit zwei Spalten aus das "Dbo". FactFinance-Tabelle.  Die nächste Anweisung zeigt dieser Index mit dem gleichen Namen und eine weitere Spalte neu erstellt.  
-  
-```  
-CREATE INDEX IX_FF ON dbo.FactFinance (  
-    FinanceKey ASC, DateKey ASC );  
-  
---Rebuild and add the OrganizationKey  
-CREATE INDEX IX_FF ON dbo.FactFinance (  
-    FinanceKey, DateKey, OrganizationKey DESC)  
-WITH ( DROP_EXISTING = ON );  
-```  
-  
 ## <a name="see-also"></a>Siehe auch  
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
@@ -1074,5 +1061,4 @@ WITH ( DROP_EXISTING = ON );
  [Sys. xml_indexes &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
  
-
 

@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLCreateDataSource
-apilocation:
-- sqlsrv32.dll
+apiname: SQLCreateDataSource
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLCreateDataSource
-helpviewer_keywords:
-- SQLCreateDataSource function [ODBC]
+f1_keywords: SQLCreateDataSource
+helpviewer_keywords: SQLCreateDataSource function [ODBC]
 ms.assetid: 76ee851a-dca9-40cc-8e9e-eb3f74e560ee
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bca2c2b63e134d88f720db6aff7f802ea1c2ba7c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c4c7b0b4ebecf75f1bcf31b0b1716a7076513488
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlcreatedatasource-function"></a>SQLCreateDataSource-Funktion
 **Konformität**  
@@ -120,4 +114,3 @@ BOOL SQLCreateDataSource(
 |Informationen zu|Finden Sie unter|  
 |---------------------------|---------|  
 |Verwalten von Datenquellen|[SQLManageDataSources](../../../odbc/reference/syntax/sqlmanagedatasources.md)|
-

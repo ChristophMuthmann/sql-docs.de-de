@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - result sets [ODBC], bookmarks
 - bookmarks [ODBC]
 ms.assetid: a34c8f09-b786-4835-a44b-b7294c970aff
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 04e89e941162869b1bb3f1418f5d6e73622fe4cb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7233ad9ab2915c174d545cb08d4abcdeedb99d7b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="retrieving-bookmarks"></a>Abrufen von Lesezeichen
 Wenn die Anwendung zu Lesezeichen verwenden, muss er das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut auf SQL_UB_VARIABLE vor dem Vorbereiten oder Ausführen der Anweisung festgelegt. Dies ist erforderlich, da erstellen und Verwalten von Lesezeichen ein aufwendiger Vorgang sein können, damit Lesezeichen aktiviert werden soll, nur, wenn eine Anwendung gute vornehmen, kann diese verwenden.  
@@ -39,4 +37,3 @@ Wenn die Anwendung zu Lesezeichen verwenden, muss er das SQL_ATTR_USE_BOOKMARKS-
 -   Rufen Sie **SQLSetPos** auf eine Zeile im Rowset zu positionieren, und rufen Sie anschließend **SQLGetData** für die Spalte 0. Wenn ein Treiber Lesezeichen unterstützt, muss es immer die Möglichkeit zum Aufruf unterstützen **SQLGetData** für die Spalte 0, auch wenn dies nicht zulässt, dass aufrufen, **SQLGetData** für andere Spalten vor der letzten gebundenen die Spalte.  
   
 -   Rufen Sie **SQLBulkOperations** mit der *Vorgang* Argument auf SQL_ADD festgelegt, und die Spalte 0 gebunden. Der Cursor die Zeile eingefügt, und gibt das Lesezeichen für die Zeile in der gebundenen Puffer zurück.
-

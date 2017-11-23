@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Materialize Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Materialize Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.materialize
 - http://schemas.microsoft.com/analysisservices/2003/engine#Materialize
 - urn:schemas-microsoft-com:xml-analysis#Materialize
-helpviewer_keywords:
-- Materialize element
+helpviewer_keywords: Materialize element
 ms.assetid: cda19474-7170-4b0e-b0ea-297ce5128112
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 507b9cd406de23c1439cc90c6b0b0036fe0e1a9e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2cf53d1dbe5e471d01ee61a55a4464a31ddb7b31
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="materialize-element-xmla"></a>Materialize-Element (XMLA)
   Gibt an, ob die vom [DesignAggregations](../../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) -Befehl entworfenen Aggregationen materialisiert werden.  
@@ -74,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

@@ -8,29 +8,27 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], authentication
 - authentication [ODBC]
 ms.assetid: 613daef7-3171-42d0-b7e3-3879280f864d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: da8b5adf34774f2ee6f7b224d7ab18f20a4dd09e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d3fbe8f4ce9fe9edbb88c7c895311bd9560dc28f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-operating-system-authentication"></a>Mithilfe der Betriebssystem-Authentifizierung
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
   
  Oracle-betriebssystemauthentifizierung basiert auf das zugrunde liegende Betriebssystem, den Zugriff auf Konten für Datenbank steuern. Benutzer müssen kein Kennwort eingeben, wenn dieser Typ der Anmeldung.  
   
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 ```  
 SQLNET.AUTHENTICATION_SERVICES = (none)  
 ```
-

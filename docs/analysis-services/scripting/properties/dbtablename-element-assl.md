@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DbTableName Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DbTableName Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- DbTableName
-helpviewer_keywords:
-- DbTableName element
+applies_to: SQL Server 2016 Preview
+f1_keywords: DbTableName
+helpviewer_keywords: DbTableName element
 ms.assetid: 842cae85-ab9c-4c75-ab44-51a4d9b1b943
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 41dfd0fcbe72358be83ab88ca3d781da368a819c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 586a0932e8e7fdd6e7bb0d92b8a3a8fcf950d01b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbtablename-element-assl"></a>DbTableName-Element (ASSL)
   Enthält den Namen der Tabelle, an die das übergeordnete Element gebunden ist.  
@@ -70,7 +64,6 @@ ms.lasthandoff: 09/01/2017
  Die Elemente, die den übergeordneten Elementen von entsprechen **DbTableName** im Objektmodell von Analysis Management Objects (AMO) sind <xref:Microsoft.AnalysisServices.TableBinding> und <xref:Microsoft.AnalysisServices.TableNotification>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datenbankeigenschaften & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

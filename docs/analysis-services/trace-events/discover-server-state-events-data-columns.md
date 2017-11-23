@@ -8,24 +8,21 @@ ms.service:
 ms.component: trace-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords:
-- Discover Server State event category
+helpviewer_keywords: Discover Server State event category
 ms.assetid: fbacb187-a4d1-4aa4-be3b-3ddd175f9e19
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 10b3a3c47c23c2e83abff15233198be77baab566
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c71c32614ee4be7fdbe198530d5ce228452d2276
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discover-server-state-events-data-columns"></a>Datenspalten mit Serverstatusermittlungs-Ereignissen
   Die Serverstatusermittlungs-Ereigniskategorie beinhaltet die folgenden Ereignisklassen:  
@@ -101,4 +98,3 @@ ms.lasthandoff: 09/01/2017
  [Discover Server State Event Category](../../analysis-services/trace-events/discover-server-state-event-category.md)  
   
   
-

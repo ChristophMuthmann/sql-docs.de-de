@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: bf4eecc1e72f1eadcb0feeab5ca046e75155a66d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: a0d6ff0a983f1d1d1ad8fdcc7de37d9a06032025
-ms.contentlocale: de-de
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-repositories-from-the-preview-repository-to-the-ga-repository"></a>Ändern Sie Repositorys aus dem Repository Vorschau in GA-repository
 
@@ -78,4 +77,3 @@ Um in einem Quellrepository (CU oder GDR) aus dem Repository für die Vorschau z
 ## <a name="next-steps"></a>Nächste Schritte
 
 Weitere Informationen zum Installieren von SQL Server-2017 unter Linux finden Sie unter [-Installationsleitfaden für SQL Server on Linux](sql-server-linux-setup.md).
-

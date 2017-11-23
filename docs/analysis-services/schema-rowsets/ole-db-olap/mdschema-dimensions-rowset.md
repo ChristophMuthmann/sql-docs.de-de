@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_DIMENSIONS
+apiname: MDSCHEMA_DIMENSIONS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_DIMENSIONS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_DIMENSIONS rowset
 ms.assetid: a0fd94bb-359a-4df6-93a6-d60d50223944
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d6e6179a6d3538282dbbc125f8e8865ad3c560a6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d27f85dafc44caaeb4cf4f0f3b0ba613e717b962
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdschemadimensions-rowset"></a>MDSCHEMA_DIMENSIONS-Rowset
   Beschreibt die freigegebenen und privaten Dimensionen innerhalb einer Datenbank.  
@@ -42,11 +38,11 @@ ms.lasthandoff: 09/01/2017
 |Spaltenname|Typindikator|Description|  
 |-----------------|--------------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**|Der Name der Datenbank.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Wird nicht unterstützt.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Nicht unterstützt.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|Der Name des Cubes.|  
 |**DIMENSION_NAME**|**DBTYPE_WSTR**|Der Name der Dimension. Wenn eine Dimension Teil mehrerer Cubes oder Measuregruppen ist, dann ist für jede eindeutige Kombination aus Dimension, Measuregruppe und Cube eine Zeile vorhanden.|  
 |**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Der eindeutige Name der Dimension.|  
-|**DIMENSION_GUID**|**DBTYPE_GUID**|Wird nicht unterstützt.|  
+|**DIMENSION_GUID**|**DBTYPE_GUID**|Nicht unterstützt.|  
 |**DIMENSION_CAPTION**|**DBTYPE_WSTR**|Die Beschriftung der Dimension. Diese sollte verwendet werden, wenn dem Benutzer der Name der Dimension angezeigt wird, beispielsweise in der Benutzeroberfläche oder in Berichten.|  
 |**DIMENSION_ORDINAL**|**DBTYPE_UI4**|Die Position der Dimension innerhalb des Cubes.|  
 |**DIMENSION_TYPE**|**DBTYPE_I2**|Der Typ der Dimension. Gültige Werte sind:<br /><br /> **MD_DIMTYPE_UNKNOWN** (**0**)<br /><br /> **MD_DIMTYPE_TIME** (**1**)<br /><br /> **MD_DIMTYPE_MEASURE** (**2**)<br /><br /> **MD_DIMTYPE_OTHER** (**3**)<br /><br /> **MD_DIMTYPE_QUANTITATIVE** (**5**)<br /><br /> **MD_DIMTYPE_ACCOUNTS** (**6**)<br /><br /> **MD_DIMTYPE_CUSTOMERS** (**7**)<br /><br /> **MD_DIMTYPE_PRODUCTS** (**8**)<br /><br /> **MD_DIMTYPE_SCENARIO** (**9**)<br /><br /> **MD_DIMTYPE_UTILIY** (**10**)<br /><br /> **MD_DIMTYPE_CURRENCY** (**11**)<br /><br /> **MD_DIMTYPE_RATES** (**12**)<br /><br /> **MD_DIMTYPE_CHANNEL** (**13**)<br /><br /> **MD_DIMTYPE_PROMOTION** (**14**)<br /><br /> **MD_DIMTYPE_ORGANIZATION** (**15**)<br /><br /> **MD_DIMTYPE_BILL_OF_MATERIALS** (**16**)<br /><br /> **MD_DIMTYPE_GEOGRAPHY** (**17**)|  
@@ -78,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [OLE DB für OLAP-Schemarowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

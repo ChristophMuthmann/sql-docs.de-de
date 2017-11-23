@@ -8,22 +8,20 @@ ms.service:
 ms.component: powershell
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 865e6d06-b99a-41f3-9d6f-c3c97b529b23
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 06ea1f94d87a19f633b5e857482202898bf034a4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d2298c9e882f3f754b16ce33bf6bc72dfc6d80ff
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="invoke-processtable-cmdlet"></a>Invoke-ProcessTable-Cmdlet
 
@@ -129,4 +127,3 @@ ms.lasthandoff: 09/01/2017
  Dieser Befehl verarbeitet eine tabellarische Metadatentabelle mit einem **enum** -Aktualisierungstyp.  
   
   
-

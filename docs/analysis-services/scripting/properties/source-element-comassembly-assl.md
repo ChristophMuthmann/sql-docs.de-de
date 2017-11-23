@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Source Element (ComAssembly)
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Source Element (ComAssembly)
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Source
-helpviewer_keywords:
-- Source element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Source
+helpviewer_keywords: Source element
 ms.assetid: 5c9209e8-ace6-4688-a64d-4987a7648ab9
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6989b0766e150db9e67c4bb5913e40d3ca30bd5d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 29749505f76b06b8facab1895067177b19a6d534
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="source-element-comassembly-assl"></a>Source-Element (ComAssembly) (ASSL)
   Enthält den Dateinamen oder den programmtechnischen Bezeichner (ProgID) für eine COM-Komponente (Component Object Model).  
@@ -78,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

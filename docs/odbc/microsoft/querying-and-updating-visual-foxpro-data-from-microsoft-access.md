@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - Visual FoxPro data [ODBC], querying and updating
 - updating Visual FoxPro data [ODBC]
 ms.assetid: 2d314e78-9edf-44b2-bd8b-96784236bcbe
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2d4faac1ac4f917557a0827a0ad434bf6d8f36cb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ef01b8c5a21d65fb99f5f190fd159d90f3ac78b2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="querying-and-updating-visual-foxpro-data-from-microsoft-access"></a>Abfragen und Aktualisieren von Visual FoxPro-Daten aus Microsoft Access
 Sie können Abfragen und Aktualisieren von Daten in einer Visual FoxPro-Datenbank aus einer Microsoft Access-Datenbank gespeichert werden, mithilfe der Option Tabelle verknüpfen.  
@@ -52,4 +50,3 @@ Sie können Abfragen und Aktualisieren von Daten in einer Visual FoxPro-Datenban
  Sie können jetzt Microsoft Access verwenden, Abfragen und Aktualisieren von Daten in den verknüpften Visual FoxPro-Tabellen. Vorgenommenen Änderungen an verknüpften Daten werden in der Visual FoxPro-Datenquelle gesendet.  
   
  Wenn Sie nicht, dass Änderungen möchten, stellen Sie in Microsoft Access Einfluss auf die Daten in der Visual FoxPro-Datenquelle, finden Sie unter [importieren Visual FoxPro-Daten in Microsoft Access](../../odbc/microsoft/importing-visual-foxpro-data-into-microsoft-access.md).
-

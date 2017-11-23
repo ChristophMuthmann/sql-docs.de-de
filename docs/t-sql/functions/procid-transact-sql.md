@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '@@PROCID'
 - '@@PROCID_TSQL'
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - stored procedures [SQL Server], identification numbers
 - UDTs [SQL Server], object identifiers
@@ -27,19 +25,18 @@ helpviewer_keywords:
 - IDs [SQL Server], modules
 - module object identifiers [SQL Server]
 ms.assetid: 0d4882c7-edb8-49b1-a470-2c7497b8998f
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 99cb6e6d3615247544adec83ac2c292b936f9ee6
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: 9288f472601621b3177e3fa978bb2f53324881c8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40procid-transact-sql"></a>& #x 40; & #x 40; PROCID (Transact-SQL)
+# <a name="x40x40procid-transact-sql"></a>&#x40;&#x40;PROCID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt den Objektbezeichner (ID) des aktuellen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Moduls zurück. Bei einem [!INCLUDE[tsql](../../includes/tsql-md.md)]-Modul kann es sich um eine gespeicherte Prozedur, eine benutzerdefinierte Funktion oder einen Trigger handeln. @@PROCID kann nicht angegeben werden, in CLR-Module oder das in-Process Data Access-Anbieter.  
@@ -90,4 +87,3 @@ EXECUTE dbo.usp_FindName 'P%', 'A%';
  [RAISERROR &#40; Transact-SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   
-

@@ -8,24 +8,21 @@ ms.service:
 ms.component: trace-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords:
-- Queries Events event category
+helpviewer_keywords: Queries Events event category
 ms.assetid: 28aa7df5-3e1f-4f4f-8a1c-8bbd29d5da13
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 672a41fddca9909e20a5f1c578bfe22a7def9488
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 48f2e8dec1939bedda904845dd2e56a237ddc10c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="queries-events-data-columns"></a>Datenspalten der Abfrageereignisse
   Die Ereigniskategorie "Abfrageereignisse" besitzt folgende Ereignisklassen:  
@@ -89,4 +86,3 @@ ms.lasthandoff: 09/01/2017
  [Abfrageereigniskategorie](../../analysis-services/trace-events/queries-events-category.md)  
   
   
-

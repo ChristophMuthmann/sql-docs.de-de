@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Session Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Session Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.session
 - http://schemas.microsoft.com/analysisservices/2003/engine#Session
 - urn:schemas-microsoft-com:xml-analysis#Session
-helpviewer_keywords:
-- Session element
+helpviewer_keywords: Session element
 ms.assetid: 884ed090-968e-41d3-97e5-6d12787467da
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 53698817a6ae3cf6e59752eae2caf7182d843d99
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: aa1f136ee02b73ab792dae7ee7730a3917dace66
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="session-element-xmla"></a>Session-Element (XMLA)
   Verwendet den SOAP-Header in einer SOAP-Anforderungsnachricht identifiziert eine vorhandene, explizierte Sitzung auf einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -100,4 +95,3 @@ ms.lasthandoff: 09/01/2017
  [Header &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
   
   
-

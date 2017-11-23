@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SSTRANSTIGHTLYCPLD Field (SQLServerXAResource)
-apilocation:
-- SSTRANSTIGHTLYCPLD Field (SQLServerXAResource)
+apiname: SSTRANSTIGHTLYCPLD Field (SQLServerXAResource)
+apilocation: SSTRANSTIGHTLYCPLD Field (SQLServerXAResource)
 apitype: Assembly
 ms.assetid: 379857c3-9de1-4964-8782-32df317cbfbb
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 88a6ea09e8809ac028b45e2bd0fd2035b095430b
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ad4c44ab74c75a0f4d058edbad792cea721bdcd6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="sstranstightlycpld-field-sqlserverxaresource"></a>SSTRANSTIGHTLYCPLD-Feld (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,4 +50,3 @@ public static final int SSTRANSTIGHTLYCPLD
  [SQLServerXAResource-Klasse](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  
   
   
-

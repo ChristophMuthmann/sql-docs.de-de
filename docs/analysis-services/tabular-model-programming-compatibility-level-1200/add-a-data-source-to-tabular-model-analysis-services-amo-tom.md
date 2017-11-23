@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e54a8a1b-b964-4b6e-9057-44d50af676c0
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b8f6397f70727173345a41e92704a4277de32ddd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 692de4d83bfef7a61b11079fb31bb395da8771aa
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-a-data-source-to-tabular-model-analysis-services-amo-tom"></a>Hinzufügen einer Datenquelle auf tabellarische Modelle (Analysis Services AMO-TOM)
 
@@ -142,4 +141,3 @@ namespace TOMSamples
 ## <a name="next-step"></a>Nächster Schritt 
 
 Innerhalb eines Modells müssen Sie zum Einrichten von datenbindungen, die in der Datenquelle Quellspalten Zielspalten im Modell zugeordnet. Sie müssen auch die Partitionen einer Länge von mindestens 1 pro Tabelle zu definieren, in denen die Daten gespeichert. Der folgende Link zeigt, wie Sie: [Erstellen von Tabellen, Partitionen und Spalten](../../analysis-services/tabular-model-programming-compatibility-level-1200/create-tables-partitions-and-columns-in-a-tabular-model.md) 
-

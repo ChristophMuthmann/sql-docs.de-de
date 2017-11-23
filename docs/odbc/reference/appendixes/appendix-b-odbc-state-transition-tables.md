@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - transitioning states [ODBC], about state transitions
 - state transitions [ODBC], about state transitions
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2a191cb539aec61150f30d8c083dfba7dd2d2069
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 775c3d0464443d11b833a230591b94293343086b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Anhang B: ODBC-Übergang Statustabellen
 In den Tabellen in diesem Anhang werden wie die ODBC-Funktionen Übergang von der Umgebung, Verbindungs-, Anweisung und Deskriptor Zustände verursachen. Der Status der Umgebung, die Verbindung, die Anweisung oder die Deskriptor bestimmt in der Regel an, wenn Funktionen, die verwenden den entsprechenden Typ des Handles (Umgebung, Verbindung, Anweisung oder Deskriptor) aufgerufen werden kann. Die Status-Umgebung, Verbindung, anweisungs- und Deskriptorstatuswerte überlappen ungefähr wie in der folgenden Abbildung dargestellt. Angenommen, die genaue Überlappung der Verbindung gibt, C5 und C6 und Anweisung besagt, dass S1 bis S12 ist datenquellenabhängig, da Transaktionen zu unterschiedlichen Zeiten auf verschiedenen Datenquellen starten und Deskriptor Status D1i (implizit Deskriptor zugeordnet) abhängt den Status der Anweisung, die mit der Deskriptor verknüpft ist, ist beim Status D1e (explizit Deskriptor reserviert) unabhängig von den Zustand einer beliebigen Anweisung. Eine Beschreibung der einzelnen Zustände, finden Sie unter [Umgebungsübergänge](../../../odbc/reference/appendixes/environment-transitions.md), [Verbindung Übergänge](../../../odbc/reference/appendixes/connection-transitions.md), [Anweisung Übergänge](../../../odbc/reference/appendixes/statement-transitions.md), und [Deskriptor Übergänge ](../../../odbc/reference/appendixes/descriptor-transitions.md)weiter unten in diesem Anhang.  
@@ -100,9 +98,8 @@ In den Tabellen in diesem Anhang werden wie die ODBC-Funktionen Übergang von de
   
 -   [Umgebungsübergänge](../../../odbc/reference/appendixes/environment-transitions.md)  
   
--   [Verbindung Übergänge](../../../odbc/reference/appendixes/connection-transitions.md)  
+-   [Verbindungsübergänge](../../../odbc/reference/appendixes/connection-transitions.md)  
   
--   [Anweisung Übergänge](../../../odbc/reference/appendixes/statement-transitions.md)  
+-   [Statusübergänge](../../../odbc/reference/appendixes/statement-transitions.md)  
   
--   [Der Deskriptor Übergänge](../../../odbc/reference/appendixes/descriptor-transitions.md)
-
+-   [Descriptor Transitions (Deskriptorübergänge)](../../../odbc/reference/appendixes/descriptor-transitions.md)

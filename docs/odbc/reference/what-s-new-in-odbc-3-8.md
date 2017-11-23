@@ -8,29 +8,27 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 854f0bb4-17e9-489b-9595-eefffb8ba99f
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 969a07554cc63be1ef95016405c30ff94a48b409
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 309d575f63a776e90f32ba45239ecbd67771d250
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="what39s-new-in-odbc-38"></a>Was &#39; s in ODBC 3.8
 Windows 8 enthält eine aktualisierte Version des ODBC 3.8. ODBC 3.8 in Windows 8 umfasst die folgenden Funktionen:  
   
 -   [Treiberfähiges Verbindungspooling](../../odbc/reference/develop-app/driver-aware-connection-pooling.md)  
   
--   [Asynchrone Ausführung (Benachrichtigungsmethode)](../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)  
+-   [Benachrichtigungsmethode](../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)  
   
 -   [Data Access Tracing (Windows 8)](https://msdn.microsoft.com/library/windows/desktop/hh829624.aspx)  
   
@@ -51,5 +49,4 @@ Windows 8 enthält eine aktualisierte Version des ODBC 3.8. ODBC 3.8 in Windows 
  Weitere Informationen finden Sie unter [Kompatibilitätsmatrix](../../odbc/reference/develop-app/compatibility-matrix.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [ODBC Programmer's Reference](../../odbc/reference/odbc-programmer-s-reference.md)
-
+ [ODBC-Programmierreferenz](../../odbc/reference/odbc-programmer-s-reference.md)

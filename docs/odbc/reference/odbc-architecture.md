@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC architecture [ODBC], components
 - ODBC architecture [ODBC]
 ms.assetid: 2604f492-587b-4a51-9876-59a7870b3ef2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 495a8c03361e7a7bf94ef7c0a403a1894d24836e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 04e952a79e026697592f8412c48eb2e065da18df
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-architecture"></a>ODBC-Architektur
 Die ODBC-Architektur besteht aus vier Komponenten:  
@@ -50,4 +48,3 @@ Die ODBC-Architektur besteht aus vier Komponenten:
 -   [Treiber](../../odbc/reference/drivers.md)  
   
 -   [Datenquellen](../../odbc/reference/data-sources.md)
-

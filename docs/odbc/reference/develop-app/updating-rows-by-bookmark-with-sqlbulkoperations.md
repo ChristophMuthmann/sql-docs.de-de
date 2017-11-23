@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - updating data [ODBC], bookmarks
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: c9ad82b7-8dba-45b0-bdb9-f4668b37c0d6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c626472dd121d39ae01ac90824a7977587401944
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4426465ea41b257a4805399b703f28ccc22d704b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>Aktualisieren von Zeilen durch Lesezeichen mit SQLBulkOperations
 Beim Aktualisieren einer Zeile von Lesezeichen, **SQLBulkOperations** macht die Datenquelle, die eine oder mehrere Zeilen der Tabelle zu aktualisieren. Die Zeilen werden durch das Lesezeichen in einer Lesezeichenspalte gebundenen identifiziert. Die Zeile wird aktualisiert, mit der Daten in die Anwendungspuffer für jede gebundene Spalte (außer wenn der Wert in die Längen-/Indikatorpuffers für eine Spalte SQL_COLUMN_IGNORE ist). Ungebundene Spalten werden nicht aktualisiert werden.  
@@ -50,4 +48,3 @@ Beim Aktualisieren einer Zeile von Lesezeichen, **SQLBulkOperations** macht die 
 6.  Aufrufe **SQLBulkOperations** mit der *Vorgang* -Argument auf SQL_UPDATE_BY_BOOKMARK festgelegt.  
   
  Für jede Zeile, die mit der Datenquelle als Update gesendet wird, sollte die Anwendungspuffer gültige Zeilendaten haben. Wenn die Anwendungspuffer durch Abrufen, aufgefüllt wurden, falls ein zeilenstatusarray beibehalten wurde, und der Statuswert für eine Zeile SQL_ROW_DELETED, SQL_ROW_ERROR oder SQL_ROW_NOROW ist, konnte die ungültige Daten versehentlich an die Datenquelle gesendet werden.
-

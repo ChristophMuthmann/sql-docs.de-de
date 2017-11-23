@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 98da08fc-8744-4d0f-bc62-e63f1e9e6b08
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d681a36710cdc096739f2c4e5f6f13afeb3ac8cc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 94e61c3077b748c7a2a33f1bcef8ac8b7ebae9e0
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tables-object-tmsl"></a>Tables-Objekt (TMSL)
 
@@ -40,7 +39,7 @@ ms.lasthandoff: 09/01/2017
   
  "IsHidden"  
  Ein boolescher Wert, der angibt, ob die Tabelle behandelt wird als von Visualisierung Clienttools ausgeblendet.  
-"True", wenn die Tabelle, als behandelt wird ausgeblendet. andernfalls "false".  
+TRUE, wenn die Tabelle als ausgeblendetes Element behandelt wird; andernfalls FALSE.  
   
  Spalten  
  Stellt eine Spalte in einer Tabelle. Es ist ein untergeordnetes Element eines Table-Objekts. Jede Spalte verfügt über eine Reihe von Eigenschaften definiert, die beeinflussen, wie Clientanwendungen die Daten in der Spalte visuell darzustellen.  
@@ -825,4 +824,3 @@ ms.lasthandoff: 09/01/2017
  [Tabular Model Scripting Language &#40;TMSL&#41; – Referenz](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,8 +19,7 @@ f1_keywords:
 - ALTER TABLE
 - WAIT_AT_LOW_PRIORITY_TSQL
 - ALTER_COLUMN_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - columns [SQL Server], resizing
 - changing column size
@@ -61,17 +59,16 @@ helpviewer_keywords:
 - dropping columns
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-caps.latest.revision: 281
+caps.latest.revision: "281"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: fc00fddf50d7f3261d0af09b755c1eb6b4c314d2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7cee79406283aa3b75d41b968370f490cb454ea5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -431,7 +428,7 @@ ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;
  Gibt an, dass Werte in Identitätsspalten inkrementiert werden, wenn Replikations-Agents Einfügevorgänge ausführen. Diese Klausel kann angegeben werden, nur wenn *Column_name* Identitätsspalte ist.  
   
  SPARSE  
- Gibt an, dass die Spalte eine Spalte mit geringer Dichte ist. Der Speicher für Spalten mit geringer Dichte ist für NULL-Werte optimiert. Spalten mit geringer Dichte können nicht als NOT NULL festgelegt werden. Beim Umwandeln einer Spalte mit geringer Dichte in eine Spalte ohne geringe Dichte oder umgekehrt wird die Tabelle für die Dauer der Befehlsausführung gesperrt. Sie müssen möglicherweise die REBUILD-Klausel verwenden, um Speicherplatzeinsparungen freizugeben. Zusätzliche Einschränkungen und Weitere Informationen zu Spalten mit geringer Dichte finden Sie unter [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
+ Gibt an, dass die Spalte eine Sparsespalte ist. Der Speicher für Sparsespalten ist für NULL-Werte optimiert. Spalten mit geringer Dichte können nicht als NOT NULL festgelegt werden. Beim Umwandeln einer Spalte mit geringer Dichte in eine Spalte ohne geringe Dichte oder umgekehrt wird die Tabelle für die Dauer der Befehlsausführung gesperrt. Sie müssen möglicherweise die REBUILD-Klausel verwenden, um Speicherplatzeinsparungen freizugeben. Zusätzliche Einschränkungen und Weitere Informationen zu Spalten mit geringer Dichte finden Sie unter [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
  MASKIERTE hinzufügen mit (Funktion = " *Mask_function* ")  
  **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -540,7 +537,7 @@ WITH CHECK | WITH NOCHECK
  MAXDOP = *Max_degree_of_parallelism*  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Überschreibt die **Max. Grad an Parallelität** Konfigurationsoption nur für die Dauer des Vorgangs. Weitere Informationen finden Sie unter [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
+ Überschreibt die **Max. Grad an Parallelität** Konfigurationsoption nur für die Dauer des Vorgangs. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
  Verwenden Sie die MAXDOP-Option, um die Anzahl der Prozessoren zu beschränken, die für die Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.  
   
@@ -742,7 +739,7 @@ TABLE
  *spaltensatzname* XML COLUMN_SET FOR ALL_SPARSE_COLUMNS  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Der Name des Spaltensatzes. Bei einem Spaltensatz handelt es sich um eine nicht typisierte XML-Darstellung, die alle Tabellenspalten mit geringer Dichte in einer strukturierten Ausgabe kombiniert. Sie können einer Tabelle, die Spalten mit geringer Dichte enthält, keinen Spaltensatz hinzufügen. Weitere Informationen zu Spaltensätzen finden Sie unter [Verwenden von Spaltensätzen](../../relational-databases/tables/use-column-sets.md).  
+ Der Name des Spaltensatzes. Bei einem Spaltensatz handelt es sich um eine nicht typisierte XML-Darstellung, die alle Sparsespalten einer Tabelle in einer strukturierten Ausgabe kombiniert. Sie können einer Tabelle, die Sparsespalten enthält, keinen Spaltensatz hinzufügen. Weitere Informationen zu Spaltensätzen finden Sie unter [Verwenden von Spaltensätzen](../../relational-databases/tables/use-column-sets.md).  
   
  { ENABLE | DISABLE } FILETABLE_NAMESPACE  
  **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -871,7 +868,7 @@ IF VORHANDEN IST
  Spalten vom Typ **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **Xml**, **Text**, **Ntext**, **Image**, **Hierarchyid**, **Geometrie**, **Geography**, noch können Sie CLR-UDTS in einem Onlinevorgang hinzugefügt werden. Eine Spalte kann nicht online hinzugefügt werden, wenn dies dazu führt, dass die maximal mögliche Zeilengröße den Grenzwert von 8.060 Bytes überschreitet. Die Spalte wird in diesem Fall als Offlinevorgang hinzugefügt.  
   
 ## <a name="parallel-plan-execution"></a>Ausführung paralleler Pläne  
- In [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] und höher wird die Anzahl der Prozessoren zum Ausführen einer einzelnen ALTER TABLE ADD (Index basiert) Einschränkung oder DROP (gruppierter Index) CONSTRAINT Anweisung richtet sich nach der **Max. Grad an Parallelität** Konfiguration Option und die aktuelle Arbeitslast. Wenn das [!INCLUDE[ssDE](../../includes/ssde-md.md)] erkennt, dass das System ausgelastet ist, wird der Grad an Parallelität für den Vorgang automatisch reduziert, bevor mit der Ausführung der Anweisung begonnen wird. Sie können die Anzahl der Prozessoren, die zur Ausführung der Anweisung verwendet werden, durch Angeben der MAXDOP-Option manuell konfigurieren. Weitere Informationen finden Sie unter [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
+ In [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] und höher wird die Anzahl der Prozessoren zum Ausführen einer einzelnen ALTER TABLE ADD (Index basiert) Einschränkung oder DROP (gruppierter Index) CONSTRAINT Anweisung richtet sich nach der **Max. Grad an Parallelität** Konfiguration Option und die aktuelle Arbeitslast. Wenn das [!INCLUDE[ssDE](../../includes/ssde-md.md)] erkennt, dass das System ausgelastet ist, wird der Grad an Parallelität für den Vorgang automatisch reduziert, bevor mit der Ausführung der Anweisung begonnen wird. Sie können die Anzahl der Prozessoren, die zur Ausführung der Anweisung verwendet werden, durch Angeben der MAXDOP-Option manuell konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
 ## <a name="partitioned-tables"></a>Partitionierte Tabellen  
  Neben dem Ausführen von SWITCH-Vorgängen mit partitionierten Tabellen können mit ALTER TABLE der Status der Spalten, Einschränkungen und Trigger einer partitionierten Tabelle genau wie bei nicht partitionierten Tabellen geändert werden. Die Partitionierung der Tabelle selbst kann jedoch mit der Anweisung nicht geändert werden. Verwenden Sie zum Neupartitionieren einer partitionierten Tabelle [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) und [ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md). Zudem können Sie den Datentyp einer Spalte einer partitionierten Tabelle nicht ändern.  
@@ -959,7 +956,7 @@ Bei früheren Versionen wurde durch die Angabe des Formats "server.database.sche
   
 |Kategorie|Funktionssyntaxelemente|  
 |--------------|------------------------------|  
-|[Hinzufügen von Spalten und Einschränkungen](#add)|ADD • PRIMARY KEY mit Indexoptionen • Spalten und Spaltensätze mit geringer Dichte •|  
+|[Hinzufügen von Spalten und Einschränkungen](#add)|ADD • PRIMARY KEY mit Indexoptionen • Sparsespalten und Spaltensätze •|  
 |[Löschen von Spalten und Einschränkungen](#Drop)|DROP|  
 |[Ändern einer Spaltendefinition](#alter_column)|Ändern des Datentyps • Ändern der Spaltengröße • Sortierung|  
 |[Ändern einer Tabelle (Definition)](#alter_table)|DATA_COMPRESSION • SWITCH PARTITION • LOCK ESCALATION • Änderungsnachverfolgung|  
@@ -1100,8 +1097,8 @@ WITH (FILLFACTOR = 75, ONLINE = ON, PAD_INDEX = ON);
 GO  
 ```  
   
-#### <a name="h-adding-a-sparse-column"></a>H. Hinzufügen einer Spalte mit geringer Dichte  
- In den folgenden Beispielen wird gezeigt, wie Spalten mit geringer Dichte der Tabelle T1 hinzugefügt und geändert werden. Der Code zum Erstellen der Tabelle `T1` lautet wie folgt.  
+#### <a name="h-adding-a-sparse-column"></a>H. Hinzufügen einer Sparsespalte  
+ In den folgenden Beispielen wird gezeigt, wie Sparsespalten der Tabelle T1 hinzugefügt und geändert werden. Der Code zum Erstellen der Tabelle `T1` lautet wie folgt.  
   
 ```  
 CREATE TABLE T1  
@@ -1112,7 +1109,7 @@ C4 int ) ;
 GO  
 ```  
   
- Um eine zusätzliche Spalte `C5` mit geringer Dichte hinzuzufügen, führen Sie die folgende Anweisung aus.  
+ Um eine zusätzliche Sparsespalte `C5` hinzuzufügen, führen Sie die folgende Anweisung aus.  
   
 ```  
 ALTER TABLE T1  
@@ -1120,7 +1117,7 @@ ADD C5 char(100) SPARSE NULL ;
 GO  
 ```  
   
- Um die Spalte `C4` ohne geringe Dichte in eine Spalte mit geringer Dichte umzuwandeln, führen Sie die folgende Anweisung aus.  
+ Um die Nicht-Sparsespalte `C4` in eine Sparsespalte umzuwandeln, führen Sie die folgende Anweisung aus.  
   
 ```  
 ALTER TABLE T1  
@@ -1137,7 +1134,7 @@ GO
 ```  
   
 #### <a name="i-adding-a-column-set"></a>I. Hinzufügen eines Spaltensatzes  
- In den folgenden Beispielen wird veranschaulicht, wie eine Spalte der Tabelle `T2` hinzugefügt wird. Sie können einer Tabelle, die bereits Spalten mit geringer Dichte enthält, keinen Spaltensatz hinzufügen. Der Code zum Erstellen der Tabelle `T2` lautet wie folgt.  
+ In den folgenden Beispielen wird veranschaulicht, wie eine Spalte der Tabelle `T2` hinzugefügt wird. Sie können einer Tabelle, die bereits Sparsespalten enthält, keinen Spaltensatz hinzufügen. Der Code zum Erstellen der Tabelle `T2` lautet wie folgt.  
   
 ```  
 CREATE TABLE T2  
@@ -1859,5 +1856,4 @@ ALTER TABLE OrdersHistory SPLIT RANGE ('2005-01-01');
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-
 

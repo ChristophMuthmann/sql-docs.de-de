@@ -8,22 +8,20 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 102f9ca281486b6669e68395398679889c4a0a5e
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 91bc3b9570b367986f4c439e4d3864cdf2351dfa
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>Odbcdriver for SQLServer herunterladen
 
@@ -69,4 +67,3 @@ Siehe auch [Installieren des Treibers](linux-mac/installing-the-microsoft-odbc-d
 - **Red Hat Enterprise Linux 5 und 6 (64-Bit)** - [Herunterladen von Microsoft ODBC Driver 11 for SQLServer - Red Hat Linux](http://go.microsoft.com/fwlink/?LinkId=267321)
 
 - **SUSE Linux Enterprise 11 Servicepack 2 (64-Bit)** - [Preview von Microsoft ODBC Driver 11 für SQLServer - SUSE Linux herunterladen](http://go.microsoft.com/fwlink/?LinkId=264916)
-

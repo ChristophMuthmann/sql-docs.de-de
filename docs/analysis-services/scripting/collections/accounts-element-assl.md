@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Accounts Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Accounts Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Accounts
-helpviewer_keywords:
-- Accounts element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Accounts
+helpviewer_keywords: Accounts element
 ms.assetid: 3ec62f58-c19b-4b15-b040-8941521a389b
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 00d2c1edfe91f2c0223df776ff90b4c9a33bb34b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3d781e32f57f9df9cc5bf180e37761c8a26c0848
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="accounts-element-assl"></a>Accounts-Element (ASSL)
   Enthält die Auflistung der Kontotypen, die in definierten ein [Datenbank](../../../analysis-services/scripting/objects/database-element-assl.md) Element.  
@@ -82,4 +76,3 @@ ms.lasthandoff: 09/01/2017
  [Schemaauflistungen &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

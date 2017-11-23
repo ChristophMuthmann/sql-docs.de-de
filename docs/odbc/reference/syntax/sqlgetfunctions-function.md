@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetFunctions
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetFunctions
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetFunctions
-helpviewer_keywords:
-- SQLGetFunctions function [ODBC]
+f1_keywords: SQLGetFunctions
+helpviewer_keywords: SQLGetFunctions function [ODBC]
 ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 192eab3f4d34cd00bd4d3a0d257d8a941e82c456
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e7359f5e652c2db21a991845accc15aaea5710e7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions-Funktion
 **Konformität**  
@@ -233,4 +227,3 @@ SQLDisconnect(hdbc);
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

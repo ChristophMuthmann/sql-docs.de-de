@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,17 +27,16 @@ helpviewer_keywords:
 - C data types [ODBC], interval
 - interval fields [ODBC]
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6a1b1a7320feef3cff6d63ce5ca6a22be6329169
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f1e19ac3f7c14326524ab7cbaa60f499c5d81e91
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="interval-data-types"></a>Interval-Datentypen
 Ein Intervall wird als Differenz zwischen zwei Datumsangaben und Uhrzeiten definiert. Intervalle werden in zwei unterschiedliche Arten ausgedrückt werden. Ist eine *Jahr-Monat* Intervall, in der Intervalle in Jahren und einer ganzzahligen Anzahl von Monaten formuliert. Das andere ist eine *Tag* Intervall, in der Intervalle in Tagen, Minuten und Sekunden formuliert. Diese beiden Arten von Intervallen zielteilmengen verschieden und können nicht kombiniert werden, da Monate unterschiedliche Anzahl von Tagen haben können.  
@@ -75,5 +73,4 @@ Ein Intervall wird als Differenz zwischen zwei Datumsangaben und Uhrzeiten defin
   
 -   [Intervall-Literale](../../../odbc/reference/appendixes/interval-literals.md)  
   
--   [Überschreiben Standard führende und Sekunden Genauigkeit für die Interval-Datentypen](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md)
-
+-   [Overriding Default Leading and Seconds Precision for Interval Data Types (Überschreiben von standardmäßigen anführender Präzision und Genauigkeit in Sekunden für Intervalldatentypen)](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md)

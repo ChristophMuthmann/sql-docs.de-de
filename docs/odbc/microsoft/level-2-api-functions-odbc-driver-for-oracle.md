@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,21 +19,20 @@ helpviewer_keywords:
 - API functions [ODBC]
 - level 2 API functions [ODBC]
 ms.assetid: d9f49520-72d7-4234-8635-260d0ce4199c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6232a890c5898bcf543df9e47c97f363e2bfca12
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: eb35e0e2dde90261e913ffd9ba3dc28e5859e012
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="level-2-api-functions-odbc-driver-for-oracle"></a>Level-2-API-Funktionen (ODBC-Treiber für Oracle)
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
   
  Funktionen, die auf dieser Ebene bieten Schnittstelle-Konformität für Ebene 1 plus zusätzliche Funktionen wie z. B. Unterstützung für Lesezeichen, die dynamischen Parameter und die asynchrone Ausführung der ODBC-Funktionen.  
   
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/09/2017
 |**SQLProcedures**|Gibt eine Liste der Verfahren in der Datenquelle zurück. Für App-Pakete Prozeduren den PROZEDURNAMEN Spalte befindet sich im *packagename.procedurename* Format.<br /><br /> Da Oracle eine Möglichkeit, Paketfunktionen gepackte Prozeduren unterscheiden nicht bereitstellt, kehrt der Treiber SQL_PT_UNKNOWN für die Spalte PROCEDURE_TYPE zurück.|  
 |**SQLSetPos**|Legt die Cursorposition in einem Rowset. Sie können **SQLSetPos** mit **SQLGetData** zum Abrufen von Zeilen aus ungebundene Spalten nach dem Positionieren des Cursors an einer bestimmten Zeile im Rowset. Das Resultset mit hinzugefügten Zeilen *fOption* SQL_ADD werden hinzugefügt, nachdem die letzte Zeile im Resultset.|  
 |**SQLSetScrollOptions**|Legt Optionen für die Steuerung des Verhaltens von Cursor ein Anweisungshandle Befehls beschäftigt zugeordnet. Weitere Informationen finden Sie unter [Cursortyp und Parallelität Kombinationen](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md).|
-

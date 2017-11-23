@@ -13,23 +13,21 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - '- (subtract)'
 - subtract operator (-)
 ms.assetid: 9602e908-e80c-442a-a412-073e10d0abd4
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: d1156dfc98cc1d2fd5d91e9f54fd0ab4001fa2b0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6385e939f6dcf1881b86d9aa20d7f8e6c04aceb4
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="--subtract-dmx"></a>- (Subtraktion) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,4 +57,3 @@ Numeric_Expression - Numeric_Expression
  [Operatoren &#40; DMX &#41;](../dmx/operators-dmx.md)  
   
   
-

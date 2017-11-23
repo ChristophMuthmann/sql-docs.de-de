@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Steps Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Steps Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Steps
 - microsoft.xml.analysis.steps
 - urn:schemas-microsoft-com:xml-analysis#Steps
-helpviewer_keywords:
-- Steps element
+helpviewer_keywords: Steps element
 ms.assetid: a6821a2a-89ec-418b-b2dd-92adf2ccc20e
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 15f64827e38b61007aafb5a76636c2875c6d399c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8ef9601981ffda03d4e9d82de00dd166d9fb3020
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="steps-element-xmla"></a>Steps-Element (XMLA)
   Gibt die maximale Anzahl von Schritten an, die vom [DesignAggregations](../../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) -Befehl verwendet werden, um Aggregationen zu entwerfen.  
@@ -74,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

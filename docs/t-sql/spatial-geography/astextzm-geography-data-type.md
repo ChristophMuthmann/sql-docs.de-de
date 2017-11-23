@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|spatial-geography
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,22 +16,19 @@ f1_keywords:
 - AsTextZM_TSQL
 - AsTextZM
 - AsTextZM_(geography_Data_Type)_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- AsTextZM method
+dev_langs: TSQL
+helpviewer_keywords: AsTextZM method
 ms.assetid: e9dc27f6-e945-4457-8498-7644db34008e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b380f4106255947380cad6d1d208adf5be4ca6e3
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ba824c4482f49d534d11666054a0a8d3a1669d2d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="astextzm-geography-data-type"></a>AsTextZM (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,4 +65,3 @@ SELECT @g.AsTextZM();
  [Z &#40; Geography-Datentyp &#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
   
   
-

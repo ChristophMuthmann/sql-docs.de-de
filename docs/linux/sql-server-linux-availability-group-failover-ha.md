@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
+ms.openlocfilehash: 54c9be66075ebbc9614de0b007b5b718e976121b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 07a50a59c320d7abb58c725c717393f8751b337d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="operate-ha-availability-group-for-sql-server-on-linux"></a>Betreiben Sie HA-verfügbarkeitsgruppe für SQL Server on Linux
 
@@ -189,9 +188,9 @@ Wenn Replikate der verfügbarkeitsgruppe für Instanzen von SQL Server unter Lin
 1. Bevor Sie beginnen, Sichern Sie jede Datenbank.
 2. Aktualisieren von SQL Server-Instanzen, sekundäre Replikate gehostet.
 
-    A. Aktualisieren Sie zuerst die asynchronen sekundären Replikate.
+    a. Aktualisieren Sie zuerst die asynchronen sekundären Replikate.
 
-    B. Aktualisieren Sie die synchrone sekundäre Replikate.
+    b. Aktualisieren Sie die synchrone sekundäre Replikate.
 
    >[!NOTE]
    >Wenn eine verfügbarkeitsgruppe nur asynchrone verfügt wird Replikate - um Datenverluste zu vermeiden. ändern ein Replikat, synchrone und warten, bis er synchronisiert wird. Aktualisieren Sie dann dieses Replikat aus.
@@ -233,13 +232,13 @@ Wenn Replikate der verfügbarkeitsgruppe für Instanzen von SQL Server unter Lin
    >Die folgenden Schritte gelten nur für Verfügbarkeitsgruppen, die nicht über einen Manager verfügen.  
    Wenn der Cluster Verfügbarkeit Gruppentyp ist `NONE`manuell ein Failover. Führen Sie die folgenden Schritte wie folgt aus:
 
-      A. Der folgende Befehl legt das primäre Replikat zum sekundären Replikat. Ersetzen Sie `AG1` durch den Namen der verfügbarkeitsgruppe. Führen Sie den Transact-SQL-Befehl für die Instanz von SQL Server hostet, die das primäre Replikat.
+      a. Der folgende Befehl legt das primäre Replikat zum sekundären Replikat. Ersetzen Sie `AG1` durch den Namen der verfügbarkeitsgruppe. Führen Sie den Transact-SQL-Befehl für die Instanz von SQL Server hostet, die das primäre Replikat.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
       ```
 
-      B. Der folgende Befehl legt ein sekundäres Replikat zum primären. Führen den folgenden Transact-SQL-Befehl auf der Zielinstanz von SQL Server - Instanz hostet, die das synchrone sekundäre Replikat.
+      b. Der folgende Befehl legt ein sekundäres Replikat zum primären. Führen den folgenden Transact-SQL-Befehl auf der Zielinstanz von SQL Server - Instanz hostet, die das synchrone sekundäre Replikat.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;
@@ -298,4 +297,3 @@ Führen Sie zum Löschen einer verfügbarkeitsgruppe [DROP AVAILABILITY GROUP](.
 [Konfigurieren von SUSE Linux Enterprise Server-Cluster für Clusterressourcen für SQL Server-Verfügbarkeitsgruppe](sql-server-linux-availability-group-cluster-sles.md)
 
 [Konfigurieren Sie Ubuntu-Cluster für SQL Server-Verfügbarkeitsgruppe Clusterressourcen](sql-server-linux-availability-group-cluster-ubuntu.md)
-

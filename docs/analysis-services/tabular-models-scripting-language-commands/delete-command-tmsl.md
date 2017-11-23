@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 05d3fb14-ea03-4596-ac2e-9ae5bab27b4d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ef079032f26d5aa287b6e6ce30c87e7d1d1392a3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d6a4f8029d0d0cfb2ef9076347a791a04e03a540
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="delete-command-tmsl"></a>Delete-Befehl (TMSL)
 
@@ -50,7 +49,7 @@ Löscht das angegebene Objekt und alle untergeordneten Objekte und Sammlungen. W
   
  Sie können die folgenden Objekte löschen:  
   
- [Datenbankobjekt & #40; TMSL & #41;](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md)  
+ [Datenbankobjekt &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md)  
   
 ```  
 {   
@@ -62,7 +61,7 @@ Löscht das angegebene Objekt und alle untergeordneten Objekte und Sammlungen. W
 }   
 ```  
   
- [DataSources Object & #40; TMSL & #41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)  
+ [DataSources Object &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)  
   
 ```  
 {  
@@ -75,7 +74,7 @@ Löscht das angegebene Objekt und alle untergeordneten Objekte und Sammlungen. W
 }  
 ```  
   
- [Tables-Objekt & #40; TMSL & #41;](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md)  
+ [Tables-Objekt &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md)  
   
 ```  
 {   
@@ -88,7 +87,7 @@ Löscht das angegebene Objekt und alle untergeordneten Objekte und Sammlungen. W
 }   
 ```  
   
- [Partitionen Object & #40; TMSL & #41;](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md)  
+ [Partitionen Object &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md)  
   
 ```  
 {   
@@ -102,7 +101,7 @@ Löscht das angegebene Objekt und alle untergeordneten Objekte und Sammlungen. W
 }   
 ```  
   
- [Rollen Object & #40; TMSL & #41;](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)  
+ [Rollen Object &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)  
   
 ```  
 {   
@@ -145,7 +144,7 @@ Löscht das angegebene Objekt und alle untergeordneten Objekte und Sammlungen. W
 ```  
   
 ## <a name="usage-endpoints"></a>Nutzung (Endpunkte)  
- Diese Command-Element wird in einer Anweisung verwendet die [Execute-Methode & #40; XMLA & #41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) Aufruf über einen XMLA-Endpunkt verfügbar gemacht werden auf folgende Weise:  
+ Diese Command-Element wird in einer Anweisung verwendet die [Execute-Methode &#40; XMLA &#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) Aufruf über einen XMLA-Endpunkt verfügbar gemacht werden auf folgende Weise:  
   
 -   Als ein XMLA-Fenster in SQL Server Management Studio (SSMS)  
   
@@ -155,10 +154,9 @@ Löscht das angegebene Objekt und alle untergeordneten Objekte und Sammlungen. W
   
  Sie können ein vorgefertigtes Skript für diesen Befehl aus SSMS generieren.  Beispielsweise können Sie eine vorhandene Datenbank auf Rechtsklicken > **Skript** > **Skript für Datenbank als** > **DELETE in**.  
   
- Die [ \[MS-SSAS-T\]: SQL Server Analysis Services-Tabellendatenbank (SQL Server Technische Protocol)](http://go.microsoft.com/fwlink/p/?LinkId=784855) Dokuments Abschnitt 3.1.5.2.2, die die Struktur der Befehle für JSON-tabellarischen Metadaten und Objekte beschreibt. Aktuell enthält dieses Dokument Befehle und Funktionen, die noch nicht im TMSL-Skript implementiert. Finden Sie unter [Tabular Model Scripting Language & #40; TMSL & #41; Verweis](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) für Informationen zu den was unterstützt wird.  
+ Die [ \[MS-SSAS-T\]: SQL Server Analysis Services-Tabellendatenbank (SQL Server Technische Protocol)](http://go.microsoft.com/fwlink/p/?LinkId=784855) Dokuments Abschnitt 3.1.5.2.2, die die Struktur der Befehle für JSON-tabellarischen Metadaten und Objekte beschreibt. Aktuell enthält dieses Dokument Befehle und Funktionen, die noch nicht im TMSL-Skript implementiert. Finden Sie unter [Tabular Model Scripting Language &#40; TMSL &#41; Verweis](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) für Informationen zu den was unterstützt wird.  
 
 ## <a name="see-also"></a>Siehe auch  
  [Tabular Model Scripting Language &#40;TMSL&#41; – Referenz](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   
-

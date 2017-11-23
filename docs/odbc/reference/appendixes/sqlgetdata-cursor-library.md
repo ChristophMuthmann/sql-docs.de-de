@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLGetData function [ODBC], Cursor Library
+helpviewer_keywords: SQLGetData function [ODBC], Cursor Library
 ms.assetid: ff40c9c0-b847-4426-a099-1bff47e6e872
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d2024b9943f11877b38773cecaa59027867a31d1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 19aa94323ee9ad9655e374bd3fe466fcb78f3c48
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetdata-cursor-library"></a>SQLGetData (Cursor Library)
 > [!IMPORTANT]  
@@ -47,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 -   **SQLGetData** kann aufgerufen werden, nur, wenn die folgenden Bedingungen erfüllt sind: eine **wählen** -Anweisung generiert das Resultset; das **wählen** Anweisung enthielt keinen Join ein  **UNION** -Klausel, oder ein **GROUP BY** -Klausel und alle Spalten, die einen Alias oder ein Ausdruck in der Auswahlliste verwendet wurden nicht mit gebundenen **SQLBindCol**.  
   
 -   Wenn der Treiber nur eine aktive Anweisung unterstützt, ruft die Cursorbibliothek den Rest des Resultsets, die vor dem Ausführen der **wählen** -Anweisung und der Aufruf **SQLGetData**.
-

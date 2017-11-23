@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Visual FoxPro data source [ODBC], changing
 - editing data sources [ODBC], Visual FoxPro
 ms.assetid: d9c30b5a-9ddf-4044-a7c5-0bdb983fdda4
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cf0667860cc047cace0713c4b4595bb5d225e49a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a2a56fee03c4e839324ffe958031861f0e71bdeb
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="modifying-a-visual-foxpro-data-source"></a>Ändern einer Visual FoxPro-Datenquelle
 ### <a name="to-modify-a-visual-foxpro-data-source"></a>So ändern Sie eine Visual FoxPro-Datenquelle  
@@ -45,4 +43,3 @@ ms.lasthandoff: 09/09/2017
 5.  Klicken Sie auf OK, um die Änderungen zu speichern und schließen das Dialogfeld ODBC-Datenquellen-Administrator.  
   
  Ihre Änderungen werden beim nächsten Zugriff auf die Datenquelle aus der Anwendung wirksam.
-

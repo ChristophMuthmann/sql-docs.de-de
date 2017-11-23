@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- QueryBinding Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: QueryBinding Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- QueryBinding
-helpviewer_keywords:
-- QueryBinding data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: QueryBinding
+helpviewer_keywords: QueryBinding data type
 ms.assetid: 7b58fc89-0060-4e56-ad99-6f74fe8cfc6d
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 49f3632610fef7cfce90a7586c5279b9b15cd24b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bc879928e6c25be23916082b58ec75aa17cd8dda
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="querybinding-data-type-assl"></a>QueryBinding-Datentyp (ASSL)
   Definiert einen abgeleiteten Datentyp, der die Zuordnung von einer [DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md) Element mit einer [QueryDefinition](../../../analysis-services/scripting/properties/querydefinition-element-assl.md) Element.  
@@ -77,4 +71,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services Scripting Language-XML-Datentypen &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

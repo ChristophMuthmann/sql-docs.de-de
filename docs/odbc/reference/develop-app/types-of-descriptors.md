@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- descriptors [ODBC], types
+helpviewer_keywords: descriptors [ODBC], types
 ms.assetid: ec20e446-e540-41ad-8559-d9c0a5b8358f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7092b59719850ed514ce792c17eea32ae290b932
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5554b0d7d110db9270230c25ab2bcc29d5a7cb87
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="types-of-descriptors"></a>Typen von Deskriptoren
 Ein Deskriptor wird verwendet, um einen der folgenden beschreiben:  
@@ -58,4 +55,3 @@ Ein Deskriptor wird verwendet, um einen der folgenden beschreiben:
  Ein Deskriptor kann verschiedene Rollen ausführen. Verschiedene Anweisungen können Deskriptor freigeben, die die Anwendung explizit reserviert. Ein Zeilendeskriptor in einer einzelnen Anweisung kann als eine Parameterdeskriptor in einer anderen Anweisung dienen.  
   
  Es ist immer, ob ein angegebener Deskriptor ein Anwendungsdiensts oder einen Deskriptor Implementierung ist bekannt, selbst wenn der Deskriptor noch nicht in einem Datenbankvorgang verwendet wurde. Für die Deskriptoren, die die Implementierung implizit zuordnet, zeichnet die Implementierung der vordefinierten Zeile relativ zur das Anweisungshandle verwenden. Der Deskriptor, der die Anwendung durch Aufrufen von zuordnet **SQLAllocHandle** ist ein Deskriptor für die Anwendung.
-

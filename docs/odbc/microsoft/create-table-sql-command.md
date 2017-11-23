@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- CREATE TABLE [ODBC]
+helpviewer_keywords: CREATE TABLE [ODBC]
 ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6c8c6d75686741d1835f46a5ad7a64ab04c6925f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 35a22420b5ecaf21539fd16aecb3870e3f3049dc
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-table---sql-command"></a>Erstellen der Tabelle - SQL-Befehl
 Erstellt eine Tabelle mit den angegebenen Feldern.  
@@ -177,5 +174,4 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  [ALTER TABLE - SQL-Befehl](../../odbc/microsoft/alter-table-sql-command.md)   
  [Unterstützte Datentypen (Visual FoxPro-ODBC-Treiber)](../../odbc/microsoft/supported-data-types-visual-foxpro-odbc-driver.md)   
  [INSERT - SQL-Befehl](../../odbc/microsoft/insert-sql-command.md)   
- [Wählen Sie-SQL-Befehl](../../odbc/microsoft/select-sql-command.md)
-
+ [SELECT (SQL-Befehl)](../../odbc/microsoft/select-sql-command.md)

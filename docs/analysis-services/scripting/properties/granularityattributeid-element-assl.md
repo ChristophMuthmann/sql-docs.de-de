@@ -13,27 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- GranularityAttributeID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: GranularityAttributeID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- GranularityAttributeID element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: GranularityAttributeID element
 ms.assetid: 90e6c939-71bd-462a-a377-4854cb9d5266
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 755b68641fdcafa382d52b22e3a2914a50b6cf9e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b6e374e6ea46b81fcf7e2cff4a9de4d254a9259d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="granularityattributeid-element-assl"></a>GranularityAttributeID-Element (ASSL)
   Enthält den Bezeichner (ID) des Attributs mit dem übergeordneten Element [MeasureGroupAttributeBinding](../../../analysis-services/scripting/data-type/measuregroupattributebinding-data-type-out-of-line-assl.md) -Datentyp.  
@@ -71,4 +66,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

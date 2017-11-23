@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ClassifiedColumnID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ClassifiedColumnID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ClassifiedColumnID
-helpviewer_keywords:
-- ClassifiedColumnID element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ClassifiedColumnID
+helpviewer_keywords: ClassifiedColumnID element
 ms.assetid: c294b9c5-3ac2-4554-8ba8-d9f15d7e85c0
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bd2b6f596795b4a55421bc102e5b662e372b5e60
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ce958049e565b18dd1d917fb6cd458772c28060e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="classifiedcolumnid-element-assl"></a>ClassifiedColumnID-Element (ASSL)
   Enthält den Bezeichner (ID) einer verknüpften Spalte, die von klassifiziert ist die [ScalarMiningStructureColumn](../../../analysis-services/scripting/data-type/scalarminingstructurecolumn-data-type-assl.md) Element.  
@@ -72,4 +66,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

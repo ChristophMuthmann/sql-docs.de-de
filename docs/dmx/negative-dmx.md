@@ -13,23 +13,21 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - '- (negative)'
 - negative operator (-)
 ms.assetid: b530abee-71dd-4e10-b75e-d1cf98d4ea27
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 4b2531b5f53fde652e2a72b559359a1bfaecf572
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9ddea9449f0e044f784b7b4e96a4b466b2ce165e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="--negative-dmx"></a>- (Negativ) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,4 +54,3 @@ ms.lasthandoff: 08/02/2017
  [Unäre Operatoren &#40; DMX &#41;](../dmx/operators-unary.md)  
   
   
-

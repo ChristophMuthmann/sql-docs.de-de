@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Blocks Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Blocks Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Blocks
-helpviewer_keywords:
-- Blocks element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Blocks
+helpviewer_keywords: Blocks element
 ms.assetid: d6fd4e6b-b5bd-43cd-9c28-48af57cf977c
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c40b1f83ffc6e53f74cca1b864d111f54ecd2442
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a4ce7b7d5d062ec09eb0e098ec3c9a9624a9e518
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="blocks-element-assl"></a>Blocks-Element (ASSL)
   Enthält die Auflistung der Blöcke mit binären Daten, die den binären Inhalt darstellen einer [ClrAssemblyFile](../../../analysis-services/scripting/data-type/clrassemblyfile-data-type-assl.md) Element.  
@@ -84,4 +78,3 @@ ms.lasthandoff: 09/01/2017
  [Schemaauflistungen &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

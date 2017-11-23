@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLNumResultCols
-apilocation:
-- sqlsrv32.dll
+apiname: SQLNumResultCols
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLNumResultCols
-helpviewer_keywords:
-- SQLNumResultCols function [ODBC]
+f1_keywords: SQLNumResultCols
+helpviewer_keywords: SQLNumResultCols function [ODBC]
 ms.assetid: d863179f-12a9-4b55-ac6b-7d84202d3da3
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b6643c1222a43b1b188e8aab135f8eaecfc9169b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0e5ff9c7fa1bf48b05d436bc8e703bb9659e76bc
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlnumresultcols-function"></a>SQLNumResultCols-Funktion
 **Konformität**  
@@ -108,4 +102,3 @@ SQLRETURN SQLNumResultCols(
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)
-

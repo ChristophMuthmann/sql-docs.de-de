@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
+ms.openlocfilehash: cc6eee565499d696c4f634d6eedc562547bc8253
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7aa90eb3fd0a0ea66ea4b4fa09bd17d3e6887d7e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Ubuntu-Cluster und die Verfügbarkeitsgruppenressource konfigurieren
 
@@ -80,7 +79,7 @@ Die Schritte zum Erstellen einer verfügbarkeitsgruppe auf Linux-Servern zwecks 
    sudo apt-get install pacemaker pcs fence-agents resource-agents
    ```
 
-2. Legen Sie das Kennwort für den Standardbenutzer fest, der beim Installieren von Pacemaker und Corosync-Paketen erstellt wird. Verwenden Sie das Kennwort auf allen Knoten. 
+2. Legen Sie das Kennwort für den Standardbenutzer fest, der beim Installieren von Pacemaker und Corosync-Paketen erstellt wird. Verwenden Sie auf allen Knoten dasselbe Kennwort. 
 
    ```bash
    sudo passwd hacluster
@@ -104,7 +103,7 @@ sudo systemctl enable pacemaker
 
    Ausgeführten "" sudo "apt-Get Install-Pcs" Schrittmacher, Corosync und Pcs zur selben Zeit installiert und alle 3 der Dienste ausgeführt wird.  Corosync starten eine Vorlage generiert "/ etc/cluster/corosync.conf" Datei.  Nächste Schritte erfolgreich ausgeführt werden, kann diese Datei haben sollten nicht vorhanden – die problemumgehung besteht darin Schrittmacher beenden / Corosync und löschen "/ etc/cluster/corosync.conf", und klicken Sie dann der nächste Schritte erfolgreich abgeschlossen werden. "Entfernen von Pcs Clusters" bewirkt dasselbe, und können Sie sie als Zeitschritt anfängliche Cluster-Setup.
    
-   Der folgende Befehl entfernt alle vorhandenen Cluster-Konfigurationsdateien und beendet alle Clusterdienste. Dies zerstört dauerhaft Cluster. Führen Sie sie als ersten Schritt in einer vorproduktionsumgebung aus. Hinweis Schrittmacher-Dienst und muss erneut aktiviert werden, dass "Pcs Cluster zerstört" deaktiviert. Führen Sie den folgenden Befehl auf allen Knoten.
+   Der folgende Befehl entfernt alle vorhandenen Cluster-Konfigurationsdateien und beendet alle Clusterdienste. Dies zerstört dauerhaft Cluster. Führen Sie sie als ersten Schritt in einer vorproduktionsumgebung aus. Hinweis Schrittmacher-Dienst und muss erneut aktiviert werden, dass "Pcs Cluster zerstört" deaktiviert. Führen Sie den folgenden Befehl auf allen Knoten aus.
    
    >[!WARNING]
    >Der Befehl werden alle vorhandenen Clusterressourcen gelöscht.
@@ -165,7 +164,7 @@ sudo pcs property set start-failure-is-fatal=false
 
 ## <a name="install-sql-server-resource-agent-for-integration-with-pacemaker"></a>Installieren von SQL Server-Agent-Ressource für die Integration mit Schrittmacher
 
-Führen Sie die folgenden Befehle auf allen Knoten. 
+Führen Sie die folgenden Befehle auf allen Knoten aus. 
 
 ```bash
 sudo apt-get install mssql-server-ha
@@ -234,5 +233,4 @@ sudo pcs constraint order promote ag_cluster-master then start virtualip
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Betreiben HA-verfügbarkeitsgruppe](sql-server-linux-availability-group-failover-ha.md)
-
 

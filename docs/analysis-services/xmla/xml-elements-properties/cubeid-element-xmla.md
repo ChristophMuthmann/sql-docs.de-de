@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CubeID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CubeID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.cubeid
 - urn:schemas-microsoft-com:xml-analysis#CubeID
 - http://schemas.microsoft.com/analysisservices/2003/engine#CubeID
-helpviewer_keywords:
-- CubeID element
+helpviewer_keywords: CubeID element
 ms.assetid: 9dba605a-c45e-4730-827b-b7c55c8110da
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1080e0948258875b219c6ba859d6fc42d8d3d59e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 89b16593efe219d0fea6f0d09a0e431a7bab7bd6
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cubeid-element-xmla"></a>CubeID-Element (XMLA)
   Identifiziert einen Cube innerhalb eines übergeordneten Elements, das einen Objektverweis enthält.  
@@ -80,4 +75,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

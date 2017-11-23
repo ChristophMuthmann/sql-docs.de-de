@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MeasureGroupID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: MeasureGroupID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#MeasureGroupID
 - http://schemas.microsoft.com/analysisservices/2003/engine#MeasureGroupID
 - microsoft.xml.analysis.measuregroupid
-helpviewer_keywords:
-- MeasureGroupID element
+helpviewer_keywords: MeasureGroupID element
 ms.assetid: ff55777e-54ea-42b9-a084-2e12e0a10988
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 258ea48a3f33cd965960a2eafe301554535bc982
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 198c1ec4a0fa6f0a6411e4c4fab6ebcff1bad4f4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="measuregroupid-element-xmla"></a>MeasureGroupID-Element (XMLA)
   Identifiziert eine Measuregruppe innerhalb eines übergeordneten Elements, das einen Objektverweis enthält.  
@@ -79,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

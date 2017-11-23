@@ -8,29 +8,27 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], installing
 - installing ODBC driver for Oracle [ODBC]
 ms.assetid: dfac8ade-eebe-4ebe-a199-feb740ed5bae
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fb3efa619c235466f4596b8cb60f73b1eea3a36f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c46b87a3d9ea3f30524a261bc81bd37aa03c9aca
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="installing-the-software-odbc"></a>Installieren der Software (ODBC)
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber von Oracle bereitgestellt.  
   
  Der ODBC-Treiber für Oracle ist einer der Datenzugriffskomponenten. Es begleitet andere ODBC-Komponenten, z. B. ODBC-Datenquellen-Administrator, und sollte bereits installiert. Der Treiber kann auch unter "Treiber und andere Downloads" auf der Microsoft Product Support Services Online Website unter www.microsoft.com gefunden werden.  
   
@@ -40,4 +38,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!CAUTION]  
 >  Installieren von Oracle-Clientsoftware über MDAC/Windows DAC kann die aktuelle Versionen von MDAC überschreiben. Installieren Sie MDAC auftreten von Problemen mit der ODBC-Komponenten.
-

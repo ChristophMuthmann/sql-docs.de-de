@@ -1,47 +1,41 @@
 ---
 title: Installieren Sie vortrainierte Machine Learning-Modellen in SQL Server | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 10/18/2017
+ms.date: 11/16/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: ed5616b66ffdad10f0e2794eb5ab0109a0979d2e
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 8f4a145700d12f31a868cc3fc20a9dbdbe6f45ea
-ms.contentlocale: de-de
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="install-pretrained-machine-learning-models-on-sql-server"></a>Installieren Sie vortrainierte Machine learning-Modelle mit SQL Server
 
 Dieser Artikel beschreibt, wie vortrainierte Modelle mit einer Instanz von SQL Server hinzufügen, die bereits über R Services oder Machine Learning-Dienste installiert.
 
-Vortrainierte Modelle werden als eine Option bereitgestellt, bei der Installation von Microsoft R Server "oder" Machine Learning-Servers mit dem eigenständigen Installer. Können Sie dieses Installationsprogramm nur das vortrainierte Modelle erhalten, oder können Sie sie zum Aktualisieren des Machine learning-Komponenten in einer Instanz von SQL Server 2016 oder SQl Server-2017.
+Die Option zum Installieren von vortrainierte Modelle ist verfügbar, wenn Sie separaten Windows Installer für Microsoft R Server "oder" Machine Learning-Server verwenden. Können Sie dieses Installationsprogramm nur das vortrainierte Modelle erhalten, oder können Sie es auf [Aktualisieren des Machine learning Komponenten](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md) in einer Instanz von SQL Server 2016 oder SQL Server-2017.
 
 Nach dem Sie die vortrainierte Modelle durch Ausführen des Installationsprogramms heruntergeladen haben, sind einige zusätzliche Schritte erforderlich, um die Modelle für die Verwendung mit SQL Server zu konfigurieren. Dieser Artikel beschreibt den Prozess.
 
-Weitere Informationen dazu finden Sie in diesen Artikeln:
+Ein Beispiel dafür, wie mithilfe der vortrainierte Modelle mit SQL Server-Daten finden Sie in diesem Blogbeitrag vom SQL Server-Machine Learning-Team: 
 
-+ [Pre-tained Machine learning-Modellen für Stimmungslage Analysen und image](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)
-
-+ [Aktualisieren Sie die R-Komponenten in einer Instanz von R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
++ [Stimmungsanalyse mit Python in SQL Server-Machine Learning-Services](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
 
 ## <a name="benefits-of-using-pretrained-models"></a>Vorteile der Verwendung von vortrainierte Modelle
 
-Diese vorab trainierten Modelle erstellt wurden, um Kunden zu helfen, die Aufgaben wie stimmungsanalyse oder image merkmalbereitstellung müssen, aber keine Ressourcen zum Abrufen großer Datasets oder ein komplexes Modell zu trainieren. Verwendung von vorab trainierten Modelle können Sie die ersten Schritten für Text- und Bilddateitypen, die am effizientesten verarbeiten.
+Diese vorab trainierten Modelle wurden zum Unterstützen von Kunden, die Aufgaben wie das Sentiment Analysis "oder" Image merkmalbereitstellung müssen, jedoch nicht die Ressourcen zum Abrufen großer Datasets oder ein komplexes Modell trainieren besitzen, erstellt. Verwendung von vorab trainierten Modelle können Sie die ersten Schritten für Text- und effizient verarbeiten.
 
-Aktuell sind die Modelle, die verfügbar sind, Tiefe neuronale Netzwerkmodelle (DNNS) für Sentiment Analysis und bildklassifizierung. Alle vortrainierte Modelle trainiert wurden, mithilfe des Microsoft [Berechnung Netzwerk Toolkit](https://cntk.ai/Features/Index.html), oder **CNTK**. 
+Aktuell sind die Modelle, die verfügbar sind, Tiefe neuronale Netzwerkmodelle (DNNS) für Sentiment Analysis und bildklassifizierung. Alle vortrainierte Modelle trainiert wurden, mithilfe des Microsoft [Berechnung Netzwerk Toolkit](https://cntk.ai/Features/Index.html), oder **CNTK**.
 
 Jede Netzwerkkonfiguration wurde basierend auf den folgenden referenzimplementierungen:
 
@@ -49,6 +43,8 @@ Jede Netzwerkkonfiguration wurde basierend auf den folgenden referenzimplementie
 + ResNet 50
 + ResNet 101
 + AlexNet
+
+Weitere Informationen zu diesen Modellen finden Sie unter [vortrainiertes Machine learning-Modellen für Stimmungslage Analysen und Image](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)
 
 Weitere Informationen zu umfassenden lernen Netzwerken und ihre Implementierung mit CNTK finden Sie in diesen Artikeln:
 
@@ -69,17 +65,17 @@ Weitere Informationen zu umfassenden lernen Netzwerken und ihre Implementierung 
 
     + Um die R oder Python-Komponenten zur gleichen Zeit zu aktualisieren, wählen Sie die Sprache (R, Python oder beides), die Sie aktualisieren möchten, und wählen Sie die Option vortrainierte Modelle. Wählen Sie eine oder mehrere Instanzen, die diese Änderungen angewendet werden sollen.
 
-    + Wenn Sie zuvor Machine Learning-Server installiert und aktualisiert R oder Python-Komponenten, die die Bindung verwenden, lassen Sie alle vorherigen Auswahl **als**, und wählen Sie die Optionen vortrainierte Modelle. Deaktivieren Sie alle zuvor ausgewählten Optionen nicht, oder diese entfernt werden.
+    + Wenn Sie zuvor Machine Learning-Server installiert und aktualisiert R oder Python-Komponenten, die die Bindung verwenden, lassen Sie alle vorherigen Auswahl **als**, und wählen Sie die Optionen vortrainierte Modelle. Deaktivieren Sie alle zuvor ausgewählten Optionen nicht; Wenn Sie dies tun, entfernt das Installationsprogramm die Komponenten an.
 
 3. Wenn die Installation abgeschlossen ist, öffnen Sie eine Windows-Eingabeaufforderung **als Administrator**, und navigieren Sie zum Ordner "Setup bootstrap" für SQL Server, die auch vom Microsoft-R-Installationsprogramm enthält. In einer Standardinstanz von SQL Server-2017 wäre die Ordner:
     
     `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\SQL2017\x64\`
 
-4. Geben Sie die Komponente zu installieren, die Version und den Ordner mit den Modell-Quelldateien mit den Argumenten, RSetup.exe, wie in diesen Beispielen gezeigt:
+4. Führen Sie RSetup.exe, und anzugeben Sie die Komponente zu installieren, die Version und den Ordner mit den Quelldateien für das Modell verwenden Sie die Befehlszeilenargumente, die in diesen Beispielen gezeigte:
 
-  + Verwenden von Modellen mit **R_SERVICES**, verwenden Sie die folgende Syntax und Pfade:
+    + Verwenden von Modellen mit **R_SERVICES**:
 
-    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\R_SERVICES\library\MicrosoftML\mxLibs\x64`
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "<SQL_DB_instance_folder>\R_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
     Um die neueste Version der vortrainierte Modelle für R in einer Standardinstanz von SQL Server-2017, aktivieren ausführen Sie z. B. diese Anweisung:
 
@@ -89,19 +85,35 @@ Weitere Informationen zu umfassenden lernen Netzwerken und ihre Implementierung 
 
     `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstanceName\R_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
-  + Verwenden von Modellen mit **PYTHON_SERVICES**, verwenden Sie die folgende Syntax und Pfade:
+    + So verwenden vortrainierte Modelle mit R-Server (eigenständig) oder Machine Learning-Server (eigenständig):
 
-    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs`
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "~\R_SERVER\library\MicrosoftML\mxLibs\x64"`
+
+    Zum Aktivieren der Verwendung der neuesten Version der vortrainierte Modelle für R, in einer Standardinstallation von R-Server mit SQL Server 2016, würden Sie beispielsweise diese Anweisung ausführen:
+
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir ‘C:\Program Files\Microsoft SQL Server\130\R_SERVER\library\MicrosoftML\mxLibs\"`
+    
+    + Mithilfe vortrainierte Modelle mit **PYTHON_SERVICES**:
+
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "<SQL_DB_instance_folder>\PYTHON_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
     Zum Aktivieren der Verwendung der neuesten Version der vortrainierte Modelle für Python, in einer Standardinstanz von SQL Server-2017, würden Sie beispielsweise diese Anweisung ausführen:
 
-    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs"`
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
     Auf einer benannten Instanz wäre der Befehl etwa wie folgt:
 
-    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstanceName\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs"`
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstanceName\PYTHON_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
-5. Für den Versionsparameter werden die folgenden Werte unterstützt:
+    + Verwendung von Python pretrained Modelle mit Machine Learning-Server (eigenständig):
+
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir "<sql_folder>\PYTHON_SERVER\site-packages\microsoftml\mxLibs"`
+
+    Beispielsweise wenn eine Standardinstallation von Machine Learning-Server (eigenständig) 2017 von SQL Server-Setup, diese Anweisung ausführen:
+
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER\Lib\site-packages\microsoftml\mxLibs"`
+
+5. Die folgenden Werte sind für den "Version"-Parameter unterstützt:
 
     + Release Candidate-0: **9.1.0.0**
     + Release Candidate 1: **9.2.0.22**
@@ -116,6 +128,11 @@ Weitere Informationen zu umfassenden lernen Netzwerken und ihre Implementierung 
     - ResNet\_101\_Updated.model
     - ResNet\_18\_Updated.model
     - ResNet\_50\_Updated.model
+
+
+> [!NOTE]
+> 
+> Wenn Sie der Pfad zu der Modelldatei zu lang ist, erhalten Sie möglicherweise einen Fehler, beim Aufrufen der Modelldatei aus Python-Code. Dies ist eine Einschränkung in der aktuellen Python-Implementierung. Dieses Problem wird in einer bevorstehenden Dienstversion behoben werden.
 
 ## <a name="examples"></a>Beispiele
 
@@ -149,10 +166,8 @@ Das Bild entsprechend den Anforderungen des trainierten Modells geändert werden
 > [!NOTE]
 > Es ist nicht möglich, zu lesen oder ändern die vortrainierte Modelle, da sie über ein systemeigenes Format zum Verbessern der Leistung komprimiert werden.
 
-
 ### <a name="text-analysis-example"></a>Beispiel für die Analyse von Text
 
 Siehe das folgende Beispiel zeigt, wie Sie das vortrainierte merkmalbereitstellung Textmodell für textklassifizierung verwenden:
 
 [Mithilfe von Text Featurizer Stimmungsanalyse](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
-

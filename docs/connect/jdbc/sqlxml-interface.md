@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7c67be98-efb5-446c-a0e3-ee67c43cb170
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 29b8b6708c4ebf01cc16130b08bb2892f2d1ec6e
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7c636345439175c516b647a2951ac3bfa8824b06
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="sqlxml-interface"></a>SQLXML-Schnittstelle
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -56,7 +54,6 @@ ms.lasthandoff: 09/09/2017
  Das SQLXML-Objekt nicht mehr weder beschreibbaren gelesen oder geschrieben werden beim Aufrufen einer der folgenden festlegungsmethoden: z. B. SetResult, SetCharacterStream, SetBinaryStream, und SetString.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Unterstützung von XML-Daten](../../connect/jdbc/supporting-xml-data.md)  
+ [Unterstützen von XML-Daten](../../connect/jdbc/supporting-xml-data.md)  
   
   
-

@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MiningStructure Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: MiningStructure Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- MiningStructure
-helpviewer_keywords:
-- MiningStructure element
+applies_to: SQL Server 2016 Preview
+f1_keywords: MiningStructure
+helpviewer_keywords: MiningStructure element
 ms.assetid: b943cd92-0ed8-4bd8-8fbc-7dab0534aede
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3aed46d59cc828600651c0c23bbd97d8eeafb3f3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0f0ce9ca930e54c1cf8ac989330e00f298a06a28
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="miningstructure-element-assl"></a>MiningStructure-Element (ASSL)
   Definiert die Struktur für einen Satz von Miningmodellen.  
@@ -105,4 +99,3 @@ ms.lasthandoff: 09/01/2017
  [SELECT &#40; DMX &#41;](../../../dmx/select-dmx.md)  
   
   
-

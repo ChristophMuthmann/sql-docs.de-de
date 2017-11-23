@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DiscoverResponse Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: DiscoverResponse Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#DiscoverResponse
 - microsoft.xml.analysis.discoverresponse
 - urn:schemas-microsoft-com:xml-analysis#DiscoverResponse
-helpviewer_keywords:
-- DiscoverResponse element
+helpviewer_keywords: DiscoverResponse element
 ms.assetid: 20e10a82-dbd1-4ead-b92d-f84b4b2f10c6
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6f5051e1c5a9841ccf4a949a6c5b99f45a9fc8d2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8d2483f4a610d1234277f5c686e71eb37266d124
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-elements---objects---discoverresponse"></a>XML-Elemente - Objekte - DiscoverResponse
   Enthält die Informationen von einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] als Antwort auf eine [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) -Methodenaufruf.  
@@ -76,4 +71,3 @@ ms.lasthandoff: 09/01/2017
  [Objekte &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-objects.md)  
   
   
-

@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- installing ODBC components [ODBC], setup program
+helpviewer_keywords: installing ODBC components [ODBC], setup program
 ms.assetid: 9cc5d75d-b293-41e5-927c-10f4af2e7af1
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 741ccfc8e9a096b60eca94b125890d48f65eb764
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 30637bacfb73d56528233ea13c4c6daeabecf814
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setup-program"></a>Setup-Programm
 > **Hinweis:** ab Windows XP und Windows Server 2003, **ODBC ist in der Windows-Betriebssystem enthalten**. Sie sollten nur explizit ODBC in früheren Versionen von Windows installieren.  
@@ -37,4 +34,3 @@ ms.lasthandoff: 09/09/2017
  Wie viel der Installation tatsächlich vom Setupprogramm abgeschlossen ist, hängt davon ab, was Aufrufe in das DLL-Installationsprogramm fungiert. Das Installationsprogramm DLL enthält Funktionen, um einzelne ODBC-Komponenten zu installieren. Ruft das Setup-Programm einfach **SQLInstallDriverManager**, **SQLInstallDriverEx**, oder **SQLInstallTranslatorEx** im Installationsprogramm DLL, die den Pfad der abzurufenden der Verzeichnis, in dem die Komponente installiert werden und Informationen über die Komponente zur Registrierung hinzugefügt ist. Diese Funktionen kopieren Sie Dateien nicht tatsächlich; das Setup-Programm wird anhand der Informationen in den Argumenten dieser Funktionen.  
   
  Das Installationsprogramm DLL enthält auch Funktionen zum Entfernen von ODBC-Komponenten. Der Setup-Programm ruft **SQLRemoveDriverManager**, **SQLRemoveDriver**, oder **SQLRemoveTranslator** im Installationsprogramm DLL um eine Komponente Auslastung zu verringern. Anzahl der in der Registrierung und, wenn neue Verwendungsanzahl der Komponente auf 0 liegt, entfernen Sie alle Informationen über die Komponente aus der Registrierung. Diese Funktionen bauen Sie die Dateien für die Komponente nicht tatsächlich; das Setup-Programm wird auf 0 fällt die Verwendungsanzahl der neuen.
-
