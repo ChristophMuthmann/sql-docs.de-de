@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 |Standardmäßiges Format der Zeichenfolgenliterale<br /><br /> (wird für Downlevelclients verwendet)|ss [.nnnnnnn] für Informatica –)<br /><br /> Weitere Informationen finden Sie im nachfolgenden Abschnitt "Abwärtskompatibilität für Downlevelclients".|  
 |Bereich|00:00:00.0000000 über 23:59:59.9999999 (00:00:00.000 über 23:59:59.999 für Informatica –)|  
 |Elementbereiche|Bei hh handelt es sich um zwei Ziffern im Bereich von 0 bis 23, die die Stunde darstellen.<br /><br /> Bei mm handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Minute darstellen.<br /><br /> Bei ss handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Sekunde darstellen.<br /><br /> n\*ist null bis sieben Ziffern im Bereich von 0 bis 9999999, die die Sekundenbruchteile darstellen. Für Informatica n\* ist null bis drei Ziffern im Bereich von 0 bis 999.|  
-|Zeichenlänge|mindestens 8 Positionen (HH) bis maximal 16 (ss.nnnnnnn). Für Informatica – ist die maximal 12 (hh:mm:ss.nnn).|  
+|Zeichenlänge|Mindestens 8 Positionen (hh:mm:ss) bis maximal 16 Positionen (hh:mm:ss.nnnnnnn) Für Informatica – ist die maximal 12 (hh:mm:ss.nnn).|  
 |Genauigkeit, Dezimalstellen<br /><br /> (Benutzer gibt nur Dezimalstellen an)|Finden Sie in der folgenden Tabelle aus.|  
 |Speichergröße|Standardmäßig 5 Bytes fest, wobei die Standardgenauigkeit in Sekundenbruchteilen 100 ns beträgt. Im Informatica –, die Standardeinstellung ist 4 Bytes fest, der Standardwert ist 1 ms Bruchteilen zweiter mit einfacher Genauigkeit.|  
 |Genauigkeit|100 Nanosekunden (1 Millisekunde im Informatica –)|  
