@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ffad3e8daf95263a5c0ce8ee6607c2715defe43b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 035348a23627db2346d319c69030e74e128e744b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Installieren von Analysis Services im PowerPivot-Modus
   In den Verfahren in diesem Thema werden Sie durch die Installation eines einzelnen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Servers im [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Modus für eine SharePoint-Bereitstellung geführt. In den Schritten führen Sie u. a. den Installations-Assistenten für SQL Server sowie Konfigurationsaufgaben unter Verwendung der SharePoint-Zentraladministration aus.  
@@ -60,7 +59,7 @@ ms.lasthandoff: 09/01/2017
   
 -   **Mittlere Ebene:** Erweiterungen zu den [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Erfahrungen in SharePoint, einschließlich des [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Katalogs, der planmäßigen Datenaktualisierung, des Management-Dashboards und Datenanbietern. Weitere Informationen zur Installation und Konfiguration der mittleren Ebene finden Sie unter:  
   
-    -   [Installieren Sie oder deinstallieren Sie des PowerPivot für SharePoint Add-in (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)  
+    -   [Installieren oder Deinstallieren des „Power Pivot für SharePoint“-Add-In (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)  
   
     -   [Installieren oder Deinstallieren des PowerPivot für SharePoint-Add-Ins &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)  
   
@@ -122,7 +121,7 @@ ms.lasthandoff: 09/01/2017
   
 13. Legen Sie alle Dienste auf der Seite **Serverkonfiguration** auf den **Starttyp**"Automatisch" fest. Geben Sie das gewünschte Domänenkonto und Kennwort für **SQL Server Analysis Services**an, **(1)** im folgenden Diagramm.  
   
-    -   Für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]können Sie ein ****  Domänenbenutzerkonto oder ein ****  NetworkService-Konto verwenden. Das LocalSystem- oder LocalService-Konto sollte nicht verwendet werden.  
+    -   Für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]können Sie ein **Domänenbenutzerkonto** oder ein **NetworkService-Konto** verwenden. Das LocalSystem- oder LocalService-Konto sollte nicht verwendet werden.  
   
     -   Wenn Sie das SQL Server-Datenbankmodul und den SQL Server-Agent hinzugefügt haben, können Sie die Dienste zur Ausführung unter Domänenbenutzerkonten oder unter dem standardmäßigen virtuellen Konto konfigurieren.  
   
@@ -257,7 +256,7 @@ ms.lasthandoff: 09/01/2017
   
 4.  Wählen Sie **Aus SQL Server**.  
   
-5.  Geben Sie im **** Datenverbindungs-Assistenten den Namen der SQL Server-Instanz ein, in der die Datenbank enthalten ist, die Sie verwenden möchten.  
+5.  Geben Sie im **Datenverbindungs-Assistenten** den Namen der SQL Server-Instanz ein, in der die Datenbank enthalten ist, die Sie verwenden möchten.  
   
 6.  Stellen Sie sicher, dass unter „Anmeldeinformationen“ **Windows-Authentifizierung verwenden** ausgewählt ist, und klicken Sie dann auf **Weiter**.  
   
@@ -319,4 +318,3 @@ ms.lasthandoff: 09/01/2017
  [Aktualisieren von Arbeitsmappen und planmäßige Datenaktualisierungen &#40; SharePoint 2013 &#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   
-
