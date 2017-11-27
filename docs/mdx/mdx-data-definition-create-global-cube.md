@@ -2,10 +2,14 @@
 title: Erstellen Sie GLOBAL CUBE-Anweisung (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -15,24 +19,26 @@ f1_keywords:
 - CREATE
 - CREATE GLOBAL
 - CREATE GLOBAL CUBE
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - statements [MDX], CREATE GLOBAL CUBE
 - CREATE GLOBAL CUBE
 ms.assetid: b46f3c98-a4f1-4ebb-915f-a3333f4054dc
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: ec645e2e9d97abe96d95bc6d1118fce180355029
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b9a80a053d9666ca2e8c63eb6037dddf3cf4a7a5
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>MDX-Datendefinition - globalen CUBE erstellen
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Erstellt einen lokal persistenten Cube, der auf einem Teilcube aus einem Cube auf dem Server basiert, und füllt ihn auf. Für die Verbindung mit dem lokal persistenten Cube ist keine Verbindung mit dem Server erforderlich. Weitere Informationen zu lokalen Cubes finden Sie unter [lokale Cubes &#40; Analysis Services – mehrdimensionale Daten &#41; ](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md).  
   
@@ -217,3 +223,4 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
  [Erstellen Sie SESSION CUBE-Anweisung &#40; MDX &#41;](../mdx/mdx-data-definition-create-session-cube.md)  
   
   
+

@@ -2,10 +2,14 @@
 title: Erstellen von SESSION CUBE-Anweisung (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,24 +20,26 @@ f1_keywords:
 - CREATE SESSION CUBE
 - CREATE SESSION
 - CREATE
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - CREATE SESSION CUBE
 - statements [MDX], CREATE SESSION CUBE
 ms.assetid: 06b90f44-d943-4a52-b0d8-4bcbc57ed6ec
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 7d6874baf083252b258e367887f0c696a1f02ba7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 14556669f6c39977fa1f82d8fbe6a2edff927837
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>Datendefinition der MDX - SITZUNGSCUBE erstellen
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Erstellt einen Sitzungscube aus einem vorhandenen Servercube und füllt ihn auf. Der Sitzungscube ist nur innerhalb der aktuellen Sitzung sichtbar. Er kann nicht durchsucht oder aus einer anderen Sitzung abgefragt werden. Der Sitzungscube wird beim Beenden der Sitzung implizit gelöscht.  
   
@@ -220,3 +226,4 @@ CREATE SESSION CUBE [Adventure Works_XL_GROUPING1]
  [Erstellen Sie GLOBAL CUBE-Anweisung &#40; MDX &#41;](../mdx/mdx-data-definition-create-global-cube.md)  
   
   
+

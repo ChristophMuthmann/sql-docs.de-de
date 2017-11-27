@@ -2,29 +2,37 @@
 title: Untergeordnete Elemente (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: CHILDREN
-dev_langs: kbMDX
-helpviewer_keywords: Children function
+f1_keywords:
+- CHILDREN
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Children function
 ms.assetid: ce2c3069-914c-44a3-8a4c-5cbd4fb71e4c
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b6d6333f35abf27d4dce14a6cf2dc6f4866debf2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 4d55ca99aade56ae6cf5b1e01402877c924b78d8
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="children-mdx"></a>Children (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Gibt die Menge der untergeordneten Elemente eines angegebenen Elements zurück.  
   
@@ -69,3 +77,4 @@ FROM
  [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
+

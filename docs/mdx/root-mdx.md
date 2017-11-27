@@ -2,29 +2,37 @@
 title: Root (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: Root
-dev_langs: kbMDX
-helpviewer_keywords: Root function
+f1_keywords:
+- Root
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Root function
 ms.assetid: f6c42e87-5a52-4e43-9dd1-ca757f2db79c
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: d9ff454cb9953c084a75e1bf3621ff45d047d00d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 9e6eb1b8be0c5ef654ccf07bfce45070cf6bcc14
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="root-mdx"></a>Root (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Gibt ein Tupel, aus denen besteht die **alle** Elemente aus jeder Attributhierarchie innerhalb des aktuellen Bereichs in einem Cube, Dimension oder Tupel. Weitere Informationen zum Bereich finden Sie unter [SCOPE-Anweisung &#40; MDX &#41; ](../mdx/mdx-scripting-scope.md).  
   
@@ -88,3 +96,4 @@ WHERE [Measures].[Order Count]
  [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
+

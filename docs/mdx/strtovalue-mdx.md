@@ -2,29 +2,37 @@
 title: StrToValue (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: STRTOVALUE
-dev_langs: kbMDX
-helpviewer_keywords: StrToValue function
+f1_keywords:
+- STRTOVALUE
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- StrToValue function
 ms.assetid: 118a9c4f-74a3-48d5-a4f4-318664bc51bc
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b931cdfb5cc877ac9761592274df6bf71762bba2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 9db77d7e3d4721337ccbeb397d6cb7382209f027
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="strtovalue-mdx"></a>StrToValue (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Gibt den durch eine Zeichenfolge im MDX-Format (Multidimensional Expressions) angegebenen numerischen Wert zurück.  
   
@@ -68,3 +76,4 @@ WHERE [Product].[Product Categories].[Bikes]
  [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
+

@@ -2,29 +2,37 @@
 title: CovarianceN (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: COVARIANCEN
-dev_langs: kbMDX
-helpviewer_keywords: Covariancen function
+f1_keywords:
+- COVARIANCEN
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Covariancen function
 ms.assetid: 1cc621cd-ffa0-40aa-91f0-bc5cb57f692b
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 1dddff289640ae140f1e4e083487ced339fbd96c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 2eeee4c108965c00e847a8c3acdd60334e39000f
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="covariancen-mdx"></a>CovarianceN (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Gibt die Stichprobenkovarianz eines X-Y-Wertepaares zurück, die für ein Menge mithilfe der nicht unausgewogenen Auffüllungsformel (geteilt durch die Anzahl der X-Y-Paare) ausgewertet wurde.  
   
@@ -57,3 +65,4 @@ CovarianceN(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
  [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
+

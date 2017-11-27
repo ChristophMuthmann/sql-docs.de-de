@@ -2,28 +2,35 @@
 title: Bitweise Operatoren | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords: bitwise operators
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- bitwise operators
 ms.assetid: 7349167b-f4b3-4344-bd01-b8f5fee4a509
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 78a63892e5bcdbf7cc9c591c6344589492106459
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 73d85cd8e892b6d1f9bfe4f0999e73e4da16f73c
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="bitwise-operators"></a>Bitweise Operatoren
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Logische Operatoren werten Werte aus und geben einen booleschen Wert zurück. In MDX (Multidimensional Expressions) führen logische Operatoren keine bitweisen Operationen aus.  
   
@@ -31,10 +38,10 @@ ms.lasthandoff: 11/09/2017
   
 |Operator|Description|  
 |--------------|-----------------|  
-|[AND](../mdx/and-mdx.md)|Führt eine logische Konjunktion zweier numerischer Ausdrücke aus.|  
-|[IS](../mdx/is-mdx.md)|Führt einen logischen Vergleich zweier Objektausdrücke aus.|  
-|[NOT](../mdx/not-mdx.md)|Führt eine logische Negation für einen numerischen Ausdruck aus.|  
-|[ ODER ](../mdx/or-mdx.md)|Führt eine logische Disjunktion mit zwei numerischen Ausdrücken aus.|  
+|[UND](../mdx/and-mdx.md)|Führt eine logische Konjunktion zweier numerischer Ausdrücke aus.|  
+|[IST](../mdx/is-mdx.md)|Führt einen logischen Vergleich zweier Objektausdrücke aus.|  
+|[NICHT](../mdx/not-mdx.md)|Führt eine logische Negation für einen numerischen Ausdruck aus.|  
+|[OR](../mdx/or-mdx.md)|Führt eine logische Disjunktion mit zwei numerischen Ausdrücken aus.|  
 |[XOR](../mdx/xor-mdx.md)|Führt eine logische Exklusion zweier numerischer Ausdrücke aus.|  
   
 ## <a name="see-also"></a>Siehe auch  
@@ -42,3 +49,4 @@ ms.lasthandoff: 11/09/2017
  [Operatoren &#40; MDX-Syntax &#41;](../mdx/operators-mdx-syntax.md)  
   
   
+

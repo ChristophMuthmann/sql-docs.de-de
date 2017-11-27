@@ -2,10 +2,14 @@
 title: DROP SET-Anweisung (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -13,7 +17,8 @@ f1_keywords:
 - DROP
 - DROP SET
 - DROP_SET
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - DROP SET statement
 - deleting named sets
@@ -21,19 +26,20 @@ helpviewer_keywords:
 - removing named sets
 - dropping named sets
 ms.assetid: bbc37afb-af8c-41df-ba81-12771beb1c41
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 6e7506435fb4bc69335000ffde69c740d1e44c1a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: e4138e926a72af94389df15c924cf6bbcfb6e8e1
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="mdx-data-definition---drop-set"></a>MDX-Datendefinition - DROP SET
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Entfernt eine benannte Menge.  
   
@@ -63,3 +69,4 @@ DROP [SESSION] SET
  [MDX-Datendefinitionsanweisungen &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   
+

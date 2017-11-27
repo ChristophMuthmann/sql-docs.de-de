@@ -2,30 +2,36 @@
 title: MDX-Syntaxkonventionen (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], syntax
 - MDX [Analysis Services], syntax
 ms.assetid: 50a6e723-91c4-407b-a0d5-87d0d4e4e0f6
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 1ea6c7ecf3ecebf9fcb29e11ef89e554b2a343f0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 522b9ad28f712c52e603a2eaf539bb76f4dd0bd6
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="mdx-syntax-conventions-mdx"></a>MDX-Syntaxkonventionen (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   In den Diagrammen für die MDX-Syntax (Multidimensional Expressions) in der MDX-Sprachreferenz gelten die folgenden Konventionen.  
   
@@ -33,7 +39,7 @@ ms.lasthandoff: 11/09/2017
 |----------------|-----------|  
 |*Kursiv*|Gibt vom Benutzer anzugebende Argumente der MDX-Syntax an.|  
 |&#124; (Senkrechter Strich)|Trennt Syntaxelemente innerhalb von eckigen oder geschweiften Klammern. Sie können nur eines der Elemente auswählen.|  
-|`[ ]` (eckige Klammern)|Zeigt optionale Syntaxelemente an. Geben Sie die eckigen Klammern nicht mit ein.|  
+|`[ ]`(Klammern)|Zeigt optionale Syntaxelemente an. Geben Sie die eckigen Klammern nicht mit ein.|  
 |[,] ...n|Zeigt an, dass das vorherige Element beliebig oft wiederholt werden kann. Die einzelnen Elemente werden manchmal durch Kommas voneinander getrennt.|  
 |\<Bezeichnung >:: =|Zeigt den Namen eines Syntaxblockes an. Diese Konvention dient zur Gruppierung und Bezeichnung von Teilen einer langen Syntax oder einer Syntaxeinheit, die an mehreren Stellen innerhalb einer Anweisung verwendet werden kann. Jeder Standort in der die Syntax kann verwendet werden, wird angegeben, mit der Bezeichnung in spitzen Klammern eingeschlossen: \<Bezeichnung >.|  
   
@@ -41,4 +47,5 @@ ms.lasthandoff: 11/09/2017
  [MDX-Sprachreferenz &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)  
   
   
+
 

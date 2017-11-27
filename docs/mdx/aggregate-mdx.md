@@ -2,29 +2,37 @@
 title: Aggregat (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: AGGREGATE
-dev_langs: kbMDX
-helpviewer_keywords: Aggregate function
+f1_keywords:
+- AGGREGATE
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Aggregate function
 ms.assetid: 9d5e0966-74d1-4cc8-b9f9-47e4dc65d165
-caps.latest.revision: "52"
+caps.latest.revision: 52
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 109d8dc31ba0847cd7c1d0ff605e56d18ae13d52
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 894891e8341cc66253e9d4e5b952551b8b91071c
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Gibt eine Zahl zurück, die durch Aggregieren über die vom Mengenausdruck zurückgegebenen Zellen berechnet wird. Wenn kein numerischer Ausdruck angegeben wird, aggregiert die Funktion jedes Measure im aktuellen Abfragekontext mit dem für jedes Measure definierten Standardaggregationsoperator. Wenn ein numerischer Ausdruck angegeben wird, wertet die Funktion zuerst den numerischen Ausdruck für jede Zelle in der angegebenen Menge aus und summiert dann die Werte.  
   
@@ -49,7 +57,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
   
 |Aggregationsoperator|Ergebnis|  
 |--------------------------|------------|  
-|Sum|Gibt die Summe der Werte über die Menge zurück.|  
+|SUM|Gibt die Summe der Werte über die Menge zurück.|  
 |Count|Gibt die Anzahl der Werte über die Menge zurück.|  
 |Max|Gibt den Maximalwert über die Menge zurück.|  
 |Min|Gibt den Minimalwert über die Menge zurück.|  
@@ -142,3 +150,4 @@ WHERE ([Geography].[State-Province].x,
  [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
+

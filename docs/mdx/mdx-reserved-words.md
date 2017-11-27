@@ -2,31 +2,37 @@
 title: "Reservierte Wörter in MDX | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - reserved words [MDX]
 - Multidimensional Expressions [Analysis Services], reserved words
 - MDX [Analysis Services], reserved words
 ms.assetid: 8d059a8c-d578-4713-a615-2404d94ce32d
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 5f25b4718ec55d6e7d41c626cc6f0f499cf49d4a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 8bec4b29379b4ad31c8da4074786e95dc058ad10
+ms.contentlocale: de-de
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="mdx-reserved-words"></a>Reservierte Wörter in MDX
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Die folgende Tabelle enthält Wörter, die für die Verwendung durch MDX (Multidimensional Expressions) reserviert sind. Sie sollten diese Wörter nicht als Teil eines Bezeichners, z. B. eines Cubenamens oder des Namens einer benutzerdefinierten Funktion, in MDX verwenden.  
   
@@ -62,7 +68,7 @@ ms.lasthandoff: 11/09/2017
 |CALCULATIONPASSVALUE|FREEZE|NULL|TRUE|  
 |CALCULATIONS|FROM|ON|TUPLETOSTR|  
 |CALL|GENERATE|OPENINGPERIOD|TYPE|  
-|CELL|GLOBAL|oder|UNION|  
+|CELL|GLOBAL|OR|UNION|  
 |CELLFORMULASETLIST|GROUP|PAGES|UNIQUE|  
 |CHAPTERS|GROUPING|PARALLELPERIOD|UNIQUENAME|  
 |CHILDREN|HEAD|PARENT|UPDATE|  
@@ -72,9 +78,9 @@ ms.lasthandoff: 11/09/2017
 |COLUMN|IGNORE|PREDICT|USE_WEIGHTED_INCREMENT|  
 |COLUMNS|IIF|PREVMEMBER|USERNAME|  
 |CORRELATION|INCLUDEEMPTY|PROPERTIES|VALIDMEASURE|  
-|COUNT|INDEX|PROPERTY|Value|  
+|COUNT|INDEX|PROPERTY|VALUE|  
 |COUSIN|INTERSECT|QTD|VARIANZ|  
-|COVARIANCE|IS|RANK|Varianz|  
+|COVARIANCE|IS|RANK|VARIANCE|  
 |COVARIANCEN|ISANCESTOR|RECURSIVE|VARIANCEP|  
 |CREATE|ISEMPTY|RELATIVE|VARIANZAUFFÜLL|  
 |CREATEPROPERTYSET|ISGENERATION|ROLLUPCHILDREN|VISUAL|  
@@ -92,3 +98,4 @@ ms.lasthandoff: 11/09/2017
  [MDX-Sprachreferenz &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)  
   
   
+
