@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="bkmk_addtype"></a> Hinzufügen des Inhaltstyps zu einer Dokumentbibliothek  
  Sie müssen mindestens über die Listenverwaltungsberechtigung verfügen, um einen Inhaltstyp hinzuzufügen und zu konfigurieren. Diese Berechtigung ist in die Berechtigungsebene "Entwerfen" und höher integriert.  
   
- Die Website, die die Dokumentbibliothek enthält, muss eine Funktionsaktivierung für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint aufweisen. Weitere Informationen finden Sie unter [Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
+ Die Website, die die Dokumentbibliothek enthält, muss eine Funktionsaktivierung für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint aufweisen. Weitere Informationen finden Sie unter [Aktivieren der PowerPivot-Funktionsintegration für Websitesammlungen in der Zentraladministration](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
 1.  Öffnen Sie die Dokumentbibliothek, für die Sie den BI-Semantikmodell-Verbindungsinhaltstyp aktivieren möchten.  
   
