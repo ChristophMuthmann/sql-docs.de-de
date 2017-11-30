@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b2bf5afe622a5d21d5b3bacc1be819f0b120719b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f4bcc1bb453783a38c4b23e6526de1a804bde8f1
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysspxtpcontrolqueryexecstats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -36,8 +36,6 @@ ms.lasthandoff: 11/17/2017
  Die Leistung nimmt ab, wenn Sie die Statistiksammlung aktivieren. Wenn Sie eine Problembehandlung nur für eine bzw. einige wenige systemintern kompilierte gespeicherte Prozeduren durchführen möchten, können Sie die Statistiksammlung nur für diese bestimmten systemintern kompilierten gespeicherten Prozeduren aktivieren.  
   
  Zum Aktivieren der Statistiksammlung auf Prozedurebene für alle systemintern kompilierten gespeicherten Prozeduren finden Sie unter [sp_xtp_control_proc_exec_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  
-  
-|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] über [aktuelle Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)). |  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -1,11 +1,11 @@
 ---
 title: ALTER INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 11/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
-ms.component: t-sql|statements
+ms.component: tsql|statements
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -14,7 +14,7 @@ ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
 - ALTER_INDEX_TSQL
-dev_langs: TSQL
+dev_langs: t-sql
 helpviewer_keywords:
 - indexes [SQL Server], reorganizing
 - ALTER INDEX statement
@@ -43,17 +43,19 @@ helpviewer_keywords:
 - indexes [SQL Server], options
 - ALLOW_PAGE_LOCKS option
 - page locks [SQL Server]
+- index rebuild [SQL Server]
+- index reorganize [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 caps.latest.revision: "222"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 39f0a539906f192c39599dda94dfa150c13fdeca
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ef1bc9e0e99288cb739f53eb42a8e19691a04601
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +67,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="syntax"></a>Syntax  
   
 ```  
--- Syntax for SQL Server and SQL Database
+-- Syntax for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
   
 ALTER INDEX { index_name | ALL } ON <object>  
 {  
@@ -150,7 +152,7 @@ ALTER INDEX { index_name | ALL } ON <object>
 ```  
   
 ```  
--- Syntax for SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ALTER INDEX { index_name | ALL }  
     ON   [ schema_name. ] table_name  
@@ -185,13 +187,13 @@ ALTER INDEX { index_name | ALL }
   
 |Mithilfe des Schlüsselworts ALL mit diesem Vorgang|Erzeugt einen Fehler, wenn mindestens einer dieser Indextypen in der Tabelle enthalten ist|  
 |----------------------------------------|----------------------------------------|  
-|REBUILD WITH ONLINE = ON|XML-Index<br /><br /> Räumlicher Index<br /><br /> Columnstore-Index: **gilt für:** SQL Server (beginnend mit SQL Server 2012) und Azure SQL-Datenbank.|  
+|REBUILD WITH ONLINE = ON|XML-Index<br /><br /> Räumlicher Index<br /><br /> Columnstore-Index: **gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
 |REBUILD PARTITION = *Partitionsnummer*|Nicht partitionierter Index, XML-Index, räumlicher Index oder deaktivierter Index|  
 |REORGANIZE|Indizes, für die ALLOW_PAGE_LOCKS auf OFF festgelegt wurde|  
 |REORGANIZE PARTITION = *Partitionsnummer*|Nicht partitionierter Index, XML-Index, räumlicher Index oder deaktivierter Index|  
-|IGNORE_DUP_KEY = ON|XML-Index<br /><br /> Räumlicher Index<br /><br /> Columnstore-Index: **gilt für:** SQL Server (beginnend mit SQL Server 2012) und Azure SQL-Datenbank.|  
-|ONLINE = ON|XML-Index<br /><br /> Räumlicher Index<br /><br /> Columnstore-Index: **gilt für:** SQL Server (beginnend mit SQL Server 2012) und Azure SQL-Datenbank.|
-| FORTSETZBARE = ON  | Fortsetzbare Indizes nicht unterstützt, mit **alle** Schlüsselwort. <br /><br /> **Gilt für**: ab SQL Server-2017 und Azure SQL-Datenbank |   
+|IGNORE_DUP_KEY = ON|XML-Index<br /><br /> Räumlicher Index<br /><br /> Columnstore-Index: **gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
+|ONLINE = ON|XML-Index<br /><br /> Räumlicher Index<br /><br /> Columnstore-Index: **gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|
+| FORTSETZBARE = ON  | Fortsetzbare Indizes nicht unterstützt, mit **alle** Schlüsselwort. <br /><br /> **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und[!INCLUDE[ssSDS](../../includes/sssds-md.md)] |   
   
 > [!WARNING]
 >  Ausführlichere Informationen zu indexvorgängen, die online ausgeführt werden können, finden Sie unter [Richtlinien für Onlineindexvorgänge](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
@@ -207,7 +209,7 @@ ALTER INDEX { index_name | ALL }
  *table_or_view_name*  
  Der Name der Tabelle oder Sicht, die dem Index zugeordnet ist. Um einen Bericht über die Indizes eines Objekts anzuzeigen, verwenden die [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) -Katalogsicht angezeigt.  
   
- SQL-Datenbank unterstützt drei Teilen bestehende Format Database_name. [Schema_name] .table_or_view_name Wenn Database_name die aktuelle Datenbank oder Database_name Tempdb und den Table_or_view_name beginnt mit #.  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)]unterstützt drei Teilen bestehende Format Database_name. [Schema_name] .table_or_view_name Wenn Database_name die aktuelle Datenbank oder Database_name Tempdb und den Table_or_view_name beginnt mit #.  
   
  REBUILD [WITH **(**\<Rebuild_index_option > [ **,**... *n*]**)** ]  
  Gibt an, dass der Index mit denselben Spalten, demselben Indextyp, demselben Eindeutigkeitsattribut und derselben Sortierreihenfolge neu erstellt wird. Diese Klausel entspricht [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md). Mit REBUILD wird ein deaktivierter Index aktiviert. Durch das Neuerstellen eines gruppierten Indexes erfolgt nicht die Neuerstellung von zugeordneten nicht gruppierten Indizes, es sei denn, das Schlüsselwort ALL ist angegeben. Wenn Indexoptionen nicht angegeben werden, die vorhandenen Indexoptionen in gespeicherten [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) angewendet werden. Für alle Indexoptionen, deren Wert sich nicht in befindet **sys.indexes**, gilt die Standardeinstellung, die in der argumentdefinition der Option angegeben.  
@@ -219,7 +221,7 @@ ALTER INDEX { index_name | ALL }
 > [!NOTE]
 >  Wenn Sie einen primären XML-Index neu erstellen, ist die zugrunde liegende Benutzertabelle während des Indexvorgangs nicht verfügbar.  
   
-**Gilt für**: SQL Server (beginnend mit SQL Server 2012) und Azure SQL-Datenbank.
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  Für columnstore-Indizes, der Neuerstellungsvorgang:  
   
@@ -233,7 +235,7 @@ ALTER INDEX { index_name | ALL }
   
 PARTITION  
 
-**Gilt für**: SQL Server (beginnend mit SQL Server 2008) und Azure SQL-Datenbank.  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Gibt an, dass nur eine Partition eines Indexes neu erstellt oder neu organisiert wird. PARTITION kann nicht angegeben werden, wenn *Index_name* ist kein partitionierter Index.  
   
@@ -244,13 +246,13 @@ PARTITION
   
  *Partitionsnummer*  
    
-**Gilt für**: SQL Server (beginnend mit SQL Server 2008) und Azure SQL-Datenbank.
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  Die Partitionsnummer eines partitionierten Indexes, der neu erstellt oder neu organisiert werden soll. *Partitionsnummer* ist ein konstanter Ausdruck, die auf Variablen verweisen kann. Bei diesen Variablen kann es sich um Funktionen und benutzerdefinierte Variablen oder Funktionen handeln, die jedoch nicht auf eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung verweisen können. *Partitionsnummer* muss vorhanden sein, oder die Anweisung schlägt fehl.  
   
  MIT **(**\<Single_partition_rebuild_index_option >**)**  
    
-**Gilt für**: SQL Server (beginnend mit SQL Server 2008) und Azure SQL-Datenbank.  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  SORT_IN_TEMPDB, MAXDOP und DATA_COMPRESSION sind die Optionen, die angegeben werden können, wenn Sie eine einzelne Partition neu erstellen (PARTITION =  *n* ). XML-Indizes können nicht bei der Neuerstellung einer einzelnen Partition angegeben werden.  
   
@@ -296,7 +298,7 @@ Für columnstore-Indizes komprimiert REORGANIZE jede GESCHLOSSENEN Delta-Zeileng
   
 -   Um alle öffnen "und" CLOSED-Zeilengruppen zu komprimieren, finden Sie unter der Option REORGANIZE mit (COMPRESS_ALL_ROW_GROUPS) in diesem Abschnitt.  
   
-Für columnstore-Indizes in SQL Server (ab 2016) und SQL-Datenbank führt REORGANIZE online die folgende zusätzliche Defragmentierung-Optimierungen:  
+Für columnstore-Indizes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab 2016) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)], REORGANIZE führt die folgenden Optimierungen für zusätzliche Defragmentierung online:  
   
 -   Physisch entfernt Zeilen aus einer Zeilengruppe, wenn mindestens 10 % der Zeilen logisch gelöscht wurden. Die gelöschten Bytes werden auf dem physischen Medium freigegeben. Beispielsweise verfügt eine komprimierte Zeilengruppe mit 1 Million Zeilen 100 KB Zeilen gelöscht, SQL Server die gelöschten Zeilen zu entfernen und komprimieren die Zeilengruppe mit 900 k-Zeilen. Er speichert im Speicher durch Entfernen von gelöschten Zeilen.  
   
@@ -305,7 +307,7 @@ Für columnstore-Indizes in SQL Server (ab 2016) und SQL-Datenbank führt REORGA
 -   Bei Zeilengruppen, in denen mindestens 10 % der Zeilen logisch gelöscht wurden, versucht SQL Server, die dieser Zeilengruppe mit ein oder mehrere Zeilengruppen zu kombinieren.    Beispielsweise Zeilengruppe 1 mit 500.000 Zeilen komprimiert wird und Zeilengruppe 21 mit dem Maximum von 1.048.576 Zeilen komprimiert wird.  Zeilengruppe 21 hat 60 % der Zeilen gelöscht 409,830 Zeilen zu verwerfen. SQL Server wird bevorzugt, kombinieren diese zwei Zeilengruppen, um eine neue Zeilengruppe zu komprimieren, die 909,830 Zeilen enthält.  
   
 MIT NEU ORGANISIEREN (COMPRESS_ALL_ROW_GROUPS = {ON | **OFF** })  
- In SQL Server (ab 2016) und SQL-Datenbank bietet die COMPRESS_ALL_ROW_GROUPS eine Möglichkeit zum Öffnen oder CLOSED Delta-Zeilengruppen in den Columnstore zu zwingen. Mit dieser Option ist es nicht notwendig, um die Delta-Zeilengruppen zu leeren der columnstore-Index neu.  In Kombination mit dem anderen entfernen und Merge Defragmentierung Funktionen wird nicht mehr notwendig, dass der Index in den meisten Situationen neu erstellt.    
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab 2016) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)], die COMPRESS_ALL_ROW_GROUPS bietet eine Möglichkeit zum Öffnen oder CLOSED Delta-Zeilengruppen in den Columnstore zu zwingen. Mit dieser Option ist es nicht notwendig, um die Delta-Zeilengruppen zu leeren der columnstore-Index neu.  In Kombination mit dem anderen entfernen und Merge Defragmentierung Funktionen wird nicht mehr notwendig, dass der Index in den meisten Situationen neu erstellt.    
 -   ON erzwingt, dass alle Zeilengruppen in den Columnstore, unabhängig von der Größe und Status (geschlossen oder geöffnet).  
   
 -   Erzwingt die deaktiviert alle CLOSED-Zeilengruppen in den Columnstore.  
@@ -315,7 +317,7 @@ Legen Sie **(** \<Set_index Option > [ **,**... *n*] **)**
   
 PAD_INDEX = { ON | OFF }  
    
-**Gilt für**: SQL Server (beginnend mit SQL Server 2008) und Azure SQL-Datenbank.  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Gibt die Auffüllung von Indizes an. Der Standardwert ist OFF.  
   
@@ -329,7 +331,7 @@ PAD_INDEX = { ON | OFF }
   
 FILLFACTOR = *Fillfactor*  
  
- **Gilt für**: SQL Server (beginnend mit SQL Server 2008) und Azure SQL-Datenbank.
+ **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  Gibt einen Prozentwert an, der dem Füllfaktor entspricht. Dieser Faktor legt fest, wie weit die [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Blattebene jeder Indexseite während der Indexerstellung oder -änderung auffüllen soll.  *FILLFACTOR* muss ein ganzzahliger Wert zwischen 1 und 100 sein. Die Standardeinstellung ist 0. Die Füllfaktorwerte 0 und 100 sind in jeder Hinsicht identisch.  
   
@@ -342,8 +344,7 @@ FILLFACTOR = *Fillfactor*
   
  SORT_IN_TEMPDB = {ON | **OFF** }  
  
-
-**Gilt für**: SQL Server (beginnend mit SQL Server 2008) und Azure SQL-Datenbank.  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Gibt an, ob zum Speichern der Ergebnisse des Sortierens in **Tempdb**. Der Standardwert ist OFF.  
   
@@ -384,7 +385,7 @@ FILLFACTOR = *Fillfactor*
  Um das automatische Aktualisieren von Statistiken wiederherzustellen, müssen Sie STATISTICS_NORECOMPUTE auf OFF festlegen oder die UPDATE STATISTICS-Anweisung ohne die NORECOMPUTE-Klausel ausführen.  
   
 > [!IMPORTANT]
->  Wenn Sie die automatische Neuberechnung von Verteilungsstatistiken deaktivieren, wählt der Abfrageoptimierer möglicherweise nicht die optimalen Ausführungspläne für Abfragen, an denen die Tabelle beteiligt ist.  
+> Wenn Sie die automatische Neuberechnung von Verteilungsstatistiken deaktivieren, wählt der Abfrageoptimierer möglicherweise nicht die optimalen Ausführungspläne für Abfragen, an denen die Tabelle beteiligt ist.  
   
  STATISTICS_INCREMENTAL = {ON | **OFF** }  
  Wenn **ON**, die Statistiken erstellt werden, pro Partition. Wenn **OFF**, wird die statistikstruktur gelöscht und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Statistiken neu berechnet. Die Standardeinstellung ist **OFF**.  
@@ -404,9 +405,8 @@ FILLFACTOR = *Fillfactor*
 -   Statistiken, die für interne Tabellen erstellt wurden.  
   
 -   Statistiken, die mit räumlichen Indizes oder XML-Indizes erstellt wurden.  
-  
  
-**Gilt für**: SQL Server (beginnend mit SQL Server 2014) und Azure SQL-Datenbank.  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  ONLINE  **=**  {ON | **OFF** } \<wie für Rebuild_index_option >  
  Gibt an, ob die zugrunde liegenden Tabellen und zugeordneten Indizes für Abfragen und Datenänderungen während des Indexvorgangs verfügbar sind. Der Standardwert ist OFF.  
@@ -414,7 +414,7 @@ FILLFACTOR = *Fillfactor*
  Bei XML-Indizes oder räumlichen Indizes wird nur ONLINE = OFF unterstützt, und wenn ONLINE auf ON festgelegt wird, wird ein Fehler ausgelöst.  
   
 > [!NOTE]
->  Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den Editionen unterstützt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [Editionen und unterstützte Funktionen für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ON  
  Lang andauernde Sperren werden nicht für die Dauer des Indexvorgangs aufrechterhalten. Während der Hauptphase des Indexvorgangs wird nur eine beabsichtigte freigegebene Sperre (IS) für die Quelltabelle aufrechterhalten. Auf diese Weise können Abfragen oder Updates der zugrunde liegenden Tabelle und Indizes fortgesetzt werden. Zu Beginn des Vorgangs wird das Quellobjekt für sehr kurze Zeit mit einer gemeinsamen Sperre (S) belegt. Am Ende des Vorgangs wird für kurze Zeit eine S-Sperre für die Quelle eingerichtet, wenn ein nicht gruppierter Index erstellt wird, oder es wird eine Sch-M-Sperre (Schema Modification, Schemaänderung) eingerichtet, wenn ein gruppierter Index online erstellt oder gelöscht wird oder wenn ein gruppierter oder nicht gruppierter Index neu erstellt wird. ONLINE kann nicht auf ON festgelegt werden, wenn ein Index auf einer lokalen temporären Tabelle erstellt wird.  
@@ -432,11 +432,11 @@ FILLFACTOR = *Fillfactor*
   
 -   Eine Teilmenge eines partitionierten Indexes (ein vollständiger partitionierter Index kann online neu erstellt werden).  
 
--  SQL-Datenbank vor V12 und SQL Server vor SQL Server 2012, lässt nicht die `ONLINE` option für den gruppierten Index erstellen oder Vorgänge neu zu erstellen, wenn die Basistabelle enthält **varchar(max)** oder **varbinary(max)**  Spalten.
+-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]vor V12, und SQL Server vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], lässt nicht die `ONLINE` option für den gruppierten Index erstellen oder Vorgänge neu zu erstellen, wenn die Basistabelle enthält **varchar(max)** oder **varbinary(max)** Spalten.
 
 FORTSETZBARE  **=**  {ON | **OFF**}
 
-**Gilt für**: ab SQL Server-2017 und Azure SQL-Datenbank   
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und[!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
 
  Gibt an, ob ein Onlineindexvorgang kann wieder aufgenommen wird.
 
@@ -446,13 +446,13 @@ FORTSETZBARE  **=**  {ON | **OFF**}
 
 MAX_DURATION  **=**  *Zeit* [**Minuten**] mit verwendet **kann wieder aufgenommen werden = ON** (erfordert **ONLINE = ON**).
  
-**Gilt für**: ab SQL Server-2017 und Azure SQL-Datenbank 
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
 Gibt die Zeit (ein Integerwert in Minuten angegeben), dass eine fortsetzbar online-Vorgang Index werden ausgeführt, bevor er angehalten wurde. 
 
 ALLOW_ROW_LOCKS  **=**  { **ON** | {OFF}  
  
-**Gilt für**: SQL Server (beginnend mit SQL Server 2008) und Azure SQL-Datenbank.  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Gibt an, ob Zeilensperren zulässig sind. Der Standardwert ist ON.  
   
@@ -464,7 +464,7 @@ ALLOW_ROW_LOCKS  **=**  { **ON** | {OFF}
   
 ALLOW_PAGE_LOCKS  **=**  { **ON** | {OFF}  
   
-**Gilt für**: SQL Server (beginnend mit SQL Server 2008) und Azure SQL-Datenbank.
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  Gibt an, ob Seitensperren zulässig sind. Der Standardwert ist ON.  
   
@@ -479,7 +479,7 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** | {OFF}
   
  MAXDOP  **=**  Max_degree_of_parallelism  
  
-**Gilt für**: SQL Server (beginnend mit SQL Server 2008) und Azure SQL-Datenbank.  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Überschreibt die **Max. Grad an Parallelität** Konfigurationsoption für die Dauer des Indexvorgangs. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.  
   
@@ -500,10 +500,10 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** | {OFF}
  Weitere Informationen finden Sie unter [Konfigurieren von Parallelindexvorgängen](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]
->  Parallele Indexvorgänge sind nicht verfügbar in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+> Parallele Indexvorgänge sind nicht verfügbar in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den Editionen unterstützt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [Editionen und unterstützte Funktionen für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  COMPRESSION_DELAY  **=**  { **0** |*Dauer [Minuten]* }  
- Dieses Feature steht ab SQL Server 2016  
+ Diese Funktion ist verfügbar ab[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
  Verzögerung gibt die minimale Anzahl von Minuten an, die eine Delta-Zeilengruppen in den GESCHLOSSENEN Zustand verbleiben muss für eine datenträgerbasierte Tabelle in der deltazeilengruppe, vor SQL Server in der komprimierten Zeilengruppe komprimiert werden können. Da es sich bei datenträgerbasierten Tabellen nicht nachverfolgen einfügen und aktualisieren Zeiten für einzelne Zeilen, SQL Server gilt die Verzögerung in Delta-Zeilengruppen in den GESCHLOSSENEN Zustand übergeht.  
 Der Standardwert beträgt 0 Minuten.  
@@ -526,13 +526,13 @@ Der Standardwert beträgt 0 Minuten.
   
  COLUMNSTORE  
    
-**Gilt für**: SQL Server (beginnend mit SQL Server 2014) und Azure SQL-Datenbank.
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  Gilt nur für columnstore-Indizes, einschließlich nicht gruppierter und gruppierter columnstore-Indizes. COLUMNSTORE gibt an, dass der Index oder angegebene Partitionen, die mit der COLUMNSTORE_ARCHIVE-Option komprimiert wurden, dekomprimiert werden sollen. Nachdem die Daten wiederhergestellt wurden, sind sie weiterhin mit der columnstore-Komprimierung komprimiert, die für alle columnstore-Indizes verwendet wird.  
   
  COLUMNSTORE_ARCHIVE  
   
-**Gilt für**: SQL Server (beginnend mit SQL Server 2014) und Azure SQL-Datenbank.
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  Gilt nur für columnstore-Indizes, einschließlich nicht gruppierter und gruppierter columnstore-Indizes. Durch COLUMNSTORE_ARCHIVE wird die angegebene Partition weiter in eine geringere Größe komprimiert. Dies empfiehlt sich bei der Archivierung und in Situationen, in denen es auf eine geringere Speichergröße und nicht auf den zusätzlichen Zeitaufwand für das Speichern und Abrufen ankommt.  
   
@@ -540,7 +540,7 @@ Der Standardwert beträgt 0 Minuten.
   
  AUF PARTITIONEN **(** { \<Partition_number_expression > | \<Bereich >} [**,**... n] **)**  
     
-**Gilt für**: SQL Server (beginnend mit SQL Server 2008) und Azure SQL-Datenbank. 
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. 
   
  Gibt die Partitionen an, für die die DATA_COMPRESSION-Einstellung gilt. Wenn der Index nicht partitioniert ist, erzeugt das ON PARTITIONS-Argument einen Fehler. Wenn die ON PARTITIONS-Klausel nicht angegeben wird, gilt die DATA_COMPRESSION-Option für alle Partitionen eines partitionierten Indexes.  
   
@@ -556,7 +556,7 @@ Der Standardwert beträgt 0 Minuten.
   
  Wenn Sie für verschiedene Partitionen unterschiedliche Datenkomprimierungstypen festlegen möchten, geben Sie die Option DATA_COMPRESSION mehrmals an, beispielsweise:  
   
-```tsql  
+```t-sql  
 REBUILD WITH   
 (  
 DATA_COMPRESSION = NONE ON PARTITIONS (1),   
@@ -569,7 +569,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  Gibt an, ob ein Index oder eine Indexpartition einer zugrunde liegenden Tabelle online oder offline neu erstellt werden kann. Wenn **REBUILD** online ausgeführt wird (**ON**) die Daten in dieser Tabelle sind für Abfragen und datenänderungen während des Indexvorgangs verfügbar.  Die Standardeinstellung ist **OFF**.  
   
  ON  
- Lang andauernde Sperren werden nicht für die Dauer des Indexvorgangs aufrechterhalten. Während der Hauptphase des Indexvorgangs wird nur eine beabsichtigte freigegebene Sperre (IS) für die Quelltabelle aufrechterhalten. Eine S-Sperre für die Tabelle ist am Anfang der indexneuerstellung und eine Sch-M-Sperre für die Tabelle am Ende der online-indexneuerstellung erforderlich. Obwohl beide Sperren kurze Metadatensperren sind, muss insbesondere die Sch-M-Sperre auf den Abschluss aller blockierenden Transaktionen warten. Während der Wartezeit sperrt die Sch-M-Sperre alle anderen Transaktionen, die an dieser Sperre warten, wenn sie auf die gleiche Tabelle zugreifen.  
+ Lang andauernde Sperren werden nicht für die Dauer des Indexvorgangs aufrechterhalten. Während der Hauptphase des Indexvorgangs wird nur eine beabsichtigte freigegebene Sperre (IS) für die Quelltabelle aufrechterhalten. Eine S-Sperre für die Tabelle ist der Anfang der indexneuerstellung und eine Sch-M-Sperre für die Tabelle am Ende der online-indexneuerstellung erforderlich. Obwohl beide Sperren kurze Metadatensperren sind, muss insbesondere die Sch-M-Sperre auf den Abschluss aller blockierenden Transaktionen warten. Während der Wartezeit sperrt die Sch-M-Sperre alle anderen Transaktionen, die an dieser Sperre warten, wenn sie auf die gleiche Tabelle zugreifen.  
   
 > [!NOTE]
 >  Neuerstellung von Onlineindizes kann festlegen, die *Low_priority_lock_wait* weiter unten in diesem Abschnitt beschriebenen Optionen.  
@@ -579,19 +579,19 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  WAIT_AT_LOW_PRIORITY mit verwendet **ONLINE = ON** nur.  
  
-**Gilt für**: SQL Server (beginnend mit SQL Server 2014) und Azure SQL-Datenbank.
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  Bei der Onlineindexneuerstellung muss auf blockierende Vorgänge für diese Tabelle gewartet werden. **WAIT_AT_LOW_PRIORITY** gibt an, dass der Vorgang zur onlineindexneuerstellung Sperren mit niedriger Priorität, sodass andere Vorgänge, während die onlineindexerstellung wartet gewartet wird. Das Weglassen der **WAIT AT LOW PRIORITY** -Option ist gleichwertig mit `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Weitere Informationen finden Sie unter [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
   
  MAX_DURATION = *Zeit* [**Minuten**]  
   
-**Gilt für**: SQL Server (beginnend mit SQL Server 2014) und Azure SQL-Datenbank.
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  Die Wartezeit (ein ganzzahliger Wert in Minuten), während der die Sperren der Onlineindexneuerstellung mit niedriger Priorität warten, wenn der DDL-Befehl ausgeführt wird. Wenn der Vorgang blockiert wird die **MAX_DURATION** Zeit, eines der **ABORT_AFTER_WAIT** -Aktionen ausgeführt. **MAX_DURATION** ist immer in Minuten, und das Wort **Minuten** kann ausgelassen werden.  
  
  ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERN** }]  
    
-**Gilt für**: SQL Server (beginnend mit SQL Server 2014) und Azure SQL-Datenbank.
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
  Keine  
  Es wird weiterhin mit normaler (regulärer) Priorität auf die Sperre gewartet.  
@@ -604,33 +604,33 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
  RESUME 
  
-**Gilt für**: ab SQLServer 2017  
+**Gilt für**: ab[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]  
 
 Fortsetzen eines Indexvorgangs, das manuell oder aufgrund eines Fehlers angehalten wurde.
 
 Mit MAX_DURATION verwendet **kann wieder aufgenommen werden = ON**
 
  
-**Gilt für**: ab SQL Server-2017 und Azure SQL-Datenbank
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und[!INCLUDE[ssSDS](../../includes/sssds-md.md)]
 
 Die Zeit (ein ganzzahliger Wert, der in Minuten angegeben ist) die fortsetzbar Onlineindexvorgang wird ausgeführt, nachdem das wieder aufgenommen wird. Nach Ablauf dieses Zeitraums ist fortsetzbare Vorgang angehalten, wenn er immer noch ausgeführt wird.
 
 WAIT_AT_LOW_PRIORITY mit verwendet **kann wieder aufgenommen werden = ON** und **ONLINE = ON**.  
   
-**Gilt für**: ab SQL Server-2017 und Azure SQL-Datenbank 
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
  Eine online-indexneuerstellung wird fortgesetzt, nachdem eine Pause auf blockierende Vorgänge für diese Tabelle gewartet hat. **WAIT_AT_LOW_PRIORITY** gibt an, dass der Vorgang zur onlineindexneuerstellung Sperren mit niedriger Priorität, sodass andere Vorgänge, während die onlineindexerstellung wartet gewartet wird. Das Weglassen der **WAIT AT LOW PRIORITY** -Option ist gleichwertig mit `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Weitere Informationen finden Sie unter [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
 
 
 ANHALTEN
  
-**Gilt für**: ab SQL Server-2017 und Azure SQL-Datenbank 
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
 Anhalten eines fortsetzbar Vorgangs zur onlineindexneuerstellung an.
 
 ABBRECHEN
 
-**Gilt für**: ab SQL Server-2017 und Azure SQL-Datenbank   
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und[!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
 
 Abbrechen eines ausgeführten oder angehaltenen Indexvorgangs, der als fortsetzbar deklariert wurde. Müssen Sie explizit ausführen, eine **ABORT** -Neuerstellungsvorgang von Befehl zum Beenden eines Indexes kann wieder aufgenommen. Fehler oder einen fortsetzbaren Indexvorgang Anhalten wird nicht seine Ausführung beendet; Stattdessen bewirkt, dass sie den Vorgang unbestimmtes anhalten.
   
@@ -640,13 +640,13 @@ Abbrechen eines ausgeführten oder angehaltenen Indexvorgangs, der als fortsetzb
  Wenn eine Option nicht explizit angegeben ist, wird die aktuelle Einstellung angewendet. Wenn in der REBUILD-Klausel beispielsweise keine FILLFACTOR-Einstellung angegeben ist, wird der im Systemkatalog gespeicherte Füllfaktorwert während der Neuerstellung verwendet. Verwenden Sie zum Anzeigen der aktuellen indexoptionseinstellungen [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
 > [!NOTE]
->  Die Werte für ONLINE, MAXDOP und SORT_IN_TEMPDB werden nicht im Systemkatalog gespeichert. Der Standardwert der Option wird verwendet, sofern die Option nicht in der Indexanweisung angegeben ist.
+> Die Werte für ONLINE, MAXDOP und SORT_IN_TEMPDB werden nicht im Systemkatalog gespeichert. Der Standardwert der Option wird verwendet, sofern die Option nicht in der Indexanweisung angegeben ist.
   
  Auf Mehrprozessorcomputern werden für ALTER INDEX REBUILD wie bei allen anderen Abfragen automatisch mehr Prozessoren verwendet, um bei Indexänderungen Scan- und Sortierungsvorgänge auszuführen. Wenn Sie ALTER INDEX REORGANIZE, mit oder ohne LOB_COMPACTION Ausführen der **Max. Grad an Parallelität** Wert ist einem einzelnen Threadvorgang. Weitere Informationen finden Sie unter [Konfigurieren von Parallelindexvorgängen](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
  Ein Index kann nicht neu organisiert oder neu erstellt werden, wenn die Dateigruppe, in der er enthalten ist, eine Offline- oder schreibgeschützte Dateigruppe ist. Wenn das Schlüsselwort ALL angegeben ist und mindestens ein Index in einer Offline- oder schreibgeschützten Dateigruppe enthalten ist, erzeugt die Anweisung einen Fehler.  
   
-## <a name="rebuilding-indexes"></a>Neuerstellen von Indizes  
+## <a name="rebuilding-indexes"></a>Das Neuerstellen von Indizes  
  Beim Neuerstellen eines Indexes wird der Index gelöscht und neu erstellt. Bei diesem Vorgang wird die Fragmentierung entfernt, Speicherplatz wird freigegeben, indem die Seiten auf der Grundlage der angegebenen oder vorhandenen Füllfaktoreinstellung komprimiert werden, und die Indexzeilen werden in aufeinanderfolgenden Seiten neu geordnet. Wenn ALL angegeben ist, werden alle Indizes der Tabelle in einer einzelnen Transaktion gelöscht und neu erstellt. FOREIGN KEY-Einschränkungen müssen nicht im Voraus gelöscht werden. Wenn Indizes mit mindestens 128 Blöcken neu erstellt werden, verzögert das [!INCLUDE[ssDE](../../includes/ssde-md.md)] die tatsächlichen aufgehobenen Seitenzuordnungen sowie deren zugeordnete Sperren, bis für die Transaktion ein Commit ausgeführt wird.  
   
  Durch das erneute Erstellen oder Organisieren kleiner Indizes lässt sich die Fragmentierung häufig nicht verringern. Die Seiten kleiner Indizes werden manchmal in gemischten Blöcken gespeichert. Da gemischte Blöcke von bis zu acht Objekten gemeinsam genutzt werden, lässt sich die Fragmentierung in einem kleinen Index durch die erneute Erstellung oder Organisation des Indexes möglicherweise nicht verringern.  
@@ -710,9 +710,9 @@ Abbrechen eines ausgeführten oder angehaltenen Indexvorgangs, der als fortsetzb
   
  Alle anderen gleichzeitig durchgeführten Onlineindexvorgänge erzeugen einen Fehler. Sie können beispielsweise nicht zwei oder mehr Indizes zur gleichen Zeit für dieselbe Tabelle neu erstellen bzw. beim Neuerstellen eines vorhandenen Indexes keinen neuen Index für dieselbe Tabelle erstellen.  
 
-### <a name="resumable-index-operations"></a>Fortsetzbare Indexvorgänge
+### <a name="resumable-indexes"></a>Fortsetzbare Indexvorgänge
 
-**Gilt für**: ab SQL Server-2017 und Azure SQL-Datenbank 
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
 ONLINE INDEX REBUILD angegeben ist, als fortsetzbar mithilfe der kann wieder aufgenommen werden = Option. 
 -  Die FORTSETZBARE Option wird nicht in den Metadaten für einen bestimmten Index beibehalten und gelten nur für die Dauer der aktuellen DDL-Anweisung. Aus diesem Grund die ANWENDUNGSUNABHÄNGIG = ON-Klausel muss explizit angegeben werden, um Resumability zu aktivieren.
@@ -739,13 +739,12 @@ Die folgende Funktionalität ist für Neuerstellungsvorgänge fortsetzbar Index 
    -    ALTER TABLE, die mithilfe von Indizes  
    -    DDL-Befehl mit "RESUMEABLE = ON" kann nicht innerhalb einer expliziten Transaktion ausgeführt werden (nicht Teil der begin Tran... Commit-Block)
    -    Erstellen Sie einen Index, der eine berechnete Spaltenangabe oder TIMESTAMP-Spalten als Schlüsselspalten neu.
--   Für den Fall, dass die Basistabelle LOB-Spalten fortsetzbar gruppiert enthält erfordert indexneuerstellung am Anfang dieses Vorgangs eine Sch-M-Sperre
+-   Für den Fall, dass der Basistabelle LOB-Spalten fortsetzbar gruppiert ist indexneuerstellung eine Sch-M-Sperre in Starten dieses Vorgangs erforderlich.
    -    Die SORT_IN_TEMPDB = ON Option wird für fortsetzbar Index nicht unterstützt. 
 
 > [!NOTE]
 > Der DDL-Befehl ausgeführt wird, bis er abgeschlossen ist, hält oder ein Fehler auftritt. Für den Fall, dass der Befehl angehalten wird, wird ein Fehler ausgegeben, dass der Vorgang angehalten wurde und dass es sich bei die Erstellung eines Indexes nicht abgeschlossen wurde. Weitere Informationen zum aktuellen Indexstatus abgerufen werden kann, aus [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). Wie vor im Falle eines Fehlers ein Fehler auch ausgegeben wird. 
 
-  
  Weitere Informationen finden Sie unter [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
   
  ### <a name="waitatlowpriority-with-online-index-operations"></a>WAIT_AT_LOW_PRIORITY mit online-Indexvorgänge  
@@ -782,15 +781,15 @@ Die folgende Funktionalität ist für Neuerstellungsvorgänge fortsetzbar Index 
   
 ## <a name="version-notes"></a>Die Anmerkungen zu dieser Version  
   
--   SQL-Datenbank verwendet Dateigruppe und die Filestream-Optionen nicht.  
+-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]Optionen für Dateigruppe und Filestream wird nicht verwendet werden.  
   
--   Columnstore-Indizes sind nicht vor SQL Server 2012 verfügbar. 
+-  Columnstore-Indizes sind nicht verfügbar ist, vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. 
 
--  Fortsetzbare Indexvorgänge sind mit SQL Server-2017 und Azure SQL-Datenbank ab   
+-  Fortsetzbare Indexvorgänge sind verfügbar ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und[!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
   
 ## <a name="basic-syntax-example"></a>Einfaches Syntaxbeispiel:   
   
-```tsql 
+```t-sql 
 ALTER INDEX index1 ON table1 REBUILD;  
   
 ALTER INDEX ALL ON table1 REBUILD;  
@@ -849,20 +848,20 @@ CREATE TABLE cci_target (
      )  
   
 -- Convert the table to a clustered columnstore index named inxcci_cci_target;  
-```tsql
+```t-sql
 CREATE CLUSTERED COLUMNSTORE INDEX idxcci_cci_target ON cci_target;  
 ```  
   
- Verwenden Sie die TABLOCK-Option zum Einfügen von Zeilen parallel. Beginnend mit SQL Server 2016, kann der INSERT INTO-Vorgangs parallel ausgeführt, wenn TABLOCK verwendet wird.  
+ Verwenden Sie die TABLOCK-Option zum Einfügen von Zeilen parallel. Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], die INSERT INTO-Vorgangs kann parallel ausgeführt, wenn TABLOCK verwendet wird.  
   
-```tsql  
+```t-sql  
 INSERT INTO cci_target WITH (TABLOCK) 
 SELECT TOP 300000 * FROM staging;  
 ```  
   
  Führen Sie diesen Befehl, um die offenen Delta-Zeilengruppen finden Sie unter. Die Anzahl der Zeilengruppen hängt von den Grad der Parallelität.  
   
-```tsql  
+```t-sql  
 SELECT *   
 FROM sys.dm_db_column_store_row_group_physical_stats   
 WHERE object_id  = object_id('cci_target');  
@@ -870,20 +869,20 @@ WHERE object_id  = object_id('cci_target');
   
  Führen Sie diesen Befehl, um alle geschlossen und OPEN-Zeilengruppen in den Columnstore zu zwingen.  
   
-```tsql  
+```t-sql  
 ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
 ```  
   
  Führen Sie diesen Befehl erneut aus, und sehen Sie, dass eine komprimierte Zeilengruppe kleinere Zeilengruppen zusammengeführt werden.  
   
-```tsql  
+```t-sql  
 ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
 ```  
   
 ### <a name="b-compress-closed-delta-rowgroups-into-the-columnstore"></a>B. Komprimieren von GESCHLOSSENEN Delta-Zeilengruppen in den columnstore  
  Dieses Beispiel verwendet die REORGANIZE-option zu komprimieren jede GESCHLOSSENEN Delta-Zeilengruppe im columnstore-Index als eine komprimierte Zeilengruppe.   Dies ist nicht erforderlich, aber es ist nützlich, wenn die tupelverschiebungsfunktion CLOSED-Zeilengruppen schnell genug ist, nicht komprimiert wird.  
   
-```tsql  
+```t-sql  
 -- Uses AdventureWorksDW  
 -- REORGANIZE all partitions  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;  
@@ -893,13 +892,13 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. Komprimieren Sie alle GEÖFFNETEN und "geschlossen" Delta-Zeilengruppen in den columnstore  
- Gilt nicht für: SQL Server 2012 und 2014  
+ Gilt nicht für: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
- Ab SQL Server 2016 können Sie REORGANIZE WITH ausführen können (COMPRESS_ALL_ROW_GROUPS = ON) jede geöffnet und geschlossen Delta-Zeilengruppe im columnstore-Index als eine komprimierte Zeilengruppe komprimiert.    Leert die Deltastores, und erzwingt die Übernahme aller Zeilen in den Columnstore komprimiert. Dies ist hilfreich, insbesondere nach vielen Insert-Vorgänge ausführen, da diese Vorgänge die Zeilen in einem oder mehreren Deltastores gespeichert werden.  
+ Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], neu organisieren mit ausgeführt werden können (COMPRESS_ALL_ROW_GROUPS = ON) jede geöffnet und geschlossen Delta-Zeilengruppe im columnstore-Index als eine komprimierte Zeilengruppe komprimiert. Leert die Deltastores, und erzwingt die Übernahme aller Zeilen in den Columnstore komprimiert. Dies ist hilfreich, insbesondere nach vielen Insert-Vorgänge ausführen, da diese Vorgänge die Zeilen in einem oder mehreren Deltastores gespeichert werden.  
   
  REORGANIZE kombiniert Zeilengruppen zum Füllen von Zeilengruppen, bis eine maximale Anzahl von Zeilen \<= 1,024,576. Aus diesem Grund alle öffnen "und" CLOSED-Zeilengruppen zu komprimieren wird nicht Sie mit vielen komprimierten Zeilengruppen annehmen, die nur wenige Zeilen enthalten. Zeilengruppen, reduzieren Sie die komprimierte Größe und Verbessern der Leistung von Abfragen möglichst als gefüllt werden soll.  
   
-```tsql  
+```t-sql  
 -- Uses AdventureWorksDW2016  
 -- Move all OPEN and CLOSED delta rowgroups into the columnstore.  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
@@ -909,30 +908,31 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### <a name="d-defragment-a-columnstore-index-online"></a>D. Defragmentieren eines columnstore-Index online  
- Gilt nicht für: SQL Server 2012 und 2014.  
+ Gilt nicht für: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
- Beginnend mit SQL Server 2016, REORGANIZE mehr als Delta-Zeilengruppen in den Columnstore komprimiert. Er führt außerdem die Onlinedefragmentierung. Zunächst wird die Größe des Columnstore von gelöschten Zeilen physisch zu entfernen, wenn mindestens 10 % der Zeilen in einer Zeilengruppe gelöscht wurden.  Klicken Sie dann, kombiniert er Zeilengruppen kombinieren, um größere Zeilengruppen bilden, für die sind bis zu maximal 1,024,576 Zeilen pro Zeilengruppen.  Alle Zeilengruppen, die geändert werden, erhalten erneut komprimiert.  
+ Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], REORGANIZE mehr als Delta-Zeilengruppen in den Columnstore komprimiert. Er führt außerdem die Onlinedefragmentierung. Zunächst wird die Größe des Columnstore von gelöschten Zeilen physisch zu entfernen, wenn mindestens 10 % der Zeilen in einer Zeilengruppe gelöscht wurden.  Klicken Sie dann, kombiniert er Zeilengruppen kombinieren, um größere Zeilengruppen bilden, für die sind bis zu maximal 1,024,576 Zeilen pro Zeilengruppen.  Alle Zeilengruppen, die geändert werden, erhalten erneut komprimiert.  
   
 > [!NOTE]
->  Beginnend mit SQL Server 2016, ist das Neuerstellen eines columnstore-Indexes nicht mehr in den meisten Situationen erforderlich da REORGANIZE physisch entfernt gelöschte Zeilen und Zeilengruppen zusammengeführt. Die Option COMPRESS_ALL_ROW_GROUPS zwingt alle geöffnet oder geschlossen Delta-Zeilengruppen in den Columnstore die zuvor nur mit einer Wiederherstellung ausgeführt werden konnte.   REORGANIZE online ist und erfolgt im Hintergrund, damit Abfragen fortgesetzt werden können, wie der Vorgang erfolgt.  
+>  Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], das Neuerstellen eines columnstore-Indexes ist nicht mehr in den meisten Fällen erforderlich, da REORGANIZE physisch entfernt gelöschte Zeilen und Zeilengruppen zusammengeführt. Die Option COMPRESS_ALL_ROW_GROUPS zwingt alle geöffnet oder geschlossen Delta-Zeilengruppen in den Columnstore die zuvor nur mit einer Wiederherstellung ausgeführt werden konnte.   REORGANIZE online ist und erfolgt im Hintergrund, damit Abfragen fortgesetzt werden können, wie der Vorgang erfolgt.  
   
-```tsql  
+```t-sql  
 -- Uses AdventureWorks  
 -- Defragment by physically removing rows that have been logically deleted from the table, and merging rowgroups.  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;  
 ```  
   
 ### <a name="e-rebuild-a-clustered-columnstore-index-offline"></a>E. Erstellen Sie einen gruppierten columnstore-Index offline neu.  
- Gilt für: SQLServer 2012, SqlServer 2014  
+Gilt für: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])   
   
- Starten von SQL Server 2016 und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], es wird empfohlen, ALTER INDEX REORGANIZE anstelle von ALTER INDEX REBUILD.  
+> [!TIP]
+> Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], es wird empfohlen, ALTER INDEX REORGANIZE anstelle von ALTER INDEX REBUILD.  
   
 > [!NOTE]
->  In SQL Server 2012 und 2014 wird nur REORGANIZE verwendet, um CLOSED-Zeilengruppen in den Columnstore zu komprimieren. Die einzige Möglichkeit, Defragmentierung Vorgänge auszuführen und alle Delta-Zeilengruppen in den Columnstore zu zwingen, wird den Index neu erstellt.  
+> In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], REORGANIZE wird nur verwendet, um die CLOSED-Zeilengruppen in den Columnstore komprimiert. Die einzige Möglichkeit, Defragmentierung Vorgänge auszuführen und alle Delta-Zeilengruppen in den Columnstore zu zwingen, wird den Index neu erstellt.  
   
  Dieses Beispiel zeigt, wie Sie einen gruppierten columnstore-Index neu erstellen und alle Delta-Zeilengruppen in den Columnstore zu zwingen. Im ersten Schritt wird die FactInternetSales2-Tabelle mit einem gruppierten columnstore-Index vorbereitet, und es werden Daten aus den ersten vier Spalten eingefügt.  
   
-```tsql  
+```t-sql  
 -- Uses AdventureWorksDW  
   
 CREATE TABLE dbo.FactInternetSales2 (  
@@ -953,7 +953,7 @@ SELECT * FROM sys.column_store_row_groups;
   
  Die Ergebnisse zeigen, es ist eine OPEN-Zeilengruppe, d. h. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wartet darauf, dass weitere Zeilen hinzugefügt werden, bevor sie die Zeilengruppe geschlossen wird und die Daten in den Columnstore verschoben. Mit der nächsten Anweisung erstellt den gruppierten columnstore-Index, der alle Zeilen im columnstore-Index erzwingt neu.  
   
-```tsql  
+```t-sql  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REBUILD;  
 SELECT * FROM sys.column_store_row_groups;  
 ```  
@@ -961,24 +961,24 @@ SELECT * FROM sys.column_store_row_groups;
  Die Ergebnisse der SELECT-Anweisung zeigen, dass die Zeilengruppe als COMPRESSED gekennzeichnet ist. Dies bedeutet, dass die Spaltensegmente der Zeilengruppe jetzt komprimiert und im Columnstore gespeichert sind.  
   
 ### <a name="f-rebuild-a-partition-of-a-clustered-columnstore-index-offline"></a>F. Erstellen Sie eine Partition eines gruppierten columnstore-Index offline neu  
- Verwenden Sie diese für: SQLServer 2012, SqlServer 2014  
+ **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
+ 
+ Verwenden Sie ALTER INDEX REBUILD mit der Partitionsoption, um eine Partition eines großen gruppierten columnstore-Index neu zu erstellen. In diesem Beispiel wird die Partition 12 neu erstellt. Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], es wird empfohlen, und Ersetzen Sie dabei mit REORGANIZE neu erstellen.  
   
- Verwenden Sie ALTER INDEX REBUILD mit der Partitionsoption, um eine Partition eines großen gruppierten columnstore-Index neu zu erstellen. In diesem Beispiel wird die Partition 12 neu erstellt. Beginnend mit SQL Server 2016, empfehlen wir, und Ersetzen Sie dabei mit REORGANIZE neu erstellen.  
-  
-```tsql  
+```t-sql  
 ALTER INDEX cci_fact3   
 ON fact3  
 REBUILD PARTITION = 12;  
 ```  
   
 ### <a name="g-change-a-clustered-columstore-index-to-use-archival-compression"></a>G. Ändern Sie einen gruppierten rowstore-Index, um die archivierungskomprimierung zu verwenden  
- Gilt nicht für: SQL Server 2012  
+ Gilt nicht für:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
  Sie können auswählen, um die Größe eines gruppierten columnstore-Index noch weiter zu reduzieren, indem Sie mit der COLUMNSTORE_ARCHIVE-Datenkomprimierungsoption. Dies ist praktisch für ältere Daten, die auf den kostengünstiger Speicher beibehalten werden sollen. Es wird empfohlen, dass ein langsamer als bei der normalen columnstore-Komprimierung wird nur mit dies auf, die da häufig nicht abgefragte, Daten zu dekomprimieren.  
   
  Im folgenden Beispiel wird ein gruppierter columnstore-Index für die Verwendung der Archivierungskomprimierung neu erstellt. Anschließend wird gezeigt, wie die Archivierungskomprimierung entfernt wird. Letztendlich wird nur die columnstore-Komprimierung verwendet.  
   
-```tsql  
+```t-sql  
 --Prepare the example by creating a table with a clustered columnstore index.  
 CREATE TABLE SimpleTable (  
     ProductKey [int] NOT NULL,   
@@ -1010,25 +1010,25 @@ GO
 ### <a name="a-rebuilding-an-index"></a>A. Neuerstellen eines Index  
  Im folgenden Beispiel wird ein einzelner Index für die `Employee`-Tabelle der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank neu erstellt.  
   
-```tsql  
+```t-sql  
 ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;  
 ```  
   
 ### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>B. Neuerstellen aller Indizes einer Tabelle und Angeben von Optionen  
  Im folgenden Beispiel wird das Schlüsselwort `ALL` angegeben. Dadurch werden alle Indizes neu erstellt, die der Production.Product-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zugeordnet sind. Es werden drei Optionen angegeben.  
   
-**Gilt für**: SQL Server (beginnend mit SQL Server 2008) und Azure SQL-Datenbank.  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```tsql  
+```t-sql  
 ALTER INDEX ALL ON Production.Product  
 REBUILD WITH (FILLFACTOR = 80, SORT_IN_TEMPDB = ON, STATISTICS_NORECOMPUTE = ON);  
 ```  
   
  Im folgenden Beispiel werden die ONLINE-Option einschließlich der Option für Sperren mit niedriger Priorität sowie die Zeilenkomprimierungsoption hinzugefügt.  
   
-**Gilt für**: SQL Server (beginnend mit SQL Server 2014) und Azure SQL-Datenbank.  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```tsql  
+```t-sql  
 ALTER INDEX ALL ON Production.Product  
 REBUILD WITH   
 (  
@@ -1043,16 +1043,16 @@ REBUILD WITH
 ### <a name="c-reorganizing-an-index-with-lob-compaction"></a>C. Neuorganisieren eines Indexes mit LOB-Komprimierung  
  Im folgenden Beispiel wird ein einzelner gruppierter Index in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank neu organisiert. Da der Index einen LOB-Datentyp in der Blattebene enthält, komprimiert die Anweisung auch alle Seiten, die die LOB-Daten enthalten. Beachten Sie, dass die Angabe der WITH (LOB_COMPACTION)-Option nicht erforderlich ist, da der Standardwert auf ON festgelegt ist.  
   
-```tsql  
+```t-sql  
 ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE WITH (LOB_COMPACTION);  
 ```  
   
 ### <a name="d-setting-options-on-an-index"></a>D. Festlegen von Optionen für einen Index  
  Im folgenden Beispiel werden mehrere Optionen für den `AK_SalesOrderHeader_SalesOrderNumber`-Index in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank festgelegt.  
   
-**Gilt für**: SQL Server (beginnend mit SQL Server 2008) und Azure SQL-Datenbank.  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```tsql  
+```t-sql  
 ALTER INDEX AK_SalesOrderHeader_SalesOrderNumber ON  
     Sales.SalesOrderHeader  
 SET (  
@@ -1066,20 +1066,20 @@ GO
 ### <a name="e-disabling-an-index"></a>E. Deaktivieren eines Indexes  
  Im folgenden Beispiel wird ein nicht gruppierter Index für die `Employee`-Tabelle der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank deaktiviert.  
   
-```tsql  
+```t-sql  
 ALTER INDEX IX_Employee_ManagerID ON HumanResources.Employee DISABLE;
 ```  
   
 ### <a name="f-disabling-constraints"></a>F. Deaktivieren von Einschränkungen  
  Im folgende Beispiel wird eine PRIMARY KEY-Einschränkung deaktiviert, durch das Deaktivieren des PRIMARY KEY-Indexes in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank. Die FOREIGN KEY-Einschränkung für die zugrunde liegende Tabelle wird automatisch deaktiviert, und eine Warnmeldung wird angezeigt.  
   
-```tsql  
+```t-sql  
 ALTER INDEX PK_Department_DepartmentID ON HumanResources.Department DISABLE;  
 ```  
   
  Das Resultset gibt diese Warnmeldung zurück.  
   
- ```tsql  
+ ```t-sql  
  Warning: Foreign key 'FK_EmployeeDepartmentHistory_Department_DepartmentID'  
  on table 'EmployeeDepartmentHistory' referencing table 'Department'  
  was disabled as a result of disabling the index 'PK_Department_DepartmentID'.
@@ -1090,13 +1090,13 @@ ALTER INDEX PK_Department_DepartmentID ON HumanResources.Department DISABLE;
   
  Die PRIMARY KEY-Einschränkung wird aktiviert, indem der PRIMARY KEY-Index neu erstellt wird.  
   
-```tsql  
+```t-sql  
 ALTER INDEX PK_Department_DepartmentID ON HumanResources.Department REBUILD;  
 ```  
   
  Anschließend wird die FOREIGN KEY-Einschränkung aktiviert.  
   
-```tsql  
+```t-sql  
 ALTER TABLE HumanResources.EmployeeDepartmentHistory  
 CHECK CONSTRAINT FK_EmployeeDepartmentHistory_Department_DepartmentID;  
 GO  
@@ -1105,9 +1105,9 @@ GO
 ### <a name="h-rebuilding-a-partitioned-index"></a>H. Neuerstellen eines partitionierten Indexes  
  Im folgenden Beispiel wird eine einzelne Partition mit der Partitionsnummer `5` des partitionierten `IX_TransactionHistory_TransactionDate`-Indexes in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank neu erstellt. Partition 5 wird online neu erstellt, und die zehnminütige Wartezeit für die Sperre mit niedriger Priorität gilt für jede einzelne Sperre, die durch die Indexneuerstellung abgerufen wird. Wenn während dieser Zeit die Sperre nicht für die komplette Neuerstellung des Indexes reicht, wird die Anweisung für die Neuerstellung abgebrochen.  
   
-**Gilt für**: SQL Server (beginnend mit SQL Server 2014) und Azure SQL-Datenbank.  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```tsql  
+```t-sql  
 -- Verify the partitioned indexes.  
 SELECT *  
 FROM sys.dm_db_index_physical_stats (DB_ID(),OBJECT_ID(N'Production.TransactionHistory'), NULL , NULL, NULL);  
@@ -1123,7 +1123,7 @@ GO
 ### <a name="i-changing-the-compression-setting-of-an-index"></a>I. Ändern der Komprimierungseinstellung eines Indexes  
  Im folgenden Beispiel wird ein Index für eine nicht partitionierte rowstore-Tabelle neu erstellt.  
   
-```tsql
+```t-sql
 ALTER INDEX IX_INDEX1   
 ON T1  
 REBUILD   
@@ -1135,13 +1135,13 @@ GO
  
 ### <a name="j-online-resumable-index-rebuild"></a>J. Fortsetzbare onlineneuerstellung von Indizes
 
-**Gilt für**: ab SQL Server-2017 und Azure SQL-Datenbank   
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und[!INCLUDE[ssSDS](../../includes/sssds-md.md)]   
 
  Die folgenden Beispiele zeigen, wie fortsetzbar onlineneuerstellung von Indizes verwendet wird. 
 
 1. Führen Sie eine online-indexneuerstellung als fortsetzbar Vorgang mit MAXDOP = 1.
 
-   ```tsql
+   ```t-sql
    ALTER INDEX test_idx on test_table REBUILD WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON) ;
    ```
 
@@ -1149,29 +1149,29 @@ GO
 
 3. Führen Sie eine online-indexneuerstellung als fortsetzbar Vorgang mit MAX_DURATION auf 240 Minuten festgelegt ist.
 
-   ```tsql
+   ```t-sql
    ALTER INDEX test_idx on test_table REBUILD WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240) ; 
    ```
 4. Anhalten einer laufenden fortsetzbar online-indexneuerstellung.
 
-   ```tsql
+   ```t-sql
    ALTER INDEX test_idx on test_table PAUSE ;
    ```   
 5. Fortsetzen einer online-indexneuerstellung für das Neuerstellen eines Index, das ausgeführt wurde, als fortsetzbar Vorgang unter Angabe einen neuen Wert für MAXDOP auf 4 festgelegt.
 
-   ```tsql
+   ```t-sql
    ALTER INDEX test_idx on test_table RESUME WITH (MAXDOP=4) ;
    ```
 6. Fortsetzen eines Vorgangs zur onlineindexneuerstellung für eine indexneuerstellung online, die als fortsetzbar ausgeführt wurde. MAXDOP auf 2 festgelegt, legen Sie die Ausführungszeit für den Index als Resmumable ausgeführt werden, und 240 Minuten eingestellt und im Falle eines Indexes, 10 Minuten auf den Wartevorgang auf eine Sperre blockiert, und beenden Sie danach alle Hindernisse. 
 
-   ```tsql
+   ```t-sql
       ALTER INDEX test_idx on test_table  
          RESUME WITH (MAXDOP=2, MAX_DURATION= 240 MINUTES, 
          WAIT_AT_LOW_PRIORITY (MAX_DURATION=10, ABORT_AFTER_WAIT=BLOCKERS)) ;
    ```      
 7. Brechen Sie fortsetzbar indexneuerstellungsvorgangs die ausgeführt oder angehalten wird ab.
 
-   ```tsql
+   ```t-sql
    ALTER INDEX test_idx on test_table ABORT ;
    ``` 
   

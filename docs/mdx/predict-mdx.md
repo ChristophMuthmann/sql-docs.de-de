@@ -8,28 +8,23 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- PREDICT
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Predict function
+f1_keywords: PREDICT
+dev_langs: kbMDX
+helpviewer_keywords: Predict function
 ms.assetid: a82f3edd-249b-4559-98d3-6e10d81a095d
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: feeadc92c9b30013f3e45e54a7b6464cf0743442
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7bec1c96bd70b9b75c3a8c212cf1f6c04c27c73e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="predict-mdx"></a>Predict (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -78,4 +73,3 @@ WHERE([Customer].[Customer Geography].[Customer].&[12012])
  [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

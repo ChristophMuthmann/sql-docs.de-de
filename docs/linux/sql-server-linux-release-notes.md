@@ -4,7 +4,7 @@ description: "Dieses Thema enthält die Versionshinweise und Funktionen für SQL
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 10/25/2017
+ms.date: 11/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: e7fb6ac444679477c6cbc0b66c59b7ea1c9775f1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
-ms.translationtype: MT
+ms.openlocfilehash: f625cbf53c25dd097efb6619a47069be7873320f
+ms.sourcegitcommit: d122a41cc953ba3e269c8709a18aa84f7c17982c
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Versionshinweise für SQL Server-2017 unter Linux
 
@@ -51,14 +51,11 @@ In der folgenden Tabelle werden die Revisionsverlauf für SQL Server-2017 aufgel
 
 | Release | Version | Veröffentlichungsdatum |
 |-----|-----|-----|
+| [CU2](#CU2) | 14.0.3008.27 | 11-2017 |
 | [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
 | [GA](#GA) | 14.0.1000.169 | 10-2017 |
 
-## <A id="CU1"></a>Kumulative Update 1 (Oktober 2017)
-
-Dies ist das kumulative Update 1 (CU1)-Version von SQL Server-2017. Die Version des SQL Server-Datenbankmodul für diese Version ist 14.0.3006.16. Informationen zu den Korrekturen und Verbesserungen in dieser Version finden Sie unter [https://support.microsoft.com/help/4038634](https://support.microsoft.com/help/4038634).
-
-### <a name="installation"></a>Installation
+## <a name="how-to-install-cumulative-updates"></a>Installieren von kumulativen updates
 
 Wenn Sie das kumulative Update Repository konfiguriert haben, erhalten Sie das neueste kumulative Update von SQL Server-Paketen beim Ausführen von Neuinstallationen. Das kumulative Update-Repository ist die Standardeinstellung für alle Artikel der Paket-Installation für SQL Server on Linux. Weitere Informationen zum Repository-Konfiguration finden Sie unter [Quelle des Repositorys](sql-server-linux-setup.md#repositories).
 
@@ -68,6 +65,24 @@ Wenn Sie vorhandene SQL Server-Pakete aktualisieren, führen Sie das entsprechen
 - [Volltext-Suchdienst-Paket installieren](sql-server-linux-setup-full-text-search.md)
 - [Installieren von SQL Server-Agent-Paket](sql-server-linux-setup-sql-agent.md)
 - [Install SQL Server Integration Services (Installieren von SQL Server Integration Services)](sql-server-linux-setup-ssis.md)
+
+## <A id="CU2"></a>Kumulatives Update 2 (November 2017)
+
+Dies ist das kumulative Update 2 (CU2)-Version von SQL Server-2017. Die Version des SQL Server-Datenbankmodul für diese Version ist 14.0.3008.27. Informationen zu den Korrekturen und Verbesserungen in dieser Version finden Sie unter [https://support.microsoft.com/help/4052574](https://support.microsoft.com/help/4052574).
+
+### <a name="package-details"></a>Details zum Paket
+
+Für Paketinstallationen der manuellen oder offline-können Sie die RPM und Debian Pakete mit den Informationen in der folgenden Tabelle herunterladen:
+
+| Paket | Paketversion | Downloads |
+|-----|-----|-----|
+| Red Hat-RPM-Paket | 14.0.3008.27-1 | [Datenbankmodul-RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3008.27-1.x86_64.rpm)</br>[Hohe Verfügbarkeit RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3008.27-1.x86_64.rpm)</br>[Volltext-Suche RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3008.27-1.x86_64.rpm)</br>[SQL Server-Agent-RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3008.27-1.x86_64.rpm)</br>[SSIS-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM-Paket | 14.0.3008.27-1 | [MSSQL-Server-Datenbankmodul-RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3008.27-1.x86_64.rpm)</br>[Hohe Verfügbarkeit RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3008.27-1.x86_64.rpm)</br>[Volltext-Suche RPM-Paket](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3008.27-1.x86_64.rpm)</br>[SQL Server-Agent-RPM-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3008.27-1.x86_64.rpm) | 
+| Ubuntu 16.04 Debian-Paket | 14.0.3008.27-1 | [Modul Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3008.27-1_amd64.deb)</br>[Hohe Verfügbarkeit Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3008.27-1_amd64.deb)</br>[Volltext-Suche Debian-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3008.27-1_amd64.deb)</br>[Debian-Paket für SQL Server-Agent](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3008.27-1_amd64.deb)<br/>[SSIS-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
+## <A id="CU1"></a>Kumulative Update 1 (Oktober 2017)
+
+Dies ist das kumulative Update 1 (CU1)-Version von SQL Server-2017. Die Version des SQL Server-Datenbankmodul für diese Version ist 14.0.3006.16. Informationen zu den Korrekturen und Verbesserungen in dieser Version finden Sie unter [https://support.microsoft.com/help/4038634](https://support.microsoft.com/help/4038634).
 
 ### <a name="package-details"></a>Details zum Paket
 

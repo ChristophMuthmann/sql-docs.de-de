@@ -8,28 +8,23 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- CALCULATE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- CALCULATE statement
+f1_keywords: CALCULATE
+dev_langs: kbMDX
+helpviewer_keywords: CALCULATE statement
 ms.assetid: 41e196a1-d49e-487b-a42a-73e5d441ed1b
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: fe79fa5b94e07be72408fc72b0df6e57fa467ee2
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d8e74fd0cd09e050c11d2eb403d31527402f008b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="mdx-scripting---calculate"></a>MDX-Skripts - berechnen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -60,4 +55,3 @@ CALCULATE
  [Definieren von Zuweisungen und anderen Skriptbefehlen](../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)  
   
   
-

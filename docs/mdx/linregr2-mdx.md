@@ -8,28 +8,23 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- LINREGR2
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- LinRegR2 function
+f1_keywords: LINREGR2
+dev_langs: kbMDX
+helpviewer_keywords: LinRegR2 function
 ms.assetid: 770d1e1e-d034-43f1-82b1-3f91d52c86be
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: dd86db8226d06fa180d352c5296aacf14eb6d4f4
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8f136ba9ed71fbdde7c9f7b797f3caae8bcc27da
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="linregr2-mdx"></a>LinRegR2 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -76,4 +71,3 @@ LinRegR2(LastPeriods(10), [Measures].[Unit Sales],[Measures].[Store Sales])
  [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

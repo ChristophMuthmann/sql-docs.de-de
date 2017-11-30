@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4bf58c072369f3c91e721bcefd3d3af9b5dbc06b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f2786493aeb75402eae5d7e91458e97436f3435a
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysdmdbuncontainedentities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +36,6 @@ ms.lasthandoff: 11/17/2017
   Zeigt alle nicht enthaltenen Objekte an, die in der Datenbank verwendet werden. Nicht enthaltene Objekte sind Objekte, die die Datenbankbegrenzung in einer eigenständigen Datenbank überschreiten. Auf diese Sicht kann sowohl von einer eigenständigen Datenbank als auch von einer abhängigen Datenbank zugegriffen werden. Wenn Sys. dm_db_uncontained_entities leer ist, verwendet die Datenbank nicht enthaltenen Entitäten.  
   
  Wenn die Datenbankbegrenzung von einem Modul mehrmals überschritten wird, wird nur die erste Überschreitung gemeldet.  
-  
-||  
-|-|  
-|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 ||||  
 |-|-|-|  

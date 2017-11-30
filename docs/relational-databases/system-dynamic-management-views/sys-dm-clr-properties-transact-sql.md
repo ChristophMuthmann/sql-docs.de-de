@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ede97a8012bf4dbdbd312f7ae5179bb794378c1e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cb5c73dafd26f9ddd4da885b77c8649df13c3d2d
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysdmclrproperties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -36,10 +36,6 @@ ms.lasthandoff: 11/17/2017
   Gibt eine Zeile für jede Eigenschaft in Verbindung mit der CLR-Integration (Common Language Runtime) von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück, einschließlich der Version und des Status der gehosteten CLR. Die gehostete CLR wird initialisiert, indem Sie mit der [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md), [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md), oder [DROP ASSEMBLY](../../t-sql/statements/drop-assembly-transact-sql.md) -Anweisungen oder durch Ausführen alle CLR-Routine, Typ oder Trigger. Die **dm_clr_properties** -Sicht wird nicht angegeben, ob die Ausführung von benutzerdefiniertem CLR-Code auf dem Server aktiviert wurde. Ausführung von benutzerdefiniertem CLR-Code aktiviert ist, mithilfe der [Sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) gespeicherte Prozedur mit der [Clr-fähig](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) option auf 1 festgelegt ist.  
   
  Die **dm_clr_properties** -Ansicht enthält die **Namen** und **Wert** Spalten. Jede Zeile in dieser Sicht enthält Details zu einer Eigenschaft der gehosteten CLR. Mit dieser Sicht können Sie Informationen zur gehosteten CLR zusammentragen, z. B. das CLR-Installationsverzeichnis, die CLR-Version und den aktuellen Status der gehosteten CLR. Mit dieser Sicht können Sie bestimmen, ob der CLR-Integrationscode aufgrund von Problemen mit der CLR-Installation auf dem Servercomputer nicht funktioniert.  
-  
-||  
-|-|  
-|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)). [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  

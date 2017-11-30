@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b6a0b15ff483647a3c102d481d8300ff460ce8c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3920b0bc483dffb115211a0fe8837bd1bdb0d11e
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spmigrateusertocontained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +34,6 @@ ms.lasthandoff: 11/21/2017
   Konvertiert einen Datenbankbenutzer, der mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen verknüpft ist, in den Benutzer einer enthaltenen Datenbank mit Kennwort. In einer eigenständigen Datenbank können Sie mit diesem Verfahren Abhängigkeiten für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernen, in der die Datenbank installiert ist. **Sp_migrate_user_to_contained** trennt den Benutzer aus der ursprünglichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldenamen, damit Einstellungen wie Kennwort und Standardsprache für die eigenständige Datenbank separat verwaltet werden können. **Sp_migrate_user_to_contained** kann verwendet werden, vor dem Wechsel von der eigenständigen Datenbank in eine andere Instanz von der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , mit dem aktuellen Abhängigkeiten zu beseitigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldungen-Instanz.  
   
  **Hinweis** diese Prozedur wird nur in einer eigenständigen Datenbank verwendet. Weitere Informationen finden Sie unter [Contained Databases](../../relational-databases/databases/contained-databases.md).  
-  
-||  
-|-|  
-|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -8,28 +8,23 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- TOPPERCENT
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- TopPercent function
+f1_keywords: TOPPERCENT
+dev_langs: kbMDX
+helpviewer_keywords: TopPercent function
 ms.assetid: a40cfbb8-5bf4-4ae2-8686-df9a07206d56
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: b961e3c9e6a2f1fd99f82b57cddb43150ec90cea
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6053f4c720e30aa74a356e1b4aeb7cde276e2881
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +42,7 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  *Set_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
- *Prozentwert*  
+ *Prozentsatz*  
  Ein gültiger numerischer Ausdruck, der den Prozentsatz der zurückzugebenden Tupel angibt.  
   
 > [!IMPORTANT]  
@@ -146,4 +141,3 @@ FROM [Adventure Works]
  [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

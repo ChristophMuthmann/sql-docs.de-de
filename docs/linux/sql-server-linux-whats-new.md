@@ -4,7 +4,7 @@ description: "In diesem Thema werden die Neuigkeiten für SQL Server-2017 unter 
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 10/24/2017
+ms.date: 11/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.workload: On Demand
-ms.openlocfilehash: 49381b5980d5114f7d22e53ef70542bd03ecf289
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cdc32cffd67c794f5ec2d04ac7410892475f4f7f
+ms.sourcegitcommit: d122a41cc953ba3e269c8709a18aa84f7c17982c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Neuigkeiten für SQL Server-2017 unter Linux
 

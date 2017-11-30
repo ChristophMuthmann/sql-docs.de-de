@@ -1,7 +1,7 @@
 ---
 title: Erstellen einer EXTERNEN Tabelle (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 11/27/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -26,11 +26,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 802122cb7c0902c731b0fcc7d8522901ad7ea044
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 638708265e79ff0f3a927e9e049f3985cfe2752a
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="create-external-table-transact-sql"></a>Erstellen einer EXTERNEN Tabelle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -142,8 +142,12 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  Die Spaltendefinitionen, einschließlich der Datentypen und die Anzahl der Spalten der Daten in externen Dateien übereinstimmen. Wenn es ein Konflikt besteht, werden die Zeilen der Datei beim Abfragen der tatsächlichen Daten zurückgewiesen.  
   
- Für externe Tabellen, die auf Dateien in externen Datenquellen verweisen, müssen die Definitionen Spalte, und geben die genaue Schema der externen Datei zuordnen. Beim Datentypen definieren, die in Hadoop Hive/gespeicherte Daten zu verweisen, verwenden Sie die folgenden Zuordnungen zwischen Datentypen von SQL und Hive und wandeln Sie den Typ in einen SQL-Datentyp, wenn Sie daraus auswählen. Die folgenden Anweisungstypen alle Versionen von Hive, sofern nicht anders.  
-  
+ Für externe Tabellen, die auf Dateien in externen Datenquellen verweisen, müssen die Definitionen Spalte, und geben die genaue Schema der externen Datei zuordnen. Beim Datentypen definieren, die in Hadoop Hive/gespeicherte Daten zu verweisen, verwenden Sie die folgenden Zuordnungen zwischen Datentypen von SQL und Hive und wandeln Sie den Typ in einen SQL-Datentyp, wenn Sie daraus auswählen. Die folgenden Anweisungstypen alle Versionen von Hive, sofern nicht anders.
+
+> [!NOTE]  
+>  SQL Server unterstützt nicht die Struktur _unendlich_ Datenwert in beliebigen Konvertierungen. PolyBase schlägt mit einem Typkonvertierungsfehler Daten fehl.
+
+
 |SQL-Datentyp|.NET-Datentyp|Hive-Datentyp|Hadoop/Java-Datentyp|Kommentare|  
 |-------------------|--------------------|--------------------|----------------------------|--------------|  
 |tinyint|Byte|tinyint|ByteWritable|Für unsignierte Zahlen.|  

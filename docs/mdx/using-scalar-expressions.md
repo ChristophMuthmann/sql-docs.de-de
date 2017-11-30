@@ -8,27 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - scalar expressions
 - expressions [MDX], scalar
 ms.assetid: 4678b675-8fbd-4e5b-a519-d4cd1bb8c46a
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: ab955266cb89956aa216362a34f3b81a7f2644e2
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 67966680e10b35064c65a91f8b8da22a00fb17c4
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="using-scalar-expressions"></a>Verwenden von Skalarausdrücken
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -87,4 +84,3 @@ FROM [Adventure Works]
  [Ausdrücke &#40; MDX &#41;](../mdx/expressions-mdx.md)  
   
   
-

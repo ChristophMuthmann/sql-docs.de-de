@@ -8,27 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], syntax
 - MDX [Analysis Services], syntax
 ms.assetid: f4c16e1a-cf1a-4be0-839a-db018430ff14
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: bf017bbd828a07418b6e05dd8a55a404952f5dd7
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 77aab8ddf130fc7f93cecfe762833bbda873c81a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="mdx-syntax-elements-mdx"></a>MDX-Syntaxelemente (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +34,7 @@ ms.lasthandoff: 08/02/2017
   
 |Begriff|Definition|  
 |----------|----------------|  
-|[Bezeichner](../mdx/identifiers-mdx.md)|Ein Bezeichner ist der Name eines Objekts (z. B. eines Cubes, einer Dimension, eines Elements oder eines Measures).|  
+|[Identifiers (Bezeichner)](../mdx/identifiers-mdx.md)|Ein Bezeichner ist der Name eines Objekts (z. B. eines Cubes, einer Dimension, eines Elements oder eines Measures).|  
 |**Datentypen**|Definieren die Typen der Daten, die in Zellen, Elementeigenschaften oder Zelleigenschaften enthalten sind. MDX unterstützt nur den OLE VARIANT-Datentyp. Weitere Informationen zur Koersion, Konvertierung und Bearbeitung des VARIANT-Datentyps finden Sie in der Dokumentation für Platform SDK im Abschnitt über VARIANT und VARIANTARG.|  
 |[Ausdrücke &#40; MDX &#41;](../mdx/expressions-mdx.md)|Ausdrücke ist eine Syntaxeinheit, die [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] auflösen kann, um die einzelnen (skalaren) Werten oder Objekten. Ausdrücke enthalten Funktionen, die einen einzelnen Wert, einen Mengenausdruck usw. zurückgeben.|  
 |[Operatoren](../mdx/operators-mdx-syntax.md)|Operatoren sind Syntaxelemente, die mit einem oder mehreren einfachen MDX-Ausdrücken verwendet werden, um komplexere MDX-Ausdrücke zu erstellen.|  
@@ -50,4 +47,3 @@ ms.lasthandoff: 08/02/2017
  [Mehrdimensionale Ausdrücke &#40; MDX &#41; Referenz](../mdx/multidimensional-expressions-mdx-reference.md)  
   
   
-

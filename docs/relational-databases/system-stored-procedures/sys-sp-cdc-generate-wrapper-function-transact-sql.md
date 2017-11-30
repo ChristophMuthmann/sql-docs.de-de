@@ -26,20 +26,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bbadba2128bad803f56d3b1665332c48eb999beb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b32fc0848943814052a72e4b3f91eb4f5556a4bc
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysspcdcgeneratewrapperfunction-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Generiert Skripts zur Erstellung von Wrapperfunktionen für die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbaren Change Data Capture-Abfragefunktionen. Die in den generierten Wrappern unterstützte API ermöglicht die Angabe des Abfrageintervalls als datetime-Intervall. Aus diesem Grund eignet sich die Funktion ideal in vielen Warehousinganwendungen, einschließlich der Anwendungen, die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketdesignern entwickelt werden, die Change Data Capture-Technologie zur Bestimmung inkrementeller Ladevorgänge verwenden.  
-  
-||  
-|-|  
-|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

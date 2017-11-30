@@ -8,26 +8,22 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- tuple functions
+dev_langs: kbMDX
+helpviewer_keywords: tuple functions
 ms.assetid: fe41e3e5-a675-4169-a966-b42c18e8d741
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 6131dbf1be847ca738b896fee36f56cd438f4715
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b92f048f50f26d6ba5c98e28193a44a68e3ceb39
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="using-tuple-functions"></a>Verwenden von Tupelfunktionen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -63,7 +59,6 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>Siehe auch  
  [Funktionen &#40; MDX-Syntax &#41;](../mdx/functions-mdx-syntax.md)   
  [Verwenden von Elementfunktionen](../mdx/using-member-functions.md)   
- [Verwenden von Mengenfunktionen](../mdx/using-set-functions.md)  
+ [Using Set Functions (Verwenden von Mengenfunktionen)](../mdx/using-set-functions.md)  
   
   
-

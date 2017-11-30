@@ -25,20 +25,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 33d2cc30ca46ab172e1a9db4fceb639709e06779
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a0f99180f5b55808bc1bb7602d7dec7800febe68
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spfulltextkeymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Gibt Zuordnungen zwischen Dokumentbezeichnern (DocIds) und Volltextschlüsselwerten zurück. Die DocId-Spalte enthält Werte für eine **"bigint"** ganze Zahl, die einen bestimmten Volltext-Schlüsselwert in einer volltextindizierten Tabelle zugeordnet. DocId-Werte, die eine Suchbedingung erfüllen, werden vom Volltextsuchmodul an das Datenbankmodul übergeben. Dort werden sie Volltextschlüsselwerten aus der abgefragten Basistabelle zugeordnet. Die Volltextschlüsselspalte ist ein eindeutiger Index, der in einer Spalte der Tabelle erforderlich ist.  
-  
-||  
-|-|  
-|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

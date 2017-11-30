@@ -8,28 +8,23 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- UNORDER
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Unorder function
+f1_keywords: UNORDER
+dev_langs: kbMDX
+helpviewer_keywords: Unorder function
 ms.assetid: a805df2a-6320-45bc-989f-90e85faf027f
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 84bdcc8bff38451389dffc2b98f0f66ebdd50e70
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9b5ed088bc1dd8203e7bdcb13d763dccb75eb49a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="unorder-mdx"></a>Unorder (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -63,4 +58,3 @@ NonEmpty (UnOrder (<set_expression>))
  [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

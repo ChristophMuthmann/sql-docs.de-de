@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 95933929fa649826db77771cba137499f1df52b3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3dfe70d96c7b85d596c3819273acf264ba59e34b
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,6 @@ ms.lasthandoff: 11/17/2017
  Es stehen mehrere Typen von CLR-Integrationsobjekten für verwaltete Datenbanken zur Verfügung. Allgemeine Informationen zu diesen Objekten finden Sie unter [Erstellen von Datenbankobjekten mit Common Language Runtime (CLR) Integration](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md). Wenn diese Objekte ausgeführt werden, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt eine **AppDomain** unter dem sich laden und führen Sie den erforderlichen Code. Die Isolationsstufe für eine **AppDomain** ist eine **AppDomain** pro Datenbank und Besitzer. Alle CLR-Objekte, die ein Benutzer im Besitz sind, also immer ausgeführt, in der gleichen **AppDomain** pro Datenbank (wenn ein Benutzer CLR-Datenbankobjekte in anderen Datenbanken, die CLR-Datenbank, die Objekte in anderen Anwendungsdomänen ausgeführt registriert). Ein **AppDomain** wird nicht zerstört, nachdem der Code die Ausführung beendet. Stattdessen wird sie für die zukünftige Ausführung im Arbeitsspeicher zwischengespeichert. Dies verbessert die Leistung.  
   
  Weitere Informationen finden Sie unter [Anwendungsdomänen](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
-  
-||  
-|-|  
-|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299659)).|  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  

@@ -8,28 +8,23 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- CURRENTMEMBER
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- CurrentMember function
+f1_keywords: CURRENTMEMBER
+dev_langs: kbMDX
+helpviewer_keywords: CurrentMember function
 ms.assetid: 5da76496-7d13-4f17-9cee-3e1ef70c2d97
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 1c3a6a62ad055127b12c81e4c716131b130a3424
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 068d7219727c1187e5c0c06509cfdec3fe189fa2
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="currentmember-mdx"></a>CurrentMember (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -136,4 +131,3 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
  [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

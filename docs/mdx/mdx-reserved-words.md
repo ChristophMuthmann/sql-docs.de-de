@@ -8,28 +8,25 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - reserved words [MDX]
 - Multidimensional Expressions [Analysis Services], reserved words
 - MDX [Analysis Services], reserved words
 ms.assetid: 8d059a8c-d578-4713-a615-2404d94ce32d
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: a4dd6fad354f66226b72ad6a61ff9e5bf7529372
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8bec4b29379b4ad31c8da4074786e95dc058ad10
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="mdx-reserved-words"></a>Reservierte Wörter in MDX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +65,7 @@ ms.lasthandoff: 08/02/2017
 |CALCULATIONPASSVALUE|FREEZE|NULL|TRUE|  
 |CALCULATIONS|FROM|ON|TUPLETOSTR|  
 |CALL|GENERATE|OPENINGPERIOD|TYPE|  
-|CELL|GLOBAL|OR|UNION|  
+|CELL|GLOBAL|oder|UNION|  
 |CELLFORMULASETLIST|GROUP|PAGES|UNIQUE|  
 |CHAPTERS|GROUPING|PARALLELPERIOD|UNIQUENAME|  
 |CHILDREN|HEAD|PARENT|UPDATE|  
@@ -78,9 +75,9 @@ ms.lasthandoff: 08/02/2017
 |COLUMN|IGNORE|PREDICT|USE_WEIGHTED_INCREMENT|  
 |COLUMNS|IIF|PREVMEMBER|USERNAME|  
 |CORRELATION|INCLUDEEMPTY|PROPERTIES|VALIDMEASURE|  
-|COUNT|INDEX|PROPERTY|VALUE|  
+|COUNT|INDEX|PROPERTY|Value|  
 |COUSIN|INTERSECT|QTD|VARIANZ|  
-|COVARIANCE|IS|RANK|VARIANCE|  
+|COVARIANCE|IS|RANK|Varianz|  
 |COVARIANCEN|ISANCESTOR|RECURSIVE|VARIANCEP|  
 |CREATE|ISEMPTY|RELATIVE|VARIANZAUFFÜLL|  
 |CREATEPROPERTYSET|ISGENERATION|ROLLUPCHILDREN|VISUAL|  
@@ -98,4 +95,3 @@ ms.lasthandoff: 08/02/2017
  [MDX-Sprachreferenz &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)  
   
   
-

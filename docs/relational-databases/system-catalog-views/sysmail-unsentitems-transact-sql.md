@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a7147621db09dfc1c29077f82cc3eadb39b3c5b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 85b7db39b03913b735ebde53571675fd9235a7e8
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysmailunsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,6 @@ ms.lasthandoff: 11/17/2017
  Verwenden Sie diese Sicht, um anzuzeigen, wie viele Nachrichten darauf warten, gesendet zu werden, und seit wann diese sich in der E-Mail-Warteschlange befinden. Normalerweise ist die Anzahl der **unsent** werden Nachrichten mit niedriger. Führen Sie unter normalen Betriebsbedingungen einen Vergleichstest durch, um eine für Ihre Betriebsabläufe angemessene Anzahl von Nachrichten in der Nachrichtenwarteschlange zu ermitteln.  
   
  Um alle von Database Mail verarbeiteten Nachrichten anzuzeigen, verwenden [Sysmail_allitems &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md). Um nur Nachrichten mit dem Status failed anzuzeigen, verwenden [Sysmail_faileditems &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Um nur Nachrichten anzuzeigen, die gesendet wurden, verwenden Sie [Sysmail_sentitems &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
-  
-||  
-|-|  
-|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis zur [aktuellen Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  

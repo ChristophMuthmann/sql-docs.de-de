@@ -8,26 +8,22 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- logical functions [MDX]
+dev_langs: kbMDX
+helpviewer_keywords: logical functions [MDX]
 ms.assetid: 0cb34d53-9146-4924-9c9b-607afcb7a2be
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: a752a7af9a1c24fa600adfbf969f99f5176acbde
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 913191018448c88cb7abc3ac4ef21d585a282a24
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="using-logical-functions"></a>Verwenden von logischen Funktionen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -58,4 +54,3 @@ ms.lasthandoff: 08/02/2017
  [Funktionen &#40; MDX-Syntax &#41;](../mdx/functions-mdx-syntax.md)  
   
   
-
