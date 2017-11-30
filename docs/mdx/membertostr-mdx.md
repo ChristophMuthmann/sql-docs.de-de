@@ -8,28 +8,23 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- MEMBERTOSTR
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- MemberToStr function
+f1_keywords: MEMBERTOSTR
+dev_langs: kbMDX
+helpviewer_keywords: MemberToStr function
 ms.assetid: 2076b24a-603a-4d74-91bd-a3d347739bcd
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: f9f346e2dc1b02b8edd7c9e33908a28ce840e36e
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 562f44cac767b5d2d57d6829ef7b6a76c4484c87
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="membertostr-mdx"></a>MemberToStr (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -65,4 +60,3 @@ MemberToStr(Member_Expression)
  [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

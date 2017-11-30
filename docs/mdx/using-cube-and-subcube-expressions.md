@@ -8,12 +8,10 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - subcubes [MDX]
 - cubes [Analysis Services], MDX
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - expressions [MDX], subcubes
 - expressions [MDX], cubes
 ms.assetid: 95ae034d-8f88-4820-91c6-205ec424e119
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: e8e4ee0d95aa58acb6c26c325b31303059b19818
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 71ba6c7d7d5040481ea13d80a160fc19c0704c10
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="using-cube-and-subcube-expressions"></a>Verwenden von Cube- und Teilcubeausdrücken
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -94,4 +91,3 @@ ms.lasthandoff: 08/02/2017
  [SCOPE-Anweisung &#40; MDX &#41;](../mdx/mdx-scripting-scope.md)  
   
   
-

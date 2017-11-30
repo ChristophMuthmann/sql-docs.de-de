@@ -8,28 +8,23 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- CLOSINGPERIOD
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- ClosingPeriod function
+f1_keywords: CLOSINGPERIOD
+dev_langs: kbMDX
+helpviewer_keywords: ClosingPeriod function
 ms.assetid: ae709017-219d-43e1-a98a-a85bd365b4cd
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: fe7c4c827706f45b5258b5c2738ada30d131a4c4
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 921c058bf83cb8e3b54b310dcc9e65bc8202d569
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="closingperiod-mdx"></a>ClosingPeriod (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -61,7 +56,7 @@ ClosingPeriod( [ Level_Expression [ ,Member_Expression ] ] )
   
  Die **ClosingPeriod** -Funktion ist gleichbedeutend mit der folgenden MDX-Anweisung:  
   
- `Tail(Descendants(Member_Expression, Level_Expression), 1)`installiert haben.  
+ `Tail(Descendants(Member_Expression, Level_Expression), 1)`.  
   
 > [!NOTE]  
 >  Die [OpeningPeriod](../mdx/openingperiod-mdx.md) Funktion ist vergleichbar mit der **ClosingPeriod** -Funktion, außer dass die **OpeningPeriod** Funktion gibt das erste gleichgeordnete Element statt des letzten gleichgeordneten zurück.  
@@ -101,4 +96,3 @@ FROM [Adventure Works]
  [LastSibling &#40; MDX &#41;](../mdx/lastsibling-mdx.md)  
   
   
-

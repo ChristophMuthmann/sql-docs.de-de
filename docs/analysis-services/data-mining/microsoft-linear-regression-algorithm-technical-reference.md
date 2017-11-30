@@ -90,7 +90,7 @@ ms.lasthandoff: 11/17/2017
 |Vorhersagbares Attribut|Continuous, Cyclical und Ordered|  
   
 > [!NOTE]  
->  Die Inhaltstypen**Cyclical** und **Ordered** content types are supported, but the algorithm treats them as discrete values und does not perform special processing.  
+>  Die Inhaltstypen**Cyclical** und **Ordered** werden unterstützt, der Algorithmus behandelt sie jedoch als diskrete Werte und führt keine spezielle Verarbeitung durch.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Linear Regression-Algorithmus](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   

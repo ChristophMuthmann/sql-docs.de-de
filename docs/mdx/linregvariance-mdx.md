@@ -8,28 +8,23 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- LINREGVARIANCE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- LinRegVariance function
+f1_keywords: LINREGVARIANCE
+dev_langs: kbMDX
+helpviewer_keywords: LinRegVariance function
 ms.assetid: 09803510-2d71-401b-970e-bbdcac06558d
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: bad28c872f8e414eaa49fba168f55845567dc5ac
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 30ce6e0e7f43be71824734b7ab9790007a9f4763
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="linregvariance-mdx"></a>LinRegVariance (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -76,4 +71,3 @@ LinRegVariance(LastPeriods(10),[Measures].[Unit Sales],[Measures].[Store Sales])
  [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

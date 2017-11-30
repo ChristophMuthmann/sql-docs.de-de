@@ -8,28 +8,23 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- Hierarchy
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Hierarchy function
+f1_keywords: Hierarchy
+dev_langs: kbMDX
+helpviewer_keywords: Hierarchy function
 ms.assetid: 5ddf354f-8cae-4e3a-8803-0055fa86bad1
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: fdb830b6d1b7011f83e48a5c9b4d7a631feadd6a
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 5462b0eb9a5eedc48e841ba8aae3bb3514be447d
-ms.contentlocale: de-de
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="hierarchy-mdx"></a>Hierarchy (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -73,4 +68,3 @@ Level_Expression.Hierarchy
  [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

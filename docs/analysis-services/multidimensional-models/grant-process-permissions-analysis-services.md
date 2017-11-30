@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="set-processing-permissions-on-a-data-mining-structure"></a>Festlegen von Verarbeitungsberechtigungen für eine Data Miningstruktur  
  Sie können eine Rolle mit der Berechtigung zur Verarbeitung von Data Miningstrukturen erstellen. einschließlich der Verarbeitung aller Miningmodelle.  
   
- Die Berechtigungen**Drillthrough ausführen** und **Definition lesen** permissions used for browsing a mining model und structure are atomic und can be added to the same role, or separated out into a different role.  
+ Die Berechtigungen **Drillthrough ausführen** und **Definition lesen**, die für das Durchsuchen von Miningmodellen und -strukturen verwendet werden, sind atomisch und können zur selben Rolle hinzugefügt oder in eine andere Rolle ausgelagert werden.  
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung zur Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]her, öffnen Sie den Ordner "Datenbanken", und wählen Sie eine Datenbank aus.  
   

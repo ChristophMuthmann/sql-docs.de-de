@@ -8,27 +8,24 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - user-defined functions [MDX]
 - stored procedures [MDX]
 ms.assetid: 818fb2ad-f88b-4d0c-9f70-f378aed42e8e
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: e37cf8dc9b117de8af65aa6e6f478f664d2fc783
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2c24641d2be7e4e2130d21881b94a9bcd1698fd7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="using-stored-procedures-mdx"></a>Verwenden von gespeicherten Prozeduren (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,4 +56,3 @@ WHERE [Measures].[Reseller Freight Cost]
  [Funktionen &#40; MDX-Syntax &#41;](../mdx/functions-mdx-syntax.md)  
   
   
-
