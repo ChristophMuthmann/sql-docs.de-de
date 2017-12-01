@@ -52,12 +52,12 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="arguments"></a>Argumente  
  *from_lsn*  
- Der LSN-Wert, der den unteren Endpunkt des LSN-Bereichs darstellt, der im Resultset enthalten sein soll. *From_lsn* ist **("Binary(10)").**.  
+ Der LSN-Wert, der den unteren Endpunkt des LSN-Bereichs darstellt, der im Resultset enthalten sein soll. *From_lsn* ist **("Binary(10)")**.  
   
  Nur Zeilen aus der [cdc. &#91; Capture_instance &#93; _CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) Änderungstabelle mit einem Wert in **__ $Start_lsn** größer als oder gleich *From_lsn* befinden sich die Resultset.  
   
  *to_lsn*  
- Der LSN-Wert, der den oberen Endpunkt des LSN-Bereichs darstellt, der im Resultset enthalten sein soll. *To_lsn* ist **("Binary(10)").**.  
+ Der LSN-Wert, der den oberen Endpunkt des LSN-Bereichs darstellt, der im Resultset enthalten sein soll. *To_lsn* ist **("Binary(10)")**.  
   
  Nur Zeilen aus der [cdc. &#91; Capture_instance &#93; _CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) Änderungstabelle mit einem Wert in **__ $Start_lsn** kleiner als oder gleich *From_lsn* oder gleich*To_lsn* im Resultset enthalten sind.  
   

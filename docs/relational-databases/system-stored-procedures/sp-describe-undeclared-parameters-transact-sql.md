@@ -175,7 +175,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
     ```  
   
-     Der Datentyp für @p1, @p2, und @p3 werden der Datentyp von c1, der Rückgabedatentyp von dbo.tbl und den Parameterdatentyp für dbo.tbl bzw..  
+     Der Datentyp für @p1, @p2, und @p3 werden der Datentyp von c1, der Rückgabedatentyp von dbo.tbl und den Parameterdatentyp für dbo.tbl bzw.  
   
      Ein Sonderfall Wenn @p ist ein Argument an einen \<, >, \<= oder > =-Operator, einfache Ableitung Regeln nicht gelten. Der Typableitungsalgorithmus verwendet die allgemeinen, im nächsten Abschnitt erklärten Ableitungsregeln. Betrachten Sie beispielsweise die folgenden beiden Abfragen für Fälle, in denen c1 eine Spalte vom Datentyp char(30) ist:  
   
