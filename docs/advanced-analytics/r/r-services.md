@@ -25,17 +25,17 @@ ms.lasthandoff: 10/13/2017
 ---
 # <a name="microsoft-machine-learning-services"></a>Microsoft Machine Learning-Dienste
 
-Das Ziel von Microsoft Machine Learning-Services ist eine erweiterbare, skalierbare Plattform für das Integrieren von Machine Learning-Aufgaben und Tools in die Anwendungen, die Machine Learning-Dienste zu nutzen bereitstellen. Die Plattform muss die Anforderungen aller Benutzer Entwicklungs- und das Data Analytics-Prozess Beteiligten aus Datenanalysten, Architekten und Datenbankadministratoren dienen.
+Das Ziel von Microsoft Machine Learning-Services ist eine erweiterbare, skalierbare Plattform für das Integrieren von Machine Learning-Aufgaben und Tools in die Anwendungen, die Machine Learning-Dienste zu nutzen bereitstellen. Die Plattform muss die Anforderungen aller Benutzer Entwicklungs- und das Data Analytics-Prozess Beteiligten aus Datenanalysten, Architekten und Datenbankadministratoren dienen. 
 
 Wichtige Vorteile:
 
-+ Skalierbare analytics
-+ Mehrere Plattformen und rechenkontexte für Lösungen für "einmal schreiben, überall bereitstellen"
-+ Verschieben von Daten und Daten Risiko vermeidet durch das Kombinieren von Analysen an den Daten
-+ Datenanalysten können ihre eigenen Tools und Sprachen auswählen.
-+ Microsofts Unternehmensfunktionen integriert die besten Funktionen der open-source
-+ Vereinfachte administration
-+ Einfach bereitgestellt und Nutzen von Vorhersagemodellen
++ Skalierbare Analytics
++ Multi-Plattform und -Umgebungen (lokal, remote, ...) der Lösungen gemäß der Prämisse "einmal schreiben, überall bereitstellen"
++ Das Verschieben der Analyse zu den Daten verringert den Bedarf an Datenverschiebung und damit verbundener Risiken 
++ Datenanalysten können ihre Tools und Sprachen selbst auswählen.
++ Integration von Microsofts Funktionen mit dem besten an Open-Source Funktionalität 
++ Vereinfachung der Administration
++ Einfach bereitgestellt und Nutzen von Vorhersagemodellen 
 
 ## <a name="in-database-analytics-with-sql-server"></a>In der Datenbank-Analysen mit SQL Server
 
