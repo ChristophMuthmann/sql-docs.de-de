@@ -25,21 +25,22 @@ ms.lasthandoff: 10/13/2017
 ---
 # <a name="microsoft-machine-learning-services"></a>Microsoft Machine Learning-Dienste
 
-Das Ziel von Microsoft Machine Learning-Services ist eine erweiterbare, skalierbare Plattform für das Integrieren von Machine Learning-Aufgaben und Tools in die Anwendungen, die Machine Learning-Dienste zur Nutzung bereitstellen. Die Plattform muss den Anforderungen aller Benutzer, die am Entwicklungs- und Data Analytics-Prozess beteiligt sind, vom Datenanalysten, bis zum Architekten und Datenbankadministrator, dienen.
+Das Ziel von Microsoft Machine Learning-Services ist eine erweiterbare, skalierbare Plattform für das Integrieren von Machine Learning-Aufgaben und Tools in die Anwendungen, die Machine Learning-Dienste zu nutzen bereitstellen. Die Plattform muss die Anforderungen aller Benutzer Entwicklungs- und das Data Analytics-Prozess Beteiligten aus Datenanalysten, Architekten und Datenbankadministratoren dienen. 
 
-Wesntliche Vorteile:
+Wichtige Vorteile:
 
-+ Skalierbare analytics
-+ Mehrere Plattformen und rechenkontexte für Lösungen für "einmal schreiben, überall bereitstellen"
-+ Verschieben von Daten und Daten Risiko vermeidet durch das Kombinieren von Analysen an den Daten
-+ Datenanalysten können ihre eigenen Tools und Sprachen auswählen.
-+ Microsofts Unternehmensfunktionen integriert die besten Funktionen der open-source
-+ Vereinfachte administration
-+ Einfacherer Einsatz und Nutzung von Vorhersagemodellen
++ Skalierbare Analytics
++ Multi-Plattform und -Umgebungen (lokal, remote, ...) der Lösungen gemäß der Prämisse "einmal schreiben, überall bereitstellen"
++ Das Verschieben der Analyse zu den Daten verringert den Bedarf an Datenverschiebung und damit verbundener Risiken 
++ Datenanalysten können ihre Tools und Sprachen selbst auswählen.
++ Integration von Microsofts Funktionen mit dem besten an Open-Source Funktionalität 
++ Vereinfachung der Administration
++ Einfach bereitgestellt und Nutzen von Vorhersagemodellen 
 
 ## <a name="in-database-analytics-with-sql-server"></a>In der Datenbank-Analysen mit SQL Server
 
-Mit SQL Server 2016 veröffentlichte Microsoft zwei Serverplattformen für Geschäftsanwendungen, welche die beliebte Open-Source Sprache R in sich integrieren:
+In SQL Server 2016 gestartet Microsoft zwei Serverplattformen für Geschäftsanwendungen Integrieren der beliebten open Source-R-Sprache:
+
 
 + **SQL Server R Services (In-Database)**, für die Integration mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 + **Microsoft R Server**, für Bereitstellungen für Großunternehmen R auf Windows- und Linux-Servern
@@ -47,6 +48,7 @@ Mit SQL Server 2016 veröffentlichte Microsoft zwei Serverplattformen für Gesch
 Mit SQL Server 2017 wurden die Namen entsprechend geändert um der zusätzlichen Unterstützung der beliebten Sprache Python genüge zu tun. 
 
 + **SQL Server Machine Learning-Services (Datenbankintern)** unterstützt R und Python für Analysen in der Datenbank.
+
 + **Microsoft Machine Learning-Server** unterstützt R und Python-Bereitstellungen auf Windows-Servern mit Erweiterung auf anderen unterstützten Plattformen für spät 2017 geplant.
 
 ### <a name="benefits"></a>Vorteile
