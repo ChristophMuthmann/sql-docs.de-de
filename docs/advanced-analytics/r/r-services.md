@@ -25,9 +25,9 @@ ms.lasthandoff: 10/13/2017
 ---
 # <a name="microsoft-machine-learning-services"></a>Microsoft Machine Learning-Dienste
 
-Das Ziel von Microsoft Machine Learning-Services ist eine erweiterbare, skalierbare Plattform für das Integrieren von Machine Learning-Aufgaben und Tools in jene Anwendungen, die Machine Learning-Dienste nutzen, bereitzustellen. Die Plattform muss den Anforderungen aller Benutzer, die am Datenentwicklungs- und Datenanlyseprozess beteiligt sind, vom Datenanalysten, bis zum Datenbankarchitekten und -administratoren, dienen. 
+Das Ziel von Microsoft Machine Learning-Services ist eine erweiterbare, skalierbare Plattform für das Integrieren von Machine Learning-Aufgaben und Tools in die Anwendungen, die Machine Learning-Dienste zu nutzen bereitstellen. Die Plattform muss die Anforderungen aller Benutzer Entwicklungs- und das Data Analytics-Prozess Beteiligten aus Datenanalysten, Architekten und Datenbankadministratoren dienen. 
 
-Einige wichtige Vorteile daraus:
+Wichtige Vorteile:
 
 + Skalierbare Analytics
 + Multi-Plattform und -Umgebungen (lokal, remote, ...) der Lösungen gemäß der Prämisse "einmal schreiben, überall bereitstellen"
@@ -35,7 +35,7 @@ Einige wichtige Vorteile daraus:
 + Datenanalysten können ihre Tools und Sprachen selbst auswählen.
 + Integration von Microsofts Funktionen mit dem besten an Open-Source Funktionalität 
 + Vereinfachung der Administration
-+ Vereinfachung des Einsatzes und der Nutzung von Vorhersagemodellen 
++ Einfach bereitgestellt und Nutzen von Vorhersagemodellen 
 
 ## <a name="in-database-analytics-with-sql-server"></a>In der Datenbank-Analysen mit SQL Server
 
