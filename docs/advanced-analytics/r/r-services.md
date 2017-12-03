@@ -41,12 +41,14 @@ Wichtige Vorteile:
 
 In SQL Server 2016 gestartet Microsoft zwei Serverplattformen für Geschäftsanwendungen Integrieren der beliebten open Source-R-Sprache:
 
+
 + **SQL Server R Services (In-Database)**, für die Integration mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 + **Microsoft R Server**, für Bereitstellungen für Großunternehmen R auf Windows- und Linux-Servern
 
-In SQL Server 2017 wurde der Name entsprechend der Unterstützung für die Sprache der beliebten Python geändert.
+Mit SQL Server 2017 wurden die Namen entsprechend geändert um der zusätzlichen Unterstützung der beliebten Sprache Python genüge zu tun. 
 
-+ **SQL Server Machine Learning-Services (Datenbankintern)** unterstützt R und Python für die Analyse in der Datenbank.
++ **SQL Server Machine Learning-Services (Datenbankintern)** unterstützt R und Python für Analysen in der Datenbank.
+
 + **Microsoft Machine Learning-Server** unterstützt R und Python-Bereitstellungen auf Windows-Servern mit Erweiterung auf anderen unterstützten Plattformen für spät 2017 geplant.
 
 ### <a name="benefits"></a>Vorteile
