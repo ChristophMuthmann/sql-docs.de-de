@@ -47,7 +47,7 @@ Mit SQL Server 2016 veröffentlichte Microsoft zwei Serverplattformen für Gesch
 Mit SQL Server 2017 wurden die Namen entsprechend geändert um der zusätzlichen Unterstützung der beliebten Sprache Python genüge zu tun. 
 
 + **SQL Server Machine Learning-Services (Datenbankintern)** unterstützt R und Python für Analysen in der Datenbank.
-+ **Microsoft Machine Learning-Server** unterstützt R und Python Einsatz auf Windows-Servern, wobei zusätzliche Erweiterungen auf weitere Plattformen für Ende 2017 geplant sind.
++ **Microsoft Machine Learning-Server** unterstützt R und Python-Bereitstellungen auf Windows-Servern mit Erweiterung auf anderen unterstützten Plattformen für spät 2017 geplant.
 
 ### <a name="benefits"></a>Vorteile
 
