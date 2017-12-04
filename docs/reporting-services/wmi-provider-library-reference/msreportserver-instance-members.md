@@ -1,5 +1,5 @@
 ---
-title: MSReportServer_Instance-Member | Microsoft Docs
+title: MSReportServer_Instance-Member | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,25 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- MSReportServer_Instance Members
-apilocation:
-- reportingservices.mof
+apiname: MSReportServer_Instance Members
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- MSReportServer_Instance class
+helpviewer_keywords: MSReportServer_Instance class
 ms.assetid: 154b78e6-59cc-44eb-a7d9-34908d1b6b1a
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4858da330363297a88c6bcde441b26e5eb384a57
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1ad1fe599e0311c9bf448d3ae341e220efe798da
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="msreportserverinstance-members"></a>MSReportServer_Instance-Member
   Die MSReportServer_Instance-Klasse stellt grundlegende Informationen bereit, die ein Client benötigt, um eine Verbindung mit einem installierten Berichtsserver herzustellen.  
@@ -51,4 +47,3 @@ ms.lasthandoff: 08/09/2017
 |[GetReportServerUrls Method &#40;WMI MSReportServer_Instance&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md)|Listet die URLs auf, über die Benutzer auf den Berichtsserver und den Berichts-Manager zugreifen können|  
   
   
-

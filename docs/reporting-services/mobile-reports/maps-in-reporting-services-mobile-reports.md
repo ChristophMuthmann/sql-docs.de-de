@@ -1,26 +1,24 @@
 ---
-title: Karten in mobilen Reporting Services-Berichte | Microsoft Docs
+title: Karten in mobilen Reporting Services-Berichten | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: dcac784ffea9845be91f35f03fb45e2ca6a6e530
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 975ad199788370f01686c50d5dcc05f093c31f50
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Karten in mobilen Reporting Services-Berichten
 Karten sind eine hervorragende Möglichkeit, geografische Daten visuell darzustellen. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] bietet drei verschiedene Typen von Kartenvisualisierungen sowie integrierte Karten für Kontinente und eine Reihe von einzelnen Ländern. Sie können auch [benutzerdefinierte Karten hochladen und verwenden](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).   
@@ -63,12 +61,12 @@ Um echte Daten in Ihrer Karte anzuzeigen, müssen Sie Werte für mindestens zwei
   
 1. Wählen Sie in der linken oberen Ecke die Registerkarte **Daten** aus.  
   
-2. Wählen Sie **Daten hinzufügen**, klicken Sie dann entweder **lokale Excel** oder **SSRS-Server**.  
+2. Wählen Sie **Daten hinzufügen**und anschließend entweder **Lokale Excel-Datei** oder **SSRS-Server**aus.  
   
    > **Tipp**: Stellen Sie sicher, dass die [Daten in einem Format vorliegen, das in mobilen Berichten eingesetzt werden kann](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md).  
   
 3. Wählen Sie die gewünschten Arbeitsblätter aus, und wählen Sie **Importieren**.  
-   Ihre Daten werden im [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] angezeigt.  
+   Ihre Daten werden im [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]angezeigt.  
   
 4. Wählen Sie in dieser Ansicht **Daten** im Bereich **Dateneigenschaften** unter **Schlüssel** im linken Feld die Tabelle mit den Kartendaten und im rechten Feld das Schlüsselfeld aus, das den Regionen in Ihrer Karte entspricht.  
   
@@ -85,8 +83,7 @@ Um echte Daten in Ihrer Karte anzuzeigen, müssen Sie Werte für mindestens zwei
 8. Wählen Sie in der oberen linken Ecke das Symbol **Speichern** und dann entweder **Lokal speichern** zum Speichern auf Ihrem Computer oder **Auf Server speichern**.  
   
 ### <a name="see-also"></a>Siehe auch  
--  [Custom maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
+-  [Benutzerdefinierte Karten in mobilen Reporting Services-Berichten](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher (Erstellen und Veröffentlichen von mobilen Berichten mit dem Publisher für mobile Berichte von SQL Server)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   
-

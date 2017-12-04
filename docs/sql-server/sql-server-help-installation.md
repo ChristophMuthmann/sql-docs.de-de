@@ -13,17 +13,16 @@ applies_to:
 - SQL Server 2016
 - SQL Server 2017
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 80f13a760e8176eb0d0bafbac29cf162f473caf4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: b8e93b7afb8845398e23ca52c5c3f3bf3901898c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="help-viewer-and-offline-content-for-sql-server"></a>Help Viewer und Offlineinhalt für SQL Server
   
@@ -66,7 +65,7 @@ In der folgenden Tabelle sind die Tools aufgeführt, die Help Viewer basierend a
   
    >[!IMPORTANT] 
    >In SQL Server Management Studio und Visual Studio kann die Anwendung Help Viewer während des Hinzufügens der Dokumentation einfrieren (hängenbleiben). Gehen Sie zur Lösung des Problems wie folgt vor: Weitere Informationen zu diesem Problem finden Sie unter [Visual Studio Help Viewer friert beim Begrüßungsbildschirm ein](https://msdn.microsoft.com/library/mt654096.aspx).  
-   >>Öffnen Sie die Datei „%LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings“ | „HlpViewer_VisualStudio14_en-US.settings“ im Editor, und ändern Sie das Datum im folgenden Code in einen Zeitpunkt in der Zukunft. Diese Datei ist auf dem lokalen Computer nur verfügbar, wenn Sie Visual Studio installiert haben. 
+   >>Öffnen Sie die Datei „%LOCALAPPDATA%\Microsoft\HelpViewer2.3\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio15_en-US.settings“ im Editor, und ändern Sie das Datum im folgenden Code in einen Zeitpunkt in der Zukunft. Diese Datei ist auf dem lokalen Computer nur verfügbar, wenn Sie Visual Studio installiert haben. 
    >>>Cache LastRefreshed="12/31/2017 00:00:00"  
   
     Das Inhaltsverzeichnis im linken Bereich wird automatisch um die Dokumentation aktualisiert, die Sie hinzugefügt haben.  
@@ -139,7 +138,5 @@ Wenn Sie F1 drücken, wird das entsprechende Thema online angezeigt. Das Thema k
 Der Help Viewer unterstützt Proxyeinstellungen und das ISO-Format nicht. 
 
 ## <a name="additional-information"></a>Zusätzliche Informationen
-[Microsoft Help Viewer – Visual Studio 2015](https://msdn.microsoft.com/library/hh580782.aspx)
-
+[Microsoft Help Viewer – Visual Studio](/visualstudio/ide/microsoft-help-viewer)  
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

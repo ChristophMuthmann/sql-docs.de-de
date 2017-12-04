@@ -1,5 +1,5 @@
 ---
-title: Subscription and Delivery Methods | Microsoft Docs
+title: "Abonnement und Übermittlungsmethoden | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,25 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - reports [Reporting Services], delivering
 - delivery [Reporting Services]
 - methods [Reporting Services], subscription and delivery
 - subscriptions [Reporting Services], about subscriptions
 ms.assetid: a8637501-1817-4ccc-b07d-dd9ed5608805
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 45e772533354fea94bf0bee7f01219622dc09c4f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 7ac0b032199a3ec9878d604e5f7d726af872a830
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="subscription-and-delivery-methods"></a>Abonnement und Übermittlungsmethoden
   Mit diesen Methoden können Sie Abonnements und die Übermittlung von Katalogelementen erstellen und verwalten.  
@@ -42,7 +40,7 @@ ms.lasthandoff: 08/12/2017
 |<xref:ReportService2010.ReportingService2010.GetSubscriptionProperties%2A>|Gibt die Eigenschaften eines Abonnements zurück.|  
 |<xref:ReportService2010.ReportingService2010.ListMySubscriptions%2A>|Ruft eine Liste von Abonnements ab, die vom aktuellen Benutzer des Berichtsservers oder der SharePoint-Website für das angegebene Katalogelement erstellt wurden.|  
 |<xref:ReportService2010.ReportingService2010.ListSubscriptions%2A>|Ruft eine Liste von Abonnements ab, die für ein bestimmtes Element erstellt wurden.|  
-|<xref:ReportService2010.ReportingService2010.PrepareQuery%2A>|Gibt ein Dataset, die von der übermittlungsabfrage für ein datengesteuertes Abonnement abgerufenen Felder enthält.|  
+|<xref:ReportService2010.ReportingService2010.PrepareQuery%2A>|Gibt ein Dataset zurück, das die von der Übermittlungsabfrage für ein datengesteuertes Abonnement abgerufenen Felder enthält.|  
 |<xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A>|Legt die Werte der Eigenschaften eines datengesteuerten Abonnements fest.|  
 |<xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A>|Legt die Werte der Eigenschaften eines Abonnements fest.|  
   
@@ -50,7 +48,6 @@ ms.lasthandoff: 08/12/2017
  [Erstellen von Anwendungen mit dem Webdienst und .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Berichtsserver-Webdienst](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Webdienstmethoden für Berichtsserver](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
- [Technische Referenz &#40; SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [Technische Referenz (SSRS)](../../../reporting-services/technical-reference-ssrs.md)  
   
   
-

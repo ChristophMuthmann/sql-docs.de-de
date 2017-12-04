@@ -1,5 +1,5 @@
 ---
-title: Berichtsteile (Berichts-Generator und SSRS) | Microsoft Docs
+title: Berichtsteile (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10543"
+f1_keywords: "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 817f519ef87ae764f41634f467a554cbae04baed
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4b2b6d82d897af5f41163257bd129df1ef538ecd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Berichtsteile (Berichts-Generator und SSRS)
   Berichtselemente wie Tabellen, Matrizen, Diagramme und Bilder können als *Berichtsteile*veröffentlicht werden. Berichtsteile sind Elemente paginierter Berichte, die separat auf einem Berichtsserver veröffentlicht wurden und in anderen paginierten Berichten wieder verwendet werden können. Berichtsteile besitzen die Dateierweiterung ".rsc".  
@@ -33,7 +31,7 @@ ms.lasthandoff: 08/09/2017
  Die Beziehung zwischen dem Berichtsteil, den Sie einem Bericht hinzufügen, und der Instanz des Berichtsteils auf der Website oder dem Server bleibt durch die Verwendung einer eindeutigen ID erhalten. Nachdem Sie einem Bericht Berichtsteile von einer Website oder einem Server hinzugefügt haben, können Sie diese unabhängig vom ursprünglichen Berichtsteil auf der Website oder dem Server ändern. Sie können Updates annehmen, die andere Personen am Berichtsteil auf der Website oder dem Server vorgenommen haben, und den geänderten Berichtsteil auf der Website oder dem Server neu speichern, indem Sie entweder einen neuen Berichtsteil hinzufügen oder die ursprüngliche Datei überschreiben, sofern Sie über entsprechende Berechtigungen dafür verfügen.  
   
 ##  <a name="ComponentWorkflow"></a> Lebenszyklus eines Berichtsteils  
- ![Rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.gif "Rs_ComponentCreation")  
+ ![rs_Komponentenerstellung](../../reporting-services/report-design/media/rs-componentcreation.gif "rs_ComponentCreation")  
   
 1.  Person A erstellt einen Bericht mit einem Diagramm, das von einem eingebetteten Dataset abhängig ist.  
   
@@ -41,7 +39,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  Person B erstellt einen leeren Bericht, durchsucht den Berichtsteilkatalog, findet das Diagramm und fügt es dem Bericht hinzu. Das Diagramm ist jetzt zusammen mit dem eingebetteten Dataset Teil des Berichts von Person B. Person B kann die im Bericht enthaltenen Diagramm- und Datasetinstanzen ändern. Dies hat weder Auswirkungen auf die Diagramm- und Datasetinstanzen auf dem Berichtsserver, noch wird die Beziehung zwischen den Instanzen im Bericht und auf dem Berichtsserver unterbrochen.  
   
-     ![Rs_componentupdate](../../reporting-services/report-design/media/rs-componentupdate.gif "Rs_componentupdate")  
+     ![rs_componentupdate](../../reporting-services/report-design/media/rs-componentupdate.gif "rs_componentupdate")  
   
 4.  Person C fügt das Diagramm einem Bericht hinzu und ändert dieses Diagramm im Bericht von einem Balkendiagramm zu einem Kreisdiagramm.  
   
@@ -100,7 +98,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="what-comes-with-a-report-part"></a>Zugehörige Elemente zu einem Berichtsteil  
  Wenn Sie dem Bericht einen Berichtsteil hinzufügen, werden damit auch alle für die Verarbeitung erforderlichen Elemente hinzugefügt. Beispielsweise ist jedes angezeigte Objekt von einem Dataset (d. h., einer Abfrage und einer Verbindung zu einer Datenquelle) abhängig. Möglicherweise verfügt es auch über einen oder mehrere Parameter. Alle Elemente, von denen es abhängig ist, werden als *Abhängigkeiten*bezeichnet. Diese Elemente und Verweise auf diese Elemente sind im Berichtsteil enthalten, wenn Sie ihn dem Bericht hinzufügen. Das Dataset und die Parameter werden im Berichtsdatenbereich des Berichts aufgeführt.  
   
- Das Dataset für den Berichtsteil kann in den Berichtsteil eingebettet oder ein separates freigegebenes Dataset sein, auf den der Berichtsteil verweist. Wenn es in den Berichtsteil eingebettet ist, können Sie es möglicherweise ändern. Wenn es ein freigegebenes Dataset ist, ist es ein separates Objekt, für das Sie die entsprechenden Berechtigungen benötigen. Weitere Informationen zu freigegebenen und eingebetteten Datasets, finden Sie unter [Berichtsdatasets &#40; SSRS &#41; ](../../reporting-services/report-data/report-datasets-ssrs.md).  
+ Das Dataset für den Berichtsteil kann in den Berichtsteil eingebettet oder ein separates freigegebenes Dataset sein, auf den der Berichtsteil verweist. Wenn es in den Berichtsteil eingebettet ist, können Sie es möglicherweise ändern. Wenn es ein freigegebenes Dataset ist, ist es ein separates Objekt, für das Sie die entsprechenden Berechtigungen benötigen. Weitere Informationen zu freigegebenen und eingebetteten Datasets finden Sie unter [Berichtsdatasets (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
 ### <a name="resolving-naming-conflicts"></a>Lösen von Namenskonflikten  
  Wenn Sie einen Berichtsteil hinzufügen, löst Berichts-Generator alle Namenskonflikte. Wenn beispielsweise bereits ein Diagramm1 in Ihrem Bericht vorhanden ist und Sie einen Berichtsteil namens Diagramm1 hinzufügen, benennt Berichts-Generator den neuen Berichtsteil automatisch in Diagramm2 um. Wenn der Bericht bereits ein Dataset1 enthält und Sie einen Berichtsteil hinzufügen, der auf ein anderes Dataset mit dem Namen Dataset1 verweist, benennt Berichts-Generator das neue Dataset in Dataset2 um und aktualisiert die Verweise.  
@@ -152,4 +150,3 @@ ms.lasthandoff: 08/09/2017
  [Managing Report Parts (Verwalten von Berichtsteilen)](../../reporting-services/report-design/managing-report-parts.md)  
   
   
-

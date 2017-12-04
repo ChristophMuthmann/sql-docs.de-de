@@ -1,5 +1,5 @@
 ---
-title: Verwalten eine Reporting Services SharePoint-Dienstanwendung | Microsoft Docs
+title: Verwalten einer Reporting Services-SharePoint-Dienstanwendung | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-server-2016
@@ -14,25 +14,24 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: afd3ad49ecc3ff34938974a685a7695c09776762
-ms.contentlocale: de-de
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 22270e6f1aa209ef9a6938b92d0252678c2ad7e8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="manage-a-reporting-services-sharepoint-service-application"></a>Verwalten einer Reporting Services SharePoint-dienstanwendung
+# <a name="manage-a-reporting-services-sharepoint-service-application"></a>Verwalten einer Reporting Services-SharePoint-Dienstanwendung
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-dienstanwendungen werden über die SharePoint-Zentraladministration verwaltet. Die Seiten für die Verwaltung und Eigenschaften ermöglichen es Ihnen, die Konfiguration der Dienstanwendung sowie allgemeine Verwaltungsaufgaben zu aktualisieren.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienstanwendungen werden über die SharePoint-Zentraladministration verwaltet. Die Seiten für die Verwaltung und Eigenschaften ermöglichen es Ihnen, die Konfiguration der Dienstanwendung sowie allgemeine Verwaltungsaufgaben zu aktualisieren.  
 
 > [!NOTE]
-> Reporting Services-Integration in SharePoint ist nach SQL Server 2016 nicht mehr verfügbar.
+> Die Integration von Reporting Services in SharePoint ist nach SQL Server 2016 nicht mehr möglich.
 
-## <a name="open-service-application-properties-page"></a>Geöffneten Eigenschaftenseite für dienstanwendungen
+## <a name="open-service-application-properties-page"></a>Öffnen der Eigenschaftenseite von Dienstanwendungen
 
  Zum Öffnen der Eigenschaftenseite für eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung gehen Sie wie folgt vor:  
   
@@ -42,7 +41,7 @@ ms.lasthandoff: 10/06/2017
   
  Weitere Informationen zu Dienstanwendungseigenschaften finden Sie unter [Step 3: Create a Reporting Services Service Application](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
   
-## <a name="open-service-application-management-pages"></a>Open Verwaltungsseiten für dienstanwendungen
+## <a name="open-service-application-management-pages"></a>Öffnen der Verwaltungsseiten von Dienstanwendungen
 
  Zum Öffnen der Verwaltungsseiten für eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung gehen Sie wie folgt vor:  
   
@@ -52,7 +51,7 @@ ms.lasthandoff: 10/06/2017
   
 3.  Klicken Sie alternativ neben den Namen der Dienstanwendung oder auf die Spalte **Typ** für die Dienstanwendung. Dadurch wird die gesamte Zeile ausgewählt. Klicken Sie anschließend im SharePoint-Menüband auf **Verwalten** .  
   
-## <a name="system-settings-page"></a>Seite "Einstellungen" System
+## <a name="system-settings-page"></a>Seite „Systemeinstellungen“
 
  Die Seite für die Systemeinstellungen ermöglicht es Ihnen, das Verhalten und die Benutzerfreundlichkeit der Dienstanwendung einschließlich verschiedener Timeouts zu konfigurieren.
   
@@ -98,7 +97,7 @@ ms.lasthandoff: 10/06/2017
 |Einstellung|Kommentare|  
 |-------------|--------------|  
 |Berichts-Generator-Download aktivieren|Der Standardwert ist TRUE.<br /><br /> Gibt an, ob Clients die Schaltfläche zum Herunterladen der Berichts-Generator-Anwendung erkennen.|  
-|Start-URL des Berichts-Generators|Geben Sie eine benutzerdefinierte URL an, wenn der Berichtsserver nicht die Standard-URL des Berichts-Generators verwendet. Dies ist eine optionale Einstellung. Wenn Sie keinen Wert angeben, wird die Standard-URL verwendet, mit der Berichts-Generator gestartet wird. Zum Starten von Berichts-Generator 3.0 als mit einem Klick-nachdem-Anwendung einsetzen möchten, geben Sie den folgenden Wert: http://\<Computername > / ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
+|Start-URL des Berichts-Generators|Geben Sie eine benutzerdefinierte URL an, wenn der Berichtsserver nicht die Standard-URL des Berichts-Generators verwendet. Dies ist eine optionale Einstellung. Wenn Sie keinen Wert angeben, wird die Standard-URL verwendet, mit der Berichts-Generator gestartet wird. Um den Berichts-Generator 3.0 als ClickOnce-Anwendung zu starten, geben Sie den folgenden Wert ein: http://\<Computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
 |Clientdruck aktivieren|Der Standard lautet TRUE.<br /><br /> Gibt an, ob Benutzer das clientseitige Steuerelement herunterladen können, das Druckoptionen bereitstellt.|  
 |Sitzungstimeout bearbeiten|Der Standardwert ist 7.200 Sekunden.|  
 |Sitzungscachelimit bearbeiten|Der Standardwert ist 5.|  
@@ -107,7 +106,7 @@ ms.lasthandoff: 10/06/2017
 
  Sie können aktive Aufträge anzeigen und löschen, beispielsweise Aufträge, die von Berichtsabonnements und datengesteuerten Abonnements erstellt werden. Die Seite wird nicht zum Verwalten von Abonnements, sondern von Aufträgen verwendet, die von einem Abonnement ausgelöst werden. Beispielsweise generiert ein Abonnement, das planmäßig stündlich einmal ausgeführt wird, jede Stunde einen Auftrag, der auf der Seite **Aufträge verwalten** angezeigt wird.  
   
- ![Verwalten Sie ausgeführte Aufträge](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "verwalten Sie ausgeführte Aufträge")  
+ ![Verwalten gerade ausgeführter Aufträge](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "manage running jobs")  
   
 ## <a name="key-management"></a>Schlüsselverwaltung
  Die folgende Tabelle fasst die Schlüsselverwaltungsseiten zusammen.  
@@ -152,7 +151,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  Wählen Sie diese Option aus, um ein Konto anzugeben.  
   
  **Konto**  
- Geben Sie ein Windows-Domänenbenutzerkonto an. Verwenden Sie dieses Format:  *\<Domäne >\\< Benutzerkonto\>*.  
+ Geben Sie ein Windows-Domänenbenutzerkonto an. Verwenden Sie dieses Format: *\<Domäne>\\<Benutzerkonto\>*.  
   
  **Kennwort**  
  Geben Sie das Kennwort ein.  
@@ -194,4 +193,3 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 5.  Aktivieren Sie das Kontrollkästchen für den Proxy, und klicken Sie auf **OK**.  
   
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
-

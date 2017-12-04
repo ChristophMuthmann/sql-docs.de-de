@@ -1,5 +1,5 @@
 ---
-title: 'SetServiceState-Methode (WMI: MSReportServer_ConfigurationSetting) | Microsoft Docs'
+title: 'SetServiceState-Methode (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SetServiceState (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: SetServiceState (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- SetServiceState method
+helpviewer_keywords: SetServiceState method
 ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8964b2b0886ffd0483e48c8e9baf91ab9b2dae3d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 85e26f683c03e9b411ae3dc7d17f1b326981740d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---setservicestate"></a>ConfigurationSetting Methode - SetServiceState
+# <a name="configurationsetting-method---setservicestate"></a>ConfigurationSetting-Methode: SetServiceState
   Aktiviert und deaktiviert den Berichtsserver-Windows-Dienst und den Berichtsserver-Webdienst.  
   
 ## <a name="syntax"></a>Syntax  
@@ -57,7 +53,7 @@ public void SetServiceState(Boolean EnableWindowsService,
  Ein **Boolean** -Wert, der den gewünschten Status des Berichts-Managers angibt.
  
  > [!NOTE] 
- > Diese Einstellung ist ab SQL Server 2016 Reporting Services kumulative Update 2 veraltet. Das Webportal wird immer aktiviert. Der Wert wird ignoriert.
+ > Diese Einstellung wurde ab dem Kumulativen Update 2 von SQL Server 2016 Reporting Services als veraltet gekennzeichnet. Das Webportal bleibt weiterhin aktiviert. Der Wert wird ignoriert.
   
  *HRESULT*  
  [out] Wert, der angibt, ob der Aufruf erfolgreich war oder zu einem Fehler geführt hat.  
@@ -74,4 +70,3 @@ public void SetServiceState(Boolean EnableWindowsService,
  [MSReportServer_ConfigurationSetting-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

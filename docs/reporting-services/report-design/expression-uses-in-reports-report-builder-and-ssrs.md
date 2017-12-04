@@ -1,5 +1,5 @@
 ---
-title: Ausdruck verwendet wird, in Berichten (Berichts-Generator und SSRS) | Microsoft Docs
+title: Ausdrucksverwendungen in Berichten (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,23 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- expressions [Reporting Services], about expressions
+helpviewer_keywords: expressions [Reporting Services], about expressions
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 546817a006d06b1acbea5962cc1a3230867e111e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 040dc71113e8db518b1e98420241e1e6f2c3ba19
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Ausdrucksverwendungen in Berichten (Berichts-Generator und SSRS)
-In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten werden Ausdrücke innerhalb der gesamten Berichtsdefinition verwendet, um Werte für folgende Elemente anzugeben oder zu berechnen: Parameter, Abfragen, Filter, Berichtselementeigenschaften, Gruppierungs- und Sortierdefinitionen, Textfeldeigenschaften, Lesezeichen, Dokumentstrukturen, dynamischer Inhalt von Seitenkopf- und Seitenfußzeilen, Bilder und dynamische Datenquellendefinitionen. Dieses Hilfethema enthält Beispiele für die vielen Anwendungsmöglichkeiten, die Ausdrücke bieten, um den Inhalt oder die Darstellung eines Berichts zu variieren. Es handelt sich dabei aber nicht um eine vollständige Liste. Sie können einen Ausdruck für eine Eigenschaft festlegen, in einem Dialogfeld, in dem den Ausdruck angezeigt (**fx**)-Schaltfläche oder in einer Dropdownliste angezeigt, die  **\<Ausdruck… >**.  
+In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten werden Ausdrücke innerhalb der gesamten Berichtsdefinition verwendet, um Werte für folgende Elemente anzugeben oder zu berechnen: Parameter, Abfragen, Filter, Berichtselementeigenschaften, Gruppierungs- und Sortierdefinitionen, Textfeldeigenschaften, Lesezeichen, Dokumentstrukturen, dynamischer Inhalt von Seitenkopf- und Seitenfußzeilen, Bilder und dynamische Datenquellendefinitionen. Dieses Hilfethema enthält Beispiele für die vielen Anwendungsmöglichkeiten, die Ausdrücke bieten, um den Inhalt oder die Darstellung eines Berichts zu variieren. Es handelt sich dabei aber nicht um eine vollständige Liste. Sie können für jede beliebige Eigenschaft einen Ausdruck in einem Dialogfeld festlegen, in dem die Ausdrucksschaltfläche (**fx**) angezeigt wird, oder in einer Dropdownliste, in der **\<Ausdruck...>** angezeigt wird.  
   
  Ausdrücke können einfach oder komplex sein. *Einfache Ausdrücke* enthalten einen Verweis auf ein einzelnes Datasetfeld, einen Parameter oder ein integriertes Feld. Komplexe Ausdrücke können mehrere integrierte Verweise, Operatoren und Funktionsaufrufe enthalten. Beispiel: Ein komplexer Ausdruck könnte die auf dem Feld Vertrieb angewendete Sum-Funktion einschließen.  
   
@@ -65,7 +63,7 @@ In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 
 |Formatieren von Daten in einem Textfeld in Abhängigkeit des Werts.|Farbe für einen Platzhalter in einem Textfeld in der Detailzeile eines Tablix-Elements. Dialogfeld **Textfeldeigenschaften, Schriftart**.|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |Einmaliges Berechnen eines Werts, um überall im Bericht darauf verweisen zu können.|Wert für eine Berichtsvariable. Dialogfeld **Berichtseigenschaften, Variablen**.|`=Variables!MyCalculation.Value`|  
 |Einschließen bestimmter Werte für mehrere Felder aus einem Dataset.|Filtergleichung für eine Gruppe in einem Tablix-Element. Dialogfeld **Tablix-Eigenschaften, Filter**.|Wählen Sie als Datentyp die Option **Boolesch**.<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  
-|Ausblenden eines Textfelds auf der Entwurfsoberfläche, das von Benutzern ein- oder ausgeblendet werden kann, indem diese einen booleschen Parameter mit dem Namen *Show*verwenden.|Ausgeblendete Eigenschaft in einem Textfeld. Dialogfeld **Textfeldeigenschaften, Sichtbarkeit**.|`=Not Parameters!`*Anzeigen\<booleschen Parameters >*`.Value`|  
+|Ausblenden eines Textfelds auf der Entwurfsoberfläche, das von Benutzern ein- oder ausgeblendet werden kann, indem diese einen booleschen Parameter mit dem Namen *Show*verwenden.|Ausgeblendete Eigenschaft in einem Textfeld. Dialogfeld **Textfeldeigenschaften, Sichtbarkeit**.|`=Not Parameters!` *Anzeigen\<boolescher Parameter>* `.Value`|  
 |Angeben des dynamischen Inhalts von Seitenkopf- oder Seitenfußzeilen.|Wert für einen Platzhalter in einem Textfeld, das in die Seitenkopf- oder Seitenfußzeile eingefügt wird.|`="Page " & Globals!PageNumber & " of "  & Globals!TotalPages`|  
 |Dynamisches Angeben einer Datenquelle mithilfe eines Parameters.|Verbindungszeichenfolge in der Datenquelle. Dialogfeld **Datenquelleneigenschaften, Allgemein**.|`="Data Source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks2012"`|  
 |Identifizieren aller Werte für einen mehrwertigen Parameter, der vom Benutzer ausgewählt wurde.|Wert für einen Platzhalter in einem Textfeld. Dialogfeld **Tablix-Eigenschaften, Filter**.|`=Join(Parameters!MyMultivalueParameter.Value,", ")`|  
@@ -75,14 +73,13 @@ In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 
 |Verketten einer Zeichenfolge und einer Zahl, die als Prozentsatz mit zwei Dezimalstellen formatiert ist.|Wert für einen Platzhalter in einem Textfeld in einem Datenbereich. Dialogfeld **Textfeldeigenschaften, Allgemein**.|`="Growth Percent: " & Format(Fields!Growth.Value,"p2")`|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ausdrücke &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Beispiele für Ausdrücke &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Berichtsparameter &#40; Berichts-Generator und Berichts-Designer &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Beispiele für Filtergleichungen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
- [Filter, Gruppen, und Sortieren von Daten &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Kopf- und Fußzeilen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Formatieren von Text und Platzhalter &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Ausblenden eines Elements &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
+ [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Beispiele für Filtergleichungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
+ [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Seitenkopf- und Seitenfußzeilen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Formatieren von Text und Platzhaltern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Ausblenden eines Elements (Berichts-Generator und SSRS)](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   
-

@@ -1,30 +1,28 @@
 ---
-title: Erstellen eine einheitlichen Modus Berichtsserver-Datenbank (SSRS-Konfigurations-Manager) | Microsoft Docs
+title: Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus (SSRS-Konfigurations-Manager) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - databases [Reporting Services], creating
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: e51657eabce531ab1f7c44b88c8e5ff13c94fce0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1458fe51bc43c24904be30c5484f8829f8b45ebc
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="create-a-native-mode-report-server-database"></a>Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
@@ -87,7 +85,7 @@ Um eine Berichtsserver-Datenbank zu erstellen oder die Verbindungszeichenfolge o
   
 4.  Stellen Sie eine Verbindung mit der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, die Sie zum Erstellen und Hosten der Berichtsserver-Datenbank verwenden möchten.  
   
-    1.  Geben Sie die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Instanz ein, die Sie verwenden möchten. Der Assistent zeigt eine lokale [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz an, die als Standardinstanz ausgeführt wird, sofern sie verfügbar ist. Andernfalls müssen Sie den Server und die Instanz eingeben, die verwendet werden sollen. Benannte Instanzen werden im folgenden Format angegeben: \<Servername >\\< Instancename\>.  
+    1.  Geben Sie die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Instanz ein, die Sie verwenden möchten. Der Assistent zeigt eine lokale [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz an, die als Standardinstanz ausgeführt wird, sofern sie verfügbar ist. Andernfalls müssen Sie den Server und die Instanz eingeben, die verwendet werden sollen. Benannte Instanzen werden in folgendem Format angegeben: \<Servername>\\<Instanzenname\>.  
   
     2.  Geben Sie die Anmeldeinformationen ein, die für eine einmalige Verbindung mit [!INCLUDE[ssDE](../../includes/ssde-md.md)] verwendet werden, um die Berichtsserver-Datenbanken zu erstellen. Weitere Informationen zur Verwendung dieser Anmeldeinformationen finden Sie in diesem Thema unter [Vorbereitungen](#rsdbrequirements) .  
   
@@ -155,8 +153,8 @@ Der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfiguration
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Konfigurieren Sie eine Verbindung mit der Berichtsserver-Datenbank](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
-[Verwalten eines Berichtsservers der Reporting Services im einheitlichen Modus](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
+[Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 [Reporting Services-Konfigurations-Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
-Haben Sie dazu Fragen? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

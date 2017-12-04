@@ -1,5 +1,5 @@
 ---
-title: Implementieren von Renderingerweiterungen | Microsoft Docs
+title: Bereitstellen von Renderingerweiterungen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - rendering extensions [Reporting Services]
 - custom rendering extensions [Reporting Services]
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - extensions [Reporting Services], rendering
 - rendering extensions [Reporting Services], implementing
 ms.assetid: 4a5c64f5-2391-4597-ba3f-81d265b23703
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: c6be8db763c82a47d0635169f33a0f0543910abe
-ms.contentlocale: de-de
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 5c11ea9bc401fe1df849325758fbddeb867168dd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="implementing-a-rendering-extension"></a>Implementieren von Renderingerweiterungen
   Eine Renderingerweiterung stellt eine Komponente oder ein Modul eines Berichtsservers dar, mit dem Daten- und Layoutinformationen in ein gerätespezifisches Format umgewandelt werden. SQL Server Reporting Services enthält sechs Renderingerweiterungen: HTML, Excel, Word, CSV oder Text, XML, Image und PDF. Sie können zusätzliche Renderingerweiterungen erstellen, um Berichte in anderen Formaten zu generieren.  
@@ -51,8 +49,7 @@ ms.lasthandoff: 08/12/2017
  Beschreibt, wie Sie eine Renderingerweiterung von einem Berichtsserver entfernen  
   
 ## <a name="see-also"></a>Siehe auch  
- [Reporting Services-Erweiterungen](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Reporting Services-Erweiterungsbibliothek](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [Erweiterungen für Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
+ [Reporting Services Extension Library (Reporting Services-Erweiterungsbibliothek)](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

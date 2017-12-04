@@ -1,31 +1,29 @@
 ---
-title: Benutzerdefinierte Karten in mobilen Reporting Services-Berichte | Microsoft Docs
+title: Benutzerdefinierte Karten in mobilen Reporting Services-Berichten | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 59a4ebad-587a-4770-afcd-c69216b8afd9
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 410863a8fc12424addbc8edba0196066fd1daf79
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 580594ae5766b31bb18cdefc5682bda8e3a5ee15
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="custom-maps-in-reporting-services-mobile-reports"></a>benutzerdefinierte Karten in mobilen Reporting Services-Berichten
-Geografische Karten in SQL Server Mobile Report Publisher werden definiert, in einem Format, bekannt als *-esri-Shape-Dateien*.  
+# <a name="custom-maps-in-reporting-services-mobile-reports"></a>Benutzerdefinierte Karten in mobilen Reporting Services-Berichten
+Geografische Karten werden im Publisher für mobile Berichte von Microsoft SQL Server in dem Format *Shapefile* von ESRI definiert.  
   
-Dieses wurde ursprünglich von einem privaten Unternehmen entwickelt und ist inzwischen ein weitverbreitetes halboffenes Format, das in vielen Geoinformationssystem-Anwendungen verwendet wird. Entsprechend diesem Format erfordert Mobile Report Publisher zwei Dateien bereitgestellt werden, wenn Sie eine Zuordnung zu definieren:  
+Dieses wurde ursprünglich von einem privaten Unternehmen entwickelt und ist inzwischen ein weitverbreitetes halboffenes Format, das in vielen Geoinformationssystem-Anwendungen verwendet wird. Diesem Format entsprechend erfordert der Publisher für mobile Berichte, dass beim Definieren einer Karte zwei Dateien bereitgestellt werden:  
   
 - Eine SHP-Datei für Shapegeometrien  
 - Eine DBF-Datei für Metadaten  
@@ -63,4 +61,3 @@ Aus dem Web können viele vorhandene Shape-Dateien heruntergeladen werden, z. B.
   
   
   
-

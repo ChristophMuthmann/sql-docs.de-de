@@ -1,5 +1,5 @@
 ---
-title: Authentifizierung mit dem Berichtsserver | Microsoft Docs
+title: Authentifizierung beim Berichtsserver | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -17,21 +17,19 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - Forms authentication
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c38fc293a297544710b77b52d054fae58273340e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="authentication-with-the-report-server"></a>Authentifizierung mit dem Berichtsserver
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) bietet mehrere konfigurierbare Optionen zum Authentifizieren von Benutzern und Clientanwendungen für den Berichtsserver. Standardmäßig verwendet der Berichtsserver die integrierte Windows-Authentifizierung und geht von vertrauenswürdigen Beziehungen aus, wenn sich Client- und Netzwerkressourcen in der gleichen Domäne oder einer vertrauenswürdigen Domäne befinden. Abhängig von der Netzwerktopologie und den Anforderungen der Organisation können Sie das für die integrierte Windows-Authentifizierung verwendete Authentifizierungsprotokoll anpassen, die Standardauthentifizierung verwenden oder eine selbst bereitgestellte und auf einem benutzerdefinierten Formular basierende Authentifizierungserweiterung nutzen. Jeder dieser Authentifizierungstypen kann individuell aktiviert oder deaktiviert werden. Sie können mehrere Authentifizierungstypen aktivieren, wenn der Berichtsserver mehrere Arten von Anforderungen akzeptieren soll.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) bietet mehrere konfigurierbare Optionen zum Authentifizieren von Benutzern und Clientanwendungen am Berichtsserver. Standardmäßig verwendet der Berichtsserver die integrierte Windows-Authentifizierung und geht von vertrauenswürdigen Beziehungen aus, wenn sich Client- und Netzwerkressourcen in der gleichen Domäne oder einer vertrauenswürdigen Domäne befinden. Abhängig von der Netzwerktopologie und den Anforderungen der Organisation können Sie das für die integrierte Windows-Authentifizierung verwendete Authentifizierungsprotokoll anpassen, die Standardauthentifizierung verwenden oder eine selbst bereitgestellte und auf einem benutzerdefinierten Formular basierende Authentifizierungserweiterung nutzen. Jeder dieser Authentifizierungstypen kann individuell aktiviert oder deaktiviert werden. Sie können mehrere Authentifizierungstypen aktivieren, wenn der Berichtsserver mehrere Arten von Anforderungen akzeptieren soll.
   
  Alle Benutzer oder Anwendungen, die Zugriff auf Berichtsserverinhalte oder -vorgänge anfordern, müssen vor Gewähren des Zugriffs authentifiziert werden.  
   
@@ -52,9 +50,9 @@ ms.lasthandoff: 08/09/2017
 |Authentifizierungsmethode|Erklärung|  
 |---------------------------|-----------------|  
 |Anonym|Der Berichtsserver akzeptiert nur die nicht authentifizierten Anforderungen anonymer Benutzer in Bereitstellungen, die eine benutzerdefinierte Authentifizierungserweiterung enthalten.<br /><br /> Berichts-Generator akzeptiert nicht authentifizierte Anforderungen, wenn Sie den Zugriff des Berichts-Generators auf einen Berichtsserver aktivieren, der für die Standardauthentifizierung konfiguriert ist.<br /><br /> In allen anderen Fällen werden die anonymen Anforderungen mit dem Fehler 'HTTP Status 401 Access Denied' abgelehnt, bevor die Anforderung [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]erreicht. Clients, die den Fehler '401 Access Denied' erhalten, müssen die Anforderung mit einem gültigen Authentifizierungstyp umformulieren.|  
-|Technologie für einmaliges Anmelden (SSO, Single sign-on technologies)|In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] gibt es keine systemeigene Unterstützung der Technologien für einmaliges Anmelden. Wenn Sie eine Technologie für einmaliges Anmelden verwenden möchten, müssen Sie eine benutzerdefinierte Authentifizierungserweiterung erstellen.<br /><br /> Die Berichtsserver-Hostumgebung unterstützt keine ISAPI-Filter. Falls die verwendete SSO-Technologie als ISAPI-Filter implementiert ist, sollten Sie die in den ISA-Server integrierte Unterstützung für RSASecueID oder das RADIUS-Protokoll verwenden. Andernfalls können Sie eine ISA-Server-ISAPI oder ein HTTPModule für RS erstellen. Es wird jedoch die direkte Verwendung des ISA-Servers empfohlen.|  
-|Passport|In SQL Server Reporting Services unterstützt nicht.|  
-|Digest|In SQL Server Reporting Services unterstützt nicht.|  
+|Technologie für einmaliges Anmelden (SSO, Single sign-on technologies)|In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]gibt es keine systemeigene Unterstützung der Technologien für einmaliges Anmelden. Wenn Sie eine Technologie für einmaliges Anmelden verwenden möchten, müssen Sie eine benutzerdefinierte Authentifizierungserweiterung erstellen.<br /><br /> Die Berichtsserver-Hostumgebung unterstützt keine ISAPI-Filter. Falls die verwendete SSO-Technologie als ISAPI-Filter implementiert ist, sollten Sie die in den ISA-Server integrierte Unterstützung für RSASecueID oder das RADIUS-Protokoll verwenden. Andernfalls können Sie eine ISA-Server-ISAPI oder ein HTTPModule für RS erstellen. Es wird jedoch die direkte Verwendung des ISA-Servers empfohlen.|  
+|Passport|Wird in SQL Server Reporting Services nicht unterstützt.|  
+|Digest|Wird in SQL Server Reporting Services nicht unterstützt.|  
   
 ## <a name="configuration-of-authentication-settings"></a>Konfigurieren von Authentifizierungseinstellungen  
  Authentifizierungseinstellungen werden für die Standardsicherheit konfiguriert, wenn die Berichtsserver-URL reserviert ist. Wenn Sie diese Einstellungen inkorrekt bearbeiten, gibt der Berichtsserver für Anforderungen, die nicht authentifiziert werden können, die Fehler ' HTTP 401 Access Denied' zurück. Beim Auswählen eines Authentifizierungstyps müssen Sie bereits wissen, wie die Windows-Authentifizierung in Ihrem Netzwerk unterstützt wird. Sie müssen mindestens einen Authentifizierungstyp angeben. Für RSWindows können mehrere Authentifizierungstypen angegeben werden. RSWindows-Authentifizierungstypen (d.h. **RSWindowsBasic**, **RSWindowsNTLM**, **RSWindowsKerberos**und **RSWindowsNegotiate**) schließen sich mit „Custom“ gegenseitig aus.  
@@ -70,9 +68,9 @@ ms.lasthandoff: 08/09/2017
   
 -   [Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
   
--   [Konfigurieren der Standardauthentifizierung auf dem Berichtsserver](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)  
+-   [Configure Basic Authentication on the Report Server (Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver)](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)  
   
--   [Konfigurieren von benutzerdefinierten oder Formularauthentifizierung auf dem Berichtsserver](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
+-   [Konfiguration der benutzerdefinierten oder Formularauthentifizierung auf dem Berichtsserver](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
   
 ## <a name="related-tasks"></a>Verwandte Aufgaben  
   
@@ -88,12 +86,12 @@ ms.lasthandoff: 08/09/2017
 [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
 [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Erstellen und Verwalten von Rollenzuweisungen](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen-Verbindungen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+[Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
 [Implementieren von Sicherheitserweiterungen](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
 [Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im einheitlichen Modus](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
 [Konfigurieren des Berichts-Generator-Zugriffs](../../reporting-services/report-server/configure-report-builder-access.md)   
 [Übersicht über Sicherheitserweiterungen](../../reporting-services/extensions/security-extension/security-extensions-overview.md)   
 [Authentifizierung in Reporting Services](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)   
-[Autorisierung in Reporting Services](../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md)  
+[Authorization in Reporting Services (Autorisierung in Reporting Services)](../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md)  
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

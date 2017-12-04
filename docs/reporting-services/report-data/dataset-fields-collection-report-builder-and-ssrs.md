@@ -1,5 +1,5 @@
 ---
-title: Datasetfeldauflistung (Berichts-Generator und SSRS) | Microsoft Docs
+title: Verweise auf Datasetfeldauflistungen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 271d1b4018890ab23db0254b24cbf7664491b848
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b477015bd06f3af1e8d8ce43194dd9274000f8cb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Datasetfeldauflistung (Berichts-Generator und SSRS)
   Datasetfelder stellen die Daten aus einer Datenverbindung dar. Ein Feld kann entweder numerische oder nicht numerische Daten darstellen. Dazu zählen z. B. Umsätze, der Gesamtumsatz, Kundennamen, Datenbankbezeichner, URLs, Bilder, räumliche Daten und E-Mail-Adressen. Auf der Entwurfsoberfläche werden Felder als Ausdrücke in Berichtselementen wie z. B. Textfelder, Tabellen und Diagramme angezeigt.  
@@ -64,7 +63,7 @@ ms.lasthandoff: 08/09/2017
  Datenquellen, die mehrdimensionale Abfragen unterstützen, zum Beispiel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], unterstützen auch Feldeigenschaften in Feldern. Feldeigenschaften werden im Resultset einer Abfrage angezeigt, sind im Bereicht **Berichtsdaten** jedoch nicht sichtbar. Sie stehen trotzdem zur Verwendung im Bericht zur Verfügung. Wenn Sie auf eine Eigenschaft für ein Feld verweisen möchten, ziehen Sie das Feld in den Bericht und ändern die Standardeigenschaft **Value** in den Feldnamen der gewünschten Eigenschaft. In einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Cube können Sie zum Beispiel Formate für Werte in den Cubezellen definieren. Der formatierte Wert ist mithilfe der Feldeigenschaft **FormattedValue**verfügbar. Um den Wert direkt zu verwenden, anstatt einen Wert zu verwenden und die Formateigenschaft des Textfelds festzulegen, ziehen Sie das Feld in das Textfeld und ändern den Standardausdruck `=Fields!FieldName.Value` in `=Fields!FieldName.FormattedValue`.  
   
 > [!NOTE]  
->  Nicht alle **Field** -Eigenschaften können für alle Datenquellen verwendet werden. Die **Value** - und die **IsMissing** -Eigenschaft werden für alle Datenquellen definiert. Weitere vordefinierte Eigenschaften (zum Beispiel **Key**, **UniqueName**und **ParentUniqueName** für mehrdimensionale Datenquellen) werden nur unterstützt, wenn die Datenquelle diese Eigenschaften bereitstellt. Benutzerdefinierte Eigenschaften werden von einigen Datenanbietern unterstützt. Weitere Informationen finden Sie in den entsprechenden Themen zu erweiterten Feldeigenschaften für den Datenquellentyp unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md). Z. B. für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenquelle finden Sie unter [Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank &#40; SSRS &#41; ](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+>  Nicht alle **Field** -Eigenschaften können für alle Datenquellen verwendet werden. Die **Value** - und die **IsMissing** -Eigenschaft werden für alle Datenquellen definiert. Weitere vordefinierte Eigenschaften (zum Beispiel **Key**, **UniqueName**und **ParentUniqueName** für mehrdimensionale Datenquellen) werden nur unterstützt, wenn die Datenquelle diese Eigenschaften bereitstellt. Benutzerdefinierte Eigenschaften werden von einigen Datenanbietern unterstützt. Weitere Informationen finden Sie in den entsprechenden Themen zu erweiterten Feldeigenschaften für den Datenquellentyp unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md). Ein Beispiel einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenquelle finden Sie unter [Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
   
 ##  <a name="Defaults"></a> Grundlegendes zu Standardausdrücken für Felder  
@@ -110,13 +109,12 @@ ms.lasthandoff: 08/09/2017
   
   
 ##  <a name="MissingFields"></a> Erkennen von fehlenden Feldern zur Laufzeit  
- Wenn der Bericht verarbeitet wird, sind im Resultset für ein Dataset möglicherweise nicht für alle angegebenen Spalten Werte enthalten, da die Spalten in der Datenquelle nicht mehr vorhanden sind. Über die Feldeigenschaft „IsMissing“ können Sie ermitteln, ob zur Laufzeit Werte für ein Feld zurückgegeben wurden. Weitere Informationen finden Sie unter [Verweise auf Datasetfeld-Sammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md).  
+ Wenn der Bericht verarbeitet wird, sind im Resultset für ein Dataset möglicherweise nicht für alle angegebenen Spalten Werte enthalten, da die Spalten in der Datenquelle nicht mehr vorhanden sind. Über die Feldeigenschaft „IsMissing“ können Sie ermitteln, ob zur Laufzeit Werte für ein Feld zurückgegeben wurden. Weitere Informationen finden Sie unter [Verweise auf Datasetfeld-Auflistungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md).  
   
   
 ## <a name="see-also"></a>Siehe auch  
  [Dataseteigenschaften (Dialogfeld), Felder &#40;Berichts-Generator&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
- [Berichtsteile und Datasets im Berichts-Generator](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Melden Sie eingebettete Datasets und freigegebene Datasets &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Berichtsteile und Datasets in Berichts-Generator](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
-

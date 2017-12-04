@@ -1,27 +1,25 @@
 ---
-title: "Lernprogramm: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator) | Microsoft Docs"
+title: "Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 06/15/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: f48e91fcf3ea24bacaf71649db1cb4d92c7f6962
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e28719a7ee1f1610e8e673711958592837198046
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)
 In diesem Tutorial erstellen Sie ein Kreisdiagramm in einem paginierten Reporting Services-Bericht. Sie fügen Prozentsätze hinzu und kombinieren kleine Slices zu einem einzelnen Slice.
@@ -35,7 +33,7 @@ Diese Abbildung zeigt das Kreisdiagramm, das Sie erstellen.
 Wenn in einem Kreisdiagramm zu viele Datenpunkte vorhanden sind, können die Datenpunktbezeichnungen zu überfüllt sein, um sie zu lesen. Erwägen Sie in diesem Fall eine Anzahl von kleinen Slices zu einem größeren Slice zu kombinieren. Kreisdiagramme sind besser lesbar, wenn Sie die Daten bereits zu einer kleineren Anzahl von Datenpunkten aggregiert haben.  
  
 > [!NOTE]  
-> In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst. Detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Hinzufügen einer Datenquelle und Hinzufügen eines Datasets finden Sie unter dem ersten Lernprogramm dieser Reihe: [Lernprogramm: Erstellen eines einfachen Tabellenberichts &#40; Berichts-Generator &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, Hinzufügen einer Datenquelle und Hinzufügen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Ungefähre Dauer dieses Lernprogramms: 10 Minuten  
   
@@ -143,7 +141,7 @@ Drei der Slices im Kreis sind relativ klein. Sie können mehrere kleine Slices z
 
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
   
-2.  Wenn der Bereich "Eigenschaften" angezeigt wird, auf die **Ansicht** Registerkarte "> **ein-/ausblenden** Gruppe > Wählen Sie **Eigenschaften**.  
+2.  Sollte das Fenster „Eigenschaften“ nicht angezeigt werden, können Sie es über die Registerkarte **Ansicht** > Gruppe **Ein-/Ausblenden** > **Eigenschaften** öffnen.  
   
 3.  Klicken Sie auf der Entwurfsoberfläche auf ein Segment des Kreisdiagramms. Die Eigenschaften für die Reihe werden im Bereich "Eigenschaften" angezeigt.  
   
@@ -197,7 +195,7 @@ Da das Kreisdiagramm die einzige Visualisierung im Bericht ist, muss für das Di
   
 3.  Wählen Sie **Kamera- und Camcorderumsatz**, und klicken Sie auf der Registerkarte **Stamm** im Abschnitt **Schriftart** auf **Fett**.  
   
-4.  Wählen Sie **als Prozentsatz des Gesamtumsatzes**, und klicken Sie auf die **Home** Registerkarte "> **Schriftart** Abschnitt > legen Sie die Schriftgröße **10**.  
+4.  Markieren Sie **As a Percentage of Total Sales** (Als Prozentsatz des Gesamtumsatzes), und legen Sie auf der Registerkarte **Stamm** im Abschnitt **Schriftart** den Schriftgrad auf **10** fest.  
   
 5.  (Optional) Das Textfeld "Titel" muss ggf. vergrößert werden, damit die beiden Textzeilen hineinpassen.  
   
@@ -220,11 +218,10 @@ Da das Kreisdiagramm die einzige Visualisierung im Bericht ist, muss für das Di
 Der Bericht wird auf dem Berichtsserver gespeichert.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
-Sie haben das Lernprogramm "Hinzufügen eines Kreisdiagramms zu einem Bericht" erfolgreich abgeschlossen. Weitere Informationen zu Diagrammen finden Sie unter [Diagramme &#40; Berichts-Generator und SSRS &#41; ](../reporting-services/report-design/charts-report-builder-and-ssrs.md) und [Sparklines und Datenbalken &#40; Berichts-Generator und SSRS &#41; ](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+Sie haben das Lernprogramm "Hinzufügen eines Kreisdiagramms zu einem Bericht" erfolgreich abgeschlossen. Weitere Informationen zu Diagrammen finden Sie unter [Diagramme (Berichts-Generator und SSRS)](../reporting-services/report-design/charts-report-builder-and-ssrs.md) und [Sparklines und Datenbalken (Berichts-Generator und SSRS)](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Siehe auch  
 [Lernprogramme für den Berichts-Generator](../reporting-services/report-builder-tutorials.md)  
 [Berichts-Generator in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

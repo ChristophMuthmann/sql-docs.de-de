@@ -1,5 +1,5 @@
 ---
-title: Indikatoren (Berichts-Generator und SSRS) | Microsoft Docs
+title: Indikatoren (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.indicatorproperties.validateandstates.f1
 - sql13.rtp.rptdesigner.indicatorproperties.general.f1
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7c902fc6195481ab6570612c5ac9012bba33ef79
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d8ae79c60e278b5fa3cfd1a2924e45a701ffc06e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Indikatoren (Berichts-Generator und SSRS)
   In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten sind Indikatoren kleine Messgeräte, die den Zustand eines einzelnen Datenwerts auf einen Blick wiedergeben. Die Symbole zur Darstellung der Indikatoren und ihres Zustands sind einfach und auch in kleineren Größen optisch wirkungsvoll.  
@@ -45,7 +44,7 @@ ms.lasthandoff: 08/09/2017
   
  Sie können Indikatoren eigenständig in Dashboards oder Freiformberichten verwenden, sie werden jedoch am häufigsten in Tabellen oder Matrizen zur visuellen Darstellung von Daten in Zeilen oder Spalten eingesetzt. Das folgende Diagramm enthält eine Tabelle mit einem Ampelindikator, der die aufgelaufenen Jahresumsätze pro Vertriebsmitarbeiter und Gebiet vermittelt.  
    
- ![Rs_IndicatorTableTrafficLight](../../reporting-services/report-design/media/rs-indicatortabletrafficlight.gif "Rs_IndicatorTableTrafficLight")  
+ ![rs_IndikatorTabelleAmpel](../../reporting-services/report-design/media/rs-indicatortabletrafficlight.gif "rs_IndicatorTableTrafficLight")  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält integrierte Indikatorsätze und Indikatorsymbole, die direkt verwendet werden können. Sie haben auch die Möglichkeit, einzelne Indikatorsymbole und Indikatorsätze an Ihre individuellen Anforderungen anzupassen.  
   
@@ -59,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
  Wie Messgeräte befinden sich auch Indikatoren in einem Messgerätebereich. Wenn Sie einen Indikator mit dem Dialogfeld **Indikatoreigenschaften** oder dem Eigenschaftenbereich konfigurieren möchten, müssen Sie den Indikator und nicht den Bereich auswählen. Andernfalls gelten die verfügbaren Optionen für die Messgerätbereichsoptionen, und Sie können den Indikator nicht konfigurieren. Die folgende Abbildung enthält einen ausgewählten Indikator in dessen Messgerätbereich.  
   
- ![Rs_GaugePanelWithIndicator](../../reporting-services/report-design/media/rs-gaugepanelwithindicator.gif "Rs_GaugePanelWithIndicator")  
+ ![rs_MessgerätBereichMitIndikator](../../reporting-services/report-design/media/rs-gaugepanelwithindicator.gif "rs_GaugePanelWithIndicator")  
   
  Abhängig davon, wie Sie den Datenwert darstellen möchten, können Messgeräte sich als effektiver als Indikatoren erweisen. Weitere Informationen finden Sie unter [Messgeräte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   
@@ -70,10 +69,10 @@ ms.lasthandoff: 08/09/2017
   
 |Indikatorsatz|Indikatortyp|  
 |-------------------|--------------------|  
-|![Rs_DirectionalIcons](../../reporting-services/report-design/media/rs-directionalicons.gif "Rs_DirectionalIcons")|Direktional: gibt Trends mit Pfeilen nach oben und unten, flachen Pfeilen (keine Änderung) oder schräg nach oben bzw. unten weisenden Pfeilen an.|  
-|![Rs_SymbolIcons](../../reporting-services/report-design/media/rs-symbolicons.gif "Rs_SymbolIcons")|Symbole: geben den Status mit häufig verwendeten Symbolen wie Häkchen und Ausrufezeichen an.|  
-|![Rs_ShapeIcons](../../reporting-services/report-design/media/rs-shapeicons.gif "Rs_ShapeIcons")|Form: geben Bedingungen mit häufig verwendeten Formen wie Verkehrszeichen und Diamantformen.|  
-|![Rs_RatingIcons](../../reporting-services/report-design/media/rs-ratingicons.gif "Rs_RatingIcons")|Bewertungen: geben Bewertungen mit häufig verwendeten Formen und Symbolen an, die progressive Werte wie die Anzahl von Quadranten an einer Stelle anzeigen.|  
+|![Rs_DirektionalSymbole](../../reporting-services/report-design/media/rs-directionalicons.gif "Rs_DirectionalIcons")|Direktional: gibt Trends mit Pfeilen nach oben und unten, flachen Pfeilen (keine Änderung) oder schräg nach oben bzw. unten weisenden Pfeilen an.|  
+|![Rs_SymbolSymbole](../../reporting-services/report-design/media/rs-symbolicons.gif "Rs_SymbolIcons")|Symbole: geben den Status mit häufig verwendeten Symbolen wie Häkchen und Ausrufezeichen an.|  
+|![Rs_FormSymbole](../../reporting-services/report-design/media/rs-shapeicons.gif "Rs_ShapeIcons")|Form: geben Bedingungen mit häufig verwendeten Formen wie Verkehrszeichen und Diamantformen.|  
+|![Rs_BewertungSymbole](../../reporting-services/report-design/media/rs-ratingicons.gif "rs_RatingIcons")|Bewertungen: geben Bewertungen mit häufig verwendeten Formen und Symbolen an, die progressive Werte wie die Anzahl von Quadranten an einer Stelle anzeigen.|  
   
  Nachdem Sie einen Indikatorsatz ausgewählt haben, können Sie die Darstellung der einzelnen Indikatorsymbole des Satzes anpassen, indem Sie die Eigenschaften in den Dialogfeldern für Indikatoren oder im Eigenschaftenbereich festlegen. Sie können Indikatoren mit den integrierten Farben, Symbolen und Größen oder Ausdrücken konfigurieren.  
   
@@ -97,7 +96,7 @@ ms.lasthandoff: 08/09/2017
   
  Das folgende Diagramm enthält einen Bericht mit einer Tabelle, in der der Richtungsindikatorsatz **Vier Pfeile (farbig)**verwendet wird, um Verkäufe anzugeben. Die Indikatorsymbole im Bericht werden so konfiguriert, dass Blau in verschiedenen Schattierungen anstelle der Standardfarben Rot, Gelb und Grün verwendet wird.  
   
- ![Rs_IndicatorReportBlueArrows](../../reporting-services/report-design/media/rs-indicatorreportbluearrows.gif "Rs_IndicatorReportBlueArrows")  
+ ![rs_IndikatorBerichtBlauePfeile](../../reporting-services/report-design/media/rs-indicatorreportbluearrows.gif "rs_IndicatorReportBlueArrows")  
   
  Weitere Informationen zum Hinzufügen, Ändern und Löschen von Indikatoren finden Sie unter [Hinzufügen oder Löschen eines Indikators &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-or-delete-an-indicator-report-builder-and-ssrs.md).  
   
@@ -123,7 +122,7 @@ ms.lasthandoff: 08/09/2017
   
  Das folgende Diagramm zeigt einen Indikator neben einem Messgerät und innerhalb eines Messgeräts.  
   
- ![Rs_GaugePanelWithIndicatorAndGauge](../../reporting-services/report-design/media/rs-gaugepanelwithindicatorandgauge.gif "Rs_GaugePanelWithIndicatorAndGauge")  
+ ![rs_MessgerätBereichMitIndikatorUndMessgerät](../../reporting-services/report-design/media/rs-gaugepanelwithindicatorandgauge.gif "rs_GaugePanelWithIndicatorAndGauge")  
   
  Weitere Informationen finden Sie unter [Aufnehmen von Indikatoren und Messgeräten in einen Messgerätbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md).  
   
@@ -187,7 +186,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [Ändern von Indikatorsymbolen und Indikatorsätzen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [Festlegen und Konfigurieren von Maßeinheiten &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [Festlegen und Konfigurieren von Maßeinheiten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
 -   [Festlegen des Synchronisierungsbereichs &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md)  
   
@@ -197,8 +196,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Messgeräte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
- [Sparklines und Datenbalken &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Diagramme &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [Sparklines und Datenbalken (Berichts-Generator und SSRS)](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
+ [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Exportieren nach Microsoft Excel (Berichts-Generator und SSRS) | Microsoft Docs
+title: Exportieren nach Microsoft Excel (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/09/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Active
+ms.openlocfilehash: 74bec215687c17d121e0c77b23fbdef2e482f9db
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4f612dc69be670d6a99418fbf8e17f34fb8e9d7c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   Die Excel-Renderingerweiterung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] rendert einen paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht im [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] -Format (XLSX). Mit der Excel-Renderingerweiterung spiegelt die Breite von Spalten in Excel die Breite von Spalten in Berichten genauer wider.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  Sie können einige Standardeinstellungen für diesen Renderer ändern, indem Sie die Geräteinformationseinstellungen ändern. Weitere Informationen finden Sie unter [Excel Device Information Settings](../../reporting-services/excel-device-information-settings.md).  
   
- Finden Sie unter [Exportieren von Berichten &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) ausführliche Anleitungen zum Exportieren in Excel.  
+ Weitere Informationen zum Exportieren nach Excel finden Sie unter [Exportieren von Berichten (Berichts-Generator und SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 > [!IMPORTANT]  
 >  Wenn Sie einen Parameter vom Typ **String**definieren, wird für den Benutzer ein Textfeld bereitgestellt, das jeden beliebigen Wert annehmen kann. Wenn ein Berichtsparameter nicht an einen Abfrageparameter gebunden ist und die Parameterwerte im Bericht enthalten sind, können Benutzer des Berichts Ausdruckssyntax, ein Skript oder eine URL in den Parameterwert eingeben und den Bericht für Excel rendern. Wenn anschließend ein anderer Benutzer den Bericht anzeigt und auf die gerenderten Parameterinhalte klickt, führt der Benutzer möglicherweise unbeabsichtigt das bösartige Skript bzw. den bösartigen Link aus.  
@@ -43,9 +43,9 @@ ms.lasthandoff: 08/09/2017
   
 -   Die maximale Anzahl an Zeichen in einer Zeile ist auf 32.767 Zeichen beschränkt. Wenn diese Einschränkung überschritten wird, zeigt der Renderer eine Fehlermeldung an.  
   
--   Die maximale Zeilenhöhe beträgt 409 Punkte. Wenn der Inhalt der Zeile dazu führen, die Zeilenhöhe 409 Punkte überschreitet dass, zeigt Excel-Zelle eine partielle Menge an Text bis zu 409 Punkte. Der Rest des Zelleninhalts ist immer noch in der Zelle (bis zu Excel Max. Anzahl von Zeichen von 32.767).
+-   Die maximale Zeilenhöhe beträgt 409 Punkte. Wenn die Inhalte der Zeile dazu führen, dass die Zeilenhöhe 409 Punkte überschreitet, zeigt die Excel-Zelle eine Teilmenge des Texts bis zu 409 Punkten. Der Rest der Zelleninhalte liegt weiterhin innerhalb der Zelle (bis zur maximalen Anzahl von 32.767 Zeichen in Excel).
 
--  Da die maximale Zeilenhöhe 409 Punkte ist, wenn die definierte Höhe der Zelle im Bericht etwas 409 Punkte überschreitet ist, teilt Excel der Zelleninhalt in mehrere Zeilen an.
+-  Da die maximale Zeilenhöhe 409 Punkte beträgt, teilt Excel die Zelleninhalte in mehrere Zeilen auf, wenn die definierte Höhe der Zelle im Bericht größer als 409 Punkte ist.
   
 -   Die maximale Anzahl an Arbeitsblättern wird nicht in Excel definiert. Stattdessen können externe Faktoren wie der Arbeitsspeicher und der Speicherplatz dazu führen, dass Einschränkungen auftreten.  
   
@@ -116,15 +116,15 @@ ms.lasthandoff: 08/09/2017
 ### <a name="report-row-groups-and-column-groups"></a>Zeilen- und Spaltengruppen in Berichten  
  Berichte mit Zeilen- oder Spaltengruppen enthalten beim Export in Excel leere Zellen. Angenommen Sie haben einen Bericht, in dem die Zeilen nach der Entfernung zum Geschäft (Commute Distance) sortiert sind. Jede Entfernungskategorie kann mehr als einen Kunden enthalten. Der Bericht ist im folgenden Bild dargestellt.  
   
- ![Bericht in der Reporting Services-Webportal](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "Bericht auf dem Reporting Services-Webportal")  
+ ![Bericht im Reporting Services-Webportal](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "Report in the Reporting Services web portal")  
   
  Wenn der Bericht nach Excel exportiert wird, wird die Entfernung zum Geschäft nur in einer Zelle der Spalte „Entfernung zum Geschäft“ angezeigt. Abhängig von der Ausrichtung des Texts im Bericht (oben, Mitte oder unten) befindet sich der Wert in der ersten, mittleren oder letzten Zelle. Die anderen Zellen sind leer. Die Namensspalte mit den Geschäftsnamen enthält keine leeren Zellen. Das folgende Bild zeigt den Bericht nach dem Export in Excel. Die roten Zellrahmen wurden zur Hervorhebung hinzugefügt. Die grauen Felder sind die leeren Zellen. (Weder die roten Linien noch die grauen Felder sind Teil des exportierten Berichts.)  
   
- ![Bericht nach Excel exportiert, deren Zeilen](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "Bericht nach Excel exportiert, deren Zeilen")  
+ ![Nach Excel exportierter Bericht mit Zeilen](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "Report exported to Excel, with lines")  
   
  Berichte mit Zeilen- oder Spaltengruppen müssen also nach dem Export in Excel geändert werden, bevor Sie die exportierten Daten als PivotTable anzeigen können. Sie müssen den Gruppenwert in Zellen, in denen er fehlt, hinzufügen, um das Arbeitsblatt zu einer flachen Tabelle mit Werten in allen Zellen zu machen. Die folgende Abbildung zeigt das aktualisierte Arbeitsblatt.  
   
- ![Bericht nach Excel exportiert, vereinfacht](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "Bericht nach Excel exportiert, vereinfacht")  
+ ![Nach Excel exportierter vereinfachter Bericht](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "Report exported to Excel, with lines")  
   
  Wenn Sie einen Bericht erstellen, um ihn zur weiteren Analyse der Berichtsdaten nach Excel zu exportieren, sollten Sie in Ihrem Bericht nicht nach Zeilen oder Spalten gruppieren.  
   
@@ -148,7 +148,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Berichts-Generator im getrennten Modus, und Sie zeigen einen Bericht im Berichts-Generator in der Vorschau an. Da sich die RSReportServer-Konfigurationsdatei auf dem Berichtsserver befindet, müssen die Tools oder Produkten, aus denen Sie Berichte exportieren, mit einem Berichtsserver verbunden sein, um die Konfigurationsdatei zu lesen.  
   
--   Berichts-Viewer-Webpart im lokalen Modus, und die SharePoint-Farm ist nicht in einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver integriert. Weitere Informationen finden Sie unter [lokaler Modus VS. Berichten im verbundenen Modus im Berichts-Viewer (Reporting Services im SharePoint-Modus)](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
+-   Berichts-Viewer-Webpart im lokalen Modus, und die SharePoint-Farm ist nicht in einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver integriert. Weitere Informationen zum lokalen Modus finden Sie unter [Berichte im lokalen Modus im Vergleich zu Berichten im verbundenen Modus im Berichts-Viewer (Reporting Services im SharePoint-Modus)](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  Wenn der Renderer der Menüoption **Excel 2003** für Sichtbarkeit konfiguriert ist, sind die Excel-Option und die Excel 2003-Option in den folgenden Szenarien verfügbar:  
   
@@ -192,7 +192,7 @@ ms.lasthandoff: 08/09/2017
   
  Diagramme, Sparklines, Datenbalken, Karten, Messgeräte und Indikatoren werden als Bilder exportiert. Die von ihnen dargestellten Daten, z. B. die Wert- und Elementbezeichnungen für ein Diagramm, werden nicht exportiert und sind nur in der Excel-Arbeitsmappe verfügbar, wenn sie in einer Spalte oder Zeile in einem Datenbereich innerhalb eines Berichts enthalten sind.  
   
- Wenn Sie Diagramm-, Sparkline-, Datenbalken-, Karten-, Messgerät- und Indikatordaten verwenden möchten, exportieren Sie den Bericht in eine CSV-Datei oder generieren Atom-kompatible Datenfeeds aus dem Bericht. Weitere Informationen finden Sie unter [exportieren in eine CSV-Datei &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) und [Generieren von Datenfeeds aus Berichten &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
+ Wenn Sie Diagramm-, Sparkline-, Datenbalken-, Karten-, Messgerät- und Indikatordaten verwenden möchten, exportieren Sie den Bericht in eine CSV-Datei oder generieren Atom-kompatible Datenfeeds aus dem Bericht. Weitere Informationen finden Sie unter [Exportieren als CSV-Datei (Berichts-Generator und SSRS)](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) und [Generieren von Datenfeeds aus Berichten (Berichts-Generator und SSRS)](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
 ## <a name="page-sizing"></a>Anpassen der Seitengröße  
  Die Excel-Renderingerweiterung verwendet die Einstellungen zur Seitenhöhe und -breite, um zu ermitteln, welche Papiereinstellung im Excel-Arbeitsblatt definiert werden soll. Excel versucht, die Eigenschaftseinstellungen von „PageHeight“ und „PageWidth“ mit einer der gebräuchlichsten Papiergrößen abzugleichen.  
@@ -255,7 +255,7 @@ ms.lasthandoff: 08/09/2017
   
  Die Dokumentstrukturgliederung wird als reduzierbare Excel-Gliederung gerendert. Die Gliederungsstruktur stimmt mit der geschachtelten Struktur der Dokumentstruktur überein. Die Gliederung kann ab der zweiten Ebene erweitert und reduziert werden.  
   
- Der Stammknoten der Zuordnung entspricht dem Berichtsnamen den \< *Reportname*> RDL- und es ist nicht interaktiv. Die Schriftart des Dokumentstrukturlinks ist Arial, 10pt.  
+ Der Stammknoten der Struktur entspricht dem Berichtsnamen (\<*Berichtsname*>.rdl), der nicht interaktiv ist. Die Schriftart des Dokumentstrukturlinks ist Arial, 10pt.  
   
 ### <a name="drillthrough-links"></a>Drillthroughlinks  
  In Textfeldern enthaltene Drillthroughlinks werden in der Zelle als Excel-Hyperlinks gerendert, in die der Text gerendert wird. Drillthroughlinks für Bilder und Diagramme werden beim Rendern als Excel-Hyperlinks auf dem Bild gerendert. Beim Klicken auf den Drillthroughlink wird der Standardbrowser des Clients geöffnet und zur HTML-Ansicht des Ziels navigiert.  
@@ -273,11 +273,10 @@ ms.lasthandoff: 08/09/2017
  Wenn ein Bericht in mehrere Formate gerendert werden muss und kein Berichtslayout erstellt werden kann, das in allen erforderlichen Formaten wunschgemäß Rendervorgänge ausführt, verwenden Sie ggf. das integrierte globale Objekt von "RenderFormat", um die Darstellung des Berichts zur Laufzeit bedingt zu ändern. Dadurch können Berichtselemente abhängig vom verwendeten Renderer ausgeblendet oder angezeigt werden, um die besten Ergebnisse in den einzelnen Formaten zu erhalten. Weitere Informationen finden Sie unter [Integrierte globale Werte und Benutzerverweise &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Paginierung in Reporting Services &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Renderingverhalten &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Interaktive Funktionalität für verschiedene Bericht Rendern von Erweiterungen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Rendern von Berichtselementen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Tabellen, Matrizen und Listen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Renderingverhalten (Berichts-Generator und SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Rendern von Berichtselementen (Berichts-Generator und SSRS)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Katalogelemente löschen (Management Studio) | Microsoft Docs"
+title: "Löschen von Katalogelementen (Management Studio) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.deleteitems.f1
+f1_keywords: sql13.swb.reportserver.deleteitems.f1
 ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7cdd06f5488603b10e788d513c93269b250d8486
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1d530acc7b22cee01e7f8eaf639e08801c38d855
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="delete-catalog-items-management-studio"></a>Katalogelemente löschen (Management Studio)
   Verwenden Sie diese Seite, um freigegebene Zeitpläne und Rollendefinitionen zu löschen.  
@@ -51,9 +49,8 @@ ms.lasthandoff: 08/09/2017
  Zeigt einen Fehlercode an, wenn beim Löschen eines Elements ein Fehler auftritt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Löschen eines Elements &#40; Management Studio &#41;](../../reporting-services/tools/delete-an-item-management-studio.md)   
- [Berichtsserver im Management Studio F1-Hilfe](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Erstellen, ändern und Löschen von Zeitplänen](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
+ [Löschen eines Elements &#40;Management Studio&#41;](../../reporting-services/tools/delete-an-item-management-studio.md)   
+ [Berichtsserver im Management Studio (F1-Hilfe)](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Create, Modify, and Delete Schedules (Erstellen, Ändern oder Löschen von Zeitplänen)](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
   
   
-

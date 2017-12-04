@@ -1,5 +1,5 @@
 ---
-title: Berichte, Berichtsteile und Berichtsdefinitionen (Berichts-Generator und SSRS) | Microsoft Docs
+title: Berichte, Berichtsteile und Berichtsdefinitionen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - report definitions
 - reports
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 4f8368ff8e8b2ce8674a7d74b973474c758717bd
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 388fcfa8fcd993428e35308d5070612992851993
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Berichte, Berichtsteile und Berichtsdefinitionen (Berichts-Generator und SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet eine Vielzahl von Begriffen, mit denen die verschiedenen Zustände eines paginierten Berichts beschrieben werden, darunter Anfangsdefinition, veröffentlichter Bericht und angezeigter Bericht, wie der Benutzer ihn sieht.  
@@ -55,7 +54,7 @@ ms.lasthandoff: 09/27/2017
  Ein veröffentlichter Bericht wird über Rollenzuweisungen gesichert, die das rollenbasierte Sicherheitsmodell von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwenden. Der Zugriff auf veröffentlichte Berichte erfolgt über URLs, SharePoint-Webparts oder das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal. Sie können auch zu den Berichten navigieren und sie im Berichts-Generator öffnen.  
   
 ### <a name="report-snapshots"></a>Berichtsmomentaufnahmen  
- Ein Bericht kann auch als Momentaufnahme veröffentlicht werden, die sowohl Layoutinformationen als auch die Daten der ersten Berichtsausführung enthält. Berichtsmomentaufnahmen werden in keinem speziellen Renderingformat gespeichert. Stattdessen werden Berichtsmomentaufnahmen erst dann in einem endgültigen Anzeigeformat (wie HTML) gerendert, wenn sie von einem Benutzer oder einer Anwendung angefordert werden. Weitere Informationen finden Sie unter [suchen und Anzeigen von Berichten im Berichts-Manager &#40; Berichts-Generator und SSRS &#41; ](../report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md).  
+ Ein Bericht kann auch als Momentaufnahme veröffentlicht werden, die sowohl Layoutinformationen als auch die Daten der ersten Berichtsausführung enthält. Berichtsmomentaufnahmen werden in keinem speziellen Renderingformat gespeichert. Stattdessen werden Berichtsmomentaufnahmen erst dann in einem endgültigen Anzeigeformat (wie HTML) gerendert, wenn sie von einem Benutzer oder einer Anwendung angefordert werden. Weitere Informationen finden Sie unter [Suchen und Anzeigen von Berichten in Berichts-Manager (Berichts-Generator und SSRS)](../report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md).  
   
 ## <a name="rendered-reports"></a>Gerenderte Berichte  
  Ein gerenderter Bericht ist ein vollständig verarbeiteter Bericht, der sowohl Daten als auch Layoutinformationen in einem anzeigbaren Format (beispielsweise HTML) enthält. Ein Bericht kann erst dann angezeigt werden, nachdem er in ein Ausgabeformat gerendert wurde. Führen Sie zum Rendern von Berichten einen der folgenden Schritte durch:  
@@ -77,4 +76,3 @@ ms.lasthandoff: 09/27/2017
  [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   
-

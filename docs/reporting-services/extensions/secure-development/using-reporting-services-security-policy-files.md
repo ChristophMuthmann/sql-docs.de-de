@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Reporting Services-Sicherheitsrichtliniendateien | Microsoft Docs
+title: Verwenden von Reporting Services-Richtliniendateien | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - code groups [Reporting Services]
 - CodeGroup elements
@@ -21,22 +20,22 @@ helpviewer_keywords:
 - security configuration files [Reporting Services]
 - named permission sets [Reporting Services]
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 7e007886cadd8cfe9775ebda2c2271f3fd66b17d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 490f32a022606157376f7c8402d11cd8f027bc04
-ms.contentlocale: de-de
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Verwenden von Reporting Services-Sicherheitsrichtliniendateien
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] speichert Informationen zu Komponentensicherheitsrichtlinien in drei Konfigurationsdateien, die bei der Installation in das Dateisystem kopiert werden. Diese Konfigurationsdateien können eine Kombination aus nur intern verwendeten und benutzerdefinierten Sicherheitsrichtlinien für Codeassemblys in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enthalten. Die drei Konfigurationsdateien entsprechen drei sicherungsfähigen Komponenten in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: Berichtsserver und Windows-Dienst, Berichts-Manager-Webanwendung und Vorschaufenster des Berichts-Designers.  
   
 > [!NOTE]  
->  Es stehen zwei Vorschaumodi für den Berichts-Designer: Registerkarte "Vorschau" und das Popup-Vorschaufenster, das geöffnet wird, wenn der Start Ihres Berichtsprojekts im **DebugLocal** Modus. Die **Vorschau** Registerkarte "ist keine sicherungsfähige Komponente und gilt nicht sicherheitsrichtlinieneinstellungen. Im Vorschaufenster sollen die Berichtsserverfunktionen simuliert werden. Es enthält daher eine Richtlinienkonfigurationsdatei, die von Ihnen oder einem Administrator verändert werden muss, um benutzerdefinierte Assemblys und benutzerdefinierte Erweiterungen im Berichts-Designer zu verwenden.  
+>  Es stehen zwei Vorschaumodi für den Berichts-Designer zur Verfügung: die Registerkarte „Vorschau“ und das Popup-Vorschaufenster, das beim Start Ihres Berichtsprojekts im **DebugLocal**-Modus aufgerufen wird. Die Registerkarte **Vorschau** ist keine sicherungsfähige Komponente und übernimmt keine Sicherheitsrichtlinieneinstellungen. Im Vorschaufenster sollen die Berichtsserverfunktionen simuliert werden. Es enthält daher eine Richtlinienkonfigurationsdatei, die von Ihnen oder einem Administrator verändert werden muss, um benutzerdefinierte Assemblys und benutzerdefinierte Erweiterungen im Berichts-Designer zu verwenden.  
   
  Die Sicherheitsrichtlinien-Konfigurationsdateien enthalten Informationen zu Sicherheitsklassen, einige benannte Standardberechtigungssätze und die Codegruppen für Assemblys in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Die Richtlinien-Konfigurationsdateien von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] weisen Ähnlichkeiten mit der Security.config-Datei auf, in der die Codegruppenhierarchie und die Berechtigungssätze für Richtlinien auf Computer- und Unternehmensebene in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] festgelegt werden. Der Speicherort dieser Datei ist C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\CONFIG\security.config.  
   

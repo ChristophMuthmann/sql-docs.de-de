@@ -67,7 +67,7 @@ Zwischen WSFC und Pacemaker liegen mehr Gemeinsamkeiten als Unterschiede vor. Be
 Aufgrund der Unterschiede im Clusterstapel müssen einige Änderungen für Verfügbarkeitsgruppen vorgenommen werden, da SQL Server einige der Metadaten behandeln muss, die nativ von einem WSFC behandelt werden. Die wichtigste [!IMPORTANT] Änderung ist die Einführung eines Clustertyps für Verfügbarkeitsgruppen. Dieser wird in „sys.availability_groups“ in den Spalten „cluster_type“ und „cluster_type_desc“ gespeichert. Es gibt drei Clustertypen:
 
 * WSFC 
-* Extern
+* External
 * Keine
 
 Alle Verfügbarkeitsgruppen, die Verfügbarkeit erfordern, müssen einen zugrunde liegenden Cluster verwenden. Dies ist im Fall von SQL Server 2017 ein WSFC oder Pacemaker. Für Windows Server-basierte Verfügbarkeitsgruppen, die einen zugrunde liegenden WSFC verwenden, ist der Standardclustertyp WSFC und muss nicht festgelegt werden. Für Linux-basierte Verfügbarkeitsgruppen muss der Clustertyp beim Erstellen der Verfügbarkeitsgruppe auf „Extern“ festgelegt werden. Die Integration mit Pacemaker wird nach der Erstellung der Verfügbarkeitsgruppe konfiguriert, während dies bei einem WSFC während der Erstellungszeit geschieht.
@@ -77,7 +77,7 @@ Der Clustertyp „Keiner“ kann für Windows Server- und Linux-Verfügbarkeitsg
 > [!IMPORTANT] 
 > SQL Server 2017 lässt die Änderung des Clustertyps einer Verfügbarkeitsgruppe nicht zu, nachdem diese erstellt ist. Das bedeutet, dass eine Verfügbarkeitsgruppe nicht von „Keiner“ zu „Extern“ oder „WSFC“ (oder umgekehrt) umgeschaltet werden kann. 
 
-Für diejenigen, die nur eine zusätzliche schreibgeschützte Kopie einer Datenbank hinzufügen oder festlegen möchten, welche Optionen eine Verfügbarkeitsgruppe für die Migration/Upgrades bereitstellt, aber nicht an die zusätzliche Komplexität eines zugrunde liegenden Clusters oder der Replikation gebunden sein möchten, ist eine Verfügbarkeitsgruppe mit dem Clustertyp „Keiner“ eine ideale Lösung. Weitere Informationen finden Sie in den Abschnitten [Migrations and Upgrades (Migrationen und Upgrades)](#Migrations) und [Read Scale-out (Schreibgeschützte horizontale Skalierung)](#ReadScaleOut). 
+Für diejenigen, die nur eine zusätzliche schreibgeschützte Kopie einer Datenbank hinzufügen oder festlegen möchten, welche Optionen eine Verfügbarkeitsgruppe für die Migration/Upgrades bereitstellt, aber nicht an die zusätzliche Komplexität eines zugrunde liegenden Clusters oder der Replikation gebunden sein möchten, ist eine Verfügbarkeitsgruppe mit dem Clustertyp „Keiner“ eine ideale Lösung. Weitere Informationen finden Sie in den Abschnitten [Migrationen und Upgrades](#Migrations) und [Schreibgeschützte Verfügbarkeitsgruppen](#ReadScaleOut). 
 
 Der folgende Screenshot zeigt die Unterstützung für die verschiedenen Arten von Clustertypen in SSMS. Sie müssen Version 17.1 oder höher ausführen. Der folgende Screenshot stammt aus Version 17.2.
 
@@ -226,7 +226,7 @@ Wenn eine Verfügbarkeitsgruppe mit dem Clustertyp „Keiner“ konfiguriert ist
 
 Da der Protokollversand nur auf Sicherung und Wiederherstellung basiert, gibt es keine Unterschiede zwischen den Datenbanken, Dateistrukturen usw. für SQL Server unter Windows Server oder Linux. Dies bedeutet, dass der Protokollversand zwischen einer Windows Server-basierten Installation von SQL Server und einer Linux-basierten konfiguriert werden kann und ebenfalls zwischen Linux-Verteilungen. Alles andere bleibt unverändert. Es muss allerdings berücksichtigt werden, dass der Protokollversand, genau wie eine Verfügbarkeitsgruppe, nicht funktioniert, wenn die Quelle sich auf einer höheren Hauptversion von SQL Server befindet als das Ziel, das sich auf einer früheren Version von SQL Server befindet. 
 
-## <a name = "ReadScaleOut"></a> Schreibgeschützte horizontale Skalierung
+## <a name = "ReadScaleOut"></a> Schreibgeschützt
 
 Seit sekundäre Replikate in SQL Server 2012 eingeführt wurden, können diese für schreibgeschützte Abfragen verwendet werden. Es gibt zwei Möglichkeiten, wie dies mit einer Verfügbarkeitsgruppe erzielt werden kann: Indem direkter Zugriff auf das sekundäre Replikat gewährt wird oder indem das [schreibgeschützte Routing konfiguriert wird](http://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server), wofür die Verwendung eines Listeners erforderlich ist.  In SQL Server 2016 wurde die Möglichkeit eingeführt, einen Lastenausgleich für schreibgeschützte Verbindungen über den Listener vorzunehmen, indem ein Roundrobin-Algorithmus verwendet wird. Dadurch können schreibgeschützte Anforderungen über alle lesbaren Replikate verteilt werden. 
 

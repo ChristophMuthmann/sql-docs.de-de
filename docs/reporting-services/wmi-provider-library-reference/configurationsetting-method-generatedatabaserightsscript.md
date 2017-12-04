@@ -1,5 +1,5 @@
 ---
-title: 'GenerateDatabaseRightsScript-Methode (WMI: MSReportServer_ConfigurationSetting) | Microsoft Docs'
+title: 'GenerateDatabaseRightsScript-Methode (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- GenerateDatabaseRightsScript method
+helpviewer_keywords: GenerateDatabaseRightsScript method
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2e7e3d80d7e67b3a6e0924f04600860039086c94
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b9657229fa2bbdb3e7be35fd385162bf8debb53c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---generatedatabaserightsscript"></a>ConfigurationSetting Methode - GenerateDatabaseRightsScript
+# <a name="configurationsetting-method---generatedatabaserightsscript"></a>ConfigurationSetting Method – GenerateDatabaseRightsScript (ConfigurationSetting-Methode: GenerateDatabaseRightsScript)
   Generiert ein SQL-Skript, das verwendet werden kann, um einem Benutzer Berechtigungen für die Berichtsserver-Datenbank sowie für andere Datenbanken zu gewähren, die für das Ausführen eines Berichtsservers erforderlich sind. Es wird erwartet, dass der Aufrufer eine Verbindung mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankserver herstellt und das Skript ausführt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -72,7 +68,7 @@ out Int32 HRESULT);
 ## <a name="remarks"></a>Hinweise  
  Wenn *DatabaseName* leer ist, wird *IsRemote* ignoriert und der Wert aus der Konfigurationsdatei des Berichtsservers als Datenbankname verwendet.  
   
- Wenn *IsWindowsUser* festgelegt ist, um **"true"**, *Benutzername* muss im Format \<Domäne >\\< Benutzername\>.  
+ Wenn *IsWindowsUser* auf **TRUE** festgelegt ist, muss *UserName* das Format \<Domäne>\\<Benutzername\> aufweisen.  
   
  Wenn *IsWindowsUser* auf **TRUE**festgelegt ist, werden dem Benutzer durch das generierte Skript Anmeldeberechtigungen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erteilt, wobei die Berichtsserver-Datenbank als Standarddatenbank festgelegt wird. Außerdem wird ihm die **RSExec** -Rolle für die Berichtsserver-Datenbank, die temporäre Berichtsserver-Datenbank, die Masterdatenbank und die MSDB-Systemdatenbank erteilt.  
   
@@ -82,12 +78,12 @@ out Int32 HRESULT);
   
 |Konto/SID, das bzw. die übersetzt wird|Allgemeiner Name|Remotename|  
 |---------------------------------------|-----------------|-----------------|  
-|(S-1-5-18)|Lokales System|\<Domäne >\\< ComputerName\>$|  
-|.\LocalSystem|Lokales System|\<Domäne >\\< ComputerName\>$|  
-|ComputerName\LocalSystem|Lokales System|\<Domäne >\\< ComputerName\>$|  
-|LocalSystem|Lokales System|\<Domäne >\\< ComputerName\>$|  
-|(S-1-5-20)|Netzwerkdienst|\<Domäne >\\< ComputerName\>$|  
-|NT AUTHORITY\NetworkService|Netzwerkdienst|\<Domäne >\\< ComputerName\>$|  
+|(S-1-5-18)|Lokales System|\<Domäne>\\<Computername\>$|  
+|.\LocalSystem|Lokales System|\<Domäne>\\<Computername\>$|  
+|ComputerName\LocalSystem|Lokales System|\<Domäne>\\<Computername\>$|  
+|LocalSystem|Lokales System|\<Domäne>\\<Computername\>$|  
+|(S-1-5-20)|Netzwerkdienst|\<Domäne>\\<Computername\>$|  
+|NT AUTHORITY\NetworkService|Netzwerkdienst|\<Domäne>\\<Computername\>$|  
 |(S-1-5-19)|Lokaler Dienst|Fehler – siehe unten.|  
 |NT AUTHORITY\LocalService|Lokaler Dienst|Fehler – siehe unten.|  
   
@@ -103,9 +99,9 @@ out Int32 HRESULT);
 |"(local)"||  
 |"LOCAL"||  
 |localhost||  
-|\<Computername >|testlab14|  
-|\<MachineFQDN >|example.redmond.microsoft.com|  
-|\<IP-Adresse >|180.012.345,678|  
+|\<Computername>|testlab14|  
+|\<ComputerFQDN>|example.redmond.microsoft.com|  
+|\<IP-Adresse>|180.012.345,678|  
   
  Wenn *IsWindowsUser* auf **TRUE**festgelegt ist, ruft der WMI-Anbieter LookupAccountName auf, um die SID für das Konto abzurufen. Anschließend ruft er LookupAccountSID auf, um den im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Skript einzufügenden Namen abzurufen. Hierdurch wird sichergestellt, dass der verwendete Kontoname die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Überprüfung erfolgreich durchläuft.  
   
@@ -124,4 +120,3 @@ out Int32 HRESULT);
  [MSReportServer_ConfigurationSetting-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

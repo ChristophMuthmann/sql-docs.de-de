@@ -1,5 +1,5 @@
 ---
-title: Formatieren von Berichtselementen (Berichts-Generator und SSRS) | Microsoft Docs
+title: Formatieren von Berichtselementen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,25 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10444"
+f1_keywords: "10444"
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 993571d2e5d70ba0553a0ed747caccfcadb3a0da
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 01cf1b8dd539eeb7abc2311e765788dbb9655cff
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Formatieren von Berichtselementen (Berichts-Generator und SSRS)
   Durch Formatieren der Elemente in einem Bericht lässt sich das Aussehen und die Lesbarkeit des Berichts deutlich verbessern. Die Textfelder und individuellen Elemente in Textfeldern, Bilder, Ausdrücke und Daten können im Berichtsentwurfsmodus formatiert werden.  
   
- ![Rs_FormattingReporttItems](../../reporting-services/report-design/media/rs-formattingreporttitems.gif "Rs_FormattingReporttItems")  
+ ![Rs_FormatierungvonBerichtselementen](../../reporting-services/report-design/media/rs-formattingreporttitems.gif "Rs_FormattingReporttItems")  
   
  A. Textfeld mit einem doppellinigen Rahmen und unterschiedlichen Formatvorlagen, einschließlich eines Links  
   
@@ -63,4 +61,3 @@ ms.lasthandoff: 08/09/2017
  [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Formatieren von Achsenbezeichnungen in einem Diagramm (Berichts-Generator und SSRS) | Microsoft Docs
+title: Formatieren von Achsenbezeichnungen in einem Diagramm (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -25,20 +25,18 @@ f1_keywords:
 - sql13.rtp.rptdesigner.axisproperties.labelfont.f1
 - sql13.rtp.rptdesigner.axisproperties.minortickmarks.f1
 - "10141"
-helpviewer_keywords:
-- "10140"
+helpviewer_keywords: "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d3bb6bc91b9b96830074bac3de28fc6a5f6b0143
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e7cc9e4800d6fd00cd0934bc2c1eeac04f7a68fa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Formatieren von Achsenbezeichnungen in einem Diagramm (Berichts-Generator und SSRS)
   Koordinatenbasierte Diagrammtypen (Säulen-, Balken-, Flächen-, Punkt-, Linien- und Bereichsdiagramme) verfügen über zwei Achsen, die zur Kategorisierung und Anzeige von Datenbeziehungen verwendet werden. Auf jede Achse werden unterschiedliche Formatierungstypen angewendet.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="types-of-axes"></a>Achsentypen  
  Das Diagramm verfügt über zwei Hauptachsen: die Wertachse und die Kategorieachse.  
   
- ![Diagramm "categorical" und der Wert von Achsen](../../reporting-services/report-design/media/rsaxes-categorical-vs-value.gif "Diagramm "categorical" und der Wert von Achsen")  
+ ![Kategorie- und Wertachsen eines Diagramms](../../reporting-services/report-design/media/rsaxes-categorical-vs-value.gif "Chart categorical and value axes")  
   
  Wenn Sie ein Feld aus Ihrem Dataset auf die Entwurfsoberfläche ziehen, bestimmt das Diagramm, ob dieses Feld zur Kategorie- oder zur Wertachse gehört.  
   
@@ -106,14 +104,14 @@ ms.lasthandoff: 08/09/2017
  Das Diagramm berechnet unabhängig von der Größe des Diagramms ungefähr fünf Achsenbezeichnungsintervalle. Wenn Sie in breiteren oder höheren Diagrammen nur fünf Bezeichnungen an einer Achse anzeigen, können dadurch große Lücken zwischen den einzelnen Bezeichnungen entstehen. Dies macht es schwieriger, den Wert jedes Datenpunkts an der Achse zu identifizieren. Um dieses Verhalten bei breiteren oder höheren Diagrammen zu vermeiden, können Sie ein variables Achsenintervall festlegen. Das Diagramm berechnet die optimale Anzahl der Bezeichnungen, die an der Achse angezeigt werden können, je nach Achse auf Grundlage der Breite oder der Höhe des Diagramms. Weitere Informationen finden Sie unter [Angeben eines Achsenintervalls &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md).  
   
 ## <a name="sorting-axis-values"></a>Sortieren von Achsenwerten  
- Kategorien werden an der x-Achse in der Reihenfolge angezeigt, in der sie im Resultset vorkommen. Sie können die Gruppenreihenfolge ändern, indem Sie der Abfrage einen SORT-Befehl hinzufügen oder das Dataset mithilfe eines Ausdrucks sortieren. Diagrammdatenbereiche werden auf dieselbe Weise sortiert wie alle anderen Datenbereiche. Weitere Informationen zum Sortieren von Daten finden Sie unter [Sortieren von Daten in einem Datenbereich &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
+ Kategorien werden an der x-Achse in der Reihenfolge angezeigt, in der sie im Resultset vorkommen. Sie können die Gruppenreihenfolge ändern, indem Sie der Abfrage einen SORT-Befehl hinzufügen oder das Dataset mithilfe eines Ausdrucks sortieren. Diagrammdatenbereiche werden auf dieselbe Weise sortiert wie alle anderen Datenbereiche. Weitere Informationen zum Sortieren von Daten finden Sie unter [Sortieren von Daten in einem Datenbereich (Berichts-Generator und SSRS)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
   
 ## <a name="specifying-scalar-values-on-the-category-axis"></a>Angeben von Skalarwerten auf der Kategorieachse  
  Standardmäßig zeigt das Diagramm nur Achsenbezeichnungen für Datenpunkte im Dataset an, die gültige Werte enthalten. Wenn beispielsweise an der Kategorieachse die Werte 1, 2 und 6 vorhanden sind, zeigt das Diagramm nur die Kategorien 1, 2 und 6 an. Um die Skala der Kategoriewerte beizubehalten, können Sie angeben, dass das Diagramm eine skalare Achse verwenden soll. In diesem Szenario zeigt das Diagramm Bezeichnungen für 1-6 an der x-Achse des Diagramms an, auch wenn Ihr Dataset keine Werte für 3-5 enthält.  
   
  Es gibt zwei Möglichkeiten, um eine skalare Achse festzulegen:  
   
--   Wählen Sie im Dialogfeld **Achseneigenschaften** die Option **Skalare Achse** aus. Dadurch werden der Achse numerische oder Datums-/Uhrzeitwerte hinzugefügt, wo keine Datengruppierungswerte vorhanden sind. Weitere Informationen finden Sie unter [Achse Eigenschaften (Dialogfeld), Achsenoptionen &#40; Berichts-Generator und SSRS &#41; ](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11).  
+-   Wählen Sie im Dialogfeld **Achseneigenschaften** die Option **Skalare Achse** aus. Dadurch werden der Achse numerische oder Datums-/Uhrzeitwerte hinzugefügt, wo keine Datengruppierungswerte vorhanden sind. Weitere Informationen finden Sie unter [Achseneigenschaften (Dialogfeld), Achsenoptionen (Berichts-Generator und SSRS)](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11).  
   
 -   Wählen Sie ein Feld aus, oder geben Sie in das Dialogfeld **Reiheneigenschaften** einen Ausdruck für die Option **Kategorienfeld** ein. Das Diagramm fügt Achsenintervalle für alle Werte im Kategorienfeld hinzu, das Sie angegeben haben.  
   
@@ -133,8 +131,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Diagramme &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Formatieren von Datenpunkten in einem Diagramm &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
+ [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Formatieren von Datenpunkten in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
   
   
-

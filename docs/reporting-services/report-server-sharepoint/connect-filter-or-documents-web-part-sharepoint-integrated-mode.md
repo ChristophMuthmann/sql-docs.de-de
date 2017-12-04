@@ -1,5 +1,5 @@
 ---
-title: Filters oder Dokumentwebparts-Webpart mit einem Reporting Services-Berichts-Viewer-Webpart verbinden | Microsoft Docs
+title: "Verbinden des Webparts „Filter“ oder „Dokumente“ mit einem Webpart des Berichts-Viewers von Reporting Services | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-server-2016
@@ -14,79 +14,77 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 87d4b4a3f0c01804329f3a7b0688632c20ed6c9b
-ms.contentlocale: de-de
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 31ec7cc7f67428d578e2ce2a057f5d38f69261c9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="connect-filter-or-documents-web-part-with-a-reporting-services-report-viewer-web-part"></a>Verbinden Sie Filters oder Dokumentwebparts-Webpart mit einem Reporting Services-Berichts-Viewer-Webpart
+# <a name="connect-filter-or-documents-web-part-with-a-reporting-services-report-viewer-web-part"></a>Verbinden des Webparts „Filter“ oder „Dokumente“ mit einem Webpart des Berichts-Viewers von Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-Wenn Sie eine SharePoint-Produkts verwenden, können Sie ein Dashboard oder das Webpart Seite erstellen, die ein Filterwebpart oder Dokumentewebpart und ein Berichts-Viewer-Webpart enthält. Unterstützte Versionen sind [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] oder [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]. Ebenfalls unterstützt wird [!INCLUDE[winSPServ3](../../includes/winspserv3-md.md)] oder [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007. Durch Verbinden eines Filterwebparts können können Benutzer, die Filterwerte in einem Filterwebpart auswählen, den Wert für einen parametrisierten Bericht auf derselben Seite senden. Durch Verbinden eines dokumentewebparts können können Benutzer, die auf Berichte in der Bibliothek Dokumente klicken Sie auf den Bericht in einem angrenzenden Berichts-Viewer-Webpart anzeigen.
+Wenn Sie ein SharePoint-Produkt verwenden, können Sie ein Dashboard oder eine Webpartseite erstellen, die ein Webpart „Filter“ oder ein Webpart „Dokumente“ und ein Berichts-Viewer-Webpart enthält. Unterstützte Versionen sind [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] oder [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]. Ebenfalls unterstützt wird [!INCLUDE[winSPServ3](../../includes/winspserv3-md.md)] oder [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007. Durch Verbinden eines Filterwebparts können Benutzer, die Filterwerte in einem Filterwebpart auswählen, den Wert an einen parametrisierten Bericht auf derselben Seite senden. Durch Verbinden eines Webparts „Dokumente“ können Benutzer, die auf Berichte in der Bibliothek „Dokumente“ klicken, den Bericht in einem zugehörigen Berichts-Viewer-Webpart anzeigen.
 
 > [!NOTE]
-> Reporting Services-Integration in SharePoint ist nach SQL Server 2016 nicht mehr verfügbar.
+> Die Integration von Reporting Services in SharePoint ist nach SQL Server 2016 nicht mehr möglich.
 
- Das Filterwebpart wird zum Senden von Werten an einen oder mehrere Parameter in einem Bericht. Um ein Filterwebpart verwenden zu können, muss der Bericht Parameter definiert haben, die mit den Werten, den Datentyp und den vom Webpart gesendeten Format kompatibel sind.  
+ Das Filter-Webpart wird zum Senden von Werten an mindestens einen Parameter in einem Bericht verwendet. Wenn Sie ein Filter-Webpart verwenden möchten, müssen für den Bericht Parameter definiert sein, die mit den vom Webpart gesendeten Werten, Datentypen und dem Format kompatibel sind.  
   
- Das Dokumentewebpart ist der Bibliothek Dokumente der Website Home zugeordnet. Klicken Sie auf **Alle Websiteinhalte einblenden**, um Elemente aus der Bibliothek Dokumente anzuzeigen, hinzuzufügen oder zu entfernen. Klicken Sie in Bibliotheken auf **Dokumente**. Mit den Menüs **Neu**, **Upload**und **Aktionen** können Sie die Elemente in der Bibliothek Dokumente verwalten.  
+ Das Webpart „Dokumente“ ist der Bibliothek „Dokumente“ der Homepage zugeordnet. Klicken Sie auf **Alle Websiteinhalte einblenden**, um Elemente aus der Bibliothek Dokumente anzuzeigen, hinzuzufügen oder zu entfernen. Klicken Sie in Bibliotheken auf **Dokumente**. Mit den Menüs **Neu**, **Upload**und **Aktionen** können Sie die Elemente in der Bibliothek Dokumente verwalten.  
   
-## <a name="connect-a-filter-web-part"></a>Verbinden eines Filterwebparts
+## <a name="connect-a-filter-web-part"></a>Verbinden eines Filter-Webparts
   
-1.  Öffnen Sie oder erstellen Sie eine Webpartseite oder Dashboard.  
+1.  Öffnen oder erstellen Sie eine Webpartseite oder ein Dashboard.  
   
 2.  Klicken Sie im Menü **Websiteaktionen** auf **Seite bearbeiten**.  
   
 3.  Klicken Sie auf **Webpart hinzufügen**.  
   
-4.  In **alle Webparts**in der **Sonstiges** Kategorie wählen **SQL Server Reporting Services Berichts-Viewer**.  
+4.  Klicken Sie unter **Alle Webparts** in der Kategorie **Verschiedenes** auf **Berichts-Viewer für SQL Reporting Services**.  
   
-5.  Klicken Sie auf **Hinzufügen**. Das Webpart wird am oberen Rand der Zone hinzugefügt.  
+5.  Klicken Sie auf **Hinzufügen**. Das Webpart wird oben in der Zone hinzugefügt.  
   
-6.  Klicken Sie auf einer anderen Zone auf derselben Webpartseite oder demselben Dashboard auf **Webpart hinzufügen**.  
+6.  Klicken Sie in einer anderen Zone auf derselben Webpartseite oder demselben Dashboard auf **Webpart hinzufügen**.  
   
-7.  In **alle Webparts**in der **Filter** Abschnitt, wählen Sie ein Webpart.  
+7.  Wählen Sie unter **Alle Webparts** im Abschnitt **Filter** ein Webpart aus.  
   
-8.  Klicken Sie auf **Hinzufügen**. Das Webpart wird am oberen Rand der Zone hinzugefügt.  
+8.  Klicken Sie auf **Hinzufügen**. Das Webpart wird oben in der Zone hinzugefügt.  
   
-9. Klicken Sie in der Zone, die das Webpart enthält, auf das Webpart **bearbeiten** Sie im Menü **Verbindungen**, zeigen Sie auf **Filterwerte senden an**, und wählen Sie dann **Bericht Viewer** - *Berichtsname*.  
+9. Klicken Sie in der Zone mit dem Webpart auf das Menü **Bearbeiten** des Webparts, zeigen Sie auf **Verbindungen**, dann auf **Filterwerte senden an**, und klicken Sie anschließend auf **Berichts-Viewer** - *Berichtsname*.  
   
 10. Checken Sie Ihre Änderungen ein, und speichern Sie die Seite.  
   
-## <a name="connect-a-documents-web-part"></a>Verbinden eines dokumentewebparts  
+## <a name="connect-a-documents-web-part"></a>Verbinden eines Dokumente-Webparts  
   
-1.  Öffnen Sie oder erstellen Sie eine Webpartseite oder Dashboard.  
+1.  Öffnen oder erstellen Sie eine Webpartseite oder ein Dashboard.  
   
 2.  Klicken Sie im Menü **Websiteaktionen** auf **Seite bearbeiten**.  
   
 3.  Klicken Sie auf **Webpart hinzufügen**.  
   
-4.  In **alle Webparts**in der **Listen und Bibliotheken** Abschnitt **Dokumente.**  
+4.  Klicken Sie unter **Alle Webparts** im Abschnitt **Listen und Bibliotheken** auf **Dokumente**.  
   
-5.  Klicken Sie auf **Hinzufügen**. Das Webpart wird am oberen Rand der Zone hinzugefügt.  
+5.  Klicken Sie auf **Hinzufügen**. Das Webpart wird oben in der Zone hinzugefügt.  
   
 6.  Klicken Sie unten im Toolbereich auf **Anwenden** , und klicken Sie anschließend auf **OK** , um den Bereich zu schließen.  
   
-7.  Klicken Sie auf einer anderen Zone auf derselben Webpartseite oder demselben Dashboard auf **Webpart hinzufügen**.  
+7.  Klicken Sie in einer anderen Zone auf derselben Webpartseite oder demselben Dashboard auf **Webpart hinzufügen**.  
   
-8.  In **alle Webparts**in der **Sonstiges** Kategorie wählen **SQL Server Reporting Services Berichts-Viewer.**  
+8.  Klicken Sie unter **Alle Webparts** in der Kategorie **Verschiedenes** auf **Berichts-Viewer für SQL Reporting Services**.  
   
-9. Klicken Sie auf **Hinzufügen**. Das Webpart wird am oberen Rand der Zone hinzugefügt.  
+9. Klicken Sie auf **Hinzufügen**. Das Webpart wird oben in der Zone hinzugefügt.  
   
-10. Klicken Sie in der Zone, die das Webpart enthält, auf das Webpart **bearbeiten** Sie im Menü **Verbindungen**, zeigen Sie auf **Berichtsdefinitionen Abrufen von**, und wählen Sie dann  **Dokumente**.  
+10. Klicken Sie in der Zone mit dem Webpart auf das Menü **Bearbeiten** des Webparts, zeigen Sie auf **Verbindungen**, dann auf **Berichtsdefinitionen abrufen von**, und klicken Sie anschließend auf **Dokumente**.  
   
 11. Checken Sie Ihre Änderungen ein, und speichern Sie die Seite.  
   
 ## <a name="see-also"></a>Siehe auch
 
- [Der Berichts-Viewer-Webpart zu einer Webseite hinzufügen](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)   
+ [Add the Report Viewer Web Part to a Web Page (Hinzufügen des Berichts-Viewer-Webparts zu einer Webseite)](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)   
  [Berichts-Viewer-Webpart auf einer SharePoint-Website](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
  [Customize the Report Viewer Web Part (Anpassen des Berichts-Viewer-Webparts)](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)  
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
-

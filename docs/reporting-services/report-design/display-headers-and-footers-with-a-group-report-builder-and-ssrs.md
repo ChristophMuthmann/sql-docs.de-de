@@ -1,5 +1,5 @@
 ---
-title: "Anzeigen von Kopf- und Fußzeilen einer Gruppe (Berichts-Generator und SSRS) | Microsoft Docs"
+title: "Anzeigen von Kopf- und Fußzeilen einer Gruppe (Berichts-Generator und SSRS) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,29 +11,28 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 36fd7c4ac62280fb980bb24c89306a006605b665
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 5c1004a59c0cda51fb5cf9230b81a18945765005
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Anzeigen von Kopf- und Fußzeilen einer Gruppe (Berichts-Generator und SSRS)
   Sie können bestimmen, ob eine statische Zeile wie eine Gruppenkopfzeile oder -fußzeile mit dynamischen Zeilen gerendert werden soll, die mit einer Gruppe in einem Tablix-Datenbereich verknüpft sind.  
   
  Wenn Sie alle Spalten- oder Zeilenüberschriften auf mehreren Seiten wiederholen möchten, können Sie Eigenschaften für den Tablix-Datenbereich festlegen. Weitere Informationen finden Sie unter [Anzeigen von Zeilen- und Spaltenüberschriften auf mehreren Seiten (Berichts-Generator und SSRS)](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md).  
   
- Sie müssen Eigenschaften für das Tablix-Element festlegen, um das Renderingverhalten für dynamische, mit geschachtelten Gruppen verknüpfte Zeilen und Spalten oder für statische, mit Beschriftungen oder Zwischensummen verknüpfte Zeilen und Spalten zu bestimmen. Ein Tablix-Element stellt eine statische oder dynamische Zeile oder Spalte dar. Ein statisches Element wird einmal wiederholt. Beispiel: Eine Zeile mit einer Gesamtsumme ist eine statische Zeile. Ein dynamisches Element wird für jede Gruppeninstanz einmal wiederholt. Eine Zeile, die mit einer Gruppe mit dem Gruppierungsausdruck [Region] verknüpft ist, wird einmal für jeden eindeutigen Wert für eine Region wiederholt. Weitere Informationen zu Tablix-Elemente, finden Sie unter [Tablix-Datenbereichszelle, Zeilen und Spalten &#40; Berichts-Generator &#41; und SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
+ Sie müssen Eigenschaften für das Tablix-Element festlegen, um das Renderingverhalten für dynamische, mit geschachtelten Gruppen verknüpfte Zeilen und Spalten oder für statische, mit Beschriftungen oder Zwischensummen verknüpfte Zeilen und Spalten zu bestimmen. Ein Tablix-Element stellt eine statische oder dynamische Zeile oder Spalte dar. Ein statisches Element wird einmal wiederholt. Beispiel: Eine Zeile mit einer Gesamtsumme ist eine statische Zeile. Ein dynamisches Element wird für jede Gruppeninstanz einmal wiederholt. Eine Zeile, die mit einer Gruppe mit dem Gruppierungsausdruck [Region] verknüpft ist, wird einmal für jeden eindeutigen Wert für eine Region wiederholt. Weitere Informationen zu Tablix-Member finden Sie unter [Zellen, Zeilen und Spalten des Tablix-Datenbereichs (Berichts-Generator und SSRS)](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
  Sie können ein Tablix-Element im Gruppierungsbereich auswählen und die Eigenschaften **KeepWithGroup**, **KeepTogether**und **RepeatOnNewPage** im Eigenschaftenbereich festlegen. Verwenden Sie **KeepWithGroup** , um Gruppenköpfe und Fußzeilen auf der gleichen Seite wie die Gruppe anzuzeigen. Verwenden Sie **KeepTogether** , um statische Elemente mit den Zeilen oder Spalten einer Gruppe anzuzeigen. Verwenden Sie **RepeatOnNewPage** , um den Gruppenkopf oder die Fußzeile auf jeder Seite zu wiederholen, auf der mindestens eine vollständige Instanz des mit dem **KeepWithGroup** -Wert festgelegten Zeilengruppenelements angezeigt wird. **RepeatOnNewPage** wird für Spaltengruppenelemente nicht unterstützt.  
   
 > [!NOTE]  
->  **KeepWithGroup**, **KeepTogether**, und **RepeatOnNewPage** sind Eigenschaften, die Sie festlegen können, indem Sie mit der **Erweiterter Modus** der Gruppierung im Bereich. Weitere Informationen finden Sie unter [Bereichs "Gruppierung" &#40; Berichts-Generator &#41; ](../../reporting-services/report-design/grouping-pane-report-builder.md).  
+>  **KeepWithGroup**, **KeepTogether** und **RepeatOnNewPage** sind Eigenschaften von Gruppenmitgliedern, die im **Erweiterten Modus** des Bereichs „Gruppierung“ festgelegt werden können. Weitere Informationen finden Sie unter [Gruppierungsbereich (Berichts-Generator)](../../reporting-services/report-design/grouping-pane-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -75,8 +74,7 @@ ms.lasthandoff: 09/27/2017
 5.  (Optional) Zeigen Sie eine Vorschau des Berichts an. Wo es möglich ist, wird dieses Element vom Berichtsrenderer mit den angegebenen Spaltengruppenelementen beibehalten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tablix-Datenbereichszelle, Zeilen und Spalten (Berichts-Generator) und SSRS](tablix-data-region-report-builder-and-ssrs.md)   
+ [Zellen, Zeilen und Spalten des Tablix-Datenbereichs (Berichts-Generator und SSRS)](tablix-data-region-report-builder-and-ssrs.md)   
  
   
   
-

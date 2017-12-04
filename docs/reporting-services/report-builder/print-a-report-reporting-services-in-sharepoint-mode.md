@@ -1,5 +1,5 @@
 ---
-title: Drucken eines Berichts (Reporting Services im SharePoint-Modus) | Microsoft Docs
+title: Drucken eines Berichts (Reporting Services im SharePoint-Modus) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - printing reports, SharePoint Web application
 - printing reports
 ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f89c8f0d330561aacd678e4556fdaf2910b5dcc7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6a2f14906a5c3333c480de32fbcb34a8aaf7e2e4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>Drucken eines Berichts (Reporting Services im SharePoint-Modus)
   Bei einem Berichtsserver, der im SharePoint-Modus ausgeführt wird, gibt es drei Möglichkeiten zum Drucken eines Berichts aus einer SharePoint-Webanwendung:  
@@ -58,4 +57,3 @@ ms.lasthandoff: 08/09/2017
  [Aktivieren und Deaktivieren des clientseitige Drucks für Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Erste Schritte mit das Steuerelement ReportViewer 2016 | Microsoft Docs
+title: Erste Schritte mit dem ReportViewer 2016-Steuerelement | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/12/2017
 ms.prod: sql-server-2016
@@ -12,42 +12,41 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
-ms.openlocfilehash: 51c6e0a0baa59e49ae482db01253c1998894b5f8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/13/2017
-
+ms.openlocfilehash: dff598efce33f778359c2b6fb4c3a0184f2b88f6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>Integrieren von Reporting Services mithilfe von ReportViewer-Steuerelemente – erste Schritte
+# <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>Integrieren von Reporting Services mit den ReportViewer-Steuerelementen: Erste Schritte
 
-Erfahren Sie, wie Entwickler paginierte Berichte in ASP.NET-Websites und Windows Forms-apps über das Reporting Services 2016 ReportViewer-Steuerelement einbetten können. Sie können das Steuerelement ein neues Projekt hinzufügen oder aktualisieren ein vorhandenes Projekts.
+Erfahren Sie, wie Entwickler über das Reporting Services 2016 ReportViewer-Steuerelement paginierte Berichte in ASP.NET-Websites und Windows Forms-Apps einbetten können. Sie können das Steuerelement zu einem neuen Projekt hinzufügen oder ein vorhandenes Projekt aktualisieren.
 
-## <a name="adding-the-reportviewer-control-to-a-new-web-project"></a>Das ReportViewer-Steuerelement hinzufügen, um ein neues Webprojekt
+## <a name="adding-the-reportviewer-control-to-a-new-web-project"></a>Hinzufügen des ReportViewer-Steuerelement zu einem neuen Webprojekt
 
-1. Erstellen Sie ein neues **leere ASP.NET-Website** oder ein vorhandenes ASP.NET-Projekt öffnen.
+1. Erstellen Sie eine **leere ASP.NET-Website**, oder öffnen Sie ein vorhandenes ASP.NET-Projekt.
 
-    ![SsRS--neues-ASPNET-Projekt erstellen](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project.png)
+    ![ssRS-Erstellen-Neues-ASPNET-Projekt](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project.png)
 
-2. Installieren Sie das ReportViewer-2016 Steuerelement NuGet-Paket über die **NuGet-Paket-Manager-Konsole**.
+2. Installieren Sie das Steuerelemente-NuGet-Paket für ReportViewer 2016 über die **Manager-Konsole für NuGet-Pakete**.
 
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WebForms
     ```
-3. Fügen Sie eine neue ASPX-Seite auf das Projekt, und registrieren Sie das ReportViewer-Steuerelement-Assembly für die Verwendung auf der Seite.
+3. Fügen Sie dem Projekt eine neue ASPX-Seite hinzu, und registrieren Sie die ReportViewer-Steuerelementassembly zur Verwendung auf der Seite.
 
     ```
     <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
     ```
     
-4. Hinzufügen einer **ScriptManagerControl** auf der Seite.
+4. Fügen Sie **ScriptManagerControl** zu der Seite hinzu.
 
-5. Fügen Sie das ReportViewer-Steuerelement auf der Seite hinzu. Der Codeausschnitt unten kann aktualisiert werden, um einen Bericht auf einem Remoteberichtsserver gehostet zu verweisen.
+5. Fügen Sie das ReportViewer-Steuerelement zu der Seite hinzu. Der untenstehende Ausschnitt kann aktualisiert werden, um auf einen gehosteten Bericht auf einem Remoteberichtsserver zu verweisen.
 
     ```
     <rsweb:ReportViewer ID="ReportViewer1" runat="server" ProcessingMode="Remote">
@@ -55,7 +54,7 @@ Erfahren Sie, wie Entwickler paginierte Berichte in ASP.NET-Websites und Windows
     </rsweb:ReportViewer>
     ```
     
-Die letzte Seite sollte wie folgt aussehen.
+Die letzte Seite sollte wie folgt aussehen:
 
 ```
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Sample" %>
@@ -81,11 +80,11 @@ Die letzte Seite sollte wie folgt aussehen.
 
 ```
 
-## <a name="updating-an-existing-project-to-use-the-reportviewer-control"></a>Aktualisiert ein vorhandenes Projekt aus, um das ReportViewer-Steuerelement zu verwenden.
+## <a name="updating-an-existing-project-to-use-the-reportviewer-control"></a>Aktualisieren eines vorhandenen Projekts zur Verwendung des ReportViewer-Steuerelements
 
-Verwenden des 2016 ReportViewer-Steuerelements in einem vorhandenen Projekt, fügen Sie das Steuerelement über Nuget und aktualisieren die Verweise auf Version der Assembly vornehmen *14.0.0.0*. Dies umfasst das Aktualisieren des Projekts "Web.config" und alle ASPX-Seiten, die das ReportViewer-Steuerelement verweisen.
+Fügen Sie das Steuerelement über NuGet hinzu, und aktualisieren Sie die Verweise der Assembly auf Version *14.0.0.0*, um das ReportViewer 2016-Steuerelement zu einem vorhandenen Projekt hinzuzufügen. Dafür müssen Sie außerdem die Datei „web.config“ des Projekts und alle ASPX-Projekte aktualisieren, die auf das ReportViewer-Steuerelement verweisen.
 
-### <a name="sample-webconfig-changes"></a>Beispiel "Web.config" geändert
+### <a name="sample-webconfig-changes"></a>Beispiel für web.config-Änderungen
 
 ```
 <?xml version="1.0"?>
@@ -132,7 +131,7 @@ Verwenden des 2016 ReportViewer-Steuerelements in einem vorhandenen Projekt, fü
 </configuration>
 ```
 
-### <a name="sample-aspx"></a>Aspx-Beispiel
+### <a name="sample-aspx"></a>Beispiel für eine ASPX-Datei
 
 ```
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SampleAspx" %>
@@ -143,18 +142,18 @@ Verwenden des 2016 ReportViewer-Steuerelements in einem vorhandenen Projekt, fü
 <!DOCTYPE html>
 ```
 
-## <a name="adding-the-reportviewer-control-to-a-new-windows-forms-project"></a>Das ReportViewer-Steuerelement hinzufügen, um ein neues Windows Forms-Projekt
+## <a name="adding-the-reportviewer-control-to-a-new-windows-forms-project"></a>Hinzufügen des ReportViewer-Steuerelements zu einem neuen Windows Forms-Projekt
 
-1. Erstellen Sie ein neues **Windows Forms-Anwendung** oder ein vorhandenes Projekt öffnen.
+1. Erstellen Sie eine neue **Windows Forms-Anwendung**, oder öffnen Sie ein vorhandenes Projekt.
 
-    ![SsRS--neues-Winforms-Projekt erstellen](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project.png)
+    ![ssRS-Erstellen-Neues-Winforms-Projekt](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project.png)
 
-2. Installieren Sie das ReportViewer-2016 Steuerelement NuGet-Paket über die **NuGet-Paket-Manager-Konsole**.
+2. Installieren Sie das Steuerelemente-NuGet-Paket für ReportViewer 2016 über die **Manager-Konsole für NuGet-Pakete**.
 
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms
     ```
-3. Fügen Sie ein neues Steuerelement aus dem Code oder [fügen Sie das Steuerelement zur Toolbox](##adding-control-to-visual-studio-toolbar).
+3. Fügen Sie entweder ein neues Steuerelement aus Code hinzu oder [fügen Sie der Toolbox das Steuerelement hinzu](##adding-control-to-visual-studio-toolbar).
 
     ```
     private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
@@ -178,13 +177,13 @@ Verwenden des 2016 ReportViewer-Steuerelements in einem vorhandenen Projekt, fü
     }
     ```
 
-## <a name="how-to-set-100-height-on-the-report-viewer-2016-control"></a>Zum Festlegen von 100 % Höhe im Berichts-Viewer 2016-Steuerelement
+## <a name="how-to-set-100-height-on-the-report-viewer-2016-control"></a>Festlegen einer Höhe von 100 Prozent für das ReportViewer 2016-Steuerelement
 
-Das neue Steuerelement des Berichts-Viewer 2016 für HTML5-Standards-Modus Seiten optimiert ist und funktioniert in allen modernen Browsern. In der Vergangenheit mit dem alten RVC-Steuerelement beim Festlegen der Höheneigenschaft von 100 % arbeitet er auch wenn keine Vorgänger Höhe angegeben hatten. Dieses Verhalten wurde in HTML5 geändert. Wenn Sie diese Eigenschaft auf dem neuen RVC Steuerelement festlegen, sie ordnungsgemäß funktioniert nur, wenn das übergeordnete Element eine definierte Höhe verfügt, d. h. kein Wert von "Auto" oder alle Vorfahren RVC haben Höhe von 100 % zu.
+Das neue ReportViewer 2016-Steuerelement wurde für HTML5-Seiten im Standardmodus optimiert und funktioniert in allen modernen Browsern. In der Vergangenheit hat die 100 Prozent-Höheneigenschaft für das RVC-Steuerelement funktioniert, auch wenn für die Vorgängerelemente keine Höhe angegeben war. Dieses Verhalten wurde in HTML5 geändert. Wenn Sie diese Eigenschaft für das neue RVC-Steuerelement festlegen, wird sie nur korrekt ausgeführt, wenn für das übergeordnete Element eine Höhe festgelegt ist, d.h., es darf kein automatischer Wert festgelegt sein, oder wenn für alle Vorgängerelemente von RVC eine Höhe von 100 Prozent festgelegt ist.
 
-Im folgenden sind die beiden Beispiele dazu.
+Im Folgenden sind zwei Beispiele aufgeführt, in denen erklärt wird, wie Sie dies festlegen.
 
-### <a name="by-setting-the-height-of-all-the-parent-elements-to-100"></a>Durch Festlegen der Höhe aller übergeordneten Elemente auf 100 %
+### <a name="by-setting-the-height-of-all-the-parent-elements-to-100"></a>Festlegen der Höhe für alle übergeordneten Elemente auf 100 Prozent
 
 ```
 <!DOCTYPE html>
@@ -210,9 +209,9 @@ Im folgenden sind die beiden Beispiele dazu.
 
 ```
 
-### <a name="by-setting-the-style-height-attribute-on-the-parent-of-the-reportviewer-control"></a>Durch Festlegen der Formatvorlage Height-Attribut für das übergeordnete Element des Reportviewer-Steuerelements
+### <a name="by-setting-the-style-height-attribute-on-the-parent-of-the-reportviewer-control"></a>Festlegen des Formathöhenattributs auf das übergeordnete Steuerelement des ReportViewer-Steuerelements
 
-Weitere Informationen, Viewports Prozentsatz Längen, finden Sie unter [Viewport Prozentsatz Längen](https://www.w3.org/TR/css3-values/#viewport-relative-lengths).
+Weitere Informationen zu den Längen der Viewports in Prozent finden Sie unter [Viewport-percentage lengths (Längen der Viewports in Prozent)](https://www.w3.org/TR/css3-values/#viewport-relative-lengths).
 
 ```
 <!DOCTYPE html>
@@ -233,55 +232,54 @@ Weitere Informationen, Viewports Prozentsatz Längen, finden Sie unter [Viewport
 
 ```
 
-## <a name="adding-control-to-visual-studio-toolbar"></a>Hinzufügen des Steuerelements auf der Symbolleiste von Visual Studio
+## <a name="adding-control-to-visual-studio-toolbar"></a>Hinzufügen eines Steuerelements zur Visual Studio-Symbolleiste
 
-Das ReportViewer-Steuerelement ist jetzt als ein NuGet-Paket zur Verfügung gestellt. Aus diesem Grund sehen Sie nicht das ReportViewer-Steuerelement in der Standardeinstellung in der Visual Studio-Toolbox angezeigt. Sie können das Steuerelement zur Toolbox hinzufügen, indem Sie wie folgt.
+Das ReportViewer-Steuerelement wird jetzt als NuGet-Paket versendet. Aus diesem Grund wird Ihnen standardmäßig nicht das ReportViewer-Steuerelement in der Visual Studio-Toolbox angezeigt. Sie können das Steuerelement wie folgt zur Toolbox hinzufügen:
 
-1. Installieren Sie das NuGet-Paket für die Windows Forms- oder der WebForms wie oben erwähnt.
+1. Installieren Sie wie zuvor erwähnt das NuGet-Paket entweder für WinForms oder für WebForms.
 
-2. Entfernen Sie das ReportViewer-Steuerelement, das aufgeführt ist, in der Toolbox. Dies ist das Steuerelement mit einer Version von 12.x.
+2. Entfernen Sie das ReportViewer-Steuerelement aus der Toolbox. Dabei handelt es sich um das Steuerelement mit einer Version von 12.x.
 
-    ![SsRS-Remove-alte-Rvcontrol-toolbox](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
+    ![ssRS-remove-old-rvcontrol-toolbox](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
-3. Mit der rechten Maustaste an einer beliebigen Stelle in der Toolbox in, und wählen Sie dann **Elemente auswählen...** .
+3. Klicken Sie mit der rechten Maustaste zunächst auf eine beliebige Stelle in der Toolbox und anschließend auf **Elemente auswählen**.
 
-    ![SsRS-Toolbox-wählen-Element](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
+    ![ssRS-toolbox-choose-item](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     
-4. Auf der **.NET Framework-Komponenten**Option **Durchsuchen**.
+4. Klicken Sie unter den **.NET Framework-Komponenten** auf **Durchsuchen**.
 
-    ![SsRS-Toolbox-durchsuchen](../../reporting-services/application-integration/media/ssrs-toolbox-browse.png)
+    ![ssRS-toolbox-browse](../../reporting-services/application-integration/media/ssrs-toolbox-browse.png)
 
-5. Wählen Sie die **Microsoft.ReportViewer.WinForms.dll** oder **Microsoft.ReportViewer.WebForms.dll** aus dem NuGet-Paket, das Sie installiert haben.
+5. Klicken Sie in dem von Ihnen installierten NuGet-Paket auf **Microsoft.ReportViewer.WinForms.dll** oder **Microsoft.ReportViewer.WebForms.dll**.
 
     > [!NOTE] 
-    > Das NuGet-Paket wird in dem Projektmappenverzeichnis des Projekts installiert werden. Der Pfad zur Dll wird ähnlich der folgenden sein: `{Solution Directory}\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.{version}\lib\net40` oder `{Solution Directory}\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.{version}\lib\net40`.
+    > Das NuGet-Paket wird im Projektmappenverzeichnis Ihres Projekts installiert. Der Pfad zur DLL ähnelt einem der folgenden Pfade: `{Solution Directory}\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.{version}\lib\net40` oder `{Solution Directory}\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.{version}\lib\net40`.
 
-6. Das neue Steuerelement sollte in der Toolbox angezeigt werden. Anschließend können Sie es in eine andere Registerkarte in der Toolbox verschieben, wenn Sie möchten.
+6. Das neue Steuerelement sollte jetzt in der Toolbox angezeigt werden. Sie können es nun in eine andere Registerkarte in der Toolbox verschieben, wenn Sie möchten.
 
-    ![SsRS-Toolbox-rvcontrol](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
+    ![ssRS-toolbox-rvcontrol](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
 
-### <a name="things-to-be-aware-of"></a>Aspekte zu berücksichtigen
+### <a name="things-to-be-aware-of"></a>Worauf Sie achten sollten
 
-- Dadurch wird einen Verweis auf die installierten NuGet-Paket innerhalb des aktuellen Projekts hinzugefügt. Das Element in der Toolbox wird auf andere Projekte beibehalten werden. Wenn Sie in einem neuen Projektmappe/Projekt das NuGet-Paket installieren, kann das Toolboxelement eine ältere Version verweisen. 
+- Dadurch fügen Sie einen Verweis auf das installierte NuGet-Paket zu Ihrem aktuellen Projekt hinzu. Das Element in der Toolbox bleibt für andere Projekte erhalten. Wenn Sie das NuGet-Paket in einer neuen Projektmappe oder einem neuen Projekt speichern, verweist das Toolboxelement unter Umständen auf eine ältere Version. 
 
-- Das Steuerelement wird in der Toolbox verbleiben, selbst wenn die Assembly nicht mehr verfügbar ist. Wenn dieses Projekt gelöscht wurde, wird Visual Studio ein Fehler ausgelöst, wenn Sie versuchen, und fügen Sie das Steuerelement aus der Toolbox. Um diesen Fehler zu beheben, entfernen Sie das Steuerelement aus der Toolbox, und mit den oben beschriebenen Schritten erneut hinzufügen.
+- Das Steuerelement bleibt in der Toolbox, auch wenn die Assembly nicht mehr verfügbar ist. Wenn dieses Projekt gelöscht wurde, wird von Visual Studio ein Fehler ausgelöst, wenn Sie versuchen, das Steuerelement aus der Toolbox hinzuzufügen. Um diesen Fehler zu beheben, müssen Sie das Steuerelement aus der Toolbox entfernen und es über die vorstehend beschriebenen Schritte erneut hinzufügen.
 
 
 ## <a name="common-issues"></a>Häufige Probleme
     
-- Das Steuerelement ReportViewer 2016 dient mit modernen Browsern verwendet werden soll. Das Steuerelement möglicherweise nicht ausgeführt werden, wenn der Browser die Webseite in einem Internet Explorer-Kompatibilitätsmodus rendern. Intranetsites möglicherweise ein Meta-Tag, um die Einstellung zu überschreiben, das Rendern von Intranetseiten im Kompatibilitätsmodus empfehlen.
+- Das ReportViewer 2016-Steuerelement ist für die Verwendung mit modernen Browsern bestimmt. Das Steuerelement funktioniert möglicherweise nicht, wenn Browser die Webseite in einem mit Internet Explorer kompatiblen Modus rendern. Für Intranet-Websites ist möglicherweise ein META-Tag erforderlich, um Einstellungen außer Kraft zu setzen, mit denen Intranetseiten im Kompatibilitätsmodus gerendert werden können.
 
     ```
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     ```
       
-## <a name="providing-feedback"></a>Bereitstellen von feedback
+## <a name="providing-feedback"></a>Senden von Feedback
 
-Lassen Sie das Team Probleme erfahren Sie mit dem Steuerelement auftreten, auf die [Reporting Services MSDN-Foren](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices) oder per e-Mail an [ RVCFeedback@microsoft.com ](mailto:RVCFeedback@microsoft.com).
+Informieren Sie das Team über mögliche Probleme mit dem Steuerelement über die [MSDN Reporting Services-Foren](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices) oder per E-Mail unter [RVCFeedback@microsoft.com](mailto:RVCFeedback@microsoft.com).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Die Datensammlung im Steuerelement ReportingViewer 2016](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
+[Datensammlung im ReportingViewer 2016-Steuerelement](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
 Haben Sie dazu Fragen? [Besuchen Sie das Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
-
 

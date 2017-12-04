@@ -1,5 +1,5 @@
 ---
-title: "Erstellen, ändern und Löschen von Zeitplänen | Microsoft Docs"
+title: "Erstellen, Ändern und Löschen von Zeitplänen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 07/01/2016
 ms.prod: sql-server-2016
@@ -23,17 +23,16 @@ helpviewer_keywords:
 - schedules [Reporting Services], modifying
 - shared schedules [Reporting Services], deleting
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 66a306d07b8556fe43659d4b078e2d31f3d51900
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 86ca460b5fe669e9fe9e9c0130c883325f988b50
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-modify-and-delete-schedules"></a>Erstellen, Ändern oder Löschen von Zeitplänen
   In diesem Hilfethema erhalten Sie Informationen zum Erstellen, Ändern und Löschen von freigegebenen [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Zeitplänen.  Freigegebene Zeitpläne für den einheitlichen Modus werden auf der Seite „Zeitpläne“ im Webportal oder im Ordner „Freigegebene Zeitpläne“ in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]verwaltet. Verwenden Sie für den SharePoint-Modus die Verwaltungsseiten für die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung.  
@@ -147,8 +146,7 @@ Klicken Sie auf **Abbrechen**.
 ## <a name="see-also"></a>Siehe auch  
  [Schedules](../../reporting-services/subscriptions/schedules.md)   
  [Anhalten und Fortsetzen von freigegebenen Zeitplänen](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)   
- [Zwischenspeichern eines Berichts &#40; Berichts-Manager &#41;](../../reporting-services/report-server/cache-a-report-report-manager.md)   
- [Hinzufügen einer Momentaufnahme zum Melden von Sicherungsverlauf &#40; Berichts-Manager &#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
+ [Zwischenspeichern eines Berichts &#40;Berichts-Manager&#41;](../../reporting-services/report-server/cache-a-report-report-manager.md)   
+ [Hinzufügen einer Momentaufnahme zum Berichtsverlauf &#40;Berichts-Manager&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
   
   
-

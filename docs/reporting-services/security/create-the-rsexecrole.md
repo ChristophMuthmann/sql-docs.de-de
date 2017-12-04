@@ -1,5 +1,5 @@
 ---
-title: Erstellen der Rolle RSExecRole | Microsoft Docs
+title: "Erstellen der Rolle „RSExecRole“ | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -10,21 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RSExecRole
+helpviewer_keywords: RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c5830b59420268d58f6425f8a2ce52fc4a3be12e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="create-the-rsexecrole"></a>Erstellen der Rolle RSExecRole
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet eine vordefinierte Datenbankrolle namens **RSExecRole** , um Berichtsserverberechtigungen für die Berichtsserver-Datenbank zu gewähren. Die Rolle **RSExecRole** wird automatisch mit der Berichtsserver-Datenbank erstellt. Als Faustregel gilt, dass Sie sie nie ändern und ihr keine anderen Benutzer zuweisen sollten. Wenn Sie die Berichtsserver-Datenbank jedoch auf ein neues oder anderes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]verlagern, müssen Sie die Rolle in den Systemdatenbanken Master und MSDB neu erstellen.  
@@ -101,7 +98,7 @@ ms.lasthandoff: 08/09/2017
   
 20. Wiederholen Sie diesen Schritt für alle übrigen gespeicherten Prozeduren. Der Rolle**RSExecRole** müssen Berechtigungen zum Ausführen aller drei gespeicherten Prozeduren gewährt werden.  
   
- ![Rolleneigenschaften Datenbankseite](../../reporting-services/security/media/rsexecroledbproperties.gif "Seite "Eigenschaften der Datenbankrolle"")  
+ ![Eigenschaftenseite der Datenbankrolle](../../reporting-services/security/media/rsexecroledbproperties.gif "Database Role Properties page")  
   
 ## <a name="create-rsexecrole-in-msdb"></a>Erstellen der Rolle 'RSExecRole' in 'MSDB'  
  Reporting Services verwendet gespeicherte Prozeduren für den SQL Server-Agent-Dienst und ruft zur Unterstützung geplanter Vorgänge Auftragsinformationen ab. Die folgenden Schritte erklären, wie der Rolle RSExecRole Berechtigungen zum Ausführen der Prozeduren und zum Auswählen der Tabellen gewährt werden.  
@@ -193,11 +190,11 @@ ms.lasthandoff: 08/09/2017
 30. Wiederholen Sie diesen Schritt für die Tabelle sysjobs. Die Rolle RSExecRole muss Berechtigungen zum Auswählen beider Tabellen erhalten.  
   
 ## <a name="move-the-report-server-database"></a>Verlagern der Berichtsserver-Datenbank  
- Nachdem Sie die Rollen erstellt haben, können Sie die Berichtsserver-Datenbank auf eine andere SQL Server-Instanz verschieben. Weitere Informationen finden Sie unter [die Berichtsserver-Datenbanken auf einen anderen Computer verschieben](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
+ Nachdem Sie die Rollen erstellt haben, können Sie die Berichtsserver-Datenbank auf eine andere SQL Server-Instanz verschieben. Weitere Informationen finden Sie unter [Verschieben von Berichtsserver-Datenbanken auf andere Computer](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
- Wenn Sie ein Upgrade der [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu SQL Server 2016 aktualisieren vor oder nach dem Verschieben der Datenbank.  
+ Das Upgrade von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf SQL Server 2016 können Sie vor oder nach dem Verschieben der Datenbank durchführen.  
   
- Die Berichtsserver-Datenbank wird automatisch aktualisiert werden, wenn der Berichtsserver, eine Verbindung herstellt. Zum Aktualisieren der Datenbank müssen keine bestimmten Schritte ausgeführt werden.  
+ Die Berichtsserver-Datenbank wird automatisch upgegradet, wenn der Berichtsserver eine Verbindung mit der Datenbank herstellt. Zum Aktualisieren der Datenbank müssen keine bestimmten Schritte ausgeführt werden.  
   
 ## <a name="restore-encryption-keys-and-verify-your-work"></a>Wiederherstellen von Verschlüsselungsschlüsseln und Überprüfen der Arbeit  
  Nachdem die Berichtsserver-Datenbanken angefügt wurden, sollten Sie die folgenden Schritte ausführen können, um Ihre Implementierung zu überprüfen.  
@@ -212,7 +209,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  Sie können auch auf **Wählen Sie eine vorhandene Berichtsserver-Datenbank aus**klicken.  
   
-5.  Geben Sie den Servernamen des Datenbankmoduls ein. Wenn die Berichtsserver-Datenbanken mit einer benannten Instanz angefügt wurde, müssen Sie den Instanznamen im folgenden Format eingeben: \<Servername >\\< Instancename\>.  
+5.  Geben Sie den Servernamen des Datenbankmoduls ein. Wenn Sie die Berichtsserver-Datenbanken an eine benannte Instanz angefügt haben, müssen Sie den Instanznamen im folgenden Format eingeben: \<Servername>\\<Instanzname\>.  
   
 6.  Klicken Sie auf **Verbindung testen**.  
   
@@ -239,6 +236,6 @@ ms.lasthandoff: 08/09/2017
 [Verschieben von Berichtsserver-Datenbanken auf einen anderen Computer &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
 [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
 [Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
-[Sichern und Wiederherstellen von Reporting Services-Verschlüsselungsschlüsseln](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+[Verschlüsselungsschlüssel für SSRS: Sichern und Wiederherstellen von Verschlüsselungsschlüsseln](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

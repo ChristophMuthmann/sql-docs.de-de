@@ -1,14 +1,13 @@
 ---
-title: Technische Dokumentation zu SQL Server | Microsoft-Dokumentation
-ms.date: 10/02/2017
+title: SQL Server-Dokumentation | Microsoft-Dokumentation
+ms.date: 10/30/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.portal.f1
+f1_keywords: sql13.portal.f1
 helpviewer_keywords:
 - documentation [SQL Server], home page
 - Help [SQL Server]
@@ -18,46 +17,42 @@ helpviewer_keywords:
 - Books Online [SQL Server], home page
 - portal page [SQL Server]
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
-caps.latest.revision: 106
+caps.latest.revision: "106"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
+ms.workload: Active
+ms.openlocfilehash: 4e0f1f726de8ebde526376c213348a7a14597689
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 8898a815eac39966c1dd8ced8d6230e2cf8b4cac
-ms.contentlocale: de-de
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="sql-server-technical-documentation"></a>Technische Dokumentation zu SQL Server
+# <a name="sql-server-documentation"></a>SQL Server-Dokumentation
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
- > Weitere Informationen, die sich auf vorherige Versionen von SQL Server beziehen, finden Sie unter [Installation für SQL Server 2014](https://msdn.microsoft.com/en-US/library/bb500469(SQL.120).aspx).
+SQL Server ist ein zentraler Bestandteil der Microsoft-Datenplattform. SQL Server ist ein im Bereich Betriebsdatenbank-Management (Operational Database Management System, ODBMS) branchenführendes Produkt. In dieser Dokumentation finden Sie Hilfe zur Installation, Konfiguration und Verwendung von SQL Server. Die Inhalte umfassen End-to-End-Beispiele, Codebeispiele und Videos. Informationen zu SQL Server-Sprachthemen finden Sie in der [Sprachreferenz](../t-sql/language-reference.md).
 
-Dokumentation, die Sie beim Installieren, Konfigurieren und Verwenden von SQL Server unterstützt. Die Inhalte umfassen End-to-End-Beispiele, Codebeispiele und Videos. Informationen zu SQL Server-Sprachthemen finden Sie in der [Sprachreferenz](../t-sql/language-reference.md).
+|Neues  | Versionshinweise  |
+|---------|---------|
+|[Neues in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [Versionsanmerkungen zu SQL Server 2017](../sql-server/sql-server-2017-release-notes.md)        |
+|[Neues in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [Versionsanmerkungen zu SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)        |
+|[Neuigkeiten in SQL Server 2014](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)     | [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)        |
+   
+**Probieren Sie SQL Server aus!**
 
-**SQL Server 2017**
+|||
+|-|-|
+|[![Download aus dem Evaluierungscenter](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [SQL Server 2017 herunterladen](http://go.microsoft.com/fwlink/?LinkID=829477) | [![Download aus dem Evaluierungscenter](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) [SQL Server 2016 herunterladen](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) |
+|[![Erstellen eines virtuellen Computers](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Mit den virtuellen Computern von SQL Server loslegen](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) | [![Download aus dem Evaluierungscenter](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [ SQL Server Management Studio (SSMS) herunterladen](../ssms/download-sql-server-management-studio-ssms.md) |
+| [![Download aus dem Evaluierungscenter](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [ SQL Server Data Tools (SSDT) herunterladen](../ssdt/download-sql-server-data-tools-ssdt.md) | |
 
-- [Versionsanmerkungen zu SQL Server 2017](../sql-server/sql-server-2017-release-notes.md)
-- [Neues in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
-
-**SQL Server 2016**
-
-- [Versionsanmerkungen zu SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)
-- [Neues in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
-    
-**Probieren Sie SQL Server aus!**    
-- [![Download aus dem Evaluierungscenter](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [SQL Server 2017 herunterladen](http://go.microsoft.com/fwlink/?LinkID=829477)
-- [![Download aus dem Evaluierungscenter](../includes/media/download2.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) [SQL Server 2016 herunterladen](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
-- [![Erstellen von virtuellen Computern](../includes/media/azure-vm.png)](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Starten von virtuellen Computern mit SQL Server 2016 SP1 oder SQL Server 2017](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
-- [![Download aus dem Evaluierungscenter](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [ SQL Server Management Studio (SSMS) herunterladen](../ssms/download-sql-server-management-studio-ssms.md)
-- [![Download aus dem Evaluierungscenter](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [ SQL Server Data Tools (SSDT) herunterladen](../ssdt/download-sql-server-data-tools-ssdt.md)
     
 ## <a name="sql-server-technologies"></a>SQL Server-Technologien    
     
 |||    
 |-|-|    
-|![SQL-Datenbankmodul](../sql-server/media/sql-database-engine.png "SQL-Datenbankmodul")|**[Datenbankmodul](../database-engine/configure-windows/sql-server-database-engine.md)**<br /><br /> Das Datenbankmodul ist der Kerndienst zum Speichern, Verarbeiten und Sichern von Daten. Das Datenbankmodul stellt kontrollierten Zugriff und schnelle Transaktionsverarbeitung bereit. So können Sie auch hohe Anforderungen von Daten verarbeitenden Anwendungen in Ihrem Unternehmen zu erfüllen. Das Datenbankmodul stellt darüber hinaus vielfältige Unterstützung für die Aufrechterhaltung hoher Verfügbarkeit bereit.|
+|![SQL-Datenbankmodul](../sql-server/media/sql-database-engine.png "SQL-Datenbankmodul")|**[Datenbankmodul](../database-engine/configure-windows/sql-server-database-engine.md)**<br /><br /> Das Datenbankmodul ist der Kerndienst zum Speichern, Verarbeiten und Sichern von Daten. Das Datenbankmodul stellt kontrollierten Zugriff und schnelle Transaktionsverarbeitung bereit. So können Sie auch hohe Anforderungen von Daten verarbeitenden Anwendungen in Ihrem Unternehmen zu erfüllen. Das Datenbankmodul stellt darüber hinaus vielfältige Unterstützung für die Aufrechterhaltung von Hochverfügbarkeit bereit.|
 |![Integration Services](../sql-server/media/integration-services.png "Integration Services")|**[Integration Services](../integration-services/sql-server-integration-services.md)**<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ist eine Plattform für das Entwickeln von Hochleistungslösungen im Bereich Datenintegration, einschließlich Paketen zum Extrahieren, Transformieren und Laden (ETL) von Daten für den Data Warehouse-Betrieb.|    
 |![Analysis Services](../sql-server/media/analysis-services.png "Analysis Services")|**[Analysis Services](../analysis-services/analysis-services.md)**<br /><br /> [!INCLUDE[ssASnoversion_md](../includes/ssasnoversion-md.md)] ist eine Plattform für analytische Daten und ein Business Intelligence-Toolset für Einzelpersonen, Teams und Unternehmen. Server- und Clientdesigner unterstützen herkömmliche OLAP-Lösungen, neue Tabellenmodellierungslösungen sowie Self-Service-Funktionen für die Analyse und Zusammenarbeit mit [!INCLUDE[ssGemini](../includes/ssgemini-md.md)], Excel und einer SharePoint Server-Umgebung. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ermöglicht zudem Data Mining, damit Sie die Muster und Beziehungen erkennen können, die in großen Datenvolumen versteckt sind.|    
 |![Reporting Services](../sql-server/media/reporting-services.png "Reporting Services")|**[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)**<br /><br /> Reporting Services bietet webbasierte Berichtfunktionen für Unternehmen.  Sie können Berichte zu Inhalten aus einer Vielzahl von Datenquellen erstellen, Berichte in verschiedenen Formaten veröffentlichen und Abonnements und Sicherheit zentral verwalten.|
@@ -68,25 +63,20 @@ Dokumentation, die Sie beim Installieren, Konfigurieren und Verwenden von SQL Se
 
 ## <a name="migrate-and-move-data"></a>Migrieren und Verlagern von Daten
 - [Importieren und Exportieren von Daten mit dem SQL Server-Import/Export-Assistenten](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
-- [Microsoft Data Migration Assistant](https://www.microsoft.com/en-us/download/details.aspx?id=53595)
-- [Migrieren Ihrer SQL Server-Datenbank zu Azure SQL-Datenbank](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-migrate-your-sql-server-database)
+- [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)
+- [Migrieren Ihrer SQL Server-Datenbank zu Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 
 ## <a name="earlier-sql-server-versions"></a>Frühere SQL Server-Versionen
-- [Onlinedokumentation für SQL Server 2014](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
-- [Installieren von SQL Server 2014 Express und anderen älteren Versionen von SQL Server](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx). (**Vielen Dank an [Scott Hanselman](http://www.hanselman.com/) für das Sammeln aller Installer-Paketlinks an einem Ort!**)  
-- [Technische Dokumentation zu SQL Server 2012](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)  
-- [SQL Server 2008 R2-Produktdokumentation](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)  
-- [Technische Dokumentation zu SQL Server 2008](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx) 
+- [SQL Server-Update Center – Links und Informationen zu allen unterstützten Versionen](https://msdn.microsoft.com/library/ff803383.aspx)
+- [Dokumentation zu SQL Server 2014](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
+- [Dokumentation zu SQL Server 2012](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)  
+- [Dokumentation zu SQL Server 2008 R2](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)  
+- [Dokumentation zu SQL Server 2008](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx) 
 - [Archivierte Dokumentation zu SQL Server 2005](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)    
 
 ## <a name="samples"></a>Beispiele  
 - [Beispieldatenbank von Wide World Importers](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)  
-- [AdventureWorks-Beispieldatenbanken und Skripts für SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=49502) 
+- [AdventureWorks-Beispieldatenbanken und Skripts für SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=49502) 
 - [SQL Server-Beispiele bei GitHub](https://github.com/Microsoft/sql-server-samples) 
    
- ## <a name="more-information"></a>Weitere Informationen   
-+ Informationen zur Offlineanzeige der SQL Server-Dokumentation finden Sie unter [Help Viewer und Offlineinhalt für SQL Server](sql-server-help-installation.md).
-+ [SQL Server-Konfigurations-Manager](../relational-databases/sql-server-configuration-manager.md)
-+ [SQL Server-Update Center – Links und Informationen zu allen unterstützten Versionen](https://msdn.microsoft.com/library/ff803383.aspx)
-
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

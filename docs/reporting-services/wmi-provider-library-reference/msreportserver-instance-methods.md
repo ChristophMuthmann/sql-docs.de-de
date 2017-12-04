@@ -1,5 +1,5 @@
 ---
-title: MSReportServer_Instance-Methoden | Microsoft Docs
+title: MSReportServer_Instance-Methoden | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/09/2016
 ms.prod: sql-server-2016
@@ -10,25 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- MSReportServer_Instance Methods
-apilocation:
-- reportingservices.mof
+apiname: MSReportServer_Instance Methods
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- MSReportServer_Instance class
+helpviewer_keywords: MSReportServer_Instance class
 ms.assetid: ed079327-0bb0-4245-adb5-e46a90cf3586
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 74f994f44f450bf607e8f5bf5cb7864df7be58a3
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 842b91176450516c49fc49e6cc85e06e03053336
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="msreportserverinstance-methods"></a>MSReportServer_Instance-Methoden
   Die MSReportServer_Instance-Klasse stellt grundlegende Informationen bereit, die ein Client benötigt, um eine Verbindung mit einem installierten Berichtsserver herzustellen.  
@@ -43,4 +39,3 @@ ms.lasthandoff: 08/09/2017
  [MSReportServer_Instance-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   
-

@@ -1,27 +1,24 @@
 ---
-title: "Vorbereiten von Daten für mobile Reporting Services-Berichte | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+title: "Vorbereiten von Daten für mobile Berichte von Reporting Services | Microsoft-Dokumentation"
+ms.custom: SQL2016_New_Updated
 ms.date: 02/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bfde173f8848326fba857808e15448385f8c8322
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5117c3860311eac93b86b51a71f07333155a04da
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>Vorbereiten von Daten für mobile Berichte von Reporting Services
   
@@ -96,5 +93,4 @@ In dieser Tabelle werden die ParentKey-Elemente zunächst in der ItemKey-Spalte 
   
   
   
-
 

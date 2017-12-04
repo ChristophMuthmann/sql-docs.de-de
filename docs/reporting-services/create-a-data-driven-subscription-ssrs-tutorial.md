@@ -1,31 +1,29 @@
 ---
-title: Erstellen ein datengesteuerten Abonnements (SSRS-Lernprogramm) | Microsoft Docs
+title: Erstellen eines datengesteuerten Abonnements (SSRS-Tutorial) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 helpviewer_keywords:
 - subscriptions [Reporting Services], tutorials
 - walkthroughs [Reporting Services]
 - data-driven subscriptions
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 4af396aaffe116ff7000c2c787c31f775742a485
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7ca542c75d289b79284c5affeea5095ac032e1e0
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Erstellen eines datengesteuerten Abonnements (SSRS-Lernprogramm)
 In diesem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Tutorial lernen Sie die Konzepte von datengesteuerten Abonnements kennen, indem Sie durch ein einfaches Beispiel geführt werden, mit dem ein datengesteuertes Abonnement erstellt wird, das zum Generieren und Speichern einer gefilterten Berichtsausgabe in eine Dateifreigabe verwendet wird. 
@@ -84,5 +82,4 @@ Auf Ihrem Computer müssen für die Verwendung dieses Lernprogramms folgende Anw
 [Data-Driven Subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  
 [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
  
-
 

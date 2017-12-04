@@ -1,26 +1,24 @@
 ---
-title: "Navigatoren mobile Reporting Services-Berichte hinzufügen | Microsoft Docs"
+title: "Hinzufügen von Navigatoren zu mobilen Reporting Services-Berichten | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 753cb1a6bc95c854d8a9457f6dc8a70867f2a6bd
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 712a4e62ebee6d175b5e9945d74a06d32f2cb324
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-navigators-to-reporting-services-mobile-reports"></a>Hinzufügen von Navigationen zu mobilen Reporting Services-Berichten
 In [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]fügen Sie *Navigationen* hinzu, um die Daten in Visualisierungen nach Zeit oder nach Auswahl zu filtern. 
@@ -38,7 +36,7 @@ Die Navigationen ähneln Slicern in Power BI und Excel-PivotTables, haben aber a
 Wie der Name schon sagt, wird der Zeitnavigationsfilter verwendet, um einen Datenbereich in einem bestimmten Zeitraum auszuwählen.   
   
 ![SSMRP_TimeNav](../../reporting-services/mobile-reports/media/ssmrp-timenav.png)  
-*Auf der linken Seite der vier Liniendiagramme werden in der Zeit Bereich Voreinstellungen festgelegt. Das Liniendiagramm auf der rechten Seite ist der Filter.*  
+*Die vier Liniendiagramme auf der linken Seite werden in Voreingestellte Zeitbereiche festgelegt. Das Liniendiagramm auf der rechten Seite ist der Filter.*  
   
 Beim Anzeigen des Berichts in der Vorschau oder im [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Webportal ziehen Sie die Pfeile in der Zeitnavigation, um den Rest des Berichts zu filtern.  
   
@@ -132,4 +130,3 @@ Filter können auch kaskadiert werden, sodass der ausgewählte Wert eines Filter
 * [Visualisierungen in mobilen Reporting Services-Berichten](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 * [Messgeräte in mobilen Reporting Services-Berichten](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
 * [Datenraster in mobilen Reporting Services-Berichten](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)  
-

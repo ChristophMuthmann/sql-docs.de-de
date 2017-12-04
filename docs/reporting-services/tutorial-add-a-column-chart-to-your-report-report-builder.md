@@ -1,28 +1,25 @@
 ---
-title: "Lernprogramm: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator) | Microsoft Docs"
+title: "Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 09/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c231648deb4920a3e36a594271d1c9c199313668
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b1768cbe53155ec37c5f6dd690542b90e22a59cd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)
 In diesem Tutorial erstellen Sie einen paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht mit einem Säulendiagramm, das eine Datenreihe in Form mehrerer nach Kategorie gruppierter Säulen erstellt. 
@@ -37,7 +34,7 @@ In der folgenden Abbildung sehen Sie das zu erstellende Säulendiagramm mit eine
   
 ![report-builder-column-chart-tutorial](../reporting-services/media/report-builder-column-chart-tutorial.png)    
 > [!NOTE]  
-> In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle sowie zum Erstellen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle sowie zum Erstellen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Geschätzte Zeit zum Bearbeiten dieses Tutorials: 15 Minuten.  
   
@@ -67,7 +64,7 @@ In diesem Abschnitt verwenden Sie den Diagramm-Assistenten, um ein eingebettetes
 5.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine vorhandene Datenquelle aus, oder navigieren Sie zum Berichtsserver, und wählen Sie eine Datenquelle aus. Klicken Sie anschließend auf **Weiter**. Möglicherweise müssen Benutzername und Kennwort eingegeben werden.  
   
     > [!NOTE]  
-    > Welche Datenquelle Sie auswählen, ist unwichtig, solange Sie über ausreichende Berechtigungen verfügen. Aus der Datenquelle werden keine Daten abgerufen. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung &#40;Berichts-Generator&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > Welche Datenquelle Sie auswählen, ist unwichtig, solange Sie über ausreichende Berechtigungen verfügen. Aus der Datenquelle werden keine Daten abgerufen. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 6.  Klicken Sie auf der Seite **Abfrage entwerfen** auf **Als Text bearbeiten**.  
   
@@ -130,7 +127,7 @@ Standardmäßig werden die Werte auf der horizontalen Achse in einem allgemeinen
   
 2.  Klicken Sie mit der rechten Maustaste auf die horizontale Achse und anschließend auf **Eigenschaften für horizontale Achsen**.  
   
-3.  Klicken Sie auf **Nummer**, und wählen Sie unter **Kategorie** die Option **Datum** aus.  
+3.  Klicken Sie auf **Nummer** , und wählen Sie unter **Kategorie**die Option **Datum**aus.  
   
 5.  Wählen Sie im Feld **Typ** die Option **31. Jan. 2000**aus.  
   
@@ -152,7 +149,7 @@ Sie können die Bezeichnungsanzeige anpassen, indem Sie die Bezeichnungen drehen
   
 3.  Klicken Sie mit der rechten Maustaste auf die horizontale Achse und anschließend auf **Eigenschaften für horizontale Achsen**.  
   
-5.  Wählen Sie auf der Registerkarte **Bezeichnungen** unter **Optionen für automatische Anpassung von Achsenbezeichnungen ändern** **Automatische Anpassung deaktivieren** aus.  
+5.  Wählen Sie auf der Registerkarte **Bezeichnungen** unter **Optionen für automatische Anpassung von Achsenbezeichnungen ändern** **Automatische Anpassung deaktivieren**aus.  
   
 7.  Wählen Sie in **Drehwinkel für Bezeichnungen**den Wert **-90**aus.  
   
@@ -175,7 +172,7 @@ Die Legende wird automatisch auf Basis der Kategorie- und Reihendaten erstellt. 
   
 2.  Klicken Sie mit der rechten Maustaste auf die Legende des Diagramms und anschließend auf **Legendeneigenschaften**.  
   
-3.  Wählen Sie unter **Layout und Position** eine andere Position aus. Wählen Sie z.B. die Option unten in der Mitte aus.  
+3.  Wählen Sie unter **Layout und Position**eine andere Position aus. Wählen Sie z.B. die Option unten in der Mitte aus.  
   
     Wenn Sie die Legende über oder unter einem Diagramm platzieren, ändert sich das Layout der Legende von vertikal zu horizontal. Im Feld **Layout** können Sie ein anderes Layout auswählen.  
   
@@ -202,7 +199,7 @@ Standardmäßig werden die Werte auf der vertikalen Achse in einem allgemeinen F
   
 3.  Klicken Sie auf der Registerkarte **Stamm** unter **Zahl** auf die Schaltfläche **Währung**. Die Achsenbezeichnungen werden nun im Währungsformat dargestellt.  
   
-4.  Klicken Sie zweimal auf die Schaltfläche **Dezimalstellen verringern**, damit die Zahl auf einen vollständigen Dollarbetrag gerundet wird.  
+4.  Klicken Sie zweimal auf die Schaltfläche **Dezimalstellen verringern** , damit die Zahl auf einen vollständigen Dollarbetrag gerundet wird.  
   
 5.  Klicken Sie mit der rechten Maustaste auf die vertikale Achse und anschließend auf **Eigenschaften für vertikale Achsen**.  
   
@@ -224,7 +221,7 @@ Standardmäßig werden die Werte auf der vertikalen Achse in einem allgemeinen F
 
     ![Berichts-Generator-Säulendiagramm-Format-Y-Achse](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
     
-## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8. Anzeigen aller Bezeichnungen auf der horizontalen Achse (X-Achse)
+## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8. Anzeigen aller Bezeichnungen auf der horizontalen Achse (x-Achse)
 
 Sie sehen, dass nur einige der Bezeichnungen auf der X-Achse angezeigt werden. In diesem Abschnitt legen Sie eine Eigenschaft im Bereich „Eigenschaften“ fest, damit alle Bezeichnungen angezeigt werden.
 
@@ -284,7 +281,7 @@ Im Diagramm wird eine Linie angezeigt, die den gleitenden Durchschnitt für den 
   
 4.  Wählen Sie **Umsatzdiagramm** aus, und wählen Sie auf der Registerkarte **Stamm** im Abschnitt **Schriftart** die Einstellung **Fett** aus.  
   
-5.  Wählen Sie **Januar bis Dezember 2015** aus, und wählen Sie auf der Registerkarte **Stamm** im Abschnitt **Schriftart** den Schriftgrad **10** aus.  
+5.  Klicken Sie auf **January to December 2015** (Januar bis Dezember 2015), und wählen Sie auf der Registerkarte **Stamm** im Abschnitt **Schriftart** den Schriftgrad **10** aus.  
   
 6.  (Optional) Das Textfeld **Titel** muss ggf. vergrößert werden, damit die beiden Textzeilen hineinpassen. Ziehen Sie den Pfeil mit den zwei Spitzen nach unten, wenn Sie in die Mitte des unteren Rands klicken. Sie müssen möglicherweise auch den oberen Rand der Tabelle verschieben, sodass der Titel nicht überlappt wird.  
   
@@ -307,11 +304,10 @@ Im Diagramm wird eine Linie angezeigt, die den gleitenden Durchschnitt für den 
 4.  Klicken Sie auf **Speichern**.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
-Sie haben das Lernprogramm "Hinzufügen eines Säulendiagramms zu einem Bericht" erfolgreich abgeschlossen. Weitere Informationen zu Diagrammen finden Sie unter [Diagramme &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) und [Sparklines und Datenbalken &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+Sie haben das Lernprogramm "Hinzufügen eines Säulendiagramms zu einem Bericht" erfolgreich abgeschlossen. Weitere Informationen zu Diagrammen finden Sie unter [Diagramme (Berichts-Generator und SSRS)](../reporting-services/report-design/charts-report-builder-and-ssrs.md) und [Sparklines und Datenbalken (Berichts-Generator und SSRS)](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Siehe auch  
 -    [Tutorials (Berichts-Generator)](../reporting-services/report-builder-tutorials.md) 
 -    [Berichts-Generator in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

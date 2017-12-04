@@ -1,5 +1,5 @@
 ---
-title: Planen eines Berichts (Berichts-Generator) | Microsoft Docs
+title: Planen eines Berichts (Berichts-Generator) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - getting started
 - report design
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fa6837d82c145d2bb079013238dd67332e512cc6
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3d055e667ad01ff047e38aa3588205c84ad8d231
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="planning-a-report-report-builder"></a>Planen eines Berichts (Berichts-Generator)
   Mit dem Berichts-Generator können viele Arten von paginierten Berichten erstellt werden. Sie können beispielsweise Berichte erstellen, die zusammenfassende oder detaillierte Umsatzdaten, Marketing- und Umsatztrends sowie Betriebsberichte oder Dashboards enthalten. Sie können auch Berichte erstellen, die umfassend formatierten Text nutzen, beispielsweise für Bestellungen, Produktkataloge oder Serienbriefe. All diese Berichte werden mit unterschiedlichen Kombinationen derselben grundlegenden Bausteine im Berichts-Generator erstellt. Das Erstellen eines sinnvollen, verständlichen Berichts erfordert zunächst eine sorgfältige Planung. Bevor Sie beginnen, sollten Sie Folgendes beachten:  
@@ -41,7 +40,7 @@ ms.lasthandoff: 08/09/2017
   
      Der Berichts-Generator stellt eine Vielzahl von Berichtselementen bereit, die Sie dem Bericht hinzufügen können, um seine Lesbarkeit zu verbessern, wichtige Informationen hervorzuheben, die Navigation im Bericht für die Zielgruppe zu vereinfachen usw. Wenn Sie wissen, wie der Bericht aussehen soll, können Sie bestimmen, ob Berichtselemente, wie Textfelder, Rechtecke, Bilder und Linien, erforderlich sind. Möglicherweise sollen auch Elemente angezeigt oder ausgeblendet werden, soll eine Dokumentstruktur hinzugefügt, sollen Drillthroughberichte oder Unterberichte aufgenommen oder Links zu anderen Berichten erstellt werden. Weitere Informationen finden Sie unter [Bilder, Textfelder, Rechtecke und Linien &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md) und [Interaktive Sortierung, Dokumentstrukturen und Links &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md).  
   
--   **Welche Daten sollen die Leser sehen? Sollen die Daten oder das Format für unterschiedliche Zielgruppen werden gefiltert?**  
+-   **Welche Daten sollen die Leser sehen? Sollen die Daten oder das Format für unterschiedliche Zielgruppen gefiltert werden?**  
   
      Sie können den Geltungsbereich des Berichts auf bestimmte Benutzer oder Speicherorte bzw. auf einen bestimmten Zeitraum eingrenzen. Zum Filtern der Berichtsdaten verwenden Sie Parameter, um nur die gewünschten Daten abzurufen und anzuzeigen. Weitere Informationen finden Sie unter [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
@@ -59,8 +58,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Berichts-Generator in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Berichtsserver-Authoring Konzepte &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Berichterstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Lernprogramme für den Berichts-Generator](../../reporting-services/report-builder-tutorials.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus | Microsoft Docs"
+title: "Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -23,23 +23,22 @@ helpviewer_keywords:
 - role-based security [Reporting Services], about role-based security
 - security [Reporting Services], role-based
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e587f50e041d42bb09d99fa03d4146216883fce6
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 254e3311ee8f54ab80a722ca753de9c99d376b57
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bestimmt mithilfe der rollenbasierten Autorisierung und eines Authentifizierungssubsystems, wer Vorgänge ausführen und auf Elemente auf einem Berichtsserver zugreifen kann. Die rollenbasierte Autorisierung teilt die Aktionen, die ein Benutzer oder eine Gruppe ausführen kann, in Rollen ein. Die Authentifizierung basiert auf der integrierten Windows-Authentifizierung oder auf einem von Ihnen bereitgestellten benutzerdefinierten Authentifizierungsmodul. Bei beiden Authentifizierungstypen können vordefinierte oder benutzerdefinierte Rollen verwendet werden.  
   
 ## <a name="using-roles-to-grant-report-server-access"></a>Verwenden von Rollen zum Gewähren des Zugriffs auf einen Berichtsserver  
- Alle Benutzer interagieren mit einem Berichtsserver im Rahme ihrer Rolle, die eine bestimmte Ebene des Zugriffs definiert. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]enthält vordefinierte Rollen, die Sie für Benutzer und Gruppen zuweisen können, um unmittelbaren Zugriff auf einem Berichtsserver bereitzustellen. Vordefinierte Rollen sind z.B.**Inhalts-Manager**, **Verleger**und **Browser** . Jede Rolle definiert eine Auflistung verwandter Aufgaben. Zum Beispiel ist ein **Verleger** berechtigt, Berichte hinzuzufügen und Ordner zum Speichern dieser Berichte zu erstellen.  
+ Alle Benutzer interagieren mit einem Berichtsserver im Rahme ihrer Rolle, die eine bestimmte Ebene des Zugriffs definiert. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält vordefinierte Rollen, die Sie Benutzern und Gruppen zuweisen können, um unmittelbaren Zugriff auf einen Berichtsserver bereitzustellen. Vordefinierte Rollen sind z.B.**Inhalts-Manager**, **Verleger**und **Browser** . Jede Rolle definiert eine Auflistung verwandter Aufgaben. Zum Beispiel ist ein **Verleger** berechtigt, Berichte hinzuzufügen und Ordner zum Speichern dieser Berichte zu erstellen.  
   
  Rollenzuweisungen werden i. d. R. von einem übergeordneten Knoten geerbt, allerdings können Sie die Vererbung von Berechtigungen unterbrechen, indem Sie für ein bestimmtes Element eine neue Rollenzuweisung erstellen. Ein Benutzer, der für einen Bericht Mitglied der **Inhalts-Manager** -Rolle ist, kann für einen anderen Bericht Mitglied der **Browser** -Rolle sein.  
   
@@ -73,16 +72,15 @@ ms.lasthandoff: 08/09/2017
   
 |Tool|Aufgaben|  
 |----------|-----------|  
-|Management Studio - zum Anzeigen, Ändern, Erstellen und Löschen von Rollendefinitionen|[Erstellen Sie, löschen Sie oder ändern Sie einer Rolle &#40; Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
-|Berichts-Manager - zum Zuweisen von Benutzern und Gruppen zu Rollen|[Gewähren von Benutzerzugriff auf einen Berichtsserver &#40; Berichts-Manager &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> [Ändern Sie oder löschen Sie einer Rollenzuweisung &#40; Berichts-Manager &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
+|Management Studio - zum Anzeigen, Ändern, Erstellen und Löschen von Rollendefinitionen|[Erstellen, Löschen oder Ändern einer Rolle &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
+|Berichts-Manager - zum Zuweisen von Benutzern und Gruppen zu Rollen|[Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> [Ändern oder Löschen einer Rollenzuweisung &#40;Berichts-Manager&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Vordefinierte Rollen](../../reporting-services/security/role-definitions-predefined-roles.md)   
  [Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Authentifizierung mit dem Berichtsserver](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Erstellen und Verwalten von Rollenzuweisungen](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [Reporting Services-Sicherheit und Schutz](../../reporting-services/security/reporting-services-security-and-protection.md)   
- [Berichtsinhaltsverwaltung für Server &#40; SSRS im einheitlichen Modus &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
+ [Sicherheit und Schutz für Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md)   
+ [Berichtsserver Content Management (einheitlicher SSRS-Modus)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   
   
-

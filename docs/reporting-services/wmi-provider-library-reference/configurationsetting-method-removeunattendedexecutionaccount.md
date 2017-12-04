@@ -1,5 +1,5 @@
 ---
-title: ConfigurationSetting Methode - RemoveUnattendedExecutionAccount | Microsoft Docs
+title: 'ConfigurationSetting-Methode: RemoveUnattendedExecutionAccount | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- RemoveUnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: RemoveUnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- RemoveUnattendedExecutionAccount method
+helpviewer_keywords: RemoveUnattendedExecutionAccount method
 ms.assetid: 77e371c1-7c26-44f9-9119-7c8dc838db32
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 0fe9aea2c90f994932aa726bc4c89412bfabd595
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a06f158cae56f9890af2efb59c9c0077efc247a2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---removeunattendedexecutionaccount"></a>ConfigurationSetting Methode - RemoveUnattendedExecutionAccount
+# <a name="configurationsetting-method---removeunattendedexecutionaccount"></a>ConfigurationSetting Method – RemoveUnattendedExecutionAccount (ConfigurationSetting-Methode: RemoveUnattendedExecutionAccount)
   Löscht den Eintrag für das Konto für die unbeaufsichtigte Ausführung aus der Berichtsserver-Konfigurationsdatei  
   
 ## <a name="syntax"></a>Syntax  
@@ -57,4 +53,3 @@ public void RemoveUnattendedExecutionAccount (out Int32 HRESULT);
  [MSReportServer_ConfigurationSetting-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

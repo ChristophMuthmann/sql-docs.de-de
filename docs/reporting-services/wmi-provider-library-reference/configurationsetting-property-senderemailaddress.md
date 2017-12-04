@@ -1,5 +1,5 @@
 ---
-title: 'SenderEmailAddress-Eigenschaft (WMI: MSReportServer_ConfigurationSetting) | Microsoft Docs'
+title: 'SenderEmailAddress-Eigenschaft (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SenderEmailAddress
-apilocation:
-- reportingservices.mof
+apiname: SenderEmailAddress
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- SenderEmailAddress property
+helpviewer_keywords: SenderEmailAddress property
 ms.assetid: 087de0ab-6505-48c6-80f3-bd493f76282d
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3a84aa4e943eaa4cbc20dc2309ab41d32db19207
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6c165c5ea53ae8d3014417c97abcce0fc495d17e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-property---senderemailaddress"></a>ConfigurationSetting Eigenschaft - SenderEmailAddress
+# <a name="configurationsetting-property---senderemailaddress"></a>ConfigurationSetting-Eigenschaft: SenderEmailAddress
   Ruft die Adresse ab, die verwendet wird, um E-Mails vom Berichtsserver zu senden. Schreibgeschützt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -56,4 +52,3 @@ public string SenderEmailAddress;
  [MSReportServer_ConfigurationSetting-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

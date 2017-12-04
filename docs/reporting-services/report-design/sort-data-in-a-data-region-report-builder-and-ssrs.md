@@ -1,5 +1,5 @@
 ---
-title: Sortieren von Daten in einem Datenbereich (Berichts-Generator und SSRS) | Microsoft Docs
+title: Sortieren von Daten in einem Datenbereich (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 01fdabcd4005e5b3b15e6c2656daed1cff499211
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1bd8061755f4dbacdf16106ecca5e7a22b1101e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>Sortieren von Daten in einem Datenbereich (Berichts-Generator und SSRS)
   Wenn Sie bei der erstmaligen Ausführung eines Berichts die Sortierreihenfolge für Daten in einem Datenbereich ändern möchten, müssen Sie den Sortierungsausdruck für den Datenbereich oder die Datengruppe festlegen. Die Sortierungsausdruck für eine Gruppe wird automatisch auf den gleichen Wert wie der Gruppierungsausdruck festgelegt.  
@@ -125,17 +124,16 @@ ms.lasthandoff: 08/09/2017
   
     2.  Wählen Sie den Ausdruck aus, der mit dem Gruppierungsfeld übereinstimmt. Sie können den Ausdruck für das Gruppierungsfeld überprüfen, indem Sie auf **Gruppierung**klicken.  
   
-    3.  Wählen Sie in der Dropdownliste der Spalte **Reihenfolge** die Sortierreihenfolge für die einzelnen Ausdrücke aus. Bei Auswahl von**A-Z** sortiert der Ausdruck in aufsteigender Reihenfolge. Bei Auswahl von **Z-A** sortiert der Ausdruck in absteigender Reihenfolge.  
+    3.  Wählen Sie in der Dropdownliste der Spalte **Reihenfolge** die Sortierreihenfolge für die einzelnen Ausdrücke aus. Bei Auswahl von**A-Z** sortiert der Ausdruck in aufsteigender Reihenfolge. Bei Auswahl von**Z-A** sortiert der Ausdruck in absteigender Reihenfolge.  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
- Weitere Informationen zur Gruppierung von Daten auf einem Messgerät finden Sie unter [Messgeräte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
+ Weitere Informationen zur Gruppierung von Daten auf einem Messgerät finden Sie unter [Messgeräte (Berichts-Generator und SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hilfe zu Dialogfeldern, Bereichen und Assistenten in Berichts-Generator](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
- [Diagramme &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Formatieren von Achsenbezeichnungen in einem Diagramm &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Geben Sie konsistente Farben für mehrere Formdiagramme &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  
+ [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Angeben von Farben, die für mehrere Formdiagramme konsistent sind &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  
   
   
-

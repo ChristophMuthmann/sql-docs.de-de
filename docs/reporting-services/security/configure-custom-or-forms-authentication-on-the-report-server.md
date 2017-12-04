@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von benutzerdefinierten oder Formularauthentifizierung auf dem Berichtsserver | Microsoft Docs
+title: Konfigurieren der benutzerdefinierten oder Formularauthentifizierung auf dem Berichtsserver | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 04/18/2017
 ms.prod: sql-server-2016
@@ -14,16 +14,15 @@ helpviewer_keywords:
 - Forms authentication, configuring
 - custom authentication [Reporting Services]
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 325b7d6f1015b6e5e81565df37d1c02d20e5802f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>Konfiguration der benutzerdefinierten oder Formularauthentifizierung auf dem Berichtsserver
 
@@ -34,7 +33,7 @@ In der Praxis erfordert das Bereitstellen einer benutzerdefinierten Authentifizi
 > [!NOTE]
 >  Zum Erstellen einer benutzerdefinierten Authentifizierungserweiterung sind benutzerdefinierter Code und Kenntnisse der [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] -Sicherheit erforderlich. Wenn Sie keine benutzerdefinierte Authentifizierungserweiterung erstellen möchten, können Sie [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory-Gruppen und -Konten verwenden, aber Sie sollten den Rahmen einer Berichtsserverbereitstellung deutlich verringern. Weitere Informationen zur benutzerdefinierten Authentifizierung finden Sie unter [Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md).
 
-Darüber hinaus sollten Sie Formularauthentifizierung oder eine benutzerdefinierte authentifizierungserweiterung in einer SQL Server Reporting Services-Umgebung verwenden, die mit einem SharePoint-Produkt integriert ist, müssen Sie konfigurieren die SharePoint-Website für die Verwendung der Authentifizierungsmethode, die Sie auswählen. Weitere Informationen über das Konfigurieren der Authentifizierung in SharePoint finden Sie unter [Authentication Samples](http://go.microsoft.com/fwlink/?LinkId=115575) im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Developer Network (MSDN).
+Wenn Sie eine Formular- oder benutzerdefinierte Authentifizierungserweiterung in einer SQL Server Reporting Services-Umgebung verwenden möchten, die mit einem SharePoint-Produkt integriert ist, müssen Sie die SharePoint-Website für die Verwendung der von Ihnen gewählten Authentifizierungsmethode konfigurieren. Weitere Informationen über das Konfigurieren der Authentifizierung in SharePoint finden Sie unter [Authentication Samples](http://go.microsoft.com/fwlink/?LinkId=115575) im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Developer Network (MSDN).
 
 
 
@@ -42,7 +41,7 @@ Darüber hinaus sollten Sie Formularauthentifizierung oder eine benutzerdefinier
 
 1.  Öffnen Sie RSReportServer.config in einem Text-Editor.
 
-2.  Suchen \< **Authentifizierung**>.
+2.  Suchen Sie nach \<**Authentifizierung**>.
 
 3.  Kopieren Sie die folgende XML-Struktur:
 
@@ -55,7 +54,7 @@ Darüber hinaus sollten Sie Formularauthentifizierung oder eine benutzerdefinier
     </Authentication>
     ```
 
-4.  Fügen Sie ihn über die vorhandenen Einträge für \< **Authentifizierung**>.
+4.  Ersetzen Sie damit die vorhandenen Einträge für <\<**Authentifizierung**>.
 
      Beachten Sie, dass Sie **Custom** nicht mit anderen Authentifizierungstypen verwenden können.
 
@@ -74,7 +73,7 @@ Darüber hinaus sollten Sie Formularauthentifizierung oder eine benutzerdefinier
     ```
     <identity impersonate = "false" />  
     ```
-9. Fügen Sie der Konfigurationsdatei die Elementstruktur **PassThroughCookies** hinzu. Weitere Informationen finden Sie unter [im Web-Portal zum Übergeben von benutzerdefinierten Authentifizierungscookies konfigurieren](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
+9. Fügen Sie der Konfigurationsdatei die Elementstruktur **PassThroughCookies** hinzu. Weitere Informationen finden Sie unter [Konfigurieren des Webportals für die Übergabe von benutzerdefinierten Authentifizierungscookies](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md).
   
 10. Speichern Sie die Datei.  
   
@@ -85,9 +84,9 @@ Darüber hinaus sollten Sie Formularauthentifizierung oder eine benutzerdefinier
 ## <a name="see-also"></a>Siehe auch
 
 [Implementieren von Sicherheitserweiterungen](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
-[Reporting Services benutzerdefinierte Sicherheitsrolle Beispiel (GitHub)](https://github.com/Microsoft/Reporting-Services/tree/master/CustomSecuritySample)  
+[Benutzerdefiniertes Reporting Services-Sicherheitsbeispiel (GitHub)](https://github.com/Microsoft/Reporting-Services/tree/master/CustomSecuritySample)  
 [Authentifizierung mit dem Berichtsserver](../../reporting-services/security/authentication-with-the-report-server.md)   
 [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Konfigurieren der Standardauthentifizierung auf dem Berichtsserver](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
-[Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
-Weiteren Fragen wenden? [Wiederholen Sie den Reporting Services-forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+[Configure Windows Authentication on the Report Server (Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver)](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
+Haben Sie dazu Fragen? [Besuchen Sie das Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

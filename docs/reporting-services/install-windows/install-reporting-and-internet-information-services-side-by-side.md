@@ -1,37 +1,33 @@
 ---
-title: Installieren Sie Reporting und Internetinformation Services-Seite-an-Seite | Microsoft Docs
+title: Gleichzeitiges Installieren von Reporting Services und Internetinformationsdiensten | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- deploying [Reporting Services], IIS
+helpviewer_keywords: deploying [Reporting Services], IIS
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: f7e12ebcec8e06828430e10c377205e2421f50f4
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2d45e32e12a3f9a4e87afd6557a9c292ea1a26b1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-
-# <a name="install-reporting-and-internet-information-services-side-by-side"></a>Installieren Sie Reporting und Internetinformation Services-Seite-an-Seite
+# <a name="install-reporting-and-internet-information-services-side-by-side"></a>Gleichzeitiges Installieren von Reporting Services und Internetinformationsdiensten
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-Sie können installieren und Ausführen von SQL Server Reporting Services (SSRS) und Internet Information Services (IIS) auf demselben Computer. Je nach IIS-Version treten bestimmte Interoperabilitätsprobleme auf.  
+Sie können SQL Server Reporting Services (SSRS) und die Internetinformationsdienste (IIS) auf dem gleichen Computer installieren und ausführen. Je nach IIS-Version treten bestimmte Interoperabilitätsprobleme auf.  
   
 |IIS-Version|Probleme|Beschreibung|  
 |-----------------|------------|-----------------|  
@@ -50,32 +46,32 @@ Sie können installieren und Ausführen von SQL Server Reporting Services (SSRS)
   
 |Beispiel|Anforderung|  
 |-------------|-------------|  
-|`http://123.234.345.456:80/reports`|Empfängt alle Anforderungen, die an gesendet werden `http://123.234.345.456/reports` oder `http://\<computername>/reports` Wenn ein Domain Name Service die IP-Adresse in diesen Hostnamen auflösen kann.|  
+|`http://123.234.345.456:80/reports`|Empfängt alle Anforderungen, die an `http://123.234.345.456/reports` oder `http://\<computername>/reports` gesendet werden, wenn ein Domain Name Service die IP-Adresse in diesen Hostnamen auflösen kann.|  
 |`http://+:80/reports`|Empfängt alle Anforderungen, die an eine IP-Adresse oder einen Hostnamen gesendet werden, die bzw. der gültig für diesen Computer ist, sofern die URL den Namen des virtuellen Verzeichnisses "reports" enthält.|  
-|`http://123.234.345.456:80`|Empfängt alle Anforderungen, `http://123.234.345.456` oder `http://\<computername>` Wenn ein Domain Name Service die IP-Adresse in diesen Hostnamen auflösen kann.|  
+|`http://123.234.345.456:80`|Empfängt alle Anforderungen, die `http://123.234.345.456` oder `http://\<computername>` angeben, wenn ein Domain Name Service die IP-Adresse in diesen Hostnamen auflösen kann.|  
 |`http://+:80`|Empfängt für alle Anwendungsendpunkte, die **Alle zugewiesenen**zugeordnet sind, Anforderungen, die nicht bereits von anderen Anwendungen empfangen wurden.|  
 |`http://*:80`|Empfängt für Anwendungsendpunkte, die **Alle nicht zugewiesenen**zugeordnet sind, Anforderungen, die nicht bereits von anderen Anwendungen empfangen wurden.|  
   
  Ein Zeichen für einen Portkonflikt ist die folgende Fehlermeldung: 'System.IO.FileLoadException: Der Prozess kann nicht auf die Datei zugreifen, da sie von einem anderen Prozess verwendet wird. (Ausnahme von HRESULT: 0x80070020).  
   
-## <a name="url-reservations-for-iis-80-85-with-sql-server-reporting-services"></a>URL-Reservierungen für IIS 8.0, 8.5 mit SQLServer Reporting Services  
+## <a name="url-reservations-for-iis-80-85-with-sql-server-reporting-services"></a>URL-Reservierungen für IIS 8.0, 8.5 mit SQL Server Reporting Services  
  Anhand der im vorherigen Abschnitt beschriebenen Rangfolgeregeln wird deutlich, wie die für Reporting Services und IIS definierten URL-Reservierungen zur Interoperabilität beitragen. Reporting Services empfängt Anforderungen, die die Namen der virtuellen Verzeichnisse seiner Anwendungen explizit angeben; IIS empfängt alle verbleibenden Anforderungen, die dann an Anwendungen umgeleitet werden können, die innerhalb des IIS-Verarbeitungsmodells ausgeführt werden.  
   
 |Application|URL-Reservierung|Beschreibung|Anforderungsempfang|  
 |-----------------|---------------------|-----------------|---------------------|  
-|Berichtsserver|`http://+:80/ReportServer`|Starker Platzhalter an Port 80, mit virtuellem Verzeichnis "ReportServer".|Empfängt alle Anforderungen an Port 80, die das virtuelle Verzeichnis "ReportServer" angeben. Der Berichtsserver-Webdienst empfängt alle Anforderungen an http://\<Computername > / Reportserver.|  
-|Webportal|`http://+:80/Reports`|Starker Platzhalter an Port 80, mit virtuellem Verzeichnis "Reports".|Empfängt alle Anforderungen an Port 80, die das virtuelle Verzeichnis "reports" angeben. Die [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] empfängt alle Anforderungen an http://\<Computername > / reports.|  
+|Berichtsserver|`http://+:80/ReportServer`|Starker Platzhalter an Port 80, mit virtuellem Verzeichnis "ReportServer".|Empfängt alle Anforderungen an Port 80, die das virtuelle Verzeichnis "ReportServer" angeben. Der Berichtsserver-Webdienst empfängt alle Anforderungen an http://\<Computername>/reportserver.|  
+|Webportal|`http://+:80/Reports`|Starker Platzhalter an Port 80, mit virtuellem Verzeichnis "Reports".|Empfängt alle Anforderungen an Port 80, die das virtuelle Verzeichnis "reports" angeben. Das [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] empfängt alle Anforderungen an http://\<Computername>/reports.|  
 |IIS|`http://*:80/`|Schwacher Platzhalter an Port 80.|Empfängt an Port 80 alle verbleibenden Anforderungen, die nicht von einer anderen Anwendung empfangen wurden.|  
 
-## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>Seite-an-Seite-Bereitstellungen von SQL Server Reporting Services auf IIS 8.0, 8.5
+## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>Parallele Bereitstellungen von SQL Server Reporting Services in IIS 8.0, 8.5
 
  Interoperabilitätsprobleme zwischen IIS und Reporting Services treten auf, wenn IIS-Websites und Reporting Services identische Namen virtueller Verzeichnisse aufweisen. Gehen wir beispielsweise von folgender Konfiguration aus:  
   
 -   Eine Website in IIS, die Port 80 und einem virtuellen Verzeichnis mit dem Namen "Reports" zugewiesen ist.  
   
--   Eine Berichtsserverinstanz installiert, die in der Standardkonfiguration, wobei die URL-Reservierung auch Port 80 angibt und die [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] Anwendung auch "Reports" als Namen des virtuellen Verzeichnisses verwendet.  
+-   Eine in der Standardkonfiguration installierte Berichtsserverinstanz, bei der die URL-Reservierung auch Port 80 angibt und die [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]-Anwendung auch „Reports“ als Namen des virtuellen Verzeichnisses verwendet.  
   
- Im vorliegenden Fall eine an http:// gesendete Anforderung erhält\<Computername >: 80/Reports durch Empfangen der [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. Die Anwendung, die über das virtuelle Verzeichnis Reports in IIS zugegriffen wird, nicht mehr Anforderungen empfängt, nach der Installation der Berichtsserverinstanz her.  
+ Bei dieser Konfiguration wird eine an http://\<Computername>:80/reports gesendete Anforderung vom [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] empfangen. Die Anwendung, auf die über das virtuelle Verzeichnis „Reports“ in IIS zugegriffen wird, empfängt nach der Installation der Berichtsserverinstanz keine Anforderungen mehr.  
   
  Wenn Sie die Bereitstellungen älterer und neuerer Versionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]gleichzeitig ausführen, tritt unter Umständen das gerade beschriebene Routingproblem auf. Dies liegt daran, dass alle [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Versionen „ReportServer“ und „Reports“ als Namen der virtuellen Verzeichnisse für den Berichtsserver und die [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] anwendungen verwenden und damit die Wahrscheinlichkeit erhöht wird, dass in IIS die virtuellen Verzeichnisse „reports“ und „reportserver“ vorhanden sind.  
   
@@ -89,7 +85,6 @@ Sie können installieren und Ausführen von SQL Server Reporting Services (SSRS)
 
 [Konfigurieren von Berichtsserver-URLs](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [Konfigurieren einer URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
-[Installieren von Reporting Services-Berichtsserver im einheitlichen Modus](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)  
+[Installieren des Reporting Services-Berichtsservers im einheitlichen Modus](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)  
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

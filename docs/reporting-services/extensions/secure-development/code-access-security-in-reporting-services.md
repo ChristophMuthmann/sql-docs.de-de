@@ -1,5 +1,5 @@
 ---
-title: Codezugriffssicherheit in Reporting Services | Microsoft Docs
+title: Codezugriffssicherheit in Reporting Services | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - code groups [Reporting Services]
 - code access security [Reporting Services]
@@ -20,23 +19,23 @@ helpviewer_keywords:
 - code access security [Reporting Services], about code access security
 - named permission sets [Reporting Services]
 ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: a815c0942c8d99d6747e0ffe9a83ea24551c6248
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: d34c2136e148bcd5297160f1776b13b86c343a7f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="code-access-security-in-reporting-services"></a>Codezugriffssicherheit in Reporting Services
-  Die Codezugriffssicherheit dreht sich um diese Kernbegriffe: Beweise, Codegruppen und benannte Berechtigungssätze. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] haben die Komponenten Berichts-Manager, Berichts-Designer und Berichtsserver jeweils eine Richtliniendatei, die die Codezugriffssicherheit für benutzerdefinierte Assemblys sowie für die Daten-, Übermittlungs-, Rendering- und Sicherheitserweiterung konfiguriert. Die folgenden Abschnitte enthalten eine Übersicht über die Codezugriffssicherheit. Ausführlichere Informationen zu den Themen in diesem Abschnitt finden Sie unter "Sicherheitsrichtlinienmodell" in der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK-Dokumentation.  
+  Die Codezugriffssicherheit dreht sich um diese Kernbegriffe: Beweise, Codegruppen und benannte Berechtigungssätze. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] haben die Komponenten Berichts-Manager, Berichts-Designer und Berichtsserver jeweils eine Richtliniendatei, die die Codezugriffssicherheit für benutzerdefinierte Assemblys sowie für die Daten-, Übermittlungs-, Rendering- und Sicherheitserweiterung konfiguriert. Die folgenden Abschnitte enthalten eine Übersicht über die Codezugriffssicherheit. Ausführliche Informationen zu den Themen dieses Abschnitts finden Sie unter „Sicherheitsrichtlinienmodell“ in der Dokumentation zum [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK.  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet Codezugriffssicherheit, da ein großer Unterschied zwischen einer typischen [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Anwendung und dem Berichtsserver besteht, obwohl der Berichtsserver auf [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Technologie beruht. Eine typische [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Anwendung führt keinen Benutzercode aus. Im Gegensatz dazu [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet eine offene und erweiterbare Architektur, die Benutzern ermöglicht, Programmieren Berichtsdefinitionsdateien, die mithilfe der **Code** Element der Berichtsdefinitionssprache und um spezielle Funktionen in einer benutzerdefinierten Assembly für die Verwendung in Berichten zu entwickeln. Weiterhin können Entwickler leistungsstarke Erweiterungen entwerfen und bereitstellen, die die Funktionen des Berichtsservers verbessern. Diese Leistungsstärke und Flexibilität bringt auch die Notwendigkeit mit sich, so viel Schutz und Sicherheit wie möglich zu bieten.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet Codezugriffssicherheit, da ein großer Unterschied zwischen einer typischen [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Anwendung und dem Berichtsserver besteht, obwohl der Berichtsserver auf [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Technologie beruht. Eine typische [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Anwendung führt keinen Benutzercode aus. Im Gegensatz dazu verwendet [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] eine offene und erweiterbare Architektur, die Benutzern die Programmierung anhand der Berichtsdefinitionsdateien und des **Code**-Elements der Berichtsdefinitionssprache sowie die Entwicklung spezifischer Funktionen in einer benutzerdefinierten Assembly für die Verwendung in Berichten ermöglicht. Weiterhin können Entwickler leistungsstarke Erweiterungen entwerfen und bereitstellen, die die Funktionen des Berichtsservers verbessern. Diese Leistungsstärke und Flexibilität bringt auch die Notwendigkeit mit sich, so viel Schutz und Sicherheit wie möglich zu bieten.  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Entwickler können eine beliebige [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Assembly in ihren Berichten verwenden und alle Funktionen der Assemblys abrufen, die für den globalen Assemblycache bereitgestellt wurden. Der Berichtsserver kann lediglich steuern, welche Berechtigungen für Berichtsausdrücke und geladene benutzerdefinierte Assemblys gelten. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], benutzerdefinierte Assemblys **Execute**-standardmäßig nur Berechtigungen.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Entwickler können eine beliebige [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Assembly in ihren Berichten verwenden und alle Funktionen der Assemblys abrufen, die für den globalen Assemblycache bereitgestellt wurden. Der Berichtsserver kann lediglich steuern, welche Berechtigungen für Berichtsausdrücke und geladene benutzerdefinierte Assemblys gelten. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] erhalten benutzerdefinierte Assemblys standardmäßig nur Berechtigungen zum **Ausführen**.  
   
 ## <a name="evidence"></a>Beweise  
  Beweise sind Informationen, die die Common Language Runtime (CLR) zum Ermitteln einer Sicherheitsrichtlinie für Codeassemblys verwendet. Beweise geben der Laufzeit an, dass der Code ein bestimmtes Merkmal besitzt. Zu üblichen Formen von Beweisen zählen digitale Signaturen und der Speicherort einer Assembly. Beweise können auch benutzerdefiniert sein, um andere Informationen darzustellen, die für die Anwendung sinnvoll sind.  
@@ -64,10 +63,10 @@ ms.lasthandoff: 08/12/2017
  Sie sollten mit Ihrem Systemadministrator oder Experten für die Anwendungsbereitstellung zusammenarbeiten, um den Typ der Codezugriffssicherheit und Codegruppen zu ermitteln, die für Ihre benutzerdefinierten Assemblys oder [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Erweiterungen erforderlich sind.  
   
 ## <a name="named-permission-sets"></a>Benannte Berechtigungssätze  
- Ein benannter Berechtigungssatz ist ein Satz von Berechtigungen, den Administratoren einer Codegruppe zuordnen können. Die meisten benannten Berechtigungssätze bestehen aus mindestens einer Berechtigung, einem Namen und einer Beschreibung für den Berechtigungssatz. Administratoren können benannte Berechtigungssätze verwenden, um die Sicherheitsrichtlinien für Codegruppen zu erstellen oder zu ändern. Es ist möglich, einen benannten Berechtigungssatz mehreren Codegruppen zuzuordnen. Die CLR stellt integrierte benannte Berechtigungssätze bereit; zu diesen zählen **nichts**, **Ausführung**, **Internet**, **LocalIntranet**, **alles**, und **FullTrust**.  
+ Ein benannter Berechtigungssatz ist ein Satz von Berechtigungen, den Administratoren einer Codegruppe zuordnen können. Die meisten benannten Berechtigungssätze bestehen aus mindestens einer Berechtigung, einem Namen und einer Beschreibung für den Berechtigungssatz. Administratoren können benannte Berechtigungssätze verwenden, um die Sicherheitsrichtlinien für Codegruppen zu erstellen oder zu ändern. Es ist möglich, einen benannten Berechtigungssatz mehreren Codegruppen zuzuordnen. Die CLR stellt integrierte benannte Berechtigungssätze bereit. Dazu zählen **Nothing**, **Execution**, **Internet**, **LocalIntranet**, **Everything** und **FullTrust**.  
   
 > [!NOTE]  
->  Benutzerdefinierte Erweiterungen für Daten, Übermittlung, Rendering und Sicherheit im [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] muss ausgeführt werden die **FullTrust** Berechtigungssatz. Arbeiten Sie mit Ihrem Systemadministrator zusammen, um die geeigneten Codegruppen- und Mitgliedschaftsbedingungen für Ihre [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Erweiterungen hinzuzufügen.  
+>  Benutzerdefinierte Daten, Übermittlung, Rendering und Sicherheitserweiterungen in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] müssen unter dem **FullTrust**-Berechtigungssatz ausgeführt werden. Arbeiten Sie mit Ihrem Systemadministrator zusammen, um die geeigneten Codegruppen- und Mitgliedschaftsbedingungen für Ihre [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Erweiterungen hinzuzufügen.  
   
  Sie können Ihre eigenen benutzerdefinierten Ebenen von Berechtigungen benutzerdefinierten Assemblys zuordnen, die Sie mit Berichten verwenden. Wenn Sie z. B. möchten, dass eine Assembly auf eine bestimmte Datei zugreift, können Sie einen neuen benannten Berechtigungssatz mit einem bestimmten Datei-E/A-Zugriff erstellen und den Berechtigungssatz dann Ihrer Codegruppe zuordnen. Der folgende Berechtigungssatz gewährt schreibgeschützten Zugriff auf die Datei MyFile.xml:  
   
@@ -100,6 +99,6 @@ ms.lasthandoff: 08/12/2017
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sichere Entwicklung &#40; Reporting Services &#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
+ [Sichere Entwicklung (Reporting Services)](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
   
   

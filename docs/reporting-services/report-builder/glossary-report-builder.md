@@ -1,5 +1,5 @@
 ---
-title: Glossar (Berichts-Generator) | Microsoft Docs
+title: Glossar (Berichts-Generator) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69a348a8f2f2d44dbe17f5500557db03b95e5b04
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d58372b901950fa8a7f674a417aa76457e80c466
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="glossary-report-builder"></a>Glossar (Berichts-Generator)
   
@@ -82,7 +81,7 @@ ms.lasthandoff: 08/09/2017
 |Farbregeln (color rules)|Der Algorithmus, durch den jedem Kartenelement auf einer Kartenebene automatisch Farben zugewiesen werden.|  
 |Farbskala|Ein Kartenlegendentyp, in dem die Bedeutung der in einer Karte verwendeten Farben erläutert wird.|  
 |Common Language Runtime (common language runtime)|Das Modul, das die zentrale Komponente der Ausführung von verwaltetem Code bildet. Die Runtime stellt verwalteten Code mit Diensten wie sprachübergreifende Integration, Codezugriffssicherheit, Verwaltung der Objektlebensdauer sowie Debug- und Profilerstellungsunterstützung bereit.|  
-|Komplexer Ausdruck (complex expression)|Ein Ausdruck, der nicht als einen einzigen integrierten Feldverweis dargestellt werden, und wird auf der Entwurfsoberfläche als <\<Expr >>.|  
+|Komplexer Ausdruck (complex expression)|Ein Ausdruck, der nicht durch einen einzigen integrierten Feldverweis dargestellt werden kann und auf der Entwurfsoberfläche als <\<Expr>> angezeigt wird.|  
 |Verkettung|Das Kombinieren von mindestens zwei Zeichenfolgen oder -ausdrücken zu einer Zeichenfolge bzw. einem Zeichenausdruck oder das Kombinieren von mindestens zwei Binärzeichenfolgen oder -ausdrücken zu einer Binärzeichenfolge oder einem Binärzeichenausdruck.|  
 |Parallelität (concurrency)|Ein Vorgang, der es ermöglicht, dass mehrere Benutzer gleichzeitig auf freigegebene Daten zugreifen und diese ändern. SQL Server verwendet Sperren, damit mehrere Benutzer gleichzeitig auf freigegebene Daten zugreifen und diese ändern können, ohne dass Konflikte auftreten.|  
 |CONFIG-Datei|Siehe anderen Begriff: Konfigurationsdatei (configuration file)|  
@@ -173,7 +172,7 @@ ms.lasthandoff: 08/09/2017
 |Gruppierung (grouping)|Eine Datenmenge, die zusammen in einem Bericht gruppiert wird.|  
 |Temperaturverteilungskarte|Ein Typ einer Kartendarstellung, bei der die Intensität der Farbe für jedes Polygon den verknüpften analytischen Daten entspricht. Beispielsweise werden niedrige Werte in einem Bereich blau (kalt) und hohe Werte rot (heiß) dargestellt.|  
 |Hierarchie (hierarchy)|Eine logische Baumstruktur, die die Elemente einer Dimension so anordnet, dass jedes Element ein übergeordnetes Element und null oder mehr untergeordnete Elemente aufweist.|  
-|Hohe Verfügbarkeit|Status einer Ressource, die die meiste Zeit funktionstüchtig ist, von Clients genutzt werden kann und dabei einen sehr geringen Prozentsatz an Fehlern aufweist, die den Dienst unterbrechen.|  
+|Hochverfügbarkeit|Status einer Ressource, die die meiste Zeit funktionstüchtig ist, von Clients genutzt werden kann und dabei einen sehr geringen Prozentsatz an Fehlern aufweist, die den Dienst unterbrechen.|  
 |HTML|Siehe anderen Begriff: Hypertext Markup Language|  
 |HTML-Viewer|Eine Benutzeroberfläche, die aus einer Berichtssymbolleiste und anderen Steuerelementen zur Bearbeitung eines Berichts besteht.|  
 |Hypertext Markup Language (HTML)|Eine Textmarkupsprache, die zum Erstellen von Dokumenten für das Web verwendet wird. HTML definiert die Struktur und das Layout eines Webdokuments mittels verschiedener Tags und Attribute.|  
@@ -364,7 +363,7 @@ ms.lasthandoff: 08/09/2017
 |Benutzerinstanz|Eine SQL Server Express-Instanz, die im Auftrag eines Benutzers von der übergeordneten Instanz generiert wird.|  
 |Wertachse (y) (value (y) axis)|Die Achse in einem Diagramm, auf der numerische Datenwerte angezeigt werden. Normalerweise die vertikale Achse. Ausnahme: Bei Balkendiagramm sind die Achsen umgekehrt, und Gruppierungsdaten werden auf der y-Achse angezeigt.|  
 |Wertausdruck|Ein MDX-Ausdruck (Multidimensional Expressions), der einen Wert zurückgibt. Wertausdrücke können mit Mengen, Tupeln, Elementen, Ebenen, Zahlen oder Zeichenfolgen arbeiten.|  
-|variable|1. Speichert in Integration Services Werte, die in Skripts, Ausdrücken und Eigenschaftsausdrücken verwendet werden können, um Spaltenwerte und die Eigenschaften von Paketobjekten festzulegen. <br />2. Definierte Entitäten, denen Werte zugewiesen werden. Eine lokale Variable wird definiert, mit einem DECLARE@localvariable Anweisung und ein Anfangswert innerhalb des Anweisungsgruppe, in dem sie entweder eine SELECT-Anweisung deklariert ist, zugewiesen oder SET@localvariable Anweisung.|  
+|variable|1. Speichert in Integration Services Werte, die in Skripts, Ausdrücken und Eigenschaftsausdrücken verwendet werden können, um Spaltenwerte und die Eigenschaften von Paketobjekten festzulegen. <br />2. Definierte Entitäten, denen Werte zugewiesen werden. Eine lokale Variable wird mit einer DECLARE@localvariable-Anweisung definiert. Innerhalb der Anweisungsgruppe, in der sie deklariert wird, wird ihr mit einer SELECT- oder SET@localvariableAnweisung ein Anfangswert zugewiesen.|  
 |Variables Intervall (variable interval)|Eine Option für ein Reporting Services-Diagramm, die angegeben werden kann, um automatisch anhand der Breite oder der Höhe des Diagramms die optimale Anzahl der Bezeichnungen zu berechnen, die auf einer Achse platziert werden können.|  
 |Visualisierung (visualization)|Die Methode, die ein Benutzer in Karten, Diagrammen und Messgeräten zur visuellen Darstellung von analytischen Daten auswählt.|  
 |Webdienst|Ein Dienst in Reporting Services, der SOAP (Simple Object Access Protocol) über HTTP verwendet und als Kommunikationsschnittstelle zwischen den Clientprogrammen und dem Berichtsserver fungiert.|  
@@ -379,4 +378,3 @@ ms.lasthandoff: 08/09/2017
  [Berichterstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   
-

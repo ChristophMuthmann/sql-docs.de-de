@@ -1,26 +1,24 @@
 ---
-title: "Hinzufügen von Visualisierungen zu mobile Berichte von Reporting Services | Microsoft Docs"
+title: "Hinzufügen von Visualisierungen zu mobilen Reporting Services-Berichten | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 09/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7a6554de812f8f85c9adbd7a3338ab744555e9a0
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 41c6b6c84fba9f3f45795bb953af65aebbf35bb8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Hinzufügen von Visualisierungen zu mobilen Reporting Services-Berichten
 Diagramme sind ein wesentlicher Bestandteil der Visualisierung von Daten. Erfahren Sie mehr über die Diagramme, die Sie in mobilen [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten verwenden können, um eine große Bandbreite von Szenarien abzudecken. 
@@ -45,7 +43,7 @@ Jede einzelne Metrik bzw. jeder Wert, die bzw. der in einem Diagramm angezeigt w
 ### <a name="change-aggregation"></a>Ändern der Aggregation 
 Die Standardaggregation für numerische Felder in Diagrammen lautet „Summieren“. Sie können sie auf „Average“, „Count“, „Minimum“, „Maximum“, „First“ oder „Last“ ändern.
 
-* Wählen Sie die Registerkarte **Daten** aus, und wählen Sie unter **Dateneigenschaften** neben dem numerischen Feld **Optionen**, um eine andere Aggregation auszuwählen.
+* Wählen Sie die Registerkarte **Daten** aus, und wählen Sie unter **Dateneigenschaften** neben dem numerischen Feld **Optionen** aus, um eine andere Aggregation auszuwählen.
 
 ### <a name="set-or-clear-filters"></a>Festlegen oder Löschen von Filtern
 
@@ -65,15 +63,15 @@ Das Zeitdiagramm ist das grundlegendste Diagramm in [!INCLUDE[SS_MobileReptPub_S
 
 1. Ziehen Sie ein **Zeitdiagramm** aus der Registerkarte **Layout** auf die Entwurfsoberfläche, und ändern Sie die Größe.
 
-2. Es handelt sich standardmäßig um ein gestapeltes Balkendiagramm. Sie können dies unter **Serienvisualisierung** ändern.
+2. Es handelt sich standardmäßig um ein gestapeltes Balkendiagramm. Sie können dies unter **Serienvisualisierung**ändern.
 
-3. Wenn für das Diagramm Daten erforderlich sind, die noch nicht im Bericht vorhanden sind, wählen Sie die Registerkarte **Daten** > **Daten hinzufügen**, um [Daten aus Excel oder einem freigegebenen Dataset](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md) abzurufen.
+3. Wenn für das Diagramm Daten erforderlich sind, die noch nicht im Bericht vorhanden sind, wählen Sie die Registerkarte **Daten** > **Daten hinzufügen** aus, um [Daten aus Excel oder einem freigegebenen Dataset](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md) abzurufen.
 
-3. Im Bereich **Dateneigenschaften** ist für **Hauptreihe** **SimulatedTable** festgelegt. Klicken Sie auf dem Pfeil im Feld, und wählen Sie anschließend Ihre Tabelle aus.
+3. Im Bereich **Dateneigenschaften** ist **SimulatedTable** für **Hauptreihe**festgelegt. Klicken Sie auf dem Pfeil im Feld, und wählen Sie anschließend Ihre Tabelle aus.
 
-5. Wenn Sie die **Datenstruktur** auf **Nach Spalten** festlegen (auf der Registerkarte **Layout** > Bereich **Eigenschaften visueller Elemente**), können Sie im Bereich **Dateneigenschaften** mehrere Spalten mit numerischen Werten auswählen.
+5. Wenn Sie die **Datenstruktur** auf die Einstellung **By Columns** (Nach Spalten) festlegen (auf der Registerkarte **Layout** > Bereich **Eigenschaften visueller Elemente**), können Sie im Bereich **Dateneigenschaften** mehrere Spalten mit numerischen Werten auswählen.
 
-   Wenn Sie die **Datenstruktur** auf **Nach Zeilen** festlegen, können Sie im Bereich **Dateneigenschaften** ein **Namensfeld für Reihe** und eine Spalte mit numerischen Werten auswählen.
+   Wenn Sie die **Datenstruktur** auf **Nach Zeilen**festlegen, können Sie im Bereich **Dateneigenschaften** ein **Namensfeld für Reihe** und eine Spalte mit numerischen Werten auswählen.
    
 Erfahren Sie mehr über das [Gruppieren von Daten nach Spalten oder Zeilen](../../reporting-services/mobile-reports/group-data-by-columns-or-rows-in-a-mobile-report-reporting-services.md).
   
@@ -200,5 +198,4 @@ Wasserfalldiagramme sind in folgenden Fällen eine gute Wahl:
 * [Datenblätter zu mobilen Berichten hinzufügen](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)
 * [Messgeräte mobilen Berichten hinzufügen](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
   
-
 

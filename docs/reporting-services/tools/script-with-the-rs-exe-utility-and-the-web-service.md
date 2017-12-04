@@ -1,5 +1,5 @@
 ---
-title: Mit einem Skript mit dem rs.exe-Hilfsprogramm und dem Webdienst | Microsoft Docs
+title: "Skripterstellung mit dem Hilfsprogramm „rs.exe“ und dem Webdienst | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - Report Server Web service, scripts
 - scripts [Reporting Services], Web service
 ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 41e0843d517f4fe24c16c6071ba8a1921be68502
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f6c01ecec4f909ff4e5cbe445b1685b6dd07a750
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>Skripterstellung mit dem Hilfsprogramm rs.exe und dem Webdienst
   Entwickler und Berichtsserveradministratoren können auf einem Berichtsserver mithilfe des Hilfsprogramms **rs** (RS.exe) Vorgänge ausführen. In diesem Hilfsprogramm können Sie mithilfe von mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]geschriebenen Skripts Berichtsserver programmgesteuert verwalten.  
@@ -36,15 +35,14 @@ ms.lasthandoff: 08/09/2017
   
  Skriptbeispiele finden Sie unter:  
   
- [Reporting Services-Beispielskript für "rs.exe" zum Migrieren von Inhalten zwischen Berichtsservern](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+ [Sample Reporting Services rs.exe Script to Copy Content between Report Servers](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
  [SQL Server Reporting Services-Produktbeispiele](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Skripts für Bereitstellungs- und Verwaltungsaufgaben](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
- [Berichtsserver-Webdienst](../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Technische Referenz &#40; SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
- [RS.exe-Hilfsprogramm &#40; SSRS &#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
+ [Report Server-Webdienst](../../reporting-services/report-server-web-service/report-server-web-service.md)   
+ [Technische Referenz (SSRS)](../../reporting-services/technical-reference-ssrs.md)   
+ [Hilfsprogramm RS.exe (SSRS)](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
   
-

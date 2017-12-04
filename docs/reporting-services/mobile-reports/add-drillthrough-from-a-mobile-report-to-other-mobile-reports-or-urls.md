@@ -1,29 +1,27 @@
 ---
-title: "Fügen Sie Drillthrough von einem mobilen Bericht zu anderen mobilen Berichten oder URLs | Microsoft Docs"
+title: "Hinzufügen eines Drillthroughs aus einem mobilen Bericht zu anderen mobilen Berichten oder URLs | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 09/20/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c00b90770f259d9782c68eec52ccf860762f43f1
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9133e86862ec5cf234b87e598d152811dced75c9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>Drillthrough zu anderen mobilen Berichten oder URLs aus einem mobilen Bericht hinzufügen
-Sie können aus jedem Messgerät, jedem Diagramm oder jedem Datenraster in einem mobilen [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]-Bericht Drillthrough zu einem anderen mobilen Bericht oder einer benutzerdefinierten URL hinzufügen. 
+Sie können aus jedem Messgerät, jedem Diagramm oder jedem Datenraster in einem mobilen [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht Drillthrough zu einem anderen mobilen Bericht oder einer benutzerdefinierten URL hinzufügen. 
 
 Ein *Drillthrough*  ist eine Verknüpfung von einem Quellbericht, der einen anderen Zielbericht oder eine URL öffnet. Der Drillthrough-Zielbericht enthält oft Details zu einigen Elementen im Zusammenfassungsbericht. Abhängig vom mobilen Quellbericht können ein oder mehrere Parameter an den mobilen Zielbericht übergeben oder in eine benutzerdefinierte URL integriert werden.  
   
@@ -88,5 +86,4 @@ Ausgeblendete Elemente werden in einer helleren Farbe angezeigt.
 * [Hinzufügen von Parametern zu einem mobilen Bericht | Reporting Services](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
 * [Erstellen und Veröffentlichen von mobilen Berichten mit dem Publisher für mobile Berichte von SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 
 * [Webportal (einheitlicher SSRS-Modus)](../../reporting-services/web-portal-ssrs-native-mode.md)
-
 

@@ -1,27 +1,24 @@
 ---
-title: Arbeiten mit KPIs in Reporting Services | Microsoft Docs
+title: Arbeiten mit KPIs in Reporting Services | Microsoft-Dokumentation
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: f8057d09bb9118ef5575645f3fab9ba7a1fede94
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 099142ae9ac45dae0a207fe896f496dc8d4afa6f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="working-with-kpis-in-reporting-services"></a>Arbeiten mit KPIs in Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -75,7 +72,7 @@ Um Daten aus einem freigegebenen Dataset zu verwenden, können Sie Folgendes tun
   
     ![rsCreateKPI3](../reporting-services/media/rscreatekpi3.png)  
   
-2.  Wählen Sie die **mit den Auslassungszeichen (...)**  im Datenfeld. Hierdurch erscheint der Bildschirm **Wählen Sie ein Dataset** .  
+2.  Klicken Sie im Datenfeld auf die **Auslassungspunkte (…)**. Hierdurch erscheint der Bildschirm **Wählen Sie ein Dataset** .  
   
     ![rsCreateKPI4](../reporting-services/media/rscreatekpi4.png)  
   
@@ -97,7 +94,7 @@ Um Daten aus einem freigegebenen Dataset zu verwenden, können Sie Folgendes tun
   
 Um eine KPI zu entfernen, können Sie Folgendes tun.  
   
-1.  Wählen Sie die **mit den Auslassungszeichen (...)**  des KPIS, die Sie entfernen möchten. Wählen Sie **Verwalten**aus.  
+1.  Klicken Sie bei der KPI, die Sie entfernen möchten, auf die **Auslassungspunkte (…)**. Wählen Sie **Verwalten**aus.  
   
     ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
   
@@ -107,12 +104,11 @@ Um eine KPI zu entfernen, können Sie Folgendes tun.
   
 ## <a name="refreshing-a-kpi"></a>Aktualisieren einer KPI  
   
-Um den KPI zu aktualisieren, müssen Sie das Zwischenspeichern für das freigegebene Dataset konfigurieren. Weitere Informationen zu cacheaktualisierungsplänen, finden Sie unter [arbeiten mit freigegebenen Datasets](../reporting-services/work-with-shared-datasets-web-portal.md).  
+Um eine KPI zu aktualisieren, müssen Sie eine Zwischenspeicherung für das freigegebene Dataset konfigurieren. Weitere Informationen zu Cacheaktualisierungsplänen finden Sie unter [Arbeiten mit freigegebenen Datasets – Webportal](../reporting-services/work-with-shared-datasets-web-portal.md).  
   
 ## <a name="next-steps"></a>Nächste Schritte
   
-[Webportal](../reporting-services/web-portal-ssrs-native-mode.md)  
+[Web portal (Webportal)](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Arbeiten mit freigegebenen Datasets](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

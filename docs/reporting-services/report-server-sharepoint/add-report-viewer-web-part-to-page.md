@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Reporting Services Berichts-Viewer-Webpart zu einer SharePoint-Seite hinzufügen | Microsoft Docs"
+title: "Hinzufügen des Webparts des Berichts-Viewers für SQL Server Reporting Services zu einer SharePoint-Seite | Microsoft-Dokumentation"
 ms.custom: Display a report, from SQL Server Reporting Services or Power BI Report Server, by adding a Report Viewer web part to a SharePoint page.
 ms.date: 09/26/2017
 ms.prod: sql-server-2016
@@ -14,73 +14,70 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: fbc68b6ff9f1edf5cf6ee13f6e93a3d2d1a8f834
-ms.contentlocale: de-de
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: e60dfd8a296c84701dfc30588aba49220c130d9f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-
-# <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>SQL Server Reporting Services Berichts-Viewer-Webpart zu einer SharePoint-Seite hinzufügen
+# <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Hinzufügen des Webparts des Berichts-Viewers für SQL Server Reporting Services zu einer SharePoint-Seite
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-Einen Bericht, aus SQL Server Reporting Services oder Power BI-Berichtsserver, indem Sie einen Berichts-Viewer-Webpart einer SharePoint-Seite hinzufügen angezeigt.
+Zeigen Sie einen Bericht von SQL Server Reporting Services oder Power BI-Berichtsserver an, indem Sie das Berichts-Viewer-Webpart zu einer SharePoint-Seite hinzufügen.
 
-![Berichts-Viewer-Webpart auf einer SharePoint-Seite](media/sharepoint-report-viewer-web-part-on-page.png)
+![Berichts-Viewer-Webpart auf einer SharePoint-Website](media/sharepoint-report-viewer-web-part-on-page.png)
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-* Damit die Berichte erfolgreich geladen eingeschränkte Claims to Windows Token Service (C2WTS) muss für Kerberos konfiguriert werden Delegierung. Weitere Informationen zum Konfigurieren von C2WTS finden Sie unter [Claims to Windows Token Service (C2WTS) und Reporting Services](../install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md).
+* Damit Berichte erfolgreich geladen werden können, muss für Claims to Windows Token Service (C2WTS) die eingeschränkte Kerberos-Delegierung konfiguriert werden. Weitere Informationen zu C2WTS finden Sie unter [Claims to Windows Token Service (C2WTS) and Reporting Services (Forderungen an den Windows-Tokendienst (C2WTS) und Reporting Services)](../install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md).
 
-* Der Berichts-Viewer-Webpart muss zur SharePoint-Farm bereitgestellt werden. Informationen zum Bereitstellen der Lösung Webpartprojekt in Berichts-Viewer finden Sie unter [das Berichts-Viewer-Webpart auf einer SharePoint-Website bereitstellen](deploy-report-viewer-web-part.md).
+* Das Berichts-Viewer-Webpart muss für Ihre SharePoint-Farm bereitgestellt werden. Weitere Informationen zur Bereitstellung des Berichts-Viewer-Webpart-Projektmappenprojekts finden Sie unter [Deploy the Report Viewer web part on a SharePoint site (Bereitstellen des Berichts-Viewer-Webparts auf einer SharePoint-Website)](deploy-report-viewer-web-part.md).
 
-* Um ein Webpart zu einer Webseite hinzufügen, müssen Sie die Berechtigung hinzufügen und Anpassen von Seiten auf Websiteebene verfügen. Wenn Sie Standardsicherheitseinstellungen verwenden, wird diese Berechtigung Mitgliedern der Gruppe **Besitzer** erteilt, die über Berechtigungen für den Vollzugriff verfügen.
+* Sie müssen über eine Berechtigung zum Hinzufügen und Anpassen von Seiten auf Websiteebene verfügen, um einer Webseite ein Webpart hinzufügen zu können. Wenn Sie Standardsicherheitseinstellungen verwenden, wird diese Berechtigung Mitgliedern der Gruppe **Besitzer** erteilt, die über Berechtigungen für den Vollzugriff verfügen.
 
-## <a name="add-web-part"></a>Fügen Sie Webpart hinzu
+## <a name="add-web-part"></a>Hinzufügen eines Webparts
 
-1. Wählen Sie in der SharePoint-Website, die **Zahnradsymbol** Symbol in der oberen linken Ecke aus, und wählen **fügen Sie eine Seite**.
+1. Klicken Sie auf Ihrer SharePoint-Website auf das **Zahnradsymbol** in der oberen linken Ecke und anschließend auf **Seite hinzufügen**.
 
-    ![Fügen Sie eine Seite aus dem Zahnradsymbol auf einer Sharepoint-Website.](media/sharepoint-add-a-page.png)
+    ![Fügen Sie über das Zahnradsymbol eine Seite zu einer SharePoint-Website hinzu.](media/sharepoint-add-a-page.png)
 
-2. Weisen Sie der Seite einen Namen und eine Select **erstellen**.
+2. Benennen Sie Ihre Seite, und klicken Sie auf **Erstellen**.
 
-3. Wählen Sie im Seitendesigner der **einfügen** Registerkarte im Menüband. Wählen Sie dann **Webpart** innerhalb der **Teile** Abschnitt.
+3. Klicken Sie im Seiten-Designer im Menüband auf die Registerkarte **Einfügen**. Klicken Sie anschließend im Abschnitt **Parts** auf **Webpart**.
 
-    ![Fügen Sie ein Webpart aus dem Office-Menüband.](media/sharepoint-insert-web-part.png)
+    ![Fügen Sie über das Menüband ein Webpart ein.](media/sharepoint-insert-web-part.png)
 
-4. Klicken Sie unter **Kategorien**Option **SQL Server Reporting Services (einheitlicher Modus). Klicken Sie unter **Teile**Option **Berichts-Viewer**. Wählen Sie dann **hinzufügen**.
+4. Klicken Sie unter **Kategorien** auf „**SQL Server Reporting Services (Native mode)“ (SQL Server Reporting Services (einheitlicher Modus)). Klicken Sie unter **Parts** auf **Berichts-Viewer**. Klicken Sie anschließend auf **Hinzufügen**.
 
-    ![Berichts-Viewer-Webpart hinzufügen.](media/sharepoint-report-viewer-web-part.png)
+    ![Fügen Sie das Berichts-Viewer-Webpart hinzu.](media/sharepoint-report-viewer-web-part.png)
 
-    Dies kann anfangs mit der Fehlermeldung angezeigt. Der Fehler ist, da die Standard-Berichtsserver-URL, um festgelegt ist *http://localhost* und möglicherweise an diesem Speicherort nicht verfügbar sein.
+    Dabei wird zunächst möglicherweise ein Fehler ausgelöst. Dieser Fehler tritt auf, weil die Standard-URL auf *http://localhost* festgelegt und an diesem Speicherort möglicherweise nicht verfügbar ist.
 
 ## <a name="configure-the-report-viewer-web-part"></a>Konfigurieren des Berichts-Viewer-Webparts
 
-Führen Sie folgende Schritte aus, um das Webpart zu einem bestimmten Bericht zeigen zu konfigurieren.
+Führen Sie folgende Schritte aus, um das Webpart zu konfigurieren, das auf einen bestimmten Bericht zeigen soll.
 
-1. Wenn Sie die SharePoint-Seite zu bearbeiten, wählen Sie den Pfeil nach unten in der oberen rechten Ecke des Webparts, und wählen Sie **Webpart bearbeiten**.
+1. Wenn Sie die SharePoint-Seite bearbeiten, klicken Sie auf den Pfeil nach unten in der oberen rechten Ecke des Webparts, und wählen Sie **Webpart bearbeiten** aus.
 
-    ![Bearbeiten der Webseite Web Teil Dropdownmenü aus.](media/sharepoint-edit-web-part.png)
+    ![Bearbeiten Sie die Webseite über die Dropdownliste des Webparts.](media/sharepoint-edit-web-part.png)
 
-2. Geben Sie die **Berichtsserver-URL** für den Berichtsserver hostet den Bericht. Dies sollte ungefähr *http://myrsserver/reportserver*.
+2. Geben Sie die **Berichtsserver-URL** des Berichtsserver ein, der Ihren Bericht hostet. Dies sollte in etwa wie folgt aussehen: *http://myrsserver/reportserver*.
 
-3. Geben Sie den Pfad und den Namen des Berichts, der innerhalb des Webparts angezeigt werden soll. Dies sieht etwa wie *AdventureWorks Sample Reports/Company Sales*. In diesem Beispiel wird der Bericht *Company Sales* befindet sich in einem Ordner namens *AdventureWorks Sample Reports*.
+3. Geben Sie den Pfad und den Namen des Berichts an, den Sie im Webpart anzeigen möchten. Dies sollte in etwa wie folgt aussehen: */AdventureWorks Sample Reports/Company Sales*. In diesem Beispiel befindet sich der Bericht *Company Sales* (Firmenumsatz) in einem Ordner mit der Bezeichnung *AdventureWorks Sample Reports* (AdventureWorks-Beispielberichte).
 
-4. Wenn der Bericht Parameter erfordert, nachdem Sie die Berichtsserver-URL und den Namen des Berichts angegeben haben, wählen Sie **Parameter laden** innerhalb der **Parameter** Abschnitt.
+4. Wenn für Ihren Bericht Parameter benötigt werden, nachdem Sie die Berichtsserver-URL und den Namen des Berichts eingegeben haben, klicken Sie auf **Parameter laden** im Abschnitt **Parameter**.
 
-5. Wählen Sie **Ok** zum Speichern der Änderungen an der Konfiguration des Teils.
+5. Klicken Sie auf **OK**, um Ihre Änderungen der Webpart-Konfiguration zu speichern.
 
-6. Wählen Sie **speichern**, innerhalb des Office-Menübands, um die Änderungen auf die SharePoint-Seite zu speichern.
+6. Klicken Sie im Office-Menüband auf **Speichern**, um die Änderungen an der SharePoint-Seite zu speichern.
 
-![Berichts-Viewer-Webpart auf einer SharePoint-Seite](media/sharepoint-report-viewer-web-part-on-page.png)
+![Berichts-Viewer-Webpart auf einer SharePoint-Website](media/sharepoint-report-viewer-web-part-on-page.png)
 
 ## <a name="considerations-and-limitations"></a>Überlegungen und Einschränkungen
 
-* Der Berichts-Viewer-Webpart kann nicht für moderne Seiten in SharePoint verwendet werden.
-* Power BI-Berichten können nicht mit dem Berichts-Viewer-Webpart verwendet werden.
-* Wenn das Berichts-Viewer-Webpart hinzufügen zu der Seite nicht angezeigt wird, stellen Sie sicher, dass [des Berichts-Viewer-Webparts bereitgestellt](deploy-report-viewer-web-part.md).
+* Das Berichts-Viewer-Webpart kann in SharePoint nicht auf modernen Seiten verwendet werden.
+* Power BI-Berichte können mit dem Berichts-Viewer-Webpart nicht verwendet werden.
+* Wenn Ihnen das Berichts-Viewer-Webpart nicht angezeigt wird und ihn zu Ihrer Seite hinzufügen möchten, stellen Sie sicher, dass Sie den [Berichts-Viewer-Webpart bereitgestellt haben](deploy-report-viewer-web-part.md).
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
-

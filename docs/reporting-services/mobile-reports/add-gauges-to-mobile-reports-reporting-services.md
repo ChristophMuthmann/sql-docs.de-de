@@ -1,26 +1,24 @@
 ---
-title: "Hinzufügen von Messgeräten mobile Berichte | Reporting Services | Microsoft Docs"
+title: "Hinzufügen von Messgeräten zu mobilen Berichten | Reporting Services | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ec1f4cee1318947e3c1ab730b3e4f7eaa16dd333
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 156402a49bd7c72f32b548d37707acf8a0aadef2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>Hinzufügen von Messgeräten zu mobilen Berichten | Reporting Services
 Messgeräte sind die grundlegendsten und häufig genutzten visuellen Elemente in mobilen Berichten. Sie zeigen einen einzelnen Wert in einem Dataset an – lediglich den Wert, oder den Wert im Vergleich mit einem Ziel.
@@ -29,7 +27,7 @@ Messgeräte sind die grundlegendsten und häufig genutzten visuellen Elemente in
   
 *Messgerätvisualisierungen in der Registerkarte „Layout“*  
   
-Alle Messgeräte im SQL Server Mobile Report Publisher haben mindestens eine Eigenschaft gemeinsam: main, auf ein numerisches Feld in einer der Datentabellen im mobilen Bericht festgelegten Wert.  
+In Publisher für mobile Berichte von SQL Server haben alle Messgeräte mindestens eine Eigenschaft gemeinsam: einen Hauptwert in einem numerischen Feld in einer der Datentabellen des mobilen Berichts.  
 
 Alle Messgeräte außer „Zahl“ können auch einen Vergleich bzw. *Deltawert*anzeigen –die Beziehung zwischen dem Haupt- und einem Vergleichswert. Der Vergleichswert ist oft das Ziel, und das Messgerät ist eine visuelle Anzeige des Status dieses Ziels oder der Differenz zwischen tatsächlichem Wert und Ziel.
 
@@ -95,4 +93,3 @@ Damit wird bestimmt, wie im Messgerät angezeigte Zahlen formatiert werden – z
 * [Navigationen in mobilen Reporting Services-Berichten](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Visualisierungen in mobilen Reporting Services-Berichten](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 * [Datenraster in mobilen Reporting Services-Berichten](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md) 
-

@@ -1,5 +1,5 @@
 ---
-title: "Verwalten eines ausgeführten Prozesses | Microsoft Docs"
+title: Verwalten eines aktiven Prozesses | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -28,17 +28,16 @@ helpviewer_keywords:
 - displaying jobs
 - subscriptions [Reporting Services], running processes
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 103472f5003235e0e08c65c40999545ff4d864ee
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 805c1ba338d75d49e6dbd48fb6f1d8af2f5e5701
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-a-running-process"></a>Verwalten eines ausgeführten Prozesses
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] überwacht den Status von Aufträgen, die auf dem Berichtsserver ausgeführt werden. Die in Bearbeitung befindlichen Aufträge werden in regelmäßigen Abständen vom Berichtsserver gescannt und die Statusinformationen in die Berichtsserver-Datenbank bzw. bei Verwendung des SharePoint-Modus in die Dienstanwendungs-Datenbanken geschrieben. Ein Auftrag wird verarbeitet, wenn alle folgenden Prozesse ausgeführt werden: Abfrageausführung auf einem Remote- oder auf einem lokalen Datenbankserver, Berichtsverarbeitung und Berichtsrendering.  
@@ -59,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Standardabonnements von einzelnen Benutzern.  
   
- Durch das Abbrechen eines Auftrags werden nur die Prozesse beendet, die auf dem Berichtsserver ausgeführt werden. Da der Berichtsserver keine Datenverarbeitung auf anderen Computern verwaltet, müssen Sie Abfrageprozesse, die anschließend auf anderen Systemen verwaist sind, manuell abbrechen. Geben Sie möglichst Timeoutwerte an, um Abfragen automatisch zu beenden, deren Ausführung zu lange dauert. Weitere Informationen finden Sie unter [Festlegen von Timeoutwerten für Bericht und freigegebene Dataset Processing &#40; SSRS &#41; ](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). Weitere Informationen zum vorübergehenden Anhalten eines Berichts finden Sie unter [Deaktivieren oder Anhalten der Berichts- und Abonnementverarbeitung](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).  
+ Durch das Abbrechen eines Auftrags werden nur die Prozesse beendet, die auf dem Berichtsserver ausgeführt werden. Da der Berichtsserver keine Datenverarbeitung auf anderen Computern verwaltet, müssen Sie Abfrageprozesse, die anschließend auf anderen Systemen verwaist sind, manuell abbrechen. Geben Sie möglichst Timeoutwerte an, um Abfragen automatisch zu beenden, deren Ausführung zu lange dauert. Weitere Informationen finden Sie unter [Festlegen von Timeoutwerten für die Verarbeitung von Berichten und freigegebenen Datasets (SSRS)](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). Weitere Informationen zum vorübergehenden Anhalten eines Berichts finden Sie unter [Deaktivieren oder Anhalten der Berichts- und Abonnementverarbeitung](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).  
   
 > [!NOTE]  
 >  In seltenen Fällen müssen Sie den Server neu starten, um einen Prozess abzubrechen. Im SharePoint-Modus muss der Anwendungspool, in dem die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung gehostet wird, u. U. neu gestartet werden. Weitere Informationen finden Sie unter [Starten und Beenden des Berichtsserverdiensts](../../reporting-services/report-server/start-and-stop-the-report-server-service.md).  
@@ -126,11 +125,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Berichtsserveraufträge abbrechen &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)   
- [Auftragseigenschaften &#40; Management Studio &#41;](../../reporting-services/tools/job-properties-management-studio.md)   
- [Ändern einer Reporting Services-Konfigurationsdatei &#40; "Rsreportserver.config" &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Auftragseigenschaften (Management Studio)](../../reporting-services/tools/job-properties-management-studio.md)   
+ [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [RsReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Berichts-Manager &#40; SSRS im einheitlichen Modus &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Monitoring Report Server Performance (Überwachen der Leistung des Berichtsservers)](../../reporting-services/report-server/monitoring-report-server-performance.md)  
   
   
-

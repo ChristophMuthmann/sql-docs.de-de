@@ -1,5 +1,5 @@
 ---
-title: "Ändern der Zeilenhöhe oder der Spaltenbreite (Berichts-Generator und SSRS) | Microsoft Docs"
+title: "Ändern der Zeilenhöhe oder der Spaltenbreite (Berichts-Generator und SSRS) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 085a86b5ae97ea07a33049c0755af2677a3c5217
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 6b1a6cf8ee0f04929c645854c5f162d30ce04405
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>Ändern der Zeilenhöhe oder der Spaltenbreite (Berichts-Generator und SSRS)
   Wenn Sie eine Zeilenhöhe festlegen, legen Sie damit die maximale Höhe der Zeile im gerenderten Bericht fest. Textfelder in einer Zeile passen sich jedoch zur Laufzeit automatisch vertikal an die darin enthaltenen Daten an. Dies kann dazu führen, dass eine Zeile über die festgelegte Höhe hinausgeht. Wenn Sie eine feste Zeilenhöhe definieren möchten, müssen Sie die Textfeldeigenschaften so ändern, dass sich die Zeile nicht automatisch ausdehnt.  
@@ -45,11 +44,11 @@ ms.lasthandoff: 09/27/2017
   
 1.  Klicken Sie in der Ansicht Entwurf auf eine Zelle in der Tabellenzeile.  
   
-     ![Ausgewählte Zelle in einer Tabelle](../../reporting-services/report-design/media/table-selectcell.png "ausgewählte Zelle in einer Tabelle")  
+     ![Ausgewählte Zelle in einer Tabelle](../../reporting-services/report-design/media/table-selectcell.png "Selected Cell in a Table")  
   
 2.  Ändern Sie im angezeigten Bereich **Eigenschaften** die Eigenschaft **Höhe** , und klicken Sie anschließend auf eine beliebige Stelle außerhalb des Bereichs **Eigenschaften** .  
   
-     ![Bereich "Eigenschaften" für ausgewählte Tabellenzelle](../../reporting-services/report-design/media/cell-propertiespane.png "Bereich "Eigenschaften" für ausgewählte Tabellenzelle")  
+     ![Eigenschaftenbereich für ausgewählte Tabellenzelle](../../reporting-services/report-design/media/cell-propertiespane.png "Properties Pane for selected table cell")  
   
 ### <a name="to-prevent-a-row-from-automatically-expanding-vertically"></a>So deaktivieren Sie die automatische Ausdehnung einer Zeile  
   
@@ -72,11 +71,10 @@ ms.lasthandoff: 09/27/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Tablix-Datenbereich (Berichts-Generator und SSRS)](tablix-data-region-report-builder-and-ssrs.md)   
- [Tablix-Datenbereichszelle, Zeilen und Spalten (Berichts-Generator) und SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
+ [Zellen, Zeilen und Spalten des Tablix-Datenbereichs (Berichts-Generator und SSRS)](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
  [Tabellen (Berichts-Generator und SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [Matrizen (Berichts-Generator und SSRS)](create-a-matrix-report-builder-and-ssrs.md)   
  [Listen (Berichts-Generator und SSRS)](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen (Berichts-Generator und SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: ConfigurationSetting Eigenschaft - VirtualDirectoryReportServer | Microsoft Docs
+title: 'ConfigurationSetting-Eigenschaft: VirtualDirectoryReportServer | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- VirtualDirectoryReportServer property
+helpviewer_keywords: VirtualDirectoryReportServer property
 ms.assetid: 3e0e860a-afe9-47ce-ae6a-f8c7ca26494f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 51dad011a884370b009e7bb43e9012079859aca8
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 68879d004cae62d22353431666fe920c26f7c0ae
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-property---virtualdirectoryreportserver"></a>ConfigurationSetting Eigenschaft - VirtualDirectoryReportServer
+# <a name="configurationsetting-property---virtualdirectoryreportserver"></a>ConfigurationSetting-Eigenschaft: VirtualDirectoryReportServer
   Gibt das virtuelle Verzeichnis für die Berichtsserveranwendung zurück. Schreibgeschützt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -51,4 +49,3 @@ public string VirtualDirectoryReportServer;
  [MSReportServer_ConfigurationSetting-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Die e-Mail-Übermittlung in Reporting Services | Microsoft Docs"
+title: "E-Mail-Übermittlung in Reporting Services | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - e-mail [Reporting Services]
 - mail [Reporting Services]
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0b50ccb5717de8f64f915d7cbedc663ec8345400
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 1698558dcfe2a7d31b6050295e714337dbe66b01
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>E-Mail-Übermittlung in Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält eine E-Mail-Übermittlungserweiterung, mit der Sie einen Bericht per E-Mail an einzelne Benutzer oder Gruppen senden können. Um einen Bericht per E-Mail zu verteilen, 1) konfigurieren Sie den Berichtsserver für die E-Mail-Zustellung und 2) definieren entweder ein Standardabonnement oder ein datengesteuertes Abonnement. Ein einzelnes Abonnement kann nicht mehrere Berichte in einer einzigen E-Mail-Nachricht übermitteln. Sie können jedoch mehrere Abonnements erstellen.  
@@ -89,7 +88,7 @@ ms.lasthandoff: 09/27/2017
  Für einen Berichtsserver im einheitlichen Modus wird die E-Mail-Übermittlungserweiterung mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager im einheitlichen Modus und durch Bearbeiten der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationsdateien konfiguriert. Für einen Berichtsserver im SharePoint-Modus wird die E-Mail-Übermittlungserweiterung auf SharePoint-Verwaltungsseiten und in PowerShell-Skripts konfiguriert.  
   
  
- Informationen zum Konfigurieren eines Berichtsservers im einheitlichen Modus finden Sie unter [e-Mail-Einstellungen - Reporting Services im einheitlichen Modus (Konfigurations-Manager)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)
+ Informationen zum Konfigurieren eines Berichtsservers im einheitlichen Modus finden Sie unter [E-Mail-Einstellungen: einheitlicher Modus von Reporting Services (Konfigurations-Manager)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).
  
  
  Informationen zum Konfigurieren eines Berichtsservers im SharePoint-Modus finden Sie im folgenden Thema:  
@@ -102,4 +101,3 @@ ms.lasthandoff: 09/27/2017
  [Role Assignments (Rollenzuweisungen)](../../reporting-services/security/role-assignments.md)  
   
   
-

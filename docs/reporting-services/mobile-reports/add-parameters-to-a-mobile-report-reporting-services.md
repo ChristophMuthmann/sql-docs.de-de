@@ -1,29 +1,27 @@
 ---
-title: "Hinzufügen von Parametern zu einem mobilen Bericht | Reporting Services | Microsoft Docs"
+title: "Hinzufügen von Parametern zu einem mobilen Bericht | Reporting Services | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 11/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 113cb057-deec-40eb-abc8-f35d3900eaa6
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6fad62a6549f4b9752bde07e39f53175768a68cb
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2acc30da2fa25f1cfedb1f07bcdadc4f9be9d295
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-parameters-to-a-mobile-report--reporting-services"></a>Hinzufügen von Parametern zu einem mobilen Bericht | Reporting Services
-Sie können mobile [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]-Berichte mit Parametern erstellen, sodass Sie und die Leser des Berichts Ihre Berichte filtern können. Berichte mit Parametern können auch Ziel eines [Drillthrough aus einem Zielbericht](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md)sein. 
+Sie können mobile [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichte mit Parametern erstellen, sodass Sie und die Leser des Berichts Ihre Berichte filtern können. Berichte mit Parametern können auch Ziel eines [Drillthrough aus einem Zielbericht](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md)sein. 
 
 Beginnen Sie mit einem freigegebenen Dataset mit mindestens einem Parameter, um einen mobilen Bericht mit Parametern zu erstellen. Erfahren Sie mehr über das [Erstellen von Parametern in einem freigegebenen Dataset](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
 
@@ -68,5 +66,4 @@ Nachdem Sie einem mobilen Bericht Parameter hinzugefügt haben, erstellen Sie ei
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher (Erstellen und Veröffentlichen von mobilen Berichten mit dem Publisher für mobile Berichte von SQL Server)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   
-
 

@@ -1,5 +1,5 @@
 ---
-title: "Gewähren von Benutzerzugriff auf einem Berichtsserver | Microsoft Docs"
+title: "Gewähren von Benutzerzugriff auf einen Berichtsserver | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-server-2016
@@ -17,16 +17,15 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a92c37165b8142b7e96a8bb99dee43ea5f12e247
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="grant-user-access-to-a-report-server"></a>Gewähren von Benutzerzugriff auf einen Berichtsserver
 
@@ -36,7 +35,7 @@ ms.lasthandoff: 08/09/2017
 
  **Berichtsserver im SharePoint-Modus:** Für Berichtsserver, die für den integrierten SharePoint-Modus konfiguriert sind, muss der Zugriff von einer SharePoint-Website mit SharePoint-Berechtigungen konfiguriert werden. Die Berechtigungsebenen der SharePoint-Website legen den Zugriff auf Berichtsserverinhalt und -vorgänge fest. Sie müssen Websiteadministrator sein, um Berechtigungen auf einer SharePoint-Website gewähren zu können. Weitere Informationen finden Sie unter [Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md).
 
- **Berichtsserver im einheitlichen Modus:** diesem Thema liegt der Schwerpunkt auf einem Berichtsserver, der für den einheitlichen Modus und die Verwendung des Webportals zum Zuweisen von Benutzern zu einer Rolle konfiguriert ist. Die folgenden beiden Rollen stehen zur Verfügung:
+ **Berichtsserver im einheitlichen Modus:** In diesem Thema liegt der Schwerpunkt auf einem für den einheitlichen Modus konfigurierten Berichtsserver und der Verwendung des Webportals zum Zuweisen von Benutzern zu Rollen. Die folgenden beiden Rollen stehen zur Verfügung:
 
 - Rollen auf Elementebene werden verwendet, um Berichtsserverinhalte, Abonnements, Berichtsverarbeitung und Berichtsverlauf anzuzeigen, hinzuzufügen und zu verwalten. Rollenzuweisungen auf Elementebene werden im Stammknoten (dem Stammordner) oder in bestimmten Ordnern oder Elementen weiter unten in der Hierarchie definiert.
 
@@ -52,28 +51,28 @@ ms.lasthandoff: 08/09/2017
 
 - Um diese Aufgabe an andere Benutzer zu delegieren, erstellen Sie Rollenzuweisungen, die Benutzerkonten den Rollen Inhalts-Manager und Systemadministrator zuordnen. Benutzer, die über Inhalts-Manager- und Systemadministrator-Berechtigungen verfügen, können einem Berichtsserver Benutzer hinzufügen.
 
-- Sehen Sie sich in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]die vordefinierten Systemrollen und Benutzerrollen an, damit Ihnen die mit den einzelnen Rollen verbundenen Tasks vertraut sind. Damit werden die Rollen kennen sollten, bevor Sie Benutzer hinzufügen möchten, stehen keine Taskbeschreibungen im Webportal angezeigt.
+- Sehen Sie sich in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]die vordefinierten Systemrollen und Benutzerrollen an, damit Ihnen die mit den einzelnen Rollen verbundenen Tasks vertraut sind. Im Webportal werden keine Aufgabenbeschreibungen angezeigt, sodass Sie die Rollen kennen sollten, bevor Sie Benutzer hinzufügen.
 
 - Passen Sie die Rollen optional an, oder definieren Sie zusätzliche Rollen, um die Auflistung von benötigten Tasks einzuschließen. Wenn Sie zum Beispiel benutzerdefinierte Sicherheitseinstellungen für einzelne Elemente verwenden möchten, können Sie eine neue Rollendefinition erstellen, die Lesezugriff für Ordner gewährt.
 
 ### <a name="to-add-a-user-or-group-to-a-system-role"></a>So fügen Sie einer Systemrolle einen Benutzer oder eine Gruppe hinzu
 
-1. Starten Sie die [Webportal](../web-portal-ssrs-native-mode.md).
+1. Starten Sie das [Webportal](../web-portal-ssrs-native-mode.md).
 
-2. Wählen Sie die *Zahnradsymbol* in der oberen rechten Ecke.
+2. Klicken Sie auf das *Zahnradsymbol* in der oberen rechten Ecke.
 
 3. Wählen Sie **Siteeinstellungen**aus.
 
 4. Wählen Sie **Sicherheit**.
 
-5. Wählen Sie **Benutzer oder Gruppe hinzufügen**.
+5. Klicken Sie auf **Gruppe oder Benutzer hinzufügen**.
 
-6. In **Gruppen- oder Benutzernamen**, geben Sie ein Windows-Domänenbenutzer oder ein-Gruppenkonto im folgenden Format: \<Domäne >\\< Konto\>. 
+6. Geben Sie unter **Gruppe oder Benutzer** ein Windows-Domänenbenutzer- oder -Gruppenkonto im folgenden Format ein: \<Domäne>\\<Konto\>. 
 
     > [!NOTE]
     > Wenn Sie die Formularauthentifizierung oder die benutzerdefinierte Sicherheit verwenden, geben Sie das Benutzer- oder Gruppenkonto in dem für Ihre Bereitstellung richtigen Format an.
 
-7. Wählen Sie eine Systemrolle aus, und wählen Sie dann **OK**.
+7. Wählen Sie eine Systemrolle aus, und klicken Sie anschließend auf **OK**.
 
     Rollen sind kumulativ, das heißt, wenn Sie sowohl die Systemadministrator- als auch die Systembenutzerrolle wählen, kann ein Benutzer oder eine Gruppe die Tasks beider Rollen ausführen.
 
@@ -81,31 +80,31 @@ ms.lasthandoff: 08/09/2017
 
 ### <a name="to-add-a-user-or-group-to-an-item-role"></a>So fügen Sie einem Benutzer oder einer Gruppe eine Elementrolle hinzu
 
-1. Starten Sie die **Webportal** und suchen Sie das Berichtselement, das für die Sie einen Benutzer oder Gruppe hinzufügen möchten.
+1. Starten Sie das **Webportal**, und suchen Sie das Berichtselement, für das Sie einen Benutzer oder eine Gruppe hinzufügen möchten.
 
-2. Wählen Sie die **...**  (Ellipse) auf ein Element.
+2. Klicken Sie auf die Auslassungspunkte (**...**) eines Elements.
 
-3. Wählen Sie in der Dropdown-Menü **verwalten**.
+3. Klicken Sie im Dropdownmenü auf **Verwalten**.
 
 4. Wählen Sie **Sicherheit**.
 
-5. Wählen Sie **Benutzer oder Gruppe hinzufügen**.
+5. Klicken Sie auf **Gruppe oder Benutzer hinzufügen**.
 
     > [!NOTE]
-    > Wenn ein Element aktuell die Sicherheitseinstellungen eines übergeordneten Elements erbt, wählen Sie **anpassen Sicherheit** in der Symbolleiste, um die Sicherheitseinstellungen zu ändern. Wählen Sie dann **Benutzer oder Gruppe hinzufügen**.
+    > Falls ein Element aktuell die Sicherheitseinstellungen eines übergeordneten Elements erbt, klicken Sie auf der Symbolleiste auf **Sicherheit anpassen**, um die Sicherheitseinstellungen zu ändern. Klicken Sie dann auf **Gruppe oder Benutzer hinzufügen**.
 
-6. In **Gruppen- oder Benutzernamen**, geben Sie ein Windows-Domänenbenutzer oder ein-Gruppenkonto im folgenden Format: \<Domäne >\\< Konto\>. Wenn Sie die Formularauthentifizierung oder die benutzerdefinierte Sicherheit verwenden, geben Sie das Benutzer- oder Gruppenkonto in dem für Ihre Bereitstellung richtigen Format an.
+6. Geben Sie unter **Gruppe oder Benutzer** ein Windows-Domänenbenutzer- oder -Gruppenkonto im folgenden Format ein: \<Domäne>\\<Konto\>. Wenn Sie die Formularauthentifizierung oder die benutzerdefinierte Sicherheit verwenden, geben Sie das Benutzer- oder Gruppenkonto in dem für Ihre Bereitstellung richtigen Format an.
 
-7. Wählen Sie eine oder mehrere Rollendefinitionen, die beschreiben, wie der Benutzer oder die Gruppe sollte Zugriff auf das Element, und wählen Sie dann **OK**.
+7. Wählen Sie mindestens eine Rollendefinition aus, die beschreibt, wie der Benutzer oder die Gruppe auf das Element zugreifen soll, und klicken Sie dann auf **OK**.
 
 8. Wiederholen Sie den Vorgang, um weiteren Benutzern oder Gruppen Rollen zuzuweisen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Erstellen und Verwalten von Rollenzuweisungen](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[Neue Rollenzuweisung: Bearbeiten Sie, Seite "Zuordnung" "&#40; Berichts-Manager &#41;](http://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
-[Sicherheit-Eigenschaftenseite, Elemente &#40; Berichts-Manager &#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
+[Neue Rollenzuweisung: Seite „Rollenzuweisung bearbeiten“ &#40;Berichts-Manager&#41;](http://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
+[Sicherheit (Eigenschaftenseite) &#40;Elemente, Berichts-Manager&#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
 [Rollenzuweisungen](../../reporting-services/security/role-assignments.md)   
 [Rollendefinitionen](../../reporting-services/security/role-definitions.md)  
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

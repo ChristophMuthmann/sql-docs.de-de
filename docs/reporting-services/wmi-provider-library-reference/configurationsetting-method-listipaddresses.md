@@ -1,5 +1,5 @@
 ---
-title: 'ListIPAddresses-Methode (WMI: MSReportServer_ConfigurationSetting) | Microsoft Docs'
+title: 'ListIPAddresses-Methode (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ListIPAddresses method
+helpviewer_keywords: ListIPAddresses method
 ms.assetid: 7e7cf182-fba0-4604-a474-098461e23e9d
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 04634adefc625bc1ac973bd651916850115d3c0b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fab56872fc19c7da09a6cf94928eff70022710e1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---listipaddresses"></a>ConfigurationSetting Methode - ListIPAddresses
+# <a name="configurationsetting-method---listipaddresses"></a>ConfigurationSetting-Methode: ListIPAddresses
   Listet die IP-Adressen für den Berichtsservercomputer auf.  
   
 ## <a name="syntax"></a>Syntax  
@@ -73,4 +71,3 @@ public void ListIPAddresses (out string[] IPAddress,
  [MSReportServer_ConfigurationSetting-Member](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

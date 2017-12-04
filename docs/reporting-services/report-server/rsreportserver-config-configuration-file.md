@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 967dfebc4add43efb039a3b5eb54f8e5d20f1fab
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.workload: Active
+ms.openlocfilehash: 68a812ca454de6c9ee1784d33cfb5e0730957fbd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RSReportServer.config-Konfigurationsdatei
 In der Datei [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** werden Einstellungen gespeichert, die vom Berichtsserver-Webdienst und der Hintergrundverarbeitung verwendet werden. Alle [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Anwendungen werden innerhalb eines einzelnen Prozesses ausgeführt, der die in der Datei RSReportServer.config gespeicherten Konfigurationseinstellungen liest. Sowohl der Berichtsserver im einheitlichen als auch der Berichtsserver im SharePoint-Modus verwenden "Rsreportserver.config". Die zwei Modi verwenden jedoch nicht alle gleichen Einstellungen in der Konfigurationsdatei. Die SharePoint-Modusversion der Datei ist kleiner, da viele der Einstellungen für den SharePoint-Modus in den SharePoint-Konfigurationsdatenbanken und nicht in der Datei gespeichert werden. In diesem Thema werden die für den einheitlichen und den SharePoint-Modus installierte Standardkonfigurationsdatei sowie einige wichtige Einstellungen und Verhaltensweisen beschrieben, die von der Konfigurationsdatei gesteuert werden.  
@@ -77,7 +77,7 @@ Weitere Informationen zum Bearbeiten dieser Datei finden Sie unter [Ändern eine
 |**DisableSecureFormsAuthenticationCookie**|Der Standardwert ist False.<br /><br /> Gibt an, ob der Vorgang deaktiviert wird, durch den erzwungen wird, dass das für Formular- und benutzerdefinierte Authentifizierungen verwendete Cookie als sicher gekennzeichnet wird. Ab SQL Server 2012 werden die mit benutzerdefinierten Authentifizierungserweiterungen verwendeten Formularauthentifizierungscookies beim Senden an den Client von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] automatisch als sichere Cookies gekennzeichnet. Indem diese Eigenschaft geändert wird, können Berichtsserveradministratoren und Autoren von benutzerdefinierten Sicherheitserweiterungen wieder zum früheren Verhalten zurückkehren, bei dem der Autor der benutzerdefinierten Sicherheitserweiterung bestimmen konnte, ob das Cookie als sicheres Cookie gekennzeichnet werden soll. Es wird empfohlen, für die Formularauthentifizierung sichere Cookies zu verwenden, um die Netzwerkermittlung und Wiederholungsangriffe zu verhindern.|N|  
 |**CleanupCycleMinutes**|Gibt die Anzahl von Minuten an, nach der alte Sitzungen und abgelaufene Momentaufnahmen aus den Berichtsserver-Datenbanken entfernt werden. Gültige Werte sind 0 bis zu einer maximalen ganzen Zahl. Der Standardwert ist 10. Wenn Sie den Wert 0 festlegen, wird der Cleanupprozess der Datenbank deaktiviert.|N,S|  
 |**MaxActiveReqForOneUser**|Gibt die maximale Anzahl von Berichten an, die gleichzeitig von einem Benutzer verarbeitet werden können. Bei Erreichen dieses Grenzwerts werden weitere Berichtsverarbeitungsanforderungen abgelehnt. Gültige Werte sind 1 bis zu einer maximalen ganzen Zahl. Der Standardwert ist 20.<br /><br /> Beachten Sie, dass die meisten Anforderungen sehr schnell verarbeitet werden. Von daher ist es unwahrscheinlich, dass ein einzelner Benutzer mehr als 20 Verbindungen gleichzeitig geöffnet hat. Falls Benutzer mehr als 15 verarbeitungsintensive Berichte gleichzeitig öffnen, müssen Sie diesen Wert möglicherweise erhöhen.<br /><br /> Diese Einstellung wird für Berichtsserver ignoriert, die im integrierten SharePoint-Modus ausgeführt werden.|N,S|  
-|**MaxActiveReqForAnonymous**|Gibt die maximale Anzahl der anonymen Anforderungen, die gleichzeitig im Prozess sein kann. Sobald der Grenzwert erreicht ist, werden weitere verarbeitungsanforderungen abgelehnt. Gültige Werte sind 1 bis zu einer maximalen ganzen Zahl. Der Standardwert ist 200.
+|**MaxActiveReqForAnonymous**|Gibt die maximale Anzahl von anonymen Anforderungen an, die gleichzeitig verarbeitet werden können. Bei Erreichen dieses Grenzwerts werden weitere Verarbeitungsanforderungen abgelehnt. Gültige Werte sind 1 bis zu einer maximalen ganzen Zahl. Der Standardwert ist 200.
 |**DatabaseQueryTimeout**|Gibt die Anzahl von Sekunden an, nach der für eine Verbindung zur Berichtsserver-Datenbank ein Timeout auftritt. Dieser Wert wird an die System.Data.SQLClient.SQLCommand.CommandTimeout-Eigenschaft übergeben. Gültige Werte reichen von 0 bis 2147483647. Der Standardwert lautet 120. Ein Wert von 0 gibt eine unbegrenzte Wartezeit an und wird deshalb nicht empfohlen.|N|  
 |**AlertingCleanupCycleMinutes**|Der Standardwert ist 20.<br /><br /> Bestimmt, wie häufig die in der Warnungsdatenbank gespeicherten temporären Daten bereinigt werden.|S|  
 |**AlertingDataCleanupMinutes**|Der Standardwert ist 360.<br /><br /> Bestimmt, wie lange Sitzungsdaten, die zum Erstellen oder Bearbeiten einer Warnungsdefinition verwendet werden, in der Warnungsdatenbank beibehalten werden. Der Standardwert ist 6 Stunden.|S|  
@@ -847,7 +847,6 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
  [Initialisieren eines Berichtsservers (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Speichern verschlüsselter Berichtsserverdaten (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
- Haben Sie dazu Fragen? [Wiederholen Sie den Reporting Services-forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+ Haben Sie dazu Fragen? [Besuchen Sie das Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
-

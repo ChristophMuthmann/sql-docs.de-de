@@ -1,5 +1,5 @@
 ---
-title: "Messgeräte (Berichts-Generator und SSRS) | Microsoft Docs"
+title: "Messgeräte (Berichts-Generator und SSRS) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -159,17 +159,16 @@ f1_keywords:
 - "10190"
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8e9aa0032e0610b73c28ff50c7c8f616cca6a2fd
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5c0b12e57fd5917ee91a4191d87c3e354248928a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Messgeräte (Berichts-Generator und SSRS)
   In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten zeigt ein Messgerätdatenbereich einen einzelnen Wert aus Ihrem Dataset an. Einzelne Messgeräte werden stets in einem Messgerätbereich positioniert, dem untergeordnete oder benachbarte Messgeräte hinzugefügt werden können. Innerhalb eines einzelnen Messgerätbereichs können Sie mehrere Messgeräte mit einheitlichen Funktionen wie Filtern, Gruppieren oder Sortieren erstellen.  
@@ -184,7 +183,7 @@ ms.lasthandoff: 08/09/2017
   
  Es gibt zwei Typen von Messgeräten: radiale und lineare Messgeräte. Die folgende Abbildung zeigt die grundlegenden Elemente eines einzelnen radialen Messgeräts im Messgerätbereich.  
   
- ![Diagramm mit messgerätelementen](../../reporting-services/report-design/media/gauge-elements-diagram.gif "Diagramm mit Messgerätelementen")  
+ ![Diagramm mit Messgerätelementen](../../reporting-services/report-design/media/gauge-elements-diagram.gif "Gauge elements diagram")  
   
  Weitere Informationen zur Verwendung von Messgeräten als KPIs finden Sie unter [Tutorial: Hinzufügen eines KPIS zu einem Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
@@ -198,19 +197,19 @@ ms.lasthandoff: 08/09/2017
   
  Lineare Messgeräte sind rechteckig, horizontal oder vertikal ausgerichtet und ähneln Linealen. Die Messgerätzeiger sind oft Thermometer, können jedoch auch Marker oder Balken sein. Aufgrund seiner Form ist dieser Messgerättyp hilfreich beim Integrieren in die Tabellen- oder Matrixdatenbereiche, um die Fortschrittsdaten anzuzeigen.  
   
- Abgesehen von diesen Unterschieden sind die zwei Messgerättypen austauschbar. Wenn Sie jedoch im Bericht ein einfaches Messgerät verwenden müssen, sollten Sie erwägen, einen Indikator anstelle eines Messgeräts zu verwenden. Weitere Informationen finden Sie unter [Indikatoren &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
+ Abgesehen von diesen Unterschieden sind die zwei Messgerättypen austauschbar. Wenn Sie jedoch im Bericht ein einfaches Messgerät verwenden müssen, sollten Sie erwägen, einen Indikator anstelle eines Messgeräts zu verwenden. Weitere Informationen finden Sie unter [Indikatoren (Berichts-Generator und SSRS)](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
  In den folgenden Abbildungen werden radiale und lineare Messgeräte angezeigt. Das radiale Messgerät ist rund und verwendet den Nadelzeiger. Das lineare Messgerät ist horizontal und verwendet den Thermometerzeiger.  
   
  **Radiales Messgerät**  
   
- ![Rs_RadialGauge](../../reporting-services/report-design/media/rs-radialgauge.gif "Rs_RadialGauge")  
+ ![rs_RundesMessgerät](../../reporting-services/report-design/media/rs-radialgauge.gif "rs_RadialGauge")  
   
  Optionen für radiale Messgeräte: "Radial", "Radial mit kleinem Messgerät", "Zwei Skalen", "90 Grad Nordost", "90 Grad Nordwest", "90 Grad Südwest", "90 Grad Südost", "180 Grad Nord", "180 Grad Süd", "180 Grad West", "180 Grad Ost" und "Messgerät".  
   
  **Lineares Messgerät**  
   
- ![Rs_LinearGauge](../../reporting-services/report-design/media/rs-lineargauge.gif "Rs_LinearGauge")  
+ ![rs_LinearesMessgerät](../../reporting-services/report-design/media/rs-lineargauge.gif "rs_LinearGauge")  
   
  Optionen für lineare Messgeräte: "Horizontal", "Vertikal", "Mehrere Balkenzeiger", "Zwei Skalen", "Drei Farbbereiche", "Logarithmisch", "Thermometer", "Thermometer Fahrenheit/Celsius" und "Lineardiagramm".  
   
@@ -306,10 +305,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Filter, Gruppen, und Sortieren von Daten &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Berichtsparameter &#40; Berichts-Generator und Berichts-Designer &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Diagramme &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Tabellen, Matrizen und Listen &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

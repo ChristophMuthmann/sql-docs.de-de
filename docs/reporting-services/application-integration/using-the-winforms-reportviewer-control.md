@@ -1,5 +1,5 @@
 ---
-title: "Verwenden das ReportViewer-Steuerelement für WinForms | Microsoft Docs"
+title: Verwenden des ReportViewer-Steuerelements in WinForms | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/06/2016
 ms.prod: sql-server-2016
@@ -10,56 +10,53 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ReportViewer controls
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: ReportViewer controls
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4b6a64a6d5832461e7d1d73597499e6a67e4bc4b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b8a315338fec870de62e1705f84c1396d1570520
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Verwenden des ReportViewer-Steuerelements in WinForms
   Zur Anzeige von Berichten, die auf einem Berichtsserver bereitgestellt werden oder die sich auf einem lokalen Dateisystem befinden, können Sie das ReportViewer-Steuerelement für WinForms verwenden, um die Berichte in eine Windows-Anwendung zu rendern.  
   
 ## <a name="to-add-the-reportviewer-control-to-a-windows-application"></a>So fügen Sie das ReportViewer-Steuerelement zu einer Windows-Anwendung hinzu  
   
-1.  Erstellen einer neuen Windows-Anwendung, die entweder [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+1.  Erstellen Sie entweder mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] oder mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] eine neue Windows-Anwendung.  
   
-     \-"Oder" -  
+     \- Oder –  
   
      Öffnen Sie ein bestehendes Windows-Anwendungsprojekt, und fügen Sie ein neues Formular hinzu.  
   
-2.  Suchen Sie das ReportViewer-Steuerelement in der **Toolbox**. Wenn die **Toolbox** ist nicht sichtbar ist, Sie können darauf zugreifen aus der **Ansicht** Menü dazu **Toolbox**.  
+2.  Suchen Sie das ReportViewer-Steuerelement in der **Toolbox**. Wenn die **Toolbox** nicht sichtbar ist, können Sie über das Menü **Ansicht** darauf zugreifen, indem Sie auf **Toolbox** klicken.  
   
-     ![Auswählen des ReportViewer-Steuerelement](../../reporting-services/application-integration/media/windowsapp-toolboxreportviewer.png "auswählen ReportViewer-Steuerelement")  
+     ![Auswählen des ReportViewer-Steuerelements](../../reporting-services/application-integration/media/windowsapp-toolboxreportviewer.png "Selecting ReportViewer control")  
   
 3.  Ziehen Sie das ReportViewer-Steuerelement auf die Entwurfsoberfläche der Windows Form.  
   
      Ein als reportViewer1 bezeichnete ReportViewer-Steuerelement wird zum Formular hinzugefügt.  
   
- Nachdem das Steuerelement dem Formular hinzugefügt wird die **ReportViewer-Aufgaben** Smarttag angezeigt und fordert Sie auf einen Bericht auszuwählen.  
+ Nachdem das Steuerelement zum Formular hinzugefügt wurde, wird das SmartTag **ReportViewer-Aufgaben** angezeigt, und Sie werden aufgefordert, einen Bericht auszuwählen.  
   
- Wenn der Bericht, die Sie anzeigen möchten auf einem Berichtsserver bereitgestellt wurde die  **\<Serverbericht >** option die **Bericht auswählen** Dropdown-Liste. Nach der  **\<Serverbericht >** ausgewählt ist, werden zwei weitere Eigenschaften angezeigt: **Berichtsserver-Url** und **Berichtspfad**. Die **Berichtsserver-Url** ist die Adresse auf dem Berichtsserver und die **Berichtspfad** ist der vollständige Pfad zum Rendern des Berichts.  
+ Wenn der Bericht, den Sie anzeigen möchten, auf einem Berichtsserver bereitgestellt wurde, wählen Sie die Option **\<Server Report>** aus der Dropdownliste **Bericht wählen**. Nachdem die Option **\<Server Report>** aktiviert wurde, werden zwei weitere Eigenschaften angezeigt: **Berichtsserver-URL** und **Berichtspfad**. Die **Berichtsserver-URL** entspricht der Adresse des Berichtsservers, und der **Berichtspfad** entspricht dem vollen Pfad zu dem Bericht, der gerendert werden soll.  
   
- ![Wählen Sie Serverbericht](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "Serverbericht auswählen")  
+ ![Auswählen des Serverberichts](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "Select server report")  
   
- Wenn der Bericht Sie einen Bericht im lokalen Modus anzeigen möchten, wählen Sie entweder die **einen neuen Bericht entwerfen** Option aus, um den Berichts-Designer zu starten, oder wählen Sie einen Bericht, der bereits Teil eines bestehenden Projekts ist.  
+ Wenn der Bericht, den Sie anzeigen möchten, ein Bericht im lokalen Modus ist, aktivieren Sie entweder die Option **Neuen Bericht entwerfen**, um den Berichts-Designer zu starten, oder Sie wählen einen Bericht aus, der bereits Teil eines bestehenden Projekts ist.  
   
- ![Auswählen eines lokalen Berichts](../../reporting-services/application-integration/media/windowsapp-localreportsettings.png "Auswählen eines lokalen Berichts")  
+ ![Auswählen eines lokalen Berichts](../../reporting-services/application-integration/media/windowsapp-localreportsettings.png "Select local report")  
   
 ## <a name="viewing-reports-in-remote-processing-mode"></a>Anzeigen von Berichten im Remoteverarbeitungsmodus  
- Im folgenden Beispiel wird veranschaulicht, wie ein Bericht, der mit dem ReportViewer-Steuerelement in WinForms auf einem Berichtsserver bereitgestellt wurde, gerendert wird. Dieses Beispiel verwendet die Sales Order Detail-Bericht, der in enthalten ist das [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Projekt für Beispielberichte.  
+ Im folgenden Beispiel wird veranschaulicht, wie ein Bericht, der mit dem ReportViewer-Steuerelement in WinForms auf einem Berichtsserver bereitgestellt wurde, gerendert wird. In diesem Beispiel wird der Bericht für Auftragsdetails, der im [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Projekt für Beispielberichte enthalten ist, verwendet.  
  
-**C#-**
+**C#**
 ```csharp  
 public partial class Form1 : Form  
 {  
@@ -157,34 +154,34 @@ End Class
   
 1.  Öffnen Sie das Windows-Projekt, zu dem der Bericht hinzugefügt werden soll.  
   
-2.  Aus der **Projekt** klicken Sie im Menü **vorhandenes Element hinzufügen**.  
+2.  Klicken Sie im Menü **Projekt** auf **Vorhandenes Element hinzufügen**.  
   
 3.  Wechseln Sie zu der Position, an der Sie das Projekt für [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Beispielberichte installiert haben.  
   
-     Das Herunterladen der bespielberichte navigieren Sie zu [AdventureWorks 2012-Beispielberichte](http://go.microsoft.com/fwlink/?LinkId=404153)  
+     Zum Herunterladen der Beispielberichte navigieren Sie zu [AdventureWorks 2012-Berichtsbeispiele](http://go.microsoft.com/fwlink/?LinkId=404153).  
   
-4.  Wählen Sie die Datei Sales Order Detail.rdl aus, und klicken Sie auf die **hinzufügen** Schaltfläche.  
+4.  Wählen Sie die Datei „Sales Order Detail.rdl“ aus, und klicken Sie auf die Schaltfläche **Hinzufügen**.  
   
      Die Datei Sales Order Detail.rdl sollte jetzt ein Teil des Projekts sein.  
   
-     ![Sales Order Detailbericht](../../reporting-services/application-integration/media/windowsapp-salesorderdetailreport.png "Sales Order Detailbericht")  
+     ![Umsatz, Bericht für Auftragsdetails](../../reporting-services/application-integration/media/windowsapp-salesorderdetailreport.png "Sales Order Detail Report")  
   
-5.  Mit der rechten Maustaste in die Datei Sales Order Detail.rdl im Projektmappen-Explorer, und wählen Sie **umbenennen**. Benennen Sie den Bericht zu **Sales Order Detail.rdlc** und drücken Sie die EINGABETASTE.  
+5.  Klicken Sie mit der rechten Maustaste auf die Datei „Sales Order Detail.rdl“ im Projektmappen-Explorer, und wählen Sie **Umbenennen** aus. Benennen Sie den Bericht in **Sales Order Detail.rdlc** um, und drücken Sie die EINGABETASTE.  
   
-     Projektmappen-Explorer nicht sichtbar ist, öffnen Sie es aus der **Ansicht** Menü dazu **Projektmappen-Explorer**.  
+     Wenn der Projektmappen-Explorer nicht sichtbar ist, können Sie ihn über das Menü **Ansicht** öffnen, indem Sie auf **Projektmappen-Explorer** klicken.  
   
     > [!NOTE]  
-    >  Die Dateierweiterung von Rdl zu Rdlc umbenennen, können Sie so bearbeiten Sie den Bericht mithilfe des Berichts-Designer für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)].  
+    >  Durch Umbenennen der Dateierweiterung von RDL zu RDLC können Sie den Bericht mit dem Berichts-Designer für [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] bearbeiten.  
   
-6.  Wählen Sie nach dem Umbenennen des Berichts die Datei aus, und suchen Sie das Eigenschaftenfenster. Ändern der **in Ausgabeverzeichnis kopieren** Eigenschaft **kopieren, wenn neuer**.  
+6.  Wählen Sie nach dem Umbenennen des Berichts die Datei aus, und suchen Sie das Eigenschaftenfenster. Ändern Sie die Eigenschaft **In Ausgabeverzeichnis kopieren** in **Kopieren, wenn neuer**.  
   
-     ![Einstellung für Kopieren in eine Ausgabe](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "kopieren in eine Ausgabe Konfigurieren der Einstellung")  
+     ![Konfigurieren der Einstellung für das Kopieren in eine Ausgabe](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "Configuring Copy To Output setting")  
   
-     Wenn die **Eigenschaften** nicht sichtbar ist, öffnen Sie ihn in die **Ansicht** Menü dazu **Fenster "Eigenschaften"**.  
+     Wenn das Fenster **Eigenschaften** nicht sichtbar ist, können Sie es im Menü **Ansicht** öffnen, indem Sie auf **Eigenschaftenfenster** klicken.  
   
  Mit dem folgenden Codebeispiel wird ein Dataset für die Auftragsdaten erstellt. Dann wird der Bericht für Auftragsdetails im lokalen Modus erstellt.  
 
-**C#-**
+**C#**
 ```csharp  
 public partial class Form1 : Form  
 {  
@@ -512,7 +509,6 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Integrieren von Reporting Services, die mit den ReportViewer-Steuerelementen](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
+ [Integrieren von Reporting Services mithilfe der ReportViewer-Steuerelemente](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "SharePoint-Bibliotheksübermittlung in Reporting Services | Microsoft Docs"
+title: "SharePoint-Bibliotheksübermittlung in Reporting Services | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - delivering reports [Reporting Services]
 - subscriptions [Reporting Services], SharePoint library delivery
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 18312b5d8222cc79b07eb3a33eaf3fb60454b861
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 57b269676875edbb4a250a9bfd1e45c894239282
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>SharePoint-Bibliotheksübermittlung in Reporting Services
   Falls der Berichtsserver für die SharePoint-Integration konfiguriert ist, enthält er eine Übermittlungserweiterung, mit der Sie einen Bericht an eine SharePoint-Bibliothek senden können.  
@@ -80,7 +79,7 @@ ms.lasthandoff: 08/09/2017
  Gibt eine optionale **Title** -Eigenschaft für den Bericht in der Zielbibliothek an. Dies ist eine Standardeigenschaft für alle in einer Bibliothek gespeicherten Elemente. Benutzer können angeben, ob diese Eigenschaft beim Anzeigen des Inhalts der Bibliothek auf einer SharePoint-Website angezeigt oder ausgeblendet werden soll.  
   
  Pfad  
- Gibt eine vollqualifizierte URL zur SharePoint-Bibliothek an, einschließlich der SharePoint-Webanwendung und -Website. Zum Beispiel: `http://mySharePointWeb/MySite/MyDocLib`, wobei `http://mySharePointWeb` gibt an, die Web-Anwendung, "MySite" die SharePoint-Website, und "MyDocLib" der SharePoint-Bibliothek, in dem der Bericht übermittelt werden.  
+ Gibt eine vollqualifizierte URL zur SharePoint-Bibliothek an, einschließlich der SharePoint-Webanwendung und -Website. Beispielsweise `http://mySharePointWeb/MySite/MyDocLib`, wobei `http://mySharePointWeb` die Webanwendung angibt, „MySite“ die SharePoint-Website ist und „MyDocLib“ der SharePoint-Bibliothek entspricht, an die der Bericht übermittelt wird.  
   
  Sie können keine Seite, Website oder Liste angeben. Der Zielcontainer muss eine Bibliothek auf derselben Website oder Webfarm sein.  
   
@@ -92,8 +91,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen und Verwalten von Abonnements für Berichtsserver im SharePoint-Modus](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [Abonnements und Übermittlung &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen-Verbindungen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Specify Credential and Connection Information for Report Data Sources (Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen)](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   
-

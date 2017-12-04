@@ -1,5 +1,5 @@
 ---
-title: "Übergeben von Berichtsparametern innerhalb einer URL | Microsoft Docs"
+title: "Übergeben von Berichtsparametern innerhalb einer URL | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - URL access [Reporting Services], passing parameters
 - passing parameters [Reporting Services]
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e3b076b74a6082e34dc9c489c0383fd6a5c3bd4f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d16e5466bbbdd2f15ba36540ba2cde8d0417b1dd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Übergeben von Berichtsparametern innerhalb einer URL
   Sie können Berichtsparameter an einen Bericht übergeben, indem Sie sie in eine Berichts-URL einschließen. Diesen URL-Parametern wird nichts vorangestellt, da sie direkt an das Berichtsverarbeitungsmodul übergeben werden.  
@@ -34,7 +33,7 @@ ms.lasthandoff: 08/09/2017
 >   
 >  Wenn Sie keine Proxysyntax einschließen, müssen Sie dem Parameter *rp:*voranstellen.  
   
- Alle Abfrageparameter können über entsprechende Berichtsparameter verfügen. Sie übergeben einen Abfrageparameter an einen Bericht, indem Sie den entsprechenden Berichtsparameter übergeben. Weitere Informationen finden Sie unter [Erstellen einer Abfrage im relationalen Abfrage-Designer &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
+ Alle Abfrageparameter können über entsprechende Berichtsparameter verfügen. Sie übergeben einen Abfrageparameter an einen Bericht, indem Sie den entsprechenden Berichtsparameter übergeben. Weitere Informationen finden Sie unter [Erstellen einer Abfrage im Relationalen Abfrage-Designer (Berichts-Generator und SSRS)](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
   
 > [!IMPORTANT]  
 >  Bei den Berichtsparametern wird die Groß-/Kleinschreibung beachtet.  
@@ -112,8 +111,7 @@ http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [URL-Zugriff &#40; SSRS &#41;](../reporting-services/url-access-ssrs.md)   
- [URL-Zugriffsparameterverweis](../reporting-services/url-access-parameter-reference.md)  
+ [URL-Zugriff &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
+ [URL Access Parameter Reference (URL-Zugriffsparameterverweis)](../reporting-services/url-access-parameter-reference.md)  
   
   
-

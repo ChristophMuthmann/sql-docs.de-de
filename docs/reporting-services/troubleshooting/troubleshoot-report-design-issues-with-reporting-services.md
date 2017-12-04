@@ -1,5 +1,5 @@
 ---
-title: Behandlung von Problemen mit Reporting Services | Microsoft Docs
+title: "Problembehandlung: Berichtsentwürfe in Reporting Services | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 02/27/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7646ed9709e6d293b3e72a0255efc2f3bc17eebf
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6d9a5cbd4b8065a7344eeec2d7cd495e656ec941
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Behandlung von Problemen in Reporting Services
 Probleme bei der Berichtserstellung können auftreten, wenn Sie das Berichtslayout in der Entwurfsansicht in einer Berichterstellungsanwendung erstellen. Dieses Thema soll Ihnen beim Behandeln der folgenden Probleme helfen.   
@@ -68,5 +67,4 @@ Wenn mehrere Datenbereiche oder Berichtselemente gemeinsam gruppiert werden soll
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

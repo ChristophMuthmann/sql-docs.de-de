@@ -1,27 +1,25 @@
 ---
-title: "Lernprogramm: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator) | Microsoft Docs"
+title: "Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 06/15/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: e05e6893c50dc0976b873dbd96caaf30d3dc76f6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: af11d5fdee9122663431f4f00ef5e40fb765c7b4
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)
 In diesem Tutorial verwenden Sie einen Assistenten in [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] , um ein Kreisdiagramm in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht zu erstellen. Anschließend fügen Sie einen Filter hinzu und erweitern das Diagramm. 
@@ -38,7 +36,7 @@ Die folgende Abbildung zeigt das zu erstellende Balkendiagramm mit den Umsätzen
   
  
 > [!NOTE]  
-> In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Detaillierte Anweisungen zum Navigieren auf einem Berichtsserver, erstellen Sie ein Dataset, und wählen Sie eine Datenquelle finden Sie im erste Lernprogramm dieser Reihe: [Lernprogramm: Erstellen eines einfachen Tabellenberichts &#40; Berichts-Generator &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Erstellen eines Datasets und zum Auswählen einer Datenquelle finden Sie im ersten Tutorial dieser Reihe unter [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Geschätzte Zeit zum Bearbeiten dieses Tutorials: 15 Minuten.  
   
@@ -55,7 +53,7 @@ Darin erstellen Sie ein eingebettetes Dataset, wählen eine freigegebene Datenqu
   
      Das Dialogfeld **Erste Schritte** wird angezeigt.  
   
-     ![Berichts-Generator beginnen](../reporting-services/media/rb-getstarted.png "Berichts-Generator beginnen.")  
+     ![Erste Schritte mit dem Berichts-Generator](../reporting-services/media/rb-getstarted.png "Report Builder Get Started")  
   
      Wenn das Dialogfeld **Erste Schritte** nicht angezeigt wird, klicken Sie auf **Datei** >**Neu**. Das Dialogfeld **Neuer Bericht oder neues Dataset** verfügt größtenteils über den gleichen Inhalt wie das Dialogfeld **Erste Schritte** . 
       
@@ -220,7 +218,7 @@ Standardmäßig werden die Werte auf der horizontalen Achse in einem allgemeinen
   
 2.  Klicken Sie unten im Diagramm auf die horizontale Achse, um sie auszuwählen.  
   
-3.  Auf der **Home** Registerkarte "> **Anzahl** Gruppe > **Währung**. Die horizontalen Achsenbezeichnungen werden zu Währungsbezeichnungen geändert.  
+3.  Klicken Sie auf der Registerkarte **Start** in der Gruppe **Number** (Zahl) auf **Currency** (Währung). Die horizontalen Achsenbezeichnungen werden zu Währungsbezeichnungen geändert.  
   
 3.  (Optional) Entfernen Sie die Dezimalstellen. Klicken Sie in der Nähe der Schaltfläche **Währung** zweimal auf die Schaltfläche **Dezimalstelle löschen** .  
   
@@ -308,5 +306,4 @@ Sie haben das Lernprogramm "Hinzufügen eines Balkendiagramms zu einem Bericht" 
 [Lernprogramme für den Berichts-Generator](../reporting-services/report-builder-tutorials.md)  
 [Berichts-Generator in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

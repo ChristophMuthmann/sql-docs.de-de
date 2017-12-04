@@ -3,12 +3,11 @@ title: "Editionen und unterstützte Funktionen von SQL Server 2017 | Microsoft-D
 ms.custom:
 - SQL2016_New_Updated
 - SQL2017_New_Updated
-ms.date: 09/14/2017
+ms.date: 11/10/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- server-general
+ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -35,17 +34,16 @@ helpviewer_keywords:
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
 ms.assetid: 
-caps.latest.revision: 121
+caps.latest.revision: "121"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 103b7bb90a6c0fa322062e890af2824fe363cfd8
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 5625df3149ad6386cf903d00a655e56d070bd792
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Editionen und unterstützten Funktionen von SQL Server 2017
 
@@ -69,7 +67,7 @@ Die neuesten Versionsanmerkungen und Informationen zu Neuerungen finden Sie übe
 
 ### <a name="try-sql-server"></a>Testen Sie SQL Server!    
     
-> [![Download from Evaluation Center (Herunterladen aus dem Evaluation Center)](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/) **[Download SQL Server 2017 CTP from the Evaluation Center (Herunterladen von SQL Server 2017 CTP aus dem Evaluation Center)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**    
+> [![Download aus dem Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/)**[Download SQL Server 2017 aus dem Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**    
 
 <!---    
 > ![Azure Virtual Machine small](../analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.SQL2016SP1-WS2016?tab=Overview?wt.mc_id=sqL16_vm)**   
@@ -408,4 +406,3 @@ Informationen über die Business Intelligence-Clientfeatures, die von den einzel
  
   
   
-

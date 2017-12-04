@@ -1,28 +1,25 @@
 ---
-title: 'Lektion 3: Definieren eines datengesteuerten Abonnements | Microsoft Docs'
+title: 'Lektion 3: Definieren eines datengesteuerten Abonnements | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 05/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1ae87a509d3d5d1eb55645408b63f8267498efbd
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c092a13ee59f483a993810e558be4e11f88c3716
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 In dieser Lektion des [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Tutorials verwenden Sie die datengesteuerten Abonnementseiten des [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Webportals, um eine Verbindung mit einer Abonnementdatenquelle herzustellen, um eine Abfrage zu erstellen, die Abonnementdaten abruft, und um das Resultset den Berichts- und Übermittlungsoptionen zuzuordnen.  
@@ -88,7 +85,7 @@ Parameter  |Wertquelle  | Wert/Feld
 **Renderformat** | Wert aus Dataset abrufen | Format
 **Schreibmodus**| Wert eingeben| Automatisch inkrementieren    
 **Dateierweiterung** |Wert eingeben |Wahr
-**Benutzername** | Wert eingeben | Geben Sie Ihr Domänenbenutzerkonto an. Geben Sie ihn in folgendem Format: \<Domäne >\\\<Konto >. Das Benutzerkonto muss über Berechtigungen für den Pfad verfügen, den Sie konfiguriert haben. 
+**Benutzername** | Wert eingeben | Geben Sie Ihr Domänenbenutzerkonto an. Geben Sie es im folgenden Format ein: \<Domäne>\\\<Konto>. Das Benutzerkonto muss über Berechtigungen für den Pfad verfügen, den Sie konfiguriert haben. 
 **Kennwort** | Wert eingeben | Geben Sie Ihr Kennwort ein
 
 ## <a name="report-parameters"></a>Berichtsparameter
@@ -98,12 +95,12 @@ Parameter  |Wertquelle  | Wert/Feld
 ## <a name="next-steps"></a>Nächste Schritte  
 Beim Ausführen des Abonnements werden vier Berichtsdateien an die von Ihnen angegebene Dateifreigabe übermittelt, eine für jeden Auftrag in der *Abonnenten* -Datenquelle. Jede Übermittlung muss im Hinblick auf die Daten (sie müssen sich auf einen bestimmten Auftrag beziehen), das Renderingformat und das Dateiformat eindeutig sein. Sie können jeden Bericht von dem freigegebenen Ordner aus öffnen, um sicherzustellen, dass jede Version entsprechend den von Ihnen festgelegten Abonnementoptionen angepasst wurde.  
   
-![Liste der Dateien, die vom Abonnement erstellten](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "Liste der Dateien, die vom Abonnement erstellt werden.")  
+![Liste der Dateien, die vom Abonnement erstellt werden](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "List of files created by the subscription").  
   
 Die Abonnementseite im Webportal enthält das Datum der **letzten Ausführung** und den **Status** des Abonnements. 
 **Hinweis:** Aktualisieren Sie die Seite, nachdem das Abonnement ausgeführt wurde, um die aktualisierten Informationen anzuzeigen.  
     
-![Abonnement führt im Berichts-Manager](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "Abonnement führt im Berichts-Manager")  
+![Abonnementergebnisse im Berichts-Manager](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "Subscription results in Report Manager")  
   
 Dies ist der letzte Schritt des Tutorials „Defining a Data-Driven Subscription“ (Definieren eines datengesteuerten Abonnements).   
   
@@ -115,5 +112,4 @@ Dies ist der letzte Schritt des Tutorials „Defining a Data-Driven Subscription
   
   
   
-
 

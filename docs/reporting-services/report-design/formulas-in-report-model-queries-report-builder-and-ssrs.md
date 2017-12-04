@@ -1,5 +1,5 @@
 ---
-title: Formeln in Berichts-Modell Abfragen (Berichts-Generator und SSRS) | Microsoft Docs
+title: Formeln in Berichtsmodellabfragen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,25 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10151"
+f1_keywords: "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f74c464aad45ffad0c1dfc2a40d62944446e63d7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 310d2eefcf253371e488f9e6fe5707a89b6f7ab6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>Formeln in Berichtsmodellabfragen (Berichts-Generator und SSRS)
   Formeln sind Berechnungen, die für Werte in einem Bericht ausgeführt werden, die ein Berichtsmodell als Datenquelle verwenden. Formel werden im **Dialogfeld "Formeln definieren"** im Berichtsmodell-Abfrage-Designer definiert, wenn Sie eine Abfrage für eine Berichtsmodell-Datenquelle definieren. Eine Formel kann Funktionen, Operatoren, Konstanten und Verweise auf Felder oder Entitäten enthalten. Mithilfe von Formeln können Sie numerische und Textdaten kombinieren, aggregieren, filtern und auswerten. Sie können Formeln erstellen und als neue Felder speichern oder die Formeln vorhandener Felder ändern.  
   
- Formeln sind keine RDL-Ausdrücke und beginnen nicht mit einem Gleichheitszeichen (=). Weitere Informationen zu RDL finden Sie unter [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
+ Formeln sind keine RDL-Ausdrücke und beginnen nicht mit einem Gleichheitszeichen (=). Weitere Informationen zu RDL-Ausdrücken finden Sie unter [Ausdrücke (Berichts-Generator und SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
  Formeln können folgendermaßen aussehen:  
   
@@ -63,7 +61,7 @@ ms.lasthandoff: 08/09/2017
   
  Mithilfe von Funktionen können einfache oder komplexe Berechnungen ausgeführt werden. Die Struktur einer Funktion beginnt mit dem Funktionsnamen, gefolgt von einer öffnenden Klammer, den Argumenten für die Funktion, die durch Kommas voneinander getrennt sind, und einer schließenden Klammer.  
   
- ![Ein Beispiel einer Funktion. ] (../../reporting-services/report-design/media/functionexample.gif "Ein Beispiel für eine Funktion.")  
+ ![Beispiel für eine Funktion](../../reporting-services/report-design/media/functionexample.gif "An example of a function")  
   
  Argumente können aus Feldverweisen, Zahlen, Text und logischen Werten wie **TRUE** oder **FALSE**bestehen. Argumente können auch aus Konstanten, Formeln oder anderen Funktionen bestehen. Die Argumente, die Sie eingeben, müssen einen gültigen Wert für das jeweilige Argument ergeben. Wenn in der Formel z. B. zwei ganze Zahlen multipliziert werden, kann das Ergebnis keine Textzeichenfolge sein.  
   
@@ -82,4 +80,3 @@ ms.lasthandoff: 08/09/2017
 |Textfunktionen|**CONCAT**, **FIND**, **LEFT**, **LENGTH**, **LOWER**, **LTRIM**, **REPLACE**, **RIGHT**, **RTRIM**, **SUBSTRING**, **UPPER**|  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Unterberichte (Berichts-Generator und SSRS) | Microsoft Docs
+title: Unterberichte (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 1ef1efaa3eb6e369e4b46766b3ed13fcbd2c0725
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8deb7c183ab46007fb0d4c4aee17762676963c4d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>Unterberichte (Berichts-Generator und SSRS)
   Ein Unterbericht ist ein Berichtselement, das einen anderen Bericht innerhalb des Hauptteils eines Hauptberichts anzeigt. Grundsätzlich ist ein Unterbericht in einem Bericht mit einem Frame in einer Webseite vergleichbar. Er wird dazu verwendet, einen Bericht innerhalb eines Berichts einzubetten. Jeder Bericht kann als Unterbericht verwendet werden. Der als Unterbericht angezeigte Bericht wird auf einem Berichtsserver gespeichert, normalerweise im gleichen Ordner wie der übergeordnete Bericht. Sie können den übergeordneten Bericht zum Übergeben von Parametern an den Unterbericht einrichten. Ein Unterbericht kann innerhalb von Datenbereichen wiederholt werden. Dabei wird ein Parameter zum Filtern von Daten in jeder Instanz des Unterberichts verwendet.  
@@ -28,7 +28,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Wenn Sie einen Unterbericht in einem Tablix-Datenbereich verwenden, werden der Unterbericht und seine Parameter für jede Zeile verarbeitet. Wenn viele Zeilen vorhanden sind, sollten Sie sich in einem solchen Fall überlegen, ob ein Drillthroughbericht nicht besser geeignet ist.  
   
- ![Rs_Subreport](../../reporting-services/report-design/media/rs-subreport.gif "Rs_Subreport")  
+ ![rs_Unterbericht](../../reporting-services/report-design/media/rs-subreport.gif "rs_Subreportt")  
   
  In dieser Abbildung stammen die im Hauptbericht "Verkaufsauftrag" angezeigten Kontaktinformationen eigentlich aus einem Unterbericht "Kontakte".  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 08/09/2017
   
  Ein Unterbericht kann im Hauptteil des Berichts oder in einem Datenbereich platziert werden. Wenn ein Unterbericht in einem Datenbereich platziert wird, wird dieser mit jeder Instanz der Gruppe oder Zeile im Datenbereich wiederholt. Um einen Wert von der Gruppe oder Zeile an den Unterbericht zu übergeben, verwenden Sie in der Value-Eigenschaft des Unterberichts für das Feld einen Feldausdruck mit dem Wert, den Sie an den Parameter des Unterberichts übergeben möchten.  
   
- Weitere Informationen zum Arbeiten mit Unterberichten finden Sie unter [Hinzufügen eines Unterberichts und Parameter &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md).  
+ Weitere Informationen zum Arbeiten mit Unterberichten finden Sie unter [Hinzufügen eines Unterberichts und Hinzufügen von Parametern (Berichts-Generator und SSRS)](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md).  
   
 ## <a name="specifying-subreport-names-and-locations"></a>Angeben von Unterberichtsnamen und Speicherorten  
  Sie können einen Hauptbericht entwerfen, um in einem anderen Ordner auf demselben Berichtsserver einen Unterbericht anzugeben.  
@@ -60,6 +60,6 @@ ms.lasthandoff: 08/09/2017
  Um im Berichts-Generator einen Unterbericht eines Hauptberichts in der Vorschau anzuzeigen, müssen beide Berichte auf demselben Berichtsserver gespeichert sein, oder Sie müssen einen vollständigen Pfad zum Unterbericht angeben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Drillthrough, Drilldown, Unterberichte und geschachtelte Datenbereiche &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Drillthrough, Drilldown, Unterberichte und geschachtelte Datenbereiche &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

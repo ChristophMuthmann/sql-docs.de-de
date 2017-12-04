@@ -1,5 +1,5 @@
 ---
-title: "Hinzufügen einer Drillthroughaktion für einen Bericht (Berichts-Generator und SSRS) | Microsoft Docs"
+title: "Hinzufügen einer Drillthroughaktion für einen Bericht (Berichts-Generator und SSRS) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,24 +11,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f1e5c7c678cb3c38d9e0225ce47bc2dca91ab326
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: aea97d13582353816693b5e1a2345001071c685b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>Hinzufügen einer Drillthroughaktion für einen Bericht (Berichts-Generator und SSRS)
   Der Bericht, der geöffnet wird, wenn Sie auf den Link im Hauptbericht klicken, wird als *Drillthroughbericht*bezeichnet. Der Drillthrough-Link ermöglicht einen Drillthrough-Vorgang.  
   
  Drillthroughberichte müssen auf demselben Berichtsserver wie der Hauptbericht veröffentlicht werden, können aber in anderen Ordnern abgelegt sein. Sie können jedem Element einen Drillthroughlink hinzufügen, das über eine Eigenschaft **Aktion** verfügt, z. B. ein Textfeld, ein Bild oder Datenpunkte in einem Diagramm.  
   
- Sie müssen zuerst den Drillthroughbericht erstellen, mit dem der Hauptbericht verknüpft wird, um einem Bericht einen Drillthroughlink hinzuzufügen. Ein Drillthroughbericht enthält im Allgemeinen Details zu einem im ursprünglichen Zusammenfassungsbericht enthaltenen Element und enthält oft Parameter, mit denen der Drillthroughbericht basierend auf Parametern, die vom Hauptbericht übergeben werden, gefiltert wird. Weitere Informationen zum Erstellen des Drillthroughberichts finden Sie unter [Drillthroughberichte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md).  
+ Sie müssen zuerst den Drillthroughbericht erstellen, mit dem der Hauptbericht verknüpft wird, um einem Bericht einen Drillthroughlink hinzuzufügen. Ein Drillthroughbericht enthält im Allgemeinen Details zu einem im ursprünglichen Zusammenfassungsbericht enthaltenen Element und enthält oft Parameter, mit denen der Drillthroughbericht basierend auf Parametern, die vom Hauptbericht übergeben werden, gefiltert wird. Weitere Informationen zum Erstellen des Drillthroughberichts finden Sie unter [Drillthroughberichte (Berichts-Generator und SSRS)](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -59,16 +58,15 @@ ms.lasthandoff: 08/09/2017
         > [!NOTE]  
         >  Werte können einen Ausdruck enthalten, der zu einem an den Berichtsparameter zu übergebenden Wert ausgewertet werden kann. Die Ausdrücke in der Werteliste beinhalten die Feldliste für den aktuellen Bericht.  
   
-     Informationen zum Ausblenden von Parametern in Berichten finden Sie unter [Hinzufügen, Ändern oder Löschen von Berichtsparametern &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md).  
+     Informationen zum Ausblenden von Parametern in Berichten finden Sie unter [Hinzufügen, Ändern oder Löschen von Berichtsparametern (Berichts-Generator und SSRS)](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md).  
   
 6.  (Optional) Bei Textfeldern ist es hilfreich, die Farbe und den Effekt des Texts zu ändern, um zu verdeutlichen, dass es sich um einen Link handelt. Verwenden Sie dazu die Registerkarte **Home** auf dem Menüband.  
   
 7.  Führen Sie den Bericht aus, und klicken Sie auf das Berichtselement, für das Sie den Link festgelegt haben, um den Link zu testen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Im Dialogfeld "Eigenschaften" Aktion &#40; Berichts-Generator und SSRS &#41;](http://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)   
- [Formatieren von Datenpunkten in einem Diagramm &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [Anzeigen von QuickInfos für eine Reihe &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)  
+ [Aktionseigenschaften (Dialogfeld) &#40;Berichts-Generator und SSRS&#41;](http://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)   
+ [Formatieren von Datenpunkten in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Anzeigen von QuickInfos für eine Reihe &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   
   
-

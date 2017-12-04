@@ -1,5 +1,5 @@
 ---
-title: "Interaktive Funktionalität - verschiedene Berichtsrenderingerweiterungen | Microsoft Docs"
+title: "Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 9a422c1619ae284ec49643465bd8b84efda1910b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4e91731abe741a802252475bb054c826454ee2a0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="interactive-functionality---different-report-rendering-extensions"></a>Interaktive Funktionalität - verschiedene Berichtsrenderingerweiterungen
+# <a name="interactive-functionality---different-report-rendering-extensions"></a>Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bietet Funktionen für die Interaktion mit einem paginierten Bericht zur Laufzeit. Nicht alle Berichtsrenderingformate unterstützen die interaktiven Funktionen in vollem Umfang. In der folgenden Tabelle ist die Funktionsweise der einzelnen interaktiven Funktionen in bestimmten Formaten beschrieben.  
   
 > [!NOTE]  
@@ -60,7 +59,7 @@ ms.lasthandoff: 08/09/2017
 |-------------------|-------------------------|  
 |Vorschau/Berichts-Viewer, HTML|Benutzer klicken auf Symbole zum Erweitern und Reduzieren, um Abschnitte eines Berichts anzuzeigen.|  
 |PDF|Der Berichtsserver exportiert den aktuellen Ansichtsstatus des Berichts in eine PDF-Datei. Interaktives Umschalten wird nicht unterstützt.|  
-|Excel|Drilldownlinks und Elemente, die umgeschaltet werden können, werden in Excel als reduzierbare Konturen gerendert. Sie können Abschnitte des Berichts in Excel erweitern und reduzieren. Weitere Informationen zu Excel-Einschränkungen, finden Sie unter [exportieren nach Microsoft Excel &#40; Berichts-Generator und SSRS &#41; ](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
+|Excel|Drilldownlinks und Elemente, die umgeschaltet werden können, werden in Excel als reduzierbare Konturen gerendert. Sie können Abschnitte des Berichts in Excel erweitern und reduzieren. Weitere Informationen zu Einschränkungen durch Excel finden Sie unter [Exportieren nach Microsoft Excel (Berichts-Generator und SSRS)](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
 |Wort|Der Berichtsserver exportiert den aktuellen Ansichtsstatus des Berichts in eine PDF-Datei. Interaktives Umschalten wird nicht unterstützt.|  
 |Andere|Nicht verfügbar in MHTML, XML oder CSV. Beim Exportieren in ein Bildformat exportiert der Berichtsserver den aktuellen Ansichtsstatus des Berichts in eine PDF-Datei. Interaktives Umschalten wird nicht unterstützt.|  
   
@@ -116,10 +115,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Interaktive Sortierung, Dokumentstrukturen, und Links &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [Interaktive Sortierung, Dokumentstrukturen und Links &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
     
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Diagramme &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
-
