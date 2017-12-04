@@ -1,7 +1,7 @@
 ---
 title: "Konfigurieren der Serverkonfigurationsoption Speicher für Indexerstellung | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 03/02/2017
+ms.date: 11/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -18,16 +18,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c9e2a10cd21015fa56a2081e359baf3b9198064
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8aab31080adfc6235d6110aa0ad21159996bfcff
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Speicher für Indexerstellung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  In diesem Thema wird beschrieben, wie die Serverkonfigurationsoption **Speicher für Indexerstellung** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert wird. Mit der Option **Speicher für Indexerstellung** wird der maximale Umfang des für die Erstellung von Indizes zugeordneten Arbeitsspeichers gesteuert. Der Standardwert für diese Option beträgt 0 (Selbstkonfiguration). Wenn später für die Indexerstellung mehr Speicherplatz benötigt wird und noch Speicherplatz verfügbar ist, wird dieser vom Server verwendet, und der für die Option festgelegte Wert wird überschritten. Wenn kein Speicherplatz mehr verfügbar ist, wird die Indexerstellung so lange fortgesetzt, wie der bereits zugeordnete Speicherplatz gestattet.  
+  In diesem Thema wird beschrieben, wie die Serverkonfigurationsoption **Speicher für Indexerstellung** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert wird. Mit der Option **Speicher für Indexerstellung** wird der maximale Umfang des für Sortiervorgänge beim Erstellen von Indizes zu Beginn zugeordneten Arbeitsspeichers gesteuert. Der Standardwert für diese Option beträgt 0 (Selbstkonfiguration). Wenn später für die Indexerstellung mehr Speicherplatz benötigt wird und noch Speicherplatz verfügbar ist, wird dieser vom Server verwendet, und der für die Option festgelegte Wert wird überschritten. Wenn kein Speicherplatz mehr verfügbar ist, wird die Indexerstellung so lange fortgesetzt, wie der bereits zugeordnete Speicherplatz gestattet.  
   
  **In diesem Thema**  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
--   Die Einstellung der Option **min memory per query** hat Vorrang gegenüber der Option **index create memory** . Wenn Sie beide Optionen ändern und der Wert von **index create memory** (Speicher für Indexerstellung) den Wert von **min memory per query**(Min. Arbeitsspeicher pro Abfrage) unterschreitet, werden die Werte zwar festgelegt, es wird jedoch eine Warnmeldung ausgegeben. Eine ähnliche Warnmeldung erhalten Sie auch während der Ausführung.  
+-   Die Einstellung der Option **[Min. Arbeitsspeicher pro Abfrage](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)** hat Vorrang vor der Option **Speicher für Indexerstellung**. Wenn Sie beide Optionen ändern und der Wert von **index create memory** (Speicher für Indexerstellung) den Wert von **min memory per query**(Min. Arbeitsspeicher pro Abfrage) unterschreitet, werden die Werte zwar festgelegt, es wird jedoch eine Warnmeldung ausgegeben. Eine ähnliche Warnmeldung erhalten Sie auch während der Ausführung.  
   
 -   Bei der Verwendung von partitionierten Tabellen und Indizes können sich die Mindestanforderungen für den zur Indexerstellung benötigten Speicherplatz bei nicht ausgerichteten partitionierten Indizes und einem hohen Parallelitätsgrad erheblich erhöhen. Mit dieser Option wird gesteuert, wie viel Arbeitsspeicher den Indexpartitionen eines einzelnen Indexerstellungsvorgangs insgesamt zugeordnet wird. Wenn der durch die Option festgelegte Wert das zur Ausführung der Abfrage erforderliche Minimum unterschreitet, wird die Abfrage mit einem Fehler beendet.  
   
@@ -62,6 +62,8 @@ ms.lasthandoff: 11/20/2017
 -   Diese Option ist eine erweiterte Option und sollte ausschließlich von einem erfahrenen Datenbankadministrator oder einem zertifizierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Techniker geändert werden.  
   
 -   Die Option **Speicher für Indexerstellung** ist eine selbstkonfigurierende Option, die im Normalfall nicht angepasst werden muss. Wenn Sie jedoch Schwierigkeiten beim Erstellen von Indizes feststellen, sollten Sie den Wert dieser Option abweichend vom Ausführungswert erhöhen.  
+
+-   Auf einem Produktionssystem wird ein Index in der Regel sehr selten erstellt; diese Aufgabe wird stattdessen häufig als Auftrag zur Ausführung außerhalb der Geschäftszeiten geplant. Wenn Indizes selten und außerhalb der Hauptgeschäftszeiten erstellt werden, kann die Indexerstellungsleistung daher durch Erhöhen von **Speicher für Indexerstellung** verbessert werden. Sie sollten die Konfigurationsoption **[Min. Arbeitsspeicher pro Abfrage](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)** jedoch auf einen niedrigen Wert festlegen, sodass der Indexerstellungsauftrag gestartet wird, auch wenn der angeforderte Arbeitsspeicher nicht verfügbar ist.
   
 ###  <a name="Security"></a> Sicherheit  
   

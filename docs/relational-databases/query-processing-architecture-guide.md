@@ -1,32 +1,33 @@
 ---
 title: Handbuch zur Architektur der Abfrageverarbeitung | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 10/13/2017
+ms.date: 11/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1c129951edea28bc36c2151d8b20d8502088653e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: 3189dade2df1e1767ba26263960a59d6b8241aa4
-ms.contentlocale: de-de
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verarbeitet Abfragen für verschiedene Datenspeicherungsarchitekturen, z.B. lokale Tabellen, partitionierte Tabellen und serverübergreifend verteilte Tabellen. In den folgenden Themen wird erläutert, wie mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Abfragen verarbeitet werden und die Wiederverwendung von Abfragen mithilfe des Zwischenspeicherns von Ausführungsplänen optimiert wird.
 
@@ -38,9 +39,11 @@ Die Verarbeitung einer einzelnen SQL-Anweisung ist das grundlegendste Verfahren,
 
 Eine `SELECT` -Anweisung ist nicht prozedural; sie gibt nicht die genauen Schritte vor, die der Datenbankserver verwenden soll, um die angeforderten Daten abzurufen. Dies bedeutet, dass der Datenbankserver die Anweisung analysieren muss, um das effizienteste Verfahren zum Extrahieren der angeforderten Daten zu ermitteln. Dieser Vorgang wird als Optimieren der `SELECT` -Anweisung bezeichnet. Die Komponente, die ihn durchführt, wird als Abfrageoptimierer bezeichnet. Die Eingaben für den Abfrageoptimierer bestehen aus der Abfrage, dem Datenbankschema (Tabellen- und Indexdefinitionen) und den Datenbankstatistiken. Die Ausgabe des Abfrageoptimierers ist ein Abfrageausführungsplan, der manchmal auch als Abfrageplan oder einfach nur als Plan bezeichnet wird. Der Inhalt eines Abfrageplans wird ausführlicher an späterer Stelle in diesem Thema beschrieben.
 
-Die Ein- und Ausgaben des Abfrageoptimierers während der Optimierung einer einzelnen `SELECT`-Anweisung werden in der folgenden Abbildung gezeigt: ![query_processor_io](../relational-databases/media/query-processor-io.gif)
+Die Ein- und Ausgaben des Abfrageoptimierers während der Optimierung einer einzelnen `SELECT`-Anweisung werden in folgendem Diagramm dargestellt:
 
-Eine `SELECT` -Anweisung definiert lediglich Folgendes:  
+![query_processor_io](../relational-databases/media/query-processor-io.gif)
+
+Eine `SELECT`-Anweisung definiert lediglich Folgendes:  
 * Das Format des Resultsets. Dieses wird meistens in der Auswahlliste angegeben. Das endgültige Format des Resultsets wird jedoch auch von anderen Klauseln, wie z.B. `ORDER BY` und `GROUP BY` , beeinflusst.
 * Die Tabellen, die die Quelldaten enthalten. Dies wird in der `FROM` -Klausel angegeben.
 * Die logischen Beziehungen zwischen den Tabellen, die im Rahmen der `SELECT` -Anweisung relevant sind. Diese werden in den Joinspezifikationen definiert, die in der `WHERE` -Klausel oder in einer `ON` -Klausel, die auf `FROM`folgt, auftreten können.
@@ -240,7 +243,7 @@ Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageprozessor opti
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] erstellt intelligente, dynamische Pläne, in denen verteilte Abfragen effizient für den Zugriff auf Daten in Remotemitgliedstabellen verwendet werden: 
 
 * Zunächst verwendet der Abfrageprozessor OLE DB, um die Definitionen der CHECK-Einschränkungen aus jeder Mitgliedstabelle abzurufen. Dadurch kann der Abfrageprozessor die Verteilung der Schlüsselwerte auf die Mitgliedstabellen zuordnen.
-* Der Abfrageprozessor vergleicht die in der `WHERE`-Klausel einer SQL-Anweisung angegebenen Schlüsselbereiche mit der Zuordnung, die die Verteilung der Zeilen in den Mitgliedstabellen anzeigt. Anschließend erstellt der Abfrageprozessor einen Abfrageausführungsplan, der mithilfe von verteilten Abfragen nur die Remotezeilen abruft, die zum Ausführen der SQL-Anweisung erforderlich sind. Darüber hinaus wird der Ausführungsplan so erstellt, dass alle Zugriffe auf Remotemitgliedstabellen, entweder für Daten oder Metadaten, so lange verzögert werden, bis die Informationen benötigt werden.
+* The Query Processor compares the key ranges specified in an SQL statement `WHERE` -Klausel einer SQL-Anweisung angegebenen Schlüsselbereiche mit der Zuordnung, die die Verteilung der Zeilen in den Mitgliedstabellen anzeigt. Anschließend erstellt der Abfrageprozessor einen Abfrageausführungsplan, der mithilfe von verteilten Abfragen nur die Remotezeilen abruft, die zum Ausführen der SQL-Anweisung erforderlich sind. Darüber hinaus wird der Ausführungsplan so erstellt, dass alle Zugriffe auf Remotemitgliedstabellen, entweder für Daten oder Metadaten, so lange verzögert werden, bis die Informationen benötigt werden.
 
 Stellen Sie sich z.B. ein System vor, in dem eine Kundentabelle über Server1 (`CustomerID` von 1 bis 3299999), Server2 (`CustomerID` von 3300000 bis 6599999) und Server3 (`CustomerID` von 6600000 bis 9999999) partitioniert ist.
 
@@ -619,7 +622,7 @@ Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer ver
   Jeder Abfrage- oder Indexvorgang setzt zu seiner Ausführung eine bestimmte Anzahl von Arbeitsthreads voraus. Das Ausführen eines parallelen Plans erfordert mehr Arbeitsthreads als ein serieller Plan, und die Anzahl der erforderlichen Arbeitsthreads steigt mit dem Grad der Parallelität. Wenn die Arbeitsthreadanforderung des parallelen Plans für einen bestimmten Grad der Parallelität nicht erfüllt werden kann, reduziert [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] den Grad an Parallelität automatisch oder verwirft den parallelen Plan in dem angegebenen Arbeitsauslastungskontext. Stattdessen wird der serielle Plan (ein Arbeitsthread) ausgeführt. 
 
 3. Welcher Abfragetyp oder Indexvorgangstyp soll ausgeführt werden?  
-  Indexvorgänge, die einen Index erstellen oder neu erstellen oder einen gruppierten Index löschen, sowie Abfragen, die sehr viele CPU-Zyklen beanspruchen, eignen sich am besten für einen parallelen Plan. So sind z. B. Joins großer Tabellen, umfassende Aggregationen und Sortierungen großer Resultsets gut geeignet. Für einfache Abfragen, die häufig in transaktionsverarbeitenden Anwendungen eingesetzt werden, wird der zusätzliche Aufwand, der für die Koordinierung einer parallelen Abfrageausführung erforderlich ist, durch die erwartete Leistungssteigerung in der Regel nicht gerechtfertigt. Um zu ermitteln, für welche Abfragen die parallele Ausführung sinnvoll ist und für welche dies nicht gilt, vergleicht [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die geschätzten Kosten für die Ausführung der Abfrage oder des Indexvorgangs mithilfe des [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)-Werts. Mithilfe von [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)können Benutzer den Standardwert 5 ändern; dies wird jedoch nicht empfohlen. 
+  Indexvorgänge, die einen Index erstellen oder neu erstellen oder einen gruppierten Index löschen, sowie Abfragen, die sehr viele CPU-Zyklen beanspruchen, eignen sich am besten für einen parallelen Plan. So sind z. B. Joins großer Tabellen, umfassende Aggregationen und Sortierungen großer Resultsets gut geeignet. Für einfache Abfragen, die häufig in transaktionsverarbeitenden Anwendungen eingesetzt werden, wird der zusätzliche Aufwand, der für die Koordinierung einer parallelen Abfrageausführung erforderlich ist, durch die erwartete Leistungssteigerung in der Regel nicht gerechtfertigt. Um zu ermitteln, für welche Abfragen die parallele Ausführung sinnvoll ist und für welche dies nicht gilt, vergleicht [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die geschätzten Kosten für die Ausführung der Abfrage oder des Indexvorgangs mithilfe des [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)-Werts (Kostenschwellenwert für Parallelität). Benutzer können den Standardwert 5 mithilfe von [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ändern, wenn durch einen richtigen Test ermittelt wurde, dass ein anderer Wert besser für die ausgeführte Workload geeignet ist. 
 
 4. Gibt es eine ausreichende Anzahl von zu verarbeitenden Zeilen?  
   Wenn der Abfrageoptimierer ermittelt, dass die Anzahl der Zeilen zu niedrig ist, werden keine Verteilungsoperatoren eingesetzt, um die Zeilen zu verteilen. Demzufolge werden die Operatoren seriell ausgeführt. Durch das Ausführen der Operatoren in einem seriellen Plan werden Situationen vermieden, in denen die Kosten für Start, Verteilung und Koordinierung den Nutzen übersteigen, der durch die parallele Ausführung der Operatoren erzielt würde.
@@ -716,9 +719,9 @@ Im Folgenden sehen Sie einen möglichen parallelen Plan, der für die zuvor besc
          ([tpcd1G].[dbo].[LINEITEM].[L_ORDER_DATES_IDX]), ORDERED)
 ```
 
-![parallel_plan](../relational-databases/media/parallel-plan.gif) Abfrageplan mit DOP 4, enthält einen Join zweier Tabellen
+Die folgende Abbildung zeigt einen Abfrageplan, der mit einem Parallelitätsgrad von 4 ausgeführt wird und ein Join von zwei Tabellen einschließt.
 
-Die Abbildung zeigt einen Abfrageoptimiererplan, der mit einem Parallelitätsgrad von 4 ausgeführt wird und ein Join von zwei Tabellen einschließt.
+![parallel_plan](../relational-databases/media/parallel-plan.gif)
 
 Der parallele Plan enthält drei Parallelism-Operatoren. Sowohl der „Index Seek“-Operator des `o_datkey_ptr`-Indexes als auch der „Index Scan“-Operator des `l_order_dates_idx`-Indexes werden parallel ausgeführt. Dadurch werden mehrere exklusive Datenströme erzeugt. Dies kann mithilfe der nächsten Parallelism-Operatoren oberhalb der Operatoren „Index Scan“ und „Index Seek“ bestimmt werden. Beide Operatoren nehmen einfach eine Umverteilung der Daten auf die Datenströme vor, sodass dieselbe Anzahl von Datenströmen als Ausgabe erzeugt wird, wie als Eingabe vorlag. Diese Anzahl der Datenströme entspricht dem Grad an Parallelität.
 
@@ -727,6 +730,8 @@ Der „Parallelism“-Operator oberhalb des `l_order_dates_idx` Index Scan-Opera
 Der „Parallelism“-Operator oberhalb des „Index Seek“-Operators nimmt mithilfe des Werts für `O_ORDERKEY` eine Neueinteilung der Eingabedatenströme vor. Da die Eingabe nicht anhand der Werte der `O_ORDERKEY`-Spalte sortiert wird, es sich hierbei aber um die Joinspalte des `Merge Join`-Operators handelt, stellt der „Sort“-Operator zwischen dem „Parallelism“- und dem „Merge Join“-Operator sicher, dass die Eingabe für den `Merge Join`-Operator auf der Basis der Joinspalten sortiert wird. Der `Sort`-Operator wird wie der „Merge Join“-Operator parallel ausgeführt.
 
 Der oberste „Parallelism“-Operator fasst die Ergebnisse von mehreren Datenströmen in einem einzigen Datenstrom zusammen. Teilaggregationen, die vom „Stream Aggregate“-Operator unterhalb des „Parallelism“-Operators vorgenommen werden, werden dann in dem „Stream Aggregate“-Operator oberhalb des „Parallelism“-Operators zu einem einzigen `SUM`-Wert für jeden Wert von `O_ORDERPRIORITY` aufsummiert. Dieser Plan verwendet acht Arbeisthreads, da er zwei Austauschsegmente mit einem Parallelitätsgrad von 4 besitzt.
+
+Weitere Informationen zu den in diesem Beispiel verwendeten Operatoren finden Sie unter [Showplan Logical and Physical Operators Reference (Referenz zu logischen und physischen Showplanoperatoren)](../relational-databases/showplan-logical-and-physical-operators-reference.md).
 
 ### <a name="parallel-index-operations"></a>Parallele Indexvorgänge
 
@@ -1040,4 +1045,3 @@ GO
  [Bewährte Methoden für den Abfragespeicher](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [Kardinalitätsschätzung](../relational-databases/performance/cardinality-estimation-sql-server.md)  
  [Adaptive Abfrageverarbeitung](../relational-databases/performance/adaptive-query-processing.md)
-

@@ -1,13 +1,14 @@
 ---
 title: Always Encrypted (Datenbankmodul) | Microsoft-Dokumentation
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 04/24/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +18,19 @@ helpviewer_keywords:
 - Always Encrypted, about
 - SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 312c12a57368de2e4d27d5a27403dcffde4181e2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="always-encrypted-database-engine"></a>„Immer verschlüsselt“ (Datenbankmodul)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   ![Immer verschlüsselt](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
@@ -61,7 +61,7 @@ Eine Anwendung muss einen Always Encrypted-fähigen Clienttreiber verwenden, um 
 
 Als nächstes kontaktiert der Treiber den Schlüsselspeicher, der den Spaltenhauptschlüssel enthält, um den verschlüsselten Wert des Spaltenverschlüsselungsschlüssels zu entschlüsseln und anschließend verwendet er den Klartext-Verschlüsselungsschlüssel zum Entschlüsseln der Parameter. Der sich ergebende Klartext-Spaltenverschlüsselungsschlüssel wird zwischengespeichert, um die Anzahl der Roundtrips zum Schlüsselspeicher für die nachfolgende Verwendung des gleichen Spaltenverschlüsselungsschlüssels zu verringern. Der Treiber ersetzt die Klartextwerte der Parameter, die verschlüsselte Spalten mit den verschlüsselten Werten anvisieren und übermittelt die Abfrage an den Server zur Verarbeitung.
 
-Der Server berechnet das Resultset und für jede verschlüsselte Aktion im Resultset fügt der Treiber die Verschlüsselungsmetadaten für die Spalte an, einschließlich der Informationen über den Verschlüsselungsalgorithmus und den entsprechenden Schlüsseln. Der Treiber versucht zuerst, den Klartext-Verschlüsselungsschlüssel im lokalen Cache zu finden und fragt nur dann den Spaltenhauptschlüssel ab, wenn er den Schlüssel nicht im Cache finden kann. Als Nächstes entschlüsselt der Treiber die Ergebnisse und übermittelt Klartextwerte an die Anwendung.
+Der Server berechnet das Resultset, und für jede verschlüsselte Spalte im Resultset fügt der Treiber die Verschlüsselungsmetadaten für die Spalte an, einschließlich der Informationen zum Verschlüsselungsalgorithmus und zu den entsprechenden Schlüsseln. Der Treiber versucht zuerst, den Klartext-Verschlüsselungsschlüssel im lokalen Cache zu finden und fragt nur dann den Spaltenhauptschlüssel ab, wenn er den Schlüssel nicht im Cache finden kann. Als Nächstes entschlüsselt der Treiber die Ergebnisse und übermittelt Klartextwerte an die Anwendung.
 
  Ein Clienttreiber interagiert mit einem Schlüsselspeicher, der einen Spaltenhauptschlüssel enthält, indem er einen Speicheranbieter für den Spaltenhauptschlüssel verwendet. Dies ist eine clientseitige Softwarekomponente, die einen Schlüsselspeicher einkapselt, der den Spaltenhauptschlüssel enthält. Anbieter der gängigen Schlüsselspeicherarten sind in clientseitigen Treiberbibliotheken aus Microsoft oder als eigenständige Downloads verfügbar. Sie können auch einen eigenen Anbieter implementieren. Die Funktionen von Always Encrypted, einschließlich integrierte Spaltenhauptschlüssel-Speicheranbieter, variieren je nach Treiberbibliothek und deren Version. 
 
@@ -254,4 +254,3 @@ GO
 [sp_refresh_parameter_encryption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)   
   
   
-

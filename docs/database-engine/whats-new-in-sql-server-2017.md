@@ -1,29 +1,30 @@
 ---
 title: "Neues im Datenbankmodul – SQL Server 2017 | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 09/11/2017
-ms.prod: sql-server-2017
+ms.date: 10/24/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-engine
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: eddd1edd812d9224e151960788f8f510f809fb27
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 5051d2d668105bd0a309eb64f2b8becd459d8a6b
-ms.openlocfilehash: 6cc679441602d4aa1d125c2f61f9d538e3b716a2
-ms.contentlocale: de-de
-ms.lasthandoff: 10/12/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>Neues im Datenbankmodul – SQL Server 2017
-[!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 In diesem Thema werden die Verbesserungen an [!INCLUDE[ssdenoversion-md](../includes/ssdenoversion-md.md)] für [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] beschrieben. Klicken Sie auf die Links, um weitere Informationen zu jedem Element zu erhalten:
 
@@ -67,7 +68,7 @@ In diesem Thema werden die Verbesserungen an [!INCLUDE[ssdenoversion-md](../incl
     - `CROSS APPLY` -Operator in nativ kompilierten Modulen.   
 - Die neuen Zeichenfolgenfunktionen [CONCAT_WS](../t-sql/functions/concat-ws-transact-sql.md), [TRANSLATE](../t-sql/functions/translate-transact-sql.md)und [TRIM](../t-sql/functions/trim-transact-sql.md) wurden hinzugefügt.   
 - Die `WITHIN GROUP` -Klausel wird nun für die [STRING_AGG](../t-sql/functions/string-agg-transact-sql.md) -Funktion unterstützt.
-- Es wurden zwei neue japanische Sortierungsfamilien (Japanese_Bushu_Kakusu_140 und Japanese_XJIS_140) hinzugefügt, und die Sortierungsoption „Unterscheidung nach Variierungsauswahlzeichen“ (_VSS) wurde für die Verwendung in japanischen Sortierungen hinzugefügt. Einzelheiten dazu finden Sie unter [Sortierung und Unicode-Unterstützung](../relational-databases/collations/collation-and-unicode-support.md).   
+- Es wurden zwei neue japanische Sortierungsfamilien (Japanese_Bushu_Kakusu_140 und Japanese_XJIS_140) hinzugefügt, und die Sortierungsoption „Unterscheidung nach Variierungsauswahlzeichen“ (_VSS) wurde für die Verwendung in diesen neuen japanischen Sortierungen hinzugefügt. Darüber hinaus unterstützen alle neuen Sortierungen automatisch ergänzende Zeichen, ohne dass die Angabe der _SC-Option notwendig ist. Einzelheiten dazu finden Sie unter [Sortierung und Unicode-Unterstützung](../relational-databases/collations/collation-and-unicode-support.md).   
 - Neue Bulk-Access-Optionen ([BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) und [OPENROWSET(BULK...)](../t-sql/functions/openrowset-transact-sql.md)) ermöglichen den Zugriff auf Daten direkt aus einer Datei, die als CSV-Format angegeben ist, und über die neue `BLOB_STORAGE` -Option von [EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)aus Dateien in Azure Blob Storage.
 - Der Datenbank- **KOMPATIBILITÄTSGRAD** 140 wurde hinzugefügt.   Kunden, die diesen Kompatibilitätsgrad ausführen, können die neuesten Sprachfeatures und Verhaltensweisen des Abfrageoptimierers nutzen. Dies schließt Änderungen in den einzelnen von Microsoft veröffentlichten Vorabversionen ein.
 - Verbesserte Berechnung der Aktualisierungsschwellenwerte für inkrementelle Statistiken (Kompatibilitätsgrad 140 erforderlich).
@@ -86,5 +87,4 @@ In diesem Thema werden die Verbesserungen an [!INCLUDE[ssdenoversion-md](../incl
 - Neue Berechtigungen: `DATABASE SCOPED CREDENTIAL` ist jetzt eine Klasse von sicherungfsähigen, unterstützenden `CONTROL`, `ALTER`, `REFERENCES`, `TAKE OWNERSHIP`und `VIEW DEFINITION` -Berechtigungen. `ADMINISTER DATABASE BULK OPERATIONS`, das auf SQL-Datenbanken beschränkt ist, ist jetzt in `sys.fn_builtin_permissions` sichtbar.   
 - Die DMV [sys.dm_os_host_info](../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md) wurde hinzugefügt und stellt Systeminformationen sowohl für Windows als auch für Linux bereit.   
 - Die Datenbankrollen werden mit R Services für das Verwalten von Berechtigungen erstellt, die Paketen zugeordnet sind. Weitere Informationen finden Sie unter [R-Paketverwaltung für SQL Server](../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md).
-
 

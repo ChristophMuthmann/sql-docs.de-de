@@ -1,29 +1,30 @@
 ---
 title: "Unterstützte Funktionen für nativ kompilierte T-SQL-Module | Microsoft Dokumentation"
 ms.custom: 
-ms.date: 04/12/2017
-ms.prod: sql-server-2016
+ms.date: 10/23/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.suite: sql
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ed811d1184287c1e45f93d3ddd4253400dc5a237
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
-ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Unterstützte Funktionen für nativ kompilierte T-SQL-Module
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
   Dieses Thema listet die T-SQL-Oberflächenbereiche und unterstützten Funktionen im Hauptteil nativ kompilierter T-SQL-Module auf, wie gespeicherte Prozeduren ([CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)), benutzerdefinierte Skalarfunktionen, Inline-Tabellenwertfunktionen und Trigger.  
@@ -195,8 +196,8 @@ Die folgenden DML-Anweisungen werden unterstützt.
 -   Bitweise Operatoren ~, &, |, und ^  
 
 -   APPLY-Operator
-    - **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 wird der APPLY-Operator in nativ kompilierten Modulen unterstützt.
+    - **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] wird der APPLY-Operator in nativ kompilierten Modulen unterstützt.
 
 ##  <a name="bfncsp"></a> Integrierte Funktionen in nativ kompilierten Modulen  
  Die folgenden Funktionen werden in Einschränkungen in speicheroptimierten Tabellen und in nativ kompilierten T-SQL-Modulen unterstützt.  
@@ -206,8 +207,8 @@ Die folgenden DML-Anweisungen werden unterstützt.
 -   Datumsfunktionen: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME und YEAR.  
 
 -   Zeichenfolgenfunktionen: LEN, LTRIM, RTRIM und SUBSTRING.  
-    - **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 werden die folgenden integrierten Funktionen ebenfalls unterstützt: TRIM, TRANSLATE und CONCAT_WS.  
+    - **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] werden die folgenden integrierten Funktionen ebenfalls unterstützt: TRIM, TRANSLATE und CONCAT_WS.  
 
 -   Identitätsfunktionen: SCOPE_IDENTITY  
 
@@ -216,8 +217,8 @@ Die folgenden DML-Anweisungen werden unterstützt.
 -   Uniqueidentifier-Funktionen: NEWID und NEWSEQUENTIALID  
 
 -   JSON-Funktionen  
-    - **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 werden die JSON-Funktionen in nativ kompilierten Modulen unterstützt.
+    - **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] werden die JSON-Funktionen in nativ kompilierten Modulen unterstützt.
 
 -   Fehlerfunktionen: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY und ERROR_STATE  
 
@@ -307,6 +308,5 @@ GO
 ## <a name="see-also"></a>Siehe auch  
  [Nativ kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)   
  [Migrationsprobleme bei nativ kompilierten gespeicherten Prozeduren](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
-
 
 

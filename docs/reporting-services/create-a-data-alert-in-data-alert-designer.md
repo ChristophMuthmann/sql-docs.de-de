@@ -1,5 +1,5 @@
 ---
-title: Erstellen eine Datenwarnung im Datenwarnungs-Designer | Microsoft Docs
+title: Erstellen einer Datenwarnung im Datenwarnungs-Designer | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 54f1cd4f907de0cd3511f1aa25ed8d6e49e2b54b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 3cbf24497be6bc9716678645568850297158c20f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Erstellen einer Datenwarnung im Datenwarnungs-Designer
 
@@ -30,9 +29,9 @@ ms.lasthandoff: 08/17/2017
 Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen. Nach dem Speichern der Warnungsdefinitionen können Sie diese im Datenwarnungs-Designer erneut öffnen, bearbeiten und dann erneut speichern. Weitere Informationen zum Bearbeiten von Warnungsdefinitionen finden Sie unter [Verwalten meiner Datenwarnungen im Datenwarnungs-Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) und [Bearbeiten einer Datenwarnung im Warnungs-Designer](../reporting-services/edit-a-data-alert-in-alert-designer.md).
 
 > [!NOTE]
-> Reporting Services-Integration in SharePoint ist nach SQL Server 2016 nicht mehr verfügbar.
+> Die Integration von Reporting Services in SharePoint ist nach SQL Server 2016 nicht mehr möglich.
 
-## <a name="create-a-data-alert-definition"></a>Erstellen einer datenwarnungsdefinition
+## <a name="create-a-data-alert-definition"></a>Erstellen einer Datenwarnungsdefinition
  
 1.  Wechseln Sie zur SharePoint-Bibliothek mit dem Bericht, für den Sie eine Datenwarnungsdefinition erstellen möchten.  
   
@@ -47,7 +46,7 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen. Nach 
   
      Das folgende Bild zeigt das Menü **Aktionen** an.  
   
-     ![Öffnen von Warnungs-Designer aus SharePoint-Bibliothek](../reporting-services/media/rs-openalertdesigneriw.gif "öffnen Warnungs-Designer aus SharePoint-Bibliothek")  
+     ![Warnungs-Designer aus SharePoint-Bibliothek öffnen](../reporting-services/media/rs-openalertdesigneriw.gif "Open Alert Designer from SharePoint library")  
   
      Der Datenwarnungs-Designer wird geöffnet und zeigt die ersten 100 Zeilen des ersten Datenfeeds an, den der Bericht in einer Tabelle generiert.  
   
@@ -60,7 +59,7 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen. Nach 
   
 4.  Wählen Sie in der Dropdownliste **Berichtsdatenname** optional einen anderen Datenfeed aus.  
   
-     Wenn kein Datenfeed aus dem Bericht generiert wird, können Sie für den Bericht keine Warnungsdefinition erstellen. Das Layout des Berichts bestimmt den Inhalt jedes Datenfeeds. Weitere Informationen finden Sie unter [Generieren von Datenfeeds aus Berichten &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
+     Wenn kein Datenfeed aus dem Bericht generiert wird, können Sie für den Bericht keine Warnungsdefinition erstellen. Das Layout des Berichts bestimmt den Inhalt jedes Datenfeeds. Weitere Informationen finden Sie unter [Generieren von Datenfeeds aus Berichten (Berichts-Generator und SSRS)](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
 5.  Sie können im Textfeld **Warnungsname** den Standardnamen in einen sinnvolleren Namen ändern.  
   
@@ -111,7 +110,7 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen. Nach 
     > [!NOTE]  
     >  Durch das Beenden einer Warnmeldung wird die Warnungsdefinition nicht gelöscht. Nach dem Beenden einer Warnmeldung können Sie diese durch Aktualisieren des Start- und Enddatums erneut starten. Weitere Informationen zum Löschen von Warnungsdefinitionen finden Sie unter [Verwalten meiner Datenwarnungen im Datenwarnungs-Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   
-18. Deaktivieren Sie optional das Kontrollkästchen zum **Senden von Meldungen** nur bei Ergebnisänderungen.  
+18. Deaktivieren Sie optional das Kontrollkästchen zum **Senden von Meldungen nur bei Ergebnisänderungen** .  
   
      Wenn Sie Warnmeldungen häufig senden, sind redundante Informationen u. U. nicht erwünscht, und Sie sollten das Kontrollkästchen nicht deaktivieren.  
   
@@ -121,7 +120,7 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen. Nach 
   
 20. Aktualisieren Sie optional im Textfeld **Betreff** die Betreffzeile der Warnmeldung.  
   
-     Die Standardeinstellung ist der Antragsteller **datenwarnungs für \<Name der datenwarnung >**.  
+     Der Standardbetreff lautet **Datenwarnung für \<Name der Datenwarnung>**.  
   
 21. Geben Sie optional im Textfeld **Beschreibung** eine Beschreibung der Warnmeldung ein.  
   
@@ -133,5 +132,4 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen. Nach 
 [Datenwarnungs-Manager für Warnungsadministratoren](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Reporting Services-Datenwarnungen](../reporting-services/reporting-services-data-alerts.md)  
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

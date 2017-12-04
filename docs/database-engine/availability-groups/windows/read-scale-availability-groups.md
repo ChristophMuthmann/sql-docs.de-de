@@ -1,26 +1,26 @@
 ---
 title: "Schreibgeschützte Verfügbarkeitsgruppen | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 04/11/2017
-ms.prod: sql-server-2016
+ms.date: 10/24/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7c607ab320a7deb80fb140ee9f4cc25b798b7fc4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6dfa046a07b9fd5a3eddbe474b5ea63c1163c26c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="read-scale-availability-groups"></a>Schreibgeschützte Verfügbarkeitsgruppen
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
@@ -33,12 +33,14 @@ Die Clientanwendungen, die Analysen durchführen oder Berichte zu Workloads erst
 
 ## <a name="read-scale-availability-groups-without-cluster"></a>Schreibgeschützte Verfügbarkeitsgruppen ohne Cluster
 
-In [!INCLUDE[sssgl15-md](..\..\..\includes\sssql15-md.md)] und vorher haben Verfügbarkeitsgruppen ein Cluster erfordert. Der Cluster hat für Geschäftskontinuität gesorgt: hohe Verfügbarkeit und Notfallwiederherstellung (HADR). Darüber hinaus konnten sekundäre Replikate für Lesevorgänge konfiguriert werden. Das Konfigurieren und Betreiben eines Clusters kam mit hohem operativem Aufwand, wenn es nicht die hohe Verfügbarkeit zum Ziel hatte. SQL Server 2017 führt schreibgeschützte Verfügbarkeitsgruppen ohne Cluster ein. 
+In [!INCLUDE[sssql15-md](..\..\..\includes\sssql15-md.md)] und früher war ein Cluster für alle Verfügbarkeitsgruppen erforderlich. Der Cluster hat für Geschäftskontinuität gesorgt: Hochverfügbarkeit und Notfallwiederherstellung (HADR). Darüber hinaus konnten sekundäre Replikate für Lesevorgänge konfiguriert werden. Das Konfigurieren und Betreiben eines Clusters kam mit hohem operativem Aufwand, wenn es nicht die hohe Verfügbarkeit zum Ziel hatte. SQL Server 2017 führt schreibgeschützte Verfügbarkeitsgruppen ohne Cluster ein. 
 
-Wenn es Unternehmensanforderung ist, die Ressourcen unternehmenskritischer Workloads, die in der primären Datenbank ausgeführt werden, aufrechtzuerhalten, können Benutzer jetzt das schreibgeschützte Routing verwenden oder eine direkte Verbindung zu lesbaren sekundären Replikaten herstellen, ohne dass es eine Abhängigkeit von der Integration in eine Clustertechnologie gibt. Diese Funktionen sind für SQL Server 2017 unter Windows- und Linux-Plattformen verfügbar.
+Wenn es eine Unternehmensanforderung ist, die Ressourcen unternehmenskritischer Workloads aufrechtzuerhalten, die auf dem primären Replikat ausgeführt werden, können Benutzer jetzt das schreibgeschützte Routing verwenden oder eine direkte Verbindung zu lesbaren sekundären Replikaten herstellen, ohne dass eine Abhängigkeit von der Integration in eine Clustertechnologie besteht. Diese Funktionen sind für SQL Server 2017 unter Windows- und Linux-Plattformen verfügbar.
 
 >[!IMPORTANT]
->Dabei handelt es sich nicht um eine Einrichtung mit hoher Verfügbarkeit. Es gibt keine Infrastruktur zur Überwachung und Koordinierung der Fehlererkennung und eines automatischen Failovers. Verwenden Sie für Benutzer, die HADR-Funktionen benötigen, einen Cluster-Manager (WSFC unter Windows oder Pacemaker unter Linux). 
+>Dabei handelt es sich nicht um eine Einrichtung mit hoher Verfügbarkeit. Es gibt keine Infrastruktur zur Überwachung und Koordinierung der Fehlererkennung und eines automatischen Failovers. Ohne ein Cluster kann SQL Server nicht die niedrige Zielsetzung für die Wiederherstellungszeit (RTO, Recovery time objective) gewährleisten, die eine automatisierte Hochverfügbarkeitslösung bereitstellt. Verwenden Sie für Benutzer, die Hochverfügbarkeitsfunktionen benötigen, einen Cluster-Manager (WSFC unter Windows oder Pacemaker unter Linux). 
+>
+>Die schreibgeschützte Verfügbarkeitsgruppe kann Funktionen für die Notfallwiederherstellung bereitstellen. Wenn sich die schreibgeschützten Replikate im synchronen Commitmodus befinden, bieten diese eine RPO (Recovery point objective) von 0 (null). Weitere Informationen zum Ausführen eines Failovers einer schreibgeschützten Verfügbarkeitsgruppe finden Sie unter [Ausführen eines Failovers des primären Replikats auf schreibgeschützten Verfügbarkeitsgruppen](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md#ReadScaleOutOnly).
 
 ## <a name="use-distributed-availability-groups-for-geographic-read-scale"></a>Verwenden Sie für geografischen Schreibschutz verteilte Verfügbarkeitsgruppen
 
@@ -57,4 +59,3 @@ Eine einzelne verteilte Verfügbarkeitsgruppe kann bis zu 17 lesbare sekundäre 
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
-

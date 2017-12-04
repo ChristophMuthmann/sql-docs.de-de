@@ -4,39 +4,39 @@ ms.custom:
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: SQL
 ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - online index operations
 - source indexes [SQL Server]
-- preexisting indexes [SQL Server]
+- pre-existing indexes [SQL Server]
 - target indexes [SQL Server]
 - temporary mapping index [SQL Server]
 - index temporary mappings [SQL Server]
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.prod_service: database engine, sql database, sql data warehouse
+ms.suite: sql
+ms.prod_service: database-engine, sql-database
+ms.service: 
 ms.component: indexes
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 838a02643b47162d767e8f3b4191e5e3796adf57
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5c4b0e6d0830e1addce4f3bc586aa4c09029314c
+ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="how-online-index-operations-work"></a>Funktionsweise von Onlineindexvorgängen
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   In diesem Thema werden die während eines Onlineindexvorgangs vorhandenen Strukturen definiert und die mit diesen Strukturen verbundenen Aktivitäten aufgezeigt.  
   
 ## <a name="online-index-structures"></a>Onlineindexstrukturen  
- Um gleichzeitige Benutzeraktivitäten während eines Index-DLL-Vorgangs (Data Definition Language, Datendefinitionssprache) zu ermöglichen, werden folgende Strukturen im Rahmen des Onlineindexvorgangs verwendet: Quellindizes und bereits vorhandene Indizes, Zielindizes sowie ein temporärer Zuordnungsindex zum Neuerstellen eines Heaps oder Löschen eines gruppierten Indexes im Onlinemodus.  
+ Es werden folgende Strukturen während des Onlineindexvorgangs verwendet, um gleichzeitige Benutzeraktivitäten während eines Index-DDL-Vorgangs (Data Definition Language, Datendefinitionssprache) zu ermöglichen: Quellindizes und bereits vorhandene Indizes, Zielindizes sowie ein temporärer Zuordnungsindex zum Neuerstellen eines Heaps oder Löschen eines gruppierten Indexes im Onlinemodus.  
   
 -   **Quellindizes und bereits vorhandene Indizes**  
   
@@ -66,13 +66,13 @@ ms.lasthandoff: 06/22/2017
   
 |Phase|Quellaktivität|Quellsperren|  
 |-----------|---------------------|------------------|  
-|Vorbereitung<br /><br /> Sehr kurze Phase|Vorbereitung der Systemmetadaten auf die Erstellung der neuen leeren Indexstruktur.<br /><br /> Es wird eine Momentaufnahme der Tabelle definiert. Das heißt, dass mithilfe der Zeilenversionsverwaltung eine Lesekonsistenz auf Transaktionsebene ermöglicht wird.<br /><br /> Schreibvorgänge durch gleichzeitige Benutzer an der Quelle werden für einen sehr kurzen Zeitraum gesperrt.<br /><br /> Es werden mit Ausnahme der Erstellung mehrerer nicht gruppierter Indizes keine gleichzeitigen DDL-Vorgänge zugelassen.|S (Shared) für Tabelle*<br /><br /> Beabsichtigte freigegebene Sperre (Intent Shared, IS)<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
-|Erstellen<br /><br /> Hauptphase|Die Daten werden gescannt, sortiert, zusammengeführt und in Massenladevorgängen in das Ziel eingefügt.<br /><br /> Auswahl-, Einfüge-, Update- und Löschvorgänge durch gleichzeitige Benutzer werden sowohl auf die bereits vorhandenen Indizes als auch auf sämtliche neu erstellten Indizes angewendet.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
-|Endphase<br /><br /> Sehr kurze Phase|Alle Transaktionen ohne Commit müssen abgeschlossen werden, bevor diese Phase gestartet wird. Je nach der eingerichteten Sperre werden alle Lese- und Schreibtransaktionen für einen sehr kurzen Zeitraum gesperrt, bis diese Phase abgeschlossen ist.<br /><br /> Sie Systemmetadaten werden aktualisiert; d. h., die Quelle wurde durch das Ziel ersetzt.<br /><br /> Die Quelle wird gelöscht, falls dies erforderlich ist. Beispielsweise nach dem erneuten Erstellen oder dem Löschen eines gruppierten Indexes.|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> S für die Tabelle, sofern ein nicht gruppierter Index erstellt wird.\*<br /><br /> Schemaänderungssperre (SCH-M, Schema Modification), sofern eine Quellstruktur (Index oder Tabelle) gelöscht wird.\*|  
+|Vorbereitung<br /><br /> Kurze Phase|Vorbereitung der Systemmetadaten auf die Erstellung der neuen leeren Indexstruktur.<br /><br /> Es wird eine Momentaufnahme der Tabelle definiert. Das heißt, dass mithilfe der Zeilenversionsverwaltung eine Lesekonsistenz auf Transaktionsebene ermöglicht wird.<br /><br /> Gleichzeitige Schreibvorgänge an der Quelle durch Benutzer werden für einen kurzen Zeitraum gesperrt.<br /><br /> Es werden mit Ausnahme der Erstellung mehrerer nicht gruppierter Indizes keine gleichzeitigen DDL-Vorgänge zugelassen.|S (Shared) für Tabelle*<br /><br /> Beabsichtigte freigegebene Sperre (Intent Shared, IS)<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
+|Erstellen<br /><br /> Hauptphase|Die Daten werden gescannt, sortiert, zusammengeführt und in Massenladevorgängen in das Ziel eingefügt.<br /><br /> Gleichzeitige Auswahl-, Einfüge-, Update- und Löschvorgänge durch Benutzer werden sowohl auf die bereits vorhandenen Indizes als auch auf sämtliche neu erstellten Indizes angewendet.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
+|Endphase<br /><br /> Kurze Phase|Alle Transaktionen ohne Commit müssen abgeschlossen werden, bevor diese Phase gestartet wird. Je nach der eingerichteten Sperre werden alle neuen Lese- und Schreibtransaktionen durch Benutzer für einen kurzen Zeitraum gesperrt, bis diese Phase abgeschlossen ist.<br /><br /> Sie Systemmetadaten werden aktualisiert; d. h., die Quelle wurde durch das Ziel ersetzt.<br /><br /> Die Quelle wird gelöscht, falls dies erforderlich ist. Beispielsweise nach dem erneuten Erstellen oder dem Löschen eines gruppierten Indexes.|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> S für die Tabelle, sofern ein nicht gruppierter Index erstellt wird.\*<br /><br /> Schemaänderungssperre (SCH-M, Schema Modification), sofern eine Quellstruktur (Index oder Tabelle) gelöscht wird.\*|  
   
  \* Der Indexvorgang wartet, bis Updatetransaktionen ohne Commit abgeschlossen sind, bevor er die S- oder SCH-M-Sperre für die Tabelle einrichtet.  
   
- ** Die Ressourcensperre INDEX_BUILD_INTERNAL_RESOURCE verhindert die Ausführung gleichzeitiger DDL-Vorgänge (Datendefinitionssprache) für die Quelle und bereits vorhandene Strukturen, während der Indexvorgang ausgeführt wird. Diese Sperre verhindert beispielsweise die gleichzeitige Neuerstellung zweier Indizes für dieselbe Tabelle. Obwohl diese Ressourcensperre der Sch-M-Sperre zugeordnet ist, verhindert sie keine Datenbearbeitungsanweisungen.  
+ ** Die Ressourcensperre INDEX_BUILD_INTERNAL_RESOURCE verhindert die Ausführung gleichzeitiger DDL-Vorgänge für die Quelle und bereits vorhandene Strukturen, während der Indexvorgang ausgeführt wird. Diese Sperre verhindert beispielsweise die gleichzeitige Neuerstellung zweier Indizes für dieselbe Tabelle. Obwohl diese Ressourcensperre der Sch-M-Sperre zugeordnet ist, verhindert sie keine Datenbearbeitungsanweisungen.  
   
  Die vorherige Tabelle zeigt eine einzelne freigegebene Sperre (Shared, S) an, die während der Erstellungsphase eines Onlineindexvorgangs, der einen einzelnen Index einschließt, eingerichtet wurde. Wenn gruppierte und nicht gruppierte Indizes erstellt oder neu erstellt werden, werden bei einem einzelnen Onlineindexvorgang (z. B. während der anfänglichen Erstellung eines gruppierten Indexes für eine Tabelle, die einen oder mehrere nicht gruppierte Indizes enthält) zwei kurzfristige S-Sperren gefolgt von langfristigen beabsichtigten gemeinsamen Sperren (IS-Sperren) während der Erstellungsphase eingerichtet. Eine S-Sperre wird zunächst für die Erstellung des gruppierten Indexes eingerichtet, und wenn die Erstellung des gruppierten Indexes abgeschlossen ist, wird eine zweite kurzfristige S-Sperre für die Erstellung der nicht gruppierten Indizes eingerichtet. Nachdem die nicht gruppierten Indizes erstellt wurden, wird die S-Sperre bis zur Endphase des Onlineindexvorgangs auf eine IS-Sperre herabgestuft.  
   
@@ -97,4 +97,3 @@ ms.lasthandoff: 06/22/2017
  [Richtlinien für Onlineindexvorgänge](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  
   
   
-

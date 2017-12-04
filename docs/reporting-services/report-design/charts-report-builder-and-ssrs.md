@@ -1,5 +1,5 @@
 ---
-title: Diagramme (Berichts-Generator und SSRS) | Microsoft Docs
+title: Diagramme (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -21,49 +21,49 @@ f1_keywords:
 - "10172"
 - sql13.rtp.rptdesigner.chartareaproperties.3doptions.f1
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: ca57a00afd7256fce9c620099277a9894cbf59a3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: d7c46a132a6d559e6299910d6b2e4e117e650f45
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Diagramme (Berichts-Generator und SSRS)
-Erfahren Sie, mit Diagrammdatenbereichen für die Leser Ihre [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginierte Berichte zu verstehen, große Mengen aggregierter Daten auf einen Blick.  
+Erfahren Sie mehr über das Verwenden von Diagrammdatenbereichen, um die Leser Ihrer paginierten Berichte von [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] dabei zu unterstützen, große Mengen von aggregierten Daten auf einen Blick zu verstehen.  
 
-Weitere Zeit, die Sie aufwenden müssen sorgfältig vorbereiten und auswerten Ihrer Daten vor dem Erstellen eines Diagramms, desto einfacher kostenintensiver wird Ihre Diagramme schnell und effizient zu gestalten. Um Hilfe zu erhalten, welcher Diagrammtyp auswählen, finden Sie unter [Diagrammtypen](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md) zum Experimentieren mit Diagrammen sofort zu starten, finden Sie unter der Balken, Spalte, Sparkline und Kreisdiagramm Lernprogramme in [Lernprogrammen für Berichts-Generator](../../reporting-services/report-builder-tutorials.md).  
+Je mehr Zeit Sie dafür aufwenden, Ihre Daten vorzubereiten und zu analysieren, bevor Sie ein Diagramm erstellen, desto schneller und effizienter können Sie Ihre Diagramme gestalten. Weitere Informationen dazu, welches Diagramm Sie verwenden sollten, finden Sie unter [Diagrammtypen](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md). Weitere Informationen zum sofortigen Experimentieren mit Diagrammen finden Sie in den Tutorials zu Balken-, Säulen-, Sparkline- und Kreisdiagrammen unter [Report Builder Tutorials (Tutorials für den Berichts-Generator)](../../reporting-services/report-builder-tutorials.md).  
   
  Die folgende Abbildung zeigt viele der verschiedenen Elemente, die im Diagramm verwendet werden.  
   
- ![Diagrammelemente](../../reporting-services/report-design/media/rs-chartelementsc.gif "Diagrammelemente")  
+ ![Diagrammelemente](../../reporting-services/report-design/media/rs-chartelementsc.gif "Chart elements diagram")  
   
- Sie können Diagramme getrennt von einem Bericht als veröffentlichen *berichtsteile*. Weitere Informationen finden Sie unter [Berichtsteile](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).
+ Diagramme können getrennt von einem Bericht als *Berichtsteile* veröffentlicht werden. Weitere Informationen finden Sie unter [Berichtsteile](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).
   
  
 ##  <a name="DesigningChart"></a> Entwerfen eines Diagramms  
- Nachdem Sie der Entwurfsoberfläche einen Diagrammdatenbereich hinzugefügt haben, können Sie Berichtsdataset-Felder für numerische und nicht numerische Daten in den Diagrammdatenbereich des Diagramms ziehen. Wenn Sie in der Entwurfsoberfläche auf das Diagramm klicken, wird der Diagrammdatenbereich mit drei untergeordneten Bereichen angezeigt: Kategoriegruppen, Reihengruppen und Werte. Wenn der Bericht über ein freigegebenes oder eingebettetes Dataset verfügt, werden die Felder im Dataset im Berichtsdatenbereich angezeigt. Ziehen Sie Felder aus dem Dataset in den entsprechenden Bereich im Bereich Diagrammdaten. Wenn einem Bereich des Diagramms ein Feld hinzugefügt wird, wird in der Standardeinstellung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ein Aggregat für das Feld berechnet. Sie können auch die Reihengruppierung verwenden, um Reihen dynamisch zu generieren. Ein Diagramm ist [wie eine Matrix organisiert](#SimilarMatrix).  
+ Nachdem Sie der Entwurfsoberfläche einen Diagrammdatenbereich hinzugefügt haben, können Sie Berichtsdataset-Felder für numerische und nicht numerische Daten in den Diagrammdatenbereich des Diagramms ziehen. Wenn Sie in der Entwurfsoberfläche auf das Diagramm klicken, wird der Diagrammdatenbereich mit drei untergeordneten Bereichen angezeigt: Kategoriegruppen, Reihengruppen und Werte. Wenn der Bericht über ein freigegebenes oder eingebettetes Dataset verfügt, werden die Felder im Dataset im Berichtsdatenbereich angezeigt. Ziehen Sie die Felder aus dem Dataset in den entsprechenden Diagrammdatenbereich. Wenn einem Bereich des Diagramms ein Feld hinzugefügt wird, wird in der Standardeinstellung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ein Aggregat für das Feld berechnet. Sie können auch die Reihengruppierung verwenden, um Reihen dynamisch zu generieren. Ein Diagramm ist [wie eine Matrix organisiert](#SimilarMatrix).  
   
- ![Rs_chartwSeriesCategories](../../reporting-services/report-design/media/rs-chartwseriescategories.gif "Rs_chartwSeriesCategories")  
+ ![rs_chartwSeriesCategories](../../reporting-services/report-design/media/rs-chartwseriescategories.gif "rs_chartwSeriesCategories")  
   
 > [!NOTE]  
 >  Die Daten im Diagramm unterscheiden sich zur Entwurfszeit von den Daten im Diagramm, wenn der Bericht verarbeitet wird. Es ist nicht die wirklichen Daten. Es handelt sich um generierte Daten, die hinzugefügt wurden, damit Sie das Diagramm zur Entwurfszeit mit einer Vorstellung von dessen tatsächlicher Darstellung erstellen können.  
   
-##  <a name="SimilarMatrix"></a>Ein Diagramm wie z. B. eine Matrix ist  
+##  <a name="SimilarMatrix"></a> Ähnlichkeiten zwischen einem Diagramm und einer Matrix  
  Eine Möglichkeit, die Funktionsweise von Diagrammen zu veranschaulichen, ist der Vergleich mit Matrizen.  
   
- ![Neue Matrix aus Toolbox hinzugefügt, markiert](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "neue Matrix aus Toolbox hinzugefügt, ausgewählt")  
+ ![Neue Matrix aus Toolbox hinzugefügt, markiert](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "New Matrix added from Toolbox, selected")  
   
  Begrifflich ist ihre Organisation identisch:  
   
--   Die Spaltengruppe der Matrix ähnelt dem kategoriegruppenbereich im Diagramm.  
+-   Die Spaltengruppe in der Matrix ist mit dem Kategoriegruppenbereich im Diagramm identisch.  
   
--   Die Zeilengruppe in der Matrix ähnelt dem reihengruppenbereich im Diagramm.  
+-   Die Zeilengruppe in der Matrix ist mit dem Reihengruppenbereich im Diagramm identisch.  
   
--   Der Datenbereich in der Matrix ist z. B. den Bereich der Werte im Diagramm.  
+-   Der Datenbereich in der Matrix ist mit dem Wertebereich im Diagramm identisch.  
   
  
 ##  <a name="AddingData"></a> Hinzufügen von Daten zum Diagramm  
@@ -71,7 +71,7 @@ Weitere Zeit, die Sie aufwenden müssen sorgfältig vorbereiten und auswerten Ih
   
  Wenn Sie das Feld Vertrieb im Wertebereich ablegen, wird der Text des Datenfelds in der Legende angezeigt, und die Daten aus diesem numerischen Feld werden zu einem einzelnen Wert aggregiert. Standardmäßig wird der Wert mit der integrierten Funktion SUM aggregiert. Der Diagrammdatenbereich enthält einen einfachen Ausdruck für das Feld. Im Beispiel wird `[Sum(Sales)]` für den Feldausdruck `=Sum(Fields!Sales.Value)`angezeigt. Wenn keine Gruppen angegeben werden, zeigt das Diagramm nur einen Datenpunkt an. Um mehrere Datenpunkte anzuzeigen, müssen Sie die Daten gruppieren, indem Sie ein Gruppierungsfeld hinzufügen. Wenn Sie das Feld Name dem Kategoriegruppenbereich hinzufügen, wird dem Diagramm automatisch ein Gruppierungsfeld mit demselben Namen wie das Feld hinzugefügt. Wenn Felder hinzugefügt werden, in denen Werte entlang der x- und y-Achse definiert werden, verfügt das Diagramm über genügend Informationen, um die Daten korrekt zu zeichnen.  
   
- ![Rs_chartwNoSeries](../../reporting-services/report-design/media/rs-chartwnoseries.gif "Rs_chartwNoSeries")  
+ ![rs_chartwNoSeries](../../reporting-services/report-design/media/rs-chartwnoseries.gif "rs_chartwNoSeries")  
   
  Wenn der Reihengruppenbereich leer bleibt, wird die Anzahl der Reihen zur Entwurfszeit festgelegt. In diesem Beispiel ist Vertrieb die einzige im Diagramm angezeigte Reihe.  
   
@@ -144,10 +144,10 @@ Weitere Zeit, die Sie aufwenden müssen sorgfältig vorbereiten und auswerten Ih
   
 ## <a name="see-also"></a>Siehe auch  
  [Bilder, Textfelder, Rechtecke und Linien &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
- [Interaktive Sortierung, Dokumentstrukturen, und Links &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [Geschachtelte Datenbereiche &#40; Berichts-Generator und SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [Lernprogramm: Hinzufügen eines Säulendiagramms zu dem Bericht &#40; Berichts-Generator &#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [Interaktive Sortierung, Dokumentstrukturen und Links &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [Geschachtelte Datenbereiche &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
+ [Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
  [Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Lernprogramm: Hinzufügen eines Balkendiagramms zum Bericht &#40; Berichts-Generator &#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

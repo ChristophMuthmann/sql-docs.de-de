@@ -2,11 +2,13 @@
 title: "'SQL Server:Als veraltet markierte Funktionen'-Objekt | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/03/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +17,19 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1cbdf2dde41142d1b674e71df3a34756e8fcce99
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: e4ed295cab6b932ba39a2a6417b8977dc5791e6e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-deprecated-features-object"></a>'SQL Server:Als veraltet markierte Funktionen'-Objekt
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Das „SQLServer:Als veraltet markierte Funktionen“-Objekt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt einen Leistungsindikator bereit, um die als veraltet gekennzeichneten Funktionen zu überwachen. In jedem Fall stellt der Leistungsindikator einen Verwendungszähler bereit, der angibt, wie oft die veraltete Funktion seit dem letzten Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gefunden wurde.  
   
@@ -114,7 +116,7 @@ In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet mark
 |Hindi|Ereignis tritt einmal pro Datenbankstart und einmal pro Sortierungsverwendung auf. Planen Sie, Anwendungen zu ändern, die diese Sortierung verwenden. Verwenden Sie stattdessen Indic_General_90.|  
 |HOLDLOCK-Tabellenhinweis ohne Klammern||  
 |IDENTITYCOL|Die Syntax INDENTITYCOL wurde gefunden. Schreiben Sie die Anweisungen so um, dass sie die $identity-Syntax verwenden. Tritt einmal pro Kompilierung auf.|  
-|Indexsicht-Auswahlliste ohne COUNT_BIG(*)|Die Auswahlliste einer indizierten Aggregatsicht muss den Wert COUNT_BIG (*) enthalten.|  
+|Indexsicht-Auswahlliste ohne COUNT_BIG(\*)|Die Auswahlliste einer indizierten Aggregatsicht muss den Wert COUNT_BIG (\*) enthalten.|  
 |INDEX_OPTION|CREATE TABLE-, ALTER TABLE- oder CREATE INDEX-Syntax ohne Klammern um die Optionen gefunden. Schreiben Sie Anweisung so um, dass sie die aktuelle Syntax verwendet. Tritt einmal pro Abfrage auf.|  
 |INDEXKEY_PROPERTY|Die Syntax INDEXKEY_PROPERTY wurde gefunden. Schreiben Sie die Anweisungen so um, dass sie sys.index_columns abfragen. Tritt einmal pro Kompilierung auf.|  
 |Indirekte TVF-Hinweise|Das indirekte Anwenden von Tabellenhinweisen auf einen Aufruf einer Tabellenwertfunktion (Table Valued Function, TVF) mit mehreren Anweisungen über eine Sicht wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nicht mehr unterstützt.|  
@@ -292,4 +294,3 @@ In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet mark
  [Verwenden von SQL Server-Objekten](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   
   
-

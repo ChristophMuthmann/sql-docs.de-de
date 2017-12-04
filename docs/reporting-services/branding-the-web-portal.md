@@ -1,26 +1,23 @@
 ---
-title: Branding des Webportals | Microsoft Docs
+title: Branding des Webportals | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: fcca4ace177a9d606a49db485fe6c61c4ef24355
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9c78d9480dd8d2bacca80fd06183b9d31f7714d5
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/18/2017
 ---
-
 # <a name="branding-the-web-portal"></a>Branding des Webportals
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -74,7 +71,7 @@ Das LESS-Stylesheet enthält Blöcke, die auf einige vordefinierte LESS-Variable
         background-color:@primaryButtonBg;   
     }  
   
-Obwohl dies der CSS-Syntax ähnelt, das die Farbwerte anzeigt, mit dem Präfix der @symbol, sind eindeutig für LESS. Sie sind Variablen, deren Werte von der JSON-Datei festgelegt werden.  
+Obwohl dies der CSS-Syntax ähnelt, sind die Farbwerte, die mit dem Präfix @symbol versehen sind, für LESS eindeutig. Sie sind Variablen, deren Werte von der JSON-Datei festgelegt werden.  
   
 Wenn beispielsweise die colors.json-Datei die folgenden Werte hätte.  
   
@@ -247,5 +244,4 @@ Sie können das Paket auch **Herunterladen** oder **Entfernen** . Das Entfernen 
         }  
     }  
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.dm.domainproperties.f1
+f1_keywords: sql13.dqs.dm.domainproperties.f1
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 21943e484d690d0ff26cf9a93e0688e0804dd02c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e097256faccb24e82194edc7247ae7010a601430
-ms.contentlocale: de-de
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-domain-properties"></a>Festlegen von Domäneneigenschaften
   In diesem Thema wird beschrieben, wie Domäneneigenschaften in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) festgelegt werden.  
@@ -57,7 +54,7 @@ ms.lasthandoff: 09/09/2017
  Nachdem eine Domäne erstellt wurde, kann der Domänenname oder die Beschreibung geändert werden. Der Domänenname muss für die Wissensdatenbank eindeutig sein. Die Beschreibung kann bis zu 256 Zeichen enthalten.  
   
 ###  <a name="Type"></a> Datentyp  
- Wenn Sie die Domäne erstellen, wählen Sie einen der folgenden Datentypen für die Werte in der Domäne aus: **Zeichenfolge** (Standardeinstellung), **Datum**, **Ganze Zahl**oder **Dezimal**. Nachdem Sie die Domäne erstellt haben, können Sie den Datentyp anzeigen, jedoch nicht mehr ändern. Der für eine Domäne ausgewählte Datentyp definiert den Typ von Quelldaten, die der Domäne zugeordnet werden können. Informationen zu unterstützten Datentypen für jeden der vier Domänendatentypen in DQS finden Sie unter [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+ Wenn Sie die Domäne erstellen, wählen Sie einen der folgenden Datentypen für die Werte in der Domäne aus: **Zeichenfolge** (Standardeinstellung), **Datum**, **Ganze Zahl**oder **Dezimal**. Nachdem Sie die Domäne erstellt haben, können Sie den Datentyp anzeigen, jedoch nicht mehr ändern. Der für eine Domäne ausgewählte Datentyp definiert den Typ von Quelldaten, die der Domäne zugeordnet werden können. Informationen zu unterstützten Datentypen für jeden der vier Domänendatentypen in DQS finden Sie unter [Supported SQL Server and SSIS Data Types for DQS Domains (Unterstützte SQL Server- und SSIS-Datentypen für DQS-Domänen)](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 ###  <a name="Leading"></a> Führende Werte verwenden  
  Aktivieren Sie dieses Kontrollkästchen, um anzugeben, dass der führende Wert in einer Gruppe von Synonymen statt eines Werts ausgegeben wird, der ein Synonym dafür ist. Deaktivieren Sie **Führende Werte verwenden** , um anzugeben, dass jeder Synonymwert in seinem richtigen oder korrigierten Format ausgegeben und nicht durch den führenden Wert für die zugehörige Gruppe ersetzt wird.  
@@ -97,4 +94,3 @@ ms.lasthandoff: 09/09/2017
  Wenn der Datentyp **Zeichenfolge**ist, wählen Sie dies aus, um anzugeben, dass DQS während der Bereinigung keine Syntaxfehler in der Domäne identifiziert. Aktivieren Sie dieses Kontrollkästchen, wenn die Identifizierung von Syntaxfehlern für diese Domäne irrelevant ist. Die Identifizierung von Syntaxfehler ist für eine Seriennummer beispielsweise unwichtig. Dieses Steuerelement ist nur für den Datentyp „Zeichenfolge“ verfügbar. DQS überprüft keine anderen Datentypen als Zeichenfolgen auf Syntaxfehler.  
   
   
-

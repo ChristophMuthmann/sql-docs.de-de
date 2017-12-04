@@ -1,5 +1,5 @@
 ---
-title: Datenwarnungs-Designer | Microsoft Docs
+title: Datenwarnungs-Designer | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - creating, data alerts
 - creating, alerts
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 67b7bf50b5773ee52651942345e40146a7e70fb6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 10ec05b662839e5cf2aac0d756d7ae581bdf8de9
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-alert-designer"></a>Datenwarnungs-Designer
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/09/2017
 Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und bearbeiten. Eine Warnungsdefinition ist eine Auflistung von Metadaten. Dazu gehören die für Sie interessanten Berichtsdaten, die Regeln, die Berichtsdaten zum Erstellen von Datenwarnungsinstanzen und zum Senden von Datenwarnmeldungen erfüllen müssen, sowie die Empfänger der Warnmeldung usw.  
 
 > [!NOTE]
-> Reporting Services-Integration in SharePoint ist nach SQL Server 2016 nicht mehr verfügbar.
+> Die Integration von Reporting Services in SharePoint ist nach SQL Server 2016 nicht mehr möglich.
 
  Um eine Warnungsdefinition zu erstellen, führen Sie eine Reihe von verwandten Tasks aus:  
   
@@ -64,7 +64,7 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und be
 ##  <a name="AlertDesigner"></a> Benutzeroberfläche des Datenwarnungs-Designers  
  Der Datenwarnungs-Designer ist in verschiedene Bereiche unterteilt. Der Bereich, in dem Sie den Berichtsdatenfeed auswählen, der Bereich, in dem Sie einfache oder komplexe Bedingungen erstellen, indem Sie Bedingungen Regeln hinzufügen, usw. Das folgende Bild zeigt die Bereiche im Datenwarnungs-Designer an.  
   
- ![Bereiche der Benutzeroberfläche von Warnungs-Designer](../reporting-services/media/rs-alertdesigner.gif "Bereiche der Benutzeroberfläche von Warnungs-Designer")  
+ ![Bereiche der Benutzeroberfläche des Warnungs-Designers](../reporting-services/media/rs-alertdesigner.gif "Areas within the Alert Designer user interface")  
   
   
 ### <a name="alert-data"></a>Warnungsdaten  
@@ -74,7 +74,7 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und be
   
  Ist der Bericht parametrisiert, und sehen Sie nicht die im Berichtsdatenfeed erwarteten Daten und Spalten, führen Sie den Bericht mithilfe der entsprechenden Parameterwerte erneut aus. Die Spalten und Werte müssen im Bericht vorhanden sein, der in den Datenfeed einzubinden ist.  
   
- Abhängig vom Layout des Berichts ist es möglicherweise nicht intuitiv, wie viele Datenfeeds ein Bericht enthält oder welche Daten in welchem Datenfeed enthalten sind. Die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Atom-Renderingerweiterung generiert die Datenfeeds, die Sie mit Warnungen verwenden. Die Atom-Renderingerweiterung stellt Berichtsdaten als vereinfachte Rowsets bereit, ein Tabellenformat, in dem alle Spalten die gleiche Anzahl Zeilen aufweisen. Diese Rowsets sind Inhalte der Datenfeeds. Da das Berichtslayout oft komplex ist und Datenbereiche mit mehreren Peers oder geschachtelte Datenbereiche enthält, werden mehrere Datenfeeds benötigt, um alle Berichtsdaten verfügbar zu machen. Weitere Informationen zum Generieren von Datenfeeds aus Berichten finden Sie unter [Generieren von Datenfeeds aus Berichten &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md) und [Generieren von Datenfeeds aus einem Bericht &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
+ Abhängig vom Layout des Berichts ist es möglicherweise nicht intuitiv, wie viele Datenfeeds ein Bericht enthält oder welche Daten in welchem Datenfeed enthalten sind. Die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Atom-Renderingerweiterung generiert die Datenfeeds, die Sie mit Warnungen verwenden. Die Atom-Renderingerweiterung stellt Berichtsdaten als vereinfachte Rowsets bereit, ein Tabellenformat, in dem alle Spalten die gleiche Anzahl Zeilen aufweisen. Diese Rowsets sind Inhalte der Datenfeeds. Da das Berichtslayout oft komplex ist und Datenbereiche mit mehreren Peers oder geschachtelte Datenbereiche enthält, werden mehrere Datenfeeds benötigt, um alle Berichtsdaten verfügbar zu machen. Weitere Informationen zum Generieren von Datenfeeds aus Berichten finden Sie unter [Generieren von Datenfeeds aus Berichten (Berichts-Generator und SSRS)](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md) und [Generieren von Datenfeeds aus einem Bericht (Berichts-Generator und SSRS)](../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
   
  Wenn Sie einen Datenfeed auswählen, werden die Daten aus dem Feed im Warnungsdatenbereich vom Datenwarnungs-Designer in einer Tabelle mit Zeilen und Spalten angezeigt. Die Metadaten der Datenquelle, die der Bericht verwendet, oder der Bericht selbst gibt/geben die Spaltennamen an, und der Datenfeed füllt die Feldliste auf, mit der Sie Regeln in der Datenbedingung definieren. Der Datenfeed enthält auch Metadaten, wie z. B. die Datentypen von Tabellenspalten, die die Werte und Vergleichsoperatoren einschränken, die Sie beim Erstellen der Regeln mit Feldern verwenden können.  
   
@@ -146,7 +146,7 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und be
   
 -   Vergleiche des String-Datentyps sind **ist**, **ist not**und **enthält**.  
   
- Wenn Sie eine Regel erstellen, geben Sie an, ob ein Wert oder Feld im Vergleich zu verwenden ist. Wählen Sie dazu die Option **Werteingabemodus** oder **Feldauswahlmodus**aus. Wenn Sie **Werteingabemodus**auswählen, stellen Sie eine Liste mit zu vergleichenden Werten bereit. Ein Vergleich, der mehrere OR-Klauseln umfasst, ähnelt stark dem logischen IN-Vergleich in [!INCLUDE[tsql](../includes/tsql-md.md)], der einer Liste mit für eine Übereinstimmung zu testenden Werten entspricht. Weitere Informationen finden Sie unter [IN &#40;Transact-SQL&#41;](../t-sql/language-elements/in-transact-sql.md).  
+ Wenn Sie eine Regel erstellen, geben Sie an, ob ein Wert oder Feld im Vergleich zu verwenden ist. Wählen Sie dazu die Option **Werteingabemodus** oder **Feldauswahlmodus**aus. Wenn Sie **Werteingabemodus**auswählen, stellen Sie eine Liste mit zu vergleichenden Werten bereit. Ein Vergleich, der mehrere OR-Klauseln umfasst, ähnelt stark dem logischen IN-Vergleich in [!INCLUDE[tsql](../includes/tsql-md.md)], der einer Liste mit für eine Übereinstimmung zu testenden Werten entspricht. Weitere Informationen finden Sie unter [IN (Transact-SQL)](../t-sql/language-elements/in-transact-sql.md).  
   
  Wenn Sie **Feldauswahlmodus**auswählen, erfolgt der Vergleich zwischen zwei Feldern (Zeile für Zeile). Die zwei Felder müssen über kompatible Datentypen verfügen, beispielsweise zwei numerische Felder. Andernfalls ist der Vergleich nicht gültig. Eine Liste mit Feldern wird automatisch angezeigt, wenn Sie die Option **Feldauswahlmodus**auswählen.  
   
@@ -177,7 +177,7 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und be
 ### <a name="email-settings"></a>E-Mail-Einstellungen  
  Sie geben anhand der Option **Empfänger** die E-Mail-Adressen der Empfänger an, die Datenwarnmeldungen per E-Mail erhalten sollen. Mehrere E-Mail-Adressen werden auf dieselbe Art wie bei Microsoft Office Outlook-E-Mails durch Semikolons getrennt. Sie können auch Verteilergruppen als Empfänger angeben. Dies vereinfacht und optimiert die Verwaltung der Empfängerliste. Wenn SharePoint Ihre E-Mail-Adresse bestimmen kann, wenn Sie eine Warnungsdefinition erstellen, wird Ihre E-Mail-Adresse automatisch der Empfängerliste hinzugefügt. Andernfalls müssen Sie sich ausdrücklich als Empfänger hinzufügen.  
   
- Der Standardbetreff der e-Mail lautet **datenwarnungs für \<Warnungsname >**. Sie können den Betreff Ihren Anforderungen entsprechend ändern.  
+ Der Standardbetreff der E-Mail lautet **Datenwarnung für \<Warnungsname>**. Sie können den Betreff Ihren Anforderungen entsprechend ändern.  
   
  Sie können mithilfe der Option **Beschreibung** auch eine Beschreibung angeben, die in der Datenwarnmeldung enthalten sein soll. Das Einfügen einer Beschreibung, insbesondere im Fall von ähnlichen Datenwarnungen, ermöglicht ein schnelles Unterscheiden und Verstehen der Warnmeldungen. Zusätzlich zur Warnmeldung, die gesendet wird, wenn Berichtsdaten die angegebenen Regeln erfüllen, wird bei Auftreten eines Fehlers allen Empfängern eine Warnmeldung gesendet. Weitere Informationen finden Sie unter [Data Alert Messages](../reporting-services/data-alert-messages.md).  
   
@@ -186,7 +186,7 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und be
 ##  <a name="CreateAlert"></a> Erstellen einer Datenwarnungsdefinition  
  Wenn Ihnen die SharePoint-Berechtigungen "Elemente anzeigen" und "Warnungen erstellen" gewährt werden und erstellt werden, können Sie eine Datenwarnungsdefinition für jeden Bericht erstellen, den Sie anzeigen können. Dabei wird vorausgesetzt, dass der betreffende Bericht gespeicherte Anmeldeinformationen oder keine Anmeldeinformationen verwendet. Sie führen den Bericht über eine SharePoint-Bibliothek aus. Die für Sie verfügbaren Daten, die Sie im Datenwarnungs-Designer verwenden können, stammen aus dem Bericht. Wenn der Bericht parametrisiert wird, müssen Sie den Bericht möglicherweise mithilfe anderer Parameterwerte erstellen, um sicherzustellen, dass die Daten, an denen Sie interessiert sind, im Bericht enthalten sind. Nachdem der Bericht geöffnet ist, klicken Sie auf der Berichtssymbolleiste im Menü **Aktionen** auf die Option **Neue Datenwarnung** , um den Datenwarnungs-Designer zu öffnen. Das folgende Bild zeigt das Öffnen des Datenwarnungs-Designers.  
   
- ![Öffnen von Warnungs-Designer aus SharePoint-Bibliothek](../reporting-services/media/rs-openalertdesigneriw.gif "öffnen Warnungs-Designer aus SharePoint-Bibliothek")  
+ ![Warnungs-Designer aus SharePoint-Bibliothek öffnen](../reporting-services/media/rs-openalertdesigneriw.gif "Open Alert Designer from SharePoint library")  
   
  Weitere Informationen finden Sie unter [Erstellen einer Datenwarnung im Datenwarnungs-Designer](../reporting-services/create-a-data-alert-in-data-alert-designer.md).  
   
@@ -205,7 +205,7 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und be
   
  Um eine Datenwarnungsdefinition zu bearbeiten, klicken Sie im Datenwarnungs-Manager mit der rechten Maustaste auf die gewünschte Definition, und klicken Sie anschließend auf **Bearbeiten**. Das folgende Bild zeigt das Kontextmenü einer Datenwarnung im Datenwarnungs-Manager.  
   
- ![Datenwarnungs-Designer öffnen, indem Sie auf Bearbeiten](../reporting-services/media/rs-alertmanageriwopendesigner.gif "öffnen den Datenwarnungs-Designer durch Klicken auf Bearbeiten")  
+ ![Datenwarnungs-Designer öffnen, indem Sie auf „Bearbeiten“ klicken](../reporting-services/media/rs-alertmanageriwopendesigner.gif "Open Data Alert Designer by clicking Edit")  
   
  Weitere Informationen finden Sie unter [Bearbeiten einer Datenwarnung im Warnungs-Designer](../reporting-services/edit-a-data-alert-in-alert-designer.md).  
   
@@ -220,6 +220,6 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und be
 ## <a name="see-also"></a>Siehe auch
 
 [Reporting Services-Datenwarnungen](../reporting-services/reporting-services-data-alerts.md)   
-[Datenwarnungs-Manager für Warnungsadministratoren](../reporting-services/data-alert-manager-for-alerting-administrators.md)  
+[Data Alert Manager for Alerting Administrators (Datenwarnungs-Manager für Warnungsadministratoren)](../reporting-services/data-alert-manager-for-alerting-administrators.md)  
 
-Weiteren Fragen wenden? [Versuchen Sie das Reporting Services-Forum stellen](http://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)

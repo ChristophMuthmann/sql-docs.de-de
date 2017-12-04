@@ -1,13 +1,11 @@
 ---
-title: Power BI-Bericht-Server-Integration (Konfigurations-Manager) | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+title: Integration von Power BI-Berichtsserver (Configuration Manager) | Microsoft-Dokumentation
+ms.custom: SQL2016_New_Updated
 ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,14 +16,12 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: c6f8c9440a6229726c655dae42ea7ab955e35f54
-ms.contentlocale: de-de
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 6a99f3051cb4f4cae12c525204387906fbf3d8b5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Berichtsserverintegration für Power BI (Configuration Manager)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
@@ -36,7 +32,7 @@ Die Seite  **Power BI-Integration** in [!INCLUDE[ssRSnoversion](../../includes/s
 
 Zusätzlich zu einer aktiven Internetverbindung zum Öffnen des [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] -Diensts sind die folgenden Anforderungen zum Abschließen der Integration von [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]erforderlich.
 
-- **Azure Active Directory:** Ihr Unternehmen muss Azure Active Directory verwenden, das die Verzeichnis- und Identitätsverwaltung für Azure-Dienste und Webanwendungen bietet. Weitere Informationen finden Sie unter [Neuigkeiten von Azure Active Directory?](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
+- **Azure Active Directory:** Ihr Unternehmen muss Azure Active Directory verwenden, das die Verzeichnis- und Identitätsverwaltung für Azure-Dienste und Webanwendungen bietet. Weitere Informationen finden Sie unter [Was ist Azure Active Directory?](https://azure.microsoft.com/documentation/articles/active-directory-whatis/).
 
 - **Verwalteter Mandant:** Das [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] -Dashboard, an das Sie Berichtselemente anheften möchten, muss Teil eines verwalteten Azure AD-Mandanten sein.  Ein verwalteter Mandant wird automatisch beim erstmaligen Abonnieren der Azure-Dienste wie Office 365 und Microsoft Intune für Ihr Unternehmen erstellt.   Virale Mandanten werden derzeit nicht unterstützt.  Weitere Informationen finden Sie in den Abschnitten „Erläuterung zum Azure AD-Mandanten“ und „Gewusst wie: Abrufen eines Azure AD-Verzeichnisses“ in [Erläuterungen zum Azure AD-Verzeichnis](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant).
 
@@ -48,7 +44,7 @@ Zusätzlich zu einer aktiven Internetverbindung zum Öffnen des [!INCLUDE[sspowe
 
         PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credential.
 
-Weitere Informationen zum Speichern von Anmeldeinformationen finden im Abschnitt "Konfigurieren von gespeicherten Anmeldeinformationen für eine berichtsspezifische Datenquelle" in [Speichern von Anmeldeinformationen in einer Reporting Services-Datenquelle](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).
+Weitere Informationen zum Speichern von Anmeldeinformationen finden Sie im Abschnitt „Konfigurieren von gespeicherten Anmeldeinformationen für eine berichtsspezifische Datenquelle“ unter [Speichern von Anmeldeinformationen in einer Reporting Services-Datenquelle](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).
 
 Ein Administrator kann die  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Protokolldateien auf weitere Informationen überprüfen.  Es werden Meldungen wie die Folgenden angezeigt. Eine hervorragende Möglichkeit zum Überprüfen und Überwachen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Protokolldateien ist die Verwendung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Power Query für die Dateien.  Weitere Informationen und ein kurzes Video finden Sie unter [Berichtsserverdienst-Ablaufverfolgungsprotokoll](../../reporting-services/report-server/report-server-service-trace-log.md).
 
@@ -74,7 +70,7 @@ Führen Sie die folgenden Schritte des [!INCLUDE[ssRSnoversion](../../includes/s
 
 **Registrierung aufheben:** Das Aufheben der Registrierung für den Berichtsserver aus Azure Active Directory führt zu Folgendem:
 
-- Die **Meine Einstellungen** Link wird nicht mehr von der Web-portalmenüleiste sichtbar sein.
+- Der Link **Meine Einstellungen** wird nicht mehr in der Menüleiste des Webportals angezeigt.
 
 - Berichtselemente, die bereits angeheftet wurden, sind weiterhin auf Dashboards angeheftet. Die Kacheln auf dem Dashboard werden jedoch nicht mehr aktualisiert.
 
@@ -94,7 +90,7 @@ Verwenden Sie die Option **Registrierung aktualisieren** , wenn die Konfiguratio
 
 - Wählen Sie **Hinzufügen** aus, um eine neue HTTP-Identität für das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] hinzuzufügen, und wählen Sie dann **OK**aus.
 
-     Das [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] -Symbol wird geändert, um die Änderung der Serverkonfiguration anzuzeigen.  ![Ssrs_powebi_icon_warning](../../reporting-services/install-windows/media/ssrs-powebi-icon-warning.png "Ssrs_powebi_icon_warning")
+     Das [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] -Symbol wird geändert, um die Änderung der Serverkonfiguration anzuzeigen.  ![ssrs_powebi_icon_warning](../../reporting-services/install-windows/media/ssrs-powebi-icon-warning.png "ssrs_powebi_icon_warning")
 
 - Wählen Sie auf der Seite **Power BI-Integration** die Option **Aktualisieren der Registrierung**aus.
 
@@ -112,11 +108,11 @@ In diesem Abschnitt werden die grundlegenden Schritte und die damit verbundenen 
 
 3. Die Power BI-Clientanwendung wird in Ihrem verwalteten Mandanten in Azure Active Directory erstellt.
 
-4. Die Registrierung umfasst Umleitungs-URLs, die verwendet werden, wenn sich Benutzer vom Berichtsserver anmelden.  Die App-ID und die URLs werden in der ReportServer-Datenbank gespeichert. Die Umleitungs-URL wird während der Authentifizierungsaufrufe in Azure verwendet, sodass der Aufruf an den Berichtsserver zurückgegeben werden kann. Z. B. wenn Benutzer anmelden oder Elemente an ein Dashboard anheften.
+4. Die Registrierung umfasst Umleitungs-URLs, die verwendet werden, wenn sich Benutzer vom Berichtsserver anmelden.  Die App-ID und die URLs werden in der ReportServer-Datenbank gespeichert. Die Umleitungs-URL wird während der Authentifizierungsaufrufe in Azure verwendet, sodass der Aufruf an den Berichtsserver zurückgegeben werden kann. Wenn sich Benutzer z.B. anmelden oder Elemente an ein Dashboard anheften.
 
-5. Die App-ID und URLS werden in Configuration Manager angezeigt.
+5. Die App-ID und URLs werden im Konfigurations-Manager angezeigt.
 
- ![Ssrs_pbiflow_integration](../../reporting-services/install-windows/media/ssrs-pbiflow-integration.png "Ssrs_pbiflow_integration")
+ ![ssrs_pbiflow_integration](../../reporting-services/install-windows/media/ssrs-pbiflow-integration.png "ssrs_pbiflow_integration")
 
  **Wenn ein Benutzer ein Berichtselement an ein Dashboard anheftet:**
 
@@ -134,7 +130,7 @@ In diesem Abschnitt werden die grundlegenden Schritte und die damit verbundenen 
 
 7. Es wird ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnement erstellt, um die geplante Aktualisierung des Berichtselements auf der Dashboardkachel zu verwalten. Das Abonnement verwendet das Sicherheitstoken, das bei der Anmeldung des Benutzers erstellt wurde.
 
-     Das Token ist gut für **90 Tage**, nach denen die Benutzer sich erneut anmelden, um ein neues Benutzertoken zu erstellen müssen. Wenn das Token abgelaufen ist, werden die angehefteten Kacheln weiterhin im Dashboard angezeigt, aber die Daten werden nicht mehr aktualisiert.  Die für angeheftete Elemente verwendeten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements weisen einen Fehler auf, bis ein neues Benutzertoken erstellt wird. Finden Sie unter [Meine Einstellungen für Power BI-Integration &#40; Webportal &#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5). .
+     Das Token ist für **90 Tage**gültig. Anschließend müssen sich die Benutzer neu anmelden, um ein neues Benutzertoken zu erstellen. Wenn das Token abgelaufen ist, werden die angehefteten Kacheln weiterhin im Dashboard angezeigt, aber die Daten werden nicht mehr aktualisiert.  Die für angeheftete Elemente verwendeten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements weisen einen Fehler auf, bis ein neues Benutzertoken erstellt wird. Weitere Informationen finden Sie unter [Meine Einstellungen für die Power BI-Integration (Webportal)](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5). .
 
 Wenn ein Benutzer ein Element ein zweites Mal anheftet, werden die Schritte 1 bis 4 übersprungen und stattdessen die App-ID und die URLs aus der ReportServer-Datenbank abgerufen. Der Ablauf wird dann mit Schritt 5 fortgesetzt.
 
@@ -163,4 +159,3 @@ Wenn ein Benutzer ein Element ein zweites Mal anheftet, werden die Schritte 1 bi
 [Dashboards in Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](http://go.microsoft.com/fwlink/?LinkId=620231)
-

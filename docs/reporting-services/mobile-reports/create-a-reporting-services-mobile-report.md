@@ -1,37 +1,35 @@
 ---
-title: Erstellen von mobilen Reporting Services-Berichte | Microsoft Docs
+title: Erstellen eines mobilen Berichts in Reporting Services | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7fce4526bb296113aedb62e5dcf94b50e198210f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 800aa539255c937b089c13999d57f64bf0ec6558
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Erstellen eines mobilen Berichts in Reporting Services
-Mit SQL Server Mobile Report Publisher können Sie schnell mobile Berichte von SQL Server 2016 Reporting Services erstellen, die problemlos an jede Bildschirmgröße, auf eine Entwurfsoberfläche mit anpassbaren Rasterzeilen und Spalten und flexiblen Elementen skaliert werden.  
+Mit dem Publisher für mobile Berichte von SQL Server können Sie schnell mobile Berichte für SQL Server 2016 Reporting Services erstellen, die sich problemlos an jede Bildschirmgröße anpassen. Das Tool bietet eine Entwurfsoberfläche mit anpassbaren Rasterzeilen und -spalten sowie flexible Elemente für mobile Berichte.  
   
-Beim ersten eines mobilen Berichts erstellen können Sie SQL Server Mobile Report Publisher auf dem lokalen Computer über das Reporting Services-Webportal installieren. Die Installation kann auch über das [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=733527)erfolgen. Danach können Sie das Tool entweder aus dem Webportal oder lokal starten.   
+Wenn Sie zum ersten Mal einen mobilen Bericht erstellen, können Sie den Publisher für mobile Berichte von SQL Server über das Reporting Services-Webportal auf Ihrem lokalen Computer installieren. Die Installation kann auch über das [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=733527)erfolgen. Danach können Sie das Tool entweder aus dem Webportal oder lokal starten.   
     
-1. Wählen Sie in der oberen Leiste des Webportals Reporting Services, **neu** > **mobiler Bericht**.  
+1. Klicken Sie auf der oberen Leiste des Reporting Services-Webportals auf **Neu** > **Mobiler Bericht**.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
      
-2. Auf der **Layout** Registerkarte im Publisher für Mobile Berichte, wählen Sie einen Navigator, Messgerät, Diagramm, Zuordnung oder Datagrid aus, und ziehen Sie es in den Entwurfsbereich.  
+2. Wählen Sie in der Registerkarte **Layout** im Publisher für mobile Berichte einen Navigator, ein Messgerät, ein Diagramm, eine Zuordnung oder ein Datenraster aus, und ziehen Sie es in den Entwurfsbereich.  
   
 3. Klicken Sie auf die untere rechte Ecke des Elements und halten Sie sie gedrückt, um die Größe wie gewünscht anzupassen.  
   
@@ -69,7 +67,7 @@ Beim ersten eines mobilen Berichts erstellen können Sie SQL Server Mobile Repor
   
 11. Nun sollten Sie Ihren Bericht speichern. Wählen Sie oben links das Symbol aus, und klicken Sie anschließend auf **Lokal speichern** oder **Auf Server speichern**.  
   
-   Um es zu einem Server zu speichern, benötigen Sie Zugriff auf eine SQL Server 2016 Reporting Services-Berichtsserver.  
+   Sie benötigen Zugriff auf einen SQL Server 2016 Reporting Services-Berichtsserver, um den Bericht auf einem Server zu speichern.  
      
    ### <a name="see-also"></a>Siehe auch  
      
@@ -77,4 +75,3 @@ Beim ersten eines mobilen Berichts erstellen können Sie SQL Server Mobile Repor
 -   [Gestalten eines mobilen Reporting Services-Berichts für Telefone oder Tablets](../../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md)  
   
    
-
