@@ -1,5 +1,5 @@
 # [Übersicht](database-engine-powershell-reference.md)  
-# [New and recently updated articles (Neue und kürzlich aktualisierte Artikel)](new-updated-powershell.md)
+# [Neue und aktualisierte Artikel](new-updated-powershell.md)
 # [Invoke-PolicyEvaluation-Cmdlet](invoke-policyevaluation-cmdlet.md)  
 # [Invoke-Sqlcmd-Cmdlet](invoke-sqlcmd-cmdlet.md)  
 # [Abfrageausdrücke und eindeutige Ressourcennamen](query-expressions-and-uniform-resource-names.md)  

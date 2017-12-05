@@ -11,7 +11,7 @@
 ## [In SQL Server 2016 nicht mehr unterstützte Funktionen](discontinued-database-engine-functionality-in-sql-server-2016.md)  
 ## [Grundlegende Änderungen in SQL Server 2017](breaking-changes-to-database-engine-features-in-sql-server-2017.md)  
 ## [Grundlegende Änderungen in SQL Server 2016](breaking-changes-to-database-engine-features-in-sql-server-2016.md)  
-## [New and recently updated articles (Neue und kürzlich aktualisierte Artikel)](new-updated-database-engine.md)
+## [Neue und aktualisierte Artikel](new-updated-database-engine.md)
 
 # [Installieren](../database-engine/install-windows/installation-for-sql-server-2016.md)
 # [Konfigurieren](../database-engine/configure-windows/configure-database-engine-instances-sql-server.md)

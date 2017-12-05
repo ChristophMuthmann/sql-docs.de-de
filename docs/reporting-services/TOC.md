@@ -2,7 +2,7 @@
 
 # Übersicht
 ## [What's new in Reporting Services (Neuigkeiten bei Reporting Services)](what-s-new-in-sql-server-reporting-services-ssrs.md) 
-## [New and recently updated articles (Neue und kürzlich aktualisierte Artikel)](new-updated-reporting-services.md)
+## [Neue und aktualisierte Artikel](new-updated-reporting-services.md)
 ## [Quorumprotokoll](change-log-sql-server-reporting-services.md)
 ## [Reporting Services Concepts (SSRS) (Konzepte von Reporting Services (SSRS))](reporting-services-concepts-ssrs.md)
 ## [Reporting Services Features and Tasks (Reporting Services-Funktionen und -Tasks)](reporting-services-features-and-tasks-ssrs.md)   

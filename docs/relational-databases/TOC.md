@@ -1,5 +1,5 @@
 # [Übersicht](database-features.md)
-# [New and recently updated articles (Neue und kürzlich aktualisierte Artikel)](new-updated-relational-databases.md)
+# [Neue und aktualisierte Artikel](new-updated-relational-databases.md)
 
 # [SQL Server Guides (Handbücher für SQL-Server)](sql-server-guides.md)
 ## Handbuch zur Problembehandlung und Überwachung von Always On-Verfügbarkeitsgruppen

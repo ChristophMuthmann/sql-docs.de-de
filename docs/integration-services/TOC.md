@@ -3,7 +3,7 @@
 # Übersicht
 ## [Neuigkeiten in Integration Services in SQL Server 2016](what-s-new-in-integration-services-in-sql-server-2016.md)
 ## [Neues in Integration Services in SQL Server 2017](what-s-new-in-integration-services-in-sql-server-2017.md)
-## [New and recently updated articles (Neue und kürzlich aktualisierte Artikel)](new-updated-integration-services.md)
+## [Neue und aktualisierte Artikel](new-updated-integration-services.md)
 ## [Von den SQL Server 2016-Editionen unterstützte Integration Services-Funktionen](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Integration Services – Abwärtskompatibilität](integration-services-backward-compatibility.md)
 
