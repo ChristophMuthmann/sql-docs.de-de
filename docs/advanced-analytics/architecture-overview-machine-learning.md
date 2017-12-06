@@ -2,7 +2,7 @@
 title: "Übersicht über die Architektur für SQL Server-Machine Learning-Services | Microsoft Docs"
 ms.custom: 
 ms.date: 11/03/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -12,11 +12,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: c81f114f97dee97a37832201637ac5e17fe08794
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9726ba8958f623d3c3c92d18f59f4c25d18fb0b0
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="architecture-overview-for-sql-server-machine-learning-services"></a>Übersicht über die Architektur für SQL Server-Machine Learning-Services 
 

@@ -2,7 +2,7 @@
 title: "Synchronisierung von R-Paket für SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 10/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -12,11 +12,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c668fc9e2d2b8ab8934ccf4bfffb8b04b998bb71
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fb56ffa08160934e1a3eac340a81ba7d6427ad49
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>Synchronisierung von R-Paket für SQL Server
 

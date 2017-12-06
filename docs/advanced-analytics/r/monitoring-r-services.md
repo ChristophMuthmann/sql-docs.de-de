@@ -2,7 +2,7 @@
 title: "Überwachen von R Services | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 11/29/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c717473de44124ae8ea1736de371069a155c6b0a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3401a1b72b0ec409c8f3398b996de7e9d39c0763
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="monitoring-r-services"></a>Überwachung von R-Diensten
   In diesem Abschnitt erhalten Sie Informationen zu folgenden gängigen Überwachungsaufgaben beim Verwenden von [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]:  

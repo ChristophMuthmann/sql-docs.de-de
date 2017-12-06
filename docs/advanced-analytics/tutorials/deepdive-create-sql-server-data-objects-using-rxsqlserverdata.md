@@ -2,7 +2,7 @@
 title: Erstellen von SQL Server-Datenobjekten mithilfe von RxSqlServerData | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/18/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7eecfb2ce8a6cfe525b07aa8c6636c7dd77b0d30
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c6208de7eedf66640ab2b8131a4b73c51e6fbaba
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata"></a>Erstellen von SQL Server-Datenobjekten mithilfe von RxSqlServerData
 

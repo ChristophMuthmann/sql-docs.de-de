@@ -2,7 +2,7 @@
 title: "Konvertieren von R-Code für die Verwendung in R Services| Microsoft-Dokumentation"
 ms.custom: SQL2016_New_Updated
 ms.date: 06/29/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d403b716d6be6c571f4de76a25ba3f6f7f5c4e8d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e861a139af2c4aad159920a6659a0598091439b8
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="converting-r-code-for-use-in-r-services"></a>Konvertieren von R-Code für die Verwendung in R Services
 

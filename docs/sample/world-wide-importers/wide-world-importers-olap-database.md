@@ -1,9 +1,9 @@
 ---
 title: Wide World Importers OLAP-Datenbank | Microsoft Docs
-ms.prod: world-wide-importers
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: samples
-ms.component: 
+ms.service: 
+ms.component: samples
 ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: e86540aca2f4db314a7c28e1d8f68f71e951a514
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 345f66d4fc47598ddfb253259c3ad055f534282b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="wide-world-importers-data-warehousing-and-analytics-database"></a>Wide World Importers Data Warehouse- und analysearbeitsauslastungen-Datenbank
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Die Dokumentation für die Wide World Importers Data Warehouse- und analysearbeitsauslastungen-Datenbank.

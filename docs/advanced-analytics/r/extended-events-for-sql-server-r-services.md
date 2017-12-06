@@ -2,7 +2,7 @@
 title: Erweiterte Ereignisse bei SQL Server R Services | Microsoft-Dokumentation
 ms.custom: SQL2016_New_Updated
 ms.date: 11/29/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0b4d65cd2812fea830bbdd7127b8f47569979e94
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 76350c58a9ef7dc52eaf1a260ec04a231f362872
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="extended-events-for-sql-server-r-services"></a>Erweiterte Ereignisse bei SQL Server R Services
   [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] bietet eine Reihe von erweiterten Ereignissen, die bei der Problembehandlung von Vorgängen im Zusammenhang mit [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] oder R-Aufträgen an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet werden können.  

@@ -26,11 +26,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 638708265e79ff0f3a927e9e049f3985cfe2752a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
-ms.translationtype: HT
+ms.openlocfilehash: eab36ee612c3e559bf13db948c128ea6428063ae
+ms.sourcegitcommit: 3cc7ffde800b451923c523fd549e8f4b4994f052
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="create-external-table-transact-sql"></a>Erstellen einer EXTERNEN Tabelle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -295,6 +295,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 -   CREATE TABLE und DROP TABLE  
   
 -   CREATE STATISTICS und DROP STATISTICS  
+Hinweis: Zum Erstellen und Löschen von Statistiken in externen Tabellen werden in Azure SQL-Datenbank nicht unterstützt. 
   
 -   CREATE VIEW und DROP VIEW  
   

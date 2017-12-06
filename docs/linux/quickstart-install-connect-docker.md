@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: acd47bd1e2104027610f7ee38c9b135a785429e5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 80d3d05fcd693f6290649c2c63446c400c9ad3b2
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>Führen Sie die 2017 von SQL Server-Container-Image mit Docker
 
@@ -35,31 +35,9 @@ Dieses Image besteht aus SQL Server auf Grundlage 16.04 Ubuntu Linux ausgeführt
 ## <a id="requirements"></a> Erforderliche Komponenten
 
 - Docker-Modul 1.8 für ein beliebiges unterstützt für Mac/Windows, Linux-Distribution oder Docker. Weitere Informationen finden Sie unter [installieren Sie Docker](https://docs.docker.com/engine/installation/).
-- Mindestens 4 GB Speicherplatz
-- Mindestens 4 GB RAM
+- Mindestens 2 GB Speicherplatz
+- Mindestens 2 GB RAM
 - [Systemanforderungen für SQL Server on Linux](sql-server-linux-setup.md#system).
-
-> [!IMPORTANT]
-> Die Standardeinstellung zu Docker für Mac und Docker für Windows beträgt 2 GB für die VM Moby, damit auf 4 GB geändert werden muss. Wenn Sie auf Mac oder Windows ausgeführt werden, verwenden Sie die folgenden Verfahren, um den Arbeitsspeicher zu erhöhen.
-
-### <a name="increase-docker-memory-to-4-gb-mac"></a>Erhöhen Sie den Docker-Arbeitsspeicher auf 4 GB (Mac)
-
-Die folgenden Schritte geben Sie Speicher für Docker für Mac auf 4 GB.
-
-1. Klicken Sie auf das Docker-Logo in der oberen Statusleiste.
-1. Wählen Sie **Voreinstellungen**.
-1. Verschieben Sie den Indikator Arbeitsspeicher auf 4 GB oder mehr.
-1. Klicken Sie auf die **Neustart** Schaltfläche auf die Schaltfläche des Bildschirms.
-
-### <a name="increase-docker-memory-to-4-gb-windows"></a>Erhöhen Sie den Docker-Arbeitsspeicher auf 4 GB (Windows)
-
-Die folgenden Schritte geben Sie Speicher für Docker für Windows auf 4 GB.
-
-1. Mit der rechten Maustaste auf das Symbol "Docker" aus der Taskleiste.
-1. Klicken Sie auf **Einstellungen** unter diesem Menü.
-1. Klicken Sie auf die **erweiterte** Registerkarte.
-1. Verschieben Sie den Indikator Arbeitsspeicher auf 4 GB oder mehr.
-1. Klicken Sie auf die **übernehmen** Schaltfläche.
 
 ## <a name="pull-and-run-the-container-image"></a>Ziehen Sie aus, und führen Sie das Container-Bild
 

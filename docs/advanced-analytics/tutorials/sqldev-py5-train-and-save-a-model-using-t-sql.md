@@ -2,7 +2,7 @@
 title: 'Schritt 5: Trainieren, und speichern Sie ein Python-Modell mithilfe des T-SQL | Microsoft Docs'
 ms.custom: 
 ms.date: 10/17/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: python-services
@@ -17,11 +17,11 @@ caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 11fa031229d8bc08a9091c3fa6f85e81468d7379
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bcad930d7d2a759e66adf1309eba6af144010c82
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="step-5-train-and-save-a-python-model-using-t-sql"></a>Schritt 5: Trainieren Sie, und speichern Sie ein Python-Modell mithilfe des T-SQL
 

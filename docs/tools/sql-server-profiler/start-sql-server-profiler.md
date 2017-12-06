@@ -2,9 +2,12 @@
 title: "Führen Sie SQL Server Profiler | Microsoft Docs"
 ms.custom: 
 ms.date: 7/7/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3ad9d4d4762a085ee63ce142c6998af07b3c018c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f9327a1cdb70be829701fa0710f5833545f8a0d2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="run-sql-server-profiler"></a>Ausführen von SQL Server Profiler
-  Sie können ausführen [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] in einer Vielzahl von Szenarien auf verschiedene Weise zur Unterstützung der Ablaufverfolgung sammeln ausgegeben. Sie starten können [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] über das Windows 10 **starten** im Menü aus der **Tools** im Menü [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber und über verschiedene Positionen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Sie können ausführen [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] in einer Vielzahl von Szenarien auf verschiedene Weise zur Unterstützung der Ablaufverfolgung sammeln ausgegeben. Sie starten können [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] über das Windows 10 **starten** im Menü aus der **Tools** im Menü [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber und über verschiedene Positionen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 Beim ersten Starten [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , und wählen Sie **neue Ablaufverfolgung** aus der **Datei** Menü, zeigt die Anwendung eine **Verbindung mit Server herstellen** (Dialogfeld), in dem Sie angeben können, eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz für die Verbindung.  
 ## <a name="to-start-sql-server-profiler-from-the-windows-10-start-menu"></a>So starten Sie SQL Server Profiler über Windows 10-Startmenü  

@@ -1,7 +1,7 @@
 ---
 title: Machine learning-Lebenszyklus und die Teamprozess | Microsoft Docs
 ms.date: 11/03/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -13,11 +13,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: bfe2fb19481c78e982d69303af1dec8041283324
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d4479af03c905d6e82167b4525a3ecee9c644d6c
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="machine-learning-lifecycle-and-personas"></a>Machine Learning-Lebenszyklus und Rollen
 

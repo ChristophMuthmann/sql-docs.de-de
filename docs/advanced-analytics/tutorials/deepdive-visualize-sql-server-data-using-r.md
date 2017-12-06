@@ -2,7 +2,7 @@
 title: Visualisieren von SQL Server-Daten mithilfe von R (Tieferer Einblick in Data Science) | Microsoft-Dokumenation
 ms.custom: SQL2016_New_Updated
 ms.date: 05/18/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a67480daf011a021002e1688b006a1f0593f8e5f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fa42e69f1e376dc528b3385ca3c4be38fea4710b
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="visualize-sql-server-data-using-r"></a>Visualisieren von SQL Server Data mit R
 

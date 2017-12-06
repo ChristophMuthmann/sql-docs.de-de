@@ -2,7 +2,7 @@
 title: "End-to-End Data sience-Vorgehensweise für R und SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 08/22/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -15,11 +15,11 @@ caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: a49cad5bd89633841c5ff54c03e39b098fca72e5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f392f7366ffc2504ce2834311b941351ef4e66c2
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>End-to-End Data sience-Vorgehensweise für R und SQL Server
 

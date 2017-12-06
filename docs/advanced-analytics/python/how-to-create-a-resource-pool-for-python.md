@@ -2,7 +2,7 @@
 title: "How To Create a Resource Pool für Python | Microsoft Docs"
 ms.custom: 
 ms.date: 04/18/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -12,11 +12,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f0a5239d61e5f72b96af68b142953eb7f2173b67
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2117d637c216fbd4a159f333944445bc45e7d9d8
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="how-to-create-a-resource-pool-for-python"></a>How To Create a Resource Pool für Python
 

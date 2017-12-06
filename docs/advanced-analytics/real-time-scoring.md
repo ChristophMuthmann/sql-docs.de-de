@@ -2,7 +2,7 @@
 title: Bewerten von Realtime | Microsoft Docs
 ms.custom: 
 ms.date: 11/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -12,11 +12,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ea8977d555bc30f661817b72fbf90f9198cf3088
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 766dd16b8c716ee42e316400b7aed4f9cf6bc06a
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="realtime-scoring"></a>Echtzeit-Bewertung
 

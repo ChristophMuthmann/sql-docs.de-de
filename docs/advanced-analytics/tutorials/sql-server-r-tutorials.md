@@ -2,7 +2,7 @@
 title: "Lernprogramme für SQL Server-R | Microsoft Docs"
 ms.custom: SQL2016_New_Updated
 ms.date: 08/29/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 341ec619ee5976ca7488f3662f010358b4457437
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ee88d7dbbb1a10c11a1e1c50cb4c048189f9d026
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="sql-server-r-tutorials"></a>SQL Server-R-Lernprogramme
 

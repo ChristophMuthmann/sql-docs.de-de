@@ -1,7 +1,7 @@
 ---
 title: Microsoft-Machine Learning-Dienste | Microsoft Docs
 ms.date: 11/09/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -13,11 +13,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9735d257ce81e5b84ea19eeb70be8bef21127c13
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: ead2781727f81c21c2b8d38f9faf6b363666e56e
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="microsoft-machine-learning-services"></a>Microsoft Machine Learning-Dienste
 

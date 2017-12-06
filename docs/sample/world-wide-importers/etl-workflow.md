@@ -1,9 +1,9 @@
 ---
 title: ETL-Workflows | Microsoft Docs
-ms.prod: world-wide-importers
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: samples
-ms.component: 
+ms.service: 
+ms.component: samples
 ms.technology: samples
 ms.custom: 
 ms.date: 06/15/2017
@@ -18,11 +18,11 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: 3b81a6494458f7d9f2e89b120119e402786e21ea
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bbda77b86b4c804ae0cf261f54f51fc487090e1d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL-Workflows
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Die ETL-Pakets WWI_Integration dient zum Migrieren von Daten aus der Datenbank "wideworldimporters" in der Datenbank WideWorldImportersDW sich mit den Daten. Das Paket wird in regelmäßigen Abständen ausgeführt (die am häufigsten täglich).

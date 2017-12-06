@@ -1,7 +1,7 @@
 ---
 title: Erstellen von Diagrammen und Darstellungen, die mithilfe von SQL und R (Exemplarische Vorgehensweise) | Microsoft Docs
 ms.date: 11/10/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: e720755146e8d29ddf06ccdecdd2d744c1885013
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: 8cf83243f4c2c9dd5d114799166160d53573c90f
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Erstellen von Diagrammen und Darstellungen, die mithilfe von SQL und R (Exemplarische Vorgehensweise)
 

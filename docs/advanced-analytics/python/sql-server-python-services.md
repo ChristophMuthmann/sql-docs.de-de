@@ -1,7 +1,7 @@
 ---
 title: Machine Learning-Dienste mit Python | Microsoft Docs
 ms.date: 11/03/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -13,11 +13,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: af81754d0e6b87546432ea864098da4615522670
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 665d307f37bca34669de291a2ea0c71d231288a8
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="machine-learning-services-with-python"></a>Machine Learning-Dienste mit Python
 

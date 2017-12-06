@@ -2,7 +2,7 @@
 title: 'Schritt 3: Durchsuchen und Visualisieren von Daten | Microsoft Docs'
 ms.custom: 
 ms.date: 10/17/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: sql-python
@@ -17,11 +17,11 @@ caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 31fa666c98948dc18f7aad988de795809594d2dd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e0177dc993f8394bbf44599d2e06b1deaf9458e1
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="step-3-explore-and-visualize-the-data"></a>Schritt 3: Durchsuchen und Visualisieren von Daten
 

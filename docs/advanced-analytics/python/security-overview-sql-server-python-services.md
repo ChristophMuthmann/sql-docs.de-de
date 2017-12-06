@@ -2,7 +2,7 @@
 title: "Übersicht über die Sicherheit für Python in SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 11/03/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 8e0f7b35f91fa9f62b1ac4ab2e32c56ff0265bdf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f3d104425953774583602492da6ea65fddb8b837
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="security-overview-for-python-in-sql-server"></a>Übersicht über die Sicherheit für Python in SQL Server
 

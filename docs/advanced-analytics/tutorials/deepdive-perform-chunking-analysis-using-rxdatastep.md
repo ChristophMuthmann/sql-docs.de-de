@@ -2,7 +2,7 @@
 title: "Segmentierung Analysen mit RxDataStep ausführen | Microsoft Docs"
 ms.custom: 
 ms.date: 05/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7fb2f00e3506514c7d4870763052df2558f47aa4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 245bf9cf48b833a87b96666f1c050ca8fc1b4dbc
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="perform-chunking-analysis-using-rxdatastep"></a>Stückweise Analysieren mithilfe von rxDataStep
 

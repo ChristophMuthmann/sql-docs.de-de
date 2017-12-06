@@ -1,7 +1,7 @@
 ---
 title: "Sicherheitsüberlegungen für Machine Learning in SQL Server | Microsoft Docs"
 ms.date: 11/16/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -13,11 +13,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 8c1cc4c65d35f6c2806a9890464cccfb6c621494
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a32980d02215435e5bbcc3a2ca0f95b3f57f8d14
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="security-considerations-for-machine-learning-in-sql-server"></a>Sicherheitsüberlegungen für Machine Learning in SQL Server
 

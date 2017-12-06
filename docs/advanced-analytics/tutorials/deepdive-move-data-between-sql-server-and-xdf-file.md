@@ -2,7 +2,7 @@
 title: Verschieben von Daten zwischen SQLServer und XDF-Datei | Microsoft Docs
 ms.custom: 
 ms.date: 05/18/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2579c75a4d99e04d5cae60870632c45b52a56cac
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a140cc358afab1f1ff324e0a47ed67501ee75e23
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="move-data-between-sql-server-and-xdf-file"></a>Verschieben von Daten zwischen SQL Server und einer XDF-Datei
 

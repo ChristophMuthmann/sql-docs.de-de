@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 helpviewer_keywords: Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: ab9be968e11688a960e4306f82cf7ca47666f688
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d412eec0c27fac301f2ac6d319666f40004da409
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="active-directory-authentication-with-sql-server-on-linux"></a>Active Directory-Authentifizierung mit SQLServer on Linux
 

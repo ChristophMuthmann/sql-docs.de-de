@@ -2,7 +2,7 @@
 title: "Überwachung von R Services mithilfe von benutzerdefinierten Berichten in Management Studio | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 10/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 46ed619271b56d59085b131839e65cd02e27d8fe
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 370b261206515081a4c31b834597f58ceb977d29
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Überwachen von Machine Learning Services mithilfe benutzerdefinierter Berichte in Management Studio
 

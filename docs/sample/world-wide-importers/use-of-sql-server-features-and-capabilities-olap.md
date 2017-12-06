@@ -1,9 +1,9 @@
 ---
 title: Verwendung von SQL Server-Features und Funktionen | Microsoft Docs
-ms.prod: world-wide-importers
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: samples
-ms.component: 
+ms.service: 
+ms.component: samples
 ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: 1f879ed08d00acf0556c364a94162719b8906434
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9179b95331ddcad4a704feadae2aa3f9211f8dff
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>WideWorldImportersDW Verwendung von SQL Server-Features und Funktionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]WideWorldImportersDW dient zum Großteil der wichtigsten Funktionen von SQL Server zu präsentieren, die für Data Warehouse- und Analysen geeignet sind. Im folgenden wird eine Liste der SQL Server-Features und Funktionen und eine Beschreibung, wie sie in WideWorldImportersDW verwendet werden.

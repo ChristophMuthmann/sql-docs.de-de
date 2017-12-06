@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b171317170d9144edb71dfb29b36940ce6d7ee31
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 98e5e604c815b099d7e66d9fd3720d50d8422a9e
+ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -282,12 +282,12 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |FT_RESTART_CRAWL |Tritt auf, wenn ein Volltextcrawl von einem letzten bekannten fehlerfreien Punkt neu gestartet werden muss, um nach einem vorübergehenden Fehler wiederhergestellt zu werden. Durch die Wartezeit können die Arbeitstasks, die zurzeit an der jeweiligen Auffüllung arbeiten, abgeschlossen werden oder den aktuellen Schritt beenden.| 
 |FULLTEXT GATHERER |Tritt bei der Synchronisierung von Volltextvorgängen auf.| 
 |GDMA_GET_RESOURCE_OWNER |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|GHOSTCLEANUP_UPDATE_STATS |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] über aktuelle.| 
+|GHOSTCLEANUP_UPDATE_STATS |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |GHOSTCLEANUPSYNCMGR |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|GLOBAL_QUERY_CANCEL |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] über aktuelle.| 
+|GLOBAL_QUERY_CANCEL |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |GLOBAL_QUERY_CLOSE |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|GLOBAL_QUERY_CONSUMER |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] über aktuelle.| 
-|GLOBAL_QUERY_PRODUCER |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] über aktuelle.| 
+|GLOBAL_QUERY_CONSUMER |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|GLOBAL_QUERY_PRODUCER |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |GLOBAL_TRAN_CREATE |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |GLOBAL_TRAN_UCS_SESSION |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |GUARDIAN |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
@@ -346,9 +346,9 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |HADR_TDS_LISTENER_SYNC |Das interne AlwaysOn-System oder der wsfc-Cluster fordert, dass Listener gestartet oder beendet werden. Die Verarbeitung dieser Anforderung ist immer asynchron, und es gibt einen Mechanismus zum Entfernen von redundanten Anforderungen. Es gibt auch Momente, in denen dieser Prozess aufgrund von Konfigurationsänderungen angehalten wird. Alle Wartevorgänge, die mit diesem Listener-Synchronisierungsmechanismus verknüpft sind, verwenden diesen Wartetyp. Nur zur internen Verwendung., <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_TDS_LISTENER_SYNC_PROCESSING |Am Ende einer immer auf Transact-SQL-Anweisung, die erforderlich sind, starten und/oder beenden Anavailability den Listener verwendet. Da der Start-/Beendigungsvorgang asynchron erfolgt, der UI-Thread blockiert mit diesem Wartetyp, bis die Situation des Listeners bekannt ist., <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_THROTTLE_LOG_RATE_GOVERNOR |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|HADR_THROTTLE_LOG_RATE_LOG_SIZE |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] über aktuelle.| 
-|HADR_THROTTLE_LOG_RATE_SEEDING |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] über aktuelle.| 
-|HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] über aktuelle.| 
+|HADR_THROTTLE_LOG_RATE_LOG_SIZE |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HADR_THROTTLE_LOG_RATE_SEEDING |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_TIMER_TASK |Warten auf die Sperre für das Zeitgebertaskobjekt; wird auch für die tatsächlichen Wartevorgänge zwischen Zeiten verwendet, in denen Arbeiten ausgeführt werden. Z. B. für eine Aufgabe, die alle 10 Sekunden, nach einer Ausführung ausgeführt wird-AlwaysOn-Verfügbarkeitsgruppen, ca. 10 Sekunden auf der Task erneut geplant wartet, und die Wartezeit ist darin enthalten., <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_TRANSPORT_DBRLIST |Warten auf Zugriff auf die Datenbankreplikatliste der Transportschicht. Für den Spinlock, die Zugriff darauf verwendet., <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_TRANSPORT_FLOW_CONTROL |Warten, wenn die Anzahl der ausstehenden unbestätigten Always On-Nachrichten über die Out Schwellenwert für die flusssteuerung. Dies ist auf Verfügbarkeit replikatreplikats-Basis (nicht auf eine Datenbank-Basis)., <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -471,9 +471,9 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |MD_AGENT_YIELD |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |MD_LAZYCACHE_RWLOCK |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |MEMORY_ALLOCATION_EXT |Tritt auf beim belegen von Arbeitsspeicher von den internen SQL Server-Speicher-Pool oder des Betriebssystems,., <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|MEMORY_GRANT_UPDATE |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] über aktuelle.| 
+|MEMORY_GRANT_UPDATE |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |METADATA_LAZYCACHE_RWLOCK |TBD <br /> **Gilt für**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] nur. |  
-|MIGRATIONBUFFER |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] über aktuelle.| 
+|MIGRATIONBUFFER |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |MISCELLANEOUS |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |MISCELLANEOUS |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |MSQL_DQ |Tritt auf, wenn ein Task auf das Ende eines verteilten Abfragevorgangs wartet. Dieser Wartetyp wird verwendet, um mögliche MARS-Anwendungsdeadlocks (Multiple Active Result Sets) zu erkennen. Die Wartezeit wird mit dem Ende des Aufrufs der verteilten Abfrage beendet.| 
@@ -733,12 +733,12 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |PWAIT_MD_RELATION_CACHE |Tritt auf, während der internen Synchronisierung in Metadaten zu Tabelle oder eines Indexes., <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |PWAIT_MD_SERVER_CACHE |Tritt während der internen Synchronisierung in Metadaten zu Verbindungsservern auf., <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |PWAIT_MD_UPGRADE_CONFIG |Tritt während der internen Synchronisierung beim Aktualisieren von serverweiten Konfigurationen., <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|PWAIT_PREEMPTIVE_APP_USAGE_TIMER |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] über aktuelle.| 
+|PWAIT_PREEMPTIVE_APP_USAGE_TIMER |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |PWAIT_PREEMPTIVE_AUDIT_ACCESS_WINDOWSLOG |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |PWAIT_QRY_BPMEMORY |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |PWAIT_REPLICA_ONLINE_INIT_MUTEX |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |PWAIT_RESOURCE_SEMAPHORE_FT_PARALLEL_QUERY_SYNC |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|PWAIT_SBS_FILE_OPERATION |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] über aktuelle.| 
+|PWAIT_SBS_FILE_OPERATION |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |PWAIT_XTP_FSSTORAGE_MAINTENANCE |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |PWAIT_XTP_HOST_STORAGE_WAIT |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |QDS_ASYNC_CHECK_CONSISTENCY_TASK |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -752,7 +752,7 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |QDS_DB_DISK |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |QDS_DYN_VECTOR |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |QDS_EXCLUSIVE_ACCESS |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|QDS_HOST_INIT |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] über aktuelle.| 
+|QDS_HOST_INIT |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |QDS_LOADDB |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |QDS_PERSIST_TASK_MAIN_LOOP_SLEEP |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |QDS_QDS_CAPTURE_INIT |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -777,12 +777,12 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |QUERY_OPTIMIZER_PRINT_MUTEX |Tritt während der Synchronisierung der Erstellung der Diagnoseausgabe des Abfrageoptimierers auf. Dieser Wartetyp tritt nur auf, wenn diagnoseeinstellungen unter der Richtung des Microsoft Support Services aktiviert wurden.| 
 |QUERY_TASK_ENQUEUE_MUTEX |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |QUERY_TRACEOUT |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
-|RBIO_WAIT_VLF |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] über aktuelle.| 
+|RBIO_WAIT_VLF |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |RECOVER_CHANGEDB |Tritt während der Synchronisierung des Datenbankstatus in einer Datenbank im betriebsbereiten Standbymodus auf.| 
 |RECOVERY_MGR_LOCK |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REDO_THREAD_PENDING_WORK |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REDO_THREAD_SYNC |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|REMOTE_BLOCK_IO |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] über aktuelle.| 
+|REMOTE_BLOCK_IO |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REMOTE_DATA_ARCHIVE_MIGRATION_DMV |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REMOTE_DATA_ARCHIVE_SCHEMA_DMV |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REMOTE_DATA_ARCHIVE_SCHEMA_TASK_QUEUE |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -812,12 +812,12 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |SATELLITE_CARGO |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |SATELLITE_SERVICE_SETUP |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |SATELLITE_TASK |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|SBS_DISPATCH |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] über aktuelle.| 
-|SBS_RECEIVE_TRANSPORT |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] über aktuelle.| 
-|SBS_TRANSPORT |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] über aktuelle.| 
+|SBS_DISPATCH |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|SBS_RECEIVE_TRANSPORT |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|SBS_TRANSPORT |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |SCAN_CHAR_HASH_ARRAY_INITIALIZATION |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |SEC_DROP_TEMP_KEY |Tritt nach einem fehlerhaftem Versuch, einen temporären Sicherheitsschlüssel zu löschen, vor einem Wiederholungsversuch auf.| 
-|SECURITY_CNG_PROVIDER_MUTEX |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] über aktuelle.| 
+|SECURITY_CNG_PROVIDER_MUTEX |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |SECURITY_CRYPTO_CONTEXT_MUTEX |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |SECURITY_DBE_STATE_MUTEX |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |SECURITY_KEYRING_RWLOCK |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -852,7 +852,7 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |SNI_HTTP_WAITFOR_0_DISCON |Tritt auf, während SQL Server wird heruntergefahren, während des Wartens auf ausstehender HTTP-Verbindungen beendet.| 
 |SNI_LISTENER_ACCESS |Tritt auf, während darauf gewartet wird, dass nicht einheitliche Speicherzugriffsknoten (Non-Uniform Memory Access, NUMA) die Statusänderung aktualisieren. Der Zugriff auf die Statusänderung wird serialisiert.| 
 |SNI_TASK_COMPLETION |Tritt bei einem Wartevorgang auf das Beenden aller Tasks während der Statusänderung eines NUMA-Knotens auf.| 
-|SNI_WRITE_ASYNC |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] über aktuelle.| 
+|SNI_WRITE_ASYNC |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |SOAP_READ |Tritt während eines Wartevorgangs auf den Abschluss eines HTTP-Netzwerklesevorgangs auf.| 
 |SOAP_WRITE |Tritt auf, während auf den Abschluss eines HTTP-Netzwerkschreibvorgangs gewartet wird.| 
 |SOCKETDUPLICATEQUEUE_CLEANUP |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -903,7 +903,7 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |TDS_INIT |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |TDS_PROXY_CONTAINER |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |TEMPOBJ |Tritt auf, wenn Löschvorgänge temporärer Objekte synchronisiert werden. Dieser Wartetyp ist selten und tritt nur auf, wenn ein Task einen exklusiven Zugriff für temp-Tabellenlöschvorgänge angefordert hat.| 
-|TEMPORAL_BACKGROUND_PROCEED_CLEANUP |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] über aktuelle.| 
+|TEMPORAL_BACKGROUND_PROCEED_CLEANUP |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |TERMINATE_LISTENER |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |THREADPOOL |Tritt auf, wenn ein Task auf die weitere Ausführung eines Arbeitsthreads wartet. Dies kann anzeigen, dass die Einstellung für die maximale Anzahl von Arbeitsthreads zu niedrig ist oder die Ausführung von Batches ungewöhnlich lange dauert, wodurch die Anzahl der Arbeitsthreads reduziert wird, die für das Ausführen anderer Batches verfügbar sind.| 
 |TIMEPRIV_TIMEPERIOD |Tritt während der internen Synchronisierung des Zeitgebers für erweiterte Ereignisse auf.| 
@@ -933,13 +933,13 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |WAIT_FOR_RESULTS |Tritt auf, wenn auf das Auslösen einer Abfragebenachrichtigung gewartet wird.| 
 |WAIT_SCRIPTDEPLOYMENT_REQUEST |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_SCRIPTDEPLOYMENT_WORKER |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|WAIT_XLOGREAD_SIGNAL |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] über aktuelle.| 
+|WAIT_XLOGREAD_SIGNAL |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_ASYNC_TX_COMPLETION |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_CKPT_AGENT_WAKEUP |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_CKPT_CLOSE |Tritt beim Warten auf Abschluss eines Prüfpunkts., <br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_CKPT_ENABLED |Tritt auf, wenn die prüfpunktausführung deaktiviert ist, und Warten auf die prüfpunktausführung aktiviert ist., <br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_CKPT_STATE_LOCK |Tritt beim Synchronisieren der Überprüfung des prüfpunktstatus., <br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|WAIT_XTP_COMPILE_WAIT |TBD <br /> **GILT für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] über aktuelle.| 
+|WAIT_XTP_COMPILE_WAIT |TBD <br /> **GILT für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_GUEST |Tritt auf, wenn die datenbankspeicherbelegung den Empfang von Benachrichtigungen Arbeitsspeicherstatus niedrig zu halten., <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_HOST_WAIT |Tritt auf, wenn Wartevorgänge vom Datenbankmodul ausgelöst und vom Host implementiert werden., <br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_OFFLINE_CKPT_BEFORE_REDO |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -947,7 +947,7 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |WAIT_XTP_OFFLINE_CKPT_NEW_LOG |Tritt auf, wenn der offline-Prüfpunkt Scannen neue Protokolldatensätze wartet., <br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_PROCEDURE_ENTRY |Tritt auf, wenn ein Drop-Verfahren darauf wartet, dass alle aktuellen Ausführungen dieser Prozedur abgeschlossen werden., <br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_RECOVERY |Tritt auf, wenn die Wiederherstellung der Datenbank für die Wiederherstellung von speicheroptimierten Objekten abgeschlossen wartet., <br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|WAIT_XTP_SERIAL_RECOVERY |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] über aktuelle.| 
+|WAIT_XTP_SERIAL_RECOVERY |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_SWITCH_TO_INACTIVE |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_TASK_SHUTDOWN |Tritt beim Warten auf eines In-Memory-OLTP-Threads abgeschlossen., <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_TRAN_DEPENDENCY |Tritt auf, wenn auf transaktionsabhängigkeiten gewartet wird., <br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -996,10 +996,10 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |XE_TIMER_TASK_DONE |TBD| 
 |XIO_CREDENTIAL_MGR_RWLOCK |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |XIO_CREDENTIAL_RWLOCK |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|XIO_EDS_MGR_RWLOCK |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] über aktuelle.| 
-|XIO_EDS_RWLOCK |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] über aktuelle.| 
-|XIO_IOSTATS_BLOBLIST_RWLOCK |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] über aktuelle.| 
-|XIO_IOSTATS_FCBLIST_RWLOCK |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] über aktuelle.| 
+|XIO_EDS_MGR_RWLOCK |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|XIO_EDS_RWLOCK |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|XIO_IOSTATS_BLOBLIST_RWLOCK |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|XIO_IOSTATS_FCBLIST_RWLOCK |TBD <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |XIO_LEASE_RENEW_MGR_RWLOCK |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |XTP_HOST_DB_COLLECTION |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |XTP_HOST_LOG_ACTIVITY |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
