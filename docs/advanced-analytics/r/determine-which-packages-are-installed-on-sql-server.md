@@ -2,7 +2,7 @@
 title: Bestimmen, welche R-Pakete installiert sind, auf SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 10/09/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 63e5b575bb9f1894470b615bc975cd84fb0bffff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d2404680ce5c3ddccc0ac65a3b49c905a1fc30a8
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="determine-which-r-packages-are-installed-on-sql-server"></a>Bestimmen Sie, welche R-Pakete auf SQL Server installiert sind
 

@@ -3,8 +3,11 @@ title: Sequenztyps | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6bd44dc569515f6673bb5791cd7d53a0500d09d2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: af693b0d47a92fdefc2ebf2104455d7ea5b782c5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="type-system---sequence-type-matching"></a>Geben Sie die System - Sequenztyps
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Der Wert eines XQuery-Ausdrucks ist immer eine Sequenz aus null oder mehreren Elementen. Ein Item kann entweder ein atomarer Wert oder ein Knoten sein. Der Sequenztyp bezieht sich auf die Möglichkeit, den von einem Abfrageausdruck zurückgegebenen Sequenztyp einem bestimmten Typ zuzuordnen. Beispiel:  
   

@@ -25,11 +25,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 037f9e0da637b872298d3859499858620570bc41
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6db9730d5e0905d464a57151365a9413f61a86eb
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-external-file-format-transact-sql"></a>Erstellen eines EXTERNEN DATEIFORMATS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -158,7 +158,7 @@ WITH (
 -   STRING_DELIMITER = 0x7E0x7E – zwei Tildas (z. B. ~ ~)
   
  DATE_FORMAT = *Datetime_format*  
- Gibt ein benutzerdefiniertes Format für alle Datums- und Zeitdaten, die in einer durch Trennzeichen getrennte Textdatei angezeigt werden. Wenn die Quelldatei Datefime Standardformate verwendet wird, ist diese Option nicht erforderlich. Pro Datei ist nur eine benutzerdefinierte Datetime-Format zulässig. Sie können nicht mehrere benutzerdefinierte Datetime-Formate pro Datei angeben. Allerdings können Sie mehrere Datetime-Formate verwenden, ist jeweils das Standardformat für den jeweiligen Datentyp in der externen Tabellendefinition.
+ Gibt ein benutzerdefiniertes Format für alle Datums- und Zeitdaten, die in einer durch Trennzeichen getrennte Textdatei angezeigt werden. Wenn die Quelldatei "DateTime" Standardformate verwendet wird, ist diese Option nicht erforderlich. Pro Datei ist nur eine benutzerdefinierte Datetime-Format zulässig. Sie können nicht mehrere benutzerdefinierte Datetime-Formate pro Datei angeben. Allerdings können Sie mehrere Datetime-Formate verwenden, ist jeweils das Standardformat für den jeweiligen Datentyp in der externen Tabellendefinition.
  
  
 PolyBase verwendet nur die benutzerdefinierten Datumsformat für das Importieren von Daten. Das benutzerdefinierte Format wird nicht zum Schreiben von Daten in eine externe Datei verwendet.

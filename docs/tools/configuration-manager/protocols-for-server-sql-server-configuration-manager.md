@@ -2,9 +2,12 @@
 title: "Protokolle für &lt;Server&gt; (SQL Server-Konfigurations-Manager) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,13 +17,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1f6dbb16c60165c80aacecc5b162847b41885ad
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2e65d516b569cd0e59e3fe01e1074c2c6171c448
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="protocols-for-ltservergt-sql-server-configuration-manager"></a>Protokolle für &lt;Server&gt; (SQL Server-Konfigurations-Manager)
-  Zum Konfigurieren der von [!INCLUDE[ssDE](../../includes/ssde-md.md)]verwendeten Protokolle wählen Sie für die gewünschte Serverinstanz im Konsolenbereich **Protokolle** aus, klicken im Detailbereich mit der rechten Maustaste auf das entsprechende Protokoll und klicken dann auf **Eigenschaften**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Zum Konfigurieren der Protokolle verwendet werden, indem Sie die [!INCLUDE[ssDE](../../includes/ssde-md.md)]Option **Protokolle** für die gewünschte Serverinstanz im Konsolenbereich mit der rechten Maustaste in des entsprechenden Protokolls im Detailbereich, und klicken Sie dann auf **Eigenschaften**.  
   
   

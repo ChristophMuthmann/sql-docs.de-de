@@ -2,9 +2,12 @@
 title: SQL Server &lt;Server&gt; (SQL Server-Konfigurations-Manager) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5c761da4eed39f16165ae690589f6ba5236956fd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fd603628e3b5571864ccb489d40d8f0b147458e6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-ltservergt-sql-server-configuration-manager"></a>SQL Server &lt;Server&gt; (SQL Server-Konfigurations-Manager)
-  Dieser Dienst unterstützt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Klicken Sie im Detailbereich mit der rechten Maustaste auf den Dienst, und klicken Sie anschließend auf **Eigenschaften**, um die Diensteigenschaften anzuzeigen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dies ist der Dienst unterstützt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Um die Diensteigenschaften anzuzeigen, klicken Sie im Detailbereich mit der rechten Maustaste auf den Dienst, und klicken Sie dann auf **Eigenschaften**.  
   
  Informationen zu [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]finden Sie in der Onlinedokumentation.  
   

@@ -2,9 +2,12 @@
 title: SQL Server Profiler-Vorlagen | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 85ae94af96a6908af67f0a334203b0025d26fe94
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e8426d5f71d74a703270bd27e61730122afa9aa7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler-Vorlagen
-  Mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] können Sie Vorlagen erstellen, die die Ereignisklassen und Datenspalten definieren, die in Ablaufverfolgungen eingeschlossen werden sollen. Nach dem Definieren und Speichern der Vorlage können Sie eine Ablaufverfolgung ausführen, die die Daten für jede ausgewählte Ereignisklasse aufzeichnet. Eine Vorlage kann für viele Ablaufverfolgungen verwendet werden. Die Vorlage selbst wird nicht ausgeführt.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Sie können [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] um Vorlagen zu erstellen, definieren die Ereignisklassen und Datenspalten in ablaufverfolgungen eingeschlossen werden sollen. Nach dem Definieren und Speichern der Vorlage können Sie eine Ablaufverfolgung ausführen, die die Daten für jede ausgewählte Ereignisklasse aufzeichnet. Eine Vorlage kann für viele Ablaufverfolgungen verwendet werden. Die Vorlage selbst wird nicht ausgeführt.  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] bietet vordefinierte Ablaufverfolgungsvorlagen, mit denen Sie auf einfache Weise die Ereignisklassen konfigurieren können, die Sie höchstwahrscheinlich für spezifische Ablaufverfolgungen benötigen. Beispielsweise können Sie mithilfe der Standardvorlage eine allgemeine Ablaufverfolgung zum Aufzeichnen von Anmeldungen, Abmeldungen, abgeschlossenen Batches und Verbindungsinformationen erstellen. Diese Vorlage kann unverändert zum Ausführen von Ablaufverfolgungen verwendet werden. Sie kann aber auch als Ausgangspunkt für zusätzliche Vorlagen mit unterschiedlichen Ereigniskonfigurationen dienen.  
   

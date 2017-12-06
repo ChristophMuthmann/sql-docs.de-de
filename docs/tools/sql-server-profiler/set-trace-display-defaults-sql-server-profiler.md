@@ -2,9 +2,12 @@
 title: Legen Sie die Ablaufverfolgungsanzeige (SQL Server Profiler) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 94a063f38e24c06e2b07b4a41fd094e3407df490
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8737ffefa5cf01785de31d41ee7a17a3b4787b1c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>Festlegen der Standardeinstellungen für die Ablaufverfolgungsanzeige (SQL Server Profiler)
-  In diesem Thema wird beschrieben, wie Sie Tooloptionen festlegen, mit denen der Schrifttyp, der Schriftgrad und der Schriftschnitt angegeben werden, die [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zum Anzeigen von Ablaufverfolgungen im Ablaufverfolgungsfenster verwendet. Darüber hinaus können Sie angeben, dass [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] alle Datums- und Uhrzeitwerte gemäß den regionalen Einstellungen anzeigt, die für Ihr Betriebssystem konfiguriert sind.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In diesem Thema wird beschrieben, wie Sie Tooloptionen festlegen, die die Schriftarttypen angeben, Größe und Format, die [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zum Anzeigen von ablaufverfolgungen im Ablaufverfolgungsfenster verwendet. Darüber hinaus können Sie angeben, dass [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] alle Datums- und Uhrzeitwerte gemäß den regionalen Einstellungen anzeigt, die für Ihr Betriebssystem konfiguriert sind.  
   
 ### <a name="to-set-trace-display-defaults"></a>So legen Sie die Standardeinstellungen für die Ablaufverfolgungsanzeige fest  
   

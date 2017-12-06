@@ -1,10 +1,13 @@
 ---
 title: Befehlszeilenoptionen in SSMA-Konsole (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 08/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
-ms.openlocfilehash: af93a39eb16c45de0e848bc7b41cdf2758bd1ae0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7a7f1612f8947a67ec454a4fcc25c7e155d9f23e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>Befehlszeilenoptionen in der Konsole SSMA (AccessToSQL)
 Microsoft stellt Ihnen eine Reihe robuster Befehlszeilenoptionen auszuführen und zu steuern SSMA-Aktivitäten. Die folgenden Abschnitte enthalten zusätzliche Details.  

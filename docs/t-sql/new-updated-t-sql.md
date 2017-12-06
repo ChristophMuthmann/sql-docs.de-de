@@ -6,27 +6,23 @@ documentationcenter:
 author: MightyPen
 manager: jhubbard
 editor: BYHAM
-ms.service: 
-ms.component: t-sql
-ms.suite: sql
+ms.service: na
 ms.topic: updart-autogen
 ms.technology: database-engine
-ms.custom: 
+ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/27/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.date: 12/02/2017
 ms.author: genemi
 ms.workload: t-sql
-ms.openlocfilehash: 0f5d3cb833a9434429d094048e77e86dccd54fd2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 33c50454f34c1902ea7f7dedc9ecb0a54f99ce24
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="new-and-recently-updated-transact-sql-docs"></a>Neue und zuletzt aktualisiert: Transact-SQL-Dokumente
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
+
 
 
 Beinahe jeden Tag aktualisiert Microsoft einige der vorhandenen Artikel auf der Dokumentationswebsite [Docs.Microsoft.com](http://docs.microsoft.com/). In diesem Artikel werden Auszüge aus den zuletzt aktualisierten Artikeln wiedergegeben. Links zu den neuen Artikel werden ggf. ebenfalls aufgeführt.
@@ -37,7 +33,7 @@ Neueste Updates werden für den folgenden Datumsbereich und Themenbereich gemeld
 
 
 
-- *Datumsbereich des Updates*: &nbsp; **11.9.2017** &nbsp; –bis– &nbsp; **27.9.2017**
+- *Datumsbereich des Updates:* &nbsp; **2017-09-28** &nbsp; - zu - &nbsp; **2017-12-02**
 - *Bereich für die Themenbereichsdatenbank:* &nbsp; **T-SQL-**.
 
 
@@ -76,7 +72,8 @@ Kopieren Sie aus diesem und anderen Gründen auf gar keinen Fall Code aus diesen
 
 Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Abschnitt Auszüge aufgeführt sind.
 
-1. [Sql_variant (Transact-SQL)](#TitleNum_1)
+1. [Umgekehrter Schrägstrich (Zeilenfortsetzungszeichen) (Transact-SQL)](#TitleNum_1)
+2. [Wählen SIE - ORDER BY-Klausel (Transact-SQL)](#TitleNum_2)
 
 
 
@@ -87,57 +84,82 @@ Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Absch
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-sqlvariant-transact-sqldata-typessql-variant-transact-sqlmd"></a>1. &nbsp; [Sql_variant (Transact-SQL)](data-types/sql-variant-transact-sql.md)
+### <a name="1-nbsp-backslash-line-continuation-transact-sqllanguage-elementssql-server-utilities-statements-backslashmd"></a>1. &nbsp;[Umgekehrten Schrägstrich (Zeilenfortsetzungszeichen) (Transact-SQL)](language-elements/sql-server-utilities-statements-backslash.md)
 
-*Aktualisiert: 2017-09-13* &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
+*Aktualisiert: 2017-11-15* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Weiter](#TitleNum_2))
 
-<!-- Source markdown line 111.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 83.  ms.author= "rickbyh".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 659578de7de33d8672ceb9542093862107d13526 c80026de2b0deedab3722a874e9124c2cfefa049  (PR=0  ,  Filename=sql-variant-transact-sql.md  ,  Dirpath=docs\t-sql\data-types\  ,  MergeCommitSha40=5cd78481b3fac55ec34b59e7b1ad25e0e14d2a00) -->
+<!-- git diff --ignore-all-space --unified=0 9484441710ac9a083a554ffadb59a3b7e92484b3 19b9c37c65ba462a32067c80e81a920eeb339851  (PR=3966  ,  Filename=sql-server-utilities-statements-backslash.md  ,  Dirpath=docs\t-sql\language-elements\  ,  MergeCommitSha40=b0c223ba0f78af5eb76948e68e2d1aab2e7b80c1) -->
 
 
 
-**Beispiele**
+**B. Teilen eine binäre Zeichenfolge**
 
 
-**A. Verwenden eine Sql_variant in einer Tabelle**
-
- Im folgenden Beispiel erstellt eine Tabelle mit einem Sql_variant-Datentyp. Und im Beispiel ruft dann `SQL_VARIANT_PROPERTY` Informationen zu den `colA` Wert `46279.1` , in dem `colB`  = `1689`, davon ausgehend, dass `tableA` hat `colA` vom Typ `sql_variant` und `colB`.
+Im folgende Beispiel werden ein umgekehrter Schrägstrich und ein Wagenrücklauf verwendet, um eine binäre Zeichenfolge in zwei Linien geteilt.
 
 ```
-CREATE   TABLE tableA(colA sql_variant, colB int)
-INSERT INTO tableA values ( cast (46279.1 as decimal(8,2)), 1689)
-SELECT   SQL_VARIANT_PROPERTY(colA,'BaseType') AS 'Base Type',
-         SQL_VARIANT_PROPERTY(colA,'Precision') AS 'Precision',
-         SQL_VARIANT_PROPERTY(colA,'Scale') AS 'Scale'
-FROM      tableA
-WHERE      colB = 1689
-```
-
- ..! --SsResult--NSCHLIEßEN-NotShown... /.. /Includes/ssresult-MD.MD)] Beachten Sie, dass jeder dieser drei Werte ist ein **Sql_variant**.
+SELECT 0xabc\
+def AS [ColumnResult];
 
 ```
-Base Type    Precision    Scale
----------    ---------    -----
-decimal      8           2
 
-(1 row(s) affected)
-```
-
-**B. Verwenden eine Sql_variant als variable**
-
- Im folgenden Beispiel erstellt eine Variable mit dem Sql_variant-Datentyp, und ruft dann `SQL_VARIANT_PROPERTY` Informationen zu einer Variablen mit dem Namen @v1.
+ ..! --SsResult--NSCHLIEßEN-NotShown... /.. /Includes/ssresult-MD.MD)]
 
 ```
-DECLARE @v1 sql_variant;
-SET @v1 = 'ABC';
-SELECT @v1;
-SELECT SQL_VARIANT_PROPERTY(@v1, 'BaseType');
-SELECT SQL_VARIANT_PROPERTY(@v1, 'MaxLength');
+ ColumnResult
+ ------------
+ 0xABCDEF
 ```
+
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_2"/>
+
+### <a name="2-nbsp-select---order-by-clause-transact-sqlqueriesselect-order-by-clause-transact-sqlmd"></a>2. &nbsp;[Wählen: ORDER BY-Klausel (Transact-SQL)](queries/select-order-by-clause-transact-sql.md)
+
+*Aktualisiert: 2017-10-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([vorherigen](#TitleNum_1))
+
+<!-- Source markdown line 481.  ms.author= "rickbyh".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 b8d7bc7bab46e914eb2facf6c654a5944383077e de7e4f3f7826011e273120a2b6b08af4d263a510  (PR=3663  ,  Filename=select-order-by-clause-transact-sql.md  ,  Dirpath=docs\t-sql\queries\  ,  MergeCommitSha40=e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1) -->
+
+
+
+**<a name="Union"></a>Verwenden von ORDER BY mit UNION, EXCEPT und INTERSECT**
+
+ Wenn eine Abfrage die Operatoren UNION, EXCEPT oder INTERSECT verwendet, muss die ORDER BY-Klausel am Ende der Anweisung angegeben werden, und die Ergebnissen der kombinierten Abfragen werden sortiert. Im folgenden Beispiel werden alle Produkte zurückgegeben, die rot oder gelb sind, und die kombinierte Liste wird anhand der Spalte `ListPrice` sortiert.
+
+```sql
+USE AdventureWorks2012;
+GO
+SELECT Name, Color, ListPrice
+FROM Production.Product
+WHERE Color = 'Red'
+-- ORDER BY cannot be specified here.
+UNION ALL
+SELECT Name, Color, ListPrice
+FROM Production.Product
+WHERE Color = 'Yellow'
+ORDER BY ListPrice ASC;
+
+```
+
+**Beispiele:..! --SsSDWfull--NSCHLIEßEN-NotShown... /.. /Includes/sssdwfull-MD.MD)] und..! --SsPDW--NSCHLIEßEN-NotShown... /.. /Includes/sspdw-MD.MD)]**
 
 
 
@@ -151,36 +173,40 @@ SELECT SQL_VARIANT_PROPERTY(@v1, 'MaxLength');
 <!--  HOW TO:
     Refresh this file's line items with the latest 'Count-in-Similars*' content.
     Then run Run-533-*.BAT
+    2017-12-02  23:00pm
 -->
 
 Dieser Abschnitt enthält sehr ähnliche Artikel für zuletzt aktualisierte Artikel in anderen Themenbereichen innerhalb des gleichen GitHub-Repositorys: [MicrosoftDocs/sql-docs-pr](https://github.com/MicrosoftDocs/sql-docs/).
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Themenbereiche, die über neue oder kürzlich aktualisierte Artikel verfügen
 
-- [Neu + Aktualisiert (0+1): Dokumentation zu **Advanced Analytics für SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Neu + Aktualisiert (0+1): Dokumentation zu **Analysis Services für SQL**](../analysis-services/new-updated-analysis-services.md)
-- [Neu + Aktualisiert (4+1): Dokumentation zum **Datenbankmodul für SQL**](../database-engine/new-updated-database-engine.md)
-- [Neu + Aktualisiert (17+0):Dokumentation zu **Integration Services für SQL**](../integration-services/new-updated-integration-services.md)
-- [Neu + Aktualisiert (3+0): Dokumentation zu **Linux für SQL**](../linux/new-updated-linux.md)
-- [Neu + Aktualisiert (1+1): Dokumentation zu **relationalen Datenbanken für SQL**](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (2+0): **Reporting Services for SQL** docs (Neu + Aktualisiert (2+0): Dokumentation zu Reporting Services für SQL)](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (0+1): **SQL Server Management Studio (SSMS)** docs (Neu + Aktualisiert (0+1): Dokumentation zu SQL Server Management Studio (SSMS))](../ssms/new-updated-ssms.md)
-- [New + Updated (0+1): **Transact-SQL** docs (Neu + Aktualisiert (0+1): Dokumentation zu Transact-SQL)](../t-sql/new-updated-t-sql.md)
+- [Neue und aktualisierte (3 + 14): **Advanced Analytics für SQL** Docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (1+0): **Analysis Services for SQL** docs (Neu + Aktualisiert (1+0): Analysis Services für SQL-Dokumente)](../analysis-services/new-updated-analysis-services.md)
+- [Neue und aktualisierte (87 + 0): **Analyseplattformsystem für SQL** Docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [Neue und aktualisierte (5 + 4): **Herstellen einer Verbindung mit SQL** Docs](../connect/new-updated-connect.md)
+- [Neue und aktualisierte (0 + 1): **für SQL-Datenbank-Engine** Docs](../database-engine/new-updated-database-engine.md)
+- [Neue und aktualisierte (2 + 2): **Integration Services für SQL** Docs](../integration-services/new-updated-integration-services.md)
+- [Neue und aktualisierte (10 + 9): **Linux für SQL** Docs](../linux/new-updated-linux.md)
+- [Neue und aktualisierte (2 + 4): **relationale Datenbanken für SQL** Docs](../relational-databases/new-updated-relational-databases.md)
+- [Neue und aktualisierte (4 + 2): **Reporting Services für SQL** Docs](../reporting-services/new-updated-reporting-services.md)
+- [Neue und aktualisierte (0 + 1): **Samples for SQL** Docs](../sample/new-updated-sample.md)
+- [Neue und aktualisierte (21 + 0): **SQL Operations Studio** Docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Neue und aktualisierte (5 + 1): **Microsoft SQL Server** Docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (0+1): **SQL Server Data Tools (SSDT)** docs (Neu + Aktualisiert (0+1): SQL Server Data Tools-Dokumente (SSDT))](../ssdt/new-updated-ssdt.md)
+- [Neue und aktualisierte (1 + 0): **SQL Server Migration Assistant (SSMA)** Docs](../ssma/new-updated-ssma.md)
+- [New + Updated (0+1): **SQL Server Management Studio (SSMS)** docs (Neu + Aktualisiert (0+1): SQL Server Management Studio-Dokumente (SSMS))](../ssms/new-updated-ssms.md)
+- [Neue und aktualisierte (0 + 2): **Transact-SQL** Docs](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Themenbereiche, die über keine neuen oder kürzlich aktualisierten Artikel verfügen
 
+- [Neue und aktualisierte (0 + 0): **Data Migration Assistant (DMA) für SQL** Docs](../dma/new-updated-dma.md)
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs (Neu + Aktualisiert (0+0): ActiveX Data Objects (ADO) für SQL-Dokumente)](../ado/new-updated-ado.md)
-- [New + Updated (0+0): **Connect to SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zum Herstellen einer Verbindung mit SQL)](../connect/new-updated-connect.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs (Neu + Aktualisiert (0+0): Data Quality Services für SQL-Dokumente)](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs (Neu + Aktualisiert (0+0): Data Mining-Erweiterungen (DMX) für SQL)](../dmx/new-updated-dmx.md)
 - [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Master Data Services (MDS) für SQL)](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs (Neu + Aktualisiert (0+0): Mehrdimensionale Ausdrücke für SQL)](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs (Neu + Aktualisiert (0+0): Open Database Connectivity für SQL-Dokumente)](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs (Neu + Aktualisiert (0+0): PowerShell für SQL-Dokumente)](../powershell/new-updated-powershell.md)
-- [New + Updated (0+0): **Samples for SQL** docs (Neu + Aktualisiert (0+0): Beispiele für SQL-Dokumente)](../sample/new-updated-sample.md)
-- [Neu + Aktualisiert (0+0): Dokumentation zu **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+0): **SQL Server Data Tools (SSDT)** docs (Neu + Aktualisiert (0+0): Dokumentation zu SQL Server Data Tools (SSDT))](../ssdt/new-updated-ssdt.md)
-- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs (Neu + Aktualisiert (0+0): SQL Server Migration Assistant-Dokumente (SSMA))](../ssma/new-updated-ssma.md)
 - [Neu + Aktualisiert (0+0): Dokumentation zu **Tools für SQL**](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs (Neu + Aktualisiert (0+0): XQuery für SQL-Dokumente)](../xquery/new-updated-xquery.md)
 

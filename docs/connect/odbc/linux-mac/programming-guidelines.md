@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b107903c83100d24f8691fba78ab9e928ee23d00
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 7bdb349022f82d29045c7277185485b595675bc3
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="programming-guidelines"></a>Programmierrichtlinien
 
@@ -75,21 +75,36 @@ Die folgenden Funktionen sind nicht in dieser Version des ODBC-Treibers unter Ma
 
 ## <a name="character-set-support"></a>Zeichensatz-Unterstützung
 
-Die Client-Codierung kann einer der folgenden sein:
+SQLCHAR-Daten in einem der folgenden Zeichen werden vom Treiber unterstützt:
+
   -  UTF-8
-  -  ISO-8859-1
-  -  ISO-8859-2
+  -  CP437
+  -  CP850
+  -  CP874
+  -  CP932
+  -  CP936
+  -  CP949
+  -  CP950
+  -  CP1251
+  -  CP1253
+  -  CP1256
+  -  CP1257
+  -  CP1258
+  -  ISO-8859-1 / CP1252
+  -  ISO-8859-2 / CP1250
   -  ISO-8859-3
   -  ISO-8859-4
   -  ISO-8859-5
   -  ISO-8859-6
   -  ISO-8859-7
-  -  ISO-8859-8
-  -  ISO-8859-9
+  -  ISO-8859-8 / CP1255
+  -  ISO-8859-9 / CP1254
   -  ISO-8859-13
   -  ISO-8859-15
-  
-SQLCHAR-Daten müssen einen der unterstützten Zeichen sein. SQLWCHAR-Daten müssen UTF-16LE (Little Endian) sein.  
+
+Beim Herstellen der Verbindung erkennt der Treiber das aktuelle Gebietsschema des Prozesses, der in der Sie geladen wird. Der Treiber verwenden, Codierungen für SQLCHAR (schmale Zeichen)-Daten, wenn sie einen der oben aufgeführten unterstützten Codierungen handelt, Andernfalls wird standardmäßig in UTF-8. Da alle Prozesse im Gebietsschema "C" in der Standardeinstellung starten (und daher dazu führen, den Treiber standardmäßig in UTF-8 dass), wenn eine Anwendung eine der oben genannten Codierungen verwenden muss, sollten Sie verwenden die **Setlocale** Funktion zum entsprechend vor dem Festlegen des Gebietsschemas Herstellen einer Verbindung; entweder indem Sie das gewünschte Gebietsschema explizit angeben oder eine leere Zeichenfolge z. B. `setlocale(LC_ALL, "")`, um den gebietsschemaeinstellungen der Umgebung zu verwenden.
+
+SQLWCHAR-Daten müssen UTF-16LE (Little Endian) sein.
 
 Wenn SQLDescribeParameter keinen SQL-Typ auf dem Server angibt, verwendet der Treiber den SQL-Typ, der im *ParameterType* -Parameter von SQLBindParameter angegeben ist. Wenn ein schmaler SQL-Typ, wie SQL_VARCHAR, in SQLBindParameter angegeben ist, konvertiert der Treiber die bereitgestellten Daten von der Codepage des Clients auf den Standardwert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Codepage. (Die Standardeinstellung [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Codepage ist in der Regel 1252.) Wenn die Clientcodepage nicht unterstützt wird, wird er in UTF-8 festgelegt. In diesem Fall konvertiert der Treiber die UTF-8-Daten dann in die Standardcodepage. Es können jedoch Datenverluste auftreten. Wenn Codepage 1252 ein Zeichen nicht darstellen kann, konvertiert der Treiber das Zeichen in ein Fragezeichen („?“). Um diese Datenverluste zu vermeiden, geben Sie in SQLBindParameter einen Unicode SQL-Zeichentyp an, z. B. SQL_NVARCHAR. In diesem Fall konvertiert der Treiber die angegebenen Unicode-Daten in UTF-8-Codierung in UTF-16 ohne Datenverlust.
 

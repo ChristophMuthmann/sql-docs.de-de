@@ -2,9 +2,12 @@
 title: Anhalten einer Ablaufverfolgung (SQL Server Profiler) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f416ead2192c379f43a97aa386ca21589fd1385c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 07c66a2907d0e0d6b75e413959256133156b67a6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="pause-a-trace-sql-server-profiler"></a>Anhalten einer Ablaufverfolgung (SQL Server Profiler)
-  Durch Anhalten einer Ablaufverfolgung wird verhindert, dass weitere Ereignisdaten vor dem Neustarten der Ablaufverfolgung aufgezeichnet werden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Durch Anhalten einer Ablaufverfolgung verhindert, dass weitere Ereignisdaten vor dem Neustarten der Ablaufverfolgungs aufgezeichnet.  
   
  Durch Anhalten einer Ablaufverfolgung wird verhindert, dass Ereignisdaten vor dem Neustarten der Ablaufverfolgung aufgezeichnet werden. Durch das Neustarten einer Ablaufverfolgung werden die Ablaufverfolgungsvorgänge fortgesetzt. Zuvor aufgezeichnete Daten gehen nach einem Neustart nicht verloren. Wird die Ablaufverfolgung neu gestartet, wird die Aufzeichnung der Daten von diesem Punkt an fortgesetzt. Während eine Ablaufverfolgung angehalten wird, können Sie den Namen, Ereignisse, Spalten und Filter ändern. Es ist allerdings nicht möglich, die Ziele, an die Sie die Ablaufverfolgungsdaten senden, oder die Serververbindung zu ändern.  
   

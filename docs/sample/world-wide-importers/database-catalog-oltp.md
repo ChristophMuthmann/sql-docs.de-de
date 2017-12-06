@@ -1,9 +1,9 @@
 ---
 title: "\"Wideworldimporters\" Datenbankkatalog | Microsoft Docs"
-ms.prod: world-wide-importers
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: samples
-ms.component: 
+ms.service: 
+ms.component: samples
 ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 4af23af22f369dc70110812b831e167b88b4885d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6d87a24e91f96957170671303af641c6bacc6599
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="wideworldimporters-database-catalog"></a>Datenbankkatalog "wideworldimporters"
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Die Datenbank "wideworldimporters" enthält alle der Transaktionsinformationen und Tagesdaten für und Verkäufe, sowie für Fahrzeuge und kalten Räume Sensordaten.
@@ -79,7 +79,7 @@ Details der Parameter und Personen (Benutzer und Kontakte), zusammen mit (häufi
 |StateProvinces|Städte sind Teil der Bundesstaaten oder Provinzen. Diese Tabelle weist Details davon, wie z. B. räumliche Daten für die Beschreibung der Grenzen jeder Bundesland oder Kanton.|
 |Länder|Sind Teil der Länder, Bundesstaaten oder Provinzen. Die Tabelle enthält Details davon, wie z. B. räumliche Daten, die die Grenzen der einzelnen Länder beschreibt.|
 |DeliveryMethods|Optionen für die Übermittlung von vordefinierten Elemente (z. B. LKW/van, Post, Pickup, Courier, usw.)|
-|PaymentMethods|Optionen zum Durchführen von Zahlungen (z. B. Bar, Scheck EFT, usw..)|
+|PaymentMethods|Optionen zum Durchführen von Zahlungen (z. B. Bar, Scheck EFT, usw.)|
 |TransactionTypes|Arten von Kunden, Lieferanten oder vordefinierten Transaktionen (z. B. Rechnung, Gutschrift, usw.)|
 
 ### <a name="purchasing-schema"></a>Erwerb von Schemas
@@ -122,7 +122,7 @@ Details der stock-Elemente, deren betrieben und Transaktionen.
 |StockGroups|Gruppen, die zum Kategorisieren von vordefinierten Elemente (z. B. Novelties, Toys, eßbare Novelties, usw.)|
 |StockItemStockGroups|Die vordefinierten Elemente sind in der Stock (m: n) gruppiert|
 |Farben|Stock Elemente können (optional) Farben aufweisen.|
-|PackageTypes|Methoden, mit denen Elemente stock verpackt werden können (z. B. Feld, Kartons, Palette, kg usw..|
+|PackageTypes|Methoden, mit denen Elemente stock verpackt werden können (z. B. Feld, Kartons, Palette, kg usw.|
 |StockItemTransactions|Transaktionen, die für alle Bewegungen aller vordefinierten Elemente (Empfang, Verkauf, auf null)|
 |VehicleTemperatures|Regelmäßig aufgezeichneten Temperaturen Fahrzeug chillers|
 |ColdRoomTemperatures|Temperaturen kalte Platz Chillers regelmäßig aufgezeichnet|

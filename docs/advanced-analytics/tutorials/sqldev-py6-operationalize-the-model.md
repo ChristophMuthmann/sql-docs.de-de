@@ -2,7 +2,7 @@
 title: 'Schritt 6: Operationalisieren die Python-Modell mithilfe von SQL Server | Microsoft Docs'
 ms.custom: 
 ms.date: 10/17/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: python-services
@@ -17,11 +17,11 @@ caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 7dcda2d17413e6c660510498c4b3ea770bb0b09d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: da38ad56ff82d836fa34e42d3505d3a588344cfa
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="step-6-operationalize-the-python-model-using-sql-server"></a>Schritt 6: Operationalisieren Sie die Python-Modell mithilfe von SQL Server
 
@@ -185,7 +185,7 @@ In diesem Abschnitt erfahren Sie, wie einzelne Vorhersagen zu erstellen, indem z
 + [PredictTipSingleModeRxPy](#PredictTipSingleModeRxPy) für die einzelnen Zeile Bewertung unter Verwendung des Modells Revoscalepy dient.
 + Wenn Sie noch nicht geschehen ein Modell trainiert, wiederherstellen, [Schritt 5](sqldev-py5-train-and-save-a-model-using-t-sql.md)!
 
-Beide Modelle werden als Eingabe eine Reihe von einzelnen Werten, z. B. Reisenden Count, Reise Abstand usw.. Eine Funktion mit Tabellenrückgabe `fnEngineerFeatures`, wird verwendet, um Breiten-und Längengrade der Eingaben in ein neues Feature konvertieren, direkte Abstand. [Lektion 4](sqldev-py4-create-data-features-using-t-sql.md) enthält eine Beschreibung dieser Funktion mit Tabellenrückgabe.
+Beide Modelle werden als Eingabe eine Reihe von einzelnen Werten, z. B. Reisenden Count, Reise Abstand usw. Eine Funktion mit Tabellenrückgabe `fnEngineerFeatures`, wird verwendet, um Breiten-und Längengrade der Eingaben in ein neues Feature konvertieren, direkte Abstand. [Lektion 4](sqldev-py4-create-data-features-using-t-sql.md) enthält eine Beschreibung dieser Funktion mit Tabellenrückgabe.
 
 Sowohl gespeicherten Prozeduren erstellen Sie eine Bewertung auf der Grundlage der Python-Modells.
 

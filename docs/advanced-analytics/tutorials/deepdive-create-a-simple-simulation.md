@@ -2,7 +2,7 @@
 title: 'Lektion 5: Erstellen einer einfachen Simulation (Tieferer Einblick in Data Science) | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 05/18/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c6bad3a92aa3bf5c1e52d34b5c9f9e981c96bd87
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e5dfca8ecef324b510b614ae93b7aefe9a4efe07
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="create-a-simple-simulation"></a>Erstellen Sie eine einfache Simulation
 

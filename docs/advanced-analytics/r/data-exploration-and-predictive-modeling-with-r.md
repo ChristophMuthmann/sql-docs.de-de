@@ -2,7 +2,7 @@
 title: Datensuche und Vorhersagemodellierung mit R | Microsoft-Dokumentation
 ms.custom: SQL2016_New_Updated
 ms.date: 04/18/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 79f82cbf4cba40a4c4fd2b2683ce3c16913ef315
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 139e3c15229c3c7da11fd6ffa56993963f3caecd
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r"></a>Datensuche und Vorhersagemodellierung mit R
 

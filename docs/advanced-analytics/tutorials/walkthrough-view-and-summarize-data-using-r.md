@@ -1,7 +1,7 @@
 ---
 title: Anzeigen und Zusammenfassen von Daten mithilfe von R (Exemplarische Vorgehensweise) | Microsoft Docs
 ms.date: 11/10/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 90afd69ca0d447a92b557255fae93cd899eddc1b
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: 534479bf1a473574038da1a24dc1fc06510f4f23
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="view-and-summarize-data-using-r"></a>Anzeigen und Zusammenfassen von Daten mithilfe von R
 

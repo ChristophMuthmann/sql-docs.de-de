@@ -2,7 +2,7 @@
 title: Erstellen von Data-Features, die mit R und SQL (Exemplarische Vorgehensweise) | Microsoft Docs
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 095f5b9880a8f78a8d73461dd8cbeae28f30169e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6689d2b1f12e446b13a3cd6712ef263ee5ef83cd
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="create-data-features-using-r-and-sql-walkthrough"></a>Erstellen von Data-Features, die mit R und SQL (Exemplarische Vorgehensweise)
 

@@ -1,7 +1,7 @@
 ---
 title: "Voraussetzungen für die Data sience-Vorgehensweise für SQL Server und R | Microsoft Docs"
 ms.date: 11/10/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 127957f5a2838efb9d2dfa2829cb33909c490571
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: c3b8cd3873645606fa9e286c3afbfa953c0ae5a1
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="prerequisites-for-the-data-science-walkthrough-for-sql-server-and-r"></a>Voraussetzungen für die Data sience-Vorgehensweise für SQL Server und R
 

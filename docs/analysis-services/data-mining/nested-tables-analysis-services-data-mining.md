@@ -23,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fddc871d01fcd7559a5b7e8af251c602975720b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1a46bece83240a564845fe55c2a674d45aa668ee
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Geschachtelte Tabellen (Analysis Services - Data Mining)
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]müssen einem Data Mining-Algorithmus Daten in Form einer Reihe von Fällen zugeführt werden, die in einer Falltabelle enthalten sind. Nicht alle Fälle lassen sich jedoch durch eine einzelne Datenzeile beschreiben. So kann sich ein Fall z.&nbsp;B. aus zwei Tabellen ableiten: einer Tabelle mit Kundeninformationen und einer anderen Tabelle mit den von Kunden getätigten Käufen. Ein einzelner Kunde in der Kundeninformationstabelle könnte über mehrere Elemente in der Kundenkäufe-Tabelle verfügen, weshalb es schwierig ist, die Daten in einer einzelnen Zeile zu beschreiben. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt eine eindeutige Methode zum Verarbeiten dieser Fälle bereit, indem *geschachtelte Tabellen*verwendet werden. Das Konzept von geschachtelten Tabellen wird in der folgenden Abbildung veranschaulicht.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
  Wenn die geschachtelte Tabelle beispielsweise die Spalten **Product**, **ProductQuantity**und **ProductPrice**enthält, können Sie **Product** als Schlüsselspalte der geschachtelten Tabelle festlegen und der Miningstruktur **ProductQuantity** als Eingabespalte hinzufügen.  
   
 ## <a name="filtering-nested-table-data"></a>Filtern von geschachtelten Tabellendaten  
- In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]können Sie Filter für Daten definieren, die zum Trainieren oder Testen eines Data Mining-Modells verwendet werden. Mit einem Filter kann die Zusammensetzung des Modell beeinflusst oder das Modell an einer Teilmenge der Fälle getestet werden. Filter können auch auf geschachtelte Tabellen angewendet werden. Es gibt Einschränkungen bezüglich der Syntax, die für geschachtelte Tabellen verwendet werden kann.  
+ In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]können Sie Filter für Daten definieren, die zum Trainieren oder Testen eines Data Mining-Modells verwendet werden. Ein Filter kann die Zusammensetzung des Modell beeinflusst oder zum Testen des Modells für eine Teilmenge der Fälle verwendet werden. Filter können auch auf geschachtelte Tabellen angewendet werden. Es gibt Einschränkungen bezüglich der Syntax, die für geschachtelte Tabellen verwendet werden kann.  
   
  Wenn Sie einen Filter auf eine geschachtelte Tabelle anwenden, prüfen Sie, ob ein Attribut vorhanden oder nicht vorhanden ist. Sie können beispielsweise einen Filter anwenden, der die im Modell verwendeten Fälle auf diejenigen Fälle beschränkt, die in der geschachtelten Tabelle einen bestimmten Wert aufweisen. Sie könnten die im Modell verwendeten Fälle auch auf die Kunden beschränken, die einen bestimmten Artikel nicht gekauft haben.  
   

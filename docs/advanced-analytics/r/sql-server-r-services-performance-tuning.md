@@ -2,7 +2,7 @@
 title: "Leistungsoptimierung für SQL Server R Services | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 07/12/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 536d493ba199ff4cdc808c5463cb260926f106f5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a1f3db839e51a85151141149d7a2778ce8cd423b
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>Optimieren der Leistung für R in SQL Server
 

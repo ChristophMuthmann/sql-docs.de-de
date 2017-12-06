@@ -2,10 +2,10 @@
 title: "Lizenzbedingungen für SQL Server Data Tools und Visual Studio 2017 | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 08/04/2017
-ms.prod: ssdt
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: ssdt
-ms.component: 
+ms.service: 
+ms.component: ssdt
 ms.reviewer: 
 ms.suite: sql
 ms.technology: tools-ssdt
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 91a0225159bc963220e1a6f98838766ac99ee396
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: eccaef1eef9b5dd74200bcc5590e66d14ec1d51e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-data-tools---license-terms"></a>SQL Server Data Tools – Lizenzbedingungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

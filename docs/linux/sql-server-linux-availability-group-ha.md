@@ -5,7 +5,7 @@ ms.date: 10/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cacdf2de6c6e85c8afd0723f4dae21feab0c71cf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7131eec581f973738d1cacb45dd355e2b7168aeb
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Hohe Verfügbarkeit und Datenschutz für verfügbarkeitsgruppenkonfigurationen
 
@@ -161,7 +161,7 @@ In diesem Szenario haben zwei Replikate für die Reaktion für das Failover ausg
 
 Sie können auswählen, um das Standardverhalten überschreiben und verhindern, dass die verfügbarkeitsgruppenressource Einstellung `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` automatisch.
 
-Das folgende Skript legt `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` auf 0 für eine verfügbarkeitsgruppe mit dem Namen `<**ag1**>`. Vor dem Ausführen von Replace `<**ag1**>` mit dem Namen der verfügbarkeitsgruppe.
+Das folgende Skript legt `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` auf 0 für eine verfügbarkeitsgruppe mit dem Namen `<**ag1**>`. Ersetzen Sie `<**ag1**>` vor der Ausführung durch den Namen der Verfügbarkeitsgruppe.
 
 ```bash
 sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=0

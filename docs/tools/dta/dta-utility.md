@@ -2,9 +2,12 @@
 title: DTA (Hilfsprogramm) | Microsoft Docs
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3600ea7d01e3dfd7963198433c37ad05a9b68315
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 192a28c8833fb801e19d1dee7485b667ea56128d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="dta-utility"></a>dta (Hilfsprogramm)
-  Das **dta** -Hilfsprogramm ist die Eingabeaufforderungsversion des Datenbankoptimierungsratgebers. Mit dem Hilfsprogramm **dta** soll es Ihnen ermöglicht werden, die Funktionalität des Datenbankoptimierungsratgebers in Anwendungen und Skripts zu verwenden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Die **Dta** -Hilfsprogramm ist die Befehlszeilenversion des Datenbankmodul-Optimierungsratgeber. Mit dem Hilfsprogramm **dta** soll es Ihnen ermöglicht werden, die Funktionalität des Datenbankoptimierungsratgebers in Anwendungen und Skripts zu verwenden.  
   
  Wie der Datenbankoptimierungsratgeber dient auch das **dta** -Hilfsprogramm dazu, eine Arbeitsauslastung zu analysieren und Empfehlungen zu den physischen Entwurfsstrukturen auszugeben, um die Serverleistung für diese Arbeitsauslastung zu verbessern. Bei der Arbeitsauslastung kann es sich um einen Plancache, eine [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -Ablaufverfolgungsdatei oder -tabelle oder ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript handeln. Zu den physischen Entwurfsstrukturen zählen Indizes, indizierte Sichten und die Partitionierung. Nach der Analyse einer Arbeitsauslastung erstellt das **dta** -Hilfsprogramm eine Empfehlung für den physischen Datenbankentwurf und kann das notwendige Skript zum Implementieren der Empfehlung generieren. Arbeitsauslastungen können über die Eingabeaufforderung mithilfe der Argumente **-if** oder **-it** angegeben werden. Mithilfe von **-ix** können Sie zudem eine XML-Eingabedatei über die Eingabeaufforderung angeben. In diesem Fall wird die Arbeitsauslastung in der XML-Eingabedatei angegeben.  
   

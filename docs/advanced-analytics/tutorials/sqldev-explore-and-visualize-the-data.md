@@ -2,7 +2,7 @@
 title: 'Lektion 3: Durchsuchen und Visualisieren von Daten | Microsoft Docs'
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -18,11 +18,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a2d9d9f53cae6c19e446c544ca65552c04b4fe1d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8e385cdc2624b7d3fc5e1d13644475ab5d9c7a0d
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>Lektion 3: Durchsuchen und Visualisieren von Daten
 

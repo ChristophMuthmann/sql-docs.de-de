@@ -2,9 +2,12 @@
 title: XML-Eingabe Beispiele (DTA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cbe4b41965cd682b7d3540b2d2baa9b85a4963a7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9d152397ce3dd0000d6086030b5b4c8e7142c92d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="xml-input-file-samples-dta"></a>Beispiele für XML-Eingabedateien (DTA)
-  Dieser Abschnitt enthält XML-Beispieleingabedateien, die Sie mit dem Befehlszeilentool **dta** verwenden können. Dieses Tool ist eine der Benutzeroberflächen des Datenbankoptimierungsratgebers. Dabei handelt es sich um ein Tool, mit dem Sie Datenbanken zur Verbesserung der Abfrageleistung optimieren können. Der Datenbankoptimierungsratgeber analysiert die Auswirkungen einer Arbeitsauslastung auf eine oder mehrere Datenbanken. Eine Arbeitsauslastung ist ein Satz von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die für zu optimierende Datenbanken ausgeführt werden. Wenn der Datenbankoptimierungsratgeber die Analyse der Auswirkungen der Arbeitsauslastung beendet hat, erstellt er eine Empfehlung zum Hinzufügen von Indizes, indizierten Sichten oder Partitionierungsstrategien, mit denen sich die Abfrageleistung Ihrer Datenbanken verbessern lässt.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dieser Abschnitt enthält XML-beispieleingabedateien, die mit der **Dta** -Befehlszeilentool. Dieses Tool ist eine der Benutzeroberflächen des Datenbankoptimierungsratgebers. Dabei handelt es sich um ein Tool, mit dem Sie Datenbanken zur Verbesserung der Abfrageleistung optimieren können. Der Datenbankoptimierungsratgeber analysiert die Auswirkungen einer Arbeitsauslastung auf eine oder mehrere Datenbanken. Eine Arbeitsauslastung ist ein Satz von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die für zu optimierende Datenbanken ausgeführt werden. Wenn der Datenbankoptimierungsratgeber die Analyse der Auswirkungen der Arbeitsauslastung beendet hat, erstellt er eine Empfehlung zum Hinzufügen von Indizes, indizierten Sichten oder Partitionierungsstrategien, mit denen sich die Abfrageleistung Ihrer Datenbanken verbessern lässt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

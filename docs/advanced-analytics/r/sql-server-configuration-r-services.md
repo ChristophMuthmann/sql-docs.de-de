@@ -2,7 +2,7 @@
 title: SQL Server-Konfiguration (R Services) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 486c0d2772660d4a549e3ebdf29e2cd54ace3d01
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6bb91c23d7890fdd92cbe949e468cbad5d1dc143
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>SQL Server-Konfiguration für die Verwendung mit R
 
@@ -70,7 +70,7 @@ Das Windows-Betriebssystem verwendet eine Auslagerungsdatei, um Abstürze zu ver
 
 Auch die Geschwindigkeit des Laufwerks, auf dem die Auslagerungsdatei gespeichert ist, kann die Leistung beeinträchtigen. Wenn Sie die Auslagerungsdatei auf einem SSD speichern oder mehrere Auslagerungsdateien SSD-übergreifend verwenden, kann dies die Leistung verbessern.
 
-Informationen zum Ändern der Größe der Auslagerungsdatei, finden Sie unter [Gewusst wie: Bestimmen der geeigneten Auslagerungsdateigröße für 64-Bit-Versionen von Windows](https://support.microsoft.com/en-us/kb/2860880).
+Informationen zum Ändern der Größe der Auslagerungsdatei, finden Sie unter [Gewusst wie: Bestimmen der geeigneten Auslagerungsdateigröße für 64-Bit-Versionen von Windows](https://support.microsoft.com/kb/2860880).
 
 ## <a name="optimizations-at-instance-or-database-level"></a>Optimierungen auf Instanz- oder Datenbankebene
 
@@ -167,7 +167,7 @@ Details, einschließlich Beispielcode finden Sie in diesem Lernprogramm: [SQL Op
 
 **Weitere Ressourcen:**
 
-+ [Soft-NUMA in SQLServer](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Soft-NUMA in SQLServer](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
     
     Zuordnen von Soft-NUMA-Knoten zu CPUs
 

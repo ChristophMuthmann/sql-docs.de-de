@@ -2,9 +2,12 @@
 title: SQL Server-Eigenschaften (Registerkarte "Erweitert") | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a0ff03aeddf8e8072d479ef13a14c68080d5d3df
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 570471b64b257bda598f72015e6b9a7767a4e5ba
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-properties-advanced-tab"></a>SQL Server-Eigenschaften (Registerkarte Erweitert)
-  Die folgenden Eigenschaften werden standardmäßig auf der Registerkarte **Erweitert** angezeigt. Wenn Eigenschaften vom Benutzer definiert wurden, werden sie mit den entsprechenden Werten auch auf dieser Registerkarte angezeigt.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Die folgenden Eigenschaften werden auf die **erweitert** Registerkarte standardmäßig. Wenn Eigenschaften vom Benutzer definiert wurden, werden sie mit den entsprechenden Werten auch auf dieser Registerkarte angezeigt.  
   
 ## <a name="options"></a>enthalten  
  **Gruppiert**  

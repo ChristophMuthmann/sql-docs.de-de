@@ -2,7 +2,7 @@
 title: "Löschen eines SQL Server-Index | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: docset-sql-devref
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 745951f7c4a1436a5bae36db24d3431d1a4e64a4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e20449b0a86f69ef5280c207668764e16fbc2696
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="dropping-a-sql-server-index"></a>Löschen eines SQL Server-Index
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

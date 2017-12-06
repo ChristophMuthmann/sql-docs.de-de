@@ -2,9 +2,12 @@
 title: Clientprotokolle (SQL Server-Konfigurations-Manager) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 56ec6c8b1118916087c21b9514fdc4d311f04790
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8ca2e6a4fafa808fd4c32c3033b7c83983f5454f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="client-protocols-sql-server-configuration-manager"></a>Clientprotokolle (SQL Server-Konfigurations-Manager)
-  Um die Reihenfolge zu konfigurieren, mit der Protokolle von den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clients auf diesem Computer verwendet werden, klicken Sie im Konsolenbereich mit der rechten Maustaste auf **Clientprotokolle** , und klicken Sie dann auf **Eigenschaften**. Sie können auch mit der rechten Maustaste im Detailbereich auf ein Protokoll klicken und dann auf **Reihenfolge**klicken.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]So konfigurieren Sie die Reihenfolge, die Protokolle verwendet werden, indem Sie die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Clients auf diesem Computer Maustaste **ClientProtocols** im Konsolenbereich, und klicken Sie dann auf **Eigenschaften**, oder mit der rechten Maustaste den ein Protokoll im Detailbereich, und klicken Sie dann auf **Reihenfolge**.  
   
  Um die Eigenschaften der von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clients auf diesem Computer verwendeten Clientprotokolle zu konfigurieren, klicken Sie im Konsolenbereich auf **Clientprotokolle**, klicken Sie im Detailbereich mit der rechten Maustaste auf das gewünschte Protokoll, und klicken Sie dann auf **Eigenschaften**.  
   

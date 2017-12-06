@@ -2,7 +2,7 @@
 title: Systemeigene Bewertung | Microsoft Docs
 ms.custom: 
 ms.date: 09/19/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -11,11 +11,11 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: fe571e3e432d6445c76133c4c2a9c56f2f67eff0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8cce800526dbf89da77508713b4dd2aa2eead4ae
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="native-scoring"></a>Systemeigene Bewertung
 

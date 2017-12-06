@@ -2,7 +2,7 @@
 title: Analysieren von Daten im lokalen Computekontext | Microsoft Docs
 ms.custom: 
 ms.date: 05/18/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 514cc855af010347006054ad30fc5e5c36b16322
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d8e6516b7d203180d5c2a605db1099b1dcbae708
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="analyze-data-in-local-compute-context-data-science-deep-dive"></a>Analysieren von Daten im lokalen Computekontext (Data Science Deep Dive)
 
