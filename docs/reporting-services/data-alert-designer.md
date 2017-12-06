@@ -2,9 +2,12 @@
 title: Datenwarnungs-Designer | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,11 +26,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 67b7bf50b5773ee52651942345e40146a7e70fb6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6936d4ed42c5e63c964655f43e3618a2ae58f0db
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="data-alert-designer"></a>Datenwarnungs-Designer
 
@@ -169,7 +172,7 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und be
   
  Das Serienmuster gibt an, wann die Warnung gesendet wird. Wenn die Regeln während des Intervalls erfüllt werden, das das Muster angibt, wird die Warnung erst am Ende des Intervalls gesendet.  
   
- Falls Sie so schnell wie möglich eine Datenwarnmeldung erhalten möchten, wenn Berichtsdaten die angegebenen Regeln erfüllen, können Sie die Warnung so planen, dass sie oft ausgeführt wird. Wenn sich die Berichtsdaten nicht ändern, erhalten Sie und andere Empfänger u. U. viele redundante Meldungen. Möchten Sie nur Meldungen empfangen, wenn sich die Ergebnisse der Regelanwendung ändern, wählen Sie die Option zum **Senden von Meldungen nur bei Ergebnisänderungen** .  
+ Falls Sie so schnell wie möglich eine Datenwarnmeldung erhalten möchten, wenn Berichtsdaten die angegebenen Regeln erfüllen, können Sie die Warnung so planen, dass sie oft ausgeführt wird. Wenn sich die Berichtsdaten nicht ändern, erhalten Sie und andere Empfänger u. U. viele redundante Meldungen. Möchten Sie nur Meldungen empfangen, wenn sich die Ergebnisse der Regelanwendung ändern, wählen Sie die Option zum **Senden von Meldungen nur bei Ergebnisänderungen**.  
   
 > [!IMPORTANT]  
 >  Die Verwendung eines Serienmusters, das häufiger als täglich ausgeführt wird, ist nicht empfehlenswert, sofern hierfür kein wichtiger Grund auf Unternehmensebene vorliegt. Die Verarbeitung von Datenwarnungsdefinitionen in Echtzeit ist kein unterstütztes Szenario. Das zu häufige Verarbeiten von Datenwarnungsdefinitionen beeinträchtigt die Leistung des Berichtsservers und der allgemeinen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Bereitstellung.  

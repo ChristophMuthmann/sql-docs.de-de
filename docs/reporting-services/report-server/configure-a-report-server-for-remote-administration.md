@@ -1,9 +1,13 @@
 ---
 title: "Konfigurieren eines Berichtsservers für die Remoteverwaltung | Microsoft-Dokumentation"
 ms.date: 09/14/2015
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
+ms.custom: 
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 9c2bf31935e821aff995fead3f8aa0478114424e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: aea0b5ff0ec119cc19744220442761ae74e9bf86
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Konfigurieren eines Berichtsservers für die Remoteverwaltung
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]können Sie Berichtsserverinstanzen lokal oder remote konfigurieren. Zum Konfigurieren einer Remote-Berichtsserverinstanz können Sie das Reporting Services-Konfigurationstool verwenden oder benutzerdefinierten Code schreiben, der für den Anbieter der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Windows-Verwaltungsinstrumentation (Windows Management Instrumentation oder WMI) verwendet wird. Das Reporting Services-Konfigurationstool stellt dem WMI-Anbieter eine grafische Benutzeroberfläche bereit, sodass Sie einen Berichtsserver konfigurieren können, ohne Code schreiben zu müssen. Wenn Sie das Tool starten, können Sie einen Remoteserver angeben, zu dem eine Verbindung hergestellt werden soll.  
@@ -66,7 +70,7 @@ ms.lasthandoff: 11/09/2017
   
 1.  Klicken Sie auf **Start**, zeigen Sie auf **Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], dann auf **Konfigurationstools**, und klicken Sie auf **SQL Server-Konfigurations-Manager**.  
   
-2.  Erweitern Sie im linken Bereich den Eintrag **SQL Server-Netzwerkkonfiguration**, und klicken Sie dann für die Instanz von  **auf** Protokolle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+2.  Erweitern Sie im linken Bereich den Eintrag **SQL Server-Netzwerkkonfiguration**, und klicken Sie dann für die Instanz von auf **Protokolle** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 3.  Aktivieren Sie im Detailbereich die Protokolle TCP/IP und Named Pipes, und starten Sie dann den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst neu.  
   
