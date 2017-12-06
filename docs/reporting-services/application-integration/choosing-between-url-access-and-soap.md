@@ -2,9 +2,12 @@
 title: Entscheidung zwischen URL-Zugriff und SOAP in Reporting Services | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/19/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: application-integration
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -14,11 +17,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 8d09ebc398462e9a79a0a107600b147c748125a7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ff10b6386a3a9262c7a29c6940dc48cf32bfac26
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="choosing-between-url-access-and-soap-in-reporting-services"></a>Entscheidung zwischen URL-Zugriff und SOAP in Reporting Services
 

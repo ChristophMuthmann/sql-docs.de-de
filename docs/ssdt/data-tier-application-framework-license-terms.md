@@ -2,10 +2,10 @@
 title: "Data-Tier Application Framework – Lizenzbedingungen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 01/19/2017
-ms.prod: ssdt
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: ssdt
-ms.component: 
+ms.service: 
+ms.component: ssdt
 ms.reviewer: 
 ms.suite: sql
 ms.technology: tools-ssdt
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 67d200f7fd16799631dd3f01be5eb2a820fe6def
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 69ff96ae34f0584dce48eb4e5659a3dda888f840
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="data-tier-application-framework---license-terms"></a>Data-Tier Application Framework – Lizenzbedingungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

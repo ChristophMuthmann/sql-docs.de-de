@@ -2,9 +2,12 @@
 title: Berichts-Designer (F1-Hilfe) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a3629ab42cef5cceeaccb8a969b003667808936f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a283102f53802dabef95b289f7dcab6a96af6c34
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-designer-f1-help"></a>Berichts-Designer (F1-Hilfe)
   Dieser Abschnitt stellt F1-Hilfe für die Assistenten, Ansichten und Dialogfelder des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichts-Designers in [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]bereit. Sie können die F1-Hilfe auch bei geöffnetem Dialogfeld durch Drücken der F1-Taste oder durch Klicken auf die im Dialogfeld angezeigte Schaltfläche Hilfe öffnen.  

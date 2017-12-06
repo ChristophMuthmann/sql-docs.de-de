@@ -2,9 +2,12 @@
 title: "Erstellen, Ändern und Löschen von Zeitplänen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 07/01/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -28,11 +31,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 86ca460b5fe669e9fe9e9c0130c883325f988b50
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 32fe1afefa899880710a818c56eef4079fe90622
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-modify-and-delete-schedules"></a>Erstellen, Ändern oder Löschen von Zeitplänen
   In diesem Hilfethema erhalten Sie Informationen zum Erstellen, Ändern und Löschen von freigegebenen [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Zeitplänen.  Freigegebene Zeitpläne für den einheitlichen Modus werden auf der Seite „Zeitpläne“ im Webportal oder im Ordner „Freigegebene Zeitpläne“ in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]verwaltet. Verwenden Sie für den SharePoint-Modus die Verwaltungsseiten für die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung.  

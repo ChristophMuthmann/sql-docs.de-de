@@ -2,9 +2,12 @@
 title: "Erstellen der Rolle „RSExecRole“ | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ caps.latest.revision: "23"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.openlocfilehash: c5830b59420268d58f6425f8a2ce52fc4a3be12e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6d137b42fd99f18c0742d4535762c9cfd36d4b1a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-the-rsexecrole"></a>Erstellen der Rolle RSExecRole
 

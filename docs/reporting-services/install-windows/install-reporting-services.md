@@ -1,9 +1,13 @@
 ---
 title: Installieren von SQL Server Reporting Services | Microsoft-Dokumentation
 ms.date: 10/10/2017
-ms.prod: sql-server-2017
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
+ms.custom: 
 ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
@@ -13,11 +17,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: 2ab73e59ffc05a18f8a1a36ac66ba59ed726fdef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3cc3d78c22bbb4b32696692074e2dad2d6809a3a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="install-sql-server-reporting-services"></a>Installieren von SQL Server Reporting Services
 

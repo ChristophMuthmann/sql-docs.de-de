@@ -2,9 +2,12 @@
 title: "Tutorial: Hinzufügen einer KPI zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 06/15/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -15,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 0ba9911d41a851ed51150d83e96b61c2e7ec2c2f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7e3e6194d510371b5a7aed8cad4f2efe5d188687
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines KPIs zu einem Bericht (Berichts-Generator)
 In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] -Tutorial fügen Sie eine Leistungskennzahl (key performance indicator; KPI) zu einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht hinzu.  
@@ -161,7 +164,7 @@ Erweitern Sie die Spalten, und legen Sie das Format für die Datums- und Währun
 
 3. Drücken Sie die STRG-TASTE, und wählen Sie anschließend die vier Zellen aus, die [Sum(Sales)] enthalten.
 
-4. Klicken Sie auf der Registerkarte **Stamm** auf **Zahl** > **Währung**. Die Zellen ändern sich, um die formatierte Währung anzuzeigen.
+4. Klicken Sie auf der Registerkarte **Start** unter **Number** (Zahl) auf  > **Currency** (Währung). Die Zellen ändern sich, um die formatierte Währung anzuzeigen.
 
    Wenn Sie das Gebietsschema „Deutsch (Deutschland)“ verwenden, lautet der Standardbeispieltext [12.345,00€]. Falls kein Beispielwert für die Währung angezeigt wird, klicken Sie in der Gruppe **Zahlen** auf **Platzhalterformate** > **Beispielwerte**.
     
@@ -171,7 +174,7 @@ Erweitern Sie die Spalten, und legen Sie das Format für die Datums- und Währun
 
 6. Klicken Sie auf die Zelle, die [SalesDate] enthält.
 
-6. Klicken Sie in der Gruppe **Zahl** auf **Datum**.
+6. Klicken Sie in der Gruppe **Number** (Zahl) auf **Date** (Datum).
 
    In der Zelle wird das Beispieldatum [1/31/2000] angezeigt. 
 

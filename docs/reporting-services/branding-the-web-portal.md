@@ -2,9 +2,12 @@
 title: Branding des Webportals | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,11 +15,11 @@ author: guyinacube
 ms.author: asaxton
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9c78d9480dd8d2bacca80fd06183b9d31f7714d5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: a3f7f0f6e67ffb9c3b9460241f84f46ada29e746
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="branding-the-web-portal"></a>Branding des Webportals
 

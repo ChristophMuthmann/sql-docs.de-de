@@ -2,9 +2,12 @@
 title: "Löschen eines Elements (Management Studio) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 454b2f64f2f2ae1e4fdbda0d34b0da058855aef3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 188e4a44b6fa36a097d1133da35600e9129f89d7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="delete-an-item-management-studio"></a>Löschen eines Elements (Management Studio)
   Bei der Herstellung einer Verbindung mit einer Berichtsserverinstanz in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]können Sie Rollendefinitionen und freigegebene Zeitpläne löschen. Sie können keine Berichte, Modelle oder andere Elemente auf einem Berichtsserver löschen. Verwenden Sie zum Löschen von Berichtsserverinhalt stattdessen den Berichts-Manager. Verwenden Sie alternativ bei Konfiguration des Berichtsservers für den integrierten SharePoint-Modus die Elementverwaltungsfunktionen in der SharePoint-Bibliothek, die Ihren Inhalt enthält.  

@@ -2,9 +2,12 @@
 title: "Gestalten eines mobilen Reporting Services-Berichts für Telefone oder Tablets | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f7b0eeb9aafba1755c33a0900ce076d9c13dcd81
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a73a3bf4f6a0cddfe35849e653d5d30b756a3fbf
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lay-out-a-reporting-services-mobile-report-for-phone-or-tablet"></a>Gestalten eines mobilen Reporting Services-Berichts für Telefone oder Tablets
 Nachdem Sie in [Ihren mobilen Reporting Services-Bericht erstellt haben](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md) [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-long.md)], können Sie eine für Telefone und Tablets angepasste Version dieses Berichts gestalten.  

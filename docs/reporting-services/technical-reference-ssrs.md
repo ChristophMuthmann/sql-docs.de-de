@@ -2,9 +2,12 @@
 title: Technische Referenz (SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 5565b2626e033e1360d3ae7a5843364c5946db51
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 95f2277794ae29689ca7e81fa536c8bf45b029ec
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="technical-reference-ssrs"></a>Technische Referenz (SSRS)
 
@@ -47,7 +50,7 @@ ms.lasthandoff: 11/09/2017
  [Geräteinformationseinstellungen für Renderingerweiterungen &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)  
   
  ![Kleines Dateiordnersymbol](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Eingabeaufforderungs-Hilfsprogramme für Berichtsserver**  
- [Hilfsprogramm RS.exe &#40;SSRS&#41;](../reporting-services/tools/rs-exe-utility-ssrs.md)  
+ [Hilfsprogramm RS.exe (SSRS)](../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
  [rsconfig-Hilfsprogramm &#40;SSRS&#41;](../reporting-services/tools/rsconfig-utility-ssrs.md)  
   

@@ -2,9 +2,12 @@
 title: Berichtsabschnitte (Dialogfeld) (Berichts-Generator) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 76be472210f6049a470be62a427bfc91f0c70ef2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3bb8672019ef1a7dd4602a6d839f169860b7d409
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>Berichtsabschnitte (Dialogfeld) (Berichts-Generator)
   Wenn Sie einen Bericht öffnen, überprüft der Berichts-Generator, ob der Bericht nur ein **<Section\<**-Element der Berichtsdefinitionssprache (Report Definition Language, RDL) enthält. Das Öffnen eines Berichts mit mehreren **\<Section>**-Elementen wird nicht unterstützt.  

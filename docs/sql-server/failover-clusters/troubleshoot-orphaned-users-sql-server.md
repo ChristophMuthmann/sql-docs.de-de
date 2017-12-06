@@ -2,7 +2,10 @@
 title: Problembehandlung bei verwaisten Benutzern (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/14/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: 
 ms.technology: dbe-high-availability
@@ -22,14 +25,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 9ff0d42bc753de6e179e0cd4c7882bdfd9626cba
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1780f563d2e4f9533ebe1f82deefe7b785b6ec8c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Problembehandlung bei verwaisten Benutzern (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Verwaiste Benutzer treten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf, wenn ein Datenbankbenutzer auf einem Anmeldenamen in der **Masterdatenbank** basiert, aber der Anmeldename nicht mehr in **Master**vorhanden ist. Dies kann auftreten, wenn der Anmeldename gelöscht wird, oder wenn die Datenbank auf einen anderen Server verschoben wird, auf dem der Anmeldename nicht existiert. Dieses Thema beschreibt, wie Sie verwaiste Benutzer finden und sie den Anmeldenamen erneut zuordnen können.  
   

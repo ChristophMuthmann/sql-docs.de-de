@@ -2,9 +2,12 @@
 title: Suchen nach Berichten und anderen Elementen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 88576d1bab512cb0d8567ef95e6b7ef3a1db124a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 46825c7f0b93267a216444a91c5d7da0bef3879f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>Suchen nach Berichten und anderen Elementen (Berichts-Generator und SSRS)
   Mithilfe des Berichts-Managers können Sie auf einem Berichtsserver nach bestimmten Elementen anhand des Namens oder einer Beschreibung suchen. Sie haben die Möglichkeit, nach veröffentlichten Berichten, Berichtsmodellen, Ordnern, freigegebenen Datenquellen und Ressourcen zu suchen. Es ist nicht möglich, nach Zeitplänen, Besitzern, Rollenzuweisungen, bestimmten Momentaufnahmen im Berichtsverlauf oder nach Abonnements zu suchen. Die Suche wird in der Berichtsserver-Datenbank ausgeführt, in der die Elemente gespeichert sind.  
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="see-also"></a>Siehe auch  
  [Finding and Viewing Reports in Report Manager (Report Builder and SSRS) (Suchen und Anzeigen von Berichten in Berichts-Manager (Berichts-Generator und SSRS))](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)   
  [Using My Reports (Report Builder and SSRS) (Verwenden von Meine Berichte (Berichts-Generator und SSRS))](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)   
- [Suchen, Anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Öffnen und Schließen eines Berichts (Berichts-Manager)](../../reporting-services/reports/open-and-close-a-report-report-manager.md)  
   
   

@@ -2,9 +2,12 @@
 title: Verwenden eines externen Datasets mit Reporting Services | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 179c1ecb3641a848561c49489d1d23a51c1b6ff8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bd33f6f7d6d664ce5d3affea0cb9fdab1b1992ae
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Verwenden eines externen Datasets mit Reporting Services
   Das **DataSet**-Objekt ist wesentlich für die Unterstützung getrennter, verteilter Datenszenarios mit [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Das **DataSet**-Objekt ist eine speicherresidente Datendarstellung, die unabhängig von der Datenquelle ein konsistentes relationales Programmiermodell zur Verfügung stellt. Es kann mit mehreren verschiedenen Datenquellen verwendet werden, mit XML-Daten oder zur Verwaltung lokaler Daten in einer Anwendung. Das **DataSet**-Objekt stellt ein komplettes Dataset dar, einschließlich verknüpfter Tabellen, Einschränkungen und Beziehungen zwischen den Tabellen. Da das **DataSet**-Objekt sehr vielseitig beim Speichern und Verfügbarmachen von Daten ist, kann es sein, dass Ihre Daten häufig verarbeitet und in ein **DataSet**-Objekt umgewandelt werden müssen, bevor diese Daten in Berichten erfasst werden können.  

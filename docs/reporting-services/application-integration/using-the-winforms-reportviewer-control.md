@@ -2,9 +2,12 @@
 title: Verwenden des ReportViewer-Steuerelements in WinForms | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/06/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: application-integration
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -18,11 +21,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: b8a315338fec870de62e1705f84c1396d1570520
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 003510196b7e4d803fe857c8df05d424ebace30d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Verwenden des ReportViewer-Steuerelements in WinForms
   Zur Anzeige von Berichten, die auf einem Berichtsserver bereitgestellt werden oder die sich auf einem lokalen Dateisystem befinden, können Sie das ReportViewer-Steuerelement für WinForms verwenden, um die Berichte in eine Windows-Anwendung zu rendern.  

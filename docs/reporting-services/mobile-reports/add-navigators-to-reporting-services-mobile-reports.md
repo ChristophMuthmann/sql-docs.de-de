@@ -2,9 +2,12 @@
 title: "Hinzufügen von Navigatoren zu mobilen Reporting Services-Berichten | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 712a4e62ebee6d175b5e9945d74a06d32f2cb324
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d483e2dcafeb45beb00e32cfed7cf04ab41ca689
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-navigators-to-reporting-services-mobile-reports"></a>Hinzufügen von Navigationen zu mobilen Reporting Services-Berichten
 In [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]fügen Sie *Navigationen* hinzu, um die Daten in Visualisierungen nach Zeit oder nach Auswahl zu filtern. 

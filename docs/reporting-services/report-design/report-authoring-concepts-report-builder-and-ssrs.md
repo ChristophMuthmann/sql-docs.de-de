@@ -2,9 +2,12 @@
 title: Berichtserstellungskonzepte (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 312291488481b09890f590db58ef416d5967c507
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 38eaef95a61458ddca97d830c3d0fce8df139c3d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Berichtserstellungskonzepte (Berichts-Generator und SSRS)
   In diesem Abschnitt werden kurz einige in der Dokumentation zum Berichts-Generator und Berichts-Designer verwendete Schlüsselkonzepte zur Beschreibung paginierter Berichte definiert. Definitionen bestimmter Wörter oder Begriffe finden Sie im [Glossar &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/glossary-report-builder.md).  

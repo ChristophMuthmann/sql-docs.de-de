@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3a3264d10535196e245ca9f5e0e59366667cf3fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c5ea8b666dead9d4a23255fe9eecda64258a9f8a
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>Formatieren von Abfrageergebnisse als JSON mit FOR JSON (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ Die Ausgabe der **FOR JSON**-Klausel besitzt die folgenden Eigenschaften:
     -   Ein kleines Resultset kann eine einzelne Zeile enthalten.
     -   Ein großes Resultset teilt den langen JSON-String über mehrere Zeilen auf.
         -   Standardmäßig verkettet SQL Server Management Studio (SSMS) die Ergebnisse in einer einzelnen Zeile, wenn die Ausgabeeinstellung **Results to Grid (Ergebnisse im Raster)** ist. Die SSMS-Statusleiste zeigt die tatsächliche Zeilenanzahl an.
-        -   Möglicherweise erfordern andere Clientanwendungen Code, um längere Ergebnislisten neu zu einer einzelnen gültigen JSON-Zeichenfolge zu kombinieren, indem die Inhalte mehrerer Zeilen verkettet werden. Ein Beispiel für diesen Code in einer C#-Anwendung finden Sie unter [Use FOR JSON output in a C# client app (Verwenden der FOR JSON-Ausgabe in einer C#-Client-App)](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app).
+        -   Möglicherweise erfordern andere Clientanwendungen Code, um längere Ergebnislisten neu zu einer einzelnen gültigen JSON-Zeichenfolge zu kombinieren, indem die Inhalte mehrerer Zeilen verkettet werden. Ein Beispiel für diesen Code in einer C#-Anwendung finden Sie unter [Use FOR JSON output in a C# client app (Verwenden der FOR JSON-Ausgabe in einer C#-Client-App)](../../relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md#use-for-json-output-in-a-c-client-app).
   
      ![Beispiel einer FOR JSON-Ausgabe](../../relational-databases/json/media/forjson-example2.png)  
   

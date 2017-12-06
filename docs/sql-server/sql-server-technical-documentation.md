@@ -2,8 +2,12 @@
 title: SQL Server-Dokumentation | Microsoft-Dokumentation
 ms.date: 10/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +26,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4e0f1f726de8ebde526376c213348a7a14597689
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 15e4d0a993dbc4b97413f94ccdb2620fc2baf24a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-documentation"></a>SQL Server-Dokumentation
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server ist ein zentraler Bestandteil der Microsoft-Datenplattform. SQL Server ist ein im Bereich Betriebsdatenbank-Management (Operational Database Management System, ODBMS) branchenführendes Produkt. In dieser Dokumentation finden Sie Hilfe zur Installation, Konfiguration und Verwendung von SQL Server. Die Inhalte umfassen End-to-End-Beispiele, Codebeispiele und Videos. Informationen zu SQL Server-Sprachthemen finden Sie in der [Sprachreferenz](../t-sql/language-reference.md).
 

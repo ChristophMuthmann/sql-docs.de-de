@@ -17,14 +17,14 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f566af7bab5a69c99a07c0f275cb44ddb79cc841
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4184ce50cbacda16e113122753b56a4e4ee682cf
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Neues in Master Data Services (MDS)
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   In diesem Thema sind die Änderungen und Aktualisierungen in der [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Version von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]zusammengefasst. 
   
