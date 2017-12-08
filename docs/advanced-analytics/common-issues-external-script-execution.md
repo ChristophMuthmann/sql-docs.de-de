@@ -15,7 +15,7 @@ manager: jhubbard
 ms.workload: Inactive
 ms.openlocfilehash: 145faefb97db368d499ebc33c09ca79fa49cde60
 ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/01/2017
 ---

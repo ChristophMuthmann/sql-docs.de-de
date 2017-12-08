@@ -17,7 +17,7 @@ ms.technology: database-engine
 ms.workload: On Demand
 ms.openlocfilehash: 2b09251cae6b89dd742d685f9405155a7b674a3d
 ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/01/2017
 ---

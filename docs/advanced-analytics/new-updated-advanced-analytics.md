@@ -17,7 +17,7 @@ ms.author: genemi
 ms.workload: advanced-analytics
 ms.openlocfilehash: 636e243f1f39f0bfa688c6caada1e03078de9a32
 ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/04/2017
 ---

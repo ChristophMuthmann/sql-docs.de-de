@@ -17,7 +17,7 @@ manager: cgronlund
 ms.workload: On Demand
 ms.openlocfilehash: d5835b1c79ec1ce26e200b02fa9ba6e03378187b
 ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/17/2017
 ---
