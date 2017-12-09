@@ -15,7 +15,7 @@ ms.author: jeannt
 manager: cgronlund
 ms.openlocfilehash: ef6573ca1d682ae4b4f4336ad6f809f1e094e9fc
 ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2017
 ---
