@@ -1,12 +1,14 @@
 ---
 title: Vorbereiten einer Spiegeldatenbank auf die Spiegelung (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 11/10/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - logins [SQL Server], database mirroring
 - mirror database [SQL Server]
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 869a784fe82f1a142fd2a9792bd79784b5fe3959
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e813cf330d3c2d61b9c3163bac75ec5441d06455
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>Vorbereiten einer Spiegeldatenbank auf die Spiegelung (SQL Server)
-  Eine Datenbank-Spiegelungssitzung kann erst beginnen, nachdem der Datenbankbesitzer oder Systemadministrator sichergestellt hat, dass die Spiegeldatenbank erstellt und auf die Spiegelung vorbereitet wurde. Zum Erstellen einer neuen Spiegeldatenbank sind zumindest eine vollständige Sicherung der Prinzipaldatenbank sowie eine nachfolgende Protokollsicherung erforderlich, wobei beide auf der Spiegelserverinstanz mithilfe von WITH NORECOVERY wiederhergestellt werden müssen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Eine Datenbank-Spiegelungssitzung kann erst beginnen, nachdem der Datenbankbesitzer oder Systemadministrator sichergestellt hat, dass die Spiegeldatenbank erstellt und auf die Spiegelung vorbereitet wurde. Zum Erstellen einer neuen Spiegeldatenbank sind zumindest eine vollständige Sicherung der Prinzipaldatenbank sowie eine nachfolgende Protokollsicherung erforderlich, wobei beide auf der Spiegelserverinstanz mithilfe von WITH NORECOVERY wiederhergestellt werden müssen.  
   
  In diesem Thema wird beschrieben, wie Sie eine Spiegeldatenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]vorbereiten.  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 08/02/2017
   
 -   Die Prinzipalserver- und Spiegelserverinstanz müssen unter derselben Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden. Obwohl der Spiegelserver eine höhere SQL Server-Version aufweisen darf, wird diese Konfiguration nur für einen sorgfältig geplanten Upgradeprozess empfohlen. In einer solchen Konfiguration laufen Sie Gefahr, ein automatisches Failover auszuführen, bei dem die Datenverschiebung automatisch angehalten wird, da Daten nicht zu einer niedrigeren SQL Server-Version verschoben werden können. Weitere Informationen finden Sie unter [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).  
   
--   Die Prinzipalserver- und Spiegelserverinstanz müssen unter derselben Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden. Informationen zur unterstützten Datenbankspiegelung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+-   Die Prinzipalserver- und Spiegelserverinstanz müssen unter derselben Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden. Informationen zur unterstützten Datenbankspiegelung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] finden Sie unter [Editionen und unterstützte Funktionen von SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md).  
   
 -   Für die Datenbank muss das vollständige Wiederherstellungsmodell verwendet werden.  
   
@@ -276,5 +277,4 @@ ms.lasthandoff: 08/02/2017
  [RESTORE-Argumente &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)  
   
   
-
 

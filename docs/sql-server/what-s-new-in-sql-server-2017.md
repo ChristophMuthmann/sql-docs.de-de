@@ -2,9 +2,12 @@
 title: Neues in SQL Server 2017 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/19/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 9abddcd8544221c5d6dff0eeb12dc441df632933
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 445de7e87daf3d7e083532a06269d810f574fa96
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Neues in SQL Server 2017
-SQL Server 2017 stellt einen wichtigen Schritt dar, um SQL Server zu einer Plattform zu machen, auf der Sie verschiedene Wahlmöglichkeiten haben: Wählen Sie zwischen verschiedenen Entwicklungssprachen und Datentypen, zwischen lokaler Ausführung oder Ausführung in der Cloud sowie zwischen verschiedenen Betriebssystemen, indem die Leistungsfähigkeit von SQL Server für Linux, Linux-basierte Docker-Container und Windows bereitgestellt wird. Im Folgenden werden die Neuerungen für bestimmte Funktionsbereiche zusammengefasst und Links mit zusätzlichen Details zur Verfügung gestellt. Weitere Informationen zu SQL Server für Linux finden Sie in der Dokumentation zu [SQL Server für Linux](https://docs.microsoft.com/sql/linux/).
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)] SQL Server 2017 stellt einen wichtigen Schritt dar, um SQL Server zu einer Plattform zu machen, auf der Sie verschiedene Wahlmöglichkeiten haben: Wählen Sie zwischen verschiedenen Entwicklungssprachen und Datentypen, zwischen lokaler Ausführung oder Ausführung in der Cloud sowie zwischen verschiedenen Betriebssystemen, indem die Leistungsfähigkeit von SQL Server für Linux, Linux-basierte Docker-Container und Windows bereitgestellt wird. Im Folgenden werden die Neuerungen für bestimmte Funktionsbereiche zusammengefasst und Links mit zusätzlichen Details zur Verfügung gestellt. Weitere Informationen zu SQL Server für Linux finden Sie in der Dokumentation zu [SQL Server für Linux](https://docs.microsoft.com/sql/linux/).
 
 [![Download aus dem Evaluierungscenter](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Probieren Sie es aus:** [Laden Sie die aktuellste Version von SQL Server 2017 herunter: Oktober 2017](http://go.microsoft.com/fwlink/?LinkID=829477).
 

@@ -2,29 +2,30 @@
 title: Replikationskonflikt-Viewer von Microsoft (Mergereplikation) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.replconflictviewer.cvmerge.f1
+f1_keywords: sql13.rep.replconflictviewer.cvmerge.f1
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7eb7232103562f5196c7f3f5b83017b8060fdaf4
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 2fdedf349961105e1c979b87c0876150acbf04dc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Replikationskonflikt-Viewer von Microsoft (Mergereplikation)
-  Der Replikationskonflikt-Viewer ermöglicht die Anzeige aller Konflikte, die während der Replikationssynchronisierung auftreten. Konflikte treten auf, wenn dieselben Daten auf zwei verschiedenen Servern bearbeitet werden, z. B. auf einem Verleger und einem Abonnenten, oder aber auf zwei verschiedenen Abonnenten. Die Replikation löst Konflikte automatisch mithilfe des Konfliktlösers, der beim Erstellen des Artikels ausgewählt wurde. Der Replikationskonflikt-Viewer ermöglicht es Ihnen aber auch, ggf. eine andere Lösung für den Konflikt zu wählen. Die folgenden Konflikte sind möglich:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Der Replikationskonflikt-Viewer ermöglicht die Anzeige aller Konflikte, die während der Replikationssynchronisierung auftreten. Konflikte treten auf, wenn dieselben Daten auf zwei verschiedenen Servern bearbeitet werden, z. B. auf einem Verleger und einem Abonnenten, oder aber auf zwei verschiedenen Abonnenten. Die Replikation löst Konflikte automatisch mithilfe des Konfliktlösers, der beim Erstellen des Artikels ausgewählt wurde. Der Replikationskonflikt-Viewer ermöglicht es Ihnen aber auch, ggf. eine andere Lösung für den Konflikt zu wählen. Die folgenden Konflikte sind möglich:  
   
 -   Updatekonflikte. Updatekonflikte treten auf, wenn dieselben Daten an zwei verschiedenen Speicherorten geändert werden. Eine Änderung setzt sich dabei unbeabsichtigt gegen eine andere durch. Sie haben die Möglichkeit, die vorhandenen Daten (die Daten, die gewonnen haben) beizubehalten, die vorhandenen Daten mit den Daten zu überschreiben, die einen Konflikt mit ihnen ausgelöst haben (die Daten, die verloren haben) oder die Daten zusammenzuführen (die Daten, die gewonnen haben, und die, die verloren haben) und die vorhandenen Daten zu aktualisieren.  
   
@@ -35,7 +36,7 @@ ms.lasthandoff: 06/22/2017
  Wenn Konflikte während der Synchronisierung gelöst werden, werden die Daten aus der verlierenden Zeile in eine Konflikttabelle geschrieben. Unabhängig davon, ob Sie die ursprüngliche Lösung akzeptieren oder eine andere Lösung für den Konflikt wählen, wird die protokollierte Konfliktzeile aus der Konflikttabelle gelöscht. Sie sollten deshalb in regelmäßigen Abständen Konflikte überprüfen, um die Größe der Konfliktnachverfolgungstabellen zu verringern.  
   
 > [!NOTE]  
->  Konflikte, die logische Datensätze einschließen, werden im Konflikt-Viewer nicht angezeigt. Mit den gespeicherten Replikationsprozeduren können Informationen zu diesen Konflikten angezeigt werden. Weitere Informationen finden Sie unter [Anzeigen von Konfliktinformationen zu Mergeveröffentlichungen &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
+>  Konflikte, die logische Datensätze einschließen, werden im Konflikt-Viewer nicht angezeigt. Mit den gespeicherten Replikationsprozeduren können Informationen zu diesen Konflikten angezeigt werden. Weitere Informationen finden Sie unter [Anzeigen von Konfliktinformationen zu Mergeveröffentlichungen &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
   
 ## <a name="options"></a>enthalten  
  Der Replikationskonflikt-Viewer ist in zwei Abschnitte unterteilt. Der obere Abschnitt des Dialogfelds zeigt die Konfliktliste für die ausgewählte Tabelle. Wenn Sie auf ein Element in der Konfliktliste klicken, werden die Details des Konflikts im unteren Abschnitt des Dialogfelds angezeigt.  
@@ -88,6 +89,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Lösen von Datenkonflikten für Mergeveröffentlichungen &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)   
- [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
+ [Advanced Merge Replication Conflict Detection and Resolution (Erweiterte Konflikterkennung und -lösung bei der Mergereplikation)](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

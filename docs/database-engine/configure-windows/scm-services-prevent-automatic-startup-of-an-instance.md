@@ -1,13 +1,14 @@
 ---
 title: 'SCM-Dienste: Verhindern eines automatischen Starts einer Instanz | Microsoft-Dokumentation'
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 01/06/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +19,19 @@ helpviewer_keywords:
 - stopping SQL Server
 - preventing automatic startups [SQL Server]
 ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c5867f6317bef2a7c7a9cf958a5be71847bbfb3b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3f6a163ec9e6bb37cbbb190395a28273e0521765
-ms.contentlocale: de-de
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="scm-services---prevent-automatic-startup-of-an-instance"></a>SCM-Dienste: Verhindern eines automatischen Starts einer Instanz
-  In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des SQL Server-Konfigurations-Managers verhindern können, dass eine Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] automatisch gestartet wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist normalerweise für den automatischen Start konfiguriert. Sie können diese Einstellung ändern, indem Sie den Startmodus für die Instanz auf manuell festlegen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe des SQL Server-Konfigurations-Managers verhindern können, dass eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatisch gestartet wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist normalerweise für den automatischen Start konfiguriert. Sie können diese Einstellung ändern, indem Sie den Startmodus für die Instanz auf manuell festlegen.  
   
 ##  <a name="SSMSProcedure"></a> Verwenden des SQL Server-Konfigurations-Managers  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 08/02/2017
   
 3.  Klicken Sie im Detailbereich mit der rechten Maustaste auf **MSSQLServer**, und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Legen Sie im Dialogfeld **SQL Server \<***Instanzname***> Eigenschaften** im Feld **Eigenschaften** den Wert für **Startmodus** auf **Manuell** fest.  
+4.  Legen Sie im Dialogfeld **SQL Server \<***Instanzname***> Eigenschaften** auf der Registerkarte **Dienst** im Feld **Allgemein** den Wert für **Startmodus** auf **Manuell** fest.  
   
 5.  Klicken Sie auf **OK**, um das Dialogfeld **SQL Server \<***Instanzname***> Eigenschaften** zu schließen, und schließen Sie dann den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager.  
   
@@ -59,4 +59,3 @@ ms.lasthandoff: 08/02/2017
  [Starten, Beenden, Anhalten, Fortsetzen und Neustarten des Datenbankmoduls, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
   
-

@@ -2,11 +2,13 @@
 title: "Erstellen eines Steuerungspunkts für das SQL Server-Hilfsprogramm (SQL Server-Hilfsprogramm) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,20 +22,19 @@ helpviewer_keywords:
 - Create UCP
 - UCP
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: eaf3148fba4a949d937b725fe4f860f1bb228674
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f06506dffa7c0d8497a6fc0986e8a29a701d0415
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Erstellen eines Steuerungspunkts für das SQL Server-Hilfsprogramm (SQL Server-Hilfsprogramm)
-  Ein Unternehmen kann über mehrere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramme verfügen, und jedes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm kann viele Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Datenebenenanwendungen verwalten. Jedes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm verfügt über genau einen Steuerungspunkt für das Hilfsprogramm (Utility Control Point, UCP). Sie müssen einen neuen UCP für jedes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm erstellen. Jede verwaltete Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und jede Datenebenenanwendung gehört mindestens einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm an und wird von einem einzelnen UCP verwaltet.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ein Unternehmen kann über mehrere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Hilfsprogramme verfügen, und jedes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Hilfsprogramm kann viele Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Datenschichtanwendungen verwalten. Jedes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm verfügt über genau einen Steuerungspunkt für das Hilfsprogramm (Utility Control Point, UCP). Sie müssen einen neuen UCP für jedes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm erstellen. Jede verwaltete Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und jede Datenebenenanwendung gehört mindestens einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm an und wird von einem einzelnen UCP verwaltet.  
   
  Der UCP erfasst alle 15 Minuten Konfigurations- und Leistungsinformationen von verwalteten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen. Diese Informationen werden auf dem UCP im Utility Management Data Warehouse (UMDW) gespeichert. Der UMDW-Dateiname lautet "sysutility_mdw". [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Leistungsdaten werden mit Richtlinien verglichen, sodass Sie Engpässe bei der Ressourcennutzung und Konsolidierungsmöglichkeiten leichter erkennen können.  
   
@@ -106,7 +107,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ## <a name="wizard-steps"></a>Schritte des Assistenten  
  ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")  
   
- Die folgenden Abschnitte enthalten Informationen zu den einzelnen Seiten im Assistentenworkflow, der zum Erstellen eines neuen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -UCPs ausgeführt wird. Um den Assistenten zum Erstellen eines neuen UCPs zu starten, öffnen Sie im Menü Ansicht in SSMS den Bereich „Hilfsprogramm-Explorer“ und klicken dann oben im Bereich Hilfsprogramm-Explorer auf die Schaltfläche ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")**UCP erstellen**.  
+ Die folgenden Abschnitte enthalten Informationen zu den einzelnen Seiten im Assistentenworkflow, der zum Erstellen eines neuen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -UCPs ausgeführt wird. Öffnen Sie im Menü „Ansicht“ in SSMS den Bereich „Hilfsprogramm-Explorer“, und klicken Sie dann oben im Bereich „Hilfsprogramm-Explorer“ auf die Schaltfläche ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP") **Create UCP** (UCP erstellen), um den Assistenten zum Erstellen eines neuen UCP zu starten.  
   
  Klicken Sie auf einen Link in der unten angezeigten Liste, um zu den Details für eine Assistentenseite zu navigieren.  
   
@@ -129,9 +130,9 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Welcome"></a> Einführung in den Assistenten zum Erstellen von UCPs  
  Wenn Sie den Hilfsprogramm-Explorer öffnen und keinen verbundenen Steuerungspunkt für das Hilfsprogramm sehen, müssen Sie eine Verbindung mit einem Steuerungspunkt herstellen oder einen neuen erstellen.  
   
- **Mit vorhandenem UCP verbinden** – Wenn bereits ein Steuerungspunkt für das Hilfsprogramm (UCP, Utility Control Point) in der Bereitstellung vorhanden ist, können Sie eine Verbindung mit ihm herstellen, indem Sie oben im Bereich „Hilfsprogramm-Explorer“ auf die Schaltfläche ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")**Mit Hilfsprogramm verbinden** klicken. Um eine Verbindung mit einem vorhandenen UCP herzustellen, müssen Sie über Administrator-Anmeldeinformationen verfügen oder Mitglied der Utility Reader-Rolle sein. Beachten Sie, dass es nur einen UCP pro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm geben kann, und Sie können nur mit einem UCP von einer Instanz des SSMS verbunden werden.  
+ **Mit vorhandenem UCP verbinden**: Wenn bereits ein Steuerungspunkt für das Hilfsprogramm (UCP, Utility Control Point) in der Bereitstellung vorhanden ist, können Sie eine Verbindung mit ihm herstellen, indem Sie oben im Bereich „Hilfsprogramm-Explorer“ auf die Schaltfläche ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")**Connect to Utility** (Mit Hilfsprogramm verbinden) klicken. Um eine Verbindung mit einem vorhandenen UCP herzustellen, müssen Sie über Administrator-Anmeldeinformationen verfügen oder Mitglied der Utility Reader-Rolle sein. Beachten Sie, dass es nur einen UCP pro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm geben kann, und Sie können nur mit einem UCP von einer Instanz des SSMS verbunden werden.  
   
- **Neuen UCP erstellen** – Um einen neuen Steuerungspunkt für das Hilfsprogramm zu erstellen, klicken Sie oben im Bereich „Hilfsprogramm-Explorer“ auf die Schaltfläche ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")**UCP erstellen** . Um einen neuen UCP zu erstellen, müssen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen sowie Administrator-Anmeldeinformationen im Verbindungsdialogfeld angeben. Beachten Sie, dass es nur einen UCP pro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm geben kann.  
+ **Neuen UCP erstellen**: Um einen neuen Steuerungspunkt für das Hilfsprogramm zu erstellen, klicken Sie oben im Bereich „Hilfsprogramm-Explorer“ auf die Schaltfläche ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")**Create UCP** (UCP erstellen). Um einen neuen UCP zu erstellen, müssen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen sowie Administrator-Anmeldeinformationen im Verbindungsdialogfeld angeben. Beachten Sie, dass es nur einen UCP pro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm geben kann.  
   
 ##  <a name="Instance_name"></a> Instanz angeben  
  Geben Sie die folgenden Informationen zum UCP an, den Sie erstellen:  
@@ -235,4 +236,3 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
  [Problembehandlung beim SQL Server-Hilfsprogramm](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   
-

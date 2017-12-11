@@ -3,8 +3,11 @@ title: Herunterladen von SQL Server Data Tools (SSDT) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 10/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssdt
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 39a840f8a28c40b9bea33608f754532954f5db7d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 46b86d31a7d5b03bf0c43f61c3c7c7fcf4c2a8ce
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>Herunterladen von SQL Server Data Tools (SSDT)
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 **[SQL Server Datatools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)** ist ein modernes und kostenlos herunterladbares Entwicklungstool für relationale SQL Server-Datenbanken, Azure SQL-Datenbanken, Integration Services-Pakete, Analysis Services-Datenmodelle und Reporting Services-Berichte. Mit SSDT lassen sich Datenbanken und andere Inhaltstypen für SQL Server entwerfen und bereitstellen – und zwar ebenso einfach wie eine Anwendung in Visual Studio. 
 
 SSDT für Visual Studio 2017 (15.4.0, Vorschauversion) ist jetzt verfügbar. Mit diesem Release wird für Projekte von SQL Server-Datenbank, Analysis Services, Reporting Services und Integration Services in Visual Studio 2017 15.4 oder höher eine eigenständige, benutzerfreundliche Webinstallation eingeführt.

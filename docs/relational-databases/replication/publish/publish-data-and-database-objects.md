@@ -2,11 +2,13 @@
 title: "Veröffentlichen von Daten und Datenbankobjekten | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -41,19 +43,19 @@ helpviewer_keywords:
 - publications [SQL Server replication], modifying
 - user-defined functions [SQL Server replication]
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
-caps.latest.revision: 83
+caps.latest.revision: "83"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d909e573f9e04728b8d31973108ed7499e61172d
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 7df7cad2ce05a9f18f9950b769e4f3b62aa7c984
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="publish-data-and-database-objects"></a>Veröffentlichen von Daten und Datenbankobjekten
-  Wenn Sie eine Veröffentlichung erstellen möchten, können Sie die Tabellen und anderen Datenbankobjekte auswählen, die Sie veröffentlichen möchten. Mit einer Replikation können die folgenden Datenbankobjekte veröffentlicht werden:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Wenn Sie eine Veröffentlichung erstellen möchten, können Sie die Tabellen und anderen Datenbankobjekte auswählen, die Sie veröffentlichen möchten. Mit einer Replikation können die folgenden Datenbankobjekte veröffentlicht werden:  
   
 |Datenbankobjekt|Momentaufnahmereplikation und Transaktionsreplikation|Mergereplikation|  
 |---------------------|--------------------------------------------------------|-----------------------|  
@@ -121,7 +123,7 @@ ms.lasthandoff: 06/22/2017
   
  Beim Veröffentlichen einer Tabelle für die Replikation können Sie angeben, welche Schemaobjekte auf den Abonnenten kopiert werden sollen, z. B. deklarierte referenzielle Integrität (PRIMARY KEY-Einschränkungen, Referenzeinschränkungen, eindeutige Einschränkungen), Indizes, Benutzer-DML-Trigger (DDL-Trigger können nicht repliziert werden), erweiterte Eigenschaften und Sortierungen. Erweiterte Eigenschaften werden nur in der ersten Synchronisierung zwischen dem Verleger und dem Abonnenten repliziert. Wenn Sie eine erweiterte Eigenschaft nach der ersten Synchronisierung hinzufügen oder ändern, wird die Änderung nicht repliziert.  
   
- Weitere Informationen zum Angeben von Schemaoptionen finden Sie unter [Angeben von Schemaoptionen](../../../relational-databases/replication/publish/specify-schema-options.md) oder <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>.  
+ Informationen zum Angeben von Schemaoptionen finden Sie unter [Angeben von Schemaoptionen](../../../relational-databases/replication/publish/specify-schema-options.md) oder <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>.  
   
 ### <a name="partitioned-tables-and-indexes"></a>Partitionierte Tabellen und Indizes  
  Die Replikation unterstützt das Veröffentlichen von Tabellen und Indizes. Das Maß an Unterstützung hängt vom verwendeten Replikationstyp und den Optionen ab, die für die Veröffentlichung und die mit den partitionierten Tabellen verbundenen Artikel angegeben werden. Weitere Informationen finden Sie unter [Replicate Partitioned Tables and Indexes](../../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).  
@@ -262,4 +264,3 @@ ms.lasthandoff: 06/22/2017
  [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
-

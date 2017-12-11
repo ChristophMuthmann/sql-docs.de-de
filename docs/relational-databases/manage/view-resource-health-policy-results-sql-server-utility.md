@@ -2,27 +2,29 @@
 title: "Anzeigen der Ergebnisse zu Ressourcenintegritätsrichtlinien (SQL Server-Hilfsprogramm) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 80cb14fb-f4c6-4be2-ba17-eb4e4cddd35f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9059d01d2f47ebbd56af966f45f6832222491930
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: d2424c5e6ef2fe348c35f361b71927644aca590b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-resource-health-policy-results-sql-server-utility"></a>Anzeigen der Ergebnisse zu Ressourcenintegritätsrichtlinien (SQL Server-Hilfsprogramm)
-  Verwenden Sie das Dashboard des Hilfsprogramms in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , um Ressourcenparameter des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramms für verwaltete Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Datenschichtanwendungen anzuzeigen. Weitere Informationen finden Sie unter [Funktionen und Tasks im SQL Server-Hilfsprogramm](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Verwenden Sie das Dashboard des -Hilfsprogramms in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um Ressourcenparameter des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Hilfsprogramms für verwaltete Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Datenschichtanwendungen anzuzeigen. Weitere Informationen finden Sie unter [Funktionen und Tasks im SQL Server-Hilfsprogramm](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
 ##  <a name="SSMSProcedure"></a>  
   
@@ -30,7 +32,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) auf **Ansicht**und dann auf **Hilfsprogramm-Explorer** , um den Navigationsbereich des Hilfsprogramm-Explorers anzuzeigen. Um den Inhaltsbereich anzuzeigen, klicken Sie auf **Ansicht**und dann auf **Inhalt des Hilfsprogramm-Explorers**.  
   
-2.  Klicken Sie im Navigationsbereich auf ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")**Mit Hilfsprogramm verbinden**. Wenn Sie keinen Steuerungspunkt für das Hilfsprogramm erstellt bzw. keine Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Datenschichtanwendungen im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm registriert haben, erhalten Sie weitere Informationen unter [SQL Server-Hilfsprogramm – Features und Aufgaben](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
+2.  Klicken Sie im Navigationsbereich auf ![](../../relational-databases/manage/media/connect-to-utility.gif "Mit_Hilfsprogramm_verbinden")**Mit Hilfsprogramm verbinden**. Wenn Sie keinen Steuerungspunkt für das Hilfsprogramm erstellt bzw. keine Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Datenschichtanwendungen im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm registriert haben, erhalten Sie weitere Informationen unter [SQL Server-Hilfsprogramm – Features und Aufgaben](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
 3.  Klicken Sie auf den UCP-Knoten, um Zusammenfassungsdaten für verwaltete Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Datenschichtanwendungen anzuzeigen (zum Aktualisieren mit der rechten Maustaste klicken). Dashboarddaten werden im Inhaltsbereich angezeigt.  
   

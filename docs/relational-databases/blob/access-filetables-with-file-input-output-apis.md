@@ -2,29 +2,30 @@
 title: Zugreifen auf FileTables mit Datei-E/A-APIs | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-blob
+ms.suite: sql
+ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- FileTables [SQL Server], accessing files with file APIs
+helpviewer_keywords: FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fee941d70d60091034abfd77998616508fedd611
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 726ad4c57ce295c4317132333f50867d9466151a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Zugreifen auf FileTables mit Datei-E/A-APIs
-  Beschreibt, wie Dateisystem-E/A in einer FileTable funktioniert.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Beschreibt, wie Dateisystem-E/A in einer FileTable funktioniert.  
   
 ##  <a name="accessing"></a> Erste Schritte mit Datei-E/A-APIs mit FileTables  
  Die primäre Verwendung von FileTables wird durch das Windows-Dateisystem und Datei-E/A-APIs erwartet. FileTables unterstützt den nicht transaktionalen Zugriff durch den umfangreichen Satz verfügbarer Datei-E/A-APIs.  
@@ -60,7 +61,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="delete"></a> Löschen von Dateien und Verzeichnissen in einer FileTable  
  Jede Windows-Datei-E/A-API-Semantik wird erzwungen, wenn Sie eine Datei oder ein Verzeichnis löschen.  
   
--   Beim Löschen eines Verzeichnisses tritt ein Fehler auf, wenn das Verzeichnis Unterverzeichnisse mit Dateien enthält.  
+-   Beim Löschen eines Verzeichnisses tritt ein Fehler auf, wenn das Verzeichnis irgendwelche Dateien oder Unterverzeichnisse enthält.  
   
 -   Durch Löschen einer Datei oder eines Verzeichnisses wird die entsprechende Zeile aus der FileTable entfernt. Dies entspricht dem Löschen dieser Zeile durch einen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Vorgang.  
   
@@ -113,7 +114,7 @@ ms.lasthandoff: 06/22/2017
 |**Reparse Points**|Nein||  
 |**Persistente ACLs**|Nein||  
 |**Benannte Datenströme**|Nein||  
-|**Dateien von geringer Dichte**|ja|Geringe Dichte kann nur für Dateien festgelegt werden und wirkt sich auf die Speicherung des Datenstroms aus. Da FILESTREAM-Daten auf NTFS-Volumes gespeichert werden, unterstützt die FileTable-Funktion Dateien mit geringer Dichte, indem er die Anforderungen an das NTFS-Dateisystem weiterleitet.|  
+|**Dateien von geringer Dichte**|ja|Geringe Dichte kann nur für Dateien festgelegt werden und wirkt sich auf die Speicherung des Datenstroms aus. Da FILESTREAM-Daten auf NTFS-Volumes gespeichert werden, unterstützt die Dateitabellenfunktion Sparsedateien, indem sie die Anforderungen an das NTFS-Dateisystem weiterleitet.|  
 |**Komprimierung**|ja||  
 |**Verschlüsselung**|ja||  
 |**TxF**|Nein||  
@@ -131,9 +132,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Laden von Dateien in FileTables](../../relational-databases/blob/load-files-into-filetables.md)   
- [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
+ [Arbeiten mit Verzeichnissen und Pfaden in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [Zugreifen auf FileTables mit Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [FileTable-DDL, Funktionen, gespeicherte Prozeduren und Sichten](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   
   
-

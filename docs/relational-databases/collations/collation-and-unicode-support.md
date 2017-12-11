@@ -1,12 +1,14 @@
 ---
 title: "Sortierung und Unicode-Unterstützung | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 08/04/2017
-ms.prod: sql-server-2016
+ms.date: 10/24/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: collations
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,20 +29,19 @@ helpviewer_keywords:
 - SQL Server collations
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: ef3f7949bbccdc46f59bcb74de76cf395c09885c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 74f73ab33a010583b4747fcc2d9b35d6cdea14a2
-ms.openlocfilehash: 03e346a8f89d923525951ec8b8683527b611d8f5
-ms.contentlocale: de-de
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
-  Sortierungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bieten Sortierregeln und die Berücksichtigung von Groß-/Kleinschreibung und Akzenten für die Daten. Sortierungen, die mit Zeichendatentypen wie **char** und **varchar** verwendet werden, geben die Codeseite und die entsprechenden Zeichen vor, die für den jeweiligen Datentyp dargestellt werden können. Bei der Installation einer neuen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], bei der Wiederherstellung einer Datenbanksicherung oder bei der Verbindung von Servern mit Clientdatenbanken ist es wichtig, dass Sie die Gebietsschemaanforderungen, die Sortierreihenfolge und das Verhalten in Bezug auf die Groß-/Kleinschreibung und Akzente der Daten kennen, mit denen Sie arbeiten. Informationen zum Auflisten von Sortierungen, die in Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verfügbar sind, finden Sie unter [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md).    
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sortierungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bieten Sortierregeln und die Berücksichtigung von Groß-/Kleinschreibung und Akzenten für die Daten. Sortierungen, die mit Zeichendatentypen wie **char** und **varchar** verwendet werden, geben die Codeseite und die entsprechenden Zeichen vor, die für den jeweiligen Datentyp dargestellt werden können. Bei der Installation einer neuen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], bei der Wiederherstellung einer Datenbanksicherung oder bei der Verbindung von Servern mit Clientdatenbanken ist es wichtig, dass Sie die Gebietsschemaanforderungen, die Sortierreihenfolge und das Verhalten in Bezug auf die Groß-/Kleinschreibung und Akzente der Daten kennen, mit denen Sie arbeiten. Informationen zum Auflisten von Sortierungen, die in Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verfügbar sind, finden Sie unter [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md).    
     
  Wenn Sie eine Sortierung für den Server, die Datenbank, die Spalte oder den Ausdruck auswählen, weisen Sie den Daten bestimmte Merkmale zu, die Auswirkungen auf die Ergebnisse vieler Datenbankvorgänge haben. Wenn Sie beispielsweise eine Abfrage mit ORDER BY erstellen, kann die Sortierreihenfolge des Resultsets von der Sortierung abhängen, die für die Datenbank gilt oder die in einer COLLATE-Klausel auf Ausdrucksebene der Abfrage vorgegeben ist.    
     
@@ -133,7 +134,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     
  Sie können auch versuchen, eine andere Sortierung für die Daten auf dem Server zu verwenden. Wählen Sie eine Sortierung aus, die einer Codepage auf dem Client zugeordnet werden kann.    
     
- Um die verfügbaren UTF-16-Sortierungen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]zu verwenden und das Suchen und Sortieren einiger Unicode-Zeichen zu verbessern, können Sie eine der `_SC` -Sortierungen mit ergänzenden Zeichen (nur Windows-Sortierungen) auswählen.    
+ Sie können eine der SC-Sortierungen (Supplementary Characters, ergänzende Zeichen) oder die Sortierungen von Version 140 auswählen, um die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verfügbaren UTF-16-Sortierungen zu verwenden, um die Suche nach und Sortierung von einigen Unicode-Zeichen (nur Windows-Sortierungen) zu verbessern.    
     
  Zum Abwägen der Vor- und Nachteile von Unicode- und Nicht-Unicode-Datentypen müssen Sie das Szenario testen und die Leistungsunterschiede in Ihrer Umgebung messen. Es ist ratsam, die Sortierung zu standardisieren, die für die Systeme in Ihrem Unternehmen verwendet wird, und so weit wie möglich Unicode-Server und -Clients bereitzustellen.    
     
@@ -155,35 +156,39 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ##  <a name="Supplementary_Characters"></a> Ergänzende Zeichen    
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt Datentypen wie **nchar** und **nvarchar** zum Speichern von Unicode-Daten bereit. Bei diesen Datentypen wird Text im Format *UTF-16*codiert. Das Unicode Consortium hat jedem Zeichen einen eindeutigen Codepunkt zugeordnet, der einem Wert im Bereich 0x0000 bis 0x10FFFF entspricht. Die am häufigsten verwendeten Zeichen weisen Codepunktwerte auf, die im Arbeitsspeicher und auf dem Datenträger in ein 16-Bit-Wort passen. Zeichen mit Codepunktwerten, die größer als 0xFFFF sind, erfordern jedoch zwei aufeinanderfolgende 16-Bit-Wörter. Diese Zeichen werden als *ergänzende Zeichen*bezeichnet, und die beiden aufeinanderfolgenden 16-Bit-Wörter werden als *Ersatzpaare*bezeichnet.    
     
+ Für die Datentypen **nchar**,**nvarchar** und **sql_variant** kann jetzt eine neue Familie von SC-Sortierungen verwendet werden, die in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eingeführt wurde. Beispiel: `Latin1_General_100_CI_AS_SC`, oder bei Verwenden einer japanischen Sortierung `Japanese_Bushu_Kakusu_100_CI_AS_SC`.    
+
+ Ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] unterstützen alle neuen Sortierungen automatisch ergänzende Zeichen.
+
  Bei Verwendung ergänzender Zeichen:    
     
 -   Ergänzende Zeichen können bei Sortier- und Vergleichsvorgängen für Sortierungsversionen ab 90 verwendet werden.    
     
--   Alle _100-Ebenen-Sortierungen unterstützen die linguistische Sortierung mit ergänzenden Zeichen.    
+-   Alle Sortierungen von Version 100 unterstützen die linguistische Sortierung mit ergänzenden Zeichen.    
     
 -   Ergänzende Zeichen werden für die Verwendung in Metadaten, beispielsweise in Namen von Datenbankobjekten, nicht unterstützt.    
     
--   Für die Datentypen **nchar** ,**nvarchar** und **sql_variant** kann jetzt eine neue Familie von SC-Sortierungen (Supplementary Characters) verwendet werden, die in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eingeführt wurde. Beispiel: `Latin1_General_100_CI_AS_SC`, oder bei Verwenden einer japanischen Sortierung `Japanese_Bushu_Kakusu_100_CI_AS_SC`.    
-  > [!NOTE]    
-  >  Datenbanken, die Sammlungen mit zusätzlichen Zeichen (\_SC) enthalten, können nicht für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Replikation verwendet werden. Das liegt daran, dass manche der Systemtabellen und gespeicherten Prozeduren, die für die Replikation erstellt wurden, den Legacydatentyp **ntext** verwenden, der keine zusätzlichen Zeichen unterstützt.  
+-   Datenbanken, die Sammlungen mit zusätzlichen Zeichen (\_SC) enthalten, können nicht für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Replikation verwendet werden. Das liegt daran, dass manche der Systemtabellen und gespeicherten Prozeduren, die für die Replikation erstellt wurden, den Legacydatentyp **ntext** verwenden, der keine zusätzlichen Zeichen unterstützt.  
     
-     Das SC-Flag kann in folgenden Versionen angewendet werden:    
+-   Das SC-Flag kann in folgenden Versionen angewendet werden:    
     
-    -   Windows-Sortierungen der Version 90    
+    -   Sortierungen von Version 90    
     
-    -   Windows-Sortierungen der Version 100    
+    -   Sortierungen von Version 100    
     
-     Das SC-Flag kann nicht auf folgende Versionen angewendet werden:    
+-   Das SC-Flag kann nicht auf folgende Versionen angewendet werden:    
     
     -   Nicht versionierte Windows-Sortierungen der Version 80    
     
     -   Die binären Sortierungen BIN und BIN2    
     
-    -   Die SQL*-Sortierungen    
+    -   Die SQL\*-Sortierungen    
     
- In der folgenden Tabelle wird das Verhalten einiger Zeichenfolgenfunktionen und Zeichenfolgenoperatoren verglichen, wenn diese ergänzende Zeichen mit und ohne SC-Sortierung verwenden.    
+    -   Sortierungen von Version 140 (diese benötigen kein SC-Flag, da sie ergänzende Zeichen bereits unterstützen)    
     
-|Zeichenfolgenfunktion oder Operator|Mit SC-Sortierung|Ohne SC-Sortierung|    
+ In der folgenden Tabelle wird das Verhalten einiger Zeichenfolgenfunktionen und Zeichenfolgenoperatoren verglichen, wenn diese ergänzende Zeichen mit und ohne SCA-Sortierung (supplementary character-aware) verwenden:    
+    
+|Zeichenfolgenfunktion oder Operator|Mit SCA-Sortierung|Ohne SCA-Sortierung|    
 |---------------------------------|--------------------------|-----------------------------|    
 |[CHARINDEX](../../t-sql/functions/charindex-transact-sql.md)<br /><br /> [LEN](../../t-sql/functions/len-transact-sql.md)<br /><br /> [PATINDEX](../../t-sql/functions/patindex-transact-sql.md)|Das UTF-16-Ersatzzeichenpaar wird als einzelner Codepunkt betrachtet.|Das UTF-16-Ersatzzeichenpaar wird als zwei Codepunkte betrachtet.|    
 |[LEFT](../../t-sql/functions/left-transact-sql.md)<br /><br /> [REPLACE](../../t-sql/functions/replace-transact-sql.md)<br /><br /> [REVERSE](../../t-sql/functions/reverse-transact-sql.md)<br /><br /> [RIGHT](../../t-sql/functions/right-transact-sql.md)<br /><br /> [SUBSTRING](../../t-sql/functions/substring-transact-sql.md)<br /><br /> [STUFF](../../t-sql/functions/stuff-transact-sql.md)|Diese Funktionen behandeln jedes Ersatzzeichenpaar als einzelnen Codepunkt und funktionieren wie erwartet.|Diese Funktionen können Ersatzzeichenpaare möglicherweise aufteilen und zu unerwarteten Ergebnissen führen.|    
@@ -205,13 +210,15 @@ Datenbankanwendungen, die mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 
 ##  <a name="Japanese_Collations"></a> Japanische Sortierungen, die in  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
  
-Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]werden zwei neue japanische Sortierungsfamilien unterstützt, bei denen es sich um Permutationen verschiedener Optionen (_CS, _AS, _KS, _WS, _VSS usw.) handelt. 
+Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] werden zwei neue japanische Sortierungsfamilien unterstützt, bei denen es sich um Permutationen verschiedener Optionen (\_CS, \_AS, \_KS, \_WS, \_VSS) handelt. 
 
-Um diese Sortierungen aufzulisten, können Sie das SQL Server-Datenbankmodul abfragen:
+Sie können das SQL Server-Datenbankmodul abfragen, um diese Sortierungen aufzulisten:
 ``` 
 SELECT Name, Description FROM fn_helpcollations()  
 WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 ``` 
+
+Alle neuen Sortierungen verfügen über integrierte Unterstützung für ergänzende Zeichen, sodass keine der neuen Sortierungen das SC-Flag besitzt (oder benötigt).
 
 Diese Sortierungen werden in Indizes des Datenbankmoduls, in für den Arbeitsspeicher optimierten Tabellen, in Columnstore-Indizes und in nativ kompilierten Modulen unterstützt.
     
@@ -239,5 +246,4 @@ Diese Sortierungen werden in Indizes des Datenbankmoduls, in für den Arbeitsspe
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    
     
   
-
 

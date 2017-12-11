@@ -2,31 +2,32 @@
 title: Ressourcenkontrolle | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: resource-governor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Resource Governor, overview
 - Resource Governor
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c7bbd2ba4ed132f3e1a795f72667c34f764c0d30
-ms.contentlocale: de-de
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b1d9225d46e1331a4dfc62ef20fcd91a6e0f52ef
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="resource-governor"></a>Resource Governor
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktion, mit der Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Arbeitsauslastung und den Verbrauch von Systemressourcen verwalten können. Über die Ressourcenkontrolle legen Sie Grenzwerte für die CPU, physische E/A sowie den Arbeitsspeicher fest, die für eingehende Anwendungsanforderungen zur Verfügung stehen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor ist eine Funktion, mit der Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Arbeitsauslastung und den Verbrauch von Systemressourcen verwalten können. Über die Ressourcenkontrolle legen Sie Grenzwerte für die CPU, physische E/A sowie den Arbeitsspeicher fest, die für eingehende Anwendungsanforderungen zur Verfügung stehen.  
   
 ## <a name="benefits-of-resource-governor"></a>Vorteile der Ressourcenkontrolle  
  Mit der Ressourcenkontrolle können Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Arbeitsauslastungen und -Ressourcen verwalten, indem Sie durch eingehende Anforderungen Grenzen für den Ressourcenverbrauch festlegen. Im Kontext der Ressourcenkontrolle bezeichnet Arbeitsauslastung eine Reihe von ähnlich dimensionierten Abfragen oder Anforderungen, die als einzelne Entität behandelt werden kann und sollte. Dies ist zwar keine Voraussetzung, je einheitlicher das Ressourcenverwendungsmuster einer Arbeitsauslastung jedoch ist, desto größer der Nutzen der Ressourcenkontrolle. Ressourcengrenzen können in Echtzeit mit minimaler Wirkung auf Arbeitsauslastungen, die ausgeführt werden, neu konfiguriert werden.  
@@ -98,4 +99,3 @@ ms.lasthandoff: 06/22/2017
  [Datenbankmodulinstanzen &#40;SQL Server&#41;](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  
   
   
-

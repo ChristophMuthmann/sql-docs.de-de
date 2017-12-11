@@ -2,9 +2,12 @@
 title: "Rechenkapazitätsgrenzen von bestimmten Editionen von SQL Server | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 11/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: ssdt
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,18 +21,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ef30b71b10c44d8e09a543e75e7c19e5e85fec02
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 02a5a436fdae6d9196359b36e72af3ffc11d2a87
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Compute Capacity Limits by Edition of SQL Server
-  In diesem Thema wird erläutert, wie Sie Kapazitätsgrenzen für verschiedene Editionen von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] berechnen und wie sie sich in physischen und virtualisierten Umgebungen mit Hyperthreaded-Prozessoren unterscheiden.  
+# <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Rechenkapazitätsgrenzen von bestimmten Editionen von SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In diesem Artikel wird erläutert, wie Sie Kapazitätsgrenzen für Editionen von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] berechnen und wie sie sich in physischen und virtualisierten Umgebungen mit Hyperthreaded-Prozessoren unterscheiden.  
   
  ![Zuordnungen zu Rechenkapazitätsgrenzen](../sql-server/media/compute-capacity-limits.gif "Mappings to compute capacity limits")  
   
- In der folgenden Tabelle werden die Schreibweisen, die im oben angegebenen Diagramm verwendet werden, beschrieben:  
+ In dieser Tabelle werden die Schreibweisen im vorigen Diagramm beschrieben:  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
@@ -42,56 +45,58 @@ ms.lasthandoff: 11/09/2017
 > [!IMPORTANT]  
 > Weitere Details:  
 >   
-> - Einem virtuellen Computer werden ein oder mehrere virtuelle Prozessoren zugeordnet.  
+> - Ein virtueller Computer (VM) weist einen oder mehrere virtuelle Prozessoren auf.  
 > - Ein oder mehrere virtuelle Prozessoren werden genau einem virtuellem Computer zugeordnet.  
-> - 0 (null) oder ein virtueller Prozessor wird null oder mehreren logischen Prozessoren zugeordnet. Die Zuordnung virtueller Prozessor zu logischer Prozessor kann wie folgt sein: 
+> - 0 (null) oder ein virtueller Prozessor wird null oder mehreren logischen Prozessoren zugeordnet. Die Zuordnung virtueller Prozessoren zu logischen Prozessoren ist wie folgt: 
 >     -   1:0 stellt einen ungebundenen logischen, von den Gastbetriebssystemen nicht verwendeten Prozessor dar.  
 >     -   1:viele stellt einen Overcommit dar.  
->     -   0:viele stellt die Abwesenheit des virtuellen Computers auf dem Hostsystem dar, deshalb werden keine logischen Prozessoren von den VMs verwendet.  
+>     -   0:viele stellt die Abwesenheit des virtuellen Computers auf dem Hostsystem dar. Also den Fall, dass virtuelle Computer keine logischen Prozessoren verwenden.  
 > - Ein Socket wird null oder mehr Kernen zugeordnet. Die Zuordnung Socket zu Kern kann wie folgt sein:  
->     -   1:0 stellt einen leeren Socket dar (kein Chip installiert).  
->     -   1:1 stellt einen in den Socket installierten Einzelkern-Chip dar (heutzutage sehr selten).  
->     -   1:viele stellt ein in den Socket installierten Mehrkern-Chip dar (typische Werte sind 2,4,8).  
-> - Ein Kern wird einem oder zwei logischen Prozessoren zugeordnet. Die Zuordnung Kern zu logischer Prozessor kann wie folgt sein:  
+>     -   1:0 stellt einen leeren Socket dar. Es ist kein Chip installiert.  
+>     -   1:1 stellt einen im Socket installierten Einzelkern-Chip dar. Diese Zuordnung ist heutzutage selten.  
+>     -   1:viele stellt einen im Socket installierten Mehrkern-Chip dar. Typische Werte sind 2, 4 und 8.  
+> - Ein Kern wird einem oder zwei logischen Prozessoren zugeordnet. Die Zuordnung von Kernen zu logischen Prozessoren ist wie folgt:  
 >     -   1:1, Hyperthreading ist aus.  
 >     -   1:2, Hyperthreading ist an.  
   
- Die folgenden Definitionen gelten für die in diesem Thema verwendeten Begriffe:  
+ Die folgenden Definitionen gelten für die in diesem Artikel verwendeten Begriffe:  
   
--   Ein Thread oder logischer Prozessor ist aus der Sicht von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]bzw. aus der Sicht des Betriebssystems, einer Anwendung oder eines Treibers ein logisches Computermodul.  
+-   Ein Thread oder logischer Prozessor ist aus der Sicht von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bzw. aus der Sicht des Betriebssystems, einer Anwendung oder eines Treibers ein logisches Computermodul.  
   
--   Ein Kern ist eine Prozessoreinheit, die aus einem oder mehreren logischen Prozessoren bestehen kann.  
+-   Ein Kern ist eine Prozessoreinheit. Sie kann aus einem oder mehreren logischen Prozessoren bestehen.  
   
 -   Ein physischer Prozessor kann aus einem oder mehreren Kernen bestehen. Ein physischer Prozessor ist das Gleiche wie ein Prozessorpaket oder ein Socket.  
   
-Systeme mit mehr als einem physischen Prozessor oder Systeme mit physischen Prozessoren, die mehrere Kerne und/oder Hyperthreads haben, ermöglichen dem Betriebssystem, mehrere Tasks gleichzeitig auszuführen. Jeder Thread der Ausführung wird als logischer Prozessor angezeigt. Wenn Sie z. B. einen Computer haben, der zwei Quad-Core-Prozessoren hat, mit aktiviertem Hyperthreading und zwei Threads pro Kern, haben Sie 16 logische Prozessoren: 2 Prozessoren x 4 Kerne pro Prozessor x 2 Threads pro Kern. Beachten Sie dabei Folgendes:  
+Systeme mit mehr als einem physischen Prozessor oder Systeme mit physischen Prozessoren, die mehrere Kerne und/oder Hyperthreads haben, ermöglichen dem Betriebssystem, mehrere Tasks gleichzeitig auszuführen. Jeder Thread der Ausführung wird als logischer Prozessor angezeigt. Wenn Ihr Computer z.B. zwei Quad-Core-Prozessoren mit aktiviertem Hyperthreading und zwei Threads pro Kern aufweist, verfügen Sie über 16 logische Prozessoren: 2 Prozessoren x 4 Kernen pro Prozessor x 2 Threads pro Kern. Beachten Sie dabei Folgendes:  
   
 -   Die Rechenkapazität eines logischen Prozessors von einem einzelnen Thread eines Hyperthread-Kerns ist geringer als die Rechenkapazität eines logischen Prozessors von diesem gleichen Kern mit deaktiviertem Hyperthreading.  
   
--   Doch die Rechenkapazität der 2 logischen Prozessoren im Hyperthread-Kern ist größer als die Rechenkapazität des gleichen Kerns mit deaktiviertem Hyperthreading.  
+-   Die Rechenkapazität der zwei logischen Prozessoren im Hyperthread-Kern ist größer als die Rechenkapazität des gleichen Kerns mit deaktiviertem Hyperthreading.  
   
 Jede Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] hat zwei Rechenkapazitätsgrenzen:  
   
-- Die maximale Anzahl von Sockets (identisch mit physikalischem Prozessor oder Socket oder Prozessorpaket).  
+- Die maximale Anzahl von Sockets (oder physischen Prozessoren oder Prozessorpaketen)  
   
-- Die maximale Anzahl von Kernen, wie vom Betriebssystem gemeldet.  
+- Die maximale Anzahl von Kernen, die vom Betriebssystem gemeldet wird  
   
-Diese Begrenzungen gelten für eine einzelne Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Sie stellen die maximale Rechenkapazität dar, die eine einzelne Instanz verwendet. Sie schränken den Server nicht ein, auf dem die Instanz möglicherweise bereitgestellt wird. Die Bereitstellung mehrerer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanzen auf demselben physischen Server ist zweifellos eine effiziente Möglichkeit, die Rechenkapazität eines physischen Servers mit mehr Sockets und/oder Kernen zu nutzen, als unten für die Kapazitätsgrenzen angegeben ist.  
+Diese Begrenzungen gelten für eine einzelne Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Sie stellen die maximale Rechenkapazität dar, die eine einzelne Instanz verwendet. Sie schränken den Server nicht ein, auf dem die Instanz möglicherweise bereitgestellt wird. Vielmehr stellt die Bereitstellung mehrerer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanzen auf demselben physischen Server eine effiziente Möglichkeit dar, die Rechenkapazität eines physischen Servers mit mehr Sockets und/oder Kernen zu nutzen, als es die Kapazitätsgrenzen zulassen.  
   
 Die folgende Tabelle gibt die Rechenkapazitätsgrenzen für eine einzelne Instanz jeder Edition von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]an:  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Edition|Maximale von einer einzelnen Instanz verwendete Rechenkapazität ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Maximale von einer einzelnen Instanz verwendete Rechenkapazität (AS, RS)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Edition|Maximale Rechenkapazität für eine einzelne Instanz ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Maximale Rechenkapazität für eine einzelne Instanz (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition: Core-basierte Lizenzierung\*|Maximum des Betriebssystems|Maximum des Betriebssystems|  
 |Entwickler|Maximum des Betriebssystems|Maximum des Betriebssystems|  
 |Standard|Beschränkt auf weniger als 4 Sockets oder 24 Kerne|Beschränkt auf weniger als 4 Sockets oder 24 Kerne|  
 |Express|Beschränkt auf weniger als 1 Socket oder 4 Kerne|Beschränkt auf weniger als 1 Socket oder 4 Kerne|  
 
-\*Enterprise Edition mit einer Lizenzierung auf Grundlage von Serverlizenz + Clientzugriffslizenz (CAL) (für neue Verträge nicht verfügbar) ist auf maximal 20 Kerne pro [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz beschränkt. Für das auf Prozessorkernen basierende Serverlizenzierungsmodell gelten keine Beschränkungen.  
+\*Die Enterprise Edition mit einer Lizenzierung in Form von Serverlizenz + Clientzugriffslizenz (CAL) ist auf maximal 20 Kerne pro [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz beschränkt. (Diese Lizenzierung ist für neue Verträge nicht verfügbar.) Für das auf Prozessorkernen basierende Serverlizenzierungsmodell gelten keine Beschränkungen.  
   
-In einer virtualisierten Umgebung basiert die Rechenkapazitätsgrenze auf der Anzahl der logischen Prozessoren und nicht der Kerne, da die Prozessorarchitektur für die Gastanwendungen nicht sichtbar ist.  Ein Server mit vier Sockets beispielsweise, bestückt mit Quad-Core-Prozessoren und der Fähigkeit, zwei Hyperthreads pro Kern zu aktivieren, enthält mit aktiviertem Hyperthreading 32 logische Prozessoren, bei deaktiviertem Hyperthreading jedoch nur 16 logische Prozessoren. Diese logischen Prozessoren können virtuellen Computern auf dem Server zugeordnet werden, wobei die Rechenlast des virtuellen Computers auf diesem logischen Prozessor einem Ausführungs-Thread auf dem physischen Prozessor im Hostserver zugeordnet wird.  
+In einer virtualisierten Umgebung beruht die Beschränkung der Rechenkapazität auf der Anzahl der logischen Prozessoren, nicht der Kerne. Dies hat den Grund, dass die Prozessorarchitektur für die Gastanwendungen nicht sichtbar ist. 
+
+Ein Server mit vier Sockets beispielsweise, bestückt mit Quad-Core-Prozessoren und der Fähigkeit, zwei Hyperthreads pro Kern zu aktivieren, enthält mit aktiviertem Hyperthreading 32 logische Prozessoren. Er enthält jedoch mit deaktiviertem Hyperthreading nur 16 logische Prozessoren. Diese logischen Prozessoren können virtuellen Computern auf dem Server zugeordnet werden. Die Rechenlast der virtuellen Computers auf diesem logischen Prozessor wird einem Ausführungs-Thread auf dem physischen Prozessor im Hostserver zugeordnet.  
   
-Sie können das Hyperthreading deaktivieren, wenn die Leistung pro virtueller Prozessor wichtig ist. Sie können das Hyperthreading anhand einer BIOS-Einstellung für den Prozessor während des BIOS-Setups deaktivieren, aber es ist in der Regel ein Vorgang im Serverbereich, der sich auf alle Arbeitsauslastungen auswirkt, die auf dem Server ausgeführt werden. Dies weist darauf hin, Arbeitsauslastungen, die in virtualisierten Umgebungen ausgeführt werden, von denen zu trennen, die in einer physischen Betriebssystemumgebung von der Hyperthreading-Leistungssteigerung profitieren würden.  
+Es kann daher sinnvoll sein, Hyperthreading zu deaktivieren, wenn die Leistung der einzelnen virtuellen Prozessoren wichtig ist. Sie können das Hyperthreading mithilfe einer BIOS-Einstellung für den Prozessor während der BIOS-Einrichtung aktivieren oder deaktivieren. Normalerweise handelt es sich aber um einen Vorgang im Bereich des Servers, der alle auf dem Server ausgeführten Arbeitsauslastungen betrifft. Dies kann dafür sprechen, Arbeitsauslastungen, die in virtualisierten Umgebungen ausgeführt werden, von solchen zu trennen, die in einer physischen Betriebssystemumgebung von der Leistungssteigerung durch Hyperthreading profitieren würden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Editionen und Komponenten von SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)   
