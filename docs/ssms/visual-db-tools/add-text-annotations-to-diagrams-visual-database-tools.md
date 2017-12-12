@@ -3,8 +3,11 @@ title: "Hinzufügen von Textanmerkungen zu Diagrammen (Visual Database Tools) | 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7fa9460c29b35522acdd052bf6d5414e8119f158
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2bf2ee6e692782bfd6bcddc4e8a70d758e002416
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-text-annotations-to-diagrams-visual-database-tools"></a>Hinzufügen von Textanmerkungen zu Diagrammen (Visual Database Tools)
-Sie können Hinweise oder Kommentare zu einem Diagramm erstellen, indem Sie Textanmerkungen hinzufügen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können Hinweise oder Kommentare zu einem Diagramm erstellen, indem Sie Textanmerkungen hinzufügen.  
   
 ### <a name="to-add-text-annotations-to-diagrams"></a>So fügen Sie Textanmerkungen zu Diagrammen hinzu  
   

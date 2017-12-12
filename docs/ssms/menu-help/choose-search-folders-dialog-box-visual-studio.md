@@ -3,8 +3,11 @@ title: "Suchordner auswählen (Dialogfeld in Visual Studio) | Microsoft-Dokument
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6e21d0e8cf2a8906be3699d742b420439181d500
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7bdc3ea0d960d2bb2e4abbe2f16ec2ff2a3db62b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Suchordner auswählen (Dialogfeld in Visual Studio)
-Ermöglicht es Ihnen, eigene benannte Sätze mit Suchordnern zusammenzustellen, zu speichern und zu überarbeiten sowie den Ordner anzugeben, in dem sie durchsucht werden. Zum Anzeigen dieses Dialogfelds klicken Sie im Fenster In Dateien suchen, In Dateien ersetzen oder Suchen und Ersetzen neben der Dropdownliste **Suchen in** auf die Schaltfläche **Durchsuchen (...)** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Ermöglicht es Ihnen, eigene benannte Sätze mit Suchordnern zusammenzustellen, zu speichern und zu überarbeiten sowie den Ordner anzugeben, in dem sie durchsucht werden. Zum Anzeigen dieses Dialogfelds klicken Sie im Fenster In Dateien suchen, In Dateien ersetzen oder Suchen und Ersetzen neben der Dropdownliste **Suchen in** auf die Schaltfläche **Durchsuchen (...)** .  
   
 Fügen Sie der Liste **Ausgewählte Ordner** Ordner hinzu, geben Sie im Feld **Ordnersatz** einen Namen für diesen Ordner ein, und klicken Sie auf **Übernehmen** , um ihn zu speichern. Dieser benutzerdefinierte Suchbereich kann danach anhand des Namens aus den Dropdownlisten **Suchen in** in den Fenstern **Suchen in Dateien** und **Ersetzen in Dateien**ausgewählt werden. Wenn Sie einen benutzerdefinierten Ordnersatz aus den Listen **Suchen in** entfernen möchten, wählen Sie seinen Namen im Feld **Ordnersatz** aus, und klicken Sie auf **Löschen**.  
   

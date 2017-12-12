@@ -2,9 +2,12 @@
 title: Verwenden von Kommentaren | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,15 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0dc4641b0c397bcd57e64df629bab0d9bbc217af
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0cbec7ac86d173d1b8af843a06441607fc6edf54
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-2-4---using-comments"></a>Lektion 2-4: Verwenden von Kommentaren
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Sie einfach einen Teil Ihres Skripts auskommentieren.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ermöglicht es Ihnen, einen Teil Ihres Skripts einfach auszukommentieren.  
   
 ## <a name="commenting-out-part-of-a-script"></a>Auskommentieren eines Teil eines Skripts  
   

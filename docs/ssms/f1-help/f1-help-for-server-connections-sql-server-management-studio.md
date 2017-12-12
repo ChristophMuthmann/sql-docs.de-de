@@ -3,8 +3,11 @@ title: "Hilfe (F1) für Serververbindungen (SQL Server Management Studio) | Micr
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-f1
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b0d1bf92b96962838c10582036a6f4f032b24d04
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fa021d96cd400e2a3e3a994dc501d950c933018f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>Hilfe (F1) für Serververbindungen (SQL Server Management Studio)
-Dieser Abschnitt enthält die F1-Hilfethemen für die Dialogfeldseiten von **Verbindung mit Server herstellen** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dieser Abschnitt enthält die F1-Hilfethemen für die Dialogfeldseiten von **Verbindung mit Server herstellen** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
   
 [Nach Servern suchen &#40;lokale Server&#41;](../../ssms/f1-help/browse-for-servers-local-servers.md)  
   

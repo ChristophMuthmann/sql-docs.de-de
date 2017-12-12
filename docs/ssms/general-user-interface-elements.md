@@ -3,8 +3,11 @@ title: "Allgemeine Benutzeroberflächenelemente | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 72a00e52b92b48c7be310ab5aa985b81608c1bce
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 70ebaa64ba9316d2931a5f7080a6aae5fce80cc4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="general-user-interface-elements"></a>Allgemeine Benutzeroberflächenelemente
-Der **Editor**, das **Eigenschaftenfenster** und die **Toolbox** zählen zu den grundlegenden Elementen von [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Der **Editor**, das Fenster **Eigenschaften** und die **Toolbox** zählen zu den grundlegenden Elementen von [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)].  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 [Info (Dialogfeld)](../ssms/about-dialog-box.md)  

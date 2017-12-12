@@ -3,8 +3,11 @@ title: Speichern (Dialogfeld) (Visual Database Tools) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4a568b3dae2f510365d1db4a838ae58a02eb177a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ecfaae0da3917b08db87173dfc2b7842e2972ae0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>Speichern (Dialogfeld) (Visual Database Tools)
-Dieses Dialogfeld wird angezeigt, wenn Sie Ihre Arbeit im Tabellen-Designer speichern und diese Arbeit sich auf andere Tabellen auswirkt. Mit diesem Dialogfeld können Sie bestimmen, welche Tabellen gespeichert werden sollen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dieses Dialogfeld wird angezeigt, wenn Sie Ihre Arbeit im Tabellen-Designer speichern und diese Arbeit sich auf andere Tabellen auswirkt. Mit diesem Dialogfeld können Sie bestimmen, welche Tabellen gespeichert werden sollen.  
   
 > [!NOTE]  
 > Für die im Tabellen-Designer gemachten Änderungen an einer Tabelle wird erst dann ein Commit an die Datenbank ausgeführt, wenn Sie die Tabelle speichern. Nach dem Speichern der Tabelle können keine Änderungen rückgängig gemacht werden. Um alle nicht gespeicherten Änderungen zu verwerfen, schließen Sie alle offenen Tabellen, ohne sie zu speichern.  

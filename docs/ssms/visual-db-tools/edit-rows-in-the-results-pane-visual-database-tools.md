@@ -3,8 +3,11 @@ title: Bearbeiten von Zeilen im Ergebnisbereich (Visual Database Tools) | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4ef7ec75a6546023d661b7ed448cdab9adf473b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5c6a8804827768aa0398d611636f69758099f3e6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>Bearbeiten von Zeilen im Ergebnisbereich (Visual Database Tools)
-In vielen Fällen können Sie die Daten im [Ergebnisbereich](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)bearbeiten. Ausführlichere Informationen zum Ändern von Daten finden Sie unter [Regeln zum Aktualisieren von Ergebnissen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md) und [Verwenden von Daten im Ergebnisbereich &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)bearbeiten.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In vielen Fällen können Sie die Daten im [Ergebnisbereich](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) bearbeiten. Ausführlichere Informationen zum Ändern von Daten finden Sie unter [Regeln zum Aktualisieren von Ergebnissen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md) und [Verwenden von Daten im Ergebnisbereich &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)bearbeiten.  
   
 ### <a name="to-edit-data-in-the-results-pane"></a>So bearbeiten Sie Daten im Ergebnisbereich  
   

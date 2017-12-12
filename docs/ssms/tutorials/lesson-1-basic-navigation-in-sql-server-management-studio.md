@@ -3,8 +3,11 @@ title: 'Lektion 1: Grundlegendes zur Navigation in SQL Server Management Studio 
 ms.custom: 
 ms.date: 08/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,13 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 37f2b590f7e20990e1b2a70b88bca17bc6401f2d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 663338477f0bba22e3d5cacbe9c1bc34292f0e88
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>Lektion 1: Grundlegendes zur Navigation in SQL Server Management Studio
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) ist ein leistungsstarkes und flexibles Tool. In dieser Lektion werden die Fenster der Entwurfsoberfläche erläutert, mit der Ihre Arbeit erleichtert wird. Am Ende dieser Lektion wissen Sie, wie Sie nicht benötigte Fenster entfernen, wie Sie schnell auf Fenster mit den benötigten Informationen zugreifen können und wie Sie die Standardoberfläche für die von Ihnen am häufigsten ausgeführten Arbeiten konfigurieren können.  
   
 Diese Lektion enthält die folgenden Themen:  

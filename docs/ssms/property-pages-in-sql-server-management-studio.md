@@ -3,8 +3,11 @@ title: Eigenschaftenseiten in SQL Server Management Studio | Microsoft-Dokumenta
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 94c531a2fa9fd1c654329c6120906dda1abe7c46
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8c4c23da504c70c1139705c514d3b95631fa1ac0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>Eigenschaftenseiten in SQL Server Management Studio
-Die Dialogfelder für Eigenschaftenseiten in [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] verwenden ein einheitliches Format, in dem Informationen mit erweiterten und reduzierten Kategorien angezeigt werden. Die angezeigten Felder hängen von der jeweiligen Eigenschaft ab. Die in Grau angezeigten Eigenschaften sind schreibgeschützt. Die Schaltflächen Nach Kategorien und Alphabetisch befinden sich oben auf den einzelnen Eigenschaftenseiten.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Die Dialogfelder für Eigenschaftenseiten in [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] verwenden ein einheitliches Format, in dem Informationen mit erweiterten und reduzierten Kategorien angezeigt werden. Die angezeigten Felder hängen von der jeweiligen Eigenschaft ab. Die in Grau angezeigten Eigenschaften sind schreibgeschützt. Die Schaltflächen Nach Kategorien und Alphabetisch befinden sich oben auf den einzelnen Eigenschaftenseiten.  
   
 Die folgende Tabelle enthält die gemeinsamen Elemente von Dialogfeldern für Eigenschaftenseiten in [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] .  
   

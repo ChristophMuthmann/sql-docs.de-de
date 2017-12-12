@@ -3,8 +3,11 @@ title: "Ändern von Joinoperatoren (Visual Database Tools) | Microsoft-Dokumenta
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ebec4a0b9106152a8a7914263a70a7ddf0399679
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 62763186119afe111ee2a191a577db19178be896
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>Ändern von Joinoperatoren (Visual Database Tools)
-In der Standardeinstellung verknüpft der [Abfrage- und Sicht-Designer](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) Tabellen mit einem Gleichheitszeichen (Gleichheitsjoin), durch das Werte in den zwei Joinspalten einander zugeordnet werden. Sie können ggf. den Operator für das Vergleichen der Werte in den Joinspalten ändern.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In der Standardeinstellung verknüpft der [Abfrage- und Sicht-Designer](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) Tabellen mit einem Gleichheitszeichen (Gleichheitsjoin), durch das Werte in den zwei Joinspalten einander zugeordnet werden. Sie können ggf. den Operator für das Vergleichen der Werte in den Joinspalten ändern.  
   
 ### <a name="to-modify-join-operators"></a>So ändern Sie Joinoperatoren  
   

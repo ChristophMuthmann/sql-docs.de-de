@@ -3,8 +3,11 @@ title: "Optionen (Designer – Seite „Wartungspläne“) | Microsoft-Dokumenta
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 87e5c7771dfa5bdb1f49633b08625de0302b69d9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: be7de4f323b1f4351ad851c04222e0513d73a93c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="options-designers---maintenance-plans-page"></a>Optionen (Designer – Seite „Wartungspläne“)
-Bestimmen Sie mithilfe des Dialogfelds **Optionen** das Standardverhalten des Designers, wenn einer Entwurfsoberfläche neue Formen hinzugefügt werden. Klicken Sie im Menü **Extras** auf **Optionen**, erweitern Sie **Designer**, und wählen Sie **Wartungspläne**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Bestimmen Sie mithilfe des Dialogfelds **Optionen** das Standardverhalten des Designers, wenn einer Entwurfsoberfläche neue Formen hinzugefügt werden. Klicken Sie im Menü **Extras** auf **Optionen**, erweitern Sie **Designer**, und wählen Sie **Wartungspläne**.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
 **Neue Form standardmäßig mit der ausgewählten Form verbinden**  

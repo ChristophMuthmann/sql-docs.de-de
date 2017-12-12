@@ -3,8 +3,11 @@ title: Navigieren im Abfrage- und Sicht-Designer (Visual Database Tools) | Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 36051cdc7eb95e2222f4af16dbf88536f4a263e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 134e017c94bbf364d74c3914149a09be3deaa9a3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Navigieren im Abfrage- und Sicht-Designer (Visual Database Tools)
-Sie können im Abfrage- und Sicht-Designer mit der Tastatur und mit der Maus arbeiten. In den folgenden Tabellen finden Sie spezielle Methoden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können im Abfrage- und Sicht-Designer mit der Tastatur und mit der Maus arbeiten. In den folgenden Tabellen finden Sie spezielle Methoden.  
   
 ## <a name="any-pane"></a>Alle Bereiche  
   

@@ -3,8 +3,11 @@ title: Erstellen von Abfragen mit Joins (Visual Database Tools)|Microsoft-Dokume
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c22ecdbe76b036bbf78810db4d2a18729b184757
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a4d46c668c5654155783c3cc70a1ad23b33c5c82
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="query-with-joins-visual-database-tools"></a>Erstellen von Abfragen mit Joins (Visual Database Tools)
-Ein Abfrageergebnis kann Daten aus mehreren Tabellen oder Tabellenwertobjekten enthalten. Daten aus mehreren Tabellenwertobjekten können mit dem JOIN-Vorgang aus SQL kombiniert werden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Ein Abfrageergebnis kann Daten aus mehreren Tabellen oder Tabellenwertobjekten enthalten. Daten aus mehreren Tabellenwertobjekten können mit dem JOIN-Vorgang aus SQL kombiniert werden.  
   
 Informationen zum Erstellen von Abfragen mit mehreren Tabellen finden Sie unter folgenden Themen.  
   

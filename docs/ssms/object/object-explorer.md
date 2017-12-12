@@ -3,8 +3,11 @@ title: Objekt-Explorer | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -30,14 +33,15 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 41d97e078b7d7faa4cd15e35a2f3de6b438d09c6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 05c1ba2d0a8d223ee1d4713613b23d9d07df8241
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="object-explorer"></a>Objekt-Explorer
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] bietet Funktionen zum Verwalten von Objekten in Instanzen von [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)]und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] bietet Funktionen zum Verwalten von Objekten in Instanzen von [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)].  
   
 ## <a name="benefits-of-object-explorer"></a>Vorteile des Objekt-Explorers  
 Der Objekt-Explorer stellt eine hierarchische Benutzeroberfläche zum Anzeigen und Verwalten der Objekte in allen Instanzen von SQL Server bereit. Der Bereich "Details zum Objekt-Explorer" stellt eine tabellarische Ansicht der Instanzobjekte sowie eine Funktion zum Suchen bestimmter Objekte zur Verfügung. Die Funktionalität des Objekt-Explorers variiert abhängig vom Servertyp, enthält aber im Allgemeinen die Entwicklungsfunktionen für Datenbanken und die Verwaltungsfunktionen für alle Servertypen.  

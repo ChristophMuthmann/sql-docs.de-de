@@ -3,8 +3,11 @@ title: Projektmappen (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7f9d66e69535af5c4811d9ac6f038d6fa0a2ee78
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 506e7aec9c3c6c89d057d75f4b8b92947cc0cd50
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="solutions-sql-server-management-studio"></a>Projektmappen (SQL Server Management Studio)
-Eine [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] -Projektmappe ist eine Auflistung von einem oder mehreren verwandten Projekten. Projekte sind Container, mit denen Entwickler verwandte Dateien organisieren, z. B. Sätze häufig verwendeter Verwaltungsskripts.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]Eine [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]-Projektmappe ist eine Auflistung von einem oder mehreren verwandten Projekten. Projekte sind Container, mit denen Entwickler verwandte Dateien organisieren, z. B. Sätze häufig verwendeter Verwaltungsskripts.  
   
 ## <a name="solution-overview"></a>Übersicht über die Lösungen  
 Sie können [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] als Plattform für die Skriptentwicklung für [!INCLUDE[ssDE](../../includes/ssde_md.md)] und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]verwenden. Entwickeln Sie Skripts und Abfragen für relationale und mehrdimensionale Datenbanken mithilfe der [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] -Code-Editoren, und sammeln Sie verwandte Skripts und Abfragen in Projekten.  

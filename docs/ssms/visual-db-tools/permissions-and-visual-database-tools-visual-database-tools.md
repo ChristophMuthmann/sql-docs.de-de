@@ -3,8 +3,11 @@ title: Berechtigungen und Visual Database Tools (Visual Database Tools) | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 232491b14f93a24416f1d5704b5d627ca6d1358b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ceb8a15b4f480c2f2a075928787d86803f567187
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>Berechtigungen und Visual Database Tools (Visual Database Tools)
-Berechtigungen, die Benutzern den Zugriff auf Datenquellenobjekte ermöglichen, werden nicht in Visual Database Tools, sondern in der Datenquelle zugewiesen. Die Zugriffsberechtigungen für Datenquellenobjekte werden durch die Sicherheitsrichtlinie der Installation gesteuert. Wenn Sie nicht über die Berechtigung verfügen, auf bestimmte Datenbankobjekte zuzugreifen, müssen Sie sich an den Datenbankadministrator wenden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Berechtigungen, die Benutzern den Zugriff auf Datenquellenobjekte ermöglichen, werden nicht in Visual Database Tools, sondern in der Datenquelle zugewiesen. Die Zugriffsberechtigungen für Datenquellenobjekte werden durch die Sicherheitsrichtlinie der Installation gesteuert. Wenn Sie nicht über die Berechtigung verfügen, auf bestimmte Datenbankobjekte zuzugreifen, müssen Sie sich an den Datenbankadministrator wenden.  
   
 Wenn Ihnen die Datenbankberechtigungen nur das Anzeigen und nicht das Bearbeiten der Datenbankstruktur gestatten, können Sie mithilfe von Änderungsskripts eigene Änderungen entwerfen, ohne diese in die Datenbank zu übertragen.  
   

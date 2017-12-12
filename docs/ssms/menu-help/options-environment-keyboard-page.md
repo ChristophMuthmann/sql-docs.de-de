@@ -3,8 +3,11 @@ title: "Optionen (Umgebung – Seite „Tastatur“) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b6f0a390c8492d331de1524ed371dddcdf28ebc8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 27217dad35a1fc323c92cd0db69c867fcbc7a766
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="options-environment---keyboard-page"></a>Optionen (Umgebung – Seite „Tastatur“)
-Mithilfe des Dialogfelds **Optionen** können Sie das Tastaturschema für [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]anpassen. Verwenden Sie diese Option, um ein Tastaturschema auszuwählen. Wenn Sie auf diese Seite zugreifen möchten, klicken Sie im Menü **Extras** auf **Optionen** , wählen Sie den Ordner **Umgebung** aus, und klicken Sie dann auf **Tastatur**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mithilfe des Dialogfelds **Optionen** können Sie das Tastaturschema für [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] anpassen. Verwenden Sie diese Option, um ein Tastaturschema auszuwählen. Wenn Sie auf diese Seite zugreifen möchten, klicken Sie im Menü **Extras** auf **Optionen** , wählen Sie den Ordner **Umgebung** aus, und klicken Sie dann auf **Tastatur**.  
   
 Die Dropdownliste **Tastaturschema** stellt die verfügbaren Auflistungen von Tastenkombinationen bereit. Um ein bestimmtes Schema zu laden, wählen Sie es aus der Liste aus. Wenn Sie das Dialogfeld **Optionen** verlassen möchten, klicken Sie auf **OK**. Das ausgewählte Schema wird in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]geladen.  
   

@@ -3,8 +3,11 @@ title: Detailbereich des Objekt-Explorers | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c88f8188f607e5508bf087e230b1e8e70e92aab7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 523ea1b976fc5769cd400e9bbe32f380956421df
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="object-explorer-details-pane"></a>Detailbereich des Objekt-Explorers
-Details zum Objekt-Explorer, eine Komponente von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], stellt eine tabellarische Ansicht aller Objekte im Server sowie eine Benutzeroberfläche zu deren Verwaltung bereit. Die Funktionalität des Objekt-Explorers variiert abhängig vom Servertyp, enthält aber im Allgemeinen die Entwicklungsfunktionen für Datenbanken und die Verwaltungsfunktionen für alle Servertypen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Details zum Objekt-Explorer, eine Komponente von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], stellt eine tabellarische Ansicht aller Objekte im Server sowie eine Benutzeroberfläche zu deren Verwaltung bereit. Die Funktionalität des Objekt-Explorers variiert abhängig vom Servertyp, enthält aber im Allgemeinen die Entwicklungsfunktionen für Datenbanken und die Verwaltungsfunktionen für alle Servertypen.  
   
 Der Bereich Details zum Objekt-Explorer ist standardmäßig in [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] sichtbar. Wenn der Objekt-Explorer nicht angezeigt wird, klicken Sie im Menü **Ansicht** auf **Details zum Objekt-Explorer** , oder drücken Sie **F7**.  
   

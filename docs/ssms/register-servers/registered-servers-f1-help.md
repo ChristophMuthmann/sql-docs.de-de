@@ -2,9 +2,12 @@
 title: Registrierte Server (F1-Hilfe) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e6862293a076e345534c77995352e5f63daee20b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fd228d9af6de24bc8e57a1ae640af9fa0e613695
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="registered-servers-f1-help"></a>Registrierte Server (F1-Hilfe)
-  Dieser Abschnitt enthält die F1-Hilfe zur Komponente Registrierte Server in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Er beschreibt die verschiedenen Optionen.
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dieser Abschnitt enthält die F1-Hilfe zur Komponente Registrierte Server in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Er beschreibt die verschiedenen Optionen.
   
  Informationen zu registrierten Servern und Links zu den mit ihnen möglichen Aktionen finden Sie im Thema [Registrieren von Servern](../../tools/sql-server-management-studio/register-servers.md) . 
  

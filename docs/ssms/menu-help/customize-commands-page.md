@@ -3,8 +3,11 @@ title: Anpassen (Seite Befehle) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: adcb678da9ce46a261aa288085339e820137d616
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7fec4dfbfc43e1b0ef8716af253278192bf82747
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="customize-commands-page"></a>Anpassen (Seite Befehle)
-Mithilfe dieses Dialogfelds können Sie Befehle zu Symbolleisten und Menüs hinzufügen und die Bilder für auf Symbolleisten verwendeten Schaltflächen sowie für Menübefehle ändern. Sie können auf die Seite **Befehle** zugreifen, indem Sie im Menü **Extras** auf **Anpassen** klicken und anschließend auf **Befehle**klicken.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mithilfe dieses Dialogfelds können Sie Befehle zu Symbolleisten und Menüs hinzufügen und die Bilder für auf Symbolleisten verwendeten Schaltflächen sowie für Menübefehle ändern. Sie können auf die Seite **Befehle** zugreifen, indem Sie im Menü **Extras** auf **Anpassen** klicken und anschließend auf **Befehle**klicken.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
 **Kategorien**  

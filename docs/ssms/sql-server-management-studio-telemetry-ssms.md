@@ -3,8 +3,11 @@ title: "SQL Server Management Studio – Telemetrie (SSMS) | Microsoft-Dokumenta
 ms.custom: 
 ms.date: 02/20/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,15 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dd49e14d6a19d1ac81a5cb17494988ce05c40e80
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: db59123cfd2f78bc069bdb2b688dc2daec8e6830
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="local-audit-for-ssms-usage-feedback-collection"></a>Lokale Überwachung für Feedbackerfassung zur SSMS-Nutzung
-
-SQL Server Management Studio (SSMS) enthält internetaktivierte Features, die anonyme Featurenutzungsdaten erfassen und an Microsoft senden können. SSMS erfasst möglicherweise Standardinformationen zu Ihrem Computer und Informationen zur Nutzung und Leistung, die möglicherweise an Microsoft übermittelt und analysiert werden, um die Qualität, Sicherheit und Zuverlässigkeit von SSMS zu optimieren. Wir erfassen nicht Ihren Namen, Ihre Adresse oder andere Kontaktinformationen. Weitere Informationen finden Sie in den [Datenschutzbestimmungen von SQL Server](https://www.microsoft.com/en-us/privacystatement/SQLServer/Default.aspx).
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SQL Server Management Studio (SSMS) enthält internetaktivierte Features, die anonyme Featurenutzungsdaten erfassen und an Microsoft senden können. SSMS erfasst möglicherweise Standardinformationen zu Ihrem Computer und Informationen zur Nutzung und Leistung, die möglicherweise an Microsoft übermittelt und analysiert werden, um die Qualität, Sicherheit und Zuverlässigkeit von SSMS zu optimieren. Wir erfassen nicht Ihren Namen, Ihre Adresse oder andere Kontaktinformationen. Weitere Informationen finden Sie in den [Datenschutzbestimmungen von SQL Server](https://www.microsoft.com/en-us/privacystatement/SQLServer/Default.aspx).
 
 ## <a name="audit-feature-usage-data"></a>Überwachen von Featurenutzungsdaten
 

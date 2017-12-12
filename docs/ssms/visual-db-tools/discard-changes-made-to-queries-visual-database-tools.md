@@ -3,8 +3,11 @@ title: "Verwerfen von Änderungen an Abfragen (Visual Database Tools) | Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4fc3552f3c45f41b828b4027dc25b98fc332262f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 507ef93ff1bae87aea60ef746d2e9c578f6b63e4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>Verwerfen von Änderungen an Abfragen (Visual Database Tools)
-Sie können an einer Abfragedefinition vorgenommene Änderungen vor dem Speichern verwerfen. Nach dem Speichern kann ein früherer Zustand nicht wiederhergestellt werden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können an einer Abfragedefinition vorgenommene Änderungen vor dem Speichern verwerfen. Nach dem Speichern kann ein früherer Zustand nicht wiederhergestellt werden.  
   
 > [!NOTE]  
 > Um Änderungen an Werten im Ergebnisbereich rückgängig zu machen, drücken Sie die ESC-TASTE, bevor Sie zu einem anderen Datensatz wechseln. Wenn Sie zu einem anderen Datensatz wechseln und eine Benachrichtigung erhalten, dass die Änderungen nicht an die Datenbank übergeben werden, haben Sie nochmals die Gelegenheit, durch Drücken der ESC-TASTE den früheren Wert wiederherzustellen.  

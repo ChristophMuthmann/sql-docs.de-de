@@ -6,27 +6,23 @@ documentationcenter:
 author: MightyPen
 manager: jhubbard
 editor: barbkess
-ms.service: 
-ms.component: database-engine
-ms.suite: sql
+ms.service: na
 ms.topic: updart-autogen
 ms.technology: database-engine
-ms.custom: 
+ms.custom: UpdArt.exe
 ms.workload: database-engine
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/27/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
+ms.date: 12/02/2017
 ms.author: genemi
-ms.openlocfilehash: a367634760aba2b3293df230a427f10bc49feffa
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a0b847d4f0e848105be50a06f93abbbbc6f67dc9
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="new-and-recently-updated-database-engine-docs"></a>Neue und kürzlich aktualisierte Dokumentation zu Datenbankmodulen
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+
 
 
 Beinahe jeden Tag aktualisiert Microsoft einige der vorhandenen Artikel auf der Dokumentationswebsite [Docs.Microsoft.com](http://docs.microsoft.com/). In diesem Artikel werden Auszüge aus den zuletzt aktualisierten Artikeln wiedergegeben. Links zu den neuen Artikel werden ggf. ebenfalls aufgeführt.
@@ -37,7 +33,7 @@ Neueste Updates werden für den folgenden Datumsbereich und Themenbereich gemeld
 
 
 
-- *Datumsbereich des Updates*: &nbsp; **11.9.2017** &nbsp; –bis– &nbsp; **27.9.2017**
+- *Datumsbereich des Updates*: &nbsp; **28.09.2017** &nbsp; – bis – &nbsp; **02.12.2017**
 - *Themenbereich:* &nbsp; **Datenbankmodul**.
 
 
@@ -50,10 +46,7 @@ Neueste Updates werden für den folgenden Datumsbereich und Themenbereich gemeld
 Die folgenden Links leiten Sie zu den neuen Artikeln weiter, die erst kürzlich erstellt wurden.
 
 
-1. [Hinzufügen von Funktionen zu einer Instanz von SQL Server (Setup)](install-windows/add-features-to-an-instance-of-sql-server-setup.md)
-2. [Installieren von SQL Server von der Eingabeaufforderung](install-windows/install-sql-server-from-the-command-prompt.md)
-3. [Installieren von SQL Server mithilfe einer Konfigurationsdatei](install-windows/install-sql-server-using-a-configuration-file.md)
-4. [Business continuity and database recovery - SQL Server (Geschäftskontinuität und Datenbankwiederherstellung mit SQL Server)](sql-server-business-continuity-dr.md)
+***Dieses Mal sind keine neuen Artikel aufgeführt.***
 
 
 
@@ -79,7 +72,7 @@ Kopieren Sie aus diesem und anderen Gründen auf gar keinen Fall Code aus diesen
 
 Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Abschnitt Auszüge aufgeführt sind.
 
-1. [Installieren von Updates an der Eingabeaufforderung](#TitleNum_1)
+1. [Für Ad-hoc-Arbeitsauslastungen optimieren (Serverkonfigurationsoption)](#TitleNum_1)
 
 
 
@@ -90,36 +83,37 @@ Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Absch
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-installing-updates-from-the-command-promptinstall-windowsinstalling-updates-from-the-command-promptmd"></a>1. &nbsp; [Installieren von Updates an der Eingabeaufforderung](install-windows/installing-updates-from-the-command-prompt.md)
+### <a name="1-nbsp-optimize-for-ad-hoc-workloads-server-configuration-optionconfigure-windowsoptimize-for-ad-hoc-workloads-server-configuration-optionmd"></a>1. &nbsp; [Für Ad-hoc-Arbeitsauslastungen optimieren (Serverkonfigurationsoption)](configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md)
 
-*Aktualisiert: 12.9.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*Aktualisiert: 20.11.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 48.  ms.author= "mikeray".  -->
+<!-- Source markdown line 38.  ms.author= "rickbyh".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 04abb23d0682c23654a55e7926d2140f0b6ae408 a4bb1e27ae99460a66da72848ace1417b148f85c  (PR=3122  ,  Filename=installing-updates-from-the-command-prompt.md  ,  Dirpath=docs\database-engine\install-windows\  ,  MergeCommitSha40=1df54edd5857ac2816fa4b164d268835d9713638) -->
+<!-- git diff --ignore-all-space --unified=0 6ca71358f13780b930e6fd10e431d4df2bb96441 221306c4554ebd383ab68ed67cdaeca390f57106  (PR=4032  ,  Filename=optimize-for-ad-hoc-workloads-server-configuration-option.md  ,  Dirpath=docs\database-engine\configure-windows\  ,  MergeCommitSha40=7f8aebc72e7d0c8cff3990865c9f1316996a67d5) -->
 
 
 
-- Aktualisieren Sie alle Instanzen von ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)], alle freigegebenen Komponenten wie ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] und Verwaltungstools auf Ihrem Computer:
+**Empfehlungen**
 
-```
-    <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /AllInstances.
-```
-
-- Entfernen Sie ein Update für eine einfache Instanz von ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)], alle freigegebenen Komponenten wie ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] und Verwaltungstools:
+Wenn die Anzahl von einmal genutzten Plänen einen beträchtlichen Teil des Speichers für „..!NCLUDE-NotShown--ssDEnoversion--../../includes/ssdenoversion-md.md)]“ in einem OLTP-Server beansprucht, und wenn diese Pläne Ad-hoc-Pläne sind, verwenden Sie diese Serveroption, um die Speichernutzung mit diesen Objekten zu verringern.
+Um die Anzahl von zwischengespeicherten einmal genutzten Plänen zu ermitteln, führen Sie die folgende Abfrage aus:
 
 ```
-    <package_name>.exe /qs /Action=RemovePatch /InstanceName=MyInstance.
+SELECT objtype, cacheobjtype,
+  AVG(usecounts) AS Avg_UseCount,
+  SUM(refcounts) AS AllRefObjects,
+  SUM(CAST(size_in_bytes AS bigint))/1024/1024 AS Size_MB
+FROM sys.dm_exec_cached_plans
+WHERE objtype = 'Adhoc' AND usecounts = 1
+GROUP BY objtype, cacheobjtype;
 ```
 
-- Entfernen Sie ein Update für ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)], nur für freigegebene Komponenten wie ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] und Verwaltungstools:
-
-```
-    <package_name>.exe /qs /Action=RemovePatch
-```
+> [!IMPORTANT]
+> Wenn **Optimieren für Ad-hoc-Arbeitsauslastungen** auf 1 festgelegt wird, wirkt sich dies ausschließlich auf neue Pläne aus. Pläne, die sich bereits im Plancache befinden, sind davon nicht betroffen.
+> Sollen auch bereits zwischengespeicherte Abfragepläne sofort betroffen sein, muss der Plancache mit [ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE--../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) gelöscht werden, oder ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] muss neu gestartet werden.
 
 
 
@@ -132,36 +126,40 @@ Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Absch
 <!--  HOW TO:
     Refresh this file's line items with the latest 'Count-in-Similars*' content.
     Then run Run-533-*.BAT
+    2017-12-02  23:00pm
 -->
 
 Dieser Abschnitt enthält sehr ähnliche Artikel für zuletzt aktualisierte Artikel in anderen Themenbereichen innerhalb des gleichen GitHub-Repositorys: [MicrosoftDocs/sql-docs-pr](https://github.com/MicrosoftDocs/sql-docs/).
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Themenbereiche, die über neue oder kürzlich aktualisierte Artikel verfügen
 
-- [Neu + Aktualisiert (0+1): Dokumentation zu **Advanced Analytics für SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Neu + Aktualisiert (0+1): Dokumentation zu **Analysis Services für SQL**](../analysis-services/new-updated-analysis-services.md)
-- [Neu + Aktualisiert (4+1): Dokumentation zum **Datenbankmodul für SQL**](../database-engine/new-updated-database-engine.md)
-- [Neu + Aktualisiert (17+0):Dokumentation zu **Integration Services für SQL**](../integration-services/new-updated-integration-services.md)
-- [Neu + Aktualisiert (3+0): Dokumentation zu **Linux für SQL**](../linux/new-updated-linux.md)
-- [Neu + Aktualisiert (1+1): Dokumentation zu **relationalen Datenbanken für SQL**](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (2+0): **Reporting Services for SQL** docs (Neu + Aktualisiert (2+0): Dokumentation zu Reporting Services für SQL)](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (0+1): **SQL Server Management Studio (SSMS)** docs (Neu + Aktualisiert (0+1): Dokumentation zu SQL Server Management Studio (SSMS))](../ssms/new-updated-ssms.md)
-- [New + Updated (0+1): **Transact-SQL** docs (Neu + Aktualisiert (0+1): Dokumentation zu Transact-SQL)](../t-sql/new-updated-t-sql.md)
+- [Neu + Aktualisiert (3+14): Dokumente zu **Advanced Analytics für SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (1+0): **Analysis Services for SQL** docs (Neu + Aktualisiert (1+0): Analysis Services für SQL-Dokumente)](../analysis-services/new-updated-analysis-services.md)
+- [Neu + Aktualisiert (87+0): Dokumente zu **Analyseplattformsystem für SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [Neu + Aktualisiert (5+4): Dokumente zu **Herstellen einer Verbindung mit SQL**](../connect/new-updated-connect.md)
+- [Neu + Aktualisiert (0+1): Dokumente zum **Datenbankmodul für SQL**](../database-engine/new-updated-database-engine.md)
+- [Neu + Aktualisiert (2+2):Dokumente zu **Integration Services für SQL**](../integration-services/new-updated-integration-services.md)
+- [Neu + Aktualisiert (10+9): Dokumente zu **Linux für SQL**](../linux/new-updated-linux.md)
+- [Neu + Aktualisiert (2+4): Dokumente zu **Relationale Datenbanken für SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Neu + Aktualisiert (4+2): Dokumente zu **Reporting Services für SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Neu + Aktualisiert (0+1): Dokumente zu **Beispiele für SQL**](../sample/new-updated-sample.md)
+- [Neu + Aktualisiert (21+0): Dokumente zu **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Neu + Aktualisiert (5+1): Dokumente zu **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
+- [New + Updated (0+1): **SQL Server Data Tools (SSDT)** docs (Neu + Aktualisiert (0+1): SQL Server Data Tools-Dokumente (SSDT))](../ssdt/new-updated-ssdt.md)
+- [Neu + Aktualisiert (1+0): Dokumente zu **SQL Server Migration Assistant (SSMA)**](../ssma/new-updated-ssma.md)
+- [New + Updated (0+1): **SQL Server Management Studio (SSMS)** docs (Neu + Aktualisiert (0+1): SQL Server Management Studio-Dokumente (SSMS))](../ssms/new-updated-ssms.md)
+- [Neu + Aktualisiert (0+2): Dokumente zu **Transact-SQL**](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Themenbereiche, die über keine neuen oder kürzlich aktualisierten Artikel verfügen
 
+- [Neu + Aktualisiert (0+0): Dokumente zu **Data Migration Assistant (DMA) für SQL**](../dma/new-updated-dma.md)
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs (Neu + Aktualisiert (0+0): ActiveX Data Objects (ADO) für SQL-Dokumente)](../ado/new-updated-ado.md)
-- [New + Updated (0+0): **Connect to SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zum Herstellen einer Verbindung mit SQL)](../connect/new-updated-connect.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs (Neu + Aktualisiert (0+0): Data Quality Services für SQL-Dokumente)](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs (Neu + Aktualisiert (0+0): Data Mining-Erweiterungen (DMX) für SQL)](../dmx/new-updated-dmx.md)
 - [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs (Neu + Aktualisiert (0+0): Dokumentation zu Master Data Services (MDS) für SQL)](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs (Neu + Aktualisiert (0+0): Mehrdimensionale Ausdrücke für SQL)](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs (Neu + Aktualisiert (0+0): Open Database Connectivity für SQL-Dokumente)](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs (Neu + Aktualisiert (0+0): PowerShell für SQL-Dokumente)](../powershell/new-updated-powershell.md)
-- [New + Updated (0+0): **Samples for SQL** docs (Neu + Aktualisiert (0+0): Beispiele für SQL-Dokumente)](../sample/new-updated-sample.md)
-- [Neu + Aktualisiert (0+0): Dokumentation zu **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+0): **SQL Server Data Tools (SSDT)** docs (Neu + Aktualisiert (0+0): Dokumentation zu SQL Server Data Tools (SSDT))](../ssdt/new-updated-ssdt.md)
-- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs (Neu + Aktualisiert (0+0): SQL Server Migration Assistant-Dokumente (SSMA))](../ssma/new-updated-ssma.md)
 - [Neu + Aktualisiert (0+0): Dokumentation zu **Tools für SQL**](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs (Neu + Aktualisiert (0+0): XQuery für SQL-Dokumente)](../xquery/new-updated-xquery.md)
 

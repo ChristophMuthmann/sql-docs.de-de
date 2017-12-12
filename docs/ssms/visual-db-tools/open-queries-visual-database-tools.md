@@ -3,8 +3,11 @@ title: "Öffnen von Abfragen (Visual Database Tools) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5b9780d3afacfb73a9eabe244206117311029ff9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c2efbc1e30f7cd67529e0df143e4ac47c5ada294
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="open-queries-visual-database-tools"></a>Öffnen von Abfragen (Visual Database Tools)
-Sie können eine vorhandene Abfrage im Abfrage- und Sicht-Designer mit dem Befehl **Öffnen** öffnen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können eine vorhandene Abfrage im Abfrage- und Sicht-Designer mit dem Befehl **Öffnen** öffnen.  
   
 ### <a name="to-open-a-query-in-all-panes"></a>So öffnen Sie eine Abfrage in allen Bereichen  
   

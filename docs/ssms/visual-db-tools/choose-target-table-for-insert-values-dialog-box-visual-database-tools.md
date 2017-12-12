@@ -3,8 +3,11 @@ title: "Zieltabelle für eingefügte Ergebnisse auswählen (Dialogfeld)) | Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e0a85c2a077e8ebfbff90dc5e8eb41f741d8cbb4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 122a85ded88a961a7c39945d5db88e1f2b128140
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="choose-target-table-for-insert-values-dialog-box-visual-database-tools"></a>Zieltabelle für eingefügte Ergebnisse auswählen (Dialogfeld) (Visual Database Tools)
-Mit diesem Dialogfeld können Sie angeben, welche Tabelle mit einer INSERT VALUES-Abfrage aktualisiert werden soll. Das Dialogfeld wird aufgerufen, wenn beim Ändern des Typs einer Abfrage in eine INSERT VALUES-Abfrage im Bereich **Diagramm** mehrere Tabellen angezeigt werden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mit diesem Dialogfeld können Sie angeben, welche Tabelle mit einer INSERT VALUES-Abfrage aktualisiert werden soll. Das Dialogfeld wird aufgerufen, wenn beim Ändern des Typs einer Abfrage in eine INSERT VALUES-Abfrage im Bereich **Diagramm** mehrere Tabellen angezeigt werden.  
   
 Wählen Sie die Tabelle aus, zu der Sie Daten hinzufügen möchten, und klicken Sie auf **OK**.  
   

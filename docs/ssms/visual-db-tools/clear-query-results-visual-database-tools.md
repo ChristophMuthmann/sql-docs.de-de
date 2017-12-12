@@ -3,8 +3,11 @@ title: "Löschen von Abfrageergebnissen (Visual Database Tools) | Microsoft-Doku
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 34c9f0c6283b05a06c0b7671b8aa008899a560c2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 30c1aa87c77ce0a3f60c690d24eb563c524b7739
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Löschen von Abfrageergebnissen (Visual Database Tools)
-Nachdem Sie im **Abfrage- und Sicht-Designer**eine Abfrage ausgeführt haben, können Sie den Inhalt des Ergebnisbereichs löschen. Diese Vorgehensweise gilt für Abfragen, die mithilfe der Optionen **Sicht öffnen** oder **Tabelle öffnen** im Objekt-Explorer erstellt wurden. In[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]kann nach dem Ausführen einer Abfrage im Abfrage-Editor der Inhalt des Ergebnisbereichs nur durch Schließen des Abfrage-Editorfensters oder durch Ausführen einer weiteren Abfrage gelöscht werden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Nachdem Sie im **Abfrage- und Sicht-Designer** eine Abfrage ausgeführt haben, können Sie den Inhalt des Ergebnisbereichs löschen. Diese Vorgehensweise gilt für Abfragen, die mithilfe der Optionen **Sicht öffnen** oder **Tabelle öffnen** im Objekt-Explorer erstellt wurden. In[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]kann nach dem Ausführen einer Abfrage im Abfrage-Editor der Inhalt des Ergebnisbereichs nur durch Schließen des Abfrage-Editorfensters oder durch Ausführen einer weiteren Abfrage gelöscht werden.  
   
 > [!NOTE]  
 > Damit werden keine Änderungen rückgängig gemacht, die Sie an der Datenbank vorgenommen haben. Weitere Informationen zur Funktionsweise des Ergebnisbereichs finden Sie unter [Verwenden von Daten im Ergebnisbereich &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md).  

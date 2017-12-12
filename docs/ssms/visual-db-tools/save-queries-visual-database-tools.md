@@ -3,8 +3,11 @@ title: Speichern von Abfragen (Visual Database Tools) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d935d9d79d2c83ef42c8631a0f8e163682f0a3c8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c12821b95b599bbd48ddb60083bd051e930ecfaf
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="save-queries-visual-database-tools"></a>Speichern von Abfragen (Visual Database Tools)
-Speichern Sie die Abfrage, wenn Sie später damit arbeiten möchten. Beachten Sie, dass durch das Ausführen der Abfrage keine Änderungen gespeichert werden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Speichern Sie die Abfrage, wenn Sie später damit arbeiten möchten. Beachten Sie, dass durch das Ausführen der Abfrage keine Änderungen gespeichert werden.  
   
 ### <a name="to-save-a-query"></a>So speichern Sie eine Abfrage  
   

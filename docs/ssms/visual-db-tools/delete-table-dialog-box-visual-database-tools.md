@@ -3,8 +3,11 @@ title: "Tabelle löschen (Dialogfeld) (Visual Database Tools) | Microsoft-Dokume
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c937c391ddcb9008e9ff04b64e9a37780b6c3b5b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fa3d15fc0837ede02c35858bbd4ae5125fb050bb
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>Tabelle löschen (Dialogfeld) (Visual Database Tools)
-This dialog box allows you to specify the table from which to delete records. This dialog box appears if more than one table is displayed in the Diagram pane when you change the type of a query to a DELETE query.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mithilfe dieses Dialogfelds können Sie die Tabelle angeben, aus der Datensätze gelöscht werden sollen. Dieses Dialogfeld wird angezeigt, wenn beim Ändern eines Abfragetyps in eine DELETE-Abfrage im Diagrammbereich mehr als eine Tabelle angezeigt werden.  
   
 Wählen Sie die Tabelle aus, aus der Datensätze gelöscht werden sollen, und klicken Sie auf **OK**.  
   

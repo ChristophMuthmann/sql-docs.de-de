@@ -3,8 +3,11 @@ title: Verwalten von Objekten mittels Objekt-Explorer | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1deb4bbc2566d2c59bf24caddde565265594f2a9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 190cdeff71f6b46b6ff2e7c6f42895137a67eda6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>Verwalten von Objekten mittels Objekt-Explorer
-Mit dem Objekt-Explorer können Sie Objekte, z. B. Datenbanken, Tabellen und gespeicherte Prozeduren, verwalten.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mit dem Objekt-Explorer können Sie Objekte, z. B. Datenbanken, Tabellen und gespeicherte Prozeduren, verwalten.  
   
 ## <a name="viewing-objects-in-object-explorer"></a>Anzeigen von Objekten im Objekt-Explorer  
 Der Objekt-Explorer verwendet zum Gruppieren von Informationen in Ordnern eine Baumstruktur. Zum Erweitern von Ordnern klicken Sie auf das Pluszeichen (+), oder doppelklicken Sie auf den Ordner. Erweitern Sie die Ordner, um detailliertere Informationen anzuzeigen. Klicken Sie mit der rechten Maustaste auf Ordner oder Objekte, um allgemeine Aufgaben auszuführen. Doppelklicken Sie auf Objekte, um die gängigste Aufgabe auszuführen.  

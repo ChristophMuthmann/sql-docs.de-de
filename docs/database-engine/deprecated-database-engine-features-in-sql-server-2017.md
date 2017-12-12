@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cff5b201eee23cad7d5f8a6d6fe7748e4441f400
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 256a8f2456c5d5f728322e80d03629c75d921161
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Als veraltet markierte Funktionen des Datenbankmoduls in SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Kompatibilitätsgrad|Datenbank-Kompatibilitätsgrad 110 und 120|Planen Sie, in einer zukünftigen Version die Datenbank und die Anwendung zu aktualisieren.|Datenbank-Kompatibilitätsgrad 110<br /><br /> Datenbank-Kompatibilitätsgrad 120||  
 |XML|XDR-Inlineschemagenerierung|Die XMLDATA-Direktive zur FOR XML-Option ist veraltet. Verwenden Sie XSD-Generierung für RAW- und AUTO-Modus. Es gibt keinen Ersatz für die XMLDATA-Direktive im EXPLICIT-Modus.|XMLDATA|181|  
 |Sichern und Wiederherstellen|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *Bandgerät*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *Datenträger*|BACKUP DATABASE oder LOG TO TAPE|235|  
-|Sichern und Wiederherstellen|sp_addumpdevice'**tape**'|sp_addumpdevice'**disk**'|ADDING TAPE DEVICE|236|  
+|Sichern und Wiederherstellen|sp_addumpdevice '**tape**'|sp_addumpdevice '**disk**'|ADDING TAPE DEVICE|236|  
 |Sichern und Wiederherstellen|sp_helpdevice|sys.backup_devices|sp_helpdevice|100|  
 |Sortierungen|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|Keine. Diese Sortierungen sind in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]vorhanden, aber nicht über fn_helpcollations sichtbar.|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|191<br /><br /> 192<br /><br /> 194|  
 |Sortierungen|Hindi<br /><br /> Macedonian|Diese Sortierungen sind in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] und höher vorhanden, aber über fn_helpcollations nicht sichtbar. Verwenden Sie stattdessen Macedonian_FYROM_90 und Indic_General_90.|Hindi<br /><br /> Macedonian|190<br /><br /> 193|  

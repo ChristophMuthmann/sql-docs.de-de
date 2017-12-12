@@ -3,8 +3,11 @@ title: SQL Editor (Visual Database Tools) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5b5c0c123950f5314a0f6fce46c92d64b20821df
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8d12d926366ece3db66b9edb950a0ec579e33f7f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL-Editor (Visual Database Tools)
-Verwenden Sie den SQL-Editor, um vorhandene gespeicherte Prozeduren, Funktionen, Trigger und SQL-Skripts zu bearbeiten. Dieses Fenster wird geöffnet, wenn Sie eines dieser Objekte öffnen. Wenn Sie eine neue SQL-Anweisung erstellen möchten, um sie auf Ihre Datenquelle anzuwenden, verwenden Sie den [SQL-Bereich](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) des Abfrage-Designers.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Verwenden Sie den SQL-Editor, um vorhandene gespeicherte Prozeduren, Funktionen, Trigger und SQL-Skripts zu bearbeiten. Dieses Fenster wird geöffnet, wenn Sie eines dieser Objekte öffnen. Wenn Sie eine neue SQL-Anweisung erstellen möchten, um sie auf Ihre Datenquelle anzuwenden, verwenden Sie den [SQL-Bereich](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) des Abfrage-Designers.  
   
 Der SQL-Editor bietet viele nützliche Funktionen für die SQL-Textbearbeitung, einschließlich der folgenden:  
   

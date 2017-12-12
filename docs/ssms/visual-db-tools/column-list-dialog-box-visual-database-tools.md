@@ -3,8 +3,11 @@ title: Spaltenliste (Dialogfeld) (Visual Database Tools) | Microsoft-Dokumentati
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bcc0686b1d0cca66764bde9dffe7ab725fd6e50f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7347d75f3f213cb5b39fa753fc33a184a36b29cf
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>Spaltenliste (Dialogfeld) (Visual Database Tools)
-Beim Schreiben von Abfragen kann es hilfreich sein, eine Liste der Spalten anzuzeigen, die in den ausgewählten Tabellenwertobjekten verfügbar sind.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Beim Schreiben von Abfragen kann es hilfreich sein, eine Liste der Spalten anzuzeigen, die in den ausgewählten Tabellenwertobjekten verfügbar sind.  
   
 Klicken Sie zum Anzeigen dieses Dialogfelds im Menü **Abfrage-Designer** im Diagramm mit der rechten Maustaste auf die Kopfzeile eines Tabellenwertobjekts, und klicken Sie dann auf **Eigenschaften**. Klicken Sie im Fenster **Eigenschaften** auf das Feld **Spaltenliste** . Klicken Sie dann rechts neben dem Feld auf die Auslassungspunkte **(...)** .  
   

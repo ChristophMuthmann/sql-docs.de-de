@@ -3,8 +3,11 @@ title: Bereitstellen von Anweisungen zum Herunterladen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b20bfc05f18b7c06f66cc8cf5f13462b073ae1bc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 91d211e60e91cdf59aa8877fed2f0c771a16a3e1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="post-download-instructions"></a>Bereitstellen von Anweisungen zum Herunterladen
-Mithilfe dieser Seite können Sie Downloadanweisungen für einen Zielserver angeben.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe dieser Seite können Sie Downloadanweisungen für einen Zielserver angeben.  
   
 ## <a name="options"></a>enthalten  
 **Anweisungstyp**  

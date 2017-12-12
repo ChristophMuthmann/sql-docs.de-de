@@ -3,8 +3,11 @@ title: "Kombinieren von Bedingungen, wenn „AND“ Vorrang hat (Visual Database
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a84b1997c18d5e23554dbb9f85e2c6baad4e9b58
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 375048e54f6cf1b95650a4f21deac8137ece5242
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>Kombinieren von Bedingungen, wenn AND Vorrang hat (Visual Database Tools)
-Um Bedingungen mit AND zu kombinieren, fügen Sie die Spalte zur Abfrage zweimal hinzu – je einmal für jede Bedingung. Um Bedingungen mit OR zu kombinieren, setzen Sie die erste Bedingung in die Filterspalte und die weiteren Bedingungen in eine Spalte **Oder...** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Um Bedingungen mit AND zu kombinieren, fügen Sie die Spalte zur Abfrage zweimal hinzu – je einmal für jede Bedingung. Um Bedingungen mit OR zu kombinieren, setzen Sie die erste Bedingung in die Filterspalte und die weiteren Bedingungen in eine Spalte **Oder...** .  
   
 Angenommen, Sie möchten nach Mitarbeitern suchen, die entweder seit mehr als fünf Jahren in der Firma beschäftigt sind und gering qualifizierte Tätigkeiten auf unterer Betriebsebene ausüben oder unabhängig vom Einstellungsdatum auf mittlerer Betriebsebene tätig sind. Diese Abfrage erfordert drei Bedingungen, von denen zwei mit AND verknüpft sind:  
   

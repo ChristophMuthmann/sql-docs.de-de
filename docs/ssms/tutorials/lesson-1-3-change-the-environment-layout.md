@@ -2,9 +2,12 @@
 title: "Ändern des Umgebungslayouts | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 140a909962391f037158178f9f5c85441714cfaa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ec585601316887d3968dc70795a09053e54d1868
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-1-3---change-the-environment-layout"></a>Lektion 1-3: Ändern des Umgebungslayouts
-Die Komponenten von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nehmen viel Platz auf dem Bildschirm ein. Wenn Sie sich mehr Platz verschaffen möchten, können Sie Komponenten von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] schließen, ausblenden oder verschieben. In den folgenden Übungen verschieben Sie Komponenten an verschiedene Stellen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Die Komponenten von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nehmen viel Platz auf dem Bildschirm ein. Wenn Sie sich mehr Platz verschaffen möchten, können Sie Komponenten von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] schließen, ausblenden oder verschieben. In den folgenden Übungen verschieben Sie Komponenten an verschiedene Stellen.  
   
 ## <a name="closing-and-hiding-components"></a>Schließen und Ausblenden von Komponenten  
   

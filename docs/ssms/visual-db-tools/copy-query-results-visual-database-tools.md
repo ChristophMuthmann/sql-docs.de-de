@@ -3,8 +3,11 @@ title: Kopieren von Abfrageergebnissen (Visual Database Tools) | Microsoft-Dokum
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a256975fbeed9461b13cd579382c3a0dbbd4d5ab
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5bab1e49dc6e83401fec2ac6f0210f27801a7387
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="copy-query-results-visual-database-tools"></a>Kopieren von Abfrageergebnissen (Visual Database Tools)
-Sie können das Resultset in Form von durch Tabstopps getrenntem Text aus dem Bereich **Ergebnisse** kopieren. Dabei kann das gesamte Resultset oder eine beliebige Anzahl zusammenhängender oder nicht zusammenhängender Zeilen oder Zellen kopiert werden.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können das Resultset in Form von durch Tabstopps getrenntem Text aus dem Bereich **Ergebnisse** kopieren. Dabei kann das gesamte Resultset oder eine beliebige Anzahl zusammenhängender oder nicht zusammenhängender Zeilen oder Zellen kopiert werden.  
   
 ### <a name="to-copy-result-set-text-from-the-results-pane"></a>So kopieren Sie den Resultset-Text aus dem Bereich Ergebnisse  
   

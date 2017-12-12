@@ -3,8 +3,11 @@ title: "Anpassen von Menüs und Tastenkombinationen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 34aac044681d6ba558799ed7bcbedbd2fde1411e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 04f57c9717643065fa50f1364586b9b886c92c4c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Anpassen von Menüs und Tastenkombinationen
-Mit einer Zugriffstaste können Sie einen Menübefehl oder eine Schaltfläche auswählen, indem Sie ALT+*<single letter>*drücken. Drücken Sie z. B. zum Öffnen des Menüs **Bearbeiten** die Tasten ALT+B. Mit dem Dialogfeld **Anpassen** können Sie Symbolleistenschaltflächen, Menüs und Menübefehle neu anordnen und ändern. Sie erhalten Anweisungen zum Ändern der Einstellungen mithilfe der Maus oder ausschließlich mithilfe der Tastatur.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mit einer Zugriffstaste können Sie einen Menübefehl oder eine Schaltfläche auswählen, indem Sie ALT+*<single letter>* drücken. Drücken Sie z. B. zum Öffnen des Menüs **Bearbeiten** die Tasten ALT+B. Mit dem Dialogfeld **Anpassen** können Sie Symbolleistenschaltflächen, Menüs und Menübefehle neu anordnen und ändern. Sie erhalten Anweisungen zum Ändern der Einstellungen mithilfe der Maus oder ausschließlich mithilfe der Tastatur.  
   
 Zugriffstasten für gespeicherte Prozeduren mit der STRG-TASTE können über die Seite **Tastatur** des Dialogfelds **Extras**/**Optionen** erstellt werden.  
   
