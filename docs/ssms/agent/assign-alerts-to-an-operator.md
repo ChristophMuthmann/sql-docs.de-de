@@ -3,8 +3,11 @@ title: Zuweisen von Warnungen zu einem Operator | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1f12a64b87badd99d7cf38dd248326c005ed6d2f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2b1d997f822ecf563c7550499e4e379e71cd6d15
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="assign-alerts-to-an-operator"></a>Zuweisen von Warnungen zu einem Operator
-In diesem Thema wird beschrieben, wie Warnungen des [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agents Operatoderen zugewiesen werden, damit diese in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] oder [!INCLUDE[tsql](../../includes/tsql_md.md)]Benachrichtigungen über Aufträge empfangen können.  
+# <a name="assign-alerts-to-an-operator"></a>Assign Alerts to an Operator
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie Warnungen des [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agents Operatoren zugewiesen werden, damit diese in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] oder [!INCLUDE[tsql](../../includes/tsql_md.md)] Benachrichtigungen über Aufträge empfangen können.  
   
 **In diesem Thema**  
   
@@ -63,7 +66,7 @@ Nur Mitglieder der festen Serverrolle **sysadmin** können Operatoren Warnungen 
   
 #### <a name="to-assign-alerts-to-an-operator"></a>So weisen Sie einem Operator Warnungen zu  
   
-1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Server zu erweitern, der den Operator enthält, dem Sie die Warnung zuweisen möchten.  
+1.  Klicken Sie im **Objekt-Explorer**auf das Pluszeichen, um den Server zu erweitern, der den Operator enthält, dem Sie die Warnung zuweisen möchten.  
   
 2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent**zu erweitern.  
   
