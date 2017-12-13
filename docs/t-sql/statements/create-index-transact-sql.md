@@ -59,11 +59,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2a7ab870eda08de78986c14233e4ebc79b397573
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 92e32f9a86265376a67466aa389f29ec9608a061
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -241,7 +241,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  *index_name*  
  Der Name des Indexes. Indexnamen müssen für eine Tabelle oder Sicht eindeutig sein, können aber innerhalb einer Datenbank mehrfach vorkommen. Indexnamen müssen den Regeln der [Bezeichner](../../relational-databases/databases/database-identifiers.md).  
   
- *Spalte*  
+ *column*  
  Gibt die Spalte(n) an, auf der bzw. denen der Index basiert. Geben Sie zwei oder mehr Spaltennamen an, um einen zusammengesetzten Index für die kombinierten Werte der angegebenen Spalten zu erstellen. Listet die Spalten im zusammengesetzten Index in der Reihenfolge der Sortierpriorität in den Klammern hinter einzuschließenden *Table_or_view_name*.  
   
  Bis zu 32 Spalten können in einem einzigen zusammengesetzten Indexschlüssel kombiniert werden. Alle Spalten in einem zusammengesetzten Indexschlüssel müssen sich in derselben Tabelle oder Sicht befinden. Die maximale zulässige Größe der kombinierten Indexwerte ist 900 Bytes für einen gruppierten Index oder 1.700 Bytes für einen nicht gruppierten Index. Die Grenzwerte sind 16 Spalten und 900 Byte für Versionen vor [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
@@ -422,17 +422,11 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  Wenn Statistiken pro Partition nicht unterstützt werden, wird die Option ignoriert und eine Warnung generiert. Inkrementelle Statistiken werden für folgende Statistiktypen nicht unterstützt:  
   
 -   Statistiken, die mit Indizes erstellt wurden, die über keine Partitionsausrichtung mit der Basistabelle verfügen.  
-  
 -   Statistiken, die für lesbare sekundäre Always On-Datenbanken erstellt wurden.  
-  
 -   Statistiken, die für schreibgeschützte Datenbanken erstellt wurden.  
-  
 -   Statistiken, die für gefilterte Indizes erstellt wurden.  
-  
 -   Statistiken, die für Sichten erstellt wurden.  
-  
 -   Statistiken, die für interne Tabellen erstellt wurden.  
-  
 -   Statistiken, die mit räumlichen Indizes oder XML-Indizes erstellt wurden.  
   
  DROP_EXISTING = {ON | **OFF** }  
@@ -473,15 +467,10 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  Indizes, einschließlich Indizes für globale temporäre Tabellen, können mit den folgenden Ausnahmen online erstellt werden:  
   
 -   XML-Index  
-  
 -   Index für eine lokale temporäre Tabelle.  
-  
 -   Eindeutiger gruppierter Anfangsindex für eine Sicht.  
-  
 -   Deaktivierte gruppierte Indizes.  
-  
 -   Gruppierter Index, sofern die zugrunde liegende Tabelle LOB-Datentypen enthält: **Image**, **Ntext**, **Text**, und räumliche Typen.  
-  
 -   **varchar(max)** und **varbinary(max)** Spalten nicht Teil eines Indexes sein. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) und im [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], wenn eine Tabelle enthält **varchar(max)** oder **varbinary(max)** Spalten ein gruppierter Index mit anderen Spalten möglich. erstellt oder neu erstellt, mit der **ONLINE** Option. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]lässt nicht zu den **ONLINE** option, wenn die Basistabelle enthält **varchar(max)** oder **varbinary(max)** Spalten.  
   
  Weitere Informationen finden Sie unter [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
@@ -511,7 +500,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  MAXDOP = *Max_degree_of_parallelism*  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Überschreibt die [Konfigurieren der max Degree of Parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) Konfigurationsoption für die Dauer des Indexvorgangs. Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.  
+ Überschreibt die **Max. Grad an Parallelität** Konfigurationsoption für die Dauer des Indexvorgangs. Weitere Informationen finden Sie unter [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.  
   
  *Max_degree_of_parallelism* sind möglich:  
   

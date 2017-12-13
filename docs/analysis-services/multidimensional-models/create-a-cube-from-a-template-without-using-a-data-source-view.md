@@ -2,12 +2,12 @@
 title: Erstellen Sie einen Cube ohne Verwendung einer Datenquellensicht aus einer Vorlage | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e5105826e0aff1721b379b9ad0b2e1a9f5208414
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8ebf7113a80cecd58a98108a82caa26d21d5d158
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Erstellen eines Cubes aus einer Vorlage, ohne eine Datenquellensicht zu verwenden
-  Wählen Sie **Cube ohne eine Datenquelle erstellen** auf der ersten Seite des Cube-Assistenten aus, um einen Cube ohne Verwendung einer Datenquellensicht zu erstellen. Später können Sie das relationale Schema für die Datenquellensicht mit dem Schemagenerierungs-Assistenten auf der Grundlage der Cubestruktur und möglicherweise anderer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte generieren. Weitere Informationen zum Generieren eines Schemas finden Sie unter [Schemagenerierungs-Assistent &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Wählen Sie **Cube ohne eine Datenquelle erstellen** auf der ersten Seite des Cube-Assistenten, um einen Cube ohne Verwendung einer Datenquellensicht zu erstellen. Später können Sie das relationale Schema für die Datenquellensicht mit dem Schemagenerierungs-Assistenten auf der Grundlage der Cubestruktur und möglicherweise anderer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte generieren. Weitere Informationen zum Generieren eines Schemas finden Sie unter [Schemagenerierungs-Assistent &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md).  
   
 ## <a name="selecting-the-build-method"></a>Auswählen der Erstellungsmethode  
  Klicken Sie im Cube-Assistenten auf der Seite **Erstellungsmethode auswählen** auf **Cube ohne eine Datenquelle erstellen**. Um den Cube mithilfe einer vorhandenen Cubevorlage zu erstellen, aktivieren Sie das Kontrollkästchen **Cubevorlage verwenden** . . Wenn Sie sich gegen die Verwendung einer Vorlage entscheiden, müssen Sie die Optionen manuell festlegen.  

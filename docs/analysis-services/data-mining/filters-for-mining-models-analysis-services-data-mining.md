@@ -2,12 +2,12 @@
 title: "Filter für Miningmodelle (Analysis Services – Datamining) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8bf35c6bd8086ba6fc61dce76853308c9cb34e2d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: de1d81ae0dba51e98cb8d883ca5e7ae22eb4314b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filter für Miningmodelle (Analysis Services – Data Mining)
-  Mithilfe der datenbasierten Modellfilterung können Sie Miningmodelle erstellen, die Teilmengen der Daten einer Miningstruktur verwenden. Die Filterung ermöglicht Flexibilität bei der Entwicklung der Miningstrukturen und der Datenquellen, da Sie eine einzelne Miningstruktur auf der Grundlage einer umfassenden Datenquellensicht erstellen können. Anschließend können Sie Filter erstellen, um nur einen Teil dieser Daten zu verwenden und mehrere Modelle zu trainieren und zu testen, anstatt für jede Teilmenge der Daten eine andere Struktur und ein zugehöriges Modell zu erstellen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Datenbasierte modellfilterung können Sie Miningmodelle erstellen, die Teilmengen von Daten in einer Miningstruktur verwenden. Die Filterung ermöglicht Flexibilität bei der Entwicklung der Miningstrukturen und der Datenquellen, da Sie eine einzelne Miningstruktur auf der Grundlage einer umfassenden Datenquellensicht erstellen können. Anschließend können Sie Filter erstellen, um nur einen Teil dieser Daten zu verwenden und mehrere Modelle zu trainieren und zu testen, anstatt für jede Teilmenge der Daten eine andere Struktur und ein zugehöriges Modell zu erstellen.  
   
  Zum Beispiel definieren Sie die Datenquellensicht für die Tabelle "Kunden" und verknüpfte Tabellen. Anschließend definieren Sie eine einzelne Miningstruktur, die alle Felder enthält, die Sie benötigen. Schließlich erstellen Sie ein Modell, das nach einem bestimmten Kundenattribut gefiltert wird, z. B. "Region". Sie können einfach eine Kopie dieses Modells erstellen und nur die Filterbedingungen ändern, um ein neues Modell auf der Grundlage einer anderen Region zu erzeugen.  
   

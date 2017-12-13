@@ -2,12 +2,12 @@
 title: Zuordnungsmodellabfragen | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 25c3f04c7ae61788f10cc488e5680107fb4e9a3e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b176b73816fb01ff7659e00f58dd4441bc689866
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="association-model-query-examples"></a>Beispiele für Zuordnungsmodellabfragen
-  Beim Erstellen einer Abfrage für ein Data Mining-Modell können Sie entweder eine Inhaltsabfrage oder eine Vorhersageabfrage auswählen. Die Inhaltsabfrage liefert Details über die während der Analyse ermittelten Regeln und Itemsets. Die Vorhersageabfrage nimmt hingegen Vorhersagen anhand der in den Daten gefundenen Zuordnungen vor. Für ein Zuordnungsmodell basieren Vorhersagen üblicherweise auf Regeln und können für Empfehlungen verwendet werden. Bei Abfragen des Inhalts wird hingegen die Beziehung zwischen Itemsets analysiert. Sie können auch Metadaten über das Modell abrufen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Wenn Sie eine Abfrage für ein Datamining-Modell erstellen, können Sie entweder eine Inhaltsabfrage Details über die Regeln und Itemsets, die während der Analyse ermittelten liefert erstellen oder Sie können eine Vorhersageabfrage, die in den Daten gefundenen Zuordnungen generiert erstellen Vorhersagen. Für ein Zuordnungsmodell basieren Vorhersagen üblicherweise auf Regeln und können für Empfehlungen verwendet werden. Bei Abfragen des Inhalts wird hingegen die Beziehung zwischen Itemsets analysiert. Sie können auch Metadaten über das Modell abrufen.  
   
  In diesem Abschnitt wird erklärt, wie diese Art von Abfragen für Modelle erstellt werden, die auf dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules-Algorithmus basieren.  
   

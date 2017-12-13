@@ -2,12 +2,12 @@
 title: "Unterstützte Datenquellen (SSAS – mehrdimensional) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 69f1519d6b3c03294469707a7e1485955f864a2e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 774c6a7a3de377c9bfa6073b26e8ce45d7b3477e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="supported-data-sources-ssas---multidimensional"></a>Unterstützte Datenquellen (SSAS – Mehrdimensional)
-  In diesem Thema werden die Datenquellentypen beschrieben, die Sie in einem tabellarischen Modell verwenden können.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dieses Thema beschreibt die Typen von Datenquellen, die Sie in einem mehrdimensionalen Modell verwenden können.  
   
 ##  <a name="bkmk_supported_ds"></a> Unterstützte Datenquellen  
  Sie können Daten aus den Datenquellen in der folgenden Tabelle abrufen. Bei der Installation von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]werden die für die einzelnen Datenquellen aufgelisteten Anbieter nicht von Setup installiert. Einige Anbieter wurden möglicherweise bereits mit anderen Anwendungen auf dem Computer installiert. In anderen Fällen müssen Sie den Anbieter herunterladen und installieren.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 |-|-|-|-|  
 |Quelle|Versionen|Dateityp|Anbieter*|  
 |Access-Datenbanken|Microsoft Access 2010, 2013, 2016|.accdb oder .mdb|Microsoft Jet 4.0 OLE DB-Anbieter|  
-|Relationale SQL Server-Datenbanken*|Microsoft SQL Server 2008, 2008 R2, 2012, 2014, 2016, [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] , Microsoft Analytics Platform System (APS)<br /><br /> <br /><br /> Hinweis: Auf [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Azure.com [finden Sie weitere Details zu](http://go.microsoft.com/fwlink/?LinkID=157856).<br /><br /> Hinweis: Das Analytics Platform System (APS) wurde früher als SQL Server Parallel Data Warehouse (PDW) bezeichnet. Ursprünglich war für das Herstellen einer Verbindung mit PDW von Analysis Services ein spezieller Datenanbieter erforderlich. Dieser Anbieter wurde in SQL Server 2012 ersetzt. Ab SQL Server 2012 wird der SQL Server Native Client für Verbindungen mit PDW/APS verwendet. Weitere Informationen zu APS finden Sie auf der Website [Microsoft Analytics Platform System](http://www.microsoft.com/en-us/server-cloud/products/analytics-platform-system/resources.aspx).|(–)|OLE DB-Anbieter für SQL Server<br /><br /> SQL Server Native Client OLE DB-Anbieter<br /><br /> OLE DB-Anbieter für SQL Server Native 11.0 Client<br /><br /> .NET Framework-Datenanbieter für SQL Client|  
+|Relationale SQL Server-Datenbanken*|Microsoft SQL Server 2008, 2008 R2, 2012, 2014, 2016, [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], Azure SQL Datawarehouse, Microsoft Analytics Platform System (APS)<br /><br /> <br /><br /> Hinweis: Auf [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Azure.com [finden Sie weitere Details zu](http://go.microsoft.com/fwlink/?LinkID=157856).<br /><br /> Hinweis: Analytics Platform System (APS) wurde früher als SQL Server Parallel Data Warehouse (PDW) bezeichnet. Ursprünglich war für das Herstellen einer Verbindung mit PDW von Analysis Services ein spezieller Datenanbieter erforderlich. Dieser Anbieter wurde in SQL Server 2012 ersetzt. Ab SQL Server 2012 wird der SQL Server Native Client für Verbindungen mit PDW/APS verwendet. Weitere Informationen zu APS finden Sie auf der Website [Microsoft Analytics Platform System](http://www.microsoft.com/en-us/server-cloud/products/analytics-platform-system/resources.aspx).|(–)|OLE DB-Anbieter für SQL Server<br /><br /> SQL Server Native Client OLE DB-Anbieter<br /><br /> OLE DB-Anbieter für SQL Server Native 11.0 Client<br /><br /> .NET Framework-Datenanbieter für SQL Client|  
 |Relationale Oracle-Datenbanken|Oracle 9i, 10g, 11g, 12g|(–)|OLE DB-Anbieter für Oracle<br /><br /> .NET Framework-Datenanbieter für Oracle Client<br /><br /> .NET Framework-Datenanbieter für SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Relationale Teradata-Datenbanken|Teradata V2R6, V12|(–)|OLE DB-Anbieter für TDOLEDB<br /><br /> .NET-Datenanbieter für Teradata|  
 |Relationale Informix-Datenbanken|V11.10|(–)|OLE DB-Anbieter für Informix|  

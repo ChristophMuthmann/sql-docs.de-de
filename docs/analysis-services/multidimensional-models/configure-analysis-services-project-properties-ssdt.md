@@ -2,12 +2,12 @@
 title: Konfigurieren von Analysis Services-Projekteigenschaften (SSDT) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 310906f7fa8ddc07f5643121e5120acf1135cb39
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d36e47029fb6fac4a7ba0bbfc846d1c7efac8aa9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>Konfigurieren von Analysis Services-Projekteigenschaften (SSDT)
-  Ein [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt wird mit bestimmten Standardeigenschaften definiert, die sich auf das Erstellen und Bereitstellen des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts auswirken.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], wird ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt wird mit bestimmten Standardeigenschaften, die Einfluss auf die Erstellung und Bereitstellung von definiert die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekt.  
   
  Zum Ändern der Projekteigenschaften klicken Sie mit der rechten Maustaste auf das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projektobjekt, und klicken Sie dann auf **Eigenschaften**. Alternativ können Sie im Menü **Projekt** auf Eigenschaften klicken.  
   

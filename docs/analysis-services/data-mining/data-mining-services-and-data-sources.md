@@ -2,12 +2,12 @@
 title: Datamining-Dienste und Datenquellen | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e4e1c93a69bbf7ee54c5ea217512778f0c73eeb7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3042b80feb8f40c7f371e7b42fd7e63e86618f48
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-services-and-data-sources"></a>Data Mining-Dienste und Datenquellen
-  Für Data Mining ist eine Verbindung zu einer Instanz von SQL Server Analysis Services erforderlich. Daten von einem Cube sind für Data Mining nicht erforderlich, und die Verwendung relationaler Quellen wird empfohlen. Data Mining verwendet jedoch vom [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Modul bereitgestellte Komponenten.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Datamining erfordert eine Verbindung mit einer Instanz von SQL Server Analysis Services. Daten von einem Cube sind für Data Mining nicht erforderlich, und die Verwendung relationaler Quellen wird empfohlen. Data Mining verwendet jedoch vom [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Modul bereitgestellte Komponenten.  
   
  Dieses Thema enthält Informationen, die erforderlich sind, wenn Sie eine Verbindung zu einer lokalen oder Remoteinstanz von SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] herstellen, um Data Mining-Modelle zu erstellen, zu verarbeiten, bereitzustellen oder abzufragen.  
   

@@ -2,12 +2,12 @@
 title: Miningmodellinhalt Sequence Clustering-Modellen | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8d0cc7b52ecffbc7a85be31047a8db97e7a1922b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 336dd3cc52fc72576c60c20c0e324f177b488837
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-content-for-sequence-clustering-models"></a>Miningmodellinhalt von Sequence Clustering-Modellen
-  In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den Microsoft Sequence Clustering-Algorithmus verwenden. Eine Erklärung der auf die Miningmodellinhalte bezogenen allgemeinen und statistischen Terminologie, die für alle Modelltypen gilt, finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dieses Thema beschreibt Miningmodellinhalt, der Modellen eigen ist, die den Microsoft Sequence Clustering-Algorithmus verwenden. Eine Erläuterung der allgemeinen Miningmodellinhalte, die für alle Modelltypen gelten, und Statistikterminologie finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-sequence-clustering-model"></a>Grundlegendes zur Struktur von Sequence Clustering-Modellen  
  Ein Sequence Clustering-Modell verfügt über einen einzigen übergeordneten Knoten (NOTE_TYPE = 1), der das Modell und die zugehörigen Metadaten darstellt. Der übergeordnete Knoten mit der Bezeichnung **(Alle)**verfügt über einen verknüpften Sequenzknoten (NODE_TYPE = 13), der alle Übergänge auflistet, die in den Trainingsdaten erkannt wurden.  

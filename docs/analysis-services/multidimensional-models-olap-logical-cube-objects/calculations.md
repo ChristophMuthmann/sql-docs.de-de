@@ -2,12 +2,12 @@
 title: Berechnungen | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0771e03eaa12e37cce685309fa776fe7f7c31443
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 660c506193bfd554d8bbf5c1183bfea9384bbb4c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="calculations"></a>Berechnungen
-  Eine Berechnung ist ein Ausdruck (Multidimensional Expressions) oder ein Skript, das verwendet wird, definieren Sie ein berechnetes Element, eine benannte Menge oder eine Zuweisung mit definiertem Bereich in einem Cube in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Mithilfe von Berechnungen können Sie einem Cube Objekte hinzufügen, die nicht durch die Daten des Cubes definiert sind, sondern über Ausdrücke, die auf andere Teile des Cubes, andere Cubes oder auch auf Informationen außerhalb der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbank verweisen können. Mithilfe von Berechnungen können Sie die Funktionen eines Cubes erweitern, wodurch Business Intelligence-Anwendungen flexibler und leistungsfähiger werden. Weitere Informationen zu skripterstellungsberechnungen finden Sie unter [Introduction to MDX Scripting in Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892). Weitere Informationen zu Leistungsproblemen im Zusammenhang mit MDX-Abfragen und-Berechnungen finden Sie unter der [SQL Server 2005 Analysis Services Performance Guide](http://go.microsoft.com/fwlink/?LinkId=81621).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Eine Berechnung ist ein Ausdruck (Multidimensional Expressions) oder ein Skript, das verwendet wird, definieren Sie ein berechnetes Element, eine benannte Menge oder eine Zuweisung mit definiertem Bereich in einem Cube in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Mithilfe von Berechnungen können Sie einem Cube Objekte hinzufügen, die nicht durch die Daten des Cubes definiert sind, sondern über Ausdrücke, die auf andere Teile des Cubes, andere Cubes oder auch auf Informationen außerhalb der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbank verweisen können. Mithilfe von Berechnungen können Sie die Funktionen eines Cubes erweitern, wodurch Business Intelligence-Anwendungen flexibler und leistungsfähiger werden. Weitere Informationen zu skripterstellungsberechnungen finden Sie unter [Introduction to MDX Scripting in Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892). Weitere Informationen zu Leistungsproblemen im Zusammenhang mit MDX-Abfragen und-Berechnungen finden Sie unter der [SQL Server 2005 Analysis Services Performance Guide](http://go.microsoft.com/fwlink/?LinkId=81621).  
   
 ## <a name="calculated-members"></a>Berechnete Elemente  
  Bei einem berechneten Element handelt es sich um ein Element, dessen Wert zur Laufzeit mithilfe eines MDX-Ausdrucks (Multidimensional Expressions) berechnet wird, den Sie beim Definieren des berechneten Elements angeben. Ein berechnetes Element ist für Business Intelligence-Anwendungen in gleicher Weise wie andere Elemente auch verfügbar. Durch berechnete Elemente wird die Größe des Cubes nicht erhöht, da nur die Definitionen im Cube gespeichert werden. Die Werte werden im Arbeitsspeicher berechnet, wenn sie zur Beantwortung einer Abfrage benötigt werden.  

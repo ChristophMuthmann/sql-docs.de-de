@@ -2,12 +2,12 @@
 title: DISCOVER_DIMENSION_STAT-Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ed2707a9ee417f8e019137034e90f1a9132948e2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bfe9352a73c2548bfa092eb88d04605b6721b4ed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discoverdimensionstat-rowset"></a>DISCOVER_DIMENSION_STAT-Rowset
-  Stellt Informationen zu einer Dimension bereit, einschließlich des Namens der Datenbank, die sie enthält, den Dimensionsnamen, ihre Attribute und die Anzahl der Elemente für jedes Attribut. In einem tabellarischen Modell entspricht dies den Spalten in einer Tabelle und der Anzahl von Werten in jeder Spalte.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält Informationen zu einer Dimension, einschließlich des Namens der Datenbank, die es, den Dimensionsnamen, ihre Attribute und eine Anzahl der Elemente für jedes Attribut enthält. In einem tabellarischen Modell entspricht dies den Spalten in einer Tabelle und der Anzahl von Werten in jeder Spalte.  
   
  **Gilt für:** tabellarische und mehrdimensionale Modelle  
   

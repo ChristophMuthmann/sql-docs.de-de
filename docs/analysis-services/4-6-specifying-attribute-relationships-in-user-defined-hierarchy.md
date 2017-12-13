@@ -2,12 +2,12 @@
 title: 4-6-angeben von Attributbeziehungen in eine benutzerdefinierte Hierarchie | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f8db9cd243cb27505bfda4eb2342802b8bb588ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 03b086e70e3d1fdb085faac12392cc4265af5dcb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="4-6-specifying-attribute-relationships-in-user-defined-hierarchy"></a>4-6-angeben von Attributbeziehungen in eine benutzerdefinierte Hierarchie
-Wie Sie bereits in diesem Lernprogramm erfahren haben, können Sie Attributhierarchien in Ebenen innerhalb von Benutzerhierarchien organisieren, um Navigationspfade für Benutzer in einem Cube zur Verfügung zu stellen. Eine Benutzerhierarchie kann eine natürliche Hierarchie wie beispielsweise Ort, Land/Region und Staat repräsentieren oder nur einen Navigationspfad wie beispielsweise Angestelltenname, Titel und Abteilungsname. Für den Benutzer, der in einer Hierarchie navigiert, stellen sich diese beiden Hierarchietypen gleich dar.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Da Sie bereits in diesem Lernprogramm erfahren haben, können Sie Attributhierarchien in Ebenen innerhalb einer benutzerdefinierten Hierarchie um Navigationspfade für Benutzer in einem Cube bereitzustellen organisieren. Eine Benutzerhierarchie kann eine natürliche Hierarchie wie beispielsweise Ort, Land/Region und Staat repräsentieren oder nur einen Navigationspfad wie beispielsweise Angestelltenname, Titel und Abteilungsname. Für den Benutzer, der in einer Hierarchie navigiert, stellen sich diese beiden Hierarchietypen gleich dar.  
   
 Wenn Sie Attributbeziehungen zwischen den Attributen definieren, die die Ebenen bilden, kann von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] mithilfe einer natürlichen Hierarchie eine Aggregation von einem Attribut verwendet werden, um die Ergebnisse von einem verknüpften Attribut zu erhalten. Wenn keine Beziehungen zwischen Attributen definiert sind, werden von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] alle Nicht-Schlüssel-Attribute vom Schlüsselattribut aggregiert. Sofern die zugrunde liegenden Daten dies unterstützen, sollten Sie daher auch Attributbeziehungen zwischen Attributen definieren. Durch Definieren von Attributbeziehungen wird die Dimensions-, Partitions- und Abfrageverarbeitung verbessert. Weitere Informationen finden Sie unter [Definieren von Attributbeziehungen](../analysis-services/multidimensional-models/attribute-relationships-define.md) und [Attributbeziehungen](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
   

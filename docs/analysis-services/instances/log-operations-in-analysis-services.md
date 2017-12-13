@@ -2,12 +2,12 @@
 title: "Vorgänge in Analysis Services protokolliert | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 546e28af279bd62018f54a7f1bff33c6e27b8883
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 85a9806ca93e6b6216d8327d785803e1de19abde
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="log-operations-in-analysis-services"></a>Protokollvorgänge in Analysis Services
-  Eine Analysis Services-Instanz protokolliert Serverbenachrichtigungen, Fehler und Warnungen in der Datei "msmdsrv.log" – eine Datei für jede Instanz, die Sie installieren. Administratoren finden in diesem Protokoll Einblicke in routinemäßige und außergewöhnliche Ereignisse. In neueren Versionen wurde die Protokollierung verbessert, um weitere Informationen zu erfassen. Protokolldatensätze enthalten jetzt die Produktversion und Editionsinformationen sowie Prozessor, Speicher, Konnektivität und blockierende Ereignisse. Sie können die gesamte Änderungsliste unter [Protokollierungsverbesserungen](http://support.microsoft.com/kb/2965035)einsehen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services-Instanz werden serverbenachrichtigungen, Fehler und Warnungen auf die Datei "Msmdsrv.log" – einer für jede Instanz protokolliert, die Sie installieren. Administratoren finden in diesem Protokoll Einblicke in routinemäßige und außergewöhnliche Ereignisse. In neueren Versionen wurde die Protokollierung verbessert, um weitere Informationen zu erfassen. Protokolldatensätze enthalten jetzt die Produktversion und Editionsinformationen sowie Prozessor, Speicher, Konnektivität und blockierende Ereignisse. Sie können die gesamte Änderungsliste unter [Protokollierungsverbesserungen](http://support.microsoft.com/kb/2965035)einsehen.  
   
  Neben dem integrierten Protokollierungsfeature verwenden viele Administratoren und Entwickler auch die von der Analysis Services-Community bereitgestellten Tools zum Sammeln von Daten zu Servervorgängen, wie z.B. **ASTrace**. Die Download-Links finden Sie unter [Microsoft SQL Server Community Samples: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) (Microsoft SQL Server-Community-Beispiele: Analysis Services).  
   

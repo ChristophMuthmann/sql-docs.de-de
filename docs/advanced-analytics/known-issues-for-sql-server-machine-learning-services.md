@@ -1,11 +1,12 @@
 ---
 title: Bekannte Probleme in Machine Learning Services | Microsoft Docs
 ms.date: 11/16/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: r-services
+ms.service: 
+ms.component: advanced-analytics
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: d5835b1c79ec1ce26e200b02fa9ba6e03378187b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: HT
+ms.openlocfilehash: 62eeb13d172325d70d4efcbc014a3525fabf4136
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Bekannte Probleme in Machine Learning-Diensten
 

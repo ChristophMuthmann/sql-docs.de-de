@@ -2,12 +2,12 @@
 title: Erstellen und Verwalten einer lokalen Partition (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b2e5047564e2001f87691d622a736c9ad28b87c5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cf08f0031c6e805b5677a0e551a20c941d0dce34
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Erstellen und Verwalten einer lokalen Partition (Analysis Services)
-  Sie können zusätzliche Partitionen für eine Measuregruppe erstellen, um die Verarbeitungsleistung zu verbessern. Durch die Verwendung mehrerer Partitionen können Sie Faktendaten einer entsprechenden Anzahl physischer Datendateien sowohl auf lokalen als auch auf Remoteservern zuordnen. Da Partitionen in Analysis Services unabhängig und parallel verarbeitet werden können, erhalten Sie eine bessere Kontrolle über die Arbeitsauslastungen auf dem Server.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sie können zusätzliche Partitionen für eine Measuregruppe zur Verbesserung der verarbeitungsleistung erstellen. Durch die Verwendung mehrerer Partitionen können Sie Faktendaten einer entsprechenden Anzahl physischer Datendateien sowohl auf lokalen als auch auf Remoteservern zuordnen. Da Partitionen in Analysis Services unabhängig und parallel verarbeitet werden können, erhalten Sie eine bessere Kontrolle über die Arbeitsauslastungen auf dem Server.  
   
  Partitionen können in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] während des Modellentwurfs oder nach der Bereitstellung der Projektmappe mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder XMLA erstellt werden. Es empfiehlt sich, nur einen von beiden Ansätzen zu nutzen. Wenn Sie zwischen den Tools wechseln, kann es vorkommen, dass die an einer bereitgestellten Datenbank in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vorgenommenen Änderungen überschrieben werden, wenn die Projektmappe anschließend mithilfe von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]erneut bereitgestellt wird.  
   

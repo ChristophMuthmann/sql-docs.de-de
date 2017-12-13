@@ -2,12 +2,12 @@
 title: MDSCHEMA_MEMBERS-Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a5ac98919c5ac10900eb69c9fe7319c6e8b22a75
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bff8fc8c121f88dbc8bf7cbdc0b2ce1705934702
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdschemamembers-rowset"></a>MDSCHEMA_MEMBERS-Rowset
-  Beschreibt die Elemente innerhalb einer Datenbank.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Beschreibt die Elemente innerhalb einer Datenbank an.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Die **MDSCHEMA_MEMBERS** Rowset enthält die folgenden Spalten.  

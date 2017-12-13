@@ -2,12 +2,12 @@
 title: Entwickeln mit Analysis Services Scripting Language (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8ba45c74f873bc597dc9f5efc734259d9c98b6a2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 45b116586a0ce328815d8139b751547045fa85f8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="developing-with-analysis-services-scripting-language-assl"></a>Entwickeln mit Analysis Services Scripting Language (ASSL)
-  Analysis Services Scripting Language (ASSL) ist eine Erweiterung, die XMLA durch eine Objektdefinitionssprache und Befehlssprache zum Erstellen und Verwalten von Analysis Services-Strukturen direkt auf dem Server ergänzt. Sie können ASSL in benutzerdefinierten Anwendung zur Kommunikation mit Analysis Services über das XMLA-Protokoll verwenden. ASSL umfasst zwei Teile:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Services Scripting Language (ASSL) ist eine Erweiterung zu XMLA, die eine objektdefinitionssprache und Befehlssprache zum Erstellen und Verwalten von Analysis Services-Datenstrukturen direkt auf dem Server hinzugefügt. Sie können ASSL in benutzerdefinierten Anwendung zur Kommunikation mit Analysis Services über das XMLA-Protokoll verwenden. ASSL umfasst zwei Teile:  
   
 -   Eine (Data Definition Language, Datendefinitionssprache) oder objektdefinitionssprache, definiert und beschreibt eine Instanz von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], sowie die Datenbanken und Datenbankobjekte, die die Instanz enthält.  
   

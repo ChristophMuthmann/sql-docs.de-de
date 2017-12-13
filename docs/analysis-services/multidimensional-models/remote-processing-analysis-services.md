@@ -2,12 +2,12 @@
 title: Remote verarbeiten (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 59113cc41bf1e7805b033ff0af68ee2c1accda3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 190fc7bd8fa6a88d5a55068f32a4c55d2d1fd455
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="remote-processing-analysis-services"></a>Remoteverarbeitung (Analysis Services)
-  Sie können die geplante oder unbeaufsichtigte Verarbeitung auf einer Remoteinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ausführen, wobei die Verarbeitungsanforderung von einem Computer stammt, jedoch auf einem anderen Computer im selben Netzwerk ausgeführt wird.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sie können die geplante oder unbeaufsichtigte Verarbeitung auf einer Remoteinstanz ausführen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz, in dem das Verarbeiten der Anforderung von einem Computer stammt, jedoch auf einem anderen Computer im selben Netzwerk ausgeführt wird.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
   

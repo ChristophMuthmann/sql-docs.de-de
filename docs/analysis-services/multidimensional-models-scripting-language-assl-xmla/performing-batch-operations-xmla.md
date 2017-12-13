@@ -2,12 +2,12 @@
 title: "Ausführen von Batchvorgängen (XMLA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 509554d21fc56088d5be341cd828b8b8ed8e3d60
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 09f95f71f20800f5a0250aec83c505e8aaf99be1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="performing-batch-operations-xmla"></a>Ausführen von Batchvorgängen (XMLA)
-  Können Sie die [Batch](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) -Befehl in XML for Analysis (XMLA) mehrere XMLA-Befehle, die mit einer einzigen XMLA-ausführen [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) Methode. Sie können mehrere Befehle, die in enthaltenen Ausführen der **Batch** -Befehl entweder als einzelne Transaktion oder als individuelle Transaktionen für jeden Befehl in Serie oder parallel. Sie können auch angeben, Out-of-Line-Bindungen und andere Eigenschaften in der **Batch** Befehl für die Verarbeitung mehrerer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Objekte.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Können Sie die [Batch](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) -Befehl in XML for Analysis (XMLA) mehrere XMLA-Befehle, die mit einer einzigen XMLA-ausführen [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) Methode. Sie können mehrere Befehle, die in enthaltenen Ausführen der **Batch** -Befehl entweder als einzelne Transaktion oder als individuelle Transaktionen für jeden Befehl in Serie oder parallel. Sie können auch angeben, Out-of-Line-Bindungen und andere Eigenschaften in der **Batch** Befehl für die Verarbeitung mehrerer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Objekte.  
   
 ## <a name="running-transactional-and-nontransactional-batch-commands"></a>Ausführen von transaktionalen und nicht transaktionalen Batchbefehlen  
  Die **Batch** Befehl führt die Befehle in einer von zwei Methoden:  

@@ -2,12 +2,12 @@
 title: Dimensionen in mehrdimensionalen Modellen | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 73d367008bc1b3be6f4e3f6f5885adf79437f4c0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 33c9c09cdcfae67f469585fa69fda626696f1856
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dimensions-in-multidimensional-models"></a>Dimensionen in mehrdimensionalen Modellen
-  Eine Datenbankdimension ist eine Auflistung verknüpfter Objekte, Attribute genannt, mit deren Hilfe Informationen zu Faktendaten in einem oder mehreren Cubes zur Verfügung gestellt werden können. Typische Attribute in einer Produktdimension können z. B. Produktname, Produktkategorie, Produktlinie, Produktgröße und Produktpreis sein. Diese Objekte sind an eine oder mehrere Spalten in einer oder mehreren Tabellen in einer Datenquellensicht gebunden. Standardmäßig sind diese Attribute als Attributhierarchien sichtbar und dienen zum besseren Verständnis der Faktdaten in einem Cube. Attribute können in Form von benutzerdefinierten Hierarchien organisiert werden, die Navigationspfade bereitstellen, um Benutzer beim Durchsuchen der Daten in einem Cube zu unterstützen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Eine Datenbankdimension ist eine Auflistung verknüpfter Objekte, Attribute genannt, die verwendet werden kann, um Informationen zu Faktendaten in einem oder mehreren Cubes bereitzustellen. Typische Attribute in einer Produktdimension können z. B. Produktname, Produktkategorie, Produktlinie, Produktgröße und Produktpreis sein. Diese Objekte sind an eine oder mehrere Spalten in einer oder mehreren Tabellen in einer Datenquellensicht gebunden. Standardmäßig sind diese Attribute als Attributhierarchien sichtbar und dienen zum besseren Verständnis der Faktdaten in einem Cube. Attribute können in Form von benutzerdefinierten Hierarchien organisiert werden, die Navigationspfade bereitstellen, um Benutzer beim Durchsuchen der Daten in einem Cube zu unterstützen.  
   
  Cubes enthalten alle Dimensionen, auf die Benutzer ihre Analysen von Faktendaten stützen. Eine Instanz einer Datenbankdimension in einem Cube wird Cubedimension genannt. Sie bezieht sich auf eine oder mehrere Measuregruppen in einem Cube. Eine Datenbankdimension kann mehrere Male in einem Cube verwendet werden. Eine Faktentabelle kann z. B. mehrere zeitbezogene Fakten aufweisen, und es kann eine separate Cubedimension definiert werden, die die Analyse der einzelnen zeitbezogenen Fakten unterstützt. Es muss jedoch nur eine zeitbezogene Datenbankdimension vorhanden sein, was auch bedeutet, dass nur eine zeitbezogene relationale Datenbanktabelle vorhanden sein muss, um mehrere zeitbasierte Cubedimensionen zu unterstützen.  
   

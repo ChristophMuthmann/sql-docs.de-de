@@ -2,12 +2,12 @@
 title: Clusteringmodellabfragen | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e60908ae9bba2e5f549b1f3fc57581553785938f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2b01f01f0ed67f490f32e9310cbb1c239c3cbe17
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="clustering-model-query-examples"></a>Beispiele für Clusteringmodellabfragen
-  Wenn Sie eine Abfrage für ein Data Mining-Modell erstellen, können Sie Metadaten über das Modell abrufen oder eine Inhaltsabfrage erstellen, die Details über die in der Analyse erkannten Muster bereitstellt. Sie können auch eine Vorhersageabfrage erstellen, die anhand der Muster des Modells Vorhersagen für neue Daten generiert. Jeder Abfragetyp stellt andere Informationen bereit. Eine Inhaltsabfrage stellt beispielsweise zusätzliche Details über die gefundenen Cluster zur Verfügung, während eine Vorhersageabfrage Aufschluss darüber gibt, zu welchem Cluster ein neuer Datenpunkt höchstwahrscheinlich gehört.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Wenn Sie eine Abfrage für ein Datamining-Modell erstellen, können Sie Metadaten zum Modell abrufen oder erstellen eine Inhaltsabfrage, die Details über die in der Analyse erkannten Muster bereitstellt. Sie können auch eine Vorhersageabfrage erstellen, die anhand der Muster des Modells Vorhersagen für neue Daten generiert. Jeder Abfragetyp stellt andere Informationen bereit. Eine Inhaltsabfrage stellt beispielsweise zusätzliche Details über die gefundenen Cluster zur Verfügung, während eine Vorhersageabfrage Aufschluss darüber gibt, zu welchem Cluster ein neuer Datenpunkt höchstwahrscheinlich gehört.  
   
  In diesem Abschnitt wird erklärt, wie die Abfragen für Modelle erstellt werden, die auf dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering-Algorithmus basieren.  
   

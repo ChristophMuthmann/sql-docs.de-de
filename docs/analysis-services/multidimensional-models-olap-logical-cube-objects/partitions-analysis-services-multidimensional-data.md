@@ -2,12 +2,12 @@
 title: "Partitionen (Analysis Services – mehrdimensionale Daten) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -33,14 +33,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: eeeec758905021bfb1b352fb325810f096e3292d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dab66f2e60e602f163f3c0986719655b6f89f3a5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>Partitionen (Analysis Services – Mehrdimensionale Daten)
-  Eine Partition ist ein Container für einen Teil der Measuregruppendaten. Partitionen sind in einer MDX-Abfrage nicht sichtbar, da alle Abfragen den gesamten Inhalt der Measuregruppe wiedergeben, unabhängig davon, wie viele Partitionen für die Measuregruppe defniert wurden. Der Dateninhalt einer Partition wird durch die Abfragebindungen der Partition und die Slicingausdrücke definiert.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Eine Partition ist ein Container für einen Teil der Measuregruppendaten. Partitionen sind in einer MDX-Abfrage nicht sichtbar, da alle Abfragen den gesamten Inhalt der Measuregruppe wiedergeben, unabhängig davon, wie viele Partitionen für die Measuregruppe defniert wurden. Der Dateninhalt einer Partition wird durch die Abfragebindungen der Partition und die Slicingausdrücke definiert.  
   
  Ein einfaches <xref:Microsoft.AnalysisServices.Partition>-Objekt besteht aus grundlegenden Informationenen, der Slicingdefinition, dem Aggregationsentwurf usw. Grundlegende Informationen beinhalten den Namen der Partition, den Speichermodus, den Verarbeitungsmodus usw. Die Slicingdefinition ist ein MDX-Ausdruck, der ein Tupel oder einen Satz angibt. Die Slicingdefinition besitzt die gleichen Einschränkungen wie die StrToSet MDX-Funktion. Zusammen mit dem CONSTRAINED-Parameter kann die Slicingdefinition Dimensionen, Hierarchien, Ebenen- und Elementnamen, Schlüssel, eindeutige Namen oder andere benannte Objekte in dem Cube verwenden, jedoch keine MDX-Funktionen. Der Aggregationsentwurf ist eine Auflistung von Aggregationsdefinitionen, die für mehrere Partitionen freigegeben sein können. Der Standard wird vom Aggregationsentwurf des übergeordneten Cubes übernommen.  
   

@@ -2,12 +2,12 @@
 title: Durchsuchen eines Modells mit dem Microsoft Struktur-Viewer | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -32,14 +32,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 709a209b6149a38e7bc33d9734c13ae4e9b81dee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bb13244b95652917fdf09d017d66f927be915c8b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Durchsuchen eines Modells mit dem Microsoft Struktur-Viewer
-  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Struktur-Viewer in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zeigt Entscheidungsbäume an, die mithilfe des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus erstellt werden. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus ist ein hybrider Entscheidungsstrukturalgorithmus, der sowohl Klassifizierung als auch Regression unterstützt. Deshalb können Sie auch diesen Viewer verwenden, um Modelle auf Grundlage des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus anzuzeigen. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus wird für vorhersagende Modellierung sowohl diskreter als auch fortlaufender Attribute verwendet. Weitere Informationen zu diesem Algorithmus finden Sie unter [Microsoft Decision Trees Algorithm](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Struktur-Viewer in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zeigt Entscheidungsbäume an, die mit basieren die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus ist ein hybrider Entscheidungsstrukturalgorithmus, der sowohl Klassifizierung als auch Regression unterstützt. Deshalb können Sie auch diesen Viewer verwenden, um Modelle auf Grundlage des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus anzuzeigen. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus wird für vorhersagende Modellierung sowohl diskreter als auch fortlaufender Attribute verwendet. Weitere Informationen zu diesem Algorithmus finden Sie unter [Microsoft Decision Trees Algorithm](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md).  
   
 > [!NOTE]  
 >  Wenn Sie detaillierte Informationen über die im Modell verwendeten Formeln und die entdeckten Muster sehen möchten, verwenden Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree-Viewer. Weitere Informationen finden Sie unter [Durchsuchen eines Modells mit dem Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) oder [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).  

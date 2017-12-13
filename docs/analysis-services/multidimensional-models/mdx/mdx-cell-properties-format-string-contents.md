@@ -2,12 +2,12 @@
 title: FORMAT_STRING-Inhalt (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 590521cd679b4717e4240602634bc05e8d73d49f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5116ad72af06d2820c2af6ed0957d9030d971747
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>MDX-Cell Properties - FORMAT_STRING-Inhalt
-  Die **FORMAT_STRING** -Zelleigenschaft formatiert die **VALUE** -Zelleigenschaft, indem sie den Wert für die **FORMATTED_VALUE** -Zelleigenschaft erstellt. Die **FORMAT_STRING** -Zelleigenschaft behandelt sowohl Zeichenfolgenwerte als auch numerische Rohdaten, indem sie einen Formatausdruck auf den Wert anwendet, um einen formatierten Wert für die **FORMATTED_VALUE** -Zelleigenschaft zurückzugeben. Die folgenden Tabellen geben die Syntax und die Formatierungszeichen detailliert an, mit denen Zeichenfolgenwerte und numerische Werte behandelt werden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Die **FORMAT_STRING** -Zelleigenschaft formatiert die **Wert** Zelleigenschaft, indem den Wert für die **FORMATTED_VALUE** Zelleigenschaft. Die **FORMAT_STRING** -Zelleigenschaft behandelt sowohl Zeichenfolgenwerte als auch numerische Rohdaten, indem sie einen Formatausdruck auf den Wert anwendet, um einen formatierten Wert für die **FORMATTED_VALUE** -Zelleigenschaft zurückzugeben. Die folgenden Tabellen geben die Syntax und die Formatierungszeichen detailliert an, mit denen Zeichenfolgenwerte und numerische Werte behandelt werden.  
   
 ## <a name="string-values"></a>Zeichenfolgenwerte  
  Ein Formatausdruck für Zeichenfolgen kann aus einem Abschnitt oder aus zwei durch ein Semikolon (;) getrennten Abschnitten bestehen.  

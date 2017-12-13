@@ -2,12 +2,12 @@
 title: "Erteilen von Berechtigungen für ein Datenquellenobjekt (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c774f7711a32eb512c28914146b05f2db52f4b2c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5a08c7f67120126f836552af70bf97e0b6cda366
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>Erteilen von Berechtigungen für ein Datenquellenobjekt (Analysis Services)
-  Im Normalfall benötigen die meisten Benutzer von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] keinen Zugriff auf die Datenquellen, die einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt zugrunde liegen. Sie fragen die Daten in der Regel nur in einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank ab. Allerdings muss ein Benutzer im Zusammenhang mit dem Data Mining, z. B. beim Ausführen von Vorhersagen auf der Basis eines Miningmodells, die aus einem Miningmodell abgeleiteten Daten mit den vom Benutzer bereitgestellten Daten verknüpfen. Um eine Verbindung mit der Datenquelle, in der sich die vom Benutzer bereitgestellten Daten befinden, herstellen zu können, verwendet der Benutzer eine DMX-Abfrage (Data Mining-Erweiterungen), die sowohl die [OPENQUERY &#40;DMX&#41;](../../dmx/source-data-query-openquery.md)-Klausel als auch die [OPENROWSET &#40;DMX&#41;](../../dmx/source-data-query-openrowset.md)-Klausel enthält.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In der Regel die meisten Benutzer von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] keinen Zugriff auf die Datenquellen, die zugrunde liegen ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekt. Sie fragen die Daten in der Regel nur in einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank ab. Allerdings muss ein Benutzer im Zusammenhang mit dem Data Mining, z. B. beim Ausführen von Vorhersagen auf der Basis eines Miningmodells, die aus einem Miningmodell abgeleiteten Daten mit den vom Benutzer bereitgestellten Daten verknüpfen. Um eine Verbindung mit der Datenquelle, in der sich die vom Benutzer bereitgestellten Daten befinden, herstellen zu können, verwendet der Benutzer eine DMX-Abfrage (Data Mining-Erweiterungen), die sowohl die [OPENQUERY &#40;DMX&#41;](../../dmx/source-data-query-openquery.md)-Klausel als auch die [OPENROWSET &#40;DMX&#41;](../../dmx/source-data-query-openrowset.md)-Klausel enthält.  
   
  Zum Ausführen einer DMX-Abfrage, die eine Verbindung mit einer Datenquelle herstellt, muss der Benutzer Zugriff auf das Datenquellenobjekt innerhalb der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank haben. Standardmäßig haben nur Server- oder Datenbankadministratoren Zugriff auf Datenquellenobjekte. Dies bedeutet, dass ein Benutzer nur dann auf ein Datenquellenobjekt zugreifen kann, wenn er von einem Administrator entsprechende Berechtigungen erhält.  
   

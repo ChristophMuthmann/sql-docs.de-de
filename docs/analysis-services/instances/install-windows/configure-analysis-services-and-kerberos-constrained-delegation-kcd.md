@@ -2,12 +2,12 @@
 title: "Konfigurieren von Analysis Services und eingeschränkte Kerberos-Delegierung (KCD) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 95a002a015a94f0b6ad69bc2331403604717d778
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ae2cafe597e5540a58cc89e28cee87516942d021
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>Konfigurieren von Analysis Services und der eingeschränkten Kerberos-Delegierung
-  Die eingeschränkte Kerberos-Delegierung (Kerberos Constrained Delegation, KCD) ist ein Authentifizierungsprotokoll, das Sie mit der Windows-Authentifizierung konfigurieren können, um die Clientanmeldeinformationen in Ihrer gesamten Umgebung von Dienst zu Dienst zu delegieren. Die KCD erfordert zusätzliche Infrastruktur, z. B. einen Domänencontroller, und eine zusätzliche Konfiguration Ihrer Umgebung. Die KCD wird für verschiedene Szenarios vorausgesetzt, bei denen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] - und [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Daten mit SharePoint 2016 verwendet werden. In SharePoint 2016 wurde Excel Services aus der SharePoint-Farm auf einen getrennten, neuen Server, den sog. **Office Online Server**, ausgelagert. Da der Office Online Server getrennt ist, gibt es vermehrt Bedarf an einer Möglichkeit, Clientanmeldeinformationen in den typischen Szenarien mit zwei Hops zu delegieren.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Kerberos-Delegierung (KCD) eines Authentifizierungsprotokolls ist, das Sie mit Windows-Authentifizierung zum Delegieren von Anmeldeinformationen von Clients konfigurieren können, Dienst zu Dienst in Ihrer gesamten Umgebung. Die KCD erfordert zusätzliche Infrastruktur, z. B. einen Domänencontroller, und eine zusätzliche Konfiguration Ihrer Umgebung. Die KCD wird für verschiedene Szenarios vorausgesetzt, bei denen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] - und [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Daten mit SharePoint 2016 verwendet werden. In SharePoint 2016 wurde Excel Services aus der SharePoint-Farm auf einen getrennten, neuen Server, den sog. **Office Online Server**, ausgelagert. Da der Office Online Server getrennt ist, gibt es vermehrt Bedarf an einer Möglichkeit, Clientanmeldeinformationen in den typischen Szenarien mit zwei Hops zu delegieren.  
   
 ||  
 |-|  

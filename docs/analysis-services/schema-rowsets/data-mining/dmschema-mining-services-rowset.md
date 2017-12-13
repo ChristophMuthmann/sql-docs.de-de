@@ -2,12 +2,12 @@
 title: DMSCHEMA_MINING_SERVICES-Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 56d83a4651662294ef1af8c41c741e2e32a3f4e4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4a7a400ba01989b8b4bb74d682a2c3533fa9127f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dmschemaminingservices-rowset"></a>DMSCHEMA_MINING_SERVICES-Rowset
-  Stellt eine Beschreibung jedes Data Mining-Algorithmus bereit, den der Anbieter unterstützt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält eine Beschreibung der einzelnen Datamining-Algorithmus, der vom Anbieter unterstützt.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Die **DMSCHEMA_MINING_SERVICES** Rowset enthält die folgenden Spalten.  

@@ -2,12 +2,12 @@
 title: Programmieren AMO-OLAP-von erweiterten Objekten | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b58d475dfab97de8076bf058bfdd1171ddb37f35
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 924f2a618b029d3724a2435fa1a27287d454247e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>Programmieren von erweiterten AMO OLAP-Objekten
-  In diesem Thema werden die Programmierdetails von erweiterten OLAP-Objekten in Analysis Management Objects (AMO) erläutert. Dieses Thema enthält folgende Abschnitte:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Dieses Thema erklärt, dass der Analysis Management Objects (AMO) Programmierdetails OLAP-Objekte erweitert. Dieses Thema enthält folgende Abschnitte:  
   
 -   [Aktionsobjekte](#Action)  
   

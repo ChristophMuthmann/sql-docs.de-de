@@ -2,12 +2,12 @@
 title: Sichern und Wiederherstellen von Analysis Services-Datenbanken | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6f5db5fe3911767be37930fb7d195efffb826042
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f750fc5c1c991b8cf4392d427855f583c478c028
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Sichern und Wiederherstellen von Analysis Services-Datenbanken
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verfügt über Sicherungs- und Wiederherstellungsfunktionen, weshalb Sie für eine Datenbank und ihre Objekte einen Zustand wiederherstellen können, der zu einem bestimmten Zeitpunkt gültig war. Die Sicherung und Wiederherstellung ist auch eine zulässige Methode zum Migrieren von Datenbanken zu aktualisierten Servern, zum Verschieben von Datenbanken zwischen Servern oder zum Bereitstellen einer Datenbank auf einem Produktionsserver. Zur Datenwiederherstellung sollten Sie, falls Sie noch nicht über einen Sicherungsplan verfügen und Ihre Daten wertvoll sind, so schnell wie möglich einen solchen Plan entwerfen und implementieren.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sicherungs- und Wiederherstellungsfunktionen verfügt, sodass Sie eine Datenbank und ihre Objekte aus einem bestimmten Zeitpunkt wiederherstellen können. Die Sicherung und Wiederherstellung ist auch eine zulässige Methode zum Migrieren von Datenbanken zu aktualisierten Servern, zum Verschieben von Datenbanken zwischen Servern oder zum Bereitstellen einer Datenbank auf einem Produktionsserver. Zur Datenwiederherstellung sollten Sie, falls Sie noch nicht über einen Sicherungsplan verfügen und Ihre Daten wertvoll sind, so schnell wie möglich einen solchen Plan entwerfen und implementieren.  
   
  Die Befehle zur Sicherung und die Wiederherstellung werden in einer bereitgestellten Analysis Services-Datenbank ausgeführt. Für die Projekte und Projektmappen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]sollten Sie mithilfe der Quellcodeverwaltung sicherstellen, dass Sie bestimmte Versionen der Quelldateien wiederherstellen können, und anschließend einen Datenwiederherstellungsplan für das Repository des von Ihnen verwendeten Quellcodeverwaltungssystems erstellen.  
   

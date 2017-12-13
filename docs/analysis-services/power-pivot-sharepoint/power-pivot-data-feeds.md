@@ -2,12 +2,12 @@
 title: Power Pivot-Datenfeeds | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4703cf8f6ac0af1d45c4fcfb4129b40fd52ecb9a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6e845c632a44b4d74a7b12eeaf2ed80e85ffbb02
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-data-feeds"></a>Power Pivot-Datenfeeds
-  Ein Datenfeed stellt einen aus einer Onlinedatenquelle in eine Clientanwendung abrufbaren Datenstrom bereit. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie mithilfe von Datenfeeds Daten aus einem Atom-fähigen Webdienst oder einer Atom-fähigen Anwendung in eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenquelle in einer Excel-Arbeitsmappe einfügen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ein Datenfeed stellt einen Strom von Daten aus einer Onlinedatenquelle in eine Clientanwendung abrufbaren bereit. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie mithilfe von Datenfeeds Daten aus einem Atom-fähigen Webdienst oder einer Atom-fähigen Anwendung in eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenquelle in einer Excel-Arbeitsmappe einfügen.  
   
  Die Informationen in diesem Abschnitt sollen Sie bei der optimalen Nutzung von Datenfeeds zum Abrufen vorhandener Unternehmens- oder Arbeitsgruppendaten in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen unterstützen. Er enthält zusätzlich Informationen zum Freigeben von Datenfeeds für andere Mitarbeiter in Ihrer Organisation sowie zur Erstellung und Verwendung von Datenfeeds, falls Probleme behoben werden müssen.  
   

@@ -2,12 +2,12 @@
 title: Namingtemplatetranslation-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c1747160a1360a0b3edbe989fc041791dd5ed7e4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e7ffe5508de562eccad465c094a6251581e356b7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="namingtemplatetranslations-element-assl"></a>NamingTemplateTranslation-Element (ASSL)
-  Stellt eine Auflistung lokalisierter Übersetzungen für das [NamingTemplate](../../../analysis-services/scripting/properties/namingtemplate-element-assl.md) -Element des übergeordneten Elements, [DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md), bereit.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Stellt eine Auflistung lokalisierter Übersetzungen für die [NamingTemplate](../../../analysis-services/scripting/properties/namingtemplate-element-assl.md) Element des übergeordneten Elements, [DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md).  
   
 ## <a name="syntax"></a>Syntax  
   

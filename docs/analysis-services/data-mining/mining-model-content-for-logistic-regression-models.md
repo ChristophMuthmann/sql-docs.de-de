@@ -2,12 +2,12 @@
 title: "Miningmodellinhalt für logistische Regressionsmodelle | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1c49ae086aba41c6b023a1cbd395e6ddd8fc8f29
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fcc42dbd4d53a3d5a967933bebf22b1f73ac91e2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-content-for-logistic-regression-models"></a>Miningmodellinhalt von logistischen Regressionsmodellen
-  In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den Microsoft Logistic Regression-Algorithmus verwenden. Eine Erklärung zur Interpretation von Statistiken und Strukturen, die allen Modelltypen gemein sind, und die allgemeinen Definitionen von Begriffen in Bezug auf den Miningmodellinhalt finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dieses Thema beschreibt Miningmodellinhalt, der Modellen eigen ist, die den Microsoft Logistic Regression-Algorithmus verwenden. Eine Erklärung zur Interpretation von Statistiken und Strukturen, die allen Modelltypen gemein sind, und die allgemeinen Definitionen von Begriffen in Bezug auf den Miningmodellinhalt finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-logistic-regression-model"></a>Grundlegendes zur Struktur von logistischen Regressionsmodellen  
  Ein logistisches Regressionsmodell wird mithilfe des Microsoft Neural Network-Algorithmus mit Parametern erstellt, die das Modell darauf beschränken, den verborgenen Knoten zu entfernen. Daher ist die Gesamtstruktur eines logistischen Regressionsmodells fast identisch mit dem eines neuronalen Netzwerks: Jedes Modell verfügt sowohl über einen einzelnen übergeordneten Knoten, der das Modell und dessen Metadaten darstellt, als auch über einen besonderen Knoten für Randstatistik (NODE_TYPE = 24), der beschreibende Statistiken über die im Modell verwendeten Eingaben liefert.  

@@ -2,12 +2,12 @@
 title: Microsoft Decision Trees Algorithm Technical Reference | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 81dd23b543d8791f9e68a15cfc8feaf58aade127
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 397c5e27b3dcf096fa3707d94d3e5e8d049e8f36
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Decision Trees-Algorithmus
-  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus ist ein hybrider Algorithmus, der verschiedene Methoden zum Erstellen einer Struktur integriert und mehrere analytische Tasks, wie Regression, Klassifikation und Zuordnung, unterstützt. Der Microsoft Decision Trees-Algorithmus unterstützt die Modellierung sowohl diskreter als auch fortlaufender Attribute.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus ist ein hybrider Algorithmus, der verschiedene Methoden zum Erstellen einer Struktur integriert und mehrere analytische Tasks, wie Regression, Klassifikation und Zuordnung unterstützt. Der Microsoft Decision Trees-Algorithmus unterstützt die Modellierung sowohl diskreter als auch fortlaufender Attribute.  
   
  In diesem Thema wird die Implementierung des Algorithmus erläutert und beschrieben, wie das Verhalten des Algorithmus für verschiedene Aufgaben angepasst wird. Ferner werden Links zu weiteren Informationen über das Abfragen von Entscheidungsstrukturmodellen zur Verfügung gestellt.  
   

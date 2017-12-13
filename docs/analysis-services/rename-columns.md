@@ -2,12 +2,12 @@
 title: 'Lektion 3: Umbenennen von Spalten | Microsoft Docs'
 ms.custom: 
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -19,11 +19,11 @@ ms.author: owend
 manager: kfile
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: e872107cf9ac05a6fb779c5ab7cadfadacb40410
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 369650777e09a97044da423e4b4266c75f48b6a6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="rename-columns"></a>Umbenennen von Spalten
-In dieser Lektion wird entfernt. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]In dieser Lektion wird entfernt. 

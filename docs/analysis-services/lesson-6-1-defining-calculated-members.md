@@ -2,12 +2,12 @@
 title: Definieren von berechneten Elementen | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e77732f0ad13e3373e073038587e819ed2617eb1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2968ac67b1e7ca3652dd4ae2cbb7cfd3293e51ca
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>Lektion 6-1: Definieren von berechneten Elementen
-Berechnete Elemente sind Elemente einer Dimension oder Measuregruppe, die auf Basis einer Kombination aus Cubedaten, arithmetischen Operatoren, Zahlen und Funktionen definiert werden. Sie können beispielsweise ein berechnetes Element erstellen, das die Summe zweier physischer Measures im Cube berechnet. Die Definitionen berechneter Elemente werden in Cubes gespeichert, ihre Werte werden jedoch erst zum Zeitpunkt der Abfrage berechnet.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Berechnete Elemente sind Elemente einer Dimension oder eine Measuregruppe, die definiert werden basierend auf einer Kombination von Cubedaten, arithmetischen Operatoren, Zahlen und Funktionen. Sie können beispielsweise ein berechnetes Element erstellen, das die Summe zweier physischer Measures im Cube berechnet. Die Definitionen berechneter Elemente werden in Cubes gespeichert, ihre Werte werden jedoch erst zum Zeitpunkt der Abfrage berechnet.  
   
 Mithilfe des Befehls **Neues berechnetes Element** auf der Registerkarte **Berechnungen** des Cube-Designers können Sie ein berechnetes Element erstellen. Sie können ein berechnetes Element in jeder beliebigen Dimension erstellen, einschließlich der Measuredimension. Sie können ein berechnetes Element auch innerhalb eines Anzeigeordners im Dialogfeld **Berechnungseigenschaften** platzieren. Weitere Informationen finden Sie unter [Berechnungen](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md), [Berechnungen in mehrdimensionalen Modellen](../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)und [Erstellen von berechneten Elementen](../analysis-services/multidimensional-models/create-calculated-members.md).  
   

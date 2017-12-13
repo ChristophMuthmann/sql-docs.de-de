@@ -2,12 +2,12 @@
 title: "Verknüpfte Measuregruppen | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9d83878543d1c749757b2603a3fe3001fb6b1581
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cc306874fed195a649dd0cc18d43db4a426cefa4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="linked-measure-groups"></a>Verknüpfte Measuregruppen
-  Eine verknüpfte Measuregruppe basiert auf einer anderen Measuregruppe in einem anderen Cube innerhalb derselben Datenbank oder einer anderen Analysis Services-Datenbank. Eine verknüpfte Measuregruppe kann z. B. verwendet werden, wenn Sie einen Satz von Measures und die entsprechenden Datenwerte in mehreren Cubes wiederverwenden möchten.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Eine verknüpfte Measuregruppe basiert auf einer anderen Measuregruppe in einem anderen Cube innerhalb derselben Datenbank oder einer anderen Analysis Services-Datenbank. Eine verknüpfte Measuregruppe kann z. B. verwendet werden, wenn Sie einen Satz von Measures und die entsprechenden Datenwerte in mehreren Cubes wiederverwenden möchten.  
   
  Microsoft empfiehlt, die ursprünglichen und verknüpften Measuregruppen in Projektmappen abzulegen, die auf dem gleichen Server ausgeführt werden. Das Verknüpfen mit einer Measuregruppe auf einem Remoteserver soll in einer zukünftigen Version als veraltet markiert werden (siehe [Veraltete Analysis Services-Funktionen in SQL Server 2016](../../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md)).  
   

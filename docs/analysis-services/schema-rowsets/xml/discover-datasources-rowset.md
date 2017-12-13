@@ -2,12 +2,12 @@
 title: DISCOVER_DATASOURCES-Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6948843614925bb4f31dd5e60180e8a921ce6f7d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 88fede87c305afd15819a9379999806ec39eeb49
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discoverdatasources-rowset"></a>DISCOVER_DATASOURCES-Rowset
-  Gibt eine Liste der XMLA-Anbieterdatenquellen (XML for Analysis) zurück, die auf dem Server oder dem Webdienst verfügbar sind. Die veröffentlichten Datenquellen werden von einer URL des Anwendungswebservers zurückgegeben. Der Client kann eine Verbindung mit einer der Datenquellen in der Liste herstellen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Gibt eine Liste der XML for Analysis (XMLA)-anbieterdatenquellen, die auf dem Server oder den Webdienst verfügbar sind. Die veröffentlichten Datenquellen werden von einer URL des Anwendungswebservers zurückgegeben. Der Client kann eine Verbindung mit einer der Datenquellen in der Liste herstellen.  
   
  Beim Aufrufen der [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) Methode mit der **DISCOVER_DATASOURCES** Enumerationswert in der [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) Element, das **Discover** Methode gibt die **DISCOVER_DATASOURCES** Rowset.  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |**DataSourceDescription**|**DBTYPE_WSTR**||Die vom Verleger eingegebene Beschreibung der Datenquelle.<br /><br /> Kann **NULL**zurückgeben.|  
 |**URL**|**DBTYPE_WSTR**|ja|Der eindeutige Pfad, der angibt, wo die XMLA-Methoden (XML for Analysis) für diese Datenquelle aufgerufen werden.<br /><br /> Kann **NULL**zurückgeben.|  
 |**DataSourceInfo**|**DBTYPE_WSTR**||Eine Zeichenfolge, die alle zusätzlichen Informationen enthält, die erforderlich sind, um eine Verbindung mit der Datenquelle herzustellen.<br /><br /> Kann **NULL**zurückgeben.|  
-|**ProviderName**|**DBTYPE_WSTR**|ja|Der Name des Anbieters für die Datenquelle.<br /><br /> Beispiel:`"MSOLAP"`<br /><br /> Kann **NULL**zurückgeben.|  
+|**ProviderName**|**DBTYPE_WSTR**|ja|Der Name des Anbieters für die Datenquelle.<br /><br /> Beispiel: `"MSOLAP"`<br /><br /> Kann **NULL**zurückgeben.|  
 |**ProviderType**|**DBTYPE_WSTR**|ja|Die vom Anbieter unterstützten Datentypen. Dieses Array kann einen oder mehrere der folgenden Typen enthalten:<br /><br /> **MDP**: multidimensionaler Datenanbieter.<br /><br /> **TDP**: tabellarischer Datenanbieter.<br /><br /> **DMP**: Datamining-Anbieter (implementiert die OLE für DB für Data Mining-Spezifikation).|  
 |**AuthenticationMode**|**DBTYPE_WSTR**|ja|Eine Spezifikation, die angibt, welchen Typ des Sicherheitsmodus die Datenquelle verwendet. Folgende Werte sind möglich:<br /><br /> **Nicht authentifizierte**: keine Benutzer-ID oder ungültiges Kennwort gesendet werden muss.<br /><br /> **Authentifizierte**: Benutzer-ID und Kennwort in den für die Verbindung mit der Datenquelle erforderlichen Informationen enthalten sein müssen.<br /><br /> **Integrierte**: die Datenquelle verwendet die zugrundeliegende Sicherheit, um zu bestimmen, Autorisierung, z. B. integrierte Sicherheit von bereitgestellten [!INCLUDE[msCoName](../../../includes/msconame-md.md)] (Internet Information Services, IIS).|  
   

@@ -2,12 +2,12 @@
 title: Programmieren von AMO, Datamining-Objekte | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ef18607c859ee7894bd61305a47299836774dec9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c5729dfd1411ae533c359bfdbc9867b2c453ebc1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="programming-amo-data-mining-objects"></a>Programmieren von AMO-Data Mining-Objekten
-  Das Programmieren von Data Mining-Objekten mithilfe von AMO ist unkompliziert und einfach. Der erste Schritt ist, das Datenstrukturmodell zu erstellen, um das Miningprojekt zu unterstützen. Anschließend erstellen Sie das Data Mining-Modell, das den Miningalgorithmus unterstützt, den Sie für die Vorhersage oder für die Ermittlung der Ihren Daten zugrundeliegenden unsichtbaren Beziehungen verwenden möchten. Nachdem Sie Ihr Miningprojekt erstellt haben (einschließlich Struktur und Algorithmus), können Sie die Miningmodelle verarbeiten, um die trainierten Modelle abzurufen, die Sie später verwenden, wenn Sie Abfragen und Vorhersagen über die Clientanwendung ausführen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Programmieren von Datamining-Objekte mithilfe von AMO ist einfach und unkompliziert. Der erste Schritt ist, das Datenstrukturmodell zu erstellen, um das Miningprojekt zu unterstützen. Anschließend erstellen Sie das Data Mining-Modell, das den Miningalgorithmus unterstützt, den Sie für die Vorhersage oder für die Ermittlung der Ihren Daten zugrundeliegenden unsichtbaren Beziehungen verwenden möchten. Nachdem Sie Ihr Miningprojekt erstellt haben (einschließlich Struktur und Algorithmus), können Sie die Miningmodelle verarbeiten, um die trainierten Modelle abzurufen, die Sie später verwenden, wenn Sie Abfragen und Vorhersagen über die Clientanwendung ausführen.  
   
  Dabei ist zu beachten, dass AMO nicht der Abfrage dient, sondern der Verwaltung und der Administration Ihrer Miningstrukturen und Modelle. Um die Daten abzufragen, verwenden Sie [Entwickeln mit ADOMD.NET](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
   

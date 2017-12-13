@@ -2,12 +2,12 @@
 title: Verwenden von Aggregatfunktionen | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 407e0f9d3c7c0d6c3a8a3c2734a53fbab8aca240
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7a146e6be066f8669757d15f5fe76ac67c5c172b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-aggregate-functions"></a>Verwenden von Aggregatfunktionen
-  Wird eine Dimension zum Segmentieren eines Measures verwendet, wird das Measure gemäß den in dieser Dimension enthaltenen Hierarchien zusammengefasst. Das Zusammenfassungsverhalten hängt von der für das Measure angegebenen Aggregatfunktion ab. Für die meisten Measures, die numerische Daten enthalten, ist die Aggregatfunktion **Sum**. Der Wert des Measures wird je nach de Ebene, auf der die Hierarchie aktiv ist, zu unterschiedlichen Mengen summiert.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Wenn eine Dimension zum Segmentieren eines Measures verwendet wird, wird das Measure gemäß den in dieser Dimension enthaltenen Hierarchien zusammengefasst. Das Zusammenfassungsverhalten hängt von der für das Measure angegebenen Aggregatfunktion ab. Für die meisten Measures, die numerische Daten enthalten, ist die Aggregatfunktion **Sum**. Der Wert des Measures wird je nach de Ebene, auf der die Hierarchie aktiv ist, zu unterschiedlichen Mengen summiert.  
   
  In Analysis Services wird jedes Measure, das Sie erstellen, durch eine Aggregationsfunktion gesichert, die den Betrieb des Measures bestimmt. Zu den vordefinierten Aggregationstypen zählen **Sum**, **Min**, **Max**, **Count**, **Distinct Count**und einige andere, spezialisiertere Funktionen. Wenn Sie Aggregationen basierend auf komplexen oder benutzerdefinierten Formeln benötigen, können Sie alternativ eine MDX-Berechnung anstelle einer vorgefertigten Aggregationsfunktion erstellen. Wenn Sie beispielsweise ein Measure für einen Prozentwert definieren möchten, würden Sie dies in MDX anhand eines berechneten Measures tun. Siehe [CREATE MEMBER-Anweisung &#40;MDX&#41;](../../mdx/mdx-data-definition-create-member.md).  
   

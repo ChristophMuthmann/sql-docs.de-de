@@ -2,12 +2,12 @@
 title: Microsoft Association-Algorithmus | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -39,14 +39,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8b53b106e81fd161696d05d95d2669ca899a3034
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8d68a5b94df379a3ab19d4df5d4621c986762473
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft Association-Algorithmus
-  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association-Algorithmus ist ein Algorithmus, der häufig für Recommendation Engines verwendet wird. Eine Recommendation Engine empfiehlt Kunden Artikel auf der Basis von Produkten, die diese Kunden bereits gekauft oder an denen sie Interesse gezeigt haben. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association-Algorithmus ist auch ein nützliches Market Basket Analysis-Instrument.   
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association-Algorithmus ist ein Algorithmus, der für Recommendation Engines von nutzen häufig verwendet wird. Eine Recommendation Engine empfiehlt Kunden Artikel auf der Basis von Produkten, die diese Kunden bereits gekauft oder an denen sie Interesse gezeigt haben. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association-Algorithmus ist auch ein nützliches Market Basket Analysis-Instrument.   
   
  Association-Modelle basieren auf Datasets, die Bezeichner enthalten, die sich sowohl auf einzelne Fälle als auch auf die Elemente beziehen, die in dem Fall enthalten sind. Eine Gruppe von Elementen in einem Fall wird als *Itemset*bezeichnet. Ein Association-Modell besteht aus einer Reihe von Itemsets und Regeln, die beschreiben, wie diese Elemente in den Fällen gruppiert sind. Mit den Regeln, die der Algorithmus identifiziert, lassen sich wahrscheinliche Kaufentscheidungen von Kunden vorhersagen. Grundlage für diese Prognose sind die Artikel, die sich bereits im Einkaufswagen des Kunden befinden. Die folgende Abbildung zeigt eine Reihe von Regeln in einem Itemset.  
   

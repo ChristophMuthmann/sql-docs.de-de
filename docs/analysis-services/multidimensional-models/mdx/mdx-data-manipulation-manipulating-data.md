@@ -2,12 +2,12 @@
 title: Bearbeiten von Daten (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 37ee4f05ad916e3fb1d12b2bfb29da183f9ebb47
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4a38653e2a8e4370d144c1ed799ac068f9b08585
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-data-manipulation---manipulating-data"></a>MDX - Datenbearbeitung: Bearbeiten von Daten
-  Mit MDX (Multidimensional Expressions) können Daten auf viele Arten bearbeitet werden. In den folgenden Themen sind die erweiterten Konzepte beschrieben, wie in der MDX-Sprache Daten bearbeitet werden können.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]MDX (Multidimensional Expressions) können verwendet werden, die Daten in einer Vielzahl von Möglichkeiten bearbeiten. In den folgenden Themen sind die erweiterten Konzepte beschrieben, wie in der MDX-Sprache Daten bearbeitet werden können.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

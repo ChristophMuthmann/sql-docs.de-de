@@ -2,12 +2,12 @@
 title: "Fehlende Werte (Analysis Services – Datamining) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b1c2b1b598989965af2be43ad62c02ae4017fd42
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9fd36d5de83b72fcc62945de61aa5f7b2d0cb3e2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Fehlende Werte (Analysis Services - Data Mining)
-  Die Behandlung  *fehlender Werte* ist ein wichtiger Teil der effektiven Modellierung. In diesem Abschnitt wird erläutert, was fehlende Werte sind, und es werden die Funktionen beschrieben, die in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für die Arbeit mit fehlenden Werten bereitgestellt werden, wenn Sie Data Mining-Strukturen und Miningmodelle erstellen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Behandlung von *fehlende Werte* ist ein wichtiger Teil der effektiven Modellierung. In diesem Abschnitt wird erläutert, was fehlende Werte sind, und es werden die Funktionen beschrieben, die in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für die Arbeit mit fehlenden Werten bereitgestellt werden, wenn Sie Data Mining-Strukturen und Miningmodelle erstellen.  
   
 ## <a name="definition-of-missing-values-in-data-mining"></a>Definition fehlender Werte in Data Mining  
  Ein fehlender Wert kann Verschiedenes bedeuten. Vielleicht war das Feld nicht zutreffend, oder das Ereignis trat nicht ein, oder die Daten waren nicht verfügbar. Möglicherweise kannte die Person, die die Daten eingegeben hat, den richtigen Wert nicht, oder sie hat nicht darauf geachtet, dass alle Felder ausgefüllt sind.  

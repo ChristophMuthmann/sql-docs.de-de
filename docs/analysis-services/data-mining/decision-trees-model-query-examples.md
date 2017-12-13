@@ -2,12 +2,12 @@
 title: Decision Trees-Modell Abfragebeispiele | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b1b441eb4718e5f362fb1ef6f6a3a889cf5dc812
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f38e76e522a4b062e27379533c22b540311f4c34
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="decision-trees-model-query-examples"></a>Beispiele für Entscheidungsstruktur-Modellabfragen
-  Beim Erstellen einer Abfrage für ein Data Mining-Modell können Sie eine Inhaltsabfrage erstellen, die Details über die bei der Analyse ermittelten Muster liefert. Alternativ dazu können Sie auch eine Vorhersageabfrage erstellen, die Vorhersagen für neue Daten anhand der im Modell befindlichen Muster vornimmt. So könnte beispielsweise eine Inhaltsabfrage für ein Entscheidungsstrukturmodell statistische Angaben zur Anzahl der Fälle auf jeder Ebene der Struktur oder die Regeln liefern, die die Fälle voneinander unterscheiden. Alternativ dazu ordnet eine Vorhersageabfrage das Modell neuen Daten zu, um Empfehlungen, Klassifikationen und so weiter zu generieren. Mit einer Abfrage können Sie auch Metadaten zum Modell abrufen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Wenn Sie eine Abfrage für ein Datamining-Modell erstellen, können Sie eine Inhaltsabfrage Details über die in der Analyse erkannten Muster liefert erstellen oder Erstellung einer Vorhersageabfrage, die die Muster im Modell Vorhersagen für neue Daten generiert. So könnte beispielsweise eine Inhaltsabfrage für ein Entscheidungsstrukturmodell statistische Angaben zur Anzahl der Fälle auf jeder Ebene der Struktur oder die Regeln liefern, die die Fälle voneinander unterscheiden. Alternativ dazu ordnet eine Vorhersageabfrage das Modell neuen Daten zu, um Empfehlungen, Klassifikationen und so weiter zu generieren. Mit einer Abfrage können Sie auch Metadaten zum Modell abrufen.  
   
  In diesem Abschnitt wird erklärt, wie Abfragen für Modelle erstellt werden, die auf dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus basieren.  
   

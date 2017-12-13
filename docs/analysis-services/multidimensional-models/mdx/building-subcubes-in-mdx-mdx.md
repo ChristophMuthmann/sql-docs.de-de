@@ -2,12 +2,12 @@
 title: Erstellen von Teilcubes in MDX (Multidimensional Expressions) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d56fe149317939cfb0b184dcd20b1411514f2ca9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a84f574abdac7490ce4dad5683dd800f474ca59c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>Erstellen von Teilcubes in MDX (MDX)
-  Ein Teilcube ist eine Teilmenge eines Cubes, die einer gefilterten Sicht der zugrunde liegenden Daten entspricht. Durch Begrenzen des Cubes auf einen Teilcube können Sie die Abfrageleistung verbessern.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Ein Teilcube ist eine Teilmenge eines Cubes, die eine gefilterte Ansicht der zugrunde liegenden Daten darstellt. Durch Begrenzen des Cubes auf einen Teilcube können Sie die Abfrageleistung verbessern.  
   
  Zum Definieren eines Teilcubes verwenden Sie die in diesem Thema beschriebene [CREATE SUBCUBE](../../../mdx/mdx-data-definition-create-subcube.md) -Anweisung.  
   

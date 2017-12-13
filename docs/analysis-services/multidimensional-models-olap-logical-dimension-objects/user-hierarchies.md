@@ -2,12 +2,12 @@
 title: Benutzerhierarchien | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -35,14 +35,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 069f68e31f516a7f90a07cd462b70e0b455ab800
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 71c8f644f19236e9507b37ebdd75f1bcde7299eb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="user-hierarchies"></a>Benutzerhierarchien
-  Benutzerdefinierte Hierarchien werden von benutzerdefinierten Hierarchien von Attributen, die verwendet werden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Elemente einer Dimension in Form von hierarchischen Strukturen zu organisieren und Navigationspfade in einem Cube bereitzustellen. In der folgenden Tabelle ist beispielsweise eine Dimensionstabelle für eine Zeitdimension definiert. Die Dimensionstabelle unterstützt die drei Attribute "Year", "Quarter" und "Month".  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Benutzerdefinierte Hierarchien werden von benutzerdefinierten Hierarchien von Attributen, die verwendet werden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Elemente einer Dimension in Form von hierarchischen Strukturen zu organisieren und Navigationspfade in einem Cube bereitzustellen. In der folgenden Tabelle ist beispielsweise eine Dimensionstabelle für eine Zeitdimension definiert. Die Dimensionstabelle unterstützt die drei Attribute "Year", "Quarter" und "Month".  
   
 |Year|Quarter|Month|  
 |----------|-------------|-----------|  

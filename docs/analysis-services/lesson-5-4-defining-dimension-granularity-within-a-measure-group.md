@@ -2,12 +2,12 @@
 title: "Definieren von Dimensionsgranularität innerhalb einer Measuregruppe | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5fbdacd6a82296b08d0f395502df71f0a9e65eb8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bef441eba4e4aa9353a496282680449bc39fa629
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>Lektion 5-4: Definieren von Dimensionsgranularität innerhalb einer Measuregruppe
-Benutzer möchten die Möglichkeit bekommen, Faktendaten mit einer anderen Granularität oder Spezifizierung für andere Zwecke zu dimensionieren. Verkaufsdaten für Händler- oder Internetverkäufe können z. B. für jeden Tag aufgezeichnet werden, wogegen Sollvorgaben für den Verkauf möglicherweise nur auf Monats- oder Quartalsebene vorhanden sind. In diesen Szenarios möchten Benutzer eine Time-Dimension mit einer anderen oder detaillierteren Auflösung für jede dieser verschiedenen Faktentabellen verwenden. Sie könnten zwar eine neue Datenbankdimension als Time-Dimension mit dieser anderen Auflösung definieren, doch bietet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]eine einfachere Lösung.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Benutzer sollten Dimension von Faktendaten auf anderen Granularität oder Spezifizierung für andere Zwecke verwendet. Verkaufsdaten für Händler- oder Internetverkäufe können z. B. für jeden Tag aufgezeichnet werden, wogegen Sollvorgaben für den Verkauf möglicherweise nur auf Monats- oder Quartalsebene vorhanden sind. In diesen Szenarios möchten Benutzer eine Time-Dimension mit einer anderen oder detaillierteren Auflösung für jede dieser verschiedenen Faktentabellen verwenden. Sie könnten zwar eine neue Datenbankdimension als Time-Dimension mit dieser anderen Auflösung definieren, doch bietet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]eine einfachere Lösung.  
   
 Wenn eine Dimension in einer Measuregruppe verwendet wird, basiert die Auflösung der Daten in dieser Dimension in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]standardmäßig auf dem Schlüsselattribut der Dimension. Wenn beispielsweise eine Zeitdimension in einer Measuregruppe enthalten und die Standardauflösung der Zeitdimension täglich ist, ist die Standardauflösung der Dimension innerhalb der Measuregruppe täglich. Dies ist häufig angemessen, wie z. B. für die Measuregruppen **Internet Sales** und **Reseller Sales** in diesem Tutorial. Wenn allerdings solch eine Dimension in anderen Typen von Measuregruppen eingeschlossen wird (beispielsweise Vorgaben für den Verkauf oder Budget-Measuregruppe), ist eine monatliche oder vierteljährliche Auflösung angemessener.  
   

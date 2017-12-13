@@ -2,12 +2,12 @@
 title: "Zusammenhängende Projekte für Datamining-Lösungen | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: da5beda0118e0eb281a84c9d0f675b94e3a9d067
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d197240962d834b3da6c6e1dbdd1fb224a995192
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Verwandte Projekte für Data Mining-Lösungen
-  Eine Data Mining-Projektmappe erfordert mindestens das Data Mining-Projekt, in dem Datenquellen, Datenquellenansichten, Miningstrukturen und Miningmodelle definiert werden. Wenn Data Mining-Modelle jedoch für die tägliche Entscheidungsfindung eingesetzt werden, ist es wichtig, Data Mining in andere Teile der vorhersagenden Analytiklösung zu integrieren, die die folgenden Prozesse und Komponenten enthalten kann:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Mindestens erforderliche für ein Datamining-Lösung ist die Datamining-Projekt, das Datenquellen, Datenquellensichten, Miningstrukturen und Miningmodelle definiert. Wenn Data Mining-Modelle jedoch für die tägliche Entscheidungsfindung eingesetzt werden, ist es wichtig, Data Mining in andere Teile der vorhersagenden Analytiklösung zu integrieren, die die folgenden Prozesse und Komponenten enthalten kann:  
   
 -   Vorbereitung und Auswahl der Daten und Variablen. Schließt Datenbereinigung, Metadatenverwaltung, Integration mehrerer Datenquellen, Konvertierung, Zusammenführung und das Hochladen von Daten in ein Data Warehouse ein.  
   

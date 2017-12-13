@@ -2,12 +2,12 @@
 title: Funktionsauswahl (Datamining) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1c4d0c9166a850d9860e2844403bb7da925f8193
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 851262d2141413487aafe45456cba7748440fde6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="feature-selection-data-mining"></a>Funktionsauswahl (Data Mining)
-  Die*Featureauswahl* ist ein wichtiger Teil für das Machine Learning. Die Featureauswahl bezieht sich auf das Reduzieren der Eingaben für die Verarbeitung und Analyse oder die Suche nach sinnvollen Eingaben. Ein verwandter Begriff ist die *Featureentwicklung* (oder *Featureextraktion*), der sich auf Verfahren zum Extrahieren nützlicher Informationen aus vorhandenen Daten bezieht.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*Funktionsauswahl* ist ein wichtiger Teil von maschinellem lernen. Die Featureauswahl bezieht sich auf das Reduzieren der Eingaben für die Verarbeitung und Analyse oder die Suche nach sinnvollen Eingaben. Ein verwandter Begriff ist die *Featureentwicklung* (oder *Featureextraktion*), der sich auf Verfahren zum Extrahieren nützlicher Informationen aus vorhandenen Daten bezieht.  
   
 ## <a name="why-do-feature-selection"></a>Wofür dient die Featureauswahl?  
  Die Featureauswahl ist aus verschiedenen Gründen entscheidend für die Erstellung eines guten Modells. Einer ist, dass die Featureauswahl ein gewisses Maß an *Kardinalitätsreduzierung*impliziert, um die Anzahl der Attribute zu reduzieren, die beim Erstellen eines Modells berücksichtigt werden. Daten enthalten fast immer mehr Informationen als für das Erstellen des Modells erforderlich sind – oder die falsche Art von Informationen. Angenommen, Sie verfügen über ein Dataset mit 500 Spalten, die Merkmale von Kunden beschreiben. Wenn die Daten in einigen Spalten jedoch nur eine geringe Dichte aufweisen, bringt es nur sehr wenig, diese dem Modell hinzuzufügen, und wenn einige Spalten sich untereinander duplizieren, könnte die Verwendung beider Spalten Auswirkungen auf das Modell haben.  

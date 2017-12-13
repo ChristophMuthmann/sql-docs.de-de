@@ -2,12 +2,12 @@
 title: Die grundlegende MDX-Abfrage (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 46373fffaba2935a6faa9efa6deddebd6ce66ceb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 91f450be525f7ec0d019a3f17f28ee25886c44aa
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-query---the-basic-query"></a>MDX-Abfrage - die grundlegende Abfrage
-  Die grundlegende MDX-Abfrage (Multidimensional Expressions) besteht aus der SELECT-Anweisung. Dies ist die am häufigsten verwendete Abfrage in MDX. Wenn Sie wissen, wie in einer SELECT-Anweisung von MDX ein Resultset angegeben wird, wie die Syntax der SELECT-Anweisung lautet und wie eine einfache Abfrage mit der SELECT-Anweisung erstellt wird, verfügen Sie über das Basiswissen zum Abfragen mehrdimensionaler Daten mit MDX.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Die grundlegende MDX (Multidimensional Expressions)-Abfrage ist die SELECT-Anweisung, die am häufigsten verwendete Abfrage in MDX. Wenn Sie wissen, wie in einer SELECT-Anweisung von MDX ein Resultset angegeben wird, wie die Syntax der SELECT-Anweisung lautet und wie eine einfache Abfrage mit der SELECT-Anweisung erstellt wird, verfügen Sie über das Basiswissen zum Abfragen mehrdimensionaler Daten mit MDX.  
   
 ## <a name="specifying-a-result-set"></a>Angeben eines Resultsets  
  Die SELECT-Anweisung in MDX gibt ein Resultset an, das aus einer Teilmenge mehrdimensionaler Daten besteht, die aus einem Cube zurückgegeben wurde. Zum Angeben eines Resultsets muss die MDX-Abfrage die folgenden Informationen enthalten:  

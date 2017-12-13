@@ -2,12 +2,12 @@
 title: Sichtbare Gesamtwerte und nicht sichtbare Gesamtwerte | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 822e1f7e496b3c6fb74fff558b37b244e2b41512
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f966f4108f3ad029b6c069216cd7713f3b4ac7e7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>Sichtbare Gesamtwerte und nicht sichtbare Gesamtwerte
-  Als sichtbare Gesamtwerte werden Gesamtbeträge am Ende einer Spalte oder Zeile bezeichnet, in denen alle in der Spalte bzw. Zeile sichtbaren Elemente zusammengezählt wurden. Dies ist bei der Anzeige der meisten Tabellen das Standardverhalten. In bestimmten Fällen sollen jedoch möglicherweise nur bestimmte Spalten in einer Tabelle, jedoch die Gesamtbeträge für die komplette Zeile angezeigt werden, einschließlich der nicht sichtbaren Spalten. Diese werden als **nicht sichtbare Gesamtwerte**bezeichnet, da der Gesamtbetrag sowohl die sichtbaren als auch die nicht sichtbaren Werte umfasst.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Sichtbare Gesamtwerte werden Gesamtbeträge am Ende einer Spalte oder Zeile, in denen alle in der Spalte bzw. Zeile sichtbaren Elemente zusammengezählt wurden. Dies ist bei der Anzeige der meisten Tabellen das Standardverhalten. In bestimmten Fällen sollen jedoch möglicherweise nur bestimmte Spalten in einer Tabelle, jedoch die Gesamtbeträge für die komplette Zeile angezeigt werden, einschließlich der nicht sichtbaren Spalten. Diese werden als **nicht sichtbare Gesamtwerte**bezeichnet, da der Gesamtbetrag sowohl die sichtbaren als auch die nicht sichtbaren Werte umfasst.  
   
  Das folgende Szenario veranschaulicht das Verhalten von nicht sichtbaren Gesamtwerten. Der erste Schritt zeigt das Standardverhalten von sichtbaren Gesamtwerten.  
   

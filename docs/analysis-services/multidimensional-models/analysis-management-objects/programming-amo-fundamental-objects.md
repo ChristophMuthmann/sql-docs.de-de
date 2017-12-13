@@ -2,12 +2,12 @@
 title: Programmieren von AMO Fundamental Objects | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6eda664b7dbe009d5f82e0daffe0b428b26098d0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 82ab6322367b9aaac757e9444d98a30401d42b06
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="programming-amo-fundamental-objects"></a>Programming AMO Fundamental objects
-  Grundlegende Objekte sind im Allgemeinen einfache und unkomplizierte Objekte. Diese Objekte werden in der Regel erstellt und instanziiert, und wenn sie nicht mehr benötigt werden, trennt der Benutzer die Verbindung zu ihnen. Grundlegende Klassen beinhalten die folgenden Objekte: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> und <xref:Microsoft.AnalysisServices.DataSourceView>. Das einzige komplexe Objekt innerhalb der grundlegenden AMO-Objekte ist <xref:Microsoft.AnalysisServices.DataSourceView>, das Details benötigt, um das abstrakte Modell zu erstellen, das die Datenquellensicht darstellt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Grundlegende Objekte sind im Allgemeinen einfache und unkomplizierte Objekte. Diese Objekte werden in der Regel erstellt und instanziiert, und wenn sie nicht mehr benötigt werden, trennt der Benutzer die Verbindung zu ihnen. Grundlegende Klassen beinhalten die folgenden Objekte: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> und <xref:Microsoft.AnalysisServices.DataSourceView>. Das einzige komplexe Objekt innerhalb der grundlegenden AMO-Objekte ist <xref:Microsoft.AnalysisServices.DataSourceView>, das Details benötigt, um das abstrakte Modell zu erstellen, das die Datenquellensicht darstellt.  
   
  <xref:Microsoft.AnalysisServices.Server>- und <xref:Microsoft.AnalysisServices.Database>-Objekte sind in der Regel erforderlich, um die enthaltenen Objekte als OLAP- oder Data Mining-Objekte zu verwenden.  
   

@@ -2,12 +2,12 @@
 title: Technische Referenz zu Microsoft Neural Network-Algorithmus | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -37,14 +37,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 46dc639d30a60ef8f332c340e3ffd685c8f4f72f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 932d04a5af5bc4631b5c0c80f0b66891eeedb6da
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Neural Network-Algorithmus
-  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus verwendet ein *mehrschichtiges Perzeptronnetzwerk* , das auch als *Netzwerk von Deltaregeln mit Rückpropagierung*bezeichnet wird. Es besteht aus bis zu drei Ebenen aus Neuronen oder *Perzeptronen*. Zu diesen Ebenen gehört eine Eingabeebene, eine optionale verborgene Ebene und eine Ausgabeebene.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] neuronalen Netzwerk verwendet ein *mehrschichtiges Perzeptronnetzwerk* Netzwerk, das so genannte eine *Netzwerk von deltaregeln mit rückpropagierung*besteht aus bis zu drei Ebenen von Neuronen, oder  *perzeptrons*. Zu diesen Ebenen gehört eine Eingabeebene, eine optionale verborgene Ebene und eine Ausgabeebene.  
   
  Eine detaillierte Erläuterung von mehrschichtigen Perzeptronnetzwerken geht über den Rahmen dieser Dokumentation hinaus. In diesem Thema wird die grundlegende Implementierung des Algorithmus, einschließlich der Methode zum Normalisieren von Eingabe- und Ausgabewerten, erläutert sowie Funktionsauswahlverfahren zur Reduzierung der Attributkardinalität beschrieben. Das Thema enthält eine Beschreibung der Parameter und anderer Einstellungen, mit denen das Verhalten des Algorithmus angepasst wird. Ferner werden Links zu weiteren Informationen über das Abfragen von Modellen zur Verfügung gestellt.  
   

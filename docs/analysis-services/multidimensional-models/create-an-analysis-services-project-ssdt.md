@@ -2,12 +2,12 @@
 title: Erstellen eines Analysis Services-Projekts (SSDT) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a5b26af390b901d6f23eacd409d919a6d1c656ee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8ff6e42f9b18df54afc83fe80574d79845cf78e4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Erstellen eines Analysis Services-Projekts (SSDT)
-  Sie können ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] entweder mithilfe der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projektvorlage oder mithilfe des Assistenten zum Importieren einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank definieren, um die Inhalte einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank zu lesen. Wenn gerade keine Projektmappe in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]geladen ist, wird beim Erstellen eines neuen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts automatisch eine neue Projektmappe erstellt. Andernfalls wird der vorhandenen Projektmappe das neue [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt hinzugefügt. Eine bewährte Methode für die Projektmappenentwicklung besteht darin, getrennte Projekte für die verschiedenen Typen von Anwendungsdaten unter Verwendung einer einzelnen Projektmappe zu erstellen, sofern sich die Projekte aufeinander beziehen. Sie können z. B. über eine einzelne Projektmappe verfügen, die getrennte Projekte für Integration Services-Pakete, Analysis Services-Datenbanken und Reporting Services-Berichte enthält, die alle von der gleichen Geschäftsanwendung verwendet werden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Können Sie definieren eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] im Projekt [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] entweder mithilfe der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projektvorlage oder mithilfe des Imports [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Assistenten zum Lesen des Inhalts einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank. Wenn gerade keine Projektmappe in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]geladen ist, wird beim Erstellen eines neuen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts automatisch eine neue Projektmappe erstellt. Andernfalls wird der vorhandenen Projektmappe das neue [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt hinzugefügt. Eine bewährte Methode für die Projektmappenentwicklung besteht darin, getrennte Projekte für die verschiedenen Typen von Anwendungsdaten unter Verwendung einer einzelnen Projektmappe zu erstellen, sofern sich die Projekte aufeinander beziehen. Sie können z. B. über eine einzelne Projektmappe verfügen, die getrennte Projekte für Integration Services-Pakete, Analysis Services-Datenbanken und Reporting Services-Berichte enthält, die alle von der gleichen Geschäftsanwendung verwendet werden.  
   
  Ein Analysis Services-Projekt enthält in einer einzelnen Analysis Services-Datenbank verwendete Objekte. Der Name des Servers und der Datenbank, unter denen die Projektmetadaten als instanziierte Objekte bereitgestellt werden, sind in den Bereitstellungseigenschaften des Projekts angegeben.  
   

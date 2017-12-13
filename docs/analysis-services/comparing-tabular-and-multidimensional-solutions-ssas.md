@@ -2,12 +2,12 @@
 title: "Vergleichen von tabellarischen und mehrdimensionalen Lösungen (SSAS) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/15/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: b4ebbabc5925f42a377be5b54ff9d5c5c5605c49
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d9825f298a0c881a0a8809205bcb46538f081519
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Vergleichen von tabellarischen und mehrdimensionalen Lösungen
-  SQL Server Analysis Services bietet mehrere Ansätze zum Erstellen eines Business Intelligence-Semantikmodells: tabellarische, mehrdimensionale und Power Pivot für SharePoint.
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services bietet mehrere Ansätze zum Erstellen eines Business Intelligence-Semantikmodells: tabellarische, mehrdimensionale und Power Pivot für SharePoint.
   
  Mehr als ein Ansatz ermöglicht eine Modellierungsumgebung, die auf unterschiedliche Geschäfts- und Benutzeranforderungen zugeschnitten ist. Das mehrdimensionale Modell ist eine auf offenen Standards basierende ausgereifte Technologie, die von zahlreichen Herstellern von BI-Software genutzt wird, aber nur schwer zu meistern ist. Das tabellarische Modell bietet einen relationalen Modellierungsansatz, den viele Entwickler intuitiver finden. Das Power Pivot-Modell ist noch einfacher und bietet eine visuelle Datenmodellierung in Excel sowie Serverunterstützung, die über SharePoint bereitgestellt wird.  
   

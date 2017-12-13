@@ -2,12 +2,12 @@
 title: Microsoft Sequence Clustering Algorithm Technical Reference | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9c624a1c14614d62c200e1f3afdfe5623a318853
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 993c4005015b18b1ee6f6106e13fae8429ddcaec
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Sequence Clustering-Algorithmus
-  Der Microsoft Sequence Clustering-Algorithmus ist ein hybrider Algorithmus, der Markov-Kettenanalysen verbindet, um sortierte Sequenzen zu identifizieren, und die Ergebnisse dieser Analyse mit Clustering-Techniken verbindet, um Cluster basierend auf den Sequenzen und anderen Attributen im Modell zu erstellen. In diesem Thema werden die Implementierung des Algorithmus, die Anpassung des Algorithmus und die speziellen Anforderungen für Sequenzclustermodelle beschrieben.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Der Microsoft Sequence Clustering-Algorithmus ist ein hybrider Algorithmus, der Markov-Kette Analysis verwendet, um sortierte Sequenzen zu identifizieren und kombiniert die Ergebnisse dieser Analyse mit clustering-Techniken, um Cluster basierend auf den Sequenzen und anderen Attributen zu generieren im Modell. In diesem Thema werden die Implementierung des Algorithmus, die Anpassung des Algorithmus und die speziellen Anforderungen für Sequenzclustermodelle beschrieben.  
   
  Weitere allgemeine Informationen über den Algorithmus, einschließlich Durchsuchen und Abfragen von Sequenzclustermodellen, finden Sie unter [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md).  
   

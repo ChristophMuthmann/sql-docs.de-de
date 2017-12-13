@@ -2,12 +2,12 @@
 title: "Autorisieren des Zugriffs auf Objekte und Vorgänge (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8bc4a8f86ade20312789199c7a762951763000eb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cff9bdcefc19729ed8f29a1fe8f04267e03ddf4a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Autorisieren des Zugriffs auf Objekte und Vorgänge (Analysis Services)
-  Der Zugriff für Nichtadministratorbenutzer auf Cubes, Dimensionen und Miningmodelle innerhalb einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank wird durch die Mitgliedschaft in mindesten einer Datenbankrolle gewährt. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Administratoren erstellen diese Datenbankrollen, gewähren Lese- oder Lese-/Schreibberechtigungen für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte und weisen dann jeder Rolle [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzer und Gruppen zu.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]NichtadministratorBenutzer auf Cubes, Dimensionen und Miningmodelle innerhalb einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank wird durch die Mitgliedschaft in einer oder mehreren Datenbankrollen gewährt. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Administratoren erstellen diese Datenbankrollen, gewähren Lese- oder Lese-/Schreibberechtigungen für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte und weisen dann jeder Rolle [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzer und Gruppen zu.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bestimmt die gültigen Berechtigungen für einen bestimmten Windows-Benutzer oder eine bestimmte Windows-Benutzergruppe, indem die Berechtigungen kombiniert werden, die jeder Datenbankrolle zugeordnet sind, zu der der Benutzer oder die Gruppe gehört. Das führt dazu, dass wenn eine bestimmte Datenbankrolle einem Benutzer oder einer Gruppe die Berechtigung zum Anzeigen einer Dimension, eines Measures oder eines Attributs erteilt, eine andere Datenbankrolle diese Benutzer- oder Gruppenberechtigung jedoch nicht erteilt, der Benutzer oder die Gruppe über die Berechtigung zum Anzeigen des Objekts verfügt.  
   

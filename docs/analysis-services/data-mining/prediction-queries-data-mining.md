@@ -2,12 +2,12 @@
 title: Vorhersageabfragen (Datamining) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3ba916eaea3e1aeacb108a4c6a800d677dfb578c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0219e94bf988b1df95a93e8fc927092fc07e2c2f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="prediction-queries-data-mining"></a>Vorhersageabfragen (Data Mining)
-  Das Ziel eines typischen Data Mining-Projekts besteht darin, mithilfe des Miningmodells Vorhersagen zu treffen. Beispiel: Sie möchten die zu erwartenden Ausfallzeiten für einen bestimmten Servercluster vorhersagen oder die Wahrscheinlichkeit ermitteln, mit der bestimmte Kundensegmente auf eine Werbekampagne reagieren. Für all diese Aufgaben können Sie eine Vorhersageabfrage erstellen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Das Ziel eines typischen Datamining-Projekts ist die Verwendung des Miningmodells um vorhersagen zu treffen. Beispiel: Sie möchten die zu erwartenden Ausfallzeiten für einen bestimmten Servercluster vorhersagen oder die Wahrscheinlichkeit ermitteln, mit der bestimmte Kundensegmente auf eine Werbekampagne reagieren. Für all diese Aufgaben können Sie eine Vorhersageabfrage erstellen.  
   
  Funktionell gibt es unterschiedliche Typen von Vorhersageabfragen, die in SQL Server unterstützt wurden, abhängig von der Art der Eingabe für die Abfrage:  
   

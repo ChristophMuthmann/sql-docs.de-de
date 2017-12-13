@@ -2,12 +2,12 @@
 title: PowerPivot-Dienstkonten konfigurieren | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: aae3f818de4936974dd53f14c2b3fdbbea0b369f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 016909afa00382f9b1a0905e95423eb82007b758
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Konfigurieren von Power Pivot-Dienstkonten
-  Zu einer [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]-Installation gehören zwei Dienste, die Servervorgänge unterstützen. Der **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])**-Dienst ist ein Windows-Dienst, der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Datenverarbeitung und -Abfrageunterstützung auf einem Anwendungsserver bietet. Das Anmeldekonto für diesen Dienst wird immer während des SQL Server-Setups angegeben, wenn Sie Analysis Services im integrierten SharePoint-Modus installieren.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ein [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]-Installation gehören zwei Dienste, die Servervorgänge unterstützen. Der **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])**-Dienst ist ein Windows-Dienst, der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Datenverarbeitung und -Abfrageunterstützung auf einem Anwendungsserver bietet. Das Anmeldekonto für diesen Dienst wird immer während des SQL Server-Setups angegeben, wenn Sie Analysis Services im integrierten SharePoint-Modus installieren.  
   
  Ein zweites Konto muss für die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung angegeben werden, einen freigegebenen Webdienst, der unter einer Anwendungspoolidentität in einer SharePoint-Farm ausgeführt wird. Dieses Konto wird angegeben, wenn Sie mit dem [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]-Konfigurationstool oder PowerShell eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Installation konfigurieren.  
   

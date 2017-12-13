@@ -2,12 +2,12 @@
 title: "Anforderungen und Überlegungen für Analysis Services-Bereitstellung | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fa49c67746a2c2e9da22e8e2b18ae9af06eb6c42
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ca6771f8ea74bdff21f67704a1d45915b6d73cf6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Anforderungen und Überlegungen für die Bereitstellung von Analysis Services
-  Die Leistung und Verfügbarkeit einer Lösung hängt von vielen Faktoren ab, einschließlich der Funktionen der zugrunde liegenden Hardware, der Topologie der Serverbereitstellung, der Eigenschaften der Lösung (z. B. die Verteilung von Partitionen auf mehreren Servern oder die Verwendung von ROLAP-Speicher, der Direktzugriff auf das relationale Modul erfordert), der Vereinbarungen zum Servicelevel und der Komplexität des Datenmodells.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die Leistung und Verfügbarkeit einer Lösung hängt von vielen Faktoren ab, einschließlich der Funktionen der zugrunde liegenden Hardware, die Topologie der serverbereitstellung, die Merkmale der Projektmappe (z. B. mit der Verteilung von Partitionen auf mehrere Server oder mit dem ROLAP-Speicher, die direkten Zugriff auf das relationale Modul erfordert), Vereinbarungen zum Servicelevel und der Komplexität des Datenmodells.  
   
 ## <a name="memory-and-processor-requirements"></a>Arbeitsspeicher- und Prozessoranforderungen  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] benötigt unter folgenden Umständen zusätzliche Arbeitsspeicher- und Prozessorressourcen:  

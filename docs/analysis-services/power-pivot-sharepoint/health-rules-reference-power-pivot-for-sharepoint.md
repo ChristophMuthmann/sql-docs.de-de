@@ -2,12 +2,12 @@
 title: "Integritätsregeln Verweis (PowerPivot für SharePoint) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: da1a6f30d5a94efd5aaf9a5fecc5bd4435a49bfd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7e1e98142c2234fc680daa8311cf35cbd8057bed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="health-rules-reference-power-pivot-for-sharepoint"></a>Referenz zu Integritätsregeln (Power Pivot für SharePoint)
-  In diesem Referenzthema werden die SharePoint-Integritätsregeln beschrieben, die durch eine [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] für SharePoint-Installation hinzugefügt werden. Diese Regeln werden verwendet, um Probleme mit dem Serverzustand, der Verfügbarkeit oder der Konfiguration einer [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Dienstanwendung bzw. einer zugeordneten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz zu melden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In diesem Referenzthema beschreibt die SharePoint-Integritätsregeln, die von hinzugefügt werden eine [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] für SharePoint-Installation. Diese Regeln werden verwendet, um Probleme mit dem Serverzustand, der Verfügbarkeit oder der Konfiguration einer [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Dienstanwendung bzw. einer zugeordneten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz zu melden.  
   
  In der folgenden Tabelle werden die Regeln in der Reihenfolge aufgeführt, in der sie in der SharePoint-Zentraladministration auf der Seite Regeldefinitionen der Integritätsanalyse angezeigt werden. Bei konfigurierbaren Regeln können Sie die Schwellenwerte ändern, bei denen die Regel ausgelöst wird. Weitere Informationen finden Sie unter [Konfigurieren von Power Pivot-Integritätsregeln](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md). Unter "Automatische Reparatur" wird angegeben, ob es eine integrierte Abhilfemaßnahme gibt. Falls ja, können Sie auf der Seite der Problemberichte auf diese klicken, um das Problem zu beheben.  
   

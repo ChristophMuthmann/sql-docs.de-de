@@ -2,12 +2,12 @@
 title: "Sortieren von Attributelementen basierend auf einem sekundären Attribut | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 55680946738ce1317a0c71397d7a0fe90c959e01
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7e5210ee745f9ce57c7c621832804d9a90de6b5a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-4-5---sorting-attribute-members-based-on-a-secondary-attribute"></a>Lektion 4-5: Sortieren von Attributelementen basierend auf einem sekundären Attribut
-In Lektion 3 haben Sie das Sortieren von Attributelementen basierend auf ihrem Namen oder ihrem Schlüsselwert kennen gelernt. Sie haben sich auch mit der Verwendung eines zusammengesetzten Elementschlüssels in Bezug auf Attributelemente und Sortierreihenfolge vertraut gemacht. Weitere Informationen finden Sie unter [Ändern der Date-Dimension](../analysis-services/lesson-3-4-modifying-the-date-dimension.md). Wenn jedoch weder der Name noch der Schlüssel des Attributs die von Ihnen gewünschte Sortierreihenfolge ermöglicht, müssen Sie Attributelemente basierend auf einem sekundären Attribut sortieren, um die gewünschte Sortierreihenfolge zu erhalten. Wenn zwischen den Attributen eine Beziehung definiert wurde, können Sie das zweite Attribut verwenden, um die Elemente des ersten Attributs zu sortieren.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]In Lektion 3 haben Sie gelernt, wie Sie zum Sortieren von Attributelementen basierend auf ihrem Namen oder Schlüssel-Wert. Sie haben sich auch mit der Verwendung eines zusammengesetzten Elementschlüssels in Bezug auf Attributelemente und Sortierreihenfolge vertraut gemacht. Weitere Informationen finden Sie unter [Ändern der Date-Dimension](../analysis-services/lesson-3-4-modifying-the-date-dimension.md). Wenn jedoch weder der Name noch der Schlüssel des Attributs die von Ihnen gewünschte Sortierreihenfolge ermöglicht, müssen Sie Attributelemente basierend auf einem sekundären Attribut sortieren, um die gewünschte Sortierreihenfolge zu erhalten. Wenn zwischen den Attributen eine Beziehung definiert wurde, können Sie das zweite Attribut verwenden, um die Elemente des ersten Attributs zu sortieren.  
   
 Attributbeziehungen definieren die Beziehungen oder Abhängigkeiten zwischen Attributen. In einer Dimension, die auf einer einzelnen relationalen Tabelle basiert, sind typischerweise alle Attribute durch das Schlüsselattribut miteinander verknüpft. Der Grund hierfür ist, dass alle Attribute für eine Dimension Informationen zu den Elementen bereitstellen, die über das Schlüsselattribut der Dimension mit den Fakten in der Faktentabelle für jede verbundene Measuregruppe verknüpft sind. In einer Dimension, die auf mehreren Tabellen basiert, sind Elemente typischerweise basierend auf dem Joinschlüssel zwischen den Tabellen verknüpft. Verknüpfte Attribute können verwendet werden, um eine Sortierreihenfolge anzugeben, wenn dies durch die zugrunde liegenden Daten unterstützt wird. Sie können z. B. ein neues Attribut erstellen, das die Sortierlogik für ein verknüpftes Attribut bereitstellt.  
   

@@ -2,12 +2,12 @@
 title: "Währungsumrechnungen (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9a35589bbcd4bbc89e0c47a0f1cc76e60f8a7a5f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8565a3599dfd9ef96f1cb4156f4bbbdc8ac60927
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="currency-conversions-analysis-services"></a>Währungsumrechnungen (Analysis Services)
-  [!INCLUDE[applies](../includes/applies-md.md)] Nur Multidimensional  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[applies](../includes/applies-md.md)] Mehrdimensionale nur  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verwendet eine Kombination von Funktionen, die durch MDX-Skripts (Multidimensional Expressions) bestimmt werden, um für Cubes, die mehrere Währungen unterstützen, Währungsumrechnungen bereitzustellen.  
   

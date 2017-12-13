@@ -2,12 +2,12 @@
 title: "Verwenden von Datenfeeds (PowerPivot für SharePoint) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 78239c159da9213ca3cbc3e14ac5367e9846aa8c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ecbf6babc1bfa86cb8c7cdd5d18789be02cf8229
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>Verwenden von Datenfeeds (Power Pivot für SharePoint)
-  Datenfeeds sind einzelne oder mehrere Datenströme, die von einer Onlinedatenquelle generiert und in ein Zieldokument oder eine Zielanwendung gestreamt werden. Wenn Sie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel verwenden, können Datenfeeds Ihnen helfen, vorhandene Unternehmens- oder Geschäftsdaten von beliebigen Datenquellen in das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Fenster in der Excel 2010-Arbeitsmappe abzurufen. Nachdem Sie einen Datenfeed in eine Arbeitsmappe importiert haben, können Sie später in allen Datenaktualisierungsvorgängen, die Sie auf einem SharePoint Server planen, darauf verweisen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Datenfeeds sind eine oder mehrere Datenströme, die von einer Onlinedatenquelle generiert und in ein Zieldokument oder eine Anwendung gestreamt. Wenn Sie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel verwenden, können Datenfeeds Ihnen helfen, vorhandene Unternehmens- oder Geschäftsdaten von beliebigen Datenquellen in das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Fenster in der Excel 2010-Arbeitsmappe abzurufen. Nachdem Sie einen Datenfeed in eine Arbeitsmappe importiert haben, können Sie später in allen Datenaktualisierungsvorgängen, die Sie auf einem SharePoint Server planen, darauf verweisen.  
   
  Wie Sie einen Datenfeed verwenden, hängt davon ab, ob Sie integrierte Exportfunktionen in Anwendungen verwenden, die Atom-Datenfeeds unterstützen, oder ob Sie benutzerdefinierte Datendienste erstellen und verwenden. Anwendungen, die in der Lage sind, Atom-XML-Daten zu veröffentlichen und zu lesen, unterstützen eine nahtlose Datenübertragung, die die Datenfeed- und Datendienstmechanismen für den Benutzer nicht erkennen lässt. Für den Benutzer werden einfach nur Daten von einer Anwendung in eine andere verschoben.  
   

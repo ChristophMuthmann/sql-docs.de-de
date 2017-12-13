@@ -2,12 +2,12 @@
 title: 'Definieren einer m: N-Beziehung und von m: N-Beziehungseigenschaften | Microsoft Docs'
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ad2f336f3197d7746ef250b942d48b5d17740d20
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2f9f9807ecfe195dc38d1d953092775e1b648adb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Definieren einer m:n-Beziehung und deren Eigenschaften
-  In diesem Thema werden m:n-Dimensionen in Analysis Services erläutert. Zusätzlich wird beschrieben, in welchen Fällen sie verwendet und wie sie erstellt werden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In diesem Thema wird erläutert, m: n-Dimensionen in Analysis Services, einschließlich ihrer Verwendung und zu deren Erstellung.  
   
 ## <a name="introduction"></a>Einführung  
  Analysis Services unterstützt m:n-Dimensionen und ermöglicht so komplexere Analysen als diejenigen, die in einem klassischen Sternschema modelliert werden können. In einem klassischen Sternschema verfügen alle Dimensionen über eine 1:n-Beziehung mit einer Faktentabelle. Jeder Fakt ist mit einem Dimensionselement verknüpft, und ein einzelnes Dimensionselement ist vielen Fakten zugeordnet.  

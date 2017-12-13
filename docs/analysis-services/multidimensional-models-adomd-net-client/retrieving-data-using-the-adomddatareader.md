@@ -2,12 +2,12 @@
 title: Abrufen von Daten mittels AdomdDataReader | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e1e086fd6662a00e79b87a02fbaf3528b08895de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f9c02bc400a7d1b3d9bec1a42f6ee43045616e3a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>Abrufen von Daten mittels AdomdDataReader
-  Beim Abruf von analytischen Daten stellt das <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>-Objekt ein ausgewogenes Gleichgewicht zwischen Verwaltung und Interaktivität bereit. Das <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>-Objekt ruft einen schreibgeschützten, vereinfachten Vorwärtsdatenstrom von einer analytischen Datenquelle ab. Dieser nicht zwischengespeicherte Datenstrom ermöglicht es der prozeduralen Logik, die Ergebnisse von einer analytischen Datenquelle effektiv sequenziell zu verarbeiten. Daher ist <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> eine gute Wahl für das Abrufen großer Datenmengen zu Anzeigezwecken, da die Daten nicht zwischengespeichert werden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Beim Abrufen von analytischen Daten, die <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> Objekt stellt ein gutes Gleichgewicht zwischen Verwaltung und Interaktivität. Das <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>-Objekt ruft einen schreibgeschützten, vereinfachten Vorwärtsdatenstrom von einer analytischen Datenquelle ab. Dieser nicht zwischengespeicherte Datenstrom ermöglicht es der prozeduralen Logik, die Ergebnisse von einer analytischen Datenquelle effektiv sequenziell zu verarbeiten. Daher ist <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> eine gute Wahl für das Abrufen großer Datenmengen zu Anzeigezwecken, da die Daten nicht zwischengespeichert werden.  
   
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> kann darüber hinaus die Anwendungsleistung erhöhen, indem Daten abgerufen werden, sobald diese zur Verfügung stehen, anstatt darauf zu warten, dass die vollständigen Ergebnisse der Abfrage zurückgegeben werden. <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> reduziert des Weiteren den Systemverwaltungsaufwand, da dieser Leser standardmäßig nur jeweils eine Zeile speichert.  
   

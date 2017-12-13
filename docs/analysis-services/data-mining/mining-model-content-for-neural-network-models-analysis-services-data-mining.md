@@ -2,12 +2,12 @@
 title: "Miningmodellinhalt für neuronale Netzwerkmodelle | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 63b64dcdf9cf4b94933b978c030418e1baebbfb4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9b8da7c6608b10c5816fafda8129efbf9e393e9b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Miningmodellinhalt von neuronalen Netzwerkmodellen (Analysis Services - Data Mining)
-  In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den Microsoft Neural Network-Algorithmus verwenden. Eine Erklärung dazu, wie Statistiken und Strukturen, die allen Modelltypen eigen sind, interpretiert werden, und die allgemeinen Definitionen von Begriffen in Bezug auf den Miningmodellinhalt finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dieses Thema beschreibt Miningmodellinhalt, der Modellen eigen ist, die den Microsoft Neural Network-Algorithmus verwenden. Eine Erklärung zur Interpretation von Statistiken und Strukturen, die allen Modelltypen gemein sind, und die allgemeinen Definitionen von Begriffen in Bezug auf den Miningmodellinhalt finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-neural-network-model"></a>Grundlegendes zur Struktur von neuronalen Netzwerkmodellen  
  Jedes neuronale Netzwerkmodell verfügt sowohl über einen einzelnen, übergeordneten Knoten, der das Modell und seine Metadaten darstellt, als auch über einen Knoten für Randstatistik (NODE_TYPE = 24), der beschreibende Statistiken über die Eingabeattribute bietet. Der Knoten für Randstatistik ist hilfreich, da er Informationen über Eingaben zusammenfasst, sodass Sie keine Daten von den einzelnen Knoten abfragen müssen.  

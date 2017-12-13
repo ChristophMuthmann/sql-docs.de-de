@@ -2,12 +2,12 @@
 title: Anzeigen des Cubeschemas | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3a7d0c9790f0e8f624179eda86c9062d03b78887
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2489ce5465afcbbb42ffaa9403d75a7d42d68ca4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="view-the-cube-schema"></a>Anzeigen des Cubeschemas
-  Im **Cube-Designer** auf der Registerkarte **Cubestruktur** im Bereich **Datenquellensicht** wird das Cubeschema angezeigt. Das Schema entspricht der Tabellengruppe, aus der die Measures und Dimensionen für einen Cube abgeleitet werden. Jedes Cubeschema besteht aus mindestens einer Faktentabelle und Dimensionstabelle, auf denen die Measures und Dimensionen im Cube basieren.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die **Datenquellensicht** im Bereich der **Cubestruktur** Registerkarte **Cube-Designer** wird das Cubeschema angezeigt. Das Schema entspricht der Tabellengruppe, aus der die Measures und Dimensionen für einen Cube abgeleitet werden. Jedes Cubeschema besteht aus mindestens einer Faktentabelle und Dimensionstabelle, auf denen die Measures und Dimensionen im Cube basieren.  
   
  Auf der Registerkarte **Cubestruktur** im Bereich **Datenquellensicht** wird ein Diagramm der Datenquellensicht angezeigt, die die Grundlage für den Cube bildet. Dieses Diagramm stellt eine Teilmenge des Hauptdiagramms der Datenquellensicht dar. Im Bereich **Datenquellensicht** können Tabellen ein- und ausgeblendet und beliebige vorhandene Diagramme angezeigt werden. Änderungen am zugrunde liegenden Schema (z. B. durch Hinzufügen neuer Beziehungen oder benannter Abfragen) sind jedoch nicht möglich. Um Änderungen am Schema vorzunehmen, verwenden Sie den Datenquellensicht-Designer.  
   

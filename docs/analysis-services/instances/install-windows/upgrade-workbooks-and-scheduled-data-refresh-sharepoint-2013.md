@@ -2,12 +2,12 @@
 title: "Aktualisieren von Arbeitsmappen und planmäßige Datenaktualisierungen (SharePoint 2013) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffec3fb3ec6abd9d6fd1779ae8e8f434894e68b9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3d1ecdb0be095931b952b3ef93ee566db40dfb5f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Aktualisieren von Arbeitsmappen und planmäßige Datenaktualisierungen (SharePoint 2013)
-  In diesem Thema wird die Verwendung von Arbeitsmappen beschrieben, die in [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Umgebungen früherer Versionen erstellt wurden. Außerdem wird erläutert, wie [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Arbeitsmappen aktualisiert werden, um die Vorteile neuer, in diesem Release eingeführter Features zu nutzen. Weitere Informationen zu neuen Features finden Sie unter [Neues in Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]In diesem Thema erläutert die Verwendung von Arbeitsmappen, die in früheren erstellt [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Umgebungen und das upgrade [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Arbeitsmappen, damit Sie in dieser Version eingeführten neuen Funktionen nutzen können. Weitere Informationen zu neuen Features finden Sie unter [Neues in Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
   
 > [!WARNING]  
 >  Für das Upgrade von Arbeitsmappen, die automatisch auf dem Server aktualisiert werden, kann kein Rollback ausgeführt werden. Sobald eine Arbeitsmappe aktualisiert wurde, bleibt sie auf diesem Stand. Um eine frühere Version zu verwenden, können Sie die vorherige Arbeitsmappe erneut in SharePoint veröffentlichen, eine frühere Version wiederherstellen oder die Arbeitsmappe wiederverwenden. Weitere Informationen zum Wiederherstellen oder Wiederverwenden eines Dokuments in SharePoint finden Sie unter [Planen des Schutzes von Inhalten mit Papierkörben und der Versionsverwaltung](http://go.microsoft.com/fwlink/?LinkId=238669).  

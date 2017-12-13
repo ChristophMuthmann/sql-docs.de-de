@@ -2,12 +2,12 @@
 title: Abrufen von Metadaten aus einer analytischen Datenquelle | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c7c280b4b4a996d68bb403ea6210322604452e5d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2c432c699cd0a924b0624d98b0e7f97323718f3c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="retrieving-metadata-from-an-analytical-data-source"></a>Abrufen von Metadaten aus einer analytischen Datenquelle
-  Metadaten sind wichtig für Anwendungen, die analytische Daten abrufen und damit arbeiten. Beim Abrufen von Daten aus einer relationalen Datenquelle ist die Dimensionalität dieser Daten selbst bei geschachtelten Datasets vorhersehbar. Resultsets aus einer relationalen Datenbank haben meist eine zweidimensionale oder skalare Struktur. Aus analytischen Datenquellen abgerufene Daten können jedoch eine variable Dimensionalität aufweisen und möglicherweise entlang tiefer Hierarchien organisiert sein.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Metadaten sind wichtig für Anwendungen, die abrufen und Arbeiten mit analytischen Daten. Beim Abrufen von Daten aus einer relationalen Datenquelle ist die Dimensionalität dieser Daten selbst bei geschachtelten Datasets vorhersehbar. Resultsets aus einer relationalen Datenbank haben meist eine zweidimensionale oder skalare Struktur. Aus analytischen Datenquellen abgerufene Daten können jedoch eine variable Dimensionalität aufweisen und möglicherweise entlang tiefer Hierarchien organisiert sein.  
   
  Um der Komplexität des Metadatenabrufs aus analytischen Datenquellen zu begegnen, bietet ADOMD.NET zwei Arten des Metadatenabrufs:  
   

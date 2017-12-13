@@ -15,15 +15,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 96bf588edd15c77caa6649ac04b6a95046135e95
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
-ms.translationtype: HT
+ms.openlocfilehash: edff09c1c66a1b3c97a80d42d5a1d9702dca3e0c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Einschränkungen und bekannten Probleme für SSIS unter Linux
 
-In diesem Thema wird beschrieben, aktuelle Einschränkungen und bekannten Probleme für SQL Server Integration Services (SSIS) unter Linux.
+Dieser Artikel beschreibt aktuelle Einschränkungen und bekannten Probleme für Microsoft SQL Server Integration Services (SSIS) unter Linux.
 
 ## <a name="general-limitations-and-known-issues"></a>Allgemeine Einschränkungen und bekannte Probleme
 

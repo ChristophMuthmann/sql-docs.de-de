@@ -2,12 +2,12 @@
 title: "EXISTING-Schlüsselwort (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c8542b33d91ff7a228eb2f8b2be29b6b6748c4c2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5bc9a22779eba59b104b75587c8fb216218cdb10
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-query---existing-keyword"></a>MDX-Abfrage - EXISTING-Schlüsselwort
-  Erzwingt die Auswertung einer angegebenen Menge im aktuellen Kontext.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Erzwingt, dass einer angegebenen Menge im aktuellen Kontext ausgewertet werden.  
   
 ## <a name="syntax"></a>Syntax  
   

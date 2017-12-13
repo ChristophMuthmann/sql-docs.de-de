@@ -2,12 +2,12 @@
 title: Erteilen von Datenbankberechtigungen (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ae21903694c80a5f919374e4e367dc82b4cec09e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d313637275d28a83b8a0f79e23bfc46bd972ae2a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Erteilen von Datenbankberechtigungen (Analysis Services)
-  Wenn Sie Datenbanken mit Analysis Services verwalten und bereits über Kenntnisse zu relationalen Datenbanken verfügen, müssen Sie zuerst verstehen, dass in Bezug auf Datenzugriff die Datenbank nicht das primäre sicherungsfähige Objekt in Analysis Services ist.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Wenn Sie Analysis Services-datenbankverwaltung mit Kenntnisse zu relationalen Datenbanken annähert, wird im ersten Schritt müssen Sie verstehen, dass die Datenbank in Bezug auf Datenzugriff, nicht das primäre sicherungsfähige Objekt in Analysis Services ist.  
   
  Die primäre Abfragestruktur in Analysis Services ist ein Cube (oder ein tabellarisches Modell), mit Benutzerberechtigungen, die für diese bestimmten Objekte festgelegt sind. Im Gegensatz zum relationalen Datenbankmodul, bei dem Datenbankanmeldenamen und Benutzerberechtigungen (oft **db_datareader**) für die Datenbank selbst festgelegt sind, ist eine Analysis Services-Datenbank hauptsächlich ein Container für die Hauptabfrageobjekte in einem Datenmodell. Wenn Sie hauptsächlich den Datenzugriff für einen Cube oder ein tabellarisches Modell aktivieren möchten, können Sie zunächst die Datenbankberechtigungen umgehen und sich direkt diesem Thema zuwenden: [Erteilen von Cube- oder Modellberechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   

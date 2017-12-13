@@ -2,12 +2,12 @@
 title: Erstellen von berechneten Elementen | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 526186a2a5942b777c22fd7da7b5dad5326133da
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f91c068837043959e63e5e5f99d8ba719a51bb16
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-calculated-members"></a>Erstellen von berechneten Elementen
-  Sie können benutzerdefinierte Measures oder Dimensionselemente (so genannte berechnete Elemente) erstellen, indem Sie Cubedaten, arithmetische Operatoren, Zahlen und Funktionen kombinieren. Sie können z. B. ein berechnetes Element mit dem Namen Euros erstellen, das Dollar in Euro konvertiert, indem ein vorhandenes Dollar-Measure mit einem Umrechnungskurs multipliziert wird. Euros kann Endbenutzern dann in einer eigenen Zeile oder Spalte angezeigt werden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sie können benutzerdefinierte Measures oder Dimensionselemente, so genannte berechnete Elemente durch Kombinieren von Cubedaten, arithmetischen Operatoren, Zahlen und Funktionen erstellen. Sie können z. B. ein berechnetes Element mit dem Namen Euros erstellen, das Dollar in Euro konvertiert, indem ein vorhandenes Dollar-Measure mit einem Umrechnungskurs multipliziert wird. Euros kann Endbenutzern dann in einer eigenen Zeile oder Spalte angezeigt werden.  
   
  Definitionen berechneter Elemente werden zwar gespeichert, ihre Werte sind jedoch nur im Arbeitsspeicher vorhanden. Im vorherigen Beispiel werden die Werte für Euros für Endbenutzer angezeigt, aber nicht als Cubedaten gespeichert.  
   

@@ -2,12 +2,12 @@
 title: Latency-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 83de3562db54a631c78787cd5db0836a8d81d265
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9061078168f43c3c0ecc7d24f0f86f97023a096d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="latency-element-assl"></a>Latency-Element (ASSL)
-  Definiert die "Kulanzfrist" zwischen der frühesten Benachrichtigung und dem Augenblick, an dem die MOLAP-Images zerstört werden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definiert die "Kulanzfrist" zwischen der frühesten Benachrichtigung und dem Zeitpunkt, die mehrdimensionale OLAP (MOLAP)-Images zerstört werden.  
   
 ## <a name="syntax"></a>Syntax  
   

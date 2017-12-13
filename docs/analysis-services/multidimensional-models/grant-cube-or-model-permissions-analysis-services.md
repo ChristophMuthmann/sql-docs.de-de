@@ -2,12 +2,12 @@
 title: Erteilen Cube- oder modellberechtigungen (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b57c8f78162dbfcfe414ed8bc4fcdcedd04c85d0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fb36f978c414a1ef5916cb0ebd78971c001940e7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Erteilen von Cube- oder Modellberechtigungen (Analysis Services)
-  Ein Cube oder tabellarisches Modell ist das primäre Abfrageobjekt in einem Analysis Services-Datenmodell. Wenn sich Benutzer mit mehrdimensionalen oder tabellarischen Daten von Excel aus verbinden, um Daten ad hoc zu untersuchen, beginnen sie in der Regel damit, einen bestimmten Cube oder ein tabellarisches Modell als Datenstruktur hinter dem Pivot-Berichtsobjekt auszuwählen. In diesem Thema wird erklärt, wie die erforderlichen Berechtigungen für den Zugriff auf Cube- oder tabellarische Daten vergeben werden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ein Cube oder tabellarisches Modell ist das primäre Abfrageobjekt in einem Analysis Services-Datenmodell. Wenn sich Benutzer mit mehrdimensionalen oder tabellarischen Daten von Excel aus verbinden, um Daten ad hoc zu untersuchen, beginnen sie in der Regel damit, einen bestimmten Cube oder ein tabellarisches Modell als Datenstruktur hinter dem Pivot-Berichtsobjekt auszuwählen. In diesem Thema wird erklärt, wie die erforderlichen Berechtigungen für den Zugriff auf Cube- oder tabellarische Daten vergeben werden.  
   
  Standardmäßig hat nur der Server- oder Datenbankadministrator die Berechtigung, Cubes in einer Datenbank abzufragen. Der Zugriff auf Cubes durch einen Benutzer, der kein Administrator ist, setzt dessen Mitgliedschaft in einer Rolle voraus, die für die Datenbank, die den Cube enthält, erstellt wurde. Die Mitgliedschaft wird für Windows-Benutzer- oder -Gruppenkonten unterstützt, die entweder in Active Directory oder auf dem lokalen Computer definiert wurden. Bevor Sie beginnen, geben Sie an, welche Konten Mitgliedschaft in den zu erstellenden Rollen erhalten werden.  
   

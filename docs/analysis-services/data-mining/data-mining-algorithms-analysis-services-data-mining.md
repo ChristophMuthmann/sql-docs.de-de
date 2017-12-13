@@ -2,12 +2,12 @@
 title: "Datamining-Algorithmen (Analysis Services – Datamining) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ff1064666919897691a7dc407fe84da7d3a4cbfe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 092ec27d421f91a1dc4484298139783df1695594
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>Data Mining-Algorithmen (Analysis Services - Data Mining)
-  Ein *Algorithmus* beim Data Mining (oder Machine Learning) besteht aus einer Reihe von Heuristiken und Berechnungen, durch die aus Daten ein Modell erstellt wird. Um ein Modell zu erstellen, werden vom Algorithmus zuerst die von Ihnen bereitgestellten Daten analysiert und bestimmte Muster oder Trends gesucht. Mithilfe der Ergebnisse dieser Analyse über zahlreiche Iterationen definiert der Algorithmus die optimalen Parameter zum Erstellen des Miningmodells. Diese Parameter werden dann für das gesamte Dataset übernommen, um aussagefähige Muster und ausführliche Statistiken zu extrahieren.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ein *Algorithmus* in Data Mining (oder Machine Learning) ist eine Reihe von Heuristiken und Berechnungen, die ein Modell aus Daten erstellt. Um ein Modell zu erstellen, werden vom Algorithmus zuerst die von Ihnen bereitgestellten Daten analysiert und bestimmte Muster oder Trends gesucht. Mithilfe der Ergebnisse dieser Analyse über zahlreiche Iterationen definiert der Algorithmus die optimalen Parameter zum Erstellen des Miningmodells. Diese Parameter werden dann für das gesamte Dataset übernommen, um aussagefähige Muster und ausführliche Statistiken zu extrahieren.  
   
  Das von einem Algorithmus aus Ihren Daten erstellte Miningmodell kann verschiedene Formen annehmen, einschließlich der folgenden:  
   

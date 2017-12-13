@@ -2,12 +2,12 @@
 title: Partitionen in mehrdimensionalen Modellen | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ea486225e7ada9256aae3ad17732761388481835
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 986ade2663f23d0e987269a9474963d3f7137e71
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partitions-in-multidimensional-models"></a>Partitionen in mehrdimensionalen Modellen
-  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]stellt eine *Partition* den physischen Speicher der in eine Measuregruppe geladenen Faktendaten dar. Für jede Measuregruppe wird automatisch eine einzelne Partition erstellt. Es ist jedoch üblich, zusätzliche Partitionen zur weiteren Segmentierung der Daten zu erstellen, um eine effizientere Verarbeitung und eine schnellere Abfrageleistung zu erzielen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], *Partition* den physischen Speicher der in eine Measuregruppe geladenen Faktendaten. Für jede Measuregruppe wird automatisch eine einzelne Partition erstellt. Es ist jedoch üblich, zusätzliche Partitionen zur weiteren Segmentierung der Daten zu erstellen, um eine effizientere Verarbeitung und eine schnellere Abfrageleistung zu erzielen.  
   
  Die Verarbeitung ist effizienter, da Partitionen unabhängig von einander parallel auf einem oder mehreren Servern verarbeitet werden können. Abfragen werden schneller ausgeführt, weil für jede Partition Speichermodi und Aggregationsoptimierungen konfiguriert werden können, die zu kürzeren Antwortzeiten führen. Wenn Sie den MOLAP-Speicher beispielsweise für Partitionen auswählen, die neuere Daten enthalten, erzielen Sie im Normalfall eine höhere Leistung als bei ROLAP. Bei einer Partitionierung nach Datum weisen Partitionen, die neuere Daten enthalten, ebenso mehr Optimierungen auf als Partitionen, die ältere, seltener abgefragte Daten enthalten. Wenn Speicher- und Aggregationsverfahren nach Partition variieren, wirkt sich das negativ auf zukünftige Zusammenführungsvorgänge aus. Überprüfen Sie, ob das Zusammenführen ein wesentlicher Bestandteil Ihrer Partitionsverwaltungsstrategie ist, bevor Sie einzelne Partitionen optimieren.  
   

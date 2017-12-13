@@ -2,12 +2,12 @@
 title: Time Series-Modell Abfragebeispiele | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cd37cd530af23d04f98866eebcaaad824a66f150
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5e72bec5f3ff9a0dbc14912fb2bba656744a678d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="time-series-model-query-examples"></a>Abfragebeispiel Zeitreihenmodell
-  Beim Erstellen einer Abfrage für ein Data Mining-Modell können Sie entweder eine Inhaltsabfrage oder eine Vorhersageabfrage auswählen. Die Inhaltsabfrage liefert Details über die bei der Analyse ermittelten Muster. Die Vorhersageabfrage nimmt hingegen Vorhersagen für neue Daten anhand der im Modell befindlichen Muster vor. Eine Inhaltsabfrage für ein Zeitreihenmodell bietet möglicherweise zusätzliche Angaben zu den erkannten periodischen Strukturen, wohingegen eine Vorhersageabfrage Vorhersagen für die nächsten 5 bis 10 Zeitscheiben bietet. Mit einer Abfrage können Sie auch Metadaten zum Modell abrufen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Wenn Sie eine Abfrage für ein Datamining-Modell erstellen, können Sie entweder eine Inhaltsabfrage Details über die in der Analyse erkannten Muster liefert erstellen oder Erstellung einer Vorhersageabfrage, die die Muster im Modell Vorhersagen für neue Daten generiert. Eine Inhaltsabfrage für ein Zeitreihenmodell bietet möglicherweise zusätzliche Angaben zu den erkannten periodischen Strukturen, wohingegen eine Vorhersageabfrage Vorhersagen für die nächsten 5 bis 10 Zeitscheiben bietet. Mit einer Abfrage können Sie auch Metadaten zum Modell abrufen.  
   
  In diesem Abschnitt wird erläutert, wie diese beiden Abfragetypen für Modelle erstellt werden, die auf dem Microsoft Time Series-Algorithmus basieren.  
   

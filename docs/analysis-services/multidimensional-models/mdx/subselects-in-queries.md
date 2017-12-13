@@ -2,12 +2,12 @@
 title: "Untergeordnete SELECT-Ausdrücke in Abfragen | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 513ec56cc2f73b1c9e0b1746ec2d22bc5ee31145
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 664aa30f1b4dca46597ba464e93eb8534e44dca3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="subselects-in-queries"></a>Unterauswahlen in Abfragen
-  Unterauswahlausdrücke werden SELECT-Ausdrücke geschachtelt, die verwendet werden, um das Leerzeichen des Cubes einzuschränken, von wo der äußere externe SELECT ausgewertet wird. Unterauswahlen ermöglichen es Ihnen, ein neues Leerzeichen zu definieren, über dem alle Berechnungen ausgewertet werden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Unterauswahlausdrücke werden SELECT-Ausdrücke geschachtelt, die verwendet werden, um zu verhindern, dass das Leerzeichen des Cubes, in denen der äußere externe SELECT ausgewertet wird. Unterauswahlen ermöglichen es Ihnen, ein neues Leerzeichen zu definieren, über dem alle Berechnungen ausgewertet werden.  
   
 ## <a name="subselects-by-example"></a>Unterauswahlen zum Beispiel  
  Beginnen wir mit einem Beispiel, wie Unterauswahlen helfen können, die Ergebnisse zu erzeugen, die wir anzeigen möchten. Angenommen, Sie werden gebeten, eine Tabelle zu erzeugen, in der das Verkaufsverhalten für ein Jahr für die obersten 10 Produkte angezeigt wird.  
