@@ -1,11 +1,9 @@
-# [Herunterladen von SSMS](download-sql-server-management-studio-ssms.md)
 # [Was ist SSMS?](sql-server-management-studio-ssms.md)
-
-# Neues
+# [Herunterladen von SSMS](download-sql-server-management-studio-ssms.md)
 ## [SSMS-Änderungsprotokoll & vorherige Releases](sql-server-management-studio-changelog-ssms.md)
 ## [Versionsanmerkungen](download-sql-server-management-studio-ssms.md#release-notes)
+## [Installieren nicht englischsprachiger SSMS-Versionen](install-other-languages.md)
 ## [Neue und aktualisierte Artikel](new-updated-ssms.md)
-
 # [Download SQL Server PowerShell Module (Herunterladen des SQL Server PowerShell-Moduls)](download-sql-server-ps-module.md)
 
 # [SQL Server-Agent +](../ssms/agent/sql-server-agent.md)
