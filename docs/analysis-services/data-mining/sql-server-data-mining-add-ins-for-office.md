@@ -2,12 +2,12 @@
 title: "SQL Server Data Mining-Add-Ins für Office | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e2682484f535bbc98e75c072e1a75243ab78ccd3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: be2255a512f04cd23b8f9d6717d6ec63ab2b2f16
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>SQL Server Data Mining-Add-Ins für Office
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Bei den Data Mining-Add-Ins für Office handelt es sich um ein kompaktes Set von Tools für Vorhersageanalysen, mit denen Sie auf der Grundlage von Daten in Excel analytische Modelle für Vorhersagezwecke, Empfehlungen oder Untersuchungen erstellen können.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Data Mining-Add-ins für Office ist ein kompaktes Set von Tools für Vorhersageanalysen, mit denen Sie Daten in Excel analytische Modelle für Vorhersagen, Empfehlungen oder Untersuchungen erstellen können.  
   
  Die Assistenten und die Datenverwaltungstools in den Add-Ins bieten schrittweise Anleitungen für die folgenden gängigen Data Mining-Tasks:  
   

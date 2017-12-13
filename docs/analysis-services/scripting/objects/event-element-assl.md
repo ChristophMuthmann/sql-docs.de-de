@@ -2,12 +2,12 @@
 title: Event-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f21f26b92e2fac6b57457ddfd605abd89f09216a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5f11ecf35e78958de5086f8502695166403d2e5a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="event-element-assl"></a>Event-Element (ASSL)
-  Definiert eine **Ereignis** als Teil der aufzuzeichnenden eine [Ablaufverfolgung](../../../analysis-services/scripting/objects/trace-element-assl.md) Element.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definiert eine **Ereignis** als Teil der aufzuzeichnenden eine [Ablaufverfolgung](../../../analysis-services/scripting/objects/trace-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   

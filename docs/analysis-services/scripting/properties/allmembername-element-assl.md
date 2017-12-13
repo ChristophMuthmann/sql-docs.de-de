@@ -2,12 +2,12 @@
 title: AllMemberName-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ba833c0b4dcc80a9edd411f707e40ce9a297e86c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b65c0bc17759c250a1e1d303521ff2ca1328496e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="allmembername-element-assl"></a>AllMemberName-Element (ASSL)
-  Enthält die Beschriftung in der Standardsprache für alle-Elements ein [Hierarchie](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) Element.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält die Beschriftung in der Standardsprache für alle-Elements ein [Hierarchie](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   

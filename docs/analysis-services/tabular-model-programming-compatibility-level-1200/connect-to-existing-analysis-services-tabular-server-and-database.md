@@ -2,12 +2,12 @@
 title: Herstellen einer Verbindung mit vorhandenen tabellarischen Analysis Services-Server und Datenbank | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: df4fb2df60cf27c5a2f33676b9e34fdf1b255a34
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e34cc306126acc431048fd93b7eab99049bc2414
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connect-to-existing-analysis-services-tabular-server-and-database"></a>Herstellen einer Verbindung mit vorhandenen tabellarischen Analysis Services-Server und Datenbank
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-In SQL Server 2016 enthält Analysis Services Management Objects (AMO) mehrere Namespaces, mit denen eine Serververbindung eingerichtet werden konnte. Dieser Artikel beschreibt die zum Herstellen eine Serververbindung mit dem Microsoft.AnalysisServices.Tabular-Namespace für Modelle und Datenbanken 1200 erstellt oder höheren Kompatibilitätsgrad. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]In SQL Server 2016 enthält Analysis Services Management Objects (AMO) mehrere Namespaces, mit denen eine Serververbindung eingerichtet werden konnte. Dieser Artikel beschreibt die zum Herstellen eine Serververbindung mit dem Microsoft.AnalysisServices.Tabular-Namespace für Modelle und Datenbanken 1200 erstellt oder höheren Kompatibilitätsgrad. 
 
 Zur Verbindung mit eines Analysis Services-Servers muss Code instanziieren ein Serverobjekts, und klicken Sie dann die "Connect"-Methode dafür aufrufen. Nachdem die Verbindung hergestellt ist, wider Eigenschaften des Serverobjekts die Einstellungen der aktuellen Analysis Services-Instanz. 
 

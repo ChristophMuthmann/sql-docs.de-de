@@ -2,12 +2,12 @@
 title: "Miningmodellinhalt bei Zeitreihenmodellen (Analysis Services – Datamining) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8878d03ca3690fbd13d46decadc2dc9f48755db6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: db5a4f94951de076e1076bb8b70ff796fecc9edd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Miningmodellinhalt von Zeitreihenmodellen (Analysis Services &ndash; Data Mining)
-  Zur Speicherung des Inhalts wird für alle Miningmodelle die gleiche Struktur verwendet. Diese Struktur wird nach dem Data Mining-Schemarowset für den Inhalt definiert. Innerhalb dieser standardmäßigen Struktur werden die Knoten, die Informationen enthalten, jedoch unterschiedlich angeordnet, sodass sie verschiedene Arten von Strukturen darstellen. In diesem Thema werden die Anordnung der Knoten und die Bedeutung der einzelnen Knoten für Miningmodelle erläutert, die auf dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus basieren.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Alle Miningmodelle verwendet die gleiche Struktur zur Speicherung des Inhalts. Diese Struktur wird nach dem Data Mining-Schemarowset für den Inhalt definiert. Innerhalb dieser standardmäßigen Struktur werden die Knoten, die Informationen enthalten, jedoch unterschiedlich angeordnet, sodass sie verschiedene Arten von Strukturen darstellen. In diesem Thema werden die Anordnung der Knoten und die Bedeutung der einzelnen Knoten für Miningmodelle erläutert, die auf dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus basieren.  
   
  Eine Erläuterung der allgemeinen Miningmodellinhalte, die für alle Modelltypen gelten, finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   

@@ -2,12 +2,12 @@
 title: "Übersetzungen in tabellarischen Modellen (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0f125112e836420d8103379c8c119d52c13dfea6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5a79c607d07a50861f87bcdec21c928231cd51bc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>Übersetzungen in Tabellenmodellen (Analysis Services)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Fügt Unterstützung für übersetzungszeichenfolgen für Tabellenmodelle hinzu. Einzelne Objekte im Modell können mehrere Übersetzungen eines Namens oder einer Beschreibung aufweisen, wodurch die Unterstützung von mehrsprachigen Versionen innerhalb der Modelldefinition möglich wird.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Unterstützung für übersetzungszeichenfolgen für Tabellenmodelle. Einzelne Objekte im Modell können mehrere Übersetzungen eines Namens oder einer Beschreibung aufweisen, wodurch die Unterstützung von mehrsprachigen Versionen innerhalb der Modelldefinition möglich wird.  
   
  Übersetzte Zeichenfolgen stehen nur für Objektmetadaten (Namen und Beschreibungen von Tabellen und Spalten) zur Verfügung, die in einem Clienttool wie einer Excel PivotTable-Liste angezeigt werden.  Zum Verwenden von übersetzten Listen gibt die Clientverbindung die Kultur an. Im Feature **In Excel analysieren** können Sie die Sprache in einer Dropdownliste auswählen. Für andere Tools muss die Kultur möglicherweise in der Verbindungszeichenfolge eingegeben werden.  
   

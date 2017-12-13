@@ -2,12 +2,12 @@
 title: "Power Pivot Mindestberechtigungen Beispiel – SharePoint 2013 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 96d0bc028312b4bfcaa0e5fbf9932d77881c087b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0b7ccea7d93562ea9103594e13b078cf9b8ccdf7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-minimum-privilege-example---sharepoint-2013"></a>Power Pivot Mindestberechtigungen Beispiel – SharePoint 2013
-  Dieses Thema veranschaulicht eine Beispielkonfiguration für [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint 2013 mit Mindestberechtigungen. Bei der Konfiguration wird für jede der drei Komponenten ein anderes Konto verwendet, von denen jedes über Mindestberechtigungen verfügt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]In diesem Thema wird beschrieben, ein Beispiel für [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint 2013-Konfiguration mit Mindestberechtigungen. Bei der Konfiguration wird für jede der drei Komponenten ein anderes Konto verwendet, von denen jedes über Mindestberechtigungen verfügt.  
   
 ||  
 |-|  

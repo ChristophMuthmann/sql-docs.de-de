@@ -2,12 +2,12 @@
 title: Tabellarische Modelle (SSAS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 1d770b114a708301f884de76d7c6a4cc39227195
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 569cd3ff914f7b758fb1cfaf1a8c631e8c3d9c4e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabular-modeling-ssas"></a>Tabellenmodellierung (SSAS)
-  Tabellarische Modelle sind Analysis Services-Datenbanken, die im In-Memory- oder im DirectQuery-Modus ausgeführt werden. Sie greifen in relationalen Back-End-Datenquellen direkt auf Daten zu.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Tabellarische Modelle sind Analysis Services-Datenbanken, die im Arbeitsspeicher oder im DirectQuery-Modus Zugriff auf Daten direkt aus relationalen Back-End-Datenquellen auszuführen.  
   
  In-Memory ist die Standardeinstellung. Das In-Memory-Analysemodul nutzt modernste Komprimierungsalgorithmen und einen Multithreaded-Abfrageprozessor, um Berichterstellungsclientanwendungen wie Microsoft Excel und Microsoft [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]schnellen Zugriff auf Objekte und Daten tabellarischer Modelle zu gewähren.  
   

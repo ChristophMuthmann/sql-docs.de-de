@@ -2,12 +2,12 @@
 title: Value-Element (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d0e3954de89983d545df118398398128568eff3f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 81c84c7e407a7f2f57c9f750314dafa6fb99e1ef
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="value-element-xmla"></a>Value-Element (XMLA)
-  Enthält den gewünschten Wert ein [Attribut](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) von hinzuzufügenden Elements ein [einfügen](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) Befehl oder ein [Zelle](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md) Element aktualisiert werden ein [UpdateCells](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)Befehl.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Enthält den gewünschten Wert ein [Attribut](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) von hinzuzufügenden Elements ein [einfügen](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) Befehl oder ein [Zelle](../../../analysis-services/xmla/xml-elements-properties/cell-element-xmla.md) Element aktualisiert werden ein [UpdateCells](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md) Befehl.  
   
 ## <a name="syntax"></a>Syntax  
   

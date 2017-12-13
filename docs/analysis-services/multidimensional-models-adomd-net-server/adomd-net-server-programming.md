@@ -2,12 +2,12 @@
 title: ADOMD.NET-serverprogrammierung | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fd825c22b7b6b4436d57c0baaeaf6abdb416cd91
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ec1460930df27e1111d17b6c5692f82186348153
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="adomdnet-server-programming"></a>ADOMD.NET-Serverprogrammierung
-  Die ADOMD.NET-Serverkomponenten von ADOMD.NET befinden sich innerhalb der **Microsoft.AnalysisServices.AdomdServer** -Namespace (in msmgdsrv.dll). Sie verwenden diese Serverkomponenten, erstellen Sie benutzerdefinierte MDX (Multidimensional Expressions)-Funktionen und gespeicherten Prozeduren, die ausgeführt werden, in einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Die Serverobjekte stellen die Funktionen für die Abfrage von Cubes und Miningmodellen und für die Bewertung von Ausdrücken in einem gegebenen Kontext bereit. Zu den Vorteilen der Erstellung benutzerdefinierter Funktionen und gespeicherter Prozeduren gehören eine schnelle Ausführung, eine zentralisierte Bereitstellung und eine verbesserte Wartungsfreundlichkeit.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die ADOMD.NET-Serverkomponenten von ADOMD.NET befinden sich innerhalb der **Microsoft.AnalysisServices.AdomdServer** -Namespace (in msmgdsrv.dll). Sie verwenden diese Serverkomponenten, erstellen Sie benutzerdefinierte MDX (Multidimensional Expressions)-Funktionen und gespeicherten Prozeduren, die ausgeführt werden, in einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Die Serverobjekte stellen die Funktionen für die Abfrage von Cubes und Miningmodellen und für die Bewertung von Ausdrücken in einem gegebenen Kontext bereit. Zu den Vorteilen der Erstellung benutzerdefinierter Funktionen und gespeicherter Prozeduren gehören eine schnelle Ausführung, eine zentralisierte Bereitstellung und eine verbesserte Wartungsfreundlichkeit.  
   
  Die Themen in der folgenden Tabelle helfen Ihnen, ADOMD.NET-Serveranwendungen zu entwickeln.  
   

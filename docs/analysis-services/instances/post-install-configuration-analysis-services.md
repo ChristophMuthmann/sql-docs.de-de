@@ -2,12 +2,12 @@
 title: Konfiguration (Analysis Services) nach der Installation | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a87a4995e5b7776012e81f9cf908949dbc9339a3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6c35dfdbf2dd4eb9e9cae0c99bfc405fbca27380
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="post-install-configuration-analysis-services"></a>Konfiguration nach der Installation (Analysis Services)
-  Nach der Installation von Analysis Services sind weitere Konfigurationsschritte erforderlich, um einen voll funktionsfähigen Server für die allgemeine Verwendung bereitzustellen. In diesem Abschnitt werden zusätzliche Aufgaben beschrieben, die zum Abschließen der Installation ausgeführt werden. Je nach Verbindungsanforderungen müssen Sie möglicherweise auch die Authentifizierung konfigurieren (siehe [Verbindung mit Analysis Services herstellen](../../analysis-services/instances/connect-to-analysis-services.md)).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Nach der Installation von Analysis Services, sind weitere Konfigurationsschritte erforderlich, den Server vollständig betriebsbereit ist und zur allgemeinen Verwendung verfügbar zu machen. In diesem Abschnitt werden zusätzliche Aufgaben beschrieben, die zum Abschließen der Installation ausgeführt werden. Je nach Verbindungsanforderungen müssen Sie möglicherweise auch die Authentifizierung konfigurieren (siehe [Verbindung mit Analysis Services herstellen](../../analysis-services/instances/connect-to-analysis-services.md)).  
   
  Sobald Datenbanken zur Bereitstellung verfügbar sind, müssen zusätzliche Schritte ausgeführt werden. Sie müssen Rollenmitgliedschaften für die Datenbank konfigurieren, um den Benutzerzugriff auf die Daten zu gewähren, eine Sicherungs- und Wiederherstellungsstrategie für Datenbanken entwerfen und entscheiden, ob Daten in regelmäßigen Intervallen nach einem Verarbeitungszeitplan aktualisiert werden sollen. Weitere Informationen zur Bereitstellung und Verwaltung von Datenbanken finden Sie unter den folgenden Links: [Mehrdimensionale Modelldatenbanken &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) und [Tabellarische Modelldatenbanken &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md).  
   

@@ -1,6 +1,6 @@
 ---
 title: Installieren von SQL Server Integrationsservices unter Linux | Microsoft Docs
-description: Dieses Thema beschreibt, wie SQL Server Integration Services (SSIS) unter Linux zu installieren.
+description: Dieser Artikel beschreibt, wie SQL Server Integration Services (SSIS) unter Linux zu installieren.
 author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 851d8dc5121eb12b7d754a95db73494adcc632b4
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
-ms.translationtype: HT
+ms.openlocfilehash: 13bd5bde7e4e4ec63bb7e3bd7d8959440f499672
+ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Installieren von SQL Server Integration Services (SSIS) unter Linux
 
@@ -117,21 +117,11 @@ sudo yum update mssql-server-is
 ### <a name="remove-ssis"></a>Entfernen von SSIS
 So entfernen Sie `mssql-server-is`, können Sie folgenden Befehl ausführen:
 ```bash
-sudo yum remove msssql-server-is
+sudo yum remove mssql-server-is
 ```
-
-
-
-
-## <a name="run-a-package"></a>Ausführen eines Pakets
-Kopieren Sie das SSIS-Paket auf dem Linux-Computer. Verwenden Sie dann den folgenden Befehl zum Ausführen des Pakets an.
-
-```bash
-dtexec /F <package name> /DE <protection password>
-```
-
-
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zur Verwendung von SSIS unter Linux zu extrahieren, Transformieren und Laden von Daten finden Sie unter [extrahieren, Transformieren und Laden von Daten für SQL Server on Linux mit SSIS](sql-server-linux-migrate-ssis.md).
+Zum Ausführen von SSIS-Pakete auf Linux finden Sie unter [extrahieren, Transformieren und Laden von Daten für SQL Server on Linux mit SSIS](sql-server-linux-migrate-ssis.md).
+
+Konfigurieren zusätzliche Einstellungen der SSIS unter Linux finden Sie [konfigurieren Sie SQL Server Integration Services unter Linux mit Ssis-Conf](sql-server-linux-configure-ssis.md).

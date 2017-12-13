@@ -2,12 +2,12 @@
 title: IsDefaultImage-Element (XML) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 57419279e470e9ae5e3bf22a1527e4a889ae79be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8b25a8ff30f64be924ca8b52467f84f344d55c64
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="isdefaultimage-element-xml"></a>IsDefaultImage-Element (XML)
-  Gibt an, dass die Möglichkeit besteht, das Standardimage für diese Entität durch Navigieren von dieser Beziehung zur anderen Tabelle und durch Abrufen des Members mit dem Attribut "IsDefaultImage" abzurufen.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Gibt an, dass es möglich ist, das Standardimage für diese Entität durch Navigieren von dieser Beziehung zur anderen Tabelle abrufen und Abrufen des Members mit das Attribut "isdefaultimage" hat.  
   
 ## <a name="syntax"></a>Syntax  
   

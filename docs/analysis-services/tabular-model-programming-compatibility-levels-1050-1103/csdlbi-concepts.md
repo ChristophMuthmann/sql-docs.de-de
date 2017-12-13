@@ -2,12 +2,12 @@
 title: CSDLBI-Konzepte | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,17 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 16688e8f3f87e8ca9e2e95e4d2200a3a1bf03342
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8b75857391d8c5298db654469ada8c117926dc89
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI-Konzepte
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  Die konzeptionelle Schemadefinitionssprache mit BI-Anmerkungen (CSDLBI) basiert auf Entity Data Framework, einer Abstraktion zum Darstellen von Daten, die es ermöglicht, dass unterschiedliche Datasets programmgesteuert aufgerufen, abgefragt oder exportiert werden können. CSDLBI wird verwendet, um mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellte Datenmodelle darzustellen, weil diese Sprache umfangreiche datengesteuerte Berichterstellungsfunktionen und Anwendungen unterstützt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Konzeptionelle Schemadefinitionssprache mit BI-Anmerkungen (CSDLBI) basiert auf Entity Data Framework eine Abstraktion zum Darstellen von Daten in einer Weise, die unterschiedliche Datasets programmgesteuert zugegriffen ist, abgefragt oder exportiert werden, ermöglicht. CSDLBI wird verwendet, um mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellte Datenmodelle darzustellen, weil diese Sprache umfangreiche datengesteuerte Berichterstellungsfunktionen und Anwendungen unterstützt.  
   
  In diesem Abschnitt wird erläutert, wie die CSDLBI-Darstellung (tabellarischen und mehrdimensionalen) [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenmodellen zugeordnet wird, und es werden Beispiele für die einzelnen Modelltypen bereitgestellt.  
   
@@ -72,7 +69,7 @@ ms.lasthandoff: 11/17/2017
   
  Die **EntitySet** enthält keine Informationen zu Spalten oder Daten in der Tabelle. Die ausführliche Beschreibung der Spalten und ihrer Eigenschaften wird im EntityType-Element bereitgestellt.  
   
- Die **EntitySet** -Element für jede Entität (Tabelle) umfasst eine Auflistung von Eigenschaften, die definieren, die Schlüsselspalte, den Datentyp und die Länge der Spalte, NULL-Zulässigkeit, das Sortierverhalten usw.. Im folgenden CSDL-Auszug werden z. B. drei Spalten in der Customer-Tabelle beschrieben. Die erste Spalte ist eine spezielle ausgeblendete Spalte, die intern vom Modell verwendet wird.  
+ Die **EntitySet** -Element für jede Entität (Tabelle) umfasst eine Auflistung von Eigenschaften, die definieren, die Schlüsselspalte, den Datentyp und die Länge der Spalte, NULL-Zulässigkeit, das Sortierverhalten usw. Im folgenden CSDL-Auszug werden z. B. drei Spalten in der Customer-Tabelle beschrieben. Die erste Spalte ist eine spezielle ausgeblendete Spalte, die intern vom Modell verwendet wird.  
   
 ```  
 <EntityType Name="Customer">  
@@ -99,7 +96,7 @@ ms.lasthandoff: 11/17/2017
   
  Zuordnungen haben immer genau zwei Enden, die jeweils auf ein Feld oder eine Spalte in einer Tabelle zeigen. Daher sind mehrere Beziehungen zwischen zwei Tabellen möglich, wenn die Beziehungen verschiedene Endpunkte haben. Den Endpunkten der Zuordnung wird ein Rollenname zugewiesen, der angibt, wie die Zuordnung im Kontext des Datenmodells verwendet wird. Ein Beispiel für einen Rollennamen möglicherweise **"ShipTo"**, die bei Anwendung auf eine Kunden-ID, die die Kunden-ID in eine Orders-Tabelle verknüpft ist.  
   
- Die CSDLBI-Darstellung des Modells enthält auch Attribute in der Zuordnung, die bestimmen, wie die Entitäten einander in Hinsicht zugeordnet sind, die *Multiplizität* der Zuordnung. Multiplizität gibt an, ob das Attribut oder die Spalte am Endpunkt einer Beziehung zwischen Tabellen auf der 1-Seite oder auf der n-Seite einer 1:n-Beziehung ist. Es gibt keinen separaten Wert für 1:1-Beziehungen. CSDLBI-Anmerkungen unterstützen eine Multiplizität von 0 (das bedeutet, dass die Entität nicht zugeordnet ist) oder 0..1, was entweder eine 1:1-Beziehung oder eine 1:n-Beziehung bedeutet.  
+ Die CSDLBI-Darstellung des Modells enthält auch Attribute in der Zuordnung, die bestimmen, wie die Entitäten einander in Hinsicht zugeordnet sind, die *Multiplizität* der Zuordnung. Multiplizität gibt an, ob das Attribut oder die Spalte am Endpunkt einer Beziehung zwischen Tabellen auf der 1-Seite oder auf der n-Seite einer 1:n-Beziehung ist. Es gibt keinen separaten Wert für 1:1-Beziehungen. CSDLBI-Anmerkungen unterstützen eine Multiplizität von 0 (das bedeutet, dass die Entität nicht zugeordnet ist) oder 0.1, was entweder eine 1:1-Beziehung oder eine 1:n-Beziehung bedeutet.  
   
  Im folgenden Beispiel wird die CSDLBI-Ausgabe für eine Beziehung zwischen den Tabellen "Date" und "ProductInventory" dargestellt, wobei die zwei Tabellen über die DateAlternateKey-Spalte verknüpft sind. Beachten Sie, dass standardmäßig der Name des der **AssociationSet** ist der vollqualifizierte Name der Spalten, die in der Beziehung beteiligt sind. Sie können dieses Verhalten jedoch ändern, wenn Sie das Modell erstellen, und ein anderes Namensformat verwenden.  
   

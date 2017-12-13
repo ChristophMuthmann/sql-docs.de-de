@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 11/24/2017
+ms.date: 12/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 62a9e4eec99073e63d53c2d610a7527fbe5f9c91
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
-ms.translationtype: HT
+ms.openlocfilehash: b418634c714fda6dfd0e339e42c7b584436c5433
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Ändern der Kompatibilitätsgrad der Datenbank (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -102,15 +102,7 @@ SELECT name, compatibility_level FROM sys.databases;
  Wenn vorhandener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anwendungen auswirken, Verhaltensunterschiede in Ihrer Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Konvertieren der Anwendung in die nahtlose Zusammenarbeit mit den neuen Kompatibilitätsmodus. Verwenden Sie dann **ALTER DATABASE** so ändern Sie den Kompatibilitätsgrad in "130". Die neue kompatibilitätseinstellung für eine Datenbank in Kraft, wenn ein **USE Database** ausgegeben wird oder eine neue Anmeldung für diese Datenbank als Standarddatenbank verarbeitet wird.  
   
 ## <a name="best-practices"></a>Bewährte Methoden  
- Das Ändern des Kompatibilitätsgrades, während Benutzer mit der Datenbank verbunden sind, kann zu fehlerhaften Resultsets für aktive Abfragen führen. Wird der Kompatibilitätsgrad z.&#160;B. während der Kompilierung eines Abfrageplans geändert, basiert der kompilierte Plan möglicherweise sowohl auf dem alten als auch auf dem neuen Kompatibilitätsgrad, was zu einem fehlerhaften Plan und möglicherweise ungenauen Ergebnissen führt. Das Problem kann noch verstärkt werden, wenn der Plan im Plancache gespeichert und für nachfolgende Abfragen erneut verwendet wird. Zur Vermeidung ungenauer Ergebnisse wird zum Ändern des Kompatibilitätsgrades einer Datenbank das folgende Verfahren empfohlen:  
-  
-1.  Versetzen Sie die Datenbank mithilfe von ALTER DATABASE SET SINGLE_USER in den Einzelbenutzermodus.  
-  
-2.  Ändern Sie den Kompatibilitätsgrad der Datenbank.  
-  
-3.  Versetzen Sie die Datenbank mithilfe von ALTER DATABASE SET MULTI_USER in den Mehrbenutzermodus.  
-  
-4.  Weitere Informationen zum Festlegen des Modus "Access" einer Datenbank finden Sie unter [ALTER DATABASE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql.md).  
+Der empfohlene Workflow für den Kompatibilitätsgrad aktualisieren, finden Sie unter [Ändern des Datenbank-Kompatibilitätsmodus und Verwenden des Abfragespeichers](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md).  
   
 ## <a name="compatibility-levels-and-stored-procedures"></a>Kompatibilitätsgrade und gespeicherte Prozeduren  
  Wenn eine gespeicherte Prozedur ausgeführt wird, verwendet sie den aktuellen Kompatibilitätsgrad der Datenbank, in der sie definiert ist. Wenn die Kompatibilitätseinstellung einer Datenbank geändert wird, werden alle zugehörigen gespeicherten Prozeduren automatisch entsprechend neu kompiliert.  

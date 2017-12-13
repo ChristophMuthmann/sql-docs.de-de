@@ -2,12 +2,12 @@
 title: "Ausführen von Transaktionen in ADOMD.NET | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5c78445de3ed3b17805bc458ce6078e0d9587eed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: abe2e4bcc48a86e26e9a70e4f39e6bfbf7ba13ee
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connections-in-adomdnet---performing-transactions"></a>Verbindungen in ADOMD.NET - Ausführen von Transaktionen
-  In ADOMD.NET verwenden Sie das <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction>-Objekt, um den Transaktionskontext für ein gegebenes <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>-Objekt zu verwalten. Diese Funktionalität ermöglicht es Ihnen, mehrere Befehle vom gleichen Kontext auszuführen. Jeder Befehl liest die gleichen Daten, ohne dass sich die gelesenen Daten zwischen jeder Befehlsausführung ändern.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In ADOMD.NET verwenden Sie die <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> Objekt zum Verwalten der bereits verwendeten Transaktionskontext für einen bestimmten <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> Objekt. Diese Funktionalität ermöglicht es Ihnen, mehrere Befehle vom gleichen Kontext auszuführen. Jeder Befehl liest die gleichen Daten, ohne dass sich die gelesenen Daten zwischen jeder Befehlsausführung ändern.  
   
 > [!NOTE]  
 >  Die <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> Klasse ist die Implementierung von der **System.Data.IDbTransaction** Schnittstelle, Teil der [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Klassenbibliothek und implementiert, die von allen .NET Framework-Datenanbietern, die unterstützen Transaktionen.  

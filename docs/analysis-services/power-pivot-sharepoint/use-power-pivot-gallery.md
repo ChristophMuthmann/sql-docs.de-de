@@ -2,12 +2,12 @@
 title: Verwenden des Power Pivot-Katalogs | Microsoft Docs
 ms.custom: 
 ms.date: 08/31/2015
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2baeb4233fc9c8c8121e468c7d9111a52a66ba7d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3e56bbb1285683d0328b9ca64092d075406ccabf
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-power-pivot-gallery"></a>Verwenden des Power Pivot-Katalogs
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog ist eine besondere SharePoint-Dokumentbibliothek, die umfangreiche Vorschau- und Dokumentverwaltungsmöglichkeiten für veröffentlichte Excel-Arbeitsmappen und Reporting Services-Berichte bereitstellt, die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten enthalten.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog ist eine spezielle SharePoint-Dokumentbibliothek, die umfangreiche Vorschau- und dokumentverwaltungsmöglichkeiten für veröffentlichte Excel-Arbeitsmappen bereitstellt und Reporting Services-Berichte enthalten [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Daten.  
   
 > [!NOTE]  
 >  Abhängig davon wie Ihr Server konfiguriert ist, werden unter Umständen für bestimmte Dokumente Warnungen oder Fehlermeldungen im Vorschaubereich angezeigt. Meldungen werden möglicherweise angezeigt, wenn für eine Excel-Arbeitsmappe festgelegt wurde, dass sie bei jedem Öffnen automatisch aktualisiert wird. Warnmeldungen zur Datenaktualisierung werden als Vorschaubild angezeigt, wenn Excel Services so konfiguriert ist, dass Fehlermeldungen als Warnung bei Datenaktualisierungen angezeigt werden. Farm- oder Dienstadministratoren können Konfigurationseinstellungen ändern, damit eine Vorschau des tatsächlichen Arbeitsblatts angezeigt wird. Weitere Informationen finden Sie unter [Erstellen eines vertrauenswürdigen Speicherorts für PowerPivot-Websites in der Zentraladministration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  

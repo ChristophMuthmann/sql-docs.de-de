@@ -2,12 +2,12 @@
 title: Erteilen von benutzerdefiniertem Zugriff auf Zellendaten (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f199fb9b23b2837c4d886c2c5721c6cd762b7fad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0089b0257e4e3291375aee7baad1f304412f2a20
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>Erteilen von benutzerdefiniertem Zugriff auf Zellendaten (Analysis Services)
-  Zellensicherheit wird verwendet, um den Zugriff auf Measuredaten innerhalb eines Cubes zuzulassen oder zu verweigern. Die folgende Abbildung zeigt eine Kombination zugelassener und verweigerter Measures in einer PivotTable, wenn ein Benutzer angemeldet ist, dessen Rolle nur den Zugriff auf bestimmte Measures erlaubt. In diesem Beispiel sind der **Betrag der Verkäufe des Wiederverkäufers** und die **Gesamtproduktkosten des Wiederverkäufers** die einzigen über diese Rolle verfügbaren Measures. Alle anderen Measures werden implizit abgelehnt (im unten stehenden Abschnitt "Zulassen des Zugriffs auf bestimmte Measures" sind die Schritte zu diesem Ergebnis beschrieben).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Zellensicherheit wird verwendet, zulassen oder Verweigern des Zugriffs auf Daten innerhalb eines Cubes zu messen. Die folgende Abbildung zeigt eine Kombination zugelassener und verweigerter Measures in einer PivotTable, wenn ein Benutzer angemeldet ist, dessen Rolle nur den Zugriff auf bestimmte Measures erlaubt. In diesem Beispiel sind der **Betrag der Verkäufe des Wiederverkäufers** und die **Gesamtproduktkosten des Wiederverkäufers** die einzigen über diese Rolle verfügbaren Measures. Alle anderen Measures werden implizit abgelehnt (im unten stehenden Abschnitt "Zulassen des Zugriffs auf bestimmte Measures" sind die Schritte zu diesem Ergebnis beschrieben).  
   
  ![PivotTable mit zugelassenen und verweigerten Zellen](../../analysis-services/multidimensional-models/media/ssas-permscellsallowed.png "Pivottable mit zugelassenen und verweigerten Zellen")  
   

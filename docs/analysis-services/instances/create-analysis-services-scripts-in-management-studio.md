@@ -2,12 +2,12 @@
 title: Erstellen von Analysis Services-Skripts in Management Studio | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 22811448d173c9f55229557dfed64e16ead18706
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 55f3f1485ba2e684371444ec6f40696b3f853fcd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Erstellen von Analysis Services-Skripts in Management Studio
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] schließt Skriptgenerierungsfunktionen, Vorlagen und Editoren ein, mit denen Sie Analysis Services-Objekte und Tasks schreiben können.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] schließt skriptgenerierungsfunktionen, Vorlagen und Editoren, die Sie verwenden können, um Analysis Services-Objekte und Tasks schreiben.  
   
 ## <a name="script-analysis-services-tasks-in-management-studio"></a>Script Analysis Services-Tasks in Management Studio  
  Sie können in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Skripts erstellen, indem auf eine der Skriptoptionen in einem taskbezogenen Dialogfeld geklickt wird. Alle Dialogfelder, die Sie zum Ausführen von Aufgaben verwenden (z. B. Sicherung oder Wiederherstellungsdatenbank, Objektverarbeitung oder Aggregationsentwurf), beinhalten oben eine Skriptoption. Durch die Auswahl einer dieser Optionen wird auf Grundlage der Informationen und der Einstellungen im Dialogfeld ein XMLA-Skript generiert.  

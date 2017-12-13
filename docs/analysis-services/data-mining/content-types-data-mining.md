@@ -2,12 +2,12 @@
 title: Inhaltstypen (Datamining) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -35,14 +35,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2e3cf974c1b3cc1b8cecbc441da3ab2514c8f512
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6d605692200b4e1c056d90070238dcce442c1e29
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="content-types-data-mining"></a>Inhaltstypen (Data Mining)
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie den physischen Datentyp für eine Spalte in einer Miningstruktur sowie einen logischen Inhaltstyp für die Spalte bei Verwendung in einem Modell definieren.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Sie können die sowohl den physischen Datentyp für eine Spalte in einer Miningstruktur sowie einen logischen Inhaltstyp für die Spalte bei Verwendung in einem Modell definieren  
   
  Der *Datentyp* bestimmt, wie Algorithmen die Daten beim Erstellen von Miningmodellen in diesen Spalten verarbeiten. Durch Definieren des Datentyps einer Spalte erhält der Algorithmus Informationen über die Art und Verarbeitung der Daten in den Spalten. Jeder Datentyp in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt einen oder mehrere Inhaltstypen für Data Mining.  
   

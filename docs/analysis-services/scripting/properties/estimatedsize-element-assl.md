@@ -2,12 +2,12 @@
 title: EstimatedSize-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3cb162adb6d7495d17b0ac1517604f0bb27a0d96
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8f6ccdb40ff8388d46d7d69c52d2b83c4817410e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="estimatedsize-element-assl"></a>EstimatedSize-Element (ASSL)
-  Enthält die schreibgeschützte geschätzte Größe des übergeordneten Elements (in Byte).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält die schreibgeschützte geschätzte Größe in Bytes, des übergeordneten Elements.  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -2,12 +2,12 @@
 title: "Festlegen der Sicherheit für gespeicherte Prozeduren | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2865051f8689620a5a9df1b450ea74fb6eff8c7b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8ae76fbe9c09366f0a9177de901e8c08ca5ffe15
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="setting-security-for-stored-procedures"></a>Festlegen der Sicherheit für gespeicherte Prozeduren
-  Die Sicherheit für gespeicherte Prozeduren wird mit der **PermissionSet** -Eigenschaft für eine gespeicherte Prozedur in einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (Serverebene), einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank, oder einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt festgelegt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Festlegen der Sicherheit für gespeicherte Prozeduren wird mit der **PermissionSet** Eigenschaft für eine gespeicherte Prozedur für eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (Serverebene), ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank oder ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Mehrdimensionales Modell Assemblys-Verwaltung](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)   

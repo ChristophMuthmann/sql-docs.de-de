@@ -3,19 +3,22 @@ title: Systemeigene Bewertung | Microsoft Docs
 ms.custom: 
 ms.date: 09/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: r-services
+ms.service: 
+ms.component: advanced-analytics
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 8cce800526dbf89da77508713b4dd2aa2eead4ae
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 92bb9ad88b884d5104f2fbc716151ce91f3d764e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="native-scoring"></a>Systemeigene Bewertung
 

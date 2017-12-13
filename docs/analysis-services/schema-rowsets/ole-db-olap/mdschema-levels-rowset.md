@@ -2,12 +2,12 @@
 title: MDSCHEMA_LEVELS-Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1c0497713e1a115a0c82b7eb957affb82dd060db
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 56f864291da1c44ef48c937c133e420ad3b5dc08
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdschemalevels-rowset"></a>MDSCHEMA_LEVELS-Rowset
-  Beschreibt jede Ebene innerhalb einer bestimmten Hierarchie.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Beschreibt jede Ebene innerhalb einer bestimmten Hierarchie an.  
   
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Die **MDSCHEMA_LEVELS** Rowset enthält die folgenden Spalten.  

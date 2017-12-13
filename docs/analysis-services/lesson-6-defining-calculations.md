@@ -2,12 +2,12 @@
 title: 'Lektion 6: Definieren von Berechnungen | Microsoft Docs'
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 124ccfaa310ac6bc356cfaf30a7dc5c331b563a0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6ad53ac85c3ea996714684d4cc0fb114f5317697
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-6-defining-calculations"></a>Lektion 6: Definieren von Berechnungen
-In dieser Lektion erfahren Sie, wie Berechnungen definiert werden, bei denen es sich um MDX-Ausdrücke oder -Skripts (Multidimensional Expressions) handelt. Berechnungen ermöglichen es Ihnen, berechnete Elemente und benannte Mengen zu definieren und weitere Skriptbefehle auszuführen, um die Fähigkeiten eines [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Cubes zu erweitern. Sie können z. B. einen Skriptbefehl ausführen, um einen Teilcube zu definieren und dann den Zellen im Teilcube eine Berechnung zuordnen.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]In dieser Lektion lernen Sie Berechnungen definieren, die mehrdimensionale Ausdrücke (Multidimensional Expressions) oder Skripts werden. Berechnungen ermöglichen es Ihnen, berechnete Elemente und benannte Mengen zu definieren und weitere Skriptbefehle auszuführen, um die Fähigkeiten eines [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Cubes zu erweitern. Sie können z. B. einen Skriptbefehl ausführen, um einen Teilcube zu definieren und dann den Zellen im Teilcube eine Berechnung zuordnen.  
   
 Wenn Sie eine neue Berechnung im Cube-Designer definieren, wird die Berechnung dem Bereich **Skriptplaner** der Registerkarte **Berechnungen** im Cube-Designer hinzugefügt, und die Felder für den jeweiligen Berechnungstyp werden in einem Berechnungsformular im Bereich **Berechnungsausdrücke** angezeigt. Berechnungen werden in der Reihenfolge ausgeführt, in der sie im Bereich **Skriptplaner** aufgelistet sind. Durch Klicken mit der rechten Maustaste auf eine bestimmte Berechnung und Auswählen von **Nach oben** oder **Nach unten**oder durch Klicken auf eine bestimmte Berechnung und Verwenden der Symbole **Nach oben** oder **Nach unten** auf der Symbolleiste der Registerkarte **Berechnungen** können Sie die Reihenfolge der Berechnungen ändern.  
   

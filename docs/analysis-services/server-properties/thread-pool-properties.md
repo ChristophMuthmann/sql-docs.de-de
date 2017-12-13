@@ -2,12 +2,12 @@
 title: Threadpooleigenschaften | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: server-properties
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: afc7c7e8464661b6d853715c98f6cc61b00bf6b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 25a741e35b7efa0b3bb13047853f6f39d8300c3c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="thread-pool-properties"></a>Threadpooleigenschaften
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet Multithreading für viele Vorgänge, um die Gesamtserverleistung zu verbessern, indem mehrere Aufträge parallel ausgeführt werden. Zur effizienteren Verwaltung von Threads verwendet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Threadpools, um Threads vorab zuzuordnen und die Threadverfügbarkeit für den nächsten Auftrag zu erleichtern.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet Multithreading für viele Vorgänge, die gesamtleistung des Servers verbessern, indem mehrere Aufträge parallel ausgeführt wird. Zur effizienteren Verwaltung von Threads verwendet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Threadpools, um Threads vorab zuzuordnen und die Threadverfügbarkeit für den nächsten Auftrag zu erleichtern.  
   
  Jede Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwaltet einen eigenen Satz von Threadpools. Es gibt Unterschiede in Bezug darauf, wie Threadpools von tabellarischen und mehrdimensionalen Instanzen verwendet werden. So verwenden z.B. nur mehrdimensionale Instanzen den **IOProcess** -Threadpool. Daher ist die in diesem Thema beschriebene **PerNumaNode** -Eigenschaft für tabellarische Instanzen bedeutungslos. Im Abschnitt [Eigenschaftsreferenz](#bkmk_propref) unten werden für jede Eigenschaft die Modusanforderungen aufgeführt.
   

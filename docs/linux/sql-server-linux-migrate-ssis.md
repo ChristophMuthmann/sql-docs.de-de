@@ -15,17 +15,17 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 2b09251cae6b89dd742d685f9405155a7b674a3d
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
-ms.translationtype: HT
+ms.openlocfilehash: 83c602be92eae7a907d891a56c85141873b5266e
+ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Extrahieren, Transformieren und Laden von Daten unter Linux mit SSIS
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-In diesem Thema wird beschrieben, wie SQL Server Integration Services (SSIS)-Pakete auf Linux ausgeführt wird. SSIS löst Probleme bei der Integration von komplexen Daten extrahieren von Daten aus mehreren Quellen und Formaten, Transformieren und Bereinigen der Daten und die Daten in mehrere Ziele laden. 
+Dieser Artikel beschreibt, wie SQL Server Integration Services (SSIS)-Pakete auf Linux ausgeführt wird. SSIS löst Probleme bei der Integration von komplexen Daten extrahieren von Daten aus mehreren Quellen und Formaten, Transformieren und Bereinigen der Daten und die Daten in mehrere Ziele laden. 
 
 SSIS-Pakete auf Linux laufende können mit Microsoft SQL Server, die auf Windows lokal oder in der Cloud, die unter Linux oder in Docker verbinden. Sie können auch mit Azure SQL-Datenbank, Azure SQL Data Warehouse, ODBC-Datenquellen, Flatfiles und anderen Datenquellen, einschließlich ADO.NET Quellen, XML-Dateien und OData-Diensten verbinden.
 
@@ -47,17 +47,17 @@ Um ein SSIS-Paket auf einem Linux-Computer auszuführen, führen Sie folgende Sc
     $ dtexec /F \<package name \> /DE <protection password>
     ```
 
-## <a name="other-common-ssis-tasks"></a>Andere allgemeine SSIS-tasks
+## <a name="design-packages"></a>Entwerfen von Paketen
 
--   **Entwerfen Sie Pakete**.
+**Herstellen einer Verbindung mit der ODBC-Datenquellen**. Mit SSIS unter Linux CTP-Version 2.1 aktualisiert und höher können SSIS-Pakete auf Linux ODBC-Verbindungen. Diese Funktion wurde mit SQL Server und die MySQL-ODBC-Treiber getestet, aber auch mit jeder Unicode-ODBC-Treiber arbeiten, die die ODBC-Spezifikation berücksichtigt werden sollen. Zur Entwurfszeit können Sie entweder einen DSN oder eine Verbindungszeichenfolge in die ODBC-Verbindung angeben; Sie können auch Windows-Authentifizierung verwenden. Weitere Informationen finden Sie unter der [Blogbeitrag Ankündigung ODBC-Unterstützung unter Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
 
-    -   **Herstellen einer Verbindung mit der ODBC-Datenquellen**. Mit SSIS unter Linux CTP-Version 2.1 aktualisiert und höher können SSIS-Pakete auf Linux ODBC-Verbindungen. Diese Funktion wurde mit SQL Server und die MySQL-ODBC-Treiber getestet, aber auch mit jeder Unicode-ODBC-Treiber arbeiten, die die ODBC-Spezifikation berücksichtigt werden sollen. Zur Entwurfszeit können Sie entweder einen DSN oder eine Verbindungszeichenfolge in die ODBC-Verbindung angeben; Sie können auch Windows-Authentifizierung verwenden. Weitere Informationen finden Sie unter der [Blogbeitrag Ankündigung ODBC-Unterstützung unter Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
+**Pfade**. Geben Sie im Windows-Format Pfade im SSIS-Pakete. SSIS unter Linux unterstützt keine Pfade für Linux-Format, aber Windows-Stil Pfade Linux-Stil Pfade zur Laufzeit zugeordnet. Klicken Sie dann, z. B. SSIS unter Linux ordnet den Windows-Stil Pfad `C:\test` auf den Linux-Stil Pfad `/test`.
 
-    -   **Pfade**. Geben Sie im Windows-Format Pfade im SSIS-Pakete. SSIS unter Linux unterstützt keine Pfade für Linux-Format, aber Windows-Stil Pfade Linux-Stil Pfade zur Laufzeit zugeordnet. Klicken Sie dann, z. B. SSIS unter Linux ordnet den Windows-Stil Pfad `C:\test` auf den Linux-Stil Pfad `/test`.
+## <a name="deploy-packages"></a>Bereitstellen von Paketen
+Sie können nur Pakete im Dateisystem unter Linux in dieser Version speichern. Die SSIS-Katalogdatenbank und die legacy-SSIS-Dienst sind nicht verfügbar unter Linux für die Bereitstellung von Paketen und Speicher.
 
--   **Bereitstellen von Paketen**. Sie können nur Pakete im Dateisystem unter Linux in dieser Version speichern. Die SSIS-Katalogdatenbank und die legacy-SSIS-Dienst sind nicht verfügbar unter Linux für die Bereitstellung von Paketen und Speicher.
-
--   **Planen von Paketen**. Sie können Linux-System Planen von Tools wie z. B. `cron` um Pakete zu planen. SQL-Agent können für Linux keine um Ausführung in dieser Version des Pakets zu planen. Weitere Informationen finden Sie unter [Zeitplan SSIS-Pakete auf Linux mit Cron](sql-server-linux-schedule-ssis-packages.md).
+## <a name="schedule-packages"></a>Zeitplan-Pakete
+Sie können Linux-System Planen von Tools wie z. B. `cron` um Pakete zu planen. SQL-Agent können für Linux keine um Ausführung in dieser Version des Pakets zu planen. Weitere Informationen finden Sie unter [Zeitplan SSIS-Pakete auf Linux mit Cron](sql-server-linux-schedule-ssis-packages.md).
 
 ## <a name="limitations-and-known-issues"></a>Einschränkungen und bekannte Probleme
 

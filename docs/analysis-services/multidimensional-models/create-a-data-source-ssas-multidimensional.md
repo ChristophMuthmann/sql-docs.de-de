@@ -2,12 +2,12 @@
 title: "Erstellen einer Datenquelle (SSAS – mehrdimensional) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8fbcb252ca94f94eef82cbb2b19a3c15dcf7a38f
-ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.openlocfilehash: 2927962261f35ea8b5f032853660e3e6bc1d0ad2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Erstellen einer Datenquelle (SSAS – mehrdimensional)
-  In einem mehrdimensionalen Modell von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt ein Datenquellenobjekt eine Verbindung zu der Datenquelle dar, von der Sie Daten verarbeiten (oder importieren). Ein mehrdimensionales Modell muss mindestens ein Datenquellenobjekt enthalten, Sie können jedoch weitere hinzufügen, um Daten aus mehreren Data Warehouses zu kombinieren. Erstellen Sie anhand der Anweisungen in diesem Thema ein Datenquellenobjekt für Ihr Modell. Weitere Informationen zum Festlegen von Eigenschaften für dieses Objekt finden Sie unter [Festlegen von Datenquelleneigenschaften &#40;SSAS – mehrdimensional&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mehrdimensionalen Modell ein Datenquellenobjekt stellt eine Verbindung mit der Datenquelle, von dem Sie verarbeiten (oder importieren) Daten. Ein mehrdimensionales Modell muss mindestens ein Datenquellenobjekt enthalten, Sie können jedoch weitere hinzufügen, um Daten aus mehreren Data Warehouses zu kombinieren. Erstellen Sie anhand der Anweisungen in diesem Thema ein Datenquellenobjekt für Ihr Modell. Weitere Informationen zum Festlegen von Eigenschaften für dieses Objekt finden Sie unter [Festlegen von Datenquelleneigenschaften &#40;SSAS – mehrdimensional&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md).  
   
  Dieses Thema enthält folgende Abschnitte:  
   

@@ -1,12 +1,12 @@
 ---
 title: Analysis Services | Microsoft Docs
 ms.date: 05/11/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: c7e997b69125703fd4dbd240aada1071d4e6a658
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d31d430fdaf5276b52a3f90efacf4a9a56576a35
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="what-is-analysis-services"></a>Was ist eine Analysis Services?
-  Analysis Services ist ein analytisches Datenmodul in Decision Support und Business Analytics, analytischen Daten für Geschäftsberichte und Clientanwendungen wie Excel, Power BI bereitstellt, die durch das Reporting Services-Berichte und andere Daten Visualisierungstools verwendet.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services ist ein analytisches Datenmodul in Decision Support und Business Analytics, analytischen Daten für Geschäftsberichte und Clientanwendungen wie Excel, Power BI bereitstellt, die durch das Reporting Services-Berichte und andere Daten Visualisierungstools verwendet.  
   
  Ein typischer Workflow enthält, erstellen eine mehrdimensionale oder tabellarische Datenmodell, Bereitstellung des Modells als Datenbank mit einer lokalen SQL Server Analysis Services oder Azure Analysis Services-Serverinstanz, wiederkehrende Datenverarbeitung einrichten und zuweisen Berechtigungen zum Zugriff auf Daten von Endbenutzern zu ermöglichen. Wenn er abgeschlossen ist, kann Ihr semantische Datenmodell von allen Clientanwendungen, die Unterstützung von Analysis Services als Datenquelle zugegriffen werden.  
  

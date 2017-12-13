@@ -2,12 +2,12 @@
 title: Konfigurieren und Anzeigen von SharePoint und Diagnoseprotokollierung | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 2ca4cda21f2cb76f2f46e13be5f87765a73d665d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8c9c9e933c57a17e8b64846e25d6e9fe80f8f61d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>Konfigurieren und Anzeigen von SharePoint und Diagnoseprotokollierung
-  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Server-Vorgänge, Ereignisse und Meldungen werden in SharePoint-Protokolldateien aufgezeichnet. Verwenden Sie die Informationen in diesem Thema, um Protokolliergrade zu konfigurieren und Protokolldatei-Informationen anzuzeigen. Sie können steuern, welche [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Serverereignisse in einer Datei protokolliert werden. Sie können auch den Schweregrad von Meldungen steuern, die protokolliert werden. Weitere Informationen finden Sie unter [Konfigurieren der Sammlung von Verwendungsdaten für &#40;PowerPivot für SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Servervorgänge, Ereignisse und Meldungen werden in SharePoint-Protokolldateien aufgezeichnet. Verwenden Sie die Informationen in diesem Thema, um Protokolliergrade zu konfigurieren und Protokolldatei-Informationen anzuzeigen. Sie können steuern, welche [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Serverereignisse in einer Datei protokolliert werden. Sie können auch den Schweregrad von Meldungen steuern, die protokolliert werden. Weitere Informationen finden Sie unter [Konfigurieren der Sammlung von Verwendungsdaten für &#40;PowerPivot für SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
  In diesem Thema:  
   

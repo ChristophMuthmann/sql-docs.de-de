@@ -2,12 +2,12 @@
 title: XML for Analysis (XMLA)-Referenz | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 826536d6f28df078b3ca0899176303cbe1a06865
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 90f16cb73dc060e7708054afbeba44d597c02ef8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="xml-for-analysis--xmla-reference"></a>XML for Analysis (XMLA)-Referenz
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet die XML for Analysis (XMLA)-Protokoll zum Verarbeiten aller Kommunikation zwischen Clientanwendungen und einer Analysis Services-Instanz. Die Erstellung von Anforderungen und Decodierung von Antworten in anderen Clientbibliotheken, z. B. ADOMD.NET und AMO, erfolgt auf elementarster Ebene in XMLA und dient als Zwischenstufe für eine Analysis Services-Instanz, die ausschließlich XMLA verwendet.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet die XML for Analysis (XMLA)-Protokoll zum Verarbeiten aller Kommunikation zwischen Clientanwendungen und einer Analysis Services-Instanz. Die Erstellung von Anforderungen und Decodierung von Antworten in anderen Clientbibliotheken, z. B. ADOMD.NET und AMO, erfolgt auf elementarster Ebene in XMLA und dient als Zwischenstufe für eine Analysis Services-Instanz, die ausschließlich XMLA verwendet.  
   
  Um die Ermittlung und Bearbeitung von Daten in multidimensionalen und tabellarischen Format zu unterstützen, die XMLA-Spezifikation definiert zwei allgemein verfügbare Methoden [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) und [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md), und ein die Auflistung von XML-Elemente und Datentypen. Da XML eine lose verbundene Client- und Server-Architektur ermöglicht, wickeln beide Methoden eingehende und ausgehende Informationen im XML-Format ab. Analysis Services ist mit der XMLA 1.1-Spezifikation -Spezifikation, erweitert diese Datendefinitions- und Bearbeitungsfunktionen zusätzliche Verarbeitungskapazität, implementiert als Anmerkungen auf Einbeziehung jedoch die **Discover** und **Execute** Methoden. Die erweiterte XML-Syntax wird als Analysis Services Scripting Language (ASSL) bezeichnet. ASSL baut auf der XMLA-Spezifikation auf, ohne diese zu verletzen. Die XMLA-Interoperabilität ist unabhängig davon gewährleistet, ob lediglich XMLA verwendet oder ob XMLA und ASSL kombiniert werden.  
   

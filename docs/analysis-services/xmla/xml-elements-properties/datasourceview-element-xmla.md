@@ -2,12 +2,12 @@
 title: DataSourceView-Element (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c1f5a81358b182a595cbb4e7a98b50db1a7ce460
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8d4516694011712336c7c2063a83d9945a6977ad
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="datasourceview-element-xmla"></a>DataSourceView-Element (XMLA)
-  Enthält eine Out-of-Line-datenquellensichtbindung für das übergeordnete [Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) oder [Prozess](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) Element.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Enthält eine Out-of-Line-datenquellensichtbindung für das übergeordnete [Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) oder [Prozess](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   

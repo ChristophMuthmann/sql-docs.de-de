@@ -2,12 +2,12 @@
 title: Verarbeiten eines mehrdimensionalen Modells (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,16 +31,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0813f6d0947927d93a44519c5cbe8eeeb6a5719c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a919efd37f8e10259ee23b9d6b879c46812d2721
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="processing-a-multidimensional-model-analysis-services"></a>Verarbeiten eines mehrdimensionalen Modells (Analysis Services)
-  Die Verarbeitung bezeichnet den Schritt oder eine Abfolge von Schritten, durch die Daten von Analysis Services aus einer relationalen Datenquelle in ein mehrdimensionales Modell geladen werden. Bei Objekten, die die MOLAP-Speicherung verwenden, werden Daten auf dem Datenträger im Datenbankdateiordner gespeichert. In Bezug auf den ROLAP-Speicher ist die Verarbeitung bedarfsbasiert, und zwar als Reaktion auf eine MDX-Abfrage auf einem Objekt. Bei Objekten, die die ROLAP-Speicherung verwenden, bezieht sich "Verarbeitung" auf die Aktualisierung des Caches, bevor Abfrageergebnisse zurückgegeben werden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die Verarbeitung ist den Schritt oder eine Reihe von Schritten, die Analysis Services Daten aus einer relationalen Datenquelle in ein mehrdimensionales Modell geladen. Bei Objekten, die die MOLAP-Speicherung verwenden, werden Daten auf dem Datenträger im Datenbankdateiordner gespeichert. In Bezug auf den ROLAP-Speicher ist die Verarbeitung bedarfsbasiert, und zwar als Reaktion auf eine MDX-Abfrage auf einem Objekt. Bei Objekten, die die ROLAP-Speicherung verwenden, bezieht sich "Verarbeitung" auf die Aktualisierung des Caches, bevor Abfrageergebnisse zurückgegeben werden.  
   
- Die Verarbeitung wird standardmäßig ausgeführt, wenn eine Projektmappe auf dem Server bereitgestellt wird. Sie können eine Projektmappe auch vollständig oder teilweise verarbeiten, indem Sie entweder Ad-hoc-Tools wie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]verwenden oder eine zeitgesteuerte Verarbeitung mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] und SQL Server-Agent durchführen. Wenn Sie eine strukturelle Änderung am Modell vornehmen, z.. B. eine Dimension entfernen oder den Kompatibilitätsgrad ändern, müssen Sie die Verarbeitung wiederholen, um die physischen und logischen Aspekte des Modells zu synchronisieren.  
+ Die Verarbeitung wird standardmäßig ausgeführt, wenn eine Projektmappe auf dem Server bereitgestellt wird. Sie können eine Projektmappe auch vollständig oder teilweise verarbeiten, indem Sie entweder Ad-hoc-Tools wie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]verwenden oder eine zeitgesteuerte Verarbeitung mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] und SQL Server-Agent durchführen. Wenn Sie eine strukturelle Änderung am Modell vornehmen, z. B. eine Dimension entfernen oder den Kompatibilitätsgrad ändern, müssen Sie die Verarbeitung wiederholen, um die physischen und logischen Aspekte des Modells zu synchronisieren.  
   
  Dieses Thema enthält folgende Abschnitte:  
   

@@ -2,12 +2,12 @@
 title: Erstellen und Bereitstellen eine leere Datenbank (Analysis Services AMO-TOM) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3fd42cdbd8eae5bada2c169a601c801a6e619afe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9581f7eb39fe0a6f8979ce09fde4233e800bef8d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-deploy-an-empty-database-analysis-services-amo-tom"></a>Erstellen und Bereitstellen einer leeren Datenbank (Analysis Services AMO-TOM)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-Ein gängiges Programmiermodells Szenario für AMO-TOM besteht darin Datenbanken und -Modelle im Handumdrehen zu generieren. Dieser Artikel führt Sie durch die Schritte zum Erstellen einer Datenbank. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Ein gängiges Programmiermodells Szenario für AMO-TOM besteht darin Datenbanken und -Modelle im Handumdrehen zu generieren. Dieser Artikel führt Sie durch die Schritte zum Erstellen einer Datenbank. 
 
 Für tabellarische Lösungen besteht eine 1: 1-Entsprechung zwischen einer Datenbank- und modellsicherheitseinstellungen, mit der ein Modell pro Datenbank zur Verfügung. Sie können einen oder anderen in der Regel angeben, und das Modul wird das fehlende Objekt ableiten. 
 

@@ -2,7 +2,7 @@
 title: Verwenden von Daten aus OLAP-Cubes in R | Microsoft Docs
 ms.custom: 
 ms.prod: sql-non-specified
-ms.date: 11/29/2017
+ms.date: 12/08/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -15,22 +15,20 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 60e95f4c101a4afe2a8161ba40df7b27bd85f602
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 21bb48b26b7bf8e755ba85a16fb25676bbff4363
+ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>Verwenden von Daten aus OLAP-Cubes in R
 
-Die **OlapR** Paket ist ein R-Paket aus, sofern von Microsoft für die Verwendung mit Machine Learning-Server und SQL Server, die Sie MDX-Abfragen zum Abrufen von Daten aus OLAP-Cubes ausführen können. Mit diesem Paket müssen Sie das Erstellen von Verbindungsservern oder bereinigen Sie die vereinfachte Rowsets; Sie können OLAP-Daten direkt in r verwenden.
+Die **OlapR** Paket ist ein R-Paket aus, sofern von Microsoft für die Verwendung mit Machine Learning-Server und SQL Server, die Sie MDX-Abfragen zum Abrufen von Daten aus OLAP-Cubes ausführen können. Mit diesem Paket müssen Sie das Erstellen von Verbindungsservern oder bereinigen Sie die vereinfachte Rowsets; Sie können OLAP-Daten direkt aus r abrufen.
 
 Dieser Artikel beschreibt die API, sowie eine Übersicht über OLAP- und MDX für R-Benutzer, die möglicherweise noch nicht mit mehrdimensionale Cubedatenbanken.
 
 > [!IMPORTANT]
-> Eine Instanz von Analysis Services konventionellen mehrdimensionalen Cubes oder tabellarische Modelle unterstützt, jedoch eine Instanz kann nicht beide Typen von Modellen unterstützen. Bevor Sie eine Abfrage für eine Analysis Services-Datenbank erstellen, überprüfen Sie daher, dass es sich um mehrdimensionale Modelle enthält.
-> 
-> Obwohl ein tabellarisches Modell abgefragt werden kann, mithilfe von MDX, die **OlapR** Paket unterstützt keine Verbindungen mit tabellarischen Modell Instanzen. Sie müssen zum Abrufen von Daten aus einer im tabellarischen Modus, eine bessere Option besteht darin, aktivieren [DirectQuery](https://docs.microsoft.com/sql/analysis-services/tabular-models/directquery-mode-ssas-tabular) auf das Modell, und die Instanz, die als Verbindungsserver in SQL Server verfügbar. 
+> Eine Instanz von Analysis Services konventionellen mehrdimensionalen Cubes oder tabellarische Modelle unterstützt, jedoch eine Instanz kann nicht beide Typen von Modellen unterstützen. Aus diesem Grund, bevor Sie versuchen, eine MDX-Abfrage für einen Cube zu erstellen, stellen Sie sicher, dass die Instanz von Analysis Services mehrdimensionale Modelle enthält.
 
 ## <a name="what-is-an-olap-cube"></a>Was ist ein OLAP-Cube?
 
@@ -70,9 +68,9 @@ Das **olapR** -Paket unterstützt zwei Methoden zum Erstellen von MDX-Abfragen:
 
     Nicht alle MDX-Abfragen können mit dieser Methode erstellt werden, da MDX komplex sein kann. Diese API unterstützt jedoch die meisten der am häufigsten häufige und sinnvolle Vorgänge, einschließlich Slice, Datenwürfel aufgeteilt, Drilldown, Rollup und Pivot in N-Dimensionen.
 
-+ **Wohlgeformte MDX kopieren und einfügen.** Erstellen Sie manuell, und fügen Sie in einer MDX-Abfrage. Diese Option ist am besten bei vorhandenen MDX-Abfragen, die Sie wiederverwenden möchten, oder wenn die Abfrage zu erstellenden zu komplex für **OlapR** behandelt. 
++ **Wohlgeformte MDX kopieren und einfügen.** Erstellen Sie manuell, und fügen Sie in einer MDX-Abfrage. Diese Option ist am besten bei vorhandenen MDX-Abfragen, die Sie wiederverwenden möchten, oder wenn die Abfrage zu erstellenden zu komplex für **OlapR** behandelt.
 
-    Erstellen Sie Ihrer MDX über alle Client-Dienstprogramm, z. B. SSMS oder Excel, und speichern Sie dann die Zeichenfolge, die die MDX-Abfrage definiert. Geben Sie diese MDX-Zeichenfolge als Argument an die *SSAS Abfrage Handler* in der **OlapR** Paket. Die Funktion die Abfrage mit dem angegebenen Analysis Services-Server sendet, und übergibt der R, vorausgesetzt, dass Sie berechtigt, den Cube natürlich Abfragen die Ergebnisse.
+    Speichern Sie nach der Erstellung Ihrer MDX Client-Dienstprogramm, z. B. SSMS oder Excel, über die Abfragezeichenfolge. Geben Sie diese MDX-Zeichenfolge als Argument an die *SSAS Abfrage Handler* in der **OlapR** Paket. Der Anbieter sendet die Abfrage mit dem angegebenen Analysis Services-Server und übergibt der r die Ergebnisse 
 
 Beispiele zum Erstellen einer MDX Abfragen oder eine vorhandene MDX-Abfrage ausführen, finden Sie unter [Erstellen von MDX-Abfragen mithilfe von R](../../advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md).
 
@@ -80,40 +78,50 @@ Beispiele zum Erstellen einer MDX Abfragen oder eine vorhandene MDX-Abfrage ausf
 
 Dieser Abschnitt listet einige bekannte Probleme und häufig gestellte Fragen über die **OlapR** Paket.
 
-### <a name="tabular-models-are-not-supported"></a>Tabellarische Modelle werden nicht unterstützt.
+### <a name="tabular-model-support"></a>Tabellenmodell-Unterstützung
 
-Wenn Sie eine Verbindung mit einer Instanz von Analysis Services herstellen, die ein tabellarisches Modell enthält die `explore` -Funktion meldet Erfolg mit einem Rückgabewert von "true". Allerdings tabellenmodellobjekte sind keinen kompatiblen Typ und können nicht durchsucht werden.
+Wenn Sie eine Verbindung mit einer Instanz von Analysis Services herstellen, die ein tabellarisches Modell enthält die `explore` -Funktion meldet Erfolg mit einem Rückgabewert von "true". Allerdings tabellenmodellobjekte unterscheiden sich von mehrdimensionalen Objekten und die Struktur einer mehrdimensionalen Datenbank unterscheidet sich von denen für ein tabellarisches Modell.
 
-Darüber hinaus, wenn Sie entwerfen eine gültige MDX-Abfrage für ein tabellarisches Modell (mithilfe eines externen Tools), und fügen Sie die Abfrage in dieser API, die Abfrage gibt ein NULL-Ergebnis zurück und meldet keine Fehler.
+Obwohl DAX (Data Analysis Expressions) der Sprache, die in der Regel mit tabellarischen Modellen verwendet wird, können Sie gültige MDX-Abfragen für ein tabellarisches Modell entwerfen, wenn Sie bereits mit MDX vertraut sind. Die OlapR Konstruktoren können keine um gültigen MDX-Abfragen für ein tabellarisches Modell zu erstellen.
 
-Wenn Sie zum Extrahieren von Daten aus einem tabellarischen Modell für die Verwendung in R müssen, sollten Sie diese Optionen:
+MDX-Abfragen sind jedoch eine ineffiziente Möglichkeit zum Abrufen von Daten aus einem tabellarischen Modell. Wenn Sie zum Abrufen von Daten aus einem tabellarischen Modell für die Verwendung in R möchten, erwägen Sie stattdessen diese Methoden:
 
 + Aktivieren von DirectQuery für das Modell aus, und fügen Sie den Server als Verbindungsserver in SQL Server. 
 + Wenn das tabellarische Modell auf einem relationalen Datamart erstellt wurde, werden rufen Sie die Daten direkt aus der Quelle ab.
 
 ### <a name="how-to-determine-whether-an-instance-contains-tabular-or-multidimensional-models"></a>Gewusst wie: bestimmen, ob eine Instanz tabellarische oder mehrdimensionale Modelle enthält.
 
-Es gibt deutliche Unterschiede zwischen tabellarischen Modellen und mehrdimensionale Modelle, die Auswirkungen auf die Weise Daten gespeichert und verarbeitet wird. Beispielsweise tabellarische Modelle werden im Arbeitsspeicher gespeichert und Nutzen von columnstore-Indizes, um sehr schnelle Berechnungen durchzuführen. In mehrdimensionalen Modellen werden auf Datenträger gespeichert und Aggregationen im Voraus definiert und mithilfe von MDX-Abfragen abgerufen werden.
-
-Aus diesem Grund kann eine einzelne Analysis Services-Instanz nur einen Typ von Modell enthalten. Finden Sie im folgenden Artikel Weitere Tipps dazu, wie Sie die beiden Typen von Modellen zu unterscheiden:
-
-+ [Mehrdimensionale und tabellarische Modelle vergleichen](https://docs.microsoft.com/sql/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
+Eine einzelne Analysis Services-Instanz kann nur einen Typ von Modell enthalten, obwohl sie mehrere Modelle enthalten kann. Der Grund dafür ist, dass es grundlegende Unterschiede zwischen tabellarischen Modellen und mehrdimensionale Modelle, die die zu steuern, wie Daten gespeichert und verarbeitet werden. Beispielsweise tabellarische Modelle werden im Arbeitsspeicher gespeichert und Nutzen von columnstore-Indizes, um sehr schnelle Berechnungen durchzuführen. In mehrdimensionalen Modellen werden auf Datenträger gespeichert und Aggregationen im Voraus definiert und mithilfe von MDX-Abfragen abgerufen werden.
 
 Wenn Sie eine Verbindung zu Analysis Services über einen Client wie SQL Server Management Studio herstellen, können Sie auf einen Blick erkennen, welcher Modelltyp unterstützt wird, durch einen Blick auf das Symbol für die Datenbank.
 
-Sie können auch die Servereigenschaften anzeigen. Die **Servermodus** Eigenschaft zwei Werte werden unterstützt: _mehrdimensionale_ oder _tabellarische_.
+Sie können auch anzeigen, und Fragen Sie die Servereigenschaften, um zu bestimmen, welcher Typ von Modell die Instanz unterstützt. Die **Servermodus** Eigenschaft zwei Werte werden unterstützt: _mehrdimensionale_ oder _tabellarische_.
 
-Weitere Informationen dazu, wie beim Überprüfen von Servertyp, verwenden die Servereigenschaft finden Sie unter [OLE DB für OLAP-Schemarowsets](https://docs.microsoft.com/sql/analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets)
+Finden Sie im folgenden Artikel allgemeine Informationen zu den zwei Typen von Modellen aus:
+
++ [Mehrdimensionale und tabellarische Modelle vergleichen](https://docs.microsoft.com/sql/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
+
+Finden Sie im folgenden Artikel Informationen zum Abfragen von Servereigenschaften:
+
++ [OLE DB für OLAP-Schemarowsets](https://docs.microsoft.com/sql/analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets)
 
 ### <a name="writeback-is-not-supported"></a>Das Rückschreiben wird nicht unterstützt.
 
 Es ist nicht möglich, benutzerdefinierte R Berechnungsergebnisse des in den Cube schreiben.
 
-Im Allgemeinen auch, wenn Sie ein Cube für das Rückschreiben aktiviert ist, wird nur eingeschränkte Vorgänge werden unterstützt, und möglicherweise zusätzliche Konfigurationsschritte erforderlich. Es wird empfohlen, dass Sie für diese Vorgänge MDX verwenden.
+Im Allgemeinen auch, wenn Sie ein Cube für das Rückschreiben aktiviert ist, wird nur eingeschränkte Vorgänge werden unterstützt, und möglicherweise zusätzliche Konfigurationsschritte erforderlich. Es wird empfohlen, dass Sie für solche Vorgänge MDX verwenden.
 
 + [Dimensionen mit aktiviertem Schreibzugriff](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions)
 + [Partitionen mit aktiviertem Schreibzugriff](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions)
 + [Festlegen von benutzerdefiniertem Zugriff auf Zellendaten](https://docs.microsoft.com/sql/analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services)
+
+### <a name="long-running-mdx-queries-block-cube-processing"></a>Lang andauernde MDX-Abfragen blockiert, die Verarbeitung eines Cubes
+
+Obwohl die **OlapR** Paket führt nur Lesevorgänge, lang andauernde MDX-Abfragen erstellen sperren, die verhindern, dass den Cube verarbeitet wird. Testen Sie MDX-Abfragen immer im voraus, damit Sie wissen, wie viele Daten zurückgegeben werden sollen.
+
+Wenn Sie versuchen, eine Verbindung mit einem Cube, die gesperrt wird, erhalten Sie möglicherweise einen Fehler, den das SQL Server-Datawarehouse nicht erreicht werden kann. Vorgeschlagene Lösungen umfassen das Aktivieren von Remoteverbindungen, überprüfen den Server oder den Instanznamen usw.; sollten Sie aber die Möglichkeit, dass eine vorherige offene Verbindung.
+
+Eine SSAS-Serveradministrator kann verhindern, dass Probleme identifizieren und Beenden von geöffneten Sitzungen sperren. Eine Timeouteigenschaft kann auch für MDX-Abfragen auf Serverebene für das erzwungene Beenden aller lang andauernde Abfragen angewendet werden.
 
 ## <a name="resources"></a>Ressourcen
 

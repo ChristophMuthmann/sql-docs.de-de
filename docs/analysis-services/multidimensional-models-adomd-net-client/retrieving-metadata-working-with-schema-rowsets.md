@@ -2,12 +2,12 @@
 title: Arbeiten mit Schemarowsets in ADOMD.NET | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7086db056d4d5ac61349546b8748cdd19ee318c6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4045c7b677129bcc7b72b8ed46fa84aed95e49f5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="retrieving-metadata---working-with-schema-rowsets"></a>Beim Abrufen der Metadaten - arbeiten mit Schemarowsets
-  Wenn Sie mehr als die im ADOMD.NET-Objektmodell vorhandenen Metadaten benötigen, bietet ADOMD.NET die Möglichkeit, den vollständigen Bereich für XMLA-(XML for Analysis-), OLE DB-, OLE DB für OLAP- und OLE DB für Data Mining-Schemarowsets abzurufen:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Wenn Sie weitere Metadaten als verfügbar, in das ADOMD.NET-Objektmodell ist benötigen, bietet ADOMD.NET die Möglichkeit, den vollständigen Bereich von XML für Analysis (XMLA), OLE DB, OLE DB für OLAP und OLE DB für Data Mining-Schemarowsets abzurufen:  
   
  **XML for Analysis-Metadaten**  
  Die XML for Analysis-Schemarowsets stellen eine Methode zum Abrufen von Informationen über den Server auf niedriger Ebene bereit. Zu den verfügbaren Informationen gehören die auf dem Server vorhandenen Datenquellen, die durch den Anbieter reservierten Schlüsselwörter, die vom Anbieter unterstützten Literale und vieles mehr. Sie können ein XML for Analysis-Schemarowset verwenden, um alle Schemarowsets zu ermitteln, die vom Anbieter unterstützt werden.  

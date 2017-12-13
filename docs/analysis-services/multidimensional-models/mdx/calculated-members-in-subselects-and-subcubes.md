@@ -2,12 +2,12 @@
 title: "Berechnete Elemente in untergeordneten SELECT-Ausdrücken und Teilcubes | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2a2dc70e91783283b2b57fe6737c558375bb47f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fb3f752fa2a07a2c5e0964cbe91e4fb791bdc3da
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Berechnete Elemente in untergeordneten SELECT-Ausdrücken und Teilcubes
-  Ein berechnetes Element ist ein Dimensionselement, dessen Wert zur Laufzeit aus einem Ausdruck berechnet wird und das in untergeordneten SELECT-Ausdrücken und in Teilcubes verwendet werden kann, um den Cubebereich einer Abfrage genauer zu definieren.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Ein berechnetes Element ist ein Dimensionselement, dessen Wert zur Laufzeit aus einem Ausdruck berechnet wird, und kann in untergeordneten SELECT-Ausdrücken verwendet werden, und den cubebereich einer Abfrage genauer zu Teilcubes zu definieren.  
   
 ## <a name="enabling-calculated-members-in-the-subspace"></a>Aktivieren berechneter Elemente im Teilbereich  
  Die Verbindungszeichenfolgen-Eigenschaft **SubQueries** unter <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> oder die **DBPROPMSMDSUBQUERIES** -Eigenschaft unter [Unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) definiert das Verhalten oder die Zulässigkeit von berechneten Elementen oder berechneten Sätzen in Unterauswahlen oder Teilcubes. Im weiteren Verlauf dieses Dokuments bezieht sich der Begriff "untergeordneter SELECT-Ausdruck" auf untergeordnete SELECT-Ausdrücke UND auf Teilcubes, sofern nichts anderes angegeben ist.  

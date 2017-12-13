@@ -2,12 +2,12 @@
 title: "MDX (Multidimensional Expressions) unterstützt | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2fc0cbe76eff75b9735e32c879d20bf70c16005f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ac2469b590bd8eb9789d5308d26cef87ef027aa9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="supported-mdx-mdx"></a>Unterstütztes MDX (MDX)
-  Die folgenden Anweisungen und Funktionen werden in MDX-Skripts (Multidimensional Expressions) unterstützt:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Die folgenden Anweisungen und Funktionen werden in MDX (Multidimensional Expressions)-Skript unterstützt:  
   
  [&#40;Kommentar&#41; &#40;MDX&#41;](../../../mdx/comment-mdx-double-slash.md)  
   

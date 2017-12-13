@@ -17,15 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ba7958a1b5b9398dec3cb07630ee84b72970d2ae
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e7662fe90dc6f90c4437f200086e4d96b486a20b
+ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL-Tools und Hilfsprogramme für SQLServer, Azure SQL-Datenbank und SQL Azure Datawarehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
 
 
 ## <a name="tools-to-run-queries-and-manage-databases"></a>Tools zum Ausführen von Abfragen und Verwalten von Datenbanken  
@@ -37,7 +36,12 @@ ms.lasthandoff: 12/05/2017
 | [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Umwandeln von Visual Studio in einer leistungsstarken Entwicklungsumgebung für SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse. **SSDT unter Windows ausgeführt wird**.|
 | [Visual Studio-Code](https://code.visualstudio.com/)| Installieren Sie nach der Installation von Visual Studio-Code, der [Mssql-Erweiterung](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) zum Entwickeln von Microsoft SQL Server, Azure SQL-Datenbank und SQL Data Warehouse. **Visual Studio-Code ausgeführt wird, unter Windows, Mac OS und Linux**.|
 
+## <a name="which-tool-should-i-choose"></a>Welches Tool muss werden ausgewählt?
 
+- Möchten Sie eine SQL Server-Instanz oder Datenbank in einer Lightweight-Editor unter Windows, Linux oder Mac verwalten? Wählen Sie[[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] 
+- Möchten Sie eine SQL Server-Instanz oder Datenbank auf Windows mit vollständiger GUI-Unterstützung verwalten? Wählen Sie [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+- Führen Sie zum Erstellen oder Verwalten von Datenbankcode, einschließlich der Kompilierung bei der Überprüfung werden sollen, Umgestaltung und Designer-Unterstützung unter Windows? Wählen Sie [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+- Möchten Sie die T-SQL-Skripts in einer Lightweight-Editor unter Windows, Linux oder Mac schreiben? Wählen Sie [Visual Studio Code](https://code.visualstudio.com/) und [Mssql-Erweiterung](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
 ## <a name="additional-tools"></a>Zusätzliche tools
 

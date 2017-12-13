@@ -2,12 +2,12 @@
 title: 'Lektion 5: Definieren von Beziehungen zwischen Dimensionen und Measuregruppen | Microsoft Docs'
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a36c57ed912ec93c52d0f3316d0ac7ba421e4966
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 55d2ea123600615d64d737cbf9de5a895f1000ea
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>Lektion 5: Definieren von Beziehungen zwischen Dimensionen und Measuregruppen
-In den vorhergehenden Lektionen in diesem Lernprogramm haben Sie gelernt, dass zu einem Cube hinzugefügte Datenbankdimensionen als Basis für Cubedimensionen verwendet werden können. In dieser Lektion lernen Sie, verschiedene Typen von Beziehungen zwischen Cubedimensionen und Measuregruppen zu definieren und die Eigenschaften dieser Beziehungen anzugeben.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]In den vorherigen Lektionen in diesem Lernprogramm haben Sie gelernt, dass zu einem Cube hinzugefügte Datenbankdimensionen als Basis für eine oder mehrere Cubedimensionen verwendet werden können. In dieser Lektion lernen Sie, verschiedene Typen von Beziehungen zwischen Cubedimensionen und Measuregruppen zu definieren und die Eigenschaften dieser Beziehungen anzugeben.  
   
 Weitere Informationen finden Sie unter [Dimensionsbeziehungen](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   

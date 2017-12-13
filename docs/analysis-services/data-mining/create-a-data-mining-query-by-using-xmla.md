@@ -2,12 +2,12 @@
 title: Erstellen Sie eine Datamining-Abfrage mithilfe von XMLA | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 78037aa620ae5a0ed6861d55503e96fd5bb2fb18
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c2f5e3fd04ae0552ef9e8c7cae54e98bc7e46981
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>Erstellen einer Data Mining-Abfrage mit XMLA
-  Abfragen für Data Mining-Objekte können Sie mithilfe von AMO, DMX oder XML/A erstellen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sie können eine Vielzahl von Abfragen für Datamining-Objekte erstellen, indem Sie mithilfe von AMO, DMX oder XML/a  
   
  XML wird für die Kommunikation zwischen dem Analysis Services-Server und allen Clients benötigt. Obwohl Inhaltsabfragen im Allgemeinen einfacher mit DMX erstellt werden können, können Sie Abfragen mit der DISCOVER- und der COMMAND-Anweisung in XML/A schreiben, indem Sie entweder einen Client verwenden, der das SOAP-Protokoll unterstützt, oder indem Sie eine XML/A-Abfrage in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]erstellen.  
   

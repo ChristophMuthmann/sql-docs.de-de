@@ -2,12 +2,12 @@
 title: Aktivieren des DirectQuery-Modus in SSDT | Microsoft Docs
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a3b43ff386936e76091c64d8db1f73bda587f23b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1866cd3c6194edf7065ebb2929cc77f8cc4acc3a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="enable-directquery-mode-in-ssdt"></a>Aktivieren des DirectQuery-Modus in SSDT
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-In diesem Abschnitt wird die Aktivierung des DirectQuery-Modus für ein tabellarisches Modellprojekt in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]erklärt.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]In diesem Thema beschreiben wir zum Aktivieren der für ein Projekt für tabellarische Modelle im DirectQuery-Modus [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 Wenn Sie den DirectQuery-Modus für ein tabellarisches Modell aktivieren, entwerfen Sie in SSDT:
 -   Funktionen, die mit dem DirectQuery-Modus inkompatibel sind, werden deaktiviert.  

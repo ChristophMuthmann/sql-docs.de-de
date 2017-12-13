@@ -2,12 +2,12 @@
 title: "Wählen Sie aus, und ordnen Sie Eingabedaten für eine Vorhersageabfrage | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e055a4ef5a23e08a7b8147cfd746c48b304aa3b3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d938cefe6996b28e13dc13e5562acfc42ee82e5a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Auswählen und Zuordnen von Eingabedaten für eine Vorhersageabfrage
-  Wenn Prognosen aus einem Miningmodell erstellt werden, werden im Allgemeinen neue Daten in das Modell eingegeben. (Eine Ausnahme bilden Zeitreihenmodelle, die nur Prognosen auf Grundlage von historischen Daten treffen können.) Um neue Daten für das Modell bereitstellen zu können, müssen die Daten als Teil einer Datenquellensicht verfügbar sein. Wenn Sie im Voraus wissen, welche Daten Sie für die Prognose verwenden möchten, können Sie sie in die Datenquellensicht einschließen, mit denen Sie das Modell erstellt haben. Andernfalls müssen Sie ggf. eine neue Datenquellensicht erstellen. Weitere Informationen finden Sie unter [Datenquellsichten in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Wenn Sie Vorhersagen aus einem Miningmodell erstellen, führen Sie dies im Allgemeinen neue Daten in das Modell eingegeben. (Eine Ausnahme bilden Zeitreihenmodelle, die nur Prognosen auf Grundlage von historischen Daten treffen können.) Um neue Daten für das Modell bereitstellen zu können, müssen die Daten als Teil einer Datenquellensicht verfügbar sein. Wenn Sie im Voraus wissen, welche Daten Sie für die Prognose verwenden möchten, können Sie sie in die Datenquellensicht einschließen, mit denen Sie das Modell erstellt haben. Andernfalls müssen Sie ggf. eine neue Datenquellensicht erstellen. Weitere Informationen finden Sie unter [Datenquellsichten in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
  Gelegentlich sind die benötigten Daten möglicherweise in mehr als einer Tabelle in einem 1:n-Join enthalten. Dies trifft auf Daten zu, die für Zuordnungsmodelle oder Sequenzclustermodelle verwendet werden, für die wiederum eine Falltabelle verwendet wird, die mit einer geschachtelten Tabelle verknüpft ist, die Produkt- oder Transaktionsdetails enthält. Wenn das Modell eine für Fälle geschachtelte Tabellenstruktur verwendet, müssen die Daten, die für die Prognose verwendet werden, auch eine für Fälle geschachtelte Tabellenstruktur besitzen.  
   

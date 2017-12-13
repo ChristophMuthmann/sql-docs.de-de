@@ -2,12 +2,12 @@
 title: Perspektiven in mehrdimensionalen Modellen | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9961af8c7f6edef8ed330d70df42dc63ff5b9d9b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 65c85b108905cbfecd1f52234af7d33745e8e681
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="perspectives-in-multidimensional-models"></a>Perspektiven in mehrdimensionalen Modellen
-  Bei einer Perspektive handelt es sich um eine für eine bestimmte Anwendung oder Benutzergruppe erstellte Teilmenge eines Cubes. Der Cube selbst stellt die Standardperspektive dar. Eine Perspektive wird auf einem Client als Cube verfügbar gemacht. Wenn ein Benutzer eine Perspektive anzeigt, wird diese wie ein weiterer Cube angezeigt. Alle Änderungen, die an den Cubedaten durch Rückschreibevorgänge in der Perspektive vorgenommen wurden, erfolgen am Originalcube. Weitere Informationen zu den in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]enthaltenen Sichten finden Sie unter [Perspektiven](../../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Eine Perspektive ist eine Teilmenge eines Cubes, die für eine bestimmte Anwendung oder Gruppe von Benutzern erstellt. Der Cube selbst stellt die Standardperspektive dar. Eine Perspektive wird auf einem Client als Cube verfügbar gemacht. Wenn ein Benutzer eine Perspektive anzeigt, wird diese wie ein weiterer Cube angezeigt. Alle Änderungen, die an den Cubedaten durch Rückschreibevorgänge in der Perspektive vorgenommen wurden, erfolgen am Originalcube. Weitere Informationen zu den in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]enthaltenen Sichten finden Sie unter [Perspektiven](../../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md).  
   
  Verwenden Sie im Cube-Designer die Registerkarte **Perspektiven** , um Perspektiven in einem Cube zu erstellen oder zu ändern. Die erste Spalte der Registerkarte **Perspektiven** ist die Spalte **Cubeobjekte** , in der alle Objekte des Cubes aufgelistet sind. Diese Spalte entspricht der Standardperspektive des Cubes, mit der der Cube selbst dargestellt wird.  
   

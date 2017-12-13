@@ -2,12 +2,12 @@
 title: Erstellen Sie eine Singleton-Abfrage aus einer Vorlage | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7b455a9f4c8996ec2dd9e6d255f4e9f282d58df4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ddcf7a176fd619ffb3140b8bbeea390b3532b2e0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Erstellen einer SINGLETON-Vorhersageabfrage aus einer Vorlage
-  Eine SINGLETON-Abfrage ist für Modelle hilfreich, die Sie für Vorhersagen verwenden möchten, ohne sie jedoch einem externen Eingabedataset zuzuordnen oder sie für Massenvorhersagen zu verwenden. Mit einer SINGLETON-Abfrage können Sie einen Wert oder Werte für das Modell bereitstellen und sofort den vorhergesagten Wert anzeigen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Eine Singleton-Abfrage ist nützlich, wenn Sie ein Modell, die Sie für Vorhersagen verwenden möchten verfügen, aber nicht auf einem externen Eingabedataset zuzuordnen oder Bulk Vorhersagen treffen möchten. Mit einer SINGLETON-Abfrage können Sie einen Wert oder Werte für das Modell bereitstellen und sofort den vorhergesagten Wert anzeigen.  
   
  Zum Beispiel stellt die folgende DMX-Abfrage eine SINGLETON-Abfrage für das als Ziel verwendete Mailingmodell dar (TM_Decision_Tree).  
   

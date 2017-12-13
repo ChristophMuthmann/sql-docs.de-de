@@ -2,12 +2,12 @@
 title: "OLE DB für Datamining | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 936073519a4b05780e611b89b7e1ee7f66f8c3cd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3caad32d76be76c70baff4c16827a37743222049
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-programming---ole-db"></a>Datamining-Programmierungsverfahren - OLE DB
-  Die Datamining-Funktionen in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] entsprechen den [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB für Data Mining 1.0-Spezifikation, die im Juni 2000 veröffentlicht wurden.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Die Datamining-Funktionen in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] entsprechen den [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB für Data Mining 1.0-Spezifikation, die im Juni 2000 veröffentlicht wurden.  
   
  In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] wurde die Spezifikation durch Hinzufügung folgender Elemente erweitert: neue Schemarowsets, Spalten zu bestehenden Schemarowsets, Syntax zur Data Mining Extensions (DMX)-Sprache zum Erstellen und Verwalten von Miningstrukturen.  
   

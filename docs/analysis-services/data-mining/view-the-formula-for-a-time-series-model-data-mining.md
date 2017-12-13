@@ -2,12 +2,12 @@
 title: "Anzeigen der Formel für ein Zeitreihenmodell Modells (Datamining) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0a84f9cefb4793cd03536b228c52db3452d7937b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bb044b96eecbbb5c6eb18dcc33eae1807b2fe8b4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Anzeigen der Formel für ein Zeitreihenmodell (Data Mining)
-  Wenn Sie mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining ein Zeitreihenmodell erstellt haben, besteht die einfachste Möglichkeit zur Anzeige der Regressionsgleichung für dieses Modell darin, die **Mininglegende** des [Microsoft Time Series-Viewers](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)zu verwenden, der alle Konstanten in einem lesbaren Format darstellt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Wenn Sie einem Zeitreihenmodell mit erstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining, die einfachste Möglichkeit, um die Regressionsformel anzuzeigen, für das Modell ist die Verwendung der **Mininglegende** von der [Microsoft Time Series-Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), welche Alle Konstanten dargestellt im lesbaren Format.  
   
 ### <a name="to-view-the-artxp-regression-formula-for-a-time-series-model"></a>So zeigen Sie die ARTXP-Regressionsformel für ein Zeitreihenmodell an  
   

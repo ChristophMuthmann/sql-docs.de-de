@@ -2,12 +2,12 @@
 title: "Lektion 3: Ändern von Maßen, Attributen und Hierarchien | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a4d500a76930c46f15b36f352787edf4e01199f2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a65107e5281bfa85e92a1c1ca27f9213fdd69ded
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Lektion 3: Ändern von Maßen, Attributen und Hierarchien
-Nach dem Definieren des Anfangscubes können Sie den Cube nun besser verwendbar und benutzerfreundlicher machen. Fügen Sie zu diesem Zweck Hierarchien hinzu, die die Navigation und Aggregation auf verschiedenen Ebenen unterstützen, wenden Sie Formate auf bestimmte Measures an und definieren Sie Berechnungen und Beziehungen.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Nach dem definieren, können Sie die Nützlichkeit und Zweckmäßigkeit des Cubes zu verbessern. Fügen Sie zu diesem Zweck Hierarchien hinzu, die die Navigation und Aggregation auf verschiedenen Ebenen unterstützen, wenden Sie Formate auf bestimmte Measures an und definieren Sie Berechnungen und Beziehungen.  
   
 > [!NOTE]  
 > Für alle Lektionen in diesem Lernprogramm sind abgeschlossene Projekte online verfügbar. Sie können jede Lektion aufrufen, indem Sie ein abgeschlossenes Projekt aus der vorherigen Lektion als Ausgangspunkt verwenden. [Klicken Sie hier](http://go.microsoft.com/fwlink/?LinkID=221866) , um die Beispielprojekte für dieses Lernprogramm herunterzuladen.  

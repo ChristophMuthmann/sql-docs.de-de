@@ -2,12 +2,12 @@
 title: Anwenden von Vorhersagefunktionen auf ein Modell | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 496cacf7c8c2a374748f81b45a1a5e7ac770016b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6c36ab1bbdb5f2f11b81ddc43fb79b5f073ec9b9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Anwenden von Vorhersagefunktionen auf ein Modell
-  Zum Erstellen einer Vorhersageabfrage in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining müssen Sie zuerst das Miningmodell auswählen, auf dem die Abfrage basieren soll. Sie können jedes Miningmodell auswählen, das im aktuellen Projekt vorhanden ist.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Zum Erstellen einer Vorhersageabfrage in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining, müssen Sie zuerst das Miningmodell auf dem die Abfrage basieren auswählen. Sie können jedes Miningmodell auswählen, das im aktuellen Projekt vorhanden ist.  
   
  Nachdem Sie ein Modell ausgewählt haben, fügen Sie der Abfrage eine *Vorhersagefunktion* hinzu. Eine Vorhersagefunktion kann verwendet werden, um eine Vorhersage zu erhalten. Aber Sie können auch Vorhersagefunktionen hinzufügen, die damit zusammenhängenden Statistiken zurückgeben, z. B. die Wahrscheinlichkeit des vorhergesagten Wert oder Informationen, die beim Generieren der Vorhersage verwendet wurden.  
   

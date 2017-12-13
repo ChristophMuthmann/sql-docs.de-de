@@ -2,12 +2,12 @@
 title: "Eigenschaften für Miningstrukturen und Strukturspalten | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c1a05d933124d98894ddf40edee9584c0dfd89bc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 42ee21307542c7e204ac7b4616714c2285cce032
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Eigenschaften für Miningstrukturen und Strukturspalten
-  Sie können mithilfe der Registerkarte **Miningstruktur** des Data Mining-Designers die Eigenschaften für eine Miningstruktur und für die verbundenen Spalten und geschachtelten Tabellen festlegen oder ändern. Eigenschaften, die Sie auf dieser Registerkarte festlegen, werden an alle Miningmodelle weitergegeben, die mit der Struktur verbunden sind.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sie können Eigenschaften festlegen oder Ändern der für eine Miningstruktur und die zugeordneten Spalten und geschachtelten Tabellen mithilfe der **Miningstruktur** des Data Mining-Designers. Eigenschaften, die Sie auf dieser Registerkarte festlegen, werden an alle Miningmodelle weitergegeben, die mit der Struktur verbunden sind.  
   
 > [!NOTE]  
 >  Wenn Sie den Wert einer beliebigen Eigenschaft in der Miningstruktur ändern, darunter auch Metadaten wie Name oder Beschreibung, müssen die Miningstruktur und zugehörige Modelle neu verarbeitet werden, bevor Sie das Modell anzeigen oder abfragen können.  

@@ -2,12 +2,12 @@
 title: "Planen der Datenaktualisierung mit Datenquellen – keine Windowsauthentifizierung | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fa765a3c088d9559495b20f60f5f062bb5c9184f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c165409874271ef7ab60428976f74212a3b3f431
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>Planen der Datenaktualisierung mit Datenquellen – keine Windowsauthentifizierung
-  In diesem Thema wird ein Workflow für eine planmäßige Datenaktualisierung in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint beschrieben. Dabei können Datenquellen verwendet werden, die die Windows-Authentifizierung **NICHT** unterstützen, z. B. Oracle- oder IDM DB2-Datenquellen. Obwohl sich die Abbildungen und Schritte in diesem Thema auf Oracle-Datenquellen beziehen, gilt der gleiche Workflow auch für andere Datenquellen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In diesem Thema wird beschrieben, einen Workflow [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint Datenquellen planmäßige datenaktualisierung, die Daten verwenden kann, die nur **nicht** unterstützen die Windows-Authentifizierung. z. B. Oracle- oder IDM DB2-Datenquellen. Obwohl sich die Abbildungen und Schritte in diesem Thema auf Oracle-Datenquellen beziehen, gilt der gleiche Workflow auch für andere Datenquellen.  
   
 ||  
 |-|  

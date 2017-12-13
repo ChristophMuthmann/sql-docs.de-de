@@ -2,12 +2,12 @@
 title: "Suchen eines bestimmten Knotens in einem Abhängigkeitsnetzwerk | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1b0dd066ca0c9e9e8189e7b211866f0971f3df92
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f95a58a73030375534a202dd0c6a6d24a449e373
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>Suchen eines bestimmten Knotens in einem Abhängigkeitsnetzwerk
-  Ein Abhängigkeitsnetzwerk in einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Miningmodell kann zahlreiche Knoten enthalten, wodurch das Auffinden der gewünschten Daten erschwert wird. Um dieses Problem zu lösen, können Sie bestimmte Knoten im Dialogfeld **Knoten suchen** auf der Registerkarte **Abhängigkeitsnetzwerk** des Data Mining-Designers suchen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ein Abhängigkeitsnetzwerk in einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Miningmodell kann zahlreiche Knoten enthalten, wodurch es schwierig, die Daten zu suchen Sie interessiert. Um dieses Problem zu lösen, können Sie bestimmte Knoten im Dialogfeld **Knoten suchen** auf der Registerkarte **Abhängigkeitsnetzwerk** des Data Mining-Designers suchen.  
   
 ### <a name="to-find-a-specific-node-in-a-dependency-network"></a>So suchen Sie einen bestimmten Knoten in einem Abhängigkeitsnetzwerk  
   

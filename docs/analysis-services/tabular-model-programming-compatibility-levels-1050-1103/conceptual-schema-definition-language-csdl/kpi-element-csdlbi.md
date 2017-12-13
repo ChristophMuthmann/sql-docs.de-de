@@ -2,12 +2,12 @@
 title: KPI-Element (CSDLBI) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8941555a0768f80a30947c043aea639469ec8df3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 10ddf679eb9ede1302120eae9274b79927c3dc9a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="kpi-element-csdlbi"></a>KPI-Element (CSDLBI)
-  Das KPI-Element definiert eine Berechnung, die als Key Performance Indicator (KPI) verwendet werden kann. In einem Business Intelligence-Datenmodell basieren KPIs auf Measures. Somit enthält die KPI-Definition alle Measures zugeordneten Metadaten sowie die für die Darstellung der KPI-Werte benötigten Informationen, einschließlich einer Standardgrafik.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Das Kpi-Element definiert eine Berechnung, die als ein Key Performance Indicator (KPI) verwendet werden kann. In einem Business Intelligence-Datenmodell basieren KPIs auf Measures. Somit enthält die KPI-Definition alle Measures zugeordneten Metadaten sowie die für die Darstellung der KPI-Werte benötigten Informationen, einschließlich einer Standardgrafik.  
   
  Das KPI-Element gibt nicht die Formel an, die in der Measuredefinition enthalten ist, sondern die zusätzlichen Metadaten, die Measures zugeordnet sind, die als KPIs verwendet werden. Sobald Sie ein Measure als KPI festgelegt haben, können Sie es in anderen Kontexten nicht als Measure verwenden.  
   

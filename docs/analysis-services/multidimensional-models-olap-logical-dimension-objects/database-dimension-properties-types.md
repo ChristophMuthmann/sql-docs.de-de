@@ -2,12 +2,12 @@
 title: Dimension-Typen | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -37,14 +37,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6484d74f95da6f17f2ff46554c5ca16fac38fc0a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bab78f642342cd070ecde62a37d65972a17a109f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-dimension-properties---types"></a>Eigenschaften von Datenbankdimensionen - Typen
-  Die **Typ** Einstellung der Eigenschaft enthält Informationen zum Inhalt einer Dimension für Server- und Clientanwendungen. In einigen Fällen die **Typ** Einstellung nur stellt Hinweis für Clientanwendungen bereit und ist optional. In anderen Fällen z. B. **Konten** oder **Zeit** Dimensionen, die **Typ** eigenschafteneinstellungen für die Dimension und ihre Attribute bestimmen das Verhalten für bestimmte Server basierenden und kann erforderlich sein, um bestimmte Verhalten im Cube zu implementieren. Z. B. die **Typ** -Eigenschaft einer Dimension kann festgelegt werden, um **Konten** , um den Clientanwendungen mitzuteilen, dass die Standarddimension Kontoattribute enthält. Weitere Informationen über die Zeit, Konto und währungsdimensionen finden Sie unter [erstellen eine datumstypdimension](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [Erstellen eines Finanzkontos des über-und untergeordneten Typs Dimension](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), und [erstellen Sie eine Währung Geben Sie die Dimension](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die **Typ** Einstellung der Eigenschaft enthält Informationen zum Inhalt einer Dimension für Server- und Clientanwendungen. In einigen Fällen die **Typ** Einstellung nur stellt Hinweis für Clientanwendungen bereit und ist optional. In anderen Fällen z. B. **Konten** oder **Zeit** Dimensionen, die **Typ** eigenschafteneinstellungen für die Dimension und ihre Attribute bestimmen das Verhalten für bestimmte Server basierenden und kann erforderlich sein, um bestimmte Verhalten im Cube zu implementieren. Z. B. die **Typ** -Eigenschaft einer Dimension kann festgelegt werden, um **Konten** , um den Clientanwendungen mitzuteilen, dass die Standarddimension Kontoattribute enthält. Weitere Informationen über die Zeit, Konto und währungsdimensionen finden Sie unter [erstellen eine datumstypdimension](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [Erstellen eines Finanzkontos des über-und untergeordneten Typs Dimension](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), und [erstellen Sie eine Währung Geben Sie die Dimension](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
   
  Die Standardeinstellung für den Dimensionstyp ist **reguläre**, womit keine Annahmen zum Inhalt der Dimension gemacht. Dies ist die Standardeinstellung für alle Dimensionen, wenn Sie erstmalig eine Dimension definieren, es sei denn, Sie geben **Zeit** beim Definieren der Dimensions mithilfe des Dimensions-Assistenten. Sie sollten auch lassen **reguläre** den Dimensionstyp aus, wenn der Dimensions-Assistent einen geeigneten Typ für den Dimensionstyp nicht aufgeführt ist.  
   

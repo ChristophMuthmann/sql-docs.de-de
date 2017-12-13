@@ -2,12 +2,12 @@
 title: RollbackTransaction-Element (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7c4e44239047729e0989f8a2b8d5dbca9487c967
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3eafaeebd6af0c93715e41ccf0917fd9b4b96f09
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="rollbacktransaction-element-xmla"></a>RollbackTransaction-Element (XMLA)
-  Rollback einer Transaktion für die aktuelle Sitzung mit einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Rollback einer Transaktion für die aktuelle Sitzung mit einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -65,9 +65,9 @@ ms.lasthandoff: 11/17/2017
  Der **RollbackTransaction** -Befehl führt ein Rollback für alle aktiven Transaktionen, die explizit durch das **BeginTransaction** -Element definiert sind, auf der aktuellen Sitzung durch. Wenn keine aktive Transaktion vorhanden ist, tritt ein Fehler auf. Wenn bereits eine aktive Transaktion vorhanden ist, die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Instanz den Verweiszähler den Verweiszähler der Transaktionen für die aktuelle Sitzung auf 0 (null), alle aktive Transaktionen ein Rollback.  
   
 ## <a name="see-also"></a>Siehe auch  
- [BeginTransaction-Element & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/begintransaction-element-xmla.md)   
- [Cancel-Element & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)   
- [CommitTransaction-Element & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/committransaction-element-xmla.md)   
- [Befehle & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+ [BeginTransaction-Element &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/begintransaction-element-xmla.md)   
+ [Cancel-Element &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)   
+ [CommitTransaction-Element &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/committransaction-element-xmla.md)   
+ [Befehle &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

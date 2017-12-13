@@ -2,12 +2,12 @@
 title: "Verwaltung von Datamining-Lösungen und-Objekten | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 41239f58ecdcea9f5d60e1ebdd83bc010b2c3bdd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a3f1f0dc49296c7b2b4182de5eb69abbb720f1b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Verwaltung von Data Mining-Lösungen und -Objekten
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] stellt Clienttools bereit, mit denen Sie vorhandene Miningstrukturen und Miningmodelle verwalten können. In diesem Abschnitt werden die Verwaltungsvorgänge beschrieben, die Sie mit der jeweiligen Umgebung ausführen können.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] bietet Clienttools, mit denen Sie vorhandene Miningstrukturen und Miningmodelle verwalten können. In diesem Abschnitt werden die Verwaltungsvorgänge beschrieben, die Sie mit der jeweiligen Umgebung ausführen können.  
   
  Außer mit diesen Tools können Data Mining-Objekte auch programmgesteuert mithilfe von AMO oder mit anderen Clients verwaltet werden, die eine Verbindung mit einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank herstellen können, wie etwa mit den Data Mining Add-Ins für [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007.  
   

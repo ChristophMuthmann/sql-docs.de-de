@@ -2,12 +2,12 @@
 title: Was ist neu in Analysis Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/24/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5264fa7ed32a1f35136c710da28af09c6ee0fab8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6456879f43d94dbe9883146b8d45cc5f5a433610
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="what39s-new-in-analysis-services"></a>Was ist neu in Analysis Services
-SQL Server 2016 Analysis Services umfasst viele neue Verbesserungen, die Leistung zu verbessern, einfacher Lösung erstellen, automatisierte datenbankverwaltung bereitstellen, verbesserte Beziehungen mit bidirektionale kreuzfilterung, parallele Verarbeitung von Partitionen und vieles mehr. Das Herzstück der meisten Verbesserungen in dieser Version ist der neue Kompatibilitätsgrad 1200 für tabellarische Modelldatenbanken.     
+[!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]SQL Server 2016 Analysis Services umfasst viele neue Verbesserungen, die Leistung zu verbessern, einfacher Lösung erstellen, automatisierte datenbankverwaltung bereitstellen, verbesserte Beziehungen mit bidirektionale kreuzfilterung, parallele Verarbeitung von Partitionen und vieles mehr. Das Herzstück der meisten Verbesserungen in dieser Version ist der neue Kompatibilitätsgrad 1200 für tabellarische Modelldatenbanken.     
 
 ## <a name="azure-analysis-services"></a>Azure Analysis Services
 Wie auf der SQL PASS-Konferenz 2016 angekündigt, ist Analysis Services nun als Azure-Dienst in der Cloud verfügbar. **Azure Analysis Services** tabellarische Modelle mit dem Kompatibilitätsgrad 1200 oder höher unterstützt. DirectQuery, Partitionen, Sicherheit auf Zeilenebene, Bidirektionale Beziehungen und Übersetzungen werden unterstützt. Um mehr über den Dienst zu erfahren, und ihn kostenlos zu testen, wechseln Sie zu [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/). 

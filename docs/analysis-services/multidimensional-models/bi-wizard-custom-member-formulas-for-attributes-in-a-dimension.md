@@ -2,12 +2,12 @@
 title: "Festlegen benutzerdefinierter Elementformeln für Attribute in einer Dimension | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7f6cd6ca41dab2aa9d213281de94882c03f50db2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 10b6f8e3daf8a5b13bee1bef87454dfc40096804
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-wizard---custom-member-formulas-for-attributes-in-a-dimension"></a>BI-Assistent – benutzerdefinierte Elementformeln für Attribute in einer Dimension
-  Fügen Sie einem Cube oder einer Dimension eine Erweiterung für benutzerdefinierte Elementformeln hinzu, um die Standardaggregation, die einem Dimensionselement zugeordnet ist, durch die Ergebnisse eines MDX-Ausdrucks (Multidimensional Expressions) zu ersetzen. (Durch diese Erweiterung wird die **CustomRollupColumn** -Eigenschaft für ein angegebenes Attribut in einer Dimension festgelegt.)  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Fügen Sie durch Anwenden einer benutzerdefinierten Elementformel zu einem Cube oder einer Dimension, um die Standardaggregation zu ersetzen, die einem Dimensionselement mit den Ergebnissen der ein Ausdruck (Multidimensional Expressions) zugeordnet ist. (Durch diese Erweiterung wird die **CustomRollupColumn** -Eigenschaft für ein angegebenes Attribut in einer Dimension festgelegt.)  
   
 > [!NOTE]  
 >  Benutzerdefinierte Formeln stehen nur für Dimensionen zur Verfügung, die auf bestehenden Datenquellen basieren. Bei Dimensionen, die ohne Datenquelle erstellt wurden, müssen Sie den Schemagenerierungs-Assistenten ausführen, um eine Datenquellensicht vor dem Hinzufügen einer benutzerdefinierten Elementformel zu erstellen.  

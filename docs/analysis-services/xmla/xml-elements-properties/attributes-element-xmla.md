@@ -2,12 +2,12 @@
 title: Attribute-Element (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b0647c088e158d4ccccb42b7e6af5650f5209824
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ac450f0143b934412e47321e357e7256e8d10074
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attributes-element-xmla"></a>Attributes-Element (XMLA)
-  Enthält eine Sammlung der [Attribute](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) -Elemente, die vom übergeordneten [Insert](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) - oder [Update](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md) -Befehl oder vom übergeordneten [Where](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md) -Element verwendet werden.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Enthält eine Auflistung von [Attribut](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) Elementen, die vom übergeordneten Element verwendet [einfügen](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) oder [Update](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md) -Befehl oder vom übergeordneten [, in dem](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   

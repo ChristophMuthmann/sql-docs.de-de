@@ -2,12 +2,12 @@
 title: "Hinzufügen von Miningmodellen zu einer Struktur (Analysis Services – Datamining) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c31f4f263238b4aff38d00923ef921cb829e5c7e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 074fab70ac5818aeb825691d63aa511f01698c1d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>Hinzufügen von Miningmodellen zu einer Struktur (Analysis Services - Data Mining)
-  Eine Miningstruktur ist für die Unterstützung mehrerer Miningmodelle bestimmt. Nachdem Sie den Assistenten beendet haben, können Sie die Struktur öffnen und neue Miningmodelle hinzufügen. Jedes Mal, wenn Sie ein Modell erstellen, können Sie einen anderen Algorithmus verwenden, die Parameter ändern oder Filter anwenden, um eine andere Teilmenge der Daten zu verwenden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Eine Miningstruktur mehrere Miningmodelle unterstützen dient. Nachdem Sie den Assistenten beendet haben, können Sie die Struktur öffnen und neue Miningmodelle hinzufügen. Jedes Mal, wenn Sie ein Modell erstellen, können Sie einen anderen Algorithmus verwenden, die Parameter ändern oder Filter anwenden, um eine andere Teilmenge der Daten zu verwenden.  
   
 ## <a name="adding-new-mining-models"></a>Hinzufügen von neuen Miningmodellen  
  Wenn Sie den Data Mining-Assistenten zur Erstellung eines neuen Miningmodells verwenden, müssen Sie standardmäßig zunächst immer eine Miningstruktur erstellen. Mithilfe des Assistenten ist die Option verfügbar, der Struktur ein ursprüngliches Miningmodell hinzuzufügen. Sie müssen jedoch nicht sofort ein Modell erstellen. Wenn Sie nur die Struktur erstellen, müssen Sie nicht entscheiden, welche Spalte als vorhersagbares Attribut verwendet werden soll oder wie die Daten in einem bestimmten Modell verwendet werden sollen. Stattdessen richten Sie nur die allgemeine Datenstruktur ein, die Sie künftig verwenden möchten. Später können Sie mit [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md) neue Miningmodelle hinzufügen, die auf der Struktur basieren.  

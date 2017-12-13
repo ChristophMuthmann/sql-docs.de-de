@@ -2,12 +2,12 @@
 title: OLE DB-Schemarowsets | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 240b1fff05adb7bc528ba8a53f54d59a7b1af854
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 10a60e9e3696076a4e3672e7bcb5037f362f161b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="ole-db-schema-rowsets"></a>OLE DB-Schemarowsets
-  Die folgenden OLE DB-Schemarowsets werden vom [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis-Anbieter (XMLA) unterstützt. Verwenden der **DISCOVER_ENUMERATORS** Rowset mit der [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) -Methode überprüft, ob ein bestimmter Datenquellenanbieter ein Rowset unterstützt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Die folgenden OLE DB-Schemarowsets werden vom unterstützt die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA)-Anbieter. Verwenden der **DISCOVER_ENUMERATORS** Rowset mit der [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) -Methode überprüft, ob ein bestimmter Datenquellenanbieter ein Rowset unterstützt.  
   
  Weitere Informationen über diese Rowsets finden Sie im Thema "Schema Rowsets" im Abschnitt "OLE DB Programmer's Reference" der MSDN® Library auf der [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-Website.  
   

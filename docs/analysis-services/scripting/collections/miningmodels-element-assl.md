@@ -2,12 +2,12 @@
 title: MiningModels-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ed5965df67eea4863bc5c7ca730a5dcc193f2add
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bae04d64619e24cc89140908d60506c9a09554d9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="miningmodels-element-assl"></a>MiningModels-Element (ASSL)
-  Enthält die Auflistung der [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) Elemente, die zu einem [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält die Auflistung der [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) Elemente, die zu einem [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md).  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -2,12 +2,12 @@
 title: "Auswählen und Zuordnen von Modelltestdaten | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0fc3ae78de1d40004dc1d99cd465cf043e1fa334
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 591da6613982e9c7539b26257c6f78265343220e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="choose-and-map-model-testing-data"></a>Auswählen und Zuordnen von Modelltestdaten
-  Um in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ein Genauigkeitsdiagramm zu erstellen, müssen Sie die Daten auswählen, die zum Testen des Modells verwendet werden und die Daten dem Modell zuordnen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Zum Erstellen eines genauigkeitsdiagramms in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], müssen Sie die Daten, die zum Testen des Modells verwendet werden, und ordnen Sie die Daten für das Modell auswählen.  
   
  Standardmäßig verwendet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Miningmodelltestdaten, vorausgesetzt, dass bei der Erstellung der Miningstruktur ein zurückgehaltenes Dataset erstellt wurde. Die Erstellung eines zurückgehaltenen Testsatzes ist die einfachste Möglichkeit, Modelle zu testen, die auf der gleichen Miningstruktur basieren, da die Spaltennamen und Datentypen immer dem Modell entsprechen, und Sie können davon ausgehen, dass die Verteilung der Daten auf ähnliche Weise erfolgt. Außerdem erstellt der Designer die Beziehungen zwischen den Eingabe- und Modellspalten automatisch.  
   

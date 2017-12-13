@@ -2,12 +2,12 @@
 title: "Berechnete Spalten (SSAS – tabellarisch) | Microsoft Docs"
 ms.custom: 
 ms.date: 10/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c7fe8e5ad97a1955160bf2f8f953c85971f66b09
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fcd2e415214ca310f2f53a71f04e58306bec4a63
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="calculated-columns"></a>Berechnete Spalten
-  Berechnete Spalten in tabellarischen Modellen können Sie dem Modell neue Daten hinzufügen. Anstatt Werte in die Spalte einzufügen oder zu importieren, erstellen Sie eine DAX-Formel, mit der die Zeilenebenenwerte der Spalte definiert werden. Die berechnete Spalte kann wie jede andere Spalte in einem Bericht, einer PivotTable oder einem PivotChart verwendet werden.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Berechnete Spalten in tabellarischen Modellen können Sie dem Modell neue Daten hinzufügen. Anstatt Werte in die Spalte einzufügen oder zu importieren, erstellen Sie eine DAX-Formel, mit der die Zeilenebenenwerte der Spalte definiert werden. Die berechnete Spalte kann wie jede andere Spalte in einem Bericht, einer PivotTable oder einem PivotChart verwendet werden.  
  
   
   

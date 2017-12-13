@@ -2,12 +2,12 @@
 title: DbSchemaName-Element (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bfa0ae41571fcd04361801e13571f758afbc44cd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 06c9f5eece5cd8a40c327b864076a7d2f1eba3b1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dbschemaname-element-xmla"></a>DbSchemaName-Element (XMLA)
-  Enthält den Namen des Schemas, das vom übergeordneten [TableNotification](../../../analysis-services/xmla/xml-elements-properties/tablenotification-element-xmla.md) -Element in der vom [DbTableName](../../../analysis-services/xmla/xml-elements-properties/dbtablename-element-xmla.md) -Element identifizierten Tabelle verwendet wird.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Enthält den Namen des Schemas, die vom übergeordneten Element verwendeten [TableNotification](../../../analysis-services/xmla/xml-elements-properties/tablenotification-element-xmla.md) Element in die Tabelle identifiziert durch die [DbTableName](../../../analysis-services/xmla/xml-elements-properties/dbtablename-element-xmla.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   

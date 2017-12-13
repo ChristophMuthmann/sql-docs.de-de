@@ -2,12 +2,12 @@
 title: Testen eines Modells im DirectQuery-Modus | Microsoft Docs
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d6f55de10089d304fe5dc5d00c388d007a2241a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 430bfd1f58ea15ab04fb57f7f806191a57bc2d4e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="test-a-model-in-directquery-mode"></a>Testen eines Modells im DirectQuery-Modus
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  Erfahren Sie hier, welche Optionen Ihnen in jeder Phase der Entwicklung beginnend beim Entwurf zum Testen eines tabellarischen Modells im DirectQuery-Modus zur Verfügung stehen.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Überprüfen Sie die Optionen für ein tabellarisches Modell im DirectQuery-Modus in den einzelnen Phasen der Entwicklung beginnend beim Entwurf zu testen.  
   
 ## <a name="test-in-excel"></a>Testen in Excel 
   

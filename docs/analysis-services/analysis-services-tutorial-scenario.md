@@ -2,12 +2,12 @@
 title: Analysis Services-Lernprogrammszenario | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: deb268dde13782f6ffe6d3481e004d6b8cae17b5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 332b9e9e84ac25637186655de533624449ac3a01
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services-Lernprogrammszenario
-Dieses Lernprogramm basiert auf [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], einem fiktiven Unternehmen. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ist ein großes, multinationales Herstellungsunternehmen, das Fahrräder aus Metall und Verbundwerkstoffen für kommerzielle Märkte in Nordamerika, Europa und Asien produziert und vertreibt. Die Zentrale von [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] befindet sich in Bothell, Washington (USA), wo das Unternehmen 500 Arbeiter beschäftigt. Zusätzlich beschäftigt [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] eine Reihe von regionalen Verkaufsteams für die gesamte Marktbasis.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Dieses Lernprogramm basiert auf [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], einem fiktiven Unternehmen. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ist ein großes, multinationales Herstellungsunternehmen, das Fahrräder aus Metall und Verbundwerkstoffen für kommerzielle Märkte in Nordamerika, Europa und Asien produziert und vertreibt. Die Zentrale von [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] befindet sich in Bothell, Washington (USA), wo das Unternehmen 500 Arbeiter beschäftigt. Zusätzlich beschäftigt [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] eine Reihe von regionalen Verkaufsteams für die gesamte Marktbasis.  
   
 In den vergangenen Jahren hat [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] die kleine Fabrik Importadores Neptuno erworben, die sich in Mexiko befindet. Importadores Neptuno stellt einige wichtige Unterkomponenten für die [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] -Produktlinie her. Diese Unterkomponenten werden für die Produktendmontage in Bothell angeliefert. Im Jahr 2005 wurde Importadores Neptuno alleiniger Hersteller und Vertreiber der Tourenrad-Produktgruppe.  
   

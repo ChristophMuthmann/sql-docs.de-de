@@ -2,12 +2,12 @@
 title: Erstellen und Verwalten einer Remotepartition (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bbcff2fe14716ebb2af74430538573706f8c2475
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 152d8f844949ac0a27747e04b4d2ca55a257c39e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Erstellen und Verwalten einer Remotepartition (Analysis Services)
-  Bei der Partitionierung einer Measuregruppe können Sie eine sekundäre Datenbank auf einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Remoteinstanz als Partitionsspeicher konfigurieren.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Bei der Partitionierung einer Measuregruppe können Sie eine sekundäre Datenbank auf einem Remoteserver konfigurieren [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Remoteinstanz als Partitionsspeicher.  
   
  Remotepartitionen für einen Cube (die so genannte Masterdatenbank) werden in einer dedizierten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank auf der Remoteinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gespeichert (die so genannte sekundäre Datenbank).  
   

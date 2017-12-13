@@ -2,12 +2,12 @@
 title: Perspektiven | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2a892a571a70b3f5bff5fb16496c2fee5d18f151
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 21b3d6af2d4a6248926773e78dbf366b6c6d9ee5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="perspectives"></a>Perspektiven
-  Eine Perspektive ist eine Definition, die es Benutzern ermöglicht, einen Cube auf einfachere Weise anzuzeigen. Eine Perspektive ist eine Teilmenge der Funktion eines Cubes. Mithilfe von Perspektiven können Administratoren Sichten eines Cubes erstellen, die Benutzer dabei unterstützen, die für sie wichtigsten Daten hervorzuheben. Eine Perspektive enthält Teilmengen aller Objekte eines Cubes. Eine Perspektive kann keine Elemente einschließen, die nicht im übergeordneten Cube definiert sind.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Eine Perspektive ist eine Definition, die Benutzern ermöglicht, einen Cube auf einfachere Weise anzuzeigen. Eine Perspektive ist eine Teilmenge der Funktion eines Cubes. Mithilfe von Perspektiven können Administratoren Sichten eines Cubes erstellen, die Benutzer dabei unterstützen, die für sie wichtigsten Daten hervorzuheben. Eine Perspektive enthält Teilmengen aller Objekte eines Cubes. Eine Perspektive kann keine Elemente einschließen, die nicht im übergeordneten Cube definiert sind.  
   
  Eine einfache <xref:Microsoft.AnalysisServices.Perspective> Objekt besteht aus: grundlegenden Informationen, Dimensionen, Measuregruppen, Berechnungen, KPIs und Aktionen. Grundlegende Informationen beinhalten den Namen und das Standardmeasure der Perspektive. Die Dimensionen sind eine Teilmenge der Cubedimensionen. Measuregruppen sind eine Teilmenge der Measuregruppen des Cubes. Die Berechnungen sind eine Teilmenge der Cubeberechnungen. Die KPIs sind eine Teilmenge der KPIs des Cubes. Die Aktionen sind eine Teilmenge der Cubeaktionen.  
   

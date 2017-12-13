@@ -2,12 +2,12 @@
 title: "Data Mining-Abfragen, Tasks und Anweisungen für | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7ffbdae6e1ffbd491d1191df8543e8b3f831921d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f2be13f6662ad2ed4d3cdae60eb1cc7ac458f62a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>Data Mining-Abfragetasks und Anweisungen
-  Die Möglichkeit zum Erstellen von Abfragen ist wichtig, wenn Sie die Data Mining-Modelle nutzen möchten. Dieser Abschnitt enthält Links zu Beispielen, die die Erstellung von Abfragen für ein Data Mining-Modell mithilfe der Tools in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]veranschaulichen. Weitere Informationen zu Data Mining-Abfragen oder den unterschiedlichen Abfragetypen, die erstellt werden können, finden Sie unter [Data Mining-Abfrage](../../analysis-services/data-mining/data-mining-queries.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die Fähigkeit zum Erstellen von Abfragen ist wichtig, wenn Sie zu der die Datamining-Modelle verwenden. Dieser Abschnitt enthält Links zu Beispielen, die die Erstellung von Abfragen für ein Data Mining-Modell mithilfe der Tools in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]veranschaulichen. Weitere Informationen zu Data Mining-Abfragen oder den unterschiedlichen Abfragetypen, die erstellt werden können, finden Sie unter [Data Mining-Abfrage](../../analysis-services/data-mining/data-mining-queries.md).  
   
 ## <a name="creating-queries-with-prediction-query-builder"></a>Erstellen von Abfragen mit dem Generator für Vorhersageabfragen  
  Der Generator für Vorhersageabfragen steht sowohl in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] als auch in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] als Methode der grafischen Erstellung von Abfragen für Data Mining-Modelle zur Verfügung. In den folgenden Themen wird erläutert, wie Sie ein Modell auswählen, eine Datenquelle angeben, die Vorhersagen anpassen und die Ausgabe speichern können.  

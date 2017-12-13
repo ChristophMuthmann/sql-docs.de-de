@@ -2,12 +2,12 @@
 title: "Hinzufügen von Beispieldaten zu einem DirectQuery-Modell im Entwurfsmodus | Microsoft Docs"
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ff618d97a65c7143dda513d38d66dd72d1459022
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 962cadeac40c4cd450265d6c617a2bdcf1afa9ac
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>Hinzufügen von Beispieldaten zu einem DirectQuery-Modell im Entwurfsmodus
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
- Im DirectQuery-Modus werden Tabellenpartitionen entweder zum Erstellen von Beispieldatenteilmengen verwenden, die während des Modellentwurfs genutzt werden, oder zum Erstellen von Alternativen einer vollständigen Datenansicht.
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Im DirectQuery-Modus werden Tabellenpartitionen zum Beispiel Teilmengen von Daten verwendet, die während des Modellentwurfs erstellen, oder Erstellen von alternativen einer vollständigen Datenansicht.
  
  Bei der Bereitstellung eines DirectQuery-Tabellenmodells ist nur eine Partition pro Tabelle erlaubt, und diese Partition muss bei Bedarf eine vollständige Datenansicht sein. Bei jeder zusätzlichen Partition handelt es sich entweder um einen Ersatz für eine vollständige Datenansicht oder um Beispieldaten. In diesem Thema wird das Erstellen einer Beispielpartition mit einer Teilmenge von Daten beschrieben.
  

@@ -2,12 +2,12 @@
 title: Abfragen eines tabellarischen Modells | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6bf0f912ecc01127cc8cf1f6f347141440792911
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8e413fe7d6d56d3b79637eb2b263abd8c06f23e1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="querying-a-tabular-model"></a>Abfragen eines tabellarischen Modells
-  Ein Entwickler, der ein tabellarisches Modell abfragt, möchte Daten aus der tabellarischen Datenbank abrufen. Dafür gibt es zwei Optionen: Verwenden Sie Tabellenabfragen in DAX, oder verwenden Sie MDX und rufen Sie die Daten so ab, als stammten sie aus einem Cube. Abhängig vom zugrunde liegenden Modus des tabellarischen Modells könnten jedoch nur DAX-Tabellenabfragen möglich sein. Für den DirectQuery-Modus ist die Verwendung von DAX-Tabellenabfragen erforderlich.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Als Entwickler bedeutet das Abfragen eines tabellarischen Modells zum Abrufen von Daten aus der tabellarischen Datenbank. zu diesem Zweck haben Sie zwei Optionen: Verwenden Sie Tabellenabfragen in DAX oder MDX und rufen Sie die Daten aus einem Cube stammten. Abhängig vom zugrunde liegenden Modus des tabellarischen Modells könnten jedoch nur DAX-Tabellenabfragen möglich sein. Für den DirectQuery-Modus ist die Verwendung von DAX-Tabellenabfragen erforderlich.  
   
 ## <a name="querying-with-adomdnet"></a>Abfragen mit ADOMD.Net  
  Das Abfragen eines tabellarischen Modells mit ADOMD.Net ist einfach und flexibel. Senden Sie entweder MDX-Anweisungen oder tabellarische Abfrageausdrücke von DAX an den Server, um die Ergebnisse zu erhalten.  

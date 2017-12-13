@@ -2,12 +2,12 @@
 title: "Überwachen von Ablaufverfolgungen (XMLA) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 45bf2482dc80a7f6f2019572ffd38b1937e72b85
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f913d7d7cd223d017f617430e4beae1a6c1b8c95
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="monitoring-traces-xmla"></a>Überwachen von Ablaufverfolgungen (XMLA)
-  Sie können die [abonnieren](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md) -Befehl in XML for Analysis (XMLA) zum Überwachen einer vorhandenen Ablaufverfolgungs definiert, die auf einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Die **abonnieren** Befehl gibt die Ergebnisse einer Ablaufverfolgung als Rowset zurück.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sie können die [abonnieren](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md) -Befehl in XML for Analysis (XMLA) zum Überwachen einer vorhandenen Ablaufverfolgungs definiert, die auf einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Die **abonnieren** Befehl gibt die Ergebnisse einer Ablaufverfolgung als Rowset zurück.  
   
 ## <a name="specifying-a-trace"></a>Festlegen einer Ablaufverfolgung  
  Die [Objekt](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) Eigenschaft von der **abonnieren** -Befehls muss einen Objektverweis auf entweder enthalten eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz oder eine Ablaufverfolgung auf eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz. Wenn die **Objekt** Eigenschaft wurde nicht angegeben oder ein ablaufverfolgungsbezeichner ist nicht angegeben, der **Objekt** -Eigenschaft, die **abonnieren** Befehl überwacht die Ablaufverfolgung der standardsitzung für die explizite Sitzung in den SOAP-Header für den Befehl angegeben.  

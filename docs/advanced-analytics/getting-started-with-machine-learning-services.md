@@ -3,8 +3,11 @@ title: Erste Schritte mit Machine Learning in der SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 11/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: r-services
+ms.service: 
+ms.component: advanced-analytics
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 812cedf6f23adcd99baf24954d9f598bd281fc7c
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 98f6498eb042cc79728f8c1fb55e142655842481
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>Erste Schritte mit Machine Learning in der SQL Server
 

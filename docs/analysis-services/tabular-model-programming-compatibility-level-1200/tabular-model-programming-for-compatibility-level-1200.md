@@ -2,12 +2,12 @@
 title: "Programmierung von tabellarischen Modellen für den Kompatibilitätsgrad 1200 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2a2b814f4944c0e135c345d8f78970a1d08c8918
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5c7a0c3c69a8d4c834cf6a44cd3e588faed2593f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>Tabellarische Programmiermodell für die Kompatibilität auf 1200 und höher
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-Beginnen mit dem Kompatibilitätsgrad 1200, tabellarischer Metadaten dient zum Beschreiben der Model-Konstrukten Verlaufsdaten mehrdimensionale Metadaten als Deskriptoren für tabellenmodellobjekte ersetzen. Metadaten für Tabellen, Spalten und Beziehungen werden die Tabelle, Spalte und Beziehung, anstatt die mehrdimensionale Entsprechungen (Dimensionen und Attributtypen).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Beginnen mit dem Kompatibilitätsgrad 1200, tabellarischer Metadaten dient zum Beschreiben der Model-Konstrukten Verlaufsdaten mehrdimensionale Metadaten als Deskriptoren für tabellenmodellobjekte ersetzen. Metadaten für Tabellen, Spalten und Beziehungen werden die Tabelle, Spalte und Beziehung, anstatt die mehrdimensionale Entsprechungen (Dimensionen und Attributtypen).  
   
 Sie können Erstellen neuer Modelle mit Kompatibilitätsgrad 1200 oder höher mithilfe der Microsoft.AnalysisServices.Tabular-APIs, die neueste Version von SQL Server Data Tools (SSDT) oder durch Ändern der **CompatibilityLevel** einem vorhandenen tabellarischen Modell zu aktualisieren (auch in SSDT erfolgt). Auf diese Weise bindet das Modell auf neuere Versionen des Servers, Tools und Programmierschnittstellen.   
   

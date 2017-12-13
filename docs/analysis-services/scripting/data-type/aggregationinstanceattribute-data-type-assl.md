@@ -2,12 +2,12 @@
 title: AggregationInstanceAttribute-Datentyp (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b6a9f69ee53a764fb0bfd758c0c205c0c063ce80
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e41624e1fee58fe13a17ea6e4c92770fd2aac782
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="aggregationinstanceattribute-data-type-assl"></a>AggregationInstanceAttribute-Datentyp (ASSL)
-  Definiert einen Grunddatentyp, der Informationen über ein Attribut, das von einer Aggregationsinstanz verwendet wird, darstellt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definiert einen Grunddatentyp, der Informationen über ein Attribut, das von einer Aggregationsinstanz verwendet darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   

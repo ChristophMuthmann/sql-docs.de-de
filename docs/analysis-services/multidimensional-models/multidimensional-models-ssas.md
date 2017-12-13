@@ -2,12 +2,12 @@
 title: Mehrdimensionale Modelle (SSAS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 73a6a2986bd06354ccb1443424ce2aaa31715a72
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c03d39261ff288832dbbeedc5e2a5cc90175d735
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="multidimensional-modeling-ssas"></a>Mehrdimensionale Modellierung (SSAS)
-  Eine mehrdimensionale Analysis Services-Lösung verwendet Cubestrukturen zum Analysieren von Geschäftsdaten über mehrere Dimensionen hinweg. Der mehrdimensionale Modus ist der standardmäßige Servermodus von Analysis Services. Die Komponente umfasst ein Abfrage- und Berechnungsmodul für OLAP-Daten, wobei MOLAP-, ROLAP- und HOLAP-Speichermodi die Leistung durch skalierbare Datenanforderungen ausgleichen. Das Analysis Services-OLAP-Modul ist ein branchenführender OLAP-Server, der für eine breite Palette von BI-Tools gut geeignet ist. Die meisten Analysis Services-Bereitstellungen werden als klassische OLAP-Server installiert.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Eine mehrdimensionale Analysis Services-Lösung verwendet Cubestrukturen zum Analysieren von Geschäftsdaten über mehrere Dimensionen hinweg. Der mehrdimensionale Modus ist der standardmäßige Servermodus von Analysis Services. Die Komponente umfasst ein Abfrage- und Berechnungsmodul für OLAP-Daten, wobei MOLAP-, ROLAP- und HOLAP-Speichermodi die Leistung durch skalierbare Datenanforderungen ausgleichen. Das Analysis Services-OLAP-Modul ist ein branchenführender OLAP-Server, der für eine breite Palette von BI-Tools gut geeignet ist. Die meisten Analysis Services-Bereitstellungen werden als klassische OLAP-Server installiert.  
   
 ## <a name="benefits-of-using-multidimensional-solutions"></a>Vorteile der Verwendung von mehrdimensionalen Lösungen  
  Der Hauptgrund zum Erstellen eines mehrdimensionalen Analysis Services-Modells ist, eine schnelle Leistung von Ad-hoc-Abfragen für Geschäftsdaten zu erreichen. Ein mehrdimensionales Modell besteht aus Cubes und Dimensionen, die kommentiert werden können und zur Unterstützung komplexer Abfragekonstruktionen erweitert werden können. BI-Entwickler erstellen Cubes, um schnelle Antwortzeiten zu unterstützen und eine einzelne Datenquelle zur Geschäftsberichterstellung bereitzustellen. Angesichts der wachsenden Wichtigkeit von Business Intelligence über alle Ebenen einer Organisation hinweg stellt eine einzelne Quelle analytischer Daten sicher, dass Diskrepanzen auf einem Minimum gehalten, wenn nicht sogar ganz ausgeschlossen werden.  

@@ -2,12 +2,12 @@
 title: "Erstellen oder Anpassen eine Datenfeedbibliothek (PowerPivot für SharePoint) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 678847e195c1b75744569088049cb957dacc46fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4304b6b25595bab37df01bdada4a046411cc3f4d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>Erstellen oder Anpassen einer Datenfeedbibliothek (Power Pivot für SharePoint)
-  Eine *Datenfeedbibliothek* ist eine zweckgebundene SharePoint-Bibliothek, mit der Sie Atom-Datendienstdokumente (.atomsvc) registrieren und freigeben können. Diese Dokumente enthalten XML-Datenfeeds in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen oder anderen Clientanwendungen, die das Atom-Datenfeedformat unterstützen. Eine Datenfeedbibliothek unterscheidet sich von anderen SharePoint-Bibliotheken, da sie folgende Möglichkeiten bietet:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ein *datenfeedbibliothek* ist eine zweckgebundene SharePoint-Bibliothek, mit dem Sie registrieren und Freigeben von Atom-datendienstdokumente (.atomsvc). Diese Dokumente enthalten XML-Datenfeeds in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen oder anderen Clientanwendungen, die das Atom-Datenfeedformat unterstützen. Eine Datenfeedbibliothek unterscheidet sich von anderen SharePoint-Bibliotheken, da sie folgende Möglichkeiten bietet:  
   
 -   Erstellen oder Bearbeiten eines *Datendienstdokuments*, das zum Angeben einer HTTP-Verbindung mit einem bestimmten Feed verwendet wird.  
   

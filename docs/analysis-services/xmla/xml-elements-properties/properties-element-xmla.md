@@ -2,12 +2,12 @@
 title: Properties-Element (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a1b6d317bee380fab7439ecc67b82fce452536ae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3a026ff9faaec188d71ec37c0378b067471843bb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="properties-element-xmla"></a>Properties-Element (XMLA)
-  Enthält XML für Analysis (XMAL)-Eigenschaften, die verwendet werden, indem Sie die [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) und [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) Methoden.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Enthält XML für Analysis (XMAL)-Eigenschaften, die verwendet werden, indem Sie die [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) und [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) Methoden.  
   
 ## <a name="syntax"></a>Syntax  
   

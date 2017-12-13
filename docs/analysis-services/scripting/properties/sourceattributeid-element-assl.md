@@ -2,12 +2,12 @@
 title: SourceAttributeID-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bef6d96192765f5fffa6468c7c84093dacee992e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2f40e4559613c38be86e5239440626cb6a55f931
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="sourceattributeid-element-assl"></a>SourceAttributeID-Element (ASSL)
-  Enthält den Bezeichner (ID) des Quellattributs, auf denen die [Ebene](../../../analysis-services/scripting/objects/level-element-assl.md) -Element basiert.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält den Bezeichner (ID) des Quellattributs, auf denen die [Ebene](../../../analysis-services/scripting/objects/level-element-assl.md) -Element basiert.  
   
 ## <a name="syntax"></a>Syntax  
   

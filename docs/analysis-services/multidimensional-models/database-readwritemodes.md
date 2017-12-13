@@ -2,12 +2,12 @@
 title: Datenbank-ReadWriteModes | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f91af75c3ecd493ec781e7c5a8e0e45cca075202
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b7c48381d6f4cc1c7c92802f2028c73f8afb402d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-readwritemodes"></a>Datenbank-ReadWriteModes
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbankadministratoren (DBA) müssen oftmals eine Datenbank mit Lese-/Schreibzugriff in eine schreibgeschützte Datenbank ändern oder umgekehrt. Diese Situationen hängen in der Regel von Unternehmensanforderungen ab, z.&nbsp;B. der Freigabe des Datenbankordners für mehrere Server zum dezentralen Skalieren einer Projektmappe und zur Verbesserung der Leistung. Die **ReadWriteMode** -Datenbankeigenschaft ermöglicht es dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -DBA, den Betriebsmodus der Datenbank in solchen Fällen problemlos zu ändern.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Es gibt häufig Situationen, wenn ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbankadministrator (Dba) eine Datenbank Lese-/Schreibzugriff in eine schreibgeschützte Datenbank ändern möchte oder umgekehrt. Diese Situationen hängen in der Regel von Unternehmensanforderungen ab, z.&nbsp;B. der Freigabe des Datenbankordners für mehrere Server zum dezentralen Skalieren einer Projektmappe und zur Verbesserung der Leistung. Die **ReadWriteMode** -Datenbankeigenschaft ermöglicht es dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -DBA, den Betriebsmodus der Datenbank in solchen Fällen problemlos zu ändern.  
   
 ## <a name="readwritemode-database-property"></a>ReadWriteMode-Datenbankeigenschaft  
  Die **ReadWriteMode** -Datenbankeigenschaft gibt an, ob sich die Datenbank im Lese-/Schreibmodus oder im schreibgeschützter Modus befindet. Hierbei handelt es sich um die beiden einzigen möglichen Werte der Eigenschaft. Wenn sich die Datenbank im schreibgeschützten Modus befindet, können keine Änderungen oder Updates für die Datenbank übernommen werden. Im Lese-/Schreibmodus können hingegen Änderungen und Updates vorgenommen werden. Die Datenbankeigenschaft **ReadWriteMode** wird als schreibgeschützte Eigenschaft definiert. Sie kann nur über einen **Attach** -Befehl festgelegt werden.  

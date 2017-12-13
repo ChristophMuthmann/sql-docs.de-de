@@ -2,12 +2,12 @@
 title: UnknownMemberTranslation-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f5e75ab44c48383fcd8b68ddf736c8de60e4478e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8e173c1cb9fa77d6d5607814bd2d93624a7dae18
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="unknownmembertranslation-element-assl"></a>UnknownMemberTranslation-Element (ASSL)
-  Enthält eine Übersetzung für die Beschriftung des der [UnknownMember](../../../analysis-services/scripting/properties/unknownmember-element-assl.md) -Element für eine [Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md) Element.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält eine Übersetzung für die Beschriftung des der [UnknownMember](../../../analysis-services/scripting/properties/unknownmember-element-assl.md) -Element für eine [Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   

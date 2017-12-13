@@ -2,12 +2,12 @@
 title: Datamining-Architektur | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 637caf3c237da1bcd032ec81ddcd626e94b56dbe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: be637286bda9a3d2a6f39115357603bf03eec81c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-architecture"></a>Data Mining-Architektur
-  In diesem Abschnitt wird die Architektur von Data Mining-Lösungen beschrieben, die in einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]gehostet werden. In den Themen dieses Abschnitts werden die logische und physische Architektur einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz beschrieben, die Data Mining unterstützt. Darüber hinaus enthalten sie Informationen zu den Clients, Anbietern und Protokollen, die für die Kommunikation mit Data Mining-Servern und die lokale oder Remote-Bearbeitung von Data Mining-Objekten verwendet werden können.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dieser Abschnitt beschreibt die Architektur von Datamining-Lösungen, die in einer Instanz von gehostet werden [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. In den Themen dieses Abschnitts werden die logische und physische Architektur einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz beschrieben, die Data Mining unterstützt. Darüber hinaus enthalten sie Informationen zu den Clients, Anbietern und Protokollen, die für die Kommunikation mit Data Mining-Servern und die lokale oder Remote-Bearbeitung von Data Mining-Objekten verwendet werden können.  
   
  Im Allgemeinen ist SQL Server Data Mining ein Dienst, der als ein Teil einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz bereitgestellt und im mehrdimensionalen Modus ausgeführt wird. Daher empfiehlt es sich, dass Sie auch die folgenden Abschnitte in der Onlinedokumentation lesen, in denen Betrieb, Wartung und Konfiguration von mehrdimensionalen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Lösungen beschrieben werden.  
   

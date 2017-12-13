@@ -2,12 +2,12 @@
 title: Installieren von Analysis Services im PowerPivot-Modus | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - setup-install
 - setup-install
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ffad3e8daf95263a5c0ce8ee6607c2715defe43b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0215c2ebdd4a98607dcb60418e468fbe02f6663f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Installieren von Analysis Services im PowerPivot-Modus
-  In den Verfahren in diesem Thema werden Sie durch die Installation eines einzelnen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Servers im [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Modus für eine SharePoint-Bereitstellung geführt. In den Schritten führen Sie u. a. den Installations-Assistenten für SQL Server sowie Konfigurationsaufgaben unter Verwendung der SharePoint-Zentraladministration aus.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Die Verfahren in diesem Thema führen Sie durch die Installation eines einzelnen Servers eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Server in [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Modus für eine SharePoint-Bereitstellung. In den Schritten führen Sie u. a. den Installations-Assistenten für SQL Server sowie Konfigurationsaufgaben unter Verwendung der SharePoint-Zentraladministration aus.  
   
 ||  
 |-|  
@@ -310,7 +310,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Verwalten von Excel Services-Datenmodelleinstellungen (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\)) (http://technet.microsoft.com/library/jj219780(v=office.15)).  
   
- ![SharePoint-Einstellungen](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Einstellungen") [Submit Feedback und Kontaktinformationen Informationen über Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
+ ![SharePoint-Einstellungen](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") [Übermitteln von Feedback und Kontaktinformationen über Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Migrieren von Power Pivot zu SharePoint 2013](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   

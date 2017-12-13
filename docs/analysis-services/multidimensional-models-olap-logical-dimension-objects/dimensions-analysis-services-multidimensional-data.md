@@ -2,12 +2,12 @@
 title: "Dimensionen (Analysis Services – mehrdimensionale Daten) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffb3b3a3ef069be26ff6d3812d52ff4d18a7dc9c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9f876ad9e6b7627b22322604d406a189b6c03834
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dimensions-analysis-services---multidimensional-data"></a>Dimensionen (Analysis Services – Mehrdimensionale Daten)
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Dimensionen sind eine wesentliche Komponente von Cubes. Mit Dimensionen werden Daten nach Interessensbereichen geordnet, z. B. nach Kunden, Geschäften oder Angestellten. Dimensionen in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] enthalten Attribute, die den Spalten in den Dimensionstabellen entsprechen. Diese Attribute erscheinen in der Form von Attributhierarchien und können in benutzerdefinierten Hierarchien organisiert, oder basierend auf den Spalten der zugrunde liegenden Dimensionstabelle als Über-/Unterordnungshierarchien definiert werden. Hierarchien werden dazu verwendet, die in einem Cube enthaltenen Measures zu ordnen. Die folgenden Themen bieten eine Übersicht über Dimensionen, Attribute und Hierarchien.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Dimensionen sind eine wesentliche Komponente von Cubes. Mit Dimensionen werden Daten nach Interessensbereichen geordnet, z. B. nach Kunden, Geschäften oder Angestellten. Dimensionen in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] enthalten Attribute, die den Spalten in den Dimensionstabellen entsprechen. Diese Attribute erscheinen in der Form von Attributhierarchien und können in benutzerdefinierten Hierarchien organisiert, oder basierend auf den Spalten der zugrunde liegenden Dimensionstabelle als Über-/Unterordnungshierarchien definiert werden. Hierarchien werden dazu verwendet, die in einem Cube enthaltenen Measures zu ordnen. Die folgenden Themen bieten eine Übersicht über Dimensionen, Attribute und Hierarchien.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

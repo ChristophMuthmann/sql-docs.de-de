@@ -2,12 +2,12 @@
 title: "Unterstützung für Übersetzungen in Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2f9339fc314e178ec75777d985851da2589a3658
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ffebab4d2702f914cdf43ba4acdff916b1f54e57
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="translation-support-in-analysis-services"></a>Unterstützung für Übersetzungen in Analysis Services
-  In einem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenmodell können Sie mehrere Übersetzungen einer Beschriftung oder Beschreibung einbetten, um kulturspezifische Zeichenfolgen basierend auf der LCID (Sprachcode-ID) bereitzustellen. Bei mehrdimensionalen Modellen können Übersetzungen für den Datenbanknamen, Cubeobjekte und Datenbankdimensionsobjekte hinzugefügt werden. Bei tabellarischen Modellen können Beschriftungen und Beschreibungen der Tabellen und Spalten übersetzt werden.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]In einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Datenmodelle, können Sie mehrere Übersetzungen einer Beschriftung oder Beschreibung, um kulturspezifische Zeichenfolgen basierend auf der LCID bereitzustellen einbetten. Bei mehrdimensionalen Modellen können Übersetzungen für den Datenbanknamen, Cubeobjekte und Datenbankdimensionsobjekte hinzugefügt werden. Bei tabellarischen Modellen können Beschriftungen und Beschreibungen der Tabellen und Spalten übersetzt werden.  
   
  Durch Definieren einer Übersetzung werden die Metadaten und die übersetzte Beschriftung innerhalb des Modells erstellt. Um lokalisierte Zeichenfolgen in einer Clientanwendung zu rendern, müssen Sie jedoch entweder die **Language** -Eigenschaft für das Objekt festlegen oder einen **Culture** - oder **Locale Identifier** -Parameter in der Verbindungszeichenfolge übergeben (z.B. durch Festlegen von `LocaleIdentifier=1036` , um französische Zeichenfolgen zurückzugeben).  
   

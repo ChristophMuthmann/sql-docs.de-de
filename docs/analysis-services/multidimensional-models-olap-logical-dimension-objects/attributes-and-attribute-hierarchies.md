@@ -2,12 +2,12 @@
 title: Attribute und Attributhierarchien | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -32,14 +32,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a86eb2f15fe0109a2e5b2492a61ca7102e662e7e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 18621eba78a2e4c95de6373485044b5f88e1f744
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>Attribute und Attributhierarchien
-  Dimensionen sind Auflistungen von Attributen, die an eine oder mehrere Spalten in einer Tabelle oder Sicht in der Datenquellensicht gebunden sind.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dimensionen sind Auflistungen von Attributen, die an eine oder mehrere Spalten in einer Tabelle oder Sicht in der Datenquellensicht gebunden sind.  
   
 ## <a name="key-attribute"></a>Schlüsselattribut  
  Jede Dimension enthält ein Schlüsselattribut. Jedes Attribut ist an mindestens eine Spalte in einer Dimensionstabelle gebunden. Das Schlüsselattribut ist das Attribut in einer Dimension, das die Spalten in der Dimensionshaupttabelle identifiziert, die in Fremdschlüsselbeziehungen zur Faktentabelle verwendet werden. Das Schlüsselattribut entspricht normalerweise den Primärschlüsselspalten in der Dimensionstabelle. Sie können einen logischen Primärschlüssel für eine Tabelle in einer Datenquellensicht definieren, die über keinen physischen Primärschlüssel in der zugrunde liegenden Datenquelle verfügt. **Weitere Informationen**, finden Sie unter [definieren logischer Primärschlüssel in einer Datenquellensicht &#40; Analysis Services &#41; ](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md). Beim Definieren von Schlüsselattributen versuchen der Cube-Assistent und der Dimensions-Assistent, die Primärschlüsselspalten der Dimensionstabelle in der Datenquellensicht zu verwenden. Wurde für die Dimensionstabelle weder ein logischer noch ein physischer Primärschlüssel definiert, sind die Assistenten möglicherweise nicht in der Lage, die Schlüsselattribute für die Dimension richtig zu definieren.  

@@ -2,12 +2,12 @@
 title: Erteilen von benutzerdefiniertem Zugriff auf dimensiondaten (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -32,14 +32,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6cf115e0e7c931dd4e0b173b937a476cd08635df
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9429721bd5349204d235b40edd3e7a49c7b7f0c0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Erteilen eines benutzerdefinierten Zugriffs auf Dimensiondaten (Analysis Services)
-  Nach der Aktivierung des Lesezugriffs auf einen Cube können Sie zusätzliche Berechtigungen festlegen, die den Zugriff auf Dimensionselemente ausdrücklich zulassen oder verweigern (einschließlich der Measures, die in der Measuredimension enthalten sind, die alle in einem Cube verwendeten Measures enthält). Wenn Sie beispielsweise mehrere Kategorien von Resellern haben, möchten Sie möglicherweise Berechtigungen festlegen, um Daten für einen bestimmten Unternehmenstyp auszuschließen. In der folgenden Abbildung ist die Vorher-und-Nachher-Auswirkung des Verweigerns des Zugriffs auf den Unternehmenstyp "Warehouse" in der Dimension "Reseller" dargestellt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Nach Aktivierung des Lesezugriffs auf einen Cube, können Sie zusätzliche Berechtigungen festlegen, die explizit zulassen oder Verweigern des Zugriffs auf Dimensionselemente (einschließlich der enthaltenen Measures in der Measures-Dimension, die alle in einem Cube verwendeten Measures enthält). Wenn Sie beispielsweise mehrere Kategorien von Resellern haben, möchten Sie möglicherweise Berechtigungen festlegen, um Daten für einen bestimmten Unternehmenstyp auszuschließen. In der folgenden Abbildung ist die Vorher-und-Nachher-Auswirkung des Verweigerns des Zugriffs auf den Unternehmenstyp "Warehouse" in der Dimension "Reseller" dargestellt.  
   
  ![PivotTables mit und ohne Dimensionselement](../../analysis-services/multidimensional-models/media/ssas-permsdimdenied.png "PivotTables mit und ohne Dimensionselement")  
   

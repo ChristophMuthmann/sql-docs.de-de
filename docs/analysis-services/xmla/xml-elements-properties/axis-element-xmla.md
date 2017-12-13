@@ -2,12 +2,12 @@
 title: Axis-Element (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f482d55db6a18adb18a469185534f880bb802d22
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 790fdec7656fa1af8b273a2a3ca7941933480be4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="axis-element-xmla"></a>Axis-Element (XMLA)
-  Enthält eine Menge von Tupeln, die zur Darstellung einer einzelnen Achse in einer enthaltenen mehrdimensionalen Datasets ein [Achsen](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md) Element, das verwendet die [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) von zurückgegebener Datentyp der [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) Methode.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Enthält eine Menge von Tupeln, die zur Darstellung einer einzelnen Achse in einer enthaltenen mehrdimensionalen Datasets ein [Achsen](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md) Element, das verwendet die [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) von zurückgegebener Datentyp die [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) Methode.  
   
 ## <a name="syntax"></a>Syntax  
   

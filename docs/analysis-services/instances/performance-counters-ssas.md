@@ -2,12 +2,12 @@
 title: Leistungsindikatoren (SSAS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b7da59897426d459371d44b637dfda97183cca3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0046d4b982d57491553353c88d309b309964e142
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="performance-counters-ssas"></a>Leistungsindikatoren (SSAS)
-  Mit dem Systemmonitor können Sie die Leistung einer Microsoft SQL Server Analysis Services (SSAS)-Instanz mithilfe von Leistungsindikatoren überwachen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Mit dem Systemmonitor können Sie die Leistung einer Microsoft SQL Server Analysis Services (SSAS)-Instanz mithilfe von Leistungsindikatoren überwachen.  
   
  Der Systemmonitor ist ein MMC-Snap-In ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Control), das die Verwendung von Ressourcen nachverfolgt. Sie können dieses MMC-Snap-In starten, indem Sie an der Eingabeaufforderung **PerfMon** eingeben oder in der Systemsteuerung auf **Verwaltung**und anschließend auf **Systemmonitor**klicken. Mithilfe des Systemmonitors können Sie die Leistung und Aktivität von Server und Prozessen mithilfe vordefinierter Objekte und Leistungsindikatoren nachverfolgen sowie Ereignisse mithilfe benutzerdefinierter Leistungsindikatoren überwachen. Der Systemmonitor erfasst Anzahlwerte anstelle von Daten zu den Ereignissen, z. B. die Speicherauslastung, die Anzahl der aktiven Transaktionen oder die CPU-Aktivität. Für bestimmte Leistungsindikatoren können auch Schwellenwerte festgelegt werden, um Warnungen zu generieren, durch die Operatoren benachrichtigt werden.  
   

@@ -2,12 +2,12 @@
 title: Measures | Microsoft Docs
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ece228053898085df6a2d95bf513c0d889cfa646
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6309c988b279db0e96915e6ae4d17011255d47f6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="measures"></a>Measures
-  In tabellarischen Modellen ist ein Measure eine Berechnung, die mit einer DAX-Formel für die Verwendung in einem Berichtserstellungsclient erstellt wird. Measures werden auf Grundlage von Feldern, Filtern oder eines Slicers ausgewertet, die der Benutzer in der Clientanwendung zur Berichtserstellung auswählt.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]In tabellarischen Modellen ist ein Measure eine Berechnung, die mit einer DAX-Formel für die Verwendung in einem berichtserstellungsclient erstellt. Measures werden auf Grundlage von Feldern, Filtern oder eines Slicers ausgewertet, die der Benutzer in der Clientanwendung zur Berichtserstellung auswählt.  
   
 ##  <a name="bkmk_understanding"></a> Vorteile  
  Measures können auf Standardaggregationsfunktionen basieren, z. B. AVERAGE, COUNT oder SUM, oder Sie können mit DAX eigene Formeln definieren. Zusätzlich zur Formel verfügt jedes Measure über Eigenschaften, die vom Measuredatentyp definiert werden, z. B. Name, Tabellendetails, Format und Dezimalstellen.  

@@ -2,12 +2,12 @@
 title: Verbindungszeichenfolgen-Eigenschaften (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cd41219341488f64487b831ec42c50869552a660
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 10c3749dafe92066faed35c4af06444e2fcd55ff
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connection-string-properties-analysis-services"></a>Verbindungszeichenfolgen-Eigenschaften (Analysis Services)
-  In diesem Thema sind Eigenschaften für Verbindungszeichenfolgen dokumentiert, die Sie u. U. in einem der Designer- oder Verwaltungstools festlegen bzw. die in Verbindungszeichenfolgen von Clientanwendungen verwendet werden, die eine Verbindung mit Analysis Services-Daten herstellen und diese abfragen. In diesem Dokument wird daher nur auf einen Teilbereich der verfügbaren Eigenschaften eingegangen. Die vollständige Liste umfasst zahlreiche Server- und Datenbankeigenschaften, mit denen eine Verbindung unabhängig davon, wie die Instanz oder Datenbank auf dem Server konfiguriert ist, an spezifische Anwendungen angepasst werden kann.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In diesem Thema werden die Verbindungszeichenfolgen-Eigenschaften, die Sie möglicherweise in einem der Tools Designer- oder Verwaltungstools festlegen bzw. die in Verbindungszeichenfolgen von Clientanwendungen, die zum Verbinden und Analysis Services-Daten Abfragen. In diesem Dokument wird daher nur auf einen Teilbereich der verfügbaren Eigenschaften eingegangen. Die vollständige Liste umfasst zahlreiche Server- und Datenbankeigenschaften, mit denen eine Verbindung unabhängig davon, wie die Instanz oder Datenbank auf dem Server konfiguriert ist, an spezifische Anwendungen angepasst werden kann.  
   
  Entwickler, die benutzerdefinierte Verbindungszeichenfolgen im Anwendungscode erstellen, finden in der API-Dokumentation für ADOMD.NET-Clients eine ausführlichere Liste: <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   

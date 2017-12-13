@@ -2,12 +2,12 @@
 title: Verarbeiten eines Miningmodells | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5bf9d1f64c100a69411b54efc7b371fc327f12cb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ef9aab1e5608be6c9b06401e05ebfa6df9cee8c7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="process-a-mining-model"></a>Verarbeiten eines Miningmodells
-  Auf der Registerkarte Miningmodelle im Data Mining-Designer von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]können Sie ein bestimmtes Miningmodell verarbeiten, das einer Miningstruktur zugeordnet ist. Sie können auch alle Modelle verarbeiten, die der Struktur zugeordnet sind.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Im Data Mining-Designer in der Registerkarte Miningmodelle [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], verarbeiten Sie ein bestimmtes Miningmodell, das einer Miningstruktur zugeordnet ist, oder Sie können alle Modelle verarbeiten, die der Struktur zugeordnet sind.  
   
  Sie können ein Miningmodell mit den folgenden Tools verarbeiten:  
   

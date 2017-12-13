@@ -2,12 +2,12 @@
 title: "CSDLBI-Attribute für Berichtsentwurf | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,17 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cf0a6f94595778429b4ec850dac22757fc4a39e9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 01c75144c964c80a224401cd7b5f81939f2714e9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>CSDLBI-Attribute für Berichtsentwurf
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  In diesem Abschnitt werden die Attribute in den Erweiterungen für CSDL für Tabellenmodellierung beschrieben, die sich auf den [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]-Abfrageentwurf auswirken.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dieser Abschnitt beschreibt die Attribute in die Erweiterungen für CSDL für tabellenmodellierung, die Einfluss auf [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Abfrageentwurf.  
   
 ## <a name="model-attributes"></a>Modellattribute  
  Diese Attribute werden für ein Unterelement eines [EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx) -Elements der CSDL definiert.  
@@ -71,7 +68,7 @@ ms.lasthandoff: 11/17/2017
 |**Ausrichtung**|Enum|Ein Wert, der angibt, wie die Feldwerte in einer Tabellenpräsentation ausgerichtet werden sollten. Mögliche Werte **Default**, **Center**, **Left**, **Right**. Wenn der Wert nicht angegeben wird, wird die Ausrichtung durch den Standardwert auf Grundlage des Datentyps des Felds bestimmt.|  
 |**FormatString**|Text|Eine .NET-Formatzeichenfolge, die angibt, wie der Wert des Felds standardmäßig formatiert werden sollte. Wenn die Zeichenfolge nicht angegeben wird, wird das folgende Format angenommen:<br /><br /> Datetime - Felder: regionales kurzes Datum oder "d"<br /><br /> -Gleitkommafelder und ganzzahlige Felder mit einer standardaggregatfunktion: regionale Zahl oder "n"<br /><br /> -Ganze Zahlen ohne standardaggregatfunktion: regionale Dezimalzahl oder "d"<br /><br /> Für alle anderen Feldtypen ist keine Formatzeichenfolge gültig.|  
 |**Einheiten**|Text|Das Symbol, das für Feldwerte zur Darstellung von Einheiten übernommen wird. Wenn das Symbol nicht angegeben wird, werden die Einheiten als unbekannt angenommen.|  
-|**Breite**|Integer|Die bevorzugte Breite in Zeichen, die zum Anzeigen der Werte des Felds in einer Tabellenpräsentation reserviert werden sollen. Wenn die Breite nicht angegeben wird, wird eine Standardbreite angenommen, die auf dem Datentyp des Felds basiert.|  
+|**Width**|Integer|Die bevorzugte Breite in Zeichen, die zum Anzeigen der Werte des Felds in einer Tabellenpräsentation reserviert werden sollen. Wenn die Breite nicht angegeben wird, wird eine Standardbreite angenommen, die auf dem Datentyp des Felds basiert.|  
 |**SortDirection**|Enum|Ein Wert, der angibt, wie die Feldwerte normalerweise sortiert werden. Mögliche Werte: **Default**, **Ascending**, **Descending**. Wenn der Wert nicht angegeben wird, wird mit dem Standardwert eine Sortierrichtung auf Grundlage des Datentyps des Felds zugewiesen.|  
 |**IsRightToLeft**|Boolean|Gibt an, ob das Feld Text enthält, der von rechts nach links gelesen werden soll. Wenn der Wert nicht angegeben wird, wird die Modelleinstellung verwendet.|  
 |**OrderBy**|MemberRef|Ein Verweis auf ein anderes Feld im Modell, mit dem die Sortierreihenfolge für die Werte des Felds definiert wird. Die Werte für die zwei Felder müssen über eine 1:1-Zuordnung verfügen, da das Sortierverhalten andernfalls nicht definiert wird. Wenn die Werte nicht angegeben werden, wird das Feld auf Grundlage seines eigenen Werts sortiert.|  

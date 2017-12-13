@@ -2,12 +2,12 @@
 title: RefreshInterval-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: be823034fa1531164bf278ad012c989890470f9c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f0c832e3f9b2bdc3d5d8bcb76ad3e2c39d03bb03
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="refreshinterval-element-assl"></a>RefreshInterval-Element (ASSL)
-  Gibt das Intervall an, in dem die gebundenen Daten, die dem übergeordneten Element zugeordnet sind, aktualisiert werden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Gibt das Intervall an, an dem die gebundenen Daten, die verknüpft sind, mit dem übergeordneten Element aktualisiert werden.  
   
 ## <a name="syntax"></a>Syntax  
   

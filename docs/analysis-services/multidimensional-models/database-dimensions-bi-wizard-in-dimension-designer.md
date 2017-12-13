@@ -2,12 +2,12 @@
 title: Starten Sie Business Intelligence-Assistenten im Dimensions-Designer | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a916b45036a24d812594b5478efb1d33f06a2c62
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ef434312b7c70784acdd5d65c1cda5a964c444fd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-dimensions---bi-wizard-in-dimension-designer"></a>Datenbankdimensionen Sie-BI-Assistenten im Dimensions-Designer
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellen Sie mit dem Business Intelligence-Assistenten oder dem Dimensions-Designer benutzerdefinierte Rollup-Operatoren sowie benutzerdefinierte Elementformeln. Außerdem können Sie Dimensionen für den Rückschreibevorgang konfigurieren. Sie können den Business Intelligence-Assistenten in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]über den Projektmappen-Explorer oder den Cube-Designer starten. Der Zugriff auf den Dimensions-Designer ist über [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]möglich.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], benutzerdefinierten Rollup-Operatoren sowie benutzerdefinierte Formeln erstellen und Konfigurieren von Dimensionen für das Rückschreiben mit der Business Intelligence-Assistenten oder dem Dimensions-Designer. Sie können den Business Intelligence-Assistenten in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]über den Projektmappen-Explorer oder den Cube-Designer starten. Der Zugriff auf den Dimensions-Designer ist über [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]möglich.  
   
 ### <a name="to-start-the-business-intelligence-wizard"></a>So starten Sie den Business Intelligence-Assistenten  
   

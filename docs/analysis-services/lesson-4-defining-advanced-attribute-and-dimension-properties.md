@@ -2,12 +2,12 @@
 title: 'Lektion 4: Definieren von Attributen und Dimensionseigenschaften erweiterte | Microsoft Docs'
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4a649addc2a2ab676856076fa64ed352f48cf4e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2ed7b1d026369b249b1acfc7da23242efcc22b26
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lektion 4: Definieren von erweiterten Attributen und Dimensionseigenschaften
-In dieser Lektion lernen Sie, wie einige erweiterte Attributeigenschaften, Attributhierarchien und Dimensionseigenschaften verwendet werden müssen.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]In dieser Lektion lernen Sie einige der erweiterten Eigenschaften der Attribute, Attributhierarchien und Dimensionseigenschaften verwendet werden.  
   
 > [!NOTE]  
 > Diese Lektion baut auf einer erweiterten Version des [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Lernprogrammprojekts auf, das Sie in den ersten drei Lektionen dieses Lernprogramms abgeschlossen haben. In der ersten Aufgabe dieser Lektion wird beschrieben, wo das entsprechende Beispielprojekt für diese Lektion zu finden ist, und welche Unterschiede zwischen diesem Projekt und dem Projekt bestehen, das Sie in den ersten drei Lektionen erstellt haben.  

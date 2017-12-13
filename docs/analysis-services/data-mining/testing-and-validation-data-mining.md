@@ -2,12 +2,12 @@
 title: "Tests und Überprüfung (Datamining) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -37,14 +37,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 38ef15322528bfae0dbd1b134d80fb7d1a56a734
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e20e18e5f2a41150a74b54575b582fd4e9dc3492
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="testing-and-validation-data-mining"></a>Tests und Überprüfung (Data Mining)
-  Die Überprüfung ist der Prozess des Bewertens, welche Leistung die Miningmodelle mit echten Daten erzielen. Es ist wichtig, dass Sie Ihre Miningmodelle überprüfen, indem Sie ihre Qualität und Merkmale studieren, bevor Sie sie in einer Produktionsumgebung bereitstellen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Überprüfung wird der Prozess des bewertens, wie gut die Miningmodelle mit echten Daten erzielen. Es ist wichtig, dass Sie Ihre Miningmodelle überprüfen, indem Sie ihre Qualität und Merkmale studieren, bevor Sie sie in einer Produktionsumgebung bereitstellen.  
   
  In diesem Abschnitt werden einige grundlegende Konzepte im Zusammenhang mit der Modellqualität und die Strategien zur Modellvalidierung vorgestellt, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]zur Verfügung stehen. Eine Übersicht dazu, wie Modellüberprüfungen in den größeren Data Mining-Prozess eingebunden werden können, finden Sie unter [Data Mining-Projektmappen](../../analysis-services/data-mining/data-mining-solutions.md).  
   

@@ -2,12 +2,12 @@
 title: AssociationSet-Element (CSDLBI) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae30edd006aa425ddd4f574ceb67f0534674f93a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a8cf7089d9c70b051c3eaa6a43ddbce942500d2b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="associationset-element-csdlbi"></a>AssociationSet-Element (CSDLBI)
-  Das **AssociationSet** -Element ist ein komplexer Typ, mit dem eine Zuordnung definiert wird. In einem CSDLBI-Datenmodell stellt eine Zuordnung eine Beziehung zwischen zwei Tabellen dar.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Die **AssociationSet** Element ist ein komplexer Typ, der eine Zuordnung definiert. In einem CSDLBI-Datenmodell stellt eine Zuordnung eine Beziehung zwischen zwei Tabellen dar.  
   
  Für jede eindeutige Beziehung in einem Modell muss **AssociationSet** angegeben werden. **AssociationSet** definiert die Endpunkte mithilfe des **Association** -Elements. Das **AssociationSet** -Element definiert zusätzlich Metadaten für die Beziehung und ihre Verwendung im Datenmodell.  
   

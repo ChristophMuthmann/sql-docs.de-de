@@ -2,12 +2,12 @@
 title: Power Pivot-Konfiguration mit Windows PowerShell | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ff0decfe7bfe8ba1d93c4b722fecbc50c0d86ed1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cf814ab826f373ff4266206e6e4c0becda187bca
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-configuration-using-windows-powershell"></a>PowerPivot-Konfiguration mit Windows PowerShell
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] enthält Windows PowerShell-Cmdlets, mit denen Sie eine Installation von [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]konfigurieren können. Für die vollständige Konfiguration einer Installation mit PowerShell ist die Verwendung von SharePoint-Cmdlets und [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Cmdlets erforderlich. Ein Großteil der Konfiguration kann mithilfe eines der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Tools ausgeführt werden. Weitere Informationen zu den Tools finden Sie unter [Power Pivot-Konfigurationstools](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] enthält Windows PowerShell-Cmdlets, die Sie verwenden können, so konfigurieren Sie eine Installation von [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Für die vollständige Konfiguration einer Installation mit PowerShell ist die Verwendung von SharePoint-Cmdlets und [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Cmdlets erforderlich. Ein Großteil der Konfiguration kann mithilfe eines der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Tools ausgeführt werden. Weitere Informationen zu den Tools finden Sie unter [Power Pivot-Konfigurationstools](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   
 > [!IMPORTANT]  
 >  Für eine SharePoint 2010-Farm muss SharePoint 2010 SP1 installiert sein, bevor Sie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint oder eine SharePoint-Farm konfigurieren können, die einen [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] -Datenbankserver verwendet. Wenn Sie das Service Pack noch nicht installiert haben, installieren Sie es, bevor Sie mit der Serverkonfiguration beginnen.  

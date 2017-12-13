@@ -2,12 +2,12 @@
 title: "SystemGetClusterAccuracyResults (Analysis Services – Datamining) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 592500d3ab749c6ba07a82b0ff650dc7ff282dc1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6ad7e0e0cbb1cf265a9944b81989b59b110602e9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="systemgetclusteraccuracyresults-analysis-services---data-mining"></a>SystemGetClusterAccuracyResults (Analysis Services – Data Mining)
-  Gibt Genauigkeitsmetriken einer Kreuzvalidierung für eine Miningstruktur und zugehörige Clustering-Modelle zurück.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Gibt genauigkeitsmetriken einer kreuzvalidierung für eine Miningstruktur und zugehörige clustering-Modelle zurück.  
   
  Diese gespeicherte Prozedur gibt Metriken für das ganze Dataset als einzelne Partition zurück. Um das Dataset in Querschnitte zu partitionieren und Metriken für jede Partition zurückzugeben, verwenden Sie [SystemGetClusterCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md).  
   

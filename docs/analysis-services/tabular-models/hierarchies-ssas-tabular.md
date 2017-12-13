@@ -2,12 +2,12 @@
 title: Hierarchien | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a7604fe65427b5744cb0b34689a98f7fc6cd809b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 11112104f624c3594a99e867d03bfaaab28ac37c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="hierarchies"></a>Hierarchien
-  Hierarchien in Tabellenmodellen sind Metadaten, mit denen Beziehungen zwischen mindestens zwei Spalten in einer Tabelle definiert werden. Hierarchien können getrennt von anderen Spalten in der Feldliste eines Berichterstellungsclients angezeigt werden, damit Clientbenutzer einfacher darin navigieren und sie in einen Bericht aufnehmen können.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Hierarchien in tabellarischen Modellen sind Metadaten, die Beziehungen zwischen zwei oder mehr Spalten in einer Tabelle definiert werden. Hierarchien können getrennt von anderen Spalten in der Feldliste eines Berichterstellungsclients angezeigt werden, damit Clientbenutzer einfacher darin navigieren und sie in einen Bericht aufnehmen können.  
   
 ##  <a name="bkmk_benefits"></a> Vorteile  
  Tabellen können Dutzende oder sogar Hunderte Spalten mit ungewöhnlichen Spaltennamen und ohne erkennbare Reihenfolge enthalten. Dies kann dazu führen, dass die Spalten in den Feldlisten von Berichterstellungsclients ungeordnet dargestellt werden, und es Benutzern erschweren, Daten zu finden und in einen Bericht einzuschließen. Hierarchien können eine übersichtliche und intuitive Ansicht einer andernfalls komplexen Datenstruktur bereitstellen.  

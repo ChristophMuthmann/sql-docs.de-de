@@ -2,12 +2,12 @@
 title: Kreuzvalidierungsformeln | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5e472f4f5a680bbcfd84cc260bd2d6acb35b70e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 041206471791fe8be8b06e407854f96fc021eedd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cross-validation-formulas"></a>Kreuzvalidierungsformeln
-  Wenn Sie einen Kreuzvalidierungsbericht generieren, enthält dieser in Abhängigkeit des Miningmodelltyps (d.h. der zum Erstellen des Modells verwendet Algorithmus) Genauigkeitsmeasures für jedes Modell, den Datentyp des vorhersagbaren Attributs und ggf. den vorhersagbaren Attributwert.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Wenn Sie einen kreuzvalidierungsbericht generieren, enthält es genauigkeitsmeasures für jedes Modell in Abhängigkeit von den Typ des Miningmodells (d. h. der Algorithmus, der zum Erstellen des Modells verwendet wurde), der den Datentyp des vorhersagbaren Attributs und dem vorhersagbaren Attribut Wert, falls vorhanden.  
   
  In diesem Abschnitt werden die im Kreuzvalidierungsbericht verwendeten Measures aufgeführt und die Berechnungsmethode beschrieben.  
   

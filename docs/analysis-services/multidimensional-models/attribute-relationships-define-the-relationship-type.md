@@ -2,12 +2,12 @@
 title: Definieren des Beziehungstyps einer attributbeziehung | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cfb5edcfcec3d977af9a78ce8cad43161ea0180b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ae16d82015c0ca848b8014bb6ce06564749ca6f5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-relationships---define-the-relationship-type"></a>Attributbeziehungen – definieren des Beziehungstyps
-  Zum Definieren des Beziehungstyps einer Attributbeziehung verwenden Sie die Registerkarte **Attributbeziehungen** im Dimensions-Designer, den Sie über [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aufrufen können.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sie definieren des Beziehungstyps einer attributbeziehung mithilfe der **Attributbeziehungen** Registerkarte im Dimensions-Designer, die aus zugegriffen werden kann [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-set-the-relationship-type-of-an-attribute-relationship"></a>So definieren Sie den Beziehungstyp einer Attributbeziehung  
   

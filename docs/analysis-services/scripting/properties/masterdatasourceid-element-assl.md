@@ -2,12 +2,12 @@
 title: MasterDatasourceID-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a883026e0fe728fb80f1c970b6bda95117a3b767
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f42e1f93f8b35730b1540e2fcea7177cdc6d7220
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="masterdatasourceid-element-assl"></a>MasterDatasourceID-Element (ASSL)
-  Enthält den Masterdatenquellen-Bezeichner (ID) für eine [Datenbank](../../../analysis-services/scripting/objects/database-element-assl.md) Element.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält den Masterdatenquellen-Bezeichner (ID) für eine [Datenbank](../../../analysis-services/scripting/objects/database-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   

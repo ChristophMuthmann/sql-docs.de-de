@@ -2,12 +2,12 @@
 title: IMDEmbeddedData Schnittstelle | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,17 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 584e13737a74d02239a9b9ff8d517ef58f53c1d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 77bad0900d5d636a06ed1b836697e96120d0a7cd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="imdembeddeddata-interface"></a>IMDEmbeddedData-Schnittstelle
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  Die IMDEmbeddedData-Schnittstelle ist eine öffentliche Schnittstelle verwendet, um ein eingebettetes verwalten [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Datenbank oder einer tabellarischen Modelldatenbank. Die Schnittstelle erbt von der **IPersistStream** Schnittstelle. Die Schnittstelle lässt folgende Vorgänge zu:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die IMDEmbeddedData-Schnittstelle ist eine öffentliche Schnittstelle verwendet, um ein eingebettetes verwalten [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Datenbank oder einer tabellarischen Modelldatenbank. Die Schnittstelle erbt von der **IPersistStream** Schnittstelle. Die Schnittstelle lässt folgende Vorgänge zu:  
   
 -   Ruft einen Bezeichner in den eingebetteten Datenstrom im Containerdokument ab.  
   

@@ -2,12 +2,12 @@
 title: Definieren einer Datenquelle | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d54f8f04c4e67a81fc1da4c47c6e995ac98ff84d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c6d92c514cb38f1277efeedaa4172968f8e150ec
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-1-2---defining-a-data-source"></a>Lektion 1-2: Definieren einer Datenquelle
-Nach dem Erstellen eines [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekts beginnen Sie im Allgemeinen die Arbeit an dem Projekt, indem Sie mindestens eine Datenquelle definieren, die vom Projekt verwendet wird. Wenn Sie eine Datenquelle definieren, definieren Sie die Verbindungszeichenfolgeinformationen, die zum Verbinden der Datenquelle verwendet werden. Weitere Informationen finden Sie unter [Erstellen einer Datenquelle &#40;SSAS – mehrdimensional&#41;](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Nach der Erstellung einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt Sie in der Regel beginnen der Arbeit mit dem Projekt definieren Sie eine oder mehrere Datenquellen, die vom Projekt verwendet wird. Wenn Sie eine Datenquelle definieren, definieren Sie die Verbindungszeichenfolgeinformationen, die zum Verbinden der Datenquelle verwendet werden. Weitere Informationen finden Sie unter [Erstellen einer Datenquelle &#40;SSAS – mehrdimensional&#41;](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
   
 In der folgenden Aufgabe definieren Sie die AdventureWorksDWSQLServer2012-Beispieldatenbank als Datenquelle für das [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Projekt. Während sich diese Datenbank für die Zwecke dieses Lernprogramms auf Ihrem lokalen Computer befindet, werden Quelldatenbanken häufig auf mindestens einem Remotecomputer gehostet.  
   

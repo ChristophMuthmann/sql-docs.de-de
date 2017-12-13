@@ -2,12 +2,12 @@
 title: "Klassifikationsmatrix (Analysis Services – Datamining) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8882fb1235b4d8beeb819833c76c872f1a4df76f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1bcd19b3f4c4a1c5ee3320fa7be493672eb91dae
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>Klassifikationsmatrix (Analysis Services   Data Mining)
-  In einer *Klassifikationsmatrix* werden alle im Modell enthaltenen Fälle in Kategorien unterteilt. Dabei wird festgestellt, ob der vorhergesagte Wert mit dem Istwert übereinstimmt. Alle Fälle in jeder Kategorie werden dann gezählt und die Summen in der Matrix angezeigt. Die Klassifikationsmatrix ist ein Standardtool für die Auswertung statistischer Modelle und auch unter dem Namen *Verwirrungsmatrix*bekannt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ein *Klassifikationsmatrix* werden alle Fälle des Modells in Kategorien unterteilt. dabei wird festgestellt, ob der vorhergesagte Wert mit dem Istwert übereinstimmt. Alle Fälle in jeder Kategorie werden dann gezählt und die Summen in der Matrix angezeigt. Die Klassifikationsmatrix ist ein Standardtool für die Auswertung statistischer Modelle und auch unter dem Namen *Verwirrungsmatrix*bekannt.  
   
  In dem Diagramm, das bei Auswahl der **Klassifikationsmatrix** erstellt wird, werden die Istwerte für jeden angegebenen, vorhergesagten Status mit den vorhergesagten Werten verglichen. Durch die Zeilen der Matrix werden die vorhergesagten Werte und durch die Spalten die Istwerte des Modells dargestellt. In der Analyse werden die folgenden Kategorien verwendet: *falsch positiv*, *wahr positiv*, *falsch negativ*und *wahr negativ*.  
   

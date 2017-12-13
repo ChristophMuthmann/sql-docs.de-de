@@ -2,12 +2,12 @@
 title: Microsoft Neural Network-Algorithmus | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -32,14 +32,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a5b34600d0037fc0d2f5eaac20251718ae4ff217
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dc7c43077650ddee110eb48ad455e7cb1ab5ce8e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network-Algorithmus
-  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus ist eine Implementierung der beliebten und anpassbaren Architektur für neuronale Netzwerke für das Machine Learning.  Der Algorithmus testet jeden möglichen Status des Eingabeattributs mit jedem möglichen Status des vorhersagbaren Attributs und nutzt die Trainingsdaten für die Berechnung der Wahrscheinlichkeiten für jede Kombination. Sie können diese Wahrscheinlichkeiten später für Klassifizierungs- oder Regressionstasks und für die Vorhersage eines Ergebnisses auf Basis einiger Eingabeattribute verwenden. Ein neuronales Netzwerk kann auch für die Zuordnungsanalyse verwendet werden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus ist eine Implementierung der gängigeren und anwendbare neuronalen Architektur für maschinelles lernen.  Der Algorithmus testet jeden möglichen Status des Eingabeattributs mit jedem möglichen Status des vorhersagbaren Attributs und nutzt die Trainingsdaten für die Berechnung der Wahrscheinlichkeiten für jede Kombination. Sie können diese Wahrscheinlichkeiten später für Klassifizierungs- oder Regressionstasks und für die Vorhersage eines Ergebnisses auf Basis einiger Eingabeattribute verwenden. Ein neuronales Netzwerk kann auch für die Zuordnungsanalyse verwendet werden.  
   
  Beim Erstellen eines Miningmodells mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network-Algorithmus können Sie mehrere Ausgaben einschließen – der Algorithmus erstellt dann mehrere Netzwerke. Die Anzahl der Netzwerke in einem einzelnen Miningmodell ist abhängig von der Anzahl der Status (oder Attributwerte) in den Eingabespalten sowie die Anzahl der vorhersagbaren Spalten, die das Miningmodell verwendet, und der Anzahl der Status in diesen Spalten.  
   

@@ -2,12 +2,12 @@
 title: Verarbeiten von Optionen und Einstellungen (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9ca6239dc157d5c6d7f4ac8afd24ff161b57992a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 37311ad6191047a4eebdc51f427bc0e28c8f86d0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>Verarbeiten von Optionen und Einstellungen (Analysis Services)
-  Beim Verarbeiten von Objekten in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie eine Verarbeitungsoption auswählen, die den Verarbeitungstyp der einzelnen Objekte steuert. Die Verarbeitungstypen unterscheiden sich von Objekt zu Objekt sowie aufgrund von Änderungen, die für das Objekt vorgenommen wurden, seit es zuletzt verarbeitet wurde. Wenn Sie [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwenden, um die Verarbeitungsmethode automatisch auszuwählen, wird die Methode verwendet, die das Objekt in der kürzesten Zeit in einem vollständig verarbeiteten Zustand zurückgibt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Beim Verarbeiten von Objekten in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], können Sie eine Verarbeitungsoption auswählen, die den Typ der Verarbeitung zu steuern, die für jedes Objekt tritt auswählen. Die Verarbeitungstypen unterscheiden sich von Objekt zu Objekt sowie aufgrund von Änderungen, die für das Objekt vorgenommen wurden, seit es zuletzt verarbeitet wurde. Wenn Sie [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwenden, um die Verarbeitungsmethode automatisch auszuwählen, wird die Methode verwendet, die das Objekt in der kürzesten Zeit in einem vollständig verarbeiteten Zustand zurückgibt.  
   
  Mit den Aufbereitungseinstellungen können Sie steuern, welche Objekte verarbeitet werden, und welche Methoden zum Verarbeiten der Objekte verwendet werden. Bestimmte Aufbereitungseinstellungen werden vor allem für Batchverarbeitungsaufträge verwendet. Weitere Informationen zur Batchverarbeitung finden Sie unter [Batchverarbeitung &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md).  
   

@@ -2,12 +2,12 @@
 title: Trend-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6a784b274e5971f0846c0ee3739cce75e70b2276
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8ef66ad34c074994bd651908180b525b8fec18c9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="trend-element-assl"></a>Trend-Element (ASSL)
-  Enthält einen Multidimensional Expressions (MDX)-Ausdruck, der für einen Trendindikator zurückgibt eine [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) Element.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält einen Multidimensional Expressions (MDX)-Ausdruck, der für einen Trendindikator zurückgibt eine [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   

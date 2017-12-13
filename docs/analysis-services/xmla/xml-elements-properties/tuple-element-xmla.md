@@ -2,12 +2,12 @@
 title: Tuple-Element (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 976d47573aa44ffe73878475e5ece552639428bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c5b736390fc88221a35d0080ccde11feea772ae0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tuple-element-xmla"></a>Tuple-Element (XMLA)
-  Enthält eine Sammlung von [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)-Elementen, die im übergeordneten [Tuples](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md)-Element enthalten sind.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Enthält eine Auflistung von [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) vom übergeordneten Element enthaltenen Elemente [Tupel](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   

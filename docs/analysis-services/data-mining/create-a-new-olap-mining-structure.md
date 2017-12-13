@@ -2,12 +2,12 @@
 title: Erstellen eine neue OLAP-Miningstruktur | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1aceaa55b007eaf43a9a44540284ba95786fca63
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ede498333c2fa7c1967d62e2d403d09a6d50acde
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Erstellen einer neuen OLAP-Miningstruktur
-  Sie können den Data Mining-Assistenten in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwenden, um eine Miningstruktur zu erstellen, in der Daten aus einem mehrdimensionalen Modell verwendet werden. Miningmodelle, die auf OLAP-Cubes basieren, können die Spalte und Werte in Faktentabellen, Dimensionen und Measuregruppen als Attribute für die Analyse verwenden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sie können Data Mining-Assistenten in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine Miningstruktur erstellen, die Daten aus einem mehrdimensionalen Modell verwendet. Miningmodelle, die auf OLAP-Cubes basieren, können die Spalte und Werte in Faktentabellen, Dimensionen und Measuregruppen als Attribute für die Analyse verwenden.  
   
 ### <a name="to-create-a-new-olap-mining-structure"></a>So erstellen Sie eine neue OLAP-Miningstruktur  
   

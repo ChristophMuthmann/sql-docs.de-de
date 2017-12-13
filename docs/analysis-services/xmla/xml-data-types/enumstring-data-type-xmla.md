@@ -2,12 +2,12 @@
 title: EnumString-Datentyp (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7f3365cbe5ad69fb81ab1231b2d09fd593ada3ac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4018f8cafb3daed98c05d9d59c12a0cfb1998e7a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="enumstring-data-type-xmla"></a>EnumString-Datentyp (XMLA)
-  Definiert einen abgeleiteten Datentyp, der für einen gegebenen Enumerator einen Satz genannter Konstanten darstellt.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Definiert einen abgeleiteten Datentyp, der für einen gegebenen Enumerator einen Satz benannter Konstanten darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   

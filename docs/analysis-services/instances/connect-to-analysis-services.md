@@ -2,12 +2,12 @@
 title: Herstellen einer Verbindung mit Analysis Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 45b056f7b2d109396a114a7d8459bcc4db95c1ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 683474e873b45eca2fc39d0b8f254da06d205cf2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connect-to-analysis-services"></a>Verbindung mit Analysis Services herstellen
-  In diesem Abschnitt erfahren Sie etwas über Eigenschaften von Verbindungszeichenfolgen, Clientbibliotheken für Verbindungen, die von Analysis Services unterstützten Authentifizierungsmethoden sowie das Einrichten oder Löschen von Verbindungen, bevor ein Server offline geschaltet wird.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Verwenden Sie die Informationen in diesem Abschnitt, um Informationen zu Eigenschaften von Verbindungszeichenfolgen, Clientbibliotheken für Verbindungen, die die unterstützten Authentifizierungsmethoden werden vom Analysis Services sowie zum Einrichten oder Löschen von Verbindungen, bevor ein Server offline geschaltet.  
   
 ## <a name="analysis-services-connections"></a>Analysis Services-Verbindungen  
  Analysis Services verwendet TCP als Netzwerkprotokoll und XML for Analysis (XMLA) als Kommunikationsprotokoll. Auf der untersten Ebene wird von allen Clientbibliotheken, die mit Analysis Services bereitgestellt wurden, XMLA-over-TCP implementiert. Obwohl es möglich ist, Anwendungen auf Grundlage der XMLA-Struktur zu erstellen, verwenden die meisten Anwendungen und Anwendungsentwickler Clientbibliotheken, um die Vorteile von Objektmodellen und die damit verbundene effiziente Codierung zu nutzen. Für Clientverbindungen zu Analysis Services können Sie IIS als zwischengeschaltete Verbindung verwenden, wenn Sie TCP nicht über den Stapel hinweg verwenden können. Ein Vorteil der Verwendung von HTTP-Zugriff über IIS ist die Möglichkeit, eine Verbindung von Anwendungen aus herzustellen, die Anmeldeinformationen in der Verbindungszeichenfolge übergeben.  

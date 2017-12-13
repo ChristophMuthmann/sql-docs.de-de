@@ -2,12 +2,12 @@
 title: Attribut-Element (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1556d139665387068b10cd034b19c3246096100b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b2100479529d5d7ca15bd8b6dcf0600088617c02
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-element-xmla"></a>Attribute-Element (XMLA)
-  Definiert oder filtert ein Element in einem Attribut, auf denen ein übergeordnetes Element [einfügen](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [Update](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), oder [löschen](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) Befehl ausführt.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Definiert oder filtert ein Element in einem Attribut, auf denen ein übergeordnetes Element [einfügen](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [Update](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), oder [löschen](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) Befehl ausführt.  
   
 ## <a name="syntax"></a>Syntax  
   

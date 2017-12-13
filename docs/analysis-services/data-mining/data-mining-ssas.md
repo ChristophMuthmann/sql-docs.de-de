@@ -2,12 +2,12 @@
 title: Datamining (SSAS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 08014cb37823ce3f2bbdec7d89647d685f6a7684
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ac8390ebf0ffd45388d4fcea1dfbf846146b3b0d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-ssas"></a>Data Mining (SSAS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist seit der Veröffentlichung im Jahr 2000 führend bei Predictive Analytics und stellt in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Data Mining bereit. Die Kombination von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining stellt eine integrierte Plattform für Predictive Analytics mit Datenbereinigung und -vorbereitung, Machine Learning und Berichterstellung bereit. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining umfasst mehrere Standardalgorithmen, einschließlich EM- und K-Means-Clustermodellen, neuronalen Netzwerken, logistischer und linearer Regression, Entscheidungsstrukturen und Naive Bayes-Klassifizierungen. Alle Modelle umfassen Visualisierungen, mit denen Sie Ihre Modelle entwickeln, optimieren und auswerten können.  Die Integration von Data Mining in Business Intelligence-Lösungen unterstützt Sie bei fundierten Entscheidungen zu komplexen Problemen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wurde ein führender Vorhersageanalysen seit der Version 2000 durch die Bereitstellung von Datamining in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Die Kombination von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining stellt eine integrierte Plattform für Predictive Analytics mit Datenbereinigung und -vorbereitung, Machine Learning und Berichterstellung bereit. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining umfasst mehrere Standardalgorithmen, einschließlich EM- und K-Means-Clustermodellen, neuronalen Netzwerken, logistischer und linearer Regression, Entscheidungsstrukturen und Naive Bayes-Klassifizierungen. Alle Modelle umfassen Visualisierungen, mit denen Sie Ihre Modelle entwickeln, optimieren und auswerten können.  Die Integration von Data Mining in Business Intelligence-Lösungen unterstützt Sie bei fundierten Entscheidungen zu komplexen Problemen.  
   
 ## <a name="benefits-of-data-mining"></a>Vorteile des Data Minings  
  Data Mining (auch als Predictive Analytics und Machine Learning bezeichnet) verwendet gut erforschte statistische Prinzipien für die Erkennung von Mustern in Ihren Daten. Indem die in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] enthaltenen Data Mining-Algorithmen auf Daten angewendet werden, können Trends vorhergesagt, Muster identifiziert, Regeln und Empfehlungen aufgestellt, die Abfolge von Ereignissen in komplexen Datasets analysiert und neue Einblicke gewonnen werden.  

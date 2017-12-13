@@ -2,12 +2,12 @@
 title: Cardinality-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 370c30491c54d0df0eb94d572ba04983db00b0f0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 52dc48847eb6620431fabc5bda538a07b3235196
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cardinality-element-assl"></a>Cardinality-Element (ASSL)
-  Zeigt die Kardinalität der Beziehung beschrieben durch einen [AttributeRelationship](../../../analysis-services/scripting/objects/attributerelationship-element-assl.md) oder [RegularMeasureGroupDimension](../../../analysis-services/scripting/data-type/regularmeasuregroupdimension-data-type-assl.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Zeigt die Kardinalität der Beziehung beschrieben durch einen [AttributeRelationship](../../../analysis-services/scripting/objects/attributerelationship-element-assl.md) oder [RegularMeasureGroupDimension](../../../analysis-services/scripting/data-type/regularmeasuregroupdimension-data-type-assl.md).  
   
 ## <a name="syntax"></a>Syntax  
   

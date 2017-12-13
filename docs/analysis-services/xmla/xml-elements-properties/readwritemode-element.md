@@ -2,12 +2,12 @@
 title: ReadWriteMode-Element | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d55928ce65b1b40710b662c6d3f5b55b798368a9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8ed345b4e0562fd61b7995d91bd2db12cad4cd57
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="readwritemode-element"></a>ReadWriteMode-Element
-  Die **ReadWriteMode** -Datenbankeigenschaft gibt an, ob sich die Datenbank im **ReadWrite** -Modus oder im **ReadOnly** -Modus befindet. Hierbei handelt es sich um die beiden einzigen möglichen Werte der Eigenschaft.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Die **ReadWriteMode** -Datenbankeigenschaft gibt an, ob die Datenbank im **ReadWrite** Modus oder im **ReadOnly** Modus. Hierbei handelt es sich um die beiden einzigen möglichen Werte der Eigenschaft.  
   
 ## <a name="syntax"></a>Syntax  
   

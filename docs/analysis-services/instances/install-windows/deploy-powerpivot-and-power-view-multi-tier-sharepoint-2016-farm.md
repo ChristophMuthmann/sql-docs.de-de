@@ -2,12 +2,12 @@
 title: Bereitstellen von PowerPivot und Power View - Multi-Tier SharePoint 2016 Farm | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 290c8d09fbb59ec8b7c6db580946fa7ee6f45806
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e17d5872e57af56e895f5879d9b8dd194576cd3e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="deploy-powerpivot-and-power-view---multi-tier-sharepoint-2016-farm"></a>Bereitstellen von PowerPivot und Power View - Multi-Tier SharePoint 2016 Farm
-  **Zusammenfassung:** Dieses Whitepaper bietet SharePoint-Administratoren und Architekten detaillierte Anleitungen für die Bereitstellung und Konfiguration einer Microsoft BI Demo-Umgebung in einer SharePoint-Farm mit mehreren Servern auf Grundlage der Preview-Versionen von SharePoint Server 2016, Office Online-Server und des SQL Server 2016 BI-Stack für SharePoint 2016. Nach einer kurzen Einführung wichtiger architektonischer Änderungen und entsprechender Systemabhängigkeiten werden Software-und Konfigurationsanforderungen sowie der empfohlene Bereitstellungspfad für die Aktivierung und Überprüfung der BI-Funktionen in drei Hauptphasen beschrieben. Dieses Whitepaper behandelt auch bekannte Probleme in SharePoint Server 2016 Beta 2, Office Online Server Preview und SQL Server 2016 CTP 3.1 mit entsprechenden Lösungs- bzw. Umgehungsvorschlägen. In den endgültigen Produktversionen sind diese Umgehungen nicht mehr erforderlich. Überprüfen Sie vor der Bereitstellung von RTM-Releases, ob es eine aktuellere Version dieses Whitepapers gibt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**Zusammenfassung:** Zusammenfassung: Dieses Whitepaper bietet SharePoint-Administratoren und Architekten detaillierte Anleitungen für die Bereitstellung und Konfiguration einer Microsoft BI Demo-Umgebung in einer SharePoint-Farm mit mehreren Servern auf der Grundlage der Preview-Versionen von SharePoint Server 2016, Office Online Server und des SQL Server 2016 BI-Stack für SharePoint 2016. Nach einer kurzen Einführung wichtiger architektonischer Änderungen und entsprechender Systemabhängigkeiten werden Software-und Konfigurationsanforderungen sowie der empfohlene Bereitstellungspfad für die Aktivierung und Überprüfung der BI-Funktionen in drei Hauptphasen beschrieben. Dieses Whitepaper behandelt auch bekannte Probleme in SharePoint Server 2016 Beta 2, Office Online Server Preview und SQL Server 2016 CTP 3.1 mit entsprechenden Lösungs- bzw. Umgehungsvorschlägen. In den endgültigen Produktversionen sind diese Umgehungen nicht mehr erforderlich. Überprüfen Sie vor der Bereitstellung von RTM-Releases, ob es eine aktuellere Version dieses Whitepapers gibt.  
   
  **Autor:**Kay Unkroth, Jason Haak  
   

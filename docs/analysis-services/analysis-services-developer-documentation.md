@@ -2,12 +2,12 @@
 title: "Analysis Services-Dokumentation für Entwickler | Microsoft Docs"
 ms.custom: 
 ms.date: 03/24/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fb44b74ac82e369f6dbdd29d87bd085a35144d29
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a941a9f08482f78c762cbc25fc3f3eb28d7a8cf4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-developer-documentation"></a>Entwicklerhandbuch (Analysis Services)
-In Analysis Services fast jedes Objekt und die Arbeitslast programmierbaren und häufig mehr als ein Ansatz zur Auswahl vorhanden ist.  Optionen umfassen das Schreiben von verwaltetem Code, Skript oder einen offenen Standards wie XMLA und MSOLAP verwenden, wenn Ihre Lösung nicht infrage mithilfe von .NET Framework.
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]In Analysis Services fast jedes Objekt und die Arbeitslast programmierbaren und häufig mehr als ein Ansatz zur Auswahl vorhanden ist.  Optionen umfassen das Schreiben von verwaltetem Code, Skript oder einen offenen Standards wie XMLA und MSOLAP verwenden, wenn Ihre Lösung nicht infrage mithilfe von .NET Framework.
 
 ## <a name="what-you-can-accomplish-in-code"></a>Was können Sie im Code erreichen.
 Typische Programmierszenarien enthalten Server und die Bereitstellung, Verwaltung, Modell und Datenbankerstellung und Datenzugriff von benutzerdefinierten Anwendungen und Berichte, die Analysis Services-Daten nutzen. In all diesen Szenarien ist eine feste Architektur und Objekt Definition Hierarchie, mit klar verständlichen Vorgängen, die Datendefinition, Verarbeitung und abfragearbeitsauslastungen erstrecken.

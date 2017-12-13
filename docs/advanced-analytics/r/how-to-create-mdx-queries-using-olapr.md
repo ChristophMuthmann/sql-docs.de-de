@@ -17,24 +17,24 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 4ee223a3c27ee35a823917f9d1aefcd8fb86e80e
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 235240ef5b49e0fb08ac86e215e98907dd42880a
+ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="how-to-create-mdx-queries-using-olapr"></a>Vorgehensweise: Erstellen von MDX-Abfragen mit olapR
 
-Die [OlapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) Paket unterstützt Abfragen für mehrdimensionale Modelle in SQL Server Analysis Services gehostet. Sie können eine Abfrage für einen vorhandenen Cube mithilfe von MDX erstellen, Dimensionen und alle anderen Cubes zu untersuchen und fügen Sie in vorhandenen MDX-Abfragen zum Abrufen von Daten.
+Die [OlapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) Paket unterstützt MDX-Abfragen für Cubes in SQL Server Analysis Services gehostet. Sie können eine Abfrage für einen vorhandenen Cube zu erstellen, Durchsuchen von Dimensionen und andere Cubeobjekte und fügen Sie in vorhandenen MDX-Abfragen zum Abrufen von Daten.
 
-Dieser Artikel beschreibt die zwei Hauptanwendungsgebiete des Pakets OlapR:
+Dieser Artikel beschreibt die zwei Hauptanwendungsgebiete von der **OlapR** Paket:
 
-+ [Erstellen Sie eine Abfrage von R, mithilfe der Konstruktoren, die im Paket OlapR bereitgestellt](#buildMDX)
++ [Erstellen Sie eine MDX-Abfrage von R, mithilfe der Konstruktoren, die im Paket OlapR bereitgestellt](#buildMDX)
 + [Führen Sie eine gültige MDX-Abfrage, die mit OlapR und OLAP-Anbieter](#executeMDX)
 
 Die folgenden Vorgänge werden nicht unterstützt:
 
-+ Abfragen eines tabellarischen Modells
++ DAX-Abfragen für ein tabellarisches Modell
 + Erstellen von neuen OLAP-Objekten
 + Rückschreiben von Daten in Partitionen, einschließlich Measures "oder" Summen
 
@@ -48,7 +48,7 @@ Die folgenden Vorgänge werden nicht unterstützt:
 
 4. Verwenden Sie die folgenden Hilfsfunktionen, um weitere Details über die Dimensionen und Measures anzugeben, die in der MDX-Abfrage enthalten sein sollen:
 
-     + `cube()` Geben Sie den Namen der SSAS-Datenbank an.
+     + `cube()` Geben Sie den Namen der SSAS-Datenbank an. Wenn eine Verbindung mit einer benannten Instanz herstellen, geben Sie den Computernamen und den Instanznamen ein. 
      + `columns()`Geben Sie die Namen von Measures zur Verwendung in der **ON Spalten** Argument.
      + `rows()`Geben Sie die Namen von Measures zur Verwendung in der **ON Zeilen** Argument.
      + `slicers()` Geben Sie ein Feld oder Elemente an, das bzw. die als Datenschnitt verwendet werden soll(en). Ein Datenschnitt funktioniert wie ein Filter, der auf alle MDX-Abfragedaten angewendet wird.
@@ -59,7 +59,7 @@ Die folgenden Vorgänge werden nicht unterstützt:
          
          Wenn Ihre Abfrage relativ einfach ist, können Sie die Funktionen `columns`, `rows`usw. verwenden, um Ihre Abfrage zu erstellen. Jedoch können Sie auch die `axis()` -Funktion mit einem Indexwert ungleich null verwenden, um eine MDX-Abfrage mit vielen Qualifizierern zu erstellen oder zusätzliche Dimensionen als Qualifizierer hinzuzufügen.
 
-5. Übergeben Sie das Handle und die fertiggestellte MDX-Abfrage an die Funktionen `executeMD` oder `execute2D`, je nach Form der Ergebnisse.
+5. Übergeben Sie das Handle und die abgeschlossene MDX-Abfrage in einem der folgenden Funktionen, abhängig von der Form der Ergebnisse: 
 
   + `executeMD` Gibt ein mehrdimensionales Array zurück
   + `execute2D` Gibt einen zweidimensionalen (tabellarischen) Datenrahmen zurück
@@ -81,7 +81,7 @@ Die folgenden Vorgänge werden nicht unterstützt:
 
 In den folgenden Beispielen basieren auf dem AdventureWorks Data Mart und den Cube-Projekt, da dieses Projekt ist weit verbreitet, in mehreren Versionen, einschließlich der Sicherungsdateien, die mit Analysis Services einfach wiederhergestellt werden können. Wenn Sie einen vorhandenen Cube besitzen, erhalten Sie einen Beispielcube mithilfe dieser Optionen aus:
 
-+ Erstellen des Cubes, der verwendet wird, in diesen Beispielen gemäß das Analysinotes-Services-Lernprogramm bis zu Lektion 4: [erstellen einen OLAP-Cube](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
++ Erstellen des Cubes, der verwendet wird, in diesen Beispielen anhand der Analysis Services-Lernprogramm bis zu Lektion 4: [erstellen einen OLAP-Cube](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
 
 + Herunterladen von einem vorhandenen Cube als Sicherung, und stellen Sie es mit einer Instanz von Analysis Services wieder her. Diese Site enthält z. B. einen vollständig verarbeiteten Cubes im ZIP-Format: [Adventure Works mehrdimensionalen Modell SQL 2014](http://msftdbprodsamples.codeplex.com/downloads/get/882334). Extrahieren Sie die Datei, und klicken Sie dann in der SSAS-Instanz wiederherstellen. Weitere Informationen finden Sie unter [Sicherung und Wiederherstellung](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md), oder [Restore-ASDatabase-Cmdlet](../../analysis-services/powershell/restore-asdatabase-cmdlet.md).
 
@@ -98,7 +98,7 @@ WHERE [Sales Territory].[Sales Territory Country].[Australia]
 
 + In Spalten können Sie mehrere Measures als Elemente einer durch Trennzeichen getrennten Zeichenfolge angeben.
 + Die Zeilenachse verwendet alle möglichen Werte (alle ELEMENTE) der Dimension „Produktlinie“. 
-+ Diese Abfrage würde eine Tabelle mit drei Spalten zurückgeben, die eine _Rollup_ -Zusammenfassung der Internetumsätze aus allen Ländern enthält.
++ Diese Abfrage würde eine Tabelle mit drei Spalten, die mit Zurückgeben einer _Rollup_ Zusammenfassung der Internet Sales aus allen Ländern.
 + Die WHERE-Klausel gibt die _Slicer-Achse_. In diesem Beispiel wird der Slicer wird verwendet, ein Mitglied der **"salesterritory"** Dimension, um die Abfrage zu filtern, sodass nur die Umsätze von Handelspartnern aus Australien in Berechnungen verwendet werden.
 
 #### <a name="to-build-this-query-using-the-functions-provided-in-olapr"></a>So erstellen Sie diese Abfrage mithilfe der in olapR bereitgestellten Funktionen
@@ -115,6 +115,12 @@ slicers(qry) <- c("[Sales Territory].[Sales Territory Country].[Australia]")
 
 result1 <- executeMD(ocs, qry)
 
+```
+
+Müssen Sie für eine benannte Instanz alle Zeichen mit Escapezeichen, die Steuerzeichen in r berücksichtigt werden konnte  Die folgende Verbindungszeichenfolge verweist, beispielsweise eine Instanz OLAP01, auf einem Server mit dem Namen ContosoHQ:
+
+```R
+cnnstr <- "Data Source=ContosoHQ\\OLAP01; Provider=MSOLAP;"
 ```
 
 #### <a name="to-run-this-query-as-a-predefined-mdx-string"></a>So führen Sie diese Abfrage als vordefinierte MDX-Zeichenfolge aus
@@ -156,7 +162,7 @@ ocs <- OlapConnection(cnnstr)
 explore(ocs)
 ```
 
-| Ergebnisse  |  
+| Ergebnisse  |
 | ----|
 | _Analysis Services-Tutorial_|
 |_Internetumsätze_|
@@ -174,7 +180,7 @@ ocs \<- OlapConnection(cnnstr)
 explore(ocs, "Sales")
 ```
 
-| Ergebnisse  |  
+| Ergebnisse  |
 | ----|
 | _Kunde_|
 |_Datum_|
@@ -183,7 +189,7 @@ explore(ocs, "Sales")
 
 #### <a name="to-return-all-members-of-the-specified-dimension-and-hierarchy"></a>So geben Sie alle Elemente der angegebenen Dimension und Hierarchie zurück
 
-Geben Sie nach dem Definieren der Quelle und dem Erstellen des Handles den Cube, die Dimension und die Hierarchie an, die zurückgegeben werden sollen.
+Geben Sie nach dem Definieren der Quelle und dem Erstellen des Handles den Cube, die Dimension und die Hierarchie an, die zurückgegeben werden sollen. In den zurückgegebenen Ergebnisse, Elemente, die mit dem Präfix  **->**  untergeordneten Elemente des vorherigen Elements darstellen.
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
@@ -191,7 +197,7 @@ ocs \<- OlapConnection(cnnstr)
 explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Category")
 ```
 
-| Ergebnisse  |  
+| Ergebnisse  |
 | ----|
 | _Zubehör_|
 |_Fahrräder_|
@@ -200,8 +206,6 @@ explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Cat
 |Montagekomponenten >|
 |Montagekomponenten >|
 
-
-Elemente in der zurückgegebenen Ergebnisse aus, die mit dem Präfix  **->**  untergeordneten Elemente des vorherigen Elements darstellen.
 
 ## <a name="see-also"></a>Siehe auch
 

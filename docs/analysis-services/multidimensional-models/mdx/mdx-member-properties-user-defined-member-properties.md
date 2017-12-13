@@ -2,12 +2,12 @@
 title: Benutzerdefinierte Elementeigenschaften (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: eaeb79931b4c9c57088ada093148047a26b614d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 41d93923d60dec00e70d68b1de1779fe97a43da5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-member-properties---user-defined-member-properties"></a>MDX - Elementeigenschaften: benutzerdefinierte Elementeigenschaften
-  Benutzerdefinierte Elementeigenschaften können einer bestimmten benannten Ebene in einer Dimension als Attributbeziehungen hinzugefügt werden. Benutzerdefinierte Elementeigenschaften können weder der **(Alle)** -Ebene einer Hierarchie noch der Hierarchie selbst hinzugefügt werden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Benutzerdefinierte Elementeigenschaften können zu einer bestimmten benannten Ebene in einer Dimension als attributbeziehungen hinzugefügt werden. Benutzerdefinierte Elementeigenschaften können weder der **(Alle)** -Ebene einer Hierarchie noch der Hierarchie selbst hinzugefügt werden.  
   
 ## <a name="creating-user-defined-member-properties"></a>Erstellen von benutzerdefinierten Elementeigenschaften  
  Benutzerdefinierte Elementeigenschaften können serverbasierten Dimensionen oder Cubes entweder über die Benutzeroberfläche oder programmgesteuert hinzugefügt werden.  

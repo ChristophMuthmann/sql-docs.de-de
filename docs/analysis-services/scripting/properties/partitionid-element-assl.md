@@ -2,12 +2,12 @@
 title: PartitionID-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ced5e03a10c37e4b28c467efd03a72c42dadea4d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 596cf1ea5ae9f95e5e23f58002e3165ab2690c6d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partitionid-element-assl"></a>PartitionID-Element (ASSL)
-  Ordnet eine [Partition](../../../analysis-services/scripting/objects/partition-element-assl.md) Element mit einem übergeordneten Element, Bindung oder Out-of-Line-Bindung.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Ordnet eine [Partition](../../../analysis-services/scripting/objects/partition-element-assl.md) Element mit einem übergeordneten Element, Bindung oder Out-of-Line-Bindung.  
   
 ## <a name="syntax"></a>Syntax  
   

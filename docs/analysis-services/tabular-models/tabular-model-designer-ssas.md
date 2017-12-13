@@ -1,12 +1,12 @@
 ---
 title: "Designer für tabellarische Modelle | Microsoft Docs"
 ms.date: 10/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
 ms.technology:
 - analysis-services
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 388c20c5fffdd584b2923341db13c7bf634f289b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 14a6ca056a079b4a51813783883cc09c5f53e8ad
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabular-model-designer-ssas"></a>Tabellen-Modell-Designer (SSAS)
-Der Designer für tabellarische Modelle ist Bestandteil von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]und in Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]integriert. Der Designer bietet zusätzliche Projekttypvorlagen speziell für die Entwicklung von Projektmappen für professionelle tabellarische Modelle.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] wird als kostenloser Webdownload installiert. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).    
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Der Designer für tabellarische Modelle ist Bestandteil des [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], integriert in Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], zusätzliche Projekttypvorlagen speziell für die Entwicklung von Projektmappen für professionelle tabellarische Modelle.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] wird als kostenloser Webdownload installiert. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).    
   
 ##  <a name="bkmk_benefits"></a> Vorteile  
  Wenn Sie [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]installieren, werden den verfügbaren Projekttypen neue Projektvorlagen zum Erstellen tabellarischer Modelle hinzugefügt. Nachdem ein neues Projekt für tabellarische Modelle auf der Grundlage einer der Vorlagen erstellt wurde, können Sie mit der Erstellung von Modellen beginnen. Dazu verwenden Sie die Designer-Tools und Assistenten für tabellarische Modelle.  

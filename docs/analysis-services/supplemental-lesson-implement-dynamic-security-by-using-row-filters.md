@@ -2,12 +2,12 @@
 title: Implementieren von dynamischer Sicherheit mithilfe von Zeilenfiltern | Microsoft Docs
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -16,11 +16,11 @@ ms.assetid:
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: edc82bdddadbeacef82d767e8575e5f84ad719b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1999153a1ccab371035df399ee0320cc56acb587
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="supplemental-lesson---implement-dynamic-security-by-using-row-filters"></a>Ergänzende Lektion - Implementieren von dynamischer Sicherheit mithilfe von Zeilenfiltern
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]

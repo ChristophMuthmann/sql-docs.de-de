@@ -2,12 +2,12 @@
 title: "Erteilen von Berechtigungen für eine Dimension (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 415bb6a484edafc091f091c2e572a05155a561fa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ccf0f7d014bfd85f3368633058984089005101ec
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>Gewähren von Berechtigungen in einer Dimension (Analysis Services)
-  Dimensionssicherheit wird verwendet, um Berechtigungen für ein Dimensionsobjekt festzulegen, nicht für dessen Daten. Meist ist das Gewähren oder Verweigern des Zugriffs auf Verarbeitungsvorgänge das Hauptziel bei der Festlegung von Berechtigungen in einer Dimension.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dimensionssicherheit wird verwendet, zum Festlegen von Berechtigungen für ein Dimensionsobjekt, nicht für dessen Daten. Meist ist das Gewähren oder Verweigern des Zugriffs auf Verarbeitungsvorgänge das Hauptziel bei der Festlegung von Berechtigungen in einer Dimension.  
   
  Unter Umständen möchten Sie jedoch vielleicht nicht die Verarbeitungsvorgänge steuern, sondern den Datenzugriff für eine Dimension oder die darin enthaltenen Attribute und Hierarchien. Ein Unternehmen mit regionalen Vertriebsabteilungen möchte beispielsweise Verkaufsdaten für Mitarbeiter außerhalb der Abteilung sperren. Sie können Berechtigungen für Dimensionsattribute und Dimensionsmitglieder festlegen, um Zugriff auf Teile der Dimensionsdaten für unterschiedliche Komponenten zu gewähren oder zu verweigern. Beachten Sie, dass Sie nicht den Zugriff auf ein bestimmtes Dimensionsobjekt selbst, sondern nur auf dessen Daten verweigern können. Wenn Sie vor allem den Zugriff für Mitglieder in einer Dimension gewähren oder verweigern möchten, einschließlich der Zugriffsrechte für individuelle Attributhierarchien, finden Sie Informationen hierzu unter [Erteilen von benutzerdefiniertem Zugriff auf Dimensionsdaten &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md) .  
   

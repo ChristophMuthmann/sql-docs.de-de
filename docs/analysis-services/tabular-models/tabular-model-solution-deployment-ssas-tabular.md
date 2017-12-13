@@ -2,12 +2,12 @@
 title: "Bereitstellung von Tabellenmodelllösungen (SSAS – tabellarisch) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5766323ffd6f50fff6f6b73bddf52e665f9bcab8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fa6eac77d29470dce66970189173acf6d1842b1f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>Bereitstellung von Tabellenmodelllösungen (SSAS – tabellarisch)
-  Nachdem Sie eine Projektmappe für ein tabellarisches Modellprojekt erstellt haben, müssen Sie sie bereitstellen, damit Benutzer das Modell mit einer Berichterstellungsclientanwendung durchsuchen können. In diesem Thema werden die verschiedenen Eigenschaften und die Methoden beschrieben, die Sie verwenden können, wenn Sie Projektmappen für tabellarische Modelle in der Umgebung bereitstellen.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Nachdem Sie eine Projektmappe ein Projekt für tabellarische Modelle, müssen Sie es damit Benutzer das Modell mit einer berichterstellungsclientanwendung durchsuchen bereitstellen. In diesem Thema werden die verschiedenen Eigenschaften und die Methoden beschrieben, die Sie verwenden können, wenn Sie Projektmappen für tabellarische Modelle in der Umgebung bereitstellen.  
   
  Abschnitte in diesem Thema:  
   

@@ -2,12 +2,12 @@
 title: ReportParameters-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0e7361c6d9cee2e9efda3d6617419ea5642eac11
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 61b863015757214818a829b1a835e8cbbd41e111
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="reportparameters-element-assl"></a>ReportParameters-Element (ASSL)
-  Enthält die Auflistung der [ReportParameter](../../../analysis-services/scripting/objects/reportparameter-element-assl.md) Elemente für eine [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md) Element.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält die Auflistung der [ReportParameter](../../../analysis-services/scripting/objects/reportparameter-element-assl.md) Elemente für eine [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   

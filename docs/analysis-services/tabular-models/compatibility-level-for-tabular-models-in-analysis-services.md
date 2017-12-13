@@ -2,12 +2,12 @@
 title: "Kompatibilitätsgrad für tabellarische Modelle in Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 10/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 385d9a062dfa723e4e73317ffca6984b18f22c47
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d194cdfa2771b96f2ae1880f474b8a0107e0b67c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Kompatibilitätsgrad für tabellarische Modelle von Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
   Die *Kompatibilitätsgrad* bezieht sich auf die Release-spezifischen Verhalten in der Analysis Services-Modul. Beispielsweise verfügen DirectQuery und tabellarische Objektmetadaten verschiedene Implementierungen abhängig von den Kompatibilitätsgrad. Im Allgemeinen sollten Sie die neuesten Kompatibilitätsgrad von Ihren Servern unterstützt auswählen.
 

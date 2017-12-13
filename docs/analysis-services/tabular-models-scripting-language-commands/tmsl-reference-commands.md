@@ -1,12 +1,12 @@
 ---
 title: Befehle im tabellarischen Modell Scripting Language (TMSL) | Microsoft Docs
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
 ms.technology:
 - analysis-services
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 71b44ae1e5f8e5db2859bb4d3b2457c752de4dc6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e041aa751bc2d54713cb996dde321c21231bf608
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tmsl-reference---commands"></a>TMSL-Verweis - Befehle
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Sie können Befehle in einem XMLA-Endpunkt ausführen, das Formulieren von Definitionen von Systemobjekten im JSON-Format mit dem tabellarischen Tabular Model Scripting Language (TMSL), für tabellenmodelldatenbanken.   Finden Sie unter [Definitionen von Systemobjekten im tabellarischen Modell Scripting Language &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md) eine Liste von Objekten, die mit den folgenden Befehlen verwendet.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Sie können Befehle in einem XMLA-Endpunkt ausführen, das Formulieren von Definitionen von Systemobjekten im JSON-Format mit dem tabellarischen Tabular Model Scripting Language (TMSL), für tabellenmodelldatenbanken.   Finden Sie unter [Definitionen von Systemobjekten im tabellarischen Modell Scripting Language &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md) eine Liste von Objekten, die mit den folgenden Befehlen verwendet.  
   
 ## <a name="object-operations"></a>Objektvorgänge  
   

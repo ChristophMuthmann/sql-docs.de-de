@@ -2,12 +2,12 @@
 title: "Konfigurieren von Tabellenverhaltenseigenschaften für Power View-Berichte (SSAS – tabellarisch) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d72788a68562aef532b436d182a2768cfa08d9e6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d1bd1900080d7b41b161461fb715edac4b2b1614
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View: Konfigurieren von Tabellenverhalten-Eigenschaften für Berichte
-  Wenn Sie ein tabellarisches Modell als Datenmodell für [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]verwenden, können Sie die Tabellenverhaltenseigenschaften festlegen, die Detailzeilen auf einer präziseren Ebene verfügbar machen. Das Festlegen von Tabellenverhaltenseigenschaften ändert das Gruppierungsverhalten von Detailzeilen und erzeugt eine bessere Standardplatzierung bei der Feststellung von Informationen (z. B. Namen, Foto-IDs oder Logobilder) in Kachel-, Karten- oder Diagrammlayouts.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Wenn Sie ein tabellarisches Modell als Datenmodell für verwenden [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], Sie können festlegen, tabellenverhalten-Eigenschaften, die Detailzeilen auf einer präziseren Ebene verfügbar machen. Das Festlegen von Tabellenverhaltenseigenschaften ändert das Gruppierungsverhalten von Detailzeilen und erzeugt eine bessere Standardplatzierung bei der Feststellung von Informationen (z. B. Namen, Foto-IDs oder Logobilder) in Kachel-, Karten- oder Diagrammlayouts.  
   
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] unterscheidet sich von anderen Berichtsanwendungen darin, dass es Gruppenelemente automatisch während des Berichtsentwurfs gruppiert, indem die von Ihnen in der Berichtsfeldliste positionierten Spalten gegenüber dem von Ihnen verwendeten Präsentationsformat ausgewertet werden. In den meisten Fällen führt die Standardgruppierung zu einem optimalen Ergebnis. Für einige Tabellen, hauptsächlich solche, die Detaildaten enthalten, führt das Standardgruppierungsverhalten jedoch manchmal zur Gruppierung von Zeilen, bei denen dies nicht erwünscht ist. Für solche Tabellen können Sie Eigenschaften festlegen, die ändern, wie Gruppen ausgewertet werden.  
   

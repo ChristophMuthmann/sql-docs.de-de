@@ -2,12 +2,12 @@
 title: RequestType-Element (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1306c1ab21c67a0752af077c7f14eaa9e243709e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 968d40d09b1516a5d2281d9bf164994aa2be1c70
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="requesttype-element-xmla"></a>RequestType-Element (XMLA)
-  Bestimmt den Typ des vom zurückgegebenen Metadaten der [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) Methode.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Bestimmt den Typ des vom zurückgegebenen Metadaten der [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) Methode.  
   
 ## <a name="syntax"></a>Syntax  
   

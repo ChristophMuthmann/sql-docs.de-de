@@ -2,12 +2,12 @@
 title: Sperren und Entsperren von Datenbanken (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7c47c9c9b1b875cd7290df53ab27c59251a56783
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 47b88aa52aba52f2919d41cba462323e5b061bdf
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="locking-and-unlocking-databases-xmla"></a>Sperren und Entsperren von Datenbanken (XMLA)
-  Sperren und Entsperren von Datenbanken verwenden, bzw. die [Sperre](../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md) und [Unlock](../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md) -Befehle in XML for Analysis (XMLA). In der Regel sperren und entsperren andere XMLA-Befehle Objekte je nach Bedarf automatisch, um den Befehl während der Ausführung abschließen zu können. Kann explizit sperren oder Entsperren Sie eine Datenbank, um mehrere Befehle innerhalb einer einzelnen Transaktion auszuführen, beispielsweise eine [Batch](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) Befehl, während andere Anwendungen eine Schreibtransaktion in der Datenbank verhindert.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sperren und Entsperren von Datenbanken verwenden, bzw. die [Sperre](../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md) und [Unlock](../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md) -Befehle in XML for Analysis (XMLA). In der Regel sperren und entsperren andere XMLA-Befehle Objekte je nach Bedarf automatisch, um den Befehl während der Ausführung abschließen zu können. Kann explizit sperren oder Entsperren Sie eine Datenbank, um mehrere Befehle innerhalb einer einzelnen Transaktion auszuführen, beispielsweise eine [Batch](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) Befehl, während andere Anwendungen eine Schreibtransaktion in der Datenbank verhindert.  
   
 ## <a name="locking-databases"></a>Sperren von Datenbanken  
  Der **Lock** -Befehl sperrt die gemeinsame oder exklusive Nutzung eines Objekts im Rahmen der derzeit aktiven Transaktion. Eine Sperre in einem Objekt verhindert, dass ein Commit für Transaktionen ausgeführt wird, bevor die Sperre entfernt wurde. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt zwei Arten von Sperren: gemeinsame Sperren und exklusive Sperren. Weitere Informationen zu den von unterstützten Typen von Sperren [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], finden Sie unter [Mode-Element &#40; XMLA &#41; ](../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md).  

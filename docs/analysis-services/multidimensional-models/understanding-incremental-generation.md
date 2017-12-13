@@ -2,12 +2,12 @@
 title: Grundlegendes zur inkrementellen Generierung | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 11cb339bf60a4a2758a8c43592d7374eef5391ed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c9a3cd3a86660e9c5ed818a0751deef36218a812
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="understanding-incremental-generation"></a>Grundlegendes zur inkrementellen Generierung
-  Nach der Generierung des Anfangsschemas können Sie Cube- und Dimensionsdefinitionen mithilfe von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ändern und dann den Schemagenerierungs-Assistenten erneut ausführen. Der Assistent aktualisiert das Schema in der Themenbereichsdatenbank und in der zugehörigen Datenquellensicht, um die Änderungen wiederzugeben. Dabei werden die aktuell in den erneut zu generierenden Tabellen vorhandenen Daten so weit wie möglich beibehalten. Wenn Sie die Tabellen nach der Anfangsgenerierung geändert haben, werden diese Änderungen, falls möglich, vom Schemagenerierungs-Assistenten unter Berücksichtigung folgender Regeln beibehalten:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Nach der anfangsschemas können Sie Cube- und Dimensionsdefinitionen mithilfe ändern [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], und führen Sie den Schemagenerierungs-Assistenten erneut aus. Der Assistent aktualisiert das Schema in der Themenbereichsdatenbank und in der zugehörigen Datenquellensicht, um die Änderungen wiederzugeben. Dabei werden die aktuell in den erneut zu generierenden Tabellen vorhandenen Daten so weit wie möglich beibehalten. Wenn Sie die Tabellen nach der Anfangsgenerierung geändert haben, werden diese Änderungen, falls möglich, vom Schemagenerierungs-Assistenten unter Berücksichtigung folgender Regeln beibehalten:  
   
 -   Wurde eine Tabelle vorher vom Assistenten generiert, wird die Tabelle überschrieben. Sie können verhindern, dass eine vom Assistenten erstellte Tabelle überschrieben wird, indem Sie die **AllowChangesDuringGeneration** -Eigenschaft für die Tabelle in der Datenquellensicht in **false**ändern. Wenn Sie die Steuerung einer Tabelle übernehmen, wird die Tabelle wie jede andere benutzerdefinierte Tabelle behandelt und bleibt von der erneuten Generierung unberührt. Wenn Sie eine Tabelle aus der Generierung entfernen, können Sie die **AllowChangesDuringGeneration** -Eigenschaft für die Tabelle später in der Datenquellensicht in **true** ändern und die Tabelle für Änderungen durch den Assistenten erneut öffnen. Weitere Informationen finden Sie unter [Ändern von Eigenschaften in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md).  
   

@@ -2,12 +2,12 @@
 title: ImpersonationInfoSecurity-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a802892e11e1639480d4f62db7e95ceab3e91c4a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8a36bde40a9229cf9c831323472d63dcf666b1ad
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="impersonationinfosecurity-element-assl"></a>ImpersonationInfoSecurity-Element (ASSL)
-  Enthält einen schreibgeschützten Wert, der angibt, ob die Anmeldeinformationen geändert wurden, die in bereitgestellt werden die [ImpersonationInfo](../../../analysis-services/scripting/data-type/impersonationinfo-data-type-assl.md) -Datentyp.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält einen schreibgeschützten Wert, der angibt, ob die Anmeldeinformationen geändert wurden, die in bereitgestellt werden die [ImpersonationInfo](../../../analysis-services/scripting/data-type/impersonationinfo-data-type-assl.md) -Datentyp.  
   
 ## <a name="syntax"></a>Syntax  
   

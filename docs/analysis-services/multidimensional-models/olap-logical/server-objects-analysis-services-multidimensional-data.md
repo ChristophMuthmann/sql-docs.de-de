@@ -2,12 +2,12 @@
 title: "Serverobjekte (Analysis Services – mehrdimensionale Daten) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -21,13 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8325adc82cc010f9b5f7dcb7eaf79a8fe984d0cf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8f7aea37ee24590d5ea76ffa5008c9bc6354ce07
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="server-objects-analysis-services---multidimensional-data"></a>Serverobjekte (Analysis Services – Mehrdimensionale Daten)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
     
 ## <a name="introducing-server-objects"></a>Einführung in Serverobjekte  
  Die <xref:Microsoft.AnalysisServices.Server> Objekt darstellt, den Server und die Instanz des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , denen Sie arbeiten möchten.  

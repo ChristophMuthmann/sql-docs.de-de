@@ -2,12 +2,12 @@
 title: "Modelleigenschaften (SSAS – tabellarisch) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f0f897572dda34193a87cab649cb3d1b9e155fcb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 10fc0c4c74dddf6faaa2cfe0b2bff4e24695ec2d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="model-properties-ssas-tabular"></a>Model Properties (SSAS Tabular)
-  In diesem Thema werden Eigenschaften für tabellarische Modelle beschrieben. Jedes Projekt für tabellarische Modelle verfügt über Modelleigenschaften, die Einfluss darauf haben, wie das jeweilige in SQL Server-Entwicklungstools erstellte Modell gesichert und die Arbeitsbereichsdatenbank gespeichert wird. Die hier beschriebenen Modelleigenschaften gelten nicht für Modelle, die bereits bereitgestellt wurden.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Dieses Thema beschreibt die Eigenschaften für tabellarische Modelle. Jedes Projekt für tabellarische Modelle verfügt über Modelleigenschaften, die Einfluss darauf haben, wie das jeweilige in SQL Server-Entwicklungstools erstellte Modell gesichert und die Arbeitsbereichsdatenbank gespeichert wird. Die hier beschriebenen Modelleigenschaften gelten nicht für Modelle, die bereits bereitgestellt wurden.  
   
  Abschnitte in diesem Thema:  
   

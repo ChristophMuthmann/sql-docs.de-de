@@ -2,12 +2,12 @@
 title: Key Performance Indicators (KPIs) in mehrdimensionalen Modellen | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 326f2bd9d1ca70ff025e0b9cdf27ce167474d7be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 166c09d9d8b2c767767ffda7914f8d465af43829
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Leistungskennzahlen (Key Performance Indicators, KPIs) in mehrdimensionalen Modellen
-  Key Performance Indicator (KPI) ist ein Begriff aus der Wirtschaft, der eine quantifizierbare Maßeinheit zur Ermittlung des Geschäftserfolges darstellt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ein Key Performance Indicator (KPI) ist eine quantifizierbare Maßeinheit zur Geschäftserfolges Wirtschaft.  
   
  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]stellt ein KPI eine Auflistung von Berechnungen dar, die mit einer Measuregruppe in einem Cube verknüpft sind, die zur Auswertung der Geschäftserfolge verwendet werden. In der Regel sind diese Berechnungen eine Kombination aus MDX-Ausdrücken (Multidimensional Expressions) und berechneten Elementen. KPIs enthalten außerdem Metadaten, aus denen hervorgeht, wie Clientanwendungen die Berechnungsergebnisse des KPIs anzeigen sollen.  
   

@@ -2,12 +2,12 @@
 title: Diskretisierungsmethoden (Datamining) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3e9dcfdfb3fa3edb5691c04d8887d4dfe1be99f0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 40f6c134370c390cb88e9eb52434da6473ca3b57
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discretization-methods-data-mining"></a>Diskretisierungsmethoden (Data Mining)
-  Einige Algorithmen, die verwendet werden, um Data Mining-Modelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zu erstellen, benötigen bestimmte Inhaltstypen, um richtig zu funktionieren. Beispielsweise kann der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus kontinuierliche Spalten nicht als Eingabe verwenden und keine kontinuierlichen Werte vorhersagen. Außerdem können einige Spalten so viele Werte enthalten, dass der Algorithmus interessante Muster in Daten, aus denen ein Modell erstellt wird, nur schwer identifizieren kann.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Einige Algorithmen, die zum Erstellen von Datamining-Modellen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] benötigen bestimmte Inhaltstypen, um richtig zu funktionieren. Beispielsweise kann der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus kontinuierliche Spalten nicht als Eingabe verwenden und keine kontinuierlichen Werte vorhersagen. Außerdem können einige Spalten so viele Werte enthalten, dass der Algorithmus interessante Muster in Daten, aus denen ein Modell erstellt wird, nur schwer identifizieren kann.  
   
  In diesen Fällen können Sie die Daten in den Spalten diskretisieren, sodass Sie die Algorithmen verwenden können, um ein Miningmodell zu erstellen. Unter*Diskretisierung* wird der Prozess verstanden, Werte in Buckets zu platzieren, sodass sich eine begrenzte Anzahl an möglichen Statuswerten ergibt. Die Buckets selbst werden als sortierte und diskrete Werte behandelt. Sie können sowohl numerische als auch Zeichenfolgenspalten diskretisieren.  
   

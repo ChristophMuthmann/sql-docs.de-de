@@ -2,12 +2,12 @@
 title: Importieren Sie eine Data Mining-Projekte mit der Analysis Services-Import-Assistenten | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5111073e53da22a27edfe9d3f3c13985236c0b15
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b90ffa3645d844d066542e0c2cd8ac7e6999250d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Importieren eines Data Mining-Projekts mithilfe des Analysis Services-Import-Assistenten
-  In diesem Thema wird beschrieben, wie ein neues Data Mining-Projekt erstellt wird, indem die Metadaten aus einem vorhandenen Data Mining-Projekt auf einen anderen Server mithilfe der Vorlage **Import from Server (Multidimensional and Data Mining) Project**(Vom Server importieren (mehrdimensionales und Data Mining-Projekt)) in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]importiert werden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In diesem Thema wird beschrieben, wie ein neues Datamining-Projekt durch Importieren von Metadaten aus einem vorhandenen Datamining-Projekt auf einem anderen Server, mit der Vorlage erstellen **aus Project Server (mehrdimensionale und Data Mining) importieren**, im [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>Importieren von Datenquellen, Miningstrukturen und Miningmodellen aus einem vorhandenen Data Mining-Projekt  
  Wenn Sie die Vorlage **Import from Server (Multidimensional and Data Mining) Project**verwenden, erstellt [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ein neues Data Mining-Projekt und kopiert die Metadaten anschließend aus dem angegebenen Data Mining-Projekt. Das neue Projekt enthält die gleichen Datenquellen, Datenquellensichten, Miningstrukturen und Miningmodelle wie die ssASnoversion-Datenbank, aus der der Import erfolgt ist. Das Projekt kann jedoch erst verwendet werden, wenn Sie bestimmte Eigenschaften aktualisiert und die Objekte wie beschrieben verarbeitet haben:  

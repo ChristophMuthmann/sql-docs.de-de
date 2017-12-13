@@ -2,12 +2,12 @@
 title: Integrierte Elementeigenschaften (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 95f89f7681777d6d65f9d385521c9cfb911ff1b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cf5daff8843fab7cdf1aed4acd0fec0dec84e5ea
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX-Elementeigenschaften - systeminternen Elementeigenschaften
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] macht systeminterne Eigenschaften für Dimensionselemente verfügbar, die Sie in eine Abfrage einschließen können, um zusätzliche Daten oder Metadaten für eine benutzerdefinierte Anwendung zurückzugeben, oder um die Überprüfung oder Erstellung des Modells zu unterstützen. Wenn Sie die SQL Server-Clienttools verwenden, können Sie die systeminternen Eigenschaften in SQL Server Management Studio (SSMS) anzeigen lassen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] macht systeminterne Eigenschaften für Dimensionselemente, die in einer Abfrage, um zusätzliche Daten oder Metadaten für die Verwendung in eine benutzerdefinierte Anwendung zurückzugeben oder bei der Überprüfung des Modells oder Erstellung eingeschlossen werden können. Wenn Sie die SQL Server-Clienttools verwenden, können Sie die systeminternen Eigenschaften in SQL Server Management Studio (SSMS) anzeigen lassen.  
   
  Systeminterne Eigenschaften sind **ID**, **KEY**, **KEYx**und **NAME**und werden von jedem Element auf beliebigen Ebenen verfügbar gemacht. Sie können u.a. auch Positionsinformationen wie **LEVEL_NUMBER** oder **PARENT_UNIQUE_NAME**zurückgeben.  
   

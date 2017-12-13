@@ -2,12 +2,12 @@
 title: "Die Windows-Firewall für den Analysis Services-Zugriff konfigurieren | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: d1edb8853dcc8faa1ff632ea9379f937881c9886
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 50841f276b204ed30de97636c5d3c5cccd7204e0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen
-  Ein unverzichtbarer erster Schritt beim Verfügbarmachen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oder [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] im Netzwerk besteht darin zu bestimmen, ob die Blockierung von Ports in einer Firewall aufgehoben werden muss. Bei den meisten Installationen müssen Sie mindestens eine eingehende Firewallregel erstellen, die Verbindungen mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]zulässt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ein unverzichtbarer erster Schritt beim Verfügbarmachen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oder [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] im Netzwerk verfügbar ist, um zu bestimmen, ob Sie die Blockierung von Ports in einer Firewall aufheben müssen. Bei den meisten Installationen müssen Sie mindestens eine eingehende Firewallregel erstellen, die Verbindungen mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]zulässt.  
   
  Die Anforderungen für die Firewallkonfiguration sind je nach [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Installation unterschiedlich:  
   

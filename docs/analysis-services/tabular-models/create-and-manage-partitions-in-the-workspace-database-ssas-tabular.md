@@ -2,12 +2,12 @@
 title: "Erstellen und Verwalten von Partitionen in der Arbeitsbereichsdatenbank (SSAS – tabellarisch) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 13beb940c74b269a15fcae447e144a4767288848
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 094dc11c2d13ec23575a40ce41c1369080f11d40
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>Erstellen und Verwalten von Partitionen in der Arbeitsbereichsdatenbank (SSAS – tabellarisch)
-  Durch Partitionen wird eine Tabelle logisch unterteilt. Die einzelnen Partitionen können dann unabhängig voneinander oder parallel mit anderen Partitionen verarbeitet (aktualisiert) werden. Durch Partitionen kann sich die Skalierbarkeit und Verwaltbarkeit großer Datenbanken verbessern. Standardmäßig verfügt jede Tabelle über eine Partition, die alle Spalten einschließt. In diesem Thema wird beschrieben, wie Partitionen in der Arbeitsbereichsdatenbank des Modells unter Verwendung des Dialogfelds **Partitions-Manager** in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Partitionen unterteilt eine Tabelle logisch. Die einzelnen Partitionen können dann unabhängig voneinander oder parallel mit anderen Partitionen verarbeitet (aktualisiert) werden. Durch Partitionen kann sich die Skalierbarkeit und Verwaltbarkeit großer Datenbanken verbessern. Standardmäßig verfügt jede Tabelle über eine Partition, die alle Spalten einschließt. In diesem Thema wird beschrieben, wie Partitionen in der Arbeitsbereichsdatenbank des Modells unter Verwendung des Dialogfelds **Partitions-Manager** in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
   
  Nachdem ein Modell für eine andere Analysis Services-Instanz bereitgestellt wurde, können Datenbankadministratoren Partitionen im (bereitgestellten) Modell mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]erstellen und verwalten. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Tabellenmodellpartitionen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
   

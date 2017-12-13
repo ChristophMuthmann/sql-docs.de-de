@@ -2,12 +2,12 @@
 title: Aufrufen von gespeicherten Prozeduren | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: aa00161709980550644f07a7330198d9369b706e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 48c35e5583369335f5d9ab6215faa4fd86d66f6a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="calling-stored-procedures"></a>Aufrufen von gespeicherten Prozeduren
-  Gespeicherte Prozeduren können auf dem Server oder aus einer Clientanwendung aufgerufen werden. In beiden Fällen werden gespeicherte Prozeduren immer auf dem Server ausgeführt, entweder im Kontext des Servers oder einer Datenbank. Zum Ausführen einer gespeicherten Prozedur sind keine besonderen Berechtigungen erforderlich. Nach dem Hinzufügen einer gespeicherten Prozedur von einer Assembly zum Server- oder Datenbankkontext kann diese gespeicherte Prozedur von jedem Benutzer ausgeführt werden, sofern die Rolle des Benutzers die von der gespeicherten Prozedur durchgeführten Aktionen ermöglicht.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Gespeicherte Prozeduren können auf dem Server oder von der Clientanwendung aufgerufen werden. In beiden Fällen werden gespeicherte Prozeduren immer auf dem Server ausgeführt, entweder im Kontext des Servers oder einer Datenbank. Zum Ausführen einer gespeicherten Prozedur sind keine besonderen Berechtigungen erforderlich. Nach dem Hinzufügen einer gespeicherten Prozedur von einer Assembly zum Server- oder Datenbankkontext kann diese gespeicherte Prozedur von jedem Benutzer ausgeführt werden, sofern die Rolle des Benutzers die von der gespeicherten Prozedur durchgeführten Aktionen ermöglicht.  
   
  Eine gespeicherte Prozedur wird in MDX auf dieselbe Weise wie eine systeminterne MDX-Funktion aufgerufen. Für eine gespeicherte Prozedur ohne Parameter wird der Name der Prozedur und ein leeres Paar Klammern verwendet, wie im Folgenden gezeigt:  
   

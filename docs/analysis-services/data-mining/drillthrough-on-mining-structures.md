@@ -2,12 +2,12 @@
 title: Drillthrough in Miningstrukturen | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cfbedd4235f4409df31912df360cf192725f36e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 96d9e924f914822b7eb26b4242c1120113da7c3b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="drillthrough-on-mining-structures"></a>Drillthrough in Miningstrukturen
-  *Drillthrough* beschreibt die Fähigkeit, entweder ein Miningmodell oder eine Miningstruktur abzufragen und ausführliche Daten zu erhalten, die im Modell nicht verfügbar sind.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*Drillthrough* bedeutet die Fähigkeit, ein Miningmodell oder eine Miningstruktur abzufragen und ausführliche Daten zu erhalten, wird im Modell nicht verfügbar.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] bietet zwei verschiedene Optionen für Drillthroughs in Falldaten. Sie können einen Drillthrough zu den Daten ausführen, die für die Erstellung des Miningmodells verwendet wurden, oder Sie führen einen Drillthrough zu den Quelldaten in der Miningstruktur aus.  
   

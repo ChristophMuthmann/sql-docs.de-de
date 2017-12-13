@@ -2,12 +2,12 @@
 title: "Überprüfen von Cube- und Dimensionseigenschaften | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 73dea5a137a6ae685d36f06a4e4497e976133819
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0831f70668a453f811b2b330e6593d6ac23dd1f4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-2-4---reviewing-cube-and-dimension-properties"></a>Lektion 2-4: Überprüfen von Cube- und Dimensionseigenschaften
-Nachdem Sie einen Cube definiert haben, können Sie die Ergebnisse mit dem Cube-Designer überprüfen. In der folgenden Aufgabe überprüfen Sie die Struktur des Cubs im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Projekt.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Nachdem Sie einen Cube definiert haben, können Sie die Ergebnisse überprüfen, mithilfe des Cube-Designers. In der folgenden Aufgabe überprüfen Sie die Struktur des Cubs im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Projekt.  
   
 ### <a name="to-review-cube-and-dimension-properties-in-cube-designer"></a>So überprüfen Sie Cube- und Dimensionseigenschaften im Cube-Designer  
   

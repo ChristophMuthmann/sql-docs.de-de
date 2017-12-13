@@ -2,12 +2,12 @@
 title: "Ansicht Datenaktualisierungsverlauf (PowerPivot für SharePoint) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 43dce2aa27cfda6251eeca52eba4f74f722f4ced
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4c2347b4bf7a02f61599f0a318ab1660dff50e4d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>Anzeigen des Verlaufs der Datenaktualisierungen (PowerPivot für SharePoint)
-  Der Verlauf der Datenaktualisierung ist ein Datensatz aller Datenaktualisierungsaktivitäten für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten in einer Excel-Arbeitsmappe. Datenaktualisierungsvorgänge werden für eine Analysis Services-Serverinstanz in einer SharePoint-Farm nach einem von Ihnen vorgegebenen Zeitplan ausgeführt. Standardmäßig wird der Datenaktualisierungsverlauf ein Jahr lang beibehalten. Ein Farmadministrator kann jedoch eine andere Beibehaltungsrichtlinie für Verwendungs- und Ereignisverläufe angeben. Diese bestimmt, wie lange Datensätze für Datenaktualisierungen beibehalten werden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Verlauf der datenaktualisierung ist ein Datensatz aller datenaktualisierungsaktivitäten für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Daten in einer Excel-Arbeitsmappe. Datenaktualisierungsvorgänge werden für eine Analysis Services-Serverinstanz in einer SharePoint-Farm nach einem von Ihnen vorgegebenen Zeitplan ausgeführt. Standardmäßig wird der Datenaktualisierungsverlauf ein Jahr lang beibehalten. Ein Farmadministrator kann jedoch eine andere Beibehaltungsrichtlinie für Verwendungs- und Ereignisverläufe angeben. Diese bestimmt, wie lange Datensätze für Datenaktualisierungen beibehalten werden.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 2010  
   

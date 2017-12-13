@@ -2,12 +2,12 @@
 title: Description-Element (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 41064071dea3359a34fb2f8c88bd6687eb85f5da
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 61c858ebd03f60ad7a361871cb7954c6b4f324c3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="description-element-xmla"></a>Description-Element (XMLA)
-  Enthält die Beschreibung des übergeordneten [Error](../../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md) -Elements.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Enthält die Beschreibung des übergeordneten Elements [Fehler](../../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   

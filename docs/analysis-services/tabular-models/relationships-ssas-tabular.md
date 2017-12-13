@@ -2,12 +2,12 @@
 title: "Beziehungen (SSAS – tabellarisch) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: eb0e07074d8658944d6abb3feaeab2b8c51a5d92
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e8e5f1a6224a72fbda958adf4969f357db58d6d4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="relationships-ssas-tabular"></a>Beziehungen (SSAS – tabellarisch)
-  In tabellarischen Modellen ist eine Beziehung eine Verbindung, die Sie zwischen zwei Tabellen mit Daten erstellen. Die Beziehung legt fest, wie die Daten in den beiden Tabellen korreliert werden sollen. Eine Customers-Tabelle und eine Orders-Tabelle können z. B. verknüpft werden, um den Kundennamen anzuzeigen, der jeder Bestellung zugeordnet ist.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]In tabellarischen Modellen ist eine Beziehung eine Verbindung zwischen zwei Tabellen mit Daten. Die Beziehung legt fest, wie die Daten in den beiden Tabellen korreliert werden sollen. Eine Customers-Tabelle und eine Orders-Tabelle können z. B. verknüpft werden, um den Kundennamen anzuzeigen, der jeder Bestellung zugeordnet ist.  
   
  Wenn Sie Daten mithilfe des Tabellenimport-Assistenten aus derselben Datenquelle importieren, werden Beziehungen, die bereits in den für den Import ausgewählten Tabellen (in der Datenquelle) vorhanden sind, im Modell neu erstellt. Sie können erkannte und neu erstellte Beziehungen automatisch anzeigen, indem Sie den Modell-Designer in der Diagrammsicht oder das Dialogfeld "Beziehungen verwalten" verwenden. Sie können auch manuell neue Beziehungen zwischen Tabellen erstellen. Verwenden Sie dazu den Modell-Designer in der Diagrammsicht oder das Dialogfeld "Beziehung erstellen" oder "Beziehungen verwalten".  
   

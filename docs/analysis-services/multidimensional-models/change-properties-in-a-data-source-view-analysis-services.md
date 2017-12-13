@@ -2,12 +2,12 @@
 title: "Ändern der Eigenschaften in einer Datenquellensicht (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fa1e0fa67c2a9dca58b4cfcff33407994810baa5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b8d8d731552fe099d161d6b87bca87ceecd709a9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Ändern von Eigenschaften in einer Datenquellensicht (Analysis Services)
-  Nachdem Sie eine Datenquellensicht mithilfe des Datenquellensicht-Assistenten definiert und der Datenquellensicht Tabellen, Sichten, benannte Berechnungen und benannte Abfrage hinzugefügt haben, kann es gewünscht sein, Eigenschaften zu ändern, die Folgendes betreffen:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Nach dem Definieren einer Datenquellensicht mithilfe der Datenquellensicht-Assistenten und das Hinzufügen von Tabellen, Sichten, Berechnungen benannte und benannte Abfragen mit der Datenquelle anzeigen, können Sie Eigenschaften im Zusammenhang mit ändern möchten:  
   
 -   Übereinstimmungskriterien für Datenquellensichten  
   

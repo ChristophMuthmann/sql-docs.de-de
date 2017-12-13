@@ -2,12 +2,12 @@
 title: EntityType-Element (CSDLBI) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f5b62cad891d4d02120b3325d57e327e299ef1be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 303f09187528dd7fa2c897fea5fd86ec6d7f23d9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="entitytype-element-csdlbi"></a>EntityType-Element (CSDLBI)
-  Das **EntityType** -Element ist ein komplexer Typ, der die Struktur einer Entität auf hoher Ebene in einem Datenmodell darstellt, beispielsweise ein Kunde oder eine Bestellung. Die **Bi: EntityType** Element erweitert die Definition von [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) verwendet der [Entity Data Framework](http://msdn.microsoft.com/library/bb399567.aspx).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Die **EntityType** Element ist ein komplexer Typ, der die Struktur einer Entität auf hoher Ebene, z. B. ein Kunde oder eine Bestellung in einem Datenmodell darstellt. Die **Bi: EntityType** Element erweitert die Definition von [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) verwendet der [Entity Data Framework](http://msdn.microsoft.com/library/bb399567.aspx).  
   
  Ein EntityType-Element muss für jede der Entitäten angegeben werden, die im Datenmodell enthalten sind. Die Unterelemente von EntityType beschreiben die Spalten und Measures in der Tabelle. Beziehungen von Tabellen sind in **EntityContainer**enthalten.  
   

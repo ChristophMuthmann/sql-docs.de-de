@@ -2,12 +2,12 @@
 title: ModelingFlags-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a2ae419864b73406d854e05f03cf11add9d1cdaa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 60a85d1f6b7b079ab3ea09148299c9edc1f155f3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="modelingflags-element-assl"></a>ModelingFlags-Element (ASSL)
-  Enthält die Auflistung der [ModelingFlag](../../../analysis-services/scripting/objects/modelingflag-element-assl.md) Elemente für eine Spalte in einer [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) oder ein [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält die Auflistung der [ModelingFlag](../../../analysis-services/scripting/objects/modelingflag-element-assl.md) Elemente für eine Spalte in einer [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) oder ein [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md).  
   
 ## <a name="syntax"></a>Syntax  
   

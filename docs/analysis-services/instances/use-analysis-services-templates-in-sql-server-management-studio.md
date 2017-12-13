@@ -2,12 +2,12 @@
 title: Verwenden von Analysis Services-Vorlagen in SQL Server Management Studio | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9775571e489c2f950bf50fb3c62386fba13e90dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: aa787d2f040ac8065e4df8c68da3b6c730ff9640
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Verwenden von Analysis Services-Vorlagen in SQL Server Management Studio
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stellt einen Satz von Vorlagen bereit, mit deren Hilfe Sie schnell XMLA-Skripts oder DMX/MDX-Abfragen erstellen, KPIs in einem Cube oder einem tabellarischen Modell erstellen, Skripts für Sicherungs- und Wiederherstellungsvorgänge schreiben und viele andere Tasks ausführen können. Die Vorlagen befinden sich im **Vorlagen-Explorer** von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] bietet eine Reihe von Vorlagen können Sie die erstellen Sie schnell XMLA-Skripts, DMX- oder MDX-Abfragen erstellen, KPIs in einen Cube oder tabellarisches Modell, Skript Sicherung Wiederherstellungsvorgänge und viele andere Tasks ausführen. Die Vorlagen befinden sich im **Vorlagen-Explorer** von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  Dieses Thema enthält eine Liste der Vorlagen für mehrdimensionale Modelle und tabellarische Modelle sowie Beispiele für die Erstellung einer MDX-Abfrage und XMLA-Anweisung mit dem Metadaten-Explorer und dem Vorlagen-Explorer.  
   

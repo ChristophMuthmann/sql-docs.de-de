@@ -2,12 +2,12 @@
 title: 'Lektion 1: Definieren einer Datenquellensicht innerhalb eines Analysis Services-Projekt | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a8a8a672919d2ee1fde9497dbdd9260362e3b537
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ae0bf6f8f74711407a33f5b32929bfb62d75423c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Lektion 1: Definieren einer Datenquellensicht innerhalb eines Analysis Services-Projekts
-Der Entwurf einer Business Intelligence-Anwendung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] beginnt mit dem Erstellen eines [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekts in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Innerhalb dieses Projekts definieren Sie alle Elemente in Ihrer Projektmappe beginnend mit einer Datenquellensicht.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Entwerfen einer Business Intelligence-Anwendung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] beginnt mit dem Erstellen einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Projekt [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Innerhalb dieses Projekts definieren Sie alle Elemente in Ihrer Projektmappe beginnend mit einer Datenquellensicht.  
   
 Diese Lektion enthält die folgenden Aufgaben:  
   

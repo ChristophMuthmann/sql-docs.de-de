@@ -2,12 +2,12 @@
 title: Datamining-Lernprogramme (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 05/06/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -19,14 +19,15 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 39db9f015ef3c52d5e967bdb6c45a47f8b7bd40f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f7375fc22170ffa3f0f11455af619d62f42df50c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>Data Mining-Lernprogramme (Analysis Services)
-[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erleichtert das Erstellen von Datamining-Lösungen mithilfe von Assistenten und integrierten Visualisierungen. Insbesondere dann, wenn Sie Computerlernen nicht gewohnt sind, sind die Tools in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] eine einfache Möglichkeit zum Entwerfen, Trainieren und Durchsuchen von Datamining-Modellen. Die Daten in Ihren Modellen können in einem Cube, einer relationalen Datenbank oder einer anderen Quelle, die von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützt wird, gespeichert werden. Nach dem Erstellen eines Modells können Sie es produktiv nutzen durch Zugriff auf das Modell zum Erstellen von Vorhersageabfragen mithilfe von mehreren Clients, einschließlich [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] und ASP.NET.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erleichtert das Erstellen von Datamining-Lösungen mithilfe von Assistenten und integrierte Visualisierungen. Insbesondere dann, wenn Sie Computerlernen nicht gewohnt sind, sind die Tools in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] eine einfache Möglichkeit zum Entwerfen, Trainieren und Durchsuchen von Datamining-Modellen. Die Daten in Ihren Modellen können in einem Cube, einer relationalen Datenbank oder einer anderen Quelle, die von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützt wird, gespeichert werden. Nach dem Erstellen eines Modells können Sie es produktiv nutzen durch Zugriff auf das Modell zum Erstellen von Vorhersageabfragen mithilfe von mehreren Clients, einschließlich [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] und ASP.NET.  
   
 > [!NOTE]  
 >Die hier beschriebenen Tutorials wurden nicht für [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]aktualisiert. Sie können die Tutorials für SQL Server 2014 verwenden. Funktionell gibt es keine Änderungen in Data Mining-Funktionen für [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Die Schritte sollten identisch sein.  

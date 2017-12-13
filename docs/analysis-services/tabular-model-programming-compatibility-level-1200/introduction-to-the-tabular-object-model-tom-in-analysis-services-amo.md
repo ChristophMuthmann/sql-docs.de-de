@@ -2,12 +2,12 @@
 title: "Einführung in tabellarischen Objektmodell (TOM) in Analysis Services AMO | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4511f34d149494cd48a0ee52a94cc668bfdd8960
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3f8399c5430cf34d947e881586bacef5ade46587
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Einführung in die im tabellarischen Objektmodell (TOM) in Analysis Services AMO
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Im tabellarischen Objektmodell (TOM) ist eine Erweiterung von der Clientbibliothek des Analysis Services Management Object (AMO) erstellt zur Unterstützung von Programmierszenarien für tabellarische Modelle mit Kompatibilitätsgrad 1200 oder höher erstellt. Wie bei AMO, bietet TOM eine programmgesteuerte Möglichkeit zum Verarbeiten von Verwaltungsfunktionen wie das Erstellen von Modellen, importieren und Aktualisieren von Daten und Zuweisen von Rollen und Berechtigungen.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Im tabellarischen Objektmodell (TOM) ist eine Erweiterung von der Clientbibliothek des Analysis Services Management Object (AMO) erstellt zur Unterstützung von Programmierszenarien für tabellarische Modelle mit Kompatibilitätsgrad 1200 oder höher erstellt. Wie bei AMO, bietet TOM eine programmgesteuerte Möglichkeit zum Verarbeiten von Verwaltungsfunktionen wie das Erstellen von Modellen, importieren und Aktualisieren von Daten und Zuweisen von Rollen und Berechtigungen.  
   
 TOM macht native tabellarischen Metadaten, wie z. B. **Modell**, **Tabellen**, **Spalten**, und **Beziehungen** Objekte.  Ein allgemeinen Überblick über das Modell Objektstruktur unten veranschaulicht, wie die Komponententeile miteinander verknüpft sind.  
   

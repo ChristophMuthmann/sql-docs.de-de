@@ -2,12 +2,12 @@
 title: Erstellen Sie eine BI-Semantikmodell-Verbindung mit einer PowerPivot-Arbeitsmappe | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 111dd53e993bc5797e8fae34ee9b02eee707aa3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 71a0b7e14adc41efb70470ad3e2d825590fe2e50
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-power-pivot-workbook"></a>Erstellen einer BI-Semantikmodellverbindung zu einer PowerPivot-Arbeitsmappe
-  Verwenden Sie die Informationen in diesem Thema, um eine BI-Semantikmodellverbindung einzurichten, die zu einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe in der gleichen Farm umleitet.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Verwenden Sie die Informationen in diesem Thema, um eine BI-semantikmodellverbindung einzurichten, die zum umleitet eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Arbeitsmappe in der gleichen Farm.  
   
  Nachdem Sie eine BI-Semantikmodellverbindung erstellt und SharePoint-Berechtigungen konfiguriert haben, können Sie sie als Datenquelle für Excel- oder [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Berichte verwenden.  
   

@@ -2,12 +2,12 @@
 title: DISCOVER_CSDL_METADATA-Rowset | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7221a67fb73c55b0173da2c10826d75003c50e6d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3679e15b62a746cba1322bdf85691e313839ba46
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discovercsdlmetadata-rowset"></a>DISCOVER_CSDL_METADATA-Rowset
-  Gibt Informationen über ein (tabellarisches oder mehrdimensionales) [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Datenmodell zurück, und stellt die Definition des Modells im CSDLBI (Conceptual Schema Definition Language)-Format mit BI-Anmerkungen bereit. CSDLBI basiert auf CSDL, einem vom Entity Data Framework verwendeten XML-Schema, das für die Kommunikation zwischen einem [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Server und dem [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] -Client verwendet wird. Die Business Intelligence (BI)-Anmerkungen stellen zusätzliche Metadaten zu Tabellenmodellen und den darin enthaltenen Objekten bereit. Weitere Informationen zu Tabellendatenmodellen finden Sie unter [CSDL-Anmerkungen für Business Intelligence &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Gibt Informationen über eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Datenmodell (tabellarisch oder mehrdimensional), die Definition des Modells im CSDLBI (Conceptual Schema Definition Language mit BI-Anmerkungen)-Format bereitstellt. CSDLBI basiert auf CSDL, einem vom Entity Data Framework verwendeten XML-Schema, das für die Kommunikation zwischen einem [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Server und dem [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] -Client verwendet wird. Die Business Intelligence (BI)-Anmerkungen stellen zusätzliche Metadaten zu Tabellenmodellen und den darin enthaltenen Objekten bereit. Weitere Informationen zu Tabellendatenmodellen finden Sie unter [CSDL-Anmerkungen für Business Intelligence &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
   
  Der Sicherheitskontext des Befehls wirkt sich auf das Rowset aus, das zurückgegeben wird. Leseberechtigungen auf der Analysis Services-Instanz sind erforderlich, um die CSDL-Definition vom Server abzurufen.  
   

@@ -2,12 +2,12 @@
 title: Microsoft Naive Bayes-Algorithmus | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b5a187447c2e2c222996fd59b5b673a8a68974e3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3ec33ea83457850aed338c46534ca3cb85d53c61
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes-Algorithmus
-  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus ist ein auf Bayes Theoremen basierender Klassifikationsalgorithmus, der sowohl bei der Vorhersagemodellierung als auch in der explorativen Modellierung eingesetzt werden kann. Die Angabe "naiv" im Namen "Naïve Bayes" rührt daher, dass der Algorithmus Bayes Techniken verwendet, aber keine Abhängigkeiten berücksichtigt, die möglicherweise vorhanden sind.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus ist ein klassifikationsalgorithmus, der basierend auf Bayes theoremen und für explorative und prognostizierte Modellierung verwendet werden kann. Die Angabe "naiv" im Namen "Naïve Bayes" rührt daher, dass der Algorithmus Bayes Techniken verwendet, aber keine Abhängigkeiten berücksichtigt, die möglicherweise vorhanden sind.  
   
  Der Rechenaufwand für diesen Algorithmus ist geringer als der der anderen [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Algorithmen und ist daher hilfreich für das schnelle Generieren von Miningmodellen, um Beziehungen zwischen Eingabespalten und vorhersagbaren Spalten zu ermitteln. Sie können diesen Algorithmus für eine erste Untersuchung der Daten verwenden. Später können Sie dann die Ergebnisse anwenden, um zusätzliche Miningmodelle mit anderen Algorithmen zu erstellen, deren Rechenaufwand größer ist und die präziser sind.  
   

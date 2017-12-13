@@ -2,12 +2,12 @@
 title: Objekt-Element (Dimension) (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8e71db80848a496260137fb3f3937ed755e9ed95
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3f4e836439433d9e3bf17f55f70b637f6f80d649
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="object-element-dimension-xmla"></a>Object-Element (Dimension) (XMLA)
-  Enthält einen Objektverweis für die Dimension, auf der der übergeordnete [Insert](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)-, [Update](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)- oder [Drop](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) -Befehl ausgeführt wird.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Enthält einen Objektverweis für die Dimension, auf dem das übergeordnete Element [einfügen](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [Update](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), oder [löschen](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) Befehl ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -2,12 +2,12 @@
 title: SourceMeasureGroup-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 30cea4a156acf4af8c715b6fdf96cf0d92eca2c7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 76f5d0ad24e76484f50598af9f06f6b13331c43f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="sourcemeasuregroup-element-assl"></a>SourceMeasureGroup-Element (ASSL)
-  Identifiziert die Measuregruppe, die als Datenquelle für eine Miningstruktur-Spalte dient.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Identifiziert die Measuregruppe, die als Datenquelle für eine Miningstrukturspalte dient.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -61,13 +61,13 @@ ms.lasthandoff: 11/17/2017
 |Untergeordnete Elemente|Keine|  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen zu den **binden** Typs, einschließlich der Tabellen von Analysis Services Scripting Language (ASSL) von Objekten des der **binden** Typ und der Vererbungshierarchie der **binden**  , finden Sie unter [Binding-Datentyp &#40; ASSL &#41; ](../../../analysis-services/scripting/data-type/binding-data-type-assl.md).  
+ Weitere Informationen zu den **binden** Typs, einschließlich der Tabellen von Analysis Services Scripting Language (ASSL) von Objekten des der **binden** Typ und der Vererbungshierarchie der **binden ** , finden Sie unter [Binding-Datentyp & #40; ASSL & #41; ](../../../analysis-services/scripting/data-type/binding-data-type-assl.md).  
   
- Einen Überblick über datenbindungen in ASSL finden Sie unter [&#40; Datenquellen und Bindungen SSAS – mehrdimensional &#41; ](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Einen Überblick über datenbindungen in ASSL finden Sie unter [& #40; Datenquellen und Bindungen SSAS – mehrdimensional & #41; ](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
  Die Elemente, die den übergeordneten Elementen von entsprechen **SourceMeasureGroup** im Objektmodell von Analysis Management Objects (AMO) sind <xref:Microsoft.AnalysisServices.MiningStructureColumn> und <xref:Microsoft.AnalysisServices.TableMiningStructureColumn>.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Objekte &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+ [Objekte & #40; ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

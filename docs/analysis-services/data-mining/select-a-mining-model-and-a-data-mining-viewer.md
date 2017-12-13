@@ -2,12 +2,12 @@
 title: "Auswählen eines Miningmodell- und Datamining-Viewers | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d97a29fac2a85c1398fa8a994f50a0766bd119d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 712e8e501d3f1a8a37b2627d2356ff542af8bd08
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>Auswählen eines Miningmodell- und Data Mining-Viewers
-  Zum Durchsuchen eines Miningmodells können Sie einen der Viewer auf der Registerkarte **Miningmodell-Viewer** des Data Mining-Designers verwenden. Sie können mühelos zwischen Modellen wechseln oder den verwendeten Viewer ändern.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sie können ein Miningmodell durchsuchen, mit einem der Viewer auf die **Miningmodell-Viewer** des Data Mining-Designers. Sie können mühelos zwischen Modellen wechseln oder den verwendeten Viewer ändern.  
   
 -   Das Dropdown-Listenfeld **Miningmodell** der Registerkarte **Miningmodell-Viewer** des Data Mining-Designers in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] enthält eine Liste aller Miningmodelle, die sich in der aktuellen Miningstruktur befinden.  
   

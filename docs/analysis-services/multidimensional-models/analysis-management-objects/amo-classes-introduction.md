@@ -2,12 +2,12 @@
 title: "Einführung in AMO-Klassen | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a688b9544642ecb9dc5cbca1d7c5e3af90a5ebd4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bcaa0f01f487eeb028ec93792f29a9a8598ca6a6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="amo-classes---introduction"></a>AMO-Klassen - Einführung
-  Analysis Management Objects (AMO) ist eine Bibliothek von Klassen, die entwickelt wurde, um eine Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] über eine Clientanwendung zu verwalten. AMO-Klassen sind Klassen, die verwendet werden, um [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Objekte wie Datenbanken, Dimensionen, Cubes, Miningstrukturen und Modelle, Rollen und Berechtigungen, Ausnahmen usw. zu verwalten.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Management Objects (AMO) ist eine Bibliothek von Klassen zur Verwaltung einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] von einer Clientanwendung. AMO-Klassen sind Klassen, die verwendet werden, um [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Objekte wie Datenbanken, Dimensionen, Cubes, Miningstrukturen und Modelle, Rollen und Berechtigungen, Ausnahmen usw. zu verwalten.  
   
  Die folgende Abbildung zeigt die Beziehung der in diesem Thema erläuterten Klassen.  
   

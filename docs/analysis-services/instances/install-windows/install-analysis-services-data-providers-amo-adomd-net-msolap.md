@@ -2,12 +2,12 @@
 title: Installieren von Analysis Services-Datenanbietern (AMO, ADOMD.NET, MSOLAP) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 63ce2b423f04ef4199bbb32b5349c26c25fe2199
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7cd7f4a950335557e3fb65d3d504f79af0801de0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="install-analysis-services-data-providers-amo-adomdnet-msolap"></a>Installieren von Analysis Services-Datenanbietern (AMO, ADOMD.NET, MSOLAP)
-  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ist ein Versionsupdate der Analysis Services-Datenanbieter, die aus ADOMD.Net, AMO und MSOLAP bestehen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ist ein Versionsupdate der Analysis Services-Datenanbieter, bestehend aus ADOMD.NET, AMO und MSOLAP.  
   
  Für die meisten abfragebasierten Datenzugriffsszenarien können Sie die vorhandenen älteren Versionen von bereits auf Clientsystemen installierten Datenanbietern verwenden, um auf tabellarische und mehrdimensionale Modelle auf einer SQL Server 2016 Analysis Services-Instanz zuzugreifen. Dies schließt tabellarische Modelle ein, die ausschließlich für SQL Server 2016 verfügbare Funktionen verwenden. Im Allgemeinen sollten Clientanwendungen, die Abfragen generieren (wie Excel, Reporting Services oder Tableau), beim Zugriff auf ein Analysis Services-Modell nicht die neuesten Datenanbieter benötigen.  
   

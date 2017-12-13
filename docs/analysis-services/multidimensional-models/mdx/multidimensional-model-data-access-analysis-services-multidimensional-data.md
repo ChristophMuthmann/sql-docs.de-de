@@ -2,12 +2,12 @@
 title: "Datenzugriff auf mehrdimensionale Modelle (Analysis Services – mehrdimensionale Daten) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ff56655be72dd63160bcfdbdb27f3c2a978de367
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 678912f45f94b99ce9abf96e864b60dd794f7b1c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>Datenzugriff auf mehrdimensionale Modelle (Analysis Services – mehrdimensionale Daten)
-  Verwenden Sie die Informationen in diesem Thema, um zu erfahren, wie mit programmgesteuerten Methoden, Skript oder Clientanwendungen, die integrierten Support für das Herstellen einer Verbindung zu einem [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Server in Ihrem Netzwerk enthalten, auf mehrdimensionale [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Daten zugegriffen wird.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Verwenden Sie die Informationen in diesem Thema erfahren, wie den Zugriff auf [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] mehrdimensionale Daten, die mit programmgesteuerten Methoden, Skript oder Clientanwendungen, die integrierte Unterstützung für die Verbindung mit einer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Server im Netzwerk.  
   
  Dieses Thema enthält folgende Abschnitte:  
   

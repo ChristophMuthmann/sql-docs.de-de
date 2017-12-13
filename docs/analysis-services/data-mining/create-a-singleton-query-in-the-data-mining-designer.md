@@ -2,12 +2,12 @@
 title: Erstellen eine Singleton-Abfrage im Datamining-Designer | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cd960d2d0f0628e2c8a8c568cf7e5bb065caa2a8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a311450bae77c533860c09c06f53497dbba4035e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>Erstellen einer SINGLETON-Abfrage im Data Mining-Designer
-  Eine SINGLETON-Abfrage ist nützlich, wenn Sie eine Vorhersage für einen einzelnen Fall erstellen möchten. Weitere Informationen zu SINGLETON-Abfragen finden Sie unter [Data Mining-Abfragen](../../analysis-services/data-mining/data-mining-queries.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Eine Singleton-Abfrage ist nützlich, wenn Sie eine Vorhersage für einen einzelnen Fall erstellen möchten. Weitere Informationen zu SINGLETON-Abfragen finden Sie unter [Data Mining-Abfragen](../../analysis-services/data-mining/data-mining-queries.md).  
   
  Auf der Registerkarte **Miningmodellvorhersage** im Data Mining-Designer können Sie zahlreiche unterschiedliche Abfragetypen erstellen. Sie können eine Abfrage mit dem Designer erstellen oder durch das Eingeben von DMX-Anweisungen (Data Mining-Erweiterungen). Sie können auch mit dem Designer beginnen und die auf diese Weise erstellte Abfrage durch Änderung der DMX-Anweisungen oder durch Hinzufügen einer WHERE- oder ORDER BY-Klausel anpassen.  
   

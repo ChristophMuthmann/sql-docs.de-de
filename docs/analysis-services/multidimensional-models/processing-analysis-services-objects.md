@@ -2,12 +2,12 @@
 title: Verarbeiten von Analysis Services-Objekte | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7314562257267c1350174e48c79c3e0b28bbaa6a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 14559d9f5b7581c406df31aee9782019a580bc31
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="processing-analysis-services-objects"></a>Verarbeiten von Analysis Services-Objekten
-  Die Verarbeitung betrifft die folgenden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekttypen: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbanken, -Cubes, -Dimensionen, -Measuregruppen, -Partitionen, -Miningmodelle und -Miningstrukturen. Sie können für jedes der Objekte eine Verarbeitungsstufe angeben, oder Sie können die Option Standard verarbeiten angeben, um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die automatische Auswahl der optimalen Verarbeitungsstufe zu überlassen. Weitere Informationen zu den verschiedenen Ebenen zum Verarbeiten aller Objekte finden Sie unter [Verarbeitungsoptionen und -einstellungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Verarbeitung betrifft die folgenden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Objekttypen: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbanken, Cubes, Dimensionen, Measuregruppen, Partitionen und Datamining-Strukturen und Modelle. Sie können für jedes der Objekte eine Verarbeitungsstufe angeben, oder Sie können die Option Standard verarbeiten angeben, um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die automatische Auswahl der optimalen Verarbeitungsstufe zu überlassen. Weitere Informationen zu den verschiedenen Ebenen zum Verarbeiten aller Objekte finden Sie unter [Verarbeitungsoptionen und -einstellungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
  Es ist wichtig, dass Sie sich der möglichen Konsequenzen des Verarbeitungsverhaltens bewusst sind, um eventuelle negative Auswirkungen zu vermeiden. Wenn Sie zum Beispiel die vollständige Verarbeitung einer Dimension wählen, werden alle von dieser Dimension abhängigen Partitionen in den Status 'Nicht verarbeitet' versetzt. Davon betroffene Cubes sind dann nicht für Abfragen verfügbar, bis die abhängigen Partitionen verarbeitet sind.  
   

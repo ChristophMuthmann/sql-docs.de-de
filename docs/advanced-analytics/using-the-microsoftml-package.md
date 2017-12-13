@@ -3,8 +3,11 @@ title: Verwenden das Paket MicrosoftML mit SQLServer | Microsoft Docs
 ms.custom: 
 ms.date: 08/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: r-services
+ms.service: 
+ms.component: advanced-analytics
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 02c2e0da0f6f0ee1b90fc9cbaf84569d9d8f08a1
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: b802daf9a02734245bc5adb0695fded14063fca5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="using-the-microsoftml-package-with-sql-server"></a>Verwenden das Paket MicrosoftML mit SQL Server
 

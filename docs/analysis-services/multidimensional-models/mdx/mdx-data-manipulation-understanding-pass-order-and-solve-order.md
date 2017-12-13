@@ -2,12 +2,12 @@
 title: "Grundlegendes zu Durchlauf- und Lösungsreihenfolge (MDX) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e1f07fa57c0c4c16dd1cbbeeac504b59a250912
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9c3b028eb658f2f75d6e70ec9057f3f156ca5f05
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>MDX - Datenmanipulation: Grundlegendes zur Übergabe bestellen und Lösungsreihenfolge
-  Wird ein Cube als Ergebnis eines MDX-Skripts berechnet, durchläuft er, abhängig von der Verwendung verschiedener Berechnungsfunktionen, möglicherweise viele Berechnungsphasen. Jede Phase bezeichnet man als Berechnungsdurchlauf.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Wenn ein Cube als Ergebnis eines MDX-Skripts berechnet wird, können sie viele berechnungsphasen je nach der Verwendung verschiedener Berechnungsfunktionen Features durchlaufen. Jede Phase bezeichnet man als Berechnungsdurchlauf.  
   
  Auf einen Berechnungsdurchlauf kann durch eine Ordnungsposition verwiesen werden, die Berechnungsdurchlaufnummer genannt wird. Die Anzahl an Berechnungsdurchläufen, die für eine vollständige Berechnung aller Zellen eines Cubes erforderlich sind, wird als Berechnungsdurchlauftiefe des Cubes bezeichnet.  
   

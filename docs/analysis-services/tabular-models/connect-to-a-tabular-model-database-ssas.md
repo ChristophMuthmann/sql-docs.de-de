@@ -2,12 +2,12 @@
 title: Herstellen einer Verbindung mit einer tabellarischen Modelldatenbank (SSAS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 69878a319fb5b061e712bcf96e094356b558553e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b4848d36fffe5d7b6e70b5be937874bbfe6537cb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>Herstellen einer Verbindung mit einer tabellarischen Modelldatenbank (SSAS)
-  Nachdem Sie ein tabellarisches Modell erstellt und auf einem Analysis Services-Tabellenmodus-Server bereitgestellt haben, müssen Sie Berechtigungen festlegen, die es für Clientanwendungen verfügbar machen. Dieses Thema erläutert die Vorgehensweise bei Berechtigungen und beim Verbindungsaufbau mit einer Datenbank ausgehend von Clientanwendungen.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Nachdem Sie ein tabellarisches Modell erstellt und auf einem Analysis Services-Tabellenmodus-Server bereitstellen, müssen Sie Berechtigungen festlegen, die es für Clientanwendungen verfügbar machen. Dieses Thema erläutert die Vorgehensweise bei Berechtigungen und beim Verbindungsaufbau mit einer Datenbank ausgehend von Clientanwendungen.  
   
 > [!NOTE]  
 >  Remoteverbindungen mit Analysis Services sind standardmäßig erst dann verfügbar, wenn Sie die Firewall konfiguriert haben. Stellen Sie sicher, dass Sie den entsprechenden Port geöffnet haben, wenn Sie eine benannte oder eine Standardinstanz für Clientverbindungen konfigurieren. Weitere Informationen finden Sie unter [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  

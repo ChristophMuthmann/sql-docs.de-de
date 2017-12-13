@@ -2,12 +2,12 @@
 title: Technische Referenz zu Microsoft Linear Regression-Algorithmus | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 188666c119f92bc0093877c055ed4097cc2e1471
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6e68aa664039d9fa7531c6563025c108687c2868
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Linear Regression-Algorithmus
-  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus ist eine spezielle Version des Microsoft Decision Trees-Algorithmus, der für die Modellierung kontinuierlicher Attributpaare optimiert ist. In diesem Thema wird die Implementierung des Algorithmus erläutert und beschrieben, wie das Verhalten des Algorithmus angepasst wird. Ferner werden Links zu weiteren Informationen über das Abfragen von Modellen zur Verfügung gestellt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus ist eine spezielle Version des Microsoft Decision Trees-Algorithmus, der für die Modellierung kontinuierlicher Attributpaare optimiert ist. In diesem Thema wird die Implementierung des Algorithmus erläutert und beschrieben, wie das Verhalten des Algorithmus angepasst wird. Ferner werden Links zu weiteren Informationen über das Abfragen von Modellen zur Verfügung gestellt.  
   
 ## <a name="implementation-of-the-linear-regression-algorithm"></a>Implementierung des Linear Regression-Algorithmus  
  Der Microsoft Decision Trees-Algorithmus kann für viele Tasks verwendet werden: die lineare Regression, die Klassifizierung oder die Zuordnungsanalyse. Um diesen Algorithmus für die lineare Regression zu implementieren, werden die Parameter des Algorithmus gesteuert, um die Zunahme der Struktur zu beschränken und alle Daten im Modell in einem einzigen Knoten zu speichern. Mit anderen Worten, obwohl die lineare Regression auf einer Entscheidungsstruktur basiert, enthält die Struktur nur einen einzigen Stamm und keine Verzweigungen: Alle Daten befinden sich im Stammknoten.  

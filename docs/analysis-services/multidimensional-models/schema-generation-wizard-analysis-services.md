@@ -2,12 +2,12 @@
 title: Schemagenerierungs-Assistent (Analysis Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f4c43ae5e0b38aab494f21237986b958286d7b9b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5bd04de3519739a08ba65b5ecf2e27e0b5915254
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>Schemagenerierungs-Assistent (Analysis Services)
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] unterstützt zwei Methoden der Verwendung relationaler Schemas, wenn OLAP-Objekte innerhalb von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekten oder -Datenbanken definiert werden. Normalerweise erfolgt die Definition von OLAP-Objekten basierend auf einem logischen Datenmodell, das in einer Datenquellensicht innerhalb eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts oder einer Datenbank gebildet wird. Diese Datenquellensicht wird basierend auf Schemaelementen aus einer oder mehreren relationalen Datenquellen (wie in der Datenquellensicht angepasst) definiert.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] unterstützt zwei Methoden zum Arbeiten mit relationalen Schemas, beim Definieren von OLAP-innerhalb Objekte einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekt oder einer Datenbank. Normalerweise erfolgt die Definition von OLAP-Objekten basierend auf einem logischen Datenmodell, das in einer Datenquellensicht innerhalb eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts oder einer Datenbank gebildet wird. Diese Datenquellensicht wird basierend auf Schemaelementen aus einer oder mehreren relationalen Datenquellen (wie in der Datenquellensicht angepasst) definiert.  
   
  Alternativ können Sie zuerst OLAP-Objekte definieren und dann eine Datenquellensicht, eine Datenquelle und das zugrunde liegende relationale Datenbankschema generieren, von dem diese OLAP-Objekte unterstützt werden. Diese relationale Datenbank wird als Themenbereichsdatenbank bezeichnet.  
   

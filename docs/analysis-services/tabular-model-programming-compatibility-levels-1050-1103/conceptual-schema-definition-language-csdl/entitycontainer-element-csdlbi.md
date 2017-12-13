@@ -2,12 +2,12 @@
 title: EntityContainer-Element (CSDLBI) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e5328a9c360fa4465e0bcf53bd0f017447c7c113
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 21ad4c6d328c8c299a2ae34c4ac5aab27feec794
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="entitycontainer-element-csdlbi"></a>EntityContainer-Element (CSDLBI)
-  Das EntityContainer-Element ist ein komplexer Typ, der auf dem CSDL-Typ EntityContainer basiert, und eine Auflistung von Entitäten innerhalb eines einzelnen Datenmodells definiert. In einer Business Intelligence-Anwendung kann das vom einem EntityContainer dargestellte Datenmodell mehrere Tabellen mit durch Beziehungen verknüpften Spalten sowie Berechnungen, Measures und KPIs enthalten. Das Konzept des Modells ähnelt einer Datenbank oder einer Datenquelle.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Der EntityContainer-Element ist ein komplexer Typ, der basierend auf dem CSDL-Typ EntityContainer, die eine Auflistung von Entitäten innerhalb eines einzelnen Datenmodells definiert. In einer Business Intelligence-Anwendung kann das vom einem EntityContainer dargestellte Datenmodell mehrere Tabellen mit durch Beziehungen verknüpften Spalten sowie Berechnungen, Measures und KPIs enthalten. Das Konzept des Modells ähnelt einer Datenbank oder einer Datenquelle.  
   
  Der EntityContainer muss jeden der Entitätstypen angeben, die im Datenmodell enthalten sind, einschließlich Tabellen und Beziehungen. Informationen zu diesen Modellentitäten werden anhand der Auflistung von untergeordneten Entitäten des Typs (Entitätselement) angegeben. Weitere Informationen finden Sie unter [EntityType-Element &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entitytype-element-csdlbi.md).  
   

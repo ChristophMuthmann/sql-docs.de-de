@@ -2,12 +2,12 @@
 title: Verarbeiten von Datamining-Objekten | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 06346679653136a2efa0fc228405e3282078b279
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b25fae3fd5c17b93cc17ce2a3f7ea6d6059aa0fe
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="processing-data-mining-objects"></a>Verarbeiten von Data Mining-Objekten
-  Ein Data Mining-Objekt ist vor seiner Verarbeitung nur ein leerer Container. Die*Verarbeitung* eines Data Mining-Modells wird auch als *Training*bezeichnet.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Eine Datamining-Objekt ist nur ein leerer Container, bis er verarbeitet worden ist. Die*Verarbeitung* eines Data Mining-Modells wird auch als *Training*bezeichnet.  
   
  **Verarbeiten von Miningstrukturen:** Eine Miningstruktur ruft Daten von einer externen Datenquelle ab, die über die Spaltenbindungen und Verwendungsmetadaten definiert ist, und liest die Daten. Diese Daten werden vollständig gelesen und anschließend analysiert, um verschiedene statistische Informationen zu extrahieren. Analysis Services speichert eine kurze Darstellung der Daten, die für die Analyse durch Data Mining-Algorithmen geeignet ist, in einem lokalen Cache. Sie können diesen Cache entweder beibehalten oder löschen, nachdem die Modelle verarbeitet wurden. Standardmäßig wird der Cache gespeichert. Weitere Informationen finden Sie unter [Process a Mining Structure](../../analysis-services/data-mining/process-a-mining-structure.md).  
   

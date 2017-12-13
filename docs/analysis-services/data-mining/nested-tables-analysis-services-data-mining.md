@@ -2,12 +2,12 @@
 title: "Geschachtelte Tabellen (Analysis Services – Datamining) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1a46bece83240a564845fe55c2a674d45aa668ee
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
-ms.translationtype: HT
+ms.openlocfilehash: e561111342531d5e390111282d1ca64f0b05fe17
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Geschachtelte Tabellen (Analysis Services - Data Mining)
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]müssen einem Data Mining-Algorithmus Daten in Form einer Reihe von Fällen zugeführt werden, die in einer Falltabelle enthalten sind. Nicht alle Fälle lassen sich jedoch durch eine einzelne Datenzeile beschreiben. So kann sich ein Fall z.&nbsp;B. aus zwei Tabellen ableiten: einer Tabelle mit Kundeninformationen und einer anderen Tabelle mit den von Kunden getätigten Käufen. Ein einzelner Kunde in der Kundeninformationstabelle könnte über mehrere Elemente in der Kundenkäufe-Tabelle verfügen, weshalb es schwierig ist, die Daten in einer einzelnen Zeile zu beschreiben. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt eine eindeutige Methode zum Verarbeiten dieser Fälle bereit, indem *geschachtelte Tabellen*verwendet werden. Das Konzept von geschachtelten Tabellen wird in der folgenden Abbildung veranschaulicht.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], müssen zugeführt werden für einen Datamining-Algorithmus als eine Reihe von Fällen, die in einer Falltabelle enthalten sind. Nicht alle Fälle lassen sich jedoch durch eine einzelne Datenzeile beschreiben. So kann sich ein Fall z.&nbsp;B. aus zwei Tabellen ableiten: einer Tabelle mit Kundeninformationen und einer anderen Tabelle mit den von Kunden getätigten Käufen. Ein einzelner Kunde in der Kundeninformationstabelle könnte über mehrere Elemente in der Kundenkäufe-Tabelle verfügen, weshalb es schwierig ist, die Daten in einer einzelnen Zeile zu beschreiben. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt eine eindeutige Methode zum Verarbeiten dieser Fälle bereit, indem *geschachtelte Tabellen*verwendet werden. Das Konzept von geschachtelten Tabellen wird in der folgenden Abbildung veranschaulicht.  
   
  ![Zwei Tabellen mit einer geschachtelten Tabelle kombiniert](../../analysis-services/data-mining/media/nested-tables.gif "zwei Tabellen mit einer geschachtelten Tabelle kombiniert")  
   

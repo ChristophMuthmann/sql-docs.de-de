@@ -2,12 +2,12 @@
 title: Miningmodellinhalt Entscheidungsstrukturmodellen | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e44543e26d7e1ba9ec190334babe6e2c8a992281
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9b46a11c3edc4ca3e9c735d324f961165bd022cd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Miningmodellinhalt von Entscheidungsstrukturmodellen (Analysis Services – Data Mining)
-  In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus verwenden. Eine allgemeine Erläuterung der Miningmodellinhalte für alle Modelltypen finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md). Sie sollten stets bedenken, dass der Microsoft Decision Trees-Algorithmus ein hybrider Algorithmus ist, der Modelle mit sehr unterschiedlichen Funktionen erstellen kann: Eine Entscheidungsstruktur kann Zuordnungen, Regeln oder gar lineare Regression darstellen. Der Aufbau der Struktur ist grundsätzlich gleich. Allerdings hängt die Art und Weise, in der Sie die Informationen interpretieren, vom Zweck ab, für den Sie das Modell erstellen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In diesem Thema wird beschrieben, Miningmodellinhalt, der Modellen eigen ist, mit denen die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus. Eine allgemeine Erläuterung der Miningmodellinhalte für alle Modelltypen finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md). Sie sollten stets bedenken, dass der Microsoft Decision Trees-Algorithmus ein hybrider Algorithmus ist, der Modelle mit sehr unterschiedlichen Funktionen erstellen kann: Eine Entscheidungsstruktur kann Zuordnungen, Regeln oder gar lineare Regression darstellen. Der Aufbau der Struktur ist grundsätzlich gleich. Allerdings hängt die Art und Weise, in der Sie die Informationen interpretieren, vom Zweck ab, für den Sie das Modell erstellen.  
   
 ##  <a name="bkmk_Top"></a> Grundlegendes zur Struktur von Entscheidungsstrukturmodellen  
  Ein Entscheidungsstrukturmodell verfügt über einen einzelnen übergeordneten Knoten, der das Modell und die zugehörigen Metadaten darstellt. Unterhalb des übergeordneten Knotens befinden sich unabhängige Strukturen, die die vorhersagbaren Attribute darstellen, die Sie auswählen. Wenn Sie beispielsweise Ihr Entscheidungsstrukturmodell darauf einrichten, vorherzusagen, welche Kunden etwas kaufen werden, und Angaben zu Geschlecht und Einkommen eingeben, würde das Modell eine einzelne Struktur für das Einkaufsattribut erstellen, wobei viele Zweige in Bedingungen hinsichtlich Geschlecht und Einkommen unterteilt wären.  

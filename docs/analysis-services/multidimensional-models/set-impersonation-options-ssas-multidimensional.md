@@ -2,12 +2,12 @@
 title: "Festlegen von Identitätswechseloptionen (SSAS – mehrdimensional) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b448d78a897c6e7c6aa6973b6e61b92ff7a9aade
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5758391cdcc5e216bed3ec100b254c8f5f6e3a89
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Festlegen von Identitätswechseloptionen (SSAS – mehrdimensional)
-  Wenn Sie ein **data source** -Objekt in einem Analysis Services-Modell erstellen, müssen Sie unter den verschiedenen Einstellungen eine Option für den Identitätswechsel konfigurieren. Diese Option bestimmt, ob Analysis Services die Identität eines bestimmten Windows-Benutzerkontos annimmt, wenn lokale Vorgänge im Zusammenhang mit der Verbindung ausgeführt werden, z. B. das Laden eines OLE DB-Datenanbieters oder das Auflösen von Benutzerprofilinformationen in Umgebungen, die Roamingprofile unterstützen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Beim Erstellen einer **Datenquelle** Objekt in einem Analysis Services-Modell besteht eine der Einstellungen, die Sie konfigurieren müssen, ist eine Option für den Identitätswechsel. Diese Option bestimmt, ob Analysis Services die Identität eines bestimmten Windows-Benutzerkontos annimmt, wenn lokale Vorgänge im Zusammenhang mit der Verbindung ausgeführt werden, z. B. das Laden eines OLE DB-Datenanbieters oder das Auflösen von Benutzerprofilinformationen in Umgebungen, die Roamingprofile unterstützen.  
   
  Bei Verbindungen, die Windows-Authentifizierung verwenden, bestimmt die Identitätswechseloption außerdem die Benutzeridentität, unter der Abfragen an die externe Datenquelle ausgeführt werden. Wenn Sie die Identitätswechseloption z.B. auf **contoso\dbuser**festlegen, werden Datenabfragen während der Verarbeitung als **contoso\dbuser** auf dem Datenbankserver ausgeführt.  
   

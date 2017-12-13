@@ -2,12 +2,12 @@
 title: "ADOMD.NET-Clientfunktionalität | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4573834d025c7afb066c4e363c476e8fb18c4ab7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8010335c897b279ead050e34a25b2f2833d63021
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="adomdnet-client-functionality"></a>ADOMD.NET-Clientfunktionalität
-  Wie andere [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Datenanbieter auch dient ADOMD.NET als Verbindung zwischen einer Anwendung und einer Datenquelle. Im Gegensatz zu anderen .NET Framework-Datenanbietern arbeitet ADOMD.NET jedoch mit analytischen Daten. Um das leisten zu können, unterstützt ADOMD.NET eine Funktionalität, die sich von der anderer .NET Framework-Datenanbieter erheblich unterscheidet. ADOMD.NET ermöglicht nicht nur das Abrufen von Daten, sondern auch das Abrufen von Metadaten und Änderungen an der Struktur des analytischen Datenspeichers:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ADOMD.NET wie bei anderen [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Datenanbieter auch dient als Brücke zwischen einer Anwendung und einer Datenquelle. Im Gegensatz zu anderen .NET Framework-Datenanbietern arbeitet ADOMD.NET jedoch mit analytischen Daten. Um das leisten zu können, unterstützt ADOMD.NET eine Funktionalität, die sich von der anderer .NET Framework-Datenanbieter erheblich unterscheidet. ADOMD.NET ermöglicht nicht nur das Abrufen von Daten, sondern auch das Abrufen von Metadaten und Änderungen an der Struktur des analytischen Datenspeichers:  
   
  **Abrufen von Metadaten**  
  Anwendungen können mehr über die Daten "lernen", die durch Metadatenabruf aus der Datenquelle abgerufen werden können, wobei entweder Schemarowsets oder das Objektmodell verwendet werden. Informationen, wie zum Beispiel die jeweils verfügbaren Key Performance Indicator (KPI)-Arten, die Dimensionen in einem Cube, und die von den Miningmodellen benötigten Parameter, können alle ermittelt werden. Metadaten sind am wichtigsten für *dynamische* Anwendungen, die Benutzereingaben zur Ermittlung des Typs, Tiefe und Umfang der Daten abgerufen werden müssen. Beispiele: Query Analyzer, Microsoft Excel und andere Abfragetools. Metadaten sind weniger wichtig *statische* Anwendungen, die einen vordefinierten Satz von Aktionen ausführen.  

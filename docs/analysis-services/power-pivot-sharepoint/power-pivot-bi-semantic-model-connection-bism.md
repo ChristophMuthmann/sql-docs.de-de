@@ -2,12 +2,12 @@
 title: Power Pivot BI-Semantikmodellverbindung (.bism) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 48c902ba8427101083d1f9e6d012fb15a86d9491
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3cfc29f3a8c23252afdbcee1a1487f32c2aa88f4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-bi-semantic-model-connection-bism"></a>PowerPivot BI-Semantikmodellverbindung (.bism)
-  Eine BI-Semantikmodellverbindung (BISM-Datei) ist eine portierbare Verbindung, durch die Excel- oder Power View-Berichte mit einer Analysis Services-Datenbank für tabellarische Modelle oder einer Analysis Services-Instanz im mehrdimensionalen Modus verbunden werden. Wenn Sie mit Office Data Connection-Dateien (ODC-Dateien) vertraut sind, können Sie feststellen, dass eine BISM-Verbindungsdatei ähnlich definiert und verwendet wird.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Eine BI-semantikmodellverbindung (.bism) ist eine portierbare Verbindung, die Excel- oder Power View-Berichte mit einer Analysis Services-Tabellenmodell-Datenbank oder einer Analysis Services-Instanz im mehrdimensionalen Modus. Wenn Sie mit Office Data Connection-Dateien (ODC-Dateien) vertraut sind, können Sie feststellen, dass eine BISM-Verbindungsdatei ähnlich definiert und verwendet wird.  
   
  Die Erstellung und der Zugriff auf eine BI-Semantikmodellverbindung erfolgt über SharePoint. Beim Erstellen von BI-Semantikmodellverbindungen werden Schnellstartbefehle für eine BI-Semantikmodellverbindung in einer Bibliothek aktiviert. Schnellstartbefehle öffnen eine neue Excel-Arbeitsmappe oder Optionen zum Bearbeiten der Verbindungsdatei. Wenn Reporting Services installiert ist, sehen Sie auch einen Befehl, um einen [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Bericht zu erstellen.  
   

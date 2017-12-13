@@ -2,12 +2,12 @@
 title: "Mehrdimensionale Modelllösungsbereitstellung | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cba427cba20a443179621758dabc8d56b1104152
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4ea62c1e36451be1c18362073bd917e2376e1e51
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="multidimensional-model-solution-deployment"></a>Mehrdimensionale Modelllösungsbereitstellung
-  Nachdem Sie die Entwicklung eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts abgeschlossen haben, können Sie die Datenbank auf einem Analysis Services-Server bereitstellen. Analysis Services bietet sechs mögliche Bereitstellungsmethoden, die zum Umlagern der Datenbank auf einen Test- oder Produktionsserver verwendet werden können. Die Methoden werden nach ihren Vorteilen aufgelistet: AMO-Automatisierung, XMLA, Bereitstellungs-Assistent, Bereitstellungshilfsprogramm, Synchronisations-Assistent sowie Sicherung und Wiederherstellung.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Nach Abschluss die Entwicklung einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt können Sie die Datenbank auf einem Analysis Services-Server bereitstellen. Analysis Services bietet sechs mögliche Bereitstellungsmethoden, die zum Umlagern der Datenbank auf einen Test- oder Produktionsserver verwendet werden können. Die Methoden werden nach ihren Vorteilen aufgelistet: AMO-Automatisierung, XMLA, Bereitstellungs-Assistent, Bereitstellungshilfsprogramm, Synchronisations-Assistent sowie Sicherung und Wiederherstellung.  
   
  Dieses Thema enthält folgende Abschnitte:  
   

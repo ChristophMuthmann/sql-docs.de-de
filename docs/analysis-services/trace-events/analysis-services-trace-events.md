@@ -2,12 +2,12 @@
 title: Analysis Services-Ablaufverfolgungsereignisse | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 72e9e9352f5eaba5ca528cebfcd45fb6ca2917de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bda0bd4dac6b7f60bbda2fd9562af9fa2ebe9abb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-trace-events"></a>Analysis Services-Ablaufverfolgungsereignisse
-  Sie können der Aktivität einer Microsoft SQL Server Analysis Services (SSAS)-Instanz verfolgen, indem Sie die von der Instanz generierten Ablaufverfolgungsereignisse erfassen und anschließend analysieren.  Ablaufverfolgungsereignisse werden so gruppiert, dass verwandte Ablaufverfolgungsereignisse einfacher gefunden werden können.  Jedes Ablaufverfolgungsereignis enthält einen Satz von Daten, der für das Ereignis relevant ist. Nicht alle Datenelemente sind für sämtliche Ereignisse von Bedeutung.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sie können die Aktivität einer Microsoft SQL Server Analysis Services (SSAS)-Instanz durch Aufzeichnen und Analysieren anschließend die von der Instanz generierten Ablaufverfolgungsereignisse folgen.  Ablaufverfolgungsereignisse werden so gruppiert, dass verwandte Ablaufverfolgungsereignisse einfacher gefunden werden können.  Jedes Ablaufverfolgungsereignis enthält einen Satz von Daten, der für das Ereignis relevant ist. Nicht alle Datenelemente sind für sämtliche Ereignisse von Bedeutung.  
   
  Ablaufverfolgungsereignisse können mithilfe von **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**gestartet und aufgezeichnet werden (siehe [Verwenden von SQL Server Profiler zum Überwachen von Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)). Alternativ können sie mit einem XMLA-Befehl als **Erweiterte Ereignisse von SQL Server** gestartet und später analysiert werden (siehe [Überwachen von Analysis Services mit den erweiterten Ereignissen von SQL Server](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)).  
   

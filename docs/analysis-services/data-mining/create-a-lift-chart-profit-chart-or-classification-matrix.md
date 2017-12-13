@@ -2,12 +2,12 @@
 title: "Erstellen Sie ein Prognosegütediagramm, Gewinndiagramm oder Klassifikationsmatrix | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 651223b9903c231f15ab4232c180b7432411e726
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4b4e29848a830cde36521967265eba3de8b9929c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Erstellen von Prognosegütediagrammen, Gewinndiagrammen oder Klassifikationsmatrizen
-  Sie können für ein Data Mining-Modell in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mit fünf grundlegenden Schritten ein Genauigkeitsdiagramm erstellen:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sie können für ein Genauigkeitsdiagramm erstellen eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datamining-Modell in fünf grundlegenden Schritten:  
   
 -   Wählen Sie die Miningstruktur aus, die die zu vergleichenden Miningmodelle enthält.  
   

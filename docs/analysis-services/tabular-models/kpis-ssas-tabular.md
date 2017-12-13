@@ -2,12 +2,12 @@
 title: "KPIs (SSAS – tabellarisch) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9c3c91a755b50ffc1dc51d305589f17322584854
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2e5c74ba7ae5a96646364ffebf4895af1999319b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="kpis"></a>KPIs (Key Performance Indicators)
-  Ein *KPI* (Key Performance Indicator) wird in einem Tabellenmodell verwendet, um die Leistung eines durch ein *Basismeasure* definierten Werts im Vergleich zu einem *Zielwert* zu messen, der ebenfalls durch ein Measure oder einen absoluten Wert definiert wird. Dieses Thema bietet Entwicklern von tabellarischen Modellen einen grundlegenden Überblick der in einem Tabellenmodell verwendeten KPIs.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Ein *KPI* (Key Performance Indicator) wird in einem tabellarischen Modell dient zur Messung der Leistung eines Werts, der definiert, indem Sie eine *Base* Measure gegen eine *Ziel* auch durch definierten Werts im ein Measure oder einen absoluten Wert. Dieses Thema bietet Entwicklern von tabellarischen Modellen einen grundlegenden Überblick der in einem Tabellenmodell verwendeten KPIs.  
   
 ##  <a name="bkmk_benefits"></a> Vorteile  
  Key Performance Indicator (KPI) ist ein Begriff aus der Wirtschaft, der eine quantifizierbare Maßeinheit zur Messung der Umsetzung von Geschäftszielen darstellt. KPIs werden im Lauf der Zeit häufig ausgewertet. Die Vertriebsabteilung eines Unternehmens könnte KPIs beispielsweise verwenden, um den monatlichen Bruttogewinn mit dem vorausgesagten Bruttogewinn zu vergleichen. Die Buchhaltung könnte die monatlichen Ausgaben und Einnahmen gegenüberstellen, um eine Kostenauswertung vorzunehmen, und die Personalabteilung könnte den Quartalsumsatz pro Mitarbeiter ermitteln. Beides sind Beispiele für KPIs. Um eine schnelle und genaue Verlaufsübersicht ihrer Geschäftserfolge zu erhalten und Trends zu erkennen, greifen Fachanwender oft auf KPIs zurück, die in geschäftlichen Kennzahlensystemen gruppiert werden.  

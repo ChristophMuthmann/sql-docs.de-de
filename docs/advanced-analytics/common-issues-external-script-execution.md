@@ -3,8 +3,11 @@ title: "Häufige Probleme mit der externen skriptausführung in SQL Server | Mic
 ms.custom: SQL2016_New_Updated
 ms.date: 10/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: r-services
+ms.service: 
+ms.component: advanced-analytics
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 145faefb97db368d499ebc33c09ca79fa49cde60
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
-ms.translationtype: HT
+ms.openlocfilehash: e1dfc244fbe77d7938853cf6c1109e190c464436
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>Häufige Probleme mit der externen skriptausführung in SQL Server
 

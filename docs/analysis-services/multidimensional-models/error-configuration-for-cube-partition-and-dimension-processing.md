@@ -2,12 +2,12 @@
 title: "Fehlerkonfiguration für die Dimensionsverarbeitung von Cubes, Partition und | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2c6a984d44c17375d1bd33482ec6c1f26fcb29ef
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 29e105e78a46e1917b2fc2902db4256edc2ba099
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>Fehlerkonfiguration für die Dimensionsverarbeitung von Cubes, Partition und
-  Anhand von Fehlerkonfigurationseigenschaften für Cube-, Partitions- oder Dimensionsobjekte wird bestimmt, wie der Server während der Verarbeitung auf Datenintegritätsfehler reagiert. Diese Fehler werden normalerweise durch doppelte Schlüssel, fehlende Schlüssel und NULL-Werte in einer Schlüsselspalte ausgelöst. Dabei wird der Datensatz, der den Fehler verursacht hat, der Datenbank nicht hinzugefügt. Mithilfe von Eigenschaften können Sie die nächsten auszuführenden Schritte festlegen. Standardmäßig wird die Verarbeitung beendet. Manchmal ist es während der Cubeentwicklung jedoch erwünscht, dass die Verarbeitung bei Fehlern fortgesetzt wird, z. B. um das Cubeverhalten mit importierten und sogar unvollständigen Daten zu testen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Fehlerkonfigurationseigenschaften für Cube-, Partitions- oder dimensionsobjekte wird bestimmt, wie der Server reagiert, wenn Daten während der Verarbeitung auf. Diese Fehler werden normalerweise durch doppelte Schlüssel, fehlende Schlüssel und NULL-Werte in einer Schlüsselspalte ausgelöst. Dabei wird der Datensatz, der den Fehler verursacht hat, der Datenbank nicht hinzugefügt. Mithilfe von Eigenschaften können Sie die nächsten auszuführenden Schritte festlegen. Standardmäßig wird die Verarbeitung beendet. Manchmal ist es während der Cubeentwicklung jedoch erwünscht, dass die Verarbeitung bei Fehlern fortgesetzt wird, z. B. um das Cubeverhalten mit importierten und sogar unvollständigen Daten zu testen.  
   
  Dieses Thema enthält folgende Abschnitte:  
   

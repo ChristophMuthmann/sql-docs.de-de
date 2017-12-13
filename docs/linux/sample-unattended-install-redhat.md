@@ -2,8 +2,8 @@
 title: "Unbeaufsichtigte Installation für SQL Server unter Red Hat Enterprise Linux | Microsoft Docs"
 description: SQL Server-Skript-Beispiel - unbeaufsichtigte Installation unter Red Hat Enterprise Linux
 author: edmacauley
-ms.author: edmacauley
-manager: jhubbard
+ms.author: edmaca
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 8f352dcf0f646cd259a1163a5c752f233ed16393
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
+ms.openlocfilehash: 93e6520d3d2c15559ee001742bf58fa897814e3d
+ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Beispiel: Für die unbeaufsichtigte SQL Server-Installationsskript für Red Hat Enterprise Linux
 
@@ -39,7 +39,7 @@ Dieses Beispielskript für die Bash installiert SQL Server 2017 auf Red Hat Ente
 Speichern Sie das Beispielskript in einer Datei und um ihn anzupassen, ersetzen Sie die Variablenwerte in das Skript. Sie können auch eine der Skriptvariablen als Umgebungsvariablen, festlegen solange Sie sie aus der Skriptdatei entfernen.
 
 ```bash
-#!/bin/bash
+#!/bin/bash -eu
 
 # Use the following variables to control your install:
 

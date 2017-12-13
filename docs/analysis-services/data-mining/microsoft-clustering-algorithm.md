@@ -2,12 +2,12 @@
 title: Microsoft Clustering-Algorithmus | Microsoft Docs
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2d569cea784548d1e6869868f3f2e0030927b96e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cb57075143154d8e317350625b6ac602dc241597
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-clustering-algorithm"></a>Microsoft Clustering-Algorithmus
-  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Clusteringalgorithmus ist ein *Segmentierungs-* oder *Clustering* -Algorithmus, der Fälle in einem Dataset durchläuft, um diese in Cluster mit ähnlichen Merkmalen zu gruppieren. Diese Gruppierungen eignen sich zum Durchsuchen von Daten, Identifizieren von Datenanomalien und Erstellen von Vorhersagen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering-Algorithmus ist ein *Segmentierung* oder *clustering* Algorithmus, der Fälle in einem Dataset, um diese in Clustern zu gruppieren, die ähnliche Merkmale enthalten durchläuft. Diese Gruppierungen eignen sich zum Durchsuchen von Daten, Identifizieren von Datenanomalien und Erstellen von Vorhersagen.  
   
  Clustermodelle identifizieren Beziehungen in einem Dataset, die bei einer einfachen Betrachtung der Daten nicht unbedingt zu erkennen sind. Sie können z.B. einfach davon ausgehen, dass Personen, die mit dem Fahrrad zur Arbeit fahren, für gewöhnlich nicht weit von ihren Arbeitsplätzen entfernt wohnen. Der Algorithmus kann jedoch nach anderen Merkmalen von Fahrradpendlern suchen, die nicht so klar auf der Hand liegen. In dem folgenden Diagramm zeigt Cluster A Daten zu Personen, die dazu tendieren, mit dem Auto zur Arbeit fahren, während Cluster B Daten zu Personen zeigt, die dazu tendieren, mit dem Fahrrad zur Arbeit zu fahren.  
   

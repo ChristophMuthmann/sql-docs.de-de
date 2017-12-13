@@ -2,12 +2,12 @@
 title: Analysis Services-Skriptprojekt in SQL Server Management Studio | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c974474663bf17f49f235ef57983a61196054d16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e849993eeda199ad134f21b80872828993803d14
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>Analysis Services-Skriptprojekt in SQL Server Management Studio
-  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie Analysis-Server-Skriptprojekt in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] erstellen, um einander ähnliche Skripts zu Entwicklungs-, Verwaltungs- und Quellcodeverwaltungszwecken in einer Gruppe zusammenzufassen. Falls noch keine Projektmappe in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]geladen ist, wird beim Erstellen eines neuen Skriptprojekts von Analysis-Server automatisch eine neue Projektmappe erstellt. Andernfalls kann das neue Skriptprojekt von Analysis-Server der vorhandenen Projektmappe hinzugefügt oder in einer neuen Projektmappe erstellt werden.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], erstellen ein skriptprojekts von Analysis-Server in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zum Gruppieren von einander ähnliche Skripts zu Entwicklungs-, Verwaltungs- und quellcodeverwaltungszwecken. Falls noch keine Projektmappe in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]geladen ist, wird beim Erstellen eines neuen Skriptprojekts von Analysis-Server automatisch eine neue Projektmappe erstellt. Andernfalls kann das neue Skriptprojekt von Analysis-Server der vorhandenen Projektmappe hinzugefügt oder in einer neuen Projektmappe erstellt werden.  
   
  Zum Erstellen eines Skriptprojekts von Analysis-Server in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]gehen Sie die folgenden grundlegenden Schritte durch:  
   

@@ -2,12 +2,12 @@
 title: Measures und Measuregruppen | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f02584f0daf175439fb51e3afac34e6b4a328f52
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a800041d5a0f98760e1359c5eee93c706859e020
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="measures-and-measure-groups"></a>Measures und Measuregruppen
-  Ein Cube enthält *Measures* in *Measuregruppen*, Geschäftslogik sowie eine Sammlung von Dimensionen, die Kontext für die Auswertung der numerischen Daten eines Measures bereitstellen. Measures und Measuregruppen sind wesentliche Bestandteile eines Cubes. Ein Cube kann ohne mindestens eines dieser Elemente nicht bestehen.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ein Cube enthält *Measures* in *Measuregruppen*, Geschäftslogik sowie eine Auflistung von Dimensionen, die Kontext für die Auswertung der numerischen Daten, die ein Measure enthält. Measures und Measuregruppen sind wesentliche Bestandteile eines Cubes. Ein Cube kann ohne mindestens eines dieser Elemente nicht bestehen.  
   
  In diesem Thema werden [Measures](#bkmk_measure) und [Measure Groups](#bkmk_mg)beschrieben. Außerdem enthält es die folgende Tabelle mit Links zu Schritten zum Erstellen und Konfigurieren von Measures und Measuregruppen.  
   

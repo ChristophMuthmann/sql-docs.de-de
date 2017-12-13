@@ -2,12 +2,12 @@
 title: Inhaltsabfragen (Datamining) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 45a912354d122eadb7008c2ff260366fa46770fe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c32111e19274ecd744f968c7ce128a924487f22c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="content-queries-data-mining"></a>Inhaltsabfragen (Data Mining)
-  Eine Inhaltsabfrage stellt eine Möglichkeit dar, Informationen über interne Statistiken und die Struktur des Miningmodells zu extrahieren. Mitunter enthält eine Inhaltsabfrage Details, die im Viewer nicht unmittelbar verfügbar sind. Sie können auch die Ergebnisse einer Inhaltsabfrage verwenden, um Informationen programmgesteuert zu anderen Verwendungszwecken zu extrahieren.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Eine Inhaltsabfrage stellt eine Möglichkeit, Informationen über interne Statistiken und die Struktur des Miningmodells zu extrahieren. Mitunter enthält eine Inhaltsabfrage Details, die im Viewer nicht unmittelbar verfügbar sind. Sie können auch die Ergebnisse einer Inhaltsabfrage verwenden, um Informationen programmgesteuert zu anderen Verwendungszwecken zu extrahieren.  
   
  Dieser Abschnitt enthält allgemeine Informationen über die Art der Informationen, die Sie mit einer Inhaltsabfrage abrufen können, sowie die allgemeine DMX-Syntax für Inhaltsabfragen.  
   

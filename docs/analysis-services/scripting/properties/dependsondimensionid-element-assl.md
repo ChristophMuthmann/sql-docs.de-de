@@ -2,12 +2,12 @@
 title: DependsOnDimensionID-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 642a9391256bc863bcecc9a6ab3a378d9a3fa7ff
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8792bca1ee0cc060aff1fce1514c613e217307a8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dependsondimensionid-element-assl"></a>DependsOnDimensionID-Element (ASSL)
-  Enthält den Bezeichner (ID) einer anderen Dimension, von der die übergeordnete Dimension abhängt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält den Bezeichner (ID) einer anderen Dimension, von denen die übergeordnete Dimension abhängt.  
   
 ## <a name="syntax"></a>Syntax  
   

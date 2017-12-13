@@ -2,12 +2,12 @@
 title: Berechnet die Darstellung einer Spalte (tabellarisch) | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c1817234c6a3061afc53377053725009babbcc84
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9b781ff43a5fbcbb9d8a2a58837a1546724e2338
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tables---calculated-column-representation"></a>Tabellen - Darstellung einer berechneten Spalte
-  Eine berechnete Spalte ist ein DAX-Ausdruck, der eine neue Spalte in einer Tabelle erstellt. Die abgerufenen Werte werden in der Tabelle gespeichert. Der berechnete Spaltenausdruck wird bei jeder Verarbeitung der Tabelle ausgewertet.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Eine berechnete Spalte ist ein DAX-Ausdruck, der eine neue Spalte in einer Tabelle erstellt, und die abgerufenen Werte werden in der Tabelle gespeichert. Der berechnete Spaltenausdruck wird bei jeder Verarbeitung der Tabelle ausgewertet.  
   
 ## <a name="calculated-column-representation"></a>Darstellung einer berechneten Spalte  
   

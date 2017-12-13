@@ -2,12 +2,12 @@
 title: Objekte (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5001e7e5bf73b632432aa761c22a72440999aacc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e82e2852373d7df18c244ab53487d7b19e96783b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="xml-elements---objects"></a>XML-Elemente - Objekte
-  Die XML for Analysis (XMLA)-Protokoll verwendet zwei Methoden, **Discover** und **Execute**, um ein gängiges Verfahren für Anwendungen, um den Zugriff auf Informationen in einer Instanz von bieten [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Da diese Methode mithilfe des SOAP-Protokolls (Simple Object Access Protocol) aufgerufen werden, unterstützen sie XML-Eingaben und liefern XML-Ausgaben.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Die XML for Analysis (XMLA)-Protokoll verwendet zwei Methoden, **Discover** und **Execute**, um ein gängiges Verfahren für Anwendungen, um den Zugriff auf Informationen in einer Instanz von bieten [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Da diese Methode mithilfe des SOAP-Protokolls (Simple Object Access Protocol) aufgerufen werden, unterstützen sie XML-Eingaben und liefern XML-Ausgaben.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  In den folgenden Themen werden die von [!INCLUDE[ssAS](../../includes/ssas-md.md)] implementierten XMLA-Objekte beschrieben.  

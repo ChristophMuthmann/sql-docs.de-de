@@ -2,12 +2,12 @@
 title: Angeben des Inhalts einer Abfrageachse (MDX) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c58b048b5452719382c45c9c160293d5d7b6918f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9b7100066015b84fafb6ed11428b318ef79fc78d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-query-axis"></a>MDX Abfrage- und Slicerachsen - Geben Sie den Inhalt einer Abfrageachse
-  Abfrageachsen geben die Kanten eines Cellsets an, die von einer SELECT-Anweisung von MDX (Multidimensional Expressions) zurückgegeben wird. Durch Angeben der Kanten eines Cellsets können Sie die zurückgegebenen Daten einschränken, die für den Client sichtbar sind.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Abfrageachsen geben die Kanten eines cellSets von einer SELECT-Anweisung von MDX (Multidimensional Expressions) zurückgegeben. Durch Angeben der Kanten eines Cellsets können Sie die zurückgegebenen Daten einschränken, die für den Client sichtbar sind.  
   
  Sie geben Abfrageachsen an, indem Sie einer Menge mithilfe eines `<SELECT query axis clause>` -Wertes eine bestimmte Abfrageachse zuweisen. Jeder `<SELECT query axis clause>` -Wert definiert eine Abfrageachse. Die Anzahl der Achsen im Dataset entspricht der Anzahl von `<SELECT query axis clause>` -Werten in der SELECT-Anweisung.  
   

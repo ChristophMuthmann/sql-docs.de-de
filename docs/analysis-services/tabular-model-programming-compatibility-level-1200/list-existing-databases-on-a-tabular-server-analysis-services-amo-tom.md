@@ -2,12 +2,12 @@
 title: Listet die vorhandene Datenbanken auf einem tabellarischen Server (Analysis Services AMO-TOM) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 25b6f8ef54de536c47b3a5df4a6d8ed3b6d627de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 79563e4a6bcbcbf5aa52e903b81cb9c3fcb9639c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="list-existing-databases-on-a-tabular-server-analysis-services-amo-tom"></a>Listet die vorhandene Datenbanken auf einem tabellarischen Server (Analysis Services AMO-TOM)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-Wenn Sie haben eine **Server** Objekt, mit einer Analysis Services-Instanz verbunden, Sie können eine Iteration durch **Server.Databases** -Auflistung, um die Liste aller Datenbanken, die von der Anlaysis-Services-Instanz gehostet wird. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Wenn Sie haben eine **Server** Objekt, mit einer Analysis Services-Instanz verbunden, Sie können eine Iteration durch **Server.Databases** -Auflistung, um die Liste aller Datenbanken, die von der Anlaysis-Services-Instanz gehostet wird. 
 
 Die **Server.Databases** Auflistung enthält ein **Datenbank** Objekt für jede Datenbank auf dem Server, unabhängig vom Servermodus (mehrdimensional oder tabellarisch) oder Datenbanktyp (mehrdimensional, gehostet Tabellarische Pre-1200 oder tabellarischen 1200 oder höher). 
 

@@ -2,12 +2,12 @@
 title: "Tools und Ansätze zum Verarbeiten (Analysis Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 597c60a56702d8c7726957e26e02055f85b3b49f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ad1cff7114e6891af5cdf54cfc29b658213c6bb4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Tools und Ansätze zum Verarbeiten (Analysis Services)
-  Die Verarbeitung ist ein Vorgang, bei dem Analysis Services Daten aus einer relationalen Datenquelle abfragt und Analysis Services-Objekte mit diesen Daten auffüllt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Verarbeitung ist ein Vorgang in dem Analysis Services eine relationalen Datenquelle abfragt und Analysis Services-Objekte, die mit diesen Daten auffüllt.  
   
  Als Analysis Services-Systemadministrator können Sie die Verarbeitung der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte mithilfe der folgenden Ansätze ausführen und überwachen:  
   

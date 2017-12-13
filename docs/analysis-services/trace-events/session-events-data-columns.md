@@ -2,12 +2,12 @@
 title: "Datenspalten für Sitzungsereignisse | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6692609a547efbe6baa2be620d5405f634e5d5dd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 663170f53391f844b6b94bcb5ffb615f150d0eed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="session-events-data-columns"></a>Datenspalten für Sitzungsereignisse
-  Die Sitzungsereignisse-Ereigniskategorie weist folgende Ereignisklasse auf:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die Sitzungsereignisse-Ereigniskategorie weist folgende Ereignisklasse:  
   
 |**Ereignis-ID**|**Ereignisname**|**Ereignisbeschreibung**|  
 |------------------|--------------------|---------------------------|  

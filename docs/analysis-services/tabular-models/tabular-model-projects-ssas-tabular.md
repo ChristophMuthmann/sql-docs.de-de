@@ -2,12 +2,12 @@
 title: "Tabellenmodellprojekte (SSAS – tabellarisch) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0b71248949c16481dca0649fa86722477a46f231
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d6422eb1648f33f699525edbc944f3bc0b4c5519
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabular-model-projects-ssas-tabular"></a>Tabellenmodellprojekte (SSAS – tabellarisch)
-  Zum Erstellen eines neuen tabellarischen Modells müssen Sie zunächst ein neues Projekt für tabellarische Modelle in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]anlegen. Wenn Sie [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]installieren, werden drei neue Business Intelligence-Projektvorlagen zum Erstellen von Projekten für tabellarische Modelle bereitgestellt. Jede Projektvorlage stellt einen Bezugsrahmen für die Erstellung von Modellen bereit. In diesem Abschnitt wird beschrieben, wie ein neues Projekt für tabellarische Modelle mithilfe von Projektvorlagen erstellt wird.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Um ein neues tabellarisches Modell zu erstellen, müssen Sie zunächst ein neues Projekt für tabellarische Modelle in erstellen [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Wenn Sie [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]installieren, werden drei neue Business Intelligence-Projektvorlagen zum Erstellen von Projekten für tabellarische Modelle bereitgestellt. Jede Projektvorlage stellt einen Bezugsrahmen für die Erstellung von Modellen bereit. In diesem Abschnitt wird beschrieben, wie ein neues Projekt für tabellarische Modelle mithilfe von Projektvorlagen erstellt wird.  
   
 ## <a name="related-tasks"></a>Verwandte Aufgaben  
   

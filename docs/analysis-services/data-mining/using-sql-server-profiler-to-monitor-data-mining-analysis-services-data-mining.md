@@ -2,12 +2,12 @@
 title: "SQL Server Profiler zum Überwachen von Datamining mit | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f3a8a59a9bea7f2e11d4ec3d68d5ad2dcd28ec6a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 98bafd9d594d06ea85330d8affc47969bbcab43f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>Verwenden von SQL Server Profiler zum Überwachen von Data Mining (Analysis Services – Data Mining)
-  Wenn Sie über die erforderlichen Berechtigungen verfügen, können Sie SQL Server Profiler zum Überwachen von Data Mining-Aktivitäten verwenden, die als Anforderungen an eine Instanz von SQL Server Analysis Services gesendet werden. Zu Data Mining-Aktivitäten können die Verarbeitung von Modellen oder Strukturen, Vorhersage- und Inhaltsabfragen sowie die Erstellung neuer Modelle oder Strukturen gehören.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Wenn Sie die erforderlichen Berechtigungen verfügen, können Sie SQL Server Profiler, Datamining-Aktivitäten überwachen, die als Anforderungen, die mit einer Instanz von SQL Server Analysis Services gesendet ausgegeben werden. Zu Data Mining-Aktivitäten können die Verarbeitung von Modellen oder Strukturen, Vorhersage- und Inhaltsabfragen sowie die Erstellung neuer Modelle oder Strukturen gehören.  
   
  SQL Server Profiler verwendet eine **Ablaufverfolgung** , um von verschiedenen Clients stammende Anforderungen zu überwachen – einschließlich [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], SQL Server Management Studio, Web-Dienste oder die Data Mining-Add-Ins für Excel. Dabei müssen jedoch alle Aktivitäten dieselbe SQL Server Analysis Services-Instanz nutzen. Sie müssen für jede zu überwachende Instanz von SQL Server Analysis Services eine separate Ablaufverfolgung erstellen. Allgemeine Informationen zu Ablaufverfolgungen und der Verwendung von SQL Server Profiler finden Sie unter [Verwenden von SQL Server Profiler zum Überwachen von Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
   

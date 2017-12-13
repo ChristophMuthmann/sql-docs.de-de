@@ -2,12 +2,12 @@
 title: Tables-Objekt (TMSL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d681a36710cdc096739f2c4e5f6f13afeb3ac8cc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 85e0d667cc7ad89533dd9df7ced0a68e6e7ae8a7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tables-object-tmsl"></a>Tables-Objekt (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Definiert in einem Modell enthaltenen Tabellen an. Tabellen in einem Modell sind entweder gebunden, um Tabellen in einer externen Datenbank, aus der Daten importiert oder abgefragt werden, oder eine berechnete Tabelle aus einer DAX-Ausdruck erstellt. Innerhalb einer Tabelle, eine oder mehrere **Partition** Objekte beschreiben die Quelle der Daten.  Zwischen Tabellen eine **Beziehung** Objekt gibt an, die Kardinalität, Filter und andere Eigenschaften der Beziehung.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Definiert in einem Modell enthaltenen Tabellen an. Tabellen in einem Modell sind entweder gebunden, um Tabellen in einer externen Datenbank, aus der Daten importiert oder abgefragt werden, oder eine berechnete Tabelle aus einer DAX-Ausdruck erstellt. Innerhalb einer Tabelle, eine oder mehrere **Partition** Objekte beschreiben die Quelle der Daten.  Zwischen Tabellen eine **Beziehung** Objekt gibt an, die Kardinalität, Filter und andere Eigenschaften der Beziehung.  
   
 ## <a name="object-definition"></a>Objektdefinition  
  Alle Objekte verfügen über einen gemeinsamen Satz von Eigenschaften, einschließlich Name, Typ, Beschreibung, eine eigenschaftsauflistung und Anmerkungen. **Tabelle** Objekte verfügen außerdem über die folgenden Eigenschaften.  

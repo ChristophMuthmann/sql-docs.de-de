@@ -2,12 +2,12 @@
 title: "Überwachen einer Instanz von Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6fafa9acf07ddd88cfeb66f6328a4f0da99512d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 69cc17afa5a35844a76f838993630cecf49b0bed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Überwachen einer Instanz von Analysis Services
-  Sie können die Leistung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] überwachen, indem Sie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] oder den Systemmonitor verwenden, der manchmal auch als **PerfMon**bezeichnet wird. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] erstellen und verwalten Sie Ablaufverfolgungen und können Ablaufverfolgungsergebnisse analysieren und wiedergeben. Systemmonitor-Berichte zum Serverstatus, die im Index unter den jeweiligen Leistungsindikatoren zu finden sind, werden im nächsten Abschnitt erläutert.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sie können die Leistung überwachen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] oder den Systemmonitor, auch bezeichnet als **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] erstellen und verwalten Sie Ablaufverfolgungen und können Ablaufverfolgungsergebnisse analysieren und wiedergeben. Systemmonitor-Berichte zum Serverstatus, die im Index unter den jeweiligen Leistungsindikatoren zu finden sind, werden im nächsten Abschnitt erläutert.  
   
 > [!NOTE]  
 >  Weitere Informationen zur Überwachung finden Sie im [SQL Server 2008 R2-Vorgangshandbuch](http://go.microsoft.com/fwlink/?LinkID=225539).  

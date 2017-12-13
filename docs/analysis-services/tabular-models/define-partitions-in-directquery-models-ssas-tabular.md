@@ -2,12 +2,12 @@
 title: "Definieren von Partitionen im DirectQuery-Modelle (SSAS – tabellarisch) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0b680877b5ac907e143222b029d5d717145d3c2a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2af8137f3063c4403c728e229c1836d5111bc927
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-partitions-in-directquery-models"></a>Definieren von Partitionen im DirectQuery-Modellen
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  In diesem Abschnitt wird erläutert, wie Partitionen in DirectQuery-Modellen verwendet werden. Allgemeinere Informationen zu Partitionen in Tabellenmodellen finden Sie unter [Partitionen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]In diesem Abschnitt wird erläutert, wie Partitionen im DirectQuery-Modelle verwendet werden. Allgemeinere Informationen zu Partitionen in Tabellenmodellen finden Sie unter [Partitionen &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
 > [!NOTE]  
 >  Obwohl eine Tabelle über mehrere Partitionen verfügen kann, kann im DirectQuery-Modus nur eine von ihnen für die Verwendung in der Abfrageausführung festgelegt werden. Die Anforderung einer einzelnen Partition gilt für DirectQuery-Modelle in allen Kompatibilitätsgraden.  

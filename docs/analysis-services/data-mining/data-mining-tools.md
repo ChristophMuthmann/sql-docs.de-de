@@ -2,12 +2,12 @@
 title: Datamining-Tools | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a39d648c6e9a7abb24c1c5a936fa1908b4ddd91a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d47b9015ba7635a7392639fbc8a7e1ca5ff73d13
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-tools"></a>Data Mining-Tools
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt die folgenden Tools zum Erstellen von Data Mining-Lösungen bereit:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt die folgenden Tools, die Sie verwenden können, um Datamining-Lösungen zu erstellen:  
   
 -   Der **Data Mining-Assistent** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] erleichtert das Erstellen von Miningstrukturen und Miningmodellen aus relationalen Datenquellen oder mehrdimensionalen Daten in Würfeln.  
   

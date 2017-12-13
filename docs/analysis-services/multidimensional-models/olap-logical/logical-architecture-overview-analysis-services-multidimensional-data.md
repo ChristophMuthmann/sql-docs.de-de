@@ -2,12 +2,12 @@
 title: "Übersicht über logische Architektur (Analysis Services – mehrdimensionale Daten) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 356eff5190638e3ac2086b1839649b99dc788699
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7a73988ba44bc7f72d8541fb6db445c2a3958554
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Übersicht über logische Architektur (Analysis Services – Mehrdimensionale Daten)
-  Analysis Services wird in einem Serverbereitstellungsmodus ausgeführt, durch den die von den unterschiedlichen Analysis Services-Modelltypen verwendete Arbeitsspeicherarchitektur und Laufzeitumgebung bestimmt wird. Der Servermodus wird während der Installation bestimmt. **Mehrdimensionale und Data Mining-Modus** herkömmliches OLAP und Datamining unterstützt. **Tabellenmodus** tabellarische Modelle unterstützt. **Im integrierten SharePoint-Modus** bezieht sich auf einer Instanz von Analysis Services, die als installiert wurde [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint, zum Laden und Abfragen von Excel oder [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Datenmodellen innerhalb einer Arbeitsmappe.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Services arbeitet in einem serverbereitstellungsmodus, der bestimmt, die Arbeitsspeicher Architektur und Common Language Runtime-Umgebung durch verschiedene Typen von Analysis Services-Modelle verwendet. Der Servermodus wird während der Installation bestimmt. **Mehrdimensionale und Data Mining-Modus** herkömmliches OLAP und Datamining unterstützt. **Tabellenmodus** tabellarische Modelle unterstützt. **Im integrierten SharePoint-Modus** bezieht sich auf einer Instanz von Analysis Services, die als installiert wurde [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint, zum Laden und Abfragen von Excel oder [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Datenmodellen innerhalb einer Arbeitsmappe.  
   
  In diesem Thema wird die grundlegende Architektur von Analysis Services bei der Ausführung im mehrdimensionalen und Data Mining-Modus erläutert. Weitere Informationen zu anderen Modi finden Sie unter [tabellarische Modellierung &#40; SSAS &#41; ](../../../analysis-services/tabular-models/tabular-models-ssas.md) und [Vergleichen von tabellarischen und mehrdimensionalen Lösungen &#40; SSAS &#41; ](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   

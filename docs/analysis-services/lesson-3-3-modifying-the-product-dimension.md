@@ -2,12 +2,12 @@
 title: "Ändern der Produktdimension | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fd334585da2a88fd8dbdbd5fdad9ba2d8f403cb1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a6ff0c5e509a40c84850e281d2ab9f41246c4880
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-3-3---modifying-the-product-dimension"></a>Lektion 3 – 3 – Ändern der Produktdimension
-In den Aufgaben in diesem Thema verwenden Sie eine benannte Berechnung, um aussagekräftigere Namen für Produktlinien zur Verfügung zu stellen, definieren eine Hierarchie in der Product-Dimension, und geben den (All) -Elementnamen für die Hierarchie an. Außerdem gruppieren Sie Attribute in Anzeigeordner.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Im Bereich Tasks in diesem Thema verwenden Sie eine benannte Berechnung, um aussagekräftigere Namen für Produktlinien bereitzustellen, definieren eine Hierarchie in der Product-Dimension und geben Sie den (All)-Elementnamen für die Hierarchie. Außerdem gruppieren Sie Attribute in Anzeigeordner.  
   
 ## <a name="adding-a-named-calculation"></a>Hinzufügen einer benannten Berechnung  
 Sie können einer Tabelle in einer Datenquellensicht eine benannte Berechnung hinzufügen. In der folgenden Aufgabe erstellen Sie eine benannte Berechnung, die den vollständigen Produktliniennamen anzeigt.  

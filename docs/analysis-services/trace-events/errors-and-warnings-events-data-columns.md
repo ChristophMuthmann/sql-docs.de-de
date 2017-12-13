@@ -2,12 +2,12 @@
 title: Fehler- und Warnungsereignis-Datenspalten | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 78a12a28e4178d5839217d472d686e6e2e08f3d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5e32c6503bdd5ad2d13b1194a67d97e44d6ca12f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="errors-and-warnings-events-data-columns"></a>Fehler- und Warnungsereignis-Datenspalten
-  Die Ereigniskategorie Sicherheitsüberwachung enthält die folgenden Ereignisklassen:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die Security Audit-Ereigniskategorie enthält die folgenden Ereignisklassen:  
   
 -   Fehlerklasse  
   

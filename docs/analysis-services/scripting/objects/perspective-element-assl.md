@@ -2,12 +2,12 @@
 title: Perspective-Element (ASSL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 28368ffe071ae5139c4ea5245a0d9bea9222b7dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1c5638c91a7c092917029b49d939e03bbfc7079a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="perspective-element-assl"></a>Perspective-Element (ASSL)
-  Definiert Details für eine Perspektive eines eine [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) Element.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definiert Details für eine Perspektive eines eine [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) Element.  
   
 ## <a name="syntax"></a>Syntax  
   

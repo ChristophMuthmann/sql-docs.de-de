@@ -2,12 +2,12 @@
 title: Bidirektionale kreuzfilter-Analysis-Services - Tabellenmodelle - | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 77c84d5c262127b64ad38a2e643028120ec5da12
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bb36d45580332bdff45daae25a7de3a9e7aa2beb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-directional-cross-filters---tabular-models---analysis-services"></a>Bidirektionale kreuzfilter-- tabellenmodellen - Analysis Services
-  Neu in SQL Server 2016 ist eine integrierte Methode zum Aktivieren *bidirektionaler Kreuzfilter* in tabellarischen Modellen, durch die keine Notwendigkeit für manuell erstellte DAX-Umgehungen für die Tabellenbeziehungen übergreifende Weitergabe des Filterkontexts mehr besteht.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Neues in SQL Server 2016 ist ein integrierter Ansatz zum Aktivieren der *bidirektionale kreuzfilter* in tabellarischen Modellen entfällt das Erfordernis manuell erstellte DAX-umgehungen für die Weitergabe des filterkontexts tabellenbeziehungen.  
   
  Das Konzept lässt sich wie folgt in seine Komponenten unterteilen: Die *Kreuzfilterung* ist die Möglichkeit, einen Filterkontext für eine Tabelle basierend auf Werten in einer verknüpften Tabelle festzulegen, und *bidirektional* ist die Übertragung eines Filterkontexts an eine zweite verknüpfte Tabelle auf der anderen Seite einer Tabellenbeziehung. Wie der Name schon sagt, ist eine Segmentierung in beide Richtungen der Beziehung und nicht bloß in eine möglich.  Intern wird bei der bidirektionalen Filterung der Filterkontext so erweitert, dass eine Obermenge Ihrer Daten abgefragt wird.  
   

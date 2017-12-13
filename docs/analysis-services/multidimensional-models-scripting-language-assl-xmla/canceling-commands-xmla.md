@@ -2,12 +2,12 @@
 title: Abbrechen von Befehlen (XMLA) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -32,14 +32,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d86c304f8735cc8933fd9c466af4f58f4d980c74
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5b6e43a5c79ccce179f960053ec7adde4e407509
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="canceling-commands-xmla"></a>Abbrechen von Befehlen (XMLA)
-  Abhängigkeit von den Administrationsberechtigungen des Benutzers, der den Befehl ausgibt die ["Abbrechen"](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) -Befehl in XML for Analysis (XMLA) einen Befehl, die sich auf eine Sitzung, eine Sitzung, eine Verbindung, einem Serverprozess oder einer zugeordneten Sitzung abbrechen können oder Verbindung.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Abhängigkeit von den Administrationsberechtigungen des Benutzers, der den Befehl ausgibt die ["Abbrechen"](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) -Befehl in XML for Analysis (XMLA) einen Befehl, die sich auf eine Sitzung, eine Sitzung, eine Verbindung, einem Serverprozess oder einer zugeordneten Sitzung abbrechen können oder Verbindung.  
   
 ## <a name="canceling-commands"></a>Abbrechen von Befehlen  
  Ein Benutzer kann den zurzeit ausgeführten Befehl innerhalb des Kontexts der aktuellen expliziten Sitzung abbrechen, indem Sie senden eine **"Abbrechen"** -Befehl ohne festgelegte Eigenschaften.  

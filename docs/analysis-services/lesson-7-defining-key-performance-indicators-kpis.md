@@ -2,12 +2,12 @@
 title: 'Lektion 7: Definieren von Key Performance Indicators (KPIs) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b9c700456926c466776c1a7049efc65ece929449
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 03ae0a4bfe3c764cc0d541f99714be872029e867
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-7-defining-key-performance-indicators-kpis"></a>Lektion 7: Definieren von KPIs (Key Performance Indicator)
-In dieser Lektion erfahren Sie, wie Sie KPIs (Key Performance Indicator) in Ihrem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt definieren können. KPIs stellen ein Gerüst für die Definition serverseitiger Berechnungen bereit, die Measures für Ihr Unternehmen bereitstellen und die Darstellung der resultierenden Informationen in Standardform wiedergeben. KPIs können in Berichten, Portalen und Dashboards mithilfe von Datenzugriffs-APIs sowie [!INCLUDE[msCoName](../includes/msconame-md.md)] -Tools und Drittanbietertools angezeigt werden. KPIs sind Metadatenwrapper um reguläre Measures und andere MDX-Ausdrücke (Multidimensional Expressions). Weitere Informationen finden Sie unter [Leistungskennzahlen &#40;Key Performance Indicators, KPIs&#41; in mehrdimensionalen Modellen](../analysis-services/multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]In dieser Lektion erfahren Sie, wie definieren Sie Key Performance Indicators (KPIs) in Ihrer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Projekt. KPIs stellen ein Gerüst für die Definition serverseitiger Berechnungen bereit, die Measures für Ihr Unternehmen bereitstellen und die Darstellung der resultierenden Informationen in Standardform wiedergeben. KPIs können in Berichten, Portalen und Dashboards mithilfe von Datenzugriffs-APIs sowie [!INCLUDE[msCoName](../includes/msconame-md.md)] -Tools und Drittanbietertools angezeigt werden. KPIs sind Metadatenwrapper um reguläre Measures und andere MDX-Ausdrücke (Multidimensional Expressions). Weitere Informationen finden Sie unter [Leistungskennzahlen &#40;Key Performance Indicators, KPIs&#41; in mehrdimensionalen Modellen](../analysis-services/multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md).  
   
 > [!NOTE]  
 > Für alle Lektionen in diesem Lernprogramm sind abgeschlossene Projekte online verfügbar. Sie können jede Lektion aufrufen, indem Sie ein abgeschlossenes Projekt aus der vorherigen Lektion als Ausgangspunkt verwenden. [Klicken Sie hier](http://go.microsoft.com/fwlink/?LinkID=221866) , um die Beispielprojekte für dieses Lernprogramm herunterzuladen.  

@@ -2,12 +2,12 @@
 title: Installieren, verteilen und verweisen auf die tabellarischen Objektmodell | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a2ba71ce1ac7dcc0787e84edba3ea436bd33e25f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 60d264dccf042ec9447d92f17045f238597cd29e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="install-distribute-and-reference-the-tabular-object-model"></a>Installieren, verteilen und verweisen auf die tabellarischen Objektmodell
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-In diesem Artikel erläutert, wie herunterladen, verweisen und Verteilen von Analysis Services Tabular Objekt Model (TOM), eine c#-Klassenbibliothek zum Erstellen und verwalten tabellarische Modelle und Datenbanken in verwaltetem Code.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]In diesem Artikel erläutert, wie herunterladen, verweisen und Verteilen von Analysis Services Tabular Objekt Model (TOM), eine c#-Klassenbibliothek zum Erstellen und verwalten tabellarische Modelle und Datenbanken in verwaltetem Code.  
   
 PETER ist eine Erweiterung der AMO-Clientbibliothek (Microsoft.AnalysisServices.dll), die mit SQL Server 2016 geliefert wird. Es funktioniert mit tabellarischen Modellen, die in der SQL Server 2016-Version der tabellarischen metadatenmoduls abzielt. Um TOM verwenden zu können, müssen das Modell und die Datenbank mit dem Kompatibilitätsgrad 1200 oder höher sein.  
 

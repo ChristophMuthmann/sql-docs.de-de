@@ -2,12 +2,12 @@
 title: "Ändern die Customer-Dimension | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 44e30a4b743bad8022446bb04b86d0c3002c3fb9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 55c63a3a3d54bd92f494e11029e6ee450f0ee46c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>Lektion 3-2-ändern die Customer-Dimension
-Es gibt viele verschiedene Möglichkeiten zum Verbessern der Benutzerfreundlichkeit und Funktionalität der Dimensionen in einem Cube. Mit den Schritten in diesem Thema ändern Sie die Customer-Dimension.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Es gibt viele verschiedene Möglichkeiten, die benutzerfreundlichkeit und Funktionalität der Dimensionen in einem Cube zu erhöhen. Mit den Schritten in diesem Thema ändern Sie die Customer-Dimension.  
   
 ## <a name="renaming-attributes"></a>Umbenennen von Attributen  
 Sie können Attributnamen auf der Registerkarte **Dimensionsstruktur** des Dimensions-Designers ändern.  

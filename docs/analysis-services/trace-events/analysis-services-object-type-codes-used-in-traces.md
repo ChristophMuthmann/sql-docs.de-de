@@ -2,12 +2,12 @@
 title: Analysis Services-Objekttypcodes in ablaufverfolgungen verwendete | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e6daef93ce07609173a3595adbb409c4b13607e2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 09c8d0a538d539c54e304d220566345a96a5e2f1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-object-type-codes-used-in-traces"></a>In Ablaufverfolgungen verwendete Analysis Services-Objekttypcodes
-  Diese Seite enthält den Objekttyp (eine Zahl mit sechs Ziffern) der einzelnen Objekte in einem Analysis Services-Datenmodell. Diese Codes werden in Ablaufverfolgungsprotokollen angezeigt und dienen der Identifizierung des Objekttyps, dem eine bestimmte Sperre zugeordnet ist. Angenommen, ein Sperrtimeout in einer Datenbank zeigt den Objekttyp 100002 an, der der Datenbank-Objekttyp ist.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Diese Seite enthält den Objekttyp (eine Zahl mit sechs Ziffern) der einzelnen Objekte in einem Analysis Services-Datenmodell. Diese Codes werden in Ablaufverfolgungsprotokollen angezeigt und dienen der Identifizierung des Objekttyps, dem eine bestimmte Sperre zugeordnet ist. Angenommen, ein Sperrtimeout in einer Datenbank zeigt den Objekttyp 100002 an, der der Datenbank-Objekttyp ist.  
   
 > [!NOTE]  
 >  Unten werden weitere Codes aufgeführt. Im Ablaufverfolgungsprotokoll werden tatsächlich weniger Codes angezeigt. Die folgende umfassende Liste beinhaltet Codetypen für jedes Objekt. Allerdings stellen nur solche Objekte, die eine Sperre annehmen, einen Objekttypcode in einem Ablaufverfolgungsprotokoll dar.  
