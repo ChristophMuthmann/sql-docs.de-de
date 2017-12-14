@@ -1,5 +1,5 @@
 ---
-title: Ablaufsteuerung | Microsoft Docs
+title: Ablaufsteuerung | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,26 +16,25 @@ helpviewer_keywords:
 - SSIS control flow elements
 - SQL Server Integration Services control flow elements
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: de01c45d538cd7117b81ea55613aa66be643a2c2
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 22d33e386fb522b7b01c65d4ed87b1dac7d47e14
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="control-flow"></a>Ablaufsteuerung
-  Ein Paket besteht aus einer Ablaufsteuerung und optional einem oder mehreren Datenflüssen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt drei verschiedene Arten von ablaufsteuerungselementen bereit: Container für die Strukturen in Paketen, Tasks für die Funktionalität sowie rangfolgeneinschränkungen, mit denen die ausführbaren Dateien, Container und Tasks zu einer geordneten ablaufsteuerung verbunden.  
+  Ein Paket besteht aus einer Ablaufsteuerung und optional einem oder mehreren Datenflüssen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt drei verschiedene Arten von Ablaufsteuerungselementen bereit: Container für die Strukturen in Paketen, Tasks für die Funktionalität sowie Rangfolgeneinschränkungen, mit denen die ausführbaren Dateien, Container und Tasks zu einer geordneten Ablaufsteuerung verbunden werden.  
   
  Weitere Informationen finden Sie unter [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md), [Integration Services Containers](../../integration-services/control-flow/integration-services-containers.md)und [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md).  
   
  Im folgenden Diagramm wird eine Ablaufsteuerung mit einem Container und sechs Tasks angezeigt. Fünf Tasks sind auf Paketebene und ein Task auf Containerebene definiert. Der Task befindet sich innerhalb eines Containers.  
   
- ![Ablaufsteuerung mit sechs Tasks und Container](../../integration-services/control-flow/media/ssis-controlflowelmt.gif "Ablaufsteuerung mit sechs Tasks und Container")  
+ ![Ablaufsteuerung mit sechs Tasks und einem Container](../../integration-services/control-flow/media/ssis-controlflowelmt.gif "Ablaufsteuerung mit sechs Tasks und einem Container")  
   
  Die Architektur von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützt das Schachteln von Containern, und eine Ablaufsteuerung kann mehrere Ebenen geschachtelter Container einschließen. Beispielsweise könnte ein Paket einen Foreach-Schleifencontainer enthalten, der wiederum einen Foreach-Schleifencontainer enthält usw.  
   
@@ -47,7 +45,7 @@ ms.lasthandoff: 08/03/2017
   
  Im folgenden Diagramm wird die Ablaufsteuerung eines einfachen Pakets im Ablaufsteuerungs-Designer angezeigt. Die dargestellte Ablaufsteuerung besteht aus drei Tasks auf Paketebene und einem Container auf Paketebene, der drei Tasks enthält. Die Tasks und Container sind mithilfe von Rangfolgeneinschränkungen miteinander verbunden.  
   
- ![Screenshot des ablaufsteuerungs-Designers mit Paket](../../integration-services/connection-manager/media/samplecontrolflow.gif "Screenshot des ablaufsteuerungs-Designers mit Paket")  
+ ![Screenshot des Ablaufsteuerungs-Designers mit Paket](../../integration-services/connection-manager/media/samplecontrolflow.gif "Screenshot des Ablaufsteuerungs-Designers mit Paket")  
   
  Das Erstellen einer Ablaufverfolgung umfasst folgende Aufgaben:  
   
@@ -67,15 +65,14 @@ ms.lasthandoff: 08/03/2017
   
      Viele Tasks erfordern eine Verbindung mit einer Datenquelle, und Sie müssen dem Paket die vom Task benötigten Verbindungs-Manager hinzufügen. In Abhängigkeit vom verwendeten Enumeratortyp erfordert der Foreach-Schleifencontainer möglicherweise auch einen Verbindungs-Manager. Sie können die Verbindungs-Manager beim Erstellen der Ablaufsteuerung für jedes einzelne Element hinzufügen, oder aber bevor Sie mit dem Erstellen der Ablaufsteuerung beginnen. Weitere Informationen finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md) und [Erstellen von Verbindungs-Managern](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer enthält außerdem viele Entwurfszeitfunktionen, die Sie verwenden können, auf die Entwurfsoberfläche verwalten und die ablaufsteuerung selbstdokumentierend zu gestalten.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer enthält außerdem viele Entwurfszeitfunktionen, mit denen Sie die Entwurfsoberfläche verwalten und die Ablaufsteuerung selbstdokumentierend gestalten können.  
   
 ## <a name="related-tasks"></a>Verwandte Aufgaben  
   
--   [Fügen Sie hinzu oder löschen Sie eines Tasks oder Containers in einer Ablaufsteuerung](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+-   [Hinzufügen oder Löschen eines Tasks oder Containers in einer Ablaufsteuerung](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 -   [Festlegen der Eigenschaften eines Tasks oder Containers](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
--   [Gruppe oder Aufheben der Gruppierung von Komponenten](../../integration-services/group-or-ungroup-components.md)  
+-   [Gruppieren von Komponenten oder Aufheben der Gruppierung](../../integration-services/group-or-ungroup-components.md)  
   
   
-

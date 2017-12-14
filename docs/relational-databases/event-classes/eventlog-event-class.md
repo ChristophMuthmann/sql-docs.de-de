@@ -2,9 +2,12 @@
 title: EventLog-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4e304c76fb4b81177dac90e852edff82d806d87d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a5613acf3a5d41bc80d58f5122da3c7fbee8c9af
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="eventlog-event-class"></a>EventLog-Ereignisklasse
-  Die EventLog-Ereignisklasse zeigt an, dass Ereignisse im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Ereignisprotokoll protokolliert wurden.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Die EventLog-Ereignisklasse zeigt an, dass Ereignisse im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Ereignisprotokoll protokolliert wurden.  
   
 ## <a name="eventlog-event-class-data-columns"></a>Datenspalten der EventLog-Ereignisklasse  
   

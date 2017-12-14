@@ -2,9 +2,12 @@
 title: Konfigurieren von IntelliSense (SQL Server Management Studio) | Microsoft Dokumentation
 ms.custom: 
 ms.date: 06/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2a4f61032e9cd11158a80b9e95d1d98c457b56be
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 51b83615533ea409a2f169a025edbb2540ec8230
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>Konfigurieren von IntelliSense (SQL Server Management Studio)
-  Die meisten [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense-Optionen sind standardmäßig aktiviert. Sie können eine IntelliSense-Option deaktivieren und stattdessen über einen Menübefehl oder eine Tastenkombination aufrufen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Die meisten [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense-Optionen sind standardmäßig aktiviert. Sie können eine IntelliSense-Option deaktivieren und stattdessen über einen Menübefehl oder eine Tastenkombination aufrufen.  
   
 > [!IMPORTANT]  
 >  Einige Änderungen werden in Ihrer aktuellen Editor-Sitzung nicht wirksam.  Sie müssen eine neue Transact-SQL-Editor-Sitzung öffnen, um die Änderung anzeigen zu können.

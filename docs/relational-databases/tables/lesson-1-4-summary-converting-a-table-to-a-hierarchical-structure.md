@@ -2,9 +2,12 @@
 title: 'Zusammenfassung: Konvertieren einer Tabelle in eine hierarchische Struktur | Microsoft -Dokumentation'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9a0e190e5277b5f662c9a3e4e13957f2e3d6f72c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b9d4e54cf888e5c8f66d4c47aa41edb532f06f74
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-1-4---summary---converting-a-table-to-a-hierarchical-structure"></a>Lektion 1-4 – Zusammenfassung – Konvertieren einer Tabelle in eine hierarchische Struktur
-Der **hierarchyid** -Datentyp kann in einem einfachen, kompakten Format eine hierarchische Beziehung speichern. Mithilfe richtiger Indizes können Daten effizient auf der Hierarchieebene, auf der Ebene von Teilstrukturen der Hierarchie oder durch herkömmliche Singleton-Suchvorgänge zurückgegeben werden.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Der **hierarchyid**-Datentyp kann in einem einfachen, kompakten Format eine hierarchische Beziehung speichern. Mithilfe richtiger Indizes können Daten effizient auf der Hierarchieebene, auf der Ebene von Teilstrukturen der Hierarchie oder durch herkömmliche Singleton-Suchvorgänge zurückgegeben werden.  
   
 In dieser Lektion haben Sie zwei der hierarchischen Methoden verwendet. In der nächsten Lektion wird gezeigt, wie hierarchische Daten mithilfe dieser und anderer Methoden abgefragt und bearbeitet werden.  
   

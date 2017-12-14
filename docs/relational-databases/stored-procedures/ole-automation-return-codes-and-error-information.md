@@ -2,9 +2,12 @@
 title: "Rückgabecodes und Fehlerinformationen der OLE-Automatisierung | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 07/05/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-ole
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0db7fd283f74b6235cd771da246006dbba1cdb80
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6f51c1f609a1ab0556e3ba0494e23dc18cb4c9aa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>Rückgabecodes und Fehlerinformationen der OLE-Automatisierung
-  Die gespeicherten Systemprozeduren über OLE-Automatisierung geben einen **int** -Rückgabecode zurück, bei dem es sich um das HRESULT handelt, das vom zugrunde liegenden OLE-Automatisierungsvorgang zurückgegeben wird. Ein HRESULT von 0 zeigt eine erfolgreiche Ausführung an. Ein HRESULT ungleich 0 ist ein OLE-Fehlercode im hexadezimalen Format 0x800*nnnnn*, als **int** -Wert im Rückgabecode einer gespeicherten Prozedur entspricht dies dem Format 214*nnnnnnn*.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Die gespeicherten Systemprozeduren über OLE-Automatisierung geben einen **int**-Rückgabecode zurück, bei dem es sich um das HRESULT handelt, das vom zugrunde liegenden OLE-Automatisierungsvorgang zurückgegeben wird. Ein HRESULT von 0 zeigt eine erfolgreiche Ausführung an. Ein HRESULT ungleich 0 ist ein OLE-Fehlercode im hexadezimalen Format 0x800*nnnnn*, als **int** -Wert im Rückgabecode einer gespeicherten Prozedur entspricht dies dem Format 214*nnnnnnn*.  
   
  Die Übergabe eines ungültigen Objektnamens (SQLDMO.Xyzzy) an die sp_OACreate-Funktion führt zu einem **int** -HRESULT von 2147221005, was im hexadezimalen Format 0x800401f3 entspricht.  
   

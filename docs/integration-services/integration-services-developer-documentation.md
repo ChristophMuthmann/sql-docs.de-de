@@ -1,5 +1,5 @@
 ---
-title: "Integration Services-Dokumentation für Entwickler | Microsoft Docs"
+title: Integration Services-Entwicklerdokumentation | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - SQL Server Integration Services, programming
 - packages [Integration Services], programming
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
-caps.latest.revision: 76
+caps.latest.revision: "76"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cf7d7afba8ada3f6027db3053914b1822597792c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 4f1568b369673d68051ecccf19484f80b6094087
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-developer-documentation"></a>Integration Services-Entwicklerdokumentation
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] umfasst ein völlig neu konzipiertes Objektmodell mit vielen verbesserten Funktionen, um das Erweitern und Programmieren von Paketen einfacher, flexibler und leistungsstärker zu gestalten. Entwickler haben die Möglichkeit, fast jeden Aspekt von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Paketen zu erweitern und zu programmieren.  
@@ -44,7 +41,7 @@ ms.lasthandoff: 09/26/2017
   
 -   Sie können Pakete erstellen, konfigurieren und programmgesteuert aus Ihren eigenen Anwendungen ausführen.  
   
- Wenn sich die integrierten Komponenten in ggf. Folgendes herausstellen [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nicht Ihren Anforderungen entsprechen, Sie können die Effektivität von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] durch codieren eigener Erweiterungen erhöhen. Dieser Ansatz bietet Ihnen zwei unterschiedliche Optionen:  
+ Wenn die integrierten Komponenten in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nicht Ihren Anforderungen entsprechen, können Sie die Effektivität von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] durch Codieren eigener Erweiterungen erhöhen. Dieser Ansatz bietet Ihnen zwei unterschiedliche Optionen:  
   
 -   Zur sofortigen Verwendung in einem einzelnen Paket können Sie einen benutzerdefinierten Task erstellen, indem Sie Code in den Skripttask schreiben. Sie haben auch die Möglichkeit, eine benutzerdefinierte Datenflusskomponente, die Sie als Quelle, Transformation oder Ziel konfigurieren können, zu erstellen, indem Sie Code in die Skriptkomponente schreiben. Diese leistungsstarken Wrapper schreiben den Infrastrukturcode für Sie, damit Sie sich vollständig auf die Entwicklung der benutzerdefinierten Funktionen konzentrieren können. Sie lassen sich jedoch nicht leicht an anderer Stelle wiederverwenden.  
   
@@ -68,7 +65,7 @@ ms.lasthandoff: 09/26/2017
  Beschreibt die wichtige Unterscheidung zwischen synchronen und asynchronen Ausgaben sowie die Komponenten, von denen sie im Datenfluss verwendet werden.  
   
  [Programmgesteuertes Arbeiten mit Verbindungs-Managern](../integration-services/working-with-connection-managers-programmatically.md)  
- Listet die Verbindungs-Manager die Verwendung von verwaltetem Code und die Werte, die die Verbindungs-Manager zurückgeben, wenn der Code Ruft die **AcquireConnection** Methode.  
+ Listet die Verbindungs-Manager auf, die Sie aus verwaltetem Code verwenden können, und die Werte, die Verbindungs-Manager zurückgeben, wenn der Code die **AcquireConnection**-Methode aufruft.  
   
  [Erweitern von Paketen mit Skripts](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
  Erläutert, wie die Ablaufsteuerung mithilfe des Skripttasks und der Datenfluss mithilfe der Skriptkomponente erweitert werden können.  
@@ -98,4 +95,3 @@ ms.lasthandoff: 09/26/2017
  [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
   
   
-

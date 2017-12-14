@@ -2,9 +2,12 @@
 title: "Arbeiten mit Änderungsdaten (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d46d8364dafb218035e3e9c7d828833f9c604375
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f4a6407cbe969ff2d5e016849acbcd148e540a69
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="work-with-change-data-sql-server"></a>Arbeiten mit Änderungsdaten (SQL Server)
-  Änderungsdaten werden über Tabellenwertfunktionen (Table Valued Function, TVF) für Change Data Capture-Consumer verfügbar gemacht. Für alle Abfragen dieser Funktionen sind zwei Parameter erforderlich, um den Bereich der Protokollfolgenummern (Log Sequence Number, LSN) zu definieren, die bei der Entwicklung des zurückgegebenen Resultsets ausgewählt werden können. Sowohl der untere als auch der obere LSN-Wert, die das Intervall begrenzen, werden in das Intervall eingeschlossen.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Änderungsdaten werden über Tabellenwertfunktionen (Table Valued Functions, TVFs) für Change Data Capture-Consumer verfügbar gemacht. Für alle Abfragen dieser Funktionen sind zwei Parameter erforderlich, um den Bereich der Protokollfolgenummern (Log Sequence Number, LSN) zu definieren, die bei der Entwicklung des zurückgegebenen Resultsets ausgewählt werden können. Sowohl der untere als auch der obere LSN-Wert, die das Intervall begrenzen, werden in das Intervall eingeschlossen.  
   
  Zur Unterstützung bei der Ermittlung der geeigneten LSN-Werte für die Abfrage einer TVF stehen mehrere Funktionen zur Verfügung. Die Funktion [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) gibt die kleinste LSN des Gültigkeitsintervalls einer Aufzeichnungsinstanz zurück. Beim Gültigkeitsintervall handelt es sich um das Zeitintervall, in dem Änderungsdaten aktuell für Aufzeichnungsinstanzen verfügbar sind. Die Funktion [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) gibt die größte LSN im Gültigkeitsintervall zurück. Mit den Funktionen [sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) und [sys.fn_cdc_map_lsn_to_time](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md) können LSN-Werte auf einer konventionellen Zeitachse dargestellt werden. Da Change Data Capture geschlossene Abfrageintervalle verwendet, ist es in einigen Fällen erforderlich, den nächsten LSN-Wert in einer Folge zu generieren, um sicherzustellen, dass Änderungen in aufeinander folgenden Abfragefenstern nicht doppelt vorkommen. Die Funktionen [sys.fn_cdc_increment_lsn](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md) und [sys.fn_cdc_decrement_lsn](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md) sind nützlich, wenn ein LSN-Wert inkrementell angepasst werden soll.  
   

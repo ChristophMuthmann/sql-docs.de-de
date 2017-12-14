@@ -1,10 +1,13 @@
 ---
 title: "Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 11/20/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ec8294a92b9c6bb3da761b84a2bae702bd85dfdd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4eba9f74d9eb5a46cfda7d5d28c1584c20fb22e7
+ms.sourcegitcommit: ef1fa818beea435f58986af3379853dc28f5efd8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen
-  Die Kerberos-Authentifizierung kann mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden, wenn die beiden folgenden Bedingungen erfüllt sind:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Die Kerberos-Authentifizierung kann mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden, wenn die beiden folgenden Bedingungen erfüllt sind:  
   
 -   Der Client- und der Servercomputer müssen Teil der gleichen Windows-Domäne sein oder sich in vertrauenswürdigen Domänen befinden.  
   
@@ -36,9 +39,9 @@ ms.lasthandoff: 11/09/2017
     > [!NOTE]  
     >  Wenn der Server den Dienstprinzipalnamen nicht automatisch registrieren kann, muss der Dienstprinzipalname manuell registriert werden. Siehe [Manuelle SPN-Registrierung](#Manual).  
   
- Durch Abfragen der dynamischen Verwaltungssicht sys.dm_exec_connections können Sie überprüfen, ob eine Verbindung Kerberos verwendet. Führen Sie die folgende Abfrage aus, und überprüfen Sie den Wert der Spalte auth_scheme, der "KERBEROS" lautet, wenn Kerberos aktiviert ist.  
+Durch Abfragen der dynamischen Verwaltungssicht sys.dm_exec_connections können Sie überprüfen, ob eine Verbindung Kerberos verwendet. Führen Sie die folgende Abfrage aus, und überprüfen Sie den Wert der Spalte auth_scheme, der "KERBEROS" lautet, wenn Kerberos aktiviert ist.  
   
-```  
+```t-sql  
 SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;  
 ```  
   
@@ -72,39 +75,40 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 ##  <a name="Formats"></a> SPN-Formate  
  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]wurde das SPN-Format geändert, um die Kerberos-Authentifizierung unter TCP/IP, Named Pipes und Shared Memory zu unterstützen. Die folgenden SPN-Formate für benannte und Standardinstanzen werden unterstützt.  
   
- **Benannte Instanz**  
+**Benannte Instanz**  
   
--   *MSSQLSvc/FQDN*:[*port***|***instancename*], wobei:  
+-   **MSSQLSvc/\<FQDN>:[\<Port> | \<Instanzname>]**, wobei:  
   
-    -   *MSSQLSvc* der Dienst ist, der registriert wird.  
+    -   **MSSQLSvc** der Dienst ist, der registriert wird.  
   
-    -   *FQDN* der vollqualifizierte Domänenname des Servers ist.  
+    -   **\<FQDN>** der vollqualifizierte Domänenname des Servers ist.  
   
-    -   *port* die TCP-Portnummer ist.  
+    -   **\<Port>** die TCP-Portnummer ist.  
   
-    -   *instancename* der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz ist.  
+    -   **\<Instanzname>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Name der** -Instanz ist.  
   
- **Standardinstanz**  
+**Standardinstanz**  
   
--   *MSSQLSvc/FQDN*:*port***|***MSSQLSvc/FQDN*, wobei:  
+-   **MSSQLSvc/\<FQDN>:\<Port>** | **MSSQLSvc/\<FQDN>**, wobei:  
   
-    -   *MSSQLSvc* der Dienst ist, der registriert wird.  
+    -   **MSSQLSvc** der Dienst ist, der registriert wird.  
   
-    -   *FQDN* der vollqualifizierte Domänenname des Servers ist.  
+    -   **\<FQDN>** der vollqualifizierte Domänenname des Servers ist.  
   
-    -   *port* die TCP-Portnummer ist.  
+    -   **\<Port>** die TCP-Portnummer ist.  
   
- Beim neuen SPN-Format ist keine Portnummer erforderlich. Somit können Server mit mehreren Ports oder Protokolle ohne Portnummern Kerberos-Authentifizierung verwenden.  
-  
-> [!NOTE]  
->  Bei TCP/IP-Verbindungen, bei denen der TCP-Port im SPN enthalten ist, muss [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das TCP-Protokoll für einen Benutzer aktivieren, um mithilfe der Kerberos-Authentifizierung eine Verbindung herzustellen.  
-  
+    > [!NOTE]
+    > Beim neuen SPN-Format ist keine Portnummer erforderlich. Somit können Server mit mehreren Ports oder Protokolle ohne Portnummern Kerberos-Authentifizierung verwenden.  
+   
 |||  
 |-|-|  
-|MSSQLSvc/*fqdn:port*|Der vom Anbieter erstellte Standard-SPN, wenn TCP verwendet wird. *port* ist eine TCP-Portnummer.|  
-|MSSQLSvc/*fqdn*|Der vom Anbieter erstellte Standard-SPN für eine Standardinstanz, wenn ein anderes Protokoll als TCP verwendet wird. *fqdn* ist ein vollqualifizierter Domänenname.|  
-|MSSQLSvc/*fqdn/InstanceName*|Der vom Anbieter erstellte Standard-SPN für eine benannte Instanz, wenn ein anderes Protokoll als TCP verwendet wird. *InstanceName* ist der Name einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-  
+|MSSQLSvc/\<FQDN>:<port>|Der vom Anbieter erstellte Standard-SPN, wenn TCP verwendet wird. \<Port> ist eine TCP-Portnummer.|  
+|MSSQLSvc/\<FQDN>|Der vom Anbieter erstellte Standard-SPN für eine Standardinstanz, wenn ein anderes Protokoll als TCP verwendet wird. \<FQDN> ist ein vollqualifizierter Domänenname.|  
+|MSSQLSvc/\<FQDN>:\<Instanzname>|Der vom Anbieter erstellte Standard-SPN für eine benannte Instanz, wenn ein anderes Protokoll als TCP verwendet wird. \<Instanzname> ist der Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz.|  
+
+> [!NOTE]  
+> Bei TCP/IP-Verbindungen, bei denen der TCP-Port im SPN enthalten ist, muss [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das TCP-Protokoll für einen Benutzer aktivieren, um mithilfe der Kerberos-Authentifizierung eine Verbindung herzustellen. 
+
 ##  <a name="Auto"></a> Automatische SPN-Registrierung  
  Beim Starten einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] versucht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , den SPN für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst zu registrieren. Wird die Instanz beendet, versucht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die Registrierung des SPN wieder aufzuheben. Bei TCP/IP-Verbindungen wird der SPN im folgenden Format registriert: *MSSQLSvc/\<FQDN>*:*\<tcpport>*. Sowohl benannte Instanzen als auch die Standardinstanz werden als *MSSQLSvc* registriert, wobei der *\<tcpport>*-Wert zur Unterscheidung der Instanzen dient.  
   
@@ -113,44 +117,45 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
  Die Registrierung bzw. die Aufhebung der Registrierung eines SPN muss möglicherweise manuell durchgeführt werden, wenn der Dienst nicht über die Berechtigungen für diese Aktionen verfügt.  
   
 ##  <a name="Manual"></a> Manuelle SPN-Registrierung  
- Um den SPN manuell zu registrieren, muss der Administrator das Setspn.exe-Tool verwenden, das mit den Microsoft [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] -Supporttools geliefert wird. Weitere Informationen finden Sie im KB-Artikel [Supporttools in Windows Server 2003 Service Pack 1](http://support.microsoft.com/kb/892777) .  
+Um den SPN manuell zu registrieren, muss der Administrator das Setspn.exe-Tool verwenden, das mit den Microsoft [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] -Supporttools geliefert wird. Weitere Informationen finden Sie im KB-Artikel [Supporttools in Windows Server 2003 Service Pack 1](http://support.microsoft.com/kb/892777) .  
   
- Setspn.exe ist ein Befehlszeilentool, mit dem Sie die SPN-Verzeichniseigenschaft lesen, ändern und löschen können. Mit diesem Tool können Sie auch die aktuellen SPN anzeigen, die Standard-SPN des Kontos zurücksetzen und zusätzliche SPN hinzufügen oder löschen.  
+Setspn.exe ist ein Befehlszeilentool, mit dem Sie die SPN-Verzeichniseigenschaft lesen, ändern und löschen können. Mit diesem Tool können Sie auch die aktuellen SPN anzeigen, die Standard-SPN des Kontos zurücksetzen und zusätzliche SPN hinzufügen oder löschen.  
   
- Im folgenden Beispiel wird die Syntax dargestellt, mit der ein SPN für eine TCP/IP-Verbindung manuell registriert wird.  
-  
-```  
-setspn -A MSSQLSvc/myhost.redmond.microsoft.com:1433 accountname  
-```  
-  
- **Hinweis** Wenn bereits ein SPN vorhanden ist, muss er gelöscht werden, bevor er erneut registriert werden kann. Verwenden Sie dafür den `setspn` -Befehl und den `-D` -Schalter. In den folgenden Beispielen wird veranschaulicht, wie Sie einen neuen instanzbasierten SPN manuell registrieren können. Verwenden Sie für die Standardinstanz Folgendes:  
+Das folgende Beispiel veranschaulicht die Syntax, die zur manuellen Registrierung eines SPN für eine TCP/IP-Verbindung unter Verwendung eines Domänenbenutzerkontos zu verwenden ist:  
   
 ```  
-setspn -A MSSQLSvc/myhost.redmond.microsoft.com accountname  
+setspn -A MSSQLSvc/myhost.redmond.microsoft.com:1433 redmond\accountname  
 ```  
   
- Verwenden Sie für eine benannte Instanz Folgendes:  
+> [!NOTE]
+> Wenn bereits ein SPN vorhanden ist, muss er gelöscht werden, um ihn erneut registrieren zu können. Verwenden Sie dafür den `setspn` -Befehl und den `-D` -Schalter. In den folgenden Beispielen wird veranschaulicht, wie Sie einen neuen instanzbasierten SPN manuell registrieren können. Verwenden Sie für eine Standardinstanz mit einem Domänenbenutzerkonto Folgendes:  
   
 ```  
-setspn -A MSSQLSvc/myhost.redmond.microsoft.com/instancename accountname  
+setspn -A MSSQLSvc/myhost.redmond.microsoft.com redmond\accountname  
+```  
+  
+Verwenden Sie für eine benannte Instanz Folgendes:  
+  
+```  
+setspn -A MSSQLSvc/myhost.redmond.microsoft.com/instancename redmond\accountname  
 ```  
   
 ##  <a name="Client"></a> Clientverbindungen  
  Clienttreiber unterstützen vom Benutzer angegebene SPN. Wenn jedoch kein SPN angegeben wurde, wird er auf der Grundlage des Clientverbindungstyps automatisch erstellt. Bei einer TCP-Verbindung wird ein SPN im Format *MSSQLSvc*/*FQDN*:[*port*] sowohl für benannte als auch für Standardinstanzen verwendet.  
   
- Bei Named-Pipes- und Shared-Memory-Verbindungen wird ein SPN im Format *MSSQLSvc*/*FQDN*:*Instanzname* für eine benannte Instanz und im Format *MSSQLSvc*/*FQDN* für die Standardinstanz verwendet.  
+Für Verbindungen mit Named Pipes und gemeinsam genutzten Speicherbereichen wird für eine benannte Instanz ein SPN im Format *MSSQLSvc/\<FQDN>:\<Instanzname>* und für die Standardinstanz *MSSQLSvc/\<FQDN>* verwendet.  
   
  **Verwenden eines Dienstkontos als SPN**  
   
- Dienstkonten können als SPN verwendet werden. Sie werden durch das Verbindungsattribut für die Kerberos-Authentifizierung angegeben und liegen in den folgenden Formaten vor:  
+Dienstkonten können als SPN verwendet werden. Sie werden durch das Verbindungsattribut für die Kerberos-Authentifizierung angegeben und liegen in den folgenden Formaten vor:  
   
 -   **username@domain** oder **Domäne\Benutzername** für ein Domänenbenutzerkonto  
   
 -   **Computer$@domain** oder **Host\FQDN** für ein Computerdomänenkonto, z.B. Lokales System oder NETWORK SERVICES.  
   
- Um die Authentifizierungsmethode einer Verbindung zu bestimmen, führen Sie die folgende Abfrage aus.  
+Um die Authentifizierungsmethode einer Verbindung zu bestimmen, führen Sie die folgende Abfrage aus.  
   
-```tsql  
+```t-sql  
 SELECT net_transport, auth_scheme   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  
@@ -167,7 +172,7 @@ WHERE session_id = @@SPID;
 |Die SPN-Suche schlägt fehl, oder der SPN ist nicht dem richtigen Domänenkonto, virtuellen Konto, MSA oder integrierten Konto zugeordnet bzw. entspricht nicht dem richtigen Domänenkonto, virtuellen Konto, MSA oder integrierten Konto.|Lokale Verbindungen und Remoteverbindungen verwenden NTLM.|  
   
 > [!NOTE]  
->  "Richtig" bedeutet in diesem Fall, dass es sich bei dem Konto, das dem registrierten SPN zugeordnet ist, um das Konto handelt, unter dem der SQL Server-Dienst ausgeführt wird.  
+> "Richtig" bedeutet in diesem Fall, dass es sich bei dem Konto, das dem registrierten SPN zugeordnet ist, um das Konto handelt, unter dem der SQL Server-Dienst ausgeführt wird.  
   
 ##  <a name="Comments"></a> Kommentare  
  Die dedizierte Administratorverbindung (Dedicated Administrator Connection, DAC) verwendet einen auf Instanznamen basierenden SPN. Die Kerberos-Authentifizierung kann mit einer DAC verwendet werden, wenn dieser SPN erfolgreich registriert wurde. Alternativ kann ein Benutzer den Kontonamen als SPN festlegen.  

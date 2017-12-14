@@ -2,9 +2,12 @@
 title: Showplan Statistics Profile-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fce31743a7bb66586b414d2e4b720bd70216d379
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: acf72e8f528b80074ec964b375c00e172119bbed
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="showplan-statistics-profile-event-class"></a>Showplan Statistics Profile-Ereignisklasse
-  Die Showplan Statistics Profile-Ereignisklasse tritt auf, wenn [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine SQL-Anweisung ausführt. Die enthaltenen Informationen sind eine Teilmenge der in der Showplan XML Statistics Profile-Ereignisklasse verfügbaren Informationen.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Die „Showplan Statistics Profile“-Ereignisklasse tritt auf, wenn [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine SQL-Anweisung ausführt. Die enthaltenen Informationen sind eine Teilmenge der in der Showplan XML Statistics Profile-Ereignisklasse verfügbaren Informationen.  
   
  Die Showplan Statistics Profile-Ereignisklasse zeigt vollständige Kompilierzeitdaten an. Für Ablaufverfolgungen mit Showplan Statistics Profile kann es zu einem hohen Leistungsaufwand kommen. Um dieses Problem zu minimieren, beschränken Sie die Verwendung dieser Ereignisklasse auf Ablaufverfolgungen, die bestimmte Probleme nur für einen kurzen Zeitraum überwachen.  
   

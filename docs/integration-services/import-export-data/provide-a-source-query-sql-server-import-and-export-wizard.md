@@ -1,5 +1,5 @@
 ---
-title: Geben Sie eine Quellabfrage (SQL Server-Import / Export-Assistent) | Microsoft Docs
+title: Angeben einer Quellabfrage (SQL Server-Import/Export-Assistent) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,42 +8,39 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.providesourcequery.f1
+f1_keywords: sql13.dts.impexpwizard.providesourcequery.f1
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 190c39de92d8fc1b559f43c90c95e446ccc87272
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 11ce97439baf73614bda8b2bd57c412790876189
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Quellabfrage angeben (SQL Server-Import/Export-Assistent)
-Wenn Sie angegeben haben, dass Sie eine Abfrage zum Auswählen der zu kopierenden Daten bereitstellen möchten, zeigt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistent **Quellabfrage angeben**an. Auf dieser Seite schreiben und testen Sie die SQL-Abfrage, die die Daten sammelt, die aus der Datenquelle in das Ziel kopiert werden sollen. Sie können den Text der eine gespeicherte Abfrage einzufügen, oder laden den Abfragetext aus einer Datei.
+Wenn Sie angegeben haben, dass Sie eine Abfrage zum Auswählen der zu kopierenden Daten bereitstellen möchten, zeigt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistent **Quellabfrage angeben**an. Auf dieser Seite schreiben und testen Sie die SQL-Abfrage, die die Daten sammelt, die aus der Datenquelle in das Ziel kopiert werden sollen. Sie können außerdem den Text einer gespeicherten Abfrage einfügen oder den Abfragetext aus einer Datei laden.
 
 ## <a name="screen-shot-of-the-source-query-page"></a>Screenshot der Seite „Quellabfrage“  
 Die folgende Abbildung zeigt die Seite **Quellabfrage angeben** des Assistenten.
  
-In diesem einfachen Beispiel hat der Benutzer die Abfrage eingegeben `SELECT * FROM Sales.Customer` kopiert alle Zeilen und Spalten aus der **Sales.Customer** Tabelle in der Quelldatenbank.
--   `SELECT *`bedeutet, dass alle Spalten zu kopieren.
--   Das Fehlen einer `WHERE` Klausel bedeutet, dass alle Zeilen kopiert werden.
+In diesem einfachen Beispiel hat der Benutzer die Abfrage `SELECT * FROM Sales.Customer` eingegeben, um alle Zeilen und Spalten aus der Tabelle **Sales.Customer** in der Quelldatenbank zu kopieren.
+-   `SELECT *` bedeutet, dass alle Spalten kopiert werden.
+-   Das Fehlen einer `WHERE`-Klausel bedeutet, dass alle Zeilen kopiert werden.
   
- ![Quelle Abfrageseite des Import / Export-Assistenten](../../integration-services/import-export-data/media/source-query.png "Quelle Abfrageseite des Import / Export-Assistenten")  
+ ![Seite „Quellabfrage“ des Import/Export-Assistenten](../../integration-services/import-export-data/media/source-query.png "Source query page of the Import and Export Wizard")  
 
 ## <a name="provide-the-query-and-check-its-syntax"></a>Bereitstellen der Abfrage und Überprüfen von deren Syntax
 **SQL-Anweisung**  
- Geben Sie eine SELECT-Abfrage zum Abrufen von bestimmten Zeilen und Spalten mit Daten aus der Quelldatenbank. Sie können außerdem fügen Sie den Text einer gespeicherten Abfrage oder die Abfrage aus einer Datei zu laden, indem Sie auf **Durchsuchen**. 
+ Geben Sie eine SELECT-Abfrage ein, um bestimmte Datenzeilen und -spalten aus der Quelldatenbank abzurufen. Sie können auch den Text einer gespeicherten Abfrage einfügen oder die Abfrage aus einer Datei laden, indem Sie auf **Durchsuchen** klicken. 
   
- Z. B. die folgende Abfrage ruft die **SalesPersonID**, **SalesQuota**, und **SalesYTD** aus dem AdventureWorks-Beispiel-Datenbank für Vertriebsmitarbeiter, deren kommissionsanteil größer ist als 1.5 Prozent.  
+ Die folgende Abfrage ruft z.B. die Daten zu **SalesPersonID**, **SalesQuota** und **SalesYTD** aus der AdventureWorks-Beispieldatenbank für Vertriebsmitarbeiter ab, deren Provisionsanteil größer als 1,5 % ist.  
   
 ```sql
 SELECT SalesPersonID, SalesQuota, SalesYTD  
@@ -62,10 +59,10 @@ Wenn Ihre Datenquelle Excel ist, gehen Sie zu [Bereitstellen einer Datenabfrage 
 > Wenn die für die Prüfung der Anweisungssyntax erforderliche Zeit den Timeoutwert von 30 Sekunden überschreitet, wird die Analyse beendet und ein Fehler ausgelöst. Sie können erst nach erfolgreicher Analyse über diese Seite des Assistenten hinaus gelangen. Eine Lösung zum Vermeiden eines Timeouts besteht darin, eine Datenbanksicht basierend auf der gewünschten Abfrage zu erstellen und die Sicht im Assistenten abzufragen, statt den Abfragetext direkt einzugeben.  
   
  **Durchsuchen**  
- Wählen Sie eine gespeicherte Datei mit dem Text der SQL-Abfrage mithilfe der **öffnen** (Dialogfeld). Durch das Auswählen einer Datei wird der Test aus der Datei in das Textfeld **SQL-Anweisung** kopiert.  
+ Suchen Sie mithilfe des Dialogfelds **Öffnen** eine Datei, die den Text einer SQL-Abfrage enthält. Durch das Auswählen einer Datei wird der Test aus der Datei in das Textfeld **SQL-Anweisung** kopiert.  
  
 ## <a name="excelQueries"></a> Bereitstellen einer Datenabfrage für Excel
-### <a name="specify-excel-objects-in-queries"></a>Geben Sie die Excel-Objekte in Abfragen
+### <a name="specify-excel-objects-in-queries"></a>Angeben von Excel-Objekten in Abfragen
 Es gibt drei Arten von Excel-Objekten, die Sie abfragen können.
 -   **Arbeitsblatt:** Fügen Sie das $-Zeichen an das Ende des Blattnamens an, und schließen Sie die Zeichenfolge in Trennzeichen ein, z.B. **[Sheet1$]**, um ein Arbeitsblatt abzufragen.
 
@@ -94,6 +91,5 @@ Unabhängig davon, ob Sie ein Arbeitsblatt oder einen Bereich als Quelltabelle a
 -   Für die meisten Ziele lautet die nächste Seite **Quelltabellen und -sichten auswählen**. Auf dieser Seite überprüfen Sie die Abfrage, die Sie angegeben haben, und wählen optional die zu kopierenden Spalten und Vorschaubeispieldaten. Weitere Informationen finden Sie unter [Quelltabellen und -sichten auswählen](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md).  
   
 -   Wenn Ihr Ziel eine Flatfile ist, lautet die nächste Seite **Flatfileziel konfigurieren**. Auf dieser Seite geben Sie Formatierungsoptionen für das Flatfileziel an. (Nach der Konfiguration der Flatfile heißt die nächste Seite **Quelltabellen und -sichten auswählen**.) Weitere Informationen finden Sie unter [Flatfileziel konfigurieren](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md).  
-
 
 

@@ -1,12 +1,14 @@
 ---
-title: Benutzerdefinierte Eigenschaften der Transformation | Microsoft Docs
+title: Benutzerdefinierte Eigenschaften von Transformationen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -41,16 +43,16 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-caps.latest.revision: 72
+caps.latest.revision: "72"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 62ff6e04e7f26e6ca1af9760ebb17c5f41d37f0d
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 964997cb8223139d44c696a80b4c659769f717a9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transformation-custom-properties"></a>Benutzerdefinierte Eigenschaften von Transformationen
   Neben den Eigenschaften, die die meisten Datenflussobjekte im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Objektmodell aufweisen, verfügen zahlreiche Datenflussobjekte über benutzerdefinierte objektspezifische Eigenschaften. Diese benutzerdefinierten Eigenschaften sind nur zur Laufzeit verfügbar und sind nicht in der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Managed Programming Referenz-Dokumentation dokumentiert.  
@@ -264,7 +266,7 @@ ms.lasthandoff: 08/03/2017
   
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
-|Trennzeichen|String|Die von der Transformation verwendeten Tokentrennzeichen. Die Standardtrennzeichen umfassen folgende Zeichen: Leerzeichen (), Komma (,), Punkt (.), Semikolon (;), Doppelpunkt (:), Bindestrich (-), doppelte gerades Anführungszeichen ("), einfaches gerades Anführungszeichen ('), kaufmännisches und-Zeichen (&), Schrägstrich markieren (/), umgekehrter Schrägstrich (\\), at-Zeichen (@), Ausrufezeichen (!), Fragezeichen (?), öffnende Klammer ((), schließende Klammer ()), kleiner als (\<), größer als (>), öffnen die Klammer ([]), schließende Klammer (]), öffnende geschweifte Klammer ({}), schließende geschweifte Klammer (}), Pipe (&#124;), Nummernzeichen (#), Sternchen (*), Caretzeichen (^) und Prozentzeichen (%).|  
+|Trennzeichen|String|Die von der Transformation verwendeten Tokentrennzeichen. Zu den Standardtrennzeichen zählen folgende Zeichen: Leerzeichen ( ), Komma (,), Punkt (.), Semikolon (;), Doppelpunkt (:), Bindestrich (-), doppeltes gerades Anführungszeichen ("), einfaches gerades Anführungszeichen ('), kaufmännisches Und-Zeichen (&), Schrägstrich (/), umgekehrter Schrägstrich (\\), at-Zeichen (@), Ausrufezeichen (!), Fragezeichen (?), öffnende Klammer ((), schließende Klammer ()), kleiner als (\<), größer als (>), öffnende eckige Klammer ([), schließende eckige Klammer (]), öffnende geschweifte Klammer ({), schließende geschweifte Klammer (}), senkrechter Strich (&#124;), Nummernzeichen (#), Sternchen (*), Caretzeichen (^) und Prozentzeichen (%).|  
 |Exhaustive|Boolean|Ein Wert, der angibt, ob jeder Eingabedatensatz mit jedem anderen Eingabedatensatz verglichen wird. Der Wert von **True** wird meistens zu Debugzwecken verwendet. Der Standardwert dieser Eigenschaft ist **False**.<br /><br /> Hinweis: Diese Eigenschaft ist im **Transformations-Editor für Fuzzygruppierung**nicht verfügbar, kann aber mit dem **Erweiterten Editor**festgelegt werden.|  
 |MaxMemoryUsage|Integer|Die Höchstmenge an Arbeitsspeicher zur Verwendung durch die Transformation. Der Standardwert dieser Eigenschaft ist **0**, wodurch die dynamische Speicherauslastung aktiviert wird.<br /><br /> Der Wert dieser Eigenschaft kann mithilfe eines Eigenschaftsausdrucks angegeben werden.<br /><br /> Hinweis: Diese Eigenschaft ist im **Transformations-Editor für Fuzzygruppierung**nicht verfügbar, kann aber mit dem **Erweiterten Editor**festgelegt werden.|  
 |MinSimilarity|Double|Der Schwellenwert für die Ähnlichkeit, mit dem die Transformation Duplikate ermittelt, der als ein Wert zwischen 0 und 1 ausgedrückt wird.  Der Standardwert dieser Eigenschaft ist 0.8.|  
@@ -298,7 +300,7 @@ ms.lasthandoff: 08/03/2017
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|Boolean|Gibt an, ob eine Kopie der Verweistabelle für die Indexerstellung der Fuzzysuche und nachfolgende Suchen erstellt werden soll. Der Standardwert dieser Eigenschaft ist **True**.|  
-|Trennzeichen|String|Die Trennzeichen, die von der Transformation verwendet werden, um Spaltenwerte mit Token zu versehen. Die Standardtrennzeichen umfassen folgende Zeichen: Leerzeichen (), Komma (,), Punkt (.) Semikolon (;), Doppelpunkt (:), Bindestrich (-), doppelte gerades Anführungszeichen ("), einfaches gerades Anführungszeichen ('), kaufmännisches und-Zeichen (&), Schrägstrich markieren (/), umgekehrter Schrägstrich (\\), at-Zeichen (@), Ausrufezeichen (!), Fragezeichen (?), öffnende Klammer ((), schließende Klammer ()), kleiner als (\<), größer als (>), öffnen die Klammer ([]), schließende Klammer (]), öffnende geschweifte Klammer ({}), schließende geschweifte Klammer (}), Pipe (&#124;). Nummernzeichen (#), Sternchen (*), Caretzeichen (^) und Prozentzeichen (%).|  
+|Trennzeichen|String|Die Trennzeichen, die von der Transformation verwendet werden, um Spaltenwerte mit Token zu versehen. Zu den Standardtrennzeichen zählen folgende Zeichen: Leerzeichen ( ), Komma (,), Punkt (.), Semikolon (;), Doppelpunkt (:), Bindestrich (-), doppeltes gerades Anführungszeichen ("), einfaches gerades Anführungszeichen ('), kaufmännisches Und-Zeichen (&), Schrägstrich (/), umgekehrter Schrägstrich (\\), at-Zeichen (@), Ausrufezeichen (!), Fragezeichen (?), öffnende Klammer ((), schließende Klammer ()), kleiner als (\<), größer als (>), öffnende eckige Klammer ([), schließende eckige Klammer (]), öffnende geschweifte Klammer ({), schließende geschweifte Klammer (}), senkrechter Strich (&#124;). Nummernzeichen (#), Sternchen (*), Caretzeichen (^) und Prozentzeichen (%).|  
 |DropExistingMatchIndex|Boolean|Ein Wert, der angibt, ob der in MatchIndexName angegebene Übereinstimmungsindex gelöscht wird, wenn MatchIndexOptions nicht auf ReuseExistingIndex festgelegt ist. Der Standardwert dieser Eigenschaft ist **True**.|  
 |Exhaustive|Boolean|Ein Wert, der angibt, ob jeder Eingabedatensatz mit jedem anderen Eingabedatensatz verglichen wird. Der Wert von **True** wird meistens zu Debugzwecken verwendet. Der Standardwert dieser Eigenschaft ist **False**.<br /><br /> Hinweis: Diese Eigenschaft ist im **Transformations-Editor für Fuzzysuche**nicht verfügbar, kann aber mit dem **Erweiterten Editor**festgelegt werden.|  
 |MatchIndexName|String|Der Name des Übereinstimmungsindexes. Der Übereinstimmungsindex ist die Tabelle, in der die Transformation den von ihr verwendeten Index erstellt und speichert. Wenn der Übereinstimmungsindex wiederverwendet wird, gibt MatchIndexName den wiederzuverwendenden Index an. MatchIndexName muss ein gültiger [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Bezeichnername sein. Wenn der Name z. B. Leerzeichen enthält, muss der Name in Klammern eingeschlossen werden.|  
@@ -631,7 +633,7 @@ ms.lasthandoff: 08/03/2017
  Weitere Informationen finden Sie unter [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
+ [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
  [Pfadeigenschaften](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
  [Data Flow-Eigenschaften, die mithilfe von Ausdrücken festgelegt werden können](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  

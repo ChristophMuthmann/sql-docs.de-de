@@ -1,5 +1,5 @@
 ---
-title: Hadoop-Verbindungs-Manager | Microsoft Docs
+title: Hadoop-Verbindungs-Manager | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ssis.designer.hadoopconn.f1
+f1_keywords: sql13.ssis.designer.hadoopconn.f1
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 79b0782d0d01733f10310f1eaac611fc688dbf21
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3c4bf82dad09b90f672e52947267ddf92fbdb984
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop-Verbindungs-Manager
   Der Hadoop-Verbindungs-Manager ermöglicht die Verbindung eines SSIS-Pakets mit einem Hadoop-Cluster mithilfe der Werte, die Sie für die Eigenschaften angeben.  
@@ -44,9 +41,9 @@ ms.lasthandoff: 08/03/2017
   
     3.  Wählen Sie unter **Authentication** die Zugriffsmethode für den WebHCat-Dienst auf. Die verfügbaren Werte sind **Basic** und **Kerberos**.  
   
-         ![Hadoop Verbindungs-Manager-Editor mit Standardauthentifizierung](../../integration-services/connection-manager/media/hadoop-cm-basic.png "Hadoop Verbindungs-Manager-Editor mit Standardauthentifizierung")  
+         ![Hadoop-Verbindungs-Manager-Editor mit Standardauthentifizierung](../../integration-services/connection-manager/media/hadoop-cm-basic.png "Hadoop-Verbindungs-Manager-Editor mit Standardauthentifizierung")  
   
-         ![Hadoop Verbindungs-Manager-Editor mit Kerberos-Authentifizierung](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "Hadoop Verbindungs-Manager-Editor mit Kerberos-Authentifizierung")  
+         ![Hadoop-Verbindungs-Manager-Editor mit Kerberos-Authentifizierung](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "Hadoop-Verbindungs-Manager-Editor mit Kerberos-Authentifizierung")  
   
     4.  Geben Sie für **WebHCat User**im Feld **User** den für den Zugriff auf WebHCat autorisierten Benutzer ein.  
   
@@ -74,4 +71,3 @@ ms.lasthandoff: 08/03/2017
  [Hadoop-Dateisystemtask](../../integration-services/control-flow/hadoop-file-system-task.md)  
   
   
-

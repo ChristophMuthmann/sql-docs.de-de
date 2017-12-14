@@ -1,5 +1,5 @@
 ---
-title: Catalog. execution_component_phases | Microsoft Docs
+title: catalog.execution_component_phases | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 07a9a163-4787-40f7-b371-ac5c6cb4b095
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: b3459ce6d7e9eb0b9580ffa54e3b87e16f3e8fb0
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1cbf125c6e69af8faac15d0aa0fe5a11afe72e41
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogexecutioncomponentphases"></a>catalog.execution_component_phases
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,9 +35,9 @@ ms.lasthandoff: 08/03/2017
 |package_name|**nvarchar(260)**|Der Name des ersten Pakets, das während der Ausführung gestartet wurde.|  
 |task_name|**nvarchar(4000)**|Der Name des Datenflusstask.|  
 |subcomponent_name|**nvarchar(4000)**|Der Name der Datenflusskomponente.|  
-|phase|**vom Datentyp nvarchar(128)**|Der Name der Ausführungsphase.|  
-|start_time|**DateTimeOffset(7)**|Der Zeitpunkt, zu dem die Phase gestartet wurde.|  
-|end_time|**DateTimeOffset(7)**|Der Zeitpunkt, zu dem die Phase beendet wurde.|  
+|phase|**nvarchar(128)**|Der Name der Ausführungsphase.|  
+|start_time|**datetimeoffset(7)**|Der Zeitpunkt, zu dem die Phase gestartet wurde.|  
+|end_time|**datetimeoffset(7)**|Der Zeitpunkt, zu dem die Phase beendet wurde.|  
 |execution_path|**nvarchar(max)**|Der Ausführungspfad der Datenflusstask.|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -75,4 +73,3 @@ order by package_name, task_name, subcomponent_name, execution_path
 >  Wenn Sie über die Berechtigung verfügen, einen Vorgang auf dem Server auszuführen, verfügen Sie auch über die Berechtigung, Informationen zu dem Vorgang anzuzeigen. Sicherheit auf Zeilenebene wird erzwungen. Es werden nur Zeilen angezeigt, zu deren Anzeige Sie berechtigt sind.  
   
   
-

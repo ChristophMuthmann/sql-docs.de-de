@@ -2,9 +2,12 @@
 title: Lock:Deadlock Chain (Ereignisklasse) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2d7edf2d9fc188d897dfd3142a184b01980fa16f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f2719ef1fde703553617170a99f57f31897484e5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lockdeadlock-chain-event-class"></a>Lock:Deadlock Chain (Ereignisklasse)
-  Die Lock:Deadlock Chain-Ereignisklasse wird für jeden an einem Deadlock Beteiligten erstellt.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Die „Lock:Deadlock Chain“-Ereignisklasse wird für jeden an einem Deadlock Beteiligten erstellt.  
   
  Verwenden Sie die Lock:Deadlock Chain-Ereignisklasse, um zu überwachen, wann Deadlockbedingungen auftreten. Diese Informationen sind nützlich, wenn ermittelt werden soll, ob Deadlocks eine deutliche Auswirkung auf die Leistung der Anwendung haben und welche Objekte daran beteiligt sind. Sie können den Anwendungscode, der diese Objekte ändert, untersuchen, um festzustellen, ob die Deadlocks durch Änderungen minimiert werden können.  
   

@@ -2,9 +2,12 @@
 title: "Einschätzen der Dienstunterbrechung für den Rollenwechsel (Datenbankspiegelung) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd86103fe23292df96c1ef11dafd0e3b5d70196e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2083d1c82e4557e4de96cd8841ce043563b25f90
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Einschätzen der Unterbrechung des Diensts während des Rollenwechsels (Datenbankspiegelung)
-  Während eines Rollenwechsels ist der Zeitraum, für den die Datenbankspiegelung außer Dienst ist, abhängig von der Art des Rollenwechsels und vom Grund für den Rollenwechsel.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Während eines Rollenwechsels ist der Zeitraum, für den die Datenbankspiegelung außer Dienst ist, abhängig von der Art des Rollenwechsels und vom Grund für den Rollenwechsel.  
   
 -   Beim automatischen Failover tragen zwei Faktoren zur Dauer der Dienstunterbrechung bei: zum einen die benötigte Zeit, bis der Spiegelserver erkennt, dass in der Prinzipalserverinstanz ein Fehler aufgetreten ist, also die Fehlererkennungszeit, zum anderen die Zeit, die für das Failover der Datenbank benötigt wird, also die Failoverzeit.  
   

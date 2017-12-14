@@ -1,5 +1,5 @@
 ---
-title: "Change Data Capture Service für Oracle von Attunity System Architecture | Microsoft Docs"
+title: "Change Data Capture Service für Oracle von Attunity System Architecture | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,31 +8,29 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1db6c737-3c60-4066-a0a3-3611e1c83e4e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69f36b9b3e01be90cc1f5a4cd19fb80543186620
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9adf6ab7d2a249f089f418ed436506922057eab5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-system-architecture"></a>Change Data Capture Service für Oracle von Attunity System Architecture
   Der CDC Service for Oracle zeichnet Änderungen, die an ausgewählten Tabellen in einer oder mehreren Oracle-Quelldatenbanken vorgenommen werden, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC-Datenbanken auf einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz auf. Im folgenden Diagramm sind die Komponenten dargestellt, aus denen der CDC Service for Oracle besteht.  
   
- ![Service-Architektur](../../integration-services/change-data-capture/media/service-architecture.gif "-Service-Architektur")  
+ ![Dienstarchitektur](../../integration-services/change-data-capture/media/service-architecture.gif "Dienstarchitektur")  
   
  Die Abbildung veranschaulicht die vier verwendeten Plattformen. In vielen Fällen können sich diese Plattformen überschneiden, aber dieses Diagramm zeigt einen standardmäßigen Anwendungsfall. Es ist z. B. sinnvoll, dass die Oracle- und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank jeweils auf einem separaten Computer ausgeführt werden und nicht gemeinsam mit der Oracle CDC Service-Plattform oder der Plattform genutzt werden, über die der CDC Service entworfen wird. In der Abbildung sind die folgenden Plattformen dargestellt:  
   
--   Oracle CDC Service: Hierbei kann es sich um einen beliebigen unterstützten Windows-Computer handeln, auf dem der Oracle CDC Service installiert ist und ausgeführt wird. Diese Plattform kann auch einen Clusterknoten in einem Microsoft-Failovercluster darstellen (Konfigurationen für hohe Verfügbarkeit werden weiter unten in diesem Dokument behandelt).  
+-   Oracle CDC Service: Hierbei kann es sich um einen beliebigen unterstützten Windows-Computer handeln, auf dem der Oracle CDC Service installiert ist und ausgeführt wird. Diese Plattform kann auch einen Clusterknoten in einem Microsoft-Failovercluster darstellen (Konfigurationen für Hochverfügbarkeit werden weiter unten in diesem Dokument behandelt).  
   
 -   Oracle-Datenbank: Hierbei kann es sich um einen beliebigen Computer handeln, auf dem eine unterstützte Version der Oracle-Datenbank ausgeführt wird. Dies gilt auch für Computer, auf denen Windows, Linux oder ein beliebiges anderes Betriebssystem ausgeführt wird, das von der installierten Version der Oracle-Datenbank unterstützt wird. Beachten Sie, dass diese Plattform im Diagramm im Plural angegeben ist, da ein einzelner Oracle CDC Service die Änderungen von mehreren Oracle-Quelldatenbanken aufzeichnen kann.  
   
@@ -60,4 +58,3 @@ ms.lasthandoff: 08/03/2017
  Der Oracle CDC Service und seine untergeordneten Oracle CDC-Instanzen können nur mit den Oracle-Quelldatenbanken und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zielinstanz als Clients kommunizieren. Damit werden nicht aktiv Netzwerke und andere Protokolle überwacht. Der Oracle CDC Service überwacht die CDC-Datenbanken auf Konfigurationsänderungen und passt seine Abläufe basierend auf der aktualisierten Konfiguration an.  
   
   
-

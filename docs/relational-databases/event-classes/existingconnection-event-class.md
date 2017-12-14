@@ -2,9 +2,12 @@
 title: ExistingConnection (Ereignisklasse) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 98b79af4713d77b3c53bf2de715d70d2bddc8ede
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f3d1b7aff3c86f0ec85ccc66f5adf96ae99cfb20
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="existingconnection-event-class"></a>ExistingConnection (Ereignisklasse)
-  Die Ereignisklasse ExistingConnection zeigt die Eigenschaften der Benutzerverbindungen, die beim Starten der Ablaufverfolgung vorhanden waren. Der Server löst je ein ExistingConnection-Ereignis für die einzelnen vorhandenen Benutzerverbindungen aus.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Die Ereignisklasse ExistingConnection zeigt die Eigenschaften der Benutzerverbindungen, die beim Starten der Ablaufverfolgung vorhanden waren. Der Server löst je ein ExistingConnection-Ereignis für die einzelnen vorhandenen Benutzerverbindungen aus.  
   
 ## <a name="existing-connection-event-class-data-columns"></a>Datenspalten in der Existing Connection-Ereignisklasse  
   

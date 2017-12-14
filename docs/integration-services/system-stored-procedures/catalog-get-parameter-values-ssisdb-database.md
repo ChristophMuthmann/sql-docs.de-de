@@ -1,5 +1,5 @@
 ---
-title: Catalog. get_parameter_values (SSISDB-Datenbank) | Microsoft Docs
+title: catalog.get_parameter_values (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4ad8f0c367e38581db696d2aa32afd5b92d635d2
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 644103554b39fde12a2abb150af18799700f7b79
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cataloggetparametervalues-ssisdb-database"></a>catalog.get_parameter_values (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Löst aus, und ruft die Standardparameterwerte aus einem Projekt und den entsprechenden Paketen im ab der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Katalog.  
+  Ermittelt die Standardparameterwerte und ruft diese aus einem Projekt und den entsprechenden Paketen im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,16 +39,16 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @folder_name =] *Ordnername*  
+ [ @folder_name = ] *folder_name*  
  Der Name des Ordners, der das Projekt enthält. Der *folder_name* ist **nvarchar(128)**.  
   
- [ @project_name =] *Project_name*  
+ [ @project_name = ] *project_name*  
  Der Name des Projekts, in dem sich die Parameter befinden. Der *project_name* ist **nvarchar(128)**.  
   
- [ @package_name =] *Paketname*  
+ [ @package_name = ] *package_name*  
  Der Name des Pakets. Geben Sie den Paketnamen an, um alle Projektparameter und die Parameter aus einem bestimmten Paket abzurufen. Verwenden Sie NULL, um alle Projektparameter und die Parameter aus allen Paketen abzurufen. Der *package_name* ist **nvarchar(260)**.  
   
- [ @reference_id =] *Reference_id*  
+ [ @reference_id = ] *reference_id*  
  Der eindeutige Bezeichner eines Umgebungsverweises. Dieser Parameter ist optional. Der *reference_id* ist **bigint**.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
@@ -62,7 +60,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |object_type|**smallint**|Der Typ des Parameters. Für einen Projektparameter ist der Wert `20` , und für einen Paketparameter ist der Wert `30` .|  
-|parameter_data_type|**vom Datentyp nvarchar(128)**|Der Datentyp des Parameters.|  
+|parameter_data_type|**nvarchar(128)**|Der Datentyp des Parameters.|  
 |parameter_name|**sysname**|Der Name des Parameters.|  
 |parameter_value|**sql_variant**|Der Wert des Parameters.|  
 |sensitive|**bit**|Wenn der Wert `1`lautet, ist der Parameterwert vertraulich. Wenn der Wert `0`lautet, ist der Parameterwert nicht vertraulich.|  
@@ -91,4 +89,3 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 -   Der angegebene Umgebungsverweis ist nicht vorhanden.  
   
   
-

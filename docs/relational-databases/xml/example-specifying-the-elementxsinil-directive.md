@@ -2,9 +2,12 @@
 title: 'Beispiel: Angeben der ELEMENTXSINIL-Direktive | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dc7da5b0e66592b6d7c8f2f7318cc79483188571
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 10744e4aef7ad4283329aff574001105544c4588
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="example-specifying-the-elementxsinil-directive"></a>Beispiel: Angeben der ELEMENTXSINIL-Direktive
-  Wenn Sie zum Abrufen einer elementzentrierten XML-Ausgabe die ELEMENT-Direktive angeben, und eine Spalte einen NULL-Wert aufweist, wird das entsprechende Element im EXPLICIT-Modus nicht generiert. Sie können optional die ELEMENTXSINIL-Direktive angeben, um das Generieren von Elementen für NULL-Werte anzufordern, wenn das **xsi:nil** -Attribut auf TRUE festgelegt ist.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Wenn Sie zum Abrufen einer elementzentrierten XML-Ausgabe die ELEMENT-Direktive angeben, und eine Spalte einen NULL-Wert aufweist, wird das entsprechende Element im EXPLICIT-Modus nicht generiert. Sie können optional die ELEMENTXSINIL-Direktive angeben, um das Generieren von Elementen für NULL-Werte anzufordern, wenn das **xsi:nil** -Attribut auf TRUE festgelegt ist.  
   
  Die folgende Abfrage konstruiert eine XML-Ausgabe, die die Adressen der Mitarbeiter enthält. Für die Spalten `AddressLine2` und `City` ist in den Spaltennamen die `ELEMENTXSINIL` -Direktive angegeben. So werden für NULL-Werte in der `AddressLine2` - und `City` -Spalte des Rowsets Elemente generiert.  
   

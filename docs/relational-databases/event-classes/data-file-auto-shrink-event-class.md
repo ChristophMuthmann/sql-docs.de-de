@@ -2,9 +2,12 @@
 title: Data File Auto Shrink-Ereignisklassen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b30109dc3f7ea8eed7e819c3fb7654aff5fc9ea1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 47c05cf969cf8b76f8905b097bd07d86fc0baa4b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-file-auto-shrink-event-class"></a>Data File Auto Shrink-Ereignisklasse
-  Die **Data File Auto Shrink** -Ereignisklasse gibt an, dass die Datendatei verkleinert wurde. Dieses Ereignis wird nicht ausgelöst, wenn die Datendatei explizit durch die ALTER DATABASE-Anweisung verkleinert wird. Schließen Sie die **Data File Auto Shrink** -Ereignisklasse in Ablaufverfolgungen ein, die die Größenveränderung der Datendatei überwachen.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Die **Data File Auto Shrink**-Ereignisklasse gibt an, dass die Datendatei verkleinert wurde. Dieses Ereignis wird nicht ausgelöst, wenn die Datendatei explizit durch die ALTER DATABASE-Anweisung verkleinert wird. Schließen Sie die **Data File Auto Shrink** -Ereignisklasse in Ablaufverfolgungen ein, die die Größenveränderung der Datendatei überwachen.  
   
  Wenn die **Data File Auto Shrink** -Ereignisklasse in eine Ablaufverfolgung eingeschlossen wird, ist der Mehraufwand gering, es sei denn, die Datendatei wird häufig verkleinert.  
   

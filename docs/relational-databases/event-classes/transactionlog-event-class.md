@@ -2,9 +2,12 @@
 title: TransactionLog-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 372113aa92be61fb807f351ff79cf9c1b6a8ec86
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 073de0fa118dfffe6a3b6956220e4564bee363b3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transactionlog-event-class"></a>TransactionLog-Ereignisklasse
-  Verwenden Sie die TransactionLog-Ereignisklasse, um Aktivitäten in den Transaktionsprotokollen in einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]zu überwachen.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Verwenden Sie die TransactionLog-Ereignisklasse, um Aktivitäten in den Transaktionsprotokollen in einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] zu überwachen.  
   
 ## <a name="transactionlog-event-class-data-columns"></a>Datenspalten der TransactionLog-Ereignisklasse  
   

@@ -1,5 +1,5 @@
 ---
-title: Entwickeln einer benutzerdefinierten Quellkomponente | Microsoft Docs
+title: Entwickeln einer benutzerdefinierten Quellkomponente | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,30 +24,29 @@ helpviewer_keywords:
 - custom sources [Integration Services]
 - source components [Integration Services]
 ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 30e5320679193120148f714324da10d4d0c65506
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7ff2fd453c04886594f4d70e1115f00acac72edb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-source-component"></a>Entwickeln einer benutzerdefinierten Quellkomponente
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ermöglicht es Entwicklern, Quellkomponenten zu schreiben, die benutzerdefinierte Datenquellen herstellen und Daten aus diesen Quellen an andere Komponenten in einem Datenflusstask bereitgestellt werden können. Die Möglichkeit, benutzerdefinierte Quellen zu erstellen, ist hilfreich, wenn Sie Verbindungen zu Datenquellen herstellen müssen, auf die Sie über keine der bestehenden [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Quellen zugreifen können.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ermöglicht es Entwicklern, in Quellkomponenten zu schreiben, die Verbindungen mit benutzerdefinierten Datenquellen herstellen und anderen Komponenten im Datenflusstask Daten aus diesen Quellen zur Verfügung stellen. Die Möglichkeit, benutzerdefinierte Quellen zu erstellen, ist hilfreich, wenn Sie Verbindungen zu Datenquellen herstellen müssen, auf die Sie über keine der bestehenden [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Quellen zugreifen können.  
   
  Quellkomponenten verfügen über eine oder mehrere Ausgaben und keine Eingabe. Zur Entwurfszeit dienen Quellkomponenten zur Erstellung und Konfiguration von Verbindungen, zum Lesen von Spaltenmetadaten aus der externen Datenquelle und zur Konfiguration der Ausgabespalten der Quelle basierend auf der externen Datenquelle. Während der Ausführung stellen sie eine Verbindung mit der externen Datenquelle her und fügen einem Ausgabepuffer Zeilen hinzu. Der Datenflusstask stellt dann Downstreamkomponenten diesen Puffer mit Datenzeilen bereit.  
   
- Eine allgemeine Übersicht über die Entwicklung von Data Flow Component finden Sie unter [Entwickeln einer benutzerdefinierten Datenflusskomponente](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
+ Einen allgemeinen Überblick über die Entwicklung von Datenflusskomponenten finden Sie unter [Entwickeln einer benutzerdefinierten Datenflusskomponente](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
 ## <a name="design-time"></a>Entwurfszeit  
  Zur Implementierung der Entwurfszeitfunktionen einer Quellkomponente müssen Sie eine Verbindung mit einer externen Datenquelle festlegen, der Datenquelle entsprechende Ausgabespalten hinzufügen und konfigurieren sowie überprüfen, ob die Komponente zur Ausführung bereit ist. Definitionsgemäß verfügt eine Quellkomponente über keine Eingabe und eine oder mehrere asynchrone Ausgaben.  
   
 ### <a name="creating-the-component"></a>Erstellen der Komponente  
- Quellkomponenten stellen mithilfe in einem Paket definierter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Objekte eine Verbindung mit externen Datenquellen her. Um auf die Notwendigkeit eines Verbindungs-Managers zu verweisen, wird der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>-Auflistung der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>-Eigenschaft ein Element hinzugefügt. Diese Auflistung erfüllt zweierlei Zwecke: Sie enthält Verweise auf Verbindungs-Manager im Paket, die von der Komponente genutzt werden, und zeigt dem Designer den Bedarf für einen Verbindungs-Manager an. Wenn ein <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> der Auflistung hinzugefügt wurde die **Erweiterter Editor** zeigt die **Verbindungseigenschaften** ermöglicht Benutzern das auswählen oder erstellen Sie eine Verbindung im Paket auf der Registerkarte.  
+ Quellkomponenten stellen mithilfe in einem Paket definierter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Objekte eine Verbindung mit externen Datenquellen her. Um auf die Notwendigkeit eines Verbindungs-Managers zu verweisen, wird der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>-Auflistung der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>-Eigenschaft ein Element hinzugefügt. Diese Auflistung erfüllt zweierlei Zwecke: Sie enthält Verweise auf Verbindungs-Manager im Paket, die von der Komponente genutzt werden, und zeigt dem Designer den Bedarf für einen Verbindungs-Manager an. Beim Hinzufügen eines <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100>-Typs zur Auflistung wird im **Erweiterten Editor** die Registerkarte **Verbindungseigenschaften** angezeigt, um den Benutzer aufzufordern, im Paket eine Verbindung auszuwählen oder zu erstellen.  
   
  Im folgenden Codebeispiel wird eine Implementierung von <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> gezeigt, die eine Ausgabe sowie ein <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100>-Objekt zur <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> hinzufügt.  
   
@@ -185,10 +182,10 @@ End Sub
 |DT_CY|0|0|0|0|  
 |DT_NUMERIC|0|Größer 0 und kleiner oder gleich 28 sowie kleiner als Genauigkeit|Größer oder gleich 1 und kleiner oder gleich 38|0|  
 |DT_BYTES|Größer 0|0|0|0|  
-|DT_STR|Größer als 0 und kleiner als 8000.|0|0|Nicht 0 und eine gültige Codepage|  
+|DT_STR|Größer als 0 und kleiner als 8000|0|0|Nicht 0 und eine gültige Codepage|  
 |DT_WSTR|Größer 0 und kleiner 4000|0|0|0|  
   
- Da die Beschränkungen der Datentypeigenschaften vom Datentyp der Ausgabespalte abhängen, müssen Sie bei der Arbeit mit verwalteten Typen den richtigen [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Datentyp wählen. Die Basisklasse stellt drei Hilfsmethoden <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A>, und <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>, bei der Entwickler verwalteter Komponenten bei der Auswahl einer [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Datentyps einen verwalteten Typ. Diese Methoden wandeln verwaltete Datentypen in [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Datentypen um und umgekehrt.  
+ Da die Beschränkungen der Datentypeigenschaften vom Datentyp der Ausgabespalte abhängen, müssen Sie bei der Arbeit mit verwalteten Typen den richtigen [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Datentyp wählen. Die Basisklasse stellt drei Hilfsmethoden, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> und <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>, die Entwickler verwalteter Komponenten bei der Auswahl eines [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Datentyps für einen verwalteten Typ unterstützen. Diese Methoden wandeln verwaltete Datentypen in [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Datentypen um und umgekehrt.  
   
  Im folgenden Codebeispiel wird gezeigt, wie die Ausgabenspaltenauflistung einer Komponente basierend auf einem Tabellenschema aufgefüllt wird. Die Hilfsmethoden der Basisklasse dienen dazu, den Datentyp der Spalte festzulegen, und die abhängigen Eigenschaften werden basierend auf dem Datentyp festgelegt.  
   
@@ -369,9 +366,9 @@ End Sub
 ```  
   
 ### <a name="validating-the-component"></a>Überprüfen der Komponente  
- Sie sollten eine Quellkomponente überprüfen und sicherstellen, dass die in den Ausgabespaltenauflistungen definierten Spalten denjenigen bei der externen Datenquelle entsprechen. Manchmal ist der Abgleich der Ausgabespalten mit der externen Datenquelle nicht möglich, beispielsweise da keine Verbindung besteht oder zeitaufwendige Roundtrips zum Server vermieden werden sollen. In solchen Fällen können die Spalten in der Ausgabe dennoch mithilfe der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExternalMetadataColumnCollection%2A> des Ausgabeobjekts überprüft werden. Weitere Informationen finden Sie unter [Überprüfen einer Datenflusskomponente](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md).  
+ Sie sollten eine Quellkomponente überprüfen und sicherstellen, dass die in den Ausgabespaltenauflistungen definierten Spalten denjenigen bei der externen Datenquelle entsprechen. Manchmal ist der Abgleich der Ausgabespalten mit der externen Datenquelle nicht möglich, beispielsweise da keine Verbindung besteht oder zeitaufwendige Roundtrips zum Server vermieden werden sollen. In solchen Fällen können die Spalten in der Ausgabe dennoch mithilfe der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExternalMetadataColumnCollection%2A> des Ausgabeobjekts überprüft werden. Weitere Informationen zu finden Sie unter [Überprüfen einer Datenflusskomponente](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md).  
   
- Diese Auflistung ist sowohl für Eingabe- als auch für Ausgabeobjekte vorhanden. Sie können sie mit den Spalten der externen Datenquelle füllen. Können Sie diese Sammlung verwenden, auf die Ausgabespalten überprüfen beim [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer ist offline, wenn die Komponente getrennt ist, oder wenn die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> Eigenschaft ist **"false"**. Die Auflistung sollte zunächst zum Zeitpunkt der Erstellung der Ausgabespalten aufgefüllt werden. Das Hinzufügen externer Metadatenspalten zur Auflistung ist recht einfach, da die externe Metadatenspalte zunächst der Ausgabespalte entsprechen sollte. Die Datentypeigenschaften der Spalte sollten bereits korrekt festgelegt worden sein, und die Eigenschaften können direkt in das <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>-Objekt kopiert werden.  
+ Diese Auflistung ist sowohl für Eingabe- als auch für Ausgabeobjekte vorhanden. Sie können sie mit den Spalten der externen Datenquelle füllen. Mithilfe dieser Auflistung können Sie die Ausgabespalten überprüfen, wenn der [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer offline ist, die Verbindung mit der Komponente getrennt ist oder wenn die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A>-Eigenschaft **false** lautet. Die Auflistung sollte zunächst zum Zeitpunkt der Erstellung der Ausgabespalten aufgefüllt werden. Das Hinzufügen externer Metadatenspalten zur Auflistung ist recht einfach, da die externe Metadatenspalte zunächst der Ausgabespalte entsprechen sollte. Die Datentypeigenschaften der Spalte sollten bereits korrekt festgelegt worden sein, und die Eigenschaften können direkt in das <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>-Objekt kopiert werden.  
   
  Im folgenden Beispielcode wird eine externe Metadatenspalte auf Grundlage einer neu erstellten Ausgabespalte hinzugefügt. Dabei wird vorausgesetzt, dass die Ausgabespalte bereits erstellt wurde.  
   
@@ -410,13 +407,13 @@ Private Sub CreateExternalMetaDataColumn(ByVal output As IDTSOutput100, ByVal ou
     End Sub  
 ```  
   
-## <a name="run-time"></a>Zur Laufzeit  
+## <a name="run-time"></a>Runtime  
  Bei der Ausführung fügen die Komponenten Zeilen zu Ausgabepuffern hinzu, die durch den Datenflusstask erstellt und der Komponente in der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>-Methode bereitgestellt werden. Einmal für Quellkomponenten aufgerufen, erhält die Methode einen Ausgabepuffer für jede <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> der Komponente, die mit einer Downstreamkomponente verbunden ist.  
   
 ### <a name="locating-columns-in-the-buffer"></a>Suchen von Spalten im Puffer  
  Der Ausgabepuffer für eine Komponente enthält die von der Komponente definierten Spalten sowie alle zur Ausgabe einer Downstreamkomponente hinzugefügten Spalten. Falls beispielsweise eine Quellkomponente drei Spalten in ihrer Ausgabe bereitstellt und die nächste Komponente eine vierte Ausgabespalte hinzufügt, enthält der Ausgabepuffer, der für die Quellkomponente bereitgestellt wird, diese vier Spalten.  
   
- Die Reihenfolge der Spalten in einer Pufferzeile wird nicht vom Index der Ausgabespalte in der Ausgabespaltenauflistung definiert. Die genaue Position einer Ausgabespalte in einer Pufferzeile kann nur mithilfe der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSBufferManagerClass.FindColumnByLineageID%2A>-Methode des <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferManager%2A> ermittelt werden. Diese Methode sucht nach der Spalte mit der angegebenen Herkunfts-ID in den angegebenen Puffer und gibt die Position in der Zeile. Die Indizes der Ausgabespalten befinden sich typischerweise in der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A>-Methode und werden für die Verwendung während des <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>-Schritts gespeichert.  
+ Die Reihenfolge der Spalten in einer Pufferzeile wird nicht vom Index der Ausgabespalte in der Ausgabespaltenauflistung definiert. Die genaue Position einer Ausgabespalte in einer Pufferzeile kann nur mithilfe der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSBufferManagerClass.FindColumnByLineageID%2A>-Methode des <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferManager%2A> ermittelt werden. Diese Methode sucht die Spalte mit der angegebenen Herkunfts-ID im jeweiligen Puffer und gibt ihre Position in der Zeile zurück. Die Indizes der Ausgabespalten befinden sich typischerweise in der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A>-Methode und werden für die Verwendung während des <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>-Schritts gespeichert.  
   
  Im folgenden Codebeispiel wird die Position der Ausgabespalten im Ausgabepuffer bei einem Aufruf von <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> gesucht und in einer internen Struktur gespeichert. Auch der Name der Spalte wird in der Struktur gespeichert und im Codebeispiel für die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>-Methode im nächsten Abschnitt dieses Themas verwendet.  
   
@@ -678,7 +675,6 @@ End Namespace
   
 ## <a name="see-also"></a>Siehe auch  
  [Entwickeln einer benutzerdefinierten Zielkomponente](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)   
- [Erstellen einer Datenquelle mit der Skriptkomponente](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  
+ [Erstellen einer Quelle mit der Skriptkomponente](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  
   
   
-

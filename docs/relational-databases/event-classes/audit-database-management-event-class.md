@@ -2,9 +2,12 @@
 title: Audit Database Management (Ereignisklasse) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5d45215a7f1780a85b2b7104c68cbfa775a945f5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 29348def9ba11a148cdbc63557aa0c7535ca1953
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-database-management-event-class"></a>Audit Database Management (Ereignisklasse)
-  Die Ereignisklasse **Audit Database Management** tritt auf, wenn eine Datenbank erstellt, geändert oder gelöscht wird.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Die Ereignisklasse **Audit Database Management** tritt auf, wenn eine Datenbank erstellt, geändert oder gelöscht wird.  
   
 ## <a name="audit-database-management-event-class-data-columns"></a>Datenspalten in der Audit Database Management-Ereignisklasse  
   

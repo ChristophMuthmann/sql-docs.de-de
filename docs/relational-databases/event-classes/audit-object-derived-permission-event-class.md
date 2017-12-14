@@ -2,9 +2,12 @@
 title: Audit Object Derived Permission-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bec371bcc5f0dcc972a2f612d1c5fa628b6d09bf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 50db4ef7828f6b564c56b3512ff2f1223544b330
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-object-derived-permission-event-class"></a>Audit Object Derived Permission-Ereignisklasse
-  Die **Audit Object Derived Permission** -Ereignisklasse zeichnet das Ausstellen von CREATE-, ALTER- oder DROP-Befehlen für ein angegebenes Objekt auf. Dieses Ereignis tritt nur auf, wenn dem Objekt keine Berechtigungen oder Besitzer direkt zugeordnet sind.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Die **Audit Object Derived Permission**-Ereignisklasse zeichnet das Ausstellen von CREATE-, ALTER- oder DROP-Befehlen für ein angegebenes Objekt auf. Dieses Ereignis tritt nur auf, wenn dem Objekt keine Berechtigungen oder Besitzer direkt zugeordnet sind.  
   
  Es kann sein, dass diese Ereignisklasse in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt wird. Es wird empfohlen, stattdessen die **Audit Schema Object Management** -Ereignisklasse zu verwenden.  
   

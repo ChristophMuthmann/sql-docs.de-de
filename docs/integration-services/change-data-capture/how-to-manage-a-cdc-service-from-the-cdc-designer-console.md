@@ -1,5 +1,5 @@
 ---
-title: "Gewusst wie: Verwalten eines CDC Service über die CDC Designer Console | Microsoft Docs"
+title: "Verwalten eines CDC Service über die CDC Designer Console | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 80fc7320cb47a9fc46b331b119ff91ec0a1cdc19
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d160c771e78e05622bb86fc61f16088f8d76e04f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>Verwalten eines CDC Service über die CDC Designer Console
   In diesem Verfahren wird beschrieben, wie Sie die CDC Designer Console zum Verwalten eines CDC-Diensts verwenden.  
@@ -51,4 +49,3 @@ ms.lasthandoff: 08/03/2017
  Andere Tasks des CDC-Diensts werden mithilfe der CDC Service Configuration Console ausgeführt. Informationen zu den Tasks, die Sie in der Service Configuration Console ausführen können, finden Sie in der Onlinehilfe der Service Configuration Console.  
   
   
-

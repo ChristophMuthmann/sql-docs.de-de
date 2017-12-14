@@ -1,5 +1,5 @@
 ---
-title: "Verwenden von Eigenschaftsausdrücken in Paketen | Microsoft Docs"
+title: "Verwenden von Eigenschaftsausdrücken in Paketen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - expressions [Integration Services], property expressions
 - property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7f1a931e20a1ab0bafae0e014b174cf718e9a69f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 87cdbcf3158e3bbcc76233ff48f0ec90d5372c64
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-property-expressions-in-packages"></a>Verwenden von Eigenschaftsausdrücken in Paketen
   Ein Eigenschaftsausdruck ist ein einer Eigenschaft zugewiesener Ausdruck, um das dynamische Aktualisieren der Eigenschaft zur Laufzeit zu ermöglichen. So kann ein Eigenschaftsausdruck z. B. die An-Zeile aktualisieren, die ein Task des Typs "Mail senden" verwendet, indem eine in einer Variablen gespeicherte E-Mail-Adresse eingefügt wird.  
@@ -75,7 +73,7 @@ ms.lasthandoff: 08/03/2017
   
  Im folgenden Diagramm werden die Benutzeroberflächen angezeigt, die Sie verwenden, um Eigenschaftsausdrücke hinzuzufügen, zu ändern oder zu entfernen.  
   
- ![Die Benutzeroberfläche für Eigenschaftsausdrücke](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "die Benutzeroberfläche für Eigenschaftsausdrücke")  
+ ![Benutzeroberfläche für Eigenschaftsausdrücke](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "The user interface for property expressions")  
   
  Klicken Sie im **Eigenschaften** -Fenster und auf der **Ausdrücke** -Seite auf die Schaltfläche zum Durchsuchen **(…)** in der Sammlungsebene **Ausdrücke** , um das **Eigenschaftsausdruck-Editor** -Dialogfeld zu öffnen. Der Eigenschaftsausdruck-Editor ermöglicht das Zuordnen einer Eigenschaft zu einem Ausdruck und das Eingeben eines Eigenschaftsausdrucks. Wenn Sie die grafischen Ausdruckstools zum Erstellen und anschließend zum Überprüfen des Ausdrucks verwenden möchten, klicken Sie auf der Ausdrucksebene auf die Schaltfläche zum Durchsuchen **(…)** , um das **Ausdrucks-Generator** -Dialogfeld zu öffnen. Erstellen bzw. ändern Sie anschließend den Ausdruck, und überprüfen Sie ihn bei Bedarf.  
   
@@ -183,4 +181,3 @@ ms.lasthandoff: 08/03/2017
  [Verwenden von Variablen in Paketen](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   
-

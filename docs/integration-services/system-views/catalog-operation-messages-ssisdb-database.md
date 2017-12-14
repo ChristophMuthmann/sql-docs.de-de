@@ -1,5 +1,5 @@
 ---
-title: Catalog. operation_messages (SSISDB-Datenbank) | Microsoft Docs
+title: catalog.operation_messages (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - catalog.operation_messages view [Integration Services]
 - operation_messages view [Integration Services]
 ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 235e9896cbf075bdc26e3df120b23091b8e82d6d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 666d7014adb8feaa77e72f5856838051d992c8df
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogoperationmessages-ssisdb-database"></a>catalog.operation_messages (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,18 +35,18 @@ ms.lasthandoff: 09/26/2017
 |-----------------|---------------|-----------------|  
 |operation_message_id|**bigint**|Der eindeutige Bezeichner (ID) der Meldung.|  
 |operation_id|**bigint**|Die eindeutige ID des Vorgangs.|  
-|message_time|**DateTimeOffset(7)**|Zeitpunkt, zu dem die Meldung erstellt wurde.|  
+|message_time|**datetimeoffset(7)**|Zeitpunkt, zu dem die Meldung erstellt wurde.|  
 |message_type|**smallint**|Typ der angezeigten Meldung.|  
 |message_source_type|**smallint**|Die ID des Typs der Nachrichtenquelle.|  
 |message|**nvarchar(max)**|Der Text der Meldung.|  
-|extended_info_id|**bigint**|Die ID der zusätzliche Informationen, die auf die vorgangsmeldung beziehen gefunden wird, der [Extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md) anzeigen.|  
+|extended_info_id|**bigint**|Die ID weiterer Informationen, die sich auf die Vorgangsmeldung beziehen. Diese ist in der Sicht [extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md) enthalten.|  
   
 ## <a name="remarks"></a>Hinweise  
  In dieser Sicht wird eine Zeile für jede Meldung angezeigt, die während eines Vorgangs im Katalog protokolliert wird. Die Meldung kann durch den Server, den Paketausführungsprozess oder das Ausführungsmodul generiert werden.  
   
  In dieser Sicht werden die folgenden Meldungstypen angezeigt:  
   
-|**Message_type** Wert|Description|  
+|Wert von **message_type**|Description|  
 |-----------------------------|-----------------|  
 |-1|Unknown|  
 |120|Fehler|  
@@ -92,4 +90,3 @@ ms.lasthandoff: 09/26/2017
 >  Wenn Sie über die Berechtigung verfügen, einen Vorgang auf dem Server auszuführen, verfügen Sie auch über die Berechtigung, Informationen zu dem Vorgang anzuzeigen. Sicherheit auf Zeilenebene wird erzwungen. Es werden nur Zeilen angezeigt, zu deren Anzeige Sie berechtigt sind.  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Festlegen von Paketeigenschaften | Microsoft Docs
+title: Festlegen von Paketeigenschaften | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,17 +27,16 @@ helpviewer_keywords:
 - version properties [Integration Services]
 - SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 658f7e77fe821fa4821b61162662175ab5f840c1
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 860438f65035233e198177697f24d2a2d820d75f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-package-properties"></a>Festlegen von Paketeigenschaften
   Wenn Sie ein Paket in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] mithilfe der grafischen Benutzeroberfläche von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] erstellen, legen Sie die Eigenschaften des Paketobjekts im Eigenschaftenfenster fest.  
@@ -116,7 +114,7 @@ ms.lasthandoff: 08/03/2017
 |**CreatorComputerName**|Der Name des Computers, auf dem das Paket erstellt wurde.|  
 |**CreatorName**|Der Name der Person, die das Paket erstellt hat.|  
 |**Description**|Eine Beschreibung der Paketfunktionalität.|  
-|**ID**|Der Paket-GUID, der dem Paket beim Erstellen zugewiesen wird. Diese Eigenschaft ist schreibgeschützt. Generieren Sie einen neuen Zufallswert für die **ID** -Eigenschaft die Option  **\<neue ID generieren\>**  in der Dropdown-Liste.|  
+|**ID**|Der Paket-GUID, der dem Paket beim Erstellen zugewiesen wird. Diese Eigenschaft ist schreibgeschützt. Um einen neuen Zufallswert für die **ID**-Eigenschaft zu generieren, wählen Sie in der Dropdownliste **\<Neue ID generieren\>** aus.|  
 |**Name**|Der Name des Pakets.|  
 |**PackageType**|Der Pakettyp. Mögliche Werte sind **Default**, **DTSDesigner**, **DTSDesigner100**, **DTSWizard**, **SQLDBMaint**und **SQLReplication**. Der Standardwert dieser Eigenschaft ist **Default**. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>.|  
   
@@ -161,7 +159,7 @@ ms.lasthandoff: 08/03/2017
 |**VersionMajor**|Die aktuelle Hauptversion des Pakets.|  
 |**VersionMinor**|Die aktuelle Nebenversion des Pakets.|  
 
-## <a name="set-package-properties-in-the-properties-window"></a>Festlegen von Paketeigenschaften im Eigenschaftenfenster 
+## <a name="set-package-properties-in-the-properties-window"></a>Festlegen von Paketeigenschaften im Fenster „Eigenschaften“ 
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt mit dem Paket, das Sie konfigurieren möchten.  
   
 2.  Doppelklicken Sie im Bereich **Projektmappen-Explorer**auf das Paket, um es im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer zu öffnen, oder klicken Sie mit der rechten Maustaste, und wählen Sie **Sicht-Designer**aus.  
@@ -176,4 +174,3 @@ ms.lasthandoff: 08/03/2017
   
 5.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-

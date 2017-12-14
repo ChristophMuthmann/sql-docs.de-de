@@ -1,5 +1,5 @@
 ---
-title: Entwickeln einer benutzerdefinierten Transformationskomponente mit asynchronen Ausgaben | Microsoft Docs
+title: Entwickeln einer benutzerdefinierten Transformationskomponente mit asynchronen Ausgaben | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - PrimeOutput method
 - data flow components [Integration Services], transformation components
 ms.assetid: 1c3e92c7-a4fa-4fdd-b9ca-ac3069536274
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: de3e9e37d125e8c098fc4fd3fe8036b3c634f228
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fbd542b091316f11c17af387e0a8f735704f5e54
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>Entwickeln einer benutzerdefinierten Transformationskomponente mit asynchronen Ausgaben
   Verwenden Sie eine Komponente mit asynchronen Ausgaben dann, wenn eine Transformation keine Zeilen ausgeben kann, solange die Komponente nicht alle ihre Eingabezeilen empfangen hat, oder wenn die Transformation nicht genau eine Ausgabezeile für jede als Eingabe empfangene Zeile erstellt. Die Transformation für das Aggregieren kann z. B. erst dann eine Summe über mehrere Zeilen errechnen, wenn sie alle Zeilen gelesen hat. Dagegen können Sie jederzeit eine Komponente mit synchronen Ausgaben verwenden, wenn Sie jede Datenzeile beim Durchlaufen verändern. Sie können die Daten für jede vorhandene Zeile verändern, oder Sie können eine oder mehrere neue Spalten erstellen, wovon jede einen Wert für jede einzelne der Eingabzeilen aufweist. Weitere Informationen zu den Unterschieden zwischen synchronen und asynchronen Komponenten finden Sie unter [Grundlegendes zu synchronen und asynchronen Transformationen](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
@@ -47,7 +44,7 @@ ms.lasthandoff: 08/03/2017
   
  Die Spalten von Upstreamkomponenten, die einer Komponente mit synchronen Ausgaben zur Verfügung stehen, stehen den Komponenten, die sich unterhalb der Komponente befinden, automatisch zur Verfügung. Daher muss eine Komponente mit synchronen Ausgaben keine Ausgabespalten definieren, um für die nächste Komponente Spalten und Zeilen bereitzustellen. Komponenten mit asynchronen Ausgaben müssen dagegen Ausgabespalten definieren, und Zeilen für die Downstreamkomponenten bereitstellen. Daher muss eine Komponente mit asynchronen Ausgaben sowohl in der Entwurfs- als auch in der Ausführungszeit mehr Tasks ausführen, und der Komponentenentwickler muss mehr Code implementieren.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält mehrere Transformationen mit asynchronen Ausgaben. So erfordert z. B. die Transformation zum Sortieren alle Zeilen, bevor sie sie sie sortieren kann, wobei sie asynchrone Ausgaben verwendet. Nachdem sie alle Zeilen empfangen hat, sortiert sie sie und fügt sie der Ausgabe hinzu.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält mehrere Transformationen mit asynchronen Ausgaben. So erfordert z. B. die Transformation zum Sortieren alle Zeilen, bevor sie sie sie sortieren kann, wobei sie asynchrone Ausgaben verwendet. Nachdem sie alle Zeilen empfangen hat, sortiert sie sie und fügt sie der Ausgabe hinzu.  
   
  Dieser Abschnitt erklärt im Detail, wie Transformationen mit asynchronen Ausgaben entwickelt werden. Weitere Informationen zur Entwicklung von Quellkomponenten finden Sie unter [Entwickeln einer benutzerdefinierten Quellkomponente](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md).  
   
@@ -151,7 +148,7 @@ Public Overrides Sub OnInputPathAttached(ByVal inputID As Integer)
 End Sub  
 ```  
   
-## <a name="run-time"></a>Zur Laufzeit  
+## <a name="run-time"></a>Runtime  
  Komponenten mit asynchronen Ausgaben führen während der Laufzeit ebenfalls eine andere Sequenz von Methoden aus als andere Komponententypen. Zunächst sind sie die einzigen Komponenten, die sowohl bei der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>- als auch der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>-Methode aufgerufen werden. Komponenten mit asynchronen Ausgaben benötigen ebenfalls Zugang zu allen eingehenden Zeilen, bevor sie mit der Verarbeitung beginnen können; daher müssen sie die Eingabezeilen intern zwischenspeichern, bis alle Zeilen gelesen wurden. Schließlich empfangen Komponenten mit asynchronen Ausgaben im Gegensatz zu anderen Komponenten sowohl einen Eingabe- als auch einen Ausgabepuffer.  
   
 ### <a name="understanding-the-buffers"></a>Grundlegendes zu den Puffern  
@@ -334,4 +331,3 @@ End Namespace
  [Erstellen einer asynchronen Transformation mit der Skriptkomponente](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
   
   
-

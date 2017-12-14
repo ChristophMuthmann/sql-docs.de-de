@@ -1,5 +1,5 @@
 ---
-title: Bearbeiten der erweiterten Eigenschaften | Microsoft Docs
+title: Bearbeiten der erweiterten Eigenschaften | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- advanced
+f1_keywords: advanced
 ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 469785d1add7db3382852938d3a798f7a6666e3e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 322399090ca90882fdbbf403643f6909ce5ae33f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="edit-the-advanced-properties"></a>Bearbeiten der erweiterten Eigenschaften
   Verwenden Sie die Registerkarte **Erweitert** , um der CDC-Instanz besondere Eigenschaften hinzuzufügen.  
@@ -42,8 +39,7 @@ ms.lasthandoff: 08/03/2017
  Eine Beschreibung der Eigenschaften, die Sie eingeben können, finden Sie in der Tabelle mit den verfügbaren Optionen unter [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gewusst wie: Verwalten einer CDC-Instanz](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
- [Gewusst wie: Bearbeiten der CDC-Instanzeigenschaften](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)  
+ [Verwalten einer CDC-Instanz](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
+ [Bearbeiten der CDC-Instanzeigenschaften](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)  
   
   
-

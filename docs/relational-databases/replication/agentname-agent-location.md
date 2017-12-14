@@ -2,9 +2,12 @@
 title: Speicherort des &lt;AgentName&gt;-Agents | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f2a23eef0a5877890b88b6a93b1362d814749158
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6f26cfa943a7cf2e3853423bf565c9abad2a4c48
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ltagentnamegt-agent-location"></a>Speicherort des &lt;AgentName&gt;-Agents
-  Der Merge-Agent (für Mergeabonnements) und der Verteiler-Agent (für Transaktions- und Momentaufnahme-Abonnements) werden auf dem Verteiler oder auf dem Abonnenten ausgeführt. Wenn der Agent auf dem Verteiler ausgeführt wird, wird das Abonnement als Pushabonnement, und bei Ausführung auf dem Abonnenten als Pullabonnement bezeichnet. Weitere Informationen zu Push- und Pullabonnements finden Sie unter [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md). Die in diesem Schritt des Assistenten erstellten Abonnements gehören dem ausgewählten Typ an. Um Abonnements beider Typen zu erstellen, müssen Sie den Assistenten zweimal ausführen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Der Merge-Agent (für Mergeabonnements) und der Verteilungs-Agent (für Transaktions- und Momentaufnahme-Abonnements) werden auf dem Verteiler oder auf dem Abonnenten ausgeführt. Wenn der Agent auf dem Verteiler ausgeführt wird, wird das Abonnement als Pushabonnement, und bei Ausführung auf dem Abonnenten als Pullabonnement bezeichnet. Weitere Informationen zu Push- und Pullabonnements finden Sie unter [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md). Die in diesem Schritt des Assistenten erstellten Abonnements gehören dem ausgewählten Typ an. Um Abonnements beider Typen zu erstellen, müssen Sie den Assistenten zweimal ausführen.  
   
 > [!NOTE]  
 >  Nach dem Erstellen eines Abonnements kann der Abonnementtyp nicht mehr geändert werden.  

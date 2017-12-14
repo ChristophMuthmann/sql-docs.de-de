@@ -2,9 +2,12 @@
 title: Showplan Text-Ereignisklasse (Unencoded)| Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cdbd698b1ee7ac3273a2ecc4c52e0c8b5659e41a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8b5d4d061f83114b9b1d5eb31f1a09e6901f565f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="showplan-text-unencoded-event-class"></a>Showplan Text (Unencoded)-Ereignisklasse
-  Die Showplan Text (Unencoded)-Ereignisklasse tritt auf, wenn in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine SQL-Anweisung ausgeführt wird. Diese Ereignisklasse ist mit der Showplan Text-Ereignisklasse bis auf den Unterschied identisch, dass die Informationen hier nicht als binäre Daten, sondern als Zeichenfolge formatiert sind.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Die „Showplan Text (Unencoded)“-Ereignisklasse tritt auf, wenn in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine SQL-Anweisung ausgeführt wird. Diese Ereignisklasse ist mit der Showplan Text-Ereignisklasse bis auf den Unterschied identisch, dass die Informationen hier nicht als binäre Daten, sondern als Zeichenfolge formatiert sind.  
   
  Bei den eingeschlossenen Informationen handelt es sich um eine Teilmenge der Informationen, die in den Ereignisklassen „Showplan All“, „Showplan XML“ und „Showplan XML Statistics Profile“ verfügbar sind.  
   

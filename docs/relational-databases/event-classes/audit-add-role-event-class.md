@@ -2,9 +2,12 @@
 title: Audit Add Role-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 99f91cb628e60b2646b39091f4ac53cd8d4c9a21
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9b4cbc6c52d893a90251ef785f878efccf11e36b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-add-role-event-class"></a>Audit Add Role (Ereignisklasse)
-  Die **Audit Add Role** -Ereignisklasse tritt auf, wenn eine Datenbankrolle einer Datenbank hinzugefügt oder daraus entfernt wird. Diese Ereignisklasse wird von den gespeicherten Prozeduren **sp_addrole** und **sp_droprole** verwendet.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Die **Audit Add Role**-Ereignisklasse tritt auf, wenn eine Datenbankrolle einer Datenbank hinzugefügt oder daraus entfernt wird. Diese Ereignisklasse wird von den gespeicherten Prozeduren **sp_addrole** und **sp_droprole** verwendet.  
   
  Diese Ereignisklasse ist möglicherweise aus einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Es wird empfohlen, stattdessen die **Audit Database Principal Management** -Ereignisklasse zu verwenden.  
   

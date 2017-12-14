@@ -1,5 +1,5 @@
 ---
-title: Codieren eines benutzerdefinierten ForEach-Enumerators | Microsoft Docs
+title: Codieren eines benutzerdefinierten Foreach-Enumerators | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,37 +8,33 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom foreach enumerators [Integration Services], coding
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom foreach enumerators [Integration Services], coding
 ms.assetid: 279cf6de-d06f-40e7-b8ca-569310449f36
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 74e6e838c3dcfb18e52a8fbf460a5b71ee25399a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a7b4e876198c38de3b6ead93e3b4c78a08615f6c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="coding-a-custom-foreach-enumerator"></a>Codieren eines benutzerdefinierten Foreach-Enumerators
   Nachdem Sie eine Klasse erstellt haben, die von der <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator>-Basisklasse erbt, und das <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute>-Attribut auf die Klasse angewendet haben, müssen Sie die Implementierung der Eigenschaften und Methoden der Basisklasse überschreiben, um die benutzerdefinierte Funktionalität bereitzustellen.  
   
- Ein funktionstüchtiges Beispiel eines benutzerdefinierten Enumerators finden Sie unter [Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten foreach-Enumerator](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md).  
+ Ein funktionierendes Beispiel eines benutzerdefinierten Enumerators finden Sie unter [Developing a User Interface for a Custom ForEach Enumerator](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md) (Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten ForEach-Enumerator).  
   
 ## <a name="initializing-the-enumerator"></a>Initialisieren des Enumerators  
  Sie können die <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.InitializeForEachEnumerator%2A>-Methode verwenden, um Verweise auf die im Paket definierten Verbindungs-Manager zwischenzuspeichern und um Verweise auf die Ereignisschnittstelle zwischenzuspeichern, die Sie verwenden können, um Fehler, Warnungen und Informationsmeldungen auszulösen.  
   
 ## <a name="validating-the-enumerator"></a>Überprüfen des Enumerators  
- Überschreiben Sie die <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.Validate%2A>-Methode, um zu überprüfen, ob der Enumerator ordnungsgemäß konfiguriert ist. Wenn die-Methode zurückgibt **Fehler**, der Enumerator und das Paket, das den Enumerator enthält nicht ausgeführt werden. Die Implementierung dieser Methode ist für jeden Enumerator spezifisch. Wenn jedoch der Enumerator auf <xref:Microsoft.SqlServer.Dts.Runtime.Variable>- oder <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Objekten basiert, sollten Sie Code hinzufügen, um zu überprüfen, ob diese Objekte in den Auflistungen, die der Methode bereitgestellt werden, vorhanden sind.  
+ Überschreiben Sie die <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.Validate%2A>-Methode, um zu überprüfen, ob der Enumerator ordnungsgemäß konfiguriert ist. Wenn die Methode **Failure** zurückgibt, werden der Enumerator und das Paket, das den Enumerator enthält, nicht ausgeführt. Die Implementierung dieser Methode ist für jeden Enumerator spezifisch. Wenn jedoch der Enumerator auf <xref:Microsoft.SqlServer.Dts.Runtime.Variable>- oder <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Objekten basiert, sollten Sie Code hinzufügen, um zu überprüfen, ob diese Objekte in den Auflistungen, die der Methode bereitgestellt werden, vorhanden sind.  
   
  Im folgenden Codebeispiel wird die Implementierung von <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.Validate%2A> gezeigt, die nach einer in einer Eigenschaft des Enumerators angegebenen Variablen sucht.  
   
@@ -118,8 +114,7 @@ End Function
 ```  
  
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen eines benutzerdefinierten ForEach-Enumerators](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/creating-a-custom-foreach-enumerator.md)   
- [Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten foreach-Enumerator](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
+ [Erstellen eines benutzerdefinierten Foreach-Enumerators](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/creating-a-custom-foreach-enumerator.md)   
+ [Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten ForEach-Enumerator](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
   
   
-

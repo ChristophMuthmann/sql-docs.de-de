@@ -1,5 +1,5 @@
 ---
-title: "Überprüfen einer Datenflusskomponente | Microsoft Docs"
+title: "Überprüfen einer Datenflusskomponente | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - data flow components [Integration Services], validating
 - validation [Integration Services]
 ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 937d904f7139e03655177b4544d573da7cc35e14
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3c3953a6c1fbf676d82b3057df2eb9a61f9cc6e4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="validating-a-data-flow-component"></a>Überprüfen einer Datenflusskomponente
   Die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>-Basisklasse wird bereitgestellt, um die Ausführung einer Komponente zu verhindern, die nicht korrekt konfiguriert wurde. Verwenden Sie diese Methode, wenn Sie überprüfen wollen, ob eine Komponente die erwartete Anzahl an Eingabe- und Ausgabeobjekten aufweist, die Werte der benutzerdefinierten Eigenschaften der Komponente zulässig sind, und Verbindungen, falls erforderlich, angegeben sind. Sie können diese Methode auch verwenden, um zu überprüfen, ob die Spalten in der Eingabe- und Ausgabeauflistung die korrekten Datentypen enthalten und der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType> jeder Spalte ordnungsgemäß für die Komponente festgelegt wurde. Durch die Basisklassenimplementierung wird der Überprüfungsprozess unterstützt, indem die Eingabespaltenauflistung der Komponente überprüft und sichergestellt wird, dass jede Spalte in der Auflistung auf eine Spalte in <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100> der Upstreamkomponente verweist.  
@@ -48,9 +45,9 @@ ms.lasthandoff: 08/03/2017
   
  Der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISBROKEN>-Wert zeigt an, dass die Komponente einen Fehler aufweist, der durch Bearbeitung der Komponente im Designer behoben werden kann. Der Fehler wird typischerweise durch eine benutzerdefinierte Eigenschaft oder eine erforderliche Verbindung verursacht, die nicht angegeben oder nicht ordnungsgemäß eingerichtet wurde.  
   
- Der endgültige Fehlerwert ist <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISCORRUPT>, wodurch angezeigt wird, dass die Komponente Fehler gefunden hat, die nur auftreten dürften, wenn die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>-Eigenschaft entweder durch Bearbeiten des Paket-XML oder durch Verwenden des Objektmodells direkt geändert wurde. Dieser Fehlertyp tritt z. B. auf, wenn eine Komponente nur eine einzelne Eingabe hinzugefügt hat, aber bei der Überprüfung festgestellt wird, dass mehr als eine Eingabe in <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> vorhanden ist. Rückgabe von Fehlern, die dies generieren Wert kann nur behoben werden, indem die Komponente mit der **zurücksetzen** Schaltfläche der **Erweiterter Editor** (Dialogfeld).  
+ Der endgültige Fehlerwert ist <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISCORRUPT>, wodurch angezeigt wird, dass die Komponente Fehler gefunden hat, die nur auftreten dürften, wenn die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>-Eigenschaft entweder durch Bearbeiten des Paket-XML oder durch Verwenden des Objektmodells direkt geändert wurde. Dieser Fehlertyp tritt z. B. auf, wenn eine Komponente nur eine einzelne Eingabe hinzugefügt hat, aber bei der Überprüfung festgestellt wird, dass mehr als eine Eingabe in <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> vorhanden ist. Fehler, die diesen Rückgabewert generieren, können nur behoben werden, indem die Komponente durch Verwenden der Schaltfläche **Zurücksetzen** im Dialogfeld **Erweiterter Editor** zurückgesetzt wird.  
   
- Neben der Rückgabe von Fehlerwerten stellen Komponenten Feedback bereit, indem sie während der Überprüfung Warnungen und Fehler anzeigen. Dieser Mechanismus wird durch die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A>- und <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A>-Methoden bereitgestellt. Wenn diese Methoden aufgerufen werden, werden diese Ereignisse der **Fehlerliste** Fenster [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Komponentenentwickler können dann für die Benutzer direktes Feedback über die aufgetretenen Fehler bereitstellen bzw. erläutern, wie diese behoben werden können.  
+ Neben der Rückgabe von Fehlerwerten stellen Komponenten Feedback bereit, indem sie während der Überprüfung Warnungen und Fehler anzeigen. Dieser Mechanismus wird durch die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A>- und <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A>-Methoden bereitgestellt. Wenn diese Methoden aufgerufen werden, werden diese Ereignisse im Fenster **Fehlerliste** von [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] angezeigt. Komponentenentwickler können dann für die Benutzer direktes Feedback über die aufgetretenen Fehler bereitstellen bzw. erläutern, wie diese behoben werden können.  
   
  Im folgenden Codebeispiel wird eine überschriebene Implementierung von <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> veranschaulicht.  
   
@@ -199,4 +196,3 @@ Public  Overrides Sub ReinitializeMetaData()
 End Sub  
 ```  
   
-

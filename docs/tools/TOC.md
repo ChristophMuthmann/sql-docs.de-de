@@ -2,6 +2,8 @@
 # [Übersicht über SQL Server-Tools und -Dienstprogramme](../tools/overview-sql-tools.md)
 # [New and recently updated articles (Neue und kürzlich aktualisierte Artikel)](new-updated-tools.md)
 
+# [SQL Operations Studio (Vorschau)](../sql-operations-studio/what-is.md)
+
 # [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
 # [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)

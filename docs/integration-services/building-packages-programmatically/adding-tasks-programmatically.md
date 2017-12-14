@@ -1,5 +1,5 @@
 ---
-title: "Programmgesteuertes Hinzufügen von Tasks | Microsoft Docs"
+title: "Programmgesteuertes Hinzufügen von Tasks | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - tasks [Integration Services], packages
 - adding package tasks
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 35fbfd1c17d88d684671050c297a19822b098479
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: cbd8f1d0ac4a942fae2305f7841fe25dc185e463
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="adding-tasks-programmatically"></a>Programmgesteuertes Hinzufügen von Tasks
   Folgenden Objekttypen im Laufzeitmodul können Tasks hinzugefügt werden:  
@@ -50,10 +47,10 @@ ms.lasthandoff: 08/03/2017
   
  Jeder Container verfügt über eine <xref:Microsoft.SqlServer.Dts.Runtime.Executables>-Auflistung, die die einzelnen <xref:Microsoft.SqlServer.Dts.Runtime.Executable>-Objekte enthält. Jeder ausführbare Task erbt und implementiert die <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A>-Methode sowie die <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A>-Methode. Diese zwei Methoden werden vom Laufzeitmodul aufgerufen, um jede <xref:Microsoft.SqlServer.Dts.Runtime.Executable> zu verarbeiten.  
   
- Um einem Paket einen Task hinzuzufügen, benötigen Sie einen Container mit einer Auflistung vorhandener <xref:Microsoft.SqlServer.Dts.Runtime.Executables>. Meist handelt es sich bei dem Task, den Sie der Auflistung hinzufügen, um ein Paket. Um die neue Aufgabe, die in der Auflistung des Containers ausführbare hinzuzufügen, rufen Sie die <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> Methode. Die Methode verfügt über einen Parameter, eine Zeichenfolge, die den CLSID-, PROGID- bzw. STOCK-Moniker oder den <xref:Microsoft.SqlServer.Dts.Runtime.TaskInfo.CreationName%2A> des Tasks, den Sie hinzufügen, enthält.  
+ Um einem Paket einen Task hinzuzufügen, benötigen Sie einen Container mit einer Auflistung vorhandener <xref:Microsoft.SqlServer.Dts.Runtime.Executables>. Meist handelt es sich bei dem Task, den Sie der Auflistung hinzufügen, um ein Paket. Um der Auflistung des Containers die neue ausführbare Datei des Tasks hinzuzufügen, rufen Sie die <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A>-Methode auf. Die Methode verfügt über einen Parameter, eine Zeichenfolge, die den CLSID-, PROGID- bzw. STOCK-Moniker oder den <xref:Microsoft.SqlServer.Dts.Runtime.TaskInfo.CreationName%2A> des Tasks, den Sie hinzufügen, enthält.  
   
 ## <a name="task-names"></a>Tasknamen  
- Obwohl Sie eine Aufgabe nach Name oder ID angeben, können die **STOCK** Moniker ist am häufigsten verwendeten im Parameters die <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> Methode. Hinzufügen eine Aufgabe zu einer ausführbaren Datei identifizierte der **STOCK** Moniker, verwenden Sie die folgende Syntax:  
+ Sie können einen Task zwar über einen Namen oder eine ID definieren, aber der **STOCK**-Moniker ist der am häufigsten für die <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A>-Methode verwendete Parameter. Verwenden Sie die folgende Syntax, um einen Task einer ausführbaren Datei hinzuzufügen, die durch den **STOCK**-Moniker identifiziert wird:  
   
 ```csharp  
 Executable exec = package.Executables.Add("STOCK:BulkInsertTask");  
@@ -65,7 +62,7 @@ Dim exec As Executable = package.Executables.Add("STOCK:BulkInsertTask")
   
 ```  
   
- Die folgende Liste enthält die Namen für jede Aufgabe, mit denen nach der **STOCK** Moniker.  
+ Die folgende Liste zeigt die Namen für alle Tasks an, die nach dem **STOCK**-Moniker verwendet werden.  
   
 -   ActiveXScriptTask  
   
@@ -127,7 +124,7 @@ Dim exec As Executable = package.Executables.Add( _
   "Culture=neutral, PublicKeyToken=89845dcd8080cc91")  
 ```  
   
- Sie können den langen Namen für den Task programmgesteuert abrufen, ohne die taskversion angeben der **AssemblyQualifiedName** Eigenschaft der Klasse, wie im folgenden Beispiel gezeigt. Für dieses Beispiel ist ein Verweis auf die Microsoft.SqlServer.SQLTask-Assembly erforderlich.  
+ Sie können den langen Namen des Tasks programmgesteuert mithilfe der **AssemblyQualifiedName**-Eigenschaft der Klasse erhalten, ohne die Taskversion angeben zu müssen. Dies wird im nächsten Beispiel veranschaulicht. Für dieses Beispiel ist ein Verweis auf die Microsoft.SqlServer.SQLTask-Assembly erforderlich.  
   
 ```csharp  
 using Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask;  
@@ -143,7 +140,7 @@ Imports Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask
       GetType(Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask).AssemblyQualifiedName)  
 ```  
   
- Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:Microsoft.SqlServer.Dts.Runtime.Executables> Auflistung ein neues Paket, und fügen Sie einen Task "Dateisystem" und einen Masseneinfügungstask auf die Auflistung mit ihrer **STOCK** Moniker. Für dieses Beispiel ist einVerweis auf die Microsoft.SqlServer.FileSystemTask- sowie die Microsoft.SqlServer.BulkInsertTask-Assembly erforderlich.  
+ Im folgenden Codebeispiel wird die Erstellung einer <xref:Microsoft.SqlServer.Dts.Runtime.Executables>-Auflistung aus einem neuen Paket veranschaulicht. Anschließend wird der Auflistung unter Verwendung der **STOCK**-Moniker ein Dateisystem- und ein Masseneinfügungstask hinzugefügt. Für dieses Beispiel ist einVerweis auf die Microsoft.SqlServer.FileSystemTask- sowie die Microsoft.SqlServer.BulkInsertTask-Assembly erforderlich.  
   
 ```csharp  
 using System;  
@@ -321,19 +318,19 @@ End Module
   
  Um Eigenschaften festzulegen oder Methoden auf dem neuen Objekt aufzurufen, haben Sie zwei Optionen:  
   
-1.  Verwenden Sie die <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.Properties%2A>-Auflistung des <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>. Verwenden Sie z. B. zum Abrufen einer Eigenschaft aus dem Objekt `th.Properties["propertyname"].GetValue(th))`. Zum Festlegen einer Eigenschaft nutzen Sie `th.Properties["propertyname"].SetValue(th, <value>);`.  
+1.  Verwenden Sie die <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.Properties%2A>-Auflistung des <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>. Verwenden Sie beispielsweise `th.Properties["propertyname"].GetValue(th))`, um eine Eigenschaft des Objekts abzurufen. Zum Festlegen einer Eigenschaft nutzen Sie `th.Properties["propertyname"].SetValue(th, <value>);`.  
   
 2.  Wandeln Sie das <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.InnerObject%2A> des <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> in die Taskklasse um. Zum Umwandeln des Masseneinfügungstasks in einen <xref:Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask>, nachdem er dem Paket als <xref:Microsoft.SqlServer.Dts.Runtime.Executable> hinzugefügt und anschließend in einen <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> umgewandelt wurde, verwenden Sie beispielsweise `BulkInsertTask myTask = th.InnerObject as BulkInsertTask;`.  
   
  Die Verwendung der <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>-Klasse im Code anstelle der Umwandlung in die taskspezifische Klasse bietet folgende Vorteile:  
   
--   Die <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.Properties%2A> -Anbieter benötigt keinen Verweis auf die Assembly im Code.  
+-   Der <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost><xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.Properties%2A>-Anbieter benötigt keinen Verweis auf die Assembly im Code.  
   
 -   Sie können Code für generische Routinen schreiben, die für jeden Task anwendbar sind, da Sie bei der Kompilierung nicht über den Namen des Tasks verfügen müssen. Zu diesen generischen Routinen zählen Methoden, bei denen Sie den Tasknamen an die Methode übergeben und der Methodencode für alle Tasks geeignet ist. Diese Methode ist gut für das Schreiben von Testcode geeignet.  
   
- Umwandlung von Typen aus den <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> in die taskspezifische Klasse bietet folgende Vorteile:  
+ Die Umwandlung vom <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> in die taskspezifische Klasse bietet folgende Vorteile:  
   
--   Visual Studio-Projekt können Sie Anweisungsvervollständigung (IntelliSense).  
+-   Das Visual Studio-Projekt bietet Ihnen die Anweisungsvervollständigung (IntelliSense).  
   
 -   Der Code wird möglicherweise schneller ausgeführt.  
   
@@ -420,10 +417,9 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
- Blogeintrag, [EzAPI – Updated for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223), auf blogs.msdn.com.  
+ Blogeintrag, [EzAPI – Updated for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223) (EzAPI – aktualisiert für SQL Server 2012), auf blogs.msdn.com.  
 
 ## <a name="see-also"></a>Siehe auch  
  [Programmgesteuertes Verbinden von Tasks](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  
   
   
-

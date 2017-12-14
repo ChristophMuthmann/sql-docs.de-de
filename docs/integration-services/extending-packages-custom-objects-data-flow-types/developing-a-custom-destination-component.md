@@ -1,5 +1,5 @@
 ---
-title: Entwickeln einer benutzerdefinierten Zielkomponente | Microsoft Docs
+title: Entwickeln einer benutzerdefinierten Zielkomponente | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -25,30 +23,29 @@ helpviewer_keywords:
 - custom data flow components [Integration Services], destination components
 - data flow components [Integration Services], destination components
 ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: b579a17ba5095e3864148abaff75880da9fed108
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a95f24318503d8f76604bbcf683bc9ed79bd1ce0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-destination-component"></a>Entwickeln einer benutzerdefinierten Zielkomponente
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bietet Entwicklern die Möglichkeit, benutzerdefinierte Zielkomponenten zu schreiben, die herstellen und Daten in beliebigen benutzerdefinierten Datenquelle speichern können. Benutzerdefinierte Zielkomponenten sind hilfreich, wenn Sie Verbindungen zu Datenquellen herstellen müssen, auf die nicht über eine der vorhandenen Quellkomponenten, die in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthalten sind, zugegriffen werden kann.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bietet Entwicklern die Möglichkeit, in benutzerdefinierte Zielkomponenten zu schreiben, die eine Verbindung mit einer beliebigen benutzerdefinierten Datenquelle herstellen und Daten in dieser speichern können. Benutzerdefinierte Zielkomponenten sind hilfreich, wenn Sie Verbindungen zu Datenquellen herstellen müssen, auf die nicht über eine der vorhandenen Quellkomponenten, die in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthalten sind, zugegriffen werden kann.  
   
  Zielkomponenten verfügen über eine oder mehrere Eingaben und keine Ausgabe. Zur Entwurfszeit erstellen und konfigurieren sie Verbindungen und lesen Spaltenmetadaten aus der externen Datenquelle. Während der Ausführung stellen sie eine Verbindung zu ihrer externen Datenquelle her und fügen Zeilen, die von den Komponenten upstream im Datenfluss empfangen wurden, zur externen Datenquelle hinzu. Wenn die externe Datenquelle vor der Ausführung der Komponente besteht, dann muss die Zielkomponente außerdem sicherstellen, dass die Datentypen der Spalten, die die Komponente empfängt, zu den Datentypen der Spalten der externen Datenquelle passen.  
   
- In diesem Abschnitt wird im Detail auf die Entwicklung von Zielkomponenten eingegangen, und es werden zur Verdeutlichung wichtiger Konzepte Codebeispiele bereitgestellt. Eine allgemeine Übersicht über die Entwicklung von Data Flow Component finden Sie unter [Entwickeln einer benutzerdefinierten Datenflusskomponente](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
+ In diesem Abschnitt wird im Detail auf die Entwicklung von Zielkomponenten eingegangen, und es werden zur Verdeutlichung wichtiger Konzepte Codebeispiele bereitgestellt. Einen allgemeinen Überblick über die Entwicklung von Datenflusskomponenten finden Sie unter [Entwickeln einer benutzerdefinierten Datenflusskomponente](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
 ## <a name="design-time"></a>Entwurfszeit  
  Zur Implementierung der Entwurfszeitfunktionen einer Zielkomponente müssen Sie eine Verbindung mit einer externen Datenquelle festlegen und überprüfen, ob die Komponente richtig konfiguriert wurde. Definitionsgemäß verfügt eine Zielkomponente über einen Eingang und möglicherweise eine Fehlerausgabe.  
   
 ### <a name="creating-the-component"></a>Erstellen der Komponente  
- Zielkomponenten stellen mithilfe von in einem Paket definierten <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Objekten eine Verbindung mit externen Datenquellen her. Die Zielkomponente zeigt seine Anforderung für einen Verbindungs-Manager, um die [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer und Benutzern der Komponente, durch Hinzufügen eines Elements, dass die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> Auflistung von der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Diese Auflistung erfüllt zweierlei Zwecke: erstens zeigt sie dem [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer den Bedarf für einen Verbindungs-Manager an und zweitens enthält sie, nachdem der Benutzer einen Verbindungs-Manager ausgewählt oder erstellt hat, einen Verweis zum Verbindungs-Manager im Paket, das von der Komponente verwendet wird. Wenn ein <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> der Auflistung hinzugefügt wird die **Erweiterter Editor** zeigt die **Verbindungseigenschaften** Registerkarte, um den Benutzer auffordern, wählen Sie aus, oder erstellen Sie eine Verbindung im Paket für die Verwendung von der Komponente.  
+ Zielkomponenten stellen mithilfe von in einem Paket definierten <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Objekten eine Verbindung mit externen Datenquellen her. Die Zielkomponente zeigt an, dass ein Verbindungs-Manager für den [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer und andere Benutzer der Komponente durch Hinzufügen eines Elements zur <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>-Auflistung von <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> erforderlich ist. Diese Auflistung erfüllt zweierlei Zwecke: erstens zeigt sie dem [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer den Bedarf für einen Verbindungs-Manager an und zweitens enthält sie, nachdem der Benutzer einen Verbindungs-Manager ausgewählt oder erstellt hat, einen Verweis zum Verbindungs-Manager im Paket, das von der Komponente verwendet wird. Beim Hinzufügen eines <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100>-Typs zur Auflistung wird im **Erweiterten Editor** die Registerkarte **Verbindungseigenschaften** angezeigt, um den Benutzer aufzufordern, im Paket für die Komponente eine Verbindung auszuwählen oder zu erstellen.  
   
  Im folgenden Codebeispiel wird eine Implementierung von <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> gezeigt, die eine Eingabe und dann ein <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100>-Objekt zu <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> hinzufügt.  
   
@@ -111,7 +108,7 @@ End Namespace
 ```  
   
 ### <a name="connecting-to-an-external-data-source"></a>Herstellen einer Verbindung mit einer externen Datenquelle  
- Nachdem eine Verbindung hinzugefügt wird die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>, überschreiben Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> Methode zum Herstellen einer Verbindung mit der externen Datenquelle. Diese Methode wird zur Entwurfs- und zur Laufzeit aufgerufen. Die Komponente muss eine Verbindung mit dem von der Laufzeitverbindung festgelegten Verbindungs-Manager und anschließend mit der externen Datenquelle herstellen. Sobald die Verbindung hergestellt ist, sollte sie von der Komponente intern zwischengespeichert und freigegeben werden, wenn <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> aufgerufen wird. Entwickler überschreiben diese Methode und geben die Verbindung, die von der Komponente während <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> hergestellt wurde, frei. Die beiden Methoden <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> und <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> werden zur Entwurfs- und zur Laufzeit aufgerufen.  
+ Nachdem eine Verbindung zur <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> hinzugefügt wurde, überschreiben Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A>-Methode, um eine Verbindung mit der externen Datenquelle herzustellen. Diese Methode wird zur Entwurfs- und zur Laufzeit aufgerufen. Die Komponente muss eine Verbindung mit dem von der Laufzeitverbindung festgelegten Verbindungs-Manager und anschließend mit der externen Datenquelle herstellen. Sobald die Verbindung hergestellt ist, sollte sie von der Komponente intern zwischengespeichert und freigegeben werden, wenn <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> aufgerufen wird. Entwickler überschreiben diese Methode und geben die Verbindung, die von der Komponente während <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> hergestellt wurde, frei. Die beiden Methoden <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> und <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> werden zur Entwurfs- und zur Laufzeit aufgerufen.  
   
  Im folgenden Codebeispiel wird eine Komponente gezeigt, die in der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A>-Methode eine Verbindung mit einer ADO.NET-Verbindung herstellt und die Verbindung dann in <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> beendet.  
   
@@ -174,9 +171,9 @@ End Sub
 ```  
   
 ### <a name="validating-the-component"></a>Überprüfen der Komponente  
- Zielkomponentenentwickler sollten Überprüfung ausführen, wie in beschrieben [Überprüfung Komponenten](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md). Darüber hinaus sollten sie überprüfen, ob die Datentypeigenschaften der in den Eingabespaltenauflistungen der Komponente definierten Spalten denjenigen bei der externen Datenquelle entsprechen. Manchmal ist der Abgleich der Eingabespalten mit der externen Datenquelle nicht möglich oder unerwünscht, z. B. wenn die Komponente oder der [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer sich im Offline-Zustand befinden oder Roundtrips zum Server nicht zulässig sind. In solchen Fällen können die Spalten in der Eingabespaltenauflistung dennoch mithilfe von <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.ExternalMetadataColumnCollection%2A> des Eingabeobjekts überprüft werden.  
+ Zielkomponentenentwickler sollten Überprüfungen wie in [Überprüfen einer Datenflusskomponente](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md) beschrieben ausführen. Darüber hinaus sollten sie überprüfen, ob die Datentypeigenschaften der in den Eingabespaltenauflistungen der Komponente definierten Spalten denjenigen bei der externen Datenquelle entsprechen. Manchmal ist der Abgleich der Eingabespalten mit der externen Datenquelle nicht möglich oder unerwünscht, z. B. wenn die Komponente oder der [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer sich im Offline-Zustand befinden oder Roundtrips zum Server nicht zulässig sind. In solchen Fällen können die Spalten in der Eingabespaltenauflistung dennoch mithilfe von <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.ExternalMetadataColumnCollection%2A> des Eingabeobjekts überprüft werden.  
   
- Diese Auflistung ist sowohl für Eingabe- als auch für Ausgabeobjekte vorhanden und muss vom Komponentenentwickler mit den Spalten der externen Datenquelle gefüllt werden. Diese Auflistung kann so überprüfen Sie die Eingabespalten verwendet werden beim der [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer ist offline, wenn die Komponente getrennt ist, oder wenn die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> Eigenschaft ist **"false"**.  
+ Diese Auflistung ist sowohl für Eingabe- als auch für Ausgabeobjekte vorhanden und muss vom Komponentenentwickler mit den Spalten der externen Datenquelle gefüllt werden. Mithilfe dieser Auflistung können die Eingabespalten überprüft werden, wenn der [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer offline ist, die Verbindung mit der Komponente getrennt ist oder wenn die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A>-Eigenschaft **false** lautet.  
   
  Im folgenden Beispielcode wird eine externe Metadatenspalte auf Grundlage einer vorhandenen Eingabespalte hinzugefügt.  
   
@@ -213,8 +210,8 @@ Private Sub AddExternalMetaDataColumn(ByVal input As IDTSInput100, ByVal inputCo
 End Sub  
 ```  
   
-## <a name="run-time"></a>Zur Laufzeit  
- Während der Ausführung wird die Zielkomponente jedes Mal bei der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>-Methode aufgerufen, wenn eine voller <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> von der Upstreamkomponente verfügbar ist. Diese Methode wird wiederholt aufgerufen, bis keine weiteren Puffer verfügbar sind und die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> Eigenschaft **"true"**. Bei dieser Methode lesen Zielkomponenten die Spalten und Zeilen im Puffer und fügen sie zur externen Datenquelle hinzu.  
+## <a name="run-time"></a>Runtime  
+ Während der Ausführung wird die Zielkomponente jedes Mal bei der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>-Methode aufgerufen, wenn eine voller <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> von der Upstreamkomponente verfügbar ist. Diese Methode wird immer wieder aufgerufen, bis keine Puffer mehr verfügbar sind und die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A>-Eigenschaft **true** ist. Bei dieser Methode lesen Zielkomponenten die Spalten und Zeilen im Puffer und fügen sie zur externen Datenquelle hinzu.  
   
 ### <a name="locating-columns-in-the-buffer"></a>Suchen von Spalten im Puffer  
  Der Eingabepuffer für eine Komponente enthält alle der in den Ausgabespaltenauflistungen der Komponenten upstream von der Komponente im Datenfluss definierten Spalten. Falls beispielsweise eine Quellkomponente drei Spalten in ihrer Ausgabe bereitstellt und die nächste Komponente eine weitere Ausgabespalte hinzufügt, enthält der Puffer, der für die Zielkomponente bereitgestellt wird, vier Spalten, selbst wenn die Zielkomponente nur zwei Spalten schreibt.  
@@ -496,4 +493,3 @@ End Namespace
  [Erstellen eines Ziels mit der Skriptkomponente](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: Dialogfeld 'Richtlinien auswerten', Seite 'Auswertungsergebnisse' | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,16 +18,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cdbaf264398ac66a0b237f28eab927183c7421ff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ee1bbf3e515fb5da1b5186fbe4d4ad9c37f00034
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>Dialogfeld 'Richtlinien auswerten', Seite 'Auswertungsergebnisse'
-  Mithilfe dieses Dialogfelds können Sie die Ergebnisse der Richtlinienauswertung anzeigen und richtlinienbasierte Verwaltungsrichtlinien auf einen Satz von Zielen anwenden, die mit den Richtlinien nicht übereinstimmen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe dieses Dialogfelds können Sie die Ergebnisse der Richtlinienauswertung anzeigen und richtlinienbasierte Verwaltungsrichtlinien auf einen Satz von Zielen anwenden, die mit den Richtlinien nicht übereinstimmen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
  **Ergebnisse: Richtlinie**  
  Der Name der Richtlinie, die ausgewertet wird. Dieses Feld ist schreibgeschützt.  
   

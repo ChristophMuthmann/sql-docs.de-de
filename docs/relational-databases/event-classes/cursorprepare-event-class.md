@@ -2,9 +2,12 @@
 title: CursorPrepare-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 978867c63089538ad4d02c92058fa147560e7ee3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6fcbca475c65b6fb1b3aed42f49bfa7dace3cea8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursorprepare-event-class"></a>CursorPrepare-Ereignisklasse
-  Die **CursorPrepare** -Ereignisklasse beschreibt cursorvorbereitende Ereignisse, die in API-Cursorn (Application Programming Interface, Anwendungsprogrammierschnittstelle) auftreten. Cursorvorbereitende Ereignisse treten auf, wenn [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] eine mit einem Cursor verknüpfte SELECT-Anweisung in einen Ausführungsplan kompiliert, jedoch den Cursor nicht erstellt.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Die **CursorPrepare**-Ereignisklasse beschreibt cursorvorbereitende Ereignisse, die in API-Cursorn (Application Programming Interface, Anwendungsprogrammierschnittstelle) auftreten. Cursorvorbereitende Ereignisse treten auf, wenn [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] eine mit einem Cursor verknüpfte SELECT-Anweisung in einen Ausführungsplan kompiliert, jedoch den Cursor nicht erstellt.  
   
  Schließen Sie die **CursorPrepare** -Ereignisklasse in Ablaufverfolgungen ein, die die Leistung von Cursorn aufzeichnen. Wenn die **CursorPrepare** -Ereignisklasse in eine Ablaufverfolgung eingeschlossen wird, hängt der dadurch entstehende Mehraufwand davon ab, wie oft Cursor während der Ablaufverfolgung für die Datenbank verwendet werden. Wenn Cursor sehr häufig verwendet werden, kann die Ablaufverfolgung die Leistung erheblich beeinträchtigen.  
   

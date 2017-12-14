@@ -2,9 +2,12 @@
 title: Audit Change Audit-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c311e6899508ce797a4365047046ba9ba2e5a782
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bf510cafd676d6e0f362ba06f2853c61361c3e58
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-change-audit-event-class"></a>Audit Change Audit-Ereignisklasse
-  Die **Audit Change Audit** -Ereignisklasse tritt auf, wenn eine Änderung an der Ablaufverfolgung für eine Überwachung vorgenommen wird.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Die **Audit Change Audit**-Ereignisklasse tritt auf, wenn eine Änderung an der Ablaufverfolgung für eine Überwachung vorgenommen wird.  
   
 ## <a name="audit-change-audit-event-class-data-columns"></a>Datenspalten für die Audit Change Audit-Ereignisklasse  
   

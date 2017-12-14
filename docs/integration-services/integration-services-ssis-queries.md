@@ -1,5 +1,5 @@
 ---
-title: Integration Services-Abfragen (SSIS) | Microsoft Docs
+title: Integration Services-Abfragen (SSIS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,39 +8,36 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.querybuilder.f1
+f1_keywords: sql13.dts.designer.querybuilder.f1
 helpviewer_keywords:
 - Query Builder [Integration Services]
 - queries [Integration Services]
 - statements [Integration Services]
 - queries [Integration Services], about queries in packages
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 236a6fab2910eaf6eef70ce298259b17fe9f0e3a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 81dd719383f3a05356d15677ce61bad5e8962807
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services-Abfragen (SSIS)
   Der Task SQL ausführen, die OLE DB-Quelle, das OLE DB-Ziel und die Transformation für die Suche können SQL-Abfragen verwenden. In dem Task SQL ausführen können von SQL-Anweisungen Datenbankobjekte und Daten erstellt, aktualisiert und gelöscht sowie gespeicherte Prozeduren und SELECT-Anweisungen ausgeführt werden. In der OLE DB-Quelle und der Nachschlagetransformation sind die SQL-Anweisungen normalerweise SELECT- oder ECEC-Anweisungen. Von den letzteren werden am häufigsten gespeicherte Prozeduren ausgeführt, die Resultsets zurückgeben.  
   
  Eine Abfrage kann analysiert werden, um festzustellen, ob sie gültig ist. Beim Analysieren einer Abfrage, die eine Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verwendet, wird die Abfrage analysiert, ausgeführt, und das Ausführungsergebnis (Erfolg oder Fehlgeschlagen) wird dem Analyseergebnis zugeordnet. Wenn die Abfrage eine Verbindung mit einer Datenquelle verwendet, die nicht zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]gehört, wird nur die Anweisung analysiert.  
   
-Sie können die SQL-Anweisung auf folgenden Arten angeben:
-1.   Geben Sie ihn direkt im Designer.
-2.   Geben Sie eine Verbindung mit einer Datei, die Anweisung enthält.
-3.   Geben Sie eine Variable, die die Anweisung enthält.  
+Sie können die SQL-Anweisung auf folgende Arten angeben:
+1.   Geben Sie sie direkt im Designer ein.
+2.   Geben Sie eine Verbindung mit einer Datei an, die die Anweisung enthält.
+3.   Geben Sie eine Variable an, die die Anweisung enthält.  
   
 ## <a name="direct-input-sql"></a>Direkteingabe-SQL  
  Der Query-Generator steht für den Task SQL ausführen, die OLE DB-Quelle, das OLE DB-Ziel und die Transformation für die Suche zur Verfügung. Der Query-Generator bietet die folgenden Vorteile:  
@@ -104,12 +101,12 @@ Verwenden Sie das Dialogfeld **Abfrage-Generator** , um Abfragen zum Verwenden m
 |**Rasterbereich ein-/ausblenden**|Blendet den Bereich **Raster** ein oder aus.|  
 |**SQL-Bereich ein-/ausblenden**|Blendet den Bereich **SQL** ein oder aus.|  
 |**Ergebnisbereich ein-/ausblenden**|Blendet den Bereich **Ergebnisse** ein oder aus.|  
-|**Führen Sie**|Führt die Abfrage aus. Ergebnisse werden im Ergebnisbereich angezeigt.|  
+|**Ausführen**|Führt die Abfrage aus. Ergebnisse werden im Ergebnisbereich angezeigt.|  
 |**SQL überprüfen**|Überprüft, ob das SQL-Konto gültig ist.|  
 |**Aufsteigend sortieren**|Sortiert die Ausgabezeilen der ausgewählten Spalte des Rasterbereichs in aufsteigender Reihenfolge.|  
 |**Absteigend sortieren**|Sortiert die Ausgabezeilen der ausgewählten Spalte des Rasterbereichs in absteigender Reihenfolge.|  
 |**Filter entfernen**|Wählen Sie einen Spaltennamen im Rasterbereich aus, und klicken Sie auf **Filter entfernen** , um die Sortierungskriterien aus der Spalte zu entfernen.|  
-|**Group By verwenden**|Fügt der Abfrage die GROUP BY-Funktionalität hinzu.|  
+|**GROUP BY verwenden**|Fügt der Abfrage die GROUP BY-Funktionalität hinzu.|  
 |**Tabelle hinzufügen**|Fügt der Abfrage eine neue Tabelle hinzu.|  
   
  **Abfragedefinition**  
@@ -123,4 +120,3 @@ Verwenden Sie das Dialogfeld **Abfrage-Generator** , um Abfragen zum Verwenden m
 |Bereich**Ergebnisse** |Zeigt die Ergebnisse der Abfrage an, wenn Sie auf die Schaltfläche **Ausführen** auf der Symbolleiste klicken.| 
 
   
-

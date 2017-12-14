@@ -1,5 +1,5 @@
 ---
-title: Benutzerrollen | Microsoft Docs
+title: Benutzerrollen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c302cecea6c443e97badeca3737211cdadec239
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f01d18033764d683871cbc8d5883e25c78b7d958
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="user-roles"></a>Benutzerrollen
   In diesem Abschnitt werden die Benutzerrollen für den Change Data Capture Service für Oracle von Attunity beschrieben. Die beschriebenen Rollen sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankrollen, Windows-Rollen und Oracle-Datenbankrollen.  
@@ -147,7 +145,7 @@ ms.lasthandoff: 08/03/2017
   
  In der folgenden Liste sind die erforderlichen Berechtigungen beschrieben, die dem Log Mining-Benutzer gewährt werden sollten:  
   
--   Klicken Sie auf \<beliebige-aufgezeichnete-Tabelle >  
+-   SELECT on \<beliebige-aufgezeichnete-tabelle>  
   
 -   SELECT ANY TRANSACTION  
   
@@ -181,4 +179,3 @@ ms.lasthandoff: 08/03/2017
  Die Anmeldeinformationen für diesen Benutzer werden nicht gespeichert. Sie werden von der CDC Designer Console jeweils angefordert, wenn sie benötigt werden, und dann für die restlichen Benutzeroberflächen-Sitzungen beibehalten.  
   
   
-

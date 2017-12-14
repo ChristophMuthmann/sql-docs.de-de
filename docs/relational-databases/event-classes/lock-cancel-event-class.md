@@ -2,9 +2,12 @@
 title: Lock:Cancel-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7779d63d103903fe4f7f756f5f3ed68c5aecd321
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2d3bac361baa6bc171331fd85926d2624bc50eb3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lockcancel-event-class"></a>Lock:Cancel-Ereignisklasse
-  Die **Lock:Cancel** -Ereignisklasse zeigt an, dass der Erhalt einer Sperre für eine Ressource abgebrochen wurde (z. B. aufgrund einer abgebrochenen Abfrage).  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Die **Lock:Cancel**-Ereignisklasse zeigt an, dass der Erhalt einer Sperre für eine Ressource abgebrochen wurde (z.B. aufgrund einer abgebrochenen Abfrage).  
   
 ## <a name="lockcancel-event-class-data-columns"></a>Datenspalten der Lock:Cancel-Ereignisklasse  
   

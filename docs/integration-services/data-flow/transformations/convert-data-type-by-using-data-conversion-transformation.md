@@ -1,5 +1,5 @@
 ---
-title: "Konvertieren von Datentyp mithilfe der Transformation für Datenkonvertierung | Microsoft Docs"
+title: "Konvertieren des Datentyps mithilfe der Transformation für Datenkonvertierung | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +16,18 @@ helpviewer_keywords:
 - Data Conversion transformation
 - data types [Integration Services], converting
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 3a6de227fc2fd0e93abfc9e8ac5300dbf0a137ac
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fcae6a724feb11400c8b6c3d4e149bc6b87504c9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="convert-data-type-by-using-data-conversion-transformation"></a>Konvertieren von Datentyp mithilfe der Transformation für Datenkonvertierung
+# <a name="convert-data-type-by-using-data-conversion-transformation"></a>Konvertieren des Datentyps mithilfe der Transformation für Datenkonvertierung
   Um eine Transformation für Datenkonvertierung hinzuzufügen und zu konfigurieren, muss das Paket bereits mindestens einen Datenflusstask und eine Quelle enthalten.  
   
 ### <a name="to-convert-data-to-a-different-data-type"></a>So konvertieren Sie Daten in einen anderen Datentyp  
@@ -62,11 +60,10 @@ ms.lasthandoff: 08/03/2017
 12. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Transformation für Datenkonvertierung](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)   
- [Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Integration Services-Pfade](../../../integration-services/data-flow/integration-services-paths.md)   
- [Integration Services-Datentypen](../../../integration-services/data-flow/integration-services-data-types.md)   
+ [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)   
+ [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
+ [Integration Services Paths](../../../integration-services/data-flow/integration-services-paths.md)  (Integration Services-Pfade)  
+ [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)  (Integration Services-Datentypen)  
  [Datenflusstask](../../../integration-services/control-flow/data-flow-task.md)  
   
   
-

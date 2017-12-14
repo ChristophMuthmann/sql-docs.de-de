@@ -2,9 +2,12 @@
 title: Audit Server Principal Impersonation-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 82a21462a9b04113be6e595a979f04a98ee0bad9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6a2ee6d2ede0d91b7755c499255b3ac138cf65dd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-server-principal-impersonation-event-class"></a>Audit Server Principal Impersonation-Ereignisklasse
-  Die **Audit Server Principal Impersonation**-Ereignisklasse tritt bei einem Identitätswechsel im Serverbereich auf, beispielsweise bei EXECUTE AS \<*Anmeldename*>.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Die **Audit Server Principal Impersonation**-Ereignisklasse tritt bei einem Identitätswechsel im Serverbereich auf, beispielsweise bei EXECUTE AS \<*Anmeldename*>.  
   
 ## <a name="audit-server-principal-impersonation-event-class-data-columns"></a>Datenspalten für Audit Server Principal Impersonation-Ereignisklassen  
   

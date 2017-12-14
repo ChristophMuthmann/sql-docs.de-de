@@ -1,32 +1,30 @@
 ---
 title: "Indizes für speicheroptimierte Tabellen | Microsoft-Dokumentation"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
-ms.date: 06/12/2017
-ms.prod: sql-server-2016
+ms.custom: 
+ms.date: 11/6/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
 ms.reviewer: 
 ms.service: 
-ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.component: in-memory-oltp
+ms.suite: sql
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1679cf30077600cbff38aea1869bc7c8c9edc53e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b468f44444a9c6cc031ea892f44849db401e0ab7
-ms.contentlocale: de-de
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="indexes-for-memory-optimized-tables"></a>Indizes für speicheroptimierte Tabellen
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
 Dieser Artikel beschreibt die Typen von Indizes, die für eine speicheroptimierte Tabelle zur Verfügung stehen. Der Artikel enthält Folgendes:  
@@ -44,7 +42,7 @@ Dieser Artikel beschreibt die Typen von Indizes, die für eine speicheroptimiert
   
 ## <a name="a-syntax-for-memory-optimized-indexes"></a>A. Syntax für speicheroptimierte Indizes  
   
-Jede CREATE TABLE-Anweisung für eine speicheroptimierte Tabelle muss zwischen 1 und 8 Klauseln zum Deklarieren von Indizes enthalten. Bei dem Index muss es sich um einen der folgenden handeln:  
+Jede CREATE TABLE-Anweisung für eine speicheroptimierte Tabelle muss einbeziehen und indizieren, entweder explizit über einen INDEX oder implizit über eine PRIMAY KEY- oder UNIQUE-Einschränkung. Bei dem Index muss es sich um einen der folgenden handeln:  
   
 - Hashindex  
 - Nicht gruppierter Index (d.h. die interne Standardstruktur einer B-Struktur).  
@@ -66,7 +64,9 @@ Für eine Deklaration mit dem Standard DURABILITY = SCHEMA_AND_DATA muss die spe
         WITH (  
             MEMORY_OPTIMIZED = ON,  
             DURABILITY = SCHEMA_AND_DATA);  
-  
+> [!NOTE]  
+>  Für [!INCLUDE[ssSQL15](../../includes/sssql14-md.md)] und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] besteht ein Limit von 8 Indizes pro speicheroptimierte Tabelle oder Tabellentyp. Ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] gibt es keine Begrenzung mehr für die spezifische Anzahl von Indizes für speicheroptimierte Tabellen und Tabellentypen.
+
   
   
 ### <a name="a1-code-sample-for-syntax"></a>A.1 Codebeispiel für Syntax  
@@ -232,4 +232,3 @@ Die folgende Tabelle enthält alle Vorgänge, die von den verschiedenen Indextyp
   
   
 In dieser Tabelle bedeutet „Ja“, dass der Index die Anforderung effizient bedienen kann, und „Nein“ bedeutet, dass der Index die Anforderung nicht effizient erfüllen kann.  
-

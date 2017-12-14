@@ -1,0 +1,28 @@
+# [SQL Operations Studio (Vorschau)](what-is.md)
+# [Installieren](download.md)
+# Schnellstarts
+## [Herstellen einer Verbindung mit SQL Server und Abfragen](quickstart-sql-server.md)
+## [Herstellen einer Verbindung mit Azure SQL-Datenbank und Abfragen](quickstart-sql-database.md)
+## [Herstellen einer Verbindung mit Azure SQL Data Warehouse und Abfragen](quickstart-sql-dw.md)
+# Lernprogramme
+## [T-SQL-Editor](tutorial-sql-editor.md) 
+## [Einblickbeispiel: langsame Abfragen](tutorial-qds-sql-server.md)
+## [Einblickbeispiel: Tablespacenutzung](tutorial-table-space-sql-server.md)
+## [Erstellen eines benutzerdefinierten Einblicks](tutorial-build-custom-insight-sql-server.md) 
+## [Sichern und Wiederherstellen](tutorial-backup-restore-sql-server.md)
+# Anleitungen
+## [Dashboards und Einblickwidgets](insight-widgets.md)
+## [Codeausschnitte](code-snippets.md)
+## [Integriertes Terminal (PowerShell, Bash)](integrated-terminal.md)
+## [Tastenkombinationen](keyboard-shortcuts.md)
+## [Servergruppen](server-groups.md)
+## [Quellcodeverwaltung](source-control.md)
+## [Arbeitsbereich- und Benutzereinstellungen](settings.md)
+## [Windows-Authentifizierung (Kerberos)](enable-kerberos.md)
+## [Sammlung von Verwendungsdaten](usage-data-collection.md)
+# Ressourcen
+## [Transact-SQL-Referenz](../t-sql/language-reference.md)
+## [SQL Operations Studio (Vorschau) GitHub-Repository](https://www.github.com/Microsoft/SqlOpsStudio)
+## [SQL Server Blog (SQL Server-Blog)](https://blogs.technet.microsoft.com/dataplatforminsider/)
+# [FAQ](faq.md)
+# [Probleme melden und Vorschläge machen](https://github.com/microsoft/sqlopsstudio/issues)

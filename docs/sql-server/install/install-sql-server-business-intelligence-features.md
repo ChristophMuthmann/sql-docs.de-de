@@ -1,10 +1,13 @@
 ---
 title: Installieren von SQL Server 2016 Business Intelligence-Funktionen | Microsoft-Dokumentation
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/02/2016
-ms.prod: sql-server-2016
+ms.prod: install
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 - setup-install
@@ -16,14 +19,14 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 78f608debbe1d5dd20d593957289765924399b51
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1c7146172d2e6029ec1923cbdd58aa80d59ceaa8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sql-server-business-intelligence-features"></a>Installieren von SQL Server 2016 Business Intelligence-Funktionen
-  Zu den SQL Server-Funktionen, die Teil der Microsoft Business Intelligence-Plattform sind, zählen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]sowie mehrere Clientanwendungen zum Erstellen von und Arbeiten mit analytischen Daten. Dieser Abschnitt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setupdokumentation erklärt, wie diese Funktionen installiert werden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Zu den SQL Server-Funktionen, die Teil der Microsoft Business Intelligence-Plattform sind, zählen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sowie mehrere Clientanwendungen zum Erstellen von und Arbeiten mit analytischen Daten. Dieser Abschnitt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setupdokumentation erklärt, wie diese Funktionen installiert werden.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] können als eigenständige Server, in Konfigurationen für horizontales Skalieren oder als gemeinsame Dienstanwendungen in einer SharePoint-Farm installiert werden. Bei der Installation der Dienste in einer Farm werden BI-Funktionen aktiviert, die nur in SharePoint verfügbar sind, einschließlich [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint und [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], der neue interaktive Ad-hoc-Berichts-Designer von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , der auf [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] - oder [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] -Datenbanken tabellarischer Modelle läuft.  
   

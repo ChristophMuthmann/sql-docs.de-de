@@ -1,5 +1,5 @@
 ---
-title: OData-Quelle | Microsoft Docs
+title: OData-Quelle | Microsoft-Dokumentation
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,8 +8,7 @@ ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,31 +17,30 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
-ms.openlocfilehash: 1e0ef2b7cca9509a58aeadca3903e8aec3b7b9b9
-ms.contentlocale: de-de
-ms.lasthandoff: 08/23/2017
-
+ms.openlocfilehash: 653b48d9148d840290911baed697138d07a92a91
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odata-source"></a>OData-Quelle
 Verwenden Sie die OData-Quellkomponente in einem SSIS-Paket, um Daten aus einem Open Data Protocol (OData)-Dienst zu nutzen. Die Komponente unterstützt die OData v3 und v4-Protokolle.  
   
--   Für OData V3-Protokolle unterstützt die Komponente das Atom- und JSON-Datenformate.  
+-   Für OData V3-Protokolle unterstützt die Komponente das ATOM- und das JSON-Datenformat.  
   
 -   Für OData V4-Protokolle unterstützt die Komponente das JSON-Datenformat.  
 
 Die OData-Quelle umfasst Unterstützung für die folgenden Datenquellen:
 -   Microsoft Dynamics AX Online und Microsoft Dynamics CRM Online
--   SharePoint-Listen. Um alle Listen auf einem SharePoint-Server anzeigen möchten, verwenden Sie die folgende URL: http://\<Server > / _vti_bin/ListData.svc. Weitere Informationen zu den URL-Konventionen in SharePoint finden Sie unter [SharePoint Foundation-REST-Schnittstelle](http://msdn.microsoft.com/library/ff521587.aspx).
+-   SharePoint-Listen. Um alle Listen auf einem SharePoint-Server anzuzeigen, verwenden Sie die folgende URL: „http://\<Server>/_vti_bin/ListData.svc“. Weitere Informationen zu den URL-Konventionen in SharePoint finden Sie unter [SharePoint Foundation-REST-Schnittstelle](http://msdn.microsoft.com/library/ff521587.aspx).
   
 ## <a name="odata-format-and-performance"></a>OData-Format und Leistung
- Die meisten OData-Dienste können die Ergebnisse in verschiedenen Formaten zurück. Sie können angeben, das Format des Resultsets mithilfe der `$format` Abfrageoption. Formate wie JSON und JSON Light sind effizienter als ATOM oder XML und erzielen bei der Übertragung großer Datenmengen möglicherweise eine bessere Leistung. In der folgenden Tabelle sind Ergebnisse aus Beispieltests dargestellt. Wie Sie erkennen können, ergab der Wechsel von ATOM zu JSON einen Leistungszuwachs von 30-53% und der Wechsel von ATOM zum neuen JSON Light-Format (verfügbar in WCF Data Services 5.1) einen Leistungszuwachs von 67 %.  
+ Die meisten OData-Dienste können Ergebnisse in verschiedenen Formaten zurückgeben. Sie können das Format des Resultsets mithilfe der `$format`-Abfrageoption angeben. Formate wie JSON und JSON Light sind effizienter als ATOM oder XML und erzielen bei der Übertragung großer Datenmengen möglicherweise eine bessere Leistung. In der folgenden Tabelle sind Ergebnisse aus Beispieltests dargestellt. Wie Sie erkennen können, ergab der Wechsel von ATOM zu JSON einen Leistungszuwachs von 30-53% und der Wechsel von ATOM zum neuen JSON Light-Format (verfügbar in WCF Data Services 5.1) einen Leistungszuwachs von 67 %.  
   
 |Zeilen|ATOM|JSON|JSON (Light)|  
 |-|-|-|-|  
@@ -81,7 +79,7 @@ Die OData-Quelle umfasst Unterstützung für die folgenden Datenquellen:
  Geben Sie Optionen für die Abfrage an. Beispiel: `$top=5` 
   
  **Feed-URL**  
- Zeigt die schreibgeschützte feed-URL auf Grundlage der Optionen, die Sie ausgewählt haben, auf das Dialogfeld zu öffnen.  
+ Zeigt die schreibgeschützte Feed-URL auf Grundlage der Optionen an, die Sie in diesem Dialogfeld ausgewählt haben.  
   
  **Vorschau**  
  Zeigt mithilfe des Dialogfelds **Vorschau** eine Vorschau der Ergebnisse an. In der**Vorschau** können bis zu 20 Zeilen angezeigt werden.  
@@ -101,7 +99,7 @@ Die OData-Quelle umfasst Unterstützung für die folgenden Datenquellen:
   
 ### <a name="options"></a>enthalten  
  **Verfügbare externe Spalten**  
- Zeigt die Liste der in der Datenquelle verfügbaren Quellspalten an. Verwenden Sie Kontrollkästchen in der Liste, um in der Tabelle am Ende der Seite Spalten hinzuzufügen bzw. Spalten zu entfernen. Die ausgewählten Spalten werden in der Ausgabe hinzugefügt.  
+ Zeigt die Liste der in der Datenquelle verfügbaren Quellspalten an. Verwenden Sie Kontrollkästchen in der Liste, um in der Tabelle am Ende der Seite Spalten hinzuzufügen bzw. Spalten zu entfernen. Die ausgewählten Spalten werden der Ausgabe hinzugefügt.  
   
  **Externe Spalte**  
  Zeigt auswählbare Quellspalten an, die Sie in die Ausgabe einschließen können.  
@@ -140,4 +138,3 @@ Die OData-Quelle umfasst Unterstützung für die folgenden Datenquellen:
  [OData-Verbindungs-Manager](../../integration-services/connection-manager/odata-connection-manager.md)  
   
   
-

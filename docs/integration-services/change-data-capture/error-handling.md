@@ -1,5 +1,5 @@
 ---
-title: Fehlerbehandlung | Microsoft Docs
+title: Fehlerbehandlung | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,21 +8,19 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9243f40c5088c8ed2abcb92c435d662b408b45d5
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3821b2849ef266437fb65c45004415727746d80f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="error-handling"></a>Fehlerbehandlung
   Eine Oracle CDC-Instanz führt das Mining für Änderungen einer einzelnen Oracle-Quelldatenbank durch (ein Oracle RAC-Cluster wird als einzelne Datenbank angesehen) und schreibt die Änderungen mit ausgeführtem Commit in Änderungstabellen in einer CDC-Datenbank auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zielinstanz.  
@@ -62,7 +60,7 @@ ms.lasthandoff: 08/03/2017
   
 -   In der Tabelle MSXDBCDC.dbo.xdbcdc_trace, die vom Hauptprozess des Oracle CDC Service für die allgemeine Protokollierung und die Ablaufverfolgung verwendet wird.  
   
--   Die \<cdc-Datenbank >. der Tabelle, die für die allgemeine Protokollierung und Ablaufverfolgung von Oracle CDC-Instanzen verwendet wird. Dies bedeutet, dass auf eine bestimmte Oracle CDC-Instanz bezogene Fehler in der Ablaufverfolgungstabelle dieser Instanz protokolliert werden.  
+-   In der Tabelle „\<cdc-database>.cdc.xdbcdc_trace“, die von Oracle CDC-Instanzen für die allgemeine Protokollierung und die Ablaufverfolgung verwendet wird. Dies bedeutet, dass auf eine bestimmte Oracle CDC-Instanz bezogene Fehler in der Ablaufverfolgungstabelle dieser Instanz protokolliert werden.  
   
  Die Informationen werden vom Oracle CDC Service protokolliert, wenn für den Dienst Folgendes gilt:  
   
@@ -121,7 +119,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Change Data Capture Designer für Oracle von Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
- [Die Oracle CDC-Instanz](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
+ [Oracle CDC-Instanz](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
   
   
-

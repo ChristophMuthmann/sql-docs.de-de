@@ -1,9 +1,13 @@
 ---
 title: "Leitfäden für Entwickler für SQL Server | Microsoft-Dokumentation"
 ms.date: 10/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, analysis-services, integration-services, reporting-services, master-data-services
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cae0c9873a900fc5a5cb180a01e912b9f4dd61cf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6f9d2162e34d2a0462e74bfba3f0cac6784d0191
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="developer-guides-for-sql-server"></a>Leitfäden für Entwickler für SQL Server
-  Integrieren Sie fast jede SQL Server-Funktion mithilfe von benutzerdefiniertem Code mithilfe der Programmierungsmodelle und Programmierungsschnittstellen. Jeder Funktionsbereich enthält native und verwaltete APIs, die für Datensammlung, Datenzugriff, Serververwaltung oder Datenvisualisierung verwendet werden.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Integrieren Sie fast jede SQL Server-Funktion mithilfe von benutzerdefiniertem Code mithilfe der Programmierungsmodelle und Programmierungsschnittstellen. Jeder Funktionsbereich enthält native und verwaltete APIs, die für Datensammlung, Datenzugriff, Serververwaltung oder Datenvisualisierung verwendet werden.  
   
 ## <a name="sql-server-developer-edition-free"></a>SQL Server Developer Edition (Kostenlos!)
 

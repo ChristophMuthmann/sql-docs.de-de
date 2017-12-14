@@ -1,10 +1,13 @@
 ---
 title: Externe Skripts aktiviert (Serverkonfigurationsoption) | Microsoft-Dokumentation
-ms.custom: SQL2016_New_Updated
-ms.date: 08/03/2017
-ms.prod: sql-server-2016
+ms.date: 11/13/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -14,37 +17,57 @@ f1_keywords:
 helpviewer_keywords: external scripts enabled option
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: jeannt
+ms.author: edmaca
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 05c5af488241c28a5b83c01ac089fa5e1e1715c0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8d92fc9873ffd3fded2e0f614b0f633895d6a715
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>Externe Skripts aktiviert – Serverkonfigurationsoption
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+**Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] und [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)].
 
-  Aktivieren Sie mit der Option **external scripts enabled** die Ausführung von Skripts mit bestimmten Remotespracherweiterungen. Diese Eigenschaft ist standardmäßig deaktiviert. Beim Setup kann diese Eigenschaft optional auf TRUE festgelegt werden, wenn **Advanced Analytics Services** installiert wird.  
-  
+Aktivieren Sie mit der Option **external scripts enabled** die Ausführung von Skripts mit bestimmten Remotespracherweiterungen. Diese Eigenschaft ist standardmäßig deaktiviert. Beim Setup kann diese Eigenschaft optional auf TRUE festgelegt werden, wenn **Advanced Analytics Services** installiert wird.
 
- Bevor Sie mit der gespeicherten Prozedur **sp_execute_external_script** ein externes Skript ausführen können, müssen Sie die Option „external script enabled“ aktivieren. Führen Sie mit **sp_execute_external_script** Skripts aus, die in einer unterstützten Sprache wie beispielsweise R geschrieben wurden. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]besteht [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] aus einer Serverkomponente, die mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]installiert wird, sowie Arbeitsstationstools und Verbindungsbibliotheken, der Datenanalysten mit der Hochleistungsumgebung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verbinden.  Installieren Sie das Feature **Advanced Analytics-Erweiterungen** während des Setups von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um die Ausführung von R-Skripts zu ermöglichen. Weitere Informationen finden Sie unter [Installing Previous Versions of SQL Server R Services](http://msdn.microsoft.com/library/48380645-9e72-4744-bebb-1c1fd8a18c43).  
-  
- Führen Sie das folgende Skript aus, um externe Skripts zu aktivieren:  
-  
-```  
-sp_configure 'external scripts enabled', 1;  
+## <a name="remarks"></a>Hinweise
+
+Bevor Sie mit der gespeicherten Prozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) ein externes Skript ausführen können, müssen Sie die Option „external script enabled“ aktivieren. Verwenden Sie **sp_execute_external_script** zum Ausführen von Skripts, die in einer unterstützten Sprache wie R oder Python geschrieben sind. 
+
++ Für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]
+
+    [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] bietet Unterstützung für die Sprache R in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und einen Satz von R-Arbeitsstationstools und -Verbindungsbibliotheken.
+
+    Installieren Sie das Feature **Advanced Analytics-Erweiterungen** während des Setups von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um die Ausführung von R-Skripts zu ermöglichen. Die Sprache R wird standardmäßig installiert.
+
++ Für [[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
+
+    [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] verwendet die gleiche Architektur wie in SQL Server 2016, bietet jedoch Unterstützung für die Sprache Python.
+
+    Installieren Sie das Feature **Advanced Analytics-Erweiterungen** während des Setups von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um die Ausführung externer Skripts zu ermöglichen. Achten Sie darauf, dass Sie während der ersten Installation mindestens eine Sprache auswählen: R oder Python oder beides. 
+
+## <a name="additional-requirements"></a>Zusätzliche Anforderungen
+
+Führen Sie nach der Installation das folgende Skript aus, um externe Skripts zu aktivieren:
+
+```sql
+sp_configure 'external scripts enabled', 1;
 RECONFIGURE WITH OVERRIDE;  
-```  
-  
- Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu, damit diese Änderung wirksam wird.  
-  
-## <a name="see-also"></a>Siehe auch  
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
- [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)   
- [SQL Server R Services](../../advanced-analytics/r-services/sql-server-r-services.md)  
-  
-  
+```
+
+Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu, damit diese Änderung wirksam wird.
+
+Weitere Informationen finden Sie unter [Einrichten von SQL Server Machine Learning-Services (Datenbankintern)](/../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+
+[RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)
+
+[sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
+
+[SQL Server-Machine Learning-Dienste](../../advanced-analytics/r/sql-server-r-services.md)

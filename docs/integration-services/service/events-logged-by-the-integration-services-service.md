@@ -1,5 +1,5 @@
 ---
-title: Von Integration Services-Dienst protokollierten Ereignissen | Microsoft Docs
+title: Ereignisprotokollierung durch den Integration Services-Dienst | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - events [Integration Services], service
 - Integration Services service, events
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: cc4cd7e190c7cd2ab7fc2bec25505ae8da6f30fe
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dc85b9b432cfccacabb6cf877e7f26edd4b0b975
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Ereignisprotokollierung durch den Integration Services-Dienst
   Der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst protokolliert verschiedene Meldungen in das Windows-Anwendungsereignisprotokoll. Der Dienst Paket protokolliert diese Meldungen, wenn er startet, wenn er anhält und wenn bestimmte Probleme auftreten.  
@@ -36,7 +34,7 @@ ms.lasthandoff: 08/03/2017
   
  Allgemeine Informationen zum [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Dienst finden Sie unter [Integration Services-Dienst &#40;SSIS-Dienst&#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
   
-## <a name="service-status-messages"></a>Service-Status-Nachrichten
+## <a name="service-status-messages"></a>Meldungen zur Servicequalität
  Wenn Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] zur Installation auswählen, wird der Dienst [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installiert und gestartet, und der Starttyp wird auf Automatisch gesetzt.  
   
 |Ereignis-ID|Symbolischer Name|Text|Hinweise|  
@@ -47,7 +45,7 @@ ms.lasthandoff: 08/03/2017
 |258|DTS_MSG_SERVER_STOPPING|Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Dienst wird angehalten.% n%nAlle ausgeführten Pakete beim Beenden anhalten: %1|Der Dienst wird angehalten, und wenn der Dienst so konfiguriert ist, hält er alle ausgeführten Pakete an. In der Konfigurationsdatei können Sie den Wert True oder False festlegen. Dieser Wert bestimmt, ob der Dienst die Ausführung von Paketen beendet, wenn der Dienst selbst beendet wird. Die Meldung für dieses Ereignis enthält den Wert dieser Einstellung.|  
 |259|DTS_MSG_SERVER_STOPPED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Dienst wurde beendet.%nServerversion %1|Der Dienst wurde beendet.|  
   
-## <a name="settings-file-messages"></a>Einstellungsdatei für Nachrichten  
+## <a name="settings-file-messages"></a>Meldungen zur Einstellungsdatei  
  Einstellungen für den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst werden in einer XML-Datei gespeichert, die Sie ändern können. Weitere Informationen finden Sie unter [Integration Services-Dienst &#40;SSIS-Dienst&#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
   
 |Ereignis-ID|Symbolischer Name|Text|Hinweise|  
@@ -105,4 +103,3 @@ ms.lasthandoff: 08/03/2017
  
 ## <a name="related-tasks"></a>Verwandte Aufgaben  
  Informationen zum Anzeigen von Protokolleinträgen finden Sie unter [Durch ein Integration Services-Paket protokollierte Ereignisse](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
-

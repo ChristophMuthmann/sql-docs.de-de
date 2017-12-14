@@ -1,5 +1,5 @@
 ---
-title: Paket-Verwaltung (SSIS-Dienst) | Microsoft Docs
+title: Paketverwaltung (SSIS-Dienst) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,31 +29,30 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 51d6e32f04d470c7f4ddfc8d3c4b6d994e0bd764
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f3438dedb23fe7a168599e06b4847654853aa57b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="package-management-ssis-service"></a>Paketverwaltung (SSIS-Dienst)
-  Paketverwaltung enthält die Überwachung, Verwaltung, importieren und Exportieren von Paketen.  
+  Die Paketverwaltung umfasst das Überwachen, Verwalten, Importieren und Exportieren von Paketen.  
  
  ## <a name="package-store"></a>-Paketspeicher  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]enthält zwei Ordner der obersten Ebene für den Zugriff auf Pakete: 
- - **Ausführen von Paketen** 
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt zwei Ordner auf oberster Ebene für den Zugriff auf Pakete zur Verfügung: 
+ - **Ausgeführte Pakete** 
  - **Gespeicherte Pakete**
 
  Der Ordner **Ausgeführte Pakete** enthält eine Auflistung der Pakete, die derzeit auf dem Server ausgeführt werden. Im Ordner **Gespeicherte Pakete** sind die im Paketspeicher gespeicherten Pakete aufgelistet. Hierbei handelt es sich um die einzigen vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst verwalteten Pakete. Der Paketspeicher kann aus den msdb-Datenbank- und/oder den Dateisystemordnern bestehen, die in der Konfigurationsdatei des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Diensts aufgelistet sind. In der Konfigurationsdatei sind die zu verwaltenden msdb- und Dateisystemordner angegeben. Sie können Pakete auch an anderen Stellen des Dateisystems speichern, die nicht vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst verwaltet werden.  
   
- Pakete, die Sie in Msdb zu speichern, werden in einer Tabelle mit dem Namen Sysssispackages gespeichert. Wenn Sie Pakete in Msdb speichern, können Sie sie in logischen Ordnern gruppieren. Mithilfe von logischen Ordnern können Sie die Pakete nach ihrem Zweck organisieren oder Filtern von Paketen in der Sysssispackages-Tabelle. Erstellen Sie neue logische Ordner in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Standardmäßig werden alle logischen Ordner, die Sie der msdb-Datenbank hinzufügen, automatisch in den Paketspeicher übernommen.  
+ Pakete, die Sie in der msdb-Datenbank speichern, werden in einer Tabelle mit dem Namen „sysssispackages“ gespeichert. Beim Speichern von Paketen in der msdb-Datenbank können Sie die Pakete in logischen Ordnern gruppieren. Die Verwendung von logischen Ordnern ermöglicht Ihnen, die Pakete nach dem Einsatzzweck zu sortieren oder sie in der Tabelle „sysssispackages“ zu filtern. Erstellen Sie neue logische Ordner in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Standardmäßig werden alle logischen Ordner, die Sie der msdb-Datenbank hinzufügen, automatisch in den Paketspeicher übernommen.  
   
- Die logischen Ordner, die Sie erstellen, werden als Zeilen in der Tabelle Sysssispackagefolders in ' msdb ' dargestellt. Die Spalten „folderid“ und „parentfolderid“ in der „sysssispackagefolders“-Tabelle definieren die Ordnerhierarchie. Die logischen Stammordner in ' msdb ' werden die Zeilen in Sysssispackagefolders mit null-Werten in der Spalte Parentfolderid. Weitere Informationen finden Sie unter [Sysssispackages &#40; Transact-SQL &#41; ](../../relational-databases/system-tables/sysssispackages-transact-sql.md) und [Sysssispackagefolders (Transact-SQL &)](../../relational-databases/system-tables/sysssispackagefolders-transact-sql.md).  
+ Die logischen Ordner, die Sie erstellen, werden in der Tabelle „sysssispackagefolders“ der msdb-Datenbank als Zeilen dargestellt. Die Spalten „folderid“ und „parentfolderid“ in der „sysssispackagefolders“-Tabelle definieren die Ordnerhierarchie. Die logischen Stammordner in der msdb-Datenbank sind die Zeilen in der Tabelle „sysssispackagefolders“, die in der Spalte „parentfolderid“ NULL-Werte aufweisen. Weitere Informationen finden Sie unter [sysssispackages &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysssispackages-transact-sql.md) und [sysssispackagefolders (Transact-SQL)](../../relational-databases/system-tables/sysssispackagefolders-transact-sql.md).  
   
  Wenn Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] öffnen und eine Verbindung mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]herstellen, werden die msdb-Ordner, die vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst verwaltet werden, im Ordner „Gespeicherte Pakete“ aufgelistet. Wenn in der Konfigurationsdatei Stammdateisystemordner angegeben sind, werden im Ordner Gespeicherte Pakete auch die Pakete aufgelistet, die in diesen Ordnern sowie deren Unterordnern gespeichert sind.  
   
@@ -66,12 +64,12 @@ ms.lasthandoff: 08/03/2017
   
  Zum Anzeigen der Liste der Pakete im Paketspeicher müssen Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] öffnen und eine Verbindung mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]herstellen.  
   
-## <a name="monitor-running-packages"></a>Ausgeführte Pakete überwachen  
- Die **ausgeführte Pakete** Ordner werden derzeit ausgeführte Pakete aufgelistet. Wenn Sie Informationen zu den aktuellen Paketen auf der Seite **Zusammenfassung** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]anzeigen möchten, klicken Sie auf den Ordner **Ausgeführte Pakete** . Informationen wie die Ausführungsdauer der ausgeführten Pakete werden auf der Seite **Zusammenfassung** angezeigt. Sie können den Ordner aktualisieren, um die aktuellsten Informationen anzuzeigen.  
+## <a name="monitor-running-packages"></a>Überwachen von ausgeführten Paketen  
+ Der Ordner **Ausgeführte Pakete** enthält eine Liste der Pakete, die derzeit ausgeführt werden. Wenn Sie Informationen zu den aktuellen Paketen auf der Seite **Zusammenfassung** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]anzeigen möchten, klicken Sie auf den Ordner **Ausgeführte Pakete** . Informationen wie die Ausführungsdauer der ausgeführten Pakete werden auf der Seite **Zusammenfassung** angezeigt. Sie können den Ordner aktualisieren, um die aktuellsten Informationen anzuzeigen.  
   
  Wenn Sie Informationen zu einem einzelnen ausgeführten Paket auf der Seite **Zusammenfassung** anzeigen möchten, klicken Sie auf das Paket. Auf der Seite **Zusammenfassung** werden Informationen wie die Version und die Beschreibung des Pakets angezeigt.  
   
-Beenden eines ausgeführtes Pakets aus der **ausgeführte Pakete** Ordner mit der rechten Maustaste auf das Paket, und klicken Sie dann auf **beenden**.  
+Sie können ein ausgeführtes Paket im Ordner **Ausgeführte Pakete** beenden, indem Sie mit der rechten Maustaste auf das Paket und anschließend auf **Beenden** klicken.  
   
 ## <a name="view-packages-in-ssms"></a>Anzeigen von Paketen in SSMS
     
@@ -86,7 +84,7 @@ Beenden eines ausgeführtes Pakets aus der **ausgeführte Pakete** Ordner mit de
     > [!IMPORTANT]  
     >  Wenn Sie keine Verbindung mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]herstellen können, wird der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst wahrscheinlich nicht ausgeführt. Wenn Sie weitere Informationen zum Status des Diensts erhalten möchten, klicken Sie auf **Start**, zeigen Sie auf **Alle Programme**, zeigen Sie auf **Microsoft SQL Server**, zeigen Sie auf **Konfigurationstools**, und klicken Sie dann auf **SQL Server-Konfigurations-Manager**. Klicken Sie im linken Bereich auf **SQL Server-Dienste**. Suchen Sie im rechten Bereich den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst. Starten Sie den Dienst, wenn er nicht bereits ausgeführt wird.  
   
-     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]wird geöffnet. Standardmäßig ist das Fenster des Objekt-Explorers geöffnet und in der unteren linken Ecke des Studios positioniert. Ist der Objekt-Explorer nicht geöffnet, klicken Sie im Menü **Ansicht** auf **Objekt-Explorer** .  
+     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] wird geöffnet. Standardmäßig ist das Fenster des Objekt-Explorers geöffnet und in der unteren linken Ecke des Studios positioniert. Ist der Objekt-Explorer nicht geöffnet, klicken Sie im Menü **Ansicht** auf **Objekt-Explorer** .  
   
 ### <a name="to-view-the-packages-that-integration-services-service-manages"></a>So zeigen Sie die vom Integration Services-Dienst verwalteten Pakete an  
   
@@ -96,9 +94,9 @@ Beenden eines ausgeführtes Pakets aus der **ausgeführte Pakete** Ordner mit de
 
 ## <a name="import-and-export-packages"></a>Importieren und Exportieren von Paketen
  
- Pakete können in der sysssispackages-Tabelle in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-msdb-Datenbank oder im Dateisystem gespeichert werden.  
+ Pakete können in der sysssispackages-Tabelle in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -msdb-Datenbank oder im Dateisystem gespeichert werden.  
   
- Der Paketspeicher, bei dem es sich um den logischen Speicherort handelt, der vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Dienst überwacht und verwaltet wird, kann sowohl die msdb-Datenbank als auch die in der Konfigurationsdatei für den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Dienst angegebenen Dateisystemordner einschließen.  
+ Der Paketspeicher, bei dem es sich um den logischen Speicherort handelt, der vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst überwacht und verwaltet wird, kann sowohl die msdb-Datenbank als auch die in der Konfigurationsdatei für den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst angegebenen Dateisystemordner einschließen.  
   
  Sie können Pakete zwischen den folgenden Speichertypen importieren und exportieren:  
   
@@ -106,9 +104,9 @@ Beenden eines ausgeführtes Pakets aus der **ausgeführte Pakete** Ordner mit de
   
 -   Ordner im SSIS-Paketspeicher. Die beiden Standardordner heißen File System und MSDM.  
   
--   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-msdb-Datenbank.  
+-   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -msdb-Datenbank.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]bietet Ihnen die Möglichkeit zu importieren und Exportieren von Paketen und von Paketen das Speicherformat und den Speicherort der Pakete ändern. Mit den Import- und Export-Features können Sie Pakete zum Dateisystem, zum Paketspeicher oder zur msdb-Datenbank hinzufügen und Pakete aus einem Speicherformat in ein anderes Format kopieren. So können z.B. in msdb gespeicherte Pakete in das Dateisystem kopiert werden und umgekehrt.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ermöglicht Ihnen das Importieren und Exportieren von Paketen. Damit können Sie das Speicherformat und den Speicherort der Pakete ändern. Mit den Import- und Export-Features können Sie Pakete zum Dateisystem, zum Paketspeicher oder zur msdb-Datenbank hinzufügen und Pakete aus einem Speicherformat in ein anderes Format kopieren. So können z.B. in msdb gespeicherte Pakete in das Dateisystem kopiert werden und umgekehrt.  
   
  Zum Kopieren eines Pakets in ein anderes Format können Sie auch das Eingabeaufforderungs-Hilfsprogramm **dtutil** („dtutil.exe“) verwenden. Weitere Informationen finden Sie unter [dtutil Utility](../../integration-services/dtutil-utility.md).  
   
@@ -134,7 +132,7 @@ Beenden eines ausgeführtes Pakets aus der **ausgeführte Pakete** Ordner mit de
   
     -   Wählen Sie im Feld **Servertyp** die Option **Integration Services**aus.  
   
-    -   In der **Servernamen** Feld, geben Sie einen Servernamen ein, oder klicken Sie auf  **\<Suche fortsetzen… >** und suchen Sie den zu verwendenden Server.  
+    -   Geben Sie im Feld **Servername** einen Servernamen an, oder klicken Sie auf **\<Suche fortsetzen>**, um nach dem zu verwendenden Server zu suchen.  
   
 3.  Wenn der Objekt-Explorer nicht geöffnet ist, klicken Sie im Menü **Ansicht** auf **Objekt-Explorer**.  
   
@@ -170,7 +168,7 @@ Beenden eines ausgeführtes Pakets aus der **ausgeführte Pakete** Ordner mit de
   
     -   Wählen Sie im Feld **Servertyp** die Option **Integration Services**aus.  
   
-    -   In der **Servernamen** Feld, geben Sie einen Servernamen ein, oder klicken Sie auf  **\<Suche fortsetzen… >** und suchen Sie den zu verwendenden Server.  
+    -   Geben Sie im Feld **Servername** einen Servernamen an, oder klicken Sie auf **\<Suche fortsetzen>**, um nach dem zu verwendenden Server zu suchen.  
   
 3.  Wenn der Objekt-Explorer nicht geöffnet ist, klicken Sie im Menü **Ansicht** auf **Objekt-Explorer**.  
   
@@ -222,10 +220,10 @@ Beenden eines ausgeführtes Pakets aus der **ausgeführte Pakete** Ordner mit de
  Wählen Sie einen Authentifizierungstyp aus.  
   
  **Benutzername**  
- Wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden, stellen Sie einen Benutzernamen bereit.  
+ Stellen Sie einen Benutzernamen bereit, falls Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden.  
   
  **Kennwort**  
- Geben Sie ein Kennwort an, falls Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden.  
+ Stellen Sie ein Kennwort bereit, falls Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden.  
   
  **Paketpfad**  
  Geben Sie den Paketpfad ein, oder klicken Sie auf die Schaltfläche „Durchsuchen“ **(…)** , und suchen Sie das Paket.  
@@ -262,10 +260,10 @@ Beenden eines ausgeführtes Pakets aus der **ausgeführte Pakete** Ordner mit de
  Wählen Sie einen Authentifizierungstyp aus.  
   
  **Benutzername**  
- Wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden, stellen Sie einen Benutzernamen bereit.  
+ Stellen Sie einen Benutzernamen bereit, falls Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden.  
   
  **Kennwort**  
- Geben Sie ein Kennwort an, falls Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden.  
+ Stellen Sie ein Kennwort bereit, falls Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden.  
   
  **Paketpfad**  
  Geben Sie den Paketpfad ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** , um nach dem Ordner zu suchen, in dem das Paket gespeichert werden soll.  
@@ -295,4 +293,3 @@ Beenden eines ausgeführtes Pakets aus der **ausgeführte Pakete** Ordner mit de
  [Integration Services-Dienst &#40;SSIS-Dienst&#41;](../../integration-services/service/integration-services-service-ssis-service.md)  
   
   
-

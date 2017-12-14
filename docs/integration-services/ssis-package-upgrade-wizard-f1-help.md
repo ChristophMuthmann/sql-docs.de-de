@@ -1,5 +1,5 @@
 ---
-title: SSIS-Paket-Upgrade-Assistent F1-Hilfe | Microsoft Docs
+title: SSIS Paketupgrade-Assistent (F1-Hilfe) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,32 +20,31 @@ f1_keywords:
 - sql13.is.upgradewizard.completewizard.f1
 - sql13.is.upgradewizard.upgradingpackage.f1
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0e9c1eccc9a14c580ba733fc3c4f63e88db92d60
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 01c6f66c5b72a320284034cf5e789d37cc265551
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS Paketupgrade-Assistent (F1-Hilfe)
-  Verwenden Sie den SSIS-PaketUpgrade-Assistenten zum Aktualisieren von Paketen, die mit früheren Versionen von erstellten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf das Paketformat für die aktuelle Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+  Verwenden Sie den SSIS-Paketupgrade-Assistenten, um ein Upgrade für die mit früheren Versionen erstellten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Pakete auf das für die aktuelle Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]verwendete Paketformat durchzuführen.  
   
  **So führen Sie den SSIS Paketupgrade-Assistenten aus**  
   
 -   [Aktualisieren von Integration Services-Paketen mit dem SSIS-Paketupgrade-Assistenten](../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
 
-## <a name="ssis-upgrade-wizard"></a>SSIS Upgrade-Assistent
+## <a name="ssis-upgrade-wizard"></a>SSIS-Paketupgrade-Assistent
   
 ### <a name="options"></a>enthalten  
  **Diese Seite nicht mehr anzeigen.**  
  Lassen Sie die Willkommensseite beim nächsten Öffnen des Assistenten aus.  
  
-## <a name="select-source-location-page"></a>Wählen Sie die Seite "Speicherort der Quelle"
+## <a name="select-source-location-page"></a>Seite „Quellspeicherort auswählen“
  Mithilfe der Seite **Quellspeicherort auswählen** geben Sie die Quelle an, aus der Pakete aktualisiert werden sollen.  
   
 > [!NOTE]  
@@ -90,7 +88,7 @@ ms.lasthandoff: 09/26/2017
  **Kennwort**  
  Geben Sie das Kennwort ein, das die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung verwendet, um eine Verbindung mit dem Server herzustellen.  
  
-## <a name="select-destination-location-page"></a>Wählen Sie die Seite "Zielordner"
+## <a name="select-destination-location-page"></a>Seite „Zielspeicherort auswählen“
  Auf der Seite **Zielspeicherort auswählen** können Sie das Ziel angeben, an dem die aktualisierten Pakete gespeichert werden sollen.  
   
 > [!NOTE]  
@@ -142,7 +140,7 @@ ms.lasthandoff: 09/26/2017
  **Kennwort**  
  Geben Sie das Kennwort ein, das bei der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung verwendet werden soll, um eine Verbindung mit dem Server herzustellen.  
  
-## <a name="select-package-management-options-page"></a>Paketverwaltungsoptionen Seite "auswählen"
+## <a name="select-package-management-options-page"></a>Seite „Paketverwaltungsoptionen auswählen“
   Verwenden Sie die Seite **Paketverwaltungsoptionen auswählen** , um Optionen für Paketupgrades anzugeben.  
   
  **So führen Sie den SSIS Paketupgrade-Assistenten aus**  
@@ -153,23 +151,23 @@ ms.lasthandoff: 09/26/2017
  **Verbindungszeichenfolgen zum Verwenden neuer Anbieternamen aktualisieren**  
  Aktualisieren Sie die Verbindungszeichenfolgen, um für die aktuelle Version von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]die Namen für die folgenden Anbieter zu verwenden:  
   
--   OLE DB-Anbieter für[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
+-   OLE DB-Anbieter für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client  
   
  Der [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketupgrade-Assistent aktualisiert nur Verbindungszeichenfolgen, die in Verbindungs-Managern gespeichert sind. Der Assistent aktualisiert keine Verbindungszeichenfolgen, die dynamisch mithilfe der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Ausdruckssprache oder mithilfe von Code in einem Skripttask erstellt wurden.  
   
- **Überprüfen von Upgradepaketen**  
+ **Upgradepakete überprüfen**  
  Überprüfen Sie die Upgradepakete, und speichern Sie nur die Upgradepakete, die die Überprüfung bestehen.  
   
  Wenn Sie diese Option nicht aktivieren, überprüft der Assistent keine Upgradepakete. Deshalb speichert der Assistent alle Upgradepakete, unabhängig davon, ob die Pakete gültig sind oder nicht. Der Assistent speichert Upgradepakete unter dem Ziel, das auf der Seite **Zielspeicherort auswählen** des Assistenten angegeben ist.  
   
  Die Überprüfung verlängert die Dauer des Upgradevorgangs. Es wird empfohlen, diese Option für große Pakete, die voraussichtlich erfolgreich aktualisiert werden, nicht zu aktivieren.  
   
- **Erstellen Sie neue Paket-IDs**  
+ **Neue Paket-IDs erstellen**  
  Erstellen Sie neue Paket-IDs für die Upgradepakete.  
   
- **Fortsetzen Sie Upgradeprozess bei fehlerhaftem PaketUpgrade**  
+ **Upgradeprozess bei fehlerhaftem Paketupgrade fortsetzen**  
  Legen Sie fest, dass der [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketupgrade-Assistent mit dem Upgrade der restlichen Pakete fortfährt, wenn ein Paket nicht aktualisiert werden kann.  
   
  **Paketnamenskonflikte**  
@@ -178,10 +176,10 @@ ms.lasthandoff: 09/26/2017
  **Vorhandene Paketdateien überschreiben**  
  Ersetzt das vorhandene Paket durch das Upgradepaket desselben Namens.  
   
- **Fügen Sie zum Aktualisieren von Paketnamen numerische Suffixe hinzu**  
+ **Zum Aktualisieren von Paketnamen numerische Suffixe hinzufügen**  
  Fügt dem Namen des Upgradepakets ein numerisches Suffix hinzu.  
   
- **Pakete nicht aktualisieren**  
+ **Kein Upgrade für Pakete durchführen**  
  Unterbricht das Upgrade der Pakete und zeigt einen Fehler an, wenn Sie den Assistenten abschließen.  
   
  Diese Optionen sind nicht verfügbar, wenn Sie die Option **An Quellspeicherort speichern** auf der Seite **Zielspeicherort auswählen** des Assistenten auswählen.  
@@ -195,7 +193,7 @@ ms.lasthandoff: 09/26/2017
 > [!NOTE]  
 >  Diese Option ist nur verfügbar, wenn Sie festlegen, dass die Originalpakete und die Upgradepakete im Dateisystem und im selben Ordner gespeichert werden.  
 
-## <a name="select-packages-page"></a>Wählen Sie die Seite "Pakete"
+## <a name="select-packages-page"></a>Seite „Pakete auswählen“
   Verwenden Sie die Seite **Pakete auswählen** , um die Pakete für das Upgrade auszuwählen. Auf dieser Seite werden die Pakete aufgelistet, die am auf der Seite **Quellspeicherort auswählen** des Assistenten ausgewählten Speicherort gespeichert sind.  
   
 ### <a name="options"></a>enthalten  
@@ -214,18 +212,18 @@ ms.lasthandoff: 09/26/2017
  **Auf Auswahl anwenden**  
  Wenden Sie das festgelegte Kennwort an, um die ausgewählten Upgradepakete zu entschlüsseln.  
  
-## <a name="complete-the-wizard-page"></a>Auf der Seite Assistenten abschließen
+## <a name="complete-the-wizard-page"></a>Seite „Assistenten abschließen“
   Verwenden Sie die Seite **Assistenten abschließen** , um die Paketupgradeoptionen zu überprüfen und zu bestätigen, die Sie ausgewählt haben. Dies ist die letzte Seite des Assistenten, auf der Sie zurückgehen und die Optionen für diese Sitzung des Assistenten ändern können.  
   
 ### <a name="options"></a>enthalten  
- **Zusammenfassung der Optionen**  
+ **Zusammenfassungsoptionen**  
  Überprüfen Sie die Upgradeoptionen, die Sie im Assistenten ausgewählt haben. Um Optionen zu ändern, klicken Sie auf **Zurück** , um zu den vorherigen Assistentenseiten zurückzukehren.
  
-## <a name="upgrading-the-packages-page"></a>Aktualisieren die Seite "Pakete"
+## <a name="upgrading-the-packages-page"></a>Seite „Pakete werden aktualisiert“
   Verwenden Sie die Seite **Pakete werden aktualisiert** , um den Status der Paketaktualisierung anzuzeigen und um den Aktualisierungsprozess unterbrechen. Der [!INCLUDE[ssIS](../includes/ssis-md.md)] Paketaktualisierungs-Assistent aktualisiert die ausgewählten Pakete nacheinander.  
   
 ### <a name="options"></a>enthalten  
- **Meldungsbereich**  
+ **Bereich „Meldung“**  
  Zeigt während der Aktualisierung Statusmeldungen und Zusammenfassungsinformationen an.  
   
  **Aktion**  
@@ -251,12 +249,12 @@ ms.lasthandoff: 09/26/2017
   
 -   Den Bericht als E-Mail-Nachricht versenden.  
 
-## <a name="view-upgraded-packages"></a>Zeigen Sie aktualisierte Pakete an
-### <a name="view-upgraded-packages-that-were-saved-to-a-sql-server-database-or-to-the-package-store"></a>Zeigen Sie aktualisierte Pakete an, die in einer SQL Server-Datenbank oder im Paketspeicher gespeichert wurden
+## <a name="view-upgraded-packages"></a>Anzeigen von Paketen mit durchgeführtem Upgrade
+### <a name="view-upgraded-packages-that-were-saved-to-a-sql-server-database-or-to-the-package-store"></a>Anzeigen von Paketen mit durchgeführtem Upgrade, die in einer SQL Server-Datenbank oder dem Paketspeicher gespeichert wurden
   
 Stellen Sie in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]im Objekt-Explorer eine Verbindung mit der lokalen Instanz von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]her, und erweitern Sie dann den Knoten **Gespeicherte Pakete** , um die aktualisierten Pakete anzuzeigen.  
   
-### <a name="view-upgraded-packages-that-were-upgraded-from-sql-server-data-tools"></a>Zeigen Sie aktualisierte Pakete, die in SQL Server-Datentools aktualisiert wurden  
+### <a name="view-upgraded-packages-that-were-upgraded-from-sql-server-data-tools"></a>Anzeigen von Paketen mit in SQL Server Data Tools durchgeführtem Upgrade  
   
 Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]im Projektmappen-Explorer das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt, und erweitern Sie dann den Knoten **SSIS-Pakete** , um die aktualisierten Pakete anzuzeigen.  
   
@@ -264,4 +262,3 @@ Stellen Sie in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]im Objekt-E
  [Aktualisieren von Integration Services-Paketen](../integration-services/install-windows/upgrade-integration-services-packages.md)  
   
   
-

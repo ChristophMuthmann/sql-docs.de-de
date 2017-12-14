@@ -1,5 +1,5 @@
 ---
-title: Anzeigen von Paketobjekten | Microsoft Docs
+title: Anzeigen von Paketobjekten | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - viewing package objects
 - SQL Server Integration Services packages, properties
 ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4314664538d2f3f328e0fbc48965e2541089a95c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 88c6bc973c6039b81d8af48a9dd7d76304946add
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="view-package-objects"></a>Anzeigen von Paketobjekten
   Im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer stellt die Registerkarte **Paket-Explorer** eine Explorer-Sicht des Pakets bereit. Diese Sicht gibt die Containerhierarchie der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Architektur wieder. Der Paketcontainer befindet sich ganz oben in der Hierarchie, und Sie erweitern das Paket, um die Verbindungen, ausführbaren Dateien, Ereignishandler, Protokollanbieter, Rangfolgeneinschränkungen und Variablen im Paket anzuzeigen.  
@@ -45,9 +43,9 @@ ms.lasthandoff: 09/26/2017
   
  Das folgende Diagramm zeigt eine Strukturansicht eines einfachen Pakets.  
   
- ![Screenshot der Registerkarte Paket-Explorer](../integration-services/media/packageexplorer.gif "Screenshot der Registerkarte Paket-Explorer")  
+ ![Screenshot der Registerkarte „Package-Explorer“](../integration-services/media/packageexplorer.gif "Screenshot of the Package Explorer tab")  
   
-## <a name="view-the-package-structure-and-content"></a>Zeigen Sie die Paketstruktur und den Inhalt an.  
+## <a name="view-the-package-structure-and-content"></a>Anzeigen der Paketstruktur und des Paketinhalts  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt mit dem Paket, das Sie im Bereich **Paket-Explorer**anzeigen möchten.  
   
@@ -57,7 +55,7 @@ ms.lasthandoff: 09/26/2017
   
 4.  Erweitern Sie in Abhängigkeit von der Paketstruktur Ordner der nächsten Ebene.  
   
-## <a name="view-the-properties-of-a-package-object"></a>Anzeigen der Eigenschaften eines Pakets-Objekts
+## <a name="view-the-properties-of-a-package-object"></a>Anzeigen der Eigenschaften eines Paketobjekts
   
 -   Klicken Sie mit der rechten Maustaste auf ein Objekt, und klicken Sie auf **Eigenschaften** , um das Fenster **Eigenschaften** zu öffnen.  
   
@@ -70,8 +68,7 @@ ms.lasthandoff: 09/26/2017
  [Integration Services-Container](../integration-services/control-flow/integration-services-containers.md)   
  [Rangfolgeneinschränkungen](../integration-services/control-flow/precedence-constraints.md)   
  [Integration Services-Variablen &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md)   
- [Integrationsservices &#40; SSIS &#41; Ereignishandler](../integration-services/integration-services-ssis-event-handlers.md)   
- [Integrationsservices &#40; SSIS &#41; Protokollierung](../integration-services/performance/integration-services-ssis-logging.md)  
+ [Integration Services-Ereignishandler &#40;SSIS&#41;](../integration-services/integration-services-ssis-event-handlers.md)   
+ [Integration Services-Protokollierung &#40;SSIS&#41;](../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

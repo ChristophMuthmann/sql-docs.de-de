@@ -1,10 +1,13 @@
 ---
 title: "Lektion 4: Wiederherstellen einer Datenbank auf einem virtuellen Computer über URLs | Microsoft-Dokumentation"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f641f3df1010396d54a655beaaf982a7bff63972
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ad780f4f49f99c0537e5ff560d1addab59627d9c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-4-restore-database-to-virtual-machine-from-url"></a>Lektion 4: Wiederherstellen einer Datenbank auf einem virtuellen Computer über URLs
-In dieser Lektion werden Sie die AdventureWorks2014-Datenbank für Ihre Instanz von SQL Server 2016 auf dem virtuellen Computer in Microsoft Azure wiederherstellen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In dieser Lektion werden Sie die AdventureWorks2014-Datenbank für Ihre Instanz von SQL Server 2016 auf dem virtuellen Computer in Microsoft Azure wiederherstellen.  
   
 > [!NOTE]  
 > Der Einfachheit halber verwenden wir in diesem Tutorial den gleichen Container für die Daten und Protokolldateien, die wir für die Datenbanksicherung verwenden. In einer Produktionsumgebung würden Sie wahrscheinlich mehrere Container und häufig auch mehrere Datendateien verwenden. Mit SQL Server 2016 könnten Sie auch ein Striping der Sicherung über mehrere Blobs erwägen, um die Backup-Leistung zu steigern, wenn Sie eine große Datenbank sichern.  

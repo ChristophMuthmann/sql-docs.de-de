@@ -2,9 +2,12 @@
 title: "Überlegungen zur Sicherheit für die Replikation von SQL Server Compact | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ed93760e86efa73c2d3c14b6a94799736b761f6e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f4aaf58d17b0a3b5f53a9251e811c8b58775e48c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="security-considerations-for-sql-server-compact-replication"></a>Überlegungen zur Sicherheit für die Replikation von SQL Server Compact
-  Die Sicherung der Konnektivität zwischen einer Instanz des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbankmoduls und [!INCLUDE[ssEW](../../../includes/ssew-md.md)] umfasst die richtige Konfiguration der Sicherheit sowohl für Microsoft Internetinformationsdienste (IIS) als auch für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Die Sicherung der Konnektivität zwischen einer Instanz des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbankmoduls und [!INCLUDE[ssEW](../../../includes/ssew-md.md)] umfasst die richtige Konfiguration der Sicherheit sowohl für Microsoft Internetinformationsdienste (IIS) als auch für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sicherheit und Schutz &#40;Replikation&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)   

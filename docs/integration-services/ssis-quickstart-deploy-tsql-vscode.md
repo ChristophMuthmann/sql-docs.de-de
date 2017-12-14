@@ -1,5 +1,5 @@
 ---
-title: Bereitstellen ein SSIS-Projekts mit Transact-SQL (Visual Studio-Code) | Microsoft Docs
+title: Bereitstellen eines SSIS-Pakets mit Transact-SQL (VS Code) | Microsoft-Dokumentation
 ms.date: 09/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -8,80 +8,78 @@ ms.service:
 ms.component: integration-services
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
-ms.openlocfilehash: 2dc6de798ca76b43627a3c381fe628506c3e7480
-ms.contentlocale: de-de
-ms.lasthandoff: 10/04/2017
-
+ms.openlocfilehash: 41996c43919714a222fa3a453a943529315f957b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Bereitstellen eines SSIS-Projekts von Visual Studio-Code mit Transact-SQL
-Dieser Schnellstart veranschaulicht, wie Visual Studio-Code zum Herstellen einer Verbindung mit dem SSIS-Katalogdatenbank und verwenden dann Transact-SQL-Anweisungen, um ein SSIS-Projekt im SSIS-Katalog bereitstellen.
+# <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Bereitstellen eines SSIS-Pakets aus Visual Studio Code mit Transact-SQL
+In diesem Schnellstart wird erläutert, wie Sie Visual Studio Code verwenden müssen, um eine Verbindung mit der SSIS-Katalogdatenbank herzustellen, und wie Sie anschließend Transact-SQL-Anweisungen verwenden müssen, um ein im SSIS-Katalog gespeichertes SSIS-Projekt bereitzustellen.
 
 > [!NOTE]
-> In diesem Artikel beschriebene Methode ist nicht verfügbar, bei der Herstellung einer Verbindung mit eines Azure SQL-Datenbankserver mit Visual Studio Code. Die `catalog.deploy_project` gespeicherte Prozedur erwartet den Pfad zu der `.ispac` Datei im Dateisystem lokalen (lokal).
+> Die in diesem Artikel beschriebene Methode ist nicht verfügbar, wenn Sie mit VS Code eine Verbindung mit einem Azure SQL-Datenbankserver herstellen. Die gespeicherte Prozedur `catalog.deploy_project` erwartet den Pfad zur Datei `.ispac` im lokalen Dateisystem.
 
-Visual Studio-Code ist ein Codeeditor für Windows, Mac OS und Linux, der Erweiterungen, einschließlich unterstützt die `mssql` -Erweiterung für das Herstellen einer Verbindung mit Microsoft SQL Server, Azure SQL-Datenbank oder Azure SQL Data Warehouse. Weitere Informationen zu Visual Studio Code, finden Sie unter [Visual Studio Code](https://code.visualstudio.com/).
+Visual Studio Code ist ein Code-Editor für Windows, macOS und Linux, der Erweiterungen unterstützt. Dazu gehört auch die `mssql`-Erweiterung zum Herstellen einer Verbindung mit Microsoft SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse. Weitere Informationen zu VS Code finden Sie unter [Visual Studio Code](https://code.visualstudio.com/).
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Bevor Sie beginnen, stellen Sie sicher, dass Sie die neueste Version von Visual Studio Code installiert und geladen haben die `mssql` Erweiterung. Zum Herunterladen dieser Tools finden Sie unter den folgenden Seiten:
+Prüfen Sie, bevor Sie beginnen, ob Sie die neueste Version von Visual Studio Code installiert haben und die `mssql`-Erweiterung geladen ist. Informationen zum Herunterladen dieser Tools finden Sie auf den folgenden Seiten:
 -   [Herunterladen von Visual Studio Code](https://code.visualstudio.com/Download)
--   [MSSQL-Erweiterung](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
+-   [mssql extension (mssql-Erweiterung)](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
-## <a name="set-language-mode-to-sql-in-vs-code"></a>Modus "Sprache" in SQL in Visual Studio Code festlegen
+## <a name="set-language-mode-to-sql-in-vs-code"></a>Festlegen des Sprachmodus auf SQL in VS Code
 
-So aktivieren Sie `mssql` Befehle und T-SQL-IntelliSense, legen Sie die Language-Modus auf **SQL** in Visual Studio-Code.
+Legen Sie den Sprachmodus auf `mssql`SQL **in Visual Studio Code fest, um** -Befehle und T-SQL IntelliSense zu aktivieren.
 
-1. Öffnen Sie Visual Studio-Code, und klicken Sie dann öffnen Sie ein neues Fenster. 
+1. Öffnen Sie zuerst Visual Studio Code und dann ein neues Fenster. 
 
-2. Klicken Sie auf **Klartext** in der unteren rechten Ecke der Statusleiste.
+2. Klicken Sie auf **Nur-Text** in der unteren rechten Ecke der Statusleiste.
  
-3. In der **Sprachauswahl Modus** Dropdown-Menü, das geöffnet wird, eingeben oder auswählen **SQL**, und drücken Sie dann die **EINGABETASTE** Modus "Sprache" auf SQL festgelegt. 
+3. Klicken Sie im sich öffnenden Dropdownmenü **Sprachmodus auswählen** auf **SQL**, oder geben Sie es ein, und drücken Sie dann die **EINGABETASTE**, um den Sprachmodus auf „SQL“ festzulegen. 
 
-## <a name="connect-to-the-ssis-catalog-database"></a>Herstellen einer Verbindung mit dem SSIS-Katalogdatenbank
+## <a name="connect-to-the-ssis-catalog-database"></a>Herstellen einer Verbindung mit der SSIS-Katalogdatenbank
 
-Verwenden Sie Visual Studio-Code zum Herstellen einer Verbindung im SSIS-Katalog.
+Verwenden Sie Visual Studio Code, um eine Verbindung mit dem SSIS-Katalog herzustellen.
 
 > [!IMPORTANT]
-> Stellen Sie bevor Sie fortfahren sicher, dass Sie Ihre Server, Datenbank und Anmeldeinformationen bereit. Wenn Sie sich der Fokus aus Visual Studio-Code ändern, nachdem Sie mit der Eingabe der Verbindungsinformationen für das Profil beginnen, müssen Sie neu starten, erstellen das Verbindungsprofil.
+> Bevor Sie fortfahren, stellen Sie sicher, dass Sie die erforderlichen Server-, Datenbank- und Anmeldeinformationen zur Hand haben. Wenn Sie den Fokus von Visual Studio Code ändern, nachdem Sie mit der Eingabe der Verbindungsprofilinformationen begonnen haben, müssen Sie erneut mit dem Erstellen des Verbindungsprofils beginnen.
 
-1. Drücken Sie in Visual Studio-Code **STRG + UMSCHALT + P** (oder **F1**) öffnen Sie die Palette-Befehl.
+1. Drücken Sie in VS Code **STRG+UMSCHALT+P** (oder **F1**), um die Befehlspalette zu öffnen.
 
-2. Typ **Sqlcon** , und drücken Sie **EINGABETASTE**.
+2. Geben Sie **sqlcon** ein, und drücken Sie die **EINGABETASTE**.
 
-3. Drücken Sie **EINGABETASTE** auswählen **Verbindungsprofils erstellen**. Dieser Schritt erstellt ein Profil für die SQL Server-Instanz.
+3. Drücken Sie die **EINGABETASTE**, um **Create Connection Profile** (Verbindungsprofil erstellen) auszuwählen. Mithilfe dieses Schritts wird ein Verbindungsprofil für Ihre SQL Server-Instanz erstellt.
 
-4. Befolgen Sie die Verbindungseigenschaften für das neue Verbindungsprofil angeben. Drücken Sie nach jeder Wert angeben, **EINGABETASTE** um den Vorgang fortzusetzen. 
+4. Befolgen Sie die Anweisungen, um die Verbindungseigenschaften für das neue Verbindungsprofil anzugeben. Nachdem Sie sämtliche Werte angegeben haben, drücken Sie die **EINGABETASTE**, um fortzufahren. 
 
-   | Einstellung       | Empfohlener Wert | Weitere Informationen |
+   | Einstellung       | Vorgeschlagener Wert | Weitere Informationen |
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **Servername** | Die vollqualifizierten Servernamen |  |
-   | **Datenbankname** | **SSISDB** | Der Name der Datenbank für die Verbindung. |
-   | **Authentifizierung** | SQL-Anmeldung| Dieser Schnellstart verwendet SQL-Authentifizierung. |
-   | **Benutzername** | Serveradmin-Kontos | Dies ist das Konto, das Sie angegeben werden, wenn Sie auf den Server erstellt haben. |
-   | **Kennwort (SQL-Anmeldung)** | Das Kennwort für Ihr serveradmin-Kontos | Dies ist das Kennwort, das Sie angegeben werden, wenn Sie auf den Server erstellt haben. |
-   | **Speichern Kennwort?** | Ja oder Nein | Wählen Sie Ja, wenn Sie nicht, das Kennwort jedes Mal eingeben möchten. |
-   | **Geben Sie einen Namen für dieses Profil** | Benennen Sie ein Profil, z. B. **MySSISServer** | Eine gespeicherte Profilname beschleunigt die Verbindung bei nachfolgenden Anmeldungen. | 
+   | **Servername** | Der vollqualifizierte Servername |  |
+   | **Datenbankname** | **SSISDB** | Dies ist der Name der Datenbank, mit der eine Verbindung hergestellt werden soll. |
+   | **Authentifizierung** | SQL-Anmeldung| In diesem Schnellstart wird die SQL-Authentifizierung verwendet. |
+   | **Benutzername** | Das Konto des Serveradministrators | Dabei handelt es sich um das Konto, das Sie beim Erstellen des Servers angegeben haben. |
+   | **Kennwort (SQL-Anmeldung)** | Das Kennwort für das Konto des Serveradministrators | Dabei handelt es sich um das Kennwort, das Sie beim Erstellen des Servers angegeben haben. |
+   | **Kennwort speichern** | Ja oder Nein | Wenn Sie nicht bei jedem Neustart Ihr Kennwort eingeben möchten, wählen Sie „Ja“ aus. |
+   | **Namen für dieses Profil eingeben** | Ein Profilname wie **mySSISServer** | Wenn Sie den Profilnamen speichern, wird bei späteren Anmeldungen schneller eine Verbindung hergestellt. | 
 
-5. Drücken Sie die **ESC** Taste, um die Info-Meldung zu schließen, die Sie informiert, dass das Profil erstellt und verbunden ist.
+5. Drücken Sie die **ESC**-Taste, um die Meldung zu schließen, in der Sie darüber informiert werden, dass das Profil erstellt und eine Verbindung hergestellt wurde.
 
-6. Überprüfen Sie die Verbindung in der Statusleiste aus.
+6. Überprüfen Sie Ihre Verbindung in der Statusleiste.
 
-## <a name="run-the-t-sql-code"></a>Führen Sie den T-SQL-code
-Führen Sie den folgenden Transact-SQL-Code, um ein SSIS-Projekt bereitstellen.
+## <a name="run-the-t-sql-code"></a>Ausführen des T-SQL-Codes
+Führen Sie den folgenden Transact-SQL-Code aus, um ein SSIS-Projekt bereitzustellen.
 
-1. In der **Editor** Fenster, geben Sie die folgende Abfrage in das leere Abfragefenster.
+1. Geben Sie im Fenster **Editor** die folgende Abfrage in ein leeres Abfragefenster ein.
 
-2. Aktualisieren Sie die Parameterwerte in der `catalog.deploy_project` für Ihr System die gespeicherte Prozedur.
+2. Aktualisieren Sie die Parameterwerte in der für das System gespeicherten `catalog.deploy_project`-Prozedur.
 
-3. Drücken Sie **STRG + UMSCHALT + E** , führen Sie den Code und Bereitstellen des Projekts.
+3. Drücken Sie **STRG+UMSCHALT+E**, um den Code und das Projekt bereitzustellen.
 
 ```sql
 DECLARE @ProjectBinary AS varbinary(max)
@@ -95,17 +93,16 @@ EXEC catalog.deploy_project @folder_name = '<target_folder>',
 ```
 
 ## <a name="next-steps"></a>Nächste Schritte
-- Erwägen Sie andere Verfahren zum Bereitstellen eines Pakets aus.
-    - [Bereitstellen eines SSIS-Pakets mit SSMS](./ssis-quickstart-deploy-ssms.md)
-    - [Bereitstellen eines SSIS-Pakets mit Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)
-    - [Bereitstellen eines SSIS-Pakets von der Befehlszeile aus](./ssis-quickstart-deploy-cmdline.md)
-    - [Bereitstellen eines SSIS-Pakets mit PowerShell](ssis-quickstart-deploy-powershell.md)
-    - [Bereitstellen eines SSIS-Pakets mit c#](./ssis-quickstart-deploy-dotnet.md) 
-- Führen Sie ein bereitgestelltes Paket. Um ein Paket auszuführen, können Sie über mehrere Tools und Sprachen auswählen. Weitere Informationen finden Sie unter den folgenden Artikeln:
-    - [Führen Sie ein SSIS-Paket mit SSMS](./ssis-quickstart-run-ssms.md)
-    - [Führen Sie ein SSIS-Paket mit Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
-    - [Führen Sie ein SSIS-Paket mit Transact-SQL (Visual Studio-Code)](ssis-quickstart-run-tsql-vscode.md)
-    - [Führen Sie ein SSIS-Paket von der Befehlszeile aus](./ssis-quickstart-run-cmdline.md)
-    - [Führen Sie ein SSIS-Paket mit PowerShell](ssis-quickstart-run-powershell.md)
-    - [Führen Sie ein SSIS-Paket mit c#](./ssis-quickstart-run-dotnet.md) 
-
+- Erfahren Sie mehr über weitere Möglichkeiten, ein Paket bereitzustellen.
+    - [Deploy an SSIS package with SSMS (Bereitstellen eines SSIS-Projekts mit SSMS)](./ssis-quickstart-deploy-ssms.md)
+    - [Deploy an SSIS package with Transact-SQL (SSMS) (Bereitstellen eines SSIS-Pakets mit Transact-SQL [SSMS])](./ssis-quickstart-deploy-tsql-ssms.md)
+    - [Deploy an SSIS package from the command prompt (Bereitstellen eines SSIS-Projekts von der Befehlszeile aus)](./ssis-quickstart-deploy-cmdline.md)
+    - [Deploy an SSIS package with PowerShell (Bereitstellen eines SSIS-Pakets mit PowerShell)](ssis-quickstart-deploy-powershell.md)
+    - [Deploy an SSIS package with C# (Bereitstellen eines SSIS-Pakets mit C#)](./ssis-quickstart-deploy-dotnet.md) 
+- Führen Sie ein bereitgestelltes Paket aus. Für die Ausführung eines Pakets können Sie aus mehreren Tools und Sprachen auswählen. Weitere Informationen finden Sie in den folgenden Artikeln:
+    - [Run an SSIS package with SSMS (Ausführen eines SSIS-Pakets mit SSMS)](./ssis-quickstart-run-ssms.md)
+    - [Run an SSIS package with Transact-SQL (SSMS) (Ausführen eines SSIS-Pakets mit Transact-SQL [SSMS])](./ssis-quickstart-run-tsql-ssms.md)
+    - [Run an SSIS package with Transact-SQL (VS Code) (Ausführen eines SSIS-Pakets mit Transact-SQL [VS Code])](ssis-quickstart-run-tsql-vscode.md)
+    - [Run an SSIS package from the command prompt (Ausführen eines SSIS-Pakets über die Eingabeaufforderung)](./ssis-quickstart-run-cmdline.md)
+    - [Run an SSIS package with PowerShell (Ausführen eines SSIS-Pakets mit PowerShell)](ssis-quickstart-run-powershell.md)
+    - [Run an SSIS package with C# (Ausführen eines SSIS-Pakets mit C#)](./ssis-quickstart-run-dotnet.md) 

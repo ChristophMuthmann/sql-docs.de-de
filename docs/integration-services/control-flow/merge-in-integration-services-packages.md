@@ -1,5 +1,5 @@
 ---
-title: MERGE in Integrationsservices-Paketen | Microsoft Docs
+title: MERGE in Integration Services-Paketen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- MERGE statement [SQL Server]
+helpviewer_keywords: MERGE statement [SQL Server]
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cc3effea9b3d20e556707d31852d3003b7b27a65
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a3b26c9c918e1a3c59b0bd8cd688b3fff2d6a868
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE in Integration Services-Paketen
   In der aktuellen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]kann die SQL-Anweisung in einem Task „SQL ausführen“ eine MERGE-Anweisung enthalten. Diese MERGE-Anweisung ermöglicht es Ihnen, in einer einzelnen Anweisung mehrere INSERT-, UPDATE- und DELETE-Vorgänge auszuführen.  
@@ -77,4 +74,3 @@ ms.lasthandoff: 08/03/2017
  Die Inventory-Datenbank umfasst eine ProductsInventory-Tabelle mit den Spalten ProductID und StockOnHand. In einer Shipments-Tabelle mit den Spalten ProductID, CustomerID und Quantity werden Produktlieferungen an Kunden verfolgt. Die ProductInventory-Tabelle muss täglich auf Basis der Informationen der Shipments-Tabelle aktualisiert werden. Mit einer einzigen MERGE-Anweisung kann der Bestand in der ProductInventory-Tabelle auf Grundlage der erfolgten Lieferungen reduziert werden. Wenn der Bestand für ein Produkt auf 0 reduziert wurde, kann diese MERGE-Anweisung die entsprechende Produktzeile auch in der ProductInventory-Tabelle löschen.  
   
   
-

@@ -2,9 +2,12 @@
 title: "Datenspalten für OLEDB DataRead-Ereignisklassen | Microsoft Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 475009bfb14dfdca4cd7ab9eed1decfa8b747e3c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cf914267c6cd1e859d7f2ab5fed7c02895f879e4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="oledb-dataread-event-class"></a>OLEDB DataRead-Ereignisklasse
-  Die OLEDB DataRead-Ereignisklasse tritt auf, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen OLE DB-Anbieter für verteilte Abfragen und remote gespeicherte Prozeduren aufruft. Fügen Sie diese Ereignisklasse in Ablaufverfolgungen ein, die Datenanforderungsaufrufe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an den OLE DB-Anbieter überwachen.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Die OLEDB DataRead-Ereignisklasse tritt auf, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen OLE DB-Anbieter für verteilte Abfragen und remote gespeicherte Prozeduren aufruft. Fügen Sie diese Ereignisklasse in Ablaufverfolgungen ein, die Datenanforderungsaufrufe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an den OLE DB-Anbieter überwachen.  
   
  Wenn die OLEDB DataRead-Klasse in einer Ablaufverfolgung enthalten ist, kommt es zu einem hohen Leistungsaufwand. Es wird empfohlen, dass Sie die Verwendung dieser Ereignisklasse auf Ablaufverfolgungen beschränken, die bestimmte Probleme jeweils nur für einen kurzen Zeitraum überwachen.  
   

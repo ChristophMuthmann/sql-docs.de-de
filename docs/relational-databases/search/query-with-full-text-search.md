@@ -2,9 +2,12 @@
 title: Abfragen mit Volltextsuche | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,15 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: bfded7d067ded1dacaffede2f36f261451cd59c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cdd09271669926fdf2c94f183818517a439bef92
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-with-full-text-search"></a>Abfragen mit Volltextsuche
-
-Zum Schreiben von Volltextabfragen mit den Volltextprädikaten verwenden Sie **CONTAINS** und **FREETEXT** und die Rowsetwertfunktionen **CONTAINSTABLE** und **FREETEXTTABLE** mit der **SELECT**-Anweisung. Dieses Thema enthält Beispiele für jedes Prädikat und jede Funktion und hilft Ihnen dabei, das Beste auszuwählen.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Zum Schreiben von Volltextabfragen mit den Volltextprädikaten verwenden Sie **CONTAINS** und **FREETEXT** und die Rowsetwertfunktionen **CONTAINSTABLE** und **FREETEXTTABLE** mit der **SELECT**-Anweisung. Dieses Thema enthält Beispiele für jedes Prädikat und jede Funktion und hilft Ihnen dabei, das Beste auszuwählen.
 
 -   Verwenden Sie **CONTAINS** und **CONTAINSTABLE**, damit es mit Wörtern und Ausdrücken übereinstimmt.
 -   Verwenden Sie **FREETEXT** und **FREETEXTTABLE**, damit es mit der Bedeutung, aber nicht mit dem genauen Wortlaut übereinstimmt.
@@ -128,7 +130,7 @@ Beispiele finden Sie unter [einfache Beispiele für jedes Prädikat und jede Fun
 | |CONTAINS/CONTAINSTABLE|FREETEXT/FREETEXTTABLE|
 |---|---|---|
 |**Abfrageart**|Suchen Sie nach einzelnen Wörtern und Ausdrücken mit genauen oder (ungenauen) Fuzzy-Matches.|Suchen Sie nach der Bedeutung, ohne exakte Übereinstimmungen des Wortlauts der angegebenen Wörter, Ausdrücke oder Sätze (die *Freitextzeichenfolgen*).<br/><br/>Übereinstimmungen werden dann generiert, wenn ein Begriff oder eine Form eines Begriffs im Volltextindex einer angegebenen Spalte gefunden wird.|
-|**Weitere Abfrageoptionen**|Sie können den Abstand von Wörtern in einer bestimmten Entfernung voneinander angeben.<br/><br/>Sie können gewichtete Übereinstimmungen zurückgeben.<br/><br/>Sie können die logische Operation verwenden, um Suchbedingungen zu kombinieren. Weitere Informationen finden Sie unter [Verwenden von booleschen Operatoren (AND, OR und NOT)](#Using_Boolean_Operators) weiter unten in diesem Thema.|N/V|
+| **Weitere Abfrageoptionen**|Sie können den Abstand von Wörtern in einer bestimmten Entfernung voneinander angeben.<br/><br/>Sie können gewichtete Übereinstimmungen zurückgeben.<br/><br/>Sie können die logische Operation verwenden, um Suchbedingungen zu kombinieren. Weitere Informationen finden Sie unter [Verwenden von booleschen Operatoren (AND, OR und NOT)](#Using_Boolean_Operators) weiter unten in diesem Thema.|N/V|
 
 ## <a name="compare-predicates-and-functions"></a>Vergleichen Sie Prädikate und Funktionen
 
@@ -139,7 +141,7 @@ Beispiele finden Sie unter [einfache Beispiele für jedes Prädikat und jede Fun
 | |Prädikate<br/>CONTAINS/FREETEXT|Funktionen<br/>CONTAINSTABLE/FREETEXTTABLE|
 |---|---|---|
 |**Verwendung**|Verwenden Sie die Volltext-**-Prädikate** CONTAINS und FREETEXT in der WHERE- oder HAVING-Klausel einer SELECT-Anweisung.|Verwenden Sie die **Funktionen** CONTAINSTABLE- und FREETEXTTABLE-Funktionen wie einen herkömmlichen Tabellennamen in der FROM-Klausel einer SELECT-Anweisung.|
-|**Weitere Abfrageoptionen**|Sie können diese mit beliebigen anderen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prädikaten kombinieren, wie z.B. LIKE und BETWEEN.<br/><br/>Sie können entweder eine einzelne Spalte, eine Liste mit Spalten oder alle Spalten der Tabelle für die Suche auswählen.<br/><br/>Optional können Sie die Sprache angeben, deren Ressourcen bei der Volltextabfrage für die Wörtertrennung, die Wortstammerkennung und Thesaurus-Suchen sowie die Entfernung von Füllwörtern verwendet werden.|Sie müssen die Basistabelle festlegen, um zu suchen, wenn Sie eine dieser Funktionen verwenden. Wie bei den Prädikaten können Sie eine einzelne Spalte, eine Liste mit Spalten oder alle Spalten in der Tabelle für die Suche auswählen. Außerdem kann optional die Sprache angegeben werden, deren Ressourcen bei der Volltextabfrage verwendet werden sollen.<br/><br/>In der Regel müssen Sie die Ergebnisse von CONTAINSTABLE oder FREETEXTTABLE mit der Basistabelle verknüpfen. Zu diesem Zweck müssen Sie den eindeutigen Namen der Schlüsselspalte kennen. Mit dieser Spalte, die in jeder volltextfähigen Tabelle enthalten ist, wird die Eindeutigkeit von Zeilen für die Tabelle erzwungen (die *eindeutige* *Schlüsselspalte*). Weitere Informationen über die Schlüsselspalte, finden Sie unter [Erstellen und Verwalten von Volltextindizes](../../relational-databases/search/create-and-manage-full-text-indexes.md).|
+| **Weitere Abfrageoptionen**|Sie können diese mit beliebigen anderen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prädikaten kombinieren, wie z.B. LIKE und BETWEEN.<br/><br/>Sie können entweder eine einzelne Spalte, eine Liste mit Spalten oder alle Spalten der Tabelle für die Suche auswählen.<br/><br/>Optional können Sie die Sprache angeben, deren Ressourcen bei der Volltextabfrage für die Wörtertrennung, die Wortstammerkennung und Thesaurus-Suchen sowie die Entfernung von Füllwörtern verwendet werden.|Sie müssen die Basistabelle festlegen, um zu suchen, wenn Sie eine dieser Funktionen verwenden. Wie bei den Prädikaten können Sie eine einzelne Spalte, eine Liste mit Spalten oder alle Spalten in der Tabelle für die Suche auswählen. Außerdem kann optional die Sprache angegeben werden, deren Ressourcen bei der Volltextabfrage verwendet werden sollen.<br/><br/>In der Regel müssen Sie die Ergebnisse von CONTAINSTABLE oder FREETEXTTABLE mit der Basistabelle verknüpfen. Zu diesem Zweck müssen Sie den eindeutigen Namen der Schlüsselspalte kennen. Mit dieser Spalte, die in jeder volltextfähigen Tabelle enthalten ist, wird die Eindeutigkeit von Zeilen für die Tabelle erzwungen (die *eindeutige* *Schlüsselspalte*). Weitere Informationen über die Schlüsselspalte, finden Sie unter [Erstellen und Verwalten von Volltextindizes](../../relational-databases/search/create-and-manage-full-text-indexes.md).|
 |**Ergebnisse**|Die Prädikate CONTAINS und FREETEXT geben einen TRUE- oder FALSE-Wert zurück, der angibt, ob eine bestimmte Zeile mit der Volltextabfrage übereinstimmt. Übereinstimmende Zeilen werden im Resultset zurückgegeben.|Diese Funktionen geben eine Tabelle mit null, einer oder mehreren Zeilen zurück, die mit der Volltextabfrage übereinstimmen. Die zurückgegebene Tabelle enthält nur Zeilen aus der Basistabelle, die die angegebenen Auswahlkriterien in der Volltextsuchbedingung der Funktion erfüllen.<br/><br/>Abfragen, die eine dieser Funktionen verwenden, geben auch einen Relevanzrangfolgenwert (RANK) und einen Volltextschlüssel (KEY) für jede Zeile zurück, wie im Folgenden dargestellt:<br/><ul><li>**Schlüssel**-Spalte. Die KEY-Spalte gibt eindeutige Werte der zurückgegebenen Zeilen zurück. Die KEY-Spalte kann verwendet werden, um Auswahlkriterien anzugeben.</li><li>**Rank**-Spalte. Die RANK-Spalte gibt einen *Rangwert* für jede Zeile zurück, der angibt, wie gut die Zeilen mit den Auswahlkriterien übereinstimmen. Je höher der Rangwert des Textes oder Dokuments in einer Zeile ist, desto relevanter ist die Zeile für die betreffende Volltextabfrage. Beachten Sie, dass unterschiedliche Zeilen denselben Rang haben können. Sie können die Anzahl zurückgegebener Übereinstimmungen mit dem optionalen Parameter *top_n_by_rank* einschränken. Weitere Informationen finden Sie unter [Einschränken von Suchergebnissen mit RANK](../../relational-databases/search/limit-search-results-with-rank.md).</li></ul>|
 |**Zusätzliche Optionen**|Sie können einen vierteiligen Namen im CONTAINS- oder FREETEXT-Prädikat zum Abfragen von volltextindizierten Spalten der Zieltabellen auf einem Verbindungsserver verwenden. Erstellen Sie zum Vorbereiten eines Remoteservers für den Empfang von Volltextabfragen einen Volltextindex für die Zieltabellen und -spalten auf dem Remoteserver, und fügen Sie anschließend den Remoteserver als Verbindungsserver hinzu.|N/V|
 |**Weitere Informationen**|Weitere Informationen zur Syntax und zu den Argumenten dieser Prädikate finden Sie unter [CONTAINS](../../t-sql/queries/contains-transact-sql.md) und [FREETEXT](../../t-sql/queries/freetext-transact-sql.md).|Weitere Informationen zur Syntax und den Argumenten dieser Funktionen finden Sie unter [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) und [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).|

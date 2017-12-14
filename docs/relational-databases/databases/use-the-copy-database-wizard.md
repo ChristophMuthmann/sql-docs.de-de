@@ -2,9 +2,12 @@
 title: Verwenden des Assistenten zum Kopieren von Datenbanken | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -29,14 +32,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7e53c91fb8462fb26fd5a94e20c7a6ba7e2f54d0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 28f18fd090691e5aae6023fe7282ef235b12778c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-the-copy-database-wizard"></a>Verwenden des Assistenten zum Kopieren von Datenbanken
-Der Assistent zum Kopieren von Datenbanken verschiebt oder kopiert Datenbanken und bestimmte Serverobjekte ohne Serverausfallzeiten problemlos von einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz zu einer anderen. Mit diesem Assistenten können Sie folgende Aktionen ausführen: 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Der Assistent zum Kopieren von Datenbanken verschiebt oder kopiert Datenbanken und bestimmte Serverobjekte ohne Serverausfallzeiten problemlos von einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz zu einer anderen. Mit diesem Assistenten können Sie folgende Aktionen ausführen: 
   
 -   Einen Quell- und Zielserver auswählen.  
   

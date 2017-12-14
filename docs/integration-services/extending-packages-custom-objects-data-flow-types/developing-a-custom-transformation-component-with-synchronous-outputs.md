@@ -1,5 +1,5 @@
 ---
-title: Entwickeln einer benutzerdefinierten Transformationskomponente mit synchronen Ausgaben | Microsoft Docs
+title: Entwickeln einer benutzerdefinierten Transformationskomponente mit synchronen Ausgaben | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - output columns [Integration Services]
 - data flow components [Integration Services], transformation components
 ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: d316a3921cd3b2d8b3e82a6ed5c5b629389614a7
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5c6999fbcc1dccdf7a79802bdc9a2d49630f908e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>Entwickeln einer benutzerdefinierten Transformationskomponente mit synchronen Ausgaben
   Transformationskomponenten mit synchronen Ausgaben empfangen Zeilen von Upstreamkomponenten und lesen oder modifizieren die Werte in den Spalten der betreffenden Zeilen bei der Weitergabe dieser Zeilen an Downstreamkomponenten. Sie können auch zusätzliche Ausgabespalten definieren, die sich aus den von den Upstreamkomponenten erhaltenen Spalten ableiten. Es werden dem Datenfluss jedoch keine zusätzlichen Zeilen hinzugefügt. Weitere Informationen zu den Unterschieden zwischen synchronen und asynchronen Komponenten finden Sie unter [Grundlegendes zu synchronen und asynchronen Transformationen](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
@@ -127,12 +124,12 @@ End Class
 |DT_CY|0|0|0|0|  
 |DT_NUMERIC|0|Größer 0 und kleiner oder gleich 28 sowie kleiner als Genauigkeit|Größer oder gleich 1 und kleiner oder gleich 38|0|  
 |DT_BYTES|Größer 0|0|0|0|  
-|DT_STR|Größer als 0 und kleiner als 8000.|0|0|Nicht 0 und eine gültige Codepage|  
+|DT_STR|Größer als 0 und kleiner als 8000|0|0|Nicht 0 und eine gültige Codepage|  
 |DT_WSTR|Größer 0 und kleiner 4000|0|0|0|  
   
  Da die Beschränkungen der Datentypeigenschaften vom Datentyp der Ausgabespalte abhängen, müssen Sie bei der Arbeit mit verwalteten Typen den richtigen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Datentyp wählen. Die Basisklasse stellt drei Hilfsmethoden bereit, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> und <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>, die Entwickler verwalteter Komponenten bei der Auswahl eines [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Datentyps für einen verwalteten Typ unterstützen. Diese Methoden wandeln verwaltete Datentypen in [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Datentypen um und umgekehrt.  
   
-## <a name="run-time"></a>Zur Laufzeit  
+## <a name="run-time"></a>Runtime  
  Generell wird die Implementierung der Laufzeitkomponente zwei Kategorien zugeordnet. Diese sind das Suchen der Ein- und Ausgabespalten der Komponente im Puffer und das Lesen oder Schreiben dieser Spaltenwerte in den eingehenden Pufferzeilen.  
   
 ### <a name="locating-columns-in-the-buffer"></a>Suchen von Spalten im Puffer  
@@ -194,7 +191,7 @@ End Sub
 ### <a name="processing-rows"></a>Verarbeiten von Zeilen  
  Komponenten empfangen <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer>-Objekte, die Zeilen und Spalten in der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>-Methode enthalten. Bei dieser Methode werden die Zeilen im Puffer durchlaufen, und die während <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> erkannten Spalten werden gelesen und modifiziert. Diese Methode wird vom Datenflusstask wiederholt aufgerufen, bis von der Upstreamkomponente keine Zeilen mehr bereitgestellt werden.  
   
- Eine einzelne Spalte in den Puffer gelesen oder geschrieben werden, mithilfe der Array Indexer Zugriff-Methode oder mithilfe eines der **abrufen** oder **festgelegt** Methoden. Die **abrufen** und **festgelegt** Methoden sind effizienter und sollte verwendet werden, wenn der Datentyp der Spalte im Puffer bekannt ist.  
+ Eine einzelne Spalte im Puffer wird mithilfe der Indexerzugriffsmethode für Arrays oder mit der **Get**- bzw. **Set**-Methode gelesen oder geschrieben. Die **Get**- und **Set**-Methode sind effizienter und sollten dann verwendet werden, wenn der Datentyp der Spalte in dem Puffer bekannt ist.  
   
  Im folgenden Codebeispiel wird eine Implementierung der <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>-Methode zur Verarbeitung von eingehenden Zeilen veranschaulicht.  
   
@@ -337,4 +334,3 @@ End Namespace
  [Erstellen einer synchronen Transformation mit der Skriptkomponente](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
   
   
-

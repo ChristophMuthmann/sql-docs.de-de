@@ -1,5 +1,5 @@
 ---
-title: Catalog.event_messages | Microsoft Docs
+title: catalog.event_messages | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a0db5ace2a95bea93189cb48378b01a4ba599942
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c1569b4bb562d9342792e4ff9cda58ffe3714eb2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogeventmessages"></a>catalog.event_messages
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,12 +31,12 @@ ms.lasthandoff: 09/26/2017
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |Event_message_ID|bigint|Die eindeutige ID der Ereignismeldung.|  
-|Operation_id|bigint|Der Typ des Vorgangs.<br /><br /> Eine Liste der Vorgangstypen, finden Sie unter [catalog.operations &#40; SSISDB-Datenbank &#41; ](../../integration-services/system-views/catalog-operations-ssisdb-database.md).|  
+|Operation_id|bigint|Der Typ des Vorgangs.<br /><br /> Eine Liste von Vorgangstypen finden Sie unter [catalog.operations &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).|  
 |Message_time|datetimeoffset(7)|Der Zeitpunkt, zu dem die Meldung erstellt wurde.|  
-|Message_type|smallint|Typ der angezeigten Meldung. Weitere Informationen zu Nachrichtentypen, finden Sie unter [Catalog. operation_messages &#40; SSISDB-Datenbank &#41; ](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md).|  
+|Message_type|smallint|Typ der angezeigten Meldung. Weitere Informationen zu Meldungstypen finden Sie unter [catalog.operation_messages &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md).|  
 |Message_source_type|smallint|Die Quelle der Nachricht.|  
 |message|nvarchar(max)|Der Text der Meldung.|  
-|Extended_info_id|bigint|Die ID der zusätzliche Informationen, die auf die vorgangsmeldung beziehen gefunden wird, der [Catalog. extended_operation_info &#40; SSISDB-Datenbank &#41; ](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md) anzeigen.|  
+|Extended_info_id|bigint|Die ID weiterer Informationen, die sich auf die Vorgangsmeldung beziehen, finden Sie in der [catalog.extended_operation_info &#40;SSISDB Datenbank&#41;](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md)-Sicht.|  
 |Package_name|nvarchar(260)|Der Name der Paketdatei.|  
 |Event_name|nvarchar(1024)|Das der Meldung zugeordnete Laufzeitereignis.|  
 |Message_source_name|nvarchar(4000)|Die Paketkomponente, die als Quelle der Nachricht dient.|  
@@ -74,4 +72,3 @@ ms.lasthandoff: 09/26/2017
  [catalog.event_message_context](../../integration-services/system-views/catalog-event-message-context.md)  
   
   
-

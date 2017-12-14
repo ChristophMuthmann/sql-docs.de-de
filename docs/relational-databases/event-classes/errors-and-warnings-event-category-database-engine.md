@@ -2,9 +2,12 @@
 title: Fehler und Warnungen-Ereigniskategorie (Datenbankmodul) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3a7bd25e25dd35ec1dd6bfc0a64a836b2466ebd4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bdac2740a2db73a3cf548b37c288b8dd203ed46d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Fehler und Warnungen-Ereigniskategorie (Datenbankmodul)
-  Die **Fehler und Warnungen** -Ereigniskategorie enthält allgemeine Fehler- und Warnungsereignisse.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Die **Fehler und Warnungen**-Ereigniskategorie enthält allgemeine Fehler- und Warnungsereignisse.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

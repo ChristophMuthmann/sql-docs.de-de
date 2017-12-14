@@ -2,9 +2,12 @@
 title: Datenspalten der Audit Schema Object Management-Ereignisklasse | Microsoft Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 30cb8662d2221181a34eb1a525864fe3f9cea223
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 953b741eda57762795c2391b6f6de0b20362cb05
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-schema-object-management-event-class"></a>Audit Schema Object Management-Ereignisklasse
-  Die **Audit Schema Object Management** -Ereignisklasse tritt auf, wenn Serverobjekte erstellt, geändert oder gelöscht werden.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Die **Audit Schema Object Management**-Ereignisklasse tritt auf, wenn Serverobjekte erstellt, geändert oder gelöscht werden.  
   
 ## <a name="audit-schema-object-management-event-class-data-columns"></a>Datenspalten der Audit Schema Object Management-Ereignisklasse  
   

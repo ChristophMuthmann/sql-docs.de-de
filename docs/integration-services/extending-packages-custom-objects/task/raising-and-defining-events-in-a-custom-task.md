@@ -1,5 +1,5 @@
 ---
-title: "Durch das Auslösen und Definieren von Ereignissen in einem benutzerdefinierten Task | Microsoft Docs"
+title: "Auslösen und Definieren von Ereignissen in einem benutzerdefinierten Task | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -29,17 +27,16 @@ helpviewer_keywords:
 - SSIS events, runtime
 - IDTSEvents interface
 ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 44e27c1ff000046744aa78479b73cc8ef39d6f2e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4f71ff29b7e029bc52fd6ffe243b4279e6caf08b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>Auslösen und Definieren von Ereignissen in einem benutzerdefinierten Task
   Das [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Laufzeitmodul bietet eine Auflistung von Ereignissen, die Statusinformationen zu dem Fortschritt eines Tasks liefern, während der Task überprüft und ausgeführt wird. Diese Ereignisse werden durch die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents>-Schnittstelle definiert. Sie wird Tasks als Parameter für die <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A>-Methode und die <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A>-Methode bereitgestellt.  
@@ -47,13 +44,13 @@ ms.lasthandoff: 08/03/2017
  Es gibt eine weitere Gruppe von Ereignissen, die in der <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>-Schnittstelle definiert sind und von Seiten des Tasks von <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> ausgelöst werden. Der <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> löst Ereignisse aus, die vor und nach der Validierung und Ausführung auftreten, wohingegen der Task die Ereignisse auslöst, die während der Ausführung und Validierung auftreten.  
   
 ## <a name="creating-custom-events"></a>Erstellen von benutzerdefinierten Ereignissen  
- Entwickler von benutzerdefinierten Tasks können neue, benutzerdefinierte Ereignisse definieren, indem sie eine neue <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> in der überschriebenen Implementierung der <xref:Microsoft.SqlServer.Dts.Runtime.Task.InitializeTask%2A>-Methode erstellen. Nach der <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> ist erstellt, wird er hinzugefügt die **EventInfos** -Auflistung unter Verwendung der <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> Methode. Die Methodensignatur der <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A>-Methode lautet wie folgt:  
+ Entwickler von benutzerdefinierten Tasks können neue, benutzerdefinierte Ereignisse definieren, indem sie eine neue <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> in der überschriebenen Implementierung der <xref:Microsoft.SqlServer.Dts.Runtime.Task.InitializeTask%2A>-Methode erstellen. Nachdem die <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> erstellt wurde, wird sie der **EventInfos**-Auflistung mithilfe der <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A>-Methode hinzugefügt. Die Methodensignatur der <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A>-Methode lautet wie folgt:  
   
  `public void Add(string eventName, string description, bool allowEventHandlers, string[] parameterNames, TypeCode[] parameterTypes, string[] parameterDescriptions);`  
   
  Im folgenden Codebeispiel ist die **InitializeTask**-Methode eines benutzerdefinierten Tasks dargestellt. Es werden zwei benutzerdefinierte Ereignisse erstellt und deren Eigenschaften festgelegt. Die neuen Ereignisse werden dann der <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos>-Auflistung hinzugefügt.  
   
- Das erste benutzerdefinierte Ereignis hat den Ereignisnamen (*eventName*) **OnBeforeIncrement** und die Beschreibung (*description* **Fires after the initial value is updated.** Der nächste Parameter, der **true**-Wert, gibt an, dass dieses Ereignis die Erstellung eines Ereignishandlercontainers zulässt, um das Ereignis zu verarbeiten. Bei dem Ereignishandler handelt es sich um einen Container für die Strukturen in Paketen und Dienste für Tasks, wie andere Container, z. B. Paketcontainer, Sequenzcontainer, For-Schleifencontainer und ForEach-Schleifencontainer. Wenn die *AllowEventHandlers* Parameter ist **"true"**, <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> Objekte für das Ereignis erstellt werden. Alle Parameter, die für das Ereignis definiert wurden, sind nun für den <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> in der Variablenauflistung des <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> verfügbar.  
+ Das erste benutzerdefinierte Ereignis hat den Ereignisnamen (*eventName*) **OnBeforeIncrement** und die Beschreibung (*description* **Fires after the initial value is updated.** Der nächste Parameter, der **true**-Wert, gibt an, dass dieses Ereignis die Erstellung eines Ereignishandlercontainers zulässt, um das Ereignis zu verarbeiten. Bei dem Ereignishandler handelt es sich um einen Container für die Strukturen in Paketen und Dienste für Tasks, wie andere Container, z. B. Paketcontainer, Sequenzcontainer, For-Schleifencontainer und ForEach-Schleifencontainer. Wenn der *allowEventHandlers*-Parameter **true** ist, werden <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>-Objekte für das Ereignis erstellt. Alle Parameter, die für das Ereignis definiert wurden, sind nun für den <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> in der Variablenauflistung des <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> verfügbar.  
   
 ```csharp  
 public override void InitializeTask(Connections connections,  
@@ -127,7 +124,7 @@ Nothing,  bFireOnBeforeIncrement)
 ```  
   
 ## <a name="sample"></a>Beispiel  
- Das folgende Beispiel zeigt eine Aufgabe, die in ein benutzerdefiniertes Ereignis definiert die **InitializeTask** Methode fügt das benutzerdefinierte Ereignis der <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> -Auflistung, und löst dann das benutzerdefinierte Ereignis während seiner **Execute** Methode durch Aufrufen der <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireCustomEvent%2A> Methode.  
+ Im folgenden Beispiel ist ein Task dargestellt, der ein benutzerdefiniertes Ereignis in der **InitializeTask**-Methode definiert, das benutzerdefinierte Ereignis der <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos>-Auflistung hinzufügt und dann das benutzerdefinierte Ereignis während der **Execute**-Methode durch Aufrufen der <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireCustomEvent%2A>-Methode auslöst.  
   
 ```csharp  
 [DtsTask(DisplayName = "CustomEventTask")]  
@@ -200,8 +197,7 @@ Nothing,  bFireOnBeforeIncrement)
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Integrationsservices &#40; SSIS &#41; Ereignishandler](../../../integration-services/integration-services-ssis-event-handlers.md)   
+ [Integration Services-Ereignishandler &#40;SSIS&#41;](../../../integration-services/integration-services-ssis-event-handlers.md)   
  [Hinzufügen eines Ereignishandlers zu einem Paket](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   
-

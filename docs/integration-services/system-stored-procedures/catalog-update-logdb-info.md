@@ -1,30 +1,28 @@
 ---
-title: Catalog.update_logdb_info (SSISDB-Datenbank) | Microsoft Docs
+title: Catalog.update_logdb_info (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/18/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a898be08859230ab873fd8e358b892789aaed043
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fad30ab7de9b608a79a8df9269dd84dabcf47418
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="catalogupdatelogdbinfo-ssisdb-database"></a>Catalog.update_logdb_info (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
-Update der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out-Protokollinformationen.
+Aktualisieren Sie die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Scale Out-Protokollinformationen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,11 +31,11 @@ catalog.update_logdb_info [@server_name = ] server_name, [@connection_string = ]
 ```
 
 ## <a name="arguments"></a>Argumente
-[ @server_name =] *Servername*  
- Der SQLServer für horizontales Skalieren Protokollierung verwendet. Die *Server_name* ist **Nvarchar**.  
+[ @server_name = ] *server_name*  
+ Die für die Scale Out-Protokollierung verwendete SQL Server-Instanz. Der *server_name* ist **nvarchar**.  
 
- [ @connection_string =] *Verbindungszeichenfolge*  
- Die Verbindungszeichenfolge, die für horizontales Skalieren Protokollierung verwendet. Die *Verbindungszeichenfolge* ist **Nvarchar**.
+ [ @connection_string = ] *connection_string*  
+ Die Verbindungszeichenfolge, die für Scale Out-Protokollierung verwendet wird. Der *connection_string* ist **nvarchar**.
 
  ## <a name="return-code-value"></a>Rückgabecodewert  
  0 (Erfolg)  
@@ -52,4 +50,3 @@ catalog.update_logdb_info [@server_name = ] server_name, [@connection_string = ]
   
 -   Mitgliedschaft in der Serverrolle **sysadmin**  
  
-

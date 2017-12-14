@@ -1,5 +1,5 @@
 ---
-title: Dtutil (Hilfsprogramm) | Microsoft Docs
+title: dtutil-Hilfsprogramm | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,17 +27,16 @@ helpviewer_keywords:
 - removing packages
 - relocating packages
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-caps.latest.revision: 114
+caps.latest.revision: "114"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 15315ffd796662bb814060c62bc0fb3872c9190a
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7a5cf2737ac465c5d216a0d9a27a3c3e6e5836e0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="dtutil-utility"></a>dtutil (Hilfsprogramm)
   Das Eingabeaufforderungs-Hilfsprogramm **dtutil** dient zum Verwalten von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen. Mit dem Hilfsprogramm kann ein Paket kopiert, verschoben oder gelöscht und das Vorhandensein eines Pakets überprüft werden. Diese Aktionen können für jedes [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paket ausgeführt werden, das sich an einem der drei folgenden Speicherorte befindet: in einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank, im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketspeicher oder im Dateisystem. Falls das Hilfsprogramm auf ein Paket zugreift, das in **msdb**gespeichert ist, werden Sie möglicherweise zur Eingabe eines Benutzernamens und eines Kennworts aufgefordert. Wenn die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung verwendet, ist sowohl ein Benutzername als auch ein Kennwort erforderlich. Falls der Benutzername fehlt, versucht **dtutil** sich bei [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mit der Windows-Authentifizierung anzumelden. Der Speichertyp des Pakets wird durch die Optionen **/SQL**, **/FILE**und **/DTS** identifiziert.  
@@ -70,18 +68,18 @@ ms.lasthandoff: 08/03/2017
   
  Auf einem 64-Bit-Computer installiert [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] eine 64-Bit-Version des Hilfsprogramms **dtexec** (dtexec.exe) und des Hilfsprogramms **dtutil** (dtutil.exe). Wählen Sie zum Installieren der 32-Bit-Versionen dieser [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Tools während des Setups entweder Clienttools oder [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .  
   
- Standardmäßig wird auf einem 64-Bit-Computer, auf dem sowohl die 64-Bit-Version als auch die 32-Bit-Version eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Befehlszeilen-Hilfsprogramms installiert ist, die 32-Bit-Version an der Eingabeaufforderung ausgeführt. Die 32-Bit-Version wird ausgeführt, da der Verzeichnispfad für die 32-Bit-Version in der PATH-Umgebungsvariablen vor dem Verzeichnispfad für die 64-Bit-Version aufgeführt wird. (Die 32-Bit-Verzeichnispfad ist normalerweise  *\<Laufwerk >*: \Programme Dateien (x86) server\130\dts\binn, während der 64-Bit-Verzeichnispfad  *\<Laufwerk >*: \Programme\Microsoft SQL Server\130\DTS\Binn.)  
+ Standardmäßig wird auf einem 64-Bit-Computer, auf dem sowohl die 64-Bit-Version als auch die 32-Bit-Version eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Befehlszeilen-Hilfsprogramms installiert ist, die 32-Bit-Version an der Eingabeaufforderung ausgeführt. Die 32-Bit-Version wird ausgeführt, da der Verzeichnispfad für die 32-Bit-Version in der PATH-Umgebungsvariablen vor dem Verzeichnispfad für die 64-Bit-Version aufgeführt wird. (Typischerweise ist der 32-Bit-Verzeichnispfad „*\<Laufwerk>*:\Programme(x86)\Microsoft SQL Server\130\DTS\Binn“, während der 64-Bit-Verzeichnispfad „*\<Laufwerk>*:\Programme\Microsoft SQL Server\130\DTS\Binn“ lautet.)  
   
 > [!NOTE]  
 >  Wenn Sie das Hilfsprogramm mithilfe des SQL Server-Agents ausführen, verwendet dieser automatisch die 64-Bit-Version des Hilfsprogramms. Der SQL Server-Agent sucht die richtige ausführbare Datei für das Hilfsprogramm in der Registrierung und nicht in der PATH-Umgebungsvariablen.  
   
  Wenn Sie sicherstellen möchten, dass die 64-Bit-Version des Hilfsprogramms an der Eingabeaufforderung ausgeführt wird, können Sie einen der folgenden Schritte ausführen:  
   
--   Öffnen Sie ein Eingabeaufforderungsfenster, wechseln Sie zum Verzeichnis mit der 64-Bit-Version des Hilfsprogramms *(\<Laufwerk >*: \Programme\Microsoft SQL Server\130\DTS\Binn), und führen Sie das Hilfsprogramm aus diesem Verzeichnis.  
+-   Öffnen Sie eine Eingabeaufforderung, wechseln Sie in das Verzeichnis mit der 64-Bit-Version des Hilfsprogramms („*\<Laufwerk>*:\Programme\Microsoft SQL Server\130\DTS\Binn“), und führen Sie dann das Hilfsprogramm aus diesem Verzeichnis aus.  
   
--   Führen Sie das Hilfsprogramm an der Eingabeaufforderung, indem Sie den vollständigen Pfad eingeben (*\<Laufwerk >*: \Programme\Microsoft SQL Server\130\DTS\Binn) auf die 64-Bit-Version des Hilfsprogramms.  
+-   Führen Sie an der Eingabeaufforderung das Hilfsprogramm aus, indem Sie den vollständigen Pfad („*\<Laufwerk>*:\Programme\Microsoft SQL Server\130\DTS\Binn“) der 64-Bit-Version des Hilfsprogramms eingeben.  
   
--   Ändern Sie die Reihenfolge der Pfade in der PATH-Umgebungsvariablen dauerhaft, indem platzieren den 64-Bit-Pfad (*\<Laufwerk >*: \Programme\Microsoft SQL Server\130\DTS\Binn) vor dem 32-Bit-Pfad (*\<Laufwerk >*: \ Programm Dateien (x86) server\130\dts\binn) in der Variablen.  
+-   Ändern Sie die Reihenfolge der Pfade in der PATH-Umgebungsvariablen dauerhaft, indem Sie den 64-Bit-Pfad („*\<Laufwerk>*:\Programme\Microsoft SQL Server\130\DTS\Binn“) in der Variablen vor dem 32-Bit-Pfad („*\<Laufwerk>*:\ Programme(x86)\Microsoft SQL Server\130\DTS\Binn“) platzieren.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -100,7 +98,7 @@ dtutil /option [value] [/option [value]]...
 |/DestP[assword] *Kennwort*|Gibt das Kennwort an, das mit der Option SQL verwendet wird, um mithilfe der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung eine Verbindung mit der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz herzustellen. Wenn *DESTPASSWORD* in einer Befehlszeile angegeben wird, die die Option *DTSUSER* nicht einschließt, wird ein Fehler generiert.<br /><br /> Hinweis: [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)].|  
 |/DestS[erver] *Serverinstanz*|Gibt den Servernamen an, der für eine beliebige Aktion verwendet wird, in deren Verlauf ein Zielpaket in einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz gespeichert wird. Mit dieser Option wird beim Speichern eines [!INCLUDE[ssIS](../includes/ssis-md.md)] -Pakets ein nicht lokaler oder ein nicht standardmäßiger Server identifiziert. *DESTSERVER* darf nicht in einer Befehlszeile angegeben werden, die keine Aktion einschließt, die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]zugeordnet ist. Geeignete Aktionen, um diese Option anzugeben, wären beispielsweise Aktionen, wie sie durch *SIGN SQL*, *COPY SQL*oder *MOVE SQL* angegeben werden.<br /><br /> Ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanzname kann angegeben werden, indem dem Servernamen ein umgekehrter Schrägstrich und der Instanzname hinzugefügt wird.|  
 |/DestU[ser] *Benutzername*|Gibt den Benutzernamen an, der mit den Optionen *SIGN SQL*, *COPY SQL*und *MOVE SQL* verwendet wird, um eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] herzustellen, die die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung verwendet. *DESTUSER* darf nicht in einer Befehlszeile angegeben werden, die die Optionen *SIGN SQL*, *COPY SQL*oder *MOVE SQL* nicht enthält.|  
-|/Dump *Prozess-ID*|(Optional) Veranlasst den angegebenen Prozess, entweder das Hilfsprogramm **dtexec** oder den Prozess **dtsDebugHost.exe** , anzuhalten und die Debugdumpdateien „.mdmp“ und „.tmp“ zu erstellen.<br /><br /> Hinweis: Um die Option **/Dump**verwenden zu können, muss Ihnen das Benutzerrecht für Debugprogramme (SeDebugPrivilege) zugewiesen sein.<br /><br /> Verwenden Sie den Windows Task-Manager, um die *Prozess-ID* für den Prozess zu suchen, den Sie anhalten möchten.<br /><br /> Standardmäßig [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] speichert die debugdumpdateien im Ordner  *\<Laufwerk >*: \Programme\Microsoft SQL Server\130\Shared\ErrorDumps.<br /><br /> Weitere Informationen zum **dtexec** -Hilfsprogramm und zum **dtsDebugHost.exe** -Prozess finden Sie unter [dtexec-Hilfsprogramm](../integration-services/packages/dtexec-utility.md) and [Erstellen, Bereitstellen und Debuggen von benutzerdefinierten Objekten](../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).<br /><br /> Weitere Informationen zum Debuggen von Dumpdateien finden Sie unter [Generieren von Dumpdateien für die Paketausführung](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).<br /><br /> Hinweis: Debugdumpdateien können vertrauliche Informationen enthalten. Verwenden Sie eine Zugriffssteuerungsliste, um den Zugriff auf die Dateien einzuschränken oder die Dateien in einen Ordner mit eingeschränktem Zugriff zu kopieren.|  
+|/Dump *Prozess-ID*|(Optional) Veranlasst den angegebenen Prozess, entweder das Hilfsprogramm **dtexec** oder den Prozess **dtsDebugHost.exe** , anzuhalten und die Debugdumpdateien „.mdmp“ und „.tmp“ zu erstellen.<br /><br /> Hinweis: Um die Option **/Dump**verwenden zu können, muss Ihnen das Benutzerrecht für Debugprogramme (SeDebugPrivilege) zugewiesen sein.<br /><br /> Verwenden Sie den Windows Task-Manager, um die *Prozess-ID* für den Prozess zu suchen, den Sie anhalten möchten.<br /><br /> Standardmäßig speichert [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] die Debugdumpdateien im Ordner „*\<Laufwerk>*:\Programme\Microsoft SQL Server\130\Shared\ErrorDumps“.<br /><br /> Weitere Informationen zum **dtexec** -Hilfsprogramm und zum **dtsDebugHost.exe** -Prozess finden Sie unter [dtexec-Hilfsprogramm](../integration-services/packages/dtexec-utility.md) and [Erstellen, Bereitstellen und Debuggen von benutzerdefinierten Objekten](../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).<br /><br /> Weitere Informationen zum Debuggen von Dumpdateien finden Sie unter [Generieren von Dumpdateien für die Paketausführung](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).<br /><br /> Hinweis: Debugdumpdateien können vertrauliche Informationen enthalten. Verwenden Sie eine Zugriffssteuerungsliste, um den Zugriff auf die Dateien einzuschränken oder die Dateien in einen Ordner mit eingeschränktem Zugriff zu kopieren.|  
 |/DT[S] *filespec*|Gibt an, dass sich das [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paket, auf das sich der Vorgang bezieht, im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketspeicher befindet. Das *filespec* -Argument muss den Ordnerpfad beginnend mit dem Stamm des [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketspeichers enthalten. Standardmäßig lauten die Namen der Stammordner in der Konfigurationsdatei "MSDB" und "Dateisystem". Pfade, die ein Leerzeichen enthalten, müssen in doppelte Anführungszeichen gesetzt werden.<br /><br /> Wenn die Option DT[S] in derselben Befehlszeile wie eine der folgenden Optionen angegeben wird, wird der Fehler DTEXEC_DTEXECERROR zurückgegeben:<br /><br /> **FILE**<br /><br /> **location**<br /><br /> **SOURCEUSER**<br /><br /> **SOURCEPASSWORD**<br /><br /> **SOURCESERVER**|  
 |/En[crypt] *{SQL &#124; FILE}; Path;ProtectionLevel[;password]*|(Optional). Verschlüsselt das geladene Paket mit der angegebenen Schutzebene und dem angegebenen Kennwort und speichert es an dem in *Path*angegebenen Speicherort. Der Wert für *ProtectionLevel* bestimmt, ob ein Kennwort erforderlich ist.<br /><br /> *SQL* – „Path“ ist der Name des Zielpakets.<br /><br /> *FILE* – „Path“ ist der vollqualifizierte Pfad und Dateiname für das Paket.<br /><br /> *DTS* – Diese Option wird zurzeit nicht unterstützt.<br /><br /> *ProtectionLevel* -Optionen:<br /><br /> Ebene 0: Vertrauliche Informationen werden entfernt.<br /><br /> Ebene 1: Vertrauliche Informationen werden mithilfe der lokalen Benutzeranmeldeinformationen verschlüsselt.<br /><br /> Ebene 2: Vertrauliche Informationen werden mithilfe des erforderlichen Kennworts verschlüsselt.<br /><br /> Ebene 3: Das Paket wird mithilfe des erforderlichen Kennworts verschlüsselt.<br /><br /> Ebene 4: Das Paket wird mithilfe der lokalen Benutzeranmeldeinformationen verschlüsselt.<br /><br /> Ebene 5: Für das Paket wird die Speicherverschlüsselung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet.|  
 |/Ex[ists]|(Optional). Wird verwendet, um zu bestimmen, ob ein Paket vorhanden ist. **dtutil** versucht, das Paket zu finden, dass entweder von der Option *SQL*, *DTS* oder *FILE* angegeben wurde. Falls **dtutil** das angegebene Paket nicht finden kann, wird der Fehler DTEXEC_DTEXECERROR zurückgegeben.|  
@@ -284,4 +282,3 @@ dtutil /FILE PackageToEncrypt.dtsx /ENCRYPT file;EncryptedPackage.dtsx;3;EncPswd
 [Ausführen von Integration Services-Paketen (SSIS)](../integration-services/packages/run-integration-services-ssis-packages.md)  
   
   
-

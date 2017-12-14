@@ -2,9 +2,12 @@
 title: Hash Warning-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d8743fe8a2905eeff25a806d08e6dd7e076c3c60
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0e96888456d728f0ac572e526fdc00218d6e3b7e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning-Ereignisklasse
-  Mit der Hash Warning-Ereignisklasse können Sie überwachen, ob während eines Hashvorgangs eine Hashrekursion oder eine Beendigung des Hashings (Hashabbruch) aufgetreten ist.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Mit der Hash Warning-Ereignisklasse können Sie überwachen, ob während eines Hashvorgangs eine Hashrekursion oder eine Beendigung des Hashings (Hashabbruch) aufgetreten ist.  
   
  Die Hashrekursion tritt auf, wenn die Eingabe für den verfügbaren Arbeitsspeicher zu groß ist und deshalb auf mehrere Partitionen verteilt wird, die separat verarbeitet werden. Sollten diese Partitionen für den Arbeitsspeicher immer noch zu groß sein, werden sie in Unterpartitionen aufgeteilt, die dann ebenfalls separat verarbeitet werden. Dieser Vorgang wird so lange fortgesetzt, bis jede Partition in den verfügbaren Arbeitsspeicher passt oder die maximale Rekursionsebene erreicht ist (die in der IntegerData-Datenspalte angezeigt wird).  
   

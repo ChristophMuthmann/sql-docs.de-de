@@ -2,9 +2,12 @@
 title: Lock:Timeout (Ereignisklasse) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: db75a1766177f5aa96600249289f1eb97dd9c19c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2523de44f225c1429453362067c7a859e6a17b56
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="locktimeout-event-class"></a>Lock:Timeout (Ereignisklasse)
-  Die Lock:Timeout-Ereignisklasse gibt an, dass für die Anforderung einer Sperre auf einer Ressource, wie beispielsweise eine Seite, ein Timeout eingetreten ist, da eine andere Transaktion eine blockierende Sperre für die angeforderte Ressource aufrechterhält. Das Timeout wird durch die @@LOCK_TIMEOUT-Systemfunktion ermittelt und kann durch die SET LOCK_TIMEOUT-Anweisung festgelegt werden.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Die Lock:Timeout-Ereignisklasse gibt an, dass für die Anforderung einer Sperre auf einer Ressource, wie beispielsweise eine Seite, ein Timeout eingetreten ist, da eine andere Transaktion eine blockierende Sperre für die angeforderte Ressource aufrechterhält. Das Timeout wird durch die @@LOCK_TIMEOUT-Systemfunktion ermittelt und kann durch die SET LOCK_TIMEOUT-Anweisung festgelegt werden.  
   
  Die Lock:Timeout-Ereignisklasse kann dazu verwendet werden, Bedingungen zu überwachen, die zu Timeouts führen. Diese Informationen sind nützlich, wenn ermittelt werden soll, ob Timeouts eine Auswirkung auf die Leistung der Anwendung haben und welche Objekte daran beteiligt sind. Sie können den Anwendungscode überprüfen, von dem diese Objekte geändert werden, um festzustellen, ob Änderungen vorgenommen werden können, die Timeouts minimieren.  
   

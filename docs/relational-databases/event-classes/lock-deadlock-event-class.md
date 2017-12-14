@@ -2,9 +2,12 @@
 title: Lock:Deadlock (Ereignisklasse) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b9ca6119d3c4972e4b9edb758c62891da536c24d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1236806dff15aefb7f1ce9b2388c2e63b8f81e08
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lockdeadlock-event-class"></a>Lock:Deadlock (Ereignisklasse)
-  Nach dem abgebrochenen Versuch, eine Sperre abzurufen, wird die Lock:Deadlock-Ereignisklasse erstellt, weil dieser Versuch Teil einer Deadlocksituation war und als Deadlockopfer ausgewählt wurde.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Nach dem abgebrochenen Versuch, eine Sperre abzurufen, wird die Lock:Deadlock-Ereignisklasse erstellt, weil dieser Versuch Teil einer Deadlocksituation war und als Deadlockopfer ausgewählt wurde.  
   
  Mit der Ereignisklasse Lock:Deadlock können Sie überwachen, ob Deadlocks auftreten und welche Objekte beteiligt sind. Mithife dieser Informationen können Sie ermitteln, ob die Deadlocks die Leistung Ihrer Anwendung deutlich beeinträchtigen oder nicht. Anschließend können Sie den Anwendungscode daraufhin untersuchen, ob Änderungen möglich sind, mit denen das Auftreten von Deadlocks minimiert wird.  
   

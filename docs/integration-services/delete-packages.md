@@ -1,5 +1,5 @@
 ---
-title: "Löschen von Paketen | Microsoft Docs"
+title: "Löschen von Paketen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 85b7d512-0ea7-47f5-8937-b1af6592b5b5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 70b39c648fc2d3ddd13db93d3923880edcf56675
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2850e4cff0eb342e04c9770aefdf2d9914a941cb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="delete-packages"></a>Löschen von Paketen
   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]können Sie Pakete löschen, die im Dateisystem gespeichert sind. Wenn Sie ein Paket löschen, wird es dauerhaft gelöscht und kann nicht in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt wiederhergestellt werden.  
@@ -40,4 +38,3 @@ ms.lasthandoff: 08/03/2017
 3.  Klicken Sie auf **OK** , um den Löschvorgang zu bestätigen, oder klicken Sie auf **Abbrechen** , um das Paket beizubehalten.  
   
   
-

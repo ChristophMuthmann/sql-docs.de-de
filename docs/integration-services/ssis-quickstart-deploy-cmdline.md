@@ -1,5 +1,5 @@
 ---
-title: Bereitstellen ein SSIS-Projekts von der Befehlszeile aus | Microsoft Docs
+title: "Bereitstellen eines SSIS-Projekts über die Eingabeaufforderung | Microsoft-Dokumentation"
 ms.date: 09/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -8,65 +8,62 @@ ms.service:
 ms.component: integration-services
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: 0f1c7733f0ce6b132c209961a1fd12da80cbd282
-ms.contentlocale: de-de
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 6c3e7f7e3fa870c7aa5b30a5a4a324f0cef7f6ba
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Bereitstellen eines SSIS-Projekts von der Befehlszeile aus mit ISDeploymentWizard.exe
-Dieser Schnellstart-Lernprogramm veranschaulicht, wie ein SSIS-Projekt, von der Befehlszeile aus bereitstellen, indem Sie mit dem Integration Services-Bereitstellungs-Assistenten `ISDeploymentWizard.exe`.
+# <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Bereitstellen eines SSIS-Projekts über die Eingabeaufforderung mit ISDeploymentWizard.exe
+Dieses Schnellstarttutorial zeigt, wie Sie ein SSIS-Projekt über die Eingabeaufforderung bereitstellen, indem Sie den Bereitstellungs-Assistenten für Integration Services, `ISDeploymentWizard.exe`, ausführen.
 
-Weitere Informationen zu den Bereitstellungs-Assistenten von Integration Services, finden Sie unter [Integration Services Deployment Wizard](packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).
+Weitere Informationen zum Bereitstellungs-Assistenten für Integration Services finden Sie unter [Bereitstellungs-Assistent für Integration Services](packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).
 
-## <a name="start-the-integration-services-deployment-wizard"></a>Starten Sie den Bereitstellungs-Assistenten von Integration Services
+## <a name="start-the-integration-services-deployment-wizard"></a>Starten des Bereitstellungs-Assistenten für Integration Services
 1. Öffnen Sie ein Eingabeaufforderungsfenster.
 
-2. Führen Sie `ISDeploymentWizard.exe` aus. Integration Services-Bereitstellungs-Assistent wird geöffnet.
+2. Führen Sie `ISDeploymentWizard.exe` aus. Der Bereitstellungs-Assistent für Integration Services wird geöffnet.
 
-    Falls der Ordner, die enthält `ISDeploymentWizard.exe` befindet sich nicht in Ihrer `path` Umgebungsvariablen müssen unter Umständen verwendet die `cd` Befehl aus, um in das Verzeichnis zu ändern. Für SQL Server 2017 dieser Ordner ist in der Regel `C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn`.
+    Wenn sich der Ordner, der `ISDeploymentWizard.exe` enthält, nicht in Ihrer Umgebungsvariable `path` befindet, müssen Sie möglicherweise mit dem Befehl `cd` in das Verzeichnis wechseln. Bei SQL Server 2017 lautet dieser Ordner in der Regel `C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn`.
 
 ## <a name="deploy-a-project-with-the-wizard"></a>Bereitstellen eines Projekts mit dem Assistenten
-1. Auf der **Einführung** Seite des Assistenten, überprüfen Sie in der Einführung. Klicken Sie auf **Weiter** So öffnen die **Quelle auswählen** Seite.
+1. Lesen Sie auf der Seite **Einführung** des Assistenten die Einführung. Klicken Sie auf **Weiter**, um die Seite **Quelle auswählen** zu öffnen.
 
-2. Auf der **Quelle auswählen** Seite, wählen Sie die vorhandene SSIS-Projekt bereitstellen.
+2. Wählen Sie auf der Seite **Quelle auswählen** das vorhandene SSIS-Projekt aus, das bereitgestellt werden soll.
     -   Um eine von Ihnen erstellte Projektbereitstellungsdatei bereitzustellen, wählen Sie **Projektbereitstellungsdatei** aus, und geben Sie den Pfad für die ISPAC-Datei ein.
-    -   Wählen Sie zum Bereitstellen eines Projekts, die sich in einem SSIS-Katalog befindet, **Integration Services-Katalog**, und geben Sie dann den Servernamen und den Pfad zum Projekt im Katalog.
+    -   Um ein Projekt bereitzustellen, das sich in einem SSIS-Katalog befindet, wählen Sie **Integration Services-Katalog** aus und geben dann den Servernamen und den Pfad zum Projekt im Katalog ein.
     Klicken Sie auf **Weiter** , um die Seite **Ziel auswählen** zu sehen.
   
-3.  Auf der **Ziel auswählen** Seite, wählen Sie das Ziel für das Projekt.
-    -   Geben Sie den vollqualifizierten Servernamen ein. Wenn der Zielserver eine Azure SQL-Datenbankserver ist, wird der Name im folgenden Format: `<server_name>.database.windows.net`.
-    -   Klicken Sie dann auf **Durchsuchen** um den Zielordner im SSISDB auszuwählen.
-    Klicken Sie auf **Weiter** So öffnen die **Überprüfung** Seite.  
+3.  Wählen Sie auf der Seite **Ziel auswählen** das Ziel für das Projekt aus.
+    -   Geben Sie den vollqualifizierten Servernamen ein. Wenn es sich dem Zielserver um einen Azure SQL-Datenbankserver handelt, ist der Name im Format `<server_name>.database.windows.net`.
+    -   Klicken Sie dann auf **Durchsuchen**, um den Zielordner in SSISDB auszuwählen.
+    Klicken Sie auf **Weiter**, um die Seite **Überprüfen** zu öffnen.  
   
-4.  Auf der **überprüfen** überprüfen Sie die Einstellungen, die Sie ausgewählt haben.
+4.  Überprüfen Sie auf der Seite **Überprüfen** die Einstellungen, die Sie ausgewählt haben.
     -   Sie können Ihre Auswahl ändern, indem Sie auf **Zurück**klicken oder indem Sie auf einen der Schritte im linken Bereich klicken.
     -   Klicken Sie auf **Bereitstellen** , um den Bereitstellungsprozess zu starten.
   
-5.  Nachdem der Bereitstellungsvorgang abgeschlossen ist, ist die **Ergebnisse** -Seite wird geöffnet. Diese Seite zeigt an, ob die einzelnen Aktionen erfolgreich ausgeführt wurden oder ob Fehler aufgetreten sind.
-    -   Wenn der Vorgang fehlgeschlagen ist, klicken Sie auf **Fehler** in der **Ergebnis** Spalte um eine Erklärung des Fehlers anzuzeigen.
-    -   Klicken Sie optional auf **Bericht speichern...**  um die Ergebnisse als XML-Datei zu speichern.
-    -   Klicken Sie auf **schließen** um den Assistenten zu beenden.
+5.  Nachdem der Bereitstellungsvorgang abgeschlossen ist, wird die Seite **Ergebnisse** geöffnet. Diese Seite zeigt an, ob die einzelnen Aktionen erfolgreich ausgeführt wurden oder ob Fehler aufgetreten sind.
+    -   Ist die Aktion fehlerhaft, klicken Sie in der Spalte **Ergebnis** auf **Fehler**, um eine Erläuterung zum Fehler anzuzeigen.
+    -   Klicken Sie auf **Bericht speichern...**, um die Ergebnisse in einer XML-Datei zu speichern.
+    -   Klicken Sie auf **Schließen**, um den Assistenten zu beenden.
 
 ## <a name="next-steps"></a>Nächste Schritte
-- Erwägen Sie andere Verfahren zum Bereitstellen eines Pakets aus.
-    - [Bereitstellen eines SSIS-Pakets mit SSMS](./ssis-quickstart-deploy-ssms.md)
-    - [Bereitstellen eines SSIS-Pakets mit Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)
-    - [Bereitstellen eines SSIS-Pakets mit Transact-SQL (Visual Studio-Code)](ssis-quickstart-deploy-tsql-vscode.md)
-    - [Bereitstellen eines SSIS-Pakets mit PowerShell](ssis-quickstart-deploy-powershell.md)
-    - [Bereitstellen eines SSIS-Pakets mit c#](./ssis-quickstart-deploy-dotnet.md) 
-- Führen Sie ein bereitgestelltes Paket. Um ein Paket auszuführen, können Sie über mehrere Tools und Sprachen auswählen. Weitere Informationen finden Sie unter den folgenden Artikeln:
-    - [Führen Sie ein SSIS-Paket mit SSMS](./ssis-quickstart-run-ssms.md)
-    - [Führen Sie ein SSIS-Paket mit Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
-    - [Führen Sie ein SSIS-Paket mit Transact-SQL (Visual Studio-Code)](ssis-quickstart-run-tsql-vscode.md)
-    - [Führen Sie ein SSIS-Paket von der Befehlszeile aus](./ssis-quickstart-run-cmdline.md)
-    - [Führen Sie ein SSIS-Paket mit PowerShell](ssis-quickstart-run-powershell.md)
-    - [Führen Sie ein SSIS-Paket mit c#](./ssis-quickstart-run-dotnet.md) 
-
+- Erfahren Sie mehr über weitere Möglichkeiten, ein Paket bereitzustellen.
+    - [Deploy an SSIS package with SSMS (Bereitstellen eines SSIS-Projekts mit SSMS)](./ssis-quickstart-deploy-ssms.md)
+    - [Deploy an SSIS package with Transact-SQL (SSMS) (Bereitstellen eines SSIS-Pakets mit Transact-SQL [SSMS])](./ssis-quickstart-deploy-tsql-ssms.md)
+    - [Deploy an SSIS package with Transact-SQL (VS Code) (Bereitstellen eines SSIS-Pakets mit Transact-SQL [VS Code])](ssis-quickstart-deploy-tsql-vscode.md)
+    - [Deploy an SSIS package with PowerShell (Bereitstellen eines SSIS-Pakets mit PowerShell)](ssis-quickstart-deploy-powershell.md)
+    - [Deploy an SSIS package with C# (Bereitstellen eines SSIS-Pakets mit C#)](./ssis-quickstart-deploy-dotnet.md) 
+- Führen Sie ein bereitgestelltes Paket aus. Für die Ausführung eines Pakets können Sie aus mehreren Tools und Sprachen auswählen. Weitere Informationen finden Sie in den folgenden Artikeln:
+    - [Run an SSIS package with SSMS (Ausführen eines SSIS-Pakets mit SSMS)](./ssis-quickstart-run-ssms.md)
+    - [Run an SSIS package with Transact-SQL (SSMS) (Ausführen eines SSIS-Pakets mit Transact-SQL [SSMS])](./ssis-quickstart-run-tsql-ssms.md)
+    - [Run an SSIS package with Transact-SQL (VS Code) (Ausführen eines SSIS-Pakets mit Transact-SQL [VS Code])](ssis-quickstart-run-tsql-vscode.md)
+    - [Run an SSIS package from the command prompt (Ausführen eines SSIS-Pakets über die Eingabeaufforderung)](./ssis-quickstart-run-cmdline.md)
+    - [Run an SSIS package with PowerShell (Ausführen eines SSIS-Pakets mit PowerShell)](ssis-quickstart-run-powershell.md)
+    - [Run an SSIS package with C# (Ausführen eines SSIS-Pakets mit C#)](./ssis-quickstart-run-dotnet.md) 

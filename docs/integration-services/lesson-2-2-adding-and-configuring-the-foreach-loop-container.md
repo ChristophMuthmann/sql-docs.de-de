@@ -1,5 +1,5 @@
 ---
-title: "Schritt 2: Hinzufügen und konfigurieren den ForEach-Schleifencontainer | Microsoft Docs"
+title: "Schritt 2: Hinzufügen und Konfigurieren des Foreach-Schleifencontainers | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
-ms.openlocfilehash: 315933379f0ec61453fa0fd783686f9446a977c0
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4c5183131893849feca62582a63a0d2c25963631
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>Lektion 2 x 2-hinzufügen und konfigurieren den foreach-Schleifen-Container
+# <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>Lektion 2-2 – Hinzufügen und Konfigurieren des Foreach-Schleifencontainers
 In dieser Aufgabe fügen Sie die Möglichkeit zum Schleifendurchlauf für einen Ordner von Flatfiles hinzu und wenden die auch in Lektion 1 verwendete Datenflusstransformation auf jede dieser Flatfiles an. Dies geschieht durch das Hinzufügen eines Foreach-Schleifencontainers zur Ablaufsteuerung und dessen Konfigurierung.  
   
 Für den von Ihnen hinzugefügten Foreach-Schleifencontainer muss es möglich sein, eine Verbindung mit jeder Flatfile im Ordner herzustellen. Da alle Dateien im Ordner das gleiche Format aufweisen, kann vom Foreach-Schleifencontainer der gleiche Flatfile-Verbindungs-Manager zum Herstellen einer Verbindung mit jeder dieser Dateien verwendet werden. Der vom Container verwendete Flatfile-Verbindungs-Manager ist der gleiche Flatfile-Verbindungs-Manager, den Sie in Lektion 1 erstellt haben.  
@@ -43,7 +40,7 @@ Die Vorgänge in diesem Task verdeutlichen, wie Sie den Foreach-Schleifencontain
 Nachdem Sie diese Änderungen am Paket vorgenommen haben, iteriert der Foreach-Schleifencontainer beim Ausführen des Pakets durch die Auflistung der Dateien im Ordner Sample Data. Jedes Mal, wenn eine mit den Kriterien übereinstimmende Datei gefunden wird, wird die benutzerdefinierte Variable vom Foreach-Schleifencontainer mit dem Dateinamen aufgefüllt, die benutzerdefinierte Variable der **ConnectionString** -Eigenschaft des Flatfile-Verbindungs-Managers für Sample Currency Data zugeordnet und der Datenfluss anschließend gegen diese Datei ausgeführt. Dadurch wird in jeder Iteration der Foreach-Schleife vom Datenflusstask eine andere Flatfile verarbeitet.  
   
 > [!NOTE]  
-> Da [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] trennt die ablaufsteuerung vom Datenfluss, keine der Schleifen, die Sie der ablaufsteuerung hinzufügen, ist keine Änderung an den Datenfluss erforderlich. Deshalb muss der von Ihnen in Lektion 1 erstellte Datenfluss nicht geändert werden.  
+> Weil [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] die Ablaufsteuerung vom Datenfluss trennt, erfordert keine der Schleifen, die Sie der Ablaufsteuerung hinzufügen, Änderungen am Datenfluss. Deshalb muss der von Ihnen in Lektion 1 erstellte Datenfluss nicht geändert werden.  
   
 ### <a name="to-add-a-foreach-loop-container"></a>So fügen Sie einen Foreach-Schleifencontainer hinzu  
   
@@ -71,11 +68,11 @@ Nachdem Sie diese Änderungen am Paket vorgenommen haben, iteriert der Foreach-S
   
     Die Beispieldaten sind in den [!INCLUDE[ssIS](../includes/ssis-md.md)] -Lektionspaketen enthalten. Um die Beispieldaten und die Lektionspakete herunterzuladen, gehen Sie wie folgt vor.  
   
-    1.  Navigieren Sie zu [Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=275027). 
+    1.  Klicken Sie [hier](http://go.microsoft.com/fwlink/?LinkId=275027)aus. 
   
     2.  Klicken Sie auf die Registerkarte **DOWNLOADS** .  
   
-    3.  Klicken Sie auf den Link, um die [SQL2012. Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip](http://msftisprodsamples.codeplex.com/downloads/get/596031) Datei.  
+    3.  Klicken Sie auf den Link für die Datei [SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip](http://msftisprodsamples.codeplex.com/downloads/get/596031).  
   
 6.  Geben Sie im Feld **Dateien** **Currency_\*.txt** ein.  
   
@@ -83,7 +80,7 @@ Nachdem Sie diese Änderungen am Paket vorgenommen haben, iteriert der Foreach-S
   
 1.  Klicken Sie auf **Variablenzuordnungen**.  
   
-2.  Auf der **Variablenzuordnungen** Seite in der **Variable** Spalte, klicken Sie auf die leere Zelle, und wählen Sie  **\<neue Variable… >**.  
+2.  Klicken Sie auf der Seite **Variablenzuordnungen** in der Spalte **Variable** auf die leere Zelle, und wählen Sie **\<Neue Variable…>** aus.  
   
 3.  Geben Sie im Dialogfeld **Variable hinzufügen** für **Name** **varFileName**ein.  
   
@@ -99,7 +96,7 @@ Nachdem Sie diese Änderungen am Paket vorgenommen haben, iteriert der Foreach-S
 -   Ziehen Sie den Datenflusstask **Extract Sample Currency Data** (Beispielwährungsdaten extrahieren) in Foreach-Schleifencontainer, der jetzt **Foreach File in Folder**(Foreach-Datei in Ordner) heißt.  
   
 ## <a name="next-lesson-task"></a>Aufgabe in der nächsten Lektion  
-[Schritt 3: Ändern der Flat File Connection Manager](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+[Schritt 3: Ändern des Flatfile-Verbindungs-Managers](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>Siehe auch  
 [Konfigurieren eines Foreach-Schleifencontainers](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
@@ -107,4 +104,3 @@ Nachdem Sie diese Änderungen am Paket vorgenommen haben, iteriert der Foreach-S
   
   
   
-

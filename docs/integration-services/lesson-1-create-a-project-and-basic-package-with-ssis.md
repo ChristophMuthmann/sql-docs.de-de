@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 1: Erstellen Sie ein Projekt und ein einfaches Paket mit SSIS | Microsoft Docs'
+title: 'Lektion 1: Erstellen eines Projekts und Basispakets mit SSIS | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 0839d5dfbcb033a9a0d466ce9b87ecc738b15250
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 58a71c4ef573925218061d5796a56028d82d042b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lesson 1: Create a Project and Basic Package with SSIS
 
- > Inhalt im Zusammenhang mit früheren Versionen von SQL Server, finden Sie unter [Lektion 1: Erstellen des Projekts und Basispakets](https://msdn.microsoft.com/en-US/library/ms170419(SQL.120).aspx).
+ > Inhalte im Zusammenhang mit früheren Versionen von SQL Server finden Sie unter [Lektion 1: Erstellen des Projekts und Basispakets](https://msdn.microsoft.com/en-US/library/ms170419(SQL.120).aspx).
 
 In dieser Lektion erstellen Sie ein einfaches ETL-Paket, durch das Daten aus einer einzelnen Flatfilequelle extrahiert, Daten mithilfe zweier Transformationskomponenten für die Suche transformiert und diese Daten in die **FactCurrency** -Faktentabelle in **AdventureWorksDW2012**geschrieben werden. Als Teil dieser Lektion lernen Sie das Erstellen neuer Pakete, das Hinzufügen und Konfigurieren von Datenquellen- und Datenzielverbindungen sowie das Arbeiten mit neuen Ablaufsteuerungs- und Datenflusskomponenten.  
   
@@ -86,17 +83,17 @@ Diese Lektion enthält die folgenden Aufgaben:
   
 -   [Schritt 1: Erstellen eines neuen Integration Services-Projekts](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [Schritt 2: Hinzufügen und konfigurieren ein Flat File Connection Manager](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [Schritt 2: Hinzufügen und Konfigurieren eines Verbindungs-Managers für Flatfiles](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
--   [Schritt 3: Hinzufügen und konfigurieren einen OLE DB-Verbindungs-Manager](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+-   [Schritt 3: Hinzufügen und Konfigurieren eines OLE DB-Verbindungs-Managers](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
 -   [Schritt 4: Hinzufügen eines Datenflusstasks zum Paket](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
 -   [Schritt 5: Hinzufügen und Konfigurieren der Flatfilequelle](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
--   [Schritt 6: Hinzufügen und konfigurieren die Transformationen für Suche](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+-   [Schritt 6: Hinzufügen und Konfigurieren von Suchtransformationen](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
--   [Schritt 7: Hinzufügen und Konfigurieren des OLE DB-Zieles](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+-   [Schritt 7: Hinzufügen und Konfigurieren des OLE DB-Ziels](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
 -   [Schritt 8: Vereinfachen des Layouts des Lektion 1-Pakets](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
@@ -105,4 +102,3 @@ Diese Lektion enthält die folgenden Aufgaben:
 ## <a name="start-the-lesson"></a>Lektion beginnen  
 [Schritt 1: Erstellen eines neuen Integration Services-Projekts](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   
-

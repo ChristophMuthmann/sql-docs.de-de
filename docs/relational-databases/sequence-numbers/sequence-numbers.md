@@ -2,9 +2,12 @@
 title: Sequenznummern | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: sequence-numbers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f9ea8bee30f70c215c6ea73caba5d44dff37aa22
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e2d9ff3876144ce984c29e804016ec9a69bbd38b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sequence-numbers"></a>Sequenznummern
-  Als Sequenz wird ein benutzerdefiniertes schemagebundenes Objekt bezeichnet, das eine Sequenz numerischer Werte anhand der Spezifikation generiert, mit der die Sequenz erstellt wurde. Die Sequenz von numerischen Werten wird in aufsteigender oder absteigender Reihenfolge in einem definierten Intervall generiert, und je nach Anforderung wird ein Zyklus (Wiederholungen) ausgeführt. Sequenzen werden anders als Identitätsspalten keinen Tabellen zugeordnet. Eine Anwendung verweist auf ein Sequenzobjekt, um den nächsten Wert zu empfangen. Die Beziehung zwischen Sequenzen und Tabellen wird von der Anwendung gesteuert. Benutzeranwendungen können auf ein Sequenzobjekt verweisen und die Werteschlüssel in mehreren Zeilen und Tabellen koordinieren.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Als Sequenz wird ein benutzerdefiniertes schemagebundenes Objekt bezeichnet, das eine Sequenz numerischer Werte anhand der Spezifikation generiert, mit der die Sequenz erstellt wurde. Die Sequenz von numerischen Werten wird in aufsteigender oder absteigender Reihenfolge in einem definierten Intervall generiert, und je nach Anforderung wird ein Zyklus (Wiederholungen) ausgeführt. Sequenzen werden anders als Identitätsspalten keinen Tabellen zugeordnet. Eine Anwendung verweist auf ein Sequenzobjekt, um den nächsten Wert zu empfangen. Die Beziehung zwischen Sequenzen und Tabellen wird von der Anwendung gesteuert. Benutzeranwendungen können auf ein Sequenzobjekt verweisen und die Werteschlüssel in mehreren Zeilen und Tabellen koordinieren.  
   
  Eine Sequenz wird unabhängig von den Tabellen mithilfe der **CREATE SEQUENCE** -Anweisung erstellt. Mithilfe von Optionen können Sie das Inkrement, Maximal- und Minimalwerte, den Anfangspunkt, die automatische Neustartfunktion sowie das Zwischenspeichern konfigurieren, um die Leistung zu verbessern. Weitere Informationen zu den Optionen finden Sie unter [CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md).  
   

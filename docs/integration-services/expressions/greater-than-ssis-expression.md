@@ -1,5 +1,5 @@
 ---
-title: "&gt;(Größer als) (SSIS-Ausdruck) | Microsoft Docs"
+title: "&gt; (Größer als) (SSIS-Ausdruck) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - greater than operator (>)
 - '> (greater than operator)'
 ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 79a0d985349cfbb950e5eab2c32c40a5ef71c173
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c584ec6710548ac0abfb065c39bafa4fb634099f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="gt-greater-than-ssis-expression"></a>&gt;(Größer als) (SSIS-Ausdruck)
+# <a name="gt-greater-than-ssis-expression"></a>&gt; (Größer als) (SSIS-Ausdruck)
   Führt einen Vergleich aus, um zu ermitteln, ob der erste Ausdruck größer ist als der zweite. Die Ausdrucksauswertung konvertiert viele Datentypen automatisch vor dem Vergleich.  
   
 > [!NOTE]  
@@ -108,12 +106,11 @@ ListPrice > 500
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [&#60; &#40; Kleiner als &#41; &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/less-than-ssis-expression.md)   
- [&#62; = &#40; Größer als oder gleich &#41; &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   
- [&#60; = &#40; Kleiner als oder gleich &#41; &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   
- [== &#40; Gleicher &#41; &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/equal-ssis-expression.md)   
- [Operatorrangfolge und Assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Operatoren &#40; SSIS-Ausdruck &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+ [&#60; &#40;Kleiner als&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/less-than-ssis-expression.md)   
+ [&#62;= &#40;Größer oder gleich&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   
+ [&#60;= &#40;Kleiner oder gleich&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   
+ [== &#40;Gleich, SSIS-Ausdruck&#41;](../../integration-services/expressions/equal-ssis-expression.md)   
+ [Operatorenrangfolge und -assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Operatoren &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

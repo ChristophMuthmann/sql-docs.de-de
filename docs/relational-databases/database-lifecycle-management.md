@@ -2,9 +2,12 @@
 title: Datenbank-Lebenszyklusverwaltung | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -34,14 +37,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ab6e7d5d5876bfb5b05599f31e67473231f741c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a13f1130c7bd9deb72c07af66860c20c140eba7e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-lifecycle-management"></a>Datenbank-Lebenszyklusverwaltung
-  Die Datenbank-Lebenszyklusverwaltung (Database Lifecycle Management, DLM) ist ein auf Richtlinien basierendes Konzept zur Verwaltung von Datenbanken und Datenbeständen. DLM ist kein Produkt, sondern ein umfassender Ansatz zur Verwaltung des Datenbankschemas sowie der Daten und Metadaten für eine Datenbankanwendung. Ein durchdachtes, proaktives DLM-Konzept versetzt Organisationen in die Lage, Datenressourcen unter Anwendung geeigneter Leistungs-, Schutz- und Verfügbarkeitslevels sowie zu angemessenen Kosten zu verwalten.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Die Datenbank-Lebenszyklusverwaltung (Database Lifecycle Management, DLM) ist ein auf Richtlinien basierendes Konzept zur Verwaltung von Datenbanken und Datenbeständen. DLM ist kein Produkt, sondern ein umfassender Ansatz zur Verwaltung des Datenbankschemas sowie der Daten und Metadaten für eine Datenbankanwendung. Ein durchdachtes, proaktives DLM-Konzept versetzt Organisationen in die Lage, Datenressourcen unter Anwendung geeigneter Leistungs-, Schutz- und Verfügbarkeitslevels sowie zu angemessenen Kosten zu verwalten.  
   
  Zu Beginn werden Design und Intention des DLM-Projekts festgelegt. Darauf folgen die Entwicklung, Überprüfung, Erstellung, Bereitstellung, Verwaltung, Überwachung und Sicherung der Datenbanken, und zuletzt wird ein Datenarchiv angelegt. Dieses Thema bietet eine Übersicht über die DLM-Phasen, von der Datenbankentwicklung über die Erstellung und Bereitstellung bis hin zur Überwachung (Abbildung 1). Zusätzlich werden Aktivitäten zur Datenverwaltung und Datenportabilität erörtert, z. B. Import/Export, Sicherung, Migration und Synchronisierung.  
   

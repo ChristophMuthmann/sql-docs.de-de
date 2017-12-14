@@ -2,9 +2,12 @@
 title: SQL Server:Catalog Metadata-Objekt | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: dagiro
 ms.author: v-dagir
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4d1f9ca9e984a06fb35921123c34a49ff2221491
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1d89996523ada4e50d2fd3c0950c1e4dc0668aef
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-catalog-metadata-object"></a>SQLServer:Catalog Metadata-Objekt
-Das **SQLServer:Catalog Metadata** Leistungsobjekt enthält Leistungsindikatoren für Katalogmetadaten für SQL Server.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das **SQLServer:Catalog Metadata**-Leistungsobjekt enthält Leistungsindikatoren für Katalogmetadaten für SQL Server.
 
 In der folgenden Tabelle sind die **Catalog Metadata** .
 

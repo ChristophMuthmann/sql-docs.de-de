@@ -2,9 +2,12 @@
 title: Invoke-Sqlcmd-Cmdlet | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: powershell
+ms.service: 
+ms.component: powershell
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3a80c470217ede2ea1eae6ffad6d09cd4bccec8c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7afb1a8a23055df89c0a446e2d4be3255311b5b6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd-Cmdlet
   **Invoke-Sqlcmd** ist ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Cmdlet, das Skripts ausführt, die Anweisungen aus den Sprachen ([!INCLUDE[tsql](../includes/tsql-md.md)] und XQuery) und Befehle enthalten, die vom Hilfsprogramm **sqlcmd** unterstützt werden.  
@@ -114,14 +117,14 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Anmelde-ID für die Authentifizierung.|-U|-Username|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Kennwort für die Authentifizierung.|-P|-Password|  
 |Variablendefinition.|-v|-Variable|  
-|Abfragetimeoutintervall.|-t|-QueryTimeOut|  
+|Abfragetimeoutintervall (Sekunden).|-t|-QueryTimeOut|  
 |Ausführung bei Fehler beenden.|-b|-AbortOnError|  
 |Dedizierte Administratorverbindung.|-A|-DedicatedAdministratorConnection|  
 |Interaktive Befehle, Startskript und Umgebungsvariablen deaktivieren.|-X|-DisableCommands|  
 |Variablenersetzung deaktivieren.|-X|-DisableVariables|  
 |Minimaler Schweregrad für Bericht.|-v|-SeverityLevel|  
 |Minimaler Fehlergrad für Bericht.|-m|-ErrorLevel|  
-|Anmeldungstimeoutintervall.|-l|-ConnectionTimeout|  
+|Anmeldungstimeoutintervall (Sekunden).|-l|-ConnectionTimeout|  
 |Hostname.|-H|-HostName|  
 |Kennwort ändern und beenden.|-Z|-NewPassword|  
 |Eingabedatei, die eine Abfrage enthält|-i|-InputFile|  

@@ -2,9 +2,12 @@
 title: SQL Server, LogPool-Freepool-Objekt | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: dagiro
 ms.author: v-dagir
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4e1431cc4cc311e20daf416e9086acefe2bc6df9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 542de5f2333faef289beaddc62c8d86ced05eb93
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-logpool-freepool-object"></a>SQLServer, LogPool FreePool (Objekt)
-Das Leistungsobjekt **SQLServer:LogPool FreePool** bietet Leistungsindikatoren für Statistiken zum freien Pool innerhalb des Protokollpools.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das Leistungsobjekt **SQLServer:LogPool FreePool** bietet Leistungsindikatoren für Statistiken zum freien Pool innerhalb des Protokollpools.
 
 In der folgenden Tabelle werden die SQL Server-Leistungsobjekte für **LogPool FreePool** beschrieben.
 

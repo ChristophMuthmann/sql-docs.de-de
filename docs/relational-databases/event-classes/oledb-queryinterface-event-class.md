@@ -2,9 +2,12 @@
 title: OLE DB QueryInterface-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a675719a1c034127bce3afc1bee730cc2221dd53
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 54ea634acb632f76d6d74aa192fb89e4b3f8af94
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface-Ereignisklasse
-  Die **OLEDB QueryInterface** -Ereignisklasse tritt auf, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen OLE DB- **QueryInterface** -Aufruf für verteilte Abfragen und remote gespeicherte Prozeduren ausführt. Nehmen Sie diese Ereignisklasse in Ablaufverfolgungen auf, die Probleme im Zusammenhang mit verteilten Abfragen und remote gespeicherten Prozeduren überwachen.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Die **OLEDB QueryInterface**-Ereignisklasse tritt auf, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen OLE DB-**QueryInterface**-Aufruf für verteilte Abfragen und remote gespeicherte Prozeduren ausführt. Nehmen Sie diese Ereignisklasse in Ablaufverfolgungen auf, die Probleme im Zusammenhang mit verteilten Abfragen und remote gespeicherten Prozeduren überwachen.  
   
  Wenn die **OLEDB QueryInterface** -Ereignisklasse verwendet wird, ist der Verarbeitungsaufwand hoch. Falls solche Ereignisse häufig auftreten, kann die Leistung durch die Ablaufverfolgung erheblich beeinträchtigt werden. Beschränken Sie die Verwendung dieser Ereignisklasse auf Ablaufverfolgungen, die für kurze Zeit spezielle Probleme überwachen, um die Leistungsbeeinträchtigung möglichst gering zu halten.  
   

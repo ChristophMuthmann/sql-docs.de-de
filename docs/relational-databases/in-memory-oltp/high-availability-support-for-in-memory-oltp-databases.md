@@ -2,9 +2,12 @@
 title: "Unterstützung für Hochverfügbarkeit für In-Memory OLTP-Datenbanken | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 08/31/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 14e2a3d68d922c4e78ee154a380fc6ddd4721526
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d3f655fc9d0a88ab0c4f11e7b6adbeb0bb405467
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>Unterstützung für Hochverfügbarkeit für In-Memory OLTP-Datenbanken
-  Datenbanken mit speicheroptimierten Tabellen mit bzw. ohne systemeigene kompilierte gespeicherte Prozeduren werden mit AlwaysOn-Verfügbarkeitsgruppen vollständig unterstützt.  Es gibt keinen Unterschied in Konfiguration und Unterstützung zwischen Datenbanken mit [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Objekten und solchen ohne diese Objekte.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Datenbanken mit speicheroptimierten Tabellen mit bzw. ohne nativ kompilierte gespeicherte Prozeduren werden mit AlwaysOn-Verfügbarkeitsgruppen vollständig unterstützt.  Es gibt keinen Unterschied in Konfiguration und Unterstützung zwischen Datenbanken mit [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Objekten und solchen ohne diese Objekte.  
   
  Wenn in der Konfiguration einer AlwaysOn-Verfügbarkeitsgruppe eine In-Memory-OLTP-Datenbank bereitgestellt wird, werden bei Anwendung von REDO Änderungen an speicheroptimierten Tabellen auf dem primären Replikat im Arbeitsspeicher auf die Tabellen auf den sekundären Replikaten angewendet. Dies bedeutet, dass ein Failover zu einem sekundären Replikat sehr schnell erfolgen kann, da sich die Daten bereits im Arbeitsspeicher befinden. Darüber hinaus stehen die Tabellen für Abfragen auf sekundären Replikaten, die für den Lesezugriff konfiguriert wurden, zur Verfügung.  
   

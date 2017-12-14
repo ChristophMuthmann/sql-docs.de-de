@@ -2,9 +2,12 @@
 title: "Verwalten und Überwachen von Change Data Capture (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: eeb22b42fa171fe644e6fa01e1be107bc1917afa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0528c9fb9751aadc11f7896347538d5a200b0290
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Verwalten und Überwachen von Change Data Capture (SQL Server)
-  In diesem Thema wird beschrieben, wie Sie Change Data Capture verwalten und überwachen können.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie Sie Change Data Capture verwalten und überwachen können.  
   
 ##  <a name="Capture"></a> Aufzeichnungsauftrag  
  Der Aufzeichnungsauftrag wird durch Ausführen der parameterlosen gespeicherten Prozedur **sp_MScdc_capture_job**initiiert. Diese gespeicherte Prozedur beginnt mit dem Extrahieren der konfigurierten Werte für *maxtrans*, *maxscans*, *continuous*und *pollinginterval* für den Aufzeichnungsauftrag aus „msdb.dbo.cdc_jobs“. Diese konfigurierten Werte werden dann als Parameter an die gespeicherte Prozedur **sp_cdc_scan**übergeben. Dies wird verwendet, um **sp_replcmds** zum Ausführen des Protokollscans aufzurufen.  

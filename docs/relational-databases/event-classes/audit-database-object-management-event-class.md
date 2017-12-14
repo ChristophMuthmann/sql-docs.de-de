@@ -2,9 +2,12 @@
 title: Datenspalten der Audit Database Object Management-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ff1a11eda7fca9303bd1bb3b1f05a3188925c9a1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ab0aa40a81d6e0cb09062fe3916c30953fd1983d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-database-object-management-event-class"></a>Audit Database Object Management-Ereignisklasse
-  Die **Audit Database Object Management** -Ereignisklasse tritt auf, wenn eine CREATE-, ALTER- oder DROP-Anweisung für Datenbankobjekte ausgeführt wird, wie z. B. Schemas.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Die **Audit Database Object Management**-Ereignisklasse tritt auf, wenn eine CREATE-, ALTER- oder DROP-Anweisung für Datenbankobjekte ausgeführt wird, wie z.B. Schemas.  
   
 > [!NOTE]  
 >  Auf den öffentlichen Schlüssel bezogene Aktionen werden nicht überwacht.  

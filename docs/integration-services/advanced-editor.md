@@ -1,5 +1,5 @@
 ---
-title: Erweiterter Editor | Microsoft Docs
+title: Erweiterter Editor | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,24 +18,23 @@ f1_keywords:
 - sql13.dts.designer.advancededitor.connections.f1
 - sql13.dts.designer.advancededitor.columnmappings.f1
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a19014f742ea4be55028bd93d07b0c388159e0a0
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1b955ca40730e07da0b0532ee42b0820116ad14f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="advanced-editor"></a>Erweiterter Editor
   Verwenden Sie das Dialogfeld **Erweiterter Editor** , um Eigenschaften für das ausgewählte [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Objekt zu konfigurieren.  
   
  **Erweiterter Editor** ist für die meisten [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Objekte verfügbar, die konfigurierbare Eigenschaften aufweisen. Es ist der einzige verfügbare Editor für jene Objekte, die keine benutzerdefinierte Benutzeroberfläche bereitstellen.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Datenflussobjekte haben Eigenschaften, die auf der Komponentenebene, der Eingabe- und Ausgabeebene und der Ebene der Eingabe- und Ausgabespalten festgelegt werden können. **Erweiterter Editor** zählt alle allgemeinen und benutzerdefinierten Eigenschaften des ausgewählten Objekts auf und zeigt sie auf jeweils bis zu vier von fünf der folgenden Registerkarten an:  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Datenflussobjekte haben Eigenschaften, die auf der Komponentenebene, der Eingabe- und Ausgabeebene und der Ebene der Eingabe- und Ausgabespalten festgelegt werden können. **Erweiterter Editor** zählt alle allgemeinen und benutzerdefinierten Eigenschaften des ausgewählten Objekts auf und zeigt sie auf jeweils bis zu vier von fünf der folgenden Registerkarten an:  
   
 -   **Verbindungs-Manager** – verwenden Sie diese Registerkarte, um Verbindungseigenschaften festzulegen.  
   
@@ -58,10 +56,9 @@ ms.lasthandoff: 08/03/2017
   
  Weitere Informationen zu den speziellen Komponenten, die Sie bearbeiten, finden Sie in der Beschreibung der Komponenten im Abschnitt zu den Datenflusselementen in der Objekt- und Konzeptdokumentation von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] :  
   
--   [Integration Services-Transformationen](../integration-services/data-flow/transformations/integration-services-transformations.md)  
+-   [SQL Server Integration Services-Transformationen](../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen und Meldungsreferenz von Integration Services-Fehler](../integration-services/integration-services-error-and-message-reference.md)  
+ [Fehler- und Meldungsreferenz von Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
   
   
-

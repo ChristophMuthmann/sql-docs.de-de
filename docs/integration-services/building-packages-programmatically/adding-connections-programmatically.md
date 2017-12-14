@@ -1,5 +1,5 @@
 ---
-title: "Programmgesteuertes Hinzufügen von Verbindungen | Microsoft Docs"
+title: "Programmgesteuertes Hinzufügen von Verbindungen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -29,31 +27,30 @@ helpviewer_keywords:
 - SSIS connection managers
 - adding package connections
 ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: b768ad80f2b28cc3fb73a2210188bab26c902441
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ed662d5dff653fc0e245db65f6fe25b4b209c77e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="adding-connections-programmatically"></a>Programmgesteuertes Hinzufügen von Verbindungen
-  Die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Klasse stellt physische Verbindungen zu externen Datenquellen dar. Durch die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Klassen werden die Implementierungsdetails der Verbindung von der Laufzeit isoliert. Daher kann die Laufzeit mit den einzelnen Verbindungs-Managern auf eine konsistente, vorhersehbare Weise interagieren. Verbindungs-Manager enthalten eine Reihe von Basiseigenschaften, die alle Verbindungen gemeinsam haben, z. B. die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>-, die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>- <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> und die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>-Eigenschaft. Die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>-Eigenschaft und die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>-Eigenschaft sind jedoch in der Regel die einzigen Eigenschaften, die zur Konfiguration eines Verbindungs-Managers erforderlich sind. Im Gegensatz zu anderen Programmierungsmodellen, in denen Verbindungsklassen Methoden verfügbar wie z. B. machen **öffnen** oder **verbinden** um physisch eine Verbindung mit der Datenquelle herzustellen, verwaltet das Laufzeitmodul alle Verbindungen für das Paket während der Ausführung.  
+  Die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Klasse stellt physische Verbindungen zu externen Datenquellen dar. Durch die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Klassen werden die Implementierungsdetails der Verbindung von der Laufzeit isoliert. Daher kann die Laufzeit mit den einzelnen Verbindungs-Managern auf eine konsistente, vorhersehbare Weise interagieren. Verbindungs-Manager enthalten eine Reihe von Basiseigenschaften, die alle Verbindungen gemeinsam haben, z. B. die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>-, die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>- <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> und die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>-Eigenschaft. Die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>-Eigenschaft und die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>-Eigenschaft sind jedoch in der Regel die einzigen Eigenschaften, die zur Konfiguration eines Verbindungs-Managers erforderlich sind. Im Gegensatz zu anderen Programmierungsmodellen, bei denen Verbindungsklassen Methoden wie die **Open**- oder die **Connect**-Methode verfügbar machen, um eine physische Verbindung mit der Datenquelle herzustellen, verwaltet das Laufzeitmodul alle Verbindungen für das Paket während der Ausführung.  
   
  Die <xref:Microsoft.SqlServer.Dts.Runtime.Connections>-Klasse ist eine Auflistung der Verbindungs-Manager, die dem Paket hinzugefügt wurden und zur Laufzeit für die Verwendung zur Verfügung stehen. Sie können der Auflistung mithilfe der <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Add%2A>-Methode der Auflistung mehrere Verbindungs-Manager hinzufügen und eine Zeichenfolge bereitstellen, die den Typ des Verbindungs-Managers angibt. Die <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Add%2A>-Methode gibt die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Instanz zurück, die dem Paket hinzugefügt wurde.  
   
 ## <a name="intrinsic-properties"></a>Systeminterne Eigenschaften  
- Die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Klasse macht eine Reihe von Eigenschaften verfügbar, die alle Verbindungen gemeinsam haben. In einigen Fällen benötigen Sie jedoch Zugriff auf Eigenschaften, die für den speziellen Verbindungstyp eindeutig sind. Die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Properties%2A>-Auflistung der <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Klasse bietet Zugriff auf diese Eigenschaften. Die Eigenschaften können mithilfe des Indexers oder den Namen der Eigenschaft aus der Auflistung abgerufen werden und die **GetValue** -Methode und die Werte festgelegt werden, werden die **SetValue** Methode. Die Eigenschaften der zugrunde liegenden Verbindungsobjekteigenschaften können auch festgelegt werden, indem eine tatsächliche Instanz des Objekts abgerufen und die Eigenschaften direkt festgelegt werden. Um die zugrunde liegende Verbindung abzurufen, verwenden Sie die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.InnerObject%2A>-Eigenschaft des Verbindungs-Managers. In der folgenden Codezeile ist eine C#-Zeile dargestellt, die von einem ADO.NET-Verbindungs-Manager mit der zugrunde liegenden Klasse, <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.ConnectionManagerAdoNetClass>, erstellt wird.  
+ Die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Klasse macht eine Reihe von Eigenschaften verfügbar, die alle Verbindungen gemeinsam haben. In einigen Fällen benötigen Sie jedoch Zugriff auf Eigenschaften, die für den speziellen Verbindungstyp eindeutig sind. Die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Properties%2A>-Auflistung der <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Klasse bietet Zugriff auf diese Eigenschaften. Die Eigenschaften können mithilfe des Indexers oder des Eigenschaftennamens und der **GetValue**-Methode aus der Auflistung abgerufen werden, und die Werte werden mithilfe der **setValue**-Methode festgelegt. Die Eigenschaften der zugrunde liegenden Verbindungsobjekteigenschaften können auch festgelegt werden, indem eine tatsächliche Instanz des Objekts abgerufen und die Eigenschaften direkt festgelegt werden. Um die zugrunde liegende Verbindung abzurufen, verwenden Sie die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.InnerObject%2A>-Eigenschaft des Verbindungs-Managers. In der folgenden Codezeile ist eine C#-Zeile dargestellt, die von einem ADO.NET-Verbindungs-Manager mit der zugrunde liegenden Klasse, <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.ConnectionManagerAdoNetClass>, erstellt wird.  
   
  `ConnectionManagerAdoNetClass cmado = cm.InnerObject as ConnectionManagerAdoNet;`  
   
- Dadurch wird das Objekt des verwalteten Verbindungs-Managers in das zugrunde liegende Verbindungsobjekt umgewandelt. Bei Verwendung von C++, die **QueryInterface** Methode der <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> -Objekts aufgerufen wird und die Schnittstelle des zugrunde liegenden Verbindungsobjekts wird angefordert.  
+ Dadurch wird das Objekt des verwalteten Verbindungs-Managers in das zugrunde liegende Verbindungsobjekt umgewandelt. Wenn Sie C++ verwenden, wird die **QueryInterface**-Methode des <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Objekts aufgerufen, und die Oberfläche des zugrunde liegenden Verbindungsobjekts wird angefordert.  
   
- In der folgenden Tabelle sind die in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthaltenen Verbindungs-Manager sowie die Zeichenfolge aufgeführt, die in der `package.Connections.Add("xxx")`-Anweisung verwendet wird. Eine Liste aller Verbindungs-Manager, finden Sie unter [Integration Services &#40; SSIS &#41; Verbindungen](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
+ In der folgenden Tabelle sind die in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthaltenen Verbindungs-Manager sowie die Zeichenfolge aufgeführt, die in der `package.Connections.Add("xxx")`-Anweisung verwendet wird. Eine Liste aller Verbindungs-Manager finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
 |String|Verbindungs-Manager|  
 |------------|------------------------|  
@@ -217,11 +214,10 @@ End Class
  `Number of connections in package: 2`  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
- Technische Artikel [Verbindungszeichenfolgen](http://go.microsoft.com/fwlink/?LinkId=220743), auf carlprothman.net.  
+ Technischer Artikel, [Verbindungszeichenfolgen](http://go.microsoft.com/fwlink/?LinkId=220743), unter carlprothman.net.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Integrationsservices &#40; SSIS &#41; Verbindungen](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Erstellen von Verbindungs-Manager](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
+ [SQL Server Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
+ [Erstellen von Verbindungs-Managern](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   
   
-

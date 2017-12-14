@@ -2,9 +2,12 @@
 title: Eigenschaften der gespeicherten Prozedur (Seite Allgemein) | Microsoft Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ee9de5d6a71411489f1a8cfd7595a910cfc971da
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 73b418977e357145b7a4a04018dcc139d7a3c8a4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="stored-procedure-properties-general-page"></a>Eigenschaften der gespeicherten Prozedur (Seite Allgemein)
-  Zeigt Informationen zu einer gespeicherten Prozedur an. Alle Informationen sind schreibgeschützt.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Zeigt Informationen zu einer gespeicherten Prozedur an. Alle Informationen sind schreibgeschützt.  
   
 ## <a name="options"></a>Optionen  
  **Datenbank**  

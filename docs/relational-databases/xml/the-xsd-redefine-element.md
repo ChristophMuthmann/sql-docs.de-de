@@ -1,10 +1,13 @@
 ---
 title: Das &lt;xsd:redefine&gt;-Element | Microsoft-Dokumentation
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 80d00134f8ebfa1360551b8d10b28650c217388f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: acb4011d190445476a0fedfc70557cfcb5e36af5
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="the-ltxsdredefinegt-element"></a>Das &lt;xsd:redefine&gt;-Element
-  Das W3C XSD **redefine** -Element stellt Unterstützung zum Neudefinieren von Schemakomponenten zur Verfügung. Die Unterstützung dieser Direktive kann jedoch die Leistung beeinträchtigen und erfordert außerdem, dass in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle Instanzen des **xml** -Datentyps erneut überprüft werden, die mit dem neu definierten Schema verknüpft sind. Deshalb unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dieses Element nicht. XML-Schemas, die das **\<xsd:redefine>**-Element enthalten, werden vom Server zurückgewiesen.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Das W3C XSD **redefine**-Element stellt Unterstützung zum Neudefinieren von Schemakomponenten zur Verfügung. Die Unterstützung dieser Direktive kann jedoch die Leistung beeinträchtigen und erfordert außerdem, dass in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle Instanzen des **xml** -Datentyps erneut überprüft werden, die mit dem neu definierten Schema verknüpft sind. Deshalb unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dieses Element nicht. XML-Schemas, die das **\<xsd:redefine>**-Element enthalten, werden vom Server zurückgewiesen.  
   
  Gehen Sie zum Aktualisieren des Schemas oder seiner Komponenten stattdessen folgendermaßen vor:  
   

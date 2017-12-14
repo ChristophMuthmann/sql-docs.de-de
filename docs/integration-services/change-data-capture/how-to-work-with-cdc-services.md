@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit CDC-Dienste | Microsoft Docs
+title: Verwenden von CDC Services | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bd4d1ea9deb9451701f84470ed2f35f7aa220df2
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9e867d2f9ab34ed2fa97b0e4f8bb6b4510ba0038
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="how-to-work-with-cdc-services"></a>Verwenden von CDC Services
   In diesem Verfahren wird beschrieben, wie Sie mithilfe der CDC Service Configuration Console eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz für die Verwendung von Oracle CDC Services vorbereiten und einen neuen CDC-Dienst erstellen.  
@@ -63,7 +61,6 @@ ms.lasthandoff: 08/03/2017
          Informationen zum Eingeben der Anmeldeinformationen für eine Anmeldung, die über die Schreibberechtigung für die MSXDBCDC-Datenbank verfügt, z. B. die Datenbankrolle **db_owner** , finden Sie unter [Erstellen und Bearbeiten eines CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md) und [Verbindung mit SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit CDC-Dienste](../../integration-services/change-data-capture/work-with-cdc-services.md)  
+ [Verwenden von CDC Services](../../integration-services/change-data-capture/work-with-cdc-services.md)  
   
   
-

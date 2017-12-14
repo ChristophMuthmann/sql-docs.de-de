@@ -1,15 +1,14 @@
 ---
 title: "Leistungscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank | Microsoft-Dokumentation"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 04/08/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
 ms.reviewer: 
 ms.service: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.component: performance
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,20 +22,19 @@ helpviewer_keywords:
 - performance (SQL Database)
 - database performance (SQL Database)
 ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0b635fc2b91f8ad068b2c44d0926824b9676aad0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 6490c2356c0753f68e7ef5261ede3d699a08b863
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>Leistungscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank
-  Diese Seite enthält Links, mit deren Hilfe Sie die erforderlichen Informationen zur Leistung in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] und [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]finden.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Diese Seite enthält Links, mit deren Hilfe Sie die erforderlichen Informationen zur Leistung in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] und [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] finden.  
   
  **Legende**  
   
@@ -79,4 +77,3 @@ ms.lasthandoff: 09/27/2017
  [Query Performance Insight für Azure](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/)  
   
   
-

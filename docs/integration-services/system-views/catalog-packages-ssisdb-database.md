@@ -1,5 +1,5 @@
 ---
-title: Catalog.Packages (SSISDB-Datenbank) | Microsoft Docs
+title: catalog.packages (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - packages view [Integration Services]
 - catalog.packages view [Integration Services]
 ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f836c2b1bdf59f157f10abb708ed55f99dfc9f0f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e544436126d299182760f94ef46304c334d448b6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,16 +37,16 @@ ms.lasthandoff: 09/26/2017
 |name|**nvarchar(256)**|Der eindeutige Name des Pakets.|  
 |package_guid|**uniqueidentifier**|Der global eindeutige Bezeichner (Globally Unique Identifier, GUID) für das Paket.|  
 |Beschreibung|**nvarchar(1024)**|Eine optionale Beschreibung des Pakets.|  
-|package_format_version|**int**|Die Version des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die zum Entwickeln des Pakets verwendet wurde.|  
+|package_format_version|**int**|Die Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mit der das Paket entwickelt wurde.|  
 |version_major|**int**|Die Hauptversion des Pakets.|  
 |version_minor|**int**|Die Nebenversion des Pakets.|  
 |version_build|**int**|Die Buildversion des Pakets.|  
 |version_comments|**nvarchar(1024)**|Optionale Kommentare zur Paketversion.|  
 |version_guid|**uniqueidentifier**|Die GUID, die die Paketversion eindeutig identifiziert.|  
 |project_id|**bigint**|Die eindeutige ID des Projekts.|  
-|Einstiegspunkt|**bit**|Der Wert `1` gibt an, dass das Paket direkt gestartet werden soll. Der Wert `0` gibt an, dass das Paket von einem anderen Paket mit dem Task Paket ausführen gestartet werden soll. Der Standardwert lautet `1`.|  
+|entry_point|**bit**|Der Wert `1` gibt an, dass das Paket direkt gestartet werden soll. Der Wert `0` gibt an, dass das Paket von einem anderen Paket mit dem Task Paket ausführen gestartet werden soll. Der Standardwert lautet `1`.|  
 |validation_status|**char(1)**|Der Status der Überprüfung.|  
-|last_validation_time|**DateTimeOffset(7)**|Der Zeitpunkt der letzten Überprüfung.|  
+|last_validation_time|**datetimeoffset(7)**|Der Zeitpunkt der letzten Überprüfung.|  
   
 ## <a name="remarks"></a>Hinweise  
  In dieser Sicht wird eine Zeile für jedes Paket im Katalog angezeigt.  
@@ -66,4 +64,3 @@ ms.lasthandoff: 09/26/2017
 >  Wenn Sie über die READ-Berechtigung für ein Projekt verfügen, verfügen Sie auch über die READ-Berechtigung für alle Pakete und Umgebungsverweise, die diesem Projekt zugeordnet sind. Sicherheit auf Zeilenebene wird erzwungen. Es werden nur Zeilen angezeigt, zu deren Anzeige Sie berechtigt sind.  
   
   
-

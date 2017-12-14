@@ -1,5 +1,5 @@
 ---
-title: Datamining-Abfrage | Microsoft Docs
+title: Datamining-Abfrage | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.dataminingquery.f1
+f1_keywords: sql13.dts.designer.dataminingquery.f1
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8809f1e5f91ad5746b66d4640747b1ec0a923f0f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4509a3b7838e112bbd002c7efe4b6782a772f7d0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-mining-query"></a>Data Mining-Abfrage
   Im Entwurfsbereich befindet sich der Data Mining-Generator für Vorhersageabfragen, mit dem Sie Data Mining-Vorhersageabfragen erstellen können. Vorhersageabfragen können entweder auf der Grundlage von Eingabetabellen oder von SINGLETON-Vorhersageabfragen erstellt werden. Wechseln Sie zur Ergebnissicht, um die Abfrage auszuführen und die Ergebnisse anzuzeigen. Die Abfragesicht zeigt die vom Generator für Vorhersageabfragen erstellte DMX-Abfrage (Data Mining Extensions).  
@@ -34,9 +31,9 @@ ms.lasthandoff: 08/03/2017
  Schaltfläche Ansicht wechseln  
  Klicken Sie auf ein Symbol, um zwischen dem Entwurfs- und Abfragebereich zu wechseln. Standardmäßig ist der Entwurfsbereich geöffnet.  
   
- Um in das Entwurfsfenster zu wechseln, klicken Sie auf die ![Symbol "Entwurf"](../../integration-services/control-flow/media/ssis-designicon.gif "Symbol "Entwurf"") Symbol.  
+ Klicken Sie auf das ![Design-Symbol](../../integration-services/control-flow/media/ssis-designicon.gif "Design-Symbol"), um in den Entwurfsbereich zu wechseln.  
   
- Um in den Abfragebereich zu wechseln, klicken Sie auf die ![Symbol "SQL"](../../integration-services/control-flow/media/ssis-queryicon.gif "Symbol "SQL"") Symbol.  
+ Klicken Sie auf das ![SQL-Symbol](../../integration-services/control-flow/media/ssis-queryicon.gif "SQL-Symbol"), um in den Abfragebereich zu wechseln.  
   
  **Miningmodell**  
  Zeigt das Miningmodell an, auf dem Sie die Vorhersagen aufbauen wollen.  
@@ -72,7 +69,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Data Mining-Abfragetools](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Datamining-Erweiterungen &#40; DMX &#41; -Anweisungsreferenz](../../dmx/data-mining-extensions-dmx-statements.md)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Catalog. set_object_parameter_value (SSISDB-Datenbank) | Microsoft Docs
+title: catalog.set_object_parameter_value (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 3a5dc70b1e955b3c702dc9e9dbe4776cc4ebd5ac
-ms.contentlocale: de-de
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: 8fe142dd0fdf6e896c6930528b563514c3aa2fb8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogsetobjectparametervalue-ssisdb-database"></a>catalog.set_object_parameter_value (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Legt den Wert eines Parameters im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog fest. Ordnet den Wert einer Umgebungsvariablen oder weist einen Literalwert, der standardmäßig verwendet wird, wenn keine anderen Werte zugewiesen werden.  
+  Legt den Wert eines Parameters im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog fest. Ordnet einer Umgebungsvariable den Wert zu oder weist einen Literalwert zu, der standardmäßig verwendet wird, wenn keine anderen Werte zugewiesen werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,26 +41,26 @@ catalog.set_object_parameter_value [@object_type =] object_type
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [@object_type =] *Object_type*  
+ [@object_type =] *object_type*  
  Der Typ des Parameters. Verwenden Sie den Wert `20` , um einen Projektparameter anzugeben, oder den Wert `30` , um einen Paketparameter anzugeben. Der *object_type* ist **smallInt**.  
   
- [@folder_name =] *Ordnername*  
+ [@folder_name =] *folder_name*  
  Der Name des Ordners, der den Parameter enthält. Der *folder_name* ist **nvarchar(128)**.  
   
- [@project_name =] *Project_name*  
+ [@project_name =] *project_name*  
  Der Name des Projekts, das den Parameter enthält. Der *project_name* ist **nvarchar(128)**.  
   
- [@parameter_name =] *Parameter_name*  
+ [@parameter_name =] *parameter_name*  
  Der Name des Parameters. Der *parameter_name* ist **nvarchar(128)**.  
   
- [@parameter_value =] *Parameter_value*  
+ [@parameter_value =] *parameter_value*  
  Der Wert des Parameters. Der *parameter_value* ist **sql_variant**.  
   
- [@object_name =] *Object_name*  
+ [@object_name =] *object_name*  
  Der Name des Pakets. Dieses Argument ist erforderlich, wenn der Parameter ein Paketparameter ist. Der *object_name* ist **nvarchar(260)**.  
   
- [@value_type =] *Value_type*  
- Der Typ des Parameterwerts. Verwenden Sie das Zeichen `V` gibt an, dass *Parameter_value* ein Literalwert, der standardmäßig verwendet wird, wenn vor der Ausführung keine anderen Werte zugewiesen werden. Verwenden Sie das Zeichen `R` , um anzugeben, dass *parameter_value* ein Wert ist, auf den verwiesen wird und der auf den Namen einer Umgebungsvariablen festgelegt wurde. Dieses Argument ist optional. Das Zeichen `V` wird standardmäßig verwendet. Der *value_type* ist **char(1)**.  
+ [@value_type =] *value_type*  
+ Der Typ des Parameterwerts. Verwenden Sie das Zeichen `V`, um anzugeben, dass *parameter_value* ein Literalwert ist, der standardmäßig verwendet wird, wenn vor der Ausführung keine anderen Werte zugewiesen werden. Verwenden Sie das Zeichen `R` , um anzugeben, dass *parameter_value* ein Wert ist, auf den verwiesen wird und der auf den Namen einer Umgebungsvariablen festgelegt wurde. Dieses Argument ist optional. Das Zeichen `V` wird standardmäßig verwendet. Der *value_type* ist **char(1)**.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
  0 (Erfolg)  
@@ -94,7 +92,7 @@ catalog.set_object_parameter_value [@object_type =] object_type
   
 ## <a name="remarks"></a>Hinweise  
   
--   Wenn kein *value_type* angegeben ist, wird standardmäßig ein Literalwert für *parameter_value* verwendet. Wenn ein Literalwert verwendet wird, die *Value_set* in der [Object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) Ansicht festgelegt ist, um `1`. Ein NULL-Parameterwert ist nicht zulässig.  
+-   Wenn kein *value_type* angegeben ist, wird standardmäßig ein Literalwert für *parameter_value* verwendet. Wenn ein Literalwert verwendet wird, wird *value_set* in der Sicht [object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) auf `1` festgelegt. Ein NULL-Parameterwert ist nicht zulässig.  
   
 -   Wenn *value_type* das Zeichen `R`enthält, das einen Wert bezeichnet, auf den verwiesen wird, verweist *parameter_value* auf den Namen einer Umgebungsvariablen.  
   
@@ -103,4 +101,3 @@ catalog.set_object_parameter_value [@object_type =] object_type
 -   Für `30` kann der Wert *object_type* verwendet werden, um einen Paketparameter anzugeben. In diesem Fall wird ein Wert für *object_name* verwendet, um das entsprechende Paket anzugeben. Wenn *object_name* nicht angegeben wird, gibt die gespeicherte Prozedur einen Fehler zurück und wird beendet.  
   
   
-

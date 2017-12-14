@@ -1,32 +1,30 @@
 ---
 title: "SQL Server-Sicherung über URLs | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 11/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 3358baeca572cb8894eb31798932221d1809a77a
+ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: d0fea4f1ffe507d0b410a16a668a138a7f0dee2e
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server-Sicherung über URLs
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   In diesem Thema werden die Konzepte, die Anforderungen und die Komponenten eingeführt, die notwendig sind, um den Microsoft Azure BLOB-Speicherdienst als Sicherungsziel zu verwenden. Die Sicherungs- und Wiederherstellungsfunktion sind gleich oder ähnlich wie beim Verwenden von DISK oder TAPE, mit wenigen Unterschieden. Diese Unterschiede sowie einige Codebeispiele werden in diesem Thema erörtert.  
   
@@ -116,12 +114,12 @@ ms.lasthandoff: 09/27/2017
   
 |BACKUP-/RESTORE-Anweisung|Unterstützt|Ausnahmen|Kommentare|
 |-|-|-|-|
-|BACKUP|√|BLOCKSIZE und MAXTRANSFERSIZE werden für Block-Blobs unterstützt. Sie werden nicht für Seiten-Blobs unterstützt. | Die Sicherung in einem Block-Blob erfordert eine SAS, die in einer SQL Server-Anmeldeinformation gespeichert ist. Die Sicherung auf einem Seiten-Blob erfordert den Speicherkontoschlüssel, der in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldeinformation gespeichert ist, und erfordert das Argument WITH CREDENTIAL, um festgelegt zu werden.|  
-|RESTORE|√||Erfordert die Definition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen sowie die Angabe des Arguments WITH CREDENTIAL, wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen mithilfe des Speicherkontoschlüssels als geheimem Schlüssel definiert werden.|  
-|RESTORE FILELISTONLY|√||Erfordert die Definition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen sowie die Angabe des Arguments WITH CREDENTIAL, wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen mithilfe des Speicherkontoschlüssels als geheimem Schlüssel definiert werden.|  
-|RESTORE HEADERONLY|√||Erfordert die Definition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen sowie die Angabe des Arguments WITH CREDENTIAL, wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen mithilfe des Speicherkontoschlüssels als geheimem Schlüssel definiert werden.|  
-|RESTORE LABELONLY|√||Erfordert die Definition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen sowie die Angabe des Arguments WITH CREDENTIAL, wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen mithilfe des Speicherkontoschlüssels als geheimem Schlüssel definiert werden.|  
-|RESTORE VERIFYONLY|√||Erfordert die Definition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen sowie die Angabe des Arguments WITH CREDENTIAL, wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen mithilfe des Speicherkontoschlüssels als geheimem Schlüssel definiert werden.|  
+|BACKUP|J|BLOCKSIZE und MAXTRANSFERSIZE werden für Block-Blobs unterstützt. Sie werden nicht für Seiten-Blobs unterstützt. | Die Sicherung in einem Block-Blob erfordert eine SAS, die in einer SQL Server-Anmeldeinformation gespeichert ist. Die Sicherung auf einem Seiten-Blob erfordert den Speicherkontoschlüssel, der in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldeinformation gespeichert ist, und erfordert das Argument WITH CREDENTIAL, um festgelegt zu werden.|  
+|RESTORE|J||Erfordert die Definition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen sowie die Angabe des Arguments WITH CREDENTIAL, wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen mithilfe des Speicherkontoschlüssels als geheimem Schlüssel definiert werden.|  
+|RESTORE FILELISTONLY|J||Erfordert die Definition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen sowie die Angabe des Arguments WITH CREDENTIAL, wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen mithilfe des Speicherkontoschlüssels als geheimem Schlüssel definiert werden.|  
+|RESTORE HEADERONLY|J||Erfordert die Definition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen sowie die Angabe des Arguments WITH CREDENTIAL, wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen mithilfe des Speicherkontoschlüssels als geheimem Schlüssel definiert werden.|  
+|RESTORE LABELONLY|J||Erfordert die Definition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen sowie die Angabe des Arguments WITH CREDENTIAL, wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen mithilfe des Speicherkontoschlüssels als geheimem Schlüssel definiert werden.|  
+|RESTORE VERIFYONLY|J||Erfordert die Definition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen sowie die Angabe des Arguments WITH CREDENTIAL, wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen mithilfe des Speicherkontoschlüssels als geheimem Schlüssel definiert werden.|  
 |RESTORE REWINDONLY|−|||  
   
  Allgemeine und Syntaxinformationen zu BACKUP-Anweisungen finden Sie unter [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
@@ -132,36 +130,36 @@ ms.lasthandoff: 09/27/2017
 
 |Argument|Unterstützt|Exception|Kommentare|  
 |-|-|-|-|  
-|DATABASE|√|||  
-|LOG|√|||  
+|DATABASE|J|||  
+|LOG|J|||  
 ||  
-|TO (URL)|√|Bei URL wird das Angeben bzw. Erstellen eines logischen Namens im Gegensatz zu DISK und TAPE nicht unterstützt.|Dieses Argument wird verwendet, um den URL-Pfad der Sicherungsdatei anzugeben.|  
-|MIRROR TO|√|||  
+|TO (URL)|J|Bei URL wird das Angeben bzw. Erstellen eines logischen Namens im Gegensatz zu DISK und TAPE nicht unterstützt.|Dieses Argument wird verwendet, um den URL-Pfad der Sicherungsdatei anzugeben.|  
+|MIRROR TO|J|||  
 |**WITH-OPTIONEN:**||||  
-|CREDENTIAL|√||WITH CREDENTIAL wird nur unterstützt, wenn die Option BACKUP TO URL zur Sicherung in den Microsoft Azure BLOB-Speicherdienst verwendet wird und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen mithilfe des Speicherkontoschlüssels als geheimem Schlüssel definiert werden.|  
-|FILE_SNAPSHOT|√|||  
-|ENCRYPTION|√||Wird das Argument **WITH ENCRYPTION** angegeben, gewährleistet die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dateimomentaufnahme-Sicherung, dass die gesamte Datenbank vor dem Erstellen der Sicherung mit TDE verschlüsselt wurde, und verschlüsselt die Dateimomentaufnahme-Sicherungsdatei selbst in diesem Fall mit dem für TDE in der Datenbank angegebenen Algorithmus. Die Sicherung schlägt fehl, wenn nicht alle Daten in der gesamten Datenbank verschlüsselt sind (z. B. wenn der Verschlüsselungsvorgang noch nicht abgeschlossen ist).|  
-|DIFFERENTIAL|√|||  
-|COPY_ONLY|√|||  
-|COMPRESSION&#124;NO_COMPRESSION|√|Wird für Dateimomentaufnahme-Sicherungen nicht unterstützt||  
-|DESCRIPTION|√|||  
-|NAME|√|||  
+|CREDENTIAL|J||WITH CREDENTIAL wird nur unterstützt, wenn die Option BACKUP TO URL zur Sicherung in den Microsoft Azure BLOB-Speicherdienst verwendet wird und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen mithilfe des Speicherkontoschlüssels als geheimem Schlüssel definiert werden.|  
+|FILE_SNAPSHOT|J|||  
+|ENCRYPTION|J||Wird das Argument **WITH ENCRYPTION** angegeben, gewährleistet die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dateimomentaufnahme-Sicherung, dass die gesamte Datenbank vor dem Erstellen der Sicherung mit TDE verschlüsselt wurde, und verschlüsselt die Dateimomentaufnahme-Sicherungsdatei selbst in diesem Fall mit dem für TDE in der Datenbank angegebenen Algorithmus. Die Sicherung schlägt fehl, wenn nicht alle Daten in der gesamten Datenbank verschlüsselt sind (z. B. wenn der Verschlüsselungsvorgang noch nicht abgeschlossen ist).|  
+|DIFFERENTIAL|J|||  
+|COPY_ONLY|J|||  
+|COMPRESSION&#124;NO_COMPRESSION|J|Wird für Dateimomentaufnahme-Sicherungen nicht unterstützt||  
+|DESCRIPTION|J|||  
+|NAME|J|||  
 |EXPIREDATE &#124; RETAINDAYS|−|||  
 |NOINIT &#124; INIT|−||Das Anfügen an BLOBs ist nicht möglich. Verwenden Sie zum Überschreiben einer Sicherung das Argument **WITH FORMAT** . Allerdings ist das Argument **WITH FORMAT** bei Verwendung von Dateimomentaufnahme-Sicherungen (mit dem Argument **WITH FILE_SNAPSHOT** ) nicht zulässig, um zu vermeiden, dass Dateimomentaufnahmen, die mit der ursprünglichen Dateimomentaufnahme-Sicherung erstellt wurden, verwaist zurückbleiben.|  
 |NOSKIP &#124; SKIP|−|||  
-|NOFORMAT &#124; FORMAT|√||Eine Sicherung, die auf ein vorhandenes BLOB geschrieben wird, ist nur erfolgreich, wenn **WITH FORMAT** angegeben wird. Das vorhandene BLOB wird bei Angabe von **WITH FORMAT** überschrieben. Allerdings ist das Argument FORMAT bei Verwendung von Dateimomentaufnahme-Sicherungen (mit dem Argument **WITH FILE_SNAPSHOT** ) nicht zulässig, um zu vermeiden, dass Dateimomentaufnahmen, die mit der ursprünglichen Dateimomentaufnahme-Sicherung erstellt wurden, verwaist zurückbleiben. Allerdings ist das Argument **WITH FORMAT** bei Verwendung von Dateimomentaufnahme-Sicherungen (mit dem Argument **WITH FILE_SNAPSHOT** ) nicht zulässig, um zu vermeiden, dass Dateimomentaufnahmen, die mit der ursprünglichen Dateimomentaufnahme-Sicherung erstellt wurden, verwaist zurückbleiben.|  
-|MEDIADESCRIPTION|√|||  
-|MEDIANAME|√|||  
-|BLOCKSIZE|√|Nicht für Seiten-Blob unterstützt. Unterstützt für Block-Blob.| Empfohlen BLOCKSIZE = 65536 zum Optimieren der Verwendung von 50.000 Blöcken, die in einem Block-Blob zulässig sind. |  
-|BUFFERCOUNT|√|||  
-|MAXTRANSFERSIZE|√|Nicht für Seiten-Blob unterstützt. Unterstützt für Block-Blob.| Der Standardwert ist 1048576. Der Wert kann in einem Bereich bis zu 4 MB in Schritten von 65.536 Bytes liegen.</br> Empfohlen MAXTRANSFERSIZE = 4194304 zum Optimieren der Verwendung von 50.000 Blöcken, die in einem Block-Blob zulässig sind. |  
-|NO_CHECKSUM &#124; CHECKSUM|√|||  
-|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|√|||  
-|STATS|√|||  
+|NOFORMAT &#124; FORMAT|J||Eine Sicherung, die auf ein vorhandenes BLOB geschrieben wird, ist nur erfolgreich, wenn **WITH FORMAT** angegeben wird. Das vorhandene BLOB wird bei Angabe von **WITH FORMAT** überschrieben. Allerdings ist das Argument FORMAT bei Verwendung von Dateimomentaufnahme-Sicherungen (mit dem Argument **WITH FILE_SNAPSHOT** ) nicht zulässig, um zu vermeiden, dass Dateimomentaufnahmen, die mit der ursprünglichen Dateimomentaufnahme-Sicherung erstellt wurden, verwaist zurückbleiben. Allerdings ist das Argument **WITH FORMAT** bei Verwendung von Dateimomentaufnahme-Sicherungen (mit dem Argument **WITH FILE_SNAPSHOT** ) nicht zulässig, um zu vermeiden, dass Dateimomentaufnahmen, die mit der ursprünglichen Dateimomentaufnahme-Sicherung erstellt wurden, verwaist zurückbleiben.|  
+|MEDIADESCRIPTION|J|||  
+|MEDIANAME|J|||  
+|BLOCKSIZE|J|Nicht für Seiten-Blob unterstützt. Unterstützt für Block-Blob.| Empfohlen BLOCKSIZE = 65536 zum Optimieren der Verwendung von 50.000 Blöcken, die in einem Block-Blob zulässig sind. |  
+|BUFFERCOUNT|J|||  
+|MAXTRANSFERSIZE|J|Nicht für Seiten-Blob unterstützt. Unterstützt für Block-Blob.| Der Standardwert ist 1048576. Der Wert kann in einem Bereich bis zu 4 MB in Schritten von 65.536 Bytes liegen.</br> Empfohlen MAXTRANSFERSIZE = 4194304 zum Optimieren der Verwendung von 50.000 Blöcken, die in einem Block-Blob zulässig sind. |  
+|NO_CHECKSUM &#124; CHECKSUM|J|||  
+|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|J|||  
+|STATS|J|||  
 |REWIND &#124; NOREWIND|−|||  
 |UNLOAD &#124; NOUNLOAD|−|||  
-|NORECOVERY &#124; STANDBY|√|||  
-|NO_TRUNCATE|√|||  
+|NORECOVERY &#124; STANDBY|J|||  
+|NO_TRUNCATE|J|||  
   
  Weitere Informationen zu BACKUP-Argumenten finden Sie unter [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
   
@@ -169,35 +167,35 @@ ms.lasthandoff: 09/27/2017
   
 |Argument|Unterstützt|Ausnahmen|Kommentare|  
 |-|-|-|-|  
-|DATABASE|√|||  
-|LOG|√|||  
-|FROM (URL)|√||Das FROM URL-Argument wird verwendet, um den URL-Pfad der Sicherungsdatei anzugeben.|  
+|DATABASE|J|||  
+|LOG|J|||  
+|FROM (URL)|J||Das FROM URL-Argument wird verwendet, um den URL-Pfad der Sicherungsdatei anzugeben.|  
 |**WITH Options:**||||  
-|CREDENTIAL|√||WITH CREDENTIAL wird nur unterstützt, wenn Daten mit der RESTORE FROM URL-Option vom Microsoft Azure BLOB-Speicherdienst wiederhergestellt werden.|  
-|PARTIAL|√|||  
-|RECOVERY &#124; NORECOVERY &#124; STANDBY|√|||  
-|LOADHISTORY|√|||  
-|MOVE|√|||  
-|REPLACE|√|||  
-|RESTART|√|||  
-|RESTRICTED_USER|√|||  
+|CREDENTIAL|J||WITH CREDENTIAL wird nur unterstützt, wenn Daten mit der RESTORE FROM URL-Option vom Microsoft Azure BLOB-Speicherdienst wiederhergestellt werden.|  
+|PARTIAL|J|||  
+|RECOVERY &#124; NORECOVERY &#124; STANDBY|J|||  
+|LOADHISTORY|J|||  
+|MOVE|J|||  
+|REPLACE|J|||  
+|RESTART|J|||  
+|RESTRICTED_USER|J|||  
 |FILE|−|||  
-|PASSWORD|√|||  
-|MEDIANAME|√|||  
-|MEDIAPASSWORD|√|||  
-|BLOCKSIZE|√|||  
+|PASSWORD|J|||  
+|MEDIANAME|J|||  
+|MEDIAPASSWORD|J|||  
+|BLOCKSIZE|J|||  
 |BUFFERCOUNT|−|||  
 |MAXTRANSFERSIZE|−|||  
-|CHECKSUM &#124; NO_CHECKSUM|√|||  
-|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|√|||  
-|FILESTREAM|√|Wird für Momentaufnahmesicherungen nicht unterstützt||  
-|STATS|√|||  
+|CHECKSUM &#124; NO_CHECKSUM|J|||  
+|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|J|||  
+|FILESTREAM|J|Wird für Momentaufnahmesicherungen nicht unterstützt||  
+|STATS|J|||  
 |REWIND &#124; NOREWIND|−|||  
 |UNLOAD &#124; NOUNLOAD|−|||  
-|KEEP_REPLICATION|√|||  
-|KEEP_CDC|√|||  
-|ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|√|||  
-|STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|√|||  
+|KEEP_REPLICATION|J|||  
+|KEEP_CDC|J|||  
+|ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|J|||  
+|STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|J|||  
   
  Weitere Informationen zu RESTORE-Argumenten finden Sie unter [RESTORE-Argumente &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
@@ -280,10 +278,12 @@ Die Aufgabe „Datenbank wiederherstellen“ enthält als Medium eine **URL** , 
 >  Ein Tutorial zur Verwendung von SQL Server 2016 mit Microsoft Azure Blob Storage finden Sie unter [Tutorial: Verwenden von SQL Server 2016-Datenbanken mit Microsoft Azure Blob Storage](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
 ###  <a name="SAS"></a> Erstellen einer Shared Access Signature  
- In dem folgenden Beispiel werden Shared Access Signatures erstellt, die zum Erstellen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen für einen neu erstellten Container verwendet werden können. Das Skript erstellt eine Shared Access Signature, die einer gespeicherten Zugriffsrichtlinie zugeordnet ist. Weitere Informationen finden Sie unter [Shared Access Signatures, Teil 1: Grundlagen zum SAS-Modell](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Dieses Beispiel erfordert Microsoft Azure PowerShell. Informationen zum Installieren und Verwenden von Azure PowerShell finden Sie unter [Installieren und Konfigurieren von Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
+ In dem folgenden Beispiel werden Shared Access Signatures erstellt, die zum Erstellen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen für einen neu erstellten Container verwendet werden können. Das Skript erstellt eine Shared Access Signature, die einer gespeicherten Zugriffsrichtlinie zugeordnet ist. Weitere Informationen finden Sie unter [Shared Access Signatures, Teil 1: Grundlagen zum SAS-Modell](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Das Skript schreibt auch den T-SQL-Befehl, der zum Erstellen der Anmeldeinformationen unter SQL Server erforderlich ist. 
 
 > [!NOTE] 
->  Diese Skripts wurden mit Azure PowerShell 5.0.10586 geschrieben.
+> Dieses Beispiel erfordert Microsoft Azure PowerShell. Informationen zum Installieren und Verwenden von Azure PowerShell finden Sie unter [Installieren und Konfigurieren von Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
+> Diese Skripts wurden mit Azure PowerShell 5.1.15063 überprüft. 
+
 
 **Shared Access Signature, die einer gespeicherten Zugriffsrichtlinie zugeordnet ist**  
   
@@ -316,21 +316,16 @@ New-AzureRmStorageAccount -Name $storageAccountName -ResourceGroupName $resource
 $accountKeys = Get-AzureRmStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
 
 # Create a new storage account context using an ARM storage account  
-$storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Key1 
+$storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].value 
 
 # Creates a new container in blob storage  
 $container = New-AzureStorageContainer -Context $storageContext -Name $containerName  
 $cbc = $container.CloudBlobContainer  
 
 # Sets up a Stored Access Policy and a Shared Access Signature for the new container  
-$permissions = $cbc.GetPermissions();  
-$policyName = $policyName  
-$policy = new-object 'Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicy'  
-$policy.SharedAccessStartTime = $(Get-Date).ToUniversalTime().AddMinutes(-5)  
-$policy.SharedAccessExpiryTime = $(Get-Date).ToUniversalTime().AddYears(10)  
-$policy.Permissions = "Read,Write,List,Delete"  
-$permissions.SharedAccessPolicies.Add($policyName, $policy)  
-$cbc.SetPermissions($permissions);  
+$policy = New-AzureStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission "rwld"
+$sas = New-AzureStorageContainerSASToken -Policy $policyName -Context $storageContext -Container $containerName
+
 
 # Gets the Shared Access Signature for the policy  
 $policy = new-object 'Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicy'  
@@ -343,51 +338,59 @@ $tSql = "CREATE CREDENTIAL [{0}] WITH IDENTITY='Shared Access Signature', SECRET
 $tSql | clip  
 Write-Host $tSql  
 ```  
-  
+
+Nachdem Sie das Skript erfolgreich ausgeführt haben, kopieren Sie den Befehl `CREATE CREDENTIAL` in ein Abfragetool, stellen eine Verbindung mit einer SQL Server-Instanz her und führen den Befehl zum Erstellen der Anmeldeinformationen mit der Shared Access Signature aus. 
+
 ###  <a name="credential"></a> Erstellen von Anmeldeinformationen  
- In den folgenden Beispielen werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen für die Authentifizierung bei einem Microsoft Azure BLOB-Speicherdienst erstellt.  
+ In den folgenden Beispielen werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen für die Authentifizierung bei einem Microsoft Azure BLOB-Speicherdienst erstellt. Führen Sie einen der folgenden Schritte aus: 
   
-1.  **Verwenden der Identität und des Zugriffsschlüssels eines Speicherkontos**  
+1.  **Verwenden von Shared Access Signature**  
+
+   Wenn Sie das oben genannte Skript zum Erstellen der Shared Access Signature ausgeführt haben, kopieren Sie die Anweisung `CREATE CREDENTIAL` in einen mit Ihrer SQL Server-Instanz verbundenen Abfrage-Editor, und führen Sie den Befehl aus. 
+
+   Der folgende T-SQL-Befehl ist ein Beispiel, das die Anmeldeinformationen für die Verwendung einer Shared Access Signature erstellt. 
+
+   ```sql  
+   IF NOT EXISTS  
+   (SELECT * FROM sys.credentials   
+   WHERE name = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>')  
+   CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] 
+      WITH IDENTITY = 'SHARED ACCESS IGNATURE',  
+      SECRET = '<SAS_TOKEN>';  
+   ```  
   
-    ```Transact-sql  
-    IF NOT EXISTS  
-    (SELECT * FROM sys.credentials   
-    WHERE name = '<mycredentialname>')  
-    CREATE CREDENTIAL [<mycredentialname>] WITH IDENTITY = '<mystorageaccountname>'  
-    ,SECRET = '<mystorageaccountaccesskey>';  
-    ```  
+2.  **Verwenden der Identität und des Zugriffsschlüssels eines Speicherkontos**  
   
-2.  **Verwenden von Shared Access Signature**  
-  
-    ```Transact-sql  
-    IF NOT EXISTS  
-    (SELECT * FROM sys.credentials   
-    WHERE name = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>')  
-    CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] WITH IDENTITY = 'SHARED ACCESS SIGNATURE'  
-    ,SECRET = '<SAS_TOKEN>';  
-    ```  
+   ```sql 
+   IF NOT EXISTS  
+   (SELECT * FROM sys.credentials   
+   WHERE name = '<mycredentialname>')  
+   CREATE CREDENTIAL [<mycredentialname>] WITH IDENTITY = '<mystorageaccountname>'  
+   ,SECRET = '<mystorageaccountaccesskey>';  
+   ```  
   
 ###  <a name="complete"></a> Ausführen einer vollständigen Datenbanksicherung  
- In den folgenden Beispielen wird eine vollständige Sicherung der AdventureWorks2016-Datenbank in den Microsoft Azure BLOB-Speicherdienst ausgeführt.  
+ In den folgenden Beispielen wird eine vollständige Sicherung der AdventureWorks2016-Datenbank in den Microsoft Azure BLOB-Speicherdienst ausgeführt. Führen Sie eines der folgenden Verfahren aus:   
   
-1.  **Zur URL unter Verwendung der Identität und des Zugriffsschlüssels des Speicherkontos**  
-  
-    ```Transact-SQL
-    BACKUP DATABASE AdventureWorks2016  
-    TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak'   
-          WITH CREDENTIAL = '<mycredentialname>'   
-         ,COMPRESSION  
-         ,STATS = 5;  
-    GO   
-    ```  
   
 2.  **Zur URL unter Verwendung von Shared Access Signature**  
   
-    ```Transact-SQL  
-    BACKUP DATABASE AdventureWorks2016   
-    TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak';  
-    GO   
-    ```  
+   ```sql  
+   BACKUP DATABASE AdventureWorks2016   
+   TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak';  
+   GO   
+   ```  
+
+1.  **Zur URL unter Verwendung der Identität und des Zugriffsschlüssels des Speicherkontos**  
+  
+   ```sql
+   BACKUP DATABASE AdventureWorks2016  
+   TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak'   
+         WITH CREDENTIAL = '<mycredentialname>'   
+        ,COMPRESSION  
+        ,STATS = 5;  
+   GO   
+   ```  
   
 
   
@@ -397,21 +400,21 @@ Write-Host $tSql
   
 1.  **Von URL unter Verwendung von Shared Access Signature**  
   
-    ```Transact-SQL
-    RESTORE DATABASE AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_16_00_00.bak'   
-    WITH MOVE 'AdventureWorks2016_data' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2016.mdf'  
-    ,MOVE 'AdventureWorks2016_log' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2016.ldf'  
-    ,NORECOVERY  
-    ,REPLACE  
-    ,STATS = 5;  
-    GO   
+   ```sql
+   RESTORE DATABASE AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_16_00_00.bak'   
+   WITH MOVE 'AdventureWorks2016_data' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2016.mdf'  
+   ,MOVE 'AdventureWorks2016_log' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2016.ldf'  
+   ,NORECOVERY  
+   ,REPLACE  
+   ,STATS = 5;  
+   GO   
   
-    RESTORE LOG AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_18_00_00.trn'   
-    WITH   
-    RECOVERY   
-    ,STOPAT = 'May 18, 2015 5:35 PM'   
-    GO  
-    ```  
+   RESTORE LOG AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_18_00_00.trn'   
+   WITH   
+   RECOVERY   
+   ,STOPAT = 'May 18, 2015 5:35 PM'   
+   GO  
+   ```  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server-URL-Sicherung – bewährte Methoden und Problembehandlung](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
@@ -419,4 +422,3 @@ Write-Host $tSql
  [Tutorial: Verwenden von SQL Server 2016-Datenbanken mit Microsoft Azure Blob Storage](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   
-

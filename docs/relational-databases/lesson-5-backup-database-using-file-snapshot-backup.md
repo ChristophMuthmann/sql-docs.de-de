@@ -1,10 +1,13 @@
 ---
 title: 'Lektion 5: Backup einer Datenbank mit Dateimomentaufnahme-Sicherung | Microsoft-Dokumentation'
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3b5e0888f00f34fc3d85f6727cc98903c66c2239
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 910053b9953a1352c98b6b8f67dc844204933b2e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-5-backup-database-using-file-snapshot-backup"></a>Lektion 5: Backup einer Datenbank mit Dateimomentaufnahme-Sicherung
-In dieser Lektion werden Sie in Ihrem virtuellen Azure-Computer Ihre AdventureWorks2014-Datenbank per Dateimomentaufnahme-Sicherung zum Ausführen einer nahezu sofortigen Sicherung mithilfe von Azure-Momentaufnahmen sichern. Weitere Informationen zu Momentaufnahme-Sicherungen finden Sie unter [Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In dieser Lektion werden Sie in Ihrem virtuellen Azure-Computer Ihre AdventureWorks2014-Datenbank per Dateimomentaufnahme-Sicherung zum Ausführen einer nahezu sofortigen Sicherung mithilfe von Azure-Momentaufnahmen sichern. Weitere Informationen zu Momentaufnahme-Sicherungen finden Sie unter [Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
   
 So sichern Sie die AdventureWorks2014-Datenbank mithilfe der Dateimomentaufnahme-Sicherung:  
   

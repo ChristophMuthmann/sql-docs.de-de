@@ -1,5 +1,5 @@
 ---
-title: Catalog. deny_permission (SSISDB-Datenbank) | Microsoft Docs
+title: catalog.deny_permission (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 689a59e92286881fa3be7ee3754a786ccb54ae6c
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 5ba6cb8b0d185ce5c669fd33f563a9bb5754baa2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogdenypermission-ssisdb-database"></a>catalog.deny_permission (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,28 +38,28 @@ catalog.deny_permission [ @object_type = ] object_type
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @object_type =] *Object_type*  
- Der Typ des sicherungsfähigen Objekts. Typen sicherungsfähiger Objekte lauten Ordner (`1`), Projekt (`2`), Umgebung (`3`), und Vorgang (`4`). Die *Object_type* ist **"smallint"***.*  
+ [ @object_type = ] *object_type*  
+ Der Typ des sicherungsfähigen Objekts. Die Typen von sicherungsfähigen Objekten umfassen Ordner (`1`), Projekt (`2`), Umgebung (`3`) und Vorgang (`4`). Das Argument *object_type* ist vom Typ **smallint***.*  
   
- [ @object_id =] *Object_id*  
- Der eindeutige Bezeichner (ID) oder der Primärschlüssel des sicherungsfähigen Objekts. Die *Object_id* ist **"bigint"**.  
+ [ @object_id = ] *object_id*  
+ Der eindeutige Bezeichner (ID) oder der Primärschlüssel des sicherungsfähigen Objekts. Das Argument *object_id* ist vom Typ **bigint**.  
   
- [ @principal_id =] *Principal_id*  
- Die ID des Prinzipals, der verweigert werden soll. Die *Principal_id* ist **Int**.  
+ [ @principal_id = ] *principal_id*  
+ Die ID des Prinzipals, der verweigert werden soll. Das Argument *principal_id* ist vom Typ **int**.  
   
- [ @permission_type =] *Permission_type*  
- Der Typ der Berechtigung, die verweigert werden soll. Die *Permission_type* ist **"smallint"**.  
+ [ @permission_type = ] *permission_type*  
+ Der Typ der Berechtigung, die verweigert werden soll. Das Argument *permission_type* ist vom Typ **smallint**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg)  
   
- 1 (Object_class ist nicht gültig.)  
+ 1 („object_class“ ist ungültig)  
   
- 2 (Object_id ist nicht vorhanden)  
+ 2 („object_id“ ist nicht vorhanden)  
   
- 3 (Prinzipal ist nicht vorhanden)  
+ 3 („principal“ ist nicht vorhanden)  
   
- 4 (Berechtigung ist nicht gültig.)  
+ 4 („permission“ ist ungültig)  
   
  5 (anderer Fehler)  
   
@@ -95,9 +93,8 @@ catalog.deny_permission [ @object_type = ] object_type
 ## <a name="errors-and-warnings"></a>Fehler und Warnungen  
  In der folgenden Liste werden einige Bedingungen beschrieben, die möglicherweise einen Fehler oder eine Warnung auslösen:  
   
--   Wenn Permission_type angegeben wird, verweigert die Prozedur die angegebene Berechtigung, die dem angegebenen Prinzipal für das angegebene Objekt explizit zugewiesen ist. Auch wenn keine solchen Instanzen vorhanden sind, gibt die Prozedur dennoch einen Erfolgscodewert (`0`) zurück.  
+-   Wenn „permission_type“ angegeben wird, verweigert die Prozedur die angegebene Berechtigung, die dem angegebenen Prinzipal für das angegebene Objekt explizit zugewiesen wurde. Auch wenn keine solchen Instanzen vorhanden sind, gibt die Prozedur dennoch einen Erfolgscodewert (`0`) zurück.  
   
--   Wenn Permission_type weggelassen wird, verweigert die Prozedur alle Berechtigungen für den angegebenen Prinzipal mit dem angegebenen Objekt.  
+-   Wenn „permission_type“ ausgelassen wird, verweigert die Prozedur alle Berechtigungen für den angegebenen Prinzipal des angegebenen Objekts.  
   
   
-

@@ -3,8 +3,11 @@ title: Parameter | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1d4e6260a060152121b7b3ec0ef9ac14b2042c3a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 697268f348d50079d2d3f740ea56b9dd28944792
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="parameters"></a>Parameter
-Parameter werden zum Austauschen von Daten zwischen gespeicherten Prozeduren und Funktionen und der Anwendung bzw. dem Tool verwendet, von der bzw. von dem die gespeicherte Prozedur oder Funktion aufgerufen wurde. 
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Parameter werden zum Austauschen von Daten zwischen gespeicherten Prozeduren und Funktionen und der Anwendung bzw. dem Tool verwendet, von der bzw. von dem die gespeicherte Prozedur oder Funktion aufgerufen wurde: 
 
 *  Eingabeparameter ermöglichen dem Aufrufer die Übergabe eines Datenwerts an die gespeicherte Prozedur oder die Funktion.
 *  Ausgabeparameter ermöglichen der gespeicherten Prozedur das Übergeben eines Datenwerts oder einer Cursorvariablen zurück an den Aufrufer. Benutzerdefinierte Funktionen können keine Ausgabeparameter angeben.

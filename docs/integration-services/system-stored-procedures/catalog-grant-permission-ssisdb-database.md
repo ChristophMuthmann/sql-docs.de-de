@@ -1,5 +1,5 @@
 ---
-title: Catalog. grant_permission (SSISDB-Datenbank) | Microsoft Docs
+title: catalog.grant_permission (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,30 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - grant_permission stored procedure [Integration Services]
 - catalog.grant_permission stored procedure [Integration Services]
 ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
-ms.openlocfilehash: 5f9bb38521631bcc60d39fba747f17b86183545d
-ms.contentlocale: de-de
-ms.lasthandoff: 09/13/2017
-
+ms.openlocfilehash: 6d9115186c35eaae94e36cc079753bbdbe798638
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cataloggrantpermission-ssisdb-database"></a>catalog.grant_permission (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Gewährt eine Berechtigung für ein sicherungsfähiges Objekt in der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Katalog.  
+  Gewährt eine Berechtigung für ein sicherungsfähiges Objekt im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,28 +41,28 @@ catalog.grant_permission [ @object_type = ] object_type
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @object_type =] *Object_type*  
- Der Typ des sicherungsfähigen Objekts. Typen sicherungsfähiger Objekte lauten Ordner (`1`), Projekt (`2`), Umgebung (`3`), und Vorgang (`4`). Die *Object_type* ist **"smallint"***.*  
+ [ @object_type = ] *object_type*  
+ Der Typ des sicherungsfähigen Objekts. Die Typen von sicherungsfähigen Objekten umfassen Ordner (`1`), Projekt (`2`), Umgebung (`3`) und Vorgang (`4`). Das Argument *object_type* ist vom Typ **smallint***.*  
   
- [ @object_id =] *Object_id*  
- Der eindeutige Bezeichner (ID) des sicherungsfähigen Objekts. Die *Object_id* ist **"bigint"**.  
+ [ @object_id = ] *object_id*  
+ Der eindeutige Bezeichner (ID) des sicherungsfähigen Objekts. Das Argument *object_id* ist vom Typ **bigint**.  
   
- [ @principal_id =] *Principal_id*  
- Die ID des Prinzipals, dem eine Berechtigung gewährt werden soll. Die *Principal_id* ist **Int**.  
+ [ @principal_id = ] *principal_id*  
+ Die ID des Prinzipals, dem eine Berechtigung gewährt werden soll. Das Argument *principal_id* ist vom Typ **int**.  
   
- [ @permission_type =] *Permission_type*  
- Der Typ der zu gewährenden Berechtigung. Die *Permission_type* ist **"smallint"**.  
+ [ @permission_type = ] *permission_type*  
+ Der Typ der zu gewährenden Berechtigung. Das Argument *permission_type* ist vom Typ **smallint**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg)  
   
- 1 (Object_class ist ungültig.)  
+ 1 („object_class“ ist ungültig)  
   
- 2 (Object_id ist nicht vorhanden)  
+ 2 („object_id“ ist nicht vorhanden)  
   
- 3 (Prinzipal ist nicht vorhanden)  
+ 3 („principal“ ist nicht vorhanden)  
   
- 4 (Berechtigung ist ungültig.)  
+ 4 („permission“ ist ungültig)  
   
  5 (anderer Fehler)  
   
@@ -80,7 +78,7 @@ catalog.grant_permission [ @object_type = ] object_type
   
 -   Mitgliedschaft in der Serverrolle **sysadmin**  
 
-Dieses Verfahren kann nicht von Anmeldungen, die von SQL Server authentifiziert wurden, nicht aufgerufen werden. Er kann nicht von der Anmeldenamens "sa" aufgerufen werden.
+Dieses Verfahren kann nicht durch Anmeldevorgänge aufgerufen werden, die von SQL Server authentifiziert wurden. Es kann nicht durch die SA-Anmeldung aufgerufen werden.
   
 ## <a name="remarks"></a>Hinweise  
  Mit dieser gespeicherten Prozedur können Sie die in der folgenden Tabelle beschriebenen Typen von Berechtigungen gewähren:  
@@ -101,4 +99,3 @@ Dieses Verfahren kann nicht von Anmeldungen, die von SQL Server authentifiziert 
  Entsprechende Fehler und Meldungen finden Sie im Abschnitt "Rückgabecodewerte".  
   
   
-

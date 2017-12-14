@@ -2,9 +2,12 @@
 title: "Ändern von Schriftfarbe, Schriftgrad und Schriftschnitt | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 44b149ed19e4c5eefc4ca2b0298fc8d63342b2c0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0b27197892a40573ba8a164c54392f90158c218c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="change-font-color-size-and-style"></a>Ändern von Schriftfarbe, Schriftgrad und Schriftschnitt
-  Sie können die Textdarstellung im Editor und an anderen Stellen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]anpassen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können die Textdarstellung im Editor und an anderen Stellen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] anpassen.  
   
 ### <a name="to-change-font-color-size-and-style-in-the-editor"></a>So ändern Sie Schriftfarbe, Schriftgrad und Schriftschnitt im Editor  
   

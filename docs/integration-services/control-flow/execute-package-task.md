@@ -1,5 +1,5 @@
 ---
-title: "Tasks \"Paket ausführen\" | Microsoft Docs"
+title: "Paket ausführen (Task) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - child packages
 - parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 70b2679a86d46c731617d7f607541f60886afb40
-ms.contentlocale: de-de
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: a51a1ac9bbe88d5b2d5718b4c02181cc33dd7f89
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="execute-package-task"></a>Paket ausführen (Task)
   Der Task Paket ausführen erweitert die Unternehmensfunktionen von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , indem Paketen das Ausführen anderer Pakete als Teil eines Workflows ermöglicht wird.  
@@ -55,7 +53,7 @@ ms.lasthandoff: 08/11/2017
  Der Task "Paket ausführen" kann untergeordnete Pakete ausführen, die im gleichen Projekt enthalten sind, das auch das übergeordnete Paket enthält. Sie wählen ein untergeordnetes Paket vom Projekt aus, indem Sie die **ReferenceType** -Eigenschaft auf **Projektverweis**und dann die **PackageNameFromProjectReference** -Eigenschaft entsprechend festlegen.  
   
 > [!NOTE]  
->  Die Option **ReferenceType** ist schreibgeschützt und auf **Externer Verweis** festgelegt, wenn das Projekt, das das Paket enthält, nicht in das Projektbereitstellungsmodell konvertiert wurde. [Bereitstellen von Integrationsservices (SSIS)-Projekten und Paketen](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+>  Die Option **ReferenceType** ist schreibgeschützt und auf **Externer Verweis** festgelegt, wenn das Projekt, das das Paket enthält, nicht in das Projektbereitstellungsmodell konvertiert wurde. [Stellen Sie SQL Server Integration Services-Projekte und Pakete (SSIS) bereit](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  Mit dem Task „Paket ausführen“ können Pakete ausgeführt werden, die in der msdb-Datenbank von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert sind, sowie im Dateisystem gespeicherte Pakete. Der Task stellt mithilfe eines OLE DB-Verbindungs-Managers eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder mit einem Dateiverbindungs-Manager her, um auf das Dateisystem zuzugreifen. Weitere Informationen finden Sie unter [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) und [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
   
@@ -162,7 +160,7 @@ ms.lasthandoff: 08/11/2017
  Wählen Sie **Projektverweis** für untergeordnete Pakete im Projekt aus. Wählen Sie **Externer Verweis** für untergeordnete Pakete aus, die sich außerhalb des Pakets befinden.  
   
 > [!NOTE]  
->  Die Option **ReferenceType** ist schreibgeschützt und auf **Externer Verweis** festgelegt, wenn das Projekt, das das Paket enthält, nicht in das Projektbereitstellungsmodell konvertiert wurde. [Bereitstellen von Integrationsservices (SSIS)-Projekten und Paketen](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+>  Die Option **ReferenceType** ist schreibgeschützt und auf **Externer Verweis** festgelegt, wenn das Projekt, das das Paket enthält, nicht in das Projektbereitstellungsmodell konvertiert wurde. [Stellen Sie SQL Server Integration Services-Projekte und Pakete (SSIS) bereit](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  **Kennwort**  
  Wenn das untergeordnete Paket kennwortgeschützt ist, stellen Sie das Kennwort für das untergeordnete Paket bereit, oder klicken Sie auf die Schaltfläche mit den drei Punkten (...), und erstellen Sie ein neues Kennwort für das untergeordnete Paket.  
@@ -195,16 +193,16 @@ ms.lasthandoff: 08/11/2017
   
 ##### <a name="location--sql-server"></a>Location = SQL Server  
  **Verbindung**  
- Wählen Sie einen OLE DB-Verbindungs-Manager in der Liste aus, oder klicken Sie auf \< **neue Verbindung...** > um einen neuen Verbindungs-Manager zu erstellen.  
+ Wählen Sie in der Liste einen OLE DB-Verbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
- **Verwandte Themen:** [OLE DB-Verbindungs-Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+ **Verwandte Themen:** [OLE DB-Verbindungs-Manager konfigurieren](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
  **PackageName**  
  Geben Sie den Namen des untergeordneten Pakets an, oder klicken Sie auf die Schaltfläche mit den drei Punkten, um nach dem Paket zu suchen.  
   
 ##### <a name="location--file-system"></a>Location = File system  
  **Verbindung**  
- Wählen Sie einen Dateiverbindungs-Manager in der Liste aus, oder klicken Sie auf \< **neue Verbindung...** > um einen neuen Verbindungs-Manager zu erstellen.  
+ Wählen Sie in der Liste einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
  **Verwandte Themen:** [Dateiverbindungs-Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -214,7 +212,7 @@ ms.lasthandoff: 08/11/2017
 ###  <a name="parameter"></a> Festlegen der Optionen auf der Seite "Parameterbindungen"  
  Sie können Werte aus dem übergeordneten Paket oder dem Projekt an das untergeordnete Paket übergeben. Das Projekt muss das Projektbereitstellungsmodell verwenden, und das untergeordnete Paket muss im gleichen Projekt enthalten sein wie das übergeordnete Paket.  
   
- Informationen zum Konvertieren von Projekten in das projektbereitstellungsmodell finden Sie unter [Bereitstellen von Integration Services (SSIS)-Projekten und Paketen](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+ Weitere Informationen zum Konvertieren eines Projekts in das Projektbereitstellungsmodell finden Sie unter [Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md) (Bereitstellen von SQL Server Integration Services-Projekten und -Paketen [SSIS]).  
   
  **Untergeordneter Paketparameter**  
  Geben Sie einen Namen für den untergeordneten Paketparameter ein, oder wählen Sie diesen aus.  
@@ -229,4 +227,3 @@ ms.lasthandoff: 08/11/2017
  Klicken Sie, um eine Zuordnung zwischen einem Parameter oder einer Variable und einem untergeordneten Paketparameter zu entfernen.  
   
   
-

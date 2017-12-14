@@ -2,9 +2,12 @@
 title: Skript zum Erteilen von Oracle-Berechtigungen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 847fc8a563be78e9dd354d2a1d255945a014fa2c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a6706467d2d7860b431513be88149cc8c270230f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="script-to-grant-oracle-permissions"></a>Skript zum Erteilen von Oracle-Berechtigungen
-  Das in diesem Thema bereitgestellte Skript wird während der Konfiguration von Oracle-Datenbanken verwendet, die Daten mithilfe der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikation veröffentlichen. Nach der Installation ist das Skript auch in folgendem Verzeichnis verfügbar: *\<Laufwerk>*:\\\Programme\Microsoft SQL Server\\*\<Instanzname>*\MSSQL\Install\oracleadmin.sql. Weitere Informationen zum Konfigurieren der Oracle-Datenbank finden Sie unter [Konfigurieren eines Oracle-Verlegers](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das in diesem Thema bereitgestellte Skript wird während der Konfiguration von Oracle-Datenbanken verwendet, die Daten mithilfe der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Replikation veröffentlichen. Nach der Installation ist das Skript auch in folgendem Verzeichnis verfügbar: *\<Laufwerk>*:\\\Programme\Microsoft SQL Server\\*\<Instanzname>*\MSSQL\Install\oracleadmin.sql. Weitere Informationen zum Konfigurieren der Oracle-Datenbank finden Sie unter [Konfigurieren eines Oracle-Verlegers](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
 > [!NOTE]  
 >  Dieses Skript enthält die `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`-Anweisung. Diese Anweisung ist für die von der Transaktionsreplikation verwendeten Trigger erforderlich. Wenn Sie ausschließlich mit Momentaufnahmereplikation arbeiten, können Sie diese Zeile aus dem Skript entfernen.  

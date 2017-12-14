@@ -1,5 +1,5 @@
 ---
-title: Integration Services-Pfade | Microsoft Docs
+title: SQL Server Integration Services-Pfade | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,24 +22,23 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 541c8faa4c878922411680646f3fa7a557eefe0f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 388a88d1f9a7ad6b18b2f04a702d2198c644e4fe
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-paths"></a>SQL Server Integration Services-Pfade
   Ein Pfad verbindet zwei Komponenten in einem Datenfluss, indem die Ausgabe einer Datenflusskomponente mit der Eingabe einer anderen Komponente verbunden wird. Ein Pfad weist eine Quelle und ein Ziel auf. Wenn z. B. ein Pfad eine Verbindung mit einer OLE DB-Quelle und einer Transformation zum Sortieren herstellt, ist die OLE DB-Quelle die Quelle des Pfads, und die Transformation zum Sortieren ist das Ziel des Pfads. Die Quelle ist die Komponente, wo der Pfad beginnt, und das Ziel ist die Komponente, wo der Pfad endet.  
   
  Wenn Sie ein Paket im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer ausführen, können Sie die Daten in einem Datenfluss anzeigen, indem Sie Daten-Viewer an einen Pfad anfügen. Ein Daten-Viewer kann zur Anzeige von Daten in einem Raster konfiguriert werden. Ein Daten-Viewer ist ein hilfreiches Tool zum Debuggen. Weitere Informationen finden Sie unter [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md).  
   
-## <a name="configure-the-path"></a>Konfigurieren Sie den Pfad  
+## <a name="configure-the-path"></a>Konfigurieren des Pfads  
  Der [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer stellt das Dialogfeld **Datenflusspfad-Editor** bereit, in dem Sie Pfadeigenschaften festlegen, die Metadaten der Datenspalten, die über den Pfad übergeben werden, anzeigen sowie Daten-Viewer konfigurieren können.  
   
  Zu den konfigurierbaren Pfadeigenschaften gehört der Name, die Beschreibung und die Anmerkung des Pfads. Pfade können auch programmgesteuert konfiguriert werden. Weitere Informationen finden Sie unter [Programmgesteuertes Verbinden von Datenflusskomponenten](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
@@ -49,7 +47,7 @@ ms.lasthandoff: 09/26/2017
   
  Die Metadaten zeigen den Namen, den Datentyp, die Genauigkeit, die Dezimalstellen, die Länge, die Codepage und die Quellkomponente jeder Spalte in der Ausgabe der vorherigen Komponente an. Die Quellkomponente ist jene Datenflusskomponente, die die Spalte erstellt hat. Dies kann, muss aber nicht die erste Komponente im Datenfluss sein. Beispielsweise werden mit einer Transformation für UNION ALL und einer Transformation zum Sortieren eigene Spalten erstellt, die die Quelle der Ausgabespalten sind. Dagegen können Spalten mit einer Transformation für das Kopieren von Spalten durchlaufen werden, ohne sie zu ändern. Es können auch neue Spalten erstellt werden, indem Eingabespalten kopiert werden. Die Transformation für das Kopieren von Spalten ist nur für neue Spalten die Quellkomponente.  
 
-## <a name="set-the-properties-of-a-path-with-the-data-flow-path-editor"></a>Legen Sie die Eigenschaften eines Pfads mit dem Daten Datenflusspfad-Editor
+## <a name="set-the-properties-of-a-path-with-the-data-flow-path-editor"></a>Festlegen der Eigenschaften eines Pfads mit dem Datenflusspfad-Editor
 Mit Pfaden werden zwei Datenflusskomponenten verbunden. Wenn Sie Pfadeigenschaften festlegen möchten, muss der Datenfluss mindestens zwei verbundene Datenflusskomponenten enthalten.
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
@@ -64,7 +62,7 @@ Mit Pfaden werden zwei Datenflusskomponenten verbunden. Wenn Sie Pfadeigenschaft
   
 6.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
 
-## <a name="general-page---data-flow-path-editor"></a>Seite "Allgemein" - Daten Datenflusspfad-Editors
+## <a name="general-page---data-flow-path-editor"></a>Seite „Allgemein“ – Datenflusspfad-Editor
 Mithilfe des Dialogfelds **Datenflusspfad-Editor** legen Sie Pfadeigenschaften fest, zeigen Metadaten an und verwalten die mit dem Pfad verknüpften Daten-Viewer.  
   
  Mit dem Knoten **Allgemein** des Dialogfelds **Datenflusspfad-Editor** werden der Pfad benannt und beschrieben und die Optionen für die Pfadanmerkungen angegeben.  
@@ -91,7 +89,7 @@ Mithilfe des Dialogfelds **Datenflusspfad-Editor** legen Sie Pfadeigenschaften f
  **SourceName**  
  Zeigt die Ausgabe an, die den Beginn des Pfads angibt.  
  
-## <a name="metadata-page---data-flow-path-editor"></a>Seite "Metadaten" – Daten Datenflusspfad-Editors
+## <a name="metadata-page---data-flow-path-editor"></a>Seite „Metadaten“ – Datenflusspfad-Editor
 Verwenden Sie die Seite **Metadaten** im Dialogfeld **Datenflusspfad-Editor** , um die Metadaten der Pfadspalten anzuzeigen.  
   
 ### <a name="options"></a>enthalten  
@@ -131,7 +129,7 @@ Verwenden Sie die Seite **Metadaten** im Dialogfeld **Datenflusspfad-Editor** , 
  **In Zwischenablage kopieren**  
  Kopiert die Spaltenmetadaten in die Zwischenablage. Standardmäßig werden alle Metadatenzeilen in der aktuell angezeigten Reihenfolge kopiert und sortiert.  
  
-## <a name="data-viewers-page---data-flow-path-editor"></a>Seite der Daten-Viewer - Daten Datenflusspfad-Editors
+## <a name="data-viewers-page---data-flow-path-editor"></a>Seite „Daten-Viewer“ – Datenflusspfad-Editor
 Verwenden Sie die Seite **Daten-Viewer** des Dialogfelds **Datenflusspfad-Editor** , um die Daten-Viewer zu verwalten, die dem Pfad zugeordnet sind.  
   
 ### <a name="options"></a>enthalten  
@@ -165,4 +163,3 @@ Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
 |PathAnnotation|Ganze Zahl (Enumeration)|Ein Wert, der angibt, ob eine Anmerkung mit dem Pfad auf der Designeroberfläche angezeigt werden soll. Die möglichen Werte sind **AsNeeded**, **SourceName**, **PathName**und **Never**. Der Standardwert ist **AsNeeded**.|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|Die dem Pfad zugeordnete Eingabe.|  
 |SourceName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|Die dem Pfad zugeordnete Ausgabe.|  
-

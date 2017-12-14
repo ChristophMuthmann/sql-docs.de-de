@@ -122,6 +122,7 @@
 
 ### [Vermeiden von Fehlern mit Benutzerpaketbibliotheken für R](r/packages-installed-in-user-libraries.md)
 
+### [Hinzufügen der SQLRUserGroup als Datenbankbenutzer](r/add-sqlrusergroup-to-database.md)
 
 ## Durchsuchen und Modellieren von Daten
 

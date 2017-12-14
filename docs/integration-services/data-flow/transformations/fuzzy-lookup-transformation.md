@@ -1,5 +1,5 @@
 ---
-title: "Transformation für Fuzzysuche | Microsoft Docs"
+title: "Transformation für Fuzzysuche | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -36,17 +35,16 @@ helpviewer_keywords:
 - missing values replaced [Integration Services]
 - similarity thresholds [Integration Services]
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
-caps.latest.revision: 75
+caps.latest.revision: "75"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: ff5f003749572b16e750b5940cd0f05b0b879fda
-ms.contentlocale: de-de
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 81427a1ae80ddf6a3d3135e8d814dc9944413e60
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="fuzzy-lookup-transformation"></a>Transformation für Fuzzysuche
   Die Transformation für Fuzzysuche führt Aufgaben zum Datencleanup durch, wie das Standardisieren von Daten, das Korrigieren von Daten und das Bereitstellen fehlender Werte.  
@@ -62,7 +60,7 @@ ms.lasthandoff: 08/19/2017
   
  Diese Transformation weist je eine Eingabe und eine Ausgabe auf.  
   
- Für die Fuzzyübereinstimmung können nur Spalten mit den Datentypen **DT_WSTR** und **DT_STR** verwendet werden. Die genaue Übereinstimmung kann Spalten aller DTS-Datentypen verwendet, mit Ausnahme von **DT_TEXT**, **DT_NTEXT**und **DT_IMAGE**. Weitere Informationen finden Sie unter [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md). Spalten, die einen Join zwischen der Eingabe- und der Verweistabelle aufweisen, müssen kompatible Datentypen enthalten. So ist beispielsweise das Verknüpfen einer Spalte mit dem DTS-Datentyp **DT_WSTR** mit einer Spalte mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** gültig, das Verknüpfen einer Spalte mit dem **DT_WSTR** mit einer Spalte mit dem **int** -Datentyp ist jedoch ungültig.  
+ Für die Fuzzyübereinstimmung können nur Spalten mit den Datentypen **DT_WSTR** und **DT_STR** verwendet werden. Die genaue Übereinstimmung kann Spalten aller DTS-Datentypen verwendet, mit Ausnahme von **DT_TEXT**, **DT_NTEXT**und **DT_IMAGE**. Weitere Informationen finden Sie unter [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md). Spalten, die einen Join zwischen der Eingabe- und der Verweistabelle aufweisen, müssen kompatible Datentypen enthalten. So ist beispielsweise das Verknüpfen einer Spalte mit dem DTS-Datentyp **DT_WSTR** mit einer Spalte mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** data type, but invalid to join a column with the **DT_WSTR** mit einer Spalte mit dem **int** data type.  
   
  Sie können diese Transformation anpassen, indem Sie den maximalen Umfang des Arbeitsspeichers, den Zeilenvergleichsalgorithmus sowie den Zwischenspeicher für Indizes und Verweistabellen, die von der Transformation verwendet werden, angeben.  
   
@@ -223,8 +221,7 @@ ms.lasthandoff: 08/19/2017
   
 ## <a name="see-also"></a>Siehe auch  
  [Transformation für Suche](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
- [Transformation für Fuzzygruppierung](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
- [Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
+ [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
+ [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

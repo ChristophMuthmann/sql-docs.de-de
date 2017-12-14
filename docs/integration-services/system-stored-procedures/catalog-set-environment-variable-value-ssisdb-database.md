@@ -1,5 +1,5 @@
 ---
-title: Catalog. set_environment_variable_value (SSISDB-Datenbank) | Microsoft Docs
+title: catalog.set_environment_variable_value (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 1d493dad-9d9c-4f0a-87e2-20a2d4a35f99
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7f30937f6dca19f82ccb2dc8ac998dd9f9510c0f
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 05d356be0d0f3c5327c77653aeed1fde7f6f3ef8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogsetenvironmentvariablevalue-ssisdb-database"></a>catalog.set_environment_variable_value (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,16 +38,16 @@ catalog.set_environment_variable_value [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @folder_name =] *Ordnername*  
+ [ @folder_name = ] *folder_name*  
  Der Name des Ordners, der die Umgebung enthält. Der *folder_name* ist **nvarchar(128)**.  
   
- [ @environment_name =] *Environment_name*  
+ [ @environment_name = ] *environment_name*  
  Der Name der Umgebung. Der *environment_name* ist **nvarchar(128)**.  
   
- [ @variable _name =] *Variable _name*  
+ [ @variable _name = ] *variable _name*  
  Der Name der Umgebungsvariablen. Der *variable _name* ist **nvarchar(128)**.  
   
- [ @value =] *Wert*  
+ [ @value = ] *value*  
  Der Wert der Umgebungsvariablen. Der *value* ist **sql_variant**.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
@@ -79,4 +77,3 @@ catalog.set_environment_variable_value [ @folder_name = ] folder_name
 -   Der Benutzer verfügt nicht über die entsprechenden Berechtigungen.  
   
   
-

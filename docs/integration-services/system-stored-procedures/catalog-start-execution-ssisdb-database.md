@@ -1,5 +1,5 @@
 ---
-title: Catalog. start_execution (SSISDB-Datenbank) | Microsoft Docs
+title: catalog.start_execution (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 8edb51596198f27f00c1b78ddc8b3075ad035143
-ms.contentlocale: de-de
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: a09c765e61b71586802d31b31917644a0f336f0c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogstartexecution-ssisdb-database"></a>catalog.start_execution (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,17 +35,17 @@ catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [@execution_id =] *Execution_id*  
+ [@execution_id =] *execution_id*  
  Der eindeutige Bezeichner für die Instanz der Ausführung. Der *execution_id* ist **bigint**.
  
- [@retry_count =] *Retry_count*  
- Die Wiederholungsanzahl, wenn die Ausführung ein Fehler auftritt. Er wird wirksam, nur, wenn die Ausführung in horizontal skalieren ist. Dieser Parameter ist optional. Wenn nicht angegeben, wird der Wert auf 0 festgelegt. Die *Retry_count* ist **Int**.
+ [@retry_count =] *retry_count*  
+ Die Anzahl von Wiederholungsversuchen, wenn bei der Ausführung ein Fehler auftritt. Dieses Argument wird nur wirksam, wenn die Ausführung in Scale Out erfolgt. Dieser Parameter ist optional. Wenn es nicht angegeben wird, wird der Wert auf 0 festgelegt. Das Argument *retry_count* ist vom Typ **Int**.
   
 ## <a name="remarks"></a>Hinweise  
- Eine Ausführung wird verwendet, geben Sie die Parameterwerte, die von einem Paket während einer einzelnen Instanz der paketausführung verwendet wird. Nachdem eine Instanz der Ausführung erstellt wurde, wird möglicherweise das entsprechende Projekt erneut bereitgestellt, bevor die Instanz gestartet wurde. In diesem Fall verweist auf die Instanz der Ausführung eines Projekts, das veraltet ist. Diese ungültige Verweis bewirkt, dass die gespeicherte Prozedur fehlschlägt.  
+ Eine Ausführung wird verwendet, um die Parameterwerte anzugeben, die von einem Paket während einer einzelnen Instanz der Paketausführung verwendet werden. Nachdem eine Instanz der Ausführung erstellt wurde, wird möglicherweise das entsprechende Projekt erneut bereitgestellt, bevor die Instanz gestartet wurde. In diesem Fall verweist die Instanz der Ausführung auf ein veraltetes Projekt. Dieser ungültige Verweis führt dazu, dass bei der gespeicherten Prozedur ein Fehler auftritt.  
   
 > [!NOTE]  
->  Ausführungen können nur einmal gestartet werden. Um eine Instanz der Ausführung zu starten, muss er den Status "erstellt" (Wert `1` in der **Status** Spalte die [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) anzeigen).  
+>  Ausführungen können nur einmal gestartet werden. Um eine Instanz der Ausführung zu starten, muss sie den Zustand „Erstellt“ (ein Wert `1` in der Spalte **status** der Sicht [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md)) aufweisen.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird catalog.create_execution aufgerufen, um eine Ausführungsinstanz für das Paket Child1.dtsx zu erstellen. Das Paket ist in Integration Services Projekt1 enthalten. Im Beispiel wird catalog.set_execution_parameter_value aufgerufen, um Werte für die Parameter Parameter1, Parameter2 und LOGGING_LEVEL festzulegen. Im Beispiel wird catalog.start_execution aufgerufen, um eine Instanz der Ausführung zu starten.  
@@ -97,4 +95,3 @@ GO
 -   Die der Instanz der Ausführung zugeordnete Projektversion ist veraltet. Es kann nur die aktuelle Version eines Projekts ausgeführt werden.  
   
   
-

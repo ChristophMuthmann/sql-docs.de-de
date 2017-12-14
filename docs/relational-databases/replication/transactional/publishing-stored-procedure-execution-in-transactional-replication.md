@@ -2,9 +2,12 @@
 title: "Veröffentlichen der Ausführung von gespeicherten Prozeduren in der Transaktionsreplikation | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d92bf7d6279cc367e3ea2d67d19e78d362a39151
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 935ef9f319559ee9e021e9cedbb6150c7334d1f6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Veröffentlichen der Ausführung von gespeicherten Prozeduren in der Transaktionsreplikation
-  Wenn Sie gespeicherte Prozeduren verwenden, die auf dem Verleger ausgeführt werden und sich auf die veröffentlichten Tabellen auswirken, sollten Sie darüber nachdenken, diese gespeicherten Prozeduren als Artikel für die Ausführung einer gespeicherten Prozedur in Ihre Veröffentlichung aufzunehmen. Die Definition der Prozedur (die CREATE PROCEDURE-Anweisung) wird beim Initialisieren des Abonnements auf den Abonnenten repliziert. Wenn die Prozedur dann auf dem Verleger ausgeführt wird, führt die Replikation auch die entsprechende Prozedur auf dem Abonnenten aus. Dies kann in den Fällen, in denen umfangreiche Batchvorgänge ausgeführt werden, zu einer deutlichen Leistungssteigerung führen, da nur die Ausführung der Prozedur repliziert wird und sich das Replizieren der einzelnen Änderungen für jede Zeile erübrigt. Nehmen wir z. B. an, Sie erstellen in der Veröffentlichungsdatenbank die folgende gespeicherte Prozedur:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Wenn Sie gespeicherte Prozeduren verwenden, die auf dem Verleger ausgeführt werden und sich auf die veröffentlichten Tabellen auswirken, sollten Sie darüber nachdenken, diese gespeicherten Prozeduren als Artikel für die Ausführung einer gespeicherten Prozedur in Ihre Veröffentlichung aufzunehmen. Die Definition der Prozedur (die CREATE PROCEDURE-Anweisung) wird beim Initialisieren des Abonnements auf den Abonnenten repliziert. Wenn die Prozedur dann auf dem Verleger ausgeführt wird, führt die Replikation auch die entsprechende Prozedur auf dem Abonnenten aus. Dies kann in den Fällen, in denen umfangreiche Batchvorgänge ausgeführt werden, zu einer deutlichen Leistungssteigerung führen, da nur die Ausführung der Prozedur repliziert wird und sich das Replizieren der einzelnen Änderungen für jede Zeile erübrigt. Nehmen wir z. B. an, Sie erstellen in der Veröffentlichungsdatenbank die folgende gespeicherte Prozedur:  
   
 ```  
 CREATE PROC give_raise AS  

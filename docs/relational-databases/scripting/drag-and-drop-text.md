@@ -2,9 +2,12 @@
 title: Verschieben von Text mit Drag und Drop | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 286ad84499dec5341ed3757d00eb7badcb56732c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9b55cb9cab0176d4d6e58870c087e75d2626822a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="drag-and-drop-text"></a>Verschieben von Text mit Drag und Drop
-  Sie können Text auswählen und dann mit Drag und Drop an eine andere Position verschieben. Das Verschieben von Text mit Drag und Drop ist für Folgendes möglich:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können Text auswählen und dann mit Drag und Drop an eine andere Position verschieben. Das Verschieben von Text mit Drag und Drop ist für Folgendes möglich:  
   
 -   Aus dem Objekt-Explorer in den Editor, um eine Abfrage zu erstellen.  
   

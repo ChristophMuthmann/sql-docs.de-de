@@ -1,5 +1,5 @@
 ---
-title: Benutzerdefinierte Eigenschaften CDC-Steuerungstasks | Microsoft Docs
+title: Benutzerdefinierte Eigenschaften des CDC-Steuerungstasks | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2ed58b63b6bbeff9ffea04325c94d85fe06de1ab
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2d48d78bd1e2e6d86a8416564d5ef7ee22a785d0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cdc-control-task-custom-properties"></a>Benutzerdefinierte Eigenschaften des CDC-Steuerungstasks
   In der folgenden Tabelle werden die benutzerdefinierten Eigenschaften des CDC-Steuerungstasks beschrieben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
@@ -41,8 +39,7 @@ ms.lasthandoff: 08/03/2017
 |CommandTimeout|integer|Dieser Wert gibt beim Kommunizieren mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank das Timeout (in Sekunden) an. Dieser Wert wird verwendet, wenn die Antwortzeit der Datenbank sehr langsam ist und der Standardwert (30 Sekunden) nicht ausreicht.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [CDC-Steuerungstask](../../integration-services/control-flow/cdc-control-task.md)   
+ [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)   
  [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)  
   
   
-

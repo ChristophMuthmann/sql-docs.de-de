@@ -2,9 +2,12 @@
 title: CurvePolygon | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: spatial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 65ca3c0fd622dd691424b555972dfde42903d07b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5c87bfe2f5342cc9edceb6a472cba8579c09c220
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="curvepolygon"></a>CurvePolygon
-  Ein **CurvePolygon** ist eine von einem äußeren Begrenzungsring und null oder mehr inneren Ringe definierte topologisch geschlossene Fläche.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Ein **CurvePolygon** ist eine von einem äußeren Begrenzungsring und null (0) oder mehr inneren Ringen definierte topologisch geschlossene Fläche.  
   
 > [!IMPORTANT]  
 >  Laden Sie das Whitepaper [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Neue räumliche Funktionen in SQL Server 2012 **herunter, um eine ausführliche Beschreibung und Beispiele für die in** eingeführten räumlichen Funktionen (z.B. [CurvePolygon](http://go.microsoft.com/fwlink/?LinkId=226407)-Untertyp) zu erhalten.  

@@ -2,9 +2,12 @@
 title: SQL Server PowerShell-Anbieter | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fe5587212030b01ec03aa357e3bf4ff7f6ac0e73
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4aa7050589878d109ef826bad2c9385abc00b5f9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell-Anbieter
-  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anbieter für Windows PowerShell macht die Hierarchie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekten auf ähnliche Weise wie in Dateisystempfaden verfügbar. Mithilfe der Pfade können Sie Objekte finden und dann Methoden der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object-Modelle (SMO) verwenden, um Aktionen für die Objekte auszuführen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anbieter für Windows PowerShell macht die Hierarchie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekten in Pfaden verfügbar, die Dateisystempfaden ähneln. Mithilfe der Pfade können Sie Objekte finden und dann Methoden der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object-Modelle (SMO) verwenden, um Aktionen für die Objekte auszuführen.  
   
 ## <a name="benefits-of-the-sql-server-powershell-provider"></a>Vorteile des SQL Server PowerShell-Anbieters  
  Die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anbieter implementierten Pfade ermögliche das einfache und interaktive Überprüfen aller Objekte in einer Instanz von SQL Server. Sie können in den Pfaden navigieren, indem Sie Windows PowerShell-Aliase ähnlich den Befehlen verwenden, die Sie normalerweise zum Navigieren in den Dateisystempfaden verwenden.  

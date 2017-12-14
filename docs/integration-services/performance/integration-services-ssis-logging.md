@@ -1,5 +1,5 @@
 ---
-title: SQL Server Integration Services (SSIS)-Protokollierung | Microsoft Docs
+title: Integration Services-Protokollierung (SSIS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -32,17 +31,16 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 22c1126b8d5555dc743f7c8906230cf5dbcb08a8
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 772217a434d69d8849fdaefd66108365c25e46e7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services-Protokollierung (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält Protokollanbieter, mit denen Sie die Protokollierung in Paketen, Containern und Tasks implementieren können. Mit der Protokollierung können Sie Laufzeitinformationen zu einem Paket aufzeichnen, damit Sie ein Paket bei jeder Ausführung überwachen und Probleme behandeln können. Beispielsweise können in einem Protokoll der Name des Operators, der das Paket ausgeführt hat, und der Zeitpunkt, zu dem die Paketausführung begann und endete, aufgezeichnet werden.  
@@ -141,7 +139,7 @@ ms.lasthandoff: 08/03/2017
 |**OnVariableValueChanged**|Schreibt einen Protokolleintrag, wenn sich der Wert einer Variablen ändert.|  
 |**OnWarning**|Schreibt einen Protokolleintrag, wenn eine Warnung auftritt.|  
 |**PipelineComponentTime**|Schreibt für jede Datenflusskomponente einen Protokolleintrag für jede Phase der Überprüfung und der Ausführung. Der Protokolleintrag gibt die Verarbeitungszeit für jede Phase an.|  
-|**Diagnostic**<br /><br /> **DiagnosticEx**|Schreibt einen Protokolleintrag, der Diagnoseinformationen enthält.<br /><br /> Sie können zum Beispiel vor und nach jedem Aufruf eines externen Datenanbieters eine Meldung protokollieren. Weitere Informationen finden Sie unter [Behandlung von Problemen mit Paketausführungstools](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).<br /><br /> Protokollieren Sie das **DiagnosticEx** -Ereignis, wenn Sie die Spaltennamen für Spalten im Datenfluss finden möchten, die Fehler enthalten. Dieses Ereignis schreibt eine Herkunftszuordnung für den Datenfluss in das Protokoll. Sie können den Spaltennamen dann in dieser Herkunftszuordnung nachschlagen, und zwar anhand des von einer Fehlerausgabe erfassten Spaltenbezeichners. Weitere Informationen finden Sie unter [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> Beachten Sie, dass Leerraum in der XML-Ausgabe beim **DiagnosticEx** -Ereignis nicht beibehalten wird, um die Größe des Protokolls zu verringern. Kopieren Sie das Protokoll in einen XML-Editor wie z.B. Visual Studio, der XML-Formatierung und Syntaxhervorhebung unterstützt, um die Lesbarkeit zu verbessern.<br /><br /> Hinweis: Wenn Sie das **DiagnosticEx** -Ereignis mit dem SQL Server-Protokollanbieter protokollieren, wird die Ausgabe möglicherweise abgeschnitten. Das **message** -Feld des SQL Server-Protokollanbieters ist vom Typ „nvarchar(2048)“. Verwenden Sie beim Protokollieren des **DiagnosticEx** -Ereignisses einen anderen Protokollanbieter, um eine abgeschnittene Ausgabe zu vermeiden.|  
+|**Diagnostic**<br /><br /> **DiagnosticEx**|Schreibt einen Protokolleintrag, der Diagnoseinformationen enthält.<br /><br /> Sie können zum Beispiel vor und nach jedem Aufruf eines externen Datenanbieters eine Meldung protokollieren. Weitere Informationen finden Sie unter [Behandlung von Problemen mit Paketausführungstools](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).<br /><br /> Protokollieren Sie das **DiagnosticEx** -Ereignis, wenn Sie die Spaltennamen für Spalten im Datenfluss finden möchten, die Fehler enthalten. Dieses Ereignis schreibt eine Herkunftszuordnung für den Datenfluss in das Protokoll. Sie können den Spaltennamen dann in dieser Herkunftszuordnung nachschlagen, und zwar anhand des von einer Fehlerausgabe erfassten Spaltenbezeichners. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> Beachten Sie, dass Leerraum in der XML-Ausgabe beim **DiagnosticEx** -Ereignis nicht beibehalten wird, um die Größe des Protokolls zu verringern. Kopieren Sie das Protokoll in einen XML-Editor wie z.B. Visual Studio, der XML-Formatierung und Syntaxhervorhebung unterstützt, um die Lesbarkeit zu verbessern.<br /><br /> Hinweis: Wenn Sie das **DiagnosticEx** -Ereignis mit dem SQL Server-Protokollanbieter protokollieren, wird die Ausgabe möglicherweise abgeschnitten. Das **message** -Feld des SQL Server-Protokollanbieters ist vom Typ „nvarchar(2048)“. Verwenden Sie beim Protokollieren des **DiagnosticEx** -Ereignisses einen anderen Protokollanbieter, um eine abgeschnittene Ausgabe zu vermeiden.|  
   
  Das Paket und viele Tasks verfügen über benutzerdefinierte Protokolleinträge, die für die Protokollierung aktiviert werden können. Der Task „Mail senden“ stellt z.B. den benutzerdefinierten Protokolleintrag **SendMailTaskBegin** bereit, mit dem im Zeitraum zwischen dem Beginn der Ausführung des Tasks „Mail senden“ und dem Senden einer E-Mail-Nachricht Informationen protokolliert werden. Weitere Informationen finden Sie unter [Custom Messages for Logging](#custom_messages).  
   
@@ -177,7 +175,7 @@ ms.lasthandoff: 08/03/2017
  Der Datenflusstask stellt eine Reihe von benutzerdefinierten Protokolleinträge bereit, die zum Überwachen und Anpassen der Leistung verwendet werden können. Sie können beispielsweise Komponenten überwachen, die möglicherweise Arbeitsspeicherverluste verursachen, oder nachverfolgen, wie lange das Ausführen einer bestimmten Komponente dauert. Eine Liste dieser benutzerdefinierten Protokolleinträge sowie Beispiele für Protokollausgaben finden Sie unter [Data Flow Task](../../integration-services/control-flow/data-flow-task.md).  
   
 #### <a name="capture-the-names-of-columns-in-which-errors-occur"></a>Erfassen der Namen fehlerhafter Spalten  
- Die Fehlerausgabe im Datenfluss ist standardmäßig so konfiguriert, dass sie nur den numerischen Bezeichner der Spalte bereitstellt, in der der Fehler aufgetreten ist. Weitere Informationen finden Sie unter [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md).  
+ Die Fehlerausgabe im Datenfluss ist standardmäßig so konfiguriert, dass sie nur den numerischen Bezeichner der Spalte bereitstellt, in der der Fehler aufgetreten ist. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).  
   
  Sie finden die Spaltennamen, indem Sie die Protokollierung aktivieren und das **DiagnosticEx** -Ereignis auswählen. Dieses Ereignis schreibt eine Herkunftszuordnung für den Datenfluss in das Protokoll. Anschließend können Sie den Namen der Spalte anhand ihres Bezeichners in dieser Herkunftszuordnung nachschlagen. Beachten Sie, dass Leerraum in der XML-Ausgabe beim **DiagnosticEx** -Ereignis nicht beibehalten wird, um die Größe des Protokolls zu verringern. Kopieren Sie das Protokoll in einen XML-Editor wie z.B. Visual Studio, der XML-Formatierung und Syntaxhervorhebung unterstützt, um die Lesbarkeit zu verbessern.  
   
@@ -234,7 +232,7 @@ ms.lasthandoff: 08/03/2017
   
 3.  Wählen Sie einen Protokollanbieter in der Liste **Anbietertyp** aus, und klicken Sie dann auf **Hinzufügen**.  
   
-4.  In der **Konfiguration** Spalte wählen Sie einen Verbindungs-Manager, oder klicken Sie auf  **\<neue Verbindung >** an einen neuen Verbindungs-Manager des entsprechenden Typs für den Protokollanbieter zu erstellen. Verwenden Sie je nach ausgewähltem Anbieter einen der folgenden Verbindungs-Manager.  
+4.  Wählen Sie in der Spalte **Konfiguration** einen Verbindungs-Manager aus, oder klicken Sie auf **\<Neue Verbindung>**, um einen neuen Verbindungs-Manager des entsprechenden Typs für den Protokollanbieter zu erstellen. Verwenden Sie je nach ausgewähltem Anbieter einen der folgenden Verbindungs-Manager.  
   
     -   Verwenden Sie für Textdateien einen Dateiverbindungs-Manager. Weitere Informationen finden Sie unter [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md).  
   
@@ -242,7 +240,7 @@ ms.lasthandoff: 08/03/2017
   
     -   Verwenden Sie für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]einen OLE DB-Verbindungs-Manager. Weitere Informationen finden Sie unter [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
-    -   Führen Sie für das Windows-Ereignisprotokoll keine Aktion durch. [!INCLUDE[ssIS](../../includes/ssis-md.md)]erstellt das Protokoll automatisch.  
+    -   Führen Sie für das Windows-Ereignisprotokoll keine Aktion durch. [!INCLUDE[ssIS](../../includes/ssis-md.md)] erstellt das Protokoll automatisch.  
   
     -   Verwenden Sie für XML-Dateien einen Dateiverbindungs-Manager.  
   
@@ -315,8 +313,8 @@ ms.lasthandoff: 08/03/2017
  **Description**  
  Das Feld Beschreibung kann bearbeitet werden. Klicken Sie in das Feld und ändern Sie die Standardbeschreibung des Protokolls.  
   
- **Konfiguration**  
- Wählen Sie einen vorhandenen Verbindungs-Manager in der Liste aus, oder klicken Sie auf \< **neue Verbindung...** > um einen neuen Verbindungs-Manager zu erstellen. Abhängig vom Typ des Protokollanbieters können Sie einen OLE DB-Verbindungs-Manager oder einen Dateiverbindungs-Manager konfigurieren. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Ereignisprotokollanbieter erfordert keine Verbindung.  
+ **Configuration**  
+ Wählen Sie einen vorhandenen Verbindungs-Manager aus der Liste aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen. Abhängig vom Typ des Protokollanbieters können Sie einen OLE DB-Verbindungs-Manager oder einen Dateiverbindungs-Manager konfigurieren. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Ereignisprotokollanbieter erfordert keine Verbindung.  
   
  Verwandte Themen: [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) , [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -420,7 +418,7 @@ ms.lasthandoff: 08/03/2017
 |Standard|Alle Ereignisse werden protokolliert, außer benutzerdefinierten und Diagnose-Ereignissen. Dies ist der Standardwert.|  
 |RuntimeLineage|Sammelt die Daten, die zum Nachverfolgen von Informationen über die Datenherkunft im Datenfluss benötigt werden. Sie können diese Herkunftsinformationen analysieren, um die Herkunftsbeziehung zwischen Tasks zuzuordnen. Unabhängige Softwareentwickler (ISVs) und Entwickler können mit diesen Informationen benutzerdefinierte Herkunftszuordnungstools erstellen.|  
 |Leistung|Nur Leistungsstatistiken sowie OnError- und OnWarning-Ereignisse werden protokolliert.<br /><br /> In dem Bericht **Ausführungsleistung** wird die aktive Zeit und die Gesamtzeit für Datenflusskomponenten des Pakets angezeigt. Diese Informationen sind verfügbar, wenn der Protokolliergrad der letzten Paketausführung auf **Leistung** oder **Ausführlich**festgelegt wurde. Weitere Informationen finden Sie unter [Berichte für den Integration Services-Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).<br /><br /> In der [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) -Sicht werden die Start- und Beendigungszeiten der Datenflusskomponenten für jede Ausführungsphase angezeigt. In dieser Sicht werden die Informationen für diese Komponenten nur angezeigt, wenn der Protokolliergrad der Paketausführung auf **Leistung** oder **Ausführlich**festgelegt ist.|  
-|Ausführlich|Alle Ereignisse werden protokolliert, einschließlich benutzerdefinierter Ereignisse und Diagnose-Ereignissen.<br /><br /> Zu benutzerdefinierten Ereignissen zählen auch die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Tasks protokollierten Ereignisse. Weitere Informationen zu benutzerdefinierten Ereignissen finden Sie unter [Benutzerdefinierte Meldungen für die Protokollierung](#custom_messages).<br /><br /> Ein Beispiel für ein Diagnoseereignis ist das **DiagnosticEx** -Ereignis. Immer wenn ein „Paket ausführen“-Task ein untergeordnetes Paket ausführt, erfasst dieses Ereignis die an untergeordnete Pakete übergebenen Parameterwerte.<br /><br /> Das **DiagnosticEx** -Ereignis hilft Ihnen auch dabei, die Namen der Spalten abzurufen, in denen Fehler auf Zeilenebene auftreten. Dieses Ereignis schreibt eine Herkunftszuordnung für den Datenfluss in das Protokoll. Sie können den Spaltennamen dann in dieser Herkunftszuordnung nachschlagen, und zwar anhand des von einer Fehlerausgabe erfassten Spaltenbezeichners.  Weitere Informationen finden Sie unter [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> Der Wert der Meldungsspalte für **DiagnosticEx** ist XML-Text. Fragen Sie zum Anzeigen des Meldungstexts für eine Paketausführung die Sicht [catalog.operation_messages &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) ab. Beachten Sie, dass Leerraum in der XML-Ausgabe beim **DiagnosticEx** -Ereignis nicht beibehalten wird, um die Größe des Protokolls zu verringern. Kopieren Sie das Protokoll in einen XML-Editor wie z.B. Visual Studio, der XML-Formatierung und Syntaxhervorhebung unterstützt, um die Lesbarkeit zu verbessern.<br /><br /> In der [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) -Sicht wird eine Zeile angezeigt, sobald eine Datenflusskomponente Daten zur Paketausführung an eine Downstreamkomponente sendet. Der Protokolliergrad muss auf **Ausführlich** festgelegt werden, um diese Informationen in der Sicht zu erfassen.|  
+|Ausführlich|Alle Ereignisse werden protokolliert, einschließlich benutzerdefinierter Ereignisse und Diagnose-Ereignissen.<br /><br /> Zu benutzerdefinierten Ereignissen zählen auch die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Tasks protokollierten Ereignisse. Weitere Informationen zu benutzerdefinierten Ereignissen finden Sie unter [Benutzerdefinierte Meldungen für die Protokollierung](#custom_messages).<br /><br /> Ein Beispiel für ein Diagnoseereignis ist das **DiagnosticEx** -Ereignis. Immer wenn ein „Paket ausführen“-Task ein untergeordnetes Paket ausführt, erfasst dieses Ereignis die an untergeordnete Pakete übergebenen Parameterwerte.<br /><br /> Das **DiagnosticEx** -Ereignis hilft Ihnen auch dabei, die Namen der Spalten abzurufen, in denen Fehler auf Zeilenebene auftreten. Dieses Ereignis schreibt eine Herkunftszuordnung für den Datenfluss in das Protokoll. Sie können den Spaltennamen dann in dieser Herkunftszuordnung nachschlagen, und zwar anhand des von einer Fehlerausgabe erfassten Spaltenbezeichners.  Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> Der Wert der Meldungsspalte für **DiagnosticEx** ist XML-Text. Fragen Sie zum Anzeigen des Meldungstexts für eine Paketausführung die Sicht [catalog.operation_messages &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) ab. Beachten Sie, dass Leerraum in der XML-Ausgabe beim **DiagnosticEx** -Ereignis nicht beibehalten wird, um die Größe des Protokolls zu verringern. Kopieren Sie das Protokoll in einen XML-Editor wie z.B. Visual Studio, der XML-Formatierung und Syntaxhervorhebung unterstützt, um die Lesbarkeit zu verbessern.<br /><br /> In der [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) -Sicht wird eine Zeile angezeigt, sobald eine Datenflusskomponente Daten zur Paketausführung an eine Downstreamkomponente sendet. Der Protokolliergrad muss auf **Ausführlich** festgelegt werden, um diese Informationen in der Sicht zu erfassen.|  
   
 ### <a name="create-and-manage-customized-logging-levels-by-using-the-customized-logging-level-management-dialog-box"></a>Erstellen und Verwalten benutzerdefinierter Protokolliergrade mithilfe des Dialogfelds „Customized Logging Level Management“ (Verwaltung benutzerdefinierter Protokolliergrade)  
  Sie können benutzerdefinierte Protokolliergrade erstellen, die nur die von Ihnen gewünschten Statistiken und Ereignisse sammeln. Optional können Sie auch den Kontext von Ereignissen erfassen, der Variablenwerte, Verbindungszeichenfolgen und Komponenteneigenschaften umfasst. Wenn Sie ein Paket ausführen, können Sie überall dort einen benutzerdefinierten Protokolliergrad auswählen, wo Sie auch einen integrierten Protokolliergrad auswählen können.  
@@ -479,7 +477,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
   
  [Aufträge übertragen (Task)](#TransferJobs)  
   
- [Task "Anmeldungen übertragen"](#TransferLogins)  
+ [Task „Anmeldungen übertragen“](#TransferLogins)  
   
  [In master gespeicherte Prozeduren übertragen (Task)](#TransferMasterStoredProcedures)  
   
@@ -687,4 +685,3 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  [DTLoggedExec-Tool für vollständige und Detailprotokollierung (CodePlex-Projekt)](http://go.microsoft.com/fwlink/?LinkId=150579)  
-

@@ -1,5 +1,5 @@
 ---
-title: Legacy-Paketbereitstellung (SSIS) | Microsoft Docs
+title: Legacypaketbereitstellung (SSIS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,17 +33,16 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 15c21ac27069d582a7006c38993f48dc3f4ed0be
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 486fa573b955848828bff349f364543e6a1e23f7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="legacy-package-deployment-ssis"></a>Legacy-Paketbereitstellung (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält Tools und Assistenten, mit denen Sie problemlos Pakete vom Entwicklungscomputer auf dem Produktionsserver oder anderen Computern bereitstellen können.  
@@ -153,7 +151,7 @@ ms.lasthandoff: 09/27/2017
 #### <a name="registry-entry"></a>Registrierungseintrag  
  Wenn Sie zum Speichern einer Konfiguration einen Registrierungseintrag verwenden möchten, können Sie entweder einen vorhandenen Schlüssel verwenden oder einen neuen Schlüssel in HKEY_CURRENT_USER erstellen. Der verwendete Registrierungsschlüssel muss einen Wert mit dem Namen **Value**aufweisen. Bei diesem Wert kann es sich um einen Wert vom Typ DWORD oder um eine Zeichenfolge handeln.  
   
- Wenn Sie den Konfigurationstyp **Registrierungseintrag** auswählen, geben Sie den Namen des Registrierungsschlüssels im Eingabefeld Registrierung ein. Das Format lautet \<Registrierungsschlüssel "" >. Wenn Sie einen Registrierungsschlüssel, die nicht im Stamm von HKEY_CURRENT_USER gespeichert ist, verwenden möchten, verwenden Sie das Format \<Key\registry Registrierungsschlüssel\\... > um den Schlüssel zu identifizieren. Wenn Sie beispielsweise den Schlüssel MyPackage verwenden, der sich in SSISPackages befindet, geben Sie **SSISPackages\MyPackage**ein.  
+ Wenn Sie den Konfigurationstyp **Registrierungseintrag** auswählen, geben Sie den Namen des Registrierungsschlüssels im Eingabefeld Registrierung ein. Das Format lautet: \<Registrierungsschlüssel>. Wenn Sie einen Registrierungsschlüssel verwenden möchten, der nicht im Stamm von HKEY_CURRENT_USER enthalten ist, verwenden Sie das Format \<Registrierungsschlüssel\Registrierungsschlüssel\\...>, um den Schlüssel zu identifizieren. Wenn Sie beispielsweise den Schlüssel MyPackage verwenden, der sich in SSISPackages befindet, geben Sie **SSISPackages\MyPackage**ein.  
   
 #### <a name="sql-server"></a>SQL Server  
  Wenn Sie den Konfigurationstyp **SQL Server** auswählen, geben Sie die Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank an, in der die Konfigurationen gespeichert werden sollen. Sie können die Konfigurationen in einer vorhandenen Tabelle speichern oder eine neue Tabelle in der angegebenen Datenbank erstellen.  
@@ -364,7 +362,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 |Wert|Description|  
 |-----------|-----------------|  
-|**Registrierungseintrag**|Geben Sie den Registrierungsschlüssel ein, der die Konfigurationsinformationen enthält. Das Format lautet \<Registrierungsschlüssel "" >.<br /><br /> Der Registrierungsschlüssel muss bereits in HKEY_CURRENT_USER vorhanden sein und einen Wert mit dem Namen "Value" aufweisen. Bei diesem Wert kann es sich um einen Wert vom Typ DWORD oder um eine Zeichenfolge handeln.<br /><br /> Wenn Sie einen Registrierungsschlüssel verwenden Schlüssel nicht im Stammverzeichnis des HKEY_CURRENT_USER ist möchten, verwenden Sie das Format \<Key\registry Registrierungsschlüssel\\... > um den Schlüssel zu identifizieren.|  
+|**Registrierungseintrag**|Geben Sie den Registrierungsschlüssel ein, der die Konfigurationsinformationen enthält. Das Format lautet: \<Registrierungsschlüssel>.<br /><br /> Der Registrierungsschlüssel muss bereits in HKEY_CURRENT_USER vorhanden sein und einen Wert mit dem Namen "Value" aufweisen. Bei diesem Wert kann es sich um einen Wert vom Typ DWORD oder um eine Zeichenfolge handeln.<br /><br /> Wenn Sie einen Registrierungsschlüssel verwenden möchten, der nicht im Stamm von HKEY_CURRENT_USER gespeichert ist, verwenden Sie das Format \<Registrierungsschlüssel\Registrierungsschlüssel\\...>, um den Schlüssel zu identifizieren.|  
   
  **Konfigurationsspeicherort ist in einer Umgebungsvariablen gespeichert**  
  Verwenden Sie diese Option, um die Umgebungsvariable anzugeben, in der die Konfiguration gespeichert werden soll.  
@@ -431,7 +429,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Fertig stellen**  
  Erstellen Sie die Konfiguration, und beenden Sie den **Paketkonfigurations-Assistenten**.  
 
-## <a name="child"></a>Verwenden Sie die Werte von Variablen und Parametern in einem untergeordneten Paket
+## <a name="child"></a> Verwenden der Werte von Variablen und Parametern in einem untergeordneten Paket
   In diesem Verfahren wird das Erstellen einer Paketkonfiguration beschrieben, die den Konfigurationstyp der übergeordneten Variablen verwendet. Durch diesen Konfigurationstyp kann ein untergeordnetes Paket, das von einem übergeordneten Paket ausgeführt wird, auf eine Variable im übergeordneten Element zugreifen.  
   
 > [!NOTE]  
@@ -492,7 +490,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 |CreateDeploymentUtility|Ein Wert, der angibt, ob beim Erstellen des Projekts ein Paketbereitstellungshilfsprogramm erstellt wird. Diese Eigenschaft muss auf **True** festgelegt sein, um ein Bereitstellungshilfsprogramm zu erstellen.|  
 |DeploymentOutputPath|Der Speicherort des Bereitstellungshilfsprogramms, relativ zur Position des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekts.|  
   
- Bei der Erstellung einer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt ist eine Manifestdatei \<Projektname >. SSISDeploymentManifest.xml, erstellt und hinzugefügt werden, zusammen mit Kopien der Projektpakete und paketabhängigkeiten in den Bin\Deployment-Ordner im Projekt oder in der DeploymentOutputPath-Eigenschaft angegebenen Speicherort. Diese Manifestdatei enthält eine Auflistung der Pakete, der Paketkonfigurationen und aller sonstigen Dateien, die im Projekt enthalten sind.  
+ Wenn Sie ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt erstellen, wird eine Manifestdatei mit dem Namen „\<Projektname>.SSISDeploymentManifest.xml“ erstellt und zusammen mit Kopien der Projektpakete und Paketabhängigkeiten in den „bin\Deployment“-Ordner des Projekts oder den Speicherort kopiert, der in der DeploymentOutputPath-Eigenschaft angegeben ist. Diese Manifestdatei enthält eine Auflistung der Pakete, der Paketkonfigurationen und aller sonstigen Dateien, die im Projekt enthalten sind.  
   
  Der Inhalt des Bereitstellungsordners wird bei jedem Erstellen des Projekts aktualisiert. Das bedeutet, dass alle in diesem Ordner gespeicherten Dateien, die durch den Erstellungsprozess nicht erneut in den Ordner kopiert werden, gelöscht werden. Beispielsweise werden die in den Bereitstellungsordnern gespeicherten Paketkonfigurationsdateien gelöscht.  
   
@@ -502,7 +500,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  Klicken Sie mit der rechten Maustaste auf das Projekt, und klicken Sie anschließend auf **Eigenschaften**.  
   
-3.  In der  **\<Projektname > Eigenschaftenseiten** (Dialogfeld), klicken Sie auf **Bereitstellungshilfsprogramm**.  
+3.  Klicken Sie im Dialogfeld **\<Projektname>-Eigenschaftenseiten** auf **Bereitstellungshilfsprogramm**.  
   
 4.  Wenn die Paketkonfigurationen beim Bereitstellen der Pakete aktualisiert werden sollen, legen Sie **AllowConfigurationChanges** auf **True**fest.  
   
@@ -521,7 +519,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  Der Pfad des Bereitstellungsordners wird in der DeploymentOutputPath-Eigenschaft des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekts angegeben, für das Sie das Bereitstellungshilfsprogramm erstellt haben. Der Standardpfad ist bin\Deployment, relativ zum [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt. Weitere Informationen finden Sie unter [Create a Deployment Utility](../../integration-services/packages/create-a-deployment-utility.md).  
   
- Sie können zum Installieren der Pakete den Paketinstallations-Assistenten verwenden. Doppelklicken Sie zum Starten des Assistenten auf die Datei des Bereitstellungshilfsprogramms, nachdem Sie den Bereitstellungsordner auf den Server kopiert haben. Diese Datei heißt \<Projektname >. SSISDeploymentManifest, und finden Sie in den Bereitstellungsordner auf dem Zielcomputer.  
+ Sie können zum Installieren der Pakete den Paketinstallations-Assistenten verwenden. Doppelklicken Sie zum Starten des Assistenten auf die Datei des Bereitstellungshilfsprogramms, nachdem Sie den Bereitstellungsordner auf den Server kopiert haben. Die Datei hat den Namen „\<Projektname>.SSISDeploymentManifest“ und befindet sich im Bereitstellungsordner des Zielcomputers.  
   
 > [!NOTE]  
 >  Abhängig von der Version des Pakets, das Sie bereitstellen, könnte ein Fehler auftreten, wenn Sie verschiedene Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parallel installiert haben. Dieser Fehler kann auftreten, da die Dateinamenerweiterung ".SSISDeploymentManifest" für alle Versionen von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]identisch ist. Durch Doppelklicken auf die Datei wird das Installationsprogramm („dtsinstall.exe“) für die zuletzt installierte Version von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]aufgerufen, die möglicherweise nicht der Version der Datei des Bereitstellungs-Hilfsprogramms entspricht. Um dieses Problem zu umgehen, führen Sie die richtige Version von "dtsinstall.exe" in der Befehlszeile aus, und stellen Sie den Pfad der Datei des BereitstellungsHilfsprogramms bereit.  
@@ -544,7 +542,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 1.  Öffnen Sie den Bereitstellungsordner auf dem Zielcomputer.  
   
-2.  Doppelklicken Sie auf die Manifestdatei \<Projektname >. SSISDeploymentManifest, um den Paketinstallations-Assistenten zu starten.  
+2.  Doppelklicken Sie auf die Manifestdatei „\<Projektname>.SSISDeploymentManifest“, um den Paketinstallations-Assistenten zu starten.  
   
 3.  Wählen Sie auf der Seite **SSIS-Pakete bereitstellen** die Option **Bereitstellung in SQL Server** .  
   
@@ -705,5 +703,4 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  **Fertig stellen**  
  Durch Klicken auf **Fertig stellen**beenden Sie den Assistenten.  
-
 

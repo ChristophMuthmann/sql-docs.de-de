@@ -2,9 +2,12 @@
 title: Audit Change Database Owner (Ereignisklasse) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0d8f16a3377d07a17378a2264b3a1f38e70b713
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 27ed23d677fb77a47e12d6ebf14a5f95ff334dfc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-change-database-owner-event-class"></a>Audit Change Database Owner (Ereignisklasse)
-  Die **Audit Change Database Owner** -Ereignisklasse tritt auf, wenn Sie die ALTER AUTHORIZATION-Anweisung verwenden, um den Besitzer einer Datenbank zu ändern, und die dazu erforderlichen Berechtigungen überprüft werden.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Die **Audit Change Database Owner**-Ereignisklasse tritt auf, wenn Sie die ALTER AUTHORIZATION-Anweisung verwenden, um den Besitzer einer Datenbank zu ändern, und die dazu erforderlichen Berechtigungen überprüft werden.  
   
 ## <a name="audit-change-database-owner-event-class-data-columns"></a>Audit Change Database Owner-Ereignisklasse (Datenspalten)  
   

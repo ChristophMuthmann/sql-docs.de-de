@@ -2,9 +2,12 @@
 title: IntelliSense (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b749035286507e3ee2a8a05af82d9da9d1e7b4c9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8c9b1806be022d0391cb19cc03a81a039927e923
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
-  Die Editoren in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] unterstützen [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense-Optionen, die die Typisierung reduzieren, schnellen Zugriff auf Syntaxinformationen bieten oder das Anzeigen der Trennzeichen komplexer Ausdrücke erleichtern.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Die Editoren in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] unterstützen [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense-Optionen, die die Typisierung reduzieren, schnellen Zugriff auf Syntaxinformationen bieten oder das Anzeigen der Trennzeichen komplexer Ausdrücke erleichtern.  
   
 ## <a name="benefits-of-intellisense"></a>Vorteile von IntelliSense  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense bietet eine Reihe von Optionen, die den problemlosen Zugriff auf Sprachverweise ermöglichen. Beim Codieren ist es nicht erforderlich, dass Sie den Editor zum Ausführen von Suchvorgängen nach Sprachelementen verlassen. Sie können den Kontext beibehalten, die gewünschten Informationen suchen, Sprachelemente direkt in den Code einfügen und sogar IntelliSense die restliche Eingabe überlassen.  

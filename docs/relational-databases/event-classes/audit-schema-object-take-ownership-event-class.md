@@ -2,9 +2,12 @@
 title: Audit Schema Object Take Ownership-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3eb6eca99cfcfd182ac71a942136bca3586ac052
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d33b405c83a983f428b9f231cd7f6086a75a7916
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-schema-object-take-ownership-event-class"></a>Audit Schema Object Take Ownership-Ereignisklasse
-  Die Ereignisklasse **Audit Schema Object Take Ownership** tritt auf, wenn die Berechtigungen zum Ändern des Besitzers eines Schemaobjekts (z. B. einer Tabelle, Prozedur oder Funktion) überprüft werden. Dies ist der Fall, wenn mit der ALTER AUTHORIZATION-Anweisung einem Objekt ein Besitzer zugewiesen wird.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Die Ereignisklasse **Audit Schema Object Take Ownership** tritt auf, wenn die Berechtigungen zum Ändern des Besitzers eines Schemaobjekts (z.B. einer Tabelle, Prozedur oder Funktion) überprüft werden. Dies ist der Fall, wenn mit der ALTER AUTHORIZATION-Anweisung einem Objekt ein Besitzer zugewiesen wird.  
   
 ## <a name="audit-schema-object-take-ownership-event-class-data-columns"></a>Datenspalten der Audit Schema Object Take Ownership-Ereignisklasse  
   

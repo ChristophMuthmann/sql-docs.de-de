@@ -1,5 +1,5 @@
 ---
-title: Bearbeiten von Instanzeigenschaften | Microsoft Docs
+title: Bearbeiten der Instanzeigenschaften | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14a55010cd2adc4ea02f0207b91a8e608ed7b176
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1ddaa0513e6b095ec5dcbb5b9b52358bbedface8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="edit-instance-properties"></a>Bearbeiten von Instanzeigenschaften
   Nehmen Sie mithilfe des Eigenschaften-Editors Änderungen an der CDC-Instanz vor, nachdem Sie die Erstkonfigurationen erstellt haben. Sie können im Eigenschaften-Editor die folgenden Schritte ausführen.  
@@ -36,7 +34,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [Bearbeiten der Tabelleneigenschaften](../../integration-services/change-data-capture/edit-the-table-properties.md)  
   
--   [Überprüfen Sie und generieren Sie ergänzender Protokollierungsskripts](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
+-   [Überprüfen und Generieren ergänzender Protokollierungsskripts](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
   
 -   [Bearbeiten der erweiterten Eigenschaften](../../integration-services/change-data-capture/edit-the-advanced-properties.md)  
   
@@ -61,4 +59,3 @@ ms.lasthandoff: 08/03/2017
      Sie können auch in der Liste im mittleren Bereich der CDC Designer Console mit der rechten Maustaste auf den Dienst klicken und **Eigenschaften**wählen.  
   
   
-

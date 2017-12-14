@@ -1,5 +1,5 @@
 ---
-title: Analysieren von Daten | Microsoft Docs
+title: Analysieren von Daten | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,30 +8,28 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - parsing [Integration Services]
 - data parsing [Integration Services]
 ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 967a838712819e5bdcefe5f88907fe9047da0fa1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e7d198fce5bdc57a21083ea063522f73cc9dde22
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="parsing-data"></a>Analysieren von Daten
   Mit Datenflüssen in Paketen werden Daten zwischen heterogenen Datenspeichern extrahiert und geladen, die eine Reihe von standardmäßigen und benutzerdefinierten Datentypen verwenden können. In einem Datenfluss werden mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Quellen Daten extrahiert, Zeichenfolgendaten analysiert und Daten in einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp konvertiert. Nachfolgende Transformationen können Daten analysieren, um sie in einen anderen Datentyp zu konvertieren oder um Spaltenkopien mit anderen Datentypen zu erstellen. Mit Ausdrücken in Komponenten können außerdem Argumente und Operanden in andere Datentypen umgewandelt werden. Wenn die Daten in einen Datenspeicher geladen werden, kann schließlich das Ziel die Daten analysieren, um sie in einen vom Ziel verwendeten Datentyp zu konvertieren. Weitere Informationen finden Sie unter [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## <a name="two-types-of-parsing"></a>Zwei Methoden zum Analysieren von  
+## <a name="two-types-of-parsing"></a>Zwei Analysetypen  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt zwei Analysemethoden zum Konvertieren von Daten bereit: schnelle Analyse und Standardanalyse.  
   
 -   Die schnelle Analyse besteht aus schnellen, einfachen Analyseroutinen, die keine gebietsschemaspezifischen Datentypkonvertierungen unterstützen, sondern nur die am häufigsten verwendeten Datums- und Zeitformate. 
@@ -52,7 +50,7 @@ Die schnelle Analyse stellt schnelle, einfache Routinen zum Analysieren von Date
   
  Die schnelle Analyse wird auf Spaltenebene angegeben. In der Flatfilequelle und der Transformation für Datenkonvertierung können Sie die schnelle Analyse für Ausgabespalten festlegen. Eingaben und Ausgaben können gebietsschemabezogene und gebietsschemaneutrale Spalten enthalten.  
  
-## <a name="numeric-data-formats-fast-parse"></a>Numerische Datenformate (Fast Parse)
+## <a name="numeric-data-formats-fast-parse"></a>Numerische Datenformate (schnelle Analyse)
 Die schnelle Analyse stellt schnelle, einfache und gebietsschemabezogene Routinen zum Analysieren von Daten bereit. Nur bestimmte Formate für integer-Datentypen werden von der schnellen Analyse unterstützt.  
   
 ### <a name="integer-data-type"></a>Integer-Datentyp
@@ -84,7 +82,7 @@ Die schnelle Analyse stellt schnelle, einfache und gebietsschemabezogene Routine
   
 -   Mindestens eine hindu-arabische Ziffer (0-9).  
 
-## <a name="date-and-time-formats-fast-parse"></a>Datums- und Zeitformate (Fast Parse)
+## <a name="date-and-time-formats-fast-parse"></a>Datums- und Zeitformate (schnelle Analyse)
 Die schnelle Analyse stellt schnelle, einfache Routinen zum Analysieren von Daten bereit. Die schnelle Analyse unterstützt die folgenden Formate für Datums- und Zeitdatentypen.  
   
 ### <a name="date-data-type"></a>Date-Datumstyp 
@@ -171,7 +169,7 @@ Die schnelle Analyse stellt schnelle, einfache Routinen zum Analysieren von Date
   
  Weitere Informationen finden Sie unter [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-### <a name="datetime-data-type"></a>Datum/Uhrzeit-Datentyp  
+### <a name="datetime-data-type"></a>Datums-/Zeitdatentyp  
  Die schnelle Analyse unterstützt die folgenden Zeichenfolgenformate für Datums-/Zeitdaten:  
   
 -   Zeitformate, die führende Leerstellen enthalten. Beispielsweise ist der Wert "  2003-01-10T203910" gültig.  
@@ -192,7 +190,7 @@ Die schnelle Analyse stellt schnelle, einfache Routinen zum Analysieren von Date
   
  Weitere Informationen finden Sie unter [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## <a name="enable-fast-parse"></a>Aktivieren Sie die schnelle Analyse
+## <a name="enable-fast-parse"></a>Aktivieren der schnellen Analyse
 Die Fast Parse-Eigenschaft muss für jede Spalte der Quelle oder Transformation festgelegt werden, die die schnelle Analyse verwendet. Verwenden Sie zum Festlegen der Eigenschaft den Erweiterten Editor der Flatfilequelle und der Transformation für Datenkonvertierung.  
   
 1.  Klicken Sie mit der rechten Maustaste auf die Flatfilequelle bzw. die Transformation für Datenkonvertierung, und klicken Sie anschließend auf **Erweiterten Editor anzeigen**.  
@@ -210,4 +208,3 @@ Die Standardanalyse enthält gebietsschemabezogene Analyseroutinen, die alle in 
   
  Die Standardanalyse stellt die Datentypkonvertierung interner Daten bereit und sollte verwendet werden, wenn das Datenformat nicht von der schnellen Analyse unterstützt wird. Weitere Informationen zur API für die automatische Datentypkonvertierung finden Sie unter "Data Type Conversion APIs" in der [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=79427). 
  
-

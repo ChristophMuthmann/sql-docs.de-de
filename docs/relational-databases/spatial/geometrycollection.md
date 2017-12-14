@@ -2,9 +2,12 @@
 title: GeometryCollection | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: spatial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f4255f316b77dc6f54cc66fee590268f521a085a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f6bfdb436105f377f4420deb20bdcf73a5af97e8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="geometrycollection"></a>GeometryCollection
-  Ein **GeometryCollection** -Objekt ist eine Auflistung von null oder mehr **geometry** - oder **geography** -Instanzen. Eine **GeometryCollection** kann leer sein.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Ein **GeometryCollection**-Objekt ist eine Auflistung von null oder mehr **geometry**- oder **geography**-Instanzen. Eine **GeometryCollection** kann leer sein.  
   
 ## <a name="geometrycollection-instances"></a>GeometryCollection-Instanzen  
   

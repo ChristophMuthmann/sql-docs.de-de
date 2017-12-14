@@ -1,5 +1,5 @@
 ---
-title: Erstellen ein Paket programmgesteuert | Microsoft Docs
+title: Programmgesteuertes Erstellen von Paketen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - packages [Integration Services], creating
 - SQL Server Integration Services packages, creating
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 58a8201d68cb6d942bd98ca3c53b6cf98336284e
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b16b2cc623c44884e088168e3c16ccb412dd88b0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="creating-a-package-programmatically"></a>Programmgesteuertes Erstellen eines Pakets
   Das <xref:Microsoft.SqlServer.Dts.Runtime.Package>-Objekt ist der Container oberster Ebene für alle anderen Objekte in einer [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Projektmappe. Als Container der obersten Ebene ist das Paket das erste Objekt, das erstellt wird. Nachfolgende Objekte werden diesem hinzugefügt und dann in dem Kontext des Pakets ausgeführt. Das Paket selbst verschiebt oder transformiert keine Daten. Das Paket ist zur Ausführung der Arbeit auf die Tasks angewiesen, die es enthält. Tasks führen den Großteil der von einem Paket ausgeführten Arbeit aus und definieren die Funktionalität eines Pakets. Ein Paket wird mit nur drei Codezeilen erstellt und ausgeführt. Um dem Paket zusätzliche Funktionalität zu verleihen, können jedoch verschiedene Tasks und <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Objekte hinzugefügt werden. In diesem Abschnitt wird erläutert, wie ein Paket programmgesteuert erstellt wird. Er enthält keine Informationen zum Erstellen der Tasks oder des <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>. Diese Themen werden in späteren Abschnitten behandelt.  
@@ -73,15 +70,15 @@ Module Module1
 End Module  
 ```  
   
- Drücken Sie F5 in Visual Studio, um das Beispiel zu kompilieren und auszuführen. Erstellen des Codes mithilfe des C#-Compilers, **csc.exe**, an der Eingabeaufforderung zu kompilieren, verwenden Sie den folgenden Befehl und Dateiverweise, und Ersetzen Sie dabei die  *\<Filename >* mit dem Namen der CS- oder VB-Datei und die Übergabe einer  *\<Outputfilename >* Ihrer Wahl.  
+ Drücken Sie F5 in Visual Studio, um das Beispiel zu kompilieren und auszuführen. Verwenden Sie zum Erstellen des Codes mithilfe des C#-Compilers, **csc.exe**, an der Eingabeaufforderung für die Kompilierung den folgenden Befehl sowie die folgenden Dateiverweise, und ersetzen Sie *\<Dateiname>* durch den Namen der CS- oder VB-Datei. Legen Sie einen *\<Ausgabedateiname>* Ihrer Wahl fest.  
   
- **csc/target: library/out: \<Outputfilename > .dll \<Filename > .cs /r:Microsoft.SqlServer.Managed ob ' DTS.dll ' "/r:System.dll**  
+ **csc /target:library /out: \<Ausgabedateiname>.dll \<Dateiname>.cs /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- Erstellen des Codes, mit dem Visual Basic .NET Compiler **vbc.exe**, an der Eingabeaufforderung zu kompilieren, verwenden Sie den folgenden Befehl und Dateiverweise.  
+ Verwenden Sie zum Erstellen des Codes mithilfe des Visual Basic .NET-Compilers, **vbc.exe**, an der Eingabeaufforderung für die Kompilierung den folgenden Befehl sowie die folgenden Dateiverweise.  
   
- **Vbc/target: library/out: \<Outputfilename > .dll \<Filename > VB /r:Microsoft.SqlServer.Managed ob ' DTS.dll ' "/r:System.dll**  
+ **vbc /target:library /out: \<Ausgabedateiname>.dll \<Dateiname>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- Sie können auch ein Paket erstellen, indem Sie ein vorhandenes Paket, das auf der Festplatte gespeichert wurde, in das Dateisystem oder in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] laden. Der Unterschied besteht darin, die die <xref:Microsoft.SqlServer.Dts.Runtime.Application> -Objekt erstellt wird, und klicken Sie dann das Paketobjekt mithilfe einer der überladenen Methoden der Anwendung aufgefüllt wird: **LoadPackage** für Flatfiles, **LoadFromSQLServer** für gespeicherten Paketen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], oder <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> für Pakete, die im Dateisystem gespeichert. Im folgenden Beispiel wird ein vorhandenes Paket von der Festplatte geladen. Anschließend werden die verschiedenen Eigenschaften des Pakets betrachtet.  
+ Sie können auch ein Paket erstellen, indem Sie ein vorhandenes Paket, das auf der Festplatte gespeichert wurde, in das Dateisystem oder in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] laden. Der Unterschied besteht darin, dass das <xref:Microsoft.SqlServer.Dts.Runtime.Application>-Objekt zuerst erstellt wird und dann das Paketobjekt mit einer der überlasteten Methoden der Anwendung gefüllt wird: **LoadPackage** für Flatfiles, **LoadFromSQLServer** für Pakete, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert sind, oder <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> für Pakete, die im Dateisystem gespeichert sind. Im folgenden Beispiel wird ein vorhandenes Paket von der Festplatte geladen. Anschließend werden die verschiedenen Eigenschaften des Pakets betrachtet.  
   
 ```csharp  
 using System;  
@@ -160,12 +157,11 @@ End Module
   
 ## <a name="external-resources"></a>Externe Ressourcen  
   
--   Blogeintrag, [API Sample - OleDB-Quelle und OLE DB-Ziel](http://go.microsoft.com/fwlink/?LinkId=220824), auf blogs.msdn.com.  
+-   Blogeintrag, [API Sample – OleDB source and OleDB destination](http://go.microsoft.com/fwlink/?LinkId=220824), (API-Beispiel – OleDB-Quelle und OleDB-Ziel) auf blogs.msdn.com.  
   
--   Blogeintrag, [EzAPI – Updated for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223), auf blogs.msdn.com.  
+-   Blogeintrag, [EzAPI – Updated for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223) (EzAPI – aktualisiert für SQL Server 2012), auf blogs.msdn.com.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Programmgesteuertes Hinzufügen von Tasks](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  
   
   
-

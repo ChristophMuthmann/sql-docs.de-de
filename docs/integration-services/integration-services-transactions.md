@@ -1,5 +1,5 @@
 ---
-title: Integration Services-Transaktionen | Microsoft Docs
+title: Integration Services-Transformationen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - tasks [Integration Services], transactions
 - transactions [Integration Services]
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7355d98c342052997441c2013e056b0453962c5a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 8fa0747761ecfac4fd617096942db77a2214019d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-transactions"></a>Integration Services-Transaktionen
   Pakete verwenden Transaktionen, um die von Tasks ausgeführten Datenbankaktionen in unteilbare Einheiten einzubinden und somit die Integrität der Daten zu erhalten. Alle [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Containertypen – Pakete, For-Schleifen-Container, Foreach-Schleifen-Container und Sequenzcontainer sowie die Taskhosts, die die einzelnen Tasks kapseln – können so konfiguriert werden, dass sie Transaktionen verwenden. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt für das Konfigurieren von Transaktionen drei Optionen bereit: **NotSupported**, **Supported**und **Required**.  
@@ -53,7 +51,7 @@ Beim Konfigurieren eines Pakets zur Verwendung von Transaktionen stehen zwei Opt
   
  Im Folgenden wird beschrieben, wie beide Optionen konfiguriert werden.  
   
-### <a name="configure-a-package-to-use-a-single-transaction"></a>Konfigurieren eines Pakets zur Verwendung einer einzelnen Transaktions  
+### <a name="configure-a-package-to-use-a-single-transaction"></a>Konfigurieren eines Pakets zur Verwendung einer einzelnen Transaktion  
  Mit dieser Option initiiert das Paket selbst eine einzelne Transaktion. Um das Paket zum Initiieren dieser Transaktion zu konfigurieren, legen Sie die TransactionOption-Eigenschaft auf **Required**fest.  
   
  Danach tragen Sie bestimmte Tasks und Container in dieser einzelnen Transaktion ein. Zum Eintragen eines Tasks oder Containers in einer Transaktion legen Sie die TransactionOption-Eigenschaft dieses Tasks oder Containers auf **Supported**fest.  
@@ -77,7 +75,7 @@ Beim Konfigurieren eines Pakets zur Verwendung von Transaktionen stehen zwei Opt
   
 8.  Wiederholen Sie die Schritte 6 und 7 für alle Tasks und Container, für die Sie die Transaktion registrieren möchten.  
   
-### <a name="configure-a-package-to-use-multiple-transactions"></a>Konfigurieren eines Pakets Verwendung mehrerer Transaktionen  
+### <a name="configure-a-package-to-use-multiple-transactions"></a>Konfigurieren eines Pakets zur Verwendung mehrerer Transaktionen  
  Mit dieser Option unterstützt das Paket selbst Transaktionen, startet jedoch keine Transaktion. Um das Paket zur Unterstützung dieser Transaktion zu konfigurieren, legen Sie die TransactionOption-Eigenschaft auf **Supported**fest.  
   
  Danach konfigurieren Sie die gewünschten Tasks und Container im Paket, um Transaktionen zu initiieren oder an Transaktionen teilzunehmen. Zum Konfigurieren eines Tasks oder Containers zum Initiieren einer Transaktion legen Sie die TransactionOption-Eigenschaft dieses Tasks oder Containers auf **Required**fest.   
@@ -124,7 +122,7 @@ Es ist möglich, dass ein Paket nicht miteinander verbundene Transaktionen in ei
   
  Das folgende Diagramm zeigt die fünf nicht miteinander verbundenen Transaktionen im Paket. Eine Transaktion wird durch den Sequenzcontainer gestartet, und vier Transaktionen werden durch die SQL Ausführen-Tasks gestartet.  
   
- ![Implementierung von mehreren Transaktionen](../integration-services/media/mw-dts-trans2.gif "Implementierung mehrerer Transaktionen")  
+ ![Implementierung von mehreren Transaktionen](../integration-services/media/mw-dts-trans2.gif "Implementation of multiple transactions")  
  
 ## <a name="inherited-transactions"></a>Vererbte Transaktionen
  Ein Paket kann mithilfe des Tasks "Paket ausführen" ein anderes Paket ausführen. Das untergeordnete Paket, d. h. das von dem Task Paket ausführen ausgeführte Paket, kann seine eigene Pakettransaktion erstellen oder aber die Pakettransaktion des übergeordneten Pakets erben.  
@@ -137,7 +135,7 @@ Es ist möglich, dass ein Paket nicht miteinander verbundene Transaktionen in ei
   
  Container und Tasks des untergeordneten Pakets können nicht an der übergeordneten Pakettransaktion teilnehmen, es sei denn, das untergeordnete Paket nimmt selbst an der Transaktion teil.  
   
-### <a name="example-of-inherited-transactions"></a>Beispiel für vererbte Transaktionen  
+### <a name="example-of-inherited-transactions"></a>Beispiel für geerbte Transaktionen  
  Im folgenden Diagramm sind drei Pakete zu sehen, die Transaktionen verwenden. Jedes Paket enthält zahlreiche Tasks. Um das Verhalten der Transaktionen zu verdeutlichen, werden nur die Tasks Paket ausführen gezeigt. Das Paket A führt die Pakete B und C aus. Das Paket B wiederum führt die Pakete D und E aus, und das Paket C führt das Paket F aus.  
   
  Die Pakete und Tasks besitzen die folgenden Transaktionsattribute:  
@@ -148,7 +146,7 @@ Es ist möglich, dass ein Paket nicht miteinander verbundene Transaktionen in ei
   
 -   **TransactionOption** ist für das Paket E sowie für die Tasks Paket ausführen C und Paket ausführen E auf **NotSupported** festgelegt.  
   
- ![Fluss von vererbten Transaktionen](../integration-services/media/mw-dts-executepack.gif "Fluss von vererbten Transaktionen")  
+ ![Fluss von geerbten Transaktionen](../integration-services/media/mw-dts-executepack.gif "Flow of inherited transactions")  
   
  Nur die Pakete B, D und F können Transaktionen von ihren übergeordneten Paketen erben.  
   
@@ -170,4 +168,3 @@ Es ist möglich, dass ein Paket nicht miteinander verbundene Transaktionen in ei
  [Mehrere Transaktionen](http://msdn.microsoft.com/library/c3664a94-be89-40c0-a3a0-84b74a7fedbe)  
   
   
-

@@ -3,8 +3,11 @@ title: "Failoveroption zur Datenbank-Integritätserkennung | Microsoft-Dokumenta
 ms.custom: 
 ms.date: 04/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,15 +24,14 @@ author: JasonWHowell
 ms.author: jasonh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 722fec600bcb9b40564dff99c6036467c3856632
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1c9f10162900579bcf871b2a1bf63d8aa5cc4ac6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Failoveroption für die Integritätserkennung auf Datenbankebene in einer Verfügbarkeitsgruppe
-
-Ab SQL Server 2016 ist die Option „Integritätserkennung auf Datenbankebene“ (DB_FAILOVER) verfügbar, wenn eine Always On-Verfügbarkeitsgruppe konfiguriert wird. Die Integritätserkennung auf Datenbankebene erkennt, wenn eine Datenbank sich nicht mehr im Onlinestatus befindet oder ein Fehler auftritt und löst ein automatisches Failover der Verfügbarkeitsgruppe aus. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ab SQL Server 2016 ist die Option „Integritätserkennung auf Datenbankebene“ (DB_FAILOVER) verfügbar, wenn eine Always On-Verfügbarkeitsgruppe konfiguriert wird. Die Integritätserkennung auf Datenbankebene erkennt, wenn eine Datenbank sich nicht mehr im Onlinestatus befindet oder ein Fehler auftritt und löst ein automatisches Failover der Verfügbarkeitsgruppe aus. 
 
 Die Integritätserkennung auf Datenbankebene ist für die gesamte Verfügbarkeitsgruppe aktiviert, wodurch die Datenbank-Integritätserkennung jede Datenbank in der Verfügbarkeitsgruppe überwacht. Sie kann nicht selektiv für bestimmte Datenbanken in der Verfügbarkeitsgruppe aktiviert werden. 
 

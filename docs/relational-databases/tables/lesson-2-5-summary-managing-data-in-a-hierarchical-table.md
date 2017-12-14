@@ -2,9 +2,12 @@
 title: 'Zusammenfassung: Verwalten von Daten in einer hierarchischen Tabelle | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a5c0f68a48e557da916d9d4de741ff44128fd6e1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 994ef486992a0541323eed37a3e8054091969680
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-2-5---summary---managing-data-in-a-hierarchical-table"></a>Lektion 2.5: Zusammenfassung: Verwalten von Daten in einer hierarchischen Tabelle
-Mit dem **hierarchyid** -Datentyp können Sie auf einfache Weise Tabellen erstellen, die hierarchische Daten widerspiegeln, auf die Sie mithilfe von Tiefensuch- und Breitensuchindizes effizient zugreifen können. Mit hierarchischen Methoden fragen Sie Daten ab und bearbeiten sie.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Mit dem **hierarchyid**-Datentyp können Sie auf einfache Weise Tabellen erstellen, die hierarchische Daten widerspiegeln, auf die Sie mithilfe von Tiefensuch- und Breitensuchindizes effizient zugreifen können. Mit hierarchischen Methoden fragen Sie Daten ab und bearbeiten sie.  
   
 ## <a name="return-to-the-start-of-the-tutorial"></a>Zum Anfang des Lernprogramms zurückkehren  
 [Lernprogramm: Verwenden des hierarchyid-Datentyps](../../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)  

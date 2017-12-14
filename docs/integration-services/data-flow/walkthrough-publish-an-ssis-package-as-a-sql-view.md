@@ -1,5 +1,5 @@
 ---
-title: "Exemplarische Vorgehensweise: Veröffentlichen eines SSIS-Pakets als SQL-Ansicht | Microsoft Docs"
+title: "Exemplarische Vorgehensweise: Veröffentlichen eines SSIS-Pakets als eine SQL-Ansicht | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ssis.packagepublishwizard.f1
+f1_keywords: sql13.ssis.packagepublishwizard.f1
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 8e540a232445e0df9f6eb313b5fadfa839a73fea
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: f0e5fa598ce47a95aafe11fd3f05c82eca79c064
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Exemplarische Vorgehensweise: Veröffentlichen eines SSIS-Pakets als eine SQL-Ansicht
   Diese exemplarische Vorgehensweise enthält detaillierte Schritte zum Veröffentlichen eines SSIS-Pakets als SQL-Ansicht in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.  
@@ -100,17 +97,17 @@ ms.lasthandoff: 09/27/2017
   
 2.  Klicken Sie auf der Seite **Einführung** auf **Weiter** .  
   
-     ![Data Feed Publishing-Assistent – Seite "Einführung"](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "Data Feed Publishing-Assistent – Seite "Einführung"")  
+     ![Datenfeedveröffentlichungs-Assistent – Seite „Einführung“](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "Datenfeedveröffentlichungs-Assistent – Seite „Einführung“")  
   
 3.  Führen Sie auf der Seite **Paketeinstellungen** die folgenden Aufgaben aus:  
   
     1.  Geben Sie den **Namen** der SQL Server-Instanz ein, die den SSIS-Katalog enthält, oder klicken Sie zum Auswählen des Servers auf **Durchsuchen** .  
   
-         ![Data Feed Publishing-Assistent - Paketeinstellungen](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "Data Feed Publishing-Assistent - Paketeinstellungen")  
+         ![Datenfeedveröffentlichungs-Assistent – Seite „Paketeinstellungen“](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "Datenfeedveröffentlichungs-Assistent – Seite „Paketeinstellungen“")  
   
     2.  Klicken Sie neben dem Pfadfeld auf **Durchsuchen** , durchsuchen Sie den SSIS-Katalog, wählen Sie das zu veröffentlichende SSIS-Paket aus (Beispiel: **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**), und klicken Sie dann auf **OK**.  
   
-         ![Data Feed Publishing-Assistent – Suchen nach Paket](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "Data Feed Publishing-Assistent – Suchen nach Paket")  
+         ![Datenfeedveröffentlichungs-Assistent – Suchen nach Paket](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "Datenfeedveröffentlichungs-Assistent – Suchen nach Paket")  
   
     3.  Geben Sie mithilfe der Paketparameter, Projektparameter und Registerkarten des Verbindungs-Managers am unteren Seitenrand die Werte für alle Paketparameter, Projektparameter oder Einstellungen des Verbindungs-Managers für das Paket ein. Sie können auch einen Umgebungsverweis angeben, der für die Ausführung des Pakets verwendet wird, und Projekt-/Paketparameter an Umgebungsvariablen binden.  
   
@@ -122,7 +119,7 @@ ms.lasthandoff: 09/27/2017
   
     1.  Wählen Sie die **Datenbank** für die zu erstellende Sicht aus.  
   
-         ![Data Feed Publishing-Assistent - Veröffentlichungseinstellungen](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "Data Feed Publishing-Assistent - Veröffentlichungseinstellungen")  
+         ![Datenfeedveröffentlichungs-Assistent – Seite „Veröffentlichungseinstellungen“](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "Datenfeedveröffentlichungs-Assistent – Seite „Veröffentlichungseinstellungen“")  
   
     2.  Geben Sie einen **Namen** für die **Sicht**ein. Sie können auch eine vorhandene Sicht aus der Dropdownliste auswählen.  
   
@@ -144,7 +141,7 @@ ms.lasthandoff: 09/27/2017
   
 5.  Auf der Seite **Überprüfung** überprüfen Sie die Ergebnisse der Überprüfung der Werte für alle Einstellungen. Im folgenden Beispiel wird eine **Warnung** für das Vorhandensein des Verbindungsservers angezeigt, da der Verbindungsserver für die ausgewählte SQL Server-Instanz nicht vorhanden ist. Wenn für **Ergebnis** der Wert **Fehler**angezeigt wird, bewegen Sie den Mauszeiger über **Fehler** , um die Details zu diesem Fehler anzuzeigen. Wenn Sie z. B. die Option „InProcess zulassen“ für den SSISOLEDB-Anbieter nicht aktiviert haben, erhalten Sie einen Fehler zur Aktion „Konfiguration des Verbindungsservers“.  
   
-     ![Data Feed Publishing-Assistent – Seite "Überprüfung"](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "Data Feed Publishing-Assistent – Seite "Überprüfung"")  
+     ![Datenfeedveröffentlichungs-Assistent – Seite „Überprüfung“](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "Datenfeedveröffentlichungs-Assistent – Seite „Überprüfung“")  
   
 6.  Klicken Sie auf „Bericht speichern“, um diesen Bericht als XML-Datei zu speichern.  
   
@@ -152,7 +149,7 @@ ms.lasthandoff: 09/27/2017
   
 8.  Überprüfen Sie Ihre Auswahl auf der Seite **Zusammenfassung** , und klicken Sie auf **Veröffentlichen** , um den Veröffentlichungsprozess zu starten. Dadurch wird der Verbindungsserver erstellt, wenn er nicht bereits auf dem Server vorhanden ist. Anschließend wird die Sicht mithilfe des Verbindungsservers erstellt.  
   
-     ![Data Feed Publishing-Assistent – Seite "Zusammenfassung"](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "Data Feed Publishing-Assistent – Seite "Zusammenfassung"")  
+     ![Datenfeedveröffentlichungs-Assistent – Seite „Zusammenfassung“](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "Datenfeedveröffentlichungs-Assistent – Seite „Zusammenfassung“")  
   
      Die Ausgabedaten des Pakets können jetzt durch Ausführen der folgenden SQL-Anweisung für die TestDB-Datenbank abgefragt werden: SELECT * FROM [SSISPackageView].  
   
@@ -168,9 +165,9 @@ ms.lasthandoff: 09/27/2017
   
 1.  Starten Sie SQL Server Management Studio.  
   
-2.  Erweitern Sie \< **Computername**>, **Datenbanken**, \< **Datenbank, die Sie im Assistenten ausgewählte**>, und **Ansichten**.  
+2.  Erweitern Sie \<**Computername**>, **Datenbanken**, \<**Im Assistenten ausgewählte Datenbank**> und **Sichten**.  
   
-3.  Mit der rechten Maustaste die \< **anzeigen, die vom Assistenten erstellten**> erstellt, und klicken Sie auf **oberste 1000 Zeilen auswählen**.  
+3.  Klicken Sie mit der rechten Maustaste auf die \<**vom Assistenten erstellte Sicht**>, und klicken Sie dann auf **Die ersten 1000 Zeilen auswählen**.  
   
 4.  Vergewissern Sie sich, dass die Ergebnisse aus dem SSIS-Paket angezeigt werden.  
   
@@ -278,4 +275,3 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
  [Konfigurieren des Datenstreamingziels](../../integration-services/data-flow/configure-data-streaming-destination.md)  
   
   
-

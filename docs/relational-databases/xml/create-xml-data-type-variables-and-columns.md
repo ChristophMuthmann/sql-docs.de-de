@@ -2,9 +2,12 @@
 title: Erstellen von Variablen und Spalten des XML-Datentyps | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 34d820e076639a944e216d00d02b90b7f2c63e2d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 204c9ecf128f9aea3b520a63f4d001c09e9e9b19
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Erstellen von Variablen und Spalten des XML-Datentyps
-  Der **xml** -Datentyp ist ein integrierter Datentyp in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und ähnelt ein wenig anderen integrierten Typen wie **int** und **varchar**. Wie andere integrierte Typen können Sie den **xml** -Datentyp als Spaltentyp, wenn Sie eine Tabelle erstellen, als Variablentyp, als Parametertyp, als Funktionsrückgabestyp oder in [CAST und CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)verwenden.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Der **xml**-Datentyp ist ein integrierter Datentyp in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und ähnelt ein wenig anderen integrierten Typen wie **int** und **varchar**. Wie andere integrierte Typen können Sie den **xml** -Datentyp als Spaltentyp, wenn Sie eine Tabelle erstellen, als Variablentyp, als Parametertyp, als Funktionsrückgabestyp oder in [CAST und CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)verwenden.  
   
 ## <a name="creating-columns-and-variables"></a>Erstellen von Variablen und Spalten  
  Verwenden Sie zur Erstellung einer Spalte des `xml` -Typs als Teil einer Tabelle eine `CREATE TABLE` -Anweisung, wie im folgenden Beispiel gezeigt:  

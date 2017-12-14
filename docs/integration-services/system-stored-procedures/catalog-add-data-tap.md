@@ -1,5 +1,5 @@
 ---
-title: Catalog.add_data_tap | Microsoft Docs
+title: catalog.add_data_tap | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 686b40e7e1ad7f7843bee5af3295fdf394538f63
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 20b136348f21d6b688d86039e96c5f16f1fa7d10
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogadddatatap"></a>catalog.add_data_tap
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,36 +40,36 @@ catalog.add_data_tap [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @execution_id =] *Execution_id*  
- Die Ausführungs-ID für die Ausführung, die das Paket enthält. Die *Execution_id* ist ein **"bigint"**.  
+ [ @execution_id = ] *execution_id*  
+ Die Ausführungs-ID für die Ausführung, die das Paket enthält. Das Argument *execution_id* ist vom Typ **bigInt**.  
   
- [ @task_package_path =] *Task_package_path*  
- Der Paketpfad für den Datenflusstask. Die **PackagePath** -Eigenschaft für den Datenflusstask gibt den Pfad an. Der Pfad berücksichtigt die Groß- und Kleinschreibung. Suchen Sie den Paketpfad in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] Maustaste auf den Datenflusstask, und klicken Sie dann auf **Eigenschaften**. Die **PackagePath** Eigenschaft wird in der **Eigenschaften** Fenster.  
+ [ @task_package_path = ] *task_package_path*  
+ Der Paketpfad für den Datenflusstask. Die **PackagePath**-Eigenschaft für den Datenflusstask gibt den Pfad an. Der Pfad berücksichtigt die Groß- und Kleinschreibung. Um den Paketpfad zu suchen, klicken Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] mit der rechten Maustaste auf den Datenflusstask, und klicken Sie dann auf **Eigenschaften**. Die **PackagePath**-Eigenschaft wird im Fenster **Eigenschaften** angezeigt.  
   
- Die *Task_package_path* ist ein **nvarchar(max)**.  
+ Das Argument *task_package_path* ist vom Typ **nvarchar(max)**.  
   
- [ @dataflow_path_id_string =] *Dataflow_path_id_string*  
- Die Identifikationszeichenfolge für den Datenflusspfad. Mit einem Pfad werden zwei Datenflusskomponenten verbunden. Die **IdentificationString** Eigenschaft für den Pfad Gibt die Zeichenfolge an.  
+ [ @dataflow_path_id_string = ] *dataflow_path_id_string*  
+ Die Identifikationszeichenfolge für den Datenflusspfad. Mit einem Pfad werden zwei Datenflusskomponenten verbunden. Die **IdentificationString**-Eigenschaft für den Pfad gibt die Zeichenfolge an.  
   
- Suchen Sie die ID-Zeichenfolge in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] mit der rechten Maustaste im Pfads zwischen zwei Datenflusskomponenten, und klicken Sie dann auf **Eigenschaften**. Die **IdentificationString** Eigenschaft wird in der **Eigenschaften** Fenster.  
+ Um die Identifikationszeichenfolge zu suchen, klicken Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] mit der rechten Maustaste auf den Pfad zwischen zwei Datenflusskomponenten, und klicken dann auf **Eigenschaften**. Die **IdentificationString**-Eigenschaft wird im Fenster **Eigenschaften** angezeigt.  
   
- Die *Dataflow_path_id_string* ist ein **nvarchar(4000)**.  
+ Das Argument *dataflow_path_id_string* ist vom Typ **nvarchar(4000)**.  
   
- [ @data_filename =] *Data_filename*  
+ [ @data_filename = ] *data_filename*  
  Der Name der Datei, in der die abgezweigten Daten gespeichert werden. Wenn der Datenflusstask in einer Foreach-Schleife oder einem For-Schleifencontainer ausgeführt wird, werden die abgezweigten Daten für jede Iteration der Schleife in separaten Dateien gespeichert. Jeder Datei wird eine Zahl für die jeweilige Iteration als Präfix vorangestellt.  
   
- Standardmäßig befindet sich die Datei in die \< *Laufwerk*>: Ordner "\Programme\Microsoft SQL Server\130\DTS\DataDumps".  
+ Die Datei wird standardmäßig im Ordner „\<*Laufwerk*>:\Programme\Microsoft SQL Server\130\DTS\DataDumps“ gespeichert.  
   
- Die *Data_filename* ist ein **nvarchar(4000)**.  
+ Das Argument *data_filename* ist vom Typ **nvarchar(4000)**.  
   
- [ @max_rows =] *Max_rows*  
- Die Anzahl der Zeilen, die während der Datenabzweigung aufgezeichnet werden. Wenn dieser Wert nicht angegeben wird, werden alle Zeilen aufgezeichnet. Die *Max_rows* ist ein **Int**.  
+ [ @max_rows = ] *max_rows*  
+ Die Anzahl der Zeilen, die während der Datenabzweigung aufgezeichnet werden. Wenn dieser Wert nicht angegeben wird, werden alle Zeilen aufgezeichnet. Das Argument *max_rows* ist vom Typ **int**.  
   
- [ @data_tap_id =] *Data_tap_id*  
- Gibt die ID der Datenabzweigung zurück. Die *Data_tap_id* ist ein **"bigint"**.  
+ [ @data_tap_id = ] *data_tap_id*  
+ Gibt die ID der Datenabzweigung zurück. Das Argument *data_tap_id* ist vom Typ **bigint**.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird eine Datenabzweigung für den Datenflusspfad `'Paths[OLE DB Source.OLE DB Source Output]` im Datenflusstask `\Package\Data Flow Task` erstellt. Die abgezweigten Daten werden gespeichert, der `output0.txt` Datei im Ordner (\<*Laufwerk*>: \Programme\Microsoft SQL Server\130\DTS\DataDumps).  
+ Im folgenden Beispiel wird eine Datenabzweigung für den Datenflusspfad `'Paths[OLE DB Source.OLE DB Source Output]` im Datenflusstask `\Package\Data Flow Task` erstellt. Die abgezweigten Daten werden in der Datei `output0.txt` im Ordner „\<*Laufwerk*>:\Programme\Microsoft SQL Server\130\DTS\DataDumps“ gespeichert.  
   
 ```sql
 Declare @execution_id bigint  
@@ -85,7 +83,7 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Um datenabzweigungen hinzuzufügen, muss die Instanz der Ausführung den Status "erstellt" (der Wert 1 in der **Status** Spalte die [catalog.operations &#40; SSISDB-Datenbank &#41; ](../../integration-services/system-views/catalog-operations-ssisdb-database.md)Ansicht). Der Statuswert ändert sicher, wenn Sie die Ausführung starten. Sie können eine Ausführung erstellen, durch den Aufruf [Catalog. create_execution &#40; SSISDB-Datenbank &#41; ](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
+ Um Datenabzweigungen hinzuzufügen, muss die Ausführungsinstanz den Status „Erstellt“ (der Wert 1 in der Spalte **Zustand** der Sicht [catalog.operations &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)) aufweisen. Der Statuswert ändert sicher, wenn Sie die Ausführung starten. Sie können eine Ausführung erstellen, indem Sie [catalog.create_execution &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md) aufrufen.  
   
  Folgende Überlegungen sind bei der gespeicherten Prozedur "add_data_tap" zu beachten.  
   
@@ -93,7 +91,7 @@ Exec SSISDB.Catalog.start_execution @execution_id
   
 -   Wenn ein Paket mehr als einen Datenflusstask mit dem gleichen Namen enthält, wird der Datenflusstask durch "task_package_path" mit Angaben zur abgezweigten Komponentenausgabe eindeutig identifiziert.  
   
--   Wenn Sie eine datenabzweigung hinzufügen, ist es nicht überprüft, bevor das Paket ausgeführt wird.  
+-   Eine neu hinzugefügte Datenabzweigung wird erst beim Ausführen des Pakets überprüft.  
   
 -   Es wird empfohlen, die Anzahl von Zeilen, die während der Datenabzweigung aufgezeichnet werden, zu beschränken, damit keine zu großen Datendateien generiert werden. Wenn auf dem Computer, auf dem die gespeicherte Prozedur ausgeführt wird, nicht genügend Speicherplatz für die Datendateien verfügbar ist, wird die Ausführung des Pakets beendet und eine Fehlermeldung in ein Protokoll geschrieben.  
   
@@ -130,10 +128,9 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ## <a name="requirements"></a>Anforderungen  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
- Blogeintrag, [SSIS 2012: ein Peek auf Datenabzweigungen](http://go.microsoft.com/fwlink/?LinkId=239983), auf Rafael-salas.com.  
+ Blogeintrag [SSIS 2012: A Peek to Data Taps](http://go.microsoft.com/fwlink/?LinkId=239983) (SSIS 2012: Ein kurzer Blick auf Datenabzweigungen) auf rafael-salas.com.  
   
 ## <a name="see-also"></a>Siehe auch  
  [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)  
   
   
-

@@ -1,29 +1,27 @@
 ---
 title: "Planen der Übernahme von In-Memory-OLTP-Funktionen in SQL Server | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 05/08/2017
+ms.date: 11/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d8cfb42dd7bfa261ba364b427075280631d386b9
+ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: d1a1f9dceede34a4ccf9c6914b0fb4c50c5babdf
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planen der Übernahme von In-Memory-OLTP-Funktionen in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -261,126 +259,15 @@ Weitere Informationen zu LOB-Spalten und Spalten außerhalb von Zeilen finden Si
 ## <a name="e-limitations-of-native-procs"></a>E. Einschränkungen von nativen Prozeduren
 
 
-Bestimmte Elemente von Transact-SQL werden in nativ kompilierten gespeicherten Prozeduren nicht unterstützt.
+Bestimmte Elemente von Transact-SQL werden in nativ kompilierten T-SQL-Modulen, einschließlich gespeicherten Prozeduren, nicht unterstützt. Weitere Informationen darüber, welche Funktionen unterstützt werden, finden Sie im folgenden Artikel:
 
-Überlegungen zur Migration eines Transact-SQL-Skripts zu einer nativen Prozedur finden Sie unter:
+- [Unterstützte Funktionen für nativ kompilierte T-SQL-Module](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)
+
+Überlegungen zur Migration eines Transact-SQL-Moduls, das nicht unterstützte Features verwendet, zu einem nativ kompilierten Transact-SQL-Modul, werden im folgenden Artikel erläutert:
 
 - [Migrationsprobleme bei systemintern kompilierten gespeicherten Prozeduren](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)
 
-
-### <a name="e1-no-case-in-a-native-proc"></a>E.1 Kein CASE-Ausdruck in einer nativen Prozedur
-
-Der CASE-Ausdruck in Transact-SQL kann nicht innerhalb einer nativen Prozedur verwendet werden. Sie können dies umgehen:
-
-- [Implementieren eines CASE-Ausdrucks in einer systemintern kompilierten gespeicherten Prozedur](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)
-
-
-### <a name="e2-no-merge-in-a-native-proc"></a>E.2 Keine MERGE-Anweisung in einer nativen Prozedur
-
-
-Die [MERGE-Anweisung](../../t-sql/statements/merge-transact-sql.md) von Transact-SQL ähnelt der oft als *UPSERT* bezeichneten Funktion. Eine native Prozedur kann die MERGE-Anweisung nicht verwenden. Sie können jedoch die gleiche Funktion wie MERGE erreichen, indem Sie eine Kombination aus den Anweisungen SELECT, UPDATE und INSERT verwenden. Ein Codebeispiel finden Sie unter:
-
-- [Implementieren von MERGE-Funktionalität in einer nativ kompilierten gespeicherten Prozedur](../../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md)
-
-
-
-### <a name="e3-no-joins-in-update-or-delete-statements-in-a-native-proc"></a>E.3 Keine Joins in UPDATE- oder DELETE-Anweisungen in einer nativen Prozedur
-
-Transact-SQL-Anweisungen in einer nativen Prozedur können nur auf speicheroptimierte Tabellen zugreifen. In UPDATE- und DELETE-Anweisungen können Sie keine Tabellen verknüpfen. Bei Versuchen in einer nativen Prozedur tritt ein Fehler mit einer Meldung wie z.B. Meldung 12319 auf, die Folgendes erklärt:
-
-- Die FROM-Klausel kann nicht in einer UPDATE-Anweisung verwendet werden.
-- Eine Tabellenquelle kann nicht in einer DELETE-Anweisung angegeben werden.
-
-Dies kann mit keinem Unterabfragentyp umgangen werden. Sie können eine speicheroptimierte Tabellenvariable jedoch dazu verwenden, ein Join-Ergebnis über mehrere Anweisungen zu erreichen. Es folgen zwei Codebeispiele:
-
-- DELETE...JOIN... möchten wir in einer nativen Prozedur ausführen, können wir jedoch nicht.
-- Eine Reihe von Transact-SQL-Anweisungen zur Umgehung, die das Löschen des Joins erreichen.
-
-
-*Szenario:* Die Tabelle TabProjectEmployee besitzt einen eindeutigen Schlüssel von zwei Spalten: ProjectId und EmployeeId. Jede Zeile gibt die Zuordnung eines Mitarbeiters zu einem aktiven Projekt an. Wenn ein Mitarbeiter das Unternehmen verlässt, muss der Mitarbeiter aus der Tabelle TabProjectEmployee gelöscht werden.
-
-
-#### <a name="invalid-t-sql-deletejoin"></a>Ungültige T-SQL-, DELETE...JOIN-Anweisungen
-
-
-Eine native Prozedur kann über keine DELETE...JOIN-Anweisung wie die folgende verfügen.
-
-
-```tsql
-DELETE pe
-    FROM
-             TabProjectEmployee   AS pe
-        JOIN TabEmployee          AS e
-
-            ON pe.EmployeeId = e.EmployeeId
-    WHERE
-            e.EmployeeStatus = 'Left-the-Company'
-;
-```
-
-
-#### <a name="valid-work-around-manual-deletejoin"></a>Gültige Umgehung, manuelles Ausführen von DELETE...JOIN
-
-Als Nächstes folgt das Codebeispiel für die Umgehung in zwei Teilen:
-
-1. Die CREATE TYPE-Anweisung wird einmal einige Tage vor der ersten Verwendung des Typs durch eine tatsächliche Tabellenvariable ausgeführt.
-
-2. Der Geschäftsprozess verwendet den erstellten Typ. Zunächst wird eine Tabellenvariable des erstellten Tabellentyps deklariert.
-
-
-```tsql
-
-CREATE TYPE dbo.type_TableVar_EmployeeId
-    AS TABLE  
-    (
-        EmployeeId   bigint   NOT NULL
-    );
-```
-
-
-Als Nächstes verwenden Sie den CREATE TABLE-Typ.
-
-
-```tsql
-DECLARE @MyTableVarMo  dbo.type_TableVar_EmployeeId  
-
-INSERT INTO @MyTableVarMo (EmployeeId)
-    SELECT
-            e.EmployeeId
-        FROM
-                 TabProjectEmployee  AS pe
-            JOIN TabEmployee         AS e  ON e.EmployeeId = pe.EmployeeId
-        WHERE
-            e.EmployeeStatus = 'Left-the-Company'
-;
-
-DECLARE @EmployeeId   bigint;
-
-WHILE (1=1)
-BEGIN
-    SET @EmployeeId = NULL;
-
-    SELECT TOP 1 @EmployeeId = v.EmployeeId
-        FROM @MyTableVarMo  AS v;
-
-    IF (NULL = @Employeed) BREAK;
-    
-    DELETE TabProjectEmployee
-        WHERE EmployeeId = @EmployeeId;
-
-    DELETE @MyTableVarMo
-        WHERE EmployeeId = @EmployeeId;
-END;
-```
-
-
-### <a name="e4-query-plan-limitations-for-native-procs"></a>E.4 Abfrageplaneinschränkungen für native Prozeduren
-
-
-Einige Typen von Abfrageplänen sind für native Prozeduren nicht verfügbar. Viele Details werden im folgenden Artikel erläutert:
-
-- [Anleitung zur Abfrageverarbeitung für speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)
-
+Neben Einschränkungen für bestimmte Elemente von Transact-SQL gibt es auch Einschränkungen für Abfrageoperatoren, die in nativ kompilierten T-SQL-Modulen unterstützt werden. Aufgrund dieser Einschränkungen eignen sich nativ kompilierte gespeicherte Prozeduren nicht für analytische Abfragen, die große Datasets verarbeiten.
 
 #### <a name="no-parallel-processing-in-a-native-proc"></a>Keine parallele Verarbeitung in einer nativen Prozedur
 
@@ -421,6 +308,5 @@ Sie können die Transact-SQL-Skripts stabiler gegenüber einem möglichen Transa
 ## <a name="related-links"></a>Verwandte Links
 
 - [In-Memory OLTP (Arbeitsspeicheroptimierung)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
-
 
 

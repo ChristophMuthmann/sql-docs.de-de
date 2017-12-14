@@ -1,28 +1,30 @@
 ---
-title: SQL Server Integration Services Data Types in Expressions | Microsoft Docs
+title: "Integration Services-Datentypen in Ausdrücken | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cd0a604c665f7bd31a8ebd3e46b78afde802cc98
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 44b5829a581f0e0a0c2ff67eabe4a2a4fae3885e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Integration Services-Datentypen in Ausdrücken
   Die Ausdrucksauswertung verwendet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentypen. Wenn Daten erstmals an einen Datenfluss in einem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket weitergegeben werden, konvertiert das Datenflussmodul alle Spaltendaten in einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp, und die von einem Ausdruck verwendeten Spaltendaten weisen bereits einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp auf. Ausdrücke, die in den Transformationen für bedingtes Teilen und für abgeleitete Spalten verwendet werden, können auf Spalten verweisen, weil sie Teil eines Datenflusses mit Spaltendaten sind.  
@@ -44,7 +46,7 @@ ms.lasthandoff: 08/03/2017
   
  Betrachten Sie die Ausdrücke im folgenden Screenshot.  
   
- ![String-Datentypen in SSIS-Ausdrücke](../../integration-services/expressions/media/stringsinssisexpressions.png "String-Datentypen in SSIS-Ausdrücke")  
+ ![String-Datentypen in SSIS-Ausdrücken](../../integration-services/expressions/media/stringsinssisexpressions.png "String-Datentypen in SSIS-Ausdrücken")  
   
 1.  Der erste Ausdruck wird ohne Fehler ausgeführt, weil sich die NULL(DT_STR, ...)-Funktion auf Stammebene des Ausdrucks befindet.  
   
@@ -58,7 +60,7 @@ ms.lasthandoff: 08/03/2017
   
  Die folgenden Beispiele veranschaulichen die Auswirkungen der Umwandlung.  
   
- ![Umwandeln von Zeichenfolgen in SSIS-Ausdrücke](../../integration-services/expressions/media/stringsinssisexpressions2.png "Umwandeln von Zeichenfolgen in SSIS-Ausdrücke")  
+ ![Umwandlungsstrings in SSIS-Ausdrücken](../../integration-services/expressions/media/stringsinssisexpressions2.png "Umwandlungsstrings in SSIS-Ausdrücken")  
   
 1.  Im ersten Ausdruck wird die Umwandlung nicht auf Stammebene des Ausdrucks ausgeführt. Die Ausdrucksauswertung verarbeitet diese Umwandlung auf intelligente Weise und wandelt nicht in DT_STR, sondern in DT_WSTR um. Der Ausdruck gibt DT_WSTR zurück.  
   
@@ -71,7 +73,7 @@ ms.lasthandoff: 08/03/2017
   
  Das folgende Diagramm zeigt den Ergebnistyp impliziter Konvertierungen von BINARY-Vorgängen. Am Schnittpunkt von Spalte und Zeile in dieser Tabelle finden Sie den Ergebnistyp einer binären Operation mit Operanden der Typen, die links (Von) und rechts (Zu) angegeben sind.  
   
- ![Implizite datentypkonvertierung zwischen Datentypen](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "implizite datentypkonvertierung zwischen Datentypen")  
+ ![Implizite Datentypkonvertierung zwischen Datentypen](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "Implizite Datentypkonvertierung zwischen Datentypen")  
   
  Die Schnittmenge eines integer-Werts mit Vorzeichen und eines integer-Werts ohne Vorzeichen ist ein integer-Wert, der potenziell größer als die beiden Argumente ist.  
   
