@@ -24,6 +24,8 @@
 ### [iSCSI](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
 ### [NFS](sql-server-linux-shared-disk-cluster-configure-nfs.md)
 ### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
+## [7_Bereitstellen eines Peacemaker-Clusters](sql-server-linux-deploy-pacemaker-cluster.md)
+## [8_Erstellen und Konfigurieren von Verfügbarkeitsgruppen](sql-server-linux-create-availability-group.md)
 
 # Konzepte
 ## Install
@@ -51,6 +53,7 @@
 ### [Use PowerShell to manage (Verwenden von PowerShell zum Verwalten)](sql-server-linux-manage-powershell.md)
 ### [Use log shipping (Verwenden von Protokollversand)](sql-server-linux-use-log-shipping.md)
 ### [Use DB Mail and email alerts (Verwenden von DB-Mails und E-Mail-Warnungen)](sql-server-linux-db-mail-sql-agent.md)
+### [Konfigurieren mehrerer Subnetze für die Verfügbarkeit](sql-server-linux-configure-multiple-subnet.md)
 
 ## [Migrieren](sql-server-linux-migrate-overview.md)
 ### [Export and import a BACPAC from Windows (Exportieren und Importieren einer BACPAC-Datei von Windows)](sql-server-linux-migrate-ssms.md)
@@ -62,20 +65,21 @@
 ### [Konfigurieren von SSIS](sql-server-linux-configure-ssis.md)
 ### [Zeitliches Planen von SSIS-Paketen](sql-server-linux-schedule-ssis-packages.md)
 
-## [Configure Business Continuity (Konfigurieren des Geschäftskontinuität)](sql-server-linux-business-continuity-dr.md)
-### [Backup and Restore (Sichern und Wiederherstellen)](sql-server-linux-backup-and-restore-database.md)
+## [Konfigurieren der Geschäftskontinuität](sql-server-linux-business-continuity-dr.md)
+### [Verfügbarkeitsgrundlagen](sql-server-linux-ha-basics.md)
+### [Sichern und Wiederherstellen](sql-server-linux-backup-and-restore-database.md)
 #### [Virtual Device Interface - Linux (Virtuelle Geräteschnittstelle – Linux)](sql-server-linux-backup-vdi-specification.md)
-### [Failover Cluster Instance (Failoverclusterinstanz)](sql-server-linux-shared-disk-cluster-concepts.md)
-#### [Red Hat Enterprise Linux]()
+### [Failoverclusterinstanz](sql-server-linux-shared-disk-cluster-concepts.md)
+#### [Red Hat Enterprise Linux (RHEL)]()
 ##### [Configure (HA add-on) (Konfigurieren (HA-Add-on))](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
 ##### [Operate (HA add-on) (Ausführen (HA-Add-on))](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-#### [SUSE Linux Enterprise Server]()
+#### [SUSE Linux Enterprise Server (SLES)]()
 ##### [Configure (HA add-on) (Konfigurieren (HA-Add-on))](sql-server-linux-shared-disk-cluster-sles-configure.md)
-### [Availability Groups (Verfügbarkeitsgruppen)](sql-server-linux-availability-group-overview.md)
+### [Verfügbarkeitsgruppen](sql-server-linux-availability-group-overview.md)
 #### [Create for high availability (Erstellen für Hochverfügbarkeit)](sql-server-linux-availability-group-ha.md)
 ##### [Configure AG (Konfigurieren von AG)](sql-server-linux-availability-group-configure-ha.md)
 ##### [Configure on RHEL (Konfigurieren unter RHEL)](sql-server-linux-availability-group-cluster-rhel.md)
-##### [Configure on SUSE (Konfigurieren unter SUSE)](sql-server-linux-availability-group-cluster-sles.md)
+##### [Konfigurieren auf SLES](sql-server-linux-availability-group-cluster-sles.md)
 ##### [Configure on Ubuntu (Konfigurieren unter Ubuntu)](sql-server-linux-availability-group-cluster-ubuntu.md)
 ##### [Operate (Ausführen)](sql-server-linux-availability-group-failover-ha.md)
 #### [Erstellung nur für schreibgeschützten Zugriff]()
@@ -83,7 +87,7 @@
 
 ## [Sicherheit](sql-server-linux-security-overview.md)
 ### [Get started with security features (Erste Schritte mit den Sicherheitsfeatures)](sql-server-linux-security-get-started.md)
-### [Encrypting Connections (Verschlüsseln von Verbindungen)](sql-server-linux-encrypted-connections.md)
+### [Verschlüsseln von Verbindungen](sql-server-linux-encrypted-connections.md)
 
 ## Leistung
 ### [Bewährte Methoden](sql-server-linux-performance-best-practices.md)
@@ -91,8 +95,8 @@
 
 # Beispiele
 ## Unbeaufsichtigtes Installieren
-### [Red Hat Enterprise Linux](sample-unattended-install-redhat.md)
-### [SUSE Linux Enterprise Server](sample-unattended-install-suse.md)
+### [Red Hat Enterprise Linux (RHEL)](sample-unattended-install-redhat.md)
+### [SUSE Linux Enterprise Server (SLES)](sample-unattended-install-suse.md)
 ### [Ubuntu](sample-unattended-install-ubuntu.md)
 
 # Ressourcen
