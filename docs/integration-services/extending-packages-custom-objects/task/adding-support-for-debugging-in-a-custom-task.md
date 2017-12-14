@@ -1,5 +1,5 @@
 ---
-title: "Hinzufügen von Unterstützung für das Debuggen in einem benutzerdefinierten Task | Microsoft Docs"
+title: "Bereitstellen von Unterstützung für das Debuggen in einem benutzerdefinierten Task | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,33 +24,32 @@ helpviewer_keywords:
 - SSIS custom tasks, debugging
 - debugging [Integration Services], custom tasks
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f6e3d95b834bf64cb4dd4201658e0905d3e3ed46
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 90156ac284967ca1446ec7a9e34416208f612b6e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>Bereitstellen von Unterstützung für das Debuggen in einem benutzerdefinierten Task
   Das [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Laufzeitmodul ermöglicht das Anhalten der Ausführung von Paketen, Tasks und anderen Arten von Containern mithilfe von Breakpoints. Mit Breakpoints können Sie Überprüfungen durchführen und Fehler beheben, die verhindern, dass die Anwendung oder die Tasks korrekt ausgeführt werden. Die Breakpointarchitektur ermöglicht es dem Client, den Laufzeitwert von Objekten im Paket an definierten Ausführungpunkten auszuwerten, während die Verarbeitung des Tasks angehalten ist.  
   
  Entwickler benutzerdefinierter Tasks können mit dieser Architektur über die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite>-Schnittstelle und ihre übergeordnete Schnittstelle, <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>, benutzerdefinierte Breakpointziele erstellen. Die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite>-Schnittstelle definiert die Interaktion zwischen dem Laufzeitmodul und dem Task zur Erstellung und Verwaltung benutzerdefinierter Breakpointorte oder -ziele. Die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>-Schnittstelle bietet Methoden und Eigenschaften, die vom Laufzeitmodul aufgerufen werden, um den Task anzuhalten oder seine Ausführung fortzusetzen.  
   
- Breakpointorte oder -ziele sind Punkte in der Taskausführung, an denen die Verarbeitung angehalten werden kann. Wählen Sie Benutzer verfügbaren breakpointzielen in die **Breakpoints festlegen** (Dialogfeld). Zusätzlich zu den standardmäßigen Breakpointoptionen bietet beispielsweise der Foreach-Schleifencontainer die Option Am Anfang jeder Iteration der Schleife unterbrechen.  
+ Breakpointorte oder -ziele sind Punkte in der Taskausführung, an denen die Verarbeitung angehalten werden kann. Benutzer können im Dialogfeld **Breakpoints festlegen** unter den verfügbaren Breakpointzielen auswählen. Zusätzlich zu den standardmäßigen Breakpointoptionen bietet beispielsweise der Foreach-Schleifencontainer die Option Am Anfang jeder Iteration der Schleife unterbrechen.  
   
- Wenn ein Task während der Ausführung ein Breakpointziel erreicht, wertet er dieses aus, um festzustellen, ob ein Breakpoint aktiviert ist. Damit wird angezeigt, dass der Benutzer die Ausführung an diesem Breakpoint beenden möchte. Wenn der Breakpoint aktiviert ist, löst der Task das <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A>-Ereignis beim Laufzeitmodul aus. Das Laufzeitmodul reagiert auf das Ereignis durch Aufrufen der **Suspend** Methode der einzelnen Aufgaben, die derzeit im Paket ausgeführt wird. Ausführung des Tasks wird fortgesetzt, wenn es sich bei der Laufzeit aufgerufen, die **ResumeExecution** Methode des Tasks "angehalten".  
+ Wenn ein Task während der Ausführung ein Breakpointziel erreicht, wertet er dieses aus, um festzustellen, ob ein Breakpoint aktiviert ist. Damit wird angezeigt, dass der Benutzer die Ausführung an diesem Breakpoint beenden möchte. Wenn der Breakpoint aktiviert ist, löst der Task das <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A>-Ereignis beim Laufzeitmodul aus. Das Laufzeitmodul reagiert auf das Ereignis durch Aufruf der **Suspend**-Methode für alle Tasks, die derzeit im Paket ausgeführt werden. Die Ausführung des Tasks wird fortgesetzt, wenn die Laufzeit die **ResumeExecution**-Methode des angehaltenen Tasks aufruft.  
   
  Tasks, die keine Breakpoints verwenden, sollten dennoch die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite>- und <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>-Schnittstellen implementieren. Dadurch wird sichergestellt, dass der Task ordnungsgemäß angehalten wird, wenn andere Objekte im Paket <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A>-Ereignisse auslösen.  
   
 ## <a name="idtsbreakpointsite-interface-and-breakpointmanager"></a>IDTSBreakpointSite-Schnittstelle und BreakpointManager  
- Tasks erstellen Breakpointziele durch Aufruf der <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.CreateBreakpointTarget%2A>-Methode des <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager>, indem sie eine ganzzahlige ID und eine Zeichenfolgenbeschreibung als Parameter bereitstellen. Wenn ein Task den Punkt im Code erreicht, der ein Breakpointziel enthält, überprüft er mithilfe der <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.IsBreakpointTargetEnabled%2A>-Methode, ob der Breakpoint aktiviert ist. Wenn **"true"**, benachrichtigt der Task das Laufzeitmodul durch Auslösen der <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> Ereignis.  
+ Tasks erstellen Breakpointziele durch Aufruf der <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.CreateBreakpointTarget%2A>-Methode des <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager>, indem sie eine ganzzahlige ID und eine Zeichenfolgenbeschreibung als Parameter bereitstellen. Wenn ein Task den Punkt im Code erreicht, der ein Breakpointziel enthält, überprüft er mithilfe der <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.IsBreakpointTargetEnabled%2A>-Methode, ob der Breakpoint aktiviert ist. Falls der Wert **true** lautet, benachrichtigt der Task das Laufzeitmodul, indem er das <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A>-Ereignis auslöst.  
   
- Die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite>-Schnittstelle definiert eine Methode, <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite.AcceptBreakpointManager%2A>, die vom Laufzeitmodul während der Taskerstellung aufgerufen wird. Diese Methode stellt als Parameter das <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager>-Objekt bereit, das anschließend vom Task zur Erstellung und Verwaltung der Breakpoints verwendet wird. Aufgaben sollten speichern die <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> lokal für die Verwendung während der **Validate** und **Execute** Methoden.  
+ Die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite>-Schnittstelle definiert eine Methode, <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite.AcceptBreakpointManager%2A>, die vom Laufzeitmodul während der Taskerstellung aufgerufen wird. Diese Methode stellt als Parameter das <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager>-Objekt bereit, das anschließend vom Task zur Erstellung und Verwaltung der Breakpoints verwendet wird. Tasks sollten den <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> zur Verwendung während der **Validate**- und **Execute**-Methoden lokal speichern.  
   
  Im folgenden Codebeispiel wird das Erstellen eines Breakpointziels mithilfe des <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> veranschaulicht. Im Beispiel wird die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A>-Methode aufgerufen, um das Ereignis auszulösen.  
   
@@ -97,11 +94,11 @@ End Function
 ```  
   
 ## <a name="idtssuspend-interface"></a>IDTSSuspend-Schnittstelle  
- Die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>-Schnittstelle definiert die Methoden, die vom Laufzeitmodul aufgerufen werden, um den Task anzuhalten oder seine Ausführung fortzusetzen. Die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> Schnittstelle wird implementiert, indem Sie die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> -Schnittstelle, und die zugehörige **Suspend** und **ResumeExecution** Methoden in der Regel durch den benutzerdefinierten Task überschrieben werden. Wenn das Laufzeitmodul empfängt ein **OnBreakpointHit** Ereignis aus einer Aufgabe, er ruft die **anhalten** Methode alle derzeit ausgeführten Tasks, und benachrichtigen die Aufgaben zu unterbrechen. Wenn der Client die Ausführung fortsetzt, das Laufzeitmodul Ruft die **ResumeExecution** Methode der Aufgaben, die angehalten wurden.  
+ Die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>-Schnittstelle definiert die Methoden, die vom Laufzeitmodul aufgerufen werden, um den Task anzuhalten oder seine Ausführung fortzusetzen. Die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>-Schnittstelle wird von der <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite>-Schnittstelle implementiert, und ihre **Suspend**- und **ResumeExecution**-Methoden werden meist durch den benutzerdefinierten Task überschrieben. Wenn das Laufzeitmodul ein **OnBreakpointHit**-Ereignis von einem Task empfängt, ruft es die **Suspend**-Methode für alle derzeit ausgeführten Tasks auf und veranlasst sie, die Ausführung anzuhalten. Wenn der Client die Ausführung fortsetzt, ruft das Laufzeitmodul die **ResumeExecution**-Methode der angehaltenen Tasks auf.  
   
- Das Anhalten und Fortsetzen der Taskausführung schließt das Anhalten und Fortsetzen des Ausführungsthreads des Tasks ein. In verwaltetem Code erreichen Sie dies mit der **ManualResetEvent** -Klasse im **System.Threading** Namespace von .NET Framework.  
+ Das Anhalten und Fortsetzen der Taskausführung schließt das Anhalten und Fortsetzen des Ausführungsthreads des Tasks ein. In verwaltetem Code erreichen Sie dies mit der **ManualResetEvent**-Klasse im **System.Threading**-Namespace von .NET Framework.  
   
- Im folgenden Codebeispiel wird die Unterbrechung und Wiederaufnahme der Taskausführung veranschaulicht. Beachten Sie, dass die **Execute** Methode im vorherigen Codebeispiel geändert hat, und der Ausführungsthread angehalten wird, wenn der Breakpoint ausgelöst.  
+ Im folgenden Codebeispiel wird die Unterbrechung und Wiederaufnahme der Taskausführung veranschaulicht. Beachten Sie dabei, dass sich die **Execute**-Methode gegenüber dem letzten Codebeispiel geändert hat und der Ausführungsthread angehalten wird, wenn der Breakpoint ausgelöst wird.  
   
 ```csharp  
 private ManualResetEvent m_suspended = new ManualResetEvent( true );  
@@ -354,4 +351,3 @@ End Sub
  [Debuggen der Ablaufsteuerung](../../../integration-services/troubleshooting/debugging-control-flow.md)  
   
   
-

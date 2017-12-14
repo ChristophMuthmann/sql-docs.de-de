@@ -1,5 +1,5 @@
 ---
-title: Catalog. restore_project (SSISDB-Datenbank) | Microsoft Docs
+title: catalog.restore_project (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 8adee525-579b-4d2f-b807-e2ecc07fb2e9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 23074fc664591411666315036e3493e1b7b26134
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 55b42783b60fbdb748a9102c2a703a9a6fa35d2d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogrestoreproject-ssisdb-database"></a>catalog.restore_project (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Stellt ein Projekt in der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Katalog in einer früheren Version.  
+  Stellt die frühere Version eines Projekts im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog wieder her.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,13 +38,13 @@ catalog.restore_project [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @folder_name =] *Ordnername*  
+ [ @folder_name = ] *folder_name*  
  Der Name des Ordners, der das Projekt enthält. Der *folder_name* ist **nvarchar(128)**.  
   
- [ @project _name =] *Project_name*  
+ [ @project _name = ] *project_name*  
  Der Name des Projekts. Der *project_name* ist **nvarchar(128)**.  
   
- [ @object_version_lsn =] *"object_version_lsn"*  
+ [ @object_version_lsn = ] *object_version_lsn*  
  Die Version des Projekts. Der *object_version_lsn* ist **bigint**.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
@@ -76,10 +74,9 @@ catalog.restore_project [ @folder_name = ] folder_name
 -   Der Benutzer verfügt nicht über die entsprechenden Berechtigungen.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn ein Projekt wiederhergestellt wird, werden allen Parametern Standardwerte zugewiesen, und alle Umgebungsverweise bleiben unverändert. Die maximale Anzahl von Projektversionen, die im Katalog beibehalten werden, richtet sich nach der Katalogeigenschaft **MAX_VERSIONS_PER_PROJECT**, entsprechend der [Catalog_property](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) anzeigen.  
+ Wenn ein Projekt wiederhergestellt wird, werden allen Parametern Standardwerte zugewiesen, und alle Umgebungsverweise bleiben unverändert. Die maximale Anzahl von Projektversionen, die im Katalog beibehalten werden, wird durch die Katalogeigenschaft **MAX_VERSIONS_PER_PROJECT** bestimmt, wie in der [catalog_property](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)-Sicht gezeigt.  
   
 > [!WARNING]  
 >  Umgebungsverweise sind möglicherweise nicht mehr gültig, nachdem ein Projekt wiederhergestellt wurde.  
   
   
-

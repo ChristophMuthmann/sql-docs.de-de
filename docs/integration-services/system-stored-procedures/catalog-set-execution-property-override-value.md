@@ -1,5 +1,5 @@
 ---
-title: Catalog.set_execution_property_override_value | Microsoft Docs
+title: catalog.set_execution_property_override_value | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 37cb3c01-f4c0-4978-8e40-a975456def5a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 20f2c882a78f5e60931b0152d5877898e1972d0a
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d8e561e94e3dee033941c5defade34d28b1ac89c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogsetexecutionpropertyoverridevalue"></a>catalog.set_execution_property_override_value
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,16 +38,16 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @execution_id =] *Execution_id*  
+ [ @execution_id = ] *execution_id*  
  Der eindeutige Bezeichner für die Instanz der Ausführung. Der *execution_id* ist **bigint**.  
   
- [ @property_path =] *Property_path*  
+ [ @property_path = ] *property_path*  
  Der Pfad zur Eigenschaft im Paket. Der *property_path* ist **nvarchar(4000)**.  
   
- [ @property_value =] *Property_value*  
+ [ @property_value = ] *property_value*  
  Der Überschreibungswert, der der Eigenschaft zugewiesen werden soll. Der *property_value* ist **nvarchar(max)**.  
   
- [ @sensitive =] *vertrauliche*  
+ [ @sensitive = ] *sensitive*  
  Wenn der Wert 1 lautet, ist die Eigenschaft vertraulich und wird beim Speichern verschlüsselt. Lautet der Wert 0, ist die Eigenschaft nicht vertraulich, und der Wert wird als Nur-Text gespeichert. Das *sensitive* -Argument lautet **bit**.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -76,4 +74,3 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
  [catalog.set_execution_parameter_value &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Catalog.set_worker_agent_property (SSISDB-Datenbank) | Microsoft Docs
+title: catalog.set_worker_agent_property (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ddd2a534-6925-4d66-90e7-541c14f41de7
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: c1caf4a71e5802968d9471711b8206a26f9c28d5
-ms.contentlocale: de-de
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: 1438d3a2cf200450791c085f501c49329d61154d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="catalogsetworkeragentproperty-ssisdb-database"></a>Catalog.set_worker_agent_property (SSISDB-Datenbank)
+# <a name="catalogsetworkeragentproperty-ssisdb-database"></a>catalog.set_worker_agent_property (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-Setzt die Eigenschaft des eine [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale-Out-Worker.
+Legt die Eigenschaft eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Scale Out-Workers fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,16 +36,16 @@ catalog.set_worker_agent_property [@WorkerAgentId =] WorkerAgentId, [@PropertyNa
 
 ## <a name="arguments"></a>Argumente
 [@WorkerAgentId =] *WorkerAgentId*  
-Der Worker-Agent-ID der Skalierung Out Worker. Die *WorkerAgentId* ist **"uniqueidentifier"**.
+Die Worker-Agent-ID für den Scale Out-Worker. Das Argument *WorkerAgentId* ist vom Typ **uniqueidentifier**.
 
 [@PropertyName =] *PropertyName*  
-Der Name der Eigenschaft. Die *PropertyName* ist **nvarchar(256)**.
+Der Name der Eigenschaft. Das Argument *PropertyName* ist vom Typ **nvarchar(256)**.
 
 [@PropertyValue =] *PropertyValue*  
-Der Wert der Eigenschaft. Die *PropertyValue* ist **nvarchar(max)**.
+Der Wert der Eigenschaft. Das Argument *PropertyValue* ist vom Typ **nvarchar(max)**.
 
 ## <a name="remarks"></a>Hinweise
-Die gültigen Eigenschaftennamen sind **DisplayName**, **Beschreibung**, **Tags**.
+Die gültigen Eigenschaftennamen sind **DisplayName**, **Description**, **Tags**.
 
 ## <a name="return-code-value"></a>Rückgabecodewert  
  0 (Erfolg)  
@@ -67,9 +65,8 @@ Die gültigen Eigenschaftennamen sind **DisplayName**, **Beschreibung**, **Tags*
   
 -   Der Benutzer verfügt nicht über die entsprechenden Berechtigungen. 
 
--   Der Worker-Agent-ID ist ungültig.
+-   Die Worker-Agent-ID ist ungültig.
 
 -   Der Eigenschaftsname ist ungültig.
 
 -   Der Eigenschaftswert ist ungültig.  
-

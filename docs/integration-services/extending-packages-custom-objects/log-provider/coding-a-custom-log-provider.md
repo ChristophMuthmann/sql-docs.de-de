@@ -1,5 +1,5 @@
 ---
-title: Codieren eines benutzerdefinierten Protokollanbieters | Microsoft Docs
+title: Codieren eines benutzerdefinierten Protokollanbieters | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,31 +8,27 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom log providers [Integration Services], coding
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom log providers [Integration Services], coding
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4ae46112c19473b117a9a11eb83fc4510427365c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0fdab647193d9439ba9be97f89c503978254e0a5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="coding-a-custom-log-provider"></a>Codieren eines benutzerdefinierten Protokollanbieters
   Nachdem Sie eine Klasse erstellt haben, die von der <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase>-Basisklasse erbt, und das <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute>-Attribut auf die Klasse angewendet haben, müssen Sie die Implementierung der Eigenschaften und Methoden der Basisklasse überschreiben, um die benutzerdefinierte Funktionalität bereitzustellen.  
   
- Arbeitsbeispiele für benutzerdefinierte Protokollanbieter finden Sie unter [Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Protokollanbieter](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md).  
+ Funktionstüchtige Beispiele benutzerdefinierter Protokollanbieter finden Sie unter [Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Protokollanbieter](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md).  
   
 ## <a name="configuring-the-log-provider"></a>Konfigurieren des Protokollanbieters  
   
@@ -40,7 +36,7 @@ ms.lasthandoff: 08/03/2017
  Sie überschreiben die <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.InitializeLogProvider%2A>-Methode, um Verweise auf die Connections-Auflistung und die Ereignisschnittstelle zwischenzuspeichern. Sie können diese zwischengespeicherten Verweise später in anderen Methoden des Protokollanbieters verwenden.  
   
 ### <a name="using-the-configstring-property"></a>Verwenden der ConfigString-Eigenschaft  
- Zur Entwurfszeit erhält ein Protokollanbieter Konfigurationsinformationen aus den **Konfiguration** Spalte. Diese Konfigurationsinformationen entsprechen der <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A>-Eigenschaft des Protokollanbieters. Standardmäßig enthält diese Spalte ein Textfeld, aus dem Sie alle Zeichenfolgeninformationen abrufen können. Die meisten in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] integrierten Protokollanbieter verwenden diese Eigenschaft, um den Namen des Verbindungs-Managers zu speichern, den der Anbieter zur Verbindung mit einer externen Datenquelle verwendet. Wenn der Protokollanbieter verwendet die <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> -Eigenschaft, verwenden die <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> Methode, um diese Eigenschaft zu überprüfen, und stellen Sie sicher, dass die Eigenschaft ordnungsgemäß festgelegt ist.  
+ Zur Entwurfszeit erhält ein Protokollanbieter Konfigurationsinformationen aus der Spalte **Konfiguration**. Diese Konfigurationsinformationen entsprechen der <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A>-Eigenschaft des Protokollanbieters. Standardmäßig enthält diese Spalte ein Textfeld, aus dem Sie alle Zeichenfolgeninformationen abrufen können. Die meisten in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] integrierten Protokollanbieter verwenden diese Eigenschaft, um den Namen des Verbindungs-Managers zu speichern, den der Anbieter zur Verbindung mit einer externen Datenquelle verwendet. Falls Ihr Protokollanbieter die <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A>-Eigenschaft verwendet, wenden Sie die <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A>-Methode an, um diese Eigenschaft zu überprüfen und sicherzustellen, dass sie richtig eingestellt ist.  
   
 ### <a name="validating-the-log-provider"></a>Überprüfen des Protokollanbieters  
  Sie überschreiben die <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A>-Methode, um sicherzustellen, dass der Anbieter ordnungsgemäß konfiguriert wurde und zum Ausführen bereit ist. In der Regel genügt eine minimale Überprüfung, um sich zu vergewissern, dass <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> richtig eingestellt ist. Die Ausführung kann erst fortgesetzt werden, wenn der Protokollanbieter <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success> von der <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A>-Methode zurückgibt.  
@@ -87,7 +83,7 @@ End Function
 ```  
   
 ### <a name="persisting-the-log-provider"></a>Beibehalten des Protokollanbieters  
- Normalerweise müssen Sie keine benutzerdefinierte Persistenz für einen Verbindungs-Manager implementieren. Die benutzerdefinierte Persistenz ist nur erforderlich, wenn die Eigenschaften eines Objekts komplexe Datentypen verwenden. Weitere Informationen finden Sie unter [Entwickeln von benutzerdefinierten Objekten für Integration Services](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md).  
+ In der Regel müssen Sie keine benutzerdefinierte Persistenz für einen Verbindungs-Manager implementieren. Die benutzerdefinierte Persistenz ist nur erforderlich, wenn die Eigenschaften eines Objekts komplexe Datentypen verwenden. Weitere Informationen finden Sie unter [Developing Custom Objects for Integration Services](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md) (Entwickeln von benutzerdefinierten Objekten für Integration Services).  
   
 ## <a name="logging-with-the-log-provider"></a>Protokollieren mit dem Protokollanbieter  
  Es gibt drei Laufzeitmethoden, die von allen Protokollanbietern überschrieben werden müssen: <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> und <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A>.  
@@ -142,7 +138,7 @@ End Sub
 ```  
   
 ### <a name="writing-log-entries"></a>Schreiben von Protokolleinträgen  
- Die <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> Methode wird immer dann aufgerufen, ein Objekt im Paket ein Ereignis auslöst, durch den Aufruf von eines Brandes\<Ereignis >-Methode für eine der Ereignisschnittstellen. Jedes Ereignis wird mit Informationen über seinen Kontext ausgelöst und enthält normalerweise eine erklärende Meldung. Aber nicht jeder Aufruf der <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>-Methode enthält Informationen für jeden Methodenparameter. Beispielsweise liefern einige Standardereignisse, deren Namen selbsterklärend sind, keinen Meldungstext, und Datencode und Datenbytes sind für optionale Zusatzinformationen gedacht.  
+ Die Methode <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> wird immer dann aufgerufen, wenn ein Objekt im Paket ein Ereignis auslöst, indem es eine <Fire\<event>-Methode für eine der Ereignisschnittstellen aufruft. Jedes Ereignis wird mit Informationen über seinen Kontext ausgelöst und enthält normalerweise eine erklärende Meldung. Aber nicht jeder Aufruf der <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>-Methode enthält Informationen für jeden Methodenparameter. Beispielsweise liefern einige Standardereignisse, deren Namen selbsterklärend sind, keinen Meldungstext, und Datencode und Datenbytes sind für optionale Zusatzinformationen gedacht.  
   
  Im folgenden Codebeispiel wird die <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>-Methode implementiert und die Ereignisse in den Datenstrom geschrieben, der im vorhergehenden Abschnitt geöffnet wurde.  
   
@@ -203,4 +199,3 @@ End Sub
  [Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Protokollanbieter](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)  
   
   
-

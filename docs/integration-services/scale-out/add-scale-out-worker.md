@@ -1,5 +1,5 @@
 ---
-title: "Fügen Sie ein SSIS-Dezentrales Skalieren Worker mit Skalieren auf Unternehmensebene Manager | Microsoft Docs"
+title: "Hinzufügen eines SSIS Scale Out-Workers mit dem Manager für horizontales Hochskalieren | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 07/18/2017
 ms.prod: sql-non-specified
@@ -8,45 +8,42 @@ ms.service:
 ms.component: scale-out
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b769236330941a107865a0b133961bce5bf6b85b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ef11448d03bd188aaea425225312af9f681f530c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="add-a-scale-out-worker-with-scale-out-manager"></a>Horizontales Worker mit Skalieren auf Unternehmensebene Manager hinzufügen
+# <a name="add-a-scale-out-worker-with-scale-out-manager"></a>Hinzufügen eines SSIS Scale Out-Workers mit dem Manager für horizontales Hochskalieren
 
-Integration Services-Scale Out Manager Infrastrukturkosten erheblich die Komplexität, um die vorhandene Umgebung horizontal skalieren Scale-Out-Worker hinzufügen. 
+Der Manager für horizontales Hochskalieren der Integration Services vereinfacht das Hinzufügen des Workers für horizontales Hochskalieren zu Ihrer vorhandenen Umgebung für horizontales Hochskalieren erheblich. 
 
-Die unten aufgeführten Schritten ermöglichen es Ihnen, eine Skalierung Out Worker der Topologie Horizontales Skalieren hinzufügen:
+Mit den unten aufgeführten Schritten können Sie Ihrer Topologie für horizontales Hochskalieren einen SSIS Scale Out-Worker hinzufügen:
 
-## <a name="1-install-scale-out-worker"></a>1. Dezentrales Skalieren Worker installieren
-Wählen Sie im Installations-Assistenten von SQL Server Integration Services und Scale-Out-Worker auf die **Funktionsauswahl** Seite. 
+## <a name="1-install-scale-out-worker"></a>1. Installieren des SSIS Scale Out-Workers
+Wählen Sie im Assistenten zum Installieren von SQL Server auf der Seite **Funktionsauswahl** „Integration Services“ und „Worker für horizontales Hochskalieren“ aus. 
 ![Komponentenauswahl Worker](media/feature-select-worker.PNG)
 
-Auf der **Scale Out Konfiguration von Integration Services - Worker-Knoten** Seite, Sie können einfach klicken Sie auf "Weiter", um diese Konfiguration überspringen und verwenden **Scale-Out-Manager** , die Konfiguration nach der Installation auszuführen.
+Auf der Seite **Integration Services-Konfiguration für horizontales Hochskalieren – Workerknoten** können Sie einfach auf „Weiter“ klicken, um die Konfiguration hier zu überspringen und mit **Manager für horizontales Hochskalieren** die Konfiguration nach der Installation auszuführen.
 
-Beenden Sie den Installations-Assistenten.
+Schließen Sie den Installations-Assistenten ab.
 
-## <a name="2-open-firewall-on-scale-out-master-computer"></a>2. Öffnen Sie die Firewall auf Scale-Out-Master-computer
-Öffnen Sie den Port angegeben werden, während die Scale-Out-Master-Installation (standardmäßig 8391) und den Port des SQL Server (standardmäßig 1433) verwenden die Windows-Firewall auf dem Computer Scale-Out-Master.
+## <a name="2-open-firewall-on-scale-out-master-computer"></a>2. Öffnen der Firewall auf dem Mastercomputer für horizontales Hochskalieren
+Öffnen Sie mithilfe der Windows-Firewall auf dem Mastercomputer für horizontales Hochskalieren den Port, der während der Installation des Masters für horizontales Hochskalieren angegeben wurde (standardmäßig 8391), sowie den Port von SQL Server (standardmäßig 1433).
 
-## <a name="3-add-scale-out-worker-with-scale-out-manager"></a>3. Dezentrales Skalieren Worker mit Skalieren auf Unternehmensebene Manager hinzufügen
-SQL Server Management Studio als Administrator ausführen, und Verbinden mit SQL Server-Instanz des Scale-Out-Master.
+## <a name="3-add-scale-out-worker-with-scale-out-manager"></a>3. Hinzufügen eines SSIS Scale Out-Workers mit dem Manager für horizontales Hochskalieren
+Führen Sie SQL Server Management Studio als Administrator aus, und stellen Sie eine Verbindung mit der SQL Server-Instanz des Masters für horizontales Hochskalieren her.
 
-Mit der rechten Maustaste **SSISDB** im Objekt-Explorer, und wählen **verwalten horizontal skalieren...** . 
+Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf **SSISDB**, und wählen Sie **Zentrales Hochskalieren verwalten...** aus. 
 
-![Verwalten für horizontales Skalieren](media/manage-scale-out.PNG)
+![Zentrales Hochskalieren verwalten](media/manage-scale-out.PNG)
 
-In der ausgelesene einrichten **Scale-Out-Manager**, wechseln Sie zur **Worker-Manager**. Klicken Sie auf "+" Schaltfläche und befolgen Sie die Anweisungen im Dialogfeld "Worker verbinden". Weitere Informationen finden Sie unter [Scale-Out-Manager](integration-services-ssis-scale-out-manager.md).
-
+Wechseln Sie im daraufhin angezeigten Dialogfeld **Manager für horizontales Hochskalieren** zu **Worker-Manager**. Klicken Sie auf die „+“-Schaltfläche, und befolgen Sie die Anweisungen im Dialogfeld „Worker verbinden“. Weitere Informationen finden Sie unter [Integration Services Scale Out Manager](integration-services-ssis-scale-out-manager.md) (Integration Services: Manager für horizontales Hochskalieren).

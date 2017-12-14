@@ -1,5 +1,5 @@
 ---
-title: Dm_execution_performance_counters (SSISDB-Datenbank) | Microsoft Docs
+title: dm_execution_performance_counters (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,22 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 67d5ece89f5b964acb2bb55a8cc69ff2fb77b93b
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e143b66f9a10627695387bc5215c3b92565e230f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="functions---dmexecutionperformancecounters"></a>Funktionen - dm_execution_performance_counters
+# <a name="functions---dmexecutionperformancecounters"></a>Funktionen – dm_execution_performance_counters
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Gibt die Leistungsstatistik für eine Ausführung zurück, die auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Server ausgeführt wird.  
@@ -38,7 +36,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @execution_id =] *Execution_id*  
+ [ @execution_id = ] *Ausführungs-ID*  
  Der eindeutige Bezeichner der Ausführung, die ein oder mehrere Pakete enthält. Die Ausführung von Paketen mit dem Task "Paket ausführen" erfolgt in der gleichen Ausführung wie die Ausführung des übergeordneten Pakets.  
   
  Wenn eine Ausführungs-ID nicht angegeben wird, werden Leistungsstatistiken für mehrere Ausführungen zurückgegeben. Wenn Sie ein Mitglied der **ssis_admin** -Datenbankrolle sind, werden Leistungsstatistiken für alle aktiven Ausführungen zurückgegeben.  Wenn Sie kein Mitglied der **ssis_admin** -Datenbankrolle sind, werden Leistungsstatistiken zu den aktiven Ausführungen zurückgegeben, für die Sie Leseberechtigungen haben. *execution_id* ist **BigInt**.  
@@ -66,9 +64,9 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
   
 |Spaltenname|Spaltentyp|Beschreibung|Hinweise|  
 |-----------------|-----------------|-----------------|-------------|  
-|execution_id|**"Bigint"**<br /><br /> **NULL** ist kein gültiger Wert.|Eindeutiger Bezeichner für die das Paket enthaltende Ausführung.||  
-|counter_name|**vom Datentyp nvarchar(128)**|Der Name des Leistungsindikators.|Siehe den Abschnitt von Werten **Hinweise** .|  
-|counter_value|**"Bigint"**|Wert, der vom Indikator zurückgegeben wird.||  
+|execution_id|**BigInt**<br /><br /> **NULL** ist kein gültiger Wert.|Eindeutiger Bezeichner für die das Paket enthaltende Ausführung.||  
+|counter_name|**nvarchar(128)**|Der Name des Leistungsindikators.|Siehe den Abschnitt von Werten **Hinweise** .|  
+|counter_value|**BigInt**|Wert, der vom Indikator zurückgegeben wird.||  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel gibt die Funktion Statistiken für eine aktive Ausführung mit einer ID von 34 zurück.  
@@ -78,7 +76,7 @@ select * from [catalog].[dm_execution_performance_counters] (34)
 ```  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel gibt die Funktion Statistiken für alle Ausführungen, die unter der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Server, abhängig von Ihren Berechtigungen.  
+ Im folgenden Beispiel gibt die Funktion abhängig von den Berechtigungen Statistiken für alle Ausführungen zurück, die auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Server ausgeführt werden.  
   
 ```sql
 select * from [catalog].[dm_execution_performance_counters] (NULL)  
@@ -102,4 +100,3 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
 -   Die angegebene Ausführungs-ID ist ungültig.  
   
   
-

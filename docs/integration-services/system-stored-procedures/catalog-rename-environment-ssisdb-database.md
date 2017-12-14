@@ -1,5 +1,5 @@
 ---
-title: Catalog. rename_environment (SSISDB-Datenbank) | Microsoft Docs
+title: catalog.rename_environment (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: c73d7452-31c5-4f4e-afcc-e9eca760c826
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 504d3ca0f18c9ea11105ebb575d2f5db449f91e4
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: fab134694401fa13f2798fcd5a5ef0787dc14f52
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogrenameenvironment-ssisdb-database"></a>catalog.rename_environment (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +37,13 @@ catalog.rename_environment [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @folder_name =] *Ordnername*  
+ [ @folder_name = ] *folder_name*  
  Der Name des Ordners, der die Umgebung enthält. Der *folder_name* ist **nvarchar(128)**.  
   
- [ @environment_name =] *Environment_name*  
+ [ @environment_name = ] *environment_name*  
  Der ursprüngliche Name der Umgebung. Der *environment_name* ist **nvarchar(128)**.  
   
- [ @new_environment_name =] *New_environment_name*  
+ [ @new_environment_name = ] *new_environment_name*  
  Der neue Name der Umgebung. Der *new_environment_name* ist **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
@@ -77,4 +75,3 @@ catalog.rename_environment [ @folder_name = ] folder_name
 >  Wenn ein Umgebungsverweis ungültig ist, schlagen Überprüfung und Ausführung der entsprechenden Pakete fehl, von denen diese Verweise verwendet werden.  
   
   
-

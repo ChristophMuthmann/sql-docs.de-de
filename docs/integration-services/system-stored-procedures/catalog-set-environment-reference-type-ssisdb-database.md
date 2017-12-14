@@ -1,5 +1,5 @@
 ---
-title: Catalog. set_environment_reference_type (SSISDB-Datenbank) | Microsoft Docs
+title: catalog.set_environment_reference_type (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b79e3a06-22c0-40e5-8933-1b3414db3329
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e83d9979ee4736528efb4851848ea3eac717fab8
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 31a6d4310ad32f2517c8779172b0d539803e9f15
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogsetenvironmentreferencetype-ssisdb-database"></a>catalog.set_environment_reference_type (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Legt den Verweistyp fest und den Umgebungsnamen verknüpft sind mit einem vorhandenen umgebungsverweis für ein Projekt in der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Katalog.  
+  Legt den Verweistyp und den Umgebungsnamen fest, die einem vorhandenen Umgebungsverweis für ein Projekt im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog zugeordnet sind.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,13 +37,13 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @reference_id =] *Reference_id*  
+ [ @reference_id = ] *reference_id*  
  Der eindeutige Bezeichner des Umgebungsverweises, der aktualisiert werden soll. Der *reference_id* ist **bigint**.  
   
- [ @reference_type =] *Reference_type*  
+ [ @reference_type = ] *reference_type*  
  Gibt an, ob sich die Umgebung im gleichen Ordner wie das Projekt (relativer Verweis) oder in einem anderen Ordner (absoluter Verweis) befinden kann. Verwenden Sie den Wert `R` , um einen relativen Verweis anzugeben. Verwenden Sie den Wert `A` , um einen absoluten Verweis anzugeben. Der *reference_type* ist **char(1)**.  
   
- [ @environment_folder_name =] *Environment_folder_name*  
+ [ @environment_folder_name = ] *environment_folder_name*  
  Der Ordner, in dem sich die Umgebung befindet. Dieser Wert ist für absolute Verweise erforderlich. Der *environment_folder_name* ist **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
@@ -79,4 +77,3 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
 >  Wenn ein relativer Verweis angegeben wird, wird der *environment_folder_name* -Parameterwert nicht verwendet, und der Umgebungsordnername wird automatisch auf **NULL**festgelegt. Wenn ein absoluter Verweis angegeben wird, muss der Umgebungsordnername im *environment_folder_name* -Parameter angegeben werden.  
   
   
-

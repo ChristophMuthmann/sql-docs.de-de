@@ -1,5 +1,5 @@
 ---
-title: Catalog.Startup | Microsoft Docs
+title: catalog.Startup | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 271fd405-246a-4852-bfbe-f557241ce6ea
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3a8c89be0541be1861f45240b891d349019a8935
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: b80919c3a754913ff15a5eed9ae37b39044977a0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogstartup"></a>catalog.startup
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +30,7 @@ ms.lasthandoff: 09/26/2017
   
  Durch die gespeicherte Prozedur wird der Status aller Pakete korrigiert, die während des Ausfalls (falls zutreffend) der [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Serverinstanz ausgeführt wurden.  
   
- Sie haben die Möglichkeit, aktivieren die gespeicherte Prozedur automatisch jedes Mal ausführen der [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Serverinstanz neu gestartet wird, indem Sie auswählen der **aktivieren die automatische Ausführung von Integration Services gespeicherter Prozeduren beim Starten von SQL Server** -Option in der **Katalog erstellen** (Dialogfeld).  
+ Sie haben die Möglichkeit, die gespeicherte Prozedur automatisch ausführen zu lassen, sobald die [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Serverinstanz neu gestartet wird. Dazu wählen Sie im Dialogfeld **Katalog erstellen** die Option **Automatische Ausführung gespeicherter Integration Services-Prozeduren beim Starten von SQL Server aktivieren** aus.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,4 +54,3 @@ catalog.startup
 -   Mitgliedschaft in der Serverrolle **sysadmin**  
   
   
-

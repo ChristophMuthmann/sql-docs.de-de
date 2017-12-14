@@ -1,5 +1,5 @@
 ---
-title: Catalog.remove_data_tap | Microsoft Docs
+title: catalog.remove_data_tap | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b77db3e6-478c-441a-a838-82c4de750275
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2f2c9b5d9333c201120e5f3a3e392c59012a8ac7
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 28339c0762182397a266fa42abf6411a3dd56ef4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogremovedatatap"></a>catalog.remove_data_tap
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +35,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @data_tap_id =] *Data_tap_id*  
+ [ @data_tap_id = ] *data_tap_id*  
  Der eindeutige Bezeichner für die Datenabzweigung, die mit der gespeicherten Prozedur "catalog.add_data_tap" erstellt wird. Der *data_tap_id* ist **bigint**.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -52,7 +50,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  Keine  
   
 ## <a name="remarks"></a>Hinweise  
- Tippt Um Daten zu entfernen, muss die Instanz der Ausführung den Status "erstellt" (der Wert 1 in der **Status** Spalte die [catalog.operations &#40; SSISDB-Datenbank &#41; ](../../integration-services/system-views/catalog-operations-ssisdb-database.md)Ansicht).  
+ Um Datenabzweigungen zu entfernen, muss die Ausführungsinstanz den Status „Erstellt“ (einen Wert von 1 in der Spalte **Zustand** der Sicht [catalog.operations &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)) aufweisen.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert eine der folgenden Berechtigungen:  
@@ -69,8 +67,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
 -   Der Benutzer verfügt nicht über MODIFY-Berechtigungen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Catalog.add_data_tap](../../integration-services/system-stored-procedures/catalog-add-data-tap.md)   
+ [catalog.add_data_tap](../../integration-services/system-stored-procedures/catalog-add-data-tap.md)   
  [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)  
   
   
-

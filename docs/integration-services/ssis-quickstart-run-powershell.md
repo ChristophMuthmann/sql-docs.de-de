@@ -1,5 +1,5 @@
 ---
-title: "Ein SSIS-Paket mit PowerShell ausführen | Microsoft Docs"
+title: "Ausführen eines SSIS-Pakets mit PowerShell | Microsoft-Dokumentation"
 ms.date: 09/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: integration-services
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: d392ac49442ef0f04961908fff7acf553fa1aa57
-ms.contentlocale: de-de
-ms.lasthandoff: 09/22/2017
-
+ms.openlocfilehash: 16137e7b3fe1880592afa025f324e614332d87d3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="run-an-ssis-package-with-powershell"></a>Führen Sie ein SSIS-Paket mit PowerShell
-Dieser Schnellstart-Lernprogramm veranschaulicht, wie ein PowerShell-Skript verwenden, um eine Verbindung mit einem Datenbankserver und einem SSIS-Paket ausführen.
+# <a name="run-an-ssis-package-with-powershell"></a>Ausführen eines SSIS-Pakets mit PowerShell
+In diesem Schnellstarttutorial wird dargestellt, wie ein PowerShell-Skript verwendet wird, um eine Verbindung mit einem Datenbankserver herzustellen und ein SSIS-Paket auszuführen.
 
 ## <a name="powershell-script"></a>PowerShell-Skript
-Geben Sie geeignete Werte für die Variablen am Anfang das folgende Skript aus, und führen Sie das Skript zum Ausführen des SSIS-Pakets.
+Geben Sie am Anfang des folgenden Skripts geeignete Werte für die Variablen an, und führen Sie das Skript aus, um das SSIS-Paket auszuführen.
 
 > [!NOTE]
-> Im folgenden Beispiel wird die Windows-Authentifizierung. Um SQL Server-Authentifizierung verwenden, ersetzen die `Integrated Security=SSPI;` Argument mit `User ID=<user name>;Password=<password>;`.
+> In diesem Beispiel wird die Windows-Authentifizierung verwendet. Ersetzen Sie das Argument `Integrated Security=SSPI;` durch `User ID=<user name>;Password=<password>;`, um die SQL Server-Authentifizierung zu verwenden.
 
 ```powershell
 # Variables
@@ -70,10 +68,9 @@ Write-Host "Done."
 ```
 
 ## <a name="next-steps"></a>Nächste Schritte
-- Erwägen Sie andere Verfahren zum Ausführen eines Pakets aus.
-    - [Führen Sie ein SSIS-Paket mit SSMS](./ssis-quickstart-run-ssms.md)
-    - [Führen Sie ein SSIS-Paket mit Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
-    - [Führen Sie ein SSIS-Paket mit Transact-SQL (Visual Studio-Code)](ssis-quickstart-run-tsql-vscode.md)
-    - [Führen Sie ein SSIS-Paket von der Befehlszeile aus](./ssis-quickstart-run-cmdline.md)
-    - [Führen Sie ein SSIS-Paket mit c#](./ssis-quickstart-run-dotnet.md) 
-
+- Erfahren Sie mehr über weitere Möglichkeiten, ein Paket auszuführen.
+    - [Run an SSIS package with SSMS](./ssis-quickstart-run-ssms.md) (Ausführen eines SSIS-Pakets mit SSMS)
+    - [Run an SSIS package with Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md) (Ausführen eines SSIS-Pakets mit Transact-SQL [SSMS])
+    - [Run an SSIS package with Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md) (Ausführen eines SSIS-Pakets mit Transact-SQL [VS Code])
+    - [Ausführen eines SSIS-Pakets über die Eingabeaufforderung](./ssis-quickstart-run-cmdline.md)
+    - [Run an SSIS package with C#](./ssis-quickstart-run-dotnet.md) (Ausführen eines SSIS-Pakets mit C#) 

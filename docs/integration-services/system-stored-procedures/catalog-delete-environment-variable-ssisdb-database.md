@@ -1,5 +1,5 @@
 ---
-title: Catalog. delete_environment_variable (SSISDB-Datenbank) | Microsoft Docs
+title: catalog.delete_environment_variable (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 894b3bdb-aa34-463e-aba4-1b68ad96a0ef
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bd3ff266d41d4e62d5ecb9314a14de7e1b86d8d5
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 03262f4292055b4370d80470c6f9aaee147e9d23
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogdeleteenvironmentvariable-ssisdb-database"></a>catalog.delete_environment_variable (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +37,13 @@ delete_environment_variable [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @folder_name =] *Ordnername*  
+ [ @folder_name = ] *folder_name*  
  Der Name des Ordners, der die Umgebung enthält. Der *folder_name* ist **nvarchar(128)**.  
   
- [ @environment_name =] *Environment_name*  
+ [ @environment_name = ] *environment_name*  
  Der Name der Umgebung, die die Variable enthält. Der *environment_name* ist **nvarchar(128)**.  
   
- [ @variable_name =] *Variable_name*  
+ [ @variable_name = ] *variable_name*  
  Der Name der Variablen, die gelöscht werden soll. Der *variable_name* ist **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
@@ -71,4 +69,3 @@ delete_environment_variable [ @folder_name = ] folder_name
 -   Die Umgebungsvariable ist nicht vorhanden.  
   
   
-

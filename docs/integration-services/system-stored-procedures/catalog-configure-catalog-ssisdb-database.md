@@ -1,5 +1,5 @@
 ---
-title: Catalog. configure_catalog (SSISDB-Datenbank) | Microsoft Docs
+title: catalog.configure_catalog (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 72690c61-f462-4c25-9fce-08a687b0bd41
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 15bec231bf1de825cea952e07827074d56751386
-ms.contentlocale: de-de
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: 7edd093ee4804c8c0c01a5638fd7df519f4564bc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogconfigurecatalog-ssisdb-database"></a>catalog.configure_catalog (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +35,11 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @property_name =] *Property_name*  
- Der Name der Katalogeigenschaft. Die *Property_name* ist **nvarchar(255)**. Weitere Informationen zu verfügbaren Eigenschaften finden Sie unter [Catalog. catalog_properties &#40; SSISDB-Datenbank &#41; ](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md).  
+ [ @property_name = ] *property_name*  
+ Der Name der Katalogeigenschaft. Das Argument *property_name* ist vom Typ **nvarchar(255)**. Weitere Informationen zu verfügbaren Eigenschaften siehe [catalog.catalog_properties &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) (catalog.catalog_properties &#40;SSISDB-Datenbank&#41;).  
   
- [ @property_value =] *Property_value*  
- Der Wert der Katalogeigenschaft. Die *Property_value* ist **nvarchar(255)**. Weitere Informationen zu Eigenschaftswerten finden Sie unter [Catalog. catalog_properties &#40; SSISDB-Datenbank &#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)  
+ [ @property_value = ] *property_value*  
+ Der Wert der Katalogeigenschaft. Das Argument *property_value* ist vom Typ **nvarchar(255)**. Weitere Informationen zu Eigenschaftswerten siehe [catalog.catalog_properties &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) (catalog.catalog_properties &#40;SSISDB-Datenbank&#41;).  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -50,11 +48,11 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
  Keine  
   
 ## <a name="remarks"></a>Hinweise  
- Diese gespeicherte Prozedur bestimmt, ob die *Property_value* gilt für jede *Property_name*.  
+ Diese gespeicherte Prozedur bestimmt, ob der *property_value* für jeden *property_name* gültig ist.  
   
  Diese gespeicherte Prozedur kann nur ausgeführt werden, wenn keine aktiven Ausführungen, z. B. ausstehende, in der Warteschlange stehende, in Ausführung befindliche oder angehaltene Ausführungen, vorhanden sind.  
   
- Während der Katalog konfiguriert wird, gespeichert alle anderen Katalog Prozeduren tritt die Fehlermeldung "Der Server ist zurzeit konfiguriert wird."
+ Während der Katalog konfiguriert wird, wird bei dem Versuch, andere im Katalog gespeicherte Prozeduren auszuführen, die Fehlermeldung „Server wird gerade konfiguriert“ angezeigt.
   
  Wenn der Katalog konfiguriert ist, wird ein Eintrag in das Vorgangsprotokoll geschrieben.  
   
@@ -73,4 +71,3 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
 -   Der Eigenschaftswert ist ungültig.  
   
   
-

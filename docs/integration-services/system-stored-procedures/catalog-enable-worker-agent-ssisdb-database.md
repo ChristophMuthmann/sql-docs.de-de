@@ -1,5 +1,5 @@
 ---
-title: Catalog.enable_worker_agent (SSISDB-Datenbank) | Microsoft Docs
+title: catalog.enable_worker_agent (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c6e5266b-c32d-49ff-aa69-f09664009fb4
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 3eb3f21b6a686c3013cdaaa3000038896edfbf94
-ms.contentlocale: de-de
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: de5764612b34aa44b4e41287c951b0de4d0b5ddf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="catalogenableworkeragent-ssisdb-database"></a>Catalog.enable_worker_agent (SSISDB-Datenbank)
+# <a name="catalogenableworkeragent-ssisdb-database"></a>catalog.enable_worker_agent (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Aktivieren Sie eine Skalierung Out Worker für Scale Out Master arbeiten mit diesem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Katalog.
+Aktivieren Sie einen Scale Out-Worker für einen Scale Out-Master, der mit diesem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog arbeitet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,7 +34,7 @@ Aktivieren Sie eine Skalierung Out Worker für Scale Out Master arbeiten mit die
 catalog.enable_worker_agent [@WorkerAgentId =] WorkerAgentId
 ```
 ## <a name="arguments"></a>Argumente
-[@WorkerAgentId =] *WorkerAgentId* der Worker-Agent-ID der Skalierung Out Worker. Die *WorkerAgentId* ist **"uniqueidentifier"**.
+[@WorkerAgentId =] *WorkerAgentId* Die Worker-Agent-ID für den Scale Out-Worker. Die *WorkerAgentId* ist **uniqueidentifier**.
 
 ## <a name="example"></a>Beispiel
 In diesem Beispiel wird Worker für horizontales Hochskalieren auf „MachineA“ aktiviert.
@@ -67,4 +65,3 @@ GO
 
 ## <a name="errors-and-warnings"></a>Fehler und Warnungen
 Wenn die Worker-Agent-ID ungültig ist, gibt die gespeicherte Prozedur einen Fehler zurück.
-

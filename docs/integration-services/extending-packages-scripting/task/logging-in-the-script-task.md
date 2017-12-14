@@ -1,5 +1,5 @@
 ---
-title: Logging in the Script Task | Microsoft Docs
+title: Protokollieren im Skripttask | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,14 +8,11 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - SQL Server Integration Services packages, logs
 - SSIS packages, logs
@@ -26,25 +23,24 @@ helpviewer_keywords:
 - Script task [Integration Services], logs
 - packages [Integration Services], logs
 ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 98859dafe0b023954f10239fe11e8b76f36ab28b
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3f656f97ab20e1692fdfa3fe6996bfa1d36d5256
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="logging-in-the-script-task"></a>Protokollieren im Skripttask
-  Durch Verwendung der Protokollierung in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Paketen können Sie detaillierte Informationen über Status, Ergebnisse und Probleme der Ausführung aufzeichnen, indem Sie vordefinierte Ereignisse bzw. benutzerdefinierte Meldungen für die spätere Analyse erfassen. Der Skripttask können die <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> Methode der **Dts** Objekt um eine benutzerdefinierte Daten zu protokollieren. Wenn die Protokollierung aktiviert ist, und die **ScriptTaskLogEntry** Ereignis ausgewählt ist, für die Protokollierung auf der **Details** auf der Registerkarte die **SSIS-Protokolle konfigurieren** (Dialogfeld), ein einzelner Aufruf der <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> Methode speichert die Ereignisinformationen in allen Protokollanbietern, die für den Task konfiguriert.  
+  Durch Verwendung der Protokollierung in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Paketen können Sie detaillierte Informationen über Status, Ergebnisse und Probleme der Ausführung aufzeichnen, indem Sie vordefinierte Ereignisse bzw. benutzerdefinierte Meldungen für die spätere Analyse erfassen. Der Skripttask kann die <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>-Methode des **Dts**-Objekts verwenden, um benutzerdefinierte Daten zu protokollieren. Wenn die Protokollierung aktiviert ist und im Dialogfeld **SSIS-Protokolle konfigurieren** auf der Registerkarte **Details** das **ScriptTaskLogEntry**-Ereignis für die Protokollierung ausgewählt ist, dann speichert ein einzelner Aufruf der <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>-Methode die Ereignisinformationen in allen Protokollanbietern, die für den Task konfiguriert wurden.  
   
 > [!NOTE]  
->  Obwohl Sie Protokollierungen direkt vom Skripttask aus ausführen können, ist ggf. eine Implementierung von Ereignissen einer Protokollierung vorzuziehen. Bei Verwendung von Ereignissen nicht nur die Protokollierung von ereignismeldungen aktivieren, sondern Sie können auch auf das Ereignis mit standardmäßigen oder benutzerdefinierten Ereignishandlern reagieren.  
+>  Obwohl Sie Protokollierungen direkt vom Skripttask aus ausführen können, ist ggf. eine Implementierung von Ereignissen einer Protokollierung vorzuziehen. Bei der Verwendung von Ereignissen können Sie nicht nur die Protokollierung von Ereignismeldungen aktivieren, sondern auch mit standardmäßigen oder benutzerdefinierten Ereignishandlern auf das Ereignis reagieren.  
   
- Weitere Informationen zur Protokollierung finden Sie unter [Integration Services &#40; SSIS &#41; Protokollierung](../../../integration-services/performance/integration-services-ssis-logging.md).  
+ Weitere Informationen zur Protokollierung finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## <a name="logging-example"></a>Beispiel für die Protokollierung  
  Im folgenden Beispiel wird die Protokollierung vom Skripttask aus durch Protokollierung eines Werts, der die Anzahl der verarbeiteten Zeilen darstellt, gezeigt.  
@@ -104,10 +100,9 @@ public class ScriptMain
   
 ## <a name="external-resources"></a>Externe Ressourcen  
   
--   Blogeintrag, [Protokollierung von benutzerdefinierten Ereignissen für Integration Services-Tasks](http://go.microsoft.com/fwlink/?LinkId=165644), auf dougbert.com  
+-   Blog-Artikel, [Logging custom events for Integration Services tasks](http://go.microsoft.com/fwlink/?LinkId=165644) (Protokollieren von benutzerdefinierten Ereignissen für Integration Services-Tasks), auf „dougbert.com“  
   
 ## <a name="see-also"></a>Siehe auch  
- [Integrationsservices &#40; SSIS &#41; Protokollierung](../../../integration-services/performance/integration-services-ssis-logging.md)  
+ [Integration Services-Protokollierung &#40;SSIS&#41;](../../../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-
