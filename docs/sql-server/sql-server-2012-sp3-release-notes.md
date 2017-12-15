@@ -1,9 +1,9 @@
 ---
 title: SQL Server 2012 SP3 Release Notes | Microsoft-Dokumentation
-ms.prod: sql-server
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: server-general
-ms.component: 
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.custom: 
 ms.date: 05/17/2017
@@ -17,11 +17,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5fd9e8545be6cfeacc22e5b465f8bef01e82a746
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 960803406d9dcf81e49b08ecf23c21fdb6e76645
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2012-sp3-release-notes"></a>Versionsanmerkungen zu SQL Server 2012 SP3
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] In diesen Versionsanmerkungen werden Probleme beschrieben, die Sie vor der Installation und Problembehandlung von SQL Server 2012 Service Pack 3 kennen müssen. Versionsanmerkungen sind nur online verfügbar, nicht auf dem Installationsmedium. Sie werden regelmäßig mit dem Auftreten neuer Probleme aktualisiert. Eine Auflistung der Verbesserungen und Korrekturen finden Sie unter [SQL Server 2012 Service Pack 3-Versionsinformationen](http://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information).  

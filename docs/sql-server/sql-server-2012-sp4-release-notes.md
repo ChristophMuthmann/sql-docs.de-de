@@ -1,9 +1,9 @@
 ---
 title: Anmerkungen zur Version von SQL Server 2012 SP4 | Microsoft-Dokumentation
-ms.prod: sql-server
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: server-general
-ms.component: 
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.custom: 
 ms.date: 10/05/2017
@@ -17,11 +17,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 562c03dfc873adeaca8f8486f1ecb4c66c3c4d14
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7aed12a3e687ab4c8b42b8f07c29d252e0d6acad
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2012-sp4-release-notes"></a>Anmerkungen zur Version von SQL Server 2012 SP4
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Im Folgenden werden die Verbesserungen zusammengefasst, die in der Version SQL Server 2012 P4 enthalten sind. Außerdem werden Probleme beschrieben, die Sie prüfen sollten, bevor Sie SP4 installieren oder Probleme bei der Installation beheben. Versionsanmerkungen sind nur online verfügbar, nicht auf dem Installationsmedium. Diese Seite wird regelmäßig aktualisiert, wenn neue Probleme auftreten. Eine detaillierte Auflistung der Problembehebungen für SP4 finden Sie unter [SQL Server 2012 SP4 Release](https://go.microsoft.com/fwlink/?linkid=846937).  

@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c2b83605714e01961c50d71e83ba57691bc3833
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 33293b17caff5d5c71b58bff3f34ed130ab19ba3
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>Ausführen eines SSIS-Pakets über die Eingabeaufforderung mit „DTExec.exe“
 Dieses Schnellstarttutorial zeigt das Ausführen eines SSIS-Pakets über die Eingabeaufforderung mittels Ausführung von `DTExec.exe` mit den entsprechenden Parametern.
@@ -25,7 +25,7 @@ Dieses Schnellstarttutorial zeigt das Ausführen eines SSIS-Pakets über die Ein
 > [!NOTE]
 > Die in diesem Artikel beschriebene Methode wurde nicht Paketen getestet, die für einen Azure SQL-Datenbank-Server bereitgestellt werden.
 
-Weitere Informationen zu `DTExec.exe` finden Sie unter [dtexec Utility](https://docs.microsoft.com/en-us/sql/integration-services/packages/dtexec-utility) (Hilfprogramm dtexec).
+Weitere Informationen zu `DTExec.exe` finden Sie unter [dtexec Utility](https://docs.microsoft.com/sql/integration-services/packages/dtexec-utility) (Hilfprogramm dtexec).
 
 ## <a name="run-a-package-with-dtexec"></a>Ausführen eines Pakets mit dtexec
 
@@ -44,7 +44,7 @@ Mit den im folgenden Beispiel verwendeten Parameterwerten führt das Programm da
 ## <a name="next-steps"></a>Nächste Schritte
 - Erfahren Sie mehr über weitere Möglichkeiten, ein Paket auszuführen.
     - [Run an SSIS package with SSMS](./ssis-quickstart-run-ssms.md) (Ausführen eines SSIS-Pakets mit SSMS)
-    - [Run an SSIS package with Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md) (Ausführen eines SSIS-Pakets mit Transact-SQL [SSMS])
+    - [Run an SSIS package with Transact-SQL (SSMS) (Ausführen eines SSIS-Pakets mit Transact-SQL [SSMS])](./ssis-quickstart-run-tsql-ssms.md)
     - [Run an SSIS package with Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md) (Ausführen eines SSIS-Pakets mit Transact-SQL [VS Code])
     - [Ausführen eines SSIS-Pakets mit PowerShell](ssis-quickstart-run-powershell.md)
     - [Run an SSIS package with C#](./ssis-quickstart-run-dotnet.md) (Ausführen eines SSIS-Pakets mit C#) 

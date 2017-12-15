@@ -1,7 +1,7 @@
 ---
 title: "Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -21,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 072df52e6a96bae1393f212a3160f549ed2880e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aada9589beecbd40470ff590a8f67cfd069c49f5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Bei 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Bei 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Volltextabfragen kann ein *Thesaurus* der Volltextsuche verwendet werden, um nach Synonymen der vom Benutzer angegebenen Begriffe zu suchen. Jeder Thesaurus definiert Synonyme für eine bestimmte Sprache. Indem Sie einen Thesaurus entwickeln, der genau auf Ihre Volltextdaten abgestimmt ist, können Sie den Bereich der Volltextabfragen für diese Daten effektiv erweitern.
 
 Der Thesaurusvergleich erfolgt für alle [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)- und [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)-Abfragen sowie für alle [CONTAINS](../../t-sql/queries/contains-transact-sql.md)- und [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)-Abfragen, in denen die `FORMSOF THESAURUS`-Klausel angegeben ist.

@@ -2,10 +2,10 @@
 title: "Verwaltung von Anmeldenamen und Aufträgen nach einem Rollenwechsel (SQL Server) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: sql
 ms.technology: dbe-high-availability
@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8b5bbfbacb9bd395900143ba0a70b628ec915cec
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ff1ff9689876177cb55aaeea6689e49a478fd6d2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Verwaltung von Anmeldenamen und Aufträgen nach einem Rollenwechsel (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Bei der Bereitstellung einer Lösung für hohe Verfügbarkeit oder Notfallwiederherstellung für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank ist wichtig, relevante Informationen, die in der **master**- oder **msdb**-Datenbank für die Datenbank gespeichert sind, zu reproduzieren. Zu relevanten Informationen gehören normalerweise die Aufträge der primären/Prinzipaldatenbank sowie die Anmeldenamen der Benutzer oder Prozesse, die eine Verbindung mit der Datenbank herstellen müssen. Diese Informationen sollten auf jeder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz dupliziert werden, die eine sekundäre/Spiegeldatenbank hostet. Nach dem Rollenwechsel sollten die Informationen möglichst in der neuen primären/Prinzipaldatenbank programmgesteuert reproduziert werden.  

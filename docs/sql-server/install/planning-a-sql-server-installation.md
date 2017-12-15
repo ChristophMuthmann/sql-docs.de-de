@@ -2,10 +2,10 @@
 title: Planen einer SQL Server-Installation | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod: install
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
 ms.suite: sql
 ms.technology: setup-install
@@ -17,11 +17,11 @@ caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 199ba3b531fd06ba0b87c8a929c7fef96cbc7c99
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5f45fe1c93f33f8f4666791c9014c1ca3f4a5aec
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="planning-a-sql-server-installation"></a>Planen einer SQL Server-Installation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu installieren, führen Sie folgende Schritte aus:  

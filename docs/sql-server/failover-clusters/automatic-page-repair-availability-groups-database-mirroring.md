@@ -2,10 +2,10 @@
 title: "Automatische Seitenreparatur (Verfügbarkeitsgruppen: Datenbankspiegelung) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: sql
 ms.technology: dbe-high-availability
@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7fb7034634b662ce184065adb72f190ce6b2aa4b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b1f5007a8c6b8f222d0708692ecc802f6409738d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Automatische Seitenreparatur (Verfügbarkeitsgruppen: Datenbankspiegelung)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Automatische Seitenreparatur wird von der Datenbankspiegelung und [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] unterstützt. Wenn bestimmte Fehlertypen eine Seite beschädigen und sie unlesbar machen, versucht ein Datenbank-Spiegelungspartner (Prinzipal oder Spiegel) oder ein Verfügbarkeitsreplikat (primär oder sekundär), die Seite automatisch wiederherzustellen. Der Partner/das Replikat, der/das die Seite nicht lesen kann, fordert eine neue Kopie der Seite von seinem Partner oder einem anderen Replikat an. Wenn die Anforderung erfolgreich ist, wird die nicht lesbare Seite durch die lesbare Kopie ersetzt. Dadurch wird der Fehler normalerweise behoben.  

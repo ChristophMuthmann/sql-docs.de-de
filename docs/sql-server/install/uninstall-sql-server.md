@@ -2,10 +2,10 @@
 title: Deinstallieren von SQL Server 2016 | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: install
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
 ms.suite: sql
 ms.technology: setup-install
@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 24a0026f0233541c8c93bec0a4a87f171b725bd4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8ed0d929eaddd1bc4a324a30c47af87164c290b3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="uninstall-sql-server"></a>Deinstallieren von SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Wenn Sie eine vorhandene Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vollständig deinstallieren und das System für die Neuinstallation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorbereiten möchten, informieren Sie sich in den folgenden Themen.  

@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fe1114d05dc9eb31f3cec4c655bc2ae244683877
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c92d57984e0cb929a28ab441e40341d0eb8635df
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Azure HDInsight Create Cluster-Task
 Der **Azure HDInsight Create Cluster-Task** ermöglicht einem SSIS-Paket das Erstellen eines Azure HDInsight-Clusters im angegebenen Azure-Abonnement und in der Ressourcengruppe.
@@ -33,7 +33,7 @@ Der **Azure HDInsight Create Cluster-Task** ist eine Komponente des [SQL Server 
   
 > [!NOTE]  
 > - Das Erstellen eines neuen HDInsight-Clusters kann 10-20 Minuten in Anspruch nehmen.  
-> - Beim Erstellen und Ausführen eines Azure HDInsight-Clusters fallen Kosten an. Details finden Sie auf der Webseite mit den [Preisinformationen für HDInsight](http://azure.microsoft.com/en-us/pricing/details/hdinsight/).  
+> - Beim Erstellen und Ausführen eines Azure HDInsight-Clusters fallen Kosten an. Details finden Sie auf der Webseite mit den [Preisinformationen für HDInsight](http://azure.microsoft.com/pricing/details/hdinsight/).  
   
 Um einen **Azure HDInsight Create Cluster-Task**hinzuzufügen, legen Sie ihn mittels Drag &amp; Drop auf dem SSIS-Designer ab, und doppelklicken Sie darauf, oder klicken Sie mit der rechten Maustaste darauf. Klicken Sie dann auf **Bearbeiten** , um das folgende Dialogfeld **Azure HDInsight Create Cluster-Task-Editor** anzuzeigen.  
   

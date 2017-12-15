@@ -1,9 +1,9 @@
 ---
 title: SQL Server 2008 R2 SP2 Release Notes | Microsoft-Dokumentation
-ms.prod: sql-server
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: server-general
-ms.component: 
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.custom: 
 ms.date: 01/31/2017
@@ -20,11 +20,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 274eacb496ce91ca2171c467e9265acad5ce4b79
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a497aaec3879414fe2a7c6785a180ebf77ba25de
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] In diesem Dokument mit Versionsanmerkungen werden bekannte Probleme beschrieben, mit denen Sie sich vertraut machen sollten, bevor Sie Microsoft SQL Server 2008 R2 Service Pack 2 installieren bzw. mit der Problembehandlung beginnen. Diese Versionsanmerkungen gelten für alle Editionen von SQL Server 2008 R2 SP2 und sind nur online verfügbar. Das Dokument wird regelmäßig aktualisiert.  

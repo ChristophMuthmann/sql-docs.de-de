@@ -7,8 +7,8 @@ author: MikeRayMSFT
 manager: jhubbard
 editor: 
 ms.assetid: 
-ms.service: database-engine
-ms.component: 
+ms.service: 
+ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
@@ -16,14 +16,14 @@ ms.tgt_pltfrm: NA
 ms.workload: sql-server
 ms.custom: 
 ms.date: 17/09/2017
-ms.prod: sql-server
-ms.prod_service: sql-non-specified
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 6e4cd02cdf12b18516bbf795db347f2035619774
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: becde7ea17d456f697d247e6b03fe97b3ce74b8f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-managing-partners"></a>SQL Server: Verwaltungspartner
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Es gibt eine große Auswahl an branchenführenden Tools zur Verwaltung Ihrer SQL Server-Dienste.  Im Folgenden werden Partnerunternehmen von Microsoft aufgelistet, die Verwaltungslösungen für Microsoft SQL Server anbieten.

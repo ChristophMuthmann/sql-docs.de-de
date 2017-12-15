@@ -18,15 +18,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 58a71c4ef573925218061d5796a56028d82d042b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4c51d7d251a7e445b85558dabd4bd5d4af80b4d8
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lesson 1: Create a Project and Basic Package with SSIS
 
- > Inhalte im Zusammenhang mit früheren Versionen von SQL Server finden Sie unter [Lektion 1: Erstellen des Projekts und Basispakets](https://msdn.microsoft.com/en-US/library/ms170419(SQL.120).aspx).
+ > Inhalte im Zusammenhang mit früheren Versionen von SQL Server finden Sie unter [Lektion 1: Erstellen des Projekts und Basispakets](https://msdn.microsoft.com/library/ms170419(SQL.120).aspx).
 
 In dieser Lektion erstellen Sie ein einfaches ETL-Paket, durch das Daten aus einer einzelnen Flatfilequelle extrahiert, Daten mithilfe zweier Transformationskomponenten für die Suche transformiert und diese Daten in die **FactCurrency** -Faktentabelle in **AdventureWorksDW2012**geschrieben werden. Als Teil dieser Lektion lernen Sie das Erstellen neuer Pakete, das Hinzufügen und Konfigurieren von Datenquellen- und Datenzielverbindungen sowie das Arbeiten mit neuen Ablaufsteuerungs- und Datenflusskomponenten.  
   
@@ -36,7 +36,7 @@ In dieser Lektion erstellen Sie ein einfaches ETL-Paket, durch das Daten aus ein
 ## <a name="understanding-the-package-requirements"></a>Grundlegendes zu Paketanforderungen  
 Dieses Lernprogramm erfordert Microsoft SQL Server Data Tools.  
   
-Weitere Informationen zum Installieren von SQL Server Data Tools finden Sie unter [Herunterladen von SQL Server Data Tools](http://msdn.microsoft.com/en-us/data/hh297027).  
+Weitere Informationen zum Installieren von SQL Server Data Tools finden Sie unter [Herunterladen von SQL Server Data Tools](http://msdn.microsoft.com/data/hh297027).  
   
 Vor dem Erstellen eines Pakets benötigen Sie ein durchgehendes Verständnis der Formatierung in Quelldaten und dem Ziel. Nachdem Sie sich mit beiden dieser Datenformate vertraut gemacht haben, können Sie die Transformationen definieren, die zum Zuordnen der Quelldaten zum Ziel erforderlich sind.  
   

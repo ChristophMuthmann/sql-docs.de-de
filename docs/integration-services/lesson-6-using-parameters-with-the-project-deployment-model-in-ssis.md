@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9e6cc56ec5fe995f27833fad48ec75c317598587
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7f44e93c4fa879a8717b0af33e6071fcc0d53368
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="lesson-6-using-parameters-with-the-project-deployment-model-in-ssis"></a>Lesson 6: Using Parameters with the Project Deployment Model in SSIS
 In SQL Server 2012 wird ein neues Bereitstellungsmodell eingeführt, mit dem Sie Projekte auf dem Integration Services-Server bereitstellen können. Der Integration Services-Server ermöglicht es Ihnen, Pakete zu verwalten und auszuführen sowie Laufzeitwerte für Pakete zu konfigurieren.  
@@ -34,7 +34,7 @@ Mithilfe des Assistenten zum Konvertieren von Integration Services-Projekten kon
 Wenn Sie das Paket erneut ausführen, verwendet der Integration Services-Dienst den Parameter, um den Wert der Variablen aufzufüllen, und die Variable aktualisiert wiederum die Directory-Eigenschaft. Deshalb durchläuft das Paket die Dateien im neuen, durch den Parameterwert angegebenen Datenordner anstatt in dem Ordner, der in der Paketkonfigurationsdatei festgelegt wurde.  
   
 > [!IMPORTANT]  
-> Dieses Lernprogramm erfordert die **AdventureWorksDW2012** -Beispieldatenbank. Weitere Informationen zur Installation und Bereitstellung von **AdventureWorksDW2012**finden Sie unter [Überlegungen zum Installieren der SQL Server-Beispiele und -Beispieldatenbanken](http://technet.microsoft.com/en-us/library/ms161556%28v=sql.105%29).  
+> Dieses Lernprogramm erfordert die **AdventureWorksDW2012** -Beispieldatenbank. Weitere Informationen zur Installation und Bereitstellung von **AdventureWorksDW2012**finden Sie unter [Überlegungen zum Installieren der SQL Server-Beispiele und -Beispieldatenbanken](http://technet.microsoft.com/library/ms161556%28v=sql.105%29).  
   
 ## <a name="lesson-tasks"></a>Lektionsaufgaben  
 Diese Lektion enthält die folgenden Aufgaben:  

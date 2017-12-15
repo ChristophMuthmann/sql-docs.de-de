@@ -2,7 +2,7 @@
 title: catalog.update_master_address (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/18/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: integration-services
@@ -13,11 +13,11 @@ author: haoqian
 ms.author: haoqian
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 84ded0f503e83b20a65997238a9086ddad3dbf21
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b45f8499914ecd87a7073a5373377b85dc8a77f4
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="catalogupdatemasteraddress-ssisdb-database"></a>catalog.update_master_address (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]

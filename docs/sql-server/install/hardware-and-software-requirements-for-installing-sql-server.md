@@ -2,10 +2,10 @@
 title: "Hardware- und Softwareanforderungen für die Installation von SQL Server 2016 | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod: install
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
 ms.suite: sql
 ms.technology: setup-install
@@ -51,11 +51,11 @@ caps.latest.revision: "333"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 846d23ef96a694df4b3348077e89c0146eb8d27c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c3a1fe2059f51ff029c726824b0426fb145edf81
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Hardware- und Softwareanforderungen für die Installation von SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema sind die Mindestanforderungen an die Hardware und Software aufgeführt, um [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] auf dem Windows-Betriebssystem zu installieren und auszuführen. 

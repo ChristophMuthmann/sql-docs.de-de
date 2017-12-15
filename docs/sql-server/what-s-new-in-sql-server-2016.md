@@ -2,10 +2,10 @@
 title: Was ist neu in SQLServer 2016
 ms.custom: 
 ms.date: 07/21/2017
-ms.prod: sql-server
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: server-general
-ms.component: 
+ms.service: 
+ms.component: sql-non-specified
 ms.reviewer: 
 ms.suite: sql
 ms.technology: server-general
@@ -23,11 +23,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7f4f6bc0101c4cd05a9ec301b3e46b083250d08f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ffdc6534621597002d4b3f54a5b3c1960c9ccad8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Was ist neu in SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)] Mit SQL Server 2016 können Sie intelligente, unternehmenskritische Anwendungen mithilfe einer skalierbaren, hybriden Datenbankplattform erstellen, in der bereits alles Features integriert sind – von arbeitsspeicherinterner Leistung über erweiterte Sicherheit bis hin zu datenbankinternen Analysen. Das SQL Server 2016-Release bietet neue Sicherheitsfunktionen, Abfragemöglichkeiten, Hadoop- und Cloudintegration, R-Analyse und viele weitere Verbesserungen und Erweiterungen. 

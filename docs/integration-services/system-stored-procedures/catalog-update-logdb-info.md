@@ -2,7 +2,7 @@
 title: Catalog.update_logdb_info (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/18/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: integration-services
@@ -13,11 +13,11 @@ author: haoqian
 ms.author: haoqian
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fad30ab7de9b608a79a8df9269dd84dabcf47418
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0bd5af1a51baf6947f9634f1f7260af20a7e87b2
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="catalogupdatelogdbinfo-ssisdb-database"></a>Catalog.update_logdb_info (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]

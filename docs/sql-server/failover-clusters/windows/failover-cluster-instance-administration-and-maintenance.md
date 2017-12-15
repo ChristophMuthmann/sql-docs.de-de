@@ -2,10 +2,10 @@
 title: Verwaltung und Wartung von Failoverclusterinstanzen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: sql
 ms.technology: dbe-high-availability
@@ -30,11 +30,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef96b749f2dcfde79202efe935412b73ade6ddee
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 964ce2dcfcff3edb1de4822ee01982583062f958
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>Verwaltung und Wartung von Failoverclusterinstanzen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Wartungsaufgaben wie das Hinzufügen von Knoten zu einer vorhandenen Always On-Failoverclusterinstanz (FCI) oder das Entfernen daraus werden mithilfe des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Setupprogramms ausgeführt. Andere Verwaltungsaufgaben wie das Ändern der IP-Adressressource oder das Wiederherstellen nach bestimmten FCI-Szenarien werden mit dem Failovercluster-Manager-Snap-In ausgeführt, welches das Verwaltungs-Snap-In für den WSFC (Windows Server Failover Clustering)-Dienst darstellt.  

@@ -2,10 +2,10 @@
 title: Lokale Sprachversionen in SQL Server | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod: install
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
 ms.suite: sql
 ms.technology: setup-install
@@ -16,11 +16,11 @@ caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 72c20d3c087be9a08f63035e1207645c36f8c2f1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 17c5b8c1fae4c997f4d3a7f84ba353291296f85f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="local-language-versions-in-sql-server"></a>Lokale Sprachversionen in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt alle Sprachen, die von Windows-Betriebssystemen unterstützt werden.  

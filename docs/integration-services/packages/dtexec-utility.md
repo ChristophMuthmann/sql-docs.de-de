@@ -18,10 +18,10 @@ ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
 ms.openlocfilehash: b83e544cb070ab07d943965a5a11f305e7c70a2d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="dtexec-utility"></a>dtexec (Hilfsprogramm)
   Das Befehlszeilen-Hilfsprogramm **dtexec** dient zum Konfigurieren und Ausführen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen. Das Hilfsprogramm **dtexec** ermöglicht den Zugriff auf alle Features zur Paketkonfiguration und -ausführung, z.B. Parameter, Verbindungen, Eigenschaften, Variablen und Statusanzeigen. Das Hilfsprogramm **dtexec** ermöglicht das Laden von Paketen aus diesen Quellen: dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server, einer ISPAC-Projektdatei, einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank, dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher und dem Dateisystem.  

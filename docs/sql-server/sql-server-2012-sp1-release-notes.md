@@ -1,9 +1,9 @@
 ---
 title: SQL Server 2012 SP1 Release Notes | Microsoft-Dokumentation
-ms.prod: sql-server
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: server-general
-ms.component: 
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.custom: 
 ms.date: 01/31/2017
@@ -17,11 +17,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 47e51354f3a7239635cae40bc3ba3d99bb6be35a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ac1dcd75aa97cb12142d142c82d5c0c6d3f59791
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2012-sp1-release-notes"></a>SQL Server 2012 SP1 Release Notes
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] In diesen Versionsanmerkungen werden bekannte Probleme beschrieben, mit denen Sie sich vertraut machen sollten, bevor Sie mit der Installation oder Problembehandlung in [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 1 beginnen. Die Anmerkungen zu dieser Version sind nur online und nicht auf den Installationsmedien verfügbar und werden regelmäßig aktualisiert.  

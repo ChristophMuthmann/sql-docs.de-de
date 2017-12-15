@@ -2,7 +2,7 @@
 title: "Einstellungen der SharePoint-Website für den Berichts-Viewer-Webpart | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: reporting-services-sharepoint
@@ -11,11 +11,11 @@ ms.topic: article
 author: jt000
 ms.author: jasontre
 ms.workload: Inactive
-ms.openlocfilehash: 82efc86ab7f8b688477439816712e85497b1f03f
-ms.sourcegitcommit: 4286dddf27dcdf1c8ef3ef134474e72559c2f65c
+ms.openlocfilehash: 0be12b3f74dd2cf4e6d07d3ccc70208d5bd099b8
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="sharepoint-site-settings-for-the-report-viewer-web-part"></a>Einstellungen der SharePoint-Website für den Berichts-Viewer-Webpart
 

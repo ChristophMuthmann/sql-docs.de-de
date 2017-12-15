@@ -26,15 +26,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0106bf197cb7fdc4920cba421c4904706262e88a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 812980a1fffc05c40531cb961502ec2b627fd402
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 
- > Inhalte im Zusammenhang mit früheren Versionen von SQL Server finden Sie unter [SQL Server Integration Services](https://msdn.microsoft.com/en-US/library/ms141026(SQL.120).aspx).
+ > Inhalte im Zusammenhang mit früheren Versionen von SQL Server finden Sie unter [SQL Server Integration Services](https://msdn.microsoft.com/library/ms141026(SQL.120).aspx).
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ist eine Plattform zum Erstellen von Datenintegrations- und Datentransformationslösungen auf Unternehmensebene. Sie verwenden [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , um komplexe Unternehmensprobleme durch Kopieren oder Herunterladen von Dateien, Senden von E-Mail-Nachrichten als Antwort auf Ereignisse, Aktualisieren von Data Warehouses, Bereinigen von Daten und Data Mining sowie Verwalten von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Objekten und -Daten zu lösen. Die Pakete können alleine oder zusammen mit anderen Paketen verwendet werden, um komplexe geschäftliche Anforderungen zu erfüllen. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] kann Daten aus einer Vielzahl von Quellen, z. B. XML-Datendateien, Flatfiles und relationale Datenquellen, extrahieren und transformieren und die Daten dann in ein oder mehrere Ziele laden.<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] enthält eine Vielzahl integrierter Tasks und Transformationen; Tools zum Erstellen von Paketen und den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst zum Ausführen und Verwalten von Paketen. Sie können die grafischen [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Tools verwenden, um Lösungen zu erstellen, ohne eine einzige Codezeile schreiben zu müssen. Oder Sie können das umfangreiche [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Objektmodell programmieren, um Pakete programmgesteuert zu erstellen und benutzerdefinierte Tasks sowie andere Paketobjekte zu codieren.
 
@@ -45,8 +45,8 @@ ms.lasthandoff: 11/20/2017
 
 ##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) Hilfe erhalten
  
-- [MSDN-Forum für SSIS: Fragen stellen](https://social.msdn.microsoft.com/Forums/en-us/home?forum=sqlintegrationservices)
-- [MSDN-Forum für SSDT und SSMS: Fragen stellen](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltool)
+- [MSDN-Forum für SSIS: Fragen stellen](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
+- [MSDN-Forum für SSDT und SSMS: Fragen stellen](https://social.msdn.microsoft.com/Forums/home?forum=sqltool)
 - [Stack Overflow (*ssis*-Tag): Fragen stellen](http://stackoverflow.com/questions/tagged/ssis)
 - [Microsoft Connect: Meldung von Programmfehlern und Vorschlagen von Features](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit: Allgemeine Diskussion zu SSIS](https://www.reddit.com/r/SQLServer/search?q=ssis&restrict_sr=on)
