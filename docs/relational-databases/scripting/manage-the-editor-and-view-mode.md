@@ -2,9 +2,12 @@
 title: Verwalten des Editors und Ansichtsmodus | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 20b9724db826018521d68f44e42447112921027c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b3058e6ca6902a5b91368724763ab53f82bc982b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-the-editor-and-view-mode"></a>Verwalten des Editors und des Ansichtsmodus
-  Der Editor bietet mehrere Möglichkeiten, die Ansicht des Codes zu steuern.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Der Editor bietet mehrere Möglichkeiten, die Ansicht des Codes zu steuern.  
   
 ## <a name="changing-the-view-mode"></a>Ändern des Ansichtsmodus  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügt über einen Ansichtsmodus namens **Dokumente im Registerformat**. In diesem Modus können Sie mehrere Editoren und Dokumente gleichzeitig öffnen und über Registerkarten am oberen Rand des Editors auf diese zugreifen. Alternativ können Sie die [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] -Umgebung im Modus für eine mehrfache Dokumentschnittstelle (MDI, Multiple Document Interface) öffnen, bei dem Fenster ohne Registerkarten verknüpft werden und nebeneinander angezeigt, minimiert oder ähnlich behandelt werden können.  

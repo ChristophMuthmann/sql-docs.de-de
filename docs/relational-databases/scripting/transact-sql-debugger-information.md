@@ -2,9 +2,12 @@
 title: Transact-SQL-Debuggerinformationen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 63c4f19cea0dd6f938f2b6e2e89f66e49d4a4947
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 82eb9526073e35e05f39be67b6a3f4bcd6569612
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transact-sql-debugger---information"></a>Transact-SQL-Debuggerinformationen
-  Jedes Mal, wenn der Debugger bei einer bestimmten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung die Ausführung unterbricht, können Sie den aktuellen Ausführungsstatus in den verschiedenen Debuggerfenstern anzeigen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Jedes Mal, wenn der Debugger bei einer bestimmten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung die Ausführung unterbricht, können Sie den aktuellen Ausführungsstatus in den verschiedenen Debuggerfenstern anzeigen.  
   
 ## <a name="debugger-windows"></a>Debuggerfenster  
  Im Debuggermodus öffnet der Debugger zwei Fenster am unteren Rand des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Fensters. Der Debugger zeigt alle seine Informationen in diesen zwei Fenstern an. Jedes Debuggerfenster enthält Registerkarten, durch deren Auswahl Sie bestimmen können, welcher Satz von Informationen im Fenster angezeigt wird. Das linke Debuggerfenster enthält die Registerkarten **Lokal**, **Überwachen 1**, **Überwachen 2**, **Überwachen 3**und **Überwachen 4** . Das rechte Debuggerfenster enthält die Registerkarten **Aufrufliste**, **Threads**, **Breakpoints**, **Befehlsfenster**und **Ausgabe** .  

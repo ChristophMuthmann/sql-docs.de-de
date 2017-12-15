@@ -2,9 +2,12 @@
 title: Filter generieren | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2aa276ac1c58809cb97ef0ce002de76db32e1fa3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d3e86760f99dd98a405ec4e0efcdf0516485a09b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="generate-filters"></a>Filter generieren
-  Mithilfe des Dialogfelds **Filter generieren** können Sie einen Zeilenfilter für eine Tabelle in einer Mergeveröffentlichung definieren. Die Replikation erweitert dann den Filter automatisch auf andere Tabellen, die durch Fremdschlüsselbeziehungen verbunden sind. Wenn Sie z. B. einen Filter für eine Kundentabelle so definieren, dass diese nur Daten zu französischen Kunden enthält, dann erweitert die Replikation den Filter derart, dass verknüpfte Tabellen mit Bestellungen und Bestellungsdetails nur Informationen enthalten, die sich auf französische Kunden beziehen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe des Dialogfelds **Filter generieren** können Sie einen Zeilenfilter für eine Tabelle in einer Mergeveröffentlichung definieren. Die Replikation erweitert dann den Filter automatisch auf andere Tabellen, die durch Fremdschlüsselbeziehungen verbunden sind. Wenn Sie z. B. einen Filter für eine Kundentabelle so definieren, dass diese nur Daten zu französischen Kunden enthält, dann erweitert die Replikation den Filter derart, dass verknüpfte Tabellen mit Bestellungen und Bestellungsdetails nur Informationen enthalten, die sich auf französische Kunden beziehen.  
   
 ## <a name="options"></a>Optionen  
  Dieses Dialogfeld enthält einen dreistufigen Vorgang zum Erstellen eines Zeilenfilters für eine Tabelle. Der Filter wird dann auf die Tabellen erweitert, die mit der gefilterten Tabelle über Primärschlüssel- und Fremdschlüsselbeziehungen verknüpft sind. Wenn z. B. drei Tabellen gegeben sind, **Customer**, **SalesOrderHeader**und **SalesOrderDetail**, mit einer Beziehung zwischen **Customer** und **SalesOrderHeader**sowie einer Beziehung zwischen **SalesOrderHeader** und **SalesOrderDetail**, dann können Sie einen Zeilenfilter auf **Customer**anwenden, und die Replikation erweitert diesen Filter auf **SalesOrderHeader** und **SalesOrderDetail**.  

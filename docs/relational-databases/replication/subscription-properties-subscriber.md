@@ -2,9 +2,12 @@
 title: Abonnementeigenschaften - Abonnent | Microsoft Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 348b0b2b95f433f5c186fa71addbf418432198d4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5fe9f215218bc84d3b3f1d5bb5c22d1a2ee980d7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="subscription-properties---subscriber"></a>Abonnementeigenschaften - Abonnent
-  Im Dialogfeld **Abonnementeigenschaften** des Abonnenten können Sie die Eigenschaften von Pullabonnements anzeigen und festlegen.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Im Dialogfeld **Abonnementeigenschaften** des Abonnenten können Sie die Eigenschaften von Pullabonnements anzeigen und festlegen.  
   
  Zu jeder im Dialogfeld **Abonnementeigenschaften** verfügbaren Eigenschaft wird auch eine Beschreibung angezeigt. Klicken Sie auf eine Eigenschaft, um die dazugehörige Beschreibung am unteren Rand des Dialogfelds anzuzeigen. Dieses Thema enthält zusätzliche Informationen zu verschiedenen Eigenschaften. Die Eigenschaften sind in folgenden Kategorien angeordnet:  
   
@@ -60,13 +63,13 @@ ms.lasthandoff: 11/09/2017
  Bestimmt, ob dieses Abonnement mithilfe von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Synchronization Manager synchronisiert werden kann.  
   
  **Sicherheit**  
- Klicken Sie auf die Zeile **Agentprozesskonto** , und klicken Sie dann auf die **Schaltfläche mit den drei Punkten**, um das Konto zu ändern, unter dem der Verteilungs-Agent oder der Merge-Assistent auf dem Abonnenten ausgeführt werden. Die Sicherheitsoptionen für Verbindungen sind vom Typ des Abonnements abhängig:  
+ Klicken Sie auf die Zeile **Agentprozesskonto**, und klicken Sie dann auf die Schaltfläche mit den **drei Punkten**, um das Konto zu ändern, unter dem der Verteilungs-Agent oder der Merge-Assistent auf dem Abonnenten ausgeführt werden. Die Sicherheitsoptionen für Verbindungen sind vom Typ des Abonnements abhängig:  
   
--   Für Abonnements einer Transaktionsveröffentlichung: Sie können das Konto, unter dem der Verteilungs-Agent Verbindungen mit dem Verteiler erstellt, ändern, indem Sie auf **Verteilerverbindung**und anschließend auf die **Schaltfläche mit den drei Punkten**klicken.  
+-   Für Abonnements einer Transaktionsveröffentlichung: Sie können das Konto, unter dem der Verteilungs-Agent Verbindungen mit dem Verteiler erstellt, ändern, indem Sie auf **Verteilerverbindung**und anschließend auf die Schaltfläche mit den **drei Punkten**klicken.  
   
 -   Für Abonnements mit sofortigem Update von Transaktionsveröffentlichungen: zusätzlich zur oben beschriebenen Verteilerverbindung können Sie die Methode ändern, mit der Änderungen vom Abonnenten zum Verleger übermittelt werden: klicken Sie auf **Verlegerverbindung**und anschließend auf die **Schaltfläche mit den drei Punkten**.  
   
--   Für Abonnements von Mergeveröffentlichungen, klicken Sie auf **Verlegerverbindung**und anschließend auf die **Schaltfläche mit den drei Punkten**.  
+-   Für Abonnements von Mergeveröffentlichungen, klicken Sie auf **Verlegerverbindung**und anschließend auf die Schaltfläche mit den **drei Punkten**.  
   
  Weitere Informationen zu den für die einzelnen Agents erforderlichen Berechtigungen finden Sie unter [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
@@ -93,7 +96,7 @@ ms.lasthandoff: 11/09/2017
   
 -   Geben Sie die vollständige Adresse des IIS-Servers in **Webserveradresse**ein.  
   
--   Klicken Sie auf die Zeile **Webserververbindung** , und klicken Sie anschließend auf die **Schaltfläche mit den drei Punkten**, um das Konto festzulegen oder zu ändern, unter dem der Abonnent eine Verbindung mit dem IIS-Server herstellt.  
+-   Klicken Sie auf die Zeile **Webserververbindung**, und klicken Sie anschließend auf die Schaltfläche mit den **drei Punkten**, um das Konto festzulegen oder zu ändern, unter dem der Abonnent eine Verbindung mit dem IIS-Server herstellt.  
   
 -   Falls erforderlich, ändern Sie **Webservertimeout** . Ein Timeout bezeichnet die Dauer in Sekunden, bevor eine Websynchronisierungsanforderung ungültig wird.  
   

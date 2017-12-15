@@ -2,9 +2,12 @@
 title: "Fenster „Fehlerliste“ (Management Studio) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 639b50be753f5f9650601dc66a65102aa5ab0e19
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 14041b10f1585f267d068b050c08fa38f7eea3f0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Transact-SQL-Debugger – Fenster „Fehlerliste“
-  In der Fehlerliste [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **von** werden die vom IntelliSense-Code im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor generierten Syntax- und Semantikfehler angezeigt.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In der **Fehlerliste** von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] werden die vom IntelliSense-Code im [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Abfrage-Editor generierten Syntax- und Semantikfehler angezeigt.  
   
 ## <a name="features-of-the-error-list"></a>Funktionen der Fehlerliste  
  Die **Fehlerliste** bietet die folgende Funktionalität:  
@@ -37,9 +40,9 @@ ms.lasthandoff: 11/09/2017
   
 -   Sie können die anzuzeigenden Einträge und die Informationsspalten, die für jeden Eintrag angezeigt werden sollen, filtern.  
   
--   Nachdem Sie einen Fehler behoben haben, wird der Fehlereintrag aus der **Fehlerliste**entfernt.  
+-   Nachdem Sie einen Fehler behoben haben, wird der Fehlereintrag aus der **Fehlerliste** entfernt.  
   
--   Wenn Sie die Registerkarte für eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skriptdatei schließen, werden die Fehler in dieser Datei aus der **Fehlerliste** entfernt.  
+-   Wenn Sie die Registerkarte für eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skriptdatei schließen, werden die Fehler in dieser Datei aus der **Fehlerliste**entfernt.  
   
 ## <a name="working-with-the-error-list"></a>Arbeiten mit der Fehlerliste  
  Führen Sie zum Anzeigen der **Fehlerliste** eine der folgenden Aktionen aus:  

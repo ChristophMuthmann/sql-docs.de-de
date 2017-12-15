@@ -2,9 +2,12 @@
 title: "Ändern einer Partitionsfunktion | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: partitions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-partition
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f802feafcd209656d53224c62d2aa6a55addf460
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e6951b2a5363c78238c38956fa90d0cfd107f919
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="modify-a-partition-function"></a>Ändern einer Partitionsfunktion
-  Sie können Tabellen- oder Indexpartitionen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ändern, indem Sie mit [!INCLUDE[tsql](../../includes/tsql-md.md)]die angegebene Partitionsanzahl in Einerschritten in der Partitionsfunktion der partitionierten Tabelle bzw. des Indexes hinzufügen oder abziehen. Beim Hinzufügen einer Partition "teilen" Sie eine vorhandene Partition "auf" und definieren die Partitionsbegrenzungen erneut. Wenn Sie eine Partition löschen, "führen" Sie die Begrenzungen von zwei Partitionen "zusammen". Diese Aktion füllt eine Partition neu und belässt die andere Partition ohne Zuordnung.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Sie können Tabellen- oder Indexpartitionen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ändern, indem Sie mit [!INCLUDE[tsql](../../includes/tsql-md.md)] die angegebene Partitionsanzahl in Einerschritten in der Partitionsfunktion der partitionierten Tabelle bzw. des Indexes hinzufügen oder abziehen. Beim Hinzufügen einer Partition "teilen" Sie eine vorhandene Partition "auf" und definieren die Partitionsbegrenzungen erneut. Wenn Sie eine Partition löschen, "führen" Sie die Begrenzungen von zwei Partitionen "zusammen". Diese Aktion füllt eine Partition neu und belässt die andere Partition ohne Zuordnung.  
   
 > [!CAUTION]  
 >  Mehrere Tabellen oder Indizes können dieselbe Partitionsfunktion verwenden. Wenn Sie eine Partitionsfunktion ändern, wirkt sich dies auf alle Funktionen einer einzigen Transaktion aus. Überprüfen Sie die Abhängigkeiten der Partitionsfunktion, bevor Sie sie ändern.  
@@ -91,7 +94,7 @@ ms.lasthandoff: 11/09/2017
   
 #### <a name="to-split-a-single-partition-into-two-partitions"></a>So teilen Sie eine einzelne Partition in zwei Partitionen auf  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -116,7 +119,7 @@ ms.lasthandoff: 11/09/2017
   
 #### <a name="to-merge-two-partitions-into-one-partition"></a>So führen Sie zwei Partitionen zu einer Partition zusammen  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

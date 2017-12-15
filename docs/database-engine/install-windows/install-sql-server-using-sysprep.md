@@ -2,11 +2,12 @@
 title: Installieren von SQL Server mit SysPrep | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 09/07/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +16,15 @@ caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 1f13a80130626df2fe09ff37d566395d23e3b952
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f8f670c4eb380a5fb4a43d547133c64d616e1b54
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sql-server-with-sysprep"></a>Installieren von SQL Server mit SysPrep
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep können Sie über das Installationscenter zugreifen. Die Seite **Erweitert** des **Installationscenters** enthält zwei Optionen - **Vorbereiten eines Images von einer eigenständigen Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** und **Abschließen eines Images von einer vorbereiteten eigenständigen Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. In den Abschnitten zum [Vorbereiten](#prepare) und [Abschließen](#complete) wird der Installationsvorgang detailliert beschrieben. Weitere Informationen finden Sie unter [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md). 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Auf Aktionen zum Setup von 
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep können Sie über das Installationscenter zugreifen. Die Seite **Erweitert** des **Installationscenters** enthält zwei Optionen - **Vorbereiten eines Images von einer eigenständigen Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** und **Abschließen eines Images von einer vorbereiteten eigenständigen Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. In den Abschnitten zum [Vorbereiten](#prepare) und [Abschließen](#complete) wird der Installationsvorgang detailliert beschrieben. Weitere Informationen finden Sie unter [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md). 
   
 Sie können außerdem eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe der Eingabeaufforderung oder einer Konfigurationsdatei vorbereiten und abschließen. Weitere Informationen finden Sie in den folgenden Themen:  
   
@@ -130,7 +132,7 @@ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
 15. Während der Installation wird auf der Seite **Status der Imagevorbereitung** der Status angezeigt, sodass Sie während der Ausführung von Setup den Installationsstatus überwachen können. 
   
-16. Nach der Installation bietet die Seite **Abgeschlossen** einen Link zur zusammenfassenden Protokolldatei für die Installation und andere wichtige Hinweise. Klicken Sie auf **Schließen**, um die Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abzuschließen. 
+16. Nach der Installation bietet die Seite **Abgeschlossen** einen Link zur zusammenfassenden Protokolldatei für die Installation und andere wichtige Hinweise. Klicken Sie auf **Schließen** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um die Installation von abzuschließen. 
   
 17. Starten Sie den Computer neu, falls Sie dazu aufgefordert werden. Wenn Sie den Setupvorgang abgeschlossen haben, sollten Sie unbedingt die vom Installations-Assistenten angezeigte Meldung lesen. Weitere Informationen finden Sie unter [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md). 
   
@@ -214,7 +216,7 @@ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
 20. Während der Installation wird auf der Seite **Status des Imageabschlusses** der Status angezeigt, sodass Sie während der Ausführung von Setup den Installationsstatus überwachen können. 
   
-21. Nach der Installation bietet die Seite **Abgeschlossen** einen Link zur zusammenfassenden Protokolldatei für die Installation und andere wichtige Hinweise. Klicken Sie auf **Schließen**, um die Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abzuschließen. 
+21. Nach der Installation bietet die Seite **Abgeschlossen** einen Link zur zusammenfassenden Protokolldatei für die Installation und andere wichtige Hinweise. Klicken Sie auf **Schließen** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um die Installation von abzuschließen. 
   
 22. Starten Sie den Computer neu, falls Sie dazu aufgefordert werden. Wenn Sie den Setupvorgang abgeschlossen haben, sollten Sie unbedingt die vom Installations-Assistenten angezeigte Meldung lesen. Weitere Informationen finden Sie unter [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md). 
   
@@ -248,7 +250,7 @@ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
 11. Während der Installation wird auf der Seite **Status der Imagevorbereitung** der Status angezeigt, sodass Sie während der Ausführung von Setup den Installationsstatus überwachen können. 
   
-12. Nach der Installation bietet die Seite **Abgeschlossen** einen Link zur zusammenfassenden Protokolldatei für die Installation und andere wichtige Hinweise. Klicken Sie auf **Schließen**, um die Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abzuschließen. 
+12. Nach der Installation bietet die Seite **Abgeschlossen** einen Link zur zusammenfassenden Protokolldatei für die Installation und andere wichtige Hinweise. Klicken Sie auf **Schließen** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um die Installation von abzuschließen. 
   
 13. Starten Sie den Computer neu, falls Sie dazu aufgefordert werden. Wenn Sie den Setupvorgang abgeschlossen haben, sollten Sie unbedingt die vom Installations-Assistenten angezeigte Meldung lesen. Weitere Informationen finden Sie unter [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md). 
   

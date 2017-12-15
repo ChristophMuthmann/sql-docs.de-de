@@ -2,9 +2,12 @@
 title: "Artikeleigenschaften – &lt;Artikel&gt; | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 44abce2c85d841034ec0e70433b29fbb48e99714
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e023115d959322e0e870d6ef43c7ffcdcc82f21f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="article-properties---ltarticlegt"></a>Artikeleigenschaften – &lt;Artikel&gt;
-  Das Dialogfeld **Artikeleigenschaften** steht über den Assistenten für neue Veröffentlichung und das Dialogfeld **Veröffentlichungseigenschaften** zur Verfügung. Es ermöglicht Ihnen, die Eigenschaften für alle Typen von Artikeln anzuzeigen und festzulegen. Bestimmte Eigenschaften können nur beim Erstellen der Veröffentlichung festgelegt werden, andere nur, wenn für die Veröffentlichung keine aktiven Abonnements vorhanden sind. Eigenschaften, die nicht festgelegt werden können, werden als schreibgeschützt angezeigt.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das Dialogfeld **Artikeleigenschaften** steht über den Assistenten für neue Veröffentlichung und das Dialogfeld **Veröffentlichungseigenschaften** zur Verfügung. Es ermöglicht Ihnen, die Eigenschaften für alle Typen von Artikeln anzuzeigen und festzulegen. Bestimmte Eigenschaften können nur beim Erstellen der Veröffentlichung festgelegt werden, andere nur, wenn für die Veröffentlichung keine aktiven Abonnements vorhanden sind. Eigenschaften, die nicht festgelegt werden können, werden als schreibgeschützt angezeigt.  
   
 > [!NOTE]  
 >  Nachdem eine Veröffentlichung erstellt wurde, ist für bestimmte Eigenschaftsänderungen eine neue Momentaufnahme erforderlich. Wenn für eine Veröffentlichung Abonnements erstellt wurden, müssen bei bestimmten Änderungen alle Abonnements erneut initialisiert werden. Weitere Informationen finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
@@ -81,7 +84,7 @@ ms.lasthandoff: 11/09/2017
  **Statement delivery**  
  Die Optionen in diesem Abschnitt gelten für alle Tabellen, einschließlich indizierter Sichten, die als Tabellen repliziert werden. [!INCLUDE[msCoName](../../includes/msconame-md.md)] empfiehlt die Verwendung der Standardoptionen, sofern die Anwendung keine andere Funktionalität erfordert. Standardmäßig gibt die Transaktionsreplikation Änderungen an Abonnenten mithilfe einer Reihe gespeicherter Prozeduren weiter, die auf jedem Abonnenten gespeichert sind. Wenn für eine Tabelle auf dem Verleger ein Einfüge-, Update- oder Löschvorgang ansteht, wird der Vorgang in einen Aufruf einer gespeicherten Prozedur auf den Abonnenten übersetzt.  
   
- Mit den Optionen unter **Anweisungsübermittlung** wird angegeben, ob eine gespeicherte Prozedur verwendet wird und wenn ja, welches Format für an die Prozedur übergebene Parameter verwendet werden soll. Die Optionen für **gespeicherte Prozeduren** ermöglichen es Ihnen, die Prozeduren zu verwenden, die die Replikation automatisch erstellt, oder diese durch von Ihnen erstellte benutzerdefinierte Prozeduren zu ersetzen.  
+ Mit den Optionen unter **Anweisungsübermittlung** wird angegeben, ob eine gespeicherte Prozedur verwendet wird und wenn ja, welches Format für an die Prozedur übergebene Parameter verwendet werden soll. Die Optionen für **gespeicherte Prozeduren** ermöglichen es Ihnen, die Prozeduren zu verwenden, die Replikation automatisch erstellt, oder diese durch von Ihnen erstellte benutzerdefinierte Prozeduren zu ersetzen.  
   
  Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
@@ -155,7 +158,7 @@ ms.lasthandoff: 11/09/2017
  **Statement delivery**  
  Die Optionen in diesem Abschnitt gelten für alle Tabellen in Transaktionsveröffentlichungen. [!INCLUDE[msCoName](../../includes/msconame-md.md)] empfiehlt die Verwendung der Standardoptionen, sofern die Anwendung keine andere Funktionalität erfordert. Standardmäßig gibt die Transaktionsreplikation Änderungen an Abonnenten mithilfe einer Reihe gespeicherter Prozeduren weiter, die auf jedem Abonnenten gespeichert sind. Wenn für eine Tabelle auf dem Verleger ein Einfüge-, Update- oder Löschvorgang ansteht, wird der Vorgang in einen Aufruf einer gespeicherten Prozedur auf den Abonnenten übersetzt.  
   
- Mit den Optionen unter **Anweisungsübermittlung** wird angegeben, ob eine gespeicherte Prozedur verwendet wird und wenn ja, welches Format für an die Prozedur übergebene Parameter verwendet werden soll. Die Optionen für **gespeicherte Prozeduren** ermöglichen es Ihnen, die Prozeduren zu verwenden, die die Replikation automatisch erstellt, oder diese durch von Ihnen erstellte benutzerdefinierte Prozeduren zu ersetzen.  
+ Mit den Optionen unter **Anweisungsübermittlung** wird angegeben, ob eine gespeicherte Prozedur verwendet wird und wenn ja, welches Format für an die Prozedur übergebene Parameter verwendet werden soll. Die Optionen für **gespeicherte Prozeduren** ermöglichen es Ihnen, die Prozeduren zu verwenden, die Replikation automatisch erstellt, oder diese durch von Ihnen erstellte benutzerdefinierte Prozeduren zu ersetzen.  
   
  Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   

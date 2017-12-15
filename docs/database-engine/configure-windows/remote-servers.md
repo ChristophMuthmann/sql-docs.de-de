@@ -2,9 +2,12 @@
 title: Remoteserver | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2508d809528cd73f5e478b4ad76cf987918d9d23
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4c4d0ac2fa7d02ed8b0e75a1f0ab6347b1e5506a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="remote-servers"></a>Remoteserver
-  Remoteserver werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nur aus Gründen der Abwärtskompatibilität unterstützt. Neue Anwendungen sollten stattdessen Verbindungsserver verwenden. Weitere Informationen finden Sie unter [Verbindungsserver &#40;Datenbankmodul&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Remoteserver werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nur aus Gründen der Abwärtskompatibilität unterstützt. Neue Anwendungen sollten stattdessen Verbindungsserver verwenden. Weitere Informationen finden Sie unter [Verbindungsserver &#40;Datenbankmodul&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
   
  Durch die Konfiguration eines Remoteservers kann ein Client, der eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hergestellt hat, eine gespeicherte Prozedur in einer anderen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen, ohne eine separate Verbindung einrichten zu müssen. Der mit dem Client verbundene Server nimmt in diesem Fall die Clientanforderung an und sendet die Anforderung im Auftrag des Clients an den Remoteserver. Der Remoteserver verarbeitet die Anforderung und gibt die Ergebnisse an den ursprünglichen Server zurück. Dieser Server übergibt seinerseits die Ergebnisse an den Client. Wenn Sie eine Remoteserverkonfiguration einrichten, sollten Sie auch Sicherheitsaspekte berücksichtigen.  
   
@@ -60,7 +63,7 @@ ms.lasthandoff: 11/09/2017
 >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung.  
   
 ### <a name="remote-server-security-example"></a>Beispiel für die Sicherheit von Remoteservern  
- Betrachten Sie diese beiden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationen: **serverSend** und **serverReceive**. **serverReceive** ist so konfiguriert, dass eine eingehende Anmeldung von **serverSend**namens **Sales_Mary**einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -authentifizierten Anmeldung bei **serverReceive**namens **Alice**zugeordnet wird. Eine weitere eingehende Anmeldung von **serverSend**namens **Joe**wird einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -authentifizierten Anmeldung auf **serverReceive***,* namens **Joe**zugeordnet.  
+ Betrachten Sie diese beiden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationen: **serverSend** und **serverReceive**. **serverReceive** ist so konfiguriert, dass eine eingehende Anmeldung von **serverSend**namens **Sales_Mary**einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -authentifizierten Anmeldung bei **serverReceive**namens **Alice**zugeordnet wird. Eine weitere eingehende Anmeldung von **serverSend** namens **Joe** wird einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -authentifizierten Anmeldung auf **serverReceive***,* namens **Joe** zugeordnet.  
   
  Der folgende Transact-SQL-Beispielcode konfiguriert `serverSend` so, dass Remoteprozeduraufrufe auf `serverReceive`ausgeführt werden können.  
   

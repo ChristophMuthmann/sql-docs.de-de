@@ -2,9 +2,12 @@
 title: Replikations-Agentprofile | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ba2b5e4cb56cc8134a3febebb5c84ff8935a235d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 88f88d0a47ec41c18382d4247051156d65dfcf99
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-agent-profiles"></a>Replikations-Agent-Profile
-  Wenn die Replikation konfiguriert wird, wird ein Satz Agentprofile auf dem Verteiler installiert. Ein Agentprofil enthält eine Reihe Parameter, die bei jeder Ausführung des Agents zur Anwendung kommen: Jeder Agent meldet sich während seines Startprozesses beim Verteiler an und fragt die Parameter in seinem Profil ab. Im Fall von Mergeabonnements, die die Websynchronisierung verwenden, werden Profile heruntergeladen und auf dem Verteiler gespeichert. Wenn das Profil geändert wird, wird das Profil auf dem Verteiler aktualisiert, wenn der Merge-Agent das nächste Mal ausgeführt wird. Weitere Informationen zur Websynchronisierung finden Sie unter [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Wenn die Replikation konfiguriert wird, wird ein Satz Agentprofile auf dem Verteiler installiert. Ein Agentprofil enthält eine Reihe Parameter, die bei jeder Ausführung des Agents zur Anwendung kommen: Jeder Agent meldet sich während seines Startprozesses beim Verteiler an und fragt die Parameter in seinem Profil ab. Im Fall von Mergeabonnements, die die Websynchronisierung verwenden, werden Profile heruntergeladen und auf dem Verteiler gespeichert. Wenn das Profil geändert wird, wird das Profil auf dem Verteiler aktualisiert, wenn der Merge-Agent das nächste Mal ausgeführt wird. Weitere Informationen zur Websynchronisierung finden Sie unter [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
   
  Die Replikation stellt ein Standardprofil für jeden Agent und zusätzliche vordefinierte Profile für den Protokolllese-Agent, den Verteilungs-Agent und den Merge-Agent bereit. Neben den bereitgestellten Profilen können Sie Profile erstellen, die sich für Ihre Anwendungsanforderungen eignen. Ein Agentprofil ermöglicht ein einfaches Ändern von Schlüsselparametern für alle Agents, die dem Profil zugeordnet sind. Wenn Sie z. B. 20 Momentaufnahme-Agents haben und den Zeittimeout für Abfragen ändern müssen (den **-QueryTimeout** -Parameter), können Sie das Profil für die Momentaufnahme-Agents aktualisieren. Beim nächsten Ausführen verwenden alle Agents dieses Typs automatisch den neuen Wert.  
   

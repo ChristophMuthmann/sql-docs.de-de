@@ -2,9 +2,12 @@
 title: "Erstellen oder Löschen eines Serveralias für die Verwendung durch einen Client | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e337353c65243953afa2fd94b96aad52cb9e3eef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fc0dda4917ab08272ecc4ef1ba079826a0d8f70f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-or-delete-a-server-alias-for-use-by-a-client"></a>Erstellen oder Löschen eines Serveralias für die Verwendung durch einen Client
-  In diesem Thema wird beschrieben, wie Sie einen Serveralias in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe des SQL Server-Konfigurations-Managers erstellen oder löschen können. Bei einem Alias handelt es sich um einen alternativen Namen, der zum Herstellen einer Verbindung verwendet werden kann. In dem Alias eingeschlossen werden erforderliche Elemente einer Verbindungszeichenfolge. Diese Elemente werden mit einem vom Benutzer ausgewählten Namen offen gelegt. Aliase können mit jeder Clientanwendung verwendet werden. Mithilfe von Serveraliasnamen kann der Clientcomputer eine Verbindung mit mehreren Servern über verschiedene Netzwerkprotokolle herstellen, ohne jeweils das Protokoll und die Verbindungsdetails angeben zu müssen. Des Weiteren können mehrere Netzwerkprotokolle gleichzeitig aktiviert sein, auch wenn Sie diese Protokolle nur sporadisch nutzen. Wenn Sie den Server so konfiguriert haben, dass dieser an einer nicht standardmäßigen Portnummer oder Named Pipe lauscht und dabei der SQL Server-Browserdienst deaktiviert ist, erstellen Sie einen Alias, mit dem die neue Portnummer oder Named Pipe angegeben wird.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie Sie einen Serveralias in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe des SQL Server-Konfigurations-Managers erstellen oder löschen können. Bei einem Alias handelt es sich um einen alternativen Namen, der zum Herstellen einer Verbindung verwendet werden kann. In dem Alias eingeschlossen werden erforderliche Elemente einer Verbindungszeichenfolge. Diese Elemente werden mit einem vom Benutzer ausgewählten Namen offen gelegt. Aliase können mit jeder Clientanwendung verwendet werden. Mithilfe von Serveraliasnamen kann der Clientcomputer eine Verbindung mit mehreren Servern über verschiedene Netzwerkprotokolle herstellen, ohne jeweils das Protokoll und die Verbindungsdetails angeben zu müssen. Des Weiteren können mehrere Netzwerkprotokolle gleichzeitig aktiviert sein, auch wenn Sie diese Protokolle nur sporadisch nutzen. Wenn Sie den Server so konfiguriert haben, dass dieser an einer nicht standardmäßigen Portnummer oder Named Pipe lauscht und dabei der SQL Server-Browserdienst deaktiviert ist, erstellen Sie einen Alias, mit dem die neue Portnummer oder Named Pipe angegeben wird.  
   
 ##  <a name="SSMSProcedure"></a> Verwenden des SQL Server-Konfigurations-Managers  
   

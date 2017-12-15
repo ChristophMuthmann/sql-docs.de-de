@@ -2,9 +2,12 @@
 title: Importieren einer BACPAC-Datei zum Erstellen einer neuen Benutzerdatenbank | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/31/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -30,14 +33,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a919d864464b02da417add79139d532689d43e92
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b105471806865b78a07c5478f08d7a1bf6cf49f6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importieren einer BACPAC-Datei zum Erstellen einer neuen Benutzerdatenbank
-  Importieren Sie eine Datei einer Datenebenenanwendung (DAC) (eine BACPAC-Datei), um eine Kopie der ursprünglichen Datenbank mit den Daten auf einer neuen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]oder auf [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]zu erstellen. Die Export-/Importvorgänge können kombiniert werden, um eine DAC oder Datenbank zwischen Instanzen zu migrieren oder eine logische Sicherung zu erstellen. Dazu gehört z. B. das Erstellen einer lokalen Kopie einer in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]bereitgestellten Datenbank.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Importieren Sie eine Datei einer Datenebenenanwendung (DAC) (eine BACPAC-Datei), um eine Kopie der ursprünglichen Datenbank mit den Daten auf einer neuen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder auf [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] zu erstellen. Die Export-/Importvorgänge können kombiniert werden, um eine DAC oder Datenbank zwischen Instanzen zu migrieren oder eine logische Sicherung zu erstellen. Dazu gehört z. B. das Erstellen einer lokalen Kopie einer in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]bereitgestellten Datenbank.  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
  Beim Importvorgang wird in zwei Phasen eine neue DAC erstellt.  

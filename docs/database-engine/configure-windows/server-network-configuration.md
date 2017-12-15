@@ -2,9 +2,12 @@
 title: Servernetzwerkkonfiguration | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/27/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c4ed91e4fd96fde43f87f25d351597b875df4550
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 88db862493213badd36cfcaf4301cc1be6da5881
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="server-network-configuration"></a>Server-Netzwerkkonfiguration
-  Zu den Aufgaben, die im Rahmen der Server-Netzwerkkonfiguration durchgeführt werden müssen, gehören das Aktivieren von Protokollen, das Ändern des Anschlusses oder der Pipe, der bzw. die von einem Protokoll verwendet wird, das Konfigurieren der Verschlüsselung, das Konfigurieren des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser-Diensts, das Offenlegen oder Verbergen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] im Netzwerk sowie das Registrieren des Serverprinzipalnamens (SPN). In den meisten Fällen ist es nicht erforderlich, die Server-Netzwerkkonfiguration zu ändern. Konfigurieren Sie die Server-Netzwerkprotokolle nur dann neu, wenn spezielle Netzwerkanforderungen erfüllt werden müssen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Zu den Aufgaben, die im Rahmen der Server-Netzwerkkonfiguration durchgeführt werden müssen, gehören das Aktivieren von Protokollen, das Ändern des Anschlusses oder der Pipe, der bzw. die von einem Protokoll verwendet wird, das Konfigurieren der Verschlüsselung, das Konfigurieren des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser-Diensts, das Offenlegen oder Verbergen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] im Netzwerk sowie das Registrieren des Serverprinzipalnamens (SPN). In den meisten Fällen ist es nicht erforderlich, die Server-Netzwerkkonfiguration zu ändern. Konfigurieren Sie die Server-Netzwerkprotokolle nur dann neu, wenn spezielle Netzwerkanforderungen erfüllt werden müssen.  
   
  Die Netzwerkkonfiguration für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erfolgt mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers. Verwenden Sie für frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die SQL Server-Netzwerkkonfiguration, die zum Lieferumfang dieser Produkte gehört.  
   

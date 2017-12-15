@@ -1,5 +1,5 @@
 ---
-title: SQL Server Integration Services (SSIS-Dienst) | Microsoft Docs
+title: Integration Services-Dienst (SSIS-Dienst) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,22 +24,21 @@ helpviewer_keywords:
 - service [Integration Services]
 - SQL Server Integration Services, service
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: cb825e9f5a654ec7dd24059d43dcea5b7d91e1e1
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 9c2a1063b982ab1f3b8203f76adc59e945da12b1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services-Dienst (SSIS-Dienst)
   In den Themen in diesem Abschnitt wird der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst, ein Windows-Dienst zum Verwalten von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen, erläutert. Dieser Dienst ist nicht erforderlich, um Integration Services-Pakete zu erstellen, zu speichern und auszuführen. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] unterstützt den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst für die Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]speichert [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Objekte, Einstellungen und operative Daten in der **SSISDB** -Datenbank für Projekte, die mithilfe des Projektbereitstellungsmodells auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitgestellt wurden. Der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server, bei dem es sich um eine Instanz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankmoduls handelt, hostet die Datenbank. Weitere Informationen zur Verschlüsselung finden Sie unter [SSIS-Katalog](../../integration-services/service/ssis-catalog.md). Weitere Informationen zum Bereitstellen von Projekten auf die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Server, finden Sie unter [Bereitstellen von Integration Services (SSIS)-Projekten und Paketen](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+ Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]speichert [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Objekte, Einstellungen und operative Daten in der **SSISDB** -Datenbank für Projekte, die mithilfe des Projektbereitstellungsmodells auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitgestellt wurden. Der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server, bei dem es sich um eine Instanz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankmoduls handelt, hostet die Datenbank. Weitere Informationen zur Verschlüsselung finden Sie unter [SSIS-Katalog](../../integration-services/service/ssis-catalog.md). Weitere Informationen zum Bereitstellen eines Projekts auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server finden Sie unter [Bereitstellen von SQL Server Integration Services-Projekten und Paketen (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
 ## <a name="management-capabilities"></a>Managementfunktionen  
  Der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst ist ein Windows-Dienst zur Verwaltung von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen. Der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst steht nur in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]zur Verfügung.  
@@ -93,7 +91,7 @@ ms.lasthandoff: 09/27/2017
   
  Der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst schreibt in das Windows-Ereignisprotokoll. Sie können Dienstereignisse in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]anzeigen. Sie können Dienstereignisse auch mithilfe der Windows-Ereignisanzeige anzeigen.  
   
-## <a name="set-the-properties-of-the-service"></a>Legen Sie die Eigenschaften des Diensts
+## <a name="set-the-properties-of-the-service"></a>Festlegen der Eigenschaften des Diensts
   
  Der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst überwacht und verwaltet Pakete in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Bei der erstmaligen Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]wird der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst gestartet und der Starttyp des Dienstes auf automatisch festgelegt.  
   
@@ -167,7 +165,7 @@ ms.lasthandoff: 09/27/2017
   
 8.  Starten Sie den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst neu.  
 
-## <a name="configure-the-service"></a>Konfigurieren Sie den Dienst
+## <a name="configure-the-service"></a>Konfigurieren des Diensts
  
 Wenn Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]installieren, erstellt und installiert der Setupprozess die Konfigurationsdatei für den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst. Diese Konfigurationsdatei enthält die folgenden Einstellungen:  
   
@@ -175,7 +173,7 @@ Wenn Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]installier
   
 -   Die Stammordner, die für [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] im Objekt-Explorer von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] angezeigt werden sollen, sind die Ordner MSDB und File System.  
   
--   Die Pakete im Dateisystem, das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst verwaltet befinden sich unter %ProgramFiles%\Microsoft SQL Server\130\DTS\Packages.  
+-   Die Pakete im Dateisystem, die vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Dienst verwaltet werden, befinden sich unter „%ProgramFiles%\Microsoft SQL Server\130\DTS\Packages“.  
   
  Diese Konfigurationsdatei gibt auch an, welche msdb-Datenbank die Pakete enthält, die der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst verwaltet. Standardmäßig wird der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst für die Verwaltung von Paketen in der msdb-Datenbank der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] konfiguriert, die zur selben Zeit wie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]installiert wird. Wenn eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] nicht zur selben Zeit installiert wird, wird der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst so konfiguriert, dass Pakete in der msdb-Datenbank der lokalen Standardinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]verwaltet werden.  
   
@@ -209,7 +207,7 @@ Wenn Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]installier
 </DtsServiceConfiguration>  
 ```  
   
-### <a name="modify-the-configuration-file"></a>Ändern Sie die Konfigurationsdatei.  
+### <a name="modify-the-configuration-file"></a>Ändern der Konfigurationsdatei  
  Sie können die Konfigurationsdatei ändern, um Pakete beim Beenden des Diensts weiterhin auszuführen, um zusätzliche Stammordner im Objekt-Explorer anzuzeigen oder um einen anderen Ordner oder zusätzliche Ordner im Dateisystem anzugeben, die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwaltet werden sollen. Sie können beispielsweise zusätzliche Stammordner des Typs **SqlServerFolder**erstellen, um Pakete in den msdb-Datenbanken zusätzlicher Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]zu verwalten.  
   
 > [!NOTE]  
@@ -254,8 +252,8 @@ Wenn Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]installier
 </DtsServiceConfiguration>  
 ```  
   
-### <a name="modify-the-configuration-file-location"></a>Ändern Sie den Speicherort der Konfigurationsdatei  
- Der Registrierungsschlüssel **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** gibt den Speicherort und Namen für die Konfiguration an, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwendet wird. Der Standardwert des Registrierungsschlüssels ist **C:\Program Files\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml**. Sie können den Wert des Registrierungsschlüssels aktualisieren, um einen anderen Namen und Speicherort für die Konfigurationsdatei zu verwenden. Beachten Sie, dass die Versionsnummer im Pfad (120 für SQL Server [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)], 130 für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]usw.) variiert abhängig von der SQL Server-Version.
+### <a name="modify-the-configuration-file-location"></a>Ändern des Speicherorts der Konfigurationsdatei  
+ Der Registrierungsschlüssel **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** gibt den Speicherort und Namen für die Konfigurationsdatei an, die vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Dienst verwendet wird. Der Standardwert des Registrierungsschlüssels lautet **C:\Programme\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml**. Sie können den Wert des Registrierungsschlüssels aktualisieren, um einen anderen Namen und Speicherort für die Konfigurationsdatei zu verwenden. Beachten Sie, dass die Versionsnummer im Pfad („120“ für SQL Server [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)], „130“ für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] usw.) je nach SQL Server-Version variiert.
   
 > [!CAUTION]  
 >  Unsachgemäßes Bearbeiten der Registrierung kann zu schwerwiegenden Problemen führen, die ein Neuinstallieren des Betriebssystems erforderlich machen können. [!INCLUDE[msCoName](../../includes/msconame-md.md)] garantiert nicht, dass Probleme, die durch unsachgemäßes Bearbeiten der Registrierung entstehen, behoben werden können. Sichern Sie vor dem Bearbeiten der Registrierung alle wichtigen Daten. Weitere Informationen zum Sichern, Wiederherstellen und Bearbeiten der Registrierung finden Sie im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base-Artikel [Windows-Registrierungsinformationen für Benutzer mit fortgeschrittenen Kenntnissen](http://support.microsoft.com/kb/256986).  
@@ -265,7 +263,7 @@ Wenn Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]installier
 ## <a name="connect-to-the-local-service"></a>Herstellen einer Verbindung mit dem lokalen Dienst
   Bevor Sie eine Verbindung mit dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst herstellen, muss der Administrator Ihnen Zugriff auf den Dienst gewähren. 
   
-### <a name="to-connect-to-the-integration-services-service"></a>Verbindung mit Integration Services-Diensts  
+### <a name="to-connect-to-the-integration-services-service"></a>So stellen Sie eine Verbindung mit dem Integration Services-Dienst her  
   
 1.  Öffnen Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -359,26 +357,26 @@ Sie können die Delegierung von Anmeldeinformationen aktivieren, indem Sie dem S
 
 Weitere Informationen finden Sie im Blogbeitrag [Getting Cross Domain Kerberos and Delegation working with SSIS Package](https://blogs.msdn.microsoft.com/psssql/2014/06/26/getting-cross-domain-kerberos-and-delegation-working-with-ssis-package/)(Erreichen, dass Kerberos (domänenübergreifend) und Delegierung in SSIS-Paketen funktionieren).
  
-## <a name="configure-the-firewall"></a>Konfigurieren der firewall
+## <a name="configure-the-firewall"></a>Konfigurieren der Firewall
   
- Die Windows-Firewallsystem hilft nicht autorisierten Zugriff auf Computerressourcen über eine Netzwerkverbindung verhindert. Um über diese Firewall auf [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] zuzugreifen, müssen Sie die Firewall so konfigurieren, dass der Zugriff zulässig ist.  
+ Durch das Windows-Firewallsystem werden nicht autorisierte Zugriffe auf Computerressourcen über eine Netzwerkverbindung verhindert. Um über diese Firewall auf [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] zuzugreifen, müssen Sie die Firewall so konfigurieren, dass der Zugriff zulässig ist.  
   
 > [!IMPORTANT]  
 >  Zum Verwalten von Paketen auf einem Remoteserver müssen Sie keine Verbindung mit der Instanz des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Diensts auf dem betreffenden Remoteserver herstellen. Bearbeiten Sie stattdessen die Konfigurationsdatei für den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst, sodass die auf dem Remoteserver gespeicherten Pakete von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] angezeigt werden.
   
  Der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst verwendet das DCOM-Protokoll. Weitere Informationen zur Funktionsweise des DCOM-Protokolls über Firewalls finden Sie im Artikel "[Using Distributed COM with Firewalls](http://go.microsoft.com/fwlink/?LinkId=12490)" in der MSDN Library.  
   
- Es gibt zahlreiche verschiedene Firewallsysteme auf dem Markt. Wenn Sie eine andere Firewall als die Windows-Firewall ausführen, finden Sie in Ihrer Firewalldokumentation für Informationen, die speziell für das System ist, die Sie verwenden.  
+ Es gibt zahlreiche verschiedene Firewallsysteme auf dem Markt. Wenn Sie nicht die Windows-Firewall, sondern eine andere Firewall ausführen, schlagen Sie in Ihrer Firewalldokumentation Informationen nach, die sich auf das von Ihnen verwendete System beziehen.  
   
  Falls die Firewall das Filtern auf Anwendungsebene unterstützt, können Sie mithilfe der Benutzeroberfläche von Windows die für diese Firewall zulässigen Ausnahmen angeben, wie z. B. Programme und Dienste. Andernfalls müssen Sie für DCOM eine begrenzte Anzahl von TCP-Ports konfigurieren. Der zuvor bereitgestellte Link zur Microsoft-Website enthält Informationen zum Angeben der zu verwendenden TCP-Ports.  
   
  Der Integration Services-Dienst verwendet Port 135. Dies kann nicht geändert werden. Sie müssen TCP-Port 135 für den Zugriff auf den Dienstkontroll-Manager (SCM, Service Control Manager) öffnen. SCM führt u. a. folgende Tasks aus: Starten und Beenden von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Diensten und Übertragen von Steuerungsanforderungen an den ausgeführten Dienst.  
   
- Die Informationen im folgenden Abschnitt sind ausschließlich für die Windows-Firewall. Sie können die Windows-Firewallsystem durch Ausführen eines Befehls an der Eingabeaufforderung oder durch Festlegen von Eigenschaften im Dialogfeld Windows-Firewall konfigurieren.  
+ Die Informationen im folgenden Abschnitt gelten ausschließlich für die Windows-Firewall. Zum Konfigurieren des Windows-Firewallsystems können Sie einen Befehl an der Eingabeaufforderung ausführen oder aber Eigenschaften im Dialogfeld „Windows-Firewall“ festlegen.  
   
  Weitere Informationen zu den Standardeinstellungen der Windows-Firewall und eine Beschreibung der TCP-Ports, die sich auf Datenbankmodul, Analysis Services, Reporting Services und Integration Services auswirken, finden Sie unter [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-### <a name="configuring-a-windows-firewall"></a>Konfigurieren einer Windows-firewall  
+### <a name="configuring-a-windows-firewall"></a>Konfigurieren einer Windows-Firewall  
  Sie können die folgenden Befehle verwenden, um TCP-Port 135 zu öffnen, MsDtsSrvr.exe der Ausnahmeliste hinzuzufügen und den Bereich zum Aufheben der Blockierung für die Firewall anzugeben.  
   
 #### <a name="to-configure-a-windows-firewall-using-the-command-prompt-window"></a>So konfigurieren Sie eine Windows-Firewall mithilfe des Eingabeaufforderungsfensters  
@@ -400,7 +398,7 @@ Weitere Informationen finden Sie im Blogbeitrag [Getting Cross Domain Kerberos a
   
  In der folgenden schrittweisen Anleitung wird beschrieben, wie Sie mithilfe der Windows-Benutzeroberfläche TCP-Port 135 öffnen, MsDtsSrvr.exe der Ausnahmeliste hinzufügen und den Bereich zum Aufheben der Blockierung für die Firewall angeben.  
   
-#### <a name="to-configure-a-firewall-using-the-windows-firewall-dialog-box"></a>Konfigurieren eine Firewall über das Dialogfeld Windows-firewall  
+#### <a name="to-configure-a-firewall-using-the-windows-firewall-dialog-box"></a>So konfigurieren Sie eine Firewall mithilfe des Dialogfelds „Windows-Firewall“  
   
 1.  Doppelklicken Sie in der Systemsteuerung auf **Windows-Firewall**.  
   
@@ -424,5 +422,4 @@ Weitere Informationen finden Sie im Blogbeitrag [Getting Cross Domain Kerberos a
 9. Klicken Sie auf **OK** , um das Dialogfeld **Windows-Firewall**zu schließen.  
   
     > [!NOTE]  
-    >  Um die Windows-Firewall zu konfigurieren, diese Prozedur verwendet die **Windows-Firewall** Element in der Systemsteuerung. Über die Option **Windows-Firewall** wird nur die Firewall für das Profil des aktuellen Netzwerkspeicherorts konfiguriert. Sie können auch die Windows-Firewall konfigurieren, mit der **Netsh** -Befehlszeilentool oder den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC)-Snap-in mit dem Namen Windows-Firewall mit erweiterter Sicherheit. Weitere Informationen über diese Tools finden Sie unter [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
-
+    >  Diese Prozedur verwendet das Systemsteuerungselement **Windows-Firewall**, um die Windows-Firewall zu konfigurieren. Über die Option **Windows-Firewall** wird nur die Firewall für das Profil des aktuellen Netzwerkspeicherorts konfiguriert. Sie können die Windows-Firewall jedoch auch mithilfe des Befehlszeilentools **netsh** oder des MMC-Snap-Ins ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console) Windows Firewall mit erweiterter Sicherheit konfigurieren. Weitere Informationen über diese Tools finden Sie unter [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  

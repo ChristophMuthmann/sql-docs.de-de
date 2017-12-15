@@ -2,9 +2,12 @@
 title: "Konfigurieren von IIS für die Websynchronisierung | Microsoft Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 635969e907f5c99a34b3b3f076c95602be6510b7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e5c661e39ca7e011e185b68867be5955e2cfc280
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Konfigurieren von IIS für die Websynchronisierung
-  Die Verfahren in diesem Thema sind der zweite Schritt zur Konfiguration der Websynchronisierung für die Mergereplikation. Sie führen diesen Schritt aus, nachdem Sie die Websynchronisierung für eine Veröffentlichung aktiviert haben. Eine Übersicht über den Konfigurationsprozess bietet [Websynchronisierung konfigurieren](../../relational-databases/replication/configure-web-synchronization.md). Nachdem Sie die Verfahren in diesem Thema ausgeführt haben, fahren Sie mit dem dritten Schritt fort, in dem Sie die Websynchronisierung für ein Abonnement konfigurieren. Dieser dritte Schritt wird in den folgenden Themen beschrieben:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Die Verfahren in diesem Thema sind der zweite Schritt zur Konfiguration der Websynchronisierung für die Mergereplikation. Sie führen diesen Schritt aus, nachdem Sie die Websynchronisierung für eine Veröffentlichung aktiviert haben. Eine Übersicht über den Konfigurationsprozess bietet [Websynchronisierung konfigurieren](../../relational-databases/replication/configure-web-synchronization.md). Nachdem Sie die Verfahren in diesem Thema ausgeführt haben, fahren Sie mit dem dritten Schritt fort, in dem Sie die Websynchronisierung für ein Abonnement konfigurieren. Dieser dritte Schritt wird in den folgenden Themen beschrieben:  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Vorgehensweise: Konfigurieren eines Abonnements für die Websynchronisierung \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
   

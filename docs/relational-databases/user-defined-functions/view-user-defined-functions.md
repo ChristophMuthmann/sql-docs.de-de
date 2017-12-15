@@ -2,9 +2,12 @@
 title: Anzeigen benutzerdefinierter Funktionen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: udf
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e2efd88ad0a4b88d24a929b0e79e0e53333b2c1e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6a71d45d8d304c52592b8ee693525950c3bfed28
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-user-defined-functions"></a>Anzeigen benutzerdefinierter Funktionen
-  Sie können Informationen zur Definition oder zu den Eigenschaften einer benutzerdefinierten Funktion in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]abrufen. Manchmal ist es erforderlich, die Definition einer Funktion anzuzeigen, um zu verstehen, wie die Daten der Funktion aus den Quelltabellen abgeleitet werden, oder um die durch die Funktion definierten Daten anzuzeigen.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Sie können Informationen zur Definition oder zu den Eigenschaften einer benutzerdefinierten Funktion in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] abrufen. Manchmal ist es erforderlich, die Definition einer Funktion anzuzeigen, um zu verstehen, wie die Daten der Funktion aus den Quelltabellen abgeleitet werden, oder um die durch die Funktion definierten Daten anzuzeigen.  
   
 > [!IMPORTANT]  
 >  Wenn Sie den Namen eines Objekts ändern, auf das eine Funktion verweist, müssen Sie den Text dieser Funktion mit dem neuen Namen aktualisieren. Bevor Sie ein Objekt umbenennen, sollten Sie daher erst die Abhängigkeiten des Objekts anzeigen, um feststellen zu können, ob Funktionen von der beabsichtigten Änderung betroffen sind.  
@@ -116,7 +119,7 @@ ms.lasthandoff: 11/09/2017
   
 #### <a name="to-get-the-definition-and-properties-of-a-function"></a>So rufen Sie die Definition und die Eigenschaften einer Funktion ab  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -157,7 +160,7 @@ ms.lasthandoff: 11/09/2017
   
 #### <a name="to-get-the-dependencies-of-a-function"></a>So rufen Sie die Abhängigkeiten einer Funktion ab  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

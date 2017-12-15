@@ -1,5 +1,5 @@
 ---
-title: Excel-Quelle | Microsoft Docs
+title: Excel-Quelle | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: e8b5878513b74faa8df5e7766762f2f7287ec7af
-ms.contentlocale: de-de
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 61e28171171a822f25da6979340785bc5c114e1c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="excel-source"></a>Excel-Quelle
   Die Excel-Quelle extrahiert Daten aus Arbeitsblättern oder Bereichen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel-Arbeitsmappen.  
@@ -107,7 +105,7 @@ ms.lasthandoff: 08/17/2017
   
 -   [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
--   [Schleife durch Excel-Dateien und Tabellen mit einem foreach-Schleifen-Container](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+-   [Schleife durch Excel-Dateien und Tabellen mit einem Foreach-Schleifencontainer](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
 ## <a name="excel-source-editor-connection-manager-page"></a>Quellen-Editor für Excel (Seite Verbindungs-Manager)
   Mithilfe des Knotens **Verbindungs-Manager** im Dialogfeld **Quellen-Editor für Excel** können Sie eine [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] -Arbeitsmappe für die Quelle auswählen. Die Excel-Quelle liest Daten aus einem Arbeitsblatt oder dem benannten Bereich einer vorhandenen Arbeitsmappe.  
@@ -216,4 +214,3 @@ ms.lasthandoff: 08/17/2017
 -   Blogeintrag [Excel in Integration Services, Part 3 of 3: Issues and Alternatives](http://go.microsoft.com/fwlink/?LinkId=217676)auf dougbert.com.  
   
   
-

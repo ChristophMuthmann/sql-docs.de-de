@@ -2,9 +2,12 @@
 title: "Datenbankspiegelung – Netzwerkzugriff zulassen – Windows-Authentifizierung | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 377a35a86cf6db66711f65bb8a8f5e3ca7da28ac
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4120379703be697d47ed46659fcaba5f9e7a514e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="database-mirroring---allow-network-access---windows-authentication"></a>Datenbankspiegelung – Netzwerkzugriff zulassen – Windows-Authentifizierung
-  Die Verwendung der Windows-Authentifizierung für die Verbindung der Datenbank, wodurch Endpunkte auf zwei Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespiegelt werden, erfordert unter den folgenden Bedingungen eine manuelle Konfiguration der Anmeldekonten:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Die Verwendung der Windows-Authentifizierung für die Verbindung der Datenbank, wodurch Endpunkte auf zwei Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespiegelt werden, erfordert unter den folgenden Bedingungen eine manuelle Konfiguration der Anmeldekonten:  
   
 -   Wenn die Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Dienste unter unterschiedlichen Domänenkonten ausgeführt werden (in der gleichen oder einer vertrauenswürdigen Domäne), müssen die Anmeldeinformationen jedes Kontos in **master** auf jeder der Remoteserverinstanzen erstellt werden. Dieser Anmeldung müssen CONNECT-Berechtigungen für den Endpunkt gewährt werden.  
   
@@ -35,7 +38,7 @@ ms.lasthandoff: 11/09/2017
   
 ### <a name="to-configure-logins-for-windows-authentication"></a>So konfigurieren Sie Anmeldenamen für die Windows-Authentifizierung  
   
-1.  Erstellen Sie auf den anderen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]eine Anmeldung für das Benutzerkonto jeder Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Verwenden Sie eine [ CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md)-Anweisung mit der FROM WINDOWS-Klausel.  
+1.  Erstellen Sie auf den anderen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]eine Anmeldung für das Benutzerkonto jeder Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Verwenden Sie eine [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md)-Anweisung mit der FROM WINDOWS-Klausel.  
   
      Weitere Informationen finden Sie unter [Erstellen eines Anmeldenamens](../../relational-databases/security/authentication-access/create-a-login.md).  
   

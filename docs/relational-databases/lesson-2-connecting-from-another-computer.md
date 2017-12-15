@@ -2,9 +2,12 @@
 title: 'Lektion 2: Herstellen einer Verbindung von einem anderen Computer | Microsoft-Dokumentation'
 ms.custom: 
 ms.date: 03/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3e860fc71d2f9e5efcf68324040d267d9de6fce9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e9fcfd0dfb1171371a8b1ead7543ec14d67035d1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lektion 2: Herstellen einer Verbindung von einem anderen Computer
-Zum Erhöhen der Sicherheit ist der Zugriff auf [!INCLUDE[ssDE](../includes/ssde-md.md)] der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer, Express und Evaluation Edition von einem anderen Computer aus nach der Erstinstallation nicht möglich. In dieser Lektion erfahren Sie, wie Sie die Protokolle aktivieren, die Ports konfigurieren und die Windows-Firewall für das Herstellen von Verbindungen von anderen Computern konfigurieren.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Zum Erhöhen der Sicherheit ist der Zugriff auf [!INCLUDE[ssDE](../includes/ssde-md.md)] der Developer-, Express- und Evaluation-Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] von einem anderen Computer aus nach der Erstinstallation nicht möglich. In dieser Lektion erfahren Sie, wie Sie die Protokolle aktivieren, die Ports konfigurieren und die Windows-Firewall für das Herstellen von Verbindungen von anderen Computern konfigurieren.  
   
 Diese Lektion enthält die folgenden Aufgaben:  
   

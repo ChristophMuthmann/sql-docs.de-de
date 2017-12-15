@@ -2,9 +2,12 @@
 title: Starten und Verwenden des Datenbankoptimierungsratgebers | Microsoft Docs
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 24e2347ba4cc496fcbb985f4a47bed8022b2c8c4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 21efab98503bc82485097c87b04623bf38366a68
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Starten und Verwenden des Datenbankoptimierungsratgebers
-  In diesem Thema wird beschrieben, wie der Datenbankoptimierungsratgeber in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]gestartet und verwendet wird. Informationen zum Anzeigen der Ergebnisse und Arbeiten mit den Ergebnissen nach dem Optimieren einer Datenbank finden Sie unter [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie der Datenbankoptimierungsratgeber in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] gestartet und verwendet wird. Informationen zum Anzeigen der Ergebnisse und Arbeiten mit den Ergebnissen nach dem Optimieren einer Datenbank finden Sie unter [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
   
 ##  <a name="Initialize"></a> Initialisieren des Datenbankoptimierungsratgebers  
  Bei der ersten Verwendung muss ein Benutzer, der Mitglied der festen Serverrolle **sysadmin** ist, den Datenbankoptimierungsratgeber starten. Das liegt daran, dass mehrere Systemtabellen in der Datenbank **msdb** erstellt werden müssen, um das Optimieren von Vorgängen zu unterstützen. Die Initialisierung ermöglicht darüber hinaus Benutzern, die Mitglieder der festen Datenbankrolle **db_owner** sind, Arbeitsauslastungen für Tabellen in Datenbanken zu optimieren, die sie besitzen.  

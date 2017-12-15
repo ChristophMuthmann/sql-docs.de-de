@@ -2,9 +2,12 @@
 title: "Hinzufügen oder Bearbeiten von Filtern | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b488f571aee2fcbe68a228489e078ccdc32e9ba2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a859ba6929e849ea753b3cf5c86c428afbaaadfb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-or-edit-filter"></a>Hinzufügen oder Bearbeiten von Filtern
-  Mithilfe der Dialogfelder **Filter hinzufügen** und **Filter bearbeiten** können Sie statische Zeilenfilter und parametrisierte Zeilenfilter hinzufügen und bearbeiten.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe der Dialogfelder **Filter hinzufügen** und **Filter bearbeiten** können Sie statische Zeilenfilter und parametrisierte Zeilenfilter hinzufügen und bearbeiten.  
   
 > [!NOTE]  
 >  Für das Bearbeiten in einer vorhandenen Veröffentlichung ist eine neue Momentaufnahme für die Veröffentlichung erforderlich. Wenn eine Veröffentlichung Abonnements besitzt, müssen die Abonnements erneut initialisiert werden. Weitere Informationen zum Ändern von Eigenschaften finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../relational-databases/replication/publish/change-publication-and-article-properties.md).  

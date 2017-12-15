@@ -1,5 +1,5 @@
 ---
-title: Integration Services Fehler- und Meldungsreferenz | Microsoft Docs
+title: Fehler- und Meldungsreferenz von Integration Services | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 50a5d76125594e3175c2dc03d07de88e56cb2206
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 8b969229037b01c4897ad504ad8db2cfa17182cc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-error-and-message-reference"></a>Fehler- und Meldungsreferenz von Integration Services
   In den folgenden Tabellen sind vordefinierte Fehler-, Warn- und Informationsmeldungen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in aufsteigender numerischer Reihenfolge innerhalb jeder Kategorie aufgeführt, inklusive der jeweiligen numerischen Codes und symbolischen Namen. Jeder dieser Fehler ist als Feld der Klasse <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> im Namespace <xref:Microsoft.SqlServer.Dts.Runtime> definiert.  
@@ -387,7 +385,7 @@ ms.lasthandoff: 09/26/2017
 |0xC0024107|-1073594105|DTS_E_TASKVALIDATIONERROR|Fehler bei der Tasküberprüfung.|  
 |0xC0024108|-1073594104|DTS_E_CONNECTIONSTRINGFORMAT|Ungültiges Format der Verbindungszeichenfolge. Sie muss aus mindestens einer Komponente im Format X=Y bestehen, getrennt durch Semikolons. Dieser Fehler tritt auf, wenn im Datenbankverbindungs-Manager eine Verbindungszeichenfolge mit 0 (null) Komponenten festgelegt wird.|  
 |0xC0024109|-1073594103|DTS_E_UNQUOTEDSEMICOLON|Die Komponenten der Verbindungszeichenfolge dürfen keine Semikolons ohne Anführungszeichen enthalten. Falls für den Wert ein Semikolon erforderlich ist, schließen Sie den gesamten Wert in Anführungszeichen ein. Dieser Fehler tritt auf, wenn Werte in der Verbindungszeichenfolge Semikolons ohne Anführungszeichen enthalten, z. B. die InitialCatalog-Eigenschaft.|  
-|0xC002410A|-1073594102|DTS_E_LOGPROVIDERVALIDATIONFAILED|Fehler beim Überprüfen von mindestens einem Protokollanbieter. Das Paket kann nicht ausgeführt werden. Das Paket wird nicht ausgeführt, wenn ein Protokollanbieter nicht überprüft werden kann..|  
+|0xC002410A|-1073594102|DTS_E_LOGPROVIDERVALIDATIONFAILED|Fehler beim Überprüfen von mindestens einem Protokollanbieter. Das Paket kann nicht ausgeführt werden. Das Paket wird nicht ausgeführt, wenn ein Protokollanbieter nicht überprüft werden kann.|  
 |0xC002410B|-1073594101|DTS_E_INVALIDVALUEINARRAY|Ungültiger Wert im Array.|  
 |0xC002410C|-1073594100|DTS_E_ENUMERATIONELEMENTNOTENUMERABLE|Ein vom ForEach-Enumerator zurückgegebenes Enumeratorelement implementiert IEnumerator nicht. Dies steht im Widerspruch zu der CollectionEnumerator-Eigenschaft des ForEach-Enumerators.|  
 |0xC002410D|-1073594099|DTS_E_INVALIDENUMERATORINDEX|Fehler vom Enumerator beim Erhalt eines Elements vom Index '%1!d!'.|  
@@ -2345,4 +2343,3 @@ ms.lasthandoff: 09/26/2017
 |0xC8000018|-939524072|DTSBC_E_CANTINSERTEXTERNALMETADATACOLUMN|%1 lässt das Einfügen von externen Metadatenspalten nicht zu.|  
   
   
-

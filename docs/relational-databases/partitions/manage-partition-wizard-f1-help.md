@@ -2,9 +2,12 @@
 title: Assistent zum Verwalten von Partitionen (F1-Hilfe) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: partitions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-partition
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -26,14 +29,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 89d561c68a324e4760c8b093ba641dc7ea3453e1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 25be7d99d07300731a9395b096f316faef973eef
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Assistent zum Verwalten von Partitionen (F1-Hilfe)
-  Mit dem **Assistenten zum Verwalten von Partitionen** können Sie vorhandene partitionierte Tabellen durch Partitionswechsel oder Implementierung eines Szenarios mit gleitendem Fenster verwalten und ändern. Dieser Assistent vereinfacht die Verwaltung von Partitionen und die Migration von Daten in die und aus den Tabellen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mit dem **Assistenten zum Verwalten von Partitionen** können Sie vorhandene partitionierte Tabellen durch Partitionswechsel oder Implementierung eines Szenarios mit gleitendem Fenster verwalten und ändern. Dieser Assistent vereinfacht die Verwaltung von Partitionen und die Migration von Daten in die und aus den Tabellen.  
   
 ### <a name="to-start-the-manage-partition-wizard"></a>So starten Sie den Assistenten zum Verwalten von Partitionen  
   
@@ -46,7 +49,7 @@ ms.lasthandoff: 11/09/2017
  Dieser Abschnitt stellt die Informationen bereit, die zum Verwalten, Ändern und Implementieren von Partitionen mit dem **Assistenten zum Verwalten von Partitionen** erforderlich sind.  
   
 ##  <a name="Top"></a> In diesem Abschnitt  
- Die folgenden Abschnitte stellen Hilfe für die Seiten des **Assistenten zum Verwalten von Partitionen** bereit.  
+ Die folgenden Abschnitte stellen Hilfe für die Seiten des **Assistenten zum Verwalten von Partitionen**bereit.  
   
  [Assistent zum Verwalten von Partitionen (Seite 'Partitionsaktion auswählen')](#SelectPartitionAction)  
   

@@ -2,9 +2,12 @@
 title: Abfrage-Editor des Datenbankmoduls (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 81d67f47cddfe48575758ec7ff3b5949a4c6f1f8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 554065f8cd2eee3667eaf93ced5e6fe1c99f9517
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Abfrage-Editor des Datenbankmoduls (SQL Server Management Studio)
-  Mithilfe des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors können Sie Skripts mit [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen erstellen und ausführen. Der Editor unterstützt auch das Ausführen von Skripts, die **sqlcmd** -Befehle enthalten.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mithilfe des [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Abfrage-Editors können Sie Skripts mit [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen erstellen und ausführen. Der Editor unterstützt auch das Ausführen von Skripts, die **sqlcmd** -Befehle enthalten.  
   
 ## <a name="transact-sql-f1-help"></a>F1-Hilfe für Transact-SQL  
  Der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor unterstützt bei der Auswahl von F1 den Link zu einem Referenzthema einer bestimmten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung. Markieren Sie hierzu den Namen einer Transact-SQL-Anweisung, und wählen Sie dann F1 aus. Das Hilfesuchmodul sucht dann nach einem Thema mit einem F1-Hilfeattribut, das der markierten Zeichenfolge entspricht.  
