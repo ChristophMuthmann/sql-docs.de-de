@@ -2,9 +2,12 @@
 title: Verbessern der Leistung von Volltextindizes | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b90d942aa6c056a6a656b1bc2c835e51f468f676
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 99dc1f614be8180a8d8a4fbb5a5bf15b77f2df8e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Verbessern der Leistung von Volltextindizes
-In diesem Thema werden einige häufige Ursachen für eine geringe Leistung für Volltextindizes und -Abfragen beschrieben. Darüber hinaus werden einige Vorschläge für das Verringern dieser Probleme und das Verbessern der Leistung gemacht.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] In diesem Thema werden einige häufige Ursachen für eine geringe Leistung für Volltextindizes und -Abfragen beschrieben. Darüber hinaus werden einige Vorschläge für das Verringern dieser Probleme und das Verbessern der Leistung gemacht.
   
 ##  <a name="causes"></a> Common causes of performance issues
 ### <a name="hardware-resource-issues"></a>Probleme mit Hardware

@@ -1,5 +1,5 @@
 ---
-title: SQL Server Integration Services (SSIS) Variablen | Microsoft Docs
+title: Integration Services-Variablen (SSIS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - variables [Integration Services], about variables
 - values [Integration Services]
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: eb632c5fa2242b5b607d62488b65682a0cc4b07f
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 47738020780bb8793c8cfa281815da5be26db222
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services-Variablen (SSIS)
   Variablen speichern Werte, die von einem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket und dessen Containern, Tasks und Ereignishandlern zur Laufzeit verwendet werden können. Die Skripts im Skripttask und die Skriptkomponente können ebenfalls Variablen verwenden. Die Rangfolgeneinschränkungen, mit denen Tasks und Container zu einem Workflow zusammengestellt werden, können Variablen verwenden, wenn ihre Einschränkungsdefinitionen Ausdrücke einschließen.  
@@ -103,7 +101,7 @@ ms.lasthandoff: 08/03/2017
  Gibt den Variablennamen an.  
   
  **Namespace**  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]stellt zwei Namespaces bereit **Benutzer** und **System**. Standardmäßig gehören benutzerdefinierte Variablen zum Namespace **User** und Systemvariablen zum Namespace **System** . Sie können zusätzliche Namespaces für benutzerdefinierte Variablen erstellen und den Namen des **User** -Namespaces ändern. Es ist jedoch nicht möglich, den Namen des **System** -Namespaces zu ändern, dem **System** -Namespace Variablen hinzuzufügen oder Systemvariablen einem anderen Namespace zuzuweisen.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt zwei Namespaces bereit: **User** und **System**. Standardmäßig gehören benutzerdefinierte Variablen zum Namespace **User** und Systemvariablen zum Namespace **System** . Sie können zusätzliche Namespaces für benutzerdefinierte Variablen erstellen und den Namen des **User** -Namespaces ändern. Es ist jedoch nicht möglich, den Namen des **System** -Namespaces zu ändern, dem **System** -Namespace Variablen hinzuzufügen oder Systemvariablen einem anderen Namespace zuzuweisen.  
   
 **RaiseChangedEvent**  
  Wenn die Eigenschaft auf **True**festgelegt wird, wird das **OnVariableValueChanged** -Ereignis bei einer Änderung des Variablenwerts ausgelöst.  
@@ -162,7 +160,7 @@ ms.lasthandoff: 08/03/2017
   
  **Skripttasks und Skriptkomponenten** Stellt eine Liste von schreibgeschützten und Lese-/Schreibvariablen für Skripttasks oder Skriptkomponenten bereit, aktualisiert die Lese/Schreibvariablen innerhalb des Skripts und verwendet dann die aktualisierten Werte innerhalb oder außerhalb des Skripts. Beispielsweise im `numberOfCars = CType(Dts.Variables("NumberOfCars").Value, Integer)`-Code wird die `numberOfCars` -Skriptvariable durch den Wert in der `NumberOfCars`-Variable aktualisiert. Weitere Informationen finden Sie unter [Using Variables in the Script Task](../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md).  
 
-## <a name="add-a-variable"></a>Fügen Sie eine Variable hinzu  
+## <a name="add-a-variable"></a>Hinzufügen einer Variable  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]das gewünschte [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket.  
   
@@ -208,7 +206,7 @@ Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften 
  **Schreibgeschützt**  
  Wählen Sie diese Option aus, wenn die Variable schreibgeschützt sein soll.  
    
-## <a name="delete-a-variable"></a>Löschen einer Variablen  
+## <a name="delete-a-variable"></a>Löschen einer Variable  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
   
@@ -224,7 +222,7 @@ Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften 
   
 6.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-## <a name="change-the-scope-of-a-variable"></a>Ändern des Bereichs einer Variablen  
+## <a name="change-the-scope-of-a-variable"></a>Ändern des Bereichs einer Variable  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
   
@@ -248,9 +246,9 @@ Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften 
 -   Eigenschaftenfenster. Im Fenster **Eigenschaften** werden die Eigenschaften zum Konfigurieren von Variablen aufgelistet, die im Fenster **Variablen** nicht zur Verfügung stehen: Description, EvaluateAsExpression, Expression, ReadOnly, ValueType und IncludeInDebugDump.  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]Außerdem bietet eine Reihe von Systemvariablen, deren Eigenschaften, mit Ausnahme der RaiseChangedEvent-Eigenschaft nicht aktualisiert werden können.  
+>  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt außerdem eine Gruppe von Systemvariablen bereit, deren Eigenschaften, mit Ausnahme der RaiseChangedEvent-Eigenschaft, nicht aktualisiert werden können.  
   
-### <a name="set-expressions-on-variables"></a>Festlegen von Ausdrücken auf Variablen  
+### <a name="set-expressions-on-variables"></a>Festlegen von Ausdrücken für Variablen  
   
  Wenn Sie das Fenster **Eigenschaften** verwenden, um Ausdrücke für eine benutzerdefinierte Variable festzulegen:  
   
@@ -258,7 +256,7 @@ Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften 
   
 -   Die ValueType-Eigenschaft enthält den Datentyp des Werts in der Value-Eigenschaft. Wenn Value durch einen Ausdruck festgelegt wird, dann wird ValueType automatisch auf einen Datentyp aktualisiert, der mit dem Auswertungsergebnis des Ausdrucks kompatibel ist. Angenommen, Value enthält 0 und die ValueType-Eigenschaft enthält **Int32** . Nun legen Sie Expression auf GETDATE() fest. Daraufhin enthält Value das aktuelle Datum und die Uhrzeit, und ValueType wird auf **DateTime**festgelegt.  
   
--   Das **** Eigenschaftenfenster für die Variable stellt den Zugriff auf das Dialogfeld **Ausdrucks-Generator** bereit. Sie können dieses Tool zum Erstellen, Überprüfen und Auswerten von Ausdrücken verwenden. Weitere Informationen finden Sie unter [Ausdrucks-Generator](../integration-services/expressions/expression-builder.md) und [Integration Services-Ausdrücke &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md).  
+-   Das ** Eigenschaftenfenster** für die Variable stellt den Zugriff auf das Dialogfeld **Ausdrucks-Generator** bereit. Sie können dieses Tool zum Erstellen, Überprüfen und Auswerten von Ausdrücken verwenden. Weitere Informationen finden Sie unter [Ausdrucks-Generator](../integration-services/expressions/expression-builder.md) und [Integration Services-Ausdrücke &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md).  
   
  Wenn Sie das Fenster **Variablen** verwenden, um Ausdrücke für eine benutzerdefinierte Variable festzulegen:  
   
@@ -268,13 +266,13 @@ Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften 
   
 -   Das Fenster **Variablen** für die Variable stellt den Zugriff auf das Dialogfeld **Ausdrucks-Generator** bereit. Sie können dieses Tool zum Erstellen, Überprüfen und Auswerten von Ausdrücken verwenden. Weitere Informationen finden Sie unter [Ausdrucks-Generator](../integration-services/expressions/expression-builder.md) und [Integration Services-Ausdrücke &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md).  
   
- Wenn Sie der Variablen im Fenster **Variablen** oder im **** Eigenschaftenfenster einen Ausdruck zuweisen und **EvaluateAsExpression** auf **True**festgelegt ist, können Sie den Datentyp der Variablen nicht ändern.  
+ Wenn Sie der Variablen im Fenster **Variablen** oder im **Eigenschaftenfenster** einen Ausdruck zuweisen und **EvaluateAsExpression** auf **True**festgelegt ist, können Sie den Datentyp der Variablen nicht ändern.  
   
-### <a name="set-the-namespace-and-name-properties"></a>Legen Sie die Eigenschaften Namespace und Name
+### <a name="set-the-namespace-and-name-properties"></a>Festlegen des Namespaces und der Namenseigenschaften
   
  Die Werte der Eigenschaften **Name** und **Namespace** müssen mit einem Buchstaben beginnen, wie in Unicode-Standard 2.0 definiert ist, oder mit einem Unterstrich (_). Bei den nachfolgenden Zeichen kann es sich um Buchstaben oder Zahlen gemäß Unicode-Standard 2.0 oder um einem Unterstrich (\_) handeln.  
   
-### <a name="set-variable-properties-in-the-variables-window"></a>Legen Sie die Variableneigenschaften im Variablenfenster   
+### <a name="set-variable-properties-in-the-variables-window"></a>Festlegen von Variableneigenschaften im Fenster „Variablen“   
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
   
@@ -292,7 +290,7 @@ Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften 
   
 7.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern**, um das aktualisierte Paket zu speichern.  
   
-### <a name="set-variable-properties-in-the-properties-window"></a>Legen Sie im Eigenschaftenfenster die Variableneigenschaften fest  
+### <a name="set-variable-properties-in-the-properties-window"></a>Festlegen von Variableneigenschaften im Fenster „Eigenschaften“  
 
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
   
@@ -308,15 +306,14 @@ Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften 
   
 7.  Aktualisieren Sie im Fenster **Eigenschaften** die Variableneigenschaften für den Lese-/Schreibzugriff. Einige Eigenschaften sind für benutzerdefinierte Variablen auf Nur Lesen festgelegt.  
   
-     Weitere Informationen zu den Eigenschaften finden Sie unter [Integration Services &#40; SSIS &#41; Variablen](../integration-services/integration-services-ssis-variables.md).  
+     Weitere Informationen zu den Eigenschaften finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md).  
   
 8.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern**, um das aktualisierte Paket zu speichern.  
 
-## <a name="update-a-variable-dynamically-with-configurations"></a>Aktualisieren Sie eine Variable dynamisch mit Konfigurationen  
+## <a name="update-a-variable-dynamically-with-configurations"></a>Dynamisches Aktualisieren einer Variable mit Konfigurationen  
  Zum dynamischen Aktualisieren von Variablen können Sie Konfigurationen für die Variablen erstellen, die Konfigurationen zusammen mit dem Paket bereitstellen und dann die Variablenwerte in der Konfigurationsdatei aktualisieren, wenn Sie die Pakete bereitstellen. Zur Laufzeit verwendet das Paket die aktualisierten Variablenwerte. Weitere Informationen finden Sie unter [Erstellen von Paketkonfigurationen](../integration-services/packages/create-package-configurations.md).  
 
 ## <a name="related-tasks"></a>Verwandte Aufgaben  
  [Verwenden der Werte von Variablen und Parametern in einem untergeordneten Paket](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
  [Zuordnen von Abfrageparametern zu Variablen in einer Datenflusskomponente](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
-

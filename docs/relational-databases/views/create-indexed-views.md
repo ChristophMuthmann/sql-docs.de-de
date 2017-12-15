@@ -2,9 +2,12 @@
 title: Erstellen von indizierten Sichten | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 05/27/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: views
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-views
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 89123d1083729da9ec8f23f5ed34eb2b10c2f9d3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e72f863a4746bf091c15e48349943906e172c616
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-indexed-views"></a>Erstellen von indizierten Sichten
-  In diesem Thema wird beschrieben, wie eine indizierte Sicht in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt wird. Der erste Index, der für eine Sicht erstellt wird, muss ein eindeutiger gruppierter Index sein. Nachdem der eindeutige gruppierte Index erstellt wurde, können Sie weitere nicht gruppierte Indizes erstellen. Das Erstellen eines eindeutigen gruppierten Indexes für eine Sicht verbessert die Abfrageleistung, da die Sicht wie eine Tabelle mit einem gruppierten Index in der Datenbank gespeichert wird. Der Abfrageoptimierer kann indizierte Sichten verwenden, um die Abfrageausführung zu beschleunigen. Es ist nicht erforderlich, dass in der Abfrage auf die jeweilige Sicht verwiesen wird, damit der Optimierer diese Sicht als Ersatz berücksichtigt.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)] In diesem Thema wird beschrieben, wie eine indizierte Sicht in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)] erstellt wird. Der erste Index, der für eine Sicht erstellt wird, muss ein eindeutiger gruppierter Index sein. Nachdem der eindeutige gruppierte Index erstellt wurde, können Sie weitere nicht gruppierte Indizes erstellen. Das Erstellen eines eindeutigen gruppierten Indexes für eine Sicht verbessert die Abfrageleistung, da die Sicht wie eine Tabelle mit einem gruppierten Index in der Datenbank gespeichert wird. Der Abfrageoptimierer kann indizierte Sichten verwenden, um die Abfrageausführung zu beschleunigen. Es ist nicht erforderlich, dass in der Abfrage auf die jeweilige Sicht verwiesen wird, damit der Optimierer diese Sicht als Ersatz berücksichtigt.  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
  Die folgenden Schritte sind zum Erstellen einer indizierten Sicht erforderlich und wichtig für eine erfolgreiche Implementierung der indizierten Sicht:  
@@ -159,7 +162,7 @@ ms.lasthandoff: 11/09/2017
   
 #### <a name="to-create-an-indexed-view"></a>So erstellen Sie eine indizierte Sicht  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
