@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung mit einer Oracle-Datenquelle (SQL Server-Import / Export-Assistent) | Microsoft Docs
+title: Herstellen einer Verbindung mit einer Oracle-Datenquelle (SQL Server-Import/Export-Assistent) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,86 +8,84 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e589e7f7a0262d258342bf887ec84c57d57dc978
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f2a93e5d4c038db3620e78a4141ca8235d703263
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Herstellen einer Verbindung mit einer Oracle-Datenquelle (SQL Server-Import / Export-Assistent)
-Dieses Thema veranschaulicht das Herstellen von Verbindungen ein **Oracle** Datenquelle aus der **wählen Sie eine Datenquelle** oder **wählen Sie ein Ziel** auf der Seite der SQL Server-Import / Export-Assistenten. Es sind mehrere Datenanbieter, die Sie verwenden können, für die Verbindung zu Oracle.
+# <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Verbinden mit einer Oracle-Datenquelle (SQL Server-Import/Export-Assistent)
+In diesem Artikel wird erläutert, wie Sie eine Verbindung mit einer **Oracle**-Datenquelle von den Seiten **Datenquelle auswählen** oder **Ziel auswählen** des SQL Server-Import/Export-Assistenten herstellen. Es gibt mehrere Datenanbieter, die Sie verwenden können, um eine Verbindung mit Oracle herzustellen.
 
 > [!IMPORTANT]
-> Die detaillierten Anforderungen und erforderliche Komponenten für die Verbindung mit einer Oracle-Datenbank sind nicht Gegenstand dieses Artikels Microsoft. In diesem Artikel wird davon ausgegangen, dass Sie bereits die Oracle-Clientsoftware installiert haben und dass Sie bereits mit dem Ziel-Oracle-Datenbank hergestellt werden können. Weitere Informationen finden Sie in der Oracle-Datenbankadministrator oder der Oracle-Dokumentation.
+> Die detaillierten Anforderungen und Voraussetzungen für das Herstellen einer Verbindung mit einer Oracle-Datenbank sind nicht Gegenstand dieses Microsoft-Artikels. In diesem Artikel wird davon ausgegangen, dass Sie die Oracle-Clientsoftware bereits installiert und erfolgreich eine Verbindung mit der Oracle-Zieldatenbank hergestellt haben. Rufen Sie für weitere Informationen die Oracle-Dokumentation auf, oder wenden Sie sich an Ihren Oracle-Datenbankadministrator.
 
-## <a name="connect-to-oracle-with-the-net-framework-data-provider-for-oracle"></a>Verbinden Sie mit Oracle mit der .net Framework-Datenanbieter für Oracle
-Nach der Auswahl **.NET Framework-Datenanbieter für Oracle** auf die **wählen Sie eine Datenquelle** oder **wählen Sie ein Ziel** Seite des Assistenten die Seite zeigt eine gruppierte Liste von Optionen für den Anbieter. Viele davon werden ungeeignete Namen und Einstellungen nicht vertraut. Glücklicherweise müssen Sie nur zwei oder drei Arten von Informationen angeben. Sie können die Standardwerte für die anderen Einstellungen ignorieren.
+## <a name="connect-to-oracle-with-the-net-framework-data-provider-for-oracle"></a>Herstellen einer Verbindung mit Oracle mithilfe des .NET Framework-Datenanbieters für Oracle
+Nachdem Sie **.NET Framework-Datenanbieter für Oracle** auf der Seite **Datenquelle auswählen** oder **Ziel auswählen** des Assistenten ausgewählt haben, zeigt die Seite Ihnen eine gruppierte Liste von Optionen für den Anbieter an. Darunter befinden sich viele ungeeignete Namen und ungewöhnliche Einstellungen. Sie müssen jedoch nur zwei bis drei Informationen angeben. Die Standardwerte für die anderen Einstellungen können Sie ignorieren.
 
 > [!NOTE]
-> Die Verbindungsoptionen für diesen Datenanbieter sind identisch, ob Oracle Ihrer Quelle oder Ziel ist. D. h. die Optionen finden Sie unter sind für beide die **wählen Sie eine Datenquelle** und **wählen Sie ein Ziel** Seiten des Assistenten.
+> Die Verbindungsoptionen für diesen Datenanbieter bleiben stets unverändert – egal, ob Oracle die Quelle oder das Ziel ist. Das bedeutet, dass die angezeigten Optionen auf den Seiten **Datenquelle auswählen** und **Ziel auswählen** des Assistenten gleich sind.
 
-|Erforderliche Informationen|.NET Framework-Datenanbieter für Oracle-Eigenschaft|
+|Erforderliche Informationen|.NET Framework-Datenanbieter für die Oracle-Eigenschaft|
 |---|---|
 |Servername|**Datenquelle**|
-|Authentifizierungsinformationen (Anmeldenamen)|**Benutzer-ID** und **Kennwort**; oder, **integrierte Sicherheit**|
+|Authentifizierungsinformationen (Anmeldung)|**Benutzer-ID** und **Kennwort**, oder **Integrierte Sicherheit**|
 
-Sie müssen die Verbindungszeichenfolge in geben die **"ConnectionString"** Feld der Liste. Nach dem Eingeben der einzelnen Werte für den Oracle-Servernamen (**Datenquelle**) und Anmeldedaten, die der Assistent assembliert die Verbindungszeichenfolge aus der einzelnen Eigenschaften und ihre Werte. 
+Sie müssen die Verbindungszeichenfolge nicht im Feld **ConnectionString** in der Liste eintragen. Nachdem Sie einzelne Werte für den Oracle-Servernamen (**Datenquelle**) und die Anmeldedaten eingegeben haben, assembliert der Assistent die Verbindungszeichenfolge aus den einzelnen Eigenschaften und deren Werten. 
 
-![Verbinden Sie mit Oracle mit .NET-Anbieter](../../integration-services/import-export-data/media/connect-to-oracle-with-net-provider.jpg)
+![Herstellen einer Verbindung mit Oracle mithilfe des .NET-Anbieters](../../integration-services/import-export-data/media/connect-to-oracle-with-net-provider.jpg)
 
-## <a name="connect-to-oracle-with-the-microsoft-odbc-driver-for-oracle"></a>Mit dem Microsoft ODBC-Treiber für Oracle mit Oracle verbinden
-ODBC-Treiber sind nicht in der Dropdown-Liste der Datenquellen aufgeführt. Um mit einem ODBC-Treiber eine Verbindung herzustellen, starten Sie dazu die **.NET Framework-Datenanbieter für ODBC** als Datenquelle für die **wählen Sie eine Datenquelle** oder **wählen Sie ein Ziel** Seite. Dieser Anbieter dient als Wrapper um die ODBC-Treiber.
+## <a name="connect-to-oracle-with-the-microsoft-odbc-driver-for-oracle"></a>Herstellen einer Verbindung mit Oracle mithilfe des Microsoft ODBC-Treibers für Oracle
+ODBC-Treiber werden in der Dropdownliste der Datenquellen nicht aufgeführt. Wählen Sie zunächst **.NET Framework-Datenanbieter für ODBC** auf den Seiten **Datenquelle auswählen** oder **Ziel auswählen** als Datenquelle aus, um eine Verbindung mit einem ODBC-Treiber herzustellen. Dieser Anbieter dient als Wrapper für den ODBC-Treiber.
 
-Hier ist die generische Bildschirm sofort nach der Auswahl der .NET Framework-Datenanbieter für ODBC.
+In der folgenden Abbildung wird die generische Anzeige dargestellt, die Ihnen unmittelbar angezeigt wird, nachdem Sie „.NET Framework-Datenanbieter für ODBC“ ausgewählt haben.
 
-![Herstellen einer Verbindung mit Oracle ODBC vor](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
+![Herstellen einer Verbindung mit Oracle mithilfe von ODBC](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
 
-### <a name="options-to-specify-odbc-driver-for-oracle"></a>Optionen (ODBC-Treiber für Oracle) angeben
+### <a name="options-to-specify-odbc-driver-for-oracle"></a>Anzugebende Optionen (ODBC-Treiber für Oracle)
 
 > [!NOTE]
-> Die Verbindungsoptionen für diesen Datenanbieter und ODBC-Treiber sind identisch, ob Oracle Ihrer Quelle oder Ziel ist. D. h. die Optionen finden Sie unter sind für beide die **wählen Sie eine Datenquelle** und **wählen Sie ein Ziel** Seiten des Assistenten.
+> Die Verbindungsoptionen für diesen Datenanbieter und den ODBC-Treiber bleiben stets unverändert – egal, ob Oracle die Quelle oder das Ziel ist. Das bedeutet, dass die angezeigten Optionen auf den Seiten **Datenquelle auswählen** und **Ziel auswählen** des Assistenten gleich sind.
 
-Stellen Sie eine Verbindungszeichenfolge, die die folgenden Einstellungen und deren Werte enthält, zur Verbindung mit Oracle mit der ODBC-Treiber für Oracle. Das Format der eine vollständige Verbindungszeichenfolge folgt unmittelbar auf die Liste der Einstellungen.
+Assemblieren Sie eine Verbindungszeichenfolge, die folgende Einstellungen und deren Werte enthält, um eine Verbindung mit Oracle mithilfe des aktuellen ODBC-Treibers für Oracle herzustellen. Das Format einer vollständigen Verbindungszeichenfolge wird direkt nach der Liste der Einstellungen angezeigt.
 
 > [!TIP]
-> Abrufen von Hilfe Zusammenstellen einer Verbindungszeichenfolge, die gerade geeignet ist. Geben Sie statt einer Verbindungszeichenfolge eine vorhandene DSN (Data Source Name) oder erstellen Sie ein neues. Weitere Informationen zu diesen Optionen finden Sie unter [Herstellen einer Verbindung mit einer ODBC-Datenquelle](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).
+> Erhalten Sie Hilfe beim Assemblieren einer passenden Verbindungszeichenfolge. Stellen Sie alternativ einen vorhandenen DSN (Datenquellennamen, Data Source Name) bereit, oder erstellen Sie einen neuen, anstatt eine Verbindungszeichenfolge anzugeben. Weitere Informationen zu diesen Optionen finden Sie unter [Herstellen einer Verbindung mit einer ODBC-Datenquelle](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).
 
 **Treiber**  
-Der Name des ODBC-Treibers **Microsoft ODBC für Oracle**.
+Der Name das ODBC-Treibers **Microsoft ODBC für Oracle**.
 
 **Server**  
 Der Name des Oracle-Servers. 
 
-**UID** und **Pwd**   
-Benutzer-Id und Kennwort für die Verbindung.
+**UID** und **PWD**   
+Die Benutzer-ID und das Kennwort für die Verbindung.
 
 ### <a name="connection-string-format"></a>Format der Verbindungszeichenfolge
-Hier ist das Format für eine typische Verbindungszeichenfolge.
+Im Folgenden finden Sie das Format einer typischen Verbindungszeichenfolge.
 
     ```
     Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
     ```
 
-### <a name="enter-the-connection-string"></a>Geben Sie die Verbindungszeichenfolge
-Geben Sie die Verbindungszeichenfolge in der **"ConnectionString"** Feld aus, oder geben Sie den DNS-Namen in der **Dsn** Feld, auf die **wählen Sie eine Datenquelle** oder **wählen Sie ein Ziel** Seite. Nachdem Sie die Verbindungszeichenfolge eingeben, wird der Assistent analysiert die Zeichenfolge und zeigt die einzelnen Eigenschaften und ihre Werte in der Liste.
+### <a name="enter-the-connection-string"></a>Eingeben der Verbindungszeichenfolge
+Geben Sie die Verbindungszeichenfolge in das Feld **ConnectionString** ein, oder geben Sie den DSN-Namen in das Feld **Dsn** auf den Seiten **Datenquelle auswählen** oder **Ziel auswählen** ein. Nach der Eingabe der Verbindungszeichenfolge analysiert der Assistent die Zeichenfolge und zeigt die einzelnen Eigenschaften und deren Werte in der Liste an.
 
-Hier ist der Bildschirm, den nach dem Eingeben der Verbindungszeichenfolge angezeigt.
+In der folgenden Abbildung wird die Ansicht dargestellt, die Ihnen angezeigt wird, nachdem Sie die Verbindungszeichenfolge eingegeben haben.
 
-![Herstellen einer Verbindung mit Oracle mit ODBC](../../integration-services/import-export-data/media/connect-to-oracle-with-odbc.jpg)
+![Herstellen einer Verbindung mit Oracle mithilfe von ODBC](../../integration-services/import-export-data/media/connect-to-oracle-with-odbc.jpg)
 
-## <a name="whats-my-oracle-server-name"></a>Wie lautet meine Oracle Servername?
-Führen Sie einen der folgenden Abfragen, um den Namen des Oracle-Server abzurufen.
+## <a name="whats-my-oracle-server-name"></a>Oracle-Servername
+Führen Sie eine der folgenden Abfragen aus, um den Namen des Oracle-Servers abzurufen.
 
 `SELECT host_name FROM v$instance`
 
@@ -95,11 +93,10 @@ oder
 
 `SELECT sys_context('USERENV','SERVER_HOST') FROM dual`
 
-## <a name="other-data-providers-and-more-info"></a>Weitere Informationen und andere Datenanbieter
-Weitere Informationen dazu, wie die Verbindung mit Oracle mit einem Datenanbieter, die hier nicht aufgeführt ist, finden Sie unter [Oracle-Verbindungszeichenfolgen](https://www.connectionstrings.com/oracle/). Diese Drittanbieter-Website enthält auch Informationen über die Datenanbieter und die Verbindungsparameter, die auf dieser Seite beschriebenen.
+## <a name="other-data-providers-and-more-info"></a>Andere Datenanbieter und weitere Informationen
+Weitere Informationen zum Herstellen einer Verbindung mit Oracle mithilfe eines nicht hier aufgeführten Datenanbieters finden Sie unter [Oracle connection strings (Oracle-Verbindungszeichenfolgen)](https://www.connectionstrings.com/oracle/). Diese Drittanbieterseite enthält Informationen über die Datenanbieter und die auf dieser Seite beschriebenen Verbindungsparameter.
 
 ## <a name="see-also"></a>Siehe auch
-[Wählen Sie eine Datenquelle](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
-[Wählen Sie ein Ziel](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-
+[Auswählen einer Datenquelle](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
+[Ziel auswählen](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

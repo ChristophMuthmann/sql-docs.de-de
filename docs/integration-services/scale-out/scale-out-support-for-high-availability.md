@@ -1,102 +1,103 @@
 ---
-title: "SQL Serverintegration Services (SSIS) Dezentrales Skalieren Unterstützung für hohe Verfügbarkeit | Microsoft Docs"
+title: "Unterstützung für Scale Out mit SQL Server Integration Services (SSIS) für Hochverfügbarkeit | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 07/18/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: scale-out
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2405235bcfa09d2cc49e007f4eae6975d9ebf7a5
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 2202b61a9efce26edb0edcef53204351338ecee6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="scale-out-support-for-high-availability"></a>Horizontales Skalieren-Unterstützung für hohe Verfügbarkeit
+# <a name="scale-out-support-for-high-availability"></a>Scale Out-Unterstützung für Hochverfügbarkeit
 
-Im SSIS-horizontal skalieren wird die hoher Verfügbarkeit für Worker-Seite durch Ausführen von Paketen mit mehreren Scale Out Worker bereitgestellt.
-Hoher Verfügbarkeit der Master-Seite erfolgt mit [AlwaysOn für SSIS-Katalog](../service/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) und Windows-Failovercluster. In einem Windows-Failovercluster werden mehrere Instanzen von Scale-Out-Master gehostet. Wenn Scale-Out-Master-Dienstes oder SSISDB auf primären Knoten ausgefallen ist, wird den Dienst oder die SSISDB sekundären Knoten weiterhin benutzeranforderungen akzeptieren und kommunizieren mit Scale-Out-Worker. 
+In SSIS Scale Out wird die Hochverfügbarkeit auf Workerseite über ausführende Pakete mit mehreren Scale Out-Workers bereitgestellt.
+Die Hochverfügbarkeit auf Masterseite erfolgt über [Always On for SSIS Catalog (Always On für SSIS-Katalog)](../service/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) und Windows-Failovercluster. In einem Windows-Failovercluster werden mehrere Instanzen des Scale Out-Masters gehostet. Wenn der Scale Out-Masterdienst oder die SSISDB auf dem Primärknoten ausfallen, akzeptieren der Dienst oder die SSISDB auf dem Sekundärknoten weiterhin Benutzeranforderungen, und beide kommunizieren mit den Scale Out-Workers. 
 
-Um die hohe Verfügbarkeit der Master-Seite einzurichten, führen Sie die folgenden Schritte aus.
+Führen Sie die folgenden Schritte aus, um die Hochverfügbarkeit auf Masterseite einzurichten.
 
 ## <a name="1-prerequisites"></a>1. Erforderliche Komponenten
 Erstellen Sie einen Windows-Failovercluster. Weitere Anweisungen finden Sie im Blogbeitrag [Installing the Failover Cluster Feature and Tools for Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) (Failoverclusterfunktion und Tools für Windows Server 2012 installieren). Sie sollten die Funktion und die Tools auf allen Clusterknoten installieren.
 
-## <a name="2-install-scale-out-master-on-primary-node"></a>2. Installieren Sie Scale-Out-Master auf primären Knoten
-Installieren Sie Database Engine Services, Integration Services und Scale-Out-Master auf dem primären Knoten für den Scale-Out-Master. 
+## <a name="2-install-scale-out-master-on-primary-node"></a>2. Installieren des Scale Out-Masters auf dem Primärknoten
+Installieren Sie Database Engine Services, Integration Services und den Scale Out-Master auf dem Primärknoten für den Scale Out-Master. 
 
-Während der Installation sollten Sie 
-### <a name="21-set-the-account-running-scale-out-master-service-to-a-domain-account"></a>2.1 festgelegt, das Konto, Scale-Out-Master-Dienst zu einem Domänenkonto ausgeführt wird.
-Dieses Konto sollte auf SSISDB in der Zukunft auf dem sekundären Knoten in der Windows-Failovercluster zugreifen können. Wie Scale-Out-Master-Dienst und SSISDB Failover separat können, können sie nicht auf demselben Knoten werden.
+Bei der Installation sollten Sie Folgendes beachten: 
+### <a name="21-set-the-account-running-scale-out-master-service-to-a-domain-account"></a>2.1 Legen Sie das Konto, das den Scale Out-Masterdienst ausführt, auf ein Domänenkonto fest.
+Dieses Konto sollte zukünftig Zugriff auf die SSISDB auf dem sekundären Knoten im Windows-Failovercluster haben. Da für den Scale Out-Masterdienst und die SSISDB unabhängig voneinander Failover ausgeführt werden können, befinden sie sich möglicherweise nicht auf demselben Knoten.
 
-![HA-Serverkonfiguration](media/ha-server-config.PNG)
+![Serverkonfiguration für Hochverfügbarkeit](media/ha-server-config.PNG)
 
-### <a name="22-include-scale-out-master-service-dns-host-name-in-the-cns-of-scale-out-master-certificate"></a>2.2 Scale Out Master enthalten Dienst DNS-Hostnamen im Zertifikat CNs Scale Out Master.
+### <a name="22-include-scale-out-master-service-dns-host-name-in-the-cns-of-scale-out-master-certificate"></a>2.2 Nehmen Sie den DNS-Hostnamen des Scale Out-Masterdiensts in den allgemeinen Namen (Common Name, CN) des Scale Out-Masterzertifikats auf.
 
-Dieser Hostname wird in Scale-Out-Master-Endpunkt verwendet werden. 
+Dieser Hostname wird im Scale Out-Masterendpunkt verwendet. 
 
-![Master HA-Konfiguration](media/ha-master-config.PNG)
+![Masterkonfiguration für Hochverfügbarkeit](media/ha-master-config.PNG)
 
-## <a name="3-install-scale-out-master-on-secondary-node"></a>3. Installieren Sie Scale-Out-Master auf sekundären Knoten
-Installieren Sie Database Engine Services, Integration Services und Scale-Out-Master auf dem sekundären Knoten für den Scale-Out-Master. 
+## <a name="3-install-scale-out-master-on-secondary-node"></a>3. Installieren Sie den Scale Out-Master auf dem Sekundärknoten.
+Installieren Sie Database Engine Services, Integration Services und den Scale Out-Master auf dem Sekundärknoten für den Scale Out-Master. 
 
-Sie sollten das gleiche Zertifikat für den Scale-Out-Master mit primären Knoten verwenden. Exportieren Sie die Skalierung Out Master SSL-Zertifikat auf primären Knoten mit privaten Schlüssel und installieren sie den Stammzertifikatspeicher des Loacl Computers am sekundären Knoten. Wählen Sie dieses Zertifikat bei der Installation Scale-Out-Master.
+Sie sollten dasselbe Scale Out-Masterzertifikat wie für den Primärknoten verwenden. Exportieren Sie das SSL-Zertifikat für den Scale Out-Master mit dem privaten Schlüssel auf dem Primärknoten, und installieren Sie es im Stammzertifikatspeicher auf dem Sekundärknoten auf dem lokalen Computer. Wählen Sie dieses Zertifikat bei der Installation des Scale Out-Masters aus.
 
-![Master HA-Konfiguration 2](media/ha-master-config2.PNG)
+![Masterkonfiguration für Hochverfügbarkeit 2](media/ha-master-config2.PNG)
 
 > [!Note]
-> Sie können mehrere Sicherung Scale-Out-Master festlegen, durch die Vorgänge für sekundäre Scale Out Master wiederholen.
+> Sie können mehrere Sicherungskopien des Scale Out-Masters einrichten, indem Sie den Vorgang für den sekundären Scale Out-Master wiederholen.
 
-## <a name="4-set-up-ssisdb-always-on"></a>4. SSISDB immer auf einrichten
+## <a name="4-set-up-ssisdb-always-on"></a>4. Richten Sie Always On für SSISDB ein.
 
-Die Anweisungen immer auf Einrichten für SSISDB kann, zur angezeigt werden [AlwaysOn für SSIS-Katalog (SSISDB)](../service/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb).
+Die Anweisungen zur Einrichtung von Always On für SSISDB finden Sie unter [Always On for SSIS Catalog (SSISDB) (Always On für den SSIS-Katalog (SSISDB))](../service/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb).
 
-Darüber hinaus müssen Sie einen Verfügbarkeit Gourp Listener für die verfügbarkeitsgruppe erstellen, die SSISDB hinzugefügt. Finden Sie unter [erstellen oder konfigurieren ein Verfügbarkeitsgruppenlisteners](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).
+Außerdem müssen Sie einen Verfügbarkeitsgruppenlistener für die Verfügbarkeitsgruppe erstellen, die SSISDB hinzugefügt wurde. Vgl. [Create or Configure an Availability Group Listener (Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners)](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).
 
-## <a name="5-update-scale-out-master-service-configuration-file"></a>5. Aktualisieren der Dienstkonfigurationsdatei Scale-Out-Master
-Update Scale-Out-Master Dienstkonfigurationsdatei \<Treiber\>: \Programme\Microsoft SQL-Server\140\DTS\Binn\MasterSettings.config auf primären und sekundären Knoten. Update **SqlServerName** auf *[Availability Group Listener DNS-Name], [Port]*.
+## <a name="5-update-scale-out-master-service-configuration-file"></a>5. Aktualisieren Sie die Konfigurationsdatei des Scale Out-Masterdiensts.
+Aktualisieren Sie die Konfigurationsdatei des Scale Out-Masterdiensts („\<Treiber\>:\Programme\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config“) auf dem Primär- und dem Sekundärknoten. Aktualisieren Sie **SqlServerName** auf *[DNS des Verfügbarkeitsgruppenlisteners],[Port]*.
 
-## <a name="6-enable-package-execution-logging"></a>6. Aktivieren der paketprotokollierung-Ausführung
+## <a name="6-enable-package-execution-logging"></a>6. Aktualisieren Sie die Ausführungsprotokollierung.
 
-In der SSISDB Protokollierung erfolgt durch die Anmeldung **"# MS_SSISLogDBWorkerAgentLogin"**, dessen Kennwort wird automatisch generiert. Um die Protokollierung funktioniert für alle Replikate von SSISDB zu machen, Verfahren Sie wie folgt.
+Sie können sich bei SSISDB mit der Anmelde-ID **##MS_SSISLogDBWorkerAgentLogin##** anmelden, für die ein automatisches Kennwort generiert wurde. Führen Sie die folgenden Schritte aus, damit die Protokollierung für alle SSISDB-Replikate funktioniert.
 
-### <a name="61-change-the-password-of-msssislogdbworkeragentlogin-on-primary-sql-server"></a>6.1 Ändern des Kennworts der **"# MS_SSISLogDBWorkerAgentLogin"** auf primären Sql-Server.
-### <a name="62-add-the-login-to-secondary-sql-server"></a>6.2 Hinzufügen der sekundären Sql-Server.
-### <a name="63-update-connection-string-of-logging"></a>6.3 aktualisieren Sie 6.3 die Verbindungszeichenfolge der Protokollierung.
-Rufen Sie die gespeicherte Prozedur [Catalog]. [Update_logdb_info] mit 
+### <a name="61-change-the-password-of-msssislogdbworkeragentlogin-on-primary-sql-server"></a>6.1 Ändern Sie das Kennwort auf dem primären SQL Server auf **##MS_SSISLogDBWorkerAgentLogin##**.
+### <a name="62-add-the-login-to-secondary-sql-server"></a>6.2. Fügen Sie dem sekundären SQL Server die Anmelde-ID hinzu.
+### <a name="63-update-connection-string-of-logging"></a>6.3 Aktualisieren Sie die Verbindungszeichenfolge für die Protokollierung.
+Rufen Sie die gespeicherte Prozedur „[Katalog].[update_logdb_info]“ über 
 
-@server_name= "*[Availability Group Listener DNS-Name], [Port]*" 
+@server_name = *[DNS des Verfügbarkeitsgruppenlisteners],[Port]* 
 
-und @connection_string = "Data Source =*[Availability Group Listener DNS-Name]*,*[Port]*; Initial Catalog = SSISDB; Benutzer-Id = "# MS_SSISLogDBWorkerAgentLogin"; Kennwort =*[Kennwort]*]; ".
+und @connection_string = 'Datenquelle=*[DNS des Verfügbarkeitsgruppenlisteners]*,*[Port]*;Initial Catalog=SSISDB;User Id=##MS_SSISLogDBWorkerAgentLogin##;Password=*[Kennwort]*];' auf.
 
-## <a name="7-congifure-scale-out-master-service-role-of-windows-failover-cluster"></a>7. Congifure Scale Out Master Dienstrolle des Windows-Failoverclusters
+## <a name="7-congifure-scale-out-master-service-role-of-windows-failover-cluster"></a>7. Konfigurieren Sie die Rolle des Scale Out-Masterdiensts des Windows-Failoverclusters.
 
-Failover-cluster-Manager, die für horizontales Skalieren eine Verbindung mit Cluster herstellen. Wählen Sie den Cluster, und klicken Sie auf **Aktion** im Menü und dann **Rolle konfigurieren...** .
+Stellen Sie im Failovercluster-Manager eine Verbindung mit dem Cluster für Scale Out her. Wählen Sie den Cluster aus, und klicken Sie im Menü auf **Aktion** und dann auf **Rolle konfigurieren...**.
 
-In der ausgelesene einrichten **Assistenten für hohe Verfügbarkeit**Option **allgemeiner Dienst** in **Rolle auswählen** Seite, und wählen Sie SQL Server Integration Services Scale Out Master 14.0 in **Dienst auswählen** Seite.
+Wählen Sie in dem Popupfenster **Assistent für Hochverfügbarkeit** **Allgemeiner Dienst** auf der Seite **Rolle auswählen** aus, und klicken Sie auf der Seite **Dienst auswählen** auf den SQL Server Integration Services Scale Out-Master 14.0.
 
-In der **Clientzugriffspunkt** geben die Scale-Out-Master-Dienst-DNS-Hostnamen ein.
+Geben Sie auf der Seite **Clientzugriffspunkt** den DNS-Hostnamen des Scale Out-Masters ein.
 
-![Virtuelle Maschinen mit hoher Assistent 1](media/ha-wizard1.PNG)
+![Hochverfügbarkeitsassistent 1](media/ha-wizard1.PNG)
 
 Beenden Sie den Assistenten.
 
-## <a name="8-update-master-address-in-ssisdb"></a>8. Aktualisieren von Master Adresse in der SSISDB
+## <a name="8-update-master-address-in-ssisdb"></a>8. Aktualisieren Sie die Masteradresse in SSISDB.
 
-Führen Sie auf dem primären SQL Server gespeicherte Prozedur [SSIS] ein. [Catalog]. [Update_master_address] mit Parameter @MasterAddress = N'https: / / [Authentication-Dienst skalieren, dem DNS-Hostname]: [Port Master] ". 
+Führen Sie auf dem primären SQL Server die gespeicherte Prozedur [SSIS].[Katalog].[update_master_address] mit dem Parameter @MasterAddress = N'https://[DNS-Hostname des Scale Out-Masterdiensts]:[Masterport] ein. 
 
-## <a name="9-add-scale-out-worker"></a>9. Dezentrales Skalieren Worker hinzufügen
+## <a name="9-add-scale-out-worker"></a>9. Hinzufügen des Scale Out-Workers
 
-Jetzt können Sie anhand des Scale-Out-Worker hinzufügen [Scale-Out-Manager](integration-services-ssis-scale-out-manager.md). Geben Sie *[SQL Server Availability Group Listener-DNS-Name]*,*[Port]* in die Seite "Verbindung".
-
+Jetzt können Sie Scale Out-Workers mithilfe des [Scale Out-Managers](integration-services-ssis-scale-out-manager.md) hinzufügen. Geben Sie auf der Seite „Verbindung“ *[DNS des SQL Server-Verfügbarkeitsgruppenlisteners]*,*[Port]* ein.
 
 
 

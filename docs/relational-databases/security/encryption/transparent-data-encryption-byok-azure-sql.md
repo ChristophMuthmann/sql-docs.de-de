@@ -1,11 +1,11 @@
 ---
-title: Bring Your Own Key (TDE, Azure SQL) | Microsoft-Dokumentation
-description: "Eine Übersicht über die Bring Your Own Key-Unterstützung für Transparent Data Encryption mit Azure Key Vault für SQL-Datenbanken und Data Warehouse. Das Dokument behandelt die Vorteile des Features, die Funktionsweise, Überlegungen und Empfehlungen."
+title: "TDE: Bring Your Own Key (BYOK) – Azure SQL | Microsoft-Dokumentation"
+description: "BYOK-Unterstützung (Bring Your Own Key) für Transparent Data Encryption (TDE) mit Azure Key Vault für SQL-Datenbank und Data Warehouse. TDE mit BYOK: Überblick, Funktionsweise, Überlegungen und Empfehlungen."
 keywords: 
 services: sql-database
 documentationcenter: 
-author: becczhang
-manager: cguyer
+author: aliceku
+manager: craigg
 editor: 
 ms.assetid: 
 ms.service: sql-database
@@ -14,26 +14,25 @@ ms.workload: Inactive
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
-ms.date: 08/07/2017
-ms.author: rebeccaz
-ms.openlocfilehash: 35e51899bda60ccb5b176de0a3d7fabcc86faad7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.date: 11/15/2017
+ms.author: aliceku
+ms.openlocfilehash: 5a0b56974d85f63e3382f26b1388e7d30dfbd6f8
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption mit Bring Your Own Key-Unterstützung für Azure SQL-Datenbank und Data Warehouse
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+Die Unterstützung von BYOK für [Transparent Data Encryption (TDE)](transparent-data-encryption.md) erlaubt Ihnen, die Kontrolle über Ihre TDE-Verschlüsselungsschlüssel zu übernehmen und einzuschränken, wer auf diese zugreifen kann und zu welchem Zeitpunkt. [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault), das cloudbasierte externe Schlüsselverwaltungssystem von Azure, ist der erste Schlüsselverwaltungsdienst, bei dem die BYOK-Unterstützung in TDE integriert ist. Mit BYOK ist der Datenbank-Verschlüsselungsschlüssel durch einen asymmetrischen Schlüssel geschützt, der in Key Vault gespeichert ist. Der asymmetrische Schlüssel ist auf Serverebene festgelegt und wird von allen Datenbanken unter diesem Server geerbt. 
 
-Die Unterstützung von Bring Your Own Key (BYOK) für [Transparent Data Encryption (TDE)](transparent-data-encryption.md) erlaubt Ihnen, die Kontrolle über Ihre TDE-Verschlüsselungsschlüssel zu übernehmen und darüber, wer auf diese zugreifen kann und zu welchem Zeitpunkt. [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault), das cloudbasierte externe Schlüsselverwaltungssystem von Azure, ist der erste Schlüsselverwaltungsdienst, bei dem die BYOK-Unterstützung in TDE integriert ist. Mit BYOK ist der Datenbank-Verschlüsselungsschlüssel durch einen asymmetrischen Schlüssel geschützt, der in Key Vault gespeichert ist. Der asymmetrische Schlüssel ist auf Serverebene festgelegt und wird von allen Datenbanken unter diesem Server geerbt. 
-
-Mit der BYOK-Unterstützung können Benutzer nun Schlüsselverwaltungsaufgaben steuern, einschließlich Schlüsselrotationen, Schlüsseltresorberechtigungen, das Löschen von Schlüsseln und Aktivieren der Überwachung/Berichterstellung auf allen Verschlüsselungsschlüsseln. Key Vault bietet eine zentrale Schlüsselverwaltung, nutzt die streng überwachten Hardwaresicherheitsmodule (HSMs) und stuft die Trennung der Verwaltung von Schlüsseln und Daten höher, damit die rechtliche Kompatibilität eingehalten werden kann. 
+Mit der BYOK-Unterstützung können Benutzer nun Schlüsselverwaltungsaufgaben steuern, einschließlich Schlüsselrotationen, Schlüsseltresorberechtigungen, das Löschen von Schlüsseln und Aktivieren der Überwachung/Berichterstellung auf allen Verschlüsselungsschlüsseln. Key Vault bietet eine zentrale Schlüsselverwaltung, nutzt die streng überwachten Hardwaresicherheitsmodule (HSMs) und ermöglicht die Trennung der Pflichten zwischen dem Verwalten von Schlüsseln und Daten, um gesetzliche Bestimmungen einzuhalten. 
 
 TDE mit BYOK bietet folgende Vorteile:
 - Erhöhte Transparenz und eine präzise Steuerung mit der Möglichkeit, die TDE-Schutzvorrichtung selbst zu verwalten   
 - Zentrale Verwaltung der TDE-Verschlüsselungsschlüssel (zusammen mit anderen Schlüsseln und Geheimnissen, die in anderen Azure-Diensten verwendet werden) durch das Hosten derselben in Key Vault
-- Trennung von Schlüsseln und Datenverwaltung innerhalb der Organisation, um die Trennung von Rollen zu unterstützen
+- Trennung von Schlüsseln und Datenverwaltungsrollen innerhalb der Organisation, um die Trennung der Pflichten zu unterstützen
 - Mehr Vertrauen von Ihren eigenen Kunden, da Key Vault so konzipiert ist, dass Microsoft keine Verschlüsselungsschlüssel sehen oder extrahieren kann. 
 - Unterstützung für die Schlüsselrotation
 
@@ -56,9 +55,9 @@ Das Verwenden von TDE mit BYOK bietet Ihnen sowohl zusätzliche Aufgaben für di
 ### <a name="key-management-responsibilities"></a>Aufgaben bei der Schlüsselverwaltung
 
 Das Übernehmen der Verwaltung für Verschlüsselungsschlüssel von den Ressourcen einer Anwendung ist eine wichtige Aufgabe. Indem Sie TDE mit BYOK über Key Vault verwenden, können Sie von folgenden Aufgaben bei der Schlüsselverwaltung ausgehen:
-- **Schlüsselrotationen:** Die TDE-Schutzvorrichtungen sollten gemäß der internen Regelungen oder Kompatibilitätsanforderungen rotiert werden. Schlüsselrotationen können über den Schlüsseltresor der TDE-Schutzvorrichtung durchgeführt werden.  
+- **Schlüsselrotationen:** Die TDE-Schutzvorrichtungen sollten gemäß der internen Richtlinien oder Kompatibilitätsanforderungen rotiert werden. Schlüsselrotationen können über den Schlüsseltresor der TDE-Schutzvorrichtung durchgeführt werden.  
 - **Schlüsseltresorberechtigungen**: Berechtigungen innerhalb von Key Vault werden über einen Schlüsseltresor und auf Serverebene bereitgestellt. Die Berechtigung eines Servers für einen Schlüsseltresor kann jederzeit aufgehoben werden, indem die Zugriffsrichtlinien des Schlüsseltresors verwendet werden.
-- **Löschen von Schlüsseln**: Schlüssel können von Key Vault und SQL Server für zusätzliche Sicherheit oder zur Einhaltung der Kompatibilität gelöscht werden.
+- **Löschen von Schlüsseln**: Schlüssel können von Key Vault und SQL Server für zusätzliche Sicherheit oder zur Einhaltung der Kompatibilitätsanforderungen gelöscht werden.
 - **Überwachung/Berichterstellung auf allen Verschlüsselungsschlüsseln**: Key Vault stellt Protokolle bereit, die leicht in andere Tools für Sicherheitsinformationen und Ereignisverwaltung (SIEM) eingefügt werden können. Operations Management Suite (OMS) [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) ist ein Beispieldienst, der bereits integriert ist.
 
 ### <a name="pricing-considerations"></a>Überlegungen zu Preisen 
@@ -72,11 +71,11 @@ TDE mit BYOK-Unterstützung ist eine Sicherheitsfunktion, die in Azure SQL-Daten
 
 ### <a name="loss-of-access-to-keys"></a>Verlust des Zugriffs auf Schlüssel
 
-Sobald ein Server keine Verbindung mehr zur TDE-Schutzvorrichtung hat (entweder durch entfernte Key Vault-Berechtigungen oder einen gelöschten Schlüssel), werden **alle Verbindungen zu den verschlüsselten Datenbanken auf dem Server blockiert und diese Datenbanken offline geschaltet und innerhalb von 24 Stunden gelöscht**. Auf alte Sicherungen, die mit dem nicht verfügbaren Schlüsseln verschlüsselt sind, kann nicht mehr zugegriffen werden. Wenn ein extremer Fall vorliegt, in dem ein Schlüssel unter Verdacht steht, kompromittiert zu sein (z.B. durch unautorisierten Zugriff auf den Schlüssel durch einen Dienst oder Benutzer), ist es am besten, den Schlüssel gemäß den folgenden Richtlinien unter [Remove a potentially compromised key (Entfernen eines möglicherweise kompromittierten Schlüssels)](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md) zu entfernen. Die Datenbanken müssen gelöscht werden, bevor eine aktive TDE-Schutzvorrichtung gelöscht wird, um einen möglichen Datenverlust von bis zu zehn Minuten zu verhindern.  
+Sobald ein Server keine Verbindung mehr zur TDE-Schutzvorrichtung hat (entweder durch entfernte Key Vault-Berechtigungen oder einen gelöschten Schlüssel), **werden alle Verbindungen zu den verschlüsselten Datenbanken auf dem Server blockiert, und diese Datenbanken werden offline geschaltet und innerhalb von 24 Stunden gelöscht**. Auf alte Sicherungen, die mit dem nicht verfügbaren Schlüsseln verschlüsselt sind, kann nicht mehr zugegriffen werden. Wenn die Möglichkeit besteht, dass ein Schlüssel kompromittiert ist (z.B. durch unautorisierten Zugriff auf den Schlüssel durch einen Dienst oder Benutzer), sollte dieser Schlüssel gemäß den Richtlinien unter [Entfernen einer TDE-Schutzvorrichtung (Transparent Data Encryption) mithilfe von PowerShell](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md) gelöscht werden. Die Datenbanken müssen gelöscht werden, bevor eine aktive TDE-Schutzvorrichtung gelöscht wird, um einen möglichen Datenverlust von bis zu zehn Minuten zu verhindern.  
 
 ### <a name="expired-keys"></a>Abgelaufene Schlüssel
 
-Da die Verfügbarkeit der TDE-Schutzvorrichtung sich direkt auf die Verfügbarkeit der Datenbank auswirkt, kann ein Schlüssel mit Ablaufdatum nicht zu einem SQL-Server hinzugefügt werden. Wenn ein Schlüssel bereits als TDE-Schutzvorrichtung für einen Server verwendet und diesem später ein Ablaufdatum in Azure Key Vault hinzugefügt wird, **haben die verschlüsselten Datenbanken keinen Zugriff mehr auf ihre TDE-Schutzvorrichtung und werden innerhalb von 24 Stunden gelöscht, sobald der Schlüssel abgelaufen ist**.
+Da die Verfügbarkeit der TDE-Schutzvorrichtung sich direkt auf die Verfügbarkeit der Datenbank auswirkt, kann ein Schlüssel mit Ablaufdatum nicht zu einem SQL-Server hinzugefügt werden. Wenn ein Schlüssel bereits als TDE-Schutzvorrichtung für einen Server verwendet wird und dieser später mit einem Ablaufdatum in Azure Key Vault konfiguriert wird, **haben die verschlüsselten Datenbanken keinen Zugriff mehr auf ihre TDE-Schutzvorrichtung und werden innerhalb von 24 Stunden gelöscht, sobald der Schlüssel abgelaufen ist**.
 
 ### <a name="deleted-server-identities"></a>Gelöschte Serveridentitäten 
 
@@ -86,7 +85,7 @@ Der Zugriff eines Servers auf Key Vault wird durch die eindeutige AAD-Identität
 
 Schlüsseltresore, die für TDE verwendet werden, müssen sich im selben AAD-Mandanten wie die SQL-Datenbank oder der Data Warehouse-Server befinden. Mandantenübergreifende Interaktionen von Schlüsseltresoren und Servern werden nicht unterstützt. Eine Ressource, die mit einem Schlüssel von Key Vault verschlüsselt wird, kann nicht über Azure-Abonnements verschoben werden. Das Verschieben der Ressource über Abonnements unterbricht die notwendigen Zugriffssteuerungen von Key Vault, die TDE mit BYOK ermöglicht haben. Wenn eine Ressource auf ein anderes Abonnement verschoben werden muss, ändern Sie den TDE-Modus von BYOK zu [Vom Dienst verwaltete TDE](transparent-data-encryption-azure-sql.md). 
 
-Eindeutige TDE-Schutzvorrichtungen für Datenbanken oder Data Warehouse werden nicht unterstützt. Die TDE-Schutzvorrichtung ist auf der Serverebene festgelegt und wird von allen Ressourcen auf dem Server geerbt. 
+Eindeutige TDE-Schutzvorrichtungen für Datenbanken oder Data Warehouse werden nicht unterstützt. Die TDE-Schutzvorrichtung ist auf Serverebene festgelegt und wird von allen Ressourcen auf dem Server geerbt. 
 
 ## <a name="guidelines-for-managing-encrypted-databases"></a>Richtlinien zum Verwalten von verschlüsselte Datenbanken
 
@@ -154,5 +153,5 @@ Es wird empfohlen, dass jeder Server Zugriff auf das Key Vault-Schlüsselmateria
 ## <a name="next-steps"></a>Nächste Schritte
 
 - Erste Schritte mit der Bring Your Own Key-Unterstützung für TDE: [Turn on TDE using your own key from Key Vault using PowerShell (Aktivieren von TDE für das Verwenden Ihres eigenen Schlüssels von Key Vault mithilfe von PowerShell)](transparent-data-encryption-byok-azure-sql-configure.md)
-- Erfahren Sie , wie Sie die TDE-Schutzvorrichtung eines Servers rotieren können, damit dieser den Sicherheitsanforderungen entspricht: [Rotate the Transparent Data Encryption protector Using PowerShell (Rotieren des Transparent Data Encryption-Schutzes mithilfe von PowerShell)](transparent-data-encryption-byok-azure-sql-key-rotation.md).
-- Im Fall eines Sicherheitsrisikos erfahren Sie unter [Remove a potentially compromised key (Entfernen eines möglicherweise kompromittierten Schlüssels)](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md), wie Sie eine möglicherweise kompromittierte TDE-Schutzvorrichtung entfernen können. 
+- Erfahren Sie, wie Sie die TDE-Schutzvorrichtung eines Servers rotieren können, damit dieser den Sicherheitsrichtlinien entspricht: [Rotieren einer Transparent Data Encryption-Schutzvorrichtung (TDE) mithilfe von PowerShell](transparent-data-encryption-byok-azure-sql-key-rotation.md).
+- Im Fall eines Sicherheitsvorfalls erfahren Sie unter [Entfernen einer TDE-Schutzvorrichtung (Transparent Data Encryption) mithilfe von PowerShell](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md), wie Sie eine möglicherweise kompromittierte TDE-Schutzvorrichtung entfernen können. 

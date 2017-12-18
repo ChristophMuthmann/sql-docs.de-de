@@ -1,12 +1,14 @@
 ---
-title: Bereitstellen von Integrationsservices (SSIS)-Projekten und Paketen | Microsoft Docs
+title: Bereitstellen von SQL Server Integration Services-Projekten und -Paketen (SSIS) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: packages
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +20,16 @@ f1_keywords:
 - sql13.ssis.ssms.isenvprop.variables.f1
 - sql13.ssis.migrationwizard.f1
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 6a4d17b808332b595589cb663636b91bf82feee9
-ms.contentlocale: de-de
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: ae82e603c67f5a0223231f92b96b2334dc55840a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Bereitstellen von SQL Server Integration Services-Projekten und Paketen (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützt zwei Bereitstellungsmodelle: das Projektbereitstellungsmodell und das Legacy-Paketbereitstellungsmodell. Mithilfe des Projektbereitstellungsmodells können Sie Projekte auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitstellen.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 09/27/2017
 Weitere Informationen zum Legacy-Paketbereitstellungsmodell finden Sie unter [Legacy-Paketbereitstellung &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 > [!NOTE]  
->  Das Projektbereitstellungsmodell wurde in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]eingeführt. Wenn Sie dieses Modell verwendet haben, konnten Sie keine Pakete bereitstellen, ohne das gesamte Projekt bereitzustellen. In [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] wurde die Funktion für inkrementelle Paketbereitstellung eingeführt, mit der Sie Pakete in einem vorhandenen oder neuen Projekt bereitstellen können, ohne das gesamte Projekt bereitzustellen.  
+>  Das Projektbereitstellungsmodell wurde in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]eingeführt. Wenn Sie dieses Modell verwendet haben, konnten Sie keine Pakete bereitstellen, ohne das gesamte Projekt bereitzustellen. In [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] wurde die Funktion für inkrementelle Paketbereitstellung eingeführt, mit der Sie Pakete in einem vorhandenen oder neuen Projekt bereitstellen können, ohne das gesamte Projekt bereitzustellen.  
   
 ## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>Vergleich von Projektbereitstellungsmodell und Legacy-Paketbereitstellungsmodells  
  Der Typ von Bereitstellungsmodell, den Sie für ein Projekt auswählen, bestimmt, welche Entwicklungs- und Verwaltungsoptionen für dieses Projekt verfügbar sind. In der folgenden Tabelle werden Unterschiede und Ähnlichkeiten der Verwendung des Projektbereitstellungsmodells und des Paketbereitstellungsmodells dargestellt.  
@@ -55,7 +56,7 @@ Weitere Informationen zum Legacy-Paketbereitstellungsmodell finden Sie unter [Le
 |Pakete werden in einem separaten Windows-Prozess ausgeführt.|Pakete werden in einem separaten Windows-Prozess ausgeführt.|  
 |SQL Server-Agent wird verwendet, um die Paketausführung zu planen.|SQL Server-Agent wird verwendet, um die Paketausführung zu planen.|  
   
- Das Projektbereitstellungsmodell wurde in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]eingeführt. Wenn Sie dieses Modell verwendet haben, konnten Sie keine Pakete bereitstellen, ohne das gesamte Projekt bereitzustellen. In [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] wurde die Funktion für inkrementelle Paketbereitstellung eingeführt, mit der Sie Pakete in einem vorhandenen oder neuen Projekt bereitstellen können, ohne das gesamte Projekt bereitzustellen.   
+ Das Projektbereitstellungsmodell wurde in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]eingeführt. Wenn Sie dieses Modell verwendet haben, konnten Sie keine Pakete bereitstellen, ohne das gesamte Projekt bereitzustellen. In [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] wurde die Funktion für inkrementelle Paketbereitstellung eingeführt, mit der Sie Pakete in einem vorhandenen oder neuen Projekt bereitstellen können, ohne das gesamte Projekt bereitzustellen.   
   
 ## <a name="features-of-project-deployment-model"></a>Funktionen des Projektbereitstellungsmodells  
  In der folgenden Tabelle sind die Funktionen aufgeführt, die für Projekte, die nur für das Projektbereitstellungsmodell entwickelt wurden, verfügbar sind.  
@@ -71,25 +72,25 @@ Weitere Informationen zum Legacy-Paketbereitstellungsmodell finden Sie unter [Le
 ## <a name="project-deployment"></a>Projektbereitstellung  
  Den Mittelpunkt des Projektbereitstellungsmodells bildet die Projektbereitstellungsdatei (Erweiterung .ISPAC). Die Projektbereitstellungsdatei ist eine in sich geschlossene Bereitstellungseinheit, die nur die wesentlichen Informationen zu den Paketen und Parametern des Projekts umfasst. Die Projektbereitstellungsdatei enthält nicht sämtliche Informationen, die in der Projektdatei von Integration Services (Erweiterung .DTPROJ) enthalten sind. Beispielsweise werden zusätzliche Textdateien, die Sie zum Schreiben von Hinweisen verwenden, nicht in der Projektbereitstellungsdatei gespeichert und daher nicht im Katalog bereitgestellt.  
 
-## <a name="permissions-required-to-deploy-ssis-projects-and-packages"></a>Erforderliche Berechtigungen zum Bereitstellen des SSIS-Projekte und Pakete
+## <a name="permissions-required-to-deploy-ssis-projects-and-packages"></a>Erforderliche Berechtigungen zum Bereitstellen von SSIS-Projekten und -Paketen
 
-Wenn Sie das SSIS-Dienstkonto von der Standardeinstellung ändern, müssen Sie möglicherweise zusätzliche Berechtigungen für das Dienstkonto nicht standardmäßiger erteilen, bevor Sie die Pakete erfolgreich bereitstellen können. Wenn das nicht standardmäßige Dienstkonto nicht über die erforderlichen Berechtigungen verfügt, sehen Sie die folgende Fehlermeldung angezeigt.
+Wenn Sie das SSIS-Standarddienstkonto ändern, müssen Sie möglicherweise zusätzliche Berechtigungen für das vom Standard abweichende Dienstkonto erteilen, bevor Sie erfolgreich Pakete bereitstellen können. Wenn das vom Standard abweichende Dienstkonto nicht über die erforderlichen Berechtigungen verfügt, wird Ihnen möglicherweise folgende Fehlermeldung angezeigt.
 
-*.NET Framework-Fehler beim Ausführen der benutzerdefinierten Routine oder zusammenfassen "Deploy_project_internal": System.ComponentModel. Win32Exception: fehlt ein erforderliches Privileg ist nicht vom Client.*
+*.NET Framework-Fehler beim Ausführen der benutzerdefinierten Routine oder des benutzerdefinierten Aggregats „deploy_project_internal“: System.ComponentModel.Win32Exception: Dem Client fehlt ein erforderliches Recht.*
 
-Dieser Fehler ist in der Regel das Ergebnis der fehlenden DCOM-Berechtigungen. Um den Fehler zu beheben, führen Sie folgende Schritte aus:
+Dieser Fehler ist in der Regel das Ergebnis fehlender DCOM-Berechtigungen. Führen Sie folgende Schritte aus, um den Fehler zu beheben:
 
-1.  Öffnen der **Komponentendienste** -Konsole (oder führen Sie Dcomcnfg.exe).
-2.  In der **Komponentendienste** nacheinander **Komponentendienste** > **Computer** > **Arbeitsplatz** > **DCOM-Konfiguration**.
-3.  In der Liste zu suchende **Microsoft SQL Server Integration Services-xx.0** für die Version von SQL Server, die Sie verwenden. SQL Server 2016 ist z. B. Version 13.
-4.  Mit der rechten Maustaste, und wählen Sie **Eigenschaften**.
-5.  In der **Eigenschaften von Microsoft SQL Server Integration Services 13.0** wählen Sie im Dialogfeld die **Sicherheit** Registerkarte.
-6.  Wählen Sie für jede der drei von Berechtigungen Sätze - Start und Aktivierung, Zugriff und -Konfiguration – **anpassen**, und wählen Sie dann **bearbeiten** So öffnen die **Berechtigung** (Dialogfeld).
-7.  In der **Berechtigung** Dialogfeld Feld, das nicht standardmäßige Dienstkonto hinzufügen, und gewähren **zulassen** Berechtigungen nach Bedarf. Ein Konto in der Regel hat **lokaler Start** und **Lokale Aktivierung** Berechtigungen.
-8.  Klicken Sie auf **OK** schließen Sie dann zweimal die **Komponentendienste** Konsole.
+1.  Öffnen Sie die Konsole **Komponentendienste**, oder führen Sie „Dcomcnfg.exe“ aus.
+2.  Erweitern Sie **Komponentendienste** > **Computer** > **Arbeitsplatz** > **DCOM-Konfiguration** in der Konsole **Komponentendienste**.
+3.  Suchen Sie in der Liste nach **Microsoft SQL Server Integration Services xx.0** für die Version von SQL Server, die Sie verwenden. SQL Server 2016 ist beispielsweise Version 13.
+4.  Führen Sie einen Rechtsklick aus, und wählen Sie **Eigenschaften** aus.
+5.  Klicken Sie im Dialogfeld **Microsoft SQL Server Integration Services 13.0 Properties** (Microsoft SQL Server Integration Services 13.0 – Eigenschaften) auf die Registerkarte **Sicherheit**.
+6.  Klicken Sie für jeden der drei Berechtigungssätze (Start und Aktivierung, Zugriff, Konfiguration) auf **Anpassen** und dann auf **Bearbeiten**, um das Dialogfeld **Berechtigung** zu öffnen.
+7.  Fügen Sie im Dialogfeld **Berechtigung** das vom Standard abweichende Dienstkonto hinzu, und erteilen Sie bei Bedarf die Berechtigungen **Zulassen**. In der Regel verfügt ein Konto über die Berechtigungen **Lokaler Start** und **Lokale Aktivierung**.
+8.  Klicken Sie zweimal auf **OK**, und schließen Sie anschließend die Konsole **Komponentendienste**.
 
-Weitere Informationen zu den in diesem Abschnitt beschriebenen Fehler und zu den Berechtigungen, die vom SSIS-Dienstkonto erforderlich sind finden Sie im folgenden Blogbeitrag.  
-[System.ComponentModel. Win32Exception: Fehlt ein erforderliches Privileg ist nicht vom Client beim Bereitstellen von SSIS-Projekt](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+Weitere Informationen zu dem in diesem Abschnitt beschriebenen Fehler und den erforderlichen Berechtigungen des SSIS-Dienstkontos finden Sie im folgenden Blogbeitrag.  
+[Fehler beim Bereitstellen des SSIS-Projekts: „System.ComponentModel.Win32Exception: Dem Client fehlt ein erforderliches Recht.“](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Bereitstellen von Projekten auf dem Integration Services-Server
   In der aktuellen Version von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]können Sie Projekte auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitstellen. Der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server ermöglicht es Ihnen, Pakete zu verwalten und auszuführen sowie mit Umgebungen Laufzeitwerte für Pakete zu konfigurieren.  
@@ -99,26 +100,26 @@ Weitere Informationen zu den in diesem Abschnitt beschriebenen Fehler und zu den
   
  Um auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server ein Projekt bereitzustellen, führen Sie die folgenden Tasks aus:  
   
-1.  Erstellen Sie einen SSISDB-Katalog, wenn Sie dies nicht bereits getan haben. Weitere Informationen finden Sie unter [SSIS-Katalog](../../integration-services/service/ssis-catalog.md).  
+1.  Erstellen Sie einen SSISDB-Katalog, wenn Sie dies nicht bereits getan haben. Weitere Informationen finden Sie im [SSIS-Katalog](../../integration-services/service/ssis-catalog.md).  
   
-2.  Konvertieren Sie das Projekt mit dem **Assistenten für die Konvertierung von Integration Services-Projekten** ins Projektbereitstellungsmodell. Weitere Informationen finden Sie in den folgenden Anweisungen: [So konvertieren Sie ein Projekt in das Projektbereitstellungsmodell](#convert).  
+2.  Konvertieren Sie das Projekt mit dem Assistenten für die Konvertierung von **Integration Services-Projekten** ins Projektbereitstellungsmodell. Weitere Informationen finden Sie in den folgenden Anweisungen: [So konvertieren Sie ein Projekt in das Projektbereitstellungsmodell](#convert).  
   
-    -   Wenn Sie das Projekt in [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]erstellt haben, verwendet das Projekt standardmäßig das Projektbereitstellungsmodell.  
+    -   Wenn Sie das Projekt in [!INCLUDE[ssISversion12](../../includes/ssisversion12-md.md)] oder höher erstellt haben, verwendet das Projekt standardmäßig das Projektbereitstellungsmodell.  
   
     -   Wenn Sie das Projekt in einer früheren Version von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]erstellt haben, konvertieren Sie das Projekt nach dem Öffnen der Projektdatei in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]in das Projektbereitstellungsmodell.  
   
         > [!NOTE]  
         >  Wenn das Projekt mindestens eine Datenquelle enthält, werden die Datenquellen entfernt, wenn die Projektkonvertierung abgeschlossen wird. Fügen Sie einen Verbindungs-Manager auf Projektebene hinzu, um eine Verbindung mit einer Datenquelle herzustellen, die von den Paketen im Projekt gemeinsam genutzt werden kann. Weitere Informationen finden Sie unter [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
   
-         Abhängig davon, ob Sie den **Assistenten zum Konvertieren von Integration Services-Projekten** von [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] oder von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ausführen, führt der Assistent unterschiedliche Konvertierungstasks aus.  
+         Abhängig davon, ob Sie den Assistenten zum Konvertieren von **Integration Services-Projekten** von [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] oder von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ausführen, führt der Assistent unterschiedliche Konvertierungstasks aus.  
   
         -   Wenn Sie den Assistenten über [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]ausführen, werden die im Projekt enthaltenen Pakete von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 2005, 2008 oder 2008 R2 in das Format konvertiert, das von der aktuellen Version von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]verwendet wird. Ein Update des ursprünglichen Projekts (.dtproj) und der Paketdateien (.dtsx) wird durchgeführt.  
   
         -   Wenn Sie den Assistenten über [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ausführen, generiert der Assistent eine Projektbereitstellungsdatei (.ispac) von den Paketen und Konfigurationen, die im Projekt enthalten sind. Ein Update der Originalpaketdateien (.dtsx) wird nicht durchgeführt.  
   
-             Sie können eine vorhandene Datei auswählen oder eine neue Datei erstellen (auf der Assistentenseite für das **Auswahlziel** ).  
+             Sie können eine vorhandene Datei auswählen oder eine neue Datei erstellen (auf der Assistentenseite für das **Auswahlziel**).  
   
-             Zur Aktualisierung von Paketdateien bei der Konvertierung eines Projekts führen Sie den **Assistenten für die Konvertierung von Integration Services-Projekten** über [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]aus. Wenn Paketdateien unabhängig von einer Projektkonvertierung aktualisiert werden sollen, führen Sie den **Assistenten zum Konvertieren von Integration Services-Projekten** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aus, und führen Sie dann den **SSIS-Paketupgrade-Assistenten**aus. Wenn Sie die Paketdateien getrennt aktualisieren, stellen Sie sicher, dass Sie die Änderungen speichern. Andernfalls werden bei der Konvertierung des Projekts in das Projektbereitstellungsmodell alle nicht gespeicherten Änderungen am Paket nicht konvertiert.  
+             Zur Aktualisierung von Paketdateien bei der Konvertierung eines Projekts führen Sie den **Assistenten für die Konvertierung von Integration Services-Projekten** über [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]aus. Wenn Paketdateien unabhängig von einer Projektkonvertierung aktualisiert werden sollen, führen Sie den Assistenten zum Konvertieren von **Integration Services-Projekten** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aus, und führen Sie dann den **SSIS-Paketupgrade-Assistenten**aus. Wenn Sie die Paketdateien getrennt aktualisieren, stellen Sie sicher, dass Sie die Änderungen speichern. Andernfalls werden bei der Konvertierung des Projekts in das Projektbereitstellungsmodell alle nicht gespeicherten Änderungen am Paket nicht konvertiert.  
   
      Weitere Informationen zum Upgraden von Paketen finden Sie unter [Upgraden von Integration Services-Paketen](../../integration-services/install-windows/upgrade-integration-services-packages.md) und [Upgraden von Integration Services-Paketen mit dem SSIS-Paketupgrade-Assistenten](../../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
@@ -142,7 +143,7 @@ Weitere Informationen zu den in diesem Abschnitt beschriebenen Fehler und zu den
   
      -oder-  
   
-     In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], erweitern Sie die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  >  **SSISDB** Knoten im Objekt-Explorer und suchen Sie zum Projektordner für das Projekt, das Sie bereitstellen möchten. Klicken Sie mit der rechten Maustaste auf den Ordner **Projekte** , und klicken Sie anschließend auf **Projekt bereitstellen**.  
+     Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] den Knoten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] > **SSISDB** im Objekt-Explorer, und navigieren Sie anschließend zum Projektordner des bereitzustellenden Projekts. Klicken Sie mit der rechten Maustaste auf den Ordner **Projekte** , und klicken Sie anschließend auf **Projekt bereitstellen**.  
   
      -oder-  
   
@@ -157,7 +158,7 @@ Weitere Informationen zu den in diesem Abschnitt beschriebenen Fehler und zu den
 3.  Schließen Sie den Assistenten ab. 
 
 ## <a name="deploy-packages-to-integration-services-server"></a>Bereitstellen von Paketen auf dem Integration Services-Server
-  Mit dem in  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] eingeführten Feature für inkrementelle Paketbereitstellung können Sie ein oder mehrere Pakete in einem vorhandenen oder neuen Projekt bereitstellen, ohne das gesamte Projekt bereitzustellen.  
+  Mit dem in  [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] eingeführten Feature für inkrementelle Paketbereitstellung können Sie ein oder mehrere Pakete in einem vorhandenen oder neuen Projekt bereitstellen, ohne das gesamte Projekt bereitzustellen.  
   
 ###  <a name="DeployWizard"></a> Bereitstellen von Paketen mit dem Bereitstellungs-Assistenten für Integration Services  
   
@@ -310,7 +311,7 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
  Diese Seite erlaubt Ihnen die Überprüfung der von Ihnen vorgenommenen Einstellungen. Sie können Ihre Auswahl ändern, indem Sie auf **Zurück**klicken oder indem Sie auf einen der Schritte im linken Bereich klicken. Klicken Sie auf **Bereitstellen** , um den Bereitstellungsprozess zu starten.  
   
 #### <a name="results"></a>Ergebnisse  
- Nachdem der Bereitstellungsvorgang abgeschlossen ist, sollten Sie die Seite **Ergebnisse** sehen. Diese Seite zeigt an, ob die einzelnen Aktionen erfolgreich ausgeführt wurden oder ob Fehler aufgetreten sind. Ist die Aktion fehlerhaft, klicken Sie auf **Fehler** in der Spalte **Ergebnis** , um eine Erklärung über den Fehler anzuzeigen. Klicken Sie auf **Bericht speichern...**  um die Ergebnisse in eine XML-Datei oder klicken Sie auf Speichern **schließen** um den Assistenten zu beenden.
+ Nachdem der Bereitstellungsvorgang abgeschlossen ist, sollten Sie die Seite **Ergebnisse** sehen. Diese Seite zeigt an, ob die einzelnen Aktionen erfolgreich ausgeführt wurden oder ob Fehler aufgetreten sind. Ist die Aktion fehlerhaft, klicken Sie auf **Fehler** in der Spalte **Ergebnis** , um eine Erklärung über den Fehler anzuzeigen. Klicken Sie auf **Bericht speichern...**, um die Ergebnisse in einer XML-Datei zu speichern, oder klicken Sie auf **Schließen**, um den Assistenten zu beenden.
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
@@ -509,7 +510,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ```  
 
 ## <a name="integration-services-project-conversion-wizard"></a>Assistent für die Konvertierung von Integration Services-Projekten
-  Der **Assistent für die Konvertierung von Integration Services-Projekten** konvertiert ein Projekt ins Projektbereitstellungsmodell.  
+  Der Assistent für die Konvertierung von **Integration Services-Projekten** konvertiert ein Projekt ins Projektbereitstellungsmodell.  
   
 > [!NOTE]  
 >  Wenn das Projekt mindestens eine Datenquelle enthält, werden die Datenquellen entfernt, wenn die Projektkonvertierung abgeschlossen wird. Fügen Sie einen Verbindungs-Manager auf Projektebene hinzu, um eine Verbindung mit einer Datenquelle herzustellen, die von den Paketen im Projekt gemeinsam genutzt werden kann. Weitere Informationen finden Sie unter [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
@@ -539,13 +540,13 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 -   [Festlegen der Optionen unter "Konvertierung ausführen"](#conversion)  
   
 ###  <a name="open_dialog"></a> Öffnen des Assistenten für die Konvertierung von Integration Services-Projekten  
- Führen Sie einen der folgenden Schritte aus, um den **Assistenten zum Konvertieren von Integration Services-Projekten** zu öffnen.  
+ Führen Sie einen der folgenden Schritte aus, um den Assistenten zum Konvertieren von **Integration Services-Projekten** zu öffnen.  
   
 -   Öffnen Sie das Projekt in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], und klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt. Klicken Sie anschließend auf **In Projektbereitstellungsmodell konvertieren**.  
   
 -   Klicken Sie im Objekt-Explorer in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]mit der rechten Maustaste auf den Knoten **Projekte** , und wählen Sie anschließend die Option **Pakete importieren**aus.  
   
- Abhängig davon, ob Sie den **Assistenten zum Konvertieren von Integration Services-Projekten** von [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] oder von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ausführen, führt der Assistent unterschiedliche Konvertierungstasks aus.   
+ Abhängig davon, ob Sie den Assistenten zum Konvertieren von **Integration Services-Projekten** von [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] oder von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ausführen, führt der Assistent unterschiedliche Konvertierungstasks aus.   
   
 ###  <a name="locate"></a> Festlegen von Optionen auf der Seite "Pakete suchen"  
   
@@ -729,4 +730,3 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  **Bericht speichern**  
  Klicken Sie, um in einer XML-Datei eine Zusammenfassung der Projektkonvertierung zu speichern.  
-

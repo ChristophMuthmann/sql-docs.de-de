@@ -1,78 +1,83 @@
 ---
-title: Herstellen einer Verbindung mit lokalen Datenquellen mit Windows-Authentifizierung | Microsoft Docs
+title: Herstellen einer Verbindung mit lokalen Datenquellen und Azure-Dateifreigaben mit der Windows-Authentifizierung | Microsoft-Dokumentation
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-server-2017
-ms.technology:
-- integration-services
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: lift-shift
+ms.suite: sql
+ms.custom: 
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1e3d9736612211038991489a4bd858d1ff89d333
-ms.openlocfilehash: 1b60d877c6c75a77dd16fa8cb1704e10baf36bdb
-ms.contentlocale: de-de
-ms.lasthandoff: 10/19/2017
-
+ms.openlocfilehash: 9235ffd3225e76ee94067519c72e997c451d9893
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="connect-to-on-premises-data-sources-with-windows-authentication"></a>Herstellen einer Verbindung mit lokalen Datenquellen mit Windows-Authentifizierung
-Dieser Artikel beschreibt das Konfigurieren von SSIS-Katalog für Azure SQL-Datenbank zum Ausführen von Paketen, die Windows-Authentifizierung zu verwenden, um Verbindungen zu lokalen Datenquellen herstellen.
+# <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>Herstellen einer Verbindung mit lokalen Datenquellen und Azure-Dateifreigaben mit der Windows-Authentifizierung
+In diesem Artikel wird beschrieben, wie Sie den SSIS-Katalog auf Azure SQL-Datenbank so konfigurieren, dass er Pakete ausführt, die die Windows-Authentifizierung verwenden, um eine Verbindung mit lokalen Datenquellen und Azure-Dateifreigaben herzustellen.
 
-Die Anmeldeinformationen für die Domäne, die Sie angeben, wenn Sie die Schritte in diesem Artikel gelten für alle paketausführungen für die SQL-Datenbankinstanz, bis Sie ändern oder entfernen Sie die Anmeldeinformationen.
+Die Anmeldeinformationen für die Domäne, die Sie beim Ausführen der in diesem Artikel dargestellten Schritte angeben, gelten solange für alle Paketausführungen auf der SQL-Datenbank-Instanz, bis Sie die Anmeldeinformationen ändern oder entfernen.
 
-## <a name="prerequisite"></a>Voraussetzung
-Bevor Sie Domänenanmeldeinformationen für die Windows-Authentifizierung eingerichtet haben, überprüfen Sie, ob eine Computer keiner Domäne angehören, Ihrer lokalen Datenquelle in eine Verbindung herstellen kann `runas` Modus.
+## <a name="connect-to-on-premises-data-sources"></a>Herstellen einer Verbindung mit lokalen Datenquellen
 
-### <a name="connecting-to-sql-server"></a>Herstellen einer Verbindung mit SQLServer
-Um zu überprüfen, ob Sie eine Verbindung mit einer lokalen SQL Server herstellen können, führen Sie folgende Schritte aus:
+### <a name="prerequisite"></a>Voraussetzung
+Bevor Sie die Anmeldeinformationen für die Domäne für die Windows-Authentifizierung einrichten, überprüfen Sie, ob ein Computer, der nicht mit einer Domäne verknüpft ist, eine Verbindung mit der lokalen Datenquelle im `runas`-Modus herstellen kann.
 
-1.  Zum Ausführen dieser Tests finden Sie einen Computer keiner Domäne angehören.
+#### <a name="connecting-to-sql-server"></a>Herstellen einer Verbindung mit SQL Server
+Führen Sie folgende Schritte aus, um zu überprüfen, ob Sie eine Verbindung mit einem lokalen SQL-Server herstellen können:
 
-2.  Führen Sie den folgenden Befehl zum Starten von SQL Server Management Studio (SSMS) mit den Anmeldeinformationen für die Domäne, die Sie verwenden möchten, auf dem Computer keiner Domäne angehören:
+1.  Suchen Sie einen Computer, der nicht mit einer Domäne verknüpft ist, um diesen Test auszuführen.
+
+2.  Führen Sie auf dem Computer, der nicht mit einer Domäne verknüpft ist, folgenden Befehl aus, um SQL Server Management Studio (SSMS) mit den Anmeldeinformationen für die Domäne zu starten, die Sie verwenden möchten:
 
     ```cmd
     runas.exe /netonly /user:<domain>\<username> SSMS.exe
     ```
 
-3.  Überprüfen Sie, ob Sie eine Verbindung mit einer lokalen SQL Server herstellen können, die Sie verwenden möchten, in SSMS.
+3.  Überprüfen Sie über SSMS, ob Sie eine Verbindung mit dem lokalen SQL Server herstellen können, den Sie verwenden möchten.
 
-### <a name="connecting-to-a-file-share"></a>Herstellen einer Verbindung mit einer Dateifreigabe
-Um zu überprüfen, ob Sie eine Verbindung mit einer lokalen Dateifreigabe herstellen können, führen Sie folgende Schritte aus:
+#### <a name="connecting-to-a-file-share"></a>Herstellen einer Verbindung mit einer Dateifreigabe
+Führen Sie die folgenden Schritte aus, um zu überprüfen, ob Sie eine Verbindung mit einer lokalen Dateifreigabe herstellen können:
 
-1.  Zum Ausführen dieser Tests finden Sie einen Computer keiner Domäne angehören.
+1.  Suchen Sie einen Computer, der nicht mit einer Domäne verknüpft ist, um diesen Test auszuführen.
 
-2.  Führen Sie den folgenden Befehl auf dem Computer keiner Domäne angehören. Dieser Befehl öffnet ein Befehl Prommpt mit Anmeldeinformationen für die Domäne, die Sie verwenden möchten, und klicken Sie dann testet die Verbindung mit der Dateifreigabe durch eine Verzeichnisliste abrufen.
+2.  Führen Sie den folgenden Befehl auf dem Computer aus, der nicht mit einer Domäne verknüpft ist. Über diesen Befehl öffnen Sie zunächst ein Eingabeaufforderungsfenster mit den Anmeldeinformationen der Domäne, die Sie verwenden möchten, und testen dann die Konnektivität in der Dateifreigabe, indem Sie eine Verzeichnisliste abrufen.
 
     ```cmd
     runas.exe /netonly /user:<domain>\<username> cmd.exe
     dir \\fileshare
     ```
 
-3.  Überprüfen Sie, ob die Verzeichnisliste zurückgegeben wird, für das lokale Freigabe Datei, die Sie verwenden möchten.
+3.  Überprüfen Sie, ob die Verzeichnisliste für die lokale Dateifreigabe zurückgegeben wird, die Sie verwenden möchten.
 
-## <a name="provide-domain-credentials"></a>Geben Sie Anmeldeinformationen für die Domäne
-Um Domänenanmeldeinformationen anzugeben, mit die Pakete, die Windows-Authentifizierung zu verwenden, um Verbindungen zu lokalen Datenquellen herstellen können, führen Sie folgende Schritte aus:
+### <a name="provide-domain-credentials"></a>Angeben von Anmeldeinformationen für eine Domäne
+Führen Sie die folgenden Schritte, um Anmeldeinformationen für die Domäne anzugeben, die es erlaubt, dass Pakete die Windows-Authentifizierung verwenden, um eine Verbindung mit lokalen Datenquellen herzustellen:
 
-1.  Mit SQL Server Management Studio (SSMS) oder ein anderes Tool mit der SQL-Datenbank verbinden Sie, der als Host der SSIS-Katalogdatenbank (SSISDB). Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit der Datenbank SSISDB-Katalog in Azure](ssis-azure-connect-to-catalog-database.md).
+1.  Stellen Sie mit SQL Server Management Studio (SSMS) oder einem anderen Tool eine Verbindung mit der SQL-Datenbank her, die die SSIS-Katalogdatenbank (SSISDB) hostet. Weitere Informationen finden Sie unter [Connect to the SSISDB Catalog database on Azure (Herstellen einer Verbindung mit der SSIS-Katalogdatenbank in Azure)](ssis-azure-connect-to-catalog-database.md).
 
-2.  Öffnen Sie mit SSISDB als aktuelle Datenbank ein Abfragefenster.
+2.  Öffnen Sie ein Abfragefragefenster mit SSISDB als aktuelle Datenbank.
 
-3.  Führen Sie die folgende gespeicherte Prozedur, und geben Sie die richtigen Domänenanmeldeinformationen:
+3.  Führen Sie die folgenden gespeicherten Prozeduren aus, und stellen Sie passende Anmeldeinformationen für die Domäne bereit:
 
     ```sql
     catalog.set_execution_credential @user='<your user name>', @domain='<your domain name>', @password='<your password>'
     ```
-4.  Die SSIS-Pakete ausführen. Die Pakete verwenden die Anmeldeinformationen, die Sie zum Herstellen einer lokalen Datenquellen mit Windows-Authentifizierung bereitgestellt.
+4.  Führen Sie die SSIS-Pakete aus. Die Pakete verwenden die Anmeldeinformationen, die Sie angegeben haben, um eine Verbindung mit den lokalen Datenquellen mithilfe der Windows-Authentifizierung herzustellen.
 
-## <a name="view-domain-credentials"></a>Anmeldeinformationen für die Domäne
-Um die aktiven Domänenanmeldeinformationen anzuzeigen, führen Sie folgende Schritte aus:
+### <a name="view-domain-credentials"></a>Anzeigen von Anmeldeinformationen für eine Domäne
+Führen Sie die folgenden Schritte aus, um die aktiven Anmeldeinformationen einer Domäne anzuzeigen:
 
-1.  Mit SQL Server Management Studio (SSMS) oder ein anderes Tool mit der SQL-Datenbank verbinden Sie, der als Host der SSIS-Katalogdatenbank (SSISDB).
+1.  Stellen Sie mit SQL Server Management Studio (SSMS) oder einem anderen Tool eine Verbindung mit der SQL-Datenbank her, die die SSIS-Katalogdatenbank (SSISDB) hostet.
 
-2.  Öffnen Sie mit SSISDB als aktuelle Datenbank ein Abfragefenster.
+2.  Öffnen Sie ein Abfragefragefenster mit SSISDB als aktuelle Datenbank.
 
-3.  Führen Sie die folgende gespeicherte Prozedur, und überprüfen Sie die Ausgabe:
+3.  Führen Sie die folgende gespeicherte Prozedur aus, und überprüfen Sie die Ausgabe:
 
     ```sql
     SELECT * 
@@ -80,12 +85,12 @@ Um die aktiven Domänenanmeldeinformationen anzuzeigen, führen Sie folgende Sch
     WHERE property_name = 'EXECUTION_DOMAIN' OR property_name = 'EXECUTION_USER'
     ```
 
-## <a name="clear-domain-credentials"></a>Anmeldeinformationen für die Domäne löschen
-Um zu entfernen, und entfernen Sie die Anmeldeinformationen, die Sie bereitgestellt werden, wie in diesem Artikel beschrieben, führen Sie folgende Schritte aus:
+### <a name="clear-domain-credentials"></a>Löschen von Anmeldeinformationen für eine Domäne
+Führen Sie die folgenden Schritte aus, um die Anmeldeinformationen, die Sie angegeben haben, wie in diesem Artikel beschrieben, zu löschen und zu entfernen:
 
-1.  Mit SQL Server Management Studio (SSMS) oder ein anderes Tool mit der SQL-Datenbank verbinden Sie, der als Host der SSIS-Katalogdatenbank (SSISDB).
+1.  Stellen Sie mit SQL Server Management Studio (SSMS) oder einem anderen Tool eine Verbindung mit der SQL-Datenbank her, die die SSIS-Katalogdatenbank (SSISDB) hostet.
 
-2.  Öffnen Sie mit SSISDB als aktuelle Datenbank ein Abfragefenster.
+2.  Öffnen Sie ein Abfragefragefenster mit SSISDB als aktuelle Datenbank.
 
 3.  Führen Sie die folgende gespeicherte Prozedur aus:
 
@@ -93,23 +98,30 @@ Um zu entfernen, und entfernen Sie die Anmeldeinformationen, die Sie bereitgeste
     catalog.set_execution_credential @user='', @domain='', @password=''
     ```
 
-## <a name="connect-to-file-shares"></a>Verbindung zu Dateifreigaben herstellen
-Sie können Windows-Authentifizierung verwenden, für die Verbindung zu Dateifreigaben im selben virtuellen Netzwerk wie der Azure SSIS-Integrationslaufzeit sowohl lokal als auch auf virtuellen Azure-Computern.
+## <a name="connect-to-file-shares"></a>Herstellen einer Verbindung mit Dateifreigaben
+Sie können sowohl lokal als auch auf Azure-VMs und in Azure Files die Windows-Authentifizierung verwenden, um eine Verbindung mit Dateifreigaben in demselben Netzwerk herzustellen, auf dem Azure SSIS Integration Runtime ausgeführt wird. Weitere Informationen zu Azure Files finden Sie unter [Azure Files](https://azure.microsoft.com/services/storage/files/).
 
-Um an eine Dateifreigabe auf einem virtuellen Azure-Computer zu verbinden, führen Sie folgende Schritte aus:
+Führen Sie die folgenden Schritte aus, um eine Verbindung mit einer Dateifreigabe auf einer Azure-VM oder einer Azure-Dateifreigabe herzustellen.
 
-1.  Mit SQL Server Management Studio (SSMS) oder ein anderes Tool mit der SQL-Datenbank verbinden Sie, der als Host der SSIS-Katalogdatenbank (SSISDB).
+1.  Stellen Sie mit SQL Server Management Studio (SSMS) oder einem anderen Tool eine Verbindung mit der SQL-Datenbank her, die die SSIS-Katalogdatenbank (SSISDB) hostet.
 
-2.  Öffnen Sie mit SSISDB als aktuelle Datenbank ein Abfragefenster.
+2.  Öffnen Sie ein Abfragefragefenster mit SSISDB als aktuelle Datenbank.
 
-3.  Führen Sie die folgende gespeicherte Prozedur aus:
+3.  Führen Sie die gespeicherte `catalog.set_execution_credential`-Prozedur aus, wie in den folgenden Optionen beschrieben:
+
+    a.  Führen Sie die folgende gespeicherte Prozedur aus, um eine Verbindung mit einer Dateifreigabe auf einer Azure-VM herzustellen:
 
     ```sql
     catalog.set_execution_credential @domain = N'.', @user = N'username of local account on Azure virtual machine', @password = N'password'
     ```
 
-## <a name="next-steps"></a>Nächste Schritte
-- Bereitstellen eines Pakets an. Weitere Informationen finden Sie unter [bereitstellen ein SSIS-Projekts mit SQL Server Management Studio (SSMS)](../ssis-quickstart-deploy-ssms.md).
-- Ausführen eines Pakets. Weitere Informationen finden Sie unter [führen Sie ein SSIS-Paket mit SQL Server Management Studio (SSMS)](../ssis-quickstart-run-ssms.md).
-- Planen eines Pakets an. Weitere Informationen finden Sie unter [Zeitplan SSIS-paketausführung in Azure](ssis-azure-schedule-packages.md)
+    b.  Führen Sie die folgende gespeicherte Prozedur aus, um eine Verbindung mit einer Azure-Dateifreigabe (d.h. in Azure Files) herzustellen:
 
+    ```sql
+    catalog.set_execution_credential @domain = N'Azure', @user = N'<storage-account-name>', @password = N'<storage-account-key>'
+    ```
+
+## <a name="next-steps"></a>Nächste Schritte
+- Stellen Sie ein Paket bereit. Weitere Informationen finden Sie unter [Deploy an SSIS project with SQL Server Management Studio (SSMS) (Bereitstellen eines SSIS-Projekts mit SQL Server Management Studio (SSMS))](../ssis-quickstart-deploy-ssms.md).
+- Führen Sie ein Paket aus. Weitere Informationen finden Sie unter [Run an SSIS package with SQL Server Management Studio (SSMS) (Ausführen eines SSIS-Pakets mit SQL Server Management Studio (SSMS))](../ssis-quickstart-run-ssms.md).
+- Planen Sie ein Paket. Weitere Informationen finden Sie unter [Schedule SSIS package execution on Azure (Planen der Ausführung von SSIS-Paketen in Azure)](ssis-azure-schedule-packages.md).

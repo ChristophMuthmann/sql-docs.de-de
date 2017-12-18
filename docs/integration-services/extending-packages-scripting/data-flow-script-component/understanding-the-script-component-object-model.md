@@ -1,5 +1,5 @@
 ---
-title: Grundlegendes zu den Script Component Object Model | Microsoft Docs
+title: Grundlegendes zum Skript-Komponentenobjektmodell | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,48 +8,43 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
-helpviewer_keywords:
-- Script component [Integration Services], object model
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
+helpviewer_keywords: Script component [Integration Services], object model
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 09de00344fe94087b6287b07c4b1ffe933d27b7c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8fd9402f5ec9cdd85f2ccf45e09e4984b98ea1cc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="understanding-the-script-component-object-model"></a>Grundlegendes zum Skript-Komponentenobjektmodell
-  Entsprechend der Anleitung unter [codieren und Debuggen der Skriptkomponente](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md), skriptkomponentenprojekt enthält drei Projektelemente:  
+  Wie im Artikel [Coding and Debugging the Script Component (Codieren und Debuggen der Skriptkomponente)](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md) erläutert, enthält das Skriptkomponentenprojekt drei Projektelemente:  
   
-1.  Die **ScriptMain** Element, das enthält die **ScriptMain** Klasse, die in dem Sie Ihren Code schreiben. Die **ScriptMain** Klasse erbt von der **UserComponent** Klasse.  
+1.  Das **ScriptMain**-Element, das die **ScriptMain**-Klasse enthält, in die Sie den Code schreiben. Die **ScriptMain**-Klasse erbt von der **UserComponent**-Klasse.  
   
-2.  Die **ComponentWrapper** Element, das enthält die **UserComponent** Klasse, eine Instanz von <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> , enthält die Methoden und Eigenschaften, die Sie zum Verarbeiten von Daten und für die Interaktion mit dem Paket verwenden. Die **ComponentWrapper** -Element enthält auch **Verbindungen** und **Variablen** Auflistungsklassen.  
+2.  Das **ComponentWrapper**-Element, das die **UserComponent**-Klasse enthält, eine Instanz von <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>, die die Methoden und Eigenschaften enthält, die Sie verwenden, um Daten zu verarbeiten und mit dem Paket zu interagieren. Das **ComponentWrapper**-Element enthält außerdem die Auflistungsklassen **Verbindungen** und **Variablen**.  
   
-3.  Die **BufferWrapper** Element, das enthält Klassen, die von erben <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> für jedes Eingabe- und Ausgabe und typisierte Eigenschaften für jede Spalte.  
+3.  Das **BufferWrapper**-Element, das Klassen enthält und von <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> für jede Eingabe und Ausgabe sowie typisierte Eigenschaften für jede Spalte erbt.  
   
- Schreiben von Code in der **ScriptMain** Element, verwenden Sie die Objekte, Methoden und Eigenschaften, die in diesem Thema erläutert. Es werden nicht von jeder Komponente alle hier aufgeführten Methoden verwendet. Wenn sie jedoch verwendet werden, geschieht dies in der gezeigten Reihenfolge.  
+ Beim Schreiben des Codes in das **ScriptMain**-Element verwenden Sie die in diesem Artikel besprochenen Objekte, Methoden und Eigenschaften. Es werden nicht von jeder Komponente alle hier aufgeführten Methoden verwendet. Wenn sie jedoch verwendet werden, geschieht dies in der gezeigten Reihenfolge.  
   
  Die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>-Basisklasse enthält keinen Implementierungscode für die in diesem Thema erläuterten Methoden. Es ist daher unnötig, aber ungefährlich, Ihrer eigenen Implementierung der Methode einen Aufruf der Basisklassenimplementierung hinzuzufügen.  
   
- Informationen dazu, wie die Methoden und Eigenschaften dieser Klassen in einem bestimmten Typ von Skriptkomponente verwenden, finden Sie im Abschnitt [Additional Script Component Examples](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md). Die Beispielthemen enthalten auch vollständige Codebeispiele.  
+ Informationen darüber, wie die Methoden und Eigenschaften dieser Klassen in einem bestimmten Skriptkomponententyp zu verwenden sind, finden Sie im Abschnitt [Additional Script Component Examples (Zusätzliche Skriptkomponentenbeispiele)](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md). Die Beispielthemen enthalten auch vollständige Codebeispiele.  
   
 ## <a name="acquireconnections-method"></a>‚AcquireConnections’-Methode  
  Quellen und Ziele müssen im Allgemeinen eine Verbindung mit einer externen Datenquelle herstellen. Überschreiben Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.AcquireConnections%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>-Basisklasse, um die Verbindung oder die Verbindungsinformationen von dem entsprechenden Verbindungs-Manager abzurufen.  
   
- Das folgende Beispiel gibt eine **System.Data.SqlClient.SqlConnection** aus einen ADO.NET-Verbindungs-Manager.  
+ Im folgenden Beispiel wird **System.Data.SqlClient.SqlConnection** von einem ADO.NET-Verbindungs-Manager zurückgegeben.  
   
 ```vb  
 Dim connMgr As IDTSConnectionManager100  
@@ -63,7 +58,7 @@ Public Overrides Sub AcquireConnections(ByVal Transaction As Object)
 End Sub  
 ```  
   
- Im folgenden Beispiel gibt einen vollständigen Pfad und Dateinamen aus einem Flat File Connection Manager, und öffnet dann die Datei mithilfe einer **System.IO.StreamReader**.  
+ Das folgende Beispiel gibt einen vollständigen Pfad- und Dateinamen von einem Verbindungs-Manager für Flatfiles zurück und öffnet anschließend die Datei mithilfe von **System.IO.StreamReader**.  
   
 ```vb  
 Private textReader As StreamReader  
@@ -121,35 +116,35 @@ public override void PreExecute()
  Skriptkomponenten, die als Transformationen oder Ziele konfiguriert sind, weisen eine Eingabe auf.  
   
 #### <a name="what-the-bufferwrapper-project-item-provides"></a>Bereitstellungen durch das ‚BufferWrapper’-Projektelement  
- Für die einzelnen Eingabeargumente sortiert, dass Sie konfiguriert haben, die **BufferWrapper** Projektelement enthält eine Klasse, die abgeleitet <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> und hat den gleichen Namen wie die Eingabe. Jede Eingabepufferklasse enthält die folgenden Eigenschaften, Funktionen und Methoden:  
+ Für jede von Ihnen konfigurierte Ausgabe enthält das **BufferWrapper**-Projektelement eine Klasse, die von <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> abgeleitet ist und denselben Namen hat wie die Eingabe. Jede Eingabepufferklasse enthält die folgenden Eigenschaften, Funktionen und Methoden:  
   
--   Benannte, typisierte Accessoreigenschaften für jede ausgewählte Eingabespalte. Diese Eigenschaften sind schreibgeschützt oder Lese-/Schreibzugriff, je nach den **Verwendungstyp** für die Spalte angegeben wird, auf die **Eingabespalten** auf der Seite der **Skript Transformations-Editor**.  
+-   Benannte, typisierte Accessoreigenschaften für jede ausgewählte Eingabespalte. Diese Eigenschaften sind schreibgeschützt oder weisen Lese-/Schreibzugriff auf, abhängig von dem für die Spalte auf der Seite **Eingabespalten** des Dialogfelds **Transformations-Editor für Skripterstellung** angegebenen **Verwendungstyp**.  
   
--   Ein  **\<Spalte > _IsNull** input-Eigenschaft für jede ausgewählte Spalte. Diese Eigenschaft wird auch nur-Lese oder Lese-/Schreibzugriff, je nach den **Verwendungstyp** für die Spalte angegeben.  
+-   Eine **\<column>_IsNull**-Eigenschaft für jede ausgewählte Eingabespalte. Diese Eigenschaft ist ebenfalls schreibgeschützt oder weist Lese-/Schreibzugriff auf, abhängig von dem für die Spalte angegebenen **Verwendungstyp**.  
   
--   Ein **DirectRowTo\<Outputbuffer >** -Methode für jede konfigurierte Ausgabe. Verwenden Sie diese Methoden beim Filtern von Zeilen in eine von mehreren Ausgaben in der gleichen **ExclusionGroup**.  
+-   Eine **DirectRowTo\<outputbuffer>**-Methode für jede konfigurierte Ausgabe. Sie verwenden diese Methoden beim Filtern von Zeilen in eine von mehreren Ausgaben in derselben **ExclusionGroup**.  
   
--   Ein **NextRow** Funktion, um die nächste Eingabezeile abzurufen und ein **EndOfRowset** Funktion, um zu bestimmen, ob der letzte Datenpuffer verarbeitet wurde. Diese Funktionen ist in der Regel nicht erforderlich, wenn Sie in implementierten eingabeverarbeitungsmethoden verwenden die **UserComponent** Basisklasse. Der nächste Abschnitt enthält weitere Informationen zu den **UserComponent** Basisklasse.  
+-   Eine **NextRow**-Funktion, um die nächste Eingabezeile abzurufen, und eine **EndOfRowset**-Funktion, um zu bestimmen, ob der letzte Datenpuffer verarbeitet wurde. Normalerweise benötigen Sie diese Funktionen nicht, wenn Sie die in der **UserComponent**-Basisklasse implementierten Eingabeverarbeitungsmethoden verwenden. Im nächsten Abschnitt finden Sie weitere Informationen über die **UserComponent**-Basisklasse.  
   
 #### <a name="what-the-componentwrapper-project-item-provides"></a>Bereitstellungen durch das ‚ComponentWrapper’-Projektelement  
- Das ComponentWrapper-Projektelement enthält eine Klasse namens **UserComponent** abgeleitet, die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. Die **ScriptMain** Klasse, die in dem Sie Ihren benutzerdefinierten Code schreiben leitet sich wiederum von **UserComponent**. Die **UserComponent** Klasse enthält die folgenden Methoden:  
+ Das ComponentWrapper-Projektelement enthält eine Klasse mit dem Namen **UserComponent**, die von <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> abgeleitet wird. Die **ScriptMain**-Klasse, in die Sie Ihren benutzerdefinierten Code schreiben, wird wiederum von **UserComponent** abgeleitet. Die **UserComponent**-Klasse enthält die folgenden Methoden:  
   
--   Eine überschriebene Implementierung von der **ProcessInput** Methode. Dies ist die Methode, dass das Modul ruft weiter zur Laufzeit nach der Datenfluss der **PreExecute** -Methode, und es kann mehrfach aufgerufen werden. **ProcessInput** übergibt die Verarbeitung an die  **\<Inputbuffer > _ProcessInput** Methode. Die **ProcessInput** Methode für das Ende des Eingabepuffers überprüft, und wenn das Ende des Puffers erreicht wurde, ruft Sie die überschreibbare **FinishOutputs** -Methode und die Private **MarkOutputsAsFinished** Methode. Die **MarkOutputsAsFinished** -Methode ruft dann **SetEndOfRowset** für den letzten Ausgabepuffer.  
+-   Eine überschriebene Implementierung der **ProcessInput**-Methode. Diese Methode wird vom Datenflussmodul zur Laufzeit direkt im Anschluss an die **PreExecute**-Methode aufgerufen, unter Umständen sogar mehrfach. **ProcessInput** übergibt die Verarbeitung an die **\<inputbuffer>_ProcessInput**-Methode. Anschließend sucht die**ProcessInput**-Methode nach dem Ende des Eingabepuffers. Wenn das Ende des Puffers erreicht wurde, ruft sie die überschreibbare**FinishOutputs**-Methode und die private **MarkOutputsAsFinished**-Methode auf. Die **MarkOutputsAsFinished**-Methode ruft dann auf dem letzten Ausgabepuffer **SetEndOfRowset** auf.  
   
--   Eine überschreibbare Implementierung von der  **\<Inputbuffer > _ProcessInput** Methode. Diese Standardimplementierung durchläuft einfach jede Eingabezeile und ruft  **\<Inputbuffer > _ProcessInputRow**.  
+-   Eine überschreibbare Implementierung der **\<inputbuffer>_ProcessInput**-Methode. Diese Standardimplementierung durchläuft jede Eingabezeile einmal und ruft **\<inputbuffer>_ProcessInputRow** auf.  
   
--   Eine überschreibbare Implementierung von der  **\<Inputbuffer > _ProcessInputRow** Methode. Der Standardimplementierung ist leer. Dies ist die Methode, die Sie normalerweise überschreiben, um den benutzerdefinierten Datenverarbeitungscode zu schreiben.  
+-   Eine überschreibbare Implementierung der **\<inputbuffer>_ProcessInputRow**-Methode. Der Standardimplementierung ist leer. Dies ist die Methode, die Sie normalerweise überschreiben, um den benutzerdefinierten Datenverarbeitungscode zu schreiben.  
   
 #### <a name="what-your-custom-code-should-do"></a>Schritte, die der benutzerdefinierte Code ausführen sollte  
- Sie können die folgenden Methoden verwenden, beim Verarbeiten der Eingabe in die **ScriptMain** Klasse:  
+ Sie können mithilfe der folgenden Methoden Eingaben in die **ScriptMain**-Klasse verarbeiten:  
   
--   Überschreiben Sie  **\<Inputbuffer > _ProcessInputRow** zum Verarbeiten der Daten in jeder Eingabezeile, beim Durchlaufen verändern.  
+-   Überschreiben Sie **\<inputbuffer>_ProcessInputRow**, um die Daten in jeder Eingabezeile beim Durchlaufen zu verarbeiten.  
   
--   Überschreiben Sie  **\<Inputbuffer > _ProcessInput** nur, wenn Sie etwas zusätzliche beim Durchlaufen der Eingabezeilen tun. (Sie müssen z. B. für testen **EndOfRowset** auf um andere Maßnahmen zu ergreifen, nachdem alle Zeilen verarbeitet wurden.) Rufen Sie  **\<Inputbuffer > _ProcessInputRow** um die zeilenverarbeitung auszuführen.  
+-   Überschreiben Sie **\<inputbuffer>_ProcessInput** nur dann, wenn Sie beim Durchlaufen der Eingabezeilen noch einen anderen Vorgang ausführen müssen. (Sie müssen beispielsweise **EndOfRowset** testen, um andere Maßnahmen zu ergreifen, nachdem alle Zeilen verarbeitet wurden.) Rufen Sie **\<inputbuffer>_ProcessInputRow** auf, um die Zeilenverarbeitung auszuführen.  
   
--   Überschreiben Sie **FinishOutputs** wenn etwas, um die Ausgaben erfordern, bevor sie geschlossen werden.  
+-   Überschreiben Sie **FinishOutputs**, wenn Sie einen Vorgang für die Ausgaben ausführen müssen, bevor sie geschlossen werden.  
   
- Die **ProcessInput** Methode wird sichergestellt, dass diese Methoden zu den entsprechenden Zeitpunkten aufgerufen werden.  
+ Die **ProcessInput**-Methode stellt sicher, dass diese Methoden zum jeweils richtigen Zeitpunkt aufgerufen werden.  
   
 ### <a name="processing-outputs"></a>Verarbeiten von Ausgaben  
  Skriptkomponenten, die als Quellen oder Transformationen konfiguriert sind, weisen mindestens eine Eingabe auf.  
@@ -159,36 +154,36 @@ public override void PreExecute()
   
 -   Benannte, typisierte, lesegeschützte Accessoreigenschaften für jede ausgewählte Ausgabespalte.  
   
--   Ein lesegeschütztes  **\<Spalte > _IsNull** -Eigenschaft für jede ausgewählte Ausgabespalte, die Sie verwenden können, um den Spaltenwert auf festgelegt **null**.  
+-   Eine lesegeschützte **\<column>_IsNull**-Eigenschaft für jede ausgewählte Ausgabespalte, die Sie zum Festlegen des Spaltenwerts auf **NULL** verwenden können.  
   
--   Ein **AddRow** Methode, um in den Ausgabepuffer eine leere neue Zeile hinzuzufügen.  
+-   Eine **AddRow**-Methode, um dem Ausgabepuffer eine neue leere Zeile hinzuzufügen.  
   
--   Ein **SetEndOfRowset** Methode, um das Datenflussmodul wissen, dass keine weiteren Datenpuffer erwartet werden. Es gibt auch eine **EndOfRowset** Funktion, um zu bestimmen, ob der aktuelle Puffer der letzte Datenpuffer ist. Diese Funktionen ist in der Regel nicht erforderlich, wenn Sie in implementierten eingabeverarbeitungsmethoden verwenden die **UserComponent** Basisklasse.  
+-   Eine **SetEndOfRowset**-Methode, um dem Datenflussmodul mitzuteilen, dass keine weiteren Datenpuffer erwartet werden. Außerdem gibt es eine **EndOfRowset**-Funktion, um zu bestimmen, ob der aktuelle Puffer der letzte Datenpuffer ist. Normalerweise benötigen Sie diese Funktionen nicht, wenn Sie die in der **UserComponent**-Basisklasse implementierten Eingabeverarbeitungsmethoden verwenden.  
   
 #### <a name="what-the-componentwrapper-project-item-provides"></a>Bereitstellungen durch das ‚ComponentWrapper’-Projektelement  
- Das ComponentWrapper-Projektelement enthält eine Klasse namens **UserComponent** abgeleitet, die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. Die **ScriptMain** Klasse, die in dem Sie Ihren benutzerdefinierten Code schreiben leitet sich wiederum von **UserComponent**. Die **UserComponent** Klasse enthält die folgenden Methoden:  
+ Das ComponentWrapper-Projektelement enthält eine Klasse mit dem Namen **UserComponent**, die von <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> abgeleitet wird. Die **ScriptMain**-Klasse, in die Sie Ihren benutzerdefinierten Code schreiben, wird wiederum von **UserComponent** abgeleitet. Die **UserComponent**-Klasse enthält die folgenden Methoden:  
   
--   Eine überschriebene Implementierung von der **PrimeOutput** Methode. Das Datenflussmodul ruft diese Methode vor **ProcessInput** zur Laufzeit, und es wird nur einmal aufgerufen. **PrimeOutput** übergibt die Verarbeitung an die **CreateNewOutputRows** Methode. Klicken Sie dann, wenn die Komponente eine Quelle handelt (d. h. die Komponente weist keine Eingaben), **PrimeOutput** Ruft die überschreibbare **FinishOutputs** -Methode und die Private **MarkOutputsAsFinished** Methode. Die **MarkOutputsAsFinished** Methodenaufrufe **SetEndOfRowset** für den letzten Ausgabepuffer.  
+-   Eine überschriebene Implementierung der **PrimeOutput**-Methode. Diese Methode wird vom Datenflussmodul zur Laufzeit nur einmal vor **ProcessInput** aufgerufen. **PrimeOutput** übergibt die Verarbeitung an die **CreateNewOutputRows**-Methode. Wenn die Komponente eine Quelle ist (d.h. die Komponente weist keine Eingaben auf), ruft **PrimeOutput** die überschreibbare **FinishOutputs**-Methode und die private **MarkOutputsAsFinished**-Methode auf. Die **MarkOutputsAsFinished**-Methode ruft **SetEndOfRowset** auf dem letzten Ausgabepuffer auf.  
   
--   Eine überschreibbare Implementierung von der **CreateNewOutputRows** Methode. Der Standardimplementierung ist leer. Dies ist die Methode, die Sie normalerweise überschreiben, um den benutzerdefinierten Datenverarbeitungscode zu schreiben.  
+-   Eine überschreibbare Implementierung der **CreateNewOutputRows**-Methode. Der Standardimplementierung ist leer. Dies ist die Methode, die Sie normalerweise überschreiben, um den benutzerdefinierten Datenverarbeitungscode zu schreiben.  
   
 #### <a name="what-your-custom-code-should-do"></a>Schritte, die der benutzerdefinierte Code ausführen sollte  
- Sie können die folgenden Methoden zum Verarbeiten von Ausgaben in den **ScriptMain** Klasse:  
+ Sie können mithilfe der folgenden Methoden Ausgaben in der **ScriptMain**-Klasse verarbeiten:  
   
--   Überschreiben Sie **CreateNewOutputRows** nur beim Hinzufügen und Auffüllen können Ausgabezeilen vor der Verarbeitung der Eingabezeilen. Beispielsweise können Sie **CreateNewOutputRows** in einer Datenquelle, jedoch in einer Transformation mit asynchronen Ausgaben, Sie sollten Aufrufen **AddRow** während oder nach der Verarbeitung der Eingabedaten.  
+-   Überschreiben Sie **CreateNewOutputRows** nur, wenn Sie Ausgabezeilen vor der Verarbeitung der Eingabezeilen hinzufügen und auffüllen können. Sie können beispielsweise **CreateNewOutputRows** in einer Quelle verwenden. In einer Transformation mit asynchronen Ausgaben sollten Sie jedoch **AddRow** während oder nach der Verarbeitung der Eingabedaten aufrufen.  
   
--   Überschreiben Sie **FinishOutputs** wenn etwas, um die Ausgaben erfordern, bevor sie geschlossen werden.  
+-   Überschreiben Sie **FinishOutputs**, wenn Sie einen Vorgang für die Ausgaben ausführen müssen, bevor sie geschlossen werden.  
   
- Die **PrimeOutput** Methode wird sichergestellt, dass diese Methoden zu den entsprechenden Zeitpunkten aufgerufen werden.  
+ Die **PrimeOutput**-Methode stellt sicher, dass diese Methoden zum jeweils richtigen Zeitpunkt aufgerufen werden.  
   
 ## <a name="postexecute-method"></a>‚PostExecute’-Methode  
- Überschreiben Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PostExecute%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>-Basisklasse immer dann, wenn Sie eine Verarbeitung nur einmal durchführen müssen, nachdem Sie die Datenzeilen verarbeitet haben. Beispielsweise sollten Sie in einer Datenquelle, schließen Sie die **System.Data.SqlClient.SqlDataReader** zum Laden von Daten in den Datenfluss verwendet haben.  
+ Überschreiben Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PostExecute%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>-Basisklasse immer dann, wenn Sie eine Verarbeitung nur einmal durchführen müssen, nachdem Sie die Datenzeilen verarbeitet haben. In einer Quelle können Sie beispielsweise den von Ihnen zum Laden von Daten in den Datenfluss verwendeten **System.Data.SqlClient.SqlDataReader** schließen.  
   
 > [!IMPORTANT]  
->  Die Auflistung der **ReadWriteVariables** steht nur in der **"PostExecute"** Methode. Sie können daher den Wert einer Paketvariablen nicht direkt inkrementieren, während Sie jede Datenzeile verarbeiten. Stattdessen den Wert einer lokalen Variablen, und legen Sie den Wert der Paketvariablen auf den Wert der lokalen Variablen in der **"PostExecute"** Methode auf, nachdem alle Daten wurden verarbeitet.  
+>  Die Auflistung von **ReadWriteVariables** ist nur in der **PostExecute**-Methode verfügbar. Sie können daher den Wert einer Paketvariablen nicht direkt inkrementieren, während Sie jede Datenzeile verarbeiten. Inkrementieren Sie stattdessen den Wert einer lokalen Variablen, und legen Sie den Wert der Paketvariablen auf den Wert der lokalen Variablen in der **PostExecute**-Methode fest, nachdem alle Daten verarbeitet wurden.  
   
 ## <a name="releaseconnections-method"></a>‚ReleaseConnections’-Methode  
- Quellen und Ziele müssen in der Regel mit einer externen Datenquelle verbinden. Überschreiben Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReleaseConnections%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>-Basisklasse, um die vorher in der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.AcquireConnections%2A>-Methode geöffnete Verbindung zu schließen und freizugeben.  
+ Quellen und Ziele müssen generell eine Verbindung mit einer externen Datenquelle herstellen. Überschreiben Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReleaseConnections%2A>-Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>-Basisklasse, um die vorher in der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.AcquireConnections%2A>-Methode geöffnete Verbindung zu schließen und freizugeben.  
   
 ```vb  
     Dim connMgr As IDTSConnectionManager100  
@@ -212,8 +207,7 @@ public override void ReleaseConnections()
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)   
- [Beim Codieren und Debuggen der Skriptkomponente](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
+ [Configuring the Script Component in the Script Component Editor (Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor)](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)   
+ [Codieren und Debuggen der Skriptkomponente](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
   
   
-

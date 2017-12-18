@@ -1,10 +1,13 @@
 ---
 title: Statistik | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 10/11/2017
-ms.prod: sql-server-2016
+ms.date: 11/20/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: statistics
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-statistics
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,21 +30,63 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b64fe249a6fb8d1c619f9e63ecb2cd7af4494c17
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 39ed8dd07bab5c83f60eaee420bb0e494f5dda85
+ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="statistics"></a>Statistik
-  Der Abfrageoptimierer verwendet Statistiken zum Erstellen von Abfrageplänen, die die Abfrageleistung verbessern. Bei den meisten Abfragen generiert der Abfrageoptimierer automatisch die notwendigen Statistiken für einen hochwertigen Abfrageplan. In einigen Fällen müssen Sie weitere Statistiken erstellen oder den Abfrageentwurf ändern, um optimale Ergebnisse zu erzielen. Dieses Thema enthält eine Erläuterung von Statistikkonzepten sowie Richtlinien zur effektiven Verwendung von Abfrageoptimierungsstatistiken.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Der Abfrageoptimierer verwendet Statistiken zum Erstellen von Abfrageplänen, die die Abfrageleistung verbessern. Bei den meisten Abfragen generiert der Abfrageoptimierer automatisch die notwendigen Statistiken für einen hochwertigen Abfrageplan. In einigen Fällen müssen Sie weitere Statistiken erstellen oder den Abfrageentwurf ändern, um optimale Ergebnisse zu erzielen. Dieses Thema enthält eine Erläuterung von Statistikkonzepten sowie Richtlinien zur effektiven Verwendung von Abfrageoptimierungsstatistiken.  
   
 ##  <a name="DefinitionQOStatistics"></a> Komponenten und Konzepte  
 ### <a name="statistics"></a>Statistik  
  Statistiken zur Abfrageoptimierung sind Objekte, die statistische Informationen über die Verteilung von Werten in Spalten einer Tabelle oder indizierten Sicht enthalten. Der Abfrageoptimierer verwendet diese Statistiken, um die *Kardinalität* oder Anzahl von Zeilen im Abfrageergebnis zu schätzen. Diese *Kardinalitätsschätzungen* ermöglichen es dem Abfrageoptimierer, einen hochwertigen Abfrageplan zu erstellen. Beispielsweise kann der Abfrageoptimierer Kardinalitätsschätzungen verwenden, um statt des ressourcenintensiveren Index Scan-Operators den Index Seek-Operator auszuwählen und auf diese Weise die Abfrageleistung zu verbessern.  
   
- Jedes Statistikobjekt wird für eine Liste mit mindestens einer Tabellenspalte erstellt und enthält ein Histogramm, das die Verteilung von Werten in der ersten Spalte anzeigt. Statistikobjekte, die sich auf mehrere Spalten beziehen, enthalten außerdem statistische Informationen über die spaltenübergreifende Korrelation von Werten. Diese Korrelationsstatistiken oder *Dichten*werden von der Anzahl unterschiedlicher Zeilen mit Spaltenwerten abgeleitet. Weitere Informationen zu Statistikobjekten finden Sie unter [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).  
+ Jedes Statistikobjekt wird für eine Liste mit mindestens einer Tabellenspalte erstellt und enthält ein *Histogramm*, das die Verteilung von Werten in der ersten Spalte anzeigt. Statistikobjekte, die sich auf mehrere Spalten beziehen, enthalten außerdem statistische Informationen über die spaltenübergreifende Korrelation von Werten. Diese Korrelationsstatistiken oder *Dichten*werden von der Anzahl unterschiedlicher Zeilen mit Spaltenwerten abgeleitet. 
+
+#### <a name="histogram"></a>Histogramm  
+Ein **Histogramm** misst die Häufigkeit des Vorkommens für jeden unterschiedlichen Wert in einem Dataset. Der Abfrageoptimierer berechnet ein Histogramm für die Spaltenwerte in der ersten Schlüsselspalte des Statistikobjekts und wählt die Spaltenwerte aus, indem statistische Zeilenstichproben entnommen werden oder indem ein vollständiger Scan aller Zeilen in der Tabelle oder Sicht ausgeführt wird. Wenn das Histogramm anhand einer Gruppe von Zeilenstichproben erstellt wird, handelt es sich bei der gespeicherten Gesamtzahl von Zeilen und unterschiedlichen Werten um Schätzungen, die keine ganzen Zahlen sein müssen.
+
+> [!NOTE]
+> Histogramme werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nur für eine einzige Spalte erstellt, nämlich für die erste der Schlüsselspalten des Statistikobjekts.
   
+Zum Erstellen des Histogramms sortiert der Abfrageoptimierer die Spaltenwerte, berechnet die Anzahl der Werte, die den einzelnen unterschiedlichen Spaltenwerten entsprechen, und aggregiert die Spaltenwerte dann in maximal 200 zusammenhängenden Histogrammschritten. Jeder Histogrammschritt umfasst einen Bereich von Spaltenwerten gefolgt von einem oberen Spaltengrenzwert. Der Bereich enthält alle möglichen Spaltenwerte zwischen den Begrenzungswerten, ohne die Begrenzungswerte selbst. Der niedrigste der sortierten Spaltenwerte ist der obere Grenzwert für den ersten Histogrammschritt.
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt das **Histogramm** aus den sortierten Spaltenwerten in drei Schritten:
+
+- **Initialisierung des Histogramms:** Im ersten Schritt wird eine Wertesequenz verarbeitet, die am Anfang der sortierten Menge beginnt, und bis zu 200 Werte von *range_high_key*, *equal_rows*, *range_rows*, und *distinct_range_rows* werden erfasst (*range_rows* und *distinct_range_rows* sind während dieses Schritts immer 0). Der erste Schritt ist abgeschlossen, wenn alle Eingaben erschöpft sind oder 200 Werte gefunden wurden. Weitere Informationen finden Sie unter [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md). 
+- **Scannen mit Bucketzusammenführung:** Jeder zusätzliche Wert aus der führenden Spalte des Statistikschlüssels wird im zweiten Schritt in sortierter Reihenfolge verarbeitet. Jeder nachfolgende Wert wird entweder zum letzten Bereich hinzugefügt, oder es wird am Ende ein neuer Bereich erstellt (dies ist möglich, da die Eingabewerte sortiert sind). Wenn ein neuer Bereich erstellt wird, wird ein Paar der vorhandenen benachbarten Bereiche zu einem einzelnen Bereich reduziert. Dieses Bereichspaar wird ausgewählt, um den Verlust von Informationen zu minimieren. Diese Methode verwendet einen Algorithmus für die *maximale Differenz*, um die Anzahl von Schritten im Histogramm zu minimieren und gleichzeitig die Differenz zwischen den Begrenzungswerten zu maximieren. Die Anzahl von Schritten nach dem Reduzieren von Bereichen bleibt in diesem Schritt bei 200.
+- **Konsolidierung des Histogramms:** Im dritten Schritt können weitere Bereiche reduziert werden, wenn keine erhebliche Menge an Informationen verloren geht. Die Anzahl von Histogrammschritten kann geringer sein als die Anzahl unterschiedlicher Werte, auch bei Spalten mit weniger als 200 Grenzpunkten. Wenn jede Spalte mehr als 200 eindeutige Werte enthält, kann das Histogramm daher weniger als 200 Schritte enthalten. Für eine Spalte, die nur aus eindeutigen Werten besteht, enthält das konsolidierte Histogramm mindestens drei Schritte.
+
+> [!NOTE]
+> Wenn das Histogramm mithilfe eines Beispiels statt mit der Option „Fullscan“ erstellt wurde, werden die Werte von *equal_rows*, *range_rows*, *distinct_range_rows* und *average_range_rows* geschätzt und müssen keine ganzen Zahlen sein.
+
+Das folgende Diagramm zeigt ein Histogramm mit sechs Schritten. Der Bereich links vom ersten oberen Grenzwert ist der erste Schritt.
+  
+![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
+  
+Für jeden der vorherigen Histogrammschritt gilt:
+-   Eine fett formatierte Zeile stellt den oberen Grenzwert (*range_high_key*) und die Häufigkeit des Vorkommens (*equal_rows*) dar.  
+  
+-   Der einfarbige Bereich links von *range_high_key* stellt den Bereich der Spaltenwerte und die durchschnittliche Häufigkeit des Vorkommens der einzelnen Spaltenwerte (*average_range_rows*) dar. *average_range_rows* ist für den ersten Histogrammschritt immer 0.  
+  
+-   Gepunktete Linien stellen die als Stichprobe entnommenen Werte dar, die zum Schätzen der Gesamtanzahl der unterschiedlichen Werte im Bereich (*distinct_range_rows*) verwendet werden, sowie die Gesamtanzahl der Werte im Bereich (*range_rows*). Der Abfrageoptimierer verwendet *range_rows* und *distinct_range_rows*, um *average_range_rows* zu berechnen. Die als Stichprobe entnommenen Werte werden nicht gespeichert.   
+  
+#### <a name="density-vector"></a>Dichtevektor  
+Die **Dichte** enthält Informationen zur Anzahl von Duplikaten in einer bestimmten Spalte oder Spaltekombination und wird als 1/(Anzahl der unterschiedlichen Werte) berechnet. Der Abfrageoptimierer verwendet Dichten, um Kardinalitätsschätzungen für Abfragen zu erweitern, die mehrere Spalten aus derselben Tabelle oder indizierten Sicht zurückgeben. Der Dichtevektor enthält eine Dichte für jedes Präfix von Spalten im Statistikobjekt. 
+
+> [!NOTE]
+> Die Häufigkeit enthält Informationen über das Auftreten der einzelnen unterschiedlichen Werte in der ersten Schlüsselspalte des Statistikobjekts und wird als Zeilenanzahl · Dichte berechnet. In Spalten mit eindeutigen Werten kann eine maximale Häufigkeit von 1 gefunden werden.
+
+Wenn ein Statistikobjekt beispielsweise die Schlüsselspalten `CustomerId`, `ItemId` und `Price` enthält, wird die Dichte für jedes der folgenden Spaltenpräfixe berechnet:
+  
+|Spaltenpräfix|Dichte berechnet für|  
+|---|---|
+|(CustomerId)|Zeilen mit übereinstimmenden Werten für CustomerId|  
+|(CustomerId, ItemId)|Zeilen mit übereinstimmenden Werten für CustomerId und ItemId|  
+|(CustomerId, ItemId, Price)|Zeilen mit übereinstimmenden Werten für CustomerId, ItemId und Price| 
+
 ### <a name="filtered-statistics"></a>Gefilterte Statistiken  
  Gefilterte Statistiken können die Abfrageleistung für Abfragen verbessern, bei denen aus klar definierten Teilmengen von Daten ausgewählt wird. Gefilterte Statistiken verwenden ein Filterprädikat, um die Teilmenge von Daten auszuwählen, die in der Statistik enthalten ist. Sorgfältig entworfene gefilterte Statistiken können den Abfrageausführungsplan im Vergleich zu Tabellenstatistiken verbessern. Weitere Informationen zum Filterprädikat finden Sie unter [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md). Weitere Informationen zum Zeitpunkt der Erstellung von gefilterten Statistiken finden Sie im Abschnitt [Zeitpunkt der Erstellung von Statistiken](#CreateStatistics) in diesem Thema.  
   
@@ -53,7 +98,7 @@ ms.lasthandoff: 11/09/2017
   
  Erstellt der Abfrageoptimierer Statistiken als Ergebnis der Verwendung der AUTO_CREATE_STATISTICS-Option, beginnt der Statistikname mit `_WA`. Mithilfe der folgenden Abfrage können Sie bestimmen, ob der Abfrageoptimierer Statistiken für eine Abfrageprädikatsspalte erstellt hat.  
   
-```tsql  
+```t-sql  
 SELECT OBJECT_NAME(s.object_id) AS object_name,  
     COL_NAME(sc.object_id, sc.column_id) AS column_name,  
     s.name AS statistics_name  
@@ -147,7 +192,7 @@ Wenn eine der folgenden Bedingungen zutrifft, können Sie die Erstellung von Sta
   
  Zum Erstellen von Dichten, die für Kardinalitätsschätzungen hilfreich sind, müssen die Spalten im Abfrageprädikat einem der Spaltenpräfixe in der Statistikobjektdefinition entsprechen. Im Folgenden wird beispielsweise aus den Spalten `LastName`, `MiddleName`und `FirstName`ein Objekt für eine Statistik für mehrere Spalten erstellt.  
   
-```tsql  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.stats  
@@ -174,7 +219,7 @@ GO
   
  Der Abfrageoptimierer kann die gefilterte Statistik für `BikeWeights` verwenden, um den Abfrageplan für die folgende Abfrage zu verbessern, bei der alle Fahrräder ausgewählt werden, deren Gewicht größer ist als `25`.  
   
-```tsql  
+```t-sql  
 SELECT P.Weight AS Weight, S.Name AS BikeName  
 FROM Production.Product AS P  
     JOIN Production.ProductSubcategory AS S   
@@ -268,7 +313,7 @@ Um die Kardinalitätsschätzungen für Variablen und Funktionen zu verbessern, b
   
      Durch die folgende gespeicherte Prozedur `Sales.GetRecentSales` wird beispielsweise der Wert des Parameters `@date` geändert, wenn `@date` auf NULL festgelegt ist.  
   
-    ```tsql  
+    ```t-sql  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL  
@@ -287,7 +332,7 @@ Um die Kardinalitätsschätzungen für Variablen und Funktionen zu verbessern, b
   
      Wenn der erste Aufruf der gespeicherten Prozedur `Sales.GetRecentSales` für den Parameter `@date` NULL übergibt, kompiliert der Abfrageoptimierer die gespeicherte Prozedur mit der Kardinalitätsschätzung für `@date = NULL`, obwohl das Abfrageprädikat nicht mit `@date = NULL`aufgerufen wird. Diese Kardinalitätsschätzung kann deutlich von der Anzahl der Zeilen im tatsächlichen Abfrageergebnis abweichen. Folglich könnte der Abfrageoptimierer einen suboptimalen Abfrageplan auswählen. Um dies zu vermeiden, können Sie die gespeicherte Prozedur wie folgt in zwei Prozeduren unterteilen:  
   
-    ```tsql  
+    ```t-sql  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID ( 'Sales.GetNullRecentSales', 'P') IS NOT NULL  
@@ -317,7 +362,7 @@ Um die Kardinalitätsschätzungen für Variablen und Funktionen zu verbessern, b
   
  Bei einigen Anwendungen könnte es zu lange dauern, die Abfrage bei jeder Ausführung neu zu kompilieren. Der `OPTIMIZE FOR`-Abfragehinweis kann selbst dann hilfreich sein, wenn Sie die `RECOMPILE`-Option nicht verwenden. Sie können der gespeicherten Prozedur „Sales.GetRecentSales“ z.B. eine `OPTIMIZE FOR`-Option hinzufügen, um ein bestimmtes Datum anzugeben. Im folgenden Beispiel wird der Prozedur „Sales.GetRecentSales“ `OPTIMIZE FOR`-Option hinzugefügt.  
   
-```tsql  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL  
@@ -349,6 +394,6 @@ GO
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [Erstellen gefilterter Indizes](../../relational-databases/indexes/create-filtered-indexes.md)   
- [Steuern des Verhaltens der automatischen Statistikaktualisierung (AUTO_UPDATE_STATISTICS) in SQL Server](http://support.microsoft.com/help/2754171)
-  
+ [Controlling Autostat (AUTO_UPDATE_STATISTICS) behavior in SQL Server (Steuern des Verhaltens der automatischen Statistikaktualisierung (AUTO_UPDATE_STATISTICS) in SQL Server)](http://support.microsoft.com/help/2754171) [STATS_DATE (Transact-SQL)](../../t-sql/functions/stats-date-transact-sql.md)   
+ [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
  

@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung mit einer Access-Datenquelle (SQL Server-Import / Export-Assistent) | Microsoft Docs
+title: Herstellen einer Verbindung mit einer Access-Datenquelle (SQL Server-Import/Export-Assistent) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 06/20/2017
 ms.prod: sql-non-specified
@@ -8,39 +8,37 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 71bb3914e31259bc95a1116c2db03708c0442e8c
-ms.contentlocale: de-de
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: bfecde5790f25c254428d53ec613b968d7d3efd9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Herstellen einer Verbindung mit einer Access-Datenquelle (SQL Server-Import / Export-Assistent)
-Dieses Thema veranschaulicht das Herstellen von Verbindungen ein **Microsoft Access** Datenquelle aus der **wählen Sie eine Datenquelle** oder **wählen Sie ein Ziel** auf der Seite der SQL Server-Import / Export-Assistenten.
+# <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Herstellen einer Verbindung mit einer Access-Datenquelle (SQL Server-Import/Export-Assistent)
+In diesem Artikel wird erläutert, wie Sie eine Verbindung mit einer **Microsoft Access**-Datenquelle über die Seiten **Datenquelle auswählen** oder **Ziel auswählen** des SQL Server-Import/Export-Assistenten herstellen.
 
-Der folgende Screenshot zeigt eine Beispielverbindung mit einer Microsoft Access-Datenbank. In diesem Beispiel müssen Sie einen Benutzernamen und Kennwort eingeben, da die Zieldatenbank eine Informationsdatei nicht verwendet.
+Der folgende Screenshot zeigt eine Beispielverbindung mit einer Microsoft Access-Datenbank. In diesem Beispiel müssen Sie keinen Benutzernamen und kein Kennwort eingeben, da die Zieldatenbank keine Informationsdatei für die Arbeitsgruppe verwendet.
 
 ![Herstellen einer Verbindung mit Access](../../integration-services/import-export-data/media/connect-to-access.jpg)
 
-## <a name="options-to-specify"></a>Optionen zum Festlegen
+## <a name="options-to-specify"></a>Anzugebende Optionen
 
 > [!NOTE]
-> Die Verbindungsoptionen für diesen Datenanbieter sind identisch, ob der Zugriff auf die Quelle oder Ziel ist. D. h. die Optionen finden Sie unter sind für beide die **wählen Sie eine Datenquelle** und **wählen Sie ein Ziel** Seiten des Assistenten.
+> Die Verbindungsoptionen für diesen Datenanbieter bleiben stets unverändert – egal, ob Access die Quelle oder das Ziel ist. Das bedeutet, dass die angezeigten Optionen auf den Seiten **Datenquelle auswählen** und **Ziel auswählen** des Assistenten gleich sind.
 
 **Datenquelle**  
-Die Liste der Datenanbieter kann mehrere Einträge für Microsoft Access enthalten. Wählen Sie die neueste installierte Version oder die Version, die der Access-Version entspricht, die die Datenbank erstellt.
+Die Liste der Datenanbieter kann mehrere Einträge für Microsoft Access enthalten. Wählen Sie die neueste installierte Version oder die Version aus, die der Version von Access entspricht, mit der die Datenbankdatei erstellt wurde.
 
-|Datenquelle|Office-version|
+|Datenquelle|Office-Version|
 |-------|-------|
 |Microsoft Access (Microsoft.ACE.OLEDB.16.0)|Office 2016|
 |Microsoft Access (Microsoft.ACE.OLEDB.15.0)|Office 2013|
@@ -48,66 +46,65 @@ Die Liste der Datenanbieter kann mehrere Einträge für Microsoft Access enthalt
 |Microsoft Access (Microsoft Jet-Datenbankmodul)|Office-Versionen vor Office 2007|
 
 > [!IMPORTANT]
-> Sie müssen möglicherweise zusätzliche Dateien für die Verbindung mit Access-Datenbanken herunterladen und installieren. Finden Sie unter [erhalten Sie die Dateien müssen Sie für die Verbindung für den Zugriff auf](#officeDownloads) auf dieser Seite finden Sie weitere Informationen.
+> Sie müssen möglicherweise zusätzliche Dateien herunterladen und installieren, um eine Verbindung mit Access-Datenbanken herzustellen. Weitere Informationen finden Sie im Abschnitt [Herunterladen von Dateien zum Herstellen einer Verbindung mit Access](#officeDownloads) weiter unten auf dieser Seite.
 
  **Dateiname**  
-Geben Sie den Pfad und Namen für die Access-Datei. Beispielsweise **"c:"\\MyData.mdb** für eine Datei auf dem lokalen Computer oder  **\\ \\Sales\\Datenbank\\Northwind.mdb** für eine Datei auf einer Netzwerkfreigabe. Oder klicken Sie auf **Durchsuchen**. 
+Geben Sie den Pfad und den Dateinamen für die Access-Datei an. Beispielsweise **C:\\MyData.mdb** für eine Datei auf dem lokalen Computer oder **\\\\Sales\\Database\\Northwind.mdb** für eine Datei auf einer Netzwerkfreigabe. Oder klicken Sie auf **Durchsuchen**. 
 
  >   [!NOTE] 
- > Wenn Sie auf **Durchsuchen** , suchen Sie die Access-Datei, die **öffnen** Dialogfeld Feld Filter für Dateien mit dem älteren. MDB-Format und Datei-Erweiterung standardmäßig. Der Datenanbieter kann jedoch auch Dateien mit der neueren öffnen. Formate ACCDB und Erweiterung.
+ > Wenn Sie auf **Durchsuchen** klicken, um die Access-Datei zu suchen, filtert das Dialogfeld **Öffnen** standardmäßig automatisch nach Dateien mit dem älteren Format bzw. der älteren Erweiterung MDB. Der Datenanbieter kann jedoch auch Dateien mit dem neueren Format bzw. der neueren Erweiterung ACCDB öffnen.
   
  **Durchsuchen**  
  Suchen Sie die Datenbankdatei mithilfe des Dialogfelds **Öffnen**.  
   
  **Benutzername**  
-Wenn eine Informationsdatei der Datenbank zugeordnet ist, geben Sie einen gültigen Benutzernamen ein.  
+Wenn eine Informationsdatei für die Arbeitsgruppe der Datenbank zugeordnet ist, geben Sie einen gültigen Benutzernamen ein.  
   
  **Kennwort**  
-Wenn eine Informationsdatei der Datenbank zugeordnet ist, geben Sie das Kennwort des Benutzers hier ein.
+Wenn eine Informationsdatei für die Arbeitsgruppe der Datenbank zugeordnet ist, geben Sie ein Benutzerkennwort ein.
  
-Wenn die Datenbank mit einem einzigen Kennwort für alle Benutzer geschützt ist, finden Sie unter [wird die Datenbankdatei ein Kennwort geschützt?](#database_password).
+Wenn die Datenbank mit einem einzigen Kennwort für alle Benutzer geschützt ist, finden Sie weitere Informationen unter [Ist die Datenbankdatei kennwortgeschützt?](#database_password).
   
  **Erweitert**  
-Legen Sie erweiterte Optionen, z. B. das Datenbankkennwort oder eine nicht standardmäßige Informationsdatei der **Datenlinkeigenschaften** (Dialogfeld).  
+Geben Sie im Dialogfeld **Datenlinkeigenschaften** erweiterte Optionen an, z.B. das Datenbankkennwort oder eine nicht dem Standard entsprechende Informationsdatei für die Arbeitsgruppe.  
 
-## <a name="i-dont-see-access-in-the-list-of-data-sources"></a>Ich nicht Zugriff in der Liste der Datenquellen angezeigt.
-Wenn Sie den Zugriff in der Liste der Datenquellen nicht angezeigt wird, werden Sie die 64-Bit-Assistent ausgeführt? Die Anbieter für Excel und Access sind in der Regel 32-Bit- und nicht in der 64-Bit-Assistent angezeigt. Führen Sie stattdessen den 32-Bit-Assistenten.
+## <a name="i-dont-see-access-in-the-list-of-data-sources"></a>Access wird in der Liste der Datenquellen nicht angezeigt
+Wenn Access nicht in der Liste der Datenquellen angezeigt wird, sollten Sie überprüfen, ob Sie die 64-Bit-Version des Assistenten verwenden. Die Anbieter für Excel und Access sind in der Regel 32-Bit-Versionen und werden in der 64-Bit-Version des Assistenten nicht angezeigt. Führen Sie stattdessen die 32-Bit-Version des Assistenten aus.
 
 > [!NOTE]
-> Um die 64-Bit-Version von den SQL Server-Import / Export-Assistenten verwenden zu können, müssen Sie SQL Server installieren. SQL Server Data Tools (SSDT) und SQL Server Management Studio (SSMS) sind 32-Bit-Anwendungen, und nur 32-Bit-Dateien, einschließlich der 32-Bit-Version des Assistenten installieren.
+> Sie müssen SQL Server installieren, um die 64-Bit-Version des Import/Export-Assistenten von SQL Server verwenden zu können. SQL Server Data Tools (SSDT) und SQL Server Management Studio (SSMS) sind 32-Bit-Anwendungen und installieren daher auch nur 32-Bit-Dateien, einschließlich der 32-Bit-Version des Assistenten.
 
-## <a name="officeDownloads"></a>Rufen Sie die Verbindung für den Zugriff auf benötigte Dateien ab  
-Sie müssen möglicherweise herunterladen die Konnektivitätskomponenten für Microsoft Office-Datenquellen, einschließlich Access und Excel, sofern diese nicht bereits installiert sind. Die neueste Version der datenkonnektivitätskomponenten für Access und Excel-Dateien hier herunterladen: [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
+## <a name="officeDownloads"></a>Herunterladen von Dateien zum Herstellen einer Verbindung mit Access  
+Sie müssen möglicherweise die Konnektivitätskomponenten für Microsoft Office-Datenquellen (einschließlich Access und Excel) herunterladen, wenn diese nicht bereits installiert sind. Laden Sie die neueste Version der Konnektivitätskomponenten für Access- und Excel-Dateien hier herunter: [Microsoft Access Database Engine 2016 – Weitervertreibbare Komponente](https://www.microsoft.com/download/details.aspx?id=54920).
   
-Die neueste Version der Komponenten kann von früheren Versionen von Access erstellte Dateien öffnen.
+Die aktuelle Version der Komponenten dient zum Öffnen von Dateien, die in früheren Versionen von Access erstellt wurden.
 
-Verfügt der Computer eine 32-Bit-Version von Office, dann müssen Sie die 32-Bit-Version der Komponenten zu installieren, und außerdem müssen Sie sicherstellen, dass Sie das Paket im 32-Bit-Modus ausführen.
+Wenn der Computer über eine 32-Bit-Version von Office verfügt, müssen Sie die 32-Bit-Version der Komponenten installieren. Sie müssen zudem sicherstellen, dass Sie das Paket im 32-Bit-Modus ausführen.
 
-Wenn Sie ein Office 365-Abonnement verfügen, stellen Sie sicher, dass Sie Access-Datenbank-Engine 2016 Redistributable und nicht die Microsoft Access 2016 Runtime herunterladen. Wenn Sie das Installationsprogramm ausführen, sehen Sie eine Fehlermeldung angezeigt, dass Sie die Download-Seite-an-Seite mit den Office-Klick-und-Los-Komponenten installieren können. Um diese Fehlermeldung umgehen, führen Sie die Installation im stillen Modus, indem Sie ein Eingabeaufforderungsfenster öffnen und Ausführen der. EXE-Datei, die Sie heruntergeladen, mit der `/quiet` wechseln. Beispiel:
+Wenn Sie über ein Office 365-Abonnement verfügen, stellen Sie sicher, dass Sie die weitervertreibbare Komponente von Access Database Engine 2016 und nicht Microsoft Access 2016 Runtime herunterladen. Wenn Sie das Installationsprogramm ausführen, wird möglicherweise eine Fehlermeldung angezeigt, dass Sie den Download nicht parallel mit Klick-und-Los-Komponenten von Office installieren können. Führen Sie die Installation zur Umgehung dieser Fehlermeldung im stillen Modus durch, indem Sie ein Eingabeaufforderungsfenster öffnen und die EXE-Datei, die Sie heruntergeladen haben, mit der Befehlszeilenoption `/quiet` ausführen. Beispiel:
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-## <a name="database_password"></a>Wird die Datenbankdatei ein Kennwort geschützt?
-In einigen Fällen eine Access-Datenbank ein Kennwort geschützt ist, aber eine Informationsdatei ist nicht verwenden. Alle Benutzer müssen dasselbe Kennwort angeben, aber Sie müssen einen Benutzernamen eingeben. Um ein Datenbankkennwort bereitzustellen, führen Sie folgende Schritte aus.
+## <a name="database_password"></a> Ist die Datenbankdatei kennwortgeschützt?
+In einigen Fällen ist eine Access-Datenbank kennwortgeschützt, verwendet jedoch keine Informationsdatei für die Arbeitsgruppe. Alle Benutzer müssen das gleiche Kennwort angeben, es muss jedoch kein Benutzername eingegeben werden. Führen Sie zum Bereitstellen eines Datenbankkennworts die folgenden Schritte aus:
 
-1.  Auf der **wählen Sie eine Datenquelle** oder **wählen Sie ein Ziel** auf die **erweitert** die Schaltfläche, um die **Datenlinkeigenschaften** (Dialogfeld).  
-2.  In der **Datenlinkeigenschaften** wählen Sie im Dialogfeld die **alle** Registerkarte.  
-3.  Wählen Sie in der Liste der Eigenschaften und Werte, **Jet OLEDB: Database Password**.   
+1.  Klicken Sie auf der Seite **Datenquelle auswählen** oder **Ziel auswählen** auf die Schaltfläche **Erweitert**, um das Dialogfeld **Datenlinkeigenschaften** zu öffnen.  
+2.  Klicken Sie im Dialogfeld **Datenlinkeigenschaften** auf die Registerkarte **Alle**.  
+3.  Klicken Sie in der Liste der Eigenschaften und Werte auf **Jet OLEDB:Database Password** (Jet-OLEDB: Datenbankkennwort).   
     
-    ![Geben Sie Zugriffskennwort, Bildschirm 1](../../integration-services/import-export-data/media/specify-access-password-screen-1.jpg) 
-4.  Klicken Sie auf **Wert bearbeiten** So öffnen die **Eigenschaftswert bearbeiten** (Dialogfeld).  
+    ![Access-Kennwort festlegen, Screenshot 1](../../integration-services/import-export-data/media/specify-access-password-screen-1.jpg) 
+4.  Klicken Sie auf **Wert bearbeiten**, um das Dialogfeld **Eigenschaftswert bearbeiten** zu öffnen.  
     
-    ![Geben Sie Zugriffskennwort, (Bildschirm 2)](../../integration-services/import-export-data/media/specify-access-password-screen-2.jpg)
-5.  In der **Eigenschaftswert bearbeiten** Dialogfeld Geben Sie das Datenbankkennwort.
-6.  Klicken Sie auf **OK** in jedem Dialogfeld, um wieder die **wählen Sie eine Datenquelle** oder **wählen Sie ein Ziel** Seite des Assistenten und den Vorgang fortzusetzen.
+    ![Access-Kennwort festlegen, Screenshot 2](../../integration-services/import-export-data/media/specify-access-password-screen-2.jpg)
+5.  Geben Sie im Dialogfeld **Eigenschaftswert bearbeiten** das Datenbankkennwort ein.
+6.  Klicken Sie in jedem Dialogfeld auf **OK**, um zur Seite **Datenquelle auswählen** oder **Ziel auswählen** des Assistenten zurückzukehren und fortzufahren.
 
-## <a name="keep-your-autonumber-values-when-you-export-from-access"></a>Behalten Sie beim Exportieren von Access AutoWert-Werten
-Damit vorhandene Identity-Werte in den Quelldaten in eine Identity-Spalte in der Zieltabelle eingefügt werden können, wählen Sie die **IDENTITY_INSERT aktivieren** -Option in der **Spaltenzuordnungen** (Dialogfeld). Standardmäßig ist nicht die Identity-Zielspalte in der Regel vorhandene Werte einfügen kann. Zum Anzeigen der **Spaltenzuordnungen** wählen Sie im Dialogfeld **Zuordnungen bearbeiten** Sie beim Erreichen der **wählen Quelltabellen und-Sichten** Seite des Assistenten. Um diese Seiten anzuzeigen, finden Sie unter [wählen Quelltabellen und-Sichten](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) und [Spaltenzuordnungen](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).
+## <a name="keep-your-autonumber-values-when-you-export-from-access"></a>Beibehalten der automatisch nummerierten Werte beim Exportieren aus Access
+Wählen Sie die Option **IDENTITY_INSERT aktivieren** im Dialogfeld **Spaltenzuordnungen** aus, um zu ermöglichen, dass in den Quelldaten vorhandene Identitätswerte in eine Identitätsspalte in der Zieltabelle eingefügt werden können. Standardmäßig ist das Eingeben von vorhandenen Werten in der Identitätsspalte des Ziels nicht zulässig. Klicken Sie auf **Zuordnungen bearbeiten**, wenn Sie die Seite **Quelltabellen und -sichten auswählen** des Assistenten erreichen, um das Dialogfeld **Spaltenzuordnungen** anzuzeigen. Weitere Informationen dazu, wie Sie diese Seiten anzeigen können, finden Sie unter [Select Source Tables and Views (Quelltabellen und -sichten auswählen)](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) und [Column Mappings (Spaltenzuordnungen)](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).
 
 Wenn Ihre vorhandenen Primärschlüssel in einer Identity-Spalte, einer automatisch nummerierten Spalte oder einem Äquivalent enthalten sind, müssen Sie diese Option auswählen, um die vorhandenen Primärschlüsselwerte beizubehalten. Andernfalls weist die Identity-Zielspalte in der Regel neue Werte zu.
 
 ## <a name="see-also"></a>Siehe auch
-[Wählen Sie eine Datenquelle](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
-[Wählen Sie ein Ziel](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-
+[Auswählen einer Datenquelle](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
+[Auswählen eines Ziels](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

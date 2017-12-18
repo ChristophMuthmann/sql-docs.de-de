@@ -1,101 +1,101 @@
 ---
-title: SQL Serverintegration Services-Dezentrales Skalieren Manager | Microsoft Docs
+title: SQL Server Integration Services Scale Out-Manager | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/18/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: scale-out
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 96748296acd1b2f5ba98558335fece9637eadb87
-ms.contentlocale: de-de
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 84fe58d4dc7894728c43cb19d17d3444b5b84820
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="integration-services-scale-out-manager"></a>Integration Services Dezentrales Skalieren Manager
+# <a name="integration-services-scale-out-manager"></a>Integration Services Scale Out-Manager
 
-Scale-Out-Manager ist ein Management-Tool, das Ihnen ermöglicht, Ihre vollständige Horizontales Skalieren SSIS-Topologie an einem zentralen Ort zu verwalten. Entfernt die Last auf mehreren Computern ausgeführt und der Umgang mit t-SQL-Befehle. 
+Scale Out-Manager ist ein Verwaltungstool, mit dem Sie Ihre vollständige SSIS Scale Out-Topologie von einem einzigen Ort aus verwalten können. Sie müssen nicht mehr an mehreren Computern arbeiten und keine TSQL-Befehle mehr verwenden. 
 
-Es gibt zwei Möglichkeiten zum Auslösen der Scale-Out-Manager.
+Es gibt zwei Möglichkeiten, um Scale Out-Manager zu starten.
 
-## <a name="1-open-scale-out-manager-from-sql-server-management-studio"></a>1. Öffnen Sie Dezentrales Skalieren Manager von SQL Server Management Studio
-Öffnen Sie SQL Server Management Studio, und Verbinden mit SQL Server-Instanz des Scale-Out-Master.
+## <a name="1-open-scale-out-manager-from-sql-server-management-studio"></a>1. Öffnen Sie Scale Out-Manager über SQL Server Management Studio.
+Öffnen Sie SQL Server Management Studio, und stellen Sie eine Verbindung mit der SQL Server-Instanz von Scale Out-Master her.
 
-Mit der rechten Maustaste **SSISDB** im Objekt-Explorer, und wählen **verwalten horizontal skalieren...** . 
-![Verwalten für horizontales Skalieren](media/manage-scale-out.PNG)
+Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf **SSISDB**, und wählen Sie **Scale Out verwalten...** aus. ![Scale Out verwalten](media/manage-scale-out.PNG)
 
 > [!NOTE]
-> Es wird empfohlen, zum Ausführen von SQL Server Management Studio als Administrator als Teil der Verwaltungsvorgänge horizontal skalieren, z. B. "horizontales hochskalieren Worker hinzufügen" Administratorberechtigungen benötigen.
+> Es wird empfohlen, SQL Server Management Studio als Administrator auszuführen, da manche der Scale Out-Verwaltungsvorgänge (z.B. das Hinzufügen des Scale Out-Workers) Administratorrechte erfordern.
 
 
-## <a name="2-open-scale-out-manager-by-runing-ismanagerexe-directly"></a>2. Öffnen Sie Scale-Out-Manager, indem auf ISManager.exe direkt
+## <a name="2-open-scale-out-manager-by-runing-ismanagerexe-directly"></a>2. Öffnen von Scale Out-Manager, indem „ISManager.exe“ direkt ausgeführt wird
 
-ISManager.exe sucht unter %SystemDrive%\Programme\Microsoft Dateien (x86) \Microsoft SQL Server\140\DTS\Binn\Management. Klicken Sie mit der rechten Maustaste auf **ISManager.exe** , und wählen Sie "Als Administrator ausführen". 
+„ISManager.exe“ befindet sich unter %SystemDrive%\Programme (x86)\Microsoft SQL Server\140\DTS\Binn\Management. Klicken Sie mit der rechten Maustaste auf **ISManager.exe**, und wählen Sie „Als Administrator ausführen“ aus. 
 
-Nachdem er geöffnet wird, müssen Sie den Sql Server-Namen Scale-Out-Master eingeben und herstellen, wenn sie vor dem Verwalten Ihrer horizontal skalieren.
+Nach dem Öffnen müssen Sie den SQL-Servernamen von Scale Out-Master eingeben und eine Verbindung herstellen, bevor Sie Scale Out verwalten können.
 
-![Verwaltungsportal – Connect](media/portal-connect.PNG)
+![Portal: Verbindung herstellen](media/portal-connect.PNG)
 
-Scale-Out-Manager bietet verschiedene Funktionen wie unten beschrieben. 
+Im Folgenden werden die verschiedenen Funktionen von Scale Out-Manager beschrieben. 
 
-## <a name="enable-scale-out"></a>Aktivieren Sie für horizontales Skalieren
-Nach dem Herstellen einer Verbindung mit SQL Server, wenn horizontal skalieren nicht aktiviert ist, können Sie die Schaltfläche "Aktivieren", um ihn zu aktivieren klicken Sie auf.
+## <a name="enable-scale-out"></a>Aktivieren von Scale Out
+Wenn Scale Out deaktiviert ist, können Sie zum Aktivieren auf „Aktivieren“ klicken, nachdem Sie eine Verbindung mit SQL Server hergestellt haben.
 
-![Portal aktivieren für horizontales Skalieren](media/portal-enable-scale-out.PNG) 
-## <a name="view-scale-out-master-status"></a>Scale-Out-Master-Anzeigestatus
-Der Status der Scale-Out-Master wird angezeigt, auf die **Dashboard** Seite.
+![Portal: Aktivieren von Scale Out](media/portal-enable-scale-out.PNG) 
+## <a name="view-scale-out-master-status"></a>Anzeigen des Status von Scale Out-Master
+Der Status von Scale Out-Master wird auf der **Dashboard**-Seite angezeigt.
 
-![Projektportal-Dashboards](media/portal-dashboard.PNG)
-## <a name="view-scale-out-worker-status"></a>Scale-Out-Worker-Anzeigestatus
-Der Status der Scale-Out-Worker wird angezeigt, auf die **Worker-Manager** Seite. Sie können für jeden Arbeitsthread auf den einzelnen Status anzeigen klicken.
+![Portal: Dashboard](media/portal-dashboard.PNG)
+## <a name="view-scale-out-worker-status"></a>Anzeigen des Status des Scale Out-Workers
+Der Status des Scale Out-Workers wird auf der Seite **Worker-Manager** angezeigt. Sie können auf jeden Worker klicken, um den jeweiligen Status anzuzeigen.
 
-![Portal-Worker-Manager](media/portal-worker-manager.PNG)
+![Portal: Worker-Manager](media/portal-worker-manager.PNG)
 
-## <a name="add-scale-out-worker"></a>Dezentrales Skalieren Worker hinzufügen
-Um einen Maßstab Out Worker hinzuzufügen, klicken Sie auf die Schaltfläche "+" am unteren Rand Scale-Out-Worker-Liste. 
+## <a name="add-scale-out-worker"></a>Hinzufügen des Scale Out-Workers
+Klicken Sie auf „+“ im unteren Bereich der Liste „Scale Out-Worker“, um einen Scale Out-Worker hinzuzufügen. 
 
-Geben Sie den Computernamen des der Skalierung Out Worker Sie hinzufügen möchten und klicken Sie auf "Überprüfen". Scale-Out-Manager überprüft, ob der aktuelle Benutzer Zugriff auf den Zertifikatspeicher auf den Computern der Scale-Out-Master "und" Scale-Out-Worker verfügt.
+Geben Sie den Computernamen des Scale Out-Workers ein, den Sie hinzufügen möchten, und klicken Sie auf „Überprüfen“. Der Scale Out-Manager überprüft, ob der aktuelle Benutzer Zugriff auf die Zertifikatspeicher der Computer des Scale Out-Masters und des Scale Out-Workers hat.
 
-![Verbinden von Arbeitsthreads](media/connect-worker.PNG)
+![Verbindung herstellen: Worker](media/connect-worker.PNG)
 
-Wenn die Überprüfung erfolgreich ist, versucht Scale-Out-Manager, die Worker-Datei "App.config" gelesen und erhalten den Fingerabdruck des Zertifikats des Arbeitsthreads. Weitere Informationen finden Sie unter [Scale-Out-Worker](integration-services-ssis-scale-out-worker.md). Ist dies nicht der Arbeitsthread Config-Datei lesen, gibt es zwei alternative Methoden zur Bereitstellung des Zertifikats Worker. 
+Wenn die Überprüfung erfolgreich ist, versucht der Scale Out-Manager, die Konfigurationsdatei des Workers zu lesen und den Zertifikatfingerabdruck des Workers abzurufen. Weitere Informationen finden Sie unter [Scale Out-Worker](integration-services-ssis-scale-out-worker.md). Wenn die Konfigurationsdatei des Workers nicht gelesen werden kann, gibt es zwei Alternativen, um das Workerzertifikat bereitzustellen. 
 
-Sie können entweder den Fingerabdruck des Zertifikats Worker direkt eingeben 
+Sie können entweder den Fingerabdruck des Workerzertifikats direkt eingeben 
 
-![Das Workerzertifikat 1](media/portal-cert1.PNG)
+![Workerzertifikat (1)](media/portal-cert1.PNG)
 
-oder geben Sie die Zertifikatdatei an. 
+oder die Zertifikatdatei bereitstellen. 
 
-![Das Workerzertifikat 2](media/portal-cert2.PNG)
+![Workerzertifikat (2)](media/portal-cert2.PNG)
 
-Nachdem Sie alle Informationen erfasst, gebe Scale-Out-Manager die Aktionen ausgeführt werden. Tyically, enthält es Zertifikatinstallation "," Worker Update der Serverkonfigurationsdatei "und" Worker-Dienst neu starten. 
+Nachdem alle Informationen erfasst wurden, stellt der Scale Out-Manager die Aktionen bereit, die ausgeführt werden sollen. Üblicherweise schließt dies die Installation des Zertifikats, ein Update der Konfigurationsdatei des Workers und einen Neustart des Workerdiensts ein. 
 
-![Portal hinzufügen 1 bestätigen](media/portal-add-confirm1.PNG)
+![Portal: Hinzufügen bestätigen (1)](media/portal-add-confirm1.PNG)
 
-Für den Fall, dass das workerzertifikat nicht zugänglich ist, müssen Sie selbst manuell aktualisieren und den Worker-Dienst neu.
+Falls auf den Worker nicht zugegriffen werden kann, müssen Sie diesen manuell aktualisieren und den Workerdienst neu starten.
 
-![Portal hinzufügen 2 bestätigen](media/portal-add-confirm2.PNG)
+![Portal: Hinzufügen bestätigen (2)](media/portal-add-confirm2.PNG)
 
-Klicken Sie auf das Kontrollkästchen bestätigen, und starten Sie die Scale-Out-Worker hinzufügen.
+Aktivieren Sie das Kontrollkästchen „Bestätigen“, und beginnen Sie damit, den Scale Out-Worker hinzuzufügen.
 
-## <a name="delete-scale-out-worker"></a>Dezentrales Skalieren Worker löschen
-Um eine Skala, Worker zu löschen, wählen Sie die Skalierung Out Arbeitskraft, und klicken Sie auf der "-" am unteren Rand der Liste Scale-Out-Worker-Schaltfläche.
+## <a name="delete-scale-out-worker"></a>Löschen eines Scale Out-Workers
+Wählen Sie einen Scale Out-Worker, und klicken Sie im unteren Bereich der Liste „Scale Out-Worker“ auf „–“, um einen Scale Out-Worker zu löschen.
 
 
-## <a name="enabledisable-scale-out"></a>Horizontales Skalieren aktivieren/deaktivieren
-Zum Aktivieren oder Deaktivieren einer Skala Out Worker, wählen Sie die Skalierung, Worker, und klicken Sie auf die "Workerrollen aktivieren" oder "Workerrollen deaktivieren". Der Worker-Status für den Scale-Out-Manager entsprechend geändert werden, wenn sich der Arbeitsthread nicht offline ist.
+## <a name="enabledisable-scale-out"></a>Aktivieren/Deaktivieren von Scale Out
+Wählen Sie einen Scale Out-Worker aus, und klicken Sie auf die Schaltfläche „Worker aktivieren“ oder „Worker deaktivieren“, um einen Scale Out-Worker zu aktivieren oder zu deaktivieren. Der Workerstatus des Scale Out-Managers ändert sich entsprechend, wenn der Worker nicht offline ist.
 
-## <a name="edit-scale-out-worker-description"></a>Scale-Out-Worker-Beschreibung bearbeiten
-Um die Beschreibung des eine Skala, Worker zu bearbeiten, wählen Sie die Skalierung, Worker, und klicken Sie auf die Schaltfläche "Bearbeiten". Nachdem Sie die Bearbeitung abgeschlossen haben, klicken Sie auf die Schaltfläche "Speichern".
+## <a name="edit-scale-out-worker-description"></a>Bearbeiten der Beschreibung des Scale Out-Workers
+Wählen Sie einen Scale Out-Worker aus, und klicken Sie auf die Schaltfläche „Bearbeiten“, um die Beschreibung eines Scale Out-Workers zu bearbeiten. Klicken Sie auf die Schaltfläche „Speichern“, wenn Sie die Bearbeitung abgeschlossen haben.
 
-![Portal speichern Worker](media/portal-save-worker.PNG)
-
+![Portal: Worker speichern](media/portal-save-worker.PNG)
 

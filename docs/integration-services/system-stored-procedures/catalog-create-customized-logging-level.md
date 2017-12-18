@@ -1,5 +1,5 @@
 ---
-title: Catalog.create_customized_logging_level | Microsoft Docs
+title: catalog.create_customized_logging_level | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 20b3ba0a-126f-49bf-b70f-61b2a0fcb750
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 126fa0af811033bb0be035b1f4c550620c696bb3
-ms.contentlocale: de-de
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 94b0b41b2f6d7e87bccbd53a58a50c44c0ee29e7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="catalogcreatecustomizedlogginglevel"></a>Catalog.create_customized_logging_level
+# <a name="catalogcreatecustomizedlogginglevel"></a>catalog.create_customized_logging_level
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Erstellt einen neuen benutzerdefinierten Protokolliergrad. Weitere Informationen über benutzerdefinierte Protokolliergrade, finden Sie unter [Integration Services &#40; SSIS &#41; Protokollierung](../../integration-services/performance/integration-services-ssis-logging.md).  
+  Erstellt einen neuen benutzerdefinierten Protokolliergrad. Weitere Informationen zu Protokolliergraden finden Sie unter [Integration Services (SSIS) Logging (SSIS-Protokollierung (SQL Server Integration Services))](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,20 +39,20 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @level_name =] *Ebenenname*  
- Der Name für die neue vorhandenen benutzerdefinierten Protokolliergrads.  
+ [ @level_name = ] *level_name*  
+ Der Name für den neuen benutzerdefinierten Protokolliergrad.  
   
- Die *Ebenenname* ist **vom Datentyp nvarchar(128)**.  
+ Das Argument *level_name* ist vom Typ **nvarchar(128)**.  
   
- [ @level_description =] *Level_description*  
- Die Beschreibung für die neue vorhandenen benutzerdefinierten Protokolliergrads.  
+ [ @level_description = ] *level_description*  
+ Die Beschreibung für den neuen benutzerdefinierten Protokolliergrad.  
   
- Die *Level_description* ist **nvarchar(1024)**.  
+ Das Argument *level_description* ist vom Typ **nvarchar(1024)**.  
   
- [ @profile_value =] *Profile_value*  
- Die Statistiken, die die neue sollen Protokolliergrad, melden Sie sich an.  
+ [ @profile_value = ] *profile_value*  
+ Die Statistiken, die durch den neuen Protokolliergrad protokolliert werden sollen.  
   
- Gültige Werte für Statistiken zu zählen den folgende: Diese Werte entsprechen den Werten für die **Statistiken** auf der Registerkarte die **angepasst Logging Level Management** (Dialogfeld).  
+ Die gültigen Werte für Statistiken werden im Folgenden aufgeführt. Diese Werte entsprechen denjenigen auf der Registerkarte **Statistik** des Dialogfelds **Verwaltung des angepassten Protokolliergrads**.  
   
 -   Ausführung = 0  
   
@@ -62,26 +60,26 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
   
 -   Leistung = 2  
   
- Die *Profile_value* ist ein **"bigint"**.  
+ Das Argument *profile_value* ist vom Typ **bigint**.  
   
- [ @event_value =] *Event_value*  
- Die Ereignisse, die den neuen gewünschten Protokolliergrad, melden Sie sich an.  
+ [ @event_value = ] *event_value*  
+ Die Ereignisse, die durch den neuen Protokolliergrad protokolliert werden sollen.  
   
- Gültige Werte für Ereignisse sind die folgenden. Diese Werte entsprechen den Werten für die **Ereignisse** auf der Registerkarte die **angepasst Logging Level Management** (Dialogfeld).  
+ Die gültigen Werte für Ereignisse werden im Folgenden aufgeführt. Diese Werte entsprechen denjenigen auf der Registerkarte **Ereignisse** des Dialogfelds **Verwaltung des angepassten Protokolliergrads**.  
   
 |Ereignisse ohne Ereigniskontext|Ereignisse mit Ereigniskontext|  
 |----------------------------------|-------------------------------|  
-|OnVariableValueChanged = 0<br /><br /> OnExecutionStatusChanged = 1<br /><br /> OnPreExecute = 2<br /><br /> OnPostExecute = 3<br /><br /> OnPreValidate = 4<br /><br /> OnPostValidate = 5<br /><br /> OnWarning = 6<br /><br /> OnInformation = 7<br /><br /> OnError = 8<br /><br /> OnTaskFailed = 9<br /><br /> OnProgress = 10<br /><br /> OnQueryCancel = 11<br /><br /> OnBreakpointHit = 12<br /><br /> OnCustomEvent = 13<br /><br /> Diagnose = 14<br /><br /> DiagnosticEx = 15<br /><br /> NonDiagnostic = 16|OnVariableValueChanged_IncludeContext = 32<br /><br /> OnExecutionStatusChanged_IncludeContext = 33<br /><br /> OnPreExecute_IncludeContext = 34<br /><br /> OnPostExecute_IncludeContext = 35<br /><br /> OnPreValidate_IncludeContext = 36<br /><br /> OnPostValidate_IncludeContext = 37<br /><br /> OnWarning_IncludeContext = 38<br /><br /> OnInformation_IncludeContext = 39<br /><br /> OnError_IncludeContext = 40<br /><br /> OnTaskFailed_IncludeContext = 41<br /><br /> OnProgress_IncludeContext = 42<br /><br /> OnQueryCancel_IncludeContext = 43<br /><br /> OnBreakpointHit_IncludeContext = 44<br /><br /> OnCustomEvent_IncludeContext = 45<br /><br /> Diagnostic_IncludeContext = 46<br /><br /> DiagnosticEx_IncludeContext = 47<br /><br /> NonDiagnostic_IncludeContext = 48|  
+|OnVariableValueChanged = 0<br /><br /> OnExecutionStatusChanged = 1<br /><br /> OnPreExecute = 2<br /><br /> OnPostExecute = 3<br /><br /> OnPreValidate = 4<br /><br /> OnPostValidate = 5<br /><br /> OnWarning = 6<br /><br /> OnInformation = 7<br /><br /> OnError = 8<br /><br /> OnTaskFailed = 9<br /><br /> OnProgress = 10<br /><br /> OnQueryCancel = 11<br /><br /> OnBreakpointHit = 12<br /><br /> OnCustomEvent = 13<br /><br /> Diagnostic = 14<br /><br /> DiagnosticEx = 15<br /><br /> NonDiagnostic = 16|OnVariableValueChanged_IncludeContext = 32<br /><br /> OnExecutionStatusChanged_IncludeContext = 33<br /><br /> OnPreExecute_IncludeContext = 34<br /><br /> OnPostExecute_IncludeContext = 35<br /><br /> OnPreValidate_IncludeContext = 36<br /><br /> OnPostValidate_IncludeContext = 37<br /><br /> OnWarning_IncludeContext = 38<br /><br /> OnInformation_IncludeContext = 39<br /><br /> OnError_IncludeContext = 40<br /><br /> OnTaskFailed_IncludeContext = 41<br /><br /> OnProgress_IncludeContext = 42<br /><br /> OnQueryCancel_IncludeContext= 43<br /><br /> OnBreakpointHit_IncludeContext = 44<br /><br /> OnCustomEvent_IncludeContext = 45<br /><br /> Diagnostic_IncludeContext = 46<br /><br /> DiagnosticEx_IncludeContext = 47<br /><br /> NonDiagnostic_IncludeContext = 48|  
   
- Die *Event_value* ist ein **"bigint"**.  
+ Das Argument *event_value* ist vom Typ **bigint**.  
   
- [ @level_id =] *Level_id* OUT  
- Die Id des neuen benutzerdefinierten Protokolliergrads.  
+ [ @level_id = ] *level_id* OUT  
+ Die ID des neuen benutzerdefinierten Protokolliergrads.  
   
- Die *Level_id* ist ein **"bigint"**.  
+ Das Argument *level_id* ist vom Typ **bigint**.  
   
 ## <a name="remarks"></a>Hinweise  
- Zum Kombinieren mehrerer Werte in Transact-SQL für die *Profile_value* oder *Event_value* Argument, führen Sie dieses Beispiel. Zum Erfassen der OnError (8) und DiagnosticEx (15) Ereignisse, die Formel zum Berechnen *Event_value* ist `2^8 + 2^15 = 33024`.  
+ Gehen Sie zum Kombinieren mehrerer Werte in Transact-SQL für das Argument *profile_value* oder *event_value* wie im folgenden Beispiel vor. Verwenden Sie zur Erfassung der Ereignisse OnError (8) und DiagnosticEx (15) als Berechnungsformel für *event_value* die Formel `2^8 + 2^15 = 33024`.  
   
 ## <a name="return-codes"></a>Rückgabecodes  
  0 (Erfolg)  
@@ -101,7 +99,6 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
 ## <a name="errors-and-warnings"></a>Fehler und Warnungen  
  Die folgende Liste beschreibt Bedingungen, unter denen die gespeicherte Prozedur fehlschlägt.  
   
--   Der Benutzer besitzt nicht die erforderlichen Berechtigungen.  
+-   Der Benutzer verfügt nicht über die erforderlichen Berechtigungen.  
   
   
-

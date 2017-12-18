@@ -1,5 +1,5 @@
 ---
-title: Azure Data Lake-Speicher-Dateisystemtask | Microsoft Docs
+title: "Azure Data Lake Store-Task „Dateisystem“ | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 08/22/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,42 +18,40 @@ author: Lingxi-Li
 ms.author: lingxl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
-ms.openlocfilehash: cbc72958f992e0b5cae12cdfc8c0996378f9708c
-ms.contentlocale: de-de
-ms.lasthandoff: 10/11/2017
-
+ms.openlocfilehash: dddc479cd3518f6627d3fed8f28d1894b4d8eb37
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="azure-data-lake-store-file-system-task"></a>Azure Data Lake-Speicher-Dateisystemtask
+# <a name="azure-data-lake-store-file-system-task"></a>Azure Data Lake Store-Task „Dateisystem“
 
-Der Azure Data Lake-Speicher-Dateisystemtask ermöglicht Benutzern das Ausführen von verschiedenen Dateisystemvorgänge auf [Azure Data Lake-Speicher (ADLS)](https://azure.microsoft.com/services/data-lake-store/).
+Der Azure Data Lake Store-Task „Dateisystem“ ermöglicht Benutzern das Ausführen verschiedener Dateisystemvorgänge für [Azure Data Lake Store (ADLS)](https://azure.microsoft.com/services/data-lake-store/).
 
-Der Azure Data Lake-Speicher-Dateisystemtask ist eine Komponente von der [SQL Server Integration Services (SSIS) Feature Pack für Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
+Der Azure Data Lake Store-Task „Dateisystem“ ist eine Komponente von [SQL Server Integration Services (SSIS) Feature Pack für Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
-## <a name="configure-the-azure-data-lake-store-file-system-task"></a>Konfigurieren des Tasks Dateisystem Azure Data Lake-Speicher
+## <a name="configure-the-azure-data-lake-store-file-system-task"></a>Konfigurieren des Azure Data Lake Store-Tasks „Dateisystem“
 
-Um eine Azure Data Lake-Speicher File System Task eines Pakets hinzuzufügen, ziehen Sie es von SSIS-Toolbox auf den designerzeichnungsbereich. Klicken Sie dann doppelklicken Sie auf die Aufgabe oder mit der rechten Maustaste in der Aufgabe und wählen Sie **bearbeiten**geöffnet der **Azure Data Lake Store Dateisystem Task-Editor** (Dialogfeld).
+Ziehen Sie den Azure Data Lake Store-Task „Dateisystem“ von der SSIS-Toolbox in die Designercanvas, um diesen zu einem Paket hinzuzufügen. Doppelklicken Sie anschließend auf den Task, oder klicken Sie mit der rechten Maustaste darauf, und klicken Sie auf **Bearbeiten**, um das Dialogfeld **Azure Data Lake Store File System Task Editor** (Azure Data Lake Store-Editor für den Task „Dateisystem“) zu öffnen.
 
-Die **Vorgang** Eigenschaft gibt an, das System Dateiübertragungsvorgang ausführen. Wählen Sie eine der folgenden Vorgänge aus:
+Mit der **Operation**-Eigenschaft wird der auszuführende Dateisystemvorgang angegeben. Wählen Sie einen der folgenden Vorgänge aus:
 
 - **CopyToADLS:** Hochladen von Dateien in ADLS.
-- **CopyFromADLS:** Herunterladen von Dateien aus ADLS.
+- **CopyFromADLS:** Herunterladen von Dateien von ADLS.
 
-## <a name="configure-the-properties-for-the-operation"></a>Konfigurieren Sie die Eigenschaften für den Vorgang
-Für jeden Vorgang müssen Sie einen Azure Data Lake-Verbindungs-Manager angeben.
+## <a name="configure-the-properties-for-the-operation"></a>Konfigurieren der Eigenschaften für den Vorgang
+Sie müssen für jeden Vorgang einen Azure Data Lake-Verbindungs-Manager angeben.
 
-Hier sind die Eigenschaften für jeden Vorgang spezifisch:
+Im Folgenden werden die Eigenschaften der jeweiligen Vorgänge beschrieben:
 
 ### <a name="copytoadls"></a>CopyToADLS
-- **LocalDirectory:** gibt das lokale Quellverzeichnis der hochzuladenden Dateien enthält.
-- **FileNamePattern:** legt einen Dateinamensfilter für Quelldateien. Nur Dateien, deren Name mit das angegebene Muster übereinstimmt, werden hochgeladen. Platzhalter `*` und `?` werden unterstützt.
-- **SearchRecursively:** gibt an, ob in das Quellverzeichnis für hochzuladenden Dateien rekursiv durchsuchen.
-- **AzureDataLakeDirectory:** gibt das Zielverzeichnis ADLS zum Hochladen von Dateien auf.
-- **FileExpiry:** gibt ein Ablaufdatum und die Uhrzeit für die Dateien hochgeladen werden, um ADLS. Lassen Sie diese Eigenschaft leer, um anzugeben, dass die Dateien nie ablaufen.
+- **LocalDirectory:** gibt das lokale Quellverzeichnis an, das die hochzuladenden Dateien enthält
+- **FileNamePattern:** legt einen Dateinamensfilter für Quelldateien fest Nur Dateien, deren Namen dem angegebenen Muster entsprechen, werden hochgeladen. Die Platzhalterzeichen `*` und `?` werden unterstützt.
+- **SearchRecursively:** gibt an, ob das Quellverzeichnis rekursiv nach hochzuladenden Dateien durchsucht werden soll
+- **AzureDataLakeDirectory:** gibt das ADLS-Zielverzeichnis an, in das Dateien hochgeladen werden
+- **FileExpiry:** gibt ein Ablaufdatum und die Uhrzeit an, an dem bzw. zu der die Dateien in ADLS hochgeladen werden Geben Sie für diese Eigenschaft keinen Wert an, um festzulegen, dass Dateien über kein Ablaufdatum verfügen.
 
 ### <a name="copyfromadls"></a>CopyFromADLS
-- **AzureDataLakeDirectory:** gibt das Verzeichnis der ADLS-Quelle enthält die Dateien heruntergeladen.
-- **SearchRecursively:** gibt an, ob in das Quellverzeichnis für Herunterzuladende Dateien rekursiv durchsuchen.
-- **LocalDirectory:** gibt das Zielverzeichnis zum Speichern von heruntergeladener Dateien an.
-
+- **AzureDataLakeDirectory:** gibt das ADLS-Quellverzeichnis an, das die herunterzuladenden Dateien enthält
+- **SearchRecursively:** gibt an, ob das Quellverzeichnis rekursiv nach herunterzuladenden Dateien durchsucht werden soll
+- **LocalDirectory:** gibt das Zielverzeichnis an, in dem heruntergeladene Dateien gespeichert werden
