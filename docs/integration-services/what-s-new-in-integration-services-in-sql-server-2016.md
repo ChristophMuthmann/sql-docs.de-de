@@ -2,7 +2,7 @@
 title: Neuigkeiten in Integration Services in SQL Server 2016 | Microsoft-Dokumentation
 ms.custom: SQL2016_New_Updated
 ms.date: 09/28/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: integration-services
@@ -17,14 +17,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 984807a0a75321b529c5e2519da71b81bed8a788
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 36f418950cfa6d475c911c05fd9737fcecf62aa6
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Neuigkeiten in Integration Services in SQL Server 2016
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 In diesem Artikel werden Funktionen beschrieben, die in SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] hinzugefügt oder aktualisiert wurden. Es werden außerdem Funktionen erwähnt, die für SQL Server 2016 dem [Azure Feature Pack für SQL Server Integration Services (SSIS)](../integration-services/azure-feature-pack-for-integration-services-ssis.md) hinzugefügt oder in diesem aktualisiert wurden.  
 
@@ -206,7 +206,7 @@ Mit der Funktion für inkrementelle Paketbereitstellung können Sie ein oder meh
 ####  <a name="ErrorColumn"></a> Spaltennamen für Fehler im Datenfluss  
  Wenn Sie die Zeilen im Datenfluss, die einen Fehler enthalten umleiten, enthält die Ausgabe einen numerischen Bezeichner für die Spalte, in der der Fehler aufgetreten ist, sondern zeigt den Namen der Spalte nicht. Der Name der fehlerhaften Spalte kann auf verschiedenen Wegen gesucht oder angezeigt werden.  
   
--   Wenn Sie die Protokollierung konfigurieren, wählen Sie das Ereignis **DiagnosticEx** für die Protokollierung. Dieses Ereignis schreibt eine Spaltenzuordnung für den Datenfluss in das Protokoll. Sie können den Spaltennamen dann in dieser Spaltenzuordnung nachschlagen, und zwar mithilfe des von einer Fehlerausgabe erfassten Spaltenbezeichners. Weitere Informationen finden Sie unter [Error Handling in Data (Fehlerbehandlung in Datenflusskomponenten)](../integration-services/data-flow/error-handling-in-data.md).  
+-   Wenn Sie die Protokollierung konfigurieren, wählen Sie das Ereignis **DiagnosticEx** für die Protokollierung. Dieses Ereignis schreibt eine Spaltenzuordnung für den Datenfluss in das Protokoll. Sie können den Spaltennamen dann in dieser Spaltenzuordnung nachschlagen, und zwar mithilfe des von einer Fehlerausgabe erfassten Spaltenbezeichners. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../integration-services/data-flow/error-handling-in-data.md).  
   
 -   Im erweiterten Editor wird in den Eigenschaften einer Eingabe- oder Ausgabespalte einer Datenflusskomponente auch der Name der Upstreamspalte angezeigt.  
   

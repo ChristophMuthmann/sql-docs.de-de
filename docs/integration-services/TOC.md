@@ -73,6 +73,7 @@
 # [Bereitstellen von Paketen](packages/deploy-integration-services-ssis-projects-and-packages.md)
 # [Horizontale Hochskalierung](scale-out/integration-services-ssis-scale-out.md)
 
+# [Katalog und Server](catalog/integration-services-ssis-server-and-catalog.md)
 # [Dienst (Legacy)](../integration-services/service/integration-services-service-ssis-service.md)
 # [Sicherheit](../integration-services/security/security-overview-integration-services.md)
 # [Leistung](../integration-services/performance/monitor-running-packages-and-other-operations.md)

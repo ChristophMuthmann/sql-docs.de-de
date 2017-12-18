@@ -24,11 +24,11 @@ ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.workload: On Demand
-ms.openlocfilehash: 6860fb131bb645ca918f7095481776884c0f4f6f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5e0705c480157e7958b18ff8bdb6d996ae2f94ff
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="guidelines-for-online-index-operations"></a>Richtlinien für Onlineindexvorgänge
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,11 +103,11 @@ Für das Ausführen einer fortsetzbaren Neuerstellung eines Onlineindex gelten d
 - Wiederherstellen nach Fehlern bei der Indexneuerstellung (z.B. Datenbank-Failover oder wenn kein Speicherplatz mehr verfügbar war).
 - Wenn ein Indexvorgang angehalten wird, wird sowohl für den ursprünglichen Index als auch für den neu erstellten Index Speicherplatz benötigt, und beide müssen während des DML-Vorgangs aktualisiert werden.
 
-- Ermöglicht das Abschneiden von Abschneideprotokollen während eines Vorgangs zur Neuerstellung eines Index (dieser Vorgang kann für einen regulären Onlineindexvorgang nicht durchgeführt werden).
+- Ermöglicht das Abschneiden von Transaktionsprotokollen während einer Indexneuerstellung (dieser Vorgang kann nicht für einen regulären Onlineindexvorgang durchgeführt werden).
 - Die Option SORT_IN_TEMPDB=ON wird nicht unterstützt.
 
 > [!IMPORTANT]
-> Für die fortsetzbare Neuerstellung muss kein Abschneiden mit langer Ausführungsdauer geöffnet bleiben. Deswegen kann das Protokoll während dieses Vorgangs gekürzt werden, was eine bessere Verwaltung des Protokollspeicherplatzes gestattet. Mit dem neuen Entwurf haben wir es geschafft, dass notwendige Daten zusammen mit allen erforderlichen Verweisen für den Neustart des fortsetzbaren Vorgangs in einer Datenbank gehalten werden.
+> Für die fortsetzbare Neuerstellung muss keine Transaktion mit langer Ausführungsdauer geöffnet bleiben. Deswegen kann das Protokoll während dieses Vorgangs gekürzt werden, was eine bessere Verwaltung des Protokollspeicherplatzes gestattet. Mit dem neuen Entwurf haben wir es geschafft, dass notwendige Daten zusammen mit allen erforderlichen Verweisen für den Neustart des fortsetzbaren Vorgangs in einer Datenbank gehalten werden.
 >
 
 Im Allgemeinen besteht kein Leistungsunterschied zwischen fortsetzbaren und nicht fortsetzbaren Neuerstellungen von Onlineindizes. Wenn Sie einen fortsetzbaren Index aktualisieren, während ein Vorgang zur Indexneuerstellung unterbrochen ist:

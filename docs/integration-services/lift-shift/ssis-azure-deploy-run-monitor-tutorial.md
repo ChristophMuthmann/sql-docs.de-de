@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3391c69ccf0d3b31499d0cf18713847d3a88fc5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4bf9df198105549f481dda8472f7142533fa8f23
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Bereitstellen, Ausführen und Überwachen eines SSIS-Pakets in Azure
 Dieses Tutorial zeigt, wie ein SQL Server Integration Services-Projekt in der SSISDB-Katalogdatenbank auf einer Azure SQL-Datenbank bereitgestellt wird, ein Paket in Azure SSIS Integration Runtime ausgeführt wird und das ausgeführte Paket überwacht wird.
@@ -26,7 +26,7 @@ Dieses Tutorial zeigt, wie ein SQL Server Integration Services-Projekt in der SS
 
 Prüfen Sie, ob Sie über die Version 17.2 oder höher von SQL Server Management Studio verfügen, bevor Sie beginnen. Die neueste Version von SSMS können Sie unter [Herunterladen von SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) herunterladen.
 
-Vergewissern Sie sich auch, dass Sie die SSIS-Datenbank eingerichtet und eine Azure SSIS Integration Runtime bereitgestellt haben. Informationen dazu, wie SSIS in Azure bereitgestellt wird, finden Sie unter [Bereitstellen von SQL Server Integration Services-Paketen in Azure](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure).
+Vergewissern Sie sich auch, dass Sie die SSIS-Datenbank eingerichtet und eine Azure SSIS Integration Runtime bereitgestellt haben. Informationen dazu, wie SSIS in Azure bereitgestellt wird, finden Sie unter [Bereitstellen von SQL Server Integration Services-Paketen in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
 
 ## <a name="connect-to-the-ssisdb-database"></a>Herstellen einer Verbindung mit SSISDB
 
@@ -67,7 +67,7 @@ Verwenden Sie SQL Server Management Studio, um eine Verbindung mit dem SSIS-Kata
 
 2. Wählen Sie auf der Seite **Quelle auswählen** das vorhandene SSIS-Projekt aus, das bereitgestellt werden soll.
     -   Um eine von Ihnen erstellte Projektbereitstellungsdatei bereitzustellen, wählen Sie **Projektbereitstellungsdatei** aus, und geben Sie den Pfad für die ISPAC-Datei ein.
-    -   Um ein Projekt bereitzustellen, das sich in einem SSIS-Katalog befindet, wählen Sie **Integration Services-Katalog** aus, und geben Sie dann den Servernamen und den Pfad zum Projekt im Katalog ein.
+    -   Um ein Projekt bereitzustellen, das sich in einem SSIS-Katalog befindet, wählen Sie **Integration Services-Katalog** aus und geben dann den Servernamen und den Pfad zum Projekt im Katalog ein.
     -   Klicken Sie auf **Weiter**, um die Seite **Ziel auswählen** zu sehen.
   
 3.  Wählen Sie auf der Seite **Ziel auswählen** das Ziel für das Projekt aus.
@@ -79,7 +79,7 @@ Verwenden Sie SQL Server Management Studio, um eine Verbindung mit dem SSIS-Kata
     -   Sie können Ihre Auswahl ändern, indem Sie auf **Vorherige** klicken, oder indem Sie auf einen der Schritte im linken Bereich klicken.
     -   Klicken Sie auf **Bereitstellen**, um den Bereitstellungsprozess zu starten.
   
-5.  Nachdem der Bereitstellungsvorgang abgeschlossen ist, sollte die Seite **Ergebnisse** geöffnet werden. Diese Seite zeigt an, ob die einzelnen Aktionen erfolgreich ausgeführt wurden oder ob Fehler aufgetreten sind.
+5.  Nachdem der Bereitstellungsvorgang abgeschlossen ist, wird die Seite **Ergebnisse** geöffnet. Diese Seite zeigt an, ob die einzelnen Aktionen erfolgreich ausgeführt wurden oder ob Fehler aufgetreten sind.
     -   Ist die Aktion fehlerhaft, klicken Sie in der Spalte **Ergebnis** auf **Fehlgeschlagen**, um eine Erklärung über den Fehler anzuzeigen.
     -   Sie können auf **Bericht speichern** klicken, um die Ergebnisse in einer XML-Datei zu speichern.
     -   Klicken Sie auf **Schließen**, um den Assistenten zu beenden.
@@ -100,7 +100,7 @@ Um die Status der ausgeführten Integration Services-Vorgänge, wie Bereitstellu
 
 Sie können auch im Objekt-Explorer ein Paket auswählen, mit der rechten Maustaste darauf klicken, und dann auf **Berichte** > **Standardberichte** > **Alle Ausführungen** klicken.
 
-Weitere Informationen zum Überwachen von ausgeführten Paketen in SSMS finden Sie unter [Monitor Running Packages and Other Operations (Überwachen ausgeführter Pakete und anderer Vorgänge)](https://docs.microsoft.com/en-us/sql/integration-services/performance/monitor-running-packages-and-other-operations).
+Weitere Informationen zum Überwachen von ausgeführten Paketen in SSMS finden Sie unter [Monitor Running Packages and Other Operations (Überwachen ausgeführter Pakete und anderer Vorgänge)](https://docs.microsoft.com/sql/integration-services/performance/monitor-running-packages-and-other-operations).
 
 ## <a name="monitor-the-azure-ssis-integration-runtime"></a>Überwachen der Azure SSIS Integration Runtime
 
