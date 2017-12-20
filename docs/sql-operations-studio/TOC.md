@@ -1,5 +1,6 @@
 # [SQL Operations Studio (Vorschau)](what-is.md)
 # [Installieren](download.md)
+# [Versionsanmerkungen](release-notes.md)
 # Schnellstarts
 ## [Herstellen einer Verbindung mit SQL Server und Abfragen](quickstart-sql-server.md)
 ## [Herstellen einer Verbindung mit Azure SQL-Datenbank und Abfragen](quickstart-sql-database.md)
