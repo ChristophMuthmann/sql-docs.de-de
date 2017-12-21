@@ -1,7 +1,7 @@
-# [Installieren von Reporting Services](install-reporting-services.md)
+# [Installieren von Reporting Services 2017](install-reporting-services.md)
+## [Finden Sie den Product Key für Reporting Services 2017](find-reporting-services-product-key-ssrs.md)
 
-
-# [Install Reporting Services in native mode (Installieren von Reporting Services im einheitlichen Modus)](install-reporting-services-native-mode-report-server.md)  
+# [Installieren von Reporting Services 2016 im einheitlichen Modus](install-reporting-services-native-mode-report-server.md)  
 ## [Perform a Files-Only Installation of Reporting Services (Ausführen einer ausschließlichen Datei-Installation von Reporting Services)](files-only-installation-reporting-services.md)  
 ## [Install Reporting Services and Internet Information Services Side-by-Side (SSRS Native Mode)(Gleichzeitiges Installieren von Reporting Services und Internetinformationsdiensten (einheitlicher SSRS-Modus))](install-reporting-and-internet-information-services-side-by-side.md)  
 ## [Host a Report Server Database in a SQL Server Failover Cluster (Hosten einer Berichtsserver-Datenbank in einem SQL Server-Failovercluster)](host-a-report-server-database-in-a-sql-server-failover-cluster.md)  
@@ -29,7 +29,7 @@
 ### [Power BI Integration (Power BI-Integration)](power-bi-report-server-integration-configuration-manager.md)  
 
 
-# [Installieren des SharePoint-Modus von Reporting Services](install-reporting-services-sharepoint-mode.md)  
+# [Installieren Sie Reporting Services 2016 im SharePoint-Modus](install-reporting-services-sharepoint-mode.md)  
 ## [Supported Combinations of SharePoint and Reporting Services Server and Add-in (SQL Server 2016) (Unterstützte Kombinationen von SharePoint und Reporting Services-Server und -Add-In (SQL Server 2016))](supported-combinations-of-sharepoint-and-reporting-services-server.md)  
 ## [Where to find the SSRS add-in for SharePoint (Verfügbarkeit des SSRS-Add-Ins für SharePoint)](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
 ## [Install The First Report Server in SharePoint Mode (Installieren des ersten Berichtsservers im SharePoint-Modus)](install-the-first-report-server-in-sharepoint-mode.md)  
