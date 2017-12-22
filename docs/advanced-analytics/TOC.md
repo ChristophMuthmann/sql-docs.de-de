@@ -122,8 +122,6 @@
 
 ### [Vermeiden von Fehlern mit Benutzerpaketbibliotheken für R](r/packages-installed-in-user-libraries.md)
 
-### [Hinzufügen der SQLRUserGroup als Datenbankbenutzer](r/add-sqlrusergroup-to-database.md)
-
 ## Durchsuchen und Modellieren von Daten
 
 ### [R-Bibliotheken und -Datentypen](r/r-libraries-and-data-types.md)
@@ -155,7 +153,10 @@
 ### [Überlegungen zur Sicherheit der R-Laufzeitumgebung in SQL Server](r/security-considerations-for-the-r-runtime-in-sql-server.md)
 ### [Ändern des Benutzerkontenpools für SQL Server Machine Learning Services](r/modify-the-user-account-pool-for-sql-server-r-services.md)
 
+### [Hinzufügen der SQLRUserGroup als Datenbankbenutzer](r/add-sqlrusergroup-to-database.md)
+
 ### [Bereitstellen und Verarbeiten von Modellen mithilfe von Webdiensten](operationalization-with-mrsdeploy.md)
+
 ### [Verwalten und Überwachen von Machine Learning-Lösungen](r/managing-and-monitoring-r-solutions.md)
 ### [Ressourcenkontrolle bei Machine Learning Services](r/resource-governance-for-r-services.md)
 ### [Erstellen eines Ressourcenpools für Machine Learning](r/how-to-create-a-resource-pool-for-r.md)
