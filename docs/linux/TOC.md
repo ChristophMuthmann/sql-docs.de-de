@@ -100,6 +100,7 @@
 ### [Ubuntu](sample-unattended-install-ubuntu.md)
 
 # Ressourcen
+## [FAQ](sql-server-linux-faq.md)
 ## [Problembehandlung](sql-server-linux-troubleshooting-guide.md)
 ## [SQL Server Documentation (SQL Server-Dokumentation)](../sql-server/sql-server-technical-documentation.md)
 ## Partner
