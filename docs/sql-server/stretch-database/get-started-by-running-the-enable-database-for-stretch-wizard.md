@@ -184,7 +184,7 @@ Wenn Sie zum Auswählen zu migrierender Zeilen eine andere Art von Filterfunktio
   
 ##  <a name="KnownIssues"></a> Problembehandlung für den Assistenten  
  **Fehler beim Stretch-Datenbank-Assistenten.**  
- Wenn Stretch-Datenbank noch nicht auf Serverebene aktiviert ist und Sie den Assistenten ohne die Systemadministratorberechtigungen zum Aktivieren des Assistenten ausführen, tritt ein Fehler auf. Bitten Sie den Systemadministrator, Stretch-Datenbank auf der lokalen Serverinstanz zu aktivieren, und führen Sie den Assistenten dann erneut aus. Weitere Informationen finden Sie unter [Prerequisite: Permission to enable Stretch Database on the server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).  
+ Wenn Stretch-Datenbank noch nicht auf Serverebene aktiviert ist und Sie den Assistenten ohne die Systemadministratorberechtigungen zum Aktivieren des Assistenten ausführen, tritt ein Fehler auf. Bitten Sie den Systemadministrator, Stretch-Datenbank auf der lokalen Serverinstanz zu aktivieren, und führen Sie den Assistenten dann erneut aus. Weitere Informationen finden Sie unter [Voraussetzung: Die Berechtigung, Stretch-Datenbank auf einem Server zu aktivieren](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).  
   
 ## <a name="next-steps"></a>Nächste Schritte  
  Aktivieren Sie zusätzliche Tabellen für Stretch-Datenbank. Überwachen Sie die Datenmigration, und verwalten Sie für Stretch aktivierte Datenbanken und Tabellen.  

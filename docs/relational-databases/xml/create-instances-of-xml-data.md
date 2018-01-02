@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: acc794554646b0382f5cb0e0c60451e213746d16
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ec51663f65f5673888ef20ee462078e545848334
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-instances-of-xml-data"></a>Erstellen von Instanzen der XML-Daten
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie XML-Instanzen generiert werden.  
@@ -73,7 +73,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
  Standardmäßig verwirft der XML-Parser insignifikante Leerzeichen, wenn Zeichenfolgendaten in XML konvertiert werden, wenn eine der folgenden Bedingungen zutrifft:  
   
--   `The xml:space` -Attribut ist nicht für ein Element oder seine Vorgängerelemente definiert.  
+-   Das `xml:space`-Attribut ist nicht für ein Element oder seine Vorgängerelemente definiert.  
   
 -   Das `xml:space` -Attribut für ein Element oder eines seiner Vorgängerelemente weist den Standardwert auf.  
   

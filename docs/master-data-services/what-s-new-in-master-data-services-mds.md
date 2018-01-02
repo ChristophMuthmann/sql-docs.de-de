@@ -42,7 +42,7 @@ ms.lasthandoff: 12/04/2017
   
  Durch Leistungsverbesserungen können Sie größere Modelle erstellen, Daten effizienter laden und eine bessere Gesamtleistung erzielen. Dies umfasst die Verbesserung der Leistung für das Add-In für Microsoft, um die Ladezeiten von Daten zu verringern und es dem Add-In zu ermöglichen, größere Entitäten zu verarbeiten.  
   
- Weitere Informationen zum Add-In für Microsoft Excel finden Sie unter [Master Data Services Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
+ Weitere Informationen zum Add-In für Microsoft Excel finden Sie unter [Master Data Services-Add-In für Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
   
  Die folgenden Funktionsverbesserungen sind enthalten.  
   

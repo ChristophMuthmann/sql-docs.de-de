@@ -19,11 +19,11 @@ caps.latest.revision: "14"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: f55439476e962ab97c2e29a37524854fa52d819b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 571f4f13be8ddcfaf2bd1b4d649df0ef09ba6bfc
+ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Konfigurieren von SQL Server in einer Server Core-Installation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dieses Thema enthält Details zum Konfigurieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für eine Server Core-Installation.  
@@ -115,7 +115,7 @@ Diese Schritte müssen auf einem PC mit der Clientversion von Windows oder Windo
   
 7. Wählen Sie die Registerkarte **Hohe Verfügbarkeit (immer aktiviert)** aus.  
   
-8. Überprüfen Sie, ob das Feld Name des Windows-Failoverclusters den Namen des lokalen Failoverclusterknoten enthält. Wenn dieses Feld leer ist, unterstützt diese Serverinstanz AlwaysOn-Verfügbarkeitsgruppen aktuell nicht. Der lokale Computer ist kein Clusterknoten, der WSFC-Cluster wurde geschlossen oder diese Edition von [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] unterstützt keine AlwaysOn-Verfügbarkeitsgruppen.  
+8. Überprüfen Sie, ob das Feld Name des Windows-Failoverclusters den Namen des lokalen Failoverclusterknoten enthält. Wenn dieses Feld leer ist, unterstützt diese Serverinstanz AlwaysOn-Verfügbarkeitsgruppen aktuell nicht. Der lokale Computer ist kein Clusterknoten, der WSFC-Cluster wurde heruntergefahren oder diese Edition von [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] unterstützt keine AlwaysOn-Verfügbarkeitsgruppen.  
   
 9. Aktivieren Sie das Kontrollkästchen AlwaysOn-Verfügbarkeitsgruppen aktivieren, und klicken Sie auf OK.  
   

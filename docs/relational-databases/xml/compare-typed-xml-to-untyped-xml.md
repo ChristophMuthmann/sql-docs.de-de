@@ -32,11 +32,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1335222c16e955affee5237c0160afb058ebeea2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cf2185ff9c0aa70c97b4d067f4d58d5360b70948
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Vergleichen von typisiertem XML mit nicht typisiertem XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Sie können Variablen, Parameter und Spalten des **xml**-Datentyps erstellen. Optional können Sie eine Auflistung von XML-Schemas mit einer Variablen, einem Parameter oder einer Spalte vom Typ **xml** verknüpfen. In diesem Fall wird die Instanz des **xml** -Datentyps als *typisiert*bezeichnet. Anderenfalls wird die XML-Instanz als *nicht typisiert*bezeichnet.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
  Im folgenden Beispiel wird eine zweiteilige Benennungskonvention zum Angeben des Namens der XML-Schemaauflistung verwendet. Der erste Teil ist der Schemaname, der zweite Teil der Name der XML-Schemaauflistung.  
   
 ### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Beispiel: Verknüpfen einer Schemaauflistung mit einer Variablen vom Typ xml  
- Im folgenden Beispiel wird eine Variable vom Typ**xml** erstellt und eine Schemaauflistung mit dieser verknüpft. Die im Beispiel angegebene Schemaauflistung wurde bereits in die **AdventureWorks** -Datenbank importiert.  
+ Im folgenden Beispiel wird eine Variable vom Typ **xml** erstellt und eine Schemaauflistung mit dieser verknüpft. Die im Beispiel angegebene Schemaauflistung wurde bereits in die **AdventureWorks** -Datenbank importiert.  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   

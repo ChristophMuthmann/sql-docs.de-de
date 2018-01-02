@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 99dc1f614be8180a8d8a4fbb5a5bf15b77f2df8e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8b31518a6ed1b32820e9ed1dc2f7acb7a6b94685
+ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Verbessern der Leistung von Volltextindizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] In diesem Thema werden einige häufige Ursachen für eine geringe Leistung für Volltextindizes und -Abfragen beschrieben. Darüber hinaus werden einige Vorschläge für das Verringern dieser Probleme und das Verbessern der Leistung gemacht.
@@ -151,7 +151,7 @@ Wichtige Informationen zu den folgenden Formeln finden Sie in den Notizen unter 
   
  `F = 8*10*8=640`  
   
- Die nächste Berechnung ergibt den optimalen Wert für **max server memory**:*M*. **Der gesamte physische Speicher für dieses System in MB –*T*– beträgt `8192`.  
+ Die nächste Berechnung ergibt den optimalen Wert für **max server memory**:*M*. *T*, der gesamte physische Speicher, der auf diesem System verfügbar ist, beträgt `8192` (in MB).  
   
  `M = 8192-640-500=7052`  
   

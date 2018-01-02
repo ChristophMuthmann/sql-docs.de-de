@@ -103,7 +103,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  Fügen Sie auf der Registerkarte **Ablaufsteuerung** des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers der Entwurfsoberfläche einen Datenflusstask hinzu.  
   
-2.  Fügen Sie dem Datenflusstask auf der Registerkarte **Datenfluss** tab, add an OLE DB source to the Datenfluss task, and then open the **Quellen-Editor für OLE DB**.  
+2.  Fügen Sie dem Datenflusstask auf der Registerkarte **Datenfluss** eine OLE DB-Datenquelle hinzu, und öffnen Sie dann den **Quellen-Editor für OLE DB.**  
   
 3.  Konfigurieren Sie auf der Seite **Verbindungs-Manager** des Editors die Quelle mit den folgenden Einstellungen:  
   

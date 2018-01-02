@@ -26,11 +26,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: f7ce518d2588e07ae90842f92a7e9ee47cfc5543
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 5c47b393a4c91aa9e02b934834a00d3e2ec5a88d
+ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="polybase-guide"></a>PolyBase-Leitfaden
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] PolyBase ist eine Technologie, die mit T-SQL auf Daten außerhalb der Datenbank zugreift.  In SQL Server 2016 können Sie Abfragen für externe Daten in Hadoop ausführen oder Daten aus Azure Blob Storage importieren und exportieren. Die Abfragen sind für die Übertragung der Berechnung an Hadoop optimiert. In Azure SQL Data Warehouse können Sie Daten aus Azure-Blobspeichern und Azure Data Lake Store importieren und exportieren.
@@ -59,7 +59,7 @@ Einfach ausgedrückt: Mit PolyBase müssen Sie keine zusätzliche Software in Ih
   
 ## <a name="performance"></a>Leistung  
   
--   **Übertragen der Berechnung an Hadoop.**Der Abfrageoptimierer trifft eine kostenbasierte Entscheidung darüber, ob die Berechnung an Hadoop übertragen wird, um die Abfrageleistung zu verbessern.  Für diese kostenbasierte Entscheidung verwendet der Optimierer Statistiken in externen Tabellen.   Bei der Übertragung der Berechnung werden MapReduce-Aufträge erstellt und die verteilten Berechnungsressourcen von Hadoop genutzt.  
+-   **Übertragen der Berechnung an Hadoop.**Der Abfrageoptimierer trifft eine kostenbasierte Entscheidung darüber, ob die Berechnung an Hadoop übertragen wird, um die Abfrageleistung zu verbessern.  Für diese kostenbasierte Entscheidung verwendet der Optimierer Statistiken in externen Tabellen. Bei der Übertragung der Berechnung werden MapReduce-Aufträge erstellt und die verteilten Berechnungsressourcen von Hadoop genutzt.  
   
 -   **Skalieren von Berechnungsressourcen.** Um die Abfrageleistung zu verbessern, können Sie [PolyBase-Erweiterungsgruppen](../../relational-databases/polybase/polybase-scale-out-groups.md)von SQL Server verwenden. Die ermöglicht eine parallele Datenübertragung zwischen SQL Server-Instanzen und Hadoop-Knoten und fügt Berechnungsressourcen für die Verarbeitung der externen Daten hinzu.  
   

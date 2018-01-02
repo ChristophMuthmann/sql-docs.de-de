@@ -1,7 +1,7 @@
 ---
 title: Herunterladen von SQL Server Management Studio (SSMS) | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 10/09/2017
+ms.date: 12/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
@@ -30,11 +30,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 550f91939f2ab6b8e16455a6a5dea2a4ac519c5d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 90ffdbc2b636c360fd145c83847704f9860d6c37
+ms.sourcegitcommit: f376e735c7315d6bdedb16244ad5f5f6428631d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/11/2017
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Herunterladen von SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SSMS ist eine integrierte Umgebung zum Verwalten jeder beliebigen SQL-Infrastruktur, von SQL Server bis hin zur SQL-Datenbank. SSMS stellt Tools zum Konfigurieren, Überwachen und Verwalten von Instanzen von SQL Server zur Verfügung. Verwenden Sie SSMS, um Abfragen und Skripts zu erstellen sowie die Datenebenenkomponenten bereitzustellen, zu überwachen und zu aktualisieren, die von Ihren Anwendungen verwendet werden.
@@ -45,9 +45,9 @@ Verwenden Sie SQL Server Management Studio (SSMS) zum Abfragen, Entwerfen und Ve
 
 SSMS 17.X ist die größte Generation von *SQL Server Management Studio* und stellt Unterstützung für SQL Server 2017 bereit.
 
-**[![Download](../ssdt/media/download.png) Herunterladen von SQL Server Management Studio 17.3](https://go.microsoft.com/fwlink/?linkid=858904)**
+**[![Download](../ssdt/media/download.png) Herunterladen von SQL Server Management Studio 17.4](https://go.microsoft.com/fwlink/?linkid=864329)**
 
-**[![Download](../ssdt/media/download.png) Herunterladen des Upgradepakets von SQL Server Management Studio 17.3 (Upgrades 17.X bis 17.3)](https://go.microsoft.com/fwlink/?linkid=858906)**
+**[![Download](../ssdt/media/download.png) Herunterladen des Upgradepakets von SQL Server Management Studio 17.4 (Upgrades 17.X bis 17.4)](https://go.microsoft.com/fwlink/?linkid=864331)**
 
 Die Installation von SSMS 17.X upgradet oder ersetzt nicht die Versionen 16.X oder früher von SSMS. SSMS 17.x wird parallel zu früheren Versionen installiert, damit beide Versionen zur Verfügung stehen.
 Wenn ein Computer parallele SSMS-Installationen enthält, sollten Sie sich vergewissern, dass Sie die richtige Version für Ihre speziellen Anforderungen starten. Die neueste Version heißt *Microsoft SQL Server Management Studio 17* und verfügt über ein neues Symbol: 
@@ -55,37 +55,74 @@ Wenn ein Computer parallele SSMS-Installationen enthält, sollten Sie sich verge
    ![SSMS 17.X](media/download-sql-server-management-studio-ssms/version-icons.png)
 
 
-> [!NOTE]
-> Das SQL Server PowerShell-Modul ist nun eine separate Installation über den PowerShell-Katalog.  Weitere Informationen finden Sie in den [Downloadanweisungen](download-sql-server-ps-module.md).
+## <a name="available-languages"></a>Verfügbare Sprachen
 
+> [!NOTE]
+> In andere Sprachen als Englisch lokalisierte Versionen von SSMS benötigen das [KB 2862966-Sicherheitsupdate-Paket](https://support.microsoft.com/en-us/kb/2862966) für die Installation unter: Windows 8, Windows 7, Windows Server 2012 und Windows Server 2008 R2.
+
+
+Diese Version von SSMS kann in folgenden Sprachen installiert werden:
+
+SQL Server Management Studio 17.4:<br>
+[Chinesisch (Volksrepublik China)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x804) | [Chinesisch (Taiwan)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40a)
+
+Upgradepaket für SQL Server Management Studio 17.4 (Upgrades 17.X bis 17.4):<br>
+[Chinesisch (Volksrepublik China)](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x804) | [Chinesisch (Taiwan)](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=864331&clcid=0x40a)
+
+> [!NOTE]
+> Das SQL Server PowerShell-Modul ist nun eine separate Installation über den PowerShell-Katalog. Weitere Informationen finden Sie unter [Download SQL Server PowerShell Module](download-sql-server-ps-module.md) (Herunterladen des SQL Server PowerShell-Moduls).
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
 **Versionsinformationen**
 
-Versionsnummer: 17.3
+Versionsnummer: 17.4
 
-Buildnummer dieses Release: 14.0.17199.0
+Buildnummer dieses Releases: 14.0.17213.0
+
+Veröffentlichungsdatum: 7. Dezember 2017
 
 ## <a name="new-in-this-release"></a>In dieser Version neu
 
-SSMS 17.3 ist die neueste Version von SQL Server Management Studio. Die Generation 17.X von SSMS bietet Support für beinahe alle Featurebereiche unter SQL Server 2008 bis SQL Server 2017. Version 17.X unterstützt auch SQL Analysis Service-PaaS.
+SSMS 17.4 ist die neueste Version von SQL Server Management Studio. Die Generation 17.X von SSMS bietet Support für beinahe alle Featurebereiche unter SQL Server 2008 bis SQL Server 2017. Version 17.X unterstützt auch SQL Analysis Service-PaaS.
 
-Version 17.3 enthält Folgendes:
+Version 17.4 enthält Folgendes:
 
-- Es wurde ein neuer Assistent zum Importieren von Flatfiles hinzugefügt, um den Import von CSV-Dateien mithilfe eines intelligenten Frameworks zu optimieren, wozu minimale Benutzerintervention oder spezielles Domänenwissen erforderlich ist. Weitere Informationen finden Sie unter [Import Flat File to SQL Wizard (Importieren einer Flat File zum SQL-Assistenten)](../relational-databases/import-export/import-flat-file-wizard.md).
-- Hinzugefügter „XEvent Profiler“-Knoten zum Objekt-Explorer. Weitere Informationen finden Sie unter [Use the SSMS XEvent Profiler (Verwenden des SSMS XEvent Profiler)](../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
-- Aktualisierte Wartevorgangsfilterung und -kategorisierung in historischen Wartevorgangsberichten des Performance Dashboards.
-- Die Syntaxprüfung der „Predict“-Funktion wurde hinzugefügt.
-- Die Syntaxprüfung der Abfragen der externen Bibliotheksverwaltung wurde hinzugefügt.
-- SMO-Unterstützung für die externe Bibliotheksverwaltung wurde hinzugefügt.
-- Die Unterstützung „PowerShell starten“ wurde dem Fenster „Registrierte Server“ hinzugefügt (erfordert ein neues SQL PowerShell-Modul).
-- Always On: [die schreibgeschützte Routingunterstützung](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md) für Verfügbarkeitsgruppen wurde hinzugefügt.
-- Eine Option zum Senden von Ablaufverfolgungsdetails an das Ausgabefenster für „Active Directory: universell mit MFA-Unterstützung“-Logins wurde hinzugefügt (standardmäßig deaktiviert, muss in den Benutzereinstellungen unter „Tools > Optionen > Azure-Dienste > Azure Cloud > Ablaufverfolgungsebene für ADAL-Ausgabefenster“ aktiviert werden). 
-- Abfragespeicher: 
-  - Es kann auf die Abfragespeicher-Benutzeroberfläche zugegriffen werden, auch wenn QDS deaktiviert ist, solange QDS Daten aufgezeichnet hat.
-  - Die Abfragespeicher-Benutzeroberfläche macht die Kategorisierung von Wartevorgängen in allen vorhandenen Berichten verfügbar. Dadurch können Kunden die Szenarios der wichtigsten wartenden Abfragen und vieles mehr entsperren.
-- Inklusionen der Header von Skriptparametern sind jetzt optional (standardmäßig deaktiviert, kann in den Benutzereinstellungen unter „Tools > Optionen > SQL Server-Objekt-Explorer > Skripts > Header für Skriptparameter einbeziehen“ aktiviert werden) – [Connect-Artikel 3139199](https://connect.microsoft.com/SQLServer/feedback/details/3139199).
-- Das „RC“-Branding wurde entfernt.
+Sicherheitsrisikobewertung:
+- Es wurde ein neuer SQL-Risikoanalysedienst hinzugefügt, der Ihre Datenbanken auf potentielle Sicherheitsrisiken und Abweichungen von bewährten Methoden untersuchen kann, wie etwa Fehlkonfigurationen, übermäßige Berechtigungen und unzureichend geschützte vertrauliche Daten. 
+- Zu den Ergebnissen der Bewertung zählen Aktionsschritte zum Beheben der jeweiligen Probleme und ggf. benutzerdefinierte Skripts zur Wiederherstellung. Der Bewertungsbericht kann für die verschiedenen Umgebungen und an spezifische Anforderungen angepasst werden. Weitere Informationen finden Sie unter [SQL-Sicherheitsrisikobewertung](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment).
+
+SMO:
+- Das Problem, bei dem *HasMemoryOptimizedObjects* unter Azure eine Ausnahme auslöste, wurde behoben.
+- Unterstützung für die neue CATALOG_COLLATION-Funktion wurde hinzugefügt.
+
+AlwaysOn-Dashboard:
+- Verbesserungen an der Latenzanalyse in Verfügbarkeitsgruppen.
+- Zwei neue Berichte: *AlwaysOn\_Latenz\_primär* und *AlwaysOn\_Latenz\_sekundär*.
+
+Showplan:
+- Aktualisierte Links verweisen auf die korrekte Dokumentation.
+- Die Analyse von Einzelplänen ist direkt aus dem generierten eigentlichen Plan heraus möglich.
+- Neuer Symbolsatz.
+- Unterstützung für die Erkennung von „Logische Operatoren anwenden“, wie GbApply, InnerApply.
+        
+XE-Profiler:
+- In XEvent Profiler umbenannt.
+- Die Menübefehle „Stopp“/„Start“ führen jetzt standardmäßig zum Beenden/Starten der Sitzung.
+- Aktivierte Tastenkombinationen (z. B. STRG-F zum Suchen).
+- Hinzugefügte Aktionen ‚database\_name‘ und ‚client\_hostname‘ zu den entsprechenden Ereignissen in XEvent Profiler-Sitzungen. Damit die Änderung wirksam wird, müssen Sie möglicherweise vorhandene QuickSessionStandard- oder QuickSessionTSQL-Instanzen auf den Servern löschen – [Connect 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981)
+
+Befehlszeile:
+- Neue Befehlszeilenoption („-G“), die verwendet werden kann, um SSMS automatisch eine Verbindung mit einem Server/einer Datenbank mithilfe von Active Directory-Authentifizierung (wahlweise ‚Integrated‘ oder ‚Password‘) herstellen zu lassen. Weitere Informationen finden Sie unter [Ssms-Hilfsprogramm](ssms-utility.md).
+
+Assistent zum Importieren von Flatfiles:
+- Neue Möglichkeit zur Auswahl eines anderen als des Standardschemanamens („dbo“) beim Erstellen der Tabelle.
+
+Abfragespeicher:
+- Der Bericht „Rückläufige Abfragen“ beim Erweitern der Liste der verfügbaren Berichte im Abfragespeicher wurde wiederhergestellt.
+
+**Integration Services (IS)**
+- Neue Funktion zur Paketüberprüfung im Bereitstellungs-Assistenten, die dem Benutzer hilft, Komponenten innerhalb von SSIS-Paketen zu erkennen, die in Azure-SSIS IR nicht unterstützt werden.
+
 
 Die vollständige Liste der Änderungen finden Sie unter [SQL Server Management Studio - Changelog (SSMS) (SQL Server Management Studio: Änderungsprotokoll (SSMS))](../ssms/sql-server-management-studio-changelog-ssms.md).
 
@@ -124,36 +161,12 @@ Dieses Release von SSMS unterstützt die folgenden 64-Bit-Plattformen, wenn sie 
 
 * Eine Liste bekannter Probleme und Problemumgehungen finden Sie in den [Versionshinweisen für SQL Server Management Studio](../ssms/sql-server-management-studio-release-notes.md).
 
-## <a name="available-languages"></a>Verfügbare Sprachen
-
-> [!NOTE]
-> In andere Sprachen als Englisch lokalisierte Versionen von SSMS benötigen das [KB 2862966-Sicherheitsupdate-Paket](https://support.microsoft.com/en-us/kb/2862966) für die Installation unter: Windows 8, Windows 7, Windows Server 2012 und Windows Server 2008 R2.
-
-Diese Version von SSMS kann in folgenden Sprachen installiert werden:
-
-SQL Server Management Studio 17.3:<br>
-[Chinesisch (Volksrepublik China)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x804) | [Chinesisch (Taiwan)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40a)
-
-Upgradepaket für SQL Server Management Studio 17.3 (Upgrades 17.X bis 17.3):<br>
-[Chinesisch (Volksrepublik China)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x804) | [Chinesisch (Taiwan)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x40a)
 
 ## <a name="release-notes"></a>Versionsanmerkungen
 
-Version 17.3 weist folgende Probleme und Einschränkungen auf:
+Version 17.4 weist folgende Probleme und Einschränkungen auf:
 
-**SSMS Allgemein**
-
-- Die folgenden SSMS-Funktionen werden für die Azure AD-Authentifizierung nicht unterstützt, wenn die universelle Authentifizierung mit MFA verwendet wird:
-   - Der Datenbankoptimierungsratgeber wird für die Azure AD-Authentifizierung nicht unterstützt. Es liegt ein bekanntes Problem vor, bei dem dem Benutzer die folgende kryptische Fehlermeldung angezeigt wird: „Could not load file or assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…“ (Datei oder Assembly ‚Microsoft.IdentityModel.Clients.ActiveDirectory,…‘ konnte nicht geladen werden), obwohl man eigentlich folgende Fehlermeldung erwarten würde: „Database Engine Tuning Advisor does not support Microsoft Azure SQL Database. (DTAClient)“ (Die Microsoft Azure SQL-Datenbank wird vom Datenbankoptimierungsratgeber nicht unterstützt).
-- Bei dem Versuch, eine Abfrage in DTA zu analysieren entsteht folgender Fehler: "Object must implement IConvertible. (mscorlib)“ (Objekt muss IConvertible implementieren).
-- *Rückläufige Abfragen* fehlen in der Liste der Berichte im Abfragespeicher im Objekt-Explorer.
-   - Problemumgehung: Klicken Sie mit der rechten Maustaste auf den Knoten **Abfragespeicher**, und wählen Sie **View Regressed Queries (Rückläufige Abfragen anzeigen)** aus.
-
-**Integration Services (IS)**
-
-- Der [Ausführungspfad] in [Katalog].[Ereignismeldungen] ist für Paketausführungen in Scale Out falsch. Der [Ausführungspfad] beginnt mit „\Package“ anstelle des Objektnamens des ausführbaren Pakets. Beim Anzeigen der Übersichtsberichte von Paketausführungen in SSMA kann der Link zum „Ausführungspfad“ in der Übersicht über die Ausführung nicht funktionieren. Klicken Sie im Übersichtsbericht auf „Nachrichten anzeigen“, um alle Ereignismeldungen zu prüfen.
-
-
+Zu diesem Zeitpunkt liegen keine bekannten Probleme vor.
 
 ## <a name="previous-releases"></a>Vorgängerversionen
 
@@ -162,6 +175,9 @@ Version 17.3 weist folgende Probleme und Einschränkungen auf:
 ## <a name="feedback"></a>Feedback
 
 ![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools-Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Ein Problem bei Microsoft Connect melden oder einen Vorschlag einbringen](https://connect.microsoft.com/SQLServer/Feedback)
+
+
+
 
 ## <a name="see-also"></a>Siehe auch
 
