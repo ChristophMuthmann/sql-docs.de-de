@@ -3,7 +3,7 @@ title: 'Distributed Replay: Anforderungen | Microsoft Docs'
 ms.custom: 
 ms.date: 11/08/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,13 +17,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: ondemand
-ms.openlocfilehash: 1344620cc4885e91be7e89432969903fb0e79301
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 951f403905f260532c5d4aa806597e916142d15d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="distributed-replay-requirements"></a>Distributed Replay: Anforderungen
+# <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Vor der Verwendung der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Funktion, die in diesem Thema beschriebenen produktanforderungen berücksichtigen.  
   
 ## <a name="input-trace-requirements"></a>Anforderungen an die Eingabedatei für die Ablaufverfolgung  

@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 12/07/2017
+ms.date: 12/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b418634c714fda6dfd0e339e42c7b584436c5433
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c5e55a85b2ff67327198ff3fa54654b904429ed8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Ändern der Kompatibilitätsgrad der Datenbank (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
 
  Führen Sie die folgende Abfrage zum Ermitteln der Version von den [!INCLUDE[ssDE](../../includes/ssde-md.md)] , der Sie verbunden sind.  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY('ProductVersion');  
 ```  
   
@@ -88,12 +88,13 @@ SELECT SERVERPROPERTY('ProductVersion');
 
  Um den aktuellen Kompatibilitätsgrad zu ermitteln, Fragen den **Compatibility_level** Spalte [sys.databases &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT name, compatibility_level FROM sys.databases;  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Für alle Installationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], der standardmäßige Kompatibilitätsgrad festgelegt ist, auf die Version von den [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Datenbanken werden auf diesen Grad festgelegt, es sei denn, die **Modell** Datenbank hat einen niedrigeren Kompatibilitätsgrad. Beim Upgrade einer Datenbank aus einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die Datenbank behält den vorhandenen Kompatibilitätsgrad, wenn es mindestens minimale zulässig, die für diese Instanz von ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Datenbank mit einem Kompatibilitätsgrad kleiner als die zulässige Ebene aktualisiert wurde, wird die Datenbank auf die niedrigste Kompatibilität Ebene zulässig. Dies gilt sowohl für die System- als auch für die Benutzerdatenbanken. Verwendung **ALTER DATABASE** so ändern Sie den Kompatibilitätsgrad der Datenbank. Um den aktuellen Kompatibilitätsgrad einer Datenbank anzuzeigen, Fragen Sie die **Compatibility_level** Spalte in der **sys.databases** -Katalogsicht angezeigt.  
+
+Für alle Installationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], der standardmäßige Kompatibilitätsgrad festgelegt ist, auf die Version von den [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Datenbanken werden auf diesen Grad festgelegt, es sei denn, die **Modell** Datenbank hat einen niedrigeren Kompatibilitätsgrad. Beim Upgrade einer Datenbank aus einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die Datenbank behält den vorhandenen Kompatibilitätsgrad, wenn es mindestens minimale zulässig, die für diese Instanz von ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Datenbank mit einem Kompatibilitätsgrad kleiner als die zulässige Ebene aktualisiert wurde, wird die Datenbank auf die niedrigste Kompatibilität Ebene zulässig. Dies gilt sowohl für die System- als auch für die Benutzerdatenbanken. Verwendung **ALTER DATABASE** so ändern Sie den Kompatibilitätsgrad der Datenbank. Um den aktuellen Kompatibilitätsgrad einer Datenbank anzuzeigen, Fragen Sie die **Compatibility_level** Spalte in der **sys.databases** -Katalogsicht angezeigt.  
 
   
 ## <a name="using-compatibility-level-for-backward-compatibility"></a>Verwenden des Kompatibilitätsgrads für die Abwärtskompatibilität  
@@ -136,7 +137,8 @@ In diesem Abschnitt wird beschrieben, neue Verhaltensweisen, die mit Kompatibili
 | Trace 2371 ist standardmäßig in deaktiviert [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. | [Verfolgen Sie 2371](https://blogs.msdn.microsoft.com/psssql/2016/10/04/default-auto-statistics-update-threshold-change-for-sql-server-2016/) ist standardmäßig in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Das Ablaufverfolgungsflag 2371 weist des automatisch Statistiken Updaters auf eine kleinere noch weiser Teilmenge von Zeilen in einer Tabelle Beispieldaten, die eine hervorragende viele Zeilen enthält. <br/> <br/> Eine Verbesserung besteht darin, in der Stichprobe mehr Zeilen enthalten, die vor kurzem eingefügt wurden. <br/> <br/> Eine andere Verbesserung ist, können Abfragen ausgeführt werden, während der Update Statistics-Prozess wird ausgeführt, anstatt Sperren der Abfrage. |  
 | Für Kompatibilitätsgrad 120 Statistiken aufgenommen werden, indem eine *einzelne*-Thread des Prozesses. | Für Kompatibilitätsgrad 130 Statistiken aufgenommen werden, indem eine *Multi*-Thread des Prozesses. |  
 | 253 eingehende Fremdschlüssel liegt die Beschränkung. | Eine bestimmte Tabelle kann bis zu 10.000 eingehende Fremdschlüsseln oder ähnliche Verweise verweist. Einschränkungen finden Sie unter [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md). |  
-|Die als veraltet markierte Hashalgorithmen MD2, MD4, MD5, SHA und SHA1 sind zulässig.|Nur SHA2_256 und SHA2_512 Hashalgorithmen sind zulässig.|  
+|Die als veraltet markierte Hashalgorithmen MD2, MD4, MD5, SHA und SHA1 sind zulässig.|Nur SHA2_256 und SHA2_512 Hashalgorithmen sind zulässig.|
+||[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]bietet Verbesserungen in einige Typen datenkonvertierungen sowie bei einigen Vorgängen (hauptsächlich ungewöhnlich). Weitere Informationen finden Sie [SQL Server 2016-Verbesserungen bei der Verarbeitung von einigen Datentypen und ungewöhnlich, dass Vorgänge](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon).|
   
   
 Korrekturen, die unter Trace flag 4199 in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] sind jetzt standardmäßig aktiviert. Mit Kompatibilitätsmodus 130. Das Ablaufverfolgungsflag 4199 zur Verfügung gestellt werden trotzdem gilt für das neue Fehlerbehebungen durch Abfrageoptimierer, die nach der Veröffentlichung sind [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Verwenden den älteren Abfrageoptimierer [!INCLUDE[ssSDS](../../includes/sssds-md.md)] müssen Sie den Kompatibilitätsgrad 110 auswählen. Informationen zum Ablaufverfolgungsflag 4199 finden Sie unter [Ablaufverfolgungsflag 4199](https://support.microsoft.com/en-us/kb/974006).  
@@ -146,7 +148,7 @@ Korrekturen, die unter Trace flag 4199 in früheren Versionen von [!INCLUDE[ssNo
   
 |Kompatibilitätsgradeinstellung 110 oder niedriger|Kompatibilitätsgradeinstellung 120|  
 |--------------------------------------------------|-----------------------------------------|  
-|Der ältere Abfrageoptimierer wird verwendet.|Die Komponente zum Erstellen und Optimieren von Abfrageplänen wurde in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] deutlich verbessert. Diese neue Funktion des Abfrageoptimierers ist nur bei Verwendung des Datenbank-Kompatibilitätsgrads 120 verfügbar. Damit diese Verbesserungen optimal genutzt werden können, sollten neue Datenbankanwendungen mit dem Datenbank-Kompatibilitätsgrad 120 entwickelt werden. Von früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen migrierte Anwendungen sollten sorgfältig daraufhin überprüft werden, ob die bisherige gute Leistung aufrechterhalten bzw. verbessert wird. Wird die Leistung beeinträchtigt, können Sie den Kompatibilitätsgrad der Datenbank auf 110 oder einen niedrigeren Wert festlegen, um die ältere Methodologie des Abfrageoptimierers zu nutzen.<br /><br /> Der Datenbank-Kompatibilitätsgrad 120 verwendet eine neue Kardinalitätsschätzung, die für moderne Data Warehousing- und OLTP-Arbeitsauslastungen optimiert ist. Vor dem Festlegen von Datenbank-Kompatibilitätsgrad auf 110 aufgrund von Leistungsproblemen, finden Sie die Empfehlungen im Abschnitt Abfragepläne, der die [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [Neuigkeiten im Datenbankmodul](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md) Thema.|  
+|Der ältere Abfrageoptimierer wird verwendet.|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]bietet erhebliche Verbesserungen an die Komponente, die erstellt und optimiert die Abfragepläne. Diese neue Funktion des Abfrageoptimierers ist nur bei Verwendung des Datenbank-Kompatibilitätsgrads 120 verfügbar. Damit diese Verbesserungen optimal genutzt werden können, sollten neue Datenbankanwendungen mit dem Datenbank-Kompatibilitätsgrad 120 entwickelt werden. Von früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen migrierte Anwendungen sollten sorgfältig daraufhin überprüft werden, ob die bisherige gute Leistung aufrechterhalten bzw. verbessert wird. Wird die Leistung beeinträchtigt, können Sie den Kompatibilitätsgrad der Datenbank auf 110 oder einen niedrigeren Wert festlegen, um die ältere Methodologie des Abfrageoptimierers zu nutzen.<br /><br /> Der Datenbank-Kompatibilitätsgrad 120 verwendet eine neue Kardinalitätsschätzung, die für moderne Data Warehousing- und OLTP-Arbeitsauslastungen optimiert ist. Vor dem Festlegen von Datenbank-Kompatibilitätsgrad auf 110 aufgrund von Leistungsproblemen, finden Sie die Empfehlungen im Abschnitt Abfragepläne, der die [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [Neuigkeiten im Datenbankmodul](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md) Thema.|  
 |Bei Kompatibilitätsgraden unter 120, wird die Language-Einstellung ignoriert, beim Konvertieren einer **Datum** Wert in einen Zeichenfolgenwert. Beachten Sie, dass dieses Verhalten nur für bestimmte ist die **Datum** Typ. Siehe Beispiel B im Abschnitt "Beispiele" weiter unten.|Die Language-Einstellung wird nicht ignoriert werden, bei der Konvertierung einer **Datum** Wert in einen Zeichenfolgenwert.|  
 |Rekursive Verweise auf der rechten Seite einer EXCEPT-Klausel erzeugen eine Endlosschleife. Beispiel C im Abschnitt "Beispiele" weiter unten veranschaulicht dieses Verhalten.|Rekursive Verweise in einer EXCEPT-Klausel generieren gemäß dem ANSI SQL-Standard einen Fehler.|  
 |Der rekursive CTE lässt doppelte Spaltennamen zu.|Der rekursive CTE lässt keine doppelten Spaltennamen zu.|  
@@ -186,7 +188,7 @@ Korrekturen, die unter Trace flag 4199 in früheren Versionen von [!INCLUDE[ssNo
 |Strenge Überprüfung angewendet, um Elemente des XML- **AnyType** Typ.|Lax-Überprüfung angewendet wird, auf Elemente in der **AnyType** Typ. Weitere Informationen finden Sie unter [Platzhalterkomponenten und Inhaltsüberprüfung](../../relational-databases/xml/wildcard-components-and-content-validation.md).|Low|  
 |Die speziellen Attribute **xsi: nil** und **xsi: Type** kann nicht abgefragt oder durch Anweisungen Data Manipulation Language geändert werden.<br /><br /> Dies bedeutet, dass `/e/@xsi:nil` fehlschlägt, während `/e/@*` ignoriert die **xsi: nil** und **xsi: Type** Attribute. Allerdings `/e` gibt die **xsi: nil** und **xsi: Type** Attribute aus Gründen der Konsistenz mit `SELECT xmlCol`, selbst wenn `xsi:nil = "false"`.|Die speziellen Attribute **xsi: nil** und **xsi: Type** werden als reguläre Attribute gespeichert und können abgefragt und geändert werden.<br /><br /> Z. B. die Ausführung der Abfrage `SELECT x.query('a/b/@*')` gibt alle Attribute einschließlich **xsi: nil** und **xsi: Type**. Um diese Typen in der Abfrage auszuschließen, ersetzen `@*` mit `@*[namespace-uri(.) != "` *Xsi-Namespace-Uri einfügen* `"` und nicht `(local-name(.) = "type"` oder`local-name(.) ="nil".`|Low|  
 |Eine benutzerdefinierte Funktion, die eine XML-Zeichenfolgenkonstante in einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-datetime-Typ konvertiert, wird als deterministisch gekennzeichnet.|Eine benutzerdefinierte Funktion, die eine XML-Zeichenfolgenkonstante in einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-datetime-Typ konvertiert, wird als nicht deterministisch gekennzeichnet.|Low|  
-|Die XML-Datentypen "union" und "list" werden nicht vollständig unterstützt.|Die XML-Datentypen "union" und "list" werden vollständig unterstützt, einschließlich der folgenden Funktionalität:<br /><br /> "union" von "list"<br /><br /> "union" von "union"<br /><br /> Liste der atomaren Typen<br /><br /> "list" von "union"|Niedrig|  
+|Die XML-Datentypen "union" und "list" werden nicht vollständig unterstützt.|Die XML-Datentypen "union" und "list" werden vollständig unterstützt, einschließlich der folgenden Funktionalität:<br /><br /> "union" von "list"<br /><br /> "union" von "union"<br /><br /> Liste der atomaren Typen<br /><br /> "list" von "union"|Low|  
 |Die für eine xQuery-Methode erforderlichen SET-Optionen werden nicht überprüft, wenn die Methode in einer Sicht oder Inline-Tabellenwertfunktion enthalten ist.|Die für eine xQuery-Methode erforderlichen SET-Optionen werden überprüft, wenn die Methode in einer Sicht oder Inline-Tabellenwertfunktion enthalten ist. Wenn die SET-Optionen der Methode nicht ordnungsgemäß festgelegt sind, wird ein Fehler ausgegeben.|Low|  
 |XML-Attributwerte, die Zeilenendezeichen enthalten (Wagenrücklauf und Zeilenvorschub) werden nicht gemäß dem XML-Standard normalisiert. Somit werden anstelle eines einzelnen Zeilenvorschubzeichens beide Zeichen zurückgegeben.|XML-Attributwerte, die Zeilenendezeichen enthalten (Wagenrücklauf und Zeilenvorschub) werden gemäß dem XML-Standard normalisiert. Somit werden alle Zeilenumbrüche in extern analysierten Entitäten (einschließlich der Dokumententität) bei Eingabe normalisiert, indem sowohl die aus zwei Zeichen bestehende Folge #xD #xA als auch alle Vorkommnisse von #xD, die nicht von #xA gefolgt werden, in das einzelne Zeichen #xA übersetzt werden.<br /><br /> Anwendungen, die mithilfe von Attributen Zeichenfolgenwerte transportieren, die Zeilenendezeichen enthalten, erhalten diese Zeichen nicht wie gesendet zurück. Um die Normalisierung zu verhindern, müssen für die Codierung aller Zeilenendezeichen numerische XML-Zeichenentitäten verwendet werden.|Low|  
 |Die Spalteneigenschaften ROWGUIDCOL und IDENTITY können als Einschränkung falsch benannt werden. Beispielsweise wird die Anweisung `CREATE TABLE T (C1 int CONSTRAINT MyConstraint IDENTITY)` ausgeführt, doch wird der Einschränkungsname nicht beibehalten und ist für den Benutzer nicht verfügbar.|Die Spalteneigenschaften ROWGUIDCOL und IDENTITY können nicht als Einschränkung benannt werden. Der Fehler 156 wird zurückgegeben.|Low|  
@@ -222,7 +224,7 @@ Korrekturen, die unter Trace flag 4199 in früheren Versionen von [!INCLUDE[ssNo
 ### <a name="a-changing-the-compatibility-level"></a>A. Ändern des Kompatibilitätsgrads  
  Im folgenden Beispiel wird den Kompatibilitätsgrad der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbank `110,` [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET COMPATIBILITY_LEVEL = 110;  
 GO  
@@ -230,7 +232,7 @@ GO
   
  Das folgende Beispiel gibt den Kompatibilitätsgrad der aktuellen Datenbank zurück.  
   
-```tsql  
+```sql  
 SELECT name, compatibility_level   
 FROM sys.databases   
 WHERE name = db_name();  
@@ -239,7 +241,7 @@ WHERE name = db_name();
 ### <a name="b-ignoring--the-set-language-statement-except-under-compatibility-level-120"></a>B. Ignorieren die SET LANGUAGE-Anweisung außer für Kompatibilitätsgrad 120  
  Die folgende Abfrage ignoriert die Anweisung SET LANGUAGE außer Kompatibilitätsgrad unter 120.  
   
-```tsql  
+```sql  
 SET DATEFORMAT dmy;   
 DECLARE @t2 date = '12/5/2011' ;  
 SET LANGUAGE dutch;   
@@ -255,7 +257,7 @@ SELECT CONVERT(varchar(11), @t2, 106);
 ### <a name="c"></a>C.  
  Erstellen Sie für kompatibilitätsgradeinstellung 110 oder niedriger, rekursive Verweise auf die rechte Seite des EXCEPT-Klausel eine Endlosschleife.  
   
-```tsql  
+```sql  
 WITH   
 cte AS (SELECT * FROM (VALUES (1),(2),(3)) v (a)),  
 r   
@@ -270,7 +272,7 @@ FROM r;
 ### <a name="d"></a>D.  
  Dieses Beispiel zeigt den Unterschied zwischen den Formaten 0 und 121. Weitere Informationen zu Datums- und Zeitformaten finden Sie unter [CAST und CONVERT &#40; Transact-SQL &#41; ](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
-```tsql  
+```sql  
 CREATE TABLE t1 (c1 time(7), c2 datetime2);   
   
 INSERT t1 (c1,c2) VALUES (GETDATE(), GETDATE());  
@@ -293,7 +295,7 @@ Jun  7 2011  3:15PM  2011-06-07 15:15:35.8130000
 ### <a name="e"></a>E.  
  Die Variablenzuweisung ist in einer Anweisung mit einem UNION-Operator auf der obersten Ebene zulässig, kann jedoch unerwartete Ergebnisse zurückgeben. Beispielsweise wird in den folgenden Anweisungen der lokalen Variable `@v` der Wert der Spalte `BusinessEntityID` aus der Vereinigung von zwei Tabellen zugewiesen. Wenn die SELECT-Anweisung mehr als einen Wert zurückgibt, wird der Variablen definitionsgemäß der zuletzt zurückgegebene Wert zugewiesen. In diesem Fall wird der Variablen der letzte Wert richtig zugewiesen, es wird jedoch auch das Resultset der SELECT UNION-Anweisung zurückgegeben.  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET compatibility_level = 90;  
 GO  
@@ -309,7 +311,7 @@ SELECT @v;
 ### <a name="f"></a>F.  
  Die Variablenzuweisung ist in einer Anweisung mit einem UNION-Operator auf der obersten Ebene nicht zulässig. Der Fehler 10734 wird zurückgegeben. Um den Fehler zu beheben, müssen Sie die Abfrage umschreiben, wie im folgenden Beispiel gezeigt.  
   
-```tsql  
+```sql  
 DECLARE @v int;  
 SELECT @v = BusinessEntityID FROM   
     (SELECT BusinessEntityID FROM HumanResources.Employee  

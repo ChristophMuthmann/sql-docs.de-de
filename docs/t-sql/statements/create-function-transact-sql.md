@@ -41,11 +41,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e570da6faf04bb8aef58829911cdf19e7f5951c9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 76b25e852e94ff6a511d8b18adb31f9da883a7fe
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -346,15 +346,15 @@ RETURNS return_data_type
  Gibt die Assembly und die Methode an, auf die der erstellte Funktionsname verweisen soll.  
   
 -   *Assembly_name* -übereinstimmen, dass einen Wert in der `name` Spalte   
-    `SELECT * FROM sys.assemblies;`.  
+    `SELECT * FROM sys.assemblies;`installiert haben.  
     Dies ist der Name, der für die `CREATE ASSEMBLY`-Anweisung verwendet wurde.  
   
 -   *CLASS_NAME* -übereinstimmen, dass einen Wert in der `assembly_name` Spalte  
-    `SELECT * FROM sys.assembly_modules;`.  
+    `SELECT * FROM sys.assembly_modules;`installiert haben.  
     Häufig enthält der Wert einen Punkt. In solchen Fällen das Transact-SQL-Syntax erfordert, dass der Wert mit ein Paar von gerade Klammern oder ein Paar von Anführungszeichen umschlossen werden "".  
   
 -   *keine Variablenargumentlisten verwenden* -übereinstimmen, dass einen Wert in der `method_name` Spalte   
-    `SELECT * FROM sys.assembly_modules;`.  
+    `SELECT * FROM sys.assembly_modules;`installiert haben.  
     Die Methode muss statisch sein.  
   
  In einem typischen Beispiel für MyFood.DLL, bei dem sich alle Typen im MyFood-Namespace befinden, könnte der Wert `EXTERNAL NAME` folgender sein:   
@@ -436,7 +436,7 @@ RETURNS return_data_type
   
  Definiert den Tabellendatentyp. Die Tabellendeklaration schließt Spaltendefinitionen und Einschränkungen ein. Für CLR-Funktionen können nur *Column_name* und *Data_type* kann angegeben werden.  
   
- *Spaltenname*  
+ *column_name*  
  Der Name einer Spalte in der Tabelle. Spaltennamen müssen den Regeln für Bezeichner entsprechen und in der Tabelle eindeutig sein. *Column_name* kann zwischen 1 und 128 Zeichen bestehen.  
   
  *data_type*  
@@ -498,7 +498,7 @@ RETURNS return_data_type
   
  Gibt eine berechnete Spalte an. Weitere Informationen zu berechneten Spalten finden Sie unter [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md).  
   
- *Spaltenname*  
+ *column_name*  
  Der Name der berechneten Spalte.  
   
  *computed_column_expression*  
@@ -668,7 +668,7 @@ RETURNS return_data_type
   
  Im Folgenden wird der Funktionsaufruf aufgeführt. Beachten Sie, dass `DATEFIRST` auf `1` festgelegt ist.  
   
-```tsql
+```sql
 CREATE FUNCTION dbo.ISOweek (@DATE datetime)  
 RETURNS int  
 WITH EXECUTE AS CALLER  
@@ -703,7 +703,7 @@ ISO Week
 ### <a name="b-creating-an-inline-table-valued-function"></a>B. Erstellen einer Inline-Tabellenwertfunktion  
  Das folgende Beispiel gibt eine Inline-Tabellenwertfunktion in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurück. Es gibt drei Spalten `ProductID`, `Name` sowie das Aggregat der Jahr-bis-heute Summen nach Geschäft als `YTD Total` für jedes Produkt, das an das Geschäft verkauft wurde.  
   
-```tsql  
+```sql  
 CREATE FUNCTION Sales.ufn_SalesByStore (@storeid int)  
 RETURNS TABLE  
 AS  
@@ -722,14 +722,14 @@ GO
 
  Rufen Sie die Funktion mit dieser Abfrage auf.    
 
-```tsql  
+```sql  
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
 ### <a name="c-creating-a-multi-statement-table-valued-function"></a>C. Erstellen einer Tabellenwertfunktion mit mehreren Anweisungen  
  Im folgenden Beispiel wird die Tabellenwertfunktion `fn_FindReports(InEmpID)` in der AdventureWorks2012-Datenbank erstellt. Wenn der Funktion eine gültige Mitarbeiter-ID bereitgestellt wird, gibt sie eine Tabelle zurück, die allen Mitarbeitern entspricht, die dem Mitarbeiter entweder direkt oder indirekt unterstellt sind. Die Funktion verwendet eine rekursive Abfrage (Common Table Expression, CTE), um eine hierarchische Mitarbeiterliste zu erstellen. Weitere Informationen zu rekursiven CTEs finden Sie unter [WITH Common_table_expression &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.ufn_FindReports (@InEmpID INTEGER)  
 RETURNS @retFindReports TABLE   
 (  
@@ -779,7 +779,7 @@ GO
   
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql  
+```sql  
 DECLARE @SamplesPath nvarchar(1024);  
 -- You may have to modify the value of this variable if you have  
 -- installed the sample in a location other than the default location.  
@@ -803,7 +803,7 @@ GO
   
 ### <a name="e-displaying-the-definition-of-includetsqlincludestsql-mdmd-user-defined-functions"></a>E. Anzeigen der Definition [!INCLUDE[tsql](../../includes/tsql-md.md)] von benutzerdefinierten Funktionen  
   
-```tsql  
+```sql  
 SELECT definition, type   
 FROM sys.sql_modules AS m  
 JOIN sys.objects AS o ON m.object_id = o.object_id   

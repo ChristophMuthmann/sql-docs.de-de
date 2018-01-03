@@ -3,7 +3,7 @@ title: "Ableiten einer Vorlage von einer zurzeit ausgeführten Ablaufverfolgung 
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e2809d167582e261d0d64d430e419862fb9a8b66
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3f73f49d90ee0e5ca9bbe33b80fa8444f8dae045
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="derive-a-template-from-a-running-trace-sql-server-profiler"></a>Ableiten einer Vorlage von einer zurzeit ausgeführten Ablaufverfolgung (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In diesem Thema wird beschrieben, wie eine Ablaufverfolgungsvorlage aus einer vorhandenen Ablaufverfolgung erstellen, während der Ausführung mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

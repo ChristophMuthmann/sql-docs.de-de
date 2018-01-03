@@ -24,18 +24,18 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8da98a7a5fe003c9567be9623cff3604e754c473
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5a6942ecfcf189716e0829eadcb0d94c6d731650
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="lag-transact-sql"></a>LAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Greift auf Daten aus einer vorherigen Zeile in das gleiche Ergebnis festzulegen, ohne die Verwendung von einem selbstjoin beginnend mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. LAG ermöglicht den Zugriff auf eine Zeile mit einem bestimmten physischen Offset vor der aktuellen Zeile. Verwenden Sie diese analytische Funktion in einer SELECT-Anweisung, um Werte in der aktuellen Zeile mit Werten in einer vorherigen Zeile zu vergleichen.  
   
- ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Thema Linksymbol") [Transact-SQL-Syntaxkonventionen & #40; Transact-SQL & #41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Thema Linksymbol") [Transact-SQL-Syntaxkonventionen &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,7 +55,7 @@ LAG (scalar_expression [,offset] [,default])
  Der zurückzugebende Wert, wenn *"scalar_expression"* am *Offset* ist NULL. Wenn kein Standardwert angegeben ist, wird NULL zurückgegeben. *standardmäßige* kann eine Spalte, Unterabfrage oder ein anderer Ausdruck sein, jedoch keine analytische Funktion. *standardmäßige* typkompatibel sein muss mit *"scalar_expression"*.  
   
  ÜBER **(** [ *Partition_by_clause* ] *Order_by_clause***)**  
- *Partition_by_clause* teilt das Resultset, das von der FROM-Klausel erstellt wird, in Partitionen, die auf die die Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. *Order_by_clause* bestimmt die Reihenfolge der Daten, bevor die Funktion angewendet wird. Wenn *Partition_by_clause* angegeben wird, bestimmt die Reihenfolge der Daten in der Partition. Die *Order_by_clause* ist erforderlich. Weitere Informationen finden Sie unter [Klausel "OVER" & #40; Transact-SQL & #41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ *Partition_by_clause* teilt das Resultset, das von der FROM-Klausel erstellt wird, in Partitionen, die auf die die Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. *Order_by_clause* bestimmt die Reihenfolge der Daten, bevor die Funktion angewendet wird. Wenn *Partition_by_clause* angegeben wird, bestimmt die Reihenfolge der Daten in der Partition. Die *Order_by_clause* ist erforderlich. Weitere Informationen finden Sie unter [Klausel "OVER" &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Rückgabetypen  
  Der Datentyp des angegebenen *"scalar_expression"*. NULL wird zurückgegeben, wenn *"scalar_expression"* NULL-Werte zulässt oder *Standard* auf NULL festgelegt ist.  
@@ -68,7 +68,7 @@ LAG (scalar_expression [,offset] [,default])
 ### <a name="a-compare-values-between-years"></a>A. Vergleichen von Werten aus verschiedenen Jahren  
  Im folgenden Beispiel wird mithilfe der LAG-Funktion die Differenz der Verkaufszahlen für einen bestimmten Mitarbeiter im Verlauf der Vorjahre zurückgegeben. Beachten Sie, dass der Standardwert 0 (null) zurückgegeben wird, da für die erste Zeile kein LAG-Wert verfügbar ist.  
   
-```t-sql   
+```sql   
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, YEAR(QuotaDate) AS SalesYear, SalesQuota AS CurrentQuota,   
@@ -94,7 +94,7 @@ BusinessEntityID SalesYear   CurrentQuota          PreviousQuota
 ### <a name="b-compare-values-within-partitions"></a>B. Vergleichen von Werten innerhalb von Partitionen  
  Im folgenden Beispiel werden mithilfe der LAG-Funktion die Verkaufszahlen des laufenden Jahres verschiedener Mitarbeiter verglichen. Um die Zeilen im Resultset nach Vertriebsgebiet zu unterteilen, wird die PARTITION BY-Klausel angegeben. Die LAG-Funktion wird auf jede Partition einzeln angewendet, und die Berechnung wird für jede Partition neu gestartet. Die ORDER BY-Klausel in der OVER-Klausel sortiert die Zeilen in jeder Partition. Die ORDER BY-Klausel in der SELECT-Anweisung sortiert die Zeilen im gesamten Resultset. Beachten Sie, dass der Standardwert 0 (null) zurückgegeben wird, da für die erste Zeile jeder Partition kein LAG-Wert verfügbar ist.  
   
-```t-sql   
+```sql   
 USE AdventureWorks2012;  
 GO  
 SELECT TerritoryName, BusinessEntityID, SalesYTD,   
@@ -120,7 +120,7 @@ Northwest                280              1352577.1325          1573012.9383
 ### <a name="c-specifying-arbitrary-expressions"></a>C. Angeben willkürlicher Ausdrücke  
  Im folgenden Beispiel wird das Angeben verschiedener willkürlicher Ausdrücke in der Syntax der LAG-Funktion veranschaulicht.  
   
-```t-sql   
+```sql   
 CREATE TABLE T (a int, b int, c int);   
 GO  
 INSERT INTO T VALUES (1, 1, -3), (2, 2, 4), (3, 1, NULL), (4, 3, 1), (5, 2, NULL), (6, 1, 5);   
@@ -148,7 +148,7 @@ b           c           i
 ### <a name="d-compare-values-between-quarters"></a>D: vergleicht Werte verschiedener Quartale  
  Das folgende Beispiel veranschaulicht die LAG-Funktion. Die Abfrage verwendet die LAG-Funktion, um die Differenz der Verkaufszahlen für einen bestimmten Mitarbeiter über vorherige Kalenderquartale zurückzugeben. Beachten Sie, dass der Standardwert 0 (null) zurückgegeben wird, da für die erste Zeile kein LAG-Wert verfügbar ist.  
   
-```t-sql   
+```sql   
 -- Uses AdventureWorks  
   
 SELECT CalendarYear, CalendarQuarter, SalesAmountQuota AS SalesQuota,  
@@ -173,7 +173,7 @@ Year Quarter  SalesQuota  PrevQuota  Diff
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [LEAD & #40; Transact-SQL & #41;](../../t-sql/functions/lead-transact-sql.md)  
+ [LEAD &#40; Transact-SQL &#41;](../../t-sql/functions/lead-transact-sql.md)  
   
   
 

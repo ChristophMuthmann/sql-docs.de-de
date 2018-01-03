@@ -3,7 +3,7 @@ title: Globale Einstellungen (Ausgabefenster) (SybaseToSQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 05b7329e6a70cef182d32d3366dde58a1f487fdf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c00ed7c312268af348535e28923bbfd1656636af
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-output-window--sybasetosql"></a>Globale Einstellungen (Ausgabefenster) (SybaseToSQL)
 Verwenden der **globale Einstellungen** Dialogfeld Einstellungen für SSMA angeben.  
   
 Das Fenster "Ausgabe" Einstellungen für den Zugriff auf die **Tools** klicken Sie im Menü **globale Einstellungen**, klicken Sie auf **GUI** am unteren Rand des linken Bereich, und klicken Sie dann wählen **Fenster "Ausgabe"**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Bereich Fehlerliste anzeigen**  
 Wählen Sie **"true"** gegebenenfalls SSMA Bereich Fehlerliste angezeigt werden, wenn Nachrichten vorhanden sind.  
   

@@ -39,11 +39,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 20363fdc5408fbc79ba833c365bcb118fb1a2846
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cafa4381c52b3b884883f61e6e5f232ac894ee8a
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -290,7 +290,7 @@ FROM { <table_source> [ ,...n ] }
  ON \<Search_condition >  
  Gibt die Bedingung an, auf der der Join basiert. Als Bedingung können beliebige Prädikate angegeben werden, obwohl häufig Spalten- und Vergleichsoperatoren verwendet werden, z. B.:  
   
-```tsql
+```sql
 SELECT p.ProductID, v.BusinessEntityID  
 FROM Production.Product AS p   
 JOIN Purchasing.ProductVendor AS v  
@@ -435,7 +435,7 @@ ON (p.ProductID = v.ProductID);
 ### <a name="a-using-a-simple-from-clause"></a>A. Verwenden einer einfachen FROM-Klausel  
  Im folgenden Beispiel werden die `TerritoryID`- und `Name`-Spalten aus der `SalesTerritory`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Beispieldatenbank abgerufen.  
   
-```tsql    
+```sql    
 SELECT TerritoryID, Name  
 FROM Sales.SalesTerritory  
 ORDER BY TerritoryID ;  
@@ -462,7 +462,7 @@ TerritoryID Name
 ### <a name="b-using-the-tablock-and-holdlock-optimizer-hints"></a>B. Verwenden der TABLOCK- und HOLDLOCK-Optimierungshinweise  
  Die folgende Teiltransaktion zeigt, wie eine explizite freigegebene Tabellensperre auf die `Employee`-Tabelle angewendet und der Index gelesen wird. Die Sperre bleibt während der gesamten Transaktion bestehen.  
   
-```tsql    
+```sql    
 BEGIN TRAN  
 SELECT COUNT(*)   
 FROM HumanResources.Employee WITH (TABLOCK, HOLDLOCK) ;  
@@ -481,7 +481,7 @@ ORDER BY e.BusinessEntityID, d.Name ;
 ### <a name="d-using-the-sql-92-full-outer-join-syntax"></a>D. Verwenden der SQL-92-FULL OUTER JOIN-Syntax  
  Im folgenden Beispiel werden der Produktname und alle zugehörigen Kaufaufträge in der `SalesOrderDetail`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückgegeben. Außerdem werden Kaufaufträge zurückgegeben, für die kein Produkt in der `Product`-Tabelle aufgeführt ist. Darüber hinaus werden Produkte mit einem anderen Kaufauftrag als dem in der `Product`-Tabelle aufgeführten Kaufauftrag zurückgegeben.  
   
-```tsql  
+```sql  
 -- The OUTER keyword following the FULL keyword is optional.  
 SELECT p.Name, sod.SalesOrderID  
 FROM Production.Product AS p  
@@ -493,7 +493,7 @@ ORDER BY p.Name ;
 ### <a name="e-using-the-sql-92-left-outer-join-syntax"></a>E. Verwenden der SQL-92 LEFT OUTER JOIN-Syntax  
  Im folgenden Beispiel werden zwei Tabellen über `ProductID` verknüpft und die nicht entsprechenden Zeilen aus der linken Tabelle aufbewahrt. Die `Product`-Tabelle wird mit der `SalesOrderDetail`-Tabelle über die `ProductID`-Spalten in den beiden Tabellen verglichen. Im Resultset werden alle bestellten und nicht bestellten Produkte angezeigt.  
   
-```tsql    
+```sql    
 SELECT p.Name, sod.SalesOrderID  
 FROM Production.Product AS p  
 LEFT OUTER JOIN Sales.SalesOrderDetail AS sod  
@@ -504,7 +504,7 @@ ORDER BY p.Name ;
 ### <a name="f-using-the-sql-92-inner-join-syntax"></a>F. Verwenden der SQL-92-INNER JOIN-Syntax  
  Im folgenden Beispiel werden alle Produktnamen und Verkaufsauftragsnummern zurückgegeben.  
   
-```tsql    
+```sql    
 -- By default, SQL Server performs an INNER JOIN if only the JOIN   
 -- keyword is specified.  
 SELECT p.Name, sod.SalesOrderID  
@@ -517,7 +517,7 @@ ORDER BY p.Name ;
 ### <a name="g-using-the-sql-92-right-outer-join-syntax"></a>G. Verwenden der SQL-92-RIGHT OUTER JOIN-Syntax  
  Im folgenden Beispiel werden zwei Tabellen über `TerritoryID` verknüpft und die nicht entsprechenden Zeilen aus der rechten Tabelle aufbewahrt. Die `SalesTerritory`-Tabelle wird mit der `SalesPerson`-Tabelle über die `TerritoryID`-Spalte in den beiden Tabellen verglichen. Im Resultset werden alle Vertriebsmitarbeiter unabhängig davon aufgeführt, ob ihnen ein Gebiet zugewiesen ist.  
   
-```tsql    
+```sql    
 SELECT st.Name AS Territory, sp.BusinessEntityID  
 FROM Sales.SalesTerritory AS st   
 RIGHT OUTER JOIN Sales.SalesPerson AS sp  
@@ -530,7 +530,7 @@ ON st.TerritoryID = sp.TerritoryID ;
 > [!IMPORTANT]  
 >  Nach Angabe eines Joinhinweises muss das INNER-Schlüsselwort für jeder auszuführende innere Join explizit angegeben werden.  
   
-```tsql    
+```sql    
 SELECT p.Name AS ProductName, v.Name AS VendorName  
 FROM Production.Product AS p   
 INNER MERGE JOIN Purchasing.ProductVendor AS pv   
@@ -543,7 +543,7 @@ ORDER BY p.Name, v.Name ;
 ### <a name="i-using-a-derived-table"></a>I. Verwenden einer abgeleiteten Tabelle  
  Im folgenden Beispiel wird eine abgeleitete Tabelle verwendet. Mit einer `SELECT`-Anweisung nach der `FROM`-Klausel werden die Vor- und Nachnamen aller Mitarbeiter und ihre Wohnorte zurückgegeben.  
   
-```tsql    
+```sql    
 SELECT RTRIM(p.FirstName) + ' ' + LTRIM(p.LastName) AS Name, d.City  
 FROM Person.Person AS p  
 INNER JOIN HumanResources.Employee e ON p.BusinessEntityID = e.BusinessEntityID   
@@ -559,7 +559,7 @@ ORDER BY p.LastName, p.FirstName;
 ### <a name="j-using-tablesample-to-read-data-from-a-sample-of-rows-in-a-table"></a>J. Verwenden von TABLESAMPLE, um Daten von einem Beispiel für Zeilen in einer Tabelle zu lesen  
  Im folgenden Beispiel wird `TABLESAMPLE` in der `FROM`-Klausel verwendet, um ungefähr `10`-Prozent aller Zeilen in der `Customer`-Tabelle zurückzugeben.  
   
-```tsql    
+```sql    
 SELECT *  
 FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;  
 ```  
@@ -577,14 +577,14 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
   
  Im Beispiel werden mit `APPLY` alle Abteilungen und alle Mitarbeiter in dieser Abteilung zurückgegeben. Wenn eine bestimmte Abteilung keine Mitarbeiter hat, werden für diese Abteilung keine Zeilen zurückgegeben.  
   
-```tsql
+```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
 FROM Departments d CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
  Wenn die Abfrage Zeilen für diese Abteilungen ohne Mitarbeiter produzieren soll, die NULL-Werte für die Spalten `EmpID`, `EmpLastName` und `EmpSalary` produziert, verwenden Sie stattdessen `OUTER APPLY`.  
   
-```tsql
+```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
 FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
@@ -592,7 +592,7 @@ FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;
 ### <a name="l-using-cross-apply"></a>L. Verwenden von CROSS APPLY  
  Im folgenden Beispiel wird eine Momentaufnahme aller im Plancache gespeicherten Abfragen abgerufen, indem die dynamische Verwaltungssicht `sys.dm_exec_cached_plans` abgefragt wird, um die Planhandles aller Abfragepläne im Cache abzurufen. Dann wird der `CROSS APPLY`-Operator angegeben, um die Planhandles an `sys.dm_exec_query_plan` zu übergeben. Die XML-Showplanausgabe für jeden aktuell im Plancache gespeicherten Plan wird in der `query_plan` -Spalte der zurückgegebenen Tabelle angezeigt.  
   
-```tsql
+```sql
 USE master;  
 GO  
 SELECT dbid, object_id, query_plan   
@@ -607,7 +607,7 @@ GO
   
  Im folgenden Beispiel wird das Argument der FOR SYSTEM_TIME AS OF Date_time_literal_or_variable zurückzugebenden Zeilen der Tabelle, die seit dem 1. Januar 2014 tatsächliche (aktuell) waren.  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -619,7 +619,7 @@ WHERE ManagerID = 5;
   
  Im folgenden Beispiel wird die Date_time_literal_or_variable FOR SYSTEM_TIME FROM Date_time_literal_or_variable-Argument, um Zeilen zurückzugeben, die während des Zeitraums definiert, wie mit dem 1. Januar 2013 beginnt und endet mit dem 1. Januar 2014 aktiv waren, exklusive obere Grenze.  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -631,7 +631,7 @@ WHERE ManagerID = 5;
   
  Im folgenden Beispiel wird die für SYSTEM_TIME zwischen Date_time_literal_or_variable und Date_time_literal_or_variable-Argument, um zurückzugeben, alle Zeilen, die während des Zeitraums definiert, wie mit dem 1. Januar 2013 beginnt und endet mit dem 1. Januar 2014 aktiv waren, der oberen Grenze liegen.  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -643,7 +643,7 @@ WHERE ManagerID = 5;
   
  Im folgenden Beispiel wird der FOR SYSTEM_TIME CONTAINED IN (Date_time_literal_or_variable, Date_time_literal_or_variable)-Argument, um Zeilen zurückzugeben, die geöffnet und geschlossen wurden während des Zeitraums, der als "mit dem 1. Januar 2013 beginnt und endet mit" definiert wurden 1. Januar 2014.  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -655,7 +655,7 @@ WHERE ManagerID = 5;
   
  Im folgenden Beispiel wird eine Variable statt ein Literal der Begrenzungswerte des Datums für die Abfrage bereitstellen.  
   
-```tsql
+```sql
 DECLARE @AsOfFrom datetime2 = dateadd(month,-12, sysutcdatetime());
 DECLARE @AsOfTo datetime2 = dateadd(month,-6, sysutcdatetime());
   
@@ -673,7 +673,7 @@ WHERE ManagerID = 5;
 ### <a name="n-using-the-inner-join-syntax"></a>N. Verwenden der INNER JOIN-syntax  
  Das folgende Beispiel gibt die `SalesOrderNumber`, `ProductKey`, und `EnglishProductName` Spalten aus der `FactInternetSales` und `DimProduct` Tabellen Where des Joinschlüssels `ProductKey`, in beiden Tabellen entspricht. Die `SalesOrderNumber` und `EnglishProductName` Spalten jeweils in eine der Tabellen nur vorhanden sein, daher ist es nicht erforderlich, den Tabellenalias mit den folgenden Spalten anzugeben, wie gezeigt; diese Aliase sind aus Gründen der Lesbarkeit. Das Wort **AS** vor dem Alias Name ist nicht erforderlich, jedoch wird empfohlen, zur besseren Lesbarkeit und dem ANSI-Standard entsprechen.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -684,7 +684,7 @@ INNER JOIN DimProduct AS dp
   
  Da die `INNER` Schlüsselwort ist nicht für innere Verknüpfungen erforderlich, diese Abfrage kann als geschrieben werden:  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -695,7 +695,7 @@ ON dp.ProductKey = fis.ProductKey;
   
  Ein `WHERE` Klausel kann auch zum Erstellen von dieser Abfrage um zurückgegebenen Ergebnisse zu begrenzen. In diesem Beispiel beschränkt die Ergebnisse auf `SalesOrderNumber` höhere Werte als "SO5000":  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -709,7 +709,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>O. Mithilfe der LEFT OUTER JOIN und RIGHT OUTER JOIN-syntax  
  Das folgende Beispiel verknüpft die `FactInternetSales` und `DimProduct` Tabellen in der `ProductKey` Spalten. Die linker äußerer Join-Syntax wird beibehalten, die nicht entsprechenden Zeilen aus der linken Seite (`FactInternetSales`) Tabelle. Da die `FactInternetSales` Tabelle enthält keine `ProductKey` Werte, die nicht entsprechen der `DimProduct` Tabelle, diese Abfrage gibt dieselben Zeilen wie im ersten inneren Join-Beispiel oben.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -722,7 +722,7 @@ LEFT OUTER JOIN DimProduct AS dp
   
  Rechte äußere Joins werden nicht übereinstimmenden Zeilen aus der rechten Tabelle beibehalten. Im folgende Beispiel gibt dieselben Zeilen wie im obigen linker äußerer Join-Beispiel.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -733,7 +733,7 @@ RIGHT OUTER JOIN FactInternetSales AS fis
   
  Die folgende Abfrage verwendet die `DimSalesTerritory` Tabelle als die linke Tabelle in einem linken äußeren Join. Ruft ab den `SalesOrderNumber` Werte aus der `FactInternetSales` Tabelle. Wenn es keine Aufträge für einen bestimmten sind `SalesTerritoryKey`, die Abfrage eine gibt NULL zurück, für die `SalesOrderNumber` für diese Zeile. Diese Abfrage wird sortiert nach der `SalesOrderNumber` Spalte, sodass alle NULL-Werte in dieser Spalte wird am oberen Rand der Ergebnisse angezeigt.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -745,7 +745,7 @@ ORDER BY fis.SalesOrderNumber;
   
  Diese Abfrage kann so umgeschrieben werden, mit einem rechten äußeren Join zu dieselben Ergebnisse abrufen:  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -758,7 +758,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="p-using-the-full-outer-join-syntax"></a>P. Verwenden der FULL OUTER JOIN-syntax  
  Das folgende Beispiel zeigt einen vollständiger äußeren Join, die alle Zeilen aus beiden verknüpften Tabellen zurückgegeben, aber gibt NULL für Werte, die nicht übereinstimmen, aus der anderen Tabelle.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -770,7 +770,7 @@ ORDER BY fis.SalesOrderNumber;
   
  Diese Abfrage kann auch ohne formuliert werden die `OUTER` Schlüsselwort.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -783,7 +783,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="q-using-the-cross-join-syntax"></a>Q. Verwenden der CROSS JOIN-syntax  
  Das folgende Beispiel gibt das Kreuzprodukt von der `FactInternetSales` und `DimSalesTerritory` Tabellen. Eine Liste aller möglichen Kombinationen von `SalesOrderNumber` und `SalesTerritoryKey` werden zurückgegeben. Beachten Sie das Fehlen der `ON` -Klausel in der Cross Join-Abfrage.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, fis.SalesOrderNumber  
@@ -795,7 +795,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="r-using-a-derived-table"></a>R. Verwenden einer abgeleiteten Tabelle  
  Im folgenden Beispiel wird eine abgeleitete Tabelle (eine `SELECT` Anweisung nach der `FROM` Klausel) zurückgeben der `CustomerKey` und `LastName` Spalten aller Kunden in der `DimCustomer` -Tabelle mit `BirthDate` Werte höher als 1. Januar 1970 und dem Nachnamen "Smith".  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT CustomerKey, LastName  
@@ -809,7 +809,7 @@ ORDER BY LastName;
 ### <a name="s-reduce-join-hint-example"></a>S. Beispiel für einen Join-Hinweis reduzieren  
  Im folgenden Beispiel wird die `REDUCE` Join-Hinweis, die Verarbeitung der abgeleiteten Tabelle in der Abfrage zu ändern. Bei Verwendung der `REDUCE` Join-Hinweis in der folgenden Abfrage die `fis.ProductKey` projiziert wird, repliziert und unterschiedliche vorgenommen und dann hinzugefügt `DimProduct` während das Mischen von `DimProduct` auf `ProductKey`. Die daraus resultierende abgeleitete Tabelle wird auf verteilt `fis.ProductKey`.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 EXPLAIN SELECT SalesOrderNumber  
@@ -825,7 +825,7 @@ ORDER BY SalesOrderNumber;
 ### <a name="t-replicate-join-hint-example"></a>T. Beispiel für einen replizieren Join-Hinweis  
  Im folgenden Beispiel wird gezeigt, die gleiche Abfrage wie im vorherigen Beispiel, außer dass eine `REPLICATE` Join-Hinweis wird verwendet, statt die `REDUCE` Join-Hinweis. Verwenden der `REPLICATE` Hinweis bewirkt, dass die Werte in der `ProductKey` (verknüpfte) Spalte aus der `FactInternetSales` Tabelle auf allen Knoten repliziert werden sollen. Die `DimProduct` Tabelle ist verknüpft, auf die replizierten Version dieser Werte.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 EXPLAIN SELECT SalesOrderNumber  
@@ -843,7 +843,7 @@ ORDER BY SalesOrderNumber;
   
  Im folgenden Beispiel wird der REDISTRIBUTE-Hinweis eine zufällige Verschiebung für die FactInternetSales-Tabelle erzwungen, da es sich bei "ProductKey" ist die verteilungsspalte für DimProduct und nicht die verteilungsspalte für FactInternetSales.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 EXPLAIN  

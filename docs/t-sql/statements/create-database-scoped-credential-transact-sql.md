@@ -28,11 +28,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4dff68e0c4e50a755ec058602bd61208ccd9b7de
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6b0cb350ffccb7ad61335de314765f2b85dc0821
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>Erstellen von ausgelegte Anmeldeinformationen für die Datenbank (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -94,7 +94,7 @@ WITH IDENTITY = 'identity_name'
 ### <a name="a-creating-a-database-scoped-credential-for-your-application"></a>A. Erstellen einer Datenbank werden Anmeldeinformationen für Ihre Anwendung begrenzt.
  Das folgende Beispiel erstellt die datenbankweite Anmeldeinformationen namens `AppCred`. Die datenbankbezogenen Anmeldeinformationen enthält, die Windows-Benutzer `Mary5` und ein Kennwort anzugeben.  
   
-```tsql  
+```sql  
 -- Create a db master key if one does not already exist, using your own password.  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD='<EnterStrongPasswordHere>';  
   
@@ -106,7 +106,7 @@ GO
 
 ### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. Erstellen einer Datenbank werden Anmeldeinformationen für eine shared Access Signature beschränkt.   
 Das folgende Beispiel erstellt die datenbankweit gültigen Anmeldeinformationen, die verwendet werden kann, erstellen eine [externen Datenquelle](../../t-sql/statements/create-external-data-source-transact-sql.md), die möglich Massenvorgänge, z. B. [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) und [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). Signaturen für freigegebenen Zugriff kann nicht mit PolyBase in SQL Server, APS oder SQL Data Warehouse verwendet werden.
-```tsql
+```sql
 CREATE DATABASE SCOPED CREDENTIAL MyCredentials  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
 SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
@@ -118,7 +118,7 @@ Das folgende Beispiel erstellt die datenbankweit gültigen Anmeldeinformationen,
 Azure Data Lake-Speicher verwendet eine Azure Active Directory-Anwendung für Service to Service-Authentifizierung.
 Bitte [erstellen Sie eine AAD-Anwendung](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory) und Dokumentieren Sie die "client_id", die OAuth_2.0_Token_EndPoint und den Schlüssel ein, bevor Sie versuchen, eine datenbankweite Anmeldeinformationen zu erstellen.
 
-```tsql
+```sql
 CREATE DATABASE SCOPED CREDENTIAL ADL_User
 WITH
     IDENTITY = '<client_id>@\<OAuth_2.0_Token_EndPoint>'

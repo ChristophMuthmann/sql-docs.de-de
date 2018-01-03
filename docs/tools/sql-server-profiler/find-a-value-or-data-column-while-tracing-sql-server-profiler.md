@@ -3,7 +3,7 @@ title: "Suchen Sie einen Wert oder eine Datenspalte während der Ablaufverfolgun
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 197d74983d179aa8d9504c09d0c21786e7ac27db
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fe703bd160d698de591cad5ce321c0cdf4b544a8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>Suchen eines Wertes oder einer Datenspalte während der Ablaufverfolgung (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In diesem Thema wird beschrieben, wie für die Suche nach einem bestimmten Wert oder eine Datenspalte in der Ablaufverfolgungsausgabe, während die Ablaufverfolgung ausgeführt wird, mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

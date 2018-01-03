@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 60271a08e7a48e60153b1e556c61e44a9a2c48a8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 96016adf491a2869054068339a7fba64f8e7fedb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="drop-database-scoped-credential-transact-sql"></a>DROP DATABASE ausgelegte CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ DROP DATABASE SCOPED CREDENTIAL credential_name
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird der datenbankweite Anmeldeinformationen namens `SalesAccess`.  
   
-```tsql  
+```sql  
 DROP DATABASE SCOPED CREDENTIAL AppCred;  
 GO  
 ```  

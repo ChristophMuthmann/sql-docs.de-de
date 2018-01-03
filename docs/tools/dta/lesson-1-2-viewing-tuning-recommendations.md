@@ -3,7 +3,7 @@ title: Anzeigen von Optimierungsempfehlungen | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0beed8adb028f43884306b92223a9c3f58db507b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: edd4b57780ac2df7a8eec09701819b5b44ef19bd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-2---viewing-tuning-recommendations"></a>Lektion 1-2 - Anzeige von Optimierungsempfehlungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dieser Task verwendet die optimierungssitzung an, die Sie in erstellt [Optimieren einer Arbeitsauslastung](../../tools/dta/lesson-1-1-tuning-a-workload.md). Wenn Sie die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank mit dem Skript MyScript.sql [!INCLUDE[tsql](../../includes/tsql-md.md)] optimiert haben, werden die Ergebnisse des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgebers auf der Registerkarte **Empfehlungen** angezeigt. In der folgenden Aufgabe erhalten Sie eine Einführung zur Registerkarte **Empfehlungen** auf der grafischen Benutzeroberfläche (graphical user interface, GUI) des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgebers. Außerdem können Sie die Informationen prüfen, die als Ergebnisse der Optimierungssitzung zur Verfügung gestellt werden.  
@@ -59,7 +59,7 @@ Das Auswerten einer Untergruppe von Optimierungsempfehlungen kann erforderlich s
   
 Auf der Registerkarte **Berichte** können Sie weitere Ergebnisse der Optimierung anzeigen. Darauf wird in der nächsten Aufgabe dieser Lektion näher eingegangen.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Anzeigen von Optimierungsberichten](../../tools/dta/lesson-1-3-viewing-tuning-reports.md)  
   
   

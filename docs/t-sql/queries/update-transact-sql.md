@@ -43,11 +43,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 671eb95a5c1772ec790886d923112d491bbd2a35
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1a739b230d39726367d54a64e7b2327f6a80f9ca
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Syntax  
   
-```tsql  
+```sql  
 -- Syntax for SQL Server and Azure SQL Database  
 
 [ WITH <common_table_expression> [...n] ]  
@@ -158,7 +158,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  SET  
  Gibt die Liste der zu aktualisierenden Spalten- oder Variablennamen an.  
   
- *Spaltenname*  
+ *column_name*  
  Eine Spalte mit Daten, die geändert werden sollten. *Column_name* muss vorhanden sein, *Table_or View_name*. Identitätsspalten können nicht aktualisiert werden.  
   
  *expression*  
@@ -464,7 +464,7 @@ ID     Value
 ## <a name="logging-behavior"></a>Protokollierungsverhalten  
  Die UPDATE-Anweisung wird protokolliert; Allerdings teilaktualisierungen von Datentypen mit umfangreichen Werten die **.** Schreiben Sie die Klausel werden minimal protokolliert. Weitere Informationen finden Sie im vorherigen Abschnitt "Datentypen" unter "Aktualisieren von Datentypen mit umfangreichen Werten".  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Berechtigungen  
  Für die Zieltabelle sind UPDATE-Berechtigungen erforderlich. SELECT-Berechtigungen müssen auch für die Tabelle aktualisiert werden, wenn die UPDATE-Anweisung eine WHERE-Klausel enthält, oder wenn *Ausdruck* in der SET-Klausel eine Spalte in der Tabelle verwendet.  

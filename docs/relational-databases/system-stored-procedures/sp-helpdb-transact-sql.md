@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 46eb86009bf940857788425afd4781ca79ab3686
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c1af0b93536006ba5f7b106c10935b07263a572b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,8 +68,8 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**name**|**vom Typ NCHAR(128)**|Logischer Dateiname der Datei.|  
 |**FileID**|**smallint**|Die Datei-ID|  
 |**Dateiname**|**NCHAR(260)**|Betriebssystem-Dateiname (physischer Dateiname).|  
-|**Dateigruppe**|**vom Datentyp nvarchar(128)**|Dateigruppe, zu der die Datei gehört.<br /><br /> NULL = Datei ist eine Protokolldatei. Sie gehört nie zu einer Dateigruppe.|  
-|**Größe**|**nvarchar(18)**|Dateigröße in MB.|  
+|**Dateigruppe**|**nvarchar(128)**|Dateigruppe, zu der die Datei gehört.<br /><br /> NULL = Datei ist eine Protokolldatei. Sie gehört nie zu einer Dateigruppe.|  
+|**size**|**nvarchar(18)**|Dateigröße in MB.|  
 |**MaxSize**|**nvarchar(18)**|Maximale Größe, auf die die Datei vergrößert werden kann. Mit UNLIMITED in diesem Feld kann die Datei so lange vergrößert werden, bis der Datenträger voll ist.|  
 |**Wachstum**|**nvarchar(18)**|Vergrößerungsinkrement der Datei. Hiermit wird die Menge des Speicherplatzes, der hinzugefügt wird, zu der Datei, die jedes Mal neuer Speicherplatz benötigt wird.|  
 |**Verwendung**|**varchar(9)**|Verwendung der Datei. Für eine Datendatei ist der Wert **'nur Daten'** und der Wert ist für die Protokolldatei **'nur protokollieren'**.|  
@@ -87,14 +87,14 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ### <a name="a-returning-information-about-a-single-database"></a>A. Zurückgeben von Informationen für eine einzelne Datenbank  
  Im folgenden Beispiel werden Informationen zur [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank angezeigt.  
   
-```tsql  
+```sql  
 EXEC sp_helpdb N'AdventureWorks2012';  
 ```  
   
 ### <a name="b-returning-information-about-all-databases"></a>B. Zurückgeben von Informationen für alle Datenbanken  
  Im folgenden Beispiel werden Informationen zu allen Datenbanken auf dem Server mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angezeigt.  
   
-```tsql  
+```sql  
 EXEC sp_helpdb;  
 GO  
 ```  

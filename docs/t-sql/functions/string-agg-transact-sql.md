@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fed0fc07f27a3069ba56309b1da7f18197bd987f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5eab0444f036b05f23982b6f21455bfc5ab408a8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ NULL-Werte werden ignoriert, und das entsprechende Trennzeichen nicht hinzugefü
 
 ### <a name="a-generate-list-of-names-separated-in-new-lines"></a>A. Generieren Sie Liste der Namen in neue Zeilen getrennte 
 Im folgenden Beispiel wird eine Liste der Namen in eine Zelle eines einzelnen Resultsets durch Zeilenumbrüche voneinander getrennt.
-```tsql
+```sql
 SELECT STRING_AGG (FirstName, CHAR(13)) AS csv 
 FROM Person.Person; 
 ```
@@ -107,7 +107,7 @@ FROM Person.Person;
 
 ### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. Liste der Namen getrennt durch Kommas ohne NULL-Werte zu generieren   
 Im folgenden Beispiel ersetzt null-Werte mit "N/v" und gibt die Namen getrennt durch Kommas in einer Zelle ein Einzelergebnis zurück.  
-```tsql
+```sql
 SELECT STRING_AGG ( ISNULL(FirstName,'N/A'), ',') AS csv 
 FROM Person.Person; 
 ```
@@ -122,7 +122,7 @@ FROM Person.Person;
 
 ### <a name="c-generate-comma-separated-values"></a>C. Durch Trennzeichen getrennten Werten zu generieren 
 
-```tsql   
+```sql   
 SELECT 
 STRING_AGG(CONCAT(FirstName, ' ', LastName, ' (', ModifiedDate, ')'), CHAR(13)) 
   AS names 
@@ -141,7 +141,7 @@ FROM Person.Person;
 ### <a name="d-return-news-articles-with-related-tags"></a>D. Zurückgeben von Artikeln mit den zugehörigen tags 
 
 Artikel und die Tags werden in verschiedenen Tabellen aufgeteilt. Entwickler möchte eine Zeile pro jeder Artikel mit allen zugeordneten Tags zurückgegeben. Verwenden folgende Abfrage: 
-```tsql
+```sql
 SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
 FROM dbo.Article AS a       
 LEFT JOIN dbo.ArticleTag AS t 
@@ -160,7 +160,7 @@ GROUP BY a.articleId, title;
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. Liste von e-Mail-Adressen pro brushville generieren
 
 Die folgende Abfrage sucht nach der e-Mail-Adressen von Mitarbeitern und gruppiert sie nach brushville: 
-```tsql
+```sql
 SELECT town, STRING_AGG (email, ';') AS emails 
 FROM dbo.Employee 
 GROUP BY town; 
@@ -178,7 +178,7 @@ E-Mail-Nachrichten zurückgegeben, in die e-Mail-Nachrichten, die Spalte zum Sen
 ### <a name="f-generate-a-sorted-list-of-emails-per-towns"></a>F. Eine sortierte Liste von e-Mail-Adressen pro brushville generieren   
    
 Ähnlich wie bei den vorherigen Beispiel die folgende Abfrage sucht nach der e-Mail-Adressen von Mitarbeitern, gruppiert sie nach der Stadt und die e-Mail-Nachrichten in alphabetischer Reihenfolge sortiert:   
-```tsql
+```sql
 SELECT town, 
     STRING_AGG (email, ';') WITHIN GROUP (ORDER BY email ASC) AS emails 
 FROM dbo.Employee 

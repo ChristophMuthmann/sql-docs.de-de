@@ -1,7 +1,7 @@
 ---
 title: Ablaufverfolgungsflags (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 11/24/2017
+ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -26,11 +26,11 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e0315da3d42331296f78cf977c7fd36cdff32853
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: 05d205ca74a1da06e0783a69102b332603ec75a0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - Ablaufverfolgungsflags (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -82,6 +82,7 @@ In der folgenden Tabelle werden die in [!INCLUDE[ssNoVersion](../../includes/ssn
 |**2371**|Ändert den festen automatische Update Statistics Schwellenwert dynamische automatische Update Statistics Schwellenwert an. Weitere Informationen finden Sie in diesem [Microsoft Support-Artikel](http://support.microsoft.com/kb/2754171).<br /><br />**Hinweis:** ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und wählen Sie unter der [Datenbank-Kompatibilitätsgrad](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, dieses Verhalten wird vom Modul gesteuert und Ablaufverfolgungsflag 2371 hat keine Auswirkungen.<br /><br />**Bereich**: globale nur|
 |**2389**|Enable generiert automatisch schnelle Statistiken für Aufsteigend Schlüssel (Histogramm Änderung). Wenn das Ablaufverfolgungsflag 2389 festgelegt ist, und eine führende Statistikspalte als aufsteigend gekennzeichnet ist, wird das Histogramm verwendet, um die Schätzung der Kardinalität zum Zeitpunkt der Kompilierung Abfrage angepasst werden. Weitere Informationen finden Sie in diesem [Microsoft Support-Artikel](http://support.microsoft.com/kb/2801413).<br /><br />**Hinweis:** stellen Sie sicher, dass Sie diese Option aus, bevor Sie es in einer produktionsumgebung umsetzen gründlich testen.<br /><br />**Hinweis:** dieses Ablaufverfolgungsflag gilt nicht, CE Version 120 oder höher. Verwenden Sie das Ablaufverfolgungsflag 4139 stattdessen.<br /><br />**Bereich**: global oder Sitzung oder diesen Abfragebereich|
 |**2390**|Aktivieren Sie die automatisch generierte schnelle Statistiken für aufsteigend oder Unbekannter Schlüssel (Histogramm Änderung). Wenn das Ablaufverfolgungsflag 2390 festgelegt ist, und eine führende Statistikspalte als aufsteigend oder unbekannt gekennzeichnet ist, wird das Histogramm verwendet, um die Schätzung der Kardinalität zum Zeitpunkt der Kompilierung Abfrage angepasst werden. Weitere Informationen finden Sie in diesem [Microsoft Support-Artikel](http://support.microsoft.com/kb/2801413).<br /><br />**Hinweis:** stellen Sie sicher, dass Sie diese Option aus, bevor Sie es in einer produktionsumgebung umsetzen gründlich testen.<br /><br />**Hinweis:** dieses Ablaufverfolgungsflag gilt nicht, CE Version 120 oder höher. Verwenden Sie das Ablaufverfolgungsflag 4139 stattdessen.<br /><br />**Bereich**: global oder Sitzung oder diesen Abfragebereich|
+|**2430**|Ermöglicht das alternative Cleanup der Lock-Klasse. Weitere Informationen finden Sie in diesem [Microsoft Support-Artikel](http://support.microsoft.com/kb/2754301).<br /><br />**Bereich**: globale nur| 
 |**2453**|Ermöglicht eine Tabellenvariable zum Recompile auslösen, wenn ausreichende Anzahl von Zeilen geändert werden. Weitere Informationen finden Sie in diesem [Microsoft Support-Artikel](http://support.microsoft.com/kb/2952444).<br /><br />**Hinweis:** stellen Sie sicher, dass Sie diese Option aus, bevor Sie es in einer produktionsumgebung umsetzen gründlich testen.<br /><br />**Bereich**: global oder Sitzung oder diesen Abfragebereich|
 |**2528**|Deaktiviert die parallele Prüfung von Objekten durch DBCC CHECKDB, DBCC CHECKFILEGROUP und DBCC CHECKTABLE. Standardmäßig wird der Grad der Parallelität automatisch durch den Abfrageprozessor bestimmt. Der maximale Grad an Parallelität wird genau wie, parallele Abfragen konfiguriert. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).<br /><br />**Hinweis:** parallele DBCC-Überprüfungen in der Regel aktiviert (Standard). Der Abfrageprozessor erneut bewertet und automatisch anpasst und Parallelität für jede Tabelle oder einen Batch von Tabellen, die von DBCC CHECKDB überprüft.<br /><br />Die typische Verwendung-Szenario ist, wenn ein Systemadministrator, dass diese Serverlast weiß bis DBCC CHECKDB abgeschlossen ist und daher manuell verringern oder Deaktivieren von Parallelität, erhöhen Sie den Concurrency Arbeitslast andere Benutzer wählt erhöht. Allerdings kann Deaktivieren der parallele Überprüfungen unter DBCC CHECKDB es dauert führen.<br /><br />**Hinweis:** Wenn DBCC CHECKDB mit der Option TABLOCK ausgeführt wird, und Parallelität deaktiviert ist, können Tabellen für längere Zeit gesperrt werden.<br /><br />**Hinweis:** ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, eine MAXDOP-Option ist verfügbar, um die Max. Grad an Parallelität-Konfigurationsoption von Sp_configure für die Anweisung zu überschreiben.<br /><br />**Bereich**: global oder Sitzung|
 |**2549**|Führt die DBCC CHECKDB Befehl vorausgesetzt, dass jede Datenbankdatei auf einem Laufwerk mit eindeutig ist. DBCC CHECKDB-Befehl erstellt eine interne Liste der Seiten in allen Datenbankdateien pro eindeutigen Laufwerk zu lesen. Diese Logik bestimmt eindeutig Laufwerke, die basierend auf den Laufwerksbuchstaben der den physischen Dateinamen der einzelnen Dateien.<br /><br />**Hinweis:** dieses Ablaufverfolgungsflag nicht verwenden, es sei denn, Sie wissen, dass jede Datei einen eindeutigen physischen Datenträger basiert.<br /><br />**Hinweis:** auch wenn dieses Ablaufverfolgungsflag Verbessern der Leistung von DBCC CHECKDB Befehle, die Ziel-Verwendung der Option PHYSICAL_ONLY, einige Benutzer möglicherweise keine zur Verbesserung der Leistung angezeigt. Während dieses Ablaufverfolgungsflag Datenträgerverwendung für e/a-Ressourcen verbessert wird, schränkt die zugrunde liegenden Leistung der Datenträgerressourcen ggf. die allgemeine Leistung des Befehls DBCC CHECKDB. Weitere Informationen finden Sie unter [Microsoft Support-Artikel](http://support.microsoft.com/kb/2634571).<br /><br />**Bereich**: globale nur| 
@@ -165,13 +166,13 @@ Verwenden der `DBCC TRACESTATUS` Befehl aus, um zu bestimmen, welche Ablaufverfo
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird das Ablaufverfolgungsflag 3205 auf für alle Sitzungen auf Serverebene mithilfe von DBCC TRACEON.  
   
-```t-sql  
+```sql  
 DBCC TRACEON (3205,-1);  
 ```
 
 Sie können alle Plan beeinflussenden Hotfixes von Ablaufverfolgungsflags 4199 und 4137 für eine bestimmte Abfrage gesteuert.
   
-```t-sql
+```sql
 SELECT x FROM correlated WHERE f1 = 0 AND f2 = 1 OPTION (QUERYTRACEON 4199, QUERYTRACEON 4137)
 ``` 
  

@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aa43f93003240c41fefdc589392f936c60a2333d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b80f18cb5440560b34924cad619af1f195f49a47
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-deadlockpriority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -75,7 +75,7 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
   
  Von der für die Sitzungen festgelegten Deadlockpriorität hängt ab, welche Sitzung als Deadlockopfer ausgewählt wird:  
   
--   Wenn für beide Sitzungen die gIeiche Deadlockprioriät festgelegt wurde, wählt die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diejenige Sitzung als Deadlockopfer aus, für die das Rollback weniger aufwändig ist. Wenn beispielsweise für beide Sitzungen die Deadlockpriorität HIGH festgelegt wurde, wählt die Instanz diejenige Sitzung als Opfer aus, bei der das Rollback voraussichtlich weniger aufwändig sein wird.  
+-   Wenn für beide Sitzungen die gIeiche Deadlockprioriät festgelegt wurde, wählt die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diejenige Sitzung als Deadlockopfer aus, für die das Rollback weniger aufwändig ist. Wenn beispielsweise für beide Sitzungen die Deadlockpriorität HIGH festgelegt wurde, wählt die Instanz diejenige Sitzung als Opfer aus, bei der das Rollback voraussichtlich weniger aufwändig sein wird. Die Kosten wird bestimmt durch Vergleich der Anzahl der Protokollbytes, die bis zu diesem Zeitpunkt in der jeweiligen Transaktion geschrieben. (Sie können diesen Wert als "Protokoll verwendet" in einem deadlockdiagramm finden Sie unter).
   
 -   Wenn die Sitzungen verschiedene Deadlockprioritäten aufweisen, wird die Sitzung mit der niedrigsten Deadlockpriorität als Deadlockopfer ausgewählt.  
   

@@ -2,7 +2,7 @@
 title: ALTER DATABASE SET-Optionen (Transact-SQL) | Microsoft Docs
 description: "Informationen Sie zum Festlegen von Datenbankoptionen wie z.B. die automatische Optimierung, Verschlüsselung, Abfragespeicher in einer SQL Server und Azure SQL-Datenbank"
 ms.custom: 
-ms.date: 11/27/2017
+ms.date: 12/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -34,11 +34,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d73118014577a947037bd25fd2fb3959a56a4e47
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: de5b72bd7e890c2b7375448119af832f0e79d075
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET-Optionen (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -248,7 +248,7 @@ SET
   | ANSI_PADDING { ON | OFF }   
   | ANSI_WARNINGS { ON | OFF }   
   | ARITHABORT { ON | OFF }   
-  | COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120}  
+  | COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120 | 130 | 140 }  
   | CONCAT_NULL_YIELDS_NULL { ON | OFF }   
   | NUMERIC_ROUNDABORT { ON | OFF }   
   | QUOTED_IDENTIFIER { ON | OFF }   
@@ -388,7 +388,7 @@ SET
 
  **\<Change_tracking_option >:: =**  
   
- **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nicht verfügbar in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)].  
   
  Steuert Änderungsnachverfolgungsoptionen. Sie können die Änderungsnachverfolgung aktivieren, Optionen festlegen, Optionen ändern und die Änderungsnachverfolgung deaktivieren. Beispiele hierzu finden Sie im Abschnitt "Beispiele" weiter unten in diesem Thema.  
   
@@ -693,7 +693,7 @@ MULTI_USER
   
  **\<Query_store_options >:: =**  
   
- **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ON | OFF | CLEAR [ ALL ]  
  Steuert, ob der Abfragespeicher in dieser Datenbank aktiviert ist, und steuert außerdem das Entfernen des Inhalts des Abfragespeichers.  
@@ -986,7 +986,7 @@ FEDERATED_SERVICE_ACCOUNT = ON | AUSSCHALTEN
  Ist OFF festgelegt, wirkt sich diese Einstellung nur auf die Definition neuer Spalten aus.  
   
 > [!IMPORTANT]  
->  In einer späteren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird ANSI_PADDING immer auf ON festgelegt, und jede Anwendung, für die die Option explizit auf OFF festgelegt ist, löst einen Fehler aus. Verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen nicht, und planen Sie das Ändern von Anwendungen, in denen es zurzeit verwendet wird. Es wird empfohlen, für ANSI_PADDING stets den Wert ON festzulegen. ANSI_PADDING muss beim Erstellen oder Bearbeiten von Indizes für berechnete Spalten oder indizierte Sichten auf ON festgelegt sein.  
+>  In einer späteren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird ANSI_PADDING immer auf ON festgelegt, und jede Anwendung, für die die Option explizit auf OFF festgelegt ist, löst einen Fehler aus. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Es wird empfohlen, für ANSI_PADDING stets den Wert ON festzulegen. ANSI_PADDING muss beim Erstellen oder Bearbeiten von Indizes für berechnete Spalten oder indizierte Sichten auf ON festgelegt sein.  
   
  **Char (*n*) ** und  **binäre (*n*) ** Spalten, die es ermöglichen, für NULL-Werte auf die Länge der Spalte aufgefüllt werden, wenn ANSI_PADDING festgelegt ist auf ON aber nachfolgende Leerzeichen und Nullen werden abgeschnitten, wenn ANSI_PADDING auf OFF festgelegt ist. **Char (*n*) ** und  **binäre (*n*) ** Spalten, die keine NULL-Werte zulassen, werden immer auf die Länge der Spalte aufgefüllt.  
   
@@ -1018,7 +1018,7 @@ FEDERATED_SERVICE_ACCOUNT = ON | AUSSCHALTEN
   
  Der Status dieser Option kann mithilfe der Spalte is_arithabort_on in der sys.databases-Katalogsicht oder der IsArithmeticAbortEnabled-Eigenschaft der DATABASEPROPERTYEX-Funktion ermittelt werden.  
   
- COMPATIBILITY_LEVEL { 90 | 100 | 110 | 120}  
+ COMPATIBILITY_LEVEL = {90 | 100 | 110 | 120 | 130 | 140}  
  Weitere Informationen finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
  CONCAT_NULL_YIELDS_NULL { ON | OFF }  
@@ -1123,21 +1123,21 @@ FEDERATED_SERVICE_ACCOUNT = ON | AUSSCHALTEN
 |\<Db_user_access_option >|ja|ja|  
 |\<Db_update_option >|ja|ja|  
 |\<Delayed_durability_option >|ja|ja|  
-|\<External_access_option >|ja|Nein|  
-|\<Cursor_option >|ja|Nein|  
-|\<Auto_option >|ja|Nein|  
-|\<Sql_option >|ja|Nein|  
-|\<Recovery_option >|ja|Nein|  
-|\<Target_recovery_time_option >|Nein|ja|  
-|\<Database_mirroring_option >|Nein|Nein|  
-|ALLOW_SNAPSHOT_ISOLATION|Nein|Nein|  
-|READ_COMMITTED_SNAPSHOT|Nein|ja|  
+|\<External_access_option >|ja|nein|  
+|\<Cursor_option >|ja|nein|  
+|\<Auto_option >|ja|nein|  
+|\<Sql_option >|ja|nein|  
+|\<Recovery_option >|ja|nein|  
+|\<Target_recovery_time_option >|nein|ja|  
+|\<Database_mirroring_option >|nein|nein|  
+|ALLOW_SNAPSHOT_ISOLATION|nein|nein|  
+|READ_COMMITTED_SNAPSHOT|nein|ja|  
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|ja|ja|  
-|\<Service_broker_option >|ja|Nein|  
+|\<Service_broker_option >|ja|nein|  
 |DATE_CORRELATION_OPTIMIZATION|ja|ja|  
 |\<Parameterization_option >|ja|ja|  
 |\<Change_tracking_option >|ja|ja|  
-|\<Db_encryption >|ja|Nein|  
+|\<Db_encryption >|ja|nein|  
   
  Der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird gelöscht, indem eine der folgenden Optionen festgelegt wird:  
   
@@ -1223,7 +1223,7 @@ GO
   
  Das Resultset zeigt, dass das Framework für die Momentaufnahmeisolation aktiviert ist.  
   
- |name |snapshot_isolation_state |Beschreibung|  
+ |NAME |snapshot_isolation_state |description|  
  |-------------------- |------------------------  |----------|  
  |AdventureWorks2012   |1                        | ON |  
   
@@ -1251,7 +1251,7 @@ SET CHANGE_TRACKING = OFF;
 ```  
   
 ### <a name="e-enabling-the-query-store"></a>E. Aktivieren des Abfragespeichers  
- **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Im folgenden Beispiel werden der Abfragespeicher aktiviert und Parameter des Abfragespeichers konfiguriert.  
   

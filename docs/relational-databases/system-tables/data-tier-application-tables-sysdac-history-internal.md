@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 55bf1ae9625c5b27c7078bbba61704eef195b0ca
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ae5fd7a9f447d8658deb520964e192e29ab67a49
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>Data-Tier-Anwendungstabellen - sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,12 +63,12 @@ ms.lasthandoff: 11/17/2017
 |**action_id**|**sequence_id**|**action_type_name**|**dac_object_type_name**|  
 |12|0|Erstellen|dacpac|  
 |12|1|Erstellen|login|  
-|12|2|Erstellen|database|  
-|12|3|Umbenennen|database|  
+|12|2|Erstellen|Datenbank|  
+|12|3|Umbenennen|Datenbank|  
   
  DAC-Vorgänge, z. B. löschen, entfernen Sie Zeilen aus nicht **Sysdac_history_internal**. Sie können die Zeilen für DACs, die nicht mehr in einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)]s bereitgestellt werden, mithilfe der folgenden Abfrage manuell löschen:  
   
-```tsql  
+```sql  
 DELETE FROM msdb.dbo.sysdac_history_internal  
 WHERE instance_id NOT IN  
    (SELECT instance_id  

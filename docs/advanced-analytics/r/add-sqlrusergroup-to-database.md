@@ -1,12 +1,12 @@
 ---
 title: "Fügen Sie als Datenbankbenutzer SQLRUserGroup | Microsoft Docs"
 ms.custom: 
-ms.date: 11/13/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.date: 12/21/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,19 +19,25 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: 97a571a9a91ac31e955f6833e27a975f87267218
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7de60bccb72364e124656f03f043c03e812187db
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="add-sqlrusergroup-as-a-database-user"></a>Fügen Sie SQLRUserGroup als einen Datenbankbenutzer hinzu.
 
-Während des Setups von [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] oder [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)], werden neue Windows-Benutzerkonten zum Ausführen von Aufgaben unter des Sicherheitstokens des erstellt die [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] Dienst. Wenn ein Benutzer ein Machine learning-Skript von einem externen Client sendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktiviert ein Konto Arbeitsthreads verfügbar, wird es auf die Identität des aufrufenden Benutzers zugeordnet und führt das Skript im Namen des Benutzers. Dieser neue Dienst des Datenbankmoduls unterstützt die sichere Ausführung externer Skripts, die aufgerufen *implizite Authentifizierung*.
+In diesem Artikel erläutert das Erteilen Sie der Gruppe der Worker von Diensten verwendeten Konten Machine Learning in SQL Server die Berechtigungen zum Herstellen einer Verbindung mit der Datenbank, und führen R oder Python-Aufträge im Namen des Benutzers erforderlich.
 
-Sie können diese Konten anzeigen, in der Windows-Benutzergruppe **SQLRUserGroup**. Standardmäßig werden 20 Konten erstellt, ist in der Regel mehr als ausreichend, für die Ausführung von R-Aufträge.
+## <a name="what-is-sqlrusergroup"></a>Was ist SQLRUserGroup?
 
-Jedoch, wenn Sie, führen Sie R-Skripts von einem remote Data Science-Client möchten und Windows-Authentifizierung verwenden, Sie müssen erteilen diese Konten über die Berechtigung zum Anmelden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz in Ihrem Namen.
+Während des Setups von [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] oder [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)], neue Windows-Benutzerkonten werden erstellt, um die Ausführung von R zu unterstützen oder ein Python-Skript Aufgaben unter den Sicherheitstoken für die [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] Dienst.
+
+Sie können diese Konten anzeigen, in der Windows-Benutzergruppe **SQLRUserGroup**. Standardmäßig werden 20 Konten erstellt, ist in der Regel mehr als ausreichend, für die Ausführung von Machine Learning-Aufträge.
+
+Wenn ein Benutzer ein Machine learning-Skript von einem externen Client sendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktiviert ein Konto Arbeitsthreads verfügbar, wird es auf die Identität des aufrufenden Benutzers zugeordnet und führt das Skript im Namen des Benutzers. Dieser neue Dienst des Datenbankmoduls unterstützt die sichere Ausführung externer Skripts, die aufgerufen *implizite Authentifizierung*.
+
+Jedoch Wenn R oder Python-Skripts von einem remote Data Science-Client ausgeführt werden sollen, und Sie die Windows-Authentifizierung verwenden, geben Sie diese Konten über die Berechtigung zum Anmelden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz in Ihrem Namen.
 
 ## <a name="add-sqlrusergroup-as-a-sql-server-login"></a>Hinzufügen von SQLRUserGroup als SQL Server-Anmeldung
 
@@ -55,8 +61,8 @@ Jedoch, wenn Sie, führen Sie R-Skripts von einem remote Data Science-Client mö
 
 5. Führen Sie einen Bildlauf durch die Liste der Gruppenkonten auf dem Server, bis Sie beginnen mit gefunden `SQLRUserGroup`.
     
-    + Der Name der Gruppe, die für den Launchpad-Dienst zugeordnet ist die _Standardinstanz_ ist immer nur **SQLRUserGroup**. Wählen Sie dieses Konto nur für die Standardinstanz.
-    + Bei Verwendung einer _benannte Instanz_, wird der Instanzname dem Standardnamen angefügt `SQLRUserGroup`. Daher, wenn die Instanz "MLTEST" benannt wird, der Standardbenutzernamen Gruppe für diese Instanz wäre **SQLRUserGroupMLTest**.
+    + Der Name der Gruppe, die für den Launchpad-Dienst zugeordnet ist die _Standardinstanz_ ist immer **SQLRUserGroup**, unabhängig davon, ob Sie R, Python oder beide installiert. Wählen Sie dieses Konto für die Standardinstanz nur ein.
+    + Bei Verwendung einer _benannte Instanz_, den Namen der Instanz wird auf den Namen der Standard-Worker-Gruppenname angefügt `SQLRUserGroup`. Daher, wenn die Instanz "MLTEST" benannt wird, der Standardbenutzernamen Gruppe für diese Instanz wäre **SQLRUserGroupMLTest**.
  
      ![Beispiel für Gruppen auf Server](media/implied-auth-login5.png "Beispiel für Gruppen auf Server")
    

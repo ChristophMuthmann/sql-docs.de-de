@@ -3,7 +3,7 @@ title: Anzeigen von Optimierungsberichten | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d270a34d882cbe4c5ffd458e52a9033db1b16c26
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9a1a567a2f29073f73033182fd14867540a95b93
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-3---viewing-tuning-reports"></a>Lektion 1 bis 3 - Optimierungsberichte anzeigen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Sie die Anzeige in der vorigen Übung dieser Lektion, aus, die Sie der [!INCLUDE[tsql](../../includes/tsql-md.md)] Skripts, erstellen oder Löschen von Datenbankobjekten in die der Datenbankoptimierungsratgeber Empfehlungen, die als Ergebnis die optimierungssitzung MySession generiert wurden. Die Optimierungssitzung MySession wurde in [Optimieren einer Arbeitsauslastung](../../tools/dta/lesson-1-1-tuning-a-workload.md)angelegt.  

@@ -33,11 +33,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ea94b26815eb1bc3453a1bcf01eb6b522f41e037
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a095e1de4fdffc97d615a39fd7cf185c99493d02
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
 ### <a name="a-creating-a-range-left-partition-function-on-an-int-column"></a>A. Erstellen einer RANGE LEFT-Partitionsfunktion für eine int-Spalte  
  Mit der folgenden Partitionsfunktion wird eine Tabelle oder ein Index in vier Partitionen partitioniert.  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION myRangePF1 (int)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 ```  
@@ -111,7 +111,7 @@ AS RANGE LEFT FOR VALUES (1, 100, 1000);
 ### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>B. Erstellen einer RANGE RIGHT-Partitionsfunktion für eine int-Spalte  
  Die folgende Partitionsfunktion verwendet die gleichen Werte für *Boundary_value* [ **,***.. ...n* ] wie im vorherigen Beispiel, außer dass RANGE RIGHT angegeben.  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION myRangePF2 (int)  
 AS RANGE RIGHT FOR VALUES (1, 100, 1000);  
 ```  
@@ -125,7 +125,7 @@ AS RANGE RIGHT FOR VALUES (1, 100, 1000);
 ### <a name="c-creating-a-range-right-partition-function-on-a-datetime-column"></a>C. Erstellen einer RANGE RIGHT-Partitionsfunktion für eine datetime-Spalte  
  Die folgende Partitionsfunktion partitioniert eine Tabelle oder einen Index in 12 Partitionen für jeden Monat des Jahres einen der Werte in einer **"DateTime"** Spalte.  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION [myDateRangePF1] (datetime)  
 AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',  
                '20030501', '20030601', '20030701', '20030801',   
@@ -141,7 +141,7 @@ AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',
 ### <a name="d-creating-a-partition-function-on-a-char-column"></a>D. Erstellen einer Partitionsfunktion für eine char-Spalte  
  Die folgende Partitionsfunktion partitioniert eine Tabelle oder einen Index in vier Partitionen.  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION myRangePF3 (char(20))  
 AS RANGE RIGHT FOR VALUES ('EX', 'RXE', 'XR');  
 ```  
@@ -155,7 +155,7 @@ AS RANGE RIGHT FOR VALUES ('EX', 'RXE', 'XR');
 ### <a name="e-creating-15000-partitions"></a>E. Erstellen von 15.000 Partitionen  
  Mit der folgenden Partitionsfunktion wird eine Tabelle oder ein Index in 15.000 Partitionen partitioniert.  
   
-```tsql  
+```sql  
 --Create integer partition function for 15,000 partitions.  
 DECLARE @IntegerPartitionFunction nvarchar(max) = 
     N'CREATE PARTITION FUNCTION IntegerPartitionFunction (int) 
@@ -174,7 +174,7 @@ GO
 ### <a name="f-creating-partitions-for-multiple-years"></a>F. Erstellen von Partitionen für mehrere Jahre  
  Die folgende Partitionsfunktion partitioniert eine Tabelle oder einen Index in 50 Partitionen auf einer **datetime2** Spalte. Für jeden Monat zwischen Januar 2007 und Januar 2011 gibt es eine Partition.  
   
-```tsql  
+```sql  
 --Create date partition function with increment by month.  
 DECLARE @DatePartitionFunction nvarchar(max) = 
     N'CREATE PARTITION FUNCTION DatePartitionFunction (datetime2) 

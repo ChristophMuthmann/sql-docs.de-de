@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 98f60a6a46fbbce2bd4b1bac16d0a7c8edc69361
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5fedc9777146d24cb04fb7652344f244babc8246
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="tryconvert-transact-sql"></a>TRY_CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
 ### <a name="a-tryconvert-returns-null"></a>A. TRY_CONVERT gibt NULL zurück.  
  Im folgenden Beispiel wird veranschaulicht, dass TRY_CONVERT "0" zurückgibt, wenn die Umwandlung fehlerhaft ist.  
   
-```tsql  
+```sql  
 SELECT   
     CASE WHEN TRY_CONVERT(float, 'test') IS NULL   
     THEN 'Cast failed'  
@@ -92,7 +92,7 @@ Cast failed
   
  Im folgenden Beispiel wird veranschaulicht, dass der Ausdruck das erwartete Format aufweisen muss.  
   
-```tsql  
+```sql  
 SET DATEFORMAT dmy;  
 SELECT TRY_CONVERT(datetime2, '12/31/2010') AS Result;  
 GO  
@@ -111,7 +111,7 @@ NULL
 ### <a name="b-tryconvert-fails-with-an-error"></a>B. Bei TRY_CONVERT tritt ein Fehler auf.  
  Im folgenden Beispiel wird veranschaulicht, dass TRY_CONVERT einen Fehler zurückgibt, wenn die Umwandlung explizit nicht zulässig ist.  
   
-```tsql  
+```sql  
 SELECT TRY_CONVERT(xml, 4) AS Result;  
 GO  
 ```  

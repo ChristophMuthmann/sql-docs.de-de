@@ -3,7 +3,7 @@ title: DTA (Hilfsprogramm) | Microsoft Docs
 ms.custom: 
 ms.date: 01/09/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -27,13 +27,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 192a28c8833fb801e19d1dee7485b667ea56128d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 21deb8edf30db7281ebacfd7b1176070ce13cc6e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="dta-utility"></a>dta (Hilfsprogramm)
+# <a name="dta-utility"></a>dta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Die **Dta** -Hilfsprogramm ist die Befehlszeilenversion des Datenbankmodul-Optimierungsratgeber. Mit dem Hilfsprogramm **dta** soll es Ihnen ermöglicht werden, die Funktionalität des Datenbankoptimierungsratgebers in Anwendungen und Skripts zu verwenden.  
   
  Wie der Datenbankoptimierungsratgeber dient auch das **dta** -Hilfsprogramm dazu, eine Arbeitsauslastung zu analysieren und Empfehlungen zu den physischen Entwurfsstrukturen auszugeben, um die Serverleistung für diese Arbeitsauslastung zu verbessern. Bei der Arbeitsauslastung kann es sich um einen Plancache, eine [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -Ablaufverfolgungsdatei oder -tabelle oder ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript handeln. Zu den physischen Entwurfsstrukturen zählen Indizes, indizierte Sichten und die Partitionierung. Nach der Analyse einer Arbeitsauslastung erstellt das **dta** -Hilfsprogramm eine Empfehlung für den physischen Datenbankentwurf und kann das notwendige Skript zum Implementieren der Empfehlung generieren. Arbeitsauslastungen können über die Eingabeaufforderung mithilfe der Argumente **-if** oder **-it** angegeben werden. Mithilfe von **-ix** können Sie zudem eine XML-Eingabedatei über die Eingabeaufforderung angeben. In diesem Fall wird die Arbeitsauslastung in der XML-Eingabedatei angegeben.  
@@ -133,7 +133,7 @@ dta -D db_name1, db_name2...
 dta -D db_name1, db_name2 -d db_name1  
 ```  
   
- **-d** *Datenbankname*  
+ **-d** *database_name*  
  Gibt die erste Datenbank an, mit der **dta** eine Verbindung herstellt, wenn eine Arbeitsauslastung optimiert wird. Für dieses Argument kann nur eine einzige Datenbank angegeben werden. Beispiel:  
   
 ```  
@@ -156,9 +156,9 @@ dta -d AdventureWorks2012 ...
   
 |Parameter|Standardwert|Details|  
 |---------------|-------------------|-------------|  
-|*Datenbankname*|Der mit der Option*-D* angegebene Wert für **database_name** .||  
+|*database_name*|Der mit der Option*-D* angegebene Wert für **database_name** .||  
 |*owner_name*|**dbo**|*owner_name* muss **dbo**lauten. Wenn ein anderer Wert angegeben wird, schlägt die Ausführung von **dta** fehl, und es wird ein Fehler ausgegeben.|  
-|*table_name*|Keine||  
+|*table_name*|InclusionThresholdSetting||  
   
  Wenn eine Datei verwendet wird, geben Sie als Dateierweiterung .xml an. Beispiel: TuningLog.xml.  
   
@@ -171,7 +171,7 @@ dta -d AdventureWorks2012 ...
  **-fa** *physical_design_structures_to_add*  
  Gibt an, welche Arten physischer Entwurfsstruktur **dta** in die Empfehlung aufnehmen soll. In der folgenden Tabelle sind die Werte, die für dieses Argument angegeben werden können, sowie die zugehörigen Beschreibungen aufgeführt. Wenn kein Wert angegeben wird, verwendet **dta** den Standardwert **-fa****IDX**.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |IDX_IV|Indizes und indizierte Sichten.|  
 |IDX|Nur Indizes.|  
@@ -192,7 +192,7 @@ dta -d AdventureWorks2012 ...
  **-fk** *keep_existing_option*  
  Gibt an, welche vorhandenen physischen Entwurfsstrukturen **dta** beim Generieren der Empfehlung beibehalten muss. In der folgenden Tabelle sind die Werte, die für dieses Argument angegeben werden können, sowie die zugehörigen Beschreibungen aufgeführt:  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |Keine|Keine vorhandenen Strukturen|  
 |ALL|Alle vorhandenen Strukturen|  
@@ -203,7 +203,7 @@ dta -d AdventureWorks2012 ...
  **-fp** *partitioning_strategy*  
  Gibt an, ob neue physische Entwurfsstrukturen (Indizes und indizierte Sichten), die von **dta** vorgeschlagen werden, partitioniert werden sollen und wie diese Partitionierung ggf. erfolgen soll. In der folgenden Tabelle sind die Werte, die für dieses Argument angegeben werden können, sowie die zugehörigen Beschreibungen aufgeführt:  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |Keine|Keine Partitionierung|  
 |FULL|Vollständige Partitionierung (zur Verbesserung der Leistung)|  
@@ -253,7 +253,7 @@ dta -d AdventureWorks2012 ...
  **-N** *online_option*  
  Gibt an, ob physische Entwurfsstrukturen online erstellt werden. In der folgenden Tabelle sind die Werte, die Sie für dieses Argument angeben können, sowie die zugehörigen Beschreibungen aufgeführt:  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |OFF|Es können keine empfohlenen physischen Entwurfsstrukturen online erstellt werden.|  
 |ON|Alle empfohlenen physischen Entwurfsstrukturen können online erstellt werden.|  
@@ -306,7 +306,7 @@ In diesem Fall DTA Abfragespeicher als Quelle der arbeitsauslastung verwendet un
  **-rl** *analysis_report_list*  
  Gibt die Liste der zu generierenden Analyseberichte an. In der folgenden Tabelle sind die Werte aufgeführt, die für dieses Argument angegeben werden können:  
   
-|Wert|Bericht|  
+|value|Bericht|  
 |-----------|------------|  
 |ALL|Alle Analyseberichte|  
 |STMT_COST|Anweisungskostenbericht|  
@@ -388,7 +388,7 @@ dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A
   
  **C. Begrenzen der Anzahl optimierter Abfragen**  
   
- In diesem Beispiel wird die Optimierung beendet, sobald die Anzahl der Abfragen, die aus der Datei orders_wkld.sql gelesen werden, den Wert 10 erreicht hat (`-n 10`) oder die Optimierung für eine Dauer von 15 Minuten ausgeführt wurde (`-A 15`), je nachdem, welches Ereignis zuerst eintritt. Wenn Sie die Optimierung aller 10 Abfragen sicherstellen möchten, geben Sie mithilfe von `-A 0`eine unbegrenzte Optimierungszeit an. Wenn die Zeit ein wichtiger Faktor ist, geben Sie ein geeignetes Zeitlimit an, indem Sie wie im folgenden Beispiel gezeigt mit dem Argument `-A` die Anzahl der Minuten angeben, die für die Optimierung zur Verfügung stehen.  
+ In diesem Beispiel wird die Optimierung beendet, sobald die Anzahl der Abfragen, die aus der Datei orders_wkld.sql gelesen werden, den Wert 10 erreicht hat (`-n 10`) oder die Optimierung für eine Dauer von 15 Minuten ausgeführt wurde (`-A 15`), je nachdem, welches Ereignis zuerst eintritt. Wenn Sie die Optimierung aller 10 Abfragen sicherstellen möchten, geben Sie mithilfe von `-A 0` eine unbegrenzte Optimierungszeit an. Wenn die Zeit ein wichtiger Faktor ist, geben Sie ein geeignetes Zeitlimit an, indem Sie wie im folgenden Beispiel gezeigt mit dem Argument `-A` die Anzahl der Minuten angeben, die für die Optimierung zur Verfügung stehen.  
   
 ```  
 dta –D orders –if orders_wkld.sql –of script.sql –A 15 -n 10  

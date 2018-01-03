@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 284c184a7e77842ec798dbff6d32c193ce9055f8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6ddb3472f19ce2fda8bc368cd07f7ea602d74a02
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="rownumber-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,7 +79,7 @@ ROW_NUMBER ( )
 
 Die folgende Abfrage gibt die vier Systemtabellen in alphabetischer Reihenfolge zurück.
 
-```t-sql
+```sql
 SELECT 
   name, recovery_model_desc
 FROM sys.databases 
@@ -89,7 +89,7 @@ ORDER BY name ASC;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|name    |recovery_model_desc |  
+|NAME    |recovery_model_desc |  
 |-----------  |------------ |  
 |master |SIMPLE |
 |model |FULL |
@@ -98,7 +98,7 @@ ORDER BY name ASC;
 
 Um eine Zeilennummernspalte vor jede Zeile hinzuzufügen, fügen Sie eine Spalte mit dem `ROW_NUMBER` Funktion, die in diesem Fall mit dem Namen `Row#`. Sie verschieben, müssen die `ORDER BY` Klausel bis zu der `OVER` Klausel.
 
-```t-sql
+```sql
 SELECT 
   ROW_NUMBER() OVER(ORDER BY name ASC) AS Row#,
   name, recovery_model_desc
@@ -108,7 +108,7 @@ WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|Zeilennr. |name    |recovery_model_desc |  
+|Zeilennr. |NAME    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |1 |master |SIMPLE |
 |2 |model |FULL |
@@ -117,7 +117,7 @@ WHERE database_id < 5;
 
 Hinzufügen einer `PARTITION BY` -Klausel für die `recovery_model_desc` Spalte wird neu gestartet, wenn die Nummerierung der `recovery_model_desc` -Wert ändert. 
  
-```t-sql
+```sql
 SELECT 
   ROW_NUMBER() OVER(PARTITION BY recovery_model_desc ORDER BY name ASC) 
     AS Row#,
@@ -127,7 +127,7 @@ FROM sys.databases WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|Zeilennr. |name    |recovery_model_desc |  
+|Zeilennr. |NAME    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |1 |model |FULL |
 |1 |master |SIMPLE |
@@ -138,7 +138,7 @@ FROM sys.databases WHERE database_id < 5;
 ### <a name="b-returning-the-row-number-for-salespeople"></a>B. Zurückgeben der Zeilennummer für Vertriebsmitarbeiter  
  Im folgenden Beispiel wird eine Zeilennummer für die Vertriebsmitarbeiter in [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] auf Grundlage der Verkaufszahlen des laufenden Jahres berechnet.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT ROW_NUMBER() OVER(ORDER BY SalesYTD DESC) AS Row,   
@@ -172,7 +172,7 @@ Row FirstName    LastName               SalesYTD
 ### <a name="c-returning-a-subset-of-rows"></a>C. Zurückgeben einer Teilmenge von Zeilen  
  Im folgenden Beispiel werden Zeilennummern für alle Zeilen in der `SalesOrderHeader`-Tabelle in der Reihenfolge des `OrderDate` berechnet und nur die Zeilen `50` bis `60` (einschließlich) zurückgegeben.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WITH OrderedOrders AS  
@@ -189,7 +189,7 @@ WHERE RowNumber BETWEEN 50 AND 60;
 ### <a name="d-using-rownumber-with-partition"></a>D. Verwenden von ROW_NUMBER () mit PARTITION  
  Im folgenden Beispiel wird das Argument `PARTITION BY` zum Partitionieren des Abfrageresultset nach der Spalte `TerritoryName` verwendet. Durch die `ORDER BY`-Klausel in der `OVER`-Klausel werden die Zeilen in jeder Partition nach der Spalte `SalesYTD` sortiert. Die `ORDER BY`-Klausel in der `SELECT`-Anweisung sortiert das gesamte Abfrageresultset nach `TerritoryName`.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT FirstName, LastName, TerritoryName, ROUND(SalesYTD,2,1) AS SalesYTD,  
@@ -227,7 +227,7 @@ Jae        Pak                  United Kingdom       4116871.22    1
 ### <a name="e-returning-the-row-number-for-salespeople"></a>E. Zurückgeben der Zeilennummer für Vertriebsmitarbeiter  
  Das folgende Beispiel gibt die `ROW_NUMBER` für Vertriebsmitarbeiter, die basierend auf ihren zugewiesenen Vorgabe.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) 
@@ -256,7 +256,7 @@ RowNumber  FirstName  LastName            SalesQuota
 ### <a name="f-using-rownumber-with-partition"></a>F. Verwenden von ROW_NUMBER () mit PARTITION  
  Im folgenden Beispiel wird die Verwendung der `ROW_NUMBER`-Funktion mit dem `PARTITION BY`-Argument dargestellt. Dies bewirkt, dass die `ROW_NUMBER` Funktion, um die Anzahl der Zeilen in jeder Partition.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(PARTITION BY SalesTerritoryKey 

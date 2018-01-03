@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 54a39a38050589ba4e842253e192b820c2f1c0ea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b7ea9bb6828182ee0cbc5d0ebef1065564bf03df
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ Standardmäßig `TRIM` -Funktion entfernt das Leerzeichen `char(32)` auf beiden 
 ## <a name="examples"></a>Beispiele
 ### <a name="a--removes-the-space-character-from-both-sides-of-string"></a>A.  Entfernt das Leerzeichen auf beiden Seiten der Zeichenfolge   
 Im folgende Beispiel entfernt Leerzeichen vor und nach dem Wort `test`.   
-```tsql
+```sql
 SELECT TRIM( '     test    ') AS Result;
 ```
 
@@ -68,7 +68,7 @@ SELECT TRIM( '     test    ') AS Result;
 
 ### <a name="b--removes-specified-characters-from-both-sides-of-string"></a>B.  Entfernt den angegebenen Zeichen auf beiden Seiten der Zeichenfolge   
 Im folgende Beispiel werden Punkt und nachfolgende Leerzeichen entfernt.
-```tsql
+```sql
 SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 ```
 

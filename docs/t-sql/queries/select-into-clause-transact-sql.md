@@ -34,11 +34,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: df016654700bd36ebb553e7b3cd66f50d35eadc1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 022786e7c6b1e23780b7acf373efe677f121686b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO-Klausel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ Falls eine dieser Bedingungen erfüllt ist, wird die Spalte mit NOT NULL erstell
 ### <a name="a-creating-a-table-by-specifying-columns-from-multiple-sources"></a>A. Erstellen einer Tabelle durch Angeben von Spalten aus mehreren Quellen  
  Im folgenden Beispiel wird die `dbo.EmployeeAddresses`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank erstellt, indem sieben Spalten aus verschiedenen mitarbeiter- und adressbezogenen Tabellen ausgewählt werden.  
   
-```tsql  
+```sql  
 SELECT c.FirstName, c.LastName, e.JobTitle, a.AddressLine1, a.City,   
     sp.Name AS [State/Province], a.PostalCode  
 INTO dbo.EmployeeAddresses  
@@ -128,7 +128,7 @@ GO
 ### <a name="b-inserting-rows-using-minimal-logging"></a>B. Einfügen von Zeilen bei minimaler Protokollierung  
  Im folgenden Beispiel wird die `dbo.NewProducts`-Tabelle erstellt, und Zeilen aus der `Production.Product`-Tabelle werden eingefügt. Im Beispiel wird davon ausgegangen, dass das Wiederherstellungsmodell der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank auf FULL festgelegt wird. Um sicherzustellen, dass die minimale Protokollierung verwendet wird, wird das Wiederherstellungsmodell der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank auf BULK_LOGGED festgelegt, bevor Zeilen eingefügt und nach der SELECT...INTO-SELECT-Anweisung auf FULL zurückgesetzt werden. Dadurch wird sichergestellt, dass die SELECT…INTO-Anweisung minimalen Speicherplatz im Transaktionsprotokoll belegt und effektiv ausgeführt wird.  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY BULK_LOGGED;  
 GO  
   
@@ -144,7 +144,7 @@ GO
 ### <a name="c-creating-an-identity-column-using-the-identity-function"></a>C. Erstellen einer Identitätsspalte mithilfe der IDENTITY-Funktion  
  Im folgenden Beispiel wird die IDENTITY-Funktion verwendet, um eine Identitätsspalte in der neuen `Person.USAddress`-Tabelle der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zu erstellen. Dies ist erforderlich, da die SELECT-Anweisung, durch die die Tabelle definiert wird, einen Join enthält. Dieser Join bewirkt, dass die IDENTITY-Eigenschaft nicht an die neue Tabelle übertragen wird. Beachten Sie, dass sich der in der IDENTITY-Funktion angegebene Ausgangs- und Inkrementwert von dem der `AddressID`-Spalte in der `Person.Address`-Quelltabelle unterscheidet.  
   
-```tsql  
+```sql  
 -- Determine the IDENTITY status of the source column AddressID.  
 SELECT OBJECT_NAME(object_id) AS TableName, name AS column_name, 
   is_identity, seed_value, increment_value  
@@ -173,7 +173,7 @@ WHERE name = 'AddressID';
   
  **Gilt für:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -216,7 +216,7 @@ GO
   
  **Gilt für:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql
+```sql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  
 SELECT DISTINCT   
         Insured_Customers.FirstName, Insured_Customers.LastName,   
@@ -234,7 +234,7 @@ Das folgende Beispiel Demostrates als Kopie einer anderen Tabelle eine neue Tabe
 
  **Gilt für:**[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
-```tsql
+```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
 ALTER DATABASE [AdventureWorksDW2016]
 ADD FILE

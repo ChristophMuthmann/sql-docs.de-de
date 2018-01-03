@@ -3,7 +3,7 @@ title: Festlegen von Optionen und Layout | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8d497ec1f8b0d7c557c6d802328ddbbb4360a988
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fc759f4beb67d96abad27dc5bdbe0a4e322f330a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-2---setting-tool-options-and-layout"></a>Lektion 1-2: Festlegen von Optionen und Layout
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Sie können Optionen festlegen, die konfigurieren, welche die grafischen Benutzeroberfläche (GUI) von der Datenbankoptimierungsratgeber beim Starten der Schriftart anzeigt, die verwendet wird, sowie weitere Funktionen, die am besten unterstützen, wie er verwendet werden. Im Folgenden werden die Optionen erläutert, die Sie festlegen können, sowie ihre Verwendung.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/05/2017
     -   Standardmäßig ist **Vor dem Beenden der Sitzungsanalyse fragen** aktiviert, damit nicht eine Optimierungssitzung aus Versehen beendet wird, bevor die Analyse einer Arbeitsauslastung durch den Datenbankoptimierungsratgeber abgeschlossen ist.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
-[Lektion 2: Verwenden des Datenbankoptimierungsratgebers](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[Lesson 2: Using Database Engine Tuning Advisor (Lektion 2: Verwenden des Datenbankoptimierungsratgebers)](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
   
   
   

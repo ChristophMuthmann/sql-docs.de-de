@@ -30,11 +30,11 @@ caps.latest.revision: "35"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: b6478b5e9eb148dea799fb928384098712e4810d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 35b7f2b516227e00af629cadb5c1dccadad2b092
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="filename-transact-sql"></a>FILE_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ FILE_NAME ( file_id )
  Die Datei-ID, für die der Dateiname zurückgegeben wird. *FILE_ID* ist **Int**.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **vom Datentyp nvarchar(128)**  
+ **nvarchar(128)**  
   
 ## <a name="remarks"></a>Hinweise  
  *FILE_ID* entspricht der File_id-Spalte in den Katalogsichten Sys. master_files oder Sys. database_files.  
@@ -62,7 +62,7 @@ FILE_NAME ( file_id )
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel gibt den Dateinamen für `file_ID 1` und `file_ID` in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank.  
   
-```tsql  
+```sql  
 SELECT FILE_NAME(1) AS 'File Name 1', FILE_NAME(2) AS 'File Name 2';  
 GO  
 ```  

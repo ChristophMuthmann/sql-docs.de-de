@@ -1,7 +1,7 @@
 ---
 title: ORDER BY-Klausel (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/11/2017
+ms.date: 12/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -44,11 +44,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ba5d93e724e11887397fef9a6e3a6a33426c88c6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e718c2d35b1627abee53c3214294372fb23d61a8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="select---order-by-clause-transact-sql"></a>Wählen SIE - ORDER BY-Klausel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,9 +61,12 @@ ms.lasthandoff: 11/17/2017
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
+> [!NOTE]  
+>  ORDER BY wird nicht unterstützt, wählen Sie im / in oder erstellen Sie Tabelle AS auswählen (CTAS)-Anweisungen in [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+
 ## <a name="syntax"></a>Syntax  
   
-```tsql  
+```sql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 ORDER BY order_by_expression  
@@ -131,7 +134,7 @@ ORDER BY order_by_expression
  In Abfrageausführungsplänen wird der Wert für die offsetzeilenanzahl angezeigt, der **Zeilen** oder **oben** -Attribut des TOP-Abfrageoperators.  
   
 ## <a name="best-practices"></a>Bewährte Methoden  
- Geben Sie in der ORDER BY-Klausel keine ganzen Zahlen als Positionsangaben der Spalten in der Auswahlliste an. Auch wenn eine Anweisung wie `SELECT ProductID, Name FROM Production.Production ORDER BY 2` nicht ungültig ist, wird dadurch im Vergleich zur Angabe des tatsächlichen Spaltennamens das Verständnis durch andere erschwert. Außerdem erfordern Änderungen an der Auswahlliste, etwa eine Änderung der Spaltenreihenfolge oder das Hinzufügen neuer Spalten, auch Änderungen an der ORDER BY-Klausel, um unerwartete Ergebnisse zu vermeiden.  
+ Geben Sie in der ORDER BY-Klausel keine ganzen Zahlen als Positionsangaben der Spalten in der Auswahlliste an. Auch wenn eine Anweisung wie `SELECT ProductID, Name FROM Production.Production ORDER BY 2` nicht ungültig ist, wird dadurch im Vergleich zur Angabe des tatsächlichen Spaltennamens das Verständnis durch andere erschwert. Außerdem ändert sich in der select-Liste, z. B. das Ändern der Spaltenreihenfolge oder neue Spalten hinzufügen, erfordert das Ändern der ORDER BY-Klausel, um unerwartete Ergebnisse zu vermeiden.  
   
  In einer SELECT TOP (*N*)-Anweisung immer eine ORDER BY-Klausel verwenden. Dies ist die einzige Möglichkeit, zuverlässig anzugeben, welche Zeilen von TOP betroffen sind. Weitere Informationen finden Sie unter [nach oben &#40; Transact-SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
   
@@ -159,9 +162,9 @@ ORDER BY order_by_expression
   
 -   SELECT DISTINCT  
   
- Wenn die Anweisung einen UNION-, EXCEPT- oder INTERSECT-Operator enthält, gilt außerdem, dass die Spaltennamen oder Spaltenaliasnamen in der Auswahlliste der ersten (linken) Abfrage angegeben werden müssen.  
+ Darüber hinaus, wenn die Anweisung eine UNION enthält, EXCEPT oder INTERSECT-Operator, Spaltennamen oder Spaltenaliasnamen in der Auswahlliste der ersten (linken) Abfrage angegeben werden müssen.  
   
- In einer Abfrage, die die Operatoren UNION, EXCEPT oder INTERSECT verwendet, wird ORDER BY nur am Ende der Anweisung zugelassen. Diese Einschränkung ist nur gültig, wenn UNION, EXCEPT und INTERSECT in einer Abfrage der obersten Ebene verwendet werden, nicht in einer Unterabfrage. Weitere Informationen finden Sie im Abschnitt "Beispiele" weiter unten.  
+ In einer Abfrage, die die Operatoren UNION, EXCEPT oder INTERSECT verwendet, wird ORDER BY nur am Ende der Anweisung zugelassen. Diese Einschränkung gilt nur für auf, wenn Sie angeben UNION, EXCEPT und INTERSECT in einer Abfrage der obersten Ebene nicht in einer Unterabfrage. Weitere Informationen finden Sie im Abschnitt "Beispiele" weiter unten.  
   
  Die ORDER BY-Klausel ist in Sichten, Inlinefunktionen, abgeleiteten Tabellen und Unterabfragen nicht gültig, es sei denn, die TOP- oder die OFFSET- und die FETCH-Klausel werden ebenfalls angegeben. Wenn ORDER BY in diesen Objekten verwendet wird, werden mit der Klausel nur die Zeilen bestimmt, die von der TOP-Klausel oder von der OFFSET- und der FETCH-Klausel zurückgegeben werden. Durch die ORDER BY-Klausel wird keine bestimmte Ergebnisreihenfolge bei der Abfrage dieser Konstrukte sichergestellt, es sei denn, in der Abfrage selbst ist ebenfalls ORDER BY angegeben.  
   
@@ -267,8 +270,8 @@ ORDER BY ProductID DESC;
   
 ```  
   
-#### <a name="b-specifying-a-ascending-order"></a>B. Angeben einer aufsteigenden Reihenfolge  
- Im folgenden Beispiel wird das Resultset anhand der `Name`-Spalte in aufsteigender Reihenfolge sortiert. Beachten Sie, dass die Zeichen alphabetisch und nicht numerisch sortiert sind. Das heißt, 10 steht in der Sortierreihenfolge vor 2.  
+#### <a name="b-specifying-an-ascending-order"></a>B. Angeben einen aufsteigenden Reihenfolge  
+ Im folgenden Beispiel wird das Resultset anhand der `Name`-Spalte in aufsteigender Reihenfolge sortiert. Die Zeichen alphabetisch und nicht numerisch sortiert. Das heißt, 10 steht in der Sortierreihenfolge vor 2.  
   
 ```  
 USE AdventureWorks2012;  
@@ -313,7 +316,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
 ```  
   
 ###  <a name="Case"></a>Angeben einer bedingten Reihenfolge  
- In den folgenden Beispielen wird der CASE-Ausdruck in einer ORDER BY-Klausel verwendet, um die Sortierreihenfolge der Zeilen auf Grundlage eines angegebenen Spaltenwerts bedingt zu bestimmen. Im ersten Beispiel wird der Wert in der `SalariedFlag`-Spalte der `HumanResources.Employee`-Tabelle ausgewertet. Mitarbeiter, deren `SalariedFlag` auf 1 festgelegt wurde, werden nach `BusinessEntityID` in absteigender Folge zurückgegeben. Mitarbeiter, deren `SalariedFlag` auf 0 festgelegt wurde, werden nach `BusinessEntityID` in aufsteigender Folge zurückgegeben. Im zweiten Beispiel wird das Resultset nach der `TerritoryName`-Spalte sortiert, wenn die `CountryRegionName`-Spalte gleich 'United States' ist, und bei allen anderen Zeilen nach `CountryRegionName`.  
+ Die folgenden Beispiele verwenden den CASE-Ausdruck in einer ORDER BY-Klausel, um die Sortierreihenfolge der Zeilen auf Grundlage eines angegebenen Spaltenwerts bedingt zu bestimmen. Im ersten Beispiel wird der Wert in der `SalariedFlag`-Spalte der `HumanResources.Employee`-Tabelle ausgewertet. Mitarbeiter, deren `SalariedFlag` auf 1 festgelegt wurde, werden nach `BusinessEntityID` in absteigender Folge zurückgegeben. Mitarbeiter, deren `SalariedFlag` auf 0 festgelegt wurde, werden nach `BusinessEntityID` in aufsteigender Folge zurückgegeben. Im zweiten Beispiel wird das Resultset nach der `TerritoryName`-Spalte sortiert, wenn die `CountryRegionName`-Spalte gleich 'United States' ist, und bei allen anderen Zeilen nach `CountryRegionName`.  
   
 ```  
 SELECT BusinessEntityID, SalariedFlag  

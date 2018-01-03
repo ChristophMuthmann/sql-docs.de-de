@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d5fa1af5399fcc790b7e4c542e2c90314daa36d6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 38958007757b3bc2d4016946a918982eba91251b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="trycast-transact-sql"></a>TRY_CAST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
 ### <a name="a-trycast-returns-null"></a>A. TRY_CAST gibt NULL zurück.  
  Im folgenden Beispiel wird veranschaulicht, dass TRY_CAST NULL zurückgibt, wenn die Umwandlung fehlerhaft ist.  
   
-```tsql  
+```sql  
 SELECT   
     CASE WHEN TRY_CAST('test' AS float) IS NULL   
     THEN 'Cast failed'  
@@ -88,7 +88,7 @@ Cast failed
   
  Im folgenden Beispiel wird veranschaulicht, dass der Ausdruck das erwartete Format aufweisen muss.  
   
-```tsql  
+```sql  
 SET DATEFORMAT dmy;  
 SELECT TRY_CAST('12/31/2010' AS datetime2) AS Result;  
 GO  
@@ -107,7 +107,7 @@ NULL
 ### <a name="b-trycast-fails-with-an-error"></a>B. Bei TRY_CAST tritt ein Fehler auf.  
  Im folgenden Beispiel wird veranschaulicht, dass TRY_CAST einen Fehler zurückgibt, wenn die Umwandlung explizit nicht zulässig ist.  
   
-```tsql  
+```sql  
 SELECT TRY_CAST(4 AS xml) AS Result;  
 GO  
 ```  

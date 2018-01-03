@@ -34,11 +34,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c2c5b9cec465ff1e969df9f657ab66a7e6d5b68f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fd51d2a902337b232f5bf9497f5ebd0bbcac9199
+ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -46,8 +46,11 @@ ms.lasthandoff: 11/17/2017
 Konvertieren einer Rowstore-Tabelle einen gruppierten columnstore-Index, oder erstellen Sie einen nicht gruppierten columnstore-Index. Verwenden Sie einen columnstore-Index aus, um effizient operative Echtzeitanalyse auf einer OLTP-Arbeitslast auszuführen oder um Daten datenkomprimierung und abfrageleistung für Data warehousing-arbeitsauslastungen zu verbessern.  
   
 > [!NOTE]  
->  Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], können Sie die Tabelle als gruppierten columnstore-Index erstellen.   Es ist nicht mehr notwendig, erstellen Sie zuerst eine Rowstore-Tabelle, und klicken Sie dann in einen gruppierten columnstore-Index zu konvertieren.  
-  
+> Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], können Sie die Tabelle als gruppierten columnstore-Index erstellen.   Es ist nicht mehr notwendig, erstellen Sie zuerst eine Rowstore-Tabelle, und klicken Sie dann in einen gruppierten columnstore-Index zu konvertieren.  
+
+> [!TIP]
+> Informationen zu Richtlinien zum Entwerfen Indizes, finden Sie in der [SQL Server Handbuch zum Indexentwurf](../../relational-databases/sql-server-index-design-guide.md).
+
 Fahren Sie mit Beispielen:  
 -   [Beispiele zum Konvertieren einer Rowstore-Tabelle in columnstore](../../t-sql/statements/create-columnstore-index-transact-sql.md#convert)  
 -   [Beispiele für nicht gruppierte columnstore-Indizes](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
@@ -272,7 +275,7 @@ Die SET-Optionen in der Spalte Erforderlicher Wert sind immer dann erforderlich,
 - Ein INSERT-, UPDATE-, DELETE- oder MERGE-Vorgang ändert die Daten in einem gefilterten Index.  
 - Der gefilterte Index wird vom Abfrageoptimierer verwendet, um den Abfrageplan zu erstellen.  
   
-    |SET-Optionen|Erforderlicher Wert|Standardserverwert|Standardwert<br /><br /> OLE DB- und ODBC-Wert|Standardwert<br /><br /> DB-Library-Wert|  
+    |SET-Optionen|Erforderlicher Wert|Standardserverwert|Default<br /><br /> OLE DB- und ODBC-Wert|Default<br /><br /> DB-Library-Wert|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -299,20 +302,20 @@ Die SET-Optionen in der Spalte Erforderlicher Wert sind immer dann erforderlich,
 **Jede Spalte in einem columnstore-Index muss eines der folgenden allgemeinen Geschäftsdatentypen sein:** 
 -   "DateTimeOffset" [(  *n*  )]  
 -   datetime2 [(  *n*  )]  
--   datetime  
+-   DATETIME  
 -   smalldatetime  
--   Datum  
+-   date  
 -   Zeit [(  *n*  )]  
 -   "float" [(  *n*  )]  
 -   echte [(  *n*  )]  
 -   Dezimal [( *Genauigkeit* [ *, Skalierung* ] **)** ]
 -   numerische [( *Genauigkeit* [ *, Skalierung* ] **)** ]    
 -   money  
--   smallmoney  
--   bigint  
--   int  
+-   SMALLMONEY  
+-   BIGINT  
+-   ssNoversion  
 -   smallint  
--   tinyint  
+-   TINYINT  
 -   bit  
 -   Nvarchar [(  *n*  )] 
 -   nvarchar(max) (gilt für [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und Azure SQL-Datenbank auf Premium Tarif, in nur gruppierte columnstore-Indizes)   

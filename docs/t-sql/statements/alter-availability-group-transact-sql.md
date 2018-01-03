@@ -1,7 +1,7 @@
 ---
 title: ALTER AVAILABILITY GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 10/16/2017
+ms.date: 01/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -28,11 +28,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c31f7eef71570c9c25afe19e26779943678ff509
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8d08fa5b70558b64357338b95f33b8d482775b61
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ ALTER AVAILABILITY GROUP group_name
  Gibt den Namen der neuen Verfügbarkeitsgruppe an. *Gruppenname* muss ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Bezeichner, und er muss eindeutig sein in allen Verfügbarkeitsgruppen im WSFC-Cluster.  
   
  AUTOMATED_BACKUP_PREFERENCE  **=**  {PRIMÄREN | SECONDARY_ONLY | SEKUNDÄRE | KEINE}  
- Legt fest, wie ein Sicherungsauftrag das primäre Replikat auswerten soll, wenn ausgewählt wird, wo Sicherungen ausgeführt werden müssen. Sie können einen gegebenen Sicherungsauftrag erstellen, um die automatisierte Sicherungseinstellung zu berücksichtigen. Die Einstellung wird nicht von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erzwungen und weist deshalb keine Auswirkungen auf Ad-hoc-Sicherungen auf.  
+ Legt fest, wie ein Sicherungsauftrag das primäre Replikat auswerten soll, wenn ausgewählt wird, wo Sicherungen ausgeführt werden müssen. Sie können einen gegebenen Sicherungsauftrag erstellen, um die automatisierte Sicherungseinstellung zu berücksichtigen. Es ist wichtig zu verstehen, dass die Einstellung von nicht erzwungen wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sodass er keine Auswirkungen auf ad-hoc-Sicherungen verfügt.  
   
  Wird nur für das primäre Replikat unterstützt.  
   
@@ -185,7 +185,7 @@ ALTER AVAILABILITY GROUP group_name
  Gibt an, dass Sicherungsaufträge die Rolle der Verfügbarkeitsreplikate ignorieren sollen, wenn sie das Replikat zum Durchführen der Sicherungen auswählen. Hinweis: Sicherungsaufträge können andere Faktoren auswerten, wie z. B. die Sicherungspriorität jedes Verfügbarkeitsreplikats in Verbindung mit seinem Betriebszustand und Verbindungsstatus.  
   
 > [!IMPORTANT]  
->  Die Einstellung AUTOMATED_BACKUP_PREFERENCE wird nicht erzwungen. Die Interpretation dieser Einstellung hängt von der Logik ab, die Sie ggf. per Skript in Sicherungsaufträge für die Datenbanken in einer angegebenen Verfügbarkeitsgruppe integriert haben. Die Voreinstellung für die automatisierte Sicherung hat keine Auswirkungen auf Ad-hoc-Sicherungen. Weitere Informationen finden Sie unter [Konfigurieren der Sicherung auf Verfügbarkeitsreplikaten &#40; SQLServer &#41; ](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).  
+>  Die Einstellung AUTOMATED_BACKUP_PREFERENCE wird nicht erzwungen. Die Interpretation dieser Einstellung hängt von der Logik ab, die Sie ggf. per Skript in Sicherungsaufträge für die Datenbanken in einer angegebenen Verfügbarkeitsgruppe integriert haben. Die Voreinstellung für automatisierte Sicherung hat keine Auswirkungen auf ad-hoc-Sicherungen. Weitere Informationen finden Sie unter [Konfigurieren der Sicherung auf Verfügbarkeitsreplikaten &#40; SQLServer &#41; ](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).  
   
 > [!NOTE]  
 >  Um die automatisierte sicherungseinstellung einer vorhandenen verfügbarkeitsgruppe anzuzeigen, wählen Sie die **Automated_backup_preference** oder **Automated_backup_preference_desc** Spalte die [ availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) -Katalogsicht angezeigt. Darüber hinaus [Sys. fn_hadr_backup_is_preferred_replica &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) können verwendet werden, um das bevorzugte sicherungsreplikat zu bestimmen.  Diese Funktion gibt immer 1 für mindestens eines der Replikate zurück, sogar wenn `AUTOMATED_BACKUP_PREFERENCE = NONE` ist.  
@@ -235,7 +235,7 @@ ALTER AVAILABILITY GROUP group_name
  Wird nur für das primäre Replikat unterstützt.  
   
 > [!NOTE]  
->  Nachdem Sie eine Verfügbarkeitsgruppe erstellt haben, müssen Sie wiederum eine Verbindung zu jeder Serverinstanz herstellen, die ein sekundäres Replikat hostet, und anschließend jede sekundäre Datenbank vorbereiten und mit der Verfügbarkeitsgruppe verknüpfen. Weitere Informationen finden Sie unter [Starten der Datenverschiebung auf einer sekundären Always On-Datenbank &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
+>  Nachdem Sie eine Verfügbarkeitsgruppe erstellt haben, müssen Sie wiederum eine Verbindung zu jeder Serverinstanz herstellen, die ein sekundäres Replikat hostet, und anschließend jede sekundäre Datenbank vorbereiten und mit der Verfügbarkeitsgruppe verknüpfen. Weitere Informationen finden Sie weiter unten in diesem Thema im Abschnitt [Starten der Datenverschiebung auf einer sekundären Always On-Datenbank &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
  "Datenbank entfernen" *Database_name*  
  Entfernt die angegebene primäre Datenbank und die entsprechenden sekundären Datenbanken aus der Verfügbarkeitsgruppe. Wird nur für das primäre Replikat unterstützt.  
@@ -599,10 +599,10 @@ ALTER AVAILABILITY GROUP group_name
   
  Informationen zu Einschränkungen bei den AVAILABILITY GROUP-Transact-SQL-Anweisungen finden Sie unter [Übersicht von Transact-SQL-Anweisungen für AlwaysOn-Verfügbarkeitsgruppen &#40; SQLServer &#41; ](../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md).  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Berechtigungen  
- Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung.  
+ Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung.  Außerdem erfordert die ALTER ANY DATABASE-Berechtigung.   
   
 ## <a name="examples"></a>Beispiele  
   
@@ -629,7 +629,7 @@ GO
  [Sys. availability_replicas &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
  [availability_groups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [Problembehandlung für die Always On-Verfügbarkeitsgruppenkonfiguration &#40; SQLServer &#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
- [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover (SQL Server)](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   

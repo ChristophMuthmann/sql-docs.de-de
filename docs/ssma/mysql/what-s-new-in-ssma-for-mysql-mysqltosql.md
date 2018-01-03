@@ -1,7 +1,7 @@
 ---
 title: "Neuheiten bei SSMA für die MySQL (MySQLToSql) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa1c2183c81438c1d83e13e35c627e5e087b62ec
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6da0bf47b7976da1f21262d23bd29d8e093a0516
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Was ist neu in SSMA für die MySQL (MySQLToSql)
 In diesem Thema werden die SSMA für MySQL-Änderungen in jeder Version aufgelistet. 

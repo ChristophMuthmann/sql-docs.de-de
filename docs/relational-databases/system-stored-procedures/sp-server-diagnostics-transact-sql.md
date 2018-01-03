@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 537267b15a65dca3035ba79e6bbecb9f7bc4a51c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5a4b8748f024649ec2980e46d8e828afcffc553c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,14 +61,14 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="result-sets"></a>Resultsets  
 **Sp_server_diagnostics** gibt die folgenden Informationen zurück  
   
-|Column|Datentyp|Description|  
+|Spalte|Datentyp|Description|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Gibt den Zeitstempel der Zeilenerstellung an. Jede Zeile in einem einzelnen Rowset weist denselben Zeitstempel auf.|  
 |**component_type**|**sysname**|Gibt an, ob die Zeile Informationen für enthält die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzebene Komponente oder für eine Always On-verfügbarkeitsgruppe:<br /><br /> Instanz<br /><br /> AlwaysOn: AvailabilityGroup|  
-|**Komponentenname**|**sysname**|Gibt den Namen der Komponente oder den Namen der Verfügbarkeitsgruppe an:<br /><br /> System<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> Ereignisse<br /><br /> *\<Name der verfügbarkeitsgruppe >*|  
-|**Status**|**int**|Gibt den Integritätsstatus der Komponente an:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
+|**Komponentenname**|**sysname**|Gibt den Namen der Komponente oder den Namen der Verfügbarkeitsgruppe an:<br /><br /> System<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> -Ereignisse<br /><br /> *\<Name der verfügbarkeitsgruppe >*|  
+|**state**|**int**|Gibt den Integritätsstatus der Komponente an:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|Beschreibt die Zustandsspalte. Folgende Beschreibungen entsprechen den Werten in der Statusspalte:<br /><br /> 0: unbekannt<br /><br /> 1: Bereinigen<br /><br /> 2: Warnung<br /><br /> 3: Fehler|  
-|**Daten**|**Varchar (Max.)**|Gibt Daten an, die für die Komponente spezifisch sind.|  
+|**data**|**Varchar (Max.)**|Gibt Daten an, die für die Komponente spezifisch sind.|  
   
  Im Folgenden finden Sie die Beschreibungen der fünf Komponenten:  
   
@@ -95,7 +95,7 @@ In der folgenden Tabelle sind die Komponenten den jeweils zugeordneten Integrit�
 |resource|x|x|x||  
 |query_processing|x|x|x||  
 |io_subsystem|x|x|||  
-|Ereignisse||||x|  
+|-Ereignisse||||x|  
   
 Das (x) in jeder Zeile steht für gültige Zustände für die Komponente. Im Beispiel wird io_subsystem als fehlerfrei oder Warnung angezeigt. Der Fehlerstatus wird nicht angezeigt.  
  
@@ -107,7 +107,7 @@ Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.
   
 ## <a name="examples"></a>Beispiele  
 Es ist empfehlenswert, die Zustandsinformationen in erweiterten Sitzungen aufzuzeichnen und in einer Datei zu speichern, die sich außerhalb von SQL Server befindet. In diesem Fall können Sie auch bei einem Fehler auf diese zugreifen. Im folgenden Beispiel wird die Ausgabe einer Ereignissitzung in einer Datei gespeichert:  
-```tsql  
+```sql  
 CREATE EVENT SESSION [diag]  
 ON SERVER  
            ADD EVENT [sp_server_diagnostics_component_result] (set collect_data=1)  
@@ -119,7 +119,7 @@ GO
 ```  
   
 In der unten angegebenen Beispielabfrage wird die Protokolldatei der erweiterten Sitzung gelesen:  
-```tsql  
+```sql  
 SELECT  
     xml_data.value('(/event/@name)[1]','varchar(max)') AS Name  
   , xml_data.value('(/event/@package)[1]', 'varchar(max)') AS Package  
@@ -142,7 +142,7 @@ ORDER BY time;
 ```  
   
 Im folgenden Beispiel wird die Ausgabe von sp_server_diagnostics an eine Tabelle in einem anderen als dem Wiederholungsmodus aufgezeichnet:  
-```tsql  
+```sql  
 CREATE TABLE SpServerDiagnosticsResult  
 (  
       create_time DateTime,  
@@ -156,16 +156,16 @@ INSERT INTO SpServerDiagnosticsResult
 EXEC sp_server_diagnostics; 
 ```  
 
-Der unten angegebenen Beispielabfrage liest die Zusammenfassung aus der Tabelle ausgeben:  
-```tsql  
+Die nachstehende Beispielabfrage liest die Zusammenfassungsausgabe aus der Tabelle:  
+```sql  
 SELECT create_time,
        component_name,
        state_desc 
 FROM SpServerDiagnosticsResult;  
 ``` 
 
-Der unten angegebenen Beispielabfrage gelesen Teil die ausführliche Ausgabe, die jede Komponente in der Tabelle:  
-```tsql  
+Die nachstehende Beispielabfrage liest einige Bestandteile der ausführlichen Ausgabe aus jeder Komponente in der Tabelle:  
+```sql  
 -- system
 select data.value('(/system/@systemCpuUtilization)[1]','bigint') as 'System_CPU',
    data.value('(/system/@sqlCpuUtilization)[1]','bigint') as 'SQL_CPU',

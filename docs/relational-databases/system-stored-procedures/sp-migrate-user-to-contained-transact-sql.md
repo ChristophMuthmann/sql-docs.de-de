@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3920b0bc483dffb115211a0fe8837bd1bdb0d11e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 366d2347118fa55a8541e7f84a268b173ae5b2e3
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spmigrateusertocontained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
   
 -   **Sp_migrate_user_to_contained** kann nicht in einer Systemdatenbank verwendet werden.  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
  Achten Sie beim Migrieren von Benutzern darauf, dass nicht alle Administratoranmeldungen von der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelöscht werden. Wenn alle Anmeldungen gelöscht werden, finden Sie unter [Herstellen einer Verbindung mit SQL Server beim System Systemadministratoren gesperrt sind](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md).  
   
  Wenn die **"BUILTIN\Administrators"** Anmeldung vorhanden ist, können Administratoren durch Starten ihre Anwendung mit Verbinden der **als Administrator ausführen** Option.  
@@ -85,7 +85,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ### <a name="a-migrating-a-single-user"></a>A. Migrieren eines einzelnen Benutzers  
  Im folgenden Beispiel wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldename `Barry` in den Benutzer einer enthaltenen Datenbankbenutzer mit Kennwort migriert. Der Benutzername wird im Beispiel nicht geändert, und der Anmeldename ist weiterhin aktiviert.  
   
-```tsql  
+```sql  
 sp_migrate_user_to_contained   
 @username = N'Barry',  
 @rename = N'keep_name',  
@@ -96,7 +96,7 @@ sp_migrate_user_to_contained
 ### <a name="b-migrating-all-database-users-with-logins-to-contained-database-users-without-logins"></a>B. Migrieren aller Datenbankbenutzer mit Anmeldenamen zu Benutzern in eigenständigen Datenbanken ohne Anmeldenamen  
  Im folgenden Beispiel werden alle Benutzer, die auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldungen basieren, in Benutzer enthaltener Datenbanken mit Kennwörtern migriert. Nicht berücksichtigt werden Anmeldungen, die nicht aktiviert sind. Das Beispiel muss in der enthaltenen Datenbank ausgeführt werden.  
   
-```tsql  
+```sql  
 DECLARE @username sysname ;  
 DECLARE user_cursor CURSOR  
     FOR   

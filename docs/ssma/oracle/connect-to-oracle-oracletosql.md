@@ -1,7 +1,7 @@
 ---
 title: Herstellen einer Verbindung mit Oracle (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,18 +17,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 9f2db42d3770626ef983b4d45473ad5827c604f5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 04f87810ef02030a95c06870012972f307c41f33
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Herstellen einer Verbindung mit Oracle (OracleToSQL)
 Verwenden der **Connect to Oracle** Dialogfeld Verbindung mit der Oracle-Datenbank, die Sie migrieren möchten.  
   
 Zum Zugriff auf dieses Dialogfeld, in dem **Datei** klicken Sie im Menü **Connect to Oracle**. Wenn Sie zuvor eine Verbindung hergestellt haben, wird der Befehl ist **eine erneute Verbindung mit Oracle**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Anbieter**  
 Auswählen der Datenzugriffsanbieter für die Verbindung mit der Oracle-Datenbank. Verfügbare Anbieter sind die Oracle-Client-Anbieter und der OLE DB-Anbieter. Der Standardwert ist die Oracle-Client-Anbieter.  
   
@@ -62,7 +62,7 @@ Geben Sie die SID für die Datenbank ein. Die SID ist ein Bezeichner, der die Or
   
 Dies ist ein Modus "Standard"-Option.  
   
-**Benutzername**  
+**User name**  
 Geben Sie den Benutzernamen, den SSMA für die Verbindung zur Oracle-Datenbank verwenden.  
   
 **Kennwort**  

@@ -64,11 +64,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fc00fddf50d7f3261d0af09b755c1eb6b4c314d2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 596e524d009f62439e5b8205603040369384fc79
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -334,7 +334,7 @@ Der Datentyp des **Text**, **Ntext** und **Image** Spalten können nur auf folge
   
  Wenn die Spalte geändert wird mit VERSCHLÜSSELT verschlüsselt ist, können Sie den Datentyp in einen kompatiblen Datentyp (z. B. INT, BIGINT) ändern, jedoch Einstellungen für die Verschlüsselung kann nicht geändert werden.  
   
- *Spaltenname*  
+ *column_name*  
  Der Name der Spalte, die geändert, hinzugefügt oder gelöscht werden soll. *Column_name* kann maximal 128 Zeichen sein. Bei neuen Spalten *Column_name* kann ausgelassen werden, für Spalten erstellt, die mit einem **Zeitstempel** -Datentyp. Der Name **Zeitstempel** wird verwendet, wenn keine *Column_name* für angegeben wird eine **Zeitstempel** -Datentypspalte.  
   
  [ *Type_schema_name***.** ] *Type_name*  
@@ -777,7 +777,7 @@ TABLE
   
 -   Führen Sie den folgenden Befehl aus, um Stretch für eine Tabelle zu deaktivieren und die Remotedaten einer Tabelle aus Azure zurück zu SQL Server zu kopieren. Dieser Befehl kann nicht abgebrochen werden.  
   
-    ```tsql  
+    ```sql  
 ALTER TABLE \<table name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;  
     ```  
@@ -788,7 +788,7 @@ ALTER TABLE \<table name>
   
 -   Führen Sie den folgenden Befehl aus, um Stretch für eine Tabelle zu deaktivieren und die Remotedaten zu verwerfen.  
   
-    ```tsql  
+    ```sql  
 ALTER TABLE \<table_name>
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;  
     ```  
@@ -1648,7 +1648,7 @@ ORDER BY p.partition_number;
 ```  
   
 ### <a name="g-determining-the-partition-column-for-a-partitioned-table"></a>G. Bestimmen die Partitionsspalte für eine partitionierte Tabelle  
- Die folgende Abfrage gibt den Namen der Partitionierungsspalte für die Tabelle zurück. `FactResellerSales`.  
+ Die folgende Abfrage gibt den Namen der Partitionierungsspalte für die Tabelle zurück. `FactResellerSales`installiert haben.  
   
 ```  
 SELECT t.object_id AS Object_ID, t.name AS TableName, 

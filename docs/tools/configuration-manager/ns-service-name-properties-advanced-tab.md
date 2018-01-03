@@ -3,7 +3,7 @@ title: NS$&lt;Dienstname&gt; Eigenschaften (Registerkarte "Erweitert") | Microso
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3f445a7e929a646dff0e89d4d66ee1e69f9b38bc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 31c9c71f1bc3330761e292929fc026e28d7d8121
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nsltservice-namegt-properties-advanced-tab"></a>NS$&lt;Dienstname&gt; Eigenschaften (Registerkarte "Erweitert")
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNS](../../includes/ssns-md.md)] wird als Dienst mit dem Namen im Format implementiert **NS$***< benutzerkonfigurierter Name >*. Wenn Eigenschaften vom Benutzer definiert wurden, werden sie mit den entsprechenden Werten auf dieser Registerkarte angezeigt. Auf dieser Registerkarte werden möglicherweise keine Eigenschaften aufgeführt.  

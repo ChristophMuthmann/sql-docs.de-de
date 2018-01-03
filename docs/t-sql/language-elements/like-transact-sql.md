@@ -36,11 +36,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8ca323b2431d493edd3db513502f197580b4149d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d8883f7a71a72a005323458bc96ca1d795d86513
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -91,7 +91,7 @@ match_expression [ NOT ] LIKE pattern
   
  Mit einem Muster, die enthält einen Zeichenfolgenvergleich **Char** und **Varchar** Daten möglicherweise keinen Vergleich mit LIKE aufgrund der Art der dateispeicherung übergeben. Verschaffen Sie sich eine Übersicht darüber, wie die einzelnen Datentypen gespeichert werden und wann ein Vergleich mit LIKE fehlschlagen kann. Das folgende Beispiel übergibt eine lokale **Char** -Variablen an eine gespeicherte Prozedur ein, und Mustervergleich sollen alle Mitarbeiter, deren letzten beginnen mit einem angegebenen Satz von Zeichen gefunden.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName char(20)  
@@ -109,7 +109,7 @@ GO
   
  Im folgenden Beispiel wird jedoch erfolgreich ist, da nachfolgende Leerzeichen nicht hinzugefügt werden eine **Varchar** Variable.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName varchar(20)  
@@ -137,7 +137,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
   
  Die folgenden Beispiele verdeutlichen die Unterschiede der zurückgegebenen Zeilen beim Durchführen von Mustervergleichen mit ASCII- und Unicode-LIKE-Operatoren.  
   
-```tsql  
+```sql  
 -- ASCII pattern matching with char column  
 CREATE TABLE t (col1 char(30));  
 INSERT INTO t VALUES ('Robert King');  
@@ -168,7 +168,7 @@ WHERE RTRIM(col1) LIKE '% King';   -- returns 1 row
   
  Mit der folgenden Abfrage werden beispielsweise alle dynamischen Verwaltungssichten in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank angezeigt, da sie alle mit den Buchstaben `dm` beginnen.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT Name  
@@ -207,7 +207,7 @@ GO
 ### <a name="a-using-like-with-the--wildcard-character"></a>A. Verwenden von NOT LIKE mit dem Platzhalterzeichen %  
  Im folgenden Beispiel werden alle Telefonnummern gefunden, die die Vorwahl `415` in der `PersonPhone`-Tabelle enthalten.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -241,7 +241,7 @@ GO
 ### <a name="b-using-not-like-with-the--wildcard-character"></a>B. Verwenden von NOT LIKE mit dem Platzhalterzeichen %  
  Im folgenden Beispiel werden alle Telefonnummern in der `PersonPhone`-Tabelle gefunden, die nicht die Vorwahl `415` aufweisen.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -272,7 +272,7 @@ Gail                  Westover             305-555-0100
 ### <a name="c-using-the-escape-clause"></a>C. Verwenden der ESCAPE-Klausel  
  Im folgenden Beispiel werden die `ESCAPE`-Klausel und das Escapezeichen verwendet, um die exakte Zeichenfolge `10-15%` in der `c1`-Spalte der `mytbl2`-Tabelle zu suchen.  
   
-```tsql
+```sql
 USE tempdb;  
 GO  
 IF EXISTS(SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES  
@@ -297,7 +297,7 @@ GO
 ### <a name="d-using-the---wildcard-characters"></a>D. Verwenden des []-Platzhalterzeichens  
  Im folgende Beispiel werden Mitarbeiter ermittelt, auf die `Person` Tabelle mit den ersten Vornamen des `Cheryl` oder `Sheryl`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT BusinessEntityID, FirstName, LastName   
@@ -308,7 +308,7 @@ GO
   
  Im folgenden Beispiel werden in der `Person`-Tabelle Zeilen für Mitarbeiter mit den Nachnamen `Zheng` oder `Zhang` gesucht.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, FirstName  
@@ -323,7 +323,7 @@ GO
 ### <a name="e-using-like-with-the--wildcard-character"></a>E. Verwenden von NOT LIKE mit dem Platzhalterzeichen %  
  Das folgende Beispiel findet alle Mitarbeiter in der `DimEmployee` Tabelle mit Telefonnummern, die mit beginnt `612`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -335,7 +335,7 @@ ORDER by LastName;
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. Verwenden von NOT LIKE mit dem Platzhalterzeichen %  
  Das folgende Beispiel findet alle Telefonnummern in der `DimEmployee` Tabelle, die nicht mit beginnen `612`.  zugreifen.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -347,7 +347,7 @@ ORDER by LastName;
 ### <a name="g-using-like-with-the--wildcard-character"></a>G. Verwenden von NOT LIKE mit dem Platzhalterzeichen _  
  Das folgende Beispiel findet alle Telefonnummern Ortsvorwahl ab, mit denen `6` und Endziffern `2` in der `DimEmployee` Tabelle. Beachten Sie, dass es sich bei das Platzhalterzeichen % auch am Ende das Suchmuster enthalten ist, da die Ortskennzahl der erste Teil der Rufnummer ist und zusätzliche Zeichen nach dem in der Wert der Spalte vorhanden sein.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  

@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 64686457f1f5f4057635eb4a4c9a0f3d4030d8fa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c2a8612af978c6cd32056ff192e0eae8909b50cb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -223,14 +223,14 @@ Eine quick Start-Lernprogramm veranschaulicht, wie Sie mit einer Azure SQL-Daten
 ### <a name="simple-example"></a>Einfaches Beispiel  
  Ein einfaches Beispiel zum Erstellen einer Datenbank.  
   
-```tsql  
+```sql  
 CREATE DATABASE TestDB1;  
 ```  
   
 ### <a name="simple-example-with-edition"></a>Einfaches Beispiel mit der Edition  
  Ein einfaches Beispiel zum Erstellen einer standard-Datenbank.  
   
-```tsql  
+```sql  
 CREATE DATABASE TestDB2  
 ( EDITION = 'standard' );  
 ```  
@@ -238,7 +238,7 @@ CREATE DATABASE TestDB2
 ### <a name="example-with-additional-options"></a>Beispiel mit zusätzlichen Optionen  
  Ein Beispiel für mehrere Optionen.  
   
-```tsql  
+```sql  
 CREATE DATABASE hito   
 COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS   
 ( MAXSIZE = 500 MB, EDITION = 'standard', SERVICE_OBJECTIVE = 'S1' ) ;  
@@ -247,7 +247,7 @@ COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS
 ### <a name="creating-a-copy"></a>Eine Kopie erstellen  
  Beispiel für die Erstellung einer Kopie einer Datenbank.  
   
-```tsql  
+```sql  
 CREATE DATABASE escuela   
 AS COPY OF school;  
 ```  
@@ -255,21 +255,21 @@ AS COPY OF school;
 ### <a name="creating-a-database-in-an-elastic-pool"></a>Erstellen einer Datenbank in einem elastischen Pool  
  Neue Datenbank erstellt mit dem Namen S3M100 Pool:  
   
-```tsql  
+```sql  
 CREATE DATABASE db1 ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = S3M100 ) ) ;  
 ```  
   
 ### <a name="creating-a-copy-of-a-database-on-another-server"></a>Erstellen eine Kopie einer Datenbank auf einem anderen Server  
  Das folgende Beispiel erstellt eine Kopie der Db_original-Datenbank, in der Leistungsstufe P2 Db_copy für eine einzelne Datenbank.  Dies gilt unabhängig davon, ob Db_original in einem elastischen Pool oder eine Leistungsstufe für eine einzelne Datenbank.  
   
-```tsql  
+```sql  
 CREATE DATABASE db_copy   
     AS COPY OF ozabzw7545.db_original ( SERVICE_OBJECTIVE = 'P2' )  ;  
 ```  
   
  Das folgende Beispiel erstellt eine Kopie der Db_original-Datenbank, in einem elastischen Pool mit dem Namen ep1 Db_copy.  Dies gilt unabhängig davon, ob Db_original in einem elastischen Pool oder eine Leistungsstufe für eine einzelne Datenbank.  Wenn Db_original in einem elastischen Pool mit einem anderen Namen befindet, wird Db_copy weiterhin in ep1 erstellt.  
   
-```tsql  
+```sql  
 CREATE DATABASE db_copy   
     AS COPY OF ozabzw7545.db_original   
     (SERVICE_OBJECTIVE = ELASTIC_POOL( name = ep1 ) ) ;  
@@ -279,7 +279,7 @@ CREATE DATABASE db_copy
 
 Im folgenden Beispiel wird die katalogsortierung zu DATABASE_DEFAULT, beim Erstellen der Datenbank, wodurch versetzt wird die katalogsortierung mit der Sortierung der Datenbank identisch sein.
 
-```tsql
+```sql
 CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = ‘basic’)  
       WITH CATALOG_COLLATION = DATABASE_DEFAULT 
 ```

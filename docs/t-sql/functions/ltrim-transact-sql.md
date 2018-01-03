@@ -28,11 +28,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4221804a91d23c872f3874d19bc575c88b6e0ffe
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 438975b08700cb87c534f0cb4e3021a4167ae8b1
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="ltrim-transact-sql"></a>LTRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +60,7 @@ LTRIM ( character_expression )
 
  Im folgenden Beispiel wird die LTRIM führende Leerzeichen aus einem Zeichenausdruck entfernt werden sollen.  
   
-```tsql  
+```sql  
 SELECT LTRIM('     Five spaces are at the beginning of this string.') FROM sys.databases;  
 ```  
   
