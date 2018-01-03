@@ -3,7 +3,7 @@ title: "Öffnen von Abfragen (Visual Database Tools) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c2efbc1e30f7cd67529e0df143e4ac47c5ada294
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 32d326f9f2c07413405ce32c0c90de9d567a3bcc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-queries-visual-database-tools"></a>Öffnen von Abfragen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können eine vorhandene Abfrage im Abfrage- und Sicht-Designer mit dem Befehl **Öffnen** öffnen.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 > Standardmäßig öffnet der Abfrage- und Sicht-Designer alle Bereiche (SQL, Kriterien, Diagramm und Ergebnisse); diese Standardeinstellung kann jedoch im Dialogfeld **Optionen** geändert werden. Wenn diese Bereiche geschlossen sind und Sie sie anzeigen möchten, zeigen Sie im Menü **Abfrage-Designer** auf **Bereich**, und klicken Sie anschließend auf den Bereich, den Sie öffnen möchten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Ausführen grundlegender Vorgänge mit Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 [Speichern von Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
 [Verwenden von Daten im Ergebnisbereich &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  

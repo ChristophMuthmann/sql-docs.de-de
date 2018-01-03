@@ -3,10 +3,10 @@ title: Installieren Sie die SCOM-Management Packs (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ab3985d8-0a71-4b28-9d28-9886ae2a110f
 caps.latest.revision: "16"
-ms.openlocfilehash: f20048a70ef04bba475f9e8e6b58b24095f23f1a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0fce285f730508ec9bf7f384eed4f6b3c9ed3dda
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="install-the-scom-management-packs"></a>Installieren Sie die SCOM-Management Packs
 Führen Sie diese Schritte zum Herunterladen und installieren die System Center Operations Manager (SCOM) Management Packs für SQL Server PDW. Die Management Packs sind erforderlich, zum Überwachen von SQL Server PDW aus SCOM.  

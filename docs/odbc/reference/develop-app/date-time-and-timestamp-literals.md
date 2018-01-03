@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8aa042321602332ea016b88c69332dd67a256044
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 132377c8578ae4a403753d71dc82cd12b8be3c80
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="date-time-and-timestamp-literals"></a>Date, Time und Timestamp-Literale
 Die Escapesequenz für Datum, Uhrzeit und timestampliterale lautet  
@@ -33,7 +33,7 @@ Die Escapesequenz für Datum, Uhrzeit und timestampliterale lautet
   
 |*Literal-Typ*|Bedeutung|Formatieren von *Wert*|  
 |---------------------|-------------|-----------------------|  
-|**d**|Datum|*JJJJ*-*mm*-*TT*|  
+|**d**|date|*JJJJ*-*mm*-*TT*|  
 |**t**|Zeit *|*"hh"*:*mm*:*ss*[1]|  
 |**TS**|Timestamp|*JJJJ*-*mm*-*Dd* *"hh"*:*mm*:*ss* [. *f...* ] [1]|  
   

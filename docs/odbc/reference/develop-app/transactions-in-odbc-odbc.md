@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d73b20da430e6a637f2977c2a2fa975d9d8c1601
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d775a3349a082f4c525e8417f5df30ebd38ab245
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transactions-in-odbc-odbc"></a>Transaktionen in ODBC ODBC
 Transaktionen in ODBC werden auf der Verbindungsebene abgeschlossen; d. h., wenn eine Anwendung eine Transaktion abschließt, es ein Commit oder Rollback alle Arbeit, die über alle Anweisungshandles dieser Verbindung.  

@@ -3,7 +3,7 @@ title: WillChangeField- und FieldChangeComplete-Ereignisse (ADO) | Microsoft Doc
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -26,11 +26,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d532aa3857e2a61bb5ec23fa9258f6d7aa1186f2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4c30a41b18016515f97ba044eb0d36724a59a351
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>WillChangeField- und FieldChangeComplete-Ereignisse (ADO)
 Die **WillChangeField** Ereignis wird aufgerufen, bevor ein ausstehender Vorgang verwendet den Wert einer oder mehrerer ändert [Feld](../../../ado/reference/ado-api/field-object.md) Objekte in der [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Die **FieldChangeComplete** Ereignis wird aufgerufen, nachdem der Wert aus einem oder mehreren **Feld** Objekte wurde geändert.  
@@ -47,7 +47,7 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  *cFields*  
  Ein **lange** , der angibt, dass der Anzahl der **Feld** Objekte im *Felder*.  
   
- *Felder*  
+ *Fields*  
  Für **WillChangeField**, *Felder* Parameter ist ein Array von **Varianten** enthält **Feld** Objekte mit den ursprünglichen Werten. Für **FieldChangeComplete**, *Felder* Parameter ist ein Array von **Varianten** enthält **Feld** Objekte mit den geänderten Werten .  
   
  *pError*  

@@ -3,7 +3,7 @@ title: Execute-Methode (ADO-Befehl) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d8a16c395a01e20765dd1aaa569889b4b041cb9c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aa39093a0efe75959bfa0e6805ea90b65c6d39a9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="execute-method-ado-command"></a>Execute-Methode (ADO-Befehl)
 Führt die Abfrage, die SQL-Anweisung oder die gespeicherte Prozedur, die im angegebenen der [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) oder [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) Eigenschaft von der [Befehlsobjekt](../../../ado/reference/ado-api/command-object-ado.md).  
@@ -48,7 +48,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
  *Parameter*  
  Optional. Ein **Variant** Array von Parameterwerten, die zusammen mit der Eingabezeichenfolge oder im angegebenen Stream **CommandText** oder **CommandStream**. (Output-Parameter werden keine richtige Werte, wenn dieses Argument übergeben zurück.)  
   
- *Optionen*  
+ *enthalten*  
  Optional. Ein **lange** Wert, der angibt, wie der Anbieter auswerten soll die [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) oder die [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) Eigenschaft von der [Befehl](../../../ado/reference/ado-api/command-object-ado.md) -Objekt. Kann ein Bitmaskenwert mit [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) und/oder [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) Werte. Beispielsweise können Sie **AdCmdText** und **AdExecuteNoRecords** in Kombination, wenn Sie den Wert des ADO haben möchten die **CommandText** Eigenschaft als Text und Geben Sie an, dass der Befehl sollte verwerfen und keine Datensätze, die generiert werden können zurück, wenn der Befehlstext ausgeführt wird.  
   
 > [!NOTE]

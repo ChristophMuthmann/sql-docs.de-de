@@ -3,10 +3,10 @@ title: "Konfigurieren von SCOM zum Überwachen von Analyseplattformsystem"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4dba9b50-1447-45fc-b219-b9fc99d47d8d
 caps.latest.revision: "10"
-ms.openlocfilehash: f9c8a778afad89abea9ad4fd092fefb15844a5ae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 435bbae75548d1959d509b9833bd9a6f7ec658e2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-scom-to-monitor-analytics-platform-system"></a>Konfigurieren von SCOM zum Überwachen von Analyseplattformsystem
 Führen Sie diese Schritte aus, um die System Center Operations Manager (SCOM) Management Packs für Analytics Platform System zu konfigurieren. Die Management Packs sind erforderlich, Analytics Platform System von SCOM überwacht.  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 31122122cdb7a6f940dd1ba91eeb8caef8ac9d0c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e3bb3278fe83922aee29aa8348d32b3fbc757511
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unicode-data"></a>Unicode-Daten
 SQL-Unicode-Datentypen werden bereitgestellt, um Daten zu beschreiben, die im Unicode-Format, systemintern für das DBMS befindet. Ein C#-Unicode-Datentyp wird bereitgestellt, damit eine Anwendung zum Binden von Daten in einen Unicode-Puffer kann. Der Treiber-Manager können Daten aus einem Unicode-C-Typ (SQL_C_WCHAR) zu erleichtern konvertieren-Funktion mit einer ANSI-Treiber.  

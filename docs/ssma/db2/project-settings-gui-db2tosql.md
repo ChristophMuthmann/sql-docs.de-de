@@ -1,7 +1,7 @@
 ---
 title: Projekteinstellungen (GUI) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a280b4dab7986298d8b420dad7ec05645e6fab86
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 21dc510ed064c36a0a2a4827e6e7dd811365567e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-gui-db2tosql"></a>Projekteinstellungen (GUI) (DB2ToSQL)
 Die GUI-projekteinstellungen können Sie konfigurieren die Darstellung von Daten auf die **Daten** Registerkarte und, ob nach der Konvertierung den Assessment-Bericht angezeigt werden oder nicht.  
@@ -35,7 +35,7 @@ Die GUI-Bereich finden Sie in der **Projekteinstellungen** und **Projekt Standar
   
 -   Verwenden der **Projekt Standardeinstellungen** im Dialogfeld Optionen der Benutzeroberfläche für alle Projekte festgelegt. Die GUI-Einstellungen für den Zugriff auf die **Tools** klicken Sie im Menü **Projekt Standardeinstellungen**, wählen Sie die Migration-Projekttyp, die für die Einstellungen sind erforderlich, angezeigt oder geändert werden **Migration Zielversion** Dropdown-Liste, und klicken Sie dann auf **GUI** unten im linken Bereich.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Maximale Anzahl für die Quelle**  
 Konfiguriert die Anzahl von Zeilen mit Daten, die angezeigt wird, auf die **Daten** Registerkarte für die ausgewählte Quelltabelle.  
   

@@ -3,10 +3,10 @@ title: Analytics Platform System-Hardwarekomponenten
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: aa1cdcc7-cfee-4658-bbce-7d319bfb7483
 caps.latest.revision: "17"
-ms.openlocfilehash: 1c42436dd5a5e98dd1343e95d116bc0056ed1e2b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cd58b4a7afb2f69081b99a884d3b0f32b194097a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="analytics-platform-system-hardware-components"></a>Analytics Platform System-Hardwarekomponenten
 

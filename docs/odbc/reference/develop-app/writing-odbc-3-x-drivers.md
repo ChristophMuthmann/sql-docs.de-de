@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,94 +22,94 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5ea639a8bde008d657cff558183220d7e68fe568
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b73a32d607bb2fc2c1cd2392ab4d1b436e7ed94d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-odbc-3x-drivers"></a>Schreiben von ODBC 3.x-Treiber
 Die folgende Tabelle zeigt die funktionsunterstützung in einer ODBC-3. *x* Treiber und eine ODBC-Anwendung und die Zuordnung, die vom Treiber-Manager ausgeführt, wenn die Funktionen für eine ODBC 3. aufgerufen werden. *X* Treiber.  
   
 |Funktion|Supported<br /><br /> durch eine<br /><br /> ODBC-3. *x*<br /><br /> Treiber?|Supported<br /><br /> durch eine<br /><br /> ODBC-3. *x*<br /><br /> Anwendung?|Zugeordnet/unterstützt<br /><br /> durch die ODBC-3. *x*<br /><br /> Treiber-Manager<br /><br /> eine ODBC-3. *x* Treiber?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
-|**SQLAllocConnect**|Nein|Keine [1]|ja|  
-|**SQLAllocEnv**|Nein|Keine [1]|ja|  
-|**SQLAllocHandle**|ja|ja|Nein|  
-|**SQLAllocStmt:**|Nein|Keine [1]|ja|  
-|**SQLBindCol**|ja|ja|Nein|  
-|**SQLBindParam**|Nein|Ja [2]|ja|  
-|**SQLBindParameter**|ja|ja|Nein|  
-|**SQLBrowseConnect**|ja|ja|Nein|  
-|**SQLBulkOperations**|ja|ja|Nein|  
-|**SQLCancel**|ja|ja|Nein|  
-|**SQLCloseCursor**|ja|ja|Nein|  
-|**SQLColAttribute**|ja|ja|Nein|  
-|**SQLColAttributes**|Keine [3]|Nein|ja|  
-|**SQLColumnPrivileges**|ja|ja|Nein|  
-|**SQLColumns**|ja|ja|Nein|  
-|**SQLConnect**|ja|ja|Nein|  
+|**SQLAllocConnect**|nein|Keine [1]|ja|  
+|**SQLAllocEnv**|nein|Keine [1]|ja|  
+|**SQLAllocHandle**|ja|ja|nein|  
+|**SQLAllocStmt:**|nein|Keine [1]|ja|  
+|**SQLBindCol**|ja|ja|nein|  
+|**SQLBindParam**|nein|Ja [2]|ja|  
+|**SQLBindParameter**|ja|ja|nein|  
+|**SQLBrowseConnect**|ja|ja|nein|  
+|**SQLBulkOperations**|ja|ja|nein|  
+|**SQLCancel**|ja|ja|nein|  
+|**SQLCloseCursor**|ja|ja|nein|  
+|**SQLColAttribute**|ja|ja|nein|  
+|**SQLColAttributes**|Keine [3]|nein|ja|  
+|**SQLColumnPrivileges**|ja|ja|nein|  
+|**SQLColumns**|ja|ja|nein|  
+|**SQLConnect**|ja|ja|nein|  
 |**SQLCopyDesc**|ja|ja|Ja [4]|  
-|**SQLDataSources**|Nein|Ja|ja|  
-|**SQLDescribeCol**|ja|ja|Nein|  
-|**SQLDescribeParam**|ja|ja|Nein|  
-|**SQLDisconnect**|ja|ja|Nein|  
-|**SQLDriverConnect**|ja|ja|Nein|  
-|**SQLDrivers**|Nein|Ja|ja|  
-|**SQLEndTran**|ja|ja|Nein|  
-|**SQLError**|Nein|Keine [1]|ja|  
-|**SQLExecDirect**|ja|ja|Nein|  
-|**SQLExecute**|ja|ja|Nein|  
-|**SQLExtendedFetch**|ja|Nein|Nein|  
-|**SQLFetch**|ja|ja|Nein|  
-|**SQLFetchScroll**|ja|ja|Nein|  
-|**SQLForeignKeys**|ja|ja|Nein|  
-|**SQLFreeConnect**|Nein|Ja [1]|ja|  
-|**SQLFreeEnv**|Nein|Ja [1]|ja|  
-|**SQLFreeHandle**|ja|ja|Nein|  
-|**SQLFreeStmt**|ja|ja|Nein|  
-|**SQLGetConnectAttr**|ja|ja|Nein|  
+|**SQLDataSources**|nein|ja|ja|  
+|**SQLDescribeCol**|ja|ja|nein|  
+|**SQLDescribeParam**|ja|ja|nein|  
+|**SQLDisconnect**|ja|ja|nein|  
+|**SQLDriverConnect**|ja|ja|nein|  
+|**SQLDrivers**|nein|ja|ja|  
+|**SQLEndTran**|ja|ja|nein|  
+|**SQLError**|nein|Keine [1]|ja|  
+|**SQLExecDirect**|ja|ja|nein|  
+|**SQLExecute**|ja|ja|nein|  
+|**SQLExtendedFetch**|ja|nein|nein|  
+|**SQLFetch**|ja|ja|nein|  
+|**SQLFetchScroll**|ja|ja|nein|  
+|**SQLForeignKeys**|ja|ja|nein|  
+|**SQLFreeConnect**|nein|Ja [1]|ja|  
+|**SQLFreeEnv**|nein|Ja [1]|ja|  
+|**SQLFreeHandle**|ja|ja|nein|  
+|**SQLFreeStmt**|ja|ja|nein|  
+|**SQLGetConnectAttr**|ja|ja|nein|  
 |**SQLGetConnectOption**|Keine [5]|Keine [1]|ja|  
-|**SQLGetCursorName**|ja|ja|Nein|  
-|**SQLGetData**|ja|ja|Nein|  
-|**SQLGetDescField**|ja|ja|Nein|  
-|**SQLGetDescRec**|ja|ja|Nein|  
-|**SQLGetDiagField**|ja|ja|Nein|  
-|**SQLGetDiagRec**|ja|ja|Nein|  
-|**SQLGetEnvAttr**|ja|ja|Nein|  
+|**SQLGetCursorName**|ja|ja|nein|  
+|**SQLGetData**|ja|ja|nein|  
+|**SQLGetDescField**|ja|ja|nein|  
+|**SQLGetDescRec**|ja|ja|nein|  
+|**SQLGetDiagField**|ja|ja|nein|  
+|**SQLGetDiagRec**|ja|ja|nein|  
+|**SQLGetEnvAttr**|ja|ja|nein|  
 |**SQLGetFunctions**|Keine [6]|ja|ja|  
-|**SQLGetInfo**|ja|ja|Nein|  
-|**SQLGetStmtAttr**|ja|ja|Nein|  
+|**SQLGetInfo**|ja|ja|nein|  
+|**SQLGetStmtAttr**|ja|ja|nein|  
 |**SQLGetStmtOption**|Keine [5]|Keine [1]|ja|  
-|**SQLGetTypeInfo**|ja|ja|Nein|  
-|**SQLMoreResults**|ja|ja|Nein|  
-|**SQLNativeSql**|ja|ja|Nein|  
-|**SQLNumParams**|ja|ja|Nein|  
-|**SQLNumResultCols**|ja|ja|Nein|  
-|**SQLParamData**|ja|ja|Nein|  
-|**SQLParamOptions**|Nein|Nein|ja|  
-|**SQLPrepare**|ja|ja|Nein|  
-|**SQLPrimaryKeys**|ja|ja|Nein|  
-|**SQLProcedureColumns**|ja|ja|Nein|  
-|**SQLProcedures**|ja|ja|Nein|  
-|**SQLPutData**|ja|ja|Nein|  
-|**SQLRowCount**|ja|ja|Nein|  
-|**SQLSetConnectAttr**|ja|ja|Nein|  
+|**SQLGetTypeInfo**|ja|ja|nein|  
+|**SQLMoreResults**|ja|ja|nein|  
+|**SQLNativeSql**|ja|ja|nein|  
+|**SQLNumParams**|ja|ja|nein|  
+|**SQLNumResultCols**|ja|ja|nein|  
+|**SQLParamData**|ja|ja|nein|  
+|**SQLParamOptions**|nein|nein|ja|  
+|**SQLPrepare**|ja|ja|nein|  
+|**SQLPrimaryKeys**|ja|ja|nein|  
+|**SQLProcedureColumns**|ja|ja|nein|  
+|**SQLProcedures**|ja|ja|nein|  
+|**SQLPutData**|ja|ja|nein|  
+|**SQLRowCount**|ja|ja|nein|  
+|**SQLSetConnectAttr**|ja|ja|nein|  
 |**SQLSetConnectOption**|Keine [5]|Keine [1]|ja|  
-|**SQLSetCursorName**|ja|ja|Nein|  
-|**SQLSetDescField**|ja|ja|Nein|  
-|**SQLSetDescRec**|ja|ja|Nein|  
-|**SQLSetEnvAttr**|ja|ja|Nein|  
-|**SQLSetPos**|ja|ja|Nein|  
-|**SQLSetParam**|Nein|Nein|ja|  
-|**SQLSetScrollOption**|ja|ja|Nein|  
-|**SQLSetStmtAttr**|ja|ja|Nein|  
+|**SQLSetCursorName**|ja|ja|nein|  
+|**SQLSetDescField**|ja|ja|nein|  
+|**SQLSetDescRec**|ja|ja|nein|  
+|**SQLSetEnvAttr**|ja|ja|nein|  
+|**SQLSetPos**|ja|ja|nein|  
+|**SQLSetParam**|nein|nein|ja|  
+|**SQLSetScrollOption**|ja|ja|nein|  
+|**SQLSetStmtAttr**|ja|ja|nein|  
 |**SQLSetStmtOption**|Keine [5]|Keine [1]|ja|  
-|**SQLSpecialColumns**|ja|ja|Nein|  
-|**SQLStatistics**|ja|ja|Nein|  
-|**SQLTablePrivileges**|ja|ja|Nein|  
-|**SQLTables**|ja|ja|Nein|  
-|**SQLTransact**|Nein|Keine [1]|ja|  
+|**SQLSpecialColumns**|ja|ja|nein|  
+|**SQLStatistics**|ja|ja|nein|  
+|**SQLTablePrivileges**|ja|ja|nein|  
+|**SQLTables**|ja|ja|nein|  
+|**SQLTransact**|nein|Keine [1]|ja|  
   
  [1] für diese Funktion ist in ODBC 3. veraltet. *x*. ODBC-3. *x* Anwendungen sollten diese Funktion nicht verwenden. Allerdings kann ein Open Group oder eine ISO-CLI-kompatible Anwendung diese Funktion aufrufen.  
   

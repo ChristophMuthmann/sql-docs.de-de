@@ -2,11 +2,11 @@
 title: Unbeaufsichtigte Installation von Machine Learning Services | Microsoft Docs
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: c58bbb4a7277b37c9ef479b79ba4809a02218908
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fdd28279b99f0dd39a0b971412d1252feb978413
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="unattended-installation-of-machine-learning-services-in-database"></a>Unbeaufsichtigte Installation von Machine Learning-Services (Datenbankintern)
 
@@ -34,7 +34,7 @@ Für die unbeaufsichtigte Installation bedeutet, dass Sie nicht die interaktiven
 
 **Gilt für: SQL Server 2017 Machine Learning Services (Datenbankintern), SQL Server 2016 R Services**
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 + Sie müssen das Datenbankmodul für jede Instanz installieren, in dem Sie Machine Learning verwenden möchten.
 
@@ -72,7 +72,7 @@ Beachten Sie die Flags, die für R in SQL Server-2017 erforderlich:
 
 + `ADVANCEDANALYTICS`
 + `SQL_INST_MR`
-+ `IACCEPTROPENLICENSETERMS`.
++ `IACCEPTROPENLICENSETERMS`installiert haben.
 
 ### <a name="install-python-only"></a>Installieren Sie Python nur
 

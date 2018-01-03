@@ -1,7 +1,7 @@
 ---
 title: Migration Datenbericht (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,16 +17,16 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.workload: Inactive
-ms.openlocfilehash: 883dca5cbae4bd17f9ec75f230b850ecedd9a01d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d88f1451ec5253e097c9f96691c5b22b3eae896a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-migration-report--oracletosql"></a>Migration Datenbericht (OracleToSQL)
 Die **Daten Migrationsbericht** Dialogfeld wird angezeigt, nach dem Migrieren von Daten an [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Status**  
 Zeigt den Status der Datenmigration von der Quell-in die Zieldatenbank.  
   

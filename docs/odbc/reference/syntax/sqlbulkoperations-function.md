@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 74934fb9edbcea316b4acb09f4b8e63c08236b1d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1872238d5e017ef8b6bd3fbfb2dc185051fc3557
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations-Funktion
 **Konformität**  
@@ -103,7 +103,7 @@ SQLRETURN SQLBulkOperations(
 ## <a name="comments"></a>Kommentare  
   
 > [!CAUTION]  
->  Informationen zum Status der fehlerhaften Anweisung **SQLBulkOperations** in aufgerufen werden können und was sie tun muss, um die Kompatibilität mit ODBC 2.. *X* -Anwendungen finden Sie unter der [Blockcursor, scrollfähige Cursor und Abwärtskompatibilität](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) Abschnitt in Anhang G: Treiber Richtlinien für die Abwärtskompatibilität.  
+>  Informationen zum Status der fehlerhaften Anweisung **SQLBulkOperations** in aufgerufen werden können und was sie tun muss, um die Kompatibilität mit ODBC 2. *X* -Anwendungen finden Sie unter der [Blockcursor, scrollfähige Cursor und Abwärtskompatibilität](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) Abschnitt in Anhang G: Treiber Richtlinien für die Abwärtskompatibilität.  
   
  Eine Anwendung verwendet **SQLBulkOperations** zum Ausführen der folgenden Vorgänge für die Basistabelle oder Sicht, die die aktuelle Abfrage entspricht:  
   
@@ -143,7 +143,7 @@ SQLRETURN SQLBulkOperations(
   
 5.  Wenn die Anwendung das Anweisungsattribut SQL_ATTR_ROW_STATUS_PTR festgelegt wurde, können sie dieses Array, um das Ergebnis des Vorgangs finden Sie unter überprüfen.  
   
- Wenn eine Anwendung bindet die Spalte 0 vor dem Aufrufen **SQLBulkOperations** mit einer *Vorgang* Argument SQL_ADD, der Treiber aktualisiert die Puffern mit gebundenen Spalten 0 mit den Werten der Lesezeichen für die neu eingefügte Zeile. Damit dies eintritt muss die Anwendung das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut auf SQL_UB_VARIABLE festgelegt haben vor der Ausführung der Anweisung. (Dies funktioniert nicht mit einer ODBC 2.. *x* Treiber.)  
+ Wenn eine Anwendung bindet die Spalte 0 vor dem Aufrufen **SQLBulkOperations** mit einer *Vorgang* Argument SQL_ADD, der Treiber aktualisiert die Puffern mit gebundenen Spalten 0 mit den Werten der Lesezeichen für die neu eingefügte Zeile. Damit dies eintritt muss die Anwendung das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut auf SQL_UB_VARIABLE festgelegt haben vor der Ausführung der Anweisung. (Dies funktioniert nicht mit einer ODBC 2. *x* Treiber.)  
   
  Long-Daten können mithilfe von SQLParamData und SQLPutData Aufrufe in Teilen von SQLBulkOperations, hinzugefügt werden. Weitere Informationen finden Sie unter "Bereitstellen von langen Daten für Bulk Inserts und Updates" weiter unten in diesem Funktionsverweis.  
   

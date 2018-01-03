@@ -3,10 +3,10 @@ title: "Analytics Platform Verarbeitung und die Speicherkapazität"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 2c32fec4-e97c-4797-b7f8-7c8d4301b7b6
 caps.latest.revision: "7"
-ms.openlocfilehash: 5eeb12d1ca257b0caa1566027811d08a4c0bc38d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9d7f933c45f05d7d4226a2f64fd41eff8d1c914a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="analytics-platform-system-processing-and-storage-capacity"></a>Analytics Platform System Verarbeitung und die Speicherkapazität
 Ihre geschäftlichen Anforderungen bestimmen die Anzahl der Skalierungseinheiten für Daten und die Größe der Compute-Knoten-Datenträger, die Sie in Ihrer Anwendung Analytics Platform System (APS) benötigen. Verwenden Sie diese Berechnungen Verarbeitung und Speicherung als Anleitung für die Kapazität Ihrer Kauf und planungsentscheidungen.  

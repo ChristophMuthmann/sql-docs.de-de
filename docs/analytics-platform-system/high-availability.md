@@ -3,10 +3,10 @@ title: "Analytics Platform System hohe Verfügbarkeit"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 5ab245e9-0316-4d25-a626-4745ce856925
 caps.latest.revision: "9"
-ms.openlocfilehash: 78b55161af9bfe8da16d7276bddc4e2f2cff9ee5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 11733b45ba25f625ea2d3d601939973e9137b15d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="analytics-platform-system-high-availability"></a>Analytics Platform System hohe Verfügbarkeit
 Beschreibt, wie das Analytics Platform System (APS) für hohe Verfügbarkeit ausgelegt ist.  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 147d3a17b4041caf3a83ec819d65dc43af32312f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: aaf3c1fddb673e0cd62d334e9b87eeb2d9016ec6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="processing-a-sql-statement"></a>Verarbeiten einer SQL-Anweisung
 Erläutert die Verfahren für die Verwendung von SQL programmgesteuert, ist es erforderlich, die erläutern, wie eine SQL-Anweisung verarbeitet wird. Die Schritte beziehen sich alle drei Methoden, obwohl der einzelnen Techniken zu unterschiedlichen Zeiten ausgeführt. Die folgende Abbildung zeigt die Schritte zur bei der Verarbeitung einer SQL-Anweisung, die im weiteren Verlauf dieses Abschnitts erläutert werden.  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5ddf51903e3c6f8f58be1ccf0fcf5f037e4adb8c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 534c6181a1634eb4963bc4f448939f335d821e5f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="committing-and-rolling-back-transactions"></a>Ausführen von Commits oder Rollbacks von Transaktionen
 Um einen commit oder Rollback einer Transaktions im Manualcommit Modus, eine Anwendung ruft **SQLEndTran**. Treiber für DBMS-Systeme, die Transaktionen, in der Regel unterstützen implementieren Sie diese Funktion durch das Ausführen einer **COMMIT** oder **ROLLBACK** Anweisung. Der Treiber-Manager nicht aufgerufen **SQLEndTran** die Verbindung im Autocommit-Modus ist einfach zurückgibt, wenn SQL_SUCCESS zurück, selbst wenn die Anwendung versucht, ein Rollback der Transaktion auszuführen. Da die Treiber für DBMS-Systeme, die keine Transaktionen unterstützen immer im Autocommit Modus sind, können sie entweder implementieren **SQLEndTran** SQL_SUCCESS zurück, ohne jegliche oder überhaupt nicht implementiert.  

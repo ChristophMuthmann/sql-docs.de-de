@@ -2,11 +2,11 @@
 title: "Installieren von Machine Learning einen eigenständigen Server oder einen eigenständigen R Server | Microsoft Docs"
 ms.custom: 
 ms.date: 11/16/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 8a11d71e1568b3da175de0d2eecf182a9b415400
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d69755716ae84ed280f8af9c62a85dc861f66d75
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone"></a>Installieren von Machine Learning-Server (eigenständig) oder R Server (eigenständig)
 
@@ -146,14 +146,14 @@ Nur zu Referenzzwecken werden, wenn Sie eine Instanz von SQL Server R Services (
 
 Die folgende Tabelle enthält die Pfade für jede Installation.
 
-|Version| Installationsmethode | Standardordner|
+|Versionsoptionen| Installationsmethode | Standardordner|
 |----|----|----|
 |R-Server (eigenständig) |SQL Server 2016-Setup-Assistenten|`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
 |R-Server (eigenständig) |Eigenständiges Windows-Installationsprogramm|`C:\Program Files\Microsoft\R Server\R_SERVER`|
 |Machine Learning-Server (eigenständig) |  2017 von SQL Server-Setup-Assistenten |`C:\Program Files\Microsoft SQL Server\140\R_SERVER`|
 |Machine Learning-Server (eigenständig) |  Eigenständiges Windows-Installationsprogramm |`C:\Program Files\Microsoft\R Server\R_SERVER`|
 |R Services (In-Database) |SQL Server 2016-Setup-Assistenten|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
-|Machine Learning-Dienste (datenbankintern) |2017 von SQL Server-Setup-Assistenten|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`oder`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
+|Machine Learning-Dienste (datenbankintern) |2017 von SQL Server-Setup-Assistenten|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES` oder `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
 
 ### <a name="development-tools"></a>Entwicklungstools
 

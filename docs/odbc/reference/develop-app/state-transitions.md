@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a0483bc53e02fa645c48200323ed4573105d37dd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6795a0e730f1b927b7921863714a2a9db55551e4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="state-transitions"></a>Statusübergänge
 ODBC definiert diskrete *Zustände* für jede Umgebung, jede Verbindung und jede Anweisung. Die Umgebung verfügt beispielsweise über drei mögliche Zustände: verfügbaren (in dem keine Umgebung zugeordnet ist), zugewiesenem (in der eine Umgebung erhält jedoch keine Verbindungen zugeordnet sind) und die Verbindung (in der Umgebung und eine oder mehrere Verbindungen sind reserviert). Verbindungen werden sieben mögliche Zustände aufweisen; -Anweisungen verfügen über 13 mögliche Zustände.  

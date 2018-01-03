@@ -3,7 +3,7 @@ title: Herstellen einer Verbindung mit registrierten Servern und dem Objekt-Expl
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f280ca05701c1497843a1dd8caf78e166a1b98f5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 212fb87e719e621608298312932445b29712f3b8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-2---connect-with-registered-servers-and-object-explorer"></a>Lektion 1-2: Herstellen einer Verbindung mit registrierten Servern und dem Objekt-Explorer
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dieses Lernprogramm veranschaulicht die Verwendung von registrierten Servern und Objekt-Explorer.  
@@ -73,7 +73,7 @@ Wie die Komponente Registrierte Server kann der Objekt-Explorer eine Verbindung 
   
     Beachten Sie, dass [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] die Systemdatenbanken in einem separaten Ordner präsentiert.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Ändern des Umgebungslayouts](../../tools/sql-server-management-studio/lesson-1-3-change-the-environment-layout.md)  
   
   

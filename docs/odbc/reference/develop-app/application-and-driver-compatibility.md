@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4502dda43876dce2c8421c75d008dcaedfe87987
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ba98b68cd760b4256429c74ee2f06ab2486b4b73
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="application-and-driver-compatibility"></a>Anwendung und zur Kompatibilität der Gerätetreiber
 ODBC-Anwendungen und Treiber fallen in eine Anzahl von Kategorien, zusätzlich zu ihrer Version. Einige dieser Anwendungen sind nicht kompatibel mit einige Treiber; in anderen Fällen kann der Typ der Anwendung oder Treiber einen Einfluss auf die Abwärtskompatibilität zwischen ihnen auswirken.  

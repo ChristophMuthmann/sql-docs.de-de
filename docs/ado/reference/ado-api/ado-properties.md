@@ -3,7 +3,7 @@ title: Eigenschaften von ADO.NET | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 92fd58042fec8d001f539074db2d76d2d8243f6b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f77f31c7dcb3a52e25b359d146669284d43b1dce
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-properties"></a>Eigenschaften von ADO.NET
 |||  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
 |[Typ](../../../ado/reference/ado-api/type-property-ado.md)|Gibt an, die betriebliche Typ oder den Datentyp einer **Parameter**, **Feld**, oder **Eigenschaft** Objekt.|  
 |[Typ (ADO-Datenstrom)](../../../ado/reference/ado-api/type-property-ado-stream.md)|Gibt den Typ der Daten in der **Stream** (binär oder Text).|  
 |[OriginalValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|Gibt den aktuellen Wert in der Datenbank für eine **Feld** Objekt.|  
-|[Wert](../../../ado/reference/ado-api/value-property-ado.md)|Gibt den zugewiesenen Wert an eine **Feld**, **Parameter**, oder **Eigenschaft** Objekt.|  
+|[ReplTest1](../../../ado/reference/ado-api/value-property-ado.md)|Gibt den zugewiesenen Wert an eine **Feld**, **Parameter**, oder **Eigenschaft** Objekt.|  
 |[Version](../../../ado/reference/ado-api/version-property-ado.md)|Gibt die ADO-Versionsnummer an.|  
   
 ## <a name="see-also"></a>Siehe auch  

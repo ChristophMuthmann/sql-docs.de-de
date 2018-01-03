@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f908db305a92399ccb5ca9e4930460db249fff46
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: eff91b12ebf378aa4bbcdbbfbdfa84c40a66f06b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keyset-driven-cursors"></a>Keysetgesteuerte Cursor
 Ein keysetgesteuerter Cursor liegt zwischen statischen und einen dynamischen Cursor in seiner Fähigkeit, Änderungen zu erkennen. Wie ein statischer Cursor kann es nicht immer zum Ändern der Mitgliedschaft und Reihenfolge des Resultsets erkennen. Z. B. einen dynamischen Cursor erkennt er Änderungen auf die Werte der Zeilen im Resultset (unterliegen die Isolationsstufe der Transaktion, wie durch das Verbindungsattribut SQL_ATTR_TXN_ISOLATION festgelegt).  

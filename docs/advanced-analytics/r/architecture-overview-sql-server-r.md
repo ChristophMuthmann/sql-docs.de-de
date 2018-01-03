@@ -2,9 +2,11 @@
 title: "Übersicht über die Architektur (SQL Server R Services) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 07/11/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 037393dfd83c2576ed0783bfa582e96f2b74da9d
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 445c28ab59dd3f66f46a0ad43aff40da5696ee0a
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="architecture-overview-for-r-in-sql-server"></a>Übersicht über die Architektur für R in SQL Server
 
@@ -46,7 +48,7 @@ Die Rolle dieser zusätzlichen Komponenten besteht darin Data Exchange Geschwind
 
 Ausführliche Beschreibung der Komponenten, die Unterstützung von R, wie z. B. die [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] und RLauncher, finden Sie unter [neue Komponenten](../../advanced-analytics/r/new-components-in-sql-server-to-support-r.md).
 
-## <a name="security"></a>Sicherheit
+## <a name="security"></a>Security
 
 Beim Ausführen von R-Code mithilfe von Machine Learning Services oder SQL Server R Services erfolgen alle R-Skripts außerhalb der SQL Server-Prozess, um Sicherheit und bessere Verwaltung zu ermöglichen. Diese Isolierung von Prozessen gilt unabhängig davon, ob führen Sie das R-Skript als Teil einer gespeicherten Prozedur oder der Auftrag der SQL Server-Computer von einem Remotecomputer herstellen und Starten eines Auftrags, das der Server als computekontext verwendet.
 

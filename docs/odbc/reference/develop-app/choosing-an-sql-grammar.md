@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b7d30a5a79391025b1be0312ca2020de47c2db5a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6eedc2466842d922e1b10445500f05ad904d1a0b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choosing-an-sql-grammar"></a>Auswählen einer SQL-Grammatik
 Die erste Entscheidung, die bei der SQL-Anweisungen Konstruieren der Grammatik verwendet wird. Zusätzlich zu den von verschiedenen normungsinstitutionen, z. B. Open Group, ANSI und ISO-Images Grammatiken, definiert praktisch jeder DBMS-Hersteller eine eigene Grammatik, von denen jede geringfügig vom Standard variiert.  

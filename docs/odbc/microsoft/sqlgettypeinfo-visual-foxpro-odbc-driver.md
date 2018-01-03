@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 28edc12e72becb1734de27fb89a86b5ca838e9dd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2e552a73289da6d78223b6416b7be7fe125e23e7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/20/2017
 |SQL_BIGINT|Nicht unterstützt. Es ist kein 64-Bit-Visual FoxPro-Typ.|  
 |SQL_BIT|Logische Operatoren|  
 |SQL_CHAR|Zeichen|  
-|SQL_DATE|Datum|  
+|SQL_DATE|date|  
 |SQL_DECIMAL|Numerisch|  
 |SQL_DOUBLE|Double|  
 |SQL_FLOAT|Double|  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/20/2017
 |SQL_REAL|Double|  
 |SQL_SMALLINT|Integer|  
 |SQL_TIME|Nicht unterstützt. Es ist keine Visual FoxPro *Zeit* Typ.|  
-|SQL_TIMESTAMP|DateTime|  
+|SQL_TIMESTAMP|datetime|  
 |SQL_TINYINT|Integer|  
 |SQL_VARBINARY|Memo (binär) *, Allgemein|  
 |SQL_VARCHAR|Zeichen|  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3af1222c7404a5b05246026edbbc37149780de8c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6cbe554b72bf971e6b589b936cd6901ef5fa59a7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deferred-buffers"></a>Verzögerte Puffer
 Ein *verzögerte Puffer* ist, deren Wert, zu einem Zeitpunkt verwendet wird *nach* in einem Funktionsaufruf angegeben ist. Beispielsweise **SQLBindParameter** wird verwendet, um zuzuordnen, oder *zu binden,* einen Datenpuffer mit einem Parameter in einer SQL-Anweisung. Die Anwendung gibt die Anzahl der Parameter und übergibt die Adresse, die Bytelänge und den Typ des Puffers. Der Treiber speichert diese Informationen jedoch nicht zur Untersuchung von Inhalten aus dem Puffer. Später, wenn die Anwendung die Anweisung ausführt, der Treiber Ruft die Informationen ab und verwendet, um die Parameterdaten abrufen und an die Datenquelle gesendet. Aus diesem Grund wird die Eingabe von Daten in den Puffer verzögert. Da verzögerte Puffer werden in eine bestimmte Funktion angegeben und in einer anderen verwendet, ist es ein anwendungsprogrammierungsfehler Fehler um eine verzögerte Puffer freizugeben, während der Treiber noch vorhanden sein, erwartet; Weitere Informationen finden Sie unter [Allocating und Freigeben von Puffern](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)weiter unten in diesem Abschnitt.  

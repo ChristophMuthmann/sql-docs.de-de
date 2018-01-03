@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c7742b8f95ba8fef61777e2cb106b6df12285ee3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 78edde90cc7103f87039bc1a357ea1d0357366a6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-conversions"></a>Datentypkonvertierungen
 Daten konvertiert werden können von einem Typ in einen anderen an einem der vier Mal: Wenn Daten übertragen aus einer Anwendungsvariablen in eine andere (C#, C) Sendens von Daten in einer Anwendungsvariablen an einen Anweisungsparameter (C zu SQL) zurückgegebenen Daten in einer Resultsetspalte eine Anwendungsvariable (SQL zu C), und wenn Daten aus einer Spalte für die Datenquelle an eine andere (SQL to SQL) übertragen wird.  

@@ -1,9 +1,11 @@
 ---
 title: "Ändern des benutzerkontenpools für SQL Server-Machine Learning | Microsoft Docs"
 ms.date: 11/03/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: b122d94e54f70f13a1cb3baeed2740686b0b3195
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 0cd54371d35595dfbef6f54fcd66dab8d2dd812f
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="modify-the-user-account-pool-for-sql-server-machine-learning"></a>Ändern des benutzerkontenpools für SQL Server-Machine learning
 
@@ -68,7 +70,7 @@ Zusätzliche Informationen zum Verwalten von Machine learning-Aufgabe-Kapazität
 - [SQL Server-Konfiguration für R Services](../../advanced-analytics/r/sql-server-configuration-r-services.md)
 -  [Leistung-Fallstudie für R Services](../../advanced-analytics/r/performance-case-study-r-services.md)
 
-## <a name="security"></a>Sicherheit
+## <a name="security"></a>Security
 
 Jede Benutzergruppe wird mit dem [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]-Dienst auf einer bestimmten Instanz verknüpft und kann keine R-Aufträge unterstützen, die auf anderen Instanzen ausgeführt werden.
 

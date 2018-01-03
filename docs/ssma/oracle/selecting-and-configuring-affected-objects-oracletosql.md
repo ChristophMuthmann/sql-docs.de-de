@@ -1,7 +1,7 @@
 ---
 title: "Auswählen und Konfigurieren von betroffene Objekte (OracleToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 54b2b1e67a0d7049b14c5f4bdd85c28d427810ca
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1a4fe479f53c914b4417cd0069335fa8bb0da027
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Auswählen und Konfigurieren von betroffene Objekte (OracleToSQL)
 Auf dieser Seite können Sie Tabellen auswählen und Fremdschlüsseln, Änderungen in der verglichen werden sollen, wenn SSMA wird überprüft, die Ergebnisse der Ausführung für die Objekte, die in den vorherigen Schritt ausgewählt wurde ob. Darüber hinaus können Sie die Überprüfung der Parameter anpassen.  
@@ -45,9 +45,9 @@ Die Registerkarte "Tabelle" enthält die Rasteransicht der ausgewählten Tabelle
   
 -   Dezimalstellen  
   
--   Rule  
+-   Regel  
   
--   Standardwert  
+-   Default  
   
 -   Identität  
   
@@ -64,7 +64,7 @@ Registerkarte "Eigenschaften" zeigt die Eigenschaften der ausgewählten Tabelle 
   
 -   Erstellt oder zuletzt geändert  
   
--   Objektname  
+-   Objektnamen  
   
 ## <a name="columns-comparison-settings"></a>Vergleichseinstellungen Spalten  
 Einrichten der Vergleichsregeln für Tabellenspalten auf **Spalten Vergleich** Seite. Sie können die folgenden Einstellungen vornehmen.  

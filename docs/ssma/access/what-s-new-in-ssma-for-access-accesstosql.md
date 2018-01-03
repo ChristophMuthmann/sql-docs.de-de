@@ -1,7 +1,7 @@
 ---
 title: "Neuheiten bei SSMA für die Access(AccessToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e82bc510cb99d5666fa9413ac6212491041b568d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3b159377cfa3ff160d9be60dba91af5561649c4a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Was ist neu in SSMA für Access (AccessToSQL)
 In diesem Thema werden die SSMA für Access-Änderungen in jeder Version aufgelistet.  

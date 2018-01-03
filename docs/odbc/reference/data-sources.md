@@ -1,11 +1,11 @@
 ---
-title: Datenquellen | Microsoft Docs
+title: Datenquellen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -19,13 +19,13 @@ caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.openlocfilehash: f7d67e1e67a872c33865a95619ccb1c54ef7f8f2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 84c415fd10a757cebfc365759d7fb038f9630ec4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="data-sources"></a>Datenquellen
+# <a name="data-sources"></a>Projektmappen-Explorer
 Ein *Datenquelle* ist einfach die Quelle der Daten. Sie können eine Datei, die eine bestimmte Datenbank auf einem DBMS oder sogar einem live-Datenfeed sein. Daten können sich auf demselben Computer wie das Programm oder auf einem anderen Computer an einer beliebigen Stelle in einem Netzwerk sein. Z. B. möglicherweise eine Datenquelle eine Oracle-DBMS, die unter einem Betriebssystem OS/2®, Novell® Netware zugreift; eine IBM DB2-DBMS erfolgt über ein Gateway; eine Auflistung von Xbase-Dateien in einem Serververzeichnis; oder eine lokale Microsoft® Access-Datenbankdatei.  
   
  Der Zweck einer Datenquelle gehört, das alle technischen Informationen benötigt Zugriff auf die Daten zu erfassen – der Treibername, Netzwerkadresse, Netzwerksoftware usw. – zu einem einzelnen platzieren, und blenden Sie es dem Benutzer. Der Benutzer sollte sein können betrachten Sie eine Liste, die Lohnbuchhaltung, Bestandsinformationen und Mitarbeiter enthält, Payroll aus der Liste auswählen und die Anwendung die Gehaltsdaten herstellen, ohne zu wissen, wo die Daten zu Gehältern befindet, oder wie die Anwendung darauf gelangt.  

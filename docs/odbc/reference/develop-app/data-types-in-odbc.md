@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4fe71066cc5e5eec20de135d519f429e0caa0eb2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f9e56fd3649c95bcf826d89841a07511b7145d88
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-types-in-odbc"></a>Datentypen in ODBC
 ODBC verwendet zwei Sätze von Datentypen: SQL-Datentypen und C-Datentypen. SQL-Datentypen werden in der Datenquelle verwendet, und C-Datentypen werden in C-Code in der Anwendung verwendet.  

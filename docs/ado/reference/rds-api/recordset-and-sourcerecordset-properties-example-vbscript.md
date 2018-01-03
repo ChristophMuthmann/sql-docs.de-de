@@ -1,11 +1,13 @@
 ---
 title: Recordset und SourceRecordset Eigenschaften Beispiel (VBScript) | Microsoft Docs
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: VB
@@ -18,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bddde66f1e2afa1fe8e37332b282e023e534cea7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e719a6a51a7e936cf88f3c216c2335a614424931
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>Recordset und SourceRecordset Eigenschaften Beispiel (VBScript)
 > [!IMPORTANT]

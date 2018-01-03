@@ -3,10 +3,10 @@ title: 'Vorgehensweise: Erstellen Sie einen Skripttask, der den SSIS-PDW-Zielada
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: e2a9b254-5a66-44b1-863a-fa831555e7e0
 caps.latest.revision: "8"
-ms.openlocfilehash: 7d9cfb2987b05b51edc31cd0db4105ae2c12e596
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8056c97e66147cb68d7918301515c1dc52524387
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-a-script-task-that-uses-the-ssis-pdw-destination-adapter"></a>Vorgehensweise: Erstellen Sie einen Skripttask, der den SSIS-PDW-Zieladapter verwendet
 Integration Services-Skripttask können Sie praktisch jeder Vorgang, der durchgeführt werden können in einer .NET-Anwendung innerhalb des Kontexts, der eine ablaufsteuerung des SSIS-ausführen. Diese Skriptcode der SSIS-Paket ist ein Codebeispiel für die Verwendung von SSIS PDW-Ziel-Adapter.  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: df2f3bfdb37ab506de3fe99d8c7d1e5e9764ef43
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 85d11ebb5fd4245a7c6b5cf7c277e45d8df90011
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>Nicht unterstützte Visual FoxPro-Befehle und Funktionen (Visual FoxPro-ODBC-Treiber)
 Die folgende Tabelle enthält FoxPro Befehle und Funktionen, die von Microsoft® Visual FoxPro unterstützt werden, werden von der Visual FoxPro-ODBC-Treiber nicht unterstützt.  
@@ -66,7 +66,7 @@ Die folgende Tabelle enthält FoxPro Befehle und Funktionen, die von Microsoft®
 |Arbeitsspeicher-Systemvariable _BROWSER|Erstellen von APP-Befehl|Erstellen von EXE-Befehl|  
 |Befehl "Projekt" erstellen|Arbeitsspeicher-Systemvariable _BUILDER||  
   
-## <a name="c"></a>C  
+## <a name="c"></a>c  
   
 ||||  
 |-|-|-|  

@@ -2,12 +2,14 @@
 title: Anzeigen und Durchsuchen von Daten mit SQL (Exemplarische Vorgehensweise) | Microsoft Docs
 ms.custom: 
 ms.date: 07/14/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: SQL Server 2016
 dev_langs: R
 ms.assetid: d3835d6d-e68b-486d-81a0-81b717cc6134
@@ -16,11 +18,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8c4913d0b365b2ff8a2fb67a818449943c7acc19
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: f6bf3d5ea1e1018a727f94bc2ae2682fc8f7e5e3
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="view-and-explore-the-data-using-sql-walkthrough"></a>Anzeigen und Durchsuchen von Daten mit SQL (Exemplarische Vorgehensweise)
 

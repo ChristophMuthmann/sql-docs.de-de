@@ -3,7 +3,7 @@ title: Geben Sie die Beispiel-Eigenschaft (Eigenschaft) (VC++) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,14 +19,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6838ae3c98f9dc4c210100e04103c94d5ba0d115
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a283a4b547d5806b18a988684751a53578c5da0c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-property-example-property-vc"></a>Type-Eigenschaft (Beispiel) (VC++)
-Dieses Beispiel zeigt die [Typ](../../../ado/reference/ado-api/type-property-ado.md) Eigenschaft. Es ist ein Modell für ein Hilfsprogramm zum Auflisten von z. B. die Namen und Typen einer Auflistung [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md), [Felder](../../../ado/reference/ado-api/fields-collection-ado.md)usw..  
+Dieses Beispiel zeigt die [Typ](../../../ado/reference/ado-api/type-property-ado.md) Eigenschaft. Es ist ein Modell für ein Hilfsprogramm zum Auflisten von z. B. die Namen und Typen einer Auflistung [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md), [Felder](../../../ado/reference/ado-api/fields-collection-ado.md)usw.  
   
  Wir müssen nicht öffnen die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) für den Zugriff auf seine **Eigenschaften** Auflistung sind vorhanden, wenn die **Recordset** Objekt instanziiert wird. Allerdings Festlegen der [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) Eigenschaft, um **AdUseClient** fügt verschiedene Eigenschaften, die **Recordset** des Objekts **Eigenschaften** Auflistung, indem das Beispiel ein wenig interessanter. Zur besseren Übersichtlichkeit, verwenden wir explizit die [Element](../../../ado/reference/ado-api/item-property-ado.md) aufzurufende jeder Eigenschaft [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md) Objekt.  
   

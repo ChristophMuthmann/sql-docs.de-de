@@ -2,10 +2,10 @@
 title: "Übersicht über die Architektur für SQL Server-Machine Learning-Services | Microsoft Docs"
 ms.custom: 
 ms.date: 11/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 6904c963c6178db530248f6189906e71df25308a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 62bcc1ce7b8dbdbee96b50631644a00afbfd4e78
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="architecture-overview-for-sql-server-machine-learning-services"></a>Übersicht über die Architektur für SQL Server-Machine Learning-Services 
 
@@ -60,7 +60,7 @@ Um diese Ziele zu erreichen, wird diese kernbegriffe die Architektur des SQL Ser
 
    Darüber hinaus bietet Microsoft einen Satz von proprietären Bibliotheken, die Integration mit SQL Server, einschließlich Daten Übersetzung, Komprimierung und Optimierung richtet sich an jede unterstützte Sprache bereitstellen.
 
-+ **Sicherheit**
++ **Security**
 
    Steigerung der Sicherheit bedeutet für integrierte Windows-Authentifizierung und SQL-Anmeldungen Kennwort-basierte als auch als sichere Handhabung von Anmeldeinformationen, die Abhängigkeit von SQL Server für den Schutz von Daten und Verwenden der SQL Server vertrauenswürdige Launchpad, um externe Skripts zu verwalten, unterstützen die Ausführung und sichere Daten in Skripts verwendet.
 

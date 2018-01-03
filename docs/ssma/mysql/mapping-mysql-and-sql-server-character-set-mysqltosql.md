@@ -1,7 +1,7 @@
 ---
 title: Zuordnen von MySQL und SQL Server-Zeichen festgelegt (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c3845c66ea4407b48e371f8b2ec0ad7b9da7edfa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c9b3fc89548b10593cb16e2a70c93afe9b56350e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Zuordnen von MySQL und SQL Server-Zeichen (MySQLToSQL) festlegen
 Zeichensatz (Zeichensatz) kann für MySQL-Unicodezeichen-Datentypen, Ausdrücke und Literale angegeben werden.  
@@ -121,7 +121,7 @@ Zuordnen von CharSet variiert auf unterschiedlichen Knotenebenen, nämlich:
     |CP 1251|Windows-Kyrillisch|CHAR/VARCHAR (Standard)|  
     |CP 1256|Windows-Arabisch|CHAR/VARCHAR (Standard)|  
     |CP 1257|Windows-Baltisch|CHAR/VARCHAR (Standard)|  
-    |binary|Binäre Pseudo-Zeichensatz|CHAR/VARCHAR (Standard)|  
+    |BINARY|Binäre Pseudo-Zeichensatz|CHAR/VARCHAR (Standard)|  
     |geostd8|Georgisch GEOSTD8|CHAR/VARCHAR (Standard)|  
     |cp932|SJIS für Japanisch für Windows|NCHAR/NVARCHAR (Standard)|  
     |eucjpms|UJIS für Japanisch für Windows|NCHAR/NVARCHAR (Standard)|  

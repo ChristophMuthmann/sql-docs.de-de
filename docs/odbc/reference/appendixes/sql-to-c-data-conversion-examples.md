@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6e2c763d78eb6ea0cf854a455e09fc09b8a7de2c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 52791dba31e61663a84d9c80041874c1869c2836
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-to-c-data-conversion-examples"></a>SQL, um Beispiele für die Konvertierung von C-Daten
 Die in der folgenden Tabelle dargestellten Beispiele veranschaulichen, wie der Treiber SQL-Daten in C-Daten konvertiert:  
   
-|SQL-Typ<br /><br /> Bezeichner (identifier)|SQL data<br /><br /> value|C-Typ<br /><br /> Bezeichner (identifier)|Puffer<br /><br /> length|**TargetValuePtr*|SQLSTATE|  
+|SQL-Typ<br /><br /> Bezeichner (identifier)|SQL data<br /><br /> Wert|C-Typ<br /><br /> Bezeichner (identifier)|Puffer<br /><br /> length|**TargetValuePtr*|SQLSTATE|  
 |-----------------------------|------------------------|---------------------------|-----------------------|------------------------|--------------|  
 |SQL_CHAR|abcdef|SQL_C_CHAR|7|abcdef\0 [a]|–|  
 |SQL_CHAR|abcdef|SQL_C_CHAR|6|abcde\0 [a]|01004|  

@@ -3,7 +3,7 @@ title: "Auftragsschritt-Eigenschaften – Neuer Auftragsschritt (Seite „Erweit
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 58ef4690d93af433ab05fc45841e8de48bfc7904
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 89de59aaac4ca2c66272c4be25f9829ed589d563
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="job-step-properties---new-job-step-advanced-page"></a>Auftragsschritt-Eigenschaften – Neuer Auftragsschritt (Seite „Erweitert“)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe dieser Seite können Sie die Eigenschaften für einen [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agentauftragsschritt anzeigen und ändern.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Aktion bei Erfolg**  
 Legt fest, welche Aktion der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent bei erfolgreicher Auftragsausführung ausführen soll.  
   
@@ -47,7 +47,7 @@ Legt fest, welche Datei für die Ausgabe aus dem Auftragsschritt verwendet werde
 **...**  
 Nach der Datei, die für die Ausgabe aus dem Auftragsschritt verwendet werden soll, können Sie suchen.  
   
-**Sicht**  
+**Ansicht**  
 In [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]ist diese Schaltfläche für die Anzeige von Ausgabedateien deaktiviert. Nutzen Sie stattdessen den Editor für die Anzeige von Auftragsschritt-Ausgabedateien.  
   
 **Ausgabe an vorhandene Datei anfügen**  
@@ -56,7 +56,7 @@ Fügt die Ausgabe an den vorhandenen Inhalt der Datei an. Andernfalls wird der v
 **In Tabelle protokollieren**  
 Protokolliert die Ausgabedaten des Auftragsschritts in der **sysjobstepslogs** -Tabelle der **msdb** -Datenbank.  
   
-**Sicht**  
+**Ansicht**  
 Klicken Sie nach Ausführung des Auftragsschritts auf **Anzeigen** , um seine Ausgabe in der Tabelle anzuzeigen.  
   
 **Ausgabe an vorhandenen Eintrag in Tabelle anfügen**  
@@ -75,7 +75,7 @@ Legt fest, welche Datei für die Ausgabe aus dem Auftragsschritt verwendet werde
 **...**  
 Nach der Datei, die für die Ausgabe aus dem Auftragsschritt verwendet werden soll, können Sie suchen.  
   
-**Sicht**  
+**Ansicht**  
 In [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]ist diese Schaltfläche für die Anzeige von Ausgabedateien deaktiviert. Nutzen Sie stattdessen den Editor für die Anzeige von Auftragsschritt-Ausgabedateien.  
   
 **Ausgabe an vorhandene Datei anfügen**  
@@ -84,7 +84,7 @@ Fügt die Auftragsschrittausgabe bei jeder Ausführung des Schritts an den vorha
 **In Tabelle protokollieren**  
 Protokolliert die Ausgabedaten des Auftragsschritts in der **sysjobstepslogs** -Tabelle der **msdb** -Datenbank.  
   
-**Sicht**  
+**Ansicht**  
 Klicken Sie nach Ausführung des Auftragsschritts auf **Anzeigen** , um seine Ausgabe in der Tabelle anzuzeigen.  
   
 **Ausgabe an vorhandenen Eintrag in Tabelle anfügen**  
@@ -100,7 +100,7 @@ Legt fest, welche Datei für die Ausgabe aus dem Auftragsschritt verwendet werde
 **...**  
 Nach der Datei, die für die Ausgabe aus dem Auftragsschritt verwendet werden soll, können Sie suchen.  
   
-**Sicht**  
+**Ansicht**  
 In [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]ist diese Schaltfläche für die Anzeige von Ausgabedateien deaktiviert. Nutzen Sie stattdessen den Editor für die Anzeige von Auftragsschritt-Ausgabedateien.  
   
 **Ausgabe an vorhandene Datei anfügen**  
@@ -109,7 +109,7 @@ Fügt die Auftragsschrittausgabe bei jeder Ausführung des Schritts an den vorha
 **In Tabelle protokollieren**  
 Protokolliert die Ausgabedaten des Auftragsschritts in der **sysjobstepslogs** -Tabelle der **msdb** -Datenbank.  
   
-**Sicht**  
+**Ansicht**  
 Klicken Sie nach Ausführung des Auftragsschritts auf **Anzeigen** , um seine Ausgabe in der Tabelle anzuzeigen.  
   
 **Ausgabe an vorhandenen Eintrag in Tabelle anfügen**  
@@ -132,7 +132,7 @@ Legt fest, welche Datei für die Ausgabe aus dem Auftragsschritt verwendet werde
 **...**  
 Nach der Datei, die für die Ausgabe aus dem Auftragsschritt verwendet werden soll, können Sie suchen.  
   
-**Sicht**  
+**Ansicht**  
 In [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]ist diese Schaltfläche für die Anzeige von Ausgabedateien deaktiviert. Nutzen Sie stattdessen den Editor für die Anzeige von Auftragsschritt-Ausgabedateien.  
   
 **Ausgabe an vorhandene Datei anfügen**  
@@ -141,7 +141,7 @@ Fügt die Ausgabe an den vorhandenen Inhalt der Datei an. Andernfalls wird der v
 **In Tabelle protokollieren**  
 Protokolliert die Ausgabedaten des Auftragsschritts in der **sysjobstepslogs** -Tabelle der **msdb** -Datenbank.  
   
-**Sicht**  
+**Ansicht**  
 Klicken Sie nach Ausführung des Auftragsschritts auf **Anzeigen** , um seine Ausgabe in der Tabelle anzuzeigen.  
   
 **Ausgabe an vorhandenen Eintrag in Tabelle anfügen**  
@@ -150,6 +150,6 @@ Fügt die Ausgabe an den vorhandenen Inhalt der Tabelle an. Andernfalls wird der
 **Schrittausgabe in Verlauf einschließen**  
 Wählen Sie diese Option aus, wenn die Ausgabe des Auftragsschritts in den Auftragsverlauf aufgenommen werden soll.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Verwalten von Auftragsschritten](../../ssms/agent/manage-job-steps.md)  
   

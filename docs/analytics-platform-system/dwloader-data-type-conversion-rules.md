@@ -3,10 +3,10 @@ title: "Konvertierungsregeln für Dwloader-Datentyp"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 79c48520-b08b-4b15-a943-a551cc90a2c4
 caps.latest.revision: "30"
-ms.openlocfilehash: 2ac1325b3765bafbe34dc61f65f7641431afdfa0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 29cf43b7bb5ea38d821e62b03cc125fe5e0fc30c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-conversion-rules-for-dwloader"></a>Konvertierungsregeln für Dwloader-Datentyp
 In diesem Thema wird beschrieben, die Eingabedaten-Formate und impliziten datentypkonvertierungen, [Dwloader Command-Line-Ladeprogramm](dwloader.md) beim Laden von Daten in PDW unterstützt. Die implizite datenkonvertierungen auftreten, wenn die Eingabedaten nicht den Datentyp in der SQL Server PDW-Zieltabelle übereinstimmt. Verwenden Sie diese Informationen beim Entwerfen Ihrer Ladevorgang, um sicherzustellen, dass Ihre Daten in SQL Server PDW erfolgreich geladen wird.  
@@ -91,7 +91,7 @@ In der folgenden Tabelle definiert, das Standardformat und die Regeln zum Laden 
 ### <a name="DateFormats"></a>DateTime-Formate  
 Dwloader unterstützt die folgenden Formate für die Eingabedaten, die sie in SQL Server PDW geladen wird. Weitere Details sind nach der Tabelle aufgeführt.  
   
-|datetime|smalldatetime|Datum|datetime2|datetimeoffset|  
+|DATETIME|smalldatetime|date|datetime2|datetimeoffset|  
 |------------|-----------------|--------|-------------|------------------|  
 |[M [M]] M-[d] d-[Yy] Yy hh: mm: [ss.fff]|[M [M]] M-[d] d-[Yy] Yy hh: mm [: 00]|[M [M]] M-[d] d-[Yy] yy|[M [M]] M-[d] d-[Yy] Yy hh: mm: [.fffffff]|[M [M]] M-[d] d-[Yy] Yy hh: mm: [.fffffff] zzz|  
 |[M [M]] M-[d] d-[Yy] Yy hh: mm: [ss.fff] [Tt]|[M [M]] M-[d] d-[Yy] Yy hh: mm [: 00] [Tt]||[M [M]] M-[d] d-[Yy] Yy hh: mm: [.fffffff] [Tt]|[M [M]] M-[d] d-[Yy] Yy hh: mm: [.fffffff] [Tt] Zzz|  

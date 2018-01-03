@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b04226eeab2adde4a36f93fb5630f3097741a6d6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 70b27a10dc14583a39870fc434b7b69fb674ab5b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>Verwenden 32-Bit-Anwendungen mit 32-Bit-Treiber
 Sie können die 32-Bit-Anwendungen mit 32-Bit-Treiber ausführen. Verwenden die 32-Bit-Anwendungen und die 32-Bit-Treiber der Win32®-API.  

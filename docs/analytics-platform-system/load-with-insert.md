@@ -3,10 +3,10 @@ title: Laden von Daten mit INSERT
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 6e951b0e-e95b-4fd1-b5f3-c65607aee0d8
 caps.latest.revision: "21"
-ms.openlocfilehash: 059dc1e8601fb02aac9a91631a161bae1e995389
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 625b6938ebbb2d0b753cb1a35f5c1df7372c6cca
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="load-data-with-insert"></a>Laden von Daten mit INSERT
 
@@ -129,8 +129,8 @@ In der folgenden Tabelle definiert, die akzeptierte Formate und die Regeln zum E
   
 |Literaltyp|Format|Aufgrund von Konvertierungsregeln|  
 |------------|------|----------------|
-|Zeichenfolgenliteral im **Ganzzahl** Format|"Nnnnnnnnnnnnnn"<br /><br />Beispiel: "321312313123"| Keine |  
-|Integer-literal|nnnnnnnnnnnnnn<br /><br />Beispiel: 321312313123| Keine|  
+|Zeichenfolgenliteral im **Ganzzahl** Format|"Nnnnnnnnnnnnnn"<br /><br />Beispiel: "321312313123"| InclusionThresholdSetting |  
+|Integer-literal|nnnnnnnnnnnnnn<br /><br />Beispiel: 321312313123| InclusionThresholdSetting|  
 |Decimal-literal|nnnnnn.nnnnn<br /><br />Beispiel: 123344.34455|Die Werte, die rechts neben dem Dezimaltrennzeichen werden abgeschnitten.|  
   
 ### <a name="money-and-smallmoney-data-types"></a>Datentypen Money und smallmoney  
@@ -153,10 +153,10 @@ In der folgenden Tabelle definiert, die akzeptierte Formate und die Regeln zum E
   
 |Literaltyp|Format|Aufgrund von Konvertierungsregeln|  
 |----------------|----------|--------------------|  
-|Ein Zeichenfolgenliteral handeln|Format: "Zeichenfolge"<br /><br />Beispiel: 'Abc'| Keine|  
-|Unicode-Zeichenfolgenliteral|: Formatzeichenfolge N'character "<br /><br />Beispiel: N '|  Keine |  
-|Integer-literal|Format: Nnnnnnnnnnn<br /><br />Beispiel: 321312313123| Keine |  
-|Decimal-literal|Format: nnnnnn.nnnnnnn<br /><br />Beispiel: 12344.34455| Keine |  
+|Ein Zeichenfolgenliteral handeln|Format: "Zeichenfolge"<br /><br />Beispiel: 'Abc'| InclusionThresholdSetting|  
+|Unicode-Zeichenfolgenliteral|: Formatzeichenfolge N'character "<br /><br />Beispiel: N '|  InclusionThresholdSetting |  
+|Integer-literal|Format: Nnnnnnnnnnn<br /><br />Beispiel: 321312313123| InclusionThresholdSetting |  
+|Decimal-literal|Format: nnnnnn.nnnnnnn<br /><br />Beispiel: 12344.34455| InclusionThresholdSetting |  
 |Money-literal|Format: $nnnnnn.nnnnn<br /><br />Beispiel: $123456.99|Das Währungssymbol wird nicht mit dem Wert eingefügt. Um das Währungssymbol einzufügen, geben Sie den Wert als Zeichenfolgenliteral. Dies entspricht das Format der **Dwloader** Tool, das jedes Literal als Zeichenfolgenliteral behandelt.<br /><br />Kommas sind nicht zulässig.<br /><br />Wenn die Anzahl der Ziffern nach dem Dezimaltrennzeichen 2 überschreitet, wird der Wert auf den nächsten Wert aufgerundet. Beispielsweise wird der Wert 123.946789 als 123.95 eingefügt.<br /><br />Nur das Standardformat 0 (keine Kommas und 2 Ziffern nach dem Dezimaltrennzeichen) ist zulässig, wenn die CONVERT-Funktion zu verwenden, um Money Literale einzufügen.|  
 
   

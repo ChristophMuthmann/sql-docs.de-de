@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ac53e4901a3a6d6b412bddd2408e22e3ea1ef115
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8bc7222f4af9c58d0674c32c9d789303b939d670
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fetching-data"></a>Abrufen von Daten
 Der Prozess des Abrufens von Zeilen aus dem Resultset und deren Rückgabe an die Anwendung wird aufgerufen, *abrufen*. In diesem Abschnitt wird beschrieben, wie Daten abgerufen werden.  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5497ef9b94a57442fd675db6729147d0432ece56
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6012ca2f1b307f475839c7357e813817e222051e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-length-and-indicator-values"></a>Mithilfe der Länge und Indikatorwerte
 Die Längen-/Indikatorpuffers wird verwendet, übergeben Sie die Bytelänge der Daten in den Datenpuffer oder einen speziellen Indikator wie z. B. SQL_NULL_DATA gibt an, dass die Daten NULL sind. Abhängig von der Funktion, in der es verwendet wird, wird ein Längen-/Indikatorpuffers definiert, um eine SQLINTEGER oder ein SQLSMALLINT sein. Aus diesem Grund ist ein einzelnes Argument erforderlich, um es zu beschreiben. Dieses Argument enthält die Bytelänge der Daten selbst oder um einen Indikatorwert, wenn Datenpuffer eine nondeferred Eingabepuffer ist. Es wird oft mit dem Namen *StrLen_or_Ind* oder einem ähnlichen Namen. Beispielsweise folgender code ruft **SQLPutData** , übergeben einen Puffer von Daten vollständig; die Bytelänge (*ValueLen*) direkt übergeben wird, da Datenpuffer (*ValuePtr*) ist ein Eingabepuffer.  

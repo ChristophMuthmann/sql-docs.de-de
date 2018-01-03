@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26e758e6f4884309a17d5abfaa82b64d767d4df5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3dacb8a0f83084d61c7ca55c5ae093bb57876b82
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**sync_object**||Der Name der Tabelle oder Sicht, mit der eine Synchronisierungsausgabedatei erstellt wird. Die Standardeinstellung ist NULL. Diese Option wird für Oracle-Verleger nicht unterstützt.|  
 |**Tabellenbereich**||Gibt den Tabellenbereich an, der von der Protokollierungstabelle für einen Artikel verwendet wird, der von einer Oracle-Datenbank veröffentlicht wird. Weitere Informationen finden Sie unter [Verwalten von Oracle-Tabellenbereichen](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).|  
 |**Schwellenwert**||Der Prozentwert, der steuert, wann der Verteilungs-Agent einen neuen Identitätsbereich zuweist. Wird für die Peer-zu-Peer-Replikation nicht unterstützt.|  
-|**Typ**||Diese Option wird für Oracle-Verleger nicht unterstützt.|  
+|**type**||Diese Option wird für Oracle-Verleger nicht unterstützt.|  
 ||**logbased**|Protokollbasierter Artikel.|  
 ||**Logbased manualboth**|Protokollbasierter Artikel mit manuell erstelltem Filter und manuell erstellter Sicht. Diese Option erfordert, dass die *Sync_object* und *Filter* Eigenschaften auch festgelegt werden. Diese Option wird für Oracle-Verleger nicht unterstützt.|  
 ||**Logbased manualfilter**|Protokollbasierter Artikel mit manuell erstelltem Filter. Diese Option erfordert, dass die *Sync_object* und *Filter* Eigenschaften auch festgelegt werden. Diese Option wird für Oracle-Verleger nicht unterstützt.|  
@@ -218,7 +218,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
  Innerhalb einer vorhandenen Veröffentlichung können Sie **Sp_changearticle** einen Artikel ändern, ohne Sie zu löschen und die gesamte Veröffentlichung neu erstellen.  
   
 > [!NOTE]  
->  Beim Ändern des Werts von *Schema_option*, das System führt ein bitweises Update nicht. Dies bedeutet, dass beim Festlegen der *Schema_option* mit **Sp_changearticle**vorhandene biteinstellungen möglicherweise deaktiviert. Um die vorhandenen Einstellungen beizubehalten, sollten Sie ausführen [& (bitweises AND)](../../t-sql/language-elements/bitwise-and-transact-sql.md) zwischen dem Wert festlegen und der aktuelle Wert der *Schema_option*, dem kann bestimmt werden, durch das Ausführen von [Sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md).  
+>  Beim Ändern des Werts von *Schema_option*, das System führt ein bitweises Update nicht. Dies bedeutet, dass beim Festlegen der *Schema_option* mit **Sp_changearticle**vorhandene biteinstellungen möglicherweise deaktiviert. Um die vorhandenen Einstellungen beizubehalten, sollten Sie ausführen [| (Bitweises OR) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) zwischen dem Wert festlegen und der aktuelle Wert der *Schema_option*, dem kann bestimmt werden, durch das Ausführen [Sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md).  
   
 ## <a name="valid-schema-options"></a>Valid Schema Options  
  Die folgende Tabelle beschreibt die zulässigen Werte von *Schema_option* basierend auf dem Replikationstyp (oben) und den Artikeltyp (in der ersten Spalte angezeigt).  

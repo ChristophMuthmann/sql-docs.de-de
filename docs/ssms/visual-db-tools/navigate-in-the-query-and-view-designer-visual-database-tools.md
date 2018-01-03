@@ -3,7 +3,7 @@ title: Navigieren im Abfrage- und Sicht-Designer (Visual Database Tools) | Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 134e017c94bbf364d74c3914149a09be3deaa9a3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9cbebb7269afbf1ae1caa16032c7d4c4406ba148
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Navigieren im Abfrage- und Sicht-Designer (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können im Abfrage- und Sicht-Designer mit der Tastatur und mit der Maus arbeiten. In den folgenden Tabellen finden Sie spezielle Methoden.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/05/2017
 |Wechseln zwischen den Spalten in einer Tabelle oder einem tabellenähnlich strukturierten Objekt|Pfeiltasten|Klicken Sie auf die Spalte, zu der Sie wechseln möchten.|  
 |Auswählen der Datenspalte für die Ausgabe|LEERTASTE oder PLUS|Klicken Sie auf das Kontrollkästchen neben Spaltennamen.|  
 |Entfernen der ausgewählten Datenspalte aus der Abfrageausgabe|LEERTASTE oder MINUS|Klicken Sie auf das Kontrollkästchen neben Spaltennamen.|  
-|Entfernen der ausgewählten Tabelle, des tabellenähnlich strukturierten Objekts oder der Joinlinie aus der Abfrage|DELETE|Klicken mit der rechten Maustaste, und wählen Sie **Entfernen**aus.|  
+|Entfernen der ausgewählten Tabelle, des tabellenähnlich strukturierten Objekts oder der Joinlinie aus der Abfrage|Delete|Klicken mit der rechten Maustaste, und wählen Sie **Entfernen**aus.|  
   
 > [!NOTE]  
 > Wenn mehrere Elemente markiert sind, wirkt sich das Drücken dieser Taste auf alle ausgewählten Elemente aus. Sie können mehrere Elemente markieren, indem Sie beim Klicken STRG gedrückt halten.  
@@ -72,8 +72,8 @@ Weitere Informationen finden Sie unter [Diagrammbereich &#40;Visual Database Too
 |Einfügen von Text aus der Zwischenablage (im Bearbeitungsmodus)|STRG+V||  
 |Wechseln zwischen dem Einfüge- und dem Überschreibmodus beim Bearbeiten in einer Zelle|EINFG||  
 |Aktivieren bzw. Deaktivieren des Kontrollkästchens in der Ausgabespalte|LEERTASTE|Klicken Sie auf das Kontrollkästchen.|  
-|Löschen des markierten Inhalts einer Zelle|DELETE||  
-|Löschen aller Werte einer markierten Spalte eines Datenblatts|DELETE||  
+|Löschen des markierten Inhalts einer Zelle|Delete||  
+|Löschen aller Werte einer markierten Spalte eines Datenblatts|Delete||  
 |Einfügen einer Zeile zwischen vorhandenen Zeilen|EINFG, nach dem Markieren der Zeile des Datenblatts||  
 |Hinzufügen der Spalte „Oder...“|EINFG, nach dem Markieren einer Spalte „Oder...“||  
   
@@ -103,7 +103,7 @@ Weitere Informationen finden Sie unter [SQL-Bereich &#40;Visual Database Tools&#
 |Markieren bis zum letzten Zeichen in einer Zelle|UMSCHALT+ENDE||  
 |Wechseln zwischen dem Bearbeitungsmodus und dem Modus für die Zellenauswahl|F2||  
 |Wechseln zwischen dem Einfüge- und dem Überschreibmodus beim Bearbeiten in einer Zelle|EINFG||  
-|Löschen einer Zeile aus der Tabelle|DELETE||  
+|Löschen einer Zeile aus der Tabelle|Delete||  
 |Rückgängig machen von Änderungen an der aktuellen Zelle|ESC in der geänderten Zelle||  
 |Rückgängig machen von Änderungen an der aktuellen Zeile|ESC in einer nicht geänderten Zelle||  
 |Eingeben von Null in eine Zelle|STRG+0||  
@@ -117,6 +117,6 @@ Weitere Informationen finden Sie unter [SQL-Bereich &#40;Visual Database Tools&#
   
 Weitere Informationen finden Sie unter [Ergebnisbereich &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 544f4aa32119b0fde5971f76e46a382b92dbd3ef
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f1cb1869039572d0d6da1302f66ce64abc3f2590
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what-is-odbc"></a>Was ist "ODBC"?
 Viele Missverständnisse über ODBC, die in der IT-Welt vorhanden sein. Für den Endbenutzer ist es ein Symbol in der Microsoft® Windows®-Systemsteuerung. Für den Anwendungsprogrammierer ist es eine Bibliothek mit Data Access-Routinen. Zu viele andere ist es die Antwort auf alle Datenbank-Access-Probleme, die jemals gestaltete.  

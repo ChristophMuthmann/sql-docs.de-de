@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d239280ebe6eaaafaed44341354bec8a6d0b225e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 806acdd35452ff22e922158ed071d41d8e45f031
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetconnectattr-function"></a>SQLSetConnectAttr-Funktion
 **Konformität**  
@@ -129,7 +129,7 @@ SQLRETURN SQLSetConnectAttr(
   
  Einige Verbindungsattribute können festgelegt werden, nur verwendet werden, bevor eine Verbindung hergestellt wurde. andere können festgelegt werden, nachdem eine Verbindung hergestellt wurde. Die folgende Tabelle zeigt die Verbindungsattribute, die festgelegt werden müssen, bevor oder nachdem eine Verbindung hergestellt wurde. *Entweder* gibt an, dass das Attribut entweder vor oder nach der Verbindung festgelegt werden kann.  
   
-|Attribut|Legen Sie vor oder nach Verbindung?|  
+|attribute|Legen Sie vor oder nach Verbindung?|  
 |---------------|-------------------------------------|  
 |SQL_ATTR_ACCESS_MODE|Entweder [1]|  
 |SQL_ATTR_ASYNC_DBC_EVENT|Sowohl als auch|  

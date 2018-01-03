@@ -3,7 +3,7 @@ title: Benachrichtigung nach dem Speichervorgang (Dialogfeld) (Visual Database T
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef2947ba3f63c75bef2f4f15822743b16f88d07a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fe0d00e66789e1971df2db603cc90213c31067de
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>Benachrichtigung nach dem Speichervorgang (Dialogfeld) (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dieses Dialogfeld wird angezeigt, wenn beim Versuch, eine Tabelle zu speichern, Fehler auftreten. In diesem Dialogfeld werden die erfolgreich in der Datenbank gespeicherten Objekte, die nicht gespeicherten Objekte und die aufgetretenen Fehler aufgeführt.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Textdatei speichern**  
 Zeigen Sie das Dialogfeld **Speichern unter** an, in dem Sie aufgefordert werden, einen Speicherort zum Speichern einer Textdatei anzugeben, in der die Fehlerinformationen aufgelistet werden. In dieser Datei werden sowohl die erfolgreich gespeicherten Datenbankänderungen als auch die Änderungen aufgezeichnet, die aufgrund von Fehlern nicht gespeichert werden konnten.  
   

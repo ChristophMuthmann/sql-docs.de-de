@@ -1,7 +1,7 @@
 ---
 title: Speichern von Metadaten (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 16c473fbefcfca15d005a04fbb842ef40b10fffa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e62fcd6b41208b1cf17c9f611da8a7af5454ab45
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-metadata--mysqltosql"></a>Speichern von Metadaten (MySQLToSQL)
 Die **speichern Metadaten** Dialogfeld aufgefordert, die Metadaten in das SSMA-Projekt zu laden, bevor Sie es speichern. Mit diesem können Sie eine vollständige Projektdatei verfügen, die Sie offline verwenden können, und Senden an andere Personen, z. B. der technische Support in Verbindung.  
   
 Für den Zugriff auf die **speichern Metadaten** (Dialogfeld), speichern Sie das Projekt. SSMA wird angezeigt, wenn keine Metadaten nicht vorhanden ist, die **speichern Metadaten** (Dialogfeld).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Name**  
 Der Name jeder Datenbank im Projekt.  
   

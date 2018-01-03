@@ -3,7 +3,7 @@ title: WillExecute-Ereignis (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5988a43be066f61019223eb6a501d1bc73e8bc23
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 66a04a7bf45771c9c6f16b32bfd9c8bac54db4ad
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="willexecute-event-ado"></a>WillExecute-Ereignis (ADO)
 Die **WillExecute** Ereignis wird aufgerufen, kurz bevor ein ausstehenden Befehls für eine Verbindung ausgeführt wird.  
@@ -48,7 +48,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *LockType*  
  Ein [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) , enthält den Typ der Sperre für die **Recordset** , wird geöffnet. Mit diesem Parameter können Sie die Sperre ändern, auf einen beliebigen Typ während einer **RecordsetOpen** Vorgang. *LockType* werden für alle anderen Vorgänge ignoriert.  
   
- *Optionen*  
+ *enthalten*  
  Ein **lange** Wert, der Optionen, die verwendet werden kann angibt, führen Sie den Befehl aus, oder öffnen Sie die **Recordset**.  
   
  *adStatus*  

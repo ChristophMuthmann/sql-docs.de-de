@@ -3,7 +3,7 @@ title: Angeben von Suchkriterien (Visual Database Tools) | Microsoft-Dokumentati
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -29,11 +29,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 617b996bbd6142dd14f5307ae39f13cc058a6c53
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 44e732e599553a3f7adcd2abee8ea6a209aa42cf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-search-criteria-visual-database-tools"></a>Angeben von Suchkriterien (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Die Anzahl der von einer Abfrage zurückgegebenen Zeilen kann durch Suchkriterien eingeschränkt werden.  
@@ -66,7 +66,7 @@ Erklärt, wie und warum diese beiden Klauseln in einer Abfrage verwendet werden.
 Erklärt, wie alle Zeilen zurückgegeben werden, deren Wert in einer bestimmten Spalte nicht dem in der Abfrageanweisung angegebenen Wert entspricht.  
   
 [Einschließen oder Ausschließen von Zeilen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/include-or-exclude-rows-visual-database-tools.md)  
-Erklärt die Konzepte hinter den in Abfragen verwendeten Klauseln und Operatoren  
+Erklärt die Konzepte hinter den in Abfragen verwendeten Klauseln und Operatoren   
   
 [Ausschließen doppelter Zeilen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/exclude-duplicate-rows-visual-database-tools.md)  
 Erklärt, wie doppelte Zeilen aus SELECT-Abfragen gefiltert werden.  

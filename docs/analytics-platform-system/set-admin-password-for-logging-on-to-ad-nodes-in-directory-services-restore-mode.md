@@ -3,10 +3,10 @@ title: Festlegen Sie AD Knoten Admin-Anmeldekennwort, im Modus "Verzeichnisdiens
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 97a9c715-2763-417d-b45c-bb0180759e47
 caps.latest.revision: "20"
-ms.openlocfilehash: 1496e3e18bde0fbe1daad452081191bbe0ffb23e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2e0379093db9364f45793adc20635bfa4ad53748
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm"></a>Legen Sie das Administratorkennwort für das Anmelden beim AD-Knoten im Verzeichnisdienst-Wiederherstellungsmodus (DSRM)
 Directory Verzeichnisdienst-Wiederherstellungsmodus (DSRM) ist eine Startmethode zum Reparieren oder Wiederherstellen von Active Directory-Domänendienste (AD DS). Hiermit wird die Appliance AD Knoten anmelden, nachdem AD DS ein Fehler aufgetreten ist oder wenn die AD DS wiederhergestellt werden muss. Das Kennwort für den Verzeichnisdienst-Wiederherstellungsmodus wurde während des Setups Appliance am Standort Hardware-Hersteller initialisiert und sollte vom Administrator Appliance geändert werden. Analyseplattformsystem verfügt über zwei AD DS (Domänencontroller)  ***Appliance_domain*-AD01** und  ***Appliance_domain*-AD02**. Ändern Sie das DSRM-Kennwort mithilfe der folgenden Schritte für jeden Knoten Appliance AD.  

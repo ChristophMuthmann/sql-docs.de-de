@@ -3,10 +3,10 @@ title: "Stellen Sie eine durch TDE in Parallel Datawarehouse geschützte Datenba
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: ffb681ca-8598-4614-b06c-660376333fc3
 caps.latest.revision: "4"
-ms.openlocfilehash: 31f81447bd4fdaf5a2528f5828cc3d70618240c6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5df3843a3e329901f8f77b65e5f6d4ff69cf6dbf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="restore-a-database-protected-by-tde"></a>Stellen Sie eine durch TDE geschützte Datenbank wieder her.
 Verwenden Sie die folgenden Schritte zum Wiederherstellen einer Datenbank, die mit transparenter datenverschlüsselung verschlüsselt wird.  

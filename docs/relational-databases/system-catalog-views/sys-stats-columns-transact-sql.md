@@ -1,7 +1,7 @@
 ---
 title: Sys. stats_columns (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/15/2017
+ms.date: 12/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f04a35bc8c99bc3db1fbd87e42da12a04f200a8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 13114155ad4820ee293acdd11b7833083dafd9fc
+ms.sourcegitcommit: c4633058216bcf6748db0eaa0e815761dc98c24d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/19/2017
 ---
 # <a name="sysstatscolumns-transact-sql"></a>sys.stats_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID des Objekts, von dem diese Spalte ein Bestandteil ist|  
-|**stats_id**|**int**|ID der Statistik, von der diese Spalte ein Bestandteil ist|  
+|**stats_id**|**int**|ID der Statistik, von der diese Spalte ein Bestandteil ist<br /><br />Wenn Statistiken einem Index entsprechen den *Stats_id* Wert ist identisch mit der *Index_id* Wert in der [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) -Katalogsicht angezeigt.|  
 |**stats_column_id**|**int**|1-basierte Ordnungszahl innerhalb der Gruppe von stats_columns-Spalten|  
 |**column_id**|**int**|ID der Spalte in **sys.columns**|  
   
@@ -48,7 +48,10 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Siehe auch  
  [Katalogsichten für Objekte &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Abfragen von SQL Server-Systemkatalogs – häufig gestellte Fragen](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [Häufig gestellte Fragen zu Abfragen des SQL Server-Systemkatalogs](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [Statistiken](../../relational-databases/statistics/statistics.md)    
+ [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
+ [Sys.dm_db_stats_histogram &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
  [Sys.Stats &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)  
   
   

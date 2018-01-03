@@ -3,7 +3,7 @@ title: Catalog-Beispiel (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 72686db96fb53609f53e6dd0ac11fe238c98b403
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4d273d0fb54e1ef8b541519b750ebe7071bb3108
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catalog-example-vb"></a>Katalog-Beispiel (VB)
 Dieses Visual Basic-Projekt erstellt einen neuen Cube mithilfe von MDX. Klicken Sie dann, sind es die Struktur eines Cubes in Microsoft Word-Dokument dokumentiert.  

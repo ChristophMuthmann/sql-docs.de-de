@@ -3,7 +3,7 @@ title: "Datei öffnen (Dialogfeld) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 11a990c6668b4b70998cd3e118c01d5d7bcb7722
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 894dcee809aac7b3d32b30f1ee5fdc988eb8b009
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-file-dialog-box"></a>Datei öffnen (Dialogfeld)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Verwenden Sie das Dialogfeld **Datei öffnen**, um eine vorhandene Datei von einem Datenträger zu öffnen. Außerdem können Sie dieses Dialogfeld dazu verwenden, eine bereits geöffnete Datei mit unterschiedlichen Sprachcodierungsoptionen zu öffnen.  
@@ -35,7 +35,7 @@ Um auf dieses Dialogfeld zuzugreifen, wählen Sie im Menü **Datei** die Option 
 > Überprüfen Sie vor dem Öffnen eines Projekts oder einer Komponente in [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]die Vertrauenswürdigkeit des zugehörigen Codes. Durch das Öffnen des Projekts oder der Komponente in [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] wird möglicherweise der Code des Projekts bzw. der Komponente in einem vertrauenswürdigen Prozess auf dem lokalen Computer ausgeführt.  
   
 ## <a name="option"></a>Option  
-**Suchen in**  
+**Look in**  
 Suchen Sie den vorhandenen Projektordner aus dieser Dropdownliste aus. Nach der Auswahl eines Ordners aus dieser Liste wird der Inhalt im primären Bereich angezeigt.  
   
 ## <a name="my-places-bar"></a>Meine Umgebung (Leiste)  

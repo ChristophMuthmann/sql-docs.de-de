@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9e4f5b152bf1234c59783f52c64c5bbb06cb2903
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: feae201ca72f241fe2ad18023d4686985203c89d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
@@ -38,22 +38,22 @@ ms.lasthandoff: 11/20/2017
   
 |*Funktion*|Supported|  
 |----------------|---------------|  
-|SQL_API_SQLBROWSECONNECT|Nein|  
-|SQL_API_SQLCOLUMNPRIVELEGES|Nein|  
+|SQL_API_SQLBROWSECONNECT|nein|  
+|SQL_API_SQLCOLUMNPRIVELEGES|nein|  
 |SQL_API_SQLDATASOURCES|ja|  
-|SQL_API_SQLDESCRIBEPARAM|Nein|  
+|SQL_API_SQLDESCRIBEPARAM|nein|  
 |SQL_API_SQLDRIVERS|ja|  
 |SQL_API_SQLEXTENDEDFETCH|ja|  
-|SQL_API_SQLFOREIGNKEYS|Nein|  
+|SQL_API_SQLFOREIGNKEYS|nein|  
 |SQL_API_SQLMORERESULTS|ja|  
-|SQL_API_SQLNATIVESQL|Nein|  
+|SQL_API_SQLNATIVESQL|nein|  
 |SQL_API_SQLNUMPARAMS|ja|  
 |SQL_API_SQLPARAMOPTIONS|ja|  
 |SQL_API_SQLPRIMARYKEYS|ja|  
-|SQL_API_SQLPROCEDURECOLUMNS|Nein|  
-|SQL_API_SQLPROCEDURES|Nein|  
+|SQL_API_SQLPROCEDURECOLUMNS|nein|  
+|SQL_API_SQLPROCEDURES|nein|  
 |SQL_API_SQLSETPOS|ja|  
 |SQL_API_SQLSETSCROLLOPTIONS|ja|  
-|SQL_API_SQLTABLEPRIVILEGES|Nein|  
+|SQL_API_SQLTABLEPRIVILEGES|nein|  
   
  Weitere Informationen finden Sie unter [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) in der *ODBC Programmer's Reference*.

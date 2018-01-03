@@ -3,10 +3,10 @@ title: "Appliance (Analytics Platform System) überwachen"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 253864fb-9178-41d2-a0ae-5dd9fd0a4fda
 caps.latest.revision: "25"
-ms.openlocfilehash: dbbae960d5e4d88b6cb725c9e22fc36a428b9264
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7d85f311df05a0aa43e074226d639493e1513153
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appliance-monitoring"></a>Überwachen der Anwendung
 Dieses Monitoring Appliance-Handbuch beschreibt die Tools und Aufgaben für die Überwachung der SQL Server PDW Appliance.  

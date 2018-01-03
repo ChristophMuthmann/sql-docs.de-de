@@ -3,7 +3,7 @@ title: ADO MD-Eigenschaften | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 48c27fa950a31a0121bb5253fe9b94ba5893bae3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c59077cbb3604cca9ef352c348a49e6301ace6df
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-md-properties"></a>ADO MD-Eigenschaften
 |||  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 |[Status](../../../ado/reference/ado-md-api/state-property-ado-md.md)|Gibt den aktuellen Status der das Cellset an.|  
 |[Typ](../../../ado/reference/ado-md-api/type-property-ado-md.md)|Gibt den Typ des aktuellen Elements an.|  
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|Gibt einen eindeutigen Namen für das aktuelle Objekt an.|  
-|[Wert](../../../ado/reference/ado-md-api/value-property-ado-md.md)|Gibt den Wert der aktuellen Zelle.|  
+|[ReplTest1](../../../ado/reference/ado-md-api/value-property-ado-md.md)|Gibt den Wert der aktuellen Zelle.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [ADO MD-API-Referenz](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   

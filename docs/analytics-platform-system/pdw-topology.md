@@ -3,10 +3,10 @@ title: PDW-Topologie (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9bf6fb50-eba0-418c-b6b5-787b8e263cac
 caps.latest.revision: "3"
-ms.openlocfilehash: 1a25356d2bf421f6abe061fd51082733a6d72c7c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ca41b39e30c592692f72917b8ed68f1588158f95
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pdw-topology"></a>PDW-Topologie
 Zeigt an, und den Informationen zu den SQL Server PDW-Komponenten. Verwenden der **Appliance Topologie Netzwerkkonfiguration** Seite, um das Netzwerk-IP-Adressen zu ändern.  

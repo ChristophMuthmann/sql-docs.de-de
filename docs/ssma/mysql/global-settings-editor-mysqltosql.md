@@ -1,7 +1,7 @@
 ---
 title: Globale Einstellungen (Editor) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 440303d56fc621d811c67147fa4ebe665ac51341
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cedd977a396116621741fce43993e4dcecc3c494
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-editor-mysqltosql"></a>Globale Einstellungen (Editor) (MySQLToSQL)
 Verwenden Sie die Seite des Editors für die **globale Einstellungen** Dialogfeld Einstellungen für das Fenster des Code-Editors angeben.  
   
 Zum Zugriff auf die editoreinstellungen in der **Tools** klicken Sie im Menü **globale Einstellungen**, klicken Sie auf **GUI** am unteren Rand des linken Bereich, und klicken Sie dann wählen **Editor**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Anzeigen von Zeilennummern im Editor**  
 Wählen Sie zum Anzeigen von Zeilennummern im Code-Editor-Fenster **"true"**.  
   

@@ -1,7 +1,7 @@
 ---
 title: DBCC CHECKDB (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 09/21/2016
+ms.date: 12/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -40,11 +40,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 67d2d6b3b6ad42e444f8f7f2908f2327c4844933
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c4a5ab88b068d32e9a40f4556564018a5f806608
+ms.sourcegitcommit: 27f1143cf9b52dd27acf81234a516c32a239a320
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -132,10 +132,7 @@ DBCC CHECKDB
 >  Zum Reparieren von Fehlern empfiehlt sich das Wiederherstellen mithilfe einer Sicherung. Bei Reparaturvorgängen werden keine Einschränkungen berücksichtigt, die möglicherweise in oder zwischen Tabellen vorhanden sind. Wenn die angegebene Tabelle an einer oder mehreren Einschränkungen beteiligt ist, ist es empfehlenswert, nach einem Reparaturvorgang DBCC CHECKCONSTRAINTS auszuführen. Wenn Sie REPAIR verwenden müssen, sollten Sie DBCC CHECKDB ohne Reparaturoption ausführen, um die zu verwendende Reparaturstufe zu ermitteln. Wenn Sie die REPAIR_ALLOW_DATA_LOSS-Ebene verwenden, empfiehlt es sich, die Datenbank vor dem Ausführen von DBCC CHECKDB zu sichern.    
     
  ALL_ERRORMSGS  
- Zeigt alle gemeldeten Fehler für jedes Objekt an. Alle Fehlermeldungen werden standardmäßig angezeigt. Das Angeben oder Weglassen dieser Option hat keine Auswirkungen. Fehlermeldungen werden nach davon ausgenommen sind Meldungen generiert aus der Objekt-ID sortiert [Tempdb-Datenbank](../../relational-databases/databases/tempdb-database.md).  
-    
-> [!NOTE] 
-> In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] werden maximal 1.000 Fehlermeldungen zurückgegeben. Wenn Sie ALL_ERRORMSGS angeben, es wird empfohlen, dass Sie mithilfe den DBCC-Befehl Ausführen der [Hilfsprogramms "Sqlcmd"](../../tools/sqlcmd-utility.md) oder durch die Planung einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrag, um den Befehl auszuführen und die Ausgabe in eine Datei weiterleiten. Mit jeder dieser Methoden kann sichergestellt werden, dass beim einmaligen Ausführen des Befehls alle Fehlermeldugen gemeldet werden.    
+ Zeigt alle gemeldeten Fehler für jedes Objekt an. Alle Fehlermeldungen werden standardmäßig angezeigt. Das Angeben oder Weglassen dieser Option hat keine Auswirkungen. Fehlermeldungen werden nach davon ausgenommen sind Meldungen generiert aus der Objekt-ID sortiert [Tempdb-Datenbank](../../relational-databases/databases/tempdb-database.md).     
 
  EXTENDED_LOGICAL_CHECKS  
  Wenn der Kompatiblitätsgrad 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) oder höher ist, werden logische Konsistenzprüfungen an einer indizierten Sicht, XML-Indizes und räumliche Indizes (sofern vorhanden) ausgeführt.  

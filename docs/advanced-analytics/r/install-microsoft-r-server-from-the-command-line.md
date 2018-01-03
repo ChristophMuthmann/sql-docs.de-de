@@ -2,11 +2,11 @@
 title: "Installieren von Machine Learning-Server (eigenständig) oder Microsoft R Server (eigenständig) über die Befehlszeile | Microsoft Docs"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 400f743bfbb065a5e271b5ff335d0896bb2ac3ef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c10594fdecd48782a80b5d609bb21c6a937f8863
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="install-machine-learning-server-standalone-or-microsoft-r-server-standalone-from-the-command-line"></a>Installieren von Machine Learning-Server (eigenständig) oder Microsoft R Server (eigenständig) über die Befehlszeile
 
@@ -33,7 +33,7 @@ Ein **unbeaufsichtigte** Installation erfordert, geben Sie den Speicherort des S
 
 Für eine **stille** Installation geben Sie dieselben Argumente an, und fügen Sie den Schalter **/q** hinzu. Es werden keine aufforderungen mehr bereitgestellt, und keine Benutzerinteraktion erforderlich ist. -Setup Sie jedoch einen Fehler auf, wenn alle erforderlichen Argumente ausgelassen werden.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Sie sollten wissen, wie eine Installation von SQL Server über die Befehlszeile ausführen und mit den Argumenten scripting vertraut sein.
 

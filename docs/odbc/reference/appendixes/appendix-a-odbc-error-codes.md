@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,14 +21,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1117eac94fdad6d90fda688f1a324608f0b37dad
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: af6533afbeb3b47c548e5475604136ae5fdc894b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appendix-a-odbc-error-codes"></a>Anhang A: ODBC-Fehlercodes
-Dieses Thema erläutert SQLSTATE-Werten für ODBC 3.. *x*. Weitere Informationen zu ODBC 3.. *x* SQLSTATE-Werten finden Sie unter [SQLSTATE-Zuordnungen](../../../odbc/reference/develop-app/sqlstate-mappings.md).  
+Dieses Thema erläutert SQLSTATE-Werten für ODBC 3. *x*. Weitere Informationen zu ODBC 3. *x* SQLSTATE-Werten finden Sie unter [SQLSTATE-Zuordnungen](../../../odbc/reference/develop-app/sqlstate-mappings.md).  
   
  **SQLGetDiagRec** oder **SQLGetDiagField** SQLSTATE-Werten zurückgibt, gemäß der Definition von Open Group *Datenverwaltung: Structured Query Language (SQL), Version 2* (März 1995). SQLSTATE-Werten handelt es sich um Zeichenfolgen, die fünf Zeichen enthalten. Die folgende Tabelle enthält die SQLSTATE-Werten, die ein Treiber für zurückgeben können **SQLGetDiagRec**.  
   

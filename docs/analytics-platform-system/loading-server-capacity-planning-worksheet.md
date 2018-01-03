@@ -3,10 +3,10 @@ title: "Laden die Server-Arbeitsblatt für Kapazität Planung (SQLServer PDW)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: df2155be-a624-40ba-9a85-58af708f7ce7
 caps.latest.revision: "9"
-ms.openlocfilehash: e14d4baca91e0b892b84620330655271fa67badb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0c5edef2b15b4e8412022e14853ad833cd9bbee5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="loading-server-capacity-planning-worksheet"></a>Laden die Planung Arbeitsblatt für die Server-Kapazität
 Mit diesem Arbeitsblatt Kapazität können Sie die Anforderungen für einen Server laden zum Laden von Daten in SQL Server PDW zu bestimmen. Hiermit können Sie Ihren Plan für den Kauf bzw. Bereitstellung vorhandene Server laden erstellen.  

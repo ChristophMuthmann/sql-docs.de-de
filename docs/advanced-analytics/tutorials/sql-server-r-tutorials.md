@@ -2,12 +2,14 @@
 title: "Lernprogramme für SQL Server-R | Microsoft Docs"
 ms.custom: SQL2016_New_Updated
 ms.date: 08/29/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: SQL Server 2016
 dev_langs: R
 caps.latest.revision: "1"
@@ -15,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ee88d7dbbb1a10c11a1e1c50cb4c048189f9d026
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 57ebbf72c613bd6618376482b10f5d7ef625dbc5
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="sql-server-r-tutorials"></a>SQL Server-R-Lernprogramme
 

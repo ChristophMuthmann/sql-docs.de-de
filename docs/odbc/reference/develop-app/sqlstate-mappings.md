@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,20 +21,20 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c17b2052e3ef088d5baa98481cbb81d972cd1093
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 68b514cd35e7da713f6e38a01c25d5d64d621794
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlstate-mappings"></a>SQLSTATE-Zuordnungen
-Dieses Thema erläutert SQLSTATE-Werten für ODBC-2. *x* und ODBC-3. *X*. Weitere Informationen zu ODBC 3.. *x* SQLSTATE-Werten finden Sie unter [Anhang A: ODBC-Fehlercodes](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
+Dieses Thema erläutert SQLSTATE-Werten für ODBC-2. *x* und ODBC-3. *X*. Weitere Informationen zu ODBC 3. *x* SQLSTATE-Werten finden Sie unter [Anhang A: ODBC-Fehlercodes](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
   
  In ODBC 3. *x*HYxxx SQLSTATEs werden zurückgegeben, statt S1xxx und 42Sxx SQLSTATEs anstelle von S00XX zurückgegeben werden. Dadurch wurde auch Open Group und ISO-Standards entsprechen. In vielen Fällen ist die Zuordnung nicht 1: 1, da die Standards die Interpretation von mehreren SQLSTATEs neu definiert haben.  
   
- Wenn eine ODBC-2. *x* Anwendung wird aktualisiert, um eine ODBC 3.. *X* Anwendung, die Anwendung muss geändert werden, um ODBC 3. erwarten. *X* SQLSTATEs anstelle von ODBC 2.. *X* SQLSTATEs. Die folgende Tabelle enthält die ODBC-3. *x* SQLSTATEs, jede ODBC 2. *X* SQLSTATE zugeordnet ist.  
+ Wenn eine ODBC-2. *x* Anwendung wird aktualisiert, um eine ODBC 3. *X* Anwendung, die Anwendung muss geändert werden, um ODBC 3. erwarten. *X* SQLSTATEs anstelle von ODBC 2. *X* SQLSTATEs. Die folgende Tabelle enthält die ODBC-3. *x* SQLSTATEs, jede ODBC 2. *X* SQLSTATE zugeordnet ist.  
   
- Wenn das Attribut der SQL_ATTR_ODBC_VERSION-Umgebung auf SQL_OV_ODBC2 festgelegt ist, sendet der Treiber ODBC 2. an. *x* SQLSTATEs anstelle von ODBC 3.. *X* SQLSTATEs Wenn **SQLGetDiagField** oder **SQLGetDiagRec** aufgerufen wird. Eine bestimmte Zuordnung kann bestimmt werden, anhand dessen Verifizieren der ODBC 2.*.x* SQLSTATE in Spalte 1 in der folgenden Tabelle, die die ODBC 3. entspricht. *X* SQLSTATE in Spalte 2.  
+ Wenn das Attribut der SQL_ATTR_ODBC_VERSION-Umgebung auf SQL_OV_ODBC2 festgelegt ist, sendet der Treiber ODBC 2. an. *x* SQLSTATEs anstelle von ODBC 3. *X* SQLSTATEs Wenn **SQLGetDiagField** oder **SQLGetDiagRec** aufgerufen wird. Eine bestimmte Zuordnung kann bestimmt werden, anhand dessen Verifizieren der ODBC 2.*.x* SQLSTATE in Spalte 1 in der folgenden Tabelle, die die ODBC 3. entspricht. *X* SQLSTATE in Spalte 2.  
   
 |ODBC-2. *x* SQLSTATE|ODBC-3. *x* SQLSTATE|Kommentare|  
 |-------------------------|-------------------------|--------------|  

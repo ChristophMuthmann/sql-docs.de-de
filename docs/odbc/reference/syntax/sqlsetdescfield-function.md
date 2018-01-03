@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e39f84504f04d9dc0ff0c6c9c9c17d096b4cacc5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3e6a0ee843ce2b78ebc611fee30a5ee8e16fc7e1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField-Funktion
 **Konformität**  
@@ -141,7 +141,7 @@ SQLRETURN SQLSetDescField(
   
  Die Initialisierung des Headerfelder ist in der Tabelle beschriebenen, das folgt.  
   
-|Header-Feldnamen|Typ|R/W|Standardwert|  
+|Header-Feldnamen|Typ|R/W|Default|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_ALLOC_TYPE|SQLSMALLINT|ARD: R-APD: R IRD: R IPD: R|ARD: SQL_DESC_ALLOC_AUTO für implizite oder SQL_DESC_ALLOC_USER für explizite<br /><br /> APD: SQL_DESC_ALLOC_AUTO für implizite oder SQL_DESC_ALLOC_USER für explizite<br /><br /> IRD: SQL_DESC_ALLOC_AUTO<br /><br /> IPD: SQL_DESC_ALLOC_AUTO|  
 |SQL_DESC_ARRAY_SIZE|SQLULEN ERSTELLT WURDE|ARD: R/W APD: R/W IRD: nicht verwendeter IPD: nicht verwendeter|ARD: [1] APD: [1] IRD: nicht verwendeter IPD: nicht verwendeter|  
@@ -155,7 +155,7 @@ SQL_DESC_COUNT|SQLSMALLINT|ARD: R/W APD: IRD R/W: R IPD: R/W|ARD: 0 APD: IRD 0: 
   
  Die Initialisierung des Datensatzfelder ist wie in der folgenden Tabelle gezeigt.  
   
-|Datensatz-Feldnamen|Typ|R/W|Standardwert|  
+|Datensatz-Feldnamen|Typ|R/W|Default|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|ARD: Nicht verwendeter APD: nicht verwendeter IRD: R IPD: nicht verwendeter|ARD: Nicht verwendeter APD: nicht verwendeter IRD: D IPD: nicht verwendeter|  
 |SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|ARD: Nicht verwendeter APD: nicht verwendeter IRD: R IPD: nicht verwendeter|ARD: Nicht verwendeter APD: nicht verwendeter IRD: D IPD: nicht verwendeter|  

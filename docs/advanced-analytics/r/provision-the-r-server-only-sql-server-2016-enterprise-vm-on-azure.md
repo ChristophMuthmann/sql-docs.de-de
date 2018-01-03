@@ -2,9 +2,11 @@
 title: "Bereitstellen eines virtuellen Computers für Machine Learning in Azure | Microsoft Docs"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod: r-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,11 +15,11 @@ caps.latest.revision: "12"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: a57f9d0e392818ec1198f3d0a19106e9db9c7810
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4887d79f60a8fd418fd4a5543bbac9dec0af3ebc
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="provision-a-virtual-machine-for-machine-learning-on-azure"></a>Bereitstellen eines virtuellen Computers für Machine Learning in Azure
 

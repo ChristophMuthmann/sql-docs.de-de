@@ -5,7 +5,7 @@ ms.date: 10/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
-ms.component: dma
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: sql-dma
@@ -19,11 +19,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc543e392818c2fa8ceea1c55e7a065df603b02d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ea780da11c39984fa8828119eee621a66768f1fe
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-data-migration-assistant"></a>Übersicht über Data-Migrations-Assistenten
 
@@ -49,7 +49,7 @@ Data Migration Assistant (DMA) können Sie zum Aktualisieren auf eine moderne Da
 
   - Leistung
 
-  - Sicherheit
+  - Security
 
   - Speicherung
 
@@ -72,14 +72,14 @@ DMA ersetzt alle vorherige Versionen von SQL Server Upgrade Advisor und Upgrades
 **Datenquellen**
 - SQL Server 2005
 - SQL Server 2008
-- SQL Server 2008 R2
+- SQL Server 2008 R2
 - SQL Server 2012 
-- SQL Server 2014
+- SQLServer 2014
 - SQL Server 2016
 
 **Ziele**
 - SQL Server 2012
-- SQL Server 2014
+- SQLServer 2014
 - SQL Server 2016
 - Azure SQL-Datenbank
 

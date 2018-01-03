@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 97d25a4d641e63dd081f16601f78e48d0ec8e17b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0a2e4c0e37d62eccccf1e0af0f2acc28ed09e8b6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="features-to-watch-for"></a>Funktionen, die Überwachung für
 Dieser Abschnitt beschreibt eine Reihe von Funktionen, die Anwendungsentwicklern häufig dauern, bis gewährt. Diese Funktionen in der Tat variieren stark Support-und Art der Unterstützung von DBMS; Fehler beim Code dafür ist wahrscheinlich Probleme verursachen, im interoperablen Anwendungen ausführen können.  

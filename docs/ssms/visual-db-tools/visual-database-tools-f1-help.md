@@ -3,7 +3,7 @@ title: "Visual Database Tools – F1-Hilfe | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,18 +18,18 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 58c97c63b74f329e00958d833b732cc9ed1eadf9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ebe883f56442fcd71e31c514b16fd8305d2a09f3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-database-tools-f1-help"></a>Visual Database Tools - F1-Hilfe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In diesen Themen werden die Befehle und Optionen in den Dialogfeldern und Eigenschaftenfenstern für Visual Database Tools-Elemente, wie beispielsweise das Fenster Tabelleneigenschaften und die Registerkarte Spalteneigenschaften behandelt.  
   
 Drücken Sie zum Zugreifen auf Dialogfeldthemen F1, wenn ein Dialogfeld geöffnet ist und es fokussiert ist. Klicken Sie zum Zugreifen auf Eigenschaftenfensterthemen auf das Eigenschaftenfenster, und drücken Sie F1.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Entwerfen von Tabellen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
 [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

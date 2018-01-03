@@ -3,7 +3,7 @@ title: "Ändern des Umgebungslayouts | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ec585601316887d3968dc70795a09053e54d1868
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aeb1e5f0f66a98425ab7600636510e82cfdc16c0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-3---change-the-environment-layout"></a>Lektion 1-3: Ändern des Umgebungslayouts
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Die Komponenten von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nehmen viel Platz auf dem Bildschirm ein. Wenn Sie sich mehr Platz verschaffen möchten, können Sie Komponenten von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] schließen, ausblenden oder verschieben. In den folgenden Übungen verschieben Sie Komponenten an verschiedene Stellen.  
@@ -57,7 +57,7 @@ Sie können die Darstellung von Komponenten in [!INCLUDE[ssManStudio](../../incl
   
 1.  Klicken Sie mit der rechten Maustaste auf die Titelleiste des Objekt-Explorers. Es werden folgende Menüoptionen angezeigt:  
   
-    -   Float  
+    -   float  
   
     -   Andocken  
   
@@ -85,7 +85,7 @@ Sie können die Darstellung von Komponenten in [!INCLUDE[ssManStudio](../../incl
   
 9. Wenn Sie die ursprüngliche Konfiguration wiederherstellen möchten, klicken Sie im Menü **Fenster** auf **Fensterlayout zurücksetzen**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Anzeigen des Abfragefensters](../../tools/sql-server-management-studio/lesson-1-4-display-the-query-window.md)  
   
   

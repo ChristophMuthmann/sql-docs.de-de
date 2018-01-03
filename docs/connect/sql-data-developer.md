@@ -3,7 +3,7 @@ title: SQL Data Developer | Microsoft Docs
 ms.custom: 
 ms.date: 03/28/2017
 ms.prod: sql-non-specified
-ms.prod_service: 
+ms.prod_service: database-engine
 ms.service: 
 ms.component: connect
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 10c5b6f36ac8c9c4e60e974ad7f3f25a46e9d02e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 9f772b9f79697001bbfaa191ec84bc077de415c8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-data-developer"></a>Entwickler von SQL-Daten
 Verwenden Sie Microsoft SQL-Datenplattform datenorientierte Lösungen über mobile Geräte und Desktops für Webserver, Unternehmensservern und der Cloud zu erstellen.  

@@ -3,10 +3,10 @@ title: "Ansicht die Kapazitätsauslastung (Analytics Platform System)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 373633ca-c5af-4618-88e8-58ca84e8e5f4
 caps.latest.revision: "9"
-ms.openlocfilehash: 63ca3350ec8753f1ca16891ce1d752d872af471b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9bf391d92b29acc057fad1170f878bfb47bccd23
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="view-capacity-utilization"></a>Ansicht die Kapazitätsauslastung
 In diesem Thema erläutert die Ausnutzung der Speicherkapazität in der SQL Server PDW-Anwendung anzeigen.  

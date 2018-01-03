@@ -3,23 +3,23 @@ title: "Dwloader Command-Line-Ladeprogramm für Parallel Data Warehouse"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
-description: "** Dwloader ** ist ein Befehlszeilentool Parallel Data Warehouse (PDW), die Zeilen der Tabelle in einem Massenvorgang in eine vorhandene Tabelle lädt."
+description: "**Dwloader** ist ein Befehlszeilentool Parallel Data Warehouse (PDW), die Zeilen der Tabelle in einem Massenvorgang in eine vorhandene Tabelle lädt."
 ms.date: 11/04/2016
 ms.topic: article
 ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
 caps.latest.revision: "90"
-ms.openlocfilehash: 0335005e2e0590efe28a0cbf7dff6aaacfea331f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4050df3fa69a823ebb36076367c2e8d7344ac1a2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dwloader-command-line-loader"></a>Dwloader Command-Line-Ladeprogramm
 **Dwloader** ist ein Befehlszeilentool Parallel Data Warehouse (PDW), die Zeilen der Tabelle in einem Massenvorgang in eine vorhandene Tabelle lädt. Beim Laden von Zeilen können Sie alle Zeilen bis zum Ende der Tabelle hinzufügen (*append-Modus* oder *Fastappend-Modus*), neue Zeilen angefügt, und aktualisieren Sie vorhandene Zeilen (*Upsert-Modus*), oder löschen Sie alle vorhandene Zeilen vor dem Laden, und klicken Sie dann alle Zeilen in eine leere Tabelle einfügen (*Modus laden*).  
@@ -127,7 +127,7 @@ Zeigt die einfache Hilfeinformationen zu mit dem Loader. Hilfe wird nur angezeig
 **U -** *Login_name*  
 Eine gültige Anmeldung für SQL Server-Authentifizierung mit entsprechenden Berechtigungen zum Ausführen der Last.  
   
-**-P** *Kennwort*  
+**-P** *password*  
 Das Kennwort für eine SQL Server-Authentifizierung *Login_name*.  
   
 **-W**  
@@ -402,7 +402,7 @@ Das Ladeprogramm Zeilen am Ende der vorhandenen Zeilen in der Zieltabelle eingef
 fastappend  
 Das Ladeprogramm Zeilen direkt, ohne eine temporäre Tabelle, bis zum Ende der vorhandenen Zeilen in die Zieltabelle eingefügt. Fastappend erfordert die Multi-Transaktion (– m) Option. Eine staging-Datenbank kann nicht angegeben werden, wenn Fastappend verwenden. Es ist kein Rollback mit Fastappend, was bedeutet, dass die Wiederherstellung aus einer fehlerhaften oder abgebrochenen Last vom Auslastungstest-Prozess verarbeitet werden muss.  
   
-Upsert **-K***Merge_column* [,... *n* ]    
+Upsert **-K***Merge_column* [,... *n* ]  
 Das Ladeprogramm verwendet die SQL Server-Merge-Anweisung, um vorhandene Zeilen aktualisiert, und fügen Sie neue Zeilen.  
   
 Die Option-K gibt die Spalte(n) auf die Zusammenführung basieren. Diese Spalten bilden einen Merge-Schlüssel, der eine eindeutige Zeile darstellen soll. Wenn der Merge-Schlüssel in der Zieltabelle vorhanden ist, wird die Zeile aktualisiert. Wenn der Merge-Schlüssel in der Zieltabelle nicht vorhanden ist, wird die Zeile angefügt.  
@@ -556,13 +556,13 @@ Append-Modus lädt Daten in zwei Phasen. Stufe eins lädt Daten aus der Quelldat
 |Tabellentyp|Multi-Transaktion<br />Modus (-m)|Tabelle ist leer.|Parallelität unterstützt|Protokollierung|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
 |Heap|ja|ja|ja|minimale|  
-|Heap|ja|Nein|ja|minimale|  
-|Heap|Nein|Ja|Nein|minimale|  
-|Heap|Nein|Nein|Nein|minimale|  
-|CL|ja|ja|Nein|minimale|  
-|CL|ja|Nein|ja|Full|  
-|CL|Nein|Ja|Nein|minimale|  
-|CL|Nein|Nein|ja|Full|  
+|Heap|ja|nein|ja|minimale|  
+|Heap|nein|ja|nein|minimale|  
+|Heap|nein|nein|nein|minimale|  
+|CL|ja|ja|nein|minimale|  
+|CL|ja|nein|ja|Vollständig|  
+|CL|nein|ja|nein|minimale|  
+|CL|nein|nein|ja|Vollständig|  
   
 Die oben aufgeführten Tabelle zeigt **Dwloader** mit der Append-Modus in einem Heap oder gruppierten Index (CI) Tabelle, mit oder ohne das Multi-Transaktions-Flag beim Laden und in eine leere Tabelle oder eine nicht leere Tabelle zu laden. Der Sperr- und Protokollierungsverhaltens Verhalten jeder solche Kombination laden wird in der Tabelle angezeigt. Z. B. Laden (2.) Phase mit der Append-Modus in einen gruppierten Index ohne Multi-Transaktionsmodus ausgeführt wird und in eine leere Tabelle haben PDW eine exklusive Sperre für die Tabelle zu erstellen und Protokollierung ist minimal. Dies bedeutet, dass ein Kunde kann nicht gleichzeitig (2.) Phase und Abfrage in eine leere Tabelle geladen werden. Allerdings mit der gleichen Konfiguration in eine nicht leere Tabelle zu laden, PDW keine exklusive Sperre für die Tabelle und zur Parallelität ist möglich. Leider wird vollständige Protokollierung verlangsamen des Prozesses.  
   

@@ -3,7 +3,7 @@ title: Speichern von Metadaten (SybaseToSQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5c94871e7799882f7df9d5017d84fa4ec0e68f14
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 982a481a1476dab39ce91c500d7c60b256bea1ed
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-metadata--sybasetosql"></a>Speichern von Metadaten (SybaseToSQL)
 Die **speichern Metadaten** Dialogfeld aufgefordert, die Metadaten in das SSMA-Projekt zu laden, bevor Sie es speichern. Mit diesem können Sie eine vollständige Projektdatei verfügen, die Sie offline verwenden können, und Senden an andere Personen, z. B. der technische Support in Verbindung.  
   
 Für den Zugriff auf die **speichern Metadaten** (Dialogfeld), speichern Sie das Projekt. SSMA wird angezeigt, wenn keine Metadaten nicht vorhanden ist, die **speichern Metadaten** (Dialogfeld).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Name**  
 Der Name jeder Datenbank im Projekt.  
   

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 40b73ac727b682649f12ac6b70a0256681447622
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c3bc1fc7fcefb034b30c604c358b15ae1db6353e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connection-string-format-and-attributes"></a>Format der Verbindungszeichenfolge und Attribute
 > [!IMPORTANT]  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/20/2017
   
  Die Attribute für die Verbindungszeichenfolge sind wie folgt aus:  
   
-|Attribut|Description|Standardwert|  
+|attribute|Description|Standardwert|  
 |---------------|-----------------|-------------------|  
 |DSN|Der Name der Datenquelle aufgeführt, in der Registerkarte "Treiber" der **ODBC-Datenquellenadministrator** (Dialogfeld).|""|  
 |PWD|Das Kennwort für den Oracle-Server, die Sie zugreifen möchten. Dieser Treiber unterstützt die Einschränkungen, die Oracle auf Kennwörter ablegt.|""|  

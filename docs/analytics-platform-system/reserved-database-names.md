@@ -3,10 +3,10 @@ title: Reservierte Datenbanknamen (SQLServer PDW)
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/13/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 92b0ffb2-0dcb-413f-bc0e-85e9e3e50f92
 caps.latest.revision: "5"
-ms.openlocfilehash: a53ec871818a595121391ca59abdeb62b3315431
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 809bbe11366deb54f5a08d9cf8b404f58ce9383f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reserved-database-names"></a>Reservierte Namen
 Reservierte Datenbankname ist ein Name, der mit einer Benutzerdatenbank in SQL Server PDW zugewiesen werden kann.  

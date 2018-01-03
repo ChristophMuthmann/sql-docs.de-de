@@ -8,7 +8,7 @@ editor:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.devlang: C++
@@ -18,11 +18,11 @@ ms.tgt_pltfrm: NA
 ms.workload: Inactive
 ms.date: 07/13/2017
 ms.author: genemi
-ms.openlocfilehash: 3db232853bdf2106dd0166ac8307f99990371c05
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1a49585e1bf9d0f871a80f8bf386102b5cac8f0a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>Abrufen von numerischen Daten mit SQL\_numerischen\_Struktur
 

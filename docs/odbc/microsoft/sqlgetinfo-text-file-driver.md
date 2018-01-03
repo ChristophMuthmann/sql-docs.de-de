@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9a5fe524a3c95c4f01cea5902612a5e8a8c1b537
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7e8a4b2d890fa257b29049ca4374f475a4b80f57
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetinfo-text-file-driver"></a>SQLGetInfo (Text-Datei-Treiber)
 > [!NOTE]  
@@ -42,9 +42,9 @@ ms.lasthandoff: 11/20/2017
   
 ## <a name="sqldbmsver"></a>SQL_DBMS_VER  
   
-|ISAM|Version|Format der Versionsnummer erneut|  
+|ISAM|Versionsoptionen|Format der Versionsnummer erneut|  
 |----------|-------------|-------------------------------|  
-|Text|1,0|01.00.0000|  
+|Textmodus|1,0|01.00.0000|  
   
 ## <a name="sqlcatalogusage"></a>SQL_CATALOG_USAGE  
  SQL_QU_DML_STATEMENTS &#124; SQL_QU_TABLE_DEFINITION  

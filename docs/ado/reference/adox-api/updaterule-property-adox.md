@@ -3,7 +3,7 @@ title: UpdateRule-Eigenschaft (ADOX) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ded3322bf28cb627ea74573fcef872611918c9b5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e4666ae3b64567bebf14ca498b680bde56d723b6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="updaterule-property-adox"></a>UpdateRule-Eigenschaft (ADOX)
 Gibt an, die Aktion ausgeführt, wenn ein primärer [Schlüssel](../../../ado/reference/adox-api/key-object-adox.md) wird aktualisiert.  

@@ -3,7 +3,7 @@ title: Globale Einstellungen (Editor) (SybaseToSQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 14682687275c0227ebd105a2c134870922db3e91
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d0c1184a8bd170ba8f5d3a191904868b93db9486
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-editor-sybasetosql"></a>Globale Einstellungen (Editor) (SybaseToSQL)
 Verwenden Sie die Seite des Editors für die **globale Einstellungen** Dialogfeld Einstellungen für das Fenster des Code-Editors angeben.  
   
 Zum Zugriff auf die editoreinstellungen in der **Tools** klicken Sie im Menü **globale Einstellungen**, klicken Sie auf **GUI** am unteren Rand des linken Bereich, und klicken Sie dann wählen **Editor**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Anzeigen von Zeilennummern**  
 Wählen Sie zum Anzeigen von Zeilennummern im Code-Editor-Fenster **"true"**.  
   

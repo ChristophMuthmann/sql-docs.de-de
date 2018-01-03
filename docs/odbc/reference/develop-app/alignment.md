@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 506a496cb09e2a874e7d2dc19f06e250715db6f1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 527e8d47d4d352a0fad579d3c12c5ef3768c402b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignment"></a>Ausrichtung
 Die, die in einer ODBC-Anwendung Ausrichtungsprobleme unterscheiden sich in der Regel nicht als bei einer anderen Anwendung. Das heißt, haben die meisten ODBC-Anwendungen nur wenige oder gar keine Probleme mit der Ausrichtung. Die Nachteile für die fehlende Ausrichtung von Adressen hängt von der Hardware und Betriebssystem und als kleinere als eine leichte Leistungseinbuße oder als ein schwerwiegender Laufzeitfehler wie Haupt-sein. Aus diesem Grund sollten ODBC-Anwendungen und portable ODBC-Anwendungen insbesondere darauf achten, dass die Daten ordnungsgemäß auszurichten sein.  

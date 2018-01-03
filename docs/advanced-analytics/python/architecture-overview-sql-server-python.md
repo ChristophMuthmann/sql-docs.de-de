@@ -2,9 +2,11 @@
 title: Architektur | Microsoft Docs
 ms.custom: 
 ms.date: 11/03/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 19f95f1c29970e9469cd1c0d27200bf50ef06be9
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: f9a7802848f5355b3bab8a45cd5d2f55b861bfe9
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="architecture-overview-for-machine-learning-services-with-python"></a>Übersicht über die Architektur für Machine Learning-Dienste mit Python
 
@@ -37,7 +39,7 @@ Das in SQL Server 2016 jetzt eingeführte Extensibility Framework unterstützt d
 
 Ausführliche Beschreibung der Komponenten, die z. B. Python, unterstützen die [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] und PythonLauncher, finden Sie unter [neue Komponenten](../../advanced-analytics/python/new-components-in-sql-server-to-support-python-integration.md).
 
-## <a name="security"></a>Sicherheit
+## <a name="security"></a>Security
 
 Python-Aufgaben werden außerhalb der SQL Server-Prozess, um Sicherheit und bessere Verwaltung zu ermöglichen.
 

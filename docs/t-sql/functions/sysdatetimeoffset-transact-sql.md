@@ -35,11 +35,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 52b1f1c1ceea9564151c03d7f06dd94a9f6ca526
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: fedd2c31623fc9df2afbab7897e3de446f98a960
+ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/16/2017
 ---
 # <a name="sysdatetimeoffset-transact-sql"></a>SYSDATETIMEOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +57,7 @@ SYSDATETIMEOFFSET ( )
 ```  
   
 ## <a name="return-type"></a>Rückgabetyp  
- **DateTimeOffset(7)**  
+ **datetimeoffset(7)**  
   
 ## <a name="remarks"></a>Hinweise  
  [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen können auf verweisen SYSDATETIMEOFFSET überall verweisen, kann eine **"DateTimeOffset"** Ausdruck.  
@@ -77,7 +77,7 @@ SYSDATETIMEOFFSET ( )
 SELECT SYSDATETIME() AS SYSDATETIME  
     ,SYSDATETIMEOFFSET() AS SYSDATETIMEOFFSET  
     ,SYSUTCDATETIME() AS SYSUTCDATETIME  
-    ,CURRENT_TIMESTAMP AS CURRENT_TIMESTAMP  
+    ,CURRENT_TIMESTAMP AS [CURRENT_TIMESTAMP]  
     ,GETDATE() AS GETDATE  
     ,GETUTCDATE() AS GETUTCDATE;  
 ```  

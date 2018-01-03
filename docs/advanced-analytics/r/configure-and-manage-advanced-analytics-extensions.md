@@ -2,11 +2,11 @@
 title: "Erweiterte Konfigurationsoptionen für Machine Learning-Dienste | Microsoft Docs"
 ms.custom: SQL2016_New_Updated
 ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 369c630e249d7775e67508fc9b00e94447182012
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 24f2082572cdb314257826570471548f87b1b60e
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="advanced-configuration-options-for-machine-learning-services"></a>Erweiterte Konfigurationsoptionen für Machine Learning-Dienste
 
@@ -43,7 +43,7 @@ Auf protext vertrauliche Ressourcen auf der [!INCLUDE[ssNoVersion](../../include
 
 + Der Benutzerkontenpool ist mit einer bestimmten Instanz verknüpft. Ein separater Pool von Worker-Konten wird für jede Instanz benötigt auf dem Machine Learning aktiviert wurde. Konten können nicht zwischen Instanzen freigegeben werden.
 
-+ Benutzerkontonamen im Pool weisen das Format „SQLInstanzname*nn*zugeordnet sind. Z. B. bei Verwendung die Standardinstanz für den Machine learning unterstützt der benutzerkontenpool Kontonamen wie MSSQLSERVER01, MSSQLSERVER02 usw..
++ Benutzerkontonamen im Pool weisen das Format „SQLInstanzname*nn*zugeordnet sind. Z. B. bei Verwendung die Standardinstanz für den Machine learning unterstützt der benutzerkontenpool Kontonamen wie MSSQLSERVER01, MSSQLSERVER02 usw.
 
 + Die Größe des Benutzerkontenpools ist statisch und der Standardwert ist 20. Die Anzahl der externen-laufzeitsitzungen, die gleichzeitig gestartet werden kann, wird durch die Größe dieses benutzerkontenpools beschränkt. Zum Ändern dieses Limits, sollte ein Administrator SQL Server-Konfigurations-Manager verwenden.
 
@@ -97,7 +97,7 @@ Sie müssen Administrator auf dem Computer sein, auf dem [!INCLUDE[ssNoVersion](
 
 Die folgende Tabelle enthält die erweiterten Einstellungen für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], mit den zulässigen Werten. 
 
-|**Einstellungsname**|**Typ**|**Description**|
+|**Einstellungsname**|**Typ**|**Beschreibung**|
 |----|----|----|
 |AUFTRAG\_CLEANUP\_ON\_BEENDEN|Integer |Dies ist eine interne Einstellung – ändern Sie diesen Wert nicht. </br></br>Gibt an, ob die für jede externe Common Language Runtime-Sitzung erstellte temporäre Arbeitsordner bereinigt werden soll, nachdem die Sitzung abgeschlossen ist. Diese Einstellung ist beim Debuggen nützlich. </br></br>Unterstützte Werte sind **0** (deaktiviert) oder **1** (aktiviert). </br></br>Der Standard ist 1, Bedeutung Protokolldateien werden beim Beenden entfernt.|
 |TRACE\_EBENE|Integer |Konfiguriert den Ausführlichkeitsgrad der Ablaufverfolgung des MSSQLLAUNCHPAD für Debugzwecke an. Dies wirkt sich auf Ablaufverfolgungsdateien im Pfad, durch die Einstellung LOG_DIRECTORY angegeben. </br></br>Unterstützte Werte sind: **1** (Fehler), **2** (Leistung), **3** (Warnung), **4** (Information). </br></br>Der Standard ist 1, d. h. die Ausgabe von Warnungen.|

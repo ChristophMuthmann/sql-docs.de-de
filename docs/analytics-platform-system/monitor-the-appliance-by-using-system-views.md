@@ -3,10 +3,10 @@ title: "Überwachen Sie die Anwendung mithilfe von Systemsichten (Analytics Plat
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d6e34c16-12ba-4a6f-80a7-391bca5ba534
 caps.latest.revision: "8"
-ms.openlocfilehash: 50b48aa74c7ba83fd4216cfb84ec99ccea2b0712
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 17845f9be4a3b6c40573403d2d314c8802b71015
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="monitor-the-appliance-by-using-system-views"></a>Überwachen Sie die Anwendung mithilfe von Systemsichten
 Dieses Thema listet die Systemsichten, die Sie für die Überwachung von SQL Server PDW verwenden können.  

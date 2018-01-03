@@ -2,12 +2,14 @@
 title: 'Lektion 1: Herunterladen der Beispieldaten | Microsoft Docs'
 ms.custom: 
 ms.date: 07/26/2016
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: SQL Server 2016
 dev_langs:
 - R
@@ -18,11 +20,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 29adfa6c16aa4acd12e846e15bc5f1afd44e5f86
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 9a5c5a5ab4bfe841ec7e06ffd44fef9ca9c15e85
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="lesson-1-download-the-sample-data"></a>Lektion 1: Herunterladen der Beispieldaten
 

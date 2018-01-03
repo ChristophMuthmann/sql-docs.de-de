@@ -3,7 +3,7 @@ title: Speichern von Abfragen (Visual Database Tools) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c12821b95b599bbd48ddb60083bd051e930ecfaf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5ee22a6e0449fbf87b00d65eccb46b896592b7ac
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-queries-visual-database-tools"></a>Speichern von Abfragen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Speichern Sie die Abfrage, wenn Sie später damit arbeiten möchten. Beachten Sie, dass durch das Ausführen der Abfrage keine Änderungen gespeichert werden.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  Die Abfrage wird im Projektmappen-Explorer im Ordner Abfrage des Projekts gespeichert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Erstellen von Abfragen (Visual Database Tools)](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
 [Ausführen von Abfragen (Visual Database Tools)](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
 [Verwerfen von Änderungen an Abfragen (Visual Database Tools)](../../ssms/visual-db-tools/discard-changes-made-to-queries-visual-database-tools.md)  

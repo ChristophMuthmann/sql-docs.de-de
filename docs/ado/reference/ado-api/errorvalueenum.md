@@ -3,7 +3,7 @@ title: ErrorValueEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 330141b69b57eb5eff206706ebd3c3fdf2468734
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 31ced069917c4ba7c3960d0a9dc5fe382c961a2c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 Gibt den Typ des ADO-Laufzeitfehler.  
@@ -40,7 +40,7 @@ Gibt den Typ des ADO-Laufzeitfehler.
 > [!NOTE]
 >  OLE DB-Fehler möglicherweise auf Ihre ADO-Anwendung übergeben werden. Diese können in der Regel identifiziert werden, durch ein Windows-Einrichtungscode von *4*. Beispielsweise 0 x 800***4***.  
   
-|Konstante|Wert|Description|  
+|Konstante|value|Description|  
 |--------------|-----------|-----------------|  
 |**adErrBoundToCommand**|3707-2146824581 0x800A0E7B|Kann nicht geändert werden die **ActiveConnection** Eigenschaft eine **Recordset** Objekt mit einer **Befehl** Objekt als Quelle.|  
 |**adErrCannotComplete**|3732-2146824556 0x800A0E94|Server kann den Vorgang nicht abschließen.|  

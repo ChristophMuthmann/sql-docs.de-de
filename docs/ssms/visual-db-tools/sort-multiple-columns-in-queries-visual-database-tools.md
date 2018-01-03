@@ -3,7 +3,7 @@ title: Sortieren mehrerer Spalten in Abfragen (Visual Database Tools) | Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c683c3359b46dd5732f3ea504198c20e183a7946
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c860279d932e5c9b61ed351ed518734b970105a1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>Sortieren mehrerer Spalten in Abfragen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können die Reihenfolge festlegen, in der die Spalten beim Sortieren von Daten verwendet werden, indem Sie im [Kriterienbereich](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) die Spalte **Sortierreihenfolge** verwenden.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/05/2017
   
     Wiederholen Sie diese Schritte für jede Spalte, nach der die Ergebnisse sortiert werden sollen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Sortieren und Gruppieren von Abfrageergebnissen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
 [Zusammenfassen von Abfrageergebnissen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
   

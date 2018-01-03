@@ -2,14 +2,14 @@
 title: 'Lektion 6: Operationalisieren von R-Modell | Microsoft Docs'
 ms.custom: 
 ms.date: 11/10/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: SQL Server 2016
 dev_langs:
 - R
@@ -20,11 +20,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: dd1ea47b8b687f371e4f4656e5953f72654e153d
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: 3c5ea78ef1b1c3ad9ab842fe36d4bbf0b3791ea2
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="lesson-6-operationalize-the-r-model"></a>Lektion 6: Operationalisieren von R-Modell
 

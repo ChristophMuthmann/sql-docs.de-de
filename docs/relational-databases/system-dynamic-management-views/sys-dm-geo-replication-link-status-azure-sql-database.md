@@ -25,11 +25,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0399e0ef7587a7a7cb8a7ef32419518f1b95d53e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 040c326ca5e4f38a1a6c32ce3ae5fe7ba6ddddea
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>Sys.dm_geo_replication_link_status (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,8 +48,8 @@ ms.lasthandoff: 11/17/2017
 |Rolle (role)|**tinyint**|Geografische Replikation-Rolle, eine von:<br /><br /> 0 = Primary. Die Database_id bezieht sich auf die primäre Datenbank in der Partnerschaft geografische Replikation.<br /><br /> 1 = der sekundären Datenbank.  Die Database_id bezieht sich auf die primäre Datenbank in der Partnerschaft geografische Replikation.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Sekundären Typs, einer der:<br /><br /> 0 = keine direkten Verbindungen zugelassen werden, in der sekundären Datenbank und die Datenbank ist nicht für Lesezugriff verfügbar.<br /><br /> 2 = alle Verbindungen sind zulässig, in der Datenbank in die sekundäre Repl; Ication für schreibgeschützten Zugriff.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|Nein<br /><br /> Alle|  
-|last_commit|**datetimeoffset**|Der Zeitpunkt der letzten Transaktion, die an die Datenbank übergeben. In der sekundären Datenbank abgerufen, wenn das primäre des Replikationslinks ausgefallen ist, weist dies darauf hin bis was zeigen Sie die sekundäre Datenbank aufgeholt hat.|
+|secondary_allow_connections_desc|**nvarchar(256)**|nein<br /><br /> All|  
+|last_commit|**datetimeoffset**|Der Zeitpunkt der letzten Transaktion, die an die Datenbank übergeben. Wenn in der primären Datenbank abgerufen wird, gibt es zuletzt Commit in der primären Datenbank an. Wenn in der sekundären Datenbank abgerufen wird, gibt es zuletzt Commit in der sekundären Datenbank an. In der sekundären Datenbank abgerufen, wenn das primäre des Replikationslinks ausgefallen ist, weist dies darauf hin bis was zeigen Sie die sekundäre Datenbank aufgeholt hat.|
   
 > [!NOTE]  
 >  Wenn die replikationsbeziehung beendet wird, durch das Entfernen der sekundären Datenbank (im Abschnitt 4.2.), die Zeile für diese Datenbank in der **sys.dm_geo_replication_link_status** -Sicht nicht mehr angezeigt.  

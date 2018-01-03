@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 38917d4e3a7cbd53be9a638d0d4dc3f5b2c2b179
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0a57a4fca26e40a5c83d79f4a952e1c9ccbfa1cc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Microsoft ODBC-Datenbanktreiber für Desktop
 ODBC ist eine API, die mit der Datenbank Zugriff Sprache Structured Query Language (SQL) verwendet. Sie können eine Vielzahl von Datenbank-Managementsystemen (DBMS) mit dem gleichen ODBC-Quellcode zugreifen, die direkt in Quellcode einer Anwendung integriert wird. Mit Microsoft ODBC-Desktop-Datenbanktreiber kann ein Benutzer einer ODBC-fähigen Anwendung zu öffnen, Abfrage, und Aktualisieren einer desktop-Datenbank über die ODBC-Schnittstelle.  
@@ -43,7 +43,7 @@ ODBC ist eine API, die mit der Datenbank Zugriff Sprache Structured Query Langua
   
 -   DBASE  
   
--   Text  
+-   Textmodus  
   
  Finden Sie unter [Visual FoxPro-ODBC-Treiber](../../odbc/microsoft/visual-foxpro-odbc-driver.md) für eine ausführliche Dokumentation zu den ODBC-Treiber für Microsoft Visual FoxPro®.  
   

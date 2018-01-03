@@ -3,10 +3,10 @@ title: "Konfigurieren Sie InfiniBand-Netzwerkadapter für das Analytics Platform
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 61f3c51a-4411-4fe8-8b03-c8e1ba279646
 caps.latest.revision: "15"
-ms.openlocfilehash: 007e595f52ab891438c862afa6d94d68644b091f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 052dfcb32de7fb84acc0ce97c55775944a1d0dc1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>InfiniBand-Netzwerkadapter für Analytics Platform System konfigurieren
 Beschreibt, wie die InfiniBand-Netzwerkadapter auf einem nicht-Appliance Clientserver für die Verbindung mit dem Steuerungsknoten auf SQL Server Parallel Data Warehouse (PDW) konfigurieren. Verwenden Sie diese Anweisungen für grundlegende Konnektivität und hohe Verfügbarkeit, sodass laden, Sicherung und andere Prozesse werden automatisch mit dem aktiven InfiniBand-Netzwerk verbinden.  
@@ -58,7 +58,7 @@ Sie benötigen ein APS Appliance-Domänenkonto für die Anmeldung der AD01-Knote
   
 Sie benötigen ein Windowskonto auf dem Clientserver, der Berechtigung zur Konfiguration der Netzwerkadapter verfügt.  
   
-### <a name="prerequisites"></a>Erforderliche Komponenten  
+### <a name="prerequisites"></a>Voraussetzungen  
 Diese Anweisungen gehen davon aus, die Clientserver bereits Verkabeln und der Appliance InfiniBand-Netzwerk verbunden ist. Racks und Verkabelung Anweisungen finden Sie in [erwerben und Konfigurieren eines Servers geladen](acquire-and-configure-loading-server.md).  
   
 ### <a name="general-remarks"></a>Allgemeine Hinweise  

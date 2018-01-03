@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b1d3afd8cdc7f4d482c4bc5f23c775e6c67cdd46
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3a461a0845961e2c7019c1ece680b35e05ebcaf3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="default-subkey"></a>Standard-Unterschlüssel
 Die Registrierung möglicherweise eine Standard-Datenquelle mit den Standard-Unterschlüssel angeben. Dieser Unterschlüssel ist ein Sonderfall des Data Source-Spezifikation Unterschlüssel und die gleichen Werte wie alle anderen Data Source-Spezifikation Unterschlüssel verfügt. Der einzige Unterschied ist, dass er nicht als einen Wert unter dem ODBC-Datenquellen-Unterschlüssel aufgeführt ist.

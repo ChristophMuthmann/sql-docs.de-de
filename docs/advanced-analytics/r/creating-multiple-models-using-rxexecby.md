@@ -2,9 +2,11 @@
 title: Erstellen mehrere Modelle mit RxExecBy | Microsoft Docs
 ms.custom: 
 ms.date: 04/18/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: abde4e0ab342f126b73321b66e93fa7b31433222
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 1afae193d01f8a4a8b3a06d0022d436d14b0dd0b
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="creating-multiple-models-using-rxexecby"></a>Erstellen mehrere Modelle mit rxExecBy
 

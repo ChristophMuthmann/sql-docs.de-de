@@ -5,7 +5,7 @@ ms.date: 10/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
-ms.component: dma
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: sql-dma
@@ -19,11 +19,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05c94bd5803520aa5424cca837784f8f67382d16
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 07d72eb6c4d40c3e61f4292616f9eda99d6d4742
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Neuigkeiten im Daten-Migrations-Assistent
 
@@ -85,7 +85,7 @@ Die v1. 0-Version von DMA ist die erste Version, und bietet für:
 
 - Ermittlung von neuen Funktionen in der Ziel-SQL Server-Plattform, die ein Upgrade die Datenbank profitieren kann. Alle Ergebnisse werden als Funktion Empfehlungen beschrieben, und sie werden in der folgenden Bereiche kategorisiert:
     - Leistung
-    - Sicherheit
+    - Security
     - Speicherung
 
 -   Moderne Benutzeroberfläche, um Bewertungen ausführen.

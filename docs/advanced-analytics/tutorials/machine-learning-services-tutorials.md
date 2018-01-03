@@ -1,30 +1,33 @@
 ---
-title: SQL Server-Machine Learning-Lernprogramme | Microsoft Docs
-ms.custom: SQL2016_New_Updated
-ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+title: SQL Server-Machine Learning-Services-Lernprogramme | Microsoft Docs
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: Python
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
+dev_langs:
+- Python
+- R
 ms.assetid: 5ccc75f6-6703-47d9-b879-9a740569b45e
 caps.latest.revision: "32"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: c0547d809e73e13b7bedcc8ac960b00c7c8a9706
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b8c384e5d8e13ed0961ad82f95af17c0352389be
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="sql-server-machine-learning-tutorials"></a>SQL Server Machine Learning-Lernprogramme
+# <a name="tutorials-for-sql-server-machine-learning-services"></a>Lernprogramme für SQL Server-Machine Learning-Services
 
 Dieser Artikel bietet eine umfassende Liste der Lernprogramme, Demos und Beispielanwendungen, die Machine Learning-Funktionen in SQL Server 2016 oder SQL Server-2017 verwenden. Beginnen Sie hier, um zu erfahren, zum Ausführen von R oder Python von T-SQL, wie remote und lokalen rechenkontexten verwenden und den R und Python-Code für eine SQL-produktionsumgebung zu optimieren.
 
@@ -44,7 +47,7 @@ Weitere Informationen zu Anforderungen und zu ersten Schritten finden Sie unter 
 
 + [Lösungen](#bkmk_solutions) 
 
-    Vorlagen für das Microsoft Data Science-Team können angepasst werden, um Machine Learning lässt sich schnell und Ihnen den Einstieg. Jede Lösung wird auf einen bestimmten Task oder Branche Problem zugeschnitten; Darüber hinaus sind die meisten Lösungen zum Ausführen von in SQL Server oder in eine Cloudumgebung wie Azure Machine Learning ausgelegt. Mithilfe von Microsoft R Server "oder" Machine Learning-Server können andere Lösungen unter Linux oder Spark oder im Hadoop-Cluster ausführen.
+    Vorlagen für das Microsoft Data Science-Team können angepasst werden, um Machine Learning lässt sich schnell und Ihnen den Einstieg. Jede Lösung wird auf einem bestimmten Task oder Branche Problem zugeschnitten. Die meisten Lösungen dienen als in SQL Server oder in eine Cloudumgebung wie Azure Machine Learning ausgeführt werden. Mithilfe von Microsoft R Server "oder" Machine Learning-Server können andere Lösungen unter Linux oder Spark oder im Hadoop-Cluster ausführen.
 
 ### <a name ="bkmk_samples"></a>SQL Server-Produktbeispiele
 
@@ -58,7 +61,7 @@ Markieren Sie diese Beispiele und Demos, die von der SQL Server und R-Server-Ent
 
 + [NEU! Ausführen von Kunden über Python- und SQL Server-clustering](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/)
 
-    Erfahren Sie, wie die Kmeans-Algorithmus verwenden, um nicht überwachten Gruppieren von Kunden ausführen. In diesem Beispiel wird die Python-Sprachdatenbank verwendet. 
+    Erfahren Sie, wie die Kmeans-Algorithmus verwenden, um nicht überwachten Gruppieren von Kunden ausführen. In diesem Beispiel wird die Python-Sprachdatenbank verwendet.
     
     Gilt für: SQLServer 2017
 
@@ -73,6 +76,10 @@ Markieren Sie diese Beispiele und Demos, die von der SQL Server und R-Server-Ent
    Erstellen der Ski Vermietung Analyse-Anwendung mithilfe von Python, zukünftige Bedarf planen. Dieses Beispiel verwendet die neue Python-Clientbibliothek **Revoscalepy**, um ein lineares Regressionsmodell zu erstellen.
    
    Gilt für: SQLServer 2017
+
++ [Verwenden Sie die Tableau mit SQL Server-Machine Learning-Services](https://blogs.msdn.microsoft.com/mlserver/2017/12/14/how-to-use-tableau-with-sql-server-machine-learning-services-with-r-and-python/)
+
+    Analysieren von soziale Medien und Tableau Diagramme erstellen, verwenden SQL Server und r angezeigt.
 
 ### <a name="bkmk_solutions"></a>Projektmappenvorlagen
 
@@ -111,7 +118,7 @@ Mit SQL Server-2017 können Sie R oder Python oder beides installieren. Andernfa
 Nach dem Ausführen von SQL Server-Setup, vergessen Sie nicht folgenden wichtigen Schritte aus:
 
 1. Die externen Skript Ausführung-Funktion aktivieren, indem ausgeführt `sp_configure 'external scripts enabled', 1`. Befolgen Sie die Anweisungen neu konfigurieren und starten Sie SQL Server neu.
-2. Stellen Sie sicher, dass das Launchpad-Dienst ausgeführt wird, und der Arbeitsthread es verwendet Konten eine mit der SQL Server-Instanz Verbindung kann.
+2. Stellen Sie sicher, dass der Launchpad-Dienst ausgeführt wird und das Launchpad-Worker-Konten mit der SQL Server-Instanz eine Verbindung herstellen können.
 3. Überprüfen Sie die Berechtigungen für den Benutzer möglich, die r oder Python-Skripts ausführen müssen. Unabhängig davon, ob Sie SQL-Anmeldungen oder Windows-Benutzerkonten verwenden wird der Benutzer muss über die Berechtigung zum Ausführen von R oder Python-Skripts und muss in der Lage, mit der Instanz herstellen. Je nach im Lernprogramm der Benutzer auch benötigen die Berechtigung zum Schreiben von Daten, Erstellen von Datenbankobjekten oder führen Sie eine Bulk Import von Daten.
 
 Einzelheiten finden Sie in diesem Artikel finden Sie einige allgemeine Setup- und Konfigurationsprobleme: [Problembehandlung Machine Learning-Dienste](../machine-learning-troubleshooting-faq.md)

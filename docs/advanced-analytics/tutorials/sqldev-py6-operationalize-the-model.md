@@ -2,12 +2,14 @@
 title: 'Schritt 6: Operationalisieren die Python-Modell mithilfe von SQL Server | Microsoft Docs'
 ms.custom: 
 ms.date: 10/17/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
-ms.technology: python-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: SQL Server 2017
 dev_langs:
 - Python
@@ -17,11 +19,11 @@ caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: da38ad56ff82d836fa34e42d3505d3a588344cfa
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 56a0ae3bab6e8a60221f34c954adc661d2d0ddca
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="step-6-operationalize-the-python-model-using-sql-server"></a>Schritt 6: Operationalisieren Sie die Python-Modell mithilfe von SQL Server
 

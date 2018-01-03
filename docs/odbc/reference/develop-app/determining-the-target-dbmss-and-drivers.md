@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 76daa1e2753c91df7a016d4801ddea48bc285eb5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 515b89b4b99d73584cf1f88783296e49f6ab298d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>Ermitteln der Ziel-DBMS und Treiber
 Ist die nächste Frage zu berücksichtigen, was sind das Ziel-DBMS für die Anwendung, und welche Treiber zur Verfügung stehen unterstützen, die diese DBMS? Da allgemeine Anwendungen häufig sehr interoperabel sein, ist die Frage des Ziel-DBMS-Systeme am besten geeignete benutzerdefinierte und vertikale Anwendungen. Allerdings gilt die Frage der Zieltreiber für alle Anwendungen, denn Treiber Geschwindigkeit, Qualität, Unterstützung von Funktionen und Verfügbarkeit variieren. Auch wenn Treiber sind mit der Anwendung verteilt werden, müssen die Kosten und die Verfügbarkeit von lizenzierungsplänen berücksichtigt werden.  

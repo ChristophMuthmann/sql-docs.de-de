@@ -3,7 +3,7 @@ title: SeekEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 97a2a99c7310022e86e574a0f4b04227cee95726
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e6f60ed06b2f23bceec62822f43b77f5c10c3ce1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="seekenum"></a>SeekEnum
 Gibt den Typ des [Seek](../../../ado/reference/ado-api/seek-method.md) ausgeführt.  
   
-|Konstante|Wert|Description|  
+|Konstante|value|Description|  
 |--------------|-----------|-----------------|  
 |**Nordwind.mdb**|1|Sucht den ersten Schlüssel gleich *KeyValues*.|  
 |**adSeekLastEQ**|2|Sucht das letzte Schlüssel gleich *KeyValues*.|  

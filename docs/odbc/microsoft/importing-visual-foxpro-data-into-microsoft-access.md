@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6835c7ba9b4e1d2034b20e2e9945888f74bba60c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4fd7585d60928bdae7f7be94c78c07ea35117cc0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="importing-visual-foxpro-data-into-microsoft-access"></a>Visual FoxPro-Daten importieren in Microsoft Access
 Sie können in einer Visual FoxPro-Datenbank in eine Microsoft Access-Datenbank mithilfe der Importoption gespeicherte Daten importieren.  

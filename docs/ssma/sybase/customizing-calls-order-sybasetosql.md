@@ -3,7 +3,7 @@ title: Anpassen der Reihenfolge der Aufrufe (SybaseToSQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e181c4339c663b2455c68151937013b5c587f2b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fcc1a0055eabcde9b4718e537e2ee37956f116f9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customizing-calls-order-sybasetosql"></a>Anpassen der Reihenfolge der Aufrufe (SybaseToSQL)
 In diesem Schritt wählen Sie die Reihenfolge, in der die Objekte so testen Sie aufgerufen werden.  

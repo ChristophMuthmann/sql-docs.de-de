@@ -3,10 +3,10 @@ title: "Überwachen Sie das Gerät mithilfe der Verwaltungskonsole (Analytics Pl
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 294ba6ac-b1ff-46ea-ba32-d8b32cb4cdc2
 caps.latest.revision: "26"
-ms.openlocfilehash: c9a2d9e7191a1f362dfc998254f69a2a71e32aac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: db27003d4e1efd54a179551f585fb23ce9c0ed82
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="monitor-the-appliance-by-using-the-admin-console"></a>Überwachen Sie die Anwendung mithilfe der Verwaltungskonsole
 Die Verwaltungskonsole ist eine SQL Server PDW-Webanwendung, die die Appliance Zustand, Integrität und Leistung Informationen bereitstellt. Benutzer eine Verbindung herstellen, um die Verwaltungskonsole über Internet Explorer.  

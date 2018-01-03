@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -35,11 +35,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1592db374d02534121ed75cfe8e07429f1aacac
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c2fcdf0a9a7af2f34a2a0d87495d00ddf3373d3a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Unterstützung für Regeln, Trigger, Standardwerte und gespeicherte Prozeduren (Visual FoxPro-ODBC-Treiber)
 Sie können keine Visual FoxPro-Regeln, Trigger, Standardwerte oder gespeicherte Prozeduren mithilfe der Visual FoxPro-ODBC-Treiber erstellen. Allerdings kann die Anwendung interagiert vorhandenen Regeln, Trigger, Standardwerte oder gespeicherte Prozeduren, wie eingefügt, aktualisiert oder Visual FoxPro-Daten in einer Datenbank gespeichert löscht.  
@@ -86,7 +86,7 @@ Sie können keine Visual FoxPro-Regeln, Trigger, Standardwerte oder gespeicherte
 |BITTEST ()-Funktion|BITXOR-Funktion||  
 |BOF ()-Funktion|BITAND-Funktion||  
   
-## <a name="c"></a>C  
+## <a name="c"></a>c  
   
 ||||  
 |-|-|-|  

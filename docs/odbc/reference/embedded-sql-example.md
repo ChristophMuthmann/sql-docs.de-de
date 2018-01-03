@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ae3b2c60025f82d3153166a887fea12453443450
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 13890248b3e724f2a41db5a3425c62dc7635b63a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="embedded-sql-example"></a>Embedded SQL-Beispiel
 Der folgende Code ist eine einfache embedded SQL, geschriebenes Programm in c Das Programm zeigt viele, aber nicht in allen eingebetteten SQL-Techniken. Das Programm fordert den Benutzer für eine Auftragsnummer ein, die Kundennummer, Vertriebsmitarbeiter und Status der Bestellung abgerufen und die abgerufene Informationen auf dem Bildschirm angezeigt.  

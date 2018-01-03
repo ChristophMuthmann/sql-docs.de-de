@@ -1,7 +1,7 @@
 ---
 title: Globale Einstellungen (Ausgabefenster) (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,18 +17,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.workload: Inactive
-ms.openlocfilehash: 49ff7e15505a51b6f7e3ba2b382b35894e64e577
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a72a4df25b21c8fb3a7f2286ee2cb4e412cadeca
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-output-window--oracletosql"></a>Globale Einstellungen (Ausgabefenster) (OracleToSQL)
 Verwenden der **globale Einstellungen** Dialogfeld Einstellungen für SSMA angeben.  
   
 Das Fenster "Ausgabe" Einstellungen für den Zugriff auf die **Tools** klicken Sie im Menü **globale Einstellungen**, klicken Sie auf **GUI** am unteren Rand des linken Bereich, und klicken Sie dann wählen **Fenster "Ausgabe"**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Bereich Fehlerliste anzeigen**  
 Wählen Sie **"true"** gegebenenfalls SSMA Bereich Fehlerliste angezeigt werden, wenn Nachrichten vorhanden sind.  
   

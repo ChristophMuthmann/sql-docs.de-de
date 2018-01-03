@@ -2,9 +2,11 @@
 title: "Erste Schritte mit Microsoft R Server (Eigenständig) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod: r-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,11 +15,11 @@ caps.latest.revision: "21"
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: a0932e10c72166bee4b674ea5df6e80b032e7964
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5ff9e6bc9b6cebb4602683180737aa78e7deb6e3
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="getting-started-with-machine-learning-server-standalone"></a>Erste Schritte mit Machine Learning-Server (eigenständig)
  

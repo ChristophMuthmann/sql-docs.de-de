@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bde6eb0d06e99a9a7e08aeb4d4179bcbb9a5bff2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6a4f91eb2e4e255007fef3f93504872f791499e7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="prepared-execution-odbc"></a>Die vorbereitete Ausführung ODBC
 Die vorbereitete Ausführung ist eine effiziente Möglichkeit, eine Anweisung mehrmals auszuführen. Die Anweisung zuerst kompiliert wird, oder *vorbereitet,* in eines Plans. Der Access-Plan wird dann ausgeführt wird, eine oder mehrere Male zu einem späteren Zeitpunkt. Weitere Informationen zu Access Pläne, finden Sie unter [eine SQL-Anweisung verarbeiten](../../../odbc/reference/processing-a-sql-statement.md).  

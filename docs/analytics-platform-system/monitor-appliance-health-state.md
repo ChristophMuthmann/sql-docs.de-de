@@ -3,10 +3,10 @@ title: "Integritätsstatus des Monitors Appliance (Analytics Platform System)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 91132e3c-3137-4670-adaa-8a7b234fb8d2
 caps.latest.revision: "12"
-ms.openlocfilehash: dad3355061bafcbbfa3a34b21d2043b0411129ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d83c3d35c4cf65ebf714b44bc9db7db36b11f818
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="monitor-appliance-health-state"></a>Integritätsstatus des Monitors Appliance
 In diesem Thema erläutert, wie den Status einer SQL Server PDW Appliance mithilfe der Verwaltungskonsole oder durch direkte Abfrage der SQL Server PDW dynamischen Management-Ansichten überwachen.  

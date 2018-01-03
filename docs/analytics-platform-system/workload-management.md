@@ -3,10 +3,10 @@ title: Arbeitsauslastungsverwaltung (SQLServer PDW)
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/12/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 69063b1a-a8f3-453a-83ab-afbe7eb4f463
 caps.latest.revision: "11"
-ms.openlocfilehash: 596fba5031e3183a9278e20384d51852cea0f2b8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 738818a49491fbf8f8df491cac2f10ebdeedf3bf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="workload-management"></a>Arbeitsauslastungsverwaltung
 Verwaltungsfunktionen für SQL Server-PDW-arbeitsauslastung können Benutzer und Administratoren Zuweisen von Anforderungen an die Konfiguration des Speichers und Parallelität vorab festgelegt. Verwenden Sie arbeitsauslastungsverwaltung zum Verbessern der Leistung Ihrer arbeitsauslastung entweder consistent "und" gemischte, indem Anforderungen an die entsprechenden Ressourcen haben, ohne alle Anforderungen ewig eingabeereignisübermittlung ermöglicht.  
@@ -136,7 +136,7 @@ SQL-Anweisungen und Vorgänge, die Ressourcenklassen unterliegen:
   
 -   UPDATE  
   
--   DELETE  
+-   Delete  
   
 -   RESTORE DATABASE, wenn in einem eingebaut mit Weitere Serverknoten wiederherstellen.  
   

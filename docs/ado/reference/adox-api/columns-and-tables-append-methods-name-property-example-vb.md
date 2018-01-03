@@ -3,7 +3,7 @@ title: Spalten und Tabellen Append-Methode, benennen Sie die Beispiel-Eigenschaf
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 452afe514483f548325fcf29ece750ff0de42d3a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 637f3aa8ebe0fe809b298b3c6d99ddfbd013ef6f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vb"></a>Append-Methode, Beispiel für Name-Eigenschaft (VB) Spalten und Tabellen
 Der folgende Code veranschaulicht, wie eine neue Tabelle erstellt wird.  

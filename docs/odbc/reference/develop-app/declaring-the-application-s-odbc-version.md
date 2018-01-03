@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,18 +24,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a58aebc6517268c054a4d2ac92066eb0d0469d2c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2c021fb123e0a8cf861fa91fe78d3882ba16111e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>Deklarieren die Anwendung &#39; s ODBC-Version
 Bevor eine Verbindung mit eine Anwendung belegt wird, müssen sie die SQL_ATTR_ODBC_VERSION Umgebung-Attribut festgelegt. Dieses Attribut gibt an, dass die Anwendung die ODBC 2. folgt. *x* oder ODBC-3. *X* Spezifikation bei Verwendung der folgenden Elemente:  
   
--   **SQLSTATEs**. Viele SQLSTATE-Werten unterscheiden sich in ODBC 2.. *x* und ODBC-3. *X*.  
+-   **SQLSTATEs**. Viele SQLSTATE-Werten unterscheiden sich in ODBC 2. *x* und ODBC-3. *X*.  
   
--   **Date, Time und Timestamp-Typ-IDs**. Die folgende Tabelle zeigt die Typ-IDs für Date, Time und Timestamp-Datentyp in ODBC 2.. *x* und ODBC-3. *X*.  
+-   **Date, Time und Timestamp-Typ-IDs**. Die folgende Tabelle zeigt die Typ-IDs für Date, Time und Timestamp-Datentyp in ODBC 2. *x* und ODBC-3. *X*.  
   
     |ODBC-2. *x*|ODBC-3. *x*|  
     |----------------|----------------|  
@@ -53,4 +53,4 @@ Bevor eine Verbindung mit eine Anwendung belegt wird, müssen sie die SQL_ATTR_O
  Die ODBC 3.*.x* Treiber-Manager und ODBC 3.*.x* Treiber prüfen die Version des ODBC-Spezifikation, die in den eine Anwendung geschrieben wird, und entsprechend reagieren. Beispielsweise, wenn die Anwendung die ODBC 2. beachtet. *x* -Spezifikation und ruft **SQLExecute** vor dem Aufruf **SQLPrepare**, die ODBC 3.*.x* -Treiber-Manager gibt SQLSTATE S1010 () Fehler bei Funktionssequenz). Wenn die Anwendung die ODBC 3. folgt*.x* -Spezifikation, die der Treiber-Manager gibt SQLSTATE HY010 (Sequenzfehler-Funktion). Weitere Informationen finden Sie unter [Abwärtskompatibilität und zur Einhaltung von Standards](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
   
 > [!IMPORTANT]  
->  Anwendungen, die die ODBC 3. befolgen. *x* Spezifikation muss bedingten Code verwenden, um zu vermeiden, mithilfe von Funktionen noch nicht mit ODBC 3.. *X* beim Arbeiten mit ODBC 2.. *X* Treiber. ODBC-2. *x* Treiber unterstützen keine Funktionen, die noch nicht mit ODBC 3.. *X* nur verwendet werden, weil die Anwendung wird deklariert, dass er die ODBC 3. folgt. *X* Spezifikation. Darüber hinaus ODBC 3. *x* Treiber zur Unterstützung von Funktionen, die noch nicht mit ODBC 3. nicht eingestellt werden. *X* nur verwendet werden, weil die Anwendung wird deklariert, dass er die ODBC 2. folgt. *X* Spezifikation.
+>  Anwendungen, die die ODBC 3. befolgen. *x* Spezifikation muss bedingten Code verwenden, um zu vermeiden, mithilfe von Funktionen noch nicht mit ODBC 3. *X* beim Arbeiten mit ODBC 2. *X* Treiber. ODBC-2. *x* Treiber unterstützen keine Funktionen, die noch nicht mit ODBC 3. *X* nur verwendet werden, weil die Anwendung wird deklariert, dass er die ODBC 3. folgt. *X* Spezifikation. Darüber hinaus ODBC 3. *x* Treiber zur Unterstützung von Funktionen, die noch nicht mit ODBC 3. nicht eingestellt werden. *X* nur verwendet werden, weil die Anwendung wird deklariert, dass er die ODBC 2. folgt. *X* Spezifikation.

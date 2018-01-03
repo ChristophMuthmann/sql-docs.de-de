@@ -3,7 +3,7 @@ title: Arbeiten mit Datenbankdiagrammen (Visual Database Tools) | Microsoft-Doku
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ab3f8d06ac812b63c86e763ab1f9dd077c35f4fb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 19146185e1f01352f7be33fed099163dfa36667c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="work-with-database-diagrams-visual-database-tools"></a>Arbeiten mit Datenbankdiagrammen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können mit dem Datenbank-Designer ein visuelles Datenbankdiagramm erstellen. In den folgenden Themen werden die Grundlagen für die Bearbeitung von Datenbankdiagrammen mit dem Datenbank-Designer behandelt.  

@@ -1,106 +1,100 @@
 ---
-title: R-Modelle erstellen | Microsoft Docs
+title: Erstellen Sie R-Modelle (SQL und R deep Dive) | Microsoft Docs
 ms.custom: 
-ms.date: 05/18/2017
-ms.prod: sql-non-specified
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: a195d5e2-72e2-4dd6-bf43-947312e4a52a
 caps.latest.revision: "14"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 4b5bb3c7947b3cf1cfaeea86156b3fbad9ce3535
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: cbd11a6c7bd27341e5a2b62e85e7c29cec926e4d
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="create-r-models"></a>Erstellen Sie R-Modelle
+# <a name="create-r-models-sql-and-r-deep-dive"></a>Erstellen Sie R-Modelle (SQL und R deep Dive)
+
+Dieser Artikel ist Teil des Lernprogramms Data Science Deep Dive zur Verwendung von ["revoscaler"](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
 
 Sie haben die Trainingsdaten nun erweitert und können zum Analysieren der Daten die lineare Regression verwenden. Lineare Modelle sind ein wichtiges Tool in der Welt von Vorhersageanalysen. Das **RevoScaleR** -Paket in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] enthält hierfür einen leistungsfähigen, skalierbaren Algorithmus.
 
 ## <a name="create-a-linear-regression-model"></a>Erstellen eines linearen Regressionsmodells
 
-Sie erstellen ein einfaches lineares Modell, das den Kreditkartensaldo eines Kunden mithilfe der unabhängigen Variablen in den Spalten *gender* und *creditLine* schätzt.
+In diesem Schritt erstellen Sie ein einfaches Lineares Modell, das für die Kunden, verwenden als unabhängige Variablen die Werte in der Kreditkartensaldo schätzt die *Geschlecht* und *CreditLine* Spalten.
   
-Zu diesem Zweck verwenden Sie die neue Funktion **rxLinMod** , die Remotecomputekontexte unterstützt.
+Verwenden Sie hierzu die [RxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) -Funktion, die remote rechenkontexte unterstützt.
   
-1. Erstellen Sie eine R-Variable, um das fertige Modell zu speichern, und rufen Sie die Funktion *rxLinMod* auf, um eine geeignete Formel zu übergeben.
+1. Erstellen Sie eine R-Variable, und speichern Sie das abgeschlossene Modell, und rufen **RxLinMod**, übergeben eine entsprechende Formel.
   
     ```R
     linModObj <- rxLinMod(balance ~ gender + creditLine,  data = sqlFraudDS)
     ```
   
-2. Um eine Zusammenfassung der Ergebnisse anzuzeigen, rufen Sie einfach die R-Standardfunktion *summary* für das Modellobjekt auf.
+2. Rufen Sie zum Anzeigen einer Zusammenfassung der Ergebnisse der standardmäßige R `summary` Funktion in der Model-Objekts.
   
      ```R
      summary(linModObj)
      ```
 
-Es mag Ihnen seltsam erscheinen, dass eine einfache R-Funktion wie **summary** hier funktioniert, da Sie im vorherigen Schritt den Server als Computekontext festgelegt haben. Auch wenn die Funktion **rxLinMod** den Remotecomputekontext zum Erstellen des Modells verwendet, gibt sie auch ein Objekt zurück, das das Modell für Ihre lokale Arbeitsstation enthält und es im freigegebenen Verzeichnis speichert.
+Sie glauben sie spezielle, der eine einfache R-Funktion wie `summary` würde hier funktionieren, da im vorherigen Schritt des computekontexts mit dem Server festlegen. Auch wenn die Funktion **rxLinMod** den Remotecomputekontext zum Erstellen des Modells verwendet, gibt sie auch ein Objekt zurück, das das Modell für Ihre lokale Arbeitsstation enthält und es im freigegebenen Verzeichnis speichert.
 
 Daher können Sie R-Standardbefehle für das Modell ausführen, als ob es mithilfe des „lokalen“ Kontexts erstellt wurde.
 
 **Ergebnisse**
 
-*Linear Regression Results for: balance ~ gender + creditLineData: sqlFraudDS (RxSqlServerData Data Source)*
+```
+Linear Regression Results for: balance ~ gender + creditLineData: sqlFraudDS (RxSqlServerData Data Source)
+Dependent variable(s): balance
+Total independent variables: 4 (Including number dropped: 1)
+Number of valid observations: 10000
+Number of missing observations: 0
+Coefficients: (1 not defined because of singularities)
 
-*Dependent variable(s): balance*
+Estimate Std. Error t value Pr(>|t|) (Intercept)
+3253.575 71.194 45.700 2.22e-16
+gender=Male -88.813 78.360 -1.133 0.257
+gender=Female Dropped Dropped Dropped Dropped
+creditLine 95.379 3.862 24.694 2.22e-16
+Signif. codes: 0  0.001  0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-*Total independent variables: 4 (Including number dropped: 1)*
-
-*Number of valid observations: 10000*
-
-*Number of missing observations: 0*
-
-*Coefficients: (1 not defined because of singularities)*
-
-*Estimate Std. Fehlerwert t Pr (> | t |) (Intercept)*
-
-*3253.575 71.194 45.700 2.22e-16*
-
-*gender=Male -88.813 78.360 -1.133 0.257*
-
-*gender=Female Dropped Dropped Dropped Dropped*
-
-*creditLine 95.379 3.862 24.694 2.22e-16*
-
-*Signif. codes: 0  0.001  0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1*
-
-*Residual standard error: 3812 on 9997 degrees of freedom*
-
-*Multiple R-squared: 0.05765*
-
-*Adjusted R-squared: 0.05746*
-
-*F-statistic: 305.8 on 2 and 9997 DF, p-value: < 2.2e-16*
-
-*Condition number: 1.0184*
+Residual standard error: 3812 on 9997 degrees of freedom
+Multiple R-squared: 0.05765
+Adjusted R-squared: 0.05746
+F-statistic: 305.8 on 2 and 9997 DF, p-value: < 2.2e-16
+Condition number: 1.0184
+```
 
 ## <a name="create-a-logistic-regression-model"></a>Erstellen eines logistischen Regressionsmodells
 
-Nun erstellen Sie ein logistisches Regressionsmodell, das angibt, ob ein bestimmter Kunde ein Betrugs-Risiko ist. Verwenden Sie die Funktion *rxLogit* (enthalten im **RevoScaleR** -Paket), die die Anpassung der logistischen Regressionsmodelle in Remotecomputekontexten unterstützt.
+Als Nächstes erstellen Sie ein Logistisches Regressionsmodell, das angibt, ob ein bestimmter Kunde ein Betrug Risiko ist. Verwenden Sie die **"revoscaler"** [RxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) -Funktion, welche unterstützt die Anpassung der Modelle zur logistischen Regression in Remotebüros remotecomputekontexten.
 
 1.  Lassen Sie den Computekontext wie er ist. Sie werden weiterhin auch die gleiche Datenquelle verwenden.
 
 2.  Rufen Sie die Funktion **rxLogit** auf, und übergeben Sie die Formel, die zum Definieren des Modells erforderlich ist.
 
     ```R
-    logitObj <- rxLogit(fraudRisk ~ state + gender + cardholder + balance +      numTrans + numIntlTrans + creditLine, data = sqlFraudDS,      dropFirst = TRUE)
+    logitObj <- rxLogit(fraudRisk ~ state + gender + cardholder + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS, dropFirst = TRUE)
     ```
   
     Da es ein großes Modell mit 60 unabhängigen Variablen ist, einschließlich der drei Dummy-Variablen, die gelöscht werden, müssen Sie möglicherweise ein paar Minuten warten, bis der Computekontext das Objekt zurückgibt.
     
     Der Grund für die Größe des Modells ist, dass in R und im **RevoScaleR** -Paket alle Ebenen einer kategorischen Faktor-Variable automatisch als separate Dummyvariablen behandelt werden.
   
-3.  Rufen Sie die **summary** -Funktion von R auf, um eine Zusammenfassung des zurückgegebenen Modells anzuzeigen.
+3.  Rufen Sie zum Anzeigen einer Zusammenfassung des zurückgegebenen Modells R `summary` Funktion.
   
     ```R
     summary(logitObj)
@@ -108,60 +102,41 @@ Nun erstellen Sie ein logistisches Regressionsmodell, das angibt, ob ein bestimm
   
 **Teilergebnisse**
 
-*Logistic Regression Results for: fraudRisk ~ state + gender +     cardholder + balance + numTrans + numIntlTrans + creditLine*
+```
+Logistic Regression Results for: fraudRisk ~ state + gender + cardholder + balance + numTrans + numIntlTrans + creditLine
+Data: sqlFraudDS (RxSqlServerData Data Source)
+Dependent variable(s): fraudRisk
+Total independent variables: 60 (Including number dropped: 3)
+Number of valid observations: 10000 -2
 
-*Data: sqlFraudDS (RxSqlServerData Data Source)*
+LogLikelihood: 2032.8699 (Residual deviance on 9943 degrees of freedom)
 
-*Dependent variable(s): fraudRisk*
+Coefficients:
+Estimate Std. Error z value Pr(>|z|)     (Intercept)
+-8.627e+00  1.319e+00  -6.538 6.22e-11
+state=AK                Dropped    Dropped Dropped  Dropped
+state=AL             -1.043e+00  1.383e+00  -0.754   0.4511
 
-*Total independent variables: 60 (Including number dropped: 3)*
+(other states omitted)
 
-*Anzahl der gültigen Beobachtungen: 10000-2*
+gender=Male             Dropped    Dropped Dropped  Dropped
+gender=Female         7.226e-01  1.217e-01   5.936 2.92e-09
+cardholder=Principal    Dropped    Dropped Dropped  Dropped
+cardholder=Secondary  5.635e-01  3.403e-01   1.656   0.0977
+balance               3.962e-04  1.564e-05  25.335 2.22e-16
+numTrans              4.950e-02  2.202e-03  22.477 2.22e-16
+numIntlTrans          3.414e-02  5.318e-03   6.420 1.36e-10
+creditLine            1.042e-01  4.705e-03  22.153 2.22e-16
 
-*LogLikelihood: 2032.8699 (Residual deviance on 9943 degrees of freedom)*
-
-*Coefficients:*
-
-*Estimate Std. Error z value Pr(>|z|)     (Intercept)*
-
-*-8.627e+00  1.319e+00  -6.538 6.22e-11*
-
-*state=AK                Dropped    Dropped Dropped  Dropped*
-
-*state=AL             -1.043e+00  1.383e+00  -0.754   0.4511*
-
-*(other states omitted)*
-
-*gender=Male             Dropped    Dropped Dropped  Dropped*
-
-*gender=Female         7.226e-01  1.217e-01   5.936 2.92e-09*
-
-*cardholder=Principal    Dropped    Dropped Dropped  Dropped*
-
-*Karteninhabern = sekundäre 5.635e-3.403e 01-01 1.656 0.0977*
-
-*balance               3.962e-04  1.564e-05  25.335 2.22e-16*
-
-*numTrans              4.950e-02  2.202e-03  22.477 2.22e-16*
-
-*numIntlTrans          3.414e-02  5.318e-03   6.420 1.36e-10*
-
-*creditLine            1.042e-01  4.705e-03  22.153 2.22e-16*
-
-*---*
-
-*Signif. codes:  0 ‘\*\*\*’ 0.001 ‘\*\*’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1*
-
-*Condition number of final variance-covariance matrix: 3997.308*
-
-*Number of iterations: 15*
+Signif. codes:  0 ‘\*\*\*’ 0.001 ‘\*\*’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Condition number of final variance-covariance matrix: 3997.308
+Number of iterations: 15
+```
 
 ## <a name="next-step"></a>Nächster Schritt
 
 [Neue Bewertungsdaten](../../advanced-analytics/tutorials/deepdive-score-new-data.md)
 
-## <a name="previous-step"></a>Vorheriger Schritt
+## <a name="previous-step"></a>Vorherigen Schritt
 
-[Visualisieren von SQL Server-Daten mithilfe von R](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
-
-
+[Visualisieren von SQL Server-Daten mit R](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)

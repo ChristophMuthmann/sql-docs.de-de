@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0173c157981896354288cc0a2442d7acc94d05de
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b90b71a5e327e894329ca8474e8edff5740d8826
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="describing-parameters"></a>Beschreibt die Parameter
 **SQLBindParameter** enthält Argumente, die den Parameter zu beschreiben: die SQL-Datentyp, Genauigkeit und Dezimalstellen. Der Treiber verwendet diese Informationen oder *Metadaten* umzuwandelnde Wert des Parameters in den Typ, der von der Datenquelle benötigt. Auf den ersten Blick scheint es sich, dass der Treiber in einfacher als die Anwendung Parametermetadaten kennen ist; Nachdem alle kann der Treiber mühelos ermitteln, die Metadaten für ein-Spalte Resultset. Es stellt sich heraus, ist dies nicht der Fall. Zuerst die meisten Datenquellen bieten eine Möglichkeit für den Treiber zum Ermitteln von Parametermetadaten keine. Zweitens stellt die meisten Anwendungen bereits kennen, die Metadaten.  

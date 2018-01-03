@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6fb9cd848463d0315d42b49f42e690f1bd7e47b0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: be7fb7064f3e6508b481011ed2aa05068542cef9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetstmtattr-function"></a>SQLSetStmtAttr-Funktion
 **Konformität**  
@@ -161,7 +161,7 @@ SQLRETURN SQLSetStmtAttr(
 ## <a name="statement-attributes"></a>Anweisungsattribute  
  Die aktuell definierten Attribute und die Version von ODBC, in denen sie eingeführt wurden, werden in der folgenden Tabelle angezeigt. Es wird erwartet, dass weitere Attribute von Treibern, die von verschiedenen Datenquellen nutzen definiert werden. ODBC ist ein Bereich von Attributen reserviert. Entwickler müssen Werte für die eigene Verwendung treiberspezifische von Open Group reservieren. Weitere Informationen finden Sie unter [Treiber-spezifische Datentypen, Deskriptor Typen Informationstypen, Diagnosetypen und Attribute](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
-|Attribut|*ValuePtr* Inhalt|  
+|attribute|*ValuePtr* Inhalt|  
 |---------------|-------------------------|  
 |SQL_ATTR_APP_PARAM_DESC (ODBC 3.0)|Das Handle für die APD für nachfolgende Aufrufe **SQLExecute** und **SQLExecDirect** des Anweisungshandles. Der erste Wert dieses Attributs ist der Deskriptor implizit zugeordnet werden, wenn die Anweisung ursprünglich zugeordnet wurde. Wenn der Wert dieses Attributs auf SQL_NULL_DESC oder das Handle, das ursprünglich zugeordnet wurde, für den Deskriptor festgelegt ist, einen explizit zugewiesenen APD-Handle, das zuvor das Anweisungshandle zugeordnet wurde von ihm getrennt ist und das Anweisungshandle zurückgesetzt wird, um die implizit reserviert APD Handle.<br /><br /> Dieses Attribut kann nicht festgelegt werden, um ein Deskriptor-Handle, das implizit für eine andere Anweisung zugewiesen wurde oder eine andere Deskriptorhandles, die implizit in derselben Anweisung festgelegt wurde; implizit zugeordneten Deskriptorhandles darf nicht mehr als eine Anweisung oder Deskriptorhandles zugeordnet sein.|  
 |SQL_ATTR_APP_ROW_DESC (ODBC 3.0)|Das Handle für die ARD für nachfolgende Abrufe des Anweisungshandles. Der erste Wert dieses Attributs ist der Deskriptor implizit zugeordnet werden, wenn die Anweisung ursprünglich zugeordnet wurde. Wenn der Wert dieses Attributs auf SQL_NULL_DESC oder das Handle, das ursprünglich zugeordnet wurde, für den Deskriptor festgelegt ist, einen explizit zugewiesenen ARD-Handle, das zuvor das Anweisungshandle zugeordnet wurde von ihm getrennt ist und das Anweisungshandle zurückgesetzt wird, um die implizit reserviert ARD Handle.<br /><br /> Dieses Attribut kann nicht festgelegt werden, um ein Deskriptor-Handle, das implizit für eine andere Anweisung zugewiesen wurde oder eine andere Deskriptorhandles, die implizit in derselben Anweisung festgelegt wurde; implizit zugeordneten Deskriptorhandles darf nicht mehr als eine Anweisung oder Deskriptorhandles zugeordnet sein.|  

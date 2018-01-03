@@ -3,7 +3,7 @@ title: WillConnect-Ereignis (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7113fadf60c58478173287f331822798df9aeb63
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 45e9a6fb4dcc55b836195065c279627e50c74511
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="willconnect-event-ado"></a>WillConnect-Ereignis (ADO)
 Die **WillConnect** Ereignis wird aufgerufen, bevor eine Verbindung gestartet wird.  
@@ -50,7 +50,7 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *Kennwort*  
  Ein **Zeichenfolge** , ein Kennwort für die ausstehende Verbindung enthält.  
   
- *Optionen*  
+ *enthalten*  
  Ein **lange** Wert, der angibt, wie der Anbieter auswerten soll die *"ConnectionString"*. Ihre einzige Option ist **AdAsyncOpen**.  
   
  *adStatus*  

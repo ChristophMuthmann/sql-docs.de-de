@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: df24a552ba87063601f03ed16302d4c5c5eec804
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 10ef63cf77fc4668d9f9f80daaff8ab483d1876b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetstmtattr-function"></a>SQLGetStmtAttr-Funktion
 **Konformität**  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
  **SQLGetStmtAttr** gibt die aktuelle Einstellung der ein Anweisungsattribut zurück.  
   
 > [!NOTE]  
->  Weitere Informationen zu welcher der Treiber-Manager ordnet diese Funktion auf, wenn eine ODBC 3.. *x* Anwendung arbeitet mit einer ODBC 2.. *X* -Treiber verwenden, finden Sie unter [Ersatz-Zuordnungsfunktionen für Backward Compatibility Anwendungen](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
+>  Weitere Informationen zu welcher der Treiber-Manager ordnet diese Funktion auf, wenn eine ODBC 3. *x* Anwendung arbeitet mit einer ODBC 2. *X* -Treiber verwenden, finden Sie unter [Ersatz-Zuordnungsfunktionen für Backward Compatibility Anwendungen](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -106,7 +106,7 @@ SQLRETURN SQLGetStmtAttr(
   
  Ein Aufruf von **SQLGetStmtAttr** gibt in  *\*ValuePtr* den Wert des Attributs im angegebenen Anweisung *Attribut*. Dieser Wert kann es sich entweder um einen SQLULEN-Wert oder ein Null-terminierte Zeichenfolge sein. Ist der Wert einen Wert SQLULEN erstellt wurde, schreibt einige Treiber möglicherweise nur die untere 32-Bit- oder 16-Bit, der einen Puffer und lassen Sie das Bit höherer Ordnung unverändert. Aus diesem Grund sollten Anwendungen verwendet einen Puffer SQLULEN erstellt wurde, und initialisieren den Wert auf 0 vor dem Aufrufen dieser Funktion. Darüber hinaus die *Pufferlänge* und *StringLengthPtr* Argumente werden nicht verwendet. Wenn der Wert eine Null-terminierte Zeichenfolge ist, gibt die Anwendung die maximale Länge der Zeichenfolge in der *Pufferlänge* Argument und der Treiber gibt die Länge der Zeichenfolge in der  *\* StringLengthPtr* Puffer.  
   
- Damit Anwendungen Aufrufen **SQLGetStmtAttr** zum Arbeiten mit ODBC 2.. *X* -Treiber, die einen Aufruf von **SQLGetStmtAttr** zugeordnet ist, in der Treiber-Manager **SQLGetStmtOption**.  
+ Damit Anwendungen Aufrufen **SQLGetStmtAttr** zum Arbeiten mit ODBC 2. *X* -Treiber, die einen Aufruf von **SQLGetStmtAttr** zugeordnet ist, in der Treiber-Manager **SQLGetStmtOption**.  
   
  Die folgenden Anweisungsattribute sind schreibgeschützt, damit Sie abgerufen werden kann **SQLGetStmtAttr**, jedoch nicht festlegen, indem **SQLSetStmtAttr**:  
   

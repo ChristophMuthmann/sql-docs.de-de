@@ -3,7 +3,7 @@ title: Index-Eigenschaft | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3fa23448f5942baabf364a0b02f61324d29ec7b3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9e7dac3b9494e2c23de547bdf96ba0079a264af9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="index-property"></a>Index-Eigenschaft
 Gibt den Namen des Indexes derzeit wirksamen für eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  

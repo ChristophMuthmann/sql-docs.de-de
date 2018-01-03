@@ -3,7 +3,7 @@ title: "Speichern ausgewählter Tabellen in einem Diagramm (Visual Database Tool
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 13e47d349680589c14f2804629c1417872f49265
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ec8f86fbb4056c950cae3a7aa9e6572bb6f98ace
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>Speichern ausgewählter Tabellen in einem Diagramm (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Wenn Sie nicht alle Änderungen speichern möchten, die an einem Datenbankdiagramm vorgenommen wurden, können Sie auch nur eine einzelne Tabelle oder mehrere ausgewählte Tabellen speichern.  
@@ -42,6 +42,6 @@ ms.lasthandoff: 12/05/2017
     > [!NOTE]  
     > Die Tabellenliste kann mehr Tabellen enthalten, als Sie ausgewählt haben. Wenn Sie beispielsweise den Datentyp einer Spalte ändern, die eine Beziehung zu einer anderen Tabelle aufweist, werden beide Tabellen in die Liste aufgenommen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Arbeiten mit Datenbankdiagrammen (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

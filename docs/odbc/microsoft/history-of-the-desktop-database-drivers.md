@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: beb79b003e6e36b195d781b071dde814c5265adc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6dfa1dc1b533c9e40175e9a3d29dc872344bd664
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="history-of-the-desktop-database-drivers"></a>Verlauf der Desktop-Datenbanktreiber
 Die folgende Tabelle zeigt die Desktop-Datenbanktreiber Versionsverlauf.  
   
-|Version|Veröffentlichungsdatum|Description|  
+|Versionsoptionen|Veröffentlichungsdatum|Description|  
 |-------------|------------------|-----------------|  
 |1,0|August 1993|Verwendet die SIMBA der Abfrageprozessor von PageAhead Software erzeugt. SIMBA empfangen ODBC-Aufrufe und SQL-Anweisungen, verarbeitet diese in Microsoft Jet installierbare ISAM-Aufrufe und anschließend aufgerufen, die Microsoft Jet-ISAM-Dispatch-Ebene, um das Laden und Aufrufen des entsprechenden installierbaren ISAM-Treibers.|  
 |2.0|Dezember 1994|Verwendet ODBC-Version 2.0, das ODBC-Funktionalität erheblich erweitert. Die wichtige Änderung der Version 2.0 wurde, dass das Microsoft Jet-Datenbankmodul den Abfrageprozessor SIMBA ersetzt. Mit dem Microsoft Jet-Datenbankmodul integriert in der Microsoft Jet installierbare ISAM-Treiber und der Microsoft Access-Technologie weitaus eng der Desktop-Datenbanktreiber. Deutliche Verbesserungen wurden:<br /><br /> -Systemeigene Unterstützung für scrollfähige Cursor.<br />-Systemeigene Unterstützung für äußere Joins, aktualisiert und heterogene Joins und Transaktionen.<br />-32-Bit-Versionen der Treiber für Microsoft Windows NT.|  

@@ -3,10 +3,10 @@ title: Konfigurieren von externen SMP-SQL-Server zum Empfangen der Remotetabelle
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/13/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6bbd2ed6-064e-4b45-b67b-608dc0f2b2bc
 caps.latest.revision: "13"
-ms.openlocfilehash: 56ef4d9b75e8051a17c276556a321ed19ddcf2d8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 18b61d60e8ca771feab84b24a9ff53cc7bdfc193
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies"></a>Konfigurieren Sie eine externe SMP-SQL-Server für den Empfang von Kopien der Remotetabelle
 Beschreibt, wie eine externe SQL Server-Instanz zum Empfangen der Remotetabelle Kopien von SQL Server PDW konfiguriert.  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -28,11 +28,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ff5b0244e54432e28d5a1b43d813911b3f90ffd2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 626d1577fe3b4176a01f95332dc6c90d2cbc2faa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="datetime-data-types"></a>DateTime-Datentypen
 In ODBC 3.*.x*, die Bezeichner für das Datum, Zeit und Zeitstempel SQL-Datentypen von SQL_DATE, SQL_TIME und SQL_TIMESTAMP geändert haben (mit Instanzen von **#define** in der Headerdatei 9, 10 und 11) an den SQL_ TYPE_DATE, SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP (mit Instanzen von **#define** in der Headerdatei von 91, 92 und 93) zugeordnet. Der entsprechende Bezeichner haben sich seit geändert SQL_C_DATE SQL_C_TIME und SQL_C_TIMESTAMP SQL_C_TYPE_DATE, SQL_C_TYPE_TIME und SQL_C_TYPE_TIMESTAMP bzw. C-Typ und die Instanzen von **#define** wurden geändert entsprechend.  
@@ -43,6 +43,6 @@ In ODBC 3.*.x*, die Bezeichner für das Datum, Zeit und Zeitstempel SQL-Datentyp
   
  Eine ODBC 3.*.x* Treiber verarbeitet, die Funktionsaufrufe, die im vorherigen Absatz gemäß der Einstellung des Attributs SQL_ATTR_ODBC_VERSION Umgebung aufgeführt. Für **SQLColumns**, **SQLGetTypeInfo**, **SQLProcedureColumns**, **SQLSpecialColumns**, und **SQLStatistics** , wenn SQL_ATTR_ODBC_VERSION auf SQL_OV_ODBC3 fest, die Funktionen return SQL_TYPE_DATE, SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP im Feld "DATA_TYPE" festgelegt ist. Die COLUMN_SIZE-Spalte (im zurückgegebenes Resultset **SQLColumns**, **SQLGetTypeInfo**, **SQLProcedureColumns**, und **SQLSpecialColumns**) enthält die Genauigkeit für den ungefähren numerischen Typ an. Die Spalte NUM_PREC_RADIX (im zurückgegebenes Resultset **SQLColumns**, **SQLGetTypeInfo**, und **SQLProcedureColumns**) den Wert 2 enthält. Wenn SQL_ATTR_ODBC_VERSION auf SQL_OV_ODBC2, und klicken Sie dann auf die Funktionen return SQL_DATE, SQL_TIME und SQL_TIMESTAMP im Feld "DATA_TYPE" festgelegt ist, enthält die COLUMN_SIZE-Spalte die dezimale Genauigkeit für den ungefähren numerischen Typ und die NUM_PREC_RADIX-Spalte enthält einen Wert von 10.  
   
- Bei der Anforderung von alle Datentypen in einem Aufruf von **SQLGetTypeInfo**, die von der Funktion zurückgegebene Resultset enthält sowohl SQL_TYPE_DATE, SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP gemäß Definition in ODBC 3.*.x*, und SQL_DATE, SQL_TIME und SQL_TIMESTAMP gemäß Definition in ODBC 2.. *x*.  
+ Bei der Anforderung von alle Datentypen in einem Aufruf von **SQLGetTypeInfo**, die von der Funktion zurückgegebene Resultset enthält sowohl SQL_TYPE_DATE, SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP gemäß Definition in ODBC 3.*.x*, und SQL_DATE, SQL_TIME und SQL_TIMESTAMP gemäß Definition in ODBC 2. *x*.  
   
  Aufgrund wie die ODBC 3.*.x* -Treiber-Manager führt die Zuordnung der Date, Time und Timestamp-Datentypen, ODBC 3.*.x* Treiber müssen nur erkennen **#defines** von 91, 92, und 93 für Datum, Uhrzeit und Timestamp-C-Datentypen eingegeben wird, der *TargetType* Argumente des **SQLBindCol** und **SQLGetData** oder  *ValueType* Argument **SQLBindParameter**, und Sie müssen nur erkennen **#defines** von 91, 92 und 93 für das Datum, Uhrzeit und Timestamp SQL-Datentypen in der eingegeben*ParameterType* Argument **SQLBindParameter** oder *DataType* Argument **SQLGetTypeInfo**. Weitere Informationen finden Sie unter [Änderungen des Datentyps "DateTime"](../../../odbc/reference/develop-app/datetime-data-type-changes.md).

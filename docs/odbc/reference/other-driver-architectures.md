@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f3fc19dd4b6553362705b7cc57c9431a29aa91ca
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fca4bea3f40702fb2593442ccbbfb311f813a87a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="other-driver-architectures"></a>Andere Treiber-Architekturen
 Einige ODBC-Treiber übereinstimmen nicht streng auf die zuvor beschriebenen Architektur. Dies kann daran liegen die Treiber Aufgaben außer denen eines herkömmlichen ODBC-Treibers, oder sind keine Treiber in den normalen Sinn.  

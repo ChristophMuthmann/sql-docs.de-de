@@ -3,7 +3,7 @@ title: Requery-Methode | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ed510a242cee92518b6b4511ffaa51539766e086
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 90ca81710f2c20929305e894fe2dbda49bb5b3b8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="requery-method"></a>Requery-Methode
 Aktualisiert die Daten in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt durch erneutes Ausführen der Abfrage auf der das Objekt basiert.  
@@ -39,7 +39,7 @@ recordset.Requery Options
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Optionen*  
+ *enthalten*  
  Optional. Eine Bitmaske, die enthält [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) und [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) Werte, die diesen Vorgang beeinflussen.  
   
 > [!NOTE]

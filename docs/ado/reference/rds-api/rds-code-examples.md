@@ -1,14 +1,14 @@
 ---
 title: RDS-Codebeispiele | Microsoft Docs
-ms.prod: sql-non-specified
-ms.prod_service: drivers
 ms.service: 
-ms.component: reference
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: RDS samples [ADO]
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: af848d0237c7f3df12cc187f3827ae64ebe52768
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d53120cb3422d46329fe21a94166f1c39744f009
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="rds-code-examples"></a>RDS-Codebeispiele
 > [!IMPORTANT]

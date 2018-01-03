@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3dbc86d0dd1be8ef4e8ca19f8a7f25147a35fcc6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c202841d54e01758312c4e8388a78e583de9058c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField-Funktion
 **Konformität**  
@@ -232,7 +232,7 @@ n-Definition *|"ERSTELLEN SIE DOMÄNE"|SQL_DIAG_CREATE_DOMAIN|
   
 -   Datensätze, die für die Nummer der Zeile unbekannt ist werden vor allen anderen Datensätzen angezeigt, da SQL_ROW_NUMBER_UNKNOWN definiert ist, um – 2 werden.  
   
--   Für alle Datensätze, die an bestimmten Zeilen betreffen, werden die Datensätze durch den Wert im Feld SQL_DIAG_ROW_NUMBER sortiert. Alle Fehler und Warnungen der ersten Zeile betroffen aufgeführt sind, und klicken Sie dann alle Fehler und Warnungen der nächsten Zeile betroffenen usw..  
+-   Für alle Datensätze, die an bestimmten Zeilen betreffen, werden die Datensätze durch den Wert im Feld SQL_DIAG_ROW_NUMBER sortiert. Alle Fehler und Warnungen der ersten Zeile betroffen aufgeführt sind, und klicken Sie dann alle Fehler und Warnungen der nächsten Zeile betroffenen usw.  
   
 > [!NOTE]  
 >  Die ODBC 3.*.x* Treibermanager sortiert nicht Statusdatensätze in der Diagnose Warteschlange Wenn SQLSTATE 01 s 01 (Fehler in Zeile) wird zurückgegeben, von einer ODBC 2.*.x* Treiber oder, wenn SQLSTATE 01 s 01 (Fehler in Zeile) wird zurückgegeben, die von einer ODBC 3*.x* Treiber beim **SQLExtendedFetch** aufgerufen wird oder **SQLSetPos** wird aufgerufen, für einen Cursor, die mit positioniert **SQLExtendedFetch** .  

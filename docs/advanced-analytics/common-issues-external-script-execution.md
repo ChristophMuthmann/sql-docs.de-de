@@ -2,10 +2,10 @@
 title: "Häufige Probleme mit der externen skriptausführung in SQL Server | Microsoft Docs"
 ms.custom: SQL2016_New_Updated
 ms.date: 10/11/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e1dfc244fbe77d7938853cf6c1109e190c464436
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4f515ba26c4eeae70eaf9244c0eaedaa954954b4
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>Häufige Probleme mit der externen skriptausführung in SQL Server
 
@@ -191,9 +191,9 @@ Wenn Sie installiert und aktiviert dann Machine Learning, aber Sie diesen Fehler
 
 4. Neustarten des Diensts in der Regel wird das Problem behebt, sodass Machine Learning-Skripts ausgeführt werden können. Wenn der Neustart nicht das Problem behoben wird, beachten Sie den Pfad und den Argumenten in der **Binärpfad** -Eigenschaft, und führen Sie folgende Schritte:
 
-    a. Überprüfen Sie das Startprogramm config-Datei, und stellen Sie sicher, dass das Arbeitsverzeichnis gültig ist.
+    A. Überprüfen Sie das Startprogramm config-Datei, und stellen Sie sicher, dass das Arbeitsverzeichnis gültig ist.
 
-    b. Stellen Sie sicher, dass die Windows-Gruppe, die vom Launchpad verwendet SQL Server-Instanz herstellen kann wie in beschrieben die [vorherigen Abschnitt](#bkmk_LaunchpadTS).
+    B. Stellen Sie sicher, dass die Windows-Gruppe, die vom Launchpad verwendet SQL Server-Instanz herstellen kann wie in beschrieben die [vorherigen Abschnitt](#bkmk_LaunchpadTS).
 
     c. Wenn Sie die Diensteigenschaften nicht ändern, starten Sie den Launchpad-Dienst neu.
 

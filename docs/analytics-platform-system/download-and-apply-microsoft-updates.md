@@ -3,10 +3,10 @@ title: Herunterladen und Anwenden von Microsoft-Updates (Analytics Platform Syst
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4f69df44-8549-4a8a-b10c-f91908594856
 caps.latest.revision: "51"
-ms.openlocfilehash: 806b7fd790244963d878038a3c3c291c387ebb1e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7c91a5ed97d5aedfa456fd63e16c0178c5241706
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="download-and-apply-microsoft-updates"></a>Herunterladen und Anwenden von Microsoft-Updates
 In diesem Thema wird erläutert, wie Updates von Microsoft Update-Katalog zu Windows Server Update Services (WSUS) herunterladen und diese Updates auf die Analytics Platform System Appliance-Server angewendet werden. Microsoft Update werden alle anwendbaren Updates für Windows und SQL Server installieren. WSUS ist auf dem VMM-virtuellen Computer von dem Gerät installiert.  
@@ -32,7 +32,7 @@ In diesem Thema wird erläutert, wie Updates von Microsoft Update-Katalog zu Win
 >   
 > Microsoft-Updates werden nicht angewendet werden, während das Gerät verwendet wird. Anwenden von Updates kann dazu führen, dass Appliance Knoten neu starten. Während eines Wartungsfensters sollten die Updates angewendet werden, wenn das Gerät nicht verwendet wird.  
   
-### <a name="prerequisites"></a>Erforderliche Komponenten  
+### <a name="prerequisites"></a>Voraussetzungen  
 Bevor Sie diese Schritte ausführen, müssen Sie:  
   
 -   Konfigurieren von WSUS auf Ihrer Anwendung entsprechend den Anweisungen im [Konfigurieren von Windows Server Update Services &#40; WSUS &#41; &#40; Analyseplattformsystem &#41; ](configure-windows-server-update-services-wsus.md).  

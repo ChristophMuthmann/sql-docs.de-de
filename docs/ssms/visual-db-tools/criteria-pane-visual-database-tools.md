@@ -3,7 +3,7 @@ title: Kriterienbereich (Visual Database Tools) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3470e686b03adba5a1258c60a855e71a6d83931a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1a1e427daff8ec555854db5173ca5d84a5a711cd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Kriterienbereich (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Im Kriterienbereich können Sie Abfrageoptionen angeben, d. h. welche Datenspalten angezeigt oder wie die Ergebnisse sortiert werden und welche Zeilen ausgewählt werden sollen. Hierzu geben Sie die gewünschten Optionen in einem Datenblatt ähnlich einer Kalkulationstabelle ein. Im Kriterienbereich können Sie Folgendes angeben:  
@@ -59,23 +59,23 @@ Welche Informationen genau im Kriterienbereich angezeigt werden, ist abhängig v
   
 Wenn der Kriterienbereich nicht sichtbar ist, klicken Sie mit der rechten Maustaste auf den Designer, zeigen Sie auf **Bereich**, und klicken Sie dann auf **Kriterien**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
   
-|**Column**|**Abfragetyp**|**Description**|  
+|**Column**|**Abfragetyp**|**Beschreibung**|  
 |--------------|------------------|-------------------|  
-|Column|Alle|Zeigt entweder den Namen einer in der Abfrage verwendeten Datenspalte oder den Ausdruck für eine berechnete Spalte an. Diese Spalte ist gesperrt und bleibt somit bei einem horizontalen Bildlauf immer sichtbar.|  
+|Spalte|All|Zeigt entweder den Namen einer in der Abfrage verwendeten Datenspalte oder den Ausdruck für eine berechnete Spalte an. Diese Spalte ist gesperrt und bleibt somit bei einem horizontalen Bildlauf immer sichtbar.|  
 |Alias|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Gibt entweder einen alternativen Namen für eine Spalte an oder den Namen, den Sie für eine berechnete Spalte verwenden können.|  
 |Tabelle|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Gibt den Namen der Tabelle oder des Objekts mit Tabellenstruktur für die zugeordnete Datenspalte an. Diese Spalte ist bei berechneten Spalten leer.|  
 |Ausgabe|SELECT, INSERT FROM, MAKE TABLE|Gibt an, ob eine Datenspalte in der Abfrageausgabe aufgeführt wird oder nicht.<br /><br />Hinweis: Wenn dies in der Datenbank zulässig ist, können Sie eine Datenspalte in Sortier- oder Suchklauseln verwenden, ohne die Spalte im Resultset anzuzeigen.|  
 |Sortiertyp|SELECT, INSERT FROM|Gibt an, dass die zugeordnete Datenspalte zum Sortieren der Abfrageergebnisse verwendet wird. Zeigt außerdem an, ob aufsteigend oder absteigend sortiert wird.|  
 |Sortierreihenfolge|SELECT, INSERT FROM|Gibt die Sortierpriorität für Datenspalten an, die zum Sortieren des Resultsets verwendet werden. Wenn Sie die Sortierreihenfolge für eine Datenspalte ändern, wird die Sortierreihenfolge für alle anderen Spalten entsprechend aktualisiert.|  
 |Gruppieren nach|SELECT, INSERT FROM, MAKE TABLE|Gibt an, dass die zugeordnete Datenspalte zum Erstellen einer Aggregatabfrage verwendet wird. Diese Datenblattspalte wird nur angezeigt, wenn Sie im Menü **Extras** die Option **Gruppieren nach** ausgewählt oder im SQL-Bereich eine GROUP BY-Klausel hinzugefügt haben.<br /><br />In der Standardeinstellung ist der Wert dieser Spalte auf **Gruppieren nach**gesetzt, und die Spalte ist Teil der GROUP BY-Klausel.<br /><br />Wenn Sie in eine Zelle in dieser Spalte wechseln und eine Aggregatfunktion auf die zugeordnete Datenspalte anwenden, wird für den sich ergebenden Ausdruck eine Ausgabespalte zum Resultset hinzugefügt.|  
-|Kriterien|Alle|Gibt eine Suchbedingung (Filter) für die zugeordnete Datenspalte an. Geben Sie einen Operator (Standardeinstellung ist "=") und den zu suchenden Wert ein. Setzen Sie Textwerte in einfache Anführungszeichen.<br /><br />Wenn die zugeordnete Datenspalte Teil einer GROUP BY-Klausel ist, wird der von Ihnen eingegebene Ausdruck für eine HAVING-Klausel verwendet.<br /><br />Wenn Sie in der Datenblattspalte **Kriterien** Werte für mehrere Zellen eingeben, werden die sich ergebenden Suchbedingungen automatisch durch ein logisches AND verknüpft.<br /><br />Um mehrere Ausdrücke für Suchbedingungen für eine einzelne Datenbankspalte anzugeben, z. B. (fname > 'A') AND (fname < 'M'), fügen Sie die Datenspalte zweimal in den Kriterienbereich ein, und geben Sie für jede Instanz der Datenspalte unterschiedliche Werte in der Spalte **Kriterien** ein.|  
-|Oder...|Alle|Gibt einen zusätzlichen Ausdruck für eine Suchbedingung für die Datenspalte an, der mit vorherigen Ausdrücken durch ein logisches OR verknüpft wird. Sie können weitere **Oder** -Rasterspalten hinzufügen, indem Sie in der äußerst rechten **Oder** -Spalte die TAB-TASTE drücken.|  
+|Kriterien|All|Gibt eine Suchbedingung (Filter) für die zugeordnete Datenspalte an. Geben Sie einen Operator (Standardeinstellung ist "=") und den zu suchenden Wert ein. Setzen Sie Textwerte in einfache Anführungszeichen.<br /><br />Wenn die zugeordnete Datenspalte Teil einer GROUP BY-Klausel ist, wird der von Ihnen eingegebene Ausdruck für eine HAVING-Klausel verwendet.<br /><br />Wenn Sie in der Datenblattspalte **Kriterien** Werte für mehrere Zellen eingeben, werden die sich ergebenden Suchbedingungen automatisch durch ein logisches AND verknüpft.<br /><br />Um mehrere Ausdrücke für Suchbedingungen für eine einzelne Datenbankspalte anzugeben, z. B. (fname > 'A') AND (fname < 'M'), fügen Sie die Datenspalte zweimal in den Kriterienbereich ein, und geben Sie für jede Instanz der Datenspalte unterschiedliche Werte in der Spalte **Kriterien** ein.|  
+|Oder...|All|Gibt einen zusätzlichen Ausdruck für eine Suchbedingung für die Datenspalte an, der mit vorherigen Ausdrücken durch ein logisches OR verknüpft wird. Sie können weitere **Oder** -Rasterspalten hinzufügen, indem Sie in der äußerst rechten **Oder** -Spalte die TAB-TASTE drücken.|  
 |Anfügen|INSERT FROM|Gibt den Namen der Zieldatenspalte für die zugeordnete Datenspalte an. Wenn Sie eine INSERT FROM-Abfrage erstellen, versucht der Abfrage- und Sicht-Designer, die Quelle einer übereinstimmenden Zieldatenspalte zuzuordnen. Wenn der Abfrage- und Sicht-Designer keine Übereinstimmung finden kann, müssen Sie den Spaltennamen angeben.|  
 |Neuer Wert|UPDATE, INSERT INTO|Gibt den Wert an, der in der zugeordneten Spalte gesetzt werden soll. Geben Sie einen Literalwert oder einen Ausdruck ein.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Diagrammbereich &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)  
 [Regeln für das Eingeben von Suchwerten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  

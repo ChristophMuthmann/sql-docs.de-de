@@ -3,23 +3,23 @@ title: "Monitor lädt für Parallel Datawarehouse"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
-description: "Sie können überwachen, aktive und aktuelle [dwloader](dwloader.md) lädt mithilfe der Verwaltungskonsole Analytics Platform System (APS) oder die Parallel Data Warehouse (PDW)-Systemsichten auf."
+description: "Sie können überwachen, aktive und aktuelle [Dwloader](dwloader.md) mithilfe der Verwaltungskonsole Analytics Platform System (APS) oder die Parallel Data Warehouse (PDW)-Systemsichten lädt."
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: c0c55c16-00bc-4676-8970-a8e10b3e9408
 caps.latest.revision: "6"
-ms.openlocfilehash: a172b35934f35054bbe528894b04d0d69a814910
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 988c34b248b0058941f53575a79e4f3b6acb4de0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="monitor-loads"></a>Überwachen der Auslastung
 Sie können überwachen, aktive und aktuelle [Dwloader](dwloader.md) lädt mithilfe der Verwaltungskonsole Analytics Platform System (APS) oder Parallel Data Warehouse (PDW) [Systemsichten](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/). 
@@ -31,7 +31,7 @@ Sie können überwachen, aktive und aktuelle [Dwloader](dwloader.md) lädt mithi
 To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
 -->
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
 Unabhängig von der Methode, die zum Überwachen der Auslastung verwendet wird muss die Anmeldung über die Berechtigung zum Zugriff auf die zugrunde liegenden Datenquellen verfügen. 
 
 <!-- MISSING LINKS

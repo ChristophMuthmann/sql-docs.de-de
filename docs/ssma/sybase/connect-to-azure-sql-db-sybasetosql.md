@@ -3,7 +3,7 @@ title: Herstellen einer Verbindung mit Azure SQL-Datenbank (SybaseToSQL) | Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d63fac7037bfe3f3646d9fa1c36200aa682b2fe3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1267aecb68c344b6de0fad2c7c129a0b6ab2205c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>Herstellen einer Verbindung mit Azure SQL-Datenbank (SybaseToSQL)
 Stellen Sie mithilfe der Azure SQL-Datenbank (Dialogfeld), mit der Azure SQL-Datenbank-Datenbank herstellen, die Sie migrieren möchten.  
   
 Zum Zugriff auf dieses Dialogfeld, in dem **Datei** klicken Sie im Menü **Herstellen einer Verbindung mit Azure SQL-Datenbank**. Wenn Sie zuvor eine Verbindung hergestellt haben, wird der Befehl ist **eine erneute Verbindung mit der Azure SQL-Datenbank.**  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Servername**  
   
 Wählen Sie aus, oder geben Sie den Servernamen für die Verbindung mit Azure SQL-Datenbank.  
@@ -43,7 +43,7 @@ Wählen Sie aus, geben Sie ein oder **Durchsuchen** den Datenbanknamen.
 > [!IMPORTANT]  
 > SSMA für Sybase unterstützt keine Verbindung mit der master-Datenbank in Azure SQL-Datenbank.  
   
-**Benutzername**  
+**User name**  
   
 Geben Sie den Benutzernamen, den SSMA für die Verbindung mit der Azure SQL-Datenbank-Datenbank verwenden  
   

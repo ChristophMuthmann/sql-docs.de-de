@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b8073bd935f010a91c9dde8863e1731ab3032a7e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 049eb6998407ad02ca91565d9b26d0a0bf9b37eb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-static-cursors"></a>Statische ODBC-Cursor
 Ein statischer Cursor ist in der das Resultset angezeigt wird, um statisch sein. Es kann nicht in der Regel Änderungen erkennen, die an der Mitgliedschaft, Reihenfolge oder Werte des Resultsets nach dem Öffnen des Cursors vorgenommen wurden. Nehmen wir beispielsweise an ein statischer Cursor abruft, eine Zeile und einer anderen Anwendung wird diese Zeile aktualisiert. Wenn der statische Cursor die Zeile refetches, sind die Werte, die er angezeigt wird trotz der von der anderen Anwendung vorgenommenen unverändert.  

@@ -3,7 +3,7 @@ title: CreateRecordset-Methode (RDS) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2a1bec5dc5b8c0e159755c9689aac0c9bfc40217
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7046143a53241622c7bcf03610c416715024fcc0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset-Methode (RDS)
 Erstellt ein leeres getrennt [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -51,7 +51,7 @@ object.CreateRecordset(ColumnInfos)
  *ColumnsInfos*  
  Ein **Variant** Array von Attributen, die jede Spalte definiert den **Recordset** erstellt. Jede Spaltendefinition enthält ein Array von vier erforderlichen Attribute und ein optionales Attribut.  
   
-|Attribut|Description|  
+|attribute|Description|  
 |---------------|-----------------|  
 |Name|Name des den Spaltenüberschrift.|  
 |Typ|Ganze Zahl des Datentyps.|  

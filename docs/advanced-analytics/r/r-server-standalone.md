@@ -2,10 +2,12 @@
 title: "R Server (eigenständig) | Microsoft-Dokumentation"
 ms.custom: SQL2016_New_Updated
 ms.date: 06/22/2017
-ms.prod: r-server
 ms.reviewer: 
-ms.suite: 
-ms.technology: r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+vms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: R
@@ -14,11 +16,11 @@ caps.latest.revision: "22"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 1812dc6b60e5f5ee4547810a591b37643be17096
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: aa740dc305bf3a34afac42371dbd1ba554b11924
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="r-server-standalone"></a>R-Server (eigenständig)
 

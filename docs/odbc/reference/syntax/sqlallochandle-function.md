@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e355208a1ddcae70eaea4fd01e7d3193e3b2db47
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b8bf173bf0055dc06cf475aa72e137d9ca426222
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle-Funktion
 **Konformität**  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
  **SQLAllocHandle** reserviert ein Handle Umgebung, Verbindung, Anweisung oder Deskriptor.  
   
 > [!NOTE]  
->  Diese Funktion ist eine generische Funktion für die Zuordnung von Handles, die die ODBC 2.0-Funktionen ersetzt **SQLAllocConnect**, **SQLAllocEnv**, und **SQLAllocStmt:**. Damit Anwendungen Aufrufen **SQLAllocHandle** zum Arbeiten mit ODBC 2.. *X* -Treiber, die einen Aufruf von **SQLAllocHandle** zugeordnet ist, in der Treiber-Manager **SQLAllocConnect**, **SQLAllocEnv**, oder  **SQLAllocStmt:**je nach Bedarf. Weitere Informationen finden Sie unter "Kommentare". Weitere Informationen zu welcher der Treiber-Manager ordnet diese Funktion auf, wenn eine ODBC 3.. *x* Anwendung arbeitet mit einer ODBC 2.. *X* -Treiber verwenden, finden Sie unter [Ersatz-Zuordnungsfunktionen für Backward Compatibility Anwendungen](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
+>  Diese Funktion ist eine generische Funktion für die Zuordnung von Handles, die die ODBC 2.0-Funktionen ersetzt **SQLAllocConnect**, **SQLAllocEnv**, und **SQLAllocStmt:**. Damit Anwendungen Aufrufen **SQLAllocHandle** zum Arbeiten mit ODBC 2. *X* -Treiber, die einen Aufruf von **SQLAllocHandle** zugeordnet ist, in der Treiber-Manager **SQLAllocConnect**, **SQLAllocEnv**, oder  **SQLAllocStmt:**je nach Bedarf. Weitere Informationen finden Sie unter "Kommentare". Weitere Informationen zu welcher der Treiber-Manager ordnet diese Funktion auf, wenn eine ODBC 3. *x* Anwendung arbeitet mit einer ODBC 2. *X* -Treiber verwenden, finden Sie unter [Ersatz-Zuordnungsfunktionen für Backward Compatibility Anwendungen](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -99,7 +99,7 @@ SQLRETURN SQLAllocHandle(
 |HY014|Das Limit für die Anzahl von Handles wurde überschritten|Das treiberdefinierten Limit für die Anzahl der Handles, die für den Typ des Handle zugeordnet werden kann, angegeben durch die *HandleType* Argument wurde erreicht.|  
 |HY092|Ungültiger Attribut-/Optionsbezeichner|(DM) die *HandleType* wurde Argument: SQL_HANDLE_ENV auf SQL_HANDLE_DBC auf, SQL_HANDLE_STMT oder SQL_HANDLE_DESC.|  
 |HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Nur trennen, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum Zustand "angehalten" [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYC00|Optionales Feature nicht implementiert|Die *HandleType* Argument SQL_HANDLE_DESC und der Treiber wurde eine ODBC 2.. *X* Treiber.|  
+|HYC00|Optionales Feature nicht implementiert|Die *HandleType* Argument SQL_HANDLE_DESC und der Treiber wurde eine ODBC 2. *X* Treiber.|  
 |HYT01|Verbindungstimeout abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Das Verbindungstimeout wird über festgelegt **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|Diese Funktion wird im Treiber nicht unterstützt.|(DM) die *HandleType* Argument SQL_HANDLE_STMT auf, und der Treiber nicht wurde eine gültige ODBC-Treiber.<br /><br /> (DM) die *HandleType* Argument wurde SQL_HANDLE_DESC und der Treiber unterstützt nicht das Zuordnen einer Deskriptorhandles.|  
   

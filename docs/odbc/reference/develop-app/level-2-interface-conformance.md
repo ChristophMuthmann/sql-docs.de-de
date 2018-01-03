@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 216cfaa83c7b48e94778b98fde9766a47221091b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4002a7b376a752d4c5d3a2ddd2506bc9357842fa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="level-2-interface-conformance"></a>Ebene 2 Schnittstelle Konformität
 Der Konformitätsgrad des Level 2-Schnittstelle enthält die Funktionen der Ebene 1 Benutzeroberfläche Konformitätsgrad – sowie die folgenden Features:  

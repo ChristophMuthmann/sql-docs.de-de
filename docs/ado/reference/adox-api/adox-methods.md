@@ -3,7 +3,7 @@ title: ADOX-Methoden | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d92c279d0a9302e2c7fef09c359f425ec0e5e9c4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ad8a7eb710e129b6ba9110694c8cebfddeab85d3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adox-methods"></a>ADOX-Methoden
 |||  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
 |[Append (Ansichten)](../../../ado/reference/adox-api/append-method-adox-views.md)|Fügt ein neues **Ansicht** -Objekt an die **Ansichten** Auflistung.|  
 |[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|Ändert das Kennwort für ein Benutzerkonto an.|  
 |[Erstellen](../../../ado/reference/adox-api/create-method-adox.md)|Wird einen neuen Katalog erstellt.|  
-|[Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Entfernt ein Objekt aus einer Auflistung.|  
+|[Löschen](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Entfernt ein Objekt aus einer Auflistung.|  
 |[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|Gibt den Besitzer eines Objekts in einem Katalog zurück.|  
 |[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|Gibt die Berechtigungen für Benutzer oder eine Gruppe für ein Objekt zurück.|  
 |[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|Gibt den Besitzer eines Objekts in einem Katalog an.|  

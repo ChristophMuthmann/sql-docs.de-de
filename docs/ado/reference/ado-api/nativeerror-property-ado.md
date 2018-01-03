@@ -3,7 +3,7 @@ title: NativeError-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e6d98280027ac307ca04a988052b189cf3365f8e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 55a6415051943de6b92327ce4e9cf157c972edd4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nativeerror-property-ado"></a>NativeError-Eigenschaft (ADO)
 Gibt den anbieterspezifischen Fehlercode für einen bestimmten [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt.  

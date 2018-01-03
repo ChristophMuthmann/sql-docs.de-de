@@ -3,7 +3,7 @@ title: WillMove- und MoveComplete-Ereignisse (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -26,11 +26,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b4cf136ccd49b461578f7a34941465a54c4e4183
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 47a80edb11d7c580f444236e32ce80623417360f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove- und MoveComplete-Ereignisse (ADO)
 Die **WillMove** Ereignis wird aufgerufen, bevor ein ausstehender Vorgang ändert sich die aktuelle Position in der [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Die **MoveComplete** Ereignis wird aufgerufen, nachdem die aktuelle Position in der **Recordset** ändert.  

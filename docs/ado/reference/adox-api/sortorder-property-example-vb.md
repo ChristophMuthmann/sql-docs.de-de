@@ -3,7 +3,7 @@ title: "Beispiel für SortOrder-Eigenschaft (VB) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f11956a6030b825c37f6600b2f8b40c47dc0ce20
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77ac31157edfe36af85b112fffeaca6bb6cca86b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder-Eigenschaft (VB)-Beispiel
 In diesem Beispiel wird veranschaulicht, die [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) Eigenschaft eine [Spalte](../../../ado/reference/adox-api/column-object-adox.md) wurde, angefügt an die [Spalten](../../../ado/reference/adox-api/columns-collection-adox.md) Auflistung von ein [Index](../../../ado/reference/adox-api/index-object-adox.md). Der Code Fügt einen aufsteigenden Index der Spalte "Country" in der **Mitarbeiter** Tabelle, zeigt die Datensätze. Und klicken Sie dann der Code der Country-Spalte in einer absteigenden Index fügt die **Mitarbeiter** Tabelle und die Datensätze wird erneut angezeigt. Der Unterschied zwischen der auf- und absteigender Indizes wird angezeigt.  

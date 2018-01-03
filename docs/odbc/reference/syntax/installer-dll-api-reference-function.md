@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 846cd1f07c5bd940e35711ee79dc1c6c5e63e736
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 614548110102e21cdd9f4bd5ba01f85aff6a6c55
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installer-dll-api-reference-function"></a>Installer DLL-API-Referenz-Funktion
 Dieser Abschnitt beschreibt die Syntax der Funktionen in der DLL-API-Installationsprogramm an. Der Installer DLL-API besteht aus 20 Funktionen. Drei dieser Funktionen **SQLGetTranslator**, **SQLRemoveDSNFromIni**, und **SQLWriteDSNToIni**, die nur von Setup DLLs aufgerufen werden. Die anderen Funktionen werden durch die Einrichtung und Verwaltung Programme aufgerufen.  

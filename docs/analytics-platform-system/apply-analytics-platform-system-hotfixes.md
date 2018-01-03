@@ -3,10 +3,10 @@ title: Anwenden von Analytics Platform System Hotfixes (Analytics Platform Syste
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fca5eec9-86b8-4d20-b498-1678c367b5c8
 caps.latest.revision: "25"
-ms.openlocfilehash: af879486885f2c27ad4c3d80ef9a3d41279ff0ee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 562d0ce41f5a1b12930fdedabd73214ddebd4e4e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Anwenden von Analytics Platform System Hotfixes
 Dieses Thema erläutert das Anwenden von Hotfixes auf dem Softwareupdatepunkt Analytics Platform System.  
@@ -33,7 +33,7 @@ Dieses Thema erläutert das Anwenden von Hotfixes auf dem Softwareupdatepunkt An
 > [!WARNING]  
 > Einen Hotfix Analytics Platform System nicht angewendet, während das Gerät verwendet wird. Anwendung eines Hotfixes kann dazu führen, dass Appliance Knoten neu starten. Der Hotfix sollte während eines Wartungsfensters übernommen werden, wenn das Gerät nicht verwendet wird.  
   
-### <a name="prerequisites"></a>Erforderliche Komponenten  
+### <a name="prerequisites"></a>Voraussetzungen  
 Um diese Schritte ausführen zu können, benötigen Sie Folgendes:  
   
 -   Eine Analytics Platform System Anmeldung mit Zugriffsberechtigungen für die Admin-Konsole, um den Anwendungszustand zu überwachen. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  

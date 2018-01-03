@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dc8ca40adb6a70b56d9b91842fa1fd560fc50f8a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f72a196447399b6df74de8d46fa1eee572910fac
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="prompting-the-user-for-connection-information"></a>Der Benutzer aufgefordert, Verbindungsinformationen
 Wenn die Anwendung verwendet **SQLConnect** und muss den Benutzer für alle Verbindungsinformationen aufzufordern wie Benutzername und Kennwort muss geschieht dies selbst. Obwohl dadurch die Anwendung die Steuerung des "Erscheinungsbilds" kann die Anwendung, die Treiber-spezifischen Code enthalten Internet Explorer erzwungen. Dies tritt auf, wenn die Anwendung den Benutzer zur treiberspezifische Verbindungsinformationen aufzufordern muss. Dies stellt eine unmöglich Situation für allgemeiner Anwendungen, die darauf ausgelegt sind, funktionieren alle Treiber, einschließlich der Treiber, die nicht vorhanden sind, wenn die Anwendung geschrieben wird.  

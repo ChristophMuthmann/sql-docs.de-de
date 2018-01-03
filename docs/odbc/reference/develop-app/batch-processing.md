@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a6d4e8a78659a29b32509b35e46227be486c06e4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d0aa353451c71ccba775a29365a3c4603fd64f3c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="batch-processing"></a>Batchverarbeitung
 Unterstützung für Batches von SQL-Anweisungen ist nicht weit verbreitet ist, damit interoperable Anwendungen ausführen können sie bedingte oder gar nicht verwendet werden soll. Weitere Informationen finden Sie unter [Batches ausführen](../../../odbc/reference/develop-app/executing-batches.md).

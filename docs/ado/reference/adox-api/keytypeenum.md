@@ -3,7 +3,7 @@ title: "Diesen zurück | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b560d4b5edd23593f5c149813a6be445bc79dd1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b7041fefba35f0b496473af4ca25e861ee798918
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keytypeenum"></a>Diesen zurück
 Gibt den Typ des [Schlüssel](../../../ado/reference/adox-api/key-object-adox.md): primäre, Fremdschlüssel oder eindeutig.  
   
-|Konstante|Wert|Description|  
+|Konstante|value|Description|  
 |--------------|-----------|-----------------|  
 |**adKeyPrimary**|1|Standard. Der Schlüssel ist ein Primärschlüssel ist.|  
 |**adKeyForeign**|2|Der Schlüssel ist ein Fremdschlüssel.|  

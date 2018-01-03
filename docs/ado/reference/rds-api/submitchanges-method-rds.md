@@ -1,11 +1,13 @@
 ---
 title: SubmitChanges-Methode (RDS) | Microsoft Docs
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2d7015e1a668697a12c373904c0bd71e22108449
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fc04a3ac77d6363c86f684b474fb5fa9a06c3c5e
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges-Methode (RDS)
 Ausstehende Änderungen von der lokal zwischengespeicherten und aktualisierbare übermittelt [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) mit der Datenquelle angegeben, der [verbinden](../../../ado/reference/rds-api/connect-property-rds.md) Eigenschaft oder die [URL](../../../ado/reference/rds-api/url-property-rds.md) Eigenschaft.  

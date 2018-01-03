@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 39532ba3a94d99ef4df7479d851348b6b179328a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 6dda329540bd228920e88a12c69a4a6f2b8a8327
+ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/16/2017
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Verbindungsresilienz im Windows ODBC-Treiber
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -61,9 +61,9 @@ ms.lasthandoff: 11/18/2017
   
  Wenn eine Anwendung eine Verbindung mit SQL_DRIVER_COMPLETE_REQUIRED herstellt und dann versucht, eine Anweisung über eine unterbrochene Verbindung ausführen, zeigt der ODBC-Treiber das Dialogfeld nicht erneut an. Darüber hinaus während der Wiederherstellung,  
   
--   Während der Wiederherstellung muss jeder Aufruf von **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**, zurückgeben **SQL_CD_TRUE**.  
+-   Während der Wiederherstellung muss jeder Aufruf von **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**, zurückgeben **SQL_CD_FALSE**.  
   
--   Bei Wiederherstellungsfehlern jeder Aufruf von **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**, zurückgeben **SQL_CD_FALSE**.  
+-   Bei Wiederherstellungsfehlern jeder Aufruf von **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**, zurückgeben **SQL_CD_TRUE**.  
   
  Die folgenden Statuscodes werden von jeder Funktion zurückgegeben, die auf dem Server einen Befehl ausführt:  
   

@@ -3,10 +3,10 @@ title: PDW-Zertifikatbereitstellung (Analytics Platform System)
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,18 +15,18 @@ ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
 caps.latest.revision: "22"
-ms.openlocfilehash: dd8daf48fc67d4325f5a76631ef2808f42a0dee3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c6cbaf559e51103648a4238245d44425c4d5af77
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pdw-certificate-provisioning"></a>PDW-Zertifikatbereitstellung
 Die **PDW Zertifikatbereitstellung** auf der Seite das Analytics Platform System**Configuration Manager** importiert oder von PDW verwendeten Zertifikats entfernt. 
 
 Verwenden, kann ein Zertifikat zum Verschlüsseln von Verbindungen sicheren Kommunikation mit dem Steuerungsknoten über SQL Server-Clients, Tools, mit denen die SQL Server PDW-Treiber unterstützen die [Admin Console](monitor-the-appliance-by-using-the-admin-console.md), und lädt Sie Integration Services. 
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
 Vor dem Installieren des Zertifikats an, führen Sie folgende Schritte aus:  
   
 1.  Ein gesichertes Zertifikat zu erhalten. Wenn Sie weitere Informationen zum Abrufen eines sicheren Zertifikats benötigen, wenden Sie sich an Microsoft Support.  

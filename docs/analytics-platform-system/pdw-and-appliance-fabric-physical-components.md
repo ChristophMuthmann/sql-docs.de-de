@@ -3,10 +3,10 @@ title: PDW Appliance Fabric physische Komponenten und (Analytics Platform System
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7748d3da-0b7c-4ec6-9c22-4897758ba573
 caps.latest.revision: "17"
-ms.openlocfilehash: 93e4b1521b213c9d29f3cae9bcc900cad6c6a674
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 95e80aaa641b04391d96b55f7491e21f1a30b6d1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pdw-and-appliance-fabric-physical-components"></a>Physische PDW und Appliance-Fabric-Komponenten
 Namen und Beschreibungen für die PDW und Appliance, physischen Fabric-Komponenten. PDW-Region enthält alle diese Komponenten.  
@@ -32,9 +32,9 @@ Dies zeigt die Namen der physischen Komponenten und, in dem sie in das erste Rac
   
 ![Komponentennamen für PDW-Region – HP](./media/pdw-and-appliance-fabric-physical-components/APS_HW_ComponentNames-HP.png "APS_HW_ComponentNames HP")  
   
-Der tatsächliche Name für PDW-Komponenten wird der Name der PDW-Region, gefolgt von einem Bindestrich, gefolgt vom Komponentennamen. Beispielsweise ist der Name der PDW-Region PDW123, sind die tatsächlichen Namen **PDW123 CTL01**, **PDW123 CMP01**usw..  
+Der tatsächliche Name für PDW-Komponenten wird der Name der PDW-Region, gefolgt von einem Bindestrich, gefolgt vom Komponentennamen. Beispielsweise ist der Name der PDW-Region PDW123, sind die tatsächlichen Namen **PDW123 CTL01**, **PDW123 CMP01**usw.  
   
-Auf ähnliche Weise wird der tatsächliche Name für die Appliance Fabric-Komponenten der Appliance-Domäne, gefolgt von einem Bindestrich, gefolgt vom Komponentennamen. Wenn die Domäne der Anwendung FSW123 ist, die Appliance Fabric VMs sind beispielsweise **FSW123 WDS**, **FSW123 AD01**, **FSW123 VMM**usw..  
+Auf ähnliche Weise wird der tatsächliche Name für die Appliance Fabric-Komponenten der Appliance-Domäne, gefolgt von einem Bindestrich, gefolgt vom Komponentennamen. Wenn die Domäne der Anwendung FSW123 ist, die Appliance Fabric VMs sind beispielsweise **FSW123 WDS**, **FSW123 AD01**, **FSW123 VMM**usw.  
   
 Hier ist eine konsolidierte Sicht der PDW-Region mit 6 Serverknoten aus.  
   

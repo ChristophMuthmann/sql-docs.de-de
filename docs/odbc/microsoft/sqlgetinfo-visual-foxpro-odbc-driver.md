@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: faba1c19d221ac79d0be4513f6a1b2802daef7ed
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a4c1d3356b91e3cb311c1dbf5ee7246bbb4baaa8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="b"></a>B  
  SQL_BOOKMARK_PERSISTENCE gibt SQL_BP_SCROLL zurück.  
   
-## <a name="c"></a>C  
+## <a name="c"></a>c  
  SQL_COLUMN_ALIAS gibt "Y" zurück.  
   
  SQL_CONCAT_NULL_BEHAVIOR gibt SQL_CB_NULL zurück.  

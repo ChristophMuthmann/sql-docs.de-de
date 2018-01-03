@@ -3,10 +3,10 @@ title: "Appliance-Installation und Konfiguration (Übersicht) (Analytics Platfor
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 10934f62-4acf-4ca5-b550-f426ba81fe11
 caps.latest.revision: "23"
-ms.openlocfilehash: 34d66302d0ed114c32e0c6294dfe7789e32a9253
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 719447d2f6d9376ec9db35f35c7f38b50ef460fa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appliance-installation-and-configuration-overview"></a>Appliance-Installation und Konfiguration (Übersicht)
 Führt SQL Server PDW Appliance-Administratoren über die ersten Schritte zum Einrichten und erste Schritte mit Ihrer neuen SQL Server PDW Appliance.  
@@ -43,7 +43,7 @@ Wenn Ihre IHV nicht die Hardware-Installation ausgeführt werden, gehen Sie folg
   
 |||  
 |-|-|  
-|**Task**|**Description**|  
+|**Task**|**Beschreibung**|  
 |Bestätigen Sie die Dokumentation|Vergewissern Sie sich, dass Sie alle erforderlichen Dokumente und Informationen von unabhängige Hardwarehersteller (IHVS) erhalten haben. Finden Sie unter [Informationen von Ihrem IHV &#40; abrufen Analyseplattformsystem &#41; ](information-to-obtain-from-your-ihv.md).|  
 |Installieren von hardware|Stellen Sie sicher, dass das Rechenzentrum die Appliance aufnehmen kann. Verschieben Sie die Appliance-Komponenten im Rechenzentrum. Die Netzwerkswitches, Stomverteilereinheiten, Rack und Verkabelung. Finden Sie unter [Hardwareinstallation &#40; Analyseplattformsystem &#41; ](hardware-installation.md).|  
   
@@ -51,14 +51,14 @@ Wenn Ihre IHV nicht die Hardware-Installation ausgeführt werden, gehen Sie folg
   
 |||  
 |-|-|  
-|**Task**|**Description**|  
+|**Task**|**Beschreibung**|  
 |Schalten Sie das Gerät|Schalten Sie jede Einheit Komponentenknoten in der erforderlichen Reihenfolge, warten nach Bedarf, um sicherzustellen, dass keine Fehler auftreten.|  
   
 ## <a name="ConfigureAppliance"></a>3. Konfigurieren Sie die Anwendung  
   
 |||  
 |-|-|  
-|**Task**|**Description**|  
+|**Task**|**Beschreibung**|  
 |||  
 |Konfigurieren Sie das Gerät mithilfe der SQL Server-PDW**Configuration Manager**|Verwenden Sie den Konfigurations-Manager, um Kennwörter Appliance, Zeitzonen, Netzwerk-und Firewalleinstellungen, Sicherheitszertifikate, und Leistung und andere Einstellungen auf Ihrer Anwendung festzulegen. Finden Sie unter [Appliance-Konfiguration &#40; Analyseplattformsystem &#41; ](appliance-configuration.md).|  
   
@@ -69,7 +69,7 @@ Wenn Ihre IHV nicht die Hardware-Installation ausgeführt werden, gehen Sie folg
   
 |||  
 |-|-|  
-|**Task**|**Description**|  
+|**Task**|**Beschreibung**|  
 |Anwenden von Updates für SQL Server PDW|(Optional) Sie müssen möglicherweise eine oder mehrere SQL Server PDW-Updates, um Ihre SQL Server PDW-Software auf die neueste Version aktualisieren anwenden. Finden Sie unter [anwenden Analytics Platform System Hotfixes &#40; Analyseplattformsystem &#41; ](apply-analytics-platform-system-hotfixes.md).|  
 |Konfigurieren Sie Windows Server Update Services|Konfigurieren Sie das Gerät zum Empfangen von Updates von Windows Server Update Services für unterstützende Software. Finden Sie unter [herunterladen und Anwenden von Microsoft Updates &#40; Analyseplattformsystem &#41; ](download-and-apply-microsoft-updates.md).|  
   
@@ -78,7 +78,7 @@ Nachdem Sie alle vorherigen Schritte abgeschlossen haben, ist Ihre Einheit für 
   
 |||  
 |-|-|  
-|**Task**|**Description**|  
+|**Task**|**Beschreibung**|  
 |Installieren von SQL Server PDW-Treiber und Konnektivität konfigurieren|Konfigurieren Sie lokale Computer keine Verbindung mit SQL Server PDW mithilfe von SQL Server Data Tools, Sqlcmd, Business Intelligence-Software oder andere Tools. <!-- MISSING LINKS See [Client Tools (SQL Server PDW)](assetId:///721851d5-e521-4d5b-ba6d-8e2e9d3c7808).-->|  
 |Erstellen von Anmeldungen und Server-Rollen und Zuweisen von Berechtigungen|Planen und Erstellen von Anmeldungen und Server-Rollen, mit dem Benutzer mit den entsprechenden Berechtigungen in SQL Server PDW anmelden können. <!-- MISSING LINKS See [PDW Permissions &#40;SQL Server PDW&#41;](../sqlpdw/pdw-permissions-sql-server-pdw.md).-->|  
 |Konfigurieren Sie das Azure Data Management Gateway|Das Gateway ermöglicht Azure Benutzern lokaler APS Datenzugriff von APS-Daten als OData Feeds secure verfügbar gemacht. Das Gateway ist bereits auf dem Knoten "Zugriffssteuerung" installiert. Bitten Sie Microsoft, um Unterstützung bei der Konfiguration.|  

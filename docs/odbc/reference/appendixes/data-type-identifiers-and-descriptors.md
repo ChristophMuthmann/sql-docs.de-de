@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0040a426bd11048a993e98015a536c76e1b4381c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1f54638aa02c885ee0e6fe8d14310d319dafb11c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>-Datentypbezeichnungen und Deskriptoren
 Die Datentypen aufgeführt, der [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) und [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) Abschnitten weiter oben in diesem Anhang werden "präzise" Datentypen: jeder Bezeichner verweist auf eine single-Datentyp. Es ist eine 1: 1-Entsprechung zwischen den Bezeichner und den Datentyp aus. Deskriptoren, führen jedoch nicht in allen Fällen einen einzelnen Wert verwenden, um Datentypen zu identifizieren. In einigen Fällen verwenden sie einen Datentyp für "verbose" und einen Typ Subcode. Für alle Datentypen mit Ausnahme der Datentypen "DateTime" und das Intervall der ausführlichen Typbezeichner ist identisch mit der präzise Typbezeichner, und der Wert in SQL_DESC_DATETIME_INTERVAL_CODE gleich 0 ist. Für die Datentypen "DateTime" und das Intervall jedoch ein ausführlichen Typ (SQL_DATETIME oder SQL_INTERVAL) in SQL_DESC_TYPE gespeichert ist, ein präziser in SQL_DESC_CONCISE_TYPE gespeichert wird und eine Subcode für jeden präziser in SQL_DESC_DATETIME_INTERVAL_CODE gespeichert ist. Eines dieser Felder wirkt sich auf die anderen. Weitere Informationen zu diesen Feldern finden Sie unter der [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) funktionsbeschreibung.  
