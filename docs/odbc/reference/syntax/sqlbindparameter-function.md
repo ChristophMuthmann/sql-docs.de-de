@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 083be2fe5cda6f28cb250a3e0bc4aaef9bf30ef2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 299e4ced3e6047f7d3e205d384d3191d43e70ef1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter-Funktion
 **Konformität**  
@@ -113,7 +113,7 @@ SQLRETURN SQLBindParameter(
 |HY104|Ungültiger Wert für Genauigkeit oder Dezimalstellen|Der Wert für das Argument angegebene *ColumnSize* oder *DecimalDigits* lag außerhalb des Bereichs von Werten, die von der Datenquelle für eine Spalte mit der angegebenen SQL-Datentyp unterstützt die  *ParameterType* Argument.|  
 |HY105|Ungültiger Parametertyp|(DM) der Wert für das Argument angegebene *InputOutputType* war ungültig. (Siehe "Kommentare".)|  
 |HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Nur trennen, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum Zustand "angehalten" [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYC00|Optionales Feature nicht implementiert|Der Treiber oder die Datenquelle unterstützt nicht die Konvertierung angegeben, durch die Kombination der Wert für das Argument angegebene *ValueType* und der treiberspezifischen-Wert, der für das Argument angegebene *ParameterType*.<br /><br /> Der Wert für das Argument angegebene *ParameterType* wurde eine gültige ODBC SQL-Datentypbezeichner, für den ODBC-Version vom Treiber unterstützt, jedoch wurde durch den Treiber oder die Datenquelle nicht unterstützt.<br /><br /> Der Treiber unterstützt nur ODBC 2.. *x* und dem Argument *ValueType* war es eines der folgenden:<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> und die Intervall-C-Datentypen in [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) in Anhang D:-Datentypen.<br /><br /> Der Treiber unterstützt nur die ODBC-Versionen vor 3.50 und dem Argument *ValueType* SQL_C_GUID wurde.|  
+|HYC00|Optionales Feature nicht implementiert|Der Treiber oder die Datenquelle unterstützt nicht die Konvertierung angegeben, durch die Kombination der Wert für das Argument angegebene *ValueType* und der treiberspezifischen-Wert, der für das Argument angegebene *ParameterType*.<br /><br /> Der Wert für das Argument angegebene *ParameterType* wurde eine gültige ODBC SQL-Datentypbezeichner, für den ODBC-Version vom Treiber unterstützt, jedoch wurde durch den Treiber oder die Datenquelle nicht unterstützt.<br /><br /> Der Treiber unterstützt nur ODBC 2. *x* und dem Argument *ValueType* war es eines der folgenden:<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> und die Intervall-C-Datentypen in [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) in Anhang D:-Datentypen.<br /><br /> Der Treiber unterstützt nur die ODBC-Versionen vor 3.50 und dem Argument *ValueType* SQL_C_GUID wurde.|  
 |HYT01|Verbindungstimeout abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Das Verbindungstimeout wird über festgelegt **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|Diese Funktion wird im Treiber nicht unterstützt.|(DM) der Treiber verknüpft sind, mit der *StatementHandle* der Funktion nicht unterstützt.|  
   
@@ -227,7 +227,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*Len*) oder SQL_DATA_AT_EXEC|E
  Für die gestreamte Ausgabe- oder gestreamte Eingabe-/Ausgabeparameter der *Pufferlänge* Argument wird ignoriert, da die Länge des Puffers in angegeben sind **SQLGetData**.  
   
 > [!NOTE]  
->  Wenn eine Anwendung ODBC 1.0 aufruft **SQLSetParam** in einer ODBC-3. *X* Treiber, der Treiber-Manager konvertiert diese zu einem Aufruf von **SQLBindParameter** in dem die *Pufferlänge* Argument weist immer SQL_SETPARAM_VALUE_MAX. Da der Treiber-Manager einen Fehler Wenn eine ODBC 3. zurückgibt. *x* setzt *Pufferlänge* zu SQL_SETPARAM_VALUE_MAX, eine ODBC 3.. *X* Treiber kann Hiermit können Sie bestimmen, wann sie von einer ODBC-1.0-Anwendung aufgerufen wird.  
+>  Wenn eine Anwendung ODBC 1.0 aufruft **SQLSetParam** in einer ODBC-3. *X* Treiber, der Treiber-Manager konvertiert diese zu einem Aufruf von **SQLBindParameter** in dem die *Pufferlänge* Argument weist immer SQL_SETPARAM_VALUE_MAX. Da der Treiber-Manager einen Fehler Wenn eine ODBC 3. zurückgibt. *x* setzt *Pufferlänge* zu SQL_SETPARAM_VALUE_MAX, eine ODBC 3. *X* Treiber kann Hiermit können Sie bestimmen, wann sie von einer ODBC-1.0-Anwendung aufgerufen wird.  
   
 > [!NOTE]  
 >  In **SQLSetParam**die Möglichkeit, in dem eine Anwendung die Länge des gibt, der **ParameterValuePtr* zu Puffern, damit der Treiber zurückkehren kann, Zeichen- oder Binärdaten und die Möglichkeit, in dem eine Anwendung sendet, eine Array von Zeichen oder binäre Parameterwerte an den Treiber sind treiberdefinierten.  
@@ -247,7 +247,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*Len*) oder SQL_DATA_AT_EXEC|E
   
      Um beispielsweise anzugeben, dass mit 10.000 Datenbytes gesendet wird **SQLPutData** in einen oder mehrere Aufrufe für einen Parameter SQL_LONGVARCHAR eine Anwendung festlegt **StrLen_or_IndPtr* auf SQL_LEN_DATA_AT_EXEC ( 10000).  
   
--   SQL_DATA_AT_EXEC. Die Daten für den Parameter mit gesendet werden, **SQLPutData**. Dieser Wert wird von ODBC 1.0-Anwendungen, die beim Aufruf von ODBC 3.. *x* Treiber. Weitere Informationen finden Sie unter "Übergeben Parameterwerte" weiter unten in diesem Abschnitt.  
+-   SQL_DATA_AT_EXEC. Die Daten für den Parameter mit gesendet werden, **SQLPutData**. Dieser Wert wird von ODBC 1.0-Anwendungen, die beim Aufruf von ODBC 3. *x* Treiber. Weitere Informationen finden Sie unter "Übergeben Parameterwerte" weiter unten in diesem Abschnitt.  
   
  Wenn *StrLen_or_IndPtr* ist ein null-Zeiger der Treiber wird davon ausgegangen, dass alle Werte der Eingabeparameter ungleich NULL sind und-Zeichen und Binärdatentypen Null-terminiert ist. Wenn *InputOutputType* ist SQL_PARAM_OUTPUT oder SQL_PARAM_OUTPUT_STREAM und *ParameterValuePtr* und *StrLen_or_IndPtr* sind beide null-Zeiger, der Treiber verwirft der Ausgabewert.  
   
@@ -385,7 +385,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*Len*) oder SQL_DATA_AT_EXEC|E
  Einige Fehler bei der Verarbeitung einer einzelnen Satz von Parametern dazu führen, dass die Verarbeitung der nachfolgenden Sätze von Parametern im Array zu beenden. Andere Fehler wirken sich nicht auf die Verarbeitung der nachfolgenden Parameter aus. Welche Fehler Verarbeitung angehalten werden, ist die treiberdefinierten. Wenn die Verarbeitung wird nicht beendet, alle Parameter im Array werden verarbeitet, aufgrund des Fehlers SQL_SUCCESS_WITH_INFO zurückgegeben und der Puffer von SQL_ATTR_PARAMS_PROCESSED_PTR definiert und der maximalen Anzahl von Parametersätzen verarbeitet festgelegt ist (gemäß der SQL_ATTR_PARAMSET_SIZE-Anweisungsattribut) inklusive Fehler Sätze.  
   
 > [!CAUTION]  
->  Tritt ein Fehler bei der Verarbeitung eines Arrays von Parametern des ODBC-Verhalten unterscheidet sich in ODBC 3.. *x* als ODBC 2. vorlag. *X*. In ODBC 2. *x*, der Funktion zurückgegebene endete, Verarbeitung und SQL_ERROR zurück. Der Puffer verweist die *Pirow* Argument **SQLParamOptions** enthalten die Anzahl der Fehlerzeile. In ODBC 3. *x*, die Funktion gibt SQL_SUCCESS_WITH_INFO zurück und Verarbeiten von Mai entweder beendet oder fortgesetzt werden. Wenn es weiterhin auftritt, wird das SQL_ATTR_PARAMS_PROCESSED_PTR angegebene Puffer festgelegt werden, auf den Wert aller Parameter verarbeitet, einschließlich derer, die zu einem Fehler führten. Diese Änderung im Verhalten kann für vorhandene Anwendungen beeinträchtigen.  
+>  Tritt ein Fehler bei der Verarbeitung eines Arrays von Parametern des ODBC-Verhalten unterscheidet sich in ODBC 3. *x* als ODBC 2. vorlag. *X*. In ODBC 2. *x*, der Funktion zurückgegebene endete, Verarbeitung und SQL_ERROR zurück. Der Puffer verweist die *Pirow* Argument **SQLParamOptions** enthalten die Anzahl der Fehlerzeile. In ODBC 3. *x*, die Funktion gibt SQL_SUCCESS_WITH_INFO zurück und Verarbeiten von Mai entweder beendet oder fortgesetzt werden. Wenn es weiterhin auftritt, wird das SQL_ATTR_PARAMS_PROCESSED_PTR angegebene Puffer festgelegt werden, auf den Wert aller Parameter verarbeitet, einschließlich derer, die zu einem Fehler führten. Diese Änderung im Verhalten kann für vorhandene Anwendungen beeinträchtigen.  
   
  Wenn **SQLExecute** oder **SQLExecDirect** gibt vor dem Abschluss der Verarbeitung von alle Parametersätze, die in einem Parameterarray, z. B. wenn SQL_ERROR oder SQL_NEED_DATA zurückgegeben wird, enthält das Statusarray Status für diesen Parameter, die bereits verarbeitet wurden. Der Speicherort, auf das Feld SQL_DESC_ROWS_PROCESSED_PTR in den IPD enthält die Nummer der Zeile in das Parameterarray an, das den Fehlercode SQL_ERROR oder SQL_NEED_DATA verursacht hat. Wenn ein Array von Parametern an eine SELECT-Anweisung gesendet wird, wird die Verfügbarkeit des Status Arraywerte treiberdefinierten; Diese möglicherweise zur Verfügung, nachdem die Anweisung ausgeführt wurde, oder als Ergebnis legt abgerufen werden.  
   
@@ -469,7 +469,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*Len*) oder SQL_DATA_AT_EXEC|E
  Wenn der Aufruf von **SQLBindParameter** ein Fehler auftritt, der Inhalt der deskriptorfelder, die im APD festgelegt haben, würden sind nicht definiert und Feld SQL_DESC_COUNT APD bleibt unverändert. Darüber hinaus die SQL_DESC_LENGTH, SQL_DESC_PRECISION SQL_DESC_SCALE und SQL_DESC_TYPE Felder des entsprechenden Datensatzes in den IPD sind nicht definiert, und das SQL_DESC_COUNT-Feld, der die IPD bleibt unverändert.  
   
 ## <a name="conversion-of-calls-to-and-from-sqlsetparam"></a>Konvertierung von Aufrufen an und von SQLSetParam  
- Wenn eine Anwendung ODBC 1.0 aufruft **SQLSetParam** in einer ODBC-3. *X* -Treiber verwenden, die ODBC 3.. *X* Treibermanager ordnet den Aufruf aus, wie in der folgenden Tabelle gezeigt.  
+ Wenn eine Anwendung ODBC 1.0 aufruft **SQLSetParam** in einer ODBC-3. *X* -Treiber verwenden, die ODBC 3. *X* Treibermanager ordnet den Aufruf aus, wie in der folgenden Tabelle gezeigt.  
   
 |Aufrufen von ODBC 1.0-Anwendung|Rufen Sie ODBC-3. *x* Treiber|  
 |----------------------------------|-------------------------------|  

@@ -3,7 +3,7 @@ title: Herstellen einer Verbindung mit der Sybase (SybaseToSQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4f565c0acba658142e0542ce2a1806d0216f4f8b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ebf5f7f5c12a8a2e3af85ba2901e2348da92c30b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Herstellen einer Verbindung mit der Sybase (SybaseToSQL)
 Verwenden der **Herstellen einer Verbindung mit der Sybase** Dialogfeld Verbindung mit der Sybase Adaptive Server Enterprise (ASE)-Instanz, die Sie migrieren möchten.  
   
 Zum Zugriff auf dieses Dialogfeld, in dem **Datei** klicken Sie im Menü **Herstellen einer Verbindung mit der Sybase**. Wenn Sie zuvor eine Verbindung hergestellt haben, wird der Befehl ist **eine erneute Verbindung zu Sybase**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Anbieter**  
 Wählen Sie einen der installierten Anbieter auf dem Computer für die Verbindung mit der Sybase-Server.  
   
@@ -44,7 +44,7 @@ Geben Sie an, oder wählen Sie den Namen oder IP-Adresse des Adaptive Server. De
 **Serverport**  
 Wenn Sie einen nicht standardmäßigen Port für Verbindungen mit ASE verwenden, geben Sie die Portnummer. Die Standardportnummer ist 5000. Dies ist ein Modus "standard"-Option.  
   
-**Benutzername**  
+**User name**  
 Geben Sie den Benutzernamen ein, der zum Herstellen einer ASE verwendet wird. Dies ist ein Modus "standard"-Option.  
   
 **Kennwort**  

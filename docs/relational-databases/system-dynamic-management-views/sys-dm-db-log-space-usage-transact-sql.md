@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f4dfc548cdc7c2ece756e86f753a8bc21513f158
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f7e0e14e96c3581b7a66fad23e21ac7a15808a1f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmdblogspaceusage-transact-sql"></a>Sys.dm_db_log_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
   Gibt Speicherplatz Nutzungsinformationen für das Datenbankprotokoll. (Alle Protokolldateien werden kombiniert.) 
   
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|Datenbank-ID|  
 |total_log_size_in_bytes |**bigint** |Die Größe des Protokolls  |
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="a-determine-the-amount-of-free-log-space-in-tempdb"></a>A. Bestimmen Sie die Menge des freien Protokollspeicherplatzes in tempdb   
 Die folgende Abfrage gibt den insgesamt freien Speicherplatz in Megabyte (MB) in Tempdb verfügbar.
 
-```tsql
+```sql
 USE tempdb;  
 GO  
 

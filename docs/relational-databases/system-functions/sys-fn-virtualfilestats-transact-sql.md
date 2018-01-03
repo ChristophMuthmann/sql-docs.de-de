@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 75af14c94dd17ae6caead3f6b5dee9e0bf0b257e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f09bc032ffe4de52fcb7d9f46e4fbdd4450c8c14
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 ### <a name="a-displaying-statistical-information-for-a-database"></a>A. Anzeigen von statistischen Informationen zu einer Datenbank  
  Das folgende Beispiel zeigt statistische Informationen zur Datei ID 1 in der Datenbank an, die die ID `1` hat.  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(1, 1);  
 GO  
@@ -90,7 +90,7 @@ GO
 ### <a name="b-displaying-statistical-information-for-a-named-database-and-file"></a>B. Anzeigen von statistischen Informationen zu einer benannten Datenbank und Datei  
  Das folgende Beispiel zeigt statistische Informationen zur Protokolldatei in der Beispieldatenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] an. Die Systemfunktion `DB_ID` dient zum Angeben der *Database_id* Parameter.  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(DB_ID(N'AdventureWorks2012'), 2);  
 GO  
@@ -99,7 +99,7 @@ GO
 ### <a name="c-displaying-statistical-information-for-all-databases-and-files"></a>C. Anzeigen von statistischen Informationen zu allen Datenbanken und Dateien  
  Das folgende Beispiel zeigt statistische Informationen zu allen Dateien in allen Datenbanken der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an.  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(NULL,NULL);  
 GO  

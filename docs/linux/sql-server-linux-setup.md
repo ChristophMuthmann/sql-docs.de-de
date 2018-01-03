@@ -4,7 +4,7 @@ description: Installieren, aktualisieren und Deinstallieren von SQL Server on Li
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 10/26/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 65835ac1faf75664ecdbac8907c74906ccc4175e
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
+ms.openlocfilehash: 180c8492531da7c3b9c15ebef28917b52e0869ce
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>-Installationsleitfaden für SQL Server on Linux
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 12/01/2017
 In diesem Thema erläutert das installieren, aktualisieren und Deinstallieren von SQL Server-2017 unter Linux. SQL Server-2017 wird unter Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) und Ubuntu unterstützt. Es ist auch verfügbar als Docker-Image, die auf den Docker-Modul unter Linux oder Docker für Windows/Mac ausgeführt werden kann
 
 > [!TIP]
-> Wechseln Sie zum schnellen Einstieg in eines der Schnellstart-Lernprogrammen für [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), oder [Docker](quickstart-install-connect-docker.md).
+> Wechseln Sie zum schnellen Einstieg in eines der Schnellstarts für [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), oder [Docker](quickstart-install-connect-docker.md).
 
 ## <a id="supportedplatforms"></a>Unterstützte Plattformen
 
@@ -40,6 +40,10 @@ SQL Server-2017 wird auf den folgenden Linux-Plattformen unterstützt:
 | **SUSE Linux Enterprise Server** | v12 SP2 | [SLES v12 SP2 abrufen](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Ubuntu 16.04 abrufen](http://www.ubuntu.com/download/server)
 | **Docker-Modul** | 1.8+ | [Abrufen von Docker](http://www.docker.com/products/overview)
+
+Microsoft unterstützt die Bereitstellung und Verwaltung von SQL Server-Container mithilfe von OpenShift und Kubernetes.
+
+Die neuesten Supportrichtlinie für SQL Server-2017, finden Sie unter [technischen Support-Richtlinie für Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
 
 ## <a id="system"></a>Systemanforderungen
 
@@ -62,7 +66,7 @@ Bei Verwendung von **System NFS (Network File)** Remotefreigaben in der Produkti
 
 ## <a id="platforms"></a> Installieren von SQL Server
 
-Sie können SQL Server on Linux über die Befehlszeile installieren. Anleitungen hierzu finden Sie in den folgenden Schnellstart-Lernprogrammen:
+Sie können SQL Server on Linux über die Befehlszeile installieren. Anleitungen hierzu finden Sie eine der folgenden Schnellstarts aus:
 
 - [Installieren Sie auf Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installieren Sie auf SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
@@ -162,7 +166,7 @@ Das Ende der Repository-URL stellt den Repository-Typ:
 Um die CU oder GDR-Repositorys zu konfigurieren, verwenden Sie die folgenden Schritte aus:
 
 > [!NOTE]
-> Die [Quick start-Lernprogramme](#platforms) CU Repository konfigurieren. Wenn Sie diese Lernprogramme ausführen, müssen Sie nicht die folgenden Schritte verwenden weiterhin die CU-Repository verwenden. Diese Schritte sind nur notwendig, zum Ändern von Ihr konfigurierte Repositorys.
+> Die [Schnellstarts](#platforms) CU Repository konfigurieren. Wenn Sie diese Lernprogramme ausführen, müssen Sie nicht die folgenden Schritte verwenden weiterhin die CU-Repository verwenden. Diese Schritte sind nur notwendig, zum Ändern von Ihr konfigurierte Repositorys.
 
 1. Entfernen Sie ggf. die zuvor konfigurierte Repository.
 
@@ -202,7 +206,7 @@ Um die CU oder GDR-Repositorys zu konfigurieren, verwenden Sie die folgenden Sch
 
 Sie können eine unbeaufsichtigte Installation auf folgende Weise ausführen:
 
-- Führen Sie der ersten in Schritten der [Quick start-Lernprogramme](#platforms) Repositorys registrieren und Installieren von SQL Server.
+- Führen Sie der ersten in Schritten der [Schnellstarts](#platforms) Repositorys registrieren und Installieren von SQL Server.
 - Bei der Ausführung `mssql-conf setup`legen [Umgebungsvariablen](sql-server-linux-configure-environment-variables.md) und Verwenden der `-n` (keine Aufforderung) Option.
 
 Das folgende Beispiel konfiguriert die Developer Edition von SQL Server mit der **MSSQL_PID** -Umgebungsvariablen angegeben. Außerdem akzeptiert den Endbenutzer-Lizenzvertrag (**ACCEPT_EULA**) und legt das SA-Benutzerkennwort (**MSSQL_SA_PASSWORD**). Die `-n` Parameter führt eine unaufgefordert-Installation, in dem die Konfigurationswerte aus der Umgebungsvariablen abgerufen werden.
@@ -266,7 +270,7 @@ Nach der Installation können Sie auch andere optionale Pakete für SQL Server i
 - [SQL Server-Volltextsuche](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integrationsservices (Ubuntu)](sql-server-linux-setup-ssis.md)
 
-Verbinden Sie mit Ihrer SQL Server-Instanz zu erstellende und Verwalten von Datenbanken zu starten. Um zu beginnen, finden Sie unter den Schnellstart-Lernprogrammen:
+Verbinden Sie mit Ihrer SQL Server-Instanz zu erstellende und Verwalten von Datenbanken zu starten. Um zu beginnen, finden Sie in der Schnellstarts:
 
 - [Installieren Sie auf Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installieren Sie auf SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)

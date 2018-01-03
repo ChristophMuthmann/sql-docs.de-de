@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 25675b2dc83e5251b381bf95af353deb647d563a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c4314d23f344df87d270f526a64e4d6d0f033dab
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="managedbackupfngethealthstatus-transact-sql"></a>managed_backup.fn_get_health_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Syntax  
   
-```tsql  
+```sql  
 managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 'time_2')  
 ```  
   
@@ -59,18 +59,18 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|number_of_storage_connectivity_errors|int|Die Anzahl von Verbindungsfehlern, die auftreten, wenn das Programm eine Verbindung mit dem Windows Azure-Speicherkonto herstellt.|  
-|number_of_sql_errors|int|Die Anzahl der Fehler, die zurückgegeben werden, wenn das Programm eine Verbindung mit der SQL Server Engine herstellt.|  
-|number_of_invalid_credential_errors|int|Die Anzahl der Fehler, die zurückgegeben werden, wenn das Programm versucht, sich mit den SQL-Anmeldeinformationen zu authentifizieren.|  
-|number_of_other_errors|int|Die Anzahl der Fehler aus anderen Kategorien außer Konnektivität, SQL oder Anmeldeinformationen.|  
-|number_of_corrupted_or_deleted_backups|int|Die Anzahl der gelöschten oder beschädigte Sicherungsdateien.|  
-|number_of_backup_loops|int|Die Anzahl der Scans, die der Sicherungs-Agent für alle mit [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] konfigurierten Datenbanken ausführt sind.|  
-|number_of_retention_loops|int|Die Anzahl der Datenbankscans, die zur Ermittlung der festgelegten Beibehaltungsdauer ausgeführt werden.|  
+|number_of_storage_connectivity_errors|ssNoversion|Die Anzahl von Verbindungsfehlern, die auftreten, wenn das Programm eine Verbindung mit dem Windows Azure-Speicherkonto herstellt.|  
+|number_of_sql_errors|ssNoversion|Die Anzahl der Fehler, die zurückgegeben werden, wenn das Programm eine Verbindung mit der SQL Server Engine herstellt.|  
+|number_of_invalid_credential_errors|ssNoversion|Die Anzahl der Fehler, die zurückgegeben werden, wenn das Programm versucht, sich mit den SQL-Anmeldeinformationen zu authentifizieren.|  
+|number_of_other_errors|ssNoversion|Die Anzahl der Fehler aus anderen Kategorien außer Konnektivität, SQL oder Anmeldeinformationen.|  
+|number_of_corrupted_or_deleted_backups|ssNoversion|Die Anzahl der gelöschten oder beschädigte Sicherungsdateien.|  
+|number_of_backup_loops|ssNoversion|Die Anzahl der Scans, die der Sicherungs-Agent für alle mit [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] konfigurierten Datenbanken ausführt sind.|  
+|number_of_retention_loops|ssNoversion|Die Anzahl der Datenbankscans, die zur Ermittlung der festgelegten Beibehaltungsdauer ausgeführt werden.|  
   
 ## <a name="best-practices"></a>Bewährte Methoden  
  Anhand dieser aggregierten Anzahl kann die Systemintegrität überwacht werden. Wenn die Spalte number_ of_retention_loops nach 30 Minuten beispielsweise 0 ist, dauert die Überwachung der Beibehaltungsdauer entweder sehr lange oder funktioniert nicht ordnungsgemäß. Spalten mit Werten ungleich 0 können auf Probleme hindeuten. Sie sollten die Protokolle der erweiterten Ereignisse prüfen, um das Problem einzugrenzen. Alternativ können Sie mithilfe der gespeicherten Prozedur **managed_backup.sp_get_backup_diagnostics** zum Abrufen einer Liste der erweiterten Ereignisse, um die Details des Fehlers zu finden.  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert **wählen** Berechtigungen für die Funktion.  

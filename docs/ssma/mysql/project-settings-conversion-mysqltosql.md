@@ -1,7 +1,7 @@
 ---
 title: Projekteinstellungen (Konvertierung) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5c40fe3bcc95b062b188c041477011358d60fba2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9062c61ad2a799a20370c8b406843e0e4a209869
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>Projekteinstellungen (Konvertierung) (MySQLToSQL)
 Die Seite "Konvertierung", der die **Projekteinstellungen** Dialogfeld enthält Einstellungen, anpassen, wie SSMA MySQL-Syntax in SQL Server- bzw. SQL Azure-Syntax konvertiert.  
@@ -35,7 +35,7 @@ Bereich Konvertierung finden Sie in der **Projekteinstellungen** und **Projekt S
   
 -   Zum Angeben von Einstellungen für das aktuelle Projekt auf die **Tools** klicken Sie im Menü **Projekteinstellungen**, klicken Sie dann auf **allgemeine** am unteren Rand der linken Bereich, und klicken Sie dann auf **Konvertierung**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
   
 ### <a name="collate-clause"></a>COLLATE-Klausel  
   

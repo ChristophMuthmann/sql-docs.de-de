@@ -3,7 +3,7 @@ title: Verwalten von Sicherungen (SybaseToSQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5b6c378905edce07e46d048eae391be837352e07
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 89df7322e4025ffb79f3ae2aecb2ef67fa52c8d7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managing-backups-sybasetosql"></a>Verwalten von Sicherungen (SybaseToSQL)
 Sybase Sicherungsverwaltung können Sie sichern und Wiederherstellen der Daten vor oder nach dem Ausführen eines Tests Tabelle. Sie können auch der Sicherungsinhalt Sicherungsinhalt verwalten Dialogfeld verwalten.  

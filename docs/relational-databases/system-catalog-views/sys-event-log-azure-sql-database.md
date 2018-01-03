@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4df7543112666b498a2896d62d16186a83d6e4af
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 77682d906a1fe24f371e6ec31c11e586398cdba6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 |**event_type**|**nvarchar(64)**|Der Typ des Ereignisses.<br /><br /> Finden Sie unter [Ereignistypen](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) eine Liste der möglichen Werte.|  
 |**event_subtype**|**int**|Der Untertyp des eintretenden Ereignisses.<br /><br /> Finden Sie unter [Ereignistypen](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) eine Liste der möglichen Werte.|  
 |**event_subtype_desc**|**nvarchar(64)**|Die Beschreibung des Ereignisuntertyps.<br /><br /> Finden Sie unter [Ereignistypen](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) eine Liste der möglichen Werte.|  
-|**Schweregrad**|**int**|Der Schweregrad des Fehlers. Folgende Werte sind möglich:<br /><br /> 0 = Information<br />1 = Warning<br />2 = Fehler|  
+|**severity**|**int**|Der Schweregrad des Fehlers. Folgende Werte sind möglich:<br /><br /> 0 = Information<br />1 = Warning<br />2 = Fehler|  
 |**event_count**|**int**|Die Anzahl, wie oft dieses Ereignis eingetreten ist für die angegebene Datenbank innerhalb des angegebenen Zeitintervalls (**Start_time** und **End_time**).|  
 |**Beschreibung**|**nvarchar(max)**|Detaillierte Beschreibung des Ereignisses.<br /><br /> Finden Sie unter [Ereignistypen](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) eine Liste der möglichen Werte.|  
 |**additional_data**|**XML**|*Hinweis: Dieser Wert ist immer NULL für Azure SQL-Datenbank V12. Finden Sie unter [Beispiele](#Deadlock) im Abschnitt zum Abrufen von Deadlockereignisse für V12.*<br /><br /> Für **Deadlock** enthält Ereignisse, diese Spalte das deadlockdiagramm. Bei anderen Ereignistypen enthält diese Spalte NULL. |  
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]  
 >  Diese Sicht enthält nicht alle [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Datenbankereignisse, die eintreten können, sondern nur die hier aufgeführten. Zusätzliche Kategorien, Ereignistypen und Untertypen werden in zukünftigen Versionen von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ggf. hinzugefügt.  
   
-|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**Schweregrad**|**Beschreibung**|  
+|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**Beschreibung**|  
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
 |**Konnektivität**|**connection_successful**|0|**connection_successful**|0|Die Verbindung mit der Datenbank war erfolgreich.|  
 |**Konnektivität**|**connection_failed**|0|**invalid_login_name**|2|Der Anmeldename ist in dieser SQL Server-Version nicht gültig.|  
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/21/2017
   
  Wenn ein Benutzer zum Beispiel aufgrund eines ungültigen Anmeldenamens sieben Mal zwischen 11:00 und 11:05 Uhr am 05.02.2012 (UTC) keine Verbindung mit der Datenbank Database1 herstellen kann, sind diese Informationen in dieser Sicht in einer einzelnen Zeile verfügbar:  
   
-|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**Schweregrad**|**event_count**|**Beschreibung**|**additional_data**|  
+|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**Beschreibung**|**additional_data**|  
 |------------------------|---------------------|-------------------|-------------------------|---------------------|------------------------|------------------------------|------------------|----------------------|---------------------|--------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
@@ -175,7 +175,7 @@ WHERE event_type = 'throttling'
 ### <a name="db-scoped-extended-event"></a>DB-Gültigkeitsbereich erweiterte Ereignisse  
  Verwenden Sie den folgenden Beispielcode zum Einrichten der Sitzungs für die Db-Gültigkeitsbereich erweiterte Ereignisse (XEvent):  
   
-```tsql  
+```sql  
 IF EXISTS  
     (SELECT * from sys.database_event_sessions  
         WHERE name = 'azure_monitor_deadlock_session')  
@@ -207,7 +207,7 @@ ALTER EVENT SESSION azure_monitor_deadlock_session
 
 Verwenden Sie die folgende Abfrage überprüft, ob ein Deadlock vorhanden ist.  
   
-```tsql  
+```sql  
 WITH CTE AS (  
     SELECT CAST(xet.target_data AS XML)  AS [target_data_XML]  
         FROM            sys.dm_xe_database_session_targets AS xet  

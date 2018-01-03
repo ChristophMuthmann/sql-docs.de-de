@@ -1,7 +1,7 @@
 ---
 title: "Verknüpfen von Access-Anwendungen mit SQLServer - Azure SQL-Datenbank | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -33,11 +33,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
-ms.openlocfilehash: b4ac30b2c0275de85f7ebab7cb8c7d0876f3142f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aa06650106584d975c6bf45855473dc1d80a100d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Verknüpfen von Access-Anwendungen mit SQL Server - Azure SQL-Datenbank (AccessToSQL)
 Wenn Sie die vorhandenen Access-Anwendungen mit verwenden möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], können Sie die ursprünglichen Access-Tabellen verknüpfen, um die migrierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Tabellen. Verknüpfen die Access-Datenbank ändert, sodass Ihre Abfragen, Formulare, Berichte und Datenzugriffsseiten die Daten im Verwenden der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder SQL Azure-Datenbank nicht die Daten in der Access-Datenbank.  

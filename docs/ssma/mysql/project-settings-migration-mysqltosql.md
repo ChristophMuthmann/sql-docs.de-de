@@ -1,7 +1,7 @@
 ---
 title: Projekteinstellungen (Migration) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8a9e6a74fda3bfce0f18aa2d8b987d8593d225fd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 97ea6eb0162b544f3c0666042b0ae70a5783fe43
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-migration-mysqltosql"></a>Projekteinstellungen (Migration) (MySQLToSQL)
 Die Seite "Migration", der die **Projekteinstellungen** Dialogfeld enthält Einstellungen, anpassen, wie SSMA Daten aus MySQL zu SQL Server migriert.  
@@ -35,7 +35,7 @@ Der Bereich für die Migration finden Sie in der **Projekteinstellungen** und **
   
 -   Zum Angeben von Einstellungen für das aktuelle Projekt auf die **Tools** klicken Sie im Menü **Projekteinstellungen**, klicken Sie auf **allgemeine** am unteren Rand der linken Bereich, und klicken Sie dann auf **Migration**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
   
 ### <a name="bulk-copy"></a>Massenkopieren  
   

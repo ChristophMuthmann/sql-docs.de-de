@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 91602b959da7ed3b622fcc77e59670cdfc803722
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e024b0147fb716adfba320d2129a7d623bbff85d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ Planhandle ist ein Hashwert aus dem kompilierten Plan des gesamten Batchs abgele
 Folgender Ausdruck ist ein einfaches Beispiel zur Veranschaulichung der Übergabe einer **Sql_handle** entweder direkt oder über **CROSS APPLY**.
   1.  Erstellen Sie die Aktivität.  
 Führen Sie die folgende T-SQL in ein neues Abfragefenster im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].   
-      ```tsql
+      ```sql
       -- Identify current spid (session_id)
       SELECT @@SPID;
       GO
@@ -108,7 +108,7 @@ Führen Sie die folgende T-SQL in ein neues Abfragefenster im [!INCLUDE[ssManStu
     2.  Mit **CROSS APPLY**.  
     Sql_handle von **Sys. dm_exec_requests** übergeben werden, um **Sys. dm_exec_sql_text** mit **CROSS APPLY**. Öffnen Sie ein neues Abfragefenster, und übergeben Sie die Spid, die in Schritt 1 identifiziert. In diesem Beispiel wird die Spid entspricht `59`.
 
-        ```tsql
+        ```sql
         SELECT t.*
         FROM sys.dm_exec_requests AS r
         CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) AS t
@@ -118,7 +118,7 @@ Führen Sie die folgende T-SQL in ein neues Abfragefenster im [!INCLUDE[ssManStu
     2.  Übergeben von **Sql_handle** direkt.  
 Abrufen der **Sql_handle** aus **Sys. dm_exec_requests**. Übergeben Sie dann die **Sql_handle** direkt zu **Sys. dm_exec_sql_text**. Öffnen Sie ein neues Abfragefenster, und übergeben Sie die Spid, die in Schritt 1 identifizierten **Sys. dm_exec_requests**. In diesem Beispiel wird die Spid entspricht `59`. Übergeben Sie das zurückgegebene **Sql_handle** als Argument an **Sys. dm_exec_sql_text**.
 
-        ```tsql
+        ```sql
         -- acquire sql_handle
         SELECT sql_handle FROM sys.dm_exec_requests WHERE session_id = 59  -- modify this value with your actual spid
         
@@ -130,7 +130,7 @@ Abrufen der **Sql_handle** aus **Sys. dm_exec_requests**. Übergeben Sie dann di
 ### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>B. Abrufen von Informationen zu den fünf Abfragen mit der höchsten durchschnittlichen CPU-Zeit  
  Im folgenden Beispiel wird der Text der SQL-Anweisung und die durchschnittliche CPU-Zeit für die fünf Abfragen mit der höchsten durchschnittlichen CPU-Zeit zurückgegeben.  
   
-```tsql  
+```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
     SUBSTRING(st.text, (qs.statement_start_offset/2)+1,   
         ((CASE qs.statement_end_offset  
@@ -145,7 +145,7 @@ ORDER BY total_worker_time/execution_count DESC;
 ### <a name="c-provide-batch-execution-statistics"></a>C. Geben Sie die Batchausführung Statistiken  
  Im folgenden Beispiel wird der Text von SQL-Abfragen zurückgegeben, die in Batches ausgeführt werden. Außerdem werden statistische Informationen zu den Abfragen bereitgestellt.  
   
-```tsql  
+```sql  
 SELECT s2.dbid,   
     s1.sql_handle,    
     (SELECT TOP 1 SUBSTRING(s2.text,statement_start_offset / 2+1 ,   

@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
-ms.openlocfilehash: 410d3c7c51e1b5fc0824da8c5d3f788ccb77f104
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: fa96adb2d8a3cf5430ca09b636007887b7863df1
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Installieren Sie die SQL Server-Befehlszeilentools Sqlcmd und Bcp unter Linux
 
@@ -206,7 +206,7 @@ Beginnend mit SQL Server 2017 CTP 2.0, sind die SQL Server-Befehlszeilentools in
 
 Die folgende Tabelle enthält den Speicherort für die neuesten Tools Pakete:
 
-| Tools-Paket | Version | Herunterladen |
+| Tools-Paket | Versionsoptionen | Herunterladen |
 |-----|-----|-----|
 | Red Hat-RPM-Tools-Paket | 14.0.5.0-1 | [MSSQL-Tools-RPM-Paket](https://packages.microsoft.com/rhel/7.3/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
 | SLES RPM-Tools-Paket | 14.0.5.0-1 | [MSSQL-Tools-RPM-Paket](https://packages.microsoft.com/sles/12/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
@@ -215,7 +215,7 @@ Die folgende Tabelle enthält den Speicherort für die neuesten Tools Pakete:
 
 Diese Pakete richten sich nach **Msodbcsql**, und muss zunächst installiert werden. Die **Msodbcsql** Paket besteht eine Abhängigkeit auf **UnixODBC-entwickl** (RPM) oder **Unixodbc-Dev** (Debian). Der Speicherort, der die **Msodbcsql** Pakete werden in der folgenden Tabelle aufgeführt:
 
-| Msodbcsql-Paket | Version | Herunterladen |
+| Msodbcsql-Paket | Versionsoptionen | Herunterladen |
 |-----|-----|-----|
 | Red Hat-RPM-Msodbcsql-Paket | 13.1.6.0-1 | [Msodbcsql-RPM-Paket](https://packages.microsoft.com/rhel/7.3/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
 | SLES RPM-Msodbcsql-Paket | 13.1.6.0-1 | [Msodbcsql-RPM-Paket](https://packages.microsoft.com/sles/12/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
@@ -261,7 +261,7 @@ Verwenden Sie die folgenden Schritte aus, um diese Pakete manuell zu installiere
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Ein Beispiel zum Verwenden von **Sqlcmd** zum Herstellen einer Verbindung mit SQL Server, und erstellen Sie eine Datenbank, finden Sie in einem der folgenden Quick start Lernprogramme:
+Ein Beispiel zum Verwenden von **Sqlcmd** zum Herstellen einer Verbindung mit SQL Server, und erstellen Sie eine Datenbank, finden Sie in der folgenden Schnellstarts:
 
 - [Installieren Sie auf Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installieren Sie auf SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)

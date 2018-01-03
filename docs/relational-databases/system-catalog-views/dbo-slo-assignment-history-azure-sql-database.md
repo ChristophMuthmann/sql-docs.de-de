@@ -1,13 +1,12 @@
 ---
 title: dbo. slo_assignment_history (Azure SQL-Datenbank) | Microsoft Docs
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 06/10/2016
 ms.prod: 
 ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database
 ms.service: sql-database
-ms.suite: 
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -26,14 +25,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 61bf1f0541df9085235dc00072624e1e91425cc5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fcff1c5141e6556f8cb4184284769e3be537f80a
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dbosloassignmenthistory-azure-sql-database"></a>dbo.slo_assignment_history (Azure SQL-Datenbank)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
     
 > [!IMPORTANT]  
@@ -49,16 +48,16 @@ ms.lasthandoff: 11/09/2017
   
 -   SLO-Zuweisungsfehler, die in der error_code-Spalte und error_desc-Spalte aufgezeichnet werden.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |database_name|**sysname**|Der Name der Datenbank.|  
 |database_id|**int**|Die ID der Datenbank.|  
-|create_date|**DateTimeOffset(7)**|Das Datum der Datenbankerstellung.|  
+|create_date|**datetimeoffset(7)**|Das Datum der Datenbankerstellung.|  
 |service_objective_name|**sysname**|Der Name des Servicelevelziels (SLO, Service Level Objective).|  
 |service_objective_id|**uniqueidentifier**|Die ID des SLOs.|  
 |operation_id|**uniqueidentifier**|ID des Vorgangs.|  
-|operation_start_time|**DateTimeOffset(7)**|Die Startzeit der Datenbank-SLO-Änderungsanforderung.|  
-|operation_end_time|**DateTimeOffset(7)**|Die Beendigungszeit der Datenbank-SLO-Änderungsanforderung.|  
+|operation_start_time|**datetimeoffset(7)**|Die Startzeit der Datenbank-SLO-Änderungsanforderung.|  
+|operation_end_time|**datetimeoffset(7)**|Die Beendigungszeit der Datenbank-SLO-Änderungsanforderung.|  
 |error_code|**int**|Der Fehlercode der Datenbank-SLO-Änderungsanforderung.|  
 |error_desc|**nvarchar**|Die Beschreibung des Fehlers in der Datenbank-SLO-Änderungsanforderung.|  
   

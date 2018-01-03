@@ -1,7 +1,7 @@
 ---
 title: Herstellen einer Verbindung mit Oracle-Datenbank (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -18,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: 848af110f61c80cc8b54b890f8754844506948f0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: df379493d026c3cc3da3bf01ea036e8f32072625
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-to-oracle-database-oracletosql"></a>Herstellen einer Verbindung mit Oracle-Datenbank (OracleToSQL)
 Zum Migrieren von Oracle-Datenbanken zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], Sie müssen die Verbindung mit der Oracle-Datenbank, die Sie migrieren möchten. Wenn Sie eine Verbindung herstellen, SSMA Ruft Metadaten zu allen Oracle-Schemas ab und zeigt ihn dann in der Oracle-Metadaten-Explorer-Bereich an. SSMA speichert Informationen über den Datenbankserver, aber die Kennwörter werden nicht gespeichert.  

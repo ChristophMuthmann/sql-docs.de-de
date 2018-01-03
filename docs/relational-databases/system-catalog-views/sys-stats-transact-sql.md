@@ -1,7 +1,7 @@
 ---
 title: Sys.Stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ba477c2bc30fdeccee1af448e953043f3c5d9d92
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0650931e6a9c450409cd40b366a5e9fb6bf08771
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysstats-transact-sql"></a>sys.stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID des Objekts, zu dem diese Statistik gehört.|  
 |**name**|**sysname**|Der Name der Statistik. Ist eindeutig innerhalb des Objekts.|  
-|**stats_id**|**int**|Die ID der Statistik. Ist eindeutig innerhalb des Objekts.|  
+|**stats_id**|**int**|Die ID der Statistik. Ist eindeutig innerhalb des Objekts.<br /><br />Wenn Statistiken einem Index entsprechen den *Stats_id* Wert ist identisch mit der *Index_id* Wert in der [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) -Katalogsicht angezeigt.|  
 |**auto_created**|**bit**|Gibt an, ob die Statistik von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatisch erstellt wurde.<br /><br /> 0 = Statistik wurde nicht von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatisch erstellt.<br /><br /> 1 = Statistik wurde von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatisch erstellt.|  
 |**user_created**|**bit**|Gibt an, ob die Statistik von einem Benutzer erstellt wurde.<br /><br /> 0 = Statistik wurde nicht von einem Benutzer erstellt.<br /><br /> 1 = Statistik wurde von einem Benutzer erstellt.|  
 |**no_recompute**|**bit**|Gibt an, ob die Statistik mit der **NORECOMPUTE** -Option erstellt wurde.<br /><br /> 0 = Statistik wurde nicht mithilfe der **NORECOMPUTE** -Option erstellt.<br /><br /> 1 = Statistik wurde mithilfe der **NORECOMPUTE** -Option erstellt.|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="examples"></a>Beispiele  
  In den folgenden Beispielen werden alle Statistiken und Statistikspalten für die Tabelle `HumanResources.Employee` zurückgegeben.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT s.name AS statistics_name  
@@ -68,12 +68,16 @@ INNER JOIN sys.stats_columns AS sc
 INNER JOIN sys.columns AS c   
     ON sc.object_id = c.object_id AND c.column_id = sc.column_id  
 WHERE s.object_id = OBJECT_ID('HumanResources.Employee');  
-  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
  [Katalogsichten für Objekte &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Häufig gestellte Fragen zu Abfragen des SQL Server-Systemkatalogs](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
-  
-  
+ [Abfragen von SQL Server-Systemkatalogs – häufig gestellte Fragen](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [Statistiken](../../relational-databases/statistics/statistics.md)    
+ [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
+ [Sys.dm_db_stats_histogram &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+ [Sys. stats_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)
+ 
+
+ 

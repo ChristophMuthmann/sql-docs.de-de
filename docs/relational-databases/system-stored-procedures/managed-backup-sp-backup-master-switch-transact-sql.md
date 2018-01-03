@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0d7567235212388b477abcbfddca8049f2ada735
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 84955e0805abf954d23159cbd0bd1e5b32d1f508
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="managedbackupsp-backupmasterswitch-transact-sql"></a>managed_backup.sp_ Backup_master_switch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Syntax  
   
-```tsql  
+```sql  
 EXEC managed_backup.sp_backup_master_switch   
                      [@state = ] { 0 | 1}  
 ```  
@@ -57,7 +57,7 @@ EXEC managed_backup.sp_backup_master_switch
 ## <a name="return-code-value"></a>Rückgabecodewert  
  0 (Erfolg) oder 1 (Fehler)  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
  Beschreibt Sicherheitsaspekte in Bezug auf die statement.Include-Berechtigung in einem Unterabschnitt (H3-Überschrift). Erwägen Sie, ggf. weitere Unterabschnitte für Besitzverkettung und Überwachung einzuschließen.  
   
 ### <a name="permissions"></a>Berechtigungen  

@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fbca0ca02e994a3c286cea445965edd9cd53bfcf
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5ddde4fe4ff510058ff1a70a329a8939de0808a3
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysfnvalidateplanguide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 ### <a name="a-validating-all-plan-guides-in-a-database"></a>A. Überprüfen aller Planhinweislisten in einer Datenbank  
  Im folgenden Beispiel wird die Gültigkeit aller Planhinweislisten in der aktuellen Datenbank überprüft. Wenn ein leeres Resultset zurückgegeben wird, sind alle Planhinweislisten gültig.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT plan_guide_id, msgnum, severity, state, message  
@@ -82,7 +82,7 @@ GO
 ### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>B. Testen der Gültigkeitsüberprüfung der Planhinweislisten vor dem Implementieren von Änderungen an der Datenbank  
  Im folgenden Beispiel wird eine explizite Transaktion verwendet, um einen Index zu löschen. Die `sys.fn_validate_plan_guide` -Funktion wird ausgeführt, um zu bestimmen, ob diese Aktion Planhinweislisten in der Datenbank ungültig gemacht wird. Auf der Basis der Ergebnisse der Funktion wird entweder ein Commit der `DROP INDEX` -Anweisung oder ein Rollback der Transaktion ausgeführt, sodass der Index nicht gelöscht wird.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BEGIN TRANSACTION;  

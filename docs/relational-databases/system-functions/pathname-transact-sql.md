@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 029ba3a0508e3198b3b81e94a508783308a4257d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f37b03f60063643472b325c4c3f61e87078794f8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Spaltenname*  
+ *column_name*  
  Der Spaltenname einer **varbinary(max)** FILESTREAM-Spalte. *column_name* muss ein Spaltenname sein. Es kann sich hierbei weder um einen Ausdruck noch um das Ergebnis einer CAST- oder CONVERT-Anweisung handeln.  
   
  Des Pfadnamens für eine Spalte des anderen Datentyps oder für eine **varbinary(max)** Columnthat verfügt nicht über die FILESTREAM-Speicher-Attribut wird dazu führen, dass eine Abfrage-Kompilierzeitfehler.  
@@ -51,7 +51,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  *@option*  
  Eine ganze Zahl [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) , der definiert, wie die Serverkomponente des Pfads formatiert werden soll. *@option*einer der folgenden Werte ist möglich. Die Standardeinstellung ist 0.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |0|Gibt den Servernamen in ein BIOS-Format konvertiert zurück, z. B.: `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|Gibt den Servernamen ohne Konvertierung, z. B. an:`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -64,7 +64,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  Wenn die Datenbank zu einer Always On-verfügbarkeitsgruppe gehört zu gruppieren, klicken Sie dann den Wert der *Use_replica_computer_name* hat folgenden Effekt auf das Ergebnis der **PathName** Funktion:  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |Nicht angegeben.|Die Funktion gibt den virtuellen Netzwerknamen in (VNN) im Pfad zurück.|  
 |0|Die Funktion gibt den virtuellen Netzwerknamen in (VNN) im Pfad zurück.|  
@@ -86,7 +86,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ### <a name="a-reading-the-path-for-a-filestream-blob"></a>A. Lesen des Pfads für einen FILESTREAM-BLOB  
  Im folgenden Beispiel wird `PathName` der Variablen `nvarchar(max)` zugewiesen.  
   
-```tsql  
+```sql  
 DECLARE @PathName nvarchar(max);  
 SET @PathName = (  
     SELECT TOP 1 photo.PathName()  
@@ -98,7 +98,7 @@ SET @PathName = (
 ### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>B. Anzeigen der Pfade für FILESTREAM-BLOBs in einer Tabelle  
  Im folgenden Beispiel werden die Pfade für drei FILESTREAM BLOBs erstellt und angezeigt.  
   
-```tsql  
+```sql  
 -- Create a FILESTREAM-enabled database.  
 -- The c:\data directory must exist.  
 CREATE DATABASE PathNameDB  

@@ -3,7 +3,7 @@ title: Globale Einstellungen (Tester) (SybaseToSQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a08108be504ebe901f6e202af2fd8c1d757c198c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1b5ba92c5972df1e29bbe3c4cd3df4f093739a86
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-tester-sybasetosql"></a>Globale Einstellungen (Tester) (SybaseToSQL)
 Verwenden Sie die Seite "Tester" von der **globale Einstellungen** Dialogfeld Einstellungen für SSMA Tester angeben.  
   
 Die Tester-Einstellungen für den Zugriff auf die **Tools** klicken Sie im Menü **globale Einstellungen**, und klicken Sie auf **Tester** unten im linken Bereich.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Testfähig Objekt analysis**  
 Diese Einstellung gibt an, ob die Analyse der testfähig Objekte. Wählen Sie **Ja** Wenn SSMA Tester zu analysieren und suchen automatisch die abhängigen Objekte gelöscht werden sollen. Standard-Option festgelegt ist **Ja**.  
   
@@ -39,7 +39,7 @@ Die folgenden Optionen sind für diese Einstellung verfügbar:
   
 1.  ja  
   
-2.  Nein  
+2.  nein  
   
 **Erweiterungstabellen Modus speichern**  
 Diese Einstellung gibt an, wie die internen Erweiterungstabellen erstellt während der Ausführung des Testfalls zu speichern. Folgenden Optionen kann für diese bestimmte Einstellung festgelegt werden:  
@@ -61,7 +61,7 @@ Die folgenden Optionen sind für diese Einstellung verfügbar:
   
 1.  ja  
   
-2.  Nein  
+2.  nein  
   
 **Die Ausführung des Tests nach dem ersten Fehler beenden**  
 Diese Einstellung gibt an, ob der aktuelle ausgeführten Testfall zu beenden, wenn während der Ausführung ein Fehler aufgetreten ist. Standard-Option festgelegt ist **Ja**.  
@@ -70,7 +70,7 @@ Die folgenden Optionen sind für diese Einstellung verfügbar:
   
 1.  ja  
   
-2.  Nein  
+2.  nein  
   
 ## <a name="see-also"></a>Siehe auch  
 [Beenden Testfall Vorbereitung &#40; SybaseToSQL &#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  

@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5cd1687ea44749eea8a777d80026d375fbd841a2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 233a613024b4e216501ea7baaaf9a363325e5998
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,10 +76,10 @@ CHANGETABLE (
  *Tabelle*  
  Die benutzerdefinierte Tabelle, von der Änderungsnachverfolgungsinformationen abgerufen werden sollen. Die Änderungsnachverfolgung muss für die Tabelle aktiviert sein. Es kann ein Tabellenname verwendet werden, der aus ein, zwei, drei oder vier Teilen besteht. Der Tabellenname kann synonym mit der Tabelle sein.  
   
- *Spaltenname*  
+ *column_name*  
  Gibt den Namen der Primärschlüsselspalte oder der Spalten an. Es können mehrere Spaltennamen in beliebiger Reihenfolge angegeben werden.  
   
- *Wert*  
+ *ReplTest1*  
  Der Wert des Primärschlüssels. Wenn mehrere Primärschlüsselspalten vorhanden sind, die Werte müssen angegeben werden in der gleichen Reihenfolge wie die Spalten angezeigt, in werden der *Column_name* Liste.  
   
  [AS] *Table_alias* [(*Spaltenalias* [,... *n* ] ) ]  
@@ -158,7 +158,7 @@ CHANGETABLE (
 ### <a name="a-returning-rows-for-an-initial-synchronization-of-data"></a>A. Zurückgeben von Zeilen für eine Erstsynchronisierung der Daten  
  Im folgenden Beispiel wird gezeigt, wie Daten für eine Erstsynchronisierung der Tabellendaten abgerufen werden. Die Abfrage gibt alle Zeilendaten und ihre zugehörigen Versionen zurück. Sie können diese Daten dann einfügen oder dem System hinzufügen, das die synchronisierten Daten enthalten soll.  
   
-```tsql  
+```sql  
 -- Get all current rows with associated version  
 SELECT e.[Emp ID], e.SSN, e.FirstName, e.LastName,  
     c.SYS_CHANGE_VERSION, c.SYS_CHANGE_CONTEXT  
@@ -170,7 +170,7 @@ CROSS APPLY CHANGETABLE
 ### <a name="b-listing-all-changes-that-were-made-since-a-specific-version"></a>B. Auflisten aller Änderungen, die seit einer bestimmten Version vorgenommen wurden  
  Im folgenden Beispiel werden alle Änderungen aufgelistet, die seit der angegebenen Version (`@last_sync_version)`) in der Tabelle vorgenommen wurden. [Emp-ID] und SSN ist Spalten in einem zusammengesetzten Primärschlüssel.  
   
-```tsql  
+```sql  
 DECLARE @last_sync_version bigint;  
 SET @last_sync_version = <value obtained from query>;  
 SELECT [Emp ID], SSN,  
@@ -182,7 +182,7 @@ FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS C;
 ### <a name="c-obtaining-all-changed-data-for-a-synchronization"></a>C. Abrufen aller geänderten Daten für eine Synchronisierung  
  Im folgenden Beispiel wird gezeigt, wie Sie alle geänderten Daten abrufen können. Diese Abfrage führt die Änderungsnachverfolgungsinformationen mit der Benutzertabelle zusammen, sodass Benutzertabelleninformationen zurückgegeben werden. Ein `LEFT OUTER JOIN` wird verwendet, damit eine Zeile für gelöschte Zeilen zurückgegeben wird.  
   
-```tsql  
+```sql  
 -- Get all changes (inserts, updates, deletes)  
 DECLARE @last_sync_version bigint;  
 SET @last_sync_version = <value obtained from query>;  
@@ -197,7 +197,7 @@ FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS c
 ### <a name="d-detecting-conflicts-by-using-changetableversion"></a>D. Erkennen von Konflikten mit CHANGETABLE(VERSION...)  
  Im folgenden Beispiel wird gezeigt, wie eine Zeile nur dann aktualisiert wird, wenn sie sich seit der letzten Synchronisierung nicht geändert hat. Die Versionsnummer der betreffenden Zeile wird mit `CHANGETABLE` abgerufen. Wenn die Zeile aktualisiert wurde, werden keine Änderungen vorgenommen, und die Abfrage gibt Informationen über die aktuelle Änderung der Zeile zurück.  
   
-```tsql  
+```sql  
 -- @last_sync_version must be set to a valid value  
 UPDATE  
     SalesLT.Product  

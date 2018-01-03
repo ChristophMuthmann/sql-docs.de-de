@@ -1,10 +1,12 @@
 ---
 title: "Einrichtung und Konfiguration für Python Machine Learning-Dienste | Microsoft Docs"
 ms.custom: 
-ms.date: 07/31/2017
-ms.prod: sql-non-specified
+ms.date: 12/20/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,15 +14,15 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: bc9cfe7bf885c99ccfe487e10e001ff36f68ee86
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: bea554929e222b98788524203ed060c9b5e0ce17
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-up-python-machine-learning-services-in-database"></a>Einrichten von Python Machine Learning-Services (Datenbankintern)
 
-  Sie installieren die erforderlichen Komponenten für Python durch Ausführen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup-Assistenten und den interaktiven Anweisungen folgen, wie in diesem Thema beschrieben.
+  In diesem Artikel wird beschrieben, wie zum Installieren der erforderlichen Komponenten für die Python durch Ausführen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup-Assistenten und den interaktiven Anweisungen folgen.
 
 ## <a name="machine-learning-options-in-sql-server-setup"></a>Machine learning-Optionen in SQL Server-setup
 
@@ -30,7 +32,7 @@ Die **gemeinsam genutzte Funktionen** Abschnitt enthält eine separate Installat
 
 Nachdem die Installation abgeschlossen ist, konfigurieren, dass die Instanz, um die Ausführung von Skripts zu ermöglichen, die eine externe ausführbare Datei verwenden. Sie müssen möglicherweise zusätzliche Änderungen vornehmen, mit dem Server um Machine Learning-arbeitsauslastungen zu unterstützen. Konfigurationsänderungen muss in der Regel ein Neustart der Instanz oder einen Neustart des Launchpad-Diensts.
 
-### <a name="prerequisites"></a>Erforderliche Komponenten
+### <a name="prerequisites"></a>Voraussetzungen
 
 + SQL Server-2017 ist erforderlich. Python-Integration wird auf früheren Versionen von SQL Server nicht unterstützt.
 + Achten Sie darauf, dass das Datenbankmodul installiert werden. Eine Instanz von SQL Server wird zum Ausführen von Python-Skripts in der Datenbank erforderlich.
@@ -40,11 +42,12 @@ Nachdem die Installation abgeschlossen ist, konfigurieren, dass die Instanz, um 
   Dieses Problem zu umgehen können Sie die Replikation verwenden, so kopieren Sie die erforderlichen Tabellen in eine eigenständige SQL Server-Instanz, die Python-Dienste verwendet. Alternativ können Sie Machine Learning mit Python-Diensten auf einem eigenständigen Computer installieren, die die AlwaysOn-Einstellung verwendet und ist Teil einer verfügbarkeitsgruppe.
 
 + Seite-an-Seite-Installation mit anderen Versionen von Python ist möglich, da SQL Server-Instanz eine eigene Kopie der Anaconda-Verteilung verwendet wird. Ausführen von Code, der Python auf dem SQL Server-Computer außerhalb von SQL Server verwendet, kann jedoch zu verschiedenen Problemen führen:
-    + Sie verwenden eine andere Bibliothek und andere ausführbare Datei, und unterschiedliche Ergebnisse erhalten, als Sie ausführen, wenn Sie in SQL Server ausgeführt werden.
-    + Python-Skripts, die auf externen Bibliotheken können von SQL Server, um Ressourcenkonflikte führende verwaltet werden.
+    
+    - Sie verwenden eine andere Bibliothek und andere ausführbare Datei, und unterschiedliche Ergebnisse erhalten, als Sie ausführen, wenn Sie in SQL Server ausgeführt werden.
+    - Python-Skripts, die auf externen Bibliotheken können von SQL Server, um Ressourcenkonflikte führende verwaltet werden.
   
 > [!IMPORTANT]
-> Nachdem Setup abgeschlossen ist, achten Sie darauf, dass Sie zusätzliche nach der Konfiguration in diesem Thema beschriebenen Schritte. Dazu gehören das Aktivieren von SQL Server, um externe Skripts zu verwenden und das Hinzufügen von Konten für SQL Server zum Ausführen von Python-Aufträgen in Ihrem Namen erforderlich sind.
+> Nachdem Setup abgeschlossen ist, achten Sie darauf, dass Sie zusätzliche nach der Konfiguration in diesem Artikel beschriebenen Schritte. Diese Schritte umfassen das Aktivieren von SQL Server, um externe Skripts zu verwenden und das Hinzufügen von Konten für SQL Server zum Ausführen von Python-Aufträgen in Ihrem Namen erforderlich sind.
 
 ### <a name="unattended-installation"></a>Für die unbeaufsichtigte installation
 
@@ -103,7 +106,12 @@ Zum Ausführen einer unbeaufsichtigten Installations verwenden Sie die Befehlsze
 
 ##  <a name="bkmk_enableFeature"></a>Schritt 2: Ausführen von Python-Skripts zu aktivieren
 
-1. Öffnen Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Wenn es nicht bereits installiert ist, können Sie den SQL Server-Setup-Assistenten erneut aus, um ein Downloadlink zu öffnen, und installieren Sie es ausführen.
+1. Öffnen Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
+
+    > [!TIP]
+    > Sie können auch herunterladen und installieren Sie die entsprechende Version von dieser Seite: [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+    > 
+    > Sie können auch versuchen, die Preview-Version von [SQL Operations Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is), das Verwaltungsaufgaben und Abfragen von SQL Server unterstützt.
   
 2. Herstellen einer Verbindung mit der Instanz, auf dem Machine Learning-Dienste installiert, und führen Sie den folgenden Befehl aus:
 
@@ -120,7 +128,7 @@ Zum Ausführen einer unbeaufsichtigten Installations verwenden Sie die Befehlsze
     RECONFIGURE WITH OVERRIDE
     ```
     
-    Wenn Sie bereits die Funktion für die Sprache "R" aktiviert haben, müssen Sie nicht ausführen ein zweites Mal für Python neu konfigurieren. Die zugrunde liegende Erweiterbarkeitsplattform unterstützt beide Sprachen.
+    Wenn Sie bereits die Funktion für die Sprache "R" aktiviert haben, führen Sie kein zweites Mal für Python neu konfigurieren. Die zugrunde liegende Erweiterbarkeitsplattform unterstützt beide Sprachen.
 
 4. Starten Sie den SQL Server-Dienst für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz. Startet den zugehörigen neu auch automatischer Neustart des SQL Server-Diensts [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] Dienst.
 

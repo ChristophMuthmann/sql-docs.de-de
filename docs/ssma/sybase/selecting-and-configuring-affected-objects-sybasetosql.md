@@ -3,7 +3,7 @@ title: "Auswählen und Konfigurieren von betroffene Objekte (SybaseToSQL) | Micr
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 016fc9d6f7250756a098cd4b1876ca74ed67e3cc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 102de8f523d91c34369ca84a4577e5978934349d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Auswählen und Konfigurieren von betroffene Objekte (SybaseToSQL)
 Auf dieser Seite können Sie Tabellen auswählen und Fremdschlüsseln, Änderungen in der verglichen werden sollen, wenn SSMA wird überprüft, die Ergebnisse der Ausführung für die Objekte, die in den vorherigen Schritt ausgewählt wurde ob. Darüber hinaus können Sie die Überprüfung der Parameter anpassen.  
@@ -46,9 +46,9 @@ Die Registerkarte "Tabelle" enthält die Rasteransicht der ausgewählten Tabelle
   
 -   Dezimalstellen  
   
--   Rule  
+-   Regel  
   
--   Standardwert  
+-   Default  
   
 -   Identität  
   
@@ -65,7 +65,7 @@ Registerkarte "Eigenschaften" zeigt die Eigenschaften der ausgewählten Tabelle 
   
 -   Erstellt oder zuletzt geändert  
   
--   Objektname  
+-   Objektnamen  
   
 ## <a name="table-comparison-settings"></a>Vergleich von Tabelleneinstellungen  
 Einrichten der Vergleichsregeln für die Tabelle auf **Tabellenvergleiche** Seite. Sie können die folgenden Einstellungen vornehmen.  

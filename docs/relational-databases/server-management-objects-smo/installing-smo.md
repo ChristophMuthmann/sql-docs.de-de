@@ -20,13 +20,15 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bae4a59bc8365eae4bfcaba8610c1f3c11b8af97
-ms.sourcegitcommit: c41e1bf5a53e96855b4424de4e0897153070bb28
+ms.openlocfilehash: 999c4535543e98c3122b38972130ca36668ce9e7
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/21/2017
 ---
 #<a name="installing-smo"></a>Installieren von SMO
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Diese Seite enthält Informationen zum Installieren von SMO für die Verwendung von Anwendungen und die systemvoraussetzungen für SMO verwenden.
 

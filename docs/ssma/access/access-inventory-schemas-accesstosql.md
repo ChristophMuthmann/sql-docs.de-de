@@ -1,7 +1,7 @@
 ---
 title: Zugriff auf Lager Schemas (AccessToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -47,11 +47,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d22835bef06693ecf2fef51240f4bd9d9607a8e0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8d3c34d87adbe5e854b9de2f49bda5492583298d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Access-Inventur-Schemas (AccessToSQL)
 In den folgenden Abschnitten wird beschrieben, die Tabellen, die von SSMA erstellt werden, wenn Sie zu Access-Schemas exportieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -94,7 +94,7 @@ Tabellenmetadaten ist exportiert der **SSMA_Access_InventoryTables** Tabelle. Di
 |**LinkedTable**|**nvarchar(4000)**|Eine andere Tabelle, sofern vorhanden, die mit der Tabelle verknüpft ist. Ermöglicht das Verknüpfen von Tabellen Hinzufügungen, löschungen und Updates für die andere Tabelle mithilfe dieser Tabelle.|  
 |**ExternalSource**|**nvarchar(4000)**|Die Datenquelle ist ggf., die der Tabelle zugeordnet. Wenn eine Tabelle verknüpft ist, muss es sich um eine externe Datenquelle, die in diesem Feld angegeben.|  
   
-## <a name="columns"></a>Spalten  
+## <a name="columns"></a>Spalte  
 Spaltenmetadaten ist exportiert der **SSMA_Access_InventoryColumns** Tabelle. Diese Tabelle enthält die folgenden Spalten:  
   
 |Spaltenname|Datentyp|Description|  

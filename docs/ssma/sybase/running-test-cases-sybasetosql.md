@@ -3,7 +3,7 @@ title: "Ausführen von Testfällen (SybaseToSQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 686e7701014a85e141fed9d4f9bbcecdb029f015
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0b78d26a492a73964c39b15c678103537cd9abe1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="running-test-cases-sybasetosql"></a>Ausführen von Testfällen (SybaseToSQL)
 Wenn SSMA Tester einen Testfall ausgeführt wird, führt die Objekte, die zu Testzwecken ausgewählt und erstellt einen Bericht über die Ergebnisse der Überprüfung. Wenn die Ergebnisse auf beiden Plattformen identisch sind, war der Test erfolgreich. Die Entsprechung von Objekten zwischen Sybase und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] richtet sich danach die schemazuordnung Einstellungen für das aktuelle SSMA-Projekt.  
@@ -43,7 +43,7 @@ Wenn der Test abgeschlossen ist, ist der Testfall Bericht erstellt. Klicken Sie 
   
 ## <a name="test-case-execution-steps"></a>Testfall Ausführungsschritte folgen  
   
-### <a name="prerequisites"></a>Erforderliche Komponenten  
+### <a name="prerequisites"></a>Voraussetzungen  
 SSMA-Tester wird überprüft, ob alle erforderlichen Komponenten für die Ausführung des Tests vor Beginn des Tests erfüllt sind. Wenn bestimmte Bedingungen nicht erfüllt sind, wird eine Fehlermeldung angezeigt.  
   
 ### <a name="initialization"></a>Initialisierung  
@@ -58,10 +58,10 @@ Die folgenden Objekte werden an Sybase erstellt, in der Datenbank SSMATESTER2005
 |USER_TABLE$ "TRG"|Trigger|Trigger, der die Änderungen in der überprüften Tabelle überwachen.|  
 |USER_TABLE$ Aud|Tabelle|Die Tabelle, in dem überschriebene, und gelöschte Zeilen gespeichert werden.|  
 |USER_TABLE$ AudID|Tabelle|Die Tabelle, in dem neue und geänderte Zeilen gespeichert werden.|  
-|USER_TABLE|Sicht|Vereinfachte Darstellung der tabellenänderungen.|  
-|USER_TABLE$ neue|Sicht|Vereinfachte Darstellung der eingefügten Zeilen überschrieben.|  
-|USER_TABLE$ new_id|Sicht|Kennung des eingefügten und geänderten Zeilen.|  
-|USER_TABLE$ alte|Sicht|Vereinfachte Darstellung der Zeilen gelöscht und überschrieben.|  
+|USER_TABLE|Anzeigen|Vereinfachte Darstellung der tabellenänderungen.|  
+|USER_TABLE$ neue|Anzeigen|Vereinfachte Darstellung der eingefügten Zeilen überschrieben.|  
+|USER_TABLE$ new_id|Anzeigen|Kennung des eingefügten und geänderten Zeilen.|  
+|USER_TABLE$ alte|Anzeigen|Vereinfachte Darstellung der Zeilen gelöscht und überschrieben.|  
   
 Das folgende Objekt wird in der überprüften Tabelle auf Sybase-Datenbank erstellt und [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   

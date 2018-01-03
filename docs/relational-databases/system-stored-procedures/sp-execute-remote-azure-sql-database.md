@@ -23,11 +23,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f3ce5718a35f8411a5333a200d6ea75f2326c79e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c1fabc150e92d9ca23196fbc838e5691267e9f38
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>Sp_execute_remote (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ### <a name="simple-example"></a>Einfaches Beispiel  
  Das folgende Beispiel erstellt und führt eine einfache SELECT-Anweisung in einer Remotedatenbank.  
   
-```tsql  
+```sql  
 EXEC sp_execute_remote  
     N'MyExtSrc',  
     N'SELECT COUNT(w_id) AS Count_id FROM warehouse'   

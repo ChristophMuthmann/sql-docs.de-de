@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: da7c61f339c0d8d66c8c0bcd00514a6ecf58286f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2d362be9a5cf9e3b60f30760073ec4ea30288a61
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmdbfilespaceusage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_db_file_space_usage**.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|Datenbank-ID|  
 |file_id|**smallint**|Die Datei-ID<br /><br /> FILE_ID ordnet File_id in [Sys. dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) und Fileid in [sys.sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md).|  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="determing-the-amount-of-free-space-in-tempdb"></a>Ermitteln des in tempdb verfügbaren freien Speicherplatzes  
  Die folgende Abfrage gibt die Gesamtanzahl der freien Seiten und der gesamte freie Speicherplatz in Megabyte (MB verfügbar in allen Dateien in) **Tempdb**.  
   
-```tsql
+```sql
 USE tempdb;  
 GO  
 SELECT SUM(unallocated_extent_page_count) AS [free pages],   
@@ -112,7 +112,7 @@ FROM sys.dm_db_file_space_usage;
 ### <a name="determining-the-amount-of-space-used-by-user-objects"></a>Ermitteln des von Benutzerobjekten belegten Speicherplatzes  
  Die folgende Abfrage gibt die Gesamtzahl der von den Benutzerobjekten in tempdb verwendeten Seiten sowie den von den Benutzerobjekten belegten Gesamtspeicherplatz (in MB) zurück.  
   
-```tsql  
+```sql  
 USE tempdb;  
 GO  
 SELECT SUM(user_object_reserved_page_count) AS [user object pages used],  

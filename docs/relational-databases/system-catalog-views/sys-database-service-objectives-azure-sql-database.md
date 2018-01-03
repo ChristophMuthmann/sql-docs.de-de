@@ -21,11 +21,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4d1ccfea9f9c24312d29be192e5b6497c89e7972
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 72cc970e8e6b37988399707b5cef77cbda3afd36
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>Sys.database_service_objectives (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -39,10 +39,10 @@ Ggf. für eine Azure SQL-Datenbank oder einer Azure SQL Data Warehouse die Editi
   
  Die sys.database_service_objectives-Ansicht enthält die folgenden Spalten.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|int|Die ID der Datenbank, eindeutig innerhalb einer Instanz von Azure SQL-Datenbankserver. Mit beigetreten [sys.databases &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
-|Edition|sysname|Die Dienstebene für die Datenbank oder vorhandenem Data Warehouse: **grundlegende**, **Standard**, **Premium** oder **Data Warehouse**.|  
+|database_id|ssNoversion|Die ID der Datenbank, eindeutig innerhalb einer Instanz von Azure SQL-Datenbankserver. Mit beigetreten [sys.databases &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|-Edition|sysname|Die Dienstebene für die Datenbank oder vorhandenem Data Warehouse: **grundlegende**, **Standard**, **Premium** oder **Data Warehouse**.|  
 |service_objective|sysname|Der Tarif der Datenbank. Gibt zurück, wenn die Datenbank in einem elastischen Pool befindet, **ElasticPool**.<br /><br /> Auf der **grundlegende** -Ebene gibt **grundlegende**.<br /><br /> **Einzelne Datenbank in eine standard-Dienstebene** gibt einen der folgenden zurück: S0, S1, S2 oder S3.<br /><br /> **Einzelne Datenbank in einem Premium-Dienstebene** gibt Folgendes zurück: P1, P2, P4, P6/P3 oder P11.<br /><br /> **SQL Data Warehouse** DW100 über DW2000 zurückgibt.|  
 |elastic_pool_name|sysname|Der Name des der [elastischen Pool](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) , die die Datenbank angehört. Gibt **NULL** , wenn die Datenbank eine einzelne Datenbank oder eine Warehoue Daten ist.|  
   
@@ -52,7 +52,7 @@ Ggf. für eine Azure SQL-Datenbank oder einer Azure SQL Data Warehouse die Editi
 ## <a name="examples"></a>Beispiele  
  In diesem Beispiel kann für die Masterdatenbank oder Benutzerdatenbanken ausgeführt werden. Die Abfrage gibt die Namen Service und Leistungsinformationen über die Ebene der Datenbank(en).  
   
-```tsql  
+```sql  
 SELECT  d.name,   
      slo.*    
 FROM sys.databases d   

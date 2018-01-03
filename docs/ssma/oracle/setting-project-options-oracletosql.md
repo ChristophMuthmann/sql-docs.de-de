@@ -1,7 +1,7 @@
 ---
 title: "Festlegen von Optionen für Projekt (OracleToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -18,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 6d54418b8a89a50773ffe3c98bb3c03a5ae955cd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0022ce5df4791ba3084507810d3490db2c7ae4dd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-project-options-oracletosql"></a>Einstellungsoptionen für Projekt (OracleToSQL)
 Für jedes SSMA-Projekt können Sie Optionen für Projekt festlegen. Diese Optionen geben Objekt Konvertierung, Objekt laden, Benutzeroberflächen- und Migration benutzereinstellungen. Bevor Sie Objekte konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oder Migrieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], stellen Sie sicher, dass die Konfigurationsoptionen für das Projekt geeignet sind.  
@@ -44,11 +44,11 @@ SSMA verfügt über fünf Mengen von projekteinstellungen:
   
 Es sind auch vier Modi für diese Einstellungen konfigurieren:  
   
--   Standardwert  
+-   Default  
   
 -   Optimistisch  
   
--   Full  
+-   Vollständig  
   
 -   Benutzerdefiniert  
   
@@ -97,7 +97,7 @@ Sie können auch die Einstellungen für das aktuelle Projekt anpassen. Diese Ein
   
 3.  Klicken Sie auf **OK** zum Speichern der Einstellungen.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
 Der nächste Schritt der Migration hängt von Ihren Anforderungen Projekt:  
   
 -   Zum Anpassen der Zuordnung von Quelle und Ziel-Datentypen finden Sie unter [Zuordnung Oracle und SQL Server-Datentypen &#40; OracleToSQL &#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md).  

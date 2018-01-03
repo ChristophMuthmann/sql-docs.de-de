@@ -38,11 +38,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f3e872d63c71817e8f79e261598875840ccb65f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3a218d6f89ee2c190361441a6922770e770ec11a
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>Beispiele für XML-Massenladen (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Die folgenden Beispiele veranschaulichen die XML-Massenladen in Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Alle Beispiele enthalten ein XSD-Schema und das entsprechende XDR-Schema.  
@@ -123,7 +123,7 @@ End Function
   
 1.  Erstellen Sie die folgende Tabelle:  
   
-    ```tsql  
+    ```sql  
     CREATE TABLE Cust(CustomerID  int PRIMARY KEY,  
                       CompanyName varchar(20),  
                       City        varchar(20));  
@@ -281,7 +281,7 @@ End Function
   
 1.  Erstellen Sie zwei Tabellen in **Tempdb** Datenbank:  
   
-    ```tsql  
+    ```sql  
     USE tempdb;  
     CREATE TABLE Cust(  
            CustomerID  int PRIMARY KEY,  
@@ -396,7 +396,7 @@ End Function
   
 1.  Erstellen Sie drei Tabellen:  
   
-    ```tsql  
+    ```sql  
     CREATE TABLE Ord (  
              OrderID     int  PRIMARY KEY,  
              CustomerID  varchar(5));  

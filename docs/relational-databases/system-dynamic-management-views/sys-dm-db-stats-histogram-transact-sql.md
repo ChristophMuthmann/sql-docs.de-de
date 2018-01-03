@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 93aec7a71f3522114bc9ef6c2d19edaccaac2e57
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5f43afdac5972dd5f01c192dbbc755911a83a341
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmdbstatshistogram-transact-sql"></a>Sys.dm_db_stats_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |object_id |**int**|ID des Objekts (Tabelle oder indizierte Sicht), für das die Eigenschaften des Statistikobjekts zurückgegeben werden sollen.|  
 |stats_id |**int**|Die ID des Statistikobjekts. Diese ist innerhalb der Tabelle oder indizierten Sicht eindeutig. Weitere Informationen finden Sie unter [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  
@@ -78,15 +78,15 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  Das folgende Diagramm zeigt ein Histogramm mit sechs Schritten. Der Bereich links vom ersten oberen Grenzwert ist der erste Schritt.  
   
- ![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")  
+ ![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogramm")  
   
  Für jeden Histogrammschritt gilt:  
   
--   Fett formatierte Zeile stellt den oberen Grenzwert (*Range_high_key*) und wie oft der Wartetyp tritt auf (*Equal_rows*)  
+-   Eine fett formatierte Zeile stellt den oberen Grenzwert (*range_high_key*) und die Häufigkeit des Vorkommens (*equal_rows*) dar.  
   
--   Der einfarbige Bereich links *Range_high_key* stellt den Bereich der Spaltenwerte und die durchschnittliche Anzahl von jedem Spaltenwert tritt auf (*Average_range_rows*). Die *Average_range_rows* für das Histogramm ersten Schritt ist immer 0.  
+-   Der einfarbige Bereich links von *range_high_key* stellt den Bereich der Spaltenwerte und die durchschnittliche Häufigkeit des Vorkommens der einzelnen Spaltenwerte (*average_range_rows*) dar. *average_range_rows* ist für den ersten Histogrammschritt immer 0.  
   
--   Gepunktete Linien stellen die als Stichprobe entnommenen Werte, die zum Schätzen der Gesamtanzahl der unterschiedlichen Werte im Bereich (*Distinct_range_rows*) und die Gesamtzahl der Werte im Bereich (*Range_rows*). Der Abfrageoptimierer verwendet *Range_rows* und *Distinct_range_rows* berechnet *Average_range_rows* und der als Stichprobe entnommenen Werte werden nicht gespeichert.  
+-   Gepunktete Linien stellen die als Stichprobe entnommenen Werte dar, die zum Schätzen der Gesamtanzahl der unterschiedlichen Werte im Bereich (*distinct_range_rows*) verwendet werden, sowie die Gesamtanzahl der Werte im Bereich (*range_rows*). Der Abfrageoptimierer verwendet *range_rows* und *distinct_range_rows*, um *average_range_rows* zu berechnen. Die als Stichprobe entnommenen Werte werden nicht gespeichert.  
   
  Der Abfrageoptimierer definiert die Histogrammschritte gemäß ihrer statistischen Bedeutung. Dabei wird ein Algorithmus für die maximale Differenz verwendet, um die Anzahl der Schritte im Histogramm zu minimieren und gleichzeitig die Differenz zwischen den Begrenzungswerten zu maximieren. Die maximale Anzahl von Schritten ist 200. Die Anzahl von Histogrammschritten kann geringer sein als die Anzahl unterschiedlicher Werte, auch bei Spalten mit weniger als 200 Grenzpunkten. Beispielsweise kann eine Spalte mit 100 unterschiedlichen Werten ein Histogramm mit weniger als 100 Grenzpunkten aufweisen.  
   
@@ -99,7 +99,7 @@ Erfordert, dass der Benutzer über SELECT-Berechtigungen für Statistikspalten v
 ### <a name="a-simple-example"></a>A. Einfaches Beispiel    
 Das folgende Beispiel erstellt und füllt eine einfache Tabelle. Klicken Sie dann erstellt Statistiken für die `Country_Name` Spalte.
 
-```tsql
+```sql
 CREATE TABLE Country
 (Country_ID int IDENTITY PRIMARY KEY,
 Country_Name varchar(120) NOT NULL);
@@ -109,13 +109,12 @@ CREATE STATISTICS Country_Stats
     ON Country (Country_Name) ;  
 ```   
 Der Primärschlüssel belegt `stat_id` Nummer 1, daher rufen `sys.dm_db_stats_histogram` für `stat_id` Nummer 2, für das statistikhistogramm Zurückgeben der `Country` Tabelle.    
-```tsql     
+```sql     
 SELECT * FROM sys.dm_db_stats_histogram(OBJECT_ID('Country'), 2);
 ```
 
-
 ### <a name="b-useful-query"></a>B. Praktische Abfrage:   
-```tsql  
+```sql  
 SELECT hist.step_number, hist.range_high_key, hist.range_rows, 
     hist.equal_rows, hist.distinct_range_rows, hist.average_range_rows
 FROM sys.stats AS s
@@ -126,14 +125,14 @@ WHERE s.[name] = N'<statistic_name>';
 ### <a name="c-useful-query"></a>C. Praktische Abfrage:
 Das folgende Beispiel wählt aus Tabelle `Country` mit einem Prädikat für Spalte `Country_Name`.
 
-```tsql  
+```sql  
 SELECT * FROM Country 
 WHERE Country_Name = 'Canada';
 ```
 
 Im folgenden Beispiel wird die zuvor erstellte Statistik für Tabelle prüft `Country` und `Country_Name` für den Abgleich des Prädikats in der obigen Abfrage Histogrammschritt.
 
-```tsql  
+```sql  
 SELECT ss.name, ss.stats_id, shr.steps, shr.rows, shr.rows_sampled, 
     shr.modification_counter, shr.last_updated, sh.range_rows, sh.equal_rows
 FROM sys.stats ss
@@ -149,7 +148,6 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
 ```
   
 ## <a name="see-also"></a>Siehe auch  
-
 [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
 [Objektbezogene dynamische Verwaltungssichten und-Funktionen (Transact-SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
 [Sys. dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  

@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aab6b1bde36e0e2b84c2bacfd52baca137e894f0
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 40bcb89844fb9b5cea09dab93765a32c8dedcc90
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ CROSS APPLY sys.dm_exec_sql_text(sql_handle) AS st;
 ### <a name="a-creating-a-plan-guide-from-a-query-plan-in-the-plan-cache"></a>A. Erstellen einer Planhinweisliste aus einem Abfrageplan im Plancache  
  Im folgenden Beispiel wird eine Planhinweisliste für eine einzelne SELECT-Anweisung erstellt, indem ein Abfrageplan aus dem Plancache angegeben wird. In diesem Beispiel wird zuerst eine einfache `SELECT`-Anweisung ausgeführt, für die die Planhinweisliste erstellt werden soll. Der Plan für diese Abfrage wird unter Verwendung der dynamischen Verwaltungssichten `sys.dm_exec_sql_text` und `sys.dm_exec_text_query_plan` untersucht. Anschließend wird die Planhinweisliste für die Abfrage erstellt, indem der Abfrageplan in dem Plancache angegeben wird, der der Abfrage zugeordnet ist. Die abschließende Anweisung in dem Beispiel überprüft, dass die Planhinweisliste vorhanden ist.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT WorkOrderID, p.Name, OrderQty, DueDate  

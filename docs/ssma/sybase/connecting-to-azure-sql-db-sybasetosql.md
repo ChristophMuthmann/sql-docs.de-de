@@ -3,7 +3,7 @@ title: Herstellen einer Verbindung mit Azure SQL-Datenbank (SybaseToSQL) | Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2cba5a9e698d98971940591889c144926fe1d8b8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 74be54cbdac01197d4756ae1f30b6285e8c2fa90
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-to-azure-sql-db-sybasetosql"></a>Herstellen einer Verbindung mit Azure SQL-Datenbank (SybaseToSQL)
 Zum Migrieren von Sybase-Datenbanken in Azure SQL-Datenbank müssen Sie mit der Zielinstanz von Azure SQL-Datenbank verbinden. Wenn Sie eine Verbindung herstellen, wird SSMA Ruft Metadaten zu allen Datenbanken in der Instanz von Azure SQL-Datenbank ab und Datenbankmetadaten in der Azure SQL-DB-Metadaten-Explorer angezeigt. SSMA speichert Informationen der Instanz von Azure SQL-Datenbank, Sie verbunden sind, jedoch werden Kennwörter nicht gespeichert.  

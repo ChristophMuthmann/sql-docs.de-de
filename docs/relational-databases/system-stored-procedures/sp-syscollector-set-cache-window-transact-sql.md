@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e9c1678c776266b602b227182f5109581851bdd0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9f9390255229779d2584fb0176c5651fa06cfb51
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spsyscollectorsetcachewindow-transact-sql"></a>sp_syscollector_set_cache_window (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
  [ @cache_window =] *Cache_window*  
  Gibt an, wie häufig im Fall eines Fehlers erneut versucht wird, Daten in das Verwaltungs-Data Warehouse hochzuladen, ohne dass dabei Daten verloren gehen. *Cache_window* ist **Int** hat den Standardwert 1. *Cache_window* kann einen der folgenden Werte aufweisen:  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |-1|Zwischenspeicherung aller hochzuladenden Daten aus den vorherigen fehlgeschlagenen Uploadversuchen.|  
 |0|Keine Zwischenspeicherung von Daten aus einem fehlgeschlagenen Uploadversuch.|  
@@ -67,7 +67,7 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird der Datensammler deaktiviert, das Cachefenster so konfiguriert, dass Daten für bis zu drei fehlgeschlagene Uploadversuche beibehalten werden, und der Datensammler anschließend erneut aktiviert.  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXECUTE dbo.sp_syscollector_disable_collector;  

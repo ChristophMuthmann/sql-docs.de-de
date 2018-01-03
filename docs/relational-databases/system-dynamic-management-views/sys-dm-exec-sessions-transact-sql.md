@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4119f0283be2bf4a0b145e59ec930eea4496d666
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 48af63d80b801b677d9f0f6225f84ba63c09f344
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,15 +43,15 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Identifiziert die einer aktiven primären Verbindung zugeordnete Sitzung. Lässt keine NULL-Werte zu.|  
 |login_time|**datetime**|Uhrzeit, zu der die Sitzung eingerichtet wurde. Lässt keine NULL-Werte zu.|  
-|host_name|**vom Datentyp nvarchar(128)**|Name der für eine Sitzung spezifischen Clientarbeitsstation. Der Wert ist für interne Sitzungen NULL. Lässt NULL-Werte zu.<br /><br /> **Sicherheitshinweis:** die Clientanwendung stellt den Namen der Arbeitsstation und kann fehlerhafte Daten angeben. Verwenden Sie HOST_NAME nicht als Sicherheitsfunktion.|  
-|program_name|**vom Datentyp nvarchar(128)**|Name des Clientprogramms, mit dem die Sitzung initiiert wurde. Der Wert ist für interne Sitzungen NULL. Lässt NULL-Werte zu.|  
+|host_name|**nvarchar(128)**|Name der für eine Sitzung spezifischen Clientarbeitsstation. Der Wert ist für interne Sitzungen NULL. Lässt NULL-Werte zu.<br /><br /> **Sicherheitshinweis:** die Clientanwendung stellt den Namen der Arbeitsstation und kann fehlerhafte Daten angeben. Verwenden Sie HOST_NAME nicht als Sicherheitsfunktion.|  
+|program_name|**nvarchar(128)**|Name des Clientprogramms, mit dem die Sitzung initiiert wurde. Der Wert ist für interne Sitzungen NULL. Lässt NULL-Werte zu.|  
 |host_process_id|**int**|Prozess-ID des Clientprogramms, mit dem die Sitzung initiiert wurde. Der Wert ist für interne Sitzungen NULL. Lässt NULL-Werte zu.|  
 |client_version|**int**|Die vom Client für die Verbindung mit dem Server verwendete TDS-Protokollversion der Schnittstelle. Der Wert ist für interne Sitzungen NULL. Lässt NULL-Werte zu.|  
 |client_interface_name|**nvarchar(32)**|Name der Bibliothek/Treiber, die vom Client zur Kommunikation mit dem Server verwendet wird. Der Wert ist für interne Sitzungen NULL. Lässt NULL-Werte zu.|  
-|security_id|**varbinary (85)**|Microsoft Windows-Sicherheits-ID, die der Anmeldung zugeordnet ist. Lässt keine NULL-Werte zu.|  
-|login_name|**vom Datentyp nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldename, unter dem die Sitzung gegenwärtig ausgeführt wird. Den ursprünglichen Anmeldenamen, mit dem die Sitzung erstellt wurde, finden Sie unter original_login_name. Kann eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldename oder eine Windows authentifizierter Benutzername Domäne authentifiziert. Lässt keine NULL-Werte zu.|  
-|nt_domain|**vom Datentyp nvarchar(128)**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die Windows-Domäne für den Client, wenn für die Sitzung die Windows-Authentifizierung oder eine vertrauenswürdige Verbindung verwendet wird. Dieser Wert ist für interne Sitzungen und andere Benutzer als Domänenbenutzer NULL. Lässt NULL-Werte zu.|  
-|nt_user_name|**vom Datentyp nvarchar(128)**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Der Windows-Benutzername für den Client, wenn für die Sitzung die Windows-Authentifizierung oder eine vertrauenswürdige Verbindung verwendet wird. Dieser Wert ist für interne Sitzungen und andere Benutzer als Domänenbenutzer NULL. Lässt NULL-Werte zu.|  
+|security_id|**varbinary(85)**|Microsoft Windows-Sicherheits-ID, die der Anmeldung zugeordnet ist. Lässt keine NULL-Werte zu.|  
+|login_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldename, unter dem die Sitzung gegenwärtig ausgeführt wird. Den ursprünglichen Anmeldenamen, mit dem die Sitzung erstellt wurde, finden Sie unter original_login_name. Kann eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldename oder eine Windows authentifizierter Benutzername Domäne authentifiziert. Lässt keine NULL-Werte zu.|  
+|nt_domain|**nvarchar(128)**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die Windows-Domäne für den Client, wenn für die Sitzung die Windows-Authentifizierung oder eine vertrauenswürdige Verbindung verwendet wird. Dieser Wert ist für interne Sitzungen und andere Benutzer als Domänenbenutzer NULL. Lässt NULL-Werte zu.|  
+|nt_user_name|**nvarchar(128)**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Der Windows-Benutzername für den Client, wenn für die Sitzung die Windows-Authentifizierung oder eine vertrauenswürdige Verbindung verwendet wird. Dieser Wert ist für interne Sitzungen und andere Benutzer als Domänenbenutzer NULL. Lässt NULL-Werte zu.|  
 |status|**nvarchar(30)**|Status der Sitzung. Mögliche Werte:<br /><br /> **Ausführen** -derzeit eine oder mehrere Anforderungen ausführen<br /><br /> **Sleeping** -derzeit keine Anforderungen ausgeführt<br /><br /> **Ruhende** – Sitzung wurde aufgrund des Verbindungspoolings zurückgesetzt und befindet sich nun im Status vor einer Anmeldung.<br /><br /> **Preconnect** -Sitzung ist in der Klassifizierungsfunktion der Ressourcenkontrolle.<br /><br /> Lässt keine NULL-Werte zu.|  
 |context_info|**varbinary(128)**|CONTEXT_INFO-Wert für die Sitzung. Die Kontextinformationen vom Benutzer festgelegt ist, mithilfe der [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) Anweisung. Lässt NULL-Werte zu.|  
 |cpu_time|**int**|Die von der Sitzung verwendete CPU-Zeit in Millisekunden. Lässt keine NULL-Werte zu.|  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
 |logical_reads|**bigint**|Anzahl von logischen Lesevorgängen in der Sitzung. Lässt keine NULL-Werte zu.|  
 |is_user_process|**bit**|0, wenn es sich um eine Systemsitzung handelt. Andernfalls ist der Wert 1. Lässt keine NULL-Werte zu.|  
 |text_size|**int**|TEXTSIZE-Einstellung für die Sitzung. Lässt keine NULL-Werte zu.|  
-|Sprache|**vom Datentyp nvarchar(128)**|LANGUAGE-Einstellung für die Sitzung. Lässt NULL-Werte zu.|  
+|Sprache|**nvarchar(128)**|LANGUAGE-Einstellung für die Sitzung. Lässt NULL-Werte zu.|  
 |date_format|**nvarchar(3)**|DATEFORMAT-Einstellung für die Sitzung. Lässt NULL-Werte zu.|  
 |date_first|**smallint**|DATEFIRST-Einstellung für die Sitzung. Lässt keine NULL-Werte zu.|  
 |quoted_identifier|**bit**|QUOTED_IDENTIFIER-Einstellung für die Sitzung. Lässt keine NULL-Werte zu.|  
@@ -82,8 +82,8 @@ ms.lasthandoff: 11/17/2017
 |deadlock_priority|**int**|DEADLOCK_PRIORITY-Einstellung für die Sitzung. Lässt keine NULL-Werte zu.|  
 |row_count|**bigint**|Anzahl der bisher in der Sitzung zurückgegebenen Zeilen. Lässt keine NULL-Werte zu.|  
 |prev_error|**int**|ID des letzten in der Sitzung zurückgegebenen Fehlers. Lässt keine NULL-Werte zu.|  
-|original_security_id|**varbinary (85)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Sicherheits-ID, die original_login_name zugeordnet ist. Lässt keine NULL-Werte zu.|  
-|original_login_name|**vom Datentyp nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldename, der vom Client zum Erstellen dieser Sitzung verwendet wurde. Kann ein authentifizierter Anmeldename von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ein authentifizierter Benutzername einer Windows-Domäne oder ein Benutzer einer eigenständigen Datenbank sein. Beachten Sie, dass für die Sitzung nach der ersten Verbindung möglicherweise viele implizite oder explizite Kontextwechsel erfolgt sind. Z. B. wenn [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) verwendet wird. Lässt keine NULL-Werte zu.|  
+|original_security_id|**varbinary(85)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Sicherheits-ID, die original_login_name zugeordnet ist. Lässt keine NULL-Werte zu.|  
+|original_login_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldename, der vom Client zum Erstellen dieser Sitzung verwendet wurde. Kann ein authentifizierter Anmeldename von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ein authentifizierter Benutzername einer Windows-Domäne oder ein Benutzer einer eigenständigen Datenbank sein. Beachten Sie, dass für die Sitzung nach der ersten Verbindung möglicherweise viele implizite oder explizite Kontextwechsel erfolgt sind. Z. B. wenn [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) verwendet wird. Lässt keine NULL-Werte zu.|  
 |last_successful_logon|**datetime**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Zeitpunkt der letzten erfolgreichen Anmeldung für original_login_name, bevor die aktuelle Sitzung gestartet wurde.|  
 |last_unsuccessful_logon|**datetime**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Zeitpunkt des letzten nicht erfolgreichen Anmeldeversuchs für original_login_name, bevor die aktuelle Sitzung gestartet wurde.|  
 |unsuccessful_logons|**bigint**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Anzahl der nicht erfolgreichen Anmeldeversuche für original_login_name zwischen last_successful_logon und login_time.|  
@@ -125,7 +125,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="a-finding-users-that-are-connected-to-the-server"></a>A. Ermitteln der Benutzer, die mit dem Server verbunden sind  
  Im folgenden Beispiel werden die Benutzer ermittelt, die mit dem Server verbunden sind, und die Anzahl der Sitzungen für die einzelnen Benutzer zurückgegeben.  
   
-```tsql  
+```sql  
 SELECT login_name ,COUNT(session_id) AS session_count   
 FROM sys.dm_exec_sessions   
 GROUP BY login_name;  
@@ -134,7 +134,7 @@ GROUP BY login_name;
 ### <a name="b-finding-long-running-cursors"></a>B. Suchen von Cursorn mit langer Ausführungszeit  
  Im folgenden Beispiel werden die Cursor, die seit einer längeren Zeit als der angegebenen geöffnet sind, die Benutzer, die die Cursor erstellt haben, und die Sitzungen, in denen die Cursor verwendet werden, gesucht.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT creation_time ,cursor_id   
@@ -148,7 +148,7 @@ WHERE DATEDIFF(mi, c.creation_time, GETDATE()) > 5;
 ### <a name="c-finding-idle-sessions-that-have-open-transactions"></a>C. Suchen von Sitzungen im Leerlauf, für die Transaktionen geöffnet sind  
  Im folgenden Beispiel werden Sitzungen gesucht, für die Transaktionen geöffnet sind und die sich im Leerlauf befinden. Sitzungen, für die derzeit keine Anforderung ausgeführt wird, befinden sich im Leerlauf.  
   
-```tsql  
+```sql  
 SELECT s.*   
 FROM sys.dm_exec_sessions AS s  
 WHERE EXISTS   
@@ -168,7 +168,7 @@ WHERE EXISTS
 ### <a name="d-finding-information-about-a-queries-own-connection"></a>D. Suchen nach Informationen über die eigene Verbindung einer Abfrage  
  Typische Abfrage zum Sammeln von Informationen über die eigene Verbindung einer Abfrage.  
   
-```tsql  
+```sql  
 SELECT   
     c.session_id, c.net_transport, c.encrypt_option,   
     c.auth_scheme, s.host_name, s.program_name,   

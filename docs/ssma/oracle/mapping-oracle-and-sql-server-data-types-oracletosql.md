@@ -1,7 +1,7 @@
 ---
 title: Zuordnen von Oracle und SQL Server-Datentypen (OracleToSQL) | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -18,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 6c12d5cb52f510f97816bc452cc2961230a5bd43
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8984f279cb6a42d057093f048a29149a7be2d981
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Zuordnen von Oracle und SQL Server-Datentypen (OracleToSQL)
 Oracle-Datenbank-Datentypen unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Datenbank-Datentypen. Bei der Konvertierung von Oracle-Datenbankobjekte [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Objekte aufweist, müssen Sie angeben, Zuordnen von Datentypen aus Oracle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Sie können die standardmäßigen datentypzuordnungen übernehmen, oder die Zuordnungen können angepasst werden, wie in den folgenden Abschnitten gezeigt.  
@@ -92,7 +92,7 @@ Das folgende Verfahren veranschaulicht das Zuordnen von Datentypen auf das Proje
   
         Geerbte Zuordnungen kann nicht entfernt werden. Allerdings werden geerbte Zuordnungen von benutzerdefinierten Zuordnungen auf einem bestimmten Objekt bzw. die Objektkategorie überschrieben.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
 Der nächste Schritt des Migrationsvorgangs besteht entweder [Erstellen eines Berichts Assessment](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357) oder [Objekte der Oracle-Datenbank in SQL Server-Syntax konvertieren](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272). Wenn Sie einen Assessment-Bericht erstellen, werden Oracle-Objekten während der Bewertung automatisch konvertiert.  
   
 ## <a name="see-also"></a>Siehe auch  

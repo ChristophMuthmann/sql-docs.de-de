@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8e4b889d1ee7ec8480c9f41a730ffafcd5888ef4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 26d13446ff128a00b31677c78d7e205ba40b0e94
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
 -   DDL-Trigger auf Serverebene  
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -105,21 +105,21 @@ sys.dm_sql_referencing_entities (
 |Entitätstyp|Verweisende Entität|Entität, auf die verwiesen wird|  
 |-----------------|------------------------|-----------------------|  
 |Tabelle|Ja*|ja|  
-|Sicht|ja|ja|  
+|Anzeigen|ja|ja|  
 |In [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur**|ja|ja|  
-|Gespeicherte CLR-Prozedur|Nein|ja|  
+|Gespeicherte CLR-Prozedur|nein|ja|  
 |Benutzerdefinierte Funktion in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|ja|  
-|CLR-benutzerdefinierte Funktion|Nein|ja|  
-|CLR-Trigger (DML und DDL)|Nein|Nein|  
-|DML-Trigger in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|Nein|  
-|DDL-Trigger auf Datenbankebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|Nein|  
-|DDL-Trigger auf Serverebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|Nein|  
-|Erweiterte gespeicherte Prozeduren|Nein|ja|  
-|Warteschlange|Nein|ja|  
-|Synonym|Nein|ja|  
-|Typ (Alias und CLR-benutzerdefinierter Typ)|Nein|ja|  
-|XML-Schemaauflistung|Nein|ja|  
-|Partitionsfunktion|Nein|ja|  
+|CLR-benutzerdefinierte Funktion|nein|ja|  
+|CLR-Trigger (DML und DDL)|nein|nein|  
+|DML-Trigger in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|nein|  
+|DDL-Trigger auf Datenbankebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|nein|  
+|DDL-Trigger auf Serverebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|nein|  
+|Erweiterte gespeicherte Prozeduren|nein|ja|  
+|Warteschlange|nein|ja|  
+|Synonym|nein|ja|  
+|Typ (Alias und CLR-benutzerdefinierter Typ)|nein|ja|  
+|XML-Schemaauflistung|nein|ja|  
+|Partitionsfunktion|nein|ja|  
   
  \*Eine Tabelle als verweisende Entität nachverfolgt wird, nur, wenn er verweist auf eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Modul, einen benutzerdefinierten Typ oder XML-schemaauflistung in der Definition eines berechnete Spalte, einer CHECK-Einschränkung oder einer DEFAULT-Einschränkung.  
   
@@ -148,7 +148,7 @@ sys.dm_sql_referencing_entities (
 ### <a name="a-returning-the-entities-that-refer-to-a-given-entity"></a>A. Zurückgeben der Entitäten, die auf eine bestimmte Entität verweisen  
  Im folgenden Beispiel werden die Entitäten in der aktuellen Datenbank zurückgegeben, die auf die angegebene Tabelle verweisen.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referencing_schema_name, referencing_entity_name, referencing_id, referencing_class_desc, is_caller_dependent  
@@ -159,7 +159,7 @@ GO
 ### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. Zurückgeben der Entitäten, die auf einen bestimmten Typ verweisen  
  Im folgenden Beispiel werden die Entitäten zurückgegeben, die auf den Aliastyp `dbo.Flag` verweisen. Das Resultset zeigt an, dass zwei gespeicherte Prozeduren diesen Typ verwenden. Die `dbo.Flag` Typ wird auch verwendet, in der Definition mehrerer Spalten in der `HumanResources.Employee` Tabelle ist jedoch, da der Typ nicht in der Definition einer berechneten Spalte, einer CHECK-Einschränkung oder einer DEFAULT-Einschränkung in der Tabelle vorhanden ist, werden keine Zeilen zurückgegeben für die `HumanResources.Employee`Tabelle.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referencing_schema_name, referencing_entity_name, referencing_id, referencing_class_desc, is_caller_dependent  

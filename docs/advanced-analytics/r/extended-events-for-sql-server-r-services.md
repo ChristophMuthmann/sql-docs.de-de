@@ -1,10 +1,12 @@
 ---
-title: Erweiterte Ereignisse bei SQL Server R Services | Microsoft-Dokumentation
-ms.custom: SQL2016_New_Updated
-ms.date: 11/29/2016
-ms.prod: sql-non-specified
+title: "Erweiterte Ereignisse für SQL Server-Machine Learning-Services | Microsoft Docs"
+ms.custom: 
+ms.date: 12/21/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,36 +14,47 @@ ms.assetid: 4e90e057-aacb-4adc-8da6-64861f4e87df
 caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 76350c58a9ef7dc52eaf1a260ec04a231f362872
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: b08e48eb6a53d40eefbed2a0503c4f92a10f8e66
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="extended-events-for-sql-server-r-services"></a>Erweiterte Ereignisse bei SQL Server R Services
-  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] bietet eine Reihe von erweiterten Ereignissen, die bei der Problembehandlung von Vorgängen im Zusammenhang mit [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] oder R-Aufträgen an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet werden können.  
-  
- Um eine Liste der mit SQL Server verknüpften Ereignisse anzuzeigen, führen Sie die folgende Abfrage in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aus.  
-  
-```  
-select o.name as event_name, o.description  
-  from sys.dm_xe_objects o  
-  join sys.dm_xe_packages p  
-    on o.package_guid = p.guid  
- where o.object_type = 'event'  
-   and p.name = 'SQLSatellite';  
-```  
-  
- Einige zusätzliche erweiterte Ereignisse mit [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] werden allerdings nur von externen Prozessen wie [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]und BXLServer ausgelöst, dem Satellitenprozess, der die Laufzeit von R startet. Weitere Informationen zum Erfassen dieser Ereignisse finden Sie unter [Collecting Events from External Processes](#bkmk_externalevents).  
-  
- Allgemeine Informationen zur Verwendung von erweiterten Ereignissen finden Sie unter [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md).  
+# <a name="extended-events-for-sql-server-machine-learning-services"></a>Erweiterte Ereignisse für SQL Server-Machine Learning-Services
 
-  
-##  <a name="bkmk_xeventtable"></a> Tabelle erweiterter Ereignisse  
-  
-|Ereignis|Beschreibung|Verwenden Sie|  
+SQL Server bietet eine Reihe von erweiterten Ereignissen, bei der Problembehandlung von Vorgängen im Zusammenhang mit der [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]sowie Python oder R-Aufträge an gesendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+**Gilt für:** SQL Server 2016-R-Services, SqlServer 2017 Machine Learning-Dienste
+
+## <a name="sql-server-events-for-machine-learning"></a>SQL Server-Ereignisse für Machine learning
+
+Um eine Liste der mit SQL Server verknüpften Ereignisse anzuzeigen, führen Sie die folgende Abfrage in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aus.
+
+```SQL
+SELECT o.name AS event_name, o.description
+FROM sys.dm_xe_objects o
+JOIN sys.dm_xe_packages p
+ON o.package_guid = p.guid
+WHERE o.object_type = 'event'
+AND p.name = 'SQLSatellite';
+```
+
+Allgemeine Informationen zur Verwendung von erweiterten Ereignissen finden Sie unter [Tools für erweiterte Ereignisse](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools).
+
+> [!TIP]
+> Für erweiterte Ereignisse von SQL Server generiert, testen Sie die neue [SSMS XEvent Profiler](https://docs.microsoft.com/sql/relational-databases/extended-events/use-the-ssms-xe-profiler). Diese neue Funktion in Management Studio zeigt einen live-Viewer für erweiterte Ereignisse und weniger intrusiv mit SQL Server als eine ähnliche Profiler-Ablaufverfolgung.
+
+## <a name="additional-events-specific-to-machine-learning-components"></a>Zusätzliche Ereignisse, die spezifisch für Machine Learning-Komponenten
+
+Zusätzliche erweiterte Ereignisse stehen für die Komponenten, die im Zusammenhang mit und von SQL Server Machine Learning Services verwendet z. B. die [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], und BXLServer, dem satellitenprozess, der die Laufzeit von R startet. Diese zusätzliche erweiterte Ereignisse, die aus externen Prozessen ausgelöst werden und somit müssen mit einem externen Dienstprogramm aufgezeichnet werden können.
+
+Weitere Informationen hierzu finden Sie im Abschnitt [Sammeln von Ereignissen aus externen Prozessen](#bkmk_externalevents).
+
+##  <a name="bkmk_xeventtable"></a>Tabelle erweiterter Ereignisse
+
+|Ereignis|Description|Hinweise|  
 |-----------|-----------------|---------|  
 |connection_accept|Tritt auf, wenn eine neue Verbindung akzeptiert wird. Dieses Ereignis dient dazu, alle Verbindungsversuche zu protokollieren.||  
 |failed_launching|Fehler beim Starten.|Gibt einen Fehler an.|  
@@ -54,7 +67,7 @@ select o.name as event_name, o.description
 |satellite_data_chunk_sent|Wird ausgelöst, wenn die Satellitenverbindung das Senden eines einzelnen Datensegments abschließt.|Das Ereignis gibt die Anzahl der gesendeten Zeilen an, die Anzahl der Spalten, die Anzahl der SNI-Pakete „usedm“ und die beim Senden des Blocks verstrichene Zeit in Millisekunden. Anhand dieser Informationen können Sie nachvollziehen, wie viel Zeit für das Übergeben von verschiedene Datentypen benötigt wird und wie viele Pakete verwendet werden.|  
 |satellite_data_receive_completion|Wird ausgelöst, wenn alle erforderlichen Abfragedaten über die Satellitenverbindung empfangen wurden.|Nur aus externem Prozess ausgelöst. Lesen Sie die Anleitung für das Sammeln von Ereignissen aus externen Prozessen.|  
 |satellite_data_send_completion|Wird ausgelöst, wenn alle erforderlichen Abfragedaten über die Satellitenverbindung gesendet wurden.||  
-|satellite_data_send_start|Wird ausgelöst, wenn die Datenübertragung beginnt (unmittelbar bevor der erste Datensegment gesendet wird).||  
+|satellite_data_send_start|Wird ausgelöst, wenn die Datenübertragung beginnt.| Die Datenübertragung beginnt unmittelbar vor das erste Datensegment gesendet wird.|  
 |satellite_error|Wird verwendet, um einen SQL-Satellitenfehler nachzuverfolgen||  
 |satellite_invalid_sized_message|Länge dieser Nachricht ist ungültig.||  
 |satellite_message_coalesced|Wird verwendet, um das Zusammenfügen von Nachrichten auf Netzwerkebene nachzuverfolgen||  
@@ -74,26 +87,32 @@ select o.name as event_name, o.description
 |satellite_data_chunk_sent|Wird ausgelöst, wenn die Satellitenverbindung das Senden eines einzelnen Datensegments abschließt.|Enthält Informationen über die Anzahl der Spalten, Zeilen und Pakete sowie über die zum Versenden des Segments benötigten Zeit.|  
 |satellite_sessionId_mismatch|Sitzungs-ID der Nachricht wird nicht erwartet||  
   
-###  <a name="bkmk_externalevents"></a> Collecting Events from External Processes  
- [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] startet einige Dienste, die außerhalb des SQL Server-Prozesses ausgeführt werden. Um Ereignisse, die im Zusammenhang mit diesen externen Prozessen auftreten, zu erfassen, müssen Sie eine Konfigurationsdatei zur Ereignisnachverfolgung erstellen. Diese Datei müssen Sie im gleichen Verzeichnis wie die ausführbare Datei für den Prozess ablegen.  
+###  <a name="bkmk_externalevents"></a>Sammeln von Ereignissen aus externen Prozessen
+
+SQL Server-Machine Learning-Services startet einige Dienste, die außerhalb des SQL Server-Prozesses ausgeführt. Um Ereignisse im Zusammenhang mit diesen externen Prozessen zu erfassen, müssen Sie eine Konfigurationsdatei zur ereignisnachverfolgung erstellen und speichern Sie die Datei im gleichen Verzeichnis wie die ausführbare Datei für den Prozess.  
   
--   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**   
++ **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**   
   
-     Legen Sie die *.config*-Datei im Binn-Verzeichnis für die SQL Server-Instanz ab, um Ereignisse zu erfassen, die im Zusammenhang mit Launchpad auftreten.  In einer Standardinstallation wäre dies `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`.  
+    Legen Sie die *.config*-Datei im Binn-Verzeichnis für die SQL Server-Instanz ab, um Ereignisse zu erfassen, die im Zusammenhang mit Launchpad auftreten.  In einer Standardinstallation wäre dies:
+
+    `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`installiert haben.  
   
--   **BXLServer** ist der Satellitenprozess, der die Erweiterbarkeit von SQL auf R und andere externe Skriptsprachen unterstützt.  
++ **BXLServer** ist der satellitenprozess, der Erweiterbarkeit von SQL mit externen Skriptsprachen, z. B. R oder Python unterstützt. Für jede Instanz des externen Sprache wird eine separate Instanz von BxlServer gestartet.
   
-     Um Ereignisse, die im Zusammenhang mit BXLServer auftreten, zu erfassen, legen Sie die *.config*-Datei im Installationsverzeichnis von R ab.  In einer Standardinstallation wäre dies `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`.  
-  
-> [!IMPORTANT]
->   Der Name der Konfigurationsdatei muss identisch mit dem der ausführbaren Datei sein und dem Format „[Name].xevents.xml“ entsprechen. Mit anderen Worten: Die Dateien müssen folgendermaßen benannt werden:  
->   
-> - Launchpad.xevents.xml  
-> - bxlserver.xevents.xml  
-  
- Die Konfigurationsdatei weist das folgende Format auf:  
-  
-```  
+    Um Ereignisse im Zusammenhang mit BXLServer zu erfassen, legen Sie die *config* Datei im Installationsverzeichnis von R oder Python.  In einer Standardinstallation wäre dies:
+     
+    **R:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`.  
+
+    **Python:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\library\RevoScaleR\rxLibs\x64`.
+
+Der Name der Konfigurationsdatei muss identisch mit dem der ausführbaren Datei sein und dem Format „[Name].xevents.xml“ entsprechen. Mit anderen Worten: Die Dateien müssen folgendermaßen benannt werden:
+
++ `Launchpad.xevents.xml`
++ `bxlserver.xevents.xml`
+
+Die Konfigurationsdatei weist das folgende Format auf:
+
+```xml
 \<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
 <event_session name="[session name]" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
@@ -107,19 +126,16 @@ select o.name as event_name, o.description
     </target>  
   </event_session>  
 </event_sessions>  
-  
-```  
-  
- **Hinweise:**  
-  
--   Bearbeiten Sie zum Konfigurieren der Verfolgung den Platzhalter für den Namen der Sitzung *session name*, den Platzhalter für den Dateinamen `[SessionName].xel` und die Namen der Ereignisse, die Sie erfassen möchten (z.B. `[XEvent Name 1]` oder `[XEvent Name 1]`).  
-  
--   Eine beliebige Anzahl von `event package`-Tags kann angezeigt werden und wird gesammelt, solange das Namensattribut korrekt ist.  
-  
-### <a name="example-capturing-launchpad-events"></a>Beispiel: Erfassen von Launchpad-Ereignissen  
- Das folgende Beispiel zeigt die Definition einer Ereignisnachverfolgung für den Launchpad-Dienst.  
-  
-```  
+```
+
++ Bearbeiten Sie zum Konfigurieren der Verfolgung der *Sitzungsname* Platzhalter, der Platzhalter für den Dateinamen (`[SessionName].xel`), und die Namen der Ereignisse, die Sie aufzeichnen z. B., möchten `[XEvent Name 1]`, `[XEvent Name 1]`).  
++ Eine beliebige Anzahl von Paket ereignistags möglicherweise angezeigt, und gesammelt werden, solange das Namensattribut richtig ist.
+
+### <a name="example-capturing-launchpad-events"></a>Beispiel: Erfassen von Launchpad-Ereignissen
+
+Das folgende Beispiel zeigt die Definition einer ereignisnachverfolgung für den Launchpad-Dienst:
+
+```xml
 \<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
 <event_session name="sqlsatelliteut" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
@@ -133,19 +149,16 @@ select o.name as event_name, o.description
     </target>  
   </event_session>  
 </event_sessions>  
-  
-```  
-  
- **Hinweise:**  
-  
--   Platzieren Sie die *.config*-Datei im Binn-Verzeichnis für die SQL Server-Instanz.  
-  
--   Diese Datei muss den Namen *Launchpad.xevents.xml*tragen.  
-  
+```
+
++ Platzieren Sie die *.config*-Datei im Binn-Verzeichnis für die SQL Server-Instanz.
++ Diese Datei muss den Namen `Launchpad.xevents.xml`.
+
 ### <a name="example-capturing-bxlserver-events"></a>Beispiel: Erfassen von BXLServer-Ereignissen  
- Das folgende Beispiel zeigt die Definition einer Ereignisablaufverfolgung für die ausführbare Datei von BXLServer.  
+
+Das folgende Beispiel zeigt die Definition einer Ereignisablaufverfolgung für die ausführbare Datei von BXLServer.
   
-```  
+```xml
 \<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
  <event_session name="sqlsatelliteut" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
@@ -166,18 +179,11 @@ select o.name as event_name, o.description
     </target>  
   </event_session>  
 </event_sessions>  
-  
-```  
-  
- **Hinweise:**  
-  
--   Legen Sie die *.config*-Datei im gleichen Verzeichnis ab wie die ausführbare BXLServer-Datei.  
-  
--   Diese Datei muss den Namen *bxlserver.xevents.xml*tragen.  
-  
+```
+
++ Legen Sie die *.config*-Datei im gleichen Verzeichnis ab wie die ausführbare BXLServer-Datei.
++ Diese Datei muss den Namen `bxlserver.xevents.xml`.
+
 ## <a name="see-also"></a>Siehe auch
-[Custom Management Studio Reports for R Services (Benutzerdefinierte Management Studio-Berichte für R Services)](../../advanced-analytics/r-services/monitor-r-services-using-custom-reports-in-management-studio.md)  
- [SQL Server R Services](../../advanced-analytics/r-services/sql-server-r-services.md)   
- [Managing and Monitoring R Solutions (Verwalten und Überwachen von R-Lösungen)](../../advanced-analytics/r-services/managing-and-monitoring-r-solutions.md)  
-  
-  
+
+[Benutzerdefinierte Management Studio Berichte für Machine Learning-Dienste](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)

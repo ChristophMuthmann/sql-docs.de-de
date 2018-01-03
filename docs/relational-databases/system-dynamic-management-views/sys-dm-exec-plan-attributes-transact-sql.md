@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3346d20f183810891615615c493d1d39c3339658
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0ae58f948d5219316c59022de477f147cdd4584b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,12 +52,12 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |Attribut|**varchar(128)**|Name des Attributs, das diesem Plan zugeordnet ist. Die Tabelle direkt unterhalb dieses Objekt enthält die möglichen Attribute, deren Datentypen und deren Beschreibungen.|  
-|value|**sql_variant**|Wert des Attributs, das diesem Plan zugeordnet ist.|  
+|Wert|**sql_variant**|Wert des Attributs, das diesem Plan zugeordnet ist.|  
 |is_cache_key|**bit**|Gibt an, ob das Attribut als Teil des Cachesuchschlüssels für den Plan verwendet wird.|  
 
 Aus der obigen Tabelle **Attribut** können die folgenden Werte aufweisen:
 
-|Attribut|Datentyp|Description|  
+|attribute|Datentyp|Description|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|Gibt die Optionswerte an, mit denen der Plan kompiliert wurde.|  
 |objectid|**int**|Einer der Hauptschlüssel zur Suche nach einem Objekt im Cache. Dies ist die Objekt-ID, in gespeichert [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) für Datenbankobjekte (Prozeduren, Sichten, Trigger usw.). Für Pläne vom Typ "Adhoc" oder "Prepared" ist dies ein interner Hash des Batchtexts.|  
@@ -96,7 +96,7 @@ Aus der obigen Tabelle **Attribut** können die folgenden Werte aufweisen:
 ### <a name="evaluating-set-options"></a>Auswerten von SET-Optionen  
  Um den zurückgegebenen Wert zu übersetzen **Set_options** mit den Optionen, mit denen der Plan kompiliert wurde, subtrahieren Sie die Werte aus der **Set_options** Wert, beginnend mit den größtmöglichen Wert, bis Sie 0 zu erreichen. Jeder subtrahierte Wert entspricht einer Option, die im Abfrageplan verwendet wurde. Beispielsweise, wenn der Wert in **Set_options** 251 lautet, sind die Optionen, die mit der Plan kompiliert wurde, ANSI_NULL_DFLT_ON (128), QUOTED_IDENTIFIER (64), ANSI_NULLS(32), ANSI_WARNINGS (16), CONCAT_NULL_YIELDS_NULL (8), Parallel Plan(2) und ANSI_PADDING (1).  
   
-|Option|Wert|  
+|Option|value|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
 |Paralleler Plan|2|  
@@ -124,9 +124,9 @@ Aus der obigen Tabelle **Attribut** können die folgenden Werte aufweisen:
 ### <a name="evaluating-cursor-options"></a>Auswerten von Cursoroptionen  
  Um den zurückgegebenen Wert zu übersetzen **Required_cursor_options** und **Acceptable_cursor_options** mit den Optionen, mit denen der Plan kompiliert wurde, subtrahieren Sie die Werte vom Spaltenwert, beginnend mit den größtmöglichen Wert bis 0 fortsetzen. Jeder subtrahierte Wert entspricht einer Cursoroption, die im Abfrageplan verwendet wurde.  
   
-|Option|Wert|  
+|Option|value|  
 |------------|-----------|  
-|Keine|0|  
+|InclusionThresholdSetting|0|  
 |INSENSITIVE|1|  
 |SCROLL|2|  
 |READ ONLY|4|  
@@ -148,7 +148,7 @@ Aus der obigen Tabelle **Attribut** können die folgenden Werte aufweisen:
 ### <a name="a-returning-the-attributes-for-a-specific-plan"></a>A. Zurückgeben der Attribute für einen bestimmten Plan  
  Im folgenden Beispiel werden alle Planattribute für einen angegebenen Plan zurückgegeben. Die dynamische Verwaltungssicht `sys.dm_exec_cached_plans` wird zuerst abgefragt, um das Planhandle für den angegebenen Plan abzurufen. In der zweiten Abfrage ersetzen Sie `<plan_handle>` durch einen Planhandlewert aus der ersten Abfrage.  
   
-```tsql  
+```sql  
 SELECT plan_handle, refcounts, usecounts, size_in_bytes, cacheobjtype, objtype   
 FROM sys.dm_exec_cached_plans;  
 GO  
@@ -160,7 +160,7 @@ GO
 ### <a name="b-returning-the-set-options-for-compiled-plans-and-the-sql-handle-for-cached-plans"></a>B. Zurückgeben der SET-Optionen für kompilierte Pläne und des SQL-Handles für zwischengespeicherte Pläne  
  Im folgenden Beispiel wird ein Wert zurückgegeben, der die Optionen darstellt, mit denen die einzelnen Pläne kompiliert wurden. Außerdem wird das SQL-Handle für alle zwischengespeicherten Pläne zurückgegeben.  
   
-```tsql  
+```sql  
 SELECT plan_handle, pvt.set_options, pvt.sql_handle  
 FROM (  
     SELECT plan_handle, epa.attribute, epa.value   

@@ -1,11 +1,11 @@
 ---
 title: Erste Schritte mit Machine Learning in der SQL Server | Microsoft Docs
 ms.custom: 
-ms.date: 11/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.date: 12/20/2017
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 98f6498eb042cc79728f8c1fb55e142655842481
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 600f105a3e3fb5fb590ce081633258db3d3d35d5
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>Erste Schritte mit Machine Learning in der SQL Server
 
@@ -83,7 +83,7 @@ Sie können auch installieren [!INCLUDE[rsql-platform-md](../includes/rsql-platf
 
 + [Machine Learning-Lernprogramme](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)
 
-  Beginnen Sie hier finden Sie eine Liste aller Ressourcen für den Einstieg in Machine Learning-Lösungen mit [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] oder [!INCLUDE[sssql15-md](../includes/sssql15-md.md)].
+  Beginnen Sie hier eine Liste aller Ressourcen für den Einstieg in Machine Learning-Lösungen, die mit SQL Server 2016 und SQL Server-2017 gefunden.
 
 ### <a name="r-tutorials"></a>R-Lernprogramme
 
@@ -95,7 +95,7 @@ Sie können auch installieren [!INCLUDE[rsql-platform-md](../includes/rsql-platf
 
 + [Untersuchen von R und ScaleR in 25 kurzen Funktionen](https://docs.microsoft.com/r-server/r/tutorial-r-to-revoscaler)
 
-   Haben Sie noch keine Erfahrung mit R? Fragen Sie sich, wie Microsoft R (oder "revoscaler"), standard R vergleicht? R Server finden Sie in diesen Quick-beginnt.
+   Haben Sie noch keine Erfahrung mit R? Fragen Sie sich, wie Microsoft R (oder "revoscaler"), standard R vergleicht? R Server und Machine Learning-Server finden Sie unter dieser Quick-beginnt.
 
 ### <a name="python-tutorials"></a>Python-Lernprogramme
 

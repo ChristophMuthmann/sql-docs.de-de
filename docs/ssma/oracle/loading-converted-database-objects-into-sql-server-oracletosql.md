@@ -1,7 +1,7 @@
 ---
 title: Laden konvertierte Objekte in SQLServer (OracleToSQL) Datenbank | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 66240ced7e9016aede65ffc8a51ac21108154d85
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1de8ae1e53dfd76527987a15be62894dcae10120
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>Laden konvertierte Objekte in SQLServer (OracleToSQL) Datenbank
 Nachdem Sie die Oracle-Schemas in SQL Server konvertiert haben, können Sie die resultierende Datenbankobjekte in SQL Server laden. Kann entweder über die SSMA, die die Objekte zu erstellen, oder können Sie Skripts für die Objekte und führen Sie die Skripts selbst. Darüber hinaus können mit SSMA Sie Metadaten durch den tatsächlichen Inhalt der SQL Server-Datenbank zu aktualisieren.  

@@ -1,6 +1,6 @@
 ---
 title: "Erste Schritte mit SQL Server-2017 für SUSE Linux Enterprise Server | Microsoft Docs"
-description: Dieser Schnellstart-Tutorial wird gezeigt, wie installieren Sie SQL Server-2017 auf SUSE Linux Enterprise Server und erstellen und Abfragen einer Datenbank mit Sqlcmd wird.
+description: Dieser Schnellstart veranschaulicht das Installieren von SQL Server-2017 auf SUSE Linux Enterprise Server und erstellen und Abfragen einer Datenbank mit Sqlcmd.
 author: rothja
 ms.author: jroth
 manager: jhubbard
@@ -15,22 +15,22 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.workload: On Demand
-ms.openlocfilehash: decf9cf88ef38264900c129c2626761718065739
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
+ms.openlocfilehash: b92036d4b706b5e76165708438d350c1883db912
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Installieren von SQL Server, und erstellen Sie eine Datenbank auf SUSE Linux Enterprise Server
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-In diesem Schnellstart-Tutorial installieren Sie zunächst SQL Server 2017 unter SUSE Linux Enterprise Server (SLES) v12 SP2. Verbinden Sie dann mit **Sqlcmd** Ihre erste Datenbank zu erstellen und Ausführen von Abfragen.
+In diesem Schnellstart installieren Sie zunächst SQL Server 2017 unter SUSE Linux Enterprise Server (SLES) v12 SP2. Verbinden Sie dann mit **Sqlcmd** Ihre erste Datenbank zu erstellen und Ausführen von Abfragen.
 
 > [!TIP]
 > Dieses Lernprogramm erfordert Benutzereingaben und eine Internetverbindung. Wenn Sie interessiert sind die [unbeaufsichtigte](sql-server-linux-setup.md#unattended) oder [offline](sql-server-linux-setup.md#offline) Installationsverfahren, finden Sie unter [-Installationsleitfaden für SQL Server on Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Sie benötigen einen SLES v12 SP2-Computer mit **mindestens 2 GB** des Arbeitsspeichers. Das Dateisystem muss **XFS** oder **EXT4**. Andere Dateisysteme, z. B. **BTRFS**, werden nicht unterstützt.
 
@@ -116,6 +116,11 @@ Um eine Datenbank erstellen zu können, müssen Sie die Verbindung mit einem Too
    ```
 
 > [!TIP]
-> **Sqlcmd** ist nur ein Tool zum Herstellen einer Verbindung mit SQL Server zum Ausführen von Abfragen und Verwaltungs- und Entwicklungstools Aufgaben ausführen. Andere Tools umfassen [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md) und [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
+> **Sqlcmd** ist nur ein Tool zum Herstellen einer Verbindung mit SQL Server zum Ausführen von Abfragen und Verwaltungs- und Entwicklungstools Aufgaben ausführen. Andere Tools umfassen:
+>
+> * [SQL Server Operationen Studio (Vorschau)](../sql-operations-studio/what-is.md)
+> * [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
+> * [Visual Studio-Code](sql-server-linux-develop-use-vscode.md).
+> * [MSSQL-Cli (Vorschau)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

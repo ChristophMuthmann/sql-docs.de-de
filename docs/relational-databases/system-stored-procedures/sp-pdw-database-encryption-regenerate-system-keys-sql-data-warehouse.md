@@ -18,11 +18,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 94f45c520397c608845e9bd07ec4aed173d1fd91
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ad105aed33da4215bb40548a5b73cec6b6c9e8f7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sppdwdatabaseencryptionregeneratesystemkeys-sql-data-warehouse"></a>Sp_pdw_database_encryption_regenerate_system_keys (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Syntax  
   
-```tsql  
+```sql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_pdw_database_encryption_regenerate_system_keys  ;  
@@ -51,7 +51,7 @@ sp_pdw_database_encryption_regenerate_system_keys  ;
 ## <a name="example"></a>Beispiel  
  Im folgende Beispiel wird die Datenbank-Verschlüsselungsschlüssel erneut generiert.  
   
-```tsql  
+```sql  
 EXEC sys.sp_pdw_database_encryption_regenerate_system_keys;  
 ```  
   

@@ -1,6 +1,6 @@
 ---
 title: Erste Schritte mit SQL Server-2017 auf Docker | Microsoft Docs
-description: "Dieser Schnellstart-Lernprogramm zeigt, wie Docker Container-Image von SQL Server-2017 ausgeführt. Anschließend erstellen und Abfragen einer Datenbank mit Sqlcmd."
+description: "Dieser Schnellstart veranschaulicht, wie Docker Container-Image von SQL Server-2017 ausgeführt. Anschließend erstellen und Abfragen einer Datenbank mit Sqlcmd."
 author: rothja
 ms.author: jroth
 manager: jhubbard
@@ -15,17 +15,17 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: 80d3d05fcd693f6290649c2c63446c400c9ad3b2
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 0fcd5cefc02359d407b1799e4cc31ed5afa3c818
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>Führen Sie die 2017 von SQL Server-Container-Image mit Docker
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-In diesem Schnellstart-Tutorial, verwenden Sie Docker zum Abrufen und führen Sie das SQL Server-2017 Container-Bild [Mssql-Server – Linux](https://hub.docker.com/r/microsoft/mssql-server-linux/). Verbinden Sie dann mit **Sqlcmd** Ihre erste Datenbank zu erstellen und Ausführen von Abfragen.
+In diesem Schnellstart mit der Docker pull, und führen das SQL Server-2017 Container-Bild [Mssql-Server – Linux](https://hub.docker.com/r/microsoft/mssql-server-linux/). Verbinden Sie dann mit **Sqlcmd** Ihre erste Datenbank zu erstellen und Ausführen von Abfragen.
 
 Dieses Image besteht aus SQL Server auf Grundlage 16.04 Ubuntu Linux ausgeführt wird. Sie können mit dem Docker-Modul 1.8 unter Linux oder auf Docker für Mac/Windows verwendet werden.
 
@@ -240,6 +240,8 @@ Andere häufig verwendete Tools für die Verbindung mit SQL Server gehören:
 
 - [Visual Studio-Code](sql-server-linux-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) unter Windows](sql-server-linux-develop-use-ssms.md)
+- [SQL Server Operationen Studio (Vorschau)](../sql-operations-studio/what-is.md)
+- [MSSQL-Cli (Vorschau)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 ## <a name="remove-your-container"></a>Entfernen Sie Ihres Containers
 
@@ -257,6 +259,12 @@ docker rm sql1
 
 > [!WARNING]
 > Beenden und Entfernen eines Containers dauerhaft löscht alle SQL Server-Daten im Container. Wenn Sie Ihre Daten erhalten bleiben müssen [erstellen, und kopieren Sie eine Sicherungsdatei aus dem Container](tutorial-restore-backup-in-sql-server-container.md) , oder verwenden Sie eine [Container Data Persistenz-Technik](sql-server-linux-configure-docker.md#persist).
+
+## <a name="docker-demo"></a>Docker-demo
+
+Nachdem Sie versucht haben, verwenden die SQL Server-Container-Abbild für Docker, empfiehlt es sich, zu wissen, wie Docker verwendet wird, um die Entwicklung und Tests zu verbessern. Im folgende Video wird gezeigt, wie Docker in einem kontinuierlichen Integration und das Bereitstellungsszenario verwendet werden kann.
+
+> [!VIDEO https://channel9.msdn.com/Events/Connect/2017/T152/player]
 
 ## <a name="next-steps"></a>Nächste Schritte
 

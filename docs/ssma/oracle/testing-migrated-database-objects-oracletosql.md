@@ -1,7 +1,7 @@
 ---
 title: Testen von Datenbankobjekten (OracleToSQL) migriert | Microsoft Docs
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 4b5f343234e77639e0b10eb07bce8281da9010f4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0b20c1f5d47388a92e92402faa9017dc6b042a1c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>Testen von Datenbankobjekten (OracleToSQL) migriert
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant für Oracle-Tester (SSMA Tester) testet automatisch die Konvertierung der Datenbank-Objekt und die Datenmigration von SSMA vorgenommen werden. Nachdem Sie alle Schritte der SSMA-Migration abgeschlossen wurden, verwenden Sie SSMA Tester, stellen Sie sicher, dass die konvertierte Objekte die gleiche Weise funktioniert und alle Daten ordnungsgemäß übertragen wurde.  
@@ -51,7 +51,7 @@ SSMA-Tester führt zum Testen auf Oracle und ihren äquivalenten in ausgewählte
 > [!NOTE]  
 > Achtung! Verwenden Sie niemals SSMA Tester in Produktionssystemen. Während der Tester Ausführung werden dem Quellschema und Daten geändert. In der Zwischenzeit kann die vollständige Wiederherstellen des ursprünglichen Zustands für einige Typen von getesteten Code nicht möglich.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
 Wenn Sie SSMA Tester verwenden möchten, installieren Sie SSMA-Oracle-Erweiterung-Paket mit der **installieren Tester Datenbank** aktiviert.  
   
 Um den Vergleich der resultierenden Tabellendaten zu ermöglichen, legen die **generieren ROWID-Spalte** option **Ja** vor Beginn die schemakonvertierung. SSMA wird eine ROWID-Spalte für alle Tabellen hinzufügen, während der Ausführung der **Schema konvertieren** Befehl.  

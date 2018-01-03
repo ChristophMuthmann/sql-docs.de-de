@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85bb9f9c5e389c80f3316b6a62dea8e82ac25d77
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ab59a2912f51882954420a81514b0fe2089f9a8f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sphelpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 |**file_in_group**|**sysname**|Der logische Name der Datei in der Dateigruppe.|  
 |**FileID**|**smallint**|Numerischer Dateibezeichner.|  
 |**Dateiname**|**NCHAR(260)**|Der physische Name der Datei, einschließlich des Verzeichnispfades.|  
-|**Größe**|**nvarchar(15)**|Die Dateigröße in KB.|  
+|**size**|**nvarchar(15)**|Die Dateigröße in KB.|  
 |**MaxSize**|**nvarchar(15)**|Die maximale Größe der Datei.<br /><br /> Dies ist die maximale Größe, auf die die Datei vergrößert werden kann. Mit UNLIMITED in diesem Feld kann die Datei so lange vergrößert werden, bis der Datenträger voll ist.|  
 |**Wachstum**|**nvarchar(15)**|Vergrößerungsinkrement der Datei. Dies zeigt den Speicherplatz an, der jedes Mal der Datei hinzugefügt wird, wenn neuer Speicherplatz benötigt wird.<br /><br /> 0 = Die Datei weist eine feste Größe auf und wird nicht vergrößert.|  
   
@@ -76,7 +76,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 ### <a name="a-returning-all-filegroups-in-a-database"></a>A. Zurückgeben aller Dateigruppen in einer Datenbank  
  Im folgenden Beispiel werden Informationen zu den Dateigruppen in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Beispieldatenbank zurückgegeben.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_helpfilegroup;  
@@ -86,7 +86,7 @@ GO
 ### <a name="b-returning-all-files-in-a-filegroup"></a>B. Zurückgeben aller Dateien in einer Dateigruppe  
  Im folgenden Beispiel werden Informationen zu allen Dateien in der `PRIMARY`-Dateigruppe der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Beispieldatenbank zurückgegeben.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_helpfilegroup 'PRIMARY';  

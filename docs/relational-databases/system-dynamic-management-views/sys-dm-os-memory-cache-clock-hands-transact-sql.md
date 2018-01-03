@@ -1,7 +1,7 @@
 ---
 title: dm_os_memory_cache_clock_hands (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/18/2017
+ms.date: 12/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 32ac57b5da2720b8ba3c874d604b5f65ec8da308
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0a42184a7a71f7623c7197405b7e718f40ef8979
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sysdmosmemorycacheclockhands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary(8)**|Adresse des Caches, der der Clock zugeordnet ist. Lässt keine NULL-Werte zu.|  
 |**name**|**nvarchar(256)**|Name des Caches. Lässt keine NULL-Werte zu.|  
-|**Typ**|**nvarchar(60)**|Typ des Cachespeichers. Es können mehrere Caches desselben Typs vorhanden sein. Lässt keine NULL-Werte zu.|  
+|**type**|**nvarchar(60)**|Typ des Cachespeichers. Es können mehrere Caches desselben Typs vorhanden sein. Lässt keine NULL-Werte zu.|  
 |**clock_hand**|**nvarchar(60)**|Zeigertyp. Folgende Werte sind möglich:<br /><br /> External<br /><br /> Intern<br /><br /> Lässt keine NULL-Werte zu.|  
 |**clock_status**|**nvarchar(60)**|Clockstatus. Folgende Werte sind möglich:<br /><br /> Angehalten<br /><br /> Wird ausgeführt<br /><br /> Lässt keine NULL-Werte zu.|  
 |**rounds_count**|**bigint**|Anzahl der Sweeps innerhalb des Caches zum Entfernen von Einträgen. Lässt keine NULL-Werte zu.|  
@@ -60,12 +60,9 @@ Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] benötigen Premium-Ebenen d
   
 ## <a name="remarks"></a>Hinweise  
  Die Informationen werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Arbeitsspeicher in einer Struktur gespeichert, die als Arbeitsspeichercache bezeichnet wird. Die Informationen im Cache können Daten, Indexeinträge, kompilierte Prozedurpläne und eine Vielzahl anderer Typen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Informationen sein. Damit vermieden wird, dass die Informationen neu erstellt werden müssen, werden diese solange wie möglich im Arbeitsspeichercache beibehalten und erst dann aus dem Cache entfernt, wenn sie zu alt sind, um noch hilfreich zu sein, oder wenn der Arbeitsspeicherplatz für neue Informationen benötigt wird. Der Vorgang, bei dem alte Informationen entfernt werden, wird als Arbeitsspeichersweep bezeichnet. Der Arbeitsspeichersweep ist eine häufige, jedoch keine kontinuierliche Aktivität. Der Sweep des Arbeitsspeichercaches wird von einem Taktalgorithmus gesteuert. Jeder Takt kann mehrere Arbeitsspeichersweeps steuern, die als Zeiger bezeichnet werden. Der Taktzeiger des Arbeitsspeichercaches stellt die aktuelle Position eines der Zeiger eines Arbeitsspeichersweeps dar.  
-  
+
 ## <a name="see-also"></a>Siehe auch  
-
-
- [SQL Server-Betriebssystem in Verbindung mit dynamischen Verwaltungssichten &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server-Betriebssystem in Verbindung mit dynamischen Verwaltungssichten &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)    
+ [Sys. dm_os_memory_cache_counters &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md)
   
-  
-
 

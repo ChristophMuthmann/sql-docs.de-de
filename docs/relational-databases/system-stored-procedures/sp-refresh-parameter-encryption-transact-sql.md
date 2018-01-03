@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31dd44920c1bc814985cd0391f52e035621de89f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a9343880058cef4ef86ce16613bc43821e8e8a24
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sprefreshparameterencryption-transact-sql"></a>"sp_refresh_parameter_encryption" (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ Für Module, die mit definiert sind die `EXECUTE AS` -Klausel, `IMPERSONATE` -Be
 Im folgende Beispiel erstellt eine Tabelle und eine Prozedur, die auf die Tabelle verweisen, Always Encrypted konfiguriert, und zeigt dann die Tabelle zu ändern und Ausführen der `sp_refresh_parameter_encryption` Prozedur.  
 
 Erstellen Sie zunächst die erste Tabelle und eine gespeicherte Prozedur, die auf die Tabelle verweisen.
-```tsql
+```sql
 CREATE TABLE [Patients]([PatientID] [int] IDENTITY(1,1) NOT NULL,
     [SSN] [char](11), 
     [FirstName] [nvarchar](50) NULL,
@@ -121,7 +121,7 @@ GO
 ```
 
 Richten Sie dann mit Always Encrypted-Schlüssel ist.
-```tsql
+```sql
 CREATE COLUMN MASTER KEY [CMK1]
 WITH
 (
@@ -143,7 +143,7 @@ GO
 
 
 Abschließend ersetzen wir die Spalte "ssn" mit der verschlüsselten Spalte und dann ausgeführt wird die `sp_refresh_parameter_encryption` Prozedur, die Always Encrypted-Komponenten zu aktualisieren.
-```tsql
+```sql
 ALTER TABLE [Patients] DROP COLUMN [SSN];
 GO
 

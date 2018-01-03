@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6108de273aedd3808a1941da5c152c6c774e5804
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8dc796f006abde19b0441cb9dba27d29f27c1b7e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmdbpersistedskufeatures-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |feature_name|**sysname**|Externer Name der Funktion, die in der aktuellen Datenbank aktiviert ist, aber nicht in allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt wird. Diese Funktion muss entfernt werden, bevor die Datenbank zu allen verfügbaren Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] migriert werden kann.|  
-|feature_id|**int**|Funktions-ID, die der Funktion zugeordnet ist. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
+|feature_id|**int**|Funktions-ID, die der Funktion zugeordnet ist. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]installiert haben.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW DATABASE STATE-Berechtigung für die Datenbank.  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/17/2017
 
  Wenn Sie feststellen möchten, ob in einer Datenbank Funktionen verwendet werden, die nur in bestimmten Editionen verfügbar sind, führen Sie die folgende Anweisung in der Datenbank aus:  
   
-```t-sql  
+```sql  
 SELECT feature_name FROM sys.dm_db_persisted_sku_features;  
 GO  
 ```  

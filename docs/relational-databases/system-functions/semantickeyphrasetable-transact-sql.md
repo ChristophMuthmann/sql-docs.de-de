@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 484ad4e6f82bff235fd1a9a3cad5752fb4ce08a2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d5b6f184c3ea2a455c59f221f4156e5ab7ce5210
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Syntax  
   
-```tsql  
+```sql  
 SEMANTICKEYPHRASETABLE  
     (  
     table,  
@@ -54,7 +54,7 @@ SEMANTICKEYPHRASETABLE
   
  Dieser Name kann einteilig sein oder aus bis zu vier Teilen bestehen, aber ein Remoteservername ist nicht zugelassen.  
   
- **Spalte**  
+ **column**  
  Name der indizierten Spalte, für die Ergebnisse zurückgegeben werden sollen. Für die Spalte muss die semantische Indizierung aktiviert sein.  
   
  **column_list**  
@@ -88,7 +88,7 @@ SEMANTICKEYPHRASETABLE
   
 -   [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert SELECT-Berechtigungen für die Basistabelle, für die der Volltextindex und der semantische Index erstellt wurden.  
@@ -98,7 +98,7 @@ SEMANTICKEYPHRASETABLE
 ###  <a name="HowToTopPhrases"></a>Beispiel 1: Suchen der wichtigsten Schlüsselausdrücke in einem bestimmten Dokument  
  Im folgenden Beispiel werden die obersten 10 Schlüsselausdrücke aus dem von der @DocumentId-Variable in der Spalte "Dokument" der Production.Document-Tabelle der AdventureWorks-Beispieldatenbank angegebenen Dokument abgerufen. Die @DocumentId-Variable stellt einen Wert aus der Schlüsselspalte des Volltextindexes dar. Die **SEMANTICKEYPHRASETABLE** -Funktion ruft diese Ergebnisse effizient mithilfe eines Indexsuchvorgangs anstelle eines Tabellenscans ab. In diesem Beispiel wird davon ausgegangen, dass die Spalte für die Volltextindizierung und die semantische Indizierung konfiguriert wurde.  
   
-```tsql  
+```sql  
 SELECT TOP(10) KEYP_TBL.keyphrase  
 FROM SEMANTICKEYPHRASETABLE  
     (  
@@ -113,7 +113,7 @@ ORDER BY KEYP_TBL.score DESC;
 ###  <a name="HowToTopDocuments"></a>Beispiel 2: Suchen der wichtigsten Dokumente, die einen bestimmten Schlüsselausdruck enthalten  
  Im folgenden Beispiel werden die obersten 25 Dokumente mit dem Schlüsselausdruck "Klammer" in der Spalte "Dokument" der Production.Document-Tabelle der AdventureWorks-Beispieldatenbank abgerufen. In diesem Beispiel wird davon ausgegangen, dass die Spalte für die Volltextindizierung und die semantische Indizierung konfiguriert wurde.  
   
-```tsql  
+```sql  
 SELECT TOP (25) DOC_TBL.DocumentID, DOC_TBL.DocumentSummary  
 FROM Production.Document AS DOC_TBL  
     INNER JOIN SEMANTICKEYPHRASETABLE  

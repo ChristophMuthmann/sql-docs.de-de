@@ -3,7 +3,7 @@ title: Projekteinstellungen (Azure SQL-Datenbank) (SybaseToSQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3dde8b0d823c805baf69fef6b580c8dc988e1316
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c6d39a4ceb167746ffe1f47528ac8e042f45715a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-azure-sql-db--sybasetosql"></a>Projekteinstellungen (Azure SQL-Datenbank) (SybaseToSQL)
 Die projekteinstellungen für die Azure SQL-Datenbank können Sie konfigurieren das Suffix des Azure SQL-Datenbank-Datenbank auch können implementieren taktmechanismus in Verbindung mit Azure SQL-Datenbank und klicken Sie im Dialogfeld "Verbindung" hinzugefügt werden.  
@@ -35,7 +35,7 @@ Klicken Sie im Azure SQL-Datenbank finden Sie in der **Projekteinstellungen** un
   
 -   Verwenden Sie das Dialogfeld Projekt Standardeinstellungen, um Konfigurationsoptionen für alle Projekte festzulegen. Zum Zugriff auf die Einstellungen für Azure SQL-Datenbank, in der **Tools** klicken Sie im Menü **DefaultProject Einstellungen**, klicken Sie auf **allgemeine** am unteren Rand des linken Bereich, und klicken Sie dann wählen **Azure SQL-Datenbank**.  
   
-## <a name="connectivity"></a>Konnektivität  
+## <a name="connectivity"></a>Connectivity  
 **Taktintervall**  
   
 Gibt ein Zeitintervall, das für taktmechanismus verwendet werden, um die Azure SQL-DB-Verbindung in aufrechtzuerhalten "Minuten: Sekunden-Format.  

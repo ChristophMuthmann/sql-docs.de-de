@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8cf55a19a71c6c6cbd84f82f4fbbfa39b3f77f70
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2a5c1d76f634a7d6304a17b5017d46c14022116d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Syntax  
   
-```tsql  
+```sql  
 managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)  
 ```  
   
@@ -67,7 +67,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
 |Encryptor_type|NCHAR(15)|Gibt die Verschlüsselungseinstellung zurück: Zertifikat oder Asymmetrischer Schlüssel.|  
 |Encryptor_name|NCHAR(max_length_of_cert/asymm_key_name)|Der Name des Zertifikats oder des asymmetrischen Schlüssels.|  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **Db_backupoperator** Datenbankrolle mit **ALTER ANY CREDENTIAL** Berechtigungen. Der Benutzer sollte nicht verweigert werden **VIEW ANY DEFINITION** Berechtigungen.  

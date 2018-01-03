@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f3ab63b576841aef6dec553ecc0c07ccec010319
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 508b89f5ff60b5cf64a03d167bf1ad4476edb734
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgettypeinfo-function"></a>SQLGetTypeInfo-Funktion
 **Konformität**  
@@ -98,7 +98,7 @@ SQLRETURN SQLGetTypeInfo(
 |MONEY|FIXED_PREC_SCALE|  
 |AUTO_INCREMENT|AUTO_UNIQUE_VALUE|  
   
- Das zurückgegebene Resultset wurden die folgenden Spalten hinzugefügt **SQLGetTypeInfo** für ODBC 3.. *X*:  
+ Das zurückgegebene Resultset wurden die folgenden Spalten hinzugefügt **SQLGetTypeInfo** für ODBC 3. *X*:  
   
 -   SQL_DATA_TYPE  
   
@@ -113,7 +113,7 @@ SQLRETURN SQLGetTypeInfo(
 > [!NOTE]  
 >  **SQLGetTypeInfo** möglicherweise nicht alle Datentypen zurück. Beispielsweise kann ein Treiber keinen benutzerdefinierten Datentypen zurück. Clientanwendungen können einen beliebigen gültigen Datentyp aufweisen, unabhängig davon, ob sie von zurückgegeben werden **SQLGetTypeInfo**. Die Datentypen zurückgegebenes **SQLGetTypeInfo** werden von der Datenquelle unterstützt. Sie werden zur Verwendung in Anweisungen (Data Definition Language, Datendefinitionssprache) gedacht. Treiber können Rückgabedaten Resultset mit Datentypen, außer von zurückgegebenen Typen **SQLGetTypeInfo**. Erstellen Sie das Resultset für eine Katalogfunktion auf, kann der Treiber einen Datentyp, der nicht unterstützt wird von der Datenquelle verwenden.  
   
-|Spaltenname|Column<br /><br /> number|Datentyp|Kommentare|  
+|Spaltenname|Spalte<br /><br /> number|Datentyp|Kommentare|  
 |-----------------|-----------------------|---------------|--------------|  
 |TYPE_NAME (ODBC 2.0)|1|Varchar, die nicht NULL|Name der Daten-Quelle vom Änderungsmanagement angeforderten Datentyp; z. B. "CHAR()", "VARCHAR()", "MONEY", "LONG VARBINARY" oder "CHAR () für BIT-Daten". Anwendungen müssen verwenden Sie diesen Namen in **CREATE TABLE** und **ALTER TABLE** Anweisungen.|  
 |DATA_TYPE (ODBC 2.0)|2|Smallint nicht NULL|SQL-Datentyp. Dies kann einen ODBC-SQL-Datentyp oder treiberspezifischen SQL-Datentyp sein. Für "DateTime" oder ein Zeitintervall Datentypen gibt diese Spalte den präzise-Datentyp (z. B. SQL_TYPE_TIME oder SQL_INTERVAL_YEAR_TO_MONTH) zurück. Eine Liste der gültigen ODBC SQL-Datentypen, finden Sie unter [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) in Anhang D:-Datentypen. Informationen zu treiberspezifischen SQL-Datentypen finden Sie unter der Treiber-Dokumentation.|  
@@ -123,7 +123,7 @@ SQLRETURN SQLGetTypeInfo(
 |CREATE_PARAMS (ODBC 2.0)|6|Varchar|Eine Liste von Schlüsselwörtern, die durch Kommas getrennt, für jeden Parameter, die die Anwendung in Klammern angeben kann, wenn der Name verwendet wird, die in der TYPE_NAME-Feld zurückgegeben wird. Die Schlüsselwörter in der Liste können eine der folgenden sein: Länge, Genauigkeit oder Dezimalstellen. In der Reihenfolge, in die Syntax zur zu verwendenden benötigt werden. CREATE_PARAMS für DEZIMALPUNKT wäre beispielsweise "Precision, Scale"; CREATE_PARAMS für VARCHAR würde "Length". gleich. NULL wird zurückgegeben, wenn keine Parameter für die die Datentypdefinition vorhanden sind; beispielsweise ganze Zahl.<br /><br /> Der Treiber stellt den CREATE_PARAMS Text in der Sprache des Land/Region, in dem er verwendet wird.|  
 |NULL-WERTE ZULÄSST (ODBC 2.0)|7|Smallint nicht NULL|Gibt an, ob der Datentyp NULL-Wert zulässt:<br /><br /> SQL_NO_NULLS, wenn der Datentyp NULL-Werte nicht zulässig sind.<br /><br /> SQL_NULLABLE, wenn der Datentyp NULL-Werte zulässt.<br /><br /> SQL_NULLABLE_UNKNOWN, wenn nicht bekannt ist, ob die Spalte NULL-Werte annimmt.|  
 |CASE_SENSITIVE (ODBC 2.0)|8|Smallint nicht NULL|Gibt an, ob ein Zeichendatentyp in Sortierungen und Vergleiche Groß-/Kleinschreibung ist:<br /><br /> SQL_TRUE, wenn der Datentyp ein Zeichendatentyp ist und Groß-/Kleinschreibung beachtet.<br /><br /> SQL_FALSE, wenn der Datentyp keinen Zeichendatentyp oder ist nicht in der Groß-/Kleinschreibung beachtet.|  
-|DURCHSUCHBARE (ODBC 2.0)|9|Smallint nicht NULL|Verwendung der Datentyp in einen **, in denen** Klausel:<br /><br /> SQL_PRED_NONE, wenn die Spalte kann, in verwendet werden einem **, in denen** Klausel. (Dies ist identisch mit der SQL_UNSEARCHABLE-Wert in ODBC 2.. *x*.)<br /><br /> SQL_PRED_CHAR, ob die Spalte kann, in verwendet werden eine **, in denen** -Klausel, aber nur mit der **wie** Prädikat. (Dies ist identisch mit der SQL_LIKE_ONLY-Wert in ODBC 2.. *x*.)<br /><br /> SQL_PRED_BASIC, ob die Spalte kann, in verwendet werden eine **, in denen** -Klausel mit allen Vergleichsoperatoren mit Ausnahme **wie** (Vergleichsoperatoren, quantifizierte Vergleich **BETWEEN**,  **UNTERSCHIEDLICHE**, **IN**, **Übereinstimmung**, und **UNIQUE**). (Dies ist identisch mit der SQL_ALL_EXCEPT_LIKE-Wert in ODBC 2.. *x*.)<br /><br /> SQL_SEARCHABLE, ob die Spalte kann, in verwendet werden einem **, in dem** -Klausel mit jedem Vergleichsoperator.|  
+|DURCHSUCHBARE (ODBC 2.0)|9|Smallint nicht NULL|Verwendung der Datentyp in einen **, in denen** Klausel:<br /><br /> SQL_PRED_NONE, wenn die Spalte kann, in verwendet werden einem **, in denen** Klausel. (Dies ist identisch mit der SQL_UNSEARCHABLE-Wert in ODBC 2. *x*.)<br /><br /> SQL_PRED_CHAR, ob die Spalte kann, in verwendet werden eine **, in denen** -Klausel, aber nur mit der **wie** Prädikat. (Dies ist identisch mit der SQL_LIKE_ONLY-Wert in ODBC 2. *x*.)<br /><br /> SQL_PRED_BASIC, ob die Spalte kann, in verwendet werden eine **, in denen** -Klausel mit allen Vergleichsoperatoren mit Ausnahme **wie** (Vergleichsoperatoren, quantifizierte Vergleich **BETWEEN**,  **UNTERSCHIEDLICHE**, **IN**, **Übereinstimmung**, und **UNIQUE**). (Dies ist identisch mit der SQL_ALL_EXCEPT_LIKE-Wert in ODBC 2. *x*.)<br /><br /> SQL_SEARCHABLE, ob die Spalte kann, in verwendet werden einem **, in dem** -Klausel mit jedem Vergleichsoperator.|  
 |UNSIGNED_ATTRIBUTE (ODBC 2.0)|10|Smallint|Gibt an, ob der Datentyp kein Vorzeichen aufweist:<br /><br /> SQL_TRUE, wenn der Datentyp kein Vorzeichen aufweist.<br /><br /> SQL_FALSE, wenn der Datentyp ein Vorzeichen aufweist.<br /><br /> NULL wird zurückgegeben, wenn das Attribut nicht für den Datentyp gilt oder der Datentyp nicht numerisch ist.|  
 |FIXED_PREC_SCALE (ODBC 2.0)|11|Smallint nicht NULL|Gibt an, ob der Datentyp vordefiniert wurde behoben, Genauigkeit und Dezimalstellen (die Daten datenquellenspezifischen sind), z. B. einen Money-Datentyp:<br /><br /> SQL_TRUE, wenn sie mit fester Genauigkeit und Dezimalstellenanzahl vordefiniert wurde.<br /><br /> SQL_FALSE, wenn sie nicht über vordefinierte feste Genauigkeit und Dezimalstellen verfügt.|  
 |AUTO_UNIQUE_VALUE ENTHÄLT (ODBC 2.0)|12|Smallint|Gibt an, ob der Datentyp eine automatische Inkrementierung ist:<br /><br /> SQL_TRUE, wenn der Datentyp automatische Inkrementierung ist.<br /><br /> SQL_FALSE, wenn der Datentyp nicht automatische Inkrementierung ist.<br /><br /> NULL wird zurückgegeben, wenn das Attribut nicht für den Datentyp gilt oder der Datentyp nicht numerisch ist.<br /><br /> Eine Anwendung können Sie die Werte in einer Spalte mit diesem Attribut einfügen, aber die Werte in der Spalte in der Regel kann nicht aktualisiert werden.<br /><br /> Wenn eine Einfügung in eine automatisch inkrementierte Spalte ausgeführt wird, wird ein eindeutiger Wert zum Zeitpunkt des Einfügens in die Spalte eingefügt. Das Inkrement ist nicht definiert, aber Daten datenquellenspezifischen ist. Eine Anwendung sollte nicht davon ausgehen, dass eine automatisch inkrementierte Spalte bei bestimmten Zeitpunkt kein(e) Inkremente ausnahmslos bestimmten startet.|  

@@ -4,7 +4,7 @@ description: "Dieses Thema enthält die Versionshinweise und Funktionen für SQL
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 12/12/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 5ea64c1c960f623b95891cac198af0bc17cb178c
-ms.sourcegitcommit: ffa4ce9bd71ecf363604966c20cbd2710d029831
+ms.openlocfilehash: 2e43e6f3ae6761886b2279910a69a83e756dc35f
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Versionshinweise für SQL Server-2017 unter Linux
 
@@ -35,7 +35,7 @@ Die folgenden Anmerkungen gelten für SQL Server-2017 auf Linux ausgeführt wird
 | Docker-Modul 1.8 + unter Windows, Mac und Linux | – | [Installationshandbuch](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
-> Überprüfen Sie die [Systemanforderungen](sql-server-linux-setup.md#system) für SQL Server on Linux.
+> Weitere Einzelheiten finden Sie in der [Systemanforderungen](sql-server-linux-setup.md#system) für SQL Server on Linux. Die neuesten Supportrichtlinie für SQL Server-2017, finden Sie unter der [technischen Support-Richtlinie für Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
 
 ## <a name="supported-client-tools"></a>Unterstützte-Clienttools
 
@@ -49,7 +49,7 @@ Die folgenden Anmerkungen gelten für SQL Server-2017 auf Linux ausgeführt wird
 
 In der folgenden Tabelle werden die Revisionsverlauf für SQL Server-2017 aufgelistet.
 
-| Release | Version | Veröffentlichungsdatum |
+| Release | Versionsoptionen | Veröffentlichungsdatum |
 |-----|-----|-----|
 | [CU2](#CU2) | 14.0.3008.27 | 11-2017 |
 | [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
@@ -134,7 +134,7 @@ Die folgenden Features und Dienste sind zu diesem Zeitpunkt nicht verfügbar unt
 | &nbsp; | Change Data Capture |
 | &nbsp; | Verwaltete Sicherung |
 | **High Availability (Hohe Verfügbarkeit)** | Datenbankspiegelung  |
-| **Sicherheit** | Erweiterbare Schlüsselverwaltung |
+| **Security** | Erweiterbare Schlüsselverwaltung |
 | &nbsp; | AD-Authentifizierung für Verbindungsserver | 
 | &nbsp; | AD-Authentifizierung für Verfügbarkeitsgruppen (Testreihen) | 
 | &nbsp; | 3rd Party AD-Tools (Centrify Vintela, Powerbroker) | 
@@ -289,7 +289,7 @@ Die folgenden Einschränkungen gelten für SSMS unter Windows, die mit SQL Serve
 
 ### <a name="next-steps"></a>Nächste Schritte
 
-Um zu beginnen, finden Sie unter den folgenden Schnellstart-Lernprogrammen:
+Um zu beginnen, finden Sie in der folgenden Schnellstarts:
 
 - [Installieren Sie auf Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installieren Sie auf SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)

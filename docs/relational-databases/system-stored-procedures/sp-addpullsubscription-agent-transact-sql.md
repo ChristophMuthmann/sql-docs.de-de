@@ -22,15 +22,15 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9e13ce0bc7be6b2e21a30f13a3cf7cc299d00295
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 01f7e3cdecd4c0a95c9d91104e2feee39f00252b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spaddpullsubscriptionagent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-
+ 
   Fügt einer Transaktionsveröffentlichung einen neuen geplanten Agent-Auftrag hinzu, mit dem ein Pullabonnement synchronisiert wird. Diese gespeicherte Prozedur wird auf dem Abonnenten für die Abonnementdatenbank ausgeführt.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -40,8 +40,7 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 sp_addpullsubscription_agent [ @publisher = ] 'publisher'  
-    [ , [ @publisher_db = ] 'publisher_db' ]  
-        , [ @publication = ] 'publication'  
+    [ , [ @publisher_db = ] 'publisher_db' ]          , [ @publication = ] 'publication'  
     [ , [ @subscriber = ] 'subscriber' ]  
     [ , [ @subscriber_db = ] 'subscriber_db' ]  
     [ , [ @subscriber_security_mode = ] subscriber_security_mode ]  
@@ -57,7 +56,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
     [ , [ @frequency_interval = ] frequency_interval ]  
     [ , [ @frequency_relative_interval = ] frequency_relative_interval ]  
     [ , [ @frequency_recurrence_factor = ] frequency_recurrence_factor ]  
-    [ , [ @frequency_subda y= ] frequency_subday ]  
+    [ , [ @frequency_subday = ] frequency_subday ]  
     [ , [ @frequency_subday_interval = ] frequency_subday_interval ]  
     [ , [ @active_start_time_of_day = ] active_start_time_of_day ]  
     [ , [ @active_end_time_of_day = ] active_end_time_of_day ]  
@@ -152,7 +151,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [  **@frequency_type=**] *Frequency_type*  
  Die Häufigkeit für die Zeitplanung des Verteilungs-Agents. *Frequency_type* ist **Int**, und kann einen der folgenden Werte.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**1**|Einmal|  
 |**2** (Standardwert)|Bedarfsgesteuert|  
@@ -172,7 +171,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [  **@frequency_relative_interval=**] *Frequency_relative_interval*  
  Das Datum des Verteilungs-Agents. Dieser Parameter wird verwendet, wenn *Frequency_type* festgelegt ist, um **32** (mit relativem Monatsintervall). *Frequency_relative_interval* ist **Int**, und kann einen der folgenden Werte.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**1** (Standard)|Erster|  
 |**2**|Zweimal|  
@@ -186,7 +185,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [  **@frequency_subday=**] *Frequency_subday*  
  Die Häufigkeit für die erneute geplante Ausführung während des definierten Zeitraums. *Frequency_subday* ist **Int**, und kann einen der folgenden Werte.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**1** (Standard)|Einmal|  
 |**2**|Zweimal|  
@@ -290,7 +289,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 ## <a name="see-also"></a>Siehe auch  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [Sp_addpullsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
  [Sp_change_subscription_properties &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
  [Sp_droppullsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   

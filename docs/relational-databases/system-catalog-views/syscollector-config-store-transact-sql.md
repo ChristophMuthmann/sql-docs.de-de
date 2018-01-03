@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6811c1ab9fef0f15422f1d51ac9b969476e58699
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4bf584c6d467d311223831d180838e6851013830
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syscollectorconfigstore-transact-sql"></a>syscollector_config_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   
 |Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|parameter_name|**vom Datentyp nvarchar(128)**|Der Name der Eigenschaft. Lässt keine NULL-Werte zu.|  
+|parameter_name|**nvarchar(128)**|Der Name der Eigenschaft. Lässt keine NULL-Werte zu.|  
 |parameter_value|**sql_variant**|Der tatsächliche Wert der Eigenschaft. Lässt NULL-Werte zu.|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/27/2017
 ## <a name="remarks"></a>Hinweise  
  Die Liste der verfügbaren Eigenschaften ist festgelegt, und deren Werte können nur mithilfe der geeigneten gespeicherten Prozedur geändert werden. In der folgenden Tabelle werden die Eigenschaften beschrieben, die durch diese Sicht verfügbar gemacht werden.  
   
-|Eigenschaftsname|Beschreibung|  
+|Eigenschaftenname|Description|  
 |-------------------|-----------------|  
 |CacheDirectory|Der Name des Verzeichnisses im Dateisystem, in dem die Sammlertyppakete temporäre Informationen speichern.<br /><br /> NULL = das standardmäßige temporäre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verzeichnis verwendet wird.|  
 |CacheWindow|Gibt die Datenbeibehaltungsrichtlinie des Cacheverzeichnisses für fehlgeschlagene Datenuploads an.<br /><br /> -1 = Daten aus allen fehlgeschlagenen Uploads beibehalten.<br /><br /> 0 - Keine Daten aus fehlgeschlagenen Uploads beibehalten.<br /><br /> *n*= Daten aus beibehalten  *n*  vorherigen fehlgeschlagenen uploadversuchen, wobei  *n*  > = 1.<br /><br /> Verwenden Sie die gespeicherte Prozedur sp_syscollector_set_cache_window, um diesen Wert zu ändern.|  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/27/2017
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die syscollector_config_store-Sicht abgefragt.  
   
-```tsql  
+```sql  
 SELECT parameter_name, parameter_value  
 FROM msdb.dbo.syscollector_config_store;  
 ```  

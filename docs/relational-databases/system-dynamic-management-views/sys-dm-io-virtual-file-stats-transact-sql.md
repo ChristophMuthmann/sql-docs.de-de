@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: deec9ee56fe129b77e130276c22b24c415ddc473
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6890eda5969d783a6d40b27493b07e8831146aa8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -107,7 +107,7 @@ Die ID der Datei. *FILE_ID* ist "Int", hat keinen Standardwert. Eine gültige Ei
 
  Im folgenden Beispiel werden alle Statistiken für die Protokolldatei in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückgegeben.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_io_virtual_file_stats(DB_ID(N'AdventureWorks2012'), 2);  
 GO  
 ```  
@@ -116,7 +116,7 @@ GO
 
 **Gilt für:** SQL Azure Datawarehouse
 
-```tsql
+```sql
 SELECT * FROM sys.dm_pdw_nodes_io_virtual_file_stats 
 WHERE database_name = ‘tempdb’ AND file_id = 2;
 

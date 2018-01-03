@@ -1,7 +1,7 @@
 ---
 title: "Arbeiten mit SSMA für Oracle-Konsole (OracleToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 6135cf88be820227efbc2d6d0dfa7ccd919c8a84
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 57e366ff233e744f4689cd5f3ce5ba8275692aa4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>Arbeiten mit SSMA für Oracle-Konsole (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) Version für Oracle ist jetzt über eine Konsolenanwendung in Befehlszeile zugegriffen werden kann. Die Skriptdateien bilden die Eingabe für die Anwendung für die Befehle ausführen. SSMA als Konsolenanwendung Skriptebene Schnittstelle ermöglicht, den Zyklus Migration verringert und der Migrationsaufwand skaliert.  
@@ -32,7 +32,7 @@ In diesem Abschnitt behandelten Themen gehören:
   
 |||  
 |-|-|  
-|**Themen**|**Description**|  
+|**Themen**|**Beschreibung**|  
 |[Erste Schritte mit SSMA für Oracle-Konsole &#40; OracleToSQL &#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md)|Erläutert das Verfahren, um die Konsolenanwendung auszuführen.|  
 |[Befehlszeilenoptionen SSMA-Konsole &#40; OracleToSQL &#41;](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)|Beschreibt die Befehlszeilenoptionen und Parameter, um die SSMA-Konsolenanwendung ausgeführt werden.|  
 |[Erstellen von Skriptdateien &#40; OracleToSQL &#41;](../../ssma/oracle/creating-script-files-oracletosql.md)|Erläutert das Erstellen einer Skriptdatei.|  

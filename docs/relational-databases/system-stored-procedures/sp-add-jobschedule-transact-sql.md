@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 63ebaeb737f3e1d1b6abbf2a8b4800161a82e9ef
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3b2680a591628811fb9617077700d05981ece2a2
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [  **@freq_type=** ] *Frequency_type*  
  Ein Wert, der angibt, wann der Auftrag ausgeführt werden soll. *Frequency_type* ist **Int**, hat den Standardwert **0**, und kann einen der folgenden Werte:  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |**1**|Einmal|  
 |**4**|Täglich|  
@@ -86,7 +86,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [  **@freq_interval=** ] *Frequency_interval*  
  Der Tag, an dem der Auftrag ausgeführt wird. *Frequency_interval* ist **Int**, hat den Standardwert 0 (null) und hängt vom Wert der *Frequency_type* wie in der folgenden Tabelle aufgeführt:  
   
-|Wert|Wirkung|  
+|value|Wirkung|  
 |-----------|------------|  
 |**1** (einmal)|*Frequency_interval* wird nicht verwendet.|  
 |**4** (täglich)|Jede *Frequency_interval* Tage.|  
@@ -99,7 +99,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [  **@freq_subday_type=** ] *Frequency_subday_type*  
  Gibt die Einheiten für *Frequency_subday_interval*. *Frequency_subday_type* ist **Int**, hat keinen Standardwert und kann die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung (Einheit)|  
+|value|Beschreibung (Einheit)|  
 |-----------|--------------------------|  
 |**0 x 1**|Zum angegebenen Zeitpunkt|  
 |**0 x 4**|Minuten|  
@@ -113,7 +113,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
  *Frequency_relative_interval* ist **Int**, hat keinen Standardwert und kann die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung (Einheit)|  
+|value|Beschreibung (Einheit)|  
 |-----------|--------------------------|  
 |**1**|Erster|  
 |**2**|Zweimal|  
@@ -150,7 +150,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ InclusionThresholdSetting  
   
 ## <a name="remarks"></a>Hinweise  
  Auftragszeitpläne können jetzt unabhängig von Aufträgen verwaltet werden. Um einen Zeitplan einen Auftrag hinzuzufügen, verwenden Sie **Sp_add_schedule** um den Zeitplan zu erstellen und **Sp_attach_schedule** den Zeitplan einem Auftrag angefügt.  
@@ -168,7 +168,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  
  ## <a name="example"></a>Beispiel
  Im folgende Beispiel weist einen Auftragszeitplan `SaturdayReports` die wird jeden Samstag um 2:00 Uhr ausgeführt.
-```tsql  
+```sql  
 EXEC msdb.dbo.sp_add_jobschedule 
         @job_name = N'SaturdayReports', -- Job name
         @name = N'Weekly_Sat_2AM',  -- Schedule name

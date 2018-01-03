@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7958e7a6513363030d8962774a28992bd055661d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2d06550f0a9cd322e26acfa8f29890833c15f947
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="filestream-and-filetable---spkillfilestreamnontransactedhandles"></a>FileStream- und FileTable - sp_kill_filestream_non_transacted_handles
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Syntax  
   
-```tsql  
+```sql  
 sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [[ @handle_id = ] @handle_id]]  
 ```  
   
@@ -66,7 +66,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [
 ## <a name="metadata"></a>Metadaten  
  Informationen zu geöffneten nicht transaktionalen Dateihandles, Fragen Sie die dynamische verwaltungssicht [dm_filestream_non_transacted_handles &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Berechtigungen  
  Sie benötigen **VIEW DATABASE STATE** über die Berechtigung zum Abrufen von Dateihandles aus der **dm_filestream_non_transacted_handles** -verwaltungssicht und zum Ausführen von **Sp_kill_filestream_non_ Transacted_handles**.  
@@ -74,7 +74,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [
 ## <a name="examples"></a>Beispiele  
  Die folgenden Beispiele zeigen, wie Aufrufen **Sp_kill_filestream_non_transacted_handles** nicht transaktionale Dateihandles für FileTable-Daten zu schließen.  
   
-```tsql  
+```sql  
 -- Close all open handles in the current database.  
 sp_kill_filestream_non_transacted_handles  
   
@@ -87,7 +87,7 @@ sp_kill_filestream_non_transacted_handles @table_name = ’myFileTable’, @hand
   
  Im folgende Beispiel wird gezeigt, wie ein Skript verwenden, zum Abrufen einer *Handle_id* und schließen Sie sie.  
   
-```tsql  
+```sql  
 DECLARE @handle_id varbinary(16);  
 DECLARE @table_name sysname;  
   

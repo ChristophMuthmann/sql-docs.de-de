@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e2fd94b7bab89220337cede905ecbaf1decef722
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ba6329fb017dd398e9ff17586c8bbbab8f3ba455
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Partitionsfunktionen  
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -124,21 +124,21 @@ sys.dm_sql_referenced_entities (
 |Entitätstyp|Verweisende Entität|Entität, auf die verwiesen wird|  
 |-----------------|------------------------|-----------------------|  
 |Tabelle|Ja*|ja|  
-|Sicht|ja|ja|  
+|Anzeigen|ja|ja|  
 |In [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur**|ja|ja|  
-|Gespeicherte CLR-Prozedur|Nein|ja|  
+|Gespeicherte CLR-Prozedur|nein|ja|  
 |Benutzerdefinierte Funktion in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|ja|  
-|CLR-benutzerdefinierte Funktion|Nein|ja|  
-|CLR-Trigger (DML und DDL)|Nein|Nein|  
-|DML-Trigger in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|Nein|  
-|DDL-Trigger auf Datenbankebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|Nein|  
-|DDL-Trigger auf Serverebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|Nein|  
-|Erweiterte gespeicherte Prozeduren|Nein|ja|  
-|Warteschlange|Nein|ja|  
-|Synonym|Nein|ja|  
-|Typ (Alias und CLR-benutzerdefinierter Typ)|Nein|ja|  
-|XML-Schemaauflistung|Nein|ja|  
-|Partitionsfunktion|Nein|ja|  
+|CLR-benutzerdefinierte Funktion|nein|ja|  
+|CLR-Trigger (DML und DDL)|nein|nein|  
+|DML-Trigger in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|nein|  
+|DDL-Trigger auf Datenbankebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|nein|  
+|DDL-Trigger auf Serverebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|ja|nein|  
+|Erweiterte gespeicherte Prozeduren|nein|ja|  
+|Warteschlange|nein|ja|  
+|Synonym|nein|ja|  
+|Typ (Alias und CLR-benutzerdefinierter Typ)|nein|ja|  
+|XML-Schemaauflistung|nein|ja|  
+|Partitionsfunktion|nein|ja|  
   
  \*Eine Tabelle als verweisende Entität nachverfolgt wird, nur, wenn er verweist auf eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Modul, einen benutzerdefinierten Typ oder XML-schemaauflistung in der Definition eines berechnete Spalte, einer CHECK-Einschränkung oder einer DEFAULT-Einschränkung.  
   
@@ -152,7 +152,7 @@ sys.dm_sql_referenced_entities (
 ### <a name="a-returning-entities-that-are-referenced-by-a-database-level-ddl-trigger"></a>A. Zurückgeben von Entitäten, auf die von einem DDL-Trigger auf Datenbankebene verwiesen wird  
  Im folgenden Beispiel werden die Entitäten (Tabellen und Spalten) zurückgegeben, auf die vom DDL-Trigger auf Datensatzebene  `ddlDatabaseTriggerLog` verwiesen wird.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
@@ -164,7 +164,7 @@ GO
 ### <a name="b-returning-entities-that-are-referenced-by-an-object"></a>B. Zurückgeben von Entitäten, auf die von einem Objekt verwiesen wird  
  Im folgenden Beispiel werden die Entitäten zurückgegeben, auf die von der benutzerdefinierten Funktion `dbo.ufnGetContactInformation` verwiesen wird.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
@@ -176,7 +176,7 @@ GO
 ### <a name="c-returning-column-dependencies"></a>C. Zurückgeben von Spaltenabhängigkeiten  
  Im folgenden Beispiel wird die `Table1`-Tabelle mit der berechneten Spalte `c`, die als Summe der Spalten `a` und `b` definiert ist, erstellt. Anschließend wird die `sys.dm_sql_referenced_entities`-Sicht aufgerufen. Die Sicht gibt zwei Zeilen zurück: eine für jede in der berechneten Spalte definierte Spalte.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE dbo.Table1 (a int, b int, c AS a + b);  
@@ -205,7 +205,7 @@ GO
 ### <a name="d-returning-non-schema-bound-column-dependencies"></a>D. Zurückgeben von nicht schemagebundenen Spaltenabhängigkeiten  
  Im folgenden Beispiel wird die `Table1`-Tabelle gelöscht und die `Table2`-Tabelle sowie die gespeicherte Prozedur `Proc1` erstellt. Die Prozedur verweist auf die `Table2`-Tabelle und auf die nicht vorhandene `Table1`-Tabelle. Die `sys.dm_sql_referenced_entities`-Sicht wird mit der gespeicherten Prozedur ausgeführt, die als verweisende Entität angegeben ist. Das Resultset zeigt eine Zeile für `Table1` und drei Zeilen für `Table2` an. Da `Table1` nicht vorhanden ist, können die Spaltenabhängigkeiten nicht aufgelöst werden, und es wird der Fehler 2020 zurückgegeben. Die Spalte `is_all_columns_found` gibt 0 für `Table1` zurück. Damit wird angegeben, dass einige Spalten nicht ermittelt werden konnten.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'dbo.Table1', 'U' ) IS NOT NULL   
@@ -239,7 +239,7 @@ GO
 ### <a name="e-demonstrating-dynamic-dependency-maintenance"></a>E. Veranschaulichen der dynamischen Verwaltung von Abhängigkeiten  
  Das folgende Beispiel stellt eine Erweiterung von Beispiel D dar und zeigt, dass Abhängigkeiten dynamisch verwaltet werden. Zunächst wird die in Beispiel D gelöschte `Table1`-Tabelle neu erstellt. Danach wird `sys.dm_sql_referenced_entities` erneut ausgeführt. Dabei wird die gespeicherte Prozedur als verweisende Entität angegeben. Das Resultset zeigt, dass beide Tabellen zusammen mit den in der gespeicherten Prozedur definierten zugehörigen Spalten zurückgegeben werden. Außerdem gibt die Spalte `is_all_columns_found` für alle Objekte und Spalten 1 zurück.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE Table1 (a int, b int, c AS a + b);  
@@ -272,7 +272,7 @@ GO
   
 **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```t-sql  
+```sql  
 SELECT referenced_entity_name AS table_name, referenced_minor_name as column_name, is_selected, is_updated, is_select_all  
 FROM sys.dm_sql_referenced_entities ('HumanResources.uspUpdateEmployeePersonalInfo', 'OBJECT');  
   

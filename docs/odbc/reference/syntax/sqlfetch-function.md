@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4da263d0f7511aef2e01b66667761a9e364e9720
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3af90114b88e3f54f14bbb94357f4f3bf805bb30
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlfetch-function"></a>SQLFetch-Funktion
 **Konformität**  
@@ -216,7 +216,7 @@ SQLRETURN SQLFetch(
   
 -   Fügt 0 (null) oder mehrere Statusdatensätze, die für den Fehler oder die Warnung SQLSTATEs enthalten.  
   
--   Legt die Zeilen- und Zahlenfelder in den statusdatensätzen fest. Wenn **SQLFetch** diverse Zeile oder Spalte kann nicht bestimmt werden. es legt diese Anzahl auf SQL_ROW_NUMBER_UNKNOWN oder SQL_COLUMN_NUMBER_UNKNOWN, bzw.. Wenn der Status-Datensatz nicht für eine bestimmte Spalte gelten **SQLFetch** legt die Nummer der Spalte auf SQL_NO_COLUMN_NUMBER fest.  
+-   Legt die Zeilen- und Zahlenfelder in den statusdatensätzen fest. Wenn **SQLFetch** diverse Zeile oder Spalte kann nicht bestimmt werden. es legt diese Anzahl auf SQL_ROW_NUMBER_UNKNOWN oder SQL_COLUMN_NUMBER_UNKNOWN, bzw. Wenn der Status-Datensatz nicht für eine bestimmte Spalte gelten **SQLFetch** legt die Nummer der Spalte auf SQL_NO_COLUMN_NUMBER fest.  
   
  **SQLFetch** weiterhin das Abrufen von Zeilen, bis sie alle Zeilen im Rowset abgerufen hat. Es gibt SQL_SUCCESS_WITH_INFO zurück, es sei denn, die Fehler in jeder Zeile des Rowsets (nicht einschließlich Zeilen mit dem Status SQL_ROW_NOROW), wird in diesem Fall wird SQL_ERROR zurückgegeben. Insbesondere wenn die Rowsetgröße 1 und ein Fehler auftritt, in dieser Zeile **SQLFetch** gibt SQL_ERROR zurück.  
   

@@ -15,11 +15,11 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 12/02/2017
 ms.author: genemi
-ms.openlocfilehash: 4adfcb675e52b5b73bd4dcc4867bf79350a26d52
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 030f30580b0ddb02da2a67990d0c58acf15236c9
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="new-and-recently-updated-sql-server-on-linux-docs"></a>Neue und zuletzt aktualisiert: SQL Server on Linux Docs
 
@@ -33,7 +33,7 @@ Neueste Updates werden für den folgenden Datumsbereich und Themenbereich gemeld
 
 
 
-- *Datumsbereich des Updates:* &nbsp; **2017-09-28** &nbsp; - zu - &nbsp; **2017-12-02**
+- *Datumsbereich des Updates*: &nbsp; **28.09.2017** &nbsp; – bis – &nbsp; **02.12.2017**
 - *Bereich für die Themenbereichsdatenbank:* &nbsp; **Microsoft SQL Server on Linux**.
 
 
@@ -102,7 +102,7 @@ Diese kompakte Liste enthält Links zu den aktualisierten Artikeln, die im Absch
 
 ### <a name="1-nbsp-run-the-sql-server-2017-container-image-with-dockerquickstart-install-connect-dockermd"></a>1. &nbsp;[2017 von SQL Server-Container-Image mit Docker ausführen](quickstart-install-connect-docker.md)
 
-*Aktualisiert: 2017-11 bis 30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Weiter](#TitleNum_2))
+*Aktualisiert: 30.11.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Weiter](#TitleNum_2))
 
 <!-- Source markdown line 261.  ms.author= jroth.  -->
 
@@ -256,7 +256,7 @@ Dieses Thema enthält Szenarien für die weitere Verwendung in den folgenden Abs
 **<a id="production"></a>Führen Sie Produktion containerimages**
 
 
-Schnellstart-Tutorial im vorherigen Abschnitt führt die kostenlose Developer Edition von SQL Server von Docker Hub. Die meisten Informationen gilt weiterhin, wenn Produktion containerimages, z. B. Enterprise, Standard oder Web Edition ausgeführt werden soll. Es gibt jedoch einige Unterschiede, die im folgenden beschrieben werden.
+Quickstart im vorherigen Abschnitt führt die kostenlose Developer Edition von SQL Server von Docker Hub. Die meisten Informationen gilt weiterhin, wenn Produktion containerimages, z. B. Enterprise, Standard oder Web Edition ausgeführt werden soll. Es gibt jedoch einige Unterschiede, die im folgenden beschrieben werden.
 
 - Sie können nur SQL Server in einer produktionsumgebung verwenden, wenn Sie eine gültige Lizenz verfügen. Sie erhalten eine kostenlose Lizenz für SQL Server Express Produktion [hier](https://go.microsoft.com/fwlink/?linkid=857693). Lizenzen für SQL Server Standard und Enterprise Edition stehen über [Microsoft Volume Licensing](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs.aspx).
 
@@ -272,7 +272,7 @@ Schnellstart-Tutorial im vorherigen Abschnitt führt die kostenlose Developer Ed
 
    1. Als Nächstes müssen Sie freien Entwickler containerimage in Docker-Informationsspeicher abzurufen. Wechseln Sie zu [https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux), klicken Sie auf **zur Kasse**, und befolgen Sie die Anweisungen.
 
-   1. Überprüfen Sie die Anforderungen und führen Sie Prozeduren aus, in der [quick Start-Lernprogramm – Schnellstart-Installation herstellen docker.md). Es gibt jedoch zwei Unterschiede. Sie müssen das Image per Pull beziehen **Store/Microsoft/Mssql-Server – Linux:\<Tagname\>**  Docker Store. Außerdem müssen Sie angeben, die Produktion Edition mit der **MSSQL_PID** -Umgebungsvariablen angegeben. Im folgende Beispiel wird gezeigt, wie das neueste 2017 von SQL Server-Container-Bild für die Enterprise Edition ausgeführt wird:
+   1. Überprüfen Sie die Anforderungen und führen Sie Prozeduren aus, in der [Schnellstart – Schnellstart-Installation herstellen docker.md). Es gibt jedoch zwei Unterschiede. Sie müssen das Image per Pull beziehen **Store/Microsoft/Mssql-Server – Linux:\<Tagname\>**  Docker Store. Außerdem müssen Sie angeben, die Produktion Edition mit der **MSSQL_PID** -Umgebungsvariablen angegeben. Im folgende Beispiel wird gezeigt, wie das neueste 2017 von SQL Server-Container-Bild für die Enterprise Edition ausgeführt wird:
 
 
 
@@ -506,7 +506,7 @@ Der erste Schritt ist so konfigurieren Sie das Betriebssystem auf den Clusterkno
 
 ### <a name="9-nbsp-troubleshoot-sql-server-on-linuxsql-server-linux-troubleshooting-guidemd"></a>9. &nbsp;[Problembehandlung bei SQLServer on Linux](sql-server-linux-troubleshooting-guide.md)
 
-*Aktualisiert: 2017-11 bis 30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([vorherigen](#TitleNum_8))
+*Aktualisiert: 30.11.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Zurück](#TitleNum_8))
 
 <!-- Source markdown line 125.  ms.author= anshrest.  -->
 
@@ -569,26 +569,26 @@ Dieser Abschnitt enthält sehr ähnliche Artikel für zuletzt aktualisierte Arti
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Themenbereiche, die über neue oder kürzlich aktualisierte Artikel verfügen
 
-- [Neue und aktualisierte (3 + 14): **Advanced Analytics für SQL** Docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Neu + Aktualisiert (3+14): Dokumente zu **Advanced Analytics für SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
 - [New + Updated (1+0): **Analysis Services for SQL** docs (Neu + Aktualisiert (1+0): Analysis Services für SQL-Dokumente)](../analysis-services/new-updated-analysis-services.md)
-- [Neue und aktualisierte (87 + 0): **Analyseplattformsystem für SQL** Docs](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Neue und aktualisierte (5 + 4): **Herstellen einer Verbindung mit SQL** Docs](../connect/new-updated-connect.md)
-- [Neue und aktualisierte (0 + 1): **für SQL-Datenbank-Engine** Docs](../database-engine/new-updated-database-engine.md)
-- [Neue und aktualisierte (2 + 2): **Integration Services für SQL** Docs](../integration-services/new-updated-integration-services.md)
-- [Neue und aktualisierte (10 + 9): **Linux für SQL** Docs](../linux/new-updated-linux.md)
-- [Neue und aktualisierte (2 + 4): **relationale Datenbanken für SQL** Docs](../relational-databases/new-updated-relational-databases.md)
-- [Neue und aktualisierte (4 + 2): **Reporting Services für SQL** Docs](../reporting-services/new-updated-reporting-services.md)
-- [Neue und aktualisierte (0 + 1): **Samples for SQL** Docs](../sample/new-updated-sample.md)
-- [Neue und aktualisierte (21 + 0): **SQL Operations Studio** Docs](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Neue und aktualisierte (5 + 1): **Microsoft SQL Server** Docs](../sql-server/new-updated-sql-server.md)
+- [Neu + Aktualisiert (87+0): Dokumente zu **Analyseplattformsystem für SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [Neu + Aktualisiert (5+4): Dokumente zu **Herstellen einer Verbindung mit SQL**](../connect/new-updated-connect.md)
+- [Neu + Aktualisiert (0+1): Dokumente zum **Datenbankmodul für SQL**](../database-engine/new-updated-database-engine.md)
+- [Neu + Aktualisiert (2+2):Dokumente zu **Integration Services für SQL**](../integration-services/new-updated-integration-services.md)
+- [Neu + Aktualisiert (10+9): Dokumente zu **Linux für SQL**](../linux/new-updated-linux.md)
+- [Neu + Aktualisiert (2+4): Dokumente zu **Relationale Datenbanken für SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Neu + Aktualisiert (4+2): Dokumente zu **Reporting Services für SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Neu + Aktualisiert (0+1): Dokumente zu **Beispiele für SQL**](../sample/new-updated-sample.md)
+- [Neu + Aktualisiert (21+0): Dokumente zu **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Neu + Aktualisiert (5+1): Dokumente zu **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
 - [New + Updated (0+1): **SQL Server Data Tools (SSDT)** docs (Neu + Aktualisiert (0+1): SQL Server Data Tools-Dokumente (SSDT))](../ssdt/new-updated-ssdt.md)
-- [Neue und aktualisierte (1 + 0): **SQL Server Migration Assistant (SSMA)** Docs](../ssma/new-updated-ssma.md)
+- [Neu + Aktualisiert (1+0): Dokumente zu **SQL Server Migration Assistant (SSMA)**](../ssma/new-updated-ssma.md)
 - [New + Updated (0+1): **SQL Server Management Studio (SSMS)** docs (Neu + Aktualisiert (0+1): SQL Server Management Studio-Dokumente (SSMS))](../ssms/new-updated-ssms.md)
-- [Neue und aktualisierte (0 + 2): **Transact-SQL** Docs](../t-sql/new-updated-t-sql.md)
+- [Neu + Aktualisiert (0+2): Dokumente zu **Transact-SQL**](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Themenbereiche, die über keine neuen oder kürzlich aktualisierten Artikel verfügen
 
-- [Neue und aktualisierte (0 + 0): **Data Migration Assistant (DMA) für SQL** Docs](../dma/new-updated-dma.md)
+- [Neu + Aktualisiert (0+0): Dokumente zu **Data Migration Assistant (DMA) für SQL**](../dma/new-updated-dma.md)
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs (Neu + Aktualisiert (0+0): ActiveX Data Objects (ADO) für SQL-Dokumente)](../ado/new-updated-ado.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs (Neu + Aktualisiert (0+0): Data Quality Services für SQL-Dokumente)](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs (Neu + Aktualisiert (0+0): Data Mining-Erweiterungen (DMX) für SQL)](../dmx/new-updated-dmx.md)
