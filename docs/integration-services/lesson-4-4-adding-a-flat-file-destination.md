@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6fb6a9d21c02faf2615d786dda40f35da4b25a7c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a5037fb489588b174ec66a8845cf4994d8a915e8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-4-4---adding-a-flat-file-destination"></a>Lektion 4-4: Hinzufügen eines Flatfileziels
 Die Fehlerausgabe der "Lookup Currency Key"-Transformation leitet alle Datenzeilen, für die im Suchvorgang keine Übereinstimmung gefunden wurde, zur Skripttransformation um. Um die zu den Fehlern angezeigten Informationen zu verbessern, führt die Skripttransformation ein Skript aus, mit dem die Fehlerbeschreibung abgerufen wird.  
@@ -65,7 +65,7 @@ In dieser Aufgabe speichern Sie alle Informationen zu den fehlerhaften Zeilen f�
   
 15. Klicken Sie auf **OK**.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
 [Schritt 5: Testen des Lektion 4-Lernprogrammpakets](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
   

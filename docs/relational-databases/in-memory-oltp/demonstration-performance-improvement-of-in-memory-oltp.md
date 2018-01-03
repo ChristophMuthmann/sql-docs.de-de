@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 19c04ed5c67cc2f661ed0774b3941082dec07d81
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 030764b39018049a729496177f967f659fb5b08c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demo: Leistungsverbesserungen von In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ Eine umfassendere Darstellung der potenziellen Leistungssteigerungen von In-Memo
   
 3.  Führen Sie das kurze T-SQL aus, um die Datenbank und die speicheroptimierte Dateigruppe zu erstellen.  
   
-```tsql  
+```sql  
 go  
 CREATE DATABASE imoltp;    --  Transact-SQL  
 go  
@@ -79,7 +79,7 @@ go
   
 2.  Führen Sie die folgende T-SQL-Anweisung in der Datenbank aus.  
   
-```tsql  
+```sql  
 go  
 DROP PROCEDURE IF EXISTS ncsp;  
 DROP TABLE IF EXISTS sql;  
@@ -131,7 +131,7 @@ go
   
 2.  Verwenden Sie „SSMS.exe“ erneut, um die folgende T-SQL-Anweisung erneut in der Datenbank auszuführen,  
   
-```tsql  
+```sql  
 go  
 SET STATISTICS TIME OFF;  
 SET NOCOUNT ON;  
@@ -194,13 +194,13 @@ go
   
  Als Nächstes kommen die Ausgabezeitstatistiken, die bei unserer zweiten Testausführung generiert werden.  
   
-```tsql  
+```sql  
 10453 ms , A: Disk-based table and interpreted Transact-SQL.  
 5626 ms , B: memory-optimized table with hash index and interpreted Transact-SQL.  
 3937 ms , C: memory-optimized table with hash index and native SP.  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

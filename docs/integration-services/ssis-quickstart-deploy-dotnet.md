@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,18 +13,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7891a781a5874653eb7d4864529630d4d2a03442
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8e01ed21accad152b2ef32d012f3194458ab0440
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>Bereitstellen eines SSIS-Projekts mit C#-Code in einer .NET-App
 In diesem Schnellstarttutorial wird dargestellt, wie C#-Code geschrieben wird, um eine Verbindung mit einem Datenbankserver herzustellen und ein SSIS-Paket bereitzustellen.
 
 Um eine C#-App zu erstellen, können Sie Visual Studio, Visual Studio Code oder ein anderes Tool Ihrer Wahl verwenden.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Bevor Sie beginnen, stellen Sie sicher, dass Sie Visual Studio oder Visual Studio Code installiert haben. Laden Sie die kostenlose Community Edition von Visual Studio oder Visual Studio Code (ebenfalls kostenlos) unter [Visual Studio-Downloads](https://www.visualstudio.com/downloads/) herunter.
 
@@ -126,9 +126,9 @@ namespace deploy_ssis_project
     - [Deploy an SSIS package from the command prompt (Bereitstellen eines SSIS-Pakets von der Befehlszeile aus)](./ssis-quickstart-deploy-cmdline.md)
     - [Deploy an SSIS package with PowerShell (Bereitstellen eines SSIS-Pakets mit PowerShell)](ssis-quickstart-deploy-powershell.md)
 - Führen Sie ein bereitgestelltes Paket aus. Für die Ausführung eines Pakets können Sie aus mehreren Tools und Sprachen auswählen. Weitere Informationen finden Sie in den folgenden Artikeln:
-    - [Run an SSIS package with SSMS (Ausführen eines SSIS-Pakets mit SSMS)](./ssis-quickstart-run-ssms.md)
+    - [Run an SSIS package with SSMS](./ssis-quickstart-run-ssms.md) (Ausführen eines SSIS-Pakets mit SSMS)
     - [Run an SSIS package with Transact-SQL (SSMS) (Ausführen eines SSIS-Pakets mit Transact-SQL [SSMS])](./ssis-quickstart-run-tsql-ssms.md)
-    - [Run an SSIS package with Transact-SQL (VS Code) (Ausführen eines SSIS-Pakets mit Transact-SQL [VS Code])](ssis-quickstart-run-tsql-vscode.md)
-    - [Run an SSIS package from the command prompt (Ausführen eines SSIS-Pakets über die Eingabeaufforderung)](./ssis-quickstart-run-cmdline.md)
-    - [Run an SSIS package with PowerShell (Ausführen eines SSIS-Pakets mit PowerShell)](ssis-quickstart-run-powershell.md)
-    - [Run an SSIS package with C# (Ausführen eines SSIS-Pakets mit C#)](./ssis-quickstart-run-dotnet.md) 
+    - [Run an SSIS package with Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md) (Ausführen eines SSIS-Pakets mit Transact-SQL [VS Code])
+    - [Run an SSIS package from the command prompt](./ssis-quickstart-run-cmdline.md) (Ausführen eines SSIS-Pakets über die Eingabeaufforderung)
+    - [Run an SSIS package with PowerShell](ssis-quickstart-run-powershell.md) (Ausführen eines SSIS-Pakets mit PowerShell)
+    - [Run an SSIS package with C#](./ssis-quickstart-run-dotnet.md) (Ausführen eines SSIS-Pakets mit C#) 

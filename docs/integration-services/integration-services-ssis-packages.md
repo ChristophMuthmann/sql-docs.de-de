@@ -5,7 +5,7 @@ ms.date: 08/31/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 24316ec5dfd86dad719cf603287953f13b70743f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 953fccc13a0d3ef9d34cfe84e5ed50675eeb801b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services-Pakete (SSIS)
   Bei einem Paket handelt es sich um eine organisierte Auflistung von Verbindungen, Ablaufsteuerungselementen, Datenflusselementen, Ereignishandlern, Variablen, Parametern und Konfigurationen, die Sie entweder mit den grafischen Designtools von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] oder programmgesteuert erstellen.  Sie speichern dann das fertige Paket in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], dem [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketspeicher oder im Dateisystem, oder Sie können das ssISnoversion-Projekt auf dem Server [!INCLUDE[ssIS](../includes/ssis-md.md)] bereitstellen. Das Paket ist jene Arbeitseinheit, die abgerufen, ausgeführt und gespeichert wird.  
@@ -110,7 +110,7 @@ ms.lasthandoff: 11/20/2017
   
  Zum Ändern der Paket-GUID müssen Sie in **im Eigenschaftenfenster in der** ID [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]-Eigenschaft eine GUID neu generieren. Zum Ändern des Paketnamens können Sie im Eigenschaftenfenster den Wert der **Name** -Eigenschaft aktualisieren. Sie können auch die **dtutil** -Eingabeaufforderung verwenden oder die GUID und Namen programmgesteuert aktualisieren. Weitere Informationen finden Sie unter [Festlegen von Paketeigenschaften](../integration-services/set-package-properties.md) und [dtutil (Hilfsprogramm)](../integration-services/dtutil-utility.md).  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] schließt neben dem [!INCLUDE[ssIS](../includes/ssis-md.md)] -Objektmodell zum Erstellen von Paketen zwei grafische Tools ein, den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Designer und den [!INCLUDE[ssIS](../includes/ssis-md.md)] -Import/Export-Assistenten. Weitere Informationen finden Sie in den folgenden Themen:  
   
 -   [Importieren und Exportieren von Daten mit dem SQL Server-Import/Export-Assistenten](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  

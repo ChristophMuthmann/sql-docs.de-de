@@ -3,7 +3,7 @@ title: ConnectionTimeout-Eigenschaft (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 17572bfd4ef1de5fa20246f88c8a0187409bbfd4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 603158672b81380976224b2d9ff708a27c879ff8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connectiontimeout-property-ado"></a>ConnectionTimeout-Eigenschaft (ADO)
 Gibt an, wie lange gewartet wird, beim Herstellen einer Verbindung, bevor der Versuch beendet und ein Fehler generiert.  

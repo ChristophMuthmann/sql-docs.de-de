@@ -5,7 +5,7 @@ ms.date: 08/22/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7bd2425af92d89982ea7ccfc8b2a3220a15b24e7
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: ddaf96b05f2d1b6fc9857faf6309c5bfdd4d449c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Azure Feature Pack für Integration Services (SSIS)
 Das SQL Server Integration Services-Feature Pack (SSIS) für Azure ist eine Erweiterung, die die auf dieser Seite für SSIS aufgelisteten Komponenten für Verbindungen mit Azure-Diensten, für die Übertragung von Daten zwischen Azure und lokalen Datenquellen und für die Verarbeitung der in Azure gespeicherten Daten bereitstellt.
@@ -85,7 +85,7 @@ Das SQL Server Integration Services-Feature Pack (SSIS) für Azure ist eine Erwe
 - [SSIS-Feature Pack für Azure](http://go.microsoft.com/fwlink/?LinkID=626967) für SQL Server 2016
 - [SSIS-Feature Pack für Azure](https://www.microsoft.com/download/details.aspx?id=54798) für [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
  Sie müssen die folgenden erforderlichen Komponenten installieren, bevor Sie dieses Feature Pack installieren.
 
 -   SQL Server Integration Services

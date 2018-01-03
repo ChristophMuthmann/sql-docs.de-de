@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ac141fd1bffe16fe483381b9d81c1972de5ac27
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a7d8f17f5fbb9044b1fb33758626a93e1d69125a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>Funktionsbereich "Versionsverwaltung" (Master Data Manager)
   Im Funktionsbereich "Versionsverwaltung" können Administratoren Daten validieren, Transaktionen überprüfen und umkehren, Versionskopien von Daten erstellen und Versionen von Daten für abonnierende Systeme markieren. Weitere Informationen zu Administratoren finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
  [Umkehren einer Transaktion &#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Master Data Manager-Webanwendung [Master Data Services]](../master-data-services/master-data-manager-web-application.md)  
   
   

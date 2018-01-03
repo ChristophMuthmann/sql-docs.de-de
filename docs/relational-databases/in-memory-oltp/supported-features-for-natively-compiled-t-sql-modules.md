@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ed811d1184287c1e45f93d3ddd4253400dc5a237
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fee5822e0833afec741b00d2e18b2c1a0db28ec5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Unterstützte Funktionen für nativ kompilierte T-SQL-Module
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -137,7 +137,7 @@ HAVING-Klausel:
   - Dieser Grenzwert kann herabgesetzt werden, wenn die Abfrage Joins oder Aggregatfunktionen enthält. (Beispielsweise liegt die Beschränkung bei einem Join mit zwei Tabellen bei 4.096 Zeilen. Bei zwei Joins mit drei Tabellen lautet der Grenzwert 2.730 Zeilen).  
   - Sie können Ergebnisse erhalten, die größer als 8.192 sind, indem Sie die Anzahl von Zeilen in einer Variablen speichern:  
 
-```tsql
+```sql
 DECLARE @v INT = 9000;
 SELECT TOP (@v) … FROM … ORDER BY …
 ```
@@ -155,7 +155,7 @@ Die folgenden DML-Anweisungen werden unterstützt.
 
 -   UPDATE  
 
--   DELETE  
+-   Delete  
 
 -   WHERE wird zusammen mit UPDATE- und DELETE-Anweisungen unterstützt.  
 
@@ -257,7 +257,7 @@ Die folgenden DML-Anweisungen werden unterstützt.
 
  Beispiel mit TOP N = 8192: Wird kompiliert  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -270,7 +270,7 @@ GO
 
  Beispiel mit TOP N > 8192: Kann nicht kompiliert werden  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -285,7 +285,7 @@ GO
 
  Beispiel mit einer Variablen: Wird kompiliert  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -305,7 +305,7 @@ GO
 
  Die Formel zum Berechnen eines im ungünstigsten Fall unterstützten Maximalwerts für N in TOP N lautet wie folgt: `N = floor ( 65536 / number_of_tables * 8 + total_size+of+aggs )`.  
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Nativ kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)   
  [Migrationsprobleme bei nativ kompilierten gespeicherten Prozeduren](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
 

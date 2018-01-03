@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b1c53b09fe118de3a90c78bd1393da90a915385b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b009aea458e83421468e57a07455803f9df96a0b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="cardinality-estimation-sql-server"></a>Kardinalitätsschätzung (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ Sie verfügen über Techniken, um eine Abfrage zu identifizieren, die mit der ne
   
  **Kompatibilitätsgrad:** Sie können sicherstellen, dass ein bestimmter Grad für Ihre Datenbank gilt, indem Sie den folgenden Transact-SQL-Code für [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)ausführen.  
 
-```tsql  
+```sql  
 SELECT ServerProperty('ProductVersion');  
 go  
   
@@ -65,7 +65,7 @@ go
   
  **Ältere Kardinalitätsschätzung**: In einer SQL Server-Datenbank, die mit dem Kompatibilitätsgrad 120 oder höher eingerichtet wurde, kann Version 70 der Kardinalitätsschätzung aktiviert werden. Verwenden Sie dazu [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) auf Datenbankebene.
   
-```tsql  
+```sql  
 ALTER DATABASE
     SCOPED CONFIGURATION  
         SET LEGACY_CARDINALITY_ESTIMATION = ON;  
@@ -78,7 +78,7 @@ SELECT name, value
  
  Oder ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
  
- ```tsql  
+ ```sql  
 SELECT CustomerId, OrderAddedDate  
     FROM OrderTable  
     WHERE OrderAddedDate >= '2016-05-01'; 
@@ -87,7 +87,7 @@ SELECT CustomerId, OrderAddedDate
  
  **Abfragespeicher:** Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ist der Abfragespeicher ein praktisches Tool zum Untersuchen der Leistung Ihrer Abfragen. In [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] wird im **Objekt-Explorer** unterhalb des Knotens Ihrer Datenbank ein Knoten **Abfragespeicher** angezeigt, wenn der Abfragespeicher aktiviert ist.  
   
-```tsql  
+```sql  
 ALTER DATABASE <yourDatabase>  
     SET QUERY_STORE = ON;  
 go  
@@ -109,7 +109,7 @@ ALTER DATABASE <yourDatabase>
   
  Eine andere Option zum Nachverfolgen des Prozesses der Kardinalitätsschätzung ist die Verwendung des erweiterten Ereignisses **query_optimizer_estimate_cardinality**. Das folgende T-SQL-Codebeispiel wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt. Es schreibt eine XEL-Datei in C:\Temp\ (Sie können den Pfad ändern). Wenn Sie die XEL-Datei in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] öffnen, werden die detaillierten Daten in einer von Benutzern gut lesbaren Weise angezeigt.  
   
-```tsql  
+```sql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
 go  
   
@@ -234,7 +234,7 @@ Dieser Abschnitt enthält Beispielabfragen, die von den Erweiterungen der Kardin
   
 Angenommen, die Statistiken für OrderTable wurden zuletzt am 30.4.2016 erfasst – der Maximalwert für OrderAddedDate war „2016-04-30“. Bei der Kardinalitätsschätzung für Kompatibilitätsgrad 120 (und höher) wird berücksichtigt, dass Spalten in OrderTable mit *ansteigenden* Daten Werte aufweisen können, die über dem von der Statistik aufgezeichneten Maximalwert liegen. Dies verbessert den Abfrageplan für SQL-SELECT-Anweisungen wie die folgende.  
   
-```tsql  
+```sql  
 SELECT CustomerId, OrderAddedDate  
     FROM OrderTable  
     WHERE OrderAddedDate >= '2016-05-01';  
@@ -246,7 +246,7 @@ Die folgende SELECT-Anweisung zeigt gefilterte Prädikate für „Model“ und �
   
 Bei der Kardinalitätsschätzung mit Kompatibilitätsgrad 120 wird berücksichtigt, dass eine Korrelation zwischen den beiden Spalten „Model“ und „ModelVariant“ existieren kann, die sich in der gleichen Tabelle befinden. Die Kardinalitätsschätzung kann genauer einschätzen, wie viele Zeilen von der Abfrage zurückgegeben werden, und der Abfrageoptimierer generiert einen besseren Plan.  
   
-```tsql  
+```sql  
 SELECT Model, Purchase_Price  
     FROM dbo.Hardware  
     WHERE  
@@ -257,7 +257,7 @@ SELECT Model, Purchase_Price
 ### <a name="example-c-ce-no-longer-assumes-any-correlation-between-filtered-predicates-from-different-tablescc"></a>Beispiel C. Die Kardinalitätsschätzung geht nicht mehr von einer Korrelation zwischen gefilterten Prädikaten aus verschiedenen Tabellen aus. 
 Umfangreiche neue Untersuchungen moderner Arbeitslasten und tatsächlicher Geschäftsdaten haben ergeben, dass Prädikatfilter aus unterschiedlichen Tabellen üblicherweise nicht korrelieren. In der folgenden Abfrage nimmt die Kardinalitätsschätzung an, dass zwischen „s.type“ und „r.date“ kein Zusammenhang besteht. Daher wird die Anzahl der zurückgegebenen Zeilen niedriger eingeschätzt.  
   
-```tsql  
+```sql  
 SELECT s.ticket, s.customer, r.store  
     FROM  
                    dbo.Sales    AS s  
@@ -269,7 +269,7 @@ SELECT s.ticket, s.customer, r.store
 ```  
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überwachen und Optimieren der Leistung](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
   [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator (Optimieren Ihrer Abfragepläne mit der SQL Server 2014-Kardinalitätsschätzung)](http://msdn.microsoft.com/library/dn673537.aspx)  
  [Abfragehinweise](../../t-sql/queries/hints-transact-sql-query.md)  

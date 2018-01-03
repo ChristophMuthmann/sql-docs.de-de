@@ -3,7 +3,7 @@ title: GetRows-Methode (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8d3349fd15c62e500a4ed7bd2add37202985c529
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c1fbe3a548115fbfa76861c40232ccf799a3a137
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getrows-method-example-vc"></a>GetRows-Methode (VC++-Beispiel)
 Dieses Beispiel verwendet die [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) Methode zum Abrufen einer angegebenen Anzahl von Zeilen aus einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) und ein Array mit den resultierenden Daten zu füllen. Die **GetRows** Methode wird in zwei Fällen kleiner als die gewünschte Anzahl von Zeilen zurück: entweder If [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) erreicht wurde oder wenn **GetRows** hat versucht, einen Datensatz abzurufen, die wurde von einem anderen Benutzer gelöscht. Die Funktion gibt **"false"** nur, wenn der zweite Fall tritt auf. Die GetRowsOK-Funktion ist erforderlich, damit dieses Verfahren ausführen.  

@@ -3,7 +3,7 @@ title: Anpassen (Seite Befehle) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7fec4dfbfc43e1b0ef8716af253278192bf82747
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9d748b147c19031f5f304f0233c772dbd91798b8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customize-commands-page"></a>Anpassen (Seite Befehle)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mithilfe dieses Dialogfelds können Sie Befehle zu Symbolleisten und Menüs hinzufügen und die Bilder für auf Symbolleisten verwendeten Schaltflächen sowie für Menübefehle ändern. Sie können auf die Seite **Befehle** zugreifen, indem Sie im Menü **Extras** auf **Anpassen** klicken und anschließend auf **Befehle**klicken.  
@@ -45,6 +45,6 @@ Zeigt das Dialogfeld **Befehle neu anordnen** an, mit dem Sie Befehle in Menüs 
 **Tastatur**  
 Zeigt die Seite **Tastatur** des Dialogfelds **Optionen** an, in dem Sie Tastenkombinationen für Befehle angeben können.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Anpassen von Menüs und Tastenkombinationen](../../ssms/customize-menus-and-shortcut-keys.md)  
   

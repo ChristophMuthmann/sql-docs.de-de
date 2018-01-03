@@ -37,11 +37,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e0115a7595476adadb0fc0328a14b01b0476771a
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: c55cc253a5b82bed265b2b67ab9cd63d8c971408
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Neuorganisieren und Neuerstellen von Indizes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,14 +52,14 @@ ms.lasthandoff: 11/28/2017
   
  Sie können die Indexfragmentierung durch Neuorganisieren oder Neuerstellen eines Indexes beheben. Für partitionierte Indizes, die auf Grundlage eines Partitionsschemas erstellt wurden, können beide Methoden für einen vollständigen Index oder für eine einzelne Partition eines Indexes verwendet werden. Beim Neuerstellen eines Indexes wird der Index gelöscht und neu erstellt. Bei diesem Vorgang wird die Fragmentierung entfernt, Speicherplatz wird freigegeben, indem die Seiten auf der Grundlage der angegebenen oder vorhandenen Füllfaktoreinstellung komprimiert werden, und die Indexzeilen werden in aufeinanderfolgenden Seiten neu geordnet. Wenn `ALL` angegeben ist, werden alle Indizes der Tabelle in einer einzelnen Transaktion gelöscht und neu erstellt. Das Neuorganisieren eines Indexes beansprucht minimale Systemressourcen. Dabei wird die Blattebene von gruppierten und nicht gruppierten Indizes in Tabellen und Sichten defragmentiert, indem die Blattebenenseiten physisch neu geordnet werden, damit sie mit der logischen Reihenfolge der Blattknoten von links nach rechts übereinstimmen. Durch das Neuorganisieren werden die Indexseiten auch komprimiert. Die Komprimierung basiert auf dem vorhandenen Füllfaktorwert.  
    
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Fragmentation"></a> Erkennen der Fragmentierung  
  Der erste Schritt bei der Entscheidung für eine Defragmentierungsmethode besteht im Analysieren des Indexes, um den Fragmentierungsgrad zu ermitteln. Mithilfe der Systemfunktion [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)können Sie die Fragmentierung in einem bestimmten Index, allen Indizes in einer Tabelle oder indizierten Sicht, allen Indizes in einer Datenbank oder allen Indizes in allen Datenbanken erkennen. Für partitionierte Indizes stellt **sys.dm_db_index_physical_stats** außerdem Fragmentierungsinformationen für jede Partition bereit.  
   
  Das durch die Funktion **sys.dm_db_index_physical_stats** zurückgegebene Resultset enthält die folgenden Spalten.  
   
-|Column|Beschreibung|  
+|Spalte|Description|  
 |------------|-----------------|  
 |**avg_fragmentation_in_percent**|Der Prozentsatz der logischen Fragmentierung (falsche Reihenfolge der Seiten in einem Index).|  
 |**fragment_count**|Die Anzahl der Fragmente (physisch aufeinanderfolgende Blattseiten) im Index.|  
@@ -164,7 +164,7 @@ ms.lasthandoff: 11/28/2017
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     -- Find the average fragmentation percentage of all indexes  
@@ -258,7 +258,7 @@ ms.lasthandoff: 11/28/2017
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     -- Reorganize the IX_Employee_OrganizationalLevel_OrganizationalNode 
@@ -278,7 +278,7 @@ ms.lasthandoff: 11/28/2017
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     -- Reorganize all indexes on the HumanResources.Employee table.  
@@ -313,7 +313,7 @@ ms.lasthandoff: 11/28/2017
 
 Nutzen Sie Lösungen wie [Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag), um die Indexdefragmentierung und das Aktualisieren der Statistiken für eine oder mehrere Datenbanken automatisch zu verwalten. Dieser Vorgang entscheidet unter anderem anhand des Fragmentierungsgrads automatisch, ob ein Index neu organisiert oder neu erstellt wird und aktualisiert Statistiken mit einem linearen Schwellenwert.
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
   [Handbuch zum SQL Server Indexentwurf](../../relational-databases/sql-server-index-design-guide.md)   
   [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
   [Adaptive Indexdefragmentierung](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)   

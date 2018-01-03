@@ -3,7 +3,7 @@ title: AddNew-Methode (Beispiel) (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 52971f9c72b1fabbacea478d45c0a71191510c75
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dae9541d53b68a9b61c30492887eda2550fff6c9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="addnew-method-example-vb"></a>AddNew-Methode (Beispiel) (VB)
 Dieses Beispiel verwendet die [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) Methode, um einen neuen Eintrag mit dem angegebenen Namen zu erstellen.  

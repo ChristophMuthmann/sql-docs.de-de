@@ -3,7 +3,7 @@ title: Ersetzen von Vorlagenparametern|Microsoft-Dokumente
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-templates
 ms.reviewer: 
@@ -23,13 +23,13 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 17d36529a476493920ceb74d64069d5e77e7d10e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cae991dbfcdfb2b00a3229746455c58b59f39bd5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="replace-template-parameters"></a>Ersetzen von Vorlagenparametern
+# <a name="replace-template-parameters"></a>Vorlagenparameter ersetzen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vorlagen enthalten Parameter, die bei jeder Verwendung der betreffenden Vorlage durch implementierungsspezifische Werte ersetzt werden können. Nach dem Öffnen einer Vorlage in einem Code-Editor können Sie die Parameter durch für die Implementierung relevante Werte ersetzen.  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
@@ -37,7 +37,7 @@ Das Dialogfeld **Werte für Vorlagenparameter angeben** ist ein Raster mit drei 
   
 Um das Dialogfeld verwenden zu können, müssen die im Skript enthaltenen Parameter in spitze Klammern (`< >`) gesetzt und in folgendem Format angegeben werden: `<`*Parametername*`,` *Datentyp*`,` *Standardwert*`>`.  
   
-## <a name="replace-template-parameters"></a>Ersetzen von Vorlagenparametern  
+## <a name="replace-template-parameters"></a>Vorlagenparameter ersetzen  
 Nach dem Öffnen der Vorlage in einem Code-Editor-Fenster:  
   
 1.  Klicken Sie im Menü **Abfrage** auf **Werte für Vorlagenparameter angeben**.  
@@ -46,7 +46,7 @@ Nach dem Öffnen der Vorlage in einem Code-Editor-Fenster:
   
 3.  Klicken Sie auf **OK** , um das Dialogfeld **Vorlagenparameter ersetzen** zu schließen und das Skript im Abfrage-Editor zu ändern.  
   
-## <a name="see-also"></a>Siehe auch  
-[Vorlagen-Explorer](../../ssms/template/template-explorer.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+[Template Explorer](../../ssms/template/template-explorer.md)  
 [Öffnen einer Vorlage](../../ssms/template/open-a-template.md)  
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 395967f86de07074db3a7c8cad7c49195ed54d86
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d9fcd874e83a0fcecadf7dd76bb5bf67a21df6d6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Anwendungsmuster zur Partitionierung von speicheroptimierten Tabellen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ Pflege aktiver Daten
   
  Im ersten Teil dieses Beispiels werden die Datenbank und die erforderlichen Objekte erstellt. Im zweiten Teil des Beispiels wird gezeigt, wie Daten aus einer speicheroptimierten Tabelle in eine partitionierte Tabelle verschoben werden.  
   
-```tsql  
+```sql  
 CREATE DATABASE partitionsample;  
 GO  
   
@@ -217,7 +217,7 @@ SELECT OBJECT_NAME( object_id) , partition_number , row_count  FROM sys.dm_db_pa
   WHERE object_id = OBJECT_ID( 'dbo.SalesOrders_cold') AND index_id = 1;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

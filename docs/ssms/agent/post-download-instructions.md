@@ -3,7 +3,7 @@ title: Bereitstellen von Anweisungen zum Herunterladen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,20 +18,20 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 91d211e60e91cdf59aa8877fed2f0c771a16a3e1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 15869a75cc44e52a962ad85e23089551c908f087
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="post-download-instructions"></a>Bereitstellen von Anweisungen zum Herunterladen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe dieser Seite können Sie Downloadanweisungen für einen Zielserver angeben.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Anweisungstyp**  
 Gibt den Typ der bereitzustellenden Downloadanweisung an.  
   
-**Description**  
+**Beschreibung**  
 Zeigt eine Beschreibung der Downloadanweisungen an.  
   
 **Abrufintervall**  
@@ -55,6 +55,6 @@ Zeigt Datum und Uhrzeit des Zielservers in der Ortszeit des Servers an.
 **Abrufintervall**  
 Zeigt das aktuelle Abrufintervall für den Zielserver an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Automatisierte Verwaltung in einem Unternehmen](../../ssms/agent/automated-administration-across-an-enterprise.md)  
   

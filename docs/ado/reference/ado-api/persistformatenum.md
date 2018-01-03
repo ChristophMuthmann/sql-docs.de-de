@@ -3,7 +3,7 @@ title: PersistFormatEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2695db14fdbdf05aba5b0a1b14b063ff6672a928
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ee380cb3912ba93efb5f75555e9c2d08c38864cb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="persistformatenum"></a>PersistFormatEnum
 Gibt das Format zum Speichern einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-|Konstante|Wert|Description|  
+|Konstante|value|Description|  
 |--------------|-----------|-----------------|  
 |**adPersistADTG**|0|Gibt Microsoft Advanced Data TableGram (ADTG)-Format an.|  
 |**adPersistADO**|1|Gibt an, dass der ADO-Extensible Markup Language (XML)-Format verwendet wird. Dieser Wert ist AdPersistXML und Gründen der Abwärtskompatibilität enthalten.|  

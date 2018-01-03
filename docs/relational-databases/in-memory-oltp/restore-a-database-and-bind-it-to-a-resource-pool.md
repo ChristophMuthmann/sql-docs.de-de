@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0123a452a34fc5d445499fa1ba372a458cdcff60
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e959e9afd0ff9487e77fd4526a570aacf894d285
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="restore-a-database-and-bind-it-to-a-resource-pool"></a>Wiederherstellen einer Datenbank und Binden der Datenbank an einen Ressourcenpool
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Obwohl Sie über genügend Arbeitsspeicher zum Wiederherstellen einer Datenbank mit speicheroptimierten Tabellen verfügen, sollten Sie bewährte Methoden befolgen und die Datenbank an einen benannten Ressourcenpool binden. Da die Datenbank vorhanden sein muss, bevor Sie diese an den Pool binden können, besteht die Wiederherstellung der Datenbank aus mehreren Schritten. In diesem Thema werden die einzelnen Schritte erläutert.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="bkmk_NORECOVERY"></a> Wiederherstellen mit NORECOVERY  
  Wenn Sie eine Datenbank mit NORECOVERY wiederherstellen, wird die Datenbank erstellt und das Datenträgerimage wiederhergestellt, ohne dass Speicher beansprucht wird.  
   
-```tsql  
+```sql  
 RESTORE DATABASE IMOLTP_DB   
    FROM DISK = 'C:\IMOLTP_test\IMOLTP_DB.bak'  
    WITH NORECOVERY  
@@ -51,7 +51,7 @@ RESTORE DATABASE IMOLTP_DB
 ###  <a name="bkmk_createPool"></a> Erstellen des Ressourcenpools  
  Durch folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code wird ein Ressourcenpool mit dem Namen "Pool_IMOLTP" erstellt. 50 % des verfügbaren Arbeitsspeichers werden dem Pool zur Verfügung gestellt.  Nachdem der Pool erstellt wurde, wird die Ressourcenkontrolle neu konfiguriert, um "Pool_IMOLTP" einzuschließen.  
   
-```tsql  
+```sql  
 CREATE RESOURCE POOL Pool_IMOLTP WITH (MAX_MEMORY_PERCENT = 50);  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
 GO  
@@ -62,7 +62,7 @@ GO
   
  Mit folgender [!INCLUDE[tsql](../../includes/tsql-md.md)] wird eine Bindung zwischen der IMOLTP_DB-Datenbank und dem Pool_IMOLTP-Ressourcenpool definiert. Die Bindung wird erst wirksam, nachdem der nächste Schritt ausgeführt wurde.  
   
-```tsql  
+```sql  
 EXEC sp_xtp_bind_db_resource_pool 'IMOLTP_DB', 'Pool_IMOLTP'  
 GO  
 ```  
@@ -70,7 +70,7 @@ GO
 ###  <a name="bkmk_RECOVERY"></a> Wiederherstellen mit RECOVERY  
  Wenn Sie die Datenbank mit RECOVERY wiederherstellen, werden die Datenbank online geschaltet und alle Daten wiederhergestellt.  
   
-```tsql  
+```sql  
 RESTORE DATABASE IMOLTP_DB   
    WITH RECOVERY  
 ```  
@@ -78,7 +78,7 @@ RESTORE DATABASE IMOLTP_DB
 ###  <a name="bkmk_Monitor"></a> Überwachen der Ressourcenpoolleistung  
  Überwachen Sie das "Statistiken für Ressourcenpools"-Objekt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sobald die Datenbank an den benannten Ressourcenpool gebunden und mit RECOVERY wiederhergestellt wurde. Weitere Informationen finden Sie unter [SQL Server, "Statistiken für Ressourcenpools"-Objekt](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Binden einer Datenbank mit speicheroptimierten Tabellen an einen Ressourcenpool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)   
  [SQL Server, "Statistiken für Ressourcenpools"-Objekt](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)   

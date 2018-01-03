@@ -3,7 +3,7 @@ title: SQL Server Management Studio-Webbrowser | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f2b2fef9625075583b267404da82567d7a562e21
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b8f75dcd8398205bdf4f9a2a1b553cea06e47174
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-management-studio-web-browser"></a>SQL Server Management Studio-Webbrowser
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] hostet eine Version von [!INCLUDE[msCoName](../includes/msconame_md.md)] Internet Explorer. Mit diesem Webbrowser können Sie URLs durchsuchen und Hilfethemen der MSDN Library anzeigen, ohne [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]zu verlassen. Zum Aufrufen des Webbrowsers zeigen Sie im Menü **Ansicht** auf **Webbrowser** , und klicken Sie dann auf die Option zum **Anzeigen des Browsers**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Allgemeine Benutzeroberflächenelemente](../ssms/general-user-interface-elements.md)  
   

@@ -3,7 +3,7 @@ title: Angeben von Auftragsantworten | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a95f0e289dd73b2001b7cb60d7ef707f9a26fd15
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2710dd7f389ff50ebbe5c1fd1338ad4283b9fe87
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-job-responses"></a>Angeben von Auftragsantworten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Auftragsantworten geben Aktionen an, die der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent-Dienst nach Abschluss eines Auftrags ausführt. Sie stellen sicher, dass Datenbankadministratoren wissen, wann Aufträge fertig gestellt sind und wie oft diese ausgeführt werden. Zu den typischen Auftragsantworten gehören folgende:  
@@ -43,14 +43,14 @@ ms.lasthandoff: 12/05/2017
   
     Verwenden Sie diese Auftragsantwort, wenn Sie sicher sind, dass Sie diesen Auftrag nicht erneut ausführen müssen.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
-|**Description**|**Thema**|  
+|**Beschreibung**|**Thema**|  
 |Beschreibt, wie ein Operator über den Auftragsstatus benachrichtigt wird.|[Benachrichtigen eines Operators über den Auftragsstatus](../../ssms/agent/notify-an-operator-of-job-status.md)|  
 |Beschreibt, wie der Auftragsstatus in das Windows-Anwendungsprotokoll ausgegeben wird.|[Write the Job Status to the Windows Application Log](../../ssms/agent/write-the-job-status-to-the-windows-application-log.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Überwachen und Reagieren auf Ereignisse](../../ssms/agent/monitor-and-respond-to-events.md)  
   

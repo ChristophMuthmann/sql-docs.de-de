@@ -3,7 +3,7 @@ title: ConnectModeEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fd3a2912bdc0e204bfbbe1c16a878302f181679c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 99befb958e09e6973059d9677fa51ca1d5f7fc1c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 Gibt die verfügbaren Berechtigungen zum Ändern von Daten in eine [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md), öffnen eine [Datensatz](../../../ado/reference/ado-api/record-object-ado.md), oder das Angeben von Werten für die [Modus](../../../ado/reference/ado-api/mode-property-ado.md) Eigenschaft von der  **Datensatz** und [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekte.  
   
-|Konstante|Wert|Description|  
+|Konstante|value|Description|  
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|Gibt an, nur-Lese Zugriff.|  
 |**adModeReadWrite**|3|Gibt Lese-/Schreibberechtigungen an.|  

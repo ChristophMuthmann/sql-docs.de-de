@@ -5,7 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c8a82c0ebb888c4ea075789c7f2149726ff7af25
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2e21ab2cdfc462485bf15b741dbe6e795c0833de
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services-Paket- und Projektparameter (SSIS)
   Mit[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -(SSIS-)Parametern können Sie Eigenschaften in Paketen zur Zeit der Paketausführung Werte zuweisen. Sie können *Projektparameter* auf Projektebene und *Paketparameter* auf Paketebene erstellen. Projektparameter werden verwendet, um jegliche externen Eingaben bereitzustellen, die das Projekt für ein oder mehrere Pakete im Projekt empfängt. Mit Paketparametern können Sie die Paketausführung ändern, ohne das Paket bearbeiten und erneut bereitstellen zu müssen.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/20/2017
   
  In der folgenden Tabelle sind die Werttypen aufgeführt.  
   
-|Wertname|Beschreibung|Werttyp|  
+|Wertname|Description|Werttyp|  
 |----------------|-----------------|-------------------|  
 |Ausführungswert|Der Wert, der einer bestimmten Instanz der Paketausführung zugewiesen wird. Diese Zuweisung überschreibt alle anderen Werte, gilt aber nur für eine einzelne Instanz der Paketausführung.|Literal|  
 |Serverwert|Der Wert, der dem Parameter innerhalb des Projektbereichs zugewiesen wird, nachdem das Projekt auf dem Integration Services-Server bereitgestellt wurde. Dieser Wert überschreibt den Entwurfsstandard.|Literaler oder Umgebungsvariablenverweis|  
@@ -169,7 +169,7 @@ Sie verwenden [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]
 ## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
 Im Dialogfeld **Parametrisieren** können Sie einen neuen oder vorhandenen Parameter einer Eigenschaft oder einem Task zuordnen. Sie öffnen das Dialogfeld, indem Sie mit der rechten Maustaste auf einen Task oder die Registerkarte „Ablaufsteuerung“ im [!INCLUDE[ssIS](../includes/ssis-md.md)]-Designer klicken und dann auf **Parametrisieren** klicken. Die folgende Liste beschreibt Benutzeroberflächenelemente im Dialogfeld. Weitere Informationen zu Parametern finden Sie unter [Integration Services-Parameter (SSIS)](https://msdn.microsoft.com/library/hh213214.aspx).
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Eigenschaft**  
  Wählen Sie die Eigenschaft der Aufgabe aus, der Sie einem Parameter zuordnen möchten. Diese Liste wird mit allen Eigenschaften aufgefüllt, die parametrisiert werden können.  
   
@@ -185,10 +185,10 @@ Im Dialogfeld **Parametrisieren** können Sie einen neuen oder vorhandenen Param
  **Name**  
  Geben Sie den Namen des Parameters an, den Sie erstellen möchten.  
   
- **Description**  
+ **Beschreibung**  
  Geben Sie die Beschreibung für den Parameter an.  
   
- **Wert**  
+ **ReplTest1**  
  Geben Sie den Standardwert für den Parameter an. Dies wird auch als der Entwurfsstandard bezeichnet, der später zur Bereitstellungszeit überschrieben werden kann.  
   
  **Scope**  

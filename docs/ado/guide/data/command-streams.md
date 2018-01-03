@@ -3,7 +3,7 @@ title: Befehl Streams | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 46ef9db34ecfc7ee0ba3fbd41a052658a065a010
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9ffb70205cbf2c2679cea827ffa0b7445586c795
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-streams"></a>Befehl Streams
 ADO unterstützt immer Eingabe des Befehls im Zeichenfolgenformat angegeben werden, indem Sie die **CommandText** Eigenschaft. Als Alternative können mit ADO 2.7 oder höher, Sie können auch einen Datenstrom von Informationen für die Eingabe des Befehls durch Zuweisen des Streams, der **CommandStream** Eigenschaft. Sie können eine ADO zuweisen **Stream** Objekt oder ein beliebiges Objekt aus, die COM unterstützt **IStream** Schnittstelle.  

@@ -3,7 +3,7 @@ title: CursorType LockType und EditMode Eigenschaften (VC++-Beispiel) | Microsof
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2df2b16a42fa10058ee66ea978a3046b23f8bbc1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e514d34b2eb04e4afd37149a3b1279603420dd22
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>CursorType LockType und EditMode Eigenschaften (VC++-Beispiel)
 Dieses Beispiel veranschaulicht das Festlegen der [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) und [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) Eigenschaften vor dem Öffnen einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Es zeigt auch den Wert von der [EditMode](../../../ado/reference/ado-api/editmode-property.md) Eigenschaft unter verschiedenen Bedingungen. Die EditModeOutput-Funktion wird zum Ausführen dieser Prozedur erforderlich.  

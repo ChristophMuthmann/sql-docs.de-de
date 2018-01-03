@@ -3,7 +3,7 @@ title: Eigenschaftenfenster (F1-Hilfe, Management Studio) | Microsoft-Dokumentat
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -30,18 +30,18 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a2c2c42f9a4e9690d9c9229ec7020e5e94c130ab
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e53a9ff4593a24820c6ff8f4ab0cb1540ba02a95
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Eigenschaftenfenster (F1-Hilfe, Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mithilfe des Fensters **Eigenschaften** können Sie die Eigenschaften ausgewählter Elemente anzeigen. Zudem können Sie mithilfe des Fensters **Eigenschaften** Datei-, Projekt- und Projektmappeneigenschaften anzeigen. Das Fenster **Eigenschaften** ist verfügbar, wenn Sie im Menü **Ansicht** auf **Eigenschaftenfenster** klicken.  
   
 Im Fenster **Eigenschaften** werden unterschiedliche Arten der Bearbeitung von Feldern angezeigt, je nachdem, welche Bearbeitung für die bestimmte Eigenschaft erforderlich ist. Die in Grau angezeigten Eigenschaften sind schreibgeschützt.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Objektname**  
 Führt das aktuell ausgewählte Objekt bzw. die aktuell ausgewählten Objekte auf. Es werden nur die Objekte aus dem aktiven Editor oder Designer angezeigt.  
   
@@ -57,6 +57,6 @@ Zeigt die Eigenschaften für ein Objekt an.
 **Beschreibungsbereich**  
 Der Beschreibungsbereich befindet sich unten im Fenster **Eigenschaften** und zeigt den Eigenschaftentyp und eine kurze Beschreibung der Eigenschaft an. Sie können die Beschreibung der Eigenschaft ein- und ausschalten, indem Sie den Befehl **Beschreibung** im Kontextmenü verwenden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Eigenschaftenfenster in SQL Server Management Studio](http://msdn.microsoft.com/en-us/903d4aca-f57c-43d9-a893-702eceaa7004)  
   

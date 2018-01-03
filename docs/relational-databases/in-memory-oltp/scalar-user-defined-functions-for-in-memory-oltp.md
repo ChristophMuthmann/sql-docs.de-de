@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e3c3f8ba45c00b5604cb141b2ad355ea37b061e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ec9be02546a7402b1451a94ff9bc9fd0357e7210
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>Benutzerdefinierte Skalarfunktionen für In-Memory-OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
  Das folgende Beispiel zeigt eine skalare benutzerdefinierte Funktion aus der [AdventureWorks2016CTP3](https://www.microsoft.com/download/details.aspx?id=49502) -Beispieldatenbank.  
   
-```tsql  
+```sql  
 CREATE FUNCTION [dbo].[ufnLeadingZeros_native](@Value int)   
 RETURNS varchar(8)   
 WITH NATIVE_COMPILATION, SCHEMABINDING  
@@ -106,7 +106,7 @@ END
   
  Wenn Sie eine nativ kompilierte benutzerdefinierte Skalarfunktion in einer nativ kompilierten gespeicherten Prozedur verwenden, werden die Berechtigungen für die Ausführung der benutzerdefinierten Funktion beim Erstellen der äußeren Prozedur überprüft. Falls der Benutzer, dessen Identität von der äußeren Prozedur angenommen wurde, über keine EXEC-Berechtigungen für die benutzerdefinierte Funktion verfügt, schlägt die Erstellung der gespeicherten Prozedur fehl. Falls der Benutzer nach Ändern der Berechtigungen nicht mehr über EXEC-Berechtigungen verfügt, schlägt die Ausführung der äußeren Prozedur fehl.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [Speichern eines Ausführungsplans im XML-Format](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
   

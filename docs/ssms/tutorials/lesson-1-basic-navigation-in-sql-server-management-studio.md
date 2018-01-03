@@ -3,7 +3,7 @@ title: 'Lektion 1: Grundlegendes zur Navigation in SQL Server Management Studio 
 ms.custom: 
 ms.date: 08/30/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 663338477f0bba22e3d5cacbe9c1bc34292f0e88
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e06efb71bc6d888fbad143d73019525f9529e97e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>Lektion 1: Grundlegendes zur Navigation in SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ Diese Lektion enthält die folgenden Themen:
   
 -   [Zusammenfassung: Grundlagen zur Navigation](lesson-1-9-summary-basic-navigation.md)  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Starten von SQL Server Management Studio](lesson-1-1-start-sql-server-management-studio.md)  
   
   

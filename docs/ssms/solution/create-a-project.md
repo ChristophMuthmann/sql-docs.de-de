@@ -3,7 +3,7 @@ title: Erstellen eines Projekts | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9a95d8c7ecf359e6fc10939759d05d816d91efc5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13ef5a52fff423b9c4a4035b2751017a30e86da9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-project"></a>Erstellen eines Projekts
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können innerhalb einer vorhandenen Projektmappe ein oder mehrere Projekte erstellen.  
@@ -101,7 +101,7 @@ ms.lasthandoff: 12/05/2017
   
 Für das Skriptprojekt können Sie einen Namen festlegen. Die Ordnernamen hingegen werden von [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] festgelegt und können nicht geändert werden. Sie können die Laufwerk- und Pfadspezifikation für den gemeinsamen Ordnersatz mit dem Dialogfeld **Neues Projekt hinzufügen** konfigurieren. Klicken Sie mit der rechten Maustaste auf das Projektmappensymbol im **Projektmappen-Explorer**, und klicken Sie dann auf **Hinzufügen**. Der Standardspeicherort für Skriptprojektordner lautet: „C:\Dokumente und Einstellungen\\*Benutzername*\Eigene Dokumente\SQL Server Management Studio\Projects\\.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Projektmappen-Explorer](../../ssms/solution/solution-explorer.md)  
 [Hinzufügen eines vorhandenen Projekts zu einer Projektmappe](../../ssms/solution/add-an-existing-project-to-a-solution.md)  
 [Hinzufügen neuer Elemente zu einem Projekt](../../ssms/solution/add-new-items-to-a-project.md)  

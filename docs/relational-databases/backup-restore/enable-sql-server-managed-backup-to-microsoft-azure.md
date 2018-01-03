@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3d5227792c9f1a658135e1efa5c00bbcfe078cfe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ee6f5c066b43c91d1317ca833599ac2f178b03fc
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Aktivieren der verwalteten SQL Server-Sicherung in Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] sowohl auf Datenbank- als auch auf Instanzebene mit Standardeinstellungen aktiviert wird. Außerdem wird erläutert, wie E-Mail-Benachrichtigungen aktiviert und Sicherungsaktivitäten überwacht werden.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 11/17/2017
  In diesem Tutorial wird Azure PowerShell verwendet. Bevor Sie das Tutorial starten, müssen Sie [Azure PowerShell herunterladen und installieren](http://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/).  
   
 > [!IMPORTANT]  
->  Wenn Sie auch erweiterte Optionen aktivieren oder einen benutzerdefinierten Zeitplan verwenden möchten, konfigurieren Sie diese Einstellungen zuerst, bevor Sie [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]aktivieren. Weitere Informationen finden Sie unter [Konfigurieren der erweiterten Optionen für die verwaltete Sicherung von SQL Server zu Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
+>  Wenn Sie auch erweiterte Optionen aktivieren oder einen benutzerdefinierten Zeitplan verwenden möchten, konfigurieren Sie diese Einstellungen zuerst, bevor Sie [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]aktivieren. Weitere Informationen finden Sie unter [Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
   
 ## <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-with-default-settings"></a>Aktivieren und Konfigurieren von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] mit Standardeinstellungen  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  **Erstellen von SQL-Anmeldeinformationen für die SAS-URL:** Verwenden Sie das SAS-Token, um SQL-Anmeldeinformationen für die Blobcontainer-URL zu erstellen. Verwenden Sie in SQL Server Management Studio die folgende Transact-SQL-Abfrage, um die Anmeldeinformationen für die Blobcontainer-URL auf Grundlage des folgenden Beispiels zu erstellen:  
   
-    ```tsql  
+    ```sql  
     CREATE CREDENTIAL [https://managedbackupstorage.blob.core.windows.net/backupcontainer]   
     WITH IDENTITY = 'Shared Access Signature',  
     SECRET = 'sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl'  
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/17/2017
     > [!IMPORTANT]  
     >  Geben Sie zum Aktivieren des Managed Backup auf Instanzebene `NULL` für den `database_name` -Parameter an.  
   
-    ```tsql  
+    ```sql  
     Use msdb;  
     GO  
     EXEC msdb.managed_backup.sp_backup_config_basic   
@@ -180,7 +180,7 @@ ms.lasthandoff: 11/17/2017
   
  Die in diesem Abschnitt beschriebenen Schritte sind speziell für die erste Konfiguration von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für die Datenbank vorgesehen. Mithilfe derselben gespeicherten Systemprozeduren können Sie vorhandene Konfigurationen bearbeiten und neue Werte festlegen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server Managed Backup für Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

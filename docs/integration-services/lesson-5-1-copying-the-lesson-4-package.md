@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d7c64162898389439190286fa470854bc716318
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 126a5e516c5948b776530874b390e01324fba189
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-5-1---copying-the-lesson-4-package"></a>Lektion 5-1: Kopieren des Pakets aus Lektion 4
 In dieser Aufgabe erstellen Sie eine Kopie des in Lektion 4 erstellten Pakets namens „Lesson 4.dtsx“. Alternativ können Sie dem Projekt auch das im Tutorial enthaltene, abgeschlossene Paket aus Lektion 4 hinzufügen und anschließend eine Kopie dieses Pakets erstellen. Sie werden diese neue Kopie in der gesamten Lektion 5 verwenden.  
@@ -67,6 +67,6 @@ In dieser Aufgabe erstellen Sie eine Kopie des in Lektion 4 erstellten Pakets na
   
 5.  Kopieren Sie das Paket aus Lektion 4, und fügen Sie es gemäß den Schritten 3 bis 8 der vorherigen Prozedur ein.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Schritt 2: Aktivieren und Konfigurieren von Paketkonfigurationen](../integration-services/lesson-5-2-enabling-and-configuring-package-configurations.md)  
   

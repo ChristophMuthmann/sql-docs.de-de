@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 33293b17caff5d5c71b58bff3f34ed130ab19ba3
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 8d5c64fa4ba32ebd9e95d728b3a7655b523d9627
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>Ausführen eines SSIS-Pakets über die Eingabeaufforderung mit „DTExec.exe“
 Dieses Schnellstarttutorial zeigt das Ausführen eines SSIS-Pakets über die Eingabeaufforderung mittels Ausführung von `DTExec.exe` mit den entsprechenden Parametern.

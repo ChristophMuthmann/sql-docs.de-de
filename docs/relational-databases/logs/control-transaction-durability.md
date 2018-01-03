@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 469b8008c1697f691c56f6d8893f1d637534c989
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c55b9f3bc4df4048c2edb058e7c70579fb80bdba
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="control-transaction-durability"></a>Steuern der Transaktionsdauerhaftigkeit
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="bkmk_DbControl"></a> Steuerung auf Datenbankebene    
  Der Datenbankadministrator kann mithilfe der folgenden Anweisung steuern, ob Benutzer die verzögerte Transaktionsdauerhaftigkeit in einer Datenbank nutzen können. Sie müssen die Einstellung für verzögerte Dauerhaftigkeit mit ALTER DATABASE festlegen.    
     
-```tsql    
+```sql    
 ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }    
 ```    
     
@@ -114,7 +114,7 @@ ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
 ###  <a name="CompiledProcControl"></a> Steuerung auf Atomic-Blockebene – systemintern kompilierte gespeicherte Prozeduren    
  Folgender Code wird in den Atomic-Block eingefügt.    
     
-```tsql    
+```sql    
 DELAYED_DURABILITY = { OFF | ON }    
 ```    
     
@@ -126,7 +126,7 @@ DELAYED_DURABILITY = { OFF | ON }
     
  **Beispielcode:**    
     
-```tsql    
+```sql    
 CREATE PROCEDURE <procedureName> …    
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER    
 AS BEGIN ATOMIC WITH     
@@ -149,7 +149,7 @@ END
 ###  <a name="bkmk_T-SQLControl"></a> Steuerung auf COMMIT-Ebene –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
  Da die COMMIT-Syntax erweitert ist, kann die verzögerte Transaktionsdauerhaftigkeit erzwungen werden. Wenn für DELAYED_DURABILITY auf Datenbankebene DISABLED oder FORCED festgelegt wird (siehe oben), wird diese COMMIT-Option ignoriert.    
     
-```tsql    
+```sql    
 COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [ WITH ( DELAYED_DURABILITY = { OFF | ON } ) ]    
     
 ```    
@@ -211,7 +211,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 ### <a name="includessnoversionincludesssnoversion-mdmd-shutdown-and-restart"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herunterfahren und Neustart    
  Für die verzögerte Dauerhaftigkeit macht es keinen Unterschied, ob das Herunterfahren unerwartet erfolgt oder das Herunterfahren/Neustarten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geplant ist. Wie bei Notfällen sollten Sie mit Datenverlusten rechnen. Beim geplanten Herunterfahren/Neustarten werden möglicherweise einige Transaktionen, die noch nicht auf dem Datenträger festgeschrieben wurden, zuerst auf dem Datenträger gespeichert, aber dies lässt sich nicht planen. Planen Sie so, als ob beim Herunterfahren/Neustarten (ob geplant oder ungeplant) die Daten genauso wie bei unvorhersehbaren Notfällen verloren gehen.    
     
-## <a name="see-also"></a>Siehe auch    
+## <a name="see-also"></a>Weitere Informationen finden Sie unter    
  [Transaktionen mit speicheroptimierten Tabellen](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)    
     
   

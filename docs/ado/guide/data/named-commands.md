@@ -3,7 +3,7 @@ title: Mit dem Namen Befehle | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e0eca9ac410156f891f4bd383a7100342c69662c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6830fefa2e01cf03466ae0b28dc8b132ad6a7149
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="named-commands"></a>Benannte Befehle
 [Erstellen und Ausführen einer einfachen Befehl](../../../ado/guide/data/creating-and-executing-a-simple-command.md) zeigt eine Möglichkeit zum Ausführen eines Befehls. Besteht eine weitere Möglichkeit: können Sie es einen benannten Befehl, und rufen Sie diese benannte Befehl direkt auf die **Verbindung** Objekt (zugewiesen der **ActiveConnection** Eigenschaft von der **-Befehl** Objekt). Benennen einen Befehl bedeutet, dass ein Name zugewiesen der **Name** Eigenschaft von einem **Befehl** Objekt. Beispiel:  

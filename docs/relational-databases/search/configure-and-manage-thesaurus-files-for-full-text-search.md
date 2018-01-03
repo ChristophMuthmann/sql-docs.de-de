@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: aada9589beecbd40470ff590a8f67cfd069c49f5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 210fd9bd79fa84ac5a1a2fcaaca2144a393ab585
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Bei 
@@ -176,7 +176,7 @@ Wenn zwei Ersetzungssätze mit ähnlichen Mustern für die Übereinstimmung verw
   
 Die Einstellung eines Thesaurus für diakritische Zeichen wird in einem einzelnen `<diacritics_sensitive>`-Element angegeben. Dieses Element enthält einen ganzzahligen Wert, der die Unterscheidung nach Akzent folgendermaßen steuert:  
   
-|Einstellung für diakritische Zeichen|Wert|XML|  
+|Einstellung für diakritische Zeichen|value|XML|  
 |------------------------|-----------|---------|  
 |keine Unterscheidung nach Akzent|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
 |Unterscheidung nach Akzent|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  
@@ -204,7 +204,7 @@ Der Thesaurus für eine bestimmte Sprache kann durch Bearbeiten der zugehörigen
   
 5.  Verwenden Sie [sp_fulltext_load_thesaurus_file](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md) , um den Inhalt der Thesaurusdatei in tempdb zu laden, und geben Sie den Gebietsschemabezeichner (LCID) an, der der Sprache der Thesaurusdatei entspricht. So lautet z. B. für die englische Thesaurusdatei "tsenu.xml" der LCID 1033.  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks;  
     EXEC sys.sp_fulltext_load_thesaurus_file 1033;  
     GO
@@ -230,7 +230,7 @@ Der Thesaurus für eine bestimmte Sprache kann durch Bearbeiten der zugehörigen
   
 -   Ein Thesaurus darf in den `<sub>`-Einträgen von Erweiterungssätzen und in den `<pat>`-Elementen von Ersetzungssätzen keine doppelten Einträge enthalten.  
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)   

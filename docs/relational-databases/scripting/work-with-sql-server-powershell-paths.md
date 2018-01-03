@@ -3,9 +3,9 @@ title: Verwenden von SQL Server PowerShell-Pfaden | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8e42b8172f1993b22a50c53e61b93ff8223da063
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9ca37c3e7aeaa247512a1334335440b131a5590d
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>Verwenden von SQL Server PowerShell-Pfaden
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Nach der Navigation zu einem Knoten in einem [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Anbieterpfad können Sie mit den Methoden und Eigenschaften des [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Verwaltungsobjekts, das dem Knoten zugeordnet ist, Arbeiten ausführen oder Informationen abrufen.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  **So arbeiten Sie an einem Pfadknoten:**  [Auflisten von Methoden und Eigenschaften](#ListPropMeth), [Verwenden von Methoden und Eigenschaften](#UsePropMeth)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
  Nach der Navigation zu einem Knoten in einem [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Anbieterpfad können Sie zwei Arten von Aktionen ausführen:  
   
 -   Sie können Windows PowerShell-Cmdlets ausführen, die Vorgänge an Knoten durchführen, z.B. **Rename-Item**.  
@@ -101,7 +101,7 @@ $MyDBVar.Create()
 $MyDBVar.State  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server PowerShell-Anbieter](../../relational-databases/scripting/sql-server-powershell-provider.md)   
  [Navigieren in SQL Server PowerShell-Pfaden](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md)   
  [Konvertieren von URNs in SQL Server-Anbieterpfade](../../relational-databases/scripting/convert-urns-to-sql-server-provider-paths.md)   

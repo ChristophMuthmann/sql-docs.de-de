@@ -3,7 +3,7 @@ title: Hierarchie-Objekteigenschaften, Methoden und Ereignisse | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 21054c33c0a9c03d1e8d9ec7ce3f0ccd6da265f7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8f53c1f67c78a811d957a9392c7ac8aaa7b4a76d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hierarchy-object-properties-methods-and-events"></a>Hierarchie-Objekteigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften-Sammlungen  

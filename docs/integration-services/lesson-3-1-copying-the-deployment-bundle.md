@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fd36b536be89f5a808aba7fdb6f6f423f0322599
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6f07020abe678c760c6410ebea7fdec3e8a6fe0a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-3-1---copying-the-deployment-bundle"></a>Lektion 3-1: Kopieren des Bereitstellungspakets
 In diesem Schritt kopieren Sie das Bereitstellungspaket auf den Zielcomputer.  
@@ -39,7 +39,7 @@ Die einfachste Methode zum Kopieren des Bereitstellungspakets auf den Zielcomput
   
 3.  Suchen Sie die öffentliche Freigabe, auf die Sie den Ordner auf dem Zielcomputer kopieren möchten, und klicken Sie auf **Einfügen**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Schritt 2: Ausführen des Paketinstallations-Assistenten](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
   
   

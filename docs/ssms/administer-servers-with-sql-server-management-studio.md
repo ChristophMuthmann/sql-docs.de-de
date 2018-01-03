@@ -3,7 +3,7 @@ title: Verwalten von Servern mit SQL Server Management Studio | Microsoft-Dokume
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d96924c3c4cbe0819016039bcd7867d7d798e97c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ad5958aa1725fb5c3eefe0c331459084003a9c0a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="administer-servers-with-sql-server-management-studio"></a>Verwalten von Servern mit SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +65,7 @@ Verwenden Sie [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] für Folgen
   
 Um [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] oder den [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] -Agent zu starten und zu beenden, verwenden Sie den [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] -Konfigurations-Manager.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Verwenden von SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
 [Vorgehensweise: Anzeigen von Servereigenschaften (SQL Server Management Studio)](http://msdn.microsoft.com/en-us/55f3ac04-5626-4ad2-96bd-a1f1b079659d)  
   

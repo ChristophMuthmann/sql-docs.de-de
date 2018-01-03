@@ -3,7 +3,7 @@ title: FieldStatusEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a47097ccce07c5eeb5ee859b74919e36c01f6750
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 12e543a4baa7bbcc46ea39e906d57d001ea5f078
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 Gibt an, die [Status](../../../ado/reference/ado-api/status-property-ado-field.md) von einem [Field-Objekt](../../../ado/reference/ado-api/field-object.md).  
   
  Die **AdFieldPending\***  Werte geben die Operation, die aufgrund des Status festgelegt ist, und kann mit anderen Statuswerte kombiniert werden.  
   
-|Konstante|Wert|Description|  
+|Konstante|value|Description|  
 |--------------|-----------|-----------------|  
 |**adFieldAlreadyExists**|26|Gibt an, dass das angegebene Feld bereits vorhanden ist.|  
 |**adFieldBadStatus**|12|Gibt an, dass ein gültiger Wert von ADO mit dem OLE DB-Anbieter gesendet wurde. Mögliche Ursachen sind ein OLE DB 1.0 oder 1.1-Anbieter oder eine falsche Kombination von [Wert](../../../ado/reference/ado-api/value-property-ado.md) und [Status](../../../ado/reference/ado-api/status-property-ado-field.md).|  

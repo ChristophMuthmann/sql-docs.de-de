@@ -3,7 +3,7 @@ title: Verbindung Eigenschaften (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0727d4aa613771872d175ca3909499df5c2c35b5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d54cc2ce55aa82a87dacfe2e8934d7eea449aa9a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>"ConnectionString" ConnectionTimeout und State-Eigenschaft (VC++-Beispiel)
 Dieses Beispiel zeigt verschiedene Möglichkeiten der Verwendung der ["ConnectionString"](../../../ado/reference/ado-api/connectionstring-property-ado.md) Eigenschaft so öffnen eine [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt. Darüber hinaus verwendet der [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) ein Verbindungstimeout festzulegende Eigenschaft und die [Zustand](../../../ado/reference/ado-api/state-property-ado.md) Eigenschaft beim Überprüfen des Status der Verbindungen. Die GetState-Funktion ist erforderlich, damit dieses Verfahren ausführen.  

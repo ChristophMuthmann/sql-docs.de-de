@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6d2d7b6f97be65f053248396528c3f4f18f7230e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e37b0da02e9608249c2283683324fee42fe9a8e3
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="permissions-database-engine"></a>Berechtigungen (Datenbankmodul)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ Die Gesamtanzahl der Berechtigungen für [!INCLUDE[ssSQLv14_md](../../includes/s
 [![Datenbankmodulberechtigungen](../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
 
 Sobald Sie sich mit den Berechtigungen vertraut gemacht haben, verwenden Sie die Anweisungen [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md)und [DENY](../../t-sql/statements/deny-transact-sql.md) , um Berechtigungen auf Serverebene auf Anmeldungen und Berechtigungen auf Datenbankebene auf Benutzer anzuwenden. Beispiel:   
-```tsql
+```sql
 GRANT SELECT ON OBJECT::HumanResources.Employee TO Larry;
 REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ```   
@@ -101,7 +101,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
      Die REFERENCES-Berechtigung ist für ein Objekt erforderlich, um eine FUNCTION oder VIEW mit der `WITH SCHEMABINDING` -Klausel zu erstellen, die auf das betreffende Objekt verweist.  
   
 ## <a name="chart-of-sql-server-permissions"></a>Diagramm der SQL Server-Berechtigungen  
- Navigieren Sie zu [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142), um ein Diagramm aller [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Berechtigungen in Postergröße im PDF-Format abzurufen.  
+ Navigieren Sie zu [!INCLUDE[ssDE](../../includes/ssde-md.md)] http://go.microsoft.com/fwlink/?LinkId=229142 [, um ein Diagramm aller](http://go.microsoft.com/fwlink/?LinkId=229142)-Berechtigungen in Postergröße im PDF-Format abzurufen.  
   
 ##  <a name="_securables"></a> Berechtigungen anwendbar für bestimmte sicherungsfähige Elemente  
  Die folgende Tabelle enthält eine Liste der wichtigsten Berechtigungsklassen und der sicherungsfähigen Elemente, für die sie erteilt werden können.  
@@ -110,8 +110,8 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 |----------------|----------------|  
 |ALTER|Alle Objektklassen außer TYPE.|  
 |CONTROL|Alle Objektklassen: <br />AGGREGATE,<br />APPLICATION ROLE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />AVAILABILITY GROUP,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIALS, DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br /> DEFAULT,<br />ENDPOINT,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />LOGIN,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />REMOTE SERVICE BINDING,<br />ROLE,<br />ROUTE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SERVER,<br />SERVER ROLE,<br />SERVICE,<br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE, USER,<br />VIEW und<br />XML SCHEMA COLLECTION|  
-|DELETE|Alle Objektklassen außer DATABASE SCOPED CONFIGURATION und SERVER.|  
-|EXECUTE|CLR-Typen, externe Skripts, Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR), Skalar- und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR) und Synonyme|  
+|Delete|Alle Objektklassen außer DATABASE SCOPED CONFIGURATION und SERVER.|  
+|Führen Sie|CLR-Typen, externe Skripts, Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR), Skalar- und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR) und Synonyme|  
 |IMPERSONATE|Anmeldungen und Benutzer|  
 |INSERT|Synonyme, Tabellen und Spalten, Ansichten und Spalten. Eine Berechtigung kann auf Datenbank-, Schema- oder Objektebene erteilt werden.|  
 |RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] -Warteschlangen|  
@@ -217,8 +217,8 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 |DATABASE|CREATE TYPE|CRTY|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE VIEW|CRVW|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
-|DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
-|DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
+|DATABASE|Delete|DL|SERVER|CONTROL SERVER|  
+|DATABASE|Führen Sie|EX|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br /> Gilt für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis einschließlich der aktuellen Version).|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
 |DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Gilt nur für [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Verwenden Sie ALTER ANY CONNECTION in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
@@ -264,8 +264,8 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 |MESSAGE TYPE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
-|OBJECT|DELETE|DL|SCHEMA|DELETE|  
-|OBJECT|EXECUTE|EX|SCHEMA|EXECUTE|  
+|OBJECT|DELETE|DL|SCHEMA|Delete|  
+|OBJECT|Führen Sie|EX|SCHEMA|Führen Sie|  
 |OBJECT|INSERT|IN|SCHEMA|INSERT|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
 |OBJECT|REFERENCES|RF|SCHEMA|REFERENCES|  
@@ -294,8 +294,8 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 |SCHEMA|ALTER|AL|DATABASE|ALTER ANY SCHEMA|  
 |SCHEMA|CONTROL|CL|DATABASE|CONTROL|  
 |SCHEMA|CREATE SEQUENCE|CRSO|DATABASE|CONTROL|  
-|SCHEMA|DELETE|DL|DATABASE|DELETE|  
-|SCHEMA|EXECUTE|EX|DATABASE|EXECUTE|  
+|SCHEMA|Delete|DL|DATABASE|Delete|  
+|SCHEMA|Führen Sie|EX|DATABASE|Führen Sie|  
 |SCHEMA|INSERT|IN|DATABASE|INSERT|  
 |SCHEMA|REFERENCES|RF|DATABASE|REFERENCES|  
 |SCHEMA|SELECT|SL|DATABASE|SELECT|  
@@ -324,7 +324,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 |SERVER|CONNECT SQL|COSQ|Nicht verfügbar|Nicht verfügbar|  
 |SERVER|CONTROL SERVER|CL|Nicht verfügbar|Nicht verfügbar|  
 |SERVER|CREATE ANY DATABASE|CRDB|Nicht verfügbar|Nicht verfügbar|  
-|SERVER|CREATE AVAILABILITY GROUP|CRAC|Nicht verfügbar|Nicht verfügbar|  
+|SERVER|Erstellen der Verfügbarkeitsgruppe|CRAC|Nicht verfügbar|Nicht verfügbar|  
 |SERVER|CREATE DDL EVENT NOTIFICATION|CRDE|Nicht verfügbar|Nicht verfügbar|  
 |SERVER|CREATE ENDPOINT|CRHE|Nicht verfügbar|Nicht verfügbar|  
 |SERVER|CREATE SERVER ROLE|CRSR|Nicht verfügbar|Nicht verfügbar|  
@@ -352,7 +352,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 |SYMMETRIC KEY|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |SYMMETRIC KEY|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |TYPE|CONTROL|CL|SCHEMA|CONTROL|  
-|TYPE|EXECUTE|EX|SCHEMA|EXECUTE|  
+|TYPE|Führen Sie|EX|SCHEMA|Führen Sie|  
 |TYPE|REFERENCES|RF|SCHEMA|REFERENCES|  
 |TYPE|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |TYPE|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
@@ -362,7 +362,7 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 |Benutzer|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |XML SCHEMA COLLECTION|ALTER|AL|SCHEMA|ALTER|  
 |XML SCHEMA COLLECTION|CONTROL|CL|SCHEMA|CONTROL|  
-|XML SCHEMA COLLECTION|EXECUTE|EX|SCHEMA|EXECUTE|  
+|XML SCHEMA COLLECTION|Führen Sie|EX|SCHEMA|Führen Sie|  
 |XML SCHEMA COLLECTION|REFERENCES|RF|SCHEMA|REFERENCES|  
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
@@ -423,8 +423,8 @@ Tipps zum Planen eines Berechtigungssystems finden Sie unter [Erste Schritte mit
 
 ## <a name="secial-considerations-for-column-level-permissions"></a>Spezielle Aspekte für Berechtigungen auf Spaltenebene
 
-Berechtigungen auf Spaltenebene werden mit der Syntax *<Tabellenname>(\<Spaltenname>)* gewährt. Beispiel:
-```tsql
+Berechtigungen auf Spaltenebene werden mit der Syntax *<Tabellenname>(\<Spaltenname>)* gewährt. Zum Beispiel:
+```sql
 GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
 Ein DENY auf der Tabelle wird mit einem GRANT auf einer Spalte überschrieben. Ein nachfolgendes DENY auf der Tabelle entfernt jedoch das GRANT auf der Spalte. 
@@ -435,7 +435,7 @@ Ein DENY auf der Tabelle wird mit einem GRANT auf einer Spalte überschrieben. E
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. Zurückgeben der vollständigen Liste erteilbarer Berechtigungen  
  Die folgende Anweisung gibt mithilfe der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Funktion alle `fn_builtin_permissions` -Berechtigungen zurück. Weitere Informationen finden Sie unter [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT * FROM fn_builtin_permissions(default);  
 GO  
 ```  
@@ -443,7 +443,7 @@ GO
 ### <a name="b-returning-the-permissions-on-a-particular-class-of-objects"></a>B. Zurückgeben der Berechtigungen für eine bestimmte Objektklasse  
  Im folgenden Beispiel wird `fn_builtin_permissions` verwendet, um alle Berechtigungen anzuzeigen, die für eine Kategorie des sicherungsfähigen Elements verfügbar sind. Im Beispiel werden Berechtigungen für Assemblys zurückgegeben.  
   
-```tsql  
+```sql  
 SELECT * FROM fn_builtin_permissions('assembly');  
 GO    
 ```  
@@ -451,7 +451,7 @@ GO
 ### <a name="c-returning-the-permissions-granted-to-the-executing-principal-on-an-object"></a>C. Zurückgeben der Berechtigungen, die dem ausführenden Prinzipal für ein Objekt erteilt wurden  
  Im folgenden Beispiel wird mithilfe von `fn_my_permissions` eine Liste der effektiven Berechtigungen zurückgegeben, die vom aufrufenden Prinzipal für ein bestimmtes sicherungsfähiges Element gespeichert werden. Im Beispiel werden Berechtigungen für ein Objekt mit dem Namen `Orders55` zurückgegeben. Weitere Informationen finden Sie unter [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT * FROM fn_my_permissions('Orders55', 'object');  
 GO  
 ```  
@@ -459,13 +459,13 @@ GO
 ### <a name="d-returning-the-permissions-applicable-to-a-specified-object"></a>D. Zurückgeben von Berechtigungen, die auf ein angegebenes Objekt angewendet werden können  
  Im folgenden Beispiel werden Berechtigungen für ein Objekt namens `Yttrium`zurückgegeben. Beachten Sie, dass die integrierte `OBJECT_ID` -Funktion zum Abrufen der ID des `Yttrium`-Objekts verwendet wird.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.database_permissions   
     WHERE major_id = OBJECT_ID('Yttrium');  
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Berechtigungshierarchie &#40;Datenbankmodul&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   

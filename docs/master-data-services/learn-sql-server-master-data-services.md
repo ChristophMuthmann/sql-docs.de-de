@@ -5,7 +5,7 @@ ms.date: 02/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -18,17 +18,17 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1ee69ae9ab78380e7e0456c395eb3f6a0fa5461e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 43f8d61e24597efa46e0452466449e73cbbc8888
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="learn-sql-server-master-data-services"></a>Erlernen von SQL Server Master Data Services
   
   
 ## <a name="training"></a>Training  
-* Um die neuen Features und Funktionen in [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] zu untersuchen, testen Sie diese [**virtuelle TechNet-Übungseinheit**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23113&lod=true) (Sie müssen bei Ihrem Microsoft-Konto angemeldet sein).  
+* Absolvieren Sie diese [**virtuelle TechNet-Übungseinheit**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23113&lod=true), um die neuen Features und Funktionen in [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] zu kennenzulernen. Dazu müssen Sie bei Ihrem Microsoft-Konto angemeldet sein.  
 * Absolvieren Sie diese [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] virtuelle TechNet-Übungseinheit [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)], um mithilfe des Add-In für Excel und des [**s eine**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23112&lod=true)-Lösung zum Speichern und Verwalten von Masterlisten mit geografischen Daten zu entwickeln. Erstellen Sie Entitäten und Hierarchien, und verwenden Sie [!INCLUDE[ssIS_md](../includes/ssis-md.md)] zum Auffüllen einer Dimensionstabelle.  
   
 ## <a name="videos"></a>Videos  

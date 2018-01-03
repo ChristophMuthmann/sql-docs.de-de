@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,21 +20,21 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d9632d2512c3ff44bea76e47bf7825f6dcc1400
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ff377b1dcb3e79b94f25a04e2deb01c340cc5758
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Erstellen einer Abonnementsicht zum Exportieren von Daten (Master Data Services)
   Erstellen Sie eine Abonnementsicht, um Master Data Services-Daten in Abonnementsysteme zu exportieren. Erstellen Sie eine Sicht Ihrer Daten in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die entsprechende Berechtigung für den Zugriff auf den Funktionsbereich **Integrationsmanagement** verfügen. Weitere Informationen finden Sie unter [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen.  
   
 ### <a name="to-create-and-edit-a-subscription-view"></a>So erstellen und bearbeiten Sie eine Abonnementsicht  
   
@@ -68,11 +68,11 @@ ms.lasthandoff: 11/20/2017
 ## <a name="view-information"></a>Sichtinformationen  
  Für jede erstellte Sicht wird dem Raster eine Zeile mit sieben Spalten hinzugefügt. In der folgenden Tabelle werden diese Spalten beschrieben.  
   
-|Column|Description|  
+|Spalte|Description|  
 |------------|-----------------|  
 |Status|Der Status der Sicht.<br /><br /> Wenn Sie auf **Speichern** klicken, wird das ![Symbol für den Aktualisierungsstatus](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status") angezeigt, das angibt, dass die Ansicht aktualisiert wird.<br /><br /> Wenn beim Erstellen oder Bearbeiten einer Ansicht Fehler auftreten, wird das Bild ![Fehlerstatussymbol](../master-data-services/media/mds-statusicon-error.png "Icon for error status") angezeigt.<br /><br /> Andernfalls ist der Status „OK“, und das Bild ![Symbol für den Status OK](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status") wird angezeigt.|  
 |Name|Der Name der Abonnementsicht.|  
-|Modell|Der Name des Modells.|  
+|Model|Der Name des Modells.|  
 |Versionsoptionen|Der Name der Version.|  
 |Version|Der Name des Versionsflags.|  
 |Entität|Der Name der abgeleiteten Hierarchie.|  
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **Am**: Das Datum und die Uhrzeit der letzten Aktualisierung der Sicht.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Übersicht: Exportieren von Daten &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
  [Löschen einer Abonnementsicht &#40;Master Data Services&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
  [Erstellen eines Versionsflags &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  

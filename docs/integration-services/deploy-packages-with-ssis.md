@@ -5,7 +5,7 @@ ms.date: 11/16/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 26a983c967941ef068600cd6b7efc115aba14515
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5cdab7fc8814d7a688329b2255e181adfd0c9492
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploy-packages-with-ssis"></a>Bereitstellen von Paketen mit SSIS
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] bietet Tools zum einfachen Bereitstellen von Paketen auf anderen Computern. Von den Bereitstellungstools werden auch mögliche Abhängigkeiten wie vom Paket benötigte Konfigurationen und Dateien verwaltet. In diesem Lernprogramm lernen Sie, wie Sie diese Tools verwenden, um Pakete und ihre Abhängigkeiten auf einem Zielrechner zu installieren.    
@@ -55,7 +55,7 @@ Die beste Möglichkeit, den Umgang mit den neuen Tools, Steuerelementen und Funk
 Dieses Tutorial wendet sich an Benutzer, die bereits mit grundlegenden Dateisystemvorgängen vertraut sind, aber nur über begrenzte Kenntnisse in Bezug auf die neuen Funktionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]verfügen. Um die grundlegenden [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Konzepte besser zu verstehen, deren Sie sich in diesem Tutorial bedienen, sollten Sie zuerst die folgenden [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Tutorials ausführen: [SSIS-Tutorials: Erstellen eines einfachen ETL-Pakets](../integration-services/ssis-how-to-create-an-etl-package.md).    
     
 **Quellcomputer.** Auf dem Computer, auf dem Sie das Bereitstellungspaket erstellen, **müssen die folgenden Komponenten installiert sein:**
-- SQL Server  
+- SQL Server  
 - Beispieldaten, fertige Pakete, Konfigurationen und eine Infodatei. Diese Dateien werden zusammen installiert, wenn Sie die [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)herunterladen.     
 > **Hinweis!** Sie müssen die Berechtigung haben, Tabellen in AdventureWorks oder andere Daten, die Sie verwenden, erstellen und löschen zu können.         
     
@@ -63,7 +63,7 @@ Dieses Tutorial wendet sich an Benutzer, die bereits mit grundlegenden Dateisyst
     
 **Zielcomputer.** Auf dem Computer, auf dem Sie die Pakete bereitstellen, **müssen die folgenden Komponenten installiert sein:**    
     
-- SQL Server
+- SQL Server
 - Beispieldaten, fertige Pakete, Konfigurationen und eine Infodatei. Diese Dateien werden zusammen installiert, wenn Sie die [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)herunterladen. 
     
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).    

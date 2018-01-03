@@ -3,7 +3,7 @@ title: Erstellen von Skripts mit Vorlagen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e042e4083d3e62543cee463e2d8456f162b945aa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 41b8e42e5af6b1fbdd5a094ba4df63938e2dea21
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-3-1---create-scripts-using-templates"></a>Lektion 3-1: Erstellen von Skripts mit Vorlagen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stellt eine große Anzahl von Skriptvorlagen zur Verfügung, die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen für viele häufig ausgeführte Aufgaben umfassen. Diese Vorlagen enthalten Parameter für Werte, die vom Benutzer angegeben werden, wie z. B. der Tabellenname. Wenn Sie Parameter verwenden, brauchen Sie den Namen nur einmal einzugeben, er wird dann automatisch an alle erforderlichen Stellen im Skript kopiert. Sie können auch eigene, benutzerspezifische Vorlagen für die Skripts erstellen, die Sie am häufigsten benötigen. Sie können die Vorlagenstruktur neu anordnen, Vorlagen verschieben oder neue Ordner für Vorlagen anlegen. In der folgenden Übung verwenden Sie eine Vorlage zum Anlegen einer Datenbank.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/05/2017
   
 5.  Im Dialogfeld **Werte für Vorlagenparameter angeben** enthält die **Wert** -Spalte einen empfohlenen Wert für den Parameter **Database_Name** . Geben Sie im Feld des Parameters **Database_Name** den Begriff **Marketing**ein, und klicken Sie auf **OK**. "Marketing" wird jetzt im Skript an mehreren Stellen eingefügt.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Erstellen von benutzerdefinierten Vorlagen](../../tools/sql-server-management-studio/lesson-3-2-create-custom-templates.md)  
   
   

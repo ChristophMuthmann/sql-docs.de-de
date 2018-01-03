@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bc754ac11d5db54eb8847b6de38f254720eb5ca5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 24c76d4b89c34eac3463c8acd401b52817e4d117
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Anzeigen oder Ändern von Servereigenschaften (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie Sie die Eigenschaften einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] oder dem SQL Server-Konfigurations-Manager anzeigen oder ändern.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/20/2017
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Anzeigen oder Ändern von Servereigenschaften mit:**  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **Nachverfolgung:**  [Nach dem Ändern von Servereigenschaften](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/20/2017
   
  Die Ausführungsberechtigungen für **sp_configure** ohne Parameter oder nur mit dem ersten Parameter werden standardmäßig allen Benutzern erteilt. Zum Ausführen von **sp_configure** mit beiden Parametern zum Ändern einer Konfigurationsoption oder zum Ausführen der RECONFIGURE-Anweisung muss einem Benutzer die ALTER SETTINGS-Berechtigung auf Serverebene erteilt worden sein. Die ALTER SETTINGS-Berechtigung ist in den festen Serverrollen **sysadmin** und **serveradmin** eingeschlossen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-view-or-change-server-properties"></a>So zeigen Sie Servereigenschaften an oder ändern sie  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird die integrierte [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md) -Funktion in einer `SELECT` -Anweisung verwendet, um Informationen zum aktuellen Server zurückzugeben. Dieses Szenario ist hilfreich, wenn auf einem Windows-basierten Server mehrere Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert sind und der Client eine weitere Verbindung mit der Instanz herstellen muss, die auch von der aktuellen Verbindung verwendet wird.  
   
-    ```tsql  
+    ```sql  
     SELECT CONVERT( sysname, SERVERPROPERTY('servername'));  
     GO  
     ```  
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird die [sys.servers](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md) -Katalogsicht abgefragt, um den Namen (`name`) und die ID (`server_id`) des aktuellen Servers sowie den Namen des OLE DB-Anbieters (`provider`) zum Herstellen einer Verbindung mit einem Verbindungsserver zurückzugeben.  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     SELECT name, server_id, provider  
@@ -134,7 +134,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird gezeigt, wie Sie eine Servereigenschaft mithilfe von [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ändern. Im Beispiel wird der Wert der `fill factor` -Option in `100`geändert. Der Server muss neu gestartet werden, bevor die Änderung wirksam werden kann.  
   
-```tsql  
+```sql  
 Use AdventureWorks2012;  
 GO  
 sp_configure 'show advanced options', 1;  
@@ -165,7 +165,7 @@ GO
 ##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Ändern von Servereigenschaften  
  Für einige Eigenschaften muss der Server u. U. neu gestartet werden, bevor die Änderung wirksam werden kann.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [SET-Anweisungen (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   

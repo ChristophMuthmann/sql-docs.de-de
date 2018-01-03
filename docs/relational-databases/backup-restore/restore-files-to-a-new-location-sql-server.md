@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 212e32ce69ae1b5bef4502227bdc4aafca5e5be2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3c43cc72c49f00af429de5863bdbbf608704a2f4
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="restore-files-to-a-new-location-sql-server"></a>Wiederherstellen von Dateien an einem neuen Speicherort (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So stellen Sie Dateien an einem neuen Speicherort wieder her mit**  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
   
  RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur bei unbeschädigten und zugänglichen Datenbanken geprüft werden kann (was beim Ausführen von RESTORE nicht immer der Fall ist), verfügen Mitglieder der festen Datenbankrolle **db_owner** nicht über RESTORE-Berechtigungen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-restore-files-to-a-new-location"></a>So stellen Sie Dateien an einem neuen Speicherort wieder her  
   
@@ -147,7 +147,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="TsqlExample"></a> Beispiel (Transact-SQL)  
  In diesem Beispiel werden zwei der Dateien für die `MyNwind` -Datenbank, die sich ursprünglich auf Laufwerk C befanden, an neuen Speicherorten auf Laufwerk D wiederhergestellt. Zwei Transaktionsprotokolle werden ebenfalls angewendet, um die Datenbank bis zum aktuellen Zeitpunkt wiederherzustellen. Die `RESTORE FILELISTONLY` -Anweisung wird verwendet, um die Anzahl der logischen und physischen Namen der Dateien der Datenbank zu bestimmen, die wiederhergestellt werden.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- First determine the number and names of the files in the backup.  
@@ -172,7 +172,7 @@ RESTORE LOG MyNwind
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Kopieren von Datenbanken durch Sichern und Wiederherstellen](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   

@@ -3,7 +3,7 @@ title: Append-Methode (ADOX-Spalten) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ab08924023bb1179a4f3b5dbbd7000fc1c337f09
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c9efd9a8f7333bf2cfeb649bf1a1db32de37c3c3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="append-method-adox-columns"></a>Append-Methode (ADOX-Spalten)
 Fügt ein neues [Spalte](../../../ado/reference/adox-api/column-object-adox.md) -Objekt an die [Spalten](../../../ado/reference/adox-api/columns-collection-adox.md) Auflistung.  

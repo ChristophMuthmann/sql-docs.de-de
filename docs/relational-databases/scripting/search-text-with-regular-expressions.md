@@ -3,9 +3,9 @@ title: "Suchen von Text mit regulären Ausdrücken | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -25,11 +25,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d9837053135c6c0783d69d9544c84efd35cc5efe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4522ce26253a547b7cf55202f99a4e391f8fdaf3
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="search-text-with-regular-expressions"></a>Suchen von Text mit regulären Ausdrücken
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Reguläre Ausdrücke sind eine präzise und flexible Notation zum Suchen und Ersetzen von Textmustern. Im Feld **Suchen nach** des Dialogfelds [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Find and Replace** dialog box.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
  Die folgende Tabelle enthält eine Beschreibung der regulären Ausdrücke, die in der **Verweisliste**verfügbar sind.  
   
-|expression|Syntax|Beschreibung|  
+|expression|Syntax|Description|  
 |----------------|------------|-----------------|  
 |Beliebiges Zeichen|aus.|Entspricht jedem beliebigen einzelnen Zeichen außer einem Zeilenumbruch.|  
 |0 oder mehr|*|Entspricht 0 oder mehr Vorkommen des vorherigen Ausdrucks, schlägt alle möglichen Übereinstimmungen vor.|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
  Die Liste aller regulären Ausdrücke, die in **Suchen und Ersetzen** -Vorgängen zulässig sind, ist zu lang, um in der **Verweisliste**angezeigt werden zu können. Sie können auch einen der folgenden regulären Ausdrücke in eine **Suchen nach** -Zeichenfolge einfügen:  
   
-|expression|Syntax|Beschreibung|  
+|expression|Syntax|Description|  
 |----------------|------------|-----------------|  
 |Minimal; 0 oder mehr|@|Entspricht 0 oder mehr Vorkommen des vorherigen Ausdrucks, schlägt so wenig Zeichen wie möglich vor.|  
 |Minimal; ein oder mehr|#|Entspricht einem oder mehr Vorkommen des vorherigen Ausdrucks, schlägt so wenig Zeichen wie möglich vor.|  
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
   
  In der folgenden Tabelle ist die Syntax für Übereinstimmungen in Bezug auf Standardeigenschaften von Unicode-Zeichen aufgelistet. Die aus zwei Buchstaben bestehende Abkürzung ist mit der in der Datenbank für Eigenschaften von Unicode-Zeichen identisch. Die Abkürzungen lassen sich als Teil eines Zeichensatzes angeben. So entspricht z. B. der Ausdruck [:Nd:Nl:No] einer beliebigen Ziffer.  
   
-|expression|Syntax|Beschreibung|  
+|expression|Syntax|Description|  
 |----------------|------------|-----------------|  
 |Großbuchstabe|:Lu|Entspricht einem beliebigen Großbuchstaben. So entspricht :Luhe z. B. "The", aber nicht "the".|  
 |Kleinbuchstabe|:Ll|Entspricht einem beliebigen Kleinbuchstaben. So entspricht :Llhe z. B. "the", aber nicht "The".|  
@@ -126,7 +126,7 @@ ms.lasthandoff: 11/17/2017
   
  Neben den Standardeigenschaften von Unicode-Zeichen können auch die folgenden zusätzlichen Eigenschaften als Teil eines Zeichensatzes angegeben werden:  
   
-|expression|Syntax|Beschreibung|  
+|expression|Syntax|Description|  
 |----------------|------------|-----------------|  
 |Alpha|:Al|Entspricht einem beliebigen einzelnen Zeichen. So entspricht :Alhe Wörtern wie "The", "then" und "reached".|  
 |Numerisch|:Nu|Entspricht einer beliebigen Zahl oder Ziffer.|  
@@ -138,7 +138,7 @@ ms.lasthandoff: 11/17/2017
 |Katakana|:Ka|Entspricht Katakana-Zeichen.|  
 |Ideografisch/Han/Kanji|:Id|Entspricht ideografischen Zeichen, z. B. Han und Kanji.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Suchen und Ersetzen](../../relational-databases/scripting/search-and-replace.md)   
  [Suchen von Text mit Platzhaltern](../../relational-databases/scripting/search-text-with-wildcards.md)  
   

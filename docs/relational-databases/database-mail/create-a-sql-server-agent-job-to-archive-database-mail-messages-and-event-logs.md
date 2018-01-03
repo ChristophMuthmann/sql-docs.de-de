@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1d7173c3482cb13806c4d4754d493ccec3118a73
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dc840281d8a9cd2ae9a1f85988f850cc29ab1582
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Erstellen eines Auftrags des SQL Server-Agents zum Archivieren von Datenbank-E-Mail-Nachrichten und Ereignisprotokollen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Kopien von Datenbank-E-Mail-Nachrichten und deren Anlagen werden zusammen mit dem Datenbank-E-Mail-Ereignisprotokoll in **msdb**-Tabellen gespeichert. Sie sollten die Größe der Tabellen regelmäßig reduzieren und Nachrichten und Ereignisse archivieren, die nicht mehr benötigt werden. Die folgenden Prozeduren erstellen einen Auftrag des SQL Server-Agents, um diesen Prozess zu automatisieren.  
@@ -35,9 +35,9 @@ ms.lasthandoff: 11/17/2017
   
 -   **Archivieren von Datenbank-E-Mail-Nachrichten und -Protokollen mithilfe von:**  [SQL Server-Agent](#Process_Overview)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Die neuen Tabellen zum Speichern der Archivdaten können sich in einer speziellen Archivdatenbank befinden. Alternativ können die Zeilen in eine Textdatei exportiert werden.  
    
 ###  <a name="Recommendations"></a> Empfehlungen  
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  Geben Sie im Feld **Befehl** die folgende Anweisung zum Erstellen einer Tabelle ein, die nach dem vorhergehenden Monat benannt wird und Zeilen enthält, die aus der Zeit vor Beginn des aktuellen Monats stammen:  
   
-    ```tsql  
+    ```sql  
     DECLARE @LastMonth nvarchar(12);  
     DECLARE @CopyDate nvarchar(20) ;  
     DECLARE @CreateTable nvarchar(250) ;  
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  Geben Sie im Feld **Befehl** die folgende Anweisung zum Erstellen einer Tabelle mit Anlagen ein, die nach dem vorhergehenden Monat benannt wird und die Anlagen zu den im vorhergehenden Schritt übertragenen Nachrichten enthält:  
   
-    ```tsql  
+    ```sql  
     DECLARE @LastMonth nvarchar(12);  
     DECLARE @CopyDate nvarchar(20) ;  
     DECLARE @CreateTable nvarchar(250) ;  
@@ -144,7 +144,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  Geben Sie im Feld **Befehl** die folgende Anweisung zum Erstellen einer Protokolltabelle ein, die nach dem vorhergehenden Monat benannt wird und die Protokolleinträge zu den in einem vorhergehenden Schritt übertragenen Nachrichten enthält:  
   
-    ```tsql  
+    ```sql  
     DECLARE @LastMonth nvarchar(12);  
     DECLARE @CopyDate nvarchar(20) ;  
     DECLARE @CreateTable nvarchar(250) ;  
@@ -171,7 +171,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  Geben Sie im Feld **Befehl** die folgende Anweisung ein, um Zeilen aus den Datenbank-E-Mail-Tabellen zu entfernen, die älter als der aktuelle Monat sind:  
   
-    ```tsql  
+    ```sql  
     DECLARE @CopyDate nvarchar(20) ;  
     SET @CopyDate = (SELECT CAST(CONVERT(char(8), CURRENT_TIMESTAMP- DATEPART(dd,GETDATE()-1), 112) AS datetime)) ;  
     EXECUTE msdb.dbo.sysmail_delete_mailitems_sp @sent_before = @CopyDate ;  
@@ -191,7 +191,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Geben Sie im Feld **Befehl** die folgende Anweisung ein, um Zeilen aus dem Datenbank-E-Mail-Ereignisprotokoll zu entfernen, die älter als der aktuelle Monat sind:  
   
-    ```tsql  
+    ```sql  
     DECLARE @CopyDate nvarchar(20) ;  
     SET @CopyDate = (SELECT CAST(CONVERT(char(8), CURRENT_TIMESTAMP- DATEPART(dd,GETDATE()-1), 112) AS datetime)) ;  
     EXECUTE msdb.dbo.sysmail_delete_log_sp @logged_before = @CopyDate ;  

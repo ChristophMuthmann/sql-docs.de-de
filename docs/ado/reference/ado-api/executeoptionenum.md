@@ -3,7 +3,7 @@ title: ExecuteOptionEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8357988f5082498114c435f899e898552fca1707
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dbb75cabcdaee3aebe300fce219b500f85dd6b86
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 Gibt an, wie ein Anbieter einen Befehl ausgeführt werden soll.  
   
-|Konstante|Wert|Description|  
+|Konstante|value|Description|  
 |--------------|-----------|-----------------|  
 |**adAsyncExecute**|0x10|Gibt an, dass der Befehl asynchron ausgeführt werden soll.<br /><br /> Dieser Wert kann nicht kombiniert werden, mit der [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) Wert **AdCmdTableDirect**.|  
 |**adAsyncFetch**|0x20|Gibt an, dass die verbleibenden Zeilen nach die ersten Menge in angegeben die [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) Eigenschaft asynchron abgerufen werden sollen.|  

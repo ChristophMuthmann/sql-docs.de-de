@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 38a85c28afb7a93c15b031799b47b07f592350c2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9060efc7289f0bf8fd17ad52cd97f45abefc4bfc
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Aktive sekundäre Replikate: Lesbare sekundäre Replikate (AlwaysOn-Verfügbarkeitsgruppen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -208,9 +208,9 @@ ms.lasthandoff: 11/20/2017
 -   Das Suffix „_readonly_database_statistic“ ist für von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]generierte Statistiken reserviert. Sie können dieses Suffix nicht verwenden, wenn Sie Statistiken in einer primären Datenbank erstellen. Weitere Informationen finden Sie unter [Statistics](../../../relational-databases/statistics/statistics.md).  
   
 ##  <a name="bkmk_AccessInMemTables"></a> Zugreifen auf speicheroptimierte Tabellen auf einem sekundären Replikat  
- Mit speicheroptimierten Tabellen können für primäre und sekundäre Replikate dieselben Transaktionsisolationsstufen verwendet werden. Es wird empfohlen, die Isolationsstufe auf Sitzungsebene auf READ COMMITTED und die Datenbankebenenoption auf MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT auf ON festzulegen. Beispiel:  
+ Mit speicheroptimierten Tabellen können für primäre und sekundäre Replikate dieselben Transaktionsisolationsstufen verwendet werden. Es wird empfohlen, die Isolationsstufe auf Sitzungsebene auf READ COMMITTED und die Datenbankebenenoption auf MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT auf ON festzulegen. Zum Beispiel:  
   
-```tsql  
+```sql  
 ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  
 GO  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED  
@@ -237,10 +237,10 @@ GO
   
     |Lesbares sekundäres Replikat?|Ist Momentaufnahmeisolation oder RCSI-Stufe aktiviert?|Primäre Datenbank|Sekundäre Datenbank|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
-    |Nein|Nein|Keine Zeilenversionen oder 14-Byte-Mehraufwand|Keine Zeilenversionen oder 14-Byte-Mehraufwand|  
-    |Nein|Ja|Zeilenversionen und 14-Byte-Mehraufwand|Keine Zeilenversionen, aber 14-Byte-Mehraufwand|  
-    |Ja|Nein|Keine Zeilenversionen, aber 14-Byte-Mehraufwand|Zeilenversionen und 14-Byte-Mehraufwand|  
-    |Ja|Ja|Zeilenversionen und 14-Byte-Mehraufwand|Zeilenversionen und 14-Byte-Mehraufwand|  
+    |nein|nein|Keine Zeilenversionen oder 14-Byte-Mehraufwand|Keine Zeilenversionen oder 14-Byte-Mehraufwand|  
+    |nein|ja|Zeilenversionen und 14-Byte-Mehraufwand|Keine Zeilenversionen, aber 14-Byte-Mehraufwand|  
+    |ja|nein|Keine Zeilenversionen, aber 14-Byte-Mehraufwand|Zeilenversionen und 14-Byte-Mehraufwand|  
+    |ja|ja|Zeilenversionen und 14-Byte-Mehraufwand|Zeilenversionen und 14-Byte-Mehraufwand|  
   
 ##  <a name="bkmk_RelatedTasks"></a> Verwandte Aufgaben  
   
@@ -260,7 +260,7 @@ GO
   
 -   [SQL Server AlwaysOn-Teamblog: Der offizielle SQL Server AlwaysOn-Teamblog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Informationen zum Clientverbindungszugriff auf Verfügbarkeitsreplikate &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   

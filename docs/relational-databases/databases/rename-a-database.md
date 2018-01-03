@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5470b86096170410b88c6a8e8a596fe608d33cc7
-ms.sourcegitcommit: ef1fa818beea435f58986af3379853dc28f5efd8
+ms.openlocfilehash: 8bc8f0154f8da5ecbbfc5d45e1ab1ee7ff974c69
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="rename-a-database"></a>Umbenennen einer Datenbank
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie eine benutzerdefinierte Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] umbenannt wird. Der Name der Datenbank kann alle Zeichen enthalten, die den Regeln für Bezeichner entsprechen.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/20/2017
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So benennen Sie eine Datenbank um mit:**  
   
@@ -43,12 +43,12 @@ ms.lasthandoff: 11/20/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Nachverfolgung:**  [Nach dem Umbenennen einer Datenbank](#FollowUp)  
+-   **Follow Up:**  [After renaming a database](#FollowUp)  
 
 > [!NOTE]
 > Um eine Datenbank in Azure SQL-Datenbank umzubenennen, verwenden Sie die Anweisung [ALTER DATABASE (Azure SQL-Datenbank)](../../t-sql/statements/alter-database-azure-sql-database.md). Um eine Datenbank in Azure SQL Data Warehouse oder Parallel Data Warehouse umzubenennen, verwenden Sie die Anweisung [RENAME (Transact-SQL)](/t-sql/statements/rename-transact-sql).
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird der Name der Datenbank `AdventureWorks2012` in `Northwind`geändert.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  
@@ -93,7 +93,7 @@ GO
 ##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Umbenennen einer Datenbank  
  Sichern Sie die **master** -Datenbank nach jedem Umbenennen einer Datenbank.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md)  
   

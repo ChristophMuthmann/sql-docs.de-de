@@ -3,7 +3,7 @@ title: "Operator löschen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4b6ba8a9063ad157a7d1374d29c08387bb7dce16
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2cd0a7ffe45e749be76cb5579a895b36c3f51927
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-operator"></a>Operator löschen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Auf dieser Seite können Sie Operatoren löschen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Zu löschendes Objekt**  
 Zeigt den zu löschenden Operator an.  
   
@@ -37,6 +37,6 @@ Weist Benachrichtigungen für den zu löschenden Operator neu zu.
 **Eigenschaften**  
 Zeigt Eigenschaften des Operators an, dem Benachrichtigungen neu zugewiesen werden sollen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Operatoren](../../ssms/agent/operators.md)  
   

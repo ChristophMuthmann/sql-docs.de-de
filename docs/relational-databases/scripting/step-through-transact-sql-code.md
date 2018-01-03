@@ -3,9 +3,9 @@ title: Schrittweises Durchlaufen von Transact-SQL-Code | Microsoft Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc1cc4305f53fe709a984f9cb16776c2f911b8cb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a8225e6152e33690fc2a3853d4ed79fc9606c8f9
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="step-through-transact-sql-code"></a>Schrittweises Durchlaufen von Transact-SQL-Code
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Debugger ermöglicht Ihnen, zu bestimmen, welche [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in einem [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Abfrage-Editor-Fenster ausgeführt werden. Sie können den Debugger bei einzelnen Anweisungen unterbrechen und dann den Status der Codeelemente an diesem Punkt anzeigen.  
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/17/2017
 |Ausführen eines Moduls bis Rücksprung|Klicken Sie im Menü **Debuggen** auf **Rücksprung** .<br /><br /> Klicken Sie auf der Symbolleiste **Debuggen** auf die Schaltfläche **Rücksprung** .<br /><br /> Drücken Sie UMSCHALT+F11.|  
 |Ausführen bis zur aktuellen Cursorposition|Klicken Sie mit der rechten Maustaste auf das Abfrage-Editor-Fenster, und klicken Sie dann auf **Ausführen bis Cursorposition**.<br /><br /> Drücken Sie STRG+F10.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Transact-SQL-Debuggerinformationen](../../relational-databases/scripting/transact-sql-debugger-information.md)  
   
   

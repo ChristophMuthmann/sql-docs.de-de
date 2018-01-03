@@ -3,9 +3,9 @@ title: Angeben von Instanzen im SQL Server PowerShell-Anbieter | Microsoft-Dokum
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,16 +17,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 409654f138f1ac9628822d824c431cea504d2c0f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d643ffaa5bb51529b1aa9624112cbb0e31f762cd
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-instances-in-the-sql-server-powershell-provider"></a>Angeben von Instanzen im SQL Server PowerShell-Anbieter
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Die für den SQL Server PowerShell-Anbieter angegebenen Pfade müssen die Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] und den Computer, auf dem sie ausgeführt wird, angeben. Die Syntax zum Angeben des Computers und der Instanz muss sowohl den Regeln für die SQL Server-Bezeichner als auch für die Windows PowerShell-Pfade entsprechen.  
   
-1.  **Vorbereitungen:**  [Einschränkungen](#LimitationsRestrictions)  
+1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
   
 2.  **Angeben einer Instanz:**  [Beispiele](#Examples)  
   
@@ -81,7 +81,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT
     Set-Location SQLSERVER:\SQL\%28local%29\DEFAULT  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server-Bezeichnern in PowerShell](../../relational-databases/scripting/sql-server-identifiers-in-powershell.md)   
  [SQL Server PowerShell-Anbieter](../../relational-databases/scripting/sql-server-powershell-provider.md)   
  [SQL Server-PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  

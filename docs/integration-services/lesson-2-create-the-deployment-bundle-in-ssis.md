@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7cafc9a6455ccc1534a91284e3e443714c48b3ab
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 60ff7d6e351b823d482f7fbf037d251a90756d2a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>Lesson 2: Create the Deployment Bundle in SSIS
 In [Lektion 1: Vorbereiten der Erstellung des Bereitstellungspakets](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)haben Sie das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt mit Namen „Deployment Tutorial“ erstellt, diesem die Pakete und Unterstützungsdateien hinzugefügt und Konfigurationen in Paketen implementiert.  

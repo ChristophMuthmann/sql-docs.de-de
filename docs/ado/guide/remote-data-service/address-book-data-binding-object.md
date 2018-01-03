@@ -3,7 +3,7 @@ title: Adresse Buch Datenbindungsfunktionen Objekt | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 20adad3287a409a0d9dc05ea58397da32226f00b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 22552b3b4f9574f04b5fec8a382ee792b1267ebf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="address-book-data-binding-object"></a>Adressobjekt Book-Datenbindung
 Das Adressbuch-Anwendung verwendet die [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Objekt so binden Sie Daten aus der SQL Server-Datenbank auf ein visuelles Objekt (in diesem Fall eine DHTML-Tabelle) in der Anwendung Client HTML-Seite. Ereignisgesteuerte VBScript-Programmlogik verwendet die [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) an:  

@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b6434b5e98944ee48b51d3d1c06db0ba94fbda0e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a84f5bfb08b3824f908b7b38a1da0dddcd8a71c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>Anzeigen der Größe der Datei mit geringer Dichte einer Datenbank-Momentaufnahme (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie Sie mit [!INCLUDE[tsql](../../includes/tsql-md.md)] überprüfen, ob eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankdatei eine Sparsedatei ist, und wie Sie die tatsächliche und maximale Größe ermitteln. Dateien mit geringer Dichte, die in Verbindung mit dem NTFS-Dateisystem vorkommen, werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankmomentaufnahmen verwendet.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="example"></a>Beispiel
 Das folgende Skript zeigt für jede Sparsedatei die Größe auf dem Datenträger in KB an.  Das Skript zeigt außerdem die maximale Größe in MB an, auf die eine Sparsedatei anwachsen kann.  Führen Sie das Transact-SQL-Skript in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aus.
 
-```tsql
+```sql
 SELECT  DB_NAME(sd.source_database_id) AS [SourceDatabase], 
         sd.name AS [Snapshot],
         mf.name AS [Filename], 
@@ -92,7 +92,7 @@ AND mf2.is_sparse = 0
 ORDER BY 1;
 ```
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenbank-Momentaufnahmen &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [sys.fn_virtualfilestats &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

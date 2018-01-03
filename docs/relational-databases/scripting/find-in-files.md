@@ -3,9 +3,9 @@ title: In Dateien suchen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1dfff51fc9ff9be167aee8263ede15e944eb1bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5aea89ee7bcf2410908b9a544fc8cf8134a514b1
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="find-in-files"></a>In Dateien suchen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Die Registerkarte **In Dateien suchen** des Fensters zum Suchen und Ersetzen ermöglicht Ihnen, den Code eines angegebenen Satzes von Dateien nach einer Zeichenfolge oder einem Ausdruck zu durchsuchen. Die gefundenen Übereinstimmungen und ausgeführten Aktionen werden in dem unter **Ergebnisoptionen**ausgewählten Suchergebnisfenster aufgelistet.  
@@ -139,7 +139,7 @@ ms.lasthandoff: 11/17/2017
  **Zur Symbolsuche wechseln**  
  Über diese Symbolleisten-Registerkarte wechseln Sie zum Dialogfeld **Symbol suchen** .  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Tastenkombinationen für SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

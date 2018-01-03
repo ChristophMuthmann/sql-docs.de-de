@@ -3,7 +3,7 @@ title: Anzeigen der Projekteigenschaften | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 72e9288f746333f4fe9bfb8d9fae4e1676328fba
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3cce3e5c6962370301f8a8453838d13815c62e3c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="view-project-properties"></a>Anzeigen der Projekteigenschaften
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können dem Projekt zugeordnete Eigenschaften im Eigenschaftenfenster anzeigen.  
@@ -39,6 +39,6 @@ ms.lasthandoff: 12/05/2017
   
 Projekteigenschaften wie das Erstellungsdatum sind schreibgeschützt und können über das Eigenschaftenfenster nicht geändert werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Projektmappen-Explorer](../../ssms/solution/solution-explorer.md)  
   

@@ -3,7 +3,7 @@ title: Projektmappen-Explorer | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: db694cf9183a4fd80aeb0f46c21be7abce1147de
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3652c94ce57fa5200e846c922f4d6a245478965c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="solution-explorer"></a>Projektmappen-Explorer
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Der Bereich des Projektmappen-Explorers in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] enthält Projekte genannte Container zur Verwaltung von Elementen wie Datenbankskripts, Abfragen, Datenverbindungen und Dateien. Miteinander verknüpfte Projekte können in einem Projektmappe genannten Container zusammengefasst werden.  
@@ -53,12 +53,12 @@ Verwenden Sie diese Container zu folgenden Zwecken:
   
 Die Elemente in Projekten hängen vom Projekttyp ab und davon, ob Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]verwenden.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
 Erste Schritte mit den SQL Server-Lösungen mithilfe der folgenden Themen:  
   
 |||  
 |-|-|  
-|**Description**|**Thema**|  
+|**Beschreibung**|**Thema**|  
 |Beschreibt, wie ein Projekt oder mehrere Projekte in einer Projektmappe gesammelt werden.|[Projektmappen &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)|  
 |Beschreibt, wie ein Projekt erstellt und Elemente wie Skripts und Verbindungen hinzugefügt werden.|[Projekte &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)|  
 |Enthält Informationen zu den Dateien, mit denen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] Projektmappen und Dateien verwaltet.|[Dateien zum Verwalten von Projektmappen und Projekten](../../ssms/solution/files-that-manage-solutions-and-projects.md)|  

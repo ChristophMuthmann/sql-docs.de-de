@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,18 +13,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b35bade8769e3de11f60046375f082146da579d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 53ad81ce3021f14e6d0638e7e60a050f892bb8bf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-an-ssis-package-with-sql-server-management-studio-ssms"></a>Ausführen eines SSIS-Pakets mit SQL Server Management Studio (SSMS)
 In diesem Schnellstart wird erläutert, wie Sie SQL Server Management Studio (SSMS) verwenden müssen, um eine Verbindung mit der SSIS-Katalogdatenbank herzustellen, und wie Sie anschließend ein im SSIS-Katalog gespeichertes SSIS-Paket im Objekt-Explorer in SSMS ausführen.
 
 SQL Server Management Studio ist eine integrierte Umgebung zum Verwalten jeder beliebigen SQL-Infrastruktur, von SQL Server bis hin zur SQL-Datenbank. Weitere Informationen zu SSMS finden Sie unter [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Prüfen Sie, ob Sie über die neueste Version von SQL Server Management Studio (SSMS) verfügen, bevor Sie beginnen. Wie Sie SSMS herunterladen, erfahren Sie unter [Herunterladen von SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
@@ -37,7 +37,7 @@ Verwenden Sie SQL Server Management Studio, um eine Verbindung mit dem SSIS-Kata
 
 1. Öffnen Sie SQL Server Management Studio.
 
-2. Geben Sie im Dialogfeld **Mit Server verbinden** die folgenden Informationen ein:
+2. Geben Sie im Dialogfeld **Verbindung mit dem Server herstellen** die folgenden Informationen ein:
 
    | Einstellung       | Vorgeschlagener Wert | Weitere Informationen | 
    | ------------ | ------------------ | ------------------------------------------------- | 

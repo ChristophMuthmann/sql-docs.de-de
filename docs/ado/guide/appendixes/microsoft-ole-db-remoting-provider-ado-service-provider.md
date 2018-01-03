@@ -3,7 +3,7 @@ title: "Microsoft OLE DB-Anbieter für Remoting (ADO-Dienstanbieter) | Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fea86b408c80a0165ddfae0899df4fa072839163
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cbc0d0060a58d1e73fe2df94c598a1fa054abd15
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB-Remoting-Anbieter (Übersicht)
 Der Microsoft OLE DB-Anbieter für Remoting ermöglicht, einen lokalen Benutzer auf einem Clientcomputer aufzurufenden Datenanbieter auf einem Remotecomputer. Geben Sie die Parameter des Datenproviders für den Remotecomputer wie würden Sie einen lokalen Benutzer auf dem Remotecomputer. Geben Sie dann die Parameter, die vom Anbieter-Remoting verwendet wird, auf den Remotecomputer zuzugreifen. Sie können dann den Remotecomputer zugreifen, als wären Sie ein lokaler Benutzer.

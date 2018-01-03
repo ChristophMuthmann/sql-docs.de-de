@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 89cd8b22732914664b8fc870334c3994adc15373
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f00ad52ab0eb775a7934b24cb56400e3235fab55
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-4-2---creating-a-corrupted-file"></a>Lektion 4-2: Erstellen einer beschädigten Datei
 Um die Konfiguration und die Behandlung von Transformationsfehlern zu demonstrieren, müssen Sie eine Beispielflatfile erstellen, die beim Verarbeiten für eine Komponente einen Fehler erzeugt.  
@@ -67,7 +67,7 @@ In dieser Aufgabe erstellen Sie eine Kopie einer vorhandenen Beispielflatfile. A
     > [!NOTE]  
     > Die Zahl 27 ist die ID der Komponente. Dieser Wert wird zugewiesen, wenn Sie den Datenfluss erstellen. Der Wert in Ihrem Paket kann sich von diesem Wert unterscheiden.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
 [Schritt 3: Hinzufügen von Fehlerflussumleitungen](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
   
   

@@ -3,9 +3,9 @@ title: Transact-SQL-Debugger | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ed70a11de7d159fb2e26f43b7456954fc41db9f6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bb725e9794a5c2fe582e49d77e02b7246cabd4e8
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-debugger"></a>Transact-SQL-Debugger
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Debugger ist bei der Fehlersuche in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code hilfreich, da sich mit ihm das Laufzeitverhalten des Codes untersuchen lässt. Nachdem Sie das [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenster in den Debugmodus geschaltet haben, können Sie die Ausführung bei bestimmten Codezeilen anhalten und die Informationen und Daten untersuchen, die von diesen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen verwendet oder zurückgegeben werden.  
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/17/2017
 |Beschreibt die Verwendung des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debuggers, um Code in Einzelschritten auszuführen.|[Schrittweises Durchlaufen von Transact-SQL-Code](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
 |Beschreibt die Verwendung des Debuggers, um [!INCLUDE[tsql](../../includes/tsql-md.md)] -Daten, z. B. Parameter und Variablen, und Systeminformationen anzuzeigen.|[Transact-SQL-Debuggerinformationen](../../relational-databases/scripting/transact-sql-debugger-information.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

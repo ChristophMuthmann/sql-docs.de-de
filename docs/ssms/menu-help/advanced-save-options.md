@@ -3,7 +3,7 @@ title: Erweiterte Speicheroptionen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3c75d958c7cca998117b03821857157cf2eb9355
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 394f15a46fe16b06585c262ea5dbf542746e614b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="advanced-save-options"></a>Erweiterte Speicheroptionen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mithilfe dieses Dialogfelds können Sie ein Sprachcodierungsschema auswählen und die Zeichen festlegen, die am Ende jeder Zeile eingefügt werden. Um auf das Dialogfeld **Erweiterte Speicheroptionen** zuzugreifen, klicken Sie im Menü **Datei** auf **Speichern** <query name>**.sql unter** , um das Dialogfeld **Speichern Datei As** zu öffnen, klicken Sie auf den nach unten zeigenden Pfeil auf der Schaltfläche **Speichern** , und klicken Sie dann auf **Speichern with Encoding**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Codierung**  
 Mithilfe dieses Listenfelds können Sie auf die Zieldatei ein neues Sprachcodierungsschema anwenden.  
   

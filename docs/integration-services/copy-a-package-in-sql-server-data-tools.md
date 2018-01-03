@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8f75a2f7d59a1c0fff49179020f37420f24149ed
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4e7e1369782aed98ae8598cd79675d4a1b0a70a2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>Kopieren eines Pakets in SQL Server-Datentools
   In diesem Thema wird beschrieben, wie Sie ein neues [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket durch Kopieren eines vorhandenen Pakets erstellen und wie Sie die Eigenschaften **Name** und **GUID** des neuen Pakets aktualisieren.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/20/2017
   
 11. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das neue Paket zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Speichern einer Kopie eines Pakets](http://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31)   
  [Erstellen von Paketen in SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md)   
  [Integration Services &#40;SSIS&#41; Packages](../integration-services/integration-services-ssis-packages.md) (Integration Services-Pakete [SSIS])  

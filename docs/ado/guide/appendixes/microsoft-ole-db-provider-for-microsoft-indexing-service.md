@@ -3,7 +3,7 @@ title: "Microsoft OLE DB-Anbieter für Microsoft Indexdienst | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7d0fb1ffdfdd73562aaa5b64ce997e857ae9f213
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d278b3fd6a2460471195e5744baef93292dfbc30
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB-Anbieter für Microsoft Indexing Service – Übersicht
 Microsoft OLE DB-Anbieter für Microsoft Indexdienst bietet programmgesteuerten nur-Lese Zugriff auf System- und Web-Daten, die vom Microsoft Indexdienst indiziert Datei. ADO-Anwendungen können SQL-Abfragen zum Abrufen von Inhalten und Eigenschaftsinformationen ausgeben.
@@ -101,23 +101,23 @@ MSIDXS
 
 |Methode|Verfügbar?|
 |------------|----------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Nein|
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|nein|
 |[Abbrechen](../../../ado/reference/ado-api/cancel-method-ado.md)|ja|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Nein|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Nein|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|nein|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|nein|
 |[Klon](../../../ado/reference/ado-api/clone-method-ado.md)|ja|
 |[Schließen](../../../ado/reference/ado-api/close-method-ado.md)|ja|
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Nein|
+|[Löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|nein|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|ja|
 |[Verschieben](../../../ado/reference/ado-api/move-method-ado.md)|ja|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|ja|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|ja|
-|[Öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md)|ja|
+|[Datei](../../../ado/reference/ado-api/open-method-ado-recordset.md)|ja|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|ja|
 |[Erneut synchronisieren](../../../ado/reference/ado-api/resync-method.md)|ja|
 |[Unterstützt](../../../ado/reference/ado-api/supports-method.md)|ja|
-|[Update](../../../ado/reference/ado-api/update-method.md)|Nein|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Nein|
+|[Update](../../../ado/reference/ado-api/update-method.md)|nein|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|nein|
 
  Bestimmte Implementierungsdetails und funktionalen Informationen zu den Microsoft OLE DB-Anbieter für Microsoft Indexdienst finden Sie in der [OLE DB Programmer's Guide](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx), oder besuchen Sie die Web Services-Seite von den Windows NT Server-Webdienst Standort.
 

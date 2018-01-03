@@ -3,8 +3,11 @@ title: Catalog.update_logdb_info (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 07/18/2017
 ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -13,14 +16,14 @@ author: haoqian
 ms.author: haoqian
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0bd5af1a51baf6947f9634f1f7260af20a7e87b2
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: b1389bde14814bd1d295a7abb49461029925eb10
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catalogupdatelogdbinfo-ssisdb-database"></a>Catalog.update_logdb_info (SSISDB-Datenbank)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Aktualisieren Sie die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Scale Out-Protokollinformationen.
 
@@ -41,7 +44,7 @@ catalog.update_logdb_info [@server_name = ] server_name, [@connection_string = ]
  0 (Erfolg)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ InclusionThresholdSetting  
 
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert eine der folgenden Berechtigungen:  

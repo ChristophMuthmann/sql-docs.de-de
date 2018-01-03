@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c996f85f6c487874f1d5bc5e4839b1ea2a9c618
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 941481fb17d33c18e648e4afe511e868e59fc0a1
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="query-store-usage-scenarios"></a>Verwendungsszenarien für den Abfragespeicher
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ ms.lasthandoff: 11/17/2017
   
  Alternativ können Sie ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript ausführen, um die Gesamtzahl der Abfragetexte, Abfragen und Pläne im System abzurufen und ihre Verschiedenheit durch den Vergleich ihres query_hash- und plan_hash-Werts zu bestimmen:  
   
-```tsql  
+```sql  
 /*Do cardinality analysis when suspect on ad-hoc workloads*/  
 SELECT COUNT(*) AS CountQueryTextRows FROM sys.query_store_query_text;  
 SELECT COUNT(*) AS CountQueryRows FROM sys.query_store_query;  
@@ -166,7 +166,7 @@ SELECT COUNT(DISTINCT query_plan_hash) AS  CountDifferentPlanRows FROM  sys.quer
   
  Der Ansatz mit einzelnen Abfragevorlagen erfordert die Erstellung von Planhinweislisten:  
   
-```tsql  
+```sql  
 /*Apply plan guide for the selected query template*/  
 DECLARE @stmt nvarchar(max);  
 DECLARE @params nvarchar(max);  
@@ -188,7 +188,7 @@ EXEC sp_create_plan_guide
   
  Wenn alle Ihre Abfragen (oder eine Mehrheit davon) Kandidaten für automatische Parametrisierung sind, stellt das Ändern von `FORCED PARAMETERIZATION` für die gesamte Datenbank möglicherweise die bessere Option dar:  
   
-```tsql  
+```sql  
 /*Apply forced parameterization for entire database*/  
 ALTER DATABASE <database name> SET PARAMETERIZATION  FORCED;  
 ```  
@@ -204,7 +204,7 @@ ALTER DATABASE <database name> SET PARAMETERIZATION  FORCED;
   
  In diesem Fall kann es sinnvoll sein die Serveroption [**Für Ad-Hoc-Workloads optimieren**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) zu aktivieren, um die Verschwendung von Cachespeicher für Abfragen zu vermeiden, die wahrscheinlich nicht mehr ausgeführt werden. Um die Erfassung solcher Abfragen im Abfragespeicher zu verhindern, legen Sie `QUERY_CAPTURE_MODE` auf `AUTO`fest.  
   
-```tsql  
+```sql  
 sp_configure 'show advanced options', 1;  
 GO  
 RECONFIGURE;  
@@ -220,7 +220,7 @@ ALTER DATABASE  [QueryStoreTest] SET QUERY_STORE = ON
     (OPERATION_MODE = READ_WRITE, QUERY_CAPTURE_MODE = AUTO);  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Bewährte Methoden für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md)  
   

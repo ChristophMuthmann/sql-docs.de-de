@@ -3,7 +3,7 @@ title: Mithilfe von ADO mit Microsoft Visual Basic | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ef8260be592439a3130afe9af830b8159290f2a2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5f3652eba15968b40a6d8a33902e1ca757275dd8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Verwenden von ADO mit Microsoft Visual Basic und Visual Basic für Applikationen
 Einrichten eines ADO-Projekts und Schreiben von Code für ADO gleicht gibt an, ob Sie Visual Basic oder Visual Basic für Applikationen verwenden. In diesem Thema behandelt wird, mithilfe von ADO mit Visual Basic und Visual Basic für Applikationen und Anmerkungen dieser Unterschiede.
@@ -49,7 +49,7 @@ Einrichten eines ADO-Projekts und Schreiben von Code für ADO gleicht gibt an, o
 
 3.  Klicken Sie auf **OK**.
 
- ADO können genauso leicht mit Visual Basic für Applikationen, mit Microsoft Access, z. B..
+ ADO können genauso leicht mit Visual Basic für Applikationen, mit Microsoft Access, z. B.
 
 #### <a name="to-reference-ado-from-microsoft-access"></a>In ADO-Verweis aus Microsoft Access
 

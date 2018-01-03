@@ -3,7 +3,7 @@ title: SQL Server-Agent | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1e818b754e994c3b6b585712092e5a473ed6e11b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f475fcb1a86f61f684edb65adf637e9234d0a494
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-agent"></a>SQL Server-Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent kann einen A
 ## <a name="Components"></a>Komponenten des SQL Server-Agents  
 Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent verwendet die folgenden Komponenten, um die auszuführenden Aufgaben, den Zeitpunkt der Ausführung und die Meldung erfolgreicher bzw. fehlgeschlagener Aufgaben zu definieren.  
   
-### <a name="jobs"></a>Aufträge  
+### <a name="jobs"></a>Jobs  
 Ein *Auftrag* umfasst eine angegebene Reihe von Aktionen, die der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent ausführt. Durch die Verwendung von Aufträgen können Sie eine Verwaltungsaufgabe so definieren, dass diese ein- oder mehrmals ausgeführt und der erfolgreiche oder fehlerhafte Ausführung überwacht werden kann. Aufträge können auf einem lokalen oder mehreren Remoteservern ausgeführt werden.  
   
 > [!IMPORTANT]  
@@ -131,7 +131,7 @@ Ein Subsystem ist ein vordefiniertes Objekt, das die für einen Auftragsschritt 
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] definiert die in der folgenden Tabelle aufgeführten Subsysteme:  
   
-|Name des Subsystems|Beschreibung|  
+|Name des Subsystems|Description|  
 |--------------|-----------|  
 |Microsoft ActiveX-Skript|Ausführen eines ActiveX-Skriptauftragsschritts.<br /><br />**Warnung:** Das ActiveX-Skriptsubsystem wird in einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] aus dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
 |Betriebssystem (**CmdExec**)|Ausführen eines ausführbaren Programms.|  
@@ -146,16 +146,16 @@ Ein Subsystem ist ein vordefiniertes Objekt, das die für einen Auftragsschritt 
 |[!INCLUDE[ssIS](../../includes/ssis_md.md)]-Paketausführung|Ausführen eines [!INCLUDE[ssIS](../../includes/ssis_md.md)]-Pakets.|  
   
 > [!NOTE]  
-> Da [!INCLUDE[tsql](../../includes/tsql_md.md)]-Auftragsschritte keine Proxys verwenden, gibt es kein Subsystem des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agents für [!INCLUDE[tsql](../../includes/tsql_md.md)]-Auftragsschritte.  
+> Da [!INCLUDE[tsql](../../includes/tsql_md.md)] -Auftragsschritte keine Proxys verwenden, gibt es kein Subsystem des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agents für [!INCLUDE[tsql](../../includes/tsql_md.md)] -Auftragsschritte.  
   
-Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent erzwingt Subsystemeinschränkungen auch dann, wenn der Sicherheitsprinzipal für den Proxy normalerweise über die Berechtigung zum Ausführen des Tasks im Auftragsschritt verfügen würde. Beispielsweise kann ein Proxykonto für einen Benutzer, der Mitglied der festen Serverrolle „sysadmin“ ist, nur einen [!INCLUDE[ssIS](../../includes/ssis_md.md)]-Auftragsschritt ausführen, wenn das Proxykonto Zugriff auf das [!INCLUDE[ssIS](../../includes/ssis_md.md)]-Subsystem hat. Der Benutzer kann jedoch [!INCLUDE[ssIS](../../includes/ssis_md.md)]-Pakete ausführen.  
+Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent erzwingt Subsystemeinschränkungen auch dann, wenn der Sicherheitsprinzipal für den Proxy normalerweise über die Berechtigung zum Ausführen des Tasks im Auftragsschritt verfügen würde. Beispielsweise kann ein Proxykonto für einen Benutzer, der Mitglied der festen Serverrolle „sysadmin“ ist, nur einen [!INCLUDE[ssIS](../../includes/ssis_md.md)] -Auftragsschritt ausführen, wenn das Proxykonto Zugriff auf das [!INCLUDE[ssIS](../../includes/ssis_md.md)] -Subsystem hat. Der Benutzer kann jedoch [!INCLUDE[ssIS](../../includes/ssis_md.md)] -Pakete ausführen.  
   
 ### <a name="proxies"></a>Proxys  
 Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent verwendet Proxys zum Verwalten von Sicherheitskontexten. Ein Proxy kann für mehrere Auftragsschritte verwendet werden. Mitglieder der festen Serverrolle **sysadmin** können Proxys erstellen.  
   
 Jeder Proxy entspricht einem Satz Sicherheitsanmeldeinformationen. Jeder Proxy kann einer Gruppe von Subsystemen und Anmeldenamen zugeordnet werden. Der Proxy kann nur für Auftragsschritte benutzt werden, die ein dem Proxy zugeordnetes Subsystem verwenden. Um einen Auftragsschritt zu erstellen, der einen bestimmten Proxy verwendet, muss der Auftragsbesitzer einen Anmeldenamen verwenden, der diesem Proxy zugeordnet ist, oder ein Mitglied einer Rolle mit unbeschränktem Zugriff auf Proxys sein. Mitglieder der festen Serverrolle **sysadmin** haben unbeschränkten Zugriff auf Proxys. Mitglieder von **SQLAgentUserRole**, **SQLAgentReaderRole** oder **SQLAgentOperatorRole** können nur Proxys verwenden, für die Ihnen der Zugriff erteilt wurde. Jedem Benutzer, der Mitglied einer dieser festen Datenbankrollen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agents ist, muss Zugriff auf bestimmte Proxys gewährt werden, damit er Auftragsschritte erstellen kann, bei denen diese Proxys verwendet werden.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
 Konfigurieren Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent anhand der folgenden Schritte zur Automatisierung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Verwaltung:  
   
 1.  Überprüfen Sie, welche administrativen Tasks oder Serverereignisse regelmäßig auftreten und ob diese Tasks oder Ereignisse programmgesteuert verwaltet werden können. Ein Task eignet sich für die Automatisierung, wenn er eine festgelegte Reihenfolge von Schritten umfasst und zu einem bestimmten Zeitpunkt oder als Reaktion auf ein bestimmtes Ereignis auftreten soll.  
@@ -171,7 +171,7 @@ Falls Sie mehrere Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversio
   
 Verwenden Sie für die ersten Schritte mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent die folgenden Aufgaben:  
   
-|Beschreibung|Thema|  
+|Description|Thema|  
 |-----------|-----|  
 |Beschreibt, wie der SQL Server-Agent konfiguriert wird.|[Konfigurieren des SQL Server-Agents](../../ssms/agent/configure-sql-server-agent.md)|  
 |Beschreibt, wie der SQL Server-Agent-Dienst gestartet, beendet und angehalten wird.|[Starten, Beenden oder Anhalten des SQL Server-Agent-Diensts](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)|  
@@ -181,6 +181,6 @@ Verwenden Sie für die ersten Schritte mit dem [!INCLUDE[ssNoVersion](../../incl
 |Beschreibt den Wartungsplanungs-Assistenten. Hierbei handelt es sich um ein Hilfsprogramm, mit dem Sie Aufträge, Warnungen und Operatoren erstellen können, um die Verwaltung einer SQL Server-Instanz zu automatisieren.|[Verwenden des Wartungsplanungs-Assistenten](http://msdn.microsoft.com/en-us/db65c726-9892-480c-873b-3af29afcee44)|  
 |Beschreibt, wie administrative Aufgaben mit dem SQL Server-Agent automatisiert werden.|[Automatisierte Administrationstasks &#40;SQL Server-Agent&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Oberflächenkonfiguration](http://msdn.microsoft.com/en-us/f741169c-1453-4ad2-830b-bf2be27d712f)  
   

@@ -3,7 +3,7 @@ title: "Schritt 3: Auffüllen der Felder Listenfeld | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9844f9422444a2abb8b13649f793a25f0485bc62
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 298e3107a563555169384832f82995c43c1e622d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="step-3-populate-the-fields-list-box"></a>Schritt 3: Auffüllen der Felder Listenfeld
 Im Listenfeld Felder ausgefüllt werden, legen Sie den folgenden Code in dem Click-Ereignishandler der `lstMain`:  

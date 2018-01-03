@@ -3,9 +3,9 @@ title: "Ausführen von Transact-SQL-Skriptdateien mithilfe von „sqlcmd“"
 ms.custom: 
 ms.date: 07/15/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 29c0d2c346777e0f5add0c1b4fd03517f5e9c587
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: beee362d87df237fa93f574823a4dc9d53208e95
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcmd---run-transact-sql-script-files"></a>Ausführen von Transact-SQL-Skriptdateien mithilfe von „sqlcmd“
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Verwenden Sie zum Ausführen einer Transact-SQL-Skriptdatei den Befehl **sqlcmd**. Eine Transact-SQL-Skriptdatei ist eine Textdatei, die eine Kombination aus Transact-SQL-Anweisungen, **sqlcmd** -Befehlen und Skriptvariablen enthalten kann.  
@@ -71,8 +71,8 @@ ms.lasthandoff: 11/17/2017
   
  In diesem Fall erfolgt keine Ausgabe im Eingabeaufforderungsfenster. Stattdessen erfolgt die Ausgabe in die Datei EmpAdds.txt. Sie können diese Ausgabe prüfen, indem Sie die Datei EmpAdds.txt öffnen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Starten des Hilfsprogramms "sqlcmd"](../../relational-databases/scripting/sqlcmd-start-the-utility.md)   
- [sqlcmd (Hilfsprogramm)](../../tools/sqlcmd-utility.md)  
+ [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
   
   

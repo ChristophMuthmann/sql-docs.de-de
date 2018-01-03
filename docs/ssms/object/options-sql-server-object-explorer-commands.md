@@ -3,7 +3,7 @@ title: "Optionen (SQL Server-Objekt-Explorer – Befehle) | Microsoft-Dokumentat
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 69ada91ed2c98151d052a14604786ece9e27f059
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 74210d90aa66f6bc770e6c9cb56a2e0fa38fff64
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>Optionen (SQL Server-Objekt-Explorer – Befehle)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Wenn Sie mit der rechten Maustaste auf eine Tabelle oder eine Sicht im Objekt-Explorer klicken, werden die beiden folgenden Optionen zum Anzeigen von Zeilen in der Tabelle angezeigt:  
@@ -47,6 +47,6 @@ Gibt die Anzahl von beim Bearbeiten von Zeilen in einer Tabelle zurückzugebende
 **Wert für den Befehl „Die ersten <n> Zeilen auswählen“**  
 Gibt die im erstellten Abfrage-Editor Skript angegebene Anzahl von zurückzugebenden Zeilen an. Die Standardeinstellung ist 1000 Zeilen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [SQL Server Audit (Datenbankmodul)](http://msdn.microsoft.com/en-us/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
   

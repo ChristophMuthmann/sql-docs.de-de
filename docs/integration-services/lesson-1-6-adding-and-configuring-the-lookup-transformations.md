@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f27d9b0172671e11a9bea26db398c6229e458320
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: aa364a063138708cfa48bea87abe7f0833d07575
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-6---adding-and-configuring-the-lookup-transformations"></a>Lektion 1-6: Hinzufügen und Konfigurieren von Suchtransformationen
 Nach dem Konfigurieren der Flatfilequelle zum Extrahieren von Daten aus der Quelldatei besteht die nächste Aufgabe darin, die Suchtransformationen zu definieren, die zum Abrufen der Werte für **CurrencyKey** und **DateKey**erforderlich sind. Von einer Transformation zum Suchen wird eine Suche durchgeführt, indem Daten in der angegebenen Eingabespalte mit einer Spalte in einem referenzierten Dataset verknüpft werden. Bei dem Verweisdataset kann es sich um eine vorhandene Tabelle oder Sicht, eine neue Tabelle oder das Ergebnis einer SQL-Anweisung handeln. In diesem Lernprogramm stellt die Transformation für Suche stellt mithilfe eines OLE DB-Verbindungs-Managers eine Verbindung mit der Datenbank her, die die Daten enthält, die als Quelle des Verweisdatasets dienen.  
@@ -131,16 +131,16 @@ In beiden Fällen verwendet die Suchtransformation den OLE DB-Verbindungs-Manage
   
 9. Überprüfen Sie auf der Seite **Erweitert** die Optionen für die Zwischenspeicherung.  
   
-10. Klicken Sie auf **OK** , um zur Entwurfsoberfläche **Datenfluss** zurückzukehren.  
+10. Klicken Sie auf **OK**, um zur Entwurfsoberfläche **Datenfluss** zurückzukehren.  
   
 11. Klicken Sie mit der rechten Maustaste auf die Lookup Date Key-Transformation, und klicken Sie auf **Eigenschaften**.  
   
 12. Überprüfen Sie im Eigenschaftenfenster, ob die **LocaleID** -Eigenschaft auf **Englisch (USA)** und die **DefaultCodePage** -Eigenschaft auf **1252**festgelegt ist.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Schritt 7: Hinzufügen und Konfigurieren des OLE DB-Ziels](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Lookup Transformation](../integration-services/data-flow/transformations/lookup-transformation.md)  
   
   

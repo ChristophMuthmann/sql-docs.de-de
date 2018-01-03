@@ -3,7 +3,7 @@ title: RDS in Beziehung stehenden Technologien mit | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c6424d2634e923f4f384f7fbe958ebbc27e4b492
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6216b4df4858d6c89a0c1c5374b633e38de29f8d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-related-technologies-with-rds"></a>Verwenden von verwandten Technologien mit RDS
 Dieser Abschnitt enthält die folgenden Themen.  

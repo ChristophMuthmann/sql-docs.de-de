@@ -3,7 +3,7 @@ title: "Optionen (Umgebung – Hilfe – Seite „Allgemein“) | Microsoft-Doku
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fc966f121da19eb546c9950f2f852d0d37fc9a96
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b12f4599658f6e9c3a330e96aa87b65090092478
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="options-environment---help---general-page"></a>Optionen (Umgebung – Hilfe – Seite „Allgemein“)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Im Dialogfeld **Optionen** wählen Sie Dokumentationssätze aus und entscheiden, ob Themen intern in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] oder extern in einem separaten Fenster angezeigt werden sollen. Zum Zugreifen auf dieses Dialogfeld klicken Sie im Menü **Extras** auf **Optionen** . Erweitern Sie dann im Knoten **Umgebung** den Eintrag **Hilfe** , und klicken Sie auf **Allgemein**.  

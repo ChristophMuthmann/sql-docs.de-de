@@ -3,7 +3,7 @@ title: ADO-Ereignissen zu modellieren (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6e984459ddf5e45cbcf25d9109a7e50cbd43abbf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7056aa943362acbfa7b2cdc4d16ab2e73fe14160
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-events-model-example-vc"></a>ADO-Ereignisse Modell (VC++-Beispiel)
 Der Visual C++-Teil [ADO Ereignisinstanziierung von Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md) bietet eine allgemeine Beschreibung zum Instanziieren der ADO-Ereignismodell. Folgender Ausdruck ist ein spezielles Beispiel instanziieren das Ereignismodell in der Umgebung erstellt, indem die **#import** Richtlinie.  

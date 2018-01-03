@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 43f5f8e693aac51bee20a4ca7b29a5cb0676cf92
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e5c5c217d5449c0c934636b983f48235724bb027
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>Lektion 1-3: Hinzufügen von Paketen und weiteren Dateien
 In diesem Schritt fügen Sie dem im vorherigen Schritt erstellten Deployment Tutorial-Projekt vorhandene Pakete, Hilfsdateien zur Unterstützung einzelner Pakete und eine Infodatei hinzu. Sie fügen z. B. eine XML-Datendatei hinzu, die die Daten für ein Paket und eine Textdatei enthält, von der Infodateiinformationen zu allen Paketen im Projekt bereitgestellt werden.  
@@ -74,7 +74,7 @@ In der folgenden Aufgabe fügen Sie den DataTransfer- und LoadXMLData-Paketen Ko
   
 4.  Klicken Sie im Menü Datei auf **Alle speichern**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Schritt 4: Hinzufügen von Paketkonfigurationen](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
   

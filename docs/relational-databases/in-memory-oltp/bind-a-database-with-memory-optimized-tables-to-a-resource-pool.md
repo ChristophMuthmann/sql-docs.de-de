@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7d0673cda38da74437a8a5370ae664da91afef1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b2d704561458719b9d1d73467370d2e5e1d8bd13
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Binden einer Datenbank mit speicheroptimierten Tabellen an einen Ressourcenpool
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="bkmk_CreateDatabase"></a> Erstellen der Datenbank  
  Durch folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] wird eine Datenbank mit dem Namen "IMOLTP_DB" erstellt, die mindestens eine speicheroptimierte Tabelle enthält. Der Pfad \<Laufwerk_und_Pfad> muss vor dem Ausführen dieses Befehls vorhanden sein.  
   
-```tsql  
+```sql  
 CREATE DATABASE IMOLTP_DB  
 GO  
 ALTER DATABASE IMOLTP_DB ADD FILEGROUP IMOLTP_DB_fg CONTAINS MEMORY_OPTIMIZED_DATA  
@@ -96,7 +96,7 @@ In diesem Beispiel wird davon ausgegangen, dass Sie Ihre Berechnungen ergeben ha
   
  Durch folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code wird ein Ressourcenpool mit dem Namen "Pool_IMOLTP" erstellt. Die Hälfte des verfügbaren Arbeitsspeichers wird dem Pool zur Verfügung gestellt.  Nachdem der Pool erstellt wurde, wird die Ressourcenkontrolle neu konfiguriert, um "Pool_IMOLTP" einzuschließen.  
   
-```tsql  
+```sql  
 -- set MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT to the same value  
 CREATE RESOURCE POOL Pool_IMOLTP   
   WITH   
@@ -113,7 +113,7 @@ GO
   
  Mit folgender [!INCLUDE[tsql](../../includes/tsql-md.md)] wird eine Bindung zwischen der IMOLTP_DB-Datenbank und dem Pool_IMOLTP-Ressourcenpool definiert. Die Bindung wird erst wirksam, nachdem die Datenbank online geschaltet wurde.  
   
-```tsql  
+```sql  
 EXEC sp_xtp_bind_db_resource_pool 'IMOLTP_DB', 'Pool_IMOLTP'  
 GO  
 ```  
@@ -123,7 +123,7 @@ GO
 ##  <a name="bkmk_ConfirmBinding"></a> Bestätigen der Bindung  
  Bestätigen Sie die Bindung, und beachten Sie die Ressourcenpool-ID für IMOLTP_DB. Sie darf nicht NULL sein.  
   
-```tsql  
+```sql  
 SELECT d.database_id, d.name, d.resource_pool_id  
 FROM sys.databases d  
 GO  
@@ -132,7 +132,7 @@ GO
 ##  <a name="bkmk_MakeBindingEffective"></a> Inkraftsetzen der Bindung  
  Nachdem die Datenbank an den Ressourcenpool gebunden wurde, müssen Sie sie offline und anschließend wieder online schalten, damit die Bindung wirksam wird. Wenn die Datenbank zuvor an einen anderen Pool gebunden war, wird dadurch der zugeordnete Arbeitsspeicher aus dem vorherigen Ressourcenpool entfernt, und die Speicherbelegungen für die speicheroptimierte Tabelle und die Indizes stammen jetzt aus dem neu an die Datenbank gebundenen Ressourcenpool.  
   
-```tsql  
+```sql  
 USE master  
 GO  
   
@@ -156,7 +156,7 @@ GO
   
  **Beispielcode**  
   
-```tsql  
+```sql  
 ALTER RESOURCE POOL Pool_IMOLTP  
 WITH  
      ( MIN_MEMORY_PERCENT = 70,  
@@ -185,7 +185,7 @@ GO
   
  Sobald eine Datenbank an einen benannten Ressourcenpool gebunden wurde, können Sie mit der folgenden Abfrage die Speicherbelegungen für unterschiedliche Ressourcenpools anzeigen.  
   
-```tsql  
+```sql  
 SELECT pool_id  
      , Name  
      , min_memory_percent  
@@ -213,10 +213,10 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
   
  Wenn Sie die Datenbank nicht an einen benannten Ressourcenpool binden, wird sie an den Pool "default" gebunden. Da der Standardressourcenpool von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die meisten anderen Zuordnungen verwendet wird, können Sie nicht die DMV "sys.dm_resource_governor_resource_pools" verwenden, um den von speicheroptimierten Tabellen beanspruchten Arbeitsspeicher für die gewünschte Datenbank exakt zu überwachen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)   
  [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)   
- [Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor.md)   
+ [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [Erstellen eines Ressourcenpools](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [Ändern der Einstellungen für den Ressourcenpool](../../relational-databases/resource-governor/change-resource-pool-settings.md)   

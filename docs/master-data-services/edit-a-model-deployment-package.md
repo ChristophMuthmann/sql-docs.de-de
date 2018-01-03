@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd4abcfde3f017de3bff746a596f031025dd214e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 160f491061d37b4f7bd871cc97dd01917045918c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="edit-a-model-deployment-package"></a>Bearbeiten eines Modellbereitstellungspakets
   In diesem Thema wird beschrieben, wie ausgewählte Teile eines Modells statt eines ganzen Modells in MDS bereitgestellt werden. Hierzu bearbeiten Sie mit dem Modellpaketeditor ein MDS-Modellpaket.  
@@ -30,10 +30,10 @@ ms.lasthandoff: 11/20/2017
   
  Sie wählen mithilfe des Modellpaketeditors Teile eines Modells in einer Paketdatei, die entweder vom Tool MDSModelDeploy (welches eine Paketdatei erstellt, die Objekte und Daten umfasst) oder dem Modellbereitstellungs-Assistenten (welcher eine Datei erstellt, die nur die Modellstruktur enthält) erstellt wurde, aus. Nachdem Sie das Modell im Paket bearbeitet haben, verwenden Sie das Tool MDSModelDeploy, um Objekte und Daten bereitzustellen, oder den Modellbereitstellungs-Assistent, um nur die Modellstruktur bereitzustellen.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen.  
   
 -   Es muss ein Modellpaket vorhanden sein, das Sie bearbeiten können. Weitere Informationen finden Sie unter [Bereitstellen von Modellen &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md) und [Erstellen eines Modellbereitstellungspakets mithilfe des Assistenten](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md) oder [Erstellen eines Modellbereitstellungspakets mit MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
 7.  Klicken Sie auf **Fertig stellen**.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Bereitstellen eines Modellbereitstellungspakets mithilfe des Assistenten](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   

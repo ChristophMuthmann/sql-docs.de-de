@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f4c2bb5ecc63c0168989e6ae23c0d85d5a22dea3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cb251e8c5305d6ee4acc8cfaff61ee1f9d01864f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Konfigurieren der erweiterten Optionen für die verwaltete Sicherung von SQL Server zu Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Das folgende Tutorial beschreibt, wie Sie erweiterte Optionen für [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] festlegen. Diese Prozeduren sind nur notwendig, wenn Sie die Funktionen benötigen, die sie bieten. Andernfalls können Sie [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] aktivieren und sich auf das Standardverhalten verlassen.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  **Ein Sicherungszertifikat oder einen asymmetrischen Schlüssel erstellen:** Sie können ein Zertifikat oder einen asymmetrischen Schlüssel mit der Verschlüsselung verwenden. Im folgenden Beispiel wird ein Sicherungszertifikat für die Verschlüsselung erstellt.  
   
-    ```tsql  
+    ```sql  
     USE Master;  
     GO  
        CREATE CERTIFICATE MyTestDBBackupEncryptCert  
@@ -115,10 +115,10 @@ ms.lasthandoff: 11/17/2017
   
     ```  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
  Nach dem Konfigurieren der erweiterten Optionen und der benutzerdefinierten Zeitpläne müssen Sie [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] auf der Zieldatenbank oder der SQL Server-Instanz aktivieren. Weitere Informationen finden Sie unter [Aktivieren der verwalteten SQL Server-Sicherung in Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server Managed Backup für Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

@@ -28,11 +28,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ac501920047afb4d007c126fb36ac2215162bafc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 01cb38024cef71a6a19c9b79ca036270dc46a6ab
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="logging-in-to-sql-server"></a>Anmelden an SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Sie können sich mithilfe eines beliebigen grafischen Administrationstools oder von der Eingabeaufforderung aus bei einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anmelden.  
@@ -77,13 +77,13 @@ ms.lasthandoff: 11/20/2017
 ## <a name="verifying-your-connection-protocol"></a>Überprüfen Ihres Verbindungsprotokolls  
  Bei einer Verbindung mit [!INCLUDE[ssDE](../../includes/ssde-md.md)]gibt die folgende Abfrage das für die aktuelle Verbindung verwendete Protokoll sowie die Authentifizierungsmethode (NTLM oder Kerberos) zurück und gibt an, ob es sich um eine verschlüsselte Verbindung handelt:  
   
-```tsql  
+```sql  
 SELECT net_transport, auth_scheme, encrypt_option   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  
 ```  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  [Anmelden an einer Instanz von SQL Server &#40;Befehlszeile&#41;](../../database-engine/configure-windows/log-in-to-an-instance-of-sql-server-command-prompt.md)  
   
  Die folgenden Ressourcen können beim Beheben von Verbindungsproblemen hilfreich sein:  

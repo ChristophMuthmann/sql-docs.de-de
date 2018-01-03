@@ -3,9 +3,9 @@ title: Navigieren in SQL Server PowerShell-Pfaden | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4caf4b8db104a553904213319d58fb4ea558d40a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 17bc67249ae7df8e637fc3a2314db51f4ee473c3
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Navigieren in SQL Server PowerShell-Pfaden
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Der [!INCLUDE[ssDE](../../includes/ssde-md.md)]-PowerShell-Anbieter macht den Satz von Objekten in einer Instanz von SQL Server in einer Struktur verfügbar, die einem Dateipfad ähnelt. Sie können im Anbieterpfad mithilfe von Windows PowerShell-Cmdlets navigieren und benutzerdefinierte Laufwerke erstellen, um den Pfad zu kürzen, den Sie eingeben müssen.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/17/2017
   
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anbieter implementiert eine Teilmenge der Anbieter-Cmdlets, wie in der folgenden Tabelle aufgeführt.  
   
-|Cmdlet|Kanonischer Alias|Cmd-Alias|UNIX-Shell-Alias|Beschreibung|  
+|Cmdlet|Kanonischer Alias|Cmd-Alias|UNIX-Shell-Alias|Description|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|Ruft den aktuellen Knoten ab.|  
 |**Set-Location**|**sl**|**cd, chdir**|**cd, chdir**|Ändert den aktuellen Knoten.|  
@@ -135,7 +135,7 @@ New-PSDrive -Name AWDB -Root SQLSERVER:\SQL\localhost\DEFAULT\Databases\Adventur
 Set-Location AWDB:\Tables\Purchasing.Vendor  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server PowerShell-Anbieter](../../relational-databases/scripting/sql-server-powershell-provider.md)   
  [Verwenden von SQL Server PowerShell-Pfaden](../../relational-databases/scripting/work-with-sql-server-powershell-paths.md)   
  [Konvertieren von URNs in SQL Server-Anbieterpfade](../../relational-databases/scripting/convert-urns-to-sql-server-provider-paths.md)   

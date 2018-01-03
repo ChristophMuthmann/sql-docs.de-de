@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 06fa7924c167236056961396e9ae8f811f867be9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 24549110df950d32ef6a1757d7adc58e1bccc1ca
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="cross-database-queries"></a>Datenbankübergreifende Abfragen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ Dieses Beispiel zeigt eine Methode zum Übertragen von Daten aus einer Datenbank
 
 1. Erstellen Sie Testobjekte.  Führen Sie das folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aus.  
 
-    ```tsql
+    ```sql
 
     USE master;
     GO
@@ -87,7 +87,7 @@ Dieses Beispiel zeigt eine Methode zum Übertragen von Daten aus einer Datenbank
 
 2.  Versuchen Sie eine datenbankübergreifende Abfrage. Führen Sie das folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aus.
   
-    ```tsql  
+    ```sql  
     INSERT [DestinationDatabase].[dbo].[DestTable_InMem]
     SELECT * FROM [SourceDatabase].[dbo].[SourceTable]
     ```  
@@ -98,7 +98,7 @@ Dieses Beispiel zeigt eine Methode zum Übertragen von Daten aus einer Datenbank
 
 3.  Erstellen Sie einen speicheroptimierten Tabellentyp.  Führen Sie das folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aus.
 
-    ```tsql
+    ```sql
     USE DestinationDatabase;
     GO
     
@@ -114,7 +114,7 @@ Dieses Beispiel zeigt eine Methode zum Übertragen von Daten aus einer Datenbank
     ```
 
 4.  Versuchen Sie erneut die datenbankübergreifende Abfrage.  Dieses Mal werden die Daten zunächst in eine speicheroptimierte Tabellenvariable übertragen.  Dann werden die Daten aus der Tabellenvariablen in die speicheroptimierte Tabelle übertragen.
-    ```tsql
+    ```sql
     -- Declare table variable utilizing the newly created type - MemoryType
     DECLARE @InMem dbo.MemoryType;
     
@@ -126,7 +126,7 @@ Dieses Beispiel zeigt eine Methode zum Übertragen von Daten aus einer Datenbank
     GO 
     ```
    
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Migrieren zu In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 503814b6f9ade3623a4586b97ae09434f78c0db4
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: 1e764d14059dbb4015c213fc9f35e75f529d4b10
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="memory-management-architecture-guide"></a>Handbuch zur Architektur der Speicherverwaltung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -93,10 +93,10 @@ In der folgenden Tabelle ist aufgeführt, ob ein bestimmter Typ von Speicherbele
 |Typ der Speicherbelegung| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| Seit [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
 |Einzelseitenbelegungen|ja|Ja, in Seitenbelegungen beliebiger Größe konsolidiert|
-|Mehrseitenbelegungen|Nein|Ja, in Seitenbelegungen beliebiger Größe konsolidiert|
-|CLR-Belegungen|Nein|ja|
-|Threadstapel-Arbeitsspeicher|Nein|Nein|
-|Direkte Belegungen von Windows|Nein|Nein|
+|Mehrseitenbelegungen|nein|Ja, in Seitenbelegungen beliebiger Größe konsolidiert|
+|CLR-Belegungen|nein|ja|
+|Threadstapel-Arbeitsspeicher|nein|nein|
+|Direkte Belegungen von Windows|nein|nein|
 
 Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird möglicherweise mehr Arbeitsspeicher als der in der Einstellung „Max. Serverarbeitsspeicher“ angegebene Wert zugewiesen. Dieses Verhalten kann eintreten, wenn der Wert von ***Serverspeicher gesamt (KB)*** bereits die Einstellung ***Zielserverspeicher (KB)*** erreicht hat (die als maximaler Serverarbeitsspeicher angegeben ist). Wenn nicht ausreichend zusammenhängender freier Arbeitsspeicher vorhanden ist, um die Anforderung von Mehrseiten-Speicheranforderungen (mehr als 8 KB) zu bedienen, da der Arbeitsspeicher fragmentiert ist, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine Zusage über den Grenzwert hinaus vornehmen, statt die Arbeitsspeicheranforderung zurückzuweisen. 
 
@@ -120,7 +120,7 @@ Der folgenden Tabelle können Sie entnehmen, ob ein bestimmter Typ Speicherbeleg
 
 |Typ der Speicherbelegung| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| Seit [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
-|Einzelseitenbelegungen|Nein|Nein, in Seitenbelegungen beliebiger Größe konsolidiert|
+|Einzelseitenbelegungen|nein|Nein, in Seitenbelegungen beliebiger Größe konsolidiert|
 |Mehrseitenbelegungen|ja|Nein, in Seitenbelegungen beliebiger Größe konsolidiert|
 |CLR-Belegungen|ja|ja|
 |Threadstapel-Arbeitsspeicher|ja|ja|
@@ -138,7 +138,7 @@ Bei dynamischer Verwendung des Arbeitsspeichers von [!INCLUDE[ssNoVersion](../in
 
 Die folgende Abfrage gibt Informationen über den aktuell belegten Arbeitsspeicher zurück:  
   
-```t-sql  
+```sql  
 SELECT 
   physical_memory_in_use_kb/1024 AS sql_physical_memory_in_use_MB, 
     large_page_allocations_kb/1024 AS sql_large_page_allocations_MB, 
@@ -281,7 +281,7 @@ Der Prüfsummenschutz, der in [!INCLUDE[ssVersion2005](../includes/ssversion2005
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  ist NUMA-fähig (Non-Uniform Memory Access) und liefert hervorragende Leistungen auf NUMA-Hardware, ohne dass eine besondere Konfiguration notwendig wäre. Mit immer schnelleren Prozessoren und einer wachsenden Anzahl von Prozessoren wird es zunehmend schwieriger, die Speicherlatenzzeit zu verringern, die für die Verwendung dieser zusätzlichen Verarbeitungsleistung erforderlich ist. Für die Umgehung dieser Schwierigkeit stellen Hardwarehersteller große L3-Caches bereit; dies ist jedoch nur eine eingeschränkte Lösung. Die NUMA-Architektur bietet eine skalierbare Lösung für dieses Problem. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kann die Vorteile NUMA-basierter Computer nutzen, ohne dass Anwendungsänderungen erforderlich sind. Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren von SQL Server für die Verwendung von Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 [Serverkonfigurationsoptionen für den Serverarbeitsspeicher](../database-engine/configure-windows/server-memory-server-configuration-options.md)   
 [Lesen von Seiten](../relational-databases/reading-pages.md)   
 [Schreiben von Seiten](../relational-databases/writing-pages.md)   

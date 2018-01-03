@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b01af634ed2681c49bdb444cd4a468b45be3ab03
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d318e818800a2f1cf8591ba6f35f31d55b0cd564
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Verwalten und Überwachen der semantischen Suche
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] In diesem Thema werden der Prozess der semantischen Indizierung sowie die Tasks im Zusammenhang mit der Verwaltung und Überwachung der Indizes beschrieben.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
  Die erste Phase der Indizierung umfasst die Auffüllung des Volltextschlüsselwortindexes und des semantischen Schlüsselausdruckindexes sowie die Extraktion der Dokumentähnlichkeitsdaten.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -62,7 +62,7 @@ GO
   
  Die logische Größe wird in Anzahl von Indexseiten angezeigt.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -73,7 +73,7 @@ GO
 ### <a name="what-is-the-total-size-of-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>Wie groß sind die Volltext- und die semantischen Indizes für einen Volltextkatalog insgesamt?  
  Fragen Sie die Eigenschaft **IndexSize** der Metadatenfunktion [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) ab.  
   
-```tsql  
+```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')  
 GO  
 ```  
@@ -81,7 +81,7 @@ GO
 ### <a name="how-many-items-are-indexed-in-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>Wie viele Elemente werden in den Volltext- und den semantischen Indizes für einen Volltextkatalog indiziert?  
  Fragen Sie die Eigenschaft **ItemCount** der Metadatenfunktion [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) ab.  
   
-```tsql  
+```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')  
 GO  
 ```  
@@ -109,7 +109,7 @@ GO
   
  Wenn die semantische Indizierung deaktiviert und angehalten wurde, funktionieren Abfragen über semantische Daten weiterhin und geben zuvor indizierte Daten zurück. Dieses Verhalten ist nicht konsistent mit dem Verhalten der Volltextsuche.  
   
-```tsql  
+```sql  
 -- To disable semantic indexing on a table  
 USE database_name  
 GO  

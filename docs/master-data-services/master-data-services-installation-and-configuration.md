@@ -5,7 +5,7 @@ ms.date: 07/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1d909039eb43c65358515cd4c3891b20a9a2b7e4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c4e94eae55ba86f5aa2cd548790f583c281de8f8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services-Installation und -Konfiguration
   Dieser Artikel behandelt die Installation von [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] auf einem Computer mit Windows Server 2012 R2, die Einrichtung der MDS-Datenbank und -Website und die Bereitstellung der Beispielmodelle und -daten. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) ermöglicht Ihrer Organisation, eine vertrauenswürdige Version der Daten zu verwalten.   
@@ -285,9 +285,9 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
  Einen Überblick darüber, wie Sie ein Modell und Entitäten verwenden, um eine Struktur für Ihre Daten in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] zu erstellen, finden Sie unter [Übersicht über Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md).  
   
 ## <a name="did-this-article-help-you-were-listening"></a>Fanden Sie diesen Artikel nützlich? Wir hören Ihnen zu  
- Welche Informationen suchen Sie, und haben Sie sie gefunden? Wir nehmen uns Ihr Feedback zu Herzen, um unsere Inhalte zu verbessern. Bitte senden Sie Ihre Kommentare an [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Get%20Started%20with%20Master%20Data%20Services)  
+ Welche Informationen suchen Sie, und haben Sie sie gefunden? Wir nehmen uns Ihr Feedback zu Herzen, um unsere Inhalte zu verbessern. Senden Sie Ihre Kommentare an [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Get%20Started%20with%20Master%20Data%20Services)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Master Data Services-Datenbank](../master-data-services/master-data-services-database.md)   
  [Master Data Manager-Webanwendung](../master-data-services/master-data-manager-web-application.md)   
  [Datenbankkonfiguration &#40;Seite im Konfigurations-Manager für Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   

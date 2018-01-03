@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a122a5b17171241742d9f573fa8840360957ba12
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b524575ffd1f2c10451f2aabcbf9e675f42859b7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="get-information-about-dml-triggers"></a>Abrufen von Informationen zu DML-Triggern
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie Sie Informationen zu DML-Triggern in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] abrufen. Zu diesen Informationen können die Triggertypen für eine Tabelle, der Name eines Triggers, sein Besitzer und das Erstellungs- oder Änderungsdatum zählen. Wenn der Trigger bei der Erstellung nicht verschlüsselt wurde, erhalten Sie die Definition des Triggers. Die Definition gibt Aufschluss darüber, wie sich ein Trigger auf die Tabelle auswirkt, für die er definiert ist. Zudem können Sie die Objekte feststellen, die von einem bestimmten Trigger verwendet werden. Mithilfe dieser Informationen können Sie die Objekte identifizieren, deren Änderung oder Löschung in der Datenbank sich auf den Trigger auswirkt.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Abrufen von Informationen zu DML-Triggern mit:**  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Security"></a> Sicherheit  
   
@@ -54,12 +54,12 @@ ms.lasthandoff: 11/17/2017
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
  OBJECT_DEFINITION, OBJECTPROPERTY, **sp_helptext**  
- Erfordert die Mitgliedschaft in der **public** -Rolle. Die Definition von Benutzerobjekten ist für den Objektbesitzer sichtbar oder für Berechtigte, die über eine der folgenden Berechtigungen verfügen: ALTER, CONTROL, TAKE OWNERSHIP oder VIEW DEFINITION. Mitglieder der festen Datenbankrollen **db_owner**, **db_ddladmin**und **db_securityadmin** verfügen implizit über diese Berechtigungen.  
+ Erfordert die Mitgliedschaft in der **public** -Rolle. Die Definition von Benutzerobjekten ist für den Objektbesitzer sichtbar oder für Berechtigte, die über eine der folgenden Berechtigungen verfügen: ALTER, CONTROL, TAKE OWNERSHIP oder VIEW DEFINITION. Über diese Berechtigungen verfügen implizit Mitglieder der festen Datenbankrollen **db_owner**, **db_ddladmin**und **db_securityadmin** .  
   
  **sys.sql_expression_dependencies**  
  Erfordert die Berechtigung VIEW DEFINITION für die Datenbank und die Berechtigung SELECT für **sys.sql_expression_dependencies** für die Datenbank. Standardmäßig wird die SELECT-Berechtigung nur Mitgliedern der festen Datenbankrolle **db_owner** gewährt. Wenn einem anderen Benutzer die SELECT-Berechtigung und die VIEW DEFINITION-Berechtigung erteilt werden, kann dieser Berechtigte alle Abhängigkeiten in der Datenbank anzeigen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-view-the-definition-of-a-dml-trigger"></a>So zeigen Sie die Definition eines DML-Triggers an  
   
@@ -95,7 +95,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Kopieren Sie eines der folgenden Beispiele, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In den Beispielen wird gezeigt, wie Sie die Definition des `iuPerson` -Triggers anzeigen können.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT definition   
@@ -104,7 +104,7 @@ WHERE object_id = OBJECT_ID(N'Person.iuPerson');
 GO  
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT OBJECT_DEFINITION (OBJECT_ID(N'Person.iuPerson')) AS ObjectDefinition;   
@@ -112,7 +112,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 EXEC sp_helptext 'Person.iuPerson'  
@@ -164,7 +164,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT  name, object_id, schema_id, parent_object_id, type_desc, create_date, modify_date, is_published  
@@ -174,7 +174,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT OBJECTPROPERTY(OBJECT_ID(N'Person.iuPerson'), 'ExecIsInsteadOfTrigger');   
@@ -190,7 +190,7 @@ GO
   
 3.  Kopieren Sie eines der folgenden Beispiele, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In den Beispielen wird gezeigt, wie Sie die Ereignisse anzeigen können, die den `iuPerson` -Trigger auslösen.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT object_id, type, type_desc, is_trigger_event, event_group_type, event_group_type_desc   
@@ -199,7 +199,7 @@ WHERE object_id = OBJECT_ID('Person.iuPerson');
 GO  
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO   
 SELECT object_id, type,is_first, is_last  
@@ -208,7 +208,7 @@ WHERE object_id = OBJECT_ID('Person.iuPerson');
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   

@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -18,11 +18,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 60d930bbdd618e5a99450735bdfe290d8f1a9e59
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 06a7e065187ca920497d411172a67eb8362ba857
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="staging-process-errors-master-data-services"></a>Fehler des Stagingprozesses (Master Data Services)
   Nach Abschluss des Stagingprozesses verfügen alle in den Stagingtabellen verarbeitete Datensätze über einen Werte in der Spalte ErrorCode. Diese Werte sind in der folgenden Tabelle aufgeführt.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/20/2017
 |210047|Das Element kann kein gleichgeordnetes Element von "Nicht verwendet" sein.|Dieser Fehler tritt auf, wenn **RelationshipType** = **2** (gleichgeordnet) und entweder **ParentCode** oder **ChildCode** **Unused**sind. Elemente können nur untergeordnete Elemente des Knotens "Nicht verwendet" sein.|Beziehung|  
 |210048|**ParentCode** und **ChildCode** können nicht identisch sein.|Der **ParentCode** -Wert ist identisch mit dem **ChildCode** -Wert. Diese Werte müssen unterschiedlich sein.|Beziehung|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Anzeigen von Fehlern, die während des Stagings auftreten &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
  [Übersicht: Importieren von Daten aus Tabellen &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   

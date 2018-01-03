@@ -5,7 +5,7 @@ ms.date: 04/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f76478f355ea25c72572ebd52535360697b301cf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cf437e4047e30beb754fac29c4ed2626de594363
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="entities-master-data-services"></a>Entitäten (Master Data Services)
   Entitäten sind Objekte, die in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Modellen enthalten sind. Jede Entität enthält Elemente, bei denen es sich um die Zeilen von Masterdaten handelt, die Sie verwalten.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Dieses Beispiel basiert auf der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Benutzeroberfläche. Die hierarchische Baumstruktur zeigt Beziehungen zwischen Entitäten und domänenbasierten Attributen an. Ihr Zweck besteht darin, die Beziehungen und nicht den Wichtigkeitsgrad darzustellen.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  

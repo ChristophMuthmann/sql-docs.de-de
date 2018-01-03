@@ -5,7 +5,7 @@ ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5f37057354b9b4565b4c455f14b46abb846c23a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 939ba7535afa7c877a151e348d8d0903e1572f25
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Datenbankupgrade-Assistent (Konfigurations-Manager für Master Data Services)
   Mit dem **Datenbankupgrade-Assistenten** können Sie [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbanken aktualisieren.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="progress-and-finish"></a>Status und Fertig stellen  
  Zeigt den Status des Upgradevorgangs an. Wenn die Datenbank aktualisiert wurde, klicken Sie auf den Link zur Protokolldatei, um ausführliche Informationen zum Upgrade anzuzeigen, oder aber auf **Fertig stellen** , um den Datenbank-Assistenten zu schließen und zur Seite **Datenbanken** zurückzukehren. Die aktualisierte Datenbank ist ausgewählt, und Sie können ihre Systemeinstellungen anzeigen und ändern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenbankkonfiguration &#40;Seite im Konfigurations-Manager für Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [Master Data Services – Installation und Konfiguration](../master-data-services/master-data-services-installation-and-configuration.md)  
  [Aktualisieren von Master Data Services](../database-engine/install-windows/upgrade-master-data-services.md)  

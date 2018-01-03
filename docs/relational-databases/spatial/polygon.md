@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2b8881f34970d44bdf99a9e3e547eeefb8c21d2b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e65cb03e1efa9b1c83f9cacad4bd8edba231484e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="polygon"></a>Polygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Ein **Polygon** ist eine zweidimensionale Fläche, die als Sequenz von Punkten gespeichert wird, die einen äußeren Begrenzungsring und null (0) oder mehrere innere Ringe definieren.  
@@ -142,7 +142,7 @@ MULTIPOLYGON (((2 0, 3 1, 2 2, 1.5 1.5, 2 1, 1.5 0.5, 2 0)), ((1 0, 1.5 0.5, 1 1
   
  Es folgt ein weiteres Beispiel zum Konvertieren einer ungültigen Instanz in eine gültige geometry-Instanz. Im folgenden Beispiel wurde die `Polygon` -Instanz mit drei Punkten erstellt, die identisch sind:  
   
-```tsql  
+```sql  
 DECLARE @g geometry  
 SET @g = geometry::Parse('POLYGON((1 3, 1 3, 1 3, 1 3))');  
 SET @g = @g.MakeValid();  
@@ -151,7 +151,7 @@ SELECT @g.ToString()
   
  Die oben zurückgegebene geometry-Instanz ist ein `Point(1 3)`.  Wenn das angegebene `Polygon` gleich `POLYGON((1 3, 1 5, 1 3, 1 3))` ist, gibt `MakeValid()` `LINESTRING(1 3, 1 5)`zurück.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [STArea &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   
  [STExteriorRing &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stexteriorring-geometry-data-type.md)   
  [STNumInteriorRing &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stnuminteriorring-geometry-data-type.md)   

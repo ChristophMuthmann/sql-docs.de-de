@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1cfefe5ecccd92c1db4c10120c206ed0bb4255d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9ec9e75c2d54ee40946ed70d0ab293bb8881f28b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>Suchen von Schlüsselausdrücken in Dokumenten mit der semantischen Suche
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Beschreibt, wie Schlüsselausdrücke in Dokumenten oder Textspalten gesucht werden, die für die statistische semantische Indizierung konfiguriert sind.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="HowToTopPhrases"></a> Beispiel 1: Suchen der wichtigsten Schlüsselausdrücke in einem bestimmten Dokument  
  Im folgenden Beispiel werden die obersten 10 Schlüsselausdrücke aus dem von der @DocumentId-Variable in der Spalte "Dokument" der Production.Document-Tabelle der AdventureWorks-Beispieldatenbank angegebenen Dokument abgerufen. Die @DocumentId-Variable stellt einen Wert aus der Schlüsselspalte des Volltextindexes dar.  
   
-```tsql  
+```sql  
 SELECT TOP(10) KEYP_TBL.keyphrase  
 FROM SEMANTICKEYPHRASETABLE  
     (  
@@ -60,7 +60,7 @@ GO
 ###  <a name="HowToTopDocuments"></a> Example 2: Find the top documents that contain a specific key phrase  
  Im folgenden Beispiel werden die obersten 25 Dokumente mit dem Schlüsselausdruck "Klammer" in der Spalte "Dokument" der Production.Document-Tabelle der AdventureWorks-Beispieldatenbank abgerufen.  
   
-```tsql  
+```sql  
 SELECT TOP (25) DOC_TBL.DocumentID, DOC_TBL.DocumentSummary  
 FROM Production.Document AS DOC_TBL  
     INNER JOIN SEMANTICKEYPHRASETABLE  

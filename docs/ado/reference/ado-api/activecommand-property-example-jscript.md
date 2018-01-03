@@ -3,7 +3,7 @@ title: "Beispiel für ActiveCommand-Eigenschaft (JScript) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 42f17064d474d53090dd1dcf4edb1759a2116aaf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7e5cc3fb72f84d5f44bc74521f5d95e8660ae387
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activecommand-property-example-jscript"></a>Beispiel für ActiveCommand-Eigenschaft (JScript)
 Dieses Beispiel zeigt die [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) Eigenschaft. Ausschneiden und fügen Sie den folgenden Code in Editor oder einem anderen Texteditor und speichern Sie diese als **ActiveCommandJS.asp**.  

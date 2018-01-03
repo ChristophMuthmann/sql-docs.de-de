@@ -3,7 +3,7 @@ title: "Argumente für externe Tools | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -20,13 +20,13 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7c09b8aa81f0846305b0bd1f33a89a269af64b45
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 07a73ebeb158d520db011f979bfd2e21c543c22f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="arguments-for-external-tools"></a>Argumente für externe Tools
+# <a name="arguments-for-external-tools"></a>Arguments for External Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Argumente sind Variablen, für die die SQL Server Management Studio-Umgebung Werte bereitstellt, wenn ein externes Tool aus dem Menü **Extras** gestartet wird. Externe Tools, z. B. Editor, lassen sich mit dem Dialogfeld **Externe Tools** zum Menü **Extras** hinzufügen.  
   
 In der folgenden Tabelle sind die Argumente für externe Tools aufgeführt.  
@@ -51,7 +51,7 @@ In der folgenden Tabelle sind die Argumente für externe Tools aufgeführt.
   
 * Die aktuelle Zeile oder Spalte bzw. der aktuelle Text hängt von der Position des Cursors im Text-Editor ab, wie in der Statusleiste dargestellt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Externe Tools (Dialogfeld)](../ssms/external-tools-dialog-box.md)  
 [Allgemeine Benutzeroberflächenelemente](../ssms/general-user-interface-elements.md)  
   

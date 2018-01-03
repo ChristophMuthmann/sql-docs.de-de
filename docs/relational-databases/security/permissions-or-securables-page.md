@@ -3,7 +3,7 @@ title: "Seite „Berechtigungen“ oder „Sicherungsfähige Elemente“ | Micro
 ms.custom: 
 ms.date: 01/07/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: security
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bcdb1f8d446c5cadf94718f2ae7f59c9c0624caf
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6dc65e94e95e978d47e9cb454337a52d0a6cc622
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="permissions-or-securables-page"></a>Seite 'Berechtigungen' oder 'Sicherungsfähige Elemente'
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Auf der Seite **Berechtigungen** oder **Sicherungsfähige Elemente** können die Berechtigungen für sicherungsfähige Elemente angezeigt oder festgelegt werden. Diese Seite kann von vielen Orten aus geöffnet werden. Der Inhalt der Seite kann sich geringfügig ändern, je nachdem, wie die Seite geöffnet wird und was sie enthält. Das obere Raster der Seite ist u. U. aufgefüllt, wenn die Seite geöffnet wird, oder es ist leer. Klicken Sie auf **Suchen**, um dem oberen Raster Elemente hinzuzufügen. Wählen Sie im oberen Raster ein Element aus, und legen Sie dann auf der Registerkarte **Explizit** die entsprechenden Berechtigungen fest. Verwenden Sie zum Anzeigen von aggregierten Berechtigungen die Registerkarte **Effektiv** .  
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/21/2017
  **Column**  
  Die Namen der Spalten, auf die sich die Berechtigung auswirkt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Rollen auf Datenbankebene](../../relational-databases/security/authentication-access/database-level-roles.md)   
  [Sicherheitscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   

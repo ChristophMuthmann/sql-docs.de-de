@@ -3,7 +3,7 @@ title: Verbinden mit einem SQL-Server oder einer Azure SQL-Datenbank | Microsoft
 ms.custom: 
 ms.date: 08/25/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9f1f7bc813e3b22007c9a7ef58ce373e57fbe0c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 023641a1c7f298af6a946e3d9746bc8fe29145a4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Verbinden mit einem SQL-Server oder einer Azure SQL-Datenbank
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Um mit Servern und Datenbanken arbeiten zu können, müssen Sie zuerst eine Verbindung mit dem Server herstellen. Eine Verbindung zu mehreren Servern gleichzeitig ist jedoch nicht möglich.
@@ -52,11 +52,11 @@ ms.lasthandoff: 12/05/2017
 
    ![Verbunden](../media/connect-to-server/connected.png)
 
-## <a name="next-steps"></a>Nächste Schritte
+## <a name="next-steps"></a>Next Steps
 
 [Entwerfen, Erstellen und Aktualisieren von Tabellen](../visual-db-tools/design-tables-visual-database-tools.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 
 [SQL Server Management Studio (SSMS)](../sql-server-management-studio-ssms.md)  
 [Herunterladen von SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)

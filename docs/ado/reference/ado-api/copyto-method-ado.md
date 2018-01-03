@@ -3,7 +3,7 @@ title: CopyTo-Methode (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3e9f5d99069108e452c4ba4038d166ae3a59ef20
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c59a27806939557b170ae8fc7d3f842afd21f83
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="copyto-method-ado"></a>CopyTo-Methode (ADO)
 Kopiert die angegebene Anzahl von Zeichen oder Bytes (je nach [Typ](../../../ado/reference/ado-api/type-property-ado-stream.md)) in der [Stream](../../../ado/reference/ado-api/stream-object-ado.md) in eine andere **Stream** Objekt.  

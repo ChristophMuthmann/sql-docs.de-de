@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 71522bf83637a5f783f14c0a13c2e129b5a0afdd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 60c56174d1cbfeb11f56e644eac452be2f7fcf2f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>Lektion 4: Hinzufügen der Fehlerflussumleitung mit SSIS
 Um mögliche Fehler im Transformationsprozess zu behandeln, können Sie mithilfe von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] auf der Grundlage von Komponenten oder Spalten entscheiden, wie Daten zu handhaben sind, die nicht transformiert werden können. Sie können einen Fehler in bestimmten Spalten ignorieren, die gesamte fehlgeschlagene Zeile umleiten, oder die gesamte Komponente als fehlerhaft behandeln. Standardmäßig sind alle Komponenten in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] so konfiguriert, dass sie bei Fehlern fehlschlagen. Das Behandeln einer Komponente als fehlerhaft verursacht wiederum die Behandlung des Pakets als fehlerhaft, und die gesamte nachfolgende Verarbeitung wird beendet.  

@@ -3,7 +3,7 @@ title: "Dialogfeld 'Räumliche Indizes' (Visual Database Tools) | Microsoft-Doku
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,18 +18,18 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: efb3e7457ce2406fa52801221b4c9a9d937fc7dd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7a3a67a16ceef1e85a988b762d7f0cecb4e452d2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Dialogfeld 'Räumliche Indizes' (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Verwenden Sie das Dialogfeld **Räumliche Indizes**, um Indizes für Spalten des Datentyps **geometry** oder **geography** (*räumliche Spalten*) zu erstellen, denn diese können nicht mithilfe des Dialogfelds **Index/Schlüssel** indiziert werden. Jede räumliche Spalte kann mehr als einen räumlichen Index aufweisen, jedoch müssen sie einzeln erstellt werden.  
   
 Weitere Informationen über die Einschränkungen bei der Erstellung von räumlichen Indizes finden Sie unter [Übersicht über räumliche Indizes](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Ausgewählter räumlicher Index**  
 Listet vorhandene räumliche Indizes auf. Wählen Sie einen Index aus, um dessen Eigenschaften anzuzeigen. Wenn die Liste leer ist, wurden bisher keine räumlichen Indizes für die Tabelle definiert.  
   
@@ -120,6 +120,6 @@ Gibt an, ob beim Erstellen des Index neue Statistiken berechnet werden sollen. D
 **Zeilensperren sind zulässig**  
 Gibt an, ob das Sperren auf Zeilenebene für diesen Index zugelassen ist. Das Zulassen oder Untersagen von Sperren auf Zeilenebene wirkt sich auf die Datenbankleistung aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Übersicht über räumliche Indizes](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293)  
   

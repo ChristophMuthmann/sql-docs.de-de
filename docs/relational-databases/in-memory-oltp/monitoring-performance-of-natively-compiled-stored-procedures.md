@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b49994a3167ad8639b537279085e16ef2c7ccb1a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4d42b86732e2f752646ef7d71d61f037b8e66407
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Überwachen der Leistung von systemintern kompilierten gespeicherten Prozeduren
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] In diesem Thema wird erläutert, wie Sie die Leistung von nativ kompilierten gespeicherten Prozeduren überwachen können.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/17/2017
   
  Neben**line_number**kann auch **object_id** im erweiterten Ereignis verwendet werden, um die Abfrage zu untersuchen. Mithilfe der folgenden Abfrage kann die Prozedurdefinition abgerufen werden. Anhand der Zeilennummer wird die Abfrage innerhalb der Definition identifiziert:  
   
-```tsql  
+```sql  
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
@@ -55,7 +55,7 @@ select [definition] from sys.sql_modules where object_id=object_id
   
  Mit der folgenden Abfrage werden nach der Statistiksammlung die Prozedurnamen und Ausführungsstatistiken für systemintern kompilierte gespeicherte Prozeduren in der aktuellen Datenbank zurückgegeben:  
   
-```tsql  
+```sql  
 select object_id,  
        object_name(object_id) as 'object name',  
        cached_time,  
@@ -77,7 +77,7 @@ order by total_worker_time desc
   
  Mit der folgenden Abfrage werden der Abfragetext und Ausführungsstatistiken für alle Abfragen in systemintern kompilierten gespeicherten Prozeduren der aktuellen Datenbank zurückgegeben, für die statistische Daten gesammelt wurden. Die Ergebnisse sind nach total_worker_time in absteigender Reihenfolge sortiert:  
   
-```tsql  
+```sql  
 select st.objectid,   
        object_name(st.objectid) as 'object name',   
        SUBSTRING(st.text, (qs.statement_start_offset/2) + 1, ((qs.statement_end_offset-qs.statement_start_offset)/2) + 1) as 'query text',   
@@ -106,7 +106,7 @@ order by qs.total_worker_time desc
   
  Um Showplan XML abzurufen, führen Sie folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code aus:  
   
-```tsql  
+```sql  
 SET SHOWPLAN_XML ON  
 GO  
 EXEC my_proc   
@@ -119,7 +119,7 @@ GO
   
  Im geschätzten Ausführungsplan für systemintern kompilierte gespeicherte Prozeduren werden die Abfrageoperatoren und Ausdrücke für die Abfragen der Prozedur angezeigt. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] unterstützt nicht alle SHOWPLAN_XML-Attribute für systemintern kompilierte gespeicherte Prozeduren. Attribute in Zusammenhang mit Kostenberechnungen des Abfrageoptimierers sind nicht Teil der SHOWPLAN_XML für die Prozedur.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Systemintern kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

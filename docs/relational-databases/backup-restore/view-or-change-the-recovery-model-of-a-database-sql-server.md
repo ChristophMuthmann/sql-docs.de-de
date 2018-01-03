@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: aa1faff7cf54cd227e7429fbdfda514ea177d204
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 835fd806c0292da07f82f02d6dae21c720f1bf00
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Anzeigen oder Ändern des Wiederherstellungsmodells einer Datenbank (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="Security"></a> Erforderliche Berechtigungen  
    Erfordert die ALTER-Berechtigung für die Datenbank.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-view-or-change-the-recovery-model"></a>So zeigen Sie das Wiederherstellungsmodell an oder ändern es  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird gezeigt, wie die [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) -Katalogsicht abgefragt werden muss, um mehr über das Wiederherstellungsmodell der **model** -Datenbank zu erfahren.  
   
-```tsql  
+```sql  
 SELECT name, recovery_model_desc  
    FROM sys.databases  
       WHERE name = 'model' ;  
@@ -103,7 +103,7 @@ GO
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird gezeigt, wie Sie das Wiederherstellungsmodell in der `model` -Datenbank in `FULL` mithilfe der `SET RECOVERY` -Option der [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) -Anweisung ändern können.  
   
-```tsql  
+```sql  
 USE master ;  
 ALTER DATABASE model SET RECOVERY FULL ;  
 ```  
@@ -148,7 +148,7 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 -   [Datenbankwartungspläne](http://msdn.microsoft.com/library/ms187658.aspx) (in der [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] -Onlinedokumentation)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Wiederherstellungsmodelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

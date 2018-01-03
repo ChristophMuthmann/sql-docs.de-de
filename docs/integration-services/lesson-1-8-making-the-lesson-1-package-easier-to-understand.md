@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ac8c3fa9e34de95c826c6c89a0356ac4797bd638
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7e057c1291ec3b606341c9be26a950b93ab24709
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-8---making-the-lesson-1-package-easier-to-understand"></a>Lektion 1-8: Vereinfachen des Layouts des Pakets aus Lektion 1
 Nachdem Sie nun die Konfiguration des Lektion 1-Pakets abgeschlossen haben, bietet es sich an, den Inhalt des Paketlayouts wieder in eine klare Anordnung zu bringen. Wenn die Formen in den Ablaufsteuerungs- und Datenflusslayouts beliebig groß oder nicht ausgerichtet oder gruppiert sind, lässt sich die Funktionsweise des Pakets möglicherweise schwerer nachvollziehen.  
@@ -57,7 +57,7 @@ In dieser Aufgabe verwenden Sie die Formatierungsfunktionen von [!INCLUDE[ssNoVe
   
     Wenn Sie keinen Text in das Anmerkungenfeld eingeben, ist es nicht mehr vorhanden, sobald Sie außerhalb des Felds klicken.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
 [Schritt 9: Testen des Lektion 1-Lernprogrammpakets](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   

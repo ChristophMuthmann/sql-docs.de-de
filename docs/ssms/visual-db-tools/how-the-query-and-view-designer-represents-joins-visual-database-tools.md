@@ -3,7 +3,7 @@ title: Darstellungsweise von Joins im Abfrage- und Sicht-Designer (Visual Databa
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d112b8edd88c1d5b34f63206dc3c69a1e2e89652
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 38a655b6bd55d27c49ee88affeb16db66089b87e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Darstellungsweise von Joins im Abfrage- und Sicht-Designer (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Bei verknüpften Tabellen stellt der [Abfrage- und Sicht-Designer](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) die Verknüpfung im [Diagrammbereich](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) grafisch und im [SQL-Bereich](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) mithilfe von SQL-Syntax dar.  
@@ -43,7 +43,7 @@ Wenn die verknüpften Datenspalten nicht angezeigt werden (z. B., weil das die T
   
 Die Form des Symbols in der Mitte der Joinlinie zeigt an, wie die Tabellen oder Objekte mit Tabellenstruktur verknüpft sind. Wenn die Joinklausel einen anderen Operator als „gleich“ (=) verwendet, wird der Operator im Symbol der Joinlinie angezeigt. In der folgenden Tabelle werden die in der Joinlinie angezeigten Symbole aufgelistet.  
   
-|**Joinliniensymbol**|**Description**|  
+|**Joinliniensymbol**|**Beschreibung**|  
 |----------------------|-------------------|  
 |![Symbol für Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbih.gif "Visual Database Tools icon")|Innerer Join (erstellt mit einem Gleichheitszeichen).|  
 |![Symbol für Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools icon")|Innerer Join mit dem Operator "größer als".|  
@@ -86,7 +86,7 @@ Folgende Syntaxoptionen werden beim Verknüpfen von Tabellen angewendet:
     WHERE publishers.pub_id = pub_info.pub_id  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Erstellen von Abfragen mit Joins &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
 [Verknüpfen (Dialogfeld) &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md)  
   

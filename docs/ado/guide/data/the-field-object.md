@@ -3,7 +3,7 @@ title: Field-Objekt | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ecd2382d15536a5c2ebd2b2098c89c41c78ba1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0313fdb98c7babc97faa642d7fd71299fe4cf4a3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="the-field-object"></a>Field-Objekt
 Jede **Feld** Objekt entspricht in der Regel an eine Spalte in einer Datenbanktabelle. Allerdings eine **Feld** kann auch einen Zeiger auf einen anderen repräsentieren **Recordset**, einem Kapitel aufgerufen. Ausnahmen, z. B. Kapitelspalten, werden weiter unten in diesem Handbuch behandelt.  

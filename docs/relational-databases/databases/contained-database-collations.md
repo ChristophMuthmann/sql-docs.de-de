@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 514b16de05b03b43f8187f66e06cf6ff9f94209c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 996d73149e364263e0cda1ecd1ffb2aa8b8f14e0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="contained-database-collations"></a>Enthaltene Datenbanksortierungen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Auf die Sortierreihenfolge und die Gleichheitssemantik von Textdaten wirken sich verschiedene Eigenschaften aus, u.a. die Berücksichtigung der Groß- und Kleinschreibung, die Berücksichtigung von Akzenten sowie die verwendete Basissprache. Diese Eigenschaften werden für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch die ausgewählte Sortierung der Daten ausgedrückt. Eine ausführliche Erläuterung zu Sortierungen finden Sie unter [Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md).  
@@ -37,13 +37,13 @@ ms.lasthandoff: 11/17/2017
 ### <a name="example-1"></a>Beispiel 1  
  Wenn Sie z. B. in Peking arbeiten, kann eine chinesische Sortierung verwendet werden:  
   
-```tsql  
+```sql  
 ALTER DATABASE MyDB COLLATE Chinese_Simplified_Pinyin_100_CI_AS;  
 ```  
   
  Wenn nun eine Spalte erstellt wird, ist deren Standardsortierung diese chinesische Sortierung. Gegebenenfalls kann jedoch eine andere Sortierung ausgewählt werden:  
   
-```tsql  
+```sql  
 CREATE TABLE MyTable  
       (mycolumn1 nvarchar,  
       mycolumn2 nvarchar COLLATE Frisian_100_CS_AS);  
@@ -56,7 +56,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```tsql  
+```sql  
 name            collation_name  
 --------------- ----------------------------------  
 mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS  
@@ -68,7 +68,7 @@ mycolumn2       Frisian_100_CS_AS
 ### <a name="example-2"></a>Beispiel 2  
  Betrachten Sie beispielsweise die obige (chinesische) Datenbank, wenn diese in einer Instanz mit der Sortierung **Latin1_General** verwendet wird:  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max)) ;  
@@ -92,7 +92,7 @@ JOIN #T2
   
  Dies kann durch das explizite Sortieren der temporären Tabelle korrigiert werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erleichtert diesen Vorgang etwas, indem das **DATABASE_DEFAULT** -Schlüsselwort für die **COLLATE** -Klausel bereitgestellt wird.  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max) COLLATE DATABASE_DEFAULT);  
@@ -142,7 +142,7 @@ END;
   
  Im zuvor beschriebenen Beispiel für eine temporäre Tabelle ist ersichtlich, dass dieses Sortierverhalten bei den meisten Verwendungen temporärer Tabellen eine explizite **COLLATE** -Klausel überflüssig macht. In einer enthaltenen Datenbank wird dieser Code nun ohne Fehler ausgeführt, selbst wenn sich die Datenbanksortierung und die Instanzsortierung unterscheiden:  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max));  
@@ -283,7 +283,7 @@ GO
 ## <a name="conclusion"></a>Fazit  
  Das Sortierungsverhalten enthaltener Datenbanken unterscheidet sich leicht von dem nicht enthaltener Datenbanken. Dieses Verhalten ist im Allgemeinen vorteilhaft und trägt zu Unabhängigkeit von Instanzen sowie Einfachheit bei. Für einige Benutzer können Probleme auftreten, insbesondere dann, wenn in einer Sitzung sowohl auf enthaltene als auch auf nicht enthaltene Datenbanken zugegriffen wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Eigenständige Datenbanken](../../relational-databases/databases/contained-databases.md)  
   
   

@@ -3,7 +3,7 @@ title: Verschieben eines registrierten Servers bzw. einer registrierte Servergru
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8ac3daddf1a07d6872d4813c99981c8546352d75
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 89f9a409da7eede0af44d58d9d33a1105ec5b0e0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>Verschieben eines registrierten Servers bzw. einer registrierte Servergruppe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In diesem Thema wird beschrieben, wie Sie die Server in „Registrierte Server“ organisieren, indem Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] einen registrierten Server oder Servergruppen verschieben. Servergruppen können registrierte Server oder weitere Servergruppen enthalten. Sowohl Server als auch Servergruppen können von einer Servergruppe in die andere verschoben werden.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  Erweitern Sie im Dialogfeld **Serverregistrierung verschieben** die Liste mit den Servergruppen, klicken Sie auf den Knoten, in dem der Server bzw. die Servergruppe angezeigt werden soll, und klicken Sie dann auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Registrieren von Servern](../../tools/sql-server-management-studio/register-servers.md)   
  [Erstellen oder Bearbeiten einer Servergruppe &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)  
   

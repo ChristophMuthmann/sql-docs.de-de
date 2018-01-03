@@ -3,7 +3,7 @@ title: Verwenden ein Verbindungsobjekt | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 38454d8edc91715f5a3e3d5ee55f045d0e55e581
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f6053e0134a3b9ae866f88aa4ee0742d311c2821
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-a-connection-object"></a>Verwenden ein Verbindungsobjekt
 Vor dem Öffnen einer **Verbindung** -Objekt, müssen Sie bestimmte Informationen über die Datenquelle und die Art der Verbindung definieren. Die meisten dieser Informationen wird aufrechterhalten, indem die *"ConnectionString"* Parameter von der [Open-Methode](../../../ado/reference/ado-api/open-method-ado-connection.md) auf die **Verbindung** -Objekt, oder durch die ["ConnectionString" Eigenschaft](../../../ado/reference/ado-api/connectionstring-property-ado.md) auf die **Verbindung** Objekt. Eine Verbindungszeichenfolge besteht aus einer Liste von Argument-Wert-Paaren, die durch Semikolons voneinander getrennt werden, mit den Werten, die in einfache Anführungszeichen eingeschlossen. Beispiel:  

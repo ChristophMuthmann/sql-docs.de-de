@@ -3,7 +3,7 @@ title: Farbe (Dialogfeld) (Visual Database Tools) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7380a1f338e519517fee09cda3c7419b1ac4817b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c769d37bb4ebda8299498f54c22b87099e788fb4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>Farbe (Dialogfeld) (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Das Dialogfeld **Farbe** gibt den RGB-Wert einer vom Benutzer ausgewählten Farbe zurück. Der Benutzer kann aus einer vom Bildschirmtreiber bestimmten Palette mit Grundfarben oder aus einer Palette mit benutzerdefinierten Farben auswählen. Wählen Sie aus den Grundfarben aus, oder erstellen Sie benutzerdefinierte Farben. Definieren Sie Farben durch Klicken in die Farbmatrix oder durch Eingabe in die Felder **Farbt.:**, **Sätt.:**, **Hell.:**, **Rot:**, **Grün:**und **Blau:** .  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Grundfarben**  
 Vordefinierte, durch den Bildschirmtreiber bestimmte Farben.  
   

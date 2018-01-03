@@ -18,13 +18,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 84fee80391d7ac1ce5b509ba91eaf54b385b623a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0ce086529c97471ed6b2e80e5487aadab70be2c9
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
-# <a name="migrate-to-a-partially-contained-database"></a>Migrieren zu einer partiell eigenständigen Datenbank
+# <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie die Umstellung auf das teilweise eigenständige Datenbankmodell vorbereitet wird. Anschließend werden die Migrationsschritte erläutert.  
   
  **In diesem Thema:**  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="enabling-contained-databases-using-transact-sql"></a>Aktivieren von enthaltenen Datenbanken mit Transact-SQL  
  Im folgenden Beispiel werden enthaltene Datenbanken für die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz aktiviert.  
   
-```tsql  
+```sql  
 sp_configure 'contained database authentication', 1;  
 GO  
 RECONFIGURE ;  
@@ -80,7 +80,7 @@ GO
 ### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>Konvertieren einer Datenbank in eine teilweise eigenständige Datenbank mit Transact-SQL  
  Im folgenden Beispiel wird die Datenbank `Accounting` in eine teilweise eigenständige Datenbank konvertiert.  
   
-```tsql  
+```sql  
 USE [master]  
 GO  
 ALTER DATABASE [Accounting] SET CONTAINMENT = PARTIAL  
@@ -99,7 +99,7 @@ GO
 ##  <a name="users"></a> Migrieren von Benutzern zu Benutzern eigenständiger Datenbanken  
  Im folgenden Beispiel werden alle Benutzer, die auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldungen basieren, in Benutzer enthaltener Datenbanken mit Kennwörtern migriert. Nicht berücksichtigt werden Anmeldungen, die nicht aktiviert sind. Das Beispiel muss in der enthaltenen Datenbank ausgeführt werden.  
   
-```tsql  
+```sql  
 DECLARE @username sysname ;  
 DECLARE user_cursor CURSOR  
     FOR   
@@ -122,7 +122,7 @@ CLOSE user_cursor ;
 DEALLOCATE user_cursor ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Contained Databases](../../relational-databases/databases/contained-databases.md)   
  [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)   
  [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)  

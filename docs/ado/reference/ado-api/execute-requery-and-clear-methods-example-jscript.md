@@ -3,7 +3,7 @@ title: "Ausführen und Requery Clear-Methoden-Beispiel (JScript) | Microsoft Doc
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3ff72d44c2f5fa3bd71cabd091e3ec8ecf10d7bd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 728c4dae528c9419eff4dccc46db320d3f8a11f6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="execute-requery-and-clear-methods-example-jscript"></a>Führen Sie erneut abgefragt und Clear-Methoden-Beispiel (JScript)
 In diesem Beispiel wird veranschaulicht, die **Execute** Methode, die sowohl beim Ausführen einer [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt und ein [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt. Darüber hinaus verwendet der [Requery](../../../ado/reference/ado-api/requery-method.md) Methode zum Abrufen von aktuellen Daten in einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), und die [deaktivieren](../../../ado/reference/ado-api/clear-method-ado.md) Methode, um den Inhalt der Löschen der [Fehler](../../../ado/reference/ado-api/errors-collection-ado.md)Auflistung. (Die **Fehler** Auflistung erfolgt über die **Verbindung** Objekt des der [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) Eigenschaft von der [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).) Nennen Sie die Datei **ExecuteJS.asp**.  

@@ -3,7 +3,7 @@ title: ADOX-Enumerationskonstanten | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2ec43e5030e6bb335e7089af38be9ba6b5effb55
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d531e41fdba4e012ed1d33dcf3efa180065e7697
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adox-enumerated-constants"></a>ADOX-Enumerationskonstanten
 Zur Unterstützung des Debugprozesses Listen die Konstanten auf ADOX aufgezählt einen Wert für jede Konstante. Dieser Wert ist nur eine Empfehlung und kann von einer Version von ADOX in einen anderen ändern. Der Code sollte nur auf den Namen, die nicht der tatsächliche Wert Enumerationskonstanten abhängig sein.  

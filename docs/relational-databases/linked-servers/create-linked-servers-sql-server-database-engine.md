@@ -23,11 +23,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ba9740868c30bcc587cae0f99411bd6a49276fc1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7b6d7a92e154f6e517fe3299a952a78a05aa4b7d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Erstellen von Verbindungsservern (SQL Server-Datenbankmodul)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+###  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-sql-server-management-studio"></a>So erstellen Sie einen Verbindungsserver für eine andere Instanz von SQL Server anhand von SQL Server Management Studio  
   
@@ -207,7 +207,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  Geben Sie im Abfrage-Editor folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehl ein, um eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit dem Namen `SRVR002\ACCTG`zu verknüpfen:  
   
-    ```tsql  
+    ```sql  
     USE [master]  
     GO  
     EXEC master.dbo.sp_addlinkedserver   
@@ -219,7 +219,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Führen Sie folgenden Code aus, um den Verbindungsserver zur Verwendung der Domänenanmeldeinformationen des Anmeldenamens zu konfigurieren, der den Verbindungsserver verwendet.  
   
-    ```tsql  
+    ```sql  
     EXEC master.dbo.sp_addlinkedsrvlogin   
         @rmtsrvname = N'SRVR002\ACCTG',   
         @locallogin = NULL ,   
@@ -234,7 +234,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Führen Sie folgenden Code aus, um die Verbindung mit dem Verbindungsserver zu testen. Das Beispiel gibt die Namen der Datenbanken auf dem Verbindungsserver zurück.  
   
-    ```tsql  
+    ```sql  
     SELECT name FROM [SRVR002\ACCTG].master.sys.databases ;  
     GO  
   
@@ -244,7 +244,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Verwenden Sie vierteilige Namen, um auf ein Objekt auf einem Verbindungsserver zu verweisen. Führen Sie folgenden Code aus, um eine Liste aller Anmeldenamen auf dem lokalen Server und die entsprechenden Anmeldenamen auf dem Verbindungsserver zurückzugeben.  
   
-    ```tsql  
+    ```sql  
     SELECT local.name AS LocalLogins, linked.name AS LinkedLogins  
     FROM master.sys.server_principals AS local  
     LEFT JOIN [SRVR002\ACCTG].master.sys.server_principals AS linked  
@@ -254,7 +254,7 @@ ms.lasthandoff: 11/17/2017
   
      Wenn für den Anmeldenamen vom Verbindungsserver NULL zurückgegeben wird, zeigt dies an, dass der Anmeldename auf dem Verbindungsserver nicht vorhanden ist. Von diesen Anmeldenamen kann der Verbindungsserver erst verwendet werden, wenn der Verbindungsserver so konfiguriert wird, dass ein anderer Sicherheitskontext weitergegeben wird oder der Verbindungsserver anonyme Verbindungen akzeptiert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verbindungsserver &#40;Datenbankmodul&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)  

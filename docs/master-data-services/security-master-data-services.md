@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ab9a4a049b49b3b5e0e7f9692fb8df2f7be5a824
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ab5a722213ba96fe591e9d9b8fa64681230d7733
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="security-master-data-services"></a>Sicherheit (Master Data Services)
   Verwenden Sie die Sicherheitseinstellungen in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], um dafür zu sorgen, dass Benutzer auf die speziellen Masterdaten zugreifen können, die sie für ihre Arbeit benötigen, nicht jedoch auf Daten, für die sie nicht zuständig sind.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
   
  Es muss allerdings berücksichtigt werden, dass alle in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] festgelegten Sicherheitseinstellungen in Excel erst nach 20 Minuten wirksam werden. Das Intervall wird durch die Einstellung *MdsMaximumUserInformationCacheInterval* in der Datei web.config definiert. Um das Intervall zu ändern, können Sie die Einstellung ändern und IIS neu starten.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/20/2017
 |Weisen Sie die Berechtigung Attributwerten zu, indem Sie die Berechtigung zum Modellieren von Objekten zuweisen.|[Zuweisen von Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
 |Weisen Sie die Berechtigung Elementwerten zu, indem Sie die Berechtigung Hierarchieknoten zuweisen.|[Zuweisen von Hierarchieelementberechtigungen &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   
  [Benutzer und Gruppen &#40;Master Data Services&#41;](../master-data-services/users-and-groups-master-data-services.md)   
  [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   

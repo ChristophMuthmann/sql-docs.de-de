@@ -3,9 +3,9 @@ title: XML-Editor (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -23,11 +23,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4c7f2e3e338e1d8d2bc7df6cc8fb344213e05ed4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1ff569edefb2e65e5586ff645584afe755dd4df9
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML-Editor (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Stellt eine Anzahl visueller Tools zur Arbeit mit XML-Schemas, ADO.NET-Datasets und XML-Dokumenten bereit. Der XML-Designer unterstützt die vom World Wide Web Consortium (W3C) definierte XSD-Sprache (XML Schema Definition). DTDs (Document Type Definitions) oder andere XML-Schemasprachen, wie XDR (XML-Data Reduced), werden vom Designer nicht unterstützt.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
  Für die Arbeit an XML-Dateien, XML-Schemas und Datasets stehen im Designer die folgenden drei Sichten (oder Modi) zur Verfügung:  
   
-|Sicht|Beschreibung|Unterstützte Dateitypen|  
+|Anzeigen|Description|Unterstützte Dateitypen|  
 |----------|-----------------|--------------------------|  
 |**Schema**|Zum visuellen Erstellen und Ändern von XML-Schemas und ADO.NET-Datasets.|*.xsd|  
 |**Daten**|Zum visuellen Ändern von XML-Datendateien in einem strukturierten Datenraster.|*.xml|  
@@ -108,7 +108,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="showplan-view"></a>SHOWPLAN-Sicht  
  Abfragepläne können im XML-Format gespeichert werden, wenn sie mithilfe der Option SET SHOWPLAN_XML ON erstellt wurden. Doppelklicken Sie auf eine Datei mit der Erweiterung .showplan, um den Abfrageplan zu öffnen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Speichern eines Ausführungsplans im XML-Format](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
   
   

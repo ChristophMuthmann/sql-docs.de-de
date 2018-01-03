@@ -3,8 +3,11 @@ title: "Angeben des Füllfaktors für einen Index | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3145ece1536701b112f5ffddc55c12a6f0d5369c
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: a5d92a3e54da02194fa104d38a7440c9f191462b
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Angeben des Füllfaktors für einen Index
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -41,7 +44,7 @@ ms.lasthandoff: 12/01/2017
   
      [Leistungsaspekte](#Performance)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So geben Sie einen Füllfaktor für einen Index an mit:**  
   
@@ -49,7 +52,7 @@ ms.lasthandoff: 12/01/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Performance"></a> Leistungsaspekte  
   
@@ -66,7 +69,7 @@ ms.lasthandoff: 12/01/2017
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** bzw. der festen Datenbankrollen **db_ddladmin** und **db_owner** sein.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-specify-a-fill-factor-by-using-table-designer"></a>So geben Sie einen Füllfaktor mit dem Tabellen-Designer an  
   
@@ -108,7 +111,7 @@ ms.lasthandoff: 12/01/2017
   
 #### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>So geben Sie einen Füllfaktor für einen vorhandenen Index an  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -127,7 +130,7 @@ ms.lasthandoff: 12/01/2017
   
 #### <a name="another-way-to-specify-a-fill-factor-in-an-index"></a>Alternative Möglichkeit zum Angeben eines Füllfaktors in einem Index  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

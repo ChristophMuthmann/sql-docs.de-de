@@ -3,7 +3,7 @@ title: DataControl-Fehlercodes | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 54dcd3721781ccb2889d88c2545d8bb3630cb7bc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0886839245fa7a4dc0e2baee0dfaf010ff876e70
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="datacontrol-object-error-codes"></a>RDS-Fehlercodes
 Die folgende Tabelle enthält die [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Fehlercodes-Objekt. Die positive decimal Übersetzung der niedrigen zwei Bytes, die negative dezimale Übersetzung von der vollständigen Fehlercode und die hexadezimale Werte werden angezeigt.

@@ -3,7 +3,7 @@ title: "Löschen einer Projektmappe | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 14bc137050d2a8510bab16d7b241f9363b7c06f2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d59c828615b0bb21b1f8661b030368fcc3c64ee4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-a-solution"></a>Löschen einer Projektmappe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Wenn Sie eine Projektmappe unwiderruflich löschen, werden die Dateien aus dem physischen Speicher und die Dateielemente aus der Projektmappe entfernt.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  Klicken Sie im Menü **Datei** auf **Löschen**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Projektmappen-Explorer](../../ssms/solution/solution-explorer.md)  
 [Erstellen einer neuen Projektmappe](../../ssms/solution/create-a-new-solution.md)  
 [Erstellen eines Projekts](../../ssms/solution/create-a-project.md)  

@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 01b85a4c7cf91d2d6b2f2616ff6b19221a188afd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4b3236a5888d906328f525333ae9e20b42e6d8de
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Leistungsüberwachung mit dem Abfragespeicher
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,9 +49,9 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="use-transact-sql-statements"></a>Verwenden von Transact-SQL-Anweisungen  
   
-1.  Mit der **ALTER DATABASE** -Anweisung können Sie den Abfragespeicher aktivieren. Beispiel:  
+1.  Mit der **ALTER DATABASE** -Anweisung können Sie den Abfragespeicher aktivieren. Zum Beispiel:  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
     ```  
   
@@ -90,7 +90,7 @@ Der Abfragespeicher enthält drei Speicher:
   
  Die folgende Abfrage gibt Informationen über Abfragen und Pläne im Abfragespeicher zurück.  
   
-```tsql  
+```sql  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
 FROM sys.query_store_plan AS Pl  
 JOIN sys.query_store_query AS Qry  
@@ -200,7 +200,7 @@ Die folgenden Optionen sind zur Konfiguration von Abfragespeicherparametern verf
   
  Fragen Sie [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) ab, um zu ermitteln, ob der Abfragespeicher zurzeit aktiv ist und Laufzeitstatistiken erfasst.  
   
-```tsql  
+```sql  
 SELECT actual_state, actual_state_desc, readonly_reason,   
     current_storage_size_mb, max_storage_size_mb  
 FROM sys.database_query_store_options;  
@@ -213,7 +213,7 @@ Wenn die Größe des Abfragespeichers das Kontingent überschreitet, wird die Fu
   
  Führen Sie zum Abrufen detaillierter Informationen zum Status des Abfragespeichers Folgendes in einer Benutzerdatenbank aus.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.database_query_store_options;  
 ```  
   
@@ -221,7 +221,7 @@ SELECT * FROM sys.database_query_store_options;
   
  Sie können das Intervall zum Sammeln von Statistiken zur Abfragelaufzeit  überschreiben (der Standardwert ist 60 Minuten).  
   
-```tsql  
+```sql  
 ALTER DATABASE <database_name>   
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);  
 ```  
@@ -235,14 +235,14 @@ SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);
   
  So überprüfen Sie die aktuelle Größe des Abfragespeichers und begrenzen die folgende Anweisung in der Benutzerdatenbank.  
   
-```tsql  
+```sql  
 SELECT current_storage_size_mb, max_storage_size_mb   
 FROM sys.database_query_store_options;  
 ```  
   
  Mit der folgenden Anweisung können Sie den Speicher erweitern, wenn der Abfragespeicher voll ist.  
   
-```tsql  
+```sql  
 ALTER DATABASE <database_name>   
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);  
 ```  
@@ -251,7 +251,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);
   
  Sie können mehrere Optionen zum Abfragespeicher gleichzeitig mit einer einzigen ALTER DATABASE-Anweisung festlegen.  
   
-```tsql  
+```sql  
 ALTER DATABASE <database name>   
 SET QUERY_STORE (  
     OPERATION_MODE = READ_WRITE,  
@@ -270,7 +270,7 @@ SET QUERY_STORE (
   
  Die internen Tabellen des Abfragespeichers werden beim Erstellen der Datenbank in der PRIMÄREN Dateigruppe erstellt. Diese Konfiguration kann später nicht mehr geändert werden. Wenn nicht mehr genügend Speicherplatz vorhanden ist, sollten Sie mithilfe der folgenden Anweisung ältere Daten aus dem Abfragespeicher löschen.  
   
-```tsql  
+```sql  
 ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;  
 ```  
   
@@ -278,7 +278,7 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
   
  **Löschen von Ad-hoc-Abfragen** : Hiermit löschen Sie Abfragen, die nur einmal ausgeführt wurden und mehr als 24 Stunden alt sind.  
   
-```tsql  
+```sql  
 DECLARE @id int  
 DECLARE adhoc_queries_cursor CURSOR   
 FOR   
@@ -321,7 +321,7 @@ DEALLOCATE adhoc_queries_cursor;
   
  **Welche waren die letzten *n* Abfragen, die für die Datenbank ausgeführt wurden?**  
   
-```tsql  
+```sql  
 SELECT TOP 10 qt.query_sql_text, q.query_id,   
     qt.query_text_id, p.plan_id, rs.last_execution_time  
 FROM sys.query_store_query_text AS qt   
@@ -336,7 +336,7 @@ ORDER BY rs.last_execution_time DESC;
   
  **Wie oft wurde jede Abfrage ausgeführt?**  
   
-```tsql  
+```sql  
 SELECT q.query_id, qt.query_text_id, qt.query_sql_text,   
     SUM(rs.count_executions) AS total_execution_count  
 FROM sys.query_store_query_text AS qt   
@@ -352,7 +352,7 @@ ORDER BY total_execution_count DESC;
   
  **Wie viele Abfragen weisen die längste durchschnittliche Ausführungszeit innerhalb der letzten Stunde auf?**  
   
-```tsql  
+```sql  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
     qt.query_text_id, p.plan_id, GETUTCDATE() AS CurrentUTCTime,   
     rs.last_execution_time   
@@ -369,7 +369,7 @@ ORDER BY rs.avg_duration DESC;
   
  **Wie viele Abfragen weisen die umfangreichsten durchschnittlichen physischen E/A-Lesevorgänge in den letzten 24 Stunden auf (mit der entsprechenden durchschnittlichen Zeilen- und Ausführungsanzahl)?**  
   
-```tsql  
+```sql  
 SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,   
     q.query_id, qt.query_text_id, p.plan_id, rs.runtime_stats_id,   
     rsi.start_time, rsi.end_time, rs.avg_rowcount, rs.count_executions  
@@ -388,7 +388,7 @@ ORDER BY rs.avg_physical_io_reads DESC;
   
  **Gab es Abfragen mit mehreren Plänen?** Diese Abfragen sind besonders interessant, da sie bei Änderungen der Planauswahl zu einer Regression führen können. Die folgende Abfrage erkennt diese Abfragen sowie alle Pläne:  
   
-```tsql  
+```sql  
 WITH Query_MultPlans  
 AS  
 (  
@@ -417,7 +417,7 @@ ORDER BY query_id, plan_id;
   
  **Gab es Abfragen, bei denen kürzlich eine Leistungsregression stattgefunden hat (im Vergleich zu einem anderen Zeitpunkt)?** Das folgende Abfragebeispiel gibt alle Abfragen zurück, für die sich die Ausführungszeit in den letzten 48 Stunden aufgrund einer Änderung der Planauswahl verdoppelt hat. Die Abfrage vergleicht alle Intervalle der Laufzeitstatistiken miteinander.  
   
-```tsql  
+```sql  
 SELECT   
     qt.query_sql_text,   
     q.query_id,   
@@ -457,7 +457,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
  **Abfragen mit der längsten Wartezeit?**
 Die Abfrage gibt die 10 Abfragen zurück, die am längsten warten. 
  
- ```tsql 
+ ```sql 
   SELECT TOP 10
     qt.query_text_id,
     q.query_id,
@@ -473,7 +473,7 @@ ORDER BY sum_total_wait_ms DESC
  
  **Gab es Abfragen, bei denen kürzlich eine Leistungsregression stattgefunden hat (Vergleich jüngerer und älterer Ausführungen)?** Die nächste Abfrage vergleicht die Abfrageausführung basierend auf den Zeiträumen der Ausführung. In diesem speziellen Beispiel vergleicht die Abfrage die Ausführung in jüngster Zeit (1 Stunde) mit einem älteren Zeitraum (letzter Tag) und identifiziert Ausführungen, die zu `additional_duration_workload`geführt haben. Diese Metrik wird als Differenz zwischen aktueller durchschnittlicher Ausführung und älterer durchschnittlicher Ausführung multipliziert mit der Anzahl der letzten Ausführungen berechnet. Sie stellt damit tatsächlich dar, wie viel zusätzliche Zeit die letzten Ausführungen im Vergleich zu älteren benötigt haben:  
   
-```tsql  
+```sql  
 --- "Recent" workload - last 1 hour  
 DECLARE @recent_start_time datetimeoffset;  
 DECLARE @recent_end_time datetimeoffset;  
@@ -562,7 +562,7 @@ OPTION (MERGE JOIN);
   
  **Erzwingen eines Plans für eine Abfrage (Anwenden einer Durchsetzungsrichtlinie).** Wenn ein Plan für eine bestimmte Abfrage erzwungen wird, erfolgen sämtliche Ausführungen dieser Abfrage mit dem erzwungenen Plan.  
   
-```tsql  
+```sql  
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
 ```  
   
@@ -570,11 +570,11 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
   
  **Aufheben der Erzwingung eines Plans für eine Abfrage.** Wenn Sie wieder den Abfrageoptimierer von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden möchten, um den optimalen Abfrageplan zu berechnen, heben Sie mit **sp_query_store_unforce_plan** das Erzwingen des für die Abfrage ausgewählten Plans auf.  
   
-```tsql  
+```sql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Best Practices für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Verwenden des Abfragespeichers mit In-Memory-OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [Verwendungsszenarien für den Abfragespeicher](../../relational-databases/performance/query-store-usage-scenarios.md)   

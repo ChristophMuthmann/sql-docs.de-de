@@ -3,7 +3,7 @@ title: "Warnungseigenschaften – Neue Warnung (Seite „Antwort“) | Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6a22ab0b483ff821408853b6b6c14d46047f0b39
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9096ad51e5c25a8ccbd3c82bdfe8a80c9101fe9e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alert-properties---new-alert-response-page"></a>Warnungseigenschaften – Neue Warnung (Seite „Antwort“)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Verwenden Sie diese Seite, um einen Auftrag, den Sie ausführen möchten, festzulegen und um eine Liste der Operatoren abzurufen, die bei einer [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent-Warnung benachrichtigt werden sollen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Auftrag ausführen**  
 Aktiviert die Optionen **Auftragsliste**, **Neuer Auftrag** und **Auftrag anzeigen** .  
   
@@ -58,7 +58,7 @@ Zeigt das Dialogfeld **Neuer Operator** an, in dem Sie einen neuen Operator erst
 **Operator anzeigen**  
 Zeigt das Dialogfeld **Eigenschaften** für den derzeit ausgewählten Operator an. Über das Dialogfeld **Operator-Eigenschaften** können Sie die Operator-Eigenschaften anzeigen und ändern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Warnungen](../../ssms/agent/alerts.md)  
 [Create an Alert Using Severity Level](../../ssms/agent/create-an-alert-using-severity-level.md)  
 [Warnungen](../../ssms/agent/alerts.md)  

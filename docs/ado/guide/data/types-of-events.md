@@ -3,7 +3,7 @@ title: Typen von Ereignissen | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f33ed98f367560da7f4b60d5a754d99937319358
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7880a6a3d2499735ad31b92d3c67cdfcafd8325d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="types-of-events"></a>Typen von Ereignissen
 Es gibt zwei grundlegende Arten von Ereignissen. "Werden Ereignisse" die aufgerufen werden, bevor ein Vorgang gestartet wird, in der Regel in ihren Namen enthalten "Wird" – z. B. **WillChangeRecordset** oder **WillConnect**. Ereignisse, die aufgerufen werden, nachdem ein Ereignis in der Regel abgeschlossen wurde "Vollständig" in ihren Namen enthalten, z. B. **RecordChangeComplete** oder **ConnectComplete**. Ausnahmen vorhanden sind – z. B. **InfoMessage** –, aber diese erfolgen, wenn der zugeordnete Vorgang abgeschlossen wurde.  

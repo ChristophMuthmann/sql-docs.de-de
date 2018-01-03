@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a06c7cffcf4fbfc98323cdbb3e69f78b2d87c4bc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7fda6bbf8ea336bc5646f2d420db8594d1faf968
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="linestring"></a>LineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Ein **LineString** ist ein eindimensionales Objekt, das eine Sequenz aus Punkten und die sie verbindenden Liniensegmente darstellt.  
@@ -109,7 +109,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(1 1 NULL 0, 2 4 NULL 12.3, 3 9 NUL
   
  Im folgenden Beispiel wird veranschaulicht, wie eine `geometry LineString` -Instanz mit zwei Punkten erstellt wird, die identisch sind. Ein Aufruf von `IsValid` gibt an, dass die **LineString** -Instanz nicht gültig ist, und durch einen Aufruf von `MakeValid` wird die **LineString** -Instanz in einen **Point**konvertiert.  
   
-```tsql  
+```sql  
 DECLARE @g geometry  
 SET @g = geometry::STGeomFromText('LINESTRING(1 3, 1 3)',0);  
 IF @g.STIsValid() = 1  
@@ -132,7 +132,7 @@ LINESTRING(1 3, 1 3) is not a valid LineString
 POINT(1 3) is a valid Point.  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [STLength &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STStartPoint &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/ststartpoint-geometry-data-type.md)   
  [STEndpoint &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stendpoint-geometry-data-type.md)   

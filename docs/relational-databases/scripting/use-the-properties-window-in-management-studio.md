@@ -3,9 +3,9 @@ title: Verwenden des Eigenschaftenfensters in Management Studio | Microsoft-Doku
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b99df9358de8b26efb064587af391ff901418c24
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: adef30d9bc7488bc56c3d118962028b4b005c2fa
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Verwenden des Eigenschaftenfensters in Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Das Eigenschaftenfenster enthält eine Beschreibung des Zustands eines Elements in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], z.B. Verbindungen oder Showplanoperatoren, sowie Informationen zu Datenbankobjekten wie Tabellen, Sichten und Designer.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Klicken Sie im SQL-Abfrage-Editor auf der Registerkarte **Ausführungsplan** auf die Symbole des Operators, um Informationen zu den Operatoren im Eigenschaftenfenster anzuzeigen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Eigenschaftenfenster &#40;Management Studio&#41;](http://msdn.microsoft.com/library/6a9a1389-df8d-4cfc-928b-eccbf884a22d)  
   
   

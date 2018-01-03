@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16137e7b3fe1880592afa025f324e614332d87d3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e8dc5d5ef9aaebced036db796e1518bcf929dfef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>Ausführen eines SSIS-Pakets mit PowerShell
 In diesem Schnellstarttutorial wird dargestellt, wie ein PowerShell-Skript verwendet wird, um eine Verbindung mit einem Datenbankserver herzustellen und ein SSIS-Paket auszuführen.
@@ -70,7 +70,7 @@ Write-Host "Done."
 ## <a name="next-steps"></a>Nächste Schritte
 - Erfahren Sie mehr über weitere Möglichkeiten, ein Paket auszuführen.
     - [Run an SSIS package with SSMS](./ssis-quickstart-run-ssms.md) (Ausführen eines SSIS-Pakets mit SSMS)
-    - [Run an SSIS package with Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md) (Ausführen eines SSIS-Pakets mit Transact-SQL [SSMS])
+    - [Run an SSIS package with Transact-SQL (SSMS) (Ausführen eines SSIS-Pakets mit Transact-SQL [SSMS])](./ssis-quickstart-run-tsql-ssms.md)
     - [Run an SSIS package with Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md) (Ausführen eines SSIS-Pakets mit Transact-SQL [VS Code])
     - [Ausführen eines SSIS-Pakets über die Eingabeaufforderung](./ssis-quickstart-run-cmdline.md)
     - [Run an SSIS package with C#](./ssis-quickstart-run-dotnet.md) (Ausführen eines SSIS-Pakets mit C#) 

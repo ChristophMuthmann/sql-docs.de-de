@@ -3,7 +3,7 @@ title: Handhaben mehrerer Auftragsschritte | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 27cad9f2ede077dc8cc227c9639bf3b979b5995f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0391b5c3a997241fe4de095800306ed95f5b8e15
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handle-multiple-job-steps"></a>Handhaben mehrerer Auftragsschritte
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Wenn Ihr Auftrag mehrere Auftragsschritte hat, müssen Sie die Reihenfolge angeben, in der die Auftragsschritte ausgeführt werden sollen. Dies wird *Ablaufsteuerung* genannt*.* Sie können jederzeit neue Auftragsschritte hinzufügen und den Ablauf der Auftragsschritte neu ordnen. Die Änderungen werden bei der nächsten Ausführung des Auftrags wirksam. In dieser Abbildung ist die Ablaufsteuerung eines Auftrags für die Datenbanksicherung dargestellt.  
@@ -48,7 +48,7 @@ Auftragsschritte müssen eigenständig sein. Ein Auftrag kann keine booleschen W
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent zeichnet die Informationen von Aufträgen und Auftragsschritten im Auftragsverlauf auf.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [sp_add_job](http://msdn.microsoft.com/en-us/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
 [sysjobhistory](http://msdn.microsoft.com/en-us/1b1fcdbb-2af2-45e6-bf3f-e8279432ce13)  
 [sysjobs (Transact-SQL)](http://msdn.microsoft.com/en-us/e244a6a5-54c2-47a6-8039-dd1852b0ae59)  

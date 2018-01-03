@@ -3,9 +3,9 @@ title: IntelliSense (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8c9b1806be022d0391cb19cc03a81a039927e923
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a1c97182f96f6f06d8dee2e999a94f17001ae5f0
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Die Editoren in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] unterstützen [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense-Optionen, die die Typisierung reduzieren, schnellen Zugriff auf Syntaxinformationen bieten oder das Anzeigen der Trennzeichen komplexer Ausdrücke erleichtern.  
@@ -35,12 +35,12 @@ ms.lasthandoff: 11/17/2017
 |----------------------|-----------|  
 |Beschreibt, wie IntelliSense-Optionen z. B. Anweisungsvervollständigungsoptionen oder die Größe von Transact-SQL-Skripts konfiguriert werden, für die IntelliSense deaktiviert werden soll.|[Konfigurieren von IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/configure-intellisense-sql-server-management-studio.md)|  
 |Beschreibt, wie Parameterinfo verwendet wird, um Informationen zu Anzahl, Namen und Größen der Parameter für eine Funktion oder eine gespeicherte Prozedur abzurufen.|[Parameterinfo &#40;IntelliSense&#41;](../../relational-databases/scripting/parameter-info-intellisense.md)|  
-|Beschreibt, wie QuickInfo zum Abrufen von QuickInfos verwendet wird, in denen ein Bezeichner (z. B. Tabellen- oder Sichtname) beschrieben wird.|[QuickInfo &#40;IntelliSense&#41;](../../relational-databases/scripting/quick-info-intellisense.md)|  
+|Beschreibt, wie QuickInfo zum Abrufen von QuickInfos verwendet wird, in denen ein Bezeichner (z. B. Tabellen- oder Sichtname) beschrieben wird.|[QuickInfo &#40;IntelliSense&#41;](../../relational-databases/scripting/quick-info-intellisense.md)|  
 |Beschreibt, wie IntelliSense den Rest eines Bezeichners vervollständigt, nachdem Sie so viele Zeichen des Namens eingegeben haben, dass eine kurze Liste der Objekte abgerufen werden kann, deren Namen mit derselben Zeichenfolge beginnen.|[Vervollständigen des Worts &#40;IntelliSense&#41;](../../relational-databases/scripting/complete-word-intellisense.md)|  
 |Beschreibt, wie IntelliSense beide Enden eines Paars von Trennzeichen identifizieren kann, und wie Sie zwischen den zwei Enden des Paars hin- und herwechseln können.|[Automatischer Vergleich von Syntaxpaaren](../../relational-databases/scripting/automatic-matching-of-syntax-pairs.md)|  
 |Beschreibt die Bedingungen, unter denen IntelliSense möglicherweise nicht funktioniert.|Problembehandlung von IntelliSense (SQL Server Management Studio)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

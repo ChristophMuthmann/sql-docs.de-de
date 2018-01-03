@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 53d4cd6d44f33b05ca586077a33307616aa45986
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e491a90b39421fb04501498b205b5e8355eec063
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-user-interface"></a>SQL Server Integration Services-Benutzeroberfläche
   Neben den Entwurfsoberflächen auf den Registerkarten des [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designers stellt die Benutzeroberfläche den Zugriff auf die folgenden Fenster und Dialogfelder bereit, um Paketen Funktionen hinzuzufügen und die Eigenschaften von Paketobjekten zu konfigurieren:  
@@ -119,10 +119,10 @@ ms.lasthandoff: 11/20/2017
   
  Weitere Informationen zu zusätzlichen Fenstern und Menüs finden Sie in der Visual Studio-Dokumentation.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  Weitere Informationen zum Erstellen von Paketen in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]finden Sie unter [Erstellen von Paketen in SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SSIS-Designer](../integration-services/ssis-designer.md)  
   
   

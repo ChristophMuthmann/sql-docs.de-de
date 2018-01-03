@@ -3,7 +3,7 @@ title: Argumente (Dialogfeld) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -20,23 +20,23 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3e5b21e5522fd44c4a97068c166355f571831302
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 07f7625af26f29e94bdca8bbe78466ae32282ccc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arguments-dialog-box"></a>Argumente (Dialogfeld)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Im Dialogfeld **Argumente** werden neue oder vorhandene Argumente für ein Tool angegeben. Dieses Dialogfeld wird angezeigt, wenn Sie ein externes Tool starten, für das die Option **Zur Argumenteingabe auffordern** im Dialogfeld **Externe Tools** ausgewählt ist.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Argumente**  
 Listet die aktuellen Variablen auf, die für das Tool im Dialogfeld **Externe Tools** angegeben sind. Eine vollständige Liste vordefinierter Argumente und ihrer Definitionen finden Sie unter [Arguments for External Tools](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md). Sie können auch ein benutzerdefiniertes Argument eingeben.  
   
 **Befehlszeile**  
 Zeigt den Wert für die Argumente an, die im Dialogfeld **Argumente** angegeben sind.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Arguments for External Tools](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)  
 [Externe Tools (Dialogfeld)](../ssms/external-tools-dialog-box.md)  
 [Allgemeine Benutzeroberflächenelemente](../ssms/general-user-interface-elements.md)  

@@ -3,8 +3,11 @@ title: Catalog.add_execution_worker (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,16 +17,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d5ecc54863b47ef55269a068353cbc25bbd5d008
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0b2a534635569d5e317d5bb88b2da2103a6a3ca6
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catalogaddexecutionworker-ssisdb-database"></a>Catalog.add_execution_worker (SSISDB-Datenbank)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Fügt einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Scale Out Worker einer Instanz der Ausführung in Scale Out hinzu.
+Fügt einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out-Worker einer Instanz der Ausführung in Scale Out hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +45,7 @@ Die Worker-Agent-ID für den Scale Out-Worker. Die *workeragent_id* ist **unique
  0 (Erfolg)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ InclusionThresholdSetting  
 
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert eine der folgenden Berechtigungen:  
@@ -64,6 +67,6 @@ Die Worker-Agent-ID für den Scale Out-Worker. Die *workeragent_id* ist **unique
 
 - Die Ausführung erfolgt nicht in horizontaler Hochskalierung.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 [Ausführen von Paketen in horizontaler Hochskalierung](~/integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md).
 

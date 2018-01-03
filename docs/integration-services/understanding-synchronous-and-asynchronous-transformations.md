@@ -5,7 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: docset-sql-devref
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c258cd2c85a26c20fc50c1a5e860096f7e69f26f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 33e3c5b8a8c10a6b4f94d8ae67e68debbd3c8e98
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>Grundlegendes zu synchronen und asynchronen Transformationen
   Den Unterschied zwischen einer synchronen und asynchronen Transformation in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] versteht man am besten, wenn man die Grundzüge einer synchronen Transformation kennt. Wenn eine synchrone Transformation Ihre Anforderungen nicht erfüllt, könnte Ihr Design eine asynchrone Transformation erfordern.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
   
  Es wäre auch mögliche, eine asynchrone Transformation zu erstellen, die eine synchrone Transformation emuliert, indem man jede Eingabezeile explizit in die Ausgabe kopiert. Mit diesem Ansatz könnten Sie Spalten umbenennen oder Datentypen oder -formate konvertieren. Dieser Ansatz beeinträchtigt jedoch die Leistung. Sie können die gleichen Ergebnisse bei besserer Leistung erreichen, indem Sie eingebaute Integration Services-Komponenten verwenden, wie zum Beispiel Kopieren von Spalten oder Datenkonvertierung.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen einer synchronen Transformation mit der Skriptkomponente](../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
  [Erstellen einer asynchronen Transformation mit der Skriptkomponente](../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)   
  [Entwickeln einer benutzerdefinierten Transformationskomponente mit synchronen Ausgaben](../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)   

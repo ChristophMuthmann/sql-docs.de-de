@@ -23,17 +23,17 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a16ecd57c905d98d15b7c6e5a34adf975e1b290c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6383f0bdcbd230c5bd4868084ae2fd06f4003269
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>Sichern von Dateien und Dateigruppen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie Sie Dateien und Dateigruppen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder PowerShell sichern. Wenn eine vollständige Datenbanksicherung wegen der Größe der Datenbank und aufgrund von Leistungsanforderungen nicht möglich ist, können Sie stattdessen eine Dateisicherung ausführen. Eine *Dateisicherung* enthält alle Daten in einer oder mehreren Dateien (oder Dateigruppen). Weitere Informationen finden Sie unter [Vollständige Dateisicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) und [Differenzielle Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
 
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -110,11 +110,11 @@ ms.lasthandoff: 11/17/2017
   
     -   **Vor dem Schreiben auf die Medien Prüfsumme bilden**, und optional **Bei Prüfsummenfehler fortsetzen**. Weitere Informationen zu Prüfsummen finden Sie unter [Mögliche Medienfehler während der Sicherung und Wiederherstellung &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
   
-15. Wenn Sie auf ein Bandlaufwerk sichern (gemäß der Konfiguration im Abschnitt **Ziel** der Seite **Allgemein**), ist die Option **Band nach dem Sichern entladen** aktiviert. Durch Klicken auf diese Option wird die Option **Band vor dem Entladen zurückspulen** aktiviert.  
+15. Wenn Sie auf ein Bandlaufwerk sichern (gemäß der Konfiguration im Abschnitt **Ziel** der Seite **Allgemein** ), ist die Option **Band nach dem Sichern entladen** aktiviert. Durch Klicken auf diese Option wird die Option **Band vor dem Entladen zurückspulen** aktiviert.  
   
     > **HINWEIS** : Die Optionen im Abschnitt **Transaktionsprotokoll** sind inaktiv, es sei denn, Sie sichern ein Transaktionsprotokoll (wie im Abschnitt **Sicherungstyp** der Seite **Allgemein** angegeben).  
   
-16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] und höheren Versionen wird die [Sicherungskomprimierung](../../relational-databases/backup-restore/backup-compression-sql-server.md). Ob eine Sicherung standardmäßig komprimiert wird, ist vom Wert der Serverkonfigurationsoption **Komprimierungsstandard für Sicherung** abhängig. Sie können jedoch unabhängig von der aktuellen Standardeinstellung auf Serverebene eine Sicherung komprimieren, indem Sie die Option **Sicherung komprimieren**aktivieren, oder die Komprimierung verhindern, indem Sie die Option **Sicherung nicht komprimieren**aktivieren.  
+16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] und höheren Versionen wird die [Sicherungskomprimierung](../../relational-databases/backup-restore/backup-compression-sql-server.md). Ob eine Sicherung standardmäßig komprimiert wird, ist abhängig vom Wert der Serverkonfigurationsoption **backup-compression default** . Sie können jedoch unabhängig von der aktuellen Standardeinstellung auf Serverebene eine Sicherung komprimieren, indem Sie die Option **Sicherung komprimieren**aktivieren, oder die Komprimierung verhindern, indem Sie die Option **Sicherung nicht komprimieren**aktivieren.  
   
      **So zeigen Sie die aktuelle Standardeinstellung für die Sicherungskomprimierung (Option "backup compression default") an**  
   
@@ -141,13 +141,13 @@ ms.lasthandoff: 11/17/2017
   
      [ WITH *mit_Optionen* [ **,**...*o* ] ] ;  
   
-    |Option|Beschreibung|  
+    |Option|Description|  
     |------------|-----------------|  
     |*database*|Die Datenbank, für die ein Transaktionsprotokoll, eine Teildatenbank oder die vollständige Datenbank gesichert wird.|  
     |FILE **=***logischer_Dateiname*|Gibt den logischen Namen einer Datei an, die in die Dateisicherung eingeschlossen werden soll.|  
     |FILEGROUP **=***logischer_Dateigruppenname*|Gibt den logischen Namen einer Dateigruppe an, die in die Dateisicherung eingeschlossen werden soll. Beim einfachen Wiederherstellungsmodell wird die Dateigruppensicherung nur für eine schreibgeschützte Dateigruppe unterstützt.|  
     |[ **,**...*f* ]|Stellt einen Platzhalter dar, der anzeigt, dass mehrere Dateien und Dateigruppen angegeben werden können. Für die Anzahl der Dateien oder Dateigruppen gibt es keine Einschränkungen.|  
-    |*Sicherungsmedium* [ **,**...*n* ]|Gibt eine Liste an, die zwischen 1 und 64 Sicherungsmedien für den Sicherungsvorgang enthalten kann. Sie können ein physisches Sicherungsmedium angeben oder ein entsprechendes logisches Sicherungsmedium, sofern es bereits definiert wurde. Geben Sie das physische Sicherungsmedium mithilfe der Option DISK oder TAPE an:<br /><br /> { DISK &#124; TAPE } **=***physischer_Sicherungsmediumname*<br /><br /> Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
+    |*Sicherungsmedium* [ **,**...*n* ]|Gibt eine Liste an, die zwischen 1 und 64 Sicherungsmedien für den Sicherungsvorgang enthalten kann. Sie können ein physisches Sicherungsmedium angeben oder ein entsprechendes logisches Sicherungsmedium, sofern es bereits definiert wurde. Geben Sie das physische Sicherungsmedium mithilfe der Option DISK oder TAPE an:<br /><br /> { DISK &#124; TAPE } **=***physischer_Sicherungsmediumname*<br /><br /> Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)aufgezeichnet wurde.|  
     |WITH *mit_Optionen* [ **,**...*o* ]|Optional können eine oder mehrere zusätzliche Optionen (z. B. DIFFERENTIAL) angegeben werden.<br /><br /> Hinweis: Für eine differenzielle Dateisicherung ist eine vollständige Dateisicherung als Basis erforderlich. Weitere Informationen finden Sie unter [Erstellen einer differenziellen Datenbanksicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md).|  
   
 2.  Bei Verwendung des vollständigen Wiederherstellungsmodells müssen Sie auch das Transaktionsprotokoll sichern. Es müssen ausreichend Protokollsicherungen vorhanden sein, die alle Dateisicherungen umfassen, ausgehend von der ersten Dateisicherung, damit ein vollständiger Dateisicherungssatz für die Wiederherstellung der Datenbank verwendet werden kann. Weitere Informationen finden Sie unter [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)vorbereiten.  
@@ -162,7 +162,7 @@ ms.lasthandoff: 11/17/2017
 #### <a name="a-create-a-file-backup-of-two-files"></a>A. Erstellen einer Dateisicherung für zwei Dateien  
  Im folgenden Beispiel wird eine differenzielle Dateisicherung für die `SGrp1Fi2` -Datei der Dateigruppe `SalesGroup1` und die `SGrp2Fi2` -Datei der Dateigruppe `SalesGroup2` erstellt.  
   
-```tsql  
+```sql  
 --Backup the files in the SalesGroup1 secondary filegroup.  
 BACKUP DATABASE Sales  
    FILE = 'SGrp1Fi2',   
@@ -174,7 +174,7 @@ GO
 #### <a name="b-create-a-full-file-backup-of-the-secondary-filegroups"></a>B. Erstellen einer vollständigen Dateisicherung der sekundären Dateigruppen  
  Im folgenden Beispiel wird eine vollständige Dateisicherung von jeder Datei der beiden sekundären Dateigruppen erstellt.  
   
-```tsql  
+```sql  
 --Back up the files in SalesGroup1.  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  
@@ -186,7 +186,7 @@ GO
 #### <a name="c-create-a-differential-file-backup-of-the-secondary-filegroups"></a>C. Erstellen einer differenziellen Dateisicherung der sekundären Dateigruppen  
  Im folgenden Beispiel wird eine differenzielle Dateisicherung von jeder Datei der beiden sekundären Dateigruppen erstellt.  
   
-```tsql  
+```sql  
 --Back up the files in SalesGroup1.  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  

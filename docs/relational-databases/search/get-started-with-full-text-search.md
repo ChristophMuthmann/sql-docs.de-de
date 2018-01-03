@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 65e7b1e15e55604eb6f92d0aed96d3be7dc54ad1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 50274b346c5a404c9d2c8f82dbd8d75664fa6bbe
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="get-started-with-full-text-search"></a>Erste Schritte mit der Volltextsuche
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Bei SQL Server-Datenbanken werden die Volltexte standardmäßig aktiviert. Bevor Sie Volltextabfragen jedoch ausführen können, müssen Sie einen Volltextkatalog und einen Volltextindex für die Tabellen oder indizierten Sichten, die Sie suchen möchten, erstellen.
@@ -50,7 +50,7 @@ Zum Einrichten der Volltextsuche mithilfe eines Assistenten finden Sie unter [Ve
   
 1.  Im Beispiel wird eine `AdvWksDocFTCat`CREATE FULLTEXT CATALOG [-Anweisung verwendet, um einen Volltextkatalog mit dem Namen](../../t-sql/statements/create-fulltext-catalog-transact-sql.md) zu erstellen:  
   
-    ```tsql
+    ```sql
     USE AdventureWorks;  
     GO  
     CREATE FULLTEXT CATALOG AdvWksDocFTCat;  
@@ -59,13 +59,13 @@ Zum Einrichten der Volltextsuche mithilfe eines Assistenten finden Sie unter [Ve
  
 2.  Bevor Sie einen Volltextindex für die Document-Tabelle erstellen können, müssen Sie sicherstellen, dass die Tabelle über einen eindeutigen, einspaltigen Index verfügt, der keine NULL-Werte zulässt. Die folgende [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) -Anweisung erstellt in der DocumentID-Spalte der Document-Tabelle den eindeutigen `ui_ukDoc`-Index:  
   
-    ```tsql 
+    ```sql 
     CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
     ```  
 
 3.  Nachdem Sie einen eindeutigen Schlüssel erstellt haben, können Sie in der `Document` -Tabelle einen Volltextindex erstellen, indem Sie die folgende [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) -Anweisung verwenden.  
   
-    ```tsql  
+    ```sql  
     CREATE FULLTEXT INDEX ON Production.Document  
     (  
         Document                         --Full-text index column name   
@@ -108,14 +108,14 @@ Wählen Sie stets den kleinsten eindeutigen Index, der verfügbar ist, als einde
   
  Die folgende [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung erstellt z.B. durch Kopieren aus der Systemstoppliste eine neue Volltext-Stoppliste mit dem Namen „myStoplist3“:  
   
-```tsql  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
  Die folgende [-Anweisung](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] ändert eine Stoppliste mit dem Namen „myStoplist“, indem zuerst für Spanisch und dann für Französisch das Wort „en“ hinzugefügt wird:  
   
-```tsql  
+```sql  
 ALTER FULLTEXT STOPLIST myStoplist ADD 'en' LANGUAGE 'Spanish';  
 ALTER FULLTEXT STOPLIST myStoplist ADD 'en' LANGUAGE 'French';  
 GO  

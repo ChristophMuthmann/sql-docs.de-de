@@ -3,7 +3,7 @@ title: OLE DB-Anbieter (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c95c8bdcf9c4c6d93fc94f8393909cdc758c7c87
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d16d75565f0488f641d10a46ea63e87cf184af8a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-providers-ado"></a>OLE DB-Anbieter (ADO)
 OLE DB definiert einen Satz von COM-Schnittstellen für Anwendungen mit einheitlichen Zugriff auf Daten bereitzustellen, die in verschiedenen Datenquellen gespeichert sind. Dieser Ansatz ermöglicht eine Datenquelle, die Daten über die Schnittstellen freizugeben, die Menge des DBMS-Funktionen, die die Datenquelle zu unterstützen. Programmbedingt die hohe Leistung Architektur von OLE DB Verwendungsmöglichkeiten eines Modells für flexible und komponentenbasierter Services basiert. Anstatt eine vorgegebene Anzahl von Zwischenkomponenten zwischen der Anwendung und die Daten erfordert OLE DB-nur, wenn viele Komponenten, wie die an eine bestimmte Aufgabe auszuführen.  

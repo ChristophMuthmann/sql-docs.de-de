@@ -3,7 +3,7 @@ title: Form von COMPUTE-Klausel | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1c894903c58613309ea0688a2d468e8f09b29097
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0c20aec7585c33a7165fac4e93b446e4ce3aaf4e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shape-compute-clause"></a>Shape-COMPUTE-Klausel
 Eine Form "COMPUTE-Klausel generiert ein übergeordnetes Element **Recordset**, einen Verweis auf das untergeordnete Element, dessen Spalten bestehen aus **Recordset**; Dies ist optional Spalten, deren Inhalt neue, Kapitel oder berechnete Spalten werden, oder die Ergebnis der Ausführung von Aggregatfunktionen auf dem untergeordneten Element **Recordset** oder eine zuvor geformten **Recordset**; und alle Spalten aus den untergeordneten **Recordset** abgelesen Das optionale BY-Klausel.  
@@ -82,7 +82,7 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.Or
   
  Nehmen wir beispielsweise an, dass Sie eine Tabelle namens Demographics verfügen Felder Zustand, Ort und Auffüllung besteht. (Die Auffüllung Zahlen in der Tabelle dienen lediglich als Beispiel).  
   
-|Status|City|Auffüllung|  
+|Status|Ort|Auffüllung|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
 |oder|Medford|200,000|  
@@ -118,21 +118,21 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 ## <a name="child1"></a>Child1  
   
-|Status|City|Auffüllung|  
+|Status|Ort|Auffüllung|  
 |-----------|----------|----------------|  
 |CA|Los Angeles|800,000|  
 |CA|SAN Diego|600,000|  
   
 ## <a name="child2"></a>Child2  
   
-|Status|City|Auffüllung|  
+|Status|Ort|Auffüllung|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
 |WA|Tacoma|500,000|  
   
 ## <a name="child3"></a>Child3  
   
-|Status|City|Auffüllung|  
+|Status|Ort|Auffüllung|  
 |-----------|----------|----------------|  
 |oder|Medford|200,000|  
 |oder|Portland|400,000|  

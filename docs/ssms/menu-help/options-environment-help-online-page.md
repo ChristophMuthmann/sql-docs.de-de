@@ -3,7 +3,7 @@ title: "Optionen (Umgebung – Hilfe – Seite „Online“) | Microsoft-Dokumen
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3cbb96fdd292aabaf655ab69d9a8f44928705f2e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 864a8798e9778b16eb49592c8f4e2b801ed1749d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="options-environment---help---online-page"></a>Optionen (Umgebung – Hilfe – Seite „Online“)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Im Dialogfeld **Optionen** können Sie die bei Suchvorgängen in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] zu verwendenden Hilfequellen angeben, einschließlich der F1-Hilfe. Klicken Sie im Menü **Extras** auf **Optionen**, erweitern Sie den Ordner **Umgebung** , wählen Sie **Hilfe**, und klicken Sie anschließend auf **Online**. Wenn die Seite **Online** in der Liste nicht angezeigt wird, aktivieren Sie im Dialogfeld **Optionen** das Kontrollkästchen **Alle Einstellungen anzeigen** .  

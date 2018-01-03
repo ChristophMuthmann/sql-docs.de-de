@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b0c6e128f6b2213e1a4a2af46281388f7c8a593
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 90bd63c6177591fbc3a92bf88f11f72eca4b2e58
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Erstellen und Verwalten von Volltextindizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Dieses Thema beschreibt das Erstellen, Auffüllen und Verwalten von Volltextindizes in SQL Server.
@@ -74,7 +74,7 @@ Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../../re
   
 5.  Im Bereich **Seite auswählen** können Sie eine der folgenden Seiten auswählen:  
   
-    |Page|Description|  
+    |Seite|Description|  
     |----------|-----------------|  
     |**Allgemein**|Ändert die grundlegenden Eigenschaften des Volltextindex. Beinhaltet mehrere änderbare Eigenschaften und eine Reihe von nicht änderbaren Eigenschaften, wie z. B. Datenbankname, Tabellenname und den Namen der Volltextschlüsselspalte. Die änderbaren Eigenschaften lauten:<br /><br /> **Volltextindex-Stoppliste**<br /><br /> **Volltextindizierung aktiviert**<br /><br /> **Änderungsnachverfolgung**<br /><br /> **Sucheigenschaftenliste**<br /><br />Weitere Informationen finden Sie unter [Volltextindex-Eigenschaften &#40;Seite Allgemein&#41;](http://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f).|  
     |**Spalten**|Zeigt die Tabellenspalten an, die für die Volltextindizierung verfügbar sind. Die ausgewählte Spalte bzw. die Spalten werden volltextindiziert. Sie können beliebig viele verfügbare Spalten auswählen und in den Volltextindex aufnehmen. Weitere Informationen finden Sie unter [Volltextindex-Eigenschaften &#40;Seite „Spalten“&#41;](http://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35).|  
@@ -87,7 +87,7 @@ Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../../re
   
  Die folgende Tabelle enthält die Volltexteigenschaften, die sich auf indizierte Tabellen und Spalten beziehen, sowie die zugehörigen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen.  
   
-|Eigenschaft|Beschreibung|Funktion|  
+|Eigenschaft|Description|Funktion|  
 |--------------|-----------------|--------------|  
 |**FullTextTypeColumn**|TYPE COLUMN in der Tabelle, die die Dokumenttypinformationen der Spalte enthält.|[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)|  
 |**IsFulltextIndexed**|Gibt an, ob eine Spalte für die Volltextindizierung aktiviert wurde.|COLUMNPROPERTY|  
@@ -174,7 +174,7 @@ GO
   
 Beachten Sie, dass das Volltextmodul vorhandene Filter nutzen kann, die im Betriebssystem installiert sind. Bevor die Filter, Wörtertrennungen und Wortstammerkennungen des Betriebssystems verwendet werden können, müssen Sie diese in der Serverinstanz laden. Dies wird im Folgenden beschrieben:  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_service @action='load_os_resources', @value=1  
 ```  
   

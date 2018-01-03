@@ -3,7 +3,7 @@ title: Parametrisierte Befehle mit dazwischen liegenden COMPUTE-Befehlen | Micro
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c21676293fe0d395a1e0cc5952a3d6fab1951d60
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7d59ce82d8c0d451495b229cc285e25286f5d197
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>Parametrisierte Befehle mit dazwischen liegenden COMPUTE-Befehlen
 Eine typische parametrisierte Form ANFÜGEN-Befehl hat eine Klausel, die ein übergeordnetes Element erstellt **Recordset** mit einem Abfragebefehl und eine weitere Klausel, die ein untergeordnetes Element erstellt **Recordset** mit einer parametrisierten Abfrage-Befehl: d. h. einen Befehl mit einem Platzhalter für Parameter (ein Fragezeichen "?"). Das resultierende strukturierte **Recordset** hat zwei Ebenen, in dem das übergeordnete Element die obere Ebene belegt, und das untergeordnete Element nimmt die untere Ebene.  

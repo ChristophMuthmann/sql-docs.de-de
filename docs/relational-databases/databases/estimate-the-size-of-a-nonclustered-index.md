@@ -4,7 +4,9 @@ ms.custom:
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: SQL
+ms.prod_service: database-engine, sql-database
+ms.component: indexes
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,13 +25,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5909e7d45ba7c90f82a57266994108892201c632
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 3f8256186a41f596d981d03fcbc8aa247e1794a3
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Schätzen der Größe eines nicht gruppierten Index
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   Befolgen Sie diese Schritte, um abzuschätzen, wie viel Speicherplatz zum Speichern eines nicht gruppierten Index erforderlich ist.  
   
 1.  Berechnen Sie die Variablen zur Verwendung in Schritt 2 und 3.  
@@ -258,7 +263,7 @@ ms.lasthandoff: 12/01/2017
   
      Informationen zu den Speicherplatzanforderungen von Sparsespalten finden Sie unter [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Beschreibung von gruppierten und nicht gruppierten Indizes](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  [Erstellen nicht gruppierter Indizes](../../relational-databases/indexes/create-nonclustered-indexes.md)   
  [Erstellen gruppierter Indizes](../../relational-databases/indexes/create-clustered-indexes.md)   

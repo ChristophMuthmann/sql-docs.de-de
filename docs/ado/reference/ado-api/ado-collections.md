@@ -3,7 +3,7 @@ title: ADO-Auflistungen | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5b6bc8649cca88a6a132db440a3294989dfdcadb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 911a1225bc9dd14cbf7bdc68ceb67af77ff819bb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-collections"></a>ADO-Auflistungen
 Werden die Beziehungen zwischen diesen Auflistungen und ADO-Objekten dargestellt, der [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md).  
@@ -34,7 +34,7 @@ Werden die Beziehungen zwischen diesen Auflistungen und ADO-Objekten dargestellt
 |||  
 |-|-|  
 |[Fehler](../../../ado/reference/ado-api/errors-collection-ado.md)|Enthält alle der **Fehler** in Reaktion auf einen einzelnen anbieterbezogenen Fehler erstellten Objekte.|  
-|[Felder](../../../ado/reference/ado-api/fields-collection-ado.md)|Enthält alle der **Feld** Objekte von einem **Recordset** Objekt.|  
+|[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)|Enthält alle der **Feld** Objekte von einem **Recordset** Objekt.|  
 |[Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md)|Enthält alle der **Parameter** Objekte von einem **Befehl** Objekt.|  
 |[Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md)|Enthält alle der **Eigenschaft** Objekte für eine bestimmte Instanz eines Objekts.|  
   

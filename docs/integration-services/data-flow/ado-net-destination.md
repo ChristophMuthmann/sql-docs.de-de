@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ca2ed5ed71eff099a77151690422d51ec648237
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3bd7ded25119de1acc18ded3d2add5de52441399
+ms.sourcegitcommit: d70b1c121c8536f92c90bf90f2e2b126acbc86de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="ado-net-destination"></a>ADO NET-Ziel
   Das ADO NET-Ziel lädt Daten in eine Reihe von [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-kompatible Datenbanken, die eine Datenbanktabelle oder -sicht verwenden. Sie haben die Möglichkeit, diese Daten in eine vorhandene Tabelle oder Sicht zu laden, oder Sie können eine neue Tabelle erstellen und die Daten in die neue Tabelle laden.  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/20/2017
   
 ### <a name="static-options"></a>Statische Optionen  
  **Connection manager**  
- Wählen Sie einen vorhandenen Verbindungs-Manager aus der Liste aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
+ Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
   
  **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **ADO.NET-Verbindungs-Manager konfigurieren** einen neuen Verbindungs-Manager.  
@@ -104,10 +104,10 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Wenn eine SQL Server- oder Sybase-Quelltabelle eine Identitätsspalte enthält, müssen Sie SQL ausführen-Tasks zum Aktivieren von IDENTITY_INSERT vor dem ADO NET-Ziel und zum Deaktivieren danach verwenden. (Die Identitätsspalteneigenschaft gibt einen inkrementellen Wert für die Spalte an. Die SET IDENTITY_INSERT-Anweisung ermöglicht das Einfügen expliziter Werte aus der Quelltabelle in die Identitätsspalte der Zieltabelle.)  
 >   
->   Um die SET IDENTITY_INSERT-Anweisungen und das Laden der Daten erfolgreich auszuführen, müssen Sie mit den folgenden Schritten vorgehen. 
->       1. Verwenden Sie den gleichen ADO.NET-Verbindungs-Manager für die „SQL ausführen“-Tasks und das ADO.NET-Ziel. 
->       2. Legen Sie auf dem Verbindungs-Manager die Eigenschaft **RetainSameConnection** und die Eigenschaft **MultipleActiveResultSets** auf „true“ fest. 
->       3. Legen Sie auf dem ADO.NET-Ziel die Eigenschaft **UseBulkInsertWhenPossible** auf „false“ fest. 
+>   Um die SET IDENTITY_INSERT-Anweisungen und das Laden der Daten erfolgreich auszuführen, müssen Sie mit den folgenden Schritten vorgehen.  
+>       1. Verwenden Sie den gleichen ADO.NET-Verbindungs-Manager für die „SQL ausführen“-Tasks und das ADO.NET-Ziel.  
+>       2. Legen Sie auf dem Verbindungs-Manager die Eigenschaft **RetainSameConnection** und die Eigenschaft **MultipleActiveResultSets** auf „true“ fest.  
+>       3. Legen Sie auf dem ADO.NET-Ziel die Eigenschaft **UseBulkInsertWhenPossible** auf „false“ fest.   
 >
 >  Weitere Informationen finden Sie unter [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) und [IDENTITY &#40;Eigenschaft&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
   
@@ -125,7 +125,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  Klicken Sie im **ADO.NET-Ziel-Editor**auf **Zuordnungen**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten in der Tabelle Zielspalten zuordnen.  
   
@@ -149,7 +149,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  Klicken Sie im **ADO.NET-Ziel-Editor**auf **Fehlerausgabe**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Eingabe oder Ausgabe**  
  Zeigt den Namen der Eingabe an.  
   
@@ -164,7 +164,7 @@ ms.lasthandoff: 11/20/2017
  **Abschneiden**  
  Wird nicht verwendet.  
   
- **Description**  
+ **Beschreibung**  
  Zeigt die Beschreibung des Vorgangs an.  
   
  **Diesen Wert für ausgewählte Zellen festlegen**  

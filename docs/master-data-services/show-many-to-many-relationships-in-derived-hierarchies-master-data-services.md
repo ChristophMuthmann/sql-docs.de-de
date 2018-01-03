@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec18dcf8fd78dbee82bf74adcf4e492dca604049
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0d5c10d9e0e34352db32481270343f948277149d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Anzeigen von m:n-Beziehungen in abgeleiteten Hierarchien (Master Data Services)
   Abgeleitete Hierarchien zeigen (DH) 1:n-Beziehungen an und können jetzt auch m:n-Beziehungen anzeigen.  
@@ -94,7 +94,7 @@ Eine Anleitung zum Bereitstellen des Customer-Beispielmodells und weitere in [!I
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
 ##  <a name="bkmk_member_security"></a> Elementsicherheit  
- Eine Hierarchie, die das Kopieren von Elementen ermöglicht (dadurch kann ein Element mehrere übergeordnete Elemente aufweisen), kann nicht dazu verwendet werden, um Elementsicherheitsberechtigungen zuzuweisen. Beispiel:  
+ Eine Hierarchie, die das Kopieren von Elementen ermöglicht (dadurch kann ein Element mehrere übergeordnete Elemente aufweisen), kann nicht dazu verwendet werden, um Elementsicherheitsberechtigungen zuzuweisen. Zum Beispiel:  
   
 -   Eine rekursive abgeleitete Hierarchie, die keine Null-Rekursionen verankert (jedes Element der rekursiven Ebene wird sowohl unter ROOT als auch unter seinem rekursiven übergeordneten Element angezeigt).  
   
@@ -105,7 +105,7 @@ Eine Anleitung zum Bereitstellen des Customer-Beispielmodells und weitere in [!I
 ## <a name="collections"></a>Auflistungen  
  Sammlungen und explizite Hierarchien sind veraltet. Die gespeicherte Konvertierungsprozedur (udpConvertCollectionAndConsolidatedMembersToLeaf) konvertiert Sammlungselemente in Blattelemente und erstellt abgeleitete m:n-Hierarchien, um die Informationen zur Sammlungsmitgliedschaft zu erfassen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Abgeleitete Hierarchien &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

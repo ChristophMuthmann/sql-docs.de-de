@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a505859d320552f4c591e61440a5b97bf92d8e17
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 21b7665fa4beaf0dc48f336c7f706f1a12ed4865
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>Schnellstart: Erweiterte Ereignisse in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ Sie können die Schritte verstehen, selbst wenn Sie sich entscheiden, diese nich
 - Allgemein
 - Ereignisse
 - Datenspeicher
-- Erweitert
+- Erweitert:
 
 
 Der Text und die unterstützenden Screenshots können im Laufe der Monate oder Jahre etwas ungenau werden, wenn die SSMS-Benutzeroberfläche optimiert wird. Die Screenshots dienen jedoch weiterhin zur Erläuterung, wenn sie nur geringe Abweichungen aufweisen.
@@ -97,7 +97,7 @@ Der Text und die unterstützenden Screenshots können im Laufe der Monate oder J
 
 2. Klicken Sie im Objekt-Explorer auf **Verwaltung** > **Erweiterte Ereignisse** > **Neue Sitzung**. Das Dialogfeld **Neue Sitzung** ist dabei dem **Assistenten für neue Sitzungen**vorzuziehen, obwohl die beiden einander ähnlich sind.
 
-3. Klicken Sie in der linken oberen Ecke auf die Seite **Allgemein** . Geben Sie *YourSession*oder einen beliebigen Namen in das Textfeld **Sitzungsname** ein. Drücken Sie noch *nicht* die Schaltfläche **OK** , die nur am Ende der Demo auftritt.
+3. Klicken Sie in der linken oberen Ecke auf die Seite **Allgemein** . Geben Sie *YourSession*oder einen beliebigen Namen in das Textfeld **Sitzungsname** ein. Drücken Sie noch *nicht* die Schaltfläche **OK**, die nur am Ende der Demo auftritt.
 
     ![Neue Sitzung > Allgemein > Sitzungsname](../../relational-databases/extended-events/media/xevents-session-newsessions-10-general-ssms-yoursessionnode.png)
 
@@ -105,17 +105,17 @@ Der Text und die unterstützenden Screenshots können im Laufe der Monate oder J
 
     ![Neue Sitzung > Ereignisse > Auswählen > Ereignisbibliothek, Ausgewählte Ereignisse](../../relational-databases/extended-events/media/xevents-session-newsessions-14-events-ssms-rightclick-not-wizard.png)
 
-5. Wählen Sie im Bereich **Ereignisbibliothek** in der Dropdownliste **Nur Ereignisnamen**aus.
+5. Wählen Sie im Bereich **Ereignisbibliothek** in der Dropdownliste **Nur Ereignisnamen** aus.
     - Geben Sie **sql**in das Textfeld ein, wodurch die lange Liste der verfügbaren Ereignisse mithilfe eines *Enthält* -Operators gefiltert und somit verkürzt wird.
     - Scrollen Sie zum Ereignis **sql_statement_completed**, und klicken Sie anschließend darauf.
     - Klicken Sie auf den Pfeil nach rechts **>** , um das Ereignis in das Feld **Ausgewählte Ereignisse** zu verschieben.
 
 6. Bleiben Sie auf der Seite **Ereignisse** , und klicken Sie ganz rechts auf die Schaltfläche **Konfigurieren** .
-    - Im folgenden Screenshot sehen Sie den Bereich **Optionen für die Ereigniskonfiguration** , wobei die linke Seite zur besseren Ansicht abgeschnitten ist.
+    - Im folgenden Screenshot sehen Sie den Bereich **Optionen für die Ereigniskonfiguration**, wobei die linke Seite zur besseren Ansicht abgeschnitten ist.
 
     ![Neue Sitzung > Ereignisse > Konfigurieren > Filter (Prädikat) > Feld](../../relational-databases/extended-events/media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png)
 
-7. Klicken Sie auf die Registerkarte **Filter (Prädikat)** . Klicken Sie anschließend auf **Klicken Sie hier, um eine Klausel hinzuzufügen**, um alle SQL SELECT-Anweisungen zu erfassen, die eine HAVING-Klausel aufweisen.
+7. Klicken Sie auf die Registerkarte **Filter (Prädikat)**. Klicken Sie anschließend auf **Klicken Sie hier, um eine Klausel hinzuzufügen**, um alle SQL SELECT-Anweisungen zu erfassen, die eine HAVING-Klausel aufweisen.
 
 8. Wählen Sie in der Dropdownliste **Feld** die Option **sqlserver.sql_text**aus.
    - Wählen Sie für **Operator** einen LIKE-Operator aus.
@@ -138,11 +138,11 @@ Der Text und die unterstützenden Screenshots können im Laufe der Monate oder J
 
     ![Neue Sitzung > Erweitert > Maximale Verteilungslatenzzeit > OK](../../relational-databases/extended-events/media/xevents-session-newsessions-40-advanced-ssms-yoursessionnode.png)
 
-12. Klicken Sie in der linken oberen Ecke auf die Seite **Erweitert** .
+12. Klicken Sie in der linken oberen Ecke auf die Seite **Erweitert**.
     - Verringern Sie den Wert für **Maximale Verteilungslatenzzeit** auf 3 Sekunden.
     - Klicken Sie abschließend unten auf die Schaltfläche **OK** .
 
-13. Erweitern Sie dann im **Objekt-Explorer**die Option **Verwaltung** > **Sitzungen**, und beachten Sie den neuen Knoten für **YourSession**.
+13. Erweitern Sie dann im **Objekt-Explorer** die Option **Verwaltung** > **Sitzungen**, und beachten Sie den neuen Knoten für **YourSession**.
 
     ![Knoten für Ihre neue *Ereignissitzung* namens „YourSession“ im Objekt-Explorer unter „Verwaltung > Erweiterte Ereignisse > Sitzungen“](../../relational-databases/extended-events/media/xevents-session-newsessions-50-objectexplorer-ssms-yoursessionnode.png)
 
@@ -165,7 +165,7 @@ Sie haben die SSMS-Benutzeroberfläche verwendet, um ein T-SQL-Skript zu generie
 Als Nächstes folgt die T-SQL CREATE EVENT SESSION-Anweisung für *YourSession*, die durch Klicken auf der Benutzeroberfläche generiert wurde:
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [YourSession]
     ON SERVER 
     ADD EVENT sqlserver.sql_statement_completed
@@ -206,7 +206,7 @@ GO
 Vor der CREATE EVENT SESSION-Anweisung sollten Sie eine DROP EVENT SESSION-Anweisung für den Fall bedingt ausgeben, dass der Name bereits vorhanden ist.
 
 
-```tsql
+```sql
 IF EXISTS (SELECT *
       FROM sys.server_event_sessions    -- If Microsoft SQL Server.
     --FROM sys.database_event_sessions  -- If Azure SQL Database in the cloud.
@@ -226,7 +226,7 @@ go
 Wenn Sie eine Ereignissitzung erstellen, wird sie gemäß der Standardeinstellung nicht automatisch gestartet. Sie starten die Ereignissitzung jederzeit mithilfe der folgenden T-SQL ALTER EVENT SESSION-Anweisung starten oder beenden.
 
 
-```tsql
+```sql
 ALTER EVENT SESSION [YourSession]
       ON SERVER
     --ON DATABASE
@@ -252,7 +252,7 @@ Verwenden Sie die folgenden einfachen Schritte zum Testen Ihrer Ereignissitzung:
 
 
 
-```tsql
+```sql
 SELECT
         c.name,
         Count(*)  AS [Count-Per-Column-Repeated-Name]
@@ -304,7 +304,7 @@ Führen Sie in SSMS die folgende T-SQL SELECT-Anweisung aus, um Ergebnisse zurü
 > Das Ereignissystem fügt immer eine lange Zahl an den von Ihnen angegebenen Dateinamen für „ *.xel* event_file“ an. Bevor Sie die folgende SELECT-Anweisung aus der Datei ausführen können, müssen Sie den vom System angegebenen vollständigen Namen kopieren und in die SELECT-Anweisung einfügen.
 
 
-```tsql
+```sql
 SELECT
         object_name,
         file_name,
@@ -430,7 +430,7 @@ Bestimmte Szenarien für Ereignissitzungen, die auf den Zugriff von Sperren ausg
 In der folgenden Tabelle sind die für erweiterte Ereignisse verwendeten Begriffe aufgeführt. Zudem werden ihre Bedeutungen beschrieben.
 
 
-| Begriff | Beschreibung |
+| Begriff | Description |
 | :--- | :---------- |
 | Ereignissitzung | Ein Konstrukt, das um mindestens ein Ereignis angeordnet ist, sowie unterstützende Elemente (wie Aktionen) stellen Ziele dar. Die CREATE EVENT SESSION-Anweisung erstellt jede Ereignissitzung. Sie können eine Ereignissitzung mithilfe der ALTER-Anweisung bei Bedarf starten und beenden. <br/> <br/> Eine Ereignissitzung wird gelegentlich nur als *Sitzung*bezeichnet, wenn der Kontext verdeutlicht, dass es sich um eine *Ereignissitzung*handelt. <br/> <br/> Weitere Informationen zu Ereignissitzungen werden im folgenden Abschnitt beschrieben: [Sitzungen für erweiterte Ereignisse von SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md). |
 | Ereignis | Ein bestimmtes Vorkommen im System, das von einer aktiven Ereignissitzung überwacht wird. <br/> <br/> Das Ereignis *sql_statement_completed* stellt z. B. den Zeitpunkt dar, zu dem jede angegebene T-SQL-Anweisung abgeschlossen wird. Das Ereignis kann seine Dauer und andere Daten melden. |
@@ -446,7 +446,7 @@ In der folgenden Tabelle sind die für erweiterte Ereignisse verwendeten Begriff
 Die folgende T-SQL SELECT-Anweisung gibt eine Zeile für alle verfügbaren Ereignisse zurück, deren Name die drei Zeichen umfassende Zeichenfolge „sql“ enthält. Natürlich können Sie den LIKE-Wert bearbeiten, um andere Ereignisnamen zu suchen. Die Zeilen benennen auch das Paket, das das Ereignis enthält.
 
 
-```tsql
+```sql
 SELECT   -- Find an event you want.
         p.name         AS [Package-Name],
         o.object_type,
@@ -578,7 +578,7 @@ Mithilfe der folgenden Transact-SQL SELECT-Anweisungen kann gemeldet werden, wer
 Die folgende SELECT...UNION ALL-Anweisung gibt Zeilen zurück, die angeben, wer über die erforderlichen Berechtigungen zum Erstellen von Ereignissitzungen und zum Abfragen der Systemkatalogsichten für erweiterte Ereignisse verfügt.
 
 
-```tsql
+```sql
 -- Ascertain who has the permissions listed in the ON clause.
 -- 'CONTROL SERVER' permission includes the permissions
 -- 'ALTER ANY EVENT SESSION' and 'VIEW SERVER STATE'.
@@ -636,7 +636,7 @@ Die folgende SELECT-Anweisung meldet Ihre Berechtigungen. Sie beruht auf der int
 Wenn Sie zudem über die Berechtigung verfügen, temporär die Identität anderer Konten *anzunehmen* , können Sie die Auskommentierung der [EXECUTE AS LOGIN](../../t-sql/statements/execute-as-transact-sql.md) - und REVERT-Anweisungen aufheben, um sich über die anderen Konten zu informieren.
 
 
-```tsql
+```sql
 --EXECUTE AS LOGIN = 'AccountNameHere';
 SELECT HAS_PERMS_BY_NAME(
     null, null,

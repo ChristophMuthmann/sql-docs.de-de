@@ -5,7 +5,7 @@ ms.date: 09/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 76cced5552daf87bffa6ac234f54c3ee780349a9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7e7b7e796c6badea38ea4423561d26e7f53eb95d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Neuigkeiten in Integration Services in SQL Server 2017
 Dieses Thema beschreibt die Funktionen, die in [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]hinzugefügt oder aktualisiert wurden.
@@ -42,12 +42,12 @@ Im Folgenden finden Sie die wichtigsten neuen Funktionen von Integration Service
 ## <a name="new-in-azure-data-factory"></a>Neues in Azure Data Factory
 
 In der öffentlichen Vorschauversion von Azure Data Factory Version 2, die seit September 2017 zur Verfügung steht, ist nun Folgendes möglich:
--   Bereitstellen von Paketen in der SSIS-Katalogdatenbank (SSISDB) für Azure SQL-Datenbank.
+-   Bereitstellen von Paketen in der SSIS-Katalogdatenbank (SSISDB) für Azure SQL-Datenbank
 -   Ausführen von Paketen, die in Azure in Azure SSIS Integration Runtime bereitgestellt wurden. Hierbei handelt es sich um eine Komponente von Azure Data Factory Version 2.
 
 Weitere Informationen finden Sie unter [Migration von SQL Server Integration Services-Workloads in die Cloud per Lift & Shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
 
-Diese neuen Funktionen erfordern SQL Server Data Tools (SSDT) Version 17.2 oder höher, jedoch nicht SQL Server 2017 oder SQL Server 2016. Wenn Sie Pakete in Azure bereitstellen, aktualisiert der Assistent für die Paketbereitstellung die Pakete immer auf das aktuelle Paketformat.
+Diese neuen Funktionen benötigen SQL Server Data Tools (SSDT) Version 17.2 oder höher, nicht jedoch SQL Server 2017 oder SQL Server 2016. Wenn Sie Pakete in Azure bereitstellen, aktualisiert der Assistent für die Paketbereitstellung die Pakete immer auf das aktuelle Paketformat.
 
 ## <a name="new-in-the-azure-feature-pack"></a>Neues in Azure Feature Pack
 

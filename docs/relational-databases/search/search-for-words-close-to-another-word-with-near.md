@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 362ce1e89941b1abb4578f1931d91d424ec68ae8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c3e51c4507973ef0e4394aef1049fe0edadf94f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Suchen von Wörtern in der Nähe eines anderen Worts mit NEAR
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Sie können in einem [CONTAINS](../../t-sql/queries/contains-transact-sql.md)-Prädikat oder in einer [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)-Funktion mithilfe des *Näherungsbegriffs* **NEAR** nach Wörtern oder Wendungen suchen, die nahe beieinander liegen. 
@@ -79,7 +79,7 @@ Weitere Informationen zur Syntax finden Sie unter [CONTAINS &#40;Transact-SQL&#4
 ### <a name="example-1"></a>Beispiel 1
  Sie können z. B. innerhalb der zwei Begriffe von 'Smith' wie folgt nach 'John' suchen:  
   
-```tsql
+```sql
 ... CONTAINS(column_name, 'NEAR((John, Smith), 2)')
 ```  
   
@@ -92,7 +92,7 @@ Weitere Informationen zur Syntax finden Sie unter [CONTAINS &#40;Transact-SQL&#4
 ### <a name="example-2"></a>Beispiel 2
  Im folgenden Beispiel wird die Tabelle `Production.Document` der Beispieldatenbank `AdventureWorks` nach allen Dokumentzusammenfassungen durchsucht, bei denen das Wort "reflector" im selben Dokument wie das Wort "bracket" enthalten ist.  
   
-```tsql
+```sql
 SELECT DocumentNode, Title, DocumentSummary  
 FROM Production.Document AS DocTable   
 INNER JOIN CONTAINSTABLE(Production.Document, Document,  
@@ -113,7 +113,7 @@ GO
  "`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`"  
   
 ## <a name="combine-near-with-other-terms"></a>Kombinieren von NEAR mit anderen Begriffen  
- Sie können NEAR mit einigen anderen Begriffen kombinieren. Sie können einen benutzerdefinierten NEAR-Begriff mit AND (&), OR (|) oder AND NOT (&!) mit einem anderen benutzerdefinierten NEAR-Begriff, einem einfachen Begriff oder einem Präfixbegriff kombinieren. Beispiel:  
+ Sie können NEAR mit einigen anderen Begriffen kombinieren. Sie können einen benutzerdefinierten NEAR-Begriff mit AND (&), OR (|) oder AND NOT (&!) mit einem anderen benutzerdefinierten NEAR-Begriff, einem einfachen Begriff oder einem Präfixbegriff kombinieren. Zum Beispiel:  
   
 -   CONTAINS('NEAR((*Begriff1*,*Begriff2*),5) AND *Begriff3*')  
   
@@ -158,7 +158,7 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
   
      Der Wert von **Füllwörtertransformation** wirkt sich darauf aus, wie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Stoppwörter behandelt werden, wenn diese in NEAR-Suchen angegeben sind. Weitere Informationen finden Sie unter [Füllwörtertransformation (Serverkonfigurationsoption)](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md).   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [Abfragen mit Volltextsuche](../../relational-databases/search/query-with-full-text-search.md)   

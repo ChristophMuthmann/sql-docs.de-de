@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3105ead24cc79ba2374e6caf1438ed1384078a01
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 375898263ea58a2ac8dd9e54f86257d07d1daeca
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="setup-steps-for-extensible-key-management-using-the-azure-key-vault"></a>Installationsschritte für die Erweiterbare Schlüsselverwaltung mit Azure Key Vault.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -247,7 +247,7 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
  Laden Sie den SQL Server-Connector aus dem [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?LinkId=521700)herunter. (Dies sollte vom Administrator des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Computers ausgeführt werden.)  
 
 > [!NOTE]  
->  Die Versionen 1.0.0.440 und älter wurden ersetzt und werden in Produktionsumgebungen nicht mehr unterstützt. Führen Sie ein Upgrade auf Version 1.0.1.0 oder höher durch, indem Sie das [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344) besuchen und die Anweisungen auf der Seite [SQL Server-Connector – Verwaltung und Problembehandlung](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) unter „Upgrade des SQL Server-Connectors“ ausführen.
+>  Die Versionen 1.0.0.440 und älter wurden ersetzt und werden nicht länger in Produktionsumgebungen unterstützt. Führen Sie ein Upgrade auf Version 1.0.1.0 oder höher durch, indem Sie das [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344) besuchen und die Anweisungen auf der Seite [SQL Server-Connector – Verwaltung und Problembehandlung](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) unter „Upgrade des SQL Server-Connectors“ ausführen.
   
  ![EKM-Connector-Installation](../../../relational-databases/security/encryption/media/ekm-connector-install.png "Ekm-Connector-Installation")  
   
@@ -273,7 +273,7 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
   
      Führen Sie das folgende [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Skript aus, um das [!INCLUDE[ssDE](../../../includes/ssde-md.md)] für die Verwendung eines EKM-Anbieters zu konfigurieren.  
   
-    ```tsql  
+    ```sql  
     -- Enable advanced options.  
     USE master;  
     GO  
@@ -294,7 +294,7 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
      Erstellen Sie einen Kryptografieanbieter mithilfe des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connectors, der einen EKM-Anbieter für den Azure Key Vault darstellt.    
     In diesem Beispiel wird der Name `AzureKeyVault_EKM_Prov`verwendet.  
   
-    ```tsql  
+    ```sql  
     CREATE CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
     FROM FILE = 'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
     GO  
@@ -324,9 +324,9 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
         > [!IMPORTANT]  
         >  Bindestriche müssen aus der **Client-ID**entfernt werden.  
   
-    -   Setzen Sie in den zweiten Teil des `SECRET` -Arguments den **geheimen Clientschlüssel** aus Teil I ein. In diesem Beispiel ist der **geheime Clientschlüssel** aus Teil I `Replace-With-AAD-Client-Secret`. Die endgültige Zeichenfolge für das `SECRET`-Argument ist eine lange Abfolge von Buchstaben und Ziffern *ohne Bindestriche*.  
+    -   Setzen Sie in den zweiten Teil des `SECRET` -Arguments den **geheimen Clientschlüssel** aus Teil I ein. In diesem Beispiel ist der **geheime Clientschlüssel** aus Teil I `Replace-With-AAD-Client-Secret`. Die endgültige Zeichenfolge für das `SECRET` -Argument ist eine lange Abfolge von Buchstaben und Ziffern *ohne Bindestriche*.  
   
-    ```tsql  
+    ```sql  
     USE master;  
     CREATE CREDENTIAL sysadmin_ekm_cred   
         WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
@@ -351,7 +351,7 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
   
     -   Ersetzen Sie `ContosoRSAKey0` durch den Namen Ihres Schlüssels im Azure Key Vault.  
   
-    ```tsql  
+    ```sql  
     CREATE ASYMMETRIC KEY CONTOSO_KEY   
     FROM PROVIDER [AzureKeyVault_EKM_Prov]  
     WITH PROVIDER_KEY_NAME = 'ContosoRSAKey0',  
@@ -361,7 +361,7 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
   
 Jetzt, da Sie die Grundkonfiguration abgeschlossen haben, erfahren Sie mehr zum [Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erweiterbare Schlüsselverwaltung mit Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)   
 [SQL Server-Connector – Verwaltung und Problembehandlung](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   

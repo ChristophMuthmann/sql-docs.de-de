@@ -28,13 +28,13 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 4e254e5338ef80143d5444ea0c4b4365b957c514
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4b31637578959e543e890de37c9f42e174e5b72c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/02/2018
 ---
-# <a name="upgrade-reports"></a>Aktualisieren von Berichten
+# <a name="upgrade-reports"></a>Upgrade Reports
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/05/2017
   
  Berichte werden nicht aktualisiert, wenn Sie eine Berichtsdefinitionsdatei direkt auf den Berichtsserver oder auf eine SharePoint-Website hochladen. Das Upgrade einer Berichtsdefinition in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ist die einzige Möglichkeit, die RDL-Datei zu aktualisieren.  
   
- Nachdem ein Bericht lokal oder auf dem Berichtsserver aktualisiert wurde, werden möglicherweise weitere Fehler, Warnungen und Meldungen angezeigt. Das ist das Ergebnis der Änderungen am internen Berichtsobjektmodell und an Verarbeitungskomponenten, die das Anzeigen von Meldungen bewirken, sobald zugrunde liegende Probleme im Bericht erkannt werden. Weitere Informationen finden Sie unter [Abwärtskompatibilität von Reporting Services](../../reporting-services/reporting-services-backward-compatibility.md "Abwärtskompatibilität | Reporting Services").  
+ Nachdem ein Bericht lokal oder auf dem Berichtsserver aktualisiert wurde, werden möglicherweise weitere Fehler, Warnungen und Meldungen angezeigt. Das ist das Ergebnis der Änderungen am internen Berichtsobjektmodell und an Verarbeitungskomponenten, die das Anzeigen von Meldungen bewirken, sobald zugrunde liegende Probleme im Bericht erkannt werden. Weitere Informationen finden Sie unter [Reporting Services Backward Compatibility](../../reporting-services/reporting-services-backward-compatibility.md).  
   
  Weitere Informationen zu neuen Funktionen für [!INCLUDE[ssRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md).  
 

@@ -3,9 +3,9 @@ title: "Ausführen des Transact-SQL-Debuggers | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -29,11 +29,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e081ce40af97789870b1ed63ff705db8113fb809
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 016079a4e88a669a8ea4be31652095cfc81b0184
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-the-transact-sql-debugger"></a>Ausführen des Transact-SQL-Debuggers
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können den [!INCLUDE[tsql](../../includes/tsql-md.md)]-Debugger starten, nachdem Sie ein [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Abfrage-Editor-Fenster geöffnet haben. Anschließend können Sie den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code im Debugmodus ausführen, bis Sie den Debugger beenden. Sie können Optionen festlegen, um die Ausführung des Debuggers anzupassen.  
@@ -110,7 +110,7 @@ ms.lasthandoff: 11/17/2017
 |**Alle Breakpoints deaktivieren**|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Deaktiviert alle Breakpoints.|  
 |Nicht verfügbar|**Überwachung hinzufügen**|Nicht verfügbar|Nicht verfügbar|Fügt dem **Überwachungsfenster** den ausgewählten Ausdruck hinzu.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Transact-SQL-Debugger](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Schrittweises Durchlaufen von Transact-SQL-Code](../../relational-databases/scripting/step-through-transact-sql-code.md)   
  [Transact-SQL-Debuggerinformationen](../../relational-databases/scripting/transact-sql-debugger-information.md)   

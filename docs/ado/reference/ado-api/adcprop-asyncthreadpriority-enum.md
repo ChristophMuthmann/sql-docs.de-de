@@ -3,7 +3,7 @@ title: ADCPROP_ASYNCTHREADPRIORITY_ENUM | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 39e10a6563e33ae1d1235bc220d7bd82826be853
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8a03809de8f86cf4ece91be598a71cd24b3ad9d7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adcpropasyncthreadpriorityenum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
 Für eine RDS [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt, gibt die Ausführungspriorität des asynchronen Threads, die Daten abruft.  
   
  Verwenden Sie diese Konstanten mit der **Recordset** "**Background Thread Priorität**" dynamische Eigenschaft, die im Index ADO, OLE DB-dynamische Eigenschaft verwiesen wird und die dokumentiert, die der [ Microsoft Cursor Service für OLE DB-](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) Dokumentation.  
   
-|Konstante|Wert|Description|  
+|Konstante|value|Description|  
 |--------------|-----------|-----------------|  
 |**adPriorityAboveNormal**|4|Legt die Priorität zwischen normalen und höchsten fest.|  
 |**adPriorityBelowNormal**|2|Legt die Priorität zwischen dem niedrigsten und "normal" fest.|  

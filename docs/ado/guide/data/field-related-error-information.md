@@ -3,7 +3,7 @@ title: Fehler im Zusammenhang mit dem Feld Informationen | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d37d91f2b35cf211044f2ac1f2bf8705bbc1ef16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 67404e4d66983c3cf64bd44a2d80c77c4eb99790
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="field-related-error-information"></a>Fehler im Zusammenhang mit dem Feld Informationen
 Wenn ein Fehler auf ein Feld direkt verknüpft ist – z. B. wenn die Daten nicht vorhanden ist oder wenn es sich um den falschen Typ für das Feld ist – Sie können weitere Informationen zur Ursache des Problems abrufen, indem Sie untersuchen die **Feld** des Objekts **Status**  Eigenschaft. Diese Eigenschaft wurde verbessert, um spezifische Informationen zum Problem bereit. Dies der Fall ist, z. B. bei einem Aufruf von **UpdateBatch** ein Fehler auftritt, die Ursache des Problems können ermittelt werden die **Status** Eigenschaft von der **Felder** in jeder von den betroffenen Datensätze. Die Eigenschaft enthält einen der Werte in der **FieldStatusEnum** konstant. Die folgende Tabelle enthält die Werte, die von besonderem Interesse sind, wenn ein Fehler auftritt.  
   
-|Konstante|Wert|Description|  
+|Konstante|value|Description|  
 |--------------|-----------|-----------------|  
 |**adFieldCantConvertValue**|2|Gibt an, dass das Feld kann nicht abgerufen werden oder, ohne dass Daten verloren gehen gespeichert.|  
 |**adFieldDataOverflow**|6|Gibt an, dass die Daten, die vom Anbieter zurückgegebene den Datentyp des Felds ist übergelaufen.|  

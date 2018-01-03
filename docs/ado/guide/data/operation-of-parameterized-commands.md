@@ -3,7 +3,7 @@ title: Von parametrisierten Befehlen | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5bce98fd15ac82cf9492b4f4454dba36146dd46f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 658d0dc9baa22006b327d826effb5687ccbc1822
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operation-of-parameterized-commands"></a>Von parametrisierten Befehlen
 Bei Verwendung mit einem großen untergeordneten **Recordset**, insbesondere auf die Größe des übergeordneten Elements verglichene **Recordset**, aber nur ein paar untergeordnete Kapitel zugreifen müssen Sie finden es vielleicht eine effizientere Verwendung eine parametrisierte Befehle.  

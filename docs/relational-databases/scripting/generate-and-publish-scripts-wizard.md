@@ -3,9 +3,9 @@ title: "Assistenten zum Generieren und Veröffentlichen von Skripts | Microsoft-
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -49,11 +49,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 69d2561990609eb94620ab8a3f7abd9c31dbb316
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 801dba9b807d9928f7d7dcb1db83274ca11ee778
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistenten zum Generieren und Veröffentlichen von Skripts
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können mit dem **Assistenten zum Generieren und Veröffentlichen von Skripts** Skripts zur Übertragung einer Datenbank zwischen Instanzen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] oder [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] erstellen. Sie können Skripts für eine Datenbank auf einer Datenbankmodul-Instanz im lokalen Netzwerk oder von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]aus generieren. Die generierten Skripts können auf einer anderen Datenbankmodul-Instanz oder von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]aus ausgeführt werden. Sie können den Assistenten außerdem dazu verwenden, den Inhalt einer Datenbank direkt in einem Webdienst zu veröffentlichen, der mit den Datenbank-Veröffentlichungsdiensten erstellt wurde. Sie können Skripts für eine gesamte Datenbank oder für eine Auswahl bestimmter Objekte erstellen.  
@@ -339,7 +339,7 @@ ms.lasthandoff: 11/17/2017
   
  **Abbrechen** – Klicken Sie hier, um den Assistenten vor Abschließen der Verarbeitung oder bei Auftreten eines Fehlers zu schließen.  
   
- **Fertig stellen** – Klicken Sie hier, um den Assistenten nach der Verarbeitung oder bei Auftreten eines Fehlers zu schließen.  
+ **Fertig stellen:** Klicken Sie hier, um den Assistenten nach der Verarbeitung oder bei Auftreten eines Fehlers zu schließen.  
  
 ## <a name="generating-scripts-on-azure-sql-data-warehouse"></a>Generieren von Skripts in Azure SQL Data Warehouse  
 
@@ -369,7 +369,7 @@ Wenn Sie [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] wie oben gezeigt als S
 
 Die in Schritt 4 festgelegten Optionen werden nicht gespeichert. Wenn Sie diese Optionen speichern möchten, befolgen Sie die Anweisungen in **Festlegen der Standardoptionen für die Skripterstellung auf SQL Data Warehouse**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Installieren von SMO](../../relational-databases/server-management-objects-smo/installing-smo.md)   
  [Kopieren von Datenbanken auf andere Server](../../relational-databases/databases/copy-databases-to-other-servers.md)  
   

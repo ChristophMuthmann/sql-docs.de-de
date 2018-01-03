@@ -3,7 +3,7 @@ title: "Objekte auswählen (Objekt-Explorer) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b2290199a222c9b914ca0d23a8065e699bf397d4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 27a9e701bc4dede53db94d2f9ab3260e3d305d81
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="select-objects-object-explorer"></a>Objekte auswählen (Objekt-Explorer)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Verwenden Sie das Dialogfeld **Objekte auswählen**, um der Liste in einem anderen Dialogfeld ein Objekt hinzuzufügen. Der Titel des Dialogfelds und die darin verfügbaren Optionen hängen davon ab, wie es geöffnet wurde. Es werden nur verfügbare Optionen angezeigt. Wenn Sie z. B. einen Besitzer für ein neues Objekt auswählen, sind nur Benutzernamen verfügbar.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Wählen Sie Objekttypen aus**  
 Zeigt eine Liste der Typen an, zu denen die auszuwählenden Objekte gehören. Zu diesen Typen gehören auch Prinzipale und sicherungsfähige Typen auf der [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Ebene und der Datenbankebene. Dieses Feld wird anhand der Auswahl im Dialogfeld **Objekttypen auswählen** ausgefüllt, auf das über die Schaltfläche **Objekttypen** zugegriffen wird.  
   

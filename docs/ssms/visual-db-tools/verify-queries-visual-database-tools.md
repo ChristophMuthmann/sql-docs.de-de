@@ -3,7 +3,7 @@ title: "Überprüfen von Abfragen (Visual Database Tools) | Microsoft-Dokumentat
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0353c23f4a47d8a4e432736e703b3115124bd7e2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b73437cb76c8132fc2045c5553387383207a7c7f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="verify-queries-visual-database-tools"></a>Überprüfen von Abfragen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Um Probleme zu vermeiden, können Sie die erstellte Abfrage auf richtige Syntax überprüfen. Diese Option ist insbesondere dann nützlich, wenn Sie Anweisungen im [SQL-Bereich](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)eingeben.  
@@ -43,7 +43,7 @@ Einige Hinweise, die beim Überprüfen von Abfragen bedacht werden sollten:
   
 -   Klicken Sie mit der rechten Maustaste in den **SQL-Bereich**, und wählen Sie im Kontextmenü den Befehl **SQL-Syntax überprüfen** aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Ausführen von Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
 [Ausführen grundlegender Vorgänge mit Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   

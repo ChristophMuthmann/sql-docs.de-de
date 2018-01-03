@@ -5,7 +5,7 @@ ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -18,11 +18,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 422b1a28f91bb33705f0cb6592f4a19bb6341e76
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d8f1ced372910b7fcd5e30a79b92de5808342738
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>Webkonfiguration (Seite im Konfigurations-Manager für Master Data Sevices)
   Verwenden Sie die Seite **Webkonfiguration** , um eine Website und eine Webanwendung zu konfigurieren. Sie können ferner die Data Quality Services aktivieren.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/20/2017
 |------------------|-----------------|  
 |**Integration in Data Quality Services aktivieren**|Aktivieren Sie diese Option, um die in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]. Weitere Informationen finden Sie unter [Aktivieren der Data Quality Services-Integration in Master Data Services](../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md).|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Master Data Services – Installation und Konfiguration](../master-data-services/master-data-services-installation-and-configuration.md) [Webanwendungsanforderungen &#40; Master Data Services &#41;](../master-data-services/install-windows/web-application-requirements-master-data-services.md)   
  [Erstellen einer Master Data Manager-Webanwendung &#40;Master Data Services&#41;](../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   

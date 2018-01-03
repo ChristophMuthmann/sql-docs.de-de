@@ -5,7 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4c51d7d251a7e445b85558dabd4bd5d4af80b4d8
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 842e5bd0bcae76eaffa174c0fdacaf420ae88c5e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lesson 1: Create a Project and Basic Package with SSIS
 
@@ -63,10 +63,10 @@ Das endgültige Ziel für die Quelldaten ist die **FactCurrency** -Faktentabelle
   
 |Spaltenname|Datentyp|Nachschlagetabelle|Suchspalte|  
 |---------------|-------------|----------------|-----------------|  
-|AverageRate|float|Keine|Keine|  
+|AverageRate|FLOAT|InclusionThresholdSetting|InclusionThresholdSetting|  
 |CurrencyKey|int (FK)|DimCurrency|CurrencyKey (PK)|  
 |DateKey|int (FK)|DimDate|DateKey (PK)|  
-|EndOfDayRate|float|Keine|Keine|  
+|EndOfDayRate|FLOAT|InclusionThresholdSetting|InclusionThresholdSetting|  
   
 ### <a name="mapping-source-data-to-be-compatible-with-the-destination"></a>Zuordnen der Quelldaten zum Ziel aus Kompatibilitätsgründen  
 Die Analyse der Quell- und Zieldatenformate ergibt, dass Suchvorgänge für die Werte **CurrencyKey** und **DateKey** notwendig sein werden. Die Transformationen, von denen diese Suchvorgänge ausgeführt werden, rufen die Werte **CurrencyKey** und **DateKey** ab, indem die alternativen Schlüssel aus den Dimensionstabellen **DimCurrency** und **DimDate** verwendet werden.  
@@ -75,8 +75,8 @@ Die Analyse der Quell- und Zieldatenformate ergibt, dass Suchvorgänge für die 
 |--------------------|--------------|---------------|-------------|  
 |0|FactCurrency|AverageRate|float|  
 |1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
-|2|DimDate|FullDateAlternateKey|Datum|  
-|3|FactCurrency|EndOfDayRate|float|  
+|2|DimDate|FullDateAlternateKey|date|  
+|3|FactCurrency|EndOfDayRate|FLOAT|  
   
 ## <a name="lesson-tasks"></a>Lektionsaufgaben  
 Diese Lektion enthält die folgenden Aufgaben:  

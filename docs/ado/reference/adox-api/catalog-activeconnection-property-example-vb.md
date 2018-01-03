@@ -3,7 +3,7 @@ title: Katalog ActiveConnection (VB-Beispiel) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2f1d3c53a021bc62d9ccb8cf93aae36c2dfe7ac9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8122300ca528db3e775d306ab43bff72654e7a12
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catalog-activeconnection-property-example-vb"></a>Beispiel für Katalog ActiveConnection-Eigenschaft (VB)
 Festlegen der [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) Eigenschaft, um eine gültige, offene Verbindung "geöffnet" des Katalogs. Aus einem Katalog öffnen können Sie die Schemaobjekte in diesem Katalog zugreifen.  

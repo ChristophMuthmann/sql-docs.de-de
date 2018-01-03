@@ -3,9 +3,9 @@ title: Suchen von Text mit Platzhaltern| Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 97576c021e902fb460181124cbf21c24833cf7bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 538191055aedb1c2caebe062d3227742a4e12e9c
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="search-text-with-wildcards"></a>Suchen von Text mit Platzhaltern
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mit den folgenden Ausdrücken lassen sich Zeichen oder Ziffern im Feld **Suchen nach** im Dialogfeld **Suchen und Ersetzen** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ersetzen.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
  Die folgende Tabelle enthält eine Beschreibung der Platzhalter, die unter **Verweisliste**verfügbar sind.  
   
-|expression|Syntax|Beschreibung|  
+|expression|Syntax|Description|  
 |----------------|------------|-----------------|  
 |Ein einzelnes Zeichen|?|Entspricht einem beliebigen einzelnen Zeichen.|  
 |Eine einzelne Ziffer|#|Entspricht einer beliebigen einzelnen Ziffer. Beispiel: 7# entspricht Zahlen, die aus einer 7 bestehen, gefolgt von einer anderen Zahl, wie 71, nicht aber 17.|  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
 |Ein oder mehrere Zeichen|*|Entspricht einem oder mehreren Zeichen. Beispiel: new* entspricht einem beliebigen Text mit der Buchstabenfolge "new", z. B. newfile.txt.|  
 |Zeichensatz|[ ]|Entspricht einem einzelnen Zeichen, das im Zeichensatz angegeben ist.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Suchen und Ersetzen](../../relational-databases/scripting/search-and-replace.md)   
  [Suchen von Text mit regulären Ausdrücken](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
   

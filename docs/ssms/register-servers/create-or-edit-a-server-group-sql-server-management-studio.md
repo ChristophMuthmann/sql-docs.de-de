@@ -3,7 +3,7 @@ title: Erstellen oder Bearbeiten einer Servergruppe (SQL Server Management Studi
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7e91da011789c674e8169a3ef3eb68630ac2b111
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b2bb7c1950d3a8dd84b6c5445bc48bf1ab104887
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>Erstellen oder Bearbeiten einer Servergruppe (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In diesem Thema wird beschrieben, wie Sie die Server in „Registrierte Server“ in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] organisieren, indem Sie Servergruppen erstellen und die Server den Servergruppen zuordnen. Servergruppen können jederzeit in Registrierte Server erstellt werden, aber auch beim Registrieren von Servern.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/05/2017
     > [!NOTE]  
     >  Sie können beim Registrieren eines Servers auch eine neue Servergruppe erstellen, indem Sie auf **Neue Gruppe**klicken und die entsprechenden Informationen im Dialogfeld **Neue Gruppe** eingeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Registrieren von Servern](../../tools/sql-server-management-studio/register-servers.md)  
   
   

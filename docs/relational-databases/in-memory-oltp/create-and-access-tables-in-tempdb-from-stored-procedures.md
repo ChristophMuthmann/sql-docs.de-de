@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 20efc092c1ec8caa7438c58c0767c6bcc8355bcd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 652d731aac746a5e8df4bc5ff84916596ea36106
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-and-access-tables-in-tempdb-from-stored-procedures"></a>Erstellen und Zugreifen auf Tabellen in TempDB aus gespeicherten Prozeduren
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ Weitere Details zur Speicheroptimierung temporärer Tabellen- und Tabellenvariab
   
   Im folgenden Beispiel wird veranschaulicht, wie Sie anstelle einer temporären Tabelle mit drei Spalten (id, ProductID, Quantity) eine Tabellenvariable **@OrderQuantityByProduct** des Typs **dbo.OrderQuantityByProduct**verwenden können:  
   
-```tsql  
+```sql  
 CREATE TYPE dbo.OrderQuantityByProduct   
   AS TABLE   
    (id INT NOT NULL PRIMARY KEY NONCLUSTERED HASH WITH (BUCKET_COUNT=100000),   
@@ -54,7 +54,7 @@ AS BEGIN ATOMIC WITH
   end  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Migrationsprobleme bei nativ kompilierten gespeicherten Prozeduren](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)   
  [Von In-Memory OLTP nicht unterstützte Transact-SQL-Konstrukte](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   

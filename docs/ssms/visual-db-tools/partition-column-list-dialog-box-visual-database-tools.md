@@ -3,7 +3,7 @@ title: Partitionsspaltenliste (Dialogfeld) (Visual Database Tools) | Microsoft-D
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bf4032ba86ee8cdb2b2ee32d787f8aa505f34a60
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 79eb525e471b463368cb928cae0dfcf3cf1bc797
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>Partitionsspaltenliste (Dialogfeld) (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Wenn einer Tabelle ein Partitionsschema zugeordnet ist, können Sie in diesem Dialogfeld auswählen, auf welche Spalte(n) die Partitionsfunktion angewendet wird. Damit die Funktion ordnungsgemäß ausgeführt wird, muss der Datentyp der ausgewählten Spalte dem Datentyp der Spalte entsprechen, die in der Partitionsfunktion definiert ist.  
@@ -33,9 +33,9 @@ Weitere Informationen über Partitionsschemas und Funktionen finden Sie in der S
 Datentyp  
 Zeigt die Datentypen der Spalten an, die im Partitionsschema definiert sind.  
   
-Column  
+Spalte  
 Stellt eine Dropdownliste bereit, aus der Sie die Spalte auswählen können, auf welche die Partitionsfunktion angewendet werden soll.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Tabelleneigenschaften &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  
   

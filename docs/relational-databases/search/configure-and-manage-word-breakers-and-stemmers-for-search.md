@@ -27,11 +27,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ba873b9ae0f29caa7acc85e5d5daed8dcbfd22a9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2df4759c6f2715706be48799e4190e309ffe3904
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Wörtertrennung und Wortstammerkennung führen eine linguistische Analyse aller volltextindizierten Daten aus. Die linguistische Analyse führt die folgenden beiden Schritte aus:
@@ -53,7 +53,7 @@ Um Wörtertrennungen und Wortstammerkennungen für alle von SQL Server unterstü
 
 Verwenden Sie die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, um die Liste der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Volltextsuche unterstützten Sprachen anzuzeigen. Das Vorhandensein einer Sprache in der Liste gibt an, dass Wörtertrennungen für diese Sprache registriert sind. 
   
-```tsql
+```sql
 SELECT * FROM sys.fulltext_languages
 ```
 
@@ -63,7 +63,7 @@ Zur Verwendung der Wörtertrennungen für eine Sprache durch die Volltextsuche m
 
 Verwenden Sie die folgende Anweisung, um die Liste der registrierten Wörtertrennungskomponenten anzuzeigen.
 
-```tsql
+```sql
 EXEC sp_help_fulltext_system_components 'wordbreaker';  
 GO  
 ```
@@ -88,7 +88,7 @@ Wenn Sie eine Wörtertrennung hinzufügen, entfernen oder ändern, müssen Sie d
   
 Führen Sie die folgende Anweisung aus, um die Wörtertrennungssprache bestimmter Spalten anzuzeigen.
    
-```tsql 
+```sql 
 SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
 ```  
 
@@ -99,9 +99,9 @@ Zusätzliche Optionen und weitere Informationen finden Sie unter [sys.fulltext_i
 
 ### <a name="info-about-the-mssqlserver30053-error"></a>Informationen zum Fehler MSSQLSERVER_30053
   
-|Eigenschaft|Wert|
+|Eigenschaft|value|
 |-|-|
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|30053|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
@@ -140,7 +140,7 @@ Zusätzliche Optionen und weitere Informationen finden Sie unter [sys.fulltext_i
 Dies ist wichtig, wenn ein Volltextkatalog importiert wurde, während eine Datenbank auf die neue Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktualisiert wurde. Eine oder mehrere Sprachen, die von den Volltextindizes im Volltextkatalog verwendet werden, sind jetzt ggf. neuen Wörtertrennungen zugeordnet. Weitere Informationen finden Sie unter [Upgrade der Volltextsuche](../../relational-databases/search/upgrade-full-text-search.md).  
   
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)    
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
  [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   

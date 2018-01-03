@@ -3,7 +3,7 @@ title: ADORecordsetConstruction Schnittstelle | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bd346172159ac3ee64d2c03a22f2c9a467fc2bcc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ad2a33da2d2e54f45e765bf21b2bca018128d139
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction-Schnittstelle
 Die **ADORecordsetConstruction** Schnittstelle wird verwendet, um eine ADO erstellen **Recordset** Objekt aus einer OLE DB- **Rowset** Objekt in einer C-/C++-Anwendung.  

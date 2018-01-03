@@ -3,7 +3,7 @@ title: Kopieren von Abfrageergebnissen (Visual Database Tools) | Microsoft-Dokum
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5bab1e49dc6e83401fec2ac6f0210f27801a7387
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 913fb6061bed6eaa47eff5f92d5d1c3064b1731f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="copy-query-results-visual-database-tools"></a>Kopieren von Abfrageergebnissen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können das Resultset in Form von durch Tabstopps getrenntem Text aus dem Bereich **Ergebnisse** kopieren. Dabei kann das gesamte Resultset oder eine beliebige Anzahl zusammenhängender oder nicht zusammenhängender Zeilen oder Zellen kopiert werden.  
@@ -55,6 +55,6 @@ ms.lasthandoff: 12/05/2017
   
 5.  Klicken Sie mit der rechten Maustaste darauf, und wählen Sie **Kopieren**aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Verwenden von Daten im Ergebnisbereich &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   

@@ -3,9 +3,9 @@ title: Drucken von Code und Ergebnissen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e90994acf92b6c2a3ba44d04ec62266f364a2dcc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6cdbf0bb1cc9965115d76cbf28d452db0e639f59
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="print-code-and-results"></a>Drucken von Code und Ergebnissen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Wenn Sie eine Abfrage oder Datei drucken, werden farbige Elemente in Farbe gedruckt, wenn Ihr Drucker Farbdruck unterstützt und die Farbdruckoption in der Druckerkonfiguration aktiviert ist.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
  Wenn im Editor die Zeilennummerierung aktiviert ist, werden die Zeilennummern nur gedruckt, wenn Sie über das Menü **Datei** im Dialogfeld **Drucken** die Option **Zeilennummern einschließen** auswählen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Ändern von Schriftfarbe, Schriftgrad und Schriftschnitt](../../relational-databases/scripting/change-font-color-size-and-style.md)  
   
   

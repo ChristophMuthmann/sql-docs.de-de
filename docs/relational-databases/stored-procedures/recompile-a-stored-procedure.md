@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d2f173b7e4c88182846f2613e24933ae4a470edb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 60eeccf774507cd6f4a949b7f0b5baf07b0bd960
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="recompile-a-stored-procedure"></a>Erneutes Kompilieren einer gespeicherten Prozedur
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In diesem Thema wird beschrieben, wie Sie eine gespeicherte Prozedur in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)] erneut kompilieren. Hierzu stehen drei Möglichkeiten zur Verfügung: die **WITH RECOMPILE** -Option in der Prozedurdefinition, beim Aufrufen der Prozedur der **RECOMPILE** -Abfragehinweis in einzelnen Anweisungen oder die gespeicherte Systemprozedur **sp_recompile** . In diesem Thema wird die Verwendung der WITH RECOMPILE-Option beim Erstellen einer Prozedurdefinition und Ausführen einer vorhandenen Prozedur beschrieben. Zudem wird erläutert, wie die gespeicherte Systemprozedur sp_recompile zum erneuten Kompilieren einer vorhandenen Prozedur verwendet wird.  
@@ -37,13 +37,13 @@ ms.lasthandoff: 11/17/2017
   
      [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Erneutes Kompilieren einer gespeicherten Prozedur mit:**  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
@@ -111,7 +111,7 @@ AS
   
      Kopieren Sie anschließend das zweite Codebeispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie dann auf **Ausführen**. Dadurch wird die Prozedur ausgeführt und der Abfrageplan der Prozedur erneut kompiliert.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXECUTE HumanResources.uspGetAllEmployees WITH RECOMPILE;  
@@ -129,7 +129,7 @@ GO
   
      Kopieren Sie anschließend das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie dann auf **Ausführen**. Dadurch wird die Prozedur nicht ausgeführt, aber für die erneute Kompilierung markiert, sodass ihr Abfrageplan bei der nächsten Ausführung der Prozedur aktualisiert wird.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_recompile N'HumanResources.uspGetAllEmployees';  
@@ -137,7 +137,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen einer gespeicherten Prozedur](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [Ändern einer gespeicherten Prozedur](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)   
  [Umbenennen einer gespeicherten Prozedur](../../relational-databases/stored-procedures/rename-a-stored-procedure.md)   

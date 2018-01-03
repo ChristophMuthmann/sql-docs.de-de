@@ -3,9 +3,9 @@ title: SQL Server-Bezeichner in PowerShell-Pfaden | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 95ead7b5686d23d3318d30b84abe868d00fb1622
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 43b6ff8e41bf17e5c41f79f65dac9b2714accec0
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>SQL Server-Bezeichnern in PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anbieter für Windows PowerShell verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner in Windows PowerShell-Pfaden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Bezeichner können Zeichen enthalten, die Windows PowerShell in Pfaden nicht unterstützt. Sie müssen diese Zeichen mit Escapezeichen versehen oder besondere Codierungen für sie verwenden, wenn Sie die Bezeichner in Windows PowerShell-Pfaden verwenden.  
@@ -59,7 +59,7 @@ SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing
 |Beschreibt, wie die hexadezimale Codierung für Zeichen in Begrenzungsbezeichnern angegeben wird, die in Windows PowerShell-Pfaden nicht unterstützt werden. Beschreibt außerdem, wie die Hexadezimalzeichen decodiert werden.|[Codierung und Decodierung von SQL Server-Bezeichnern](../../relational-databases/scripting/encode-and-decode-sql-server-identifiers.md)|  
 |Beschreibt, wie das Windows PowerShell-Escapezeichen für in PowerShell-Pfaden nicht unterstützte Zeichen verwendet wird.|[Escape-Bezeichner für SQL Server](../../relational-databases/scripting/escape-sql-server-identifiers.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server PowerShell-Anbieter](../../relational-databases/scripting/sql-server-powershell-provider.md)   
  [SQL Server-PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
  [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md)  

@@ -3,7 +3,7 @@ title: "Microsoft OLE DB-Anbieter für Microsoft Active Directory-Dienst | Micro
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c90c411842da3033b0be46330a2d9f2cb421c90b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a31421c2947f376b152826c87d2d01d1e0863da
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB-Anbieter für Microsoft Active Directory-Dienst
 Die Active Directory Service Interfaces (ADSI)-Anbieter ermöglicht ADO zur Verbindung mit heterogenen Verzeichnisdienste über ADSI. So erhält ADO-Anwendungen nur-Lese Zugriff auf die Microsoft Windows NT 4.0 oder Microsoft Windows 2000-Verzeichnisdienste, zusätzlich zu den LDAP-kompatibles Verzeichnisdienst und Novell-Verzeichnisdienste. ADSI selbst basiert auf ein Anbietermodell, damit bei einem neuen Anbieter gewähren Zugriff auf ein anderes Verzeichnis wird die ADO-Anwendung darauf nahtlos zugreifen werden. Der ADSI-Anbieter Freethread- und Unicode aktiviert ist.  
@@ -65,7 +65,7 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |*Root*|Gibt an, die **"ADsPath"** Objekt aus, das die Suche (d. h. vom Stamm der Suche) zu starten.|  
 |*Filter*|Gibt den Suchfilter im Format RFC 1960 an.|  
@@ -122,13 +122,13 @@ objectClass='user' AND objectCategory='Person'"
   
 |Methode|Verfügbar?|  
 |------------|----------------|  
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Nein|  
-|[Abbrechen](../../../ado/reference/ado-api/cancel-method-ado.md)|Nein|  
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Nein|  
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Nein|  
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|nein|  
+|[Abbrechen](../../../ado/reference/ado-api/cancel-method-ado.md)|nein|  
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|nein|  
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|nein|  
 |[Klon](../../../ado/reference/ado-api/clone-method-ado.md)|ja|  
 |[Schließen](../../../ado/reference/ado-api/close-method-ado.md)|ja|  
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Nein|  
+|[Löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|nein|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|ja|  
 |[Verschieben](../../../ado/reference/ado-api/move-method-ado.md)|ja|  
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|ja|  
@@ -136,12 +136,12 @@ objectClass='user' AND objectCategory='Person'"
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|ja|  
 |[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|ja|  
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|ja|  
-|[Öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md)|ja|  
+|[Datei](../../../ado/reference/ado-api/open-method-ado-recordset.md)|ja|  
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|ja|  
 |[Erneut synchronisieren](../../../ado/reference/ado-api/resync-method.md)|ja|  
 |[Unterstützt](../../../ado/reference/ado-api/supports-method.md)|ja|  
-|[Update](../../../ado/reference/ado-api/update-method.md)|Nein|  
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Nein|  
+|[Update](../../../ado/reference/ado-api/update-method.md)|nein|  
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|nein|  
   
  Weitere Informationen zu ADSI und die Einzelheiten des Anbieters finden Sie in den Active Directory-Dienstschnittstellen-Dokumentation oder besuchen Sie die ADSI-Webseite.  
   

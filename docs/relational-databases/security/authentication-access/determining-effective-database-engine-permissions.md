@@ -20,11 +20,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1435effb52d063e6b51d07343a0c042e4919b2f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5c940b6382349630be1de89e5fde8db3991500bb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Ermitteln effektiver Datenbankmodulberechtigungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ Dieses Thema beschreibt, wie Sie feststellen können, wer über Berechtigungen f
 Feste Serverrollen und feste Datenbankrollen verfügen über vorkonfigurierte Berechtigungen, die nicht geändert werden können. Um zu bestimmen, wer Mitglied der festen Serverrolle ist, führen Sie die folgende Abfrage aus.    
 >  [!NOTE] 
 >  Dies gilt nicht für SQL-Datenbank oder SQL Data Warehouse, bei denen die Berechtigungen auf Serverebene nicht verfügbar sind. Die `is_fixed_role`-Spalte von `sys.server_principals` wurde zu SQL Server 2012 hinzugefügt. Sie ist für ältere Versionen von SQL Server nicht erforderlich.  
-```tsql
+```sql
 SELECT SP1.name AS ServerRoleName, 
  isnull (SP2.name, 'No members') AS LoginName   
  FROM sys.server_role_members AS SRM
@@ -73,7 +73,7 @@ SELECT SP1.name AS ServerRoleName,
 >  * Diese Abfrage überprüft die Tabellen in der Master-Datenbank, sie kann jedoch in jeder Datenbank für das lokale Produkt ausgeführt werden. 
 
 Um zu bestimmen, wer die Mitglieder einer festen Datenbankrolle sind, führen Sie die folgende Abfrage in jeder Datenbank aus.
-```tsql
+```sql
 SELECT DP1.name AS DatabaseRoleName, 
    isnull (DP2.name, 'No members') AS DatabaseUserName 
  FROM sys.database_role_members AS DRM
@@ -113,7 +113,7 @@ Denken Sie daran, dass ein Windows-Benutzer Mitglied von mehr als einer Windows-
 Die folgende Abfrage gibt eine Liste der Berechtigungen zurück, die auf Serverebene erteilt oder verweigert wurden. Diese Abfrage sollte in der Master-Datenbank ausgeführt werden.   
 >  [!NOTE] 
 >  Berechtigungen auf Serverebene können nicht auf SQL-Datenbank oder SQL Data Warehouse abgefragt oder erteilt werden.   
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
  isnull (pe.permission_name, 'No permission statements') AS permission_name 
@@ -127,7 +127,7 @@ SELECT pr.type_desc, pr.name,
 ### <a name="database-permissions"></a>Datenbankberechtigungen
 
 Die folgende Abfrage gibt eine Liste der Berechtigungen zurück, die auf Datenbankebene erteilt oder verweigert wurden. Diese Abfrage sollte in jeder Datenbank ausgeführt werden.   
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
  isnull (pe.permission_name, 'No permission statements') AS permission_name 
@@ -139,7 +139,7 @@ ORDER BY pr.name, type_desc;
 ```
 
 Jede Klasse der Berechtigungstabelle kann mit anderen Systemansichten verknüpft werden, die verwandte Informationen über die Klasse des sicherungsfähigen Elements bereitstellen. Die folgende Abfrage enthält z.B. den Namen des Datenbankobjekts, das von der Berechtigung betroffen ist.    
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, pe.state_desc, 
  pe.permission_name, s.name + '.' + oj.name AS Object, major_id
  FROM sys.database_principals AS pr
@@ -151,8 +151,8 @@ SELECT pr.type_desc, pr.name, pe.state_desc,
    ON oj.schema_id = s.schema_id
  WHERE class_desc = 'OBJECT_OR_COLUMN';
 ```
-Verwenden Sie die `HAS_PERMS_BY_NAME`-Funktion, um zu bestimmen, ob ein bestimmter Benutzer (in diesem Fall `TestUser`) über eine Berechtigung verfügt. Beispiel:   
-```tsql
+Verwenden Sie die `HAS_PERMS_BY_NAME`-Funktion, um zu bestimmen, ob ein bestimmter Benutzer (in diesem Fall `TestUser`) über eine Berechtigung verfügt. Zum Beispiel:   
+```sql
 EXECUTE AS USER = 'TestUser';
 SELECT HAS_PERMS_BY_NAME ('dbo.T1', 'OBJECT', 'SELECT');
 REVERT;

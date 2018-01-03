@@ -5,7 +5,7 @@ ms.date: 08/24/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -24,11 +24,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c5231ce48a81595fe3523b490ca38ea056f0c9a3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a1b5a5839699b44fe0e5a2ff7d08ea7c663915a7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>SQL Server Integration Services-Projekte und Projektmappen (SSIS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stellt [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] für die Entwicklung von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen bereit.  

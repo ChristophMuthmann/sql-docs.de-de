@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c021cf13f16aa5feaa8fc0a28f0f735478fcd42d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e432e01995835f870b40ff1a0e5df07c06ef56a6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Lektion 3-2: Ausführen des Paketinstallations-Assistenten
 In diesem Schritt führen Sie den Paketinstallations-Assistenten aus, um die Pakete aus dem Deployment Tutorial-Projekt auf einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]bereitzustellen. In der sysssispackages-Tabelle der msdb-Datenbank von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] können nur Pakete installiert werden. Die unterstützenden Dateien, die das Bereitstellungspaket enthält, werden im Dateisystem bereitgestellt.  
@@ -72,14 +72,14 @@ In einer früheren Lektion haben Sie die Pakete des Lernprogramms so geändert, 
   
 16. Klicken Sie in der Liste **Konfigurationsdatei** auf **datatransferconfig.dtsconfig**, erweitern Sie Eigenschaft in der **Pfad** -Spalte des Felds **Konfigurationen** , und aktualisieren Sie die **Wert** -Spalte mit den folgenden Werten:  
   
-    |Eigenschaft|Wert|Aktualisierter Wert|  
+    |Eigenschaft|value|Aktualisierter Wert|  
     |------------|---------|-----------------|  
     |\Package.Connections[Deployment Tutorial Log].Properties[ConnectionString]|C:\Programme\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Completed Packages\Deployment Tutorial Log|C:\DeploymentTutorialInstall\Deployment Tutorial Log|  
     |\Package.Connections[NewCustomers].Properties[ConnectionString]|C:\Programme\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\NewCustomers.txt|C:\DeploymentTutorialInstall\NewCustomers.txt|  
   
 17. Klicken Sie in der Liste **Konfigurationsdatei** auf loadxmldataconfig.dtsconfig, erweitern Sie Eigenschaft in der **Pfad** -Spalte des Felds **Konfigurationen** , und aktualisieren Sie die **Wert** -Spalte mit den folgenden Werten:  
   
-    |Eigenschaft|Wert|Aktualisierter Wert|  
+    |Eigenschaft|value|Aktualisierter Wert|  
     |------------|---------|-----------------|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLData]]|C:\Programme\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xml|C:\DeploymentTutorialInstall\orders.xml|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLSchemaDefinition]]|C:\Programme\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xsd|C:\DeploymentTutorialInstall\orders.xsd|  
@@ -105,8 +105,8 @@ In einer früheren Lektion haben Sie die Pakete des Lernprogramms so geändert, 
     > [!NOTE]  
     > Es wird eine temporäre Protokolldatei erstellt, die für die Paketüberprüfung verwendet wird. Diese Datei wird bei der Ausführung des Pakets nicht verwendet.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Schritt 3: Testen der bereitgestellten Pakete](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Integration Services-Dienst &#40;SSIS-Dienst&#41;](../integration-services/service/integration-services-service-ssis-service.md)  

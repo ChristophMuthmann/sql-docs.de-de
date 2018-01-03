@@ -3,7 +3,7 @@ title: Visual C++-Erweiterungen-Beispiel | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 04f9d075a9ff4b48f83e27a6699a28a99dfcb2dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9303528381341f57722730a6e92b69a773a73b13
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-extensions-example"></a>Visual C++-Erweiterungen-Beispiel
 Dieses Programm zeigt, wie Werte aus Feldern abgerufen und in C/C++-Variablen konvertiert werden.  

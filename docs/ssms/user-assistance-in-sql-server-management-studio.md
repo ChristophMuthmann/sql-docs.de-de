@@ -3,7 +3,7 @@ title: "Benutzerunterstützung in SQL Server Management Studio | Microsoft-Dokum
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b6a3108ec508a859dd6b097425f27475a85c026f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: af99082f7ec0d39d59c7aa20fc1f6ba1d51596ed
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Benutzerunterstützung in SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Die Benutzerunterstützung ist in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] über das Menü „?“ und die [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]-Onlinedokumentation verfügbar. Über das Menü ? in [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] können Sie auf verschiedene Arten Informationen zu [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]abrufen. Außerdem erhalten Sie über dieses Menü Zugriff auf die [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] -Community und MSDN Onlineressourcen, die bislang noch nicht über die Hilfeumgebung verfügbar waren. Darüber hinaus lässt sich die Hilfeumgebung jetzt so konfigurieren, dass sie in der [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] -Umgebung oder in einem eigenen externen Fenster gestartet wird.  
@@ -36,7 +36,7 @@ Die Optionen **Inhalt** und **Index** verfügen über eine Benutzeroberfläche u
   
     Enthält eine hierarchisch strukturierte Liste verknüpfter Seiten mit hilfreichen Themen zu allgemeinen [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] -Aufgaben. Der Inhalt ist nach Komponente und Aufgabe (Beispiel: Themen zur Replikation) usw. geordnet.  
   
--   **Suchen**  
+-   **Search**  
   
     Sucht nach Themen, mit oder ohne vordefinierte Filter. Die Suche in [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] ist eine eigene Seite im Registerformat. Der Benutzer kann die Suche anhand von vordefinierten Thementyp-, Sprach- oder Technologiefiltern verfeinern. Standardmäßig wird bei der Suche kein vordefinierter Filter verwendet, und nur Themen in den installierten Auflistungen werden durchsucht.  
   

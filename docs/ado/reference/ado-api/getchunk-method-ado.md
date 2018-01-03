@@ -3,7 +3,7 @@ title: GetChunk-Methode (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b0d34a6d93c37513dd766529f85294ccd5743cec
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4b6f0aed8689fb17b4cc5750c2b6b6b1f966e8c2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getchunk-method-ado"></a>GetChunk-Methode (ADO)
 Gibt alle oder einen Teil des Inhalts eines große Text-oder Binärdaten [Feld](../../../ado/reference/ado-api/field-object.md) Objekt.  

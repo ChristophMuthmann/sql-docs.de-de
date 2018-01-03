@@ -3,7 +3,7 @@ title: "Tastenkombinationen für SQL Server Management Studio | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1fc409c7b1028a2e8b34eecc1485bffb0b53c023
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6fe84424ba04636e1731acaded762b6b16bf47e5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Tastenkombinationen für SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] bietet Benutzern zwei Tastaturschemas. Standardmäßig wird das [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Schema mit auf [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 basierenden Tastenkombinationen verwendet. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] bietet auch ein dem Standardschema von [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ähnliches Tastaturschema. Um das Tastaturschema zu ändern oder weitere Tastenkombinationen hinzuzufügen, klicken Sie im Menü **Extras** auf **Optionen**. Wählen Sie das gewünschte Tastaturschema unter **Umgebung**auf der Seite **Tastatur** aus.  
@@ -240,7 +240,7 @@ ms.lasthandoff: 12/05/2017
 |------------|-----------------------------|---------------------------------|  
 |Einfügen einer neuen Zeile|EINGABE oder UMSCHALT+EINGABE|EINGABE oder UMSCHALT+EINGABE|  
 |Auslagern der Zeichen auf eine Seite des Cursors (gilt nicht für den SQL-Editor)|STRG+T|STRG+T|  
-|Löschen eines Zeichens rechts vom Cursor|DELETE|DELETE|  
+|Löschen eines Zeichens rechts vom Cursor|Delete|Delete|  
 |Löschen eines Zeichens links vom Cursor|RÜCKTASTE<br /><br /> oder<br /><br /> UMSCHALT+<br /><br /> RÜCKTASTE|RÜCKTASTE<br /><br /> oder<br /><br /> UMSCHALT+<br /><br /> RÜCKTASTE|  
 |Löschen des Leerzeichens in der Auswahl oder Löschen des Leerzeichens, das an den Cursor angrenzt, wenn keine Auswahl getroffen wurde|STRG+K, C|Keine Entsprechung|  
 |Einfügen der für den Editor konfigurierten Anzahl von Leerzeichen|TAB|TAB|  
@@ -465,7 +465,7 @@ ms.lasthandoff: 12/05/2017
 |Wechseln zum vorherigen Steuerelement auf der Seite|UMSCHALT+TAB|Keine Entsprechung|  
 |Anzeigen des Rasters auf der Entwurfsoberfläche|EINGABE|Keine Entsprechung|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Anpassen von Menüs und Tastenkombinationen](http://msdn.microsoft.com/library/fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b)  
   
   

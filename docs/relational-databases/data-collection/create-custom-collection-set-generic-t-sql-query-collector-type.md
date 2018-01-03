@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 34b63ac7f650bdc3e333bb50a19021a48c65dee1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ef0146839adf62839b6f319df6407a4afad8e1f8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-custom-collection-set---generic-t-sql-query-collector-type"></a>Erstellen eines benutzerdefinierten Sammlungssatzes -Generischer T-SQL-Abfragesammlertyp
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Sie können auch mithilfe der mit dem Datensammler bereitgestellten gespeicherten Prozeduren einen benutzerdefinierten Sammlungssatz mit Sammelelementen erstellen, die den generischen T-SQL-Abfragesammlertyp verwenden. Das Ausführen dieses Tasks umfasst die Verwendung des Abfrage-Editors in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , um die folgenden Vorgänge durchzuführen:  
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  Da das neue Sammelelement auf einem generischen Sammlertyp basiert, der bereits installiert ist, können Sie den folgenden Code ausführen, um die GUID so festzulegen, dass Sie dem generischen T-SQL-Abfragesammlertyp entspricht.  
   
-    ```tsql  
+    ```sql  
     DECLARE @collector_type_uid uniqueidentifier;  
     SELECT @collector_type_uid = collector_type_uid FROM [msdb].[dbo].[syscollector_collector_types]   
     WHERE name = N'Generic T-SQL Query Collector Type';  
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Verwenden Sie die gespeicherte Prozedur „sp_syscollector_create_collection_item“, um das Sammelelement zu erstellen. Deklarieren Sie das Schema für das Auflistelement so, dass es dem Schema zugeordnet wird, das für den generischen T-SQL-Abfragesammlertyp erforderlich ist.  
   
-    ```tsql  
+    ```sql  
     EXEC sp_syscollector_create_collection_item   
         @name=N'Query Stats - Test 1',   
         @parameters=N'  
@@ -114,7 +114,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  Bevor Sie den neuen Sammlungssatz starten, führen Sie die folgende Abfrage aus, um zu überprüfen, dass der neue Sammlungssatz und sein Auflistelement erstellt wurden.  
   
-    ```tsql  
+    ```sql  
     USE msdb;  
     SELECT * FROM syscollector_collection_sets;  
     SELECT * FROM syscollector_collection_items;  
@@ -126,7 +126,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel werden die in den vorherigen Schritten dokumentierten Beispiele miteinander kombiniert. Beachten Sie, dass die für das Sammelelement festgelegte Auflistungshäufigkeit (5 Sekunden) ignoriert wird, da der Auflistungsmodus des Sammlungssatzes auf 0 festgelegt ist, was dem Modus mit Zwischenspeicherung entspricht. Weitere Informationen finden Sie unter [Data Collection](../../relational-databases/data-collection/data-collection.md).  
   
-```tsql  
+```sql  
 USE msdb;  
   
 DECLARE @collection_set_id int;  
@@ -166,7 +166,7 @@ SELECT @collection_item_id;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Gespeicherte Prozeduren für den Datensammler &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Zeitpläne verwalten](http://msdn.microsoft.com/library/f56c0736-dccc-41d2-afcf-71344aff143a)   
  [Starten oder Beenden eines Sammlungssatzes](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  

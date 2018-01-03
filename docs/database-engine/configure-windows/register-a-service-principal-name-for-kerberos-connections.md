@@ -23,11 +23,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4eba9f74d9eb5a46cfda7d5d28c1584c20fb22e7
-ms.sourcegitcommit: ef1fa818beea435f58986af3379853dc28f5efd8
+ms.openlocfilehash: ddf0e47b4ff05f5280401ae5fdbc7a81a8ebb7ec
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Die Kerberos-Authentifizierung kann mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden, wenn die beiden folgenden Bedingungen erfüllt sind:  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/20/2017
   
 Durch Abfragen der dynamischen Verwaltungssicht sys.dm_exec_connections können Sie überprüfen, ob eine Verbindung Kerberos verwendet. Führen Sie die folgende Abfrage aus, und überprüfen Sie den Wert der Spalte auth_scheme, der "KERBEROS" lautet, wenn Kerberos aktiviert ist.  
   
-```t-sql  
+```sql  
 SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;  
 ```  
   
@@ -155,7 +155,7 @@ Dienstkonten können als SPN verwendet werden. Sie werden durch das Verbindungsa
   
 Um die Authentifizierungsmethode einer Verbindung zu bestimmen, führen Sie die folgende Abfrage aus.  
   
-```t-sql  
+```sql  
 SELECT net_transport, auth_scheme   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  
@@ -181,7 +181,7 @@ WHERE session_id = @@SPID;
   
  Wenn die Aufhebung der SPN-Registrierung beim Herunterfahren fehlschlägt, wird dieser Fehler im Fehlerprotokoll von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgezeichnet, und das Herunterfahren wird fortgesetzt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Unterstützung von Dienstprinzipalnamen &#40;SPN&#41; in Clientverbindungen](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)   
  [Dienstprinzipalnamen (SPN) in Clientverbindungen (OLE DB)](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)   
  [Dienstprinzipalnamen (SPN) in Clientverbindungen (ODBC)](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)   

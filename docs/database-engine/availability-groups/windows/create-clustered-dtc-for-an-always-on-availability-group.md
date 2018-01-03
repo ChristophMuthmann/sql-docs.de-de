@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 77b06bff3d98e39104970adaaeadf9f8d342a357
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 76913433e0cfe08d316c668a79d452959ebbee3b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>Erstellen eines gruppierten DTCs für eine AlwaysOn-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema werden Sie durch eine vollständige Konfiguration einer gruppierten DTC-Ressource für eine SQL Server AlwaysOn-Verfügbarkeitsgruppe geführt. Für die vollständige Konfiguration kann bis zu einer Stunde erforderlich sein. 
@@ -120,7 +120,7 @@ foreach ($node in $nodes) {
 ## <a name="3--configure-in-doubt-xact-resolution"></a>3.  Konfigurieren von **Lösung für unklare Transaktion** 
 In diesem Skript wird die Serverkonfigurationsoption **Lösung für unklare Transaktion** für unsichere Transaktionen auf „presume commit“ festgelegt.  Führen Sie das folgende T-SQL-Skript in SQL Server Management Studio (SSMS) für `SQLNODE1` im **SQLCMD-Modus** aus.
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -161,7 +161,7 @@ GO
 ## <a name="4-create-test-databases"></a>4. Erstellen von Testdatenbanken
 Im Skript wird eine Datenbank namens `AG1` auf `SQLNODE1` und eine Datenbank namens `dtcDemoAG1` auf `SQLNODE2` erstellt.  Führen Sie das folgende T-SQL-Skript in SSMS für `SQLNODE1` im **SQLCMD-Modus** aus.
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -219,7 +219,7 @@ GO
 ## <a name="5---create-endpoints"></a>5.   Erstellen von Endpunkten
 In diesem Skript wird ein Endpunkt namens `AG1_endpoint` erstellt, der am TCP-Port `5022` lauscht.  Führen Sie das folgende T-SQL-Skript in SSMS für `SQLNODE1` im **SQLCMD-Modus** aus.
 
-```tsql  
+```sql  
 /**********************************************
 Execute on SQLNODE1 in SQLCMD mode
 **********************************************/
@@ -252,7 +252,7 @@ GO
 ## <a name="6---prepare-databases-for-availability-group"></a>6.   Vorbereiten der Datenbanken für die Verfügbarkeitsgruppe
 Im Skript wird `AG1` in `SQLNODE1` gesichert und in `SQLNODE2` wiederhergestellt.  Führen Sie das folgende T-SQL-Skript in SSMS für `SQLNODE1` im **SQLCMD-Modus** aus.
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -285,7 +285,7 @@ GO
 ## <a name="7---create-availability-group"></a>7.   Erstellen der Verfügbarkeitsgruppe
 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] müssen mit dem Befehl **REATE AVAILABILITY GROUP** und der Klausel **WITH DTC_SUPPORT = PER_DB** erstellt werden.  Zurzeit können Sie eine vorhandene Verfügbarkeitsgruppe nicht ändern.  Der Assistent für neue Verfügbarkeitsgruppen lässt es nicht zu, dass Sie die DTC-Unterstützung für eine neue Verfügbarkeitsgruppe aktivieren.  Im folgenden Skript wird die neue Verfügbarkeitsgruppe erstellt und mit der sekundären zusammengeführt.  Führen Sie das folgende T-SQL-Skript in SSMS für `SQLNODE1` im **SQLCMD-Modus**aus.
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -488,7 +488,7 @@ Wenn der gruppierte DTC-Dienst vollständig konfiguriert ist, müssen Sie jede I
 Wenn der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dienst erstmalig eine verteilte Transaktion erfordert, registriert er sich beim DTC-Dienst. SQL Server-Dienst wird den DTC-Dienst weiterhin verwenden, bis er neu gestartet ist. Wenn ein gruppierter DTC-Dienst verfügbar ist, registriert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sich beim gruppierten DTC-Dienst. Wenn kein gruppierter DTC-Dienst verfügbar ist, registriert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sich beim lokalen DTC-Dienst. Beenden Sie jede [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz, und starten Sie diese neu, um zu überprüfen, ob [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] beim gruppierten DTC-Dienst registriert. 
 
 Führen Sie die Schritte aus, die im folgenden T-SQL-Skript enthalten sind:
-```tsql  
+```sql  
 /*
 Gracefully cycle the SQL Server service and failover the Availability Group
     a.  On SQLNODE2, cycle the SQL Server service from SQL Server Configuration Manger
@@ -549,7 +549,7 @@ Dieser Test verwendet einen Verbindungsserver von `SQLNODE1`zu `SQLNODE2`, um ei
 ### <a name="create-linked-servers"></a>Erstellen von Verbindungsservern  
 Im folgenden Skript werden zwei Verbindungsserver in `SQLNODE1`erstellt.  Führen Sie das folgende T-SQL-Skript in SSMS für `SQLNODE1`aus.
 
-```tsql  
+```sql  
 -- SQLNODE1
 IF NOT EXISTS (SELECT * FROM sys.servers where name = N'SQLNODE1')
 BEGIN
@@ -565,7 +565,7 @@ END
 ### <a name="execute-a-distributed-transaction"></a>Ausführen einer verteilten Transaktion
 In diesem Skript wird zunächst die aktuelle DTC-Transaktionsstatistik zurückgegeben.  Anschließend wird im Skript eine verteilte Transaktion ausgeführt, in der Datenbanken aus `SQLNODE1` und `SQLNODE2`verwendet werden.  Danach wird im Skript erneut die DTC-Transaktionsstatistik zurückgegeben, die jetzt eine erhöhte Anzahl zeigen sollte.  Stellen Sie eine physische Verbindung mit `SQLNODE1` und führen Sie das folgende T-SQL-Skript in SSMS für `SQLNODE1` im **SQLCMD-Modus**aus.
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
     Must be physically connected to SQLNODE1

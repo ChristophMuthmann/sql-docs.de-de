@@ -3,7 +3,7 @@ title: "Auswählen des Schemas für Tastenkombinationen | Microsoft-Dokumentatio
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f2ec0b8dd3142775006740726340df64994be660
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 914f73712e5a8f3120017cf414d968dd323bb98b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-6---select-the-keyboard-shortcut-scheme"></a>Lektion 1-6: Auswählen des Schemas für Tastenkombinationen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Anstelle des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Standardtastaturschemas können Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zur Verwendung eines Tastaturschemas konfigurieren, das mit [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] kompatibel ist.  
@@ -39,10 +39,10 @@ ms.lasthandoff: 12/05/2017
   
 4.  Klicken Sie auf **OK** , wenn Sie das neue Tastaturschema verwenden möchten. Klicken Sie andernfalls auf **Abbrechen**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Festlegen der Startoptionen](../../tools/sql-server-management-studio/lesson-1-7-set-the-startup-options.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Tastenkombinationen für SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
 [Anpassen von Menüs und Tastenkombinationen](http://msdn.microsoft.com/library/fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b)  
   

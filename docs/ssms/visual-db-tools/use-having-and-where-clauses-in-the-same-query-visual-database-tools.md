@@ -3,7 +3,7 @@ title: Verwenden von HAVING- und WHERE-Klauseln in derselben Abfrage | Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: f4bfd62f245d9f2c46324fc437483fb379a2faa7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 89c20b9ce8f4789a9be80efd8bd95a3763ba8800
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>Verwenden von HAVING- und WHERE-Klauseln in derselben Abfrage (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In einigen Fällen empfiehlt es sich, einzelne Zeilen aus Gruppen auszuschließen (mit einer WHERE-Klausel), bevor eine Bedingung auf Gruppen als Ganzes angewendet wird (mit einer HAVING-Klausel).  
@@ -94,7 +94,7 @@ Für dieselbe Spalte kann sowohl eine WHERE-Klausel als auch eine HAVING-Klausel
     GROUP BY titles.pub_id  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Sortieren und Gruppieren von Abfrageergebnissen (Visual Database Tools)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
 [Zusammenfassen von Abfrageergebnissen (Visual Database Tools)](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
   

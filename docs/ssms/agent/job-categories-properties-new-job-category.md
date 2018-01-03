@@ -3,7 +3,7 @@ title: "Eigenschaften für Auftragskategorien – Neue Auftragskategorie | Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 622a0451534174884d44259a329702cabaff2528
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a5086ecbd7c6dbd2a8a6635da9c3820b80fd0702
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="job-categories-properties---new-job-category"></a>Eigenschaften für Auftragskategorien – Neue Auftragskategorie
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Zeigt eine Liste der Aufträge in einer Auftragskategorie oder allen Auftragskategorien an und ermöglicht Ihnen das Hinzufügen einer neuen Auftragskategorie.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Name**  
 Geben Sie den Namen der neuen Auftragskategorie ein. Wenn dies das Dialogfeld mit den Eigenschaften der Auftragskategorie ist, wird hier die von Ihnen eingesehene Kategorie angezeigt.  
   
@@ -43,6 +43,6 @@ Führt alle Aufträgen auf.
 **Auftrag**  
 Zeigt den Namen des Auftrags an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Erstellen von Aufträgen](../../ssms/agent/create-jobs.md)  
   

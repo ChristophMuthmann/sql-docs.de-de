@@ -39,11 +39,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4c18d191f0e97a2fbef5343d7b0fb7900bd2d80a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3eae1aea0305e2838f29f1259d9a21c9b33f4e2e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="database-files-and-filegroups"></a>Datenbankdateien und Dateigruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank verfügt über mindestens zwei Betriebssystemdateien: eine Datendatei und eine Protokolldatei. Datendateien enthalten Daten und Objekte wie z. B. Tabellen, Indizes, gespeicherte Prozeduren und Sichten. Protokolldateien enthalten die Informationen, die zum Wiederherstellen aller Transaktionen in der Datenbank erforderlich sind. Datendateien können für die Zuordnung und Verwaltung in Dateigruppen zusammengefasst werden.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="database-files"></a>Datenbankdateien  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken verwenden drei Arten von Dateien, wie in der folgenden Tabelle gezeigt wird.  
   
-|File|Beschreibung|  
+|File|Description|  
 |----------|-----------------|  
 |Primär|Die primäre Datendatei enthält die Startinformationen für die Datenbank und verweist auf die anderen Dateien in der Datenbank. Benutzerdaten und -objekte können in dieser Datei oder in sekundären Datendateien gespeichert werden. Jede Datenbank verfügt über eine primäre Datendatei. Die empfohlene Dateinamenerweiterung für primäre Datendateien ist MDF.|  
 |Secondary|Sekundäre Datendateien sind optional, benutzerdefiniert und speichern Benutzerdaten. Sekundäre Dateien können verwendet werden, um Daten auf mehrere Datenträger zu verteilen, indem jede Datei auf einem anderen Datenträger gespeichert wird. Wenn eine Datenbank die maximal zulässige Größe für eine einzige Datei überschreitet, haben Sie zudem die Möglichkeit, sekundäre Datendateien zu verwenden, sodass die Datenbank weiter vergrößert werden kann.<br /><br /> Die empfohlene Dateinamenerweiterung für sekundäre Datendateien ist NDF.|  
@@ -97,7 +97,7 @@ Das von einer Datenbankmomentaufnahme zum Speichern der Kopie-bei-Schreibvorgang
   
  Alle Datendateien werden in den Dateigruppen gespeichert, die in der folgenden Tabelle aufgeführt werden.  
   
-|Dateigruppe|Beschreibung|  
+|Dateigruppe|Description|  
 |---------------|-----------------|  
 |Primär|Die Dateigruppe, die die primäre Datei enthält. Alle Systemtabellen werden der primären Dateigruppe zugewiesen.|  
 |Benutzerdefinierte Dateigruppe|Jede Dateigruppe, die eigens durch den Benutzer erstellt wird, wenn dieser die Datenbank erstmals erstellt oder zu einem späteren Zeitpunkt ändert.|  
@@ -110,7 +110,7 @@ Das von einer Datenbankmomentaufnahme zum Speichern der Kopie-bei-Schreibvorgang
 ### <a name="file-and-filegroup-example"></a>Datei- und Dateigruppenbeispiel
  Im folgenden Beispiel wird eine Datenbank auf einer SQL Server-Instanz erstellt. Die Datenbank verfügt über eine primäre Datendatei, eine benutzerdefinierte Dateigruppe und eine Protokolldatei. Die primäre Datendatei befindet sich in der primären Dateigruppe, und die benutzerdefinierte Dateigruppe verfügt über zwei sekundäre Datendateien. Durch die ALTER DATABASE-Anweisung wird die benutzerdefinierte Dateigruppe als Standarddateigruppe festgelegt. Anschließend wird eine Tabelle unter Angabe der benutzerdefinierten Dateigruppe erstellt. (Dieses Beispiel verwendet einen generischen Pfad, `c:\Program Files\Microsoft SQL Server\MSSQL.1` , um die Angabe einer SQL Server-Version zu vermeiden.)
 
-```t-sql
+```sql
 USE master;
 GO
 -- Create the database with the default data

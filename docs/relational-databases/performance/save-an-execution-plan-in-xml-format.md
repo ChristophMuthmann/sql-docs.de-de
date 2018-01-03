@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 44774cbb85152ecbb16c36a01326973177bad8f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f958bece2f83b2a29914367fb71adbac640a941d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Speichern eines Ausführungsplans im XML-Format
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Verwenden Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], um Ausführungspläne als XML-Datei zu speichern und für die Anzeige zu öffnen.  
@@ -40,14 +40,14 @@ ms.lasthandoff: 11/17/2017
   
 2.  Aktivieren Sie [SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md) mithilfe der folgenden Anweisung:  
   
-    ```t-sql  
+    ```sql  
     SET SHOWPLAN_XML ON;  
     GO  
     ```  
   
      Verwenden Sie die folgende Anweisung, um [STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md) zu aktivieren:  
   
-    ```t-sql  
+    ```sql  
     SET STATISTICS XML ON;  
     GO  
     ```  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Abfrage ausführen. Beispiel:  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     SET SHOWPLAN_XML ON;  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
   
      Alternativ können Sie im Windows-Explorer auf eine Datei mit der Erweiterung **.sqlplan**doppelklicken. Der Plan wird in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]geöffnet.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SET SHOWPLAN_XML &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-xml-transact-sql.md)   
  [SET STATISTICS XML &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-xml-transact-sql.md)  
   

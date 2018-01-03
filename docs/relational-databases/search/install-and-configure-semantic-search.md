@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dddce1fa24fe2a9a11b01dcf53ebc0ab25eba5ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 76667823c35b33546fb60cdf5a40830d9f8f8726
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="install-and-configure-semantic-search"></a>Installieren und Konfigurieren der semantischen Suche
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Beschreibt die erforderlichen Komponenten für die statistische semantische Suche und wie diese Komponenten installiert oder überprüft werden.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
   
  Der Rückgabewert 1 gibt an, dass die Volltextsuche und die semantische Suche installiert sind. Der Rückgabewert 0 gibt an, dass sie nicht installiert sind.  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY('IsFullTextInstalled');  
 GO  
 ```  
@@ -54,7 +54,7 @@ GO
   
  Wenn die semantische Sprachstatistikdatenbank installiert und für die Instanz registriert ist, dann enthalten die Abfrageergebnisse eine einzelne Zeile mit Informationen zur Datenbank.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.fulltext_semantic_language_statistics_database;  
 GO  
 ```  
@@ -87,7 +87,7 @@ GO
   
  Standardmäßig lautet der Name der Datenbank **semanticsdb**. Sie können der Datenbank beim Anfügen einen anderen Namen geben. Sie müssen diesen Namen angeben, wenn Sie die Datenbank im nachfolgenden Schritt registrieren.  
   
-```tsql  
+```sql  
 CREATE DATABASE semanticsdb  
             ON ( FILENAME = 'C:\Microsoft Semantic Language Database\semanticsdb.mdf' )  
             LOG ON ( FILENAME = 'C:\Microsoft Semantic Language Database\semanticsdb_log.ldf' )  
@@ -101,7 +101,7 @@ GO
   
  Rufen Sie die gespeicherte Prozedur [sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql.md) auf, und geben Sie den Namen an, den die Datenbank beim Anfügen erhalten hat:  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsdb';  
 GO  
 ```  
@@ -126,7 +126,7 @@ GO
    
  Rufen Sie die gespeicherte Prozedur [sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql.md) auf. Sie müssen den Namen der Datenbank nicht angeben, da eine Instanz nur eine semantische Sprachstatistikdatenbank aufweisen kann.  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_unregister_language_statistics_db;  
 GO  
 ```  
@@ -135,7 +135,7 @@ GO
  
  Rufen Sie die gespeicherte Prozedur [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md) auf, und geben Sie den Namen der Datenbank an.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
   

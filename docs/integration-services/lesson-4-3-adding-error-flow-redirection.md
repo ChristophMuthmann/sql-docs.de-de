@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1538ad973644dfa38fbed083327528a1973bcc4e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1fb3ec5c108f74e6ae0b53f6bd27a4cad70e7313
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-4-3---adding-error-flow-redirection"></a>Lektion 4-3: Hinzufügen der Fehlerflussumleitung
 Wie in der vorhergehenden Aufgabe gezeigt, kann von der Lookup Currency Key-Transformation keine Übereinstimmung generiert werden, wenn die Transformation versucht, die beschädigte Beispielflatfile, die einen Fehler produziert hat, zu verarbeiten. Da die Transformation die Standardeinstellungen für die Fehlerausgabe verwendet, führt jeder Fehler dazu, dass die Transformation fehlschlägt. Wenn die Transformation fehlschlägt, schlägt auch der Rest des Pakets fehl.  
@@ -76,7 +76,7 @@ Um die Nützlichkeit der Fehlerausgabe zu verbessern, werden Sie mithilfe einer 
   
     Die fertige Unterroutine sieht wie der folgende Code aus.  
   
-    [Visual Basic]  
+    [Visual Basic]  
   
     ```vb
     Public Overrides Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)  
@@ -102,7 +102,7 @@ Um die Nützlichkeit der Fehlerausgabe zu verbessern, werden Sie mithilfe einer 
   
 13. Klicken Sie auf **OK** , um das Dialogfeld **Transformations-Editor für Skripterstellung** zu schließen.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
 [Schritt 4: Hinzufügen eines Flatfileziels](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
   
   

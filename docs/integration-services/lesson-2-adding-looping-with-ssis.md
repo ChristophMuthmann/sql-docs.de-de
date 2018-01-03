@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 96194edec70f67e9db45265de11d735e09fead30
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 46add077a9b90353ba41f18fe5c4dd15082e7c0c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-adding-looping-with-ssis"></a>Lesson 2: Adding Looping with SSIS
 In [Lektion 1: Erstellen eines Projekts und Basispakets mit SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)haben Sie ein Paket erstellt, mit dem Daten aus einer einzelnen Flatfilequelle zunächst extrahiert, anschließend mithilfe der Suchtransformationen transformiert und schließlich in die Faktentabelle **FactCurrency** der **AdventureWorksDW2012** -Beispieldatenbank geladen wurden.  
@@ -70,7 +70,7 @@ Diese Lektion enthält die folgenden Aufgaben:
 ## <a name="start-the-lesson"></a>Lektion beginnen  
 [Schritt 1: Kopieren des Pakets aus Lektion 1](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [For-Schleifencontainer](../integration-services/control-flow/for-loop-container.md)  
   
   

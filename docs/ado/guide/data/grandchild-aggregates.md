@@ -3,7 +3,7 @@ title: Untergeordnete Aggregate | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 43db96d31ff903f72bbd10d7b1824867b56f4e74
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9bc1b08b652f740c576f96b85d99140913079a8b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="grandchild-aggregates"></a>Untergeordnete Aggregate
 In einer-Klausel einer Shape-Befehl erstellte Kapitelspalte zugewiesen werden kann ein *Kapitel-Aliasnamen* (in der Regel mit dem AS-Schlüsselwort). Bestimmen Sie eine Spalte in jeder der geformten Kapitel **Recordset** mit einem vollqualifizierten Namen, der das untergeordnete Element mit der Spalte identifiziert. Beispielsweise enthält das übergeordnete Kapitel Kap1, untergeordnete Kapitel Kap2, besitzt eine Mengenspalte "Amt" und dann der qualifizierte Namen wäre chap1.chap2.amt. Der qualifizierte Name kann dann als Argument für einen der Aggregatfunktionen (SUM, AVG, MAX, MIN, COUNT, STDEV oder alle) verwendet werden.  

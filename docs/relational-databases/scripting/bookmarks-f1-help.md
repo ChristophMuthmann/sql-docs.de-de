@@ -3,9 +3,9 @@ title: Lesezeichen (F1-Hilfe) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c9adc6d51a5594868fedd941d7e74596179f69e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4b41bc6f80b179362982adbdb95828e730c9a32e
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bookmarks-f1-help"></a>Lesezeichen (F1-Hilfe)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dieser Abschnitt enthält die F1-Hilfe zu den **Lesezeichen**-Seiten in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

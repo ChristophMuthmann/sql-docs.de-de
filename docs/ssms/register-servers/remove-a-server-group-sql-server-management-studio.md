@@ -3,7 +3,7 @@ title: Entfernen einer Servergruppe (SQL Server Management Studio) | Microsoft-D
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f605faa9711e014f94325bb86414ee849f2f7ad6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d0ff2470ac6875c75c5a4882855536b4d0cf2d55
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>Entfernen einer Servergruppe (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In diesem Thema wird beschrieben, wie Sie eine Servergruppe in „Registrierte Server“ in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] entfernen. Sie können eine Servergruppe jederzeit löschen. Wenn die Servergruppe nicht leer ist, werden auch alle in der gelöschten Servergruppe enthaltenen Server oder Servergruppen gelöscht. Vor dem Löschen einer Servergruppe sollten Sie alle Server oder Servergruppen, die beibehalten werden sollen, in eine neue Servergruppe verschieben.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  Klicken Sie im Dialogfeld **Löschen bestätigen** auf **Ja**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verschieben eines registrierten Servers oder einer registrierten Servergruppe &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/move-a-registered-server-or-registered-server-group.md)  
   
   

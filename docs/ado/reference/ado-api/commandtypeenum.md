@@ -3,7 +3,7 @@ title: CommandTypeEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b4a2e9e05e48913e2aecc3ef5a6f0651cd36e2d8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fb7c01971633727f1e7e5769060b256eab13914b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 Gibt an, wie ein Befehlsargument interpretiert werden sollen.  
   
  Es ist wichtig, überprüfen Sie die benutzerdefinierte *CommandString* Werte, um zu vermeiden, mit dem Benutzer der Anwendung die Möglichkeit zum Einfügen von potenziell gefährlichen Befehle für ADO zum Ausführen.  
   
-|Konstante|Wert|Description|  
+|Konstante|value|Description|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|Gibt das Typargument für den Befehl keine.|  
 |**adCmdText**|1|Wertet [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) als Textdefinition ein Befehl oder gespeicherte Prozedur aufrufen.|  

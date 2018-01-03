@@ -3,9 +3,9 @@ title: "Verwenden von „sqlcmd“ mit Skriptvariablen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 165c7c1cac15f641c44c0d2f4ce4e7327fd514c2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eba9a6581d4f93c1eb84e14b3172f1f6cefb312f
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>Verwenden von „sqlcmd“ mit Skriptvariablen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Variablen, die in Skripts verwendet werden, werden als Skriptvariablen bezeichnet. Durch Skriptvariablen wird ein Skript aktiviert, das in verschiedenen Szenarien verwendet wird. Wenn Sie beispielsweise ein einzelnes Skript auf mehreren Servern ausführen möchten, anstatt das Skript für jeden Server zu ändern, können Sie eine Skriptvariable für den Servernamen verwenden. Durch das Ändern des Servernamens für die Skriptvariable kann das gleiche Skript auf verschiedenen Servern ausgeführt werden.  
@@ -113,7 +113,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd-Skriptvariablen  
  Mithilfe von **sqlcmd** definierte Variablen werden als Skriptvariablen bezeichnet. In der folgenden Tabelle sind die **sqlcmd** -Skriptvariablen aufgelistet.  
   
-|        Variable         | Zugehörige Option | R/W |         Standardwert         |
+|        Variable         | Zugehörige Option | R/W |         Default         |
 | ----------------------- | -------------- | --- | ----------------------- |
 | SQLCMDUSER*             | -U             | R   | ""                      |
 | SQLCMDPASSWORD*         | -P             | --  | ""                      |
@@ -334,7 +334,7 @@ C:\> sqlcmd
 >2 GO
 ```
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwenden des Hilfsprogramms sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md)   
  [Hilfsprogramm sqlcmd](../../tools/sqlcmd-utility.md)   
  [Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;Datenbankmodul&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  

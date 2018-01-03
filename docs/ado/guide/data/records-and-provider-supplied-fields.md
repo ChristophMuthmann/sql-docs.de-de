@@ -3,7 +3,7 @@ title: "Datensätze und Felder Anbieter bereitgestellte | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 16596d3ffa943f382e6c3a9ec2aa9c2e2e14432f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 69cb7375808e3c11dd8d92bab48a3588693e30e8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="records-and-provider-supplied-fields"></a>Datensätze und Felder Anbieter bereitgestellte
 Wenn eine [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt geöffnet ist, werden seine Quelle kann die aktuelle Zeile eines geöffneten [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), eine absolute URL oder eine relative URL in Verbindung mit einem geöffneten [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt .  

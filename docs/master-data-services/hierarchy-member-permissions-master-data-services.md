@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 88497e6a02ded0fc47b703ebe2bda99e10917d6b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 03ffca860f467f806dca3c9385543a59ef743219
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Berechtigungen für Hierarchieelemente (Master Data Services)
   Berechtigungen für Hierarchieelemente sind optional und sollten nur verwendet werden, wenn ein Benutzer beschränkten Zugriff auf bestimmte Elemente erhalten soll. Wenn Sie keine Berechtigungen auf der Registerkarte **Hierarchieelemente** zuweisen, basieren die Berechtigungen eines Benutzers ausschließlich auf den Berechtigungen, die auf der Registerkarte **Modelle** zugewiesen wurden.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/20/2017
 |Berechtigung|Description|  
 |----------------|-----------------|  
 |**Leseberechtigung**|Die Elemente werden angezeigt.<br /><br /> <br /><br /> Hinweis: Wenn Sie nur dem **Stamm** die **Leseberechtigung**zuweisen, sind die Elemente unter **Stamm** schreibgeschützt. In expliziten Hierarchien und Sammlungen kann der Benutzer jedoch Elemente in den **Stamm** verschieben und dem **Stamm**neue Elemente hinzufügen.|  
-|**Create**|Die Hierarchieelementberechtigung enthält keine Berechtigung zum Erstellen.|  
+|**Erstellen**|Die Hierarchieelementberechtigung enthält keine Berechtigung zum Erstellen.|  
 |**Update**|Die Elemente werden angezeigt und können vom Benutzer geändert werden. Der Benutzer kann die Elemente außerdem in beliebigen expliziten Hierarchien oder Auflistungen verschieben, denen die Elemente angehören.|  
 |**Delete**|Die Elemente werden angezeigt und können vom Benutzer gelöscht werden.|  
 |**Verweigern**|Die Elemente werden nicht angezeigt.|  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="external-resources"></a>Externe Ressourcen  
  Blogbeitrag [Sicherheitsverbesserungen](http://go.microsoft.com/fwlink/p/?LinkId=615376), auf msdn.com.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Zuweisen von Hierarchieelementberechtigungen &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
  [Vorgehensweise: Festlegen von Berechtigungen &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
  [Elemente &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   

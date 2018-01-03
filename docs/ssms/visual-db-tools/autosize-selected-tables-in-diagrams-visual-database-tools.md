@@ -3,7 +3,7 @@ title: "Automatisches Anpassen der Größe ausgewählter Tabellen in Diagrammen 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b7b582991cdff6de92b8babe372c0c7bde37c8b0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a13c67f63570b4bd132490ac87841b429650960a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="autosize-selected-tables-in-diagrams-visual-database-tools"></a>Automatisches Anpassen der Größe ausgewählter Tabellen in Diagrammen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können die Größe von in Diagrammen enthaltenen Tabellen rasch auf die kleinste Größe verkleinern, in der noch alle Felder angezeigt werden.  
@@ -37,6 +37,6 @@ ms.lasthandoff: 12/05/2017
   
 2.  Klicken Sie mit der rechten Maustaste auf eine ausgewählte Tabelle, und wählen Sie im Kontextmenü den Befehl **Größe ausgewählter Tabellen automatisch anpassen**aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Verwenden von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

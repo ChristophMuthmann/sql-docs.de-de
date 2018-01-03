@@ -3,7 +3,7 @@ title: SQL Server-Agent-Eigenschaften (Seite Warnungssystem)|Microsoft-Dokumente
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 35318a641f1f0e59f6ac0c809be44bca43394308
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 072c6c1a55e470499d49ccb11fd449a95df3cbcd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>SQL Server-Agent-Eigenschaften (Seite Warnungssystem)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Auf dieser Seite können Sie die Einstellungen für die vom [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent versandten Warnmeldungen anzeigen und ändern.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Mailsitzung**  
 Mithilfe der Optionen in diesem Abschnitt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Mail konfiguriert.  
   
@@ -76,7 +76,7 @@ Geben Sie einen beliebigen festgelegten Text ein, den das Pagingsystem bei Nachr
 **Betreff**  
 Bestimmt die Optionen für den Betreff der Nachricht.  
   
-**Prfix**  
+**Prefix**  
 Geben Sie einen beliebigen festgelegten Text ein, den das Pagingsystem bei Nachrichten, die an Pager gesendet werden, am Anfang der Zeile **Betreff** verlangt.  
   
 **Suffix**  
@@ -91,7 +91,7 @@ In diesem Abschnitt können Sie die Optionen für den Ausfallsicherheitsoperator
 **Ausfallsicherheitsoperator aktivieren**  
 Legt einen Ausfallsicherheitsoperator fest.  
   
-**Operator**  
+**Ist gleich**  
 Legt den Namen des Operators fest, der die Ausfallsicherheitsbenachrichtigungen empfängt.  
   
 **Benachrichtigen durch**  
@@ -108,7 +108,7 @@ In diesem Abschnitt können Sie Tokens für Auftragsschritte aktivieren, die in 
 **Token für alle Auftragsantworten auf Warnungen ersetzen**  
 Aktivieren Sie dieses Kontrollkästchen, um die Tokenersetzung für Aufträge zu aktivieren, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Warnungen aktiviert werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Operatoren](../../ssms/agent/operators.md)  
 [Konfigurieren von SQL Server-Agent-Mail zum Verwenden von Datenbank-E-Mails](http://msdn.microsoft.com/en-us/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
 [Datenbank-E-Mail](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1)  

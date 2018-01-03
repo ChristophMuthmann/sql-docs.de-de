@@ -3,7 +3,7 @@ title: "Ändern des Standardspeicherorts für Projekte | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eafe0cdf17d433e821e78128dcc30b1eff83cfae
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7dfbea8ef4621e7e61e2bc04b4d24bcd68c68dfc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="change-the-default-location-for-projects"></a>Ändern des Standardspeicherorts für Projekte
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Der Standardspeicherort für Dateien und Projekte ist der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]-Projektordner im Ordner „Eigene Dateien“.  
@@ -33,6 +33,6 @@ ms.lasthandoff: 12/05/2017
   
 1.  Ändern Sie den Standardspeicherort durch Öffnen oder Speichern einer Datei oder eines Projekts an einem anderen Speicherort. [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] speichert den Speicherort des zuvor geöffneten Projekts und verwendet ihn beim nächsten Öffnen oder Speichern eines Projekts.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Projektmappen-Explorer](../../ssms/solution/solution-explorer.md)  
   

@@ -5,7 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -32,11 +32,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 860438f65035233e198177697f24d2a2d820d75f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5ae011fb40b1e20a82d92f6db4c1077910f8d735
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-package-properties"></a>Festlegen von Paketeigenschaften
   Wenn Sie ein Paket in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] mithilfe der grafischen Benutzeroberfläche von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] erstellen, legen Sie die Eigenschaften des Paketobjekts im Eigenschaftenfenster fest.  
@@ -113,7 +113,7 @@ ms.lasthandoff: 11/20/2017
 |**CreationDate**|Das Datum, an dem das Paket erstellt wurde.|  
 |**CreatorComputerName**|Der Name des Computers, auf dem das Paket erstellt wurde.|  
 |**CreatorName**|Der Name der Person, die das Paket erstellt hat.|  
-|**Description**|Eine Beschreibung der Paketfunktionalität.|  
+|**Beschreibung**|Eine Beschreibung der Paketfunktionalität.|  
 |**ID**|Der Paket-GUID, der dem Paket beim Erstellen zugewiesen wird. Diese Eigenschaft ist schreibgeschützt. Um einen neuen Zufallswert für die **ID**-Eigenschaft zu generieren, wählen Sie in der Dropdownliste **\<Neue ID generieren\>** aus.|  
 |**Name**|Der Name des Pakets.|  
 |**PackageType**|Der Pakettyp. Mögliche Werte sind **Default**, **DTSDesigner**, **DTSDesigner100**, **DTSWizard**, **SQLDBMaint**und **SQLReplication**. Der Standardwert dieser Eigenschaft ist **Default**. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>.|  
@@ -132,7 +132,7 @@ ms.lasthandoff: 11/20/2017
 |**SuppressConfigurationWarnings**|Zeigt an, ob die von Konfigurationen generierten Warnungen unterdrückt werden. Der Standardwert dieser Eigenschaft ist **False**.|  
 |**UpdateObjects**|Zeigt an, ob das Paket aktualisiert wird, um neuere Versionen der vorhandenen Objekte zu verwenden, falls neuere Versionen verfügbar sind. Beispielsweise wird ein Paket mit einem Masseneinfügungstask aktualisiert, wenn diese Eigenschaft auf **TRUE**festgelegt ist, damit die neuere Version des Masseneinfügungstasks von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] verwendet wird. Der Standardwert dieser Eigenschaft ist **False**.|  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicherheit  
  Mit den Eigenschaften in dieser Kategorie wird die Schutzebene des Pakets konfiguriert. Weitere Informationen finden Sie unter [Access Control for Sensitive Data in Packages](../integration-services/security/access-control-for-sensitive-data-in-packages.md).  
   
 |Eigenschaft|Description|  

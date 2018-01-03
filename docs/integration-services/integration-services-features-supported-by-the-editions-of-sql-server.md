@@ -5,7 +5,7 @@ ms.date: 07/26/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9d7a5ad6abf892a9b8ab0b125336e13cf1318100
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 7123c7dde876fb5ec8cceb3088816df9a92360d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Von den SQL Server-Editionen unterstützte Integration Services-Funktionen
  Dieses Thema bietet detaillierte Informationen zu den von den verschiedenen [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]-Editionen unterstützten SQL Server Integration Services-Funktionen (SSIS).  
@@ -55,18 +55,18 @@ Die SQL Server Evaluation Edition steht für einen Testzeitraum von 180 Tagen zu
 
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|SQL Server-Import/Export-Assistent|Ja|ja|ja|ja|ja|  
+|SQL Server-Import/Export-Assistent|ja|ja|ja|ja|ja|  
 
 ## <a name="IS"></a> Integration Services  
   
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Integrierte Datenquellenkonnektoren|Ja|Ja|||| 
-|Integrierte Tasks und Transformationen|Ja|ja||||  
-|ODBC-Quelle und -Ziel von Attunity|ja|Ja|||| 
-|Azure-Datenquellenkonnektoren und Tasks|Ja|ja||||  
-|Hadoop-/HDFS-Connectors und -Tasks|ja|Ja||||  
-|Grundlegende Datenprofilerstellungs-Tools|Ja|ja|||| 
+|Integrierte Datenquellenkonnektoren|ja|ja|||| 
+|Integrierte Tasks und Transformationen|ja|ja||||  
+|ODBC-Quelle und -Ziel von Attunity|ja|ja|||| 
+|Azure-Datenquellenkonnektoren und Tasks|ja|ja||||  
+|Hadoop-/HDFS-Connectors und -Tasks|ja|ja||||  
+|Grundlegende Datenprofilerstellungs-Tools|ja|ja|||| 
 
 ## <a name="ISAA"></a>Integration Services – Erweiterte Quellen und Ziele  
   

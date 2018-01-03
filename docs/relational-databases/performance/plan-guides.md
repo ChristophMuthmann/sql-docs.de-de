@@ -27,11 +27,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 83025e81146c8d7087c100c66fb47215a0603562
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 04a9fcb300f3c3f374a3ee940df34c77d2516db0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="plan-guides"></a>Planhinweislisten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mit Planhinweislisten können Sie die Leistung von Abfragen optimieren, wenn Sie den Text der eigentlichen Abfrage in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nicht direkt ändern möchten oder können. Planhinweislisten beeinflussen die Abfrageoptimierung, indem Abfragehinweise oder ein fester Abfrageplan an die Abfragen angefügt werden. Die Verwendung von Planhinweislisten bietet sich z. B. an, wenn eine kleine Teilmenge von Abfragen in der Datenbankanwendung eines Drittanbieters nicht erwartungsgemäß funktioniert. In der Planhinweisliste geben Sie die Transact-SQL-Anweisung an, die optimiert werden soll, sowie entweder eine OPTION-Klausel mit den zu verwendenden Abfragehinweisen oder einen spezifischen Abfrageplan, der für die Optimierung der Abfrage verwendet werden soll. Wenn die Abfrage ausgeführt wird, vergleicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Transact-SQL-Anweisung mit der Planhinweisliste und fügt der Abfrage entweder zur Laufzeit die OPTION-Klausel hinzu oder verwendet den angegebenen Abfrageplan.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  Angenommen, die folgende gespeicherte Prozedur, die den `@Country_region`-Parameter annimmt, existiert in einer Datenbankanwendung, die in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank bereitgestellt wird:  
   
-```t-sql  
+```sql  
 CREATE PROCEDURE Sales.GetSalesOrderByCountry (@Country_region nvarchar(60))  
 AS  
 BEGIN  
@@ -66,7 +66,7 @@ END;
   
  Sie könnten dieses Problem lösen, indem Sie die gespeicherte Prozedur so ändern, dass der Abfrage der `OPTIMIZE FOR` -Abfragehinweis hinzugefügt wird. Da sich die gespeicherte Prozedur jedoch in einer bereitgestellten Anwendung befindet, können Sie den Code der Anwendung nicht direkt ändern. Stattdessen können Sie in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank die folgende Planhinweisliste erstellen.  
   
-```t-sql  
+```sql  
 sp_create_plan_guide   
 @name = N'Guide1',  
 @stmt = N'SELECT *FROM Sales.SalesOrderHeader AS h,  
@@ -86,13 +86,13 @@ sp_create_plan_guide
  ### <a name="sql-plan-guide"></a>SQL-Planhinweisliste  
  SQL-Planhinweislisten dienen zum Abgleich von Abfragen, die im Kontext von eigenständigen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen und -Batches, die nicht Teil eines Datenbankobjekts sind, ausgeführt werden. SQL-basierte Planhinweislisten können auch zum Abgleich von Abfragen verwendet werden, die in einer bestimmten Form parametrisiert werden. SQL-Planhinweislisten werden für eigenständige [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen und -Batches verwendet. Diese Anweisungen werden von einer Anwendung häufig mithilfe der gespeicherten Systemprozedur [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) übermittelt. Betrachten Sie beispielsweise den folgenden eigenständigen Batch:  
   
-```t-sql  
+```sql  
 SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC;  
 ```  
   
  Um zu verhindern, dass ein paralleler Ausführungsplan für diese Abfrage generiert wird, erstellen Sie die folgende Planhinweisliste und legen den `MAXDOP` -Abfragehinweis im `1` -Parameter auf `@hints` fest.  
   
-```t-sql  
+```sql  
 sp_create_plan_guide   
 @name = N'Guide2',   
 @stmt = N'SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC',  
@@ -119,13 +119,13 @@ sp_create_plan_guide
 ## <a name="plan-guide-matching-requirements"></a>Voraussetzungen für den Planhinweislistenabgleich  
  Planhinweislisten beziehen sich auf die Datenbank, in der sie erstellt werden. Daher können nur die Planhinweislisten gegen die Abfrage geprüft werden, die in der zum Zeitpunkt der Ausführung einer Abfrage aktuellen Datenbank vorhanden sind. Beispiel: Wenn [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] die aktuelle Datenbank ist und die folgende Abfrage ausgeführt wird:  
   
- ```t-sql
+ ```sql
  SELECT FirstName, LastName FROM Person.Person;
  ```  
   
  Dann können nur in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank vorhandene Planhinweislisten mit dieser Abfrage verglichen werden. Wenn jedoch [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] die aktuelle Datenbank ist und die folgenden Anweisungen ausgeführt werden:  
   
- ```t-sql
+ ```sql
  USE DB1; 
  SELECT FirstName, LastName FROM Person.Person;
  ```  
@@ -144,7 +144,7 @@ sp_create_plan_guide
 ## <a name="plan-guide-effect-on-the-plan-cache"></a>Auswirkungen von Planhinweislisten auf den Plancache  
  Wenn Sie eine Planhinweisliste für ein Modul erstellen, wird der Abfrageplan für dieses Modul aus dem Plancache entfernt. Wenn Sie eine Planhinweisliste des Typs OBJECT oder SQL für einen Batch erstellen, wird der Abfrageplan für einen Batch mit demselben Hashwert entfernt. Wenn Sie eine Planhinweisliste des Typs TEMPLATE erstellen, werden alle Batches mit einer Anweisung aus dem Plancache in dieser Datenbank entfernt.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Task|Thema|  
 |----------|-----------|  
@@ -157,7 +157,7 @@ sp_create_plan_guide
 |Beschreibt, wie SQL Server Profiler zum Erstellen und Testen von Testplanhinweislisten verwendet wird.|[Verwenden von SQL Server Profiler zum Erstellen und Testen von Planhinweislisten](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)|  
 |Beschreibt, wie Planhinweislisten überprüft werden.|[Überprüfen von Planhinweislisten nach einem Upgrade](../../relational-databases/performance/validate-plan-guides-after-upgrade.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   

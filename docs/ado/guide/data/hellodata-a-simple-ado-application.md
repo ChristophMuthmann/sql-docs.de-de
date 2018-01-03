@@ -3,7 +3,7 @@ title: 'HelloData: Eine einfache ADO-Anwendung | Microsoft Docs'
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 339f65cf1d4715d66e6c96316b04b072873d015d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e1c2733381221139373764577df07afa22e40e49
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: Eine einfache ADO-Anwendung
 Diese einfache Anwendung schrittweise jeden der vier wichtigsten ADO-Vorgänge: Abrufen, untersuchen, bearbeiten und Aktualisieren von Daten. Diese Vorgänge werden für die Beispieldatenbank Northwind, die Sie mit Microsoft® SQL Server ausgeführt. Im Beispiel für die Fehlerbehandlung ist minimal, auf die Grundlagen von ADO konzentrieren und Code übersichtliche zu verhindern.  
@@ -48,7 +48,7 @@ Diese einfache Anwendung schrittweise jeden der vier wichtigsten ADO-Vorgänge: 
   
  ![Zeigt Form1 für die HelloData VB-Anwendung](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|Steuerelementtyp|Eigenschaft|Wert|  
+|Steuerelementtyp|Eigenschaft|value|  
 |------------------|--------------|-----------|  
 |Form|Name|Form1|  
 ||Höhe|6500|  

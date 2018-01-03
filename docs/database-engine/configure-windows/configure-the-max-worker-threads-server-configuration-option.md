@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9e800424a84c6d1a992bcdfeae5104e885872f37
-ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.openlocfilehash: c21bd96e0d30b3656a80f0d2f240ebdbc37692ff
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Maximale Anzahl von Arbeitsthreads
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/28/2017
   
      [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So konfigurieren Sie die Option Maximale Anzahl von Arbeitsthreads mit:**  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/28/2017
   
 -   **Nachverfolgung**  [Nach dem Konfigurieren der Option „Max. Anzahl von Arbeitsthreads“](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/28/2017
   
  Die Serverkonfigurationsoption **Max. Anzahl von Arbeitsthreads** berücksichtigt keine Kontothreads, die für alle Systemtasks wie Verfügbarkeitsgruppen, Service Broker, Sperren-Manager und andere erforderlich sind. Wenn die Anzahl der konfigurierten Threads überschritten wird, stellt die folgende Abfrage Informationen zu den Systemtasks bereit, durch die die zusätzlichen Threads generiert wurden.  
   
- ```t-sql  
+ ```sql  
  SELECT  s.session_id, r.command, r.status,  
     r.wait_type, r.scheduler_id, w.worker_address,  
     w.is_preemptive, w.state, t.task_state,  
@@ -134,7 +134,7 @@ ms.lasthandoff: 11/28/2017
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird gezeigt, wie [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) verwendet wird, um die Option `max worker threads` auf `900`festzulegen.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  
@@ -150,9 +150,9 @@ GO
 ##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Konfigurieren der Option Max. Anzahl von Arbeitsthreads  
  Die Änderung wird nach dem Ausführen von [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) sofort wirksam, ohne dass ein Neustart von [!INCLUDE[ssDE](../../includes/ssde-md.md)] erforderlich ist.  
   
-## <a name="see-also"></a>Siehe auch  
- [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
+ [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Diagnoseverbindung für Datenbankadministratoren](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)  
   

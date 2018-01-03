@@ -3,9 +3,9 @@ title: SQL Server-PowerShell | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/04/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,17 +17,17 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 20bdab1b97f3806cea8b8cb3b526a3d4a057f6fd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 19eb632fc1b975671f968b9e2db806129eacae27
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-powershell"></a>SQL Server-PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt Windows PowerShell, eine leistungsstarke Skriptshell, mit der Administratoren und Entwickler die Serververwaltung und die Anwendungsbereitstellung automatisieren können. Die Windows PowerShell-Sprache unterstützt komplexere Logik als [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts und ermöglicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Administratoren dadurch die Erstellung stabiler Verwaltungsskripts. Windows PowerShell-Skripts können außerdem dazu verwendet werden, andere [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Serverprodukte zu verwalten. So steht Administratoren eine serverübergreifende allgemeine Skriptsprache zur Verfügung.  
   
 ## <a name="sql-server-powershell-components"></a>SQL Server PowerShell-Komponenten  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt das Windows PowerShell-Modul **sqlps** bereit, mit dem die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten in eine Windows PowerShell 2.0-Umgebung oder ein Windows PowerShell-Skript importiert werden. Mit dem **sqlps** -Modul werden zwei Windows PowerShell-Snap-Ins geladen, mit denen folgende Elemente implementiert werden können:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt das Windows PowerShell-Modul **sqlps** bereit, mit dem die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten in eine Windows PowerShell 2.0-Umgebung oder ein Windows PowerShell-Skript importiert werden. Mit dem **sqlps**-Modul werden zwei Windows PowerShell-Snap-Ins geladen, mit denen folgende Elemente implementiert werden können:  
   
 -   Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anbieter, der einen einfachen Navigationsmechanismus aktiviert, der Dateisystempfaden ähnelt. Sie können Dateisystempfaden ähnelnde Pfade erstellen, in denen das Laufwerk einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object-Modell zugeordnet ist, und deren Knoten auf Objektmodellklassen basieren. Sie können dann vertraute Befehle wie **cd** und **dir** verwenden, um auf den Pfaden zu navigieren, auf ähnliche Weise, wie Sie in einem Eingabeaufforderungsfenster in Ordnern navigieren. Mit anderen Befehlen, wie **ren** oder **del**, können Sie Aktionen für die Knoten im Pfad ausführen.  
   

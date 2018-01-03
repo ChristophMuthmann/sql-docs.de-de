@@ -3,7 +3,7 @@ title: "Warnungseigenschaften – Neue Warnung (Seite „Allgemein“) | Microso
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4f3f7d45da8f980797f6ff93a7446cbf827945b2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3860afc9e6af4561093350b148b1a36b6c527262
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alert-properties---new-alert-general-page"></a>Warnungseigenschaften – Neue Warnung (Seite „Allgemein“)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe dieser Seite können Sie die allgemeinen Eigenschaften von [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent-Warnungen anzeigen und ändern.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Name**  
 Ändern Sie den Namen der Warnung.  
   
@@ -72,17 +72,17 @@ Geben Sie die Instanz des Leistungsindikators an, die überwacht werden soll.
 **Warnung, falls Leistungsindikator**  
 Geben Sie das Verhalten des Leistungsindikators an, auf das die Warnung reagiert. Die Warnung könnte beispielsweise auf eine Bedingung reagieren, bei der der Wert des Leistungsindikators **Freier Speicherplatz in 'tempdb' (KB)** unter eine bestimmte Grenze fällt, oder auf eine Bedingung, bei der der Wert für **SQL-Kompilierungen/Sekunde** einen bestimmten Wert übersteigt.  
   
-**Wert**  
+**ReplTest1**  
 Geben Sie einen Wert für den Leistungsindikator an.  
   
 ## <a name="wmi-event-alert-options"></a>WMI-Ereigniswarnungsoptionen  
 **Namespace**  
 Geben Sie den Namespace an, der für die WQL-Anweisung (WMI Query Language) verwendet werden soll. Es werden nur Namespaces auf dem Computer unterstützt, auf dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent ausgeführt wird.  
   
-**Abfrage**  
+**Dataseteigenschaften**  
 Geben Sie die WQL-Anweisung an, die das Ereignis identifiziert, auf das die Warnung reagiert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Warnungen](../../ssms/agent/alerts.md)  
 [Verwenden von WQL mit dem WMI-Anbieter für Serverereignisse](http://msdn.microsoft.com/en-us/58b67426-1e66-4445-8e2c-03182e94c4be)  
 [Erstellen einer Warnung mithilfe einer Fehlernummer](../../ssms/agent/create-an-alert-using-an-error-number.md)  

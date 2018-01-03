@@ -3,7 +3,7 @@ title: Datenabschnitt | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fae3df37c9a83bdf97a7ae2a53bc76777b318546
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 486c936681adca59a90dae6a5e304be6f8b4dba5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-section"></a>Datenabschnitt
 Der Datenabschnitt definiert die Daten des Schemarowsets zusammen mit allen ausstehenden Updates, einfügungen oder löschungen. Der Datenabschnitt kann NULL oder mehr Zeilen enthalten. Es kann nur Daten aus einem Rowset enthalten, in die Zeile durch das Schema definiert ist. Darüber hinaus können wie bereits erwähnt, Spalten ohne Daten ausgelassen werden. Wenn ein Attribut oder ein Unterelement im Datenabschnitt verwendet wird, und das Konstrukt nicht im Schema-Abschnitt definiert wurde, wird es ignoriert.  
   
-## <a name="string"></a>String  
+## <a name="string"></a>Zeichenfolge  
  Reservierte XML-Zeichen in Textdaten müssen durch entsprechende Zeichenentitäten ersetzt werden. Beispielsweise muss in den Firmennamen "Jürgens Werkstatt", das einfache Anführungszeichen durch eine Entität ersetzt. Die tatsächliche Zeile würde folgendermaßen aussehen:  
   
 ```  
@@ -39,7 +39,7 @@ Der Datenabschnitt definiert die Daten des Schemarowsets zusammen mit allen auss
 ## <a name="binary"></a>Binär (Binary)  
  Binärdaten sind bin.hex codiert werden (d. h. ein Byte sind zwei Zeichen zugeordnet, ein Zeichen pro Nibble).  
   
-## <a name="datetime"></a>DateTime  
+## <a name="datetime"></a>datetime  
  Variante VT_DATE-Format wird von XML-Data-Datentypen nicht direkt unterstützt. Das richtige Format für Datumsangaben, mit der Komponente eine Daten und die Uhrzeit lautet jjjj-mm-ddTHH.  
   
  Weitere Informationen zu Datumsformaten gemäß XML finden Sie unter der [W3C XML-Data-Spezifikation](https://go.microsoft.com/fwlink/?LinkId=5692).  

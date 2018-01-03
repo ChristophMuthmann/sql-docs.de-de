@@ -3,7 +3,7 @@ title: Verwenden von ADO mit Skriptsprachen | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8e3e63f9389016dcd7e198d7d09099f94299bd19
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c7551fd26f6c0862115f0212777fb738a68e548a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-ado-with-scripting-languages"></a>Verwenden von ADO mit Skriptsprachen
 Innerhalb einer skriptumgebung können mit ADO Daten über die serverseitigen Skripts verfügbar machen. In diesem Szenario ADO, die zugrunde liegenden OLE DB-Anbieter, die es verwendet, und beliebige andere Komponenten, die erforderlich sind, um auf einen bestimmten Datenspeicher verweisen auf einem Server mit Internetinformationsdienste (Internet Information Services, IIS) installiert sind. ADO ist mithilfe von Active Server Pages (ASP), ist eine Komponente, die in ein Skript, das HTML-Daten, z. B. generieren kann verwiesen wird. Diese HTML-Inhalt kann über HTTP auf einen Webbrowser für den Client übergeben werden. Mithilfe von Skripts können auf der Webseite Aktionen zurück an das serverseitige Skript gestattet aktualisieren, durchsuchen und anzeigen bestimmte Daten gesendet.  
@@ -34,17 +34,17 @@ Innerhalb einer skriptumgebung können mit ADO Daten über die serverseitigen Sk
 |Objekt|Speichern für Skripting?|  
 |------------|-------------------------|  
 |ADO-Verbindung|ja|  
-|ADO-Befehl|Nein|  
-|ADO-Parameter|Nein|  
+|ADO-Befehl|nein|  
+|ADO-Parameter|nein|  
 |ADO-Recordset|ja|  
 |ADO-Datensatz|ja|  
 |ADO-Datenstrom|ja|  
-|ADO-Fehler|Nein|  
-|ADOX-Katalog|Nein|  
-|ADOX CellSet|Nein|  
+|ADO-Fehler|nein|  
+|ADOX-Katalog|nein|  
+|ADOX CellSet|nein|  
 |RDS DataControl|ja|  
 |RDS-Datenspeicher|ja|  
-|RDS DataFactory|Nein|  
+|RDS DataFactory|nein|  
   
  In der folgenden Tabelle listet die Anbieter, die mit Windows DAC/MDAC enthalten, und gibt an, ob sie für die Skripterstellung sicher sind.  
   
@@ -53,8 +53,8 @@ Innerhalb einer skriptumgebung können mit ADO Daten über die serverseitigen Sk
 |Form|ja|  
 |Beibehalten|ja|  
 |Remote|ja|  
-|OLE DB-Anbieter für SQLServer (SQLOLEDB)|Nein|  
-|OLE DB-Anbieter für ODBC (MSDASQL)|Nein|  
+|OLE DB-Anbieter für SQLServer (SQLOLEDB)|nein|  
+|OLE DB-Anbieter für ODBC (MSDASQL)|nein|  
   
 ## <a name="odbc-data-sources"></a>ODBC-Datenquellen  
  Ein deutlicher Unterschied zwischen Skripts und nicht-scripting ADO-Code ist der ODBC-Datenquelle verwendet. Für nicht-scripting-Anwendungen können Sie in der ODBC-Datenquellen-Administrator eine Benutzer-DSN erstellen. Für Skripts, die unter IIS ausgeführt werden, müssen Sie eine System-DSN erstellen. Andernfalls werden Ihre Skripts die Datenquelle, die Sie erstellt haben, nicht erkannt. Dies gilt für alle Skripts ADO-Anwendung mithilfe der Microsoft OLE DB-Anbieter für ODBC über Microsoft IIS.  

@@ -3,7 +3,7 @@ title: "Erstellen und Ausführen eines einfachen Befehls | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 89c32b4e148356f9d9b95a3ccea3362a07c94c71
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3f0888620c5d84087a0739eb0a47d065b2f51705
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-and-executing-a-simple-command"></a>Erstellen und Ausführen eines einfachen Befehls
 Ein einfacher Befehl ist eine, die nicht parametrisiert, und erfordert keine Persistenz. Es gibt drei Möglichkeiten zum Erstellen und einen einfachen Befehl ausführen.  

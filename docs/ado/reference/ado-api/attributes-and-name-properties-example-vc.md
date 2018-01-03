@@ -3,7 +3,7 @@ title: Attribute und Namen Eigenschaften (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c157c41d046585806c7ae3f00ef822fa90e06b2e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 79633c646120c4b53eb123d4ca0f3665b4d7be95
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>Attribute und Namen Eigenschaften (VC++-Beispiel)
 Dieses Beispiel zeigt den Wert des der [Attribute](../../../ado/reference/ado-api/attributes-property-ado.md) -Eigenschaft für [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md), [Feld](../../../ado/reference/ado-api/field-object.md), und [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md) Objekte. Er verwendet die [Namen](../../../ado/reference/ado-api/name-property-ado.md) Eigenschaft zum Anzeigen der Namen der einzelnen **Feld** und **Eigenschaft** Objekt.  

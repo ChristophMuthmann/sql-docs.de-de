@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0353aea7e84d69dca9dc469d4945a7cdf6eb7c34
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f06b2599172d8cbdaee05a4c42d852a37290dadb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="manage-change-tracking-sql-server"></a>Verwalten der Änderungsnachverfolgung (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
  Zusätzlich werden in der [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) -Katalogsicht die internen Tabellen aufgeführt, die bei aktivierter Änderungsnachverfolgung für eine Benutzertabelle erstellt werden.  
   
-### <a name="security"></a>Sicherheit  
+### <a name="security"></a>Security  
  Für den Zugriff auf Änderungsnachverfolgungsinformationen mit den [Änderungsnachverfolgungsfunktionen](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)muss der Prinzipal über die folgenden Berechtigungen verfügen:  
   
 -   SELECT-Berechtigung mindestens für die wichtigsten Schlüsselspalten der änderungsnachverfolgten Tabelle zur abgefragten Tabelle.  
@@ -104,12 +104,12 @@ ms.lasthandoff: 11/17/2017
   
  Wie bei anderen internen Tabellen auch können Sie den für die Änderungsnachverfolgungstabelle verwendeten Speicher mit der gespeicherten Prozedur [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) festlegen. Die Namen der internen Tabellen können mit der [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) -Katalogsicht abgerufen werden, wie im nachfolgenden Beispiel dargestellt.  
   
-```tsql  
+```sql  
 sp_spaceused 'sys.change_tracking_309576141'  
 sp_spaceused 'sys.syscommittab'  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Nachverfolgen von Datenänderungen &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [Datenbankeigenschaften &#40;ChangeTracking-Seite&#41;](../../relational-databases/databases/database-properties-changetracking-page.md)   

@@ -3,7 +3,7 @@ title: "Microsoft OLE DB-Anbieter für ODBC | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2b7fe46a54848d16b94919be4ee2ce8987ba167b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 44f3131bff34d35b334495c7c718eb513f5d88bf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB-Anbieter für ODBC (Übersicht)
 Ein ADO- oder RDS-Programmierer würde idealerweise möglich in dem jede Datenquelle eine OLE DB-Schnittstelle verfügbar macht, damit ADO direkt in der Datenquelle aufrufen kann. Obwohl Datenbankanbieter zunehmend OLE DB-Schnittstellen implementieren, sind einige Datenquellen noch nicht auf diese Weise bereitgestellt. Allerdings können die meisten DBMS-Systeme heute über ODBC zugegriffen werden.
@@ -210,19 +210,19 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Abbrechen](../../../ado/reference/ado-api/cancel-method-ado.md)|ja|ja|ja|ja|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|ja|ja|ja|ja|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|ja|ja|ja|ja|
-|[Klon](../../../ado/reference/ado-api/clone-method-ado.md)|Nein|Nein|Ja|ja|
+|[Klon](../../../ado/reference/ado-api/clone-method-ado.md)|nein|nein|ja|ja|
 |[Schließen](../../../ado/reference/ado-api/close-method-ado.md)|ja|ja|ja|ja|
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|ja|ja|ja|ja|
+|[Löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|ja|ja|ja|ja|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|ja|ja|ja|ja|
 |[Verschieben](../../../ado/reference/ado-api/move-method-ado.md)|ja|ja|ja|ja|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|ja|ja|ja|ja|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Nein|Ja|ja|ja|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|nein|ja|ja|ja|
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|ja|ja|ja|ja|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Nein|Ja|ja|ja|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|nein|ja|ja|ja|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|ja|ja|ja|ja|
-|[Öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md)|ja|ja|ja|ja|
+|[Datei](../../../ado/reference/ado-api/open-method-ado-recordset.md)|ja|ja|ja|ja|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|ja|ja|ja|ja|
-|[Erneut synchronisieren](../../../ado/reference/ado-api/resync-method.md)|Nein|Nein|Ja|ja|
+|[Erneut synchronisieren](../../../ado/reference/ado-api/resync-method.md)|nein|nein|ja|ja|
 |[Unterstützt](../../../ado/reference/ado-api/supports-method.md)|ja|ja|ja|ja|
 |[Update](../../../ado/reference/ado-api/update-method.md)|ja|ja|ja|ja|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|ja|ja|ja|ja|

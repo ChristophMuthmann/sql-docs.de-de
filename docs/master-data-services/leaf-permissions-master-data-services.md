@@ -5,7 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -23,11 +23,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18a5a0b1d3309d58cda54387fe228010ca11d831
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 630e5a4d312855581c6a2d8b29028d415068a396
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="leaf-permissions-master-data-services"></a>Blattberechtigungen (Master Data Services)
   Blattberechtigungen gelten für die Attributwerte aller Blattelemente einer Entität.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/20/2017
 |Berechtigung|Description|  
 |----------------|-----------------|  
 |**Lesen**|Der Benutzer kann Blattelemente und Attribute lesen.|  
-|**Create**|Der Benutzer kann Blattelemente erstellen und während der Erstellung Attributwerte zuweisen.|  
+|**Erstellen**|Der Benutzer kann Blattelemente erstellen und während der Erstellung Attributwerte zuweisen.|  
 |**Update**|Der Benutzer kann Blattelemente und Attribute aktualisieren.|  
 |**Delete**|Der Benutzer kann Blattelemente löschen.|  
 |**Verweigern**|Der Zugriff auf die Blattelemente wird vollständig verweigert.|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/20/2017
 |Berechtigung|Description|  
 |----------------|-----------------|  
 |**Lesen**|Der Benutzer kann Attribute lesen.|  
-|**Create**|Der Benutzer kann bei der Erstellung von Elementen Werte zuweisen.|  
+|**Erstellen**|Der Benutzer kann bei der Erstellung von Elementen Werte zuweisen.|  
 |**Update**|Der Benutzer kann Attribute aktualisieren.|  
 |**Delete**|Keine Auswirkung.|  
 |**Verweigern**|Das Attribut wird nicht angezeigt.<br /><br /> Hinweis: Der Zugriff auf die Attribute Name und Code kann nicht explizit verweigert werden.|  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  In diesem Beispiel ist Subcategory ein domänenbasiertes Attribut, das auf der SubcategoryList-Entität basiert. Sie können eine andere Unterkategorie für Mountain-100 auswählen, der SubcategoryList-Entität jedoch keine Elemente hinzufügen bzw. Elemente aus dieser Entität löschen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Zuweisen von Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
     
  [Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   

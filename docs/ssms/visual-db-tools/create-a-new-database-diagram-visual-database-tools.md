@@ -3,7 +3,7 @@ title: Erstellen eines neuen Datenbankdiagramms (Visual Database Tools) | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 9138d33302135de59e1d2e862f31cf16784ae60e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0ba635346ceebfd444f15aaae189cf6a31ff19d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>Erstellen eines neuen Datenbankdiagramms (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mit dem Objekt-Explorer können neue Datenbankdiagramme erstellt werden. Datenbankdiagramme zeigen die Struktur der betreffenden Datenbank grafisch an. Mithilfe von Datenbankdiagrammen können Tabellen, Spalten, Beziehungen und Schlüssel erstellt und geändert werden. Darüber hinaus können Indizes und Einschränkungen geändert werden.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/05/2017
   
 Das Ändern und Löschen von Tabellen sowie das Ändern vorhandener Tabellen und Tabellenbeziehungen kann fortgesetzt werden, bis das neue Datenbankdiagramm vollständig ist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Verwenden von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [Grundlagen des Besitzes von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
   

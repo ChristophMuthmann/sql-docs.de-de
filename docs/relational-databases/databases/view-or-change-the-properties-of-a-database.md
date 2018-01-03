@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7e640407dca96fdae2ca923dcc26f759cda4811b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2c3595bd32156fd1a88b343820e46a88d0f2c6a6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>Anzeigen oder Ändern der Eigenschaften einer Datenbank
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
      [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So zeigen Sie die Eigenschaften einer Datenbank an oder ändern diese mit:**  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 ####  <a name="Permissions"></a> Berechtigungen  
  Zum Ändern der Eigenschaften einer Datenbank ist die ALTER-Berechtigung für die Datenbank erforderlich. Zum Anzeigen der Eigenschaften einer Datenbank ist mindestens eine Mitgliedschaft in der Public-Datenbankrolle erforderlich.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-view-or-change-the-properties-of-a-database"></a>So zeigen Sie die Eigenschaften einer Datenbank an oder ändern diese  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird die Systemfunktion [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) verwendet, um den Status der AUTO_SHRINK-Datenbankoption in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank zurückzugeben. Der Rückgabewert 1 bedeutet, dass die Option auf ON festgelegt ist, und der Rückgabewert 0 bedeutet, dass die Option auf OFF festgelegt ist.  
   
-    ```tsql  
+    ```sql  
     SELECT DATABASEPROPERTYEX('AdventureWorks2012', 'IsAutoShrink');  
     ```  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird die [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) -Katalogsicht abgefragt, um mehrere Eigenschaften der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank anzuzeigen. In diesem Beispiel wird die Datenbank-ID-Nummer (`database_id`), der Schreibschutz- oder Lese-/Schreibstatus der Datenbank (`is_read_only`), die Sortierung für die Datenbank (`collation_name`) und der Datenbank-Kompatibilitätsgrad (`compatibility_level`) zurückgegeben.  
   
-    ```tsql  
+    ```sql  
     SELECT database_id, is_read_only, collation_name, compatibility_level  
     FROM sys.databases WHERE name = 'AdventureWorks2012';  
     ```  
@@ -104,7 +104,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird die [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) abgefragt, um mehrere Eigenschaften der aktuellen Datenbank anzuzeigen.  
   
-    ```tsql  
+    ```sql  
     SELECT configuration_id, name, value, value_for_secondary  
     FROM sys.database_scoped_configurations;  
     ```  
@@ -139,7 +139,7 @@ ms.lasthandoff: 11/17/2017
     ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY   
     ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

@@ -16,14 +16,14 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 12/02/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.author: genemi
 ms.workload: ssms-sql-server-management-studio
-ms.openlocfilehash: b156ff82b18ab7ffb75ca79b57f324244f759bf5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a1a9156ef4bc2846f377f9c0695ec015d58606dd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-and-recently-updated-sql-server-management-studio-ssms-for-sql-server"></a>Neu und kürzlich aktualisiert: SQL Server Management Studio (SSMS) für SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

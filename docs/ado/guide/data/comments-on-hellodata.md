@@ -3,7 +3,7 @@ title: Kommentare zur HelloData | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: adda58b0be044229cc4efc26c65b1af1c4ca3dc0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9b3cde00b3d19798d3a31b6f4c73f9b6f723e9a0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comments-on-hellodata"></a>Kommentare zur HelloData
 Die HelloData-Anwendung führt Sie durch die grundlegenden Operationen des eine typische ADO-Anwendung: erste, untersuchen, bearbeiten und Aktualisieren von Daten. Wenn Sie die Anwendung starten, klicken Sie auf die erste Schaltfläche **Daten abrufen**. Dies führt die **GetData** Unterroutine.  

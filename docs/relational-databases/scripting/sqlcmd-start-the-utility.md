@@ -3,9 +3,9 @@ title: "Starten des Hilfsprogramms „sqlcmd“ | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: db7c4d4d03742ff8834acef16f8b59334ae83fce
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 55dddd4edd48e0b6d158168b7140d2617accc683
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcmd---start-the-utility"></a>Starten des Hilfsprogramms „sqlcmd“
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mit dem [Hilfsprogramm sqlcmd](../../tools/sqlcmd-utility.md) können Sie an der Eingabeaufforderung, im Abfrage-Editor im SQLCMD-Mode, in einer Windows-Skriptdatei oder in einem Auftragsschritt des Betriebssystems (Cmd.exe) eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Auftrags [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, Systemprozeduren und Skriptdateien eingeben.
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
     > [!NOTE]  
     >  Eingegebene [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen werden in einem Puffer gespeichert. Sie werden als Batch ausgeführt, wenn der Befehl "GO" erkannt wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Ausführen von Transact-SQL-Skriptdateien mithilfe von sqlcmd](../../relational-databases/scripting/sqlcmd-run-transact-sql-script-files.md)  
   
   

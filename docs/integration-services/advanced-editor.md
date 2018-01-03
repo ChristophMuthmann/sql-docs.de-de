@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b955ca40730e07da0b0532ee42b0820116ad14f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1c10eafdd991210ceff584c215efc9426446bb40
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="advanced-editor"></a>Erweiterter Editor
   Verwenden Sie das Dialogfeld **Erweiterter Editor** , um Eigenschaften für das ausgewählte [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Objekt zu konfigurieren.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/20/2017
   
  Die angezeigten Eigenschaften variieren je nach Komponente. Weitere Informationen zu den Eigenschaften, die in **Erweiterter Editor**angezeigt werden können, finden Sie unter folgenden Themen:  
   
--   [Allgemeine Eigenschaften](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [SQL Server Integration Services-Transformationen](../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Fehler- und Meldungsreferenz von Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
   
   

@@ -3,7 +3,7 @@ title: Systemobjekte im Objekt-Explorer ausblenden | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -22,13 +22,13 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 73a97e78886138d5461dcff102750e255f752037
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3d663f053d417f02a3249ddec2b4174d30db7595
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="hide-system-objects-in-object-explorer"></a>Ausblenden von Systemobjekten im Objekt-Explorer
+# <a name="hide-system-objects-in-object-explorer"></a>Systemobjekte im Objekt-Explorer ausblenden
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In diesem Thema wird beschrieben, wie Sie im Objekt-Explorer in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] Systemobjekte ausblenden können. Der **Datenbanken** -Knoten des Objekt-Explorers enthält Systemobjekte, z. B. die Systemdatenbanken. Verwenden Sie die Seiten **Extras**/**Optionen** , um die Systemobjekte auszublenden. Manche Systemobjekte, wie z. B. Systemfunktionen und Systemdatentypen, sind von dieser Einstellung nicht betroffen.  
   
 ## <a name="SSMSProcedure"></a>Verwenden von SQL Server Management Studio  

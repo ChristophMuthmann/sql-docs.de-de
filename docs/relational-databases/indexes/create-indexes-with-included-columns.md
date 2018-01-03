@@ -27,11 +27,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ab797826f45d019926f4e35055cc18bdece9763b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 064df7a689cbb3da0323448eb5efc8d0fdace5be
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-indexes-with-included-columns"></a>Erstellen von Indizes mit eingeschlossenen Spalten
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,25 +45,9 @@ ms.lasthandoff: 11/17/2017
  Ein Index mit Nichtschlüsselspalten kann die Abfrageleistung erheblich steigern, wenn alle Spalten in der Abfrage in den Index als Schlüssel- oder Nichtschlüsselspalten eingeschlossen werden. Leistungsvorteile werden erzielt, weil der Abfrageoptimierer alle Spaltenwerte im Index finden kann; auf Daten der Tabelle oder des gruppierten Indexes wird nicht zugegriffen, sodass als Ergebnis weniger Datenträger-E/A-Vorgänge auftreten.  
   
 > [!NOTE]  
->  Wenn ein Index alle Spalten enthält, auf die eine Abfrage verweist, wird dies normalerweise als *Abdecken der Abfrage*bezeichnet.  
-  
- **In diesem Thema**  
-  
--   **Vorbereitungen:**  
-  
-     [Entwurfsempfehlungen](#DesignRecs)  
-  
-     [Einschränkungen](#Restrictions)  
-  
-     [Sicherheit](#Security)  
-  
--   **So erstellen Sie einen Index mit Nichtschlüsselspalten mit:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+> Wenn ein Index alle Spalten enthält, auf die eine Abfrage verweist, wird dies normalerweise als *Abdecken der Abfrage*bezeichnet.  
+   
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="DesignRecs"></a> Entwurfsempfehlungen  
   
@@ -94,7 +78,7 @@ ms.lasthandoff: 11/17/2017
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** bzw. der festen Datenbankrollen **db_ddladmin** und **db_owner** sein.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>So erstellen Sie einen Index mit Nichtschlüsselspalten  
   
@@ -126,13 +110,13 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>So erstellen Sie einen Index mit Nichtschlüsselspalten  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     -- Creates a nonclustered index on the Person.Address table with four included (nonkey) columns.   
@@ -143,7 +127,7 @@ ms.lasthandoff: 11/17/2017
     INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);  
     GO  
     ```  
-  
- Weitere Informationen finden Sie unter [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
-  
-  
+
+## <a name="related-content"></a>Verwandte Inhalte  
+[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)    
+[Handbuch zum SQL Server Indexentwurf](../../relational-databases/sql-server-index-design-guide.md)   

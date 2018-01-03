@@ -5,7 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: docset-sql-devref
@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5c61113cc241b20a30ac31ac6e89d82251c0dd69
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ccd75faa1209ea71944b1807f697b19691e04974
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-connection-managers-programmatically"></a>Programmgesteuertes Arbeiten mit Verbindungs-Managern
   In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ist die AcquireConnection-Methode der zugehörigen Verbindungs-Manager-Klasse die Methode, die Sie am häufigsten aufrufen, wenn Sie mit Verbindungs-Managern in verwaltetem Code arbeiten. Wenn Sie verwaltete Codes schreiben, müssen Sie zur Verwendung der Funktionalität eines Verbindungs-Managers die AcquireConnection-Methode aufrufen. Sie müssen diese Methode unabhängig davon, ob Sie einen verwalteten Code in einem Skripttask, einer Skriptkomponente, einem benutzerdefinierten Objekt oder einer benutzerdefinierten Anwendung schreiben, aufrufen.  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/20/2017
 |WMI|WMI-Verbindungs-Manager|**System.Management.ManagementScope**||  
 |SQLMOBILE|SQL Server Compact Verbindungs-Manager|**System.Data.SqlServerCe.SqlCeConnection**||  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Herstellen einer Verbindung zu Datenquellen im Skripttask](../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   
  [Herstellen einer Verbindung zu Datenquellen in der Skriptkomponente](../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)   
  [Herstellen einer Verbindung mit Datenquellen in einem benutzerdefinierten Task](../integration-services/extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  

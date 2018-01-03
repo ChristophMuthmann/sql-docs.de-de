@@ -3,7 +3,7 @@ title: Mithilfe von Lesezeichen | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a1cfde267a31b3e11f1c869ac96b652b9db5af16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7cbabea62b99f36adb2adf9f12e52d80644f33ea
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-bookmarks"></a>Mithilfe von Lesezeichen
 Es ist oft hilfreich, direkt zu einem bestimmten Datensatz zurück, nachdem verschoben haben, der **Recordset** ohne Blättern Sie in jedem Datensatz und Vergleichen von Werten. Z. B., wenn Sie versuchen, suchen Sie für einen Datensatz mit den **suchen** -Methode, aber die Suche keine Datensätze zurückgibt, werden automatisch an einem Ende der **Recordset**. Wenn Ihr Anbieter unterstützt werden, können Lesezeichen, markieren Sie die Stelle vor dem Verwenden der **suchen** Methode, sodass Sie für Ihre Position zurückkehren können. Ein Lesezeichen ist ein **Variant** Typwert, die eindeutig einen Datensatz in einem **Recordset** Objekt.  

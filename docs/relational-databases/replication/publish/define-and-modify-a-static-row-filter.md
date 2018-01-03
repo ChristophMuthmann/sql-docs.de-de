@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9eea80799dd0ccc51c23685249ebccc1cf3b1338
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 62c79a98fc0b23173539b9653272f85f20a534a7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>Definieren oder Ändern eines statischen Zeilenfilters
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)] statische Zeilenfilter definiert und geändert werden.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -54,10 +54,10 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
--   Da diese Filter statisch sind, erhalten alle Abonnenten die gleiche Teilmenge der Daten. Informationen darüber, wie Sie Zeilen in einem Tabellenartikel, der zu einer Mergeveröffentlichung gehört, dynamisch filtern können, damit jeder Abonnent eine andere Partition der Daten erhält, finden Sie unter [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md). Mergereplikation ermöglicht es Ihnen zudem, verknüpfte Zeilen auf Grundlage eines vorhandenen Zeilenfilters zu filtern. Weitere Informationen finden Sie unter [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+-   Da diese Filter statisch sind, erhalten alle Abonnenten die gleiche Teilmenge der Daten. Informationen darüber, wie Sie Zeilen in einem Tabellenartikel, der zu einer Mergeveröffentlichung gehört, dynamisch filtern können, damit jeder Abonnent eine andere Partition der Daten erhält, finden Sie unter [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md). Mergereplikation ermöglicht es Ihnen zudem, verknüpfte Zeilen auf Grundlage eines vorhandenen Zeilenfilters zu filtern. Weitere Informationen finden Sie unter [Definieren und Ändern eines Verknüpfungsfilters zwischen Mergeartikeln](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
- Definieren, ändern und löschen Sie statische Zeilenfilter auf der Seite **Tabellenzeilen filtern** des Assistenten für neue Veröffentlichung oder der Seite **Filterzeilen** des Dialogfelds **Veröffentlichungseigenschaften - \<Veröffentlichung>**. Weitere Informationen zum Verwenden des Assistenten sowie zum Zugriff auf das Dialogfeld finden Sie unter [Eine Veröffentlichung erstellen](../../../relational-databases/replication/publish/create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+ Definieren, ändern und löschen Sie statische Zeilenfilter auf der Seite **Tabellenzeilen filtern** des Assistenten für neue Veröffentlichung oder der Seite **Filterzeilen** des Dialogfelds **Veröffentlichungseigenschaften - \<Veröffentlichung>**. Weitere Informationen zum Verwenden des Assistenten sowie Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-define-a-static-row-filter"></a>So definieren Sie einen statischen Zeilenfilter  
   
@@ -76,19 +76,19 @@ ms.lasthandoff: 11/17/2017
   
     -   Der Textbereich **Filteranweisung** enthält den Standardtext im folgenden Format:  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [schema].[tablename] WHERE  
         ```  
   
     -   Der Standardtext kann nicht geändert werden. Geben Sie mithilfe der SQL-Standardsyntax im Anschluss an das WHERE-Schlüsselwort die Filterklausel ein. Die vollständige Filterklausel würde folgendermaßen lauten:  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [HumanResources].[Employee] WHERE [LoginID] = 'adventure-works\ranjit0'  
         ```  
   
     -   Ein statischer Zeilenfilter kann eine benutzerdefinierte Funktion einschließen. Die vollständige Filterklausel für einen statischen Zeilenfilter mit einer benutzerdefinierten Funktion würde folgendermaßen lauten:  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [Sales].[SalesOrderHeader] WHERE MyFunction([Freight]) > 100  
         ```  
   
@@ -113,11 +113,11 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-define-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>So definieren Sie einen statischen Zeilenfilter für eine Momentaufnahme- oder Transaktionsveröffentlichung  
   
-1.  Definieren Sie den zu filternden Artikel. Weitere Informationen finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  Definieren Sie den zu filternden Artikel. Weitere Informationen finden Sie unter [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank, [Sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) aus. Geben Sie den Namen des Artikels für **@article**, den Namen der Veröffentlichung für **@publication**, den Namen des Filters für **@filter_name**und die Filterklausel für **@filter_clause** an (ausgenommen `WHERE`).  
   
-3.  Wenn außerdem ein Spaltenfilter definiert werden muss, finden Sie Informationen unter [Definieren und Ändern eines Spaltenfilters](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Führen Sie andernfalls [Sp_articleview &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) aus. Geben Sie den Veröffentlichungsnamen für **@publication**, den Namen des gefilterten Artikels für **@article**und die in Schritt 2 angegebene Filterklausel für **@filter_clause**statische Zeilenfilter definiert und geändert werden. Damit werden die Synchronisierungsobjekte für den gefilterten Artikel erstellt.  
+3.  Wenn außerdem ein Spaltenfilter definiert werden muss, finden Sie Informationen unter [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Führen Sie andernfalls [Sp_articleview &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) aus. Geben Sie den Veröffentlichungsnamen für **@publication**, den Namen des gefilterten Artikels für **@article**und die in Schritt 2 angegebene Filterklausel für **@filter_clause**statische Zeilenfilter definiert und geändert werden. Damit werden die Synchronisierungsobjekte für den gefilterten Artikel erstellt.  
   
 #### <a name="to-modify-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>So ändern Sie einen statischen Zeilenfilter für eine Momentaufnahme- oder Transaktionsveröffentlichung  
   
@@ -139,7 +139,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-define-a-static-row-filter-for-a-merge-publication"></a>So definieren Sie einen statischen Zeilenfilter für eine Mergeveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) aus. Geben Sie die Filterklausel für **@subset_filterclause** an (ausgenommen `WHERE`). Weitere Informationen finden Sie unter [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) aus. Geben Sie die Filterklausel für **@subset_filterclause** an (ausgenommen `WHERE`). Weitere Informationen finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
   
 2.  Wenn außerdem ein Spaltenfilter definiert werden muss, finden Sie Informationen unter [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   
@@ -160,7 +160,7 @@ ms.lasthandoff: 11/17/2017
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-stat_2.sql)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Filtern von veröffentlichten Daten](../../../relational-databases/replication/publish/filter-published-data.md)   

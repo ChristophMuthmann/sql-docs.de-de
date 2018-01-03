@@ -3,9 +3,9 @@ title: Importieren des SQLPS-Moduls | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/01/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 360350a7b8e051bcab2e24df508ea97b742c52a4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ae5fb5957e23a6ad4488a33587d227219855d6b8
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="import-the-sqlps-module"></a>Importieren des SQLPS-Moduls
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Es wird empfohlen, zur Verwaltung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über PowerShell das **sqlps**-Modul in eine Windows PowerShell-Umgebung zu importieren. Das Modul lädt und registriert die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Snap-Ins und -Verwaltbarkeitsassemblys.  Ab Windows PowerShell 3.0 werden Module automatisch importiert, wenn ein Cmdlet oder eine Funktion im Modul in einem Befehl verwendet wird. Dieses Feature funktioniert für jedes Modul in einem Verzeichnis, das im Wert der PSModulePath-Umgebungsvariablen enthalten ist.  Weitere Informationen finden Sie unter [Importieren eines PowerShell-Moduls](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx).
@@ -72,7 +72,7 @@ Get-Module -ListAvailable -Name Sqlps;
   
  ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [&#91;Top&#93;]()  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server-PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
  [SQL Server PowerShell-Anbieter](../../relational-databases/scripting/sql-server-powershell-provider.md)   
  [Verwenden der Datenbankmodul-Cmdlets](../../relational-databases/scripting/use-the-database-engine-cmdlets.md)  

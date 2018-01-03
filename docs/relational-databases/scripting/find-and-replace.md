@@ -3,9 +3,9 @@ title: Suchen und Ersetzen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 31dc1f37e5f8bd3cdb5f11c244966037bd8eeca4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 85901d1a79d1f6bffb1787a555c9ebb553f4cfe5
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="find-and-replace"></a>Suchen und Ersetzen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mithilfe des Dialogfelds **Suchen und Ersetzen** können Sie Texte innerhalb von Dateien finden und ggf. ersetzen. Es können verschiedene Versionen des Dialogfelds **Suchen und Ersetzen** mit leicht unterschiedlichen Optionen angezeigt werden, abhängig davon, auf welche Weise das Dialogfeld geöffnet wurde. Zeigen Sie im Menü **Bearbeiten** auf **Suchen und Ersetzen**, und klicken Sie auf **Schnellsuche** , um das Dialogfeld mit Such- aber ohne Ersetzungsoptionen zu öffnen. Zeigen Sie im Menü **Bearbeiten** auf **Suchen und Ersetzen**, und klicken Sie auf **Schnellersetzung** , um das Dialogfeld mit Such- und Ersetzungsoptionen zu öffnen.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="find-what"></a>Suchen nach  
  Diese Steuerelemente ermöglichen Ihnen, die Zeichenfolge oder den Ausdruck anzugeben, nach dem gesucht werden soll.  
   
- **Find what**  
+ **Suchen nach**  
  Geben Sie den Suchtext ein. Im Dialogfeld wird ein wahrscheinlicher Suchtext eingetragen. Dabei wird entweder auf den Text zurückgegriffen, der vor dem Öffnen des Dialogfelds mit dem Cursor markiert wurde, oder auf in der Nähe befindlichen Text oder auf zuvor verwendeten Suchtext. Sie können aus der Dropdownliste eine der letzten 20 Suchzeichenfolgen zur Wiederverwendung auswählen.  
   
  **[Zeichenfolge mit Platzhaltern]**  
@@ -129,7 +129,7 @@ ms.lasthandoff: 11/17/2017
  **In Dateien ersetzen**  
  Über diese Symbolleisten-Registerkarte wechseln Sie zum Dialogfeld **In Dateien ersetzen** .  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Tastenkombinationen für SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

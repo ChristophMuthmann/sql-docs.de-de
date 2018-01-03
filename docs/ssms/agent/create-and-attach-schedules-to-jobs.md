@@ -3,7 +3,7 @@ title: "Anlegen und Zuweisen von Zeitplänen zu Aufträgen | Microsoft-Dokumenta
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc61a3323ae24d1c571b743fa4d0d2bed3278585
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c1f516bb0add6bd1f415260f061b1de77bf2b22a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Anlegen und Zuweisen von Zeitplänen zu Aufträgen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Zeitpläne für Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agents zu erstellen bedeutet, die Bedingung(en) zu definieren, durch die die Ausführung des Auftrags ohne Benutzerinteraktion gestartet wird. Sie können einen Auftrag so planen, dass er automatisch ausgeführt wird, indem Sie einen neuen Zeitplan für den Auftrag erstellen oder indem Sie dem Auftrag einen vorhandenen Zeitplan zuweisen.  
@@ -50,7 +50,7 @@ Ein Zeitplan kann zeit- oder ereignisbasiert sein. Zum Beispiel können Sie eine
   
 -   Einmalige Ausführung zu einem bestimmten Zeitpunkt.  
   
--   Ausführung auf wiederkehrender Basis.  
+-   Regelmäßige Ausführung.  
   
 Als Alternative zu Auftragszeitplänen können Sie auch eine Warnung erstellen, durch die in Reaktion auf ein Ereignis ein bestimmter Auftrag ausgeführt wird.  
   
@@ -87,16 +87,16 @@ Bevor Sie Aufträge definieren, die während der CPU-Leerlaufzeit ausgeführt we
   
 Definieren Sie die CPU-Leerlaufbedingung als Prozentwert, unter den die CPU-Nutzung für eine bestimmte Dauer absinken muss. Legen Sie dann die Zeitdauer fest. Wenn die CPU-Nutzung für die angegebene Zeitdauer unter den angegebenen Prozentwert abfällt, startet der [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent alle Aufträge mit CPU-Leerlaufzeitplänen. Weitere Informationen zur Verwendung von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] oder des Systemmonitors zur Überwachung der CPU-Nutzung finden Sie unter [Überwachen der CPU-Auslastung](http://msdn.microsoft.com/en-us/2a02a3b6-07b2-4ad0-8a24-670414d19812).  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
-|**Description**|**Thema**|  
+|**Beschreibung**|**Thema**|  
 |Beschreibt, wie ein Zeitplan für einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Auftrag erstellt wird.|[Create a Schedule](../../ssms/agent/create-a-schedule.md)|  
 |Beschreibt, wie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Auftrag geplant wird.|[Planen eines Auftrags](../../ssms/agent/schedule-a-job.md)|  
 |Erläutert, wie die CPU-Leerlaufbedingung für den Server definiert wird.|[Festlegen der Leerlaufzeit und Leerlaufdauer der CPU &#40;SQL Server Management Studio&#41;](../../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [sp_help_jobschedule](http://msdn.microsoft.com/en-us/2cded902-9272-4667-ac4b-a4f95a9f008e)  
 [sysjobschedules](http://msdn.microsoft.com/en-us/ccdafec7-2a9b-4356-bffb-1caa3a12db59)  
   

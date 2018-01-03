@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 10623fc1a5c493dc0fd5f03f730bf712f6c3b893
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0f27dbf8d8a6deb04fc9f45af51d0a90f694e4ef
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="application-level-partitioning"></a>Partitionierung auf Anwendungsebene
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Diese Anwendung verarbeitet Aufträge. Es besteht ein hoher Verarbeitungsaufwand für aktuelle Aufträge. Bei älteren Bestellungen ist der Verarbeitungsaufwand gering. Neue Aufträge befinden sich in einer speicheroptimierten Tabelle. Ältere Aufträge befinden sich in einer datenträgerbasierten Tabelle. Alle Aufträge nach dem *hotDate* sind in der speicheroptimierten Tabelle enthalten. Alle Aufträge vor dem *hotDate* sind in der datenträgerbasierten Tabelle enthalten. Angenommen, es liegt eine extreme OLTP-Arbeitsauslastung mit einer Vielzahl gleichzeitiger Transaktionen vor. Diese Geschäftsregel (neue Aufträge in einer speicheroptimierten Tabelle) muss erzwungen werden, selbst wenn einige gleichzeitige Transaktionen versuchen, das *hotDate*zu ändern.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="code-listing"></a>Codelisting  
   
-```tsql  
+```sql  
 USE MASTER  
 GO  
 IF NOT EXISTS(SELECT name FROM sys.databases WHERE name = 'hkTest')  
@@ -220,7 +220,7 @@ select * from hot order by orderDate desc
 select * from cold order by orderDate desc  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Codebeispiele für In-Memory OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
   
   

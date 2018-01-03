@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 160513acf82e56718e15893de1aa70d698174c80
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a81021ed7170b6bf92bfd2eebfebef9044de3bde
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SELECT- und JOIN-Anweisungen von Systemsichten für erweiterte Ereignisse in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ Als nächstes sehen wir, dass im Abschnitt **Events** (Ereignisse), das Ereignis
 
 <a name="resource_type_PAGE_cat_view"></a>
 
-Wir sind immer noch im Abschnitt **Events** > **Configure** (Ereignisse &gt; Konfigurieren) und sehen als nächstes, dass [**resource_type** auf **PAGE**](#resource_type_dmv_actual_row)festgelegt wurde. Dies bedeutet, dass Ereignisdaten nicht vom Ereignismodul zum Ziel gesendet wird, wenn der Wert **resource_type** nicht **PAGE**ist.
+Wir sind immer noch im Abschnitt **Events** > **Configure** (Ereignisse > Konfigurieren) und sehen als nächstes, dass [**resource_type** auf **PAGE**](#resource_type_dmv_actual_row) festgelegt wurde. Dies bedeutet, dass Ereignisdaten nicht vom Ereignismodul zum Ziel gesendet wird, wenn der Wert **resource_type** nicht **PAGE**ist.
 
 Es werden zusätzliche Prädikatfilter für die Datenbank und für einen Leistungsindikator angezeigt.
 
@@ -165,7 +165,7 @@ Sie können mit der rechten Maustaste im **Objekt-Explorer** auf den Sitzungskno
 Das folgende T-SQL-Skript wurde durch Zurückentwickeln mit SSMS erstellt. Anschließend wurde das Skript manuell durch strategische Bearbeitung der Leerzeichen verschönert.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [event_session_test3]
     ON SERVER  -- Or, if on Azure SQL Database, ON DATABASE.
 
@@ -219,7 +219,7 @@ Dadurch ist die T-SQL-Perspektive abgeschlossen.
 Machen Sie sich keine Sorgen! Die folgende SELECT-Anweisung von T-SQL ist nur so lang, da durch die UNION-Klausel mehrere kleine SELECT-Anweisungen vereinigt wurden. Jede der kleinen SELECT-Anweisungen kann einzeln ausgeführt werden. Die kleinen SELECT-Anweisungen zeigen an, wie die verschiedenen Katalogsichten des Systems durch JOIN verknüpft werden müssen.
 
 
-```tsql
+```sql
 SELECT
         s.name        AS [Session-Name],
         '1_EVENT'     AS [Clause-Type],
@@ -414,7 +414,7 @@ Hier ist die Liste der SELECT-Anweisungen in dieser DMV aus dem Abschnitt C:
 Alle Objekte, die Sie im Bereich erweitere Ereignisse verwenden können, stammen von Paketen, die in Ihr System geladen werden. In diesem Abschnitt werden alle Pakete und deren Beschreibungen aufgeführt.
 
 
-```tsql
+```sql
 SELECT  --C.1
         p.name         AS [Package],
         p.description  AS [Package-Description]
@@ -470,7 +470,7 @@ XtpRuntime     Extended events for the XTP Runtime
 Dieser Abschnitt beschreibt die Objekttypen, die in Ereignispaketen enthalten sind. Eine vollständige Liste aller Objekttypen, die in *sys.dm\_xe\_objects* zusammen mit der Anzahl der Objekte für jeden Typ angezeigt werden.
 
 
-```tsql
+```sql
 SELECT  --C.2
         Count(*)  AS [Count-of-Type],
         o.object_type
@@ -514,7 +514,7 @@ Die folgende SELECT-Anweisung gibt in etwa 1915 Zeilen zurück, eine für jedes 
 
 
 
-```tsql
+```sql
 SELECT  --C.3
         o.object_type  AS [Type-of-Item],
         p.name         AS [Package],
@@ -583,7 +583,7 @@ Die folgende SELECT-Anweisung gibt alle Datenfelder zurück, die speziell für I
 - Darüber hinaus müssen Sie den Wert der Klausel WHERE für *o.name =*bearbeiten.
 
 
-```tsql
+```sql
 SELECT  -- C.4
         p.name         AS [Package],
         c.object_name  AS [Event],
@@ -661,7 +661,7 @@ Der Zweck der SELECT-Anweisung ist es, die zahlreichen Felder anzuzeigen, aus de
 - Zum Filtern, welche Ereignisvorkommen zu Ihrem Ziel gesendet werden, bzw. davon abgehalten werden.
 
 
-```tsql
+```sql
 SELECT  --C.5
         dp.name         AS [Package],
         do.name         AS [Object],
@@ -736,7 +736,7 @@ Die folgende SELECT-Anweisung gibt jeden Parameter für Ihr Ziel zurück. Jeder 
 - Darüber hinaus müssen Sie den Wert der Klausel WHERE für *o.name =*bearbeiten.
 
 
-```tsql
+```sql
 SELECT  --C.6
         p.name        AS [Package],
         o.name        AS [Target],
@@ -801,7 +801,7 @@ Diese DMV SELECT-Anweisung gibt Datenzeilen des Ziels Ihrer aktiven Ereignissitz
 - Sie müssen den Wert der WHERE-Klausel für *s.name =*bearbeiten.
 
 
-```tsql
+```sql
 SELECT  --C.7
         s.name,
         t.target_name,
@@ -869,7 +869,7 @@ Angenommen, Ihre Ereignissitzungen haben Daten erfasst und wurden später beende
     - Achten Sie nicht auf die zusätzlichen Ziffern, die SQL-System jedes Mal, wenn Sie die Sitzung neu starten, in Ihre tatsächlichen. XEL-Dateinamen einbettet. Geben Sie einfach den normalen Stammnamen und die Erweiterung an.
 
 
-```tsql
+```sql
 SELECT  --C.8
         f.module_guid,
         f.package_guid,

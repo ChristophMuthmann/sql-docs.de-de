@@ -3,7 +3,7 @@ title: 'Verbindung (Visual C++-Syntax Index mit #import) | Microsoft Docs'
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e903b3090119134ea2010b8edfdcd449d18b8907
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 612860b13b0b739c49a046d3563c1980bb9195e3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connection-visual-c-syntax-index-with-import"></a>Verbindung (Visual C++-Syntax Index mit #import)
 ## <a name="methods"></a>Methoden  

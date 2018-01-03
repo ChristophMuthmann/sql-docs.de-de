@@ -5,7 +5,7 @@ ms.date: 01/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ae6560cbdb884fa8009ab33c248f1de426c9c89
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 30c30eac6d8651886a37f9895c39ab9cfc782903
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transactions-master-data-services"></a>Transaktionen (Master Data Services)
 
@@ -80,7 +80,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
 ```  
   
 ## <a name="system-settings"></a>Systemeinstellungen  
- Im [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ist eine Einstellung verfügbar, die beeinflusst, ob Transaktionen beim Bereitstellen von Datensätzen aufgezeichnet werden. Sie können diese Einstellung in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] oder direkt in der Tabelle „Systemeinstellungen“ der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]-Datenbank anpassen. Weitere Informationen finden Sie unter [Systemeinstellungen &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
+ Im [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ist eine Einstellung verfügbar, die beeinflusst, ob Transaktionen beim Bereitstellen von Datensätzen aufgezeichnet werden. Sie können diese Einstellung in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] oder direkt in der Tabelle „Systemeinstellungen“ der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank anpassen. Weitere Informationen finden Sie unter [Systemeinstellungen &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
  Wenn Sie Daten in diese Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] importieren, können Sie angeben, ob Transaktionen beim Initiieren der gespeicherten Prozedur protokolliert werden. Weitere Informationen finden Sie unter [Gespeicherte Stagingprozedur &#40;Master Data Services&#41;](../master-data-services/staging-stored-procedure-master-data-services.md).  
   
@@ -89,7 +89,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
  Mehr als ein Benutzer kann trotz Transaktionen, die aktiviert werden, die gleichen Entitätswerte ohne Fehler aktualisieren. In der Regel hat die letzte Bearbeitung zum Wert in einer Sequenz der Zeit Vorrang. Der doppelte Bearbeitungskonflikt kann im Transaktionsverlauf manuell beachtet werden und vom Administrator manuell umgekehrt werden. Der Transaktionsverlauf zeigt die einzelnen Transaktionen für den **vorherigen Wert** und den **neuen Wert** für das fragliche Attribut aus jeder Sitzung an, löst aber den Konflikt nicht automatisch, wenn mehrere **neue Werte** für den gleichen alten Wert vorhanden sind.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  

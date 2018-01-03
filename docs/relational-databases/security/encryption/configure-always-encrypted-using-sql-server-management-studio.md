@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d4181262d713918c834d7dc971444118f11fe623
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7a6e6764d71d632cb4f232eecd34e16f38bede57
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Konfigurieren von Always Encrypted mithilfe von SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ Geben Sie zum Deaktivieren von Always Encrypted für eine Datenbankverbindung `C
   
 Ohne Parametrisierung übergibt der .NET Framework-Datenanbieter jede Ihrer Anweisungen, die Sie im Abfrage-Editor erstellen, als nicht parametrisierte Abfrage. Wenn die Abfrage Literale oder Transact-SQL-Variablen für verschlüsselte Spalten enthält, kann der .NET Framework-Datenanbieter für SQL Server diese nicht erkennen und verschlüsseln, ehe die Abfrage an die Datenbank gesendet wird. Daher misslingt die Abfrage aufgrund eine Typkonflikts (zwischen dem Literal oder der Transact-SQL-Variablen in Klartext und der verschlüsselten Spalte). Die folgende Abfrage misslingt beispielsweise ohne Parametrisierung, sofern die Spalte `SSN` verschlüsselt ist.   
 
-```tsql
+```sql
 DECLARE @SSN NCHAR(11) = '795-73-9838'
 SELECT * FROM [dbo].[Patients]
 WHERE [SSN] = @SSN
@@ -148,7 +148,7 @@ Wenn sowohl „Parametrisierung für Always Encrypted“ als auch das Always Enc
 - Sind mithilfe eines einzelnen Literals initialisiert. Variablen, die mithilfe von Ausdrücken initialisiert wurden, die Operatoren oder Funktionen enthalten, werden nicht parametrisiert.      
 
 Es folgen Beispiele von Variablen, die von SQL Server Management Studio parametrisiert werden.   
-```tsql
+```sql
 DECLARE @SSN char(11) = '795-73-9838';
    
 DECLARE @BirthDate date = '19990104';
@@ -156,7 +156,7 @@ DECLARE @Salary money = $30000;
 ```
 
 Und hier sehen Sie einige Beispiele von Variablen, bei denen SQL Server Management Studio keine Parametrisierung versucht.   
-```tsql
+```sql
 DECLARE @Name nvarchar(50); --Initialization seperate from declaration
 SET @Name = 'Abel';
    
@@ -170,7 +170,7 @@ Voraussetzungen für eine erfolgreiche Parametrisierung:
 - Wenn der deklarierte Typ der Variablen ein „date“- oder „time“-Typ ist, muss die Variable mithilfe einer Zeichenfolge in einem der folgenden ISO 8601-kompatiblen Formate initialisiert werden.   
 
 Es folgen Beispiele von Transact-SQL-Variablendeklarationen, die zu Parametrisierungsfehlern führen:   
-```tsql
+```sql
 DECLARE @BirthDate date = '01/04/1999' -- unsupported date format   
    
 DECLARE @Number int = 1.1 -- the type of the literal does not match the type of the variable   
@@ -192,7 +192,7 @@ Ein weiteres nachstehendes Beispiel zeigt zwei Variablen, die die Bedingungen f�
 >   [!NOTE]
 >   Da Always Encrypted eine beschränkte Teilmenge von Typumwandlungen unterstützt, ist es in vielen Fällen erforderlich, dass der Datentyp einer Transact-SQL-Variablen dem Typ der Spalte in der Zieldatenbank entspricht. Angenommen, der Typ der Spalte `SSN` in der Tabelle `Patients` ist `char(11)`. Die folgende Abfrage misslingt, da der Typ der Variablen `@SSN` (der `nchar(11)`ist) nicht dem Typ der Spalte entspricht.   
 
-```tsql
+```sql
 DECLARE @SSN nchar(11) = '795-73-9838'
 SELECT * FROM [dbo].[Patients]
 WHERE [SSN] = @SSN;
@@ -299,7 +299,7 @@ SQL Server Management Studio erhält die Metadaten der Spaltenverschlüsselungss
 
 **Schritt 3: Konfigurieren Ihrer Anwendungen mit dem neuen Spaltenhauptschlüssel**
 
-In diesem Schritt geht es um alle Ihre Clientanwendungen, die Datenbankspalten abfragen, die mit dem zu rotierenden Spaltenhauptschlüssel geschützt werden (d.h. mit einem Spaltenverschlüsselungsschlüssel verschlüsselt sind, der wiederum mit dem zu rotierenden Spaltenhauptschlüssel verschlüsselt ist). Sie müssen sicherstellen, dass diese Clientanwendungen auf den neuen Spaltenhauptschlüssel zugreifen können. Ihr Vorgehen in diesem Schritt hängt vom Typ des Zertifikatspeichers ab, in dem sich Ihr neuer Spaltenhauptschlüssel befindet. Beispiel:
+In diesem Schritt geht es um alle Ihre Clientanwendungen, die Datenbankspalten abfragen, die mit dem zu rotierenden Spaltenhauptschlüssel geschützt werden (d.h. mit einem Spaltenverschlüsselungsschlüssel verschlüsselt sind, der wiederum mit dem zu rotierenden Spaltenhauptschlüssel verschlüsselt ist). Sie müssen sicherstellen, dass diese Clientanwendungen auf den neuen Spaltenhauptschlüssel zugreifen können. Ihr Vorgehen in diesem Schritt hängt vom Typ des Zertifikatspeichers ab, in dem sich Ihr neuer Spaltenhauptschlüssel befindet. Zum Beispiel:
 - Wenn der neue Spaltenhauptschlüssel ein im Windows-Zertifikatspeicher gespeichertes Zertifikat ist, müssen Sie das Zertifikat an dem Zertifikatspeicherort speichern (*Aktueller Benutzer* oder *Lokaler Computer*), der auch im Schlüsselpfad Ihres Spaltenhauptschlüssels in der Datenbank angegeben ist. Die Anwendung muss auf das Zertifikat zugreifen können:
     - Wenn das Zertifikat am Zertifikatspeicherort *Aktueller Benutzer* gespeichert wird, muss das Zertifikat in den Speicherort „Aktueller Benutzer“ der Windows-Identität (Benutzer) der Anwendung importiert werden.
     - Wenn das Zertifikat am Zertifikatspeicherort *Lokaler Computer* gespeichert wird, benötigt die Windows-Identität der Anwendung die Berechtigung zum Zugriff auf das Zertifikat.
@@ -461,7 +461,7 @@ Außerdem benötigen Sie Zugriff auf die Spaltenhauptschlüssel, die für die Sp
 - **Kryptografiedienstanbieter (Kryptografie-API)** – Die erforderlichen Berechtigungen und Anmeldeinformationen, zu deren Eingabe Sie möglicherweise aufgefordert werden, wenn Sie einen Schlüsselspeicher oder einen Schlüssel verwenden, hängen von der Konfiguration des Speichers und des Kryptografiedienstanbieters (cryptographic service provider; CSP) ab.
 Weitere Informationen finden Sie unter [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 - [Always Encrypted (Datenbankmodul)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted-Assistent](../../../relational-databases/security/encryption/always-encrypted-wizard.md)
 - [Übersicht über die Schlüsselverwaltung für Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)

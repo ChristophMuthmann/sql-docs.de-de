@@ -3,7 +3,7 @@ title: Warnungseigenschaften (Seite Verlauf)|Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f92525b77461ccb02c85f842eb7dc7973185f6fa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4374a0c416bee91dde44adcc811121188958fe34
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alert-properties-history-page"></a>Warnungseigenschaften (Seite Verlauf)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe dieser Seite können Sie den Verlauf von [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent-Warnungen anzeigen und ändern.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Datum der letzten Warnung**  
 Zeigt das Datum, an dem das angegebenen Ereignis zuletzt auftrat, bzw. **(Nie aufgetreten)** an, wenn das Ereignis seit Erstellung des Alarms nicht aufgetreten ist.  
   
@@ -40,6 +40,6 @@ Gesamtanzahl der Vorkommen eines Ereignisses seit der Erstellung des Alarms bzw.
 **Anzahl zurücksetzen**  
 Setzt die Informationen auf dieser Seite zurück.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Warnungen](../../ssms/agent/alerts.md)  
   

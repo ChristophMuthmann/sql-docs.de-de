@@ -3,7 +3,7 @@ title: "Visual C++-Erweiterungen für ADO | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a51272e2fba20b4c336cf4a21cce0cf4a83f4726
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5b50e3035c5c59fe522dfe5debaaa425e31951fd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-extensions"></a>Visual C++-Erweiterungen
 Die bevorzugte Methode für das Programmieren von ADO mit Visual C++ wird mithilfe der **#import** Richtlinie, wie beschrieben in [Microsoft Visual C++-ADO-Programmierung](../../../ado/guide/appendixes/visual-c-ado-programming.md). Frühere Versionen von ADO jedoch geliefert, mit der Programmierung mit Visual C++ eine alternative Methode: die Visual C++-Erweiterungen. In diesem Abschnitt werden diese Funktion für Benutzer, die Erweiterungen für Visual C++-Code verwaltet werden muss, aber neue ADO-Code geschrieben werden soll, verwenden #**importieren**.

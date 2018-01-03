@@ -3,7 +3,7 @@ title: Fehler-Objekt Eigenschaften (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -26,11 +26,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9714f4dd5118453efff2fdde040ec76a9f98e8c3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b6814178258b5713c180cccdb9d2df75ebb31eca
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="description-helpcontext-helpfile-nativeerror-number-source-and-sqlstate-properties-example-vc"></a>Beschreibung, HelpContext HelpFile, NativeError, Anzahl, Quelle und SQLState Eigenschaften (VC++-Beispiel)
 In diesem Beispiel löst einen Fehler aus, es aufgefangen und zeigt die [Beschreibung](../../../ado/reference/ado-api/description-property.md), [HelpContext](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md), [ Anzahl](../../../ado/reference/ado-api/number-property-ado.md), [Quelle](../../../ado/reference/ado-api/source-property-ado-error.md), und [SQLState](../../../ado/reference/ado-api/sqlstate-property.md) Eigenschaften des resultierenden [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt.  

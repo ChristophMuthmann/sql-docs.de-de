@@ -3,7 +3,7 @@ title: Speicherorte (Dialogfeld) (Visual Database Tools) | Microsoft-Dokumentati
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e909d68acae61d209d8d5c9be569b6d76c88b892
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0c355410d0536b4f461973ac55ba382183aa3694
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>Speicherorte (Dialogfeld) (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Verwenden Sie dieses Dialogfeld, um den Ordner mit den gewünschten Dateien zu suchen und auszuwählen. Dieses Dialogfeld übergibt den Pfad des ausgewählten Ordners an das aufrufende Dialogfeld. Es gibt folgende Möglichkeiten, um auf dieses Dialogfeld zuzugreifen:  
@@ -46,7 +46,7 @@ Zeigt den Inhalt des Datenträgers, der Festplatte und des CD-ROM-Laufwerks an.
 **Ordnername**  
 Zeigt den Pfad des ausgewählten Ordners an.  
   
-**Öffnen**  
+**Datei**  
 Gibt den Pfad des ausgewählten Ordners im Feld **Ordnername** an das aufrufende Dialogfeld zurück.  
   
 ## <a name="toolbar"></a>Symbolleiste  

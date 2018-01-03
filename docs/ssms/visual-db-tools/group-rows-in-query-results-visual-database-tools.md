@@ -3,7 +3,7 @@ title: Gruppieren von Zeilen in Abfrageergebnissen (Visual Database Tools) | Mic
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bff62f024fd85b326213197f7f79ea43ed0a0f37
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ad7ba5f8a5f4f155ee5bce77551dfab3ec7fc85e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>Gruppieren von Zeilen in Abfrageergebnissen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Zum Bilden von Teilergebnissen oder zum Anzeigen weiterer Kurzinformationen für Teilbereiche einer Tabelle erstellen Sie Gruppen mithilfe einer Aggregatabfrage. In jeder Gruppe werden die Daten aus allen Zeilen der Tabelle mit demselben Wert zusammengefasst.  
@@ -88,6 +88,6 @@ Die entsprechende Ausgabe könnte folgendermaßen aussehen:
     GROUP BY pub_id  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Sortieren und Gruppieren von Abfrageergebnissen (Visual Database Tools)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
   

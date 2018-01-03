@@ -3,7 +3,7 @@ title: "Zielserver (Registerkarte „Zielserverstatus“) | Microsoft-Dokumentat
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3916162dd9b141ab53632493a9ba20332508835f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3c82dade335a85425ea3bcee535dd10a6b6ad1be
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="target-servers-target-server-status-tab"></a>Zielserver (Registerkarte Zielserverstatus)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe dieser Seite können Sie den Status der Zielserver für diesen Masterserver anzeigen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Zielserver**  
 Zeigt den Namen des Zielservers an.  
   
@@ -58,6 +58,6 @@ Wählen Sie diese Option, um die angezeigten Informationen automatisch zu aktual
 **Aktualisieren alle**  
 Gibt an, wie oft die Informationen auf dieser Seite aktualisiert werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Automatisierte Verwaltung in einem Unternehmen](../../ssms/agent/automated-administration-across-an-enterprise.md)  
   

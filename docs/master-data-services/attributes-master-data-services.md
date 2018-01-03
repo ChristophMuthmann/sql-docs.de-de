@@ -5,7 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -24,11 +24,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ca7a31974a26dfe6b8f38ea3e17c480a74526518
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9acfc7e9d80dd82186f62dcb3fedbe43c80f9f6c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attributes-master-data-services"></a>Attribute (Master Data Services)
   Attribute sind Objekte, die in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Entitäten enthalten sind. Attributwerte beschreiben die Elemente der Entität. Ein Attribut kann verwendet werden, um ein Blattelement, ein konsolidiertes Element oder eine Auflistung zu beschreiben.  
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/20/2017
   
  ![Produktentitätsbaumstruktur](../master-data-services/media/mds-conc-entity-ui.gif "Product Entity Tree Structure")  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  

@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 59cceacbf934aea6fc3e7c0a8e2c5f089ed7f6e4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ca1b0eb6ba963192597a4ebc471c09024eef3042
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>Lektion 3-3: Testen der bereitgestellten Pakete
 In dieser Aufgabe testen Sie die Pakete, die Sie auf einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]bereitgestellt haben.  
@@ -36,7 +36,7 @@ Sie verwenden das Paketausführungshilfsprogramm, um die bereitgestellten Pakete
 > [!NOTE]  
 > Sie sollten die Optionen nicht ändern, um sicherzustellen, dass die Pakete im Kontext dieses Lernprogramms erfolgreich ausgeführt werden.  
   
-Bevor Sie Pakete mithilfe des Paketausführungshilfsprogramms in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ausführen, stellen Sie sicher, dass der Integration Services-Dienst ausgeführt wird. Der Integration Services-Dienst stellt Unterstützung für das Speichern und Ausführen von Paketen bereit. Wird der Dienst beendet, können Sie keine Verbindung mit [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] herstellen, und die auszuführenden Pakete werden nicht in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] aufgelistet. Sie benötigen außerdem Berechtigungen zum Ausführen des Pakets auf der Instanz, auf der das Paket bereitgestellt wurde. Weitere Informationen finden Sie unter [Integration Services-Rollen &#40;SSIS-Dienst&#41;](../integration-services/security/integration-services-roles-ssis-service.md).  
+Bevor Sie Pakete mithilfe des Paketausführungshilfsprogramms in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ausführen, stellen Sie sicher, dass der Integration Services-Dienst ausgeführt wird. Der Integration Services-Dienst stellt Unterstützung für das Speichern und Ausführen von Paketen bereit. Wird der Dienst beendet, können Sie keine Verbindung mit [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] herstellen, und die auszuführenden Pakete werden nicht in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] aufgelistet. Sie benötigen außerdem Berechtigungen zum Ausführen des Pakets auf der Instanz, auf der das Paket bereitgestellt wurde. Weitere Informationen finden Sie unter [Integration Services Roles &#40;SSIS Service&#41;](../integration-services/security/integration-services-roles-ssis-service.md) (Integration Services-Rollen [SSIS-Dienst]).  
   
 Die Ordner auf der obersten Ebene innerhalb des Ordners Gespeicherte Pakete sind die benutzerdefinierten Ordner, die vom Integration Services-Dienst überwacht werden. Sie können beliebig viele (oder wenige) Ordner in der Datei MsDtsSrvr.ini.xml angeben. In diesem Lernprogramm wird davon ausgegangen, dass Sie die Standarddatei MsDtsSrvr.ini.xml verwenden und dass die Ordner auf der obersten Ebene von Gespeicherte Pakete die Namen Dateisystem und MSDB besitzen.  
   
@@ -110,7 +110,7 @@ Die Ordner auf der obersten Ebene innerhalb des Ordners Gespeicherte Pakete sind
   
     Die Abfrage gibt 21 Datenzeilen zurück. Das Ergebnis besteht aus den Zeilen der XML-Datendatei orders.xml. Die einzelnen Zeilen sind Zusammenfassungen nach Land bzw. Region. In der Zeile werden der Name eines Landes bzw. einer Region, die Anzahl der Aufträge für jedes Land bzw. für jede Region und die Datumswerte der neuesten und ältesten Aufträge aufgelistet.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [dtexec (Hilfsprogramm)](../integration-services/packages/dtexec-utility.md)  
   
   

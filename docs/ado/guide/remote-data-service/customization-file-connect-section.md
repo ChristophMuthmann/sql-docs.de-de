@@ -3,7 +3,7 @@ title: Connect-Abschnitt der Anpassungsdatei | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fe0012f287536d015e1086d02833a0f6651194f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0b18fd84d31e95aa2973dd0d5377fbc8f51fafe4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customization-file-connect-section"></a>Connect-Abschnitt der Anpassungsdatei
 Das Standardverhalten des ereignishandlers ist, alle Verbindungen zu verweigern. Die **verbinden** Abschnitt gibt Ausnahmen zu diesem Verhalten. Angenommen, wenn alle der **verbinden** Abschnitte wurden, fehlt oder ist leer, und klicken Sie dann standardmäßig keine Verbindungen hergestellt werden konnte.  

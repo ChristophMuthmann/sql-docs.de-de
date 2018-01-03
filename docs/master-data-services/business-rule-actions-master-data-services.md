@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6932733e167d16db919fd7fd026a5bcc15411620
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b9cf033300908013232449ce22bc9414395c62eb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="business-rule-actions-master-data-services"></a>Geschäftsregelaktionen (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]sind Geschäftsregelaktionen die Folge von Geschäftsregel-Bedingungsauswertungen. Wenn eine Bedingung erfüllt ist (TRUE), wird die Aktion initiiert.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/20/2017
 |-----------------|-----------------|  
 |**start workflow**|Initiiert einen externen Workflow. Die Daten, die diese Aktion bewirkt haben, werden an den Workflow übergeben. Weitere Informationen finden Sie unter [SharePoint Workflow Integration with Master Data Services](http://msdn.microsoft.com/library/gg690195.aspx).<br /><br /> Diese Aktion ist für Text-, Zahlen-, Datums- und Linkwerte gültig.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Geschäftsregelbedingungen &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
  [Geschäftsregeln &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [Erstellen und Veröffentlichen einer Geschäftsregel &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  

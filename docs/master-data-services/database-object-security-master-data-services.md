@@ -5,7 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 365b24e35f44154c644afbf2646f8c52738bd90c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f7058099b0da0b991327f6ab408e55fc7143f8d3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="database-object-security-master-data-services"></a>Sicherheit von Datenbankobjekten (Master Data Services)
   In der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank werden Daten in mehreren Datenbanktabellen gespeichert und in Sichten angezeigt. Daher können Informationen, die Sie in der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung gesichert haben, für Benutzern mit Zugriff auf die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank sichtbar sein.  
@@ -51,11 +51,11 @@ ms.lasthandoff: 11/20/2017
 |Aktion|Sicherungsfähige Elemente|Berechtigungen|  
 |------------|----------------|-----------------|  
 |Erstellen, aktualisieren und löschen Sie Blattelemente und ihre Attribute.|stg.name_Leaf|Erforderlich: INSERT<br /><br /> Optional: SELECT und UPDATE|  
-|Laden Sie die Daten aus der Blattstagingtabelle in die entsprechenden MDS-Datenbanktabellen.|stg.udp_name_Leaf|EXECUTE|  
+|Laden Sie die Daten aus der Blattstagingtabelle in die entsprechenden MDS-Datenbanktabellen.|stg.udp_name_Leaf|Führen Sie|  
 |Erstellen, aktualisieren und löschen Sie konsolidierte Elemente und ihre Attribute.|stg.name_Consolidated|Erforderlich: INSERT<br /><br /> Optional: SELECT und UPDATE|  
-|Laden Sie die Daten aus der konsolidierten Stagingtabelle in die entsprechenden MDS-Datenbanktabellen.|stg.udp_name_Consolidated|EXECUTE|  
+|Laden Sie die Daten aus der konsolidierten Stagingtabelle in die entsprechenden MDS-Datenbanktabellen.|stg.udp_name_Consolidated|Führen Sie|  
 |Verschieben von Elementen in eine explizite Hierarchie|stg.name_Relationship|Erforderlich: INSERT<br /><br /> Optional: SELECT und UPDATE|  
-|Laden Sie die Daten aus der Beziehungsstagingtabelle in die entsprechenden MDS-Tabellen.|stg.udp_name_Relationship|EXECUTE|  
+|Laden Sie die Daten aus der Beziehungsstagingtabelle in die entsprechenden MDS-Tabellen.|stg.udp_name_Relationship|Führen Sie|  
 |Zeigen Sie Fehler an, die aufgetreten sind, als Daten aus den Stagingtabellen in die MDS-Datenbanktabellen eingefügt wurden.|stg.udp_name_Relationship|SELECT|  
   
  Weitere Informationen finden Sie unter [Übersicht: Importieren von Daten aus Tabellen &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/20/2017
   
 |Aktion|Sicherungsfähiges Element|Berechtigungen|  
 |------------|---------------|-----------------|  
-|Überprüfen einer Version der Daten anhand von Geschäftsregeln|mdm.udpValidateModel|EXECUTE|  
+|Überprüfen einer Version der Daten anhand von Geschäftsregeln|mdm.udpValidateModel|Führen Sie|  
   
  Weitere Informationen finden Sie unter [Gespeicherte Überprüfungsprozedur &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md).  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/20/2017
 |Aktion|Sicherungsfähige Elemente|Berechtigungen|  
 |------------|----------------|-----------------|  
 |Bestimmen der ID der zu löschenden Version|mdm.viw_SYSTEM_SCHEMA_VERSION|SELECT|  
-|Löschen einer Version eines Modells|mdm.udpVersionDelete|EXECUTE|  
+|Löschen einer Version eines Modells|mdm.udpVersionDelete|Führen Sie|  
   
  Weitere Informationen finden Sie unter [Löschen einer Version &#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md).  
   
@@ -81,14 +81,14 @@ ms.lasthandoff: 11/20/2017
   
 |Aktion|Sicherungsfähige Elemente|Berechtigungen|  
 |------------|----------------|-----------------|  
-|Sofortiges Anwenden von Elementberechtigungen|mdm.udpSecurityMemberProcessRebuildModel|EXECUTE|  
+|Sofortiges Anwenden von Elementberechtigungen|mdm.udpSecurityMemberProcessRebuildModel|Führen Sie|  
   
  Weitere Informationen finden Sie unter [Sofortiges Anwenden von Elementberechtigungen &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   
 ##  <a name="SysSettings"></a> Konfigurieren von Systemeinstellungen  
  Sie können bestimmte Systemeinstellungen konfigurieren, um das Verhalten in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]zu steuern. Sie können diese Einstellungen in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] oder, wenn Sie über die Zugriffsberechtigung UPDATE verfügen, direkt in die Datenbanktabelle mdm.tblSystemSetting anpassen. Weitere Informationen finden Sie unter [Systemeinstellungen &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Sicherheit &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

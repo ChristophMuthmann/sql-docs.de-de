@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 81dd719383f3a05356d15677ce61bad5e8962807
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 86ca875378afdd32cf509767eb3c02dc3ff0154d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services-Abfragen (SSIS)
   Der Task SQL ausführen, die OLE DB-Quelle, das OLE DB-Ziel und die Transformation für die Suche können SQL-Abfragen verwenden. In dem Task SQL ausführen können von SQL-Anweisungen Datenbankobjekte und Daten erstellt, aktualisiert und gelöscht sowie gespeicherte Prozeduren und SELECT-Anweisungen ausgeführt werden. In der OLE DB-Quelle und der Nachschlagetransformation sind die SQL-Anweisungen normalerweise SELECT- oder ECEC-Anweisungen. Von den letzteren werden am häufigsten gespeicherte Prozeduren ausgeführt, die Resultsets zurückgeben.  
@@ -91,11 +91,11 @@ Verwenden Sie das Dialogfeld **Abfrage-Generator** , um Abfragen zum Verwenden m
   
  Die Transformationen für Suche und Fuzzysuche können ebenfalls Variablen mit Parametern und Rückgabecodes verwenden. Die Informationen zur OLE DB-Quelle gelten auch für diese beiden Transformationen.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Symbolleiste**  
  Mithilfe der Symbolleiste können Sie Datasets verwalten, Bereiche zur Anzeige auswählen und Abfragefunktionen steuern.  
   
-|Wert|Description|  
+|value|Description|  
 |-----------|-----------------|  
 |**Diagrammbereich ein-/ausblenden**|Blendet den Bereich **Diagramm** ein oder aus.|  
 |**Rasterbereich ein-/ausblenden**|Blendet den Bereich **Raster** ein oder aus.|  

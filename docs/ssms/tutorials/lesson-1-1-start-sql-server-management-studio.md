@@ -3,7 +3,7 @@ title: Starten von Microsoft SQL Server Management Studio | Microsoft-Dokumentat
 ms.custom: 
 ms.date: 07/11/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ee6d1bcbf5102163c8d87d59442d9736e9b6d1f0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 100026baf315404c6b50da48a358e3bfd7200abf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-1---start-sql-server-management-studio"></a>Lektion 1-1: Starten von SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Zu Beginn dieses Lernprogramms geht es hauptsächlich um [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -67,7 +67,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  Wird Ihr Server nicht angezeigt, klicken Sie in der Liste der registrierten Server mit der rechten Maustaste auf **Datenbankmodul**, dann auf **Tasks**und anschließend auf **Lokale Serverregistrierung aktualisieren**. Um zusätzliche SQL-Server auf einer SQL-Datenbank hinzuzufügen, klicken Sie mit der rechten Maustaste auf einen Speicherort unter Registrierte Server, und klicken Sie anschließend auf **Neue Serverregistrierung**. Tragen Sie im Bereich **Anmeldename** die Informationen ein, die Sie auch im Dialogfeld **Verbindung mit Server herstellen** eingetragen haben.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Herstellen einer Verbindung mit registrierten Servern und dem Objekt-Explorer](../../tools/sql-server-management-studio/lesson-1-2-connect-with-registered-servers-and-object-explorer.md)  
 
   

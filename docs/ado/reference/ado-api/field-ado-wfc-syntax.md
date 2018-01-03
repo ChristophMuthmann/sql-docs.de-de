@@ -3,7 +3,7 @@ title: Feld (ADO - WFC-Syntax) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 02/15/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bb583ec535744dc394f700279dd104f3be6a810d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 42748fb897d2ec6a7ed226f35852b828ddf82f71
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="field-ado---wfc-syntax"></a>Feld (ADO - WFC-Syntax)
 ## <a name="package-commswfcdata"></a>Paket com.ms.wfc.data  

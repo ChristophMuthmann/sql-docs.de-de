@@ -3,7 +3,7 @@ title: StreamTypeEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b652658048661a26ee8ae61801fcea50735d4e3d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7934c6d1953e5db36020696af6ad716b3715700c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="streamtypeenum"></a>StreamTypeEnum
 Gibt den Typ der Daten in einem [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt.  
   
-|Konstante|Wert|Description|  
+|Konstante|value|Description|  
 |--------------|-----------|-----------------|  
 |**adTypeBinary**|1|Gibt Binärdaten an.|  
 |**adTypeText**|2|Standard. Gibt an, Textdaten, die in den angegebenen Zeichensatz ist [Charset](../../../ado/reference/ado-api/charset-property-ado.md).|  

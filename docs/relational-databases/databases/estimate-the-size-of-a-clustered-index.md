@@ -4,7 +4,9 @@ ms.custom:
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: SQL
+ms.prod_service: database-engine, sql-database
+ms.component: indexes
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,13 +28,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3a25804d6bb1769d785e53e0790dff994a528d92
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 202e61892586abc10c00e345361def5c26cdb75b
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>Schätzen der Größe eines gruppierten Indexes
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   Mit den folgenden Schritten können Sie den Umfang des Speicherplatzes schätzen, der zum Speichern eines gruppierten Indexes erforderlich ist:  
   
 1.  Berechnen des Speicherplatzes, der zum Speichern der Daten in der Blattebene des gruppierten Indexes erforderlich ist.  
@@ -41,7 +46,7 @@ ms.lasthandoff: 12/01/2017
   
 3.  Addieren Sie die berechneten Werte.  
   
-## <a name="step-1-calculate-the-space-used-to-store-data-in-the-leaf-level"></a>Schritt 1: Berechnen des Speicherplatzes, der zum Speichern der Daten in der Blattebene verwendet wird  
+## <a name="step-1-calculate-the-space-used-to-store-data-in-the-leaf-level"></a>Schritt 1: Berechnen des Speicherplatzes, der zum Speichern der Daten in der Blattebene verwendet wird  
   
 1.  Geben Sie die Anzahl der Zeilen an, die die Tabelle enthalten wird:  
   
@@ -224,7 +229,7 @@ ms.lasthandoff: 12/01/2017
   
      Informationen zu den Speicherplatzanforderungen von Sparsespalten finden Sie unter [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Beschreibung von gruppierten und nicht gruppierten Indizes](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  [Schätzen der Größe einer Tabelle](../../relational-databases/databases/estimate-the-size-of-a-table.md)   
  [Erstellen gruppierter Indizes](../../relational-databases/indexes/create-clustered-indexes.md)   

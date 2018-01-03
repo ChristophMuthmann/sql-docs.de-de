@@ -3,7 +3,7 @@ title: Festlegen von DCOM-Stream Marshalling Format | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5addd2044189538b95e4023230653e6011e087b4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 370958ce7f66aa7a87296f47884b62a08935fae0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-dcom-stream-marshaling-format"></a>Festlegen von DCOM-Datenstrom, die Marshalling-Format
 Ein Client-Computer, die mit der Komponenten von RDS 1.5 oder früher ist nicht kompatibel mit dem Server über Komponenten von RDS 2.0 oder höher. Wenn DCOM als zugrunde liegendes Protokoll verwendet wird, ist die Unterstützung für RDS 2.0 oder höher effizienter Transport [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekte. Wenn Ihr Client Komponenten von RDS 1.5 oder früher ausgeführt wird, können Sie den Server mit der vorherigen RDS-Unterstützung (so genannte RDS 1.0) oder neueren RDS-Unterstützung (RDS 2.0 oder höher) festlegen. Legen Sie entweder die folgenden Registrierungseinträge:  

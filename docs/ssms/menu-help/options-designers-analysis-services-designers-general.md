@@ -3,7 +3,7 @@ title: "Optionen (Designer – Analysis Services-Designer – Allgemein) | Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fabfd5ea9993155d3d4516f80779032c96de42a7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 873ec86f961896bba873509fe29bb71546be29c4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="options-designers---analysis-services-designers---general"></a>Optionen (Designer - Analysis Services-Designer – Allgemein)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Legen Sie das Standardverhalten von SQL Server Analysis Services-Designern mithilfe der Seite **Designer**, **Wartungspläne**, **Analysis Services** und **Allgemein** fest.  
   
-## <a name="connectivity"></a>Konnektivität  
+## <a name="connectivity"></a>Connectivity  
 Abfragetimeout  
 Die Anzahl der Sekunden, die der Designer wartet, bis die Abfrage reagiert, bevor er einen Fehler generiert.  
   

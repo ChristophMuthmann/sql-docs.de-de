@@ -3,7 +3,7 @@ title: Recordset (ADO - WFC-Syntax) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2367dbf9a1e4d2fcb78cefbe9094a8ef8398cb60
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ca2f3cf468dc108386c3693a46b96ceced87e916
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordset-ado---wfc-syntax"></a>Recordset (ADO - WFC-Syntax)
 ## <a name="package-commswfcdata"></a>Paket com.ms.wfc.data  

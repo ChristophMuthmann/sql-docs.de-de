@@ -4,7 +4,9 @@ ms.custom:
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: SQL
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: data-compression
 ms.technology: dbe-data-compression
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,13 +28,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c78a4c6f009e0c90a2a966fb605b0727f8d0ecdd
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 470ba24be23fa4e020d2119eb0408d50ca14efa4
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Aktivieren der Komprimierung für eine Tabelle oder einen Index
+
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
   In diesem Thema wird beschrieben, wie die Komprimierung für eine Tabelle oder einen Index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]aktiviert wird.  
   
  **In diesem Thema**  
@@ -41,7 +46,7 @@ ms.lasthandoff: 12/01/2017
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So aktivieren Sie die Komprimierung für eine Tabelle oder einen Index mit:**  
   
@@ -49,7 +54,7 @@ ms.lasthandoff: 12/01/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -64,7 +69,7 @@ ms.lasthandoff: 12/01/2017
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Tabelle oder den Index.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-enable-compression-on-a-table-or-index"></a>So aktivieren Sie die Komprimierung für eine Tabelle oder einen Index  
   
@@ -204,7 +209,7 @@ ms.lasthandoff: 12/01/2017
   
 #### <a name="to-enable-compression-on-a-table"></a>So aktivieren Sie die Komprimierung für eine Tabelle  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -222,7 +227,7 @@ ms.lasthandoff: 12/01/2017
   
 #### <a name="to-enable-compression-on-an-index"></a>So aktivieren Sie die Komprimierung für einen Index  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -248,7 +253,7 @@ ms.lasthandoff: 12/01/2017
   
  Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) und [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md)   
  [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)  
   

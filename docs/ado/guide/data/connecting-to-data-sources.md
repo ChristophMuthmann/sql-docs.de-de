@@ -3,7 +3,7 @@ title: Herstellen einer Verbindung mit Datenquellen | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2a05c4da49edef0635e95cc5aaf43976ff0753af
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dafec45c1acbe10277738f809c0804dc298be282
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-to-data-sources"></a>Herstellen einer Verbindung mit Datenquellen
 Ein ADO **Verbindung** -Objekt stellt eine eindeutige Sitzung mit einer Datenquelle, z. B. ein DBMS, einen Speicher oder eine durch Trennzeichen getrennte Textdatei dar. Im Fall von einem Client/Server-Datenbanksystem kann die ADO-Verbindung eine tatsächliche Netzwerk-Verbindung mit dem Server sein.  
   
- Die **Verbindung** Objekt unterstützt verschiedene [Eigenschaften und Methoden](../../../ado/reference/ado-api/connection-object-properties-methods-and-events.md) zum Angeben von verbindungskonfigurationen, öffnen und Schließen von Verbindungen, erstellen und Ausführen von Befehlen für die Datenquelle , und Bereitstellen von Informationen über den Entwurf der zugrunde liegenden Datenquelle in Form von Schemarowsets, usw.. Abhängig von den Funktionen, die vom Anbieter, einige Auflistungen, Methoden oder Eigenschaften des unterstützt eine **Verbindung** Objekt möglicherweise nicht zur Verfügung.  
+ Die **Verbindung** Objekt unterstützt verschiedene [Eigenschaften und Methoden](../../../ado/reference/ado-api/connection-object-properties-methods-and-events.md) zum Angeben von verbindungskonfigurationen, öffnen und Schließen von Verbindungen, erstellen und Ausführen von Befehlen für die Datenquelle , und Bereitstellen von Informationen über den Entwurf der zugrunde liegenden Datenquelle in Form von Schemarowsets, usw. Abhängig von den Funktionen, die vom Anbieter, einige Auflistungen, Methoden oder Eigenschaften des unterstützt eine **Verbindung** Objekt möglicherweise nicht zur Verfügung.  
   
  Eine Verbindung herstellen, mit einer Datenquelle mithilfe einer **Verbindung** -Objekts oder mithilfe einer **Recordset** Objekt.  
   

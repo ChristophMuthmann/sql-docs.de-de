@@ -3,7 +3,7 @@ title: "Toolboxelemente auswählen (Seite Wartungstasks) | Microsoft-Dokumentati
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3cb904c376444eeaf7ad7cfe217d3d202d4d3e59
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0ead6bf455f4fd80da564f55a5a6dd183a773116
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Toolboxelemente auswählen (Seite Wartungstasks)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Auf dieser Registerkarte des Dialogfelds **Toolbox anpassen** wird eine Liste aller Wartungstaskkomponenten angezeigt, die auf Ihrem Computer registriert sind. Außerdem können Sie festlegen, welche Komponenten in der Toolbox angezeigt werden. Sie können das Dialogfeld **Toolbox anpassen** über das Menü **Extras** öffnen. Zum Sortieren der Komponentenliste wählen Sie eine der Spaltenüberschriften.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 Die Registerkarte **Wartungstasks** enthält die folgenden Spalten mit Informationen.  
   
 **Name**  
@@ -44,7 +44,7 @@ Zeigt das Datum an, an dem die Komponente zuletzt geändert wurde.
   
 Klicken Sie auf einen Namen, um die Attribute der Komponente in den Feldern **Sprache** und **Version** zusammen mit dem Symbol anzuzeigen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Sprache**  
 Die Sprache der Komponente.  
   

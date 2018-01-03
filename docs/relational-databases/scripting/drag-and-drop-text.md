@@ -3,9 +3,9 @@ title: Verschieben von Text mit Drag und Drop | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9b55cb9cab0176d4d6e58870c087e75d2626822a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bd54efab760638f4a76fc1c7cdff6720514b2dd1
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="drag-and-drop-text"></a>Verschieben von Text mit Drag und Drop
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können Text auswählen und dann mit Drag und Drop an eine andere Position verschieben. Das Verschieben von Text mit Drag und Drop ist für Folgendes möglich:  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  Beim Ziehen wird der Text an der ursprünglichen Stelle gelöscht und an die neue Stelle verschoben. Wenn Sie beim Ziehen die STRG-TASTE drücken, wird der Text an die neue Stelle kopiert. Beim Ziehen eines Objekts aus dem Objekt-Explorer handelt es sich um eine Ausnahme. In diesem Fall wird der Objektname nicht aus dem Objekt-Explorer gelöscht.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Navigieren in Code und Text](../../relational-databases/scripting/navigate-code-and-text.md)  
   
   

@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: abfcc7d118cf97c24fd9d73817261fc1b8293c67
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7b9a1fe1c33de87d0d298e530e4704f669e7675c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="semantic-search-sql-server"></a>Semantische Suche (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Die statistische semantische Suche liefert einen tiefen Einblick in unstrukturierte Dokumente, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken gespeichert sind, indem statistisch relevante *Schlüsselausdrücke* extrahiert und indiziert werden. Anschließend werden diese Schlüsselausdrücke verwendet, um *ähnliche oder verwandte Dokumente* zu identifizieren und zu indizieren.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
  
  Diese Abfrage ruft die Funktion [semantickeyphrasetable](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md) auf.  
   
-```tsql  
+```sql  
 SET @Title = 'Sample Document.docx'  
   
 SELECT @DocID = DocumentID  
@@ -79,7 +79,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
  
  Diese Abfrage ruft die Funktion [semanticsimilaritydetailstable](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md) auf.  
   
-```tsql  
+```sql  
 SET @SourceTitle = 'first.docx'  
 SET @MatchedTitle = 'second.docx'  
   

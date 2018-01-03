@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41996c43919714a222fa3a453a943529315f957b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9f4e5d15cc4ef8c7b51f2fa79e0ff35e7f53d9df
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Bereitstellen eines SSIS-Pakets aus Visual Studio Code mit Transact-SQL
 In diesem Schnellstart wird erläutert, wie Sie Visual Studio Code verwenden müssen, um eine Verbindung mit der SSIS-Katalogdatenbank herzustellen, und wie Sie anschließend Transact-SQL-Anweisungen verwenden müssen, um ein im SSIS-Katalog gespeichertes SSIS-Projekt bereitzustellen.
@@ -27,7 +27,7 @@ In diesem Schnellstart wird erläutert, wie Sie Visual Studio Code verwenden mü
 
 Visual Studio Code ist ein Code-Editor für Windows, macOS und Linux, der Erweiterungen unterstützt. Dazu gehört auch die `mssql`-Erweiterung zum Herstellen einer Verbindung mit Microsoft SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse. Weitere Informationen zu VS Code finden Sie unter [Visual Studio Code](https://code.visualstudio.com/).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Prüfen Sie, bevor Sie beginnen, ob Sie die neueste Version von Visual Studio Code installiert haben und die `mssql`-Erweiterung geladen ist. Informationen zum Herunterladen dieser Tools finden Sie auf den folgenden Seiten:
 -   [Herunterladen von Visual Studio Code](https://code.visualstudio.com/Download)
@@ -63,7 +63,7 @@ Verwenden Sie Visual Studio Code, um eine Verbindung mit dem SSIS-Katalog herzus
    | **Servername** | Der vollqualifizierte Servername |  |
    | **Datenbankname** | **SSISDB** | Dies ist der Name der Datenbank, mit der eine Verbindung hergestellt werden soll. |
    | **Authentifizierung** | SQL-Anmeldung| In diesem Schnellstart wird die SQL-Authentifizierung verwendet. |
-   | **Benutzername** | Das Konto des Serveradministrators | Dabei handelt es sich um das Konto, das Sie beim Erstellen des Servers angegeben haben. |
+   | **User name** | Das Konto des Serveradministrators | Dabei handelt es sich um das Konto, das Sie beim Erstellen des Servers angegeben haben. |
    | **Kennwort (SQL-Anmeldung)** | Das Kennwort für das Konto des Serveradministrators | Dabei handelt es sich um das Kennwort, das Sie beim Erstellen des Servers angegeben haben. |
    | **Kennwort speichern** | Ja oder Nein | Wenn Sie nicht bei jedem Neustart Ihr Kennwort eingeben möchten, wählen Sie „Ja“ aus. |
    | **Namen für dieses Profil eingeben** | Ein Profilname wie **mySSISServer** | Wenn Sie den Profilnamen speichern, wird bei späteren Anmeldungen schneller eine Verbindung hergestellt. | 
@@ -94,15 +94,15 @@ EXEC catalog.deploy_project @folder_name = '<target_folder>',
 
 ## <a name="next-steps"></a>Nächste Schritte
 - Erfahren Sie mehr über weitere Möglichkeiten, ein Paket bereitzustellen.
-    - [Deploy an SSIS package with SSMS (Bereitstellen eines SSIS-Projekts mit SSMS)](./ssis-quickstart-deploy-ssms.md)
+    - [Deploy an SSIS package with SSMS (Bereitstellen eines SSIS-Pakets mit SSMS)](./ssis-quickstart-deploy-ssms.md)
     - [Deploy an SSIS package with Transact-SQL (SSMS) (Bereitstellen eines SSIS-Pakets mit Transact-SQL [SSMS])](./ssis-quickstart-deploy-tsql-ssms.md)
     - [Deploy an SSIS package from the command prompt (Bereitstellen eines SSIS-Projekts von der Befehlszeile aus)](./ssis-quickstart-deploy-cmdline.md)
     - [Deploy an SSIS package with PowerShell (Bereitstellen eines SSIS-Pakets mit PowerShell)](ssis-quickstart-deploy-powershell.md)
     - [Deploy an SSIS package with C# (Bereitstellen eines SSIS-Pakets mit C#)](./ssis-quickstart-deploy-dotnet.md) 
 - Führen Sie ein bereitgestelltes Paket aus. Für die Ausführung eines Pakets können Sie aus mehreren Tools und Sprachen auswählen. Weitere Informationen finden Sie in den folgenden Artikeln:
-    - [Run an SSIS package with SSMS (Ausführen eines SSIS-Pakets mit SSMS)](./ssis-quickstart-run-ssms.md)
+    - [Run an SSIS package with SSMS](./ssis-quickstart-run-ssms.md) (Ausführen eines SSIS-Pakets mit SSMS)
     - [Run an SSIS package with Transact-SQL (SSMS) (Ausführen eines SSIS-Pakets mit Transact-SQL [SSMS])](./ssis-quickstart-run-tsql-ssms.md)
-    - [Run an SSIS package with Transact-SQL (VS Code) (Ausführen eines SSIS-Pakets mit Transact-SQL [VS Code])](ssis-quickstart-run-tsql-vscode.md)
-    - [Run an SSIS package from the command prompt (Ausführen eines SSIS-Pakets über die Eingabeaufforderung)](./ssis-quickstart-run-cmdline.md)
-    - [Run an SSIS package with PowerShell (Ausführen eines SSIS-Pakets mit PowerShell)](ssis-quickstart-run-powershell.md)
-    - [Run an SSIS package with C# (Ausführen eines SSIS-Pakets mit C#)](./ssis-quickstart-run-dotnet.md) 
+    - [Run an SSIS package with Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md) (Ausführen eines SSIS-Pakets mit Transact-SQL [VS Code])
+    - [Run an SSIS package from the command prompt](./ssis-quickstart-run-cmdline.md) (Ausführen eines SSIS-Pakets über die Eingabeaufforderung)
+    - [Run an SSIS package with PowerShell](ssis-quickstart-run-powershell.md) (Ausführen eines SSIS-Pakets mit PowerShell)
+    - [Run an SSIS package with C#](./ssis-quickstart-run-dotnet.md) (Ausführen eines SSIS-Pakets mit C#) 

@@ -3,7 +3,7 @@ title: Designer in Visual Database Tools | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 206d464ab885728f270c81d9bb527b9c5f2a98ec
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 69528faf39230c9c268457896e6c692a6fc93305
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-database-tool-designers"></a>Designer in Visual Database Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Visual Database Tools kombiniert eine Reihe von Entwurfstools, die zur Bearbeitung von Datenquellen verwendet werden können. Sie können damit Abfragen erstellen, die Datenbankstruktur entwerfen oder ändern und Daten aktualisieren. Die Tools heißen Datenbankdiagramm-Designer, Tabellen-Designer und Abfrage- und Sicht-Designer.  
@@ -92,7 +92,7 @@ Sobald der Designer geöffnet ist, wird das Menü **Abfrage-Designer** im Hauptm
 >   
 > Diese Version von Visual Database Tools unterstützt Microsoft SQL Server Version 7 und ältere Versionen nicht.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Entwerfen von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  
 [Entwerfen von Tabellen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
 [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

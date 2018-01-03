@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 35970f8d14fd44ec9b1e11aec91ed11ea439a648
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 417d9cea0efa946e5180776f629f221a8bb1b545
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-6-4---deploying-the-lesson-6-package"></a>Lektion 6-4 – Bereitstellen des Pakets aus Lektion 6
 Zum Bereitstellen des Pakets muss das Paket dem SSISDB-Katalog in Integration Services in einer Instanz von SQL Server hinzugefügt werden. In dieser Lektion werden Sie dem SSISDB-Katalog das Paket aus Lektion 6 hinzufügen, den Parameter festlegen und das Paket ausführen. Für diese Lektion werden Sie mithilfe von SQL Server Management Studio dem SSISDB-Katalog das Paket aus Lektion 6 hinzufügen und das Paket bereitstellen. Nach dem Bereitstellen des Pakets, ändern Sie den Parameter, um auf einen neuen Speicherort zu verweisen, und führen dann das Paket aus.  

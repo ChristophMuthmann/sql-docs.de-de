@@ -3,7 +3,7 @@ title: "Ändern der Registrierung eines Servers (SQL Server Management Studio) |
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a933562956daaaa2113f86c94f664ba859279587
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d99c47617fb43ccfe9e788af1d5c5204463ffb8e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="change-a-server39s-registration-sql-server-management-studio"></a>Ändern der Registrierung eines Servers (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In diesem Thema wird beschrieben, wie Sie die Registrierung eines Servers in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ändern. Sie können die Verbindungsinformationen für einen registrierten Server jederzeit ändern.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  Ändern Sie im Dialogfeld **Serverregistrierungseigenschaften bearbeiten** den Server, die Anmeldeinformationen oder die Verbindungseigenschaften, und klicken Sie dann auf **Speichern**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Registrieren von Servern](../../tools/sql-server-management-studio/register-servers.md)  
   
   

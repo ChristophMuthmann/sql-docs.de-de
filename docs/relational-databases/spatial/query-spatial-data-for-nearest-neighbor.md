@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bc20a0bfe85f4e4f1a507554ec6e34e98274d624
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f3a806029b1583f1c8d8049639d3350f86969dd0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>Abfragen von nächsten Nachbarn aus räumlichen Daten
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Eine häufig für räumliche Daten verwendete Abfrage ist die „Nächster Nachbar“-Abfrage. Mithilfe von Nächster Nachbar-Abfragen werden die räumlichen Objekte gesucht, die einem bestimmten räumlichen Objekt am nächsten liegen. Beispielsweise muss von einer Filialsuche auf einer Website häufig die Filiale bestimmt werden, die dem Standort des Kunden am nächsten liegt.  
@@ -83,7 +83,7 @@ SELECT TOP ( number )
 ## <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel wird eine Nächster Nachbar-Abfrage veranschaulicht, die einen räumlichen Index verwenden kann. Im Beispiel wird die Tabelle `Person.Address` in der `AdventureWorks2012` -Datenbank verwendet.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
@@ -98,7 +98,7 @@ ORDER BY SpatialLocation.STDistance(@g);
 ## <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel wird eine Nächster Nachbar-Abfrage veranschaulicht, die keine räumlichen Indizes verwenden kann.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
@@ -109,7 +109,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
  In der Abfrage fehlt eine **WHERE** -Klausel, die `STDistance()` in einem im Syntaxabschnitt angegebenen Format verwendet, sodass die Abfrage keine räumlichen Indizes verwenden kann.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Räumliche Daten &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

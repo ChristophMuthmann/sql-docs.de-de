@@ -3,7 +3,7 @@ title: "JScript-Codebeispiel wird ein Recordset zurückzugebenden | Microsoft Do
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f69cc6f994aa9caa79733a2b32fb11111e03ff29
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 38275aa7c49b436bd6279bdc95ab16e7646ba1e7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="jscript-code-example-to-return-a-recordset"></a>JScript-Codebeispiel wird ein Recordset zurückgeben
 ## <a name="jscript-code-rsjs"></a>JScript-Code (rs.js)  

@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8b969229037b01c4897ad504ad8db2cfa17182cc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f3b9bd353109d4e9d96597ad7ac944423b4d9b54
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-error-and-message-reference"></a>Fehler- und Meldungsreferenz von Integration Services
   In den folgenden Tabellen sind vordefinierte Fehler-, Warn- und Informationsmeldungen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in aufsteigender numerischer Reihenfolge innerhalb jeder Kategorie aufgeführt, inklusive der jeweiligen numerischen Codes und symbolischen Namen. Jeder dieser Fehler ist als Feld der Klasse <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> im Namespace <xref:Microsoft.SqlServer.Dts.Runtime> definiert.  

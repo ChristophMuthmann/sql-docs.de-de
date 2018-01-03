@@ -5,7 +5,7 @@ ms.date: 11/16/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6424fb7bb1f3578848122341990aa97065414270
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dfbca740ee6d88dd9baafa286903254ffdd0ec5d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ssis-toolbox"></a>SSIS-Toolbox
   Alle auf dem lokalen Computer installierten Komponenten werden automatisch in der **SSIS-Toolbox** angezeigt. Wenn Sie zusätzliche Komponenten installieren, klicken mit der rechten Maustaste in die Toolbox und dann auf **Toolbox aktualisieren** , um die Komponenten hinzuzufügen.  

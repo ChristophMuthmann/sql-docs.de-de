@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fc00a53549cb415665f24d1b34bfb17c2d0f1992
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2e41ad96d3f1a61e7fa3d6ac77ea79e566f28498
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>Wiederherstellen einer differenziellen Datenbanksicherung (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
      [Erforderliche Komponenten](#Prerequisites)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So stellen Sie eine differenzielle Datenbanksicherung wieder her, und zwar mit**  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
   
--   Im vollständigen oder im massenprotokollierten Wiederherstellungsmodell muss das Protokoll der aktiven Transaktion (wird als Protokollfragment bezeichnet) gesichert werden, bevor eine Datenbank wiederhergestellt werden kann. Weitere Informationen finden Sie unter [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)vorbereiten.  
+-   Im vollständigen oder im massenprotokollierten Wiederherstellungsmodell muss das Protokoll der aktiven Transaktion (wird als Protokollfragment bezeichnet) gesichert werden, bevor eine Datenbank wiederhergestellt werden kann. Weitere Informationen finden Sie unter [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)bezeichnet) gesichert werden.  
   
 ###  <a name="Security"></a> Sicherheit  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
   
  RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur bei unbeschädigten und zugänglichen Datenbanken geprüft werden kann (was beim Ausführen von RESTORE nicht immer der Fall ist), verfügen Mitglieder der festen Datenbankrolle **db_owner** nicht über RESTORE-Berechtigungen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-restore-a-differential-database-backup"></a>So stellen Sie eine differenzielle Datenbanksicherung wieder her  
   
@@ -162,7 +162,7 @@ ms.lasthandoff: 11/17/2017
 #### <a name="a-restoring-a-differential-database-backup"></a>A. Wiederherstellen einer differenziellen Datenbanksicherung  
  In diesem Beispiel werden eine Datenbanksicherung und eine differenzielle Datenbanksicherung der `MyAdvWorks` -Datenbank wiederhergestellt.  
   
-```tsql  
+```sql  
 -- Assume the database is lost, and restore full database,   
 -- specifying the original full database backup and NORECOVERY,   
 -- which allows subsequent restore operations to proceed.  
@@ -182,7 +182,7 @@ GO
 #### <a name="b-restoring-a-database-differential-database-and-transaction-log-backup"></a>B. Wiederherstellen einer Datenbank-, einer differenziellen Datenbank- und einer Transaktionsprotokollsicherung  
  In diesem Beispiel werden eine Datenbanksicherung, eine differenzielle Datenbanksicherung und eine Transaktionsprotokollsicherung der `MyAdvWorks` -Datenbank wiederhergestellt.  
   
-```tsql  
+```sql  
 -- Assume the database is lost at this point. Now restore the full   
 -- database. Specify the original full database backup and NORECOVERY.  
 -- NORECOVERY allows subsequent restore operations to proceed.  
@@ -215,7 +215,7 @@ GO
   
 -   [Wiederherstellen einer Transaktionsprotokollsicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Differenzielle Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   

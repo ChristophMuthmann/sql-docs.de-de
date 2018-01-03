@@ -5,7 +5,7 @@ ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -18,11 +18,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5eea1f635fcd1080bf85fe0d45c689ef883181a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2ad5962c25cc48dcb95ff3d8efe8de37886cd971
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>Datenbank-E-Mail-Profil und -Konto erstellen (Dialogfeld)
   Verwenden Sie das Dialogfeld **Datenbank-E-Mail-Profil und -Konto erstellen** , um ein Datenbank-E-Mail-Profil und -Konto für die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank zu erstellen. Dieses Profil wird verwendet, um Benutzer und Gruppen per E-Mail über die nicht erfolgreiche Überprüfung einer Geschäftsregel zu benachrichtigen.  
@@ -56,12 +56,12 @@ ms.lasthandoff: 11/20/2017
 |------------------|-----------------|  
 |**Windows-Authentifizierung mithilfe der Anmeldeinformationen des Datenbankmoduldiensts**|Geben Sie an, dass für Datenbank-E-Mail die Anmeldeinformationen des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] -Windows-Dienstkontos verwendet werden sollen, damit sie auf dem SMTP-Server authentifiziert werden kann.|  
 |**Standardauthentifizierung**|Geben Sie an, dass für Datenbank-E-Mail ein bestimmter Benutzername und ein bestimmtes Kennwort verwendet werden sollen, damit sie auf dem SMTP-Server authentifiziert werden kann. Diese Informationen werden nur zur Authentifizierung mit dem E-Mail-Server verwendet, das Konto muss keinem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Benutzer bzw. keinem Benutzer auf dem Computer entsprechen, auf dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ausgeführt wird.|  
-|**Benutzername**|Geben Sie den Namen des Benutzerkontos ein, das von Datenbank-E-Mail für die Anmeldung beim SMTP-Server verwendet wird. Ein Benutzername ist erforderlich, wenn der SMTP-Server die Standardauthentifizierung erfordert.|  
+|**User name**|Geben Sie den Namen des Benutzerkontos ein, das von Datenbank-E-Mail für die Anmeldung beim SMTP-Server verwendet wird. Ein Benutzername ist erforderlich, wenn der SMTP-Server die Standardauthentifizierung erfordert.|  
 |**Kennwort**|Geben Sie das Kennwort ein, mit dem sich Datenbank-E-Mail beim SMTP-Server anmeldet. Ein Kennwort ist erforderlich, wenn der SMTP-Server die Standardauthentifizierung erfordert.|  
 |**Kennwort bestätigen**|Geben Sie das Kennwort zur Bestätigung erneut ein.|  
 |**Anonyme Authentifizierung**|Geben Sie an, dass der SMTP-Server keine Authentifizierung erfordert. Datenbank-E-Mail verwendet keinerlei Anmeldeinformationen zur Authentifizierung auf dem SMTP-Server.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenbankkonfiguration &#40;Seite im Konfigurations-Manager für Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [Master Data Services – Installation und Konfiguration](../master-data-services/master-data-services-installation-and-configuration.md)
   

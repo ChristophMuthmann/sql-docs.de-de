@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2850e4cff0eb342e04c9770aefdf2d9914a941cb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 48d9546f2b4d7a743b193125ef64deb6b8831c9d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-packages"></a>Löschen von Paketen
   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]können Sie Pakete löschen, die im Dateisystem gespeichert sind. Wenn Sie ein Paket löschen, wird es dauerhaft gelöscht und kann nicht in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt wiederhergestellt werden.  

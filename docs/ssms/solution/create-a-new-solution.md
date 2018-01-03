@@ -3,7 +3,7 @@ title: Erstellen einer neuen Projektmappe | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8e0e4034f71fa1a6a6c4a9fbad967fd0bc419af9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a2039725f0db2279c6385a64c68ed661366b4a80
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-new-solution"></a>Erstellen einer neuen Projektmappe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Wenn Sie ein Projekt erstellen, wird in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] eine Projektmappe dafür erstellt. Sie können jeweils nur eine Projektmappe öffnen. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] gestattet es nicht, dass Sie Ordner innerhalb von Projekten erstellen. Erstellen Sie mehrere Projekte, um Ihre Arbeit zu organisieren.  
@@ -43,7 +43,7 @@ Klicken Sie zum Öffnen des Projektmappen-Explorers im Menü **Ansicht** auf **P
   
 6.  Klicken Sie auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Ansicht](../../ssms/solution/solution-explorer.md)  
 [Öffnen von Projektmappen aus der Quellcodeverwaltung](https://msdn.microsoft.com/en-us/library/ms174216.aspx)  
   

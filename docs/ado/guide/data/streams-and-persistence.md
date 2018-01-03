@@ -3,7 +3,7 @@ title: Streams und Persistenz | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 184f33a603d94f3c40e139c8b4a1fdeb6556d012
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d39b1eee58a466ea57febf439f736ce8fa86bd52
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="streams-and-persistence"></a>Streams und Persistenz
 Die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt [speichern](../../../ado/reference/ado-api/save-method.md) Methode speichert, oder *weiterhin*, eine **Recordset** in einer Datei und die [Öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md)Methode Wiederherstellungen der **Recordset** aus dieser Datei.  

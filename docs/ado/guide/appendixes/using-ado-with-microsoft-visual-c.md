@@ -3,7 +3,7 @@ title: Verwenden von ADO mit Microsoft Visual C++ | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 92c62b26c3eb349390f56a6d485af543947eeccc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c2a1caf78d709255f3e329a45d8d60b69ce55199
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-ado-with-microsoft-visual-c"></a>Verwenden von ADO mit Microsoft Visual C++
 Informationen zum Verwenden von ADO mit Visual C++ finden Sie unter den folgenden Abschnitten:  

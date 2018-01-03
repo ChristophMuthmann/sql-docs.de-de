@@ -3,9 +3,9 @@ title: "Aktivieren, Deaktivieren und Löschen von Breakpoints | Microsoft-Dokume
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 38a596f36d68cc6efd8b21450aaddf5f0a293ab0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f2a3bd394023591be8821d1df4488945c835b253
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>Aktivieren, Deaktivieren und Löschen von Breakpoints
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Zum Anzeigen und Verwalten aller offenen Breakpoints können Sie das Fenster **Breakpoints** verwenden. Mithilfe des Fensters können Sie Informationen zu Breakpoints anzeigen und Aktionen ausführen, z. B. Löschen, Deaktivieren und Aktivieren von Breakpoints.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Klicken Sie auf der Symbolleiste des Fensters **Breakpoints** auf die Schaltfläche **Alle Breakpoints löschen** .  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Ein- und Ausschalten eines Breakpoints](../../relational-databases/scripting/toggle-a-breakpoint.md)  
   
   

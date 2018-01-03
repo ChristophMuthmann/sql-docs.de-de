@@ -3,9 +3,9 @@ title: "Von IntelliSense unterstützte Transact-SQL-Syntax | Microsoft-Dokumenta
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bec5a6542bc3095df0414c77af09acbb2ec05020
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6316251928dd147230e0849f0468a3848ef7d779
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Von IntelliSense unterstützte Transact-SQL-Syntax
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dieses Thema beschreibt die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen und Syntaxelemente, die von IntelliSense in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt werden.  
@@ -52,17 +52,17 @@ ms.lasthandoff: 11/17/2017
   
 |Transact-SQL-Anweisung|Unterstützte Syntax|Ausnahmen|  
 |-----------------------------|----------------------|----------------|  
-|[INSERT](../../t-sql/statements/insert-transact-sql.md)|Die gesamte Syntax, mit Ausnahme der *execute_statement* -Klausel.|Keine|  
-|[UPDATE](../../t-sql/queries/update-transact-sql.md)|Gesamte Syntax.|Keine|  
-|[DELETE](../../t-sql/statements/delete-transact-sql.md)|Gesamte Syntax.|Keine|  
-|[DECLARE@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|Gesamte Syntax.|Keine|  
-|[SET@local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|Gesamte Syntax.|Keine|  
-|[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|Ausführung von benutzerdefinierten gespeicherten Prozeduren, gespeicherten Systemprozeduren, benutzerdefinierten Funktionen und Systemfunktionen.|Keine|  
-|[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|Gesamte Syntax.|Keine|  
-|[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)|Gesamte Syntax.|Keine|  
+|[INSERT](../../t-sql/statements/insert-transact-sql.md)|Die gesamte Syntax, mit Ausnahme der *execute_statement* -Klausel.|InclusionThresholdSetting|  
+|[UPDATE](../../t-sql/queries/update-transact-sql.md)|Gesamte Syntax.|InclusionThresholdSetting|  
+|[DELETE](../../t-sql/statements/delete-transact-sql.md)|Gesamte Syntax.|InclusionThresholdSetting|  
+|[DECLARE@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|Gesamte Syntax.|InclusionThresholdSetting|  
+|[SET@local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|Gesamte Syntax.|InclusionThresholdSetting|  
+|[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|Ausführung von benutzerdefinierten gespeicherten Prozeduren, gespeicherten Systemprozeduren, benutzerdefinierten Funktionen und Systemfunktionen.|InclusionThresholdSetting|  
+|[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|Gesamte Syntax.|InclusionThresholdSetting|  
+|[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)|Gesamte Syntax.|InclusionThresholdSetting|  
 |[CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)|Gesamte Syntax.|Es gibt keine IntelliSense-Unterstützung für die EXTERNAL NAME-Klausel.<br /><br /> In der AS-Klausel unterstützt IntelliSense nur die Anweisungen und die Syntaxelemente, die in diesem Thema aufgeführt werden.|  
 |[ALTER PROCEDURE](../../t-sql/statements/alter-procedure-transact-sql.md)|Gesamte Syntax|Es gibt keine IntelliSense-Unterstützung für die EXTERNAL NAME-Klausel.<br /><br /> In der AS-Klausel unterstützt IntelliSense nur die Anweisungen und die Syntaxelemente, die in diesem Thema aufgeführt werden.|  
-|[USE](../../t-sql/language-elements/use-transact-sql.md)|Gesamte Syntax.|Keine|  
+|[USE](../../t-sql/language-elements/use-transact-sql.md)|Gesamte Syntax.|InclusionThresholdSetting|  
   
 ## <a name="intellisense-in-supported-statements"></a>IntelliSense in unterstützten Anweisungen  
  IntelliSense im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor unterstützt die folgenden Syntaxelemente, wenn sie in einer der unterstützten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen verwendet werden:  
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/17/2017
   
     -   Tabellen, Sichten, Tabellenwertfunktionen und Tabellenausdrücke  
   
-    -   Spalten  
+    -   Spalte  
   
     -   Prozeduren und Prozedurparameter  
   

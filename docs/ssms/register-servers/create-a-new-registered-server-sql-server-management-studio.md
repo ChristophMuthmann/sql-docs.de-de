@@ -3,7 +3,7 @@ title: Erstellen eines neu registrierten Servers (SQL Server Management Studio) 
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1802866292b1a8529e7ac2a415e6c2f64f5cc505
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: eafb023f631824a41ba4e86ebb51f1ca392e6f45
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Erstellen eines neu registrierten Servers (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In diesem Thema wird beschrieben, wie Sie die Verbindungsinformationen für Server speichern, auf die Sie häufig zugreifen, indem Sie den Server in der Komponente „Registrierte Server“ von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] registrieren. Ein Server kann vor dem Herstellen einer Verbindung oder bei der Verbindungsherstellung über den Objekt-Explorer registriert werden. Es gibt eine spezielle Menüoption zum Registrieren der Serverinstanzen auf dem lokalen Computer.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/05/2017
   
      Zentrale Verwaltungsserver speichern Serverregistrierungen im zentralen Verwaltungsserver anstatt im Dateisystem. Zentrale Verwaltungsserver und untergeordnete registrierte Server können nur mithilfe der Windows-Authentifizierung registriert werden. Wenn ein zentraler Verwaltungsserver registriert wurde, werden seine zugeordneten registrierten Server automatisch angezeigt. Weitere Informationen zu zentralen Verwaltungsservern finden Sie unter [Verwalten mehrerer Server mithilfe von zentralen Verwaltungsservern](../../relational-databases/administer-multiple-servers-using-central-management-servers.md). Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die älter sind als [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , können nicht als zentraler Verwaltungsserver festgelegt werden.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-automatically-register-the-local-server-instances"></a>So registrieren Sie die lokalen Serverinstanzen  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 12/05/2017
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] Weitere Informationen finden Sie unter [Auswählen eines Authentifizierungsmodus](../../relational-databases/security/choose-an-authentication-mode.md).  
   
-     **Benutzername**  
+     **User name**  
      Zeigt den aktuellen Benutzernamen an, zu dem die Verbindung hergestellt wird. Diese schreibgeschützte Option ist nur verfügbar, wenn Sie zum Herstellen der Verbindung die Windows-Authentifizierung ausgewählt haben. Um **Benutzername**zu ändern, melden Sie sich bei dem Computer als ein anderer Benutzer an.  
   
      **Anmeldename**  
@@ -105,7 +105,7 @@ ms.lasthandoff: 12/05/2017
   
  Um Abfragen für alle Server auszuführen, die bei einem zentralen Verwaltungsserver registriert sind, erweitern Sie den zentralen Verwaltungsserver, klicken Sie mit der rechten Maustaste auf die Servergruppe, zeigen Sie auf **Verbinden**, und klicken Sie dann auf **Neue Abfrage**. Wenn Abfragen im neuen Abfrage-Editorfenster ausgeführt werden, werden sie anhand der gespeicherten Verbindungsinformationen und des Kontexts für die Windows-Authentifizierung, für alle Server in der Servergruppe ausgeführt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Ausblenden von Systemobjekten im Objekt-Explorer](http://msdn.microsoft.com/library/c01d8804-838c-4f75-b78c-80e41e4fffdc)   
  [Exportieren von Informationen zum registrierten Server &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)   
  [Importieren von Informationen zum registrierten Server &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)  

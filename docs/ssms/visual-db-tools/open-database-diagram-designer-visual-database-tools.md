@@ -3,7 +3,7 @@ title: "Öffnen des Datenbankdiagramm-Designers (Visual Database Tools) | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5303f21c4cb7b5e95d8c23b75f7b606eaf299175
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 546a7179bb17b96d96e9e71613db868fa8aa9092
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>Öffnen des Datenbankdiagramm-Designers (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Der Datenbankdiagramm-Designer ist ein visuelles Tool, mit dem Sie eine Datenbank, mit der Sie eine Verbindung hergestellt haben, entwerfen und anzeigen können. Beim Entwerfen einer Datenbank können Sie mithilfe des Datenbank-Designers Tabellen, Spalten, Schlüssel, Indizes, Beziehungen und Einschränkungen erstellen, bearbeiten oder löschen. Zur Darstellung einer Datenbank können Sie ein oder mehrere Diagramme erstellen, die die Tabellen, Spalten, Schlüssel oder Beziehungen innerhalb der Datenbank teilweise oder ganz anzeigen.  
@@ -54,6 +54,6 @@ Sie können den Datenbankdiagramm-Designer öffnen, indem Sie ein neues oder vor
   
 3.  Das Menü **Datenbankdiagramm** wird dem Hauptmenü hinzugefügt, und das Diagramm wird im Designer-Bereich geöffnet.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Entwerfen von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  
   

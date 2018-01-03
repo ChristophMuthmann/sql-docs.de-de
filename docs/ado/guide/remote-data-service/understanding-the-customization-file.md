@@ -3,7 +3,7 @@ title: Grundlegendes zur Anpassungsdatei | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 52cd707a4c9c82cb3740f79f36a5b0578d2379f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f630817b87a464d3f02e5fdad6c88c161a081b23
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-the-customization-file"></a>Grundlegendes zu der Anpassungsdatei
 Jede Überschrift des Abschnitts in der Anpassungsdatei besteht aus eckige Klammern (**[]**), die einen Typ und die Parameter enthält. Die vier Abschnittstypen werden durch die Literalzeichenfolgen angegeben **verbinden**, **Sql**, **Userlist**, oder **Protokolle**. Der Parameter ist die Literalzeichenfolge, der Standardwert, eine vom Benutzer angegebenen Bezeichner oder nichts an.  

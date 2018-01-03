@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,20 +13,20 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c4710f13f257f98326f0fa6c7f4550551bff3fd5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4b5518a521154b37dc473eb700c3ff50d1a70d60
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-an-ssis-package-from-ssms-with-transact-sql"></a>Ausführen eines SSIS-Pakets aus SSMS mit Transact-SQL (SSMS)
 In diesem Schnellstart wird erläutert, wie Sie SQL Server Management Studio (SSMS) verwenden müssen, um eine Verbindung mit der SSIS-Katalogdatenbank herzustellen, und wie Sie anschließend Transact-SQL-Anweisungen verwenden müssen, um ein im SSIS-Katalog gespeichertes SSIS-Paket auszuführen.
 
 SQL Server Management Studio ist eine integrierte Umgebung zum Verwalten jeder beliebigen SQL-Infrastruktur, von SQL Server bis hin zur SQL-Datenbank. Weitere Informationen zu SSMS finden Sie unter [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
-Prüfen Sie, ob Sie über die neueste Version von SQL Server Management Studio (SSMS) verfügen, bevor Sie beginnen. Wie Sie SSMS herunterladen, erfahren Sie unter [Download SQL Server Management Studio (SSMS) (Herunterladen von SQL Server Management Studio (SSMS))](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+Prüfen Sie, ob Sie über die neueste Version von SQL Server Management Studio (SSMS) verfügen, bevor Sie beginnen. Wie Sie SSMS herunterladen, erfahren Sie unter [Herunterladen von SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 ## <a name="connect-to-the-ssisdb-database"></a>Herstellen einer Verbindung mit SSISDB
 
@@ -41,7 +41,7 @@ Verwenden Sie SQL Server Management Studio, um eine Verbindung mit dem SSIS-Kata
 
    | Einstellung       | Vorgeschlagener Wert | Weitere Informationen | 
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **Servertyp** | Datenbankmodul | Dieser Wert ist erforderlich. |
+   | **Servertyp** | Datenbank-Engine | Dieser Wert ist erforderlich. |
    | **Servername** | Der vollqualifizierte Servername | Wenn Sie eine Verbindung mit einem Azure SQL-Datenbankserver herstellen, ist der Name im Format `<server_name>.database.windows.net`. |
    | **Authentifizierung** | SQL Server-Authentifizierung | In diesem Schnellstart wird die SQL-Authentifizierung verwendet. |
    | **Anmeldename** | Das Konto des Serveradministrators | Dabei handelt es sich um das Konto, das Sie beim Erstellen des Servers angegeben haben. |
@@ -49,7 +49,7 @@ Verwenden Sie SQL Server Management Studio, um eine Verbindung mit dem SSIS-Kata
 
 3.  Klicken Sie auf **Verbinden**. Das Fenster „Objekt-Explorer“ wird in SSMS geöffnet.
 
-4. Erweitern Sie im Objekt-Explorer **Integration Services-Kataloge**, und erweitern Sie dann **SSISDB**, um die Objekte in der SSIS-Katalogdatenbank abzurufen.
+4. Erweitern Sie im Objekt-Explorer **Integration Services-Kataloge** und dann **SSISDB**, um die Objekte in der SSIS-Katalogdatenbank anzuzeigen.
 
 ## <a name="run-a-package"></a>Ausführen eines Pakets
 Führen Sie den folgenden Transact-SQL-Code aus, um ein SSIS-Paket auszuführen.
@@ -86,6 +86,6 @@ GO
 - Erfahren Sie mehr über weitere Möglichkeiten, ein Paket auszuführen.
     - [Run an SSIS package with SSMS (Ausführen eines SSIS-Pakets mit SSMS)](./ssis-quickstart-run-ssms.md)
     - [Ausführen eines SSIS-Pakets mit Transact-SQL (Visual Studio Code)](ssis-quickstart-run-tsql-vscode.md)
-    - [Run an SSIS package from the command prompt (Ausführen eines SSIS-Pakets über die Eingabeaufforderung)](./ssis-quickstart-run-cmdline.md)
-    - [Run an SSIS package with PowerShell (Ausführen eines SSIS-Pakets mit PowerShell)](ssis-quickstart-run-powershell.md)
-    - [Run an SSIS package with C# (Ausführen eines SSIS-Pakets mit C#)](./ssis-quickstart-run-dotnet.md) 
+    - [Run an SSIS package from the command prompt](./ssis-quickstart-run-cmdline.md) (Ausführen eines SSIS-Pakets über die Eingabeaufforderung)
+    - [Run an SSIS package with PowerShell](ssis-quickstart-run-powershell.md) (Ausführen eines SSIS-Pakets mit PowerShell)
+    - [Run an SSIS package with C#](./ssis-quickstart-run-dotnet.md) (Ausführen eines SSIS-Pakets mit C#) 

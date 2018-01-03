@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -21,11 +21,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38835ec5dd79b28f009c4471f5723ea3e2cae7a3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4a8793f71d09da12c30a5e79989f5d87d5b5b8e2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>Ordner- und Dateiberechtigungen (Master Data Services)
   Bei der Installation von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]werden Ordner und Dateien im Dateisystem in dem Installationspfad installiert, der für freigegebenen Funktionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] festgelegt wurde. Wenn Sie den Standardinstallationspfad für freigegebene Funktionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwenden, lautet der Installationspfad für [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] wie folgt: *Laufwerk*:\Programme\Microsoft SQL Server\130\Master Data Services. Sie können den Installationspfad für freigegebene Funktionen ändern; achten Sie dabei jedoch auf Berechtigungen, die vom übergeordneten Ordner geerbt werden, und auf explizit für [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]festgelegte Berechtigungen.  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/20/2017
   
  Weitere Informationen zu den Inhalten der Web.config-Datei von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] finden Sie unter [Webkonfigurationsreferenz &#40;Master Data Services&#41;](../master-data-services/web-configuration-reference-master-data-services.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Installieren von Master Data Services](../master-data-services/install-windows/install-master-data-services.md)  
   
   

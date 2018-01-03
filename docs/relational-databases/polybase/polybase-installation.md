@@ -18,18 +18,18 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 05ac029c0e4ef807a5d6586882f7655753d1bfbd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 982594dc9a0f3ec83dcecef9738b2d4cda1fad83
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="polybase-installation"></a>PolyBase-Installation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Besuchen Sie [SQL Server Evaluierungsversionen](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016), um eine Testversion von SQL Server zu installieren. 
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
   
 -   Eine 64-Bit-Evaluierungs-Edition von SQL Server  
   
@@ -116,7 +116,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 ### <a name="how-to-confirm-installation"></a>So bestätigen Sie die Installation  
  Führen Sie den folgenden Befehl aus. Wenn PolyBase installiert ist, wird 1 zurückgegeben, andernfalls 0.  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   

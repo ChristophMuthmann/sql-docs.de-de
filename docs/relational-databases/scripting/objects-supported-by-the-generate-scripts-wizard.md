@@ -3,9 +3,9 @@ title: "Vom Assistenten zum Generieren von Skripts unterstützte Objekte | Micro
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 87fde29aab8338f096d2132b13011e44fcf96014
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2b775783cf11a74bbf5ddfd2641f8dc6b483a6ff
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="objects-supported-by-the-generate-scripts-wizard"></a>Vom Assistenten zum Generieren von Skripts unterstützte Objekte
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Der Assistent zum Generieren und Veröffentlichen von Skripts unterstützt eine Teilmenge der von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] unterstützten Objekte.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 |Assembly|DEFAULT-Einschränkung|Gespeicherte Prozedur*|Benutzerdefinierter Datentyp|XML-Schemaauflistung|  
 |CHECK-Einschränkung|Volltextkatalog|Synonym|Benutzerdefinierte Funktion||  
 |CLR-gespeicherte Prozedur (Common Language Runtime)*|Index|Tabelle|Benutzerdefinierte Tabelle||  
-|CLR-benutzerdefinierte Funktion|Rule|Benutzer**|Benutzerdefinierter Typ||  
+|CLR-benutzerdefinierte Funktion|Regel|Benutzer**|Benutzerdefinierter Typ||  
   
  *Ohne Verschlüsselung veröffentlicht.  
   

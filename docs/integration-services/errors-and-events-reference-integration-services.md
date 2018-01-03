@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1924900d1e4237f49424808a71f40f61d769b2d0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c4076635be876b3ad472f6a7ac63500de9349eb4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Fehler- und Ereignisreferenz (Integration Services)
   Dieser Abschnitt der Dokumentation enthält Informationen zu verschiedenen Fehlern und Ereignissen, die im Zusammenhang mit [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]auftreten können. Für Fehlermeldungen sind Informationen zu Ursache und Lösung enthalten.  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/20/2017
 |SQLISService_273|Gibt an, dass die Konfigurationsdatei nicht gelesen werden konnte oder nicht gültig ist.|  
 |SQLISService_274|Gibt an, dass der Registrierungseintrag, der den Speicherort der Konfigurationsdatei enthält, nicht vorhanden oder leer ist.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Fehler- und Meldungsreferenz von Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
   
   

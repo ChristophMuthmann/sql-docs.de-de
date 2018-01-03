@@ -3,7 +3,7 @@ title: Erstellen von Datenbankprojekten mit SQL Server Management Studio | Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -22,16 +22,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 00e88a87885a2c7d1e6aec7f82525b8cf540cc50
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7e503d3f0effc561a8ed715ac9ff3bfb0277e2ef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>Erstellen von Datenbankprojekten mit SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Bei einem Datenbankskriptprojekt handelt es sich um einen organisierten Satz von Skripts, Verbindungsinformationen und Vorlagen, die alle einer Datenbank oder einem Teil einer Datenbank zugeordnet sind. [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] stellt [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] zum Verwalten und Entwerfen von [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] -Datenbanken im Kontext eines Skriptprojekts bereit. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] umfasst Designer, Editoren, Handbücher und Assistenten, die Benutzern bei der Entwicklung, Bereitstellung und Verwaltung von Datenbanken behilflich sind.  
   
-## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
+## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] ist eine Sammlung von Verwaltungstools zum Verwalten der Komponenten, die zu [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]gehören. Diese integrierte Umgebung ermöglicht es Benutzern, eine Reihe von Aufgaben, wie z. B. das Sichern von Daten, das Bearbeiten von Abfragen und das Automatisieren häufiger Funktionen, in einer einzigen Benutzeroberfläche auszuführen.  
   
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] enthält folgende Tools:  
@@ -69,7 +69,7 @@ Der Projektmappen-Explorer ist ein Tool für Entwickler, die Skripts, die zum gl
   
 Eine Projektmappe besteht aus mindestens einem Skriptprojekt. Ein Projekt besteht aus mindestens einem Skript oder mindestens einer Verbindung. In einem Projekt können außerdem andere Dateien als nur Skriptdateien vorhanden sein.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Verwenden von SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
 [Schreiben, Analysieren und Bearbeiten von Abfragen mit SQL Server Management Studio](http://msdn.microsoft.com/en-us/062051e4-4b77-4969-98ae-d2547c24ce3e)  
 [Projektmappen &#40;SQL Server Management Studio&#41;](../ssms/solution/solutions-sql-server-management-studio.md)  

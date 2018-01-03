@@ -3,9 +3,9 @@ title: Verwenden des Datenbankmodul-Cmdlets | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 08/04/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -29,11 +29,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b3833567185c16097983cfce99fca2e33d61d88e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5d4bd752ec6a8029d7fb209557769d6e7f32c7d7
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-the-database-engine-cmdlets"></a>Verwenden der Datenbankmodul-Cmdlets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Windows PowerShell-Cmdlets sind Einzelfunktionsbefehle, für die i.d.R. eine Verb-Substantiv-Namenskonvention gilt, z.B. **Get-Help** oder **Set-MachineName**. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anbieter für Windows PowerShell bietet für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]spezifische Cmdlets.  
@@ -64,7 +64,7 @@ Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryT 3
 |Beschreibt die Verwendung von **Encode-Sqlname** und **Decode-Sqlname** zum Verarbeiten von SQL Server-Bezeichnern, die in Windows PowerShell-Pfaden nicht unterstützte Zeichen enthalten.|[Codierung und Decodierung von SQL Server-Bezeichnern](../../relational-databases/scripting/encode-and-decode-sql-server-identifiers.md)|  
 |Beschreibt die Verwendung von **Convert-UrnToPath** zum Konvertieren eines URN (Uniform Resource Name, einheitlicher Name für Ressourcen) für SQL Server-Verwaltbarkeitsobjekte in den entsprechenden Pfad des SQL Server-Anbieters.|[Konvertieren von URNs in SQL Server-Anbieterpfade](../../relational-databases/scripting/convert-urns-to-sql-server-provider-paths.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server PowerShell-Anbieter](../../relational-databases/scripting/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
 [Übersicht über PowerShell-Cmdlets für Always On-Verfügbarkeitsgruppen (SQL Server)](../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)

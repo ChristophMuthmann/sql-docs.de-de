@@ -3,7 +3,7 @@ title: Benutzerdefinierte Berichte in Management Studio | Microsoft-Dokumentatio
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc42f882d0d8644b02152e0b93d8d55fba1bfadb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 299019dabf0c16863eda99cb2f841dae8bd4ea5b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="custom-reports-in-management-studio"></a>Benutzerdefinierte Berichte in Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] wird von vielen Objekt-Explorer-Knoten ein Satz von Standardberichten angezeigt, die von [!INCLUDE[msCoName](../../includes/msconame_md.md)] erstellt werden. In diesen Berichten werden häufig angeforderte Serverinformationen zusammengefasst. Seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 2 können in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] von [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]erstellte benutzerdefinierte Berichte von Administratoren ausgeführt werden.  
@@ -76,7 +76,7 @@ Jeder gültige [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] -Befehl
   
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Hinzufügen eines benutzerdefinierten Berichts zu Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)  
 [Aufheben der Unterdrückung von Warnungen für das Ausführen von benutzerdefinierten Berichten](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
 [Verwenden benutzerdefinierter Berichte mit Eigenschaften von Objekt-Explorer-Knoten](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  

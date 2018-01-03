@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ffca436fc0c0557950e239fcf979c84b973df6a0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bca0580d442c30bc41d46340b3317cbe15515309
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="delete-or-disable-dml-triggers"></a>Löschen oder Deaktivieren von DML-Triggern
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie Sie einen DML-Trigger in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] löschen oder deaktivieren.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
      [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Löschen oder Deaktivieren eines DML-Triggers mit:**  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/17/2017
   
  Zum Deaktivieren oder Aktivieren eines DML-Triggers muss ein Benutzer mindestens die ALTER-Berechtigung für die Tabelle oder Sicht besitzen, für die der Trigger erstellt wurde.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-delete-a-dml-trigger"></a>So löschen Sie einen DML-Trigger  
   
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Kopieren Sie die folgenden Beispiele, und fügen Sie sie in das Abfrage-Fenster ein. Führen Sie die [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) -Anweisung aus, um den `Sales.bonus_reminder` -Trigger zu erstellen. Führen Sie die [DROP TRIGGER](../../t-sql/statements/drop-trigger-transact-sql.md) -Anweisung aus, um den Trigger zu löschen.  
   
-```tsql  
+```sql  
 --Create the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -112,7 +112,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Delete the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -130,7 +130,7 @@ GO
   
 3.  Kopieren Sie die folgenden Beispiele, und fügen Sie sie in das Abfrage-Fenster ein. Führen Sie die [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) -Anweisung aus, um den `Sales.bonus_reminder` -Trigger zu erstellen. Führen Sie die [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) - und [die ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md) -Anweisungen aus, um den Trigger zu deaktivieren und zu aktivieren.  
   
-```tsql  
+```sql  
 --Create the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -146,7 +146,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Disable the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -155,7 +155,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Enable the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -163,7 +163,7 @@ ENABLE TRIGGER Sales.bonus_reminder ON Sales.SalesPersonQuotaHistory;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

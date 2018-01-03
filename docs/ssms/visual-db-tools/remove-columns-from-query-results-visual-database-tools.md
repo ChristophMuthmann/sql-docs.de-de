@@ -3,7 +3,7 @@ title: Entfernen von Spalten aus Abfrageergebnissen (Visual Database Tools)|Micr
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ade4d54d4e9e1ea791a7f0330d6bb6da091b6c19
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 92b4c394638b19addcbaf534400286494558c352
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>Entfernen von Spalten aus Abfrageergebnissen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Wenn Sie in einer Auswahlabfrage eine Spalte verwenden, die Sie im Resultset nicht anzeigen lassen bzw. der Auswahlliste der Abfrage nicht hinzufügen möchten, können Sie diese aus der Ausgabe entfernen. Die aus den Abfrageergebnissen entfernte Spalte können Sie zum Festlegen von Suchbedingungen oder für Sortierzwecke weiter verwenden.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Entfernen Sie die Spalte aus der Ausgabeliste im [SQL-Bereich](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Hinzufügen von Spalten zu Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md)  
 [Entfernen von Spalten aus Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-columns-from-queries-visual-database-tools.md)  
 [Sortieren und Gruppieren von Abfrageergebnissen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  

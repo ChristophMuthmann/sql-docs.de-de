@@ -3,9 +3,9 @@ title: "Verwenden des Hilfsprogramms „sqlcmd“ | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 06/06/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0969b3f39f94ec3832cc762ec9419425e099000f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2b59520b9b976e6b8e9f7b03a080552818d73904
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcmd---use-the-utility"></a>Verwenden des Hilfsprogramms „sqlcmd“
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Das Hilfsprogramm **sqlcmd** ist ein Befehlszeilen-Hilfsprogramm für die interaktive Ad-hoc-Ausführung von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen und -Skripts und die Automatisierung von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripttasks. Damit Sie **sqlcmd** interaktiv verwenden oder Skriptdateien aufbauen können, die mithilfe von **sqlcmd**ausgeführt werden, müssen Sie mit den Grundlagen von [!INCLUDE[tsql](../../includes/tsql-md.md)]vertraut sein. Das Hilfsprogramm **sqlcmd** wird in der Regel wie folgt verwendet:  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/17/2017
     > **TIPP** Eine vollständige Liste der vom Hilfsprogramm **sqlcmd** unterstützten Optionen erhalten Sie, indem Sie folgenden Befehl ausführen: `sqlcmd -?`.  
   
 ## <a name="run-transact-sql-statements-interactively-by-using-sqlcmd"></a>Interaktives Ausführen von Transact-SQL-Anweisungen mithilfe von „sqlcmd“  
- Sie können das Hilfsprogramm **sqlcmd** interaktiv verwenden, um [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen in einem Eingabeaufforderungsfenster auszuführen. Führen Sie das Hilfsprogramm zum Angeben von Eingabedateien und zum Abfragen ohne die Optionen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Q **,**-q **,**-Z **, oder**-i **aus, um**-Anweisungen mithilfe von **sqlcmd** interaktiv auszuführen. Beispiel:  
+ Sie können das Hilfsprogramm **sqlcmd** interaktiv verwenden, um [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen in einem Eingabeaufforderungsfenster auszuführen. Führen Sie das Hilfsprogramm zum Angeben von Eingabedateien und zum Abfragen ohne die Optionen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Q **,**-q **,**-Z **, oder**-i **aus, um**-Anweisungen mithilfe von **sqlcmd** interaktiv auszuführen. Zum Beispiel:  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="quoted-strings"></a>Zeichenfolgen in Anführungszeichen  
  Zeichen, die in Anführungszeichen eingeschlossen sind, werden ohne weitere Vorverarbeitung verwendet. Die einzige Ausnahme besteht darin, dass Anführungszeichen durch das Eingeben von zwei aufeinander folgenden Anführungszeichen in eine Zeichenfolge eingefügt werden können. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In wird diese Zeichenfolgensequenz als ein Anführungszeichen behandelt. (Die Übersetzung erfolgt jedoch auf dem Server.) Skriptvariablen werden nicht erweitert, wenn sie innerhalb einer Zeichenfolge auftreten.  
   
- Beispiel:  
+ Zum Beispiel:  
   
  `sqlcmd`  
   

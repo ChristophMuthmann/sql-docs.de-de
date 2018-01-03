@@ -3,7 +3,7 @@ title: "Übersicht über die Strukturierung Daten | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2bcfa746be8db71aa85c7e83f7f52b40997fd433
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9720e3312332fe0c4a00bac01cbaa82908125dfb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-shaping-overview"></a>Daten strukturieren (Übersicht)
 *Strukturieren von Daten* bedeutet hierarchische Beziehungen zwischen mindestens zwei logische Entitäten in einer Abfrage zu erstellen. Die Hierarchie sehen in über-/ unterordnungsbeziehungen zwischen einem Datensatz einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), und einen oder mehrere Datensätze (auch bekannt als Kapitel) eines anderen **Recordset**. In einer über-/ unterordnungsbeziehung, die das übergeordnete Element **Recordset** enthält das untergeordnete Element **Recordset**. Ein Beispiel für eine hierarchische Beziehung ist Customers und Orders. Für jeden Kunden in einer Datenbank können NULL oder mehr Aufträge vorhanden sein. Die hierarchische Beziehung kann rekursiv sein, was bedeutet, dass zwei Ebenen untergeordneten Datensätze in einen untergeordneten Datensatz geschachtelt werden können. Im Prinzip kann ein hierarchischer Datensatz Anzeigetiefe geschachtelt werden. In der Praxis ADO schränkt die Rekursion bis maximal 512 **Recordset**s.  

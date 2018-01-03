@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4fa39b24f9e57e335f6b1f01efebb4e741cdcd0d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aa80d1e050c08e66b1576835045f4faf2ef497a5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Wiederherstellen einer Datenbank an einem neuen Speicherort (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von SQL Server Management Studio(SSMS) oder [!INCLUDE[tsql](../../includes/tsql-md.md)] eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank an einem neuen Speicherort wiederherstellen und sie optional umbenennen können. Sie können eine Datenbank in ein neues Verzeichnis verschieben oder eine Kopie einer Datenbank entweder auf der gleichen oder einer anderen Serverinstanz erstellen.  
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  Wählen Sie im Raster **Wiederherzustellende Sicherungssätze** die wiederherzustellenden Sicherungen aus. Mit diesem Raster werden die Sicherungen angezeigt, die für den angegebenen Speicherort verfügbar sind. Standardmäßig wird ein Wiederherstellungsplan vorgeschlagen. Sie können die Auswahl im Raster ändern, um den vorgeschlagenen Wiederherstellungsplan zu überschreiben. Die Auswahl von Sicherungen, die von der Wiederherstellung einer früheren Sicherung abhängig sind, wird automatisch aufgehoben, wenn die Auswahl der früheren Sicherung aufgehoben wird.  
   
-     Weitere Informationen zu den Spalten des Rasters **Wiederherzustellende Sicherungssätze** finden Sie unter [Datenbank wiederherstellen &#40;Seite „Allgemein“&#41;](../../relational-databases/backup-restore/restore-database-general-page.md).  
+     Weitere Informationen zu den Spalten des Rasters **Wiederherzustellende Sicherungssätze** finden Sie unter [Datenbank wiederherstellen &#40;Seite „Allgemein“&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)bezeichnet) gesichert werden.  
   
 7.  Wählen Sie zum Angeben des neuen Speicherorts der Datenbankdateien die Seite **Dateien** , und klicken Sie anschließend auf **Alle Dateien verschieben in Ordner**. Geben Sie einen neuen Speicherort für die Ordner **Datendatei** und **Protokolldatei**an. Weitere Informationen zu diesem Raster finden Sie unter [Datenbank wiederherstellen &#40;Seite Dateien&#41;](../../relational-databases/backup-restore/restore-database-files-page.md).  
   
@@ -146,7 +146,7 @@ ms.lasthandoff: 11/17/2017
   
      { DISK | TAPE } **=***physical_backup_device_name*  
   
-     Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
+     Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)aufgezeichnet wurde.  
   
      { **RECOVERY** | NORECOVERY }  
      Wenn die Datenbank das vollständige Wiederherstellungsmodell verwendet, müssen Sie möglicherweise Transaktionsprotokollsicherungen anwenden, nachdem Sie die Datenbank wiederhergestellt haben. Geben Sie in diesem Fall die Option NORECOVERY an.  
@@ -163,7 +163,7 @@ ms.lasthandoff: 11/17/2017
      MOVE **'***logical_file_name_in_backup***'** TO **'***operating_system_file_name***'** [ **,**...*n* ]  
      Gibt an, dass die von *logical_file_name_in_backup* angegebenen Daten oder die Protokolldatei an dem von *operating_system_file_name*angegebenen Speicherort wiederhergestellt werden sollen. Geben Sie für jede logische Datei, die aus dem Sicherungssatz an einem neuen Speicherort wiederhergestellt werden soll, eine MOVE-Anweisung an.  
   
-    |Option|Beschreibung|  
+    |Option|Description|  
     |------------|-----------------|  
     |*logical_file_name_in_backup*|Gibt den logischen Namen einer Daten- oder Protokolldatei an, die in den Sicherungssatz eingeschlossen werden soll. Der logische Dateiname einer Daten- oder Protokolldatei in einem Sicherungssatz entspricht ihrem logischen Namen in der Datenbank zum Zeitpunkt der Erstellung des Sicherungssatzes.<br /><br /> <br /><br /> Hinweis: Mit [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)können Sie eine Liste abrufen, in der die logischen Dateien eines Sicherungssatzes aufgeführt sind.|  
     |*operating_system_file_name*|Gibt einen neuen Speicherort für die von *logical_file_name_in_backup*angegebene Datei an. Die Datei wird an diesem Speicherort wiederhergestellt.<br /><br /> Optional gibt *operating_system_file_name* einen neuen Dateinamen für die wiederhergestellte Datei an. Dies ist erforderlich, wenn Sie eine Kopie einer vorhandenen Datenbank auf der gleiche Serverinstanz erstellen.|  
@@ -174,7 +174,7 @@ ms.lasthandoff: 11/17/2017
   
 > **HINWEIS:** In den Beispielen zum Sichern und Wiederherstellen des Transaktionsprotokolls (einschließlich der Zeitpunktwiederherstellungen) wird, wie im folgenden `MyAdvWorks`-Beispiel, die aus [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] erstellte `MyAdvWorks_FullRM`-Datenbank verwendet. Die resultierende `MyAdvWorks_FullRM`-Datenbank muss jedoch dahingehend geändert werden, dass das vollständige Wiederherstellungsmodell mit der folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung verwendet wird: ALTER DATABASE <database_name> SET RECOVERY FULL.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- First determine the number and names of the files in the backup.  

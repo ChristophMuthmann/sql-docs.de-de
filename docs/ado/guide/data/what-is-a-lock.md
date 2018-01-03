@@ -3,7 +3,7 @@ title: Was ist eine Sperre? | Microsoft-Dokumentation
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 133cd38feed1b55557112abe45872d333cc08c2a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c8431b2a486322cb0cf2b8db6a8d0fbad27ff7bd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what-is-a-lock"></a>Was ist eine Sperre?
 Sperren ist der Prozess, der ein DBMS nach dem Zugriff auf eine Zeile in einer mehrbenutzerumgebung einschränkt. Wenn eine Zeile oder Spalte exklusiv gesperrt ist, sind andere Benutzer nicht zulässig, auf die gesperrten Daten zugreifen, bis die Sperre aufgehoben wird. Dadurch wird sichergestellt, dass zwei Benutzer gleichzeitig derselben Spalte in einer Zeile nicht aktualisieren können.  

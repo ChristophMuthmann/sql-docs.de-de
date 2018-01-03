@@ -3,9 +3,9 @@ title: SQL Server PowerShell-Anbieter | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4aa7050589878d109ef826bad2c9385abc00b5f9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f87f36a963adb92f660d292560e06128bfeac237
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell-Anbieter
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anbieter für Windows PowerShell macht die Hierarchie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekten in Pfaden verfügbar, die Dateisystempfaden ähneln. Mithilfe der Pfade können Sie Objekte finden und dann Methoden der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object-Modelle (SMO) verwenden, um Aktionen für die Objekte auszuführen.  
@@ -78,7 +78,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |Beschreibt, wie ein SMO Uniform Resource Name (URN) in einen SQL Server-Anbieterpfad konvertiert wird.|[Konvertieren von URNs in SQL Server-Anbieterpfade](../../relational-databases/scripting/convert-urns-to-sql-server-provider-paths.md)|  
 |Beschreibt, wie SQL Server-Authentifizierungsverbindungen mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anbieter geöffnet werden. Standardmäßig verwendet der Anbieter Windows-Authentifizierungsverbindungen, die mit den Anmeldeinformationen des Windows-Kontos hergestellt wurden, das die Windows PowerShell-Sitzung ausführt.|[Verwalten der Authentifizierung in PowerShell des Datenbankmoduls](../../relational-databases/scripting/manage-authentication-in-database-engine-powershell.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server-PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   
   

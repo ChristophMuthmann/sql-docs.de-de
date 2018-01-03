@@ -3,7 +3,7 @@ title: "Weitere Möglichkeiten zum Anzeigen des Codefensters | Microsoft-Dokumen
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dae743368f92cb4b274629ac66e727b07639d38b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 027435e6ffe5fed7d62aac3b7a583872ca9f8fe0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-5---other-ways-of-viewing-the-code-window"></a>Lektion 2-5: Weitere Möglichkeiten zum Anzeigen des Codefensters
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Das Codefenster kann so konfiguriert werden, dass es mehrere Codefenster auf verschiedene Weisen anzeigt.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 > Wenn Sie den Abfrage-Editor im Vollbildmodus anzeigen möchten, klicken Sie auf eine beliebige Stelle im Abfrage-Editorfenster, und drücken Sie dann UMSCHALT+ALT+EINGABE.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Erstellen eines Skriptes für eine Tabelle](../../tools/sql-server-management-studio/lesson-2-6-script-a-table.md)  
   
   

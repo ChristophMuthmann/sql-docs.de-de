@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 92e846a42325d0c30388e7524e86a3ad715fa8fa
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cea91062fa08e0bb87d47c803cbd964c5a347be6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-6-1---copying-the-lesson-5-package"></a>Lektion 6-1: Kopieren des Pakets aus Lektion 5
 In dieser Aufgabe erstellen Sie eine Kopie des in Lektion 5 erstellten Pakets Lesson 5.dtsx. Wahlweise können Sie dem Projekt auch das im Lernprogramm enthaltene abgeschlossene Paket aus Lektion 5 hinzufügen und dann von diesem Paket eine Kopie erstellen. Sie verwenden diese neue Kopie im gesamten Rest der Lektion 6.  
@@ -69,6 +69,6 @@ In dieser Aufgabe erstellen Sie eine Kopie des in Lektion 5 erstellten Pakets Le
   
     Wenn die Projektmappe nach dem Kopieren des Lektion 5-Pakets noch Pakete aus vorherigen Lektionen enthält, klicken Sie mit der rechten Maustaste auf die einzelnen Pakete aus Lektion 1 bis 5 und klicken dann auf Aus Projekt ausschließen. Anschließend sollte nur noch Lesson 6.dtsx in der Projektmappe enthalten sein.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Schritt 2: Converting the Project to the Project Deployment Model (Konvertieren des Projekts in das Projektbereitstellungsmodell)](../integration-services/lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   

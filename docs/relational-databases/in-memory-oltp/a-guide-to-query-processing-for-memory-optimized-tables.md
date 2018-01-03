@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ebca47eee84b4e48edc5164fa6a66670a84e3fee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e9f4dcd81deb9f16e21cd1b63df80cebb25a53ca
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Anleitung zur Abfrageverarbeitung für speicheroptimierte Tabellen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  Wir gehen von zwei Tabellen aus: "Customer" und "Order". Das folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript enthält die Definitionen für diese beiden Tabellen und zugehörige Indizes in ihrer (herkömmlichen) datenträgerbasierten Form:  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY,  
   ContactName nvarchar (30) NOT NULL   
@@ -72,7 +72,7 @@ GO
   
  Betrachten wir die folgende Abfrage, in der die Tabellen "Customer" und "Order" verknüpft sind und die die Bestell-ID und die zugehörigen Kundeninformationen zurückgibt:  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -91,7 +91,7 @@ Abfrageplan für einen Join datenträgerbasierter Tabellen.
   
  Betrachten wir eine leichte Abwandlung dieser Abfrage, die alle Zeilen aus der Order-Tabelle zurückgibt, nicht nur OrderID:  
   
-```tsql  
+```sql  
 SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -144,7 +144,7 @@ Abfrageverarbeitungspipeline für interpretierten Transact-SQL-Zugriff auf speic
   
  Das folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript enthält speicheroptimierte Versionen der Order- und Customer-Tabellen, wobei Hashindizes verwendet werden:  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY NONCLUSTERED,  
   ContactName nvarchar (30) NOT NULL   
@@ -161,7 +161,7 @@ GO
   
  Betrachten wir die gleiche Abfrage bei der Ausführung mit speicheroptimierten Tabellen:  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -183,7 +183,7 @@ Abfrageplan für den Join speicheroptimierter Tabellen.
 ## <a name="natively-compiled-stored-procedures"></a>Systemintern kompilierte gespeicherte Prozeduren  
  Systemintern kompilierte gespeicherte Prozeduren sind gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozeduren, die in Computercode kompiliert werden, statt durch das Abfrageausführungsmodul interpretiert zu werden. Das folgende Skript erstellt eine systemintern kompilierte gespeicherte Prozedur, die die Beispielabfrage ausführt (aus dem Abschnitt Beispielabfrage).  
   
-```tsql  
+```sql  
 CREATE PROCEDURE usp_SampleJoin  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
@@ -247,9 +247,9 @@ Ausführung systemintern kompilierter gespeicherten Prozeduren.
  Die Parameterermittlung wird nicht zum Kompilieren von systemintern kompilierten gespeicherten Prozeduren verwendet. Es wird angenommen, dass alle Parameter für die gespeicherte Prozedur UNBEKANNTE Werte haben. Systemintern kompilierte gespeicherte Prozeduren unterstützen genauso wie interpretierte gespeicherte Prozeduren den **OPTIMIZE FOR** -Hinweis. Weitere Informationen finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>Abrufen eines Abfrageausführungsplans für systemintern kompilierte gespeicherte Prozeduren  
- Der Abfrageausführungsplan für eine nativ kompilierte gespeicherte Prozedur kann mithilfe des **geschätzten Ausführungsplans** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]oder mithilfe der Option SHOWPLAN_XML in [!INCLUDE[tsql](../../includes/tsql-md.md)]abgerufen werden. Beispiel:  
+ Der Abfrageausführungsplan für eine nativ kompilierte gespeicherte Prozedur kann mithilfe des **geschätzten Ausführungsplans** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]oder mithilfe der Option SHOWPLAN_XML in [!INCLUDE[tsql](../../includes/tsql-md.md)]abgerufen werden. Zum Beispiel:  
   
-```tsql  
+```sql  
 SET SHOWPLAN_XML ON  
 GO  
 EXEC dbo.usp_myproc  
@@ -268,11 +268,11 @@ GO
 |SELECT|`SELECT OrderID FROM dbo.[Order]`||  
 |INSERT|`INSERT dbo.Customer VALUES ('abc', 'def')`||  
 |UPDATE|`UPDATE dbo.Customer SET ContactName='ghi' WHERE CustomerID='abc'`||  
-|DELETE|`DELETE dbo.Customer WHERE CustomerID='abc'`||  
+|Delete|`DELETE dbo.Customer WHERE CustomerID='abc'`||  
 |Compute Scalar|`SELECT OrderID+1 FROM dbo.[Order]`|Dieser Operator wird für systeminterne Funktionen und Typkonvertierungen verwendet. Nicht alle Funktionen und Typkonvertierungen werden in systemintern kompilierten gespeicherten Prozeduren unterstützt.|  
 |Join geschachtelter Schleifen|`SELECT o.OrderID, c.CustomerID FROM dbo.[Order] o INNER JOIN dbo.[Customer] c`|Der Operator für geschachtelte Schleifen ist der einzige Joinoperator, der in systemintern kompilierten gespeicherten Prozeduren unterstützt wird. Alle Pläne, die Joins enthalten, verwenden den Operator für geschachtelte Schleifen, selbst wenn der Plan für die gleiche Abfrage in interpretiertem [!INCLUDE[tsql](../../includes/tsql-md.md)] einen Hashjoin oder einen Zusammenführungsjoin enthält.|  
 |Sort|`SELECT ContactName FROM dbo.Customer ORDER BY ContactName`||  
-|top|`SELECT TOP 10 ContactName FROM dbo.Customer`||  
+|TOP|`SELECT TOP 10 ContactName FROM dbo.Customer`||  
 |Top-sort|`SELECT TOP 10 ContactName FROM dbo.Customer  ORDER BY ContactName`|Der **TOP** -Ausdruck (die Anzahl von zurückzugebenden Zeilen) darf 8.000 Zeilen nicht überschreiten. Weniger, wenn die Abfrage auch Join- und Aggregationsoperatoren enthält. Joins und Aggregationen reduzieren normalerweise die Anzahl der zu sortierenden Zeilen im Vergleich zur Zeilenanzahl der Basistabellen.|  
 |Stream Aggregate|`SELECT count(CustomerID) FROM dbo.Customer`|Beachten Sie, dass der Hash Match-Operator keine Aggregationen unterstützt. Daher verwenden alle Aggregationen in den systemintern kompilierten gespeicherten Prozeduren den Stream Aggregate-Operator, selbst wenn der Plan für die gleiche Abfrage in interpretiertem [!INCLUDE[tsql](../../includes/tsql-md.md)] den Hash Match-Operator verwendet.|  
   
@@ -307,7 +307,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
 -   Der vollständige Indexscan für IX_CustomerID wurde durch eine Indexsuche ersetzt. Dies führte zum Scannen von 5 Zeilen anstelle der für den vollständigen Indexscan erforderlichen 830 Zeilen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

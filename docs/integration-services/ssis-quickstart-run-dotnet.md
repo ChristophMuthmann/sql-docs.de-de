@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,18 +13,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1fbbbdd8675aff3dbf19e628b0063b96460f596f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7ab3415d2252e52e79a0129ab5c5d438ad114a76
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>Ausführen eines SSIS-Pakets mit C#-Code in einer .NET-App
 In diesem Schnellstarttutorial wird dargestellt, wie C#-Code geschrieben wird, um eine Verbindung mit einem Datenbankserver herzustellen und ein SSIS-Paket auszuführen.
 
 Sie können Visual Studio, Visual Studio Code oder ein anderes Tool Ihrer Wahl verwenden, um eine C#-App zu erstellen.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Bevor Sie beginnen, stellen Sie sicher, dass Sie Visual Studio oder Visual Studio Code installiert haben. Laden Sie die kostenlose Community Edition von Visual Studio oder Visual Studio Code (ebenfalls kostenlos) unter [Visual Studio-Downloads](https://www.visualstudio.com/downloads/) herunter.
 
@@ -33,10 +33,10 @@ Bevor Sie beginnen, stellen Sie sicher, dass Sie Visual Studio oder Visual Studi
 
 ## <a name="get-the-connection-info-if-deployed-to-sql-database"></a>Abrufen der Verbindungsinformationen, falls diese für SQL-Datenbank bereitgestellt werden
 
-Wenn Ihre Pakete für eine Azure SQL-Datenbank bereitgestellt werden, rufen Sie die Verbindungsinformationen ab, die benötigt werden, um eine Verbindung mit der SSIS-Katalogdatenbank herzustellen (SSISDB). Sie benötigen den vollqualifizierten Servernamen und die Anmeldeinformationen für die folgenden Vorgänge.
+Wenn Ihre Pakete für eine Azure SQL-Datenbank bereitgestellt werden, rufen Sie die Verbindungsinformationen ab, die benötigt werden, um eine Verbindung mit der SSIS-Katalogdatenbank (SSISDB) herzustellen. Sie benötigen den vollqualifizierten Servernamen und die Anmeldeinformationen für die folgenden Prozeduren.
 
 1. Melden Sie sich beim [Azure-Portal](https://portal.azure.com/)an.
-2. Wählen Sie aus dem Menü auf der linken Seite **SQL-Datenbank** aus, und klicken Sie auf der Seite **SQL-Datenbanken** auf die SSISDB-Datenbank. 
+2. Wählen Sie aus dem Menü auf der linken Seite **SQL-Datenbanken** aus, und klicken Sie auf der Seite **SQL-Datenbanken** auf die SSISDB-Datenbank. 
 3. Überprüfen Sie auf der **Übersichtsseite** Ihrer Datenbank den vollqualifizierten Servernamen. Zeigen Sie auf den Servernamen, damit die Option **Klicken Sie zum Kopieren** angezeigt wird. 
 4. Wenn Sie die Anmeldeinformationen für Ihren Azure SQL-Datenbankserver vergessen, navigieren Sie zur Seite „SQL Datenbankserver“, damit der Serveradministratorname angezeigt wird. Sie können das Kennwort falls erforderlich zurücksetzen.
 5. Klicken Sie auf **Datenbank-Verbindungszeichenfolgen anzeigen**.
@@ -58,7 +58,7 @@ Wenn Ihre Pakete für eine Azure SQL-Datenbank bereitgestellt werden, rufen Sie 
 4. Klicken Sie auf die Schaltfläche **Durchsuchen**, um **Microsoft.SqlServer.Management.IntegrationServices** einen Verweis hinzuzufügen. (Diese Assembly ist nur im globalen Assemblycache (Global Assembly Cache, GAC) installiert.) Das Dialogfeld **Zu referenzierende Dateien auswählen** wird geöffnet.
 5. Navigieren Sie im Dialogfeld **Zu referenzierende Dateien auswählen** zum GAC-Ordner, der die Assembly enthält. In der Regel handelt es sich dabei um den Ordner `C:\Windows\assembly\GAC_MSIL\Microsoft.SqlServer.Management.IntegrationServices\14.0.0.0__89845dcd8080cc91`.
 6. Wählen Sie die Assembly (d.h. die DLL-Datei) in dem Ordner aus, und klicken Sie auf **Hinzufügen**.
-7. Klicken Sie auf **OK**, um das Dialogfeld **Verweis-Manager** zu schließen und die drei Verweise hinzuzufügen. Überprüfen Sie die **Verweisliste** im Projektmappen-Explorer, um sicherzustellen, dass die Verweise hinzugefügt wurden.
+7. Klicken Sie auf **OK**, um das Dialogfeld **Verweis-Manager** zu schließen und die drei Verweise hinzuzufügen. Überprüfen Sie die Liste **Verweise** im Projektmappen-Explorer, um sicherzustellen, dass die Verweise hinzugefügt wurden.
 
 ## <a name="add-the-c-code"></a>Hinzufügen von C#-Code 
 1. Öffnen Sie **Program.cs**.
@@ -120,8 +120,8 @@ namespace run_ssis_package
 
 ## <a name="next-steps"></a>Nächste Schritte
 - Erfahren Sie mehr über weitere Möglichkeiten, ein Paket auszuführen.
-    - [Run an SSIS package with SSMS (Ausführen eines SSIS-Pakets mit SSMS)](./ssis-quickstart-run-ssms.md)
-    - [Ausführen eines SSIS-Pakets mit Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
-    - [Run an SSIS package with Transact-SQL (VS Code) (Ausführen eines SSIS-Pakets mit Transact-SQL (VS Code))](ssis-quickstart-run-tsql-vscode.md)
-    - [Run an SSIS package from the command prompt (Ausführen eines SSIS-Pakets über die Eingabeaufforderung)](./ssis-quickstart-run-cmdline.md)
+    - [Run an SSIS package with SSMS](./ssis-quickstart-run-ssms.md) (Ausführen eines SSIS-Pakets mit SSMS)
+    - [Run an SSIS package with Transact-SQL (SSMS) (Ausführen eines SSIS-Pakets mit Transact-SQL [SSMS])](./ssis-quickstart-run-tsql-ssms.md)
+    - [Run an SSIS package with Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md) (Ausführen eines SSIS-Pakets mit Transact-SQL [VS Code])
+    - [Run an SSIS package from the command prompt](./ssis-quickstart-run-cmdline.md) (Ausführen eines SSIS-Pakets über die Eingabeaufforderung)
     - [Run an SSIS package with PowerShell (Ausführen eines SSIS-Pakets mit PowerShell)](ssis-quickstart-run-powershell.md)

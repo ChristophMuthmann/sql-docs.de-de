@@ -3,7 +3,7 @@ title: MemberTypeEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 777eebb1c6b237b0e7378b49731d2da49108311b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9614228d620f32c900890768ab0ab57d4290cbf0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="membertypeenum"></a>MemberTypeEnum
 Gibt die Einstellung für die [Typ](../../../ado/reference/ado-md-api/type-property-ado-md.md) Eigenschaft von einem [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) Objekt.  
   
-|Konstante|Wert|Description|  
+|Konstante|value|Description|  
 |--------------|-----------|-----------------|  
 |**adMemberAll**|4|Gibt an, dass die **Member** -Objekt stellt alle Elemente der Ebene dar.|  
 |**adMemberFormula**|3|Gibt an, dass die **Member** Objekt wird mit einem Ausdruck der Formel berechnet.|  

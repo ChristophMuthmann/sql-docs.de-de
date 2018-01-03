@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 207ca8c64cd20e8e98093960bd68ad23b770ea24
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 96e21a0eb32b9aeecabdfeb574d3e793b3ab99d8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="optimize-for-ad-hoc-workloads-server-configuration-option"></a>Für Ad-hoc-Arbeitsauslastungen optimieren (Serverkonfigurationsoption)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +36,13 @@ ms.lasthandoff: 11/20/2017
  [Ablaufverfolgungsflag 8032](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) setzt die Cachelimitparameter auf die RTM-Einstellung von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] zurück, die im Allgemeinen einen größeren Cache zulässt. Verwenden Sie diese Einstellung, wenn häufig wiederverwendete Cacheeinträge nicht in den Cache passen, und wenn das Problem mit dem Plancache durch die Serverkonfigurations-Option „Optimierung für Ad-hoc-Arbeitsauslastung“ nicht behoben werden konnte.  
   
 > [!WARNING]  
->  Ablaufverfolgungsflag 8032 kann die Leistung mindern, wenn große Caches weniger Arbeitsspeicher für andere Arbeitsspeicherconsumer, z. B. den Pufferpool, verfügbar machen.  
+>  Ablaufverfolgungsflag 8032 kann die Leistung mindern, wenn große Caches weniger Arbeitsspeicher für andere Arbeitsspeicherconsumer, z. B. den Pufferpool, verfügbar machen.  
 
 ## <a name="recommendations"></a>Empfehlungen
 Wenn die Anzahl von einmal genutzten Plänen einen beträchtlichen Teil des Speichers für [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in einem OLTP-Server beansprucht, und wenn diese Pläne Ad-hoc-Pläne sind, verwenden Sie diese Serveroption, um die Speichernutzung mit diesen Objekten zu verringern.
 Um die Anzahl von zwischengespeicherten einmal genutzten Plänen zu ermitteln, führen Sie die folgende Abfrage aus:
 
-```t-sql
+```sql
 SELECT objtype, cacheobjtype, 
   AVG(usecounts) AS Avg_UseCount, 
   SUM(refcounts) AS AllRefObjects, 
@@ -56,7 +56,7 @@ GROUP BY objtype, cacheobjtype;
 > Wenn **Optimieren für Ad-hoc-Arbeitsauslastungen** auf 1 festgelegt wird, wirkt sich dies ausschließlich auf neue Pläne aus. Pläne, die sich bereits im Plancache befinden, sind davon nicht betroffen.
 > Um bereits zwischengespeicherte Abfragepläne sofort zu beeinflussen, muss der Plancache mit [ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) gelöscht oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet werden.
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   

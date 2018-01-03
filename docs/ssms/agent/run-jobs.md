@@ -3,7 +3,7 @@ title: "Ausführen von Aufträgen | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -22,24 +22,24 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 703027a77c621f28a561082fa0d5f897220cc2b0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 16154d6cc014c4d6d494b8889598bb33bba1e548
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-jobs"></a>Ausführen von Aufträgen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Zum Verwalten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agent-Aufträgen können Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], gespeicherte [!INCLUDE[tsql](../../includes/tsql_md.md)]-Prozeduren oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Management Objects verwenden.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
-|**Description**|**Thema**|  
+|**Beschreibung**|**Thema**|  
 |Beschreibt, wie ein [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Auftrag gestartet wird.|[Start a Job](../../ssms/agent/start-a-job.md)|  
 |Beschreibt, wie ein [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Auftrag beendet wird.|[Beenden eines Auftrags](../../ssms/agent/stop-a-job.md)|  
 |Beschreibt, wie ein [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Auftrag deaktiviert oder aktiviert wird.|[Deaktivieren oder Aktivieren eines Auftrags](../../ssms/agent/disable-or-enable-a-job.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [sysdownloadlist](http://msdn.microsoft.com/en-us/71087a4c-e829-488e-aa7d-a9476e2b4779)  
   

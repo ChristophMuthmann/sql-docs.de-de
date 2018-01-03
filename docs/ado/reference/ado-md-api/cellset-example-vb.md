@@ -3,7 +3,7 @@ title: Cellset-Beispiel (VB) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 35bcc8eb6068c1e0579d3245e5acc85601ebec49
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fb72abdd44deeabda8a9513744ba7d962fa7bffc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cellset-example-vb"></a>Cellset-Beispiel (VB)
 Diese Visual Basic-Projekt veranschaulicht die Grundlagen der Verwendung von ADO MD auf Cubedaten zuzugreifen. Member von Beschriftungen für die Spalten- und Zeilenüberschriften angezeigt, und zeigt formatierte Werte für bestimmte Zellen in das Cellset.  

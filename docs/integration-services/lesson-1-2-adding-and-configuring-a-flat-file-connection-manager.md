@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 498e6557348e164085bae3b3ea646caa318a49c7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f8e55988e5e55671b5ff97b80916e3c368d51dd0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>Lektion 1-2: Hinzufügen und Konfigurieren eines Verbindungs-Managers für Flatfiles
 In dieser Aufgabe fügen Sie einen Verbindungs-Manager für Flatfiles zum von Ihnen erstellten Paket hinzu. Mithilfe eines Verbindungs-Managers für Flatfiles können von einem Paket Daten aus einer Flatfile extrahiert werden. Mithilfe des Verbindungs-Managers für Flatfiles können Sie den Namen und Speicherort der Datei, die Gebietsschema- und Codepage sowie das Dateiformat einschließlich der Spaltentrennzeichen angeben, die angewendet werden sollen, wenn vom Paket Daten aus der Flatfile extrahiert werden. Zusätzlich können Sie die Datentypen für einzelne Spalten manuell angeben oder das Dialogfeld **Spaltentypen vorschlagen** verwenden, um die Spalten extrahierter Daten automatisch [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Datentypen zuzuordnen.  
@@ -92,10 +92,10 @@ Der Verbindungs-Manager für Flatfiles stellt Gebietsschemainformationen zur Dat
   
     |Flatfilespalte|Vorgeschlagener Typ|Zielspalte|Zieltyp|  
     |--------------------|------------------|----------------------|--------------------|  
-    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|float|  
+    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|FLOAT|  
     |CurrencyID|string [DT_STR]|DimCurrency.CurrencyAlternateKey|nchar(3)|  
-    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|Datum|  
-    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|float|  
+    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
+    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
     Der für die Spalte **CurrencyID** vorgeschlagene Datentyp ist inkompatibel mit dem Datentyp des Felds in der Zieltabelle. Weil `DimCurrency.CurrencyAlternateKey` den Datentyp nchar (3) hat, muss **CurrencyID** von string [DT_STR] in string [DT_WSTR] geändert werden. Zusätzlich ist das Feld `DimDate.FullDateAlternateKey` als Date-Datentyp definiert. Deshalb muss **CurrencyDate** von date [DT_Date] in database date [DT_DBDATE] geändert werden.  
   
@@ -105,10 +105,10 @@ Der Verbindungs-Manager für Flatfiles stellt Gebietsschemainformationen zur Dat
   
 4.  Klicken Sie auf **OK**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Schritt 3: Hinzufügen und Konfigurieren eines OLE DB-Verbindungs-Managers](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Verbindungs-Manager für Flatfiles](../integration-services/connection-manager/flat-file-connection-manager.md)  
 [SQL Server Integration Services-Datentypen](../integration-services/data-flow/integration-services-data-types.md)  
   

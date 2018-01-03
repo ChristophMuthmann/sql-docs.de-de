@@ -3,7 +3,7 @@ title: Description-Eigenschaft (Dialogfeld) (Visual Database Tools) | Microsoft-
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,15 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6e5bbb82ada8e0169f6f1629b38038cab2dc3042
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ebf89f25956ed529ffb75c6f9d92f15c9e95a5c3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="description-property-dialog-box-visual-database-tools"></a>Description-Eigenschaft (Dialogfeld) (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Das Dialogfeld **Description-Eigenschaft** stellt einen bearbeitbaren Bereich bereit, in dem Sie eine detaillierte Beschreibung der Datenbankobjekte, wie Tabellen, Spalten und Fremdschlüsseleinschränkungen, eingeben können. Das Dialogfeld kann für Objekte wie Tabellen und Sichten (sofern sie in einem Designer ausgewählt sind) über das Eigenschaftenfenster, für Objekte wie Indizes und CHECK-Einschränkungen über Dialogfelder und für Tabellenspalten über die Registerkarte **Spalteneigenschaften** im Tabellen-Designer aufgerufen werden. Die Beschreibung ist als erweiterte Eigenschaft für das Objekt gespeichert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Vorgehensweise: Anzeigen von Tabelleneigenschaften (Visual Database Tools)](http://msdn.microsoft.com/en-us/1865fb7c-f480-4100-9007-df5364cd002a)  
   

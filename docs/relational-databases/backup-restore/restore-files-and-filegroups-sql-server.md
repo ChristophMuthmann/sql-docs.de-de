@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 569ad370fac11210cff47eff842f056635a380ee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 428c7c62cb1b4e65ad7d2c1d22186190a9a69594
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>Wiederherstellen von Dateien und Dateigruppen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
      [Einschränkungen](#Restrictions)  
   
--   [Sicherheit](#Security)  
+-   [Security](#Security)  
   
 -   **So stellen Sie Dateien und Dateigruppen wieder her mit**  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/17/2017
   
  RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur bei unbeschädigten und zugänglichen Datenbanken geprüft werden kann (was beim Ausführen von RESTORE nicht immer der Fall ist), verfügen Mitglieder der festen Datenbankrolle **db_owner** nicht über RESTORE-Berechtigungen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-restore-files-and-filegroups"></a>So stellen Sie Dateien und Dateigruppen wieder her  
   
@@ -130,7 +130,7 @@ ms.lasthandoff: 11/17/2017
      Diese Option ist insbesondere dann hilfreich, wenn Sie Bänder für verschiedene Mediensätze wechseln müssen, beispielsweise wenn der Server nur ein Bandgerät besitzt.  
   
      **Zugriff auf die wiederhergestellte Datenbank einschränken**  
-     Gestattet nur Mitgliedern von **db_owner**, **dbcreator**oder **sysadmin**, auf die wiederhergestellte Datenbank zuzugreifen.  
+     Macht die wiederhergestellte Datenbank nur Mitgliedern von **db_owner**, **dbcreator**oder **sysadmin**verfügbar.  
   
      Das Auswählen dieser Option entspricht der Verwendung der Option RESTRICTED_USER in einer [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE-Anweisung.  
   
@@ -189,7 +189,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="TsqlExample"></a> Beispiel (Transact-SQL)  
  In diesem Beispiel werden die Dateien und Dateigruppen der `MyDatabase` -Datenbank wiederhergestellt. Zur Wiederherstellung der Datenbank zur aktuellen Zeit werden zwei Transaktionsprotokolle übernommen.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- Restore the files and filesgroups for MyDatabase.  
@@ -213,7 +213,7 @@ RESTORE LOG MyDatabase
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
  [Sichern von Dateien und Dateigruppen &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
  [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)   

@@ -3,7 +3,7 @@ title: Festlegen der Startoptionen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 11ad1af74c3db5dfcf05e37e0f6fef598435cfde
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d18cbf1dde3454f5eafafbe486531eb076d271bb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-7---set-the-startup-options"></a>Lektion 1-7: Festlegen der Startoptionen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/05/2017
   
     Beachten Sie auch die anderen Optionen, die für Sie u. U. interessant sind, wie z. B. **Systemobjekte im Objekt-Explorer ausblenden**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Wiederherstellen der Standardkonfiguration von SQL Server Management Studio](../../tools/sql-server-management-studio/lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md)  
   
   

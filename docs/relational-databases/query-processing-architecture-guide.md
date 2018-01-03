@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1c129951edea28bc36c2151d8b20d8502088653e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7d3588fd2410fdacb3c4e332c3485b40640b5587
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ Wenn eine SQL-Anweisung auf eine nicht indizierte Sicht verweist, analysieren de
 
 Nehmen Sie z. B. an, dass die folgende Sicht verwendet wird:
 
-```tsql
+```sql
 USE AdventureWorks2014;
 GO
 CREATE VIEW EmployeeName AS
@@ -118,7 +118,7 @@ GO
 
 Von dieser Sicht ausgehend führen die beiden folgenden SQL-Anweisungen die gleichen Vorgänge für die Basistabellen aus und erzeugen identische Ergebnisse:
 
-```tsql
+```sql
 /* SELECT referencing the EmployeeName view. */
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.Sales.SalesOrderHeader AS soh
@@ -142,7 +142,7 @@ Durch die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Stud
 
 Hinweise, die für Sichten in einer Abfrage gespeichert werden, können zu Konflikten mit anderen Hinweisen führen, die beim Erweitern der Sicht für den Zugriff auf ihre Basistabellen erkannt werden. Wenn das passiert, gibt die Abfrage einen Fehler zurück. Angenommen, die folgende Sicht enthält einen Tabellenhinweis in ihrer Definition:
 
-```tsql
+```sql
 USE AdventureWorks2014;
 GO
 CREATE VIEW Person.AddrState WITH SCHEMABINDING AS
@@ -154,7 +154,7 @@ WHERE a.StateProvinceID = s.StateProvinceID;
 
 Nehmen Sie nun an, dass die folgende Abfrage eingegeben wird:
 
-```tsql
+```sql
 SELECT AddressID, AddressLine1, StateProvinceCode, CountryRegionCode
 FROM Person.AddrState WITH (SERIALIZABLE)
 WHERE StateProvinceCode = 'WA';
@@ -168,7 +168,7 @@ Hinweise können über die Ebenen geschachtelter Sichten weitergegeben werden. A
 
 Wenn der `FORCE ORDER` -Hinweis in einer Abfrage verwendet wird, die eine Sicht enthält, wird die Joinreihenfolge der Tabellen innerhalb der Sicht durch die Position der Sicht im sortierten Konstrukt festgelegt. Die folgende Abfrage trifft z. B. eine Auswahl aus drei Tabellen und einer Sicht:
 
-```tsql
+```sql
 SELECT * FROM Table1, Table2, View1, Table3
 WHERE Table1.Col1 = Table2.Col1 
     AND Table2.Col1 = View1.Col1
@@ -178,7 +178,7 @@ OPTION (FORCE ORDER);
 
 Außerdem ist `View1` wie im folgenden Beispiel gezeigt definiert:
 
-```tsql
+```sql
 CREATE VIEW View1 AS
 SELECT Colx, Coly FROM TableA, TableB
 WHERE TableA.ColZ = TableB.Colz;
@@ -249,7 +249,7 @@ Stellen Sie sich z.B. ein System vor, in dem eine Kundentabelle über Server1 (`
 
 Stellen Sie sich den Ausführungsplan vor, der für diese auf Server1 ausgeführte Abfrage erstellt wird:
 
-```tsql
+```sql
 SELECT *
 FROM CompanyData.dbo.Customers
 WHERE CustomerID BETWEEN 3200000 AND 3400000;
@@ -259,7 +259,7 @@ Der Ausführungsplan für diese Abfrage extrahiert die Zeilen mit `CustomerID` -
 
 Der Abfrageprozessor von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kann zudem eine dynamische Logik in die Abfrageausführungspläne für SQL-Anweisungen integrieren, bei denen die Schlüsselwerte nicht bekannt sind, wenn der Plan erstellt werden muss. Sehen Sie sich z.B. diese gespeicherte Prozedur an:
 
-```tsql
+```sql
 CREATE PROCEDURE GetCustomer @CustomerIDParameter INT
 AS
 SELECT *
@@ -269,7 +269,7 @@ WHERE CustomerID = @CustomerIDParameter;
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kann nicht vorhersagen, welcher Schlüsselwert jeweils bei der Ausführung der Prozedur durch den `@CustomerIDParameter`-Parameter zurückgegeben wird. Da der Schlüsselwert nicht vorhergesagt werden kann, kann der Abfrageprozessor auch nicht vorhersagen, auf welche Mitgliedstabelle zugegriffen werden muss. Wegen dieses Aspekts erstellt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] einen Ausführungsplan mit Bedingungslogik (so genannte dynamische Filter), um zu steuern, auf welche Mitgliedstabelle basierend auf den Eingabeparameterwerten zugegriffen wird. Angenommen die gespeicherte Prozedur `GetCustomer` wurde für Server1 ausgeführt, dann kann die Logik des Ausführungsplans wie folgt dargestellt werden:
 
-```tsql
+```sql
 IF @CustomerIDParameter BETWEEN 1 and 3299999
    Retrieve row from local table CustomerData.dbo.Customer_33
 ELSE IF @CustomerIDParameter BETWEEN 3300000 and 6599999
@@ -303,7 +303,7 @@ Wenn eine SQL-Anweisung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 
 Die Algorithmen, die SQL-Anweisungen mit vorhandenen, nicht verwendeten Ausführungsplänen im Cache vergleichen, erfordern, dass alle Objektverweise vollqualifiziert sind. Die erste der folgenden `SELECT` -Anweisungen wird z. B. nicht mit vorhandenen Plänen verglichen. Für die zweite Anweisung wird jedoch ein Vergleich vorgenommen:
 
-```tsql
+```sql
 SELECT * FROM Person;
 
 SELECT * FROM Person.Person;
@@ -383,13 +383,13 @@ Durch die Verwendung von Parametern, einschließlich der Parametermarkierungen i
  
 Die zwei folgenden `SELECT` -Anweisungen unterscheiden sich lediglich im Hinblick auf die Werte, die in der `WHERE` -Klausel verglichen werden:
 
-```tsql
+```sql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
 
-```tsql
+```sql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 4;
@@ -401,7 +401,7 @@ Wenn Sie Konstanten mithilfe von Parametern von den SQL-Anweisungen trennen, unt
 
 * Verwenden Sie in Transact-SQL `sp_executesql`: 
 
-   ```tsql
+   ```sql
    DECLARE @MyIntParm INT
    SET @MyIntParm = 1
    EXEC sp_executesql
@@ -436,7 +436,7 @@ Wenn Sie beim Entwerfen ihrer Anwendungen nicht explizit Parameter in diese einb
 
 Auch wenn die erzwungene Parametrisierung aktiviert ist, kann die einfache Parametrisierung erfolgen. Die folgende Abfrage kann beispielsweise gemäß den Regeln der erzwungenen Parametrisierung nicht parametrisiert werden:
 
-```tsql
+```sql
 SELECT * FROM Person.Address
 WHERE AddressID = 1 + 2;
 ```
@@ -454,18 +454,18 @@ Wenn eine SQL-Anweisung ohne Parameter ausgeführt wird, parametrisiert [!INCLUD
 
 Angenommen, die folgende Anweisung wird ausgeführt:
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
 
 Der Wert 1 am Ende der Anweisung kann als Parameter angegeben werden. Das relationale Modul erstellt den Ausführungsplan für diesen Batch so, als ob anstelle des Werts 1 ein Parameter angegeben worden wäre. Aufgrund dieser einfachen Parametrisierung erkennt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], dass die folgenden beiden Anweisungen im Prinzip den gleichen Ausführungsplan generieren, und verwendet den ersten Plan auch für die zweite Anweisung:
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 4;
 ```
@@ -561,7 +561,7 @@ Das Vorbereiten einer Anweisung ist effizienter, wenn Parametermarkierungen verw
 
 Die erste Möglichkeit besteht darin, dass die Anwendung für jedes angeforderte Produkt eine eigene Abfrage ausführt:
 
-```tsql
+```sql
 SELECT * FROM AdventureWorks2014.Production.Product
 WHERE ProductID = 63;
 ```
@@ -569,7 +569,7 @@ WHERE ProductID = 63;
 Die zweite Möglichkeit umfasst folgende Schritte: 
 
 1. Die Anwendung bereitet eine Anweisung vor, die die Parametermarkierung (?) enthält:  
-   ```tsql
+   ```sql
    SELECT * FROM AdventureWorks2014.Production.Product  
    WHERE ProductID = ?;
    ```
@@ -654,7 +654,7 @@ In der folgenden Abfrage wird die Anzahl der Bestellungen gezählt, die in einem
 
 In diesem Beispiel werden erfundene Tabellen- und Spaltennamen verwendet.
 
-```tsql
+```sql
 SELECT o_orderpriority, COUNT(*) AS Order_Count
 FROM orders
 WHERE o_orderdate >= '2000/04/01'
@@ -672,7 +672,7 @@ WHERE o_orderdate >= '2000/04/01'
 
 Nehmen Sie an, dass die folgenden Indizes für die `lineitem`- und die `orders`-Tabelle definiert werden:
 
-```tsql
+```sql
 CREATE INDEX l_order_dates_idx 
    ON lineitem
       (l_orderkey, l_receiptdate, l_commitdate, l_shipdate)
@@ -765,7 +765,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt zw
 * Verbindungsservernamen  
   Mithilfe der gespeicherten Systemprozeduren `sp_addlinkedserver` und `sp_addlinkedsrvlogin` kann einer OLE DB-Datenquelle ein Servername zugewiesen werden. Auf Objekte in diesen Verbindungsservern kann in Transact-SQL-Anweisungen mithilfe von aus vier Teilen bestehenden Namen verwiesen werden. Wenn z.B. der Verbindungsservername `DeptSQLSrvr` für eine andere Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] definiert wird, verweist die folgende Anweisung auf eine Tabelle auf diesem Server: 
   
-  ```tsql
+  ```sql
   SELECT JobTitle, HireDate 
   FROM DeptSQLSrvr.AdventureWorks2014.HumanResources.Employee;
   ```
@@ -775,7 +775,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt zw
 * Ad-hoc-Konnektornamen  
   Für seltene Verweise auf eine Datenquelle wird die `OPENROWSET` - oder `OPENDATASOURCE` -Funktion zusammen mit den Informationen angegeben, die zum Herstellen einer Verbindung mit dem Verbindungsserver erforderlich sind. Auf das Rowset kann dann auf die gleiche Weise verwiesen werden, wie auf eine Tabelle in Transact-SQL-Anweisungen verwiesen wird: 
   
-  ```tsql
+  ```sql
   SELECT *
   FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',
         'c:\MSOffice\Access\Samples\Northwind.mdb';'Admin';'';
@@ -811,13 +811,13 @@ Die Partitionsentfernung wird jetzt im Suchvorgang vorgenommen.
 
 In addition, the Query Optimizer is extended so that a seek or scan operation with one condition can be done on `PartitionID` (als logischer führender Spalte) und ggf. für weitere Indexschlüsselspalten durchgeführt werden kann. Anschließend wird dann für jeden eindeutigen Wert, der die Kriterien des Suchvorgangs der ersten Ebene erfüllt hat, ein Suchvorgang der zweiten Ebene mit einer anderen Bedingung in einer oder mehreren zusätzlichen Spalten durchgeführt. Dies bedeutet, dass mit diesem Vorgang, der Skip-Scan genannt wird, der Abfrageoptimierer basierend auf einer Bedingung zunächst einen Such- bzw. Scanvorgang durchführen kann, mit dem die Partitionen ermittelt werden, auf die zugegriffen werden muss, und dann innerhalb dieses Operators einen Indexsuchvorgang der zweiten Ebene, durch den Zeilen in diesen Partitionen zurückgegeben werden, die eine andere Bedingung erfüllen. Sehen Sie sich zum Beispiel die folgende Abfrage an:
 
-```tsql
+```sql
 SELECT * FROM T WHERE a < 10 and b = 2;
 ```
 
 Gehen Sie nun davon aus, dass die Tabelle T, die als `T(a, b, c)`definiert ist, in Spalte a partitioniert wird und in Spalte b einen gruppierten Index enthält. Die Partitionsgrenzen für Tabelle T werden mit der folgenden Partitionsfunktion definiert:
 
-```tsql
+```sql
 CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 ```
 
@@ -847,7 +847,7 @@ Mit diesen Tools können Sie die folgenden Informationen abrufen:
 
 Nehmen Sie die folgende Abfrage für die partitionierte Tabelle `fact_sales`als Beispiel zur Veranschaulichung, wie diese Informationen im grafischen Ausführungsplan und in der XML-Showplanausgabe angezeigt werden. Durch diese Abfrage werden Daten in zwei Partitionen aktualisiert. 
 
-```tsql
+```sql
 UPDATE fact_sales
 SET quantity = quantity * 2
 WHERE date_id BETWEEN 20080802 AND 20080902;
@@ -976,7 +976,7 @@ Im folgenden Beispiel wird eine Testdatenbank mit einer Tabelle, die sieben Part
 > [!NOTE]
 > In diesem Beispiel werden über eine Millionen Zeilen in die Tabelle eingefügt. Je nach Hardware kann die Ausführung dieses Beispiels einige Minuten dauern. Stellen Sie vor dem Ausführen dieses Beispiels sicher, dass mehr als 1,5 GB Speicherplatz zur Verfügung stehen. 
  
-```tsql
+```sql
 USE master;
 GO
 IF DB_ID (N'db_sales_test') IS NOT NULL

@@ -3,7 +3,7 @@ title: "Ändern von Schriftfarbe, Schriftgrad und Schriftschnitt in Diagrammen |
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eb0f8bdb8cdb830825b419321ed15fe6557e1193
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8d056b70f7d13c4c6754a9e0eef8486f82e21d39
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>Ändern von Schriftfarbe, Schriftgrad und Schriftschnitt in Diagrammen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Durch Ändern der Schriftfarbe, des Schriftgrads und des Schriftschnitts können Sie Text, der in Datenbankdiagrammen angezeigt wird, individuell gestalten. Die Änderungen werden angewendet, wenn Sie neue Diagramme erstellen oder vorhandene Diagramme ändern.  
@@ -40,6 +40,6 @@ ms.lasthandoff: 12/05/2017
   
 4.  Ändern Sie die Schriftart, den Schriftgrad, die angezeigte Elemente und die Farben für Vordergrund und Hintergrund.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Verwenden von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

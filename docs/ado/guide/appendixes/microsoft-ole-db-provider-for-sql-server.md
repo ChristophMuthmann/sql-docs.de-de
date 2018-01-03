@@ -3,7 +3,7 @@ title: "Microsoft OLE DB-Anbieter für SQLServer | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b79b775a9e6bee5a1363cc95089bb0d6e66f40a5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a81ac91a4a159d41e711f79f76f79d9f168e23af
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB-Anbieter für SQL Server-Übersicht
 Microsoft OLE DB-Anbieter für SQL Server, SQLOLEDB, ermöglicht ADO, Microsoft SQL Server anzumelden.

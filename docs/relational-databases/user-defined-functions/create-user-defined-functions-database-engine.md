@@ -23,17 +23,17 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b90ec3cc6932d9487dd339041fc1f580f63a8db6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9e5aa7f65caf1de9fc0389d6d1dd5aefcc825e0b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Erstellen von benutzerdefinierten Funktionen (Datenbankmodul)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie eine benutzerdefinierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktion (User-defined Function, UDF) mit [!INCLUDE[tsql](../../includes/tsql-md.md)] erstellt wird.  
 
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -76,7 +76,7 @@ Erfordert die CREATE FUNCTION-Berechtigung in der Datenbank und die ALTER-Berech
 ##  <a name="Scalar"></a> Skalarfunktionen  
  Im folgenden Beispiel wird eine Skalarfunktion mit mehreren Anweisungen in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank erstellt. Die Funktion nimmt einen Eingabewert ( `ProductID`) an und gibt einen einzelnen Datenwert zurück, der die aggregierte Menge des Lagerbestands für das angegebene Produkt darstellt.  
   
-```t-sql  
+```sql  
 IF OBJECT_ID (N'dbo.ufnGetInventoryStock', N'FN') IS NOT NULL  
     DROP FUNCTION ufnGetInventoryStock;  
 GO  
@@ -98,7 +98,7 @@ END;
   
  Im folgenden Beispiel wird die `ufnGetInventoryStock` -Funktion verwendet, um den aktuellen Lagerbestand für Produkte mit einer `ProductModelID` zwischen 75 und 80 zurückzugeben.  
   
-```t-sql  
+```sql  
 SELECT ProductModelID, Name, dbo.ufnGetInventoryStock(ProductID)AS CurrentSupply  
 FROM Production.Product  
 WHERE ProductModelID BETWEEN 75 and 80;  
@@ -107,7 +107,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
 ##  <a name="TVF"></a> Tabellenwertfunktionen  
  Im folgenden Beispiel wird eine Inline-Tabellenwertfunktion in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank erstellt. Die Funktion nimmt einen Eingabeparameter (eine Kunden-ID (Geschäfts-ID)) an und gibt die Spalten `ProductID`, `Name`sowie das Aggregat der bisherigen Verkaufseinnahmen dieses Jahres als `YTD Total` für jedes Produkt zurück, das an das Geschäft verkauft wurde.  
   
-```t-sql  
+```sql  
 IF OBJECT_ID (N'Sales.ufn_SalesByStore', N'IF') IS NOT NULL  
     DROP FUNCTION Sales.ufn_SalesByStore;  
 GO  
@@ -128,13 +128,13 @@ RETURN
   
  Das folgende Beispiel ruft die Funktion auf und gibt die Kunden-ID 602 an.  
   
-```t-sql  
+```sql  
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
  Im folgenden Beispiel wird eine Tabellenwertfunktion in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank erstellt. Die Funktion nimmt einen einzelnen Eingabeparameter ( `EmployeeID` ) an und gibt eine Liste aller Mitarbeiter zurück, die dem angegebenen Mitarbeiter direkt oder indirekt unterstellt sind. Die Funktion wird dann unter Angabe der Mitarbeiternummer 109 aufgerufen.  
   
-```t-sql  
+```sql  
 IF OBJECT_ID (N'dbo.ufn_FindReports', N'TF') IS NOT NULL  
     DROP FUNCTION dbo.ufn_FindReports;  
 GO  

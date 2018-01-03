@@ -3,7 +3,7 @@ title: Registrieren eines verbundenen Servers (SQL Server Management Studio) | M
 ms.custom: 
 ms.date: 07/28/2016
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 66d6bf38a5500017012c3eabb466b11d2d28ad49
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5140781326b2ada6fcc7e99dcf3cb566e70cba4b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>Registrieren eines verbundenen Servers (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] In diesem Thema wird das Registrieren eines verbundenen Servers in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) beschrieben. Indem Sie den Server registrieren, können Sie die Verbindungsinformationen für Server, auf die Sie häufig zugreifen, speichern. Ein Server kann vor dem Verbinden oder bei der Verbindung im Objekt-Explorer registriert werden.  Sie können Ihre registrierten Server in SSMS anzeigen, indem Sie im Menü zu **Ansicht**\\**Registrierte Server** navigieren.
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/05/2017
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-register-a-connected-server"></a>So registrieren Sie einen Server  
   
@@ -57,7 +57,7 @@ Wenn ein Benutzer eine Verbindung mit einem angegebenen Benutzernamen und einem 
      > [!IMPORTANT]  
      > [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] Weitere Informationen finden Sie unter [Auswählen eines Authentifizierungsmodus](../../relational-databases/security/choose-an-authentication-mode.md).  
 
-     -    **Benutzername**  
+     -    **User name**  
 Zeigt den aktuellen Benutzernamen an, zu dem die Verbindung hergestellt wird. Diese schreibgeschützte Option ist nur verfügbar, wenn Sie zum Herstellen der Verbindung die Windows-Authentifizierung ausgewählt haben. Um **Benutzername**zu ändern, melden Sie sich bei dem Computer als ein anderer Benutzer an. 
 
      -    **Anmeldename**  
@@ -84,7 +84,7 @@ Klicken Sie hier, um die Verbindung mit dem unter **Servername**ausgewählten Se
 **Speichern**  
 Klicken Sie hier, um die Einstellungen des registrierten Servers zu speichern. 
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Erstellen eines neu registrierten Servers (SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)
   
   

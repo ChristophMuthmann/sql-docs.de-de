@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f8eb8029f9824ceaeee061fc829a89d0054e1244
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1cb0435fd5e28952f71cc23ce61af4a3635f06cf
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ Wenn eine aktive Arbeitsauslastung vorliegt, ist zusätzlicher Arbeitsspeicher e
 
 Betrachten Sie das folgende speicheroptimierte Tabellenschema:
   
-```tsql  
+```sql  
 CREATE TABLE t_hk
 (  
   col1 int NOT NULL  PRIMARY KEY NONCLUSTERED,  
@@ -116,21 +116,21 @@ Jeder Hashindex ist ein Hasharray aus 8-Byte-Adresszeigern.  Die Größe des Arr
   
 Mit Hashindizes erzielen Sie sehr schnelle Übereinstimmungssuchen wie:  
   
-```tsql  
+```sql  
 SELECT * FROM t_hk  
    WHERE Col2 = 3;
 ```  
   
 Nicht gruppierte Indizes liefern schneller Ergebnisse bei Bereichssuchen wie:  
   
-```tsql  
+```sql  
 SELECT * FROM t_hk  
    WHERE Col2 >= 3;
 ```  
   
 Beim Migrieren einer datenträgerbasierten Tabelle können Sie die Anzahl der eindeutigen Werte für den Index "t1c2_index" wie folgt bestimmen.  
   
-```tsql
+```sql
 SELECT COUNT(DISTINCT [Col2])  
   FROM t_hk;
 ```  
@@ -166,7 +166,7 @@ Der von nicht gruppierten Indizes belegte Arbeitsspeicher kann wie folgt berechn
   
  Nicht gruppierte Indizes eignen sich am besten für Bereichssuchen, wie in der folgenden Abfrage veranschaulicht:  
   
-```tsql  
+```sql  
 SELECT * FRON t_hk  
    WHERE c2 > 5;  
 ```  
@@ -197,7 +197,7 @@ Tabellenvariablen, die in einem umfangreichen SQL-Batch und nicht in einem Proze
 
 Mit den oben aufgeführten Berechnungen wird der Arbeitsspeicherbedarf für die derzeit bestehende Tabelle geschätzt. Zusätzlich zu diesem Arbeitsspeicher müssen Sie einplanen, dass die Tabelle anwächst, und ausreichend Arbeitsspeicher für zukünftiges Wachstum vorsehen.  Wenn Sie beispielsweise ein zehnprozentiges Wachstum erwarten, müssen Sie die oben ermittelten Ergebnisse mit 1,1 multiplizieren, um den insgesamt erforderlichen Arbeitsspeicher für die Tabelle zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 
 [Migrieren zu In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
 

@@ -3,7 +3,7 @@ title: Anbieterfehler | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 327869785bddfbd0d43bfff051a9b7ef6b97c8fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bdb4d1847a2a55c57235a88979b19f7370169b9c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="provider-errors"></a>Anbieterfehler
 Wenn ein Anbieterfehler auftritt, wird ein Laufzeitfehler-2147467259 zurückgegeben. Wenn Sie diesen Fehler erhalten, überprüfen Sie die **Fehler** Auflistung der aktiven **Verbindung** -Objekt, das enthält einen oder mehrere Fehler, die beschreiben, was aufgetreten ist.  
@@ -70,9 +70,9 @@ End Function
 ## <a name="the-error-object"></a>Die Error-Objekt  
  Mithilfe einer **Fehler** -Objekts können Sie bestimmen, welche Fehler aufgetreten ist und noch wichtiger ist, welche Anwendung oder welches Objekt den Fehler verursacht hat. Die **Fehler** Objekt hat die folgenden Eigenschaften:  
   
-|Eigenschaftsname|Description|  
+|Eigenschaftenname|Description|  
 |-------------------|-----------------|  
-|**Description**|Eine textbeschreibung des Fehlers, der aufgetreten ist.|  
+|**Beschreibung**|Eine textbeschreibung des Fehlers, der aufgetreten ist.|  
 |**HelpContext HelpFile**|Bezieht sich auf das Hilfethema und Hilfe-Datei, die eine Beschreibung des Fehlers enthalten, die aufgetreten sind.|  
 |**NativeError**|Die anbieterspezifische Fehlernummer.|  
 |**Anzahl**|Ein Long Integer-Wert, der die Anzahl darstellt (aufgeführt der **ErrorValueEnum**) des aufgetretenen Fehlers.|  

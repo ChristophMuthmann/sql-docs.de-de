@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 47738020780bb8793c8cfa281815da5be26db222
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35d6cd398b2bac3a4a7be85ba32ace3ea7a033a7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services-Variablen (SSIS)
   Variablen speichern Werte, die von einem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket und dessen Containern, Tasks und Ereignishandlern zur Laufzeit verwendet werden können. Die Skripts im Skripttask und die Skriptkomponente können ebenfalls Variablen verwenden. Die Rangfolgeneinschränkungen, mit denen Tasks und Container zu einem Workflow zusammengestellt werden, können Variablen verwenden, wenn ihre Einschränkungsdefinitionen Ausdrücke einschließen.  
@@ -187,7 +187,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="add-variable-dialog-box"></a>Variable hinzufügen (Dialogfeld)
 Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften einer neuen Variablen angeben.  
   
-#### <a name="options"></a>enthalten  
+#### <a name="options"></a>Tastatur  
  **Container**  
  Wählen Sie in der Liste einen Container aus. Der Container definiert den Gültigkeitsbereich der Variablen. Der Container kann entweder das Paket oder eine im Paket enthaltene ausführbare Datei sein.  
   
@@ -200,7 +200,7 @@ Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften 
  **Werttyp**  
  Wählen Sie einen Datentyp aus.  
   
- **Wert**  
+ **ReplTest1**  
  Geben Sie einen Wert ein. Der Wert muss mit dem unter der Option **Werttyp** angegebenen Datentyp kompatibel sein.  
   
  **Schreibgeschützt**  
@@ -256,7 +256,7 @@ Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften 
   
 -   Die ValueType-Eigenschaft enthält den Datentyp des Werts in der Value-Eigenschaft. Wenn Value durch einen Ausdruck festgelegt wird, dann wird ValueType automatisch auf einen Datentyp aktualisiert, der mit dem Auswertungsergebnis des Ausdrucks kompatibel ist. Angenommen, Value enthält 0 und die ValueType-Eigenschaft enthält **Int32** . Nun legen Sie Expression auf GETDATE() fest. Daraufhin enthält Value das aktuelle Datum und die Uhrzeit, und ValueType wird auf **DateTime**festgelegt.  
   
--   Das ** Eigenschaftenfenster** für die Variable stellt den Zugriff auf das Dialogfeld **Ausdrucks-Generator** bereit. Sie können dieses Tool zum Erstellen, Überprüfen und Auswerten von Ausdrücken verwenden. Weitere Informationen finden Sie unter [Ausdrucks-Generator](../integration-services/expressions/expression-builder.md) und [Integration Services-Ausdrücke &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md).  
+-   Das  **Eigenschaftenfenster** für die Variable stellt den Zugriff auf das Dialogfeld **Ausdrucks-Generator** bereit. Sie können dieses Tool zum Erstellen, Überprüfen und Auswerten von Ausdrücken verwenden. Weitere Informationen finden Sie unter [Ausdrucks-Generator](../integration-services/expressions/expression-builder.md) und [Integration Services-Ausdrücke &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md).  
   
  Wenn Sie das Fenster **Variablen** verwenden, um Ausdrücke für eine benutzerdefinierte Variable festzulegen:  
   
@@ -313,7 +313,7 @@ Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften 
 ## <a name="update-a-variable-dynamically-with-configurations"></a>Dynamisches Aktualisieren einer Variable mit Konfigurationen  
  Zum dynamischen Aktualisieren von Variablen können Sie Konfigurationen für die Variablen erstellen, die Konfigurationen zusammen mit dem Paket bereitstellen und dann die Variablenwerte in der Konfigurationsdatei aktualisieren, wenn Sie die Pakete bereitstellen. Zur Laufzeit verwendet das Paket die aktualisierten Variablenwerte. Weitere Informationen finden Sie unter [Erstellen von Paketkonfigurationen](../integration-services/packages/create-package-configurations.md).  
 
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  [Verwenden der Werte von Variablen und Parametern in einem untergeordneten Paket](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
  [Zuordnen von Abfrageparametern zu Variablen in einer Datenflusskomponente](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  

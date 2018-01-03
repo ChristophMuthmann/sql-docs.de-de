@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ac05bddeb5b8ec7ddb153dc4eff000dc9747d4e0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c036b75d93fe75cf0feb5e047223cb5bb285aad5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Aktivieren der semantischen Suche in Tabellen und Spalten
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Beschreibt, wie die statistische semantische Indizierung für ausgewählte Spalten, die Dokumente oder Text enthalten, aktiviert bzw. deaktiviert wird.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
  Im folgenden Beispiel wird der Standardvolltextkatalog **ft** erstellt. Im folgenden Beispiel wird ein eindeutiger Index für die **JobCandidateID**-Spalte der **HumanResources.JobCandidate**-Tabelle der AdventureWorks2012-Beispieldatenbank erstellt. Dieser eindeutige Index ist als Schlüsselspalte für einen Volltextindex erforderlich. Im Beispiel werden dann ein Volltextindex und ein semantischer Index in der **Resume** -Spalte erstellt.  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG ft AS DEFAULT  
 GO  
   
@@ -90,7 +90,7 @@ GO
   
  In diesem Beispiel wird auch angegeben, dass die Änderungsnachverfolgung ohne Auffüllung deaktiviert ist. Im Beispiel wird eine **ALTER FULLTEXT INDEX** -Anweisung verwendet, um außerhalb der Spitzenbetriebszeiten eine vollständige Auffüllung mit dem neuen Index zu beginnen und die automatische Änderungsnachverfolgung zu aktivieren.  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG documents_catalog  
 GO  
   
@@ -113,7 +113,7 @@ GO
   
  Der Index wird später zu einem Zeitpunkt mit wenig Datenverkehr aufgefüllt:  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document SET CHANGE_TRACKING AUTO  
 GO  
 ```  
@@ -139,7 +139,7 @@ GO
   
  Im folgenden Beispiel wird ein vorhandener Volltextindex für die **Production.Document** -Tabelle in der AdventureWorks2012-Beispieldatenbank geändert. Im Beispiel wird ein semantischer Index in der Spalte **Document** der Tabelle **Production.Document** hinzugefügt, die bereits einen Volltextindex hat. Das Beispiel gibt an, dass der Index nicht automatisch erneut aufgefüllt wird.  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document  
     ALTER COLUMN Document  
         ADD Statistical_Semantics  
@@ -164,7 +164,7 @@ Sie können die semantische Indizierung löschen, wenn Sie einen vorhandenen Vol
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>Löschen eines semantischen Indexes mit Transact-SQL  
 Rufen Sie zum ausschließlichen Löschen der semantischen Indizierung aus Spalten die **ALTER FULLTEXT INDEX** -Anweisung mit der Option **ALTER COLUMN***Spaltenname***DROP STATISTICAL_SEMANTICS** auf. Sie können die Indizierung in einer einzigen **ALTER** -Anweisung aus mehreren Spalten löschen.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
 
@@ -176,7 +176,7 @@ GO
   
 Rufen Sie zum Löschen der Volltextindizierung und der semantischen Indizierung aus einer Spalte die **ALTER FULLTEXT INDEX** -Anweisung mit der Option **ALTER COLUMN***Spaltenname***DROP** auf.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -202,7 +202,7 @@ GO
   
  Der Rückgabewert 1 gibt an, dass die Volltextsuche und die semantische Suche für die Datenbank aktiviert sind; der Rückgabewert 0 gibt an, dass sie nicht aktiviert sind.  
   
-```tsql  
+```sql  
 SELECT DATABASEPROPERTYEX('database_name', 'IsFullTextEnabled')  
 GO  
 ```  
@@ -226,7 +226,7 @@ GO
   
      Der Rückgabewert 1 gibt an, dass die semantische Suche für die Spalte aktiviert ist; der Rückgabewert 0 gibt an, dass sie nicht aktiviert ist.  
   
-    ```tsql  
+    ```sql  
     SELECT COLUMNPROPERTY(OBJECT_ID('table_name'), 'column_name', 'StatisticalSemantics')  
     GO  
     ```  
@@ -235,7 +235,7 @@ GO
   
      Der Wert 1 in der **statistical_semantics**-Spalte gibt an, dass die angegebene Spalte zusätzlich zur Volltextindizierung für die semantische Indizierung aktiviert ist.  
   
-    ```tsql  
+    ```sql  
     SELECT * FROM sys.fulltext_index_columns WHERE object_id = OBJECT_ID('table_name')  
     GO  
     ```  
@@ -253,7 +253,7 @@ GO
   
  Fragen Sie die Katalogsicht [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md) ab.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.fulltext_semantic_languages  
 GO  
 ```  

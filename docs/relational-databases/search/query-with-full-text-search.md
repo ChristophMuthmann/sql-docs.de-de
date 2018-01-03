@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cdd09271669926fdf2c94f183818517a439bef92
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6c4d90a0e4498ecdb28727eeca14c2f6bbe147e6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="query-with-full-text-search"></a>Abfragen mit Volltextsuche
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Zum Schreiben von Volltextabfragen mit den Volltextprädikaten verwenden Sie **CONTAINS** und **FREETEXT** und die Rowsetwertfunktionen **CONTAINSTABLE** und **FREETEXTTABLE** mit der **SELECT**-Anweisung. Dieses Thema enthält Beispiele für jedes Prädikat und jede Funktion und hilft Ihnen dabei, das Beste auszuwählen.
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="example---contains"></a>Beispiel - CONTAINS  
  Im folgenden Beispiel werden alle Produkte mit einem Preis von `$80.99` gesucht, die das Wort `"Mountain"`enthalten.  
   
-```tsql
+```sql
 USE AdventureWorks2012  
 GO  
   
@@ -55,7 +55,7 @@ GO
 ### <a name="example---freetext"></a>Beispiel - FREETEXT 
  Im folgenden Beispiel wird nach allen Dokumenten gesucht, die Wörter im Zusammenhang mit wichtigen Sicherheitskomponenten enthalten.  
   
-```tsql
+```sql
 USE AdventureWorks2012  
 GO  
   
@@ -68,7 +68,7 @@ GO
 ### <a name="example---containstable"></a>Beispiel - CONTAINSTABLE  
  Im folgenden Beispiel werden die Beschreibungs-ID und die Beschreibung aller Produkte zurückgegeben, bei denen in der Spalte **Description** das Wort „aluminum“ in der Nähe des Worts „light“ oder „lightweight“ enthalten ist. Ausschließlich Zeilen mit einem Rangwert von mindestens 2 werden zurückgegeben.  
   
-```tsql
+```sql
 USE AdventureWorks2012  
 GO  
   
@@ -90,7 +90,7 @@ GO
 ### <a name="example--freetexttable"></a>Beispiel - FREETEXTTABLE  
  Das folgende Beispiel erweitert eine FREETEXTTABLE-Abfrage so, dass die Zeilen mit dem höchsten Rangfolgenwert zuerst zurückgegeben werden und die Rangfolge jeder Zeile zur Auswahlliste hinzugefügt wird. Um die Abfrage angeben zu können, müssen Sie wissen, dass **ProductDescriptionID** die eindeutige Schlüsselspalte der **ProductDescription** -Tabelle ist.  
   
-```tsql 
+```sql 
 USE AdventureWorks2012  
 GO  
   
@@ -106,7 +106,7 @@ GO
   
 Im Folgenden finden Sie eine Erweiterung derselben Abfrage, die nur Zeilen mit einem Rangfolgenwert von 10 oder höher zurückgibt:  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -164,7 +164,7 @@ Die folgende Tabelle beschreibt die Wortarten und Ausdrücke, nach denen Sie suc
 ###  <a name="Simple_Term"></a>Suchen Sie nach einem bestimmten Wort oder Ausdruck (einfacher Begriff)  
  Sie können in eine Tabelle mithilfe von [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)oder [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) nach einem bestimmten Ausdruck suchen. Wenn Sie z. B. die Tabelle **ProductReview** in der Datenbank [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] nach allen Kommentaren zu einem Produkt mit dem Begriff „learning curve“ durchsuchen möchten, sollten Sie das CONTAINS-Prädikat wie folgt verwenden:  
   
-```tsql
+```sql
 USE AdventureWorks2012  
 GO  
   
@@ -179,7 +179,7 @@ GO
 ###  <a name="Prefix_Term"></a>Suche nach einem Wort mit einem Präfix (Präfixbegriff)  
  Sie können [CONTAINS](../../t-sql/queries/contains-transact-sql.md) oder [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) verwenden, um nach Wörtern oder Ausdrücken mit einem angegebenen Präfix zu suchen. Alle Einträge in der Spalte, die Text enthalten und mit dem angegebenen Präfix beginnen, werden zurückgegeben. So suchen Sie beispielsweise nach allen Zeilen die das Präfix `top`enthalten, z. B. `top``ple`, `top``ping`und `top`. Die Abfrage lautet folgendermaßen:  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -198,7 +198,7 @@ Sie können mithilfe von [CONTAINS](../../t-sql/queries/contains-transact-sql.md
   
 Im folgenden Beispiel wird beispielsweise nach einer Form von "foot" ("foot", "feet" usw.) in der `Comments` -Spalte der `ProductReview` -Tabelle in der `AdventureWorks` -Datenbank gesucht.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -215,7 +215,7 @@ Sie können [CONTAINSTABLE](../../relational-databases/system-functions/contains
   
 Im folgenden Beispiel ist eine Abfrage dargestellt, die mithilfe von Gewichtungen nach allen Kundenadressen sucht, in denen Text, der mit der Zeichenfolge "Bay" beginnt, entweder "Street" oder "View" enthält. Die Zeilen, die mehrere der angegebenen Wörter enthalten, erhalten einen höheren Rang in den Ergebnissen.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -243,7 +243,7 @@ Im Gegensatz dazu behandeln FREETEXT und FREETEXTTABLE die booleschen Begriffe a
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird das CONTAINS-Prädikat für die Suche nach Beschreibungen verwendet, deren Beschreibungs-ID ungleich 5 ist und die das Wort "Aluminum" und das Wort "spindle" enthalten. In der Suchbedingung wird der boolesche AND-Operator verwendet. In diesem Beispiel wird die ProductDescription-Tabelle der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank verwendet.
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -270,7 +270,7 @@ GO
 
 Nachdem Sie eine entsprechende Kombination aus Wörtertrennung, Thesaurus und Stoppliste auf eine Abfrage angewendet haben, können Sie die Ergebnisse der Tokenisierung anzeigen, indem Sie die dynamische Verwaltungssicht **sys.dm_fts_parser** verwenden. Weitere Informationen finden Sie unter [sys.dm_fts_parser &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)   

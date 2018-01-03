@@ -3,8 +3,11 @@ title: Neuigkeiten in Integration Services in SQL Server 2016 | Microsoft-Dokume
 ms.custom: SQL2016_New_Updated
 ms.date: 09/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 36f418950cfa6d475c911c05fd9737fcecf62aa6
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 6e459849dbbc844039ba3ae7a766794f1283e8a0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Neuigkeiten in Integration Services in SQL Server 2016
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -34,7 +37,7 @@ In der öffentlichen Vorschauversion von Azure Data Factory Version 2, die seit 
 -   Bereitstellen von Paketen in der SSIS-Katalogdatenbank (SSISDB) für Azure SQL-Datenbank
 -   Ausführen von Paketen, die in Azure in Azure SSIS Integration Runtime bereitgestellt wurden. Hierbei handelt es sich um eine Komponente von Azure Data Factory Version 2.
 
-Weitere Informationen finden Sie unter [Migration von SQL Server Integration Services-Workloads in die Cloud per Lift und Shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+Weitere Informationen finden Sie unter [Migration von SQL Server Integration Services-Workloads in die Cloud per Lift & Shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
 
 Diese neuen Funktionen benötigen SQL Server Data Tools (SSDT) Version 17.2 oder höher, nicht jedoch SQL Server 2017 oder SQL Server 2016. Wenn Sie Pakete in Azure bereitstellen, aktualisiert der Assistent für die Paketbereitstellung die Pakete immer auf das aktuelle Paketformat.
 
@@ -157,16 +160,16 @@ Diese neuen Funktionen benötigen SQL Server Data Tools (SSDT) Version 17.2 oder
   
 -   Sie haben die Datenbank aus einer älteren Version von SQL Server wiederhergestellt.  
   
--   Sie haben die Datenbank vor der Aktualisierung der SQL Server-Instanz nicht aus einer Always On-Verfügbarkeitsgruppe entfernt. Dies verhindert die automatische Aktualisierung der Datenbank. Weitere Informationen finden Sie unter [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade).  
+-   Sie haben die Datenbank vor der Aktualisierung der SQL Server-Instanz nicht aus einer Always On-Verfügbarkeitsgruppe entfernt. Dies verhindert die automatische Aktualisierung der Datenbank. Weitere Informationen finden Sie unter [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade).  
   
- Weitere Informationen finden Sie unter [SSIS Catalog (SSISDB) (SSIS-Katalog (SSISDB))](../integration-services/service/ssis-catalog.md). 
+ Weitere Informationen finden Sie unter [SSIS Catalog (SSISDB) (SSIS-Katalog (SSISDB))](../integration-services/catalog/ssis-catalog.md). 
 
 ####  <a name="AlwaysOn"></a> Unterstützung für Always On im SSIS-Katalog  
  Das Feature der Always On-Verfügbarkeitsgruppen ist eine Lösung für hohe Verfügbarkeit und Notfallwiederherstellung, die eine Alternative zur Datenbankspiegelung auf Unternehmensebene bietet. Eine Verfügbarkeitsgruppe unterstützt eine Failoverumgebung für einen diskreten Satz von Benutzerdatenbanken. Diese werden auch als Verfügbarkeitsdatenbanken bezeichnet, die zusammen ein Failover ausführen. Weitere Informationen finden Sie unter [AlwaysOn-Verfügbarkeitsgruppen](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
  In SQL Server 2016 stellt SSIS neue Funktionen zur Verfügung, mit denen Sie problemlos Bereitstellungen im zentralisierten SSIS-Katalog (d.h. in der SSISDB-Benutzerdatenbank) vornehmen können. Um Hochverfügbarkeit für die SSISDB-Datenbank und ihren Inhalt – Projekte, Pakete, Ausführungsprotokolle usw. – zu gewährleisten, können Sie die SSISDB-Datenbank wie jede andere Datenbank zu einer Always On-Verfügbarkeitsgruppe hinzufügen. Wenn ein Failover auftritt, übernimmt einer der sekundären Knoten automatisch die Rolle eines primären Knoten.  
   
- Eine umfassende Übersicht und eine ausführliche Anleitung für die Aktivierung von Always On für SSISDB finden Sie unter [SSIS Catalog (SSIS-Katalog)](../integration-services/service/ssis-catalog.md).  
+ Eine umfassende Übersicht und eine ausführliche Anleitung für die Aktivierung von Always On für SSISDB finden Sie unter [SSIS Catalog (SSIS-Katalog)](../integration-services/catalog/ssis-catalog.md).  
 
 ####  <a name="IncrementalDeployment"></a> Inkrementelle Paketbereitstellung  
 Mit der Funktion für inkrementelle Paketbereitstellung können Sie ein oder mehrere Pakete in einem vorhandenen oder neuen Projekt bereitstellen, ohne das gesamte Projekt bereitzustellen. Sie können Pakete schrittweise (inkrementell) mithilfe der folgenden Tools bereitstellen.  
@@ -230,7 +233,7 @@ Mit der Funktion für inkrementelle Paketbereitstellung können Sie ein oder meh
 >  (In RC0 wurde diese Methode zur neuen <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> -Schnittstelle verschoben. Weitere Informationen finden Sie unter [Neue IDTSComponentMetaData130-Schnittstelle in der API](#CMD130).)  
 
 ####  <a name="ServerLogLevel"></a> Unterstützung für den serverweiten Standardprotokolliergrad  
- Sie können nun in SQL Server unter **Servereigenschaften**mithilfe der Eigenschaft **Serverweiter Protokolliergrad** einen Standardwert für den serverweiten Protokolliergrad festlegen. Sie können zwischen einem der integrierten Protokolliergrade (None, Standard, Verbose, Performance oder RuntimeLineage) oder einem vorhandenen benutzerdefinierten entscheiden. Der ausgewählte Protokolliergrad wird auf alle im SSIS-Katalog bereitgestellten Pakete angewendet. Dies gilt standardmäßig auch für einen SQL Agent-Auftragsschritt, der ein SSIS-Paket ausführt.  
+ Sie können nun in SQL Server unter **Servereigenschaften**mithilfe der Eigenschaft **Serverweiter Protokolliergrad** einen Standardwert für den serverweiten Protokolliergrad festlegen. Sie können zwischen einem der integrierten Protokolliergrade (None, Standard, Verbose, Performance oder RuntimeLineage) oder einem vorhandenen benutzerdefinierten entscheiden. Der ausgewählte Protokolliergrad wird auf alle im SSIS-Katalog bereitgestellten Pakete angewendet. Er gilt standardmäßig auch für SQL Agent-Auftragsschritte, die ein SSIS-Paket ausführen.  
 
 ####  <a name="CMD130"></a> Neue IDTSComponentMetaData130-Schnittstelle in der API  
  Der neue Protokolliergrad <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> -Schnittstelle fügt in SQL Server 2016 der vorhandenen <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> -Schnittstelle neue Funktionalität hinzu, insbesondere der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> -Methode. (Die **GetIdentificationStringByID** -Methode wird von der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> -Schnittstelle zur neuen Schnittstelle verschoben.)Es gibt auch die neuen Schnittstellen <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn130> und <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn130> , die beide die **LineageIdentificationString** -Eigenschaft unterstützen. Weitere Informationen finden Sie unter [Spaltennamen für Fehler im Datenfluss](#ErrorColumn).  
@@ -249,7 +252,7 @@ Mit der Funktion für inkrementelle Paketbereitstellung können Sie ein oder meh
 ####  <a name="Parts"></a> Neue Vorlagen, zu Teilen umbenannt  
  Die neuen wiederverwendbaren Vorlagen zur Ablaufsteuerung, die in der CTP-Version 3.0 veröffentlicht wurden, wurden zu Teilen der Ablaufsteuerung oder zu Paketteilen umbenannt. Weitere Informationen zu diesem Feature finden Sie unter [Wiederverwenden der Ablaufsteuerung für Pakete mithilfe von Ablaufsteuerungs-Paketteilen](../integration-services/reuse-control-flow-across-packages-by-using-control-flow-package-parts.md).  
 
-## <a name="connectivity"></a>Konnektivität  
+## <a name="connectivity"></a>Connectivity  
 
 ### <a name="expanded-connectivity-on-premises"></a>Erweiterte lokale Konnektivität
 
@@ -288,8 +291,8 @@ Mit der Funktion für inkrementelle Paketbereitstellung können Sie ein oder meh
 ####  <a name="SAPBW"></a> Veröffentlichung von Microsoft Connector für SAP BW für SQL Server 2016  
  Der Microsoft® Connector für SAP BW für Microsoft SQL Server® 2016 wurde als Teil des SQL Server 2016 Feature Pack veröffentlicht. Die Komponenten des Feature Packs können Sie unter [Microsoft® SQL Server® 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297)herunterladen.
  
-#### <a name="oracleteradata"></a> Connectors, Version 4.0, für Oracle und Teradata veröffentlicht
-Die Microsoft-Connectors, Version 4.0, für Oracle und Teradata wurden veröffentlicht. Die Connectors können unter [Microsoft Connectors v4.0 für Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950)heruntergeladen werden.
+#### <a name="oracleteradata"></a> Connectors, Version&4;.0, für Oracle und Teradata veröffentlicht
+Die Microsoft-Connectors, Version&4;.0, für Oracle und Teradata wurden veröffentlicht. Die Connectors können unter [Microsoft Connectors v4.0 für Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950)heruntergeladen werden.
 
 ### <a name="pdwau5"></a> Connectors für Analytics Platform System (PDW) Appliance Update 5 veröffentlicht
 Die Zieladapter zum Laden von Daten in PDW mit AU5 wurden veröffentlicht. Die Adapter können unter [Analytics Platform System Appliance Update 5 Documentation and Client Tools](https://www.microsoft.com/download/details.aspx?id=51610)heruntergeladen werden.
@@ -316,7 +319,7 @@ Die neueste Version von Azure Feature Pack enthält den Azure SQL DW Uploadtask,
 ### <a name="better-install-experience"></a>Benutzerfreundlicheres Installieren
 
 ####  <a name="Upgrade"></a> Das Upgrade wird blockiert, wenn SSISDB zu einer Verfügbarkeitsgruppe gehört  
- Wenn die SSIS-Katalogdatenbank (SSISDB) zu einer Always On-Verfügbarkeitsgruppe gehört, müssen Sie die SSISDB aus der Verfügbarkeitsgruppe entfernen, SQL Server upgraden und die SSISDB erneut zur Verfügbarkeitsgruppe hinzufügen. Weitere Informationen finden Sie unter [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade).  
+ Wenn die SSIS-Katalogdatenbank (SSISDB) zu einer Always On-Verfügbarkeitsgruppe gehört, müssen Sie die SSISDB aus der Verfügbarkeitsgruppe entfernen, SQL Server upgraden und die SSISDB erneut zur Verfügbarkeitsgruppe hinzufügen. Weitere Informationen finden Sie unter [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade).  
 
 ### <a name="better-design-experience"></a>Ansprechenderes Designerlebnis
 
@@ -368,7 +371,7 @@ Die neueste Version von Azure Feature Pack enthält den Azure SQL DW Uploadtask,
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] führte die Eigenschaft **ValidationDetails** im [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 2 ein. Diese neue Eigenschaft wurde zu diesem Zeitpunkt nicht angekündigt oder dokumentiert. Die Eigenschaft **ValidationDetails** ist auch in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] und in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]verfügbar.   
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Neues in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)   
  [Von den SQL Server 2016-Editionen unterstützte Funktionen](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
   

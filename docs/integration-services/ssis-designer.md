@@ -5,7 +5,7 @@ ms.date: 08/31/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -31,11 +31,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b132be5de44e4bb669ce0c1aa014b89aec07a63
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 53c154bf25df98ca502925b5514e5d0da583ce2d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ssis-designer"></a>SSIS-Designer
   [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer ist ein grafisches Tool, mit dem Sie [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakete erstellen und verwalten können. [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer ist in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] im Rahmen eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekts verfügbar.  
@@ -150,7 +150,7 @@ Verwenden Sie die Registerkarte **Datenfluss** des [!INCLUDE[ssIS](../includes/s
 ## <a name="event-handlers-tab"></a>Registerkarte Ereignishandler
   Verwenden Sie die Registerkarte **Ereignishandler** von [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer zum Erstellen eines Steuerungsflusses in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket. Ein Ereignishandler wird als Reaktion auf ein Ereignis ausgeführt, das von einem Paket, Task oder Container ausgelöst wird.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Ausführbare Datei**  
  Wählen Sie die ausführbare Datei aus, für die Sie einen Ereignishandler erstellen möchten. Bei der ausführbaren Datei kann es sich um ein Paket, einen Task oder Container im Paket handeln.  
   
@@ -186,11 +186,11 @@ Pakete verwenden Verbindungs-Manager, um Verbindungen mit Datenquellen, beispiel
   
  Klicken Sie mit der rechten Maustaste in diesen Bereich, und klicken Sie dann im Menü auf die Option für den Task, den Sie ausführen möchten.
  
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Erstellen von Paketen in SQL Server-Datentools](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server Integration Services-Benutzeroberfläche](../integration-services/integration-services-user-interface.md)  
   
   

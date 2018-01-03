@@ -3,7 +3,7 @@ title: Filter- und RecordCount Eigenschaften Beispiel (JScript) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cef90353f6c91df6ce584c2470cf00b59e739208
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 28b35e3ff594eaf5ec0ea077cb09939acc508a7d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filter-and-recordcount-properties-example-jscript"></a>Filter- und RecordCount Eigenschaften Beispiel (JScript)
 In diesem Beispiel öffnet ein **Recordset** für die Firmen-Tabelle der Northwind-Datenbank und anschließend verwendet der [Filter](../../../ado/reference/ado-api/filter-property.md) Eigenschaft, um die sichtbaren Datensätze einzuschränken, die an das CompanyName-Feld mit dem Buchstaben beginnt D. Ausschneiden und fügen Sie den folgenden Code in Editor oder einem anderen Texteditor und speichern Sie diese als **Northwind**.  

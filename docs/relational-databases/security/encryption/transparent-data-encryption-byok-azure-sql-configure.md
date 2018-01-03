@@ -2,32 +2,34 @@
 title: "PowerShell: Aktivieren von TDE mithilfe Ihres eigenen Azure Key Vault-Schlüssels | Microsoft-Dokumentation"
 description: "Erfahren Sie, wie Sie eine Azure SQL-Datenbank und Data Warehouse konfigurieren können, um damit zu beginnen,Transparent Data Encryption (TDE) für die Verschlüsselung ruhender Daten mithilfe von PowerShell zu verwenden."
 keywords: 
-services: sql-database
 documentationcenter: 
 author: aliceku
 manager: craigg
 editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: security
-ms.workload: Inactive
+ms.component: security
+ms.workload: On Demand
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: aliceku
-ms.openlocfilehash: f8de7e653a925e04dbcab9efbd5b5c8e5354b611
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0acfd9faa668d1e86cb82496bdd97dc6a0ec2bc8
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="powershell-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>PowerShell: Aktivieren von Transparent Data Encryption mithilfe Ihres eigenen Schlüssels aus Azure Key Vault
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 Dieser Leitfaden zur Vorgehensweise erläutert die Art und Weise, wie Sie einen Schlüssel aus Azure Key Vault für Transparent Data Encryption (TDE) auf der SQL-Datenbank oder Data Warehouse verwenden können. Um mehr über die Unterstützung für TDE mit „Bring Your Own Key“ (BYOK) zu erfahren, besuchen Sie die Seite [TDE Bring Your Own Key to Azure SQL (TDE mit Bring Your Own Key für Azure SQL)](transparent-data-encryption-byok-azure-sql.md). 
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 - Sie müssen über ein Azure-Abonnement verfügen und Administrator für dieses Abonnement sein.
 - [Empfohlen aber optional] Sie sollten ein Hardwaresicherheitsmodul (HSM) oder einen lokalen Schlüsselspeicher zum Erstellen einer lokalen Kopie des Schlüsselmaterials für den TDE-Schutz besitzen.

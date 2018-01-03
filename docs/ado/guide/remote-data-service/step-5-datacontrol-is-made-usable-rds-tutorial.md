@@ -3,7 +3,7 @@ title: 'Schritt 5: Verwendbarmachen (RDS-Lernprogramm) | Microsoft Docs'
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 93ac89a0007223681f4844c0ecd36e4581414a6c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 45e7605b16c224e4b299c0f1454dec9372ccd929
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Schritt 5: Verwendbarmachen (RDS-Lernprogramm)
 Das zurückgegebene **Recordset** Objekt für die Verwendung verfügbar ist. Sie können überprüfen, navigieren oder bearbeiten Sie sie wie jede andere **Recordset**. Was Sie tun können die **Recordset** richtet sich nach Ihrer Umgebung. Visual Basic und Visual C++ besitzen visuelle Steuerelemente, mit denen eine **Recordset** direkt oder indirekt mit Hilfe eines Datensteuerelements aktivieren.  

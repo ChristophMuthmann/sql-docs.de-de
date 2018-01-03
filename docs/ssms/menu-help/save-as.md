@@ -3,7 +3,7 @@ title: Speichern unter | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2f86afead1c6eca201a6669e8f64e89425f0cb1c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8957cd743dd7f358d7f451f5d6e0879d040974d4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-as"></a>Speichern unter
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Wird verwendet, um eine Instanz des aktuellen Elements an einem angegebenen Speicherort in einem angegebenen Dateiformat zu speichern. Klicken Sie auf **Speichern** *<file>* **unter** im Menü **Datei** (wobei *<file>* der Name des aktuellen Elements ist), oder drücken Sie ALT+F, A im Code-Editor.  
@@ -54,7 +54,7 @@ Zeigt die Dateien und Ordner unter **Meine Projekte** oder die zuletzt besuchten
 **Arbeitsplatz**  
 Zeigt das Verzeichnis **Arbeitsplatz** auf Ihrem Computer an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Erweiterte Speicheroptionen](../../ssms/menu-help/advanced-save-options.md)  
 [Verwalten von Dateien mit Codierung](../../ssms/solution/manage-files-with-encoding.md)  
   

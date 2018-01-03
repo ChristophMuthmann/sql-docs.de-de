@@ -3,9 +3,9 @@ title: "Wort vervollständigen (IntelliSense) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3a453cb71890b50d770f13dd56f6fcab97fbddaf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 06bc89ab74ba7c284c4c25cfb35c764c1a9edf72
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="complete-word-intellisense"></a>Wort vervollständigen (IntelliSense)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Die Option „Wort vervollständigen“ von [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense gibt den Rest eines Namens für eine Variable, einen Befehl oder eine Funktion ein, sobald Sie genügend Zeichen zur eindeutigen Identifizierung des Ausdrucks eingegeben haben.  

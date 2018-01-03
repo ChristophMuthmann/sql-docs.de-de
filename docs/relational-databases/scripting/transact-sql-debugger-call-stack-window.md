@@ -3,9 +3,9 @@ title: "Fenster „Aufrufliste“ | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 403dbe97619340a3075792b999b54500ab79d4fe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 364d5ba93cf5ee8d558cafb09e84a12d833722eb
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-debugger---call-stack-window"></a>Transact-SQL-Debugger – Fenster „Aufrufliste“
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Im Fenster **Aufrufliste** werden die Module in der Aufrufliste angezeigt sowie die Datentypen und die Werte aller Parameter, die an die Module übergeben werden. [!INCLUDE[tsql](../../includes/tsql-md.md)] -Module umfassen gespeicherte Prozeduren, benutzerdefinierte Funktionen und Trigger. Um die Aufrufliste anzuzeigen, müssen Sie sich im Debugmodus befinden.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
  Alle Ausdrücke in den Fenstern **Lokal**, **Überwachung**und **Schnellüberwachung** werden auf Grundlage des aktuellen Stapelrahmens ausgewertet. Im Abfrage-Editor-Fenster wird der Code für den aktuellen Rahmen angezeigt. Standardmäßig ist der aktuelle Stapelrahmen der Rahmen, in dem der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger die Ausführung angehalten hat. Wenn Sie den aktuellen Stapelrahmen zu einem anderen Rahmen ändern, werden die Ausdrücke in den Fenstern **Lokal**, **Überwachung**und **Schnellüberwachung** im Kontext des neuen Rahmens neu ausgewertet, und der Quellcode des neuen Rahmens wird im Abfrage-Editor-Fenster angezeigt.  
   
-## <a name="columns"></a>Spalten  
+## <a name="columns"></a>Spalte  
  **Name**  
  Zeigt Informationen über ein Modul in der Aufrufliste an.  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/17/2017
  **Sprache**  
  Zeigt **Transact-SQL** für [!INCLUDE[tsql](../../includes/tsql-md.md)]an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Transact-SQL-Debugger](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Transact-SQL-Debuggerinformationen](../../relational-databases/scripting/transact-sql-debugger-information.md)   
  [Schrittweises Durchlaufen von Transact-SQL-Code](../../relational-databases/scripting/step-through-transact-sql-code.md)  

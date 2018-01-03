@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -22,11 +22,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 69ab566f5ad04cb52219c08bb6e9842da7415b87
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: db33e0c10049f1239449bafc6fdb0faa918abe0a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="versions-master-data-services"></a>Versionen (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie mehrere Versionen der Masterdaten innerhalb eines Modells erstellen. Versionen können gesperrt werden, während Sie die Daten überprüfen, und für Versionen kann ein Commit ausgeführt werden, nachdem die Daten überprüft wurden. Versionen mit ausgeführtem Commit bilden einen überwachbaren Datensatz mit Änderungen. Jede erstellte Version umfasst sämtliche Elemente, Attributwerte, Hierarchielemente, Hierarchiebeziehungen und Auflistungen für das Modell.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  Eine Anfangsversion wird automatisch erstellt, wenn Sie ein Modell anlegen und die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank mit den Masterdaten des Unternehmens auffüllen. Auf der Grundlage von Berechtigungen können Benutzer dann bei Bedarf Änderungen an dieser Version vornehmen.  
   
-2.  Wenn Sie ein Commit für eine Modellversion ausführen möchten, sperren Sie die Version, sodass nur Modelladministratoren die Daten aktualisieren können. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md). Wenn Benachrichtigungen konfiguriert sind, wird jedes Mal eine E-Mail-Benachrichtigung an Modelladministratoren gesendet, wenn sich der Status der Version ändert. Weitere Informationen finden Sie unter [Konfigurieren von E-Mail-Benachrichtigungen &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md).  
+2.  Wenn Sie ein Commit für eine Modellversion ausführen möchten, sperren Sie die Version, sodass nur Modelladministratoren die Daten aktualisieren können. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen. Wenn Benachrichtigungen konfiguriert sind, wird jedes Mal eine E-Mail-Benachrichtigung an Modelladministratoren gesendet, wenn sich der Status der Version ändert. Weitere Informationen finden Sie unter [Konfigurieren von E-Mail-Benachrichtigungen &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md).  
   
 3.  Wenden Sie Geschäftsregeln auf die Daten der gesperrten Version an und analysieren Sie alle Überprüfungsprobleme. Falls erforderlich können Sie fehlende Informationen einfügen oder die Transaktion, die das Problem verursacht hat, rückgängig machen. Darüber hinaus können Sie die Version entsperren, damit Benutzer Änderungen vornehmen können.  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     >  Eine Einstellung in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] bestimmt, ob alle oder nur die durch ein Commit bestätigten Versionen kopiert werden können. Um gleichzeitige Versionen zu erstellen, müssen Sie [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] konfigurieren, um es Ihnen zu ermöglichen, alle Versionen zu kopieren. Diese Einstellung ist auch in der Tabelle Systemeinstellungen verfügbar. Weitere Informationen finden Sie unter [Systemeinstellungen &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  

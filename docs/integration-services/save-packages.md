@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -24,11 +24,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b29636580a8e8e87229ce591863547a91cd05a8f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e81823e1a6af46813b8d8df969d7a2060d1c1b17
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-packages"></a>Speichern von Paketen
   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] erstellen Sie Pakete mithilfe des [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designers und speichern diese als XML-Dateien (DTSX-Dateien) im Dateisystem. Sie können auch Kopien der Paket-XML-Datei in der msdb-Datenbank in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oder im Paketspeicher speichern. Der Paketspeicher stellt die Ordner im Dateisystempfad dar, die von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] verwaltet werden.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/20/2017
 2.  Klicken Sie im Menü **Datei** auf **Kopie von \<Paketdatei> speichern unter**.  
   
 3.  Wählen Sie im Dialogfeld **Kopie des Pakets speichern** in der Liste **Paketspeicherort** einen Paketspeicherort aus. Die folgenden Optionen stehen zur Verfügung:  
-    -   SQL Server
+    -   SQL Server
     -   Dateisystem 
     -   SSIS-Paketspeicher 
   

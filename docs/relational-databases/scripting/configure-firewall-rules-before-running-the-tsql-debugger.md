@@ -3,9 +3,9 @@ title: "Konfigurieren von Firewallregeln vor dem Ausführen des TSQL-Debuggers |
 ms.custom: 
 ms.date: 10/20/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -28,11 +28,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 072d92452d554a439ab05010d62f5fcf624f2c4c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 74c2f422427764fce597607afdd9a259b11544a1
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Konfigurieren von Firewallregeln vor dem Ausführen des TSQL-Debuggers
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie müssen Windows-Firewall-Regeln so konfigurieren, dass das Debuggen von [!INCLUDE[tsql](../../includes/tsql-md.md)] aktiviert ist, wenn eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] hergestellt wird, die auf einem anderen Computer als der [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Abfrage-Editor ausgeführt wird.  
@@ -164,7 +164,7 @@ ms.lasthandoff: 11/17/2017
 
 * Der Server muss über RPC mit dem Client kommunizieren. Das Konto, mit dem der SQL Server-Dienst ausgeführt wird, sollte über Authentifizierungsberechtigungen für den Client verfügen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Transact-SQL-Debugger](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Ausführen des Transact-SQL-Debuggers](../../relational-databases/scripting/run-the-transact-sql-debugger.md)   
  [Schrittweises Durchlaufen von Transact-SQL-Code](../../relational-databases/scripting/step-through-transact-sql-code.md)   

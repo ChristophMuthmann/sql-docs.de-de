@@ -4,7 +4,9 @@ ms.custom:
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod_service: database-engine, sql-database
+ms.component: search
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,13 +25,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7225aea0968aac310bc531c5c5b12f994c46c752
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 0d70cc0b053c776f56041fbf961de711c4ad5c26
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Auswählen einer Sprache beim Erstellen eines Volltextindex
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   Wenn Sie einen Volltextindex erstellen, müssen Sie für die indizierte Spalte eine Spaltensprache angeben. Die [Wörtertrennung und Wortstammerkennung](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) der angegebenen Sprache wird von Volltextabfragen für die Spalte verwendet. Bei der Wahl der Spaltensprache für die Erstellung eines Volltextindex sind mehrere Dinge zu bedenken. Diese beziehen sich darauf, wie der Text vom Volltextmodul in Token zerlegt und anschließend indiziert wird.  
   
 > [!NOTE]  
@@ -50,7 +55,7 @@ ms.lasthandoff: 12/01/2017
   
      Tests haben gezeigt, dass die neuen Wörtertrennungen in anspruchsvollen Abfrageumgebungen stabil arbeiten.  
   
--   Sicherheit  
+-   Security  
   
      Die neuen Wörtertrennungen sind in SQL Server standardmäßig aktiviert. Dies ist aufgrund von Sicherheitsverbesserungen der linguistischen Komponenten möglich. Es ist sehr zu empfehlen, dass Sie signierte externe Komponenten wie Wörtertrennungen und Filter verwenden, um die Gesamtsicherheit und Stabilität von SQL Server zu verbessern. Sie können Volltext wie folgt konfigurieren, um zu überprüfen, ob diese Komponenten signiert sind:  
   
@@ -116,7 +121,7 @@ ms.lasthandoff: 12/01/2017
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]analysiert eine Volltextsuche standardmäßig die Abfrageausdrücke, indem die Sprache verwendet wird, die für die einzelnen Spalten angegeben ist, die in der Volltextklausel enthalten sind. Um dieses Verhalten zu überschreiben, geben Sie zur Abfragezeit eine nicht standardmäßige Sprache an. Für unterstützte Sprachen mit installierten Ressourcen können Sie die LANGUAGE *language_term* Klausel einer [CONTAINS](../../t-sql/queries/contains-transact-sql.md)-, [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)-, [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)- oder [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) -Abfrage verwenden, um die Sprache anzugeben, die für die Abfrageausdrücke in Bezug auf Wörtertrennung, Wortstammerkennung, Thesaurus und Stoppwörter genutzt wird.  
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

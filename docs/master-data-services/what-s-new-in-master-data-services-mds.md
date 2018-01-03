@@ -5,7 +5,7 @@ ms.date: 07/08/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4184ce50cbacda16e113122753b56a4e4ee682cf
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 3921b3ed3862218b1f2fd645641915fb4ed64ee5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Neues in Master Data Services (MDS)
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/04/2017
   
  **Download**  
   
--   Navigieren Sie zum Herunterladen von [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]zum  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.  
+-   Um [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]herunterzuladen, navigieren Sie zum  **[Evaluierungscenter](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.  
   
 -   Sie haben ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** , um einen virtuellen Computer zu starten, auf dem [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] bereits installiert ist.  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/04/2017
   
  Durch Leistungsverbesserungen können Sie größere Modelle erstellen, Daten effizienter laden und eine bessere Gesamtleistung erzielen. Dies umfasst die Verbesserung der Leistung für das Add-In für Microsoft, um die Ladezeiten von Daten zu verringern und es dem Add-In zu ermöglichen, größere Entitäten zu verarbeiten.  
   
- Weitere Informationen zum Add-In für Microsoft Excel finden Sie unter [Master Data Services-Add-In für Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
+ Weitere Informationen zum Add-In für Microsoft Excel finden Sie unter [Master Data Services Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
   
  Die folgenden Funktionsverbesserungen sind enthalten.  
   
@@ -232,7 +232,7 @@ ms.lasthandoff: 12/04/2017
   
  Die Beispielpakete wurden aktualisiert, um neue Szenarien zu unterstützen. Weitere Informationen finden Sie unter [Beispiele: Modellbereitstellungspakete (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Master Data Services und Data Quality Services-Funktionen, die von den Editionen von SQL Server 2016 unterstützt](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
  [Veraltete Funktionen von Master Data Services](../master-data-services/deprecated-master-data-services-features.md)   
  [Eingestellte Master Data Services-Funktionen](../master-data-services/discontinued-master-data-services-features.md)  

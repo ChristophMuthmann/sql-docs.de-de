@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0528c9fb9751aadc11f7896347538d5a200b0290
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 08908c187ec2e548b4379aae11517f1ad50626fe
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Verwalten und Überwachen von Change Data Capture (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie Sie Change Data Capture verwalten und überwachen können.  
@@ -111,7 +111,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Führen Sie den folgenden Code aus, um für Change Data Capture einen benutzerdefinierten Sammler zu erstellen.  
   
-    ```tsql  
+    ```sql  
     USE msdb;  
   
     DECLARE @schedule_uid uniqueidentifier;  
@@ -159,7 +159,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Greifen Sie in dem Data Warehouse, das Sie in Schritt 1 konfiguriert haben, auf die Tabelle custom_snapshots.cdc_log_scan_data zu. Diese Tabelle stellt eine Verlaufs-Momentaufnahme der Daten von Protokollscansitzungen bereit. Sie können diese Daten verwenden, um die Latenzzeit, den Durchsatz und andere Leistungskennzahlen in Abhängigkeit der Zeit zu analysieren.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Nachverfolgen von Datenänderungen &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Über Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Aktivieren und Deaktivieren von Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   

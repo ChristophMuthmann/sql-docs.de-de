@@ -20,11 +20,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e93230571a231e1746eeff928d894c02fffd57ad
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e25ba8ad35a44088cee720ad626bb1524f3db1c0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)] Gängige [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verschlüsselungsaktivitäten unter Verwendung eines asymmetrischen Schlüssels, der von Azure Key Vault geschützt wird, finden sich in den folgenden drei Bereichen.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
  Schließen Sie die Teile I bis IV des Themas [Installationsschritte für die Erweiterbare Schlüsselverwaltung mit Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)ab, bevor Sie die Schritte in diesem Thema ausführen.  
  
 > [!NOTE]  
->  Die Versionen 1.0.0.440 und älter wurden ersetzt und werden nicht länger in Produktionsumgebungen unterstützt. Führen Sie ein Upgrade auf Version 1.0.1.0 oder höher durch, indem Sie das [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344) besuchen und die Anweisungen auf der Seite [SQL Server-Connector Wartung &amp; Problembehandlung](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) (SQL Server Connector Wartung &amp; Problembehandlung) unter „Upgrade des SQL Server-Connectors“ ausführen.  
+>  Die Versionen 1.0.0.440 und älter wurden ersetzt und werden nicht länger in Produktionsumgebungen unterstützt. Führen Sie ein Upgrade auf Version 1.0.1.0 oder höher durch, indem Sie das [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344) besuchen und die Anweisungen auf der Seite [SQL Server-Connector Wartung & Problembehandlung](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) (SQL Server Connector Wartung & Problembehandlung) unter „Upgrade des SQL Server-Connectors“ ausführen.  
   
 ## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>Transparente Datenverschlüsselung mithilfe eines asymmetrischen Schlüssels aus Azure Key Vault  
  Verwenden Sie nach dem Abschluss der Teile I bis IV des Themas „Installationsschritte für die Erweiterbare Schlüsselverwaltung mit Azure Key Vault“ den Azure Key Vault-Schlüssel, um den Datenbankverschlüsselungsschlüssel mithilfe von TDE zu verschlüsseln.  
@@ -63,7 +63,7 @@ Sie müssen Anmeldeinformationen und eine Anmeldung sowie einen Datenbankverschl
   
     -   Setzen Sie in den zweiten Teil des `SECRET` -Arguments den **geheimen Clientschlüssel** aus Teil I ein. In diesem Beispiel ist der **geheime Clientschlüssel** aus Teil I `Replace-With-AAD-Client-Secret`. Die endgültige Zeichenfolge für das `SECRET` -Argument ist eine lange Abfolge von Buchstaben und Ziffern *ohne Bindestriche*.  
   
-    ```tsql  
+    ```sql  
     USE master;  
     CREATE CREDENTIAL Azure_EKM_TDE_cred   
         WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
@@ -78,7 +78,7 @@ Sie müssen Anmeldeinformationen und eine Anmeldung sowie einen Datenbankverschl
   
      Erstellen Sie eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldung, und fügen Sie ihr die Anmeldeinformationen aus Schritt 1 hinzu. In diesem [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Beispiel wird der gleiche Schlüssel verwendet, der zuvor importiert wurde.  
   
-    ```tsql  
+    ```sql  
     USE master;  
     -- Create a SQL Server login associated with the asymmetric key   
     -- for the Database engine to use when it loads a database   
@@ -98,7 +98,7 @@ Sie müssen Anmeldeinformationen und eine Anmeldung sowie einen Datenbankverschl
   
      Der DEK verschlüsselt Ihre Daten und Protokolldateien in der Datenbankinstanz und wird seinerseits mithilfe des asymmetrischen Schlüssels aus Azure Key Vault verschlüsselt. Der DEK kann mithilfe eines beliebigen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützten Algorithmus mit beliebiger Schlüssellänge erstellt werden.  
   
-    ```tsql  
+    ```sql  
     USE ContosoDatabase;  
     GO  
   
@@ -110,7 +110,7 @@ Sie müssen Anmeldeinformationen und eine Anmeldung sowie einen Datenbankverschl
   
 4.  **Aktivieren von TDE**  
   
-    ```tsql  
+    ```sql  
     -- Alter the database to enable transparent data encryption.  
     ALTER DATABASE ContosoDatabase   
     SET ENCRYPTION ON;  
@@ -127,7 +127,7 @@ Sie müssen Anmeldeinformationen und eine Anmeldung sowie einen Datenbankverschl
   
      Alternativ können Sie das folgende [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Skript ausführen. Der Verschlüsselungsstatus 3 gibt eine verschlüsselte Datenbank an.  
   
-    ```tsql  
+    ```sql  
     USE MASTER  
     SELECT * FROM sys.asymmetric_keys  
   
@@ -160,7 +160,7 @@ Das [!INCLUDE[ssDE](../../../includes/ssde-md.md)] benötigt die Anmeldeinformat
   
     -   Setzen Sie in den zweiten Teil des `SECRET` -Arguments den **geheimen Clientschlüssel** aus Teil I ein. In diesem Beispiel ist der **geheime Clientschlüssel** aus Teil I `Replace-With-AAD-Client-Secret`. Die endgültige Zeichenfolge für das `SECRET` -Argument ist eine lange Abfolge von Buchstaben und Ziffern *ohne Bindestriche*.   
   
-        ```tsql  
+        ```sql  
         USE master;  
   
         CREATE CREDENTIAL Azure_EKM_Backup_cred   
@@ -181,7 +181,7 @@ Das [!INCLUDE[ssDE](../../../includes/ssde-md.md)] benötigt die Anmeldeinformat
   
      In diesem Beispiel wird der asymmetrische Schlüssel `CONTOSO_KEY_BACKUP` aus dem Schlüsseltresor verwendet, der zuvor für die Masterdatenbank importiert oder erstellt werden kann, wie weiter oben in Teil IV, Schritt 5 beschrieben.  
   
-    ```tsql  
+    ```sql  
     USE master;  
   
     -- Create a SQL Server login associated with the asymmetric key   
@@ -203,7 +203,7 @@ Das [!INCLUDE[ssDE](../../../includes/ssde-md.md)] benötigt die Anmeldeinformat
      
      Im folgenden Beispiel sollten Sie beachten, dass wenn die Datenbank bereits mit TDE verschlüsselt wurde und sich der asymmetrische Schlüssel `CONTOSO_KEY_BACKUP` vom asymmetrischen Schlüssel von TDE unterscheidet, die Sicherung mit dem asymmetrischen Schlüssel von TDE und `CONTOSO_KEY_BACKUP` verschlüsselt wird. Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Zielinstanz benötigt beide Schlüssel, um die Sicherung zu entschlüsseln.
   
-    ```tsql  
+    ```sql  
     USE master;  
   
     BACKUP DATABASE [DATABASE_TO_BACKUP]  
@@ -226,7 +226,7 @@ Das [!INCLUDE[ssDE](../../../includes/ssde-md.md)] benötigt die Anmeldeinformat
     
      Codebeispiel für die Wiederherstellung:  
   
-    ```tsql  
+    ```sql  
     RESTORE DATABASE [DATABASE_TO_BACKUP]  
     FROM DISK = N'[PATH TO BACKUP FILE]'   
         WITH FILE = 1, NOUNLOAD, REPLACE;  
@@ -243,7 +243,7 @@ Das [!INCLUDE[ssDE](../../../includes/ssde-md.md)] benötigt die Anmeldeinformat
   
  In diesem Beispiel wird der asymmetrische Schlüssel `CONTOSO_KEY_COLUMNS` aus dem Schlüsseltresor verwendet, der zuvor importiert oder erstellt wurde, wie oben in Schritt 3, Abschnitt 3 von [Installationsschritte für die Erweiterbare Schlüsselverwaltung mit Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)beschrieben. Um diesen asymmetrischen Schlüssel in der `ContosoDatabase` -Datenbank zu verwenden, müssen Sie die `CREATE ASYMMETRIC KEY` -Anweisung erneut ausführen, um der `ContosoDatabase` -Datenbank einen Verweis auf den Schlüssel zur Verfügung zu stellen.  
   
-```tsql  
+```sql  
 USE [ContosoDatabase];  
 GO  
   
@@ -282,7 +282,7 @@ SELECT CONVERT(VARCHAR, DECRYPTBYKEY(@DATA));
 CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Installationsschritte für die Erweiterbare Schlüsselverwaltung mit Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)   
  [Erweiterbare Schlüsselverwaltung mit Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
  [EKM provider enabled (Serverkonfigurationsoption)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   

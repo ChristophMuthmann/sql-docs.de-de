@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 77f4bb2425fbb390f026769fdf7dcc9bb7ba4481
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 973c27639186635730debbb75f5087530986b04d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>Aktivieren der erforderlichen Komponenten für FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Beschreibt, wie die erforderlichen Komponenten zum Erstellen und Verwenden von Dateitabelle aktiviert werden.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="HowToCheckAccess"></a> Vorgehensweise: Überprüfen, ob nicht transaktionaler Zugriff auf Datenbanken aktiviert ist  
  Fragen Sie die Katalogsicht [sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) ab, und überprüfen Sie die Spalten **non_transacted_access** und **non_transacted_access_desc**.  
   
-```tsql  
+```sql  
 SELECT DB_NAME(database_id), non_transacted_access, non_transacted_access_desc  
     FROM sys.database_filestream_options;  
 GO  
@@ -74,14 +74,14 @@ GO
  **Angeben der Ebene des nicht transaktionalen Zugriffs mit Transact-SQL**  
  -   Wenn Sie **eine neue Datenbank erstellen**, rufen Sie die [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)-Anweisung mit der FILESTREAM-Option **NON_TRANSACTED_ACCESS** auf.  
   
-    ```tsql  
+    ```sql  
     CREATE DATABASE database_name  
         WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
     ```  
   
 -   Wenn Sie **eine vorhandene Datenbank ändern**, rufen Sie die [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung mit der FILESTREAM-Option **NON_TRANSACTED_ACCESS** auf.  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE database_name  
         SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
     ```  
@@ -100,7 +100,7 @@ GO
  **Angeben eines Verzeichnisses für FileTables mit Transact-SQL**  
  -   Wenn Sie **eine neue Datenbank erstellen**, rufen Sie die [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)-Anweisung mit der FILESTREAM-Option **DIRECTORY_NAME** auf.  
   
-    ```tsql  
+    ```sql  
     CREATE DATABASE database_name  
         WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' );  
     GO  
@@ -108,7 +108,7 @@ GO
   
 -   Wenn Sie **eine vorhandene Datenbank ändern**, rufen Sie die [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)-Anweisung mit der FILESTREAM-Option **DIRECTORY_NAME** auf. Wenn Sie diese Optionen verwenden, um den Verzeichnisnamen zu ändern, muss die Datenbank exklusiv gesperrt sein und darf keine offenen Dateihandles aufweisen.  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE database_name  
         SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' );  
     GO  
@@ -116,7 +116,7 @@ GO
   
 -   Wenn Sie **eine Datenbank anfügen**, rufen Sie die [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)-Anweisung mit der **FOR ATTACH**-Option und der FILESTREAM-Option **DIRECTORY_NAME** auf.  
   
-    ```tsql  
+    ```sql  
     CREATE DATABASE database_name  
         FOR ATTACH WITH FILESTREAM ( DIRECTORY_NAME = N'directory_name' );  
     GO  
@@ -124,7 +124,7 @@ GO
   
 -   Wenn Sie **eine Datenbank wiederherstellen**, rufen Sie die [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)-Anweisung mit der FILESTREAM-Option **DIRECTORY_NAME** auf.  
   
-    ```tsql  
+    ```sql  
     RESTORE DATABASE database_name  
         WITH FILESTREAM ( DIRECTORY_NAME = N'directory_name' );  
     GO  
@@ -136,7 +136,7 @@ GO
 ###  <a name="viewnames"></a> Vorgehensweise: Anzeigen vorhandener Verzeichnisnamen für die Instanz  
  Fragen Sie zum Anzeigen einer Liste vorhandener Verzeichnisnamen für die Instanz die [sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md)-Katalogsicht ab, und überprüfen Sie die **filestream_database_directory_name**-Spalte.  
   
-```tsql  
+```sql  
 SELECT DB_NAME ( database_id ), directory_name  
     FROM sys.database_filestream_options;  
 GO  

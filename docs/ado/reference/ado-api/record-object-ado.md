@@ -3,7 +3,7 @@ title: Record-Objekt (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a0efb504844ac58e7889cdb768821efe95f52e0b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e1246dfe943ae415f7777e5924c14580fe05afbe
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-object-ado"></a>Das Datensatzobjekt (ADO)
 Stellt eine Zeile aus einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oder der Datenanbieter oder ein Objekt, das von einem Anbieter von teilweise strukturierten Daten, z. B. einer Datei oder eines Verzeichnisses zurückgegeben.  

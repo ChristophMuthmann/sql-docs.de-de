@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 333379e7f96322ae8212625a0f42a1018a189dd3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 593c18478ee73b66d0f8402885324615615d0fcf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Lektion 5-2: Aktivieren und Konfigurieren von Paketkonfigurationen
 In dieser Aufgabe konvertieren Sie das Projekt in das Paketbereitstellungsmodell und aktivieren Paketkonfigurationen mithilfe des Paketkonfigurations-Assistenten. Sie verwenden diesen Assistenten zum Generieren einer XML-Konfigurationsdatei, die Konfigurationseinstellungen für die **Directory** -Eigenschaft des Foreach-Schleifencontainers enthält. Der Wert der Directory-Eigenschaft wird durch eine neue Variable auf Paketebene bereitgestellt, die Sie zur Laufzeit aktualisieren können. Zusätzlich füllen Sie einen neuen Beispieldatenordner auf, der während des Testens verwendet wird.  
@@ -66,7 +66,7 @@ In dieser Aufgabe konvertieren Sie das Projekt in das Paketbereitstellungsmodell
   
 2.  Klicken Sie in der Warnungs-Eingabeaufforderung auf **OK** , nachdem die Konvertierung abgeschlossen ist, und klicken Sie im Dialogfeld **In Paketbereitstellungsmodell konvertieren** auf **OK** .  
   
-3.  Klicken Sie in den Hintergrund der Registerkarte **Ablaufsteuerung** im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer.  
+3.  Klicken Sie in den Hintergrund der Registerkarte **Ablaufsteuerung** im [!INCLUDE[ssIS](../includes/ssis-md.md)]-Designer.  
   
 4.  Klicken Sie im Menü **SSIS** auf **Paketkonfigurationen**.  
   
@@ -111,6 +111,6 @@ In dieser Aufgabe konvertieren Sie das Projekt in das Paketbereitstellungsmodell
   
 3.  Fügen Sie die kopierten Dateien in den Ordner **Neue Beispieldaten** ein.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Schritt 3: Ändern des Directory-Eigenschaftskonfigurationswertes](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   

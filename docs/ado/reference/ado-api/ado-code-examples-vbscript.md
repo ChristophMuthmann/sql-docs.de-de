@@ -3,7 +3,7 @@ title: ADO Code Beispiele VBScript | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4f9c7a73af6a237d94acf01090a2566055dbad92
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 079d23b396786b1d15bd9e7d980af336e4f6f183
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-code-examples-vbscript"></a>ADO Code Beispiele VBScript
 Verwenden Sie die folgenden Codebeispiele, um weitere Informationen zu den ADO-Methoden verwenden, wenn in der Microsoft® Visual Basic® Scripting Edition (VBScript) geschrieben.  

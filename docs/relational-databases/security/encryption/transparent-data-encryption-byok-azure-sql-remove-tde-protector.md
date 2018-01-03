@@ -6,26 +6,29 @@ services: sql-database
 documentationcenter: 
 author: becczhang
 manager: craigg
-editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: security
+ms.custom: 
+ms.component: security
 ms.workload: Inactive
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
-ms.openlocfilehash: be2fd15b1f742d7edb01d39be69456c58d472801
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 30b08c760eff3bdeb6d264d1c9d79c375f0a09ec
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remove-a-transparent-data-encryption-tde-protector-using-powershell"></a>Entfernen einer TDE-Schutzvorrichtung (Transparent Data Encryption) mithilfe von PowerShell
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 - Sie müssen über ein Azure-Abonnement verfügen und Administrator für dieses Abonnement sein.
 - Sie müssen eine Installation von Azure PowerShell Version 4.2.0 oder höher besitzen und diese ausführen. 
 - In diesem Leitfaden wird davon ausgegangen, dass Sie bereits einen Schlüssel von Azure Key Vault als TDE-Schutzvorrichtung für Azure SQL-Datenbank oder Data Warehouse verwenden. Weitere Informationen finden Sie unter [Transparent Data Encryption with BYOK Support (Transparente Datenverschlüsselung mit BYOK-Unterstützung)](transparent-data-encryption-byok-azure-sql.md).

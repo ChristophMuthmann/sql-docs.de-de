@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: af4b72d2ec634d8ae71a607c6a7c4d6b17254599
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e4f1911bef4050d55b388bfa08e359af4e1862a8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-connector-for-sap-bw-f1-help"></a>F1-Hilfe zum Microsoft Connector for SAP BW
   Dieser Abschnitt enthält die F1-Hilfethemen für die drei Komponenten von [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW. Diese Themen können auch über die Benutzeroberfläche abgerufen werden, indem Sie die F1-TASTE drücken oder in den Seiten des Assistenten sowie in den Dialogfeldern auf Hilfe klicken.  
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [InfoPackage erstellen](../integration-services/data-flow/create-infopackage.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Microsoft Connector for SAP BW Components](../integration-services/microsoft-connector-for-sap-bw-components.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Komponenten von Microsoft Connector for SAP BW](../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

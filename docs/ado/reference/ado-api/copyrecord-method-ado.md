@@ -3,7 +3,7 @@ title: CopyRecord-Methode (ADO) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9459d144016deaaec593a8edd92bf5b518a8962b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 50749d088c57754ef9b667b114da8fb4f475ad19
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord-Methode (ADO)
 Kopiert eine Entität, dargestellt durch eine [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) an einen anderen Speicherort.  
@@ -51,7 +51,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  *Kennwort*  
  Optional. Ein **Zeichenfolge** Wert, der das Kennwort, die enthält bei Bedarf überprüft *Benutzername*.  
   
- *Optionen*  
+ *enthalten*  
  Optional. Ein [CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md) -Wert, der einen Standardwert hat **AdCopyUnspecified**. Gibt das Verhalten dieser Methode.  
   
  *Async*  

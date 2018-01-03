@@ -3,9 +3,9 @@ title: Verwalten von Lesezeichen | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 163b9f1d67e6c690d1865d1041344d811566e6dd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d4dc1a1474d70e686fb08e6c6df79c40cb9d3488
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manage-bookmarks"></a>Verwalten von Lesezeichen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Während der Arbeit mit einem Code-Editor können Sie mithilfe des Fensters **Lesezeichen** Links zu bestimmten Codezeilen innerhalb des Dokuments erstellen. Sie können dieses Fenster über das Menü **Ansicht** anzeigen.  
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/17/2017
  **Delete**  
  Entfernt das aktuell ausgewählte Lesezeichen aus dem Fenster **Lesezeichen** sowie aus dem Dokument, in dem es aufgetreten ist. Die Codezeile, die mit dem Lesezeichen versehen war, wird dabei nicht entfernt.  
   
- **Rename**  
+ **Umbenennen**  
  Ermöglicht Ihnen, einem Lesezeichen oder Ordner einen neuen Anzeigenamen zuzuweisen.  
   
  **Lesezeichen deaktivieren/aktivieren**  
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/17/2017
  **Alle Lesezeichen deaktivieren/aktivieren**  
  Deaktiviert oder aktiviert die Kontrollkästchen für alle Lesezeichen im Fenster **Lesezeichen** . Die Lesezeichen werden nicht entfernt und die mit ihnen gekennzeichneten Codezeilen nicht geändert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Tastenkombinationen für SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

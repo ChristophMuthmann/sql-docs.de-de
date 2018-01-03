@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 34d3f8da055577f32d1532f9ca5300960a51d383
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5ac27d37604a2245346b307b0dff8d648de26ebd
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Systeminterne Kompilierung von Tabellen und gespeicherten Prozeduren
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Mit In-Memory OLTP wird das Konzept der nativen Kompilierung eingeführt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann gespeicherte Prozeduren, die auf speicheroptimierte Tabellen zugreifen, nativ kompilieren. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann außerdem speicheroptimierte Tabellen nativ kompilieren. Die systeminterne Kompilierung ermöglicht einen schnelleren Datenzugriff und eine effizientere Abfrageausführung als interpretiertes (herkömmliches) [!INCLUDE[tsql](../../includes/tsql-md.md)]. Beim systeminternen Kompilieren von Tabellen und gespeicherten Prozeduren werden DLLs erzeugt.
@@ -39,7 +39,7 @@ In-Memory OLTP kompiliert speicheroptimierte Tabellen bei deren Erstellung sowie
 
 Die folgende Abfrage zeigt alle DLLs für Tabellen und gespeicherte Prozeduren, die aktuell in den Arbeitsspeicher des Servers geladen sind:
 
-```tsql
+```sql
 SELECT
         mod1.name,
         mod1.description
@@ -63,7 +63,7 @@ Beim Erstellen einer speicheroptimierten Tabelle mithilfe der **CREATE TABLE** -
 
 Betrachten Sie das folgende Beispielskript, in dem eine Datenbank und eine speicheroptimierte Tabelle erstellt werden:
 
-```tsql
+```sql
 USE master;
 GO
 
@@ -156,7 +156,7 @@ Weitere Informationen zu systemintern kompilierten gespeicherten Prozeduren find
 
 Betrachten Sie das folgende Beispiel für eine gespeicherte Prozedur, die Zeilen in die Tabelle t1 aus dem vorherigen Beispiel einfügt:
 
-```tsql
+```sql
 CREATE PROCEDURE dbo.native_sp
     with native_compilation,
          schemabinding,
@@ -213,8 +213,8 @@ Die Dateien, die erzeugt werden, wenn eine Tabelle oder eine gespeicherte Prozed
 
 Zum Verwalten dieser Dateien ist keine Benutzerinteraktion erforderlich. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt und entfernt die Dateien nach Bedarf.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 
-[Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 
 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)

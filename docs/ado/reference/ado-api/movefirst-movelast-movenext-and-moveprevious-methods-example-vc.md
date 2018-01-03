@@ -3,7 +3,7 @@ title: Mauszeiger Datensatz des Recordsets (VC++-Beispiel) | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: edb5e21f06690c22fd8f6aaf59ee1abd51d7206b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b2c8700f91271b65d187fe63a1f8e8d258f49275
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vc"></a>MoveFirst, MoveLast, MoveNext und MovePrevious Methoden (VC++-Beispiel)
 Dieses Beispiel verwendet die [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), und [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) -Methoden verschieben die Zeiger für den Datensatz eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basierend auf den angegebenen Befehl. Die MoveAny-Funktion ist erforderlich, damit dieses Beispiel ausführen.  

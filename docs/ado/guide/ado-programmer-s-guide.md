@@ -7,7 +7,7 @@ ms.suite: sql
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7b57ed86ba638945fb811bd146f3a2a6cf6b731e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6d9ac629320a72f311cf2a179da7a9a79d882581
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-programmer39s-guide-for-using-ado-objects"></a>ADO-Programmierer &#39; s Leitfaden zum Verwenden von ADO-Objekten
 Diese Dokumentation enthält eine Übersicht über das ADO-Objekten, die zum Arbeiten mit Daten aus verschiedenen Datenquellen verwenden. Zunächst werden die Einführung zusammengefasst, die neuen Funktionen und die Anforderung für die Installation, Verwendung und Verteilen von der ADO-Komponente. Den nächsten Abschnitten wird die Verwendung der verschiedenen Typen von ADO-Objekten. Schließlich erläutern die Anhänge verschiedene Microsoft bereitgestellten Daten und Dienstanbietern, Fehlermeldungen und Tipps zur Verwendung von ADO in verschiedenen Programmiersprachen, zusätzlich zu den Beispielen und ein Glossar.

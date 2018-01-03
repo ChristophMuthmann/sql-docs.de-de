@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ac9a4b15d48f9c5f9ac9a25a932d9acec798e31
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dd4c11bc8b7fcaad34aa085e3406f31529793954
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="changesets-master-data-services"></a>Changesets (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] unterstützt nun die Möglichkeit, ausstehende Änderungen in einer Entität als Changesets zu speichern. Es gibt zwei Verwendungsszenarios für diese Funktion.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/20/2017
   
     1.  Erstellen Sie ein Changeset. Das Changeset befindet sich im Status „Offen“. Weitere Informationen finden Sie unter [Erstellen eines Changesets &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)  
   
-    2.  Wenden Sie das Changeset an, und führen Sie einige Änderungen am Changeset durch. Weitere Informationen finden Sie unter [Anwenden und Aktualisieren eines Changesets &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
+    2.  Wenden Sie das Changeset an, und führen Sie einige Änderungen am Changeset durch. Weitere Informationen finden Sie unter [Apply and Update a Changeset &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
   
     3.  Übermitteln Sie das Changeset zur Genehmigung an den Entitätsadministrator. Das Changeset befindet sich im Status „Ausstehend“. Weitere Informationen finden Sie unter [Ein Changeset bestätigen oder übermitteln &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/20/2017
   
     3.  Wenn Sie bereit sind, führen Sie ein Commit auf das Changeset aus. Weitere Informationen finden Sie unter [Ein Changeset bestätigen oder übermitteln &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen eines Changesets &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)   
  [Anwenden und Aktualisieren eines Changesets &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
  [Ein Changeset bestätigen oder übermitteln &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)   

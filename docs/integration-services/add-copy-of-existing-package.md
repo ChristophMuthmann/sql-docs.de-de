@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b2b0255236aee66b63318dca9a18cfbae54d7ed6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 21e437e550b8522d85319a5207b2a26365b4e0d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-copy-of-existing-package"></a>Kopie des vorhandenen Pakets hinzufügen
   Verwenden Sie das Dialogfeld **Kopie des vorhandenen Pakets hinzufügen** , um einem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Projekt eine Kopie eines Pakets hinzuzufügen, das in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , im Dateisystem oder im SSIS-Paketspeicher gespeichert ist.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Paketspeicherort**  
  Wählen Sie den Typ des Speicherortes aus, aus dem das Paket kopiert werden soll.  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/20/2017
  **Authentifizierungstyp**  
  Wenn Sie aus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]kopieren, wählen Sie einen Authentifizierungstyp aus.  
   
- **Benutzername**  
+ **User name**  
  Wenn Sie die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung verwenden, stellen Sie einen Benutzernamen bereit.  
   
  **Kennwort**  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/20/2017
  **Paketpfad**  
  Geben Sie den Paketpfad ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , um das zu kopierende Paket zu suchen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Kopie des Pakets speichern](http://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   
  [Speichern von Paketen](../integration-services/save-packages.md)   
  [Integration Services-Dienst &#40;SSIS-Dienst&#41;](../integration-services/service/integration-services-service-ssis-service.md)

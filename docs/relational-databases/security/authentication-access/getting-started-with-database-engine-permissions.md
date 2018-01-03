@@ -18,11 +18,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ff03a1d00fc6cd1972ecb1d5915882287f372a5f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6234975f35a30fc956f4e8735771d09cea2d1e2e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Erste Schritte mit Berechtigungen für das Datenbankmodul
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -193,7 +193,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
   
  Führen Sie die folgende Anweisung in einer Datenbank aus, um die expliziten Berechtigungen zurückzugeben, die in einer Datenbank ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]) erteilt oder verweigert wurden.  
   
-```tsql  
+```sql  
 SELECT   
     perms.state_desc AS State,   
     permission_name AS [Permission],   
@@ -208,7 +208,7 @@ JOIN sys.objects AS obj
   
  Um die Mitglieder der Serverrollen zurückgegeben (nur[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), führen Sie die folgende Anweisung aus.  
   
-```tsql  
+```sql  
 SELECT sRole.name AS [Server Role Name] , sPrinc.name AS [Members]  
 FROM sys.server_role_members AS sRo  
 JOIN sys.server_principals AS sPrinc  
@@ -220,7 +220,7 @@ JOIN sys.server_principals AS sRole
  
  Führen Sie die folgende Anweisung in der Datenbank aus, um die Mitglieder der Datenbankrollen zurückzugeben ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]).  
   
-```tsql  
+```sql  
 SELECT dRole.name AS [Database Role Name], dPrinc.name AS [Members]  
 FROM sys.database_role_members AS dRo  
 JOIN sys.database_principals AS dPrinc  
@@ -229,16 +229,16 @@ JOIN sys.database_principals AS dRole
     ON dRo.role_principal_id = dRole.principal_id;  
 ```  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
  Weitere Themen, die Ihnen den Einstieg erleichtern, finden Sie unter:  
   
 -   [Tutorial: Erste Schritte mit dem Datenbankmodul](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [Erstellen einer Datenbank &#40;Tutorial&#41;](../../../t-sql/lesson-1-1-creating-a-database.md)  
   
--   [Lernprogramm: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
+-   [Tutorial: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   
 -   [Lernprogramm: Schreiben von Transact-SQL-Anweisungen](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Sicherheitscenter für SQL Server-Datenbankmodul und Azure SQL-Datenbank](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [Sicherheitsfunktionen &#40;Transact-SQL&#41;](../../../t-sql/functions/security-functions-transact-sql.md)   
  [Sicherheitsbezogene dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)   

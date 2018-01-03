@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 204b18d54a65c8fdf3cbc86d04e7daf1850fe84f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 86c13345caa59dfb4ef9dad6f9c9cdb0ea324472
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Aktivieren und Deaktivieren von Change Data Capture (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] In diesem Thema wird beschrieben, wie Sie Change Data Capture für Datenbanken und Tabellen aktivieren und deaktivieren können.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 > [!IMPORTANT]  
 >  Um die Vorlagen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]zu suchen, rufen Sie **Ansicht**auf, klicken Sie auf **Vorlagen-Explorer**, und wählen Sie dann **SQL Server-Vorlagen**aus. **Change Data Capture** ist ein Unterordner. In diesem Ordner finden Sie alle Vorlagen, auf die in diesem Thema verwiesen wird. Es gibt auch ein **Vorlagen-Explorer** -Symbol auf der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Symbolleiste.  
   
-```tsql  
+```sql  
 -- ====  
 -- Enable Database for CDC template   
 -- ====  
@@ -63,7 +63,7 @@ GO
 > [!IMPORTANT]  
 >  Um die Vorlagen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]zu suchen, rufen Sie **Ansicht**auf, klicken Sie auf **Vorlagen-Explorer**, und klicken Sie dann auf **SQL Server-Vorlagen**. **Change Data Capture** ist ein Unterordner, in dem Sie alle Vorlagen finden, auf die in diesem Thema verwiesen wird. Es gibt auch ein **Vorlagen-Explorer** -Symbol auf der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Symbolleiste.  
   
-```tsql  
+```sql  
 -- =======  
 -- Disable Database for Change Data Capture template   
 -- =======  
@@ -86,7 +86,7 @@ GO
   
  Standardmäßig befindet sich die Änderungstabelle in der Standarddateigruppe der Datenbank. Wenn ein Datenbankbesitzer die Position der einzelnen Änderungstabellen steuern möchte, kann er den Parameter *@filegroup_name* verwenden, um für die Änderungstabelle der Aufzeichnungsinstanz eine bestimmte Dateigruppe anzugeben. Die benannte Dateigruppe muss bereits vorhanden sein. Im Allgemeinen empfehlen wir, Änderungstabellen in eine von den Quelltabellen getrennte Dateigruppe einzufügen. Ein Beispiel für die Verwendung des Parameters **@filegroup_name** finden Sie in der Vorlage *@filegroup_name* .  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Specifying Filegroup Option Template  
 -- =========  
@@ -108,7 +108,7 @@ GO
   
  Wenn Sie keine Gatingrolle verwenden möchten, legen Sie den *@role_name* -Parameter explizit auf NULL fest. Ein Beispiel für das Aktivieren einer Tabelle ohne Gatingrolle finden Sie unter **Enable a Table Without Using a Gating Role** .  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Without Using a Gating Role template   
 -- =========  
@@ -133,7 +133,7 @@ GO
   
  Ein Beispiel zur Erläuterung der Erstellung einer Aufzeichnungsinstanz mit beiden Abfragefunktionen finden Sie in der Vorlage **Enable a Table for All and Net Changes Queries** .  
   
-```tsql  
+```sql  
 -- =============  
 -- Enable a Table for All and Net Changes Queries template   
 -- =============  
@@ -157,7 +157,7 @@ GO
   
  Ein Beispiel für das Deaktivieren einer Tabelle finden Sie in der Vorlage "Eine Aufzeichnungsinstanz für eine Tabelle deaktivieren".  
   
-```tsql  
+```sql  
 -- =====  
 -- Disable a Capture Instance for a Table template   
 -- =====  
@@ -170,7 +170,7 @@ EXEC sys.sp_cdc_disable_table
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Nachverfolgen von Datenänderungen &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Über Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Arbeiten mit Änderungsdaten &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   

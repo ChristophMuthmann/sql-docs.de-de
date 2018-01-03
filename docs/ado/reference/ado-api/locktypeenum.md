@@ -3,7 +3,7 @@ title: LockTypeEnum | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 528d26feb0037a3717ff7b1a9b05606e3ecf37c9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 48c9909bf228a6bad0ad7e6d44415a1499fd5ea5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 Gibt den Typ der Sperre, die auf Datensätze, die während der Bearbeitung platziert werden.  
   
-|Konstante|Wert|Description|  
+|Konstante|value|Description|  
 |--------------|-----------|-----------------|  
 |**adLockBatchOptimistic**|4|Gibt die vollständige BatchUpdates an. Für Batchmodus-Update erforderlich.|  
 |**adLockOptimistic**|3|Gibt an, Parallelität, Datensatz nach dem anderen. Der Anbieter verwendet eingeschränktes Sperren, Sperren von Datensätzen nur bei Aufruf der [Update](../../../ado/reference/ado-api/update-method.md) Methode.|  

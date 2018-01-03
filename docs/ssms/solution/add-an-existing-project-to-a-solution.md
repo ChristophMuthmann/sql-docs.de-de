@@ -3,7 +3,7 @@ title: "Hinzufügen eines vorhandenen Projekts zu einer Projektmappe | Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 49df8383be7aa92a07429deb886f31e9f62b2755
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: dc23e1916ac3c9844f06ff8a379e9f2da0cde025
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>Hinzufügen eines vorhandenen Projekts zu einer Projektmappe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können zu einer vorhandenen Projektmappe ein oder mehrere Projekte hinzufügen. Ein Projekt kann mit mehr als einer Projektmappe verknüpft sein.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 > Bevor Sie in einer Umgebung mit mehreren Entwicklern ein vorhandenes Projekt aus freigegebenen Verzeichnissen hinzufügen, sollten Sie sicherstellen, dass durch Ihre Änderungen nicht die Änderungen anderer Entwickler beeinträchtigt oder überschrieben werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Projekte &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
 [Projektmappen &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
   

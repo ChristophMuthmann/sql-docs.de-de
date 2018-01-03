@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c51763f25d86402e2728c3639a1958cbfec13ac6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bf905d416e81c6dbc30294559e83f247c9e3f197
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="altering-memory-optimized-tables"></a>Ändern von speicheroptimierten Tabellen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -108,7 +108,7 @@ Die Singlethreadvorgänge schreiben in diesem Fall den gesamten Inhalt der geän
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel ändert sich die Bucketanzahl eines vorhandenen Hashindexes. Dadurch wird der Hashindex mit der neuen Bucketanzahl neu erstellt, während andere Eigenschaften des Hashindexes unverändert bleiben.  
   
-```tsql
+```sql
 ALTER TABLE Sales.SalesOrderDetail_inmem   
        ALTER INDEX imPK_SalesOrderDetail_SalesOrderID_SalesOrderDetailID  
               REBUILD WITH (BUCKET_COUNT=67108864);  
@@ -117,7 +117,7 @@ GO
   
  Im folgenden Beispiel wird eine Spalte mit der Einschränkung NOT NULL und einer DEFAULT-Definition hinzugefügt, und WITH VALUES wird verwendet, um Werte für jede vorhandene Zeile der Tabelle bereitzustellen. Ohne WITH VALUES hat jede Zeile in der neuen Spalte den Wert NULL.  
   
-```tsql  
+```sql  
 ALTER TABLE Sales.SalesOrderDetail_inmem  
        ADD Comment NVARCHAR(100) NOT NULL DEFAULT N'' WITH VALUES;  
 GO
@@ -125,7 +125,7 @@ GO
   
  Im folgenden Beispiel wird einer vorhandenen Spalte eine Primärschlüsseleinschränkung hinzugefügt.  
   
-```tsql
+```sql
 CREATE TABLE dbo.UserSession (   
    SessionId int not null,   
    UserId int not null,   
@@ -143,7 +143,7 @@ GO
   
  Im folgenden Beispiel wird ein Index entfernt.  
   
-```tsql
+```sql
 ALTER TABLE Sales.SalesOrderDetail_inmem  
        DROP INDEX ix_ModifiedDate;  
 GO
@@ -151,7 +151,7 @@ GO
   
  Im folgenden Beispiel wird ein Index hinzugefügt.  
   
-```tsql  
+```sql  
 ALTER TABLE Sales.SalesOrderDetail_inmem  
        ADD INDEX ix_ModifiedDate (ModifiedDate);  
 GO  
@@ -159,7 +159,7 @@ GO
   
  Im folgenden Beispiel werden mehrere Spalten hinzugefügt, mit einem Index und Einschränkungen.  
   
-```tsql
+```sql
 ALTER TABLE Sales.SalesOrderDetail_inmem  
        ADD    CustomerID int NOT NULL DEFAULT -1 WITH VALUES,  
               ShipMethodID int NOT NULL DEFAULT -1 WITH VALUES,  
@@ -171,7 +171,7 @@ GO
 <a name="logging-of-alter-table-on-memory-optimized-tables-124"></a>
 
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 
 [Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   

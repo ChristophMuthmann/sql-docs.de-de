@@ -3,7 +3,7 @@ title: "Visual Basic für Applikationen-Funktionen | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1fee0368395faf95ce941dbf4e5352dbca549a64
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 835dfeb15a84529baf553ce1daa171d02e8faca7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic für Applikationen-Funktionen
 Im folgende Visual Basic für Applikationen-Funktionen können in Daten strukturieren CALC-Ausdrücken verwendet werden:  
@@ -35,7 +35,7 @@ Im folgende Visual Basic für Applikationen-Funktionen können in Daten struktur
 |Abs|Asc|ArcTan|ZBool|ZByte|ZCurrrency|  
 |ZDate|CDbl|Zchn|ChrB|ChrW|Zchn$|  
 |ChrB$|ZInteger|ZLong|Cos|ZSingle|CStr|  
-|Cvar|ZVarDat|CVErr|Datum|Datum$|DateAdd|  
+|Cvar|ZVarDat|CVErr|date|Datum$|DateAdd|  
 |DateDiff|DatTeil|DatSeriell|DatWert|Day|GDA|  
 |Fehler|Error$|Exponential|Fix|Format|Format$|  
 |ZW|Hex|Hex$|Hour|IIF|InStr|  
@@ -47,7 +47,7 @@ Im folgende Visual Basic für Applikationen-Funktionen können in Daten struktur
 |KAPZ|BW|QBColor|ZINS|RGB|Right|  
 |RECHTSB|Rechts$|RECHTSB$|ZZG|RGlätten|RTrim$|  
 |Zweimal|Vorzchn|Sin|LIA|LeerZchn|LeerZchn$|  
-|QWurzel|Str|Str$|StrVgl|StrKonv|String|  
+|QWurzel|Str|Str$|StrVgl|StrKonv|Zeichenfolge|  
 |String$|DIA|Tan|Uhrzeit|Time$|Zeitgeber|  
 |ZeitSeriell|ZeitSeriellStr|Glätten|Glätten$|TypName|Großbst|  
 |Großbst$|Val|VarType|Arbeitstag|Year||  

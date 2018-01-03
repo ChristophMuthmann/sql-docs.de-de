@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5686cc0fc615c7765ea592d80b803f2beecd4c52
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 82eda03e726cc16476847cc8ed21ad46f77509cb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Erstellen und Verwalten von Volltextkatalogen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Ein Volltextkatalog ist ein logischer Container für eine Gruppe von Volltextindizes. Sie müssen einen Volltextkatalog erstellen, bevor Sie einen Volltextindex erstellen können.
@@ -34,9 +34,9 @@ Ein Volltextkatalog ist ein virtuelles Objekt und gehört keiner Dateigruppe an.
 ##  <a name="creating"></a> Erstellen eines Volltextkatalogs  
 
 ### <a name="create-a-full-text-catalog-with-transact-sql"></a>Erstellen eines Volltextkatalogs mit Transact-SQL
-Verwenden Sie [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). Beispiel:
+Verwenden Sie [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). Zum Beispiel:
 
-```tsql 
+```sql 
 USE AdventureWorks;  
 GO  
 CREATE FULLTEXT CATALOG ftCatalog AS DEFAULT;  
@@ -71,7 +71,7 @@ GO
   
 In der folgenden Tabelle sind die Eigenschaften aufgeführt, die sich auf Volltextkataloge beziehen. Diese Informationen sind für die Verwaltung und Problembehandlung der Volltextsuche möglicherweise hilfreich. 
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|Description|  
 |--------------|-----------------|  
 |**AccentSensitivity**|Einstellung für die Unterscheidung nach Akzent.|
 |**ImportStatus**|Gibt an, ob der Volltextkatalog importiert wird.|  

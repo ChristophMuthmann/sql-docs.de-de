@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0cc9ed462b52c79f792852a1b6b1d380cae3e182
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 321ac7ca18880205192923cc567c172342668eec
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-a-stored-procedure"></a>Erstellen einer gespeicherten Prozedur
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+###  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So erstellen Sie eine Prozedur im Objekt-Explorer**  
   
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
@@ -61,11 +61,11 @@ ms.lasthandoff: 11/17/2017
   
 5.  Geben Sie im Dialogfeld **Werte für Vorlagenparameter angeben** die folgenden Werte für die angezeigten Parameter ein.  
   
-    |Parameter|Wert|  
+    |Parameter|value|  
     |---------------|-----------|  
-    |Autor|*Ihr Name*|  
+    |Author|*Ihr Name*|  
     |Erstellt am|*Das heutige Datum*|  
-    |Beschreibung|Gibt Mitarbeiterdaten zurück.|  
+    |Description|Gibt Mitarbeiterdaten zurück.|  
     |Prozedurname|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
     |@Datatype_For_Param1|**nvarchar**(50)|  
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
   
 7.  Ersetzen Sie im **Abfrage-Editor**die SELECT-Anweisung durch die folgende Anweisung:  
   
-    ```tsql  
+    ```sql  
     SELECT FirstName, LastName, Department  
     FROM HumanResources.vEmployeeDepartmentHistory  
     WHERE FirstName = @FirstName AND LastName = @LastName  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So erstellen Sie eine Prozedur im Abfrage-Editor**  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie im Menü **Datei** auf **Neue Abfrage**.  
   
@@ -138,7 +138,7 @@ ms.lasthandoff: 11/17/2017
     ```  
   
 ##  <a name="PowerShellProcedure"></a>   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   

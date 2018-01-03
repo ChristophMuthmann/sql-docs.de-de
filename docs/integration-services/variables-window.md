@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 79b8887bd738bc5b91ad35febadbc528968881cb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cd98311fb9b047d7c518524a6f33210bf7e9ea2b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="variables-window"></a>Variablen (Fenster)
   Verwenden Sie das Fenster **Variablen** , um benutzerdefinierte Variablen zu erstellen und zu ändern sowie um Systemvariablen anzuzeigen.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Wenn Sie der Variable einen Ausdruck zuweisen, können Sie den Datentyp nicht ändern.  
   
- **Wert**  
+ **ReplTest1**  
  Zeigt den Wert der Variablen an. Bei benutzerdefinierten Variablen können Sie den Wert aktualisieren. Dieser Wert kann ein Literal oder ein Ausdruck sein, und der Wert kann eine mehrzeilige Zeichenfolge sein. Um der Variable einen Ausdruck zuzuweisen, klicken Sie auf die Schaltfläche mit den Auslassungspunkten neben der Spalte **Ausdruck** im Fenster **Variablen** .  
   
  **Namespace**  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/20/2017
  **Ereignis bei Änderung des Variablenwertes auslösen**  
  Gibt an, ob das **OnVariableValueChanged** -Ereignis ausgelöst werden soll, wenn ein Wert geändert wird. Bei benutzerdefinierten und Systemvariablen können Sie den Wert aktualisieren. Standardmäßig wird diese Spalte nicht im Fenster **Variablen** angezeigt. Klicken Sie zum Anzeigen dieser Spalte auf **Rasteroptionen**.  
   
- **Description**  
+ **Beschreibung**  
  Anzeigen der Variablenbeschreibung. Sie können die Beschreibung für benutzerdefinierte Variablen ändern. Standardmäßig wird diese Spalte nicht im Fenster **Variablen** angezeigt. Klicken Sie zum Anzeigen dieser Spalte auf **Rasteroptionen**.  
   
  **Ausdruck**  
@@ -104,17 +104,17 @@ ms.lasthandoff: 11/20/2017
   
 -   **Data type**  
   
--   **Wert**  
+-   **ReplTest1**  
   
 -   **Namespace**  
   
 -   **Ereignis bei Änderung des Variablenwertes auslösen**  
   
--   **Description**  
+-   **Beschreibung**  
   
 -   **Ausdruck**  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Integration Services-Variablen &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md)   
  [Verwenden von Variablen in Paketen](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
  [Integration Services-Ausdrücke &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md)   

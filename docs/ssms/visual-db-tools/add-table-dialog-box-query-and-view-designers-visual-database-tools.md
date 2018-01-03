@@ -3,7 +3,7 @@ title: "Tabelle hinzufügen (Dialogfeld) (Abfrage- und Sicht-Designer) (Visual D
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3f3bfef97dd978ac0ee021742b4691ee62ed3b81
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2119f74e6aa6b2ff8c5234b43f8c79c098d26db5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>Tabelle hinzufügen (Dialogfeld) (Abfrage- und Sicht-Designer) (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Mit diesem Dialogfeld können Sie einer Abfrage oder Sicht Tabellen, Sichten, benutzerdefinierte Funktionen oder Synonyme hinzufügen.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 > Wenn die Tabelle zur Replikation veröffentlicht ist, müssen Sie mit der Transact-SQL-Anweisung [ALTER TABLE](http://msdn.microsoft.com/en-us/f1745145-182d-4301-a334-18f799d361d1) oder mit SMO (SQL Server Management Objects) Schemaänderungen ausführen. Wenn die Schemaänderungen mit dem Tabellen-Designer oder dem Datenbankdiagramm-Designer ausgeführt werden, wird versucht, die Tabelle zu entfernen und erneut zu erstellen. Da veröffentlichte Objekte nicht gelöscht werden können, schlägt die Schemaänderung fehl.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Tabellen**  
 Listet die Tabellen auf, die dem Bereich **Diagramm** hinzugefügt werden können. Um eine Tabelle hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen**. Um mehrere Tabellen gleichzeitig hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen**.  
   
@@ -51,6 +51,6 @@ Aktualisieren Sie die Liste, sodass alle Änderungen an der Datenbank in die Lis
 **Hinzufügen**  
 Fügen Sie die jeweils ausgewählten Elemente hinzu.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

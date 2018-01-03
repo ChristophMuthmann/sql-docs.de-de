@@ -3,7 +3,7 @@ title: Service-Anbieter und -Komponenten | Microsoft Docs
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 61232bd2d028c9beb1b5471bb6db0b1c28b7b7e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d44d3ce48da69c734b381058637b15b7afd0736c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="service-providers-and-components"></a>Dienstanbieter und Komponenten
 Dienstanbieter sind Komponenten, die die Funktionalität von Datenanbietern erweitern, indem implementieren die erweiterten Schnittstellen, die vom Datenspeicher nicht systemeigen unterstützt werden.  

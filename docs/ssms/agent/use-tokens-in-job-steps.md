@@ -3,7 +3,7 @@ title: Verwenden von Token in Auftragsschritten | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -23,18 +23,18 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 73cc2ac32724e2ed910c3ef44355990513020efe
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e45f9df8f2356e7dea91fd47d10afd4fea958205
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-tokens-in-job-steps"></a>Verwenden von Token in Auftragsschritten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent ermöglicht die Verwendung von Token in [!INCLUDE[tsql](../../includes/tsql_md.md)]-Auftragsschrittskripts. Durch die Verwendung von Token verfügen Sie beim Schreiben von Auftragsschritten über dieselbe Flexibilität, die die Verwendung von Variablen beim Schreiben von Softwareprogrammen bietet. Die von Ihnen in ein Auftragsschrittskript eingefügten Token werden vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent zur Ausführungszeit ersetzt, bevor der Auftragsschritt vom [!INCLUDE[tsql](../../includes/tsql_md.md)] -Subsystem ausgeführt wird.  
   
 > [!IMPORTANT]  
-> Mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 1 wurde die Syntax der Token für die Arbeitsschritte des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agents geändert. Damit Auftragsschritte fehlerfrei ausgeführt werden können, müssen alle in Auftragsschritten verwendete Token von einem Escapemakro begleitet werden. Das Verwenden von Escapemakros und das Aktualisieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Auftragsschritten, in denen Token verwendet werden, wird in den folgenden Abschnitten "Grundlegendes zum Verwenden von Token", "[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Token und -Makros" und "Aktualisieren von Auftragsschritten für die Verwendung von Makros" beschrieben. Außerdem wurde auch die [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)] -Syntax, in der zur Auszeichnung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Auftragsschritten eckige Klammern verwendet wurden (z. B. "`[DATE]`") geändert. Jetzt müssen Sie Tokennamen in runde Klammern einschließen und ein Dollarzeichen (`$`) an den Anfang der Tokensyntax setzen. Beispiel:  
+> Mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 1 wurde die Syntax der Token für die Arbeitsschritte des [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agents geändert. Damit Auftragsschritte fehlerfrei ausgeführt werden können, müssen alle in Auftragsschritten verwendete Token von einem Escapemakro begleitet werden. Das Verwenden von Escapemakros und das Aktualisieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Auftragsschritten, in denen Token verwendet werden, wird in den folgenden Abschnitten "Grundlegendes zum Verwenden von Token", "[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Token und -Makros" und "Aktualisieren von Auftragsschritten für die Verwendung von Makros" beschrieben. Außerdem wurde auch die [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)] -Syntax, in der zur Auszeichnung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] -Agent-Auftragsschritten eckige Klammern verwendet wurden (z. B. "`[DATE]`") geändert. Jetzt müssen Sie Tokennamen in runde Klammern einschließen und ein Dollarzeichen (`$`) an den Anfang der Tokensyntax setzen. Zum Beispiel:  
 >   
 > `$(ESCAPE_`*Makroname*`(DATE))`  
   
@@ -145,7 +145,7 @@ Das folgende Beispiel ist Teil eines Skripts, mit dem die Auftrags-ID ( `job_id`
 <pre>SELECT * FROM msdb.dbo.sysjobs  
 WHERE @JobID = CONVERT(uniqueidentifier, $(ESCAPE_NONE(JOBID))) ;</pre>  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Implementieren von Aufträgen](../../ssms/agent/implement-jobs.md)  
 [Verwalten von Auftragsschritten](../../ssms/agent/manage-job-steps.md)  
   

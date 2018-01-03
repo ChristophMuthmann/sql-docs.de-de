@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -32,13 +32,13 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7a5cf2737ac465c5d216a0d9a27a3c3e6e5836e0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 318e2d1481f9398780dafe56b3db3f24545242a0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="dtutil-utility"></a>dtutil (Hilfsprogramm)
+# <a name="dtutil-utility"></a>dtutil Utility
   Das Eingabeaufforderungs-Hilfsprogramm **dtutil** dient zum Verwalten von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen. Mit dem Hilfsprogramm kann ein Paket kopiert, verschoben oder gelöscht und das Vorhandensein eines Pakets überprüft werden. Diese Aktionen können für jedes [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paket ausgeführt werden, das sich an einem der drei folgenden Speicherorte befindet: in einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank, im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketspeicher oder im Dateisystem. Falls das Hilfsprogramm auf ein Paket zugreift, das in **msdb**gespeichert ist, werden Sie möglicherweise zur Eingabe eines Benutzernamens und eines Kennworts aufgefordert. Wenn die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung verwendet, ist sowohl ein Benutzername als auch ein Kennwort erforderlich. Falls der Benutzername fehlt, versucht **dtutil** sich bei [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mit der Windows-Authentifizierung anzumelden. Der Speichertyp des Pakets wird durch die Optionen **/SQL**, **/FILE**und **/DTS** identifiziert.  
   
  Die Verwendung von Befehlsdateien, oder die Umleitung wird vom Eingabeaufforderungs-Hilfsprogramm **dtutil** nicht unterstützt.  
@@ -122,7 +122,7 @@ dtutil /option [value] [/option [value]]...
 ## <a name="dtutil-exit-codes"></a>dtutil-Exitcodes  
  **dtutil** legt einen Exitcode fest, der Sie informiert, wenn Syntaxfehler erkannt, falsche Argumente verwendet oder ungültige Optionskombinationen angegeben werden. Andernfalls meldet das Hilfsprogramm „Der Vorgang wurde erfolgreich abgeschlossen“. In der folgenden Tabelle sind die Werte aufgeführt, die vom Hilfsprogramm **dtutil** beim Beenden festgelegt werden können.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |0|Das Hilfsprogramm wurde erfolgreich ausgeführt.|  
 |1|Beim Ausführen des Hilfsprogramms ist ein Fehler aufgetreten.|  
@@ -130,7 +130,7 @@ dtutil /option [value] [/option [value]]...
 |5|Das Hilfsprogramm konnte das angeforderte Paket nicht laden.|  
 |6|Das Hilfsprogramm konnte die Befehlszeile nicht auflösen, da sie syntaktische oder semantische Fehler enthielt.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Es ist nicht möglich, Befehlsdateien oder Umleitungen für **dtutil**zu verwenden.  
   
  Die Reihenfolge der Optionen in der Befehlszeile ist unerheblich.  
@@ -278,7 +278,7 @@ dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819
 dtutil /FILE PackageToEncrypt.dtsx /ENCRYPT file;EncryptedPackage.dtsx;3;EncPswd  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Ausführen von Integration Services-Paketen (SSIS)](../integration-services/packages/run-integration-services-ssis-packages.md)  
   
   

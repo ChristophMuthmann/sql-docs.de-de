@@ -3,7 +3,7 @@ title: SQL Editor (Visual Database Tools) | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8d12d926366ece3db66b9edb950a0ec579e33f7f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4abc54346419e0ba6281e71d583cf0a4e571caf0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL-Editor (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Verwenden Sie den SQL-Editor, um vorhandene gespeicherte Prozeduren, Funktionen, Trigger und SQL-Skripts zu bearbeiten. Dieses Fenster wird geöffnet, wenn Sie eines dieser Objekte öffnen. Wenn Sie eine neue SQL-Anweisung erstellen möchten, um sie auf Ihre Datenquelle anzuwenden, verwenden Sie den [SQL-Bereich](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) des Abfrage-Designers.  
@@ -54,6 +54,6 @@ Der SQL-Editor bietet viele nützliche Funktionen für die SQL-Textbearbeitung, 
   
 Bei der Bearbeitung von SQL-Anweisungen werden bestimmte Transact-SQL-Anweisungen in einem von einer dünnen Linie umrandeten Feld eingeschlossen. Dies hilft bei der visuellen Aufteilung von SQL-Code in Befehlsabschnitte und identifiziert Blöcke von SQL-Anweisungen, die grafisch mithilfe des Abfrage-Designers entworfen werden können. Weitere Informationen zur Verwendung des Abfrage-Designers finden Sie unter [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

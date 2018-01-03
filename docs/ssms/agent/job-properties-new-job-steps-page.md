@@ -3,7 +3,7 @@ title: "Auftragseigenschaften – Neuer Auftrag (Schrittseite) | Microsoft-Dokum
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: abca15659be8754bd84032a8871508cda216739c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c7db6510c6ced00b0062267db4f73418de144d30
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="job-properties---new-job-steps-page"></a>Auftragseigenschaften – Neuer Auftrag (Schrittseite)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Mithilfe dieser Seite können Sie Auftragsschritte für einen [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-Agentauftrag anzeigen und planen.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Auftragsschrittliste**  
 Führt die Auftragsschritte für diesen Auftrag auf.  
   
@@ -49,6 +49,6 @@ Erstellt einen neuen Auftragsschritt über dem ausgewählten Auftragsschritt.
 **Delete**  
 Löscht den ausgewählten Auftragsschritt. Wenn Auftragsschritte gelöscht werden, werden auch die entsprechenden Ausgabeprotokolle gelöscht.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Implementieren von Aufträgen](../../ssms/agent/implement-jobs.md)  
   

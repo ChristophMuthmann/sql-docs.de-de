@@ -3,7 +3,7 @@ title: "Öffnen mit (neue Datei) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a6dddfbff4900c77823dbe7782dd720d75f4135
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9f40b2c05b2868c83c0a80d1fab2de85fe35d381
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-with-new-file"></a>Öffnen mit (neue Datei)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können ein Dokument in einem oder mehreren Editoren öffnen, indem Sie im Menü **Datei** auf **Öffnen** und danach auf **Datei** klicken. Wählen Sie im Dialogfeld **Datei öffnen** die Datei aus, klicken Sie auf den Pfeil bei **Öffnen** , und klicken Sie dann auf **Öffnen mit**. Klicken Sie im Dialogfeld **Öffnen mit** in der Liste **Wählen Sie das zu öffnende Programm aus** auf das bevorzugte Programm, und klicken Sie dann auf **Öffnen**.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
 **Wählen Sie das zu öffnende Programm aus**  
 Listet die in [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio für den ausgewählten Dateityp zur Verfügung stehenden Editoren auf. Wählen Sie aus der Liste den Editor aus, mit dem Sie das Dokument öffnen möchten, oder klicken Sie auf **Hinzufügen** , um einen neuen Editor zur Liste hinzuzufügen.  
   
@@ -47,6 +47,6 @@ Um einen Standardeditor (und ggf. eine Sprachcodierungsoption) für den ausgewä
 > [!NOTE]  
 > In der Programmliste unter **Wählen Sie das zu öffnende Programm aus**ist an den Namen des Standardeditors für den ausgewählten Dateityp der Vermerk **(Standard)**angehängt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Zuordnen von Dateierweiterungen zu einem Code-Editor](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)  
   
