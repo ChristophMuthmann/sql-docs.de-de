@@ -2082,8 +2082,8 @@ ms.lasthandoff: 12/21/2017
 |0x80029164|-2147315356|DTS_W_FSTASK_OPERATIONFAILURE|Taskfehler beim Ausführen des Vorgangs "%1".|  
 |0x80029185|-2147315323|DTS_W_EXECPROCTASK_FILENOTINPATH|Die Datei/der Prozess "%1" ist nicht im Pfad vorhanden.|  
 |0x800291C6|-2147315258|DTS_W_SENDMAILTASK_SUBJECT_MISSING|Der Betreff ist leer.|  
-|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|Die Adresse in der Zeile "An" ist falsch. Entweder es fehlt das Symbol "@" oder die Adresse ist ungültig.|  
-|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|Die Adresse in der Zeile "Von" ist falsch. Entweder es fehlt das Symbol "@" oder die Adresse ist ungültig.|  
+|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|Die Adresse in der Zeile "An" ist falsch. Entweder es fehlt das Symbol "\@" oder die Adresse ist ungültig.|  
+|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|Die Adresse in der Zeile "Von" ist falsch. Entweder es fehlt das Symbol "\@" oder die Adresse ist ungültig.|  
 |0x8002927A|-2147315078|DTS_W_XMLTASK_DIFFFAILURE|Die beiden XML-Dokumente unterscheiden sich.|  
 |0x8002928C|-2147315060|DTS_W_XMLTASK_DTDVALIDATIONWARNING|Die DTD-Überprüfung verwendet die DTD-Datei, die in der Zeile DOCTYPE im XML-Dokument definiert ist. Der der Eigenschaft "%1" zugewiesene Wert wird nicht verwendet.|  
 |0x8002928D|-2147315059|DTS_W_XMLTASK_VALIDATIONFAILURE|Fehler beim Überprüfen von "%1" durch den Task.|  

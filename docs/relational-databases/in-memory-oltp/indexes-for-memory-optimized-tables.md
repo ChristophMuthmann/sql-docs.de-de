@@ -1,7 +1,7 @@
 ---
 title: "Indizes für speicheroptimierte Tabellen | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 11/6/2017
+ms.date: 11/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.reviewer: 
@@ -17,44 +17,42 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1679cf30077600cbff38aea1869bc7c8c9edc53e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a7c3e4fb4a7082a1874c9fc320ff67a1ce6031b0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
-# <a name="indexes-for-memory-optimized-tables"></a>Indizes für speicheroptimierte Tabellen
+# <a name="indexes-on-memory-optimized-tables"></a>Indizes für speicheroptimierte Tabellen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  
-Dieser Artikel beschreibt die Typen von Indizes, die für eine speicheroptimierte Tabelle zur Verfügung stehen. Der Artikel enthält Folgendes:  
-  
-- Kurze Codebeispiele zum Veranschaulichen der Transact-SQL-Syntax  
-- Beschreibung, inwiefern speicheroptimierte Indizes sich von herkömmlichen datenträgerbasierten Indizes unterscheiden  
-- Erläuterungen zu den Umständen, wann die einzelnen Typen von speicheroptimierten Indizes am besten geeignet sind  
-  
-  
-*Hashindizes* werden ausführlicher in einem [eng verwandte Artikel](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)behandelt.  
-  
-  
-*Columnstore* -Indizes werden in einem [anderen Artikel](~/relational-databases/indexes/columnstore-indexes-overview.md)behandelt.  
-  
-  
-## <a name="a-syntax-for-memory-optimized-indexes"></a>A. Syntax für speicheroptimierte Indizes  
-  
-Jede CREATE TABLE-Anweisung für eine speicheroptimierte Tabelle muss einbeziehen und indizieren, entweder explizit über einen INDEX oder implizit über eine PRIMAY KEY- oder UNIQUE-Einschränkung. Bei dem Index muss es sich um einen der folgenden handeln:  
+Alle speicheroptimierten Tabellen müssen mindestens einen Index enthalten, da die Zeilen durch die Indizes miteinander verbunden werden. Für eine speicheroptimierte Tabelle wird jeder Index auch speicheroptimiert. Es gibt verschiedene Methoden, mit denen sich ein Index für einen speicheroptimierten Index von einem herkömmlichen Index für eine datenträgerbasierte Tabelle unterscheidet:  
+
+- Datenzeilen werden nicht in Seiten gespeichert, sodass es keine Sammlung von Seiten bzw. Erweiterungen, Partitionen oder Zuordnungseinheiten gibt, auf die zum Abrufen aller Seiten einer Tabelle verwiesen werden kann. Für einen der verfügbaren Indextypen gibt es Indexseiten. Diese Indextypen werden jedoch anders gespeichert als Indizes für datenträgerbasierte Tabellen. Sie lassen nicht den herkömmlichen Fragmentierungstyp innerhalb einer Seite anwachsen, sodass sie keinen Füllfaktor haben.
+- Änderungen, die bei der Datenbearbeitung an Indizes in speicheroptimierten Tabellen vorgenommen werden, werden niemals auf den Datenträger geschrieben. Nur die Datenzeilen und Änderungen an den Daten werden in das Transaktionsprotokoll geschrieben. 
+- Speicheroptimierte Indizes werden neu erstellt, wenn die Datenbank wieder online geschaltet wird. 
+
+Alle Indizes in speicheroptimierten Tabellen werden basierend auf den Indexdefinitionen bei der Datenbankwiederherstellung erstellt.
+
+Bei dem Index muss es sich um einen der folgenden handeln:  
   
 - Hashindex  
-- Nicht gruppierter Index (d.h. die interne Standardstruktur einer B-Struktur).  
+- Nicht gruppierter speicheroptimierter Index (d.h. die interne Standardstruktur einer B-Struktur) 
   
+*Hashindizes* werden unter [Hashindizes für speicheroptimierte Tabellen](../../relational-databases/sql-server-index-design-guide.md#hash_index) ausführlicher erläutert.
+*Nicht gruppierte Indizes* werden unter [Nicht gruppierte Indizes für speicheroptimierte Tabellen](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index) ausführlicher behandelt.  
+*Columnstore* -Indizes werden in einem [anderen Artikel](../../relational-databases/indexes/columnstore-indexes-overview.md)behandelt.  
+
+## <a name="syntax-for-memory-optimized-indexes"></a>Syntax für speicheroptimierte Indizes  
   
-Für eine Deklaration mit dem Standard DURABILITY = SCHEMA_AND_DATA muss die speicheroptimierte Tabelle einen Primärschlüssel haben. Die PRIMARY KEY NONCLUSTERED-Klausel in der folgenden CREATE TABLE-Anweisung erfüllt zwei Anforderungen:  
+Jede CREATE TABLE-Anweisung für eine speicheroptimierte Tabelle muss einen Index enthalten, entweder explizit über einen INDEX oder implizit über eine PRIMAY KEY- oder UNIQUE-Einschränkung.
+  
+Für eine Deklaration mit dem Standard DURABILITY = SCHEMA\_AND_DATA muss die speicheroptimierte Tabelle einen Primärschlüssel enthalten. Die PRIMARY KEY NONCLUSTERED-Klausel in der folgenden CREATE TABLE-Anweisung erfüllt zwei Anforderungen:  
   
 - Sie stellt einen Index bereit, um die Mindestanforderung von einem Index in der CREATE TABLE-Anweisung zu erfüllen.  
-- Sie stellt den Primärschlüssel bereit, der für die SCHEMA_AND_DATA-Klausel erforderlich ist.  
-  
-  
-  
+- Sie stellt den Primärschlüssel bereit, der für die SCHEMA\_AND_DATA-Klausel erforderlich ist.  
+
+    ```sql
     CREATE TABLE SupportEvent  
     (  
         SupportEventId   int NOT NULL  
@@ -63,172 +61,164 @@ Für eine Deklaration mit dem Standard DURABILITY = SCHEMA_AND_DATA muss die spe
     )  
         WITH (  
             MEMORY_OPTIMIZED = ON,  
-            DURABILITY = SCHEMA_AND_DATA);  
+            DURABILITY = SCHEMA\_AND_DATA);  
+    ```
 > [!NOTE]  
->  Für [!INCLUDE[ssSQL15](../../includes/sssql14-md.md)] und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] besteht ein Limit von 8 Indizes pro speicheroptimierte Tabelle oder Tabellentyp. Ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] gibt es keine Begrenzung mehr für die spezifische Anzahl von Indizes für speicheroptimierte Tabellen und Tabellentypen.
-
+> Für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] besteht ein Limit von 8 Indizes pro speicheroptimierte Tabelle oder Tabellentyp. Ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] gibt es keine Begrenzung mehr für die spezifische Anzahl von Indizes für speicheroptimierte Tabellen und Tabellentypen.
   
-  
-### <a name="a1-code-sample-for-syntax"></a>A.1 Codebeispiel für Syntax  
+### <a name="code-sample-for-syntax"></a>Codebeispiel für die Syntax  
   
 Dieser Unterabschnitt enthält einen Transact-SQL-Codeblock, der die Syntax zum Erstellen von verschiedenen Indizes für eine speicheroptimierte Tabelle darstellt. Der Code veranschaulicht Folgendes:  
-  
   
 1. Erstellen Sie eine speicheroptimierte Tabelle.  
 2. Verwenden Sie ALTER TABLE-Anweisungen, um zwei Indizes hinzuzufügen.  
 3. Fügen Sie einige Zeilen Daten ein (INSERT).  
-  
-  
-  
+   
+    ```sql
     DROP TABLE IF EXISTS SupportEvent;  
     go  
-  
+
     CREATE TABLE SupportEvent  
     (  
-      SupportEventId   int               not null   identity(1,1)  
+        SupportEventId   int               not null   identity(1,1)  
         PRIMARY KEY NONCLUSTERED,  
-  
-      StartDateTime        datetime2     not null,  
-      CustomerName         nvarchar(16)  not null,  
-      SupportEngineerName  nvarchar(16)      null,  
-      Priority             int               null,  
-      Description          nvarchar(64)      null  
+
+        StartDateTime        datetime2     not null,  
+        CustomerName         nvarchar(16)  not null,  
+        SupportEngineerName  nvarchar(16)      null,  
+        Priority             int               null,  
+        Description          nvarchar(64)      null  
     )  
-      WITH (  
+        WITH (  
         MEMORY_OPTIMIZED = ON,  
-        DURABILITY = SCHEMA_AND_DATA);  
+        DURABILITY = SCHEMA\_AND_DATA);  
     go  
-      
+        
         --------------------  
-      
+        
     ALTER TABLE SupportEvent  
-      ADD CONSTRAINT constraintUnique_SDT_CN  
+        ADD CONSTRAINT constraintUnique_SDT_CN  
         UNIQUE NONCLUSTERED (StartDateTime DESC, CustomerName);  
     go  
-  
+
     ALTER TABLE SupportEvent  
-      ADD INDEX idx_hash_SupportEngineerName  
+        ADD INDEX idx_hash_SupportEngineerName  
         HASH (SupportEngineerName) WITH (BUCKET_COUNT = 64);  -- Nonunique.  
     go  
-      
+        
         --------------------  
-      
+        
     INSERT INTO SupportEvent  
         (StartDateTime, CustomerName, SupportEngineerName, Priority, Description)  
-      VALUES  
-        ('2016-02-25 13:40:41:123', 'Abby', 'Zeke', 2, 'Anzeigeproblem.'     ),  
-        ('2016-02-25 13:40:41:323', 'Ben' , null  , 1, 'Hilfe nicht gefunden.'    ),  
-        ('2016-02-25 13:40:41:523', 'Carl', 'Liz' , 2, 'Schaltfläche ist grau.'      ),  
-        ('2016-02-25 13:40:41:723', 'Dave', 'Zeke', 2, 'Ausblenden der Spalte nicht möglich.');  
-    go  
+        VALUES  
+        ('2016-02-23 13:40:41:123', 'Abby', 'Zeke', 2, 'Display problem.'     ),  
+        ('2016-02-24 13:40:41:323', 'Ben' , null  , 1, 'Cannot find help.'    ),  
+        ('2016-02-25 13:40:41:523', 'Carl', 'Liz' , 2, 'Button is gray.'      ),  
+        ('2016-02-26 13:40:41:723', 'Dave', 'Zeke', 2, 'Cannot unhide column.');  
+    go 
+    ``` 
   
-  
-  
-## <a name="b-nature-of-memory-optimized-indexes"></a>B. Die Art von speicheroptimierten Indizes  
-  
-Für eine speicheroptimierte Tabelle wird jeder Index auch speicheroptimiert. Es gibt verschiedene Methoden, in denen sich ein Index für einen speicheroptimierten Index von einem herkömmlichen Index für eine datenträgerbasierte Tabelle unterscheidet.  
-  
-Jeder speicheroptimierte Index ist nur im aktiven Arbeitsspeicher vorhanden. Der Index wird nicht auf dem Datenträger dargestellt.  
-  
-- Speicheroptimierte Indizes werden neu erstellt, wenn die Datenbank wieder online geschaltet wird.  
-  
-  
-Wenn eine SQL UPDATE-Anweisung Daten in einer speicheroptimierten Tabelle ändert, werden die entsprechende Änderungen an den Indizes nicht in das Protokoll geschrieben.  
-  
-  
-Die Einträge in einem speicheroptimierten Index enthalten eine direkte Arbeitsspeicheradresse für die Zeile in der Tabelle.  
-  
-- Im Gegensatz dazu enthalten Einträge in einem herkömmlichen B-Strukturindex auf einem Datenträger einen Schlüsselwert, den das System zunächst verwenden muss, um die Arbeitsspeicheradresse für die zugeordnete Tabellenzeile zu suchen.  
-  
-  
-Speicheroptimierte Indizes haben keine fixierten Seiten wie datenträgerbasierte Indizes.  
-  
-- Sie lassen nicht den herkömmlichen Fragmentierungstyp innerhalb einer Seite anwachsen, sodass sie keinen Füllfaktor haben.  
-  
-## <a name="c-duplicate-index-key-values"></a>C. Doppelte Indexschlüsselwerte
+## <a name="duplicate-index-key-values"></a>Doppelte Indexschlüsselwerte
 
-Doppelte Indexschlüsselwerte können die Leistung von Vorgängen an speicheroptimierten Tabellen beeinträchtigen. Eine große Anzahl von Duplikaten (z.B. 100+) macht das Verwalten eines Indexes ineffizient, da für die meisten Indexvorgänge doppelte Ketten durchlaufen werden müssen. Die Beeinträchtigung ist bei INSERT-, UPDATE- und DELETE-Vorgängen an speicheroptimierten Tabellen sichtbar. Dieses Problem ist sowohl aufgrund der niedrigeren Kosten pro Vorgang für Hashindizes als auch der Interferenz großer doppelter Ketten mit der Hashkollisionskette bei Hashindizes stärker sichtbar. Um die Duplizierung in einem Index zu reduzieren, verwenden Sie einen nicht gruppierten Index und fügen am Ende der Indexschlüssel zusätzliche Spalten (z.B. aus dem Primärschlüssel) zum Reduzieren der Anzahl von Duplikaten hinzu.
+Doppelte Indexschlüsselwerte können die Leistung von Vorgängen an speicheroptimierten Tabellen beeinträchtigen. Eine große Anzahl von Duplikaten (z.B. 100+) macht das Verwalten eines Indexes ineffizient, da für die meisten Indexvorgänge doppelte Ketten durchlaufen werden müssen. Die Beeinträchtigung ist bei `INSERT`-, `UPDATE`- und `DELETE`-Vorgängen in speicheroptimierten Tabellen sichtbar. 
 
-Nehmen wir als Beispiel eine Tabelle „Customers“ mit einem Primärschlüssel auf „CustomerId“ und einem Index auf der Spalte „CustomerCategoryID“. In der Regel wird es in einer bestimmten Kategorie viele Kunden und damit viele doppelte Werte für einen bestimmten Schlüssel im Index von „CustomerCategoryID“ geben. In diesem Szenario hat sich die Verwendung eines nicht gruppierten Indexes für („CustomerCategoryID“, „CustomerId“) bewährt. Dieser Index kann für Abfragen verwendet werden, die ein „CustomerCategoryID“ einbeziehendes Prädikat verwenden, er enthält keine Duplikate und verursacht darum keine Ineffizienz bei der Indexwartung.
+Dieses Problem ist sowohl aufgrund der niedrigeren Kosten pro Vorgang für Hashindizes als auch der Interferenz großer doppelter Ketten mit der Hashkollisionskette bei Hashindizes stärker sichtbar. Um die Duplizierung in einem Index zu reduzieren, verwenden Sie einen nicht gruppierten Index und fügen am Ende der Indexschlüssel zusätzliche Spalten (z.B. aus dem Primärschlüssel) zum Reduzieren der Anzahl von Duplikaten hinzu. Weitere Informationen zu Hashkollisionen finden Sie unter [Hashindizes für speicheroptimierte Tabellen](../../relational-databases/sql-server-index-design-guide.md#hash_index).
 
-Die folgende Abfrage zeigt die durchschnittliche Anzahl doppelter Indexschlüsselwerte für `CustomerCategoryID` in der Tabelle `Sales.Customers`in der Beispieldatenbank [WideWorldImporters](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx).
+Ziehen Sie zum Beispiel eine `Customers`-Tabelle mit einem Primärschlüssel für `CustomerId` und einem Index in Spalte `CustomerCategoryID` in Erwägung. In der Regel wird es in einer bestimmten Kategorie viele Kunden und damit viele doppelte Werte für einen bestimmten Schlüssel im Index von „CustomerCategoryID“ geben. In diesem Szenario hat sich die Verwendung eines nicht gruppierten Index für `(CustomerCategoryID, CustomerId)` bewährt. Dieser Index kann für Abfragen verwendet werden, die ein `CustomerCategoryID` einbeziehendes Prädikat verwenden, enthält keine Duplikate und verursacht deshalb keine Ineffizienz bei der Indexwartung.
 
-```Transact-SQL
-    SELECT AVG(row_count) FROM
-       (SELECT COUNT(*) AS row_count 
+Die folgende Abfrage zeigt die durchschnittliche Anzahl doppelter Indexschlüsselwerte für `CustomerCategoryID` in der Tabelle `Sales.Customers`in der Beispieldatenbank [WideWorldImporters](../../sample/world-wide-importers/wide-world-importers-documentation.md).
+
+```sql
+SELECT AVG(row_count) FROM
+    (SELECT COUNT(*) AS row_count 
         FROM Sales.Customers
         GROUP BY CustomerCategoryID) a
 ```
 
 Um die durchschnittliche Anzahl der Indexschlüsselduplikate für Ihre eigene Tabelle und den Index zu evaluieren, ersetzen Sie `Sales.Customers` durch Ihren Tabellennamen und `CustomerCategoryID` durch die Liste der Indexschlüsselspalten.
 
-## <a name="d-comparing-when-to-use-each-index-type"></a>D. Vergleichen des Verwendungszeitpunkts für jeden Indextyp  
-  
+## <a name="comparing-when-to-use-each-index-type"></a>Vergleichen des Verwendungszeitpunkts für jeden Indextyp  
   
 Die Art Ihrer spezifischen Abfragen bestimmt, welche Art von Index die beste Wahl ist.  
 
 Beim Implementieren speicheroptimierter Tabellen in einer vorhandenen Anwendung gilt die allgemeine Empfehlung, mit nicht gruppierten Indizes zu beginnen, da ihre Funktionen mehr den Funktionen herkömmlicher gruppierter und nicht gruppierter Indizes für datenträgerbasierte Tabellen ähneln. 
   
-  
-### <a name="d1-strengths-of-nonclustered-indexes"></a>D.1 Stärken nicht gruppierter Indizes  
-  
+### <a name="recommendations-for-nonclustered-index-use"></a>Empfehlungen für die Verwendung nicht gruppierter Indizes  
   
 Ein nicht gruppierter Index ist gegenüber einem Hashindex zu bevorzugen, wenn:  
   
-- Abfragen über eine ORDER BY-Klausel für die indizierte Spalte verfügen.  
+- Abfragen eine `ORDER BY`-Klausel für die indizierte Spalte enthalten.  
 - Bei Abfragen nur die führenden Spalten eines mehrspaltigen Indexes getestet werden.  
-- Abfragen die indizierte Spalte testen mithilfe einer WHERE-Klausel mit:  
-  - einer Ungleichheit: *WHERE StatusCode != 'Done'*  
-  - einem Wertbereich: *WHERE Quantity >= 100*  
-  
+- Abfragen die indizierte Spalte testen mithilfe einer `WHERE`-Klausel mit:  
+  - Einer Ungleichheit: `WHERE StatusCode != 'Done'`  
+  - Einem Wertebereichsscan: `WHERE Quantity >= 100`  
   
 In allen folgenden SELECT-Anweisungen wird ein nicht gruppierter Index gegenüber einem Hashindex bevorzugt:  
+
+```sql
+SELECT CustomerName, Priority, Description 
+FROM SupportEvent  
+WHERE StartDateTime > DateAdd(day, -7, GetUtcDate());  
+    
+SELECT CustomerName, Priority, Description 
+FROM SupportEvent  
+WHERE CustomerName != 'Ben';  
+    
+SELECT StartDateTime, CustomerName  
+FROM SupportEvent  
+ORDER BY StartDateTime;  
+    
+SELECT CustomerName  
+FROM SupportEvent  
+WHERE StartDateTime = '2016-02-26';  
+```
   
+### <a name="recommendations-for-hash-index-use"></a>Empfehlungen für die Verwendung von Hashindizes   
   
+[Hashindizes](../../relational-databases/sql-server-index-design-guide.md#hash_index) werden in erster Linie für gezielte Suchvorgänge und nicht für Bereichsscans verwendet.
+
+Ein Hashindex ist gegenüber einem nicht gruppierten Index vorzuziehen, wenn Abfragen Gleichheitsprädikate, verwenden, und die `WHERE`-Klausel wird allen Indexschlüsselspalten zugeordnet, wie im folgenden Beispiel gezeigt wird:  
   
-    SELECT col2 FROM TableA  
-        WHERE StartDate > DateAdd(day, -7, GetUtcDate());  
-      
-    SELECT col3 FROM TableB  
-        WHERE ActivityCode != 5;  
-      
-    SELECT StartDate, LastName  
-        FROM TableC  
-        ORDER BY StartDate;  
-      
-    SELECT IndexKeyColumn2  
-        FROM TableD  
-        WHERE IndexKeyColumn1 = 42;  
+```sql
+SELECT CustomerName 
+FROM SupportEvent  
+WHERE SupportEngineerName = 'Liz';
+```  
+
+### <a name="multi-column-index"></a>Mehrspaltiger Index  
   
+Ein mehrspaltiger Index könnte ein nicht gruppierter Index oder ein Hashindex sein. Nehmen wir an, die Indexspalten sind „col1“ und „col2“. Gemäß der folgenden `SELECT`-Anweisung wäre nur der nicht gruppierte Index für den Abfrageoptimierer nützlich:  
   
+```sql
+SELECT col1, col3  
+FROM MyTable_memop  
+WHERE col1 = 'dn';  
+```
+
+Der Hashindex benötigt die `WHERE`-Klausel, um einen Gleichheitstest für die einzelnen Spalten im Schlüssel anzugeben. Ansonsten ist der Hashindex für den Abfrageoptimierer nicht sinnvoll.  
   
-### <a name="d2-strengths-of-hash-indexes"></a>D.2 Stärken von Hashindizes  
+Genauso wenig ist der Indextyp nützlich, wenn die `WHERE`-Klausel nur die zweite Spalte im Indexschlüssel angibt.  
+
+### <a name="summary-table-to-compare-index-use-scenarios"></a>Zusammenfassungstabelle für den Vergleich der Indexverwendungsszenarien  
   
-  
-Ein [Hashindex](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) ist gegenüber einem nicht gruppierten Index zu bevorzugen, wenn:  
-  
-- Abfragen die indizierten Spalten wie im Folgenden mithilfe einer WHERE-Klausel mit exakter Gleichheit auf allen Indexschlüsselspalten testen:  
-  
-  
-  
-    SELECT col9 FROM TableZ  
-        WHERE Z_Id = 2174;  
-  
-  
-  
-### <a name="d3-summary-table-to-compare-index-strengths"></a>D.3 Zusammenfassende Tabelle für den Vergleich der Indexstärken  
-  
-  
-Die folgende Tabelle enthält alle Vorgänge, die von den verschiedenen Indextypen unterstützt werden.  
-  
+Die folgende Tabelle enthält alle Vorgänge, die von den verschiedenen Indextypen unterstützt werden. *Ja* bedeutet, dass der Index die Anforderung effizient verarbeiten kann, und *Nein* bedeutet, dass der Index die Anforderung nicht effizient erfüllen kann. 
   
 | Vorgang | Speicheroptimiert, <br/> Hashindizes | Speicheroptimiert, <br/> Nicht gruppiert | Datenträgerbasiert, <br/> (nicht) gruppiert |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
 | Indexscan, alle Tabellenzeilen abrufen. | ja | ja | ja |  
 | Indexsuche nach Gleichheitsprädikaten (=). | ja <br/> (Vollständiger Schlüssel ist erforderlich.) | ja  | ja |  
-| Indexsuche nach Ungleichheits- und Bereichsprädikaten <br/> (>, <, <=, >=, BETWEEN). | Nein <br/> (Führt zu einem Indexscan.) | ja | ja |  
-| Abrufen von Zeilen in einer Sortierreihenfolge, die der Indexdefinition entspricht. | Nein | Ja | ja |  
-| Abrufen von Zeilen in einer Sortierreihenfolge, die der umgekehrten Indexdefinition entspricht. | Nein | Nein | ja |  
-  
-  
-In dieser Tabelle bedeutet „Ja“, dass der Index die Anforderung effizient bedienen kann, und „Nein“ bedeutet, dass der Index die Anforderung nicht effizient erfüllen kann.  
+| Indexsuche nach Ungleichheits- und Bereichsprädikaten <br/> (>, <, <=, >=, `BETWEEN`). | nein <br/> (Führt zu einem Indexscan.) | Ja <sup>1</sup> | ja |  
+| Abrufen von Zeilen in einer Sortierreihenfolge, die der Indexdefinition entspricht. | nein | ja | ja |  
+| Abrufen von Zeilen in einer Sortierreihenfolge, die der umgekehrten Indexdefinition entspricht. | nein | nein | ja |  
+
+<sup>1</sup> Für einen nicht gruppierten speicheroptimierten Index ist der vollständige Schlüssel nicht erforderlich, um eine Indexsuche auszuführen.  
+
+## <a name="automatic-index-and-statistics-management"></a>Automatische Verwaltung von Index und Statistiken
+
+Nutzen Sie Lösungen wie [Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag), um die Indexdefragmentierung und das Aktualisieren der Statistiken für eine oder mehrere Datenbanken automatisch zu verwalten. Dieser Vorgang entscheidet unter anderem anhand des Fragmentierungsgrads automatisch, ob ein Index neu organisiert oder neu erstellt wird und aktualisiert Statistiken mit einem linearen Schwellenwert.
+
+## <a name="Additional_Reading"></a> Weitere Ressourcen   
+ [Handbuch zum SQL Server Indexentwurf](../../relational-databases/sql-server-index-design-guide.md)   
+ [Hashindizes für speicheroptimierte Tabellen](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
+ [Nicht gruppierte Indizes für speicheroptimierte Tabellen](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)    
+ [Adaptive Indexdefragmentierung](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)  

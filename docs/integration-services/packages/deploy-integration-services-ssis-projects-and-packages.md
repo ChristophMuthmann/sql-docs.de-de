@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ae82e603c67f5a0223231f92b96b2334dc55840a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 21e9f7359e19df03dc544211ba3a39041efa0637
+ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Bereitstellen von SQL Server Integration Services-Projekten und Paketen (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützt zwei Bereitstellungsmodelle: das Projektbereitstellungsmodell und das Legacy-Paketbereitstellungsmodell. Mithilfe des Projektbereitstellungsmodells können Sie Projekte auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitstellen.  
@@ -47,14 +47,14 @@ Weitere Informationen zum Legacy-Paketbereitstellungsmodell finden Sie unter [Le
 |Ein Projekt stellt die Entwicklungseinheit dar.|Ein Paket ist die Bereitstellungseinheit.|  
 |Parameter werden verwendet, um Paketeigenschaften Werte zuzuweisen.|Konfigurationen werden verwendet, um Paketeigenschaften Werte zuzuweisen.|  
 |Aus einem Projekt, das Pakete und Parameter enthält, wird eine Projektbereitstellungsdatei (Erweiterung .ISPAC) erstellt.|Pakete (Erweiterung .DTSX) und Konfigurationen (Erweiterung .DTSCONFIG) werden einzeln im Dateisystem gespeichert.|  
-|Ein Projekt, das Pakete und Parameter enthält, wird im SSISDB-Katalog auf einer Instanz von SQL Server bereitgestellt.|Pakete und Konfigurationen werden in das Dateisystem auf einem anderen Computer kopiert. Pakete können auch in der MSDB-Datenbank auf einer Instanz von SQL Server gespeichert werden.|  
+|Ein Projekt, das Pakete und Parameter enthält, wird im SSISDB-Katalog auf einer Instanz von SQL Server bereitgestellt.|Pakete und Konfigurationen werden in das Dateisystem auf einem anderen Computer kopiert. Pakete können auch in der MSDB-Datenbank auf einer Instanz von SQL Server gespeichert werden.|  
 |Auf dem Datenbankmodul ist die CLR-Integration erforderlich.|Auf dem Datenbankmodul ist die CLR-Integration nicht erforderlich.|  
 |Umgebungsspezifische Parameterwerte werden in Umgebungsvariablen gespeichert.|Umgebungsspezifische Konfigurationswerte werden in Konfigurationsdateien gespeichert.|  
 |Im Katalog enthaltene Projekte und Pakete können vor der Ausführung auf dem Server überprüft werden. Sie können die Überprüfung mithilfe von SQL Server Management Studio, gespeicherten Prozeduren oder verwaltetem Code ausführen.|Pakete werden unmittelbar vor der Ausführung überprüft. Ein Paket kann auch mit dtExec oder verwaltetem Code überprüft werden.|  
 |Pakete werden ausgeführt, indem mit dem Datenbankmodul eine Ausführung gestartet wird. Einer Ausführung werden vor dem Start ein Projektbezeichner, explizite Parameterwerte (optional) und Umgebungsverweise (optional) zugewiesen.<br /><br /> Sie können Pakete mit **dtExec**ausführen.|Pakete werden mit den Ausführungshilfsprogrammen **dtExec** und **DTExecUI** ausgeführt. Anwendbare Konfigurationen werden durch Eingabeaufforderungsargumente (optional) identifiziert.|  
 |Während der Ausführung werden Ereignisse, die vom Paket erzeugt werden, automatisch aufgezeichnet und im Katalog gespeichert. Sie können diese Ereignisse mit Transact-SQL-Sichten abfragen.|Während der Ausführung werden Ereignisse, die von einem Paket erzeugt werden, nicht automatisch aufgezeichnet. Dem Paket muss ein Protokollanbieter zum Aufzeichnen von Ereignissen hinzugefügt werden.|  
 |Pakete werden in einem separaten Windows-Prozess ausgeführt.|Pakete werden in einem separaten Windows-Prozess ausgeführt.|  
-|SQL Server-Agent wird verwendet, um die Paketausführung zu planen.|SQL Server-Agent wird verwendet, um die Paketausführung zu planen.|  
+|SQL Server-Agent wird verwendet, um die Paketausführung zu planen.|SQL Server-Agent wird verwendet, um die Paketausführung zu planen.|  
   
  Das Projektbereitstellungsmodell wurde in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]eingeführt. Wenn Sie dieses Modell verwendet haben, konnten Sie keine Pakete bereitstellen, ohne das gesamte Projekt bereitzustellen. In [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] wurde die Funktion für inkrementelle Paketbereitstellung eingeführt, mit der Sie Pakete in einem vorhandenen oder neuen Projekt bereitstellen können, ohne das gesamte Projekt bereitzustellen.   
   
@@ -92,7 +92,7 @@ Dieser Fehler ist in der Regel das Ergebnis fehlender DCOM-Berechtigungen. Führ
 Weitere Informationen zu dem in diesem Abschnitt beschriebenen Fehler und den erforderlichen Berechtigungen des SSIS-Dienstkontos finden Sie im folgenden Blogbeitrag.  
 [Fehler beim Bereitstellen des SSIS-Projekts: „System.ComponentModel.Win32Exception: Dem Client fehlt ein erforderliches Recht.“](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
 
-## <a name="deploy-projects-to-integration-services-server"></a>Bereitstellen von Projekten auf dem Integration Services-Server
+## <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
   In der aktuellen Version von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]können Sie Projekte auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitstellen. Der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server ermöglicht es Ihnen, Pakete zu verwalten und auszuführen sowie mit Umgebungen Laufzeitwerte für Pakete zu konfigurieren.  
   
 > [!NOTE]  
@@ -100,7 +100,7 @@ Weitere Informationen zu dem in diesem Abschnitt beschriebenen Fehler und den er
   
  Um auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server ein Projekt bereitzustellen, führen Sie die folgenden Tasks aus:  
   
-1.  Erstellen Sie einen SSISDB-Katalog, wenn Sie dies nicht bereits getan haben. Weitere Informationen finden Sie im [SSIS-Katalog](../../integration-services/service/ssis-catalog.md).  
+1.  Erstellen Sie einen SSISDB-Katalog, wenn Sie dies nicht bereits getan haben. Weitere Informationen finden Sie im [SSIS-Katalog](../../integration-services/catalog/ssis-catalog.md).  
   
 2.  Konvertieren Sie das Projekt mit dem Assistenten für die Konvertierung von **Integration Services-Projekten** ins Projektbereitstellungsmodell. Weitere Informationen finden Sie in den folgenden Anweisungen: [So konvertieren Sie ein Projekt in das Projektbereitstellungsmodell](#convert).  
   
@@ -341,7 +341,7 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
 > [!IMPORTANT]  
 >  Ein Paket kann jeweils nur mit den Werten ausgeführt werden, die in einer einzelnen Serverumgebung enthalten sind.  
   
- Sie können Sichten nach einer Liste von Serverumgebungen, Umgebungsverweisen und Umgebungsvariablen abfragen. Sie können auch gespeicherte Prozeduren aufrufen, um Umgebungen, Umgebungsverweise und Umgebungsvariablen hinzuzufügen, zu löschen und zu ändern. Weitere Informationen finden Sie im Abschnitt **Serverumgebungen, Servervariablen und Serverumgebungsverweise** im [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
+ Sie können Sichten nach einer Liste von Serverumgebungen, Umgebungsverweisen und Umgebungsvariablen abfragen. Sie können auch gespeicherte Prozeduren aufrufen, um Umgebungen, Umgebungsverweise und Umgebungsvariablen hinzuzufügen, zu löschen und zu ändern. Weitere Informationen finden Sie im Abschnitt **Serverumgebungen, Servervariablen und Serverumgebungsverweise** im [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 ### <a name="to-create-and-use-a-server-environment"></a>So erstellen und verwenden Sie eine Serverumgebung  
   
@@ -361,13 +361,13 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
   
     3.  Geben Sie den **Wert** für die Umgebungsvariable ein.  
   
-         Informationen zu den Benennungsregeln für Umgebungsvariablen finden Sie im Abschnitt **Umgebungsvariable** im [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
+         Informationen zu den Benennungsregeln für Umgebungsvariablen finden Sie im Abschnitt **Umgebungsvariable** im [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
     4.  Geben Sie an, ob die Variable einen vertraulichen Wert enthält, indem Sie das Kontrollkästchen **Vertraulich** aktivieren oder deaktivieren.  
   
          Bei Auswahl von **Vertraulich**wird der Variablenwert nicht im Feld **Wert** angezeigt.  
   
-         Vertrauliche Werte werden im SSISDB-Katalog verschlüsselt. Weitere Informationen zur Verschlüsselung finden Sie unter [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
+         Vertrauliche Werte werden im SSISDB-Katalog verschlüsselt. Weitere Informationen zur Verschlüsselung finden Sie unter [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 6.  Gehen Sie auf der Seite **Berechtigungen** wie folgt vor, um ausgewählten Benutzern und Rollen Berechtigungen zu erteilen oder zu verweigern.  
   
@@ -577,7 +577,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **SQL Server-Authentifizierung verwenden**  
  Wenn ein Benutzer eine Verbindung mit einem angegebenen Benutzernamen und einem Kennwort von einer nicht vertrauenswürdigen Verbindung herstellt, authentifiziert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Verbindung, indem überprüft wird, ob ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldekonto eingerichtet wurde und ob das angegebene Kennwort mit dem zuvor aufgezeichneten übereinstimmt. Wenn kein Anmeldekonto in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingerichtet wurde, schlägt die Authentifizierung fehl, und der Benutzer erhält eine Fehlermeldung.  
   
- **Benutzername**  
+ **User name**  
  Geben Sie einen Benutzernamen an, wenn Sie die SQL Server-Authentifizierung verwenden.  
   
  **Kennwort**  
@@ -697,7 +697,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Scope**  
  Listet den Bereich des Parameters auf.  
   
- **Wert**  
+ **ReplTest1**  
  Listet den Parameterwert auf.  
   
  Klicken Sie auf die Auslassungspunkte, die sich neben dem Wertefeld befinden, um die Parametereigenschaften zu konfigurieren.  

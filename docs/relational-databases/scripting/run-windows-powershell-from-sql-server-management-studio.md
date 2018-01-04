@@ -3,9 +3,9 @@ title: "Ausführen von Windows PowerShell über SQL Server Management Studio | M
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2f3f405a8a0a64d1202918154a163bf9b397ab93
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f5ed1e815f1a98d791d7cf7d95ce233de15c3d02
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-windows-powershell-from-sql-server-management-studio"></a>Ausführen von Windows PowerShell über SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können Windows PowerShell-Sitzungen aus dem **Objekt-Explorer** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] starten. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] startet Windows PowerShell, lädt das Modul **sqlps** und legt den Pfadkontext auf den zugeordneten Knoten in der **Objekt-Explorer**-Struktur fest.  
@@ -45,7 +45,7 @@ SQLSERVER:\SQL\MyComputer\MyInstance\Databases\AdventureWorks2012>
 ## <a name="permissions"></a>Berechtigungen  
  Wenn PowerShell in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]geöffnet wurde, wird das Programm nicht mit Administratorrechten ausgeführt, wodurch einige Aktivitäten möglicherweise verhindert werden, z. B. Aufrufe der WMI.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server-PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   
   
