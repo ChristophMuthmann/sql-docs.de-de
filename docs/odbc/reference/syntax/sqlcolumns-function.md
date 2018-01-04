@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 62d91e0a8fdccfe55b077fb52014a3ccc92e92ae
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7cb9d78a2ee194779f9e01dfd313ae4846d5a804
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcolumns-function"></a>SQLColumns-Funktion
 **Konformität**  
@@ -159,7 +159,7 @@ SQLRETURN SQLColumns(
   
  Die folgende Tabelle listet die Spalten im Resultset. Zusätzliche Spalten nach Spalte 18 (IS_NULLABLE) können vom Treiber definiert werden. Eine Anwendung sollte treiberspezifischen Spalten zuzugreifen, beginnend am Ende das Resultset statt eine explizite Ordnungsposition anzugeben. Weitere Informationen finden Sie unter [Daten von Katalogfunktionen zurückgegeben](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
   
-|Spaltenname|Column<br /><br /> number|Datentyp|Kommentare|  
+|Spaltenname|Spalte<br /><br /> number|Datentyp|Kommentare|  
 |-----------------|-----------------------|---------------|--------------|  
 |TABLE_CAT (ODBC 1.0)|1|Varchar|Name des Katalogs; NULL, wenn Sie auf die Datenquelle nicht verfügbar. Wenn ein Treiber Kataloge für einige Tabellen unterstützt jedoch nicht für andere, z. B. wenn der Treiber Daten aus anderen DBMS abruft, wird eine leere Zeichenfolge zurückgegeben ("") für diese Tabellen, denen keine Kataloge vorhanden sind.|  
 |NACH "TABLE_SCHEM" (ODBC 1.0)|2|Varchar|Schemanamen; NULL, wenn Sie auf die Datenquelle nicht verfügbar. Wenn ein Treiber Schemas für einige Tabellen unterstützt jedoch nicht für andere, z. B. wenn der Treiber Daten aus anderen DBMS abruft, wird eine leere Zeichenfolge zurückgegeben ("") für diese Tabellen, die keine Schemas aufweisen.|  

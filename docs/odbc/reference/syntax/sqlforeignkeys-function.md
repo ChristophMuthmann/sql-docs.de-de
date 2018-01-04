@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c57c8e1aa0548ceaec3342d5e668616b3292400c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ba8f395a556d976f2698ce9646db2e830e7a69aa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlforeignkeys-function"></a>SQLForeignKeys-Funktion
 **Konformität**  
@@ -204,7 +204,7 @@ SQLRETURN SQLForeignKeys(
   
  Dieses Beispiel ruft **SQLPrimaryKeys** den Primärschlüssel der Tabelle ORDERS abgerufen. Das Resultset wird eine Zeile vorhanden sein; die wichtigen Spalten sind in der folgenden Tabelle gezeigt.  
   
-|TABLE_NAME|COLUMN_NAME|KEY_SEQ|  
+|table_name|COLUMN_NAME|KEY_SEQ|  
 |-----------------|------------------|--------------|  
 |ORDERS|ORDERID|1|  
   

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 016c2cefd6280a7b2cc21e4b5e290468d8271973
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 12e66ad8a1aa5e1389b69d5f30156f7b86b3b733
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-features"></a>Neue Funktionen
 Die folgende neue Funktionen wurde in ODBC 3. eingeführt. *x*. Eine ODBC-3. *x* Anwendung arbeiten mit einer ODBC 2.*.x* Treiber wird nicht in der Lage, diese Funktionalität verwenden. Der ODBC-3. *x* -Treiber-Manager zugeordnet ist diese Funktionen bei der Arbeit mit einer ODBC 2.*.x* Treiber.  

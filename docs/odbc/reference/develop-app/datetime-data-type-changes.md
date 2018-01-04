@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,18 +24,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 40d432cd25752c88b6c82209269c1d37a6bf5f63
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c81717abdde1a8427df5e20e9241820ab11b5879
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="datetime-data-type-changes"></a>Änderungen des Datentyps "DateTime"
 In ODBC 3. *x*, die Bezeichner für das Datum, Zeit und Zeitstempel SQL-Datentypen von SQL_DATE, SQL_TIME und SQL_TIMESTAMP geändert haben (mit Instanzen von **#define** in der Headerdatei 9, 10 und 11) zu SQL_TYPE_DATE, SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP (mit Instanzen von **#define** in der Headerdatei von 91, 92 und 93) zugeordnet. Die entsprechenden C-Typ-IDs haben bzw. von SQL_C_DATE SQL_C_TIME und SQL_C_TIMESTAMP SQL_C_TYPE_DATE, SQL_C_TYPE_TIME und SQL_C_TYPE_TIMESTAMP geändert.  
   
- Die Spaltengröße und die Dezimalstellen für die SQL-Datetime-Datentypen in ODBC 3. zurückgegeben. *x* sind identisch mit der Genauigkeit und Dezimalstellenanzahl dafür in ODBC 2. zurückgegeben. *X*. Diese Werte unterscheiden sich die Werte in die deskriptorfelder SQL_DESC_PRECISION und SQL_DESC_SCALE zur Verfügung. (Weitere Informationen finden Sie unter [Spaltengröße, Dezimalstellen, Oktettlänge übertragen und Anzeigegröße](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).)  
+ Die Spaltengröße und die Dezimalstellen für die SQL-Datetime-Datentypen in ODBC 3. zurückgegeben. *x* sind identisch mit der Genauigkeit und Dezimalstellenanzahl dafür in ODBC 2. zurückgegeben.* X*. Diese Werte unterscheiden sich die Werte in die deskriptorfelder SQL_DESC_PRECISION und SQL_DESC_SCALE zur Verfügung. (Weitere Informationen finden Sie unter [Spaltengröße, Dezimalstellen, Oktettlänge übertragen und Anzeigegröße](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).)  
   
- Diese Änderungen wirken sich auf **SQLDescribeCol**, **SQLDescribeParam**, und **SQLColAttribute**; **SQLBindCol**, **SQLBindParameter**, und **SQLGetData**; und **SQLColumns**, **SQLGetTypeInfo** , **SQLProcedureColumns**, **SQLStatistics**, und **SQLSpecialColumns**.  
+ Diese Änderungen wirken sich auf **SQLDescribeCol**, **SQLDescribeParam**, und **SQLColAttribute**; **SQLBindCol**, **SQLBindParameter**, und **SQLGetData**; und **SQLColumns**, **SQLGetTypeInfo **, **SQLProcedureColumns**, **SQLStatistics**, und **SQLSpecialColumns**.  
   
  Die folgende Tabelle zeigt, wie die ODBC 3.*.x* -Treiber-Manager führt die Zuordnung von der Date, Time und Timestamp C-Datentypen in eingegeben der *TargetType* Argumente **SQLBindCol**und **SQLGetData** oder in der *ValueType* Argument **SQLBindParameter**.  
   
@@ -48,11 +48,11 @@ In ODBC 3. *x*, die Bezeichner für das Datum, Zeit und Zeitstempel SQL-Datentyp
 |SQL_C_TIMESTAMP (11)|Keine Zuordnung|SQL_C_TYPE_TIMESTAMP (93)|Keine Zuordnung [1]|SQL_C_TYPE_TIMESTAMP (93)|  
 |SQL_C_TYPE_TIMESTAMP (93)|Fehler (DM)|Fehler (DM)|SQL_C_TIMESTAMP (11)|Keine Zuordnung [2]|  
   
- [1] als Ergebnis des hierzu ein ODBC-3. *x* Anwendung arbeiten mit einer ODBC 2.. *X* Treiber können auf das Datum, Uhrzeit oder Zeitstempel zurückgegebenem in den Resultsets, die durch die Katalogfunktionen zurückgegeben werden.  
+ [1] als Ergebnis des hierzu ein ODBC-3. *x* Anwendung arbeiten mit einer ODBC 2..* X* Treiber können auf das Datum, Uhrzeit oder Zeitstempel zurückgegebenem in den Resultsets, die durch die Katalogfunktionen zurückgegeben werden.  
   
- [2] von Ereignishandleraufrufen dieser, eine ODBC-3. *x* Anwendung arbeiten mit einem ODBC 3.. *X* Treiber können auf das Datum, Uhrzeit oder Zeitstempel zurückgegebenem in den Resultsets, die durch die Katalogfunktionen zurückgegeben werden.  
+ [2] von Ereignishandleraufrufen dieser, eine ODBC-3. *x* Anwendung arbeiten mit einem ODBC 3..* X* Treiber können auf das Datum, Uhrzeit oder Zeitstempel zurückgegebenem in den Resultsets, die durch die Katalogfunktionen zurückgegeben werden.  
   
- Die folgende Tabelle zeigt, wie die ODBC 3.*.x* -Treiber-Manager führt Zuordnung der eingegebene Date, Time und Timestamp SQL Datentypen der *ParameterType* Argument **SQLBindParameter**  oder in der *DataType* Argument **SQLGetTypeInfo**.  
+ Die folgende Tabelle zeigt, wie die ODBC 3.*.x* -Treiber-Manager führt Zuordnung der eingegebene Date, Time und Timestamp SQL Datentypen der *ParameterType* Argument **SQLBindParameter ** oder in der *DataType* Argument **SQLGetTypeInfo**.  
   
 |Datentyp<br /><br /> Code eingegeben|2.*x* -app<br /><br /> 2.*x* Treiber|2.*x* -app<br /><br /> 3.*x* Treiber|3.*x* -app<br /><br /> 2.*x* Treiber|3.*x* -app<br /><br /> 3.*x* Treiber|  
 |--------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|  
@@ -63,6 +63,6 @@ In ODBC 3. *x*, die Bezeichner für das Datum, Zeit und Zeitstempel SQL-Datentyp
 |SQL_TIMESTAMP (11)|Keine Zuordnung|SQL_TYPE_TIMESTAMP (93)|Keine Zuordnung [1]|SQL_TYPE_TIMESTAMP (93)|  
 |SQL_TYPE_TIMESTAMP (93)|Fehler (DM)|Fehler (DM)|SQL_TIMESTAMP (11)|Keine Zuordnung [2]|  
   
- [1] als Ergebnis des hierzu ein ODBC-3. *x* Anwendung arbeiten mit einer ODBC 2.. *X* Treiber können auf das Datum, Uhrzeit oder Zeitstempel zurückgegebenem in den Resultsets, die durch die Katalogfunktionen zurückgegeben werden.  
+ [1] als Ergebnis des hierzu ein ODBC-3. *x* Anwendung arbeiten mit einer ODBC 2..* X* Treiber können auf das Datum, Uhrzeit oder Zeitstempel zurückgegebenem in den Resultsets, die durch die Katalogfunktionen zurückgegeben werden.  
   
- [2] von Ereignishandleraufrufen dieser, eine ODBC-3. *x* Anwendung arbeiten mit einem ODBC 3.. *X* Treiber können auf das Datum, Uhrzeit oder Zeitstempel zurückgegebenem in den Resultsets, die durch die Katalogfunktionen zurückgegeben werden.
+ [2] von Ereignishandleraufrufen dieser, eine ODBC-3. *x* Anwendung arbeiten mit einem ODBC 3..* X* Treiber können auf das Datum, Uhrzeit oder Zeitstempel zurückgegebenem in den Resultsets, die durch die Katalogfunktionen zurückgegeben werden.

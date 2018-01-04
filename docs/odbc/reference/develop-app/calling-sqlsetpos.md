@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cec632458d406fa0dedeea10a1285b1b521cb197
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 70351e468a6038a26b7b647d6bc7c64d3263f3d6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="calling-sqlsetpos"></a>SQLSetPos aufrufen
 In ODBC 2. *x*, der Zeiger auf die zeilenstatusarray wurde ein Argument an **SQLExtendedFetch**. Die zeilenstatusarray wurde durch einen Aufruf von später aktualisiert **SQLSetPos**. Einige Treiber wurden basieren auf der Tatsache, dass die dieses Array nicht zwischen ändert **SQLExtendedFetch** und **SQLSetPos**. In ODBC 3. *x*der Zeiger auf das Statusarray einem Beschreibungsfeld und ist daher die Anwendung kann problemlos ändern sie auf ein anderes Array zu verweisen. Dies kann ein Problem bei der Verwendung einer ODBC-3 sein. *x* Anwendung arbeitet mit einer ODBC 2.. *X* Treiber jedoch ist das Aufrufen **SQLSetStmtAttr** der Zeiger für den arraystatus festgelegt und ist der Aufruf von **SQLFetchScroll** zum Abrufen von Daten. Ordnet der Treiber-Manager als Sequenz von Aufrufen an diesen **SQLExtendedFetch**. Im folgenden Code ein Fehler würde normalerweise ausgelöst, wenn der Treiber-Manager die zweite ordnet **SQLSetStmtAttr** rufen Sie bei der Arbeit mit einer ODBC 2.*.x* Treiber:  

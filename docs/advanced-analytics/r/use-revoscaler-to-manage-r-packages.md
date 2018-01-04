@@ -2,9 +2,11 @@
 title: So verwenden Sie RevoScaleR-Funktionen zum Suchen, oder installieren Sie R-Paketen auf SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 09/29/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 6b8b3e3f50483d51b5e8f7533055d982b6bc6ab3
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 6d85c95a1aa0cba21c52142fa1a7599b208415ca
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>So verwenden Sie RevoScaleR-Funktionen zum Suchen, oder installieren R-Pakete auf SQL Server
 
