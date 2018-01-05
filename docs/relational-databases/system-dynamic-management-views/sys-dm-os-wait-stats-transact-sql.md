@@ -1,7 +1,7 @@
 ---
 title: Sys. dm_os_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 09/18/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 98e5e604c815b099d7e66d9fd3720d50d8422a9e
-ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
+ms.openlocfilehash: 1e6b1129e76717981e08ff35a97abf516c134ac3
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -169,7 +169,8 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |COUNTRECOVERYMGR |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |CREATE_DATINISERVICE |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|CXPACKET |Tritt bei parallelen Abfrageplänen auf, wenn es sich bei den austauschiterator des Abfrageprozessors zu synchronisieren, und erzeugen und Nutzen von Zeilen. Wenn die Wartezeit zu lang ist und durch eine Abfrageoptimierung (beispielsweise durch das Hinzufügen von Indizes) nicht verkürzt werden kann, sollten Sie erwägen, den Kostenschwellenwert für Parallelität anzupassen oder den Grad an Parallelität zu verringern.| 
+|CXCONSUMER |Tritt bei parallelen Abfrageplänen, wenn ein Consumerthread wartet, einen Producerthread Zeilen zu senden. Dies ist ein normaler Bestandteil parallele abfrageausführung. <br /> **Gilt für**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 und[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET |Tritt bei parallelen Abfrageplänen auf, wenn es sich bei den austauschiterator des Abfrageprozessors zu synchronisieren, und erzeugen und Nutzen von Zeilen. Wenn die Wartezeit zu lang ist und durch eine Abfrageoptimierung (beispielsweise durch das Hinzufügen von Indizes) nicht verkürzt werden kann, sollten Sie erwägen, den Kostenschwellenwert für Parallelität anzupassen oder den Grad an Parallelität zu verringern.<br /> **Hinweis:** In [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 und [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET nur verweist, den austauschiterator des Abfrageprozessors zu synchronisieren, und Zeilen für Consumer Threads erzeugen. Consumer-Threads werden in der Wartetyp CXCONSUMER separat nachverfolgt.| 
 |CXROWSET_SYNC |Tritt während eines parallelen Bereichsscans auf.| 
 |DAC_INIT |Tritt während des Initialisierungsvorgangs der dedizierten Administratorverbindung auf.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |TBD <br /> **Gilt für**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 

@@ -51,11 +51,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ef97afb50c2a8d4dcf18ea342b8ac98dc6014863
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1b3cdba9ffe5b8020a0e3d7c64c766cc54d89c71
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ BACKUP LOG { database_name | @database_name_var }
  {  
    { logical_device_name | @logical_device_name_var }   
  | { DISK | TAPE | URL} =   
-     { 'physical_device_name' | @physical_device_name_var }  
+     { 'physical_device_name' | @physical_device_name_var | NUL }  
  }   
   
 <MIRROR TO clause>::=  
@@ -196,7 +196,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  Der logische Name einer Dateigruppe oder einer Variablen, deren Wert dem logischen Namen einer Dateigruppe entspricht, die in der Sicherung enthalten sein soll. Beim einfachen Wiederherstellungsmodell wird die Dateigruppensicherung nur für eine schreibgeschützte Dateigruppe unterstützt.  
   
 > [!NOTE]  
->  Verwenden Sie Dateisicherungen dann, wenn eine Datenbanksicherung aufgrund der Datenbankgröße und aufgrund von Leistungsanforderungen nicht möglich ist.  
+>  Verwenden Sie Dateisicherungen dann, wenn eine Datenbanksicherung aufgrund der Datenbankgröße und aufgrund von Leistungsanforderungen nicht möglich ist. Das NUL-Gerät zum Testen der Leistung von Sicherungen verwendet werden kann, aber nicht in produktionsumgebungen verwendet werden soll.
   
  *n*  
  Ein Platzhalter, der anzeigt, dass mehrere Dateien und Dateigruppen in einer durch Trennzeichen getrennten Liste angegeben werden können. Für die Anzahl gibt es keine Einschränkungen. 
@@ -227,8 +227,11 @@ UM \<Backup_device > [ **,**...  *n*  ] Gibt an, die dem zugehörigen von Satz [
  { *Logical_device_name* | **@***Logical_device_name_var* }  
  Der logische Name des Sicherungsmediums, auf dem die Datenbank gesichert wird. Der logische Name muss den Regeln für Bezeichner entsprechen. Wenn als Variable (@*Logical_device_name_var*), Name des Sicherungsmediums kann entweder als Zeichenfolgenkonstante (@*Logical_device_name_var*  **=**  logischen Sicherungsmediums) oder als Variable eines alle Zeichenfolgen-Datentyp mit Ausnahme der **Ntext** oder **Text** -Datentypen.  
   
- {DISK | BAND | URL}  **=**  { **"***Physical_device_name***"**  |   **@**  *Physical_device_name_var* }  
- Gibt eine Datenträgerdatei oder ein Bandmedium oder einen Windows Azure-BLOB-Speicherdienst an. Das URL-Format wird zum Erstellen von Sicherungen im Windows Azure-Speicherdienst verwendet. Weitere Informationen und Beispiele finden Sie unter [SQL Server-Sicherung und-Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Ein Lernprogramm finden Sie unter [Lernprogramm: SQL Server-Sicherung und-Wiederherstellung im Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
+ {DISK | BAND | URL}  **=**  { **"***Physical_device_name***"**  |   **@**  *Physical_device_name_var* | NUL}  
+ Gibt eine Datenträgerdatei oder ein Bandmedium oder einen Windows Azure-BLOB-Speicherdienst an. Das URL-Format wird zum Erstellen von Sicherungen im Windows Azure-Speicherdienst verwendet. Weitere Informationen und Beispiele finden Sie unter [SQL Server-Sicherung und-Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Ein Lernprogramm finden Sie unter [Lernprogramm: SQL Server-Sicherung und-Wiederherstellung im Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md). 
+
+[!NOTE] 
+ Das Datenträgermedium NUL verwirft alle Informationen, die an ihn gesendet und sollte nur zu Testzwecken verwendet werden. Dies ist nicht für die Produktion.
   
 > [!IMPORTANT]  
 >  Mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 bis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], Sie können nur auf einem einzelnen Gerät sichern, wenn die URL sichern. Um auf mehrere Geräte sichern, wenn zur URL sichern, verwenden Sie [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und Sie Shared Access Signature (SAS)-Token verwenden müssen. Beispiele zum Erstellen einer Shared Access Signature finden Sie in [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) und [vereinfacht die Erstellung von SQL-Anmeldeinformationen mit Shared Access Signature (SAS)-Token in Azure Storage mit Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
@@ -236,6 +239,8 @@ UM \<Backup_device > [ **,**...  *n*  ] Gibt an, die dem zugehörigen von Satz [
 **URL betrifft**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
  Das Datenträgermedium muss erst dann vorhanden sein, wenn es in einer BACKUP-Anweisung angegeben wird. Wenn das physische Medium vorhanden ist und die Option INIT in der BACKUP-Anweisung nicht angegeben ist, wird die Sicherung an das Medium angefügt.  
+ 
+ Das NUL-Gerät verwirft alle Eingaben, die an diese Datei gesendet, jedoch die Sicherung als gesichert noch alle Seiten gekennzeichnet.
   
  Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)aufgezeichnet wurde.  
   
@@ -714,7 +719,7 @@ Wenn sich ein Sicherungsvorgang mit einem Dateiverwaltungs- oder Verkleinerungsv
   
 Wenn eine Wiederherstellung ausgeführt wird, wenn der Sicherungssatz nicht bereits in aufgezeichnet wurde die **Msdb** Datenbank, auf den Sicherungsverlauf Tabellen möglicherweise geändert werden.  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
  Beginnend mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], **Kennwort** und **MEDIAPASSWORD** -Optionen nicht mehr zum Erstellen von Sicherungen. Es ist weiterhin möglich, mit Kennwörtern erstellte Sicherungen wiederherzustellen.  
   
 ### <a name="permissions"></a>Berechtigungen  

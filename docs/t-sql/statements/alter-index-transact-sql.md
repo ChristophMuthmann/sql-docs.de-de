@@ -51,11 +51,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 48926573b515a1f40fa0db983d846b4e801abfd4
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 24c7f8121439958cd9d0d4f17254b0520cbaa857
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -307,7 +307,8 @@ Für columnstore-Indizes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 -   Bei Zeilengruppen, in denen mindestens 10 % der Zeilen logisch gelöscht wurden, versucht SQL Server, die dieser Zeilengruppe mit ein oder mehrere Zeilengruppen zu kombinieren.    Beispielsweise Zeilengruppe 1 mit 500.000 Zeilen komprimiert wird und Zeilengruppe 21 mit dem Maximum von 1.048.576 Zeilen komprimiert wird.  Zeilengruppe 21 hat 60 % der Zeilen gelöscht 409,830 Zeilen zu verwerfen. SQL Server wird bevorzugt, kombinieren diese zwei Zeilengruppen, um eine neue Zeilengruppe zu komprimieren, die 909,830 Zeilen enthält.  
   
 MIT NEU ORGANISIEREN (COMPRESS_ALL_ROW_GROUPS = {ON | **OFF** })  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab 2016) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)], die COMPRESS_ALL_ROW_GROUPS bietet eine Möglichkeit zum Öffnen oder CLOSED Delta-Zeilengruppen in den Columnstore zu zwingen. Mit dieser Option ist es nicht notwendig, um die Delta-Zeilengruppen zu leeren der columnstore-Index neu.  In Kombination mit dem anderen entfernen und Merge Defragmentierung Funktionen wird nicht mehr notwendig, dass der Index in den meisten Situationen neu erstellt.    
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)], die COMPRESS_ALL_ROW_GROUPS bietet eine Möglichkeit zum Öffnen oder CLOSED Delta-Zeilengruppen in den Columnstore zu zwingen. Mit dieser Option ist es nicht notwendig, um die Delta-Zeilengruppen zu leeren der columnstore-Index neu.  In Kombination mit dem anderen entfernen und Merge Defragmentierung Funktionen wird nicht mehr notwendig, dass der Index in den meisten Situationen neu erstellt.    
+
 -   ON erzwingt, dass alle Zeilengruppen in den Columnstore, unabhängig von der Größe und Status (geschlossen oder geöffnet).  
   
 -   Erzwingt die deaktiviert alle CLOSED-Zeilengruppen in den Columnstore.  
@@ -393,17 +394,11 @@ FILLFACTOR = *Fillfactor*
  Wenn Statistiken pro Partition nicht unterstützt werden, wird die Option ignoriert und eine Warnung generiert. Inkrementelle Statistiken werden für folgende Statistiktypen nicht unterstützt:  
   
 -   Statistiken, die mit Indizes erstellt wurden, die über keine Partitionsausrichtung mit der Basistabelle verfügen.  
-  
 -   Statistiken, die für lesbare sekundäre Always On-Datenbanken erstellt wurden.  
-  
 -   Statistiken, die für schreibgeschützte Datenbanken erstellt wurden.  
-  
 -   Statistiken, die für gefilterte Indizes erstellt wurden.  
-  
 -   Statistiken, die für Sichten erstellt wurden.  
-  
 -   Statistiken, die für interne Tabellen erstellt wurden.  
-  
 -   Statistiken, die mit räumlichen Indizes oder XML-Indizes erstellt wurden.  
  
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -414,7 +409,7 @@ FILLFACTOR = *Fillfactor*
  Bei XML-Indizes oder räumlichen Indizes wird nur ONLINE = OFF unterstützt, und wenn ONLINE auf ON festgelegt wird, wird ein Fehler ausgelöst.  
   
 > [!NOTE]
->  Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den Editionen unterstützt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [Editionen und unterstützte Funktionen für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den Editionen unterstützt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [Editionen und unterstützte Funktionen für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) und [Editionen und unterstützte Funktionen für SQL Server-2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
  ON  
  Lang andauernde Sperren werden nicht für die Dauer des Indexvorgangs aufrechterhalten. Während der Hauptphase des Indexvorgangs wird nur eine beabsichtigte freigegebene Sperre (IS) für die Quelltabelle aufrechterhalten. Auf diese Weise können Abfragen oder Updates der zugrunde liegenden Tabelle und Indizes fortgesetzt werden. Zu Beginn des Vorgangs wird das Quellobjekt für sehr kurze Zeit mit einer gemeinsamen Sperre (S) belegt. Am Ende des Vorgangs wird für kurze Zeit eine S-Sperre für die Quelle eingerichtet, wenn ein nicht gruppierter Index erstellt wird, oder es wird eine Sch-M-Sperre (Schema Modification, Schemaänderung) eingerichtet, wenn ein gruppierter Index online erstellt oder gelöscht wird oder wenn ein gruppierter oder nicht gruppierter Index neu erstellt wird. ONLINE kann nicht auf ON festgelegt werden, wenn ein Index auf einer lokalen temporären Tabelle erstellt wird.  

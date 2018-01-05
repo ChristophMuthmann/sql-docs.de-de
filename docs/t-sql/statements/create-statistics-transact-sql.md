@@ -1,7 +1,7 @@
 ---
 title: CREATE STATISTICS (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -31,11 +31,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b34ea1ffe5a61b8cb7a0ba8b695015a8655c8709
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 088b79e73be6258afc5c664aaf14ba3cad9d2f5f
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,9 +65,10 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
             [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | SAMPLE number { PERCENT | ROWS }   
             [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
-          | STATS_STREAM = stats_stream ] ]   
+          | <update_stats_stream_option> [ ,...n ]    
         [ [ , ] NORECOMPUTE ]   
-        [ [ , ] INCREMENTAL = { ON | OFF } ]  
+        [ [ , ] INCREMENTAL = { ON | OFF } ] 
+        [ [ , ] MAXDOP = max_degree_of_parallelism ]
     ] ;  
   
 <filter_predicate> ::=   
@@ -84,6 +85,11 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
   
 <comparison_op> ::=  
     IS | IS NOT | = | <> | != | > | >= | !> | < | <= | !<  
+    
+<update_stats_stream_option> ::=  
+    [ STATS_STREAM = stats_stream ]  
+    [ ROWCOUNT = numeric_constant ]  
+    [ PAGECOUNT = numeric_contant ] 
 ```  
   
 ```  
@@ -138,11 +144,11 @@ CREATE STATISTICS statistics_name
   
  Es folgen einige Beispiele für Filterprädikate für die Production.BillOfMaterials-Tabelle:  
   
- `WHERE StartDate > '20000101' AND EndDate <= '20000630'`  
+ * `WHERE StartDate > '20000101' AND EndDate <= '20000630'`  
   
- `WHERE ComponentID IN (533, 324, 753)`  
+ * `WHERE ComponentID IN (533, 324, 753)`  
   
- `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
+ * `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
   
  Weitere Informationen zu Filterprädikaten finden Sie unter [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
@@ -184,28 +190,38 @@ CREATE STATISTICS statistics_name
  Wenn Statistiken pro Partition nicht unterstützt werden, wird ein Fehler generiert. Inkrementelle Statistiken werden für folgende Statistiktypen nicht unterstützt:  
   
 -   Statistiken, die mit Indizes erstellt wurden, die über keine Partitionsausrichtung mit der Basistabelle verfügen.  
-  
 -   Statistiken, die für lesbare sekundäre Always On-Datenbanken erstellt wurden.  
-  
 -   Statistiken, die für schreibgeschützte Datenbanken erstellt wurden.  
-  
 -   Statistiken, die für gefilterte Indizes erstellt wurden.  
-  
 -   Statistiken, die für Sichten erstellt wurden.  
-  
 -   Statistiken, die für interne Tabellen erstellt wurden.  
-  
 -   Statistiken, die mit räumlichen Indizes oder XML-Indizes erstellt wurden.  
   
 **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
+MAXDOP = *Max_degree_of_parallelism*  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+  
+ Überschreibt die **Max. Grad an Parallelität** Konfigurationsoption für die Dauer des Vorgangs Statistik. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.  
+  
+ *Max_degree_of_parallelism* sind möglich:  
+  
+ 1  
+ Unterdrückt das Generieren paralleler Pläne.  
+  
+ \>1  
+ Schränkt die maximale Anzahl der Prozessoren, die in einer parallelen Statistik Operation auf die angegebene Anzahl oder weniger basierend auf der aktuellen systemarbeitsauslastung verwendet.  
+  
+ 0 (Standard)  
+ Verwendet abhängig von der aktuellen Systemarbeitsauslastung die tatsächliche Anzahl von Prozessoren oder weniger Prozessoren.  
+  
+ \<Update_stats_stream_option >[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert eine der folgenden Berechtigungen:  
   
 -   ALTER TABLE  
-  
 -   Benutzer ist der Besitzer der Tabelle  
-  
 -   Mitgliedschaft in der **Db_ddladmin** festen Datenbankrolle ""  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
@@ -224,8 +240,9 @@ CREATE STATISTICS statistics_name
  Die [Sys. sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) -Katalogsicht kennzeichnet jede Spalte im gefilterten statistikprädikat als eine verweisende Abhängigkeit. Überlegen Sie genau, welche Vorgänge Sie für Tabellenspalten ausführen, bevor Sie eine gefilterte Statistik erstellen, da Sie die Definition einer Tabellenspalte, die für ein Prädikat einer gefilterten Statistik definiert wurde, nicht löschen, umbenennen oder ändern können.  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
-*  Aktualisieren von Statistiken wird in externen Tabellen nicht unterstützt. Zum Aktualisieren der Statistiken für eine externe Tabelle löschen und Neuerstellen von Statistiken.  
-*  Sie können bis zu 64 Spalten pro Statistikobjekt auflisten.
+* Aktualisieren von Statistiken wird in externen Tabellen nicht unterstützt. Zum Aktualisieren der Statistiken für eine externe Tabelle löschen und Neuerstellen von Statistiken.  
+* Sie können bis zu 64 Spalten pro Statistikobjekt auflisten.
+* Die MAXDOP-Option ist nicht kompatibel mit den Optionen STATS_STREAM "," ROWCOUNT "und" PageCount ".
   
 ## <a name="examples"></a>Beispiele  
 

@@ -1,7 +1,7 @@
 ---
 title: ALTER WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 01/19/2016
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7bfb6ca0200095860acec2b275020012e4b96284
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0103b63c883e1d3f9a263cf5fdb4e4ef4ca9521f
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 ALTER WORKLOAD GROUP { group_name | "default" }  
 [ WITH  
     ([ IMPORTANCE = { LOW | MEDIUM | HIGH } ]  
@@ -57,24 +56,22 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Der Name einer vorhandenen benutzerdefinierten Arbeitsauslastungsgruppe oder der standardmäßigen Ressourcenkontrollen-Arbeitsauslastungsgruppe.  
   
 > [!NOTE]  
->  Die Ressourcenkontrolle erstellt den "Standard" und interne Gruppen, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist.  
+> Die Ressourcenkontrolle erstellt den "Standard" und interne Gruppen, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist.  
   
  Die "default"-Option muss in Anführungszeichen ("") oder Klammern ([]) eingeschlossen werden, wenn sie mit ALTER WORKLOAD GROUP verwendet wird, um einen Konflikt mit dem vom System reservierten Wort DEFAULT zu vermeiden. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md).  
   
 > [!NOTE]  
->  Verwenden vordefinierte Arbeitsauslastungsgruppen und Ressourcenpools werden ausschließlich Kleinbuchstabe Namen, z. B. "Default". Dies sollte bei Servern beachtet werden, die bei der Sortierung zwischen Groß-/Kleinschreibung unterscheiden. Server, die bei der Sortierung keine Groß- und Kleinschreibung unterscheiden, z. B. SQL_Latin1_General_CP1_CI_AS, behandeln "default" und "Default" gleich.  
+> Verwenden vordefinierte Arbeitsauslastungsgruppen und Ressourcenpools werden ausschließlich Kleinbuchstabe Namen, z. B. "Default". Dies sollte bei Servern beachtet werden, die bei der Sortierung zwischen Groß-/Kleinschreibung unterscheiden. Server, die bei der Sortierung keine Groß- und Kleinschreibung unterscheiden, z. B. SQL_Latin1_General_CP1_CI_AS, behandeln "default" und "Default" gleich.  
   
  IMPORTANCE = { LOW | MEDIUM | HIGH }  
  Gibt die relative Wichtigkeit einer Anforderung in der Arbeitsauslastungsgruppe an. Die Wichtigkeit kann einen der folgenden Werte aufweisen:  
   
 -   LOW  
-  
 -   MEDIUM (Standard)  
-  
 -   HIGH  
   
 > [!NOTE]  
->  Intern wird jede Wichtigkeitseinstellung als Zahl gespeichert, die für Berechnungen verwendet wird.  
+> Intern wird jede Wichtigkeitseinstellung als Zahl gespeichert, die für Berechnungen verwendet wird.  
   
  IMPORTANCE hat einen lokalen Bezug zum Ressourcenpool; Arbeitsauslastungsgruppen mit verschiedener Wichtigkeit innerhalb desselben Ressourcenpools beeinflussen sich gegenseitig, haben jedoch keine Auswirkungen auf Arbeitsauslastungsgruppen in anderen Ressourcenpools.  
   
@@ -82,7 +79,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Gibt die Höchstmenge an Arbeitsspeicher an, die eine einzelne Anforderung vom Pool in Anspruch nehmen kann. Dieser Prozentwert ist relativ zur Ressourcenpoolgröße, die von MAX_MEMORY_PERCENT festgelegt wird.  
   
 > [!NOTE]  
->  Die angegebene Menge bezieht sich nur auf den für die Abfrageausführung gewährten Arbeitsspeicher.  
+> Die angegebene Menge bezieht sich nur auf den für die Abfrageausführung gewährten Arbeitsspeicher.  
   
  *Wert* muss 0 oder eine positive ganze Zahl sein. Der zulässige Bereich für *Wert* liegt zwischen 0 und 100. Die Standardeinstellung für *Wert* ist 25.  
   
@@ -105,7 +102,10 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Gibt die maximale CPU-Zeit in Sekunden an, die eine Anforderung beanspruchen kann. *Wert* muss 0 oder eine positive ganze Zahl sein. Die Standardeinstellung für *Wert* ist 0 (null) bedeutet unbeschränkt.  
   
 > [!NOTE]  
->  Die Ressourcenkontrolle verhindert nicht, dass eine Anforderung bei Erreichung des maximalen Zeitlimits fortgesetzt wird. Es wird jedoch ein Ereignis generiert. Weitere Informationen finden Sie unter [CPU Threshold Exceeded-Ereignisklasse](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).  
+> Standardmäßig wird Ressourcenkontrolle nicht verhindern, dass eine Anforderung fortgesetzt, wenn die maximale Zeit überschritten wird. Es wird jedoch ein Ereignis generiert. Weitere Informationen finden Sie unter [CPU Threshold Exceeded-Ereignisklasse](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md). 
+
+> [!IMPORTANT]
+> Beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, und Verwenden von [Ablaufverfolgungsflag 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Ressourcenkontrolle wird eine Anforderung abgebrochen, wenn die maximale Zeit überschritten wird.
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*Wert*  
  Gibt die maximale Zeit in Sekunden an, die eine Abfrage auf das Freiwerden einer Arbeitspeicherzuweisung (Arbeitsspeicherpuffer) wartet.  

@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5900878e440a0ae821655adea764eaebad8fddf2
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
-ms.translationtype: HT
+ms.openlocfilehash: ec29eaa73339980516f4a3de4b67fa195953d80a
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -335,7 +335,7 @@ Vor dem [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP-Version 1.1, 
  Weitere Informationen zu diesen und anderen Sicherheitsaspekten bezüglich mithilfe von BULK INSERT finden Sie unter [Importieren von Massendaten durch Verwenden von BULK INSERT oder OPENROWSET &#40; BULK... &#41; &#40; SQLServer &#41; ](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ### <a name="permissions"></a>Berechtigungen  
- Erfordert die Berechtigungen INSERT und ADMINISTER BULK OPERATIONS. Darüber hinaus ist die ALTER TABLE-Berechtigung erforderlich, wenn mindestens eine der folgenden Bedingungen zutrifft:  
+ Erfordert die Berechtigungen INSERT und ADMINISTER BULK OPERATIONS. In Azure SQL-Datenbank sind INSERT und ADMINISTER Datenbank BULK OPERATIONS-Berechtigungen erforderlich. Darüber hinaus ist die ALTER TABLE-Berechtigung erforderlich, wenn mindestens eine der folgenden Bedingungen zutrifft:  
   
 -   Es sind Einschränkungen vorhanden, und die Option CHECK_CONSTRAINTS ist nicht angegeben.  
   

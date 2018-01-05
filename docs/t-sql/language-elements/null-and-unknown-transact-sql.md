@@ -18,11 +18,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d0523877d572bd644fa772713f3c7edb82d645f2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6a581045af3d5ed73e9cf9736c60588d87733369
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="null-and-unknown-transact-sql"></a>NULL und UNKNOWN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -39,23 +39,23 @@ ms.lasthandoff: 11/17/2017
   
 -   NULL-Werte können nicht als Informationen verwendet werden, die erforderlich sind, um eine Zeile in einer Tabelle von einer anderen Zeile in einer Tabelle, z. B. Primärschlüssel, oder Informationen, die zum Verteilen von Zeilen, z. B. Verteilung Schlüssel verwendet zu unterscheiden.  
   
- Sind NULL-Werte in den Daten vorhanden, ist es möglich, dass logische Operatoren und Vergleichsoperatoren nicht nur TRUE oder FALSE zurückgeben, sondern ein drittes Ergebnis: UNKNOWN. Diese Notwendigkeit einer dreiwertigen Logik ist die Ursache für zahlreiche Anwendungsfehler. In den folgenden Tabellen wird dargestellt, welche Auswirkungen die Einführung von Vergleichen zwischen NULL-Werten haben kann.  
+ Sind NULL-Werte in den Daten vorhanden, ist es möglich, dass logische Operatoren und Vergleichsoperatoren nicht nur TRUE oder FALSE zurückgeben, sondern ein drittes Ergebnis: UNKNOWN. Diese Notwendigkeit einer dreiwertigen Logik ist die Ursache für zahlreiche Anwendungsfehler. Logische Operatoren in einem booleschen Ausdruck, der unbekannte enthält werden UNKNOWN zurückgegeben, es sei denn, das Ergebnis des Operators, nicht auf dem unbekannten Ausdruck abhängt. Diese Tabellen enthalten Beispiele für dieses Verhalten.  
   
- Die folgende Tabelle zeigt die Ergebnisse des Anwendens eines AND-Operators auf zwei boolesche Operanden, in denen ein Operand gibt NULL zurück.  
+ Die folgende Tabelle zeigt die Ergebnisse des Anwendens eines AND-Operators auf zwei boolesche Ausdrücke, in denen ein Ausdruck UNKNOWN zurückgibt.  
   
-|Operand 1|Der Operand 2|Ergebnis|  
+|Ausdruck 1|Ausdruck 2|Ergebnis|  
 |---------------|---------------|------------|  
-|TRUE|NULL|FALSE|  
-|NULL|NULL|FALSE|  
-|FALSE|NULL|FALSE|  
+|TRUE|UNKNOWN|UNKNOWN|  
+|UNKNOWN|UNKNOWN|UNKNOWN|  
+|FALSE|UNKNOWN|FALSE|  
   
- Die folgende Tabelle zeigt die Ergebnisse des Anwendens eines OR-Operators auf zwei boolesche Operanden, in denen ein Operand gibt NULL zurück.  
+ Die folgende Tabelle zeigt die Ergebnisse des Anwendens eines OR-Operators auf zwei boolesche Ausdrücke, in denen ein Ausdruck UNKNOWN zurückgibt.  
   
-|Operand 1|Der Operand 2|Ergebnis|  
+|Ausdruck 1|Ausdruck 2|Ergebnis|  
 |---------------|---------------|------------|  
-|TRUE|NULL|TRUE|  
-|NULL|NULL|UNKNOWN|  
-|FALSE|NULL|UNKNOWN|  
+|TRUE|UNKNOWN|TRUE|  
+|UNKNOWN|UNKNOWN|UNKNOWN|  
+|FALSE|UNKNOWN|UNKNOWN|  
   
 ## <a name="see-also"></a>Siehe auch  
  [UND &#40; Transact-SQL &#41;](../../t-sql/language-elements/and-transact-sql.md)   

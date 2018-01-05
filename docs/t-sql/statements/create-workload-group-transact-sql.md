@@ -1,7 +1,7 @@
 ---
 title: Erstellen Sie die ARBEITSAUSLASTUNGSGRUPPE (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/16/2016
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dbe9d11d3b018df43eed813f8f987695f41ae189
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3554f6c282ba3ef551fd8592ede4c97f6d29b358
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 CREATE WORKLOAD GROUP group_name  
 [ WITH  
     ( [ IMPORTANCE = { LOW | MEDIUM | HIGH } ]  
@@ -65,13 +64,11 @@ CREATE WORKLOAD GROUP group_name
  Gibt die relative Wichtigkeit einer Anforderung in der Arbeitsauslastungsgruppe an. Wichtigkeit kann einen der folgenden, wobei MEDIUM die Standardeinstellung:  
   
 -   LOW  
-  
--   MEDIUM  
-  
+-   MEDIUM (Standard)    
 -   HIGH  
   
 > [!NOTE]  
->  Intern wird jede Wichtigkeitseinstellung als Zahl gespeichert, die für Berechnungen verwendet wird.  
+> Intern wird jede Wichtigkeitseinstellung als Zahl gespeichert, die für Berechnungen verwendet wird.  
   
  IMPORTANCE hat einen lokalen Bezug zum Ressourcenpool; Arbeitsauslastungsgruppen mit verschiedener Wichtigkeit innerhalb desselben Ressourcenpools beeinflussen sich gegenseitig, haben jedoch keine Auswirkungen auf Arbeitsauslastungsgruppen in anderen Ressourcenpools.  
   
@@ -79,7 +76,7 @@ CREATE WORKLOAD GROUP group_name
  Gibt die Höchstmenge an Arbeitsspeicher an, die eine einzelne Anforderung vom Pool in Anspruch nehmen kann. Dieser Prozentwert ist relativ zur Ressourcenpoolgröße, die von MAX_MEMORY_PERCENT festgelegt wird.  
   
 > [!NOTE]  
->  Die angegebene Menge bezieht sich nur auf den für die Abfrageausführung gewährten Arbeitsspeicher.  
+> Die angegebene Menge bezieht sich nur auf den für die Abfrageausführung gewährten Arbeitsspeicher.  
   
  *Wert* muss 0 oder eine positive ganze Zahl sein. Der zulässige Bereich für *Wert* liegt zwischen 0 und 100. Die Standardeinstellung für *Wert* ist 25.  
   
@@ -102,7 +99,10 @@ CREATE WORKLOAD GROUP group_name
  Gibt die maximale CPU-Zeit in Sekunden an, die eine Anforderung beanspruchen kann. *Wert* muss 0 oder eine positive ganze Zahl sein. Die Standardeinstellung für *Wert* ist 0 (null) bedeutet unbeschränkt.  
   
 > [!NOTE]  
->  Die Ressourcenkontrolle verhindert nicht, dass eine Anforderung bei Erreichung des maximalen Zeitlimits fortgesetzt wird. Es wird jedoch ein Ereignis generiert. Weitere Informationen finden Sie unter [CPU Threshold Exceeded-Ereignisklasse](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).  
+> Standardmäßig wird Ressourcenkontrolle nicht verhindern, dass eine Anforderung fortgesetzt, wenn die maximale Zeit überschritten wird. Es wird jedoch ein Ereignis generiert. Weitere Informationen finden Sie unter [CPU Threshold Exceeded-Ereignisklasse](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).  
+
+> [!IMPORTANT]
+> Beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, und Verwenden von [Ablaufverfolgungsflag 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Ressourcenkontrolle wird eine Anforderung abgebrochen, wenn die maximale Zeit überschritten wird. 
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*Wert*  
  Gibt die maximale Zeit in Sekunden an, die eine arbeitsspeicherzuweisung (Arbeitsspeicherpuffer) auf das Freiwerden eine Abfrage wartet.  

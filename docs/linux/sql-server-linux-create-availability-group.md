@@ -14,17 +14,19 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 6ad13c3432daee4fd38b6d46704adc0c00913f7a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c5b01fd8add48b2529c9d4150f153d6aea0b5f6c
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Erstellen und Konfigurieren einer verfügbarkeitsgruppe für SQL Server on Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 In diesem Lernprogramm wird beschrieben, wie zum Erstellen und Konfigurieren einer verfügbarkeitsgruppe (AG) für [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] unter Linux. Im Gegensatz zu [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] und zuvor auf Windows, Sie können Testreihen mit oder ohne den zugrunde liegenden Schrittmacher Cluster zuerst erstellen. Integration mit dem Cluster bei Bedarf bis zu einem späteren Zeitpunkt erfolgt nicht.
+
+Das Lernprogramm umfasst die folgenden Aufgaben:
  
 > [!div class="checklist"]
 > * Aktivieren von Verfügbarkeitsgruppen.
@@ -593,11 +595,9 @@ AG-Ressource, die erstellt wird, ist eine besondere Art von Ressource, die als K
     sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> --master meta notify=true
     ```
 
->[HINWEIS] Auf RHEL 7.4 können Sie eine Warnung mit der Verwendung des – Master auftreten. Um dies zu vermeiden, verwenden Sie die folgende Syntax:
-    ```bash
-    sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true
-    ```
-
+    >[!NOTE]
+    >Auf RHEL 7.4 können Sie eine Warnung mit der Verwendung des – Master auftreten. Um dies zu vermeiden, verwenden`sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true`
+   
     **SUSE Linux Enterprise Server (SLES)**
     
     ```bash
@@ -618,7 +618,7 @@ AG-Ressource, die erstellt wird, ist eine besondere Art von Ressource, die als K
     commit
     ```
     
-    where *NameForAGResource* is the unique name given to this cluster resource for the AG, and *AGName* is the name of the AG that was created.
+    wobei *NameForAGResource* ist der eindeutige Name für die Verfügbarkeitsgruppe für diese Clusterressource und *%AGname* ist der Name des der Verfügbarkeitsgruppe, die erstellt wurde.
  
 2.  Erstellen Sie die IP-Adressressource für die Verfügbarkeitsgruppe, die die Funktionalität des Listeners zugeordnet werden soll.
 
@@ -647,8 +647,7 @@ AG-Ressource, die erstellt wird, ist eine besondere Art von Ressource, die als K
     ```bash
     sudo pcs constraint colocation add <NameForIPResource> <NameForAGResource>-master INFINITY with-rsc-role=Master
     ```
-   
-    
+
     **SLES**
     
     ```bash
@@ -690,5 +689,5 @@ In diesem Lernprogramm haben Sie gelernt, wie zum Erstellen und Konfigurieren ei
 Die meisten AG Verwaltungsaufgaben, einschließlich Upgrades und ein Failover finden Sie unter:
 
 > [!div class="nextstepaction"]
-> [Betreiben HA-verfügbarkeitsgruppe für SQL Server on Linux](sql-server-linux-availability-group-failover-ha.md).
+> [Betreiben Sie HA-verfügbarkeitsgruppe für SQL Server on Linux](sql-server-linux-availability-group-failover-ha.md)
 

@@ -1,7 +1,7 @@
 ---
 title: Sys. dm_exec_query_stats (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/21/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 89f3fe5797170f85aeb1eff6eae506a5458999f2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cda9fe3ab2bc54f878e45834bca907976cb7793c
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,10 +107,18 @@ ms.lasthandoff: 11/17/2017
 |**last_used_threads**|**bigint**|Die Anzahl der verwendeten parallele Threads, wenn dieser Plan zuletzt ausgeführt. Es wird immer 0 für die Abfrage einer speicheroptimierten Tabellenstatus sein.<br /><br /> **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**min_used_threads**|**bigint**|Die minimale Anzahl von verwendet parallelen Threads dieses Plans jemals während einer Ausführung verwendet. Es wird immer 0 für die Abfrage einer speicheroptimierten Tabellenstatus sein.<br /><br /> **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**max_used_threads**|**bigint**|Die maximale Anzahl von verwendet parallelen Threads dieses Plans jemals während einer Ausführung verwendet. Es wird immer 0 für die Abfrage einer speicheroptimierten Tabellenstatus sein.<br /><br /> **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
+|**pdw_node_id**|**int**|Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.<br /><br /> **Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+|**total_columnstore_segment_reads**|**bigint**|Gesamtsumme der columnstore-Segmente, die von der Abfrage lesen. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**last_columnstore_segment_reads**|**bigint**|Die Anzahl der columnstore-Segmente, die von der letzten Ausführung der Abfrage gelesen werden. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**min_columnstore_segment_reads**|**bigint**|Die minimale Anzahl von columnstore-Segmente, die je von der Abfrage bei einer Ausführung gelesen werden soll. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**max_columnstore_segment_reads**|**bigint**|Die maximale Anzahl der columnstore-Segmente, die je von der Abfrage bei einer Ausführung gelesen werden soll. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**total_columnstore_segment_skips**|**bigint**|Gesamtsumme der columnstore-Segmente, die von der Abfrage ausgelassen. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**last_columnstore_segment_skips**|**bigint**|Die Anzahl der columnstore-Segmente, die von der letzten Ausführung der Abfrage ausgelassen. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**min_columnstore_segment_skips**|**bigint**|Die minimale Anzahl von columnstore-Segmente, die je von der Abfrage bei einer Ausführung übersprungen werden soll. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**max_columnstore_segment_skips**|**bigint**|Die maximale Anzahl der columnstore-Segmente, die je von der Abfrage bei einer Ausführung übersprungen werden soll. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|
   
 > [!NOTE]
-> <sup>1</sup> für systemintern kompilierte gespeicherte Prozeduren bei der Erfassung von Statistiken aktiviert ist, wird worker_time in Millisekunden. Wird die Abfrage in weniger als einer Millisekunde ausgeführt, lautet der Wert 0.  
+> <sup>1</sup> für systemintern kompilierte gespeicherte Prozeduren bei der Erfassung von Statistiken aktiviert ist, wird worker_time in Millisekunden. Wenn die Abfrage in weniger als einer Millisekunde ausgeführt wird, wird der Wert 0 lauten.  
   
 ## <a name="permissions"></a>Berechtigungen  
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
@@ -124,7 +132,7 @@ Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] benötigen Premium-Ebenen d
 ### <a name="a-finding-the-top-n-queries"></a>A. Suchen der TOP-N-Abfragen  
  Das folgende Beispiel gibt Informationen zu den fünf Abfragen mit dem höchsten durchschnittlichen CPU-Zeitaufwand zurück. Die Abfragen werden in diesem Beispiel anhand des Abfragehashes aggregiert, sodass logisch identische Abfragen basierend auf dem kumulierten Ressourcenverbrauch gruppiert werden.  
   
-``` t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TOP 5 query_stats.query_hash AS "Query Hash",   
@@ -141,13 +149,12 @@ FROM
      CROSS APPLY sys.dm_exec_sql_text(QS.sql_handle) as ST) as query_stats  
 GROUP BY query_stats.query_hash  
 ORDER BY 2 DESC;  
-  
 ```  
   
 ### <a name="b-returning-row-count-aggregates-for-a-query"></a>B. Zurückgeben der aggregierten Zeilenanzahlen für eine Abfrage  
  Im folgenden Beispiel werden Informationen zu aggregierten Zeilenanzahlen (Gesamtanzahl der Zeilen, minimale Anzahl der Zeilen, maximale Anzahl der Zeilen und letzte Zeilen) für Abfragen zurückgegeben.  
   
-``` t-sql  
+```sql  
 SELECT qs.execution_count,  
     SUBSTRING(qt.text,qs.statement_start_offset/2 +1,   
                  (CASE WHEN qs.statement_end_offset = -1   

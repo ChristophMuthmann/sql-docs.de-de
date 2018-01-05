@@ -33,14 +33,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 9e14fa00535414673f5526c6aedb3ec349235a29
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3a4ce958ed481b33f4785af2f0d7b32fb5baf519
+ms.sourcegitcommit: 9b8c7883a6c5ba38b6393a9e05367fd66355d9a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 Reduziert die Größe der Daten- und Protokolldateien in der angegebenen Datenbank.
   
@@ -65,14 +65,14 @@ DBCC SHRINKDATABASE
  Der gewünschte Prozentsatz an freiem Speicherplatz, der in der Datenbankdatei übrig bleiben soll, nachdem die Datenbank verkleinert wurde.  
   
  NOTRUNCATE  
- Komprimiert die Daten in Datendateien durch Verschieben von zugeordneten Seiten vom Ende einer Datei in nicht zugeordnete Seiten am Dateianfang. *Target_percent* ist optional.  
+ Komprimiert die Daten in Datendateien durch Verschieben von zugeordneten Seiten vom Ende einer Datei in nicht zugeordnete Seiten am Dateianfang. *Target_percent* ist optional. Diese Option wird mit Azure SQL Data Warehouse nicht unterstützt. 
   
  Der freie Speicherplatz am Dateiende wird nicht an das Betriebssystem zurückgegeben, und die physische Größe der Datei bleibt unverändert. Daher scheint die Datenbank bei Angabe von NOTRUNCATE nicht verkleinert zu werden.  
   
  NOTRUNCATE gilt nur für Datendateien. Die Protokolldatei ist nicht betroffen.  
   
  TRUNCATEONLY  
- Gibt den gesamten freien Speicherplatz am Dateiende an das Betriebssystem frei, es werden jedoch keine Seiten innerhalb der Datei verschoben. Die Datendatei wird nur bis zum letzten zugeordneten Block verkleinert. *Target_percent* wird ignoriert, wenn mit TRUNCATEONLY angegeben.  
+ Gibt den gesamten freien Speicherplatz am Dateiende an das Betriebssystem frei, es werden jedoch keine Seiten innerhalb der Datei verschoben. Die Datendatei wird nur bis zum letzten zugeordneten Block verkleinert. *Target_percent* wird ignoriert, wenn mit TRUNCATEONLY angegeben. Diese Option wird mit Azure SQL Data Warehouse nicht unterstützt.
   
  TRUNCATEONLY wirkt sich auf die Protokolldatei aus. Um nur die Datendatei abzuschneiden, verwenden Sie DBCC SHRINKFILE.  
   
@@ -108,6 +108,9 @@ Das Ausführen von DBCC SHRINKDATABASE ohne eine der Optionen NOTRUNCATE oder TR
 Die Datenbank, die verkleinert werden soll, muss sich nicht im Einzelbenutzermodus befinden. Andere Benutzer können während der Verkleinerung darin arbeiten. Das gilt auch für Systemdatenbanken.
   
 Während einer Datenbanksicherung können Sie die Datenbank nicht verkleinern. Umgekehrt können Sie eine Datenbank nicht sichern, während ein Verkleinerungsvorgang für die Datenbank ausgeführt wird.
+
+>[!NOTE]
+> Azure SQL Data Warehouse unterstützt derzeit keine DBCC SHRINKDATABASE mit der TDE aktiviert.
   
 ## <a name="how-dbcc-shrinkdatabase-works"></a>Funktionsweise von DBCC SHRINKDATABASE  
 DBCC SHRINKDATABASE verkleinert Datendateien pro Datei, Protokolldateien jedoch so, als lägen alle Protokolldateien in einem zusammenhängenden Protokollpool vor. Dateien werden immer am Ende verkleinert.
