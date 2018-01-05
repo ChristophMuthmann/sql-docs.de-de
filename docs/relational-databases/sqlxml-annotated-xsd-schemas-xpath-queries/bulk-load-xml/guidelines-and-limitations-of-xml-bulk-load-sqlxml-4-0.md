@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9b6abe63c911f92c661cb7ab4c56b3a2bb61fa14
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 453ce7fe955af4ffe25d13b1ab1abfef0f48cf59
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Richtlinien und Einschränkungen von XML-Massenladen (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Wenn Sie XML-Massenladen verwenden, sollten Sie mit den folgenden Richtlinien und Einschränkungen vertraut sein:  
@@ -171,7 +171,7 @@ ms.lasthandoff: 11/17/2017
   
 -   "Schemagen" bietet nur grundlegende Funktionalität für das Generieren des relationalen Schemas von XSD mit Anmerkungen. Der Benutzer muss die generierten Tabellen ggf. manuell ändern.  
   
--   "Schemagen" versucht, mehr als Beziehung zwischen Tabellen vorhanden ist, eine einzelne Beziehung zu erstellen, die zwischen den beiden Tabellen beteiligten Schlüssel enthält. Diese Einschränkung kann die Ursache eines [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Fehlers sein.  
+-   In denen mehr als eine Beziehung zwischen Tabellen vorhanden ist, versucht "schemagen" eine Beziehung zu erstellen, die alle Beteiligten zwischen den beiden Tabellen Schlüssel enthält. Diese Einschränkung kann die Ursache eines [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Fehlers sein.  
   
 -   Beim Massenladen von XML-Daten in eine Datenbank muss mindestens ein Attribut oder ein untergeordnetes Element im Zuordnungsschema vorhanden sein, das einer Datenbankspalte zugeordnet ist.  
   
