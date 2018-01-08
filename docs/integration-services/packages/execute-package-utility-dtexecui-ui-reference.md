@@ -107,7 +107,7 @@ ms.lasthandoff: 11/20/2017
   
 #### <a name="package-source--file-system"></a>Package Source = File System  
  **Paket**  
- Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)** , um das Paket mithilfe des Dialogfelds Öffnen zu suchen. In dem Dialogfeld werden standardmäßig nur Dateien mit der Erweiterung *.dtsx aufgelistet.  
+ Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)** , um das Paket mithilfe des Dialogfelds Öffnen zu suchen. In dem Dialogfeld werden standardmäßig nur Dateien mit der Erweiterung .dtsx aufgelistet.  
   
 #### <a name="package-source--ssis-package-store"></a>Package Source = SSIS Package Store  
  **Server**  
