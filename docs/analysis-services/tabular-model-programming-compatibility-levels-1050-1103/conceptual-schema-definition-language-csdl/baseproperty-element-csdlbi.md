@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c0dfb628e7c70edf6e5daf197e3f0d48d4cc9b20
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7f28d100ef59df6fe73b8dd93d1fbfebdb87bbb7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="baseproperty-element-csdlbi"></a>BaseProperty-Element (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Das BaseProperty-Element ist ein komplexer Typ, der als Basis für andere Elemente dient.  
@@ -34,29 +32,29 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>Elemente und Attribute  
  In der folgenden Tabelle sind die Elemente und Attribute aufgeführt, die das BaseProperty-Element definieren.  
   
-|Name|Ist erforderlich|Beschreibung|  
+|Name|Ist erforderlich|Description|  
 |----------|-----------------|-----------------|  
-|Ausrichtung|Nein|Der Name für das Element (Spalte, Measure, Navigationseigenschaft, Hierarchie oder Ebene), das von der Implementierung des Member-Typs definiert wird.|  
-|FormatString|Nein|Der Anzeigename für das Element.|  
-|IsRightToLeft|Nein|Ein boolescher Wert, der angibt, ob das Feld Text enthält, der von rechts nach links gelesen werden kann.<br /><br /> Wenn dieses Attribut weggelassen wird, wird die Standardeinstellung (des Modells) verwendet.|  
-|SortDirection|Nein|Ein Wert, der angibt, wie die Feldwerte normalerweise sortiert werden. Die Inhalte dieses Attributs werden vom einfachen Typ SortDirection definiert.<br /><br /> Wenn das Attribut nicht angegeben wird, wird eine Sortierrichtung auf Grundlage des Datentyps des Felds zugewiesen.|  
-|Einheiten|Nein|Das Symbol, das für Feldwerte zur Darstellung von Einheiten übernommen wird.<br /><br /> Wenn kein Wert angegeben ist, sind die Einheiten unbekannt.|  
+|Ausrichtung|nein|Der Name für das Element (Spalte, Measure, Navigationseigenschaft, Hierarchie oder Ebene), das von der Implementierung des Member-Typs definiert wird.|  
+|FormatString|nein|Der Anzeigename für das Element.|  
+|IsRightToLeft|nein|Ein boolescher Wert, der angibt, ob das Feld Text enthält, der von rechts nach links gelesen werden kann.<br /><br /> Wenn dieses Attribut weggelassen wird, wird die Standardeinstellung (des Modells) verwendet.|  
+|SortDirection|nein|Ein Wert, der angibt, wie die Feldwerte normalerweise sortiert werden. Die Inhalte dieses Attributs werden vom einfachen Typ SortDirection definiert.<br /><br /> Wenn das Attribut nicht angegeben wird, wird eine Sortierrichtung auf Grundlage des Datentyps des Felds zugewiesen.|  
+|Einheiten|nein|Das Symbol, das für Feldwerte zur Darstellung von Einheiten übernommen wird.<br /><br /> Wenn kein Wert angegeben ist, sind die Einheiten unbekannt.|  
   
 ## <a name="alignment-element"></a>Alignment-Element  
  Mit diesem einfachen Typ wird das Namensformat definiert, das verwendet wird, um Elemente zu unterscheiden.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
-|Keine|Verwenden Sie den Attributnamen.|  
+|InclusionThresholdSetting|Verwenden Sie den Attributnamen.|  
 |Kontext|Verwenden Sie den Namen der eingehenden Beziehung.|  
 |Merge|Verketten Sie den Namen der eingehenden Beziehung und den Eigenschaftsnamen gemäß den Regeln der aktuellen Grammatik.|  
   
 ## <a name="sortdirection-element"></a>SortDirections-Element  
  Mit diesem einfachen Typ wird das Namensformat definiert, das verwendet wird, um Elemente zu unterscheiden.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
-|Keine|Verwenden Sie den Attributnamen.|  
+|InclusionThresholdSetting|Verwenden Sie den Attributnamen.|  
 |Kontext|Verwenden Sie den Namen der eingehenden Beziehung.|  
 |Merge|Verketten Sie den Namen der eingehenden Beziehung und den Namen der Eigenschaft.|  
   

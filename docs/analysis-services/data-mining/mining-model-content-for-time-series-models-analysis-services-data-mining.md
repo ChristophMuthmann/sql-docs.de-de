@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: db5a4f94951de076e1076bb8b70ff796fecc9edd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 31909fbe1a60bca85249d7c28b11574a512f442d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Miningmodellinhalt von Zeitreihenmodellen (Analysis Services &ndash; Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Alle Miningmodelle verwendet die gleiche Struktur zur Speicherung des Inhalts. Diese Struktur wird nach dem Data Mining-Schemarowset für den Inhalt definiert. Innerhalb dieser standardmäßigen Struktur werden die Knoten, die Informationen enthalten, jedoch unterschiedlich angeordnet, sodass sie verschiedene Arten von Strukturen darstellen. In diesem Thema werden die Anordnung der Knoten und die Bedeutung der einzelnen Knoten für Miningmodelle erläutert, die auf dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus basieren.  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/08/2017
   
  Wenn der Knoten keine untergeordneten Elemente hat, bedeutet dies, dass keine signifikanten Bedingungen gefunden wurden, die die weitere Unterteilung der Fälle rechtfertigen würden. Die Verzweigung endet an diesem Punkt, und der Knoten wird als *Blattknoten*bezeichnet. Der Blattknoten enthält die Attribute, Koeffizienten und Werte, aus denen sich die ARTXP-Formel zusammensetzt.  
   
- Einige Verzweigungen weisen möglicherweise zusätzliche Teilungen auf wie bei einem Entscheidungsstrukturmodell. Beispiel: Die Verzweigung einer Struktur, die die Verkäufe für die Region Europa darstellt, wird in zwei Verzweigungen unterteilt. Eine Teilung tritt auf, wenn eine Bedingung gefunden wird, die einen signifikanten Unterschied zwischen den zwei Gruppen darstellt. Der übergeordnete Knoten gibt den Namen des Attributs an, das die Teilung verursacht hat, z. B. [Amount], sowie die Anzahl der Fälle im übergeordneten Knoten. Die Blattknoten geben detailliertere Informationen an: den Wert des Attributs (z. B. Verkäufe > 10.000 oder Verkäufe < 10.000), die Anzahl der Fälle, die die einzelnen Bedingungen erfüllen, und die ARTXP-Formel.  
+ Einige Verzweigungen weisen möglicherweise zusätzliche Teilungen auf wie bei einem Entscheidungsstrukturmodell. Beispiel: Die Verzweigung einer Struktur, die die Verkäufe für die Region Europa darstellt, wird in zwei Verzweigungen unterteilt. Eine Teilung tritt auf, wenn eine Bedingung gefunden wird, die einen signifikanten Unterschied zwischen den zwei Gruppen darstellt. Der übergeordnete Knoten gibt den Namen des Attributs an, das die Teilung verursacht hat, z. B. [Amount], sowie die Anzahl der Fälle im übergeordneten Knoten. Die Blattknoten geben detailliertere Informationen an: den Wert des Attributs (z. B. Verkäufe > 10.000 oder Verkäufe < 10.000), die Anzahl der Fälle, die die einzelnen Bedingungen erfüllen, und die ARTXP-Formel.  
   
 > [!NOTE]  
 >  Sie finden die komplette Regressionsformel auf Blattknotenebene, jedoch nicht in Stamm- oder Zwischenebenenknoten.  
@@ -415,7 +413,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  **NODE_DISTRIBUTION:** zeigt die Ausdrücke der Formel in einer geschachtelten Tabelle an, die Sie nach bestimmten Ausdrücken abfragen können. Die NODE_DISTRIBUTION-Tabelle weist dieselbe hierarchische Struktur auf wie die XML-Regeln. Das heißt, der Stammknoten der ARIMA-Reihe (NODE_TYPE = 27) enthält den Wert des konstanten Glieds und der Periodizitäten für die gesamte Formel, wobei es sich um mehrere Periodizitäten handeln kann, und die untergeordneten Knoten enthalten lediglich spezifische Informationen zu einer bestimmten periodischen Struktur bzw. die untergeordneten Knoten dieser periodischen Struktur.  
   
-|Knotentyp|Attribut|Werttyp|  
+|Knotentyp|attribute|Werttyp|  
 |---------------|---------------|----------------|  
 |27 (ARIMA-Stamm)|Konstantes Glied<br /><br /> Periodizität|11|  
 |28 (ARIMA Periodische Struktur)|Periodizität<br /><br /> Autoregressive Reihenfolge<br /><br /> Differenzreihenfolge<br /><br /> Reihenfolge für gleitenden Durchschnitt|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  

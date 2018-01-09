@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8a1c08102482ecfd1282416fda65d930526b8de3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9b489ecceb4d8aeb5716708ae680999a296b5d14
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="object-naming-rules-analysis-services"></a>Objektbenennungsregeln (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]In diesem Thema wird beschrieben, Benennungskonventionen für Objekte sowie reservierte Wörter und Zeichen in einem nicht verwendet werden, Objektnamen, im Code oder Skripts in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -88,9 +86,9 @@ ms.lasthandoff: 12/08/2017
   
 |Servermodus und Datenbank-Kompatibilitätsgrad|Reservierte Zeichen zulässig?|  
 |--------------------------------------------------|----------------------------------|  
-|MOLAP (alle Versionen)|Nein|  
-|Tabellarischer Modus - 1050|Nein|  
-|Tabellarischer Modus - 1100|Nein|  
+|MOLAP (alle Versionen)|nein|  
+|Tabellarischer Modus - 1050|nein|  
+|Tabellarischer Modus - 1100|nein|  
 |Tabellarischer Modus – 1130 und höher|ja|  
   
  Für Datenbanken kann als ModelType Default angegeben sein. 

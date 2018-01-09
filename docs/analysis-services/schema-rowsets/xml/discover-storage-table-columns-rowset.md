@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6ca81b54546e3ff69c42ea60484e462513443c5e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8a0fec3423b126a425206441543fd50679712c2f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverstoragetablecolumns-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMNS-Rowset
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Stellt Informationen auf Spaltenebene zu Speichertabellen, die von einer im SharePoint- oder tabellarischen Modus ausgeführten Analysis Services-Datenbank verwendet.  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Die **DISCOVER_STORAGE_TABLE_COLUMNS** Rowset enthält die folgenden Spalten.  
   
-|**Spaltenname**|**Typindikator**|**Einschränkung**|**Description**|  
+|**Spaltenname**|**Typindikator**|**Einschränkung**|**Beschreibung**|  
 |---------------------|------------------------|---------------------|---------------------|  
 |**DATENBANKNAME**|**DBTYPE_WSTR**|ja|Gibt den Namen der Datenbank an, die die Tabellen enthält. Bei Auslassung wird die aktuelle Datenbank verwendet.<br /><br /> Die **DISCOVER_STORAGE_TABLE_COLUMNS** Rowset kann mithilfe dieser Spalte eingeschränkt werden.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|ja|Gibt den Cube oder das Modell an, das die Tabellen enthält.<br /><br /> Das **DISCOVER_STORAGE_TABLES** -Rowset kann mithilfe dieser Spalte eingeschränkt werden.|  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/08/2017
   
  Die folgende Tabelle enthält die GUID und die Zeichenfolgenwerte, die dieses Rowset identifizieren.  
   
-|Argument|Wert|  
+|Argument|value|  
 |--------------|-----------|  
 |GUID|a07ccd44-8148-11D0-87bb-00c04fc33942|  
 |ADOMDNAME|StorageTableColumns|  

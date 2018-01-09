@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c2a32026cfa52b21ed994d8b218d5b80f5b0c03f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: dda2fe632e3a4cae0f36d766d4778f5ff910d649
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>Erstellen einer Dimension durch Generieren einer Nichtzeittabelle in der Datenquelle
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], können Sie den Dimensions-Assistenten [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] auf eine Dimension ohne Verwendung einer vorhandenen Datenquelle erstellen. Hierzu wählen Sie auf der Seite **Erstellungsmethode auswählen** des Assistenten die Option **Nichtzeittabelle in der Datenquelle generieren** aus. Um in der zugrunde liegenden Datenquelle eine neue Dimensionstabelle zu erstellen, müssen Sie über die Berechtigung zum Erstellen von Objekten in der zugrunde liegenden Datenquelle verfügen. Wenn Sie eine Dimension ohne vorab definierte Datenquellensicht definieren, können Sie entweder eine vollständig neue Dimension definieren oder eine Dimensionsvorlage verwenden.  
@@ -40,7 +37,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Customer  
   
--   Datum  
+-   date  
   
 -   Department  
   
@@ -98,7 +95,7 @@ ms.lasthandoff: 12/08/2017
   
  Wenn Sie das Kontrollkästchen **Dies ist eine veränderliche Dimension** aktivieren, definiert der Dimensions-Assistent die in der folgenden Tabelle aufgeführten Attribute:  
   
-|Attribut|Typ|  
+|attribute|Typ|  
 |---------------|----------|  
 |SCD-Original-ID|SCDOriginalID|  
 |SCD-Enddatum|SCDEndDate|  

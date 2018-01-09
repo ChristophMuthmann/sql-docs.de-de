@@ -5,13 +5,10 @@ ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 664aa30f1b4dca46597ba464e93eb8534e44dca3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 32dfe1b5c7367121bd36dae57d0175304fc2fe14
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="subselects-in-queries"></a>Unterauswahlen in Abfragen
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Unterauswahlausdrücke werden SELECT-Ausdrücke geschachtelt, die verwendet werden, um zu verhindern, dass das Leerzeichen des Cubes, in denen der äußere externe SELECT ausgewertet wird. Unterauswahlen ermöglichen es Ihnen, ein neues Leerzeichen zu definieren, über dem alle Berechnungen ausgewertet werden.  
@@ -80,7 +77,7 @@ SELECT [Date].[Calendar Year].MEMBERS on 0
   
 |||||||  
 |-|-|-|-|-|-|  
-||All Periods|KJ 2005|KJ 2006|CY 2007|KJ 2008|  
+||All Periods|KJ 2005|KJ 2006|KJ 2007|KJ 2008|  
 |Mountain-200 Black, 38|$1,634,647.94|(null)|(null)|$894,207.97|$740,439.97|  
 |Mountain-200 Black, 42|$1,285,524.65|(null)|(null)|$722,137.65|$563,387.00|  
 |Mountain-200 Silver, 38|$1,181,945.82|(null)|(null)|$634,600.78|$547,345.03|  
@@ -114,7 +111,7 @@ SELECT [Date].[Calendar Year].MEMBERS on 0
   
 |||||||  
 |-|-|-|-|-|-|  
-||All Periods|KJ 2005|KJ 2006|CY 2007|KJ 2008|  
+||All Periods|KJ 2005|KJ 2006|KJ 2007|KJ 2008|  
 |All Products|$19,997,183.30|$1,696,815.63|$2,816,611.28|$7,930,797.72|$7,552,958.66|  
 |Mountain-200 Silver, 38|$2,160,981.60|(null)|(null)|$1,024,359.10|$1,136,622.49|  
 |Mountain-200 Silver, 42|$1,914,547.85|(null)|(null)|$903,061.68|$1,011,486.18|  
@@ -151,7 +148,7 @@ SELECT [Date].[Calendar Year].MEMBERS on 0
   
 |||||||  
 |-|-|-|-|-|-|  
-||All Periods|KJ 2005|KJ 2006|CY 2007|KJ 2008|  
+||All Periods|KJ 2005|KJ 2006|KJ 2007|KJ 2008|  
 |All Products|$748,682.49|$32,204.43|$73,125.18|$269,506.56|$373,846.32|  
 |Mountain-200 Silver, 38|$90,479.61|(null)|(null)|$41,759.82|$48,719.79|  
 |Mountain-200 Silver, 42|$97,439.58|(null)|(null)|$39,439.83|$57,999.75|  

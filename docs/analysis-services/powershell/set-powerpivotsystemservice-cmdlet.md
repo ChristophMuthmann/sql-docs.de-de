@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: f6ef197b-3d74-4339-ae73-8a7c1eaf0e91
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 755c54c15e1004d3abc4caf18f89001bf6b53af4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fc15f310355b3ecaab626600c14ee27905d250a5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-powerpivotsystemservice-cmdlet"></a>Set-PowerPivotSystemService-Cmdlet
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Legt die globalen Eigenschaften des PowerPivotSystemService-Objekts auf Farmebene fest.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/08/2017
 Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-UpdateAssemblyInformation <switch>] [-WorkbookUpgradeOnDataRefresh <boolean>] [-DirectTCPConnections <boolean>] [-Confirm <switch>] [<CommonParameters>]  
 ```  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>Description  
  Das Cmdlet „Set-PowerPivotSystemService“ aktualisiert die Eigenschaften des übergeordneten [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service-Objekts in der Farm.  
   
 ## <a name="parameters"></a>Parameter  

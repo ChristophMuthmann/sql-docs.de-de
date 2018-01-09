@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 97ff6ba8-c236-4ba6-8220-b0fcb9e1dc5c
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b715a469718a168f0872e3f95cd817ec1e735d4e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 77bef111f20a6ccc72347b8e02bd967ef2d316b4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="refresh-command-tmsl"></a>Refresh-Befehl (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Verarbeitet Objekte in der aktuellen Datenbank.   
@@ -68,7 +66,7 @@ ms.lasthandoff: 12/08/2017
   
 ||||  
 |-|-|-|  
-|**Aktualisierungstyp**|**Gilt für**|**Description**|  
+|**Aktualisierungstyp**|**Gilt für**|**Beschreibung**|  
 |Volle|-Datenbank<br />Tabelle<br />Partition|Hiermit werden für alle Partitionen in der angegebenen Partition, Tabelle oder Datenbank die Daten aktualisiert und alle abhängigen Elemente neu berechnet. Hiermit werden für eine Berechnungspartition die Partition und alle abhängigen Elemente neu berechnet.|  
 |clearValues|-Datenbank<br />Tabelle<br />Partition|Hiermit werden Werte in diesem Objekt und allen abhängigen Elementen gelöscht.|  
 |berechnen|-Datenbank<br />Tabelle<br />Partition|Hiermit werden dieses Objekt und alle abhängigen Elemente neu berechnet, aber nur, wenn erforderlich. Dieser Wert erzwingt keine Neuberechnung, mit Ausnahme von veränderlichen Formeln.|  

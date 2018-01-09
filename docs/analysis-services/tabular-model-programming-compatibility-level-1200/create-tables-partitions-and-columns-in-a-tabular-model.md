@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: cf0e4791-ad3b-41a8-81ce-509d4cf223f8
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 94bad422a63276ad130027ea77de4734571016a8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2017fa20a68222bf577cc68284882ac15a22f95f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-tables-partitions-and-columns-in-a-tabular-model"></a>Erstellen von Tabellen, Partitionen und Spalten in einem tabellarischen Modell
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]In einem tabellarischen Modell besteht aus eine Tabelle Zeilen und Spalten. Zeilen sind in Partitionen unterteilt, um inkrementelle datenaktualisierung zu unterstützen. Eine tabellarische Lösung kann mehrere Typen von Tabellen, je nachdem, wo die Daten stammen unterstützen:  

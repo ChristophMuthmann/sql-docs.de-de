@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 66d86e3583b81069f2c1f77a616dac91a022ff9c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 878568721816c90e202727dc3e516370f9c3ee56
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverstoragetablecolumnsegments-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS-Rowset
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Bietet Informationen zu den auf Spalten- und Segmentebene Speichertabellen, die von einer ausgeführten tabellarischen Analysis Services-Datenbank verwendet oder [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Modus. Dieses Rowset wird hauptsächlich für Problembehandlung und Analyse verwendet.  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Die **DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS** Rowset enthält die folgenden Spalten.  
   
-|**Spaltenname**|**Typindikator**|**Einschränkung**|**Description**|  
+|**Spaltenname**|**Typindikator**|**Einschränkung**|**Beschreibung**|  
 |---------------------|------------------------|---------------------|---------------------|  
 |**DATENBANKNAME**|**DBTYPE_WSTR**|ja|Gibt die tabellarische Datenbank an.<br /><br /> Die **DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS** Rowset kann mithilfe dieser Spalte eingeschränkt werden. Wenn die aktuelle Datenbank ausgelassen wird verwendet.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|ja|Der Name des Modells.<br /><br /> Das **DISCOVER_STORAGE_TABLES** -Rowset kann mithilfe dieser Spalte eingeschränkt werden.|  
@@ -58,7 +56,7 @@ ms.lasthandoff: 12/08/2017
   
  Die folgende Tabelle enthält die GUID und die Zeichenfolgenwerte, die dieses Rowset identifizieren.  
   
-|Argument|Wert|  
+|Argument|value|  
 |--------------|-----------|  
 |GUID|a07ccd45-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|StorageSegments|  

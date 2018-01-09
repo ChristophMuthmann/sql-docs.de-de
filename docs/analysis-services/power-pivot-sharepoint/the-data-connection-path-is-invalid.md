@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: bd22e41a-0931-4d32-888a-633a3046fc5e
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0f881435773a1a87969f1ad66c46cd9f55208071
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b74fcdb45f2f7fb85423da9faa629e3565b10209
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="the-data-connection-path-is-invalid"></a>Der Datenverbindungspfad ist ungültig
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Für Excel-Arbeitsmappen, die enthalten [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Daten, Excel Services gibt diesen Fehler zurück, wenn der eingebetteten Datenquellen hergestellt werden kann.  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 01c75144c964c80a224401cd7b5f81939f2714e9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4b2c46d037112cb79502e8d0ce56a5c9c319ec09
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>CSDLBI-Attribute für Berichtsentwurf
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dieser Abschnitt beschreibt die Attribute in die Erweiterungen für CSDL für tabellenmodellierung, die Einfluss auf [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Abfrageentwurf.  
@@ -32,9 +30,9 @@ ms.lasthandoff: 12/08/2017
 ## <a name="model-attributes"></a>Modellattribute  
  Diese Attribute werden für ein Unterelement eines [EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx) -Elements der CSDL definiert.  
   
-|Attributname|Datentyp|Beschreibung|  
+|Attributname|Datentyp|Description|  
 |--------------------|---------------|-----------------|  
-|Culture|Text|Gibt die für Währungsformate verwendete Kultur an. Wenn keine Angabe erfolgt, wird EN-US verwendet.|  
+|Culture|Textmodus|Gibt die für Währungsformate verwendete Kultur an. Wenn keine Angabe erfolgt, wird EN-US verwendet.|  
 |IsRightToLeft|Boolean|Gibt an, ob die Werte von Textfeldern standardmäßig von rechts nach links gelesen werden sollen.|  
   
 ## <a name="entity-attributes"></a>Entitätsattribute  
@@ -42,11 +40,11 @@ ms.lasthandoff: 12/08/2017
   
 |Attributname|Datentyp|Description|  
 |--------------------|---------------|-----------------|  
-|**Verweisname**|Text|Der Bezeichner, der verwendet wird, um in einer DAX-Abfrage auf diese Entität zu verweisen. Wenn kein Bezeichner angegeben wird, wird der Name verwendet.|  
-|**Beschriftung**|Text|Der Anzeigename für die Entität.|  
-|**Dokumentation**|Text|Beschreibender Text, der Geschäftskunden die Bedeutung der Daten erläutert.|  
+|**Verweisname**|Textmodus|Der Bezeichner, der verwendet wird, um in einer DAX-Abfrage auf diese Entität zu verweisen. Wenn kein Bezeichner angegeben wird, wird der Name verwendet.|  
+|**Beschriftung**|Textmodus|Der Anzeigename für die Entität.|  
+|**Dokumentation**|Textmodus|Beschreibender Text, der Geschäftskunden die Bedeutung der Daten erläutert.|  
 |**Hidden**|Boolean|Gibt an, ob die Entität angezeigt werden soll. Der Standardwert ist **false**.|  
-|**CollectionCaption**|Text|Der Pluralname für den Verweis auf einen Satz von Instanzen der Entität. Wenn der Name nicht angegeben wird, wird das Caption-Attribut verwendet.|  
+|**CollectionCaption**|Textmodus|Der Pluralname für den Verweis auf einen Satz von Instanzen der Entität. Wenn der Name nicht angegeben wird, wird das Caption-Attribut verwendet.|  
 |**DisplayKey**|MemberRef[]|Eine sortierte Felderliste, mit der einem Geschäftskunden eine Entitätsinstanz angezeigt wird. Die Verweise können Instanz- und Navigationseigenschaften einschließen. Wenn auf eine Navigationseigenschaft verwiesen wird, wird der **DisplayKey** der Zielentität angezeigt. Wenn der **DisplayKey** -Wert ausgelassen wird, wird das Schlüsselfeld verwendet.|  
 |**DefaultImage**|MemberRef|Ein Verweis auf das Feld, das ein Bild enthält, mit dem einem Geschäftskunden visuell eine Entitätsinstanz angezeigt wird. Wenn der Verweis nicht angegeben wird, wird das erste Bildfeld in der Entität verwendet (sofern vorhanden).|  
 |**DefaultDetails**|MemberRef[]|Eine sortierte Liste von Feldern, die den Standardsatz der Detailinformationen darstellt, die einem Geschäftsbenutzer zu einer Entitätsinstanz angezeigt werden. Wenn die Liste nicht angegeben wird, werden die ersten fünf Felder in der Entität verwendet, wobei die Felder ausgeschlossen werden, auf die bereits von **Key**, **DisplayKey**oder **DefaultImage**verwiesen wird.|  
@@ -59,15 +57,15 @@ ms.lasthandoff: 12/08/2017
   
 |Attributname|Datentyp|Description|  
 |--------------------|---------------|-----------------|  
-|**Verweisname**|Text|Der Bezeichner, der verwendet wird, um in einer DAX-Abfrage auf diese Entität zu verweisen. Wenn der Bezeichner nicht angegeben wird, wird der Feldname verwendet.|  
-|**Beschriftung**|Text|Der Anzeigename für die Entität. Wenn der Name nicht angegeben wird, wird der **ReferenceName** des Felds verwendet.|  
-|**Dokumentation**|Text|Beschreibender Text, der Geschäftskunden die Bedeutung des Felds erläutert.|  
+|**Verweisname**|Textmodus|Der Bezeichner, der verwendet wird, um in einer DAX-Abfrage auf diese Entität zu verweisen. Wenn der Bezeichner nicht angegeben wird, wird der Feldname verwendet.|  
+|**Beschriftung**|Textmodus|Der Anzeigename für die Entität. Wenn der Name nicht angegeben wird, wird der **ReferenceName** des Felds verwendet.|  
+|**Dokumentation**|Textmodus|Beschreibender Text, der Geschäftskunden die Bedeutung des Felds erläutert.|  
 |**Hidden**|Boolean|Gibt an, ob das Feld angezeigt werden soll. Der Standard ist **false**und bedeutet, dass das Feld angezeigt wird.|  
-|**DisplayFolder**|Text|Der Name (vollständiger Pfad) des Ordners, in dem das Feld angezeigt wird. Wenn der Name nicht angegeben wird, wird das Feld am Modellstamm angezeigt.|  
+|**DisplayFolder**|Textmodus|Der Name (vollständiger Pfad) des Ordners, in dem das Feld angezeigt wird. Wenn der Name nicht angegeben wird, wird das Feld am Modellstamm angezeigt.|  
 |**ContextualNameRule**|Enum|Ein Wert, der angibt, ob und wie der Eigenschaftsname auf Grundlage des Kontexts geändert werden sollte, in dem er verwendet wird. Mögliche Werte:  **None**,  **Role**,  **Merge**.|  
 |**Ausrichtung**|Enum|Ein Wert, der angibt, wie die Feldwerte in einer Tabellenpräsentation ausgerichtet werden sollten. Mögliche Werte **Default**, **Center**, **Left**, **Right**. Wenn der Wert nicht angegeben wird, wird die Ausrichtung durch den Standardwert auf Grundlage des Datentyps des Felds bestimmt.|  
-|**FormatString**|Text|Eine .NET-Formatzeichenfolge, die angibt, wie der Wert des Felds standardmäßig formatiert werden sollte. Wenn die Zeichenfolge nicht angegeben wird, wird das folgende Format angenommen:<br /><br /> Datetime - Felder: regionales kurzes Datum oder "d"<br /><br /> -Gleitkommafelder und ganzzahlige Felder mit einer standardaggregatfunktion: regionale Zahl oder "n"<br /><br /> -Ganze Zahlen ohne standardaggregatfunktion: regionale Dezimalzahl oder "d"<br /><br /> Für alle anderen Feldtypen ist keine Formatzeichenfolge gültig.|  
-|**Einheiten**|Text|Das Symbol, das für Feldwerte zur Darstellung von Einheiten übernommen wird. Wenn das Symbol nicht angegeben wird, werden die Einheiten als unbekannt angenommen.|  
+|**FormatString**|Textmodus|Eine .NET-Formatzeichenfolge, die angibt, wie der Wert des Felds standardmäßig formatiert werden sollte. Wenn die Zeichenfolge nicht angegeben wird, wird das folgende Format angenommen:<br /><br /> Datetime - Felder: regionales kurzes Datum oder "d"<br /><br /> -Gleitkommafelder und ganzzahlige Felder mit einer standardaggregatfunktion: regionale Zahl oder "n"<br /><br /> -Ganze Zahlen ohne standardaggregatfunktion: regionale Dezimalzahl oder "d"<br /><br /> Für alle anderen Feldtypen ist keine Formatzeichenfolge gültig.|  
+|**Einheiten**|Textmodus|Das Symbol, das für Feldwerte zur Darstellung von Einheiten übernommen wird. Wenn das Symbol nicht angegeben wird, werden die Einheiten als unbekannt angenommen.|  
 |**Width**|Integer|Die bevorzugte Breite in Zeichen, die zum Anzeigen der Werte des Felds in einer Tabellenpräsentation reserviert werden sollen. Wenn die Breite nicht angegeben wird, wird eine Standardbreite angenommen, die auf dem Datentyp des Felds basiert.|  
 |**SortDirection**|Enum|Ein Wert, der angibt, wie die Feldwerte normalerweise sortiert werden. Mögliche Werte: **Default**, **Ascending**, **Descending**. Wenn der Wert nicht angegeben wird, wird mit dem Standardwert eine Sortierrichtung auf Grundlage des Datentyps des Felds zugewiesen.|  
 |**IsRightToLeft**|Boolean|Gibt an, ob das Feld Text enthält, der von rechts nach links gelesen werden soll. Wenn der Wert nicht angegeben wird, wird die Modelleinstellung verwendet.|  

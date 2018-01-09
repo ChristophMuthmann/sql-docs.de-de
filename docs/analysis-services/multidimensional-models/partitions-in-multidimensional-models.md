@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 26e01dc7-fa49-4b1f-99eb-7799d1b4dcd2
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 986ade2663f23d0e987269a9474963d3f7137e71
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6984e77d1969db95ac8b8659ba841085ce7ef7c8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="partitions-in-multidimensional-models"></a>Partitionen in mehrdimensionalen Modellen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], *Partition* den physischen Speicher der in eine Measuregruppe geladenen Faktendaten. Für jede Measuregruppe wird automatisch eine einzelne Partition erstellt. Es ist jedoch üblich, zusätzliche Partitionen zur weiteren Segmentierung der Daten zu erstellen, um eine effizientere Verarbeitung und eine schnellere Abfrageleistung zu erzielen.  
@@ -45,7 +42,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="remote-partitions"></a>Remotepartitionen  
  Bei Remotepartitionen handelt es sich um Partitionen, die auf einem Server definiert, aber auf einem anderen verarbeitet und gespeichert werden. Verwenden Sie Remotepartitionen, wenn Sie die Speicherung Ihrer Daten und Metadaten über mehrere Server verteilen möchten. Wenn Sie von der Entwicklung zur Produktion wechseln, wächst die Größe der zu analysierenden Daten normalerweise um ein Vielfaches. Bei so großen Datensegmenten besteht eine mögliche Alternative aus der Verteilung der Daten über mehrere Computer. Das liegt nicht nur daran, dass ein Computer nicht alle Daten fassen kann, sondern dass es sinnvoll ist, die Daten parallel auf mehr als einem Computer zu verarbeiten. Weitere Informationen finden Sie unter [Erstellen und Verwalten einer Remotepartition &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md).  
   
-## <a name="aggregations"></a>Aggregationen  
+## <a name="aggregations"></a>Aggregations  
  Aggregationen sind vorausberechnete Zusammenfassungen von Cubedaten, die die Abfrageantwortzeiten in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] beschleunigen. Sie können die Anzahl der für eine Measuregruppe erstellten Aggregationen steuern, indem Sie Grenzwerte für den Speicher und Leistungsgewinne festlegen oder den Prozess zur Erstellung von Aggregationen nach einer Weile willkürlich beenden. Mehr Aggregationen bringen nicht unbedingt Vorteile. Jede neue Aggregation verursacht Kosten sowohl beim Festplattenspeicher als auch bei der Verarbeitungszeit. Es wird empfohlen, Aggregationen für einen Leistungsgewinn von 30 % zu erstellen und die Anzahl von Aggregationen nur zu erhöhen, wenn Tests oder der laufende Betrieb dies erforderlich machen. Weitere Informationen finden Sie unter [Entwerfen von Aggregationen &#40;Analysis Services – Mehrdimensional&#41;](../../analysis-services/multidimensional-models/designing-aggregations-analysis-services-multidimensional.md).  
   
 ## <a name="partition-merging-and-editing"></a>Zusammenführen und Bearbeiten von Partitionen  

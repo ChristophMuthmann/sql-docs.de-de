@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7a73988ba44bc7f72d8541fb6db445c2a3958554
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2f3197d3962f7bce7b8882b9676643bed4a97bdb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Übersicht über logische Architektur (Analysis Services – Mehrdimensionale Daten)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Services arbeitet in einem serverbereitstellungsmodus, der bestimmt, die Arbeitsspeicher Architektur und Common Language Runtime-Umgebung durch verschiedene Typen von Analysis Services-Modelle verwendet. Der Servermodus wird während der Installation bestimmt. **Mehrdimensionale und Data Mining-Modus** herkömmliches OLAP und Datamining unterstützt. **Tabellenmodus** tabellarische Modelle unterstützt. **Im integrierten SharePoint-Modus** bezieht sich auf einer Instanz von Analysis Services, die als installiert wurde [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint, zum Laden und Abfragen von Excel oder [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Datenmodellen innerhalb einer Arbeitsmappe.  
@@ -103,7 +101,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>Zuordnen von Measures, Attributen und Hierarchien  
  Die Measures, Attribute und Hierarchien des Cubes in dem Beispiel werden aus den folgenden Spalten in den Fakten- und Dimensionstabellen des Cubes abgeleitet.  
   
-|Measure oder Attribut (Ebene)|Element|Quelltabelle|Quellspalte|Beispielspaltenwert|  
+|Measure oder Attribut (Ebene)|Member|Quelltabelle|Quellspalte|Beispielspaltenwert|  
 |------------------------------------|-------------|------------------|-------------------|-------------------------|  
 |Packages-Measure|Nicht verfügbar|ImportsFactTable|Pakete|12|  
 |Last-Measure|Nicht verfügbar|ImportsFactTable|Letzter|May-03-99|  

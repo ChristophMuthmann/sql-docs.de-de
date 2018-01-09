@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e92a5a964dc95906cc6d74e983723868e7b48c61
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 77fb61b67606c1d0ab3fd81f561c1dbdd0c4a126
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="programming-amo-olap-basic-objects"></a>Programming AMO OLAP basic objects
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Erstellen von komplexen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Objekte ist einfach und unkompliziert, aber Details genau beachtet werden muss. In diesem Thema werden die Programmierdetails von grundlegenden OLAP-Objekten erläutert. Dieses Thema enthält folgende Abschnitte:  

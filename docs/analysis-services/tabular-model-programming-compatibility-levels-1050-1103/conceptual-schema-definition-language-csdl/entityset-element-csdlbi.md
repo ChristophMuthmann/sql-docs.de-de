@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 20401dbc3487931219009811c83694c7f2f19703
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4ae8366ecec5bf25e1fd27a63d22ac796c080660
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="entityset-element-csdlbi"></a>EntitySet-Element (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Das EntitySet-Element definiert eine Auflistung von Entitäten eines bestimmten Typs in einem CSDLBI-Datenmodell.  
@@ -38,10 +36,10 @@ ms.lasthandoff: 12/08/2017
   
 |Attributname|Ist erforderlich|Description|  
 |--------------------|-----------------|-----------------|  
-|Beschriftung|Nein|Eine benutzerfreundliche Beschreibung der Entitätenmenge.|  
-|CollectionCaption|Nein|Eine Zeichenfolge, die den Namen der Entität im Plural enthält.|  
-|ReferenceName|Nein|Enthält den nicht zusammengeführten und vollqualifizierten Namen der Entität. In einem mehrdimensionalen Modell entspricht dies dem CubeDimensions-Namen.|  
-|Hidden|Nein|Gibt an, ob das die Entität ausgeblendet ist. Standardmäßig werden Entitäten nicht ausgeblendet.|  
+|Beschriftung|nein|Eine benutzerfreundliche Beschreibung der Entitätenmenge.|  
+|CollectionCaption|nein|Eine Zeichenfolge, die den Namen der Entität im Plural enthält.|  
+|ReferenceName|nein|Enthält den nicht zusammengeführten und vollqualifizierten Namen der Entität. In einem mehrdimensionalen Modell entspricht dies dem CubeDimensions-Namen.|  
+|Ausgeblendet|nein|Gibt an, ob das die Entität ausgeblendet ist. Standardmäßig werden Entitäten nicht ausgeblendet.|  
   
 ## <a name="example"></a>Beispiel  
  **Tabellarisch**  

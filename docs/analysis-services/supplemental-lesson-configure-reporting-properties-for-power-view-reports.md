@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8fb40241f031cca90bd2be5069d0c61a0c100dd1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 04edc4aeea3123ad58775fddf3a821f65decd90b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>Ergänzende Lektion: Konfigurieren von Berichterstellungseigenschaften für Power View-Berichte
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +31,7 @@ In dieser ergänzenden Lektion legen Sie berichterstellungseigenschaften für da
   
 Geschätzte Zeit zum Bearbeiten dieser Lektion: **30 Minuten**  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
 Diese ergänzende Lektion ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Sie sollten vor dem Ausführen der Aufgaben in dieser ergänzenden Lektion alle vorherigen Lektionen abgeschlossen haben.  
 Zum Ausführen dieser ergänzenden Lektion benötigen Sie zusätzlich Folgendes:  
   
@@ -155,7 +155,7 @@ Sie legen hier nur einige von zahlreichen Spalteneigenschaften fest. Ausführlic
   
     **Customer**  
   
-    |Column|Eigenschaft|Wert|  
+    |Spalte|Eigenschaft|value|  
     |----------|------------|---------|  
     |Geography Id|Ausgeblendet|Wahr|  
     |Birth Date|Datenformat|Short Date|  
@@ -165,9 +165,9 @@ Sie legen hier nur einige von zahlreichen Spalteneigenschaften fest. Ausführlic
     > [!NOTE]  
     > Da die Tabelle Date mithilfe der Einstellung Als Datumstabelle markieren in "Lektion 7: Markieren als Datumstabelle" als Datumstabelle für das Modell ausgewählt wurde und die Spalte Date in der Tabelle Date als Spalte ausgewählt wurde, die als eindeutiger Bezeichner fungieren soll, wird die Eigenschaft Zeilenbezeichner für die Spalte Date automatisch auf True festgelegt und kann nicht geändert werden. Bei Verwendung von Zeitintelligenzfunktionen in DAX-Formeln müssen Sie eine Datumstabelle angeben. In diesem Modell haben Sie unter Verwendung von Zeitintelligenzfunktionen eine Reihe von Measures zur Berechnung von Umsatzdaten für verschiedene Zeiträume, z. B. das vorherige und aktuelle Quartal, sowie zur Verwendung in KPIs erstellt. Weitere Informationen zum Angeben einer Datumstabelle finden Sie unter [Angeben von „Als Datumstabelle markieren“ zur Verwendung mit Zeitintelligenz &#40;SSAS – tabellarisch&#41;](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) in der SQL Server-Onlinedokumentation.  
   
-    |Column|Eigenschaft|Wert|  
+    |Spalte|Eigenschaft|value|  
     |----------|------------|---------|  
-    |Date|Datenformat|Short Date|  
+    |date|Datenformat|Short Date|  
     |Day Number of Week|Ausgeblendet|Wahr|  
     |Day Name|Nach Spalte sortieren|Day Number of Week|  
     |Day of Week|Ausgeblendet|Wahr|  
@@ -182,14 +182,14 @@ Sie legen hier nur einige von zahlreichen Spalteneigenschaften fest. Ausführlic
   
     **Geography**  
   
-    |Column|Eigenschaft|Wert|  
+    |Spalte|Eigenschaft|value|  
     |----------|------------|---------|  
     |Geography Id|Ausgeblendet|Wahr|  
     |Sales Territory Id|Ausgeblendet|Wahr|  
   
     **Product**  
   
-    |Column|Eigenschaft|Wert|  
+    |Spalte|Eigenschaft|value|  
     |----------|------------|---------|  
     |Product Id|Ausgeblendet|Wahr|  
     |Product Alternate Id|Standardbeschriftung|Wahr|  
@@ -199,7 +199,7 @@ Sie legen hier nur einige von zahlreichen Spalteneigenschaften fest. Ausführlic
   
     **Internet Sales**  
   
-    |Column|Eigenschaft|Wert|  
+    |Spalte|Eigenschaft|value|  
     |----------|------------|---------|  
     |Product Id|Ausgeblendet|Wahr|  
     |Customer Id|Ausgeblendet|Wahr|  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 865e6d06-b99a-41f3-9d6f-c3c97b529b23
@@ -17,13 +17,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 01d14a3ee7db466f184cb99fbb271520ab448244
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e2a7f1392931ec5edd41803f6df6d98aa95403dd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="invoke-processtable-cmdlet"></a>Invoke-ProcessTable-Cmdlet
+# <a name="invoke-processtable-cmdlet"></a>Invoke-ProcessTable-cmdlet
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Führt die **Prozess** -Vorgang für eine **Tabelle** mit einem bestimmten **RefreshType**.  
 
 >[!NOTE] 

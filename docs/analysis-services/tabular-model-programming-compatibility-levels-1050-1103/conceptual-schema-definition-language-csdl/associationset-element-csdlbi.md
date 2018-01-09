@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a8cf7089d9c70b051c3eaa6a43ddbce942500d2b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: df59f83d3f2ce978db817369b513c1cc0678368c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="associationset-element-csdlbi"></a>AssociationSet-Element (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Die **AssociationSet** Element ist ein komplexer Typ, der eine Zuordnung definiert. In einem CSDLBI-Datenmodell stellt eine Zuordnung eine Beziehung zwischen zwei Tabellen dar.  
@@ -34,10 +32,10 @@ ms.lasthandoff: 12/08/2017
 ## <a name="applicable-attributes"></a>Anwendbare Attribute  
  In der folgenden Tabelle sind die Elemente und Attribute aufgeführt, durch die das **AssociationSet** -Element definiert wird.  
   
-|Name|Ist erforderlich|Beschreibung|  
+|Name|Ist erforderlich|Description|  
 |----------|-----------------|-----------------|  
 |Status|ja|Eine Zeichenfolge, die angibt, ob die Zuordnung aktiv ist. Der Wert wird durch das State-Element definiert.|  
-|Hidden|Nein|Ein boolescher Wert der angibt, ob die Beziehung sichtbar ist. Standardmäßig weist Hidden den Wert **false**auf; dies bedeutet, dass alle Beziehungen im Modell sichtbar sind.|  
+|Ausgeblendet|nein|Ein boolescher Wert der angibt, ob die Beziehung sichtbar ist. Standardmäßig weist Hidden den Wert **false**auf; dies bedeutet, dass alle Beziehungen im Modell sichtbar sind.|  
   
 ## <a name="state-element"></a>State-Element  
  Das **State** -Element ist ein einfacher Typ, der angibt, ob eine Zuordnung aktiv oder inaktiv ist. Aktive Zuordnungen sollten in Berechnungen verwendet werden, auf inaktive Zuordnungen muss in Berechungen explizit verwiesen werden.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/08/2017
   
  In der folgenden Tabelle sind die Werte des **State** -Elements aufgeführt.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |Active|Die Zuordnung ist aktiv.|  
 |Inaktiv|Die Zuordnung ist aktiv.|  

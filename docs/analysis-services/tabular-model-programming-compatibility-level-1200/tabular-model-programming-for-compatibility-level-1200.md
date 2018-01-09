@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d343f693-c800-42fe-bb4f-2c38a10919f1
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5c7a0c3c69a8d4c834cf6a44cd3e588faed2593f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 30122388bc5e1c82f26bbaa37452330b97a77077
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>Tabellarische Programmiermodell für die Kompatibilität auf 1200 und höher
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Beginnen mit dem Kompatibilitätsgrad 1200, tabellarischer Metadaten dient zum Beschreiben der Model-Konstrukten Verlaufsdaten mehrdimensionale Metadaten als Deskriptoren für tabellenmodellobjekte ersetzen. Metadaten für Tabellen, Spalten und Beziehungen werden die Tabelle, Spalte und Beziehung, anstatt die mehrdimensionale Entsprechungen (Dimensionen und Attributtypen).  

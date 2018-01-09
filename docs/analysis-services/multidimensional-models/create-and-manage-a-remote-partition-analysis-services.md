@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 152d8f844949ac0a27747e04b4d2ca55a257c39e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d5793220e57962f801573e8201688dd1c03b9c0e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Erstellen und Verwalten einer Remotepartition (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Bei der Partitionierung einer Measuregruppe können Sie eine sekundäre Datenbank auf einem Remoteserver konfigurieren [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Remoteinstanz als Partitionsspeicher.  
@@ -36,7 +33,7 @@ ms.lasthandoff: 12/08/2017
   
  Eine dedizierte sekundäre Datenbank kann Remotepartitionen für genau eine Masterdatenbank speichern, die Masterdatenbank kann jedoch mehrere sekundäre Datenbanken verwenden, solange sich alle sekundären Datenbank auf derselben Remoteinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]befinden. Dimensionen in einer dedizierten Datenbank für Remotepartitionen werden als verknüpfte Dimensionen erstellt.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  Vor dem Erstellen einer Remotepartition müssen die folgenden Bedingungen erfüllt sein:  
   
 -   Sie müssen über eine zweite [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz und eine dedizierte Datenbank zum Speichern der Partitionen verfügen. Die sekundäre Datenbank ist zweckgebunden; sie dient einer Masterdatenbank als Speicher für Remotepartitionen.  
@@ -119,7 +116,7 @@ ms.lasthandoff: 12/08/2017
   
 #### <a name="set-up-the-remote-partition-in-ssdt"></a>Einrichten der Remotepartition (in SSDT)  
   
-1.  Auf dem Masterserver: Öffnen Sie den Cube im Cube-Designer, und klicken Sie auf die Registerkarte **Partitionen** . Erweitern Sie die Measuregruppe. Klicken Sie auf **Neue Partition** , wenn die Measuregruppe bereits für mehrere Partitionen konfiguriert ist, oder klicken Sie in der Quellspalte auf die Schaltfläche zum Durchsuchen (.. befinden. ), um die bestehende Partition zu bearbeiten.  
+1.  Auf dem Masterserver: Öffnen Sie den Cube im Cube-Designer, und klicken Sie auf die Registerkarte **Partitionen** . Erweitern Sie die Measuregruppe. Klicken Sie auf **Neue Partition** , wenn die Measuregruppe bereits für mehrere Partitionen konfiguriert ist, oder klicken Sie in der Quellspalte auf die Schaltfläche zum Durchsuchen (. befinden. ), um die bestehende Partition zu bearbeiten.  
   
 2.  Wählen Sie im Partitions-Assistenten unter **Quellinformationen angeben**die ursprüngliche Datenquellensicht und die Faktentabelle aus.  
   

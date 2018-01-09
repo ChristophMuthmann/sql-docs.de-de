@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 16d10e2d-d7e1-40f1-bc9d-a4e10c61af95
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e1d1caae0c63d1ffdbbed07940b35a4a822787f5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 39d00b432101560c5cf5075a0e60e445e670a28d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-powerpivotserviceapplication-cmdlet"></a>Set-PowerPivotServiceApplication-Cmdlet
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Legt die Eigenschaften des eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -dienstanwendung.  
@@ -56,7 +56,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Platzhalterzeichen akzeptieren?|false|  
   
 ### <a name="-administrationconnectionpoolsize-int"></a>-AdministrationConnectionPoolSize \<Int >  
- Gibt die Anzahl der geöffneten Verbindungen in einem Verbindungspool an, der für eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstverbindung mit Analysis Services erstellt wurde. Jede [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstinstanz öffnet eine separate Administratorverbindung zur Analysis Services-Instanz auf demselben Computer. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienst erstellt einen separaten Pool, damit Administratorverbindungen wiederverwendet werden können, um Verbindungen im Leerlauf zu suchen und den Serverstatus zu überwachen. Der Standardwert ist 200 Verbindungen. Gültige Werte sind -1 (unbegrenzt), 0 (deaktiviert die Verwendung des Verwaltungsverbindungspools) oder 1 bis 10000. Wenn Sie 0 auswählen, wird jede Verbindung neu erstellt.  
+ Gibt die Anzahl der geöffneten Verbindungen in einem Verbindungspool an, der für eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstverbindung mit Analysis Services erstellt wurde. Jede [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstinstanz öffnet eine separate Administratorverbindung zur Analysis Services-Instanz auf demselben Computer. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienst erstellt einen separaten Pool, damit Administratorverbindungen wiederverwendet werden können, um Verbindungen im Leerlauf zu suchen und den Serverstatus zu überwachen. Der Standardwert ist 200 Verbindungen. Gültige Werte sind -1 (unbegrenzt), 0 (deaktiviert die Verwendung des Verwaltungsverbindungspools) oder 1 bis 10000. Wenn Sie 0 auswählen, wird jede Verbindung neu erstellt.  
   
 |||  
 |-|-|  
@@ -159,7 +159,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Platzhalterzeichen akzeptieren?|false|  
   
 ### <a name="-datarefreshfailurethreshold-int"></a>-DataRefreshFailureThreshold \<Int >  
- Gibt die Anzahl der aufeinander folgenden Fehler an, nach der ein Zeitplan deaktiviert wird. Der Standardwert lautet 10. Sie können auch 0 eingeben, wenn ein Zeitplan nie infolge von Aktualisierungsfehlern deaktiviert werden soll.  
+ Gibt die Anzahl der aufeinander folgenden Fehler an, nach der ein Zeitplan deaktiviert wird. Der Standardwert ist 10. Sie können auch 0 eingeben, wenn ein Zeitplan nie infolge von Aktualisierungsfehlern deaktiviert werden soll.  
   
 |||  
 |-|-|  

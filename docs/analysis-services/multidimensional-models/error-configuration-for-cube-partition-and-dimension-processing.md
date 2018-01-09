@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 29e105e78a46e1917b2fc2902db4256edc2ba099
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9dcbefced6fd34dd5fa69537733d7820b0130f4d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>Fehlerkonfiguration für die Dimensionsverarbeitung von Cubes, Partition und
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Fehlerkonfigurationseigenschaften für Cube-, Partitions- oder dimensionsobjekte wird bestimmt, wie der Server reagiert, wenn Daten während der Verarbeitung auf. Diese Fehler werden normalerweise durch doppelte Schlüssel, fehlende Schlüssel und NULL-Werte in einer Schlüsselspalte ausgelöst. Dabei wird der Datensatz, der den Fehler verursacht hat, der Datenbank nicht hinzugefügt. Mithilfe von Eigenschaften können Sie die nächsten auszuführenden Schritte festlegen. Standardmäßig wird die Verarbeitung beendet. Manchmal ist es während der Cubeentwicklung jedoch erwünscht, dass die Verarbeitung bei Fehlern fortgesetzt wird, z. B. um das Cubeverhalten mit importierten und sogar unvollständigen Daten zu testen.  
@@ -90,7 +87,7 @@ ms.lasthandoff: 12/08/2017
   
  **Reaktion des Servers auf bestimmte Fehler**  
   
-|Eigenschaft|Standardwert|Andere Werte|  
+|Eigenschaft|Default|Andere Werte|  
 |--------------|-------------|------------------|  
 |**CalculationError**<br /><br /> Tritt auf, wenn die Fehlerkonfiguration initialisiert wird.|Bei**IgnoreError** wird der Fehler weder protokolliert noch gezählt. Die Verarbeitung wird fortgesetzt, solange die Fehleranzahl unter dem Grenzwert liegt.|Bei**ReportAndContinue** wird der Fehler protokolliert und gezählt.<br /><br /> Bei**ReportAndStop** wird der Fehler gemeldet, und die Verarbeitung wird unabhängig von der Fehlergrenze umgehend beendet.|  
 |**KeyNotFound**<br /><br /> Tritt auf, wenn ein Fremdschlüssel in einer Faktentabelle keinen übereinstimmenden Primärschlüssel in einer verknüpften Dimensionstabelle aufweist (beispielsweise, wenn eine Faktentabelle für Umsatzwerte einen Datensatz mit einer Produkt-ID enthält, die in der Produktdimensionstabelle nicht vorhanden ist). Dieser Fehler kann bei der Verarbeitung von Partitionen oder von Schneeflockendimensionen auftreten.|Bei**ReportAndContinue** wird der Fehler protokolliert und gezählt.|Bei**ReportAndStop** wird der Fehler gemeldet, und die Verarbeitung wird unabhängig von der Fehlergrenze umgehend beendet.<br /><br /> Bei**IgnoreError** wird der Fehler weder protokolliert noch gezählt. Die Verarbeitung wird fortgesetzt, solange die Fehleranzahl unter dem Grenzwert liegt. Datensätze, durch die dieser Fehler ausgelöst wird, werden standardmäßig in das unbekannte Element konvertiert, Sie können die **KeyErrorAction** -Eigenschaft jedoch auch so ändern, dass die Datensätze stattdessen verworfen werden.|  
@@ -112,7 +109,7 @@ ms.lasthandoff: 12/08/2017
   
  Sie können die Fehlerkonfiguration für jedes Objekt festlegen, das in einem eigenständigen Vorgang verarbeitet werden kann.  
   
-#### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
+#### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste für eines der folgenden Objekte auf **Eigenschaften** : Dimension, Cube oder Partition.  
   

@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
@@ -20,17 +17,17 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8ebf7113a80cecd58a98108a82caa26d21d5d158
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ed5bd7197fa455d5ea93f39e529961a16828ba77
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Erstellen eines Cubes aus einer Vorlage, ohne eine Datenquellensicht zu verwenden
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Wählen Sie **Cube ohne eine Datenquelle erstellen** auf der ersten Seite des Cube-Assistenten, um einen Cube ohne Verwendung einer Datenquellensicht zu erstellen. Später können Sie das relationale Schema für die Datenquellensicht mit dem Schemagenerierungs-Assistenten auf der Grundlage der Cubestruktur und möglicherweise anderer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte generieren. Weitere Informationen zum Generieren eines Schemas finden Sie unter [Schemagenerierungs-Assistent &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md).  
   
 ## <a name="selecting-the-build-method"></a>Auswählen der Erstellungsmethode  
- Klicken Sie im Cube-Assistenten auf der Seite **Erstellungsmethode auswählen** auf **Cube ohne eine Datenquelle erstellen**. Um den Cube mithilfe einer vorhandenen Cubevorlage zu erstellen, aktivieren Sie das Kontrollkästchen **Cubevorlage verwenden** . . Wenn Sie sich gegen die Verwendung einer Vorlage entscheiden, müssen Sie die Optionen manuell festlegen.  
+ Klicken Sie im Cube-Assistenten auf der Seite **Erstellungsmethode auswählen** auf **Cube ohne eine Datenquelle erstellen**. Um den Cube mithilfe einer vorhandenen Cubevorlage zu erstellen, aktivieren Sie das Kontrollkästchen **Cubevorlage verwenden** . zugreifen. Wenn Sie sich gegen die Verwendung einer Vorlage entscheiden, müssen Sie die Optionen manuell festlegen.  
   
  In Cubevorlagen sind vordefinierte Measures, Measuregruppen, Dimensionen, Hierarchien und Attribute enthalten. Wenn Sie eine Vorlage auswählen, verwendet der Assistent die Objektdefinitionen in den Vorlagen als Grundlage zum Festlegen der Optionen auf den folgenden Seiten. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] wird mit mehreren Vorlagen für Standardcubes installiert. Der Serveradministrator kann auch Cube- oder Dimensionsvorlagen hinzufügen, die speziell auf die Daten in Ihrem Unternehmen abgestimmt sind.  
   
@@ -48,7 +45,7 @@ ms.lasthandoff: 12/08/2017
   
  Sowohl das Raster **Measures aus der Vorlage auswählen** als auch das Raster **Neue Measures hinzufügen** enthält Werte in den Spalten, die in der folgenden Tabelle beschrieben sind. Sie können auf einen Wert in einer der Listen klicken, um ihn zu ändern.  
   
-|Column|Description|  
+|Spalte|Description|  
 |------------|-----------------|  
 |**Measurename**|Durch einen Wert in dieser Spalte wird der Name eines im Cube enthaltenen Measures definiert. Klicken Sie auf einen Wert in dieser Spalte, um einen Namen einzugeben. Klicken Sie in dieser Spalte auf **Neues Measure hinzufügen** , um ein neues Measure zu erstellen. In dieser Spalte wird die **Name** -Eigenschaft für das Measureobjekt festgelegt.|  
 |**Measuregruppe**|Der Name der Measuregruppe, in der das Measure enthalten ist. Klicken Sie auf diesen Wert, um einen Namen auszuwählen oder einzugeben. Wenn Sie alle Measures löschen, die zu einer bestimmten Measuregruppe gehören, wird die Measuregruppe ebenfalls entfernt. In dieser Spalte wird die **Name** -Eigenschaft für das Measuregruppenobjekt festgelegt.|  
@@ -64,7 +61,7 @@ ms.lasthandoff: 12/08/2017
   
  Sowohl das Raster **Dimensionen aus der Vorlage auswählen** als auch das Raster **Neue Dimensionen hinzufügen** enthält Werte in den Spalten, die in der folgenden Tabelle beschrieben sind. Sie können auf einen Wert in einer der Listen klicken, um ihn zu ändern.  
   
-|Column|Description|  
+|Spalte|Description|  
 |------------|-----------------|  
 |**Typ**|Zeigt den Dimensionstyp einer Vorlagendimension an. Klicken Sie auf diese Zelle, um den Dimensionstyp für eine Dimension zu ändern. In dieser Spalte wird die **Type** -Eigenschaft für das Dimensionsobjekt festgelegt.|  
 |**Name**|Zeigt den Namen der Dimension an. Klicken Sie auf diese Zelle, um einen anderen Namen einzugeben. Durch diesen Wert wird die **Name** -Eigenschaft für das Dimensionsobjekt festgelegt.|  

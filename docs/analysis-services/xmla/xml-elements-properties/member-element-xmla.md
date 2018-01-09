@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Member Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 54ea0bd96716ae6c11fa1195c9845b721fc76ef6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 82690ec66dfcb96787ea592a8d32c3826ee8776f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="member-element-xmla"></a>Member-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Stellt ein einzelnes Element in einem übergeordneten [Elemente](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md) oder [Tupel](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md) Element.  
@@ -68,11 +66,11 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|Keine|  
-|Standardwert|Keine|  
-|Kardinalität|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
+|Datentyp und -länge|InclusionThresholdSetting|  
+|Standardwert|InclusionThresholdSetting|  
+|Cardinality|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
@@ -83,9 +81,9 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="attributes"></a>Attribute  
   
-|Attribut|Beschreibung|  
+|attribute|Description|  
 |---------------|-----------------|  
-|Hierarchie|Erforderliches **String** -Attribut (nur für übergeordnete **Tuple** -Elemente). Der Name der Hierarchie, zu der das Element, das vom **Member** -Element dargestellt wird, gehört.|  
+|Hierarchy|Erforderliches **String** -Attribut (nur für übergeordnete **Tuple** -Elemente). Der Name der Hierarchie, zu der das Element, das vom **Member** -Element dargestellt wird, gehört.|  
   
 ## <a name="remarks"></a>Hinweise  
  Das **Member** -Element enthält die Informationen, die benötigt werden, um ein Element innerhalb einer gegebenen Hierarchie zu identifizieren und anzuzeigen. Für übergeordnete **Members** -Elemente wird die Hierarchie bereits vom **Hierarchy** -Attribut des übergeordneten Elements angegeben. Für übergeordnete **Tuple** -Elemente wird die Hierarchie mithilfe des **Hierarchy** -Attributs des **Member** -Elements angegeben.  

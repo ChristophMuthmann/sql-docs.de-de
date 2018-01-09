@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 10c3749dafe92066faed35c4af06444e2fcd55ff
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3fa9fd8e7b7c4722e9acf41f0f7229ee0a1f3ef7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connection-string-properties-analysis-services"></a>Verbindungszeichenfolgen-Eigenschaften (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In diesem Thema werden die Verbindungszeichenfolgen-Eigenschaften, die Sie möglicherweise in einem der Tools Designer- oder Verwaltungstools festlegen bzw. die in Verbindungszeichenfolgen von Clientanwendungen, die zum Verbinden und Analysis Services-Daten Abfragen. In diesem Dokument wird daher nur auf einen Teilbereich der verfügbaren Eigenschaften eingegangen. Die vollständige Liste umfasst zahlreiche Server- und Datenbankeigenschaften, mit denen eine Verbindung unabhängig davon, wie die Instanz oder Datenbank auf dem Server konfiguriert ist, an spezifische Anwendungen angepasst werden kann.  
@@ -158,7 +155,7 @@ ms.lasthandoff: 12/08/2017
   
  **Native (oder direkte) Verbindungen mit dem Server**  
   
- `Data Source=server[:port][\instance]` , wobei "port" und "\instance" optional sind. "Data Source=server1" öffnet z. B. eine Verbindung mit der Standardinstanz (und dem Standardport 2383) auf einem Server mit dem Namen "server1".  
+ `Data Source=server[:port][\instance]` , wobei "port" und "\instance" optional sind. "Data Source=server1" öffnet z. B. eine Verbindung mit der Standardinstanz (und dem Standardport 2383) auf einem Server mit dem Namen "server1".  
   
  "Data Source=server1:port1" öffnet eine Verbindung mit einer Analysis Services-Instanz, die an Port "port1" auf "server1" ausgeführt wird.  
   

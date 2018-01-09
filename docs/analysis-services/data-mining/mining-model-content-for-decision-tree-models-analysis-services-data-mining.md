@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9b46a11c3edc4ca3e9c735d324f961165bd022cd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3e09cceda5b62fe4112fe15a7a69b520134a733b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Miningmodellinhalt von Entscheidungsstrukturmodellen (Analysis Services – Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In diesem Thema wird beschrieben, Miningmodellinhalt, der Modellen eigen ist, mit denen die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus. Eine allgemeine Erläuterung der Miningmodellinhalte für alle Modelltypen finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md). Sie sollten stets bedenken, dass der Microsoft Decision Trees-Algorithmus ein hybrider Algorithmus ist, der Modelle mit sehr unterschiedlichen Funktionen erstellen kann: Eine Entscheidungsstruktur kann Zuordnungen, Regeln oder gar lineare Regression darstellen. Der Aufbau der Struktur ist grundsätzlich gleich. Allerdings hängt die Art und Weise, in der Sie die Informationen interpretieren, vom Zweck ab, für den Sie das Modell erstellen.  
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Wählt automatisch eine Methode für Zuordnung von Buckets zu kontinuierlichen Attributen; Allerdings können Sie steuern, wie kontinuierliche Werte in den Eingaben diskretisiert werden, durch Festlegen den Inhaltstyp der Miningstrukturspalte auf **Discretized** festlegen und anschließend die <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> oder <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> Eigenschaft.  
   
- [top](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ##  <a name="bkmk_ModelContent"></a> Modellinhalt für ein Entscheidungsstrukturmodell  
  In diesem Abschnitt werden nur diejenigen Spalten des Miningmodellinhalts detaillierter und anhand von Beispielen erläutert, die für Entscheidungsstrukturmodelle relevant sind. Informationen zu den allgemeinen Spalten im Schemarowset und weitere Erläuterungen zur Miningmodell-Terminologie finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -174,7 +172,7 @@ ms.lasthandoff: 12/08/2017
   
  Beispiele zum Abrufen dieser Statistiken finden Sie unter [Beispiele für Entscheidungsstruktur-Modellabfragen](../../analysis-services/data-mining/decision-trees-model-query-examples.md).  
   
- [top](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ## <a name="example-of-decision-tree-structure"></a>Beispiel für den Aufbau der Entscheidungsstruktur  
  Um zu verstehen, wie eine Entscheidungsstruktur funktioniert, betrachten Sie ein Beispiel, z. B. das Bike Buyer-Szenario von AdventureWorks. Unter der Annahme, dass es sich bei dem vorhersagbaren Attribut um die Kundeneinkäufe handelt, versucht der Decision Trees-Algorithmus, unter allen Eingaben, die Sie bereitstellen, eine Spalte mit Daten zu finden, die am effektivsten die Kunden herausstellt, die wahrscheinlich ein Fahrrad kaufen könnten oder die eher kein Fahrrad kaufen. Beispielsweise nimmt das Modell an, dass es sich beim Alter um den besten Indikator für Kaufverhalten handelt. Speziell, dass Kunden über 30 Jahren sehr wahrscheinlich ein Fahrrad kaufen könnten und alle anderen Kunden eher nicht. In diesem Szenario erstellt das Modell auf dem Age-Attribut eine *Teilung* . Dies bedeutet, dass sich die Struktur in zwei Zweige unterteilt. Ein Zweig enthält die Kunden über 30 und der andere diejenigen unter 30. Die neuen Verzweigungen werden in der Modellstruktur als zwei neue innere Strukturen (NODE_TYPE = 3) dargestellt.  
@@ -196,7 +194,7 @@ ms.lasthandoff: 12/08/2017
   
  Handelt es sich beim vorhersagbaren Attribut um eine fortlaufende Nummer, versucht der Algorithmus, eine Regressionsformel aufzustellen, die die Beziehung zwischen dem vorhersagbaren Attribut und den Eingaben modelliert.  
   
- [top](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ###  <a name="NodeCaption"></a> Knotenbeschriftung und Knotenbeschreibung  
  In einem Entscheidungsstrukturmodell enthalten die Knotenbeschriftung und die Knotenbeschreibung ähnliche Informationen. Allerdings ist die Knotenbeschreibung vollständiger, und sie enthält in Richtung Blattknoten immer mehr Informationen. Sowohl bei der Knotenbeschriftung als auch bei der Knotenbeschreibung handelt es sich um lokalisierte Zeichenfolgen.  
@@ -216,7 +214,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt Version 2.0 des PMML-Standards mit Erweiterungen zur Unterstützung von geschachtelten Tabellen. Wenn Ihre Daten geschachtelte Tabellen enthalten und Sie eine PMML-Version des Modells erstellen, werden alle Elemente im Modell, die die Prädikate enthalten, als eine Erweiterung markiert.  
   
- [top](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ###  <a name="bkmk_NodeDist_Discrete"></a> Knotenverteilung für diskrete Attribute  
  In einem Entscheidungsstrukturmodell enthält die NODE_DISTRIBUTION-Tabelle nützliche Statistiken. Allerdings hängt der Typ der Statistik davon ab, ob die Struktur ein diskretes oder kontinuierliches Attribut vorhersagt. In diesem Abschnitt wird die Bedeutung der Knotenverteilungsstatistik für diskrete Attribute beschrieben.  
@@ -231,7 +229,7 @@ ms.lasthandoff: 12/08/2017
   
  Für Knoten, die kontinuierliche Attribute darstellen, kann das Vorhandensein von null in den Daten zu nicht intuitiven Ergebnissen führen. Bei „m“ Fällen würde der Mittelwert beispielsweise mit „sum(all cases)/n“ berechnet, wobei „n“ einer Zahl kleiner als „m“ entspricht und „m-n“ die Anzahl der Fälle mit fehlenden Werten angibt. Die Unterstützung wird auch mit „n“ angegeben.  
   
-#### <a name="probability"></a>Wahrscheinlichkeit  
+#### <a name="probability"></a>Probability  
  Die jedem Knoten zugeordnete Wahrscheinlichkeit gibt Aufschluss über die Wahrscheinlichkeit, über die jeder Fall im gesamten Dataset in diesem bestimmten Knoten verfügen wird. Wahrscheinlichkeitsergebnisse werden sowohl für die Struktur als ganzes als auch für die unmittelbare Teilung berechnet.  
   
  Die folgende Tabelle zeigt beispielsweise ein sehr einfaches Modell mit 100 Fällen.  
@@ -284,7 +282,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Wenn Sie ein Entscheidungsstrukturmodell erstellen, das sowohl über kontinuierliche als auch diskrete vorhersagbare Attribute verfügt, erhalten Sie völlig unterschiedliche Ergebnisse auf den Knoten (Alle), die jeden Strukturknoten darstellen. Jedes Modell sollte unabhängig voneinander berücksichtigt werden, und die für die Bewertungsregression verwendeten Methoden unterscheiden sich vollständig von denen, die für die Bewertungsklassifzierung verwendet werden. Die Knotenergebniswerte können nicht verglichen werden.  
   
- [top](#bkmk_Top)  
+ [Top](#bkmk_Top)  
   
 ##  <a name="bkmk_RegressionNodes"></a> Regressionsknoten innerhalb eines Entscheidungsstrukturmodells  
  Wenn ein Entscheidungsstrukturmodell ein vorhersagbares Attribut mit kontinuierlichen, numerischen Daten enthält, versucht der Microsoft Decision Trees-Algorithmus, Bereiche in den Daten zu finden, wo die Beziehung zwischen dem vorhergesagten Status und den Eingabevariablen linear ist. Findet der Algorithmus eine lineare Beziehung, erstellt er eine spezielle Struktur (NODE_TYPE = 25), die eine lineare Regression darstellt. Diese Regressionsstrukturknoten sind komplexer als Knoten, die diskrete Werte darstellen.  

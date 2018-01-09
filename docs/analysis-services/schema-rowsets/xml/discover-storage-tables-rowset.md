@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 42b139004de7a10c073991613abcbafb84a31688
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 51b5bd319480be4c7757d4fb642859af54f209a3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverstoragetables-rowset"></a>DISCOVER_STORAGE_TABLES-Rowset
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Ermöglicht dem Client, der Tabellen zu bestimmen, die in einer im Tabellenmodus oder SharePoint-Modus ausgeführten Analysis Services-Datenbank enthalten sind.  
@@ -32,7 +30,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Rowsetspalten  
  Das **DISCOVER_STORAGE_TABLES** -Rowset enthält die folgenden Spalten.  
   
-|**Spaltenname**|**Typindikator**|**Länge**|**Description**|  
+|**Spaltenname**|**Typindikator**|**Länge**|**Beschreibung**|  
 |---------------------|------------------------|----------------|---------------------|  
 |**DATENBANKNAME**|**DBTYPE_WSTR**||Gibt den Namen der Datenbank an, die die Tabellen enthält.<br /><br /> Das **DISCOVER_STORAGE_TABLES** -Rowset kann mithilfe dieser Spalte eingeschränkt werden. Wenn diese Spalte nicht verwendet wird, um das Rowset einzuschränken, wird die aktuelle Datenbank verwendet.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**||Gibt den Cube oder das Modell an, das die Tabellen enthält.<br /><br /> Das **DISCOVER_STORAGE_TABLES** -Rowset kann mithilfe dieser Spalte eingeschränkt werden.|  

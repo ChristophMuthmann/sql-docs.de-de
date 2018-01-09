@@ -5,13 +5,10 @@ ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 078c21b0af6caeed8700861e315aeeefa53c108f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6c68c3d8eba2ec1519c38a89c7a1b0b71f3be4e3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="actions-in-multidimensional-models"></a>Aktionen in mehrdimensionalen Modellen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Eine Aktion ist ein vom Endbenutzer initiierter Vorgang nach einem ausgewählten Cube oder Teil eines Cubes. Der Vorgang kann eine Anwendung mit dem ausgewählten Element als Parameter starten, oder er kann Informationen zum ausgewählten Element abrufen. Weitere Informationen zu Aktionstypen finden Sie unter [Aktionen &#40;Analysis Services – Mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md).  
@@ -83,7 +80,7 @@ ms.lasthandoff: 12/08/2017
 |--------------|-----------------|  
 |**Aufruf**|Gibt an, wie die Aktion ausgeführt wird. Die Standardeinstellung Interaktiv gibt an, dass die Aktion ausgeführt wird, wenn ein Benutzer auf ein Objekt zugreift. Die möglichen Einstellungen sind:<br /><br /> Batch<br /><br /> Interaktiv<br /><br /> Beim Öffnen|  
 |**Application**|Beschreibt die Anwendung der Aktion.|  
-|**Description**|Beschreibt die Aktion.|  
+|**Beschreibung**|Beschreibt die Aktion.|  
 |**Beschriftung**|Stellt eine Beschriftung bereit, die für die Aktion angezeigt wird. Handelt es sich bei der Beschriftung um MDX, geben Sie **True** für **Beschriftung ist MDX**an.|  
 |**Beschriftung ist MDX**|Geben Sie **True** an, wenn es sich bei der Beschriftung um MDX handelt; andernfalls geben Sie **False** an.|  
   

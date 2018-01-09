@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,18 +23,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a65065437ced53d1554ddd11035e7aa687872e9f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 57e14656a089736a8b7ce9566362c9d7c8888a5d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="xml-data-types-xmla"></a>XML-Datentypen (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Zusätzlich zu den standardmäßigen Grundtypen und abgeleiteten Typen definiert, die von der XML 1.0-Empfehlung definiert die XML for Analysis (XMLA) 1.1-Spezifikation zusätzliche Datentypen, um die Darstellung von mehrdimensionalen und tabellarischen Daten zu unterstützen.  
   
  XMLA verwendet die in der folgenden Tabelle aufgelisteten Datentypen.  
   
-|Datentypen|Beschreibung|  
+|Datentypen|Description|  
 |----------------|-----------------|  
 |Boolean|Der **boolean** -XML-Standarddatentyp.|  
 |Decimal|Der **decimal** -XML-Standarddatentyp.|  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/08/2017
 |[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)|Mehrdimensionale Daten, die zurückgegeben werden, indem Sie die *Ergebnis* Parameter von der [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) Methode.|  
 |[Resultset](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|Ein selbstbeschreibendes XML-Resultset, das von der **Execute** -Methode zurückgegeben wird.|  
 |[Rowset](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)|Zurückgegebene Zeilen aus einer Datenquelle, die von einem eingebetteten XML-Schema strukturiert wurden die [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) Methode.|  
-|String|Der **string** -XML-Standarddatentyp.|  
+|Zeichenfolge|Der **string** -XML-Standarddatentyp.|  
 |UnsignedInt|Der **unsignedInt** -XML-Schematyp.|  
   
  Vollständige Beschreibungen der XML-Standarddatentypen finden Sie in den Kandidatenempfehlungen des World Wide Web Consortium (WC3).  

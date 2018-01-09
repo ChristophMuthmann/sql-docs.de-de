@@ -5,13 +5,10 @@ ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -31,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ca6771f8ea74bdff21f67704a1d45915b6d73cf6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: cb9d445b33f7a9ab1dc81f32ea7db419c512f680
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Anforderungen und Überlegungen für die Bereitstellung von Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die Leistung und Verfügbarkeit einer Lösung hängt von vielen Faktoren ab, einschließlich der Funktionen der zugrunde liegenden Hardware, die Topologie der serverbereitstellung, die Merkmale der Projektmappe (z. B. mit der Verteilung von Partitionen auf mehrere Server oder mit dem ROLAP-Speicher, die direkten Zugriff auf das relationale Modul erfordert), Vereinbarungen zum Servicelevel und der Komplexität des Datenmodells.  
@@ -69,7 +66,7 @@ ms.lasthandoff: 12/08/2017
  Cubes  
  Cubes, die große Faktentabellen besitzen, verlangen mehr Speicherplatz als Cubes mit kleinen Faktentabellen. Entsprechend (wenn auch in geringerem Umfang) erfordern Cubes mit zahlreichen großen Dimensionen mehr Speicherplatz als Cubes mit einer geringeren Anzahl von Dimensionselementen. Im Allgemeinen können Sie erwarten, dass eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank ungefähr 20 Prozent des Speicherplatzes erfordert, der für die gleichen Daten benötigt wird, die in der zugrunde liegenden relationalen Datenbank gespeichert sind.  
   
- Aggregationen  
+ Aggregations  
  Aggregationen erfordern proportional zu den hinzugefügten Aggregationen zusätzlichen Speicherplatz – je mehr Aggregationen vorhanden sind, desto mehr Speicherplatz ist erforderlich. Wenn Sie das Erstellen nicht erforderlicher Aggregationen vermeiden, sollte der für Aggregationen benötigte Speicherplatz in der Regel ungefähr 10 Prozent der Größe der Daten nicht übersteigen, die in der zugrunde liegenden relationalen Datenbank gespeichert sind.  
   
  Data Mining  

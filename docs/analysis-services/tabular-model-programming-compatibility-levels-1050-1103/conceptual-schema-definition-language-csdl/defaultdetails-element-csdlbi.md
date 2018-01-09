@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b2755e08e3e509723e3c1b511c27f852be157ad3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8010e9c0412b50c8d65a67c87c176bff02d1a887
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="defaultdetails-element-csdlbi"></a>DefaultDetails-Element (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Das DefaultDetails-Element stellt eine Liste mit Eigenschaftsverweisen, die zusammen den "Standardfeldsatz" von Spalten in der Tabelle zu definieren. Jede Eigenschaft kann nur auf ein Measure oder auf eine Spalte verweisen.  
@@ -32,9 +30,9 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>Elemente und Attribute  
  In der folgenden Tabelle sind die Elemente und Attribute aufgeführt, die das DefaultDetails-Element definieren.  
   
-|Name|Ist erforderlich|Beschreibung|  
+|Name|Ist erforderlich|Description|  
 |----------|-----------------|-----------------|  
-|DefaultDetailsPosition|Nein|Eine positive ganze Zahl, die das Vorhandensein und die Position in der Auflistung angibt.|  
+|DefaultDetailsPosition|nein|Eine positive ganze Zahl, die das Vorhandensein und die Position in der Auflistung angibt.|  
   
 ## <a name="example"></a>Beispiel  
  **Tabellarisch**  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 413b49cb-ea8f-415c-a059-ce692b7771a1
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5c15abedcdf384fbeb6aee14868570ab9b01eb00
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7930a6c70b7bf9ac1b4802b9014fba9ebf27bca8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="detach-command-tmsl"></a>Detach-Befehl (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Trennt eine Analysis Services-Datenbank von einem Server an.  
@@ -43,8 +41,8 @@ ms.lasthandoff: 12/08/2017
   
 ||||  
 |-|-|-|  
-|**Eigenschaft**|**Default**|**Description**|  
-|database|[Erforderlich]|Der Name des Datenbankobjekts kann nur getrennt werden.|  
+|**Eigenschaft**|**Default**|**Beschreibung**|  
+|Datenbank|[Erforderlich]|Der Name des Datenbankobjekts kann nur getrennt werden.|  
 |Kennwort|Empty|Das Kennwort zum Verschlüsseln geheimer Schlüssel in der Datenbank getrennt.|  
   
 ## <a name="response"></a>Antwort  

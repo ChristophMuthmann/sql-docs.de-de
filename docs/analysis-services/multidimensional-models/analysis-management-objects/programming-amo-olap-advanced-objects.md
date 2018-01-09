@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 924f2a618b029d3724a2435fa1a27287d454247e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 09f1785d313f0598121ad06e42b26ca4f4367730
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>Programmieren von erweiterten AMO OLAP-Objekten
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Dieses Thema erklärt, dass der Analysis Management Objects (AMO) Programmierdetails OLAP-Objekte erweitert. Dieses Thema enthält folgende Abschnitte:  
@@ -425,7 +423,7 @@ static public void CreatePerspectives(Cube cube)
   
 2.  Fügen Sie Cachespezifikationen hinzu.  
   
-|Spezifikation|Beschreibung|  
+|Spezifikation|Description|  
 |-------------------|-----------------|  
 |AggregationStorage|Der Speichertyp für Aggregationen.<br /><br /> Gilt nur für Partitionen. Für Dimensionen muss **Regular.**verwendet werden.|  
 |SilenceInterval|Minimale Zeit, die der Cache vorhanden ist, bevor das MOLAP-Imaging beginnt.|  
