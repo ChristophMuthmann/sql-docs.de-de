@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a6ff0c5e509a40c84850e281d2ab9f41246c4880
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4352e05555c713c5b979e4ac8e3fc279d6099fe1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-3-3---modifying-the-product-dimension"></a>Lektion 3 – 3 – Ändern der Produktdimension
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Im Bereich Tasks in diesem Thema verwenden Sie eine benannte Berechnung, um aussagekräftigere Namen für Produktlinien bereitzustellen, definieren eine Hierarchie in der Product-Dimension und geben Sie den (All)-Elementnamen für die Hierarchie. Außerdem gruppieren Sie Attribute in Anzeigeordner.  
@@ -185,10 +185,10 @@ Sofern die zugrunde liegenden Daten dies unterstützen, sollten Sie auch Attribu
   
     Beachten Sie, dass der Name des **Alle** -Elements als **All Products**angezeigt wird. Der Grund dafür ist, dass Sie die **AllMemberName** -Eigenschaft für die Hierarchie weiter oben in dieser Lektion in **All Products** geändert haben. Auch verfügen die Elemente der **Product Line** -Ebene jetzt über benutzerfreundliche Namen anstelle von Abkürzungen aus einem Buchstaben.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Ändern der Date-Dimension](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Definieren von benannten Berechnungen in einer Datenquellensicht &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
 [Erstellen von benutzerdefinierten Hierarchien](../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
 [Konfigurieren der Ebene &#40;Alle&#41; für Attributhierarchien](../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  

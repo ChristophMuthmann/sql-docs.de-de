@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 992175bef13c947a11ed738a135df14d226fa05b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5b6f6c1561997970811e729a498383cef08f4ac3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Konfigurieren von Analysis Services für die eingeschränkte Kerberos-Delegierung
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Wenn Sie Analysis Services für die Kerberos-Authentifizierung konfigurieren, Sie wahrscheinlich interessiert sind eines oder beide der folgenden Ziele: Analysis Services soll bei Abfragen von Daten eine Benutzeridentität annehmen Sie müssen Analysis Services eine Benutzeridentität an einen untergeordneten Dienst delegiert oder. Für die Szenarien gelten leicht abweichende Konfigurationsanforderungen. Bei beiden Szenarien muss überprüft werden, ob die Konfiguration ordnungsgemäß ausgeführt wurde.  
@@ -120,7 +117,7 @@ ms.lasthandoff: 12/08/2017
   
  Eine ausführliche Beschreibung der einzelnen Optionen auf der Registerkarte "Delegierung" des Active Directory-Dialogfelds mit den Objekteigenschaften finden Sie unter [Das komplizierteste Dialogfeld Active Directory](http://windowsitpro.com/windows/most-confusing-dialog-box-active-directory) . In diesem Artikel wird auch erläutert, wie Sie LDP zum Testen und Interpretieren der Testergebnisse verwenden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Microsoft-BI-Authentifizierung und Identitätsdelegierung](http://go.microsoft.com/fwlink/?LinkID=286576)   
  [Gegenseitige Authentifizierung mithilfe von Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
  [Verbindung mit Analysis Services herstellen](../../analysis-services/instances/connect-to-analysis-services.md)   

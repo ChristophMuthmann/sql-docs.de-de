@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: e0372941de7d139b7e91f8e03a3ce6b903d05a9f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e73736896056f0d9b6a925292260243381046d34
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="install-sample-data-and-projects"></a>Install Sample Data and Projects 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Verwenden Sie die Anweisungen und Links in diesem Thema, um alle Daten- und Projektdateien Dateien in der Analysis Services-Lernprogrammen verwendet installieren.  
@@ -40,7 +40,7 @@ In den Lektionen dieses Lernprogramms wird vorausgesetzt, dass Sie folgende Soft
   
     Analysis Services wird standardmäßig als mehrdimensionale Instanz installiert. Sie können diesen Modus überschreiben, indem Sie im Installations-Assistenten auf der Seite für die Serverkonfiguration den tabellarischen Servermodus auswählen. Falls Sie beide Servermodi ausführen möchten, führen Sie SQL Server-Setup auf demselben Computer erneut aus, um eine zweite Analysis Services-Instanz im anderen Modus zu installieren.  
   
--   SQL Server Management Studio  
+-   SQL Server Management Studio  
   
 Sie können Excel optional installieren, um mehrdimensionale Daten zu durchsuchen, während Sie das Lernprogramm ausführen. Durch die Installation von Excel wird die Funktion **In Excel analysieren** aktiviert. Diese startet Excel mit einer PivotTable-Feldliste, die mit dem Cube verbunden ist, den Sie erstellen. Es wird empfohlen, zum Durchsuchen von Daten Excel zu verwenden, da Sie schnell einen Pivotbericht erstellen können, der Ihnen das Interagieren mit den Daten ermöglicht.  
   
@@ -154,7 +154,7 @@ Die Projektdatei für Lektion 4 ist besonders wichtig, da sie die Grundlage nich
 ## <a name="next-step"></a>Nächster Schritt  
 Jetzt können Sie das Lernprogramm verwenden. Weitere Informationen für den Einstieg finden Sie unter [Mehrdimensionale Modellierung &#40;Adventure Works-Tutorial&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Installieren von SQL Server 2016 vom Installations-Assistenten aus &#40;Setup&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
 [Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
 [Configure the Windows Firewall to Allow SQL Server Access](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ecb5e4f780c1aa35b5ab509cc7862b477c3854d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e1ad6e283f580aa36ef84d62ae274a57f6d84e6a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>Arbeiten mit benutzerdefinierten Typen in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Sie erreichen den benutzerdefinierten Typ (UDT) Funktionen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus der [!INCLUDE[tsql](../../includes/tsql-md.md)] Sprache mithilfe von regulären Abfragesyntax. UDTs können für die Definition von Datenbankobjekten, als Variablen in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batches, in Funktionen und gespeicherten Prozeduren und als Argumente in Funktionen und gespeicherten Prozeduren verwendet werden.  

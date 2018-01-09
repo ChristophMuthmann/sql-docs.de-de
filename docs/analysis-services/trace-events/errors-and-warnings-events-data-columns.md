@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: Errors and Warnings event category [SQL Server]
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5e32c6503bdd5ad2d13b1194a67d97e44d6ca12f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7c3e94c56f836301b853902751c2fb4085e2df7e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="errors-and-warnings-events-data-columns"></a>Fehler- und Warnungsereignis-Datenspalten
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die Security Audit-Ereigniskategorie enthält die folgenden Ereignisklassen:  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/08/2017
 |EventClass|0|1|Die Ereignisklasse dient zur Kategorisierung von Ereignissen.|  
 |StartTime|3|5|Enthält den Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |SessionType|8|8|Enthält den Typ der Entität, die den Fehler verursachte.|  
-|Severity|22|1|Enthält den Schweregrad einer Ausnahme, die dem Fehlerereignis zugeordnet ist. Die Werte sind:<br /><br /> 0 = Erfolg<br /><br /> 1 = Information<br /><br /> 2 = Warnung<br /><br /> 3 = Fehler|  
+|Schweregrad|22|1|Enthält den Schweregrad einer Ausnahme, die dem Fehlerereignis zugeordnet ist. Die Werte sind:<br /><br /> 0 = Erfolg<br /><br /> 1 = Information<br /><br /> 2 = Warnung<br /><br /> 3 = Fehler|  
 |Success|23|1|Enthält die Angabe zum Erfolg oder Fehlschlagen des Fehlerereignisses. Die Werte sind:<br /><br /> 0 = Fehler<br /><br /> 1 = Erfolg|  
 |Fehler|24|1|Enthält die Fehlernummer eines Fehlers, der ggf. dem Fehlerereignis zugeordnet ist.|  
 |ConnectionID|25|1|Enthält die eindeutige Verbindungs-ID, die dem Fehlerereignis zugeordnet ist.|  
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/08/2017
 |TextData|42|9|Enthält die Textdaten, die dem Fehlerereignis zugeordnet sind.|  
 |ServerName|43|8|Enthält den Namen des Servers, auf dem die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz ausgeführt wird, auf der das Fehlerereignis aufgetreten ist.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Sicherheitsüberwachung-Ereigniskategorie](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

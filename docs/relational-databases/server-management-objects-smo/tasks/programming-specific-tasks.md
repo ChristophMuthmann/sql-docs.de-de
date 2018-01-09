@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 722cd58757ea108a187b4e7a0884daaee2d2d058
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8fb3927a735f0dddfa753bb939947e8d40b6ef88
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="programming-specific-tasks"></a>Programming Specific Tasks
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Programmieren spezifischer Tasks mithilfe von SMO-Objekten umfasst komplexe Themen, die nur von Programmen mit einer bestimmten Funktion, z. B. sichern, erforderlich sind Statistiken, Replikation, überwachen, Verwalten von instanzobjekten und Festlegen von Konfigurationsoptionen.  

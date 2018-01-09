@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 06178b8d1023a95433d76543ff05db4d9c654a27
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b9b84028e2561b5a0fc25c6866d86d667b8873f2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>Lokale Cubes (Analysis Services - Mehrdimensionale Daten)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Zum Erstellen, aktualisieren oder Löschen lokaler Cubes müssen Sie schreiben und Ausführen eines ASSL-Skripts oder AMO-Programm.  
@@ -76,12 +74,12 @@ ms.lasthandoff: 12/08/2017
   
 -   Es werden nur die berechneten Elemente, benannten Mengen und Zuweisungen im lokalen Cube angezeigt, die auf Measures und Dimensionen beruhen, die dem lokalen Cube hinzugefügt wurden. Ungültige berechnete Elemente, benannte Mengen und Zuweisungen werden automatisch ausgeschlossen.  
   
-### <a name="security"></a>Sicherheit  
+### <a name="security"></a>Security  
  Im Auftrag eines Benutzers auf einen lokalen Cube von einem Servercube zu erstellen, müssen Sie dem Benutzer erteilt **Drillthrough und lokaler Cube** Berechtigungen für den Servercube. Weitere Informationen finden Sie unter [gewähren, Cube oder modellberechtigungen &#40; Analysis Services &#41; ](../../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
  Lokale Cubes werden nicht wie Servercubes mithilfe von Rollen gesichert. Alle Benutzer mit Zugriff auf Dateiebene auf eine lokale Cubedatei können die darin enthaltenen Cubes abfragen. Sie können die **Verschlüsselungskennwort** Connection-Eigenschaft für eine lokale Cubedatei zum Festlegen eines Kennworts für die lokale Cubedatei. Zum Festlegen eines Kennworts für eine lokale Cubedatei ist es erforderlich, dass für alle zukünftigen Verbindungen mit der lokalen Cubedatei dieses Kennwort verwendet wird, damit die Datei abgefragt werden kann.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen Sie GLOBAL CUBE-Anweisung &#40; MDX &#41;](../../../mdx/mdx-data-definition-create-global-cube.md)   
  [Entwickeln mit Analysis Services Scripting Language &#40; ASSL &#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [REFRESH CUBE-Anweisung &#40; MDX &#41;](../../../mdx/mdx-data-definition-refresh-cube.md)  

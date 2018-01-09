@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 10ddf679eb9ede1302120eae9274b79927c3dc9a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 28f4f65bc65ac1a5d231717ddbc552e83ef302de
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="kpi-element-csdlbi"></a>KPI-Element (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Das Kpi-Element definiert eine Berechnung, die als ein Key Performance Indicator (KPI) verwendet werden kann. In einem Business Intelligence-Datenmodell basieren KPIs auf Measures. Somit enthält die KPI-Definition alle Measures zugeordneten Metadaten sowie die für die Darstellung der KPI-Werte benötigten Informationen, einschließlich einer Standardgrafik.  
@@ -34,14 +32,14 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>Elemente und Attribute  
  In der folgenden Tabelle sind die Elemente und Attribute aufgeführt, die das KPI-Element definieren.  
   
-|Name|Ist erforderlich|Beschreibung|  
+|Name|Ist erforderlich|Description|  
 |----------|-----------------|-----------------|  
-|Dokumentation|Nein|Eine Beschreibung des KPI.|  
+|Dokumentation|nein|Eine Beschreibung des KPI.|  
 |KpiGoal|ja|Ein Verweis auf eine Spalte, die Werte enthält, die als Ziel verwendet werden können.<br /><br /> Weitere Informationen finden Sie unter [PropertyRef-Element &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/propertyref-element-csdlbi.md).|  
 |KpiStatus|ja|Ein Verweis auf eine Spalte, die Werte enthält, die den aktuellen Status des KPI darstellen.|  
 |StatusGraphic|ja|Ein Verweis auf ein Bild, das den negativen, neutralen oder positiven Fortschritt für im KPI definierte Ziele angibt.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn Sie ein Modell entwerfen, können Sie einen KPI erstellen. Erstellen Sie dazu ein Measure, und weisen Sie dann das Measure zur Verwendung als KPI zu. Fügen Sie dann für KPIs spezifische Informationen hinzu, beispielsweise eine Grafik zum Aufzeigen von Trends.  
   
 ## <a name="example"></a>Beispiel  
@@ -93,7 +91,7 @@ ms.lasthandoff: 12/08/2017
 </Property>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Technische Referenz für BI-Anmerkungen zu CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

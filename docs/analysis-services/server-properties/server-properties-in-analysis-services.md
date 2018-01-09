@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6da7af04e852c5fff10a6d33e1ab69723d79e014
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4db4d5d2e57f5f4a967a2099ef11efa0ca10ca21
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="server-properties-in-analysis-services"></a>Servereigenschaften in Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Administrator kann die standardmäßigen serverkonfigurationseigenschaften von Ändern einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz. Jede Instanz verfügt über eigene Konfigurationseigenschaften, die unabhängig von anderen Instanzen auf demselben Server festgelegt werden.  
@@ -92,7 +92,7 @@ Eigenschaftenseiten in SQL Server Management Studio zeigen eine Teilmenge der Ei
 |[Sicherheitseigenschaften](../../analysis-services/server-properties/security-properties.md)|Im Abschnitt Sicherheit sind sowohl grundlegende als auch erweiterte Eigenschaften zum Definieren von Zugriffsberechtigungen enthalten. Hierzu zählen Einstellungen für Administratoren und Benutzer.|  
 |[Threadpooleigenschaften](../../analysis-services/server-properties/thread-pool-properties.md)|Die Threadpooleigenschaften steuern, wie viele Threads der Server erstellt. Hierbei handelt es sich vor allem um erweiterte Eigenschaften.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Analysis Services-Instanzverwaltung](../../analysis-services/instances/analysis-services-instance-management.md)   
  [Angeben der Konfigurationseinstellungen für die Lösungsbereitstellung](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   

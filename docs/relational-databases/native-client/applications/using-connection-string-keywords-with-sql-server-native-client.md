@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|applications
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords: sql13.swb.connecttoserver.options.registeredservers.f1
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 03cfc5aa4dd24dc595984298710c073061bec0b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a2fa102ad8d3161d1311978048a4b272253671a3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>Verwenden von Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/17/2017
 |**Datei-DSN**|Der Name einer vorhandenen ODBC-Dateidatenquelle.|  
 |**Sprache**|Name der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Sprache (optional). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]kann Nachrichten in mehreren Sprachen speichern **Sysmessages**. Wenn das Herstellen einer Verbindung mit einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit mehreren Sprachen **Sprache** gibt an, welcher Satz an Meldungen für die Verbindung verwendet werden.|  
 |**MARS_Connection**|Ermöglicht oder unterbindet die Verwendung von mehreren aktiven Resultsets (MARS) bei einer Verbindung. Gültige Werte sind "yes" und "no". Der Standardwert ist "no".|  
-|**MultiSubnetFailover**|Geben Sie immer **MultiSubnetFailover = Yes** beim Verbinden mit dem verfügbarkeitsgruppenlistener eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verfügbarkeitsgruppe oder einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failoverclusterinstanz. **MultiSubnetFailover = Yes** konfiguriert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client Schnellere Erkennung und Verbindung mit dem (gerade) aktiven Server bereitstellen. Mögliche Werte sind **Ja** und **Nein**. Die Standardeinstellung ist **keine**. Beispiel:<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> Weitere Informationen zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Unterstützung für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], finden Sie unter [SQL Server Native Client unterstützt für hohe Verfügbarkeit, Wiederherstellung im Notfall](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).|  
+|**MultiSubnetFailover**|Geben Sie immer **MultiSubnetFailover = Yes** beim Verbinden mit dem verfügbarkeitsgruppenlistener eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verfügbarkeitsgruppe oder einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failoverclusterinstanz. **MultiSubnetFailover = Yes** konfiguriert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client Schnellere Erkennung und Verbindung mit dem (gerade) aktiven Server bereitstellen. Mögliche Werte sind **Yes** und **No**. Die Standardeinstellung ist **keine**. Beispiel:<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> Weitere Informationen zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Unterstützung für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], finden Sie unter [SQL Server Native Client unterstützt für hohe Verfügbarkeit, Wiederherstellung im Notfall](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).|  
 |**NET**|Synonym für "Network".|  
 |**Netzwerk**|Gültige Werte sind **Dbnmpntw** (named Pipes) und **Dbmssocn** (TCP/IP).<br /><br /> Es ist ein Fehler auf, geben Sie einen Wert für die **Netzwerk** Schlüsselwort auch einen Protokollpräfix auf die **Server** Schlüsselwort.|  
 |**PWD**|Das Kennwort für das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldekonto, das im UID-Parameter angegeben ist. **PWD** muss nicht angegeben werden, wenn die Anmeldung ein NULL-Kennwort wurde oder bei Verwendung der Windows-Authentifizierung (`Trusted_Connection = yes`).|  

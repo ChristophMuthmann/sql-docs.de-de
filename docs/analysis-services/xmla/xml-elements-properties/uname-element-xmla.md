@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: UName Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9748d5ad0c72c30cbbadc7e3f5f333cac0c25d7b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f126f295b74fd2d1eadbe47851d43d87aae3e9a2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="uname-element-xmla"></a>UName-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Enthält den eindeutigen Namen des übergeordneten Elements [HierarchyInfo](../../../analysis-services/xmla/xml-elements-properties/hierarchyinfo-element-xmla.md) oder [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) Element.  
@@ -50,25 +48,25 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|String|  
-|Standardwert|Keine|  
-|Kardinalität|1-1: Erforderliches Element, das nur einmal auftritt.|  
+|Datentyp und -länge|Zeichenfolge|  
+|Standardwert|InclusionThresholdSetting|  
+|Cardinality|1-1: Erforderliches Element, das nur einmal auftritt.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[HierarchyInfo](../../../analysis-services/xmla/xml-elements-properties/hierarchyinfo-element-xmla.md), [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)|  
-|Untergeordnete Elemente|Keine|  
+|Untergeordnete Elemente|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Bei **HierarchyInfo** -Elementen enthält das **UName** -Element den Namen der Eigenschaft, die die eindeutigen Elementnamen der Hierarchie bereitstellt. Der Wert entspricht der MEMBER_UNIQUE_NAME-Eigenschaft, die in der OLE DB-Spezifikation für OLAP für Achsen-Rowsets definiert ist.  
   
  Bei **Member** -Elementen enthält das **UName** -Element den eindeutigen Namen des übergeordneten **Member** -Elements.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

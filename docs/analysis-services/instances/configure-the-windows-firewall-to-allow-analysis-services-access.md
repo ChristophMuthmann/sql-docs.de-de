@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 50841f276b204ed30de97636c5d3c5cccd7204e0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0cb0930e6fd3faf0b44c5b8ac46359ec959b85c9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ein unverzichtbarer erster Schritt beim Verfügbarmachen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oder [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] im Netzwerk verfügbar ist, um zu bestimmen, ob Sie die Blockierung von Ports in einer Firewall aufheben müssen. Bei den meisten Installationen müssen Sie mindestens eine eingehende Firewallregel erstellen, die Verbindungen mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]zulässt.  
@@ -240,7 +237,7 @@ ms.lasthandoff: 12/08/2017
   
  Wenn Sie SharePoint 2010 verwenden, müssen Sie keine Ports in der Windows-Firewall öffnen. SharePoint öffnet die Ports nach Bedarf selbst, und Add-Ins wie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint werden innerhalb der SharePoint-Umgebung ausgeführt. Bei einer Installation von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2010 verwendet der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdienst exklusiv die lokale Instanz SQL Server Analysis Services-Diensts ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]), die auf demselben Computer installiert ist. Dabei werden lokale Verbindungen und keine Netzwerkverbindungen verwendet, um auf den lokalen Analysis Services-Moduldienst zuzugreifen, der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten auf den SharePoint-Server lädt, abfragt und verarbeitet. Für die Anforderung von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten von Clientanwendungen werden Anforderungen über Ports weitergeleitet, die durch das SharePoint-Setup geöffnet werden. (Es werden insbesondere eingehende Regeln definiert, um den Zugriff auf SharePoint – 80, die SharePoint-Zentraladministration v4, SharePoint-Webdienste und SPUserCodeV4 zuzulassen.) Da [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Webdienste in einer SharePoint-Farm ausgeführt werden, reichen die SharePoint-Firewallregeln für den Remotezugriff auf [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten in einer SharePoint-Farm aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server-Browserdienst &#40;Datenbankmodul und SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
  [Starten, Beenden, Anhalten, Fortsetzen und Neustarten des Datenbankmoduls, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [Konfigurieren einer Windows-Firewall für Datenbankmodulzugriff](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -19,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 88376339572b8f91280b4a992451fc1178bf7127
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: edf38e8ecd84fd4f4db18bdb9423edeb8e56e76b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-mathematical-functions"></a>Verwenden von mathematischen Funktionen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/27/2017
   
  Eine Zahl, die an eine mathematische Funktion übergeben wird, wird standardmäßig als Gleitkommazahl mit doppelter Genauigkeit interpretiert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Funktionen &#40; MDX-Syntax &#41;](../mdx/functions-mdx-syntax.md)  
   
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-error-messages
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -31,11 +31,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b4c9e37cf7dac46d7739da4e8b11740df24b974c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 80c8f0e6fff0ccabc4d46b91f41a38896ad21167
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="processing-statements-that-generate-messages"></a>Verarbeiten von Anweisungen, die Meldungen generieren
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -154,7 +154,7 @@ szErrorMsg= "[Microsoft] [SQL Server Native Client][SQL Server]
   
  Wenn die Print- oder RAISERROR-Anweisung nach einer SQL­Anweisung (z. B. eine SELECT-Anweisung) stammt, und klicken Sie dann die Print- oder RAISERROR-Informationen, wenn zurückgegeben wird [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)auf dem Resultset positioniert festgelegt, die den Fehler enthält. **SQLMoreResults** SQL_SUCCESS_WITH_INFO oder SQL_ERROR zurückgegeben, abhängig vom Schweregrad der Meldung. Diese Nachrichten werden durch den Aufruf abgerufen **SQLGetDiagRec** bis SQL_NO_DATA zurückgegeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Behandlung von Fehlern und Meldungen](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
   

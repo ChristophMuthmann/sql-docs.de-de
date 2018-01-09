@@ -7,7 +7,7 @@ ms.reviewer:
 ms.suite: sql
 ms.prod_service: database-engine
 ms.component: smo
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 999c4535543e98c3122b38972130ca36668ce9e7
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: 5d758997c68328cd984befcf808721336c18ece4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/08/2018
 ---
 #<a name="installing-smo"></a>Installieren von SMO
 

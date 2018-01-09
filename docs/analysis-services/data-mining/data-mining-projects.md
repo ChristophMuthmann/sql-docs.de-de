@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ba4efe6772c6fcc668d6ce808a6c928a3af63101
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 115db2e7cc02805cd41e79363d8ff0a83d1c719e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-projects"></a>Data Mining-Projekte
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Datamining-Projekts ist Teil einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Lösung. Während des Entwurfsprozesses sind die Objekte, die Sie in diesem Projekt erstellen, für Tests und Abfragen im Rahmen einer Arbeitsbereichsdatenbank verfügbar. Wenn Benutzer in der Lage sein sollen, die Objekte im Projekt abzufragen oder zu durchsuchen, müssen Sie das Projekt auf einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitstellen, die im mehrdimensionalen Modus ausgeführt wird.  
@@ -210,7 +208,7 @@ ms.lasthandoff: 12/08/2017
  Sie können diese Aufgaben auch mit der Analysis Services Scripting Language (ASSL) oder mithilfe von Analysis Management Objects (AMO) ausführen. Weitere Informationen finden Sie unter [Entwickeln mit XMLA in Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md).  
   
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  In den folgenden Themen wird Verwendung des Data Mining-Assistenten beschrieben, um ein Data Mining-Projekt und zugeordnete Objekte zu erstellen.  
   
 |Aufgaben|Thema|  
@@ -223,7 +221,7 @@ ms.lasthandoff: 12/08/2017
 |Informationen über das Verarbeiten von Optionen und Berechtigungen|[Verarbeiten von Data Mining-Objekten](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
 |Bietet weitere Informationen über Analysis Services|[Mehrdimensionale Modelldatenbanken &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md)   
  [Erstellen mehrdimensionaler Modelle mit SQL Server-Datentools &#40;SSDT&#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [Arbeitsbereichsdatenbank &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  

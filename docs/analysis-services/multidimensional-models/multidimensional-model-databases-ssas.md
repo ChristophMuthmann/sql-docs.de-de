@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c3e78f2941cd7729576647eb96bf21c717664fcf
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 854371e81b8adf0ecf32c2685e64f5d136d00987
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="multidimensional-model-databases-ssas"></a>Mehrdimensionale Modelldatenbanken (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank ist eine Sammlung von Datenquellen, Datenquellensichten, Cubes, Dimensionen und Rollen. Optional kann eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank Data Mining-Strukturen und benutzerdefinierte Assemblys enthalten, mit deren Hilfe der Datenbank benutzerdefinierte Funktionen hinzugefügt werden können.  
@@ -47,7 +44,7 @@ ms.lasthandoff: 12/08/2017
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] dient die Einbindung der Quellcodeverwaltung dazu, die gleichzeitige Bearbeitung unterschiedlicher Objekte innerhalb eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts durch mehrere Entwickler zu unterstützen. Ein Entwickler kann eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank auch direkt bearbeiten und muss nicht den Umweg über ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt gehen. Hierbei besteht jedoch die Gefahr, dass die Objekte in einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank nicht mehr mit dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt synchron sind, das für die Bereitstellung der Datenbank verwendet wurde. Nach der Bereitstellung können Sie eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verwalten. Bestimmte Änderungen an einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank können auch mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]vorgenommen werden, z. B. Änderungen an Partitionen und Rollen, was ebenfalls dazu führen kann, dass Objekte in einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank nicht mehr mit dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt synchron sind, das für ihre Bereitstellung verwendet wurde.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  [Anfügen und Trennen von Analysis Services-Datenbanken](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)  
   
  [Sichern und Wiederherstellen von Analysis Services-Datenbanken](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
@@ -68,7 +65,7 @@ ms.lasthandoff: 12/08/2017
   
  [Umschalten einer Analysis Services-Datenbank zwischen schreibgeschütztem Modus und Lese-/Schreibmodus](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Herstellen in Onlinemodus einer Verbindung mit einer Analysis Services-Datenbank](../../analysis-services/multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md)   
  [Erstellen eines Analysis Services-Projekts &#40;SSDT&#41;](../../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)   
  [Abfragen von mehrdimensionalen Daten mit MDX](../../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)  

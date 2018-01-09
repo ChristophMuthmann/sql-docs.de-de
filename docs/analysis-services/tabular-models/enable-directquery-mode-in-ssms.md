@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5d439a9-5be1-4145-90e8-90777d80e98b
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fbce2dcf30bcdeded89ab0d8ea558d18585fe6a4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2779e5f09f447e0499e2eeb87ec89ba698cc8628
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>Aktivieren des DirectQuery-Modus in SSMS
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Sie können die Daten Zugriffseigenschaften Ändern eines tabellarischen Modells, das bereits bereitgestellt wurde, aktivieren DirectQuery-Modus, in denen Abfragen ausführen für eine relationale Back-End-Datenquelle, anstatt Daten verbleiben im Arbeitsspeicher zwischengespeichert.  
@@ -65,11 +65,11 @@ ms.lasthandoff: 12/08/2017
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Datenbank > **Eigenschaften** > **Modell** > **Standardmodus**.  
   
-2.  Legen Sie den Modus auf **DirectQuery**fest.  
+2.  Legen Sie den Modus auf **DirectQuery** fest.  
   
     |||  
     |-|-|  
-    |**Gültige Werte**|**Description**|  
+    |**Gültige Werte**|**Beschreibung**|  
     |**DirectQuery**|Abfragen werden auf eine relationale Back-End-Datenbank angewendet, wofür die für das Modell definierte Datenquellenverbindung verwendet wird.<br /><br /> Abfragen des Modells werden in native Datenbankabfragen konvertiert und an die Datenquelle umgeleitet.<br /><br /> Bei der Verarbeitung eines Modells im DirectQuery-Modus werden nur Metadaten kompiliert und bereitgestellt. Die Daten selbst befinden sich außerhalb des Modells in den Datenbankdateien der betriebsbereiten Datenquelle.|  
     |**Importieren**|Abfragen werden auf die tabellarische Datenbank in MDX oder DAX angewendet.<br /><br /> Wenn Sie ein Modell im Importmodus verarbeiten, werden Daten aus einer Back-End-Datenquelle abgerufen und auf dem Datenträger gespeichert. Beim Laden der Datenbank werden die Daten vollständig in den Arbeitsspeicher geladen, um sehr schnelle Tabellenscans und Abfragen zu ermöglichen.<br /><br /> Dies ist der Standardmodus für tabellarische Modelle und der einzige Modus für bestimmte (nicht relationale) Datenquellen.|  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 12/08/2017
   
     |||  
     |-|-|  
-    |**Gültige Werte**|**Description**|  
+    |**Gültige Werte**|**Beschreibung**|  
     |**InMemory**|Abfragen verwenden nur die im Arbeitsspeicher zwischengespeicherten Daten.|  
     |**InMemoryWithDirectQuery**|Für Abfragen wird standardmäßig der Cache verwendet, sofern in der Verbindungszeichenfolge vom Client nichts Gegenteiliges angegeben wurde.<br /><br /> Dies ist ein Hybridmodus, bei dem Partitionen einzeln für die Verwendung von „InMemory“ oder „DirectQuery“ konfiguriert werden.|  
     |**DirectQuery**|Für Abfragen wird nur die relationale Datenquelle verwendet.|  

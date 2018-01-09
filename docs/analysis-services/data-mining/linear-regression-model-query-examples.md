@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b0f34af9c1c466f09040c7915f53b993cb04ac1b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 150ef98bd2c949f7b4eb47170ec7855173608fbc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="linear-regression-model-query-examples"></a>Beispiele für lineare Regressionsmodellabfrage
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Wenn Sie eine Abfrage für ein Datamining-Modell erstellen, können Sie eine Inhaltsabfrage Details über die in der Analyse erkannten Muster liefert erstellen oder Erstellung einer Vorhersageabfrage, die die Muster im Modell Vorhersagen für neue Daten generiert. Eine Inhaltsabfrage stellt beispielsweise zusätzliche Details über die Regressionsformel zur Verfügung, während eine Vorhersageabfrage Aufschluss darüber gibt, ob ein neuer Datenpunkt in das Modell passt. Mit einer Abfrage können Sie auch Metadaten zum Modell abrufen.  
@@ -91,9 +89,9 @@ FROM LR_PredictIncome.CONTENT
   
  Erwartete Ergebnisse:  
   
-|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
+|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
-|Yearly Income|Nicht vorhanden|0|0.000457142857142857|0|1|  
+|Yearly Income|Missing|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
 |Age|471.687717702463|0|0|126.969442359327|7|  
 |Age|234.680904692439|0|0|0|8|  
@@ -208,7 +206,7 @@ NATURAL PREDICTION JOIN
   
  Eine Liste der Funktionen, die allen [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Algorithmen gemeinsam sind, finden Sie unter [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md). Weitere Informationen zum Verwenden dieser Funktionen finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; – Funktionsreferenz](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Microsoft Linear Regression-Algorithmus](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [Data Mining-Abfrage](../../analysis-services/data-mining/data-mining-queries.md)   
  [Technische Referenz zu Microsoft Linear Regression-Algorithmus](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   

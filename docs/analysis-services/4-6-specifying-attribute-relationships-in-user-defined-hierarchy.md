@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 03b086e70e3d1fdb085faac12392cc4265af5dcb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2c9d71ea7710736a17a404a997e43e6683894cd7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="4-6-specifying-attribute-relationships-in-user-defined-hierarchy"></a>4-6-angeben von Attributbeziehungen in eine benutzerdefinierte Hierarchie
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Da Sie bereits in diesem Lernprogramm erfahren haben, können Sie Attributhierarchien in Ebenen innerhalb einer benutzerdefinierten Hierarchie um Navigationspfade für Benutzer in einem Cube bereitzustellen organisieren. Eine Benutzerhierarchie kann eine natürliche Hierarchie wie beispielsweise Ort, Land/Region und Staat repräsentieren oder nur einen Navigationspfad wie beispielsweise Angestelltenname, Titel und Abteilungsname. Für den Benutzer, der in einer Hierarchie navigiert, stellen sich diese beiden Hierarchietypen gleich dar.  
@@ -45,7 +45,7 @@ In den Aufgaben in diesem Thema definieren Sie Attributbeziehungen für die Attr
   
 3.  Klicken Sie im Diagramm mit der rechten Maustaste auf das **Full Name** -Attribut, und wählen Sie anschließend **Neue Attributbeziehung**aus.  
   
-4.  Im Dialogfeld **Attributbeziehung erstellen** ist das **Quellattribut** **Full Name**. Legen Sie den Wert für **Verknüpftes Attribut** auf **Postal Code**fest. Belassen Sie in der Liste **Beziehungstyp** den Beziehungstyp auf **Flexibel** , da sich Beziehungen zwischen den Elementen im Laufe der Zeit ändern können.  
+4.  Im Dialogfeld **Attributbeziehung erstellen** ist das **Quellattribut** **Full Name**. Legen Sie den Wert für **Verknüpftes Attribut** auf **Postal Code**fest. Belassen Sie in der Liste **Beziehungstyp** den Beziehungstyp auf **Flexibel**, da sich Beziehungen zwischen den Elementen im Laufe der Zeit ändern können.  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -77,7 +77,7 @@ In den Aufgaben in diesem Thema definieren Sie Attributbeziehungen für die Attr
   
 17. Das Dialogfeld **Objekte löschen** wird geöffnet. Klicken Sie auf **OK**.  
   
-18. Klicken Sie im Diagramm mit der rechten Maustaste auf das Attribut **State-Province** , und wählen Sie anschließend **Neue Attributbeziehung**aus.  
+18. Klicken Sie im Diagramm mit der rechten Maustaste auf das Attribut **State-Province**, und wählen Sie anschließend **Neue Attributbeziehung** aus.  
   
 19. Im Dialogfeld **Attributbeziehung erstellen** lautet das **Quellattribut** **State-Province**. Legen Sie als **Verknüpftes Attribut** **Country-Region**fest. Stellen Sie in der Liste **Beziehungstyp** den Beziehungstyp auf **Fest** ein, da sich Beziehungen zwischen einem Bundesland bzw. Kanton und einem Land bzw. einer Region im Laufe der Zeit nicht ändern.  
   
@@ -111,7 +111,7 @@ In den Aufgaben in diesem Thema definieren Sie Attributbeziehungen für die Attr
   
 2.  Klicken Sie im Diagramm mit der rechten Maustaste auf das **Model Name** -Attribut, und wählen Sie anschließend **Neue Attributbeziehung**aus.  
   
-3.  Im Dialogfeld **Attributbeziehung erstellen** lautet das **Quellattribut** **Model Name**. Legen Sie für **Verknüpftes Attribut** die Einstellung **Produktgruppe**fest. Belassen Sie in der Liste **Beziehungstyp** den Beziehungstyp auf **Flexibel**.  
+3.  Im Dialogfeld **Attributbeziehung erstellen** lautet das **Quellattribut** **Model Name**. Legen Sie für **Verknüpftes Attribut** die Einstellung **Produktgruppe** fest. Belassen Sie in der Liste **Beziehungstyp** den Beziehungstyp auf **Flexibel**.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -161,7 +161,7 @@ In den Aufgaben in diesem Thema definieren Sie Attributbeziehungen für die Attr
   
 1.  Öffnen Sie den Dimensions-Designer für die Geography-Dimension, und klicken Sie auf die Registerkarte **Attributbeziehungen** .  
   
-2.  Klicken Sie im Diagramm mit der rechten Maustaste auf das **Postal Code** -Attribut, und wählen Sie anschließend **Neue Attributbeziehung**.  
+2.  Klicken Sie im Diagramm mit der rechten Maustaste auf das **Postal Code**-Attribut, und wählen Sie anschließend **Neue Attributbeziehung**.  
   
 3.  Im Dialogfeld **Attributbeziehung erstellen** lautet das **Quellattribut** **Postal Code**. Legen Sie den Wert **Verknüpftes Attribut** auf **City**fest. Legen Sie in der Liste **Beziehungstyp** den Beziehungstyp auf **Flexibel**fest.  
   
@@ -169,7 +169,7 @@ In den Aufgaben in diesem Thema definieren Sie Attributbeziehungen für die Attr
   
 5.  Klicken Sie im Diagramm mit der rechten Maustaste auf das **City** -Attribut, und wählen Sie anschließend **Neue Attributbeziehung**aus.  
   
-6.  Im Dialogfeld **Attributbeziehung erstellen** ist das **Quellattribut** **City**. Legen Sie den Wert **Verknüpftes Attribut** auf **State-Province**fest. Stellen Sie in der Liste **Beziehungstyp** den Beziehungstyp auf **Fest**ein.  
+6.  Im Dialogfeld **Attributbeziehung erstellen** ist das **Quellattribut** **City**. Legen Sie den Wert **Verknüpftes Attribut** auf **State-Province** fest. Stellen Sie in der Liste **Beziehungstyp** den Beziehungstyp auf **Fest**ein.  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -187,10 +187,10 @@ In den Aufgaben in diesem Thema definieren Sie Attributbeziehungen für die Attr
   
 14. Klicken Sie im Menü **Erstellen** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]auf **Analysis Services Tutorial bereitstellen**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Definieren von unbekannten Elementen und Eigenschaften für das Verarbeiten von NULL-Werten](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Definieren von Attributbeziehungen](../analysis-services/multidimensional-models/attribute-relationships-define.md)  
 [Eigenschaften der Benutzerhierarchie](../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)  
   

@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8d32038273e727db3b47125b26ad8293ce088672
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2e94847ca10923bba05e228f36a25e5caa8c2027
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -177,7 +177,7 @@ ASYMMETRISCHE Schlüssel *Asym_key_name*
   
  Gibt den Namen eines asymmetrischen Schlüssels an, der diesem Anmeldenamen zugeordnet werden soll. Dieser Schlüssel muss bereits in der master-Datenbank auftreten.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.  
   
  Das vorherige Erstellen von Hashwerten für Kennwörter wird nur unterstützt, wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen erstellen.  
@@ -196,6 +196,8 @@ ASYMMETRISCHE Schlüssel *Asym_key_name*
  Ein Skript zum Übertragen von Anmeldungen, finden Sie unter [zum Übertragen von Benutzernamen und Kennwörter zwischen Instanzen von SQL Server 2005 und SQL Server 2008](http://support.microsoft.com/kb/918992).  
   
  Automatisch beim Erstellen eines Anmeldenamens ermöglicht es den neuen Anmeldenamen und erteilt ihm die Serverebene **CONNECT SQL** Berechtigung.  
+ 
+ Des Servers [Authentifizierungsmodus](../../relational-databases/security/choose-an-authentication-mode.md) den Anmeldetyp für den jeweiligen Zugriff müssen übereinstimmen.
   
  Informationen zum Entwerfen eines Berechtigungssystems finden Sie unter [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
@@ -335,7 +337,7 @@ CREATE LOGIN [Contoso\Mary] FROM WINDOWS;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erste Schritte mit Berechtigungen für das Datenbankmodul](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)   
  [Prinzipale &#40;Datenbankmodul&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Kennwortrichtlinie](../../relational-databases/security/password-policy.md)   

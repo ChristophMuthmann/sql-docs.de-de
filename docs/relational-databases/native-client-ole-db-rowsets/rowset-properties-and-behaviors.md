@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-rowsets
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 68f4ffdbf0408a936d7a2c9b49f18eb8adb32520
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a0c53bff9e68fb0b95ce2876fd9521c0eb40c206
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="rowset-properties-and-behaviors"></a>Eigenschaften und Verhaltensweisen von Rowsets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -108,7 +108,7 @@ ms.lasthandoff: 11/17/2017
 |SSPROP_QP_NOTIFICATION_OPTIONS|Spalte: No<br /><br /> R/w: Lesen/Schreiben<br /><br /> Typ: VT_BSTR<br /><br /> Standard: leere Zeichenfolge<br /><br /> Beschreibung: Die Abfragebenachrichtigungsoptionen. Diese werden in einer Zeichenfolge mit `name=value` angegeben. Der Benutzer ist für das Erstellen des Diensts und Lesen von Benachrichtigungen von der Warteschlange verantwortlich. Die Syntax der Benachrichtigungen Optionen Abfragezeichenfolge lautet:<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> Beispiel:<br /><br /> `service=mySSBService;local database=mydb`|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|Spalte: No<br /><br /> R/w: Lesen/Schreiben<br /><br /> Typ: VT_UI4<br /><br /> Standard: 432000 Sekunden (5 Tage).<br /><br /> Minimum: 1 Sekunde<br /><br /> Maximum: 2^31-1 Sekunden<br /><br /> Beschreibung: Die Anzahl der Sekunden, während der die Abfragebenachrichtigung aktiv bleiben soll.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

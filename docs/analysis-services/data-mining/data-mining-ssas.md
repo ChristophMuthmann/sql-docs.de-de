@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: data mining [Analysis Services], about data mining
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ac8390ebf0ffd45388d4fcea1dfbf846146b3b0d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6ccc1faad28913133cc0870899f20b443fc28eb7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-ssas"></a>Data Mining (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wurde ein führender Vorhersageanalysen seit der Version 2000 durch die Bereitstellung von Datamining in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Die Kombination von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining stellt eine integrierte Plattform für Predictive Analytics mit Datenbereinigung und -vorbereitung, Machine Learning und Berichterstellung bereit. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining umfasst mehrere Standardalgorithmen, einschließlich EM- und K-Means-Clustermodellen, neuronalen Netzwerken, logistischer und linearer Regression, Entscheidungsstrukturen und Naive Bayes-Klassifizierungen. Alle Modelle umfassen Visualisierungen, mit denen Sie Ihre Modelle entwickeln, optimieren und auswerten können.  Die Integration von Data Mining in Business Intelligence-Lösungen unterstützt Sie bei fundierten Entscheidungen zu komplexen Problemen.  
@@ -76,7 +74,7 @@ ms.lasthandoff: 12/08/2017
   
 -   [Sicherheitsübersicht &#40;Data Mining&#41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server R Services](../../advanced-analytics/r-services/sql-server-r-services.md)  
   
   

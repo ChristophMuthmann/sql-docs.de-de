@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-rowsets
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f58933a4c922671ea6c1b96cb9690afb32f2174a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 18c250d688760aee11540933eef6703c490b38d3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>Abrufen von BLOB-Daten mithilfe von 'IRow::Open' und 'ISequentialStream'
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -87,7 +87,7 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
   
  Umfangreiche Daten können gebunden oder abgerufen, indem die **ISequentialStream** Schnittstelle. Bei gebundenen Spalten gibt das Statusflag DBSTATUS_S_TRUNCATED an, ob die Daten abgeschnitten werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Abrufen von Blobdaten mithilfe von IRow](http://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
   
   

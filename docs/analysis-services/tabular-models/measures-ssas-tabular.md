@@ -5,13 +5,10 @@ ms.date: 04/10/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6309c988b279db0e96915e6ae4d17011255d47f6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 41834c6a734417d6851e055cc63e7e8f89aea954
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="measures"></a>Measures
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]In tabellarischen Modellen ist ein Measure eine Berechnung, die mit einer DAX-Formel für die Verwendung in einem berichtserstellungsclient erstellt. Measures werden auf Grundlage von Feldern, Filtern oder eines Slicers ausgewertet, die der Benutzer in der Clientanwendung zur Berichtserstellung auswählt.  
@@ -81,7 +78,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
 |Eigenschaft|Standardeinstellung|Description|  
 |--------------|---------------------|-----------------|  
-|**Description**|Leer|Die Beschreibung der Maßeinheit. Die Beschreibung wird nicht mit dem Measure in einem Berichterstellungsclient angezeigt.|  
+|**Beschreibung**|Leer|Die Beschreibung der Maßeinheit. Die Beschreibung wird nicht mit dem Measure in einem Berichterstellungsclient angezeigt.|  
 |**Format**|Wird automatisch durch den Datentyp der Spalte bestimmt, auf die im Formelausdruck verwiesen wird.|Das Format des Measures. Beispielsweise Währung oder Prozentsatz.|  
 |**Formel**|Die Formel, die bei der Erstellung des Measures in die Bearbeitungsleiste eingefügt wurde.|Die Formel des Measures.|  
 |**Measurename**|Bei Verwendung von AutoSumme ist der Measurename gefolgt von einem Doppelpunkt dem Spaltennamen vorangestellt. Wenn eine benutzerdefinierte Formel eingegeben wird, geben Sie einen Namen gefolgt von einem Doppelpunkt und dann die Formel ein.|Der Name des Measures, so wie er in der Feldliste des Berichterstellungsclients angezeigt wird.|  
@@ -91,7 +88,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
  Jedes Measure kann als Basismeasure eines KPIs verwendet werden. Klicken Sie mit der rechten Maustaste auf ein Measure und anschließend auf **KPI erstellen**, um einen KPI im Measureraster zu erstellen. Das Dialogfeld Key Performance Indicator wird dort angezeigt, wo Sie anschließend einen Zielwert (definiert durch ein Measure oder einen absoluten Wert) angeben und Statusschwellenwerte und einen Grafiktyp definieren können. Weitere Informationen finden Sie unter [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md).  
   
-##  <a name="bkmk_rel_tasks"></a> Verwandte Aufgaben  
+##  <a name="bkmk_rel_tasks"></a> Related tasks  
   
 |Thema|Description|  
 |-----------|-----------------|  

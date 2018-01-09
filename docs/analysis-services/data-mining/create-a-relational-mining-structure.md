@@ -5,12 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 77b40db70cf3758f76d8e1773e6388fd6a833c49
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6ea3691ad03e5133d14f6aa8f99324957eb0c2b4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-relational-mining-structure"></a>Erstellen einer relationalen Miningstruktur
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die meisten Datamining-Modelle basieren auf relationalen Datenquellen. Die Vorteile, ein relationales Data Mining-Modell zu erstellen, bestehen darin, dass Sie Ad-hoc-Daten zusammenstellen sowie ein Modell trainieren und aktualisieren können, ohne dass die Komplexität gegeben ist, die beim Erstellen eines Cubes vorliegt.  
@@ -132,7 +130,7 @@ ms.lasthandoff: 12/08/2017
 > [!WARNING]  
 >  Damit Sie Drillthrough verwenden können, müssen Sie es aktivieren, wenn Sie die Miningstruktur erstellen. Sie können zu einem späteren Zeitpunkt Drillthrough für Modelle aktivieren, indem Sie eine Eigenschaft für das Modell festlegen. Die Miningstrukturen machen es jedoch erforderlich, dass diese Option am Anfang festgelegt wird. Weitere Informationen finden Sie unter [Drillthroughabfragen &#40;Data Mining&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Data Mining-Designer](../../analysis-services/data-mining/data-mining-designer.md)   
  [Datamining-Assistenten &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [Miningmodelleigenschaften](../../analysis-services/data-mining/mining-model-properties.md)   

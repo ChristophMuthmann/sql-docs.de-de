@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e306099efb3f667637adfbbfd0e47854e065ad66
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b0bbf3f9599995081b3a8b463bc59dd84dcee237
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-filegroups-and-files-to-store-data"></a>Verwenden von Dateigruppen und Dateien zur Speicherung von Daten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Datendateien werden zum Speichern von Datenbankdateien verwendet. Die Datendateien werden in Dateigruppen unterteilt. Das <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekt verfügt über eine <xref:Microsoft.SqlServer.Management.Smo.Database.FileGroups%2A>-Eigenschaft, die auf ein <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection>-Objekt verweist. Jedes <xref:Microsoft.SqlServer.Management.Smo.FileGroup>-Objekt in dieser Auflistung verfügt über eine <xref:Microsoft.SqlServer.Management.Smo.FileGroup.Files%2A>-Eigenschaft. Diese Eigenschaft bezieht sich auf eine <xref:Microsoft.SqlServer.Management.Smo.DataFileCollection>-Auflistung, die alle Datendateien enthält, die zur Datenbank gehören. Eine Dateigruppe wird prinzipiell verwendet, um Dateien zu gruppieren, die zur Speicherung eines Datenbankobjekts genutzt werden. Ein Grund für die Verteilung eines Datenbankobjekts über mehrere Dateien ist die Verbesserung der Leistung, insbesondere wenn die Dateien auf unterschiedlichen Laufwerken gespeichert sind.  
@@ -196,7 +196,7 @@ $lf1.Drop()
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  <xref:Microsoft.SqlServer.Management.Smo.FileGroup>   
  [Datenbankdateien und Dateigruppen](../../../relational-databases/databases/database-files-and-filegroups.md)  
   

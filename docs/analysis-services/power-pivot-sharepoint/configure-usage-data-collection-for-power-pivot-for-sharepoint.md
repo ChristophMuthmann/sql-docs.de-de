@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f939c078a2b21cfa16a4f36228b46822f2bc8457
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 60e8c6ab0537a8757d6a75b05e4788dc4a29768f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>Konfigurieren der Sammlung von Verwendungsdaten für Power Pivot für SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sammlung von Verwendungsdaten ist eine SharePoint-Funktion auf Farmebene. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint verwendet und erweitert dieses System, um Berichte im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboard bereitzustellen, die zeigen, wie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten und -Dienste verwendet werden. Abhängig davon, wie SharePoint installiert wird, kann die Sammlung von Verwendungsdaten für die Farm deaktiviert sein. Ein Farmadministrator muss die Verwendungsprotokollierung aktivieren, damit die Verwendungsdaten für die Darstellung im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboard erstellt werden.  
@@ -168,7 +165,7 @@ ms.lasthandoff: 12/08/2017
   
     -   Der Standardwert beträgt 300 Sekunden (oder fünf Minuten). Dieser Wert wird für dynamische Farmumgebungen empfohlen, in denen eine Vielzahl von Anwendungen und Diensten ausgeführt wird.  
   
-     Wenn Sie diesen Wert wesentlich heraufsetzen, können statistische Daten verloren gehen, bevor sie gemeldet werden. Ein Dienstneustart bewirkt z. B., dass Abfragestatistikdaten verloren gehen. Umgekehrt können die integrierten Aktivitätsberichte jedoch auch zu wenig Daten enthalten. In diesem Fall können Sie das Intervall verringern, damit Ereignisse für die Berichterstellung häufiger gemeldet werden.  
+     Wenn Sie diesen Wert wesentlich heraufsetzen, können statistische Daten verloren gehen, bevor sie gemeldet werden. Ein Dienstneustart bewirkt z. B., dass Abfragestatistikdaten verloren gehen. Umgekehrt können die integrierten Aktivitätsberichte jedoch auch zu wenig Daten enthalten. In diesem Fall können Sie das Intervall verringern, damit Ereignisse für die Berichterstellung häufiger gemeldet werden.  
   
 3.  Klicken Sie auf **OK**.  
   
@@ -198,7 +195,7 @@ ms.lasthandoff: 12/08/2017
 |Obergrenze für erwartete Antwortdauer|3000 (in Millisekunden)|Integer|Legt eine Obergrenze fest, die die erwartete Dauer für den Austausch einer Anforderung/Antwort definiert.|  
 |Obergrenze für lange Antworten|10000 (in Millisekunden)|Integer|Legt eine Obergrenze fest, die den Austausch einer Anforderung/Antwort mit langer Laufzeit definiert. Alle Anforderungen, die diese Obergrenze überschreiten, gehören zur Kategorie Überschritten, die keinen oberen Schwellenwert aufweist.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Konfigurationseinstellungsverweis &#40;Power Pivot für SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [Sammlung von Power Pivot-Verwendungsdaten](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
   

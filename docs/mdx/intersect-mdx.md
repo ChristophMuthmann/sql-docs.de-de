@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: INTERSECT
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 75a229e6b5ccf1f835122ba7fd39db115b49ce7c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d073e4bc1916720224b7b355b00e23c35430b86a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="intersect-mdx"></a>Intersect (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
  *Set_Expression2*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die **Intersect** Funktion gibt die Schnittmenge zweier Mengen zurück. Doppelte Werte werden von der Funktion standardmäßig aus den beiden Mengen entfernt, bevor die Schnittmenge gebildet wird. Die beiden angegebenen Mengen müssen dieselbe Dimensionalität haben.  
   
  Das optionale **alle** Flag werden doppelte Werte beibehalten. Wenn **alle** angegeben wird, die **Intersect** Funktion Schnittmenge Elemente wie gewohnt überschneidet, und jeder doppelte Wert in der ersten Menge, die über einen übereinstimmenden doppelten in der zweiten Menge verfügt auch überschneidet. Die beiden angegebenen Mengen müssen dieselbe Dimensionalität haben.  
@@ -83,7 +83,7 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
   
  `[Adventure Works]`  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

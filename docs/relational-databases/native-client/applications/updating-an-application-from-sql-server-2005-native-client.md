@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|applications
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: SQL Server Native Client, updating applications
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bde56c3efe2231d54463c4d23f311237415a6f53
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ea8bd24944008b1301f02024f9aa77910a7dbe37
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>Aktualisieren einer Anwendung von SQL Server 2005 Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 |Strengere SQL_C_TYPE _TIMESTAMP- und DBTYPE_DBTIMESTAMP-Parameterüberprüfung|Vor [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client **"DateTime"** Werte wurden entsprechend den Dezimalstellen gerundet **"DateTime"** und **Smalldatetime** Spalten nach [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client (und höher) wendet jetzt die strengeren Validierungsregeln an, die in der ODBC-Hauptspezifikation für Sekundenbruchteile definiert sind. Wenn ein Parameterwert nicht mit den angegebenen oder vom Client implizierten Dezimalstellen in den SQL-Typ konvertiert werden kann, ohne dass nachfolgende Stellen abgeschnitten werden, dann wird ein Fehler zurückgegeben.|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] kann andere Ergebnisse zurückgeben, wenn ein Trigger ausgeführt wird.|Eingeführten Änderungen [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] kann dazu führen, dass eine Anwendung andere Ergebnisse zurückgegeben, die von einer Anweisung, die aufgrund ein Triggers ausgeführt werden, wenn **NOCOUNT OFF** gültig war. In dieser Situation kann die Anwendung einen Fehler generieren. Um diesen Fehler zu beheben, legen **NOCOUNT ON** im Trigger, oder rufen Sie SQLMoreResults, um zum nächsten Ergebnis zu wechseln.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Programmierung für SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

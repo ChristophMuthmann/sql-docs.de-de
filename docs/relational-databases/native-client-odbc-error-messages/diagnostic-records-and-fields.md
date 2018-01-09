@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-error-messages
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -27,11 +27,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e4f1f7c5f8eb78ce45d380cc337ca0ab3c6796d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2ced62a96f94fa4cb929f295f7a390c60b42e15d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="diagnostic-records-and-fields"></a>Diagnosedatensätze und -felder
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,9 +45,9 @@ ms.lasthandoff: 11/17/2017
   
  Felder in den Statusdatensätzen enthalten Informationen über bestimmte Fehler oder Warnungen, die vom ODBC-Treiber-Manager, vom Treiber oder von der Datenquelle zurückgegeben werden, einschließlich SQLSTATE, systemeigener Fehlernummer, Diagnosemeldung, Spaltennummer und Zeilennummer. Statusdatensätze werden nur erstellt, wenn die Funktion SQL_ERROR, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_NEED_DATA oder SQL_STILL_EXECUTING zurückgibt. Eine vollständige Liste der Felder in den statusdatensätzen finden Sie unter **SQLGetDiagField**.  
   
- **SQLGetDiagRec** ruft zusammen mit der ODBC SQLSTATE, systemeigener Fehlernummer und diagnosemeldungsfeldern einen einzelnen Diagnosedatensatz ab. Diese Funktion ist vergleichbar mit der ODBC 2.. *x***SQLError** Funktion. Die einfachste Fehlerbehandlungsfunktion in ODBC 3.. *x* wiederholt aufgerufen **SQLGetDiagRec** beginnend mit der *RecNumber* Parametersatz auf 1 und erhöht *RecNumber* von 1 bis **SQLGetDiagRec** gibt SQL_NO_DATA zurück. Dies ist gleichbedeutend mit einer ODBC 2.. *x* aufrufende **SQLError** bis SQL_NO_DATA_FOUND zurückgegeben.  
+ **SQLGetDiagRec** ruft zusammen mit der ODBC SQLSTATE, systemeigener Fehlernummer und diagnosemeldungsfeldern einen einzelnen Diagnosedatensatz ab. Diese Funktion ist vergleichbar mit der ODBC 2. *x***SQLError** Funktion. Die einfachste Fehlerbehandlungsfunktion in ODBC 3. *x* wiederholt aufgerufen **SQLGetDiagRec** beginnend mit der *RecNumber* Parametersatz auf 1 und erhöht *RecNumber* von 1 bis **SQLGetDiagRec** gibt SQL_NO_DATA zurück. Dies ist gleichbedeutend mit einer ODBC 2. *x* aufrufende **SQLError** bis SQL_NO_DATA_FOUND zurückgegeben.  
   
- ODBC-3. *x* unterstützt weitaus mehr Diagnoseinformationen als ODBC 2.. *X*. Diese Informationen werden in weiteren Feldern in Diagnosedatensätzen abgerufen, indem gespeichert **SQLGetDiagField**.  
+ ODBC-3. *x* unterstützt weitaus mehr Diagnoseinformationen als ODBC 2. *X*. Diese Informationen werden in weiteren Feldern in Diagnosedatensätzen abgerufen, indem gespeichert **SQLGetDiagField**.  
   
  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber verfügt über treiberspezifische Diagnosefelder, die mit abgerufen werden können **SQLGetDiagField**. Bezeichnungen für diese treiberspezifischen Felder werden in sqlncli.h definiert. Mit diesen Bezeichnungen rufen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Status, den Schweregrad, den Servernamen, den Prozedurnamen und die jedem Diagnosedatensatz zugeordnete Zeilennummer ab. Außerdem enthält sqlncli.h Definitionen der Codes, die der Treiber verwendet, um Transact-SQL-Anweisungen zu identifizieren, wenn eine Anwendung ruft **SQLGetDiagField** mit *DiagIdentifier* SQL_DIAG_DYNAMIC_ festgelegt FUNCTION_CODE.  
   

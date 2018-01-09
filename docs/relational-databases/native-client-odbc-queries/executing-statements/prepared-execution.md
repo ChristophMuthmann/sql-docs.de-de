@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 841de8200a7f09301fafa2fc38573b7895e8634f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: af15198f0c876933a9ab2ff5583b903e279e665b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="prepared-execution"></a>Die vorbereitete Ausführung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
  Einige ältere ODBC-Anwendungen **SQLPrepare** jederzeit [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md) verwendet wurde. **SQLBindParameter** erfordert nicht die Verwendung von **SQLPrepare**, sondern kann verwendet werden, mit **SQLExecDirect**. Verwenden Sie z. B. **SQLExecDirect** mit **SQLBindParameter** den Rückgabecode abrufen oder Ausgabeparameter aus einer gespeicherten Prozedur, die nur einmal ausgeführt wird. Verwenden Sie keine **SQLPrepare** mit **SQLBindParameter** , wenn die gleiche Anweisung mehrmals ausgeführt wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Ausführen von Anweisungen &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

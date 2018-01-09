@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Key Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2e6c77841fa78b1ad2c866abc5c3aea5af50ef27
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 61e9e8b5b03e9ecdf5eba345d907f4ccc0f9c07a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="key-element-xmla"></a>Key-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Enthält einen Elementschlüsselwert für ein Attributelement.  
@@ -50,23 +48,23 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Any|  
-|Standardwert|Keine|  
-|Kardinalität|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
+|Standardwert|InclusionThresholdSetting|  
+|Cardinality|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Schlüssel](../../../analysis-services/xmla/xml-elements-properties/keys-element-xmla.md)|  
-|Untergeordnete Elemente|Keine|  
+|Untergeordnete Elemente|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Der von diesem Element verwendete Datentyp sollte dem Datentyp der jeweiligen Schlüsselspalte für das angegebene Attribut entsprechen. Wenn **Key** -Elemente nicht für ein übergeordnetes **Attribute** -Element angegeben sind, werden das **AttributeName** und das **Name** -Element, die im übergeordneten **Attribute** -Element angegeben sind, zur Identifizierung des zu modifizierenden Attributelements verwendet.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Attribute-Element &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)   
  [AttributeName-Element &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/attributename-element-xmla.md)   
  [Drop-Element &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)   

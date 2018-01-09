@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: FREEZE
@@ -22,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b447ef6b4c4699e652b6093c5d0a10e44ecb4d41
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 981baf5a25d77884444320e832e35d8b16623c46
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-scripting---freeze"></a>MDX-Skripts - fixiert werden soll
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ FREEZE Subcube_Expression
  *Subcube_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der einen Teilcube zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die **FIXIEREN** -Anweisung fixiert die Werte von Zellen in einem angegebenen Teilcube, sodass nachfolgende Anweisungen in einem MDX Skript ändern ihrer Werte in nachfolgenden Berechnungsdurchläufen übergibt.  
   
  Im folgenden Beispiel stellen A und B Teilcubes in einem MDX-Berechnungsskript dar:  
@@ -68,7 +68,7 @@ B = 3
   
  A ist jetzt gleich 2, und B ist gleich 3.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [MDX-Skriptanweisungen &#40; MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

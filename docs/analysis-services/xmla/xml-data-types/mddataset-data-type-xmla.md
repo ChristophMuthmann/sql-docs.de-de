@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: MDDataSet Data Type
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5fe67716b8c818e5a5784ea6599b1a045e7f8a44
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 382c3badf6b31e99c707c9adce011c278df82280
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mddataset-data-type-xmla"></a>MDDataSet-Datentyp (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Definiert einen abgeleiteten Datentyp, der vom zurückgegebenen mehrdimensionale Daten darstellt, der die [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) Methode.  
@@ -54,18 +52,18 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>Datentypmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
 |Basisdatentypen|[Resultset](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|  
-|Abgeleitete Datentypen|Keine|  
+|Abgeleitete Datentypen|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>Datentypbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|Keine|  
+|Übergeordnete Elemente|InclusionThresholdSetting|  
 |Untergeordnete Elemente|[Achsen](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md), [CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md), [OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md)|  
-|Abgeleitete Elemente|Keine|  
+|Abgeleitete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
  Der **MDDataSet** -Datentyp stellt das OLAP-orientierte Rowset (oder Dataset) bereit, das erforderlich ist, um OLAP-Daten in XML darzustellen. Die Inhalte dieses Rowsets können je nach den Werten der variieren die **Content** und **Format** Eigenschaften in der [Eigenschaften](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md) Auflistung von der  **Führen Sie** Methode. Weitere Informationen zu den **Content** und **Format** Eigenschaften finden Sie in [unterstützten XMLA-Eigenschaften &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  

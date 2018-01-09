@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 26bae76004b344b15f8f2be3605eb8c600c31039
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 91d370b9e71d843aa9a8ef8848b7cd63b38f0880
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>Tabellen und Spalten (SSAS – tabellarisch)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Nachdem Sie Tabellen und Daten in ein Modell hinzugefügt wurden mithilfe des Tabellenimport-Assistenten, können Sie zunächst arbeiten mit Tabellen neue Spalten mit Daten hinzufügen, Beziehungen zwischen Tabellen erstellen, Berechnungen definieren, die die Daten erweitern, und das Filtern und Sortieren von Daten in die Tabellen zur besseren Übersichtlichkeit.  
@@ -46,7 +43,7 @@ ms.lasthandoff: 12/08/2017
  **Tabellenmetadaten**  
  Beziehungen, Measures, Rollen, Perspektiven und eingefügte Daten sind ausnahmslos Metadaten, durch die Objekte innerhalb des Kontexts einer Tabelle definiert werden.  
   
- **Daten**  
+ **Data**  
  Sobald Sie zum ersten Mal Tabellen importieren, indem Sie den Tabellenimport-Assistenten verwenden oder neue Daten in berechneten Spalten erstellen, werden die Tabellenspalten mit Daten aufgefüllt. Wenn Daten in der Quelle geändert werden oder ein Modell aus dem Arbeitsspeicher entfernt wird, müssen Sie einen Verarbeitungsvorgang ausführen, um die Tabellen erneut mit Daten aufzufüllen.  
   
 ##  <a name="bkmk_working"></a> Arbeiten mit Tabellen und Spalten  

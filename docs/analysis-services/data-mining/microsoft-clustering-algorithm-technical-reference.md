@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,11 +30,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffca0c4aa4879d5732831113308c26a9032a7dff
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 187eea9af56b4da074f374923c29d7ebcea0aca2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Clustering-Algorithmus
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In diesem Abschnitt wird erläutert, die Implementierung der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering-Algorithmus, einschließlich der Parameter, die Sie verwenden können, um das Verhalten von Clustermodellen steuern. Außerdem bietet der Abschnitt Anleitungen zur Verbesserung der Leistung beim Erstellen und Verarbeiten von Clustermodellen.  
@@ -102,7 +100,7 @@ ms.lasthandoff: 12/08/2017
  CLUSTERING_METHOD  
  Gibt an, welche Clustermethode vom Algorithmus verwendet wird. Die folgenden Clustermethoden stehen zur Verfügung:  
   
-|ID|Methode|  
+|im Elementknoten &lt;Customer ID="1"|Methode|  
 |--------|------------|  
 |1|EM skalierbar|  
 |2|EM nicht skalierbar|  
@@ -114,7 +112,7 @@ ms.lasthandoff: 12/08/2017
  CLUSTER_COUNT  
  Gibt die ungefähre Anzahl der vom Algorithmus zu erstellenden Cluster an. Falls die ungefähre Anzahl von Clustern nicht aus den Daten erstellt werden kann, erstellt der Algorithmus so viele Cluster wie möglich. Durch Festlegen des CLUSTER_COUNT-Parameters auf 0 wird der Algorithmus zur Verwendung heuristischer Methoden veranlasst, um die Anzahl von zu erstellenden Clustern so gut wie möglich zu bestimmen.  
   
- Der Standardwert lautet 10.  
+ Der Standardwert ist 10.  
   
  CLUSTER_SEED  
  Gibt den numerischen Ausgangswert für die zufällige Clustergenerierung in der Anfangsphase der Modellerstellung an.  
@@ -138,12 +136,12 @@ ms.lasthandoff: 12/08/2017
   
  Eine Reduzierung der Anzahl von Kandidatenmodellen kann zwar zur Verbesserung der Leistung führen, beinhaltet jedoch das Risiko, einige gute Kandidatenmodelle zu verpassen.  
   
- Der Standardwert lautet 10.  
+ Der Standardwert ist 10.  
   
  STOPPING_TOLERANCE  
  Gibt den Wert an, mit dem bestimmt wird, wann Konvergenz erreicht ist und die Modellerstellung mit dem Algorithmus abgeschlossen ist. Konvergenz ist erreicht, wenn die Gesamtänderung der Clusterwahrscheinlichkeiten kleiner als das Verhältnis des STOPPING_TOLERANCE-Parameters geteilt durch die Modellgröße ist.  
   
- Der Standardwert lautet 10.  
+ Der Standardwert ist 10.  
   
  SAMPLE_SIZE  
  Gibt die Anzahl von Fällen an, die bei jedem Durchlauf des Algorithmus verwendet werden, wenn der CLUSTERING_METHOD-Parameter auf eine der skalierbaren Clustermethoden festgelegt ist. Das Festlegen des SAMPLE_SIZE-Parameters auf 0 bewirkt eine Clustererstellung für das gesamte Dataset in einem einzelnen Durchlauf. Das gesamte Dataset in einem einzelnen Durchlauf zu laden, kann zu Problemen mit dem Arbeitsspeicher und der Leistung führen.  
@@ -178,7 +176,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering-Algorithmus unterstützt bestimmte Eingabespalten und vorhersagbare Spalten. Diese sind in der nachstehenden Tabelle aufgelistet. Weitere Informationen zur Bedeutung der Inhaltstypen in einem Miningmodell finden Sie unter [Inhaltstypen &#40;Data Mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Column|Inhaltstypen|  
+|Spalte|Inhaltstypen|  
 |------------|-------------------|  
 |Eingabeattribut|Continuous, Cyclical, Discrete, Discretized, Key, Table, Ordered|  
 |Vorhersagbares Attribut|Continuous, Cyclical, Discrete, Discretized, Table, Ordered|  
@@ -186,7 +184,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Zyklische und sortierte Inhaltstypen werden unterstützt, der Algorithmus behandelt sie jedoch als diskrete Werte und führt keine spezielle Verarbeitung durch.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Microsoft Clustering-Algorithmus](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
  [Clusteringmodellabfragen](../../analysis-services/data-mining/clustering-model-query-examples.md)   
  [Miningmodellinhalt von Clustermodellen &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  

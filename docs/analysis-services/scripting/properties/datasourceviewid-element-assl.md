@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DataSourceViewID Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e28df2b53c961d712a21c4c1bf96a5b6e19399af
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: abfb00b1cd16aadcd98478358b48a24a9b993423
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="datasourceviewid-element-assl"></a>DataSourceViewID-Element (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Identifiziert die [DataSourceView](../../../analysis-services/scripting/objects/datasourceview-element-assl.md) Element zugeordnet ist die [binden](../../../analysis-services/scripting/data-type/binding-data-type-assl.md) übergeordneten Elements.  
@@ -47,23 +45,23 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|String|  
-|Standardwert|Keine|  
-|Kardinalität|0-1: Optionales Element, das nur einmal auftreten kann.|  
+|Datentyp und -länge|Zeichenfolge|  
+|Standardwert|InclusionThresholdSetting|  
+|Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[DataSourceViewBinding](../../../analysis-services/scripting/data-type/datasourceviewbinding-data-type-assl.md), [DSVTableBinding](../../../analysis-services/scripting/data-type/dsvtablebinding-data-type-assl.md)|  
-|Untergeordnete Elemente|Keine|  
+|Untergeordnete Elemente|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die Elemente, die den übergeordneten Elementen von entsprechen **DataSourceViewID** im Objektmodell von Analysis Management Objects (AMO) sind <xref:Microsoft.AnalysisServices.DataSourceViewBinding> und <xref:Microsoft.AnalysisServices.DSVTableBinding>.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

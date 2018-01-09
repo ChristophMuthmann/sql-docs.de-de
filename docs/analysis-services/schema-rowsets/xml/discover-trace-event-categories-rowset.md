@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1adc4b7e60c566ac1c46a4b51c06e2ee505916ee
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b95fb2824757a4b45001dd5a1eed4871995b86cb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discovertraceeventcategories-rowset"></a>DISCOVER_TRACE_EVENT_CATEGORIES-Rowset
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Zeigt die Liste der Ereigniskategorien an, die vom Ablaufverfolgungsanbieter unterstützt werden.  
@@ -36,7 +34,7 @@ ms.lasthandoff: 12/08/2017
   
 |Spaltenname|Typindikator|Länge|Description|  
 |-----------------|--------------------|------------|-----------------|  
-|**Daten**|**DBTYPE_WSTR**||Enthält eine codierte XML-Zeichenfolge, die Ereigniskategorieinformationen zum Ablaufverfolgungsanbieter beschreibt, einschließlich Kategoriename, Typ und Beschreibung. Der Typ ist eine Zeichenfolge, die den Typ der Ereigniskategorie angibt. Folgende Enumerationswerte sind möglich:<br /><br /> 0 = Normal<br /><br /> 1 = Signifikant<br /><br /> 2 = Fehler|  
+|**Data**|**DBTYPE_WSTR**||Enthält eine codierte XML-Zeichenfolge, die Ereigniskategorieinformationen zum Ablaufverfolgungsanbieter beschreibt, einschließlich Kategoriename, Typ und Beschreibung. Der Typ ist eine Zeichenfolge, die den Typ der Ereigniskategorie angibt. Folgende Enumerationswerte sind möglich:<br /><br /> 0 = Normal<br /><br /> 1 = Signifikant<br /><br /> 2 = Fehler|  
   
  Dieses Schemarowset ist nicht sortiert.  
   
@@ -45,12 +43,12 @@ ms.lasthandoff: 12/08/2017
   
  Die folgende Tabelle enthält die GUID und die Zeichenfolgenwerte, die dieses Rowset identifizieren.  
   
-|Argument|Wert|  
+|Argument|value|  
 |--------------|-----------|  
 |GUID|a07ccd19-8148-11d0-87bb-00c04fc33942|  
-|String|DISCOVER_TRACE_EVENT_CATEGORIES|  
+|Zeichenfolge|DISCOVER_TRACE_EVENT_CATEGORIES|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [XML for Analysis – Schemarowsets](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

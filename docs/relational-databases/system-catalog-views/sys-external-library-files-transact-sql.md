@@ -8,7 +8,7 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -21,11 +21,11 @@ helpviewer_keywords: sys.external_library_files catalog view
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: a3196218bbb886544a77c2fd1184c806591b16e6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a03a50bdeda18d027fbad56e2cd4b86a261052b7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sysexternallibraryfiles-transact-sql"></a>Sys.external_library_files (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -34,9 +34,9 @@ Enthält eine Zeile für jede Datei, die aus einer externen Bibliothek besteht.
 
 |Spaltenname |Datentyp |Description|
 |------|------|-----|
-|external_library_id | int |Die ID des Objekts, externe Bibliothek. |
+|external_library_id | ssNoversion |Die ID des Objekts, externe Bibliothek. |
 |content |varbinary(max) |Inhalt des Dateielements externe Bibliothek. |
-|Plattform |tinyint |ID der die Hostplattform, auf der SQL Server installiert ist. |
+|Plattform |TINYINT |ID der die Hostplattform, auf der SQL Server installiert ist. |
 |platform_desc | nvarchar(60) |Name des Host-Plattform. Gültige Werte sind "WINDOWS", "LINUX". |
 
 ### <a name="see-also"></a>Siehe auch  

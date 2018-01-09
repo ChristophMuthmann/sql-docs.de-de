@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.bidtoolset.tablebehavior.f1
@@ -21,18 +18,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d1bd1900080d7b41b161461fb715edac4b2b1614
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0f202d090127d93ec0786e0b7cca90f54f7fac0b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View: Konfigurieren von Tabellenverhalten-Eigenschaften für Berichte
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Wenn Sie ein tabellarisches Modell als Datenmodell für verwenden [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], Sie können festlegen, tabellenverhalten-Eigenschaften, die Detailzeilen auf einer präziseren Ebene verfügbar machen. Das Festlegen von Tabellenverhaltenseigenschaften ändert das Gruppierungsverhalten von Detailzeilen und erzeugt eine bessere Standardplatzierung bei der Feststellung von Informationen (z. B. Namen, Foto-IDs oder Logobilder) in Kachel-, Karten- oder Diagrammlayouts.  
   
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] unterscheidet sich von anderen Berichtsanwendungen darin, dass es Gruppenelemente automatisch während des Berichtsentwurfs gruppiert, indem die von Ihnen in der Berichtsfeldliste positionierten Spalten gegenüber dem von Ihnen verwendeten Präsentationsformat ausgewertet werden. In den meisten Fällen führt die Standardgruppierung zu einem optimalen Ergebnis. Für einige Tabellen, hauptsächlich solche, die Detaildaten enthalten, führt das Standardgruppierungsverhalten jedoch manchmal zur Gruppierung von Zeilen, bei denen dies nicht erwünscht ist. Für solche Tabellen können Sie Eigenschaften festlegen, die ändern, wie Gruppen ausgewertet werden.  
   
- Die Festlegung von Tabellenverhaltenseigenschaften wird für Tabellen empfohlen, in denen die einzelnen Zeilen von primärem Interesse sind, z. B. Mitarbeiter- oder Kundendatensätze. Im Gegensatz dazu gehören zu den Tabellen, für die sich diese Eigenschaften nicht eignen, solche, die als Nachschlagetabellen fungieren (z. B., eine Datumstabelle, eine Produktkategorietabelle oder eine Abteilungstabelle, bei denen die Tabelle aus einer relativ kleinen Anzahl von Zeilen und Spalten besteht), oder Zusammenfassungstabellen, die Zeilen enthalten, die nur zusammengefasst interessant sind (z. B., Volkszählungsdaten, für die ein Rollup nach Geschlecht, Alter oder Geografie ausgeführt wird). Für Nachschlage- und Zusammenfassungstabellen führt das Standardgruppierungsverhalten zum besten Ergebnis.  
+ Die Festlegung von Tabellenverhaltenseigenschaften wird für Tabellen empfohlen, in denen die einzelnen Zeilen von primärem Interesse sind, z. B. Mitarbeiter- oder Kundendatensätze. Im Gegensatz dazu gehören zu den Tabellen, für die sich diese Eigenschaften nicht eignen, solche, die als Nachschlagetabellen fungieren (z. B., eine Datumstabelle, eine Produktkategorietabelle oder eine Abteilungstabelle, bei denen die Tabelle aus einer relativ kleinen Anzahl von Zeilen und Spalten besteht), oder Zusammenfassungstabellen, die Zeilen enthalten, die nur zusammengefasst interessant sind (z. B., Volkszählungsdaten, für die ein Rollup nach Geschlecht, Alter oder Geografie ausgeführt wird). Für Nachschlage- und Zusammenfassungstabellen führt das Standardgruppierungsverhalten zum besten Ergebnis.  
   
 > [!NOTE]  
 >  Tabellenverhaltenseigenschaften wirken sich nur auf in [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]als Datenmodelle verwendete tabellarische Modelle aus. Tabellenverhaltenseigenschaften werden in Excel-Pivotberichten nicht unterstützt.  
@@ -141,7 +138,7 @@ ms.lasthandoff: 12/08/2017
   
  ![Diagramm entsprechend der ID zeilengruppierung](../../analysis-services/tabular-models/media/ssas-rptprop-chartrowid.gif "Diagramm entsprechend der zeilengruppierung-ID")  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
  Nachdem Sie die Tabellen im Modell ausgewertet und die Tabellenverhaltenseigenschaften zu jenen Tabellen festgelegt haben, die Detailzeilen enthalten, welche stets als einzelne Elemente angezeigt werden sollen, können Sie das Modell durch zusätzliche Eigenschaften oder Einstellungen weiter optimieren.  
   
   

@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 75caf898ac2e79e57e8c85f8b9e5a33b44460cf6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d321050e1568a505e6b3550d3af07fc176ddb566
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-an-olap-mining-structure"></a>Erstellen einer OLAP-Miningstruktur
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Es gibt Erstellung von Datamining-Modells auf Grundlage eines OLAP-Cubes oder anderen mehrdimensionalen Datenspeichers bietet zahlreiche Vorteile. Eine OLAP-Lösung enthält bereits umfangreiche Datenmengen, die gut organisiert, bereinigt und ordnungsgemäß formatiert sind. Die Komplexität der Daten ist jedoch so hoch, dass Benutzer wahrscheinlich kaum sinnvolle Muster mittels Ad-hoc-Untersuchungen erkennen können. Data Mining bietet die Möglichkeit, neue Korrelationen zu ermitteln und wertvolle Einblicke bereitzustellen.  
@@ -166,7 +164,7 @@ ms.lasthandoff: 12/08/2017
 > [!WARNING]  
 >  Die Erstellung von Data Mining-Dimensionen wird nur von den folgenden Modelltypen unterstützt: Modelle auf Grundlage des Microsoft Clustering-Algorithmus, des Microsoft Decision Trees-Algorithmus oder des Microsoft Associations-Algorithmus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Miningstrukturspalten](../../analysis-services/data-mining/mining-structure-columns.md)   
  [Miningmodellspalten](../../analysis-services/data-mining/mining-model-columns.md)   

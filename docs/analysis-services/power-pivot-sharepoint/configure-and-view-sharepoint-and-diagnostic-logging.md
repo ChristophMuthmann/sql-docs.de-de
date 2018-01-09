@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 8c9c9e933c57a17e8b64846e25d6e9fe80f8f61d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ed3dbf6b45af894f4f2f841d7c8b3496a332028f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>Konfigurieren und Anzeigen von SharePoint und Diagnoseprotokollierung
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Servervorgänge, Ereignisse und Meldungen werden in SharePoint-Protokolldateien aufgezeichnet. Verwenden Sie die Informationen in diesem Thema, um Protokolliergrade zu konfigurieren und Protokolldatei-Informationen anzuzeigen. Sie können steuern, welche [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Serverereignisse in einer Datei protokolliert werden. Sie können auch den Schweregrad von Meldungen steuern, die protokolliert werden. Weitere Informationen finden Sie unter [Konfigurieren der Sammlung von Verwendungsdaten für &#40;PowerPivot für SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
@@ -127,13 +124,13 @@ ms.lasthandoff: 12/08/2017
   
 |Verarbeiten|Bereich|Kategorie|Ebene|MessageBox|Details|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Dienst|Verwendung|Ausführlich|Es gibt keine aktuellen Anforderungsstatistiken, nichts ist zu protokollieren.|Die Serviceberichte fragen in vordefinierten Intervallen Reaktionsstatistiken als Verwendungsereignis für das Verwendungsdatensammlungssystem ab. Diese Meldung gibt an, dass es keine Abfragestatistiken für einen Bericht gibt.|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Dienst|Verwendung|Ausführlich|Es gibt keine aktuellen Anforderungsstatistiken, nichts ist zu protokollieren.|Die Serviceberichte fragen in vordefinierten Intervallen Reaktionsstatistiken als Verwendungsereignis für das Verwendungsdatensammlungssystem ab. Diese Meldung gibt an, dass es keine Abfragestatistiken für einen Bericht gibt.|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Dienst|Web-Front-End|Ausführlich|Beginnt mit der Suche nach einem Anwendungsserver für Datenquelle =\<*Pfad*>|Wenn das Programm eine Verbindungsanforderung empfängt, identifiziert der [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Dienst einen verfügbaren [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] , um die Anforderung zu behandeln. Wenn es nur einen Server in der Farm gibt, akzeptiert der lokale Server die Anforderung in allen Fällen.|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Dienst|Web-Front-End|Ausführlich|Die Suche nach dem Anwendungsserver war erfolgreich.|Die Anfrage wurde einer [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Dienstanwendung zugeordnet.|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Dienst|Web-Front-End|Ausführlich|Umleiten der Anforderung für die \< *PowerPivotdata-Quelle*> auf die [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|Die Anforderung wurde an den [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)]weitergeleitet.|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Dienst|Anforderungsverarbeitung|Ausführlich|Umleiten der Anforderung für username-\<*SharePoint-Benutzer*> in der Datenbank|Eine personifizierte Verbindung zur [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Datenquelle wurde für den SharePoint-Benutzer erstellt.|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Dienst|Anforderungsverarbeitung|Ausführlich|Umleiten der Anforderung für username-\<*SharePoint-Benutzer*> in der Datenbank|Eine personifizierte Verbindung zur [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Datenquelle wurde für den SharePoint-Benutzer erstellt.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Sammlung von Power Pivot-Verwendungsdaten](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)   
  [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Konfigurieren der Sammlung von Verwendungsdaten für Power Pivot für SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  

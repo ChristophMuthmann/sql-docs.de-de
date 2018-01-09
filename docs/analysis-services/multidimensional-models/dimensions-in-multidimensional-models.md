@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 33c9c09cdcfae67f469585fa69fda626696f1856
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6ae68ab8b879656940827bf8ebffb5c1f40cfa0b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dimensions-in-multidimensional-models"></a>Dimensionen in mehrdimensionalen Modellen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Eine Datenbankdimension ist eine Auflistung verknüpfter Objekte, Attribute genannt, die verwendet werden kann, um Informationen zu Faktendaten in einem oder mehreren Cubes bereitzustellen. Typische Attribute in einer Produktdimension können z. B. Produktname, Produktkategorie, Produktlinie, Produktgröße und Produktpreis sein. Diese Objekte sind an eine oder mehrere Spalten in einer oder mehreren Tabellen in einer Datenquellensicht gebunden. Standardmäßig sind diese Attribute als Attributhierarchien sichtbar und dienen zum besseren Verständnis der Faktdaten in einem Cube. Attribute können in Form von benutzerdefinierten Hierarchien organisiert werden, die Navigationspfade bereitstellen, um Benutzer beim Durchsuchen der Daten in einem Cube zu unterstützen.  
@@ -52,7 +49,7 @@ ms.lasthandoff: 12/08/2017
  [Definieren von Datenbankdimensionen](../../analysis-services/multidimensional-models/define-database-dimensions.md)  
  Beschreibt das Ändern und Konfigurieren einer Datenbankdimension mithilfe des Dimensions-Designers.  
   
- [Dimensionsattributeigenschaftenverweis](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Dimensionsattributeigenschaften-Verweis](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
  Beschreibt das Definieren, Ändern und Konfigurieren eines Datenbankdimensionsattributs mithilfe des Dimensions-Designers.  
   
  [Definieren von Attributbeziehungen](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
@@ -64,7 +61,7 @@ ms.lasthandoff: 12/08/2017
  [Verwenden des Business Intelligence-Assistenten zum Erweitern von Dimensionen](http://msdn.microsoft.com/library/12d995d1-75ca-4890-bf4b-a2656910b8d0)  
  Beschreibt das Verbessern einer Datenbankdimension mithilfe des Business Intelligence-Assistenten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Cubes in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

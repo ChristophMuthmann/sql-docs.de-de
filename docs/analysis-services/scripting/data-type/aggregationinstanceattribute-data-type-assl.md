@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: AggregationInstanceAttribute Data Type
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e41624e1fee58fe13a17ea6e4c92770fd2aac782
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 985222fa93becdf4a83fef7e4ba79844da912553
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="aggregationinstanceattribute-data-type-assl"></a>AggregationInstanceAttribute-Datentyp (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definiert einen Grunddatentyp, der Informationen über ein Attribut, das von einer Aggregationsinstanz verwendet darstellt.  
@@ -45,23 +43,23 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>Datentypmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Basisdatentypen|Keine|  
-|Abgeleitete Datentypen|Keine|  
+|Basisdatentypen|InclusionThresholdSetting|  
+|Abgeleitete Datentypen|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>Datentypbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|Keine|  
+|Übergeordnete Elemente|InclusionThresholdSetting|  
 |Untergeordnete Elemente|[AttributeID](../../../analysis-services/scripting/properties/attributeid-element-assl.md), [KeyColumns](../../../analysis-services/scripting/collections/keycolumns-element-assl.md)|  
 |Abgeleitete Elemente|[Attribut](../../../analysis-services/scripting/objects/attribute-element-assl.md)|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.AggregationInstanceAttribute>.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Analysis Services Scripting Language-XML-Datentypen &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

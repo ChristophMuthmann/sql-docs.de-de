@@ -5,13 +5,10 @@ ms.date: 10/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a5dcf73586ff73b24e121d517e8bc56c71c2156c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 84cdb30142c75b4bc35d956daff130df3bf62305
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-types-supported-in-tabular-models"></a>Unterstützte Datentypen in tabellarischen Modellen
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Dieser Artikel beschreibt die Datentypen, die in tabellarischen Modellen verwendet werden können und die implizite Konvertierung von Datentypen erläutert, bei der Berechnung oder in einer Data Analysis Expressions (DAX)-Formel verwendeten Daten.  
@@ -39,12 +36,12 @@ Wenn Sie Daten importieren oder einen Wert in einer Formel verwenden, werden die
   
 ||||  
 |-|-|-|  
-|**Datentyp im Modell**|**Datentyp in DAX**|**Description**|  
+|**Datentyp im Modell**|**Datentyp in DAX**|**Beschreibung**|  
 |Ganze Zahl|Ein ganzzahliger 64-Bit (acht Byte)-Wert*<br /><br /> Hinweis:<br />         DAX-Formeln unterstützen keine Datentypen, die zu klein für den kleinsten in der Beschreibung aufgeführten Wert sind.|Zahlen ohne Dezimalstellen. Ganze Zahlen können positiv oder negativ sein, aber müssen ganze Zahlen zwischen -9 223 372 036 854 775 808 (-2^63) und 9 223 372 036 854 775 807 (2^63-1) sein.|  
 |Decimal Number|Eine reelle 64-Bit (acht Byte)-Zahl*<br /><br /> Hinweis:<br />         DAX-Formeln unterstützen keine Datentypen, die zu klein für den kleinsten in der Beschreibung aufgeführten Wert sind.|Reelle Zahlen sind Zahlen, die Dezimalstellen aufweisen können. Reelle Zahlen decken viele Werte ab:<br /><br /> Negative Werte von -1,79E +308 bis -2,23E -308<br /><br /> Null (0)<br /><br /> Positive Werte von 2,23E -308 bis -1,79E +308<br /><br /> Die Anzahl der relevanten Stellen wird jedoch auf siebzehn Dezimalstellen beschränkt.|  
 |Boolean|Boolean|Entweder ein True oder ein False-Wert.|  
-|Text|String|Eine Unicodezeichen-Datenzeichenfolge. Hierbei kann es sich um Zeichenfolgen, Zahlen oder Datumsangaben in einem Textformat dargestellt sein.|  
-|Datum|Date/Time|Datumsangaben und Uhrzeiten in einer akzeptierten Form für die Darstellung von Datum und Uhrzeit.<br /><br /> Gültig sind alle Datumsangaben nach dem 1. März 1900.|  
+|Textmodus|Zeichenfolge|Eine Unicodezeichen-Datenzeichenfolge. Hierbei kann es sich um Zeichenfolgen, Zahlen oder Datumsangaben in einem Textformat dargestellt sein.|  
+|date|Date/Time|Datumsangaben und Uhrzeiten in einer akzeptierten Form für die Darstellung von Datum und Uhrzeit.<br /><br /> Gültig sind alle Datumsangaben nach dem 1. März 1900.|  
 |Währung|Währung|Der Währungsdatentyp lässt Werte zwischen -922 337 203 685 477,5808 und 922 337 203 685 477,5807 mit vier Dezimalstellen unveränderlicher Genauigkeit zu.|  
 |–|Leer|Ein leerer Datentyp in DAX, der SQL-NULLEN darstellt und ersetzt. Sie können mit der BLANK-Funktion ein Leerzeichen erstellen und mit der logischen ISBLANK-Funktion nach Leerzeichen suchen.|  
   
@@ -56,7 +53,7 @@ Wenn Sie Daten importieren oder einen Wert in einer Formel verwenden, werden die
   
 ||  
 |-|  
-|Wert|  
+|value|  
 |9223372036854775807|  
 |-9223372036854775808|  
 |1,7976931348623158e+308|  
@@ -98,7 +95,7 @@ Wenn Sie Daten importieren oder einen Wert in einer Formel verwenden, werden die
 |-|-|-|-|-|  
 |Operator (+)|INTEGER|Währung|real|Date/Time|  
 |INTEGER|INTEGER|Währung|real|Date/Time|  
-|Währung|Währung|Währung|real|Date/Time|  
+|CURRENCY|CURRENCY|CURRENCY|real|Date/Time|  
 |real|real|real|real|Date/Time|  
 |Date/Time|Date/Time|Date/Time|Date/Time|Date/Time|  
   
@@ -111,7 +108,7 @@ Wenn Sie Daten importieren oder einen Wert in einer Formel verwenden, werden die
 |-|-|-|-|-|  
 |Operator (-)|INTEGER|Währung|real|Date/Time|  
 |INTEGER|INTEGER|Währung|real|real|  
-|Währung|Währung|Währung|real|real|  
+|CURRENCY|CURRENCY|CURRENCY|real|real|  
 |real|real|real|real|real|  
 |Date/Time|Date/Time|Date/Time|Date/Time|Date/Time|  
   
@@ -126,8 +123,8 @@ Wenn Sie Daten importieren oder einen Wert in einer Formel verwenden, werden die
 |-|-|-|-|-|  
 |Operator (*)|INTEGER|Währung|real|Date/Time|  
 |INTEGER|INTEGER|Währung|real|INTEGER|  
-|Währung|Währung|real|Währung|Währung|  
-|real|real|Währung|real|real|  
+|CURRENCY|CURRENCY|real|CURRENCY|CURRENCY|  
+|real|real|CURRENCY|real|real|  
   
  Wenn beispielsweise eine ganze Zahl bei einer Multiplikation mit einer reellen Zahl kombiniert wird, werden beide Zahlen in reelle Zahlen konvertiert, und der Rückgabewert ist ebenfalls REAL.  
   
@@ -137,8 +134,8 @@ Wenn Sie Daten importieren oder einen Wert in einer Formel verwenden, werden die
 ||||||  
 |-|-|-|-|-|  
 |Operator (/)<br /><br /> (Zeile/Spalte)|INTEGER|Währung|real|Date/Time|  
-|INTEGER|real|Währung|real|real|  
-|Währung|Währung|real|Währung|real|  
+|INTEGER|real|CURRENCY|real|real|  
+|CURRENCY|CURRENCY|real|CURRENCY|real|  
 |real|real|real|real|real|  
 |Date/Time|real|real|real|real|  
   
@@ -153,9 +150,9 @@ Es wird nur ein eingeschränkter Satz von gemischten Datentyp Kombinationen für
 ||||  
 |-|-|-|  
 |expression|DAX|Excel|  
-|BLANK + BLANK|Leer|0 (Null)|  
+|BLANK + BLANK|BLANK|0 (Null)|  
 |BLANK +5|5|5|  
-|BLANK * 5|Leer|0 (Null)|  
+|BLANK * 5|BLANK|0 (Null)|  
 |5/BLANK|Unendlich|Fehler|  
 |0/BLANK|NaN|Fehler|  
 |BLANK/BLANK|Leer|Fehler|  
@@ -163,8 +160,8 @@ Es wird nur ein eingeschränkter Satz von gemischten Datentyp Kombinationen für
 |FALSE AND BLANK|FALSE|FALSE|  
 |TRUE OR BLANK|TRUE|TRUE|  
 |TRUE AND BLANK|FALSE|TRUE|  
-|BLANK OR BLANK|Leer|Fehler|  
-|BLANK AND BLANK|Leer|Fehler|  
+|BLANK OR BLANK|BLANK|Fehler|  
+|BLANK AND BLANK|BLANK|Fehler|  
   
  Informationen zur Behandlung von Leerzeichen durch eine bestimmte Funktion oder einen Operator finden Sie in den einzelnen Themen zu den verschiedenen DAX-Funktionen im Abschnitt [DAX-Funktionsreferenz](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
   

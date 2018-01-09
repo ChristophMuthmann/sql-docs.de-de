@@ -7,7 +7,7 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf6de7e2-f394-4b8a-a4b7-0b8dadf25426
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c1586c23850daa679aa6804d946ceb0d0a98ad51
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: a64db58ce05675a3a2ac30e0bcea0d3924731a08
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r"></a>Datensuche und Vorhersagemodellierung mit R
 
@@ -106,7 +106,7 @@ Weitere Informationen zum Verschieben Ihres Codes zur Ausführung in [!INCLUDE[s
 
 Normalerweise beginnt der Bereitstellungsprozess mit dem Bereinigen Ihres Skripts, um den für die Produktion nicht erforderlichen Code zu entfernen. Während des Verschiebens Berechnungen näher auf die Daten können Sie nach Möglichkeiten suchen, effizienter verschieben, zusammenfassen oder präsentieren von Daten als das alles in R.  Es wird empfohlen, dass der Data Scientist wenden Sie sich an ein Datenbankentwickler über Methoden zur Verbesserung der Leistung, insbesondere dann, wenn die Lösung verwendet die DatenBereinigung oder das Feature Engineering-Team, die möglicherweise effektiver in SQL. Möglicherweise sind Änderungen an ETL-Prozessen erforderlich, um sicherzustellen, dass Workflows zum Erstellen oder Bewerten eines Modells erfolgreich ausgeführt werden und eingegebene Daten im richtigen Format vorliegen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 
 [Comparison of Base R and ScaleR Functions (Grundlegende R- und ScaleR-Funktionen im Vergleich)](https://msdn.microsoft.com/microsoft-r/scaler/compare-base-r-scaler-functions)
 

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: RANK
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: ba556f2a298ea65ff2d9662a8deba90334d31a0f
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: cb61eefec8d262d2955e3383c2e0a24b8380be2f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="rank-mdx"></a>Rank (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ Rank(Tuple_Expression, Set_Expression [ ,Numeric Expression ] )
  *Numeric_expression*  
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt, die eine Zahl zurückgeben.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn ein numerischer Ausdruck angegeben wird, die **Rang** -Funktion bestimmt den einsbasierten Rang für das angegebene Tupel durch das Auswerten des angegebenen numerischen Ausdrucks für das Tupel. Wenn ein numerischer Ausdruck angegeben wird, die **Rang** -Funktion Tupeln mit doppelten Werten in der Menge denselben Rang zugewiesen. Die Zuweisung desselben Ranges an doppelte Werte wirkt sich auf die Rangwerte nachfolgender Tupel in der Menge aus. Eine Menge besteht beispielsweise aus folgenden Tupeln: `{(a,b), (e,f), (c,d)}`. Das Tupel `(a,b)` weist denselben Wert auf wie das Tupel `(c,d)`. Wenn das Tupel `(a,b)` den Rang "1" aufweist, liegt für `(a,b)` und `(c,d)` der Rang "1" vor. Das Tupel `(e,f)` verfügt jedoch über den Rang "3". In diesem Satz kann kein Tupel mit dem Rang "2" vorhanden sein.  
   
  Wenn ein numerischer Ausdruck nicht angegeben wird, die **Rang** Funktion gibt die einsbasierte Ordnungsposition des angegebenen Tupels zurück.  
@@ -91,7 +91,7 @@ SELECT {[Measures].[City Rank],[Measures].[Reseller Sales Amount]}  ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Reihenfolge &#40; MDX &#41;](../mdx/order-mdx.md)   
  [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Status Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f9240a80df4ea24508ac42d9138c2ab2155046e4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fec6d21ad990531ffdd1360825812654c737ba0d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="status-element-assl"></a>Status-Element (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enthält einen Multidimensional Expressions (MDX)-Ausdruck, der für einen Statusindikator zurückgibt eine [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) Element.  
@@ -47,25 +45,25 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|String|  
-|Standardwert|Keine|  
-|Kardinalität|0-1: Optionales Element, das nur einmal auftreten kann.|  
+|Datentyp und -länge|Zeichenfolge|  
+|Standardwert|InclusionThresholdSetting|  
+|Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[KPI](../../../analysis-services/scripting/objects/kpi-element-assl.md)|  
-|Untergeordnete Elemente|Keine|  
+|Untergeordnete Elemente|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Das **Status** -Element enthält einen MDX-Ausdruck.  
   
  Das Element, das das übergeordnete Element des entspricht **Status** im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.Kpi>.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

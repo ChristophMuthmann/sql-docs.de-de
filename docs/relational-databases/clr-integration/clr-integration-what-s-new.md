@@ -1,5 +1,5 @@
 ---
-title: 'Was & #39; s in CLR-Integration | Microsoft Docs'
+title: Was &#39; s in CLR-Integration | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -8,7 +8,7 @@ ms.component: clr
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 871fcccd-b726-4b13-9f95-d02b4b39d8ab
@@ -17,13 +17,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 787552c5a10579e90a0ab62e9105172f989357f5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cd04128317f2f938df87218da27c18c807d833a7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="clr-integration---what39s-new"></a>CLR-Integration – was & #39; s neu
+# <a name="clr-integration---what39s-new"></a>CLR-Integration – was &#39; s neu
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Im folgenden werden neue Funktionen in CLR-Integration in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]:  
   
 -   In Version 4 der CLR fangen CLR-Datenbankobjekte nicht länger Ausnahmen aufgrund eines beschädigten Status ab. Diese Ausnahmen werden jetzt in der CLR-Integrationshostingebene abgefangen. Diese Ausnahmen können weiterhin durch die CLR-Datenbankkomponenten abgefangen werden, indem ein Codeattribut ([\<LegacyCorruptedStateExceptionsPolicy >-Element](http://go.microsoft.com/fwlink/?LinkId=204954)). Diese Vorgehensweise wird jedoch nicht empfohlen, da die Ergebnisse nicht zuverlässig sind, wenn eine Ausnahme aufgrund eines beschädigten Status auftritt.  

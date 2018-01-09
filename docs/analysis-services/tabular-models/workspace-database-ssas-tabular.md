@@ -5,13 +5,10 @@ ms.date: 07/24/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ae2e26606a2f84abea1caed7032a80d2e2de7e45
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 73cbfa40573fcf08774a576aaa7f09bb1ea21195
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="workspace-database-ssas-tabular"></a>Arbeitsbereichsdatenbank (SSAS – tabellarisch)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Arbeitsbereichsdatenbank für tabellarische Modelle, während der Modellerstellung verwendet wird erstellt, wenn Sie ein neues Projekt für tabellarische Modelle in erstellen [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Root Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 714981915579f08fe025d73d574f8ffeccdf72a8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 402d03a39b1eb4711b338c8e3bc0ff29de11437a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="root-element-xmla"></a>root-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Ein zurückgegebenes Ergebnis enthält die [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) Methode oder ein XML for Analysis (XMLA)-Befehl ausgeführt wird, mithilfe der [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) Methode.  
@@ -54,11 +52,11 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Finden Sie in der folgenden Tabelle aus.|  
-|Standardwert|Keine|  
-|Kardinalität|1-n: Erforderliches Element, das mehr als einmal auftreten kann.|  
+|Standardwert|InclusionThresholdSetting|  
+|Cardinality|1-n: Erforderliches Element, das mehr als einmal auftreten kann.|  
   
 |Ancestor|Datentyp|  
 |--------------|---------------|  
@@ -70,12 +68,12 @@ ms.lasthandoff: 12/08/2017
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Ergebnisse](../../../analysis-services/xmla/xml-elements-properties/results-element-xmla.md), [zurückgeben](../../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)|  
-|Untergeordnete Elemente|Keine|  
+|Untergeordnete Elemente|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die **Root** -Element enthält die Informationen, die entweder die [DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md) -Element über einen einzelnen **Discover** -Methodenaufruf, oder in der [ ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md) -Element über einen einzelnen XMLA-Befehl ausgeführt wird, über einen einzelnen **Execute** -Methodenaufruf.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenbankeigenschaften &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

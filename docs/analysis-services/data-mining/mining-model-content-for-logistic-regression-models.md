@@ -5,12 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fcc42dbd4d53a3d5a967933bebf22b1f73ac91e2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5490990412aa4883d575a1fc65fee7e29db06dde
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-logistic-regression-models"></a>Miningmodellinhalt von logistischen Regressionsmodellen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dieses Thema beschreibt Miningmodellinhalt, der Modellen eigen ist, die den Microsoft Logistic Regression-Algorithmus verwenden. Eine Erklärung zur Interpretation von Statistiken und Strukturen, die allen Modelltypen gemein sind, und die allgemeinen Definitionen von Begriffen in Bezug auf den Miningmodellinhalt finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -159,7 +157,7 @@ ms.lasthandoff: 12/08/2017
  Informationen über die Unterstützung in Trainingsfällen für spezifische Werte finden Sie über den Knoten für Randstatistik.  
   
  MSOLAP_MODEL_COLUMN  
- |Node|Inhalt|  
+ |Knoten|Inhalt|  
 |----------|-------------|  
 |Modellstamm|Leer|  
 |Randstatistik|Leer|  
@@ -191,7 +189,7 @@ ms.lasthandoff: 12/08/2017
   
  Sie können diese IDs verwenden, um zu bestimmen, in welcher Beziehung Ausgabeattribute zu spezifischen Attributen der Eingabeebene stehen, indem Sie die Tabelle NODE_DISTRIBUTION des Ausgabeknotens einsehen. Jede Zeile in dieser Tabelle enthält eine ID, die auf einen bestimmten Eingabeattributknoten zurückzeigt. Die NODE_DISTRIBUTION-Tabelle enthält auch den Koeffizienten für dieses Eingabe-Ausgabe-Paar.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Microsoft Logistic Regression-Algorithmus](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [Miningmodellinhalt, neuronale Netzwerkmodelle &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Logistische Regressionsmodell-Abfragebeispiele](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)   

@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6c5514b6ef512855ff718740fc7b7ea7342a1258
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1a78f2353c7d6afa88adc0bd76c4031b9224363b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Erstellen eines Cubes mithilfe einer Datenquellensicht
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Verwenden Sie diese Methode zum Erstellen eines neuen Cubes, wenn Sie eine vorhandene Datenquellensicht verwenden möchten. Mit dieser Methode geben Sie die Datenquellensicht an und wählen Fakten- und Dimensionstabellen aus, die Sie in der Datenquellensicht verwenden möchten. Anschließend wählen Sie die Dimensionen und Measures aus, die Sie in den Cube einschließen möchten.  

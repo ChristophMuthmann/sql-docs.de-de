@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.roledesignerdialog.dimensions.f1
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ccf0f7d014bfd85f3368633058984089005101ec
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: dba9778b626da43a404c773eaeb1745b3bcd3528
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>Gewähren von Berechtigungen in einer Dimension (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dimensionssicherheit wird verwendet, zum Festlegen von Berechtigungen für ein Dimensionsobjekt, nicht für dessen Daten. Meist ist das Gewähren oder Verweigern des Zugriffs auf Verarbeitungsvorgänge das Hauptziel bei der Festlegung von Berechtigungen in einer Dimension.  
@@ -75,7 +72,7 @@ ms.lasthandoff: 12/08/2017
 > [!IMPORTANT]  
 >  Wenn Sie mithilfe von AMO (Analysis Management Objects) Datenbankrollenberechtigungen konfigurieren, trennt jeder Verweis auf eine Cubedimension im DimensionPermission-Attribut eines Cubes die Berechtigungsvererbung aus dem DimensionPermission-Attribut der Datenbank. Weitere Informationen zu AMO finden Sie unter [Entwickeln mit Analysis Management Objects &#40;AMO&#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Rollen und Berechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)   
  [Erteilen von Cube- oder Modellberechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
  [Erteilen von Berechtigungen für Datamining-Strukturen und Modelle &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   

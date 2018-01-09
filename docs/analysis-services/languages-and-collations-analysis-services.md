@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords: Analysis Services testen
@@ -26,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e7bb3fd81631b2e442cee440e3e0aa0a89c9e932
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 615b26c5dfc1ea45dfcef2494483ced1235e7cd0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="languages-and-collations-analysis-services"></a>Sprachen und Sortierungen (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt die Sprachen und Sortierungen, die von bereitgestellte [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows-Betriebssystemen. **Language** - und **Collation** -Eigenschaften werden zunächst während der Installation auf Instanzebene festgelegt, können jedoch nachträglich auf unterschiedlichen Ebenen der Objekthierarchie geändert werden.  
@@ -105,7 +105,7 @@ ms.lasthandoff: 12/08/2017
   
     -   latin1_general_100  
   
-     Eine Windows-Sortierung sortiert Zeichen anhand der linguistischen und kulturellen Merkmale der Sprache. In Windows übertrifft die Anzahl der Sortierungen die der damit verwendeten Gebietsschemas (oder Sprachen), da viele Sprachen gemeinsame Alphabete und Regeln für das Sortieren und Vergleichen von Zeichen besitzen. 33 Windows-Gebietsschemas, einschließlich aller portugiesischen und englischen Windows-Gebietsschemas, verwenden z. B. die Latin1-Codepage (1252) und folgen gemeinsamen Regeln für das Sortieren und Vergleichen von Zeichen.  
+     Eine Windows-Sortierung sortiert Zeichen anhand der linguistischen und kulturellen Merkmale der Sprache. In Windows übertrifft die Anzahl der Sortierungen die der damit verwendeten Gebietsschemas (oder Sprachen), da viele Sprachen gemeinsame Alphabete und Regeln für das Sortieren und Vergleichen von Zeichen besitzen. 33 Windows-Gebietsschemas, einschließlich aller portugiesischen und englischen Windows-Gebietsschemas, verwenden z. B. die Latin1-Codepage (1252) und folgen gemeinsamen Regeln für das Sortieren und Vergleichen von Zeichen.  
   
     > [!NOTE]  
     >  Bei der Entscheidung für eine Sortierung sollten Sie die gleiche Sortierung verwenden, die auch von der zugrunde liegenden Datenbank verwendet wird. Wenn Sie die Wahl haben, ist die _100-Version allerdings die neuere und bietet eine sprachlich präzisere kulturelle Sortierregel.  
@@ -124,7 +124,7 @@ ms.lasthandoff: 12/08/2017
 |Sortierreihenfolge (Suffix)|Beschreibung der Sortierreihenfolge|  
 |---------------------------|----------------------------|  
 |Binär (_BIN) oder BIN2 (_BIN2)|In SQL Server gibt es zwei Arten von binären Sortierungen: die älteren BIN-Sortierungen und die neueren BIN2-Sortierungen. In einer BIN2-Sortierung werden alle Zeichen entsprechend ihrer Codepunkte sortiert. In einer BIN-Sortierung wird nur das erste Zeichen entsprechend seinem Codepunkt sortiert, die anderen Zeichen jedoch nach ihren Bytewerten. (Da die Intel Plattform eine Little-Endian-Architektur aufweist, werden Unicode-Zeichen immer mit vertauschten Bytes gespeichert.)<br /><br /> Bei binären Sortierungen von Unicode-Datentypen wird das Gebietsschema bei Datensortierungen nicht berücksichtigt. Beispielsweise führen „Latin_1_General_BIN“ und „Japanese_BIN“ bei Unicode-Daten zu den gleichen Sortierergebnissen.<br /><br /> Die binäre Sortierreihenfolge unterscheidet nach Groß- und Kleinschreibung und nach Akzent. Die Option Binär ist zudem die schnellste Sortierreihenfolge.|  
-|Unterscheidung nach Groß-/Kleinschreibung (_CS)|Unterscheidet zwischen Groß- und Kleinbuchstaben. Wenn diese Option ausgewählt ist, stehen Kleinbuchstaben in der Sortierreihenfolge vor ihren entsprechenden Großbuchstaben. Sie können die Nichtunterscheidung nach Groß-/Kleinschreibung durch Angabe von „_CI“ explizit festlegen. Sortierungsspezifische Einstellungen zur Groß-/Kleinschreibung gelten nicht für Objektbezeichner, wie z. B. die ID einer Dimension, eines Cube und anderer Objekte. Einzelheiten dazu finden Sie unter [Tipps und Best Practices für die Globalisierung &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .|  
+|Unterscheidung nach Groß-/Kleinschreibung (_CS)|Unterscheidet zwischen Groß- und Kleinbuchstaben. Wenn diese Option ausgewählt ist, stehen Kleinbuchstaben in der Sortierreihenfolge vor ihren entsprechenden Großbuchstaben. Sie können die Nichtunterscheidung nach Groß-/Kleinschreibung durch Angabe von „_CI“ explizit festlegen. Sortierungsspezifische Einstellungen zur Groß-/Kleinschreibung gelten nicht für Objektbezeichner, wie z. B. die ID einer Dimension, eines Cube und anderer Objekte. Weitere Informationen finden Sie unter [Tipps und Best Practices für die Globalisierung &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .|  
 |Unterscheidung nach Akzent (_AS)|Unterscheidet zwischen Zeichen mit Akzent und Zeichen ohne Akzent. Beispielsweise ist 'a' nicht mit 'ấ' identisch. Wenn diese Option nicht ausgewählt ist, betrachtet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] die Zeichen mit Akzent und die Zeichen ohne Akzent für Sortierzwecke als identisch. Sie können die Nichtunterscheidung nach Akzent durch Angabe von „_AI“ explizit festlegen.|  
 |Unterscheidung nach Kana (_KS)|Unterscheidet zwischen zwei japanischen Kana-Zeichen: Hiragana und Katakana. Wenn diese Option nicht ausgewählt ist, betrachtet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Hiragana- und Katakana-Zeichen für Sortierzwecke als identisch. Es gibt kein Sortierreihenfolgensuffix für die Sortierung der Kana-Zeichen.|  
 |Unterscheidung nach Breite (_WS)|Unterscheidet zwischen einem Single-Byte-Zeichen und demselben Zeichen als Double-Byte-Zeichen. Wenn diese Option nicht ausgewählt ist, betrachtet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] die Single-Byte- und die Double-Byte-Darstellung desselben Zeichens für Sortierzwecke als identisch. Es gibt kein Sortierreihenfolgensuffix für die Sortierung mit Unterscheidung nach Breite.|  
@@ -179,11 +179,11 @@ ms.lasthandoff: 12/08/2017
  Wenn Sie die Sprachen-ID English (Vereinigte Staaten), (0x0409 oder 1033), als Standardsprache für die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz verwenden, können Sie von zusätzlichen Leistungsverbesserungen profitieren, indem Sie die Konfigurationseigenschaft **EnableFast1033Locale** definieren. Es handelt sich hierbei um eine erweiterte Konfigurationseigenschaft, die nur für diese Sprachen-ID zur Verfügung steht. Wenn Sie den Wert dieser Eigenschaft auf **true** festlegen, kann [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] einen schnelleren Algorithmus für Zeichenfolge-Hashingoperationen und Zeichenfolgevergleiche verwenden. Weitere Informationen zum Festlegen der Konfigurationseigenschaften finden Sie unter [Servereigenschaften in Analysis Services](../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
 ##  <a name="bkmk_gb18030"></a> GB18030-Unterstützung in Analysis Services  
- GB18030 ist ein separater Standard, der in der Volksrepublik China zur Codierung von chinesischen Schriftzeichen verwendet wird. In GB18030 können Zeichen 1, 2 oder 4 Bytes lang sein. In Analysis Services wird bei der Verarbeitung von Daten aus externen Quellen keine Datenkonvertierung vorgenommen. Die Daten werden einfach als Unicode-Daten gespeichert. Zur Abfragezeit wird basierend auf den Client-Betriebssystemeinstellungen eine GB18030-Konvertierung über die Analysis Services-Clientbibliotheken durchgeführt (insbesondere mit dem OLE DB-Anbieter „MSOLAP.dll“), wenn Textdaten in den Abfrageergebnissen zurückgegeben werden. Das Datenbankmodul unterstützt GB18030 ebenfalls. Einzelheiten dazu finden Sie unter [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ GB18030 ist ein separater Standard, der in der Volksrepublik China zur Codierung von chinesischen Schriftzeichen verwendet wird. In GB18030 können Zeichen 1, 2 oder 4 Bytes lang sein. In Analysis Services wird bei der Verarbeitung von Daten aus externen Quellen keine Datenkonvertierung vorgenommen. Die Daten werden einfach als Unicode-Daten gespeichert. Zur Abfragezeit wird basierend auf den Client-Betriebssystemeinstellungen eine GB18030-Konvertierung über die Analysis Services-Clientbibliotheken durchgeführt (insbesondere mit dem OLE DB-Anbieter „MSOLAP.dll“), wenn Textdaten in den Abfrageergebnissen zurückgegeben werden. Das Datenbankmodul unterstützt GB18030 ebenfalls. Einzelheiten dazu finden Sie unter [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Globalisierungsszenarien für Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [Globalisierung Tipps und Best Practices &#40; Analysis Services &#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
- [Sortierung und Unicode-Unterstützung](../relational-databases/collations/collation-and-unicode-support.md)  
+ [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)  
   
   

@@ -1,13 +1,13 @@
 ---
 title: So verwenden Sie RevoScaleR-Funktionen zum Suchen, oder installieren Sie R-Paketen auf SQL Server | Microsoft Docs
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 01/08/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: R
@@ -16,11 +16,11 @@ caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 6d85c95a1aa0cba21c52142fa1a7599b208415ca
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 1cc59cad6bfb95ee0981604d336087809f9cb932
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>So verwenden Sie RevoScaleR-Funktionen zum Suchen, oder installieren R-Pakete auf SQL Server
 
@@ -38,7 +38,7 @@ Dieser Artikel beschreibt diese Funktionen und bietet Beispiele für die Funktio
 
 + Wenn Sie nicht angeben einen Benutzernamen und das Kennwort bei der Erstellung des computekontexts, dient die Identität des Benutzers, den R-Code ausführt.
 
-+ Bei Verwendung dieser Funktionen von einem Remoteclient R müssen Sie eine Compute Context-Objekt zuerst erstellen mithilfe der RxInSQLServer-Funktion. Übergeben Sie für jede Paket-Management-Funktion, die Sie verwenden und danach computekontext als Argument.
++ Bei Verwendung dieser Funktionen aus einem R-Remoteclient müssen zuerst erstellen Sie eine Compute Context-Objekt, mit der [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) Funktion. Übergeben Sie für jede Paket-Management-Funktion, die Sie verwenden und danach computekontext als Argument.
 
 + Es ist möglich, führen Sie die Paket-Verwaltungsfunktionen, die mit `sp_execute_external_script`. Wenn Sie dies tun, wird die Funktion mithilfe des Sicherheitskontexts des Aufrufers gespeicherte Prozedur ausgeführt.
 
@@ -46,22 +46,23 @@ Dieser Artikel beschreibt diese Funktionen und bietet Beispiele für die Funktio
 
 Die folgenden Paketverwaltungsfunktionen werden in "revoscaler", für die Installation und Deinstallation von Paketen in einen angegebenen computekontext bereitgestellt:
 
-+ [RxInstalledPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstalledpackages): erfahren Sie mehr über Pakete, die in der angegebenen computekontext installiert.
++ [RxInstalledPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstalledpackages): erfahren Sie mehr über Pakete, die in der angegebenen computekontext installiert.
 
-+ [RxInstallPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstallpackages): Installieren von Paketen in einer computekontext, aus einem angegebenen Repository oder durch Lesen, lokal gespeichert, die ZIP-Paketen.
++ [RxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages): Installieren von Paketen in einer computekontext, aus einem angegebenen Repository oder durch Lesen, lokal gespeichert, die ZIP-Paketen.
 
-+ [RxRemovePackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxremovepackages): installierte Pakete über einen computekontext entfernen.
++ [RxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages): installierte Pakete über einen computekontext entfernen.
 
-+ [RxFindPackage](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxfindpackage): Rufen Sie den Pfad für ein oder mehrere Pakete in der angegebenen computekontext.
++ [RxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage): Rufen Sie den Pfad für ein oder mehrere Pakete in der angegebenen computekontext.
 
-+ [RxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages): eine Bibliothek Paket zwischen dem Dateisystem und Datenbanken in der angegebenen rechenkontexte kopiert.
++ [RxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages): eine Bibliothek Paket zwischen dem Dateisystem und Datenbanken in der angegebenen rechenkontexte kopiert.
 
-+ [RxSqlLibPaths](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqllibpaths): den Suchpfad für die Bibliothek Strukturen für Pakete während der Ausführung in der SQL-Server abrufen.
++ [RxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths): den Suchpfad für die Bibliothek Strukturen für Pakete während der Ausführung in der SQL-Server abrufen.
 
-Diese Pakete sind in SQL Server-2017 standardmäßig enthalten. Informationen zu diesen Funktionen finden Sie unter dem "revoscaler"-Funktion Referenzseiten: (https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)
+Diese Pakete sind in SQL Server-2017 standardmäßig enthalten. Informationen zu diesen Funktionen finden Sie unter dem "revoscaler"-Funktion Referenzseiten: (https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)
 
 > [!NOTE]
 > R-Funktionen für die paketverwaltung sind mit Microsoft R Server 9.0.1 ab. Wenn Sie die Funktionen im "revoscaler" nicht finden können, müssen Sie auf die neueste Version aktualisieren. 
+
 ## <a name="examples"></a>Beispiele
 
 Dieser Abschnitt enthält Beispiele zum Verwenden der Paket-Verwaltungsfunktionen mit einer Datenbank oder SQL Server-Instanz. 

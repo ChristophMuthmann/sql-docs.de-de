@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c96a6f6b6cbfc06b94b8707c1cc1a130dbcc934c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 25a6306e19f6eff72f84fffde0372ed0bc3d76e6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="partitions---proactive-caching"></a>Partitionen - proaktives Zwischenspeichern
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Proaktives Zwischenspeichern ermöglicht automatische MOLAP-Cache-Erstellung und Verwaltung von OLAP-Objekten. Cubes integrieren auf der Grundlage der von der Datenbank empfangenen Benachrichtigungen unverzüglich die Änderungen, die an den Daten in der Datenbank vorgenommen wurden. Das Ziel der proaktiven Zwischenspeicherung ist die Bereitstellung der Leistung von herkömmlichem MOLAP, während die Unmittelbarkeit und die einfache Handhabung von ROLAP erhalten bleibt.  
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="maximizing-performance"></a>Maximieren der Leistung  
  Wenn Sie die Leistung maximieren und gleichzeitig die Latenzzeit reduzieren möchten, kann die Zwischenspeicherung auch ohne Löschen der aktuellen MOLAP-Objekte verwendet werden. Abfragen werden dann weiterhin für MOLAP-Objekte ausgeführt, während Daten in einen neuen Cache gelesen und dort verarbeitet werden. Diese Methode bietet eine bessere Leistung, kann jedoch dazu führen, dass Abfragen während des Erstellens des neuen Caches alte Daten zurückgeben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Speichern von Dimensionen](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
  [Festlegen des Partitionsspeichers &#40;Analysis Services – Mehrdimensional&#41;](../../analysis-services/multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
   

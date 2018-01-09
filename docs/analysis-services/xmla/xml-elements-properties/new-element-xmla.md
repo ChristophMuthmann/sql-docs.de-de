@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: New Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ed9dba97438b8f9ce8942e11c90dfc05e11504de
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 706b171a82506b2598c1aac52da9dab52f16ebf6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="new-element-xmla"></a>New-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Enthält den neuen Speicherort im Dateisystem, in einem [Ordner](../../../analysis-services/xmla/xml-elements-properties/folder-element-xmla.md) Element.  
@@ -50,18 +48,18 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|String|  
-|Standardwert|Keine|  
-|Kardinalität|1-1: Erforderliches Element, das nur einmal auftritt.|  
+|Datentyp und -länge|Zeichenfolge|  
+|Standardwert|InclusionThresholdSetting|  
+|Cardinality|1-1: Erforderliches Element, das nur einmal auftritt.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnete Elemente|[Ordner](../../../analysis-services/xmla/xml-elements-properties/folder-element-xmla.md)|  
-|Untergeordnete Elemente|Keine|  
+|Untergeordnete Elemente|InclusionThresholdSetting|  
   
 ## <a name="remarks"></a>Hinweise  
  Das **New** -Element enthält einen UNC-Pfad, der während eines **Original** - oder **Folder** -Befehls den Wert des **Restore** -Elements ersetzt, das im übergeordneten **Synchronize** -Element für alle wiederhergestellten oder synchronisierten Objekte enthalten ist. Der Wert des **Original** -Elements wird mit dem Wert des **StorageLocation** -Elements für die einzelnen Cubes, Measuregruppen oder Partitionen verglichen. Wenn eine Übereinstimmung festgestellt wird, wird der Wert dieses Elements für das Update der **StorageLocation** des Objekts während der Wiederherstellung oder Synchronisierung verwendet.  

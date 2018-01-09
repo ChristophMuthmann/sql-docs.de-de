@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|features
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 843ce549dbd36f8fcbde8c61ade8cee2bc7163ca
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f56fc5dcd50b47a0689aa9ab96d17aaff1d0afe3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="date-and-time-improvements"></a>Datum und Uhrzeit-Verbesserungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
  Einige Anwendungen, z. B. in der Fertigung und Prozesssteuerung, erfordern die Fähigkeit, Zeitdaten mit einer Genauigkeit von bis zu 100 Nanosekunden zu verarbeiten. Neue Typen für diesen Zweck sind DBTYPE_DBTIME2 (OLE DB) und SQL_SS_TIME2 (ODBC).  
   
 ### <a name="use-datetime-with-extended-fractional-seconds-precision"></a>Verwenden von 'Datetime' mit einer Genauigkeit in Sekundenbruchteilen  
- OLE DB definiert bereits einen Typ mit einer Genauigkeit von bis zu 1 Nanosekunde. Dieser Typ wird jedoch bereits verwendet, von vorhandenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und solche Anwendungen erwarten von nur 1/300 einer zweiten Genauigkeit. Der neue **datetime2(3)** -Typ ist nicht direkt kompatibel mit dem vorhandenen datetime-Typ. Wenn das Risiko besteht, dass sich dies auf das Verhalten der Anwendung auswirkt, müssen Anwendungen das neue DBCOLUMN-Flag zur Bestimmung des tatsächlichen Servertyps verwenden.  
+ OLE DB definiert bereits einen Typ mit einer Genauigkeit von bis zu 1 Nanosekunde. Dieser Typ wird jedoch bereits verwendet, von vorhandenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und solche Anwendungen erwarten von nur 1/300 einer zweiten Genauigkeit. Der neue **datetime2(3)** -Typ ist nicht direkt kompatibel mit dem vorhandenen datetime-Typ. Wenn das Risiko besteht, dass sich dies auf das Verhalten der Anwendung auswirkt, müssen Anwendungen das neue DBCOLUMN-Flag zur Bestimmung des tatsächlichen Servertyps verwenden.  
   
  ODBC definiert auch einen Typ mit einer Genauigkeit von bis zu 1 Nanosekunde. Dieser Typ wird jedoch bereits verwendet, von vorhandenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Anwendungen diese Anwendungen erwarten nur 3 millisekundengenauigkeit. Der neue **datetime2(3)** -Typ ist nicht direkt kompatibel mit dem vorhandenen **datetime** -Typ. **datetime2(3)** hat eine Genauigkeit von einer Millisekunde, und **datetime** hat eine Genauigkeit von 1/300 Sekunde. In ODBC können Anwendungen bestimmen, welcher Servertyp mit dem Deskriptorfeld SQL_DESC_TYPE_NAME verwendet wird. Deshalb kann der vorhandene SQL_TYPE_TIMESTAMP-Typ (SQL_TIMESTAMP für ODBC 2.0-Anwendungen) für beide Typen verwendet werden.  
   

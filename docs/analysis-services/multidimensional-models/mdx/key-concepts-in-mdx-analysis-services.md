@@ -5,13 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cdfe16ab9a3b17d60f8e5a9ba30eeeda82d75b84
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 23aca9e6a5595c8597d13e2e832390988c50be3c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Schlüsselkonzepte in MDX (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Bevor Sie mehrdimensionale Daten Abfragen oder MDX-Ausdrücken innerhalb eines Cubes erstellen MDX (Multidimensional Expressions) verwenden können, sollten sie wissen Konzepten und Begriffen.  
@@ -144,7 +141,7 @@ ms.lasthandoff: 12/08/2017
   
  **Datenbankdimensionen und Cubedimensionen**. In Modellen können Sie eigenständige Dimensionen definieren, die anschließend in einer beliebigen Anzahl von Cubes im gleichen Modell integriert werden. Wenn Sie eine Dimension zu einem Cube hinzufügen, nennt man dies eine Cubedimension. Im Projektkontext als eigenständiges Element im Objekt-Explorer nennt man dies eine Datenbankdimension. Warum die Unterscheidung? Da Sie Eigenschaften der Dimensionen unabhängig voneinander setzen können. Die Produktdokumentation verwendet beide Begriffe, daher sollten Sie deren Bedeutung kennen.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
  Sie kennen nun die wichtigsten Konzepte und Begriffe und können mit diesen zusätzlichen Themen fortfahren, in denen grundlegende Konzepte von Analysis Services weiter erläutert werden:  
   
 -   [Die grundlegende MDX-Abfrage &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)  
@@ -153,7 +150,7 @@ ms.lasthandoff: 12/08/2017
   
 -   [Mehrdimensionale Modellierung &#40;Adventure Works-Tutorial&#41;](../../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [Tupel](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
  [Autoexists](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   

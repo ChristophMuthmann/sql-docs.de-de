@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs: TSQL
@@ -39,11 +39,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 788eeeb4acb1a2acc562f71dfe4d59a7f622192e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c7402b0f36f4d8b5ea0a554d7c82f1ff2cbaad19
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Registrieren benutzerdefinierter Typen in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Um einen benutzerdefinierten Typ (UDT) in verwenden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], müssen Sie ihn registrieren. Beim Registrieren eines UDT muss die Assembly registriert werden und der Typ in der Datenbank, in der er verwendet werden soll, erstellt werden. UDTs beschränken sich auf eine einzelne Datenbank und können nicht in mehreren Datenbanken verwendet werden, es sei denn die gleiche Assembly und der gleiche UDT wurden in jeder Datenbank registriert. Nachdem die UDT-Assembly registriert und der Typ erstellt wurden, können Sie den UDT in [!INCLUDE[tsql](../../includes/tsql-md.md)] und im Clientcode verwenden. Weitere Informationen finden Sie unter [Benutzerdefinierte CLR-Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
@@ -220,7 +220,7 @@ SELECT CAST(content AS varchar(8000))
   
  Beachten Sie, dass Sie nicht für die Verwendung von UDTs Maßnahmen ergreifen müssen beim [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] erstellt Arbeitstabellen in der **Tempdb** Systemdatenbank. Dies umfasst die Handhabung von Cursorn, Tabellenvariablen und stellen Sie eine benutzerdefinierte Tabellenwertfunktionen, die enthalten UDTs und die Verwendung von **Tempdb**. Jedoch, wenn Sie explizit in eine temporäre Tabelle erstellen **Tempdb** , eine UDT-Spalte definiert, und klicken Sie dann der UDT muss registriert werden, **Tempdb** genauso wie bei einer Benutzerdatenbank.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Benutzerdefinierte CLR-Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

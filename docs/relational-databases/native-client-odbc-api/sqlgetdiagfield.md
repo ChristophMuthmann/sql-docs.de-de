@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-api
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
@@ -19,11 +19,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8212e4077187ac68835c732ecbaee0891ad461b9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2f030fff57fba783584d3b46ba5ad56d45771bf2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/17/2017
 
   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber gibt die folgenden zusätzlichen Diagnosefelder für **SQLGetDiagField**. Diese Felder unterstützen umfangreiche fehlerberichterstellung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anwendungen und sind in allen Diagnosedatensätzen generiert auf verbundene ODBC-Verbindungshandles und ODBC-Anweisungshandles. Die Felder werden in sqlncli.h definiert.  
   
-|Diagnosedatensatzfeld|Beschreibung|  
+|Diagnosedatensatzfeld|Description|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|Meldet die Zeilennummer einer gespeicherten Prozedur, die einen Fehler verursacht. Der Wert von SQL_DIAG_SS_LINE ist nur aussagekräftig, wenn SQL_DIAG_SS_PROCNAME einen Wert zurückgibt. Der Wert wird als 16-Bit-Ganzzahl ohne Vorzeichen zurückgegeben.|  
 |SQL_DIAG_SS_MSGSTATE|Der Status einer Fehlermeldung. Informationen über den Status der Fehlermeldung finden Sie unter [RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md). Der Wert wird als 32-Bit-Ganzzahl mit Vorzeichen zurückgegeben.|  
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/17/2017
   
  Weitere Informationen zu Tabellenwertparametern finden Sie unter [Table-Valued Parameters &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQLGetDiagField-Funktion](http://go.microsoft.com/fwlink/?LinkId=59352)   
  [ODBC-API-Implementierungsdetails](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

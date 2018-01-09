@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bef441eba4e4aa9353a496282680449bc39fa629
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1cf1f2d08108f5516ad0249d1f8e3c4314b6adf8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>Lektion 5-4: Definieren von Dimensionsgranularität innerhalb einer Measuregruppe
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Benutzer sollten Dimension von Faktendaten auf anderen Granularität oder Spezifizierung für andere Zwecke verwendet. Verkaufsdaten für Händler- oder Internetverkäufe können z. B. für jeden Tag aufgezeichnet werden, wogegen Sollvorgaben für den Verkauf möglicherweise nur auf Monats- oder Quartalsebene vorhanden sind. In diesen Szenarios möchten Benutzer eine Time-Dimension mit einer anderen oder detaillierteren Auflösung für jede dieser verschiedenen Faktentabellen verwenden. Sie könnten zwar eine neue Datenbankdimension als Time-Dimension mit dieser anderen Auflösung definieren, doch bietet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]eine einfachere Lösung.  
@@ -229,7 +229,7 @@ In den Aufgaben in diesem Thema fügen Sie eine Sales Quota-Measuregruppe hinzu 
 ## <a name="next-lesson"></a>Nächste Lektion  
 [Lektion 6: Definieren von Berechnungen](../analysis-services/lesson-6-defining-calculations.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Dimensionsbeziehungen](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [Definieren einer regulären Beziehung und von Eigenschaften einer regulären Beziehung](../analysis-services/multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)  
 [Verwenden von Diagrammen im Datenquellensicht-Designer &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  

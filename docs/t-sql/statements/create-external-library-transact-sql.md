@@ -8,7 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -21,11 +21,11 @@ helpviewer_keywords: CREATE EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: bf4807943521308cb2907adab8cfc6e701325b8a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f52205803e3ab44e7c72808255dbe93fd61de336
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-external-library-transact-sql"></a>Erstellen von EXTERNEN Bibliothek (Transact-SQL)  
 

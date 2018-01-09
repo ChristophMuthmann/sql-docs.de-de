@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: AggregationDimension Data Type
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cd73d9a355f19357ea22f5554d56dfe4eaaff6d6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 105e84aa14dbb3b8dd8de239bc9e830a695ecf26
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="aggregationdimension-data-type-assl"></a>AggregationDimension-Datentyp (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Definiert einen Grunddatentyp, der die Beziehung zwischen einer Dimension darstellt und ein [Aggregation](../../../analysis-services/scripting/objects/aggregation-element-assl.md) Element.  
@@ -47,23 +45,23 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>Datentypmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Basisdatentypen|Keine|  
-|Abgeleitete Datentypen|Keine|  
+|Basisdatentypen|InclusionThresholdSetting|  
+|Abgeleitete Datentypen|InclusionThresholdSetting|  
   
 ## <a name="data-type-relationships"></a>Datentypbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
-|Übergeordnete Elemente|Keine|  
+|Übergeordnete Elemente|InclusionThresholdSetting|  
 |Untergeordnete Elemente|[Anmerkungen](../../../analysis-services/scripting/collections/annotations-element-assl.md), [Attribute](../../../analysis-services/scripting/collections/attributes-element-assl.md), [CubeDimensionID](../../../analysis-services/scripting/properties/cubedimensionid-element-assl.md)|  
 |Abgeleitete Elemente|[Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md) ([Dimensionen](../../../analysis-services/scripting/collections/dimensions-element-assl.md) Auflistung von [Aggregation](../../../analysis-services/scripting/objects/aggregation-element-assl.md))|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Das entsprechende Element im Objektmodell von Analysis Management Objects (AMO) ist <xref:Microsoft.AnalysisServices.AggregationDimension>.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Analysis Services Scripting Language-XML-Datentypen &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

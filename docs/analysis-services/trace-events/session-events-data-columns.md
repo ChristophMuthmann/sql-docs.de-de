@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: Session Events event category
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 663170f53391f844b6b94bcb5ffb615f150d0eed
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2a11895ad8a966a95b9ea4b78fa78236bc3d88d9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="session-events-data-columns"></a>Datenspalten für Sitzungsereignisse
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die Sitzungsereignisse-Ereigniskategorie weist folgende Ereignisklasse:  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/08/2017
 |---------------------|-------------------|---------------------|----------------------------|  
 |CurrentTime|2|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|Dauer|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
+|Duration|5|2|Die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |CPUTime|6|2|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
 |ConnectionID|25|1|Eindeutige Verbindungs-ID.|  
 |DatabaseName|28|8|Name der Datenbank, in der die Anweisung des Benutzers ausgeführt wird.|  

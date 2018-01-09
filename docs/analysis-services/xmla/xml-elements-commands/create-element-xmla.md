@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Create Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fc484789f5862c16ebfc95c6a7afd8d58e9b4f50
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f3e568fb190940822a6c6ef5cb65cf6b9476f4b1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-element-xmla"></a>Create-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Enthält Analysis Services Scripting Language (ASSL)-Elementen, die verwendet werden, indem die **Execute** Methode zum Erstellen von Objekten auf einer [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz.  
@@ -51,11 +49,11 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|Keine|  
-|Standardwert|Keine|  
-|Kardinalität|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
+|Datentyp und -länge|InclusionThresholdSetting|  
+|Standardwert|InclusionThresholdSetting|  
+|Cardinality|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
@@ -66,10 +64,10 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="attributes"></a>Attribute  
   
-|Attribut|Beschreibung|  
+|attribute|Description|  
 |---------------|-----------------|  
 |AllowOverwrite|Optionales **Boolean** -Attribut. Wenn die Objekte auf "true" festgelegt, in definiert werden. die **ObjectDefinition** Element werden, vorhandene Objekte auf die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz. Wenn dieses Attribut weggelassen oder auf "False" gesetzt wird, generiert das Vorhandensein eines existierenden Objekts einen Fehler.|  
-|Scope|Optionales **Enum** -Attribut. Definiert die Dauer der Objekte, die im **ObjectDefinition** -Element definiert sind. Wenn dieses Attribut weggelassen wird, definiert die Objekte der **ObjectDefinition** Element persistent auf der [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz. Der folgende Wert ist verfügbar:<br /><br /> *Sitzung*: die in definierten Objekte die **"objectdefinition"** Element nur für die Dauer des XML für Analysis (XMLA) Sitzung vorhanden sein.<br />                  Beachten Sie, dass bei Verwendung der *Sitzung* festlegen, die **ObjectDefinition** Element darf nur [Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md), [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md), oder [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) ASSL-Elemente.|  
+|Bereich|Optionales **Enum** -Attribut. Definiert die Dauer der Objekte, die im **ObjectDefinition** -Element definiert sind. Wenn dieses Attribut weggelassen wird, definiert die Objekte der **ObjectDefinition** Element persistent auf der [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz. Der folgende Wert ist verfügbar:<br /><br /> *Sitzung*: die in definierten Objekte die **"objectdefinition"** Element nur für die Dauer des XML für Analysis (XMLA) Sitzung vorhanden sein.<br />                  Beachten Sie, dass bei Verwendung der *Sitzung* festlegen, die **ObjectDefinition** Element darf nur [Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md), [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md), oder [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) ASSL-Elemente.|  
   
 ## <a name="remarks"></a>Hinweise  
  Jeder **Create** -Vorgang erstellt unter einem vom **ParentObject** -Element gegebenen übergeordneten Element ein Hauptobjekt. Wenn das übergeordnete Objekt weggelassen wird, wird davon ausgegangen, dass es die Ziel-[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Instanz ist. Dies generiert einen Fehler, wenn das übergeordnete Element eines Hauptobjekts nicht die Zielinstanz ist.  

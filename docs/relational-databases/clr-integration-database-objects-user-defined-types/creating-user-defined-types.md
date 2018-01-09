@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs: TSQL
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f669f8a9b9e031d21bd95958b12ad4f111b72b89
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a98e8438ab41e1f8dad5dd333d033d86ffcc4da2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-user-defined-types"></a>Erstellen von benutzerdefinierten Typen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Um einen benutzerdefinierten Typ (UDT) in installiert werden kann erstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], müssen Sie zuerst eine Klasse erstellen, in einem der unterstützten .NET Framework-Programmiersprachen wie Visual c# oder Visual Basic, die den Spezifikationen zum Erstellen von UDTs entspricht. Die Klasse kann dann in eine DLL (Dynamic Link Library) kompiliert werden, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen werden kann. Sie können UDTs auch mit Visual Studio erstellen und bereitstellen.  
@@ -335,7 +335,7 @@ Imports System.Text
 End Structure  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Benutzerdefinierte CLR-Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

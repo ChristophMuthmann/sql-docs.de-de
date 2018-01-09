@@ -90,7 +90,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [== &#40;Gleich&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/equal-ssis-expression.md)  
   
--   [!= &#40;Ungleich&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/unequal-ssis-expression.md)  
+-   [\!= &#40;Ungleich&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/unequal-ssis-expression.md)  
   
 -   [&#62; &#40;Größer als&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/greater-than-ssis-expression.md)  
   

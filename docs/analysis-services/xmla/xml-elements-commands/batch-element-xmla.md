@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Batch Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5e1edca7bbdaed14cf90d6fbe8cc92de5ad1f24d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8591a521cb1d3fce934e32be3d7b5cd3a4a977c4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="batch-element-xmla"></a>Batch-Element (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Führt eine oder mehrere XML für Analysis (XMLA) Befehle als Batchvorgang ein, sequenziell oder parallel auf einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -55,11 +53,11 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
-|Datentyp und -länge|Keine|  
-|Standardwert|Keine|  
-|Kardinalität|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
+|Datentyp und -länge|InclusionThresholdSetting|  
+|Standardwert|InclusionThresholdSetting|  
+|Cardinality|0-n: Optionales Element, das mehr als einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
@@ -70,7 +68,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="attributes"></a>Attribute  
   
-|Attribut|Beschreibung|  
+|attribute|Description|  
 |---------------|-----------------|  
 |ProcessAffectedObjects|(Optionales **Boolean** -Attribut) Gibt an, ob alle Objekte, die eine Wiederverarbeitung erfordern, verarbeitet werden.<br /><br /> Wenn auf True festgelegt, die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz verarbeitet alle Objekte, die erforderlich ist, eine erneute Verarbeitung als Ergebnis der Verarbeitung eines Objekts in der **Batch** Befehl.<br /><br /> Wenn auf festgelegt **"false"**, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz verarbeitet nur die Objekte, die in enthalten die **Batch** Befehl.|  
 |Transaction|(Optionales **Boolean** -Attribut) Gibt an, ob der im **Batch** -Befehl enthaltene Befehl als eine einzelne Transaktion oder als individuelle Transaktionen behandelt wird.<br /><br /> Wenn er auf "True" gesetzt ist, gelten alle im **Batch** -Befehl enthaltenen Befehle als eine einzelne Transaktion. Wenn einer der Befehle fehlschlägt, findet für alle Befehle, die vor dem fehlgeschlagenen Befehl ausgeführt wurden, ein Rollback statt und der **Batch** -Befehl wird angehalten, ohne die folgenden Befehle auszuführen.<br /><br /> Wenn der **false**-Befehl auf **Batch** festgelegt ist, wird versucht, jeden Befehl auszuführen. Anschließend wird für die Ergebnisse jedes Befehls, der erfolgreich abgeschlossen wurde, ein Commit ausgeführt.|  

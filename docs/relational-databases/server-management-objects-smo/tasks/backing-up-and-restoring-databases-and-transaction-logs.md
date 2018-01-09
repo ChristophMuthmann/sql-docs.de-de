@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1a9aa5d16960e9d52bb1a6e6edac30e7be02cf64
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bf1d65068cc72b7fda04be8b98ac999b22e010fd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Sichern und Wiederherstellen von Datenbanken und Transaktionsprotokollen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In SMO werden die <xref:Microsoft.SqlServer.Management.Smo.Backup> Klasse und die <xref:Microsoft.SqlServer.Management.Smo.Restore> -Klasse sind Hilfsklassen, die die Tools zum Ausführen bestimmter Tasks, wie Sicherung und Wiederherstellung zu ermöglichen. Ein <xref:Microsoft.SqlServer.Management.Smo.Backup> Objekt stellt eine spezifische Sicherungstask an, die anstelle von erforderlich ist eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Objekt auf der Serverinstanz.  

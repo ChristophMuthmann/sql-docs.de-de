@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 21b3d6af2d4a6248926773e78dbf366b6c6d9ee5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 815d1c6d75613855d84e9bb7ab6e5c369d97bf81
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="perspectives"></a>Perspektiven
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Eine Perspektive ist eine Definition, die Benutzern ermöglicht, einen Cube auf einfachere Weise anzuzeigen. Eine Perspektive ist eine Teilmenge der Funktion eines Cubes. Mithilfe von Perspektiven können Administratoren Sichten eines Cubes erstellen, die Benutzer dabei unterstützen, die für sie wichtigsten Daten hervorzuheben. Eine Perspektive enthält Teilmengen aller Objekte eines Cubes. Eine Perspektive kann keine Elemente einschließen, die nicht im übergeordneten Cube definiert sind.  
@@ -67,7 +65,7 @@ ms.lasthandoff: 12/08/2017
   
  Bei einer Perspektive handelt es sich um eine schreibgeschützte Sicht des Cubes. Objekte im Cube können mithilfe einer Perspektive nicht umbenannt oder geändert werden. Außerdem können das Verhalten oder die Funktionen eines Cubes, wie die Verwendung sichtbarer Gesamtwerte, nicht mithilfe einer Perspektive geändert werden.  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
  Perspektiven sollen nicht als Sicherheitsmechanismus verwendet werden, sondern werden als Tool zur Vereinfachung der Nutzung von Business Intelligence-Anwendungen für Endbenutzer verwendet. Die gesamte Sicherheit einer bestimmten Perspektive wird vom zugrunde liegenden Cube geerbt. So können z. B. Perspektiven keinen Zugriff auf Objekte in einem Cube ermöglichen, auf die ein Benutzer nicht bereits Zugriff hat. - Die Sicherheit des Cubes muss geklärt werden, damit der Zugriff auf Objekte im Cube durch eine Perspektive ermöglicht werden kann.  
   
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 096b540d63e439677568ab68037d23c1307b40bc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 31dcc25d371ee74d69af1f7a85ad34208d99fd79
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR-Skalarwertfunktionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Eine Skalarwertfunktion (SVF) gibt einen einzelnen Wert, z. B. eine Zeichenfolge, ganze Zahl oder Bitwert zurück. Sie können eine benutzerdefinierte Skalarwertfunktionen in verwaltetem Code mithilfe einer beliebigen .NET Framework-Programmiersprache erstellen. Auf diese Funktionen kann über [!INCLUDE[tsql](../../includes/tsql-md.md)] oder anderen verwalteten Code zugegriffen werden. Weitere Informationen zu den Vorteilen von CLR-Integration und Auswählen zwischen verwaltetem Code und [!INCLUDE[tsql](../../includes/tsql-md.md)], finden Sie unter [Overview of CLR Integration](../../relational-databases/clr-integration/clr-integration-overview.md).  
@@ -156,7 +156,7 @@ GO
   
  Beachten Sie, dass der Funktionsname, der in [!INCLUDE[tsql](../../includes/tsql-md.md)] angegeben wird, nicht mit dem Namen der öffentlichen statischen Zielmethode übereinstimmen muss.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Zuordnen von CLR-Parameterdaten](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
  [Übersicht über benutzerdefinierte Attribute von CLR-Integration](http://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)   
  [Benutzerdefinierte Funktionen](../../relational-databases/user-defined-functions/user-defined-functions.md)   

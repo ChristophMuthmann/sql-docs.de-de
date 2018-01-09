@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-rowsets
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3c309c174deec84526ffb0a85612fe833b0a24d8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6e0546fe394d34b9a06bed38b0277192ca8f9ff8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Rowsets und SQL Server-Cursor
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
   
  Die folgenden Rowseteigenschaften weisen den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter an, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Cursor zu verwenden. Einige Eigenschaften können mit anderen problemlos kombiniert werden. Ein Rowset mit den Eigenschaften DBPROP_IRowsetScroll und DBPROP_IRowsetChange entspricht beispielsweise einem Lesezeichenrowset mit sofortigem Updateverhalten. Andere Eigenschaften schließen sich hingegen gegenseitig aus. Zum Beispiel kann ein Rowset, das DBPROP_OTHERINSERT aufweist, keine Lesezeichen enthalten.  
   
-|Eigenschafts-ID|Wert|Rowsetverhalten|  
+|Eigenschafts-ID|value|Rowsetverhalten|  
 |-----------------|-----------|---------------------|  
 |DBPROP_SERVERCURSOR|VARIANT_TRUE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Daten können nicht über das Rowset aktualisiert werden. Das Rowset ist sequenziell und unterstützt nur den Bildlauf vorwärts und das Abrufen. Die relative Zeilenpositionierung wird unterstützt. Befehlstext kann eine ORDER BY-Klausel enthalten.|  
 |DBPROP_CANSCROLLBACKWARDS oder DBPROP_CANFETCHBACKWARDS|VARIANT_TRUE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Daten können nicht über das Rowset aktualisiert werden. Das Rowset unterstützt das Durchführen eines Bildlaufs und das Abrufen in beiden Richtungen. Die relative Zeilenpositionierung wird unterstützt. Befehlstext kann eine ORDER BY-Klausel enthalten.|  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
   
  Um ein bestimmtes Cursormodell zu verwenden, suchen Sie die dem Cursormodell entsprechende Spalte, und suchen Sie alle Rowseteigenschaften mit dem Wert "T" in der Spalte. Legen Sie diese Rowseteigenschaften auf VARIANT_TRUE fest, um das gewünschte Cursormodell zu verwenden. Die Rowseteigenschaften mit dem Wert "-" können entweder auf VARIANT_TRUE oder VARIANT_FALSE festgelegt werden.  
   
-|Rowset-Eigenschaften/Cursormodelle|Standardwert<br /><br /> result<br /><br /> Menge<br /><br /> (RO)|Schnell<br /><br /> forward-<br /><br /> nur<br /><br /> (RO)|STATIC-Cursor<br /><br /> (RO)|Keyset<br /><br /> driven<br /><br /> (RO)|  
+|Rowset-Eigenschaften/Cursormodelle|Default<br /><br /> result<br /><br /> Menge<br /><br /> (RO)|Schnell<br /><br /> forward-<br /><br /> nur<br /><br /> (RO)|STATIC-Cursor<br /><br /> (RO)|Keyset<br /><br /> driven<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|V|T|T|T|  
 |DBPROP_DEFERRED|V|V|-|-|  
@@ -159,7 +159,7 @@ ms.lasthandoff: 11/17/2017
   
  Der Cursorblock ist unabhängig von der Methode, die zum Auffüllen des Rowsets und zur Bildung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Cursorblocks verwendet wird, aktiv, bis die nächste Methode zum Abrufen von Zeilen für das Rowset ausgeführt wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

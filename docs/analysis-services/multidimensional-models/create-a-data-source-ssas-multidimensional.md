@@ -5,13 +5,10 @@ ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -28,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2927962261f35ea8b5f032853660e3e6bc1d0ad2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 213bc7a17344f42cd10258962f91711a5ee3acba
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Erstellen einer Datenquelle (SSAS – mehrdimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mehrdimensionalen Modell ein Datenquellenobjekt stellt eine Verbindung mit der Datenquelle, von dem Sie verarbeiten (oder importieren) Daten. Ein mehrdimensionales Modell muss mindestens ein Datenquellenobjekt enthalten, Sie können jedoch weitere hinzufügen, um Daten aus mehreren Data Warehouses zu kombinieren. Erstellen Sie anhand der Anweisungen in diesem Thema ein Datenquellenobjekt für Ihr Modell. Weitere Informationen zum Festlegen von Eigenschaften für dieses Objekt finden Sie unter [Festlegen von Datenquelleneigenschaften &#40;SSAS – mehrdimensional&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md).  
@@ -52,7 +49,7 @@ ms.lasthandoff: 12/08/2017
  [Hinzufügen mehrerer Datenquellen zu einem Modell](#bkmk_multipleDS)  
   
 ##  <a name="bkmk_provider"></a> Auswählen eines Datenanbieters  
- Die Verbindung können Sie mit einem verwaltetem [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework- oder einem systemeigenem OLE DB-Anbieter herstellen. Als Datenanbieter wird für SQL Server-Datenquellen SQL Server Native Client empfohlen, da dieser meist eine bessere Leistung bietet.  
+ Die Verbindung können Sie mit einem verwaltetem [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework- oder einem systemeigenem OLE DB-Anbieter herstellen. Als Datenanbieter wird für SQL Server-Datenquellen SQL Server Native Client empfohlen, da dieser meist eine bessere Leistung bietet.  
   
  Bei Oracle- und anderen Datenquellen von Drittanbietern überprüfen Sie, ob der Drittanbieter einen systemeigenen OLE DB-Anbieter bereitstellt, mit dem Sie es als Erstes probieren. Bei Fehlern versuchen Sie es mit einem anderen .NET-Anbieter oder systemeigenen OLE DB-Anbieter, der im Verbindungs-Manager aufgeführt wird. Stellen Sie sicher, dass jeder von Ihnen verwendete Datenanbieter auf allen Computern installiert ist, die zum Entwickeln und Ausführen der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Lösung verwendet werden.  
   
@@ -180,7 +177,7 @@ ms.lasthandoff: 12/08/2017
   
 5.  Suchen Sie die hinzugefügte Tabelle, und wählen Sie sie aus. Klicken Sie mit der rechten Maustaste auf die Tabelle, und wählen Sie **Neue Beziehung**aus. Wählen Sie die Quell- und Zielspalten aus, die übereinstimmende Daten enthalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Unterstützte Datenquellen &#40;SSAS – Mehrdimensional&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
  [Datenquellsichten in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   

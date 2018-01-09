@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 25903194512146b53d325b217ff7d866d7b38ad1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8d9a4e8529fdb24060db49e2263576f492570e64
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Gewährung, Widerrufen und Verweigern von Berechtigungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Die <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> Objekt verwendet, um einen Satz von Berechtigungen oder eine einzelne Serverberechtigung zuzuweisen der <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet> Objekt. Für Berechtigungen auf Serverebene verweist der Berechtigte auf eine Anmeldung. Von Windows authentifizierte Anmeldungen werden als Windows-Benutzernamen aufgelistet. Bei der Ausführung dieses Codebeispiels widerruft die Berechtigung aus dem Empfänger und überprüft, ob es entfernt wurde mit der <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A> Methode.  
@@ -257,7 +257,7 @@ foreach ( $spi in $spis)
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Berechtigungshierarchie &#40;Datenbankmodul&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)  
   
   

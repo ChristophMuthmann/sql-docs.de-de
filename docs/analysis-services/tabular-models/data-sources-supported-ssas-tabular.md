@@ -5,13 +5,10 @@ ms.date: 10/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ac5c3ca68f52a946195797e64ea650d82b1cde7f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 945b4d774e67d327c4a067f3fc59837232b90263
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-sources-supported-in-tabular-models"></a>In tabellarischen Modellen unterstützte Datenquellen
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Azure Analysis Services, finden Sie unter [in Azure Analysis Services unterstützte Datenquellen](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource).
@@ -59,9 +56,9 @@ Bei der Installation von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstud
 Datenquelle   |Versionen  |Anbieter
 ---------|---------|---------
 Microsoft SQL Server    |  2008 und höher      |       OLE DB-Anbieter für SQL Server, OLE DB-Anbieter für SQL Server Native Client, .NET Framework-Datenanbieter für SQL Client  
-Microsoft Azure SQL-Datenbank    |   Alle      |  OLE DB-Anbieter für SQL Server, OLE DB-Anbieter für SQL Server Native Client, .NET Framework-Datenanbieter für SQL Client            
-Microsoft Azure SQL Data Warehouse     |   Alle     |  OLE DB-Anbieter für SQL Server Native Client, .NET Framework-Datenanbieter für SQL Client       
-Microsoft SQL Analytics Platform System (APS)     |   Alle      |  OLE DB-Anbieter für SQL Server, OLE DB-Anbieter für SQL Server Native Client, .NET Framework-Datenanbieter für SQL Client       
+Microsoft Azure SQL-Datenbank    |   All      |  OLE DB-Anbieter für SQL Server, OLE DB-Anbieter für SQL Server Native Client, .NET Framework-Datenanbieter für SQL Client            
+Microsoft Azure SQL Data Warehouse     |   All     |  OLE DB-Anbieter für SQL Server Native Client, .NET Framework-Datenanbieter für SQL Client       
+Microsoft SQL Analytics Platform System (APS)     |   All      |  OLE DB-Anbieter für SQL Server, OLE DB-Anbieter für SQL Server Native Client, .NET Framework-Datenanbieter für SQL Client       
 Relationale Oracle-Datenbanken     |  Oracle 9i und höher       |  OLE DB-Anbieter für Oracle       
 Relationale Teradata-Datenbanken    |  Teradata V2R6 und höher     | .NET-Datenanbieter für Teradata    
 

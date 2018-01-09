@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: WTD
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: ae6c37e5d278fba839d3305ee92ba0ddae536030
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: dd738d665a8dd94758d665828174b244622a3190
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="wtd-mdx"></a>Wtd (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,12 +42,12 @@ Wtd( [ Member_Expression ] )
  *Member_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn ein Elementausdruck nicht angegeben ist, wird die Standardeinstellung ist das aktuelle Element der ersten Hierarchie mit einer Ebene des Typs Wochen, in der ersten Dimension des Typs Zeit (**Time.CurrentMember**) in der Measuregruppe.  
   
  Die **Wtd** Funktion ist eine Verknüpfungsfunktion für die [PeriodsToDate](../mdx/periodstodate-mdx.md) Funktion, auf die Ebene festgelegt ist *Wochen*. Somit ist `Wtd(Member_Expression)` äquivalent zu `PeriodsToDate(Week_Level_Expression,Member_Expression)`.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [QTD &#40; MDX &#41;](../mdx/qtd-mdx.md)   
  [MTd &#40; MDX &#41;](../mdx/mtd-mdx.md)   
  [YTD &#40; MDX &#41;](../mdx/ytd-mdx.md)   

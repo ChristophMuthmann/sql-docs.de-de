@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f279adc22305b40d0207b6256e29d42b9b32ef65
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: cfac3c1160e6889fe51f1b93a4df87a0ed92a302
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>Konfigurieren der Speicherplatzverwendung (Power Pivot für SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ein [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Bereitstellung, den Speicherplatz des Hostcomputers zum Cache verwendet [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Datenbanken zum schnelleren Neuladen. Jede in den Arbeitsspeicher geladene [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenbank wird zuerst auf einen Datenträger zwischengespeichert, damit sie später für neue Anforderungen schnell erneut geladen werden kann. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint nutzt standardmäßig den gesamten verfügbaren Speicherplatz zum Zwischenspeichern der zugehörigen Datenbanken. Sie können dieses Verhalten jedoch ändern, indem Sie Eigenschaften festlegen, durch die der verwendete Speicherplatz eingeschränkt wird.  
@@ -99,10 +96,10 @@ ms.lasthandoff: 12/08/2017
   
 5.  Klicken Sie auf **OK** , um die Änderungen zu speichern.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
  Eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Installation stellt Integritätsregeln bereit, sodass Sie Korrekturmaßnahmen ergreifen können, wenn Probleme bei Integrität, Konfiguration oder Verfügbarkeit des Servers erkannt werden. Einige dieser Regeln bestimmen mithilfe von Konfigurationseinstellungen die Bedingungen, unter denen Integritätsregeln ausgelöst werden. Beim aktiven Optimieren der Serverleistung können Sie auch diese Einstellungen überprüfen, um sicherzustellen, dass die Standardwerte für das System am besten geeignet sind. Weitere Informationen finden Sie unter [Konfigurieren von Power Pivot-Integritätsregeln](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [PowerPivot-Serververwaltung und -konfiguration in der Zentraladministration](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Power Pivot-Serververwaltung und -konfiguration in der Zentraladministration](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

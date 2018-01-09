@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: Notification Events event category
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 39c93ff427048fe1893dd78f8fe35abc0b52885b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 901c9935629b584a0eb9c1fa4320fe590efa5e3d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="notification-events-data-columns"></a>Datenspalten der Benachrichtigungsereignisse
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Benachrichtigungsereignisse sind Ereignisse, die nicht direkt von Benutzern entstehen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Zu Benachrichtigungen kommt es z. B., weil Benutzer zugrunde liegende Tabellen für das proaktive Zwischenspeichern aktualisieren.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/08/2017
 |CurrentTime|2|5|Enthält die aktuelle Zeit des Benachrichtigungsereignisses (wenn verfügbar). Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |StartTime|3|5|Enthält den Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
 |EndTime|4|5|Enthält die Uhrzeit, zu der das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen (z. B. SQL:BatchStarting oder SP:Starting) nicht aufgefüllt. Für das Filtern lauten die erwarteten Formate "JJJJ-MM-TT" und "JJJJ-MM-TT HH:MM:SS".|  
-|Dauer|5|2|Enthält die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
+|Duration|5|2|Enthält die Zeit (in Millisekunden), die für das Ereignis benötigt wurde.|  
 |IntegerData|10|1|Enthält die mit dem Benachrichtigungsereignis verbundenen ganzzahligen Daten. Wenn die EventSubclass-Spalte 8 ist, sind die Werte:<br /><br /> 1 = Erstellt<br /><br /> 2 = Gelöscht<br /><br /> 3 = Geänderte Objekteigenschaften<br /><br /> 4 = Geänderte Eigenschaften der untergeordneten Elemente des Objekts<br /><br /> 6 = Untergeordnetes Element hinzugefügt<br /><br /> 7 = Untergeordnetes Element gelöscht<br /><br /> 8 = Objekt erfolgreich verarbeitet<br /><br /> 9 = Objekt teilweise verarbeitet<br /><br /> 10 = Objekt nicht verarbeitet<br /><br /> 11 = Objekt vollständig optimiert<br /><br /> 12 = Objekt teilweise optimiert<br /><br /> 13 = Objekt nicht optimiert|  
 |ObjectID|11|8|Enthält die Objekt-ID, für die diese Benachrichtigung ausgegeben wird; dies ist ein Zeichenfolgenwert.|  
 |ObjectType|12|1|Enthält den mit dem Benachrichtigungsereignis verbundenen Objekttyp.|  

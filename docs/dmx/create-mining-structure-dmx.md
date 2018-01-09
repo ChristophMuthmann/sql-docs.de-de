@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 4663f814087722ef581c14c188b18b52178a5076
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e7c12fe48c10b0fac4a89e2aa9a8e2b2ea0dce2f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -79,7 +77,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Standardwert: REPEATABLE(0)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Sie definieren eine Miningstruktur, indem Sie eine Liste mit Spalten und optional hierarchische Beziehungen zwischen den Spalten angeben und dann wahlweise die Miningstruktur in Trainings- und Testdatasets partitionieren.  
   
  Das optionale SESSION-Schlüsselwort gibt an, dass die Struktur eine temporäre Struktur ist, die Sie nur für die Dauer der aktuellen Sitzung verwenden können. Wenn die Sitzung beendet wird, werden die Struktur und alle Modelle auf Grundlage der Struktur gelöscht. Um temporäre Miningstrukturen und Modelle zu erstellen, müssen Sie zuerst die Datenbankeigenschaft AllowSessionMiningModels festlegen. Weitere Informationen finden Sie unter [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
@@ -195,9 +193,9 @@ CREATE MINING STRUCTURE [New Mailing]
 WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datamining-Erweiterungen &#40; DMX &#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
  [Datamining-Erweiterungen &#40; DMX &#41; Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Datamining-Erweiterungen &#40; DMX &#41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

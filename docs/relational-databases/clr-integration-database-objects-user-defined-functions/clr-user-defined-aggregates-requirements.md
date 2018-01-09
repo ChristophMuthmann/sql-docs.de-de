@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -27,11 +27,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a46a1a0e60c7fbe667904388a4c1c8cae93ab827
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 158b2aaa95f289a558f0d186e359903252f6d90e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-user-defined-aggregates---requirements"></a>CLR User-Defined Aggregate - Anforderungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Ein Typ in einer Assembly der common Language Runtime (CLR) kann als eine benutzerdefinierte Aggregatfunktion registriert werden, solange den erforderliche Aggregationsvertrag implementiert. Dieser Vertrag besteht aus den **SqlUserDefinedAggregate** Attribut und der Aggregation Vertrag Methoden. Der Aggregationsvertrag beinhaltet den Mechanismus zum Speichern des Zwischenstatus der Aggregation und der Mechanismus zum Sammeln neuer Werte, besteht aus vier Methoden: **Init**, **Accumulate**,  **Merge**, und **beenden**. Wenn Sie diese Anforderungen erfüllt haben, werden benutzerdefinierte Aggregate in voll nutzen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die folgenden Abschnitte zu diesem Thema enthalten zusätzliche Details zum Erstellen von benutzerdefinierten Aggregaten und ihrer Verwendungsweise. Ein Beispiel finden Sie unter [Invoking CLR User-Defined Aggregatfunktionen](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md).  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 |---------------------|  
 |Aktualisiert die Beschreibung des der **Accumulate** Methode; sie jetzt mehrere Parameter akzeptiert.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Benutzerdefinierte CLR-Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
  [Aufrufen von CLR-benutzerdefinierten Aggregatfunktionen](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md)  
   

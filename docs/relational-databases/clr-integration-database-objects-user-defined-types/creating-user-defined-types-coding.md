@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -38,11 +38,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 71fd426940e8cf9b5970bcd24a3f982bc9dc8f2a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7f1abec952d7ad6ca57b38ff1bda37134312da4b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="creating-user-defined-types---coding"></a>Erstellen von benutzerdefinierten Typen - Codierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Beim Codieren Ihre Definition für den benutzerdefinierten Typ (UDT), müssen Sie verschiedene Funktionen, je nachdem, ob Sie den UDT implementiert werden, als eine Klasse oder Struktur sowie auf den gewählten Format- und Serialisierungsoptionen Optionen implementieren.  

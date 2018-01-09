@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 02027bfdd00a6808ec3511d85fae0fd158fa70c8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 24e661c0ba9bd5c143365c69282e2cdae91b174a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>Erteilen von Berechtigungen zum Lesen von Definitionen für Objektmetadaten (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Über die Berechtigung zum Lesen einer Objektdefinition oder Metadaten für ausgewählte Objekte einen Administrator erteilen der Berechtigung zum Anzeigen von Objektdefinitionen, ohne auch erteilen der Berechtigung zum Ändern der Objektdefinition, der Objektstruktur oder der die Istwerte ermöglicht Daten für das Objekt. **Definition lesen** Die Berechtigungen zum Lesen von Metadaten können auf Datenbank-, Datenquellen-, Dimensions-, Miningstruktur- und Miningmodellebene erteilt werden. Wenn Sie für einen Cube die Berechtigung **Definition lesen** benötigen, müssen Sie **Definition lesen** für die Datenbank aktivieren. Beachten Sie, dass Berechtigungen additiv sind. Eine Rolle kann beispielsweise einem Benutzer die Berechtigung zum Lesen eines Cubes erteilen, während eine andere Datenbankrolle demselben Benutzer die Berechtigung zum Lesen der Metadaten für eine Dimension erteilen kann. Die Berechtigungen aus den beiden unterschiedlichen Rollen werden kombiniert, um dem Benutzer die Berechtigung sowohl zum Lesen der Metadaten für den Cube als auch der Metadaten für die Dimension innerhalb dieser Datenbank zu erteilen.  
@@ -67,7 +64,7 @@ ms.lasthandoff: 12/08/2017
   
 5.  Klicken Sie auf **OK** , um die Erstellung der Rolle zu abzuschließen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erteilen von Datenbankberechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
  [Erteilen von Verarbeitungsberechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   

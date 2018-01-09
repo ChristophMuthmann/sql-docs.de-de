@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a4f1dcea3c74fdf61af401a854aba9c2166f5610
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0159070eb0405e49f9813828aa82b1483008b61f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Durchsuchen von Daten und Metadaten in Cube
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Verwenden der **Browser** Registerkarte des Cube-Designers, um Cubedaten zu durchsuchen. Sie können diese Ansicht verwenden, um die Struktur eines Cubes zu untersuchen und die Daten, die Berechnung, die Formatierung und die Sicherheit der Datenbankobjekte zu überprüfen. Sie können schnell einen Cube untersuchen, während dieser von Endbenutzern in Berichterstellungstools oder anderen Clientanwendungen angezeigt wird. Wenn Sie Cubedaten durchsuchen, können Sie unterschiedliche Dimensionen anzeigen, einen Drilldown in Elemente ausführen und die Dimensionen in Slices aufteilen.  

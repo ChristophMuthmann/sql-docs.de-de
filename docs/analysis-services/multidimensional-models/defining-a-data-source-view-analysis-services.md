@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4331bf4de9efa68338e509976b534549bd3506d5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a64d57676b6b9c0fb36772dfce08ed0a137df19a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Definieren einer Datenquellensicht (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Eine Datenquellensicht enthält das logische Modell des Schemas verwendeten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] multidimensionalen Datenbankobjekten, also Cubes, Dimensionen und Miningstrukturen. Eine Datenquellensicht ist die im XML-Format gespeicherte Metadatendefinition dieser Schemaelemente, die vom UDM (Unified Dimensional Model) und von den Miningstrukturen verwendet werden. Eine Datenquellensicht:  
@@ -139,7 +136,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Nachdem Sie den Datenquellensicht-Assistenten fertig gestellt haben, können Sie Beziehungen im Schemabereich von Datenquellensicht-Designer hinzufügen oder entfernen. Weitere Informationen finden Sie unter [Definieren von logischen Beziehungen in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-relationships-in-a-data-source-view-analysis-services.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Hinzufügen oder Entfernen von Tabellen oder Sichten in einer Datenquellensicht &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
  [Definieren Sie logischer Primärschlüssel in einer Datenquellensicht &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
  [Definieren von benannten Berechnungen in einer Datenquellensicht &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   

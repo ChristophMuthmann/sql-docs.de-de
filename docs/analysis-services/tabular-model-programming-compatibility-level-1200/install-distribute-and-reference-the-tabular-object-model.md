@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e51769f7-aac7-4835-a5ae-91aac04aa476
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 60d264dccf042ec9447d92f17045f238597cd29e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4992c9a621964f8125178f114a930b1f4e007179
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="install-distribute-and-reference-the-tabular-object-model"></a>Installieren, verteilen und verweisen auf die tabellarischen Objektmodell
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]In diesem Artikel erläutert, wie herunterladen, verweisen und Verteilen von Analysis Services Tabular Objekt Model (TOM), eine c#-Klassenbibliothek zum Erstellen und verwalten tabellarische Modelle und Datenbanken in verwaltetem Code.  
@@ -39,7 +37,7 @@ Die folgende Tabelle beschreibt jede Assembly.
 Assembly  |Funktionalität  |Wichtige Klassen |
 ---------|---------|--------------  |
 Core <br/>Microsoft.AnalysisServices.Core.dll | Tabellarische und mehrdimensionale Datenbanken, die gemeinsam sind. <br/><br/>Stellt eine Ausnahmebehandlung, generischen Verbindungen mit einer Analysis Services-Instanz und-Datenbank und den Zugriff auf Allgemeine Eigenschaften und Methoden für die Server- und Datenbankobjekten bereit. <br/><br/>Es wurde für alle AMO-Lösung, die für SQL Server 2016 erforderlich. | Core&nbsp;Server<br/>Core&nbsp;Datenbank<br/>AmoException
-PETER<br/> Microsoft.AnalysisServices.Tabular.dll, Version 13.0.1601.5 oder höher.| Erstellen Sie und verwalten Sie tabellarische Metadatenobjekte. | TOM&nbsp;Server <br/>TOM&nbsp;Datenbank<br /> Model<br /> Tabelle<br /> Column<br /> Beziehung
+PETER<br/> Microsoft.AnalysisServices.Tabular.dll, Version 13.0.1601.5 oder höher.| Erstellen Sie und verwalten Sie tabellarische Metadatenobjekte. | TOM&nbsp;Server <br/>TOM&nbsp;Datenbank<br /> Model<br /> Tabelle<br /> Spalte<br /> Beziehung
   AMO<br /> Microsoft.AnalysisServices.dll| Erstellen und Verwalten von mehrdimensionalen Servermetadaten-Objekten, einschließlich tabellarischer 1050-1103-Datenbanken. | AMO&nbsp;Server <br />AMO&nbsp;Datenbank <br /> Cube <br /> Dimension <br /> Measuregruppe 
 JSON<br/>Microsoft.AnalysisServices.Tabular.Json.dll | Ein Hilfsprogramm-DLL, die zum Steuern von Updates, die NewtonSoftJson.dll (JSON.NET) dient als Wrapper für das Risiko, dass der einführen von funktionalen Änderungen in JSON-Serialisierung in Analysis Services-arbeitsauslastungen. <br /> <br />Diese DLL ist als eine Abhängigkeit in TOM vorhanden und sollte nicht direkt im Code verwendet werden. | Keine.  
   

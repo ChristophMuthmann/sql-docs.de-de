@@ -6,7 +6,7 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 001e66b9-6c3f-41b3-81b7-46541e15f9ea
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 137889dae328d3f780082ca5837717017b66867d
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 130c52d56e45dae5da5f50ef0d5d96ea87c31d3a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning"></a>Upgrade und Installation häufig gestellte Fragen zur SQL Server-Machine Learning
 

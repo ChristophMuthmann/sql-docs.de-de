@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 68f500896e8dffa6982c2f15ac3e431bebc4df87
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9d10942e6942e4c307bc6c8fed9c7cb391d5f368
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>Lektion 6-2: Definieren von benannten Mengen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Eine benannte Menge ist eine Multidimensional Expressions (MDX)-Ausdruck, der eine Menge von Dimensionselementen zurückgibt. Sie können benannte Mengen definieren und im Rahmen der Cubedefinition speichern. Sie können auch benannte Mengen in Clientanwendungen erstellen. Benannte Mengen können durch Kombinieren von Cubedaten, arithmetischen Operatoren, Zahlen und Funktionen erstellt werden. Benannte Mengen können von Benutzern in MDX-Abfragen in Clientanwendungen sowie zum Definieren von Mengen in Teilcubes verwendet werden. Ein Teilcube bezeichnet eine Auflistung von Mengen mit Kreuzprodukten, die den Cuberaum auf den definierten Teilbereich für nachfolgende Anweisungen beschränkt. Die Definition eines eingeschränkten Cuberaums stellt ein grundlegendes Konzept der MDX-Skripterstellung dar.  
@@ -84,7 +84,7 @@ Im Rahmen der Tasks in diesem Thema definieren Sie zwei benannte Mengen: die ben
   
 9. Ändern Sie im Eigenschaftenfenster die **DiscretizationMethod**-Eigenschaft in **Automatisch**, und ändern Sie die **DiscretizationBucketCount**-Eigenschaft in **5**. Weitere Informationen finden Sie unter [Gruppieren von Attributelementen &#40;Diskretisierung&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md).  
   
-10. Klicken Sie im Menü **Erstellen** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] auf **Analysis Services Tutorial bereitstellen**.  
+10. Klicken Sie im Menü **Erstellen** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]auf **Analysis Services Tutorial bereitstellen**.  
   
 11. Wechseln Sie nach der erfolgreichen Bereitstellung zum Cube-Designer für den Cube des [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Tutorials, und klicken Sie auf der Symbolleiste der Registerkarte **Berechnungen** auf **Verbindung wiederherstellen** .  
   
@@ -141,7 +141,7 @@ Im Rahmen der Tasks in diesem Thema definieren Sie zwei benannte Mengen: die ben
 ## <a name="next-lesson"></a>Nächste Lektion  
 [Lektion 7: Definieren von KPIs &#40;Key Performance Indicator&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Berechnungen](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  
 [Erstellen von benannten Mengen](../analysis-services/multidimensional-models/create-named-sets.md)  
   

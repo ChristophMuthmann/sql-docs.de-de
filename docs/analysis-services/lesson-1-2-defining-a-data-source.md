@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c6d92c514cb38f1277efeedaa4172968f8e150ec
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3c1504d26e2c7cbdbdacf943e17d7514ba20b786
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-1-2---defining-a-data-source"></a>Lektion 1-2: Definieren einer Datenquelle
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Nach der Erstellung einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt Sie in der Regel beginnen der Arbeit mit dem Projekt definieren Sie eine oder mehrere Datenquellen, die vom Projekt verwendet wird. Wenn Sie eine Datenquelle definieren, definieren Sie die Verbindungszeichenfolgeinformationen, die zum Verbinden der Datenquelle verwendet werden. Weitere Informationen finden Sie unter [Erstellen einer Datenquelle &#40;SSAS – mehrdimensional&#41;](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
@@ -58,9 +58,9 @@ In der folgenden Aufgabe definieren Sie die AdventureWorksDWSQLServer2012-Beispi
 > [!NOTE]  
 > Wenn Sie die Eigenschaften einer Datenquelle nach dem Erstellen ändern möchten, doppelklicken Sie im Ordner **Datenquellen** auf die Datenquelle, um die Eigenschaften der Datenquelle im **Datenquellen-Designer**anzuzeigen.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Definieren einer Datenquellensicht](../analysis-services/lesson-1-3-defining-a-data-source-view.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Erstellen einer Datenquelle &#40;SSAS – mehrdimensional&#41;](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   

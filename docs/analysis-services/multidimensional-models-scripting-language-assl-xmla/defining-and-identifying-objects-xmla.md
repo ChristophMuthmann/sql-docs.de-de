@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bb3185b6c95807fa4adb383844a62dcb14342a7c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: eaea16c728177c1a2672bfd04075079598e920c9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="defining-and-identifying-objects-xmla"></a>Definieren und Identifizieren von Objekten (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Objekte werden in XML für Analysis (XMLA) Befehle mithilfe von Objektbezeichnern und Objektverweisen identifiziert und mithilfe von Analysis Services Scripting Language (ASSL) Elemente XMLA-Befehle definiert.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="object-definitions"></a>Objektdefinitionen  
  Die [erstellen](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md) und [Alter](../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md) Befehle in XMLA erstellen bzw. ändern, Objekte auf einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz. Die Definitionen für diese Objekte werden durch dargestellt ein [ObjectDefinition](../../analysis-services/xmla/xml-elements-properties/objectdefinition-element-xmla.md) Element, das Elemente aus ASSL enthält. Objektbezeichner können explizit für alle Haupt- und nebenobjekte angegeben werden, mithilfe der [ID](../../analysis-services/xmla/xml-elements-properties/id-element-xmla.md) Element. Wenn die **ID** Element nicht verwendet wird, die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz stellt einen eindeutigen Bezeichner, mit einer Benennungskonvention, die von dem zu identifizierenden Objekt abhängt. Weitere Informationen zur Verwendung der **erstellen** und **Alter** Befehle zum Definieren von Objekten finden Sie unter [erstellen und Ändern von Objekten &#40; XMLA &#41; ](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/creating-and-altering-objects-xmla.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Object-Element &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)   
  [ParentObject-Element &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-properties/parentobject-element-xmla.md)   
  [Source-Element &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)   

@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dff0e2f3dda0e4fc568f04787c4056ab27611a18
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e4e6be04453ddacfedfefbae3aaa070614349e7a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-pivot-server-administration-and-configuration-in-central-administration"></a>PowerPivot-Serververwaltung und -konfiguration in der Zentraladministration
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] serververwaltung und-Konfiguration von SharePoint Service-Anwendungsadministratoren mithilfe der SharePoint-Zentraladministration ausgeführt wird.  
@@ -54,7 +51,7 @@ ms.lasthandoff: 12/08/2017
   
  [Power Pivot-Konfigurationstools](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Link|Typ|Taskbeschreibung|  
 |----------|----------|----------------------|  
@@ -74,7 +71,7 @@ ms.lasthandoff: 12/08/2017
 |[Erstellen und Anpassen von PowerPivot-Katalogen](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)|Optional|Hinsichtlich der Installationen, die Sie manuell konfigurieren, wird über diese Prozedur erläutert, wie eine [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Katalogbibliothek erstellt wird, die Bildminiaturansichten der in ihr enthaltenen [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Arbeitsmappen anzeigt.|  
 |[Hinzufügen eines BI-Semantikmodell-Verbindungs-Inhaltstyps zu einer Bibliothek &#40;PowerPivot für SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md)|Optional|Hier wird erläutert, wie eine Dokumentbibliothek erweitert wird, um die Erstellung von Verbindungsdateien des BI-Semantikmodells zu unterstützen.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Installation von PowerPivot für SharePoint 2010](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
  [Konfigurationseinstellungsverweis &#40;Power Pivot für SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [Notfallwiederherstellung für PowerPivot für SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=389570)  

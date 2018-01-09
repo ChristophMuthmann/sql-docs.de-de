@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -19,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 6131dbf1be847ca738b896fee36f56cd438f4715
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 23af14ed67fb78fc24873528dddf4b67197f4be0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-tuple-functions"></a>Verwenden von Tupelfunktionen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/27/2017
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Funktionen &#40; MDX-Syntax &#41;](../mdx/functions-mdx-syntax.md)   
  [Verwenden von Elementfunktionen](../mdx/using-member-functions.md)   
  [Using Set Functions (Verwenden von Mengenfunktionen)](../mdx/using-set-functions.md)  

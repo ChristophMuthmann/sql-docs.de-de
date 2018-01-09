@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a83bab6263ca8812fb7909a92c48daab8ec96883
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2d6b8b562bb4dbcdb53326bf1a97163368b282fa
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>Systemanforderungen für SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -76,17 +76,17 @@ ms.lasthandoff: 11/17/2017
 |Datentyp|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components, MDAC und<br /><br /> SQL Server Native Client OLE DB-Anwendungen mit DataTypeCompatibility=80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR-UDT (\<= 8 Kb)|udt|Udt|Varbinary|  
-|varbinary(max)|varbinary|varbinary|Bild|  
-|varchar(max)|varchar|varchar|Text|  
-|nvarchar(max)|nvarchar|nvarchar|Ntext|  
+|varbinary(max)|varbinary|varbinary|image|  
+|varchar(max)|varchar|varchar|Textmodus|  
+|nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  
 |xml|xml|xml|Ntext|  
-|CLR UDT (> 8Kb)|udt|varbinary|Bild|  
-|Datum|Datum|varchar|Varchar|  
+|CLR UDT (> 8Kb)|udt|varbinary|image|  
+|date|date|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  
 |Uhrzeit|Uhrzeit|varchar|Varchar|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Programmierung für SQL Server Native Client](../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [Installieren von SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
   

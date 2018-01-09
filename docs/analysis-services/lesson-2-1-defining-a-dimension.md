@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 125908516823730701e0502398d4c8346d093edb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 25f648f53ca3af33b846711076eb91b3548174a6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-2-1---defining-a-dimension"></a>Lektion 2-1: Definieren einer Dimension
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]In der folgenden Aufgabe verwenden Sie den Dimensions-Assistenten, um einen Date-Dimension zu erstellen.  
@@ -78,10 +78,10 @@ ms.lasthandoff: 12/08/2017
   
 12. Klicken Sie im Menü **Datei** auf **Alle speichern**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Definieren eines Cubes](../analysis-services/lesson-2-2-defining-a-cube.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Dimensionen in mehrdimensionalen Modellen](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
 [Erstellen einer Dimension anhand einer vorhandenen Tabelle](../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)  
 [Erstellen einer Dimension mit dem Dimensions-Assistenten](../analysis-services/multidimensional-models/create-a-dimension-using-the-dimension-wizard.md)  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: smo
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords: Visual C# [SMO]
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3ddcad401b41aa44d72d5bac84766d05a86a0614
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ce395d68112824bf56bf7f778cd6f6a671e4ee1c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="smo-programming---getting-started-in-visual-c-net"></a>SMO-Programmierung – erste Schritte in Visual c# .NET
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[csprcs](../../includes/csprcs-md.md)] .NET ist eine der verwalteten Programmiersprachen, die von der common Language Runtime (CLR) unterstützt werden, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET. Weitere Informationen über die C#-Sprache, finden Sie unter der [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET-Dokumentation. Sie können [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] und [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] SMO-Anwendungen zu entwickeln.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
   
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], die SMO-Assemblys befinden sich im Ordner "C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\".  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen eines Visual C &#35; SMO-Projekts in Visual Studio .NET](../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)  
   
   

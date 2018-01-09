@@ -8,7 +8,7 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,11 +19,11 @@ helpviewer_keywords: PREDICT clause
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 8cc0e51a83b4c024a25caf2fe6501438a3ef8a18
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5f2ed3582341ff2824943a432e5877602b0b9ee7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="predict-transact-sql"></a>VORHERSAGEN Sie (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ Die `MODEL` Parameter wird verwendet, um das Modell für die Bewertung oder für
 
 Das Modellobjekt kann mithilfe von R oder Python oder ein anderes Tool erstellt werden.
 
-**Daten**
+**data**
 
 DATA-Parameter dient zum Angeben der Daten für die Bewertung oder die Vorhersage verwendet. Daten in Form einer Tabellenquelle in der Abfrage angegeben. Tabellenquelle kann es sich um eine Tabelle, Tabellenalias, CTE-Alias, Sicht oder Tabellenwertfunktion handeln.
 
@@ -91,7 +91,7 @@ Fehlermeldungen mit den Daten verknüpft, werden die zugrunde liegenden Vorhersa
 
 Es ist nicht möglich, die Struktur mit internen Modellen anzeigen `PREDICT`. Wenn Sie den Inhalt des Modells selbst verstehen möchten, müssen Sie das Modellobjekt laden, deserialisieren Sie ihn und entsprechenden R-Code verwenden, um das Modell zu analysieren.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Remarks
 
 Die `PREDICT` Funktion wird in allen Editionen von SQL Server, einschließlich Linux unterstützt.
 

@@ -7,18 +7,18 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: bea554929e222b98788524203ed060c9b5e0ce17
-ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
+ms.openlocfilehash: abc79124569635f3aafaaa309e25e2c827fa5d9b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-up-python-machine-learning-services-in-database"></a>Einrichten von Python Machine Learning-Services (Datenbankintern)
 

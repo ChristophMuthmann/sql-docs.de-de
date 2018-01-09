@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: f264ba96-cbbe-488b-8ac9-b3056a6e997b
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a7becc09d59d729b6f138ceef83e8a7725b3a3b1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4a87da849a5e142f0d521ddea870c2c04e041686
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---create-measure"></a>MDX-Datendefinition - MEASURE erstellen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,14 +47,14 @@ CREATE MEASURE Table_Name[Measure_Name] = DAX_Expression
  *DAX_Expression*  
  Ein gültiger DAX-Ausdruck, der einen einzelnen skalaren Wert zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Die *Measure_Name* muss in eckige Klammern eingeschlossen werden.  
   
  Die CREATE MEASURE-Anweisung kann nur innerhalb einer MDX-Skriptdefinition verwendet werden; finden Sie unter [MdxScript-Element &#40; ASSL &#41; ](../analysis-services/scripting/objects/mdxscript-element-assl.md).  
   
  Sie können auch ein berechnetes Element definieren, das in einer einzelnen Abfrage verwendet wird. Wenn Sie ein berechnetes Element definieren möchten, das auf eine einzelne Abfrage beschränkt ist, verwenden Sie die WITH-Klausel in der SELECT-Anweisung. Weitere Informationen finden Sie unter [Erstellen von Measures in MDX](../analysis-services/multidimensional-models/mdx/mdx-building-measures.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [MDX-Datendefinitionsanweisungen &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

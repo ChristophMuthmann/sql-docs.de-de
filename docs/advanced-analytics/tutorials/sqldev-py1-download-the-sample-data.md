@@ -7,7 +7,7 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: 
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: tutorial
 applies_to: SQL Server 2017
@@ -19,11 +19,11 @@ caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: b4b9aeed6b56e70c3af0c29f5bc0b6844f0a6f18
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 69bb2bbbc35bf13c4facc70508bb569714c66488
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="step-1-download-the-sample-data"></a>Schritt 1: Herunterladen der Beispieldaten
 
@@ -77,7 +77,7 @@ Wenn alle Dateien heruntergeladen wurden, wechselt PowerShell in das mithilfe de
 
 [In der Datenbank Python Analytics für den SQL-Entwickler](sqldev-in-database-python-for-sql-developers.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 
 [Machine Learning-Dienste mit Python](../python/sql-server-python-services.md)
 

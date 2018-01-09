@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-bulk-copy-operations
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1d7b6830b6d76d8a4ea40bebe486c14b316a5897
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f5a880a6a344e08e586316b985683dbf2edf87de
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-data-files-and-format-files"></a>Verwenden von Datendateien und Formatdateien
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/17/2017
   
  Die **Bcp_control** -Funktion steuert verschiedene Optionen beim Massenkopieren in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus einer Datendatei. **Bcp_control** Legt Optionen fest, wie z. B. die maximale Anzahl von Fehlern vor dem Beenden, wird die Zeile in der Datei auf dem das Massenkopieren, die Zeile auf Beenden und die Batchgröße zu beginnen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Ausführen von Massenkopiervorgängen &#40; ODBC &#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f9cdeebfead1e664db65d9a08112497199442ca1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 75e41e8d4784d04570eaebafc0efc607a45f40b4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discovertracecolumns-rowset"></a>DISCOVER_TRACE_COLUMNS-Rowset
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Gibt ein XML-Dokument, das beschreibt, die in einer Ablaufverfolgung verfügbaren Spalten zurück.  
@@ -36,7 +34,7 @@ ms.lasthandoff: 12/08/2017
   
 |Spaltenname|Typindikator|Einschränkung|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**Daten**|**DBTYPE_WSTR**|ja|Enthält eine codierte XML-Zeichenfolge, die Informationen zu den Ablaufverfolgungsspalten beschreibt, die vom Ablaufverfolgungsanbieter bereitgestellt wurden.|  
+|**Data**|**DBTYPE_WSTR**|ja|Enthält eine codierte XML-Zeichenfolge, die Informationen zu den Ablaufverfolgungsspalten beschreibt, die vom Ablaufverfolgungsanbieter bereitgestellt wurden.|  
   
  Dieses Schemarowset ist nicht sortiert.  
   
@@ -45,12 +43,12 @@ ms.lasthandoff: 12/08/2017
   
  Die folgende Tabelle enthält die GUID und die Zeichenfolgenwerte, die dieses Rowset identifizieren.  
   
-|Argument|Wert|  
+|Argument|value|  
 |--------------|-----------|  
 |GUID|a07ccd18-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|TraceColumns|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [XML for Analysis – Schemarowsets](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

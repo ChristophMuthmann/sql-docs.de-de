@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -25,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 7cf20654dc6afac951913443b4a50b39b90e8812
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e126f34be1f1cecd1a793b71ff4b64069c1802c3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---update-member"></a>MDX-Datendefinition - UPDATE-Element
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +62,7 @@ UPDATE MEMBER Cube_Name.Member_Name
  *Property_Value*  
  Ein gültiger Skalarausdruck, der den Eigenschaftswert des berechneten Elements bereitstellt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Mit der UPDATE MEMBER-Anweisung wird ein vorhandenes berechnetes Element aktualisiert und gleichzeitig die relative Rangfolge des Elements in Bezug auf andere Berechnungen beibehalten. Deshalb können Sie die Lösungsreihenfolge (SOLVEORDER) mithilfe der UPDATE MEMBER-Anweisung nicht ändern.  
   
  Eine UPDATE MEMBER-Anweisung kann nicht im MDX-Skript für einen Cube angegeben werden.  
@@ -83,7 +83,7 @@ UPDATE MEMBER Cube_Name.Member_Name
 |DISPLAY_FOLDER|Ein Zeichenfolgenwert, der den Pfad des Anzeigeordners angibt, in dem das Element von der Clientanwendung angezeigt wird. Das Trennzeichen für Ordnerebenen wird von der Clientanwendung definiert. Zu den Tools und Clients, die vom [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], den umgekehrten Schrägstrich (\\) als ebenentrennzeichen. Um mehrere Anzeigeordner für ein definiertes Element bereitzustellen, verwenden Sie ein Semikolon (;) als Trennzeichen für die Ordner.|  
 |ASSOCIATED_MEASURE_GROUP|Der Name der Measuregruppe, der dieses Element zugeordnet wird.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [DROP MEMBER-Anweisung &#40; MDX &#41;](../mdx/mdx-data-definition-drop-member.md)   
  [Erstellen Sie MEMBER-Anweisung &#40; MDX &#41;](../mdx/mdx-data-definition-create-member.md)   
  [MDX-Datendefinitionsanweisungen &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  

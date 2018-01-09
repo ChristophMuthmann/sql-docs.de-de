@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2255369fe9a3e8c74088a13efba5eaab19f7bb53
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a716193df7a74d9845cc8f70434bb525883f5936
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="logistic-regression-model-query-examples"></a>Logistische Regressionsmodell-Abfragebeispiele
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Wenn Sie eine Abfrage für ein Datamining-Modell erstellen, können Sie eine Inhaltsabfrage Details über die in der Analyse erkannten Muster liefert erstellen oder können Sie eine Vorhersageabfrage, die anhand der Muster im Modell für Vorhersagen mit neuen Daten erstellen.  
@@ -99,12 +97,12 @@ FROM [TM_Logistic Regression].CONTENT
   
 |t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
-|Age|Nicht vorhanden|0|0|0|1|  
+|Age|Missing|0|0|0|1|  
 |Age|45.43491192|17484|1|126.9544114|3|  
-|Bike Buyer|Nicht vorhanden|0|0|0|1|  
+|Bike Buyer|Missing|0|0|0|1|  
 |Bike Buyer|0|8869|0.507263784|0|4|  
 |Bike Buyer|1|8615|0.492736216|0|4|  
-|Commute Distance|Nicht vorhanden|0|0|0|1|  
+|Commute Distance|Missing|0|0|0|1|  
 |Commute Distance|5–10 Meilen|3033|0,173472889|0|4|  
   
  Die eigentliche Abfrage gibt weitaus mehr Zeilen zurück. Dieses Beispiel veranschaulicht jedoch die Art der Informationen, die über Eingaben zur Verfügung gestellt werden. Für diskrete Eingaben wird jeder mögliche Wert in der Tabelle aufgeführt. Für Eingaben mit kontinuierlichen Werten wie Age ist eine vollständige Auflistung unmöglich, daher wird die Eingabe als Mittelwert diskretisiert. Weitere Informationen dazu, wie Sie die Informationen im Knoten Randstatistik verwenden, finden Sie unter [Miningmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md).  
@@ -211,7 +209,7 @@ NATURAL PREDICTION JOIN
 > [!NOTE]  
 >  Für neuronale Netzwerk- und logistische Regressionsmodelle gibt die Funktion [PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md) einen einzelnen Wert zurück, der die Größe des Trainingssatzes für das gesamte Modell repräsentiert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Data Mining-Abfrage](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft Logistic Regression-Algorithmus](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [Technische Referenz zu Microsoft Logistic Regression-Algorithmus](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   

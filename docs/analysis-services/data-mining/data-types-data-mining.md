@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 275fddacc7d5d24be9581613863e81d2a061c92d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7e5d09435546cf0605bb7b70a685021612fd2f9b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-types-data-mining"></a>Datentypen (Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Beim Erstellen eines Miningmodells oder einer Miningstruktur in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], müssen Sie die Datentypen für jede Spalte in der Miningstruktur definieren. Anhand des Datentyps erkennt das Analysemodul, ob es sich bei den Daten in der Datenquelle um numerische Daten oder um Text handelt und wie die Daten verarbeitet werden sollen. Wenn die Datenquelle beispielsweise numerische Daten enthält, können Sie angeben, ob die Zahlen als ganze Zahlen oder durch Verwendung von Dezimalstellen verarbeitet werden sollen.  
@@ -58,7 +56,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="changing-a-data-type"></a>Ändern eines Datentyps  
  Wenn Sie den Datentyp einer Spalte ändern, müssen die Miningstruktur und alle auf dieser Struktur basierenden Miningmodelle neu verarbeitet werden. Beim Ändern des Datentyps kann es vorkommen, dass die jeweilige Spalte nicht mehr in einem bestimmten Modell verwendet werden kann. In diesem Fall gibt Analysis Services beim erneuten Verarbeiten entweder einen Fehler aus, oder das Modell wird unter Auslassung der Spalte verarbeitet.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Inhaltstypen &#40;Data Mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
  [Inhaltstypen &#40;DMX&#41;](../../dmx/content-types-dmx.md)   
  [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,11 +19,11 @@ helpviewer_keywords: ALTER EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 28a62f00b479506e919faf2cbdbf1202045192eb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e679664f02ffcb08d811a66229a21f1bdaf08077
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER externe Bibliothek (Transact-SQL)  
 

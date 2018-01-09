@@ -1,7 +1,7 @@
 ---
 title: DBCC SQLPERF (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 01/07/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -28,43 +28,44 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2588cd67ae6412837914a1eb41490797b944679d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1a4efef1269d85483b098e98a03b913306088f68
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Stellt Statistiken bezüglich der Nutzung von Speicherplatz für das Transaktionsprotokoll in allen Datenbanken bereit. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann auch zum Zurücksetzen von Wartezeiten-und latchstatistiken verwendet werden.
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [aktuelle Version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Vorschau in einigen Regionen](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Vorschau in einigen Regionen](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
-```sql
+```
 DBCC SQLPERF   
 (  
      [ LOGSPACE ]  
-     |  
-          [ "sys.dm_os_latch_stats" , CLEAR ]  
-     |  
-     [ "sys.dm_os_wait_stats" , CLEAR ]  
+     | [ "sys.dm_os_latch_stats" , CLEAR ]  
+     | [ "sys.dm_os_wait_stats" , CLEAR ]  
 )   
      [WITH NO_INFOMSGS ]  
 ```  
   
 ## <a name="arguments"></a>Argumente  
 LOGSPACE  
-Gibt die aktuelle Größe des Transaktionsprotokolls und den für jede Datenbank genutzten Protokollspeicher in Prozent an. Anhand dieser Informationen können Sie den in einem Transaktionsprotokoll genutzten Speicherplatz überwachen.  
+Gibt die aktuelle Größe des Transaktionsprotokolls und den für jede Datenbank genutzten Protokollspeicher in Prozent an. Verwenden Sie diese Informationen, die in einem Transaktionsprotokoll genutzten Speicherplatz überwachen.
+
+> [!IMPORTANT]
+> Weitere Informationen zu den Informationen zur Speicherplatzverwendung für das Transaktionsprotokoll ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], finden Sie in der ["Hinweise"](#Remarks) Abschnitt dieses Themas.
   
-**"** **sys.dm_os_latch_stats" ,** CLEAR  
+**"Sys. dm_os_latch_stats"**deaktivieren  
 Setzt die Statistik für Latches zurück. Weitere Informationen finden Sie unter [dm_os_latch_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md). Diese Option steht in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]nicht zur Verfügung.  
   
-**"sys.dm_os_wait_stats" ,** CLEAR  
+**"Sys. dm_os_wait_stats"**deaktivieren  
 Setzt die Wartestatistik zurück. Weitere Informationen finden Sie unter [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). Diese Option steht in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]nicht zur Verfügung.  
   
 WITH NO_INFOMSGS  
@@ -75,18 +76,20 @@ Unterdrückt alle Informationsmeldungen mit einem Schweregrad von 0 bis 10.
   
 |Spaltenname|Definition|  
 |---|---|
-|**Datenbankname**|Der Name der Datenbank, für die die Protokollstatistiken angezeigt werden.|  
+|**Database Name**|Der Name der Datenbank, für die die Protokollstatistiken angezeigt werden.|  
 |**Protokollgröße (MB)**|Dem Protokoll aktuell zugeordnete Größe. Es steht weniger Speicherplatz zur Verfügung, als dem Protokollspeicher ursprünglich zugeordnet wurde, da [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen kleinen Bereich an Datenträgerspeicher für interne Headerinformationen reserviert.|  
 |**Protokollspeicherplatz verwendet (%)**|Prozentsatz der Protokolldatei aktuell in Verwendung zum Speichern von Informationen zu Transaktionsprotokollen.|  
 |**Status**|Status der Protokolldatei. Immer 0.|  
   
-## <a name="remarks"></a>Hinweise  
-Im Transaktionsprotokoll wird jede in der Datenbank vorgenommene Transaktion aufgezeichnet. Weitere Informationen finden Sie unter [das Transaktionsprotokoll &#40; SQLServer &#41; ](../../relational-databases/logs/the-transaction-log-sql-server.md).
+## <a name="Remarks"></a> Hinweise  
+Beginnend mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], verwenden Sie die [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) DMV anstelle von `DBCC SQLPERF(LOGSPACE)`, um Informationen zur Speicherplatzverwendung für das Transaktionsprotokoll pro Datenbank zurückzugeben.    
+ 
+Im Transaktionsprotokoll wird jede in der Datenbank vorgenommene Transaktion aufgezeichnet. Weitere Informationen finden Sie unter [das Transaktionsprotokoll &#40; SQLServer &#41; ](../../relational-databases/logs/the-transaction-log-sql-server.md) und [Transaktionsprotokollarchitektur für SQL Server- und-managementhandbuch](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
   
 ## <a name="permissions"></a>Berechtigungen  
-Auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Ausführen von DBCC SQLPERF(LOGSPACE) erfordert VIEW SERVER STATE-Berechtigung auf dem Server. Zum Zurücksetzen der Warte- und Latchstatistiken ist die ALTER SERVER STATE-Berechtigung auf dem Server erforderlich.
+Auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auszuführende `DBCC SQLPERF(LOGSPACE)` erfordert `VIEW SERVER STATE` Berechtigung auf dem Server. Zurücksetzen der Warte-und latchstatistiken erfordert `ALTER SERVER STATE` Berechtigung auf dem Server.
   
-Auf [!INCLUDE[ssSDS](../../includes/sssds-md.md)] benötigen Premium-Ebenen die VIEW DATABASE STATE-Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard und grundlegenden Organisationsebenen erfordert die [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Administratorkonto ein. Das Zurücksetzen der Warte- und Latchstatistiken wird nicht unterstützt.
+Auf [!INCLUDE[ssSDS](../../includes/sssds-md.md)] benötigen Premium-Ebenen der `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard und grundlegenden Organisationsebenen erfordert die [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Administratorkonto ein. Das Zurücksetzen der Warte- und Latchstatistiken wird nicht unterstützt.
   
 ## <a name="examples"></a>Beispiele  
   
@@ -100,7 +103,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 Database Name Log Size (MB) Log Space Used (%) Status        
 ------------- ------------- ------------------ -----------   
 master         3.99219      14.3469            0   
@@ -117,9 +120,12 @@ Das folgende Beispiel setzt die wartestatistik für die Instanz von [!INCLUDE[ss
 DBCC SQLPERF("sys.dm_os_wait_stats",CLEAR);  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[Sp_spaceused &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)
-  
-  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
+[Sys. dm_os_latch_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)    
+[Sys. dm_os_wait_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
+[sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)    
+[Sys.dm_db_log_info &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
+[sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)     
+[Sys.dm_db_log_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)     
 

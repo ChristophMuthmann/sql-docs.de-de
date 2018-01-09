@@ -1,34 +1,39 @@
 ---
 title: "Aktivieren oder Deaktivieren der Verwaltung von R-Paket für SQL Server | Microsoft Docs"
 ms.custom: 
-ms.date: 10/05/2017
+ms.date: 01/04/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6e384893-04da-43f9-b100-bfe99888f085
 caps.latest.revision: "7"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 59ab247ebdb53dbd530b3becf6e90ef45bc3a503
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 3c3dab54416d680e0d021a2edf9fbe33d5a0d81f
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="enable-or-disable-r-package-management-for-sql-server"></a>Aktivieren Sie oder deaktivieren Sie der Verwaltung von R-Paket für SQL Server
 
-Dieser Artikel beschreibt den Prozess der aktivieren oder deaktivieren das neue Paket-Management-Feature in SQL Server-2017. Diese Funktion kann der Datenbankadministrator Paketinstallation auf der Instanz zu steuern. Die Funktion basiert auf neuen Datenbankrollen, erteilen Sie Benutzern die Möglichkeit zum Installieren der R-Pakete, die sie benötigen, oder Pakete für andere Benutzer freigeben.
+Dieser Artikel beschreibt ein neues Paket-Management-Feature in SQL Server 2017 so konzipiert, dass den Datenbankadministrator Paketinstallation mit T-SQL anstelle von r für die Instanz zu steuern.
 
-Standardmäßig wird die Verwaltungsfunktion externe Paket für SQL Server deaktiviert, auch wenn Machine Learning-Funktionen installiert wurden.
+Ater, die das Paket Management Frature aktiviert ist, können Sie auch R-Befehle verwenden, um Pakete auf einem Databae aus entfernt wird einem Remoteclient installieren.
 
-Um [aktivieren](#bkmk_enable) diese Funktion ist ein zweistufiger Prozess und erfordert einige Hilfe von einem Datenbankadministrator:
+> [!NOTE]
+> Standardmäßig wird die Verwaltungsfunktion externe Paket für SQL Server deaktiviert, auch wenn Machine Learning-Funktionen installiert wurden. 
+
+## <a name="enable-package-management"></a>Aktivieren Sie die paketverwaltung
+
+Um [aktivieren](#bkmk_enable) diese Funktion ist ein zweistufiger Prozess, einen Datenbankadministrator muss dann:
 
 1.  Aktivieren der Paketverwaltung in der SQL Server-Instanz (je einmal pro SQL Server-Instanz)
 
@@ -42,27 +47,29 @@ Um [deaktivieren](#bkmk_disable) die Paket-Verwaltungsfunktion Umkehren des Proz
 
 ## <a name="bkmk_enable"></a>Aktivieren Sie die paketverwaltung
 
-So aktivieren oder Deaktivieren der paketverwaltung erfordert das Befehlszeile-Hilfsprogramm **RegisterRExt.exe**, ist die im Lieferumfang der **"revoscaler"** Paket.
+Zum Aktivieren oder Deaktivieren der paketverwaltung, verwenden Sie das Befehlszeile-Hilfsprogramm **RegisterRExt.exe**, ist die im Lieferumfang der **"revoscaler"** Paket.
 
 1. Öffnen Sie ein Eingabeaufforderungsfenster mit erhöhten Rechten, und navigieren Sie zu dem Ordner mit dem Hilfsprogramm RegisterRExt.exe. Der Standardspeicherort ist `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`.
 
-2. Führen Sie den folgenden Befehl, geeignete Argumente für Ihre Umgebung bereitstellen:
+2. Führen Sie den folgenden Befehl, der entsprechenden Argumente für Ihre Umgebung bereitstellen:
 
     `RegisterRExt.exe /installpkgmgmt [/instance:name] [/user:username] [/password:*|password]`
 
     Dieser Befehl erstellt die Objekte auf Instanzebene auf dem SQL Server-Computer, die für die paketverwaltung erforderlich sind. Er startet auch des LaunchPads für die Instanz neu.
 
-    Wenn Sie keine Instanz angeben, wird die Standardinstanz verwendet.
+    Wenn Sie keine Instanz angeben, wird die Standardinstanz verwendet. Wenn Sie keinen Benutzer angeben, wird der aktuelle Sicherheitskontext verwendet. So ermöglicht z. B. der folgende Befehl paketverwaltung für die Instanz im Pfad RegisterRExt.exe, mit den Anmeldeinformationen des Benutzers, der die Eingabeaufforderung geöffnet:
 
-    Wenn Sie keinen Benutzer angeben, wird der aktuelle Sicherheitskontext verwendet.
+    `REgisterRExt.exe /installpkgmgmt`
 
-2.  Um paketverwaltung auf Datenbankebene hinzuzufügen, führen Sie den folgenden Befehl von einer Eingabeaufforderung mit erhöhten Rechten aus:
+2.  Um eine bestimmte Datenbank paketverwaltung hinzugefügt haben, führen Sie den folgenden Befehl von einer Eingabeaufforderung mit erhöhten Rechten aus:
 
     `RegisterRExt.exe /installpkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]`
    
     Dieser Befehl erstellt eine Datenbank-Elementen, z. B. die folgenden Datenbankrollen, die zum Steuern von Benutzerberechtigungen verwendet werden: `rpkgs-users`, `rpkgs-private`, und `rpkgs-shared`.
 
-    Wenn Sie keinen Benutzer angeben, wird der aktuelle Sicherheitskontext verwendet.
+    Aktivieren Sie der folgende Befehl beispielsweise paketverwaltung in der Datenbank, auf die Instanz, die dem RegisterRExt ausgeführt wird. Wenn Sie keinen Benutzer angeben, wird der aktuelle Sicherheitskontext verwendet. 
+
+    `RegisterRExt.exe /installpkgmgmt /database:TestDB`
 
 3. Wiederholen Sie den Befehl für jede Datenbank, in dem Pakete installiert werden muss.
 
@@ -83,21 +90,23 @@ So aktivieren oder Deaktivieren der paketverwaltung erfordert das Befehlszeile-H
         ON o.schema_id = s.schema_id;
     ```
 
-4.  Nachdem die Funktion aktiviert wurde, kann jeder Benutzer mit den entsprechenden Berechtigungen verwenden die [externe Bibliothek erstellen](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) -Anweisung in T-SQL-Pakete hinzufügen. Ein Beispiel dafür, wie dies funktioniert, finden Sie unter [Installieren zusätzlicher Pakete unter SQL Server](install-additional-r-packages-on-sql-server.md).
+4.  Nach der Aktivierung der Funktion können Sie eine Verbindung mit dem Server herstellen und installieren oder synchronisieren Sie Pakete Remote mit der R-Befehle. Ein Beispiel dafür, wie dies funktioniert, finden Sie unter [Installieren zusätzlicher Pakete unter SQL Server](install-additional-r-packages-on-sql-server.md).
 
 ## <a name="bkmk_disable"></a>Deaktivieren der paketverwaltung
 
-1.  Führen Sie an einer Eingabeaufforderung mit erhöhten Rechten den folgenden Befehl aus, um die Paketverwaltung auf Datenbankebene zu deaktivieren:
+1.  Eine Eingabeaufforderung mit erhöhten Rechten führen Sie das Dienstprogramm RegisterRExt erneut aus, und deaktivieren Sie paketverwaltung auf Datenbankebene:
 
     `RegisterRExt.exe /uninstallpkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]`
 
-    Führen Sie diesen Befehl einmal für jede Datenbank, in dem paketverwaltung verwendet wurde. Mit diesem Befehl werden die Datenbankobjekte, die im Zusammenhang mit paketverwaltung aus der angegebenen Datenbank entfernt. Es entfernt auch alle Pakete, die von der gesicherten Speicherort im Dateisystem auf dem SQL Server-Computer installiert wurden.
+    Dieser Befehl entfernt die Datenbankobjekte, die im Zusammenhang mit paketverwaltung aus der angegebenen Datenbank. Es entfernt auch alle Pakete, die von der gesicherten Speicherort im Dateisystem auf dem SQL Server-Computer installiert wurden.
 
-2.  (Optional) Nachdem alle Datenbanken von Paketen, die mit dem vorherigen Schritt gelöscht haben, führen Sie den folgenden Befehl von einer Eingabeaufforderung mit erhöhten Rechten aus:
+2. Führen Sie diesen Befehl einmal für jede Datenbank, in dem paketverwaltung verwendet wurde. 
+
+3.  (Optional) Nachdem alle Datenbanken von Paketen, die mit dem vorherigen Schritt gelöscht haben, führen Sie den folgenden Befehl von einer Eingabeaufforderung mit erhöhten Rechten aus:
 
     `RegisterRExt.exe /uninstallpkgmgmt [/instance:name] [/user:username] [/password:*|password]`
 
-    Dieser Befehl entfernt die Paket-Verwaltungsfunktion aus der Instanz an.
+    Dieser Befehl entfernt die Paket-Verwaltungsfunktion aus der Instanz an. Sie müssen möglicherweise einmal, um Änderungen finden Sie unter den Launchpad-Dienst manuell neu zu starten.
 
 ## <a name="see-also"></a>Siehe auch
 

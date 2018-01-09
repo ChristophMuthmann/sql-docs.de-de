@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 714b768f473fd1c03684ea9dc903f3f5f493cca7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 67171b2144cbfcd6680b2c2f90f4f83e0f40ab8e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="holdoutmaxcases-element"></a>HoldoutMaxCases-Element
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Gibt die maximale Anzahl von Fällen an, in der Datenquelle für die zurückhaltungspartition verwendet werden, die den Testsatz enthält eine [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) Element. Die übrigen Fälle im Datensatz werden zum Training verwendet. Ein Wert von 0 gibt an, dass die Anzahl der Fälle, die als Testsatz zurückgehalten werden können, unbegrenzt ist.  
@@ -45,20 +43,20 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|Description|  
 |--------------------|-----------------|  
 |Datentyp und -länge|Ganze Zahl, die größer als 0 ist.|  
 |Standardwert|0|  
-|Kardinalität|0-1: Optionales Element, das nur einmal auftreten kann.|  
+|Cardinality|0-1: Optionales Element, das nur einmal auftreten kann.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Element|  
 |------------------|-------------|  
 |Übergeordnetes Element|[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)|  
-|Untergeordnete Elemente|Keine|  
+|Untergeordnete Elemente|InclusionThresholdSetting|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn Sie sowohl für **HoldoutMaxPercent** als auch für **HoldoutMaxCases**Werte angeben, beschränkt der Algorithmus den Testsatz auf den kleineren der beiden Werte.  
   
  Ist für **HoldoutMaxCases** der Standardwert von 0 festgelegt, und wurde für **HoldoutMaxPercent**kein Wert definiert, verwendet der Algorithmus den gesamten Datensatz für das Training.  
@@ -70,7 +68,7 @@ ms.lasthandoff: 12/08/2017
   
  Das Element, das das übergeordnete Element des entspricht **HoldoutMaxCases** im Objekt Analysis Management Objects (AMO) Modell ist <xref:Microsoft.AnalysisServices.MiningStructure>.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datenbankeigenschaften &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)   
  [HoldoutMaxPercent-Element](../../../analysis-services/scripting/properties/holdoutmaxpercent-element.md)   
  [HoldoutSeed-Element](../../../analysis-services/scripting/properties/holdoutseed-element.md)   

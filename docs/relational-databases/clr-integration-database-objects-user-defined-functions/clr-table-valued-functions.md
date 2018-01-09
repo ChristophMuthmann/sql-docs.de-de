@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 41d9217d8bbee3f961ccc019f2b8b8dd65eb6fcc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 220c83c7378e634745a7edc71f521d30c3f812b6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-table-valued-functions"></a>CLR-Tabellenwertfunktionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Eine Tabellenwertfunktion ist eine benutzerdefinierte Funktion, die eine Tabelle zurückgibt.  
@@ -62,7 +62,7 @@ Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)
 ```  
   
 ### <a name="defining-a-table-valued-function-in-transact-sql"></a>Definieren einer Tabellenwertfunktion in Transact-SQL  
- Die Syntax zum Definieren einer CLR-Tabellenwertfunktion ähnelt dem von einem [!INCLUDE[tsql](../../includes/tsql-md.md)] Tabellenwert-Funktion, durch das Hinzufügen von der **EXTERNAL NAME** Klausel. Zum Beispiel:  
+ Die Syntax zum Definieren einer CLR-Tabellenwertfunktion ähnelt dem von einem [!INCLUDE[tsql](../../includes/tsql-md.md)] Tabellenwert-Funktion, durch das Hinzufügen von der **EXTERNAL NAME** Klausel. Beispiel:  
   
 ```  
 CREATE FUNCTION GetEmpFirstLastNames()  

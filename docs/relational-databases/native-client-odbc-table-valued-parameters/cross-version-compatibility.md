@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-table-valued-parameters
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: table-valued parameters (ODBC), cross-version compatibility
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4dda2d778124f86681f06921e404472d266b5e41
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 38f2a11a0926b53dad729137d602281cc17bf64a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cross-version-compatibility"></a>Versionsübergreifende Kompatibilität
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
   
  Wenn eine Clientanwendung, die mit kompiliert wurde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 oder höher versucht, Tabellenwertparameter beim Verbinden mit einer Serverinstanz verwenden vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client erkennt dies und SQLBindCol, SQLBindParameter SQLSetDescFields und SQLSetDescRec-Aufrufe schlagen mit SQLSTATE 07006 und der Meldung fehl, "Eingeschränkte Datentyp Attribut Verstoß (die Version von SQLServer für diese Verbindung unterstützt keine Tabellenwertparameter)".  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Table-Valued Parameters &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

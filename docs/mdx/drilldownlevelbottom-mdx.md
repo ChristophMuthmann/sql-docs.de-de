@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: DRILLDOWNLEVELBOTTOM
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: e6d4637bf9cfcdc2040affc8952ebfd8a711951d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 0811bbd1e0f3cf81ebe87ff200906e2489036092
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="drilldownlevelbottom-mdx"></a>DrilldownLevelBottom (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +53,7 @@ DrilldownLevelBottom(Set_Expression, Count [,[<Level_Expression>] [,[<Numeric_Ex
  *Include_Calc_Members*  
  Optional. Ein Schlüsselwort, das Drilldownergebnissen berechnete Elemente hinzufügt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn ein numerischer Wert angegeben wird, sortiert die **DrilldownLevelBottom** -Funktion die untergeordneten Elemente jedes Elements in der angegebenen Menge aufsteigend nach dem angegebenen Wert, ausgewertet über der Menge der untergeordneten Elemente. Wenn kein numerischer Ausdruck angegeben wird, sortiert die Funktion die untergeordneten Elemente jedes Elements in der angegebenen Menge in aufsteigender Reihenfolge nach den durch die Menge der untergeordneten Elemente dargestellten Zellenwerten, wie durch den Abfragekontext bestimmt. Dieses Verhalten ähnelt dem der BottomCount-Funktion und Tail (MDX)-Funktion, die eine Menge von Elementen in natürlicher Reihenfolge ohne Sortierung zurückgeben.  
   
  Nach dem Sortieren gibt die **DrilldownLevelBottom** -Funktion eine Menge zurück, die die übergeordneten Elemente und die in *Count*angegebene Anzahl der untergeordneten Elemente mit dem niedrigsten Wert enthält.  
@@ -91,7 +91,7 @@ DRILLDOWNLEVELBOTTOM(
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [DrilldownLevel &#40; MDX &#41;](../mdx/drilldownlevel-mdx.md)   
  [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   

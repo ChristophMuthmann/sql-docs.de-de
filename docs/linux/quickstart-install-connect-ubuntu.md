@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Active
-ms.openlocfilehash: 17d6ebb3df10a5bc8b5801c11cc8ac12cde372a2
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: f490b54cd26fd5d62699d8b5807d116f72ca771b
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="install-sql-server-and-create-a-database-on-ubuntu"></a>Installieren von SQL Server, und erstellen Sie eine Datenbank für Ubuntu
 
@@ -51,13 +51,13 @@ Um SQL Server auf Ubuntu konfigurieren möchten, führen Sie die folgenden Befeh
 1. Importieren Sie die öffentlichen Repositorys GPG Schlüssel:
 
    ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
 1. Das Microsoft SQL Server-Ubuntu-Repository zu registrieren:
 
    ```bash
-   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
+   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
    ```
 
    > [!NOTE]
@@ -99,13 +99,13 @@ Um eine Datenbank erstellen zu können, müssen Sie die Verbindung mit einem Too
 1. Importieren Sie die öffentlichen Repositorys GPG Schlüssel:
 
    ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
 1. Registrieren Sie das Repository Microsoft Ubuntu:
 
    ```bash
-   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
+   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
    ```
 
 1. Aktualisieren Sie die Liste der Datenquellen, und führen Sie den Installationsbefehl mit dem UnixODBC Developer-Paket:

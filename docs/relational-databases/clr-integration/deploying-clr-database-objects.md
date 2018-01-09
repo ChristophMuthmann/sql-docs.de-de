@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 73dd29d7c658a9537c6860aecfb69c5fcd538460
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c5fd0a8abac60e2e5b0e2f1bce35bd1d6e3554e1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="deploying-clr-database-objects"></a>Bereitstellen von CLR-Datenbankobjekten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Der Bereitstellung wird die Verteilung einer fertigen Anwendung oder das Modul installiert und auf einem anderen Computer ausgeführt werden. Bei Verwendung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio können Sie CLR-Datenbankobjekte (Common Language Runtime) entwickeln und auf einem Testserver bereitstellen. Stattdessen können verwaltete Datenbankobjekte auch mit den Redistributionsdateien von [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework statt mit Visual Studio kompiliert werden. Die kompilierten Assemblys, die die CLR-Datenbankobjekte enthalten, können dann mit Visual Studio- oder [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen auf einem Testserver bereitgestellt werden. Beachten Sie, dass Visual Studio .NET 2003 nicht für CLR-Integrationsprogrammierung oder Bereitstellung verwendet werden kann. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beinhaltet ein vorinstalliertes .NET Framework, und Visual Studio .NET 2003 kann nicht die .NET Framework 2.0-Assemblys verwenden.  
@@ -111,7 +111,7 @@ ms.lasthandoff: 11/17/2017
   
  Wenn Sie das Projekt bereitstellen, führt Visual Studio nach der Bereitstellung des Projekts dieses Skript aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Programmierkonzepte für die Integration der Common Language Runtime &#40;CLR&#41;](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

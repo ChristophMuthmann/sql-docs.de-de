@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -27,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b713da243d7c97902ed0810509a18f97dbc0c3aa
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 8780f95cab9d124b78d486e86b78897a2f2d6d39
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX - Datendefinition: ALTER CUBE
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -131,7 +131,7 @@ CELL CALCULATION Calculation_Name
  *Member_Name*  
  Ein gültiger Zeichenfolgenausdruck, der einen Elementnamen oder Elementschlüssel bereitstellt.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
  Wenn die WITH DESCENDANTS-Klausel nicht verwendet wird, werden aus den untergeordneten Elementen eines gelöschten Elements untergeordnete Elemente des diesem übergeordneten Elements. Wenn die WITH DESCENDANTS-Klausel verwendet wird, werden alle nachfolgenden Werte einschließlich ihrer Zeilen in der Dimensionstabelle ebenfalls gelöscht.  
   
 > [!NOTE]  
@@ -147,7 +147,7 @@ CELL CALCULATION Calculation_Name
  *MDX_Expression*  
  Ein gültiger MDX-Ausdruck, der ein einzelnes Element zurückgibt.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Remarks  
  Der angegebene MDX-Ausdruck kann statisch oder dynamisch sein.  
   
 ## <a name="moving-a-dimension-member"></a>Verschieben eines Dimensionselements  
@@ -181,7 +181,7 @@ CELL CALCULATION Calculation_Name
 ## <a name="creating-a-cell-calculation"></a>Erstellen einer Zellenberechnung  
  Weitere Informationen zum Erstellen einer Zellenberechnung mithilfe der ALTER CUBE-Anweisung finden Sie unter [DROP CELL CALCULATION-Anweisung &#40; MDX &#41; ](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [MDX-Datendefinitionsanweisungen &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

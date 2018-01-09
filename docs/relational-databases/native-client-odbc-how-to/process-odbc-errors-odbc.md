@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-how-to
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: errors [ODBC]
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 032c112a083f6746e4a447bc273ebc6f8d5a3d93
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e9573d2b899c240a9077f7a27324a5fc5480058e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="process-odbc-errors-odbc"></a>Verarbeiten von ODBC-Fehlern (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Beschreibung  
+### <a name="description"></a>Description  
  Dieses Beispiel zeigt einen einfachen Fehlerhandler, der [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) für die Standard-ODBC-Informationen aufruft. Anschließend wird geprüft, ob eine gültige Verbindung vorhanden ist. Ist dies der Fall, wird **SQLGetDiagField** für die ODBC-treiberspezifischen Diagnosefelder von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgerufen. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
   
  Dieses Beispiel wurde für ODBC, Version 3.0 oder höher, entwickelt.  

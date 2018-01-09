@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.GENERAL
@@ -22,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d36e47029fb6fac4a7ba0bbfc846d1c7efac8aa9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1715c22cf3976a3ad888081436bb322b38451308
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>Konfigurieren von Analysis Services-Projekteigenschaften (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], wird ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt wird mit bestimmten Standardeigenschaften, die Einfluss auf die Erstellung und Bereitstellung von definiert die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekt.  
@@ -44,7 +41,7 @@ ms.lasthandoff: 12/08/2017
 |Build/Kennwörter entfernen|Wahr|Gibt an, ob bekannte Kennwörter aus Verbindungszeichenfolgen entfernt werden, die während des Erstellungsprozesses in das Ausgabeverzeichnis geschrieben werden. Kennwörter werden entfernt, um eine erhöhe Sicherheit zu bieten. Werden Kennwörter entfernt, müssen sie beim Verarbeiten des bereitgestellten Projekts angegeben werden, damit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] auf die Quelldaten zugreifen kann.|  
 |Debuggen/Startobjekt|\<Derzeit aktives Objekt >|Bestimmt das Objekt, das gestartet wird, wenn Sie das Debuggen starten.|  
 |Bereitstellung/Bereitstellungsmodus|Nur geänderte Objekte bereitstellen|Standardmäßig werden nur die an den Projektobjekten vorgenommenen Änderungen bereitgestellt (vorausgesetzt, dass keine weiteren Änderungen an den Objekten außerhalb des Projekts direkt vorgenommen wurden). Sie haben auch die Möglichkeit, bei jeder Bereitstellung alle Projektobjekte zu berücksichtigen. Verwenden Sie die Einstellung Nur geänderte Objekte bereitstellen, um die bestmögliche Leistung zu erzielen.|  
-|Bereitstellung/Verarbeitungsoption|Standardwert|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bestimmt standardmäßig den Verarbeitungstyp, der beim Bereitstellen der an Objekten vorgenommenen Änderungen erforderlich ist. Diese Einstellung ermöglicht im Allgemeinen die schnellste Bereitstellungszeit. Sie haben aber auch die Möglichkeit, für die jeweilige Bereitstellung die vollständige Verarbeitung oder keine Verarbeitung zu wählen.|  
+|Bereitstellung/Verarbeitungsoption|Default|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bestimmt standardmäßig den Verarbeitungstyp, der beim Bereitstellen der an Objekten vorgenommenen Änderungen erforderlich ist. Diese Einstellung ermöglicht im Allgemeinen die schnellste Bereitstellungszeit. Sie haben aber auch die Möglichkeit, für die jeweilige Bereitstellung die vollständige Verarbeitung oder keine Verarbeitung zu wählen.|  
 |Bereitstellung/Transaktionsbereitstellung|False|Standardmäßig ist die Bereitstellung geänderter oder aller Objekte keine Transaktionsbereitstellung bei der Verarbeitung dieser bereitgestellten Objekte. Die Bereitstellung kann erfolgreich ausgeführt werden und persistent sein, auch wenn bei der Verarbeitung ein Fehler auftritt. Sie können diese Standardeinstellung ändern, um die Bereitstellung und Verarbeitung in einer einzelnen Transaktion zu integrieren.|  
 |Bereitstellung/Zielserver|localhost|Standardmäßig werden Datenbankobjekte des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts auf der Standardinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] auf dem lokalen Computer bereitgestellt, auf dem [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] verwendet wird. Ändern Sie diese Standardeinstellung, um eine benannte Instanz auf dem lokalen Computer bzw. eine beliebige Instanz auf einem beliebigen Remotecomputer anzugeben, auf dem Sie über die Berechtigung zum Erstellen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekten verfügen.|  
 |Bereitstellung/Datenbank|\<Projektname >|Der Name der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank, in der die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projektobjekte nach der Bereitstellung instanziiert werden, ist standardmäßig der Name des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts zum Zeitpunkt seiner Definition. Ändern Sie diese Eigenschaft, um den Namen der Datenbank auf der über die Server-Eigenschaft angegebene [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz zu ändern.|  
@@ -56,7 +53,7 @@ ms.lasthandoff: 12/08/2017
   
  Diese häufig verwendete Konfiguration wird von allen Entwicklern verwendet, bis zusätzliche Konfigurationen erstellt werden. Jedoch kann es während der verschiedenen Phasen der Projektentwicklung, z. B. während der Erstentwicklung und beim ersten Testen eines Projekts, vorkommen, dass unterschiedliche Entwickler unterschiedliche Datenquellen verwenden und das Projekt auf unterschiedlichen Servern für unterschiedliche Zwecke bereitstellen. Konfigurationen ermöglichen es Ihnen, diese unterschiedlichen Einstellungen in unterschiedlichen Konfigurationsdateien beizubehalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen von Analysis Services-Projekten &#40;SSDT&#41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
  [Bereitstellen von Analysis Services-Projekten &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   

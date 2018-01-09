@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|features
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ed0b7934dd13f04e33707470a325c4c62e07e776
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 67470cd8d308118b62ee68947868dc857ff33281
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-large-value-types"></a>Verwenden von Datentypen mit umfangreichen Werten
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
 >  Wenn das Replizieren von Daten müssen Sie möglicherweise so konfigurieren Sie die [max Text Repl Size Server Configuration-Option](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) auf-1 festgelegt.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB-Anbieter  
- Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter macht die **varchar(max)**, **varbinary(max)**, und **nvarchar(max)** Typen als DBTYPE_STR, DBTYPE_BYTES, und DBTYPE_WSTR bzw..  
+ Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter macht die **varchar(max)**, **varbinary(max)**, und **nvarchar(max)** Typen als DBTYPE_STR, DBTYPE_BYTES, und DBTYPE_WSTR bzw.  
   
  Die Datentypen **varchar(max)**, **varbinary(max)**, und **nvarchar(max)** in Spalten mit den **max** Größe auf unlimited festgelegt werden. dargestellt als ISLONG Core-OLE DB-Schemarowsets und Schnittstellen, die Spaltendatentypen.  
   

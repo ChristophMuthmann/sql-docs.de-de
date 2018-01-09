@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: MDSCHEMA_CUBES
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b436b82e46b95d545788f4885a52b20ed81cbffd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4b23f8bda8cc2aa410ddc04225420ff6372be3e4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemacubes-rowset"></a>MDSCHEMA_CUBES-Rowset
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Beschreibt die Struktur der Cubes innerhalb einer Datenbank.  
@@ -38,15 +36,15 @@ ms.lasthandoff: 12/08/2017
 |Spaltenname|Typindikator|Description|  
 |-----------------|--------------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**|Der Name der Datenbank.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Nicht unterstützt.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Wird nicht unterstützt.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|Der Name des Cubes oder der Dimension. Dimensionsnamen ist ein Dollarzeichensymbol ($) vorangestellt.<br /><br /> Hinweis: Nur Server- und Datenbankadministratoren haben Berechtigungen zum Anzeigen von Cubes, die aus einer Dimension erstellt wurden.|  
 |**CUBE_TYPE**|**DBTYPE_WSTR**|Der Typ des Cubes. Gültige Werte sind:<br /><br /> **CUBE**<br /><br /> **DIMENSION**|  
-|**CUBE_GUID**|**DBTYPE_GUID**|Nicht unterstützt.|  
-|**CREATED_ON**|**DBTYPE_DBTIMESTAMP**|Nicht unterstützt.|  
+|**CUBE_GUID**|**DBTYPE_GUID**|Wird nicht unterstützt.|  
+|**CREATED_ON**|**DBTYPE_DBTIMESTAMP**|Wird nicht unterstützt.|  
 |**LAST_SCHEMA_UPDATE**|**DBTYPE_DBTIMESTAMP**|Der Zeitpunkt der letzten Verarbeitung des Cubes.|  
-|**SCHEMA_UPDATED_BY**|**DBTYPE_WSTR**|Nicht unterstützt.|  
+|**SCHEMA_UPDATED_BY**|**DBTYPE_WSTR**|Wird nicht unterstützt.|  
 |**LAST_DATA_UPDATE**|**DBTYPE_DBTIMESTAMP**|Der Zeitpunkt der letzten Verarbeitung des Cubes.|  
-|**DATA_UPDATED_BY**|**DBTYPE_WSTR**|Nicht unterstützt.|  
+|**DATA_UPDATED_BY**|**DBTYPE_WSTR**|Wird nicht unterstützt.|  
 |**DESCRIPTION**|**DBTYPE_WSTR**|Eine benutzerfreundliche Beschreibung des Cubes.|  
 |**IS_DRILLTHROUGH_ENABLED**|**DBTYPE_BOOL**|Ein boolescher Wert, der immer True zurückgibt.|  
 |**IS_LINKABLE**|**DBTYPE_BOOL**|Ein boolescher Wert, der angibt, ob ein Cube in einem verknüpften Cube verwendet werden kann.|  
@@ -69,7 +67,7 @@ ms.lasthandoff: 12/08/2017
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Optional) Standardeinschränkung besitzt den Wert 1. Eine Bitmap mit einem der folgenden gültigen Werte:<br /><br /> 1 CUBE<br /><br /> 2 DIMENSION|  
 |**Basis Cube_Name**|**DBTYPE_WSTR**|Optional.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OLE DB für OLAP-Schemarowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

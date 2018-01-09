@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cc306874fed195a649dd0cc18d43db4a426cefa4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a5139e2e9e9d5bb06d594f9463f6632b6ee9fb78
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="linked-measure-groups"></a>Verknüpfte Measuregruppen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Eine verknüpfte Measuregruppe basiert auf einer anderen Measuregruppe in einem anderen Cube innerhalb derselben Datenbank oder einer anderen Analysis Services-Datenbank. Eine verknüpfte Measuregruppe kann z. B. verwendet werden, wenn Sie einen Satz von Measures und die entsprechenden Datenwerte in mehreren Cubes wiederverwenden möchten.  
@@ -79,7 +76,7 @@ ms.lasthandoff: 12/08/2017
   
  Um eine verknüpfte Measuregruppe zu definieren oder zu verwenden, muss das Windows-Dienstkonto für die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz Mitglied einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbankrolle sein, die Zugriffsrechte **ReadDefinition** und **Read** für die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Quellinstanz auf den Quellcube und die Measuregruppe verfügt, oder es muss Mitglied der Rolle der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Administratoren für die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Quellinstanz sein.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Definieren von verknüpften Dimensionen](../../analysis-services/multidimensional-models/define-linked-dimensions.md)  
   
   

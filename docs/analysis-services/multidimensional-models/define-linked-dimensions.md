@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4d3f3148837cd2e511ffd6d8fc539c32db362c88
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2d9b665cc3aa5dd70ea481cd6b3328ffb6d7aa82
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="define-linked-dimensions"></a>Definieren von verknüpften Dimensionen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Eine verknüpfte Dimension basiert auf einer Dimension in einer anderen Analysis Services-Datenbank mit derselben Version und demselben Kompatibilitätsgrad erstellt und gespeichert. Mithilfe einer verknüpften Dimension können Sie eine Dimension in einer Datenbank erstellen, speichern und verwalten und gleichzeitig Benutzern mehrerer Datenbanken zur Verfügung stellen. Für Benutzer sieht eine verknüpfte Dimension genauso aus wie jede andere Dimension.  
@@ -39,7 +36,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Da keine Aktualisierungsfunktion verfügbar ist, werden Dimensionen von den meisten Analysis Services-Entwicklern kopiert und nicht verknüpft. Sie können Dimensionen zwischen Projekten innerhalb derselben Projektmappe kopieren. Weitere Informationen finden Sie unter [Aktualisieren einer verknüpften Dimension in SSAS](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx).  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  Die Quelldatenbank, die die Dimension enthält, und die aktuelle Datenbank, von der sie verwendet wird, müssen über die gleiche Version und den gleichen Kompatibilitätsgrad verfügen. Weitere Informationen finden Sie unter [Kompatibilitätsgrad einer mehrdimensionalen Datenbank &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
  Die Quelldatenbank muss bereitgestellt und online geschaltet sein. Server, die verknüpfte Objekte veröffentlichen oder nutzen, müssen so konfiguriert werden, dass der Vorgang zulässig ist (siehe unten).  
@@ -81,10 +78,10 @@ ms.lasthandoff: 12/08/2017
   
 7.  Klicken Sie auf der Seite **Identitätswechselinformationen**auf Dienstkonto. Klicken Sie auf **Weiter**, und beenden Sie den Assistenten. Die gerade definierte Verbindung wird im Assistenten für verknüpfte Objekte ausgewählt.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
  Sie können die Struktur einer verknüpften Dimension nicht ändern; deshalb kann sie nicht mithilfe der Registerkarte **Dimensionsstruktur** des Dimensions-Designers angezeigt werden. Nach dem Verarbeiten der verknüpften Dimension können Sie sie mithilfe der Registerkarte **Browser** anzeigen. Es ist zudem möglich, den Namen zu ändern und eine Übersetzung für den Namen zu erstellen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Kompatibilitätsgrad einer mehrdimensionalen Datenbank &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [Verknüpfte Measuregruppen](../../analysis-services/multidimensional-models/linked-measure-groups.md)   
  [Dimensionsbeziehungen](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  

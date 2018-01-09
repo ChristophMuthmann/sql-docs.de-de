@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc5caa71cbc0a367456787f1f19babb89190d978
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e7045ebaf7ed6b6d9ce3590e8406df34a040584f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-integration-security"></a>Sicherheit der CLR-Integration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Das Sicherheitsmodell von der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Integration in die [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] common Language Runtime (CLR) verwaltet und sichert den Zugriff zwischen verschiedenen Typen von CLR- und nicht-CLR-Objekte, die ausgeführt werden, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Diese Objekte werden möglicherweise durch eine [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisung oder ein anderes CLR-Objekt, das im Server ausgeführt wird, aufgerufen. Die Aufrufe zwischen Objekten werden als Links bezeichnet. Die Typen von Sicherheitsüberprüfungen, die für diese Objekte ausgeführt werden, hängen von den betroffenen Linktypen ab.  
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/17/2017
  [Anwendungsdomänen und Sicherheit der CLR-Integration](http://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)  
  Beschreibt, wie Assemblys in Anwendungsdomänen geladen werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwalten von CLR-Integrationsassemblys](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)  
   
   

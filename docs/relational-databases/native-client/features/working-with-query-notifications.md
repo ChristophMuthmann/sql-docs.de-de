@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|features
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -28,11 +28,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 14cab75f3f5468259504b103bfa0a3e43e23f8ce
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 98eadce8ef3ffe948793a6da69a47c209889942d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="working-with-query-notifications"></a>Arbeiten mit Abfragebenachrichtigungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -142,7 +142,7 @@ RECEIVE * FROM MyQueue
   
  Wenn Sie eine Abfrage für eine Benachrichtigung übermitteln, die von dem gleichen Benutzer in dem gleichen Datenbankkontext übermittelt wurde und die die gleiche Vorlage, die gleichen Parameterwerte, die gleiche Benachrichtigungs-ID und den gleichen Übermittlungsort eines vorhandenen aktiven Abonnements verwendet, wird das vorhandene Abonnement verlängert und der neue angegebene Timeout festgelegt. Das bedeutet, dass nur eine einzige Benachrichtigung gesendet wird, wenn für identische Abfragen eine Benachrichtigung angefordert wird. Dies gilt sowohl für Abfragen, die in einem Batch dupliziert werden, als auch für Abfragen in einer gespeicherten Prozedur, die mehrmals aufgerufen wurde.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server Native Client-Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

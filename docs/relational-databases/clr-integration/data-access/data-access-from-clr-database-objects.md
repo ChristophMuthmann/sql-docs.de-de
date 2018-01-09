@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -30,13 +30,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b8f9f76427b6202850daa2ac18705c5111c4461a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b29ed2c50abd7f345ad9688c8cb82354bb57b778
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="data-access-from-clr-database-objects"></a>Datenzugriff von CLR-Datenbankobjekten aus
+# <a name="data-access-from-clr-database-objects"></a>Data Access from CLR Database Objects
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Eine Routine der common Language Runtime (CLR) kann problemlos in der Instanz von gespeicherte Daten zugreifen [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in dem er, sowie Daten in Remoteinstanzen gespeichert ausgeführt wird. Auf welche Daten die Routine zugreifen kann, wird durch den Benutzerkontext bestimmt, in dem der Code ausgeführt wird. Zugriff auf Daten aus einem CLR-Datenbankobjekt mithilfe der .NET Framework-Datenanbieter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], auch als bezeichnet **SqlClient**. Dies ist der gleiche Anbieter, den Entwickler zum Zugriff von verwalteten Clientanwendungen und Anwendungen der mittleren Ebene auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Daten verwenden. Aus diesem Grund können Sie Ihr Wissen von ADO.NET nutzen und **SqlClient** in Client-und der mittleren Ebene.  
   
 > [!NOTE]  

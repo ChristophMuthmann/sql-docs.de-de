@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 485a37af0cb6d9d5f7d34986f99db151e59c4628
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d5dd392ca57706e595b6df5f44b512cf11dacdff
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-integration-architecture----performance"></a>Architektur der CLR-Integration - Leistung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In diesem Artikel werden einige der Entwurfsoptionen, die die Leistung verbessern [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Integration in die [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework common Language Runtime (CLR).  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="fast-transitions-between-sql-server-and-clr"></a>Schnelle Übergänge zwischen SQL Server und CLR  
  Der Kompilierungsprozess erzeugt einen Funktionszeiger, der zur Laufzeit über systemeigenen Code aufgerufen werden kann. Bei benutzerdefinierten Skalarwertfunktionen erfolgt dieser Funktionsaufruf auf Zeilenbasis. Um die Kosten für den Übergang zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und CLR zu minimieren, verfügen Anweisungen, die verwaltete Aufrufe beinhalten, über einen Startschritt zur Identifizierung der Zielanwendungsdomäne. Dieser Identifizierungsschritt reduziert die Kosten für den Übergang der einzelnen Zeilen.  
   
-## <a name="performance-considerations"></a>Leistungsaspekte  
+## <a name="performance-considerations"></a>Überlegungen zur Leistung  
  Im Folgenden werden Informationen über Leistungsaspekte in Bezug auf die CLR-Integration in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gegeben. Ausführlichere Informationen finden Sie unter "[mithilfe der CLR-Integration in SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=50332)" auf der MSDN-Website. Allgemeine Informationen über die Leistungsfähigkeit von verwaltetem Code finden Sie "[verbessern .NET Application Performance and Scalability](http://go.microsoft.com/fwlink/?LinkId=50333)" auf der MSDN-Website.  
   
 ### <a name="user-defined-functions"></a>Benutzerdefinierte Funktionen  

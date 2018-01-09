@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -30,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 04170950534e6cb0020edb371ea265478fe73b97
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 510e6bbbc7155c60241b9aee4ed8b33f130652ed
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Behandeln von Fehlern und Warnungen (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Fehlerbehandlung ist notwendig, wenn XML for Analysis (XMLA) [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) oder [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) Methodenaufruf wird nicht ausgeführt, wird erfolgreich ausgeführt, aber Fehler oder Warnungen generiert oder wird erfolgreich ausgeführt, aber gibt Ergebnisse zurück die Fehler enthalten.  
@@ -61,9 +59,9 @@ ms.lasthandoff: 12/08/2017
   
 |Spaltenname|Typ|Description|Null zulässig<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
-|**ErrorCode**|**UnsignedInt**|Rückgabecode, der den Erfolg oder das Scheitern der Methode angibt. Der Hexadezimalwert muss in einen **UnsignedInt** -Wert konvertiert werden.|Nein|  
+|**ErrorCode**|**UnsignedInt**|Rückgabecode, der den Erfolg oder das Scheitern der Methode angibt. Der Hexadezimalwert muss in einen **UnsignedInt** -Wert konvertiert werden.|nein|  
 |**WarningCode**|**UnsignedInt**|Rückgabecode, der eine Warnbedingung angibt. Der Hexadezimalwert muss in einen **UnsignedInt** -Wert konvertiert werden.|ja|  
-|**Description**|**String**|Fehler- oder Warnungstext und Beschreibung, die durch die Komponente zurückgegeben werden, die den Fehler erzeugt hat.|ja|  
+|**Beschreibung**|**String**|Fehler- oder Warnungstext und Beschreibung, die durch die Komponente zurückgegeben werden, die den Fehler erzeugt hat.|ja|  
 |**Quelle**|**String**|Name der Komponente, die den Fehler oder die Warnung generiert hat.|ja|  
 |**HelpFile**|**String**|Pfad oder URL zur Hilfedatei oder dem Thema, das den Fehler oder die Warnung beschreibt.|ja|  
   
@@ -134,7 +132,7 @@ HelpFile="" />
 </return>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Entwickeln mit XMLA in Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

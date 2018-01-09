@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5818339f5bcc44770cdf728d93deb1b41b9bf618
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 499e62070cb0ec0fed8e814c926d915f7e69bbe3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="systemgetcrossvalidationresults-analysis-services---data-mining"></a>SystemGetCrossValidationResults (Analysis Services – Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Partitioniert die Miningstruktur in die angegebene Anzahl an Querschnitten, trainiert ein Modell für jede Partition, und gibt anschließend genauigkeitsmetriken für jede Partition.  
@@ -134,7 +134,7 @@ SystemGetCrossValidationResults(
   
  In der folgenden Tabelle werden die Spalten in diesem Rowset beschrieben.  
   
-|Spaltenname|Beschreibung|  
+|Spaltenname|Description|  
 |-----------------|-----------------|  
 |ModelName|Name des Modells, das getestet wurde.|  
 |AttributeName|Der Name der vorhersagbaren Spalte.|  
@@ -143,9 +143,9 @@ SystemGetCrossValidationResults(
 |PartitionSize|Ein ganzzahliger Wert, der angibt, wie viele Fälle in jeder Partition enthalten waren.|  
 |Test|Kategorie des Tests, der ausgeführt wurde. Eine Beschreibung der Kategorien und der in jeder Kategorie enthaltenen Tests finden Sie unter [Measures im Kreuzvalidierungsbericht](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).|  
 |Measure|Der Name des Measures, der vom Test zurückgegeben wurde. Measures für die einzelnen Modelle richten sich nach dem Typ des vorhersagbaren Werts. Definitionen für die einzelnen Measures finden Sie unter [Kreuzvalidierung &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).<br /><br /> Eine Liste der für die einzelnen vorhersagbaren Typen zurückgegebenen Measures finden Sie unter [Measures im Kreuzvalidierungsbericht](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).|  
-|Wert|Der Wert des angegebenen Testmeasures.|  
+|value|Der Wert des angegebenen Testmeasures.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Um Genauigkeitsmetriken für das vollständige Dataset zurückzugeben, verwenden Sie [SystemGetAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)verwenden.  
   
  Wenn das Miningmodell bereits in Aufteilungen partitioniert wurde, können Sie die Verarbeitung umgehen und nur die Ergebnisse der Kreuzvalidierung zurückgeben, indem Sie [SystemGetAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)verwenden.  
@@ -172,7 +172,7 @@ NULL
   
  Beispielergebnisse:  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Measure|Wert|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Measure|value|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |Target Mail DT|Bike Buyer|1|1|500|Klassifizierung|Wahr positiv|144|  
 |Target Mail DT|Bike Buyer|1|1|500|Klassifizierung|Falsch positiv|105|  
@@ -192,7 +192,7 @@ NULL
 ## <a name="requirements"></a>Anforderungen  
  Die Kreuzvalidierung in [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] ist erst ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]verfügbar.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SystemGetCrossValidationResults](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [SystemGetClusterCrossValidationResults &#40; Analysis Services – Datamining &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   

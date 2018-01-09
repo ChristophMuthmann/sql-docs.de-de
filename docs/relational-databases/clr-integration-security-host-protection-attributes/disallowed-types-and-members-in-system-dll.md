@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5f4325db560e4bd49282cbe79c98ec114441ea1a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fcdc6cea6898aa86940bae21ae9f5af3b7b042f9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="disallowed-types-and-members-in-systemdll"></a>Unzulässige Typen und Elemente in "System.dll"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] common Language-integrationsprogrammierung (CLR) lässt die Verwendung von einem Typ oder Member mit einem **HostProtectionAttribute** , die angibt, eine **System.Security.Permissions.HostProtectionResource**  -Enumeration mit dem Wert des **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**,  **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**,  **Synchronisierung**, oder **UI**. In der folgenden Tabelle sind die Elemente und Typen der System.dll-Assembly aufgeführt, deren Hostschutzattributwerte nicht zulässig sind.  
@@ -286,7 +286,7 @@ ms.lasthandoff: 11/17/2017
 |WebClientWriteStream.BeginRead()|ExternalThreading|  
 |WebClientWriteStream.BeginWrite()|ExternalThreading|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Hostschutzattribute und Programmierung der CLR-Integration](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
  [Unzulässige Typen und Member in "Microsoft.VisualBasic.dll"](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
  [Unzulässige Typen und Member in "mscorlib.dll"](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fb0297f91f6a7b3cac69e262eac707cdc59040bd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4bdf8563587ef08dd89634676a56324dc0191edb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-1-3---defining-a-data-source-view"></a>Lektion 1 bis 3-definieren eine Datenquellensicht
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Nach dem Definieren der Datenquellen, die Sie in Verwenden einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt der nächste Schritt besteht im Allgemeinen um eine Datenquellensicht für das Projekt zu definieren. Eine Datenquellensicht ist eine einheitliche Sicht der Metadaten von den angegebenen Tabellen und Sichten, die von den Datenquellen im Projekt definiert werden. Das Speichern der Metadaten in der Datenquellensicht ermöglicht das Arbeiten mit den Metadaten während der Entwicklung ohne offene Verbindung mit einer zugrunde liegenden Datenquelle. Weitere Informationen finden Sie unter [Datenquellsichten in mehrdimensionalen Modellen](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
@@ -83,10 +83,10 @@ In der folgenden Aufgabe definieren Sie eine Datenquellensicht, die fünf Tabell
   
     Sie können nun alle Tabellen und deren Beziehungen im Bereich **Diagramm** anzeigen. Beachten Sie, dass drei Beziehungen zwischen der FactInternetSales-Tabelle und der DimDate-Tabelle vorhanden sind. Jedem Verkauf sind drei Daten zugeordnet: ein Bestelldatum, ein Fälligkeitsdatum und ein Lieferdatum. Um die Details einer Beziehung anzuzeigen, doppelklicken Sie auf den Beziehungspfeil im Bereich **Diagramm** .  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Ändern von Standardtabellennamen](../analysis-services/lesson-1-4-modifying-default-table-names.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Datenquellsichten in mehrdimensionalen Modellen](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

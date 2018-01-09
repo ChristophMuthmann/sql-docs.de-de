@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: DMX
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: cb599ad559d2b385db60f919e93a9b2a8e1e9ee0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 564e0dddd4d1d5c3ea417b9b8a4f1f01404219d4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-extensions-dmx-syntax-conventions"></a>Data Mining-Erweiterungen (DMX) - Syntaxkonventionen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +43,7 @@ ms.lasthandoff: 11/20/2017
 |, ...|Zeigt an, dass das Element vor dem Komma beliebig oft wiederholt werden kann. Die einzelnen Elemente werden durch Trennzeichen voneinander getrennt.|  
 |\<Bezeichnung >:: =|Der Name eines Syntaxblockes. Diese Konvention dient zur Gruppierung und Bezeichnung von Abschnitten einer langen Syntax oder einer Syntaxeinheit, die an mehreren Stellen innerhalb einer Anweisung verwendet werden kann. Jeder Standort in der die Syntax kann verwendet werden, ist die Bezeichnung in spitzen Klammern, z. B. Analysefehlern \<Bezeichnung >.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datamining-Erweiterungen &#40; DMX &#41; Referenz](../dmx/data-mining-extensions-dmx-reference.md)  
   
   

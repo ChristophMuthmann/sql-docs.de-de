@@ -5,13 +5,10 @@ ms.date: 03/17/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 678912f45f94b99ce9abf96e864b60dd794f7b1c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8e1271ca7bf45132f07a9a94ddef70bf5379084f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>Datenzugriff auf mehrdimensionale Modelle (Analysis Services – mehrdimensionale Daten)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Verwenden Sie die Informationen in diesem Thema erfahren, wie den Zugriff auf [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] mehrdimensionale Daten, die mit programmgesteuerten Methoden, Skript oder Clientanwendungen, die integrierte Unterstützung für die Verbindung mit einer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Server im Netzwerk.  
@@ -61,12 +58,12 @@ ms.lasthandoff: 12/08/2017
 ### <a name="performancepoint-dashboards"></a>PerformancePoint-Dashboards  
  PerformancePoint-Dashboards werden verwendet, um Scorecards in SharePoint zu erstellen, die Geschäftsleistung verglichen mit vordefinierten Maßnahmen übermitteln. PerformancePoint bietet Unterstützung für Datenverbindungen zu mehrdimensionalen Analysis Services-Daten. Weitere Informationen finden Sie unter [Erstellen einer Analysis Services-Datenverbindung (PerformancePoint Services)](http://go.microsoft.com/fwlink/?linkid=232471).  
   
-### <a name="sql-server-data-tools"></a>SQL Server Data Tools  
+### <a name="sql-server-data-tools"></a>SQL Server Datatools  
  Modell- und Berichts-Designer erstellen Lösungen, die mehrdimensionale Modelle enthalten, mithilfe von SQL Server Data Tools. Durch die Bereitstellung der Lösung in einer Analysis Services-Instanz wird die Datenbank erstellt, mit der Sie anschließend von Excel, Reporting Services und anderen Business Intelligence-Clientanwendungen ausgehend Verbindungen herstellen.  
   
  SQL Server Data Tools werden auf einer Visual Studio-Shell erstellt und verwenden Projekte, die organisiert werden und das Modell enthalten. Weitere Informationen finden Sie unter [Erstellen mehrdimensionaler Modelle mit SQL Server Data Tools &#40;SSDT&#41;](../../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md).  
   
-### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
+### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  Für Datenbankadministratoren ist SQL Server Management Studio eine integrierte Umgebung zum Verwalten der SQL Server-Instanzen, einschließlich Instanzen von Analysis Services und mehrdimensionalen Datenbanken. Weitere Informationen finden Sie im Artikel über [SQL Server Management Studio](http://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b) und unter [Verbindung mit Analysis Services herstellen](../../../analysis-services/instances/connect-to-analysis-services.md).  
   
 ##  <a name="bkmk_querylang"></a> Abfragesprachen  
@@ -104,7 +101,7 @@ ms.lasthandoff: 12/08/2017
 |XMLA|XMLA ist die niedrigste Ebene, die einem Analysis Services-Programmierer zur Verfügung steht, und der gemeinsame Nenner, der allen Analysis Services-Datenzugriffsmethoden zugrunde liegt. XMLA ist ein dem Branchenstandard entsprechendes, SOAP-basiertes XML-Protokoll, das über eine HTTP-Verbindung universellen Datenzugriff auf sämtliche standardmäßigen mehrdimensionalen Datenquellen unterstützt. Dabei werden mithilfe von SOAP Anforderungen und Antworten für mehrdimensionale Daten formuliert. Wenn die Anwendung auf einer Nicht-Windows-Plattform ausgeführt wird, können Sie mithilfe von XMLA auf eine mehrdimensionale Datenbank zugreifen, die unter einem Windows-Server in Ihrem Netzwerk ausgeführt wird. Weitere Informationen finden Sie unter [Entwickeln mit XMLA in Analysis Services](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md).|  
 |ASSL (Analysis Services Scripting Language)|ASSL ist ein beschreibender Begriff, der auf Analysis Services-Erweiterungen des XMLA-Protokolls zutrifft. Während die Execute- und die Discover-Methode vom XMLA-Protokoll beschrieben werden, fügt ASSL die folgende Funktion hinzu:<br /><br /> –XMLA-Skript<br /><br /> –XMLA-Objektdefinitionen<br /><br /> –XMLA-Befehle<br /><br /> Mit ASSL-Erweiterungen können Analysis Services XMLA-Konstrukte jenseits der grundlegenden Bereitstellungen des Protokolls verwenden und fügen die Unterstützung von Datendefinitionen, Datenbearbeitungen und Datensteuerelementen hinzu. Weitere Informationen finden Sie unter [Entwickeln mit Analysis Services Scripting Language &#40;ASSL&#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verbindung mit Analysis Services herstellen](../../../analysis-services/instances/connect-to-analysis-services.md)   
  [Entwickeln mit Analysis Services Scripting Language &#40; ASSL &#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Entwickeln mit XMLA in Analysis Services](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   

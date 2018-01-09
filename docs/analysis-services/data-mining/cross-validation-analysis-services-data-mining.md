@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2fd4a0176a291088c9f0ee78b6c12406a3abd7e7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fad4277b58170a555597c9993ee9f681e99397f2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>Kreuzvalidierung (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*Kreuzvalidierung* ist ein Standardtool in der Analyse und ist ein wichtiges Feature Sie bei der Entwicklung und Feinabstimmung von Datamining-Modelle unterstützt. Sie verwenden die übergreifende Überprüfung, nachdem Sie eine Miningstruktur und zugehörige Miningmodelle erstellt haben, um die Gültigkeit des Modells sicherzustellen.  Die übergreifende Überprüfung verfügt über die folgenden Anwendungen:  
@@ -101,7 +99,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="tools-for-cross-validation"></a>Tools für die Kreuzvalidierung  
  Sie können die Kreuzvalidierung im Data Mining-Designer verwenden, oder Sie können die Kreuzvalidierung ausführen, indem Sie gespeicherte Prozeduren ausführen.  
   
- Wenn Sie die Data Mining-Designer-Tools verwenden, um die Kreuzvalidierung auszuführen, können Sie das Training und die Parameter der Genauigkeitsergebnisse in einem einzelnen Dialogfeld konfigurieren. Dies erleichtert die Einrichtung und Anzeige der Ergebnisse. Sie können die Genauigkeit aller Miningmodelle mit Bezug zu einer einzigen Miningstruktur messen und anschließend sofort die Ergebnisse in einem HTML-Bericht anzeigen. Die gespeicherten Prozeduren bieten jedoch einige Vorteile, z. B. hinzugefügte Anpassungen und die Fähigkeit, ein Skript für den Prozess zu erstellen.  
+ Wenn Sie die Data Mining-Designer-Tools verwenden, um die Kreuzvalidierung auszuführen, können Sie das Training und die Parameter der Genauigkeitsergebnisse in einem einzelnen Dialogfeld konfigurieren. Dies erleichtert die Einrichtung und Anzeige der Ergebnisse. Sie können die Genauigkeit aller Miningmodelle mit Bezug zu einer einzigen Miningstruktur messen und anschließend sofort die Ergebnisse in einem HTML-Bericht anzeigen. Die gespeicherten Prozeduren bieten jedoch einige Vorteile, z. B. hinzugefügte Anpassungen und die Fähigkeit, ein Skript für den Prozess zu erstellen.  
   
 ### <a name="cross-validation-in-data-mining-designer"></a>Kreuzvalidierung in Data Mining-Designer  
  Sie können die Kreuzvalidierung mit der Registerkarte **Kreuzvalidierung** der Sicht „Mininggenauigkeitsdiagramm“ entweder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder in SQL Server Development Studio ausführen.  
@@ -198,7 +196,7 @@ ms.lasthandoff: 12/08/2017
 |Siehe Beispiele für weitere Genauigkeitsdiagrammtypen.|[Klassifikationsmatrix &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [Prognosegütediagramm &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Gewinndiagramm &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Punktdiagramm &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
 |Beschreibt die Schritte zum Erstellen von verschiedenen Genauigkeitsdiagrammen.|[Tasks und Anweisungen für Test und Überprüfung &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Tests und Überprüfung &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

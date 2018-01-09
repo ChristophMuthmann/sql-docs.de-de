@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|features
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: df64c85fb5aa9034bc9f4c77a3ac54f98e379ecf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4dbed7c8217e5ea7a14d07c2c75a3c3857fd7cb7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Unterstützung von Dienstprinzipalnamen (SPN) in Clientverbindungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="usage"></a>Verwendung  
  In der folgenden Tabelle werden die häufigsten Szenarien beschrieben, in denen Clientanwendungen die sichere Authentifizierung aktivieren können.  
   
-|Szenario|Beschreibung|  
+|Szenario|Description|  
 |--------------|-----------------|  
 |Eine ältere Anwendung gibt keinen SPN an.|Dieses Kompatibilitätsszenario stellt sicher, dass sich das Verhalten von Anwendungen, die für frühere Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] entwickelt wurden, nicht verändert. Wenn kein SPN angegeben wurde, verwendet die Anwendung generierte SPNs und erkennt nicht, welche Methode zur Authentifizierung verwendet wurde.|  
 |Eine Clientanwendung, die mit der aktuellen Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client legt einen SPN in der Verbindungszeichenfolge als ein Domänenkonto für Benutzer oder Computer, als instanzspezifischen SPN oder als eine benutzerdefinierte Zeichenfolge.|Das **ServerSPN** -Schlüsselwort kann von einem Anbieter, einer Initialisierung oder einer Verbindungszeichenfolge zu folgenden Zwecken verwendet werden:<br /><br /> -Geben Sie das von verwendete Konto der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz für eine Verbindung. Dies vereinfacht den Zugriff auf die Kerberos-Authentifizierung. Wenn ein Kerberos-Schlüsselverteilungscenter (Key Distribution Center, KDC) vorhanden ist und das richtige Konto angegeben wurde, wird wahrscheinlich die Kerberos- anstatt der NTLM-Authentifizierung durchgeführt. Das KDC befindet sich normalerweise auf dem gleichen Computer wie der Domänencontroller.<br /><br /> -Geben Sie einen SPN für das Dienstkonto für Nachschlagen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz. Für jede [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz werden zwei Standard-SPNs generiert, die für diesen Zweck verwendet werden kann. Diese Schlüssel sind jedoch nicht unbedingt in Active Directory vorhanden. Daher ist in dieser Situation die Kerberos-Authentifizierung nicht gewährleistet.<br /><br /> -Geben Sie einen SPN, der verwendet wird, suchen Sie das Dienstkonto für den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz. Dies kann eine beliebige benutzerdefinierte Zeichenfolge sein, die dem Dienstkonto zugeordnet wird. In diesem Fall muss der Schlüssel im KDC manuell registriert werden und den Richtlinien für einen benutzerdefinierten SPN entsprechen.<br /><br /> Das **FailoverPartnerSPN** -Schlüsselwort kann verwendet werden, um den SPN für den Failoverpartnerserver anzugeben. Der Wertebereich des Kontos und des Active Directory-Schlüssels entspricht den Werten, die Sie für den Prinzipalserver angeben können.|  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
   
  Die Syntax, die SPNs in Attributen für Verbindungszeichenfolgen und Verbindungen verwenden, lautet wie folgt:  
   
-|Syntax|Beschreibung|  
+|Syntax|Description|  
 |------------|-----------------|  
 |MSSQLSvc/*fqdn*|Der vom Anbieter erstellte Standard-SPN für eine Standardinstanz, wenn ein anderes Protokoll als TCP verwendet wird.<br /><br /> *fqdn* ist ein vollqualifizierter Domänenname.|  
 |MSSQLSvc/*fqdn*:*port*|Der vom Anbieter erstellte Standard-SPN, wenn TCP verwendet wird.<br /><br /> *port* ist eine TCP-Portnummer.|  
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/17/2017
   
  Informationen zu Beispielanwendungen, die diese Funktion veranschaulichen, finden Sie unter [Beispiele zur Programmierbarkeit von SQL Server-Daten](http://msftdpprodsamples.codeplex.com/).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server Native Client-Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
 [Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
   

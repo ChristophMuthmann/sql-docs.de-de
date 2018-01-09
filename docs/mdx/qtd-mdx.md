@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: QTD
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 1e497a18ea68199906d41429fa35fe7ec713d992
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 767da32ea9001be53b4418fae2cfecb26d3cc842
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="qtd-mdx"></a>Qtd (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ Qtd( [ Member_Expression ] )
  *Member_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Wenn ein Member-AusdruckIS nicht angegeben, wird standardmäßig das aktuelle Element der ersten Hierarchie mit einer Ebene des Typs *Quartale* in der ersten Dimension des Typs *Zeit* in der Measuregruppe.  
   
  Die **Qtd** Funktion ist eine Verknüpfungsfunktion für die [PeriodsToDate &#40; MDX &#41; ](../mdx/periodstodate-mdx.md) Funktion, deren Ebenenausdruck-Argument auf *Quartal*. Somit ist `Qtd(Member_Expression)` funktionell äquivalent zu `PeriodsToDate(Quarter_Level_Expression, Member_Expression)`.  
@@ -64,7 +64,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [MDX-Funktionsreferenz &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

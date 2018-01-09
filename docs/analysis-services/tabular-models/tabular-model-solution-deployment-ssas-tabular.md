@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fa6eac77d29470dce66970189173acf6d1842b1f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b00a88530d8917d45358cbd69a21b9b2555e1f82
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>Bereitstellung von Tabellenmodelllösungen (SSAS – tabellarisch)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Nachdem Sie eine Projektmappe ein Projekt für tabellarische Modelle, müssen Sie es damit Benutzer das Modell mit einer berichterstellungsclientanwendung durchsuchen bereitstellen. In diesem Thema werden die verschiedenen Eigenschaften und die Methoden beschrieben, die Sie verwenden können, wenn Sie Projektmappen für tabellarische Modelle in der Umgebung bereitstellen.  
@@ -59,7 +56,7 @@ ms.lasthandoff: 12/08/2017
   
 |Eigenschaft|Standardeinstellung|Description|  
 |--------------|---------------------|-----------------|  
-|**Verarbeitungsoption**|**Standard**|Diese Eigenschaft gibt den erforderlichen Verarbeitungstyp an, wenn Änderungen an Objekten bereitgestellt werden. Diese Eigenschaft verfügt über folgende Optionen:<br /><br /> **Standard** – Diese Einstellung gibt an, dass Analysis Services den erforderlichen Verarbeitungstyp bestimmt. Nicht verarbeitete Objekte werden verarbeitet, und ggf. werden Attributbeziehungen, Attributhierarchien, Benutzerhierarchien und berechnete Spalten neu berechnet. Diese Einstellung führt im Allgemeinen zu einer schnelleren Bereitstellung als das die Option der vollständigen Verarbeitung.<br /><br /> **Nicht verarbeiten** : Diese Einstellung gibt an, dass nur die Metadaten bereitgestellt werden. Nach der Bereitstellung kann es erforderlich sein, einen Verarbeitungsvorgang für das bereitgestellte Modell auszuführen, um Daten zu aktualisieren und zu neu berechnen.<br /><br /> **Vollständig** : Diese Einstellung gibt an, dass sowohl die Metadaten bereitgestellt als auch ein vollständiger Verarbeitungsvorgang ausgeführt wird. Dies gewährleistet, dass das bereitgestellte Modell über die neuesten Updates sowohl für die Metadaten als auch die Daten verfügt.|  
+|**Verarbeitungsoption**|**Default**|Diese Eigenschaft gibt den erforderlichen Verarbeitungstyp an, wenn Änderungen an Objekten bereitgestellt werden. Diese Eigenschaft verfügt über folgende Optionen:<br /><br /> **Standard** – Diese Einstellung gibt an, dass Analysis Services den erforderlichen Verarbeitungstyp bestimmt. Nicht verarbeitete Objekte werden verarbeitet, und ggf. werden Attributbeziehungen, Attributhierarchien, Benutzerhierarchien und berechnete Spalten neu berechnet. Diese Einstellung führt im Allgemeinen zu einer schnelleren Bereitstellung als das die Option der vollständigen Verarbeitung.<br /><br /> **Nicht verarbeiten** : Diese Einstellung gibt an, dass nur die Metadaten bereitgestellt werden. Nach der Bereitstellung kann es erforderlich sein, einen Verarbeitungsvorgang für das bereitgestellte Modell auszuführen, um Daten zu aktualisieren und zu neu berechnen.<br /><br /> **Vollständig** : Diese Einstellung gibt an, dass sowohl die Metadaten bereitgestellt als auch ein vollständiger Verarbeitungsvorgang ausgeführt wird. Dies gewährleistet, dass das bereitgestellte Modell über die neuesten Updates sowohl für die Metadaten als auch die Daten verfügt.|  
 |**Transaktionsbereitstellung**|**False**|Diese Eigenschaft gibt an, ob es sich um eine Transaktionsbereitstellung handelt. Standardmäßig ist die Bereitstellung aller oder geänderter Objekte keine Transaktionsbereitstellung bei der Verarbeitung dieser bereitgestellten Objekte. Die Bereitstellung kann erfolgreich ausgeführt werden und persistent sein, auch wenn bei der Verarbeitung ein Fehler auftritt. Sie können diese Einstellung ändern, um die Bereitstellung und Verarbeitung in einer einzelnen Transaktion zu integrieren.|  
 |**Abfragemodus**|**Speicherintern**|Diese Eigenschaft gibt den Modus an, in dem die Quelle, von der Abfrageergebnisse zurückgegeben werden, im speicherinternen (zwischengespeicherten) Modus oder im DirectQuery-Modus ausgeführt wird. Diese Eigenschaft verfügt über folgende Optionen:<br /><br /> **DirectQuery** - Diese Einstellung gibt an, dass bei allen Abfragen des Modells nur die relationale Datenquelle verwendet werden soll.<br /><br /> **DirectQuery mit InMemory** – Diese Einstellung gibt an, dass Abfragen standardmäßig mit der relationalen Quelle beantwortet werden sollten, sofern in der Verbindungszeichenfolge vom Client nichts Gegenteiliges angegeben wurde.<br /><br /> **InMemory** – Diese Einstellung gibt an, dass Abfragen nur mithilfe des Caches beantwortet werden sollten.<br /><br /> **InMemory mit DirectQuery** – Diese Einstellung gibt an, dass standardmäßig für Abfragen der Cache verwendet wird, sofern in der Verbindungszeichenfolge vom Client nichts Gegenteiliges angegeben wurde.<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [DirectQuery-Modus &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).|  
   
@@ -104,7 +101,7 @@ ms.lasthandoff: 12/08/2017
 |----------|-----------------|  
 |[Bereitstellen in SQL Server-Datentools &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/deploy-from-sql-server-data-tools-ssas-tabular.md)|Beschreibt das Konfigurieren von Bereitstellungseigenschaften und die Bereitstellung eines tabellarischen Modellprojekts mit dem Bereitstellungsbefehl in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].|  
 |[Bereitstellen von Modelllösungen mithilfe des Bereitstellungs-Assistenten](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|In Themen in diesem Abschnitt wird beschrieben, wie der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Bereitstellungs-Assistent verwendet wird, um sowohl tabellarische als auch mehrdimensionale Modelllösungen bereitzustellen.|  
-|[Bereitstellen von Modelllösungen mit dem Bereitstellungshilfsprogramm](../../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|Beschreibt, wie das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Bereitstellungshilfsprogramm verwendet wird, um sowohl tabellarische als auch mehrdimensionale Modelllösungen bereitzustellen.|  
+|[Bereitstellen von Modelllösungen mit dem Bereitstellungsprogramm](../../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|Beschreibt, wie das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Bereitstellungshilfsprogramm verwendet wird, um sowohl tabellarische als auch mehrdimensionale Modelllösungen bereitzustellen.|  
 |[Bereitstellen von Modelllösungen mit XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)|Beschreibt, wie XMLA verwendet werden muss, um tabellarische und mehrdimensionale Lösungen für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitzustellen.|  
 |[Synchronisieren von Analysis Services-Datenbanken](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)|Beschreibt, wie Sie den Assistenten zum Synchronisieren einer Datenbank verwenden müssen, um die Metadaten und Daten zwischen zwei tabellarischen oder mehrdimensionalen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbanken zu synchronisieren.|  
   

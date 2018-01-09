@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -32,11 +30,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 18621eba78a2e4c95de6373485044b5f88e1f744
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 012caa5210886a9c2f6e72a6c1b7338154358d1f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>Attribute und Attributhierarchien
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dimensionen sind Auflistungen von Attributen, die an eine oder mehrere Spalten in einer Tabelle oder Sicht in der Datenquellensicht gebunden sind.  
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="attribute-relationships-star-schemas-and-snowflake-schemas"></a>Attributbeziehungen, Sternschemas und Schneeflockenschemas  
  Standardmäßig werden in einem Sternschema alle Attribute direkt mit dem Schlüsselattribut verknüpft. Hierdurch können Benutzer die Fakten im Cube auf Basis einer beliebigen Attributhierarchie in der Dimension durchsuchen. In einem Schneeflockenschema ist ein Attribut entweder direkt mit dem Schlüsselattribut verknüpft, falls die zugrunde liegende Tabelle direkt mit der Faktentabelle verknüpft ist, oder es ist indirekt verknüpft, und zwar durch das Attribut, das an den Schlüssel in der zugrunde liegenden Tabelle gebunden ist, die wiederum die per Schneeflockenschema verknüpfte Tabelle mit der direkt verknüpften Tabelle verbindet.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen von benutzerdefinierten Hierarchien](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [Definieren von Attributbeziehungen](../../analysis-services/multidimensional-models/attribute-relationships-define.md)   
  [Dimensionsattributeigenschaften-Verweis](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  

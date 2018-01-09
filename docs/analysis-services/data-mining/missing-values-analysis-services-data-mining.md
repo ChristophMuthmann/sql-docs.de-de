@@ -5,12 +5,10 @@ ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9fd36d5de83b72fcc62945de61aa5f7b2d0cb3e2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 78f57e86acdbcf9292e462854c97ebf4c91f79b1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Fehlende Werte (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Behandlung von *fehlende Werte* ist ein wichtiger Teil der effektiven Modellierung. In diesem Abschnitt wird erläutert, was fehlende Werte sind, und es werden die Funktionen beschrieben, die in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für die Arbeit mit fehlenden Werten bereitgestellt werden, wenn Sie Data Mining-Strukturen und Miningmodelle erstellen.  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/08/2017
   
  Beispielsweise enthält die folgende Tabelle die Verteilung der Werte für den Knoten (Alle) des Entscheidungsstrukturmodells, das für das Bike Buyer-Lernprogramms erstellt wurde. In diesem Beispielszenario enthält die Spalte [Bike Buyer] das vorhersagbare Attribut, wobei 1 für "Ja" und 0 für "Nein" steht.  
   
-|Wert|Fälle|  
+|value|Fälle|  
 |-----------|-----------|  
 |0|9296|  
 |1|9098|  
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="adjusting-probability-for-missing-states"></a>Anpassen der Wahrscheinlichkeit für den Status "Missing"  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zählt nicht nur die Werte, sondern berechnet auch die Wahrscheinlichkeit der einzelnen Werte im Dataset. Das gilt auch für den **Missing** -Wert. In der nachfolgenden Tabelle werden beispielsweise die Wahrscheinlichkeiten der Fälle aus dem vorigen Beispiel dargestellt:  
   
-|Wert|Fälle|Probability|  
+|value|Fälle|Probability|  
 |-----------|-----------|-----------------|  
 |0|9296|50.55%|  
 |1|9098|49.42%|  
@@ -111,7 +109,7 @@ Der Decision Trees-Algorithmus bietet eine zusätzliche Anpassung des Algorithmu
   
  Im Endeffekt soll durch diese Anpassung die Stabilität der Struktur aufrechterhalten werden.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  Die folgenden Themen stellen weitere Informationen zur Behandlung fehlender Werte bereit.  
   
 |Aufgaben|Links|  
@@ -121,7 +119,7 @@ Der Decision Trees-Algorithmus bietet eine zusätzliche Anpassung des Algorithmu
 |Informationen zum Angeben der Modellierungsflags in DMX|[Modellierungsflags &#40;DMX&#41;](../../dmx/modeling-flags-dmx.md)|  
 |Ändern der Methode, die von der Miningstruktur zur Behandlung fehlender Werte verwendet wird|[Ändern der Eigenschaften einer Miningstruktur](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Modellierungsflags &#40;Data Mining&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   

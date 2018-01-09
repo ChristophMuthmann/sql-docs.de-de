@@ -8,7 +8,7 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: ClientNetworkProtocolProperty Class
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9df1bb41268e2754f2c58f80ea77b7af2551b6bb
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5c6cb547926b932d9421dec69fa319f4517989b8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clientnetworkprotocolproperty-class"></a>ClientNetworkProtocolProperty-Klasse
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Die [ClientNetworkProtocolProperty-Klasse](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) stellt Eigenschaften eines clientnetzwerkprotokolls dar.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Festlegen von Flags für die aktuelle Eigenschaft.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Konfigurieren von Clientprotokollen](http://technet.microsoft.com/library/ms181035.aspx)  
   
   

@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5fefda98d12920fb3f7ae2cb03c52f932f371602
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 59648b6a3f3dc221fa1e80be1e737606b5fede04
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>Power Pivot-Datenaktualisierung mit SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Aktualisieren von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenmodellen in SharePoint 2013 nutzt Excel Services als Hauptkomponente zum Laden und Aktualisieren von Datenmodellen auf einer Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] im SharePoint-Modus ausgeführt wird. Der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server wird außerhalb der SharePoint-Farm ausgeführt. Die Architektur in SharePoint 2013 Excel Services unterstützt sowohl die **interaktive Datenaktualisierung** als auch die **planmäßige Datenaktualisierung**.  
@@ -62,8 +59,8 @@ ms.lasthandoff: 12/08/2017
   
 |Arbeitsmappe erstellt in|planmäßige Datenaktualisierung|Interaktive Datenaktualisierung|  
 |-------------------------|----------------------------|-------------------------|  
-|2008 R2 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel|Nicht unterstützt. Arbeitsmappe upgraden **(\*)**|Nicht unterstützt. Arbeitsmappe upgraden **(\*)**|  
-|2012 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel|Supported|Nicht unterstützt. Arbeitsmappe upgraden **(\*)**|  
+|2008 R2 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel|Wird nicht unterstützt. Arbeitsmappe upgraden **(\*)**|Wird nicht unterstützt. Arbeitsmappe upgraden **(\*)**|  
+|2012 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel|Supported|Wird nicht unterstützt. Arbeitsmappe upgraden **(\*)**|  
 |Excel 2013|Supported|Supported|  
   
  **(\*)** Weitere Informationen zum Upgraden von Arbeitsmappen finden Sie unter [Upgraden von Arbeitsmappen und planmäßige Datenaktualisierungen &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
@@ -138,7 +135,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
  **Wichtige Punkte zur geplanten Datenaktualisierung:**  
   
--   Erfordert die Bereitstellung des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Add-Ins. Weitere Informationen zur Installation finden Sie unter [Installieren oder Deinstallieren des PowerPivot für SharePoint-Add-Ins &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+-   Erfordert die Bereitstellung des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Add-Ins. Weitere Informationen finden Sie unter [Installieren oder Deinstallieren des PowerPivot für SharePoint-Add-In &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 -   Ein Benutzer konfiguriert einen Aktualisierungszeitplan für eine Arbeitsmappe. Zum geplanten Zeitpunkt sendet der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdienst eine Anforderung an Excel Services für folgende Aktionen:  
   
@@ -246,7 +243,7 @@ ms.lasthandoff: 12/08/2017
   
  [Excel Services in SharePoint 2013](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (http://msdn.microsoft.com/library/sharepoint/jj164076 (v=office.15).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Installieren von Analysis Services im PowerPivot-Modus](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

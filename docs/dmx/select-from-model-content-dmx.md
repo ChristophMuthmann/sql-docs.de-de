@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 7eaccd559a0898e489bf7befead782c7d3387245
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 24b5a1884994050874cbfd24afbae84b773620d1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;Modell&gt;. INHALT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -138,7 +136,7 @@ WHERE NODE_TYPE = 26
   
 |MODEL_NAME|NODE_DISTRIBUTION.ATTRIBUTE_NAME|NODE_DISTRIBUTION.ATTRIBUTE_VALUE|NODE_DISTRIBUTION.SUPPORT|NODE_DISTRIBUTION.PROBABILITY|NODE_DISTRIBUTION.VARIANCE|NODE_DISTRIBUTION.VALUETYPE|  
 |-----------------|----------------------------------------|-----------------------------------------|--------------------------------|------------------------------------|---------------------------------|----------------------------------|  
-|TM_NaiveBayes|Bike Buyer|Nicht vorhanden|0|0|0|1|  
+|TM_NaiveBayes|Bike Buyer|Missing|0|0|0|1|  
 |TM_NaiveBayes|Bike Buyer|0|6556|0.506685215240745|0||  
 |TM_NaiveBayes|Bike Buyer|1|6383|0.493314784759255|0||  
   
@@ -156,13 +154,13 @@ WHERE NODE_TYPE = 26
   
 |MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
 |-----------------|-----------------------|------------------------|---------------|  
-|TM_NaiveBayes|Bike Buyer|Nicht vorhanden|0|  
+|TM_NaiveBayes|Bike Buyer|Missing|0|  
 |TM_NaiveBayes|Bike Buyer|0|6556|  
 |TM_NaiveBayes|Bike Buyer|1|6383|  
   
 ## <a name="see-also"></a>Siehe auch  
  [SELECT &#40; DMX &#41;](../dmx/select-dmx.md)   
  [Datamining-Erweiterungen &#40; DMX &#41; Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Datamining-Erweiterungen &#40; DMX &#41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

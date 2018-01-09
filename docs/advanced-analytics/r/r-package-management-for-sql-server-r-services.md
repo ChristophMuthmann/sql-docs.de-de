@@ -1,13 +1,13 @@
 ---
 title: "R-paketverwaltung für SQL Server | Microsoft Docs"
 ms.custom: 
-ms.date: 10/09/2017
+ms.date: 01/04/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: R
@@ -15,98 +15,140 @@ ms.assetid: 98c14b05-750e-44f9-8531-1298bf51e8d2
 caps.latest.revision: "7"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 2b421ea34185f483bac0b9f3bd2527d68428bf50
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 576178e53a28f877ac91d99f14ce9ba6a44e506d
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="r-package-management-for-sql-server"></a>R-paketverwaltung für SQL Server
 
 Dieser Artikel beschreibt die Funktionen für die Verwaltung von R-Paketen in SQL Server-2017 und SQL Server 2016.
 
-+ Änderungen in Methoden zur Installation von R-Paket zwischen 2016 und 2017
-+ Empfohlene Methoden zum Verwalten von R-Pakete
-+ Neue Datenbankrollen für die paketverwaltung in SQL Server-2017
-+ Neue T-SQL-Anweisung für die paketverwaltung in SQL Server-2017
++ Empfohlene Methoden zum Verwalten von R-Paketen (und Python-Pakete)
++ Änderungen bei der paketverwaltung zwischen SQL Server 2016 und 2017
 
 **Gilt für:** SQL Server 2016-R-Services, SqlServer 2017 Machine Learning-Dienste
 
-## <a name="differences-in-package-management-between-sql-server-2016-and-sql-server-2017"></a>Unterschiede bei der paketverwaltung zwischen SQL Server 2016 und SQL Server-2017
+## <a name="recommended-methods-for-package-management"></a>Empfohlene Methoden zum Verwalten von Paketen
 
-In **SQL Server-2017**, paketverwaltung auf Instanzebene zu aktivieren und Verwalten von Benutzerberechtigungen zum Hinzufügen oder verwenden Pakete auf Datenbankebene.
+In SQL Server 2016 und SQL Server-2017 kann ein Computeradministrator Pakete für jede Instanz installieren, auf dem Computer Learning aktiviert wurde. 
 
-Dies erfordert, dass der Datenbankadministrator die Paket-Management-Funktion aktivieren, durch Ausführen eines Skripts, das die erforderlichen Datenbankobjekte erstellt. Weitere Informationen finden Sie unter [zum Aktivieren der R-paketverwaltung](r-package-how-to-enable-or-disable.md).
+Pakete werden in das Dateisystem, mit der Instanz-Bibliotheken, installiert und nicht von Instanzen gemeinsam genutzt werden. Dies ist derzeit die empfohlene Methode für SQL Server 2016 und SQL Server-2017.
 
-In **SQL Server 2016**, muss ein Administrator R-Pakete installieren, in der R-Bibliothek, die der Instanz zugeordnet. Diese Pakete verwenden alle Benutzer, die R-Code in der Instanz ausgeführt wird. R-Code, die in SQLServer ausgeführt wird, kann nicht im benutzerbibliotheken installierten Pakete verwenden. Allerdings kann der Administrator einzelne Benutzer die Fähigkeit zur Ausführung von R-Skripts in einer bestimmten Datenbank gewähren.
++ [Installieren Sie zusätzliche R-Pakete unter SQL Server](install-additional-r-packages-on-sql-server.md)
++ [Ermitteln der auf SQL Server installierten Pakete](determine-which-packages-are-installed-on-sql-server.md)
 
-**Zusammenfassung der Unterschiede und Vorteile**
+Darüber hinaus haben **Dbo** Rollenmitgliedschaft auf einer Instanz von SQL Server, auf dem Computer Learning aktiviert wurde, können Sie R-Pakete von einem Remoteclient aus installieren, indem Sie die Verwendung neuer Funktionen in "revoscaler".
 
-+ Bei Verwendung von Machine Learning Services in SQL Server-2017 können Sie verwalten und Installieren von R-Pakete, die entweder zur herkömmliche Methode, die basierend auf R-Tools oder mit dem neuen Datenbankrollen und die T-SQL-Anweisungen.
++ [Neue R-Funktionen für die Paketinstallation](#bkmk_remoteInstall)
 
-+ Es wird empfohlen, dass die zweite Methode, da es sich um eine präzisere Kontrolle von Administratoren, bietet mit mehr Freiheit für Benutzer gekoppelt. Angenommen, Benutzer können Installationspakete ihre eigenen, entweder mithilfe einer gespeicherten Prozedur oder durch R-Code und Freigabe von Paketen mit anderen. 
+### <a name="installation-on-servers-with-no-internet-access"></a>Installation auf Servern ohne Internetzugang
 
-    Da Pakete in einer Datenbank festgelegt werden können, und jeder Benutzer eine isolierte Paket Sandkasten erhält, ist es einfacher, verschiedene Versionen der gleichen R-Paket installieren. Sie können auch einfach kopieren oder Verschieben von Benutzern und ihren Paketen zwischen Datenbanken. 
+Damit sie einfacher Bestimmen der erforderlichen Versionen der R-Paket, und geben Sie alle Abhängigkeiten Verpacken, können Sie [MiniCRAN](https://mran.microsoft.com/package/miniCRAN). Diese R-Paket kann eine Liste der Ziel-Pakete und erstellt ein lokales Repository, das die Ziel-Pakete sowie alle zugehörigen Abhängigkeiten im ZIP-Format enthält. Sie können anschließend kopieren, die auf dem Offlineserver oder das Repository zwischen mehreren Instanzen freigeben.
 
-+ Die Verwendung der Paket-Management-Funktion in SQL Server kann die sicherungs-und Wiederherstellungsvorgänge viel einfacher. Wenn Sie Ihre Datenbank zu einem neuen Server migrieren, können Sie die Paket-Synchronisierung-Funktion verwenden, liest eine Liste mit allen Paketen und in einer Datenbank auf dem neuen Server installieren.
+Weitere Informationen finden Sie unter [erstellen Sie ein lokales Paket-Repository mit MiniCRAN](create-a-local-package-repository-using-minicran.md).
 
-+ Sie finden es vielleicht einfacher zum Installieren von R-Pakete als Administrator auf dem Computer mit herkömmlichen R-Tools, wenn Sie die einzige Person, die mithilfe des Servers für Machine Learning-Aufträge sind.
+### <a name="python-packages"></a>Python-Pakete
 
-+ Bei Verwendung von SQL Server 2016 R Services sollten Sie zum Installieren von R-Pakete, die von der Instanz, die mithilfe von R-Tools verwendet weiterhin > Achten Sie darauf, die der Instanz zugeordnete R-Bibliothek verwenden.
+Installation des neuen Python-Pakete folgt dieselben Richtlinien: 
 
-Die folgenden Abschnitte enthalten weitere Details dazu, wie paketverwaltung mit diesen beiden Optionen ausgeführt.
++ Überprüfen Sie die Python-Pakete im voraus, um Kompatibilität mit der aktuellen Python-Version zu bestimmen
++ Bewerten von Python-Paket Eignung für einen festgeschriebene SQL Server-Umgebung
++ Verwenden Sie Python-Tools, um Pakete als Administrator installieren
++ Installieren von Paketen, die in der SQL Server-Kontext nur in der Bibliothek für die Instanz ausgeführt werden müssen. 
++ Wenn Sie mehrere Umgebungen für Tests verwenden, Produktion usw., stellen Sie sicher, dass die gleiche Version von Python-Paket in der Bibliothek für die Instanz installiert ist.
 
-## <a name="r-package-management-using-t-sql"></a>R-paketverwaltung mit T-SQL
+Installationsschritte finden Sie unter [Installieren neuer Python-Pakete unter SQL Server](../python/install-additional-python-packages-on-sql-server.md)
 
-SQL Server-2017 umfasst neue T-SQL-Anweisungen, die der DBA mehr Kontrolle über die R-Pakete auf Datenbankebene erteilen. Zur gleichen Zeit kann der Datenbankadministrator Benutzern die Möglichkeit zum Installieren der Pakete benötigten und andere Benutzer freizugeben.
+## <a name="features-for-package-management-in-sql-server-2016-and-sql-server-2017"></a>Funktionen zum Verwalten von Paketen in SQL Server 2016 und SQL Server-2017
 
-Wenn Sie Pakete für andere Benutzer freigeben möchten, oder wenn mehrere Personen Machine Learning-Aufträge auf dem Server ausführen müssen, sollten Sie paketverwaltung aktivieren, Zuweisen von Benutzern zu Datenbankrollen und uploadpakete, damit Benutzer freigegeben werden können.
+SQL Server-2017 hinzugefügt einige neuen Funktionen zur Unterstützung von vereinfacht die Verwaltung von R (und Python)-Paketen von Datenbankadministratoren. Zu diesen neuen Funktionen gehören:
+
++ Die Möglichkeit zum Installieren oder Verwalten von Paket-Bibliotheken, die mithilfe von T-SQL
++ Verwaltung von Berechtigungen auf Datenbankebene über die Datenbankrollen. 
+
+In zukünftigen Versionen werden diese Features bieten die primäre Methode zum paketverwaltung von Datenbankadministratoren und Datenanalysten Installation die Laufzeitbibliotheken benötigten erleichtern erwartet.
+
+Am hinzugefügt zur gleichen Zeit Microsoft R Server und Machine Learning-Server neue R-Funktionen zu installieren und Freigeben von Paketen in einer SQL Server-computekontext zu vereinfachen. Diese Funktionen ausgeführt werden, unabhängig von der SQL Server-Funktionen, die anhand der T-SQL und von einem Remoteclient von R ausgeführt werden sollen.
+
+Dieser Abschnitt enthält einen Überblick über diese Funktionen.
+
+### <a name="bkmk_remoteInstall"></a>Neue RevoScaleR-Funktionen für die Paketinstallation 
+
+Benutzer mit eine aktuelle Version von R-Server "oder" Machine Learning-Server können auch neue Funktionen in [ **"revoscaler"** ](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) zum Installieren von Paketen auf einer Instanz, die als SQL Server-computekontext angegeben.
+
++ Der Data Scientist kann erforderlichen R-Pakete auf SQL Server installieren, ohne direkten Zugriff auf die SQL Server-Computer. Allerdings muss der Benutzer ein Mitglied der Datenbankbesitzer (**Dbo**) Rolle.
+
++ Die Benutzer kann Pakete mit anderen, freigeben, indem Installieren von Paketen mit freigegebenen Bereich. Andere autorisierte Benutzer die gleiche SQL Server-Datenbank können das Paket zugreifen.
+
++ Benutzer können privater Pakete, die für andere, nicht sichtbar sind installieren und einen privaten Sandkastens für R-Pakete erstellen.
+
++ Paketsynchronisierung kann mühelos sichern und Wiederherstellen von Paketen
+
+#### <a name="package-installation-functions"></a>Funktionen der Paket-installation
+
+Die folgenden Paketverwaltungsfunktionen werden in "revoscaler", für die Installation und Deinstallation von Paketen in einen angegebenen computekontext bereitgestellt:
+
+-   [RxInstalledPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstalledpackages): erfahren Sie mehr über Pakete, die in der angegebenen computekontext installiert.
+
+-   [RxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages): Installieren von Paketen in einer computekontext, aus einem angegebenen Repository oder durch Lesen, lokal gespeichert, die ZIP-Paketen.
+
+-   [RxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages): installierte Pakete über einen computekontext entfernen.
+
+-   [RxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage): Rufen Sie den Pfad für ein oder mehrere Pakete in der angegebenen computekontext.
+
+-   [RxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages): eine Bibliothek Paket zwischen dem Dateisystem und Datenbanken in der angegebenen rechenkontexte kopiert.
+
+-   [RxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths): den Suchpfad für die Bibliothek Strukturen für Pakete während der Ausführung in der SQL-Server abrufen.
+
+Verbinden Sie für die Verwendung dieser Funktionen mit einer Instanz von SQL Server, auf dem Sie die erforderlichen Berechtigungen mithilfe einen SQL Server-computekontext. 
+
+> [!IMPORTANT]
+> Die in der Verbindung verwendeten Anmeldeinformationen bestimmen, ob der Vorgang auf dem Server abgeschlossen werden kann.
+
+Diese Funktionen der Paket-Installation Abhängigkeiten überprüfen und sicherstellen, dass alle zugehörigen Pakete zu SQL Server, wie durch die Installation von R-Paket im lokalen rechenkontext installiert werden können. Die Funktion, die Pakete deinstalliert, berechnet ebenfalls Abhängigkeiten und stellt sicher, dass Pakete, die nicht mehr von anderen Paketen in SQL Server verwendet werden, entfernt werden, um Ressourcen freizugeben.
+
+Diese neuen Funktionen sind in der Version von "revoscaler" enthalten, die in SQL Server-2017 installiert ist. Sie können diese Funktionen auch abrufen, indem [Aktualisieren von SQL Server-Instanz](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md) verwenden Sie eine aktuelle Version von [Microsoft R Server oder Computer Learning](https://docs.microsoft.com/machine-learning-server/rebranding-microsoft-r-server). Erfordert Version 9.0.1 oder höher.
+
+#### <a name="package-synchronization-functions"></a>Paket-Synchronisierungsfunktionen
+
+Paketsynchronisierung ist ein neues Feature für nur die R-Pakete. Das Datenbankmodul verfolgt die Pakete, die von einem bestimmten Besitzer und die Gruppe verwendet werden, und können diese Pakete in das Dateisystem schreiben, bei Bedarf. In der Regel verwenden Sie die paketsynchronisierung in diesen Szenarien:
+
++ R-Pakete zwischen Instanzen von SQL Server verschoben werden sollen.
++ Sie müssen zum Installieren der Pakete für einen bestimmten Benutzer oder eine Gruppe, nachdem eine Datenbank wiederhergestellt wird.
+
+Weitere Informationen zum Aktivieren und verwenden Sie dieses Feature finden Sie unter [R-Paket-Synchronisierung für SQL Server](package-install-uninstall-and-sync.md).
+
+### <a name="package-management-using-t-sql"></a>Verwalten von Paketen mithilfe des T-SQL
+
+SQL Server-2017 hinzugefügt neue T-SQL-Anweisungen aus, um der DBA mehr Kontrolle über die R-Pakete auf Datenbankebene erteilen. Der Datenbankadministrator sollte keine Informationen zum Verwenden von R oder Python-Tools, aber stattdessen sollte der Lage R oder Python-Benutzer bieten die Möglichkeit zum Installieren der Pakete benötigten und andere Benutzer freizugeben.
+
+Diese Funktion dient, Zusammenarbeit und versionsverwaltung in mehrbenutzerumgebungen vereinfachen: z. B.:
+
++ Möchten Sie die Pakete freigeben, die Sie für andere Personen in Ihrem Team entwickelt haben.
++ Mehrere Analysten in der gleichen Datenbank arbeiten, und unterschiedliche Versionen des gleichen Pakets verwenden müssen.
++ Pakete und deren Berechtigungen zur gleichen Zeit zu verschieben, die Sie beim Ausführen der Sicherung und Wiederherstellung eine Datenbank oder verschieben möchten.
 
 Verwalten von Paketen in SQL Server-2017 stützt sich auf diese neue Datenbankobjekte und Funktionen:
 
-+ Neue Datenbankrollen für die Verwaltung von Paketzugriff und Verwendung
-+ Paketbereich separaten freigegebenen und privaten Pakete
-+ Erstellen EXTERNEN LIBRARY-Anweisung für das Hochladen von neuen Codebibliotheken mit dem server
-+ Neue R-Funktionen im "revoscaler" zur Unterstützung der Installation von Paketen in einer SQL Server-computekontext
-+ Paketsynchronisierung, um sicherzustellen, dass seine sichern und Wiederherstellen von Paketen
++ [Neue Datenbankrollen](#bkmk_roles), für die Verwaltung von Packen Zugriff sowie die Verwendung
++ [Erstellen eines EXTERNEN Bibliothek](#bkmk_createExternalLibrary) Anweisung für den Upload von Paket-Bibliotheken mit dem Server
 
-### <a name="database-roles-for-package-management"></a>Datenbankrollen für die Paketverwaltung
+Verwendung dieser Funktionen erfordert einige zusätzliche Vorbereitung auf die Instanz- und Datenbankebene: 
 
-Der Datenbankadministrator muss die Rollen, die für die paketverwaltung verwendet werden, mithilfe eines Skripts beschriebenen hier erstellen: [aktivieren oder Deaktivieren der paketverwaltung](r-package-how-to-enable-or-disable.md).
++  Der Datenbankadministrator muss die Paket-Verwaltungsfunktion explizit aktivieren, durch Ausführen eines Skripts, das die erforderlichen Datenbankobjekte erstellt. Weitere Informationen finden Sie unter [zum Aktivieren der R-paketverwaltung](r-package-how-to-enable-or-disable.md).
 
-Nachdem Sie dieses Skript ausgeführt haben, sehen Sie die folgenden neuen Datenbankrollen:
++ Benutzer müssen Rollen, die auf einer Ebene pro Datenbank zugewiesen werden. Diese Rollen bieten Benutzern die Möglichkeit, freigegeben oder privat Pakete installieren.
 
-+ `rpkgs-users`: Mitglieder dieser Rolle können alle freigegebenen Pakete, die von einem anderen installiert wurde `rpkgs-shared` Mitglied der Rolle.
++ Paket-Bibliotheken können installiert werden, mit der neuen T-SQL-Anweisung, externe Bibliothek erstellen. Allerdings müssen alle paketabhängigkeiten im Voraus vorbereitet und als Teil einer einzelnen ZIP-Datei installiert werden.
 
-+ `rpkgs-private`: Mitglieder dieser Rolle haben Zugriff auf freigegebene Pakete, mit den gleichen Berechtigungen als Mitglieder der `rpkgs-users` Rolle. Mitglieder dieser Rolle können auch installieren, entfernen und privat Bereichsbezogene Pakete verwenden.
+> [!NOTE]
+> Obwohl die hier beschriebenen Funktionen zu diesem Zeitpunkt voll funktionsfähig sind, enthalten zukünftige Versionen zusätzliche Verbesserungen, sodass es einfacher Paket Bibliotheken vorbereitet und zum Verwalten der Abhängigkeiten, an. Wenn Sie mit der Installation von R-Paket vertraut sind, wird empfohlen, dass Sie weiterhin die R-Tools für jetzt verwenden.
 
-+ `rpkgs-shared`: Mitglieder dieser Rolle haben die gleichen Berechtigungen als Mitglieder der `rpkgs-private` Rolle. Darüber hinaus können Mitglieder dieser Rolle installieren oder Entfernen von freigegebenen Paketen.
-
-+ `db_owner`: Mitglieder dieser Rolle haben die gleichen Berechtigungen als Mitglieder der `rpkgs-shared` Rolle. Darüber hinaus Mitglieder dieser Rolle können **gewähren** anderen Benutzern das Recht zum Installieren oder Entfernen von beiden gemeinsam genutzt und privater Pakete.
-
-Der Datenbankadministrator Hinzufügen von Benutzern für die Rollen auf der Grundlage einer pro Datenbank zum Steuern der Möglichkeit des Benutzers, um Pakete zu installieren.
-
-### <a name="package-scope"></a>Paketbereich
-
-Neue Features für das Paket zu Pakete unterscheiden, ob diese privat sind, oder von mehreren Benutzern gemeinsam genutzt werden können.
-
-+ **Freigegebener Bereich**
-
-    *Freigegebener Bereich* bedeutet, dass dieser Benutzer, die Berechtigung mit der gemeinsam genutzten Bereich angegeben wurden (`rpkgs-shared`) installieren und Deinstallieren von Paketen mit einer angegebenen Datenbank können. Ein Paket, das in einer Bibliothek des freigegebenen Bereichs installiert wurde, kann von anderen Benutzern der Datenbank auf SQL Server verwendet werden, sofern diesen Benutzern die Verwendung der installierten R-Pakete erlaubt ist.
-
-+ **Privater Bereich**
-
-    *Private Bereich* bedeutet, dass dieser Benutzer, die Mitgliedschaft in der privaten Bereich-Rolle zugewiesen wurde (`rpkgs-private`) installieren oder Deinstallieren von Paketen in einem privaten Speicherort pro Benutzer definierte können. Daher können alle Pakete, die im privaten Bereich installiert wurden, nur von dem Benutzer verwendet werden, der sie installiert hat. Anders gesagt kann ein Benutzer von SQL Server keine privaten Pakete verwenden, die von einem anderen Benutzer installiert wurden.
-
-Diese Modelle für den *freigegebenen* und den *privaten* Bereich können kombiniert werden, um benutzerdefinierte Sicherheitssysteme zum Bereitstellen und Verwalten von Paketen auf SQL Server zu entwickeln.
-
-Beispielsweise kann dem Leiter oder Manager einer Gruppe von Datenwissenschaftlern die Berechtigung zum Installieren von Paketen erteilt werden, und diese Pakete können dann von allen anderen Benutzern oder Datenwissenschaftlern in der gleichen SQL Server-Instanz verwendet werden.
-
-Für ein anderes Szenario ist möglicherweise eine stärkere Abgrenzung der Benutzer untereinander oder eine andere Verwendung von Paketen erforderlich. In einem solchen Fall kann der private Bereich verwendet werden, um Datenwissenschaftlern Einzelberechtigungen zu erteilen, die nur für das Installieren und Verwenden der von ihnen benötigten Pakete verantwortlich sind. Da Pakete auf Benutzerbasis installiert werden, wirken sich die von einem Benutzer installierten Pakete nicht auf die Arbeit anderer Benutzer aus, die die gleiche SQL Server-Datenbank verwenden.
-
-### <a name="create-external-library"></a>EXTERNE BIBLIOTHEK ERSTELLEN
+#### <a name="bkmk_createExternalLibrary"></a>EXTERNE BIBLIOTHEK ERSTELLEN 
 
 Die [externe Bibliothek erstellen](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) ist eine neue T-SQL-Anweisung in SQL Server-2017 um den Datenbankadministrator mit Paketen arbeiten, ohne R-Benutzertools unterstützen eingeführt. 
 
@@ -133,68 +175,26 @@ Nachdem Sie die externe Bibliothek an den Server hochgeladen wurde, müssen Sie 
 
 + Verbinden mit SQL Server von einem Remoteclient von R, und führen Sie [RxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) in der SQL Server-computekontext. Berechtigungen zum Installieren von Paketen müssen Sie erneut, entweder in private oder freigegebene Bereich dazu verfügen.
 
-Beispiele für die Installation mittels R und T-SQL finden Sie unter [Installieren zusätzlicher Pakete unter SQL Server](install-additional-r-packages-on-sql-server.md).
+Um sicherzustellen, dass alle paketabhängigkeiten angegeben werden, es wird empfohlen, [MiniCRAN](create-a-local-package-repository-using-minicran.md) um ein lokales Repository zu erstellen. Diese ZIP-Datei können dann um das Zielpaket und seine Abhängigkeiten zu installieren.
 
-### <a name="new-r-functions-for-package-installation"></a>Neue R-Funktionen für die Paketinstallation
+#### <a name="bkmk_roles"></a>Datenbankrollen für paketverwaltung 
 
-Nach dem Datenbankrollen für die paketverwaltung aktiviert wurden, Benutzer können auch neuer Funktionen in [ **"revoscaler"** ](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) zum Installieren von Paketen für die Instanz, die als SQL Server-computekontext angegeben.
+Die neuen Rollen, die im SQL Server für paketverwaltung bereitgestellt sind nicht standardmäßig auch in Instanzen enthalten, wobei Machine Learning installiert und aktiviert wurde. Sie müssen die Rollen hinzufügen, durch Ausführen eines Skripts, wie beschrieben hier: [aktivieren oder Deaktivieren der paketverwaltung](r-package-how-to-enable-or-disable.md).
 
-+ Der Data Scientist kann erforderlichen R-Pakete auf SQL Server installieren, ohne direkten Zugriff auf die SQL Server-Computer.
+Nachdem Sie dieses Skript ausgeführt haben, sehen Sie die folgenden neuen Datenbankrollen:
 
-+ Ein Benutzer kann ein Paket installieren und freigeben, durch die Installation des Pakets mit freigegebenen Bereich. Andere autorisierte Benutzer die gleiche SQL Server-Datenbank können Sie dann das Paket zugreifen.
++ `rpkgs-users`: Mitglieder dieser Rolle können alle freigegebenen Pakete, die von einem anderen installiert wurde `rpkgs-shared` Mitglied der Rolle.
 
-+ Benutzer können privater Pakete, die für andere, nicht sichtbar sind installieren und einen privaten Sandkastens für R-Pakete erstellen.
++ `rpkgs-private`: Mitglieder dieser Rolle haben Zugriff auf freigegebene Pakete, mit den gleichen Berechtigungen als Mitglieder der `rpkgs-users` Rolle. Mitglieder dieser Rolle können auch installieren, entfernen und privat Bereichsbezogene Pakete verwenden.
 
-Die folgenden Paketverwaltungsfunktionen werden in "revoscaler", für die Installation und Deinstallation von Paketen in einen angegebenen computekontext bereitgestellt:
++ `rpkgs-shared`: Mitglieder dieser Rolle haben die gleichen Berechtigungen als Mitglieder der `rpkgs-private` Rolle. Darüber hinaus können Mitglieder dieser Rolle installieren oder Entfernen von freigegebenen Paketen.
 
--   [RxInstalledPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstalledpackages): erfahren Sie mehr über Pakete, die in der angegebenen computekontext installiert.
++ `db_owner`: Mitglieder dieser Rolle haben die gleichen Berechtigungen als Mitglieder der `rpkgs-shared` Rolle. Darüber hinaus Mitglieder dieser Rolle können **gewähren** anderen Benutzern das Recht zum Installieren oder Entfernen von beiden gemeinsam genutzt und privater Pakete.
 
--   [RxInstallPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstallpackages): Installieren von Paketen in einer computekontext, aus einem angegebenen Repository oder durch Lesen, lokal gespeichert, die ZIP-Paketen.
+Der Datenbankadministrator kann Benutzer zu Rollen auf jeweils pro Datenbank hinzufügen.
 
--   [RxRemovePackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxremovepackages): installierte Pakete über einen computekontext entfernen.
 
--   [RxFindPackage](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxfindpackage): Rufen Sie den Pfad für ein oder mehrere Pakete in der angegebenen computekontext.
-
--   [RxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages): eine Bibliothek Paket zwischen dem Dateisystem und Datenbanken in der angegebenen rechenkontexte kopiert.
-
--   [RxSqlLibPaths](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqllibpaths): den Suchpfad für die Bibliothek Strukturen für Pakete während der Ausführung in der SQL-Server abrufen.
-
-Verbinden Sie für die Verwendung dieser Funktionen mit einer Instanz von SQL Server, auf dem Sie die erforderlichen Berechtigungen mithilfe einen SQL Server-computekontext. Wenn Sie eine Verbindung herstellen, bestimmen Ihre Anmeldeinformationen an, ob der Vorgang auf dem Server abgeschlossen werden kann.
-
-Die Funktionen zur Paketinstallation prüfen Abhängigkeiten und stellen sicher, dass alle zugehörigen Pakete in SQL Server installiert werden können, gerade wie bei der Installation von R-Paketen im lokalen Rechenkontext. Die Funktion, die Pakete deinstalliert, berechnet ebenfalls Abhängigkeiten und stellt sicher, dass Pakete, die nicht mehr von anderen Paketen in SQL Server verwendet werden, entfernt werden, um Ressourcen freizugeben.
-
-> [!NOTE]
-> 
-> Diese neuen Funktionen sind in SQL Server-2017 standardmäßig enthalten. Sie können Ihre Version von "revoscaler" abzurufenden dieser Funktionen durch ein Upgrade der Instanz für eine höhere Version von Microsoft R Server, z. B. Microsoft R Server 9.0.1 aktualisieren.
-> 
-> Weitere Informationen finden Sie unter [verwenden SqlBindR.exe auf UpgradeR](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
-
-### <a name="synchronization-of-r-package-libraries"></a>Synchronisierung von R-Paket-Bibliotheken
-
-Die CTP-Version 2.0-Version von SQL Server-2017 (und der Version April 2017 von Microsoft R Server) enthält neue R-Funktionen für *synchronisieren Pakete*.
-
-Paket synchronisieren bedeutet, dass das Datenbankmodul die Pakete, die von einem bestimmten Besitzer und die Gruppe verwendet werden nachverfolgt, und können diese Pakete in das Dateisystem schreiben, bei Bedarf. Paketsynchronisierung können in diesen Szenarien:
-
-+ R-Pakete zwischen Instanzen von SQL Server verschoben werden sollen.
-+ Sie müssen zum Installieren der Pakete für einen bestimmten Benutzer oder eine Gruppe, nachdem eine Datenbank wiederhergestellt wird.
-
-Weitere Informationen zum Aktivieren und verwenden Sie dieses Feature finden Sie unter [R-Paket-Synchronisierung für SQL Server](package-install-uninstall-and-sync.md).
-
-## <a name="r-package-management-using-traditional-r-tools"></a>R-paketverwaltung mit herkömmlichen R-tools
-
-Die herkömmliche Methode zur Verwaltung von R-Pakete auf einer Instanz ist zum Installieren und die Liste der Pakete mithilfe von R-Tools und Befehle. 
-
-+ Diese Option möglicherweise die einzige Option, wenn Sie eine frühe Version von SQL Server 2016 verwenden.  
-+ Diese Option kann auch einfacher wird, wenn Sie der einzige Benutzer der R-Pakete und verfügen über Administratorzugriff auf den Server.
-+ Verwalten von Versionen der R-Paket zu vereinfachen, können Sie [MiniCRAN](create-a-local-package-repository-using-minicran.md) zu erstellen, ein lokales Repository, die zwischen Instanzen freigeben.
-
-Einzelheiten finden Sie in folgenden Artikeln:
-
-+ [Installieren Sie zusätzliche R-Pakete unter SQL Server](install-additional-r-packages-on-sql-server.md)
-+ [Ermitteln der auf SQL Server installierten Pakete](determine-which-packages-are-installed-on-sql-server.md)
-
-Für SQL Server-2017, wir empfehlen die Verwendung von EXTERNEN Bibliothek erstellen und die Datenbankrollen zum Verwalten von Benutzern und ihre R-Pakete enthält.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Aktivieren oder Deaktivieren der R-Paket-Verwaltung](../r/r-package-how-to-enable-or-disable.md)
+[Paketverwaltung für SQL Server-Machine Learning](r-package-management-for-sql-server-r-services.md)

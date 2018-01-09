@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,13 +21,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2b01f01f0ed67f490f32e9310cbb1c239c3cbe17
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 34300c8642dcc48aff1b470a0b027a0e85cf8076
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="clustering-model-query-examples"></a>Beispiele für Clusteringmodellabfragen
+# <a name="clustering-model-query-examples"></a>Beispiele für Clustermodellabfragen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Wenn Sie eine Abfrage für ein Datamining-Modell erstellen, können Sie Metadaten zum Modell abrufen oder erstellen eine Inhaltsabfrage, die Details über die in der Analyse erkannten Muster bereitstellt. Sie können auch eine Vorhersageabfrage erstellen, die anhand der Muster des Modells Vorhersagen für neue Daten generiert. Jeder Abfragetyp stellt andere Informationen bereit. Eine Inhaltsabfrage stellt beispielsweise zusätzliche Details über die gefundenen Cluster zur Verfügung, während eine Vorhersageabfrage Aufschluss darüber gibt, zu welchem Cluster ein neuer Datenpunkt höchstwahrscheinlich gehört.  
   
  In diesem Abschnitt wird erklärt, wie die Abfragen für Modelle erstellt werden, die auf dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering-Algorithmus basieren.  
@@ -85,7 +83,7 @@ WHERE NODE_TYPE = 1
 |NODE_CAPTION|Clustermodell|  
 |NODE_SUPPORT|12939|  
 |CHILDREN_CARDINALITY|10|  
-|NODE_DESCRIPTION|Alle|  
+|NODE_DESCRIPTION|All|  
   
  Eine Definition der Bedeutung dieser Spalten in einem Clustermodell finden Sie unter [Miningmodellinhalt von Clustermodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
   
@@ -175,13 +173,13 @@ WHERE NODE_TYPE = 5
 |001|3|0.034481552|  
 |001|4|0.013503302|  
 |001|0|0.013453236|  
-|001|Nicht vorhanden|0|  
+|001|Missing|0|  
 |002|0|0.576980023|  
 |002|1|0.406623939|  
 |002|2|0.016380082|  
 |002|3|1.60E-05|  
 |002|4|0|  
-|002|Nicht vorhanden|0|  
+|002|Missing|0|  
   
  [Zurück zum Anfang](#bkmk_top2)  
   
@@ -393,9 +391,9 @@ NATURAL PREDICTION JOIN
 |[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|Gibt den Unterstützungswert für einen bestimmten Status zurück.|  
 |[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|Gibt die Varianz einer angegebenen Spalte zurück.|  
   
- Die Syntax einzelner Funktionen finden Sie unter [Data Mining-Erweiterungen – Funktionsreferenz &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
+ Die Syntax einzelner Funktionen finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; – Funktionsreferenz](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Data Mining-Abfrage](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft Clustering Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
  [Microsoft Clustering-Algorithmus](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)  

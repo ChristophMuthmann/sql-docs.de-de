@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 98489e4d67bdd2f20f246f196aa2fce427cd3a38
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 71ad6aeb379fa1953b041cc1d5ae676dde33f0c6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="disallowed-types-and-members-in-mscorlibdll"></a>Unzulässige Typen und Elemente in "mscorlib.dll"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] common Language-integrationsprogrammierung (CLR) lässt die Verwendung von einem Typ oder Member mit einem **HostProtectionAttribute** , die angibt, eine **System.Security.Permissions.HostProtectionResource**  -Enumeration mit dem Wert des **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**,  **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**,  **Synchronisierung**, oder **UI**. In der folgenden Tabelle sind die Elemente und Typen der mscorlib.dll-Assembly aufgeführt, deren Hostschutzattribut-Werte nicht zulässig sind.  

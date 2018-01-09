@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -27,11 +27,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6f94d2fe217f63e522b8a3d49196e13da0e12451
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7cf33a5422388ee37f1d7da4f5c48ce1c6ad855c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>Verwenden von Anweisungsparametern - Binden von Parametern
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
  Wenn **SQL_DESC_NAME** festgelegt ist für die Parameter einer gespeicherten Prozedur auch alle gespeicherten Prozedurparameter in der Abfrage festlegen sollten **SQL_DESC_NAME**.  Wenn Literale in gespeicherten Prozeduraufrufen verwendet werden, für den Parameter haben **SQL_DESC_NAME** festgelegt ist, sollten die Literale das Format verwendet *"Namen*=*Wert*", wobei *Namen* ist der Parametername der gespeicherten Prozedur (z. B. @p1). Weitere Informationen finden Sie unter [Bindungsparameter von Namen (Parameter genannt)](http://go.microsoft.com/fwlink/?LinkId=167215).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwenden von Anweisungsparametern](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  
   
   

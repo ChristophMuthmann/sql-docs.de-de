@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 77bad0900d5d636a06ed1b836697e96120d0a7cd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c35cd0e0174ffc94c498007fff8a314d2094856a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="imdembeddeddata-interface"></a>IMDEmbeddedData-Schnittstelle
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die IMDEmbeddedData-Schnittstelle ist eine öffentliche Schnittstelle verwendet, um ein eingebettetes verwalten [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Datenbank oder einer tabellarischen Modelldatenbank. Die Schnittstelle erbt von der **IPersistStream** Schnittstelle. Die Schnittstelle lässt folgende Vorgänge zu:  
@@ -107,12 +105,12 @@ HRESULT GetStreamIdentifier (
  **E_FAIL**  
  Beim Zugriff auf den Datenstrombezeichner ist ein Fehler aufgetreten.  
   
-#### <a name="remarks"></a>Hinweise  
+#### <a name="remarks"></a>Remarks  
  Um zu überprüfen, ob die aktuelle Verbindung eine eingebettete Datenbank enthält, sollte der Benutzer den Wert der DBPROP_MSMD_EMBEDDED_DATA-Eigenschaft in den OLE DB-Verbindungseigenschaften überprüfen.  
   
  Die möglichen Werte für DBPROP_MSMD_EMBEDDED_DATA lauten wie folgt:  
   
-|Name|Wert|Definition|  
+|Name|value|Definition|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|Es ist keine eingebettete Datenbank verfügbar.|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|Die aktuelle Anwendung enthält die eingebettete Datenbank.|  

@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 28714c32-718f-4f31-a597-b3289b04b864
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1bf91c2e3c09b30f5e9ea48756ae2b7c9f889644
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8348c7c3ee60d7032f9c8af373ce5b9e1a026f8f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Datenbankkonsistenzprüfung (DBCC) für Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]DBCC ermöglicht bei Bedarf datenbanküberprüfungen für mehrdimensionale und tabellarische Datenbanken auf einer Analysis Services-Instanz. Sie können DBCC in einem MDX- oder XMLA-Abfragefenster in SQL Server Management Studio (SSMS) ausführen und die DBCC-Ausgabe in SQL Server Profiler- oder XEvent-Sitzungen in SSMS verfolgen.  
@@ -239,17 +236,17 @@ Execution complete
 |Hierarchy|Ein Fehler wird ausgelöst, wenn die Sortierreihenfolge für die Hierarchie kein gültiger Wert ist.|Fehler bei Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Hierarchie „%{hier/}“.|  
 |Hierarchy|Die in der Hierarchie ausgeführten Prüfungen sind abhängig vom internen Typ des verwendeten Hierarchiezuordnungsschemas.<br /><br /> Alle Hierarchien werden auf den richtigen verarbeiteten Status, auf das Vorhandensein des Hierarchiespeichers und ggf. auf das Vorhandensein von Datenstrukturen, die für eine Konvertierung der Daten-ID in eine Hierarchieposition verwendet werden, überprüft.<br /><br /> Wenn alle Prüfungen erfolgreich sind, wird die Hierarchiestruktur durchlaufen, um sicherzustellen, dass jede Position in der Hierarchie auf das richtige Element verweist.<br />Wenn einer dieser Tests fehlschlägt, wird ein Fehler ausgelöst.|Fehler bei Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Hierarchie „%{hier/}“.|  
 |Benutzerdefinierte Hierarchie|Überprüft, ob die Namen der Hierarchieebenen festgelegt wurden.<br /><br /> Wenn die Hierarchie verarbeitet wurde, wird überprüft, ob der interne Hierarchiedatenspeicher das richtige Format aufweist.  Es wird sichergestellt, dass der interne Hierarchiespeicher keine ungültigen Datenwerte enthält.<br /><br /> Wenn die Hierarchie als nicht verarbeitet gekennzeichnet ist, vergewissern Sie sich, dass dieser Status für alte Datenstrukturen gilt und dass alle Ebenen der Hierarchie als leer markiert sind.|Fehler bei Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Hierarchie „%{hier/}“.|  
-|Column|Ein Fehler wird ausgelöst, wenn die für die Spalte verwendete Codierung nicht auf einen bekannten Wert festgelegt ist.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Spaltenstatistik fehlgeschlagen.|  
-|Column|Es wird überprüft, ob die Spalte vom Modul im Speicher komprimiert wurde.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Spaltenstatistik fehlgeschlagen.|  
-|Column|Der Typ der Komprimierung der Spalte wird auf bekannte Werte überprüft.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Spaltenstatistik fehlgeschlagen.|  
-|Column|Wenn die „Tokenisierung“ der Spalte nicht auf einen bekannten Wert festgelegt ist, wird ein Fehler ausgelöst.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Spaltenstatistik fehlgeschlagen.|  
-|Column|Wenn der für ein Datenwörterbuch für Spalten gespeicherte ID-Bereich nicht mit der Anzahl der Werte im Datenwörterbuch übereinstimmt oder außerhalb des zulässigen Bereichs liegt, wird ein Fehler ausgelöst.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens des Datenwörterbuchs fehlgeschlagen.|  
-|Column|Es wird überprüft, ob die Anzahl der Datensegmente für eine Spalte mit der Anzahl der Datensegmente für die Tabelle, zu der sie gehört, übereinstimmt.|Beschädigung in der Speicherebene. Segmentsammlung in der Spalte „%{parent/}“ ist beschädigt.|  
-|Column|Es wird überprüft, ob die Anzahl der Partitionen für eine Datenspalte mit der Anzahl der Partitionen für die Datensegmentzuordnung der Spalte übereinstimmt.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Segmentzuordnung fehlgeschlagen.|  
-|Column|Es wird überprüft, ob die Anzahl der Datensätze in einem Spaltensegment mit der im Index für das Spaltensegment gespeicherten Anzahl der Datensätze übereinstimmt.|Beschädigung in der Speicherebene. Segmentsammlung in der Spalte „%{parent/}“ ist beschädigt.|  
-|Column|Wenn eine Spalte keine Segmentstatistiken enthält, wird ein Fehler ausgelöst.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Segmentstatistik fehlgeschlagen.|  
-|Column|Wenn eine Spalte keine Komprimierungsinformationen oder keinen Segmentspeicher enthält, wird ein Fehler ausgelöst.|Die Datenbankdateien haben die Konsistenzprüfungen nicht bestanden.|  
-|Column|Ein Fehler wird gemeldet, wenn Segmentstatistiken für eine Spalte nicht mit den tatsächlichen Spaltenwerten für die minimale Daten-ID, die maximale Daten-ID, die Anzahl unterschiedlicher Werte, die Anzahl der Zeilen oder das Vorhandensein von NULL-Werten übereinstimmen.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Segmentstatistik fehlgeschlagen.|  
+|Spalte|Ein Fehler wird ausgelöst, wenn die für die Spalte verwendete Codierung nicht auf einen bekannten Wert festgelegt ist.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Spaltenstatistik fehlgeschlagen.|  
+|Spalte|Es wird überprüft, ob die Spalte vom Modul im Speicher komprimiert wurde.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Spaltenstatistik fehlgeschlagen.|  
+|Spalte|Der Typ der Komprimierung der Spalte wird auf bekannte Werte überprüft.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Spaltenstatistik fehlgeschlagen.|  
+|Spalte|Wenn die „Tokenisierung“ der Spalte nicht auf einen bekannten Wert festgelegt ist, wird ein Fehler ausgelöst.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Spaltenstatistik fehlgeschlagen.|  
+|Spalte|Wenn der für ein Datenwörterbuch für Spalten gespeicherte ID-Bereich nicht mit der Anzahl der Werte im Datenwörterbuch übereinstimmt oder außerhalb des zulässigen Bereichs liegt, wird ein Fehler ausgelöst.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens des Datenwörterbuchs fehlgeschlagen.|  
+|Spalte|Es wird überprüft, ob die Anzahl der Datensegmente für eine Spalte mit der Anzahl der Datensegmente für die Tabelle, zu der sie gehört, übereinstimmt.|Beschädigung in der Speicherebene. Segmentsammlung in der Spalte „%{parent/}“ ist beschädigt.|  
+|Spalte|Es wird überprüft, ob die Anzahl der Partitionen für eine Datenspalte mit der Anzahl der Partitionen für die Datensegmentzuordnung der Spalte übereinstimmt.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Segmentzuordnung fehlgeschlagen.|  
+|Spalte|Es wird überprüft, ob die Anzahl der Datensätze in einem Spaltensegment mit der im Index für das Spaltensegment gespeicherten Anzahl der Datensätze übereinstimmt.|Beschädigung in der Speicherebene. Segmentsammlung in der Spalte „%{parent/}“ ist beschädigt.|  
+|Spalte|Wenn eine Spalte keine Segmentstatistiken enthält, wird ein Fehler ausgelöst.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Segmentstatistik fehlgeschlagen.|  
+|Spalte|Wenn eine Spalte keine Komprimierungsinformationen oder keinen Segmentspeicher enthält, wird ein Fehler ausgelöst.|Die Datenbankdateien haben die Konsistenzprüfungen nicht bestanden.|  
+|Spalte|Ein Fehler wird gemeldet, wenn Segmentstatistiken für eine Spalte nicht mit den tatsächlichen Spaltenwerten für die minimale Daten-ID, die maximale Daten-ID, die Anzahl unterschiedlicher Werte, die Anzahl der Zeilen oder das Vorhandensein von NULL-Werten übereinstimmen.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Segmentstatistik fehlgeschlagen.|  
 |ColumnSegment|Wenn die minimale Daten-ID oder die maximale Daten-ID kleiner als der vom System reservierte Wert für NULL ist, werden die Spaltensegmentinformationen als beschädigt markiert.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Segmentstatistik fehlgeschlagen.|  
 |ColumnSegment|Wenn keine Zeilen für dieses Segment vorhanden sind, sollten die minimalen und maximalen Datenwerte für die Spalte auf den vom System reservierten Wert für NULL festgelegt werden.  Wenn der Wert nicht null ist, wird ein Fehler ausgelöst.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Segmentstatistik fehlgeschlagen.|  
 |ColumnSegment|Wenn die Spalte Zeilen und mindestens einen Wert ungleich null aufweist, wird überprüft, ob die minimale und die maximale Daten-ID für die Spalte größer als der vom System reservierte Wert für NULL ist.|Datenbankkonsistenzprüfungen (DBCC) während des Überprüfens der Segmentstatistik fehlgeschlagen.|  
@@ -261,8 +258,8 @@ Execution complete
 |DBCC-Tabelle|Für die validierte Tabelle wird überprüft, ob die Anzahl der Spalten kleiner ist als null. In dem Fall wird ein Fehler ausgelöst.  Ein Fehler tritt auch auf, wenn der Spaltenspeicher für eine Spalte in der Tabelle NULL ist.|Beschädigung in der Speicherebene. Spaltensammlung in der Tabelle „%{parent/}“ ist beschädigt.|  
 |DBCC-Partition|Überprüft die Tabelle, zu der die Partition gehört, die validiert wird. Wenn die Anzahl der Spalten für die Tabelle kleiner als null ist, wird angegeben, dass die Spaltensammlung für die Tabelle beschädigt ist. Ein Fehler tritt auch auf, wenn der Spaltenspeicher für eine Spalte in der Tabelle NULL ist.|Beschädigung in der Speicherebene. Spaltensammlung in der Tabelle „%{parent/}“ ist beschädigt.|  
 |DBCC-Partition|Durchläuft jede Spalte für die ausgewählte Partition und überprüft, ob jedes Segment für die Partition einen gültigen Link zu einer Spaltensegmentstruktur aufweist.  Wenn ein Segment einen NULL-Link enthält, wird die Partition als beschädigt betrachtet.|Beschädigung in der Speicherebene. Segmentsammlung in der Spalte „%{parent/}“ ist beschädigt.|  
-|Column|Gibt einen Fehler zurück, wenn der Spaltentyp nicht gültig ist.|Fehlerhafter Segmenttypen festgestellt.|  
-|Column|Gibt einen Fehler zurück, wenn eine Spalte eine negative Anzahl für die Anzahl der Segmente in einer Spalte aufweist oder wenn der Zeiger für die Spaltensegmentstruktur für ein Segment einen NULL-Link enthält.|Beschädigung in der Speicherebene. Segmentsammlung in der Spalte „%{parent/}“ ist beschädigt.|  
+|Spalte|Gibt einen Fehler zurück, wenn der Spaltentyp nicht gültig ist.|Fehlerhafter Segmenttypen festgestellt.|  
+|Spalte|Gibt einen Fehler zurück, wenn eine Spalte eine negative Anzahl für die Anzahl der Segmente in einer Spalte aufweist oder wenn der Zeiger für die Spaltensegmentstruktur für ein Segment einen NULL-Link enthält.|Beschädigung in der Speicherebene. Segmentsammlung in der Spalte „%{parent/}“ ist beschädigt.|  
 |DBCC-Befehl|Der DBCC-Befehl zeigt mehrere Meldungen an, während er den DBCC-Vorgang durchführt.  Er zeigt vor dem Start eine Statusmeldung an, die den Datenbank-, Tabellen- oder Spaltennamen des Objekts enthält, und eine weitere nach Abschluss der einzelnen Objektüberprüfungen.|Überprüfen der Konsistenz der \<Objectname > \<Objecttype >. Phase: vorab prüfen.<br /><br /> Überprüfen der Konsistenz der \<Objectname > \<Objecttype >. Phase: Nachprüfung.|  
   
 ## <a name="common-resolutions-for-error-conditions"></a>Allgemeine Lösungen für Fehlerbedingungen  
@@ -305,7 +302,7 @@ Execution complete
 > [!NOTE]  
 >  Diese Einstellung hat keine Auswirkungen auf DBCC, wenn der Befehl nach Bedarf ausgeführt wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verarbeiten von Datenbank, Tabelle oder Partition &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [Verarbeiten eines mehrdimensionalen Modells &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Überwachen einer Instanz von Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   

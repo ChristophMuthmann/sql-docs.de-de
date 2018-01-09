@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords: sql13.swb.assemblies.general.f1
@@ -18,16 +18,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b6598c6a24fcf23a9ebcdab0cdc736df9b2f9f39
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cf08c95a2dad30afb8920f9519791ecf4a3fc51f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="assemblies---properties"></a>Assemblys - Eigenschaften
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Verwenden Sie diese Seite anzeigen oder Ändern von Eigenschaften für die Assembly an.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **AssemblyName**  
  Zeigt den Assemblynamen an, der immer mit dem Namen der CLR-Assembly übereinstimmt.  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
  **Version**  
  Zeigt die Versionsnummer der Assembly an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
   
   

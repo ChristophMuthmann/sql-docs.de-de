@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b6153914ef43333ad2feefb1dd428974c15eb83b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 41ff7f36b26ddc1adc96bcbc9569c5a697741dd5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="supported-net-framework-libraries"></a>Unterstützte .NET Framework-Bibliotheken
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Mit der common Language Runtime (CLR) in gehosteten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], können Sie gespeicherte Prozeduren, Trigger, benutzerdefinierte Funktionen, benutzerdefinierte Typen und benutzerdefinierte Aggregate in verwaltetem Code erstellen. Mit den in den Bibliotheken der .NET Framework-Klasse verfügbaren Funktionen haben Sie Zugriff auf vorgefertigte Klassen, die Funktionen u. a. zur Zeichenfolgenbearbeitung, für erweiterte mathematische Vorgänge, den Dateizugriff und die Kryptografie bereitstellen. Auf diese Klassen können Sie von jeder verwalteten gespeicherten Prozedur, jedem benutzerdefinierten Typ, jedem Trigger, jeder benutzerdefinierten Funktion oder jedem benutzerdefinierten Aggregat aus zugreifen.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
   
  Z. B. die **System.DirectoryServices** Namespace wird nicht unterstützt. Sie müssen die System.DirectoryServices.dll-Assembly mit registrieren **UNSAFE** Berechtigungen, bevor Sie sie aus dem Code aufrufen können. Die **UNSAFE** Berichtigung ist notwendig da Klassen in der **System.DirectoryServices** Namespace entsprechen nicht die Anforderungen für **sichere** oder  **EXTERNAL_ACCESS**. Weitere Informationen finden Sie unter [CLR Integration Programming Model Einschränkungen](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md) und [CLR Integration Code Access Security](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen einer Assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
  [CLR Integration Code Access Security](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [CLR-Integration: Beschränkungen des Programmiermodells](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)  

@@ -4,14 +4,11 @@ ms.date: 10/19/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 14a6ca056a079b4a51813783883cc09c5f53e8ad
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1d0894a7718907bcbfa26565f80494cdce719287
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-model-designer-ssas"></a>Tabellen-Modell-Designer (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Der Designer für tabellarische Modelle ist Bestandteil des [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], integriert in Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], zusätzliche Projekttypvorlagen speziell für die Entwicklung von Projektmappen für professionelle tabellarische Modelle.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] wird als kostenloser Webdownload installiert. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).    
@@ -95,7 +92,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Tabelle  
   
--   Column  
+-   Spalte  
   
 -   Measure  
   
@@ -130,14 +127,14 @@ ms.lasthandoff: 12/08/2017
  Die Analysis Services-Symbolleiste ermöglicht den schnellen und einfachen Zugriff auf die am häufigsten verwendeten Befehle für die Modellerstellung.  
   
 ##  <a name="bkmk_vsint"></a>Visual Studio-integration  
- **Datenquellen-Steuerelements**  
+ **Quellcodeverwaltung**  
  Analysis Services-Projekte werden mit dem ausgewählten Plug-In für die Quellcodeverwaltung integriert. Wenn Sie Visual Studio für die Verwendung der Quellcodeverwaltung konfiguriert haben, können Sie die Funktionen zum Ein-/Auschecken im Projektmappen-Explorer verwenden. Weitere Informationen zum Konfigurieren von Team Foundation Server finden Sie unter [Konfigurieren von Visual Studio für die Verwendung der Team Foundation-Versionskontrolle](http://msdn.microsoft.com/library/ms253064.aspx). Viele Drittanbieter-Plug-Ins für die Quellcodeverwaltung werden ebenfalls unterstützt.  
   
  **Schriftarten**  
  Tabellarische Modelle verwenden die Schriftart der [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] -Umgebung, um die Schriftarten in der Anzeige zu steuern. Es kann erforderlich sein, diese Schriftart zu ändern, wenn die [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] -Standardschriftart nicht über alle Unicode-Zeichen verfügt, die Sie für Ihre Sprache benötigen. Klicken Sie zum Ändern von Schriftarten auf das Menü **Extras** &gt; **Optionen**und anschließend auf **Schriftarten und Farben**.  
   
  **Tastenkombinationen**  
- Die Analysis Services-Tastenkombinationen können über das Dialogfeld Tools->Optionen->Tastatur konfiguriert bzw. neu zugeordnet werden. Einige globale [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] -Verknüpfungen, wie z.B. „Erstellen“, „Speichern“, „Debuggen“, „neues Projekt“ usw., werden im Kontext des Designers für tabellarische Modelle unterstützt. Andere spezifische Tastenkombinationen des Designers für tabellarische Modelle sind im Analysis Services-Kontext verfügbar.  
+ Die Analysis Services-Tastenkombinationen können über das Dialogfeld Tools->Optionen->Tastatur konfiguriert bzw. neu zugeordnet werden. Einige globale [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Verknüpfungen, wie z.B. „Erstellen“, „Speichern“, „Debuggen“, „neues Projekt“ usw., werden im Kontext des Designers für tabellarische Modelle unterstützt. Andere spezifische Tastenkombinationen des Designers für tabellarische Modelle sind im Analysis Services-Kontext verfügbar.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Tabellenmodellprojekte &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   

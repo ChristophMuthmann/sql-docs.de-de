@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: kbMDX
@@ -22,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a4dd6fad354f66226b72ad6a61ff9e5bf7529372
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 22201d4c387a5f76d2ec66066d8bdd767a036fc2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-reserved-words"></a>Reservierte Wörter in MDX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/27/2017
 |BASC|DROP|MEMBERTOSTR|STRTOVAL|  
 |BDESC|EMPTY|MIN|STRTOVALUE|  
 |BEFORE|END|MTD|SUBSET|  
-|BEFORE_AND_AFTER|ERROR|NAME|SUM|  
+|BEFORE_AND_AFTER|Fehler|NAME|SUM|  
 |BOTTOMCOUNT|EXCEPT|NAMETOSET|TAIL|  
 |BOTTOMPERCENT|EXCLUDEEMPTY|NEST|THIS|  
 |BOTTOMSUM|EXTRACT|NEXTMEMBER|TOGGLEDRILLSTATE|  
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/27/2017
 |DEFAULT_MEMBER|LASTSIBLING|SELF_AND_AFTER||  
 |DEFAULTMEMBER|LEAD|SELF_AND_BEFORE||  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Reservierte Schlüsselwörter &#40; MDX-Syntax &#41;](../mdx/reserved-keywords-mdx-syntax.md)   
  [MDX-Sprachreferenz &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)  
   

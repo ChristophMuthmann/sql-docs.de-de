@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-date-time
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: date/time [OLE DB], schema rowsets
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ed0fda68433b9a5d32f2d0949c7d8e7541f2b465
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fa7700c8743fde8d0818c896d510e23f035a1448
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>Metadaten: Datum und Uhrzeit und Schemarowsets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,10 +35,10 @@ ms.lasthandoff: 11/17/2017
   
 |Spaltentyp|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|Datum|DBTYPE_DBDATE|Löschen|0|  
+|date|DBTYPE_DBDATE|Löschen|0|  
 |Uhrzeit|DBTYPE_DBTIME2|Legen Sie|0..7|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|Löschen|0|  
-|datetime|DBTYPE_DBTIMESTAMP|Löschen|3|  
+|DATETIME|DBTYPE_DBTIMESTAMP|Löschen|3|  
 |datetime2|DBTYPE_DBTIMESTAMP|Legen Sie|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Legen Sie|0..7|  
   
@@ -72,9 +72,9 @@ ms.lasthandoff: 11/17/2017
 ## <a name="providertypes-rowset"></a>PROVIDER_TYPES-Rowset  
  Die folgenden Zeilen werden für date/time-Typen zurückgegeben:  
   
-|Typ -><br /><br /> Column|Datum|Uhrzeit|smalldatetime|datetime|datetime2|datetimeoffset|  
+|Typ -><br /><br /> Spalte|date|Uhrzeit|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|Datum|Uhrzeit|smalldatetime|datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|date|Uhrzeit|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_DBDATE|DBTYPE_DBTIME2|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|Datum|Uhrzeit|smalldatetime|datetime|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|Uhrzeit|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|0|NULL|NULL|0|0|  
 |MAXIMUM_SCALE|NULL|7|NULL|NULL|7|7|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
   
  OLE DB definiert lediglich MINIMUM_SCALE und MAXIMUM_SCALE für numerische und Dezimaltypen, weshalb die Verwendung dieser Spalten für time, datetime2 und datetimeoffset durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client nicht standardmäßig ist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Metadaten &#40; OLE DB &#41;](http://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
   
   
