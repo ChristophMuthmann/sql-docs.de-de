@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d91930309e865b84f4d6e763a46026879bdc47c5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 970daabf89244a93719e273b4bff7f322cb23fe6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>BI-Assistent – Hinzufügen von Kontointelligenz zu einer Dimension
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Fügen Sie die kontointelligenzerweiterung kann einem Cube oder einer Dimension für das Standardkonto, z. B. Einnahmen und Ausgaben um Elementen eines Kontoattributs zuzuweisen. Diese Erweiterung identifiziert auch Kontotypen (wie Asset und Liability) und weist jedem Kontotyp die entsprechende Aggregation zu. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] kann die Klassifikationen verwenden, um Konten im Zeitverlauf zu aggregieren.  
@@ -55,7 +52,7 @@ ms.lasthandoff: 12/08/2017
   
     |Serverkontotyp|Aggregation|Description|  
     |-------------------------|-----------------|-----------------|  
-    |**Statistisch**|**InclusionThresholdSetting**|Ein berechnetes Verhältnis von etwas oder eine Anzahl von etwas, das nicht im Verlauf der Zeit aggregiert wird. Für diesen Kontotyp wird keine Konvertierung von Währungsdaten mit Konvertierungsregeln ausgeführt.|  
+    |**Statistisch**|**Keine**|Ein berechnetes Verhältnis von etwas oder eine Anzahl von etwas, das nicht im Verlauf der Zeit aggregiert wird. Für diesen Kontotyp wird keine Konvertierung von Währungsdaten mit Konvertierungsregeln ausgeführt.|  
     |**Liability**|**LastNonEmpty**|Das Geld oder der Wert von Dingen, das bzw. der zu einem bestimmten Zeitpunkt geschuldet wird. Für diesen Kontotyp werden im Verlauf der Zeit keine Akkumulierungen und daher auch keine natürlichen Aggregationen ausgeführt. So entspricht z. B. die Menge für Year dem Wert des letzten Monats, der Daten enthält. Für diesen Kontotyp können Währungen mit dem zum End of Period-Zeitpunkt gültigen Wechselkurs konvertiert werden.|  
     |**Asset**|**LastNonEmpty**|Das Geld oder der Wert von Dingen, die zu einem bestimmten Zeitpunkt im Besitz sind. Für diesen Kontotyp werden im Verlauf der Zeit Akkumulierungen und somit keine natürlichen Aggregationen ausgeführt. So entspricht z. B. die Menge für Year dem Wert des letzten Monats, der Daten enthält. Für diesen Kontotyp können Währungen mit dem zum End of Period-Zeitpunkt gültigen Wechselkurs konvertiert werden.|  
     |**Balance**|**LastNonEmpty**|Die Anzahl von etwas zu einem bestimmten Zeitpunkt. Für diesen Kontotyp werden im Verlauf der Zeit Akkumulierungen, jedoch keine natürlichen Aggregationen ausgeführt. So entspricht z. B. die Menge für Year dem Wert des letzten Monats, der Daten enthält.|  

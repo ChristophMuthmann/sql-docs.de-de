@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 85a9806ca93e6b6216d8327d785803e1de19abde
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 59471831fc651827944e958898ad5d2d8e5cb879
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="log-operations-in-analysis-services"></a>Protokollvorgänge in Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services-Instanz werden serverbenachrichtigungen, Fehler und Warnungen auf die Datei "Msmdsrv.log" – einer für jede Instanz protokolliert, die Sie installieren. Administratoren finden in diesem Protokoll Einblicke in routinemäßige und außergewöhnliche Ereignisse. In neueren Versionen wurde die Protokollierung verbessert, um weitere Informationen zu erfassen. Protokolldatensätze enthalten jetzt die Produktversion und Editionsinformationen sowie Prozessor, Speicher, Konnektivität und blockierende Ereignisse. Sie können die gesamte Änderungsliste unter [Protokollierungsverbesserungen](http://support.microsoft.com/kb/2965035)einsehen.  
@@ -53,9 +50,9 @@ ms.lasthandoff: 12/08/2017
   
 |Dateiname oder Speicherort|Typ|Syntaxelemente|Standardmäßig ein|  
 |---------------------------|----------|--------------|-------------------|  
-|Msmdsrv.log|Fehlerprotokoll|Routinemäßige Überwachung und grundlegende Problembehandlung|Ja|  
-|OlapQueryLog-Tabelle in einer relationalen Datenbank|Abfrageprotokoll|Sammeln von Eingaben für den Assistenten für die Nutzungsoptimierung|Nein|  
-|SQLDmp\<Guid > .mdmp-Dateien|Abstürze und Ausnahmen|Umfassende Problembehandlung|Nein|  
+|Msmdsrv.log|Fehlerprotokoll|Routinemäßige Überwachung und grundlegende Problembehandlung|ja|  
+|OlapQueryLog-Tabelle in einer relationalen Datenbank|Abfrageprotokoll|Sammeln von Eingaben für den Assistenten für die Nutzungsoptimierung|nein|  
+|SQLDmp\<Guid > .mdmp-Dateien|Abstürze und Ausnahmen|Umfassende Problembehandlung|nein|  
   
  Es wird dringend empfohlen, den folgenden Link für zusätzliche Informationsquellen zu nutzen, die in diesem Thema nicht behandelt werden: [Initial data collection tips from Microsoft Support](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)(Tipps vom Microsoft Support zur anfänglichen Datensammlung).  
   
@@ -161,7 +158,7 @@ ms.lasthandoff: 12/08/2017
   
  Die Konfigurationseinstellung, die wahrscheinlich geändert werden muss, ist die **CreateAndSendCrashReports** -Einstellung, die bestimmt, ob eine Speicherabbilddatei generiert wird.  
   
-|Wert|Beschreibung|  
+|value|Description|  
 |-----------|-----------------|  
 |0|Deaktiviert die Speicherabbilddatei. Alle anderen Einstellungen im Abschnitt "Exception" werden ignoriert.|  
 |1|(Standard) Aktiviert die Speicherabbilddatei, sendet sie aber nicht.|  

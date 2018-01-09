@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 50ac79584b61002a71c792fe485bce6f5115a0ef
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f4de10c612f0338cecbfbd2e106bee41c6115905
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="amo-other-classes-and-methods"></a>Andere AMO-Klassen und Methoden
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Dieser Abschnitt enthält gängige Klassen, die nicht spezifisch auf OLAP oder Datamining sind und, sind hilfreich bei der Verwaltung Verwalten von Objekten in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Diese Klassen decken Funktionen wie gespeicherte Prozeduren, Ablaufverfolgung, Ausnahmen sowie Sicherung und Wiederherstellung ab.  
@@ -93,7 +91,7 @@ ms.lasthandoff: 12/08/2017
   
  Sicherheit =**CopyAll**  
   
-##### <a name="restrictions"></a>Einschränkungen  
+##### <a name="restrictions"></a>Restrictions  
   
 1.  Eine lokale Partition kann nicht als Remotepartition wiederhergestellt werden.  
   

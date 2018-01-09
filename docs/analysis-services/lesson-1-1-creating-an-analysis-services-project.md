@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ebc25a68b66605dd82de6107011bcce34a2a0557
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9cdbd57f570c79b3efaabf5d07fb09ea4cc20c8b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-1-1---creating-an-analysis-services-project"></a>Lektion 1: 1-Erstellen eines Analysis Services-Projekts
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]In der folgenden Aufgabe verwenden Sie [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] zum Erstellen eines neuen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Projekt mit dem Namen **Analysis Services Tutorial**, abhängig von der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projektvorlage. Ein *Projekt* ist eine Sammlung verknüpfter Objekte. Projekte befinden sich in einer Projektmappe, zu der mindestens ein Projekt gehört. Weitere Informationen finden Sie unter [Erstellen eines Analysis Services-Projekts &#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md).  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/08/2017
   
 Sie haben das Projekt **Analysis Services Tutorial** erfolgreich auf Grundlage der **Vorlage für multidimensionale Projekte bzw. Data Mining-Projekte von Analysis Services** innerhalb einer neuen Projektmappe erstellt, die sich auch **Analysis Services Tutorial**nennt.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Definieren einer Datenquelle](../analysis-services/lesson-1-2-defining-a-data-source.md)  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 69507d44a55e1879d31e97f75a9f755078c5f36a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fe5945d4d6dce5b6afff025289793127cb8c9988
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Lektion 4-1: Verwenden einer geänderten Version des Analysis Services Tutorial-Projekts
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Die verbleibenden Lektionen in diesem Lernprogramm basieren auf einer erweiterten Version des der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Projekt, das Sie in den ersten drei Lektionen abgeschlossen. Zusätzliche Tabellen und benannte Berechnungen wurden der **Adventure Works DW 2012** -Datenquellensicht hinzugefügt, zusätzliche Dimensionen wurden dem Projekt hinzugefügt, und diese neuen Dimensionen wurden dem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube hinzugefügt. Außerdem wurde eine zweite Measuregruppe, die Measures aus einer zweiten Faktentabelle enthält, hinzugefügt. Mithilfe dieses erweiterten Projekts können Sie lernen, wie Sie Ihrer Business Intelligence-Anwendung Funktionalität hinzufügen können, ohne dass Sie bereits durchgeführte Lernschritte wiederholen müssen.  
@@ -120,7 +120,7 @@ Die Geography-Dimension basiert auf der **Geography** -Tabelle in der **Adventur
 #### <a name="analysis-services-cube"></a>Analysis Services-Cube  
 Der **Analysis Services Tutorial** -Cube enthält jetzt zwei Measuregruppen – die ursprüngliche Measuregruppe basierend auf der **InternetSales** -Tabelle und eine zweite Measuregruppe basierend auf der **ResellerSales** -Tabelle in der **Adventure Works DW 2012** -Datenquellensicht.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Definieren der Eigenschaften des übergeordneten Attributs in einer Über-/Unterordnungshierarchie](../analysis-services/lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
   
 ## <a name="see-also"></a>Siehe auch  

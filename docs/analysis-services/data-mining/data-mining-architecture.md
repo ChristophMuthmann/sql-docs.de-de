@@ -5,12 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 105f52e1-ad3b-4cd0-b67b-06dbb451c304
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: be637286bda9a3d2a6f39115357603bf03eec81c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a26a81ee0d0d2ca6bf64c2aca0d1b5f752b5f52c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-architecture"></a>Data Mining-Architektur
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dieser Abschnitt beschreibt die Architektur von Datamining-Lösungen, die in einer Instanz von gehostet werden [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. In den Themen dieses Abschnitts werden die logische und physische Architektur einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz beschrieben, die Data Mining unterstützt. Darüber hinaus enthalten sie Informationen zu den Clients, Anbietern und Protokollen, die für die Kommunikation mit Data Mining-Servern und die lokale oder Remote-Bearbeitung von Data Mining-Objekten verwendet werden können.  

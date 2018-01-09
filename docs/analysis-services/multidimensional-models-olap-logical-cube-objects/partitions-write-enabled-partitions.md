@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 512e5321c0be221e06988dfc1991409a044166bb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 82cafa346d2347afa9022a61d9ffce018d9d0dd8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="partitions---write-enabled-partitions"></a>Partitionen - Partitionen mit aktiviertem Schreibzugriff
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die Daten in einem Cube sind im Allgemeinen schreibgeschützt. In bestimmten Szenarien kann es jedoch erwünscht sein, den Schreibzugriff für eine Partition zu aktivieren. Partitionen mit aktiviertem Schreibzugriff werden verwendet, um Benutzern im geschäftlichen Bereich das Untersuchen von Szenarien zu ermöglichen, indem sie Zellenwerte ändern und die Auswirkungen der Änderungen auf die Cubedaten analysieren. Wenn Sie den Schreibzugriff für eine Partition aktivieren, können Clientanwendungen Änderungen an den Daten in der Partition aufzeichnen. Diese Änderungen, so genannte Rückschreibedaten, werden in einer separaten Tabelle gespeichert und überschreiben keine vorhandenen Daten in einer Measuregruppe. Sie werden jedoch als Teil der Cubedaten in Abfrageergebnisse einbezogen.  
@@ -59,7 +57,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Verwerfen der Änderung, um die Partition in ihrem ursprünglichen Status wiederherzustellen. Durch diesen Vorgang wird der Schreibzugriff für die Partition deaktiviert.  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
  Ein Anwender des Produkts im geschäftlichen Bereich darf nur dann Änderungen in der Rückschreibetabelle eines Cubes aufzeichnen, wenn er einer Rolle angehört, die über Lese-/Schreibberechtigung für die Zellen des Cubes verfügt. Sie können für jede Rolle steuern, welche Cubezellen aktualisiert werden können. Weitere Informationen finden Sie unter [gewähren, Cube oder modellberechtigungen &#40; Analysis Services &#41; ](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
 ## <a name="see-also"></a>Siehe auch  

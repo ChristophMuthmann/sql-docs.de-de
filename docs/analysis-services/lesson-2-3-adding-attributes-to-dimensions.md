@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4a04d6929acc77aeaf3190e65dacf933995189ee
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d4d2a87b4e387d48c6f9537ee402a10a253bf202
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-2-3---adding-attributes-to-dimensions"></a>Lektion 2 – 3 – Hinzufügen von Attributen zu Dimensionen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Nun, dass Sie Dimensionen definiert haben, können Sie sie mit Attributen auffüllen, die einzelnen Datenelemente in der Dimension darstellen. Attribute basieren normalerweise auf Feldern einer Datenquellensicht. Wenn Sie einer Dimension Attribute hinzufügen, können Sie Felder einer beliebigen Tabelle in die Datenquellensicht einschließen.  
@@ -129,11 +129,11 @@ In dieser Aufgabe verwenden Sie den Dimensions-Designer, um der Customer-Dimensi
   
 5.  Klicken Sie im Menü Datei auf **Alle speichern**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Überprüfen von Cube- und Dimensionseigenschaften](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
 ## <a name="see-also"></a>Siehe auch  
-[Dimensionsattributeigenschaftenverweis](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+[Dimensionsattributeigenschaften-Verweis](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   
   

@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 993c4005015b18b1ee6f6106e13fae8429ddcaec
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e0a53d359debe447cc4e1cc94197516c75f53f8d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Sequence Clustering-Algorithmus
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Der Microsoft Sequence Clustering-Algorithmus ist ein hybrider Algorithmus, der Markov-Kette Analysis verwendet, um sortierte Sequenzen zu identifizieren und kombiniert die Ergebnisse dieser Analyse mit clustering-Techniken, um Cluster basierend auf den Sequenzen und anderen Attributen zu generieren im Modell. In diesem Thema werden die Implementierung des Algorithmus, die Anpassung des Algorithmus und die speziellen Anforderungen für Sequenzclustermodelle beschrieben.  
@@ -89,7 +87,7 @@ ms.lasthandoff: 12/08/2017
  CLUSTER_COUNT  
  Gibt die ungefähre Anzahl der vom Algorithmus zu erstellenden Cluster an. Falls die ungefähre Anzahl von Clustern nicht aus den Daten erstellt werden kann, erstellt der Algorithmus so viele Cluster wie möglich. Durch Festlegen des CLUSTER_COUNT-Parameters auf 0 wird der Algorithmus zum Verwenden heuristischer Methoden veranlasst, um die Anzahl von zu erstellenden Clustern so gut wie möglich zu bestimmen.  
   
- Der Standardwert lautet 10.  
+ Der Standardwert ist 10.  
   
 > [!NOTE]  
 >  Eine festgelegte Zahl ungleich null dient als Hinweis für den Algorithmus, der daraufhin mit dem Ziel fortfährt, die angegebene Zahl zu finden, am Ende jedoch eine höhere oder niedrigere Zahl finden kann.  
@@ -97,7 +95,7 @@ ms.lasthandoff: 12/08/2017
  MINIMUM_SUPPORT  
  Gibt die Mindestzahl an Fällen an, die als Unterstützung eines Attributs zum Erstellen eines Clusters erforderlich ist.  
   
- Der Standardwert lautet 10.  
+ Der Standardwert ist 10.  
   
  MAXIMUM_SEQUENCE_STATES  
  Gibt die maximale Anzahl von Status an, die eine Sequenz annehmen kann.  
@@ -137,7 +135,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering-Algorithmus unterstützt bestimmte Eingabespalten und vorhersagbare Spalten. Diese sind in der nachstehenden Tabelle aufgelistet. Weitere Informationen zur Bedeutung der Inhaltstypen in einem Miningmodell finden Sie unter [Inhaltstypen &#40;Data Mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Column|Inhaltstypen|  
+|Spalte|Inhaltstypen|  
 |------------|-------------------|  
 |Eingabeattribut|Continuous, Cyclical, Discrete, Discretized, Key, Key Sequence, Table und Ordered|  
 |Vorhersagbares Attribut|Continuous, Cyclical, Discrete, Discretized, Table und Ordered|  

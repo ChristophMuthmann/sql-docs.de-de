@@ -5,12 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,13 +23,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f836f060a52db56267cd943c1dea018c9b0732a3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 260a6d48b6da55f65098790df73b01a10e35e126
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="data-mining-queries"></a>Data Mining-Abfrage
+# <a name="data-mining-queries"></a>Data Mining-Abfragen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Datamining-Abfragen eignen sich für viele Zwecke. Folgende Aktionen sind möglich:  
   
 -   Anwenden des Modells auf neue Daten, um einzelne oder mehrere Vorhersagen zu treffen. Sie können Eingabewerte als Parameter oder in einem Batch bereitstellen.  
@@ -117,10 +115,10 @@ ms.lasthandoff: 12/08/2017
     |||  
     |-|-|  
     |[Beispiele für Zuordnungsmodellabfragen](../../analysis-services/data-mining/association-model-query-examples.md)|[Microsoft Naive Bayes-Algorithmus](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)|  
-    |[Beispiele für Clusteringmodellabfragen](../../analysis-services/data-mining/clustering-model-query-examples.md)|[Neuronale Beispiele für Netzwerkmodellabfragen](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
-    |[Beispiele für Entscheidungsstruktur-Modellabfragen](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|[Sequenzclusteringmodellabfragebeispiele](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
-    |[Beispiele für lineare Regressionsmodellabfrage](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|[Abfragebeispiel Zeitreihenmodell](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
-    |[Logistische Regressionsmodell-Abfragebeispiele](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)||  
+    |[Beispiele für Clusteringmodellabfragen](../../analysis-services/data-mining/clustering-model-query-examples.md)|[Beispiele für Abfragen von neuronalen Netzwerkmodellen](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
+    |[Beispiele für Entscheidungsstruktur-Modellabfragen](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|[Beispiele für Abfragen von Sequenzclustermodellen](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
+    |[Beispiele für lineare Regressionsmodellabfragen](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|[Beispiele für Abfragen von Zeitreihenmodellen](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
+    |[Beispiele für logistische Regressionsmodellabfragen](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)||  
   
      Sie können auch VBA-Funktionen aufrufen oder eigene Funktionen erstellen. Weitere Informationen finden Sie unter [Funktionen &#40;DMX&#41;](../../dmx/functions-dmx.md).  
   
@@ -160,7 +158,7 @@ ms.lasthandoff: 12/08/2017
   
  [Data Mining-Abfragetools](../../analysis-services/data-mining/data-mining-query-tools.md)  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  Über diese Links erhalten Sie Informationen zum Erstellen und Verwenden von Data Mining-Abfragen.  
   
 |Aufgaben|Links|  
@@ -169,7 +167,7 @@ ms.lasthandoff: 12/08/2017
 |Verwenden von Data Mining-Abfragetools in SQL Server Management Studio und [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[Erstellen einer DMX-Abfrage in SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [erstellt eine Vorhersage mithilfe des Generators für Vorhersageabfragen](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [Anwenden von Vorhersagefunktionen auf ein Modell](../../analysis-services/data-mining/apply-prediction-functions-to-a-model.md)<br /><br /> [Manuelles Bearbeiten eine Vorhersageabfrage](../../analysis-services/data-mining/manually-edit-a-prediction-query.md)|  
 |Arbeiten mit externen, in Vorhersageabfragen verwendeten Daten|[Auswählen und Zuordnen von Eingabedaten für eine Vorhersageabfrage](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [Auswählen und Zuordnen von Eingabedaten für eine Vorhersageabfrage](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)|  
 |Arbeiten mit Abfrageergebnissen|[Anzeigen und Speichern der Ergebnisse einer Vorhersageabfrage](../../analysis-services/data-mining/view-and-save-the-results-of-a-prediction-query.md)|  
-|Verwenden der in Management Studio verfügbaren DMX- und XMLA-Abfragevorlagen|[Erstellen einer SINGLETON-Vorhersageabfrage aus einer Vorlage](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [Create a Data Mining Query by Using XMLA](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)<br /><br /> [Verwenden von Analysis Services-Vorlagen in SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
+|Verwenden der in Management Studio verfügbaren DMX- und XMLA-Abfragevorlagen|[Erstellen einer Singleton-Vorhersageabfrage aus einer Vorlage](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [Create a Data Mining Query by Using XMLA](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)<br /><br /> [Verwenden von Analysis Services-Vorlagen in SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |Weitere Informationen zu Inhaltsabfragen und Beispiele|[Erstellen einer Miningmodell-Inhaltsabfrage](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)<br /><br /> [Abfragen der Parameter, mit denen ein Miningmodell erstellt wird](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md)<br /><br /> [Inhaltsabfragen &#40;Data Mining&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)|  
 |Festlegen von Abfrageoptionen und Problembehandlung bei Abfrageberechtigungen und Abfragen|[Ändern des Timeoutwerts für Data Mining-Abfragen](../../analysis-services/data-mining/change-the-time-out-value-for-data-mining-queries.md)|  
 |Verwenden der Data Mining-Komponenten in Integration Services|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  

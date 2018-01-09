@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8193e756aeb2b7e0bc307b9012d522d288ac926e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 156d25ca9a17f2c79de133a32a74c8765b77a77d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="user-hierarchies---properties"></a>Benutzerhierarchien - Eigenschaften
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die folgende Tabelle beschreibt die Eigenschaften einer benutzerdefinierten Hierarchie.  
@@ -39,7 +37,7 @@ ms.lasthandoff: 12/08/2017
 |AllowDuplicateNames|Bestimmt, ob doppelte Namen in der Hierarchie zulässig sind. Die Werte sind True und False. Standardwert ist "true".|  
 |Description|Enthält die Beschreibung einer Hierarchie.|  
 |DisplayFolder|Gibt den Ordner an, in dem die Hierarchie für Benutzer aufgeführt ist.|  
-|ID|Enthält den eindeutigen Bezeichner (ID) der Hierarchie.|  
+|im Elementknoten &lt;Customer ID="1"|Enthält den eindeutigen Bezeichner (ID) der Hierarchie.|  
 |MemberNamesUnique|Bestimmt, ob Elementnamen in der Hierarchie eindeutig sein müssen. Die Werte sind True und False. Der Standardwert ist False.|  
 |Name|Enthält den Namen der Hierarchie.|  
   

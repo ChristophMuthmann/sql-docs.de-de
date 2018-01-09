@@ -5,13 +5,10 @@ ms.date: 06/15/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: d9825f298a0c881a0a8809205bcb46538f081519
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 876c15beb1fc62e805a4c86718da0590c19244bd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Vergleichen von tabellarischen und mehrdimensionalen Lösungen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services bietet mehrere Ansätze zum Erstellen eines Business Intelligence-Semantikmodells: tabellarische, mehrdimensionale und Power Pivot für SharePoint.
@@ -60,33 +57,33 @@ ms.lasthandoff: 12/08/2017
 |||| 
 |-|-|-|
 ||Multidimensional|Tabellarisch|
-|Aktionen|Ja|Nein|
-|Aggregationen|Ja|Nein|
-|Berechnete Spalte|Nein|ja|  
-|Berechnete Measures|Ja|Ja| 
-|Berechnete Tabellen|Nein|Ja<sup>1</sup>|  
-|Benutzerdefinierte Assemblys|Ja|Nein|
-|Benutzerdefinierte Rollups|Ja|Nein| 
-|Standardelement|Ja|Nein|  
+|Aktionen|ja|nein|
+|Aggregationen|ja|nein|
+|Berechnete Spalte|nein|ja|  
+|Berechnete Measures|ja|ja| 
+|Berechnete Tabellen|nein|Ja<sup>1</sup>|  
+|Benutzerdefinierte Assemblys|ja|nein|
+|Benutzerdefinierte Rollups|ja|nein| 
+|Standardelement|ja|nein|  
 |Anzeigeordner|ja|Ja<sup>1</sup>|  
-|Distinct Count|Ja|Ja (über DAX)|
+|Distinct Count|ja|Ja (über DAX)|
 |Drillthrough ausführen|ja|Ja (hängt mit Client-Anwendung)|
 |Hierarchien|ja|ja|
-|KPIs (Key Performance Indicators)|ja|Ja| 
-|Verknüpfte Objekte|Ja|Ja (verknüpfte Tabellen)|
-|M-Ausdrücke|Nein|Ja<sup>1</sup>|
+|KPIs (Key Performance Indicators)|ja|ja| 
+|Verknüpfte Objekte|ja|Ja (verknüpfte Tabellen)|
+|M-Ausdrücke|nein|Ja<sup>1</sup>|
 |m:n-Beziehungen|ja|Nein (es gibt jedoch [bidirektionale kreuzfilter](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) Kompatibilitätsgrade 1200 oder höher)| 
-|Benannte Mengen|Ja|Nein| 
+|Benannte Mengen|ja|nein| 
 |Unregelmäßige Hierarchien|ja|Ja<sup>1</sup>|  
-|Über- und untergeordnete Hierarchien|Ja|Ja (über DAX)|
-|Partitionen|Ja|ja| 
+|Über- und untergeordnete Hierarchien|ja|Ja (über DAX)|
+|Partitionen|ja|ja| 
 |Perspektiven|ja|ja|
 |Sicherheit auf Zeilenebene|ja|ja| 
 |Sicherheit auf Nachrichtenebene-Objekt|ja|Ja<sup>1</sup>|
-|Semiadditive Measures|Ja|ja| 
+|Semiadditive Measures|ja|ja| 
 |Translations|[Ja](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|ja| 
-|Benutzerdefinierte Hierarchien|Ja|Ja|
-|Rückschreiben|Ja|Nein| 
+|Benutzerdefinierte Hierarchien|ja|ja|
+|Rückschreiben|ja|nein| 
   
  <sup>1</sup> finden Sie unter [Kompatibilitätsgrad für tabellarische Modelle in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) für Informationen zu funktionalen Unterschieden zwischen den Kompatibilitätsgraden funktionsfähig.  
   

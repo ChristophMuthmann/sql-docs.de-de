@@ -7,7 +7,7 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0a90c438-d78b-47be-ac05-479de64378b2
@@ -15,11 +15,11 @@ caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 8960f8a8c5dadaa0c53cd4fcb1ab786ce6e720a7
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: e6376a5b03a272633e876b993c3a67467d7b4637
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-r-in-azure-sql-database"></a>Verwendung von R in Azure SQL-Datenbank
 

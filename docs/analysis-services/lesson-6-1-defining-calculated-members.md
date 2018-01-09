@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2968ac67b1e7ca3652dd4ae2cbb7cfd3293e51ca
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8bd25c8fc175d58df10d1a85c0dfc8c434fb84cd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>Lektion 6-1: Definieren von berechneten Elementen
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Berechnete Elemente sind Elemente einer Dimension oder eine Measuregruppe, die definiert werden basierend auf einer Kombination von Cubedaten, arithmetischen Operatoren, Zahlen und Funktionen. Sie können beispielsweise ein berechnetes Element erstellen, das die Summe zweier physischer Measures im Cube berechnet. Die Definitionen berechneter Elemente werden in Cubes gespeichert, ihre Werte werden jedoch erst zum Zeitpunkt der Abfrage berechnet.  
@@ -293,7 +293,7 @@ Im Rahmen der Tasks in diesem Thema definieren Sie berechnete Measures, damit Be
   
     Die Verkaufszahlen für das Zubehör steigen im Laufe der Zeit, doch machen diese Verkäufe nur einen Bruchteil der Gesamtverkäufe aus. Die Bruttorendite beim Verkauf von Zubehör ist jedoch höher als beim Verkauf von Fahrrädern.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Definieren von benannten Mengen](../analysis-services/lesson-6-2-defining-named-sets.md)  
   
 ## <a name="see-also"></a>Siehe auch  

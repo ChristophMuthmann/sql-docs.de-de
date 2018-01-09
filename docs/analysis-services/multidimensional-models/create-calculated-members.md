@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f91c068837043959e63e5e5f99d8ba719a51bb16
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 92d18934426772d34d4b63e087d235fe6c48dfe3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-calculated-members"></a>Erstellen von berechneten Elementen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sie können benutzerdefinierte Measures oder Dimensionselemente, so genannte berechnete Elemente durch Kombinieren von Cubedaten, arithmetischen Operatoren, Zahlen und Funktionen erstellen. Sie können z. B. ein berechnetes Element mit dem Namen Euros erstellen, das Dollar in Euro konvertiert, indem ein vorhandenes Dollar-Measure mit einem Umrechnungskurs multipliziert wird. Euros kann Endbenutzern dann in einer eigenen Zeile oder Spalte angezeigt werden.  
@@ -51,7 +48,7 @@ ms.lasthandoff: 12/08/2017
   
  Hierarchien werden in Ebenen unterteilt, die Elemente enthalten. Jedes Element erzeugt eine Überschrift. Während des Anzeigens der Daten in einem Cube können Endbenutzer einen Drilldown von einer ausgewählten Überschrift zu zuvor nicht angezeigten untergeordneten Überschriften ausführen. Die Überschrift für das berechnete Element wird zu der Ebene hinzugefügt, die sich direkt unter dem von Ihnen ausgewählten übergeordneten Element befindet.  
   
- **expression**  
+ **Ausdruck**  
  Geben Sie den Ausdruck an, der die Werte des berechneten Elements erzeugt. Dieser Ausdruck kann in MDX (Multidimensional Expressions) geschrieben sein. Der Ausdruck kann Folgendes enthalten:  
   
 -   Datenausdrücke, die für die Komponenten des Cubes stehen, wie Dimensionen, Ebenen, Measures usw.  
@@ -70,7 +67,7 @@ ms.lasthandoff: 12/08/2017
  Formatzeichenfolge  
  Gibt das Format der Zellenwerte an, die auf dem berechneten Element basieren. Die Eigenschaft nimmt dieselben Werte an wie die **Display Format** -Eigenschaft für Measures. Weitere Informationen zu Anzeigeformaten finden Sie unter [Konfigurieren von Measureeigenschaften](../../analysis-services/multidimensional-models/configure-measure-properties.md).  
   
- Visible  
+ Sichtbar  
  Bestimmt, ob das berechnete Element beim Abrufen von Cubemetadaten sichtbar oder ausgeblendet ist. Wenn das berechnete Element ausgeblendet ist, kann es trotzdem in MDX-Ausdrücken, -Anweisungen und -Skripts verwendet werden, aber es wird nicht als auswählbares Objekt in Clientbenutzeroberflächen angezeigt.  
   
  Verhalten für nicht leere Elemente  

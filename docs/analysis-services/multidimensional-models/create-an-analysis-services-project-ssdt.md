@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8ff6e42f9b18df54afc83fe80574d79845cf78e4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 366c0e4f2a3238ac9e2552553f1492b9a41b46e7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Erstellen eines Analysis Services-Projekts (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Können Sie definieren eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] im Projekt [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] entweder mithilfe der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projektvorlage oder mithilfe des Imports [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Assistenten zum Lesen des Inhalts einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank. Wenn gerade keine Projektmappe in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]geladen ist, wird beim Erstellen eines neuen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts automatisch eine neue Projektmappe erstellt. Andernfalls wird der vorhandenen Projektmappe das neue [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt hinzugefügt. Eine bewährte Methode für die Projektmappenentwicklung besteht darin, getrennte Projekte für die verschiedenen Typen von Anwendungsdaten unter Verwendung einer einzelnen Projektmappe zu erstellen, sofern sich die Projekte aufeinander beziehen. Sie können z. B. über eine einzelne Projektmappe verfügen, die getrennte Projekte für Integration Services-Pakete, Analysis Services-Datenbanken und Reporting Services-Berichte enthält, die alle von der gleichen Geschäftsanwendung verwendet werden.  
@@ -124,7 +121,7 @@ ms.lasthandoff: 12/08/2017
   
 |Ordner|Description|  
 |------------|-----------------|  
-|Datenquellen|Enthält Datenquellen für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt. Erstellen Sie diese Objekte mit dem Datenquellen-Assistenten und bearbeiten Sie sie im Datenquellen-Designer.|  
+|Projektmappen-Explorer|Enthält Datenquellen für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt. Erstellen Sie diese Objekte mit dem Datenquellen-Assistenten und bearbeiten Sie sie im Datenquellen-Designer.|  
 |Datenquellensichten|Enthält Datenquellensichten für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt. Erstellen Sie diese Objekte mit dem Datenquellensicht-Assistenten und bearbeiten Sie sie im Datenquellensicht-Designer.|  
 |Cubes|Enthält Cubes für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt. Erstellen Sie diese Objekte mit dem Cube-Assistenten und bearbeiten sie im Cube-Designer.|  
 |Dimensionen|Enthält Dimensionen für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt. Erstellen Sie diese Objekte mit dem Dimensions-Assistenten oder dem Cube-Assistenten und bearbeiten Sie sie im Dimensions-Designer.|  

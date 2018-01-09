@@ -7,7 +7,7 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c8826df7-aa67-4768-baa9-bdc875c4a766
@@ -15,11 +15,11 @@ caps.latest.revision: "12"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 4887d79f60a8fd418fd4a5543bbac9dec0af3ebc
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 6777a47d9f2078b662990c2597f84cc41222de63
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="provision-a-virtual-machine-for-machine-learning-on-azure"></a>Bereitstellen eines virtuellen Computers für Machine Learning in Azure
 

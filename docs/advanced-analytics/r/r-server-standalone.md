@@ -7,7 +7,7 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-vms.technology: r-services
+vms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: R
@@ -16,11 +16,11 @@ caps.latest.revision: "22"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: aa740dc305bf3a34afac42371dbd1ba554b11924
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: a7a7a83a1608a4505a3af0401dc8b6ac6f9c180a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="r-server-standalone"></a>R-Server (eigenständig)
 

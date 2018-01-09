@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b27946307c6ebb42cf83727e6e6e8c6f98b0e6b6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ecb1a5b33ede8c99150fd8b3ce1cf9babdb1f519
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>SPN-Registrierung für eine Analysis Services-Instanz
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)](Service Principle Name, SPN) identifiziert eindeutig eine Dienstinstanz in einer Active Directory-Domäne, wenn Kerberos zur gegenseitigen Authentifizierung von Client- und Dienstidentitäten verwendet wird. Ein SPN ist dem Anmeldekonto zugeordnet, unter dem die Dienstinstanz ausgeführt wird.  
@@ -78,7 +75,7 @@ ms.lasthandoff: 12/08/2017
   
 |Element|Description|  
 |-------------|-----------------|  
-|Dienstklasse|MSOLAPSvc.3 identifiziert den Dienst als Analysis Services-Instanz. Die " .3" ist ein Verweis auf die Version des XMLA-over-TCP/IP Protokolls, das für Analysis Services-Übertragungen verwendet wird. Die Zahl hat keinen Bezug zur Produktversion. Daher ist MSOLAPSvc.3 die richtige Dienstklasse für SQL Server 2005, 2008, 2008, 2012 R2 und jede zukünftige Version von Analysis Services, bis das Protokoll selbst überarbeitet wird.|  
+|Dienstklasse|MSOLAPSvc.3 identifiziert den Dienst als Analysis Services-Instanz. Die " .3" ist ein Verweis auf die Version des XMLA-over-TCP/IP Protokolls, das für Analysis Services-Übertragungen verwendet wird. Die Zahl hat keinen Bezug zur Produktversion. Daher ist MSOLAPSvc.3 die richtige Dienstklasse für SQL Server 2005, 2008, 2008, 2012 R2 und jede zukünftige Version von Analysis Services, bis das Protokoll selbst überarbeitet wird.|  
 |Hostname|Identifiziert den Computer, auf dem der Dienst ausgeführt wird. Das kann ein vollqualifizierter Domänenname oder ein NetBIOS-Name sein. Sie sollten einen SPN für beide Namen registrieren.<br /><br /> Wenn Sie einen SPN für den NetBIOS-Namen eines Servers registrieren, sollten Sie anhand von `SetupSPN –S` doppelte Registrierungseinträge suchen. NetBIOS-Namen sind innerhalb einer Gesamtstruktur nicht unbedingt eindeutig, und eine doppelte SPN-Registrierung führt zu einem Verbindungsfehler.<br /><br /> Bei Analysis Services-Clustern mit Lastenausgleich sollte der Hostname dem virtuellen Namen entsprechen, der dem Cluster zugewiesen ist.<br /><br /> Ein SPN sollte nie anhand der IP-Adresse erstellt werden. Kerberos verwendet die DNS-Auflösungsfunktionen der Domäne. Das wird umgangen, indem eine IP-Adresse angegeben wird.|  
 |Portnummer|Obwohl die Portnummer Teil der SPN-Syntax ist, geben Sie bei der Registrierung eines Analysis Services-SPNs nie eine Portnummer an. Der Doppelpunkt (:), der in der SPN-Standardsyntax normalerweise zur Angabe einer Portnummer dient, wird von Analysis Services für den Instanznamen verwendet. Bei einer Analysis Services-Instanz wird davon ausgegangen, dass der Port dem Standardport (TCP 2383) oder einem Port entspricht, der vom SQL Server-Browserdienst (TCP 2382) zugewiesen wird.|  
 |Instanzname|Analysis Services ist ein replizierbarer Dienst, der mehrmals auf demselben Computer installiert werden kann. Jede Instanz wird über den Instanznamen identifiziert.<br /><br /> Dem Instanznamen wird ein Doppelpunkt (:) vorangestellt. Bei einem Hostcomputer mit dem Namen "SRV01" und der benannten Instanz "SSAS-Tabular" sollte der SPN beispielsweise "SRV01:SSAS-Tabular" lauten.<br /><br /> Beachten Sie, dass sich die Syntax zum Angeben einer benannten Analysis Services-Instanz von der Syntax unterscheidet, die von anderen SQL Server-Instanzen verwendet wird. Andere Dienste verwenden einen umgekehrten Schrägstrich (\), um den Instanznamen in einem SPN anzufügen.|  
@@ -102,7 +99,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
   
  **Beispielsyntax für eine benannte Instanz ausgeführt wird als NT Service\MSOLAP$\<Instanzname >**  
   
- In diesem Beispiel wird die **setspn** -Syntax für eine benannte Instanz veranschaulicht, die unter dem virtuellen Standardkonto ausgeführt wird. Der Computerhostname lautet in diesem Fall **AW-SRV02**und der Instanzname **AW-FINANCE**. Es wird erneut, das Konto "Machine", die für den SPN angegeben wird, anstatt das virtuelle Konto **NT Service\MSOLAP$**\<Instanzname >.  
+ In diesem Beispiel wird die **setspn** -Syntax für eine benannte Instanz veranschaulicht, die unter dem virtuellen Standardkonto ausgeführt wird. Der Computerhostname lautet in diesem Fall **AW-SRV02** und der Instanzname **AW-FINANCE**. Es wird erneut, das Konto "Machine", die für den SPN angegeben wird, anstatt das virtuelle Konto **NT Service\MSOLAP$**\<Instanzname >.  
   
 ```  
 Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02  

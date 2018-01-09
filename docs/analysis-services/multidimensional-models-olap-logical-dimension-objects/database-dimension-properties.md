@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f22fa80ab461872b097ecd62eb54de1a22416c3c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d05ca23a224bd7c702bd54ef4355c568cf593327
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="database-dimension-properties"></a>Eigenschaften von Datenbankdimensionen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], die Merkmale einer Dimension werden definiert, indem die Metadaten für die Dimension basierend auf den Einstellungen der verschiedenen Dimensionseigenschaften und auf die Attribute oder Hierarchien, die von der Dimension enthalten sind. In der folgenden Tabelle werden die Dimensionseigenschaften in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] beschrieben.  
@@ -39,7 +37,7 @@ ms.lasthandoff: 12/08/2017
 |**Sortierung**|Bestimmt die von der Dimension verwendete Sortierung.|  
 |**CurrentStorageMode**|Enthält den aktuellen Speichermodus für die Dimension.|  
 |**' DependsOnDimension '**|Enthält die ID einer anderen Dimension, von der die Dimension abhängt, falls vorhanden.|  
-|**Description**|Enthält die Beschreibung einer Dimension.|  
+|**Beschreibung**|Enthält die Beschreibung einer Dimension.|  
 |**ErrorConfiguration**|Konfigurierbare Fehlerbehandlungseinstellungen für die Bearbeitung doppelter Schlüssel, unbekannter Schlüssel, für Fehlergrenzen, Aktionen bei Erkennung von Fehlern, Fehlerprotokolldateien und die Bearbeitung von NULL-Schlüsseln.|  
 |**ID**|Enthält den eindeutigen Bezeichner (ID) der Dimension.|  
 |**Sprache**|Gibt die Standardsprache für die Dimension an.|  

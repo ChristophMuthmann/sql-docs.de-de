@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cf08f0031c6e805b5677a0e551a20c941d0dce34
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 94cf5d3bdf0feadadf2180c6eb03f9898a4b6966
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Erstellen und Verwalten einer lokalen Partition (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sie können zusätzliche Partitionen für eine Measuregruppe zur Verbesserung der verarbeitungsleistung erstellen. Durch die Verwendung mehrerer Partitionen können Sie Faktendaten einer entsprechenden Anzahl physischer Datendateien sowohl auf lokalen als auch auf Remoteservern zuordnen. Da Partitionen in Analysis Services unabhängig und parallel verarbeitet werden können, erhalten Sie eine bessere Kontrolle über die Arbeitsauslastungen auf dem Server.  

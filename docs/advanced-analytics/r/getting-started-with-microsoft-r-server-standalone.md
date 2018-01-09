@@ -7,7 +7,7 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 52347d0d-ce60-4bb8-98d2-6163e87716b0
@@ -15,11 +15,11 @@ caps.latest.revision: "21"
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 5ff9e6bc9b6cebb4602683180737aa78e7deb6e3
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 7c68e4a44ea410d3ad54ee39a103695eb47b6473
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="getting-started-with-machine-learning-server-standalone"></a>Erste Schritte mit Machine Learning-Server (eigenständig)
  

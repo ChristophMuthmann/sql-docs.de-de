@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -34,11 +32,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9627648fa47b750f4b9b98b45b5878cea0806961
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3b7e4c800454a2e2eddac81a2420b5a6d6436c70
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="assl-xml-conventions"></a>XML-Konventionen in ASSL
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Services Scripting Language (ASSL) stellt die Hierarchie von Objekten als Satz von Elementtypen, von der jede die untergeordneten Elemente definiert, die sie enthalten können.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/08/2017
   
  Zusätzlich zu dieser Konventionsliste werden in Analysis Services bestimmte Konventionen in Bezug auf Kardinalität, Vererbung, Leerzeichen, Datentypen und Standardwerte befolgt.  
   
-## <a name="cardinality"></a>Kardinalität  
+## <a name="cardinality"></a>Cardinality  
  Wenn ein Element eine Kardinalität besitzt, die größer als 1 ist, wird dieses Element von einer XML-Elementauflistung gekapselt. Der Name der Auflistung verwendet die Pluralform der in der Auflistung enthaltenen Elemente. Das folgenden XML-Fragment stellt beispielsweise die **Dimensions** -Auflistung innerhalb eines **Database** -Elements dar:  
   
  `<Database>`  

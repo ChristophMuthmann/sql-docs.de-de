@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0223be3eb321aee4ecae975fe77a776082ed495f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: cc3614124b6e47f4da3526351927218dba8b03ba
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>Lektion 5-2: Definieren einer Faktenbeziehung
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Benutzer möchten manchmal Dimension Measures nach Datenelementen können, die in der Faktentabelle sind oder die Faktentabelle für bestimmten zusätzlichen verknüpften Informationen, beispielsweise Rechnungsnummern oder auftragsbestätigungsnummern mit bestimmten Verkaufsfakten. Wenn Sie eine Dimension basierend auf einem solchen Faktentabellenelement definieren, wird diese Dimension als *Faktendimension*bezeichnet. Eine Faktendimension wird auch als degenerierte Dimension bezeichnet. Faktendimensionen sind für das Gruppieren verknüpfter Faktentabellenzeilen nützlich, beispielsweise aller Zeilen, die sich auf eine bestimmte Rechnungsnummer beziehen. Obwohl Sie diese Informationen in einer separaten Dimensionstabelle in der relationalen Datenbank speichern können, stellt das Erstellen einer separaten Dimensionstabelle für die Informationen keinen Vorteil dar, weil die Dimensionstabelle genauso schnell wachsen würde wie die Faktentabelle und nur zu doppelt vorhandenen Daten und unnötiger Komplexität führen würde.  
@@ -124,7 +124,7 @@ In den Aufgaben dieses Themas fügen Sie eine neue Cubedimension basierend auf d
   
     ![Dimensionieren von Internet Sales-Sales Amount](../analysis-services/media/l5-factrelationship-3.gif "dimensionieren von Internet Sales-Sales Amount")  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
 [Definieren einer m:n-Beziehung](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  
   
 ## <a name="see-also"></a>Siehe auch  

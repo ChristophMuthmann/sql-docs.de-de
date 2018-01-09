@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3d1ecdb0be095931b952b3ef93ee566db40dfb5f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b2a122ab3ac28879a1fbcf3790953ba229a285df
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Aktualisieren von Arbeitsmappen und planmäßige Datenaktualisierungen (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]In diesem Thema erläutert die Verwendung von Arbeitsmappen, die in früheren erstellt [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Umgebungen und das upgrade [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Arbeitsmappen, damit Sie in dieser Version eingeführten neuen Funktionen nutzen können. Weitere Informationen zu neuen Features finden Sie unter [Neues in Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
@@ -104,7 +104,7 @@ ms.lasthandoff: 12/08/2017
   
 1.  Aktualisieren Sie jede Arbeitsmappe manuell, indem Sie sie in Microsoft Excel 2013 öffnen.  
   
-2.  Um die Arbeitsmappe und das darin enthaltene Modell zu aktualisieren, laden Sie die Arbeitsmappe herunter und öffnen sie in Microsoft Excel 2013.  
+2.  Um die Arbeitsmappe und das darin enthaltene Modell zu aktualisieren, laden Sie die Arbeitsmappe herunter und öffnen sie in Microsoft Excel 2013.  
   
 3.  Öffnen Sie das [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Fenster, und aktualisieren Sie das [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Modell.  
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bde831aea891db84e76ae4d00612663ed315d869
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 175199b7090abc373e0ac39d1e99e81480df4e2e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="write-enabled-dimensions"></a>Dimensionen mit aktiviertem Schreibzugriff
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Das Rückschreiben für Dimensionen wird nicht von verknüpften Dimensionen unterstützt.  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
  Nur Anwender der Unternehmenssoftware und Administratoren in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbankrollen, denen die Lese-/Schreibberechtigung für die Dimension gewährt wurde, können eine Dimension mit aktiviertem Schreibzugriff aktualisieren. Sie können für jede Rolle steuern, welche Elemente aktualisiert werden können und welche nicht. Damit Anwender der Unternehmenssoftware und Administratoren eine Dimension mit aktiviertem Schreibzugriff aktualisieren können, muss ihre Clientanwendung diese Funktionalität unterstützen. Für solche Benutzer muss die Dimension mit aktiviertem Schreibzugriff in einen Cube eingebunden sein, der nach der letzten Änderung der Dimension verarbeitet wurde. Weitere Informationen finden Sie unter [Autorisieren des Zugriffs auf Objekte und Vorgänge &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md).  
   
  Benutzer und Gruppen, die zur Administratorrolle gehören, können die Attributelemente einer Dimension mit aktiviertem Schreibzugriff aktualisieren, selbst wenn die Dimension nicht in einen Cube eingebunden ist.  

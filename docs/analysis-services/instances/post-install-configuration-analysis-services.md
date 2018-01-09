@@ -5,14 +5,10 @@ ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining - "setup-install"
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
-- setup-install
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
@@ -21,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6c35dfdbf2dd4eb9e9cae0c99bfc405fbca27380
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 58d6481958138346ee40b9815b8209cb41bf2bae
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="post-install-configuration-analysis-services"></a>Konfiguration nach der Installation (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Nach der Installation von Analysis Services, sind weitere Konfigurationsschritte erforderlich, den Server vollständig betriebsbereit ist und zur allgemeinen Verwendung verfügbar zu machen. In diesem Abschnitt werden zusätzliche Aufgaben beschrieben, die zum Abschließen der Installation ausgeführt werden. Je nach Verbindungsanforderungen müssen Sie möglicherweise auch die Authentifizierung konfigurieren (siehe [Verbindung mit Analysis Services herstellen](../../analysis-services/instances/connect-to-analysis-services.md)).  
@@ -47,7 +43,7 @@ ms.lasthandoff: 12/08/2017
 |[Bestimmen des Servermodus einer Analysis Services-Instanz](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)|Während der Installation wählen Sie einen Servermodus aus, der den Modelltyp (mehrdimensional oder tabellarisch) angibt, unter dem der Server ausgeführt wird. Wenn Sie unsicher sind, welchen Servermodus Sie verwenden sollen, ermitteln Sie den installierten Modus anhand der Informationen in diesem Thema.|  
 |[Umbenennen einer Analysis Services-Instanz](../../analysis-services/instances/rename-an-analysis-services-instance.md)|Ein aussagekräftiger Name erleichtert es Ihnen, zwischen mehreren Instanzen mit unterschiedlichen Servermodi oder zwischen Instanzen, die in erster Linie von Abteilungen oder Teams verwendet werden, zu unterscheiden. Wenn Sie den Instanznamen in einen Namen ändern möchten, der die Verwaltung von Installationen vereinfacht, befolgen Sie die Anweisungen in diesem Thema.|  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
  Erfahren Sie, wie Sie von Microsoft-Anwendungen oder benutzerdefinierten Anwendungen, die die Clientbibliotheken verwenden, eine Verbindung mit Analysis Services herstellen. Abhängig von den Anforderungen der Lösung kann es erforderlich sein, den Dienst für die Kerberos-Authentifizierung zu konfigurieren. Für domänenübergreifende Verbindungen ist der HTTP-Zugriff erforderlich. Unter [Connect to Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md) finden Sie Anweisungen zu den nächsten Schritten.  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -5,12 +5,10 @@ ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 36c55916f0f1b403ddf248c975151b638a7ccb86
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9fe63b761a9834e53832c1525d8d77ea00a9a508
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>Miningmodelle (Analysis Services – Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ein *Miningmodell* wird durch Anwenden ein Algorithmus auf Daten, aber es ist mehr als einen Algorithmus oder einen metadatencontainer erstellt: Es ist ein Satz von Daten, Statistiken und Muster, die auf neuen Daten Vorhersagen zu generieren und Rückschlüsse stellen angewendet werden können Informationen über Beziehungen.  
@@ -73,7 +71,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Wählen Sie den Algorithmus aus, der am besten für den analytischen Task geeignet ist.  
   
--   Wählen Sie die im Modell zu verwendenden Spalten aus der Struktur aus, und geben Sie deren Verwendungsweise an, z. B. welche Spalte das vorherzusagende Ergebnis enthält, welche Spalten nur für Eingaben vorgesehen sind usw.  
+-   Wählen Sie die im Modell zu verwendenden Spalten aus der Struktur aus, und geben Sie deren Verwendungsweise an, z. B. welche Spalte das vorherzusagende Ergebnis enthält, welche Spalten nur für Eingaben vorgesehen sind usw.  
   
 -   Legen Sie optional Parameter fest, die die Verarbeitung durch den Algorithmus optimieren.  
   
@@ -140,13 +138,13 @@ ms.lasthandoff: 12/08/2017
 |Informationen zur Verwendung der benutzerdefinierten Data Mining-Viewer in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Data Mining-Modell-Viewer](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |Beispiele für verschiedene Abfragetypen, die für Data Mining-Modelle verwendet werden können.|[Data Mining-Abfrage](../../analysis-services/data-mining/data-mining-queries.md)|  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  Über die folgenden Links erhalten Sie spezifischere Informationen zur Verwendung von Data Mining-Modellen.  
   
 |Task|Link|  
 |----------|----------|  
 |Hinzufügen und Löschen von Miningmodellen|[Hinzufügen eines Miningmodells zu einer vorhandenen Miningstruktur](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [Löschen eines Miningmodells aus einer Miningstruktur](../../analysis-services/data-mining/delete-a-mining-model-from-a-mining-structure.md)|  
-|Arbeiten mit Miningmodellspalten|[Ausschließen einer Spalte aus einem Miningmodell](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)<br /><br /> [Erstellen eines Alias für eine Modellspalte](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)<br /><br /> [Ändern der Diskretisierung von Spalten in Miningmodellen](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [Bestimmen einer in einem Modell als Regressor zu verwendenden Spalte](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
+|Arbeiten mit Miningmodellspalten|[Ausschließen einer Spalte aus einem Miningmodell](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)<br /><br /> [Erstellen eines Alias für eine Modellspalte](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)<br /><br /> [Ändern der Diskretisierung von Spalten in einem Miningmodell](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [Bestimmen einer in einem Modell als Regressor zu verwendenden Spalte](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
 |Ändern von Modelleigenschaften|[Ändern der Eigenschaften eines Miningmodells](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)<br /><br /> [Anwenden eines Filters auf ein Miningmodell](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)<br /><br /> [Löschen eines Filters aus einem Miningmodell](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)<br /><br /> [Aktivieren von Drillthrough für ein Miningmodell](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)<br /><br /> [Anzeigen oder Ändern von Algorithmusparametern](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)|  
 |Kopieren, Verschieben oder Verwalten von Modellen|[Erstellen einer Kopie eines Miningmodells](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)<br /><br /> [Kopieren einer Sicht eines Miningmodells](../../analysis-services/data-mining/copy-a-view-of-a-mining-model.md)<br /><br /> [EXPORT &#40;DMX&#41;](../../dmx/export-dmx.md)<br /><br /> [IMPORT &#40;DMX&#41;](../../dmx/import-dmx.md)|  
 |Auffüllen von Modellen mit Daten oder Aktualisieren von Daten in einem Modell|[Verarbeiten eines Miningmodells](../../analysis-services/data-mining/process-a-mining-model.md)|  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c7f7e5ed96e4d25d33d8d69124f9f94ccccdcef1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: de2b66f2dea7dfa29301ddd14f831d7318c6f4f9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="amo-data-mining-classes"></a>AMO-Klassen für Data Mining
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Datamining-Klassen können Sie die erstellen, ändern, löschen und Verarbeiten von Datamining-Objekte. Das Arbeiten mit Data Mining-Objekten umfasst die Erstellung von Data Mining-Strukturen, die Erstellung von Data Mining-Modellen und die Verarbeitung der Modelle.  
@@ -68,7 +66,7 @@ ms.lasthandoff: 12/08/2017
   
  Die <xref:Microsoft.AnalysisServices.MiningStructure> kann mithilfe ihrer eigenen Verarbeitungsmethode verarbeitet werden oder wenn sich ein übergeordnetes Objekt selbst mit seiner eigenen Verarbeitungsmethode verarbeitet.  
   
-### <a name="columns"></a>Spalten  
+### <a name="columns"></a>Spalte  
  Spalten enthalten die Daten für das Modell und können in Abhängigkeit von der Verwendung von unterschiedlichen Typen sein: Key, Input, Predictable oder InputPredictable. Predictable-Spalten sind das Ziel bei der Erstellung des Miningmodells.  
   
  Einzelwertspalten werden in AMO als <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn> bezeichnet. Spalten mit mehreren Werten werden als <xref:Microsoft.AnalysisServices.TableMiningStructureColumn> bezeichnet.  

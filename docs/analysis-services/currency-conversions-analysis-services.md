@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8565a3599dfd9ef96f1cb4156f4bbbdc8ac60927
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3c2d9626ff12593f6192ab6b3a6bec1bb6ab4a7b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="currency-conversions-analysis-services"></a>Währungsumrechnungen (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[applies](../includes/applies-md.md)] Mehrdimensionale nur  
@@ -90,7 +90,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="defining-currency-conversions"></a>Definieren von Währungsumrechnungen  
  Sie können mit dem Business Intelligence-Assistenten die Funktionen der Währungsumrechnung für einen Cube definieren, oder Sie können Währungsumrechnungen mithilfe von MDX-Skripts manuell definieren.  
   
-### <a name="prerequisites"></a>Erforderliche Komponenten  
+### <a name="prerequisites"></a>Voraussetzungen  
  Bevor Sie eine Währungsumrechnung in einem Cube mithilfe des Business Intelligence-Assistenten definieren können, müssen Sie zunächst mindestens eine Währungsdimension, eine Zeitdimension und eine Wechselkurs-Measuregruppe definieren. Aus diesen Objekten kann der Business Intelligence-Assistent die Daten und Metadaten abrufen, mit deren Hilfe die notwendige Berichtswährungsdimension und das notwendige MDX-Skript zum Bereitstellen der Währungsumrechnungsfunktionen erstellt werden.  
   
 ### <a name="decisions"></a>Entscheidungen  

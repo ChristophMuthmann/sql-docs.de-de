@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 726344198c74d36a0d31368980f305c1426f1607
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8e6b39e6f8e91217dbc2de28575571e3043c7358
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dimensions---introduction"></a>Dimensionen – Einführung
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Alle Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Dimensionen sind Gruppen von Attributen basierend auf Spalten aus Tabellen oder Sichten in einer Datenquellensicht. Dimensionen sind unabhängig von einem Cube vorhanden, können sowohl in mehreren Cubes als auch mehrfach in einem einzelnen Cube verwendet und zwischen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanzen verknüpft werden. Eine unabhängig von einem Cube vorhandene Dimension wird als Datenbankdimension bezeichnet und eine innerhalb eines Cubes verwendete Instanz einer Datenbankdimension als Cubedimension.  
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="processing-a-dimension"></a>Verarbeiten einer Dimension  
  Wenn Sie eine Dimension erstellt haben, müssen Sie diese verarbeiten, bevor Sie die Elemente der Attribute und Hierarchien in der Dimension anzeigen können. Wenn sich die Struktur einer Dimension geändert hat oder die Informationen in den zugrunde liegenden Tabellen aktualisiert wurden, müssen Sie die Dimension erneut verarbeiten, bevor Sie die Änderungen anzeigen können. Beim Verarbeiten einer Dimension nach einer strukturellen Änderung müssen sämtliche Cubes, die die Dimension enthalten, ebenfalls verarbeitet werden. Andernfalls kann der Cube nicht angezeigt werden.  
   
-## <a name="security"></a>Sicherheit  
+## <a name="security"></a>Security  
  Alle untergeordneten Objekte einer Dimension, einschließlich Hierarchien, Ebenen und Elementen, werden mithilfe von Rollen in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gesichert. Die Dimensionssicherheit kann für alle Cubes in der Datenbank angewendet werden, die die Dimension verwenden, oder nur für einen bestimmten Cube. Weitere Informationen zur dimensionssicherheit finden Sie unter [Erteilen von Berechtigungen für eine Dimension &#40; Analysis Services &#41; ](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md).  
   
 ## <a name="see-also"></a>Siehe auch  

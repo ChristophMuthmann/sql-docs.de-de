@@ -5,12 +5,10 @@ ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: de1d81ae0dba51e98cb8d883ca5e7ae22eb4314b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 83c491408707f1a7107a3bb6d485418189d9eb1c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filter für Miningmodelle (Analysis Services – Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Datenbasierte modellfilterung können Sie Miningmodelle erstellen, die Teilmengen von Daten in einer Miningstruktur verwenden. Die Filterung ermöglicht Flexibilität bei der Entwicklung der Miningstrukturen und der Datenquellen, da Sie eine einzelne Miningstruktur auf der Grundlage einer umfassenden Datenquellensicht erstellen können. Anschließend können Sie Filter erstellen, um nur einen Teil dieser Daten zu verwenden und mehrere Modelle zu trainieren und zu testen, anstatt für jede Teilmenge der Daten eine andere Struktur und ein zugehöriges Modell zu erstellen.  
@@ -38,7 +36,7 @@ ms.lasthandoff: 12/08/2017
   
  Die folgenden realistischen Szenarien sind einige Beispiele, in denen diese Funktion hilfreich sein kann:  
   
--   Das Erstellen von separaten Modellen für diskrete Werte wie z. B. Geschlecht, Regionen usw. Ein Bekleidungsgeschäft könnte beispielsweise demografische Kundendaten verwenden, um unterschiedliche Modelle nach Geschlecht zu erstellen, auch wenn die Verkaufsdaten aus einer einzigen Datenquelle für alle Kunden stammen.  
+-   Das Erstellen von separaten Modellen für diskrete Werte wie z. B. Geschlecht, Regionen usw. Ein Bekleidungsgeschäft könnte beispielsweise demografische Kundendaten verwenden, um unterschiedliche Modelle nach Geschlecht zu erstellen, auch wenn die Verkaufsdaten aus einer einzigen Datenquelle für alle Kunden stammen.  
   
 -   Man könnte mit Modellen experimentieren, indem man unterschiedliche Gruppierungen der gleichen Daten erstellt, beispielsweise die Altersgruppen 20-30, 20-40 oder 20-25.  
   

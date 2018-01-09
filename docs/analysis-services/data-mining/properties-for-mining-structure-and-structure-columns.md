@@ -5,12 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 42ee21307542c7e204ac7b4616714c2285cce032
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0bc682b950c696f801bef26f3b258b55ba7d93bb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Eigenschaften für Miningstrukturen und Strukturspalten
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sie können Eigenschaften festlegen oder Ändern der für eine Miningstruktur und die zugeordneten Spalten und geschachtelten Tabellen mithilfe der **Miningstruktur** des Data Mining-Designers. Eigenschaften, die Sie auf dieser Registerkarte festlegen, werden an alle Miningmodelle weitergegeben, die mit der Struktur verbunden sind.  
@@ -49,7 +47,7 @@ ms.lasthandoff: 12/08/2017
 |--------------|-----------------|  
 |**CacheMode**|Gibt an, ob die beim Trainieren verwendeten Fälle nach Abschluss des Trainings zwischengespeichert oder verworfen werden sollen. **Hinweis:**  Dieses Attribut muss auf **KeepTrainingCases** festgelegt werden, um Drillthroughs und zurückgehaltene Daten zu ermöglichen.|  
 |**Sortierung**|Gibt die Standardsortierung für die Spalte an. Wird keine Sortierung angegeben, wird die Sortierung des Servers verwendet.|  
-|**Description**|Beschreibt die Miningstruktur. Die Beschreibung sollte den Zweck und die Zusammensetzung der Daten in der Struktur beinhalten.|  
+|**Beschreibung**|Beschreibt die Miningstruktur. Die Beschreibung sollte den Zweck und die Zusammensetzung der Daten in der Struktur beinhalten.|  
 |**ErrorConfiguration (Standard)**|Legt Optionen für die spezielle Behandlung möglicher Fehler fest.|  
 |**HoldoutMaxCases**|Gibt die maximale Anzahl von Strukturfällen an, die als Testdataset reserviert werden können.  Werden Werte sowohl für **HoldoutMaxCases** als auch für **HoldoutPercent**angegeben, werden die Bedingungen miteinander kombiniert. **Hinweis:**  Zum Festlegen dieser Eigenschaft muss <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> auf **KeepTrainingCases**, um diese Eigenschaften anzuzeigen oder zu konfigurieren.|  
 |**HoldoutPercent**|Gibt die Prozentzahl der Strukturfälle an, die als Testdataset reserviert werden sollen. Werden Werte sowohl für **HoldoutMaxCases** als auch für **HoldoutPercent**angegeben, werden die Bedingungen miteinander kombiniert. **Hinweis:**  Zum Festlegen dieser Eigenschaft muss <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> auf **KeepTrainingCases**, um diese Eigenschaften anzuzeigen oder zu konfigurieren.|  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/08/2017
 |--------------|-----------------|  
 |**ClassifiedColumns**|Identifiziert die Spalte, die eine klassifizierte Spalte beschreibt.|  
 |**Inhalt**|Der Inhaltstyp der Spalte.|  
-|**Description**|Beschreibt die Spalte. Die Beschreibung der Spalte sollte Informationen darüber enthalten, wie die Daten in der Spalte für Data Mining abgeleitet oder bearbeitet wurden.|  
+|**Beschreibung**|Beschreibt die Spalte. Die Beschreibung der Spalte sollte Informationen darüber enthalten, wie die Daten in der Spalte für Data Mining abgeleitet oder bearbeitet wurden.|  
 |**DiscretizationBucketCount**|Zeigt die Anzahl der Buckets in der diskretisierten Spalte an.<br /><br /> Nur verfügbar, wenn der Inhaltstyp auf **Discretized**festgelegt ist.<br /><br /> Diese Eigenschaft ist schreibgeschützt.|  
 |**DiscretizationMethod**|Zeigt die Methode an, die zur Diskretisierung der Spalte verwendet wurde.<br /><br /> Nur verfügbar, wenn der Inhaltstyp auf **Discretized**festgelegt ist.<br /><br /> Diese Eigenschaft ist schreibgeschützt.|  
 |**Distribution**|Gibt die Verteilung von Inhalten in der Spalte an.|  

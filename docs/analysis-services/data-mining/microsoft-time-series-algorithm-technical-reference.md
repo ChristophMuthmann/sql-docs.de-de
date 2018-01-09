@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -36,13 +34,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a38c2585e2da3c1086ce15f220e13741bd7e9e71
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 40d0c34ea4bb7e95d77ff6aa37695da4080c20ac
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="microsoft-time-series-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Time Series-Algorithmus
+# <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft Time Series Algorithm Technical Reference
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus umfasst zwei separate Algorithmen zum Analysieren einer Zeitreihe:  
   
 -   Der ARTXP-Algorithmus, der seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]im Produktumfang enthalten ist, wurde zur Vorhersage des nächsten wahrscheinlichen Werts in einer Reihe optimiert.  
@@ -147,7 +145,7 @@ ms.lasthandoff: 12/08/2017
 |*INSTABILITY_SENSITIVITY*|Steuert den Punkt, bei dem die Vorhersagevarianz einen bestimmten Schwellenwert übersteigt, ab dem der ARTXP-Algorithmus die Vorhersagen unterdrückt. Der Standardwert ist 1.<br /><br /> Hinweis: Dieser Parameter gilt nicht für Modelle, die nur ARIMA verwenden.<br /><br /> Der Standardwert 1 bietet das gleiche Verhalten wie in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] überwacht die normalisierte Standardabweichung für jede Vorhersage. Sobald dieser Wert den Schwellenwert für eine Vorhersage überschreitet, gibt der Time Series-Algorithmus eine NULL zurück und beendet den Vorhersageprozess.<br /><br /> Ein Wert von [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] beendet die Instabilitätserkennung. Dies bedeutet, dass Sie eine unendliche Anzahl von Vorhersagen erstellen können, unabhängig von der Varianz.<br /><br /> Hinweis: Dieser Parameter kann nur in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise geändert werden. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard verwendet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nur den Standardwert 1.|  
 |*MAXIMUM_SERIES_VALUE*|Gibt den maximalen Wert an, der für Vorhersagen verwendet werden soll. Dieser Parameter wird zusammen mit *MINIMUM_SERIES_VALUE*verwendet, um die Vorhersagen auf einen bestimmten Bereich einzuschränken. Sie können beispielsweise festlegen, dass die vorhergesagte Verkaufsmenge an einem Tag niemals die Anzahl der Produkte im Lager überschreiten darf.<br /><br /> Hinweis: Dieser Parameter ist nur in einigen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar.|  
 |*MINIMUM_SERIES_VALUE*|Gibt den minimalen Wert an, der vorhergesagt werden kann. Dieser Parameter wird zusammen mit *MAXIMUM_SERIES_VALUE*verwendet, um die Vorhersagen auf einen bestimmten Bereich einzuschränken. Zum Beispiel können Sie angeben, dass die vorhergesagte Verkaufsmenge nie eine negative Zahl sein darf.<br /><br /> Hinweis: Dieser Parameter ist nur in einigen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar.|  
-|*MINIMUM_SUPPORT*|Gibt die Mindestanzahl von Zeitscheiben an, die erforderlich sind, um eine Teilung in jeder Zeitreihenstruktur zu generieren. Der Standardwert lautet 10.|  
+|*MINIMUM_SUPPORT*|Gibt die Mindestanzahl von Zeitscheiben an, die erforderlich sind, um eine Teilung in jeder Zeitreihenstruktur zu generieren. Der Standardwert ist 10.|  
 |*MISSING_VALUE_SUBSTITUTION*|Gibt an, wie Lücken in Vergangenheitsdaten gefüllt werden. Standardmäßig sind Lücken in Daten nicht zulässig. Die folgende Tabelle enthält die möglichen Werte für diesen Parameter:<br /><br /> **Previous:**wiederholt den Wert aus der vorherigen Zeitscheibe<br /><br /> **Mean:**verwendet einen gleitenden Durchschnitt von im Training verwendeten Zeitscheiben<br /><br /> Numeric constant: Verwendet die festgelegte Anzahl, um alle fehlenden Werte zu ersetzen.<br /><br /> **None:**Standard. Ersetzt fehlende Werte mit Werten, die entlang der Kurve des trainierten Modells grafisch dargestellt werden.<br /><br /> <br /><br /> Hinweis: Wenn die Daten mehrere Reihen enthalten, dürfen die Reihen keine unregelmäßigen Ränder haben. Das heißt, alle Reihen sollten die gleichen Anfangs- und Endpunkte haben. <br />                    [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet ebenfalls den Wert dieses Parameters, um die Lücken in den neuen Daten zu füllen, wenn Sie **PREDICTION JOIN** für ein Zeitreihenmodell ausführen.|  
 |*PERIODICITY_HINT*|Stellt für den Algorithmus einen Periodizitätshinweis der Daten bereit. Beispiel: Wenn die Verkaufszahlen jahresabhängig variieren und als Maßeinheit für die Reihe Monate gewählt wurden, ist die Periodizität 12. Dieser Parameter weist das Format {n [, n]} auf, wobei n eine beliebige positive Zahl ist.<br /><br /> Das n innerhalb der eckigen Klammern [] ist optional und kann so oft wie nötig wiederholt werden. Um beispielsweise mehrere Periodizitätshinweise für monatlich bereitgestellte Daten anzugeben, könnten Sie {12, 3, 1} eingeben, um für das Jahr, Quartal und den Monat Muster zu ermitteln. Die Periodizität hat jedoch starke Auswirkungen auf die Modellqualität. Wenn der von Ihnen gegebene Hinweis von der tatsächlichen Periodizität abweicht, können die Ergebnisse beeinträchtigt werden.<br /><br /> Der Standardwert lautet \{1\}.<br /><br /> Hinweis: Die Klammern sind erforderlich. Dieser Parameter verfügt zudem über einen String-Datentyp. Wenn Sie daher diesen Parameter als Teil einer Data Mining Extensions (DMX)-Anweisung eingeben, müssen Sie die Nummer und Klammern in Anführungszeichen einschließen.|  
 |*PREDICTION_SMOOTHING*|Gibt an, wie das Modell kombiniert werden sollte, um die Vorhersage zu optimieren. Sie können einen beliebigen Wert zwischen [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] und 1 eingeben oder die folgenden Werte verwenden:<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]:<br />                          Gibt an, dass diese Vorhersage nur ARTXP verwendet. Das Forecasting ist für weniger Vorhersagen optimiert.<br /><br /> 1: Gibt an, dass diese Vorhersage nur ARIMA verwendet. Das Forecasting ist für viele Vorhersagen optimiert.<br /><br /> 0,5: Standard Gibt an, dass für die Vorhersage beide Algorithmen verwendet und die Ergebnisse gemischt werden sollen.<br /><br /> <br /><br /> Verwenden Sie bei der Vorhersageglättung den *FORECAST_METHOD* -Parameter, um das Training zu steuern.   Hinweis: Dieser Parameter ist nur in einigen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar.|  

@@ -5,13 +5,10 @@ ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -51,11 +48,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e0ff496e40e85387e492fc6cfe355035c0e271ee
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d448349dfa423810a6bdfd70a5d79a1dfd41f0b1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-measure-properties"></a>Konfigurieren von Measureeigenschaften
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Measures haben Eigenschaften, die Ihnen ermöglichen, definieren wie die Measures-Funktion und zu steuern, wie die Measures für Benutzer angezeigt werden.  
@@ -69,7 +66,7 @@ ms.lasthandoff: 12/08/2017
 |--------------|----------------|  
 |**AggregateFunction**|Erforderlich. Bestimmt, wie Measures aggregiert werden. **Sum** ist die Standardaggregation. Weitere Informationen und eine Beschreibung zu den einzelnen Funktionen finden Sie unter [Use Aggregate Functions](../../analysis-services/multidimensional-models/use-aggregate-functions.md) .|  
 |**DataType**|Erforderlich. Gibt den Datentyp der zugrunde liegenden Faktentabellenspalte an, an die das Measure gebunden ist. Dieser Wert wird standardmäßig aus der Quellspalte geerbt.|  
-|**Description**|Stellt eine Beschreibung des Measures bereit, das in Clientanwendungen möglicherweise offen gelegt wird.|  
+|**Beschreibung**|Stellt eine Beschreibung des Measures bereit, das in Clientanwendungen möglicherweise offen gelegt wird.|  
 |**DisplayFolder**|Gibt den Ordner an, in dem das Measure angezeigt wird, wenn Benutzer die Verbindung zu dem Cube erstellen. Wenn ein Cube viele Measures enthält, können Sie sie mithilfe von Anzeigeordnern kategorisieren und dem Benutzer das Durchsuchen erleichtern.|  
 |**FormatString**|Sie können das Format, das für die Anzeige der Measurewerte für Benutzer verwendet wird, mithilfe der **FormatString** -Eigenschaft des Measures auswählen.<br /><br /> Obwohl eine Liste der Anzeigeformate in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]verfügbar ist, können Sie viele zusätzliche Formate angeben, die nicht in der Liste enthalten sind. Sie können jedes beliebige benannte oder benutzerdefinierte Format angeben, das in Microsoft Visual Basic gültig ist.|  
 |**ID**|Erforderlich. Zeigt den eindeutigen Bezeichner (ID) des Measures an. Diese Eigenschaft ist schreibgeschützt.|  

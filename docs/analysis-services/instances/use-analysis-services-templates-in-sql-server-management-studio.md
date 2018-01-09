@@ -5,13 +5,10 @@ ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: aa787d2f040ac8065e4df8c68da3b6c730ff9640
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2ad2bc8a5d6d440f9f8c06f17d2857e5343adfce
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Verwenden von Analysis Services-Vorlagen in SQL Server Management Studio
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] bietet eine Reihe von Vorlagen können Sie die erstellen Sie schnell XMLA-Skripts, DMX- oder MDX-Abfragen erstellen, KPIs in einen Cube oder tabellarisches Modell, Skript Sicherung Wiederherstellungsvorgänge und viele andere Tasks ausführen. Die Vorlagen befinden sich im **Vorlagen-Explorer** von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -217,14 +214,14 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 |XMLA\Verwaltung|Sicherung|Zeigt, wie Sie mithilfe des Befehls XMLA **Sicherung** eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank in einer Datei sichern.|  
 ||Abbrechen|Zeigt, wie Sie mithilfe des XMLA **Cancel** -Befehls alle laufenden Operationen der aktuellen Sitzung (für alle Benutzer außer Administratoren oder Serveradministratoren), Datenbank (für Administratoren) oder Instanz (für Serveradministratoren) abbrechen.|  
 ||Create Remote Partition Database|Zeigt, wie Sie mithilfe des XMLA **Create** -Befehls in Verbindung mit dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language-Datenbankelement (ASSL) eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank und eine Datenquelle zum Speichern von Remotepartitionen erstellen.|  
-||Delete|Zeigt, wie Sie mithilfe des Befehls XMLA **Löschen** -Befehls eine vorhandene [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank löschen.|  
+||DELETE|Zeigt, wie Sie mithilfe des Befehls XMLA **Löschen** -Befehls eine vorhandene [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank löschen.|  
 ||Process Dimension|Zeigt, wie Sie mithilfe des XMLA **Batch** -Befehls in Verbindung mit dem **Parallel** -Element und dem **Process** -Befehl die Attribute einer Dimension durch eine parallele Stapeloperation aktualisieren.|  
 ||Process Partition|Zeigt, wie Sie mithilfe des XMLA **Batch** -Befehls in Verbindung mit dem **Parallel** -Element und dem **Process** -Befehl eine Partition durch eine parallele Stapeloperation vollständig verarbeiten.|  
-||Restore|Zeigt, wie Sie mithilfe des Befehls XMLA **Wiederherstellung** -Befehls eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank aus einer vorhandenen Sicherungsdatei wiederherstellen.|  
+||Wiederherstellung|Zeigt, wie Sie mithilfe des Befehls XMLA **Wiederherstellung** -Befehls eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank aus einer vorhandenen Sicherungsdatei wiederherstellen.|  
 ||Synchronisieren|Zeigt, wie Sie mithilfe des Befehls XMLA **Synchronisieren** verwenden können, um eine andere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank mit der aktuellen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database using the SkipMembership option for the SynchronisierenSecurity tag.|  
 |XMLA\Schemarowsets|Ermitteln von Schemarowsets|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt eines DISCOVER_SCHEMA_ROWSETS-Schemarowsets abrufen.|  
 |XMLA\Serverstatus|Verbindungen|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt eines DISCOVER_CONNECTIONS-Schemarowsets abrufen.|  
-||Aufträge|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt eines DISCOVER_JOBS-Schemarowsets abrufen.|  
+||Jobs|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt eines DISCOVER_JOBS-Schemarowsets abrufen.|  
 ||Speicherorte|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt des DISCOVER_LOCATIONS-Schemarowsets unter Angabe des Pfads zum Standort der Sicherungsdateien abrufen.|  
 ||Locks|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt eines DISCOVER_LOCKS-Schemarowsets abrufen.|  
 ||Memory Grant|Zeigt, wie Sie mithilfe der XMLA **Discover** -Methode den Inhalt eines DISCOVER_MEMORYGRANT-Schemarowsets abrufen.|  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9f876ad9e6b7627b22322604d406a189b6c03834
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 28de753fa8256a2e730c40320b0d785822698efb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dimensions-analysis-services---multidimensional-data"></a>Dimensionen (Analysis Services – Mehrdimensionale Daten)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Dimensionen sind eine wesentliche Komponente von Cubes. Mit Dimensionen werden Daten nach Interessensbereichen geordnet, z. B. nach Kunden, Geschäften oder Angestellten. Dimensionen in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] enthalten Attribute, die den Spalten in den Dimensionstabellen entsprechen. Diese Attribute erscheinen in der Form von Attributhierarchien und können in benutzerdefinierten Hierarchien organisiert, oder basierend auf den Spalten der zugrunde liegenden Dimensionstabelle als Über-/Unterordnungshierarchien definiert werden. Hierarchien werden dazu verwendet, die in einem Cube enthaltenen Measures zu ordnen. Die folgenden Themen bieten eine Übersicht über Dimensionen, Attribute und Hierarchien.  

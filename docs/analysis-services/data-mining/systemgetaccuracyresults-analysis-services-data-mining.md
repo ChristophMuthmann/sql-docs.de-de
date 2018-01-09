@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 183fbed8a59f4f6288b321b47d30895e4a7c7394
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1f6cc8a8bc3e35f6072e5998faed8fb9d51b768f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Gibt genauigkeitsmetriken einer kreuzvalidierung für eine Miningstruktur und alle zugehörigen Modelle, mit Ausnahme der clustering-Modelle zurück.  
@@ -72,12 +72,12 @@ SystemGetAccuracyResults(<mining structure>,
   
  Eine vollständige Liste der möglichen Werte finden Sie in diesem Thema im Abschnitt mit den Hinweisen.  
   
- (Erforderlich)  
+ (erforderlich)  
   
  *Zielattribut*  
  Zeichenfolge, die den Namen eines vorhersagbaren Objekts enthält. Ein vorhersagbares Objekt kann eine Spalte, eine verschachtelte Tabellenspalte oder eine Schlüsselspalte für eine geschachtelte Tabelle eines Miningmodells sein.  
   
- (Erforderlich)  
+ (erforderlich)  
   
  *Zielstatus*  
  Zeichenfolge, die einen bestimmten vorherzusagenden Wert enthält.  
@@ -116,7 +116,7 @@ SystemGetAccuracyResults(<mining structure>,
 |PartitionCases|Eine ganze Zahl, die die Anzahl der Zeilen in der Groß-/Kleinschreibung auf Grundlage der  *\<DataSet >* Parameter.|  
 |Test|Der Typ von Test, der ausgeführt wurde.|  
 |Measure|Der Name des Measures, der vom Test zurückgegeben wurde. Measures für die einzelnen Modelle richten sich nach dem Modelltyp und dem Typ des vorhersagbaren Werts.<br /><br /> Eine Liste der für die einzelnen vorhersagbaren Typen zurückgegebenen Measures finden Sie unter [Measures im Kreuzvalidierungsbericht](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).<br /><br /> Definitionen für die einzelnen Measures finden Sie unter [Kreuzvalidierung &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).|  
-|Wert|Der Wert für das angegebene Measure.|  
+|value|Der Wert für das angegebene Measure.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die folgende Tabelle enthält Beispiele für die Werte, mit denen Sie die Daten in der für die Kreuzvalidierung verwendeten Miningstruktur angeben können. Wenn Sie Testfälle für die Kreuzvalidierung verwenden möchten, muss die Miningstruktur bereits ein Testdataset enthalten. Informationen zum Definieren eines Testdatasets bei der Erstellung einer Miningstruktur finden Sie unter [Trainings- und Testdatasets](../../analysis-services/data-mining/training-and-testing-data-sets.md).  
@@ -151,7 +151,7 @@ CALL SystemGetAccuracyResults (
   
  Beispielergebnisse:  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Measure|Wert|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Measure|value|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |v Target Mail DT|Bike Buyer|1|0|1638|Klassifizierung|Wahr positiv|605|  
 |v Target Mail DT|Bike Buyer|1|0|1638|Klassifizierung|Falsch positiv|177|  

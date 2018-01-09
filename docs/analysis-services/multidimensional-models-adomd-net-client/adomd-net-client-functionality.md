@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8010335c897b279ead050e34a25b2f2833d63021
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2d5cc63c0c6385a6457d725194f6fe0e7604c672
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="adomdnet-client-functionality"></a>ADOMD.NET-Clientfunktionalität
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ADOMD.NET wie bei anderen [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Datenanbieter auch dient als Brücke zwischen einer Anwendung und einer Datenquelle. Im Gegensatz zu anderen .NET Framework-Datenanbietern arbeitet ADOMD.NET jedoch mit analytischen Daten. Um das leisten zu können, unterstützt ADOMD.NET eine Funktionalität, die sich von der anderer .NET Framework-Datenanbieter erheblich unterscheidet. ADOMD.NET ermöglicht nicht nur das Abrufen von Daten, sondern auch das Abrufen von Metadaten und Änderungen an der Struktur des analytischen Datenspeichers:  

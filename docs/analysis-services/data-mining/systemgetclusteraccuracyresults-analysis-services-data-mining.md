@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6ad7e0e0cbb1cf265a9944b81989b59b110602e9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 47272107eea7905a1e0414f42ff450e7a1ebbdb9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="systemgetclusteraccuracyresults-analysis-services---data-mining"></a>SystemGetClusterAccuracyResults (Analysis Services – Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Gibt genauigkeitsmetriken einer kreuzvalidierung für eine Miningstruktur und zugehörige clustering-Modelle zurück.  
@@ -82,7 +82,7 @@ SystemGetClusterAccuracyResults(
   
  In der folgenden Tabelle sind die Spalten aufgeführt, die von **SystemGetClusterAccuracyResults**zurückgegeben werden. Weitere Informationen zum Interpretieren der durch die gespeicherte Prozedur zurückgegebenen Informationen finden Sie unter [Measures im Kreuzvalidierungsbericht](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).  
   
-|Spaltenname|Beschreibung|  
+|Spaltenname|Description|  
 |-----------------|-----------------|  
 |ModelName|Name des Modells, das getestet wurde. **Alles** gibt an, dass das Ergebnis ein Aggregat für alle Modelle ist.|  
 |AttributeName|Nicht anwendbar auf Clustering-Modelle.|  
@@ -91,7 +91,7 @@ SystemGetClusterAccuracyResults(
 |PartitionCases|Ein ganzzahliger Wert, der angibt, wie viele Fälle getestet wurden.|  
 |Test|Der Typ von Test, der ausgeführt wurde.|  
 |Measure|Der Name des Measures, der vom Test zurückgegeben wurde. Measures für die einzelnen Modelle richten sich nach dem Modelltyp und dem Typ des vorhersagbaren Werts.<br /><br /> Eine Liste der für die einzelnen vorhersagbaren Typen zurückgegebenen Measures finden Sie unter [Measures im Kreuzvalidierungsbericht](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).<br /><br /> Definitionen für die einzelnen Measures finden Sie unter [Kreuzvalidierung &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).|  
-|Wert|Ein Wahrscheinlichkeitsergebnis, das die Wahrscheinlichkeit des Clusterfalls angibt.|  
+|value|Ein Wahrscheinlichkeitsergebnis, das die Wahrscheinlichkeit des Clusterfalls angibt.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die folgende Tabelle enthält Beispiele für die Werte, mit denen Sie die Daten in der für die Kreuzvalidierung verwendeten Miningstruktur angeben können. Wenn Sie Testfälle für die Kreuzvalidierung verwenden möchten, muss die Miningstruktur bereits ein Testdataset enthalten. Informationen zum Definieren eines Testdatasets bei der Erstellung einer Miningstruktur finden Sie unter [Trainings- und Testdatasets](../../analysis-services/data-mining/training-and-testing-data-sets.md).  
@@ -121,10 +121,10 @@ CALL SystemGetClusterAccuracyResults (
   
  Beispielergebnisse:  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Measure|Wert|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Measure|value|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |Cluster 1|||0|5545|Clustering|Fallwahrscheinlichkeit|0.796514342249313|  
-|Cluster 2|||0|5545|Clustering|Fallwahrscheinlichkeit|0.732122471228572|  
+|Cluster 2|||0|5545|Clustering|Fallwahrscheinlichkeit|0.732122471228572|  
   
 ## <a name="requirements"></a>Anforderungen  
  Die Kreuzvalidierung in [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] ist erst ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]verfügbar.  

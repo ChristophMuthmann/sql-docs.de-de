@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 092ec27d421f91a1dc4484298139783df1695594
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 43652986e789837299feacf5387cd8b6e6d57a8b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>Data Mining-Algorithmen (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ein *Algorithmus* in Data Mining (oder Machine Learning) ist eine Reihe von Heuristiken und Berechnungen, die ein Modell aus Daten erstellt. Um ein Modell zu erstellen, werden vom Algorithmus zuerst die von Ihnen bereitgestellten Daten analysiert und bestimmte Muster oder Trends gesucht. Mithilfe der Ergebnisse dieser Analyse über zahlreiche Iterationen definiert der Algorithmus die optimalen Parameter zum Erstellen des Miningmodells. Diese Parameter werden dann für das gesamte Dataset übernommen, um aussagefähige Muster und ausführliche Statistiken zu extrahieren.  
@@ -94,13 +92,13 @@ ms.lasthandoff: 12/08/2017
 |**Modellinhalt**|Beschreibt die Strukturierung der Informationen innerhalb der einzelnen Data Mining-Modelltypen und erläutert, wie die in den einzelnen Knoten gespeicherten Informationen interpretiert werden.|  
 ||[Miningmodellinhalt von Zuordnungsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)<br /><br /> [Miningmodellinhalt von Clustermodellen &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)<br /><br /> [Miningmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)<br /><br /> [Miningmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)<br /><br /> [Miningmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)<br /><br /> [Miningmodellinhalt von Naive Bayes-Modellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)<br /><br /> [Miningmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)<br /><br /> [Miningmodellinhalt von Sequence Clustering-Modellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)<br /><br /> [Miningmodellinhalt von Zeitreihenmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|  
 |**Data Mining-Abfragen**|Stellt mehrere Abfragen bereit, die mit jedem Modelltyp verwendet werden können. Zu den Beispielen gehören Inhaltsabfragen, die Aufschluss über die im Modell enthaltenen Muster geben, und Vorhersageabfragen, die Sie beim Generieren von Vorhersagen auf Grundlage dieser Muster unterstützen.|  
-||[Beispiele für Zuordnungsmodellabfragen](../../analysis-services/data-mining/association-model-query-examples.md)<br /><br /> [Beispiele für Clusteringmodellabfragen](../../analysis-services/data-mining/clustering-model-query-examples.md)<br /><br /> [Beispiele für Entscheidungsstruktur-Modellabfragen](../../analysis-services/data-mining/decision-trees-model-query-examples.md)<br /><br /> [Beispiele für lineare Regressionsmodellabfrage](../../analysis-services/data-mining/linear-regression-model-query-examples.md)<br /><br /> [Logistische Regressionsmodell-Abfragebeispiele](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)<br /><br /> [Beispiele für Naive Bayes-Modellabfrage](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)<br /><br /> [Neuronale Beispiele für Netzwerkmodellabfragen](../../analysis-services/data-mining/neural-network-model-query-examples.md)<br /><br /> [Sequenzclusteringmodellabfragebeispiele](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)<br /><br /> [Abfragebeispiel Zeitreihenmodell](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
+||[Beispiele für Zuordnungsmodellabfragen](../../analysis-services/data-mining/association-model-query-examples.md)<br /><br /> [Beispiele für Clusteringmodellabfragen](../../analysis-services/data-mining/clustering-model-query-examples.md)<br /><br /> [Beispiele für Entscheidungsstruktur-Modellabfragen](../../analysis-services/data-mining/decision-trees-model-query-examples.md)<br /><br /> [Beispiele für lineare Regressionsmodellabfrage](../../analysis-services/data-mining/linear-regression-model-query-examples.md)<br /><br /> [Logistische Regressionsmodell-Abfragebeispiele](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)<br /><br /> [Beispiele für Naive Bayes-Modellabfragen](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)<br /><br /> [Beispiele für Abfragen von neuronalen Netzwerkmodellen](../../analysis-services/data-mining/neural-network-model-query-examples.md)<br /><br /> [Beispiele für Abfragen von Sequenzclustermodellen](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)<br /><br /> [Abfragebeispiel Zeitreihenmodell](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
-|**Thema**|**Description**|  
+|**Thema**|**Beschreibung**|  
 |---------------|---------------------|  
-|Bestimmen des von einem Data Mining-Modell verwendeten Algorithmus|[Abfragen der Parameter, mit denen ein Miningmodell erstellt wird](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md)|  
+|Bestimmen des von einem Data Mining-Modell verwendeten Algorithmus|[Abfragen der für die Erstellung eines Miningmodell verwendeten Parameter](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md)|  
 |Erstellen eines benutzerdefinierten Plug-In-Algorithmus|[Plug-In-Algorithmen](../../analysis-services/data-mining/plugin-algorithms.md)|  
 |Durchsuchen eines Modells mit einem algorithmusspezifischen Viewer|[Data Mining-Modell-Viewer](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |Anzeigen des Inhalts eines Modells unter Verwendung eines generischen Tabellenformats|[Durchsuchen eines Modells mit dem Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)|  

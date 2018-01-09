@@ -7,7 +7,7 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d15ee956-918f-40e0-b986-2bf929ef303a
@@ -15,11 +15,11 @@ caps.latest.revision: "14"
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 8f9156e11e906454e7cae00703d1ffd976424297
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 58a86d2268e318470d1d05799e9146e877966263
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-up-a-data-science-client-for-use-with-sql-server"></a>Einrichten eines Data Science-Clients für die Verwendung mit SQL Server
 
