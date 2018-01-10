@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1c80c429cd094c36ec92aa71039e6431e60e73e3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 65789c30fdb080171e70ab16e81808990a7b636e
+ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="sql-server-guides"></a>Handbücher für SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,10 +32,10 @@ ms.lasthandoff: 11/17/2017
 Die folgenden Handbücher sind verfügbar: Darin werden allgemeine Konzepte erläutert. Sie gelten für alle Versionen von SQL Server, sofern nicht anders in das entsprechende Handbuch. 
 
 [Handbuch zur Problembehandlung und Überwachung von Always On-Verfügbarkeitsgruppen](http://msdn.microsoft.com/library/dn135328)  
-[Handbuch zum Indexentwurf](../relational-databases/sql-server-index-design-guide.md)  
+[Index Design Guide (Handbuch zum Entwerfen von Indizes)](../relational-databases/sql-server-index-design-guide.md)  
 [Handbuch zur Architektur der Speicherverwaltung](../relational-databases/memory-management-architecture-guide.md)  
 [Handbuch zur Architektur von Seiten und Blöcken](../relational-databases/pages-and-extents-architecture-guide.md)  
-[Handbuch für die Validierung und Optimierung nach der Migration](post-migration-validation-and-optimization-guide.md)  
+[Handbuch für die Validierung und Optimierung nach der Migration](../relational-databases/post-migration-validation-and-optimization-guide.md)  
 [Handbuch zur Architektur der Abfrageverarbeitung](../relational-databases/query-processing-architecture-guide.md)  
 [Handbuch zu Transaktionssperren und Zeilenversionsverwaltung in SQL Server](https://msdn.microsoft.com/library/jj856598)  
 [Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen in SQL Server](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)  

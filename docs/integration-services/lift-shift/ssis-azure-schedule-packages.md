@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d0b8dbc635523b33a480ad887b73d9f395d71c8d
-ms.sourcegitcommit: ffa4ce9bd71ecf363604966c20cbd2710d029831
+ms.openlocfilehash: 26160f982982b1a8163662f57cb317e7252ab0e4
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Planen der Ausführung von SSIS-Paketen in Azure
 Sie können die Ausführung von Paketen, die in der SSIS-Katalogdatenbank auf einem Azure SQL-Datenbankserver gespeichert sind, mithilfe einer der folgenden Planungsoptionen planen:
@@ -64,7 +64,7 @@ Erstellen Sie mithilfe eines Auftragsschritts einen Auftrag, der die gespeichert
 
 Weitere Informationen zu elastischen Aufträgen auf SQL-Datenbank finden Sie unter [Verwalten von Scale Out-Clouddatenbanken](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
 
-### <a name="prerequisites"></a>Erforderliche Komponenten
+### <a name="prerequisites"></a>Voraussetzungen
 
 Sie müssen zunächst folgende Schritte ausführen, damit Sie elastische Aufträge verwenden können, um SSIS-Pakete zu planen, die in der SSIS-Katalogdatenbank auf einem Azure SQL-Datenbankserver gespeichert sind:
 
@@ -108,162 +108,11 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
 
 ## <a name="sproc"></a> Planen eines Pakets mithilfe der Azure Data Factory-Aktivität für gespeicherte SQL Server-Prozeduren
 
-> [!IMPORTANT]
-> Verwenden Sie die im folgenden Beispiel genannten JSON-Skripts mit Version 1 der Azure Data Factory-Aktivität für gespeicherte SQL Server-Prozeduren.
+Informationen zum Planen eines SSIS-Pakets mithilfe der Azure Data Factory-Aktivität „Gespeicherte Prozedur“ finden Sie in den folgenden Artikeln:
 
-Führen Sie die folgenden Schritte aus, um ein Paket mithilfe der Azure Data Factory-Aktivität für gespeicherte SQL Server-Prozeduren zu planen:
+-   Für Data Factory Version 2: [Invoke an SSIS package using stored procedure activity in Azure Data Factory (Aufrufen eines SSIS-Pakets mithilfe der Aktivität „Gespeicherte Prozedur“ in Azure Data Factory)](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
 
-1.  Erstellen Sie eine Data Factory.
-
-2.  Erstellen Sie einen verknüpften Dienst für die SQL-Datenbank, die SSISDB hostet.
-
-3.  Erstellen Sie ein Ausgabedataset, das die Planung vorantreibt.
-
-4.  Erstellen Sie eine Data Factory-Pipeline, die die Aktivität für gespeicherte SQL Server-Prozeduren verwendet, um das SSIS-Paket auszuführen.
-
-In diesem Abschnitt wird eine Übersicht über diese Schritte bereitgestellt. Ein vollständiges Tutorial für Data Factory kann in diesem Artikel nicht abgedeckt werden. Weitere Informationen finden Sie unter [SQL Server-Aktivität „Gespeicherte Prozedur“](https://docs.microsoft.com/azure/data-factory/data-factory-stored-proc-activity).
-
-Wenn eine geplante Ausführung fehlschlägt, und die ADF-Aktivität für gespeicherte Prozeduren eine Ausführungs-ID für die fehlgeschlagene Ausführung bereitstellt, überprüfen Sie den Ausführungsbericht für diese ID in SSMS im SSIS-Katalog.
-
-### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>Erstellen eines verknüpften Diensts für die SQL-Datenbank, die SSISDB hostet
-Mithilfe des verknüpften Diensts stellt Data Factory eine Verbindung mit SSISDB her.
-
-```json
-{
-    "name": "AzureSqlLinkedService",
-    "properties": {
-        "description": "",
-        "type": "AzureSqlDatabase",
-        "typeProperties": {
-            "connectionString": "Data Source = tcp: YourSQLDBServer.database.windows.net, 1433; Initial Catalog = SSISDB; User ID = YourUsername; Password = YourPassword; Integrated Security = False; Encrypt = True; Connect Timeout = 30"
-        }
-    }
-}
-```
-
-### <a name="create-an-output-dataset"></a>Erstellen eines Ausgabedatasets
-Das Ausgabedataset enthält Informationen zur Planung.
-
-```json
-{
-    "name": "sprocsampleout",
-    "properties": {
-        "type": "AzureSqlTable",
-        "linkedServiceName": "AzureSqlLinkedService",
-        "typeProperties": {
-            "tableName": "sampletable"
-        },
-        "availability": {
-            "frequency": "Hour",
-            "interval": 1
-        }
-    }
-}
-```
-### <a name="create-a-data-factory-pipeline"></a>Erstellen einer Data Factory-Pipeline
-Die Pipeline verwendet die Aktivität für gespeicherte SQL Server-Prozeduren zum Ausführen des SSIS-Pakets.
-
-```json
-{
-    "name": "SprocActivitySamplePipeline",
-    "properties": {
-        "activities": [{
-            "name": "SprocActivitySample",
-            "type": "SqlServerStoredProcedure",
-            "typeProperties": {
-                "storedProcedureName": "sp_executesql",
-                "storedProcedureParameters": {
-                    "stmt": "Transact-SQL script to create and start SSIS package execution using SSISDB catalog stored procedures"
-                }
-            },
-            "outputs": [{
-                "name": "sprocsampleout"
-            }],
-            "scheduler": {
-                "frequency": "Hour",
-                "interval": 1
-            }
-        }],
-        "start": "2017-10-01T00:00:00Z",
-        "end": "2017-10-01T05:00:00Z",
-        "isPaused": false
-    }
-}
-```
-
-Sie müssen keine neue gespeicherte Prozedur erstellen, um den Transact-SQL-Befehl zu kapseln, der zum Erstellen und Starten der Ausführung eines SSIS-Pakets erforderlich ist. Sie können im folgenden JSON-Beispiel das gesamte Skript als Wert des `stmt`-Parameters bereitstellen. Beispielskript:
-
-```sql
--- T-SQL script to create and start SSIS package execution using SSISDB catalog stored procedures
-DECLARE @return_value INT,@exe_id BIGINT,@err_msg NVARCHAR(150)
-
--- Create the exectuion
-EXEC @return_value=[SSISDB].[catalog].[create_execution] @folder_name=N'folderName', @project_name=N'projectName', @package_name=N'packageName', @use32bitruntime=0, @runinscaleout=1,@useanyworker=1, @execution_id=@exe_id OUTPUT
-
--- To synchronize SSIS package execution, set the SYNCHRONIZED execution parameter
-EXEC [SSISDB].[catalog].[set_execution_parameter_value] @exe_id, @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1
-
--- Start the execution                                                         
-EXEC [SSISDB].[catalog].[start_execution] @execution_id=@exe_id,@retry_count=0
-                                          
--- Raise an error for unsuccessful package execution
--- Execution status values include the following:
--- created (1)
--- running (2)
--- canceled (3)
--- failed (4)
--- pending (5)
--- ended unexpectedly (6)
--- succeeded (7)
--- stopping (8)
--- completed (9) 
-IF(SELECT [status]
-   FROM [SSISDB].[catalog].[executions]
-   WHERE execution_id=@exe_id)<>7
-BEGIN
-    SET @err_msg=N'Your package execution did not succeed for execution ID: ' + CAST(@exe_id AS NVARCHAR(20))
-    RAISERROR(@err_msg,15,1)
-END
-GO
-```
-
-Um das oben gezeigte SQL-Skript als den Wert des `stmt`-Parameters festzulegen, müssen Sie für gewöhnlich das gesamte Skript in eine einzige Zeile schreiben, so wie im folgenden Beispiel dargestellt. (Der [JSON-Standard](https://json.org/) unterstützt keine Steuerzeichen, einschließlich des Steuerzeichens `\n` für eine Zeile, das in anderen Sprachen verwendet wird, um Zeichen in mehrzeiligen Zeichenfolgen zu trennen.)
-
-```json
-{
-    "name": "SprocActivitySamplePipeline",
-    "properties": {
-        "activities": [
-            {
-                "type": "SqlServerStoredProcedure",
-                "typeProperties": {
-                    "storedProcedureName": "sp_executesql",
-                    "storedProcedureParameters": {
-                        "stmt": "DECLARE @return_value INT, @exe_id BIGINT, @err_msg NVARCHAR(150)    EXEC @return_value=[SSISDB].[catalog].[create_execution] @folder_name=N'test', @project_name=N'TestProject', @package_name=N'STestPackage.dtsx', @use32bitruntime=0, @runinscaleout=1, @useanyworker=1, @execution_id=@exe_id OUTPUT    EXEC [SSISDB].[catalog].[set_execution_parameter_value] @exe_id, @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1    EXEC [SSISDB].[catalog].[start_execution] @execution_id=@exe_id, @retry_count=0    IF(SELECT [status] FROM [SSISDB].[catalog].[executions] WHERE execution_id=@exe_id)<>7 BEGIN SET @err_msg=N'Your package execution did not succeed for execution ID: ' + CAST(@exe_id AS NVARCHAR(20)) RAISERROR(@err_msg,15,1) END"
-                    }
-                },
-                "outputs": [
-                    {
-                        "name": "sprocsampleout"
-                    }
-                ],
-                "scheduler": {
-                    "frequency": "Minute",
-                    "interval": 15
-                },
-                "name": "SprocActivitySample"
-            }
-        ],
-        "start": "2017-12-06T12:00:00Z",
-        "end": "2017-12-06T12:30:00Z",
-        "isPaused": false,
-        "hubName": "test_hub",
-        "pipelineMode": "Scheduled"
-    }
-}
-```
-
-Weitere Informationen zum Code in diesem Skript finden Sie unter [Deploy and Execute SSIS Packages using Stored Procedures (Bereitstellen und Ausführen von SSIS-Paketen mithilfe gespeicherter Prozeduren)](../packages/deploy-integration-services-ssis-projects-and-packages.md#deploy-and-execute-ssis-packages-using-stored-procedures).
+-   Für Data Factory Version 1: [Invoke an SSIS package using stored procedure activity in Azure Data Factory (Aufrufen eines SSIS-Pakets mithilfe der Aktivität „gespeicherte Prozedur“ in Azure Data Factory)](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)
 
 ## <a name="next-steps"></a>Nächste Schritte
 Weitere Informationen zu SQL Server-Agent finden Sie unter [SQL Server Agent Jobs for Packages (Aufträge für SQL Server-Agent für Pakete)](../packages/sql-server-agent-jobs-for-packages.md).

@@ -23,18 +23,18 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 312c12a57368de2e4d27d5a27403dcffde4181e2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d56c906c87ef69e444ee1424324cc99e3fa05ed8
+ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="always-encrypted-database-engine"></a>„Immer verschlüsselt“ (Datenbankmodul)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   ![Immer verschlüsselt](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
- Always Encrypted ist eine Funktion zum Schutz sensibler Daten, wie Kreditkartennummern oder Personalausweisnummer (z.B. US-Sozialversicherungsnummern), die in [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] - oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbanken gespeichert sind. Always Encrypted ermöglicht es Clients, sensible Daten in Clientanwendungen zu verschlüsseln und die Verschlüsselungsschlüssel niemals an [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) weiterzugeben. Daher bietet Always Encrypted eine Trennung zwischen denjenigen, die die Daten besitzen (und sie ansehen können) und denjenigen, die die Daten verwalten, (aber keinen Zugriff haben sollten). Always Encrypted stellt sicher, dass Administratoren lokaler Datenbanken, Clouddatenbank-Operatoren oder andere Benutzer mit weitgehenden Rechten, aber ohne Autorisierung, nicht auf die verschlüsselten Daten zugreifen können.So können Kunden ihre sensiblen Daten ruhigen Gewissens außerhalb ihres direkten Kontrollbereichs speichern. Dies ermöglicht Organisationen, ruhende und aktive Daten für die Speicherung in Azure zu verschlüsseln. Daraufhin kann die lokale Datenbankverwaltung an Drittanbieter delegiert oder die Anforderungen an die Sicherheitsfreigaben der eigenen Datenbankadministrationsmitarbeiter reduziert werden.  
+ Always Encrypted ist eine Funktion zum Schutz sensibler Daten, wie Kreditkartennummern oder Personalausweisnummern (z.B. US-Sozialversicherungsnummern), die in [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]- oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbanken gespeichert sind. Always Encrypted ermöglicht es Clients, sensible Daten in Clientanwendungen zu verschlüsseln und die Verschlüsselungsschlüssel niemals an [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) weiterzugeben. Daher bietet Always Encrypted eine Trennung zwischen denjenigen, die die Daten besitzen (und sie ansehen können) und denjenigen, die die Daten verwalten, (aber keinen Zugriff haben sollten). Always Encrypted stellt sicher, dass Administratoren lokaler Datenbanken, Clouddatenbank-Operatoren oder andere Benutzer mit weitgehenden Rechten, aber ohne Autorisierung, nicht auf die verschlüsselten Daten zugreifen können.So können Kunden ihre sensiblen Daten ruhigen Gewissens außerhalb ihres direkten Kontrollbereichs speichern. Dies ermöglicht Organisationen, ruhende und aktive Daten für die Speicherung in Azure zu verschlüsseln. Daraufhin kann die lokale Datenbankverwaltung an Drittanbieter delegiert oder die Anforderungen an die Sicherheitsfreigaben der eigenen Datenbankadministrationsmitarbeiter reduziert werden.  
   
  Always Encrypted macht die Verschlüsselung den Anwendungen gegenüber transparent. Ein auf dem Clientcomputer installierter Treiber, bei dem Always Encrypted aktiviert ist, erreicht dies durch die automatische Ver- und Entschlüsselung von sensiblen Daten in der Clientanwendung. Der Treiber verschlüsselt die Daten in vertraulichen Spalten, bevor er sie an [!INCLUDE[ssDE](../../../includes/ssde-md.md)]weitergibt, und schreibt Abfragen automatisch neu, sodass die Semantik der Anwendung beibehalten wird. Auf ähnliche Weise entschlüsselt der Treiber transparent Daten, die in verschlüsselten Datenbankspalten in Abfrageergebnissen gespeichert sind.  
   
@@ -85,10 +85,10 @@ Informationen zu kryptografischen Algorithmen von Always Encrypted finden Sie un
 
 |Task|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
-|Bereitstellung von Spaltenhauptschlüsseln, Spaltenverschlüsselungsschlüsseln und Verschlüsselungsschlüsseln für verschlüsselte Spalten mit dem entsprechenden Spaltenhauptschlüssel|ja|ja|Nein|
+|Bereitstellung von Spaltenhauptschlüsseln, Spaltenverschlüsselungsschlüsseln und Verschlüsselungsschlüsseln für verschlüsselte Spalten mit dem entsprechenden Spaltenhauptschlüssel|ja|ja|nein|
 |Erstellen von Schlüsselmetadaten in der Datenbank|ja|ja|ja|
 |Erstellen neuer Tabellen mit verschlüsselten Spalten|ja|ja|ja|
-|Verschlüsseln von vorhandenen Daten in ausgewählten Datenbankspalten|ja|ja|Nein|
+|Verschlüsseln von vorhandenen Daten in ausgewählten Datenbankspalten|ja|ja|nein|
 
 > [!NOTE]
 > Stellen Sie sicher, dass Sie Schlüsselbereitstellungs- oder Datenverschlüsselungstools in einer sicheren Umgebung auf einem Computer ausführen, auf dem nicht Ihre Datenbank gehostet wird. Andernfalls könnten vertrauliche Daten oder die Schlüssel in der Serverumgebung zugänglich werden, was die Vorteile der Verwendung von Always Encrypted verringern würde.  
@@ -117,7 +117,7 @@ Verwenden Sie den [Always Encrypted-Assistenten](../../../relational-databases/s
   
 ## <a name="feature-details"></a>Details zur Funktion  
   
--   Abfragen können auf deterministisch verschlüsselten Spalten Gleichheitsvergleiche durchführen. Andere Vorgänge (z.B. „größer/kleiner als“, Mustervergleich mittels LIKE-Operator oder arithmetische Operationen) können nicht durchgeführt werden.  
+-   Abfragen können in deterministisch verschlüsselten Spalten Gleichheitsvergleiche durchführen. Andere Vorgänge (z.B. „größer/kleiner als“, Mustervergleiche mittels LIKE-Operator oder arithmetische Operationen) können nicht durchgeführt werden.  
   
 -   Abfragen an Spalten, die mithilfe der zufälligen Verschlüsselung verschlüsselt wurden, können auf keiner dieser Spalten Vorgänge durchführen. Das Indizieren von zufällig verschlüsselten Spalten wird nicht unterstützt.  
 
@@ -127,7 +127,7 @@ Verwenden Sie den [Always Encrypted-Assistenten](../../../relational-databases/s
 
 -   Führen Sie nach der Änderung der Definition [sp_refresh_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) aus, um die Always Encrypted-Metadaten für das Objekt zu aktualisieren.
   
-Always Encrypted wird nicht für Spalten unterstützt, die folgende Merkmale aufweisen (z.B. kann die *verschlüsselte WITH* -Klausel nicht in **CREATE TABLE/ALTER TABLE** für eine Spalte verwendet werden, wenn eine der folgenden Bedingungen auf die Spalte zutrifft):  
+Always Encrypted wird nicht für Spalten unterstützt, die folgende Merkmale aufweisen (z.B. kann die *ENCRYPTED WITH*-Klausel nicht in **CREATE TABLE/ALTER TABLE** für eine Spalte verwendet werden, wenn eine der folgenden Bedingungen auf die Spalte zutrifft):  
   
 -   Spalten, die einen der folgenden Datentypen verwenden; **xml**, **timestamp**/**rowversion**, **image**, **ntext**, **text**, **sql_variant**, **hierarchyid**, **geography**, **geometry**, Alias, benutzerdefinierte Typen.  
 - FILESTREAM-Spalten  
@@ -236,7 +236,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)   
 [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
 [CREATE TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql.md)   

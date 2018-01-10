@@ -6,26 +6,29 @@ services: sql-database
 documentationcenter: 
 author: aliceku
 manager: craigg
-editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: security
-ms.workload: Inactive
+ms.custom: 
+ms.component: security
+ms.workload: On Demand
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 11/15/2017
 ms.author: aliceku
-ms.openlocfilehash: 5a0b56974d85f63e3382f26b1388e7d30dfbd6f8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5aaa55cc04e4844889266dc434ac92a0ed22ed00
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption mit Bring Your Own Key-Unterstützung für Azure SQL-Datenbank und Data Warehouse
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+# <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption mit Bring Your Own Key-Unterstützung (Vorschau) für Azure SQL-Datenbank und Data Warehouse
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-Die Unterstützung von BYOK für [Transparent Data Encryption (TDE)](transparent-data-encryption.md) erlaubt Ihnen, die Kontrolle über Ihre TDE-Verschlüsselungsschlüssel zu übernehmen und einzuschränken, wer auf diese zugreifen kann und zu welchem Zeitpunkt. [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault), das cloudbasierte externe Schlüsselverwaltungssystem von Azure, ist der erste Schlüsselverwaltungsdienst, bei dem die BYOK-Unterstützung in TDE integriert ist. Mit BYOK ist der Datenbank-Verschlüsselungsschlüssel durch einen asymmetrischen Schlüssel geschützt, der in Key Vault gespeichert ist. Der asymmetrische Schlüssel ist auf Serverebene festgelegt und wird von allen Datenbanken unter diesem Server geerbt. 
+Die Unterstützung von BYOK für [Transparent Data Encryption (TDE)](transparent-data-encryption.md) erlaubt Ihnen, die Kontrolle über Ihre TDE-Verschlüsselungsschlüssel zu übernehmen und einzuschränken, wer auf diese zugreifen kann und zu welchem Zeitpunkt. [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault), das cloudbasierte externe Schlüsselverwaltungssystem von Azure, ist der erste Schlüsselverwaltungsdienst, bei dem die BYOK-Unterstützung in TDE integriert ist. Mit BYOK ist der Datenbank-Verschlüsselungsschlüssel durch einen asymmetrischen Schlüssel geschützt, der in Key Vault gespeichert ist. Der asymmetrische Schlüssel ist auf Serverebene festgelegt und wird von allen Datenbanken unter diesem Server geerbt. Diese Funktion befindet sich derzeit in der Vorschauversion. Es wird empfohlen, dieses bis zur allgemeinen Verfügbarkeit nicht für Produktionsworkloads zu verwenden.
 
 Mit der BYOK-Unterstützung können Benutzer nun Schlüsselverwaltungsaufgaben steuern, einschließlich Schlüsselrotationen, Schlüsseltresorberechtigungen, das Löschen von Schlüsseln und Aktivieren der Überwachung/Berichterstellung auf allen Verschlüsselungsschlüsseln. Key Vault bietet eine zentrale Schlüsselverwaltung, nutzt die streng überwachten Hardwaresicherheitsmodule (HSMs) und ermöglicht die Trennung der Pflichten zwischen dem Verwalten von Schlüsseln und Daten, um gesetzliche Bestimmungen einzuhalten. 
 
@@ -57,6 +60,7 @@ Das Verwenden von TDE mit BYOK bietet Ihnen sowohl zusätzliche Aufgaben für di
 Das Übernehmen der Verwaltung für Verschlüsselungsschlüssel von den Ressourcen einer Anwendung ist eine wichtige Aufgabe. Indem Sie TDE mit BYOK über Key Vault verwenden, können Sie von folgenden Aufgaben bei der Schlüsselverwaltung ausgehen:
 - **Schlüsselrotationen:** Die TDE-Schutzvorrichtungen sollten gemäß der internen Richtlinien oder Kompatibilitätsanforderungen rotiert werden. Schlüsselrotationen können über den Schlüsseltresor der TDE-Schutzvorrichtung durchgeführt werden.  
 - **Schlüsseltresorberechtigungen**: Berechtigungen innerhalb von Key Vault werden über einen Schlüsseltresor und auf Serverebene bereitgestellt. Die Berechtigung eines Servers für einen Schlüsseltresor kann jederzeit aufgehoben werden, indem die Zugriffsrichtlinien des Schlüsseltresors verwendet werden.
+- **Schlüsseltresorredundanzen:** Da das Schlüsselmaterial Azure Key Vault nie verlässt und der Server keinen Zugriff auf zwischengespeicherte Kopien außerhalb des Schlüsseltresors besitzt, müssen Sie die Georeplikation von Azure Key Vault so konfigurieren, dass der Zugriff auf das Schlüsselmaterial gewährleistet ist, falls in einer Region von Azure Key Vault ein Ausfall auftritt.  Georeplizierte Datenbanken verlieren den Zugriff auf deren Schlüsselmaterial, wenn diese von einem einzigen Azure-Schlüsseltresor abhängig sind.
 - **Löschen von Schlüsseln**: Schlüssel können von Key Vault und SQL Server für zusätzliche Sicherheit oder zur Einhaltung der Kompatibilitätsanforderungen gelöscht werden.
 - **Überwachung/Berichterstellung auf allen Verschlüsselungsschlüsseln**: Key Vault stellt Protokolle bereit, die leicht in andere Tools für Sicherheitsinformationen und Ereignisverwaltung (SIEM) eingefügt werden können. Operations Management Suite (OMS) [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) ist ein Beispieldienst, der bereits integriert ist.
 
@@ -91,12 +95,11 @@ Eindeutige TDE-Schutzvorrichtungen für Datenbanken oder Data Warehouse werden n
 
 ### <a name="high-availability-and-disaster-recovery"></a>Hochverfügbarkeit und Notfallwiederherstellung
   
-Es gibt zwei Möglichkeiten, wie die Georeplikation für Server mithilfe von Key Vault konfiguriert werden kann: 
+Die Georeplikation muss für den Schlüsseltresor konfiguriert sein, um die Hochverfügbarkeit des Schlüsselmaterials in Azure Key Vault zu gewährleisten:
 
-- **Separater Schlüsseltresor**: Jeder Server hat Zugriff auf einen separaten Schlüsseltresor (idealerweise jeweils innerhalb seiner eigenen Azure-Region). Dabei handelt es sich um die empfohlene Konfiguration, da jeder Server über seine eigene Kopie der TDE-Schutzvorrichtung für die verschlüsselten, georeplizierten Datenbanken verfügt. Wenn die Azure-Regionen eines Servers offline geschaltet werden, können die anderen Server weiterhin auf die georeplizierten Datenbanken zugreifen.   
+- **Redundante Schlüsseltresore:** Jeder georeplizierte Server besitzt Zugriff auf einen separaten Schlüsseltresor, der sich idealerweise in derselben Azure-Region befindet. Dabei handelt es sich um die empfohlene Konfiguration, da jeder Server über seine eigene Kopie der TDE-Schutzvorrichtung für die verschlüsselten, georeplizierten Datenbanken verfügt. Wenn die Azure-Regionen eines Servers offline geschaltet werden, können die anderen Server weiterhin auf die georeplizierten Datenbanken zugreifen.  Diese Konfiguration muss sorgfältig durchgeführt werden, um sicherzustellen, dass der Server auf die Sicherung der TDE-Schutzvorrichtung in einem anderen Schlüsseltresor zugreifen kann, falls ein Schlüsseltresor nicht verfügbar ist.     
 
-- **Freigegebener Schlüsseltresor**: Alle Server verwenden denselben Schlüsseltresor. Diese Konfiguration ist leichter einzurichten, aber wenn die Azure-Region, in der sich der Schlüsseltresor befindet, offline geschaltet wird, kann kein Server mehr die verschlüsselten georeplizierten Datenbanken oder seine eigenen verschlüsselten Datenbanken lesen. 
- 
+
 Verwenden Sie zum Einstieg das Cmdlet [Add-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey), um den Key Vault-Schlüssel jedes Servers zu den anderen Servern im Link der Georeplikation hinzuzufügen.  
 (Beispiel für eine Schlüssel-ID von Key Vault: *https://contosokeyvault.vault.azure.net/keys/Key1/1a1a2b2b3c3c4d4d5e5e6f6f7g7g8h8h*)
 

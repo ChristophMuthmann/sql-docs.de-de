@@ -1,11 +1,11 @@
 ---
 title: "Änderungsprotokoll für SQL Server Data Tools (SSDT) | Microsoft-Dokumentation"
 ms.custom: 
-ms.date: 10/19/2017
-ms.prod: ssdt
-ms.prod_service: sql-non-specified
-ms.service: ssdt
-ms.component: 
+ms.date: 12/22/2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssdt
 ms.reviewer: 
 ms.suite: sql
 ms.technology: tools-ssdt
@@ -17,16 +17,102 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e9e028b61ce1580ed5a3f7c19d2911eca27eaf24
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 98c27d595b2cb849bdca3ccd72bd51cc8378a8b7
+ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Änderungsprotokoll für SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dieses Änderungsprotokoll bezieht sich auf [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 Ausführliche Beiträge zu den Neuigkeiten und Änderungen finden Sie auf [the SSDT Team blog (dem SSDT-Team-Blog)](https://blogs.msdn.microsoft.com/ssdt/)
+
+## <a name="ssdt-for-visual-studio-2017-1551"></a>SSDT für Visual Studio 2017 (15.5.1)
+Buildnummer: 14.0.16148.0
+  
+### <a name="whats-new"></a>Neues
+
+Bei Version 15.5.1 von Visual Studio 2017 handelt es sich, abgesehen von folgenden Fehlerkorrekturen beim Installer, um das gleiche Release wie Version 15.5.0:
+
+1.  Korrigiert: Der Installer reagiert nach der Installation von SQL Server Integration Services nicht mehr.
+2.  Korrigiert: Das Setup schlägt mit der folgenden Fehlermeldung fehl: „The requested metafile operation is not support (0x800707D3)“ (Der angeforderte Metadateivorgang wird nicht unterstützt (0x800707D3)).
+
+Neben diesen beiden Fehlerbehebungen gelten folgende Angaben zu 15.5.0 auch weiterhin für 15.5.1:
+
+## <a name="ssdt-for-visual-studio-2017-1550"></a>SSDT für Visual Studio 2017 (15.5.0)
+Buildnummer: 14.0.16146.0
+  
+### <a name="whats-new"></a>Neues
+
+SSDT für Visual Studio 2017 (15.5.0) befindet sich nicht mehr in der Vorschauphase sondern ist nun allgemein verfügbar.
+
+**Installationsprogramm**
+1. Die Benutzeroberfläche des Setups wurde lokalisiert.
+1. Die Qualität des Symbols wurde verbessert.
+
+**Integration Services (IS)**
+1. Im Bereitstellungsassistenten wurde ein Schritt zur Paketvalidierung hinzugefügt, wenn eine Bereitstellung an Azure SSIS IR in ADF durchgeführt wird, wobei mögliche Kompatibilitätsprobleme in SSIS-Paketen bei der Ausführung in Azure SSIS IR erkannt werden. Weitere Informationen finden Sie unter [Überprüfen von in Azure bereitgestellten SSIS-Paketen](..\integration-services\lift-shift\ssis-azure-validate-packages.md).
+1. Die SSIS-Erweiterung wurde lokalisiert.
+
+### <a name="bug-fixes"></a>Behebung von Programmfehlern
+
+**Integration Services (IS)**
+1. Korrigiert: Das Layout des Verbindungs-Managers von OLE DB und ADO.NET ist beschädigt.
+2. Korrigiert: Beim Bearbeiten einer Aufgabe zum Verarbeiten von Dimensionen wird der Fehler „Assembly nicht gefunden“ ausgegeben.
+
+### <a name="known-issues"></a>Bekannte Probleme
+
+Die SSIS-Aufgabe „Paket ausführen“ (**Integration Services (IS)**) unterstützt kein Debuggen, wenn ExecuteOutOfProcess auf TRUE festgelegt ist. Dieses Problem gilt nur für das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog wird nicht beeinträchtigt.
+
+
+
+## <a name="ssdt-174-for-visual-studio-2015"></a>SSDT 17.4 für Visual Studio 2015
+Buildnummer: 14.0.61712.050
+
+### <a name="whats-new"></a>Neues
+
+**Analysis Services-Projekte**
+- Es wurden drei neue Optionen zu tabellarischen Projekten hinzugefügt (unter „Optionen“ > „Analysis Services tabellarisch“ > „Datenimport“):
+  - Legacydatenquellen aktivieren: Damit kann der Benutzer ältere „Kompatibilitätsmodus 1200“-Datenquellen in neueren Kompatibilitätsmodi erstellen.
+  - Automatische Typerkennung: Ist diese Option aktiviert, versucht der Abfrage-Editor für moderne Datenquellen Datentypen für unstrukturierte Abfragen zu erkennen, während diese geladen werden. Wenn die Erkennung Erfolg hatte, kann ein neuer Schritt zur Abfrage hinzugefügt werden.
+  - Hintergrundanalyse ausführen: Ist diese Option aktiviert, führt der Abfrage-Editor für moderne Datenquellen Abfragen mit der Datenquelle aus, während diese geladen werden, um das Ausgabeschema der Abfrage zu analysieren.
+
+**Integration Services (IS)**
+- Im Bereitstellungsassistenten wurde ein Schritt zur Paketvalidierung hinzugefügt, wenn eine Bereitstellung an Azure SSIS IR in ADF durchgeführt wird, wobei mögliche Kompatibilitätsprobleme in SSIS-Paketen bei der Ausführung in Azure SSIS IR erkannt werden. Weitere Informationen finden Sie unter [Überprüfen von in Azure bereitgestellten SSIS-Paketen](..\integration-services\lift-shift\ssis-azure-validate-packages.md).
+
+
+### <a name="bug-fixes"></a>Behebung von Programmfehlern
+
+**Analysis Services-Projekte:**
+- Korrigiert: Beim Einchecken von Änderungen in TFS konnte eine nicht behandelten Ausnahme ausgelöst werden.
+- Korrigiert: Beim Hinzufügen einer Tabelle mit komplexen M-Ausdrücken zu einem Modell mit Kompatibilitätsgrad 1400 konnte eine Ausnahme ausgelöst werden.
+- Korrigiert: Beim Durchsuchen von Metadaten in der Modelldiagrammansicht stürzt Visual Studio manchmal ab.
+- Korrigiert: Beim Speichern von Änderung an Abfragen von Partition M werden berechnete Spalten aus der Tabellendefinition in Modellen mit Kompatibilitätsgrad 1400 entfernt.
+- Korrigiert: Beim Verwenden von „Abfrage umbenennen“ in Modellen mit Kompatibilitätsgrad 1400 unter „Daten abrufen“ bzw. im Tabellen-Editor kann es vorkommen, dass die Benutzeroberfläche nicht mehr reagiert, während die Kompatibilität mit dem aktuellen Datenmodell überprüft wird.
+- Korrigiert: Das Bereitstellen von Modellen mit Kompatibilitätsgrad 1400 in Azure Analysis Service kann dazu führen, dass ein Newtonsoft-Assemblyverweis fehlt.
+- Korrigiert: In einigen Fällen wurde beim Importieren von Daten mithilfe von PQ in ein Modell mit Kompatibilitätsgrad 1400 ein Fehler ausgelöst.
+- Korrigiert: Beim Skalieren von Windows tritt ein Problem mit den Dialogfeldern der PowerQuery-Benutzeroberfläche auf.
+- Korrigiert: Ein Problem beim Umbenennen von Rollen.
+- Korrigiert: Probleme bei den Projektkonfigurationen, die möglicherweise dazu führen, dass Änderungen in einigen Fällen nicht ordnungsgemäß gespeichert bzw. synchronisiert werden.
+- Korrigiert: Ein Problem im PowerQuery-Editor, bei dem Schritte zum Ändern des Typs automatisch hinzugefügt wurden.
+- Korrigiert: Nach dem Wechseln zum/vom integrierten Arbeitsbereichsmodus tritt ein Fehler beim Öffnen der BIM-Datei auf.
+- Die Eigenschaft „MaxConnections“ ist jetzt für Datenquellen in Tabellenmodellen sichtbar.
+- Die Startgröße des PowerQuery-Editorfensters wurde erweitert.
+- Eine lokalisierte Version von M-Abfrageschlüsselwörtern wie „Source“ wird jetzt im PowerQuery-Editor angezeigt.
+- Beim Arbeiten mit Modellen mit Kompatibilitätsgrad 1400 und mit strukturierten Datenquellen werden Anmeldeinformationen zwischengespeichert, damit diese nicht für jede bearbeitete Tabelle erneut eingegeben werden müssen.
+
+**RS-Projekte:**
+- Korrigiert: Ein Problem, das verhindert hat, dass ein einzelner Bericht in einem Projekt mit mehreren Berichten bereitgestellt werden konnte
+- Korrigiert: Ein Problem beim Bereitstellen von freigegebenen Datenquellen
+- Korrigiert: Beim Wechseln zwischen der Codeansicht, der Entwurfsansicht und dem Abfrage-Editorfenster stürzt der „Rückgängig machen“-Manager möglicherweise ab
+- Korrigiert: Nach einem Laufzeitfehler wird der Parameterbereich möglicherweise nicht mehr angezeigt.
+- Korrigiert: Quellcodeverwaltungszuordnungen gehen möglicherweise in Berichtsprojekten verloren.
+
+**Integration Services:**
+- Korrigiert: Ein Problem beim Wechseln einer Verbindung in einer Analysis Services-Verarbeitungsaufgabe.
+- Es wurde ein Problem behoben, bei dem einige Aufgaben/Komponenten nicht gut lokalisiert wurden.
+- Korrigiert: CDC-Komponenten funktionieren nach dem Anwenden einer SQL-Fehlerbehebung für CDC, in der die Spalte \__$command\_id hinzugefügt wird, nicht mehr.
 
 
 ## <a name="ssdt-for-visual-studio-2017-1540-preview"></a>SSDT für Visual Studio 2017 (15.4.0, Vorschauversion)

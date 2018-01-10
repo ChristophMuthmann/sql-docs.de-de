@@ -1,7 +1,8 @@
 ---
 title: SSIS Scale Out-Worker (SQL Server Integration Services) | Microsoft-Dokumentation
+ms.description: This article describes the Scale Out Master component of SSIS Scale Out
 ms.custom: 
-ms.date: 07/18/2017
+ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
@@ -16,18 +17,18 @@ author: haoqian
 ms.author: haoqian
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cb36dc89fbe8fbedc96e426d00f6982213d7d4c9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1e73695e21e8055d3c27079f106390e8d44894db
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Worker für horizontales Hochskalieren von Integration Services (SSIS)
 
-Ein Scale Out-Worker führt einen [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] Scale Out-Workerdienst aus, um Ausführungstasks aus dem Scale Out-Master abzurufen, und führt die Pakete lokal mit „ISServerExec.exe“ aus.
+Der Scale Out-Worker führt den Scale Out-Workerdienst aus, um Ausführungsaufgaben aus dem Scale Out-Master zu entfernen. Daraufhin führt der Worker die Pakete lokal mit `ISServerExec.exe` aus.
 
-## <a name="configure-sql-server-integration-services-scale-out-worker-service"></a>Konfigurieren des Worker für horizontales Hochskalieren von SQL Server Integration Services-Diensts
-Der Worker für horizontales Hochskalieren-Dienst kann mit der Datei „ \<Treiber\>:\Programme\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config“ konfiguriert werden. Der Dienst muss neu gestartet werden, nachdem die Konfigurationsdatei aktualisiert wurde.
+## <a name="configure-the-scale-out-worker-service"></a>Konfigurieren des Scale Out-Workerdiensts
+Sie können den Scale Out-Workerdienst mithilfe der ` \<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`-Datei konfigurieren. Der Dienst muss nach dem Aktualisieren der Konfigurationsdatei neu gestartet werden.
 
 Konfiguration  |Description  |Standardwert  
 ---------|---------|---------
@@ -45,20 +46,24 @@ TaskRequestMaxCPU|Die Obergrenze bezüglich CPU für Worker für horizontales Ho
 TaskRequestMinMemory|Die Mindestmenge von Arbeitsspeicher in MB für Worker für horizontales Hochskalieren, um Tasks anzufordern. **Wird NICHT in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 verwendet.**|100.0         
 MaxTaskCount|Die maximale Anzahl von Tasks, die der Worker für horizontales Hochskalieren aufnehmen kann|10         
 LeaseInternval|Das Leaseintervall einer Taskaufbewahrung durch den Worker für horizontales Hochskalieren|00:01:00         
-TasksRootFolder|Der Ordner für die Taskprotokolle. Es wird der Ordnerpfad „ \<Treiber\>:\Benutzer\\*[Konto]*\AppData\Local\SSIS\Cluster\Tasks“ verwendet, wenn der Wert leer ist. [Konto] ist das Konto, unter dem der Dienst für Worker für horizontales Hochskalieren ausgeführt wird. Standardmäßig ist dies das Konto SSISScaleOutWorker140.|Empty         
+TasksRootFolder|Der Ordner für die Taskprotokolle. Wenn der Wert leer ist, wird der Ordnerpfad `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks` verwendet. [Konto] ist das Konto, unter dem der Dienst für Worker für horizontales Hochskalieren ausgeführt wird. Standardmäßig ist dies das Konto SSISScaleOutWorker140.|Empty         
 TaskLogLevel|Die Taskprotokollebene für den Worker für horizontales Hochskalieren. (Ausführlich 0x01, Informationen 0x02, Warnung 0x04, Fehler 0x08, Status 0x10, schwerwiegender Fehler 0x20, Überwachung 0x40)|126 (Informationen, Warnung, Fehler, Status, schwerwiegender Fehler, Überwachung)     
 TaskLogSegment|Die Zeitspanne einer Taskprotokolldatei|00:00:00         
 TaskLogEnabled|Gibt an, ob das Taskprotokoll aktiviert ist.|true         
-ExecutionLogCacheFolder|Der Ordner, in dem das Paketausführungsprotokoll zwischengespeichert wird. Es wird der Ordnerpfad „ \<Treiber\>:\Benutzer\\*[Konto]*\AppData\Local\SSIS\Cluster\Agent\ELogCache“ verwendet, wenn der Wert leer ist. [Konto] ist das Konto, unter dem der Dienst für Worker für horizontales Hochskalieren ausgeführt wird. Standardmäßig ist dies das Konto SSISScaleOutWorker140.|Empty         
+ExecutionLogCacheFolder|Der Ordner, in dem das Paketausführungsprotokoll zwischengespeichert wird. Wenn der Wert leer ist, wird der Ordnerpfad ` \<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache` verwendet. [Konto] ist das Konto, unter dem der Dienst für Worker für horizontales Hochskalieren ausgeführt wird. Standardmäßig ist dies das Konto SSISScaleOutWorker140.|Empty         
 ExecutionLogMaxBufferLogCount|Die maximale Anzahl von Ausführungsprotokollen, die in einem Ausführungsprotokollpuffer im Arbeitsspeicher zwischengespeichert werden|10000        
 ExecutionLogMaxInMemoryBufferCount|Die maximale Anzahl von Ausführungsprotokollpuffern im Arbeitsspeicher für Ausführungsprotokolle|10         
 ExecutionLogRetryCount|Die Anzahl von Wiederholungsversuchen, wenn bei der Ausführungsprotokollierung ein Fehler auftritt|3
-ExecutionLogRetryTimeout|Die Anzahl von Wiederholungsversuchen, wenn bei der Ausführungsprotokollierung ein Fehler auftritt. ExecutionLogRetryCount wird ignoriert, wenn ExecutionLogRetryTimeout erreicht wird.|7.00:00:00 (7 Tage)        
-AgentId|Worker-Agent-ID für den Worker für horizontales Hochskalieren|Wird automatisch generiert        
+ExecutionLogRetryTimeout|Die Anzahl von Wiederholungsversuchen, wenn bei der Ausführungsprotokollierung ein Fehler auftritt. i\ Wenn ExecutionLogRetryCount erreicht wird, wird ExecutionLogRetryTimeout ignoriert. |7.00:00:00 (7 Tage)        
+AgentId|Worker-Agent-ID des Scale Out-Workers|Wird automatisch generiert    
+||||    
 
-## <a name="view-scale-out-worker-log"></a>Anzeigen des Protokolls für Worker für horizontales Hochskalieren
-Die Protokolldatei des Scale Out-Workerdiensts befindet sich unter dem Ordnerpfad „\<Laufwerk\>:\Benutzer\\*[Konto]*\AppData\Local\SSIS\Cluster\Agent“.
+## <a name="view-the-scale-out-worker-log"></a>Anzeigen des Protokolls des Scale Out-Workers
+Die Protokolldatei des Scale Out-Workerdiensts befindet sich im Ordner `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Agent`.
 
-Der Protokollspeicherort jedes einzelnen Tasks ist in der Datei „WorkerSettings.config“ durch „TasksRootFolder“ konfiguriert. Ist kein Speicherort angegeben, befindet sich das Protokoll unter dem Ordnerpfad „\<Laufwerk\>:\Benutzer\\*[Konto]*\AppData\Local\SSIS\Cluster\Tasks“. 
+Der Speicherort jeder einzelnen Aufgabe wird in der `WorkerSettings.config`-Datei im Ordner `TasksRootFolder` konfiguriert. Wenn kein Wert angegeben ist, befindet sich das Protokoll im Ordner `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks`. 
 
-Das *[Konto]* ist das Konto, unter dem der Scale Out-Workerdienst ausgeführt wird. Standardmäßig ist dies das Konto SSISScaleOutWorker140.
+Bei dem Parameter *[Konto]* handelt es sich um das Konto, unter dem der Scale Out-Workerdienst ausgeführt wird. Standardmäßig lautet das Konto `SSISScaleOutWorker140`.
+
+## <a name="next-steps"></a>Nächste Schritte
+[Scale Out-Master von Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)
