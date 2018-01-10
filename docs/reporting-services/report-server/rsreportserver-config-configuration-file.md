@@ -8,24 +8,22 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 caps.latest.revision: "20"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 5f01391991a8e57d09da1888c541183962e488e5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 312db6c9454c0fca1f50d63d2d5135f2fb20f6db
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="rsreportserverconfig-configuration-file"></a>RSReportServer.config-Konfigurationsdatei
+# <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config Configuration File
 In der Datei [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** werden Einstellungen gespeichert, die vom Berichtsserver-Webdienst und der Hintergrundverarbeitung verwendet werden. Alle [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Anwendungen werden innerhalb eines einzelnen Prozesses ausgeführt, der die in der Datei RSReportServer.config gespeicherten Konfigurationseinstellungen liest. Sowohl der Berichtsserver im einheitlichen als auch der Berichtsserver im SharePoint-Modus verwenden "Rsreportserver.config". Die zwei Modi verwenden jedoch nicht alle gleichen Einstellungen in der Konfigurationsdatei. Die SharePoint-Modusversion der Datei ist kleiner, da viele der Einstellungen für den SharePoint-Modus in den SharePoint-Konfigurationsdatenbanken und nicht in der Datei gespeichert werden. In diesem Thema werden die für den einheitlichen und den SharePoint-Modus installierte Standardkonfigurationsdatei sowie einige wichtige Einstellungen und Verhaltensweisen beschrieben, die von der Konfigurationsdatei gesteuert werden.  
 
 Im SharePoint-Modus enthält die Konfigurationsdatei die Einstellungen, die für alle Dienstanwendungsinstanzen gelten, die auf diesem Computer ausgeführt werden. Die SharePoint-Konfigurationsdatenbank enthält Konfigurationseinstellungen, die für bestimmte Dienstanwendungen gelten. Die Einstellungen, die in der Konfigurationsdatenbank gespeichert und über die SharePoint-Verwaltungsseiten verwaltet werden, können bei jeder [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung variieren.  
@@ -262,7 +260,7 @@ Weitere Informationen zum Bearbeiten dieser Datei finden Sie unter [Ändern eine
 |**EmbeddedRenderFormats, RenderingExtension**|Gibt das Renderingformat zum Einschließen eines Berichts in den Textkörper einer E-Mail-Nachricht an. Bilder im Bericht werden anschließend in den Bericht eingebettet. Gültige Werte sind MHTML und HTML4.0.|  
 |**PrivilegedUserRenderFormats**|Gibt die Renderingformate an, die ein Benutzer für ein Berichtsabonnement auswählen kann, wenn das Abonnieren über den Task "Alle Abonnements verwalten" aktiviert ist. Wenn dieser Wert nicht festgelegt wird, stehen alle nicht ausdrücklich ausgeschlossenen Renderingformate zur Verfügung.|  
 |**ExcludedRenderFormats, RenderingExtension**|Schließt ausdrücklich Formate aus, die nicht für eine bestimmte Übermittlungserweiterung geeignet sind. Es können nicht mehrere Instanzen derselben Renderingerweiterung ausgeschlossen werden. Durch das Ausschließen mehrerer Instanzen wird ein Fehler ausgelöst, wenn der Berichtsserver die Konfigurationsdatei liest. Standardmäßig werden die folgenden Erweiterungen für die E-Mail-Übermittlung ausgeschlossen:<br /><br /> HTMLOWC<br /><br /> NULL<br /><br /> RGDI|  
-|**SendEmailToUserAlias**|Dieser Wert wird zusammen mit **DefaultHostName**verwendet.<br /><br /> Wenn **SendEmailToUserAlias** auf **True**festgelegt ist, werden Benutzer, die einzelne Abonnements definieren, automatisch als Empfänger des Berichts angegeben. Das Feld **An** ist ausgeblendet. Ist dieser Wert auf **False**festgelegt, ist das Feld **An** sichtbar. Legen Sie für diesen Wert **True** fest, wenn Sie die volle Kontrolle über die Berichtsverteilung wünschen. Folgende Werte sind gültig:<br /><br /> **TRUE**= Die E-Mail-Adresse des Benutzers, der das Abonnement erstellt, wird verwendet. Dies ist der Standardwert.<br /><br /> **FALSE**= Eine beliebige E-Mail-Adresse kann angegeben werden.|  
+|**SendEmailToUserAlias**|Dieser Wert wird zusammen mit **DefaultHostName**verwendet.<br /><br /> Wenn **SendEmailToUserAlias** auf **True**festgelegt ist, werden Benutzer, die einzelne Abonnements definieren, automatisch als Empfänger des Berichts angegeben. Das Feld **An** ist ausgeblendet. Ist dieser Wert auf **False**festgelegt, ist das Feld **An** sichtbar. Legen Sie für diesen Wert **True** fest, wenn Sie die volle Kontrolle über die Berichtsverteilung wünschen. Gültige Werte sind:<br /><br /> **TRUE**= Die E-Mail-Adresse des Benutzers, der das Abonnement erstellt, wird verwendet. Dies ist der Standardwert.<br /><br /> **FALSE**= Eine beliebige E-Mail-Adresse kann angegeben werden.|  
 |**DefaultHostName**|Dieser Wert wird zusammen mit **SendEmailToUserAlias**verwendet.<br /><br /> Gibt einen Zeichenfolgenwert für den Hostnamen an, der an den Benutzeralias angefügt werden soll, wenn **SendEmailToUserAlias** auf true festgelegt ist. Bei diesem Wert kann es sich um einen DNS-Namen (Domain Name System) oder eine IP-Adresse handeln.|  
 |**PermittedHosts**|Beschränkt die Berichtsverteilung, indem explizit die Hosts angegeben werden, die die E-Mail-Übermittlung empfangen können. Bei **PermittedHosts**wird jeder Host als **HostName** -Element angegeben. Der Wert ist eine IP-Adresse oder ein DNS-Name.<br /><br /> Nur E-Mail-Konten, die für den Host definiert sind, sind gültige Empfänger. Wenn Sie **DefaultHostName**angegeben haben, müssen Sie sicherstellen, dass dieser Host als **HostName** -Element von **PermittedHosts**angegeben wurde. Bei diesem Wert muss es sich um mindestens einen DNS-Namen oder eine IP-Adressen handeln. Standardmäßig ist dieser Wert nicht festgelegt. Wenn dieser Wert nicht festgelegt ist, gibt es keine Einschränkungen, wer per E-Mail gesendete Berichte empfangen kann.|  
   
@@ -843,7 +841,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
 </Configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Konfigurieren von verfügbarem Speicher für Berichtsserveranwendungen](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
  [Reporting Services-Konfigurationsdateien](../../reporting-services/report-server/reporting-services-configuration-files.md)   

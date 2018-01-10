@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,13 +18,13 @@ ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: f7985d8c28074d08c53da69e448593433f2709d3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6972387a10c596256f0eef54e14054ae5adc9b38
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Grundlegendes zu Gruppen (Berichts-Generator und SSRS)
   In einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht ist eine Gruppe ein benannter Satz von Daten aus dem Berichtsdataset, der an einen Datenbereich gebunden ist. Im Grunde wird mit einer Gruppe eine Sicht eines Berichtsdatasets organisiert. Alle Gruppen in einem Datenbereich geben unterschiedliche Sichten desselben Berichtsdatasets an.  
@@ -106,7 +104,7 @@ ms.lasthandoff: 12/05/2017
 #### <a name="understanding-group-membership-for-tablix-cells"></a>Grundlegendes zur Gruppenmitgliedschaft für Tablix-Zellen  
  Zellen in einer Zeile oder Spalte eines Tablix-Datenbereichs können zu mehreren Zeilen- und Spaltengruppen gehören. Wenn Sie einen Ausdruck im Textfeld einer Zelle definieren, für die eine Aggregatfunktion verwendet wird (z. B. `=Sum(Fields!FieldName.Value`), ist der Standardgruppenbereich für eine Zelle die innerste untergeordnete Gruppe, zu der dieser gehört. Wenn eine Zelle zu Zeilen- und zu Spaltengruppen gehört, besteht der Bereich aus beiden innersten Gruppen. Sie können auch Ausdrücke erstellen, mit denen Aggregatteilergebnisse berechnet werden, die relativ zu einer anderen Datenmenge zu einer Gruppe zusammengefasst werden. Beispielsweise können Sie den Prozentsatz einer Gruppe relativ zur Spaltengruppe oder zu allen Daten für den Datenbereich berechnen (z. B. `=Sum(Fields!FieldName.Value)/Sum(Fields!FieldName.Value,"ColumnGroup")`). Weitere Informationen finden Sie unter [Tablix-Datenbereich (Berichts-Generator und SSRS)](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md) und [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen (Berichts-Generator und SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Hinzufügen oder Löschen einer Gruppe in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
  [Hinzufügen eines Gesamtergebnisses zu einer Gruppe oder einem Tablix-Datenbereich (Berichts-Generator und SSRS)](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
  [Sortieren von Daten in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   

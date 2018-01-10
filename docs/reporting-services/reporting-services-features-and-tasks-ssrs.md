@@ -8,9 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - development [Reporting Services]
 ms.assetid: 0cc20225-5784-479c-bfb0-445854111367
 caps.latest.revision: "42"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4e251399eff8391fccf029d37a11863c11850b94
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 85d55a945b8358270fd3a03bd378dbdc63620b69
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Reporting Services-Funktionen und -Tasks (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Gründungsinhalt wird nach Berichten und Berichtsfunktionen, Berichtsserverfunktionen und [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Produktfunktionen organisiert.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/05/2017
   
  [Zeitpläne](../reporting-services/subscriptions/schedules.md)  
   
- [Abonnements und Übermittlung &#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [Abonnements und Übermittlung (Reporting Services)](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
  [Reporting Services-Datenwarnungen](../reporting-services/reporting-services-data-alerts.md)  
   
@@ -58,7 +56,7 @@ ms.lasthandoff: 12/05/2017
   
  [Reporting Services-Tools](../reporting-services/tools/reporting-services-tools.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Neues bei Reporting Services &#40;SSRS&#41;](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
   

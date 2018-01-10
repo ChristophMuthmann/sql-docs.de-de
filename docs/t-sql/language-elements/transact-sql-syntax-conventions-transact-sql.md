@@ -32,11 +32,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 12291b23c9204aaf030c3a8f093fe05bf4712721
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: dfc99736884d458bdbce890bfcc4f80185115b29
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL-Syntaxkonventionen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,8 +52,8 @@ ms.lasthandoff: 11/18/2017
 |&#124; (Senkrechter Strich)|Trennt in eckigen oder geschweiften Klammern eingeschlossene Syntaxelemente. Sie können nur eines der Elemente verwenden.|  
 |`[ ]` (eckige Klammern)|Optionale Syntaxelemente. Geben Sie die eckigen Klammern nicht ein.|  
 |{ } (geschweifte Klammern)|Erforderliche Syntaxelemente. Geben Sie die geschweiften Klammern nicht ein.|  
-|[**,**...*n*]|Zeigt an, dass das vorherige Element *n* -mal wiederholt werden kann. Die einzelnen Vorkommen werden durch Kommas voneinander getrennt.|  
-|[...*n*]|Zeigt an, dass das vorherige Element *n* -mal wiederholt werden kann. Die einzelnen Vorkommen werden durch Leerzeichen voneinander getrennt.|  
+|[**,**...*n*]|Gibt an, das vorherige Element kann wiederholt werden  *n*  -Mal. Die einzelnen Vorkommen werden durch Kommas voneinander getrennt.|  
+|[...*n*]|Gibt an, das vorherige Element kann wiederholt werden  *n*  -Mal. Die einzelnen Vorkommen werden durch Leerzeichen voneinander getrennt.|  
 |;|[!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungsabschlusszeichen.Dieses Abschlusszeichen ist für die meisten Anweisungen in dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht zwingend erforderlich, in zukünftigen Versionen kann sich dies jedoch ändern.|  
 |\<Bezeichnung >:: =|Der Name eines Syntaxblockes. Diese Konvention dient zur Gruppierung und Bezeichnung von Abschnitten einer langen Syntax oder einer Syntaxeinheit, die an mehreren Stellen innerhalb einer Anweisung verwendet werden kann. Jeder Standort in der die Syntax kann verwendet werden, wird angegeben, mit der Bezeichnung in spitzen Klammern eingeschlossen: \<Bezeichnung >.<br /><br /> Eine Gruppe ist eine Auflistung von Ausdrücken, z. B. \<gruppierungssatz >; und eine Liste ist eine Auflistung von Sets, z. B. \<Liste zusammengesetzter Elemente >.|  
   
@@ -118,9 +118,9 @@ ms.lasthandoff: 11/18/2017
  Vielen Codebeispielen Präfix Unicode-Zeichenfolgenkonstanten mit dem Buchstaben **N**. Ohne die **N** -Präfix wird die Zeichenfolge wird in die Standardcodepage der Datenbank konvertiert. Diese Standardcodepage erkennt möglicherweise bestimmte Zeichen nicht.  
   
 ## <a name="applies-to-references"></a>„Applies to“-Verweise  
- Die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Verweis enthält Themen im Zusammenhang mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], und [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]. Am oberen Rand jedes Thema ist ein Abschnitt, der angibt, welche Produkte den Betreff des Themas unterstützen. Wenn ein Produkt fehlt, ist die im Thema beschriebene Funktion nicht in diesem Produkt verfügbar. Beispielsweise wurden Verfügbarkeitsgruppen in eingeführt [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Die **Erstellen einer VERFÜGBARKEITSGRUPPE** Thema wird erörtert, gilt dies für **SQL Server (SQL Server 2012 bis aktuelle Version)** , da es nicht für gilt [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], oder [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ Die [!INCLUDE[tsql](../../includes/tsql-md.md)] Verweis enthält Artikel, die im Zusammenhang mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], und [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]. Im oberen Bereich der einzelnen Artikel ist ein, der angibt, welche Produkte den Betreff des Artikels unterstützen. Wenn ein Produkt fehlt, ist die vom Artikel beschriebene Funktion nicht in diesem Produkt verfügbar. Beispielsweise wurden Verfügbarkeitsgruppen in eingeführt [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Die **CREATE AVAILABILITY GROUP** Artikel gibt an, es gilt für **SQL Server (SQL Server 2012 bis aktuelle Version)** , da es nicht für gilt [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], oder [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- In einigen Fällen kann der allgemeine Gegenstand eines Themas in einem Produkt verwendet werden, aber es werden nicht alle Argumente unterstützt. Beispielsweise wurden Benutzer für eigenständige Datenbank in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eingeführt. Die **CREATE USER** Anweisung kann verwendet werden, in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Produkt, jedoch die **WITH PASSWORD** Syntax kann nicht mit älteren Versionen verwendet werden. In diesem Fall werden zusätzliche **Applies to** -Abschnitte in den Beschreibungen der entsprechenden Arguments in den Text des Themas eingefügt.  
+ In einigen Fällen kann der allgemeine Gegenstand des Artikels in einem Produkt verwendet werden, aber alle Argumente werden nicht unterstützt. Beispielsweise wurden Benutzer für eigenständige Datenbank in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eingeführt. Die **CREATE USER** Anweisung kann verwendet werden, in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Produkt, jedoch die **WITH PASSWORD** Syntax kann nicht mit älteren Versionen verwendet werden. In diesem Fall werden zusätzliche **betrifft** -Abschnitte in die entsprechenden argumentbeschreibungen im Text des Artikels eingefügt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Transact-SQL-Referenz &#40;Datenbankmodul&#41;](../../t-sql/transact-sql-reference-database-engine.md)  

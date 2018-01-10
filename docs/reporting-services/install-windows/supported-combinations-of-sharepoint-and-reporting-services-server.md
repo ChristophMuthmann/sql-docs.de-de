@@ -8,7 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - rsSharePoint
 ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
 caps.latest.revision: "39"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 35357b59e8e597fbbc0de14cccfda1e478a7c358
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0446c7b50f78074e44258aa973f6cf970cb9f50a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>Unterstützte Kombinationen von SharePoint- und Reporting Services-Servern
 
@@ -48,14 +48,14 @@ Ein SQL Server Reporting Services-Berichtsserver, der im SharePoint-Modus instal
 |-|-------------------|-------------|------------------------|
 |1|SQL Server 2016|SQL Server 2016|SharePoint 2016|
 |2|SQL Server 2016|SQL Server 2016|SharePoint 2013|
-|3|SQL Server 2014|SQL Server 2014|SharePoint 2013|
-|4|SQL Server 2014|SQL Server 2014|SharePoint 2010|
+|3|SQLServer 2014|SQLServer 2014|SharePoint 2013|
+|4|SQLServer 2014|SQLServer 2014|SharePoint 2010|
 |5|SQL Server 2012 SP3|SQL Server 2014 und SQL Server 2012 SP3|SharePoint 2013|
 |6|SQL Server 2012 SP2|SQL Server 2014 und SQL Server 2012 SP2|SharePoint 2013|
 |7|SQL Server 2012 SP1|SQL Server 2014 und SQL Server 2012 SP1|SharePoint 2013|
-|8|SQL Server 2012 und SQL Server 2012 SP1*|SQL Server 2014|SharePoint 2010|
+|8|SQL Server 2012 und SQL Server 2012 SP1*|SQLServer 2014|SharePoint 2010|
 |9|SQL Server 2012|SQL Server 2012|SharePoint 2010|
-|10|SQL Server 2008 R2|SQL Server 2014|SharePoint 2010|
+|10|SQL Server 2008 R2|SQLServer 2014|SharePoint 2010|
 |11|SQL Server 2008 R2|SQL Server 2012 und SQL Server 2012 SP1 oder höher|SharePoint 2010|
 |12|SQL Server 2008 R2|SQL Server 2008 R2|SharePoint 2010|
 |13|SQL Server 2008 R2|SQL Server 2008 SP2|SharePoint 2007|
