@@ -8,7 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -30,11 +30,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5326ae33eada7dc692607d14779180174a045959
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 914afdde95e3b3a130cb71e5b9277f7331ee4e56
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="working-with-variables-programmatically"></a>Programmgesteuertes Arbeiten mit Variablen
   Variablen bieten die Möglichkeit, Werte dynamisch festzulegen und Prozesse in Paketen, Containern, Tasks und Ereignishandlern zu steuern. Variablen können auch von Rangfolgeneinschränkungen verwendet werden, um die Richtung des Datenflusses an andere Tasks zu steuern. Variablen haben vielerlei Verwendungszwecke:  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Sie können benutzerdefinierte Variablen für alle Containertypen erstellen: Pakete, **Foreach-Schleifencontainer**, **For-Schleifencontainer**, **Sequenzcontainer**, TasksHosts und Ereignishandler. Weitere Informationen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) und [Verwenden von Variablen in Paketen](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
-## <a name="scope"></a>Scope  
+## <a name="scope"></a>Bereich  
  Jeder Container weist seine eigene <xref:Microsoft.SqlServer.Dts.Runtime.Variables>-Auflistung auf. Wenn eine neue Variable erstellt wird, liegt diese innerhalb des Bereichs seines übergeordneten Containers. Da sich der Paketcontainer ganz oben in der Containerhierarchie befindet, funktionieren Variablen mit Paketbereich wie globale Variablen und sind für alle Container innerhalb des Pakets sichtbar. Auf die Auflistung von Variablen für den Container kann über die <xref:Microsoft.SqlServer.Dts.Runtime.Variables>-Auflistung auch von untergeordneten Elementen des Containers zugegriffen werden, indem entweder der Variablenname oder der Index der Variablen in der Auflistung verwendet wird.  
   
  Da die Sichtbarkeit einer Variablen von oben nach unten verläuft, sind Variablen, die auf der Paketebene deklariert werden, für alle Container in dem Paket sichtbar. Die <xref:Microsoft.SqlServer.Dts.Runtime.Variables>-Auflistung in einem Container umfasst daher alle Variablen, die neben den eigenen Variablen des Containers auch zu seinem übergeordneten Element gehören.  
@@ -169,7 +169,7 @@ End Module
   
  Die verfügbaren Systemvariablen sind je nach Containertyp unterschiedlich. Eine Liste der für Pakete, Container, Tasks und Ereignishandler verfügbaren Systemvariablen finden Sie unter [System Variables](../../integration-services/system-variables.md) (Systemvariablen).  
   
-## <a name="value"></a>Wert  
+## <a name="value"></a>value  
  Der Wert einer benutzerdefinierten Variablen kann ein Literal oder ein Ausdruck sein:  
   
 -   Wenn die Variable einen Literalwert enthalten soll, legen Sie den Wert seiner <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A>-Eigenschaft fest.  
@@ -235,7 +235,7 @@ End Module
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Wenn eine Konfigurationsdatei eine benutzerdefinierte Variable einschließt, kann die Variable zur Laufzeit aktualisiert werden. Dies bedeutet, dass der Wert der ursprünglich in dem Paket enthaltenen Variablen beim Ausführen des Pakets durch einen neuen Wert aus der Konfigurationsdatei ersetzt wird. Diese Ersetzungstechnik ist hilfreich, wenn ein Paket für mehrere Server bereitgestellt wird, die unterschiedliche Variablenwerte erfordern. In einer Variablen kann beispielsweise angegeben werden, wie oft ein **Foreach-Schleifencontainer** seinen Workflow wiederholt, oder es können die Empfänger aufgelistet werden, an die von einem Ereignishandler eine E-Mail gesendet wird, wenn ein Fehler ausgelöst wird. In einer Variablen kann auch die Anzahl von Fehlern geändert werden, die auftreten können, bevor für das Paket ein Fehler gemeldet wird. Diese Variablen werden dynamisch in Konfigurationsdateien für jede Umgebung bereitgestellt. Daher sind nur Lese-/Schreibvariablen in Konfigurationsdateien zulässig. Weitere Informationen finden Sie unter [Erstellen von Paketkonfigurationen](../../integration-services/packages/create-package-configurations.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Verwenden von Variablen in Paketen](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   

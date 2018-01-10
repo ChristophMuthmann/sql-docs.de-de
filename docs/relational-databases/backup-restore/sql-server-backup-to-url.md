@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3358baeca572cb8894eb31798932221d1809a77a
-ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.openlocfilehash: 8be67d9cca60d3debf15cc1c10bd2ebfa171761a
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server-Sicherung über URLs
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ ms.lasthandoff: 11/22/2017
   
 ###  <a name="Support"></a> Unterstützung für BACKUP-/RESTORE-Anweisungen  
   
-|BACKUP-/RESTORE-Anweisung|Unterstützt|Ausnahmen|Kommentare|
+|BACKUP-/RESTORE-Anweisung|Supported|Ausnahmen|Kommentare|
 |-|-|-|-|
 |BACKUP|J|BLOCKSIZE und MAXTRANSFERSIZE werden für Block-Blobs unterstützt. Sie werden nicht für Seiten-Blobs unterstützt. | Die Sicherung in einem Block-Blob erfordert eine SAS, die in einer SQL Server-Anmeldeinformation gespeichert ist. Die Sicherung auf einem Seiten-Blob erfordert den Speicherkontoschlüssel, der in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldeinformation gespeichert ist, und erfordert das Argument WITH CREDENTIAL, um festgelegt zu werden.|  
 |RESTORE|J||Erfordert die Definition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen sowie die Angabe des Arguments WITH CREDENTIAL, wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen mithilfe des Speicherkontoschlüssels als geheimem Schlüssel definiert werden.|  
@@ -165,7 +165,7 @@ ms.lasthandoff: 11/22/2017
   
 ### <a name="support-for-restore-arguments"></a>Unterstützung für RESTORE-Argumente  
   
-|Argument|Unterstützt|Ausnahmen|Kommentare|  
+|Argument|Supported|Ausnahmen|Kommentare|  
 |-|-|-|-|  
 |DATABASE|J|||  
 |LOG|J|||  
@@ -207,7 +207,7 @@ Sie können eine Datenbank über URL mit dem Sicherungstask in SQL Server Manage
   
  Die folgenden Schritte beschreiben die Änderungen, die am Task „Datenbank sichern“ in SQL Server Management Studio vorgenommen wurde, um das Sichern im Windows Azure-Speicher zu ermöglichen:  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls her, und erweitern Sie anschließend diese Instanz.
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz des SQL Server-Datenbankmoduls her, und erweitern Sie dann diese Instanz.
 
 2.  Erweitern Sie **Datenbanken**, klicken Sie mit der rechten Maustaste auf die gewünschte Datenbank, zeigen Sie auf **Tasks**, und klicken Sie anschließend auf **Back Up...**(Sichern).
   
@@ -355,7 +355,7 @@ Nachdem Sie das Skript erfolgreich ausgeführt haben, kopieren Sie den Befehl `C
    (SELECT * FROM sys.credentials   
    WHERE name = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>')  
    CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] 
-      WITH IDENTITY = 'SHARED ACCESS IGNATURE',  
+      WITH IDENTITY = 'SHARED ACCESS SIGNATURE',  
       SECRET = '<SAS_TOKEN>';  
    ```  
   
@@ -416,7 +416,7 @@ Nachdem Sie das Skript erfolgreich ausgeführt haben, kopieren Sie den Befehl `C
    GO  
    ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server-URL-Sicherung – bewährte Methoden und Problembehandlung](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [Sichern und Wiederherstellen von Systemdatenbanken &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
  [Tutorial: Verwenden von SQL Server 2016-Datenbanken mit Microsoft Azure Blob Storage](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  

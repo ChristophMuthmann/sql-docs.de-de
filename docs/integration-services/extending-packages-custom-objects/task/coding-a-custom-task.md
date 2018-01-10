@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -26,11 +26,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e9c15c407c7fae442d7d96b6679d177e864aa632
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fea3020fe77c6f5ac3f69f489a4ab1f0c4af8ccb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="coding-a-custom-task"></a>Codieren eines benutzerdefinierten Tasks
   Nachdem Sie eine Klasse erstellt haben, die von der <xref:Microsoft.SqlServer.Dts.Runtime.Task>-Basisklasse erbt, und das <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>-Attribut auf die Klasse angewendet haben, müssen Sie die Implementierung der Eigenschaften und Methoden der Basisklasse überschreiben, um die benutzerdefinierte Funktionalität bereitzustellen.  
@@ -158,7 +158,7 @@ End Class
 ```  
   
 ### <a name="persisting-the-task"></a>Beibehalten des Tasks  
- In der Regel müssen Sie keine benutzerdefinierte Persistenz für einen Task implementieren. Die benutzerdefinierte Persistenz ist nur erforderlich, wenn die Eigenschaften eines Objekts komplexe Datentypen verwenden. Weitere Informationen finden Sie unter [Developing Custom Objects for Integration Services (Entwickeln von benutzerdefinierten Objekten für Integration Services)](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md).  
+ In der Regel müssen Sie keine benutzerdefinierte Persistenz für einen Task implementieren. Die benutzerdefinierte Persistenz ist nur erforderlich, wenn die Eigenschaften eines Objekts komplexe Datentypen verwenden. Weitere Informationen finden Sie unter [Developing Custom Objects for Integration Services](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md) (Entwickeln von benutzerdefinierten Objekten für Integration Services).  
   
 ## <a name="executing-the-task"></a>Ausführen des Tasks  
  In diesem Abschnitt wird beschrieben, wie die **Execute**-Methode verwendet wird, die von Tasks geerbt und überschrieben wird. In diesem Abschnitt werden auch verschiedene Methoden zum Bereitstellen von Informationen zu den Ergebnissen der Taskausführung erläutert.  
@@ -292,9 +292,9 @@ Public Class SampleTask
 End Class  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Creating a Custom Task (Erstellen eines benutzerdefinierten Tasks)](../../../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md)   
- [Coding a Custom Task (Codieren eines benutzerdefinierten Tasks)](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Erstellen eines benutzerdefinierten Tasks](../../../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md)   
+ [Codieren eines benutzerdefinierten Tasks](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)   
  [Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Task](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
   
   

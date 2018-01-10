@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 80dda6c12477a044a8a12c9b50d8fccb18aebb23
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4fcaa7101ebdd8042d0148b4a216335a74af837b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Funktionen des Berichts-Generators: Referenz zu Aggregatfunktionen
   Um aggregierte Werte in den Bericht einzuschließen, können Sie integrierte Aggregatfunktionen in Ausdrücken verwenden. Die Standardaggregatfunktion für numerische Felder ist SUM. Sie können den Ausdruck bearbeiten und eine andere integrierte Aggregatfunktion verwenden oder einen anderen Bereich angeben. Mit dem Bereich wird angegeben, welcher Satz an Daten für die Berechnung verwendet werden soll.  
@@ -60,7 +58,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="CalculatingAggregates"></a> Integrierte Aggregatfunktionen  
  Die folgenden integrierten Funktionen berechnen Summenwerte für einen Satz von numerischen Daten ungleich null im Standardbereich oder im benannten Bereich.  
   
-|**Funktion**|**Description**|  
+|**Funktion**|**Beschreibung**|  
 |------------------|---------------------|  
 |[Avg](../../reporting-services/report-design/report-builder-functions-avg-function.md)|Gibt den Durchschnitt aller numerischen Werte ungleich NULL aus dem angegebenen Ausdruck im Kontext des festgelegten Bereichs ausgewertet zurück.|  
 |[Count](../../reporting-services/report-design/report-builder-functions-count-function.md)|Gibt die Anzahl der Werte ungleich NULL aus dem angegebenen Ausdruck im Kontext des festgelegten Bereichs ausgewertet zurück.|  
@@ -81,19 +79,19 @@ ms.lasthandoff: 12/05/2017
   
 |Position im Bericht|Felder|Parameter|Berichtselemente|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> Dataset|Variablen|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
-|Seitenheader<br /><br /> Seitenfuß|Ja|Ja|Höchstens eins<br /><br /> Hinweis 1|Ja|ja|ja|Ja|  
-|Textkörper|Ja<br /><br /> Hinweis 2|Ja|Nur Elemente im aktuellen Bereich oder einem enthaltenen Bereich<br /><br /> Hinweis 3|Nein|Ja|ja|Ja|  
-|Berichtsparameter|Nein|Nur Parameter am Anfang der Liste<br /><br /> Hinweis 4|Nein|Nein|Nein|Nein|Nein|  
-|Feld|Ja|ja|Nein|Nein|Nein|Nein|Nein|  
-|Abfrageparameter|Nein|Ja|Nein|Nein|Nein|Nein|Nein|  
-|Gruppierungsausdruck|Ja|ja|Nein|Nein|Ja|Nein|Nein|  
-|Sortierungsausdruck|Ja|ja|Nein|Nein|Ja|Ja<br /><br /> Hinweis 5|Nein|  
-|Filterausdruck|Ja|ja|Nein|Nein|Ja|Ja<br /><br /> Hinweis 6|Nein|  
-|Code|Nein|Ja<br /><br /> Hinweis 7|Nein|Nein|Nein|Nein|Nein|  
-|Berichtssprache|Nein|Ja|Nein|Nein|Nein|Nein|Nein|  
-|Variablen|Ja|ja|Nein|Nein|Ja|Aktueller oder enthaltener Bereich|Nein|  
-|Aggregate|Ja|Ja|Nur in Seitenkopf/Seitenfuß|Nur in Berichtselementaggregaten|Ja|Nein|Nein|  
-|Suchfunktionen|Ja|ja|ja|Nein|Ja|Nein|Nein|  
+|Seitenheader<br /><br /> Seitenfuß|ja|ja|Höchstens eins<br /><br /> Hinweis 1|ja|ja|ja|ja|  
+|Body|ja<br /><br /> Hinweis 2|ja|Nur Elemente im aktuellen Bereich oder einem enthaltenen Bereich<br /><br /> Hinweis 3|nein|ja|ja|ja|  
+|Berichtsparameter|nein|Nur Parameter am Anfang der Liste<br /><br /> Hinweis 4|nein|nein|nein|nein|nein|  
+|Feld|ja|ja|nein|nein|nein|nein|nein|  
+|Abfrageparameter|nein|ja|nein|nein|nein|nein|nein|  
+|Gruppierungsausdruck|ja|ja|nein|nein|ja|nein|nein|  
+|Sortierungsausdruck|ja|ja|nein|nein|ja|ja<br /><br /> Hinweis 5|nein|  
+|Filterausdruck|ja|ja|nein|nein|ja|ja<br /><br /> Hinweis 6|nein|  
+|Code|nein|ja<br /><br /> Hinweis 7|nein|nein|nein|nein|nein|  
+|Berichtssprache|nein|ja|nein|nein|nein|nein|nein|  
+|Variablen|ja|ja|nein|nein|ja|Aktueller oder enthaltener Bereich|nein|  
+|Aggregate|ja|ja|Nur in Seitenkopf/Seitenfuß|Nur in Berichtselementaggregaten|ja|nein|nein|  
+|Suchfunktionen|ja|ja|ja|nein|ja|nein|nein|  
   
 -   **Hinweis 1.** Berichtselemente müssen in der gerenderten Berichtsseite vorhanden sein, oder der Wert ist NULL. Wenn die Sichtbarkeit eines Berichtselements von einem Ausdruck abhängt, der False ergibt, ist das Berichtselement auf der Seite nicht vorhanden.  
   
@@ -118,13 +116,13 @@ ms.lasthandoff: 12/05/2017
   
 |Kontext|RunningValue|RowNumber|Erster<br /><br /> Letzter|Previous|Sum und andere Vorsortierungsfunktionen|ReportItem-Aggregate|Suchfunktionen|Aggregatfunktion|  
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
-|Ausgeführter Wert|Nein|Nein|Nein|Nein|Ja|Nein|Ja|Nein|  
-|Erster<br /><br /> Letzter|Nein|Nein|Nein|Nein|Ja|Nein|Nein|Nein|  
-|Previous|Ja|ja|ja|Nein|Ja|Nein|Ja|Nein|  
-|Sum und andere Vorsortierungsfunktionen|Nein|Nein|Nein|Nein|Ja|Nein|Ja|Nein|  
-|ReportItem-Aggregate|Nein|Nein|Nein|Nein|Nein|Nein|Nein|Nein|  
-|Suchfunktionen|Ja|Ja<br /><br /> Hinweis 1|Ja<br /><br /> Hinweis 1|Ja<br /><br /> Hinweis 1|Ja<br /><br /> Hinweis 1|Ja<br /><br /> Hinweis 1|Nein|Nein|  
-|Aggregatfunktion|Nein|Nein|Nein|Nein|Nein|Nein|Nein|Nein|  
+|Ausgeführter Wert|nein|nein|nein|nein|ja|nein|ja|nein|  
+|Erster<br /><br /> Letzter|nein|nein|nein|nein|ja|nein|nein|nein|  
+|Previous|ja|ja|ja|nein|ja|nein|ja|nein|  
+|Sum und andere Vorsortierungsfunktionen|nein|nein|nein|nein|ja|nein|ja|nein|  
+|ReportItem-Aggregate|nein|nein|nein|nein|nein|nein|nein|nein|  
+|Suchfunktionen|ja|ja<br /><br /> Hinweis 1|ja<br /><br /> Hinweis 1|ja<br /><br /> Hinweis 1|ja<br /><br /> Hinweis 1|ja<br /><br /> Hinweis 1|nein|nein|  
+|Aggregatfunktion|nein|nein|nein|nein|nein|nein|nein|nein|  
   
 -   **Hinweis 1.** Aggregatfunktionen sind nur im *Source* -Ausdruck einer Suchfunktion zulässig, wenn die Suchfunktion nicht in einem Aggregat enthalten ist. Aggregatfunktionen sind im *Destination* -Ausdruck oder *Result* -Ausdruck einer Suchfunktion nicht zulässig.  
   
@@ -133,7 +131,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="CalculatingRunningValues"></a> Berechnen von ausgeführten Werten  
  Die folgenden integrierten Funktionen berechnen ausgeführte Werte für einen Satz von Daten. **RowNumber** gleicht **RunningValue** darin, dass der ausgeführte Wert für eine Anzahl zurückgegeben wird, die für jede Zeile innerhalb des enthaltenen Bereichs inkrementiert wird. Der Bereichsparameter für diese Funktionen muss einen enthaltenden Bereich angeben, der steuert, wann der Zähler neu gestartet wird.  
   
-|**Funktion**|**Description**|  
+|**Funktion**|**Beschreibung**|  
 |------------------|---------------------|  
 |[RowNumber](../../reporting-services/report-design/report-builder-functions-rownumber-function.md)|Gibt eine laufende Zählung der Zeilenanzahl für den angegebenen Bereich zurück. Die **RowNumber** -Funktion startet den Zähler bei 1 neu und nicht bei 0.|  
 |[RunningValue](../../reporting-services/report-design/report-builder-functions-runningvalue-function.md)|Gibt ein laufendes Aggregat aller numerischen Werte ungleich NULL aus dem angegebenen Ausdruck für den Kontext des angegebenen Bereichs ausgewertet zurück.|  
@@ -143,7 +141,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="RetrievingRowCounts"></a> Abrufen von Zeilenanzahlen  
  Die folgende integrierte Funktion berechnet die Anzahl von Zeilen im angegebenen Bereich. Verwenden Sie diese Funktion, um alle Zeilen zu zählen, einschließlich Zeilen mit NULL-Werten.  
   
-|**Funktion**|**Description**|  
+|**Funktion**|**Beschreibung**|  
 |------------------|---------------------|  
 |[CountRows](../../reporting-services/report-design/report-builder-functions-countrows-function.md)|Gibt die Anzahl der Zeilen im angegebenen Bereich zurück, einschließlich der Zeilen mit NULL-Werten.|  
   
@@ -152,7 +150,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="LookupFunctions"></a> Nachschlagen von Werten aus einem anderen Dataset  
  Die folgenden Suchfunktionen rufen Werte aus einem angegebenen Dataset ab.  
   
-|**Funktion**|**Description**|  
+|**Funktion**|**Beschreibung**|  
 |------------------|---------------------|  
 |[Lookup-Funktion](../../reporting-services/report-design/report-builder-functions-lookup-function.md)|Gibt für einen angegebenen Ausdruck einen Wert aus einem Dataset zurück.|  
 |[LookupSet-Funktion](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)|Gibt für einen angegebenen Ausdruck einen Satz von Werten aus einem Dataset zurück.|  
@@ -163,7 +161,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="RetrievingPostsortValues"></a> Abrufen von sortierungsabhängigen Werten  
  Die folgenden integrierten Funktionen geben den ersten, letzten oder vorherigen Wert innerhalb eines gegebenen Bereichs zurück. Diese Funktionen hängen von der Sortierreihenfolge der Datenwerte ab. Verwenden Sie diese Funktionen, um beispielsweise den ersten und den letzten Wert auf einer Seite zu suchen, um Seitenkopfzeilen im Wörterbuchformat zu erstellen. Verwenden Sie **Previous** , um einen Wert in einer Zeile mit dem Wert der vorherigen Zeile innerhalb eines bestimmten Bereichs zu vergleichen, beispielsweise, um jährliche Prozentwerte in einer Tabelle zu finden.  
   
-|**Funktion**|**Description**|  
+|**Funktion**|**Beschreibung**|  
 |------------------|---------------------|  
 |[Erster](../../reporting-services/report-design/report-builder-functions-first-function.md)|Gibt den ersten Wert im festgelegten Bereich des angegebenen Ausdrucks zurück.|  
 |[Letzter](../../reporting-services/report-design/report-builder-functions-last-function.md)|Gibt den letzten Wert im festgelegten Bereich des angegebenen Ausdrucks zurück.|  
@@ -174,7 +172,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="RetrievingServerAggregates"></a> Abrufen von Serveraggregaten  
  Die folgende integrierte Funktion ruft benutzerdefinierte Aggregate vom Datenanbieter ab. Mithilfe eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenquellentyps können Sie beispielsweise Aggregate, die auf dem Datenquellenserver berechnet wurden, für die Verwendung in einer Gruppenkopfzeile abrufen.  
   
-|**Funktion**|**Description**|  
+|**Funktion**|**Beschreibung**|  
 |------------------|---------------------|  
 |[Aggregat](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)|Gibt ein benutzerdefiniertes Aggregat des angegebenen Ausdrucks gemäß der Definition durch den Datenanbieter zurück.|  
   
@@ -198,7 +196,7 @@ ms.lasthandoff: 12/05/2017
   
  ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link")Zurück zum Anfang  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  

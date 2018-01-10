@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server-web-service
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,18 +21,18 @@ helpviewer_keywords:
 - Web references [Reporting Services]
 ms.assetid: 4eac4e40-dafb-4403-acde-13df317c8ec8
 caps.latest.revision: "36"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9b08281ebbb0b60589e15c52cc22be9f761de5fb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7d0e616729af0a6103dff69eaa0ceccfb5c20f33
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>Festlegen der URL-Eigenschaft des Webdiensts
-  Sie können die Basis-URL des Berichtsserver-Webdiensts, auf den Ihre Anwendung derzeit weiterleitet, jederzeit in Ihren [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Anwendungen ändern. Hierzu legen Sie einfach die **Url**-Eigenschaft des Dienstobjekts fest. Beispiel:  
+  Sie können die Basis-URL des Berichtsserver-Webdiensts, auf den Ihre Anwendung derzeit weiterleitet, jederzeit in Ihren [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Anwendungen ändern. Hierzu legen Sie einfach die **Url**-Eigenschaft des Dienstobjekts fest. Zum Beispiel:  
   
 ```vb  
 Dim rs As New ReportingService2010()  
@@ -115,7 +113,7 @@ class Sample
   
  Weitere Informationen zum Erstellen des ersten Webdienst-Proxys finden Sie unter [Erstellen des Webdienstproxys](../../../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>   
  <xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>   
  [Erstellen von Anwendungen mit dem Webdienst und .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

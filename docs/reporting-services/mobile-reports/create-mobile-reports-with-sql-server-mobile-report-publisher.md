@@ -9,20 +9,20 @@ ms.service:
 ms.component: mobile-reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 caps.latest.revision: "35"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a4f3013ee42fb36cb07d0dbed46aa6820b59452d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5109bc0d5fddfa5a69f0880b2167615ac860f3ba
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>Erstellen und Veröffentlichen von mobilen Berichten mit dem Publisher für mobile Berichte von SQL Server
 Erfahren Sie mehr über mobile [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichte, die für mobile Geräte optimiert sind, mit lokalen Daten verbunden sind und über eine Sammlung von Datenvisualisierungen verfügen. 
@@ -58,7 +58,7 @@ Diese Artikel helfen Ihnen beim Einstieg.
 -  Anzeigen von [mobilen Reporting Services-Berichten und KPIs in der Power BI-App für Android-Geräte](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports)
 -  Anzeigen von [mobilen Reporting Services-Berichten und KPIs in der Power BI-App für Windows 10-Geräte](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
   
 -   [Erstellen, Ändern und Löschen von freigegebenen Datenquellen (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)  
 -   [Verwalten von freigegebenen Datasets](../../reporting-services/report-data/manage-shared-datasets.md)  

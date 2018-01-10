@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - resources [Reporting Services], security
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 caps.latest.revision: "47"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 27a166e56c39fcaef49913838e44e32506a11d49
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e8d759eccca2ea7d1c7b0803f3a44cb258ffb981
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="secure-reports-and-resources"></a>Sichere Berichte und Ressourcen
   Die Sicherheit kann für einzelne Berichte und Ressourcen festgelegt werden, um die Zugriffsebene der Benutzer für diese Objekte zu steuern. In der Standardeinstellung können nur Benutzer, die Mitglieder der integrierten Gruppe **Administratoren** sind, Berichte ausführen, Ressourcen anzeigen, Eigenschaften ändern und die Elemente löschen. Für alle anderen Benutzer müssen Rollenzuweisungen erstellt werden, die den Zugriff auf einen Bericht oder eine Ressource zulassen.  
@@ -69,7 +67,7 @@ ms.lasthandoff: 12/05/2017
  Um das Risiko des Einschließen von Links in einem Bericht, der versehentlich bösartige Skripts ausführt, zu verringern, binden Sie Links nur an Daten von vertrauenswürdigen Quellen. Stellen Sie sicher, dass Daten von den Abfrageergebnissen und den Ausdrücken, die Daten an Links binden, keine Links erstellen, die missbraucht werden können. Verwenden Sie z. B. keinen Link als Grundlage für einen Ausdruck, der Daten aus mehreren Datasetfeldern verkettet. Wechseln Sie ggf. zum Bericht, und suchen Sie nach verdächtigen Skripts und URLs mithilfe von "Quelle anzeigen".  
   
 ## <a name="mitigating-sql-injection-attacks-in-a-parameterized-report"></a>Verhindern von SQL-Injection-Angriffen in einem parametrisierten Bericht  
- Verwenden Sie in einem Bericht, der einen Parameter vom Typ **String**enthält, eine Liste der verfügbaren Werte (wird auch als Liste der gültigen Werte bezeichnet), und stellen Sie sicher, dass Benutzer, die den Bericht ausführen, nur über die Berechtigungen verfügen, die zum Anzeigen der Daten im Bericht erforderlich sind. Wenn Sie einen Parameter vom Typ **String**definieren, wird für den Benutzer ein Textfeld bereitgestellt, das jeden beliebigen Wert annehmen kann. Mit einer Liste der verfügbaren Werte werden die Werte eingeschränkt, die eingegeben werden können. Wenn der Berichtsparameter an einen Abfrageparameter gebunden ist und Sie keine Liste mit verfügbaren Werten verwenden, kann ein Benutzer des Berichts SQL-Syntax in das Textfeld eingeben. Damit öffnet er den Bericht und Ihren Server potenziell für einen SQL-Injection-Angriff. Wenn der Benutzer über Berechtigungen zum Ausführen der neuen SQL-Anweisung verfügt, können daraus unerwünschte Ergebnisse auf dem Server resultieren.  
+ Verwenden Sie in einem Bericht, der einen Parameter vom Typ **String**enthält, eine Liste der verfügbaren Werte (wird auch als Liste der gültigen Werte bezeichnet), und stellen Sie sicher, dass Benutzer, die den Bericht ausführen, nur über die Berechtigungen verfügen, die zum Anzeigen der Daten im Bericht erforderlich sind. Wenn Sie einen Parameter vom Typ **String**(Zeichenfolge) definieren, wird für den Benutzer ein Textfeld bereitgestellt, das jeden beliebigen Wert annehmen kann. Mit einer Liste der verfügbaren Werte werden die Werte eingeschränkt, die eingegeben werden können. Wenn der Berichtsparameter an einen Abfrageparameter gebunden ist und Sie keine Liste mit verfügbaren Werten verwenden, kann ein Benutzer des Berichts SQL-Syntax in das Textfeld eingeben. Damit öffnet er den Bericht und Ihren Server potenziell für einen SQL-Injection-Angriff. Wenn der Benutzer über Berechtigungen zum Ausführen der neuen SQL-Anweisung verfügt, können daraus unerwünschte Ergebnisse auf dem Server resultieren.  
   
  Wenn ein Berichtsparameter nicht an einen Abfrageparameter gebunden ist und die Parameterwerte im Bericht enthalten sind, können die Benutzer des Berichts Ausdruckssyntax oder eine URL in den Parameterwert eingeben und den Bericht für Excel oder HTML rendern. Wenn anschließend ein anderer Benutzer den Bericht anzeigt und auf die gerenderten Parameterinhalte klickt, führt der Benutzer möglicherweise unbeabsichtigt das bösartige Skript bzw. den bösartigen Link aus.  
   
@@ -81,7 +79,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="securing-confidential-reports"></a>Sichern vertraulicher Berichte  
  Berichte mit vertraulichen Informationen sollten auf der Datenzugriffsebene geschützt werden. Benutzer müssen in diesem Fall Anmeldeinformationen angeben, um auf die vertraulichen Daten zugreifen zu können. Weitere Informationen finden Sie unter [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Darüber hinaus können Sie einen Ordner für unbefugte Benutzer sperren. Weitere Informationen finden Sie unter [Sichere Ordner](../../reporting-services/security/secure-folders.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen und Verwalten von Rollenzuweisungen](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [Konfigurieren des Berichts-Generator-Zugriffs](../../reporting-services/report-server/configure-report-builder-access.md)   
  [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   

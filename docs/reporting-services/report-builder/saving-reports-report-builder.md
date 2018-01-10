@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6300efd4947f449b74f38c131dc0b869cd324ae2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1bc198dbc96325421bc231ded54c49a8dd6ac7a3
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="saving-reports-report-builder"></a>Speichern von Berichten (Berichts-Generator)
   Im Berichts-Generator können Sie einen Bericht mit Seitenzahlen auf einem [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Berichtsserver, in einer SharePoint-Bibliothek, in einer Dateifreigabe, für die Sie Schreibrechte haben, oder auf dem Computer speichern. 
@@ -70,7 +68,7 @@ Wenn Sie einen Bericht speichern, speichern Sie in Wirklichkeit die Berichtsdefi
   
 -   [Speichern eines Berichts in einer SharePoint-Bibliothek &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)  
    
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Berichte, Berichtsteile und Berichtsdefinitionen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Installieren und Deinstallieren von Berichts-Generator](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
  [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - mail [Reporting Services]
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 caps.latest.revision: "45"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 89246a976a0de3c1f3c3581509cb0f71a26cd1a5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cbf8b0a5e84efd67ffa41c4518b6432c2d3283e5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>E-Mail-Übermittlung in Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält eine E-Mail-Übermittlungserweiterung, mit der Sie einen Bericht per E-Mail an einzelne Benutzer oder Gruppen senden können. Um einen Bericht per E-Mail zu verteilen, 1) konfigurieren Sie den Berichtsserver für die E-Mail-Zustellung und 2) definieren entweder ein Standardabonnement oder ein datengesteuertes Abonnement. Ein einzelnes Abonnement kann nicht mehrere Berichte in einer einzigen E-Mail-Nachricht übermitteln. Sie können jedoch mehrere Abonnements erstellen.  
@@ -97,7 +95,7 @@ ms.lasthandoff: 12/05/2017
  Informationen zum Konfigurieren eines Berichtsservers im SharePoint-Modus finden Sie im folgenden Thema:  
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Aufgaben und Berechtigungen](../../reporting-services/security/tasks-and-permissions.md)   
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Datengesteuerte Abonnements](../../reporting-services/subscriptions/data-driven-subscriptions.md)   

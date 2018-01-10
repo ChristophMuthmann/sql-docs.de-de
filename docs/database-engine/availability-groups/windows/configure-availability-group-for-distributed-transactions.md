@@ -22,11 +22,11 @@ caps.latest.revision: "33"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: aeb43f32eba3a900be154abf3beeb457836d730a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 198d9e8f67003e23a6c94094b7e559249a2d3fad
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>Konfigurieren von Verfügbarkeitsgrupppen für verteilte Transaktionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Bei einer verteilten Transaktion arbeiten Clientanwendungen mit dem Microsoft Di
 
 In [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] werden verteilte Transaktionen für Datenbanken in einer Verfügbarkeitsgruppe nicht verhindert – selbst wenn die Verfügbarkeitsgruppe nicht für verteilte Transaktionen konfiguriert ist. Wenn eine Verfügbarkeitsgruppe jedoch nicht für verteilte Transaktionen konfiguriert ist, kann es vorkommen, dass das Failover in manchen Situationen fehlschlägt. Insbesondere neue [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)]-Instanz des primären Replikats ist möglicherweise nicht in der Lage, Transaktionsergebnisse vom DTC abzurufen. Um der [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)]-Instanz nach einem Failover das Abrufen der Ergebnisse unsicherer Transaktionen vom DTC zu ermöglichen, konfigurieren Sie die Verfügbarkeitsgruppe für verteilte Transaktionen. 
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Bevor Sie eine Verfügbarkeitsgruppe so konfigurieren, dass verteilte Transaktionen unterstützt werden, müssen die folgenden Voraussetzungen erfüllt sein:
 
@@ -86,7 +86,7 @@ Ab [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] lasen sich Verfügbarke
 
 ```transact-sql
 ALTER AVAILABILITY GROUP MyaAG
-   WITH (
+   SET (
       DTC_SUPPORT = PER_DB  
       );
 ```
@@ -187,7 +187,7 @@ Nach dem Rollback oder Commit der Transaktion können Sie die Datenbank mit `ALT
 
 Weitere Informationen zum Auflösen unsicherer Transaktionen finden Sie unter [Resolve Transactions manually](http://technet.microsoft.com/library/cc754134.aspx) (Transaktionen manuell auflösen).
 
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
 
 [Distributed Transactions](http://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions) (Verteilte Transaktionen)
 

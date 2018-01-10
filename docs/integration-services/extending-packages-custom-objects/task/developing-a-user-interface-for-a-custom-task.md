@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -29,18 +29,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8707a24fda7d84ac260e33884d01279d8cbe5501
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5a95e1007fdb54b3bd08139c3c826d372aca4171
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Task
   Das [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Objektmodell bietet Entwicklern benutzerdefinierter Tasks eine einfache Möglichkeit, eine individuelle Benutzeroberfläche für einen Task zu erstellen, der dann in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] integriert und angezeigt werden kann. Die Benutzeroberfläche kann nützliche Informationen für den Benutzer im [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer bereitstellen und den Benutzern Hinweise geben, wie sie die Eigenschaften und Einstellungen des benutzerdefinierten Tasks ordnungsgemäß konfigurieren können.  
   
  Bei der Entwicklung einer benutzerdefinierten Benutzeroberfläche für einen Task werden zwei wichtige Klassen verwendet. Diese Klassen werden in der folgenden Tabelle beschrieben.  
   
-|Klasse|Description|  
+|Class|Description|  
 |-----------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|Ein Attribut, das einen verwalteten Task identifiziert und über seine Eigenschaften Informationen zur Entwurfszeit angibt, um zu kontrollieren, wie der [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer das Objekt anzeigt, bzw. wie er mit ihm interagiert.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|Eine vom Task verwendete Schnittstelle, um den Task seiner benutzerdefinierten Benutzeroberfläche zuzuordnen.|  
@@ -204,7 +204,7 @@ Public Class HelloWorldTaskUI
 End Class  
 ```  
  
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen eines benutzerdefinierten Tasks](../../../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md)   
  [Codieren eines benutzerdefinierten Tasks](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)   
  [Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Task](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  

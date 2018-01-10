@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83f524dbbd4062735ea596b58d460ba93d590366
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 74f7d68b9e3feb4e65c1a287b69a580802719199
+ms.sourcegitcommit: fbbb050f43ecb780281b370ec73fdcd472eb0ecc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>Importieren und Exportieren von Daten von SQL Server und Azure SQL-Datenbank
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Sie können eine Vielzahl von Methoden zum Importieren und Exportieren von Daten von SQL Server und Azure SQL-Datenbank verwenden. Zu diesen Methoden zählen Transact-SQL-Anweisungen, Befehlszeilentools und Assistenten.
@@ -55,7 +55,7 @@ Wenn Sie einen benutzerdefinierten Datenimport entwerfen möchten, können Sie e
 Sie können Daten von Flatfiles oder einer Vielzahl von anderen Dateiformaten, relationalen Datenbanken und Clouddiensten importieren und exportieren. Weitere Informationen zu diesen Optionen für bestimmte Tools finden Sie in den folgenden Themen:
 -   Informationen zum SQL Server-Import/Export-Assistenten finden Sie unter [Connect to Data Sources with the SQL Server Import and Export Wizard (Herstellen einer Verbindung zu Datenquellen mit dem SQL Server-Import/Export-Assistenten)](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md).
 -   Informationen zu SQL Server Integration Services finden Sie unter [Integration Services-Verbindungen (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md).
--   Informationen zu Azure Data Factory finden Sie unter [Azure Data Factory-Connectors](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-amazon-redshift-connector).
+-   Informationen zu Azure Data Factory finden Sie unter [Azure Data Factory-Connectors](https://docs.microsoft.com/azure/data-factory/data-factory-amazon-redshift-connector).
 
 ### <a name="commonly-used-data-formats"></a>Häufig verwendete Dateiformate
 

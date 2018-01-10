@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -29,11 +29,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ff2fd453c04886594f4d70e1115f00acac72edb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a73c1630674189dd1f86a1aca68937a558d5149f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="developing-a-custom-source-component"></a>Entwickeln einer benutzerdefinierten Quellkomponente
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ermöglicht es Entwicklern, in Quellkomponenten zu schreiben, die Verbindungen mit benutzerdefinierten Datenquellen herstellen und anderen Komponenten im Datenflusstask Daten aus diesen Quellen zur Verfügung stellen. Die Möglichkeit, benutzerdefinierte Quellen zu erstellen, ist hilfreich, wenn Sie Verbindungen zu Datenquellen herstellen müssen, auf die Sie über keine der bestehenden [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Quellen zugreifen können.  
@@ -673,7 +673,7 @@ Namespace BlobSrc
 End Namespace  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Entwickeln einer benutzerdefinierten Zielkomponente](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)   
  [Erstellen einer Quelle mit der Skriptkomponente](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  
   

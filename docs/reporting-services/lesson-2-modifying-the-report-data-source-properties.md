@@ -8,21 +8,21 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 caps.latest.revision: "43"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ba7880d9cc6f316b7ce06b73dda896becd892797
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 52547af895d362214e6a33c69c29fe2cd2c3cb8a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lektion 2: Ändern der Eigenschaften der Berichtsdatenquelle
 In dieser Lektion des [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Tutorials verwenden Sie das Webportal, um einen Bericht auszuwählen, der an Empfänger übermittelt werden soll. Das datengesteuerte Abonnement, das Sie definieren, verteilt den im Tutorial **Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;** erstellten Bericht [Erstellen eines einfachen Tabellenberichts &amp;#40;SSRS-Tutorial&amp;#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  In den folgenden Schritten wird erläutert, wie Sie die Datenquellen-Verbindungsinformationen ändern, die vom Bericht zum Abrufen von Daten verwendet werden. Nur Berichte, die **gespeicherte Anmeldeinformationen** für das Zugreifen auf eine Berichtsdatenquelle verwenden, können über ein datengesteuertes Abonnement verteilt werden. Für die unbeaufsichtigte Berichtsverarbeitung sind gespeicherte Anmeldeinformationen erforderlich.  
@@ -33,8 +33,8 @@ Sie ändern auch das Dataset und den Bericht, um einen Parameter zu verwenden, m
   
 1.  Navigieren Sie zum [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Webportal mit Administratorrechten, indem Sie z.B. mit der rechten Maustaste auf das Symbol für Internet Explorer und anschließend auf **Als Administrator ausführen**klicken.  
  
-2.    Navigieren Sie zur Webportal-URL.  Beispiel:   
-    `http://<server name>/reports`.  
+2.    Navigieren Sie zur Webportal-URL.  Zum Beispiel:   
+    `http://<server name>/reports`installiert haben.  
     `http://localhost/reports`
  **Hinweis:** Sie *Webportal* -URL lautet „Reports“, nicht die URL des *Berichtsservers* „Berichtsserver“.  
 3.  Navigieren Sie zu dem Ordner, der den Bericht **Sales Orders** enthält, und klicken Sie im Kontextmenü des Berichts auf **Verwalten**.  
@@ -61,7 +61,7 @@ Sie ändern auch das Dataset und den Bericht, um einen Parameter zu verwenden, m
 10. Klicken Sie auf **Speichern**.
 11. Klicken Sie auf **Abbrechen**  
   
-11. Zeigen Sie den Bericht an, um zu überprüfen, ob er mit den von Ihnen angegebenen Anmeldeinformationen ausgeführt wird. .  
+11. Zeigen Sie den Bericht an, um zu überprüfen, ob er mit den von Ihnen angegebenen Anmeldeinformationen ausgeführt wird. zugreifen.  
   
 ## <a name="bkmk_modify_dataset"></a>So ändern Sie den AdventureWorksDataset  
  In den folgenden Schritten ändern Sie das Dataset, um einen Parameter zu verwenden, damit sich das Dataset nach einer Bestellnummer filtern lässt.
@@ -118,13 +118,13 @@ Sie ändern auch das Dataset und den Bericht, um einen Parameter zu verwenden, m
   
 2.  Klicken Sie auf der Symbolleiste auf **Erstellen** , und klicken Sie dann auf **Tutorial bereitstellen**.  
   
-## <a name="next-steps"></a>Nächste Schritte  
+## <a name="next-steps"></a>Next Steps  
 + Sie haben damit erfolgreich den Bericht so konfiguriert, dass er beim Abrufen von Daten gespeicherte Anmeldeinformationen verwendet und die Daten mit einem Parameter gefiltert werden können. 
 + In der nächsten Lektion Konfigurieren Sie das Abonnement mithilfe der datengesteuerten Abonnements des Webportals. Siehe [Lektion 3: Definieren eines datengesteuerten Abonnements](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Verwalten von Berichtsdatenquellen](../reporting-services/report-data/manage-report-data-sources.md)  
-[Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+[Specify Credential and Connection Information for Report Data Sources (Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen)](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Tutorial&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
 [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   

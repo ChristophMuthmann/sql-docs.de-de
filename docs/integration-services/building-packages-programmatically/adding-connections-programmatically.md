@@ -8,7 +8,7 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -32,11 +32,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ed662d5dff653fc0e245db65f6fe25b4b209c77e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7a8884691a3837d86f2210662cd9d680cda0e65b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="adding-connections-programmatically"></a>Programmgesteuertes Hinzufügen von Verbindungen
   Die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Klasse stellt physische Verbindungen zu externen Datenquellen dar. Durch die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Klassen werden die Implementierungsdetails der Verbindung von der Laufzeit isoliert. Daher kann die Laufzeit mit den einzelnen Verbindungs-Managern auf eine konsistente, vorhersehbare Weise interagieren. Verbindungs-Manager enthalten eine Reihe von Basiseigenschaften, die alle Verbindungen gemeinsam haben, z. B. die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>-, die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>- <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> und die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>-Eigenschaft. Die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>-Eigenschaft und die <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>-Eigenschaft sind jedoch in der Regel die einzigen Eigenschaften, die zur Konfiguration eines Verbindungs-Managers erforderlich sind. Im Gegensatz zu anderen Programmierungsmodellen, bei denen Verbindungsklassen Methoden wie die **Open**- oder die **Connect**-Methode verfügbar machen, um eine physische Verbindung mit der Datenquelle herzustellen, verwaltet das Laufzeitmodul alle Verbindungen für das Paket während der Ausführung.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/20/2017
   
  In der folgenden Tabelle sind die in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthaltenen Verbindungs-Manager sowie die Zeichenfolge aufgeführt, die in der `package.Connections.Add("xxx")`-Anweisung verwendet wird. Eine Liste aller Verbindungs-Manager finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
-|String|Verbindungs-Manager|  
+|Zeichenfolge|Ziel-Editor für Dimensionsverarbeitung|  
 |------------|------------------------|  
 |„OLEDB“|Verbindungs-Manager für OLE DB-Verbindungen.|  
 |„ODBC“|Verbindungs-Manager für ODBC-Verbindungen.|  
@@ -216,8 +216,8 @@ End Class
 ## <a name="external-resources"></a>Externe Ressourcen  
  Technischer Artikel, [Verbindungszeichenfolgen](http://go.microsoft.com/fwlink/?LinkId=220743), unter carlprothman.net.  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Integration Services (SSIS) Connections (Integration Services-Verbindungen (SSIS))](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
  [Erstellen von Verbindungs-Managern](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   
   

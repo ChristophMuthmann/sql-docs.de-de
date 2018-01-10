@@ -8,20 +8,20 @@ ms.service:
 ms.component: mobile-reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
 caps.latest.revision: "18"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 770afc0e577f0283193f63ab8ac18fa02734fe8a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b2cfe0cdb9290b4de7fdeac76ad2319807422693
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Abrufen von Daten aus freigegebenen Datasets in mobilen Reporting Services-Berichten
 Neben dem [Laden von Daten aus Excel-Dateien](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md) kann der Publisher für mobile Berichte von Microsoft SQL Server auch auf Daten aus nahezu allen Quellen zugreifen. Für den Zugriff auf Daten wird eine freigegebene Datenquelle benötigt, die auf einem Reporting Services-Webportal konfiguriert ist. Erfahren Sie mehr über das [Erstellen freigegebener Datenquellen](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) und das [Erstellen freigegebener Datasets](../../reporting-services/report-data/manage-shared-datasets.md).  

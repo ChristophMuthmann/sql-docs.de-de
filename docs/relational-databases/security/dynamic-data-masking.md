@@ -17,11 +17,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bcd7c5ce901bf1083aa48ee2e1236226b13ce5ae
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a40b52ccc4839f63acbd1be1f9b2643552a44430
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="dynamic-data-masking"></a>Dynamische Datenmaskierung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ Ein Supportmitarbeiter in einem Call Center kann z. B. Anrufer anhand mehrerer 
 ## <a name="defining-a-dynamic-data-mask"></a>Definieren einer dynamischen Datenmaske  
  Eine Maskierungsregel kann für eine Spalte in einer Tabelle definiert werden, um die Daten in dieser Spalte zu verschleiern. Es stehen vier Arten von Masken zur Verfügung.  
   
-|Funktion|Beschreibung|Beispiele|  
+|Funktion|Description|Beispiele|  
 |--------------|-----------------|--------------|  
-|Standardwert|Die vollständige Maskierung gemäß der Datentypen der festgelegten Felder.<br /><br /> Verwenden Sie XXXX oder weniger X-Platzhalter für Zeichenfolge-Datentypen, wenn die Größe des Felds weniger als vier Zeichen umfasst (**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> Verwenden Sie für numerische Datentypen den Wert 0 (null) (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> Verwenden Sie für die Datentypen für Datum und Uhrzeit 01.01.1900 00:00:00.0000000 (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br /><br />Verwenden Sie für binäre Datentypen ein Einzelbyte des ASCII-Werts 0 (**binary**, **varbinary**, **image**).|Beispielsyntax der Spaltendefinition: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Beispiel für ALTER-Syntax: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
-|Email|Eine Maskierungsmethode, die den ersten Buchstaben einer E-Mail-Adresse und das konstante Suffix „.com“ in Form einer E-Mail-Adresse verfügbar macht. . `aXXX@XXXX.com`.|Beispielsyntax der Definition: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Beispiel für ALTER-Syntax: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()'`)|  
+|Default|Die vollständige Maskierung gemäß der Datentypen der festgelegten Felder.<br /><br /> Verwenden Sie XXXX oder weniger X-Platzhalter für Zeichenfolge-Datentypen, wenn die Größe des Felds weniger als vier Zeichen umfasst (**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> Verwenden Sie für numerische Datentypen den Wert 0 (null) (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> Verwenden Sie für die Datentypen für Datum und Uhrzeit 01.01.1900 00:00:00.0000000 (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br /><br />Verwenden Sie für binäre Datentypen ein Einzelbyte des ASCII-Werts 0 (**binary**, **varbinary**, **image**).|Beispielsyntax der Spaltendefinition: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Beispiel für ALTER-Syntax: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
+|Email|Eine Maskierungsmethode, die den ersten Buchstaben einer E-Mail-Adresse und das konstante Suffix „.com“ in Form einer E-Mail-Adresse verfügbar macht. zugreifen. `aXXX@XXXX.com`.|Beispielsyntax der Definition: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Beispiel für ALTER-Syntax: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
 |Zufall (Random)|Eine zufällige Maskierungsfunktion, die für alle numerischen Typen verwendet werden kann, um den ursprünglichen Wert mit einem zufälligen Wert innerhalb eines bestimmten Bereichs zu maskieren.|Beispielsyntax der Definition: `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> Beispiel für ALTER-Syntax: `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
 |Benutzerdefinierte Zeichenfolge|Eine Maskierungsmethode, die den ersten und letzten Buchstaben verfügbar macht und in der Mitte eine benutzerdefinierte Zeichenfolge zur Auffüllung hinzufügt. `prefix,[padding],suffix`<br /><br /> Hinweis: Wenn der ursprüngliche Wert zu kurz ist, um die gesamte Maske zu vervollständigen, wird ein Teil des Präfixes oder Suffixes nicht verfügbar gemacht.|Beispielsyntax der Definition: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> Beispiel für ALTER-Syntax: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> Zusätzliche Beispiele:<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
   
@@ -197,7 +197,7 @@ ALTER TABLE Membership
 ALTER COLUMN LastName DROP MASKED;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [column_definition &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-definition-transact-sql.md)   

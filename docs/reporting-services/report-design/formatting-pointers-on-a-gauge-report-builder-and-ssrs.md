@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 479cf6630c2ea2b208c30a4a582e30c55b7c9616
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: eaee62d06fd3ab67d10b64cb44282377ace28914
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Formatieren von Zeigern auf einem Messgerät (Berichts-Generator und SSRS)
  In einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht gibt ein Messgerätzeiger den aktuellen Wert des Messgeräts an.   
@@ -60,7 +58,7 @@ ms.lasthandoff: 12/05/2017
   
  Wenn das Bild für den Zeiger eine unregelmäßige Form aufweist, empfiehlt es sich, die Farbe als transparent festzulegen, sodass die Bereiche des Bilds ausgeblendet werden, die auf dem Messgerät nicht angezeigt werden sollen. Wenn Sie eine transparente Farbe definieren, überlagert das Messgerät den vorhandenen Zeiger mit dem Bild und beschneidet das Bild, sodass nur die Form des Zeigers angezeigt wird. Die Größe des Bilds wird vom Messgerät an die Größe des Zeigers angepasst. Wenn Sie für einen Zeiger ein Bild angeben, werden alle Zeiger, die dem Messgerät später hinzugefügt werden, unter diesem Bild gezeichnet. Deshalb empfiehlt es sich, kein Bild für den Zeiger anzugeben, wenn das Messgerät mehrere Zeiger aufweisen soll. Weitere Informationen finden Sie unter [Festlegen eines Bilds als Zeiger auf einem Messgerät (Berichts-Generator und SSRS)](http://msdn.microsoft.com/en-us/9d73b3c3-a068-4868-a2be-0cd261b6e92b).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Formatieren von Skalen auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Formatieren von Bereichen auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [Messgeräte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  

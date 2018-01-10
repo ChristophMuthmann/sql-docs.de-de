@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,13 +18,13 @@ ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
 caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d0d6ee23c5cb0518b532d851bc259b6d2b2e9d60
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 69ce18de1901a873a4eaf0f39854af2512122e72
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>Drucken eines Berichts (Reporting Services im SharePoint-Modus)
   Bei einem Berichtsserver, der im SharePoint-Modus ausgeführt wird, gibt es drei Möglichkeiten zum Drucken eines Berichts aus einer SharePoint-Webanwendung:  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/05/2017
   
      Klicken Sie auf die Schaltfläche **Vorschau** , um den Bericht vor dem Drucken anzuzeigen. Dadurch wird die erste Seite des Berichts in einem separaten Vorschaufenster geöffnet. Weitere Seiten werden beim Rendern des Berichts auf dem Berichtsserver verfügbar. Ein als Vorschau angezeigter Bericht wird im EMF-Format gerendert. Sie können zur vorherigen oder nächsten Seite navigieren, bis die letzte Seite erreicht ist. Dann ist die Schaltfläche **Weiter** deaktiviert. Klicken Sie auf die Schaltfläche **Ränder** , um die Druckränder auf der Vorschauseite zu ändern. Das Dialogfeld **Ränder** wird angezeigt. Konfigurieren Sie den oberen, unteren, rechten und linken Rand, und klicken Sie auf **OK**. Das Dialogfeld wird geschlossen, und die Einstellungen werden für die Renderingvorschau und den Druckvorgang gespeichert.  
   
-## <a name="see-also"></a>Siehe auch  
- [Aktivieren und Deaktivieren des clientseitige Drucks für Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Enable and Disable Client-Side Printing for Reporting Services (Aktivieren und Deaktivieren des clientseitige Drucks für Reporting Services)](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
   

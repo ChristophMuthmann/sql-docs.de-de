@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 629decc021a33945c5a4baae9aef1cda70d22f0b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a9e34b37436a71d34def9aaae26c38866098a5b7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="previewing-reports-in-report-builder"></a>Anzeigen einer Berichtsvorschau in Berichts-Generator
   Während Sie einen paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht erstellen, sollten Sie ihn häufig in der Vorschau anzuzeigen, um zu überprüfen, ob die gewünschten Daten angezeigt werden. Klicken Sie auf **Ausführen**, um den Bericht in der Vorschau anzuzeigen. Der Bericht wird im Seitenansichtsmodus gerendert.  
@@ -83,7 +81,7 @@ ms.lasthandoff: 12/05/2017
   
  Wenn ein vom Bericht verwendeter Unterbericht nach der Erstellung der Bearbeitungssitzung geändert wird, wird der Bericht nicht in der Vorschau gerendert. Um den Bericht erfolgreich in der Vorschau anzuzeigen, müssen Sie den Bericht speichern oder auf **Aktualisieren** klicken, um neue Daten abzurufen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Formatieren von Berichtselementen (Berichts-Generator und SSRS)](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   

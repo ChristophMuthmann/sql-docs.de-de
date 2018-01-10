@@ -8,20 +8,20 @@ ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
 caps.latest.revision: "13"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 815c9eee34a0104f08958a9bbdf01407ac601e3d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6a565e8722385438bddf7b4f01d93ca0be05986f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Arbeiten mit KPIs in Reporting Services
 
@@ -61,7 +61,7 @@ Sie können entweder statische Werte zuweisen oder Daten aus einem freigegebenen
 |Feld|Description|  
 |---|---|  
 |Wertformat|  Wird verwendet, um das Format des angezeigten Werts zu ändern.|   
-|Wert|Der für die KPI anzuzeigender Wert.|  
+|value|Der für die KPI anzuzeigender Wert.|  
 |Ziel|Wird als Vergleich mit einem numerischen Wert verwendet und als prozentuale Differenz angezeigt.|  
 |Status|Zum Bestimmen der KPI-Kachelfarbe verwendete und durch Komma getrennte numerische Werte. Gültige Werte sind 1 (Grün), 0 (gelb) und-1 (Rot).|  
 |Trendsatz|Für Diagrammvisualisierungen verwendete durch Komma getrennte numerische Werte. Dies kann auch für eine Spalte eines Dataset mit Werten festgelegt werden, die den Trend darstellen.|  
@@ -90,7 +90,7 @@ Um Daten aus einem freigegebenen Dataset zu verwenden, können Sie Folgendes tun
   
     ![rsCreateKPI6](../reporting-services/media/rscreatekpi6.png)  
   
-6.  Wählen Sie **Anwenden**aus.  
+6.  Wählen Sie **Anwenden** aus.  
   
     ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)  
   
@@ -102,7 +102,7 @@ Um eine KPI zu entfernen, können Sie Folgendes tun.
   
     ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
   
-2.  Wählen Sie **Löschen**aus. Wählen Sie **Löschen** erneut im Bestätigungsdialogfeld aus.  
+2.  Wählen Sie **Löschen** aus. Wählen Sie **Löschen** erneut im Bestätigungsdialogfeld aus.  
   
     ![rsRemoveKPI2](../reporting-services/media/rsremovekpi2.png)  
   

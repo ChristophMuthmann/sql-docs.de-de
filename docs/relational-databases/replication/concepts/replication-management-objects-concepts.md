@@ -8,7 +8,7 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -28,11 +28,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c39d933b13d2ab43432d850c0233c2d0e8916142
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 86e4725f0963e5f1f79b4a730b3ae2db6f353b97
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ ms.lasthandoff: 11/17/2017
   
  In den folgenden Abschnitten wird beschrieben, wie Sie RMO für die programmgesteuerte Kontrolle von Replikationsaufgaben verwenden können:  
   
- [Konfigurieren der Verteilung](../../../relational-databases/replication/configure-distribution.md)  
+ [Verteilung konfigurieren](../../../relational-databases/replication/configure-distribution.md)  
  Die Themen in diesem Abschnitt veranschaulichen, wie RMO zum Konfigurieren von Veröffentlichung und Verteilung verwendet wird.  
   
  [Erstellen, Ändern und Löschen von Veröffentlichungen und Artikeln &#40;Replikation&#41;](../../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)  
  Die Themen in diesem Abschnitt demonstrieren, wie mit RMO Veröffentlichungen und Artikel erstellt, gelöscht und geändert werden.  
   
- [Abonnieren von Veröffentlichungen](../../../relational-databases/replication/subscribe-to-publications.md)  
+ [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)  
  Die Themen in diesem Abschnitt beschreiben, wie mit RMO Abonnements erstellt, gelöscht und geändert werden.  
   
  [Sichern einer Replikationstopologie](../../../relational-databases/replication/security/secure-a-replication-topology.md)  
@@ -197,8 +197,8 @@ ms.lasthandoff: 11/17/2017
   
  [!code-cs[HowTo#rmo_ChangeTranPub_cached](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_changetranpub_cached)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Konzepte für gespeicherte Systemprozeduren für die Replikation](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Konzepte für die Replikationsprogrammierung](../../../relational-databases/replication/concepts/replication-programming-concepts.md)  
   
   

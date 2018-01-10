@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
@@ -18,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0795006b2ec1b6dbc0f222f9513bf9d6ce9a17ac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3da875380580bcf7151db13c0b14280a9790d5dc
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="use-openjson-with-the-default-schema-sql-server"></a>Verwenden von OPENJSON mit dem Standardschema (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.lasthandoff: 11/17/2017
  Hier ein paar Beispiele, in denen **OPENJSON** mit dem Standardschema verwendet wird. Weitere Informationen und Beispiele finden Sie unter [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md).  
   
 ## <a name="example---return-each-property-of-an-object"></a>Beispiel: Rückgabe jeder Eigenschaft eines Objekts  
- **Abfrage**  
+ **Dataseteigenschaften**  
   
 ```sql  
 SELECT *
@@ -41,14 +40,14 @@ FROM OPENJSON('{"name":"John","surname":"Doe","age":45}')
   
  **Ergebnisse**  
   
-|Key|Wert|  
+|Key|value|  
 |---------|-----------|  
-|name|John|  
+|NAME|John|  
 |surname|Doe|  
 |age|45|  
   
 ## <a name="example---return-each-element-of-an-array"></a>Beispiel: Rückgabe jedes Element eines Arrays  
- **Abfrage**  
+ **Dataseteigenschaften**  
   
 ```sql  
 SELECT [key],value
@@ -57,7 +56,7 @@ FROM OPENJSON('["en-GB", "en-UK","de-AT","es-AR","sr-Cyrl"]')
   
  **Ergebnisse**  
   
-|Key|Wert|  
+|Key|value|  
 |---------|-----------|  
 |0|en-GB|  
 |1|en-UK|  
@@ -90,7 +89,7 @@ FROM OPENJSON(@json,N'lax $.info')
   
  **Ergebnisse**  
   
-|Key|Wert|Typ|  
+|Key|value|Typ|  
 |---------|-----------|----------|  
 |Typ|1|0|  
 |address|{ "town":"Bristol", "county":"Avon", "country":"England" }|5|  
@@ -110,7 +109,7 @@ CROSS APPLY OPENJSON(SalesReasons)
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Erfahren Sie mehr über die integrierte JSON-Unterstützung in SQL Server  
 Viele spezifische Lösungen, Anwendungsfälle und Empfehlungen finden Sie in SQL Server und in der Azure SQL-Daten im [Blogbeitrag über die integrierte JSON-Unterstützung](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) von Jovan Popovic, Program Manager bei Microsoft.
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  
   
   

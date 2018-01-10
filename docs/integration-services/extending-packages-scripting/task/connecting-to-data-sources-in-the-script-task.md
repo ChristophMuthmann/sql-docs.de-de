@@ -30,11 +30,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 052113c5e6f18381a26d9a3a7f1703659a40a88e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 76108d1b6c4004d85456b0f412874012b8d71228
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>Herstellen einer Verbindung zu Datenquellen im Skripttask 
   Verbindungs-Manager bieten Zugriff auf Datenquellen, die im Paket konfiguriert wurden. Weitere Informationen finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](../../../integration-services/connection-manager/integration-services-ssis-connections.md).  
@@ -57,55 +57,43 @@ ms.lasthandoff: 11/20/2017
  Im folgenden Beispiel wird veranschaulicht, wie Verbindungs-Manager innerhalb des Skripttasks aufgerufen werden können. In diesem Beispiel wird davon ausgegangen, dass Sie einen [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]-Verbindungs-Manager namens **Test ADO.NET Connection** und einen Verbindungs-Manager für Flatfiles namens **Test Flat File Connection** erstellt und konfiguriert haben. Beachten Sie, dass der [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]-Verbindungs-Manager ein **SqlConnection**-Objekt zurückgibt, das Sie sofort zur Verbindung mit der Datenquelle verwenden können. Der Verbindungs-Manager für Flatfiles gibt im Gegensatz dazu nur eine Zeichenfolge mit Pfad und Dateinamen zurück. Sie müssen Methoden aus dem **System.IO**-Namespace verwenden, um die Flatfile zu öffnen und mit ihr zu arbeiten.  
   
 ```vb  
-Public Sub Main()  
-  
-    Dim myADONETConnection As SqlClient.SqlConnection  
-    myADONETConnection = _  
-        DirectCast(Dts.Connections("Test ADO.NET Connection").AcquireConnection(Dts.Transaction), _  
-        SqlClient.SqlConnection)  
-    MsgBox(myADONETConnection.ConnectionString, _  
-        MsgBoxStyle.Information, "ADO.NET Connection")  
-  
-    Dim myFlatFileConnection As String  
-    myFlatFileConnection = _  
-        DirectCast(Dts.Connections("Test Flat File Connection").AcquireConnection(Dts.Transaction), _  
-        String)  
-    MsgBox(myFlatFileConnection, MsgBoxStyle.Information, "Flat File Connection")  
-  
-    Dts.TaskResult = ScriptResults.Success  
-  
-End Sub  
+    Public Sub Main()
+
+        Dim myADONETConnection As SqlClient.SqlConnection =
+            DirectCast(Dts.Connections("Test ADO.NET Connection").AcquireConnection(Dts.Transaction),
+                SqlClient.SqlConnection)
+        MsgBox(myADONETConnection.ConnectionString,
+            MsgBoxStyle.Information, "ADO.NET Connection")
+
+        Dim myFlatFileConnection As String =
+            DirectCast(Dts.Connections("Test Flat File Connection").AcquireConnection(Dts.Transaction),
+                String)
+        MsgBox(myFlatFileConnection, MsgBoxStyle.Information, "Flat File Connection")
+
+        Dts.TaskResult = ScriptResults.Success
+
+    End Sub
 ```  
   
 ```csharp  
-using System;  
-using System.Data.SqlClient;  
-using Microsoft.SqlServer.Dts.Runtime;  
-using System.Windows.Forms;  
-  
-public class ScriptMain  
-{  
-  
-        public void Main()  
-        {  
-            SqlConnection myADONETConnection = new SqlConnection();  
-            myADONETConnection = (SqlConnection)(Dts.Connections["Test ADO.NET Connection"].AcquireConnection(Dts.Transaction)as SqlConnection);  
-            MessageBox.Show(myADONETConnection.ConnectionString, "ADO.NET Connection");  
-  
-            string myFlatFileConnection;  
-            myFlatFileConnection = (string)(Dts.Connections["Test Flat File Connection"].AcquireConnection(Dts.Transaction) as String);  
-            MessageBox.Show(myFlatFileConnection, "Flat File Connection");  
-  
-            Dts.TaskResult = (int)ScriptResults.Success;  
-  
-        }  
-  
-}  
-  
+        public void Main()
+        {
+            SqlConnection myADONETConnection = 
+                Dts.Connections["Test ADO.NET Connection"].AcquireConnection(Dts.Transaction)
+                as SqlConnection;
+            MessageBox.Show(myADONETConnection.ConnectionString, "ADO.NET Connection");
+
+            string myFlatFileConnection = 
+                Dts.Connections["Test Flat File Connection"].AcquireConnection(Dts.Transaction) 
+                as string;
+            MessageBox.Show(myFlatFileConnection, "Flat File Connection");
+
+            Dts.TaskResult = (int)ScriptResults.Success;
+        }
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Integration Services &#40;SSIS&#41; Connections](../../../integration-services/connection-manager/integration-services-ssis-connections.md)  (Integration Services-Verbindungen [SSIS])  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Integration Services (SSIS) Connections (Integration Services-Verbindungen (SSIS))](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
  [Erstellen von Verbindungs-Managern](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   
   

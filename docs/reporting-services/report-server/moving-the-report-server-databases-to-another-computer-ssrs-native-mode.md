@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 caps.latest.revision: "10"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bf0061fb7a02901f24f75e7627d35f0916a843ff
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e3449aa8547e62e89e3fc40ab893e1eb2fefcfd6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Verschieben von Berichtsserver-Datenbanken auf einen anderen Computer (einheitlicher SSRS-Modus)
 
@@ -212,7 +210,7 @@ GO
   
 2.  Doppelklicken Sie auf der Seite Datenbank auf **Datenbank ändern**. Klicken Sie auf **Weiter**.  
   
-3.  Sie können auch auf **Vorhandene Berichtsserver-Datenbank auswählen**klicken. Klicken Sie auf **Weiter**.  
+3.  Sie können auch auf **Wählen Sie eine vorhandene Berichtsserver-Datenbank aus**klicken. Klicken Sie auf **Weiter**.  
   
 4.  Wählen Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die nun als Host für die Berichtsserver-Datenbank fungiert, und klicken Sie auf **Verbindung testen**. Klicken Sie auf **Weiter**.  
   

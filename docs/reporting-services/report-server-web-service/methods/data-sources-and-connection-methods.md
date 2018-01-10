@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server-web-service
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - data sources [Reporting Services], methods
 ms.assetid: 50999b52-fc7c-4333-9fb0-d04c37a4c90f
 caps.latest.revision: "38"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2e8039303a6d21a3979a76d1a37aa0e041ba8eaa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8eba13519bae937a6f22873adbe3386a4e6fc379
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-sources-and-connection-methods"></a>Datenquellen- und Verbindungsmethoden
   Mit diesen Methoden können Sie Datenquellenverbindungen und Anmeldeinformationen festlegen und verwalten.  
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/05/2017
 |<xref:ReportService2010.ReportingService2010.TestConnectForDataSourceDefinition%2A>|Testet die Verbindung für eine Datenquelle. Diese Methode unterstützt direkte Datenquellentests.|  
 |<xref:ReportService2010.ReportingService2010.TestConnectForItemDataSource%2A>|Testet die Verbindung für eine Datenquelle. Diese Methode unterstützt Tests von veröffentlichten Datenquellen, die von Berichten oder Modellen und freigegebenen Datenquellen verwendet werden.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Erstellen von Anwendungen mit dem Webdienst und .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Berichtsserver-Webdienst](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Webdienstmethoden für Berichtsserver](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

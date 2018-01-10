@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +18,20 @@ ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 caps.latest.revision: "19"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ed5e5031c00a8a4f638f3d3226ae331896e4a35d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d66415bd5318a98bb45f92ed262f0324c61416a1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="planning-a-report-report-builder"></a>Planen eines Berichts (Berichts-Generator)
   Mit dem Berichts-Generator können viele Arten von paginierten Berichten erstellt werden. Sie können beispielsweise Berichte erstellen, die zusammenfassende oder detaillierte Umsatzdaten, Marketing- und Umsatztrends sowie Betriebsberichte oder Dashboards enthalten. Sie können auch Berichte erstellen, die umfassend formatierten Text nutzen, beispielsweise für Bestellungen, Produktkataloge oder Serienbriefe. All diese Berichte werden mit unterschiedlichen Kombinationen derselben grundlegenden Bausteine im Berichts-Generator erstellt. Das Erstellen eines sinnvollen, verständlichen Berichts erfordert zunächst eine sorgfältige Planung. Bevor Sie beginnen, sollten Sie Folgendes beachten:  
   
 -   **In welchem Format soll der Bericht angezeigt werden?**  
   
-     Sie können Berichte online in einem Browser wie dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal rendern oder in andere Formate exportieren, beispielsweise Excel, Word oder PDF. Die endgültige Form des Berichts ist ein wichtiger Gesichtspunkt, weil nicht alle Funktionen in sämtlichen Exportformaten verfügbar sind. Weitere Informationen finden Sie unter [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+     Sie können Berichte online in einem Browser wie dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal rendern oder in andere Formate exportieren, beispielsweise Excel, Word oder PDF. Die endgültige Form des Berichts ist ein wichtiger Gesichtspunkt, weil nicht alle Funktionen in sämtlichen Exportformaten verfügbar sind. Weitere Informationen finden Sie unter [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)kennen.  
   
 -   **In welcher Struktur sollen die Daten in dem Bericht dargestellt werden?**  
   
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/05/2017
   
 -   **Welche Daten sollen die Leser sehen? Sollen die Daten oder das Format für unterschiedliche Zielgruppen gefiltert werden?**  
   
-     Sie können den Geltungsbereich des Berichts auf bestimmte Benutzer oder Speicherorte bzw. auf einen bestimmten Zeitraum eingrenzen. Zum Filtern der Berichtsdaten verwenden Sie Parameter, um nur die gewünschten Daten abzurufen und anzuzeigen. Weitere Informationen finden Sie unter [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
+     Sie können den Geltungsbereich des Berichts auf bestimmte Benutzer oder Speicherorte bzw. auf einen bestimmten Zeitraum eingrenzen. Zum Filtern der Berichtsdaten verwenden Sie Parameter, um nur die gewünschten Daten abzurufen und anzuzeigen. Weitere Informationen finden Sie unter [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)" basiert.  
   
 -   **Müssen Sie eigene Berechnungen erstellen?**  
   
@@ -59,7 +57,7 @@ ms.lasthandoff: 12/05/2017
   
      Sie können den Bericht auf dem lokalen Computer speichern und weiter bearbeiten oder lokal zu Ihrer eigenen Information ausführen. Sie müssen den Bericht jedoch auf einem im einheitlichen Modus konfigurierten Berichtsserver oder einem Berichtsserver im integrierten SharePoint-Modus speichern, um ihn für andere Benutzer freizugeben. Wenn Sie den Bericht auf einem Server speichern, können andere Benutzer ihn jederzeit ausführen. Der Berichtsserveradministrator kann jedoch auch ein Abonnement für den Bericht oder eine E-Mail-Übermittlung des Berichts an andere Personen einrichten. Sie können den Bericht auch in einem bestimmten Exportformat übermitteln. Weitere Informationen finden Sie unter [Suchen, Anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Berichts-Generator in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Berichterstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Lernprogramme für den Berichts-Generator](../../reporting-services/report-builder-tutorials.md)  

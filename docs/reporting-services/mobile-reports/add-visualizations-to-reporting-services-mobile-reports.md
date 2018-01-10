@@ -8,20 +8,20 @@ ms.service:
 ms.component: mobile-reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
 caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7c068430c44eaad1df894fc5c67849ff438ffcbc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 04a6baad7239d9a9203e4b71bbe23ea0e7318f2b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Hinzufügen von Visualisierungen zu mobilen Reporting Services-Berichten
 Diagramme sind ein wesentlicher Bestandteil der Visualisierung von Daten. Erfahren Sie mehr über die Diagramme, die Sie in mobilen [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten verwenden können, um eine große Bandbreite von Szenarien abzudecken. 

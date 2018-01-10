@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: "10543"
@@ -18,13 +16,13 @@ ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 13d641b01073882faa4b8a19b8c9af0e370d507b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 327e9c590d635c0910f5dd12f43db9dbb199871c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Berichtsteile (Berichts-Generator und SSRS)
   Berichtselemente wie Tabellen, Matrizen, Diagramme und Bilder können als *Berichtsteile*veröffentlicht werden. Berichtsteile sind Elemente paginierter Berichte, die separat auf einem Berichtsserver veröffentlicht wurden und in anderen paginierten Berichten wieder verwendet werden können. Berichtsteile besitzen die Dateierweiterung ".rsc".  
@@ -74,7 +72,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Listen  
   
- Wenn Sie ein Berichtselement veröffentlichen, in dem Daten angezeigt werden, z. B. eine Tabelle, eine Matrix oder ein Diagramm, wird das Dataset, von dem das Berichtselement abhängig ist, zusammen damit als ein darin eingebettetes Dataset gespeichert. Sie können das Dataset auch separat als freigegebenes Dataset speichern, das Sie und andere Personen als Grundlage für andere Berichtsteile verwenden können. Weitere Informationen finden Sie unter [Berichtsteile und Datasets in Berichts-Generator](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md).  
+ Wenn Sie ein Berichtselement veröffentlichen, in dem Daten angezeigt werden, z. B. eine Tabelle, eine Matrix oder ein Diagramm, wird das Dataset, von dem das Berichtselement abhängig ist, zusammen damit als ein darin eingebettetes Dataset gespeichert. Sie können das Dataset auch separat als freigegebenes Dataset speichern, das Sie und andere Personen als Grundlage für andere Berichtsteile verwenden können. Weitere Informationen finden Sie unter [Berichtsteile und Datasets](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md).  
   
  Einige Berichtsteile können auch andere Berichtselemente enthalten. Eine Tabelle kann z. B. ein Diagramm enthalten, während ein Rechteck eine Matrix und ein Diagramm enthalten kann. Wenn Sie ein Berichtselement veröffentlichen, das andere Berichtselemente enthält, werden diese als Einheit gespeichert. Die anderen Berichtselemente werden in den Containerberichtsteil eingebettet gespeichert. Sie können sie weder getrennt voneinander aktualisieren noch die Elemente im Container als separate Berichtsteile speichern.  
   
@@ -94,7 +92,7 @@ ms.lasthandoff: 12/05/2017
  Die einfachste Möglichkeit zum Erstellen eines Berichts besteht darin, einen vorhandenen Berichtsteil zum Bericht im Berichtsteilkatalog hinzuzufügen, beispielsweise eine Tabelle oder ein Diagramm. Nachdem Sie dem Bericht den Berichtsteil hinzugefügt haben, können Sie diesen nach Bedarf ändern oder Updates vom Server akzeptieren. Eine Änderung des Berichtselements in Ihrem Bericht wirkt sich nicht auf die Instanz des Berichtsteils aus, die auf der Website oder dem Server veröffentlicht wurde. Auch die Beziehung zwischen der Instanz im Bericht und der Instanz auf der Website oder dem Server bleibt bestehen. Wenn Sie über ausreichende Berechtigungen verfügen, können Sie die aktualisierte Kopie auf der Website oder auf dem Server erneut speichern. Wenn eine andere Person die Kopie auf der Website oder dem Server ändert, können Sie Ihre Kopie in ihrem momentanen Zustand beibehalten oder sie aktualisieren, damit sie der Kopie auf der Website oder dem Server entspricht.  
   
 ### <a name="searching-for-report-parts"></a>Suchen nach Berichtsteilen  
- Im Berichtsteilkatalog können Sie nach Berichtsteilen suchen, die Sie Ihrem Bericht hinzufügen möchten. Sie können die Berichtsteile nach dem gesamten Namen oder einem Teil des Namens, nach der Person, die sie erstellt oder zuletzt geändert hat, nach dem letzten Änderungsdatum, dem Speicherort oder dem Typ des Berichtsteils filtern. Sie konnten z. B. nach allen Diagrammen suchen, die in der vorhergehenden Woche von einem oder mehreren Ihrer Kollegen erstellt wurden.  
+ Im Berichtsteilkatalog können Sie nach Berichtsteilen suchen, die Sie Ihrem Bericht hinzufügen möchten. Sie können die Berichtsteile nach dem gesamten Namen oder einem Teil des Namens, nach der Person, die sie erstellt oder zuletzt geändert hat, nach dem letzten Änderungsdatum, dem Speicherort oder dem Typ des Berichtsteils filtern. Sie konnten z. B. nach allen Diagrammen suchen, die in der vorhergehenden Woche von einem oder mehreren Ihrer Kollegen erstellt wurden.  
   
  Sie können die Suchergebnisse als Miniaturansichten oder in Listenform anzeigen und nach Name, Erstellungs- und Änderungsdatum und dem Ersteller sortieren. Weitere Informationen finden Sie unter [Suchen nach Berichtsteilen und Festlegen eines Standardordners &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)veröffentlicht werden.  
   
@@ -109,7 +107,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="adding-more-than-one-report-part"></a>Hinzufügen von mehreren Berichtsteilen  
  Sie können dem Bericht eine unbegrenzte Anzahl von Berichtsteilen hinzufügen. Sie können jedoch immer nur jeweils einen Berichtsteil hinzufügen. Sie können dem gleichen Bericht sogar mehrere Instanzen desselben Berichtsteils hinzufügen. Diese verfügen alle über eindeutige Namen, sind jedoch Instanzen des gleichen Berichtsteils auf dem Server und haben die gleiche eindeutige ID.  
   
- Wenn Sie einen anderen Berichtsteil hinzufügen, der ein mit einem bereits im Bericht verwendeten Dataset identisch ist, fügt der Assistent dem Bericht keine andere Version dieses Datasets hinzu. Es leitet die Verweise im Berichtsteil um, sodass Sie auf das vorhandene Dataset verweisen. Weitere Informationen finden Sie unter [Berichtsteile und Datasets in Berichts-Generator](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md).  
+ Wenn Sie einen anderen Berichtsteil hinzufügen, der ein mit einem bereits im Bericht verwendeten Dataset identisch ist, fügt der Assistent dem Bericht keine andere Version dieses Datasets hinzu. Es leitet die Verweise im Berichtsteil um, sodass Sie auf das vorhandene Dataset verweisen. Weitere Informationen finden Sie unter [Berichtsteile und Datasets](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md).  
   
   
 ##  <a name="UpdatingComponents"></a> Aktualisieren von Berichtsteilen mit Änderungen vom Server  
@@ -147,7 +145,7 @@ ms.lasthandoff: 12/05/2017
   
  [Suchen nach Updates oder Deaktivieren von Updates (Berichts-Generator und SSRS)](http://msdn.microsoft.com/en-us/9c69792d-d7c4-453b-ae2f-6d2d071d8606)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Berichtsteile und Datasets in Berichts-Generator](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Problembehandlung bei Berichtsteilen (Berichts-Generator und SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [Managing Report Parts (Verwalten von Berichtsteilen)](../../reporting-services/report-design/managing-report-parts.md)  

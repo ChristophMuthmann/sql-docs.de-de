@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 33dcd6590ec74ecc06de8b2e545f865e1e259f26
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 661ca09d032e09e8f9599b7b8093f95fcc975731
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Erstellen, Bereitstellen und Debuggen von benutzerdefinierten Objekten
   Nachdem Sie den Code für ein benutzerdefiniertes Objekt für [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] geschrieben haben, müssen Sie die Assembly erstellen, bereitstellen und in [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer integrieren, um sie für die Nutzung in Paketen verfügbar zu machen, sie zu testen und zu debuggen.  
@@ -94,7 +94,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
 |Benutzerdefiniertes Objekt|Bereitstellungsordner|  
 |-------------------|-----------------------|  
 |Task|Aufgaben|  
-|Verbindungs-Manager|Verbindungen|  
+|Ziel-Editor für Dimensionsverarbeitung|Verbindungen|  
 |Protokollanbieter|LogProviders|  
 |Datenflusskomponente|PipelineComponents|  
   
@@ -162,9 +162,9 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
 3.  Kehren Sie zum angehaltenen Paket zurück, und setzen Sie den Vorgang über den Breakpoint hinaus fort, oder klicken Sie auf **OK**, um das Meldungsfeld, das vom Skripttask aufgerufen wird, zu verwenden, und setzen Sie die Paketausführung und den Debugvorgang fort.  
   
-## <a name="see-also"></a>Siehe auch  
- [Developing Custom Objects for Integration Services (Entwickeln benutzerdefinierter Objekte für Integration Services)](../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)   
- [Persisting Custom Objects (Beibehalten von benutzerdefinierten Objekten)](../../integration-services/extending-packages-custom-objects/persisting-custom-objects.md)   
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Entwickeln benutzerdefinierter Objekte für Integration Services](../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)   
+ [Beibehalten von benutzerdefinierten Objekten](../../integration-services/extending-packages-custom-objects/persisting-custom-objects.md)   
  [Tools zur Problembehandlung für die Paketentwicklung](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
   
   

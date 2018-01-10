@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 caps.latest.revision: "35"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 21ebae6b3b0d2a9d30b5078460f610060ba79780
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7f1198cddebd82cbabaccd635dc10182236bcc33
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="preload-the-cache-report-manager"></a>Vorabladen des Caches (Berichts-Manager)
   Sie können den Cache für ein freigegebenes Dataset vorab laden, indem Sie einen Cacheaktualisierungsplan für das freigegebene Dataset erstellen.  
@@ -94,7 +92,7 @@ ms.lasthandoff: 12/05/2017
   
 8.  Klicken Sie auf **Weiter**.  
   
-9. Geben Sie die Abfrage oder den Befehl an, die bzw. der Abonnentendaten abruft. Sie können auch den Timeoutzeitraum für Abfragen erhöhen, deren Verarbeitung lange dauert. Beispiel:  
+9. Geben Sie die Abfrage oder den Befehl an, die bzw. der Abonnentendaten abruft. Sie können auch den Timeoutzeitraum für Abfragen erhöhen, deren Verarbeitung lange dauert. Zum Beispiel:  
   
     ```  
     Select * from UserInfo  
@@ -127,7 +125,7 @@ ms.lasthandoff: 12/05/2017
   
 18. Klicken Sie auf **Anwenden**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Datengesteuerte Abonnements](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Tutorial&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Leistung, Momentaufnahmen, Zwischenspeichern (Reporting Services)](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   

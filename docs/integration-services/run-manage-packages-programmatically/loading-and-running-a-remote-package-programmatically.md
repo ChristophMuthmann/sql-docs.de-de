@@ -8,7 +8,7 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c0a229c7706ac3c46cf7a1688c15dd4e02daa4c8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 14e5a1d1539ac2d65285530607bae262ac7e9b8a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Programmgesteuertes Laden und Ausführen eines Remotepakets
   Um Remotepakete auf einem lokalen Computer auszuführen, auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nicht installiert ist, starten Sie die Pakete, sodass sie auf dem Remotecomputer ausgeführt werden, auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installiert ist. Hierzu muss auf dem lokalen Computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent, ein Webdienst oder eine Remotekomponente zum Starten der Pakete auf dem Remotecomputer verwendet werden. Wenn Sie versuchen, die Remotepakete direkt auf dem lokalen Computer zu starten, werden die Pakete geladen, und es wird versucht, die Pakete auf dem lokalen Computer auszuführen. Wenn [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nicht auf dem lokalen Computer installiert ist, werden die Pakete nicht ausgeführt.  
@@ -157,7 +157,7 @@ namespace LaunchSSISPackageAgent_CS
 >  Mit den Standardeinstellungen für die Authentifizierung und Autorisierung verfügt ein Webdienst im Allgemeinen nicht über die erforderlichen Berechtigungen für den Zugriff auf SQL Server oder das Dateisystem, um Pakete zu laden und auszuführen. Daher müssen Sie möglicherweise dem Webdienst die entsprechenden Berechtigungen zuweisen. Konfigurieren Sie hierzu die Einstellungen für die Authentifizierung und Autorisierung in der Datei **Web.config**, und weisen Sie die für Datenbank und Dateisystem erforderlichen Berechtigungen zu. Eine ausführliche Beschreibung von Berechtigungen für Webdienste, Datenbanken und Dateisysteme ist nicht Gegenstand dieses Themas.  
   
 > [!IMPORTANT]  
->  Die Methoden der <xref:Microsoft.SqlServer.Dts.Runtime.Application>-Klasse zum Arbeiten mit dem SSIS-Paketspeicher unterstützen nur ".", Localhost oder den Namen des lokalen Servers. Sie können "(local)" nicht verwenden.  
+>  Die Methoden der <xref:Microsoft.SqlServer.Dts.Runtime.Application>-Klasse zum Arbeiten mit dem SSIS-Paketspeicher unterstützen nur „.“, localhost oder den Namen des lokalen Servers. Sie können "(local)" nicht verwenden.  
   
 ### <a name="sample-code"></a>Beispielcode  
  In den folgenden Codebeispielen wird gezeigt, wie der Webdienst erstellt und getestet wird.  
@@ -425,7 +425,7 @@ namespace LaunchSSISPackageSvcTestCS
   
 -   Video [Vorgehensweise: Automatisieren der SSIS-Paketausführung mit dem SQL Server-Agent (SQL Server-Video)](http://technet.microsoft.com/sqlserver/ff686764.aspx) auf technet.microsoft.com  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Grundlegendes zu den Unterschieden zwischen der lokalen und der Remoteausführung](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [Programmgesteuertes Laden und Ausführen eines lokalen Pakets](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [Laden der Ausgabe eines lokalen Pakets](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,14 +19,14 @@ helpviewer_keywords:
 - deleting role assignments
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 caps.latest.revision: "54"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.openlocfilehash: 08eb1bab258170436e8cf168893be581364c2923
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 0e4e04ae2e783a7ef02da4e393c4fe0e4f6e98be
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="grant-user-access-to-a-report-server"></a>Gewähren von Benutzerzugriff auf einen Berichtsserver
 

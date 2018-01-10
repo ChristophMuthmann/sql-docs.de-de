@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - XML [Reporting Services], data retrieval
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 caps.latest.revision: "43"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 71d13409c7905b64f4b91b365b07f9b53b58264d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 643ad56c8c758c4711d731a6c5121206e8ce0998
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Syntax für Elementpfade für XML-Berichtsdaten (SSRS)
   Im Berichts-Designer geben Sie die Daten, die für einen Bericht aus einer XML-Datenquelle verwendet werden sollen, durch Definieren eines Elementpfades (mit Unterscheidung von Groß-/Kleinschreibung) an. Mit einem Elementpfad wird angegeben, wie die hierarchischen XML-Knoten und ihre Attribute in der XML-Datenquelle durchsucht werden können. Lassen Sie die Datasetabfrage oder den XML- **ElementPath** der XML- **Query** leer, um den Standardelementpfad zu verwenden. Wenn Daten aus der XML-Datenquelle abgerufen werden, werden Elementknoten mit Textwerten und Elementknotenattribute im Resultset zu Spalten. Die Werte der Knoten und Attribute werden beim Ausführen der Abfrage zu Zeilendaten. Die Spalten werden als Datasetfeldauflistung im Berichtsdatenbereich angezeigt. In diesem Thema wird die Syntax für Elementpfade beschrieben.  
@@ -74,7 +72,7 @@ XMLLocalName :: =
     Identifier in the XML tag.   
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  In der folgenden Tabelle sind Begriffe für Pfadelemente zusammengefasst. Die Beispiele in der Tabelle beziehen sich auf das XML-Beispieldokument Customers.xml, das im Abschnitt mit Beispielen in diesem Thema enthalten ist.  
   
 > [!NOTE]  
@@ -89,7 +87,7 @@ XMLLocalName :: =
 |**FieldList**|Definiert eine Gruppe von Elementen und Attributen, die zum Abrufen von Daten verwendet werden.<br /><br /> Wenn dieses Element nicht angegeben wird, werden alle Attribute und untergeordneten Elemente als Felder verwendet. Wenn die leere Feldliste angegeben wird (**{}**), werden keine Felder von diesem Knoten verwendet.<br /><br /> Eine **FieldList** kann nicht gleichzeitig einen **Value** und ein **Element** oder einen **ElementNode**enthalten.|  
 |**Feld**|Gibt die Daten an, die als Datasetfeld abgerufen werden.|  
 |**Attribut**|Ein Name/Wert-Paar innerhalb von **ElementNode**. Beispielsweise handelt es sich bei **ID** im Elementknoten \<Customer ID="1"> um ein Attribut, und **@ID(Integer)** gibt „1“ als Integer-Typ im entsprechenden Datenfeld **ID** zurück.|  
-|**Wert**|Der Wert des Elements. **Value** kann nur für den letzten **ElementNode** im Elementpfad verwendet werden. Da es sich beispielsweise bei \<Return> um einen Blattknoten handelt, ist der Wert von **Return {@}** **Chair**.|  
+|**ReplTest1**|Der Wert des Elements. **Value** kann nur für den letzten **ElementNode** im Elementpfad verwendet werden. Da es sich beispielsweise bei \<Return> um einen Blattknoten handelt, ist der Wert von **Return {@}** **Chair**.|  
 |**Element**|Der Wert des benannten untergeordneten Elements. Beispielsweise werden mithilfe von Customers {}/Customer {}/LastName nur Werte für das LastName-Element abgerufen.|  
 |**Typ**|Der optionale Datentyp, der für das aus diesem Element erstellte Feld zu verwenden ist.|  
 |**NamespacePrefix**|**NamespacePrefix** wird im XML-Abfrageelement definiert. Wenn kein XML-Abfrageelement vorhanden ist, werden Namespaces im XML- **ElementPath** ignoriert. Wenn ein XML-Abfrageelement vorhanden ist, verfügt der XML- **ElementPath** über das optionale Attribut **IgnoreNamespaces**. Wenn IgnoreNamespaces **TRUE**ist, werden Namespaces in XML- **ElementPath** und im XML-Dokument ignoriert. Weitere Informationen finden Sie unter [XML-Abfragesyntax für XML-Berichtsdaten (SSRS)](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).|  
@@ -211,7 +209,7 @@ XMLLocalName :: =
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [XML-Verbindungstyp &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
  [Reporting Services-Tutorials (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Hinzufügen, Bearbeiten und Aktualisieren von Feldern im Berichtsdatenbereich &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,13 +18,13 @@ ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 caps.latest.revision: "20"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4b5e2307a0f3e9034e716aa5098b241d5550d2e0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fd67c49706dce9306843bac51ae20ff23a112789
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Tastenkombinationen (Berichts-Generator)
   Im Berichts-Generator stehen Ihnen für die Navigation alle von der Windows-Umgebung unterstützten Tastenkombinationen zur Verfügung, wenn Sie paginierte [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichte erstellen und ändern. Sie können aus mehreren Standardtastenkombinationsschemas auswählen.  
@@ -99,7 +97,7 @@ ms.lasthandoff: 12/05/2017
 |Verkleinert die Ansicht des Kartensichtbereichs, wenn ein Kartenviewport ausgewählt ist.|STRG+Minuszeichen (-)|  
 |Zugriffstastenmodus zum Schwenken und Vergrößern des Kartensichtbereichs, wenn ein Kartenviewport ausgewählt ist.|STRG+Linksklick|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Berichts-Generator in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Berichtsentwurfsansicht &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [Glossar (Berichts-Generator)](../../reporting-services/report-builder/glossary-report-builder.md)  

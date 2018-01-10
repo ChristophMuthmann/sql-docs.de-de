@@ -8,20 +8,20 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 caps.latest.revision: "15"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f2d4daa75f8a339b1b0c83d7920b770e80f44525
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7c5db49ed18a5c025b1f237b59ca78ca5fbdbf71
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint
 
@@ -85,7 +85,7 @@ Rssharepoint.msi /?
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\16\` (SharePoint 2016)  
   
-3.  Konfigurieren Sie die Berichtsservereinstellungen und die Funktionsaktivierung in der SharePoint-Zentraladministration. . Weitere Informationen zum Installieren und Konfigurieren von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus finden Sie unter [Installieren des ersten Berichtsservers im SharePoint-Modus](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
+3.  Konfigurieren Sie die Berichtsservereinstellungen und die Funktionsaktivierung in der SharePoint-Zentraladministration. zugreifen. Weitere Informationen zum Installieren und Konfigurieren von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus finden Sie unter [Installieren des ersten Berichtsservers im SharePoint-Modus](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
   
 ###  <a name="bkmk_files_only_installation"></a> "Nur-Datei"-Installation  
  Wenn die Dateien installiert, die Installationsphase mit benutzerdefinierten Aktionen jedoch übersprungen werden soll, führen Sie die Datei rssharepoint.msi über die Befehlszeile mit der SKIPCA-Option aus:  
@@ -98,7 +98,7 @@ Rssharepoint.msi /?
     Msiexec.exe /i rsSharePoint.msi SKIPCA=1  
     ```  
   
- Die Benutzeroberfläche für die Installation wird geöffnet und wie gewohnt ausgeführt. Außerdem wird die Datei **rsCustomAction.exe** installiert. Die ausführbare Datei wird am Ende der Installation jedoch nicht ausgeführt, und **rsCustomAction.exe** verbleibt nach Abschluss der Installation auf dem Datenträger.  
+ Die Benutzeroberfläche für die Installation wird geöffnet und wie gewohnt ausgeführt. Außerdem wird die Datei **rsCustomAction.exe** installiert. Die ausführbare Datei wird am Ende der Installation jedoch nicht ausgeführt, und **rsCustomAction.exe** verbleibt nach Abschluss der Installation auf dem Computer.  
   
 ### <a name="use-a-two-step-installation-to-troubleshoot-installation-issues"></a>Installation in zwei Schritten zur Behandlung von Installationsproblemen  
  Wenn während der Installation Fehler auftreten, können Sie Setup über die Befehlszeile in zwei Schritten ausführen:  
@@ -264,7 +264,7 @@ Rssharepoint.msi /?
 ##  <a name="bkmk_rscustomaction"></a> RsCustomAction.exe  
  In der folgenden Tabelle sind die Schalter für rscustomaction.exe zusammengefasst:  
   
-|Schalter|Beschreibung|  
+|Schalter|Description|  
 |------------|-----------------|  
 |i|Installiert die benutzerdefinierten Aktionen. Dadurch werden die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Komponenten in SharePoint registriert. Startet den W3SVC-Dienst neu.|  
 |r|Repair|  
@@ -275,7 +275,7 @@ Rssharepoint.msi /?
 ## <a name="configuring-reporting-services"></a>Konfigurieren von Reporting Services  
  Nachdem das Add-In auf allen erforderlichen Computern installiert wurde, muss der Berichtsserver über die SharePoint-Zentraladministration konfiguriert werden. Die erforderlichen Schritte richten sich nach der Reihenfolge, in der die verschiedenen Technologien installiert wurden. Weitere Informationen finden Sie unter [Installieren des ersten Berichtsservers im SharePoint-Modus](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538) and [Reporting Services-Berichtsserver &#40;SharePoint-Modus&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen finden Sie unter
 
 [Installieren des ersten Berichtsservers im SharePoint-Modus](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)   
 [Reporting Services-Berichtsserver &#40;SharePoint-Modus&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  

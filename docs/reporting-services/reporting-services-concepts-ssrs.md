@@ -8,22 +8,20 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 caps.latest.revision: "37"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cd2500d7c1d3dff0ee0a3c41b40e6f35bb4060d5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 048406ef86bc2442e4d065f5461f85dbbd328495
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Konzepte von Reporting Services (SSRS)
   Dieses Thema bietet eine kurze Einführung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Konzepte.  
@@ -123,14 +121,14 @@ Sie erstellen mobile Reporting Services-Berichte (RSMOBILE-Dateien) im Publisher
  Berichtsparameter sind ein Teil einer Berichtsdefinition. Sie können einem paginierten und mobilen Reporting Services-Bericht Parameter hinzufügen, um ähnliche Berichte zu verknüpfen, die Berichtsdarstellung zu steuern, Berichtsdaten zu filtern oder den Bereich eines Berichts auf bestimmte Benutzer oder Orte einzugrenzen. Wenn ein paginierter Bericht auf einem systemeigenen Berichtsserver oder einer SharePoint-Website veröffentlicht wird, werden Berichtsparameter als separates Berichtsserverelement gespeichert. Parameter können unabhängig von der Berichtsdefinition verwaltet werden. Um mehrere Sätze mit Parametern für den gleichen Bericht zu erstellen, erstellen Sie *verknüpfte Berichte*.  
   
 ### <a name="report-items"></a>Berichtselemente 
- Ein Berichtselement ist ein internes, aber grundlegendes Konzept in einer Definition eines paginierten Reporting Services-Berichts. Eigenschaften eines Berichtselements gelten für Datenbereiche, Karten, Textfelder, Bilder und andere Entwurfselemente, die Sie einem Bericht hinzufügen. Das Verstehen der Eigenschaften eines Berichtselements kann Ihnen dabei helfen, angepasste Berichtsinhalte und -darstellungen zu entwerfen. Alle Berichtselemente haben z. B. eine "Hidden"-Eigenschaft, um die Sichtbarkeit zu steuern.  
+ Ein Berichtselement ist ein internes, aber grundlegendes Konzept in einer Definition eines paginierten Reporting Services-Berichts. Eigenschaften eines Berichtselements gelten für Datenbereiche, Karten, Textfelder, Bilder und andere Entwurfselemente, die Sie einem Bericht hinzufügen. Das Verstehen der Eigenschaften eines Berichtselements kann Ihnen dabei helfen, angepasste Berichtsinhalte und -darstellungen zu entwerfen. Alle Berichtselemente haben z. B. eine "Hidden"-Eigenschaft, um die Sichtbarkeit zu steuern.  
   
 ### <a name="data-regions-and-maps"></a>Datenbereiche und Karten 
  Ein Datenbereich ist ein Layoutelement, das Daten aus einem einzelnen Dataset in einem paginierten Reporting Services-Bericht anzeigt. Datenbereichstypen sind beispielsweise Tablix, Diagramm, Leiste und Indikator. "Karte" ist ein besonderer Typ des Datenbereichs, da er Daten aus zwei Datasets anzeigen kann: ein Dataset mit räumlichen Daten und eins mit analytischen Daten.  
   
  Aktivieren Sie allgemeine Datenvisualisierungen mithilfe von Datenbereichen: Zahlen und Text in einer Tabelle, Matrix oder Liste; grafische Anzeigen in einem Diagramm oder einer Leiste; und geografische Anzeigen in einer Karte. Tabellen, Matrizen und Listen basieren auf dem Tablix-Datenbereich, der bei Bedarf erweitert wird, um alle Daten aus dem Dataset anzuzeigen. Ein Tablix-Datenbereich unterstützt mehrere Zeilen- und Spaltengruppen mit statischen und dynamischen Zeilen und Spalten. In einem Diagramm werden mehrere Reihen und Kategoriegruppen in einer Vielzahl von Diagrammformaten angezeigt. In einem Messgerät wird ein einzelner Wert oder ein aggregierter Wert für ein Dataset angezeigt. In einer Karte werden räumliche Daten in Form von Kartenelementen angezeigt, deren Darstellung abhängig von den aggregierten Daten aus einem Dataset variieren kann.  
   
--   **Tabelle.** Eine Tabelle ist ein Datenbereich, in dem Daten zeilenweise dargestellt werden. Tabellenspalten sind statisch: Sie bestimmen die Anzahl von Spalten, wenn Sie den Bericht entwerfen. Tabellenzeilen sind dynamisch: sie werden nach unten erweitert, um die Daten aufzunehmen. Sie können zu den Tabellen Gruppen hinzufügen, die die Daten nach ausgewählten Feldern oder Ausdrücken zusammenfassen. Weitere Informationen finden Sie unter [Tabellen, Matrizen und Listen (Berichts-Generator und SSRS)](http://msdn.microsoft.com/en-us/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098).  
+-   **Tabelle.** Eine Tabelle ist ein Datenbereich, in dem die Daten zeilenweise dargestellt werden. Tabellenspalten sind statisch: Sie bestimmen die Anzahl von Spalten, wenn Sie den Bericht entwerfen. Tabellenzeilen sind dynamisch: sie werden nach unten erweitert, um die Daten aufzunehmen. Sie können zu den Tabellen Gruppen hinzufügen, die die Daten nach ausgewählten Feldern oder Ausdrücken zusammenfassen. Weitere Informationen finden Sie unter [Tabellen, Matrizen und Listen (Berichts-Generator und SSRS)](http://msdn.microsoft.com/en-us/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098).  
   
 -   **Matrix** Eine Matrix wird auch als Kreuztabelle bezeichnet. Ein Matrixdatenbereich enthält dynamische Zeilen und Spalten: sie werden zur Aufnahme der Daten erweitert. Eine Matrix kann dynamische Spalten und Zeilen und statische Spalten und Zeilen enthalten. Spalten oder Zeilen können in anderen Spalten oder Zeilen enthalten sein, die zur Gruppierung von Daten verwendet werden können. Weitere Informationen finden Sie unter [Tabellen, Matrizen und Listen (Berichts-Generator und SSRS)](http://msdn.microsoft.com/en-us/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098).  
   
@@ -138,7 +136,7 @@ Sie erstellen mobile Reporting Services-Berichte (RSMOBILE-Dateien) im Publisher
   
 -   **Diagramm.** Ein Diagramm stellt Daten grafisch dar. Beispiele für Diagramme sind Balken-, Kreis- und Liniendiagramme, es werden jedoch weit mehr Arten unterstützt. Weitere Informationen finden Sie unter [Diagramme &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
--   **Messgerät.** Ein Messgerät präsentiert Daten als Bereich mit einem Indikator, der auf einen bestimmten Wert innerhalb des Bereichs zeigt. Messgeräte werden verwendet, um Key Performance Indicators (KPIs) und andere Daten anzuzeigen. Beispiele für Messgeräte umfassen lineare und runde Ausführungen. Weitere Informationen finden Sie unter [Messgeräte &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
+-   **Messgerät.** Ein Messgerät präsentiert Daten als Bereich mit einem Indikator, der auf einen bestimmten Wert innerhalb des Bereichs zeigt. Messgeräte werden verwendet, um Key Performance Indicators (KPIs) und andere Daten anzuzeigen. Beispiele für Messgeräte umfassen lineare und runde Ausführungen. Weitere Informationen finden Sie unter [Gauges &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   
 -   **Karte.** Mit einer Karte können Daten vor einem geografischen Hintergrund präsentiert werden. Kartendaten können räumliche Daten aus einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Abfrage, einer ESRI-Shape-Datei oder aus [!INCLUDE[msCoName](../includes/msconame-md.md)] Bing-Kartenkacheln sein. Räumliche Daten bestehen aus Sätzen von Koordinaten zur Definition von Polygonen, die Formen oder Bereiche darstellen, von Linien, die Routen oder Pfade darstellen, und von Punkten, die durch Marker dargestellt werden. Sie können aggregierte Daten Kartenelementen zuordnen, um deren Farbe und Größe automatisch zu verändern. So kann der Markertyp für ein Geschäft auf Grundlage der Umsätze oder die Farbe für eine Straße auf Grundlage der Geschwindigkeitsbegrenzung variieren. Weitere Informationen finden Sie unter [Karten &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
@@ -218,7 +216,7 @@ Diagramm für die Berichtsverarbeitung
  Ein exportierter Bericht ist ein vollständig ausgelagerter und in einem bestimmten Dateiformat gespeicherter Bericht. Exportformate hängen von installierten Renderingerweiterungen ab und können angepasst werden. Standardmäßig schließen Exportformate Excel, Word, XML, PDF, TIFF und CSV ein. Weitere Informationen finden Sie unter [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Reporting Services-Funktionen und -Tasks &#40;SSRS&#41;](../reporting-services/reporting-services-features-and-tasks-ssrs.md)   
  [Technische Referenz (SSRS)](../reporting-services/technical-reference-ssrs.md)   
  [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  

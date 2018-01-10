@@ -8,7 +8,7 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cb1ef22a3a460926dc99f2afda21d7c1ecc0ad11
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6f9f002cf0de0f7e6e78cd529182cb5e3d63ee3f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="replication-programming-concepts"></a>Konzepte für die Replikationsprogrammierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +118,7 @@ ms.lasthandoff: 11/17/2017
 |<xref:Microsoft.SqlServer.Replication>|Verwalteter Code|Synchronisierung|  
 |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|Verwalteter Code|Erstellen von Geschäftslogikhandlern, um benutzerdefinierte Logik in den Mergesynchronisierungsvorgang zu integrieren|  
 |[Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Skripterstellung|Administration und Überwachung.|  
-|[Ausführbare Konzepte für die Programmierung von Replikations-Agents](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|Skripterstellung|Synchronisierung|  
+|[Ausführbare Konzepte für die Programmierung von Replikations-Agent](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|Skripterstellung|Synchronisierung|  
   
 ## <a name="example"></a>Beispiel  
  Unter [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] müssen Daten für 200 Vertriebsmitarbeiter weltweit veröffentlicht werden. Die Vertriebsmitarbeiter sind viel im Außendienst unterwegs und müssen Laptops oder PDAs (Personal Digital Assistants) verwenden, um Kundendaten zu ändern und neue Bestellungen hinzuzufügen. Die Änderungen müssen anschließend mit dem Verleger synchronisiert werden, wenn die Vertriebsmitarbeiter über den Laptop eine Verbindung mit dem Netzwerk herstellen.  

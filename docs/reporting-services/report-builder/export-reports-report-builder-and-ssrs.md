@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: "10437"
@@ -18,13 +16,13 @@ ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
 caps.latest.revision: "23"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: be5b29f8f01eaaee1f1ea225ec47c0665762984f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ed5a8e47a39df2d7d521181fff55fe6734062ce8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>Exportieren von Berichten (Berichts-Generator und SSRS)
 
@@ -124,8 +122,8 @@ ms.lasthandoff: 12/05/2017
 |Format|Renderingerweiterungstyp|Description|  
 |------------|------------------------------|-----------------|  
 |Acrobat-Datei (PDF-Datei)|Fester Seitenumbruch|Die PDF-Renderingerweiterung rendert Berichte in einem Dateiformat, das in Adobe Acrobat und anderen PDF-Viewern von Drittanbietern geöffnet werden kann, die das Format PDF 1.3 unterstützen. Obwohl PDF 1.3 mit Adobe Acrobat 4.0 oder höher kompatibel ist, wird Adobe Acrobat von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] erst ab Version 6 unterstützt. Die Renderingerweiterung erfordert keine Adobe-Software, um Berichte zu rendern. Zum Anzeigen oder Drucken von Berichten im PDF-Format sind allerdings PDF-Viewer wie Adobe Acrobat erforderlich.<br /><br /> Weitere Informationen finden Sie unter [Exportieren als PDF-Datei](../../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md).|  
-|Atom|Daten|Die Atom-Renderingerweiterung generiert Atom-kompatible Datenfeeds aus Berichten. Die Datenfeeds sind mit Anwendungen lesbar und austauschbar, die Atom-kompatible Datenfeeds nutzen können, z.B. Power Pivot oder Power BI.<br /><br /> Die Ausgabe ist ein Atom-Dienstdokument, in dem die in einem Bericht verfügbaren Datenfeeds aufgeführt sind. Mindestens ein Datenfeed wird für jeden Datenbereich in einem Bericht erstellt. Abhängig vom Typ des Datenbereichs und den darin angezeigten Daten können mehrere Datenfeeds generiert werden.<br /><br /> Weitere Informationen finden Sie unter [Generieren von Datenfeeds aus Berichten](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).|  
-|CSV|Daten|Die durch Trennzeichen getrennte CSV (Comma-Separated Value)-Renderingerweiterung rendert Berichte als vereinfachte Darstellung der Daten eines Berichts in einem standardisierten Nur-Text-Format, das leicht lesbar und mit anderen Anwendungen austauschbar ist.<br /><br /> Weitere Informationen finden Sie unter [Exportieren als CSV-Datei](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).|  
+|Atom|data|Die Atom-Renderingerweiterung generiert Atom-kompatible Datenfeeds aus Berichten. Die Datenfeeds sind mit Anwendungen lesbar und austauschbar, die Atom-kompatible Datenfeeds nutzen können, z.B. Power Pivot oder Power BI.<br /><br /> Die Ausgabe ist ein Atom-Dienstdokument, in dem die in einem Bericht verfügbaren Datenfeeds aufgeführt sind. Mindestens ein Datenfeed wird für jeden Datenbereich in einem Bericht erstellt. Abhängig vom Typ des Datenbereichs und den darin angezeigten Daten können mehrere Datenfeeds generiert werden.<br /><br /> Weitere Informationen finden Sie unter [Generieren von Datenfeeds aus Berichten](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).|  
+|CSV|data|Die durch Trennzeichen getrennte CSV (Comma-Separated Value)-Renderingerweiterung rendert Berichte als vereinfachte Darstellung der Daten eines Berichts in einem standardisierten Nur-Text-Format, das leicht lesbar und mit anderen Anwendungen austauschbar ist.<br /><br /> Weitere Informationen finden Sie unter [Exportieren als CSV-Datei](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).|  
 |EXCELOPENXML|Bedingter Seitenumbruch|Wird beim Überprüfen von Berichten als „Excel“ in den Exportmenüs angezeigt. Die Excel-Renderingerweiterung rendert einen Bericht als Excel-Dokument (.xlsx), das mit [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2013 kompatibel ist.  Weitere Informationen finden Sie unter [Exportieren nach Microsoft Excel](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
 |PowerPoint|Fester Seitenumbruch|Die PowerPoint-Renderingerweiterung rendert einen Bericht als PowerPoint-Dokument (.pptx), das mit PowerPoint 2013 kompatibel ist.|  
 |TIFF-Datei|Fester Seitenumbruch|Die Bildrenderingerweiterung rendert einen Bericht als Bitmap oder Metadatei. Standardmäßig erstellt die Bildrenderingerweiterung eine TIFF-Datei des Berichts, die auf mehreren Seiten angezeigt werden kann. Nachdem der Client das Bild erhalten hat, kann es in einem Image Viewer angezeigt und gedruckt werden.<br /><br /> Die Bildrenderingerweiterung kann Dateien in allen von [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]unterstützten Formaten generieren: BMP, EMF, EMFPlus, GIF, JPEG, PNG und TIFF.<br /><br /> Weitere Informationen finden Sie unter [Exportieren in eine Bilddatei](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).|  
@@ -197,7 +195,7 @@ http://<Report Server Name/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Steuern von Seitenumbrüchen, Überschriften, Spalten und Zeilen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
-[Suchen, Anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+[Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
 [Drucken von Berichten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
 [Speichern von Berichten &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
 

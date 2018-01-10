@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,13 +18,13 @@ ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ef5d6f5c0abbe09505de7608ec18d309a112d0c9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7dedffd365d48a18f896815660585c5b602a5688
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Formatieren von Datenpunkten in einem Diagramm (Berichts-Generator und SSRS)
 In einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht stellt ein Datenpunkt die kleinste Entität im Diagramm dar. In Nicht-Formdiagrammen werden Datenpunkte entsprechend dem Diagrammtyp dargestellt. Eine Linienreihe besteht beispielsweise aus einem oder mehreren verbundenen Datenpunkten. In Formdiagrammen werden Datenpunkte durch einzelne Slices oder Segmente dargestellt, aus denen sich das gesamte Diagramm zusammensetzt. In einem Kreisdiagramm ist z. B. jedes Teil ein Datenpunkt. Weitere Informationen finden Sie unter [Diagrammtypen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  
@@ -68,21 +66,21 @@ In einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md
   
 |Diagrammschlüsselwort|Description|Anwendbar auf Diagrammtyp|Beispiel für einen entsprechenden einfachen Ausdruck|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
-|#VALY|Y-Wert des Datenpunkts|Alle|`=Fields!MyDataField.Value`|  
-|#VALY2|Y-Wert Nr. 2 des Datenpunkts|Bereich, Blase|Keine|  
-|#VALY3|Y-Wert Nr. 3 des Datenpunkts|Kurs, Kerze|Keine|  
-|#VALY4|Y-Wert Nr. 4 des Datenpunkts|Kurs, Kerze|Keine|  
-|#SERIESNAME|Reihenname|Alle|Keine|  
-|#LABEL|Datenpunktbezeichnung|Alle|Keine|  
+|#VALY|Y-Wert des Datenpunkts|All|`=Fields!MyDataField.Value`|  
+|#VALY2|Y-Wert Nr. 2 des Datenpunkts|Bereich, Blase|InclusionThresholdSetting|  
+|#VALY3|Y-Wert Nr. 3 des Datenpunkts|Kurs, Kerze|InclusionThresholdSetting|  
+|#VALY4|Y-Wert Nr. 4 des Datenpunkts|Kurs, Kerze|InclusionThresholdSetting|  
+|#SERIESNAME|Reihenname|All|InclusionThresholdSetting|  
+|#LABEL|Datenpunktbezeichnung|All|InclusionThresholdSetting|  
 |#AXISLABEL|Achsenbezeichnung für Datenpunkt|Form|`=Fields!MyDataField.Value`|  
-|#INDEX|Datenpunktindex|Alle|Keine|  
-|#PERCENT|Prozentsatz für den Y-Wert des Datenpunkts|Alle|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
-|#TOTAL|Summe aller Y-Werte in der Reihe|Alle|`=Sum(Fields!MyDataField.Value)`|  
-|#LEGENDTEXT|Der Text, der dem Text des Legendenelements entspricht.|Alle|Keine|  
-|#AVG|Durchschnitt aller Y-Werte in der Reihe|Alle|`=Avg(Fields!MyDataField.Value)`|  
+|#INDEX|Datenpunktindex|All|InclusionThresholdSetting|  
+|#PERCENT|Prozentsatz für den Y-Wert des Datenpunkts|All|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
+|#TOTAL|Summe aller Y-Werte in der Reihe|All|`=Sum(Fields!MyDataField.Value)`|  
+|#LEGENDTEXT|Der Text, der dem Text des Legendenelements entspricht.|All|InclusionThresholdSetting|  
+|#AVG|Durchschnitt aller Y-Werte in der Reihe|All|`=Avg(Fields!MyDataField.Value)`|  
 |#MIN|Minimum aller Y-Werte in der Reihe|Alle|`=Min(Fields!MyDataField.Value)`|  
-|#MAX|Maximum aller Y-Werte in der Reihe|Alle|`=Max(Fields!MyDataField.Value)`|  
-|#FIRST|Der Erste aller Y-Werte in der Reihe|Alle|`=First(Fields!MyDataField.Value)`|  
+|#MAX|Maximum aller Y-Werte in der Reihe|All|`=Max(Fields!MyDataField.Value)`|  
+|#FIRST|Der Erste aller Y-Werte in der Reihe|All|`=First(Fields!MyDataField.Value)`|  
   
  Schließen Sie zum Formatieren des Schlüsselworts eine [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Formatzeichenfolge in Klammern ein. Wenn Sie beispielsweise den Wert des Datenpunkts in einer QuickInfo als Zahl mit zwei Dezimalstellen anzeigen möchten, schließen Sie die Formatzeichenfolge „N2“ in geschweifte Klammern ein, z.B. „#VALY{N2}“ für die **ToolTip** -Eigenschaft der Reihe. Weitere Informationen zu [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Formatzeichenfolgen finden Sie auf MSDN unter [Formatierung von Typen](http://go.microsoft.com/fwlink/?LinkId=112024) . Weitere Informationen zum Formatieren von Zahlen in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] finden Sie unter [Formatieren von Zahlen und Datumsangaben (Berichts-Generator und SSRS)](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
   
@@ -103,7 +101,7 @@ In einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md
   
  [Anzeigen von Prozentwerten in einem Kreisdiagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   

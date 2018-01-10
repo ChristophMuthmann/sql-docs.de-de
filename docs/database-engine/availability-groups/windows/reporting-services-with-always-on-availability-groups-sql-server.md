@@ -8,10 +8,7 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 1a397f47ac1bdb899570cea739ace569bff64c7e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: eec3793f658bf1194787c0f3e2391903308d3ea6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services mit Always On-Verfügbarkeitsgruppen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -199,7 +196,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Nachdem das Datenbankfailover abgeschlossen wurde, und nachdem der Berichtsserverdienst neu gestartet wurde, werden Aufträge des SQL Server-Agents automatisch neu erstellt. Hintegrundausführungen, die dem SQL Server-Agent zugeordnet sind, werden so lange nicht verarbeitet, bis die SQL Agent-Aufträge neu erstellt werden. Hierzu zählen [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Abonnements, Zeitpläne und Momentaufnahmen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [SQL Server Native Client-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
  [Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Erste Schritte mit Always On-Verfügbarkeitsgruppen (SQL Server)](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)   

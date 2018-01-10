@@ -8,23 +8,21 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: "10016"
 ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
 caps.latest.revision: "7"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b1426e5e1de818317a391101149b3285c0b133bf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f4b92fd68ee2202a6998b8d772d36e3aa08bd484
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>Designer für SharePoint-Listenabfragen (Berichts-Generator)
   Berichts-Generator und Berichts-Designer enthalten sowohl einen grafischen Abfrage-Designer als auch einen textbasierten Abfrage-Designer. Mit diesen Designern erstellen Sie Abfragen, um die Daten anzugeben, die für ein Berichtsdataset aus einer SharePoint-Website abgerufen werden sollen. Verwenden Sie den grafischen Abfrage-Designer zum Durchsuchen der Metadaten der SharePoint-Liste, interaktiven Erstellen einer Abfrage und Anzeigen der Ergebnisse der Abfrage. Verwenden Sie den textbasierten Abfrage-Designer, um die vom grafischen Abfrage-Designer erstellte Abfrage anzuzeigen, eine Abfrage zu ändern oder die Abfragebefehle einzugeben. Sie können auch eine vorhandene Abfrage aus einer Datei oder einem Bericht importieren.  
@@ -101,7 +99,7 @@ ms.lasthandoff: 12/05/2017
 |**Abfrage ausführen**|Führen Sie die Abfrage aus. Das Resultset wird im Bereich mit den Abfrageergebnissen angezeigt.|  
 |**Verborgene Felder anzeigen**|Blendet die Felder ein oder aus, die automatisch von SharePoint erstellt, normalerweise aber nicht in Berichten verwendet werden (z. B. "ProgId" und "Level" für SharePoint-Linkelemente). Durch das Ausblenden dieser Felder wird die Feldliste verkürzt, sodass sie einfacher zu verwenden ist.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Abfrage-Designer &#40;Berichts-Generator&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

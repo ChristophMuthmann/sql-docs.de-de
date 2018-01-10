@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 450aab8382de0a22729a65b7fe506b2db41d9fc2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d87aa313c0bec7dccfd97feaf3e1771633d773ea
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportieren nach XML (Berichts-Generator und SSRS)
   Die XML-Renderingerweiterung gibt einen paginierten Bericht im XML-Format zurück. Das Schema der Bericht-XML-Ausgabe hängt vom jeweiligen Bericht ab und enthält nur Daten. Layoutinformationen werden von der XML-Renderingerweiterung nicht gerendert, und die Paginierung wird nicht beibehalten. Der von dieser Erweiterung generierte XML-Code kann in eine Datenbank importiert, als XML-Datennachricht verwendet oder an eine benutzerdefinierte Anwendung gesendet werden.  
@@ -90,7 +88,7 @@ ms.lasthandoff: 12/05/2017
   
  Die Werte für die Variablen lauten wie folgt:  
   
-|Name|Wert|  
+|Name|value|  
 |----------|-----------|  
 |Bericht|Report.DataElementName|  
 |ReportURL|URL-codierte absolute URL zum Bericht auf dem Server.|  
@@ -112,7 +110,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="rectangles"></a>Rechtecke  
  Ein Rechteck wird als ein Element gerendert. Der Name des Elements wird von der DataElementName-RDL-Eigenschaft abgeleitet.  
   
-### <a name="custom-report-items"></a>Benutzerdefinierte Berichtselemente  
+### <a name="custom-report-items"></a>Custom Report Items  
  CustomReportItems (CRI) sind für die Renderingerweiterung nicht sichtbar. Wenn ein benutzerdefiniertes Berichtselement im Bericht vorhanden ist, rendert die Renderingerweiterung dieses als konventionelles Berichtselement.  
   
 ### <a name="images"></a>Bilder  
@@ -196,7 +194,7 @@ ms.lasthandoff: 12/05/2017
  Weitere Informationen finden Sie unter [XML Device Information Settings](../../reporting-services/xml-device-information-settings.md).  
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Renderingverhalten (Berichts-Generator und SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   

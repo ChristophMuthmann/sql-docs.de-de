@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3fcd13b5395ddb1a2e8438d26b631f62a332370e
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: 66988188b2f0ce0550384392b6f90a0b8f93d489
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>Senden einer HTML-E-Mail mit dem Skripttask
   Der Task „Mail senden“ in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützt nur E-Mails im Nur-Text-Format. Sie können jedoch problemlos HTML-E-Mails mithilfe des Skripttasks und den E-Mail-Funktionen des .NET Framework senden.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/28/2017
   
 1.  Erstellen Sie Zeichenfolgenvariablen mit den Namen `HtmlEmailTo`, `HtmlEmailFrom` und `HtmlEmailSubject`, und weisen Sie diesen entsprechende Werte für eine gültige Testnachricht zu.  
   
-2.  Erstellen Sie eine Zeichenfolgenvariable mit dem Namen `HtmlEmailBody`, und weisen Sie dieser eine Zeichenfolge eines HTML-Markups zu. Beispiel:  
+2.  Erstellen Sie eine Zeichenfolgenvariable mit dem Namen `HtmlEmailBody`, und weisen Sie dieser eine Zeichenfolge eines HTML-Markups zu. Zum Beispiel:  
   
     ```  
     <html><body><h1>Testing</h1><p>This is a <b>test</b> message.</p></body></html>  
@@ -156,7 +156,7 @@ public void Main()
         }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Mail senden (Task)](../../integration-services/control-flow/send-mail-task.md)  
   
   

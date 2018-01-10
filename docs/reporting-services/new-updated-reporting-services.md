@@ -19,11 +19,11 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.author: genemi
 ms.workload: reporting-services
-ms.openlocfilehash: fc35b1dc39ded10eaf20f503fb561562ce55da98
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a4bb2b714a4a20d299c22e6952f135cd9786748c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="new-and-recently-updated-reporting-services-for-sql-server"></a>Neu und kürzlich aktualisiert: Reporting Services für SQL Server
 

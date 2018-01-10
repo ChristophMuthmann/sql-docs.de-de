@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b9b0560be6980577dcedbe147ff856a18b032f03
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 954f01cd94ff93d10e30c313cd11bb21b13675f0
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="lesson-1-create-stored-access-policy-and-shared-access-signature"></a>Lektion 1: Erstellen einer gespeicherten Zugriffsrichtlinie und SAS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In dieser Lektion verwenden Sie ein [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/)-Skript zum Erstellen einer SAS für einen Azure-Blobcontainer mithilfe einer gespeicherten Zugriffsrichtlinie.  
@@ -115,21 +115,12 @@ Befolgen Sie folgende Schritte, um eine Richtlinie für einen Container zu erste
   
     # Creates a new container in blob storage  
     $container = New-AzureStorageContainer -Context $storageContext -Name $containerName  
-    $cbc = $container.CloudBlobContainer  
   
     # Sets up a Stored Access Policy and a Shared Access Signature for the new container  
-    $permissions = $cbc.GetPermissions();  
-    $policyName = $policyName  
-    $policy = new-object 'Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicy'  
-    $policy.SharedAccessStartTime = $(Get-Date).ToUniversalTime().AddMinutes(-5)  
-    $policy.SharedAccessExpiryTime = $(Get-Date).ToUniversalTime().AddYears(10)  
-    $policy.Permissions = "Read,Write,List,Delete"  
-    $permissions.SharedAccessPolicies.Add($policyName, $policy)  
-    $cbc.SetPermissions($permissions);  
-  
+    $policy = New-AzureStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -StartTime $(Get-Date).ToUniversalTime().AddMinutes(-5) -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission rwld
+
     # Gets the Shared Access Signature for the policy  
-    $policy = new-object 'Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicy'  
-    $sas = $cbc.GetSharedAccessSignature($policy, $policyName)  
+    $sas = New-AzureStorageContainerSASToken -name $containerName -Policy $policyName -Context $storageContext
     Write-Host 'Shared Access Signature= '$($sas.Substring(1))''  
   
     # Outputs the Transact SQL to the clipboard and to the screen to create the credential using the Shared Access Signature  
@@ -146,7 +137,7 @@ Befolgen Sie folgende Schritte, um eine Richtlinie für einen Container zu erste
   
 [Lektion 2: Erstellen von SQL Server-Anmeldeinformationen mit einer Shared Access Signature (SAS)](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
 [Shared Access Signatures, Teil 1: Grundlagen zum SAS-Modell](https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
 [Erstellen von Containern](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
 [Set Container ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
