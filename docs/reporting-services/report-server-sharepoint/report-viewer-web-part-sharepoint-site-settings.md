@@ -1,23 +1,26 @@
 ---
-title: "Einstellungen der SharePoint-Website für den Berichts-Viewer-Webpart | Microsoft-Dokumentation"
+title: "Einstellungen der SharePoint-Website für den Berichts-Viewer-Webpart (SSRS) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod: sql-non-specified
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: 
-ms.technology: reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jt000
 ms.author: jasontre
 ms.workload: Inactive
-ms.openlocfilehash: 0be12b3f74dd2cf4e6d07d3ccc70208d5bd099b8
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c5fa90156519843a81538dd4f867939910fc25d1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="sharepoint-site-settings-for-the-report-viewer-web-part"></a>Einstellungen der SharePoint-Website für den Berichts-Viewer-Webpart
+# <a name="sharepoint-site-settings-for-the-report-viewer-web-part---reporting-services"></a>Einstellungen der SharePoint-Website für den Berichts-Viewer-Webpart – Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 

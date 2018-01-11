@@ -1,33 +1,31 @@
 ---
-title: Installieren von SQL Server Reporting Services | Microsoft-Dokumentation
-ms.date: 10/10/2017
+title: "Installieren von SQL Server Reporting Services (2017 und höher) | Microsoft-Dokumentation"
+ms.date: 12/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.service: 
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+ms.topic: get-started-article
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 3cc3d78c22bbb4b32696692074e2dad2d6809a3a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2f09b475d42657c8c9ce8ef60d6b5b7c36b30cc2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="install-sql-server-reporting-services"></a>Installieren von SQL Server Reporting Services
+# <a name="install-sql-server-reporting-services-2017-and-later"></a>Installieren von SQL Server Reporting Services (2017 und höher)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-Die Installation von SQL Server Reporting Services umfasst Serverkomponenten zum Speichern von Berichtselementen, Rendern von Berichten und Verarbeiten von Abonnements sowie anderen Berichtsdiensten.  Erfahren Sie, wie Sie Power BI-Berichtsserver installieren.
+Die Installation von SQL Server Reporting Services umfasst Serverkomponenten zum Speichern von Berichtselementen, Rendern von Berichten und Verarbeiten von Abonnements sowie anderen Berichtsdiensten. 
 
 Laden Sie SQL Server 2017 Reporting Services im [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=55252) herunter.
 
@@ -55,11 +53,11 @@ Die Installation des Berichtsservers ist unkompliziert. Zum Installieren der Dat
 
     ![Edition auswählen](media/install-reporting-services/report-server-install-edition.png)
 
-    In der Dropdownliste können Sie zwischen den Editionen „Evaluation“ und „Developer“ wählen.
+    In der Dropdownliste können Sie zwischen den kostenlosen Editionen „Evaluation“ und „Developer“ wählen.
 
     ![Die Editionen „Evaluation“ und „Developer“](media/install-reporting-services/report-server-install-edition-select.png)
 
-    Ansonsten können Sie auch einen Product Key eingeben.
+    Geben Sie ansonsten einen Product Key ein. [Finden Sie den Product Key für SQL Server 2017 Reporting Services](find-reporting-services-product-key-ssrs.md)
 
 4. Lesen und akzeptieren Sie die Lizenzbedingungen sowie sonstige weitere Bedingungen, und klicken Sie anschließend auf **Weiter**.
 

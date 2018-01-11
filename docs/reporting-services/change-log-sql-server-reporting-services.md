@@ -1,24 +1,25 @@
 ---
-title: "Änderungsprotokoll für SQL Server Reporting Services | Microsoft-Dokumentation"
+title: "Änderungsprotokoll für SQL Server Reporting Services (2017 und höher) | Microsoft-Dokumentation"
 ms.custom: 
 ms.date: 11/07/2017
-ms.prod: sql-non-specified
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: casualoak
 ms.author: deliant
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: ef823d2e633438262bd0f2dbbe19337d0e1fa4ef
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: ebf8e75c505d75206de798bc2682cefc3623075e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="change-log-for-sql-server-reporting-services"></a>Änderungsprotokoll für SQL Server Reporting Services
 
