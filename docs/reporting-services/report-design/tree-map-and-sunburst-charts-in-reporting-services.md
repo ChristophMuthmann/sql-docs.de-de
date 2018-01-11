@@ -8,20 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
 caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ece2ccbf6f9c67789d5d248a9ad92b2acf0a7f36
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1dcafd7c259a88fd57022da4e72f9e3abeb077b1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Treemap- und Sunburst-Diagramme in Reporting Services
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)] Die SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Treemap- und Sunburst-Visualisierungselemente sind ausgezeichnet für die visuelle Darstellung von hierarchischen Daten geeignet. In diesem Artikel wird dargestellt, wie Sie ein Treemap- oder Sunburst-Diagramm zu einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Bericht hinzufügen. Außerdem beinhaltet er eine AdventureWorks-Beispielabfrage, um Sie bei den ersten Schritten zu unterstützen.  
@@ -132,7 +132,7 @@ In einem Sunburst-Diagramm wird die Hierarchie durch eine Reihe von Kreisen darg
   
     3.  Wählen Sie als Verbindungstyp die Option **Microsoft SQL Server** aus.  
   
-    4.  Geben Sie die Verbindungszeichenfolge für Ihren Server und Ihre Datenbank ein. Beispiel:  
+    4.  Geben Sie die Verbindungszeichenfolge für Ihren Server und Ihre Datenbank ein. Zum Beispiel:  
   
         ```  
         Data Source=[server name];Initial Catalog=AdventureWorks2016  

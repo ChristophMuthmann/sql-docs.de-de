@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: "10427"
@@ -18,13 +16,13 @@ ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 43f304a78091c9b70abea274ae28e7ad180f27a5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f50138fa4045822456105962aec3c8a6c2305fbe
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="set-default-options-for-report-builder"></a>Set default options for Report Builder
   Im Berichts-Generator können Sie zahlreiche nützliche Standardeinstellungen zum Vereinfachen und Beschleunigen der Berichtserstellung festlegen.  Wenn Sie beispielsweise den Standardberichtsserver festlegen oder ändern, speichert der Berichts-Generator Ihre Berichte automatisch auf dem gleichen Berichtsserver, sofern nicht anders angegeben.  
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/05/2017
  **Löschen aller letzten Elementlisten**  
  Löscht die aktuellen Listen der zuletzt verwendeten Sites, Server, freigegebenen Datasets, freigegebenen Datenquellenverbindungen und Dokumente.  
   
-## <a name="see-also"></a>Siehe auch  
- [Starten des Berichts-Generators](../../reporting-services/report-builder/start-report-builder.md)  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+ [Start Report Builder (Starten des Berichts-Generators.)](../../reporting-services/report-builder/start-report-builder.md)  
   
   
