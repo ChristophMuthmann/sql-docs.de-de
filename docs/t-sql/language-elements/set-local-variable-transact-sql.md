@@ -103,19 +103,19 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  += Addition und Zuweisung  
   
- = Subtraktion und Zuweisung  
+ -= Subtraktion und Zuweisung  
   
- * = Multiplikation und Zuweisung  
+ *= Multiplikation und Zuweisung  
   
- / = Division und Zuweisung  
+ /= Division und Zuweisung  
   
- % = Modulo und Zuweisung  
+ %= Modulo und Zuweisung  
   
- &=              Bitweises AND und Zuweisung  
+ &= Bitweises AND und Zuweisung  
   
- ^ = Bitweises XOR und Zuweisung  
+ ^= Bitweises XOR und Zuweisung  
   
- | = Bitweises OR und Zuweisung  
+ |= Bitweises OR und Zuweisung  
   
  *expression*  
  Ist ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md).  
