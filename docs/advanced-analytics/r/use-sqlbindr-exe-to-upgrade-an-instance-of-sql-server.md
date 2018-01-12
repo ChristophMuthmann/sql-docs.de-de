@@ -17,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 424e7d86a00901c22220d19e86b1bbced698d850
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 54e685e285f2040ec13b84aa7e0e4b020457560b
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>Aktualisieren des Machine Learning-Komponenten in SQL Server-Instanz
 
@@ -38,7 +38,7 @@ Wenn zu einem beliebigen Zeitpunkt Sie gemäß dem Zeitplan Machine Learning-Ser
 
 Der Prozess des Upgrades von Machine learning-Komponenten wird als bezeichnet **Bindung**, da sie das Modell Unterstützung für SQL Server Machine Learning Komponenten, die neue moderne Software Lifecycle-Richtlinie ändert. 
 
-Wechseln zu dem neuen Lizenzierungsmodell wird im Allgemeinen sichergestellt, dass auf die Datenanalysten immer die neueste Version von R oder Python verwenden können. Weitere Informationen zu den Begriffen der moderne Lifecycle-Richtlinie finden Sie unter [Unterstützungszeitraum für Microsoft R Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support).
+Wechseln mit dem neuen Wartungsmodell wird im Allgemeinen sichergestellt, dass auf die Datenanalysten immer die neueste Version von R oder Python verwenden können. Weitere Informationen zu den Begriffen der moderne Lifecycle-Richtlinie finden Sie unter [Unterstützungszeitraum für Microsoft R Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support).
 
 > [!NOTE]
 > Das Upgrade ändert sich nicht auf das Modell Unterstützung für SQL Server-Datenbank und die Version von SQL Server nicht geändert.
