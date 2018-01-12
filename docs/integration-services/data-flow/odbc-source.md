@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8af8fe7422b0f58c99fa95dd63bd2c0408b6e624
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 42eb0885558003d4810e873d95876bd8ac6da14b
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="odbc-source"></a>ODBC-Quelle
   Die ODBC-Quelle extrahiert Daten mithilfe einer Datenbanktabelle, Sicht oder SQL-Anweisung aus einer Datenbank mit ODBC-Unterstützung.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
  Je nach Einstellung des Fehlerverhaltens unterstützt die ODBC-Quelle das Zurückgeben von Fehlern (Datenkonvertierung, Abschneiden), die während des Extraktionsprozesses in der Fehlerausgabe auftreten. Weitere Informationen finden Sie unter [Ziel-Editor für ODBC &#40;Seite „Verbindungs-Manager“&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md).  
   
 ## <a name="data-type-support"></a>Datentypunterstützung  
- Informationen zu den Datentypen, die von der ODBC-Quelle unterstützt werden, finden Sie unter Konnektor für Open Database Connectivity (ODBC) von Attunity.  
+ Informationen zu den Datentypen, die von der ODBC-Quelle unterstützt werden, finden Sie unter „Connector für Open Database Connectivity (ODBC) von Attunity“.  
   
 ## <a name="extract-options"></a>Extrahierungsoptionen  
  Die ODBC-Quelle arbeitet entweder im Modus **Batch** oder **Zeile für Zeile** . Der verwendete Modus wird mithilfe der **FetchMethod** -Eigenschaft bestimmt. Die Modi werden in der folgenden Liste beschrieben:  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/20/2017
   
  Weitere Informationen zur **FetchMethod** -Eigenschaft finden Sie unter [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md).  
   
-## <a name="parallelism"></a>Parallelität  
+## <a name="parallelism"></a>Parallelism  
  Es gilt keine Einschränkung in Bezug auf die Anzahl von ODBC-Quellkomponenten, die parallel für dieselbe Tabelle oder verschiedene Tabellen, auf demselben Computer oder auf unterschiedlichen Computern ausgeführt werden können (mit Ausnahme normaler Einschränkungen für globale Sitzungen).  
   
  Aufgrund von Einschränkungen in Verbindung mit dem verwendeten ODBC-Anbieter kann die Anzahl gleichzeitiger Verbindungen über den Anbieter möglicherweise trotzdem eingeschränkt sein. Diese Einschränkungen begrenzen die Anzahl der unterstützten parallelen Instanzen, die für die ODBC-Quelle möglich sind. Der SSIS-Entwickler muss sich über die Einschränkungen im Klaren sein, die für verwendete ODBC-Anbieter gelten, und diese beim Erstellen von SSIS-Paketen beachten.  
@@ -101,12 +101,12 @@ ms.lasthandoff: 11/20/2017
   
 -   Doppelklicken Sie auf der Registerkarte **Datenfluss** auf die ODBC-Quelle.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
   
-#### <a name="connection-manager"></a>Verbindungs-Manager  
+#### <a name="connection-manager"></a>Ziel-Editor für Dimensionsverarbeitung  
  Wählen Sie in der Liste einen vorhandenen ODBC-Verbindungs-Manager aus, oder klicken Sie auf **Neu** , um eine neue Verbindung zu erstellen. Sie können eine Verbindung mit jeder von ODBC unterstützten Datenbank erstellen.  
   
-#### <a name="new"></a>Neu  
+#### <a name="new"></a>eine neue  
  Klicken Sie auf **Neu**. Das Dialogfeld **ODBC-Verbindungs-Manager konfigurieren** , in dem Sie einen neuen ODBC-Verbindungs-Manager erstellen können, wird geöffnet.  
   
 #### <a name="data-access-mode"></a>Datenzugriffsmodus  
@@ -137,7 +137,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  Klicken Sie im **Quellen-Editor für ODBC**auf **Spalten**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
   
 #### <a name="available-external-columns"></a>Verfügbare externe Spalten  
  Eine Liste der in der Datenquelle verfügbaren externen Spalten. Mit der Tabelle können keine Spalten hinzugefügt oder gelöscht werden. Wählen Sie die zu verwendenden Spalten aus der Datenquelle aus. Die ausgewählten Spalten werden der Liste **Externe Spalte** in der Reihenfolge hinzugefügt, in der Sie sie auswählen.  
@@ -162,12 +162,12 @@ ms.lasthandoff: 11/20/2017
   
 -   Klicken Sie im **Quellen-Editor für ODBC**auf **Fehlerausgabe**.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
   
 #### <a name="inputoutput"></a>Eingabe/Ausgabe  
  Zeigt den Namen der Datenquelle an.  
   
-#### <a name="column"></a>Column  
+#### <a name="column"></a>Spalte  
  Wird nicht verwendet.  
   
 #### <a name="error"></a>Fehler  

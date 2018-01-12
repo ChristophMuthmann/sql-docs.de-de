@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7123c7dde876fb5ec8cceb3088816df9a92360d0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bd1193331cc9658a4703a39201219896c0e921d0
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Von den SQL Server-Editionen unterstützte Integration Services-Funktionen
  Dieses Thema bietet detaillierte Informationen zu den von den verschiedenen [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]-Editionen unterstützten SQL Server Integration Services-Funktionen (SSIS).  
@@ -63,7 +63,7 @@ Die SQL Server Evaluation Edition steht für einen Testzeitraum von 180 Tagen zu
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Integrierte Datenquellenkonnektoren|ja|ja|||| 
 |Integrierte Tasks und Transformationen|ja|ja||||  
-|ODBC-Quelle und -Ziel von Attunity|ja|ja|||| 
+|ODBC-Quelle und -Ziel |ja|ja|||| 
 |Azure-Datenquellenkonnektoren und Tasks|ja|ja||||  
 |Hadoop-/HDFS-Connectors und -Tasks|ja|ja||||  
 |Grundlegende Datenprofilerstellungs-Tools|ja|ja|||| 

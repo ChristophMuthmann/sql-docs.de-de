@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5f9c6d6327b2f658ce2e71ecf7107d3c8636bcbf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 883d6283f191827caf4de79e3f148f4680ccfe8a
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution (SSISDB-Datenbank)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -62,14 +62,20 @@ catalog.create_execution [@folder_name = folder_name
  [@runinscaleout =] *runinscaleout*  
  Geben Sie an, ob die Ausführung in Scale Out erfolgen soll. Verwenden Sie den Wert 1, um das Paket in Scale Out auszuführen. Verwenden Sie den Wert 0, um das Paket ohne Scale Out auszuführen. Dieser Parameter ist optional. Wenn dieser Parameter nicht angegeben wird, wird der Wert auf DEFAULT_EXECUTION_MODE in [SSISDB].[catalog].[catalog_properties] festgelegt. Das Argument *runinscaleout* ist vom Typ **bit**. 
  
- [@useanyworker =] *useanyworker*  
-  Geben Sie an, ob jeder Scale Out-Worker für die Ausführung zugelassen ist. Verwenden Sie den Wert 1, um das Paket mit einem beliebigen Scale Out-Worker auszuführen. Verwenden Sie den Wert 0, um anzugeben, dass nicht alle Scale Out-Worker für die Paketausführung zugelassen sind. Dieser Parameter ist optional. Wenn dieser Parameter nicht angegeben wird, wird der Wert auf 1 festgelegt. Das Argument *useanyworker* ist vom Typ **bit**. 
+[@useanyworker =] *useanyworker*  
+Geben Sie an, ob jeder Scale Out-Worker für die Ausführung zugelassen ist.
+
+-   Verwenden Sie den Wert 1, um das Paket mit einem beliebigen Scale Out-Worker auszuführen. Wenn Sie `@useanyworker` auf „true“ setzen, steht jeder Worker, dessen maximale Taskanzahl (wie in der Workerkonfigurationsdatei angegeben) noch nicht erreicht ist, für die Ausführung des Pakets zur Verfügung.
+
+-   Verwenden Sie den Wert 0, um anzugeben, dass nicht alle Scale Out-Worker für die Paketausführung zugelassen sind. Wenn Sie `@useanyworker` auf „false“ festlegen, müssen Sie mithilfe des Managers für horizontales Hochskalieren oder durch Aufrufen der gespeicherten Prozedur `[catalog].[add_execution_worker]` die Worker angeben, die zum Ausführen des Pakets zulässig sind.
+
+Dieser Parameter ist optional. Wenn dieser Parameter nicht angegeben wird, wird der Wert auf 1 festgelegt. Das Argument *useanyworker* ist vom Typ **bit**. 
   
  [@execution_id =] *execution_id*  
  Gibt den eindeutigen Bezeichner für eine Ausführungsinstanz zurück. Der *execution_id* ist **bigint**.  
 
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Eine Ausführung wird verwendet, um die Parameterwerte anzugeben, die von einem Paket während einer einzelnen Instanz der Paketausführung verwendet werden.  
   
  Wenn ein Umgebungsverweis mit dem *reference_id*-Parameter angegeben wird, füllt die gespeicherte Prozedur den Projekt- und Paketparameter mit Literalwerten oder Werten, auf die verwiesen wird, der entsprechenden Umgebungsvariablen auf. Wird ein Umgebungsverweis angegeben, werden bei der Paketausführung Standardparameterwerte verwendet. Um genau zu bestimmen, welche Werte für eine bestimmte Ausführungsinstanz verwendet werden, verwenden Sie den *execution_id*-Ausgabeparameterwert dieser gespeicherten Prozedur, und fragen Sie die Sicht [execution_parameter_values](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md) ab.  
@@ -97,7 +103,7 @@ GO
  0 (Erfolg)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ InclusionThresholdSetting  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur erfordert eine der folgenden Berechtigungen:  
@@ -133,7 +139,7 @@ GO
   
 -   Die Umgebungsvariablen, auf die verwiesen wird, wurden nicht in der Umgebung gefunden, die vom Umgebungsverweis *reference_id* angegeben wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [catalog.start_execution &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)   
  [catalog.set_execution_parameter_value &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
  [catalog.add_execution_worker &#40;SSISDB-Datenbank&#41;](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)  

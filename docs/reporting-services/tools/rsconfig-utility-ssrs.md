@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - command prompt utilities [SQL Server], rsconfig
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 caps.latest.revision: "47"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d47221585f9bf08f4493043224390ff2d82bb30e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1aaac66ec2c47b50801696217c8a53f7add9ef2e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig-Hilfsprogramm (SSRS)
   Mit dem Hilfsprogramm **rsconfig.exe** werden Verbindungs- und Kontowerte in der Datei „RSReportServer.config“ verschlüsselt und gespeichert. Die verschlüsselten Werte umfassen Verbindungsinformationen für Berichtsserver-Datenbanken und Kontowerte, die für die unbeaufsichtigte Berichtsverarbeitung verwendet werden.  
@@ -60,7 +58,7 @@ rsconfig {-?}
 |**-e**|Erforderlich, wenn das **-c** -Argument nicht verwendet wird.|Gibt das Konto für die unbeaufsichtigte Berichtsausführung an.<br /><br /> Dieses Argument enthält keinen Wert. Sie müssen jedoch zusätzliche Argumente in der Befehlszeile einschließen, um die in der Konfigurationsdatei verschlüsselten Werte anzugeben.<br /><br /> Zu den Argumenten, die Sie mit **-e** angeben können, gehören **-u** und **-p**. Darüber hinaus können Sie auch **-t**festlegen.|  
 |**-m**  *Computername*|Erforderlich, wenn Sie eine Remote-Berichtsserverinstanz konfigurieren.|Gibt den Namen des Computers an, der den Berichtsserver hostet. Wird dieses Argument nicht angegeben, wird der Standardwert **localhost**verwendet.|  
 |**-s**  *Servername*|Erforderlich.|Gibt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz an, die die Berichtsserver-Datenbank hostet.|  
-|**-i**  *Instanzname*|Erforderlich, wenn Sie benannte Instanzen verwenden.|Wenn Sie eine benannte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz zum Hosten der Berichtsserver-Datenbank verwenden, gibt dieser Wert die benannte Instanz an.|  
+|**-i**  *Instanzname*|Erforderlich, wenn Sie benannte Instanzen verwenden.|Wenn Sie eine benannte Reporting Services-Instanz verwendet haben, gibt dieser Wert den Namen der Reporting Services-Instanz an.|  
 |**-d**  *Datenbankname*|Erforderlich.|Gibt den Namen der Berichtsserver-Datenbank an.|  
 |**-a**  *Authentifizierungsmethode*|Erforderlich.|Gibt die Authentifizierungsmethode an, die vom Berichtsserver zum Herstellen der Verbindung mit der Berichtsserver-Datenbank verwendet wird. Gültige Werte sind **Windows** oder **SQL** (die Groß- und Kleinschreibung wird bei diesem Argument nicht berücksichtigt).<br /><br /> **Windows** gibt an, dass der Berichtsserver die Windows-Authentifizierung verwendet.<br /><br /> **SQL** gibt an, dass der Berichtsserver die SQL Server-Authentifizierung verwendet.|  
 |**-u** *[Domäne\\]Benutzername*|Erforderlich, wenn **-e** verwendet wird; optional, wenn **-c**angegeben wird.|Gibt ein Benutzerkonto für die Verbindung mit der Berichtsserver-Datenbank oder für ein Konto für unbeaufsichtigte Vorgänge an.<br /><br /> Bei Angabe von **rsconfig -e**ist dieses Argument erforderlich. Bei dem Konto muss es sich um ein Domänenbenutzerkonto handeln.<br /><br /> Bei Angabe von **rsconfig -c** und **-a SQL**muss mit diesem Argument ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldename angegeben werden.<br /><br /> Bei Angabe von **rsconfig -c** und **-a Windows**können mit diesem Argument Anmeldeinformationen für ein Domänenbenutzerkonto, ein integriertes Konto oder ein Dienstkonto angegeben werden. Wenn Sie ein Domänenkonto angeben, geben Sie *Domäne* und *Benutzername* im Format *Domäne\Benutzername*an. Wenn Sie ein integriertes Konto verwenden, ist dieses Argument optional. Wenn Sie die Anmeldeinformationen für ein Dienstkonto verwenden möchten, geben Sie dieses Argument nicht an.|  
@@ -73,16 +71,16 @@ rsconfig {-?}
 ## <a name="file-location"></a>Dateispeicherort  
  „Rsconfig.exe“ befindet sich unter **\Programme\Microsoft SQL Server\110\Tools\Binn**. Sie können das Hilfsprogramm von einem beliebigen Ordner im Dateisystem ausführen.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
  Es gibt zwei Gründe für die Verwendung von Rsconfig.exe:  
   
 -   Ändern der Verbindungsinformationen, die ein Berichtsserver für die Verbindung mit einer Berichtsserver-Datenbank verwendet.  
   
 -   Konfiguration eines besonderen Kontos, das der Berichtsserver für die Anmeldung an einem Remote-Datenbankserver verwendet, wenn keine anderen Anmeldeinformationen verfügbar sind.  
   
- Sie können das Hilfsprogramm**rsconfig** auf einer lokalen Instanz oder auf einer Remoteinstanz von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ausführen. Sie können das Hilfsprogramm **rsconfig** nicht verwenden, um bereits festgelegte Werte zu entschlüsseln oder anzuzeigen.  
+Sie können das **RSCONFIG**-Hilfsprogramm auf einer lokalen Instanz oder auf einer Remoteinstanz von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ausführen. Sie können das Hilfsprogramm **rsconfig** nicht verwenden, um bereits festgelegte Werte zu entschlüsseln oder anzuzeigen.  
   
- Bevor Sie dieses Hilfsprogramm ausführen, müssen Sie die Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI) auf dem Computer installieren, den Sie konfigurieren.  
+Bevor Sie dieses Hilfsprogramm ausführen, müssen Sie die Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI) auf dem Computer installieren, den Sie konfigurieren.  
   
 ## <a name="examples"></a>Beispiele  
  Die folgenden Beispiele veranschaulichen mögliche Verwendungsweisen von **rsconfig**.  
@@ -129,7 +127,7 @@ rsconfig -e -u <DOMAIN\ACCOUNT> -p <PASSWORD> -t
 rsconfig -e -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -u <DOMAIN\ACCOUNT> -p <PASSWORD> -t  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   

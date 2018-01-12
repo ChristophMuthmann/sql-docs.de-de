@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b4be12e82f4df3c15fbf465863174b0cdde051af
-ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
+ms.openlocfilehash: 76d8f9fd55eb9129f31dba4dcbea9799e09148da
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/16/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Upgraden von Always On-Verfügbarkeitsgruppen-Replikatsinstanzen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/16/2017
 -   [Hardware- und Softwareanforderungen für die Installation von SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): Überprüfen Sie die Softwareanforderungen für die Installation von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Falls zusätzliche Software erforderlich ist, installieren Sie diese auf jedem Knoten, bevor Sie mit dem Upgradevorgang beginnen, um die Downtime zu minimieren.  
 
 > [!NOTE]  
->  Sie können nicht mehrere Versionen von SQL Server in einer Always On-Verfügbarkeitsgruppe verwenden. Wenn Sie mithilfe von Verfügbarkeitsgruppen eine Migration zu einer neuen Version vornehmen möchten, geht dies nur über eine verteilte Verfügbarkeitsgruppe (in SQL Server 2016 Enterprise Edition oder später enthalten).
+>  Das Kombinieren von SQL Server-Versionen in derselben Verfügbarkeitsgruppe wird nicht unterstützt, außer bei einem parallelen Upgrade, das ein Upgrade für die vorhandenen Replikate durchführt. Dies bedeutet, dass eine höhere SQL Server-Version nicht als neues Replikat zu einer bestehenden Verfügbarkeitsgruppe hinzugefügt werden kann. Ein SQL Server 2017-Replikat kann beispielsweise nicht zu einer bestehenden SQL Server 2016-Verfügbarkeitsgruppe hinzugefügt werden. Wenn Sie mithilfe von Verfügbarkeitsgruppen eine Migration zu einer neuen SQL Server-Version vornehmen möchten, geht dies nur über eine verteilte Verfügbarkeitsgruppe (in den Editionen SQL Server 2016 Enterprise oder höher enthalten).
 
 ## <a name="rolling-upgrade-best-practices-for-always-on-availability-groups"></a>Bewährte Verfahren für parallele Upgrades von Always On-Verfügbarkeitsgruppen  
  Beachten Sie beim Ausführen von Serverupgrades oder -aktualisierungen die folgenden bewährten Verfahren, um die Downtime und Datenverluste für Ihre Verfügbarkeitsgruppen zu minimieren:  

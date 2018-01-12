@@ -1,7 +1,7 @@
 ---
 title: Datenbankdateien und Dateigruppen | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 11/16/2017
+ms.date: 01/07/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -39,11 +39,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3eae1aea0305e2838f29f1259d9a21c9b33f4e2e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: e469edf82ac5c370a77d3870cd180867baf6a401
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="database-files-and-filegroups"></a>Datenbankdateien und Dateigruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank verfügt über mindestens zwei Betriebssystemdateien: eine Datendatei und eine Protokolldatei. Datendateien enthalten Daten und Objekte wie z. B. Tabellen, Indizes, gespeicherte Prozeduren und Sichten. Protokolldateien enthalten die Informationen, die zum Wiederherstellen aller Transaktionen in der Datenbank erforderlich sind. Datendateien können für die Zuordnung und Verwaltung in Dateigruppen zusammengefasst werden.  
@@ -62,27 +62,36 @@ ms.lasthandoff: 01/02/2018
  Standardmäßig werden die Daten und Transaktionsprotokolle auf dem gleichen Laufwerk und im gleichen Pfad gespeichert. Dadurch werden auch Systeme mit nur einem Datenträger berücksichtigt. Diese Vorgehensweise ist für Produktionsumgebungen jedoch  möglicherweise nicht optimal. Es wird empfohlen, Daten und Protokolldateien auf verschiedenen Datenträgern zu speichern.  
 
 ### <a name="logical-and-physical-file-names"></a>Logische und physische Dateinamen
-SQL Server-Dateien haben zwei Namen: 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dateien weisen zwei Arten von Dateinamen auf: 
 
-**logical_file_name:**  Der logische Dateiname wird dazu verwendet, in allen Transact-SQL-Anweisungen auf die physische Datei zu verweisen. Der logische Dateiname muss den Regeln für SQL Server-Bezeichner entsprechen und innerhalb der logischen Dateinamen in der Datenbank eindeutig sein.
+**logical_file_name:**  Der logische Dateiname wird dazu verwendet, in allen Transact-SQL-Anweisungen auf die physische Datei zu verweisen. Der logische Dateiname muss den Regeln für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner entsprechen und innerhalb der logischen Dateinamen in der Datenbank eindeutig sein. Dies wird durch das `NAME`-Argument in `ALTER DATABASE` festgelegt. Weitere Informationen finden Sie unter [ALTER DATABASE-Optionen FILE und FILEGROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
-**os_file_name:** Der Name der Betriebssystemdatei ist der Name der physischen Datei inklusive des Verzeichnispfads. Er muss den betriebssystemspezifischen Regeln für Dateinamen entsprechen.
+**os_file_name:** Der Name der Betriebssystemdatei ist der Name der physischen Datei inklusive des Verzeichnispfads. Er muss den betriebssystemspezifischen Regeln für Dateinamen entsprechen. Dies wird durch das `FILENAME`-Argument in `ALTER DATABASE` festgelegt. Weitere Informationen finden Sie unter [ALTER DATABASE-Optionen FILE und FILEGROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
-SQL Server-Daten und -Protokolldateien können sowohl auf FAT- als auch auf NTFS-Dateisystemen platziert werden. Es wird empfohlen, dass Sie das NTFS-Dateisystem aufgrund seiner Sicherheitsaspekte verwenden. Datendateigruppen und Protokolldateien für Lese-/Schreibvorgänge können nicht auf einem mit NTFS komprimierten Dateisystem platziert werden. Nur schreibgeschützte Datenbanken und schreibgeschützte sekundäre Dateigruppen können auf einem mit NTFS komprimierten Dateisystem platziert werden.
+> [!IMPORTANT]
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Daten und -Protokolldateien können auf FAT- oder NTFS-Dateisystemen platziert werden. Aufgrund seiner Sicherheitsaspekte wird für Windows-Systeme die Verwendung des NTFS-Dateisystems empfohlen. 
 
-Wenn mehrere SQL Server-Instanzen auf einem einzelnen Computer ausgeführt werden, erhält jede Instanz ein anderes Standardverzeichnis, um die Dateien für die in der Instanz erstellten Datenbanken zu speichern. Weitere Informationen finden Sie unter [Dateispeicherorte für Standard- und benannte Instanzen von SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).
+> [!WARNING]
+> Datendateigruppen und Protokolldateien für Lese-/Schreibvorgänge können nicht auf einem mit NTFS komprimierten Dateisystem platziert werden. Nur schreibgeschützte Datenbanken und schreibgeschützte sekundäre Dateigruppen können auf einem mit NTFS komprimierten Dateisystem platziert werden.
+> Um Speicherplatz zu sparen, wird dringend empfohlen, anstelle der Dateisystemkomprimierung die [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md) zu verwenden.
+
+Wenn mehrere Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem einzelnen Computer ausgeführt werden, erhält jede Instanz ein anderes Standardverzeichnis, in dem die Dateien für die in der Instanz erstellten Datenbanken gespeichert werden. Weitere Informationen finden Sie unter [Dateispeicherorte für Standard- und benannte Instanzen von SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).
 
 ### <a name="data-file-pages"></a>Datendateiseiten
-Die Seiten in einer SQL Server-Datendatei erhalten aufeinander folgende Seitennummern, beginnend mit null (0) für die erste Seite in der Datei. Jede Datei in einer Datenbank verfügt über eine eindeutige ID-Nummer. Um eine Seite in einer Datenbank eindeutig zu identifizieren, ist sowohl die Datei-ID als auch die Seitennummer erforderlich. Im folgenden Beispiel werden die Seitennummern in einer Datenbank dargestellt, die über eine 4 MB umfassende primäre Datendatei und eine 1 MB umfassende sekundäre Datendatei verfügt.
+Die Seiten in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datendatei erhalten, beginnend mit null (0) für die erste Seite in der Datei, aufeinander folgende Seitennummern. Jede Datei in einer Datenbank verfügt über eine eindeutige ID-Nummer. Um eine Seite in einer Datenbank eindeutig zu identifizieren, ist sowohl die Datei-ID als auch die Seitennummer erforderlich. Im folgenden Beispiel werden die Seitennummern in einer Datenbank dargestellt, die über eine 4 MB umfassende primäre Datendatei und eine 1 MB umfassende sekundäre Datendatei verfügt.
 
 ![Datendateiseiten](../../relational-databases/databases/media/data-file-pages.gif)
 
-Die erste Seite in jeder Datei ist eine Dateiheaderseite, die Informationen zu den Attributen der Datei enthält. Viele der anderen Seiten am Anfang der Datei enthalten ebenfalls Systeminformationen, wie z. B. Zuordnungstabellen. Eine der Systemseiten, die sowohl in der primären Datendatei als auch in der ersten Protokolldatei gespeichert ist, ist eine Datenbank-Startseite, die Informationen zu den Attributen der Datenbank enthält. Weitere Informationen zu Seiten und Seitentypen finden Sie unter „Grundlegendes zu Seiten und Blöcken“.
+Die erste Seite in jeder Datei ist eine Dateiheaderseite, die Informationen zu den Attributen der Datei enthält. Viele der anderen Seiten am Anfang der Datei enthalten ebenfalls Systeminformationen, wie z. B. Zuordnungstabellen. Eine der Systemseiten, die sowohl in der primären Datendatei als auch in der ersten Protokolldatei gespeichert ist, ist eine Datenbank-Startseite, die Informationen zu den Attributen der Datenbank enthält. Weitere Informationen zu Seiten und Seitentypen finden Sie im [Handbuch zur Architektur von Seiten und Blöcken](../..//relational-databases/pages-and-extents-architecture-guide.md).
 
 ### <a name="file-size"></a>Dateigröße
-SQL Server-Dateien können ausgehend von ihrer ursprünglich angegebenen Größe automatisch wachsen. Wenn Sie eine Datei definieren, können Sie eine bestimmte Schrittweite für die Vergrößerung angeben. Sobald die Datei vollständig aufgefüllt ist, wird sie um den als Schrittweite festgelegten Wert vergrößert. Wenn eine Dateigruppe mehrere Dateien enthält, beginnt die automatische Vergrößerung erst dann, wenn alle Dateien vollständig gefüllt sind. Die Vergrößerung wird dann nach dem Round-Robin-Schema vorgenommen.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dateien können automatisch über ihre ursprünglich angegebene Größe wachsen. Wenn Sie eine Datei definieren, können Sie eine bestimmte Schrittweite für die Vergrößerung angeben. Sobald die Datei vollständig aufgefüllt ist, wird sie um den als Schrittweite festgelegten Wert vergrößert. Wenn eine Dateigruppe mehrere Dateien enthält, beginnt die automatische Vergrößerung erst dann, wenn alle Dateien vollständig gefüllt sind. Die Vergrößerung wird dann nach dem Round-Robin-Schema mit [proportionaler Füllung](../../relational-databases/pages-and-extents-architecture-guide.md#ProportionalFill) vorgenommen.
 
-Für jede Datei kann zudem eine Maximalgröße angegeben werden. Wenn keine Maximalgröße angegeben wird, kann die Datei so lange vergrößert werden, bis der gesamte verfügbare Speicherplatz auf dem Datenträger verbraucht ist. Diese Funktion ist insbesondere dann hilfreich, wenn SQL Server als in eine Anwendung eingebettete Datenbank verwendet wird und der Benutzer sich nicht ohne Weiteres mit einem Systemadministrator in Verbindung setzen kann. Der Benutzer kann festlegen, dass die Dateien nach Bedarf automatisch vergrößert werden, sodass die administrative Arbeit reduziert werden kann, die mit der Überwachung des freien Speicherplatzes in der Datenbank und der manuellen Zuordnung von zusätzlichem Speicherplatz verbunden ist. 
+Für jede Datei kann zudem eine Maximalgröße angegeben werden. Wenn keine Maximalgröße angegeben wird, kann die Datei so lange vergrößert werden, bis der gesamte verfügbare Speicherplatz auf dem Datenträger verbraucht ist. Diese Funktion ist insbesondere dann hilfreich, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Datenbank verwendet wird, die in eine Anwendung eingebettet ist, und der Benutzer sich nicht ohne weiteres mit einem Systemadministrator in Verbindung setzen kann. Der Benutzer kann festlegen, dass die Dateien nach Bedarf automatisch vergrößert werden, sodass die administrative Arbeit reduziert werden kann, die mit der Überwachung des freien Speicherplatzes in der Datenbank und der manuellen Zuordnung von zusätzlichem Speicherplatz verbunden ist.  
+
+Wenn die [schnelle Dateiinitialisierung (Instant File Initialization, IFI)](../../relational-databases/databases/database-instant-file-initialization.md) für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktiviert ist, entsteht bei der Belegung von neuem Speicherplatz für Datendateien ein minimaler Overhead.
+
+Weitere Informationen zur Verwaltung von Transaktionsprotokolldateien finden Sie unter [Verwalten der Größe der Transaktionsprotokolldatei](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).   
 
 ## <a name="database-snapshot-files"></a>Datenbank-Momentaufnahmedateien
 Das von einer Datenbankmomentaufnahme zum Speichern der Kopie-bei-Schreibvorgang-Daten verwendete Dateiformat hängt davon ab, ob die Momentaufnahme von einem Benutzer erstellt oder intern verwendet wird:
@@ -174,21 +183,22 @@ Für Dateien und Dateigruppen gelten die folgenden Regeln:
 - Eine Datei kann nur Mitglied einer einzigen Dateigruppe sein.
 - Transaktionsprotokolldateien können niemals Teil einer Dateigruppe sein.
 
-## <a name="recommendations"></a>Empfehlungen
+## <a name="Recommendations"></a> Empfehlungen
 Es folgen einige allgemeine Empfehlungen für die Arbeit mit Dateien und Dateigruppen: 
 - Die meisten Datenbanken funktionieren problemlos mit nur einer einzigen Datendatei und einer einzigen Transaktionsprotokolldatei.
-- Wenn Sie mehrere Dateien verwenden, erstellen Sie eine zweite Dateigruppe für die zusätzlichen Dateien und legen diese Dateigruppe als Standarddateigruppe fest. Auf diese Weise enthält die primäre Datei nur die Systemtabellen und -objekte.
+- Wenn Sie mehrere Datendateien verwenden, erstellen Sie eine zweite Dateigruppe für die zusätzlichen Datei und legen diese Dateigruppe als Standarddateigruppe fest. Auf diese Weise enthält die primäre Datei nur die Systemtabellen und -objekte.
 - Um eine optimale Leistung zu erzielen, sollten Sie Dateien oder Dateigruppen so weit wie möglich auf unterschiedlichen verfügbaren Datenträgern erstellen. Verteilen Sie Objekte, die viel Speicherplatz beanspruchen, auf unterschiedliche Dateigruppen.
 - Verwenden Sie Dateigruppen, um Objekte auf bestimmte physische Datenträger verteilen zu können.
 - Verteilen Sie unterschiedliche Tabellen, die in denselben Joinabfragen verwendet werden, auf unterschiedliche Dateigruppen. Auf diese Weise wird die Leistung verbessert, da die verknüpften Daten in parallelen Datenträger-E/A-Operationen gesucht werden können.
 - Verteilen Sie Tabellen, auf die häufig zugegriffen wird, und die nicht gruppierten Indizes, die zu diesen Tabellen gehören, auf unterschiedliche Dateigruppen. Hierdurch wird die Leistung verbessert, da auf Dateien, die sich auf unterschiedlichen physischen Datenträgern befinden, parallele E/A-Operationen ausgeführt werden können.
 - Platzieren Sie die Transaktionsprotokolldatei(en) nicht auf demselben physischen Datenträger wie die anderen Dateien und Dateigruppen.
 
+Weitere Informationen und Empfehlungen zur Verwaltung von Transaktionsprotokolldateien finden Sie unter [Verwalten der Größe der Transaktionsprotokolldatei](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).   
+
 ## <a name="related-content"></a>Verwandte Inhalte  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
-  
- [ALTER DATABASE-Optionen für Dateien und Dateigruppen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
-  
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)    
+ [ALTER DATABASE-Optionen Datei und Dateigruppe &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)      
  [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
-  
- [Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen in SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md) 
+ [Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen in SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)    
+ [Handbuch zur Architektur von Seiten und Blöcken](../../relational-databases/pages-and-extents-architecture-guide.md)    
+ [Verwalten der Größe der Transaktionsprotokolldatei](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)     

@@ -17,16 +17,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e447f20374700fa1e6e64837a336ba17d2b7570b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 514818fce9654a720dac0a0721697b30bdcab787
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="odbc-flow-components"></a>ODBC-Flusskomponenten
   In diesem Thema werden die erforderlichen Begriffe der Erstellung eines ODBC-Datenflusses mit [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
   
- Der Konnektor für Open Database Connectivity (ODBC) von Attunity für [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] erleichtert SSIS-Entwicklern das Erstellen von Paketen, mit denen Daten aus Datenbanken mit ODBC-Unterstützung geladen bzw. wieder entladen werden.  
+ Der Connector für Open Database Connectivity (ODBC) für [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] ermöglicht SSIS-Entwicklern ein einfaches Erstellen von Paketen, mit denen Daten aus Datenbanken mit ODBC-Unterstützung geladen bzw. wieder entladen werden.  
   
  Der ODBC-Connector ist auf die Erzielung der optimalen Leistung ausgelegt, was das Laden (bzw. Entladen) von Daten in eine Datenbank mit ODBC-Unterstützung im [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]-Kontext betrifft.  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Erstellen Sie in [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] ein neues [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
   
--   Erstellen Sie einen ODBC-Verbindungs-Manager, der einen lokal installierten Sybase ODBC-Treiber mit einem DSN verwendet, der auf eine lokale Sybase-Datenbank oder Sybase-Remotedatenbank verweist. Die Daten werden in diese Datenbank extrahiert.  
+-   Erstellen Sie einen ODBC-Verbindungs-Manager, der einen lokal installierten Sybase ODBC-Treiber mit einem DSN verwendet, der auf eine lokale Sybase-Datenbank oder Sybase-Remotedatenbank verweist. Die Daten werden in diese Datenbank extrahiert.  
   
 -   Erstellen Sie einen OLE DB-Verbindungs-Manager, der eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank herstellt, in die Sie die Daten laden möchten.  
   

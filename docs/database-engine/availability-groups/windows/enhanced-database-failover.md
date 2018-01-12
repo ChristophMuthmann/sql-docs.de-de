@@ -20,11 +20,11 @@ author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3ac86ebd88dd793a0da204ace0feba02f2a055fa
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2050eed47dbe036cf0b51c9acb3fb823f4c6fa60
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>Hinzufügen eines verbesserten Datenbankfailovers zu einer Verfügbarkeitsgruppe (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,21 +45,21 @@ Dieses verfügt über die gleiche Verfügbarkeitsgruppenkonfiguration wie in Sze
 
 Eine Verfügbarkeitsgruppe wird zwischen Instanz A und Instanz B konfiguriert und enthält zwei Datenbanken: DB1 und DB2. Der Verfügbarkeitsmodus ist auf synchronen Commit mit automatischem Failover-Modus festgelegt und das verbesserte Datenbank-Failover ist aktiviert. Der Zugriff auf die Festplatte, die die Daten und Transaktionsprotokolldateien von DB2 enthält, ist unterbrochen. Wenn das Problem erkannt wird, führt die Verfügbarkeitsgruppe automatisch ein Failover zu Instanz B aus.
 
-## <a name="configure-and-viewv-the-enhanced-database-failover-option"></a>Konfigurieren und Anzeigen der Optionen für erweitertes Datenbankfailover
+## <a name="configure-and-view-the-enhanced-database-failover-option"></a>Konfigurieren und Anzeigen der Optionen für erweitertes Datenbankfailover
 
 Das verbesserte Datenbank-Failover kann mithilfe von SQL Server Management Studio oder Transact-SQL konfiguriert werden. Die PowerShell-Cmdlets sind dazu derzeit nicht in der Lage. Standardmäßig ist das verbesserte Datenbank-Failover deaktiviert.
 
-### <a name="sql-server-management-studio"></a>SQL Server Management Studio
+### <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
 Das Aktivieren des verbesserten Datenbank-Failovers ist während der Erstellung einer Verfügbarkeitsgruppe mithilfe von SQL Server Management Studio möglich. Die einzige Möglichkeit, um das Verhalten nach dem Erstellen der Verfügbarkeitsgruppe zu ändern, ist die Verwendung von Transact-SQL.
 
 *Manuelles Erstellen von Verfügbarkeitsgruppen*
 
-Verwenden Sie zum Erstellen der Verfügbarkeitsgruppe die Informationen im Thema [Use the New Availability Group Dialog Box (SQL Server Management Studio) (Verwenden des neuen Dialogfelds für Verfügbarkeitsgruppen (SQL Server Management Studio))](use-the-new-availability-group-dialog-box-sql-server-management-studio.md). Um den verbesserten Datenbank-Failover zu aktivieren, aktivieren Sie das Kontrollkästchen neben *Integritätserkennung auf Datenbankebene*.
+Verwenden Sie zum Erstellen der Verfügbarkeitsgruppe die Anweisungen im Artikel [Use the New Availability Group Dialog Box (SQL Server Management Studio) (Verwenden des neuen Dialogfelds für Verfügbarkeitsgruppen (SQL Server Management Studio))](use-the-new-availability-group-dialog-box-sql-server-management-studio.md). Um den verbesserten Datenbank-Failover zu aktivieren, aktivieren Sie das Kontrollkästchen neben *Integritätserkennung auf Datenbankebene*.
 
 *Verwenden des Assistenten für Verfügbarkeitsgruppen*
 
-Verwenden Sie die Informationen im Thema [Use the Availability Group Wizard (SQL Server Management Studio) (Verwenden des Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen (SQL Server))](use-the-availability-group-wizard-sql-server-management-studio.md). Die Option zum Aktivieren des erweiterten Datenbank-Failovers befindet sich im Dialogfeld „Namen der Verfügbarkeitsgruppe angeben“. Um diese zu aktivieren, aktivieren Sie das Kontrollkästchen neben *Integritätserkennung auf Datenbankebene*.
+Verwenden Sie die Anweisungen im Artikel [Use the Availability Group Wizard (SQL Server Management Studio) (Verwenden des Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen (SQL Server))](use-the-availability-group-wizard-sql-server-management-studio.md). Die Option zum Aktivieren des erweiterten Datenbank-Failovers befindet sich im Dialogfeld „Namen der Verfügbarkeitsgruppe angeben“. Um diese zu aktivieren, aktivieren Sie das Kontrollkästchen neben *Integritätserkennung auf Datenbankebene*.
 
 ### <a name="transact-sql"></a>Transact-SQL
 
@@ -79,7 +79,7 @@ Führen Sie den folgenden Befehl „ALTER AVAILABILITY GROUP“ aus, um das Verh
 ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = OFF)
 ```
 ### <a name="dynamic-management-view"></a>Dynamische Verwaltungssicht
-Fragen Sie die dynamische Verwaltungssicht `sys.availablity_groups` ab, um anzuzeigen, ob das verbesserte Datenbank-Failover in einer Verfügbarkeitsgruppe aktiviert ist. Die Spalte `db_failover` enthält eine 0 (Null), wenn das Verhalten deaktiviert ist oder eine 1, wenn es aktiviert ist. 
+Fragen Sie die dynamische Verwaltungssicht `sys.availability_groups` ab, um anzuzeigen, ob das verbesserte Datenbank-Failover in einer Verfügbarkeitsgruppe aktiviert ist. Die Spalte `db_failover` enthält eine 0 (Null), wenn das Verhalten deaktiviert ist oder eine 1, wenn es aktiviert ist. 
 
 ## <a name="next-steps"></a>Nächste Schritte 
 
