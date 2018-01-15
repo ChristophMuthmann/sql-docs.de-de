@@ -16,18 +16,20 @@ helpviewer_keywords:
 - objects [SMO]
 ms.assetid: 702fd63d-8734-4a02-872e-aecfb037c787
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bc43e77e099c216dbe13f2df5facbdb60a83c63b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 556403a013ee348e836c059ef9b246b4d5606a87
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-altering-and-removing-database-objects"></a>Erstellen, ändern und Löschen von Datenbankobjekten
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Die Phasen der SMO-objekterstellung sind wie folgt aus:  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Die Phasen der SMO-Objekterstellung sind:  
   
 1.  Erstellen einer Instanz des Objekts  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 01/08/2018
   
  Die **Drop** -Anweisung wird dazu verwendet, ein Objekt und alle seine abhängigen untergeordneten Objekte zu entfernen, die anfänglich zur Objekterstellung erforderlich waren.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [SMO-Objektmodell](../../../relational-databases/server-management-objects-smo/smo-object-model.md)  
   
   

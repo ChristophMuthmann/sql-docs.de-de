@@ -14,18 +14,18 @@ ms.topic: reference
 helpviewer_keywords: views [SMO]
 ms.assetid: 7d445c0e-77ef-4734-993b-e022de31df23
 caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb90ebd600a17efc71c1195ed070091ca826fc4d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f32f9db12d027561ef64f405118c0a5a00da5188
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-altering-and-removing-views"></a>Erstellen, Ändern und Löschen von Sichten
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Ansichten dargestellte der <xref:Microsoft.SqlServer.Management.Smo.View> Objekt.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Ansichten dargestellte der <xref:Microsoft.SqlServer.Management.Smo.View> Objekt.  
   
  Die <xref:Microsoft.SqlServer.Management.Smo.View.TextBody%2A>-Eigenschaft des <xref:Microsoft.SqlServer.Management.Smo.View>-Objekts definiert die Sicht. Es ist das Äquivalent der [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT-Anweisung für eine Sicht erstellen.  
   

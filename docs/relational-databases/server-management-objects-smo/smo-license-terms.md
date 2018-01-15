@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Management Studio – Lizenzbestimmungen | Microsoft-Dokumentation"
+title: SQLServer Shared Management Objects (SMO) - Lizenzbedingungen | Microsoft Docs
 ms.custom: 
 ms.date: 08/06/2017
 ms.prod: sql-non-specified
@@ -13,18 +13,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 caps.latest.revision: "9"
-author: Charles-Gagnon
-ms.author: chgagnon
-manager: kenvh
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 37ae2b17123b4478171285fbf8bb0d63ec288a0f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 44c825951f769e733ac6f6a985138d5d2c9f32d1
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQLServer Shared Management Objects (SMO)-Lizenzbedingungen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
 ## <a name="microsoft-software-license-terms"></a>MICROSOFT-SOFTWARE-LIZENZBEDINGUNGEN
 **FREIGEGEBENE VERWALTUNGSOBJEKTE FÜR MICROSOFT SQL SERVER 2017**
 

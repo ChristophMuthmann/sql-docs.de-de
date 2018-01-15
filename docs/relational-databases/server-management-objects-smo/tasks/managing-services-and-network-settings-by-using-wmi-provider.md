@@ -18,18 +18,20 @@ helpviewer_keywords:
 - monitoring [SMO]
 ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a8626731b1fde43a1713ba4afbc6a98988e2c2d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 326c98022af0adbb6e508cc9ba8c6e63f7fd6d23
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Verwalten von Diensten und Netzwerkeinstellungen durch die Nutzung von WMI-Anbieter
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Der WMI-Anbieter ist eine veröffentlichte Schnittstelle, mit dem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console (MMC) zum Verwalten der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Diensten und Netzwerkprotokollen. In SMO werden die <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> Objekt der WMI-Anbieter dar.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Der WMI-Anbieter ist eine veröffentlichte Schnittstelle, mit dem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console (MMC) zum Verwalten der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Diensten und Netzwerkprotokollen. In SMO werden die <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> Objekt der WMI-Anbieter dar.  
   
  Die <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> -Objekt arbeitet unabhängig von der Verbindung mit der <xref:Microsoft.SqlServer.Management.Smo.Server> Objekt mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], und Windows-Anmeldeinformationen für die Verbindung zum WMI-Dienst verwendet.  
   
@@ -215,7 +217,7 @@ $svc.ServiceState
   
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Siehe auch  
  [Konzepte des WMI-Anbieters für die Konfigurationsverwaltung](../../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
   
   

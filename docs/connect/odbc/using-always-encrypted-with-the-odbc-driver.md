@@ -1,7 +1,7 @@
 ---
-title: Using Always Encrypted with the Odbcdriver 13.1 for SQLServer | Microsoft Docs
+title: "Using Always Encrypted with the Odbcdriver für SQLServer | Microsoft Docs"
 ms.custom: 
-ms.date: 07/12/2017
+ms.date: 10/01/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -17,20 +17,27 @@ ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
-ms.openlocfilehash: 4e56c987938aa3cb8645dc9bef94f2f97b8c0649
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
+ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/12/2018
 ---
-# <a name="using-always-encrypted-with-the-odbc-driver-131-for-sql-server"></a>Verwenden von Always Encrypted with the Odbcdriver 13.1 for SQLServer
+# <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Mit "immer verschlüsselt" mit dem ODBC-Treiber für SQLServer
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-Dieser Artikel enthält Informationen zum Entwickeln von ODBC-Anwendungen mit [Always Encrypted (Datenbankmodul)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) und [ODBC Driver 13.1 for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
+### <a name="applicable-to"></a>Gilt für
 
-Always Encrypted ermöglicht Clientanwendungen das Verschlüsseln von vertraulichen Daten in einer Weise, dass weder die Daten noch die Verschlüsselungsschlüssel zu irgendeinem Zeitpunkt gegenüber SQL Server oder Azure SQL-Datenbank offengelegt werden. Ein Always Encrypted aktiviert-Treiber, wie z. B. den ODBC Driver 13.1 for SQL Server, erreicht dies durch die transparente Ver- und Entschlüsselung von sensiblen Daten in der Clientanwendung. Der Treiber ermittelt automatisch, welche Abfrageparameter vertraulichen Datenbankspalten (mit Always Encrypted geschützt) entsprechen. Die Werte dieser Parameter werden dann vor der Übergabe an SQL Server oder Azure SQL-Datenbank verschlüsselt. Auf ähnliche Weise entschlüsselt der Treiber die Daten transparent, die von verschlüsselten Datenbankspalten in Abfrageergebnissen empfangen werden. Weitere Informationen finden Sie unter [Always Encrypted (Datenbankmodul)](../../relational-databases/security/encryption/always-encrypted-database-engine.md).
+- Odbcdriver 13.1 for SQLServer
+- ODBC-Treiber 17 für SQLServer
 
-### <a name="prerequisites"></a>Voraussetzungen
+### <a name="introduction"></a>Einführung
+
+Dieser Artikel enthält Informationen zum Entwickeln von ODBC-Anwendungen mit [Always Encrypted (Datenbankmodul)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) und [ODBC-Treiber für SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
+
+Always Encrypted ermöglicht Clientanwendungen das Verschlüsseln von vertraulichen Daten in einer Weise, dass weder die Daten noch die Verschlüsselungsschlüssel zu irgendeinem Zeitpunkt gegenüber SQL Server oder Azure SQL-Datenbank offengelegt werden. Ein Always Encrypted aktiviert-Treiber verwenden, z. B. den ODBC-Treiber für SQL Server, erreicht dies durch die transparente Ver- und Entschlüsselung von sensiblen Daten in der Clientanwendung. Der Treiber ermittelt automatisch, welche Abfrageparameter vertraulichen Datenbankspalten (mit Always Encrypted geschützt) entsprechen. Die Werte dieser Parameter werden dann vor der Übergabe an SQL Server oder Azure SQL-Datenbank verschlüsselt. Auf ähnliche Weise entschlüsselt der Treiber die Daten transparent, die von verschlüsselten Datenbankspalten in Abfrageergebnissen empfangen werden. Weitere Informationen finden Sie unter [Always Encrypted (Datenbankmodul)](../../relational-databases/security/encryption/always-encrypted-database-engine.md).
+
+### <a name="prerequisites"></a>Erforderliche Komponenten
 
 Konfigurieren Sie Always Encrypted in Ihrer Datenbank. Dies umfasst die Bereitstellung von Always Encrypted-Schlüsseln und die Einrichtung der Verschlüsselung für ausgewählte Datenbankspalten. Wenn Sie nicht bereits über eine Datenbank verfügen, für die Always Encrypted konfiguriert ist, befolgen Sie die Anweisungen in [Erste Schritte mit Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted). Insbesondere sollten Ihre Datenbank die Metadatendefinitionen für eine Zertifizierungsstelle (Column Master Key, CMK), eine Spalte Encryption Key (CEK) und eine Tabelle mit einer oder mehreren Spalten, die mit diesem CEK verschlüsselten enthalten.
 
@@ -282,11 +289,11 @@ Da Always Encrypted eine clientseitige verschlüsselungstechnologie ist, werden 
 
 - Aufrufe an einen Spaltenhauptschlüsselspeicher für den Zugriff auf einen Spaltenhauptschlüssel.
 
-Dieser Abschnitt beschreibt die integrierten leistungsoptimierungen in den ODBC Driver 13.1 für SQL Server und wie Sie die Auswirkungen der beiden oben genannten Faktoren auf die Leistung steuern können.
+Dieser Abschnitt beschreibt die integrierten leistungsoptimierungen im ODBC-Treiber für SQL Server und wie Sie die Auswirkungen der beiden oben genannten Faktoren auf die Leistung steuern können.
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Steuern der Roundtrips zum Abrufen von Metadaten für Abfrageparameter
 
-Wenn Always Encrypted für eine Verbindung aktiviert ist, den ODBC Driver 13.1 für SQL Server wird in der Standardeinstellung rufen [Sys. sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) für jede parametrisierte Abfrage übergeben Sie die abfrageanweisung (ohne Parameter (Werten) mit SQL Server. Diese gespeicherte Prozedur analysiert die Query-Anweisung, um herauszufinden, wenn alle Parameter müssen verschlüsselt werden, und wenn dies der Fall ist, gibt die verschlüsselungsbezogenen Informationen für jeden Parameter für den Treiber an sie verschlüsseln kann. Das oben beschriebene Verhalten stellt einen hohen Grad an Transparenz für die Clientanwendung sicher: die Anwendung (und der Anwendungsentwickler) muss nicht beachten, welche Abfragen Zugriff auf verschlüsselte Spalten sein, solange die Werte, die auf verschlüsselte Spalten ausgerichtet sind, übergeben werden der Treiber in den Parametern.
+Wenn Always Encrypted für eine Verbindung aktiviert ist, ruft der Treiber, standardmäßig [Sys. sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) für jede parametrisierte Abfrage übergeben Sie die abfrageanweisung (ohne Parameterwerte) an SQL Server. Diese gespeicherte Prozedur analysiert die Query-Anweisung, um herauszufinden, wenn alle Parameter müssen verschlüsselt werden, und wenn dies der Fall ist, gibt die verschlüsselungsbezogenen Informationen für jeden Parameter für den Treiber an sie verschlüsseln kann. Das oben beschriebene Verhalten stellt einen hohen Grad an Transparenz für die Clientanwendung sicher: die Anwendung (und der Anwendungsentwickler) muss nicht beachten, welche Abfragen Zugriff auf verschlüsselte Spalten sein, solange die Werte, die auf verschlüsselte Spalten ausgerichtet sind, übergeben werden der Treiber in den Parametern.
 
 ### <a name="per-statement-always-encrypted-behavior"></a>Das Verhalten "immer verschlüsselt" pro-Anweisung
 
@@ -329,7 +336,7 @@ Wenn SQL Server den Treiber, den der Parameter nicht verschlüsselt werden muss 
 Um die Anzahl der Aufrufe an einen spaltenhauptschlüsselspeicher spaltenhauptschlüsselspeicher zu verringern, wird der Treiber den nur-Text-CEKs im Arbeitsspeicher zwischengespeichert. Nach dem Empfang der ECEK von Datenbankmetadaten, versucht der Treiber zunächst Klartext-CEK entspricht dem verschlüsselten Schlüsselwert im Cache gefunden. Der Treiber Ruft den Schlüsselspeicher CMK nur, wenn die entsprechenden Klartext-CEK im Cache gefunden.
 
 > [!NOTE]
-> In der ODBC Driver 13.1 for SQL Server werden die Einträge im Cache nach einem Timeout von zwei Stunden entfernt. Dies bedeutet, dass für einen bestimmten ECEK kontaktiert der Treiber den Schlüsselspeicher nur einmal während der Lebensdauer der Anwendung oder alle zwei Stunden, welcher Wert kleiner ist.
+> In der ODBC-Treiber für SQL Server werden die Einträge im Cache nach einem Timeout von zwei Stunden entfernt. Dies bedeutet, dass für einen bestimmten ECEK kontaktiert der Treiber den Schlüsselspeicher nur einmal während der Lebensdauer der Anwendung oder alle zwei Stunden, welcher Wert kleiner ist.
 
 ## <a name="working-with-column-master-key-stores"></a>Arbeiten mit Spaltenhauptschlüsselspeichern
 
@@ -339,7 +346,7 @@ Um den nur-Text-Wert, der eine ECEK zu erhalten, erhält des Treibers zunächst 
 
 ### <a name="built-in-keystore-providers"></a>Integrierte-Schlüsselspeicher-Anbieter
 
-Der ODBC Driver 13.1 for SQL Server enthält die folgenden integrierten-Schlüsselspeicher-Anbieter:
+Der ODBC-Treiber für SQL Server enthält die folgenden integrierten-Schlüsselspeicher-Anbieter:
 
 | Name | Description | Name des Anbieters (Metadaten) |Verfügbarkeit|
 |:---|:---|:---|:---|
@@ -352,7 +359,7 @@ Der ODBC Driver 13.1 for SQL Server enthält die folgenden integrierten-Schlüss
 
 ### <a name="using-the-azure-key-vault-provider"></a>Mithilfe des Azure Key Vault-Anbieters
 
-Azure Key Vault ist eine praktische Möglichkeit zum Speichern von Spaltenhauptschlüsseln für Always Encrypted (insbesondere, wenn Ihre Anwendungen in Azure gehostet werden). Der ODBC Driver 13.1 for SQL Server unter Linux, Mac OS und Windows umfasst eine integrierte Spalte Speicheranbieter für spaltenhauptschlüssel für Azure Key Vault. Finden Sie unter [Azure Key Vault – Schritt-für-Schritt](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [erste Schritte mit Schlüsseltresor](https://azure.microsoft.com/documentation/articles/key-vault-get-started/), und [Erstellen von Spaltenhauptschlüsseln in Azure Key Vault](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2) für Weitere Informationen zum Konfigurieren eines Azure-Schlüssels Tresor für Always Encrypted.
+Azure Key Vault ist eine praktische Möglichkeit zum Speichern von Spaltenhauptschlüsseln für Always Encrypted (insbesondere, wenn Ihre Anwendungen in Azure gehostet werden). Der ODBC-Treiber für SQL Server on Linux, Mac OS und Windows umfasst eine integrierte Spalte Speicheranbieter für spaltenhauptschlüssel für Azure Key Vault. Finden Sie unter [Azure Key Vault - Schritt-für-Schritt](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [erste Schritte mit Schlüsseltresor](https://azure.microsoft.com/documentation/articles/key-vault-get-started/), und [Erstellen von Spaltenhauptschlüsseln in Azure Key Vault](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2) für Weitere Informationen zum Konfigurieren eines Azure-Schlüssels Tresor für Always Encrypted.
 
 Der Treiber unterstützt die Authentifizierung mit Azure Key Vault mithilfe der folgenden Typen von Clientanmeldeinformationen:
 
@@ -387,11 +394,11 @@ Zum AKV CMK-Speicher verwenden, sind keine weiteren-ODBC-anwendungsänderungen e
 
 ### <a name="using-the-windows-certificate-store-provider"></a>Mithilfe des Windows-Zertifikatspeicher-Anbieters
 
-Der ODBC Driver 13.1 for SQL Server unter Windows umfasst eine integrierte Spalte Speicheranbieter für spaltenhauptschlüssel für den Windows-Zertifikatspeicher, mit dem Namen `MSSQL_CERTIFICATE_STORE`. (Dieser Anbieter ist nicht auf MacOS oder Linux verfügbar.) Mit diesem Anbieter der CMK lokal auf dem Clientcomputer gespeichert und ist keine zusätzliche Konfiguration von der Anwendung für die Verwendung mit dem Treiber erforderlich. Allerdings muss die Anwendung auf das Zertifikat und seinen privaten Schlüssel im Speicher zugreifen. Finden Sie unter [Create and Store Spaltenhauptschlüsseln (Always Encrypted)](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted) für Weitere Informationen.
+Der ODBC-Treiber für SQL Server unter Windows umfasst eine integrierte Spalte Speicheranbieter für spaltenhauptschlüssel für den Windows-Zertifikatspeicher, mit dem Namen `MSSQL_CERTIFICATE_STORE`. (Dieser Anbieter ist nicht auf MacOS oder Linux verfügbar.) Mit diesem Anbieter der CMK lokal auf dem Clientcomputer gespeichert und ist keine zusätzliche Konfiguration von der Anwendung für die Verwendung mit dem Treiber erforderlich. Allerdings muss die Anwendung auf das Zertifikat und seinen privaten Schlüssel im Speicher zugreifen. Finden Sie unter [Create and Store Spaltenhauptschlüsseln (Always Encrypted)](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted) für Weitere Informationen.
 
 ### <a name="using-custom-keystore-providers"></a>Verwenden von benutzerdefinierten-Schlüsselspeicher-Anbieter
 
-Der ODBC Driver 13.1 for SQL Server unterstützt auch benutzerdefinierte Drittanbieter-Schlüsselspeicher-Anbieter, die über die CEKeystoreProvider-Schnittstelle. Dabei kann es sich um eine Anwendung zum Laden, Abfrage, und Konfigurieren von Schlüsselspeicher-Anbieter, sodass sie vom Treiber verwendet werden können, um Zugriff auf verschlüsselte Spalten. Anwendungen können auch direkt interagieren mit einem Schlüsselspeicheranbieter zum Verschlüsseln CEKs, in SQL Server zu speichern und Ausführen von Aufgaben über den Zugriff auf verschlüsselte Spalten mit ODBC; Weitere Informationen finden Sie unter [benutzerdefinierte-Schlüsselspeicher-Anbieter](../../connect/odbc/custom-keystore-providers.md).
+Der ODBC-Treiber für SQL Server unterstützt auch benutzerdefinierte Drittanbieter-Schlüsselspeicher-Anbieter, die über die CEKeystoreProvider-Schnittstelle. Dabei kann es sich um eine Anwendung zum Laden, Abfrage, und Konfigurieren von Schlüsselspeicher-Anbieter, sodass sie vom Treiber verwendet werden können, um Zugriff auf verschlüsselte Spalten. Anwendungen können auch direkt interagieren mit einem Schlüsselspeicheranbieter zum Verschlüsseln CEKs, in SQL Server zu speichern und Ausführen von Aufgaben über den Zugriff auf verschlüsselte Spalten mit ODBC; Weitere Informationen finden Sie unter [benutzerdefinierte-Schlüsselspeicher-Anbieter](../../connect/odbc/custom-keystore-providers.md).
 
 Zwei Verbindungsattribute werden für die Interaktion mit benutzerdefinierten-Schlüsselspeicher-Anbieter verwendet. Die Überladungen sind:
 
@@ -515,11 +522,44 @@ Ein Beispiel für einen eigenen Schlüsselspeicheranbieter implementieren, finde
 
 ## <a name="limitations-of-the-odbc-driver-when-using-always-encrypted"></a>Einschränkungen des ODBC-Treibers bei Verwendung von Always Encrypted
 
-### <a name="bulk-copy-function-usage"></a>Verwendung von Bulk Copy-Funktion
-Verwenden der [SQL-Massenkopieren Funktionen](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) wird nicht unterstützt, wenn den ODBC-Treiber mit Always Encrypted. Keine transparente Ver-/Entschlüsselung erfolgt auf verschlüsselte Spalten, die mit den Funktionen der SQL-Massenkopieren verwendet werden.
-
 ### <a name="asynchronous-operations"></a>Asynchrone Vorgänge
 Während der ODBC-Treiber die Verwendung von ermöglichen [asynchrone Vorgänge](../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md) mit Always Encrypted, besteht eine Leistungseinbuße auf den Betrieb Wenn Always Encrypted aktiviert ist. Der Aufruf von `sys.sp_describe_parameter_encryption` verschlüsselungsmetadaten zu bestimmen, für die Anweisung blockiert wird, und dazu, den Treiber für den Server dass führt zurückzugebenden Metadaten vor der Rückgabe warten `SQL_STILL_EXECUTING`.
+
+### <a name="retrieve-data-in-parts-with-sqlgetdata"></a>Abrufen von Daten in Teilen mit SQLGetData
+Bevor verschlüsselt 17 von ODBC-Treiber für SQL Server können Zeichen und binärer Spalten in Teilen mit SQLGetData abgerufen werden. Nur ein Aufruf von SQLGetData kann vorgenommen werden, mit einem Puffer, der ausreichend lang ist, um die gesamte Spalte Daten enthalten.
+
+### <a name="send-data-in-parts-with-sqlputdata"></a>Senden von Daten mit SQLPutData Teilen
+Daten einfügen oder Vergleich können nicht in Teilen mit SQLPutData gesendet werden. Nur ein Aufruf von SQLPutData kann vorgenommen werden, mit einem Puffer, die gesamten Daten enthält. Verwenden Sie zum Einfügen von long-Daten in verschlüsselten Spalten ein, API für das Massenkopieren, mit einer Eingabe-Datendatei im nächsten Abschnitt beschrieben.
+
+### <a name="encrypted-money-and-smallmoney"></a>Verschlüsselte Money und smallmoney
+Verschlüsselt **Money** oder **Smallmoney** von Parametern keine Spalten angewendet werden, da es ist keine bestimmte ODBC-Datentyp die Zuordnungen für diese Typen, wodurch Fehler Operand Typ in Konflikt stehen.
+
+## <a name="bulk-copy-of-encrypted-columns"></a>Massenkopieren von verschlüsselten Spalten
+
+Verwenden der [SQL-Massenkopieren Funktionen](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md) und **Bcp** -Hilfsprogramm wird seit 17 der ODBC-Treiber für SQL Server mit Always Encrypted unterstützt. Nur-Text (auf verschlüsselte und entschlüsselte auf) und Chiffretext (wörtlich übertragen) eingefügt werden kann und das Massenkopieren (Bcp_ *) APIs mit abgerufen und die **Bcp** Hilfsprogramm.
+
+- Chiffretext varbinary(max) Format (z. B. für den Massenimport in eine andere Datenbank laden) abgerufen werden, zu verbinden, ohne die `ColumnEncryption` Option (oder legen sie den `Disabled`) und führen Sie einen BCP OUT-Vorgang.
+
+- Zum Einfügen und Abrufen von nur-Text und den Treiber transparent Durchführen von Verschlüsselung und Entschlüsselung als Einstellung für erforderlich ist, können `ColumnEncryption` zu `Enabled` ist ausreichend. Die Funktionalität der BCP-API ist andernfalls nicht geändert.
+
+- Einfügen von verschlüsseltem Text transformiert varbinary(max) Format (z. B. wie oben abgerufen), legen Sie die `BCPMODIFYENCRYPTED` auf "true" aus, und führen Sie einen Vorgang BCP IN. Sicherstellen Sie in der Reihenfolge für die resultierenden Daten zu entschlüsselnden, dass das Ziel Spaltenwerts CEK identisch, von dem der verschlüsselte Text ursprünglich erhalten wurde.
+
+Bei Verwendung der **Bcp** Hilfsprogramm: Steuern der `ColumnEncryption` festlegen, verwenden Sie die Option ' -D ', und geben Sie einen DSN, der den gewünschten Wert enthält. Zum Einfügen von verschlüsseltem Text transformiert, stellen Sie sicher der `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` Einstellung des Benutzers ist aktiviert.
+
+Die folgende Tabelle enthält eine Zusammenfassung der Aktionen, fungierte auf eine verschlüsselte Spalte:
+
+|`ColumnEncryption`|BCP-Richtung|Description|
+|----------------|-------------|-----------|
+|`Disabled`|OUT (zum Client)|Ruft die Chiffretext ab. Ist der beobachtete Datentyp **varbinary(max)**.|
+|`Enabled`|OUT (zum Client)|Ruft nur-Text ab. Der Treiber wird die Spaltendaten zu entschlüsseln.|
+|`Disabled`|IN (auf Server)|Fügt ein verschlüsseltem Text transformiert. Dies dient zum Verschieben von verschlüsselten Daten deckend ohne es entschlüsselt werden. Der Vorgang schlägt fehl, wenn die `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` Option für den Benutzer nicht festgelegt ist, oder BCPMODIFYENCRYPTED nicht auf dem Verbindungshandle festgelegt ist. Weitere Informationen finden Sie unten.|
+|`Enabled`|IN (auf Server)|Fügt ein nur-Text. Der Treiber verschlüsselt die Daten der Spalte.|
+
+### <a name="the-bcpmodifyencrypted-option"></a>Die BCPMODIFYENCRYPTED-option
+
+Wiederherstellungpunkte mit beschädigten Daten der Server normalerweise lässt keine verschlüsselten Text direkt in eine verschlüsselte Spalte eingefügt, und daher dazu ist nicht möglich; allerdings zum Massenladen von verschlüsselten Daten, die mithilfe der BCP-API, Festlegen der `BCPMODIFYENCRYPTED` [Bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) Option auf "true" Chiffretext direkt eingefügt werden können und reduziert das Risiko der Beschädigung von verschlüsselter Daten über die Einstellung der `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` Option für das Benutzerkonto. Dennoch eine überaus die Schlüssel müssen die Daten übereinstimmen, und es ist eine gute Idee, wenn einige schreibgeschützte überprüft der eingefügten Daten nach der Einfügemarke Bulk und vor der weiteren Verwendung.
+
+Finden Sie unter [migrieren geschützten sensiblen Daten durch Always Encrypted](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md) für Weitere Informationen.
 
 ## <a name="always-encrypted-api-summary"></a>Always Encrypted-API-Zusammenfassung
 
@@ -551,6 +591,12 @@ Während der ODBC-Treiber die Verwendung von ermöglichen [asynchrone Vorgänge]
 |IPD-Feld|Größe/Type|Standardwert|Description|
 |-|-|-|-|  
 |`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD (2 Bytes)|0|Wenn 0 (Standard): Entscheidung zum Verschlüsseln dieser Parameter richtet sich nach der Verfügbarkeit von verschlüsselungsmetadaten.<br><br>Wenn ungleich NULL ist: Wenn verschlüsselungsmetadaten für diesen Parameter verfügbar ist, wird sie verschlüsselt. Andernfalls die Anforderung schlägt fehl, Fehlercode: [CE300] [Microsoft] [ODBC Driver 13 for SQL Server], obligatorische Verschlüsselung wurde für einen Parameter angegeben, aber keine verschlüsselungsmetadaten wurde vom Server bereitgestellt.|
+
+### <a name="bcpcontrol-options"></a>Bcp_control-Optionen
+
+|Optionsname|Standardwert|Description|
+|-|-|-|
+|`BCPMODIFYENCRYPTED` (21)|FALSE|Bei "true", können varbinary(max) Werte in eine verschlüsselte Spalte eingefügt werden soll. Bei "false", verhindert die Einfügung, wenn richtigen Typ und Verschlüsselung Metadaten angegeben wird.|
 
 ## <a name="see-also"></a>Siehe auch
 

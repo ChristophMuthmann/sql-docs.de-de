@@ -22,18 +22,20 @@ helpviewer_keywords:
 - service master key [SMO]
 ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6a5069931c6e144dc574664e71c8f2a5d8964403
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ad74e5242702ace386fb8c14a034a56886f27191
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-encryption"></a>Verwenden der Verschlüsselung
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In SMO wird der Diensthauptschlüssel durch dargestellt die <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> Objekt. Dies verweist auf die <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> Eigenschaft von der <xref:Microsoft.SqlServer.Management.Smo.Server> Objekt. Es kann erneut generiert werden, mithilfe der <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> Methode.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  In SMO wird der Diensthauptschlüssel durch dargestellt die <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> Objekt. Dies verweist auf die <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> Eigenschaft von der <xref:Microsoft.SqlServer.Management.Smo.Server> Objekt. Es kann erneut generiert werden, mithilfe der <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> Methode.  
   
  Datenbank-Hauptschlüssels wird dargestellt, indem die <xref:Microsoft.SqlServer.Management.Smo.MasterKey> Objekt. Die <xref:Microsoft.SqlServer.Management.Smo.MasterKey.IsEncryptedByServer%2A> Eigenschaft gibt an, und zwar unabhängig davon, ob die Datenbank-Hauptschlüssel mit dem Diensthauptschlüssel verschlüsselt ist. Die verschlüsselte Kopie in der Hauptdatenbank wird immer dann automatisch aktualisiert, wenn der Datenbank-Hauptschlüssel geändert wird.  
   

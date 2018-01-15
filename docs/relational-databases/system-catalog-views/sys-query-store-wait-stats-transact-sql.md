@@ -12,10 +12,8 @@ ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- SYS.QUERY_STORE_WAIT_STATS_TSQL
-- QUERY_STORE_WAIT_STATS_TSQL
-- SYS.QUERY_STORE_WAIT_STATS
-- QUERY_STORE_WAIT_STATS
+- sys.query_store_wait_stats
+- query_store_wait_stats
 dev_langs: TSQL
 helpviewer_keywords:
 - query_store_wait_stats catalog view
@@ -26,11 +24,11 @@ author: AndrejsAnt
 ms.author: AndrejsAnt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a75e00467fbee053a05144d67f9d9a68469daeed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bed8035413a61c2bc5e4e644874bec9115c07d68
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>Sys.query_store_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -43,10 +41,10 @@ ms.lasthandoff: 11/17/2017
 |**"Plan_id"**|**bigint**|Fremdschlüssel. Verknüpft mit [Sys. query_store_plan &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
 |**runtime_stats_interval_id**|**bigint**|Fremdschlüssel. Verknüpft mit [sys.query_store_runtime_stats_interval &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**wait_category**|**tinyint**|Wartetypen kategorisiert werden, mithilfe der folgenden Tabelle, und klicken Sie dann die Wartezeit über aggregiert wird diese Kategorien warten. Verschiedene Wartekategorien erfordern verschiedene Analysen zur Problembehebung. Wartetypen aus der gleichen Kategorien führen jedoch zu sehr ähnlichen Problembehebungsvorgängen. Wenn nun die betroffenen Abfrage in den Wartezuständen bereitgestellt wird, kann ein Großteil der Überprüfungen erfolgreich abgeschlossen werden.|
-|**wait_category_desc**|**vom Datentyp nvarchar(128)**|Überprüfen Sie in der folgenden Tabelle, für die textbeschreibung der Wait-Feld "Kategorie".|
+|**wait_category_desc**|**nvarchar(128)**|Überprüfen Sie in der folgenden Tabelle, für die textbeschreibung der Wait-Feld "Kategorie".|
 |**execution_type**|**tinyint**|Bestimmt die Art der Ausführung einer Abfrage:<br /><br /> 0 – regelmäßigen Ausführung (erfolgreich abgeschlossen wurde)<br /><br /> 3 – Client initiiert hat die Ausführung aufgrund<br /><br /> 4 - Ausnahme abgebrochen Ausführung|  
-|**execution_type_desc**|**vom Datentyp nvarchar(128)**|Die textbeschreibung des Ausführung Type-Feld:<br /><br /> 0 – Normal<br /><br /> 3 – abgebrochen<br /><br /> 4 - Ausnahme|  
-|**total_query_wait_time_ms**|**bigint**|Gesamt-CPU Wartezeit für den Abfrageplan in aggregationsintervalls und wartekategorie (in Mikrosekunden gemeldet).|
+|**execution_type_desc**|**nvarchar(128)**|Die textbeschreibung des Ausführung Type-Feld:<br /><br /> 0 – Normal<br /><br /> 3 – abgebrochen<br /><br /> 4 - Ausnahme|  
+|**total_query_wait_time_ms**|**bigint**|Gesamt-CPU Wartezeit für den Abfrageplan in aggregationsintervalls und wartekategorie (in Millisekunden gemeldet).|
 |**avg_query_wait_time_ms**|**float**|Durchschnittliche Wartezeit für den Abfrageplan pro Ausführung innerhalb der Aggregation Intervall und Wait Kategorie (in Millisekunden gemeldet).|
 |**last_query_wait_time_ms**|**bigint**|Zuletzt Wartezeit für den Abfrageplan in aggregationsintervalls und wartekategorie (in Millisekunden gemeldet).|
 |**min_query_wait_time_ms**|**bigint**|Mindesttaktfrequenz der CPU Wartezeit für den Abfrageplan in aggregationsintervalls und wartekategorie (in Millisekunden gemeldet).|

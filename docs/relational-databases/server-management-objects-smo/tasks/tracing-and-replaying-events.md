@@ -18,18 +18,20 @@ helpviewer_keywords:
 - events [SMO], tracing
 ms.assetid: f41b3f85-2f6c-4c3e-9776-8c73d2cc7a53
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89db9be2fb51e8f37dce7b223b312a0a7e0a8221
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6a5501861717bf21e6004730b38f93b309c40e0e
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="tracing-and-replaying-events"></a>Verfolgen und Wiedergeben von Ereignissen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In SMO werden die **Trace** und **Replay** Objekte in der <xref:Microsoft.SqlServer.Management.Trace> Namespace stellen einen programmgesteuerten Zugriff auf die [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] Funktionalität, die verwendet wird, für die Überwachung einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]oder [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Daten über die einzelnen Ereignisse können aufgezeichnet und in einer Datei oder Tabelle zur späteren Analyse gespeichert werden. Beispielsweise können Sie eine Produktionsumgebung überwachen und feststellen, welche Prozeduren langsam ablaufen und dadurch die Leistung beeinträchtigen.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  In SMO werden die **Trace** und **Replay** Objekte in der <xref:Microsoft.SqlServer.Management.Trace> Namespace stellen einen programmgesteuerten Zugriff auf die [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] Funktionalität, die verwendet wird, für die Überwachung einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]oder [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Daten über die einzelnen Ereignisse können aufgezeichnet und in einer Datei oder Tabelle zur späteren Analyse gespeichert werden. Beispielsweise können Sie eine Produktionsumgebung überwachen und feststellen, welche Prozeduren langsam ablaufen und dadurch die Leistung beeinträchtigen.  
   
  Die **Ablaufverfolgung** und **Replay** Objekte stehen eine Reihe von Objekten, die zum Erstellen von ablaufverfolgungen in einer Instanz von verwendet werden kann [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Diese Objekte können in Ihren eigenen Anwendungen verwendet werden, um manuell Ablaufverfolgungen für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] zu erstellen. Darüber hinaus SMO **Ablaufverfolgung** Objekte können verwendet werden, zum Lesen von SQL-Ablaufverfolgungsdateien und-Tabellen durch die Überwachung erstellte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], oder DTS-Protokollierung.  
   

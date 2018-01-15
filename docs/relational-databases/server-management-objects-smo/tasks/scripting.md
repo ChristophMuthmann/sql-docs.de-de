@@ -16,18 +16,20 @@ helpviewer_keywords:
 - scripts [SMO]
 ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e3e98e7685b68b81a5dd586cdb92529456b3c935
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 897a16553e79996572d377213fd5514d4cca36a4
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="scripting"></a>Skripterstellung
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Skripterstellung in SMO wird gesteuert, indem die <xref:Microsoft.SqlServer.Management.Smo.Scripter> -Objekt und dessen untergeordnete Objekte oder **Skript** Methode für die einzelnen Objekte. Die <xref:Microsoft.SqlServer.Management.Smo.Scripter> Objekt steuert die Ermittlung von abhängigkeitsbeziehungen für Objekte auf einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Skripterstellung in SMO wird gesteuert, indem die <xref:Microsoft.SqlServer.Management.Smo.Scripter> -Objekt und dessen untergeordnete Objekte oder **Skript** Methode für die einzelnen Objekte. Die <xref:Microsoft.SqlServer.Management.Smo.Scripter> Objekt steuert die Ermittlung von abhängigkeitsbeziehungen für Objekte auf einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Die erweiterte Skripterstellung mithilfe des <xref:Microsoft.SqlServer.Management.Smo.Scripter>-Objekts und dessen untergeordneten Objekten ist ein Prozess, der aus drei Phasen besteht:  
   

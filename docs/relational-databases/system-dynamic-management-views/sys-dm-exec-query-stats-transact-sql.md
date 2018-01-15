@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cda9fe3ab2bc54f878e45834bca907976cb7793c
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 26cc8e4ea520560452b59b9a08da198882ba96cd
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,6 @@ ms.lasthandoff: 01/05/2018
 |**last_used_threads**|**bigint**|Die Anzahl der verwendeten parallele Threads, wenn dieser Plan zuletzt ausgeführt. Es wird immer 0 für die Abfrage einer speicheroptimierten Tabellenstatus sein.<br /><br /> **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**min_used_threads**|**bigint**|Die minimale Anzahl von verwendet parallelen Threads dieses Plans jemals während einer Ausführung verwendet. Es wird immer 0 für die Abfrage einer speicheroptimierten Tabellenstatus sein.<br /><br /> **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**max_used_threads**|**bigint**|Die maximale Anzahl von verwendet parallelen Threads dieses Plans jemals während einer Ausführung verwendet. Es wird immer 0 für die Abfrage einer speicheroptimierten Tabellenstatus sein.<br /><br /> **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|**pdw_node_id**|**int**|Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.<br /><br /> **Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 |**total_columnstore_segment_reads**|**bigint**|Gesamtsumme der columnstore-Segmente, die von der Abfrage lesen. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
 |**last_columnstore_segment_reads**|**bigint**|Die Anzahl der columnstore-Segmente, die von der letzten Ausführung der Abfrage gelesen werden. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
 |**min_columnstore_segment_reads**|**bigint**|Die minimale Anzahl von columnstore-Segmente, die je von der Abfrage bei einer Ausführung gelesen werden soll. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
@@ -116,7 +115,12 @@ ms.lasthandoff: 01/05/2018
 |**last_columnstore_segment_skips**|**bigint**|Die Anzahl der columnstore-Segmente, die von der letzten Ausführung der Abfrage ausgelassen. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
 |**min_columnstore_segment_skips**|**bigint**|Die minimale Anzahl von columnstore-Segmente, die je von der Abfrage bei einer Ausführung übersprungen werden soll. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
 |**max_columnstore_segment_skips**|**bigint**|Die maximale Anzahl der columnstore-Segmente, die je von der Abfrage bei einer Ausführung übersprungen werden soll. Lässt keine NULL-Werte zu.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|
-  
+|**total_spills**|**bigint**|Die Gesamtanzahl der Seiten, die durch die Ausführung dieser Abfrage Aggregierung überlaufen, seit der Kompilierung.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|Die Anzahl der Seiten gefüllt, der letzten Ausführung die Abfrage ausgeführt wurde.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|Die minimale Anzahl der Seiten, die diese Abfrage jemals eine einzelne Ausführung übergelaufen.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|Die maximale Anzahl der Seiten, die diese Abfrage jemals eine einzelne Ausführung übergelaufen.<br /><br /> **Gilt für**: beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**pdw_node_id**|**int**|Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.<br /><br /> **Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+
 > [!NOTE]
 > <sup>1</sup> für systemintern kompilierte gespeicherte Prozeduren bei der Erfassung von Statistiken aktiviert ist, wird worker_time in Millisekunden. Wenn die Abfrage in weniger als einer Millisekunde ausgeführt wird, wird der Wert 0 lauten.  
   
@@ -133,8 +137,6 @@ Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] benötigen Premium-Ebenen d
  Das folgende Beispiel gibt Informationen zu den fünf Abfragen mit dem höchsten durchschnittlichen CPU-Zeitaufwand zurück. Die Abfragen werden in diesem Beispiel anhand des Abfragehashes aggregiert, sodass logisch identische Abfragen basierend auf dem kumulierten Ressourcenverbrauch gruppiert werden.  
   
 ```sql  
-USE AdventureWorks2012;  
-GO  
 SELECT TOP 5 query_stats.query_hash AS "Query Hash",   
     SUM(query_stats.total_worker_time) / SUM(query_stats.execution_count) AS "Avg CPU Time",  
     MIN(query_stats.statement_text) AS "Statement Text"  
@@ -172,11 +174,12 @@ ORDER BY qs.execution_count DESC;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- 
- [Ausführung bezogene dynamische Verwaltungssichten und-Funktionen &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Sys. dm_exec_sql_text &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [Sys. dm_exec_query_plan &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
-  
+[Ausführung bezogene dynamische Verwaltungssichten und-Funktionen &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
+[Sys. dm_exec_sql_text &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
+[Sys. dm_exec_query_plan &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[Sys. dm_exec_procedure_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)     
+[Sys. dm_exec_trigger_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)     
+[dm_exec_cached_plans &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
   
 
 

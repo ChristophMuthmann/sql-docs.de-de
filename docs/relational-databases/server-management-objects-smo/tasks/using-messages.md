@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: messages [SMO]
 ms.assetid: 4037a866-4826-4c1f-890c-e7e3658adf13
 caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf26f0e7f9795e793f9da85d312f39fe44b611f7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3ed18e9b9b7f91613a23d0146b79e0da2b056618
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-messages"></a>Verwenden von Meldungen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In SMO werden systemmeldungen durch dargestellt werden die <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> Objekt, gehört die **Server** Objekt. Da die Systemmeldungen nicht geändert werden können, sind **SystemMessage** -Objekteigenschaften schreibgeschützt.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  In SMO werden systemmeldungen durch dargestellt werden die <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> Objekt, gehört die **Server** Objekt. Da die Systemmeldungen nicht geändert werden können, sind **SystemMessage** -Objekteigenschaften schreibgeschützt.  
   
  Benutzerdefinierte Meldungen werden programmgesteuert vom <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection>-Objekt in SMO dargestellt. Vorhandene benutzerdefinierte Meldungen können ermittelt werden, indem man die Auflistung durchläuft. Neue benutzerdefinierte Meldungen können durch Instanziierung eines neuen **UserDefinedMessage** -Objekts und Festlegung der entsprechenden Eigenschaften erstellt werden.  
   

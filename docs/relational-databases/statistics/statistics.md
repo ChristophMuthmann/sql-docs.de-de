@@ -1,7 +1,7 @@
 ---
 title: Statistik | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 11/20/2017
+ms.date: 12/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -30,18 +30,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 73102f9a2640a9d3481b9e5fd0b613d50c6b1710
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c4fc025cd2026ee0310f67c80a3a05fbd3da45c7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="statistics"></a>Statistik
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Der Abfrageoptimierer verwendet Statistiken zum Erstellen von Abfrageplänen, die die Abfrageleistung verbessern. Bei den meisten Abfragen generiert der Abfrageoptimierer automatisch die notwendigen Statistiken für einen hochwertigen Abfrageplan. In einigen Fällen müssen Sie weitere Statistiken erstellen oder den Abfrageentwurf ändern, um optimale Ergebnisse zu erzielen. Dieses Thema enthält eine Erläuterung von Statistikkonzepten sowie Richtlinien zur effektiven Verwendung von Abfrageoptimierungsstatistiken.  
   
 ##  <a name="DefinitionQOStatistics"></a> Komponenten und Konzepte  
 ### <a name="statistics"></a>Statistik  
- Statistiken zur Abfrageoptimierung sind Objekte, die statistische Informationen über die Verteilung von Werten in Spalten einer Tabelle oder indizierten Sicht enthalten. Der Abfrageoptimierer verwendet diese Statistiken, um die *Kardinalität* oder Anzahl von Zeilen im Abfrageergebnis zu schätzen. Diese *Kardinalitätsschätzungen* ermöglichen es dem Abfrageoptimierer, einen hochwertigen Abfrageplan zu erstellen. Beispielsweise kann der Abfrageoptimierer Kardinalitätsschätzungen verwenden, um statt des ressourcenintensiveren Index Scan-Operators den Index Seek-Operator auszuwählen und auf diese Weise die Abfrageleistung zu verbessern.  
+ Statistiken zur Abfrageoptimierung sind Blobs (Binary Large Objects), die statistische Informationen über die Verteilung von Werten in Spalten einer Tabelle oder indizierten Sicht enthalten. Der Abfrageoptimierer verwendet diese Statistiken, um die *Kardinalität* oder Anzahl von Zeilen im Abfrageergebnis zu schätzen. Diese *Kardinalitätsschätzungen* ermöglichen es dem Abfrageoptimierer, einen hochwertigen Abfrageplan zu erstellen. Beispielsweise kann der Abfrageoptimierer Kardinalitätsschätzungen verwenden, um statt des ressourcenintensiveren Index Scan-Operators den Index Seek-Operator auszuwählen und auf diese Weise die Abfrageleistung zu verbessern.  
   
  Jedes Statistikobjekt wird für eine Liste mit mindestens einer Tabellenspalte erstellt und enthält ein *Histogramm*, das die Verteilung von Werten in der ersten Spalte anzeigt. Statistikobjekte, die sich auf mehrere Spalten beziehen, enthalten außerdem statistische Informationen über die spaltenübergreifende Korrelation von Werten. Diese Korrelationsstatistiken oder *Dichten*werden von der Anzahl unterschiedlicher Zeilen mit Spaltenwerten abgeleitet. 
 
@@ -64,7 +64,7 @@ Zum Erstellen des Histogramms sortiert der Abfrageoptimierer die Spaltenwerte, b
 
 Das folgende Diagramm zeigt ein Histogramm mit sechs Schritten. Der Bereich links vom ersten oberen Grenzwert ist der erste Schritt.
   
-![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
+![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogramm") 
   
 Für jeden der vorherigen Histogrammschritt gilt:
 -   Eine fett formatierte Zeile stellt den oberen Grenzwert (*range_high_key*) und die Häufigkeit des Vorkommens (*equal_rows*) dar.  
@@ -73,7 +73,7 @@ Für jeden der vorherigen Histogrammschritt gilt:
   
 -   Gepunktete Linien stellen die als Stichprobe entnommenen Werte dar, die zum Schätzen der Gesamtanzahl der unterschiedlichen Werte im Bereich (*distinct_range_rows*) verwendet werden, sowie die Gesamtanzahl der Werte im Bereich (*range_rows*). Der Abfrageoptimierer verwendet *range_rows* und *distinct_range_rows*, um *average_range_rows* zu berechnen. Die als Stichprobe entnommenen Werte werden nicht gespeichert.   
   
-#### <a name="density"></a> Dichtevektor  
+#### <a name="density"></a>Dichtevektor  
 Die **Dichte** enthält Informationen zur Anzahl von Duplikaten in einer bestimmten Spalte oder Spaltekombination und wird als 1/(Anzahl der unterschiedlichen Werte) berechnet. Der Abfrageoptimierer verwendet Dichten, um Kardinalitätsschätzungen für Abfragen zu erweitern, die mehrere Spalten aus derselben Tabelle oder indizierten Sicht zurückgeben. Der Dichtevektor enthält eine Dichte für jedes Präfix von Spalten im Statistikobjekt. 
 
 > [!NOTE]
@@ -89,16 +89,16 @@ Wenn ein Statistikobjekt beispielsweise die Schlüsselspalten `CustomerId`, `Ite
 
 ### <a name="filtered-statistics"></a>Gefilterte Statistiken  
  Gefilterte Statistiken können die Abfrageleistung für Abfragen verbessern, bei denen aus klar definierten Teilmengen von Daten ausgewählt wird. Gefilterte Statistiken verwenden ein Filterprädikat, um die Teilmenge von Daten auszuwählen, die in der Statistik enthalten ist. Sorgfältig entworfene gefilterte Statistiken können den Abfrageausführungsplan im Vergleich zu Tabellenstatistiken verbessern. Weitere Informationen zum Filterprädikat finden Sie unter [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md). Weitere Informationen zum Zeitpunkt der Erstellung von gefilterten Statistiken finden Sie im Abschnitt [Zeitpunkt der Erstellung von Statistiken](#CreateStatistics) in diesem Thema.  
-  
+ 
 ### <a name="statistics-options"></a>Statistikoptionen  
  Anhand von drei Optionen können Sie festlegen, wann und wie Statistiken erstellt und aktualisiert werden. Diese Optionen werden nur auf Datenbankebene festgelegt.  
   
-#### <a name="autocreatestatistics-option"></a>AUTO_CREATE_STATISTICS (Option)  
+#### <a name="AutoUpdateStats"></a>AUTO_CREATE_STATISTICS (Option)  
  Ist die [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics)-Option zum automatischen Erstellen von Statistiken aktiviert, erstellt der Abfrageoptimierer nach Bedarf Statistiken für einzelne Spalten im Abfrageprädikat, um Kardinalitätsschätzungen für den Abfrageplan zu verbessern. Diese Statistiken für einzelne Spalten werden für Spalten erstellt, die noch nicht über ein [Histogramm](#histogram) in einem vorhandenen Statistikobjekt verfügen. Durch die AUTO_CREATE_STATISTICS-Option wird nicht festgelegt, ob Statistiken für Indizes erstellt werden. Durch diese Option werden auch keine gefilterten Statistiken generiert. Sie gilt ausschließlich für Statistiken für einzelne Spalten der gesamten Tabelle.  
   
  Erstellt der Abfrageoptimierer Statistiken als Ergebnis der Verwendung der AUTO_CREATE_STATISTICS-Option, beginnt der Statistikname mit `_WA`. Mithilfe der folgenden Abfrage können Sie bestimmen, ob der Abfrageoptimierer Statistiken für eine Abfrageprädikatsspalte erstellt hat.  
   
-```t-sql  
+```sql  
 SELECT OBJECT_NAME(s.object_id) AS object_name,  
     COL_NAME(sc.object_id, sc.column_id) AS column_name,  
     s.name AS statistics_name  
@@ -118,8 +118,8 @@ ORDER BY s.name;
 
 * Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und bei einem [Kompatibilitätsgrad](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) von unter 130 verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen abnehmenden dynamischen Schwellenwert für das Statistikupdate, der gemäß der Anzahl von Zeilen in der Tabelle angepasst wird. Dieser berechnet sich als Quadratwurzel aus 1.000 multipliziert mit der aktuellen Tabellenkardinalität. Durch diese Änderung werden Statistiken für große Tabellen häufiger aktualisiert. Weist eine Datenbank jedoch einen Kompatibilitätsgrad unter 130 auf, dann gilt der Schwellenwert [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
 
-  > [!IMPORTANT]
-  > Ab [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] oder in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verwenden Sie bei einem [Kompatibilitätsgrad der Datenbank](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) unter 130 das [Ablaufverfolgungsflag 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet dann einen abnehmenden dynamischen Schwellenwert für das Statistikupdate, der gemäß der Anzahl von Zeilen in der Tabelle angepasst wird.
+> [!IMPORTANT]
+> Ab [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] oder in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verwenden Sie bei einem [Kompatibilitätsgrad der Datenbank](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) unter 130 das [Ablaufverfolgungsflag 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet dann einen abnehmenden dynamischen Schwellenwert für das Statistikupdate, der gemäß der Anzahl von Zeilen in der Tabelle angepasst wird.
   
 Bevor der Abfrageoptimierer eine Abfrage kompiliert und einen zwischengespeicherten Abfrageplan ausführt, sucht er nach veralteten Statistiken. Vor dem Kompilieren einer Abfrage ermittelt der Abfrageoptimierer anhand der Spalten, Tabellen und indizierten Sichten im Abfrageprädikat, welche Statistiken veraltet sein könnten. Vor dem Ausführen eines zwischengespeicherten Abfrageplans überprüft das [!INCLUDE[ssDE](../../includes/ssde-md.md)] , ob der Abfrageplan auf aktuelle Statistiken verweist.  
   
@@ -143,25 +143,19 @@ Weitere Informationen zur Steuerung von AUTO_UPDATE_STATISTICS finden Sie unter 
   
 * In der Anwendung sind Timeouts bei Clientanforderungen aufgetreten, die dadurch verursacht werden, dass mindestens eine Abfrage auf aktualisierte Statistiken wartet. In einigen Fällen kann das Warten auf synchrone Statistiken dazu führen, dass Anwendungen mit kurzen Timeouts einen Fehler erzeugen.  
   
-#### <a name="incremental-stats"></a>INCREMENTAL STATS  
- Bei ON wird die Statistik pro Partition erstellt. Bei OFF wird die Statistikstruktur gelöscht und die Statistik von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu berechnet. Der Standardwert ist OFF. Diese Einstellung überschreibt die INCREMENTAL-Eigenschaft auf Datenbankebene.  
+#### <a name="incremental"></a>INCREMENTAL  
+ Wenn die Option INCREMENTAL von CREATE STATISTICS auf ON festgelegt ist, werden die Statistiken pro Partition erstellt. Bei OFF wird die Statistikstruktur gelöscht und die Statistik von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu berechnet. Der Standardwert ist OFF. Diese Einstellung überschreibt die INCREMENTAL-Eigenschaft auf Datenbankebene. Weitere Informationen zum Erstellen von inkrementellen Statistiken finden Sie unter [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md). Weitere Informationen zum automatischen Erstellen von Statistiken pro Partition finden Sie unter [Datenbankeigenschaften (Seite „Optionen“)](../../relational-databases/databases/database-properties-options-page.md#automatic) und [ALTER DATABASE SET Options (Transact-SQL) (Optionen für ALTER DATABASE SET (Transact-SQL))](../../t-sql/statements/alter-database-transact-sql-set-options.md). 
   
  Wenn einer umfangreichen Tabelle neue Partitionen hinzugefügt werden, sollte die Statistik aktualisiert werden, um die neuen Partitionen zu berücksichtigen. Das Scannen der gesamten Tabelle (FULLSCAN- oder SAMPLE-Option) könnte jedoch ziemlich lange dauern. Außerdem ist das Scannen der gesamten Tabelle nicht erforderlich, da ggf. nur die Statistik der neuen Partitionen benötigt wird. Durch die INCREMENTAL-Option werden nur Statistikdaten pro Partition erstellt und gespeichert. Beim Update werden nur die Statistiken der Partitionen aktualisiert, die eine neue Statistik erfordern.  
   
  Wenn Statistiken pro Partition nicht unterstützt werden, wird die Option ignoriert und eine Warnung generiert. Inkrementelle Statistiken werden für folgende Statistiktypen nicht unterstützt:  
   
 * Statistiken, die mit Indizes erstellt wurden, die über keine Partitionsausrichtung mit der Basistabelle verfügen.  
-  
 * Statistiken, die für lesbare sekundäre Always On-Datenbanken erstellt wurden.  
-  
 * Statistiken, die für schreibgeschützte Datenbanken erstellt wurden.  
-  
 * Statistiken, die für gefilterte Indizes erstellt wurden.  
-  
 * Statistiken, die für Sichten erstellt wurden.  
-  
 * Statistiken, die für interne Tabellen erstellt wurden.  
-  
 * Statistiken, die mit räumlichen Indizes oder XML-Indizes erstellt wurden.  
   
 **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
@@ -179,12 +173,9 @@ Wenn Statistiken mit der CREATE STATISTICS-Anweisung erstellt werden, empfiehlt 
   
 Wenn eine der folgenden Bedingungen zutrifft, können Sie die Erstellung von Statistiken mit der CREATE STATISTICS-Anweisung in Erwägung ziehen:  
 
-* Der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber schlägt vor, Statistiken zu erstellen.  
-
+* Der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber schlägt vor, Statistiken zu erstellen. 
 * Das Abfrageprädikat enthält mehrere korrelierende Spalten, die sich noch nicht im gleichen Index befinden.  
-
 * Bei der Abfrageausführung wird aus einer Teilmenge von Daten ausgewählt.  
-
 * Statistiken für eine Abfrage fehlen.  
   
 ### <a name="query-predicate-contains-multiple-correlated-columns"></a>Das Abfrageprädikat enthält mehrere korrelierende Spalten  
@@ -196,7 +187,7 @@ Wenn Statistiken für mehrere Spalten erstellt werden, wirkt sich die Reihenfolg
   
 Zum Erstellen von Dichten, die für Kardinalitätsschätzungen hilfreich sind, müssen die Spalten im Abfrageprädikat einem der Spaltenpräfixe in der Statistikobjektdefinition entsprechen. Im Folgenden wird beispielsweise aus den Spalten `LastName`, `MiddleName`und `FirstName`ein Objekt für eine Statistik für mehrere Spalten erstellt.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.stats  
@@ -223,7 +214,7 @@ Durch die folgende Anweisung wird die gefilterte `BikeWeights` -Statistik für a
   
 Der Abfrageoptimierer kann die gefilterte Statistik für `BikeWeights` verwenden, um den Abfrageplan für die folgende Abfrage zu verbessern, bei der alle Fahrräder ausgewählt werden, deren Gewicht größer ist als `25`.  
   
-```t-sql  
+```sql  
 SELECT P.Weight AS Weight, S.Name AS BikeName  
 FROM Production.Product AS P  
     JOIN Production.ProductSubcategory AS S   
@@ -241,9 +232,7 @@ Fehlende Statistiken werden als Warnungen angegeben (Tabellenname als rot format
  Wenn Statistiken fehlen, führen Sie die folgenden Schritte aus:  
   
 * Überprüfen Sie, ob [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) und [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) aktiviert sind.  
-  
 * Stellen Sie sicher, dass die Datenbank nicht schreibgeschützt ist. Wenn die Datenbank schreibgeschützt ist, kann kein neues Statistikobjekt gespeichert werden.  
-  
 * Erstellen Sie die fehlende Statistik mithilfe der [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)-Anweisung.  
   
 Wenn Statistiken zu einer schreibgeschützten Momentaufnahme fehlen oder veraltet sind, erstellt und verwaltet das [!INCLUDE[ssDE](../../includes/ssde-md.md)] temporäre Statistiken in **tempdb**. Wenn das [!INCLUDE[ssDE](../../includes/ssde-md.md)] temporäre Statistiken erstellt, wird dem Statistiknamen das *_readonly_database_statistic*-Suffix angefügt, um die temporären Statistiken von den dauerhaften Statistiken zu unterscheiden. Das Suffix *_readonly_database_statistic* ist für von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generierte Statistiken reserviert. Skripts für die temporären Statistiken können erstellt und auf einer Datenbank mit Lese-/Schreibzugriff reproduziert werden. Bei einer Skripterstellung ändert [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] das Suffix des Statistiknamens von *_readonly_database_statistic* in *_readonly_database_statistic_scripted*.  
@@ -251,7 +240,6 @@ Wenn Statistiken zu einer schreibgeschützten Momentaufnahme fehlen oder veralte
 Nur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann temporäre Statistiken erstellen und aktualisieren. Sie können jedoch temporäre Statistiken löschen und Statistikeigenschaften mit den gleichen Tools überwachen, die Sie für dauerhafte Statistiken verwenden:  
   
 * Löschen Sie temporäre Statistiken mit der Anweisung [DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md).  
-  
 * Überwachen Sie Statistiken mit den Katalogsichten **[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)** und **[sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)**. **sys_stats** beinhaltet die Spalte **is_temporary** . Damit wird angegeben, welche Statistiken dauerhaft und welche temporär sind.  
   
  Da temporäre Statistiken in **tempdb**gespeichert werden, werden durch einen Neustart des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Diensts alle temporären Statistiken entfernt.  
@@ -268,11 +256,9 @@ Nur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann temporäre St
  Ziehen Sie die Aktualisierung von Statistiken unter folgenden Bedingungen in Betracht:  
   
 * Die Ausführungszeiten von Abfragen sind langsam.  
-  
 * Es werden INSERT-Vorgänge für aufsteigend oder absteigend sortierte Schlüsselspalten ausgeführt.  
-  
 * Eine Wartung wurde durchgeführt.  
-  
+
 ### <a name="query-execution-times-are-slow"></a>Lange Ausführungszeiten für Abfragen  
  Wenn die Antwortzeiten von Abfragen langsam oder nicht vorhersagbar sind, sollten Sie sicherstellen, dass Abfragen auf aktuelle Statistiken zugreifen, bevor Sie weitere Schritte zur Problembehandlung ausführen.  
   
@@ -316,7 +302,7 @@ Um die Kardinalitätsschätzungen für Variablen und Funktionen zu verbessern, b
   
      Durch die folgende gespeicherte Prozedur `Sales.GetRecentSales` wird beispielsweise der Wert des Parameters `@date` geändert, wenn `@date` auf NULL festgelegt ist.  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL  
@@ -335,7 +321,7 @@ Um die Kardinalitätsschätzungen für Variablen und Funktionen zu verbessern, b
   
      Wenn der erste Aufruf der gespeicherten Prozedur `Sales.GetRecentSales` für den Parameter `@date` NULL übergibt, kompiliert der Abfrageoptimierer die gespeicherte Prozedur mit der Kardinalitätsschätzung für `@date = NULL`, obwohl das Abfrageprädikat nicht mit `@date = NULL`aufgerufen wird. Diese Kardinalitätsschätzung kann deutlich von der Anzahl der Zeilen im tatsächlichen Abfrageergebnis abweichen. Folglich könnte der Abfrageoptimierer einen suboptimalen Abfrageplan auswählen. Um dies zu vermeiden, können Sie die gespeicherte Prozedur wie folgt in zwei Prozeduren unterteilen:  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID ( 'Sales.GetNullRecentSales', 'P') IS NOT NULL  
@@ -365,7 +351,7 @@ Um die Kardinalitätsschätzungen für Variablen und Funktionen zu verbessern, b
   
  Bei einigen Anwendungen könnte es zu lange dauern, die Abfrage bei jeder Ausführung neu zu kompilieren. Der `OPTIMIZE FOR`-Abfragehinweis kann selbst dann hilfreich sein, wenn Sie die `RECOMPILE`-Option nicht verwenden. Sie können der gespeicherten Prozedur „Sales.GetRecentSales“ z.B. eine `OPTIMIZE FOR`-Option hinzufügen, um ein bestimmtes Datum anzugeben. Im folgenden Beispiel wird der Prozedur „Sales.GetRecentSales“ `OPTIMIZE FOR`-Option hinzugefügt.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL  
@@ -387,7 +373,7 @@ GO
  Für einige Anwendungen sind die Abfrageentwurfsrichtlinien möglicherweise nicht geeignet, weil Sie die Abfrage nicht ändern können oder die Verwendung des RECOMPILE-Abfragehinweises zu viele Neukompilierungen verursacht. Sie können mithilfe der Planhinweislisten weitere Hinweise (z. B. USE PLAN) angeben, um das Abfrageverhalten zu steuern. Zur gleichen Zeit können Sie mit dem Hersteller klären, ob die Anwendung geändert wurde. Weitere Informationen zu Planhinweislisten finden Sie unter [Planhinweislisten](../../relational-databases/performance/plan-guides.md).  
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
@@ -401,4 +387,5 @@ GO
  [STATS_DATE (Transact-SQL)](../../t-sql/functions/stats-date-transact-sql.md)   
  [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
  [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
- 
+ [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)  
+ [sys.stats_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)

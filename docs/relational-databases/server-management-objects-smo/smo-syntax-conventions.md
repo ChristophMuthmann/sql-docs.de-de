@@ -18,18 +18,20 @@ helpviewer_keywords:
 - SQL Server Management Objects, syntax conventions
 ms.assetid: 27aa179a-f3ee-4c70-9e7b-e26dba28bc3c
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9801fd89887e0e18c69bbf6e97fe5fc364961a8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2179ab4c4878290ce45bfe83afea32b0c00c5d8c
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="smo-syntax-conventions"></a>SMO-Syntaxkonventionen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) typographischen Konventionen basieren auf Codesignatur- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Referenzmaterial für Visual Studio .NET.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Objects (SMO) typographischen Konventionen basieren auf Codesignatur- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Referenzmaterial für Visual Studio .NET.  
   
 |Konvention|Syntaxelemente|  
 |----------------|--------------|  

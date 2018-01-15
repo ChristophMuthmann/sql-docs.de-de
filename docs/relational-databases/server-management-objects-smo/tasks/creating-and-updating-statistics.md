@@ -14,18 +14,18 @@ ms.topic: reference
 helpviewer_keywords: statistical information [SMO]
 ms.assetid: 47a0a172-a969-4deb-bca9-dd04401a0fe1
 caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f1acbf6b7d4c0a14bb9f236d0b802f0e96ff070
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7c1a24487cf7460024fd26e1f4101c791d29589d
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-and-updating-statistics"></a>Erstellen und Aktualisieren von Statistiken
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In SMO kann statistische Informationen zur Verarbeitung von Abfragen in der Datenbank gesammelt werden mithilfe der <xref:Microsoft.SqlServer.Management.Smo.Statistic> Objekt.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]In SMO kann statistische Informationen zur Verarbeitung von Abfragen in der Datenbank gesammelt werden mithilfe der <xref:Microsoft.SqlServer.Management.Smo.Statistic> Objekt.  
   
  Es ist möglich, zum Erstellen von Statistiken für eine Spalte mit dem <xref:Microsoft.SqlServer.Management.Smo.Statistic> und <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> Objekt. Die <xref:Microsoft.SqlServer.Management.Smo.Statistic.Update%2A>-Methode kann ausgeführt werden, um die Statistik im <xref:Microsoft.SqlServer.Management.Smo.Statistic>-Objekt zu aktualisieren. Die Ergebnisse können im Abfrageoptimierer angezeigt werden.  
   

@@ -29,11 +29,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 52fb7eaebe655c2be06b23522e434a2e08950b62
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 345977aa442e8b2a646c2c13caaf71d946ee1a93
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sqlservr-application"></a>sqlservr (Anwendung)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Die **Sqlservr** Anwendung startet, beendet, angehalten und fortgesetzt wird eine Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] über eine Eingabeaufforderung.  
@@ -67,18 +67,18 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  Startet eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz mit Minimalkonfiguration. Dies ist hilfreich, wenn der Server aufgrund der Einstellung eines Konfigurationswerts (z. B. aufgrund von Arbeitsspeichermangel) nicht gestartet werden kann.  
   
  **-e** *error_log_path*  
- Gibt den vollqualifizierten Pfad der Fehlerprotokolldatei an. Wenn nicht angegeben, ist der Standardspeicherort  *\<Laufwerk >*: \Programme\Microsoft SQL Server\MSSQL\Log\Errorlog für die Standardinstanz und  *\<Laufwerk >*: \Programme\Microsoft SQL Server\MSSQL$*Instance_name*\Log\Errorlog für eine benannte Instanz. Zwischen **-e** und *error_log_path*darf sich kein Leerzeichen befinden.  
+ Gibt den vollqualifizierten Pfad der Fehlerprotokolldatei an. Wenn nicht angegeben, ist der Standardspeicherort  *\<Laufwerk >*: \Programme\Microsoft SQL Server\MSSQL\Log\Errorlog für die Standardinstanz und  *\<Laufwerk >*: \Programme\Microsoft SQL Server\MSSQL$*Instance_name*\Log\Errorlog für eine benannte Instanz. Zwischen **-e** und *error_log_path* darf sich kein Leerzeichen befinden.  
   
- **-l** *Master_log_path*  
+ **-l** *master_log_path*  
  Gibt den vollqualifizierten Pfad für die Transaktionsprotokolldatei der **master** -Datenbank an. Zwischen **-l** und *master_log_path*darf sich kein Leerzeichen befinden.  
   
  **-m**  
  Gibt an, dass eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz im Einzelbenutzermodus gestartet werden soll. Wenn [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] im Einzelbenutzermodus gestartet wurde, kann nur ein Benutzer eine Verbindung herstellen. Der CHECKPOINT-Mechanismus, der sicherstellt, dass abgeschlossene Transaktionen regelmäßig aus dem Datenträgercache auf die Datenbankmedien geschrieben werden, wird nicht gestartet. (Diese Option wird normalerweise verwendet, wenn Sie Probleme mit Systemdatenbanken erkennen, die eine Reparatur erfordern.) Diese Option aktiviert die Option **sp_configure allow updates** (Updates zulassen). Standardmäßig ist **allow updates** deaktiviert.  
   
  **-n**  
- Ermöglicht es Ihnen, eine benannte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz zu starten. Wurde der **-s** -Parameter nicht festgelegt, versucht die Standardinstanz zu starten. Sie müssen an der Eingabeaufforderung in das entsprechende BINN-Verzeichnis für die Instanz wechseln, bevor Sie **sqlservr.exe**starten. Wenn Instanz 1 beispielsweise das Verzeichnis „\mssql$Instance1“ für die zugehörigen Binärdateien verwendet, muss der Benutzer zum Verzeichnis „\mssql$Instance1\binn“ wechseln, um **sqlservr.exe -s instance1**starten zu können. Wenn Sie eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz mit der Option **-n** starten, sollten Sie auch die Option **-e** verwenden, da sonst keine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Ereignisse protokolliert werden.  
+ Ermöglicht es Ihnen, eine benannte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz zu starten. Wurde der **-s** -Parameter nicht festgelegt, versucht die Standardinstanz zu starten. Sie müssen an der Eingabeaufforderung in das entsprechende BINN-Verzeichnis für die Instanz wechseln, bevor Sie **sqlservr.exe**starten. Wenn Instance1 beispielsweise das Verzeichnis „\mssql$Instance1“ für die zugehörigen Binärdateien verwendet wird, muss der Benutzer zum Verzeichnis „\mssql$Instance1\binn“ wechseln, um **sqlservr.exe -s instance1**starten zu können. Wenn Sie beim Starten einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mit der  **-n**  -Option ist es ratsam, verwenden Sie die **-e** option, oder [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Ereignisse werden nicht protokolliert.  
   
- **T -** *Trace#*  
+ **-T** *trace#*  
  Gibt an, dass eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz so gestartet werden soll, dass ein bestimmtes Ablaufverfolgungsflag (*trace#*) wirksam wird. Ablaufverfolgungsflags werden verwendet, um den Server mit nicht standardmäßigem Verhalten zu starten. Weitere Informationen finden Sie unter [Ablaufverfolgungsflags &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
 > [!IMPORTANT]  
@@ -101,7 +101,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
   
 -   „Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT <Größe\<“  
   
- Diese Meldungen können darauf hinweisen, dass [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] versucht, Teile des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Speicherpools freizugeben, um Speicherplatz für Elemente wie DLL-Dateien von erweiterten gespeicherten Prozeduren oder Automatisierungsobjekte zu erhalten. In diesem Fall sollten Sie erwägen, den durch den Schalter **-g**reservierten Umfang an Arbeitsspeicher zu erhöhen.  
+ Diese Meldungen können darauf hinweisen, dass [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] versucht, Teile des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Speicherpools freizugeben, um Speicherplatz für Elemente wie DLL-Dateien von erweiterten gespeicherten Prozeduren oder Automatisierungsobjekte zu erhalten. In diesem Fall sollten Sie erwägen, den durch den Schalter **-g** reservierten Umfang an Arbeitsspeicher zu erhöhen.  
   
  Wenn Sie einen Wert verwenden, der niedriger als der Standardwert ist, erhöht sich dadurch der Umfang des Arbeitsspeichers, der für den Pufferpool und die Threadstapel zur Verfügung steht. Dies kann wiederum eine gewisse Verbesserung der Leistung für arbeitsspeicherintensive Arbeitsauslastungen in Systemen bedeuten, die nicht viele erweiterte gespeicherte Prozeduren, verteilte Abfragen oder Automatisierungsobjekte verwenden.  
   
@@ -112,6 +112,6 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  Der **-h**  -Parameter wird in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]nicht unterstützt. Dieser Parameter wurde in früheren Versionen der 32-Bit-Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet, um virtuellen Adressraum für Metadaten zum Hinzufügen von Speicher im laufenden Systembetrieb (Hot Add Memory) zu reservieren, wenn AWE aktiviert ist. Weitere Informationen finden Sie unter [Nicht mehr unterstützte SQL Server-Funktionen in SQL Server 2016](http://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Startoptionen für den Datenbankmoduldienst](../database-engine/configure-windows/database-engine-service-startup-options.md)  
+ [Database Engine Service Startup Options](../database-engine/configure-windows/database-engine-service-startup-options.md)  
   
   
