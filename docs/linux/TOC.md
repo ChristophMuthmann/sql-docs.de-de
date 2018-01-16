@@ -26,6 +26,7 @@
 ### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
 ## [7_Bereitstellen eines Peacemaker-Clusters](sql-server-linux-deploy-pacemaker-cluster.md)
 ## [8_Erstellen und Konfigurieren von Verfügbarkeitsgruppen](sql-server-linux-create-availability-group.md)
+## [9_Konfigurieren in Kubernetes für Hochverfügbarkeit](tutorial-sql-server-containers-kubernetes.md)
 
 # Konzepte
 ## Install
@@ -85,7 +86,7 @@
 #### [Erstellung nur für schreibgeschützten Zugriff]()
 ##### [Configure AG (Konfigurieren von AG)](sql-server-linux-availability-group-configure-rs.md)
 
-## [Sicherheit](sql-server-linux-security-overview.md)
+## [Security](sql-server-linux-security-overview.md)
 ### [Get started with security features (Erste Schritte mit den Sicherheitsfeatures)](sql-server-linux-security-get-started.md)
 ### [Verschlüsseln von Verbindungen](sql-server-linux-encrypted-connections.md)
 
