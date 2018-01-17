@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0caf3ad75ae1362252d23b1fc0489e5fcf5bdc32
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e332dbcf96d58b867029a3a5ec4f7be950b1992d
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="bcpsendrow"></a>'bcp_sendrow'
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ RETCODE bcp_sendrow (
   
  Vor dem Aufruf **Bcp_sendrow**, müssen Aufrufe an [Bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) um die Programmvariablen mit den Zeilendaten anzugeben.  
   
- Wird **bcp_bind** unter Angabe eines langen Datentyps variabler Länge wie einem *eDataType* -Parameter von SQLTEXT und einem *pData* -Parameter ungleich NULL aufgerufen, sendet **bcp_sendrow** wie bei jedem anderen Datentyp den gesamten Datenwert. IF, allerdings **Bcp_bind** enthält eine NULL *pData* Parameter **Bcp_sendrow** Steuerelement an die Anwendung zurückgegeben werden, sofort, nachdem alle Spalten mit den angegebenen Daten an gesendet werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die Anwendung kann dann aufrufen [Bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) wiederholt, um die langen, variabler Länge, die Daten senden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ein Segment zu einem Zeitpunkt. Weitere Informationen finden Sie unter [Bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md).  
+ Wenn **Bcp_bind** aufgerufen wird, Angeben eines langen Daten variabler Länge-Typs, z. B. ein *eDataType* -Parameter von SQLTEXT und ein Wert ungleich NULL *pData* Parameter, **Bcp_sendrow** sendet den gesamten Datenwert, ebenso wie bei einem beliebigen anderen Datentyp dar. IF, allerdings **Bcp_bind** enthält eine NULL *pData* Parameter **Bcp_sendrow** Steuerelement an die Anwendung zurückgegeben werden, sofort, nachdem alle Spalten mit den angegebenen Daten an gesendet werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die Anwendung kann dann aufrufen [Bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) wiederholt, um die langen, variabler Länge, die Daten senden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ein Segment zu einem Zeitpunkt. Weitere Informationen finden Sie unter [Bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md).  
   
  Wenn **Bcp_sendrow** wird verwendet, um Zeilen aus Programmvariablen in Massenimport [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabellen, Zeilen sind ein Commit ausgeführt wurde, nur, wenn der Benutzer ruft [Bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) oder [Bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) . Der Benutzer kann wahlweise Aufrufen **Bcp_batch** nach jedem  *n*  Zeilen oder wird zwischen der eingehenden Daten eine Pause auftritt. Wird **bcp_batch** nie aufgerufen, wird ein Commit für die Zeilen ausgeführt, wenn **bcp_done** aufgerufen wird.  
   

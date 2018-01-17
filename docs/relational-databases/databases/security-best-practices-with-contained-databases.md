@@ -18,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fd6636cc4e2ee383fbd178b0f6b1e304f996570c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 612ee0b5301554b2a078493ed2df419d992b4391
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Bewährte Methoden für die Sicherheit eigenständiger Datenbanken
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Eigenständige Datenbanken bergen einige eindeutige Risiken. Diese müssen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Administratoren erkannt und gemindert werden. Die meisten Bedrohungen betreffen den Authentifizierungsprozess **USER WITH PASSWORD** , durch den die Authentifizierungsgrenze von der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Ebene auf die Datenbankebene verschoben wird.  
   
@@ -92,7 +92,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ## <a name="denial-of-service-through-autoclose"></a>Denial-of-Service-Angriff durch AUTO_CLOSE  
  Konfigurieren Sie eigenständige Datenbanken nicht so, dass sie automatisch geschlossen werden. Wenn die Datenbank nach dem Schließen geöffnet wird, um einen Benutzer zu authentifizieren, werden zusätzliche Ressourcen belegt, und dies kann in einem Denial-of-Service-Angriff ausgenutzt werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Eigenständige Datenbanken](../../relational-databases/databases/contained-databases.md)   
  [Migrieren zu einer partiell eigenständigen Datenbank](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)  
   

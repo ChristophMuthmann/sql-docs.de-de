@@ -20,14 +20,14 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9bd08b3188bc8b7a968753c01d09dba3ecf49a7e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 51130dcbecc1fcb3c83771d5fab680863d01b40d
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Eigenständige Datenbankbenutzer - machen Sie Ihre Datenbank portabel
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Verwenden Sie eigenständige Datenbankbenutzer, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - und [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Verbindungen auf Datenbankebene zu authentifizieren. Eine eigenständige Datenbank ist eine Datenbank, die von anderen Datenbanken und der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (und der Masterdatenbank), der die Datenbank hostet, isoliert ist. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt eigenständige Datenbankbenutzer sowohl für die Windows- als auch für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung. Kombinieren Sie bei Verwendung von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]eigenständige Datenbankbenutzer mit den Firewallregeln auf Datenbankebene. In diesem Thema werden die Unterschiede und Vorteile der Verwendung von einem eigenständigen Datenbankmodell im Vergleich zum herkömmlichen Anmelde-/Benutzermodell sowie zu Firewallregeln für Windows bzw. auf Serverebene vorgestellt. Bestimmte Szenarien, Verwaltbarkeit oder Anwendungsgeschäftslogik können dennoch den Einsatz des herkömmlichen Anmelde-/Benutzermodells und von Firewallregeln auf Serverebene erfordern.  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/21/2017
 |-----------------------|-----------------------------------|  
 |So ändern Sie das Kennwort im Kontext der Masterdatenbank:<br /><br /> `ALTER LOGIN login_name  WITH PASSWORD = 'strong_password';`|So ändern Sie das Kennwort im Kontext der Benutzerdatenbank:<br /><br /> `ALTER USER user_name  WITH PASSWORD = 'strong_password';`|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
   
 -   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]müssen eigenständige Datenbankbenutzer für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktiviert werden. Weitere Informationen finden Sie unter [contained database authentication Server Configuration Option](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md).  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Verwenden Sie Kennwörter derselben Stärke, wie Sie sie normalerweise für Anmeldenamen verwenden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Eigenständige Datenbanken](../../relational-databases/databases/contained-databases.md)   
  [Bewährte Methoden für die Sicherheit eigenständiger Datenbanken](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   

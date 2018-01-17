@@ -1,7 +1,7 @@
 ---
 title: FILESTREAM (SQL Server) | Microsoft-Dokumentation
 ms.custom: 
-ms.date: 10/17/2016
+ms.date: 01/11/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -21,14 +21,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9435c864a481a5df25e74c132062cada5ca0e7b5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 393b9178fcda3ba0487fc361e4edf107c17d042b
+ms.sourcegitcommit: 06131936f725a49c1364bfcc2fccac844d20ee4d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[tsql-appliesto-sslinux-only](../../includes/tsql-appliesto-sswindows-only.md)]
 
 FILESTREAM ermöglicht es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-basierten Anwendungen, nicht strukturierte Daten wie beispielsweise Dokumente und Bilder im Dateisystem zu speichern. Anwendungen können die umfassenden Streaming-APIs und die Leistung des Dateisystems nutzen und dabei die Transaktionskonsistenz zwischen den nicht strukturierten Daten und den entsprechenden strukturierten Daten erhalten.  
@@ -154,7 +153,7 @@ Der Remotedateisystemzugriff auf FILESTREAM-Daten wird über das SMB (Server Mes
 
 Die Erstellung von Speicherabbildern (E/A mit Speicherabbildern) mit einem FILESTREAM-Handle wird nicht unterstützt. Wenn Speicherabbilder für FILESTREAM-Daten verwendet werden, kann [!INCLUDE[ssDE](../../includes/ssde-md.md)] weder die Konsistenz und Dauerhaftigkeit der Daten noch die Datenbankintegrität garantieren.  
 
-## <a name="related-tasks"></a>Verwandte Aufgaben
+## <a name="related-tasks"></a>Related Tasks
 
 [Aktivieren und Konfigurieren von FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)  
 [Erstellen einer FILESTREAM-aktivierten Datenbank](../../relational-databases/blob/create-a-filestream-enabled-database.md)  

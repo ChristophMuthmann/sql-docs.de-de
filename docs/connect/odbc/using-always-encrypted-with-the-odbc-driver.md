@@ -17,11 +17,11 @@ ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
-ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
-ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
+ms.openlocfilehash: 307c9e4774037560884c7e2da43c1fed1c405a14
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Mit "immer verschlüsselt" mit dem ODBC-Treiber für SQLServer
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -350,8 +350,8 @@ Der ODBC-Treiber für SQL Server enthält die folgenden integrierten-Schlüssels
 
 | Name | Description | Name des Anbieters (Metadaten) |Verfügbarkeit|
 |:---|:---|:---|:---|
-|Azure-Schlüsseltresor |Speichern von CMKs in ein Azure-Schlüsseltresor | `AZURE_KEY_VAULT` |Windows, Mac OS, Linux|
-|Windows-Zertifikatspeicher|CMKs lokal speichert, in der Windows-Schlüsselspeicher| `MSSQL_CERTIFICATE_STORE`|Windows|
+|Azure-Schlüsseltresor |Speichern von CMKs in ein Azure-Schlüsseltresor | `AZURE_KEY_VAULT` |Windows, macOS, Linux|
+|Windows Certificate Store|CMKs lokal speichert, in der Windows-Schlüsselspeicher| `MSSQL_CERTIFICATE_STORE`|Windows|
 
 - Sie (oder Ihrem DBA) müssen sicherstellen, dass die in den Metadaten des spaltenhauptschlüssels, konfigurierte Anbietername richtig ist und der Pfad des Hauptschlüssels Spalte Schlüsselpfad Format für den gegebenen Provider einhält. Es wird empfohlen, dass Sie die Schlüssel mithilfe von Tools wie SQL Server Management Studio konfigurieren, die die gültigen Anbieternamen und Schlüsselpfade automatisch generieren, wenn die Anweisung [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md) ausgegeben wird.
 
@@ -378,13 +378,13 @@ Damit um den Treiber CMKs in AKV speichern gespeichert werden, für die spaltenv
 
 Die folgenden Verbindungszeichenfolgen zeigen, wie Azure Key Vault mit den beiden Anmeldeinformationstypen zu authentifizieren:
 
-**ClientID/-Geheimnis**:
+**ClientID/Secret**:
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**Benutzername/Kennwort**
+**Username/Password**
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
@@ -526,7 +526,7 @@ Ein Beispiel für einen eigenen Schlüsselspeicheranbieter implementieren, finde
 Während der ODBC-Treiber die Verwendung von ermöglichen [asynchrone Vorgänge](../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md) mit Always Encrypted, besteht eine Leistungseinbuße auf den Betrieb Wenn Always Encrypted aktiviert ist. Der Aufruf von `sys.sp_describe_parameter_encryption` verschlüsselungsmetadaten zu bestimmen, für die Anweisung blockiert wird, und dazu, den Treiber für den Server dass führt zurückzugebenden Metadaten vor der Rückgabe warten `SQL_STILL_EXECUTING`.
 
 ### <a name="retrieve-data-in-parts-with-sqlgetdata"></a>Abrufen von Daten in Teilen mit SQLGetData
-Bevor verschlüsselt 17 von ODBC-Treiber für SQL Server können Zeichen und binärer Spalten in Teilen mit SQLGetData abgerufen werden. Nur ein Aufruf von SQLGetData kann vorgenommen werden, mit einem Puffer, der ausreichend lang ist, um die gesamte Spalte Daten enthalten.
+Bevor verschlüsselt 17 von ODBC-Treiber für SQL Server können Zeichen und binärer Spalten in Teilen mit SQLGetData abgerufen werden. Nur ein Aufruf von SQLGetData kann vorgenommen werden, mit einem Puffer, der ausreichend lang ist, um die gesamte Spalte Daten enthalten. ODBC-Treiber 17 für SQL Server verschlüsselt **varbinary(max)** Spalten können nicht in Teilen mit SQLGetData und eine C-Typ SQL_C_BINARY abgerufen werden.
 
 ### <a name="send-data-in-parts-with-sqlputdata"></a>Senden von Daten mit SQLPutData Teilen
 Daten einfügen oder Vergleich können nicht in Teilen mit SQLPutData gesendet werden. Nur ein Aufruf von SQLPutData kann vorgenommen werden, mit einem Puffer, die gesamten Daten enthält. Verwenden Sie zum Einfügen von long-Daten in verschlüsselten Spalten ein, API für das Massenkopieren, mit einer Eingabe-Datendatei im nächsten Abschnitt beschrieben.

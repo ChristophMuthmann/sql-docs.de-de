@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 86f3a722b11761f2d195cd0490c1b9adb5479bed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4b48c2c0953e3565a406bf2a22788a2e1c537110
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="bcpcolumns"></a>bcp_columns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ RETCODE bcp_columns (
   
  Sie sollten diese Funktion nur aufrufen, wenn Sie ein Benutzerdateiformat verwenden möchten, das sich vom Standardformat unterscheidet. Weitere Informationen über eine Beschreibung des Benutzer-Standardformats für finden Sie unter **Bcp_init**.  
   
- Nach dem Aufruf **Bcp_columns**, rufen Sie [Bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)für jede Spalte in der Benutzerdatei, um benutzerdefinierte Dateiformat vollständig zu definieren.  
+ Nach dem Aufruf **Bcp_columns**, rufen Sie [Bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) für jede Spalte in der Benutzerdatei, um benutzerdefinierte Dateiformat vollständig zu definieren.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Funktionen zum Massenkopieren](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

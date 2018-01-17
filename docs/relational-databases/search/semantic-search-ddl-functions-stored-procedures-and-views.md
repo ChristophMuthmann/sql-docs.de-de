@@ -18,14 +18,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8d55057cc7c145b5c0bf3d6e0263e858164e7747
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b8298dff8e35d77798e8eb2381a7971da76b3681
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>Semantische Such-DDL, Funktionen, gespeicherte Prozeduren und Sichten
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Im Folgenden finden Sie eine Liste der Transact-SQL-Anweisungen und Datenbankobjekte, die die statistische semantische Suche in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Im Folgenden finden Sie eine Liste der Transact-SQL-Anweisungen und Datenbankobjekte, die die statistische semantische Suche in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützen.  
   
  Eine Liste der Anweisungen und Datenbankobjekte, die die Volltextsuche unterstützen, finden Sie unter [DDL, Funktionen, gespeicherte Prozeduren und Sichten für Volltextsuche](../../relational-databases/search/full-text-search-ddl-functions-stored-procedures-and-views.md).  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
 |[sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)|[Verwalten und Überwachen der semantischen Suche](../../relational-databases/search/manage-and-monitor-semantic-search.md)|  
 |[sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)|[Verwalten und Überwachen der semantischen Suche](../../relational-databases/search/manage-and-monitor-semantic-search.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Verwalten und Überwachen der semantischen Suche](../../relational-databases/search/manage-and-monitor-semantic-search.md)  
   
   

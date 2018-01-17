@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a18017f252d787ed9a5322e32ccf6997b208890
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2fe615792733b5633bcfd9e8d64e48edb8a6d219
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -129,7 +129,7 @@ RETCODE bcp_colfmt (
   
 -   Die Länge der optionalen abschließenden Bytesequenz  
   
- Jeder Aufruf von **Bcp_colfmt** gibt das Format für eine benutzerdateispalte an. Angenommen, um die Standardeinstellungen für drei Spalten in einer Benutzerdatendatei fünf Spalten zu ändern, rufen Sie zuerst [Bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)**, und rufen dann **Bcp_colfmt** fünf Mal mit drei dieser Aufrufe Ihr benutzerdefiniertes Format festgelegt. Legen Sie für die verbleibenden zwei Aufrufe *eUserDataType* auf 0 und *CbIndicator*, *CbUserData*, und *CbUserDataTerm* auf 0, SQL_VARLEN _Data, und 0 bzw.. Mit diesem Verfahren werden alle fünf Spalten kopiert, drei mit dem benutzerdefinierten Format und zwei mit dem Standardformat.  
+ Jeder Aufruf von **Bcp_colfmt** gibt das Format für eine benutzerdateispalte an. Angenommen, um die Standardeinstellungen für drei Spalten in einer Benutzerdatendatei fünf Spalten zu ändern, rufen Sie zuerst [Bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)**, und rufen dann **Bcp_colfmt** fünf Mal mit drei dieser Aufrufe Ihr benutzerdefiniertes Format festgelegt. Legen Sie für die verbleibenden zwei Aufrufe *eUserDataType* auf 0 und *CbIndicator*, *CbUserData*, und *CbUserDataTerm* auf 0, SQL_VARLEN _Data, und 0 bzw. Mit diesem Verfahren werden alle fünf Spalten kopiert, drei mit dem benutzerdefinierten Format und zwei mit dem Standardformat.  
   
  Für *CbIndicator*, ein Wert von 8, um einen großen Werttyp anzugeben ist jetzt gültig. Wenn das Präfix für ein Feld angegeben wird, dessen entsprechende Spalte den neuen max-Typ aufweist, kann dafür nur 8 festgelegt werden. Weitere Informationen finden Sie unter [Bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md).  
   
@@ -144,7 +144,7 @@ RETCODE bcp_colfmt (
  Die [Bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) Funktion kann verwendet werden, um die Formatspezifikation persistent zu speichern.  
   
 ## <a name="bcpcolfmt-support-for-enhanced-date-and-time-features"></a>'bcp_colfmt'-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
- Informationen über Typen verwendet werden, mit der *eUserDataType* -Parameter für Datum/Uhrzeit-Typen finden Sie unter [Massenkopieränderungen für erweiterte Datums- und Uhrzeittypen &#40; OLE DB und ODBC &#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+ Informationen zu den Arten der Verwendung der *eUserDataType* -Parameter für Datum/Uhrzeit-Typen finden Sie unter [Massenkopieränderungen für erweiterte Datums- und Uhrzeittypen &#40; OLE DB und ODBC &#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
  Weitere Informationen finden Sie unter [Datum und Uhrzeit-Verbesserungen &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   

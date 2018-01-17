@@ -3,7 +3,7 @@ title: Partitionierte Tabellen und Indizes | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 01/20/2016
 ms.prod: sql-non-specified
-ms.prod_service: database-engine
+ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: partitions
 ms.reviewer: 
@@ -22,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7202f88e1a77a36148eca8bd90861afe53fbb4fc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 17eebdb3bfb3acdbdf7371ef5884f553e51dd19a
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/11/2018
 ---
-# <a name="partitioned-tables-and-indexes"></a>Partitionierte Tabellen und Indizes
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die Tabellen- und Indexpartitionierung. Die Daten partitionierter Tabellen und Indizes werden in Einheiten aufgeteilt, die über mehrere Dateigruppen in einer Datenbank verteilt sein können. Die Daten werden horizontal partitioniert, sodass Gruppen von Zeilen einzelnen Partitionen zugeordnet werden. Alle Partitionen eines einzelnen Indexes oder einer Tabelle müssen sich in der gleichen Datenbank befinden. Die Tabelle oder der Index wird als einzelne logische Entität behandelt, wenn Abfragen oder Aktualisierungen für die Daten ausgeführt werden. Vor [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 waren partitionierte Tabellen und Indizes nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+# <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die Tabellen- und Indexpartitionierung. Die Daten partitionierter Tabellen und Indizes werden in Einheiten aufgeteilt, die über mehrere Dateigruppen in einer Datenbank verteilt sein können. Die Daten werden horizontal partitioniert, sodass Gruppen von Zeilen einzelnen Partitionen zugeordnet werden. Alle Partitionen eines einzelnen Indexes oder einer Tabelle müssen sich in der gleichen Datenbank befinden. Die Tabelle oder der Index wird als einzelne logische Entität behandelt, wenn Abfragen oder Aktualisierungen für die Daten ausgeführt werden. Vor [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 waren partitionierte Tabellen und Indizes nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt standardmäßig bis zu 15.000 Partitionen. In Versionen vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]war die Anzahl der Partitionen standardmäßig auf 1.000 beschränkt. Auf x86-basierten Systemen ist das Erstellen einer Tabelle oder eines Index mit mehr als 1000 möglich, wird jedoch nicht unterstützt.  
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/17/2017
  Zur Maximierung der Leistung paralleler Vorgänge wird empfohlen, die gleiche Anzahl von Partitionen und Prozessorkernen und bis zu einem Maximum von 64 zu verwenden (was die maximal zulässige Anzahl paralleler Prozessoren ist, die SQL Server nutzen kann).  
   
 ### <a name="memory-usage-and-guidelines"></a>Speicherauslastung und Richtlinien  
- Es empfiehlt sich, mindestens 16 GB Arbeitsspeicher zu verwenden, wenn eine große Anzahl von Partitionen verwendet wird. Wenn das System nicht über ausreichend Arbeitsspeicher verfügt, kann es bei DML-Anweisungen (Datenbearbeitungssprache), DDL-Anweisungen (Datendefinitionssprache) und anderen Vorgängen aufgrund ungenügenden Arbeitsspeichers zu Fehlern kommen. Bei Systemen mit 16 GB Arbeitsspeicher, die zahlreiche speicherintensive Prozesse ausführen, kann es bei Vorgängen, die für eine große Anzahl von Partitionen ausgeführt werden, zu Fehlern aufgrund von Speicherauslastung kommen. Je mehr Arbeitsspeicher Sie über die empfohlenen 16 GB hinaus verwenden, desto geringer ist die Wahrscheinlichkeit, dass Probleme mit der Leistung und Speicherauslastung auftreten.  
+ Es empfiehlt sich, mindestens 16 GB Arbeitsspeicher zu verwenden, wenn eine große Anzahl von Partitionen verwendet wird. Wenn das System nicht über ausreichend Arbeitsspeicher verfügt, kann es bei DML-Anweisungen (Datenbearbeitungssprache), DDL-Anweisungen (Datendefinitionssprache) und anderen Vorgängen aufgrund ungenügenden Arbeitsspeichers zu Fehlern kommen. Bei Systemen mit 16 GB Arbeitsspeicher, die zahlreiche speicherintensive Prozesse ausführen, kann es bei Vorgängen, die für eine große Anzahl von Partitionen ausgeführt werden, zu Fehlern aufgrund von Speicherauslastung kommen. Je mehr Arbeitsspeicher Sie über die empfohlenen 16 GB hinaus verwenden, desto geringer ist die Wahrscheinlichkeit, dass Probleme mit der Leistung und Speicherauslastung auftreten.  
   
  Einschränkungen beim Arbeitsspeicher können sich negativ auf die Leistung oder auf die Möglichkeit von SQL Server zum Erstellen eines partitionierten Index auswirken. Das gilt insbesondere für den Fall, wenn der Index nicht an seiner Basistabelle oder an deren gruppierten Index ausgerichtet ist, sofern für die Tabelle bereits ein gruppierter Index erstellt wurde.  
   
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="behavior-changes-in-statistics-computation-during-partitioned-index-operations"></a>Das Verhalten ändert sich beim Berechnen von Statistiken, während Vorgänge für partitionierte Indizes durchgeführt werden  
  Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]werden Statistiken nicht durch das Scannen aller Zeilen in der Tabelle erstellt, wenn ein partitionierter Index erstellt oder neu erstellt wird. Der Abfrageoptimierer generiert stattdessen Statistiken mithilfe des Standardalgorithmus zur Stichprobenentnahme. Nachdem eine Datenbank mit partitionierten Indizes aktualisiert wurde, bemerken Sie möglicherweise einen Unterschied in den Histogrammdaten für diese Indizes. Diese Änderung des Verhaltens beeinträchtigt die Abfrageleistung möglicherweise nicht. Um Statistiken zu partitionierten Indizes durch das Scannen aller Zeilen in der Tabelle abzurufen, verwenden Sie CREATE STATISTICS oder UPDATE STATISTICS mit der FULLSCAN-Klausel.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  

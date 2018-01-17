@@ -22,14 +22,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7b9a1fe1c33de87d0d298e530e4704f669e7675c
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 6bd21c1c3be6109431165eb0c7c17ad1cb88a1c6
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="semantic-search-sql-server"></a>Semantische Suche (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Die statistische semantische Suche liefert einen tiefen Einblick in unstrukturierte Dokumente, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken gespeichert sind, indem statistisch relevante *Schlüsselausdrücke* extrahiert und indiziert werden. Anschließend werden diese Schlüsselausdrücke verwendet, um *ähnliche oder verwandte Dokumente* zu identifizieren und zu indizieren.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Die statistische semantische Suche liefert einen tiefen Einblick in unstrukturierte Dokumente, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken gespeichert sind, indem statistisch relevante *Schlüsselausdrücke* extrahiert und indiziert werden. Anschließend werden diese Schlüsselausdrücke verwendet, um *ähnliche oder verwandte Dokumente* zu identifizieren und zu indizieren.  
   
 ##  <a name="whatcanido"></a> Was ist mit der semantischen Suche alles möglich?  
  Die semantische Suche basiert auf der vorhandenen Volltextsuchfunktion in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ermöglicht jedoch neue Szenarien, die über Schlüsselwortsuchen hinausgehen. Während Sie bei der Volltextsuche *Wörter* in einem Dokument abfragen können, können Sie bei der *semantischen* Suche die Bedeutung des Dokuments abfragen. Die jetzt möglichen Lösungen umfassen die automatische Tagextraktion, die Ermittlung von verwandten Inhalten sowie die hierarchische Navigation über ähnlichen Inhalt. Sie können beispielsweise den Index von Schlüsselausdrücken abfragen, um die Taxonomie für eine Organisation oder für einen Korpus von Dokumenten zu erstellen. Oder sie können den Dokumentähnlichkeitsindex abfragen, um Lebensläufe zu identifizieren, die einer Arbeitsplatzbeschreibung entsprechen.  

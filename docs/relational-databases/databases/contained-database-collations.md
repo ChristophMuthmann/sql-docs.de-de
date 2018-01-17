@@ -18,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 996d73149e364263e0cda1ecd1ffb2aa8b8f14e0
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5e86cd34a6a4a2f51b86a84bd6eaa1f123fb6ea8
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="contained-database-collations"></a>Enthaltene Datenbanksortierungen
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Auf die Sortierreihenfolge und die Gleichheitssemantik von Textdaten wirken sich verschiedene Eigenschaften aus, u.a. die Berücksichtigung der Groß- und Kleinschreibung, die Berücksichtigung von Akzenten sowie die verwendete Basissprache. Diese Eigenschaften werden für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch die ausgewählte Sortierung der Daten ausgedrückt. Eine ausführliche Erläuterung zu Sortierungen finden Sie unter [Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Auf die Sortierreihenfolge und die Gleichheitssemantik von Textdaten wirken sich verschiedene Eigenschaften aus, u.a. die Berücksichtigung der Groß- und Kleinschreibung, die Berücksichtigung von Akzenten sowie die verwendete Basissprache. Diese Eigenschaften werden für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch die ausgewählte Sortierung der Daten ausgedrückt. Eine ausführliche Erläuterung zu Sortierungen finden Sie unter [Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md).  
   
  Sortierungen gelten nicht nur für in Benutzertabellen gespeicherte Daten, sondern für jeden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] behandelten Text, einschließlich Metadaten, temporäre Objekte, Variablennamen usw. Deren Behandlung variiert in eigenständigen und abhängigen Datenbanken Diese Änderung wirkt sich nicht auf viele Benutzer aus. Stattdessen trägt sie zu Unabhängigkeit von Instanzen und Einheitlichkeit bei. Dies verursacht jedoch möglicherweise auch etwas Verwirrung sowie Probleme bei Sitzungen, in denen sowohl auf enthaltene als auch auf nicht enthaltene Datenbanken zugegriffen wird.  
   

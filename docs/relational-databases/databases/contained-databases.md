@@ -22,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c39632f5d9580b652f57cec05000649af7591fc2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a0569381edb5d6ff8142818fb5d1382f28e7ad09
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="contained-databases"></a>Eigenständige Datenbanken
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Eine *eigenständige Datenbank* ist eine Datenbank, die von anderen Datenbanken und der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , der die Datenbank hostet, isoliert ist.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] hilft Benutzern dabei, ihre Datenbank von der Instanz auf vier Arten zu isolieren.  
   
@@ -154,7 +154,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="databaseuncontainedusage-event"></a>database_uncontained_usage-Ereignis  
  Dieses XEvent wird ausgelöst, wenn nicht enthaltene Entität zur Laufzeit bestimmt wird. Dies schließt in Clientcode ausgelöste Entitäten ein. Dieses Xevent wird nur für tatsächliche nicht enthaltene Entitäten ausgelöst. Das Ereignis wird jedoch nur zur Laufzeit ausgelöst. Daher werden alle nicht enthaltenen Benutzerentitäten, die nicht ausgeführt wurden, von diesem XEvent nicht identifiziert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen finden Sie unter  
  [Geänderte Funktionen &#40;Enthaltene Datenbank&#41;](../../relational-databases/databases/modified-features-contained-database.md)   
  [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)   
  [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   

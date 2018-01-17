@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0af6c90954aff66d17d7fafb3115138e7d71708f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77f8e1c2faa9900f8b41f356e3dd7411f12ff6c0
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -116,7 +116,7 @@ RETCODE bcp_control (
  Gibt die Anzahl von Fehlern an, die zulässig sind, bevor der Massenkopiervorgang fehlschlägt. Der Standardwert ist 10. ein Wert kleiner als 1 setzt diese Option auf den Standardwert zurück. Beim Massenkopieren sind maximal 65.535 Fehler zulässig. Wenn für diese Option größere Werte als 65.535 festgelegt werden, wird diese Option auf 65.535 festgelegt.  
   
  BCPODBC  
- Bei "true", gibt an, dass **"DateTime"** und **Smalldatetime** ODBC-Zeitstempel Escape-Sequenz-Präfix und Suffix im Zeichenformat gespeicherten Werte verwendet. Die BCPODBC-Option gilt nur für BCP_OUT.  
+ Bei "true", gibt an, dass **"DateTime"** und **Smalldatetime** ODBC-Zeitstempel Escape-Sequenz-Präfix und Suffix im Zeichenformat gespeicherten Werte verwendet. Die BCPODBC-Option gilt nur für DB_OUT.  
   
  Bei "false", ein **"DateTime"** Wert, der 1. Januar 1997 darstellt, wird in der Zeichenfolge konvertiert: 1997-01-01-00:00:00.000. Wenn "true", die gleiche **"DateTime"** -Wert wie folgt dargestellt: {ts ' 1997-01-01 00:00:00.000 "}.  
   

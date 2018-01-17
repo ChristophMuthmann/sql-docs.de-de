@@ -3,7 +3,7 @@ title: Erstellen partitionierter Tabellen und Indizes | Microsoft-Dokumentation
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: database-engine
+ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: partitions
 ms.reviewer: 
@@ -35,14 +35,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 6f3f7e6d9f23ccebb49ac1f2c4bbc70acdff12d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 416bba81433e35e34c053aafc5412cca3875b4ae
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Erstellen partitionierter Tabellen und Indizes
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Sie können in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] eine partitionierte Tabelle oder einen Index erstellen. Die Daten in partitionierten Tabellen und Indizes werden horizontal in Einheiten aufgeteilt, die über mehrere Dateigruppen in einer Datenbank verteilt werden können. Die Partitionierung kann bewirken, dass sich große Tabellen und Indizes besser verwalten und skalieren lassen.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Sie können in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] eine partitionierte Tabelle oder einen Index erstellen. Die Daten in partitionierten Tabellen und Indizes werden horizontal in Einheiten aufgeteilt, die über mehrere Dateigruppen in einer Datenbank verteilt werden können. Die Partitionierung kann bewirken, dass sich große Tabellen und Indizes besser verwalten und skalieren lassen.  
   
  Das Erstellen einer partitionierten Tabelle oder eines Indexes erfolgt in der Regel in vier Teilen:  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/17/2017
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Erstellen einer partitionierten Tabelle oder eines partitionierten Indexes mit:**  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/17/2017
   
 -   CONTROL SERVER- oder ALTER ANY DATABASE-Berechtigung für den Server der Datenbank, in der die Partitionsfunktion und das Partitionsschema erstellt werden.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Führen Sie die Schritte in dieser Prozedur aus, um mindestens eine Dateigruppe, entsprechende Dateien und eine Tabelle zu erstellen. Sie versehen diese Objekte in der nächsten Prozedur mit Verweisen, wenn Sie die partitionierte Tabelle erstellen.  
   
 #### <a name="to-create-new-filegroups-for-a-partitioned-table"></a>So erstellen Sie neue Dateigruppen für eine partitionierte Tabelle  

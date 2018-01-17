@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7cf6f4c23f600403c7061d9ed5cb2bfd337660e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6f41069ec5254bec0ad40b250a3a9361190ba9b5
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="bcpmoretext"></a>bcp_moretext
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ RETCODE bcp_moretext (
 ## <a name="remarks"></a>Hinweise  
  Diese Funktion kann verwendet werden, zusammen mit [Bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) und [Bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) langen Daten variabler Länge Werte mit SQL Server in einer Reihe von kleineren Blöcken kopiert. **bcp_moretext** kann mit Spalten verwendet werden, die die folgenden SQL Server-Datentypen aufweisen: **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, benutzerdefinierter Typ (UDT) und XML. **bcp_moretext** unterstützt keine Datenkonvertierungen. Die angegebenen Daten müssen mit dem Datentyp der Zielspalte übereinstimmen.  
   
- Wenn **bcp_bind** mit einem *pData* -Parameter ungleich NULL für Datentypen aufgerufen wird, die von **bcp_moretext**unterstützt werden, sendet **bcp_sendrow** den gesamten Datenwert unabhängig von seiner Länge. Verfügt **bcp_bind** hingegen über einen *pData* -NULL-Parameter für unterstützte Datentypen, kann **bcp_moretext** verwendet werden, um Daten unmittelbar nach einer erfolgreichen Rückgabe von **bcp_sendrow** zu kopieren. Dadurch wird angegeben, dass alle gebundenen Spalten mit vorhandenen Daten verarbeitet wurden.  
+ Wenn **Bcp_bind** aufgerufen wird und ein Wert ungleich NULL *pData* -Parameter für Datentypen, die von unterstützt werden **Bcp_moretext**, **Bcp_sendrow** sendet den gesamten Datenwert unabhängig von der Länge. Verfügt **bcp_bind** hingegen über einen *pData* -NULL-Parameter für unterstützte Datentypen, kann **bcp_moretext** verwendet werden, um Daten unmittelbar nach einer erfolgreichen Rückgabe von **bcp_sendrow** zu kopieren. Dadurch wird angegeben, dass alle gebundenen Spalten mit vorhandenen Daten verarbeitet wurden.  
   
  Wenn Sie **bcp_moretext** verwenden, um eine unterstützte Datentypspalte in einer Zeile zu senden, müssen Sie alle anderen unterstützten Datentypspalten in der Zeile ebenfalls mit diesem Parameter senden. Es dürfen keine Spalten übersprungen werden. Unterstützte Datentypen sind SQLTEXT, SQLNTEXT, SQLIMAGE, SQLUDT und SQLXML. SQLCHARACTER, SQLVARCHAR, SQNCHAR, SQLBINARY und SQLVARBINARY gehören auch zu dieser Kategorie, wenn die Spalte den Datentyp varchar(max), nvarchar(max) bzw. varbinary(max) aufweist.  
   
