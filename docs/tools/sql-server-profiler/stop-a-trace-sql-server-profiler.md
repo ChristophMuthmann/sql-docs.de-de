@@ -16,15 +16,15 @@ helpviewer_keywords:
 - stopping traces
 ms.assetid: 47c4f33d-63e0-4444-bec8-4c1c91f8e25c
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c3fc383b99009cfac5d9b95d5e849c2b33039cbc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2a25d344bb188b457b70baebffcfe70678000007
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="stop-a-trace-sql-server-profiler"></a>Beenden einer Ablaufverfolgung (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In diesem Thema wird beschrieben, wie eine Ablaufverfolgung beendet wird, die mithilfe von läuft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

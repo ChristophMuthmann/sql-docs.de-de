@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: Table element [DTA]
 ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6ebf5a4a05d02281f7335d7244fc17bbca7e2b3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2fa7311680006fa5fc6ce51058dce05e6ed1f675
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="table-element-for-schema-dta"></a>Table-Element für Schema (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Gibt die Tabelle zum Optimieren an.  
@@ -39,13 +39,13 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-attributes"></a>Elementattribute  
   
-|attribute|Description|  
+|Attribut|Description|  
 |---------------|-----------------|  
 |**NumberOfRows**|Optional. Eine ganze Zahl, mit der Sie Tabellen unterschiedlicher Größe simulieren können.|  
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|**string**, 1 bis 255 Zeichen.|  
 |**Standardwert**|Keine.|  
@@ -55,8 +55,8 @@ ms.lasthandoff: 12/21/2017
   
 |Beziehung|Elemente|  
 |------------------|--------------|  
-|**Übergeordnetes Element**|[Schema-Element für Datenbank &#40;DTA&#41;](../../tools/dta/schema-element-for-database-dta.md)|  
-|**Untergeordnete Elemente**|[Name-Element für Tabelle &#40;DTA&#41;](../../tools/dta/name-element-for-table-dta.md)|  
+|**Übergeordnetes Element**|[Schema-Element für Datenbank &#40; DTA &#41;](../../tools/dta/schema-element-for-database-dta.md)|  
+|**Untergeordnete Elemente**|[Name-Element für Tabelle &#40; DTA &#41;](../../tools/dta/name-element-for-table-dta.md)|  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn Sie kein **Table** -Element angeben, geht der Datenbankoptimierungsratgeber davon aus, dass sich alle Tabellen in der angegebenen Datenbank optimieren lassen.  

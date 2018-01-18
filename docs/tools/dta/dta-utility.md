@@ -23,15 +23,15 @@ helpviewer_keywords:
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 caps.latest.revision: "58"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 21deb8edf30db7281ebacfd7b1176070ce13cc6e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e003329968d6ebd960f66c56051a20ac91523e47
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dta-utility"></a>dta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Die **Dta** -Hilfsprogramm ist die Befehlszeilenversion des Datenbankmodul-Optimierungsratgeber. Mit dem Hilfsprogramm **dta** soll es Ihnen ermöglicht werden, die Funktionalität des Datenbankoptimierungsratgebers in Anwendungen und Skripts zu verwenden.  
@@ -158,7 +158,7 @@ dta -d AdventureWorks2012 ...
 |---------------|-------------------|-------------|  
 |*database_name*|Der mit der Option*-D* angegebene Wert für **database_name** .||  
 |*owner_name*|**dbo**|*owner_name* muss **dbo**lauten. Wenn ein anderer Wert angegeben wird, schlägt die Ausführung von **dta** fehl, und es wird ein Fehler ausgegeben.|  
-|*table_name*|InclusionThresholdSetting||  
+|*table_name*|Keine||  
   
  Wenn eine Datei verwendet wird, geben Sie als Dateierweiterung .xml an. Beispiel: TuningLog.xml.  
   
@@ -171,7 +171,7 @@ dta -d AdventureWorks2012 ...
  **-fa** *physical_design_structures_to_add*  
  Gibt an, welche Arten physischer Entwurfsstruktur **dta** in die Empfehlung aufnehmen soll. In der folgenden Tabelle sind die Werte, die für dieses Argument angegeben werden können, sowie die zugehörigen Beschreibungen aufgeführt. Wenn kein Wert angegeben wird, verwendet **dta** den Standardwert **-fa****IDX**.  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |IDX_IV|Indizes und indizierte Sichten.|  
 |IDX|Nur Indizes.|  
@@ -181,7 +181,7 @@ dta -d AdventureWorks2012 ...
  **-fi**  
  Gibt an, dass gefilterte Indizes für neue Empfehlungen berücksichtigt werden. Weitere Informationen finden Sie unter [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
-**fc-**  
+**-fc**  
  Gibt an, dass der columnstore-Indizes für neue Empfehlungen berücksichtigt werden. Sowohl gruppierte und nicht gruppierten columnstore-Indizes werden von DTA berücksichtigt werden. Weitere Informationen finden Sie unter    
 [Columnstore-Index-Empfehlungen in Datenbank-Datenbankoptimierungsratgeber (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
@@ -192,7 +192,7 @@ dta -d AdventureWorks2012 ...
  **-fk** *keep_existing_option*  
  Gibt an, welche vorhandenen physischen Entwurfsstrukturen **dta** beim Generieren der Empfehlung beibehalten muss. In der folgenden Tabelle sind die Werte, die für dieses Argument angegeben werden können, sowie die zugehörigen Beschreibungen aufgeführt:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |Keine|Keine vorhandenen Strukturen|  
 |ALL|Alle vorhandenen Strukturen|  
@@ -203,7 +203,7 @@ dta -d AdventureWorks2012 ...
  **-fp** *partitioning_strategy*  
  Gibt an, ob neue physische Entwurfsstrukturen (Indizes und indizierte Sichten), die von **dta** vorgeschlagen werden, partitioniert werden sollen und wie diese Partitionierung ggf. erfolgen soll. In der folgenden Tabelle sind die Werte, die für dieses Argument angegeben werden können, sowie die zugehörigen Beschreibungen aufgeführt:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |Keine|Keine Partitionierung|  
 |FULL|Vollständige Partitionierung (zur Verbesserung der Leistung)|  
@@ -231,7 +231,7 @@ dta -d AdventureWorks2012 ...
  Gibt den Pfad und den Namen der Arbeitsauslastungsdatei an, die als Eingabe für die Optimierung verwendet werden soll. Die Datei muss eines der folgenden Formate aufweisen: TRC (SQL Server Profiler-Ablaufverfolgungsdatei), SQL (SQL-Datei) oder LOG ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ablaufverfolgungsdatei). Es muss entweder eine Arbeitsauslastungsdatei oder eine Arbeitsauslastungstabelle angegeben werden.  
   
  **-it** *workload_trace_table_name*  
- Gibt den Namen einer Tabelle an, die die Arbeitsauslastungs-Ablaufverfolgung für das Optimieren enthält. Der Name wird im folgenden Format angegeben: [*database_name*]**.**[*owner_name*]**.***table_name*.  
+ Gibt den Namen einer Tabelle an, die die Arbeitsauslastungs-Ablaufverfolgung für das Optimieren enthält. Der Name wird im Format angegeben: [*Database_name*]**.** [*Owner_name*] **. *** Table_name*.  
   
  In der folgenden Tabelle ist für jeden Parameter der zugehörige Standardwert aufgeführt:  
   
@@ -253,7 +253,7 @@ dta -d AdventureWorks2012 ...
  **-N** *online_option*  
  Gibt an, ob physische Entwurfsstrukturen online erstellt werden. In der folgenden Tabelle sind die Werte, die Sie für dieses Argument angeben können, sowie die zugehörigen Beschreibungen aufgeführt:  
   
-|value|Description|  
+|Wert|Description|  
 |-----------|-----------------|  
 |OFF|Es können keine empfohlenen physischen Entwurfsstrukturen online erstellt werden.|  
 |ON|Alle empfohlenen physischen Entwurfsstrukturen können online erstellt werden.|  
@@ -270,7 +270,7 @@ dta -n number_of_events -A 0
   
  In diesem Fall ist es wichtig, eine unbegrenzte Optimierungszeit anzugeben (`-A 0`). Andernfalls geht der Datenbankoptimierungsratgeber standardmäßig von einer achtstündigen Optimierungsdauer aus.
  
- **-I:** *Time_window_in_hours*   
+ **-I** *time_window_in_hours*   
    Gibt das Zeitfenster (in Stunden) bei muss eine Abfrage ausgeführt haben, dafür vom DTA in Betracht gezogen werden für die Optimierung der Verwendung von **-iq** Option (Arbeitsauslastung von Abfragespeicher). 
 ```  
 dta -iq -I 48  
@@ -306,7 +306,7 @@ In diesem Fall DTA Abfragespeicher als Quelle der arbeitsauslastung verwendet un
  **-rl** *analysis_report_list*  
  Gibt die Liste der zu generierenden Analyseberichte an. In der folgenden Tabelle sind die Werte aufgeführt, die für dieses Argument angegeben werden können:  
   
-|value|Bericht|  
+|Wert|Bericht|  
 |-----------|------------|  
 |ALL|Alle Analyseberichte|  
 |STMT_COST|Anweisungskostenbericht|  

@@ -13,20 +13,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8dbe4bc5-6aa9-48ee-857e-0b4ea764b9cb
 caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a91db42a951bc74c191bf9b63357d582eb91a451
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 92a4c081478824ca40745c3985d30b90c66c5c8a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="analysis-server-properties-service-tab"></a>Analysis-Server-Eigenschaften (Registerkarte Dienst)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Dieser Dienst ist die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Dieser Dienst ist für die ordnungsgemäße Ausführung von [!INCLUDE[ssAS](../../includes/ssas-md.md)] zwingend erforderlich. Die ausgegrauten Eigenschaftswerte können nicht mithilfe dieser Anwendung geändert werden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Binärpfad**  
  Zeigt den Speicherort der Programmdateien an, die von diesem Dienst verwendet werden.  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/21/2017
  Zeigt die Nummer an, die von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows zum Nachverfolgen der Prozesse dieses Programms verwendet wird.  
   
  **SQL-Diensttyp**  
- Zeigt den für aufrufende Prozesse bereitgestellten Diensttyp an. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden mehrere Dienste installiert.  
+ Zeigt den für aufrufende Prozesse bereitgestellten Diensttyp an. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden mehrere Dienste installiert.  
   
  **Startmodus**  
  Richten Sie den Dienst mit den folgenden Auswahlmöglichkeiten ein:  

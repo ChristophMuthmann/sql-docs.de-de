@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: "1"
 author: shkale-msft
-ms.author: shkale
+ms.author: shkale;barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4ca6de15012a8fb929c207ab1a79a41607bd74cc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 30748d9c5cf8a53b7e04c9897ba2fe70fa32972e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-graph-architecture"></a>Architektur der SQL-Diagramm  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 Erfahren Sie, wie SQL-Diagramm entworfen wird. Die Grundlagen wissen es einfacher zu verstehen, andere SQL-Diagramm Artikel.
  
-## <a name="sql-graph-database"></a>SQL-Graph-Datenbank
+## <a name="sql-graph-database"></a>SQL Graph Database
 Benutzer können einem Diagramm pro Datenbank erstellen. Ein Diagramm ist eine Auflistung von Knoten und Edge-Tabellen. Knoten oder Edge Tabellen unter dem alle Schemas in der Datenbank erstellt werden, aber sie alle für ein logisches Diagramm gehören. Eine Knotentabelle ist die Auflistung von ähnlichen Typ der Knoten. Beispielsweise enthält eine Knoten-Personentabelle alle Knoten der Person, die zu einem Diagramm gehören. Auf ähnliche Weise wird eine Rahmentabelle eine Auflistung von ähnlichen Typ der Kanten. Beispielsweise enthält eine Rahmentabelle Freunde alle Seiten, die eine Person an eine andere Person eine Verbindung herstellen. Da Knoten und Kanten in Tabellen gespeichert sind, werden die meisten Vorgänge für reguläre Tabellen unterstützt für Knoten oder Edge-Tabellen unterstützt. 
  
  
@@ -104,20 +104,20 @@ Die folgende Tabelle enthält die gültigen Werte für `graph_type` Spalte
 Impliziten Spalten in einer Knotentabelle  
 |Spaltenname    |Datentyp  |is_hidden  |Anmerkung  |
 |---  |---|---|---  |
-|Graph_id_\<Hex_string > |bigint |1  |interne Graph_id-Spalte  |
-|$Node_id_\<Hex_string > |NVARCHAR   |0  |Externe Knoten-Id-Spalte  |
+|graph_id_\<hex_string> |bigint |1  |interne Graph_id-Spalte  |
+|$node_id_\<hex_string> |NVARCHAR   |0  |Externe Knoten-Id-Spalte  |
 
 Impliziten Spalten in einer Rahmentabelle  
 |Spaltenname    |Datentyp  |is_hidden  |Anmerkung  |
 |---  |---|---|---  |
-|Graph_id_\<Hex_string > |bigint |1  |interne Graph_id-Spalte  |
-|$Edge_id_\<Hex_string > |NVARCHAR   |0  |externe Edge-Id-Spalte  |
-|From_obj_id_\<Hex_string >  |INT    |1  |interne zu Objekt-Id von Knoten  |
-|From_id_\<Hex_string >  |bigint |1  |Interne aus Knoten graph_id  |
-|$From_id_\<Hex_string > |NVARCHAR   |0  |externe aus Knoten-id  |
-|To_obj_id_\<Hex_string >    |INT    |1  |interne Objekt-ID von Knoten  |
-|To_id_\<Hex_string >    |bigint |1  |Für Knoten Graph_id intern  |
-|$To_id_\<Hex_string >   |NVARCHAR   |0  |externe Knoten-ID  |
+|graph_id_\<hex_string> |bigint |1  |interne Graph_id-Spalte  |
+|$edge_id_\<hex_string> |NVARCHAR   |0  |externe Edge-Id-Spalte  |
+|from_obj_id_\<hex_string>  |INT    |1  |interne zu Objekt-Id von Knoten  |
+|from_id_\<hex_string>  |bigint |1  |Interne aus Knoten graph_id  |
+|$from_id_\<hex_string> |NVARCHAR   |0  |externe aus Knoten-id  |
+|to_obj_id_\<hex_string>    |INT    |1  |interne Objekt-ID von Knoten  |
+|to_id_\<hex_string>    |bigint |1  |Für Knoten Graph_id intern  |
+|$to_id_\<hex_string>   |NVARCHAR   |0  |externe Knoten-ID  |
  
 ### <a name="system-functions"></a>Systemfunktionen
 Die folgenden integrierten Funktionen hinzugefügt werden. Dies hilft Benutzern, die Informationen aus den generierten Spalten extrahiert werden. Beachten Sie, dass diese Methoden die Eingaben des Benutzers nicht überprüft werden. Wenn der Benutzer ein ungültiges gibt `sys.node_id` die-Methode des entsprechenden Nachrichtenteils zu extrahieren und zurückzugeben. OBJECT_ID_FROM_NODE_ID dauert beispielsweise ein `$node_id` als Eingabe und gibt die Object_id zurück, der Tabelle, der dieser Knoten gehört zu einem. 
@@ -142,7 +142,7 @@ Erfahren Sie, den [!INCLUDE[tsql-md](../../includes/tsql-md.md)] Erweiterungen e
 |CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE `wird jetzt erweitert, um das Erstellen einer Tabelle als Knoten oder EDGE als unterstützt. Beachten Sie, dass eine Rahmentabelle möglicherweise keine Benutzer ggf. benutzerdefinierten Attributen.  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|Knoten und Edge-Tabellen können geändert werden, die gleiche Weise wie eine relationale Tabelle ist, verwendet die `ALTER TABLE`. Benutzer können hinzufügen oder Ändern von benutzerdefinierten Spalten, Indizes oder Einschränkungen. Allerdings Ändern von internen Graph Spalten, z. B. `$node_id` oder `$edge_id`, führt zu einem Fehler.  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |Benutzer können Indizes für Pseudospalten und benutzerdefinierter Spalten in Knoten und Edge-Tabellen erstellen. Alle Indextypen werden unterstützt, einschließlich gruppierten und nicht gruppierten columnstore-Indizes.  |
-|DROP TABLE |[DROP TABLE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-table-transact-sql.md)  |Knoten und Edge-Tabellen können gelöscht werden, die gleiche Weise wie eine relationale Tabelle ist, verwendet die `DROP TABLE`. In dieser Version sind jedoch keine Einschränkungen aus, um sicherzustellen, dass keine Kanten zeigen Sie auf einen gelöschten Knoten kaskadierenden Löschen des Randes, beim Löschen eines Knotens oder Knotentabelle wird nicht unterstützt. Es wird empfohlen, wenn eine Knotentabelle gelöscht wird, Benutzer alle Ränder verbunden, auf die Knoten in dieser Knotentabelle manuell, um die Integrität des Diagramms verwalten ablegen.  |
+|DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |Knoten und Edge-Tabellen können gelöscht werden, die gleiche Weise wie eine relationale Tabelle ist, verwendet die `DROP TABLE`. In dieser Version sind jedoch keine Einschränkungen aus, um sicherzustellen, dass keine Kanten zeigen Sie auf einen gelöschten Knoten kaskadierenden Löschen des Randes, beim Löschen eines Knotens oder Knotentabelle wird nicht unterstützt. Es wird empfohlen, wenn eine Knotentabelle gelöscht wird, Benutzer alle Ränder verbunden, auf die Knoten in dieser Knotentabelle manuell, um die Integrität des Diagramms verwalten ablegen.  |
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>DDL-Anweisungen Data Manipulation Language (DML)
@@ -158,7 +158,7 @@ Erfahren Sie, den [!INCLUDE[tsql-md](../../includes/tsql-md.md)] Erweiterungen e
 |Task   |Verwandtes Thema  |Hinweise
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|Knoten und Kanten intern als Tabellen gespeichert sind, daher werden die meisten der in einer Tabelle in SQL Server oder Azure SQL-Datenbank unterstützten Vorgänge unterstützt, auf den Knoten und Edge-Tabellen  |
-|MATCH  | [Übereinstimmung &#40; Transact-SQL &#41;](../../t-sql/queries/match-sql-graph.md)|Übereinstimmung integrierte wurde eingeführt, um einen Musterabgleich und Traversal über das Diagramm zu unterstützen.  |
+|MATCH  | [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)|Übereinstimmung integrierte wurde eingeführt, um einen Musterabgleich und Traversal über das Diagramm zu unterstützen.  |
 
 
 

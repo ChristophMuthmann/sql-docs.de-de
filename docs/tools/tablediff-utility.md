@@ -21,15 +21,15 @@ helpviewer_keywords:
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3ce5fef28718d257baad0c48f9a0c753bc8b4e25
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b397ef06f491da3d7b74de11c21f0f64dc7f5814
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tablediff-utility"></a>tablediff (Hilfsprogramm)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]Die **"TableDiff"** Dienstprogramm wird verwendet, um die Daten in zwei Tabellen für Nichtkonvergenz zu vergleichen und eignet sich besonders zur Problembehandlung bei mangelnder Konvergenz in einer Replikationstopologie. Dieses Hilfsprogramm kann an der Eingabeaufforderung oder in einer Batchdatei verwendet werden, um die folgenden Aufgaben auszuführen:  
@@ -84,8 +84,8 @@ tablediff
  [ **-?** ]  
  Gibt die Liste unterstützter Parameter zurück.  
   
- **-sourceserver** *Name des Quellservers*[**\\***Instanzname*]  
- Der Name des Quellservers. Geben Sie *Name des Quellservers* für die Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]an. Geben Sie *Name des Quellservers***\\***Instanzname* für eine benannte Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]an.  
+ **-Sourceserver** *Name des Quellservers*[**\\*** Instance_name*]  
+ Der Name des Quellservers. Geben Sie *Name des Quellservers* für die Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]an. Geben Sie *Name des Quellservers***\\***Instance_name* für eine benannte Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** *Quelldatenbank*  
  Der Name der Quelldatenbank.  
@@ -108,8 +108,8 @@ tablediff
  **-sourcelocked**  
  Die Quelltabelle wird während des Vergleichs mit den Tabellenhinweisen TABLOCK und HOLDLOCK gesperrt.  
   
- **-destinationserver** *Zielservername*[**\\***Instanzname*]  
- Der Name des Zielservers. Angeben von *Zielservername* für die Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Geben Sie *Zielservername***\\***Instanzname* für eine benannte Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]an.  
+ **-destinationserver** *destination_server_name*[**\\***instance_name*]  
+ Der Name des Zielservers. Angeben von *Zielservername* für die Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Geben Sie *Zielservername***\\***Instance_name* für eine benannte Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** *Abonnementdatenbank*  
  Der Name der Zieldatenbank.  
@@ -170,7 +170,7 @@ tablediff
   
 ## <a name="return-value"></a>Rückgabewert  
   
-|value|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**0**|Success|  
 |**1**|Schwerwiegender Fehler|  

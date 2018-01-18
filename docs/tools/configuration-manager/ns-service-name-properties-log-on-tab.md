@@ -13,25 +13,25 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5e6816ec-d4c5-4429-8033-b97427584890
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f14473aba288e4f68b08472d77e6cacbd99061c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fe580f038bce9676e30249765ccc02fe43696b38
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="nsltservice-namegt-properties-log-on-tab"></a>NS$&lt;Dienstname&gt; Eigenschaften (Registerkarte Anmelden)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Verwenden der **anmelden** auf der Registerkarte die **Notification Services-Eigenschaften** Dialogfeld an, das von verwendete Konto der [!INCLUDE[ssNS](../../includes/ssns-md.md)] und zu starten und beenden Sie den Dienst.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Lokales System**  
  Geben Sie ein lokales Systemkonto an, das kein Kennwort erfordert. Das lokale Systemkonto kann sich allerdings einschränkend auf die Zusammenarbeit mit anderen Servern auswirken. Dies hängt von den Privilegien ab, die dem Konto erteilt wurden.  
   
  **Dieses Konto**  
- Geben Sie ein lokales oder ein Domänenbenutzerkonto an, das die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Authentifizierung verwendet. [!INCLUDE[msCoName](../../includes/msconame-md.md)] empfiehlt, ein Domänenbenutzerkonto mit minimalen Berechtigungen für Dienste zu verwenden. Informationen zum Auswählen eines Kontos finden Sie in der Onlinedokumentation unter "Einrichten von Windows-Dienstkonten".  
+ Geben Sie ein lokales oder ein Domänenbenutzerkonto an, das die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Authentifizierung verwendet. [!INCLUDE[msCoName](../../includes/msconame-md.md)]verwenden ein Domänenbenutzerkonto mit minimalen Berechtigungen für Dienste wird empfohlen. Informationen zum Auswählen eines Kontos finden Sie in der Onlinedokumentation unter "Einrichten von Windows-Dienstkonten".  
   
  **Kontoname**  
  Geben Sie den Kontonamen des lokalen oder Domänenbenutzers an.  

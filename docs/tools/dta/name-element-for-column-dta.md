@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: Name element
 ms.assetid: f93b61de-01fe-4237-ada4-f1e481550564
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c1ef1bb1f4b952515217981fbd2d1ca301ec45e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9bb4027f057fdfcd3c6aa4802708bfe39361ecff
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="name-element-for-column-dta"></a>Name-Element für Spalte (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Gibt den Namen für eine Indexspalte in einer benutzerdefinierten Konfiguration an.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|**string**, unbegrenzte Länge.|  
 |**Standardwert**|Keine.|  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
 |Beziehung|Elemente|  
 |------------------|--------------|  
-|**Übergeordnetes Element**|[Column-Element für Index &#40;DTA&#41;](../../tools/dta/column-element-for-index-dta.md)|  
+|**Übergeordnetes Element**|[Column-Element für Index &#40; DTA &#41;](../../tools/dta/column-element-for-index-dta.md)|  
 |**Untergeordnete Elemente**|Keine.|  
   
 ## <a name="example"></a>Beispiel  

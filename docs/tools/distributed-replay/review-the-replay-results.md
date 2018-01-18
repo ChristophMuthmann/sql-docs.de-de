@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad034ad1cd4bc4f2c2945365e186262d500a6776
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ffcc2c8b5a8eb97acea95e841b24ca800b87df9d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="review-the-replay-results"></a>Überprüfen der Wiedergabeergebnisse
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Nach der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay-Funktion eine verteilte Wiedergabe abgeschlossen hat, die Wiedergabeaktivität für jeden Client aufgezeichnet und in Ergebnisdateien der Ablaufverfolgung auf jedem Client gespeichert werden. Um diese Aktivität aufzuzeichnen, müssen Sie beim Ausführen des Verwaltungstools mit der **replay** -Option den **-o** -Parameter verwenden. Weitere Informationen zur Wiedergabeoption finden Sie unter [Wiedergabeoption &#40;Verwaltungstool „Distributed Replay“&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="column-descriptions-for-result-trace"></a>Beschreibungen der Spalten für das Ergebnis der Ablaufverfolgung  
  In der folgenden Tabelle werden die Spalten der Ergebnisdaten der Ablaufverfolgung beschrieben.  
   
-|Name der Datenspalte|Datentyp|Description|Column ID|  
+|Name der Datenspalte|Datentyp|Beschreibung|Column ID|  
 |----------------------|---------------|-----------------|---------------|  
 |EventClass|**nvarchar**|Der Name der Ereignisklasse.|1|  
 |EventSequence|**bigint**|Für Anbieterfehler sowie interne Fehler und Warnungen ist dies die Sequenz der Ereignisaufzeichnung, die dem Fehler bzw. der Warnung entspricht.<br /><br /> Für alle anderen Ereignisklassen ist dies die Sequenz des Ereignisses in den ursprünglichen Ablaufverfolgungsdaten.|2|  
@@ -85,7 +85,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Distributed Replay: Anforderungen](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Befehlszeilenoptionen für das Verwaltungstool &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Befehlszeilenoptionen des Verwaltung &#40; Distributed Replay Utility &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Konfigurieren von Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

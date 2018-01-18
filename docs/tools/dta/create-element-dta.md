@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: Create element (DTA)
 ms.assetid: 9d076c90-f933-45f4-b6d9-447793f6528b
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a5b09aa5d97a5a8af16e45bb7a5f4a620d9ea753
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ee12c846e9f95eea1f5a4b798d2651a92ab8039f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-element-dta"></a>Create-Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Enthält Informationen zu den Indizes, Statistiken oder Heapstrukturen in einer benutzerspezifischen Konfiguration.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|Keine.|  
 |**Standardwert**|Keine.|  
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
 |Beziehung|Elemente|  
 |------------------|--------------|  
-|**Übergeordnetes Element**|[Recommendation-Element &#40;DTA&#41;](../../tools/dta/recommendation-element-dta.md)|  
+|**Übergeordnetes Element**|[Recommendation-Element &#40; DTA &#41;](../../tools/dta/recommendation-element-dta.md)|  
 |**Untergeordnete Elemente**|[Index-Element &#40;DTA&#41;](../../tools/dta/index-element-dta.md)<br /><br /> **Statistics** -Element (weitere Informationen finden Sie im Thema zum [XML-Schema für den Datenbankoptimierungsratgeber](http://schemas.microsoft.com/sqlserver/) )<br /><br /> **Heap** -Element (weitere Informationen finden Sie im Thema zum [XML-Schema für den Datenbankoptimierungsratgeber](http://schemas.microsoft.com/sqlserver/) )|  
   
 ## <a name="remarks"></a>Hinweise  

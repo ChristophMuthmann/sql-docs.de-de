@@ -2,7 +2,7 @@
 title: Herunterladen und installieren Sie Microsoft SQL Operations Studio (Vorschau) | Microsoft Docs
 description: "Herunterladen und installieren Sie Microsoft SQL Operations Studio (Vorschau) für Windows, Mac OS oder Linux"
 ms.custom: tools|sos
-ms.date: 12/19/2017
+ms.date: 01/17/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,23 +14,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a34a03b447e26f072b6c8064cd115333600fef4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0621d5af62b5f5b8b694d47cf16d766215a0c819
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>Herunterladen und Installieren von SQL-Vorgänge Studio (Vorschau)
 
 [!INCLUDE[name-sos](../includes/name-sos.md)]auf Windows, Mac OS und Linux ausgeführt wird.
 
-Herunterladen und installieren Sie die neueste Version der *öffentliche Vorschau Dezember*:
+Herunterladen und installieren Sie die neueste Version der *Public Preview Januar*:
 
 |Platform|Herunterladen|Veröffentlichungsdatum|
 |:---|:---|:---|
-|Windows|[Installationsprogramm](https://go.microsoft.com/fwlink/?linkid=865305)<br>[ZIP](https://go.microsoft.com/fwlink/?linkid=865304)|19 Dezember 2017 |
-|MacOS|[ZIP](https://go.microsoft.com/fwlink/?linkid=865306)|19 Dezember 2017 |
-|Linux|[.Deb](https://go.microsoft.com/fwlink/?linkid=865308)<br>[entsprechende](https://go.microsoft.com/fwlink/?linkid=865309)<br>[. weswegen](https://go.microsoft.com/fwlink/?linkid=865307)|19 Dezember 2017|
+|Windows|[Installationsprogramm](https://go.microsoft.com/fwlink/?linkid=866480)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=866479)|17 Januar 2018 |
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=866481)|17 Januar 2018 |
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=866484)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=866483)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=866482)|17 Januar 2018|
 
 Einzelheiten über die neueste Version finden Sie unter der [Anmerkungen zu dieser Version](release-notes.md).
 
@@ -40,27 +40,27 @@ Diese Version von [!INCLUDE[name-sos](../includes/name-sos-short.md)] enthält e
 
 **Installationsprogramm**
 
-1. Herunterladen und Ausführen der [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] für Windows Installer](https://go.microsoft.com/fwlink/?linkid=865305).
+1. Herunterladen und Ausführen der [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] für Windows Installer](https://go.microsoft.com/fwlink/?linkid=866480).
 1. Starten Sie den [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 
 **ZIP-Datei**
 
-1. Herunterladen [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] ZIP für Windows](https://go.microsoft.com/fwlink/?linkid=865304).
+1. Herunterladen [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] ZIP für Windows](https://go.microsoft.com/fwlink/?linkid=866479).
 2. Rufen Sie die heruntergeladene Datei, und extrahieren Sie es.
 3. Ausführen von `\sqlops-windows\sqlops.exe`
 
 
 ## <a name="get-sql-operations-studio-preview-for-macos"></a>Abrufen von SQL-Vorgänge Studio (Vorschau) für macOS
 
-1. Herunterladen [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] für MacOS](https://go.microsoft.com/fwlink/?linkid=865306).
+1. Herunterladen [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] für MacOS](https://go.microsoft.com/fwlink/?linkid=866481).
 2. Doppelklicken Sie darauf, um den Inhalt der ZIP-Datei zu erweitern.
 3. Vornehmen [!INCLUDE[name-sos](../includes/name-sos-short.md)] zur Verfügung, in der *Launchpad*, ziehen Sie *sqlops.app* auf die *Anwendungen* Ordner.
 
 
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>Abrufen von SQL-Vorgänge Studio (Vorschau) für Linux
 
-1. Herunterladen [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] für Linux](https://go.microsoft.com/fwlink/?linkid=865307).
+1. Herunterladen [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] für Linux](https://go.microsoft.com/fwlink/?linkid=866482).
 1. Extrahieren Sie die Datei, und starten Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)], öffnen Sie ein neues Terminal-Fenster, und geben Sie die folgenden Befehle:
 
    ```bash
@@ -84,7 +84,7 @@ Diese Version von [!INCLUDE[name-sos](../includes/name-sos-short.md)] enthält e
    sudo apt-get install libunwind8
    ```
 
-   **RedHat:** 
+   **Redhat:** 
    ```bash
    yum install libXScrnSaver
    ```
@@ -109,9 +109,9 @@ Wenn Sie installiert [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] m
 - Windows Server 2012 (64-Bit)
 - Windows Server 2008 R2 (64-Bit)
 
-### <a name="macos"></a>MacOS
-- MacOS 10,13 hohe Sierra
-- MacOS 10.12 Sierra
+### <a name="macos"></a>macOS
+- macOS 10.13 High Sierra
+- macOS 10.12 Sierra
 
 ### <a name="linux"></a>Linux
 - Red Hat Enterprise Linux 7.4
@@ -121,7 +121,7 @@ Wenn Sie installiert [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] m
 
 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Nächste Schritte
 
 Finden Sie in der folgenden Schnellstarts für den Einstieg:
 - [Eine Verbindung herstellen und Abfragen von SQLServer](quickstart-sql-server.md)

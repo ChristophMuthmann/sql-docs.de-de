@@ -17,15 +17,15 @@ helpviewer_keywords:
 - exporting trace templates
 ms.assetid: 5aa5f400-4aba-4081-9ed4-62cf38828438
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d052ac98b13277d366867d8e95e1f56a3b2cdfaa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 11a382d4256d99321a305137952a0ecee1d50145
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="export-a-trace-template-sql-server-profiler"></a>Exportieren einer Ablaufverfolgungsvorlage (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In diesem Thema wird beschrieben, wie So exportieren Sie eine vorhandene Ablaufverfolgungsvorlage, speichern eine Vorlagedatei (.tdf) mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Wenn Sie eine Vorlagedatei exportieren und als Datei speichern, können Sie die Vorlage für andere Instanzen von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]verwenden.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 3.  Geben Sie für die exportierte Vorlagedatei einen Dateinamen ein, und klicken Sie dann auf **Speichern**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen einer Ablaufverfolgungsvorlage &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [Erstellen einer Ablaufverfolgungsvorlage &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [Ändern einer Ablaufverfolgungsvorlage &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
  [Ableiten einer Vorlage von einer zurzeit ausgeführten Ablaufverfolgung &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [Ableiten einer Vorlage von einer Ablaufverfolgungsdatei oder Ablaufverfolgungstabelle &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   

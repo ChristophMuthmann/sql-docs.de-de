@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: TuningTimeInMin element
 ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f96f2d58bdc3e5bed18e9dd76fbdd7813a24f8a4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bba801b3dbeee9c21c371187b4a82b9d9a77f617
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin-Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Gibt die maximale Länge einer optimierungssitzung in Minuten an.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|**unsignedInt**, unbegrenzte Länge.|  
 |**Standardwert**|480 Minuten (8 Stunden).|  
@@ -50,12 +50,12 @@ ms.lasthandoff: 12/21/2017
   
 |Beziehung|Elemente|  
 |------------------|--------------|  
-|**Übergeordnetes Element**|[TuningOptions-Element &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
-|**Untergeordnete Elemente**|InclusionThresholdSetting|  
+|**Übergeordnetes Element**|[TuningOptions-Element &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**Untergeordnete Elemente**|Keine|  
   
 ## <a name="example"></a>Beispiel  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Beschreibung  
  Im folgenden Codebeispiel wird gezeigt, wie 12 Stunden als maximale Optimierungszeit festgelegt werden:  
   
 ## <a name="code"></a>Code  

@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: "1"
 author: shkale-msft
-ms.author: shkale
+ms.author: shkale;barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ab17b98a23afa3d209716145d7de39a6955cdf6d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3a0828b1e50472ecec5f256c9ddfe13e8f0db8b7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Diagramm, die Verarbeitung mit SQL Server und Azure SQL-Datenbank
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ AND Person1.Name = 'John';
 ```   
  
 ### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>Vollständig integrierte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Modul 
-Graph-Erweiterungen sind vollständig integriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Modul. Wir verwenden die gleichen Speichermodul, Metadaten, Abfrageprozessor usw. zum Speichern und Abfragen von Daten im Diagramm anzeigen. Dadurch kann Benutzer ihre Graph und relationale Daten in einer einzelnen Abfrage abzufragen. Benutzer können auch aus der Kombination von Graph-Funktionen mit anderen profitieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Technologien wie Columnstore, hohe Verfügbarkeit, R-Services, usw.. SQL-Graph-Datenbank unterstützt auch alle Sicherheits- und Compliance Funktionen zur Verfügung, mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Graph-Erweiterungen sind vollständig integriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Modul. Wir verwenden die gleichen Speichermodul, Metadaten, Abfrageprozessor usw. zum Speichern und Abfragen von Daten im Diagramm anzeigen. Dadurch kann Benutzer ihre Graph und relationale Daten in einer einzelnen Abfrage abzufragen. Benutzer können auch aus der Kombination von Graph-Funktionen mit anderen profitieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Technologien wie Columnstore, hohe Verfügbarkeit, R-Services, usw. SQL-Graph-Datenbank unterstützt auch alle Sicherheits- und Compliance Funktionen zur Verfügung, mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
  
 ### <a name="tooling-and-ecosystem"></a>Tools und das Ökosystem  
 Der Benutzer profitiert von vorhandenen Tools und das Ökosystem, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet. Tools wie Sichern und wiederherstellen, importieren und exportieren, BCP nur Arbeit ausgegeben. Andere Tools oder Dienste wie SSIS, SSRS oder PowerBI funktionieren bei Diagramm Tabellen, nur die Möglichkeit, die sie mit relationalen Tabellen arbeiten.

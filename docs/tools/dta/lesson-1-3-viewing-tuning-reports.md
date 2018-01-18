@@ -15,15 +15,15 @@ applies_to: SQL Server 2016
 helpviewer_keywords: tuning reports [SQL Server]
 ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a1a567a2f29073f73033182fd14867540a95b93
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c986b13e3c38e168f7384a6552befca085f9be2f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-3---viewing-tuning-reports"></a>Lektion 1 bis 3 - Optimierungsberichte anzeigen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Sie die Anzeige in der vorigen Übung dieser Lektion, aus, die Sie der [!INCLUDE[tsql](../../includes/tsql-md.md)] Skripts, erstellen oder Löschen von Datenbankobjekten in die der Datenbankoptimierungsratgeber Empfehlungen, die als Ergebnis die optimierungssitzung MySession generiert wurden. Die Optimierungssitzung MySession wurde in [Optimieren einer Arbeitsauslastung](../../tools/dta/lesson-1-1-tuning-a-workload.md)angelegt.  

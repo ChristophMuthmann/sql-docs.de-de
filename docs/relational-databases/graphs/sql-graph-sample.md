@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 
 caps.latest.revision: "1"
 author: shkale-msft
-ms.author: shkale
+ms.author: shkale;barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a093d431510891d0bac9616aa1058134cb168ec7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ffc2bcd906e0d975d763d12aaa899cb414ef6b5e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Erstellen Sie eine Diagrammdatenbank, und führen Sie einige Abfragen, die mithilfe des T-SQL-Mustervergleich
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -174,4 +174,4 @@ Dieses Skript verwendet die neue T-SQL-Syntax zum Erstellen von Knoten und Edge-
 |---  |---  |
 |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)  |Graph-Knoten oder Edge-Tabelle erstellen  |
 |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)  |Fügen Sie einen Knoten oder Edge-Tabelle  |
-|[Übereinstimmung &#40; Transact-SQL &#41;](../../t-sql/queries/match-sql-graph.md)  |Verwenden von MATCH zum einem Muster entsprechen, oder Durchsuchen Sie das Diagramm  |
+|[MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)  |Verwenden von MATCH zum einem Muster entsprechen, oder Durchsuchen Sie das Diagramm  |
